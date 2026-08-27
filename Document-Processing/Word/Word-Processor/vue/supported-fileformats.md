@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 ## Supported File Formats
 
-The following table describes supported formats and their conversion capabilities in the Document Editor.
+The following table describes supported formats and their conversion capabilities in the DOCX Editor.
 
 | File Format                          | Open   | Export |
 |--------------------------------------|--------|--------|
@@ -34,7 +34,7 @@ N> * Requires server-side interactions for the operations.
 
 ## Supported platforms for server-side dependencies
 
-You can deploy web APIs for the server-side dependencies of the Document Editor component on the following platforms.
+You can deploy web APIs for the server-side dependencies of the DOCX Editor component on the following platforms.
 
 - 	[ASP.NET Core](./web-services/core)
 - 	[ASP.NET MVC](./web-services/mvc)

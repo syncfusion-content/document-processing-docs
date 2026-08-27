@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Styles in Vue DOCX Editor
 
-Styles are useful for applying a set of formatting consistently throughout the document. In document editor, styles are created and added to a document programmatically or via the built-in Styles dialog.
+Styles are useful for applying a set of formatting consistently throughout the document. In DOCX Editor, styles are created and added to a document programmatically or via the built-in Styles dialog.
 
 ## Styles definition overview
 
-A Style in document editor should have the following properties:
+A Style in DOCX Editor should have the following properties:
 
 * **name**: Name of the style. All styles in a document have a unique name, which is used as an identifier when applying the style.
 * **type**: Specifies the document elements that the style will target. For example, paragraph or character.
@@ -28,7 +28,7 @@ A Style in document editor should have the following properties:
 
 ## Default style
 
-The default style for span and paragraph properties is normal. It internally inherits the default style of the document loaded or document editor component.
+The default style for span and paragraph properties is normal. It internally inherits the default style of the document loaded or DOCX Editor component.
 
 ## Style hierarchy
 
@@ -208,4 +208,4 @@ Footer
 
 ## Online Demo
 
-Explore how to apply and modify styles in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/styles.html).
+Explore how to apply and modify styles in Word documents using the Vue DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/styles.html).

@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Unsupported Features in Vue Document Editor
+# Unsupported Features in Vue DOCX Editor
 
 This section describes the unsupported elements in [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor).
 

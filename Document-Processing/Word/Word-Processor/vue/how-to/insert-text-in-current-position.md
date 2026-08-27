@@ -97,7 +97,7 @@ export default {
 
 Please refer to the gif below which illustrates how to insert text in the current cursor position on button click:
 
-![Insert text in current cursor position in Vue Document Editor](../images/insert_text.gif)
+![Insert text in current cursor position in Vue DOCX Editor](../images/insert_text.gif)
 
 ## Insert paragraph in current cursor position
 
@@ -216,7 +216,7 @@ The following example illustrates how to insert the HTML content at the current 
   {% endhighlight %}
   {% endtabs %}
   
-N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 * Please refer the following code example for server-side web implementation for HTML conversion using DocumentEditor.
 

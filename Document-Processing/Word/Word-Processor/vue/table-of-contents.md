@@ -25,7 +25,7 @@ The table of contents in a document is same as the list of chapters at the begin
 * **tabLeader**: Specifies the tab leader styles such as none, dot, hyphen, and underscore.
 * **includeOutlineLevels**: Specifies whether the outline levels are included.
 
-The following code illustrates how to insert table of content in Document Editor.
+The following code illustrates how to insert table of content in DOCX Editor.
 
 ```ts
 let tocSettings: TableOfContentsSettings =
@@ -69,7 +69,7 @@ this.$refs.documenteditor.ej2Instances.editor.insertTableOfContents(tocSettings)
 
 ## Online Demo
 
-Explore how to insert and update table of contents in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/table-of-contents.html).
+Explore how to insert and update table of contents in Word documents using the Vue DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/table-of-contents.html).
 
 ## See Also
 

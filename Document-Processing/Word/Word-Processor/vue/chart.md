@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) provides chart preservation support. Using Document Editor, you can see the chart reports from your Word document.
 
-The following example shows chart preservation in Document Editor.
+The following example shows chart preservation in DOCX Editor.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -27,7 +27,7 @@ The following example shows chart preservation in Document Editor.
 
 ## Supported Chart Types
 
-The following chart types are supported in Document Editor:
+The following chart types are supported in DOCX Editor:
 
 * Scatter_Markers
 * Bubble
@@ -51,7 +51,7 @@ The following chart types are supported in Document Editor:
 
 ## Online Demo
 
-Explore how to preserve charts in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/chart.html).
+Explore how to preserve charts in Word documents using the Vue DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/chart.html).
 
 ## See Also
 
