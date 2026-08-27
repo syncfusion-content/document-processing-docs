@@ -13,7 +13,7 @@ domainurl: ##DomainURL##
 The [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) provides an extensive and flexible API to customize the built-in ribbon UI. You can:
 
 - Customize the File menu.
-- Add the Backstage menu instead of File menu.
+- Add the Backstage menu instead of the File menu.
 - Show, hide, or add Ribbon tabs.
 - Show, hide, or add groups within tabs.
 - Show, hide, add, enable, or disable items within groups.
@@ -22,16 +22,16 @@ Below are detailed examples for each ribbon customization scenario.
 
 ## File Menu Customization
 
-Document Editor provides APIs to remove existing File menu items and add new custom items based on your requirements. You can modify the File menu using the [`fileMenuItems`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#filemenuitems) property.
+The Document Editor provides APIs to remove existing File menu items and add new custom items based on your requirements. You can modify the File menu using the [`fileMenuItems`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#filemenuitems) property.
 
-In below code example, In the example below, the "Open" and "Export" items have been removed from the File Menu Items, and new custom items have been added.
+In the example below, the "Open" and "Export" items have been removed from the File menu items, and new custom items have been added.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
 <div class="control-section">
-    <ejs-documenteditorcontainer ref="doceditcontainer" :toolbarMode="'Ribbon'" 
+    <ejs-documenteditorcontainer ref="documenteditorcontainer" :toolbarMode="'Ribbon'" 
     :serviceUrl="hostUrl" :enableToolbar='true' height='600px' :fileMenuItems="fileMenuItems"
     @fileMenuItemClick="fileMenuClick"></ejs-documenteditorcontainer>
 </div>
@@ -49,11 +49,11 @@ const fileMenuItems = [
 ];
 function fileMenuClick(args) {
   if (args.item && args.item.id === 'custom_item') {
-    doceditcontainer.value.ej2Instances.documentEditor.save('Sample', 'Docx');
+    documenteditorcontainer.value.ej2Instances.documentEditor.save('Sample', 'Docx');
   }
 }
 onMounted(() => {
-  const editorInstance = doceditcontainer.value?.ej2Instances?.documentEditor;
+  const editorInstance = documenteditorcontainer.value?.ej2Instances?.documentEditor;
 });
 </script>
 
@@ -102,7 +102,7 @@ export default {
 
 ## Backstage Menu Customization
 
-The Document Editor provides an [`backStageMenu`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#backStageMenu) API to add a backstage menu. When the backstage menu is enabled, the default File menu items are automatically hidden.
+The Document Editor provides a [`backStageMenu`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#backStageMenu) API to add a backstage menu. When the backstage menu is enabled, the default File menu items are automatically hidden.
 
 The following code example shows how to add the backstage menu items.
 
@@ -111,9 +111,9 @@ The following code example shows how to add the backstage menu items.
 
 <template>
 <div class="control-section">
-    <ejs-documenteditorcontainer ref="doceditcontainer" :toolbarMode="'Ribbon'" 
-    :serviceUrl="hostUrl" :enableToolbar='true' height='600px' :fileMenuItems="fileMenuItems"
-    @fileMenuItemClick="fileMenuClick"></ejs-documenteditorcontainer>
+    <ejs-documenteditorcontainer ref="documenteditorcontainer" :toolbarMode="'Ribbon'" 
+    :serviceUrl="hostUrl" :enableToolbar='true' height='600px' :backstageMenu="backstageMenu"
+    @backstageItemClick="handleBackstageItemClick"></ejs-documenteditorcontainer>
 </div>
 </template>
 <script setup>
@@ -131,11 +131,11 @@ const backstageMenu = {
 };
 function handleBackstageItemClick(args) {
   if (args.item) {
-    doceditcontainer.value.ej2Instances.documentEditor.openBlank();
+    documenteditorcontainer.value.ej2Instances.documentEditor.openBlank();
   }
 }
 onMounted(() => {
-  const editorInstance = doceditcontainer.value?.ej2Instances?.documentEditor;
+  const editorInstance = documenteditorcontainer.value?.ej2Instances?.documentEditor;
 });
 </script>
 
@@ -183,7 +183,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-Refer this documentation know more about [`backstage items`](https://ej2.syncfusion.com/documentation/ribbon/backstage)
+Refer to this documentation to know more about [`backstage items`](https://ej2.syncfusion.com/documentation/ribbon/backstage).
 
 ## Tab Customization
 
@@ -191,9 +191,9 @@ You can customize the ribbon tabs in the Document Editor by showing, hiding, or 
 
 ### Show/Hide Tab
 
-Document editor provides the [`showTab`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container/ribbon#showtab) API to show and hide the existing tab using existing `RibbonTabType` and `tabId`.
+The Document Editor provides the [`showTab`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container/ribbon#showtab) API to show and hide the existing tab using the existing `RibbonTabType` and `tabId`.
 
-The following code example how to show/hide existing tab using existing tab type and tab id.
+The following code example illustrates how to show/hide an existing tab using the existing tab type and tab id.
 
 ```ts
 // To hide the Home tab using the built-in `RibbonTabType`
@@ -212,7 +212,7 @@ The Document Editor provides the [`addTab`](https://ej2.syncfusion.com/vue/docum
 
 <template>
 <div class="control-section">
-    <ejs-documenteditorcontainer ref="doceditcontainer" :toolbarMode="'Ribbon'" 
+    <ejs-documenteditorcontainer ref="documenteditorcontainer" :toolbarMode="'Ribbon'" 
     :serviceUrl="hostUrl" :enableToolbar='true' height='600px'></ejs-documenteditorcontainer>
 </div>
 </template>
@@ -225,8 +225,8 @@ const documenteditorcontainer = ref(null);
 provide('DocumentEditorContainer', [Toolbar, Ribbon]);
 
 onMounted(() => {
-    const container = doceditcontainer.value?.ej2Instances;
-    // To add the tab at end of tab
+    const container = documenteditorcontainer.value?.ej2Instances;
+    // To add the tab at the end of the tabs
     const ribbonTab = {
       header: 'Custom Tab',
       id: 'custom_tab',
@@ -248,7 +248,7 @@ onMounted(() => {
     };
     container.ribbon.addTab(ribbonTab);
 
-    // To add the tab before the Insert tab(exising tab)
+    // To add the tab before the Insert tab (existing tab)
     container.ribbon.addTab(ribbonTab, 'Insert');
 });
 </script>
@@ -276,7 +276,7 @@ export default {
   mounted() {
     const container = this.$refs.doceditcontainer.ej2Instances;
 
-    // To add the tab at end of tab
+    // To add the tab at the end of the tabs
     const ribbonTab = {
       header: 'Custom Tab',
       id: 'custom_tab',
@@ -298,7 +298,7 @@ export default {
     };
     container.ribbon.addTab(ribbonTab);
 
-    // To add the tab before the Insert tab(exising tab)
+    // To add the tab before the Insert tab (existing tab)
     container.ribbon.addTab(ribbonTab, 'Insert');
   }
 };
@@ -314,19 +314,19 @@ You can also customize ribbon groups within a tab to better organize commands or
 
 ### Show/Hide Group 
 
-Document Editor provides an [`showGroup`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container/ribbon#showgroup) API to show or hide existing groups within a ribbon tab.
+The Document Editor provides a [`showGroup`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container/ribbon#showgroup) API to show or hide existing groups within a ribbon tab.
 
-The following code example show how to show/hide the group using group Id or [`RibbonGroupInfo`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#ribbongroupinfo).
+The following code example shows how to show/hide the group using the group id or [`RibbonGroupInfo`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#ribbongroupinfo).
 
 ```ts
 
-// To hide the clipboard group using group index
+// To hide the clipboard group using the group index
 this.$refs.doceditcontainer.ej2Instances.ribbon.showGroup({tabId: 'Home', index: 1} , false);
 
-// To show the clipboard group using group index
+// To show the clipboard group using the group index
 this.$refs.doceditcontainer.ej2Instances.ribbon.showGroup({tabId: 'Home', index: 1} , true);
 
-// To hide the group using id
+// To hide the group using its id
 this.$refs.doceditcontainer.ej2Instances.ribbon.showGroup('custom_group', false);
 
 ```
@@ -340,7 +340,7 @@ To extend the ribbon's functionality, you can add custom groups to any tab. This
 
 <template>
 <div class="control-section">
-    <ejs-documenteditorcontainer ref="doceditcontainer" :toolbarMode="'Ribbon'" 
+    <ejs-documenteditorcontainer ref="documenteditorcontainer" :toolbarMode="'Ribbon'" 
     :serviceUrl="hostUrl" :enableToolbar='true' height='600px'></ejs-documenteditorcontainer>
 </div>
 </template>
@@ -352,7 +352,7 @@ const documenteditorcontainer = ref(null);
 provide('DocumentEditorContainer', [Toolbar, Ribbon]);
 
 onMounted(() => {
-    const container = doceditcontainer.value?.ej2Instances;
+    const container = documenteditorcontainer.value?.ej2Instances;
     // Add the new group at the end of the Home tab
     const ribbonGroup = {
       header: 'Custom Group',
@@ -442,33 +442,33 @@ You can customize individual items within ribbon groups. This includes showing, 
 
 ### Show/Hide Item
 
-Using [`showItems`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container/ribbon#showitems) API in Document editor ribbon to enable/disable the existing item. Here, you can specify the item Id or [`RibbonItemInfo`].
+Using the [`showItems`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container/ribbon#showitems) API in the Document Editor ribbon to show/hide the existing item. Here, you can specify the item id or [`RibbonItemInfo`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#ribboniteminfo).
 
-The following code example show how to show/hide the item using item Id or [`RibbonItemInfo`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#ribboniteminfo).
+The following code example shows how to show/hide the item using the item id or [`RibbonItemInfo`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#ribboniteminfo).
 
 ```ts
-// To hide the Bold and Italic items using ribbon item information
+// To hide the Bold and Italic items using the ribbon item information
 this.$refs.doceditcontainer.ej2Instances.ribbon.showItems({ tabId: 'Home', groupIndex: 2, itemIndexes: [5, 6] } , false);
 
-// To show the Bold and Italic items using ribbon item information
+// To show the Bold and Italic items using the ribbon item information
 this.$refs.doceditcontainer.ej2Instances.ribbon.showItems({ tabId: 'Home', groupIndex: 2, itemIndexes: [5, 6] } , true);
 
-// To hide the item using item id
+// To hide the item using the item id
 this.$refs.doceditcontainer.ej2Instances.ribbon.showItems('custom_item', false);
 ```
 
 ### Enable/Disable Item
 
-Using [`enableItems`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container/ribbon#enableitems) API in Document editor ribbon to enable/disable the existing item.
+Using the [`enableItems`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container/ribbon#enableitems) API in the Document Editor ribbon to enable/disable the existing item.
 
 ```ts
-// To disable the underline using ribbon item info
+// To disable the underline using the ribbon item info
 this.$refs.doceditcontainer.ej2Instances.ribbon.enableItems({ tabId: 'Home', groupIndex: 2, itemIndexes: [7] },false);
 
-// To enable the underline using ribbon item info
+// To enable the underline using the ribbon item info
 this.$refs.doceditcontainer.ej2Instances.ribbon.enableItems({ tabId: 'Home', groupIndex: 2, itemIndexes: [7] },true);
 
-// To disable the item using id
+// To disable the item using the id
 this.$refs.doceditcontainer.ej2Instances.ribbon.enableItems('custom_item', false);
 
 ```
@@ -482,7 +482,7 @@ You can use the [`addItem`](https://ej2.syncfusion.com/vue/documentation/api/doc
 
 <template>
 <div class="control-section">
-    <ejs-documenteditorcontainer ref="doceditcontainer" :toolbarMode="'Ribbon'" 
+    <ejs-documenteditorcontainer ref="documenteditorcontainer" :toolbarMode="'Ribbon'" 
     :serviceUrl="hostUrl" :enableToolbar='true' height='600px'></ejs-documenteditorcontainer>
 </div>
 </template>
@@ -494,7 +494,7 @@ const documenteditorcontainer = ref(null);
 provide('DocumentEditorContainer', [Toolbar, Ribbon]);
 
 onMounted(() => {
-    const container = doceditcontainer.value?.ej2Instances;
+    const container = documenteditorcontainer.value?.ej2Instances;
     // To add the item at the end of the specified group (the item will be added at the end of the Undo group)
     const ribbonItem = {
       type: 'Button',
