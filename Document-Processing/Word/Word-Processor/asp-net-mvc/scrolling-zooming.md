@@ -10,7 +10,7 @@ documentation: ug
 
 # Scrolling and Zooming in ASP.NET MVC DOCX Editor
 
-The Document Editor renders the document page by page. You can scroll through the pages by using the mouse wheel or touch interactions. You can also scroll to a specific page by using the `scrollToPage()` method of the Document Editor instance.
+The DOCX Editor renders the document page by page. You can scroll through the pages by using the mouse wheel or touch interactions. You can also scroll to a specific page by using the `scrollToPage()` method of the DOCX Editor instance.
 
 
 {% tabs %}
@@ -42,7 +42,7 @@ To move the selection to a page and bring it into view, use the `goToPage()` met
 
 ## Zooming
 
-You can scale the contents in the Document Editor, ranging from 10% to 500% of the actual size. You can achieve this using the mouse or touch interactions. You can also use the `zoomFactor` property of the Document Editor instance. The value can be specified in a range from 0.1 to 5.
+You can scale the contents in the DOCX Editor, ranging from 10% to 500% of the actual size. You can achieve this using the mouse or touch interactions. You can also use the `zoomFactor` property of the DOCX Editor instance. The value can be specified in a range from 0.1 to 5.
 
 
 {% tabs %}
@@ -57,7 +57,7 @@ You can scale the contents in the Document Editor, ranging from 10% to 500% of t
 
 ## Page Fit Type
 
-Apart from specifying the zoom factor as a value, the Document Editor provides an option to specify page fit options such as fit to full page or fit to page width. You can set this option using the `fitPage()` method of the Document Editor instance.
+Apart from specifying the zoom factor as a value, the DOCX Editor provides an option to specify page fit options such as fit to full page or fit to page width. You can set this option using the `fitPage()` method of the DOCX Editor instance.
 
 
 {% tabs %}

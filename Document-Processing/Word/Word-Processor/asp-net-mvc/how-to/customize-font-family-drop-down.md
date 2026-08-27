@@ -10,7 +10,7 @@ documentation: ug
 
 # How to Customize Font Family in ASP.NET MVC DOCX Editor
 
-Document Editor provides options to customize the font family drop-down list values using `fontFamilies` in Document Editor settings. Fonts added in `fontFamilies` of `documentEditorSettings` will be displayed in the font drop-down list of the text properties pane and font dialog.
+DOCX Editor provides options to customize the font family drop-down list values using `fontFamilies` in Document Editor settings. Fonts added in `fontFamilies` of `documentEditorSettings` will be displayed in the font drop-down list of the text properties pane and font dialog.
 
 Similarly, you can use the `documentEditorSettings` property with the DocumentEditor control as well.
 

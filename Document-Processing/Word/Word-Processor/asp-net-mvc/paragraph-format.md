@@ -10,7 +10,7 @@ documentation: ug
 
 # Paragraph Format in ASP.NET MVC DOCX Editor
 
-Document editor supports various paragraph formatting options such as text alignment, indentation, paragraph spacing, and more.
+DOCX Editor supports various paragraph formatting options such as text alignment, indentation, paragraph spacing, and more.
 
 ## Indentation
 
@@ -132,11 +132,11 @@ documenteditor.selection.paragraphFormat.borders.bottom.color = "#000000";
 
 ```
 
-N> At present, the Document editor component displays all the border styles as a single line. But you can apply any border style and get the proper display in the Microsoft Word app when opening the exported Word document.
+N> At present, the DOCX Editor component displays all the border styles as a single line. But you can apply any border style and get the proper display in the Microsoft Word app when opening the exported Word document.
 
 ## Show or hide paragraph marks
 
-You can show or hide the hidden formatting symbols like spaces, tabs, paragraph marks, and breaks in the Document editor component. These marks help identify the start and end of a paragraph and all the hidden formatting symbols in a Word document.
+You can show or hide the hidden formatting symbols like spaces, tabs, paragraph marks, and breaks in the DOCX Editor component. These marks help identify the start and end of a paragraph and all the hidden formatting symbols in a Word document.
 
 The following example code illustrates how to show or hide paragraph marks.
 
@@ -158,7 +158,7 @@ documenteditor.documentEditorSettings.showHiddenMarks = true;
 
 ## Online Demo
 
-Explore how to apply paragraph formatting in Word documents using the ASP.NET MVC Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/paragraphformatting#/tailwind3).
+Explore how to apply paragraph formatting in Word documents using the ASP.NET MVC DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/paragraphformatting#/tailwind3).
 
 ## See Also
 
