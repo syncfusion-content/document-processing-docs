@@ -89,7 +89,7 @@ Here, the [React Spreadsheet component](https://www.syncfusion.com/spreadsheet-e
 {% tabs %}
 {% highlight bash tabtitle="NPM" %}
 
-npm install @syncfusion/ej2-react-spreadsheet
+npm install @syncfusion/ej2-react-spreadsheet --save
 
 {% endhighlight %}
 {% highlight bash tabtitle="YARN" %}
@@ -114,14 +114,10 @@ Add the required Spreadsheet theme style reference to `src/app/globals.css` file
 {% tabs %}
 {% highlight css tabtitle="globals.css" %}
 
-@import '@syncfusion/ej2-tailwind3-theme/styles/spreadsheet/index.css';
+@import '../../node_modules/@syncfusion/ej2-tailwind3-theme/styles/spreadsheet/index.css';
 
 {% endhighlight %}
 {% endtabs %}
-
-N> The `index.css` file automatically includes all required dependent component styles for the Spreadsheet. You do not need to import individual dependency styles such as Base, Inputs, Buttons, SplitButtons, Lists, Navigations, Popups, Dropdowns, Grids separately.
-
-N> Refer to the [Themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a Next.js project.
 
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 

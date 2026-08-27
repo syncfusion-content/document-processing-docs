@@ -81,10 +81,6 @@ Add the required Spreadsheet theme style reference to `src/App.css` file:
 @import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/spreadsheet/index.css';
 ```
 
-N> The `index.css` file automatically includes all required dependent component styles for the Spreadsheet. You do not need to import individual dependency styles such as Base, Inputs, Buttons, SplitButtons, Lists, Navigations, Popups, Dropdowns, Grids separately.
-
-N> Refer to the [Themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a React project.
-
 ## Add the Syncfusion® React Spreadsheet Component
 
 Now, import the `SpreadsheetComponent` into `src/App.js` file and replace the existing code with the following:

@@ -66,7 +66,7 @@ cd my-react-router-app
 To include the React Spreadsheet component in your project, use the following command:
 
 ```bash
-npm install @syncfusion/ej2-react-spreadsheet
+npm install @syncfusion/ej2-react-spreadsheet --save
 ```
 
 ## Import the required CSS styles
@@ -84,10 +84,6 @@ Add the required Spreadsheet theme style reference to `app.css` file:
 ```css
 @import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/spreadsheet/index.css';
 ```
-
-N> The `index.css` file automatically includes all required dependent component styles for the Spreadsheet. You do not need to import individual dependency styles such as Base, Inputs, Buttons, SplitButtons, Lists, Navigations, Popups, Dropdowns, Grids separately.
-
-N> Refer to the [Themes topic](https://ej2.syncfusion.com/react/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a Remix project.
 
 ## Configure Server-Side Rendering (SSR)
 

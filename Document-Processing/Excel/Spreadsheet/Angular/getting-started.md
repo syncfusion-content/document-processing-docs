@@ -125,13 +125,13 @@ cd spreadsheet-app
 The [Angular Spreadsheet Editor](https://www.npmjs.com/package/@syncfusion/ej2-angular-spreadsheet) package uses the Ivy-based Angular library distribution [format](https://angular.dev/tools/libraries/angular-package-format) and is compatible with `Angular 12` and above. Use the following command to install the package:
 
 ```
-npm install @syncfusion/ej2-angular-spreadsheet
+npm install @syncfusion/ej2-angular-spreadsheet --save
 ```
 
 For `Angular versions below 12`, use the legacy `ngcc` package instead:
 
 ```
-npm install @syncfusion/ej2-angular-spreadsheet@ngcc
+npm install @syncfusion/ej2-angular-spreadsheet@ngcc --save
 ```
 
 ## Register a Syncfusion License Key
@@ -156,10 +156,6 @@ Add the required Spreadsheet theme style reference to `src/styles.css` file:
 ```css
 @import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/spreadsheet/index.css';
 ```
-
-N> The `index.css` file automatically includes all required dependent component styles for the Spreadsheet. You do not need to import individual dependency styles such as Base, Inputs, Buttons, SplitButtons, Lists, Navigations, Popups, Dropdowns, Grids separately.
-
-N> Refer to the [Themes topic](https://ej2.syncfusion.com/angular/documentation/appearance/overview) to learn more about built-in themes and different ways to refer to themes in an Angular project.
 
 ## Add the Syncfusion® Angular Spreadsheet component
 

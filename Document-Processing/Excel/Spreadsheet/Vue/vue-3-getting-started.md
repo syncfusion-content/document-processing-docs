@@ -115,7 +115,7 @@ cd spreadsheet-app
 Install the [Vue Spreadsheet Editor](https://www.npmjs.com/package/@syncfusion/ej2-vue-spreadsheet) package from npm using the following command:
 
 ```
-npm install @syncfusion/ej2-vue-spreadsheet
+npm install @syncfusion/ej2-vue-spreadsheet --save
 ```
 
 ## Import the required CSS styles
@@ -133,14 +133,10 @@ Add the required Spreadsheet theme style reference to `src/style.css` file:
 {% tabs %}
 {% highlight html tabtitle="style.css" %}
 
-@import "@syncfusion/ej2-tailwind3-theme/styles/spreadsheet/index.css";
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/spreadsheet/index.css";
 
 {% endhighlight %}
 {% endtabs %}
-
-N> The `index.css` file automatically includes all required dependent component styles for the Spreadsheet. You do not need to import individual dependency styles such as Base, Inputs, Buttons, SplitButtons, Lists, Navigations, Popups, Dropdowns, Grids separately.
-
-N> Refer to the [Themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a Vue 3 project.
 
 ## Add the Vue Spreadsheet component to the application
 
