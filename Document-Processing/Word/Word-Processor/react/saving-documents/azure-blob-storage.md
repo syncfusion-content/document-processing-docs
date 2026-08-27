@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 To save a document to Azure Blob Storage, you can follow the steps below.
 
-**Step 1:** Create a Simple [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) sample in React.
+**Step 1:** Create a Simple [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) sample in React.
 
-Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in React. This will give you a basic setup of the Document Editor component.
+Follow the instructions provided in this [link](../getting-started) to create a simple DOCX Editor sample in React. This will give you a basic setup of the DOCX Editor component.
 
 **Step 2:** Modify the `DocumentEditorController.cs` File in the Web Service Project
 
@@ -109,7 +109,7 @@ private string GetValue(IFormCollection data, string key)
 
 N> Replace **Your Connection string from Azure** with the actual connection string for your Azure Blob Storage account and **Your container name in Azure** with the actual container name.
 
-**Step 3:**  Modify the index File in the Document Editor sample
+**Step 3:**  Modify the index File in the DOCX Editor sample
 
 On the client side, export the document to a blob using [`saveAsBlob`](https://ej2.syncfusion.com/react/documentation/api/document-editor#saveAsBlob) and send it to the server side for saving in the Azure Blob Storage container.
 

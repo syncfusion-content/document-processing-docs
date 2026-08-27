@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 # Open Documents from Dropbox in React DOCX Editor
 
-To load a document from Dropbox cloud file storage in a [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor), you can follow the steps below.
+To load a document from Dropbox cloud file storage in a [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor), you can follow the steps below.
 
 **Step 1:** Create a Dropbox API app
 
 To create a Dropbox API App, you can follow the official Dropbox documentation [link](https://www.dropbox.com/developers/documentation/dotnet#tutorial). The process involves visiting the Dropbox Developer website and using their App Console to set up your API app. This app will allow you to interact with Dropbox programmatically, enabling secure access to files and data.
 
-**Step 2:** Create a simple Document Editor sample in React
+**Step 2:** Create a simple DOCX Editor sample in React
 
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in React. This will give you a basic setup of the Document Editor component.
+Start by following the steps provided in this [link](../getting-started) to create a simple DOCX Editor sample in React. This will give you a basic setup of the DOCX Editor component.
 
 **Step 3:** Modify the `DocumentEditorController.cs` file in the web service project
 
@@ -103,7 +103,7 @@ public async Task<string> LoadFromDropBox([FromBody] Dictionary<string, string> 
 
 N> Replace **Your_Dropbox_Access_Token** with your actual Dropbox access token and **Your_Folder_Name** with your folder name.
 
-**Step 4:** Modify the index file in the Document Editor sample
+**Step 4:** Modify the index file in the DOCX Editor sample
 
 On the client side, the document returned from the web service is opened using the [`open`](https://ej2.syncfusion.com/react/documentation/api/document-editor#open) method.
 

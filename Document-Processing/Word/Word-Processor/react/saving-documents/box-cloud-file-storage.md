@@ -19,9 +19,9 @@ To access Box storage programmatically, you'll need a developer account with Box
 N> 1. Before accessing files, you need to authenticate your application to access your Box account. Box API supports `OAuth 2.0 authentication` for this purpose.
 N> 2. After creating the Box application, grant it access to the specific folder where documents will be saved. In the Box Developer Console, navigate to your application's configuration and add the target folder under the authorized folders. This folder authorization is required for App Tokens/JWT authentication to access files.
 
-**Step 2:** Create a Simple Document Editor sample in React
+**Step 2:** Create a Simple DOCX Editor sample in React
 
-Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in React. This will give you a basic setup of the Document Editor component.
+Follow the instructions provided in this [link](../getting-started) to create a simple DOCX Editor sample in React. This will give you a basic setup of the DOCX Editor component.
 
 **Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
 
@@ -131,7 +131,7 @@ private string GetValue(IFormCollection data, string key)
 
 N> replace **Your_Box_Storage_Access_Token** with your actual box access token, and **Your_Folder_ID** with the ID of the folder in your box storage where you want to perform specific operations. Remember to use your valid box API credentials, as **Your_Box_Storage_ClientID** and **Your_Box_Storage_ClientSecret"** are placeholders for your application's API key and secret.
 
-**Step 4:**  Modify the index File in the Document Editor sample
+**Step 4:**  Modify the index File in the DOCX Editor sample
 
 On the client side, export the document to a blob using [`saveAsBlob`](https://ej2.syncfusion.com/react/documentation/api/document-editor#saveAsBlob) and send it to the server side for saving in Box cloud file storage.
 
