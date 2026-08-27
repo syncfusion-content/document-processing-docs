@@ -147,4 +147,4 @@ N> Get the pod names in the AWS Console or using the below AWS CLI command.
 kubectl get pods
 ```
 
-Finally, you can access the sample at localhost: http://<your-ip>/api/documenteditor/
+Finally, you can access the sample at localhost: http://```<your-ip>```/api/documenteditor/
