@@ -18,13 +18,13 @@ domainurl: ##DomainURL##
 
 * Provides options such as Ignore, Ignore All, Change, and Change All in the spell check dialog.
 
-## Configure spell check in React Document Editor
+## Configure spell check in React DOCX Editor
 
 Spell checking is enabled using the [enableSpellCheck](https://ej2.syncfusion.com/documentation/api/document-editor-container/index-default#enablespellcheck) property and by configuring the spellChecker settings. A server-side service is required to process text, detect misspelled words, and provide suggestions for display in the editor.
 
 ### Client-side configuration
 
-Spell check can be enabled in the Document Editor using the [enableSpellCheck](https://ej2.syncfusion.com/documentation/api/document-editor-container/index-default#enablespellcheck) property. Configure the spell check settings with a valid service URL and language ID to enable spelling validation and suggestions.
+Spell check can be enabled in the DOCX Editor using the [enableSpellCheck](https://ej2.syncfusion.com/documentation/api/document-editor-container/index-default#enablespellcheck) property. Configure the spell check settings with a valid service URL and language ID to enable spelling validation and suggestions.
 
 The following code example demonstrates how to enable spell check and configure basic spell checker settings:
 
@@ -69,7 +69,7 @@ export default App;
 
 The above-mentioned hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service as shown below.
 
-The Document Editor client requires a server-side API to process text, identify misspelled words, and provide suggestions in the context menu. The server returns a JSON response containing details about misspelled words and their suggestions.
+The DOCX Editor client requires a server-side API to process text, identify misspelled words, and provide suggestions in the context menu. The server returns a JSON response containing details about misspelled words and their suggestions.
 
 For more information on configuring the spell check service, refer to the following:
 
@@ -83,7 +83,7 @@ For more information on configuring the spell check service, refer to the follow
 
 ### Allow suggestions
 
-By default, the Document Editor retrieves both spelling errors and suggestions for misspelled words, allowing users to correct them through context menu options. This behavior can be modified using the [allowSpellCheckAndSuggestion](https://ej2.syncfusion.com/react/documentation/api/document-editor/spellchecker#allowspellcheckandsuggestion) API to perform only spell checking without fetching suggestions.
+By default, the DOCX Editor retrieves both spelling errors and suggestions for misspelled words, allowing users to correct them through context menu options. This behavior can be modified using the [allowSpellCheckAndSuggestion](https://ej2.syncfusion.com/react/documentation/api/document-editor/spellchecker#allowspellcheckandsuggestion) API to perform only spell checking without fetching suggestions.
 
 The following code example demonstrates how to enable spell check suggestions.
 
@@ -107,7 +107,7 @@ container.documentEditor.spellChecker.removeUnderline = false;
 
 ### Language configuration
 
-The Document Editor supports multi-language spell checking. Multiple languages (dictionaries) can be added on the server side, and the language used for spell checking must match the [languageID](https://ej2.syncfusion.com/documentation/api/document-editor/spellchecker#get-languageid-number) specified in the Document Editor.
+The DOCX Editor supports multi-language spell checking. Multiple languages (dictionaries) can be added on the server side, and the language used for spell checking must match the [languageID](https://ej2.syncfusion.com/documentation/api/document-editor/spellchecker#get-languageid-number) specified in the DOCX Editor.
 
 The following code example demonstrates how to configure the languageID.
 
@@ -161,7 +161,7 @@ To write a Web API for word-by-word spell checking, refer to the [link](https://
 
 ### Optimized spell check
 
-The Document Editor provides an option to perform spell checking page by page when loading documents. By default, this property is set to false, so the spell check web API is called for each word in the document. To optimize the frequency of spell check API calls, you can enable the [enableOptimizedSpellCheck](https://ej2.syncfusion.com/react/documentation/api/document-editor/spellchecker#get-enableoptimizedspellcheck-boolean) property.
+The DOCX Editor provides an option to perform spell checking page by page when loading documents. By default, this property is set to false, so the spell check web API is called for each word in the document. To optimize the frequency of spell check API calls, you can enable the [enableOptimizedSpellCheck](https://ej2.syncfusion.com/react/documentation/api/document-editor/spellchecker#get-enableoptimizedspellcheck-boolean) property.
 
 The following code example illustrates how to enable optimized spell checking.
 
@@ -201,4 +201,4 @@ The Spelling option is available in the status bar once spell check is enabled. 
 
 ## Online demo
 
-Explore how to enable spell check in the Document Editor using React through the live demo provided [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/spell-check).
+Explore how to enable spell check in the DOCX Editor using React through the live demo provided [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/spell-check).

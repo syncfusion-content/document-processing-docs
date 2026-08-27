@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Save to Google Drive in ASP.NET MVC DOCX Editor | Syncfusion
-description: Save documents to Google Drive from React DOCX Editor, enabling cloud storage integration and streamlined document management.
+description: Save documents to Google Drive from ASP .NET MVC DOCX Editor, enabling cloud storage integration and streamlined document management.
 platform: document-processing
 control: Save document to Google Drive
 documentation: ug
