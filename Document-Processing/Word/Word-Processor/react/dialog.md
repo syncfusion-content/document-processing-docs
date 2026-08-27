@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Dialogs in React DOCX Editor
 
-[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) provides dialog support for major operations such as inserting or editing hyperlinks, and formatting text, paragraph, style, list, and table properties.
+[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) provides dialog support for major operations such as inserting or editing hyperlinks, and formatting text, paragraph, style, list, and table properties.
 
 ## Font Dialog
 
 The Font dialog allows you to modify all text properties for selected contents at once, such as bold, italic, underline, font size, font color, strikethrough, subscript, and superscript.
 
->Document Editor features are segregated into individual feature-wise modules. To use the Font dialog, inject the 'FontDialog' module using 'DocumentEditor.Inject(Selection, SfdtExport, Editor, FontDialog)'.
+>DOCX Editor features are segregated into individual feature-wise modules. To use the Font dialog, inject the 'FontDialog' module using 'DocumentEditor.Inject(Selection, SfdtExport, Editor, FontDialog)'.
 >To enable the Font dialog for a document editor instance, set 'enableFontDialog' to true.
 
 Refer to the following example.

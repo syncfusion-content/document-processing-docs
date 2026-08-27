@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Content Controls in React DOCX Editor
 
-[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) provides support for inserting, editing content controls.
+[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) provides support for inserting, editing content controls.
 
 Content controls can be categorized based on their occurrence in a document as follows:
 

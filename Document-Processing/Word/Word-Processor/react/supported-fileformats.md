@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Supported File Formats in React DOCX Editor
 
-[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports a wide range of Microsoft Word and other document formats. Some operations are handled client-side, while others require server-side processing.
+[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports a wide range of Microsoft Word and other document formats. Some operations are handled client-side, while others require server-side processing.
 
 ## Supported File Formats
 
-The following table describes supported formats and their conversion capabilities in the Document Editor.
+The following table describes supported formats and their conversion capabilities in the DOCX Editor.
 
 | File Format                          | Open   | Export |
 |--------------------------------------|--------|--------|
@@ -34,7 +34,7 @@ N> * Requires server-side interactions for the operations.
 
 ## Supported platforms for server-side dependencies
 
-You can deploy Web Services for the server-side dependencies of the Document Editor component on the following platforms.
+You can deploy Web Services for the server-side dependencies of the DOCX Editor component on the following platforms.
 
 - [ASP.NET Core](./web-services/core)
 - [ASP.NET MVC](./web-services/mvc)

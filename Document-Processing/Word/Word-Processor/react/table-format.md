@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Table format in React DOCX Editor
 
-[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) customizes the formatting of a table or table cells such as table width, cell margins, cell spacing, background color, and table alignment. This section describes how to customize these formatting for selected cells, rows, or a table in detail.
+[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) customizes the formatting of a table or table cells such as table width, cell margins, cell spacing, background color, and table alignment. This section describes how to customize these formatting for selected cells, rows, or a table in detail.
 
 ## Cell margins
 
@@ -130,7 +130,7 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ## Apply borders
 
-Document Editor exposes API to customize the borders for table cells by specifying the settings. Refer to the following sample code.
+DOCX Editor exposes API to customize the borders for table cells by specifying the settings. Refer to the following sample code.
 
 
 ```ts
@@ -180,7 +180,7 @@ Please check the below gif which illustrates how to apply a border for selected 
 
 ## Working with row formatting
 
-Document Editor allows various row formatting such as height and repeat header.
+DOCX Editor allows various row formatting such as height and repeat header.
 
 ### Row height
 
@@ -241,7 +241,7 @@ documenteditor.selection.rowFormat.allowRowBreakAcrossPages=false;
 
 ### Title
 
-Document Editor exposes API to get or set the table title of the selected table. Refer to the following sample code to set title.
+DOCX Editor exposes API to get or set the table title of the selected table. Refer to the following sample code to set title.
 
 ```ts
 documenteditor.selection.tableFormat.title = 'Shipping Details';
@@ -249,7 +249,7 @@ documenteditor.selection.tableFormat.title = 'Shipping Details';
 
 ### Description
 
-Document Editor exposes API to get or set the table description of the selected table. Refer to the following sample code to set description.
+DOCX Editor exposes API to get or set the table description of the selected table. Refer to the following sample code to set description.
 
 ```ts
 documenteditor.selection.tableFormat.description = 'Freight cost and shipping details';
@@ -257,7 +257,7 @@ documenteditor.selection.tableFormat.description = 'Freight cost and shipping de
 
 ## Online Demo
 
-Explore how to format tables in Word documents using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/table-formatting).
+Explore how to format tables in Word documents using the React DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/table-formatting).
 
 ## See Also
 

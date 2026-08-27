@@ -109,7 +109,7 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ## Page Fit Type
 
-Apart from specifying the zoom factor as a value, the Document Editor provides an option to specify page fit options such as fit to full page or fit to page width. You can set this option using the `fitPage` method of the document editor instance. Refer to the following code example.
+Apart from specifying the zoom factor as a value, the DOCX Editor provides an option to specify page fit options such as fit to full page or fit to page width. You can set this option using the `fitPage` method of the document editor instance. Refer to the following code example.
 
 
 {% raw %}
