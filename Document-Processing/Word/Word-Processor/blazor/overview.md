@@ -3,7 +3,7 @@ layout: post
 title: About Syncfusion Blazor DOCX Editor Control | Syncfusion
 description: Learn about the introduction of Syncfusion Essential Studio Blazor DOCX Editor control and more details.
 platform: document-processing
-control: Document Editor
+control: DOCX Editor
 documentation: ug
 ---
 
@@ -11,7 +11,7 @@ documentation: ug
 
 The [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) is a feature-rich, user-interactive component that enables you to create, edit, view, and print Word documents with advanced formatting, editing capabilities, and broad support for document import and export formats.
 
-![Output of Blazor Document Editor](./images/docx-editor.png)
+![Output of Blazor DOCX Editor](./images/docx-editor.png)
 
 ## Key Features
 
