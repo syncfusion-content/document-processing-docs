@@ -1,13 +1,13 @@
 ---
 layout: post
-title: AI Assist Integration in ASP.NET MVC Spreadsheet control | Syncfusion
-description: Learn how to set up and configure AI Assist in the Syncfusion ASP.NET MVC Spreadsheet control for AI-powered features.
+title: AI Assist Integration in ASP.NET MVC Spreadsheet | Syncfusion
+description: AI Assist integration in ASP.NET MVC Spreadsheet explains AI-powered features through configuration and seamless service integration.
 platform: document-processing
 control: AI Assist
 documentation: ug
 ---
 
-# AI Assist Integration in ASP.NET MVC Spreadsheet control
+# AI Assist Integration in ASP.NET MVC Spreadsheet
 
 ## Integration
 

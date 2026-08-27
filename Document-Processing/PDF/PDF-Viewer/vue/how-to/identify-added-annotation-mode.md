@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Identify added annotation mode in Vue PDF Viewer | Syncfusion
-description: Learn how to determine whether an added annotation was drawn, imported, or existing using the annotationSelect event in the Vue PDF Viewer.
+title: How to Identify the Added Annotation Mode in Vue PDF | Syncfusion
+description: Identify the annotation mode that was used to add an annotation in the Vue PDF Viewer so you can branch on the annotation type in your code.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Identify added annotation mode in Vue PDF Viewer
+# How to Identify the Added Annotation Mode in Vue PDF Viewer
 
 Determine whether an added annotation was UI-drawn, imported, or existing using the [annotationAddMode](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#annotationadd) property of the [annotationSelect](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#annotationselect) event.
 

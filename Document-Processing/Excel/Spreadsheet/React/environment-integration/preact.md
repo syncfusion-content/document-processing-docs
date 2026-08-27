@@ -1,13 +1,13 @@
 ---
 layout: post
-title: React Spreadsheet getting started with Preact | Syncfusion
-description: Checkout and learn how to use the React Spreadsheet component of Syncfusion Essential JS 2 in a Preact project.
+title: Getting Started with React Spreadsheet in Preact | Syncfusion
+description: Learn how to get started with the Syncfusion React Spreadsheet component in a Preact project. Explore setup and configuration steps
 control: Spreadsheet
 platform: document-processing
 documentation: ug
 ---
 
-# Getting started with Syncfusion® React Spreadsheet in Preact
+# Getting Started with React Spreadsheet in Preact
 
 This article outlines the steps required to set up a [`Preact`](https://preactjs.com) project and integrate Syncfusion React Spreadsheet.
 

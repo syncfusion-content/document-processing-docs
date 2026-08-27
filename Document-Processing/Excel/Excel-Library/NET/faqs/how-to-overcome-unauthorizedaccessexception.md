@@ -1,12 +1,12 @@
 ---
-title: How to overcome UnauthorizedAccessException | XlsIO | Syncfusion
-description: This page shows how to overcome UnauthorizedAccessException using .NET Excel Library.
+title: How to Resolve Access Errors in .NET Excel Library | Syncfusion
+description: Overcome UnauthorizedAccessException when using the Syncfusion .NET Excel Library to work with Excel documents.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to overcome UnauthorizedAccessException?
+# How to fix UnauthorizedAccessException in .NET Excel Library
 
 The [UnauthorizedAccessException](https://docs.microsoft.com/en-us/dotnet/api/system.unauthorizedaccessexception?view=netcore-3.1) occurs when you are trying to write in a read-only/hidden file or if you don’t have access to the particular folder that contains the file or the folder might be locked currently. 
 

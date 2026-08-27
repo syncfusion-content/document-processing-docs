@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Security Advisories in React DOCX Editor | Syncfusion
-description: Learn here all about Security Advisories in the Syncfusion React Document Editor of Syncfusion Essential JS 2 and more.
+description: Security advisories in React DOCX Editor provide information about vulnerability fixes and security updates to help maintain secure applications.
 control: Security advisories
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Security Advisories in React Document Editor
+# Security Advisories in React DOCX Editor
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> places the utmost priority on the security of our controls. Users can rest assured about the security of our controls, as we have implemented all necessary measures to mitigate security vulnerabilities such as cross-site scripting and insecure dependencies. To meet security standards, Syncfusion<sup style="font-size:70%">&reg;</sup> utilizes the [ESLint](https://eslint.org/) and [ESLint plugin security](https://github.com/eslint-community/eslint-plugin-security#rules) tools for static code analysis. Additionally, Syncfusion<sup style="font-size:70%">&reg;</sup> packages undergo software composition analysis using the SOOS security tool.
 

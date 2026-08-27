@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Notes in EJ2 ASP.NET MVC Syncfusion Spreadsheet Control
-description: Learn here all about the notes feature in EJ2 ASP.NET MVC Spreadsheet Control of Syncfusion Essential JS 2 and more.
+title: Notes in ASP.NET MVC Spreadsheet | Syncfusion
+description: Add and manage notes in the Syncfusion ASP.NET MVC Spreadsheet to provide contextual information within worksheets.
 platform: document-processing
 control: Notes
 documentation: ug
 ---
 
-# Notes in ASP.NET MVC Spreadsheet Control
+# Notes in ASP.NET MVC Spreadsheet
 
 The **Notes** feature is used to insert comments, provide feedback, suggest changes, or leave remarks on specific cells while reviewing documents in the Spreadsheet. You can enable or disable the notes functionality using the [enableNotes](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.Spreadsheet.Spreadsheet.html#Syncfusion_EJ2_Spreadsheet_Spreadsheet_EnableNotes) property, which defaults to **true**.
 

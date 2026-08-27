@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Text markup annotation in Vue PDF Viewer | Syncfusion
-description: Learn to add, edit, delete, and customize text markup annotations like highlight, underline, and squiggly in Syncfusion Vue PDF Viewer.
+title: Text Markup Annotation in Vue PDF Viewer | Syncfusion
+description: Use text markup annotations in the Vue PDF Viewer, including highlight, underline, strikethrough, and squiggly, to mark up important content.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text markup annotation in Vue PDF Viewer
+# Text Markup Annotations in Vue PDF Viewer
 
 The PDF Viewer provides options to add, edit, and delete text markup annotations, including highlight, underline, strikethrough, and squiggly.
 

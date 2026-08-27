@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Overview of the JavaScript PDF Library | Syncfusion
+title: About Syncfusion JavaScript PDF Library | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
 description: Learn about the JavaScript PDF Library, including its key capabilities, system requirements, and supported platforms.
 platform: document-processing
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Overview of the JavaScript PDF Library
+# About Syncfusion JavaScript PDF Library
 
 The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) is a lightweight, high-performance non-UI library written natively in JavaScript for generating PDF documents in both Node.js and browser environments. It enables developers to integrate robust PDF functionality into their applications for creating, reading, and editing PDF documents, and does not require Adobe Acrobat. Designed to work across JavaScript, TypeScript, Angular, React, Vue, ASP.NET Core, and ASP.NET MVC, the [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) supports programmatic generation of PDF reports with rich content, including formatted text, images, shapes, hyperlinks, and lists. The library is compliant with PDF 1.7 (ISO 32000-1) and PDF 2.0 (ISO 32000-2:2020), and produces output compatible with all major PDF readers.
 

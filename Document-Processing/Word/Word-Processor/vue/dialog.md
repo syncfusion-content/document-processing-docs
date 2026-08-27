@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Dialog in Vue Document editor component | Syncfusion
-description: Learn here all about Dialog in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Dialogs in Vue DOCX Editor | Syncfusion
+description: The dialogs in Vue DOCX Editor provides built-in dialogs to edit text, paragraphs, tables, bookmarks, and other document elements.
 control: Dialog 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Dialog in Vue Document editor component
+# Dialogs in Vue DOCX Editor
 
-[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) provides dialog support to major operations such as insert or edit hyperlink, formatting text, paragraph, style, list and table properties.
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) provides dialog support for major operations such as inserting or editing hyperlinks, and formatting text, paragraph, style, list, and table properties.
 
 ## Font Dialog
 
-Font dialog allows you to modify all text properties for selected contents at once such as bold, italic, underline, font size, font color, strikethrough, subscript and superscript.
+The Font dialog allows you to modify all text properties for selected contents at once, such as bold, italic, underline, font size, font color, strikethrough, subscript, and superscript.
 
 Refer to the following example.
 
@@ -31,7 +31,7 @@ Refer to the following example.
 
 ## Paragraph dialog
 
-This dialog allows modifying the paragraph formatting for selection at once such as text alignment, indentation, and spacing.
+This dialog allows modifying the paragraph formatting for a selection at once, such as text alignment, indentation, and spacing.
 
 To open this dialog, refer to the following example.
 
@@ -48,7 +48,7 @@ To open this dialog, refer to the following example.
 
 ## Table dialog
 
-This dialog allows creating and inserting a table at cursor position by specifying the required number of rows and columns.
+This dialog allows creating and inserting a table at the cursor position by specifying the required number of rows and columns.
 
 To open this dialog, refer to the following example.
 
@@ -71,6 +71,7 @@ This dialog allows you to perform the following operations:
 * Navigate to a bookmark.
 * Create a bookmark at current selection.
 * Delete an existing bookmark.
+
 To open this dialog, refer to the following example.
 
 {% tabs %}
@@ -86,7 +87,7 @@ To open this dialog, refer to the following example.
 
 ## Hyperlink dialog
 
-This dialog allows editing or inserting a hyperlink at cursor position.
+This dialog allows editing or inserting a hyperlink at the cursor position.
 
 To open this dialog, refer to the following example.
 
@@ -103,7 +104,7 @@ To open this dialog, refer to the following example.
 
 ## Table of contents dialog
 
-This dialog allows creating and inserting table of contents at cursor position. If the table of contents already exists at cursor position, you can customize its properties.
+This dialog allows creating and inserting a table of contents at the cursor position. If the table of contents already exists at the cursor position, you can customize its properties.
 
 To open this dialog, refer to the following example.
 
@@ -199,7 +200,7 @@ export default {
 
 ## Styles Dialog
 
-This dialog allows managing the styles in a document. It will display all the styles in the document with options to modify the properties of the existing style or create new style with the help of ‘Style dialog’. Refer to the following example.
+This dialog allows managing the styles in a document. It will display all the styles in the document with options to modify the properties of the existing style or create a new style with the help of the 'Style dialog'. Refer to the following example.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -293,7 +294,7 @@ export default {
 
 ## Style dialog
 
-You can directly use this dialog for modifying any existing style or add new style by providing the style name.
+You can directly use this dialog for modifying any existing style or adding a new style by providing the style name.
 
 To open this dialog, refer to the following example.
 
@@ -399,15 +400,15 @@ To open this dialog, refer to the following example.
       <button v-on:click='showListDialog'>Open dialog</button>
     </div>
     <ejs-documenteditor ref="documenteditor" :enableSelection='true' :isReadOnly='false' :enableEditor='true'
-      :enableSfdtExport='true' :enableListDialog='true' height="370px" style="width: 100%;"></ejs-documenteditor>
+      :enableSfdtExport='true' :enableListDialog='true' :enableEditorHistory="true" height="370px" style="width: 100%;"></ejs-documenteditor>
   </div>
 </template>
 <script setup>
-import { DocumentEditorComponent as EjsDocumenteditor, Selection, Editor, ListDialog, SfdtExport } from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorComponent as EjsDocumenteditor, Selection, Editor, ListDialog, EditorHistory, SfdtExport } from '@syncfusion/ej2-vue-documenteditor';
 import { provide, ref } from 'vue';
 
 const documenteditor = ref(null);
-provide('DocumentEditor', [Selection, Editor, ListDialog, SfdtExport]);
+provide('DocumentEditor', [Selection, Editor, ListDialog, EditorHistory, SfdtExport]);
 
 const showListDialog = function () {
   //Open list dialog.
@@ -546,7 +547,7 @@ export default {
   },
   provide: {
     //Inject require modules
-    DocumentEditor:  [Selection, Editor, BordersAndShadingDialog, SfdtExport]
+    DocumentEditor: [Selection, Editor, BordersAndShadingDialog, SfdtExport]
   },
   methods: {
     showBordersAndShadingDialog: function () {
@@ -573,7 +574,7 @@ export default {
 
 ## Table options dialog
 
-This dialog allows customizing the default cell margins and spacing between each cells of the selected table.
+This dialog allows customizing the default cell margins and spacing between each cell of the selected table. A table must exist in the document for this dialog to act on; the following sample inserts a table on mount for that reason.
 
 To open this dialog, refer to the following example.
 
@@ -674,7 +675,7 @@ export default {
 
 ## Table properties dialog
 
-This dialog allows customizing the table, row, and cell properties of the selected table.
+This dialog allows customizing the table, row, and cell properties of the selected table. A table must exist in the document for this dialog to act on; the following sample inserts a table on mount for that reason.
 
 To open this dialog, refer to the following example.
 

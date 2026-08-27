@@ -1,12 +1,12 @@
 ---
-title: Does XlsIO Show "(Blank)" for Empty Pivot Table Values? | Syncfusion
-description: This Faq explains how XlsIO handles empty or null values in PivotTable cells, showing "(blank)" similar to Microsoft Excel behavior.
+title: How to Show Blank Pivot Values in .NET Excel Library | Syncfusion
+description: Handle blank cells in pivot table describes how to show the blank cells in the pivot table using the word "blank"
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Does XlsIO Show "(Blank)" for Empty Pivot Table Values?
+# How to display "(Blank)" in pivot tables in .NET Excel Library
 
 Yes. XlsIO follows the same behavior as Microsoft Excel when displaying empty or null values in PivotTable cells. Both Microsoft Excel and XlsIO display the text "(blank)" for empty string or null values in the data source when viewing the PivotTable.
 

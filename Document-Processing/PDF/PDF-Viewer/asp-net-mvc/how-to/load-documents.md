@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Load documents dynamically in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to load or switch PDF documents dynamically in the Syncfusion ASP.NET MVC PDF Viewer using the load method.
+title: How to Load Documents Dynamically in ASP.NET MVC PDF | Syncfusion
+description: Load or switch PDF documents dynamically in the ASP.NET MVC PDF Viewer using the load method to swap documents without reloading the page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Load documents dynamically in the ASP.NET MVC PDF Viewer
+# How to Load Documents Dynamically in ASP.NET MVC PDF Viewer
 
 Load or switch PDF documents dynamically after the initial load. Use the **load()** method to load a PDF by Base64 string or file name.
 

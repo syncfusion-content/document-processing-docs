@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Organize Pages Mobile View in Vue PDF Viewer component | Syncfusion
-description: Learn how to organize pages in the mobile view of the Vue PDF Viewer, including rotating, rearranging, inserting, deleting, and copying pages on mobile devices.
+title: Mobile View in Vue PDF Viewer | Syncfusion
+description: Use the Organize Pages panel on mobile devices in the Vue PDF Viewer to rotate, rearrange, add, remove, and duplicate PDF pages.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

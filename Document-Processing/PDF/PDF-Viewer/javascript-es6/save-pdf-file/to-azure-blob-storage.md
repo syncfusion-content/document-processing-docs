@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Save PDFs to Azure Blob Storage in Syncfusion TS PDF Viewer
-description: Learn how to save PDF files to Azure Blob Storage using the Syncfusion TypeScript PDF Viewer component in standalone and server-backed configurations.
+title: Save PDFs to Azure Blob Storage in JavaScript (ES6) | Syncfusion
+description: Save PDF files from the JavaScript (ES6) PDF Viewer to Azure Blob Storage using standalone and server-backed configurations, with code samples and tips.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Save PDF files to Azure Blob Storage in TypeScript
+# Save PDF Files to Azure Blob Storage in JavaScript (ES6) PDF Viewer
 
 The TypeScript PDF Viewer component supports saving PDF files to Azure Blob Storage using either a standalone (browser) configuration or a server-backed configuration. The following steps demonstrate both approaches and include prerequisites and security guidance for production deployments.
 

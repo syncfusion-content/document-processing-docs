@@ -1,12 +1,12 @@
 ---
-title: Word to Image Performance Benchmark Results | Syncfusion
+title: Word to Image Performance Benchmark in .NET Word | Syncfusion
 description: Explore the performance benchmark results of Word-to-Image conversion using the Syncfusion .NET Word Library across different operations and document sizes.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Word-to-Image Performance Benchmarks in .NET Word Library
+# Word to Image Performance Benchmark in .NET Word
 
 The Syncfusion<sup>&reg;</sup> .NET Word library (DocIO) enables high-performance Word document processing, including Word-to-Image conversion. This performance benchmark report highlights the speed and efficiency of the conversion, demonstrating how the library performs across varying document sizes and feature scenarios in real-world conditions.
 

@@ -1,12 +1,12 @@
 ---
-title: About WPF RichTextBox control | Syncfusion
-description: Learn here all about introduction of Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
+title: About Syncfusion WPF DOCX Editor Control | Syncfusion
+description: Learn about the introduction of Syncfusion Essential Studio WPF DOCX Editor control and more details.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: overview, richtextboxadv, sfrichtextboxadv
 ---
-# Overview of the Syncfusion<sup>&reg;</sup> WPF RichTextBox
+# About Syncfusion WPF DOCX Editor Control
 
 The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) is a feature-rich, user-interactive control that enables viewing, editing, and printing rich text content with advanced formatting and layout capabilities, supporting elements such as text, images, tables, paragraphs, and comments. 
 
@@ -23,4 +23,6 @@ The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor
 * Enables [cut](./Clipboard), [copy](./Clipboard), and [paste](./Clipboard) operations, including rich text content via the clipboard. 
 * Supports loading encrypted Word documents with valid password. 
 
-N> Currently, the SfRichTextBoxAdv cannot edit rich text in headers and footers. 
+> **Limitation:** The SfRichTextBoxAdv cannot currently edit rich text in headers and footers.
+
+N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool. 

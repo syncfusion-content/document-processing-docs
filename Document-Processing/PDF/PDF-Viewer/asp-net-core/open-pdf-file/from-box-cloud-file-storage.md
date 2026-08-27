@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Open PDF from cloud storage in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to load PDFs from Box cloud storage in the Syncfusion ASP.NET Core PDF Viewer component using a server-backed approach.
+title: From Box Cloud File Storage in ASP.NET Core PDF Viewer | Syncfusion
+description: Load and display PDF files stored in Box cloud storage in the ASP.NET Core PDF Viewer using a server-backed web service for authentication.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Open PDF from Box Cloud Storage
+# Open PDF from Box Cloud Storage in ASP.NET Core PDF Viewer
 
 Follow these steps to load a PDF from Box cloud storage using the server-backed PDF Viewer.
 

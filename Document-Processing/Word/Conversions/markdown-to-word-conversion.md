@@ -6,7 +6,7 @@ control: DocIO
 documentation: UG
 ---
 
-# Markdown to Word Conversion
+# Markdown to Word Conversion in .NET using Markdown Library
 
 Markdown is a lightweight markup language that adds formatting elements to plain text documents. The .NET Word (DocIO) library supports converting Markdown files to Word documents, which mostly follows the CommonMark specification and GitHub-flavored syntax.
 
@@ -252,7 +252,70 @@ End Using
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Markdown-to-Word-conversion/Encoding).
+
 N> Provide the encoding value before opening the Markdown file, as shown in the above code example.
+
+## Open a Word document from a Markdown document
+
+You can load the contents of a `MarkdownDocument` into a `WordDocument` instance by using the `WordDocument.Open(MarkdownDocument)` API.
+
+The following code example demonstrates how to open a Markdown document and save it as a Word document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+// Opens an existing Markdown document.
+using (MarkdownDocument markdownDocument = new MarkdownDocument("Input.md"))
+{
+    // Creates a new WordDocument instance.
+    using (WordDocument wordDocument = new WordDocument())
+    {
+        // Loads the Markdown document content into the Word document.
+        wordDocument.Open(markdownDocument);
+        // Saves the Word document as a DOCX file.
+        wordDocument.Save("Output.docx", FormatType.Docx);
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+// Opens an existing Markdown document.
+using (MarkdownDocument markdownDocument = new MarkdownDocument("Input.md"))
+{
+    // Creates a new WordDocument instance.
+    using (WordDocument wordDocument = new WordDocument())
+    {
+        // Loads the Markdown document content into the Word document.
+        wordDocument.Open(markdownDocument);
+        // Saves the Word document as a DOCX file.
+        wordDocument.Save("Output.docx", FormatType.Docx);
+    }
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+' Opens an existing Markdown document.
+Using markdownDocument As New MarkdownDocument("Input.md")
+    ' Creates a new WordDocument instance.
+    Using wordDocument As New WordDocument()
+        ' Loads the Markdown document content into the Word document.
+        wordDocument.Open(markdownDocument)
+        ' Saves the Word document as a DOCX file.
+        wordDocument.Save("Output.docx", FormatType.Docx)
+    End Using
+End Using
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Markdown-to-Word-conversion/Open-Word-document-from-Markdown).
 
 ## Supported Markdown Syntax
 

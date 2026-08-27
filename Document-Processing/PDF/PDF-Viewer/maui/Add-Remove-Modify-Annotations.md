@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Add, Remove, and Edit Annotations
+# Add, Remove, and Edit Annotations in .NET MAUI PDF Viewer
 
 This section explains the various functions in the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) for adding, removing, and editing annotations in a PDF document.
 

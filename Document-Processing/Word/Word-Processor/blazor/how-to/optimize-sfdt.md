@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Optimize the SFDT file in Blazor DOCX Editor Component | Syncfusion
-description: Learn here all about optimize the SFDT file in Document Editor in Syncfusion Blazor Document Editor component and more.
+title: How to Optimize SFDT Files in Blazor DOCX Editor | Syncfusion
+description: Optimize SFDT files in Syncfusion® Blazor DOCX Editor to reduce file size, improve performance, and enhance document loading and processing efficiency.
 platform: document-processing
 control: Document Editor
 documentation: ug
 ---
 
-# How to optimize the SFDT file in Blazor Document Editor
+# How to Optimize SFDT Files in Blazor DOCX Editor
 
 Starting from version v21.1.x, the SFDT file generated in [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) component is optimized by default to reduce the file size. All static keys are minified, and the final JSON string is compressed. This helps reduce the SFDT file size relative to a DOCX file and provides the following benefits:
 * Faster file transfer between client and server through the internet.
