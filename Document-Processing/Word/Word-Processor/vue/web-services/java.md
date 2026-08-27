@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Java in Vue Document editor component | Syncfusion
-description: Learn here all about Java in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Java Web Service in Vue DOCX Editor | Syncfusion
+description: Configure Java web services in the Vue DOCX Editor to handle server-side operations such as Word document import, export, spell checking, and more.
 control: Java 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Java in Vue Document editor component
+# Java Web Service in Vue DOCX Editor
 
-This page illustrates how to create web service in Java for the server-side dependent functionalities of Word Processor component a.k.a. Document Editor. Document Editor depends on server side interaction for below listed operations and it can be written in Java using `syncfusion-ej2-wordprocessor.jar` file.
+This page illustrates how to create a web service in Java for the server-side dependencies of the Word Processor component (a.k.a. Document Editor). Document Editor depends on server-side interactions for the operations listed below, which can be written in Java using the `syncfusion-ej2-wordprocessor.jar` file.
 
 * Import Word Document
 * Paste with formatting
@@ -20,9 +20,9 @@ This page illustrates how to create web service in Java for the server-side depe
 
 ## Supported Java versions
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Java library supports Java SE 8.0(1.8) or above versions.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Java library supports Java SE 8.0 (1.8) or above.
 
-## External Jars Required
+## External jars required
 
 The following jar files are required to be referenced in your Java application.
 
@@ -32,11 +32,11 @@ The following jar files are required to be referenced in your Java application.
 
 ## Download JAR file
 
-The JAR file is available in both [Syncfusion<sup style="font-size:70%">&reg;</sup> Essential-JS2](https://www.syncfusion.com/downloads/essential-js2) build and maven repository.
+The JAR file is available in both the [Syncfusion<sup style="font-size:70%">&reg;</sup> Essential-JS2](https://www.syncfusion.com/downloads/essential-js2) build and the Maven repository.
 
 ### Get JAR file from Syncfusion<sup style="font-size:70%">&reg;</sup> build
 
-You can get the `syncfusion-ej2-wordprocessor.jar` and its dependent jar files from Syncfusion<sup style="font-size:70%">&reg;</sup> build installed location.
+You can get the `syncfusion-ej2-wordprocessor.jar` and its dependent jar files from the Syncfusion<sup style="font-size:70%">&reg;</sup> build installed location.
 
 **Syntax:**
 > Jar file: `(installed location)/Syncfusion/Essential Studio/{Platform}/{version}/JarFiles/syncfusion-ej2-wordprocessor-{version}.jar`
@@ -44,7 +44,7 @@ You can get the `syncfusion-ej2-wordprocessor.jar` and its dependent jar files f
 **Example:**
 > Jar file: `C:/Program Files (x86)/Syncfusion/Essential Studio/Vue - EJ2/18.4.0.30/JarFiles/syncfusion-ej2-wordprocessor-18.4.0.30.jar`
 
-You can also get the jar files by installing [file formats controls](https://www.syncfusion.com/sales/products/fileformats?utm_source=ug&utm_medium=listing&utm_campaign=java-word-processor#). You can find the required jars in the build installed location.
+You can also get the jar files by installing [file format controls](https://www.syncfusion.com/sales/products/fileformats?utm_source=ug&utm_medium=listing&utm_campaign=java-word-processor#). You can find the required jars in the build installed location.
 
 **Syntax:**
 > Jar file: `(installed location)/Syncfusion/Essential Studio/{Platform}/{version}/JarFiles/syncfusion-ej2-wordprocessor-{version}.jar`
@@ -52,15 +52,15 @@ You can also get the jar files by installing [file formats controls](https://www
 **Example:**
 > Jar file: `C:/Program Files (x86)/Syncfusion/Essential Studio/FileFormats/18.4.0.30/JarFiles/syncfusion-ej2-wordprocessor-18.4.0.30.jar`
 
-### Referring JAR from Syncfusion<sup style="font-size:70%">&reg;</sup> Maven Repository
+### Refer to the JAR from the Syncfusion<sup style="font-size:70%">&reg;</sup> Maven Repository
 
-You can download the jars from the Syncfusion<sup style="font-size:70%">&reg;</sup> [maven repository](https://jars.syncfusion.com/) to use our artifacts in your projects. It helps to use the Syncfusion<sup style="font-size:70%">&reg;</sup> Java packages without installing Essential Studio<sup style="font-size:70%">&reg;</sup> or platform installation to development with Syncfusion<sup style="font-size:70%">&reg;</sup> controls.
+You can download the jars from the Syncfusion<sup style="font-size:70%">&reg;</sup> [Maven repository](https://jars.syncfusion.com/) to use our artifacts in your projects. It helps you use the Syncfusion<sup style="font-size:70%">&reg;</sup> Java packages without installing Essential Studio<sup style="font-size:70%">&reg;</sup> or platform installation for development with Syncfusion<sup style="font-size:70%">&reg;</sup> controls.
 
 #### Download Syncfusion<sup style="font-size:70%">&reg;</sup> Java packages
 
-You can easily download the Syncfusion<sup style="font-size:70%">&reg;</sup> packages for Java via maven repository. Follow the below guidelines to configure as per the tool.
+You can easily download the Syncfusion<sup style="font-size:70%">&reg;</sup> packages for Java via the Maven repository. Follow the guidelines below to configure as per the tool.
 
-#### Refer the maven repository in build tool
+#### Refer to the Maven repository in the build tool
 
 ##### Gradle
 
@@ -83,7 +83,7 @@ You can easily download the Syncfusion<sup style="font-size:70%">&reg;</sup> pac
     </repository>
 ```
 
-#### Refer the Syncfusion<sup style="font-size:70%">&reg;</sup> package in your project as the dependency
+#### Refer to the Syncfusion<sup style="font-size:70%">&reg;</sup> package in your project as a dependency
 
 ##### Gradle
 
@@ -105,13 +105,13 @@ You can easily download the Syncfusion<sup style="font-size:70%">&reg;</sup> pac
 
 This section explains how to create the Java web service for DocumentEditor.
 
-## Importing Word Document
+## Importing Word Documents
 
-As the Document editor client-side script requires the document in SFDT file format, you can convert the Word documents (.dotx,.docx,.docm), rich text format documents (.rtf), and text documents (.txt) into SFDT format by using this Web API.
+As the Document Editor client-side script requires the document in SFDT file format, you can convert the Word documents (.dotx,.docx,.docm), rich text format documents (.rtf), and text documents (.txt) into SFDT format by using this Web API.
 
-Note: Document editor Java library doesn’t have support for the **DOC format** Word document. As the DOC format is an older file format, we are concentrating on latest DOCX specific features and it will be more helpful in future if you use DOCX format to utilize some more features from Document editor. So, we recommend you to use the DOCX file format instead of DOC file format, to achieve your requirement.
+N> The Document Editor Java library does not support the **DOC format** Word document. As the DOC format is an older file format, we recommend using the DOCX file format to take advantage of the latest features.
 
-The following example code illustrates how to write a Web API for importing Word documents into Document Editor component.
+The following example code illustrates how to write a Web API for importing Word documents into the Document Editor component.
 
 ```java
     @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -126,13 +126,13 @@ The following example code illustrates how to write a Web API for importing Word
     }
 ```
 
-### Import document with TIFF, EMF and WMF images
+### Import a document with TIFF, EMF, and WMF images
 
-The web browsers do not support to display metafile images like EMF and WMF and also TIFF format images. As a fallback approach, you can convert the metafile/TIFF format image to raster image using any image converter in the `MetafileImageParsed` event and this fallback raster image will be displayed in the client-side Document editor component.
+Web browsers do not support displaying metafile images like EMF and WMF, or TIFF format images. As a fallback approach, you can convert the metafile/TIFF format image to a raster image using any image converter in the `MetafileImageParsed` event, and this fallback raster image will be displayed in the client-side Document Editor component.
 
->Note: In `MetafileImageParsedEventArgs` event argument, you can get the metafile stream using `getMetafileStream()` property and you can get the `getIsMetafile()` boolean value to determine whether the image  is meta file images(WMF,EMF) or TIFF format images. In below example, we have converted the TIFF to raster image in `ConvertTiffToRasterImage()` method using TwelveMonkeys ImageIO TIFF library.
+N> In the `MetafileImageParsedEventArgs` event argument, you can get the metafile stream using the `getMetafileStream()` property, and you can get the `getIsMetafile()` boolean value to determine whether the image is a metafile image (WMF, EMF) or a TIFF format image. In the example below, the TIFF is converted to a raster image in the `ConvertTiffToRasterImage()` method using the TwelveMonkeys ImageIO TIFF library.
 
-The following example code illustrates how to use `MetafileImageParsed` event for creating fallback raster image for metafile present in a Word document.
+The following example code illustrates how to use the `MetafileImageParsed` event for creating a fallback raster image for a metafile present in a Word document.
 
 ```java
 import com.syncfusion.javahelper.system.collections.generic.*;
@@ -283,9 +283,9 @@ The following example code illustrates how to write a Web API for paste with for
 
 ## Restrict editing
 
-This Web API generates hash from the specified password and salt value which is required for restrict editing functionality of Document Editor component.
+This Web API generates a hash from the specified password and salt value which is required for the restrict editing functionality of the Document Editor component.
 
-The following example code illustrates how to write a Web API for restrict editing.
+The following example code illustrates how to write a Web API to restrict editing.
 
 ```java
     @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -328,13 +328,13 @@ The following example code illustrates how to write a Web API for restrict editi
     }
 ```
 
-## Spell Check
+## Spell check
 
-Document Editor supports performing spell checking for any input text. You can perform spell checking for the text in Document Editor and it will provide suggestions for the mis-spelled words through dialog and in context menu. Document editor client-side script requires this Web API to show error words and list suggestions in context menu. This Web API returns the json type of spell-checked word which contains details about error words if any and suggestions.
+Document Editor supports performing spell checking for any input text. You can perform spell checking for the text in Document Editor and it will provide suggestions for the misspelled words through a dialog and the context menu. The Document Editor client-side script requires this Web API to display error words and list suggestions in the context menu. This Web API returns a JSON response containing details about the spell-checked words, including error words and suggestions if any.
 
-To know more about configure spell check, please check this [link](https://github.com/SyncfusionExamples/EJ2-Document-Editor-Web-Services/tree/master/Java#steps-to-configure-spell-checker).
+To know more about configuring spell check, refer to this [link](https://github.com/SyncfusionExamples/EJ2-Document-Editor-Web-Services/tree/master/Java#steps-to-configure-spell-checker).
 
-In controller file, you can configure the spell check files like below:
+In the controller file, you can configure the spell check files as below:
 
 ```java
     List<DictionaryData> spellDictionary;
@@ -361,11 +361,11 @@ In controller file, you can configure the spell check files like below:
     }
 ```
 
-Document editor provides options to spell check word by word and spellcheck page by page when loading the documents.
+Document Editor provides options to spell check word by word and spell check page by page when loading documents.
 
 ### Spell check word by word
 
-This Web API performs the spell check word by word and return the json which contains information about error words and suggestions if any. By default, spell check word by word is performed in Document editor when enabling spell check in client-side.
+This Web API performs the spell check word by word and returns the JSON which contains information about error words and suggestions if any. By default, spell check word by word is performed in the Document Editor when spell check is enabled on the client side.
 
 The following example code illustrates how to write a Web API for spell check word by word.
 
@@ -402,7 +402,7 @@ The following example code illustrates how to write a Web API for spell check wo
 
 ### Spell check page by page
 
-This Web API performs the spell check page by page and return the json which contains information about error words and suggestions if any. By [enabling optimized spell check](../spell-check#enableoptimizedspellcheck) in client-side, you can perform spellcheck page by page when loading the documents.
+This Web API performs the spell check page by page and returns the JSON which contains information about error words and suggestions if any. By [enabling optimized spell check](../spell-check#enableoptimizedspellcheck) on the client side, you can perform spell check page by page when loading documents.
 
 The following example code illustrates how to write a Web API for spell check page by page.
 
@@ -439,13 +439,13 @@ The following example code illustrates how to write a Web API for spell check pa
 
 ## Save as file formats other than SFDT and DOCX
 
-You can configure this API, if you want to save the document in file format other than DOCX and SFDT using server-side. You can save the document in following ways:
+You can configure this API if you want to save the document in a file format other than DOCX and SFDT on the server side. You can save the document in the following ways:
 
-### Save the document in database or file server
+### Save the document in a database or file server
 
-This Web API saves the document in the server machine. You can customize this API to save the document into databases or file servers.
+This Web API saves the document on the server. You can customize this API to save the document into databases or file servers.
 
-The following example code illustrates how to write a Web API for save document in server-side.
+The following example code illustrates how to write a Web API to save a document on the server side.
 
 ```c#
     @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -458,7 +458,7 @@ The following example code illustrates how to write a Web API for save document 
                 name = "Document1.docx";
             }
             WordDocument document = WordProcessorHelper.save(data.getContent());
-            // Saves the document to server machine file system, you can customize here to save into databases or file servers based on requirement.
+            // Saves the document to the server file system. You can customize this to save into databases or file servers based on your requirements.
             FileOutputStream fileStream = new FileOutputStream(name);
             document.save(fileStream, getWFormatType(format));
             fileStream.close();
@@ -518,9 +518,9 @@ The following example code illustrates how to write a Web API for save document 
 
 ### Save as other file formats by passing SFDT string
 
-This Web API converts the SFDT string to required format and returns the document as FileStreamResult to client-side. Using this API, you can save the document in file format other than SFDT and DOCX and download the document in client browser.
+This Web API converts the SFDT string to the required format and returns the document as a FileStreamResult to the client side. Using this API, you can save the document in a file format other than SFDT and DOCX and download the document in the client browser.
 
-The following example code illustrates how to write a Web API for export sfdt.
+The following example code illustrates how to write a Web API to export SFDT.
 
 ```c#
     @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -592,9 +592,9 @@ The following example code illustrates how to write a Web API for export sfdt.
 
 ### Save as other file formats by passing DOCX file
 
-This Web API converts the DOCX document to required format and returns the document as FileStreamResult to client-side. Using this API, you can save the document in file format other than SFDT and DOCX and download the document in client browser.
+This Web API converts the DOCX document to the required format and returns the document as a FileStreamResult to the client side. Using this API, you can save the document in a file format other than SFDT and DOCX and download the document in the client browser.
 
-The following example code illustrates how to write a Web API for export.
+The following example code illustrates how to write a Web API to export.
 
 ```c#
     @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -641,4 +641,4 @@ The following example code illustrates how to write a Web API for export.
     }
 ```
 
->Note: Please refer the [Java Web API example from GitHub](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices/tree/master/Java).
+N> Please refer to the [Java Web API example from GitHub](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices/tree/master/Java).

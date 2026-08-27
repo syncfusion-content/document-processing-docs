@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Ej1 api migration in Angular Spreadsheet component | Syncfusion
-description: Learn here all about Ej1 api migration in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: EJ1 API Migration in Angular Spreadsheet | Syncfusion
+description: EJ1 API migration in Angular Spreadsheet helps transition existing applications to Essential JS 2 with updated APIs and features.
 platform: document-processing
 control: Ej1 api migration 
 documentation: ug
 ---
 
-# Ej1 api migration in Angular Spreadsheet component
+# EJ1 API migration in Angular Spreadsheet 
 
 This article describes the API migration process of the Spreadsheet component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 

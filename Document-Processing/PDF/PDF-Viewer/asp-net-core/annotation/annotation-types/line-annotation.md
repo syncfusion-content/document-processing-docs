@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add Line Annotation in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to enable, apply, customize, and manage Line annotations in the Syncfusion ASP.NET Core PDF Viewer.
+title: Line Annotation in ASP.NET Core PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Line annotations in the ASP.NET Core PDF Viewer for marking straight paths on a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Line Annotation (Shape) in ASP.NET Core PDF Viewer
+# Line Annotation in ASP.NET Core PDF Viewer
 
 Line annotations allow users to draw straight connectors or callouts on PDFs for markup, review, diagrams, or measurement guides. They support customization of color, thickness, opacity, and arrowheads, and can be edited, resized, deleted, or exported along with the document.
 

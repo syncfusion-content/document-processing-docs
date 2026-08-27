@@ -1,13 +1,13 @@
 ---
-title: How to use SfRichTextBoxAdv as a standard RichTextBox. | Syncfusion
-description: Learn how to use WPF SfRichTextBoxAdv as a standard RichTextBox along with its core key features and usage.
+title: How to Use WPF DOCX Editor as a Standard Editor | Syncfusion
+description: Use Syncfusion® WPF DOCX Editor as a standard editor with rich text formatting features and document editing capabilities.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: use-sfrichtextboxadv-like-richtextbox
 ---
 
-# Use SfRichTextBoxAdv as a standard RichTextBox
+# How to Use WPF DOCX Editor as a Standard Editor
 
 Use the following code to configure the SfRichTextBoxAdv control as a standard RichTextBox with rich text formatting options.
 
@@ -113,3 +113,8 @@ When the application is executed, the standard RichTextBox control is displayed 
 ![WPF Standard RichTextBox](../Getting-Started_images/wpf-standard-sfrichtextboxadv.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/Standard%20RichTextBox).
+
+## See also
+
+- [WPF RichTextBox Feature Tour](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor)
+- [WPF RichTextBox Examples](https://github.com/syncfusion/docx-editor-sdk-wpf-demos)

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Form fields in Blazor DOCX Editor Component | Syncfusion
-description: Learn how to insert, manage, import, export, and protect form fields in the Syncfusion Blazor Document Editor component.
+title: Form Fields in Blazor DOCX Editor | Syncfusion
+description: Form fields in Blazor DOCX Editor allow users to create, update, and protect fillable fields for structured data entry.
 platform: document-processing
 control: Document Editor
 documentation: ug
 ---
 
-# Form Fields in Blazor Document Editor Component
+# Form Fields in Blazor DOCX Editor
 
 The [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) component provides support for inserting Text, CheckBox, and DropDown form fields through the built-in toolbar.
 

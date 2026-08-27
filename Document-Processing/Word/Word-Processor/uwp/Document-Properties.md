@@ -1,62 +1,65 @@
 ---
-title: Document Properties in UWP RichTextBox control | Syncfusion
-description: Learn here all about Document Properties support in Syncfusion UWP RichTextBox (SfRichTextBoxAdv) control and more.
+title: Document Properties in UWP DOCX Editor | Syncfusion
+description: The document properties in UWP DOCX Editor track document statistics, enabling easy access to word count, paragraph count, and pages count.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: Word count, paragraph count, page count, current page number.
+keywords: word-count,paragraph-count,page-count,current-page-number,selection-changed
 ---
-# Document Properties in UWP RichTextBox (SfRichTextBoxAdv)
+# Document Properties in UWP DOCX Editor
 RichTexBox keep tracking the statistics about your documents. These statistics contains information about word count, paragraph count and pages count.
 
-## Word Count
-RichTextBox automatically counts the number of words in a document while you type. You can get the words count from [WordCount](https://help.syncfusion.com/cr/uwp/Syncfusion.SfRichTextBoxAdv.UWP~Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv~WordCount.html) property. The default value of this property is 0. 
+[`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html) keeps track of statistics about your document. These statistics contain information about word count, paragraph count, and page count. The following sections describe each statistic and how to retrieve it.
+
+## Word count
+SfRichTextBoxAdv automatically counts the number of words in a document while you type. You can get the word count from the [`WordCount`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_UI_Xaml_RichTextBoxAdv_SfRichTextBoxAdv_WordCount) property. The default value of this property is 0.
 
 The following sample code demonstrates how to get the total number of words in the document.
+
 {% tabs %}
 {% highlight Xaml %}
 <TextBlock Text="{Binding Path=WordCount, Mode=TwoWay}"  />
 
 {% endhighlight %}
 {% highlight C# %}
-int wordCount.Text = richTextBoxAdv.WordCount.ToString();
+int wordCount = richTextBoxAdv.WordCount;
 
 {% endhighlight %}
 {% highlight VB %}
-wordCount.Text = richTextBoxAdv.WordCount.ToString()
+Dim wordCount As Integer = richTextBoxAdv.WordCount
 
 {% endhighlight %}
 {% endtabs %}
 
-
-## Paragraph Count
-RichTextBox automatically counts the number of paragraphs in a document while you type. You can get the paragraph count from [ParagraphCount](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_UI_Xaml_RichTextBoxAdv_SfRichTextBoxAdv_ParagraphCount.html) property. The default value of this property is 0. Also, it ignores empty paragraphs.
+## Paragraph count
+SfRichTextBoxAdv automatically counts the number of paragraphs in a document while you type. You can get the paragraph count from the [`ParagraphCount`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_UI_Xaml_RichTextBoxAdv_SfRichTextBoxAdv_ParagraphCount) property. The default value of this property is 0. Empty paragraphs are ignored.
 
 The following sample code demonstrates how to get the total number of paragraphs in the document.
 {% tabs %}
 {% highlight Xaml %}
-<TextBlock Name="ParagraphCount" Text="{Binding Path=ParagraphCount, Mode=TwoWay}" />
+<TextBlock x:Name="paragraphCount" Text="{Binding Path=ParagraphCount}" />
 
 {% endhighlight %}
 {% highlight C# %}
-int paragraphCount.Text = richTextBoxAdv.ParagraphCount.ToString();
+int paragraphCount = richTextBoxAdv.ParagraphCount;
 
 {% endhighlight %}
 {% highlight VB %}
-paragraphCount.Text = richTextBoxAdv.ParagraphCount.ToString()
+Dim paragraphCount As Integer = richTextBoxAdv.ParagraphCount
 
 {% endhighlight %}
 {% endtabs %}
 
+## Page count
+SfRichTextBoxAdv counts the number of pages in a document while you type. You can get the page count from the [`PageCount`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_UI_Xaml_RichTextBoxAdv_SfRichTextBoxAdv_PageCount) property. The default value of this property is 0.
 
-## Page Count
-RichTextBox counts the number of pages in a document while you type. You can get the pages count from [PageCount](https://help.syncfusion.com/cr/uwp/Syncfusion.SfRichTextBoxAdv.UWP~Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv~PageCount.html) property. The default value of this property is 0.
+N> `PageCount` is not a dependency property and does not raise change notifications. Read its value inside the `SelectionChanged` event, as shown below.
 
 The following sample code demonstrates how to get the total number of pages in the document.
 {% tabs %}
 {% highlight Xaml %}
-<TextBlock x:Name="PageCount" Grid.Row="0" />
-<RichTextBoxAdv:SfRichTextBoxAdv Grid.Row="1" x:Name="richTextBoxAdv" SelectionChanged="RichTextBoxAdv_SelectionChanged"/>
+<TextBlock x:Name="pageCount" Grid.Row="0" />
+<RichTextBoxAdv:SfRichTextBoxAdv Grid.Row="1" x:Name="richTextBoxAdv" SelectionChanged="RichTextBoxAdv_SelectionChanged" />
 
 {% endhighlight %}
 {% highlight C# %}
@@ -74,14 +77,16 @@ End Sub
 {% endhighlight %}
 {% endtabs %}
 
-## Current Page number
-The [CurrentPageNumber](https://help.syncfusion.com/cr/uwp/Syncfusion.SfRichTextBoxAdv.UWP~Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv~CurrentPageNumber.html) property in the RichTextBox control returns the page number where the selection(cursor) is present.
+## Current page number
+The [`CurrentPageNumber`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_UI_Xaml_RichTextBoxAdv_SfRichTextBoxAdv_CurrentPageNumber) property returns the page number where the selection (cursor) is present in the document.
 
-The following sample code demonstrates how to get current page number in the document.
+N> `CurrentPageNumber` is not a dependency property and does not raise change notifications. Read its value inside the `SelectionChanged` event, as shown below.
+
+The following sample code demonstrates how to get the current page number in the document.
 {% tabs %}
 {% highlight Xaml %}
-<TextBlock x:Name="CurrentPageNumber" Grid.Row="0" />
-<RichTextBoxAdv:SfRichTextBoxAdv Grid.Row="1" x:Name="richTextBoxAdv" SelectionChanged="RichTextBoxAdv_SelectionChanged"/>
+<TextBlock x:Name="currentPageNumber" Grid.Row="0" />
+<RichTextBoxAdv:SfRichTextBoxAdv Grid.Row="1" x:Name="richTextBoxAdv" SelectionChanged="RichTextBoxAdv_SelectionChanged" />
 
 {% endhighlight %}
 {% highlight C# %}
@@ -99,6 +104,8 @@ End Sub
 {% endhighlight %}
 {% endtabs %}
 
-N> The above PageCount and CurrentPageNumber properties are not a dependency property. And it is not notifying for dynamic changes. So, get these properties value in
-selection changed event.
+## See also
 
+- [Getting started with UWP RichTextBox](./Getting-Started)
+- [Selection in UWP RichTextBox](./Selection)
+- [Table support in UWP RichTextBox](./Table)

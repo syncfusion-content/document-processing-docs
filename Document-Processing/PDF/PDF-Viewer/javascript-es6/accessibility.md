@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in TypeScript PDF Viewer | Syncfusion
-description: Learn about accessibility in the Syncfusion TypeScript PDF Viewer, including compliance with WCAG 2.2, Section 508, ADA and keyboard navigation support.
+title: Accessibility in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Accessibility features in the JavaScript (ES6) PDF Viewer help all users read and interact with PDF content using assistive technologies.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Syncfusion TypeScript PDF Viewer
+# Accessibility in JavaScript (ES6) PDF Viewer
 
 The PDF Viewer complies with widely adopted accessibility standards and guidance, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and WAI-ARIA roles. The following table summarizes the component's accessibility coverage.
 The accessibility compliance for the PDF Viewer component is summarized below.

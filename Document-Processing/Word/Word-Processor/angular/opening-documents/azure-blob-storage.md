@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open document from Azure Blob in Angular DOCX Editor | Syncfusion
-description:  Learn about how to Open document from Azure Blob Storage in Angular Document Editor control of Syncfusion Essential JS 2 and more details.
+title: Open Documents from Azure Blob in Angular DOCX Editor | Syncfusion
+description: Open documents from Azure Blob storage in Angular DOCX Editor, enabling scalable cloud storage integration and document access.
 platform: document-processing
 control: Open document from Azure Blob Storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from Azure Blob Storage in Angular Document Editor
+# Open Documents from Azure Blob Storage in Angular DOCX Editor
 
 To load a document from Azure Blob Storage in a [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor), you can follow the steps below.
 

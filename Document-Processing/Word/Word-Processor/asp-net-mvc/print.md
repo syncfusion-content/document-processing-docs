@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Print in ASP.NET MVC DOCX Editor Control | Syncfusion
-description: Learn here all about print in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Print in ASP.NET MVC DOCX Editor | Syncfusion
+description: Print feature in ASP.NET MVC DOCX Editor enables printing documents with page setup and quality settings for accurate document output.
 platform: document-processing
 control: Print
 documentation: ug
 ---
 
 
-# Print in ASP.NET MVC Document Editor component
+# Print in ASP.NET MVC DOCX Editor
 
 To print the document, use the `print` method from the document editor instance.
 

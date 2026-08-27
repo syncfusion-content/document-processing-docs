@@ -1,12 +1,12 @@
 ---
-title: Working with Metadata | Syncfusion
-description: This section explains how to add, modify, and read document information and XMP metadata in PDF documents using the Syncfusion .NET PDF library
+title: Metadata in .NET PDF Library | Syncfusion
+description: Learn how to add, modify, and read document information and XMP metadata in PDF documents using the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Working with Metadata (XMP)
+# Metadata in .NET PDF Library
 
 Metadata is data that describes the characteristics or properties of a document. It includes document information properties such as author, modification date, and copyright status, as well as structured XMP packets that conform to the Extensible Metadata Platform (XMP) specification. PDF readers and search engines use this metadata to index, classify, and display information about a document.
 

@@ -1,11 +1,11 @@
 ---
-title: Working with SmartArt in .NET Word (DocIO) library | Syncfusion
-description: Learn how to create, edit, and format SmartArt in a Word document using the .NET Word (DocIO) library without Microsoft Word or interop dependencies.
+title: SmartArt in .NET Word library | Syncfusion
+description: Learn how to create, edit, and format SmartArt in a Word document using the .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Working with SmartArt
+# SmartArt in .NET Word library
 
 A SmartArt diagram is a visual representation of information that helps effectively communicate ideas in documents. You can add and modify SmartArt diagrams in Word documents using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO).
 

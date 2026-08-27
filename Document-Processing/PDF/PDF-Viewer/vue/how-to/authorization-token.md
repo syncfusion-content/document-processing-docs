@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Authorization token in Vue PDF Viewer component | Syncfusion
-description: Learn here all about Authorization token in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: How to Use an Authorization Token in Vue PDF Viewer | Syncfusion
+description: Pass an authorization token to the Vue PDF Viewer to securely access protected PDF documents and authenticated API requests.
 control: Authorization token
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Authorization token in Vue PDF Viewer control
+# How to Use an Authorization Token in Vue PDF Viewer
 
 The PDF Viewer supports adding an authorization token to every AJAX request by configuring the `ajaxRequestSettings.ajaxHeaders` property. Set the header once and the library includes it in all requests initiated by the viewer.
 

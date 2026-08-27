@@ -1,12 +1,12 @@
 ---
-title: Memory (RAM) Usage Metrics for Syncfusion Excel (XlsIO) Library
-description: Peak memory usage of Syncfusion XlsIO during Create and Save and Load and Read of Text, DateTime, Number, Boolean, and Formula data.
+title: Memory Usage Metrics in .NET Excel Library | Syncfusion
+description: Memory usage details section describes peak memory consumption while creating, saving, loading, and reading Excel data.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Memory usage metrics in Excel (XlsIO) library
+# Memory Usage Metrics in .NET Excel Library
 
 This section reports the peak memory usage of XlsIO for the `Text`, `DateTime`, `Number`, `Boolean`, and `Formula` data types during Create and save and Load and read operations. Peak memory is the maximum value observed during a single run; the values below are reference points from a single machine and XlsIO version, and your results will vary based on hardware, .NET runtime, and the GC mode.
 
@@ -48,27 +48,27 @@ The following table shows the peak memory usage when creating and saving an XLSX
   <tr>
     <td>Text</td>
     <td>1.1 GB</td>   
-    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Create/String%20Data%20Type/.NET/String%20Data%20Type">GitHub sample</a></td>
+    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Create/String%20Data%20Type/.NET/String%20Data%20Type" aria-label="GitHub demo link">GitHub sample</a></td>
   </tr>
   <tr>
     <td>DateTime</td>
     <td>361 MB</td>  
-    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Create/DateTime%20Data%20Type/.NET/DateTime%20Data%20Type">GitHub sample</a></td>
+    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Create/DateTime%20Data%20Type/.NET/DateTime%20Data%20Type" aria-label="GitHub demo link">GitHub sample</a></td>
   </tr>
   <tr>
     <td>Number</td>
     <td>342 MB</td>    
-    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Create/Number%20Data%20Type/.NET/Number%20Data%20Type">GitHub sample</a></td>
+    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Create/Number%20Data%20Type/.NET/Number%20Data%20Type" aria-label="GitHub demo link">GitHub sample</a></td>
   </tr>
   <tr>
     <td>Boolean</td>
     <td>342 MB</td>     
-    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Create/Boolean%20Data%20Type/.NET/Boolean%20Data%20Type">GitHub sample</a></td>
+    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Create/Boolean%20Data%20Type/.NET/Boolean%20Data%20Type" aria-label="GitHub demo link">GitHub sample</a></td>
   </tr>
   <tr>
     <td>Formula</td>
     <td>848 MB</td>    
-    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Create/Formula%20Data%20Type/.NET/Formula%20Data%20Type">GitHub sample</a></td>
+    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Create/Formula%20Data%20Type/.NET/Formula%20Data%20Type" aria-label="GitHub demo link">GitHub sample</a></td>
   </tr>
 </table>
 
@@ -85,26 +85,26 @@ The following table shows the peak memory usage when loading and reading cell va
   <tr>
     <td>Text</td>
     <td>945 MB</td>    
-    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Open/String%20Data%20Type/.NET/String%20Data%20Type">GitHub sample</a></td>
+    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Open/String%20Data%20Type/.NET/String%20Data%20Type" aria-label="GitHub demo link">GitHub sample</a></td>
   </tr>
   <tr>
     <td>DateTime</td>
     <td>289 MB</td>
-    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Open/DateTime%20Data%20Type/.NET/DateTime%20Data%20Type">GitHub sample</a></td>
+    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Open/DateTime%20Data%20Type/.NET/DateTime%20Data%20Type" aria-label="GitHub demo link">GitHub sample</a></td>
   </tr>
   <tr>
     <td>Number</td>
     <td>290 MB</td>     
-    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Open/Number%20Data%20Type/.NET/Number%20Data%20Type">GitHub sample</a></td>
+    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Open/Number%20Data%20Type/.NET/Number%20Data%20Type" aria-label="GitHub demo link">GitHub sample</a></td>
   </tr>
   <tr>
     <td>Boolean</td>
     <td>185 MB</td>
-    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Open/Boolean%20Data%20Type/.NET/Boolean%20Data%20Type">GitHub sample</a></td>
+    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Open/Boolean%20Data%20Type/.NET/Boolean%20Data%20Type" aria-label="GitHub demo link">GitHub sample</a></td>
   </tr>
   <tr>
     <td>Formula</td>
     <td>520 MB</td>
-    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Open/Formula%20Data%20Type/.NET/Formula%20Data%20Type">GitHub sample</a></td>
+    <td><a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Open/Formula%20Data%20Type/.NET/Formula%20Data%20Type" aria-label="GitHub demo link">GitHub sample</a></td>
   </tr>
 </table>

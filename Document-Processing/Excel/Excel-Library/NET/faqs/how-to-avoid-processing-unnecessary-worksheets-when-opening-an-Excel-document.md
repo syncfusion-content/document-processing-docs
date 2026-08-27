@@ -1,11 +1,11 @@
 ---
-title: Avoid loading unused worksheets when opening Excel | Syncfusion
-description: Code example to avoid processing unnecessary worksheets when opening an Excel document using .NET Excel Library.
+title: How to Skip Unused Sheets in .NET Excel Library | Syncfusion
+description: Avoid processing unnecessary worksheets when opening Excel documents using the Syncfusion .NET Excel Library for better performance.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
-# How to avoid processing unnecessary worksheets using C#?
+# How to skip unnecessary worksheets in .NET Excel Library
 XlsIO provides support to avoid processing unnecessary worksheets when opening an Excel. The following code snippet illustrates this.
 {% tabs %} 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/FAQ/Worksheet/.NET/Parse%20Worksheets%20On%20Demand/Parse%20Worksheets%20On%20Demand/Program.cs,180" %}

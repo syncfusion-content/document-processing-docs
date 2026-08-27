@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Angular Spreadsheet MCP Server Configuration | Syncfusion®
-description: Install and configure the Syncfusion® Angular Spreadsheet MCP Server to access documentation, API guidance, code examples, and troubleshooting support.
+title: MCP Server Configuration in Angular Spreadsheet | Syncfusion
+description: MCP Server configuration in Angular Spreadsheet enables access to documentation, API references, code examples, and troubleshooting resources.
 control: Spreadsheet
 platform: document-processing
 documentation: ug
 keywords: Angular Agentic UI Builder, MCP Server, search docs, Spreadsheet SDK, Server Packages
 ---
 
-# Angular Spreadsheet MCP Server
+# MCP Server Configuration in Angular Spreadsheet
 
 The Syncfusion® Angular MCP Server accelerates Spreadsheet application development by providing relevant documentation, API references, feature guidance, code examples, and troubleshooting information directly within an AI-powered IDE. The server uses the [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) to connect an AI assistant with Syncfusion Angular documentation.
 

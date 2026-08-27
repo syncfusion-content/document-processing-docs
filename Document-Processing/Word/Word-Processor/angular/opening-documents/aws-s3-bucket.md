@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open document from AWS S3 in Angular DOCX Editor | Syncfusion
-description:  Learn about how to Open document from AWS S3 in Angular Document Editor control of Syncfusion Essential JS 2 and more details.
+title: Open Documents from AWS S3 in Angular DOCX Editor | Syncfusion
+description: Open documents from AWS S3 in Angular DOCX Editor, enabling cloud storage integration and seamless document access.
 platform: document-processing
 control: Open document from AWS S3
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from AWS S3 in Angular Document Editor
+# Open Documents from AWS S3 in Angular DOCX Editor
 
 To load a document from AWS S3 in a [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor), you can follow the steps below.
 

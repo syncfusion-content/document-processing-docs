@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Auto save a document in the Vue DOCX Editor component | Syncfusion
-description: Learn here all about how to auto save a document in the Syncfusion Vue Document Editor component of Syncfusion Essential JS 2 and more.
-control: Auto save document in Document Editor
+title: How to Auto Save Document to AWS S3 in Vue DOCX Editor | Syncfusion
+description: Automatically save edited documents to AWS S3 at regular intervals in Syncfusion® Vue DOCX Editor for reliable cloud-based storage.
+control: Auto save document in document editor 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Auto save a document in the Vue Document Editor component
+# How to Auto Save Document in Vue DOCX Editor
 
 In this article, we are going to see how to auto save the document in AWS S3. You can automatically save the edited content in regular intervals of time. It helps reduce the risk of data loss by saving an open document automatically at customized intervals.
 

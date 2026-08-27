@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Print PDF in Blazor PDF Viewer | Syncfusion
-description: Enable and customize printing, configure print events, cancel print, and monitor printing in the Blazor PDF Viewer component.
+title: About Syncfusion Print PDF in Blazor PDF Viewer Component | Syncfusion
+description: Learn how to Enable and customize printing, configure print events, cancel print, and monitor printing in the Blazor PDF Viewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print PDF in Blazor PDF Viewer
+# About Syncfusion Print PDF in Blazor PDF Viewer Component
 
 The Blazor PDF Viewer includes built-in printing via the toolbar and APIs so users can control how documents are printed and monitor the process.
 

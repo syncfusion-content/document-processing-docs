@@ -1,13 +1,13 @@
 ---
-title: Text Extraction in JavaScript PDF Library | Syncfusion
+title: Text Extraction in JavaScript PDF | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
-description: This section explains how to extract text and its bounds from a specific page or the entire PDF document by using the JavaScript PDF Library
+description: Extract text and text bounds from PDF documents programmatically using the Syncfusion JavaScript PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Text Extraction in JavaScript PDF Library
+# Text Extraction in JavaScript PDF
 
 The JavaScript PDF library allows you to extract text from a particular page or from the entire PDF document. The [PdfDataExtractor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor) class from the `@syncfusion/ej2-pdf-data-extract` add-on package supports four extraction modes:
 

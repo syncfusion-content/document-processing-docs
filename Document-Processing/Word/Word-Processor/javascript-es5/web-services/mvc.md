@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Mvc in JavaScript (ES5) Document editor control | Syncfusion
-description: Learn here all about Mvc in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: ASP.NET MVC Web Service in JavaScript DOCX Editor | Syncfusion
+description: Configure ASP.NET MVC web services in the JavaScript DOCX Editor to handle server-side operations such as Word document import, export, and more.
 platform: document-processing
 control: Mvc 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# MVC in JavaScript (ES5) Document editor control
+# ASP.NET MVC Web Service in JavaScript DOCX Editor
 
-DocumentEditor depends on server side interaction for below listed operations can be written in ASP.NET MVC using [Syncfusion.EJ2.WordEditor.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Mvc5) or [Syncfusion.EJ2.WordEditor.AspNet.Mvc4](https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Mvc4).
+DocumentEditor depends on server-side interaction for the operations listed below, which can be written in ASP.NET MVC using [Syncfusion.EJ2.WordEditor.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Mvc5) or [Syncfusion.EJ2.WordEditor.AspNet.Mvc4](https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Mvc4).
 
 * Import Word Document
 * Paste with formatting
@@ -22,9 +22,9 @@ This section explains how to create the service for DocumentEditor in ASP.NET MV
 
 ## Importing Word Document
 
-As the Document editor client-side script requires the document in SFDT file format, you can convert the Word documents (.dotx,.docx,.docm,.dot,.doc), rich text format documents (.rtf), and text documents (.txt) into SFDT format by using this Web API.
+As the Document Editor client-side script requires the document in SFDT file format, you can convert the Word documents (.dotx, .docx, .docm, .dot, .doc), rich text format documents (.rtf), and text documents (.txt) into SFDT format by using this Web API.
 
-The following example code illustrates how to write a Web API for importing Word documents into Document Editor component.
+The following example code illustrates how to write a Web API for importing Word documents into the Document Editor component.
 
 ```c#
     [HttpPost]
@@ -51,7 +51,7 @@ The following example code illustrates how to write a Web API for importing Word
 
 ## Paste with formatting
 
-This Web API converts the system clipboard data (HTML/RTF) to SFDT format which is required to paste content with formatting.
+This Web API converts the system clipboard data (HTML/RTF) to SFDT format, which is required to paste content with formatting.
 
 The following example code illustrates how to write a Web API for paste with formatting.
 
@@ -86,9 +86,9 @@ The following example code illustrates how to write a Web API for paste with for
     }
 ```
 
-## Restrict editing
+## Restrict Editing
 
-This Web API generates hash from the specified password and salt value which is required for restrict editing functionality of Document Editor component.
+This Web API generates a hash from the specified password and salt value, which is required for the restrict editing functionality of the Document Editor component.
 
 The following example code illustrates how to write a Web API for restrict editing.
 
@@ -114,11 +114,11 @@ The following example code illustrates how to write a Web API for restrict editi
 
 ## Spell Check
 
-Document Editor supports performing spell checking for any input text. You can perform spell checking for the text in Document Editor and it will provide suggestions for the mis-spelled words through dialog and in context menu. Document editor client-side script requires this Web API to show error words and list suggestions in context menu. This Web API returns the json type of spell-checked word which contains details about error words if any and suggestions.
+Document Editor supports performing spell checking for any input text. You can perform spell checking for the text in Document Editor, and it will provide suggestions for the misspelled words through a dialog and the context menu. The Document Editor client-side script requires this Web API to show error words and list suggestions in the context menu. This Web API returns the JSON type of spell-checked word, which contains details about error words, if any, and suggestions.
 
-To know more about configure spell check, please check this [link](https://github.com/SyncfusionExamples/EJ2-Document-Editor-Web-Services/tree/master/ASP.NET%20MVC#steps-to-configure-spell-checker).
+To know more about configuring spell check, please refer to this [link](https://github.com/SyncfusionExamples/EJ2-Document-Editor-Web-Services/tree/master/ASP.NET%20MVC#steps-to-configure-spell-checker).
 
-In `Global.asax.cs` file, you can configure the spell check files like below:
+In the `Global.asax.cs` file, you can configure the spell check files as shown below:
 
 ```c#
     internal static List<DictionaryData> spellDictCollection;
@@ -127,20 +127,20 @@ In `Global.asax.cs` file, you can configure the spell check files like below:
     protected void Application_Start()
     {
         GlobalConfiguration.Configure(WebApiConfig.Register);
-        //check the spell check dictionary path environment variable value and assign default data folder
-        //if it is null.
+        // Check the spell check dictionary path environment variable value and assign a default data folder
+        // if it is null.
         string path = HostingEnvironment.MapPath("//App_Data//");
-        //Set the default spellcheck.json file if the json filename is empty.
+        // Set the default spellcheck.json file if the json filename is empty.
         string jsonFileName = HostingEnvironment.MapPath("//App_Data//spellcheck.json");
         if (System.IO.File.Exists(jsonFileName))
         {
             string jsonImport = System.IO.File.ReadAllText(jsonFileName);
             List<DictionaryData> spellChecks = JsonConvert.DeserializeObject<List<DictionaryData>>(jsonImport);
             spellDictCollection = new List<DictionaryData>();
-            //construct the dictionary file path using customer provided path and dictionary name
+            // Construct the dictionary file path using the customer-provided path and dictionary name.
             foreach (var spellCheck in spellChecks)
             {
-                spellDictCollection.Add(new DictionaryData(spellCheck.LanguadeID, Path.Combine(path, spellCheck.DictionaryPath), Path.Combine(path, spellCheck.AffixPath)));
+                spellDictCollection.Add(new DictionaryData(spellCheck.LanguageID, Path.Combine(path, spellCheck.DictionaryPath), Path.Combine(path, spellCheck.AffixPath)));
                 personalDictPath = Path.Combine(path, spellCheck.PersonalDictPath);
             }
         }
@@ -148,11 +148,11 @@ In `Global.asax.cs` file, you can configure the spell check files like below:
 
 ```
 
-Document editor provides options to spell check word by word and spellcheck page by page when loading the documents.
+Document Editor provides options to spell check word by word and spell check page by page when loading the documents.
 
 ### Spell check word by word
 
-This Web API performs the spell check word by word and return the json which contains information about error words and suggestions if any. By default, spell check word by word is performed in Document editor when enabling spell check in client-side.
+This Web API performs the spell check word by word and returns the JSON, which contains information about error words and suggestions, if any. By default, spell check word by word is performed in Document Editor when enabling spell check on the client side.
 
 The following example code illustrates how to write a Web API for spell check word by word.
 
@@ -187,7 +187,7 @@ The following example code illustrates how to write a Web API for spell check wo
 
 ### Spell check page by page
 
-This Web API performs the spell check page by page and return the json which contains information about error words and suggestions if any. By [enabling optimized spell check](../spell-check#enableoptimizedspellcheck) in client-side, you can perform spellcheck page by page when loading the documents.
+This Web API performs the spell check page by page and returns the JSON, which contains information about error words and suggestions, if any. By [enabling optimized spell check](../spell-check#enableoptimizedspellcheck) on the client side, you can perform spell check page by page when loading the documents.
 
 The following example code illustrates how to write a Web API for spell check page by page.
 
@@ -222,13 +222,13 @@ The following example code illustrates how to write a Web API for spell check pa
 
 ## Save as file formats other than SFDT and DOCX
 
-You can configure this API, if you want to save the document in file format other than DOCX and SFDT using server-side. You can save the document in following ways:
+You can configure this API if you want to save the document in a file format other than DOCX and SFDT on the server side. You can save the document in the following ways:
 
-### Save the document in database or file server
+### Save the document in a database or file server
 
 This Web API saves the document in the server machine. You can customize this API to save the document into databases or file servers.
 
-The following example code illustrates how to write a Web API for save document in server-side.
+The following example code illustrates how to write a Web API to save a document on the server side.
 
 ```c#
     [HttpPost]
@@ -243,7 +243,7 @@ The following example code illustrates how to write a Web API for save document 
             name = "Document1.doc";
         }
         WDocument document = WordDocument.Save(data.Content);
-        // Saves the document to server machine file system, you can customize here to save into databases or file servers based on requirement.
+            // Saves the document to the server machine file system; you can customize this to save into databases or file servers based on your requirement.
         FileStream fileStream = new FileStream(name, FileMode.OpenOrCreate, FileAccess.ReadWrite);
         document.Save(fileStream, GetWFormatType(format));
         document.Close();
@@ -257,11 +257,11 @@ The following example code illustrates how to write a Web API for save document 
     }
 ```
 
-### Save as other file formats by passing SFDT string
+### Save as other file formats by passing an SFDT string
 
-This Web API converts the SFDT string to required format and returns the document as FileStreamResult to client-side. Using this API, you can save the document in file format other than SFDT and DOCX and download the document in client browser.
+This Web API converts the SFDT string to the required format and returns the document as a FileStreamResult to the client side. Using this API, you can save the document in a file format other than SFDT and DOCX and download the document in the client browser.
 
-The following example code illustrates how to write a Web API for export sfdt.
+The following example code illustrates how to write a Web API to export SFDT.
 
 ```c#
     [HttpPost]
@@ -328,9 +328,9 @@ The following example code illustrates how to write a Web API for export sfdt.
     }
 ```
 
-### Save as other file formats by passing DOCX file
+### Save as other file formats by passing a DOCX file
 
-This Web API converts the DOCX document to required format and returns the document as FileStreamResult to client-side. Using this API, you can save the document in file format other than SFDT and DOCX and download the document in client browser.
+This Web API converts the DOCX document to the required format and returns the document as a FileStreamResult to the client side. Using this API, you can save the document in a file format other than SFDT and DOCX and download the document in the client browser.
 
 The following example code illustrates how to write a Web API for export.
 
@@ -375,4 +375,4 @@ The following example code illustrates how to write a Web API for export.
     }
 ```
 
->Note: Please refer the [ASP.NET MVC Web API sample](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices/tree/master/ASP.NET%20MVC).
+N> Please refer to the [ASP.NET MVC Web API sample](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices/tree/master/ASP.NET%20MVC).

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Angular DOCX Editor component | Syncfusion
-description: Learn how to create a Document Editor in an Angular application using the Syncfusion® DOCX Editor control to create, edit, and view Word documents.
+title: Getting Started with Angular DOCX Editor | Syncfusion
+description: Learn how to get started with the Syncfusion Angular DOCX Editor control. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: Getting started 
 documentation: ug
@@ -169,25 +169,26 @@ Before initializing the Angular DOCX Editor control, generate a Syncfusion licen
 
 ## Import the required CSS styles
 
-The following CSS files are available in the `node_modules/@syncfusion` package folder. Reference these styles in the `src/styles.css` file using the following code:
+Themes for DOCX Editor can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/angular/documentation/appearance/overview#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/angular/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/angular/documentation/appearance/overview).
+
+This guide uses the `Tailwind 3` theme as an example, sourced from the theme package. In this package, each component includes an `index.css` file that automatically loads all the required dependency styles. To install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
+
+```bash
+npm install @syncfusion/ej2-tailwind3-theme
+```
+
+By default, projects include an `src/styles.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `src/styles.css` file to prevent style conflicts.
+
+The required styles for the DOCX Editor are imported in the **src/styles.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="styles.css" %}
 
-@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-angular-documenteditor/styles/tailwind3.css';
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/document-editor/index.css";
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/document-editor-container/index.css";
 
 {% endhighlight %}
 {% endtabs %}
-
-N> This example uses the `Tailwind 3` theme. To use a different built-in theme, replace the `tailwind3.css` references with the corresponding theme stylesheets. Refer to the [Themes documentation](https://ej2.syncfusion.com/angular/documentation/appearance/overview) for information about the available themes and the different ways to include theme styles in an Angular application.
 
 ## Initialize the Document Editor
 

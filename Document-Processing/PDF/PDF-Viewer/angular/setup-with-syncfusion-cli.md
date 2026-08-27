@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Set Up Angular PDF Viewer Using Syncfusion CLI | Syncfusion
-description: Learn how to set up an Angular PDF Viewer project using the Syncfusion CLI with both interactive and non-interactive modes
+title: Setup with Syncfusion Cli in Angular PDF Viewer | Syncfusion
+description: Use the Syncfusion CLI to scaffold a new Angular project that includes the PDF Viewer, with both non-interactive and interactive setup modes.
 control: PDF Viewer
 platform: document-processing
 documentation: ug

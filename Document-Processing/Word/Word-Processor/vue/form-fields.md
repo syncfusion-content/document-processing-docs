@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Form fields in Vue Document editor component | Syncfusion
-description: Learn here all about Form fields in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Form Fields in Vue DOCX Editor | Syncfusion
+description: Form fields in Vue DOCX Editor allow users to create, update, and protect fillable fields for structured data entry.
 control: Form fields 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form fields in Vue Document editor component
+# Form Fields in Vue DOCX Editor
 
-[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) Container component provide support for inserting Text, CheckBox, DropDown form fields through in-built toolbar.
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) Container component provides support for inserting Text, CheckBox, DropDown form fields through in-built toolbar.
 
 ![Form Fields](images/toolbar-form-fields.png)
 
@@ -29,7 +29,7 @@ this.$refs.documenteditor.ej2Instances.editor.insertFormField('Dropdown');
 
 ## Get form field names
 
-All the form fields names form current document can be retrieved using [`getFormFieldNames()`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#getformfieldnames).
+All the form field names from the current document can be retrieved using [`getFormFieldNames()`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#getformfieldnames).
 
 ```ts
 this.$refs.documenteditor.ej2Instances.getFormFieldNames();
@@ -67,14 +67,14 @@ checkboxfieldInfo.defaultValue = true;
 checkboxfieldInfo.name = "Check2";
 this.$refs.documenteditor.ej2Instances.setFormFieldInfo('Check1',checkboxfieldInfo);
 
-// Set checkbox form field properties
+// Set dropdown form field properties
 var dropdownfieldInfo = this.$refs.documenteditor.ej2Instances.getFormFieldInfo('Drop1');
 dropdownfieldInfo.dropDownItems = ['One','Two', 'Three'];
 dropdownfieldInfo.name = "Drop2";
 this.$refs.documenteditor.ej2Instances.setFormFieldInfo('Drop1',dropdownfieldInfo);
 ```
 
->Note:If a form field already exists in the document with the new name specified, the old form field name property will be cleared and it will not be accessible. Ensure the new name is unique.
+>Note: If a form field already exists in the document with the new name specified, the old form field name property will be cleared and it will not be accessible. Ensure the new name is unique.
 
 ## Form Field Shading
 
@@ -84,20 +84,20 @@ The example code below demonstrates how to set a custom shading color and how to
 
 ```ts
 // Set a custom shading color (for example, white) 
-this.$refs.doceditcontainer.ej2Instances.documentEditorSettings.formFieldSettings.shadingColor = '#ffffff';
+this.$refs.documenteditor.ej2Instances.documentEditorSettings.formFieldSettings.shadingColor = '#ffffff';
 
 // Disable form field shading entirely 
-this.$refs.doceditcontainer.ej2Instances.documentEditorSettings.formFieldSettings.applyShading = false;
+this.$refs.documenteditor.ej2Instances.documentEditorSettings.formFieldSettings.applyShading = false;
 ```
 
 N> This customization only affects the application UI and will not be preserved when exporting the document.
 
 ## Export form field data
 
-Data of the all the Form fields in the document can be exported using [`exportFormData`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#exportformdata).
+Data of all the form fields in the document can be exported using [`exportFormData`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#exportformdata).
 
 ```ts
-var formFieldDate = this.$refs.documenteditor.ej2Instances.exportFormData();
+var formFieldData = this.$refs.documenteditor.ej2Instances.exportFormData();
 ```
 
 ## Import form field data
@@ -114,7 +114,7 @@ this.$refs.documenteditor.ej2Instances.importFormData([textformField,checkformFi
 
 ## Reset form fields
 
-Reset all the form fields in current document to default value using [`resetFormFields`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#resetformfields).
+Reset all the form fields in the current document to default value using [`resetFormFields`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#resetformfields).
 
 ```ts
 this.$refs.documenteditor.ej2Instances.resetFormFields();
@@ -124,9 +124,9 @@ this.$refs.documenteditor.ej2Instances.resetFormFields();
 
 Document Editor provides support for protecting the document with `FormFieldsOnly` protection. In this protection, user can only fill form fields in the document.
 
-Document editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#stopprotection) API.
+Document Editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#stopprotection) API.
 
-The following example code illustrates how to enforce and stop protection in Document editor container.
+The following example code illustrates how to enforce and stop protection in Document Editor container.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -146,11 +146,11 @@ const serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api
 
 provide('DocumentEditorContainer', [Toolbar])
 
-onMounted(function () {
+onMounted(() => {
   //enforce protection
-  this.$refs.container.ej2Instances.documentEditor.editor.enforceProtection('123', 'FormFieldsOnly');
+  container.value.ej2Instances.documentEditor.editor.enforceProtection('123', 'FormFieldsOnly');
   //stop the document protection
-  this.$refs.container.ej2Instances.documentEditor.editor.stopProtection('123');
+  container.value.ej2Instances.documentEditor.editor.stopProtection('123');
 });
 </script>
 
@@ -174,7 +174,7 @@ export default {
     return { serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/' };
   },
   provide: {
-    //Inject require modules.
+    //Inject required modules.
     DocumentEditorContainer: [Toolbar]
   },
   mounted() {
@@ -191,7 +191,7 @@ export default {
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
->Note: In enforce Protection method, first parameter denotes password and second parameter denotes protection type. Possible values of protection type are `NoProtection |ReadOnly |FormFieldsOnly`. In stop protection method, parameter denotes the password.
+>Note: In the enforce Protection method, the first parameter denotes the password and the second parameter denotes the protection type. Possible values of protection type are `NoProtection | ReadOnly | FormFieldsOnly`. In the `stopProtection` method, the parameter denotes the password.
 
 ## Online Demo
 

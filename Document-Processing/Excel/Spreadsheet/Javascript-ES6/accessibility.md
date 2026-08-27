@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in EJ2 TypeScript Spreadsheet control | Syncfusion
-description: Learn here all about Accessibility in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Accessibility in TypeScript Spreadsheet  | Syncfusion
+description: Accessibility in TypeScript Spreadsheet supports keyboard navigation, screen reader compatibility, and ARIA attributes for inclusive experiences.
 platform: document-processing
 control: Accessibility
 documentation: ug
 ---
 
-# Accessibility in EJ2 TypeScript Spreadsheet control
+# Accessibility in TypeScript Spreadsheet 
 
 The Spreadsheet control followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria#roles) that are commonly used to evaluate accessibility.
 

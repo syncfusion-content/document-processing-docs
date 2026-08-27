@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Scrolling in EJ2 TypeScript Spreadsheet control | Syncfusion
-description: Learn here all about Scrolling in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Scrolling in TypeScript Spreadsheet | Syncfusion
+description: Scrolling in TypeScript Spreadsheet enables smooth navigation across rows and columns, helping users efficiently view large datasets.
 platform: document-processing
 control: Scrolling
 documentation: ug
 ---
 
-# Scrolling in EJ2 TypeScript Spreadsheet control
+# Scrolling in TypeScript Spreadsheet 
 
 Scrolling helps you to move quickly to different areas of the worksheet. It moves faster if we use horizontal and vertical scroll bars. Scrolling can be enabled by setting the [`allowScrolling`](https://ej2.syncfusion.com/documentation/api/spreadsheet#allowscrolling) as true.
 

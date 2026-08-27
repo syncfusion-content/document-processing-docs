@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Delete Worksheet in React Spreadsheet component | Syncfusion
-description: Learn here all about how to delete a worksheet in React Spreadsheet component of Syncfusion Essential JS 2 and more.
+description: Learn about how to delete worksheets in Excel document using the Syncfusion React Spreadsheet component and more details.
 control: Worksheet 
 platform: document-processing
 documentation: ug

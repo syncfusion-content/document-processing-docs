@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Track Changes in ASP.NET Core DOCX Editor Control | Syncfusion
-description: Learn how to track, review, accept, reject, and manage document revisions in the Syncfusion ASP.NET Core Document Editor.
+title: Track Changes in ASP.NET Core DOCX Editor | Syncfusion
+description: Track changes in ASP.NET Core DOCX Editor records document modifications and enables reviewers to accept or reject revisions efficiently.
 platform: document-processing
 control: Track Changes
 documentation: ug
 ---
 
-# Track Changes in ASP.NET Core Document Editor Component
+# Track Changes in ASP.NET Core DOCX Editor
 
 Track Changes allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject the modifications. It is a useful tool for managing changes made by several reviewers to the same document. If the track changes option is enabled, all editing operations are preserved as revisions in the Document Editor.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Spell Check in ASP.NET MVC DOCX Editor Component | Syncfusion
-description: Learn here all about spell check in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Spell Check in ASP.NET MVC DOCX Editor | Syncfusion
+description: The spell check feature in ASP.NET MVC DOCX Editor enables spelling verification and suggestion workflows to help create error-free documents.
 platform: document-processing
 control: Spell Check
 documentation: ug
 ---
 
 
-# Spell Check in ASP.NET MVC Document Editor
+# Spell Check in ASP.NET MVC DOCX Editor
 
 The Document Editor supports spell checking for input text. It provides suggestions for misspelled words through the spell-checker dialog and the context menu.
 

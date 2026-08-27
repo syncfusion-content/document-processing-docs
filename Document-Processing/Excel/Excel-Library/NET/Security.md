@@ -1,12 +1,12 @@
 ---
-title: Security in Excel (XlsIO) Library | Excel Protected View | Syncfusion
-description: This section explains all about the security feature(Excel Protected View) of the Syncfusion Excel (XlsIO) Library and more.
+title: Excel Protected View in .NET Excel Library | Syncfusion
+description: Excel protected view page describes security options in the Syncfusion .NET Excel Library for opening documents with protection.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Security in Excel (XlsIO) Library (Excel Protected View)
+# Security in .NET Excel Library
 
 You can prevent unauthorized users from viewing, moving, editing, or deleting important data in a worksheet or workbook by [protecting a worksheet or workbook](https://support.microsoft.com/en-gb/office/protect-a-workbook-7e365a4d-3e89-4616-84ca-1931257c1517?redirectSourcePath=%252fen-us%252farticle%252fPassword-protect-worksheet-or-workbook-elements-dbf706e0-ba22-4a08-84d8-552db16eef11#bmprotectelements), with or without a password.
 

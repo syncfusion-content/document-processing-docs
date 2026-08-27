@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open Azure Blob Files in React DOCX Editor | Syncfusion
-description:  Learn how to open a document from Azure Blob Storage in the React Document Editor control of Syncfusion Essential JS 2 and more details.
+title: Open Documents from Azure Blob in React DOCX Editor | Syncfusion
+description: Open documents from Azure Blob Storage in React DOCX Editor, enabling scalable cloud storage integration and document access.
 platform: document-processing
 control: Open document from Azure Blob Storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from Azure Blob Storage in React Document Editor
+# Open Documents from Azure Blob Storage in React DOCX Editor
 
 To load a document from Azure Blob Storage in a [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor), you can follow the steps below.
 
