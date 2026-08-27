@@ -150,7 +150,7 @@ export class AppComponent implements OnInit {
     http.onreadystatechange = () => {
       if (http.readyState === 4) {
         if (http.status === 200 || http.status === 304) {
-          //open the SFDT text in DOCX Editor
+          //open the SFDT text in Document Editor
           this.container.documentEditor.open(http.responseText);
         }
       }

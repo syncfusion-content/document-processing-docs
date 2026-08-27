@@ -64,9 +64,9 @@ let commentProperties: CommentProperties = {
     isResolved: false                 // The status of the comment; false indicates it is unresolved.
 };
 
-// Insert the comment with the specified properties into the DOCX Editor.
+// Insert the comment with the specified properties into the Document Editor.
 let comment: Comment = this.documentEditor.editor.insertComment('Hello world', commentProperties);
-// Insert a reply comment with specified properties into the DOCX Editor
+// Insert a reply comment with specified properties into the Document Editor
 this.documentEditor.editor.insertReplyComment(comment.id, 'Hello world', commentProperties);
 ```
 

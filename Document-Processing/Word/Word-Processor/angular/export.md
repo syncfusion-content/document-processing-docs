@@ -99,7 +99,7 @@ import {
 
 @Component({
       selector: 'app-container',
-      //specifies the template string for the DOCX Editor component
+      //specifies the template string for the Document Editor component
       template: `<div><button ejs-button (click)="saveAsBlob()" >Save</button>
       <ejs-documenteditor #document_editor  id="container" height="330px" style="display:block" [isReadOnly]=false [enableEditor]=true [enableWordExport]=true [enableSfdtExport]=true> </ejs-documenteditor></div>`,
       encapsulation: ViewEncapsulation.None,

@@ -90,7 +90,7 @@ export class AppComponent {
         ajax.onreadystatechange = () => {
             if (ajax.readyState === 4) {
                 if (ajax.status === 200 || ajax.status === 304) {
-                    // open SFDT text in DOCX Editor
+                    // open SFDT text in Document Editor
                     this.documentEditor.open(ajax.responseText);
                 }
             }

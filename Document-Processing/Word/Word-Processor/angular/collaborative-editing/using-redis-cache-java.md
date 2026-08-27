@@ -51,7 +51,7 @@ DocumentEditorComponent.Inject(CollaborativeEditingHandler);
 private collaborativeEditingHandler!: CollaborativeEditingHandler;
 
 onCreated() {
-    // Enable collaborative editing in DOCX Editor.
+    // Enable collaborative editing in Document Editor.
     this.container.documentEditor.enableCollaborativeEditing = true;
   }
 ```

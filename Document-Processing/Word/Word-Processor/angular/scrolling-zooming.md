@@ -206,7 +206,7 @@ export class AppComponent {
           },
         ],
       };
-      //Open the document in DOCX Editor.
+      //Open the document in Document Editor.
       (this.documentEditor as DocumentEditorComponent).open(
         JSON.stringify(sfdt)
       );

@@ -131,7 +131,7 @@ import {
 
 @Component({
       selector: 'app-container',
-      //specifies the template string for the DOCX Editor component
+      //specifies the template string for the Document Editor component
       template: `<ejs-documenteditor #document_editor  id="container" height="330px" style="display:block" [isReadOnly]=false [enableSelection]=true [enableSearch]=true (searchResultsChange)="onSearchResultChange()" > </ejs-documenteditor>`,
       encapsulation: ViewEncapsulation.None,
       providers: [EditorService, SelectionService, SfdtExportService]

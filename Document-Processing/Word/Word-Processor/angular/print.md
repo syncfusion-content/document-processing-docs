@@ -88,7 +88,7 @@ import {
 
   standalone: true,
   selector: 'app-container',
-  //specifies the template string for the DOCX Editor component
+  //specifies the template string for the Document Editor component
   template: `<div>
       <button ejs-button (click)="onPrint()" >Print</button>
       <ejs-documenteditor #document_editor height="330px" style="display:block" [enablePrint]=true (created)="onCreated()"></ejs-documenteditor>

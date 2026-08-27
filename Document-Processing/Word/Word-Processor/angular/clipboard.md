@@ -67,7 +67,7 @@ import {
 
   standalone: true,
   selector: 'app-container',
-  //specifies the template string for the DOCX Editor component
+  //specifies the template string for the Document Editor component
   template: `<div><button ejs-button (click)="pasteLocal()" >Paste local</button>
     <ejs-documenteditor #document_editor [enableSelection]='true' [isReadOnly]='false' [enableEditor]=true [enableLocalPaste]=true height="330px" style="display:block"></ejs-documenteditor>
       </div>`,
