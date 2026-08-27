@@ -16,9 +16,9 @@ To save a document to AWS S3, follow the steps below.
 
 Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in Vue. This will give you a basic setup of the Document Editor component.
 
-**Step 2:** Modify the `DocumentEditorController.cs` File in the Web Service Project
+**Step 2:** Modify the `DocumentEditorController.cs` file in the web service project.
 
-1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](../web-services-overview) for instructions on how to create a web service project.
+1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](../web-services) for instructions on how to create a web service project.
 
 2. Open the `DocumentEditorController.cs` file in your web service project.
 

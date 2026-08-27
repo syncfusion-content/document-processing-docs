@@ -65,7 +65,7 @@ public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryC
 [Route("SaveToBoxCloud")]
 //Post action for uploading the document to Box cloud file storage
 
-public void SaveToBoxCloud(IFormCollection data)
+public async Task SaveToBoxCloud(IFormCollection data)
 {
   if (data.Files.Count == 0)
     return;
@@ -89,7 +89,7 @@ public void SaveToBoxCloud(IFormCollection data)
   file.CopyTo(stream);
 
   var boxFile = await client.FilesManager.UploadAsync(fileRequest, stream);
-} 
+}
  
 private string GetValue(IFormCollection data, string key)
 {

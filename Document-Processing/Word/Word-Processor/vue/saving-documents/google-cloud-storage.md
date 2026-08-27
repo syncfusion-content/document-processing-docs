@@ -80,12 +80,25 @@ public void SaveToGoogleCloud(IFormCollection data)
   string bucketName = _bucketName;
 
   Stream stream = new MemoryStream();
-  file.CopyTo(stream);
+  try
+  {
+    file.CopyTo(stream);
+    stream.Position = 0;
 
-  // Upload the document to Google Cloud Storage
-  _storageClient.UploadObject(bucketName, result + "_downloaded.docx", null, stream);
+    // Upload the document to Google Cloud Storage
+    _storageClient.UploadObject(bucketName, result + "_downloaded.docx", null, stream);
+  }
+  catch (Exception ex)
+  {
+    // Log or handle the upload failure (e.g., invalid credentials, bucket not found, permission denied)
+    throw;
+  }
+  finally
+  {
+    stream.Dispose();
+  }
 
-}   
+}
 
 private string GetValue(IFormCollection data, string key)
 {

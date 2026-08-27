@@ -69,7 +69,7 @@ public DocumentEditorController(IWebHostEnvironment hostingEnvironment, IMemoryC
 
 public void SaveToGoogleDrive(IFormCollection data)
 {
-   if (data.Files.Count == 0)
+  if (data.Files.Count == 0)
     return;
 
   IFormFile file = data.Files[0];
@@ -192,7 +192,7 @@ On the client side, export the document to a blob using [`saveAsBlob`](https://e
               req.onreadystatechange = () => {
                   if (req.readyState === 4) {
                       if (req.status === 200 || req.status === 304) {
-                          console.log('Saved sucessfully');
+                          console.log('Saved successfully');
                       }
                   }
               };
