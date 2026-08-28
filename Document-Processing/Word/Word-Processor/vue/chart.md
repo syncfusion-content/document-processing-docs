@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Charts in Vue DOCX Editor component
 
-[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) provides chart preservation support. Using Document Editor, you can see the chart reports from your Word document.
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) provides chart preservation support. Using DOCX Editor, you can see the chart reports from your Word document.
 
 The following example shows chart preservation in DOCX Editor.
 
