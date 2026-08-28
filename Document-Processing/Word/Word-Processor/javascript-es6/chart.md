@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) provides chart preservation support. Using the Document Editor, you can view charts from your Word document.
 
-The following example shows chart preservation in the Document Editor.
+The following example shows chart preservation in the DOCX Editor.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -27,7 +27,7 @@ The following example shows chart preservation in the Document Editor.
 
 ## Supported Chart Types
 
-The following chart types are supported in the Document Editor:
+The following chart types are supported in the DOCX Editor:
 * Scatter_Markers
 * Bubble
 * Area

@@ -24,7 +24,7 @@ documenteditor.editor.insertTable(3,3);
 
 ## Set the maximum number of Rows when inserting a table
 
-You can use the [maximumRows](https://ej2.syncfusion.com/documentation/api/document-editor/documentEditorSettings#maximumrows) property to set the maximum number of rows allowed while inserting a table in the Document Editor component.
+You can use the [maximumRows](https://ej2.syncfusion.com/documentation/api/document-editor/documentEditorSettings#maximumrows) property to set the maximum number of rows allowed while inserting a table in the DOCX Editor component.
 
 Refer to the following sample code.
 
@@ -40,7 +40,7 @@ N> The maximum value of Row is 32767, as per Microsoft Word application and you 
 
 ## Set the maximum number of Columns when inserting a table
 
-You can use the [maximumColumns](https://ej2.syncfusion.com/documentation/api/document-editor/documentEditorSettings#maximumcolumns) property to set the maximum number of Columns allowed while inserting a table in the Document Editor component.
+You can use the [maximumColumns](https://ej2.syncfusion.com/documentation/api/document-editor/documentEditorSettings#maximumcolumns) property to set the maximum number of Columns allowed while inserting a table in the DOCX Editor component.
 
 Refer to the following sample code.
 
@@ -136,7 +136,7 @@ documenteditor.selection.selectCell();
 
 ## Delete table
 
-Document Editor allows you to delete the entire table. You can use the [`deleteTable()`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#deletetable) method of editor instance, if selection is in table. Refer to the following sample code.
+DOCX Editor allows you to delete the entire table. You can use the [`deleteTable()`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#deletetable) method of editor instance, if selection is in table. Refer to the following sample code.
 
 ```ts
 documenteditor.editor.deleteTable();
@@ -144,7 +144,7 @@ documenteditor.editor.deleteTable();
 
 ## Delete row
 
-Document Editor allows you to delete the selected number of rows. You can use the [`deleteRow()`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#deleterow) method of editor instance to delete the selected number of rows, if selection is in table. Refer to the following sample code.
+DOCX Editor allows you to delete the selected number of rows. You can use the [`deleteRow()`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#deleterow) method of editor instance to delete the selected number of rows, if selection is in table. Refer to the following sample code.
 
 ```ts
 documenteditor.editor.deleteRow();
@@ -152,7 +152,7 @@ documenteditor.editor.deleteRow();
 
 ## Delete column
 
-Document Editor allows you to delete the selected number of columns. You can use the [`deleteColumn()`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#deletecolumn) method of editor instance to delete the selected number of columns, if selection is in table. Refer to the following sample code.
+DOCX Editor allows you to delete the selected number of columns. You can use the [`deleteColumn()`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#deletecolumn) method of editor instance to delete the selected number of columns, if selection is in table. Refer to the following sample code.
 
 ```ts
 documenteditor.editor.deleteColumn();
@@ -169,7 +169,7 @@ documenteditor.editor.mergeCells();
 
 ## Positioning the table
 
-Document Editor preserves the position properties of the table and displays the table based on position properties. It does not support modifying the position properties. Whereas the table will be automatically moved along with text edited if it is positioned relative to the paragraph.
+DOCX Editor preserves the position properties of the table and displays the table based on position properties. It does not support modifying the position properties. Whereas the table will be automatically moved along with text edited if it is positioned relative to the paragraph.
 
 ## How to work with tables
 

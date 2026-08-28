@@ -27,11 +27,11 @@ domainurl: ##DomainURL##
 
 N> Image files are internally converted to base64 strings, whereas online images are preserved as URLs.
 
-N> EMF and WMF images can't be inserted, but these types of images will be preserved in Document Editor when using ASP.NET MVC Web API.
+N> EMF and WMF images can't be inserted, but these types of images will be preserved in DOCX Editor when using ASP.NET MVC Web API.
 
 ## Alternate text
 
-Document Editor exposes an API to get or set the alternate text of the selected image. Refer to the following sample code.
+DOCX Editor exposes an API to get or set the alternate text of the selected image. Refer to the following sample code.
 
 ```ts
 documenteditor.selection.imageFormat.alternateText = 'Adventure Cycle';
@@ -39,13 +39,13 @@ documenteditor.selection.imageFormat.alternateText = 'Adventure Cycle';
 
 ## Image resizing
 
-Document Editor provides a built-in image resizer that can be injected into your application based on the requirements. This allows you to resize the image by dragging the resizing points using a mouse or touch interactions. This resizer appears as follows.
+DOCX Editor provides a built-in image resizer that can be injected into your application based on the requirements. This allows you to resize the image by dragging the resizing points using a mouse or touch interactions. This resizer appears as follows.
 
 ![Image](images/image.png)
 
 ## Changing size
 
-Document Editor exposes an API to get or set the size of the selected image. Refer to the following sample code.
+DOCX Editor exposes an API to get or set the size of the selected image. Refer to the following sample code.
 
 ```ts
 documenteditor.selection.imageFormat.width = 800;

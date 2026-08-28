@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to Customize Context Menu in TypeScript DOCX Editor
 
-## How to customize the context menu in the Document Editor
+## How to customize the context menu in the DOCX Editor
 
 [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) allows you to add a custom option to the context menu. It can be achieved by using the [`addCustomMenu()`](https://ej2.syncfusion.com/documentation/api/document-editor/contextMenu#addcustommenu) method, and the custom action is defined using the [`customContextMenuSelect`](https://ej2.syncfusion.com/documentation/api/document-editor/customContentMenuEventArgs).
 
@@ -50,7 +50,7 @@ documentEditor.customContextMenuSelect = (args: CustomContentMenuEventArgs): voi
 
 ### Customize custom option in the context menu
 
-The Document Editor allows you to customize the added custom option and also to hide/show the default context menu.
+The DOCX Editor allows you to customize the added custom option and also to hide/show the default context menu.
 
 #### Hide default context menu items
 
@@ -135,7 +135,7 @@ The following is the output of the custom context menu with customization.
 
 #### Customize Context Menu with sub-menu items
 
-The Document Editor allows you to customize the context menu with sub-menu items. It can be achieved by using the [`addCustomMenu()`](https://ej2.syncfusion.com/documentation/api/document-editor/contextMenu#addcustommenu) method.
+The DOCX Editor allows you to customize the context menu with sub-menu items. It can be achieved by using the [`addCustomMenu()`](https://ej2.syncfusion.com/documentation/api/document-editor/contextMenu#addcustommenu) method.
 
 The following code shows how to add sub-items to the custom option in the context menu in the Document Editor Container.
  
@@ -174,7 +174,7 @@ let menuItems: MenuItemModel[] = [
     ],
   },
 ];
-//Initialize Document Editor component.
+//Initialize DOCX Editor component.
 let container: DocumentEditorContainer = new DocumentEditorContainer({
   enableToolbar: true,
   height: '590px',
@@ -185,7 +185,7 @@ container.created = function () {
   //Adding custom options
   container.documentEditor.contextMenu.addCustomMenu(menuItems, false, true);
 };
-//Render Document Editor Container component.
+//Render DOCX Editor Container component.
 container.appendTo('#DocumentEditor');
 ```
 

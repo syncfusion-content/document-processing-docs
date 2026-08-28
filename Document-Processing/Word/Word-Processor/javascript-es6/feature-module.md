@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Feature Modules in TypeScript DOCX Editor
 
-[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) features are segregated into individual feature modules to enable selective referencing. By default, the Document Editor displays the document in read-only mode. The required modules should be injected to extend its functionality. The following are the selective modules of the Document Editor that can be included as needed:
+[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) features are segregated into individual feature modules to enable selective referencing. By default, the DOCX Editor displays the document in read-only mode. The required modules should be injected to extend its functionality. The following are the selective modules of the DOCX Editor that can be included as needed:
 * **Print** - Prints the document.
 * **SfdtExport** - Exports the document as Syncfusion Document Text (.sfdt) file.
 * **Selection** - Selects a portion of the document and copies it to the clipboard.
@@ -21,10 +21,10 @@ domainurl: ##DomainURL##
 * **EditorHistory** - Maintains the history of editing operations so that you can perform undo and redo at any time.
 * User interface options such as context menu, options pane, image resizer, and dialog are available as individual modules.
 
-N> In addition to injecting the required modules in your application, enable the corresponding properties to extend the functionality for a Document Editor instance.
+N> In addition to injecting the required modules in your application, enable the corresponding properties to extend the functionality for a DOCX Editor instance.
 Refer to the following table.
 
-| Module | Dependent modules to be injected for extending the functionality of the Document Editor in your application | Property to enable the functionality for a Document Editor instance |
+| Module | Dependent modules to be injected for extending the functionality of the DOCX Editor in your application | Property to enable the functionality for a DOCX Editor instance |
 |---|---|---|
 |Print|`DocumentEditor.Inject(Print)`|`let documenteditor: DocumentEditor = new DocumentEditor({ enablePrint: true });`|
 |SfdtExport|`DocumentEditor.Inject(SfdtExport)`|`let documenteditor: DocumentEditor = new DocumentEditor({ enableSfdtExport: true });`|
