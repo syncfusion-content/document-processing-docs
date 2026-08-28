@@ -10,7 +10,7 @@ documentation: ug
 
 # Scrolling and Zooming in ASP.NET Core DOCX Editor
 
-The [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) renders the document page by page. You can scroll through the pages by mouse wheel or touch interactions. You can also scroll to a specific page by using the [`scrollToPage()`] method of the Document Editor instance.
+The [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) renders the document page by page. You can scroll through the pages by mouse wheel or touch interactions. You can also scroll to a specific page by using the [`scrollToPage()`] method of the DOCX Editor instance.
 
 
 {% tabs %}
@@ -25,7 +25,7 @@ The [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-ne
 
 N> Calling this method brings the specified page into view but doesn’t move the selection. This method works even if selection is not enabled.
 
-To move the selection to a specific page in the Document Editor and bring it into view, you can use the [`goToPage()`] method of the selection instance.
+To move the selection to a specific page in the DOCX Editor and bring it into view, you can use the [`goToPage()`] method of the selection instance.
 
 
 {% tabs %}
@@ -41,7 +41,7 @@ To move the selection to a specific page in the Document Editor and bring it int
 
 ## Zooming
 
-You can scale the contents in the Document Editor from 10% to 500% of the actual size. You can achieve this using mouse or touch interactions. You can also use the [`zoomFactor`] property of the Document Editor instance. The value ranges from 0.1 to 5 (10% to 500%).
+You can scale the contents in the DOCX Editor from 10% to 500% of the actual size. You can achieve this using mouse or touch interactions. You can also use the [`zoomFactor`] property of the DOCX Editor instance. The value ranges from 0.1 to 5 (10% to 500%).
 
 
 {% tabs %}
@@ -55,7 +55,7 @@ You can scale the contents in the Document Editor from 10% to 500% of the actual
 
 ## Page fit
 
-Apart from specifying the zoom factor as a value, the Document Editor provides an option to specify page fit options such as fit to full page or fit to page width. You can set this option using the [`fitPage()`] method of the Document Editor instance.
+Apart from specifying the zoom factor as a value, the DOCX Editor provides an option to specify page fit options such as fit to full page or fit to page width. You can set this option using the [`fitPage()`] method of the DOCX Editor instance.
 
 
 {% tabs %}
