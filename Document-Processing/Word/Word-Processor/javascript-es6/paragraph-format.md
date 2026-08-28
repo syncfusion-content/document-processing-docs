@@ -53,13 +53,13 @@ You can get or set the text alignment of selected paragraphs using the following
 documenteditor.selection.paragraphFormat.textAlignment = 'Center' | 'Left' | 'Right' | 'Justify';
 ```
 
-N> Starting from `v19.4.0.x`, the text justification of the Document Editor component matches the alignment of Microsoft Word 2013 and newer versions based on the compatibility mode present in the document. The Document document created using Microsoft Word 2013 and newer versions will have the compatibility mode `Word2013` and follows a special behavior in justifying the text. You can retain the text justification behavior like old versions by modifying the compatibility mode as `Word2010`.
+N> Starting from `v19.4.0.x`, the text justification of the DOCX Editor component matches the alignment of Microsoft Word 2013 and newer versions based on the compatibility mode present in the document. The Document document created using Microsoft Word 2013 and newer versions will have the compatibility mode `Word2013` and follows a special behavior in justifying the text. You can retain the text justification behavior like old versions by modifying the compatibility mode as `Word2010`.
 
 ```ts
 documenteditor.documentSettings.compatibilityMode = 'Word2010';
 ```
 
-N> The Document Editor component assumes the compatibility mode as `Word2013` by default, if it is not defined for a document.
+N> The DOCX Editor component assumes the compatibility mode as `Word2013` by default, if it is not defined for a document.
 
 ![Image](images/word2013justification.png)
 
@@ -143,11 +143,11 @@ documenteditor.selection.paragraphFormat.borders.bottom.lineWidth = 3;
 documenteditor.selection.paragraphFormat.borders.bottom.color = "#000000";
 ```
 
-N> At present, the Document Editor component displays all the border styles as single line. But you can apply any border style and get the proper display in Microsoft Word app when opening the exported Word document.
+N> At present, the DOCX Editor component displays all the border styles as single line. But you can apply any border style and get the proper display in Microsoft Word app when opening the exported Word document.
 
 ## Show or Hide Paragraph marks
 
-You can show or hide the hidden formatting symbols like spaces, tab, paragraph marks, and breaks in the Document Editor component. These marks indicate the start and end of a paragraph, as well as all the hidden formatting symbols in a Word document.
+You can show or hide the hidden formatting symbols like spaces, tab, paragraph marks, and breaks in the DOCX Editor component. These marks indicate the start and end of a paragraph, as well as all the hidden formatting symbols in a Word document.
 
 The following example code illustrates how to show or hide paragraph marks.
 
@@ -174,7 +174,7 @@ The following sample demonstrates the paragraph formatting options using a toolb
 
 ## Online Demo
 
-Explore how to apply paragraph formatting in Word documents using the JavaScript Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/paragraph-formatting.html).
+Explore how to apply paragraph formatting in Word documents using the JavaScript DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/paragraph-formatting.html).
 
 ## See Also
 

@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Track Changes allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject the modifications. It is a useful tool for managing changes made by several reviewers to the same document. If the track changes option is enabled, all editing operations are preserved as revisions in [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor).
 
-## Enable track changes in Document Editor
+## Enable track changes in DOCX Editor
 
 The following example demonstrates how to enable track changes.
 
@@ -33,7 +33,7 @@ container.documentChange = function () {
 
 ## Show/Hide Revisions Pane
 
-The Show/Hide Revisions Pane feature in the Document Editor allows users to toggle the visibility of the revisions pane, providing flexibility in managing tracked changes within the document.
+The Show/Hide Revisions Pane feature in the DOCX Editor allows users to toggle the visibility of the revisions pane, providing flexibility in managing tracked changes within the document.
 
 The following example code illustrates how to show/hide the revisions pane.
 
@@ -46,7 +46,7 @@ container.documentEditor.showRevisions = true; // To show the revisions pane.
 container.documentEditor.showRevisions = false; // To hide the revisions pane.
 ```
 
-N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 ## Get all tracked revisions
 
@@ -87,7 +87,7 @@ revisions.rejectAll();
 
 ## Accept or reject a specific revision
 
-The following example demonstrates how to accept or reject a specific revision in the Document Editor.
+The following example demonstrates how to accept or reject a specific revision in the DOCX Editor.
 
 ```js
 // Get revisions from the current document.
@@ -117,7 +117,7 @@ container.documentEditor.selection.navigatePreviousRevision();
 ```
 ## Custom metadata along with author
 
-The Document Editor provides options to customize revisions using [`revisionSettings`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/documenteditorsettingsmodel#revisionsettings). The [`customData`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/revisionsettings#customdata) property allows you to attach additional metadata to tracked revisions in the Word Processor. This metadata can represent roles, tags, or any custom identifier for the revision. To display this metadata along with the author name in the Track Changes pane, you must enable the [`showCustomDataWithAuthor`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/revisionsettings#showcustomdatawithauthor) property.
+The DOCX Editor provides options to customize revisions using [`revisionSettings`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/documenteditorsettingsmodel#revisionsettings). The [`customData`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/revisionsettings#customdata) property allows you to attach additional metadata to tracked revisions in the Word Processor. This metadata can represent roles, tags, or any custom identifier for the revision. To display this metadata along with the author name in the Track Changes pane, you must enable the [`showCustomDataWithAuthor`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/revisionsettings#showcustomdatawithauthor) property.
 
 The following example code illustrates how to enable and update custom metadata for track changes revisions.
 
@@ -141,21 +141,21 @@ The Track Changes pane will display the author name along with the custom metada
 ![Custom metadata along with author](images/track-changes-customData.png)
 
 N> 1. When you export the document as SFDT, the customData value is stored in the revision collection. When you reopen the SFDT, the custom data is automatically restored and displayed in the Track Changes pane.
-N> 2. For formats other than SFDT (e.g., DOCX), the customData is not preserved, as it is specific to the Document Editor component.
+N> 2. For formats other than SFDT (e.g., DOCX), the customData is not preserved, as it is specific to the DOCX Editor component.
 
 ## Filtering changes based on user
 
-Document Editor provides a built-in review panel with support for filtering changes based on the user.
+DOCX Editor provides a built-in review panel with support for filtering changes based on the user.
 
 ![Track changes](images/track-changes.png)
 
 ## Protect the document in track changes only mode
 
-Document Editor provides support for protecting the document with `RevisionsOnly` protection. In this protection, users can view the document and make corrections, but they cannot accept or reject any tracked changes in the document. Later, the author can view their corrections and accept or reject the changes.
+DOCX Editor provides support for protecting the document with `RevisionsOnly` protection. In this protection, users can view the document and make corrections, but they cannot accept or reject any tracked changes in the document. Later, the author can view their corrections and accept or reject the changes.
 
-Document Editor provides an option to protect and unprotect a document using the [`enforceProtection`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#stopprotection) API.
+DOCX Editor provides an option to protect and unprotect a document using the [`enforceProtection`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#stopprotection) API.
 
-The following example code illustrates how to enforce and stop protection in the Document Editor container.
+The following example code illustrates how to enforce and stop protection in the DOCX Editor container.
 
 ```js
 var container = new ej.documenteditor.DocumentEditorContainer({
@@ -182,7 +182,7 @@ N> In the enforceProtection method, the first parameter denotes the password and
 
 ## Events
 
-Document Editor provides the [beforeAcceptRejectChanges](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container#beforeacceptrejectchanges) event, which is triggered before tracked content is accepted or rejected. This event provides an opportunity to perform custom logic before accepting or rejecting changes. The event handler receives the [RevisionActionEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/revisionActionEventArgs) object as an argument, which allows access to information about the tracked content.
+DOCX Editor provides the [beforeAcceptRejectChanges](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container#beforeacceptrejectchanges) event, which is triggered before tracked content is accepted or rejected. This event provides an opportunity to perform custom logic before accepting or rejecting changes. The event handler receives the [RevisionActionEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/revisionActionEventArgs) object as an argument, which allows access to information about the tracked content.
 
 To demonstrate a specific use case, consider an example where you want to restrict the accept and reject changes functionality based on the author name. The following code snippet illustrates how to allow only the author of the tracked content to accept or reject changes:
 
@@ -210,4 +210,4 @@ function beforeAcceptRejectChanges(args) {
 
 ## Online Demo
 
-Explore how to track and review changes in Word documents using the JavaScript (ES5) Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/track-changes.html).
+Explore how to track and review changes in Word documents using the JavaScript (ES5) DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/track-changes.html).

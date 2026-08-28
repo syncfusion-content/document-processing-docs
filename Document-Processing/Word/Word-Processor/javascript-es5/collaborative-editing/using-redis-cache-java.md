@@ -22,9 +22,9 @@ The following are needed to enable collaborative editing in [JavaScript DOCX Edi
 
 ## How to enable collaborative editing in client side
 
-### Step 1: Enable collaborative editing in Document Editor
+### Step 1: Enable collaborative editing in DOCX Editor
 
-To enable collaborative editing, inject `CollaborativeEditingHandler` and set the property `enableCollaborativeEditing` to true in the Document Editor, like in the code snippet below.
+To enable collaborative editing, inject `CollaborativeEditingHandler` and set the property `enableCollaborativeEditing` to true in the DOCX Editor, like in the code snippet below.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -54,7 +54,7 @@ When opening a document, we need to generate a unique ID for each document. Thes
 
 ### Step 4: Broadcast current editing changes to remote users
 
-Changes made on the client-side need to be sent to the server-side to broadcast them to other connected users. To send the changes made to the server, use the method shown below from the Document Editor using the `contentChange` event.
+Changes made on the client-side need to be sent to the server-side to broadcast them to other connected users. To send the changes made to the server, use the method shown below from the DOCX Editor using the `contentChange` event.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}

@@ -3,7 +3,7 @@ layout: post
 title: How to Auto Save Document in ASP.NET MVC DOCX Editor | Syncfusion
 description: Automatically save edited documents to the server at regular intervals in Syncfusion® ASP.NET MVC DOCX Editor to prevent data loss.
 platform: document-processing
-control: Auto Save Document In Document Editor
+control: Auto Save Document In DOCX Editor
 documentation: ug
 ---
 
@@ -47,7 +47,7 @@ public string AutoSave()
 
 ## Online Demo
 
-Explore how to automatically save Word documents using the ASP.NET MVC Document Editor in this [ASP.NET MVC Document Editor live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/defaultfunctionalities#/tailwind3).
+Explore how to automatically save Word documents using the ASP.NET MVC DOCX Editor in this [ASP.NET MVC DOCX Editor live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/defaultfunctionalities#/tailwind3).
 
 ## See Also
-* [Auto-save document in Document Editor](./auto-save-document-in-document-editor)
+* [Auto-save document in DOCX Editor](./auto-save-document-in-document-editor)

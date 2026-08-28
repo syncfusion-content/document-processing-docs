@@ -3,7 +3,7 @@ layout: post
 title: Hyperlinks in Blazor DOCX Editor | Syncfusion
 description: The hyperlink feature in Blazor DOCX Editor enables users to insert, edit, and manage hyperlinks for quick navigation to web pages or document locations.
 platform: document-processing
-control: Document Editor
+control: DOCX Editor
 documentation: ug
 ---
 
@@ -21,7 +21,7 @@ Setting `args.IsHandled = true` prevents the editor's default navigation action 
 
 ### Add the OnRequestNavigate event for DocumentEditor
 
-The following example illustrates how to add the `OnRequestNavigate` event for the Document Editor.
+The following example illustrates how to add the `OnRequestNavigate` event for the DOCX Editor.
 
 ```cshtml
 <SfDocumentEditor ID="cont" IsReadOnly="false" EnableEditor="true" EnableSelection="true" @ref="container" Height="590px">
@@ -75,7 +75,7 @@ await container.DocumentEditor.Selection.CopyHyperlinkAsync();
 
 ## Add hyperlink
 
-The Document Editor can automatically format a URL as a hyperlink. Simply type an address and press `ENTER`, `SPACEBAR`, or `TAB`. The text will be converted to a functional hyperlink if it begins with one of the following prefixes:
+The DOCX Editor can automatically format a URL as a hyperlink. Simply type an address and press `ENTER`, `SPACEBAR`, or `TAB`. The text will be converted to a functional hyperlink if it begins with one of the following prefixes:
 
 *   `http://`
 *   `https://`
@@ -120,4 +120,4 @@ You can use the following keyboard shortcut to open the hyperlink dialog if the 
 
 ## Online demo
 
-Explore how to insert and manage hyperlinks in Word documents using the Blazor Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/hyperlinks-and-bookmarks?theme=fluent2).
+Explore how to insert and manage hyperlinks in Word documents using the Blazor DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/hyperlinks-and-bookmarks?theme=fluent2).

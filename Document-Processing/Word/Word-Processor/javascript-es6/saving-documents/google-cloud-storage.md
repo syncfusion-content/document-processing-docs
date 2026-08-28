@@ -14,7 +14,7 @@ To save a document to Google Cloud Storage, you can follow the steps below.
 
 **Step 1:** Create a Simple [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) sample in TypeScript
 
-Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in TypeScript. This will give you a basic setup of the Document Editor component.
+Follow the instructions provided in this [link](../getting-started) to create a simple DOCX Editor sample in TypeScript. This will give you a basic setup of the DOCX Editor component.
 
 **Step 2:** Create the `DocumentEditorController.cs` File in the Web Service Project
 
@@ -122,7 +122,7 @@ N> Replace **Your Bucket name from Google Cloud Storage** with the actual name o
 
 N> Replace **path/to/service-account-key.json** with the actual file path to your service account key JSON file. Make sure to provide the correct path and filename.
 
-**Step 4:** Modify the index file in the Document Editor sample
+**Step 4:** Modify the index file in the DOCX Editor sample
 
 On the client side, export the document to a blob using [`saveAsBlob`](https://ej2.syncfusion.com/documentation/api/document-editor#saveAsBlob) and send it to the server side for saving in Google Cloud Storage.
 
