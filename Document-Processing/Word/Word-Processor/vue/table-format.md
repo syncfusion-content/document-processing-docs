@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Table format in Vue DOCX Editor
 
-[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) customizes the formatting of table, or table cells such as table width, cell margins, cell spacing, background color, and table alignment. This section describes how to customize these formatting for selected cells, rows, or table in detail.
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) customizes the formatting of a table or table cells such as table width, cell margins, cell spacing, background color, and table alignment. This section describes how to customize these formatting for selected cells, rows, or a table in detail.
 
 ## Cell margins
 
@@ -27,7 +27,7 @@ this.$refs.documenteditor.ej2Instances.selection.cellFormat.topMargin=5.4;
 this.$refs.documenteditor.ej2Instances.selection.cellFormat.bottomMargin=5.4;
 ```
 
-You can also define the default cell margins for a table. If the specific cell margin value is not defined explicitly in the cell formatting, the corresponding value will be retrieved from default cells margin of the table. Refer to the following sample code.
+You can also define the default cell margins for a table. If the specific cell margin value is not defined explicitly in the cell formatting, the corresponding value will be retrieved from the default cell margins of the table. Refer to the following sample code.
 
 ```ts
 //To change the left margin
@@ -72,18 +72,18 @@ this.$refs.documenteditor.ej2Instances.selection.cellFormat.verticalAlignment='B
 
 ## Table alignment
 
-The tables are aligned in document editor to ‘Left’, ‘Right’, or ‘Center’. Refer to the following sample code.
+The tables are aligned in the document editor to ‘Left’, ‘Right’, or ‘Center’. Refer to the following sample code.
 
 ```ts
-this.$refs.documenteditor.ej2Instances.selection.tableFormat.tableAlignment=’Center’;
+this.$refs.documenteditor.ej2Instances.selection.tableFormat.tableAlignment='Center';
 ```
 
 ## Cell width
 
-Set the desired width of table cells that will be considered when the table is layouted. Refer to the following sample code.
+Set the desired width of table cells that will be considered when the table is laid out. Refer to the following sample code.
 
 ```ts
-this.$refs.documenteditor.ej2Instances.selection.cellFormat.preferredWidthType=’Point’;
+this.$refs.documenteditor.ej2Instances.selection.cellFormat.preferredWidthType='Point';
 this.$refs.documenteditor.ej2Instances.selection.cellFormat.preferredWidth=100;
 ```
 
@@ -98,7 +98,7 @@ this.$refs.documenteditor.ej2Instances.selection.tableFormat.preferredWidth=300;
 
 ## Apply borders
 
-Document editor exposes API to customize the borders for table cells by specifying the settings. Refer to the following sample code.
+Document Editor exposes API to customize the borders for table cells by specifying the settings. Refer to the following sample code.
 
 ```ts
 import { BorderSettings } from '@syncfusion/ej2-documenteditor';
@@ -110,15 +110,15 @@ let borderSettings: BorderSettings = {
 this.$refs.documenteditor.ej2Instances.editor.applyBorders(borderSettings);
 ```
 
-Please check below gif which illustrates how to apply border for selected cells through properties pane options - border color, line size and no border:
+Please check the below gif which illustrates how to apply a border for selected cells through properties pane options - border color, line size and no border:
 
 ![ApplyBorderToSelectedCell_viaPropertiesPane](images/ApplyBorderToSelectedCell_viaPropertiesPane.gif)
 
-# Working with row formatting
+## Working with row formatting
 
-Document editor allows various row formatting such as height and repeat header.
+Document Editor allows various row formatting such as height and repeat header.
 
-## Row height
+### Row height
 
 You can customize the height of a table row as ‘Auto’, ‘AtLeast’, or ‘Exactly’. Refer to the following sample code.
 
@@ -127,17 +127,17 @@ this.$refs.documenteditor.ej2Instances.selection.rowFormat.heightType='Exactly';
 this.$refs.documenteditor.ej2Instances.selection.rowFormat.height=20;
 ```
 
-## Header row
+### Header row
 
-The header row describes the content of a table. A table can optionally have a header row. Only the first row of a table can be the header row. If the cursor position is at first row of the table, then you can define whether it as header row or not, using the following sample code.
+The header row describes the content of a table. A table can optionally have a header row. Only the first row of a table can be the header row. If the cursor position is at the first row of the table, then you can define whether it is a header row or not, using the following sample code.
 
 ```ts
 this.$refs.documenteditor.ej2Instances.selection.rowFormat.isHeader=true;
 ```
 
-## Allow row break across pages
+### Allow row break across pages
 
-This property is valid if a table row does not fit in the current page during table layout. It defines whether a table row can be allowed to break. If the value is false, the entire row will be moved to the start of next page. You can modify this property for selected rows using the following sample code.
+This property is valid if a table row does not fit in the current page during table layout. It defines whether a table row can be allowed to break. If the value is false, the entire row will be moved to the start of the next page. You can modify this property for selected rows using the following sample code.
 
 ```ts
 this.$refs.documenteditor.ej2Instances.selection.rowFormat.allowRowBreakAcrossPages=false;
@@ -145,7 +145,7 @@ this.$refs.documenteditor.ej2Instances.selection.rowFormat.allowRowBreakAcrossPa
 
 ### Title
 
-Document Editor expose API to get or set the table title of the selected table. Refer to the following sample code to set title.
+Document Editor exposes API to get or set the table title of the selected table. Refer to the following sample code to set title.
 
 ```ts
 this.$refs.documenteditor.ej2Instances.selection.tableFormat.title = 'Shipping Details';
@@ -153,16 +153,16 @@ this.$refs.documenteditor.ej2Instances.selection.tableFormat.title = 'Shipping D
 
 ### Description
 
-Document Editor expose API to get or set the table description of the selected image. Refer to the following sample code to set description.
+Document Editor exposes API to get or set the table description of the selected table. Refer to the following sample code to set description.
 
 ```ts
 this.$refs.documenteditor.ej2Instances.selection.tableFormat.description = 'Freight cost and shipping details';
 ```
 
-## Online Demo
+## Online demo
 
-Explore how to format tables in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/table-formatting.html).
+Explore how to format tables in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/table-formatting).
 
-## See Also
+## See also
 
 * [Table properties dialog](./dialog#table-properties-dialog)
