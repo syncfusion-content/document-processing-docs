@@ -1,6 +1,6 @@
 ---
 title: Preserve Charts, Shapes as Images in Word to Markdown | Syncfusion
-description: Learn how to preserve Word elements as fallback images in Word-to-Markdown conversion using DocIO.
+description: Learn how to preserve Word elements as fallback images during Word-to-Markdown conversion with DocIO.
 platform: document-processing
 control: DocIO
 documentation: UG
