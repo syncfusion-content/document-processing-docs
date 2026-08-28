@@ -53,7 +53,7 @@ The following code shows how to add a custom option in the context menu.
 
 ### Customize a custom option in the context menu
 
-The Blazor Document Editor component allows you to customize added custom options and show or hide the default context menu.
+The Blazor DOCX Editor component allows you to customize added custom options and show or hide the default context menu.
 
 #### Hide default context menu items
 
