@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Form Fields in React DOCX Editor
 
-[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) Container component provides support for inserting Text, CheckBox, DropDown form fields through in-built toolbar.
+[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) Container component provides support for inserting Text, CheckBox, DropDown form fields through in-built toolbar.
 
 ![Form Fields](images/toolbar-form-fields.png)
 
@@ -122,9 +122,9 @@ documentEditor.resetFormFields();
 
 ## Protect the document in form filling mode
 
-Document Editor provides support for protecting the document with `FormFieldsOnly` protection. In this protection, user can only fill form fields in the document.
+DOCX Editor provides support for protecting the document with `FormFieldsOnly` protection. In this protection, user can only fill form fields in the document.
 
-Document Editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#stopprotection) API.
+DOCX Editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/react/documentation/api/document-editor/editor#stopprotection) API.
 
 The following example code illustrates how to enforce and stop protection in Document Editor container.
 
@@ -168,10 +168,10 @@ createRoot(document.getElementById('sample')).render(<App />);
 
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 N> In enforce Protection method, first parameter denotes password and second parameter denotes protection type. Possible values of protection type are `NoProtection |ReadOnly |FormFieldsOnly |CommentsOnly`. In stop protection method, parameter denotes the password.
 
 ## Online Demo
 
-Explore how to insert and manage form fields in Word documents using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/form-fields).
+Explore how to insert and manage form fields in Word documents using the React DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/form-fields).
