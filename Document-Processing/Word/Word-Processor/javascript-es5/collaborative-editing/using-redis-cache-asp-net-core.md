@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 ## Prerequisites
 
-The following are needed to enable collaborative editing in Document Editor.
+The following are needed to enable collaborative editing in DOCX Editor.
 
 - SignalR
 - Redis
@@ -95,7 +95,7 @@ The configuration and storage size of the Redis cache can be adjusted based on t
 
 Collaborative editing is built using three main components:
 
-### Client (JavaScript ES5 Document Editor)
+### Client (JavaScript ES5 DOCX Editor)
 
 - Captures user edits in the document
 
@@ -121,15 +121,15 @@ Collaborative editing is built using three main components:
 
 ## Integrate collaborative editing in client side
 
-### Step 1: Integrate Document Editor in JavaScript ES5 sample
+### Step 1: Integrate DOCX Editor in JavaScript ES5 sample
 
-Refer to the following documentation to get started with the [JavaScript ES5 Document Editor](../getting-started).
+Refer to the following documentation to get started with the [JavaScript ES5 DOCX Editor](../getting-started).
 
 ### Step 2: Enable collaborative editing
 
-To enable collaborative editing, inject [CollaborativeEditingHandler](https://ej2.syncfusion.com/documentation/api/document-editor/collaborativeeditinghandler) and set the [enableCollaborativeEditing](https://ej2.syncfusion.com/documentation/api/document-editor/index-default#enablecollaborativeediting) property to true in the Document Editor.
+To enable collaborative editing, inject [CollaborativeEditingHandler](https://ej2.syncfusion.com/documentation/api/document-editor/collaborativeeditinghandler) and set the [enableCollaborativeEditing](https://ej2.syncfusion.com/documentation/api/document-editor/index-default#enablecollaborativeediting) property to true in the DOCX Editor.
 
-The following code snippet demonstrates how to enable collaborative editing in the Document Editor.
+The following code snippet demonstrates how to enable collaborative editing in the DOCX Editor.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -139,9 +139,9 @@ The following code snippet demonstrates how to enable collaborative editing in t
 
 ### Step 3: Configure SignalR to send and receive changes
 
-To broadcast changes and receive updates from remote users, configure SignalR in the Document Editor.
+To broadcast changes and receive updates from remote users, configure SignalR in the DOCX Editor.
 
-The following code snippet demonstrates how to configure SignalR in the Document Editor.
+The following code snippet demonstrates how to configure SignalR in the DOCX Editor.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -165,7 +165,7 @@ The following code snippet demonstrates how to generate a unique ID and open a d
 
 Changes made on the client side must be transmitted to the server to be broadcast to other connected users. 
 
-The following code snippet demonstrates how to send changes to the server using the [contentChange](https://ej2.syncfusion.com/documentation/api/document-editor/index-default#contentchange) event in the Document Editor.
+The following code snippet demonstrates how to send changes to the server using the [contentChange](https://ej2.syncfusion.com/documentation/api/document-editor/index-default#contentchange) event in the DOCX Editor.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -177,7 +177,7 @@ The complete version of the code discussed above is available at the following [
 
 ## Integrate collaborative editing in server side
 
-### Step 1: Create the Document Editor web service project 
+### Step 1: Create the DOCX Editor web service project 
 
 Create an ASP.NET Core web service to handle server-side operations.
 
