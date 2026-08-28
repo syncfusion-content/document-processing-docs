@@ -3,7 +3,7 @@ layout: post
 title: Text Wrapping Style in Blazor DOCX Editor | Syncfusion
 description: Text wrapping styles in Blazor DOCX Editor preserve inline, square, behind text, and other wrapping modes during document rendering.
 platform: document-processing
-control: Document Editor
+control: DOCX Editor
 documentation: ug
 ---
 
@@ -15,13 +15,13 @@ Text wrapping refers to how images and shapes are fit with surrounding text in a
 
 In this option, the image or shape is placed inline with the surrounding text like any other word or letter. This image or shape will be automatically moved along with the text while editing, whereas the other options keep the image or shape in a fixed position while the text shifts and wraps around it.
 
-![View of image with inline wrapping style in Document Editor](images/Text-Wrapping-Style_images/inline-textwrapping.PNG)
+![View of image with inline wrapping style in DOCX Editor](images/Text-Wrapping-Style_images/inline-textwrapping.PNG)
 
 ## In Front of text
 
 In this option, the image or shape is placed in front of the text. This can be used to place an image around some text or to add a shape to highlight a part in a paragraph.
 
-![View of image with in front of text wrapping style in Document Editor](images/Text-Wrapping-Style_images/infront-textwrapping.PNG)
+![View of image with in front of text wrapping style in DOCX Editor](images/Text-Wrapping-Style_images/infront-textwrapping.PNG)
 
 N> Starting from v18.2.0.x, the in-front-of-text wrapping style is supported.
 
@@ -31,13 +31,13 @@ In this option, the text wraps above and below the image or shape. No text appea
 
 N> Starting from v19.1.0.x, the top and bottom wrapping style is supported.
 
-![View of image with top and bottom wrapping style in Document Editor](images/Text-Wrapping-Style_images/topandbottom-textwrapping.PNG)
+![View of image with top and bottom wrapping style in DOCX Editor](images/Text-Wrapping-Style_images/topandbottom-textwrapping.PNG)
 
 ## Behind
 
 In this option, the image or shape is placed behind the text. This can be used when you need to add a watermark or background image to a document.
 
-![View of image with behind wrapping style in Document Editor](images/Text-Wrapping-Style_images/behind-textwrapping.PNG)
+![View of image with behind wrapping style in DOCX Editor](images/Text-Wrapping-Style_images/behind-textwrapping.PNG)
 
 N> Starting from v19.2.0.x, the behind text wrapping style is supported.
 
@@ -45,6 +45,6 @@ N> Starting from v19.2.0.x, the behind text wrapping style is supported.
 
 In this option, the text wraps around the image or text box in a square shape.
 
-N> Tight and Through styles will be preserved as the square wrapping style in Document Editor, which is supported from v19.2.0.x.
+N> Tight and Through styles will be preserved as the square wrapping style in DOCX Editor, which is supported from v19.2.0.x.
 
-![View of shape with square wrapping style in Document Editor](images/Text-Wrapping-Style_images/square-textwrapping.PNG)
+![View of shape with square wrapping style in DOCX Editor](images/Text-Wrapping-Style_images/square-textwrapping.PNG)

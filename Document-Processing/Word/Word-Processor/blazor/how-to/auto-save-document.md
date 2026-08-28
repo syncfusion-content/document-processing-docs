@@ -3,7 +3,7 @@ layout: post
 title: How to Auto Save Document in Blazor DOCX Editor | Syncfusion
 description: Automatically save edited documents to the server at regular intervals in Syncfusion® Blazor DOCX Editor to prevent data loss.
 platform: document-processing
-control: Document Editor
+control: DOCX Editor
 documentation: ug
 ---
 # How to Auto Save Document in Blazor DOCX Editor
@@ -78,4 +78,4 @@ The following example illustrates how to auto-save the document to the server.
 
 ## Online demo
 
-Explore how to automatically save Word documents using the Blazor Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities).
+Explore how to automatically save Word documents using the Blazor DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities).

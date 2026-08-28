@@ -3,7 +3,7 @@ layout: post
 title: Text Format in Blazor DOCX Editor | Syncfusion
 description: Text format properties in Blazor DOCX Editor enables customizing text appearance with font styles, colors, highlighting, and character formatting options.
 platform: document-processing
-control: Document Editor
+control: DOCX Editor
 documentation: ug
 ---
 
@@ -128,7 +128,7 @@ await documentEditor.Selection.CharacterFormat.SetFontSizeAsync(32);
 
 ### Change Font Color by UI Option
 
-In the Document Editor, the Text Properties pane features two icons for managing text color within the user interface (UI):
+In the DOCX Editor, the Text Properties pane features two icons for managing text color within the user interface (UI):
 
 * **Colored Box:** This icon visually represents the **current color** applied to the selected text.
 * **Text (A) Icon:** Clicking this icon allows users **to modify the color** of the selected text by choosing a new color from the available options.
@@ -164,4 +164,4 @@ await documentEditor.Selection.CharacterFormat.SetHighlightColorAsync(HighlightC
 
 ## Online Demo
 
-Explore how to apply text formatting in Word documents using the Blazor Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/character-format?theme=fluent2).
+Explore how to apply text formatting in Word documents using the Blazor DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/character-format?theme=fluent2).
