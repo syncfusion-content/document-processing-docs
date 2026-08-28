@@ -30,7 +30,7 @@ A text box is a rectangular area on the document where you can enter text. When 
 
 ## Shape resizer
 
-The Document Editor also supports a built-in shape resizer to resize the shapes present in the document. The shape resizer accepts both touch and mouse interactions.
+The DOCX Editor also supports a built-in shape resizer to resize the shapes present in the document. The shape resizer accepts both touch and mouse interactions.
 
 ![Shape resizer view in DocumentEditor](images/Shapes_images/shape_resizer.png)
 
@@ -40,8 +40,8 @@ Text wrapping refers to how shapes fit with surrounding text in a document. Plea
 
 ## Positioning the shape
 
-Document Editor preserves the position properties of the shape and displays the shape based on position properties. It does not support modifying the position properties. However, the shape will be automatically moved along with the edited text if it is positioned relative to the line or paragraph.
+DOCX Editor preserves the position properties of the shape and displays the shape based on position properties. It does not support modifying the position properties. Whereas the shape will be automatically moved along with text edited if it is positioned relative to the line or paragraph.
 
 ## Online demo
 
-Explore how to preserve AutoShapes and grouped shapes in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/autoshapes).
+Explore how to preserve auto shapes and grouped shapes in Word documents using the Vue DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/autoshapes.html).

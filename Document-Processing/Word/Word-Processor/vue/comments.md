@@ -73,7 +73,7 @@ this.$refs.container.ej2Instances.documentEditor.editor.insertReplyComment(comme
 
 ## Get Comments
 
-Document Editor allows you to get the comments along with its reply and comment properties using [`getComments`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#getcomments).
+DOCX Editor allows you to get the comments along with its reply and comment properties using [`getComments`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#getcomments).
 
 ```ts
 //Get Comments in the document along with the properties author, date, status.
@@ -120,11 +120,11 @@ this.$refs.container.ej2Instances.documentEditor.editor.deleteAllComments();
 
 ## Protect the document in comments only mode
 
-To use the Document Editor component and its protection APIs, follow the [Getting Started](./getting-started) documentation to set up the component, then load a document before enforcing protection.
+To use the DOCX Editor component and its protection APIs, follow the [Getting Started](./getting-started) documentation to set up the component, then load a document before enforcing protection.
 
-Document Editor provides support for protecting the document with `CommentsOnly` protection. In this protection, user is allowed to add or edit comments alone in the document.
+DOCX Editor provides support for protecting the document with `CommentsOnly` protection. In this protection, user is allowed to add or edit comments alone in the document.
 
-Document Editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#stopprotection) APIs.
+DOCX Editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#stopprotection) APIs.
 
 The following example code illustrates how to enforce and stop protection in Document Editor container.
 
@@ -191,7 +191,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 Comment only protection can be enabled in UI by using [Restrict Editing pane](./document-management#restrict-editing-pane)
 
@@ -203,7 +203,7 @@ Comment only protection can be enabled in UI by using [Restrict Editing pane](./
 
 Mention support displays a list of items that users can select or tag from the suggested list. To use this feature, type the @ character in the comment box and select or tag the user from the suggestion list.
 
-The following example illustrates how to enable mention support in the Document Editor
+The following example illustrates how to enable mention support in the DOCX Editor
 
 ```
 <template>
@@ -231,7 +231,7 @@ The following example illustrates how to enable mention support in the Document 
 </script>
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 ## Events
 
@@ -337,4 +337,4 @@ export default {
 
 ## Online Demo
 
-Explore how to add, view, and manage comments in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/comments.html).
+Explore how to add, view, and manage comments in Word documents using the Vue DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/comments.html).
