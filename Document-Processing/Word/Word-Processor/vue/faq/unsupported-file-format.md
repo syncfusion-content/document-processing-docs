@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Supported File Formats in Vue DOCX Editor | Syncfusion
-description: Learn about the supported file formats in Vue DOCX Editor for importing, and exporting documents.
+description: Learn about the supported file formats in Vue DOCX Editor for importing, exporting, and processing documents.
 control: Unsupported file 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Supported File Formats in Vue DOCX Editor
+# Supported Documents Formats in Vue DOCX Editor
 
 If you receive the message "The file format you have selected isn't supported. Please choose a valid format." when opening a document in the [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor), it typically indicates that the document format is not supported by the current version of the Document Editor. Here are some common reasons for this warning:
 1.	Unsupported File Format: The document you are trying to open might be in a format that the Document Editor does not support. Ensure you are using a supported format, such as SFDT (Refer to the supported formats list below).
