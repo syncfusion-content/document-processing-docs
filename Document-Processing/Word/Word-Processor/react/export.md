@@ -10,18 +10,18 @@ domainurl: ##DomainURL##
 
 # Export in React DOCX Editor
 
-[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) exports the document into various known file formats on the client side, such as Microsoft Word document (.docx), Microsoft Word Template (.dotx), text document (.txt), and its own format called **Syncfusion<sup style="font-size:70%">&reg;</sup> Document Text (.sfdt)**.
+[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) exports the document into various known file formats on the client side, such as Microsoft Word document (.docx), Microsoft Word Template (.dotx), text document (.txt), and its own format called **Syncfusion<sup style="font-size:70%">&reg;</sup> Document Text (.sfdt)**.
 
 Two types of save APIs are provided as mentioned below.
 
-|API name|Purpose|Code Snippet for Document Editor|Code Snippet for Document Editor Container|
+|API name|Purpose|Code Snippet for DOCX Editor|Code Snippet for Document Editor Container|
 |--------|---------|----------|----------|
 |save(filename,FormatType):void<br>FormatType: Sfdt or Docx or Txt|Creates the document with specified file name and format type. Then, the created file is downloaded in the client browser by default.|documenteditor.save('sample', 'Docx')|container.documentEditor.save('sample', 'Docx')|
 |saveAsBlob(FormatType):Blob|Creates the document in specified format type and returns the created document as Blob.<br>This blob can be uploaded to your required server, database, or file path.|documenteditor.saveAsBlob('Docx')|container.documentEditor.saveAsBlob('Docx')|
 
 ## SFDT export
 
-The following example shows how to export documents in the Document Editor as Syncfusion<sup style="font-size:70%">&reg;</sup> document text (.sfdt).
+The following example shows how to export documents in the DOCX Editor as Syncfusion<sup style="font-size:70%">&reg;</sup> document text (.sfdt).
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -51,17 +51,17 @@ The following example shows how to export documents in the Document Editor as Sy
 
 {% previewsample "/document-processing/code-snippet/document-editor/react/export-container-cs1" %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer to and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use it for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer to and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use it for the serviceUrl property.
 
->Document Editor features are segregated into individual feature-wise modules. To use SFDT export, inject the `SfdtExport` module using `DocumentEditor.Inject(SfdtExport)`.
+>DOCX Editor features are segregated into individual feature-wise modules. To use SFDT export, inject the `SfdtExport` module using `DocumentEditor.Inject(SfdtExport)`.
 >
->To enable SFDT export for a document editor instance, set `enableSfdtExport` to true.
+>To enable SFDT export for a DOCX Editor instance, set `enableSfdtExport` to true.
 
 ## Word export
 
 The following example shows how to export the document as a Word document (.docx).
 
-N> The React Document Editor component's document pagination (page-by-page display) can't be guaranteed for all Word documents to match the pagination of the Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
+N> The React DOCX Editor component's document pagination (page-by-page display) can't be guaranteed for all Word documents to match the pagination of the Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -91,17 +91,17 @@ N> The React Document Editor component's document pagination (page-by-page displ
 
 {% previewsample "/document-processing/code-snippet/document-editor/react/export-container-cs2" %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer to and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use it for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer to and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use it for the serviceUrl property.
 
->Document Editor features are segregated into individual feature-wise modules. To use Word export, inject the `WordExport` and `SfdtExport` modules using `DocumentEditor.Inject(WordExport, SfdtExport)`.
+>DOCX Editor features are segregated into individual feature-wise modules. To use Word export, inject the `WordExport` and `SfdtExport` modules using `DocumentEditor.Inject(WordExport, SfdtExport)`.
 >
->To enable Word export for a document editor instance, set `enableWordExport` to true.
+>To enable Word export for a DOCX Editor instance, set `enableWordExport` to true.
 
 ## Template export
 
 The following example shows how to export the document as a Word Template (.dotx).
 
-N> The React Document Editor component's document pagination (page-by-page display) can't be guaranteed for all Word documents to match the pagination of the Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
+N> The React DOCX Editor component's document pagination (page-by-page display) can't be guaranteed for all Word documents to match the pagination of the Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -131,11 +131,11 @@ N> The React Document Editor component's document pagination (page-by-page displ
 
 {% previewsample "/document-processing/code-snippet/document-editor/react/export-container-cs4" %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer to and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use it for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer to and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use it for the serviceUrl property.
 
->Document Editor features are segregated into individual feature-wise modules. To use Word template export, inject the `WordExport` and `SfdtExport` modules using `DocumentEditor.Inject(WordExport, SfdtExport)`.
+>DOCX Editor features are segregated into individual feature-wise modules. To use Word template export, inject the `WordExport` and `SfdtExport` modules using `DocumentEditor.Inject(WordExport, SfdtExport)`.
 >
->To enable Word template export for a document editor instance, set `enableWordExport` to true.
+>To enable Word template export for a DOCX Editor instance, set `enableWordExport` to true.
 
 ## Text export
 
@@ -167,17 +167,17 @@ The following example shows how to export the document as a text document (.txt)
 {% endhighlight %}
 {% endtabs %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer to and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use it for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer to and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use it for the serviceUrl property.
 
 {% previewsample "/document-processing/code-snippet/document-editor/react/export-container-cs3" %}
 
->Document Editor features are segregated into individual feature-wise modules. To use text export, inject the `TextExport` and `SfdtExport` modules using the `DocumentEditor.Inject(TextExport, SfdtExport)`.
+>DOCX Editor features are segregated into individual feature-wise modules. To use text export, inject the `TextExport` and `SfdtExport` modules using the `DocumentEditor.Inject(TextExport, SfdtExport)`.
 >
->To enable text export for a document editor instance, set `enableTextExport` to true.
+>To enable text export for a DOCX Editor instance, set `enableTextExport` to true.
 
 ## Export as blob
 
-Document Editor also supports an API to store the document into a blob. Refer to the following sample to export the document into a blob on the client side.
+DOCX Editor also supports an API to store the document into a blob. Refer to the following sample to export the document into a blob on the client side.
 
 
 ```ts
@@ -299,7 +299,7 @@ On the client side, you can consume this web service and save the document as a 
 
 ## Online Demo
 
-Explore how to export Word documents in various formats using the React Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/advanced-exporting).
+Explore how to export Word documents in various formats using the React DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/advanced-exporting).
 
 ## See Also
 
