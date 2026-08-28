@@ -60,7 +60,7 @@ let endOffset:string = container.documentEditor.selection.endOffset;
 };
 ```
 
-The Document Editor has a [`selectionChange`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#selectionchange) event which is triggered whenever the selection changes in the document.
+The DOCX Editor has a [`selectionChange`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#selectionchange) event which is triggered whenever the selection changes in the document.
 
 ## Select Content Based on Left and Top Position
 

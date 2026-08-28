@@ -16,11 +16,11 @@ This document provides a description of the security updates available for Syncf
 
 ## Security Updates
 
-The following security updates are available for JavaScript (ES5) Document Editor control and are listed based on the release version.
+The following security updates are available for JavaScript (ES5) DOCX Editor control and are listed based on the release version.
 
 ### 2024 Volume 2 (v26.2.4) - July 25, 2024
 
-This release resolves critical and moderate security vulnerabilities affecting the JavaScript (ES5) Document Editor Docker Image.
+This release resolves critical and moderate security vulnerabilities affecting the JavaScript (ES5) DOCX Editor Docker Image.
 
 **Threat:**
 

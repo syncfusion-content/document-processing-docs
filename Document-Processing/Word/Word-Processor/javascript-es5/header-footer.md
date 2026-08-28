@@ -88,7 +88,7 @@ documenteditor.selection.closeHeaderFooter()
 
 ## Online Demo
 
-Explore how to add and customize headers and footers in Word documents using the JavaScript (ES5) Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/tailwind3/document-editor/headers-and-footers.html).
+Explore how to add and customize headers and footers in Word documents using the JavaScript (ES5) DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/tailwind3/document-editor/headers-and-footers.html).
 
 ## See Also
 
