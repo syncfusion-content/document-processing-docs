@@ -26,7 +26,7 @@ Let us briefly discuss each process.
 
 ## Push the Docker image to the Amazon Elastic Registry 
 
-**Step 1:** Dockerize the Word Processor Server Application with the image name [syncfusion/word-processor-server](https://hub.docker.com/r/syncfusion/word-processor-server)
+**Step 1:** Build a Docker Image for the Word Processor Server Application using the image name [syncfusion/word-processor-server](https://hub.docker.com/r/syncfusion/word-processor-server)
 
 ```
 docker build -t <your-image-name> .
@@ -148,4 +148,4 @@ N> Get the pod names in AWS Console or using the below AWS CLI command.
 kubectl get pods
 ```
 
-Finally, you can access the sample at localhost: http://<your-ip>/api/documenteditor/
+Finally, you can access the sample at localhost: http://```<your-ip>```/api/documenteditor/
