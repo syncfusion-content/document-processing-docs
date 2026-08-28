@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Export in TypeScript DOCX Editor | Syncfusion
-description: The export feature in TypeScript DOCX Editor enables users to save and download documents in supported formats while preserving content and formatting.
+title: Server-side export in TypeScript DOCX Editor | Syncfusion
+description: Server-side export in TypeScript DOCX Editor enables users to save and download documents in supported formats while preserving content and formatting.
 platform: document-processing
 control: Server side export 
 documentation: ug
