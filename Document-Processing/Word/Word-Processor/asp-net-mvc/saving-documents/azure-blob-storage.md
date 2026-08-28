@@ -13,9 +13,9 @@ domainurl: ##DomainURL##
 To save a document to Azure Blob Storage, you can follow the steps below
 
 
-**Step 1:** Create a Simple Document Editor Sample in ASP.NET MVC
+**Step 1:** Create a Simple DOCX Editor Sample in ASP.NET MVC
 
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in ASP.NET MVC. This will give you a basic setup of the Document Editor component.
+Start by following the steps provided in this [link](../getting-started) to create a simple DOCX Editor sample in ASP.NET MVC. This will give you a basic setup of the DOCX Editor component.
 
 
 **Step 2:** Modify the `DocumentEditorController.cs` File in the Web Service Project
@@ -111,7 +111,7 @@ private string GetValue(IFormCollection data, string key)
 
 N> Replace **Your Connection string from Azure** with the actual connection string for your Azure Blob Storage account and **Your container name in Azure** with the actual container name.
 
-**Step 3:**  Modify the Index.cshtml File in the Document Editor sample
+**Step 3:**  Modify the Index.cshtml File in the DOCX Editor sample
 
 In the client-side, to export the document into a blob using `saveAsBlob` and send it to server-side for saving in the Azure Blob Storage container:
 

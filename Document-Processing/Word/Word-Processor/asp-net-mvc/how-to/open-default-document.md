@@ -14,7 +14,7 @@ This article explains how to open a default document when DocumentEditor and Doc
 
 ## Opening a default document in DocumentEditor
 
-Using the `open` method in Document Editor allows you to open the document in SFDT format. To open the document by default, call the open method in the `created` event of the Document Editor, which gets triggered once the control is created.
+Using the `open` method in DOCX Editor allows you to open the document in SFDT format. To open the document by default, call the open method in the `created` event of the DOCX Editor, which gets triggered once the control is created.
 
 
 {% tabs %}
