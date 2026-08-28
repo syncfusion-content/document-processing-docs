@@ -34,7 +34,7 @@ documenteditor.selection.sectionFormat.bottomMargin = 10;
 documenteditor.selection.sectionFormat.topMargin = 10;
 ```
 
-N> The maximum value of `Margin` is 1584, as per the Microsoft Word application, and you can set any value less than or equal to 1584 to this property. If you set any value greater than 1584, then the Syncfusion Document Editor will automatically reset it to 1584.
+N> The maximum value of `Margin` is 1584, as per the Microsoft Word application, and you can set any value less than or equal to 1584 to this property. If you set any value greater than 1584, then the Syncfusion DOCX Editor will automatically reset it to 1584.
 
 ## Header distance
 
@@ -54,7 +54,7 @@ documenteditor.selection.sectionFormat.footerDistance = 72;
 
 ## Online demo
 
-Explore how to apply section formatting in Word documents using the ASP.NET Core Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/sectionformat#/tailwind3).
+Explore how to apply section formatting in Word documents using the ASP.NET Core DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/sectionformat#/tailwind3).
 
 ## See also
 

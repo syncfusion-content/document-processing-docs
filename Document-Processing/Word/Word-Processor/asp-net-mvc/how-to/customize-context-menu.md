@@ -10,9 +10,9 @@ documentation: ug
 
 # How to Customize Context Menu in ASP.NET MVC DOCX Editor
 
-## How to customize context menu in Document Editor
+## How to customize context menu in DOCX Editor
 
-Document Editor allows to add custom option in context menu. It can be achieved by using the `addCustomMenu()` method and custom action is defined using the `customContextMenuSelect`.
+DOCX Editor allows to add custom option in context menu. It can be achieved by using the `addCustomMenu()` method and custom action is defined using the `customContextMenuSelect`.
 
 ### Add Custom Option
 
@@ -29,7 +29,7 @@ Document Editor allows to add custom option in context menu. It can be achieved 
 
 ### Customize custom option in context menu
 
-Document Editor allows to customize the added custom option and also to hide or show default context menu.
+DOCX Editor allows to customize the added custom option and also to hide or show default context menu.
 
 #### Hide default context menu items
 
@@ -61,7 +61,7 @@ The following code shows how to hide or show the added custom option in context 
 
 #### Customize Context Menu with sub-menu items
 
-Document Editor allows you to customize the Context Menu with sub-menu items. It can be achieved by using the `addCustomMenu()` method.
+DOCX Editor allows you to customize the Context Menu with sub-menu items. It can be achieved by using the `addCustomMenu()` method.
 
 The following code shows how to add submenu items to the custom option in the context menu in the Document Editor Container.
 
@@ -76,4 +76,4 @@ The following code shows how to add submenu items to the custom option in the co
 
 ## Online Demo
 
-Explore how to customize the context menu in the ASP.NET MVC Document Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/customcontextmenu#/tailwind3).
+Explore how to customize the context menu in the ASP.NET MVC DOCX Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/customcontextmenu#/tailwind3).

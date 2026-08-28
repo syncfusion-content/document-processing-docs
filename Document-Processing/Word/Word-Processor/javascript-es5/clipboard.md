@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 ## Copy
 
-Copy a portion of the document to the system clipboard using the built-in context menu of the Document Editor. You can also do it programmatically using the following sample code.
+Copy a portion of the document to the system clipboard using the built-in context menu of the DOCX Editor. You can also do it programmatically using the following sample code.
 
 ```ts
 documentEditor.selection.copy();
@@ -22,7 +22,7 @@ documentEditor.selection.copy();
 
 ## Cut
 
-Cut a portion of the document to the system clipboard using the built-in context menu of the Document Editor. You can also do it programmatically using the following sample code.
+Cut a portion of the document to the system clipboard using the built-in context menu of the DOCX Editor. You can also do it programmatically using the following sample code.
 
 ```ts
 documentEditor.editor.cut();
@@ -30,15 +30,15 @@ documentEditor.editor.cut();
 
 ## Paste
 
-Due to limitations, you can paste contents from the system clipboard into the Document Editor only using the **Ctrl + V** keyboard shortcut.
+Due to limitations, you can paste contents from the system clipboard into the DOCX Editor only using the **Ctrl + V** keyboard shortcut.
 
 N> Due to browser limitations of getting content from the system clipboard, paste using the API and context menu options doesn't work.
 
 ## Local paste (copy/paste within control)
 
-Document Editor exposes an API to enable local paste within the control. When enabled, the following occurs:
+DOCX Editor exposes an API to enable local paste within the control. When enabled, the following occurs:
 * Selected contents will be stored to an internal clipboard as SFDT in addition to the system clipboard.
-* Clipboard paste will be overridden, and the internally stored data (SFDT data) that has formatted text will be pasted using the `paste()` API in the Document Editor.
+* Clipboard paste will be overridden, and the internally stored data (SFDT data) that has formatted text will be pasted using the `paste()` API in the DOCX Editor.
 
 ### Enable Local Paste
 
@@ -52,7 +52,7 @@ editor.enableLocalPaste = true;
 ```
 
 By default, **enableLocalPaste** is false.
-When local paste is enabled for a document editor instance, you can paste contents programmatically if the internal clipboard has stored data during last copy operation. Refer to the following sample code.
+When local paste is enabled for a DOCX Editor instance, you can paste contents programmatically if the internal clipboard has stored data during last copy operation. Refer to the following sample code.
 
 ```ts
 documentEditor.editor.paste();
@@ -60,7 +60,7 @@ documentEditor.editor.paste();
 
 ### Paste options in context menu
 
-In the Document Editor, paste options in the context menu will be in a disabled state if you try to copy/paste content from outside of the Document Editor. It gets enabled when `enableLocalPaste` is `true` and you copy/paste content within the Document Editor.
+In the DOCX Editor, paste options in the context menu will be in a disabled state if you try to copy/paste content from outside of the DOCX Editor. It gets enabled when `enableLocalPaste` is `true` and you copy/paste content within the DOCX Editor.
 
 N> Due to browser limitations of getting content from the system clipboard, paste using the API and context menu options doesn't work. Hence, the paste option is disabled in the context menu.
 
@@ -74,16 +74,16 @@ Alternatively, you can use the keyboard shortcuts:
 
 |**EnableLocalPaste** |**Paste behavior details**|
 |--------------------------|----------------------|
-|True |Allows to paste content that is copied from the same Document Editor component alone and prevents pasting content from system clipboard. Hence the content copied from outside Document Editor component can’t be pasted.<br>Browser limitation of pasting from system clipboard using API and context menu options, will be resolved. So, you can copy and paste content within the Document Editor component using API and context menu options too.|
-|False|Allows to paste content from system clipboard. Hence the content copied from both the Document Editor component and outside can be pasted.<br>Browser limitation of pasting from system clipboard using API and context menu options, will remain as a limitation.|
+|True |Allows to paste content that is copied from the same DOCX Editor component alone and prevents pasting content from system clipboard. Hence the content copied from outside DOCX Editor component can’t be pasted.<br>Browser limitation of pasting from system clipboard using API and context menu options, will be resolved. So, you can copy and paste content within the DOCX Editor component using API and context menu options too.|
+|False|Allows to paste content from system clipboard. Hence the content copied from both the DOCX Editor component and outside can be pasted.<br>Browser limitation of pasting from system clipboard using API and context menu options, will remain as a limitation.|
 
 N>
 * Keyboard shortcut for pasting will work properly in both cases.
-* Copying content from Document Editor component and pasting outside will work properly in both cases.
+* Copying content from DOCX Editor component and pasting outside will work properly in both cases.
 
 ## Paste with formatting
 
-Document Editor provides support to paste the system clipboard data with formatting. To enable clipboard paste with formatting options, set the `enableLocalPaste` property in the Document Editor to `false` and use the `Syncfusion.EJ2.WordEditor.AspNet.Core` .NET Standard library for the ASP.NET Core web API service implementation. This library helps you to paste the system clipboard data with formatting. For details on setting up the web API service, refer to the [web services overview](./web-services-overview).
+DOCX Editor provides support to paste the system clipboard data with formatting. To enable clipboard paste with formatting options, set the `enableLocalPaste` property in the DOCX Editor to `false` and use the `Syncfusion.EJ2.WordEditor.AspNet.Core` .NET Standard library for the ASP.NET Core web API service implementation. This library helps you to paste the system clipboard data with formatting. For details on setting up the web API service, refer to the [web services overview](./web-services-overview).
 
 You can paste your system clipboard data in the following ways:
 
@@ -95,7 +95,7 @@ This paste option appears as follows.
 
 ![Image](images/paste.png)
 
-N> When you paste content from an external source into the Document Editor, some formatting or elements may not appear as expected because certain elements are not supported. Refer [here](./unsupported-features) to learn more about unsupported elements.
+N> When you paste content from an external source into the DOCX Editor, some formatting or elements may not appear as expected because certain elements are not supported. Refer [here](./unsupported-features) to learn more about unsupported elements.
 
 ## See Also
 

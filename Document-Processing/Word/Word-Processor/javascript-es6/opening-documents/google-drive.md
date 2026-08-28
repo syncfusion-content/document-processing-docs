@@ -18,9 +18,9 @@ You must set up a project in the Google Developers Console and enable the Google
 
  
 
-**Step 2:** Create a Simple Document Editor Sample in TypeScript
+**Step 2:** Create a Simple DOCX Editor Sample in TypeScript
 
-Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample TypeScript. This will give you a basic setup of the Document Editor component.
+Follow the instructions provided in this [link](../getting-started) to create a simple DOCX Editor sample TypeScript. This will give you a basic setup of the DOCX Editor component.
 
 **Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
 
@@ -138,7 +138,7 @@ N> Replace **Your Google Drive Folder ID**, **Your Application name**, and **You
 
 N> The **FolderId** is the unique identifier for the folder. For example, if your folder URL is: `https://drive.google.com/drive/folders/abc123xyz456`, then the folder ID is `abc123xyz456`.
 
-**Step 4:** Modify the index file in the Document Editor sample
+**Step 4:** Modify the index file in the DOCX Editor sample
 
 On the client side, the document returned from the web service is opened using the [`open`](https://ej2.syncfusion.com/documentation/api/document-editor#open) method.
 

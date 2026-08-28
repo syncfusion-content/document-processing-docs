@@ -3,7 +3,7 @@ layout: post
 title: How to Get Selected Content in Blazor DOCX Editor | Syncfusion
 description: Get selected content as plain text and SFDT rich text in Syncfusion® Blazor DOCX Editor for content extraction, processing, and customization.
 platform: document-processing
-control: Document Editor
+control: DOCX Editor
 documentation: ug
 ---
 
@@ -13,7 +13,7 @@ You can get the selected content from the [Blazor DOCX Editor](https://www.syncf
 
 ## Get the selected content as plain text
 
-You can use the [`GetTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetTextAsync) API to get the selected content as plain text from the Blazor Document Editor component.
+You can use the [`GetTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetTextAsync) API to get the selected content as plain text from the Blazor DOCX Editor component.
 
 The following example code illustrates how to add a "Search in Google" option to the context menu for the selected text.
 
@@ -60,7 +60,7 @@ The following custom options can be added using this API:
 
 ## Get the selected content as SFDT (rich text)
 
-You can use the [`GetSfdtAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetSfdtAsync) API to get the selected content as SFDT (rich text) from the Blazor Document Editor component.
+You can use the [`GetSfdtAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetSfdtAsync) API to get the selected content as SFDT (rich text) from the Blazor DOCX Editor component.
 
 The following example code illustrates how to get the content of a bookmark and export it as SFDT.
 

@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 ## Supported file formats
 
-The following table describes supported formats and their conversion capabilities in the Document Editor.
+The following table describes supported formats and their conversion capabilities in the DOCX Editor.
 
 | File Format | Open | Export |
 |-------------|------|--------|

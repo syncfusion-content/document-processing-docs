@@ -10,7 +10,7 @@ documentation: ug
 
 # List Format in ASP.NET MVC DOCX Editor
 
-Document editor supports both the single-level and multilevel lists. Lists are used to organize data as step-by-step instructions in documents for easy understanding of key points. You can apply lists to selected paragraphs using the supported APIs.
+DOCX Editor supports both the single-level and multilevel lists. Lists are used to organize data as step-by-step instructions in documents for easy understanding of key points. You can apply lists to selected paragraphs using the supported APIs.
 
 ## Create bullet list
 
@@ -66,13 +66,13 @@ documenteditor.editor.clearList();
 
 ## Editing numbered list
 
-Document editor restarts the numbering or continue numbering for a numbered list. These options are found in the built-in context menu, if the list value is selected.
+DOCX Editor restarts the numbering or continue numbering for a numbered list. These options are found in the built-in context menu, if the list value is selected.
 
 ![Editing numbered list context menu](images/list.JPG)
 
 ## Online Demo
 
-Explore how to apply bullets and numbering in Word documents using the ASP.NET MVC Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/bulletsandnumbering#/tailwind3).
+Explore how to apply bullets and numbering in Word documents using the ASP.NET MVC DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/bulletsandnumbering#/tailwind3).
 
 ## See Also
 

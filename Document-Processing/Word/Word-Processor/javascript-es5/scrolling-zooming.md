@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Scrolling and Zooming in JavaScript DOCX Editor
 
-The [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) renders the document page by page. You can scroll through the pages using the mouse wheel or touch interactions. You can also scroll through the page by using the `scrollToPage()` method of the Document Editor instance. Refer to the following code example.
+The [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) renders the document page by page. You can scroll through the pages using the mouse wheel or touch interactions. You can also scroll through the page by using the `scrollToPage()` method of the DOCX Editor instance. Refer to the following code example.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -25,7 +25,7 @@ The [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascri
 
 N> Calling this method brings the specified page into view but does not move the selection. Hence this method will work by default. That is, it works even if the selection is not enabled.
 
-If you wish to move the selection to any page in the Document Editor and bring it into view, you can use the `goToPage()` method of the selection instance. Refer to the following code example.
+If you wish to move the selection to any page in the DOCX Editor and bring it into view, you can use the `goToPage()` method of the selection instance. Refer to the following code example.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -40,7 +40,7 @@ If you wish to move the selection to any page in the Document Editor and bring i
 
 ## Zooming
 
-You can scale the contents in the Document Editor in a range from 10% to 500% of the actual size. You can achieve this using the mouse or touch interactions. You can also use the `zoomFactor` property of the Document Editor instance. The value can be specified in a range from 0.1 to 5. Refer to the following code example.
+You can scale the contents in the DOCX Editor in a range from 10% to 500% of the actual size. You can achieve this using the mouse or touch interactions. You can also use the `zoomFactor` property of the DOCX Editor instance. The value can be specified in a range from 0.1 to 5. Refer to the following code example.
 
 ```js
 var documenteditor = new ej.documenteditor.DocumentEditor({
@@ -57,7 +57,7 @@ documenteditor.zoomFactor = 3;
 
 ## Page fit type
 
-Apart from specifying the zoom factor as a value, the Document Editor provides the option to specify page fit options such as fit to full page or fit to page width. You can set this option using the `fitPage` method of the Document Editor instance. Refer to the following code example.
+Apart from specifying the zoom factor as a value, the DOCX Editor provides the option to specify page fit options such as fit to full page or fit to page width. You can set this option using the `fitPage` method of the DOCX Editor instance. Refer to the following code example.
 
 ```js
 var documenteditor = new ej.documenteditor.DocumentEditor({
@@ -74,7 +74,7 @@ documenteditor.fitPage('FitPageWidth');
 
 ## Zoom option using UI
 
-The following code example shows how to provide zoom options in the Document Editor.
+The following code example shows how to provide zoom options in the DOCX Editor.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}

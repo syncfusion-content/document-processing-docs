@@ -9,7 +9,7 @@ documentation: ug
 
 # How to Change Search Highlight Color in ASP.NET MVC DOCX Editor
 
-Document Editor provides an option to change the default search highlight color using `searchHighlightColor` in Document Editor settings. The highlight color specified in [`documentEditorSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditorContainer.html#Syncfusion_EJ2_DocumentEditor_DocumentEditorContainer_DocumentEditorSettings) is applied to the searched text. By default, the search highlight color is `yellow`.
+DOCX Editor provides an option to change the default search highlight color using `searchHighlightColor` in Document Editor settings. The highlight color specified in [`documentEditorSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditorContainer.html#Syncfusion_EJ2_DocumentEditor_DocumentEditorContainer_DocumentEditorSettings) is applied to the searched text. By default, the search highlight color is `yellow`.
 
 Similarly, you can use the `documentEditorSettings` property with the DocumentEditor control as well.
 

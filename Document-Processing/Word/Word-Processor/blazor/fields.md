@@ -3,7 +3,7 @@ layout: post
 title: Fields in Blazor DOCX Editor | Syncfusion
 description: Fields in Blazor DOCX Editor enable inserting and updating document fields to manage dynamic content efficiently.
 platform: document-processing
-control: Document Editor
+control: DOCX Editor
 documentation: ug
 ---
 
@@ -11,11 +11,11 @@ documentation: ug
 
 Fields are placeholders in a document that display data that can change, such as the current date, the total number of pages, or information from a data source (like in a mail merge). The [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) is designed to preserve all field types when loading an existing document, ensuring that no data or functionality is lost.
 
-This document explains how to update fields and interact with them programmatically using the Document Editor's APIs.
+This document explains how to update fields and interact with them programmatically using the DOCX Editor's APIs.
 
 ## Automatic and manual field updates
 
-Certain fields are automatically updated by the Document Editor as the document's content changes.
+Certain fields are automatically updated by the DOCX Editor as the document's content changes.
 
 ### Automatically updated fields
 
@@ -32,7 +32,7 @@ Other fields, such as bookmark cross-references, must be updated manually. This 
 
 To update all fields in the document, click the **Update Fields** button in the **Review** tab of the toolbar.
 
-![The Update Fields button in the Blazor Document Editor toolbar.](images/updatefields.png)
+![The Update Fields button in the Blazor DOCX Editor toolbar.](images/updatefields.png)
 
 #### Update programmatically
 
@@ -45,11 +45,11 @@ await container.DocumentEditor.UpdateFieldsAsync();
 
 ## Programmatically interacting with fields
 
-The Document Editor provides APIs to insert fields and to get or set the information of an existing field.
+The DOCX Editor provides APIs to insert fields and to get or set the information of an existing field.
 
 ### Inserting a field
 
-The following type of fields are automatically updated in Document Editor.
+The following type of fields are automatically updated in DOCX Editor.
 
 A new field can be inserted at the current selection using the [`InsertFieldAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_InsertFieldAsync_System_String_System_String_) method. This requires specifying both the `fieldCode` and the `fieldResult`.
 
@@ -67,7 +67,7 @@ string fieldResult = "«First Name»";
 await container.DocumentEditor.Editor.InsertFieldAsync(fieldCode, fieldResult);
 ```
 
-N> The Document Editor does not validate the field code or result; it simply inserts a field with the provided information.
+N> The DOCX Editor does not validate the field code or result; it simply inserts a field with the provided information.
 
 ### Getting and modifying field information
 

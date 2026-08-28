@@ -14,7 +14,7 @@ To save a document to Google Cloud Storage, follow these steps:
 
 **Step 1:** Create a Simple [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) Sample in ASP.NET Core
 
-Follow the steps in this [link](../../document-editor/getting-started-core) to create a simple Document Editor sample in ASP.NET Core. This will give you a basic setup of the Document Editor component.
+Follow the steps in this [link](../../document-editor/getting-started-core) to create a simple DOCX Editor sample in ASP.NET Core. This will give you a basic setup of the DOCX Editor component.
 
 
 **Step 2:** Modify the `DocumentEditorController.cs` File in the Web Service Project
@@ -132,7 +132,7 @@ N>
 1. Replace **Your Bucket name from Google Cloud Storage** with the actual name of your Google Cloud Storage bucket.
 2. Replace **path/to/service-account-key.json** with the actual file path to your service account key JSON file. Make sure to provide the correct path and filename.
 
-**Step 3:**  Modify the Index.cshtml File in the Document Editor sample
+**Step 3:**  Modify the Index.cshtml File in the DOCX Editor sample
 
 On the client side, export the document to a blob using `saveAsBlob` and send it to the server for saving in Google Cloud Storage.
 

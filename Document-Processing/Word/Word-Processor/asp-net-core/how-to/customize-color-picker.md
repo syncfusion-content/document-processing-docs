@@ -12,7 +12,7 @@ documentation: ug
 
 [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) provides options to customize the color picker using `colorPickerSettings` in `DocumentEditorSettings`. The color picker offers customization options for the default appearance, by allowing selection between Picker or Palette mode, for font and border colors.
 
-Similarly, you can use the `documentEditorSettings` property for the Document Editor as well.
+Similarly, you can use the `documentEditorSettings` property for the DOCX Editor as well.
 
 
 {% tabs %}
@@ -40,4 +40,5 @@ N> According to the Word document specifications, it is not possible to modify t
 
 ## Online demo
 
-Explore how to customize the color picker in the ASP.NET Core Document Editor for formatting Word documents in this live [ASP.NET Core Color Picker Customization demo](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/colorpickercustomization#/tailwind3).
+Explore how to customize the color picker in the ASP.NET Core DOCX Editor for formatting Word documents in this live [ASP.NET Core Color Picker Customization demo](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/colorpickercustomization#/tailwind3).
+

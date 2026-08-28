@@ -84,7 +84,7 @@ The Restrict Editing Pane provides the following options to manage the document:
 
 ## Online Demo
 
-Explore how to restrict editing and protect Word documents using the ASP.NET Core Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/documentprotection#tailwind3).
+Explore how to restrict editing and protect Word documents using the ASP.NET Core DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/documentprotection#tailwind3).
 
 ## See Also
 

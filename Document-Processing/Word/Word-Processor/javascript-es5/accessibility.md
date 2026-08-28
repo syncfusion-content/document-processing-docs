@@ -38,15 +38,15 @@ The accessibility compliance for the [JavaScript DOCX Editor](https://www.syncfu
 
 ## Keyboard Accessibility
 
-For keyboard accessibility, the Document Editor supports a range of [keyboard shortcuts](./keyboard-shortcut) for navigation and editing without a mouse, including tab navigation, cursor movement, and shortcut key combinations for common editing actions such as copy, paste, undo, and redo.
+For keyboard accessibility, the DOCX Editor supports a range of [keyboard shortcuts](./keyboard-shortcut) for navigation and editing without a mouse, including tab navigation, cursor movement, and shortcut key combinations for common editing actions such as copy, paste, undo, and redo.
 
-The following accessibility compliance summary applies to the Syncfusion JavaScript (ES5) Document Editor component.
+The following accessibility compliance summary applies to the Syncfusion JavaScript (ES5) DOCX Editor component.
 
 ## Ensuring Accessibility
 
-The Document Editor component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The DOCX Editor component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Document Editor component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/wordprocessor.html) in a new window to evaluate the accessibility of the Document Editor component with accessibility tools.
+The accessibility compliance of the DOCX Editor component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/wordprocessor.html) in a new window to evaluate the accessibility of the DOCX Editor component with accessibility tools.
 
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/accessibility-cs1" %}
 

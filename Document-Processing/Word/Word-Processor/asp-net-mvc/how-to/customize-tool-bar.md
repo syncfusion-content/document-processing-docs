@@ -32,4 +32,4 @@ N> Default value of `ToolbarItems` is `['New', 'Open', 'Separator', 'Undo', 'Red
 
 ## Online Demo
 
-Explore the live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/toolbarcustomization#/tailwind3) to see how to customize the toolbar in the ASP.NET MVC Document Editor.
+Explore the live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/toolbarcustomization#/tailwind3) to see how to customize the toolbar in the ASP.NET MVC DOCX Editor.

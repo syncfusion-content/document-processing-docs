@@ -10,11 +10,11 @@ documentation: ug
 
 # How to Open a Default Document in ASP.NET Core DOCX Editor
 
-This section explains how to open a default document when the Document Editor and Document Editor Container are initialized.
+This section explains how to open a default document when the DOCX Editor and Document Editor Container are initialized.
 
-## Opening a default document in the Document Editor
+## Opening a default document in the DOCX Editor
 
-Using the `open` method in the [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) allows you to open the document in SFDT format. To open the document by default, call the `open` method in the `created` event of the Document Editor, which is triggered once the control is created.
+Using the `open` method in the [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) allows you to open the document in SFDT format. To open the document by default, call the `open` method in the `created` event of the DOCX Editor, which is triggered once the control is created.
 
 
 {% tabs %}

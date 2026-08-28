@@ -3,7 +3,7 @@ layout: post
 title: Accessibility in Blazor DOCX Editor | Syncfusion
 description: The accessibility support in Blazor DOCX Editor ensures keyboard navigation, screen reader compatibility, and an inclusive document editing experience.
 platform: document-processing
-control: Document Editor
+control: DOCX Editor
 documentation: ug
 ---
 
@@ -11,7 +11,7 @@ documentation: ug
 
 The [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) component follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria#roles) used to evaluate accessibility compliance.
 
-The accessibility compliance for the Blazor Document Editor component is outlined below.
+The accessibility compliance for the Blazor DOCX Editor component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -38,11 +38,11 @@ The accessibility compliance for the Blazor Document Editor component is outline
 
 ## Keyboard interaction
 
-The Document Editor supports a wide range of keyboard shortcuts to facilitate common actions, including text formatting, paragraph formatting, navigation, and editing.
+The DOCX Editor supports a wide range of keyboard shortcuts to facilitate common actions, including text formatting, paragraph formatting, navigation, and editing.
 
 ### Text formatting
 
-The following table lists the default keyboard shortcuts in the Document Editor for formatting text:
+The following table lists the default keyboard shortcuts in the DOCX Editor for formatting text:
 
 | Windows | Mac | Description |
 |-----------------|------|-------|
@@ -156,13 +156,13 @@ The following table lists the default keyboard shortcuts for formatting the para
 |<kbd>Ctrl</kbd> + <kbd>D</kbd> | <kbd>⌘</kbd> + <kbd>D</kbd> | Opens the font dialog.|
 |<kbd>Ctrl</kbd> + <kbd>K</kbd> | <kbd>⌘</kbd> + <kbd>K</kbd> | Opens the hyperlink dialog.|
 
-Refer to the Blazor Document Editor feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Word Processor example](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities) to learn how to render and configure the Document Editor.
+Refer to the Blazor DOCX Editor feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Word Processor example](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities) to learn how to render and configure the DOCX Editor.
 
 ## Ensuring accessibility
 
-The Blazor Document Editor component accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
+The Blazor DOCX Editor component accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) software tool during automated testing.
 
-The accessibility compliance of the Blazor Document Editor component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/document-editor) in a new window to evaluate the accessibility of the Document Editor component with accessibility tools.
+The accessibility compliance of the Blazor DOCX Editor component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/document-editor) in a new window to evaluate the accessibility of the DOCX Editor component with accessibility tools.
 
 ## See also
 
