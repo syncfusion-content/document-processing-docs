@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Styles in Vue DOCX Editor
 
-Styles are useful for applying a set of formatting consistently throughout the document. In the Document Editor, styles are created and added to a document programmatically or via the built-in Styles dialog.
+Styles are useful for applying a set of formatting consistently throughout the document. In DOCX Editor, styles are created and added to a document programmatically or via the built-in Styles dialog.
 
 ## Styles definition overview
 
-A style in the Document Editor should have the following properties:
+A Style in DOCX Editor should have the following properties:
 
 * **name**: Name of the style. All styles in a document have a unique name, which is used as an identifier when applying the style.
 * **type**: Specifies the document elements that the style will target. For example, paragraph or character.
@@ -28,7 +28,7 @@ N> The style type should match the inherited style type. For example, it is not 
 
 ## Default style
 
-The default style for span and paragraph properties is the Normal style. It internally inherits the default style of the document loaded or Document Editor component.
+The default style for span and paragraph properties is normal. It internally inherits the default style of the document loaded or DOCX Editor component.
 
 ## Style hierarchy
 
@@ -185,7 +185,7 @@ let characterStyles = this.$refs.documenteditor.ej2Instances.documentEditor.getS
 
 ## Modify an existing style
 
-You can modify an existing style with the specified style properties using the [`createStyle`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#createStyle) method. If the modifyExistingStyle parameter is set to `true`, the style properties are updated in the existing style.
+You can modify a existing style with the specified style properties using [`createStyle`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#createStyle) method. If modifyExistingStyle parameter is set to `true` the style properties is updated to the existing style.
 
 The following example illustrates how to modify an existing style.
 
@@ -205,4 +205,4 @@ N> If the modifyExistingStyle parameter is set to true and a style already exist
 
 ## Online demo
 
-Explore how to apply and modify styles in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/styles.html).
+Explore how to apply and modify styles in Word documents using the Vue DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/styles.html).

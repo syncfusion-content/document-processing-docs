@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Spell Check in Vue DOCX Editor
 
-[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) supports spell checking for document content. It identifies misspelled words and provides suggestions through a dialog and the context menu. The spell checker is compatible with [Hunspell](https://github.com/wooorm/dictionaries) dictionary files.
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) supports performing spell checking for any input text. You can perform spell checking for the text in DOCX Editor and it will provide suggestions for the mis-spelled words through dialog and in context menu. DOCX Editor's spell checker is compatible with [hunspell dictionary files](https://github.com/wooorm/dictionaries).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -79,11 +79,11 @@ export default {
 
 ## Enable spellCheck
 
-To enable spell check in Document Editor, set [`enableSpellCheck`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#enablespellcheck) property as `true` and then configure SpellCheckSettings.
+To enable spell check in DOCX Editor, set [`enableSpellCheck`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#enablespellcheck) property as `true` and then configure SpellCheckSettings.
 
 ## Disable spellCheck
 
-To disable spell check in Document Editor, set [`enableSpellCheck`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#enablespellcheck) property as `false` or remove [`enableSpellCheck`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#enablespellcheck) property initialization code. The default value of this property is false.
+To disable spell check in DOCX Editor, set [`enableSpellCheck`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#enablespellcheck) property as `false` or remove [`enableSpellCheck`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#enablespellcheck) property initialization code. The default value of this property is false.
 
 ## Spell check settings
 
@@ -97,7 +97,7 @@ this.$refs.documenteditor.ej2Instances.spellChecker.removeUnderline = false;
 
 ### AllowSpellCheckAndSuggestion
 
-By default, on performing spell check in Document Editor, both spelling and suggestions of the misspelled words will be retrieved, and these misspelled words can be corrected through context menu suggestions. You can modify this behavior using the [`allowSpellCheckAndSuggestion`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/spellChecker#allowspellcheckandsuggestion) API, which will perform only spell check.
+By default, on performing spell check in DOCX Editor, both spelling and suggestions of the mis-spelled words will be retrieved, and this mis-spelled words can be corrected through context menu suggestions. You can modify this behavior using the [`allowSpellCheckAndSuggestion`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/spellChecker#allowspellcheckandsuggestion) API, which will perform only spell check.
 
 ```ts
 this.$refs.documenteditor.ej2Instances.spellChecker.allowSpellCheckAndSuggestion = false;
@@ -105,7 +105,7 @@ this.$refs.documenteditor.ej2Instances.spellChecker.allowSpellCheckAndSuggestion
 
 ### LanguageID
 
-Document Editor provides multi-language spell check support. You can add as many languages (dictionaries) on the server side, and the language used for spell checking in Document Editor must match the [`languageID`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/spellChecker#languageid) specified in the Document Editor.
+DOCX Editor provides multi-language spell check support. You can add as many languages (dictionaries) in the server-side and to use that language for spell checking in DOCX Editor, it must be matched with [`languageID`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/spellChecker#languageid) you pass in the DOCX Editor.
 
 ```ts
 this.$refs.documenteditor.ej2Instances.spellChecker.languageID = 1033 //LCID of "en-us";
@@ -113,7 +113,7 @@ this.$refs.documenteditor.ej2Instances.spellChecker.languageID = 1033 //LCID of 
 
 ### EnableOptimizedSpellCheck
 
-Document Editor provides an option to perform spell check page by page when loading documents. The default value of this property is false, so when opening the document, the spell check web API will be called for each word in the document. To optimize the frequency of spell check web API calls, you can enable this property.
+DOCX Editor provides option to spellcheck page by page when loading the documents. The default value of this property is false, so when opening the document spellcheck web API will be called for each word in the document. To optimize the frequency of spellcheck web API calls, you can enable this property.
 
 The following code example illustrates how to enable optimized spell checking.
 

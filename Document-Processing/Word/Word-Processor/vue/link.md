@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 ## Navigate a hyperlink
 
-Document Editor triggers the `requestNavigate` event whenever the user presses the Ctrl key or taps a hyperlink within the document. This event provides the necessary details about link type, navigation URL, and local URL (if any) as arguments, and allows you to easily customize the hyperlink navigation functionality.
+DOCX Editor triggers the `requestNavigate` event whenever the user presses the Ctrl key or taps a hyperlink within the document. This event provides the necessary details about link type, navigation URL, and local URL (if any) as arguments, and allows you to easily customize the hyperlink navigation functionality.
 
 ### Add the requestNavigate event for DocumentEditor
 
@@ -120,7 +120,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 If the selection is in a hyperlink, trigger this event by calling the `navigateHyperlink` method of the `Selection` instance. Refer to the following example.
 
@@ -128,13 +128,13 @@ If the selection is in a hyperlink, trigger this event by calling the `navigateH
 
 ## Copy link
 
-Document Editor copies the link text of a hyperlink field to the clipboard if the selection is in a hyperlink. Refer to the following example.
+DOCX Editor copies the link text of a hyperlink field to the clipboard if the selection is in a hyperlink. Refer to the following example.
 
 > `documenteditor .selection.copyHyperlink();`
 
 ## Add hyperlink
 
-To create a basic hyperlink in the document, press `ENTER` / `SPACEBAR` / `SHIFT + ENTER` / `TAB` key after typing the address, for instance [`http://www.google.com`](http://www.google.com). Document Editor automatically converts this address to a hyperlink field. The text can be considered as a valid URL if it starts with any of the following.
+To create a basic hyperlink in the document, press `ENTER` / `SPACEBAR` / `SHIFT + ENTER` / `TAB` key after typing the address, for instance [`http://www.google.com`](http://www.google.com). DOCX Editor automatically converts this address to a hyperlink field. The text can be considered as a valid URL if it starts with any of the following.
 
 > `<http://>`<br>
 > `<https://>`<br>
@@ -175,7 +175,7 @@ To remove the link from a hyperlink in the document, press the Backspace key at 
 
 ## Hyperlink dialog
 
-Document Editor provides dialog support to insert or edit a hyperlink. Refer to the following example.
+DOCX Editor provides dialog support to insert or edit a hyperlink. Refer to the following example.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -196,7 +196,7 @@ You can use the following keyboard shortcut to open the hyperlink dialog if the 
 
 ## Online Demo
 
-Explore how to insert and manage hyperlinks in Word documents using the Vue Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/links-and-bookmarks.html).
+Explore how to insert and manage hyperlinks in Word documents using the Vue DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/links-and-bookmarks.html).
 
 ## See Also
 
