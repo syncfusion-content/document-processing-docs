@@ -16,7 +16,7 @@ The table of contents in a document is same as the list of chapters at the begin
 
 [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) exposes an API to insert table of contents at cursor position programmatically. You can specify the settings for table of contents explicitly. Otherwise, the default settings will be applied.
 
-[`TableOfContentsSettings`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/tableOfContentsSettings/) contain the following properties:
+[`TableOfContentsSettings`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/tableOfContentsSettings) contain the following properties:
 * **startLevel**: Specifies the start level for constructing table of contents.
 * **endLevel**: Specifies the end level for constructing table of contents.
 * **includeHyperlink**: Specifies whether the link for headings is included.
@@ -67,10 +67,10 @@ this.$refs.documenteditor.ej2Instances.editor.insertTableOfContents(tocSettings)
 
 >Same method is used for inserting, updating, and editing table of contents. This will work based on the current element at cursor position and the optional settings parameter. If table of contents is present at cursor position, the update operation will be done based on the optional settings parameter. Otherwise, the insert operation will be done.
 
-## Online Demo
+## Online demo
 
 Explore how to insert and update table of contents in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/table-of-contents.html).
 
-## See Also
+## See also
 
 * [Table of contents dialog](./dialog#table-of-contents-dialog)
