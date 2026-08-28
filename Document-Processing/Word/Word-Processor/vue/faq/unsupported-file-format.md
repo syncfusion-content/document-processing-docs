@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Supported File Formats in Vue DOCX Editor | Syncfusion
-description: Learn about the supported file formats in Vue DOCX Editor for importing, and exporting documents.
+description: Learn how Vue DOCX Editor handles unsupported file formats and understand the supported document types for opening and processing files.
 control: Unsupported file 
 platform: document-processing
 documentation: ug

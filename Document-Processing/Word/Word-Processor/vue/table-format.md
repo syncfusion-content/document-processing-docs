@@ -114,11 +114,11 @@ Please check below gif which illustrates how to apply border for selected cells 
 
 ![ApplyBorderToSelectedCell_viaPropertiesPane](images/ApplyBorderToSelectedCell_viaPropertiesPane.gif)
 
-# Working with row formatting
+## Working with row formatting
 
 DOCX Editor allows various row formatting such as height and repeat header.
 
-## Row height
+### Row height
 
 You can customize the height of a table row as ‘Auto’, ‘AtLeast’, or ‘Exactly’. Refer to the following sample code.
 
@@ -127,7 +127,7 @@ this.$refs.documenteditor.ej2Instances.selection.rowFormat.heightType='Exactly';
 this.$refs.documenteditor.ej2Instances.selection.rowFormat.height=20;
 ```
 
-## Header row
+### Header row
 
 The header row describes the content of a table. A table can optionally have a header row. Only the first row of a table can be the header row. If the cursor position is at first row of the table, then you can define whether it as header row or not, using the following sample code.
 
@@ -135,7 +135,7 @@ The header row describes the content of a table. A table can optionally have a h
 this.$refs.documenteditor.ej2Instances.selection.rowFormat.isHeader=true;
 ```
 
-## Allow row break across pages
+### Allow row break across pages
 
 This property is valid if a table row does not fit in the current page during table layout. It defines whether a table row can be allowed to break. If the value is false, the entire row will be moved to the start of next page. You can modify this property for selected rows using the following sample code.
 
@@ -143,7 +143,7 @@ This property is valid if a table row does not fit in the current page during ta
 this.$refs.documenteditor.ej2Instances.selection.rowFormat.allowRowBreakAcrossPages=false;
 ```
 
-### Title
+#### Title
 
 DOCX Editor expose API to get or set the table title of the selected table. Refer to the following sample code to set title.
 
@@ -151,7 +151,7 @@ DOCX Editor expose API to get or set the table title of the selected table. Refe
 this.$refs.documenteditor.ej2Instances.selection.tableFormat.title = 'Shipping Details';
 ```
 
-### Description
+#### Description
 
 DOCX Editor expose API to get or set the table description of the selected image. Refer to the following sample code to set description.
 
