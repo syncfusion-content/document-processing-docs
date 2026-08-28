@@ -33,7 +33,7 @@ The following example illustrates how to add text in the current selection.
 
 Please check the GIF below which illustrates how to insert text at the current cursor position on button click:
 
-![Insert text in current cursor position in JavaScript Document Editor](../images/insert_text.gif)
+![Insert text in current cursor position in JavaScript DOCX Editor](../images/insert_text.gif)
 
 ## Insert a Paragraph at the Current Cursor Position
 

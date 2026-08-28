@@ -78,7 +78,7 @@ container.documentEditor.editor.insertText('Hello World')
 
 ## Show or hide bookmark
 
-You can show or hide the square brackets around bookmarked items in the Document Editor component.
+You can show or hide the square brackets around bookmarked items in the DOCX Editor component.
 
 The following example code illustrates how to show or hide square brackets around bookmarked items.
 
@@ -88,7 +88,7 @@ container.documentEditorSettings.showBookmarks = true;
 
 ## Bookmark dialog
 
-The following example shows how to open the bookmark dialog in the Document Editor.
+The following example shows how to open the bookmark dialog in the DOCX Editor.
 
 
 
@@ -104,7 +104,7 @@ The following example shows how to open the bookmark dialog in the Document Edit
 
 ## Online Demo
 
-Explore how to insert and manage bookmarks in Word documents using the ASP.NET MVC Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/hyperlinksandbookmarks#/tailwind3).
+Explore how to insert and manage bookmarks in Word documents using the ASP.NET MVC DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/hyperlinksandbookmarks#/tailwind3).
 
 ## See Also
 

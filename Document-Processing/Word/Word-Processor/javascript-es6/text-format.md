@@ -145,7 +145,7 @@ documenteditor.selection.characterFormat.fontSize = 32;
 
 ### Change font color by UI option
 
-In the Document Editor, the Text Properties pane features two icons for managing text color within the user interface (UI):
+In the DOCX Editor, the Text Properties pane features two icons for managing text color within the user interface (UI):
 
 * **Colored Box:** This icon visually represents the **current color** applied to the selected text.
 * **Text (A) Icon:** Clicking this icon allows users **to modify the color** of the selected text by choosing a new color from the available options.
@@ -221,7 +221,7 @@ Refer to the following example.
 
 ## Online demo
 
-Explore how to apply text formatting in Word documents using the JavaScript Document Editor in this live [JavaScript Text Format demo](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/character-formatting.html).
+Explore how to apply text formatting in Word documents using the JavaScript DOCX Editor in this live [JavaScript Text Format demo](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/character-formatting.html).
 
 ## See also
 

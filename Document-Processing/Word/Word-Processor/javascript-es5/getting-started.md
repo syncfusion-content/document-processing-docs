@@ -149,7 +149,7 @@ Before initializing the JavaScript (ES5) DOCX Editor control, generate a Syncfus
 
 ## Initialize the DOCX Editor
 
-Add a container element for the Document Editor in the `index.html` file and then initialize the control in the `<script>` tag.
+Add a container element for the DOCX Editor in the `index.html` file and then initialize the control in the `<script>` tag.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}

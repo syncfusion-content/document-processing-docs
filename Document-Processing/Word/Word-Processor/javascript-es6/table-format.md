@@ -72,7 +72,7 @@ documenteditor.selection.cellFormat.verticalAlignment = 'Bottom';
 
 ## Table alignment
 
-The tables are aligned in Document Editor to ‘Left’, ‘Right’, or ‘Center’. Refer to the following sample code.
+The tables are aligned in DOCX Editor to ‘Left’, ‘Right’, or ‘Center’. Refer to the following sample code.
 
 ```ts
 documenteditor.selection.tableFormat.tableAlignment = 'Center';
@@ -122,7 +122,7 @@ documenteditor.selection.tableFormat.preferredWidth = 300;
 
 ## Apply borders
 
-Document Editor exposes API to customize the borders for table cells by specifying the settings. Refer to the following sample code.
+DOCX Editor exposes API to customize the borders for table cells by specifying the settings. Refer to the following sample code.
 
 ```ts
 import { DocumentEditor, Editor, Selection, SfdtExport, BorderSettings } from '@syncfusion/ej2-documenteditor';
@@ -146,11 +146,11 @@ documenteditor.editor.applyBorders(borderSettings);
 
 Please check the below gif which illustrates how to apply a border for selected cells through the properties pane options - border color, line size, and no border:
 
-![Apply border to selected cell via properties Pane in Javascript Document Editor](images/ApplyBorderToSelectedCell_viaPropertiesPane.gif)
+![Apply border to selected cell via properties Pane in Javascript DOCX Editor](images/ApplyBorderToSelectedCell_viaPropertiesPane.gif)
 
 ## Working with row formatting
 
-Document Editor allows various row formatting such as height and repeat header.
+DOCX Editor allows various row formatting such as height and repeat header.
 
 ### Row height
 
@@ -191,7 +191,7 @@ documenteditor.selection.rowFormat.allowRowBreakAcrossPages = false;
 
 ### Title
 
-Document Editor exposes API to get or set the table title of the selected table. Refer to the following sample code to set title.
+DOCX Editor exposes API to get or set the table title of the selected table. Refer to the following sample code to set title.
 
 ```ts
 documenteditor.selection.tableFormat.title = 'Shipping Details';
@@ -199,7 +199,7 @@ documenteditor.selection.tableFormat.title = 'Shipping Details';
 
 ### Description
 
-Document Editor exposes API to get or set the table description of the selected table. Refer to the following sample code to set description.
+DOCX Editor exposes API to get or set the table description of the selected table. Refer to the following sample code to set description.
 
 ```ts
 documenteditor.selection.tableFormat.description = 'Freight cost and shipping details';
@@ -207,7 +207,7 @@ documenteditor.selection.tableFormat.description = 'Freight cost and shipping de
 
 ## Online Demo
 
-Explore how to format tables in Word documents using the JavaScript Document Editor in this live [JavaScript Table Format demo](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/table-formatting.html).
+Explore how to format tables in Word documents using the JavaScript DOCX Editor in this live [JavaScript Table Format demo](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/table-formatting.html).
 
 ## See Also
 

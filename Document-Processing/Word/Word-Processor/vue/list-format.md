@@ -56,7 +56,7 @@ this.$refs.documenteditor.ej2Instances.editor.clearList();
 
 ## Working with lists
 
-The following sample demonstrates how to create bulleted and numbered lists in Document Editor.
+The following sample demonstrates how to create bulleted and numbered lists in DOCX Editor.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -168,13 +168,13 @@ export default {
 
 ## Editing numbered list
 
-Document Editor restarts the numbering or continues numbering for a numbered list. These options are found in the built-in context menu if the list value is selected. Refer to the following screenshot.
+DOCX Editor restarts the numbering or continues numbering for a numbered list. These options are found in the built-in context menu if the list value is selected. Refer to the following screenshot.
 
 ![Image](images/list.png)
 
 ## Online Demo
 
-Explore how to apply bullets and numbering in Word documents using the Vue Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/bullets-and-numbering.html).
+Explore how to apply bullets and numbering in Word documents using the Vue DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/bullets-and-numbering.html).
 
 ## See Also
 

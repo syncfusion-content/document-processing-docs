@@ -63,7 +63,7 @@ this.container.documentEditor.selection.getBookmarks(false);
 
 ## Show or Hide bookmark
 
-You can show or hide the bookmark indicators around bookmarked items in Document Editor component.
+You can show or hide the bookmark indicators around bookmarked items in DOCX Editor component.
 
 The following example code illustrates how to show or hide the bookmark indicators around bookmarked items.
 
@@ -93,7 +93,7 @@ this.container.documentEditor.editor.insertText('Hello World');
 
 ## Bookmark Dialog
 
-The following example shows how to open bookmark dialog in Document Editor.
+The following example shows how to open bookmark dialog in DOCX Editor.
 
 
 {% tabs %}
@@ -109,7 +109,7 @@ The following example shows how to open bookmark dialog in Document Editor.
 
 ## Online Demo
 
-Explore how to insert and manage bookmarks in Word documents using the JavaScript (ES5) Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/tailwind3/document-editor/links-and-bookmarks.html).
+Explore how to insert and manage bookmarks in Word documents using the JavaScript (ES5) DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/tailwind3/document-editor/links-and-bookmarks.html).
 
 ## See Also
 

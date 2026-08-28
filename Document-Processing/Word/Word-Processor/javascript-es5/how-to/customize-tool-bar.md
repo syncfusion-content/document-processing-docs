@@ -58,4 +58,4 @@ N> Default value of `toolbarItems` is `['New', 'Open', 'Separator', 'Undo', 'Red
 
 ## Online demo
 
-Explore how to customize the toolbar in the JavaScript (ES5) Document Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/toolbar-customization.html).
+Explore how to customize the toolbar in the JavaScript (ES5) DOCX Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/toolbar-customization.html).

@@ -3,19 +3,19 @@ layout: post
 title: How to Retrieve Bookmark Content in Blazor DOCX Editor | Syncfusion
 description: Retrieve bookmark content as plain text and retrieve document data in SFDT format using Syncfusion® Blazor DOCX Editor.
 platform: document-processing
-control: Document Editor
+control: DOCX Editor
 documentation: ug
 ---
 
 # How to Retrieve Bookmark Content as Text in Blazor DOCX Editor
 
-## How to retrieve the whole document and bookmark content as text in Blazor Document Editor
+## How to retrieve the whole document and bookmark content as text in Blazor DOCX Editor
 
 The [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) component allows retrieving the bookmark or whole document content as plain text and SFDT (rich text).
 
 ## Get the bookmark content as plain text
 
-Use the [`SelectBookmarkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_SelectBookmarkAsync_System_String_) API to navigate to the bookmark and use [`GetTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetTextAsync) API to get the bookmark content as plain text from Blazor Document Editor component.
+Use the [`SelectBookmarkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_SelectBookmarkAsync_System_String_) API to navigate to the bookmark and use [`GetTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetTextAsync) API to get the bookmark content as plain text from Blazor DOCX Editor component.
 
 The following example code illustrates how to get the bookmark content as plain text.
 
@@ -49,7 +49,7 @@ To get the bookmark content as SFDT (rich text), see [Get the selected content a
 
 ## Get the whole document content as text
 
-The [`GetTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetTextAsync) API can be used to get the whole document content as plain text from the Blazor Document Editor component.
+The [`GetTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetTextAsync) API can be used to get the whole document content as plain text from the Blazor DOCX Editor component.
 
 The following example code illustrates how to get the whole document content as plain text.
 
@@ -77,7 +77,7 @@ The following example code illustrates how to get the whole document content as 
 
 ## Get the whole document content as SFDT (Rich Text)
 
-The [`SerializeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_SerializeAsync) API is used to get the whole document content as an SFDT string from the Blazor Document Editor component.
+The [`SerializeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_SerializeAsync) API is used to get the whole document content as an SFDT string from the Blazor DOCX Editor component.
 
 The following example code illustrates how to get the whole document content as SFDT.
 
@@ -103,7 +103,7 @@ The following example code illustrates how to get the whole document content as 
 
 ## Get the header content as text
 
-Use the [`GoToHeaderAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GoToHeaderAsync) API to navigate the selection to the header and then use the [`GetTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetTextAsync) API to get the content as plain text from the Blazor Document Editor component.
+Use the [`GoToHeaderAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GoToHeaderAsync) API to navigate the selection to the header and then use the [`GetTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetTextAsync) API to get the content as plain text from the Blazor DOCX Editor component.
 
 The following example code illustrates how to get the header content as plain text.
 
@@ -130,4 +130,4 @@ The following example code illustrates how to get the header content as plain te
 }
 ```
 
-Similarly, the [`GoToFooterAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GoToFooterAsync) API can be used to navigate the selection to the footer, followed by the [`GetTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetTextAsync) API to get the content as plain text from the Blazor Document Editor component.
+Similarly, the [`GoToFooterAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GoToFooterAsync) API can be used to navigate the selection to the footer, followed by the [`GetTextAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_GetTextAsync) API to get the content as plain text from the Blazor DOCX Editor component.

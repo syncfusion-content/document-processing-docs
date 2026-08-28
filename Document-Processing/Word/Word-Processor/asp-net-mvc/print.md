@@ -10,7 +10,7 @@ documentation: ug
 
 # Print in ASP.NET MVC DOCX Editor
 
-To print the document, use the `print` method from the document editor instance.
+To print the document, use the `print` method from the DOCX Editor instance.
 
 
 {% tabs %}
@@ -36,11 +36,11 @@ To print the document, use the `print` method from the document editor instance.
 
 
 
-N> To enable print for a document editor instance, set enablePrint as true.
+N> To enable print for a DOCX Editor instance, set enablePrint as true.
 
 ## Improve print quality
 
-Document editor provides an option to improve the print quality using `printDevicePixelRatio` in Document editor settings. Document editor uses a canvas approach to render content. Then, the canvas is converted to an image and it is processed for print. Using the printDevicePixelRatio API, you can increase the image quality based on your requirement.
+DOCX Editor provides an option to improve the print quality using `printDevicePixelRatio` in Document editor settings. DOCX Editor uses a canvas approach to render content. Then, the canvas is converted to an image and it is processed for print. Using the printDevicePixelRatio API, you can increase the image quality based on your requirement.
 
 
 {% tabs %}
@@ -57,7 +57,7 @@ N> By default, the printDevicePixelRatio value is 1.
 
 ## Print using window object
 
-You can print the document in document editor by passing the window instance. This is useful to implement print in third-party frameworks such as Electron, where the window instance will not be available.
+You can print the document in DOCX Editor by passing the window instance. This is useful to implement print in third-party frameworks such as Electron, where the window instance will not be available.
 
 
 {% tabs %}
@@ -90,7 +90,7 @@ However, you can customize margins, paper, and layout options by modifying the s
 
 
 
-By customizing margins, paper, and layouts, the layout of the document will be changed in the document editor. To modify these options during the print operation, serialize the document as SFDT using the `serialize` method in the document editor instance and open the SFDT data in another instance of the document editor in a separate window.
+By customizing margins, paper, and layouts, the layout of the document will be changed in the DOCX Editor. To modify these options during the print operation, serialize the document as SFDT using the `serialize` method in the DOCX Editor instance and open the SFDT data in another instance of the DOCX Editor in a separate window.
 
 
 {% tabs %}
@@ -104,7 +104,7 @@ By customizing margins, paper, and layouts, the layout of the document will be c
 
 ## Online Demo
 
-Explore how to print Word documents using the ASP.NET MVC Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/print#/tailwind3).
+Explore how to print Word documents using the ASP.NET MVC DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/print#/tailwind3).
 
 ## See Also
 

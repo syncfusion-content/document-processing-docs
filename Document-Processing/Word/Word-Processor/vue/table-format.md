@@ -72,7 +72,7 @@ this.$refs.documenteditor.ej2Instances.selection.cellFormat.verticalAlignment='B
 
 ## Table alignment
 
-The tables are aligned in the document editor to ‘Left’, ‘Right’, or ‘Center’. Refer to the following sample code.
+The tables are aligned in DOCX Editor to ‘Left’, ‘Right’, or ‘Center’. Refer to the following sample code.
 
 ```ts
 this.$refs.documenteditor.ej2Instances.selection.tableFormat.tableAlignment='Center';
@@ -98,7 +98,7 @@ this.$refs.documenteditor.ej2Instances.selection.tableFormat.preferredWidth=300;
 
 ## Apply borders
 
-Document Editor exposes API to customize the borders for table cells by specifying the settings. Refer to the following sample code.
+DOCX Editor exposes API to customize the borders for table cells by specifying the settings. Refer to the following sample code.
 
 ```ts
 import { BorderSettings } from '@syncfusion/ej2-documenteditor';
@@ -116,7 +116,7 @@ Please check the below gif which illustrates how to apply a border for selected 
 
 ## Working with row formatting
 
-Document Editor allows various row formatting such as height and repeat header.
+DOCX Editor allows various row formatting such as height and repeat header.
 
 ### Row height
 
@@ -143,17 +143,17 @@ This property is valid if a table row does not fit in the current page during ta
 this.$refs.documenteditor.ej2Instances.selection.rowFormat.allowRowBreakAcrossPages=false;
 ```
 
-### Title
+#### Title
 
-Document Editor exposes API to get or set the table title of the selected table. Refer to the following sample code to set title.
+DOCX Editor expose API to get or set the table title of the selected table. Refer to the following sample code to set title.
 
 ```ts
 this.$refs.documenteditor.ej2Instances.selection.tableFormat.title = 'Shipping Details';
 ```
 
-### Description
+#### Description
 
-Document Editor exposes API to get or set the table description of the selected table. Refer to the following sample code to set description.
+DOCX Editor expose API to get or set the table description of the selected image. Refer to the following sample code to set description.
 
 ```ts
 this.$refs.documenteditor.ej2Instances.selection.tableFormat.description = 'Freight cost and shipping details';
@@ -161,7 +161,7 @@ this.$refs.documenteditor.ej2Instances.selection.tableFormat.description = 'Frei
 
 ## Online demo
 
-Explore how to format tables in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/table-formatting).
+Explore how to format tables in Word documents using the Vue DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/table-formatting.html).
 
 ## See also
 
