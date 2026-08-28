@@ -17,9 +17,9 @@ To load a document from Dropbox cloud file storage in a [ASP.NET Core DOCX Edito
 To create a Dropbox app, follow the official documentation provided by Dropbox [link](https://www.dropbox.com/developers/documentation/dotnet#tutorial). The process involves visiting the Dropbox Developer website and using their App Console to set up your API app. This app enables programmatic access to Dropbox files and data.
 
 
-**Step 2:** Create a Simple Document Editor Sample in ASP.NET Core
+**Step 2:** Create a Simple DOCX Editor Sample in ASP.NET Core
 
-Start by following the steps provided in this [link](../../document-editor/getting-started-core) to create a simple Document Editor sample in ASP.NET Core. This will give you a basic setup of the Document Editor component. 
+Start by following the steps provided in this [link](../../document-editor/getting-started-core) to create a simple DOCX Editor sample in ASP.NET Core. This will give you a basic setup of the DOCX Editor component. 
 
 
 **Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
@@ -106,7 +106,7 @@ public async Task<string> LoadFromDropBox([FromBody] Dictionary<string, string> 
 
 N> Replace **Your_Dropbox_Access_Token** with your actual Dropbox access token, and **Your_Folder_Name** with your folder name.
 
-**Step 4:**  Modify the Index.cshtml File in the Document Editor sample
+**Step 4:**  Modify the Index.cshtml File in the DOCX Editor sample
 
 On the client side, the document returned from the web service is opened using the `open` method.
 
