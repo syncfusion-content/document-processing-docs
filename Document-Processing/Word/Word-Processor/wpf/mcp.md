@@ -3,16 +3,16 @@ layout: post
 title: MCP Server for WPF DOCX Editor | Syncfusion
 description: The Syncfusion®WPF MCP Server provides setup guidance, integration support, and resources to accelerate WPF DOCX Editor development workflows.
 platform: document-processing
-control: RichTextBox
+control: WPF DOCX Editor
 documentation: ug
 ---
 # MCP Server for WPF DOCX Editor
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> WPF MCP Server accelerates WPF RichTextBox application development by providing deep knowledge directly in your AI-powered IDE.[Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
+Syncfusion<sup style="font-size:70%">&reg;</sup> WPF MCP Server accelerates WPF DOCX Editor application development by providing deep knowledge directly in your AI-powered IDE.[Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
 
 ## Key Benefits
 
-- **Expert WPF RichTextBox (SfRichTextBoxAdv) Knowledge** - Deep understanding of Syncfusion WPF RichTextBox (SfRichTextBoxAdv) component and its implementation patterns.
+- **Expert WPF DOCX Editor (SfRichTextBoxAdv) Knowledge** - Deep understanding of Syncfusion WPF DOCX Editor (SfRichTextBoxAdv) component and its implementation patterns.
 - **Unlimited Usage** - No request limits, time restrictions, or query caps.
 - **Privacy-Focused** - The tools operate based on the user's query and do not store any content, data, or prompts.
 
@@ -25,7 +25,7 @@ Before beginning, ensure the following prerequisites are met:
 - Microsoft [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later
 - A **compatible MCP client** (VS Code, Syncfusion<sup style="font-size:70%">&reg;</sup> Code Studio, Cursor, JetBrains, etc.)
 - An active [Syncfusion<sup style="font-size:70%">&reg;</sup> API key](https://syncfusion.com/account/api-key)
-- A **WPF application** (existing or new); see [ WPF application that includes Syncfusion WPF RichTextBox](https://help.syncfusion.com/document-processing/word/word-processor/wpf/getting-started)
+- A **WPF application** (existing or new); see [ WPF application that includes Syncfusion WPF DOCX Editor](https://help.syncfusion.com/document-processing/word/word-processor/wpf/getting-started)
 - An active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):
   - [Commercial License](https://www.syncfusion.com/sales/unlimitedlicense)
   - [Free Community License](https://www.syncfusion.com/products/communitylicense)
@@ -172,11 +172,11 @@ You can install the Syncfusion WPF MCP Server as a local tool without requiring 
 
 ## Common use cases
 
-The examples below showcase how the `search_docs` tool handles real-world WPF RichTextBox development scenarios. The tool can be invoked directly, as shown in the examples below, for specific needs. Alternatively, an AI assistant can automatically invoke it based on the request.
+The examples below showcase how the `search_docs` tool handles real-world WPF DOCX Editor development scenarios. The tool can be invoked directly, as shown in the examples below, for specific needs. Alternatively, an AI assistant can automatically invoke it based on the request.
 
 **Get Started**
 
-Use `search_docs` to get contextual guidance, code snippets, and configuration examples for the WPF RichTextBox (SfRichTextBoxAdv) component.
+Use `search_docs` to get contextual guidance, code snippets, and configuration examples for the WPF DOCX Editor (SfRichTextBoxAdv) component.
 
 {% promptcards %}
 {% promptcard DOCX Editor Configuration %}
@@ -243,7 +243,7 @@ The table below lists frequently encountered issues and suggested resolutions to
 | **Incorrect API key config** | For the file path: verify file location and content. For inline key: check the key is correctly updated. |
 | **Wrong config file location** | VS Code: `.vscode/mcp.json` • Code Studio: `.codestudio/mcp.json` • Cursor: `.cursor/mcp.json` in the workspace root. |
 | **Check IDE logs** | VS Code / Code Studio: Output panel → "MCP" • Cursor: Developer Console for MCP errors. |
-| **WPF RichTextBox not rendering** | Ensure the `Syncfusion.SfRichTextBoxAdv.WPF` NuGet packages are installed and configured properly in MainWindow.xaml or MainWindow.xaml.cs |
+| **WPF DOCX Editor not rendering** | Ensure the `Syncfusion.SfRichTextBoxAdv.WPF` NuGet packages are installed and configured properly in MainWindow.xaml or MainWindow.xaml.cs |
 
 
 ## Privacy & Security

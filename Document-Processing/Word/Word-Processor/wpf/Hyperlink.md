@@ -8,7 +8,7 @@ keywords: hyperlink,insert-hyperlink,screen-tip,request-navigate
 ---
 # Hyperlinks in WPF DOCX Editor
 
-The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) supports hyperlink fields similar to Microsoft Word. You can link part of the document content to the Internet, a file location, an email address, or any other text.
+The [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) supports hyperlink fields similar to Microsoft Word. You can link part of the document content to the Internet, a file location, an email address, or any other text.
 
 ## Insert hyperlink
 
@@ -156,7 +156,7 @@ paragraphAdv.Inlines.Add(New FieldEndAdv())
 {% endhighlight %}
 {% endtabs %}
 
-The following code example illustrates how to insert hyperlink field with ScreenTip into RichTextBox Document through UI command.
+The following code example illustrates how to insert hyperlink field with ScreenTip into WPF DOCX Editor Document through UI command.
 
 ### Insert with ScreenTip via UI command
 
@@ -169,7 +169,7 @@ SfRichTextBoxAdv.InsertHyperlinkCommand.Execute(new string[3] { "www.syncfusion.
 {% endhighlight %}
 {% endtabs %}
 
-The following section illustrates how to insert hyperlink field with ScreenTip in RichTextBox Document through built-in hyperlink dialog UI command like Microsoft Word application.
+The following section illustrates how to insert hyperlink field with ScreenTip in WPF DOCX Editor Document through built-in hyperlink dialog UI command like Microsoft Word application.
 1. Open insert hyperlink dialog.
 
 {% capture codesnippet1 %}
@@ -186,7 +186,7 @@ The following section illustrates how to insert hyperlink field with ScreenTip i
 2. Enter the display text, URL link and ScreenTip text.
 3. Click on OK to close the dialog box.
 
-![Adding Hyperlink to WPF RichTextBox](Hyperlink_images/wpf-richtextbox-insert-hyperlink.PNG)
+![Adding Hyperlink to WPF DOCX Editor](Hyperlink_images/wpf-richtextbox-insert-hyperlink.PNG)
 
 In the SfRichTextBoxAdv control, the ToolTip (ScreenTip) is shown by default when the mouse hovers over a hyperlink. You can disable the ToolTip by setting the [DisplayScreenTips](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.EditorSettings.html#Syncfusion_Windows_Controls_RichTextBoxAdv_EditorSettings_DisplayScreenTips) property of the [EditorSettings](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.EditorSettings.html) class. Set it to `false` to disable the ScreenTip; the default is `true`.
 
@@ -274,10 +274,10 @@ RemoveHandler richTextBoxAdv.RequestNavigate, AddressOf RichTextBoxAdv_RequestNa
 N> The available [HyperlinkType](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.HyperlinkType.html) values are `Webpage`, `Email`, `File` and  `Bookmark`. The [NavigationLink](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.Hyperlink.html#Syncfusion_Windows_Controls_RichTextBoxAdv_Hyperlink_NavigationLink) property contains the destination of the hyperlink as a string.
 
 
-N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
+N> You can refer to our [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF DOCX Editor example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 
 ## See also
 
-- [Selection in WPF RichTextBox](./Selection)
-- [Commands in WPF RichTextBox](./Commands)
-- [Document Structure in WPF RichTextBox](./Document-Structure)
+- [Selection in WPF DOCX Editor](./Selection)
+- [Commands in WPF DOCX Editor](./Commands)
+- [Document Structure in WPF DOCX Editor](./Document-Structure)

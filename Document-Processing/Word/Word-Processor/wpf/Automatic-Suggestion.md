@@ -9,11 +9,11 @@ keywords: automatic-suggestion, @mentions
 # Automatic Suggestion in WPF DOCX Editor
 
 ## Automatic Suggestion functionality for using @mentions
-[WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) control shows an inline dropdown with a list of suggested names while typing the mention character (@ symbol). The list of suggested names filters as you type additional characters. You can use the up or down arrow keys to move the selection and the Tab or Enter key to insert the selected item. You can also use the mouse to click any option in the list. The selected item from the suggestion list will be inserted as hyperlink with the display text and its respective link.
+[WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) control shows an inline dropdown with a list of suggested names while typing the mention character (@ symbol). The list of suggested names filters as you type additional characters. You can use the up or down arrow keys to move the selection and the Tab or Enter key to insert the selected item. You can also use the mouse to click any option in the list. The selected item from the suggestion list will be inserted as hyperlink with the display text and its respective link.
 
-![WPF RichTextBox displays Automatic Suggestion](Automatic-Suggestion_images/wpf-richtextbox-auto-suggestion.PNG)
+![WPF DOCX Editor displays Automatic Suggestion](Automatic-Suggestion_images/wpf-richtextbox-auto-suggestion.PNG)
 
-The following sample code demonstrates how to use @mentions in RichTextBox.
+The following sample code demonstrates how to use @mentions in WPF DOCX Editor.
 {% tabs %}
 {% highlight xaml %}
 <Window.Resources>
@@ -106,7 +106,7 @@ N> [View example in GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBo
 ## Customize the SuggestionBox ItemTemplate and Style
 By default, the drop-down window lists the filtered items as an image, display text and link. If you want to remove the image or link, you can write your own item template.
 
-![Modifying Suggestion Box Item in WPF RichTextBox](Automatic-Suggestion_images/wpf-richtextbox-modify-suggestion.PNG)
+![Modifying Suggestion Box Item in WPF DOCX Editor](Automatic-Suggestion_images/wpf-richtextbox-modify-suggestion.PNG)
 
 The following sample code demonstrates how to modify the suggestion box item template and style.
 {% tabs %}
@@ -207,7 +207,7 @@ richTextboxadv.SuggestionSettings.SuggestionProviders.Add(suggestionProvider);
 ## Custom mention character
 Any character can be used as a mention character, and the default value is @.
 
-![WPF RichTextBox with Custom Mention Character](Automatic-Suggestion_images/wpf-richtextbox-custom-mention-character.PNG)
+![WPF DOCX Editor with Custom Mention Character](Automatic-Suggestion_images/wpf-richtextbox-custom-mention-character.PNG)
 
 The following sample code demonstrates how to use ‘#’ as mention character.
 {% tabs %}
@@ -254,7 +254,7 @@ richTextboxadv.SuggestionSettings.SuggestionProviders.Add(suggestionProvider);
 ## Multiple Suggestion Providers
 Two or more suggestion providers can be used at a time, but each suggestion provider should have a different mention character. Additionally, each suggestion provider can have a different item source and suggestion box style.
 
-<table><tr><td><img src="Automatic-Suggestion_images/wpf-richtextbox-auto-suggestion.PNG" alt="WPF RichTextBox displays Multiple Suggestion"/><br/></td><td><img src="Automatic-Suggestion_images/wpf-richtextbox-custom-mention-character.PNG" alt="WPF RichTextBox displays Multiple Suggestion"/><br/></td></tr></table>
+<table><tr><td><img src="Automatic-Suggestion_images/wpf-richtextbox-auto-suggestion.PNG" alt="WPF DOCX Editor displays Multiple Suggestion"/><br/></td><td><img src="Automatic-Suggestion_images/wpf-richtextbox-custom-mention-character.PNG" alt="WPF DOCX Editor displays Multiple Suggestion"/><br/></td></tr></table>
 
 
 The following sample code demonstrates how to use two suggestion providers. Here we have used ‘@’ and ‘#’ as mention characters.
@@ -374,16 +374,16 @@ When the entered item is not in the suggestion list, the suggestion box displays
 
 To customize this message, follow these steps:
 •	Right click your project and add new folder named Resources.
-•	Add the [default resource file](https://github.com/syncfusion/wpf-controls-localization-resx-files/tree/master/Syncfusion.SfRichTextBoxAdv.WPF) of the RichTextBox control into the Resources folder.
+•	Add the [default resource file](https://github.com/syncfusion/wpf-controls-localization-resx-files/tree/master/Syncfusion.SfRichTextBoxAdv.WPF) of the WPF DOCX Editor control into the Resources folder.
 •	Modify the value of the `SuggestionBoxErrorMessage` resource key in the resource file.
 
 The following image illustrates the error message displayed when no matching suggestion is found.
 
-![WPF RichTextBox displays Message](Automatic-Suggestion_images/wpf-richtextbox-message.PNG)
+![WPF DOCX Editor displays Message](Automatic-Suggestion_images/wpf-richtextbox-message.PNG)
 
 The following image shows the default resource file used to modify the error message.
 
-![WPF RichTextBox displays Resource File](Automatic-Suggestion_images/wpf-richtextbox-resource-file.PNG)
+![WPF DOCX Editor displays Resource File](Automatic-Suggestion_images/wpf-richtextbox-resource-file.PNG)
 
 
 ## Custom suggestion provider
@@ -526,7 +526,7 @@ N> [View example in GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBo
 
 By default, the suggestion list is filtered as you type using the `Contains` matching logic, meaning items whose `Name` contains the entered text are displayed. You can customize this behavior, such as showing only items whose names start with or end with the entered text, by implementing a custom suggestion provider and overriding the `Search` method.
 
-<table><tr><td>Default search – contains</td><td>Custom search – starts with</td></tr><tr><td><img src="Automatic-Suggestion_images/wpf-richtextbox-auto-suggestion.PNG" alt="WPF RichTextBox displays Auto Suggestion"/></td><td><img src="Automatic-Suggestion_images/wpf-richtextbox-search.PNG" alt="Customizing Search Text in WPF RichTextBox"/></td></tr></table>
+<table><tr><td>Default search – contains</td><td>Custom search – starts with</td></tr><tr><td><img src="Automatic-Suggestion_images/wpf-richtextbox-auto-suggestion.PNG" alt="WPF DOCX Editor displays Auto Suggestion"/></td><td><img src="Automatic-Suggestion_images/wpf-richtextbox-search.PNG" alt="Customizing Search Text in WPF DOCX Editor"/></td></tr></table>
 
 The following sample code demonstrates how to override search operation in your suggestion provider.
 
@@ -550,7 +550,7 @@ public List<object> Search(string searchText)
 ## Customize insert item
 By default, the selected item from the suggestions list is inserted as a hyperlink. You can customize the insertion behavior—for example, to insert the selected item as plain text instead of a hyperlink—by implementing your own suggestion provider and overriding the `InsertSelectedItem` method.
 
-![WPF RichTextBox with Custom Insert Item](Automatic-Suggestion_images/wpf-richtextbox-custom-mention-character.PNG)
+![WPF DOCX Editor with Custom Insert Item](Automatic-Suggestion_images/wpf-richtextbox-custom-mention-character.PNG)
 
 The following sample code demonstrates how to override the insert selected item operation in your suggestion provider. In this example, the selected item is inserted as plain text using `InsertText`, so no hyperlink is added. If you want to insert the item as a hyperlink, use the [InsertHyperlink](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SelectionAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SelectionAdv_InsertHyperlink_System_String_System_String_System_String_) API instead.
 

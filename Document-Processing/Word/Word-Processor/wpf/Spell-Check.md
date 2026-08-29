@@ -8,7 +8,7 @@ keywords: spell-check,spelling,dictionary,multilingual,language
 ---
 # Spell Check in WPF DOCX Editor
 
-The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) provides support for checking spelling mistakes in the rich text document content through the [SpellChecker](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_SpellChecker) property of type [SpellChecker](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SpellChecker.html). It also supports enabling the following spell checking options.
+The [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) provides support for checking spelling mistakes in the rich text document content through the [SpellChecker](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_SpellChecker) property of type [SpellChecker](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SpellChecker.html). It also supports enabling the following spell checking options.
 
 * Ignore words in UPPERCASE.
 
@@ -120,12 +120,12 @@ The following code example demonstrates how to show the spelling pane in SfRichT
 {% endhighlight %}
 
 {% endtabs %}
-![WPF RichTextBox displays spellcheck option](SpellCheck_images/wpf-richtextbox-spellcheck-option.PNG)
+![WPF DOCX Editor displays spellcheck option](SpellCheck_images/wpf-richtextbox-spellcheck-option.PNG)
 
-N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
+N> You can refer to our [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF DOCX Editor example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 
 ## See also
 
-- [Commands in WPF RichTextBox](./Commands)
-- [Document Structure in WPF RichTextBox](./Document-Structure)
-- [Document Properties in WPF RichTextBox](./Document-Properties)
+- [Commands in WPF DOCX Editor](./Commands)
+- [Document Structure in WPF DOCX Editor](./Document-Structure)
+- [Document Properties in WPF DOCX Editor](./Document-Properties)
