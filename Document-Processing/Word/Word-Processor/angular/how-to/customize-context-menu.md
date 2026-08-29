@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to Customize Context Menu in Angular DOCX Editor
 
-## How to customize context menu in the Document Editor
+## How to customize context menu in the DOCX Editor
 
 [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor)  allows you to add custom options to the context menu. Use the [`addCustomMenu()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/contextMenu#addcustommenu) method to add a custom option, and handle the selection with the [`customContextMenuSelect`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/customContentMenuEventArgs) event.
 
@@ -88,7 +88,7 @@ N> The Web Service link `https://document.syncfusion.com/web-services/docx-edito
 
 ### Customize custom option in context menu
 
-The Document Editor allows you to customize an added custom option and also to hide or show default context menu items.
+The DOCX Editor allows you to customize an added custom option and also to hide or show default context menu items.
 
 #### Hide default context menu items
 
@@ -218,7 +218,7 @@ N> The Web Service link `https://document.syncfusion.com/web-services/docx-edito
 
 #### Customize context menu with sub-menu items
 
-The Document Editor allows you to customize the context menu with sub-menu items. It can be achieved by using the [`addCustomMenu()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/contextMenu#addcustommenu) method.
+The DOCX Editor allows you to customize the context menu with sub-menu items. It can be achieved by using the [`addCustomMenu()`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/contextMenu#addcustommenu) method.
 
 The following code shows how to add sub-items inside a custom context menu option in the Document Editor container.
  
@@ -286,4 +286,4 @@ N> The Web Service link `https://document.syncfusion.com/web-services/docx-edito
 
 ## Online demo
 
-Explore how to customize the context menu in the Angular Document Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/custom-context-menu).
+Explore how to customize the context menu in the Angular DOCX Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/custom-context-menu).
