@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Unsupported Features in ASP.NET MVC DOCX Editor
 
-This section describes the unsupported features in Syncfusion® ASP.NET MVC DOCX Editor (Document Editor).
+This section describes the unsupported features in Syncfusion® ASP.NET MVC DOCX Editor (DOCX Editor).
 
 ## Document formatting
 

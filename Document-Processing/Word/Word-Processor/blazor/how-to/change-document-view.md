@@ -3,7 +3,7 @@ layout: post
 title: How to Change Document View in Blazor DOCX Editor | Syncfusion
 description: Change the document view to web layout or print layout in Syncfusion® Blazor DOCX Editor using layout type settings.
 platform: document-processing
-control: Document Editor
+control: DOCX Editor
 documentation: ug
 ---
 
@@ -18,7 +18,7 @@ The two available layout types are:
 
 ## Setting the layout type
 
-The layout type can be set during component initialization. The following example demonstrates how to configure the Document Editor to use the `Continuous` (Web Layout) view.
+The layout type can be set during component initialization. The following example demonstrates how to configure the DOCX Editor to use the `Continuous` (Web Layout) view.
 
 ```
 @using Syncfusion.Blazor.DocumentEditor

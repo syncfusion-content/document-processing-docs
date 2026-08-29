@@ -29,7 +29,7 @@ spellChecker.removeUnderline = false;
 spellChecker.allowSpellCheckAndSuggestion = true;
 ```
 
-N> Document Editor requires server-side dependencies for spell check configuration. Refer to the [Document Editor Web API service projects](https://help.syncfusion.com/document-processing/word/word-processor/javascript-es6/web-services/core#spell-check) link for configuring spell checker in server-side. To know about server-side dependencies, please refer to this [page](./web-services-overview).
+N> DOCX Editor requires server-side dependencies for spell check configuration. Refer to the [DOCX Editor Web API service projects](https://help.syncfusion.com/document-processing/word/word-processor/javascript-es6/web-services/core#spell-check) link for configuring spell checker in server-side. To know about server-side dependencies, please refer to this [page](./web-services-overview).
 
 ## Features
 
@@ -39,11 +39,11 @@ N> Document Editor requires server-side dependencies for spell check configurati
 
 ## Enable spell check
 
-To enable spell check in the Document Editor, set [`enableSpellCheck`](https://ej2.syncfusion.com/documentation/api/document-editor#enablespellcheck) property as `true` and then configure SpellCheckSettings.
+To enable spell check in the DOCX Editor, set [`enableSpellCheck`](https://ej2.syncfusion.com/documentation/api/document-editor#enablespellcheck) property as `true` and then configure SpellCheckSettings.
 
 ## Disable spell check
 
-To disable spell check in the Document Editor, set [`enableSpellCheck`](https://ej2.syncfusion.com/documentation/api/document-editor#enablespellcheck) property as `false` or remove [`enableSpellCheck`](https://ej2.syncfusion.com/documentation/api/document-editor#enablespellcheck) property initialization code. The default value of this property is `false`.
+To disable spell check in the DOCX Editor, set [`enableSpellCheck`](https://ej2.syncfusion.com/documentation/api/document-editor#enablespellcheck) property as `false` or remove [`enableSpellCheck`](https://ej2.syncfusion.com/documentation/api/document-editor#enablespellcheck) property initialization code. The default value of this property is `false`.
 
 ## Spell check settings
 
@@ -57,7 +57,7 @@ documentEditor.spellChecker.removeUnderline = false;
 
 ### Allow suggestions
 
-By default, on performing spell check in the Document Editor, both spelling and suggestions for the misspelled words are retrieved, and misspelled words can be corrected through context menu suggestions. You can modify this behavior using the [`allowSpellCheckAndSuggestion`](https://ej2.syncfusion.com/documentation/api/document-editor/spellChecker#allowspellcheckandsuggestion) API, which will perform only spell check.
+By default, on performing spell check in the DOCX Editor, both spelling and suggestions for the misspelled words are retrieved, and misspelled words can be corrected through context menu suggestions. You can modify this behavior using the [`allowSpellCheckAndSuggestion`](https://ej2.syncfusion.com/documentation/api/document-editor/spellChecker#allowspellcheckandsuggestion) API, which will perform only spell check.
 
 ```ts
 documentEditor.spellChecker.allowSpellCheckAndSuggestion = false;
@@ -65,7 +65,7 @@ documentEditor.spellChecker.allowSpellCheckAndSuggestion = false;
 
 ### Language configuration
 
-Document Editor provides multi-language spell check support. You can add as many languages (dictionaries) on the server side, and to use that language for spell checking in the Document Editor, it must be matched with the [`languageID`](https://ej2.syncfusion.com/documentation/api/document-editor/spellChecker#languageid) you pass in the Document Editor.
+DOCX Editor provides multi-language spell check support. You can add as many languages (dictionaries) on the server side, and to use that language for spell checking in the DOCX Editor, it must be matched with the [`languageID`](https://ej2.syncfusion.com/documentation/api/document-editor/spellChecker#languageid) you pass in the DOCX Editor.
 
 ```ts
 documentEditor.spellChecker.languageID = 1033; //LCID of "en-us"
@@ -73,7 +73,7 @@ documentEditor.spellChecker.languageID = 1033; //LCID of "en-us"
 
 ### Optimized spell check
 
-Document Editor provides an option to spell check page by page when loading the documents. The default value of this property is `false`, so when opening the document, the spell check web API will be called for each word in the document. To optimize the frequency of spell check web API calls, you can enable this property.
+DOCX Editor provides an option to spell check page by page when loading the documents. The default value of this property is `false`, so when opening the document, the spell check web API will be called for each word in the document. To optimize the frequency of spell check web API calls, you can enable this property.
 
 The following code example illustrates how to enable optimized spell checking.
 
@@ -133,7 +133,7 @@ spellChecker.AddNewWord("en.dic","en.aff", "construct", new string[] { "construc
 
 Right-click on a misspelled word to open the context menu with spell check options. Please see the below screenshot for your reference.
 
-![Spell check option in JavaScript document editor context menu](images/spell-check-menu.png)
+![Spell check option in JavaScript DOCX Editor context menu](images/spell-check-menu.png)
 
 ### Suggestions
 
@@ -155,6 +155,6 @@ If you do not wish to add the word to the dictionary and do not want to show an 
 
 Using this option, you can open the spell check dialog. Please see the below screenshot for your reference.
 
-![Spell check dialog in JavaScript document editor](images/spell-check-dialog.png)
+![Spell check dialog in JavaScript DOCX Editor](images/spell-check-dialog.png)
 
 * Refer to the [Spell checker](https://help.syncfusion.com/document-processing/word/word-processor/javascript-es6/web-services/core#spell-check) link for configuring the spell checker in server-side.

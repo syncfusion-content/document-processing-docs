@@ -20,7 +20,7 @@ The following security updates are available for [Vue DOCX Editor](https://www.s
 
 ### 2024 Volume 2 (v26.2.4) - July 25, 2024
 
-This release resolves critical and moderate security vulnerabilities affecting the Vue Document Editor Docker Image.
+This release resolves critical and moderate security vulnerabilities affecting the Vue DOCX Editor Docker Image.
 
 **Threat:**
 

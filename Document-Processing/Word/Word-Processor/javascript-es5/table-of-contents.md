@@ -25,7 +25,7 @@ The [`TableOfContentsSettings`](https://ej2.syncfusion.com/javascript/documentat
 * **tabLeader**: Specifies the tab leader styles such as none, dot, hyphen, and underscore.
 * **includeOutlineLevels**: Specifies whether the outline levels are included.
 
-The following code illustrates how to insert a table of contents in Document Editor.
+The following code illustrates how to insert a table of contents in DOCX Editor.
 
 ```js
 var tocSettings = 
@@ -77,7 +77,7 @@ N> The same method is used for inserting, updating, and editing the table of con
 
 ## Online Demo
 
-Explore how to insert and update table of contents in Word documents using the JavaScript (ES5) Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/table-of-contents.html).
+Explore how to insert and update table of contents in Word documents using the JavaScript (ES5) DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/table-of-contents.html).
 
 ## See Also
 

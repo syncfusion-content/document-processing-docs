@@ -18,7 +18,7 @@ domainurl: ##DomainURL##
 <ejs-documenteditor :layoutType='Continuous' id='container'></ejs-documenteditor>
 ```
 
-N> The default value of [`layoutType`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#layouttype) in the Document Editor component is [`Pages`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/layoutType).
+N> The default value of [`layoutType`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#layouttype) in the DOCX Editor component is [`Pages`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/layoutType).
 
 ## How to change the document view in the DocumentEditorContainer component
 

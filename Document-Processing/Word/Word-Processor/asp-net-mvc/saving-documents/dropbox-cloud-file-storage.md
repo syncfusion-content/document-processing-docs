@@ -17,9 +17,9 @@ To save a document to Dropbox cloud file storage, follow these steps:
 Follow the official Dropbox documentation to create a Dropbox API app: [link](https://www.dropbox.com/developers/documentation/dotnet#tutorial). The process involves visiting the Dropbox Developer website and using the App Console to set up your API app. This app allows you to interact with Dropbox programmatically and access files securely.
 
 
-**Step 2:** Create a Simple Document Editor Sample in ASP.NET MVC
+**Step 2:** Create a Simple DOCX Editor Sample in ASP.NET MVC
 
-Follow the steps in this [link](../getting-started) to create a simple Document Editor sample in ASP.NET MVC. This gives you a basic setup of the Document Editor component.
+Follow the steps in this [link](../getting-started) to create a simple DOCX Editor sample in ASP.NET MVC. This gives you a basic setup of the DOCX Editor component.
 
 
 **Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
@@ -117,7 +117,7 @@ private string GetValue(IFormCollection data, string key)
 
 N> Replace **Your_Dropbox_Access_Token** with your actual Dropbox access token and **Your_Folder_Name** with your folder name.
 
-**Step 4:** Modify the Index.cshtml File in the Document Editor Sample
+**Step 4:** Modify the Index.cshtml File in the DOCX Editor Sample
 
 On the client side, export the document to a blob using `saveAsBlob`, and send it to the server to save it in Dropbox cloud file storage.
 

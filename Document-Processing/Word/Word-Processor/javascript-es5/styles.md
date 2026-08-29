@@ -14,7 +14,7 @@ Styles are useful for applying a set of formatting consistently throughout the d
 
 ## Styles definition overview
 
-A style in Document Editor should have the following properties:
+A style in DOCX Editor should have the following properties:
 
 * **name**: Name of the style. All styles in a document have a unique name, which is used as an identifier when applying the style.
 * **type**: Specifies the document elements that the style will target. For example, paragraph or character.
@@ -28,7 +28,7 @@ N> The style type should match the inherited style type. For example, it is not 
 
 ## Default style
 
-The default style for span and paragraph properties is Normal. It internally inherits the default style of the loaded document or the Document Editor component.
+The default style for span and paragraph properties is Normal. It internally inherits the default style of the loaded document or the DOCX Editor component.
 
 ## Style hierarchy
 
@@ -228,4 +228,4 @@ N> 3. If no style exists with the same name, it creates a new style.
 
 ## Online Demo
 
-Explore how to apply and modify styles in Word documents using the JavaScript (ES5) Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/styles.html).
+Explore how to apply and modify styles in Word documents using the JavaScript (ES5) DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/styles.html).

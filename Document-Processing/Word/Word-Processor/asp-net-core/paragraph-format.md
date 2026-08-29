@@ -132,11 +132,11 @@ documenteditor.selection.paragraphFormat.borders.bottom.color = "#000000";
 
 ```
 
-N> Currently, the Document Editor component renders every border style as a single line. However, any border style you apply is preserved correctly when opening the exported Word document in Microsoft Word.
+N> Currently, the DOCX Editor component renders every border style as a single line. However, any border style you apply is preserved correctly when opening the exported Word document in Microsoft Word.
 
 ## Show or Hide Paragraph marks
 
-Use the following code to toggle the visibility of hidden formatting symbols like spaces, tabs, paragraph marks, and breaks in the Document Editor component. These marks indicate the start and end of a paragraph and reveal all hidden formatting symbols in a Word document.
+Use the following code to toggle the visibility of hidden formatting symbols like spaces, tabs, paragraph marks, and breaks in the DOCX Editor component. These marks indicate the start and end of a paragraph and reveal all hidden formatting symbols in a Word document.
 
 ```typescript
 documenteditor.documentEditorSettings.showHiddenMarks = true;
@@ -156,7 +156,7 @@ documenteditor.documentEditorSettings.showHiddenMarks = true;
 
 ## Online Demo
 
-Explore how to apply paragraph formatting in Word documents using the ASP.NET Core Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/paragraphformat#/tailwind3).
+Explore how to apply paragraph formatting in Word documents using the ASP.NET Core DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/paragraphformat#/tailwind3).
 
 ## See Also
 
