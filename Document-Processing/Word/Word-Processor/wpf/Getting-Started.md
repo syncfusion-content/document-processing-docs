@@ -9,9 +9,9 @@ keywords: getting started, docx editor
 
 # Getting Started with WPF DOCX Editor
 
-[WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) enables you to create, edit, view, and print Word documents in WPF applications. This section guides you through the steps to get started and create a RichTextBox in a WPF application.
+[WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) enables you to create, edit, view, and print Word documents in WPF applications. This section guides you through the steps to get started and create a DOCX Editor in a WPF application.
 
-## Create a RichTextBox in WPF using SfRichTextBoxAdv
+## Create a DOCX Editor in WPF using SfRichTextBoxAdv
 
 In this walkthrough, you will create a WPF application that uses the SfRichTextBoxAdv control.
 
