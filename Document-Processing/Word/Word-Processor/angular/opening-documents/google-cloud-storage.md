@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 To load a document from Google Cloud Storage in a [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor), you can follow the steps below.
 
-**Step 1:** Create a simple Document Editor sample in Angular
+**Step 1:** Create a simple DOCX Editor sample in Angular
 
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in Angular. This will give you a basic setup of the Document Editor component.
+Start by following the steps provided in this [link](../getting-started) to create a simple DOCX Editor sample in Angular. This will give you a basic setup of the DOCX Editor component.
 
 **Step 2:** Modify the `DocumentEditorController.cs` file in the web service project
 
@@ -109,7 +109,7 @@ public async Task<string> LoadFromGoogleCloud([FromBody] Dictionary<string, stri
 
 > Replace **path/to/service-account-key.json** with the actual file path to your service account key JSON file. Make sure to provide the correct path and filename.
 
-**Step 3:** Modify the index file in the Document Editor sample
+**Step 3:** Modify the index file in the DOCX Editor sample
 
 On the client side, the document returned from the web service is opened using the [`open`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#open) method.
 

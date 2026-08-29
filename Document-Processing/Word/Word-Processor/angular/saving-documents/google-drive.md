@@ -20,9 +20,9 @@ You must set up a project in the Google Developers Console and enable the Google
 
 * Download the OAuth 2.0 Client IDs credentials JSON file from the Google Cloud Console and save it locally. Save the path to this file for use in the `appsettings.json` configuration.
 
-**Step 2:** Create a Simple [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) sample in Angular.
+**Step 2:** Create a Simple [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) sample in Angular.
 
-Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in Angular. This will give you a basic setup of the Document Editor component.
+Follow the instructions provided in this [link](../getting-started) to create a simple DOCX Editor sample in Angular. This will give you a basic setup of the DOCX Editor component.
 
 **Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
 
@@ -151,7 +151,7 @@ N> 3. You must use a unique `Client_ID` from json file to interface your applica
 
 N> 4. The **Google.Apis.Drive.v3** (v1.68.0.XXXX or later) NuGet package must be installed in your application to use the previous code example.
 
-**Step 4:**  Modify the index File in the Document Editor sample
+**Step 4:**  Modify the index File in the DOCX Editor sample
 
 On the client side, export the document to a blob using [`saveAsBlob`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#saveasblob) and send it to the server side for saving in Google Drive.
 
