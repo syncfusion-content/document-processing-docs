@@ -1,0 +1,10 @@
+@Html.EJS().DocumentEditorContainer("container").DocumentEditorSettings("settings").Render()
+<script>
+    var settings = {
+    openAsyncSettings: {
+      enable: true,               // Enable async (lazy) loading
+      initialPageLoadCount: 5,    // Render first 5 pages immediately
+      incrementalPageLoadCount: 3 // Load 3 pages per background batch
+    }
+  };
+</script>
