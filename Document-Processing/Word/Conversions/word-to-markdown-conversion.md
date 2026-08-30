@@ -708,7 +708,7 @@ Preserves charts as fallback images during Word-to-Markdown conversion.
 
 **Cross-platform**
 
-On cross-platform platforms, install the [Syncfusion.DocIORenderer NuGet package](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) and initialize `DocIORenderer`. It preserves all supported Word elements, including charts, as fallback images during Word-to-Markdown conversion.
+On cross-platform platforms, install the **Syncfusion.DocIORenderer** NuGet package and initialize `DocIORenderer`. It preserves all supported Word elements, including charts, as fallback images during Word-to-Markdown conversion.
 
 NuGet package required
 
