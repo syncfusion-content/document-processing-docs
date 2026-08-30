@@ -12,6 +12,6 @@ keywords: document-structure
 
 ## See also
 
-- [Getting started with UWP RichTextBox](./Getting-Started)
-- [Document Properties in UWP RichTextBox](./Document-Properties)
-- [Commands in UWP RichTextBox](./Commands)
+- [Getting started with UWP DOCX Editor](./Getting-Started)
+- [Document Properties in UWP DOCX Editor](./Document-Properties)
+- [Commands in UWP DOCX Editor](./Commands)

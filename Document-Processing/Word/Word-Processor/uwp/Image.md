@@ -39,6 +39,6 @@ N> At present, the image with text wrapping style `In-Line with Text` can only b
 
 ## See also
 
-- [Getting started with UWP RichTextBox](./Getting-Started)
-- [Text wrapping style in UWP RichTextBox](./Text-Wrapping-Style)
-- [Commands in UWP RichTextBox](./Commands)
+- [Getting started with UWP DOCX Editor](./Getting-Started)
+- [Text wrapping style in UWP DOCX Editor](./Text-Wrapping-Style)
+- [Commands in UWP DOCX Editor](./Commands)

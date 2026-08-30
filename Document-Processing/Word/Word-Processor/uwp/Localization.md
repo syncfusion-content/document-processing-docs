@@ -43,6 +43,6 @@ The following screenshot shows the localized `SfRichTextBoxAdv`.
 
 ## See also
 
-- [Commands in UWP RichTextBox](./Commands)
-- [Selection in UWP RichTextBox](./Selection)
-- [Getting started with UWP RichTextBox](./Getting-Started)
+- [Commands in UWP DOCX Editor](./Commands)
+- [Selection in UWP DOCX Editor](./Selection)
+- [Getting started with UWP DOCX Editor](./Getting-Started)
