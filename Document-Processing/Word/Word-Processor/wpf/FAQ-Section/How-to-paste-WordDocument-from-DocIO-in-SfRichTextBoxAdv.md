@@ -11,7 +11,7 @@ keywords: paste-WordDocument-from-DocIO
 
 The PasteCommand with [WordDocument](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html) as a parameter is a feature that allows you to paste the contents of a WordDocument into the current selection of the SfRichTextBoxAdv control. This provides a convenient and efficient way to transfer and display complex document structures from Word documents directly within the SfRichTextBoxAdv.
 
-Using this feature, you can achieve the following by pasting WordDocument into the [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) at current selection:
+Using this feature, you can achieve the following by pasting WordDocument into the [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) at current selection:
 
 * Perform all the document manipulation features of [.NET Word library (DocIO)](https://help.syncfusion.com/file-formats/docio/overview) and then finally insert into SfRichTextBoxAdv
 
@@ -84,5 +84,5 @@ N> This feature is supported from v22.2.5.
 
 - [PasteCommand API Reference](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_PasteCommand)
 - [.NET Word Library (DocIO) Documentation](https://help.syncfusion.com/file-formats/docio/overview)
-- [WPF RichTextBox Feature Tour](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor)
-- [WPF RichTextBox Examples](https://github.com/syncfusion/docx-editor-sdk-wpf-demos)
+- [WPF DOCX Editor Feature Tour](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor)
+- [WPF DOCX Editor Examples](https://github.com/syncfusion/docx-editor-sdk-wpf-demos)

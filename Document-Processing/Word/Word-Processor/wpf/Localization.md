@@ -9,7 +9,7 @@ keywords: localization,resx,culture,current-ui-culture,resource-file
 ---
 # Localization in WPF DOCX Editor
 
-Localization is the process of adapting the application to a specific language. [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) provides support to localize all the static text in the ribbon and its dialogs, including button labels, dialog titles, command tooltips, and menu items. Localization can be done by adding a resource file (Resx) and setting the desired culture in the application. The default culture is `en-US`.
+Localization is the process of adapting the application to a specific language. [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) provides support to localize all the static text in the ribbon and its dialogs, including button labels, dialog titles, command tooltips, and menu items. Localization can be done by adding a resource file (Resx) and setting the desired culture in the application. The default culture is `en-US`.
 
 The default English (`en-US`) resource files (`Syncfusion.SfRichTextBoxAdv.WPF.resx` and `Syncfusion.SfRichTextRibbon.WPF.resx`) are embedded inside the `Syncfusion.SfRichTextBoxAdv.WPF` and `Syncfusion.SfRichTextRibbon.WPF` assemblies, so they are available without any additional setup.
 
@@ -74,10 +74,10 @@ The following screenshot shows the localization in the SfRichTextBoxAdv and SfRi
 
 ![SfRichTextBoxAdv and SfRichTextRibbon rendered with French-localized text in the ribbon and dialogs](Localization_images/wpf-richtextbox-localized-text.jpeg)
 
-N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
+N> You can refer to our [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF DOCX Editor example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 
 ## See also
 
-- [Getting Started in WPF RichTextBox](./Getting-Started)
-- [Commands in WPF RichTextBox](./Commands)
-- [Document Structure in WPF RichTextBox](./Document-Structure)
+- [Getting Started in WPF DOCX Editor](./Getting-Started)
+- [Commands in WPF DOCX Editor](./Commands)
+- [Document Structure in WPF DOCX Editor](./Document-Structure)

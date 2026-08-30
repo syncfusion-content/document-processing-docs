@@ -10,7 +10,7 @@ keywords: styles
 # Document Styles in WPF DOCX Editor
 
 A style is a predefined set of table, numbering, paragraph, and character formatting properties that can be applied to regions within a document.
-In [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor), styles are created and added to a document programmatically or using the built-in Styles dialog.
+In [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor), styles are created and added to a document programmatically or using the built-in Styles dialog.
 
 A style in a document should have the following properties:
 
@@ -85,7 +85,7 @@ The following code example explains how to create new style dialog through comma
 {% endhighlight %}
 {% endtabs %}
 
-![WPF RichTextBox displays New Style Dialog](Image_images/wpf-richtextbox-new-style.PNG)
+![WPF DOCX Editor displays New Style Dialog](Image_images/wpf-richtextbox-new-style.PNG)
 
 ## Modify an existing style
 You can modify a style directly using the ShowStylesDialogCommand in SfRichTextBoxAdv.
@@ -98,10 +98,10 @@ The following code example explains how to modify the style dialog through comma
 {% endtabs %}
 
 From the styles list select a style you want to modify.
-![WPF RichTextBox displays Existing Styles](Image_images/wpf-richtextbox-existing-style.PNG)
+![WPF DOCX Editor displays Existing Styles](Image_images/wpf-richtextbox-existing-style.PNG)
 
 In the Formatting section, make any formatting changes you want, such as font style, size, or color, alignment, line spacing, or indentation.
-![WPF RichTextBox displays Modify Style](Image_images/wpf-richtextbox-modify-style.PNG)
+![WPF DOCX Editor displays Modify Style](Image_images/wpf-richtextbox-modify-style.PNG)
 
 ## Apply style
 The styles are applied using the ApplyStyleCommand in SfRichTextBoxAdv. The parameter should be passed is the Name of the Style.
@@ -127,10 +127,10 @@ The following code example explains how to clear the formatting of text through 
 {% endhighlight %}
 {% endtabs %}
 
-N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
+N> You can refer to our [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF DOCX Editor example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 
 ## See also
 
-- [Document Properties in WPF RichTextBox](./Document-Properties)
-- [Selection in WPF RichTextBox](./Selection)
-- [Commands in WPF RichTextBox](./Commands)
+- [Document Properties in WPF DOCX Editor](./Document-Properties)
+- [Selection in WPF DOCX Editor](./Selection)
+- [Commands in WPF DOCX Editor](./Commands)

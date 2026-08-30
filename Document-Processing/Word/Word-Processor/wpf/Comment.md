@@ -8,8 +8,8 @@ keywords: comment
 ---
 # Comments in WPF DOCX Editor
 
-A Comment is a note or annotation that an author or reviewer can add to the document. The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) control supports viewing and editing the comments in the document. It renders the comments present in the document in review pane, similar to the Microsoft Word.
-![WPF RichTextBox with Comment](Comment_images/wpf-richtextbox-comment.jpeg)
+A Comment is a note or annotation that an author or reviewer can add to the document. The [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) control supports viewing and editing the comments in the document. It renders the comments present in the document in review pane, similar to the Microsoft Word.
+![WPF DOCX Editor with Comment](Comment_images/wpf-richtextbox-comment.jpeg)
 
 N> Currently, the SfRichTextBoxAdv shows review pane only with Pages layout type.
 
@@ -116,7 +116,7 @@ End Sub
 
 {% endhighlight %}
 {% endtabs %}
-![Customizing Comment Style in WPF RichTextBox](Comment_images/wpf-richtextbox-comment-customization.jpeg)
+![Customizing Comment Style in WPF DOCX Editor](Comment_images/wpf-richtextbox-comment-customization.jpeg)
 
 ## Visibility of comment pane
 
@@ -137,10 +137,10 @@ Dim isCommentPaneVisible As Boolean = richTextBoxAdv.EditorSettings.IsCommentPan
 {% endhighlight %}
 {% endtabs %}
 
-N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
+N> You can refer to our [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF DOCX Editor example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 
 ## See also
 
-- [Document Properties in WPF RichTextBox](./Document-Properties)
-- [Selection in WPF RichTextBox](./Selection)
-- [Commands in WPF RichTextBox](./Commands)
+- [Document Properties in WPF DOCX Editor](./Document-Properties)
+- [Selection in WPF DOCX Editor](./Selection)
+- [Commands in WPF DOCX Editor](./Commands)
