@@ -154,7 +154,7 @@ The following PowerPoint elements are preserved as fallback images during PowerP
 
 **Cross-platform**
 
-On cross-platform platforms, install the **Syncfusion.PresentationRenderer** NuGet package and initialize `PresentationRenderer`. It preserves all supported PowerPoint elements, including charts, as fallback images during PowerPoint-to-Markdown conversion.
+On cross-platform platforms, install the **Syncfusion.PresentationRenderer.Net.Core** NuGet package and initialize `PresentationRenderer`. It preserves all supported PowerPoint elements, including charts, as fallback images during PowerPoint-to-Markdown conversion.
 
 NuGet package required
 
@@ -168,7 +168,7 @@ presentation.PresentationRenderer = new PresentationRenderer();
 
 **Windows-specific**
 
-On Windows, SmartArt, GroupShape, and OLE Object are preserved automatically without any additional code. For charts, install the **Syncfusion.OfficeChartToImageConverter** NuGet package and initialize the `ChartToImageConverter`.
+On Windows, SmartArt, GroupShape, and OLE Object are preserved automatically without any additional code. For charts, install the **Syncfusion.OfficeChartToImageConverter.WPF** NuGet package and initialize the `ChartToImageConverter`.
 
 NuGet package required
 
