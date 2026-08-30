@@ -8,7 +8,7 @@ keywords: getting started, docx editor
 ---
 # Getting Started with UWP DOCX Editor
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> [UWP RichTextBox](https://www.syncfusion.com/docx-editor-sdk/uwp-docx-editor) (SfRichTextBoxAdv) enables you to create, edit, view, and print Word documents in UWP applications. This section guides you through the steps to get started and create a RichTextBox in a UWP application.
+Syncfusion<sup style="font-size:70%">&reg;</sup> [UWP DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/uwp-docx-editor) (SfRichTextBoxAdv) enables you to create, edit, view, and print Word documents in UWP applications. This section guides you through the steps to get started and create a UWP DOCX Editor in a UWP application.
 
 ## Create a New UWP Project
 
