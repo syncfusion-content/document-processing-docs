@@ -39,14 +39,14 @@ richTextBoxAdv.Background = New SolidColorBrush(Color.FromRgb(102, 153, 204))
 {% endtabs %}
 
 **Pages layout:**
-![Changing Background color of Page Layout in WPF DOCX Editor](Image_images/wpf-richtextbox-page-layout-background.PNG)
+![Changing Background color of Page Layout in WPF DOCX Editor](Image_images/wpf-docx-editor-page-layout-background.PNG)
 
 **Continuous layout:**
-![Changing Background color of Continuous Layout in WPF DOCX Editor](Image_images/wpf-richtextbox-continuous-layout-background.PNG)
+![Changing Background color of Continuous Layout in WPF DOCX Editor](Image_images/wpf-docx-editor-continuous-layout-background.PNG)
 
 **Block layout:**
 The block layout always inherits the control background color.
-![Changing Background color of Block Layout in WPF DOCX Editor](Image_images/wpf-richtextbox-block-layout-background.PNG)
+![Changing Background color of Block Layout in WPF DOCX Editor](Image_images/wpf-docx-editor-block-layout-background.PNG)
 
 ## How to override the document background in continuous layout type?
 By default, the document background properties will be applied when the `LayoutType` is continuous. You can suppress the document background and apply the control background by setting [`OverridesDocumentBackground`](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_OverridesDocumentBackground) property to true. The default value of this property is false.
@@ -89,7 +89,7 @@ richTextBoxAdv.OverridesDocumentBackground = true
 {% endtabs %}
 
 **Continuous layout:**
-![Changing Background color of Continuous Layout in WPF DOCX Editor](Image_images/wpf-richtextbox-continous-background.PNG)
+![Changing Background color of Continuous Layout in WPF DOCX Editor](Image_images/wpf-docx-editor-continous-background.PNG)
 
 ## Setting background for document pages
 
@@ -123,10 +123,10 @@ richTextBoxAdv.Document.Background.Color = Color.FromRgb(102, 153, 204)
 {% endtabs %}
 
 **Pages layout:**
-![Changing Background color of Page Layout in WPF DOCX Editor](Image_images/wpf-richtextbox-pages-background.PNG)
+![Changing Background color of Page Layout in WPF DOCX Editor](Image_images/wpf-docx-editor-pages-background.PNG)
 
 **Continuous layout:**
-![Changing Background color of Continuous Layout in WPF DOCX Editor](Image_images/wpf-richtextbox-continous-background.PNG)
+![Changing Background color of Continuous Layout in WPF DOCX Editor](Image_images/wpf-docx-editor-continous-background.PNG)
 
 N> You can refer to our [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF DOCX Editor example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 

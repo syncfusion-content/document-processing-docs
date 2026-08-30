@@ -48,7 +48,7 @@ richTextBoxAdv.LayoutType = LayoutType.Pages
 
 {% endtabs %}
 
-![WPF DOCX Editor rendered in Pages layout, showing paginated content](Layout-Types_images/wpf-richtextbox-page-layout.jpeg)
+![WPF DOCX Editor rendered in Pages layout, showing paginated content](Layout-Types_images/wpf-docx-editor-page-layout.jpeg)
 
 ## Continuous
 
@@ -79,7 +79,7 @@ richTextBoxAdv.LayoutType = LayoutType.Continuous
 
 {% endtabs %}
 
-![WPF DOCX Editor rendered in Continuous layout, showing all content on a single scrollable page](Layout-Types_images/wpf-richtextbox-continuous-layout.jpeg)
+![WPF DOCX Editor rendered in Continuous layout, showing all content on a single scrollable page](Layout-Types_images/wpf-docx-editor-continuous-layout.jpeg)
 
 ## Block
 
@@ -110,7 +110,7 @@ richTextBoxAdv.LayoutType = LayoutType.Block
 
 {% endtabs %}
 
-![WPF DOCX Editor rendered in Block layout, showing read-only rich-text content in a single block](Layout-Types_images/wpf-richtextbox-box-layout.jpeg)
+![WPF DOCX Editor rendered in Block layout, showing read-only rich-text content in a single block](Layout-Types_images/wpf-docx-editor-box-layout.jpeg)
 
 N> You can refer to our [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF DOCX Editor example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 
