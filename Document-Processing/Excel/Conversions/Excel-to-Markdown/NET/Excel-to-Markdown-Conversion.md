@@ -336,3 +336,66 @@ Dim workbook As IWorkbook = application.Workbooks.Open("Data/Markdown.xlsx")
 Dim markdownDocument As MarkdownDocument = workbook.GetMarkdownDocument()
 {% endhighlight %}
 {% endtabs %}
+
+## Convert Excel with shapes to Markdown
+
+The .NET Excel library supports converting Excel worksheets containing shapes, such as text boxes, charts, and AutoShapes to Markdown. During conversion, these shapes are rendered as images and included in the Markdown output.
+
+The following code example shows how to convert an Excel document containing shapes to a Markdown file.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20Markdown/Excel-to-Markdown-Shapes/.NET/Excel-to-Markdown-Shapes/Excel-to-Markdown-Shapes/Program.cs,180" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+    IApplication application = excelEngine.Excel;
+    application.DefaultVersion = ExcelVersion.Xlsx;
+
+    application.XlsIORenderer = new XlsIORenderer();
+
+    IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/Input.xlsx"));
+    MarkdownExportOptions markdownExportOptions = new MarkdownExportOptions();
+    markdownExportOptions.PreserveEmptyRow = true;
+
+    workbook.SaveAs(Path.GetFullPath(@"Output/ExcelToMarkdown.md"), markdownExportOptions);
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+    IApplication application = excelEngine.Excel;
+    application.DefaultVersion = ExcelVersion.Xlsx;
+
+    application.ChartToImageConverter = new ChartToImageConverter();
+
+    IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/Input.xlsx"));
+
+    MarkdownExportOptions markdownExportOptions = new MarkdownExportOptions();
+    markdownExportOptions.PreserveEmptyRow = true;
+
+    workbook.SaveAs(Path.GetFullPath(@"Output/ExcelToMarkdown.md"), markdownExportOptions);
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Using excelEngine As New ExcelEngine()
+    Dim application As IApplication = excelEngine.Excel
+    application.DefaultVersion = ExcelVersion.Xlsx
+
+    application.ChartToImageConverter = New ChartToImageConverter()
+
+    Dim workbook As IWorkbook = application.Workbooks.Open("Input.xlsx")
+
+    Dim exportOptions As New MarkdownExportOptions()
+    exportOptions.PreserveEmptyRow = True
+
+    Using fileStream As New FileStream("Output.md", FileMode.Create, FileAccess.Write)
+        workbook.SaveAs(fileStream, exportOptions)
+    End Using
+End Using
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20Markdown/Excel-to-Markdown-Shapes/.NET/Excel-to-Markdown-Shapes" aria-label="GitHub demo link">this GitHub page</a>.
