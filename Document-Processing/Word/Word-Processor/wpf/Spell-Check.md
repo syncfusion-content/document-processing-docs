@@ -120,7 +120,7 @@ The following code example demonstrates how to show the spelling pane in SfRichT
 {% endhighlight %}
 
 {% endtabs %}
-![WPF DOCX Editor displays spellcheck option](SpellCheck_images/wpf-richtextbox-spellcheck-option.PNG)
+![WPF DOCX Editor displays spellcheck option](SpellCheck_images/wpf-docx-editor-spellcheck-option.PNG)
 
 N> You can refer to our [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF DOCX Editor example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 

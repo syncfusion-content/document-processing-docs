@@ -56,7 +56,7 @@ Create a folder named `Resources` in your project root (alongside your `.csproj`
 
 The default English (`en-US`) [Resx](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/Localization/Localization/Resources) (resource) files for `SfRichTextBoxAdv` and `SfRichTextRibbon` are available in the [GitHub sample](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/Localization). Copy `Syncfusion.SfRichTextBoxAdv.WPF.resx` and `Syncfusion.SfRichTextRibbon.WPF.resx` from the sample into the `Resources` folder of your application.
 
-![Added resource files for SfRichTextBoxAdv and SfRichTextRibbon shown in the Visual Studio Resources folder](Localization_images/wpf-richtextbox-resource-file.jpeg)
+![Added resource files for SfRichTextBoxAdv and SfRichTextRibbon shown in the Visual Studio Resources folder](Localization_images/wpf-docx-editor-resource-file.jpeg)
 
 ### Create the localized resx
 
@@ -66,13 +66,13 @@ Create Resx (resource) files named `Syncfusion.SfRichTextBoxAdv.WPF.<culture>.re
 
 Add a resource key (such as the name of the string) and its corresponding localized value in the Resource Designer of the `Syncfusion.SfRichTextBoxAdv.WPF.fr.resx` and `Syncfusion.SfRichTextRibbon.WPF.fr.resx` files.
 
-![Resource Designer showing the name and localized value columns for the Resx file](Localization_images/wpf-richtextbox-property-values.jpeg)
+![Resource Designer showing the name and localized value columns for the Resx file](Localization_images/wpf-docx-editor-property-values.jpeg)
 
 N> If you have not used `SfRichTextRibbon` in your application, you can skip the `Syncfusion.SfRichTextRibbon.WPF.<culture>.resx` files mentioned above. After adding or modifying Resx files, rebuild the application so the new resources are picked up at runtime.
 
 The following screenshot shows the localization in the SfRichTextBoxAdv and SfRichTextRibbon controls
 
-![SfRichTextBoxAdv and SfRichTextRibbon rendered with French-localized text in the ribbon and dialogs](Localization_images/wpf-richtextbox-localized-text.jpeg)
+![SfRichTextBoxAdv and SfRichTextRibbon rendered with French-localized text in the ribbon and dialogs](Localization_images/wpf-docx-editor-localized-text.jpeg)
 
 N> You can refer to our [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF DOCX Editor example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 

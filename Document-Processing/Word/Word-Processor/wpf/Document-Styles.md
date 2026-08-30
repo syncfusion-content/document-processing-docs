@@ -85,7 +85,7 @@ The following code example explains how to create new style dialog through comma
 {% endhighlight %}
 {% endtabs %}
 
-![WPF DOCX Editor displays New Style Dialog](Image_images/wpf-richtextbox-new-style.PNG)
+![WPF DOCX Editor displays New Style Dialog](Image_images/wpf-docx-editor-new-style.PNG)
 
 ## Modify an existing style
 You can modify a style directly using the ShowStylesDialogCommand in SfRichTextBoxAdv.
@@ -98,10 +98,10 @@ The following code example explains how to modify the style dialog through comma
 {% endtabs %}
 
 From the styles list select a style you want to modify.
-![WPF DOCX Editor displays Existing Styles](Image_images/wpf-richtextbox-existing-style.PNG)
+![WPF DOCX Editor displays Existing Styles](Image_images/wpf-docx-editor-existing-style.PNG)
 
 In the Formatting section, make any formatting changes you want, such as font style, size, or color, alignment, line spacing, or indentation.
-![WPF DOCX Editor displays Modify Style](Image_images/wpf-richtextbox-modify-style.PNG)
+![WPF DOCX Editor displays Modify Style](Image_images/wpf-docx-editor-modify-style.PNG)
 
 ## Apply style
 The styles are applied using the ApplyStyleCommand in SfRichTextBoxAdv. The parameter should be passed is the Name of the Style.
