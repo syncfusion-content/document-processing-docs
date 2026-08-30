@@ -8,7 +8,7 @@ keywords: background,background-color,overrides-document-background,layout-type,
 ---
 
 # Background in UWP DOCX Editor
-The RichTextBox control allows you to change background color of the control. A background of a control is represented by `Background` property of `SfRichTextBoxAdv` class. The default value of this property is black.
+The UWP DOCX Editor control allows you to change background color of the control. A background of a control is represented by `Background` property of `SfRichTextBoxAdv` class. The default value of this property is black.
 
 The following code illustrates how to apply color as background to the document.
 
@@ -50,7 +50,7 @@ The block layout always inherits the control background color.
 
 ## Setting background for document pages
 
-The RichTextBox control allows you to change the background color of the document pages. A background of a document is represented by the [`Background`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.DocumentAdv.html#Syncfusion_UI_Xaml_RichTextBoxAdv_DocumentAdv_Background) property of [`DocumentAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.DocumentAdv.html) class. The default value of this property is white.
+The UWP DOCX Editor control allows you to change the background color of the document pages. A background of a document is represented by the [`Background`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.DocumentAdv.html#Syncfusion_UI_Xaml_RichTextBoxAdv_DocumentAdv_Background) property of [`DocumentAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.DocumentAdv.html) class. The default value of this property is white.
 
 The following code illustrates how to apply color as background to the document pages.
 
@@ -149,6 +149,6 @@ N> This API is supported starting from release version v17.4.0.X.
 
 ## See also
 
-- [Commands in UWP RichTextBox](./Commands)
-- [Document Structure in UWP RichTextBox](./Document-Structure)
-- [Document Properties in UWP RichTextBox](./Document-Properties)
+- [Commands in UWP DOCX Editor](./Commands)
+- [Document Structure in UWP DOCX Editor](./Document-Structure)
+- [Document Properties in UWP DOCX Editor](./Document-Properties)

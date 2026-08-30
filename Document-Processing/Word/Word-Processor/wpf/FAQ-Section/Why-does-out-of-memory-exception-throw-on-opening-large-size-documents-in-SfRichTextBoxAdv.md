@@ -9,7 +9,7 @@ keywords: out-of-memory-exception
 
 # Memory Issues with Large Documents in WPF DOCX Editor
 
-This page explains why an `OutOfMemoryException` is thrown when opening large documents in the [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) control and provides guidance on how to avoid it.
+This page explains why an `OutOfMemoryException` is thrown when opening large documents in the [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) control and provides guidance on how to avoid it.
 
 ## Cause
 
