@@ -1789,7 +1789,7 @@ FontManager.ClearRegisteredFonts(True)
 {% endhighlight %}
 {% endtabs %}
 
-A complete working example of registering custom fonts in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Custom%20Font/.NET/Custom%20Font">this GitHub page</a>.
+A complete working example of registering custom fonts in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Custom%20Font/.NET/Custom%20Font" aria-label="GitHub example for registering custom fonts during Excel-to-PDF conversion">this GitHub page</a>.
 
 ## Supported elements
 
