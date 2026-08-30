@@ -10,7 +10,7 @@ keywords: overview, richtextboxadv, sfrichtextboxadv
 
 The [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) is a feature-rich, user-interactive control that enables viewing, editing, and printing rich text content with advanced formatting and layout capabilities, supporting elements such as text, images, tables, paragraphs, and comments. 
 
-![Output of WPF DOCX Editor](./Overview_images/wpf-richtextbox.png)
+![Output of WPF DOCX Editor](./Overview_images/wpf-docx-editor.png)
 
 ## Features
 

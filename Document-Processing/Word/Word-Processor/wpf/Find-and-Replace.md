@@ -173,7 +173,7 @@ The following code example demonstrates how to show the options pane in SfRichTe
 {% endhighlight %}
 
 {% endtabs %}
-![WPF DOCX Editor displays the Find option pane with the search input and navigation controls](Find-and-Replace_images/wpf-richtextbox-find-option.jpeg)
+![WPF DOCX Editor displays the Find option pane with the search input and navigation controls](Find-and-Replace_images/wpf-docx-editor-find-option.jpeg)
 
 N> You can refer to our [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF DOCX Editor example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 

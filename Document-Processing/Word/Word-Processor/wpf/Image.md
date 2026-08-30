@@ -39,7 +39,7 @@ Dim richTextBoxAdv As New SfRichTextBoxAdv()
 richTextBoxAdv.EditorSettings.EnableImageResizer = False
 {% endhighlight %}
 {% endtabs %}
-![WPF DOCX Editor showing an image selected with the built-in image resizer handles](Image_images/wpf-richtextbox-image.jpeg)
+![WPF DOCX Editor showing an image selected with the built-in image resizer handles](Image_images/wpf-docx-editor-image.jpeg)
 
 ## Text wrapping style
 Text wrapping refers to how images fit with surrounding text in a document. Please [refer to this page](/wpf/richtextbox/text-wrapping-style) for more information about text wrapping styles available in Word documents.

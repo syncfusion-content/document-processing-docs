@@ -31,10 +31,10 @@ The list style is determined by the [ListLevelPattern](https://help.syncfusion.c
 
 The character that appears between the list marker and the list text is set by the [FollowCharacter](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.FollowCharacterType.html) property of a list level. The available values are `Tab`, `Space`, and `Nothing`.
 The following screenshot shows single level bulleted list.
-![WPF DOCX Editor showing a single-level bulleted list with dot bullets](List_images/wpf-richtextbox-bullet-list.jpeg)
+![WPF DOCX Editor showing a single-level bulleted list with dot bullets](List_images/wpf-docx-editor-bullet-list.jpeg)
 
 The following screenshot shows single level numbered list.
-![WPF DOCX Editor showing a single-level numbered list with sequential numbers](List_images/wpf-richtextbox-number-list.jpeg)
+![WPF DOCX Editor showing a single-level numbered list with sequential numbers](List_images/wpf-docx-editor-number-list.jpeg)
 
 ## Multilevel List
 
@@ -43,7 +43,7 @@ Multilevel means defining a list within a list where up to nine levels can be de
 Each level of a multilevel list uses its own [ListLevelPattern](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.ListLevelPattern.html) value, so you can mix `Bullet` for one level, `Arabic` for another, and `LowLetter` for a third, as Microsoft Word does.
 
 The following screenshot shows multilevel list.
-![WPF DOCX Editor showing a multilevel list with three indented levels, mixing bullet and number styles](List_images/wpf-richtextbox-multilevel-list.jpeg)
+![WPF DOCX Editor showing a multilevel list with three indented levels, mixing bullet and number styles](List_images/wpf-docx-editor-multilevel-list.jpeg)
 
 ## Adding List
 

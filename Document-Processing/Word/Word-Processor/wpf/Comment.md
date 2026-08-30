@@ -9,7 +9,7 @@ keywords: comment
 # Comments in WPF DOCX Editor
 
 A Comment is a note or annotation that an author or reviewer can add to the document. The [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) control supports viewing and editing the comments in the document. It renders the comments present in the document in review pane, similar to the Microsoft Word.
-![WPF DOCX Editor with Comment](Comment_images/wpf-richtextbox-comment.jpeg)
+![WPF DOCX Editor with Comment](Comment_images/wpf-docx-editor-comment.jpeg)
 
 N> Currently, the SfRichTextBoxAdv shows review pane only with Pages layout type.
 
@@ -116,7 +116,7 @@ End Sub
 
 {% endhighlight %}
 {% endtabs %}
-![Customizing Comment Style in WPF DOCX Editor](Comment_images/wpf-richtextbox-comment-customization.jpeg)
+![Customizing Comment Style in WPF DOCX Editor](Comment_images/wpf-docx-editor-comment-customization.jpeg)
 
 ## Visibility of comment pane
 

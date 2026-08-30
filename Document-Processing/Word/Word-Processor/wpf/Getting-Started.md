@@ -89,7 +89,7 @@ N> 4. Register the license key in the `App` constructor of `App.xaml.cs` before 
 
 Open the Toolbox window and drag the **SfRichTextBoxAdv** control onto the Design view of the WPF application to add it to the user interface.
 
-![Dragging SfRichTextBoxAdv Control from Toolbox](Getting-Started_images/wpf-richtextbox-dragfrom-toolbox.png)
+![Dragging SfRichTextBoxAdv Control from Toolbox](Getting-Started_images/wpf-docx-editor-dragfrom-toolbox.png)
 
 {% endtabcontent %}
 
@@ -554,7 +554,7 @@ namespace DocumentEditor
 3. Press **Ctrl + O** or use the **Open** option in the **SfRichTextRibbon** to open a document.
 4. The document is displayed in the editor, along with the themed ribbon and editor interface, as shown below.
 
-![WPF SfRichTextBoxAdv with SfRichTextRibbon using a Windows11 theme](Getting-Started_images/wpf-richtextbox-windows11theme.png)
+![WPF SfRichTextBoxAdv with SfRichTextRibbon using a Windows11 theme](Getting-Started_images/wpf-docx-editor-windows11theme.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/Theme).
 
