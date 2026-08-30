@@ -712,7 +712,7 @@ On cross-platform platforms, install the [Syncfusion.DocIORenderer NuGet package
 
 NuGet package required
 
-* [Syncfusion.DocIORenderer](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core)
+* [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core)
 
 Initialize DocIORenderer
 
@@ -726,7 +726,7 @@ On Windows, Text Box, Shape, Ink, MathML, and SmartArt are preserved automatical
 
 NuGet package required
 
-* [Syncfusion.OfficeChartToImageConverter](https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.WPF)
+* [Syncfusion.OfficeChartToImageConverter.WPF](https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.WPF)
 
 Initialize ChartToImageConverter
 
