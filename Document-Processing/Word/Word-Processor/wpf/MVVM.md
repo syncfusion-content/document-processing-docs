@@ -8,7 +8,7 @@ keywords: mvvm,data-binding,dependency-property,two-way-binding,viewmodel
 ---
 # MVVM in WPF DOCX Editor
 
-The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) control can be used with the Model-View-ViewModel (MVVM) pattern. This section demonstrates how to use the SfRichTextBoxAdv control with the MVVM pattern.
+The [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) control can be used with the Model-View-ViewModel (MVVM) pattern. This section demonstrates how to use the SfRichTextBoxAdv control with the MVVM pattern.
 
 ## Creating a view model
 
@@ -518,10 +518,10 @@ The following code example demonstrates how to create XAML view with SfRichTextB
 
 {% endtabs %}
 
-N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
+N> You can refer to our [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF DOCX Editor example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 
 ## See also
 
-- [Commands in WPF RichTextBox](./Commands)
-- [Layout Types in WPF RichTextBox](./Layout-Types)
-- [Document Structure in WPF RichTextBox](./Document-Structure)
+- [Commands in WPF DOCX Editor](./Commands)
+- [Layout Types in WPF DOCX Editor](./Layout-Types)
+- [Document Structure in WPF DOCX Editor](./Document-Structure)

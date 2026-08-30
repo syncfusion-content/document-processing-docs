@@ -8,7 +8,7 @@ keywords: search,find,replace-text,find-options,regex-find
 ---
 # Find and Replace in WPF DOCX Editor
 
-The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) control supports searching text contents in the document. When combined with selection, it becomes a powerful tool for highlighting specific parts of the document, applying formatting such as bold, or replacing text. You can extend your search by using regular expressions to find a particular pattern of text in the document.
+The [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) control supports searching text contents in the document. When combined with selection, it becomes a powerful tool for highlighting specific parts of the document, applying formatting such as bold, or replacing text. You can extend your search by using regular expressions to find a particular pattern of text in the document.
 
 The find and replace operations are exposed through the [Find](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_Find_System_String_Syncfusion_Windows_Controls_RichTextBoxAdv_FindOptions_), [FindAll](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_FindAll_System_String_Syncfusion_Windows_Controls_RichTextBoxAdv_FindOptions_), and [FindOptions](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.FindOptions.html) API members.
 
@@ -173,12 +173,12 @@ The following code example demonstrates how to show the options pane in SfRichTe
 {% endhighlight %}
 
 {% endtabs %}
-![WPF RichTextBox displays the Find option pane with the search input and navigation controls](Find-and-Replace_images/wpf-richtextbox-find-option.jpeg)
+![WPF DOCX Editor displays the Find option pane with the search input and navigation controls](Find-and-Replace_images/wpf-richtextbox-find-option.jpeg)
 
-N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
+N> You can refer to our [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF DOCX Editor example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 
 ## See also
 
-- [Selection in WPF RichTextBox](./Selection)
-- [Commands in WPF RichTextBox](./Commands)
-- [Document Structure in WPF RichTextBox](./Document-Structure)
+- [Selection in WPF DOCX Editor](./Selection)
+- [Commands in WPF DOCX Editor](./Commands)
+- [Document Structure in WPF DOCX Editor](./Document-Structure)
