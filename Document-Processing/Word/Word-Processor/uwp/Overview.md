@@ -10,7 +10,7 @@ keywords: overview, richtextboxadv, sfrichtextboxadv
 
 The Syncfusion <sup style="font-size:70%">&reg;</sup> [UWP DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/uwp-docx-editor) (SfRichTextBoxAdv) is a feature-rich, user-interactive control that enables viewing, editing, and printing rich text content. It supports advanced formatting and layout for elements such as text, images, tables, paragraphs, and comments.
 
-![SfRichTextBoxAdv overview showing the Pages layout with a sample document](Overview_images/uwp-richtextbox.png)
+![SfRichTextBoxAdv overview showing the Pages layout with a sample document](Overview_images/uwp-docx-editor.png)
 
 ## Key features
 

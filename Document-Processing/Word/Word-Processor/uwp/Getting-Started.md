@@ -78,7 +78,7 @@ N> 4. Register the license key in the `App` constructor of `App.xaml.cs` before 
 
 Open the Toolbox window and drag the **SfRichTextBoxAdv** control onto the Design view of the UWP application to add it to the user interface.
 
-![Dragging SfRichTextBoxAdv Control from Toolbox](Getting-Started_images/uwp-richtextbox-dragfrom-toolbox.png)
+![Dragging SfRichTextBoxAdv Control from Toolbox](Getting-Started_images/uwp-docx-editor-dragfrom-toolbox.png)
 {% endtabcontent %}
 
 {% tabcontent Via XAML %}
