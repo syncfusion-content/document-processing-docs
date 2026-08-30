@@ -125,3 +125,7 @@ Widget build(BuildContext context) {
 
 {% endhighlight %}
 {% endtabs %}
+
+N>* On mobile platforms, when a PDF is loaded, the pages occupy the maximum available width, i.e., the pages fit the screen width.
+N>* When the device orientation changes, the pages automatically occupy the available width in landscape orientation as well.
+N>* In Continuous Page Layout mode, all pages are zoomed. In Single Page Layout mode, only the current page is zoomed.
