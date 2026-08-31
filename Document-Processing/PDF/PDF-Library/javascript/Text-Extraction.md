@@ -333,6 +333,102 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
+## Find Text
+
+The [findText](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#findtext) method of the [PdfDataExtractor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor) class locates specific text in a PDF document. The method returns the page index and rectangular bounds of each matching text occurrence. These details are useful for highlighting text, applying redaction, adding annotations, navigating between search results, and building custom search features.
+
+The following code example demonstrates how to search for text in a PDF document using the `findText` method.
+
+{% tabs %}
+
+{% highlight typescript tabtitle="TypeScript" %}
+
+import { PdfDocument } from '@syncfusion/ej2-pdf';
+import { PdfDataExtractor } from '@syncfusion/ej2-pdf-data-extract';
+
+// Load an existing PDF document
+let document: PdfDocument = new PdfDocument(data);
+// Initialize a new instance of the `PdfDataExtractor` class
+let extractor: PdfDataExtractor = new PdfDataExtractor(document);
+// Search for the specified text and retrieve the matching occurrences
+let searchResults = await extractor.findText('document');
+// Release document resources
+document.destroy();
+
+{% endhighlight %}
+
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Load an existing PDF document
+var document = new ej.pdf.PdfDocument(data);
+// Initialize a new instance of the PdfDataExtractor class
+var extractor = new ej.pdfdataextract.PdfDataExtractor(document);
+// Search for the specified text and retrieve the matching occurrences
+var searchResults = await extractor.findText('document');
+// Release document resources
+document.destroy();
+
+{% endhighlight %}
+
+{% endtabs %}
+
+N> The page index returned in a text search result is zero-based.
+
+N> The `findText` method searches the text content available in the PDF document. It does not perform optical character recognition on scanned or image-only PDF pages.
+
+N> Searching a large PDF document may require additional processing time depending on the number of pages and matching text occurrences.
+
+### Find text synchronously
+
+The [findTextSync](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#findtextsync) method searches for text and returns the matching occurrences synchronously.
+
+The following code example demonstrates how to search for text synchronously in a PDF document.
+
+{% tabs %}
+
+{% highlight typescript tabtitle="TypeScript" %}
+
+import { PdfDocument } from '@syncfusion/ej2-pdf';
+import { PdfDataExtractor } from '@syncfusion/ej2-pdf-data-extract';
+
+// Load an existing PDF document
+let document: PdfDocument = new PdfDocument(data);
+// Initialize a new instance of the `PdfDataExtractor` class
+let extractor: PdfDataExtractor = new PdfDataExtractor(document);
+// Search for the specified text and retrieve the matching occurrences synchronously
+let searchResults = extractor.findTextSync('document');
+// Release document resources
+document.destroy();
+
+{% endhighlight %}
+
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Load an existing PDF document
+var document = new ej.pdf.PdfDocument(data);
+// Initialize a new instance of the PdfDataExtractor class
+var extractor = new ej.pdfdataextract.PdfDataExtractor(document);
+// Search for the specified text and retrieve the matching occurrences synchronously
+var searchResults = extractor.findTextSync('document');
+// Release document resources
+document.destroy();
+
+{% endhighlight %}
+
+{% endtabs %}
+
+N> Use `findTextSync` when the search result is required immediately. For large PDF documents, use the asynchronous `findText` method to avoid blocking execution.
+
+## FindText Module API Reference
+
+Use the following table to select the text-search method that matches your requirement.
+
+| Method | Return Type | Description |
+|---|---|---|
+| [`findText(text: string)`](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#findtext) | Promise | Searches for the specified text asynchronously throughout the PDF document and returns all matching occurrences with their page indexes and bounds. |
+| [`findText(text: string, options)`](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#findtext) | Promise | Searches for the specified text asynchronously using the supplied text-search options and returns the matching occurrences. |
+| [`findTextSync(text: string)`](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#findtextsync) | Text search result collection | Searches for the specified text synchronously throughout the PDF document and returns all matching occurrences with their page indexes and bounds. |
+| [`findTextSync(text: string, options)`](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#findtextsync) | Text search result collection | Searches for the specified text synchronously using the supplied text-search options and returns the matching occurrences. |
 ## Additional Resources
 
 - [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library)
