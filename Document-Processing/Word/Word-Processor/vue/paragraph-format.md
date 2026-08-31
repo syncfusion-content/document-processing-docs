@@ -23,7 +23,7 @@ this.$refs.documenteditor.ej2Instances.selection.paragraphFormat.rightIndent= 24
 
 ## Special indentation
 
-You can define special indent for first line of the paragraph using the following sample code.
+You can define a special indent for the first line of the paragraph using the following sample code.
 
 ```javascript
 this.$refs.documenteditor.ej2Instances.selection.paragraphFormat.firstLineIndent= 24;
@@ -31,7 +31,7 @@ this.$refs.documenteditor.ej2Instances.selection.paragraphFormat.firstLineIndent
 
 ## Increase indent
 
-You can increase the left indent of selected paragraphs by a factor of 36 points using the following sample code.
+You can increase the left indent of selected paragraphs by 36 points using the following sample code.
 
 ```javascript
 this.$refs.documenteditor.ej2Instances.editor.increaseIndent()
@@ -39,7 +39,7 @@ this.$refs.documenteditor.ej2Instances.editor.increaseIndent()
 
 ## Decrease indent
 
-You can decrease the left indent of selected paragraphs by a factor of 36 points using the following sample code.
+You can decrease the left indent of selected paragraphs by 36 points using the following sample code.
 
 ```javascript
 this.$refs.documenteditor.ej2Instances.editor.decreaseIndent()
@@ -91,7 +91,7 @@ this.$refs.documenteditor.ej2Instances.selection.paragraphFormat.spaceBeforeAuto
 this.$refs.documenteditor.ej2Instances.selection.paragraphFormat.spaceAfterAuto = true;
 ```
 
->Note: If auto spacing property is enabled, then value defined in the `beforeSpacing` and `afterSpacing` property will not be considered.
+N>: If auto spacing property is enabled, then value defined in the `beforeSpacing` and `afterSpacing` property will not be considered.
 
 ## Pagination properties
 
@@ -109,9 +109,9 @@ this.$refs.documenteditor.selection.paragraphFormat.keepWithNext = true;
 this.$refs.documenteditor.selection.paragraphFormat.keepLinesTogether = true;
 ```
 
-## Paragraph Border
+## Paragraph border
 
-You can apply borders to the paragraphs in a Word document. Using borders, decorate the paragraphs to set them apart from other paragraphs in the document.
+You can apply borders to the paragraphs in a Word document. Using borders, you can decorate the paragraphs to set them apart from other paragraphs in the document.
 
 The following example code illustrates how to apply box border for the selected paragraphs.
 
@@ -137,11 +137,11 @@ this.$refs.documenteditor.selection.paragraphFormat.borders.bottom.lineWidth = 3
 this.$refs.documenteditor.selection.paragraphFormat.borders.bottom.color = "#000000";
 ```
 
-Note: At present, the Document editor component displays all the border styles as single line. But you can apply any border style and get the proper display in Microsoft Word app when opening the exported Word document.
+N> At present, the DOCX Editor component displays all the border styles as single line. But you can apply any border style and get the proper display in Microsoft Word app when opening the exported Word document.
 
 ## Show or Hide Paragraph marks
 
-You can show or hide the hidden formatting symbols like spaces, tab, paragraph marks, and breaks in Document editor component. These marks help identify the start and end of a paragraph and all the hidden formatting symbols in a Word document.
+You can show or hide the hidden formatting symbols like spaces, tab, paragraph marks, and breaks in DOCX Editor component. These marks indicate the start and end of a paragraph, as well as all the hidden formatting symbols in a Word document.
 
 The following example code illustrates how to show or hide paragraph marks.
 
@@ -386,7 +386,7 @@ export default {
 
 ## Online Demo
 
-Explore how to apply paragraph formatting in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/paragraph-formatting.html).
+Explore how to apply paragraph formatting in Word documents using the Vue DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/paragraph-formatting.html).
 
 ## See Also
 

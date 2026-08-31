@@ -10,16 +10,16 @@ domainurl: ##DomainURL##
 
 # Track Changes in Vue DOCX Editor
 
-Track Changes allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject the modifications. It is a useful tool for managing changes made by several reviewers to the same document. If track changes option is enabled, all editing operations are preserved as revisions in [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor).
+Track Changes allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject the modifications. It is a useful tool for managing changes made by several reviewers to the same document. When the track changes option is enabled, all editing operations are preserved as revisions in [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor).
 
-## Enable track changes in Document Editor
+## Enable track changes in DOCX Editor
 
 The following example demonstrates how to enable track changes.
 
 ```ts
 <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' height="590px" id='container' :enableTrackChanges='true'></ejs-documenteditorcontainer>
 ```
->Track changes are document level settings. When opening a document, if the document does not have track changes enabled, then enableTrackChanges will be disabled even if we set enableTrackChanges = 'true' in the initial rendering. If you want to enable track changes for all the documents, then we recommend enabling track changes during the document change event. The following example demonstrates how to enable Track changes for the all the Document while Opening.
+N> Track changes are document-level settings. When opening a document, if the document does not have track changes enabled, then `enableTrackChanges` will be disabled even if you set `enableTrackChanges: true` in the initial rendering. If you want to enable track changes for all the documents, we recommend enabling track changes in the `documentChange` event. The following example demonstrates how to enable Track changes for the all the document while opening.
 
 ```ts
 <template>
@@ -51,11 +51,11 @@ The following example demonstrates how to enable track changes.
   }
 </script>
 ```
-## Show/Hide Revisions Pane
- 
-The Show/Hide Revisions Pane feature in the Document Editor allows users to toggle the visibility of the revisions pane, providing flexibility in managing tracked changes within the document.
- 
-The following example code illustrates how to show/hide the revisions pane.
+## Show/Hide revisions pane
+
+The Show or Hide Revisions Pane option allows users to toggle the visibility of the revisions pane, providing flexibility in managing tracked changes within the document.
+
+The following example code illustrates how to show or hide the revisions pane.
 
 ```ts
 <template>
@@ -85,11 +85,11 @@ The following example code illustrates how to show/hide the revisions pane.
 </script>
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 ## Get all tracked revisions
 
-The following example demonstrate how to get all tracked revision from current document.
+The following example demonstrates how to get all tracked revisions from the current document.
 
 ```ts
 <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' height="590px" id='container' :enableTrackChanges='true'></ejs-documenteditorcontainer>
@@ -100,9 +100,9 @@ The following example demonstrate how to get all tracked revision from current d
 let revisions : RevisionCollection = this.$refs.container.documentEditor.revisions;
 ```
 
-## Accept or Reject all changes programmatically
+## Accept or reject all changes programmatically
 
-The following example demonstrates how to accept/reject all changes.
+The following example demonstrates how to accept or reject all changes.
 
 ```ts
 <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' height="590px" id='container' :enableTrackChanges='true'></ejs-documenteditorcontainer>
@@ -125,7 +125,7 @@ revisions.rejectAll();
 
 ## Accept or reject a specific revision
 
-The following example demonstrates how to accept/reject specific revision in the Document Editor.
+The following example demonstrates how to accept or reject a specific revision in the DOCX Editor.
 
 ```ts
 /**
@@ -144,7 +144,7 @@ revisions.get(1).reject();
 
 ## Navigate between the tracked changes
 
-The following example demonstrates how to navigate tracked revision programmatically.
+The following example demonstrates how to navigate tracked revisions programmatically.
 
 ```ts
 <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' height="590px" id='container' :enableTrackChanges='true'></ejs-documenteditorcontainer>
@@ -161,20 +161,20 @@ this.$refs.container.documentEditor.selection.navigatePreviousRevision();
 
 ## Filtering changes based on user
 
-In DocumentEditor, we have built-in review panel in which we have provided support for filtering changes based on the user.
+In the DOCX Editor, we have built-in review panel in which we have provided support for filtering changes based on the user.
 
 ![Track changes](images/track-changes.png)
 
 ## Custom metadata along with author
 
-The Document Editor provides options to customize revisions using [`revisionSettings`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/documenteditorsettingsmodel#revisionsettings). The [`customData`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/revisionsettings#customdata) property allows you to attach additional metadata to tracked revisions in the Word Processor. This metadata can represent roles, tags, or any custom identifier for the revision. To display this metadata along with the author name in the Track Changes pane, you must enable the [`showCustomDataWithAuthor`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/revisionsettings#showcustomdatawithauthor) property.
+The DOCX Editor provides options to customize revisions using [`revisionSettings`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/documenteditorsettingsmodel#revisionsettings). The [`customData`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/revisionsettings#customdata) property allows you to attach additional metadata to tracked revisions in the Word Processor. This metadata can represent roles, tags, or any custom identifier for the revision. To display this metadata along with the author name in the Track Changes pane, you must enable the [`showCustomDataWithAuthor`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/revisionsettings#showcustomdatawithauthor) property.
 
 The following example code illustrates how to enable and update custom metadata for track changes revisions.
 
 ```ts
 <template>
     <div id="app">
-      <ejs-documenteditorcontainer ref='documenteditor' :serviceUrl='serviceUrl' :documentEditorSettings='settings' height="590px" id='container' :enableTrackChanges='true' :documentEditorSettings='settings'></ejs-documenteditorcontainer>
+      <ejs-documenteditorcontainer ref='documenteditor' :serviceUrl='serviceUrl' :documentEditorSettings='settings' height="590px" id='container' :enableTrackChanges='true'></ejs-documenteditorcontainer>
     </div>
 </template>
 <script>
@@ -201,16 +201,14 @@ The Track Changes pane will display the author name along with the custom metada
 
 ![Custom metadata along with author](images/track-changes-customData.png)
 
->Note:
-* When you export the document as SFDT, the customData value is stored in the revision collection. When you reopen the SFDT, the custom data is automatically restored and displayed in the Track Changes pane.
-* Other than SFDT export (e.g. DOCX and other), the customData is not preserved, as it is specific to the Document Editor component.
+N> When the document is exported as SFDT, the `customData` value is stored in the revision collection. Upon reopening the SFDT, the custom data is automatically restored and displayed in the Track Changes pane. In formats other than SFDT (such as DOCX and others), the `customData` is not preserved, as it is specific to the DOCX Editor component.
 
 
 ## Protect the document in track changes only mode
 
-Document Editor provides support for protecting the document with `RevisionsOnly` protection. In this protection, all the users are allowed to view the document and do their corrections, but they cannot accept or reject any tracked changes in the document. Later, the author can view their corrections and accept or reject the changes.
+DOCX Editor provides support for protecting the document with `RevisionsOnly` protection. In this protection, all the users are allowed to view the document and do their corrections, but they cannot accept or reject any tracked changes in the document. Later, the author can view their corrections and accept or reject the changes.
 
-Document editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#stopprotection) API.
+The DOCX Editor provides an option to protect and unprotect a document using [`enforceProtection`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#stopprotection) API.
 
 The following example code illustrates how to enforce and stop protection in Document editor container.
 
@@ -276,17 +274,17 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 Tracked changes only protection can be enabled in UI by using [Restrict Editing pane](./document-management#restrict-editing-pane)
 
 ![Enable track changes only protection](images/tracked-changes.png)
 
->Note: In enforce Protection method, first parameter denotes password and second parameter denotes protection type. Possible values of protection type are `NoProtection |ReadOnly |FormFieldsOnly |CommentsOnly |RevisionsOnly`. In stop protection method, parameter denotes the password.
+N> In the `enforceProtection` method, the first parameter denotes the password and the second parameter denotes the protection type. Possible values of the protection type are `NoProtection | ReadOnly | FormFieldsOnly | CommentsOnly | RevisionsOnly`. In the `stopProtection` method, the parameter denotes the password.
 
 ## Event
 
-You can restrict the accept and reject changes based on the author name. The following example demonstrates how to restrict an author from accept/reject changes.
+You can restrict the accept and reject changes based on the author name. The following example demonstrates how to restrict an author from accepting or rejecting changes.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -351,6 +349,6 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## Online Demo
+## Online demo
 
-Explore how to track and review changes in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/track-changes.html).
+Explore how to track and review changes in Word documents using the Vue DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/track-changes.html).

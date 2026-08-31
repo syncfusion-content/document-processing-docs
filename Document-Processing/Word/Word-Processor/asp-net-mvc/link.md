@@ -8,13 +8,13 @@ documentation: ug
 ---
 
 
-# Hyperhyperlinks in ASP.NET MVC DOCX Editor
+# Hyperlinks in ASP.NET MVC DOCX Editor
 
-Document editor supports hyperlink fields. You can link a part of the document content to an internet location, a file location, a mail address, or any text within the document.
+DOCX Editor supports hyperlink fields. You can link a part of the document content to an internet location, a file location, a mail address, or any text within the document.
 
 ## Navigate a hyperlink
 
-Document editor triggers the `requestNavigate` event whenever the user clicks the Ctrl key or taps a hyperlink within the document. This event provides necessary details about link type, navigation URL, and local URL (if any) as arguments, and allows you to easily customize the hyperlink navigation functionality.
+DOCX Editor triggers the `requestNavigate` event whenever the user clicks the Ctrl key or taps a hyperlink within the document. This event provides necessary details about link type, navigation URL, and local URL (if any) as arguments, and allows you to easily customize the hyperlink navigation functionality.
 
 ### Add the requestNavigate event for DocumentEditor
 
@@ -55,7 +55,7 @@ documenteditor.selection.navigateHyperlink();
 
 ## Copy link
 
-Document editor copies link text of a hyperlink field to the clipboard if the selection is in a hyperlink.
+DOCX Editor copies link text of a hyperlink field to the clipboard if the selection is in a hyperlink.
 
 ```typescript
 documenteditor.selection.copyHyperlink();
@@ -63,7 +63,7 @@ documenteditor.selection.copyHyperlink();
 
 ## Add hyperlink
 
-To create a basic hyperlink in the document, press `ENTER` / `SPACEBAR` / `SHIFT + ENTER` / `TAB` keys after typing the address, for instance `http://www.google.com`. Document editor automatically converts this address to a hyperlink field. The text can be considered as a valid URL if it starts with any of the following.
+To create a basic hyperlink in the document, press `ENTER` / `SPACEBAR` / `SHIFT + ENTER` / `TAB` keys after typing the address, for instance `http://www.google.com`. DOCX Editor automatically converts this address to a hyperlink field. The text can be considered as a valid URL if it starts with any of the following.
 
 N> `<http://>`<br>
 <br/> `<https://>`<br>
@@ -103,7 +103,7 @@ documenteditor.editor.removeHyperlink();
 
 ## Hyperlink dialog
 
-Document editor provides dialog support to insert or edit a hyperlink.
+DOCX Editor provides dialog support to insert or edit a hyperlink.
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
 {% include code-snippet/document-editor/asp-net-mvc/hyperlink-dialog/razor %}
@@ -123,7 +123,7 @@ You can use the following keyboard shortcut to open the hyperlink dialog if the 
 
 ## Online Demo
 
-Explore how to insert and manage hyperlinks in Word documents using the ASP.NET MVC Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/hyperlinksandbookmarks#/tailwind3).
+Explore how to insert and manage hyperlinks in Word documents using the ASP.NET MVC DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/hyperlinksandbookmarks#/tailwind3).
 
 ## See Also
 

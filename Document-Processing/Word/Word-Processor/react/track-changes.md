@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Track Changes in React DOCX Editor
 
-[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports Track Changes functionality, which allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject these modifications. It is a useful tool for managing changes made by several reviewers to the same document. When the Track Changes option is enabled, all editing operations are preserved as revisions.
+[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports Track Changes functionality, which allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject these modifications. It is a useful tool for managing changes made by several reviewers to the same document. When the Track Changes option is enabled, all editing operations are preserved as revisions.
 
 ## Enable Track changes
 
-Track Changes can be enabled using the [enableTrackChanges](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/index-default#enabletrackchanges) property. When enabled, all editing operations are recorded and preserved as revisions in the Document Editor.
+Track Changes can be enabled using the [enableTrackChanges](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/index-default#enabletrackchanges) property. When enabled, all editing operations are recorded and preserved as revisions in the DOCX Editor.
 
 The following example demonstrates how to enable track changes.
 
@@ -124,7 +124,7 @@ N> The hosted Web API URL is for demo and evaluation purposes only. For producti
 
 ## Get all tracked revisions
 
-Use the [revisions collection](https://ej2.syncfusion.com/documentation/api/document-editor/revisioncollection) on the Document Editor instance to retrieve all tracked revisions from the current document.
+Use the [revisions collection](https://ej2.syncfusion.com/documentation/api/document-editor/revisioncollection) on the DOCX Editor instance to retrieve all tracked revisions from the current document.
 
 The following example demonstrates how to get all tracked revisions from the current document.
 
@@ -170,7 +170,7 @@ revisions.rejectAll();
 
 Use `accept()` or `reject()` on a specific revision to apply or discard that edit individually.
 
-The following example demonstrates how to accept or reject a specific revision in the Document Editor.
+The following example demonstrates how to accept or reject a specific revision in the DOCX Editor.
 
 {% tabs %}
 {% highlight ts tabtitle="TS" %}
@@ -214,7 +214,7 @@ this.container.documentEditor.selection.navigatePreviousRevision();
 
 ## Custom metadata along with author
 
-The Document Editor allows customizing revisions using [revisionSettings](https://ej2.syncfusion.com/react/documentation/api/document-editor/documenteditorsettingsmodel#revisionsettings). The [customData](https://ej2.syncfusion.com/react/documentation/api/document-editor/revisionsettings#customdata) property allows attaching additional metadata to tracked revisions. This metadata can represent roles, tags, or any custom identifier for a revision. To display this metadata along with the author name in the Track Changes pane, the [showCustomDataWithAuthor](https://ej2.syncfusion.com/react/documentation/api/document-editor/revisionsettings#showcustomdatawithauthor) property must be enabled.
+The DOCX Editor allows customizing revisions using [revisionSettings](https://ej2.syncfusion.com/react/documentation/api/document-editor/documenteditorsettingsmodel#revisionsettings). The [customData](https://ej2.syncfusion.com/react/documentation/api/document-editor/revisionsettings#customdata) property allows attaching additional metadata to tracked revisions. This metadata can represent roles, tags, or any custom identifier for a revision. To display this metadata along with the author name in the Track Changes pane, the [showCustomDataWithAuthor](https://ej2.syncfusion.com/react/documentation/api/document-editor/revisionsettings#showcustomdatawithauthor) property must be enabled.
 
 The following example illustrates how to enable and update custom metadata for track changes revisions.
 
@@ -255,7 +255,7 @@ The Track Changes pane will display the author name along with the custom metada
 
 ![Custom metadata along with author in track changes pane](./images/custom-metadata-author-trackchanges.png)
 
-N> When the document is exported as SFDT, the `customData` value is stored in the revision collection. Upon reopening the SFDT, the custom data is automatically restored and displayed in the Track Changes pane. In formats other than SFDT (such as DOCX and others), the `customData` is not preserved, as it is specific to the Document Editor component.
+N> When the document is exported as SFDT, the `customData` value is stored in the revision collection. Upon reopening the SFDT, the custom data is automatically restored and displayed in the Track Changes pane. In formats other than SFDT (such as DOCX and others), the `customData` is not preserved, as it is specific to the DOCX Editor component.
 
 ## Restrict accept or reject by author
 
@@ -307,16 +307,16 @@ createRoot(document.getElementById('sample')).render(<App />);
 
 ## Filter Changes by User
 
-The built-in review panel in the Document Editor supports filtering changes based on the user.
+The built-in review panel in the DOCX Editor supports filtering changes based on the user.
 
 ![Filter changes by user in review panel](./images/filter-changes-by-user.png)
 
 ## Online Demo
 
-Explore how to track and review changes in Word documents using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/track-changes).
+Explore how to track and review changes in Word documents using the React DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/track-changes).
 
 ## Video tutorial 
 
-To learn more about Track Changes in the Document Editor component, refer to the video below.
+To learn more about Track Changes in the DOCX Editor component, refer to the video below.
 
 {% youtube "https://www.youtube.com/watch?v=Ke27Mip4bN0" %}

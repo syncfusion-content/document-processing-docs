@@ -25,4 +25,4 @@ domainurl: ##DomainURL##
 
 ## Online Demo
 
-Explore how to enable right-to-left layout in Word documents using the JavaScript (ES5) Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/right-to-left.html).
+Explore how to enable right-to-left layout in Word documents using the JavaScript (ES5) DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/right-to-left.html).

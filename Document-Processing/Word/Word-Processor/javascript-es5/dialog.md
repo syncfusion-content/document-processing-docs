@@ -16,7 +16,7 @@ domainurl: ##DomainURL##
 
 The Font dialog allows you to modify all text properties for selected contents at once, such as bold, italic, underline, font size, font color, strikethrough, subscript, and superscript.
 
->Document Editor features are segregated into individual feature-wise modules. To enable the Font dialog for a document editor instance, set 'enableFontDialog' to true along with the required modules ('enableSelection', 'enableEditor') in the DocumentEditor constructor.
+>DOCX Editor features are segregated into individual feature-wise modules. To enable the Font dialog for a DOCX Editor instance, set 'enableFontDialog' to true along with the required modules ('enableSelection', 'enableEditor') in the DocumentEditor constructor.
 
 Refer to the following example.
 

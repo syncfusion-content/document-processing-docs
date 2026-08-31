@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 ## Preventing default keyboard shortcut
 
-The following code shows how to prevent the `CTRL + C` keyboard shortcut for copying selected content in the Document Editor.
+The following code shows how to prevent the `CTRL + C` keyboard shortcut for copying selected content in the DOCX Editor.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

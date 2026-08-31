@@ -8,8 +8,10 @@ keywords: styles-and-templates,custom-style,theming,control-template,resource,xa
 ---
 # Styles and Templates in WPF DOCX Editor
 
-This section describes the styles and templates for the [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) control. The Template defines the structure of the SfRichTextBoxAdv control and the Style defines its visual appearance. You can modify the default control template to define a unique appearance for the control.
+This section describes the styles and templates for the [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) control. The Template defines the structure of the SfRichTextBoxAdv control and the Style defines its visual appearance. You can modify the default control template to define a unique appearance for the control.
+
 The following XAML shows the default style and template for the SfRichTextBoxAdv control.
+
 {% tabs %}
 {% highlight xaml %}
 <RichTextBoxAdv:SfRichTextBoxAdvResourceWrapper x:Key="SfRichTextBoxAdvResourceWrapper"/>
@@ -833,10 +835,10 @@ The following code example demonstrates how to apply the custom style for SfRich
 
 {% endtabs %}
 
-N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
+N> You can refer to our [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF DOCX Editor example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 
 ## See also
 
-- [Getting Started in WPF RichTextBox](./Getting-Started)
-- [Document Structure in WPF RichTextBox](./Document-Structure)
-- [Commands in WPF RichTextBox](./Commands)
+- [Getting Started in WPF DOCX Editor](./Getting-Started)
+- [Document Structure in WPF DOCX Editor](./Document-Structure)
+- [Commands in WPF DOCX Editor](./Commands)

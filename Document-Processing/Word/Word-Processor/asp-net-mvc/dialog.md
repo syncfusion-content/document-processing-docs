@@ -16,7 +16,7 @@ documentation: ug
 
 The Font dialog allows modifying all text properties for selected content at once such as bold, italic, underline, font size, font color, strikethrough, subscript, and superscript.
 
-N>To enable the Font dialog for a Document Editor instance, set `enableFontDialog` to true.
+N>To enable the Font dialog for a DOCX Editor instance, set `enableFontDialog` to true.
 
 
 

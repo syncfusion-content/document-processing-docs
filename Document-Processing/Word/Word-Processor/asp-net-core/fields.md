@@ -23,11 +23,11 @@ documenteditor.editor.insertField(fieldCode, fieldResult);
 
 ```
 
-N> Document Editor does not validate or process the field code or field result. It simply inserts the field with specified field information.
+N> DOCX Editor does not validate or process the field code or field result. It simply inserts the field with specified field information.
 
 ## Update fields
 
-Document Editor provides support for updating bookmark cross reference field.
+DOCX Editor provides support for updating bookmark cross reference field.
 
 ```typescript
 //Update all the bookmark cross reference field in the document.
@@ -38,7 +38,7 @@ Bookmark cross reference fields can be updated through UI by using update fields
 
 ![Update bookmark cross reference field.](images/updatefields.png)
 
-The following type of fields are automatically updated in Document Editor.
+The following type of fields are automatically updated in DOCX Editor.
 
 * NUMPAGES
 * SECTION

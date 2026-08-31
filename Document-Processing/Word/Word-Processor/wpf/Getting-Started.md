@@ -9,9 +9,9 @@ keywords: getting started, docx editor
 
 # Getting Started with WPF DOCX Editor
 
-[WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) enables you to create, edit, view, and print Word documents in WPF applications. This section guides you through the steps to get started and create a RichTextBox in a WPF application.
+[WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) enables you to create, edit, view, and print Word documents in WPF applications. This section guides you through the steps to get started and create a DOCX Editor in a WPF application.
 
-## Create a RichTextBox in WPF using SfRichTextBoxAdv
+## Create a DOCX Editor in WPF using SfRichTextBoxAdv
 
 In this walkthrough, you will create a WPF application that uses the SfRichTextBoxAdv control.
 
@@ -89,7 +89,7 @@ N> 4. Register the license key in the `App` constructor of `App.xaml.cs` before 
 
 Open the Toolbox window and drag the **SfRichTextBoxAdv** control onto the Design view of the WPF application to add it to the user interface.
 
-![Dragging SfRichTextBoxAdv Control from Toolbox](Getting-Started_images/wpf-richtextbox-dragfrom-toolbox.png)
+![Dragging SfRichTextBoxAdv Control from Toolbox](Getting-Started_images/wpf-docx-editor-dragfrom-toolbox.png)
 
 {% endtabcontent %}
 
@@ -554,7 +554,7 @@ namespace DocumentEditor
 3. Press **Ctrl + O** or use the **Open** option in the **SfRichTextRibbon** to open a document.
 4. The document is displayed in the editor, along with the themed ribbon and editor interface, as shown below.
 
-![WPF SfRichTextBoxAdv with SfRichTextRibbon using a Windows11 theme](Getting-Started_images/wpf-richtextbox-windows11theme.png)
+![WPF SfRichTextBoxAdv with SfRichTextRibbon using a Windows11 theme](Getting-Started_images/wpf-docx-editor-windows11theme.png)
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox-Examples/tree/main/Samples/Theme).
 

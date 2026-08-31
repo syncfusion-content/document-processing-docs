@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Web Services in Syncfusion Vue DOCX Editor Control
 
-You can deploy web APIs for server-side dependencies of [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) component in the following platforms.
+You can deploy web APIs for the server-side dependencies of [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) component on the following platforms.
 
 * [ASP.NET Core](./web-services/core)
 * [ASP.NET MVC](./web-services/mvc)
@@ -20,16 +20,16 @@ You can deploy web APIs for server-side dependencies of [Vue DOCX Editor](https:
 
 |Operations|When client-server communication will be triggered?|What type of data will be transferred between client and server?|
 |------------|--------------------------------------|------------------------|
-|[Open file formats other than SFDT](./import#convert-word-documents-into-sfdt)|When opening the document other than SFDT (Vue Document Editor's native file format), the server-side web API is invoked from client-side script.|**Client**: Sends the input file.<br>**Server**: Receives the input file and sends the converted SFDT back to the client.<br><br>The server-side web API internally extracts the content from the document (DOCX, DOC, WordML, RTF, HTML) using Word library (DocIO) and converts it into SFDT for opening the document in Document Editor.|
+|[Open file formats other than SFDT](./import#convert-word-documents-into-sfdt)|When opening the document other than SFDT (Vue DOCX Editor's native file format), the server-side web API is invoked from client-side script.|**Client**: Sends the input file.<br>**Server**: Receives the input file and sends the converted SFDT back to the client.<br><br>The server-side web API internally extracts the content from the document (DOCX, DOC, WordML, RTF, HTML) using Word library (DocIO) and converts it into SFDT for opening the document in DOCX Editor.|
 |[Paste with formatting](./clipboard#paste-with-formatting)|When pasting the formatted content (HTML/RTF) received from system clipboard. For converting HTML/RTF to SFDT format.<br><br> **Note**: Whereas plain text received from system clipboard will be pasted directly in the client-side.|**Client**: Sends the input Html or Rtf string. <br>**Server**: Receives the input Html or Rtf string and sends the converted SFDT back to the client.|
 |[Restrict editing](./restrict-editing)|When protecting the document, for generating hash.|**Client**: Sends the input data for hashing algorithm.<br> **Server**: Receives the input data for hashing algorithm and sends the result hash information back to the client.|
-|[Spellcheck](./spell-check)(default)|When the spellchecker is enabled on client-side Document Editor, and it performs the spell check validation for words in the document.|**Client**: Sends the words (string) with their language for spelling validation.<br> **Server**: Receives the words (string) with their language for spelling validation and sends the validation result as JSON back to the client.|
-|[SpellCheckByPage](./spell-check)|Document editor provides options to spellcheck page by page when loading the documents. By [enabling optimized spell check](./spell-check#enableoptimizedspellcheck) in client-side, you can perform spellcheck page by page when loading the documents.|**Client**: Sends the words (string) with their language for spelling validation.<br> **Server**: Receives the words (string) with their language for spelling validation and sends the validation result as JSON back to the client.|
+|[Spellcheck](./spell-check)(default)|When the spellchecker is enabled on client-side DOCX Editor, and it performs the spell check validation for words in the document.|**Client**: Sends the words (string) with their language for spelling validation.<br> **Server**: Receives the words (string) with their language for spelling validation and sends the validation result as JSON back to the client.|
+|[SpellCheckByPage](./spell-check)|DOCX Editor provides options to spellcheck page by page when loading the documents. By [enabling optimized spell check](./spell-check#enableoptimizedspellcheck) in client-side, you can perform spellcheck page by page when loading the documents.|**Client**: Sends the words (string) with their language for spelling validation.<br> **Server**: Receives the words (string) with their language for spelling validation and sends the validation result as JSON back to the client.|
 |[Save as file formats other than SFDT and DOCX](./saving-documents/server-side-export) (optional API)|You can configure this API, if you want to save the document in file format other than DOCX and SFDT.<br><br> For saving the files as WordML, DOC, RTF, HTML, ODT, Text using Word library (DocIO) and PDF using Word (DocIO) and PDF libraries.|You can transfer document from client to server either as SFDT or DOCX format.<br><br>First option (SFDT):<br>**Client**: Sends the SFDT.<br>**Server**: Receives the SFDT and saves the converted document as any file format supported by [Word library (DocIO)](https://www.syncfusion.com/word-framework/net/word-library) in server or sends the saved file to the client browser.<br><br>Second option (DOCX):<br>**Client**: Sends the DOCX file.<br>**Server**: Receives the DOCX file and saves the converted document as any file format supported by [Word library (DocIO)](https://www.syncfusion.com/word-framework/net/word-library) in server or sends the saved file to the client browser.|
 
->Note: If you don't require the above functionalities then you can deploy as pure client-side component without any server-side interactions.
+N> If you don't require the above functionalities, you can deploy the component as a pure client-side solution without any server-side interactions.
 
-Please refer the [example from GitHub](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) to configure the web service and set the [serviceUrl](https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/).
+Please refer to the [example from GitHub](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) to configure the web service and set the [serviceUrl](https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/).
 
 If your running web service Url is `http://localhost:62869/`, set the serviceUrl like below:
 
@@ -39,7 +39,7 @@ this.$refs.container.serviceUrl = "http://localhost:62869/api/documenteditor/";
 
 ## Required Web API structure
 
-Please check below table for expected web API structure.
+Please check the table below for the expected web API structure.
 
 |Expected method name |Parameters |Return type |
 |-----|----|----|
@@ -47,14 +47,14 @@ Please check below table for expected web API structure.
 |SystemClipboard|CustomerParameter: content(type string either rtf or html) and type(either .rtf or .html) |json(sfdt format) |
 |RestrictEditing |Parameter of type CustomRestrictParameter<br>public class CustomRestrictParameter<br>        {<br>            public string passwordBase64 { get; set; }<br>            public string saltBase64 { get; set; }<br>            public int spinCount { get; set; }<br>        } |result hash information |
 |SpellCheck(default) |Parameter: SpellCheckJsonData<br>public class SpellCheckJsonData <br>{<br>            public int LanguageID { get; set; }<br>            public string TexttoCheck { get; set; }<br>            public bool CheckSpelling { get; set; }<br>            public bool CheckSuggestion { get; set; }<br>            public bool AddWord { get; set; }<br>        }  |Json type of Spellcheck containing details of spell checked word |
-|SpellCheckByPage |Parameter: SpellCheckJsonData<br>public class SpellCheckJsonData <br>{<br>            public int LanguageID { get; set; }<br>            public string TexttoCheck { get; set; }<br>            public bool CheckSpelling { get; set; }<br>            public bool CheckSuggestion { get; set; }<br>            public bool AddWord { get; set; }<br>        }  |Json type of Spellcheck containing details of spell checked word <br><br> **Note**: Document editor provides options to spellcheck page by page when loading the documents. By [enabling optimized spell check](./spell-check#enableoptimizedspellcheck) in client-side, you can perform spellcheck page by page when loading the documents. |
+|SpellCheckByPage |Parameter: SpellCheckJsonData<br>public class SpellCheckJsonData <br>{<br>            public int LanguageID { get; set; }<br>            public string TexttoCheck { get; set; }<br>            public bool CheckSpelling { get; set; }<br>            public bool CheckSuggestion { get; set; }<br>            public bool AddWord { get; set; }<br>        }  |Json type of Spellcheck containing details of spell checked word <br><br> **Note**: DOCX Editor provides options to spellcheck page by page when loading the documents. By [enabling optimized spell check](./spell-check#enableoptimizedspellcheck) in client-side, you can perform spellcheck page by page when loading the documents. |
 |Save(optional API) |parameter: SaveParameter <br>public class SaveParameter<br>{<br>public string Content { get; set; }<br> public string FileName { get; set; }<br> } |void(Save the file as file stream) |
 |ExportSFDT(optional API) |parameter: SaveParameter <br>public class SaveParameter<br>{<br>public string Content { get; set; }<br> public string FileName { get; set; }<br> } |FileStreamResult (to save the document in client-side) |
 |Export(optional API) |Files(IFormCollection) |FileStreamResult (to save the document in client-side) |
 
 ## Customize the expected method name
 
-Document editor component provides an option to customize the expected method name for Import, SystemClipboard, RestrictEditing and SpellCheck using [serverActionSettings](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container/documentEditorContainerModel#serveractionsettings).
+DOCX Editor component provides an option to customize the expected method name for Import, SystemClipboard, RestrictEditing and SpellCheck using [serverActionSettings](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container/documentEditorContainerModel#serveractionsettings).
 
 The following example code illustrates how to customize the method name using serverActionSettings.
 
@@ -112,11 +112,11 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
-## Add the custom headers to XMLHttpRequest
+## Add custom headers to XMLHttpRequest
 
-Document editor component provides an an option to add custom headers of XMLHttpRequest using the [`headers`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container/documentEditorContainerModel#headers).
+DOCX Editor component provides an option to add custom headers to the XMLHttpRequest using the [`headers`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container/documentEditorContainerModel#headers).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -173,11 +173,11 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
-## Modify the XMLHttpRequest before request send
+## Modify the XMLHttpRequest before sending the request
 
-Document editor component provides an option to modify the XMLHttpRequest object (setting additional headers, if needed) using [`beforeXmlHttpRequestSend`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#beforexmlhttprequestsend) event and it gets triggered before a server request.
+DOCX Editor component provides an option to modify the XMLHttpRequest object (setting additional headers, if needed) using the [`beforeXmlHttpRequestSend`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#beforexmlhttprequestsend) event, which gets triggered before a server request.
 
 You can customize the required [`XMLHttpRequest`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/xmlHttpRequestEventArgs) properties.
 
@@ -204,7 +204,7 @@ provide('DocumentEditorContainer', [Toolbar]);
 onMounted(function () {
   //Here, modifying the request headers
   container.value.headers = [{ syncfusion: 'true' }];
-  // Below action, cancel all server-side interactions expect spell check
+  // Below action, cancel all server-side interactions except spell check
   container.value.beforeXmlHttpRequestSend = (
     args) => {
     args.headers = container.value.headers;
@@ -242,7 +242,7 @@ onMounted(function () {
       DocumentEditorContainer: [Toolbar]
     },
     mounted(){
-     // Below action, cancel all server-side interactions expect spell check
+     // Below action, cancel all server-side interactions except spell check
      this.$refs.container.beforeXmlHttpRequestSend = (
       args ) => {
       //Here, modifying the request headers
@@ -263,6 +263,6 @@ onMounted(function () {
 {% endhighlight %}
 {% endtabs %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
-Note: Find the customizable serverActionType values are `'Import' | 'RestrictEditing' | 'SpellCheck' | 'SystemClipboard'`.
+N> The customizable serverActionType values are `'Import' | 'RestrictEditing' | 'SpellCheck' | 'SystemClipboard'`.

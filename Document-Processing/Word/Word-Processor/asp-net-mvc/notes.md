@@ -18,7 +18,7 @@ Footnotes and endnotes are both ways of adding extra bits of information to your
 
 ## Insert footnotes
 
-The Document Editor exposes an API to insert footnotes at the cursor position programmatically, or at the end of the currently selected text.
+The DOCX Editor exposes an API to insert footnotes at the cursor position programmatically, or at the end of the currently selected text.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
@@ -33,7 +33,7 @@ The Document Editor exposes an API to insert footnotes at the cursor position pr
 
 ## Insert endnotes
 
-The Document Editor exposes an API to insert endnotes at the cursor position programmatically, or at the end of the currently selected text.
+The DOCX Editor exposes an API to insert endnotes at the cursor position programmatically, or at the end of the currently selected text.
 
 
 {% tabs %}
@@ -55,4 +55,4 @@ You can update or edit footnotes and endnotes using the built-in context menu th
 
 ## Online Demo
 
-Explore how to add and manage notes in Word documents using the ASP.NET MVC Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/notes#/tailwind3).
+Explore how to add and manage notes in Word documents using the ASP.NET MVC DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/notes#/tailwind3).

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Unsupported Features in Vue DOCX Editor
 
-This section describes the unsupported elements in [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) 
+This section describes the unsupported elements in [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor).
 
 ## Document formatting
 
@@ -19,16 +19,16 @@ This section describes the unsupported elements in [React DOCX Editor](https://w
 | Paragraph Properties | Shading | No |
 |  | Mirror indent | No |
 |  | Suppress line numbers | No |
-|  | Don’t hyphenate | No |
+|  | Don't hyphenate | No |
 |  | Border styles (*Except dotted and dashed; other styles are rendered as solid*) | Partial |
-| Text Properties | Shading  | No |
-|  |  Position | No |
-|  |  Font kerning | No |
-|  |  Ligatures | No |
-|  |  Number spacing | No |
-|  |  Number forms | No |
-|  |  Stylistic sets | No |
-|  |  Contextual alternates| No |
+| Text Properties | Shading | No |
+|  | Position | No |
+|  | Font kerning | No |
+|  | Ligatures | No |
+|  | Number spacing | No |
+|  | Number forms | No |
+|  | Stylistic sets | No |
+|  | Contextual alternates | No |
 |  | Text Direction (Top to Bottom, Bottom to Top) | No |
 |  | Border styles (*Except dotted and dashed; other styles are rendered as solid*) | Partial |
 | Section Formatting | Mirror margins | No |
@@ -49,9 +49,9 @@ This section describes the unsupported elements in [React DOCX Editor](https://w
 | Ink/Draw | No |
 | Video or audio files | No |
 | Macros | No |
-| Models, Smart-Art, and Charts | [Supported Charts](https://help.syncfusion.com/document-processing/word/word-processor/vue/chart) |
-| Shapes, Textboxes, and WordArt | [Supported shapes](https://help.syncfusion.com/document-processing/word/word-processor/vue/shapes#supported-shapes) *(Shape Properties: Fill types, borders, rotation and effects are not supported) |
+| Models, SmartArt, and Charts | [Supported Charts](https://help.syncfusion.com/document-processing/word/word-processor/vue/chart) |
+| Shapes, Textboxes, and WordArt | [Supported shapes](https://help.syncfusion.com/document-processing/word/word-processor/vue/shapes#supported-shapes) (Shape Properties: Fill types, borders, rotation, and effects are not supported) |
 | Signature line | No |
 | Special Characters, Symbols, Equations | No |
 | Built-in and custom document properties | No |
-| Comment reactions | No 
+| Comment reactions | No |

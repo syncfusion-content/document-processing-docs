@@ -8,6 +8,10 @@ keywords: text-prediction,is-text-prediction-enabled
 ---
 # Text Prediction in UWP DOCX Editor
 
+The [`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html) provides support for text prediction while editing text using a virtual keyboard on a phone device. Text prediction is enabled by default in SfRichTextBoxAdv and can be disabled by setting the `IsTextPredictionEnabled` property to **false**.
+
+The following sample code demonstrates how to disable text prediction in SfRichTextBoxAdv.
+
 {% tabs %}
 {% highlight xaml %}
 <RichTextBoxAdv:SfRichTextBoxAdv x:Name="richTextBoxAdv" ManipulationMode="All" IsTextPredictionEnabled="False" />
@@ -36,6 +40,6 @@ richTextBoxAdv.IsTextPredictionEnabled = False
 
 ## See also
 
-- [Commands in UWP RichTextBox](./Commands)
-- [Importing and exporting documents in UWP RichTextBox](./Import-and-Export)
-- [Getting started with UWP RichTextBox](./Getting-Started)
+- [Commands in UWP DOCX Editor](./Commands)
+- [Importing and exporting documents in UWP DOCX Editor](./Import-and-Export)
+- [Getting started with UWP DOCX Editor](./Getting-Started)

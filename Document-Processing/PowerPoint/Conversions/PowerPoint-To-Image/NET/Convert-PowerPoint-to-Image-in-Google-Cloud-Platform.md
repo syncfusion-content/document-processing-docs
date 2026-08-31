@@ -14,7 +14,7 @@ N> If this is your first time working with Google Cloud Platform (GCP), please r
 
 ## Prerequisites 
 
-* A [Google Cloud Platform (GCP)](https://console.cloud.google.com/getting-started) account with access to the App Engine service.
+* A [Google Cloud Platform (GCP)](https://cloud.google.com/) account with access to the App Engine service.
 
 ## Google Cloud Platform (GCP)
 
@@ -28,5 +28,5 @@ NuGet package name<br/></th></tr></thead>
 <td>
 {{'[App Engine](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-google-app-engine)' | markdownify}}<br/></td><td>
 {{'[Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core)' | markdownify}}<br/>
-{{'[SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)' | markdownify}}<br/>{{'[HarfBuzzSharp.NativeAssets.Linux v8.3.1.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.1.2)' |markdownify}} <br/></td></tr>
+{{'[SkiaSharp.NativeAssets.Linux v4.150.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/4.150.1)' | markdownify}}<br/>{{'[HarfBuzzSharp.NativeAssets.Linux v14.2.1.1](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/14.2.1.1)' |markdownify}} <br/></td></tr>
 </table>

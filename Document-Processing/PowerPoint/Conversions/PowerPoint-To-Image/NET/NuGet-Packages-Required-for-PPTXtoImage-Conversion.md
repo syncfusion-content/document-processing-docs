@@ -72,7 +72,7 @@ Windows UI Library (WinUI) and .NET Multi-platform App UI (.NET MAUI)
 
 T> If you encounter issues while using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) in ASP.NET Core, refer to the [troubleshooting guide](https://support.syncfusion.com/kb/article/16010/how-to-use-troubleshooting-guide-for-aspnet-core-powerpoint-library-issues) for recommended checks and solutions.
 
-#### Retired Platforms
+### Retired Platforms
 
 The following NuGet packages need to be included in your application based on the platform.
 
@@ -126,8 +126,8 @@ The following table illustrates the native assets NuGet packages and their appli
   <tbody>
     <tr>
       <td>
-        {{'[SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)'| markdownify }}<br/>
-        {{'[HarfBuzzSharp.NativeAssets.Linux v8.3.1.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.1.2)'| markdownify }}
+        {{'[SkiaSharp.NativeAssets.Linux v4.150.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/4.150.1)'| markdownify }}<br/>
+        {{'[HarfBuzzSharp.NativeAssets.Linux v14.2.1.1](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/14.2.1.1)'| markdownify }}
       </td>
       <td>
         <ul>
@@ -139,7 +139,7 @@ The following table illustrates the native assets NuGet packages and their appli
     </tr>
     <tr>
       <td>
-        {{'[SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1)'| markdownify }}
+        {{'[SkiaSharp.NativeAssets.Linux.NoDependencies v4.150.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/4.150.1)'| markdownify }}
       </td>
       <td>
         <ul>
@@ -204,7 +204,7 @@ ASP.NET Core, Console Application (Targeting .NET Core) and Blazor
 </tr>
 </table>
 
-#### Retired Platforms
+### Retired Platforms
 
 The following NuGet packages need to be included in your application based on the platform.
 

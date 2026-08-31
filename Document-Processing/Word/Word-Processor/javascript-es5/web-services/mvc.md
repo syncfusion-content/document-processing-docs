@@ -22,9 +22,9 @@ This section explains how to create the service for DocumentEditor in ASP.NET MV
 
 ## Importing Word Document
 
-As the Document Editor client-side script requires the document in SFDT file format, you can convert the Word documents (.dotx, .docx, .docm, .dot, .doc), rich text format documents (.rtf), and text documents (.txt) into SFDT format by using this Web API.
+As the DOCX Editor client-side script requires the document in SFDT file format, you can convert the Word documents (.dotx, .docx, .docm, .dot, .doc), rich text format documents (.rtf), and text documents (.txt) into SFDT format by using this Web API.
 
-The following example code illustrates how to write a Web API for importing Word documents into the Document Editor component.
+The following example code illustrates how to write a Web API for importing Word documents into the DOCX Editor component.
 
 ```c#
     [HttpPost]
@@ -88,7 +88,7 @@ The following example code illustrates how to write a Web API for paste with for
 
 ## Restrict Editing
 
-This Web API generates a hash from the specified password and salt value, which is required for the restrict editing functionality of the Document Editor component.
+This Web API generates a hash from the specified password and salt value, which is required for the restrict editing functionality of the DOCX Editor component.
 
 The following example code illustrates how to write a Web API for restrict editing.
 
@@ -114,7 +114,7 @@ The following example code illustrates how to write a Web API for restrict editi
 
 ## Spell Check
 
-Document Editor supports performing spell checking for any input text. You can perform spell checking for the text in Document Editor, and it will provide suggestions for the misspelled words through a dialog and the context menu. The Document Editor client-side script requires this Web API to show error words and list suggestions in the context menu. This Web API returns the JSON type of spell-checked word, which contains details about error words, if any, and suggestions.
+DOCX Editor supports performing spell checking for any input text. You can perform spell checking for the text in DOCX Editor, and it will provide suggestions for the misspelled words through a dialog and the context menu. The DOCX Editor client-side script requires this Web API to show error words and list suggestions in the context menu. This Web API returns the JSON type of spell-checked word, which contains details about error words, if any, and suggestions.
 
 To know more about configuring spell check, please refer to this [link](https://github.com/SyncfusionExamples/EJ2-Document-Editor-Web-Services/tree/master/ASP.NET%20MVC#steps-to-configure-spell-checker).
 
@@ -148,11 +148,11 @@ In the `Global.asax.cs` file, you can configure the spell check files as shown b
 
 ```
 
-Document Editor provides options to spell check word by word and spell check page by page when loading the documents.
+DOCX Editor provides options to spell check word by word and spell check page by page when loading the documents.
 
 ### Spell check word by word
 
-This Web API performs the spell check word by word and returns the JSON, which contains information about error words and suggestions, if any. By default, spell check word by word is performed in Document Editor when enabling spell check on the client side.
+This Web API performs the spell check word by word and returns the JSON, which contains information about error words and suggestions, if any. By default, spell check word by word is performed in DOCX Editor when enabling spell check on the client side.
 
 The following example code illustrates how to write a Web API for spell check word by word.
 

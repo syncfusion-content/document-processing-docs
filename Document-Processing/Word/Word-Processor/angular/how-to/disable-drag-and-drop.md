@@ -1,9 +1,9 @@
 ---
 layout: post
 title: How to Disable Drag and Drop in Angular DOCX Editor | Syncfusion
-description: Disable drag and drop functionality in Syncfusion® Angular DOCX Editor to prevent users from moving content within the document editor component.
+description: Disable drag and drop functionality in Syncfusion® Angular DOCX Editor to prevent users from moving content within the DOCX Editor component.
 platform: document-processing
-control: Disable drag and drop in Document Editor
+control: Disable drag and drop in DOCX Editor
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -25,7 +25,7 @@ export class AppComponent{
 
 N> The default value of [`allowDragAndDrop`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/documentEditorSettings#allowDragAndDrop) property is `true`.
 
-The following example illustrates how to disable the drag and drop option in the Document Editor.
+The following example illustrates how to disable the drag and drop option in the DOCX Editor.
 
 ```typescript
 @Component({
@@ -36,6 +36,6 @@ export class AppComponent{
 }
 ```
 
-N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 N> The default value of [`allowDragAndDrop`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/documenteditorsettings#allowDragAndDrop) property is `true`.

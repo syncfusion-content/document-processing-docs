@@ -3,7 +3,7 @@ layout: post
 title: How to Change Cursor Color in Blazor DOCX Editor | Syncfusion
 description: Change the default cursor color in Syncfusion® Blazor DOCX Editor by overriding CSS properties and customizing the editor appearance.
 platform: document-processing
-control: Document Editor
+control: DOCX Editor
 documentation: ug
 ---
 
@@ -23,6 +23,6 @@ The editor's blinking cursor is styled using the `.e-de-blink-cursor` CSS class.
 
 N> The `!important` declaration is used here to ensure this custom style takes precedence over the component's default styles.
 
-After applying this CSS, the cursor in the Document Editor will appear in the new color.
+After applying this CSS, the cursor in the DOCX Editor will appear in the new color.
 
-![Cursor shown in red in the Blazor Document Editor.](../images/cursor-css.png)
+![Cursor shown in red in the Blazor DOCX Editor.](../images/cursor-css.png)

@@ -110,8 +110,8 @@ End Sub
 {% endhighlight %}
 {% endtabs %}
 
-N> When the `SfRichTextBoxAdv` control encounters an unsupported element, it does not render the element. Instead, it continues to the next supported element and renders that. 
-N> Examples of unsupported elements are AutoShapes, watermarks, charts, SmartArt, WordArt, equations, document structure tags, styles, wrapping styles, fields other than hyperlinks, absolutely positioned tables, and absolutely positioned images.
+N> 1. When the `SfRichTextBoxAdv` control encounters an unsupported element, it does not render the element. Instead, it continues to the next supported element and renders that. 
+N> 2. Examples of unsupported elements are AutoShapes, watermarks, charts, SmartArt, WordArt, equations, document structure tags, styles, wrapping styles, fields other than hyperlinks, absolutely positioned tables, and absolutely positioned images.
 
 ## Asynchronous loading settings
 
@@ -161,10 +161,10 @@ N> This API is supported starting from release version v17.4.0.X.
 | `DocumentSaving` | Fires when the document starts saving. |
 | `DocumentSaved` | Fires after the document is successfully saved. |
 
-N> These events are supported from Syncfusion UWP RichTextBox v18.2.0.X onwards.
+N> These events are supported from Syncfusion UWP DOCX Editor v18.2.0.X onwards.
 
 ## See also
 
-- [Commands in UWP RichTextBox](./Commands)
-- [Document properties in UWP RichTextBox](./Document-Properties)
-- [Getting started with UWP RichTextBox](./Getting-Started)
+- [Commands in UWP DOCX Editor](./Commands)
+- [Document properties in UWP DOCX Editor](./Document-Properties)
+- [Getting started with UWP DOCX Editor](./Getting-Started)

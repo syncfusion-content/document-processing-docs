@@ -8,7 +8,7 @@ keywords: touch,touch-manipulation,manipulation-mode,manipulationmodes
 ---
 # Touch in UWP DOCX Editor
 
-In a UWP application, you should specify the `ManipulationMode` property on the controls in order to enable touch manipulations such as pan, scroll, and zoom. Similarly, set the `ManipulationMode` property on the [`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.SfRichTextBoxAdv.SfRichTextBoxAdv.html) control.
+In a UWP application, you should specify the `ManipulationMode` property on the controls in order to enable touch manipulations such as pan, scroll, and zoom. Similarly, set the `ManipulationMode` property on the [`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html) control.
 
 The following code example demonstrates how to configure all touch manipulations on the SfRichTextBoxAdv control.
 
@@ -105,6 +105,6 @@ richTextBoxAdv.ManipulationMode = ManipulationModes.Scale | ManipulationModes.Sc
 
 ## See also
 
-- [Getting started with UWP RichTextBox](./Getting-Started)
-- [Overview of UWP RichTextBox](./Overview)
-- [Selection in UWP RichTextBox](./Selection)
+- [Getting started with UWP DOCX Editor](./Getting-Started)
+- [Overview of UWP DOCX Editor](./Overview)
+- [Selection in UWP DOCX Editor](./Selection)

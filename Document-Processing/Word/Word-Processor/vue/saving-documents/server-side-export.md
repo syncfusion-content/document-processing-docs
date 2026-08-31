@@ -12,15 +12,15 @@ domainurl: ##DomainURL##
 
 ## SFDT to DOCX export
 
-Document Editor supports server-side export of **Syncfusion Document Text (.sfdt)** to Doc, DOCX, RTF, Txt, WordML, HTML formats using server-side helper `**Syncfusion.EJ2.DocumentEditor**` available in ASP.NET Core & ASP.NET MVC platform in the below NuGet's.
+DOCX Editor supports server-side export of **Syncfusion Document Text (.sfdt)** to Doc, DOCX, RTF, Txt, WordML, HTML formats using server-side helper **Syncfusion.EJ2.DocumentEditor** available in ASP.NET Core & ASP.NET MVC platform in the NuGet packages below.
 
 * [Syncfusion.EJ2.WordEditor.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Core)
 * [Syncfusion.EJ2.WordEditor.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Mvc5)
 * [Syncfusion.EJ2.WordEditor.AspNet.Mvc4](https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Mvc4)
 
-Please refer the following code example.
+Please refer to the following code example.
 
-```c#
+```csharp
     //API controller for the conversion.
     [HttpPost]
     public void ExportSFDT([FromBody]SaveParameter data)
@@ -38,7 +38,7 @@ Please refer the following code example.
     }
 ```
 
-Please refer the client side example to serialize the sfdt and send to the server.
+Please refer to the following client-side example to serialize the SFDT and send it to the server.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -57,7 +57,7 @@ import { DocumentEditorComponent as EjsDocumenteditor, Selection, Editor, SfdtEx
 import { provide, ref } from 'vue';
 
 const documenteditor = ref(null);
-//Inject require modules.
+//Inject required modules.
 provide('DocumentEditor', [SfdtExport, WordExport, Selection, Editor])
 
 const exportBlob = function () {
@@ -99,7 +99,7 @@ export default {
     };
   },
   provide: {
-    //Inject require modules.
+    //Inject required modules.
     DocumentEditor: [SfdtExport, WordExport, Selection, Editor]
   },
   methods: {

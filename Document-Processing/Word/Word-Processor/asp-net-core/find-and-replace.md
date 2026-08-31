@@ -31,7 +31,7 @@ You can close the options pane by pressing `Esc` key.
 
 ## Search
 
-The `Search` module of Document Editor exposes the following APIs:
+The `Search` module of DOCX Editor exposes the following APIs:
 
 |API Name|Type |Description|
 |---|---|---|

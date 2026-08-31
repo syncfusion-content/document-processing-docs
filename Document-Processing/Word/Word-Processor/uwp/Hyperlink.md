@@ -8,7 +8,7 @@ keywords: hyperlink,insert-hyperlink,requestnavigate,screentip,editor-settings
 ---
 # Hyperlinks in UWP DOCX Editor
 
-The [`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.SfRichTextBoxAdv.SfRichTextBoxAdv.html) supports the hyperlink field, similar to Microsoft Word. You can link part of the document content to the internet, a file location, a mail address, or any text.
+The [`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html) supports the hyperlink field, similar to Microsoft Word. You can link part of the document content to the internet, a file location, a mail address, or any text.
 
 ## Inserting a hyperlink
 
@@ -133,7 +133,7 @@ paragraphAdv.Inlines.Add(New FieldEndAdv())
 {% endhighlight %}
 {% endtabs %}
 
-The following code example illustrates how to insert hyperlink field with ScreenTip into RichTextBox Document through UI command.
+The following code example illustrates how to insert hyperlink field with ScreenTip into UWP DOCX Editor Document through UI command.
 {% tabs %}
 {% highlight C# %}
 // The string array parameters are: 0 = URL, 1 = display text, 2 = ScreenTip text.
@@ -142,7 +142,7 @@ richTextBoxAdv.InsertHyperlinkCommand.Execute(new string[3] { "http://www.syncfu
 {% endhighlight %}
 {% endtabs %}
 
-The following section illustrates how to insert hyperlink field with ScreenTip in RichTextBox Document through built-in hyperlink dialog UI command like Microsoft Word application.
+The following section illustrates how to insert hyperlink field with ScreenTip in UWP DOCX Editor Document through built-in hyperlink dialog UI command like Microsoft Word application.
 1. Open insert hyperlink dialog.
 
 {% capture codesnippet1 %}
@@ -159,7 +159,7 @@ The following section illustrates how to insert hyperlink field with ScreenTip i
 2. Enter the display text, URL link and ScreenTip text.
 3. Click on OK to close the dialog box.
 
-![Adding hyperlink to UWP RichTextBox using the Insert Hyperlink dialog](Hyperlink_images/uwp-richtextbox-insert-hyperlink.PNG)
+![Adding hyperlink to UWP DOCX Editor using the Insert Hyperlink dialog](Hyperlink_images/uwp-docx-editor-insert-hyperlink.PNG)
 
 In the SfRichTextBoxAdv control, ToolTip (ScreenTip) will be shown by default when the mouse hovers over that hyperlink. You can disable ToolTip by using the [DisplayScreenTips](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.EditorSettings.html#Syncfusion_UI_Xaml_RichTextBoxAdv_EditorSettings_DisplayScreenTips) property of [EditorSettings](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.EditorSettings.html) class.
 
@@ -221,6 +221,6 @@ private async void RichTextBoxAdv_RequestNavigate(object obj, RequestNavigateEve
 
 ## See also
 
-- [Commands in UWP RichTextBox](./Commands)
-- [Selection in UWP RichTextBox](./Selection)
-- [Document Properties in UWP RichTextBox](./Document-Properties)
+- [Commands in UWP DOCX Editor](./Commands)
+- [Selection in UWP DOCX Editor](./Selection)
+- [Document Properties in UWP DOCX Editor](./Document-Properties)

@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Bookmark is a powerful tool that helps you to mark a place in the document to find again easily. You can enter many bookmarks in the document and give each one a unique name to identify easily.
 
-[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) provides built-in dialog to add, delete, and navigate bookmarks within the document. To add a bookmark, select a portion of text in the document. After that, jump to the location or add links to it within the document using built-in hyperlink dialog. You can also delete bookmarks from a document.
+[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) provides built-in dialog to add, delete, and navigate bookmarks within the document. To add a bookmark, select a portion of text in the document. After that, jump to the location or add links to it within the document using built-in hyperlink dialog. You can also delete bookmarks from a document.
 
 >Bookmark names need to begin with a letter. They can include both numbers and letters, but not spaces. To separate the words, use an underscore.
 >Bookmark names starting with an underscore are called hidden bookmarks. For example, bookmarks generated for table of contents.
@@ -65,7 +65,7 @@ this.container.documentEditor.selection.getBookmarks(false);
 
 ## Show or Hide Bookmark
 
-You can show or hide the bookmark indicators around bookmarked items in Document Editor component.
+You can show or hide the bookmark indicators around bookmarked items in DOCX Editor component.
 
 The following example code illustrates how to show or hide the bookmark indicators around bookmarked items.
 
@@ -95,7 +95,7 @@ this.container.documentEditor.editor.insertText('Hello World');
 
 ## Bookmark Dialog
 
-The following example shows how to open bookmark dialog in Document Editor.
+The following example shows how to open bookmark dialog in DOCX Editor.
 
 ```ts
 import * as ReactDOM from 'react-dom';
@@ -141,7 +141,7 @@ root.render(<App />);
 
 ## Online Demo
 
-Explore how to insert and manage bookmarks in Word documents using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/links-and-bookmarks).
+Explore how to insert and manage bookmarks in Word documents using the React DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/links-and-bookmarks).
 
 ## See Also
 
