@@ -632,3 +632,192 @@ End Using
 {% endtabs %}
  
 A complete working example to remove validations from a worksheet in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Data%20Validation/Remove%20Validation/.NET/Remove%20Validation" aria-label="GitHub demo link">this GitHub page</a>. 
+
+## Create data validation efficiently
+
+The .NET Excel library allows data validation to be created directly for a cell or range using the `CreateDataValidation` API. This API improves performance, particularly when applying the same validation rule to multiple cells in a range.
+
+The `CreateDataValidation` API supports all validation types, including text length, time, list, number, date, and custom formula validation.
+
+The following code example shows how to create text length validation for a range of cells.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+    IApplication application = excelEngine.Excel;
+    application.DefaultVersion = ExcelVersion.Xlsx;
+
+    IWorkbook workbook = application.Workbooks.Create(1);
+    IWorksheet worksheet = workbook.Worksheets[0];
+
+    // Create text length validation for the specified range
+    IDataValidation validation = worksheet.CreateDataValidation(worksheet.Range["A1:A10"]);
+
+    validation.AllowType = ExcelDataType.TextLength;
+    validation.CompareOperator = ExcelDataValidationComparisonOperator.Between;
+    validation.FirstFormula = "3";
+    validation.SecondFormula = "15";
+
+    // Configure the validation error message
+    validation.ShowErrorBox = true;
+    validation.ErrorBoxTitle = "Invalid Input";
+    validation.ErrorBoxText = "Text length must be between 3 and 15 characters.";
+    validation.PromptBoxText = "Data validation for text length";
+    validation.ShowPromptBox = true;
+
+    workbook.SaveAs(Path.GetFullPath("Output/TextLengthValidation.xlsx"));
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+    IApplication application = excelEngine.Excel;
+    application.DefaultVersion = ExcelVersion.Xlsx;
+
+    IWorkbook workbook = application.Workbooks.Create(1);
+    IWorksheet worksheet = workbook.Worksheets[0];
+
+    // Create text length validation for the specified range
+    IDataValidation validation = worksheet.CreateDataValidation(worksheet.Range["A1:A10"]);
+
+    validation.AllowType = ExcelDataType.TextLength;
+    validation.CompareOperator = ExcelDataValidationComparisonOperator.Between;
+    validation.FirstFormula = "3";
+    validation.SecondFormula = "15";
+
+    // Configure the validation error message
+    validation.ShowErrorBox = true;
+    validation.ErrorBoxTitle = "Invalid Input";
+    validation.ErrorBoxText = "Text length must be between 3 and 15 characters.";
+    validation.PromptBoxText = "Data validation for text length";
+    validation.ShowPromptBox = true;
+
+    workbook.SaveAs("TextLengthValidation.xlsx");
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+Using excelEngine As New ExcelEngine()
+
+    Dim application As IApplication = excelEngine.Excel
+    application.DefaultVersion = ExcelVersion.Xlsx
+
+    Dim workbook As IWorkbook = application.Workbooks.Create(1)
+    Dim worksheet As IWorksheet = workbook.Worksheets(0)
+
+    ' Create text length validation for the specified range
+    Dim validation As IDataValidation = worksheet.CreateDataValidation(worksheet.Range("A1:A10"))
+
+    validation.AllowType = ExcelDataType.TextLength
+    validation.CompareOperator = ExcelDataValidationComparisonOperator.Between
+    validation.FirstFormula = "3"
+    validation.SecondFormula = "15"
+
+    ' Configure the validation error message
+    validation.ShowErrorBox = True
+    validation.ErrorBoxTitle = "Invalid Input"
+    validation.ErrorBoxText = "Text length must be between 3 and 15 characters."
+    validation.PromptBoxText = "Data validation for text length"
+    validation.ShowPromptBox = True
+
+    workbook.SaveAs("TextLengthValidation.xlsx")
+End Using
+{% endhighlight %}
+{% endtabs %}
+
+### Performance metrics for data validation
+
+The following benchmark measures the time required by the Syncfusion Excel (XlsIO) library to create and save an Excel workbook containing data validation rules. Each validation type is applied to 1,000,000 cells using the `CreateDataValidation` API. The measured validation types include text length, time, list, number, date, and custom formula.
+
+<table>
+<tr>
+<th>
+Validation type
+</th>
+<th>
+Time taken (seconds)
+</th>
+<th>
+Sample link
+</th>
+</tr>
+<tr>
+<td>
+Text length
+</td>
+<td>
+1.407
+</td>
+<td>
+<a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Data%20Validation/Text%20Length%20Validation/.NET/Text%20Length%20Validation" aria-label="GitHub demo link">GitHub link</a>.
+</td>
+</tr>
+<tr>
+<td>
+Time
+</td>
+<td>
+1.426
+</td>
+<td>
+<a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Data%20Validation/Time%20Validation/.NET/Time%20Validation" aria-label="GitHub demo link">GitHub link</a>.
+</td>
+</tr>
+<tr>
+<td>
+List 
+</td>
+<td>
+1.424
+</td>
+<td>
+<a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Data%20Validation/List%20Validation/.NET/List%20Validation" aria-label="GitHub demo link">GitHub link</a>.
+</td>
+</tr>
+<tr>
+<td>
+Number
+</td>
+<td>
+1.372
+</td>
+<td>
+<a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Data%20Validation/Number%20Validation/.NET/Number%20Validation" aria-label="GitHub demo link">GitHub link</a>.
+</td>
+</tr>
+<tr>
+<td>
+Date
+</td>
+<td>
+1.428
+</td>
+<td>
+<a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Data%20Validation/Date%20Validation/.NET/Date%20Validation" aria-label="GitHub demo link">GitHub link</a>.
+</td>
+</tr>
+<tr>
+<td>
+Custom formula
+</td>
+<td>
+1.402
+</td>
+<td>
+<a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Performance%20Metrics/Data%20Validation/Formula%20Validation/.NET/Formula%20Validation" aria-label="GitHub demo link">GitHub link</a>.
+</td>
+</tr>
+</table>
+
+#### Test environment
+
+The benchmark was run on the following configuration:
+
+* **Operating system:** Windows 10 64-bit
+* **CPU:** AMD Ryzen 5 7520U with Radeon Graphics
+* **Memory:** 16 GB RAM
+
+> NOTE: Numbers are based on a single run, not a statistically averaged benchmark. Use them as a rough reference, not as a service-level agreement.
