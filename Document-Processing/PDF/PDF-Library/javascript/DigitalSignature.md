@@ -181,7 +181,7 @@ let externalSignatureCallback = (
     return { signedData: new Uint8Array() }; // Placeholder return
 };
 // Create a new signature using external signing
-let signature: PdfSignature = signatureField.create (externalSignatureCallback, {
+let signature: PdfSignature = PdfSignature.create(externalSignatureCallback, {
     cryptographicStandard: CryptographicStandard.cms,
     algorithm: DigestAlgorithm.sha256,
 });
@@ -431,43 +431,91 @@ The JavaScript PDF Library supports Long-Term Validation for digital signatures 
 You can create Long Term Validation (LTV) after externally signing a PDF document by using your public certificate chain. The following code example shows how to complete the external signing process and enable LTV using the [`enableLTV()`](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature#enableltv) method of the [`PdfSignature`](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature) class.
 
 The callback supplied to `enableLTV()` must retrieve the actual OCSP or CRL response requested by the library and return the response bytes as a `Uint8Array`.
-
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import {
     PdfDocument,
-    PdfForm,
+    PdfPage,
     PdfSignatureField,
     PdfSignature,
+    PdfSignatureOptions,
     DigestAlgorithm,
+    CryptographicStandard,
     RevocationType
 } from '@syncfusion/ej2-pdf';
 
-// Load the externally signed PDF document
-let document: PdfDocument = new PdfDocument(data);
-// Access the PDF form
-let form: PdfForm = document.form;
-// Get the externally signed signature field
-let field: PdfSignatureField = form.fieldAt(0) as PdfSignatureField;
-// Get the existing signature
-let signature: PdfSignature = field.getSignature();
-// Public certificate chain used for long-term validation
-let publicCertificates: Uint8Array[] = [/* your certificates here */];
+// Define a callback function for external signing
+function externalSignatureCallback(
+    data: Uint8Array,
+    options: {
+        algorithm: DigestAlgorithm,
+        cryptographicStandard: CryptographicStandard
+    }
+): { signedData: Uint8Array; timestampData?: Uint8Array } {
+    // Sign the supplied document data using an external signing service
+    return { signedData: externalSignedData };
+}
 
-// Retrieve the OCSP or CRL response requested by the library
+// Define a callback function to retrieve OCSP or CRL responses
 async function longTermValidationCallback(
     url: string,
     requestBytes?: Uint8Array
 ): Promise<{ response: Uint8Array }> {
-    // Send requestBytes to the supplied URL and return the actual response bytes
-    return { response: new Uint8Array() };
+    // Send requestBytes to the supplied URL and return the actual OCSP or CRL response
+    return { response: revocationResponse };
 }
 
-// Enable LTV and include the public certificates in the PDF document
+// Create a new PDF document
+let document: PdfDocument = new PdfDocument();
+// Add a page to the document
+let page: PdfPage = document.addPage();
+// Create a signature field
+let field: PdfSignatureField = new PdfSignatureField(
+    page,
+    'field',
+    { x: 50, y: 50, width: 100, height: 100 }
+);
+
+// Create a signature using the external-signing callback
+let signature: PdfSignature = PdfSignature.create(
+    externalSignatureCallback,
+    {
+        cryptographicStandard: CryptographicStandard.cms,
+        digestAlgorithm: DigestAlgorithm.sha256,
+        contactInfo: 'johndoe@owned.us',
+        locationInfo: 'Honolulu, Hawaii',
+        reason: 'I am author of this document.',
+        signedName: 'Signature'
+    }
+);
+// Add the signature field to the PDF form
+document.form.add(field);
+// Set the signature to the field
+field.setSignature(signature);
+// Save the externally signed PDF document
+let data: Uint8Array = document.save();
+// Destroy the document
+document.destroy();
+
+// Load the externally signed PDF document
+document = new PdfDocument(data);
+// Get the existing signature field
+field = document.form.fieldAt(0) as PdfSignatureField;
+// Get the existing signature
+signature = field.getSignature();
+// Get the signature options
+let options: PdfSignatureOptions = signature.getSignatureOptions();
+
+// Public certificate chain used for long-term validation
+let publicCertificates: Uint8Array[] = [
+    publicCertificate1,
+    publicCertificate2
+];
+
+// Enable LTV using the available OCSP or CRL response
 let ltvEnabled: boolean = await signature.enableLTV(
     publicCertificates,
-    RevocationType.crl,
-    true,
+    RevocationType.ocspOrCrl,
     longTermValidationCallback
 );
 if (ltvEnabled) {
@@ -480,28 +528,69 @@ document.destroy();
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 
+// Define a callback function for external signing
+function externalSignatureCallback(data, options) {
+    // Sign the supplied document data using an external signing service
+    return { signedData: externalSignedData };
+}
+
+// Define a callback function to retrieve OCSP or CRL responses
+async function longTermValidationCallback(url, requestBytes) {
+    // Send requestBytes to the supplied URL and return the actual OCSP or CRL response
+    return { response: revocationResponse };
+}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Add a page to the document
+var page = document.addPage();
+// Create a signature field
+var field = new ej.pdf.PdfSignatureField(
+    page,
+    'field',
+    { x: 50, y: 50, width: 100, height: 100 }
+);
+
+// Create a signature using the external-signing callback
+var signature = ej.pdf.PdfSignature.create(
+    externalSignatureCallback,
+    {
+        cryptographicStandard: ej.pdf.CryptographicStandard.cms,
+        digestAlgorithm: ej.pdf.DigestAlgorithm.sha256,
+        contactInfo: 'johndoe@owned.us',
+        locationInfo: 'Honolulu, Hawaii',
+        reason: 'I am author of this document.',
+        signedName: 'Signature'
+    }
+);
+// Add the signature field to the PDF form
+document.form.add(field);
+// Set the signature to the field
+field.setSignature(signature);
+// Save the externally signed PDF document
+var data = document.save();
+// Destroy the document
+document.destroy();
+
 // Load the externally signed PDF document
-var document = new ej.pdf.PdfDocument(data);
-// Access the PDF form
-var form = document.form;
-// Get the externally signed signature field
-var field = form.fieldAt(0);
+document = new ej.pdf.PdfDocument(data);
+// Get the existing signature field
+field = document.form.fieldAt(0);
 // Get the existing signature
-var signature = field.getSignature();
+signature = field.getSignature();
+// Get the signature options
+var options = signature.getSignatureOptions();
+
 // Public certificate chain used for long-term validation
-var publicCertificates = [/* your certificates here */];
+var publicCertificates = [
+    publicCertificate1,
+    publicCertificate2
+];
 
-// Retrieve the OCSP or CRL response requested by the library
-var longTermValidationCallback = async function (url, requestBytes) {
-    // Send requestBytes to the supplied URL and return the actual response bytes
-    return { response: new Uint8Array() };
-};
-
-// Enable LTV and include the public certificates in the PDF document
+// Enable LTV using the available OCSP or CRL response
 var ltvEnabled = await signature.enableLTV(
     publicCertificates,
-    ej.pdf.RevocationType.crl,
-    true,
+    ej.pdf.RevocationType.ocspOrCrl,
     longTermValidationCallback
 );
 if (ltvEnabled) {
@@ -599,42 +688,86 @@ N> When a PDF document contains multiple signatures, call `enableLTV()` for each
 You can provide the public certificate chain, select the revocation mode, and specify whether the certificates must be included in the PDF document while enabling LTV.
 
 The following code example uses CRL-based revocation information and includes the supplied public certificates in the document.
-
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import {
     PdfDocument,
-    PdfForm,
+    PdfPage,
     PdfSignatureField,
     PdfSignature,
-    RevocationType
+    DigestAlgorithm,
+    CryptographicStandard
 } from '@syncfusion/ej2-pdf';
 
-// Load the signed PDF document
-let document: PdfDocument = new PdfDocument(data);
-// Access the PDF form
-let form: PdfForm = document.form;
-// Get the signature field
-let field: PdfSignatureField = form.fieldAt(0) as PdfSignatureField;
-// Get the signature
-let signature: PdfSignature = field.getSignature();
-// Public certificate chain used for validation
-let publicCertificates: Uint8Array[] = [/* your certificates here */];
+// Define a callback function for external signing
+function externalSignatureCallback(
+    data: Uint8Array,
+    options: {
+        algorithm: DigestAlgorithm,
+        cryptographicStandard: CryptographicStandard
+    }
+): { signedData: Uint8Array; timestampData?: Uint8Array } {
+    // Sign the supplied document data using an external signing service
+    return { signedData: externalSignedData };
+}
 
-// Retrieve the revocation response requested by the library
+// Define a callback function to retrieve OCSP and CRL responses
 async function longTermValidationCallback(
     url: string,
     requestBytes?: Uint8Array
 ): Promise<{ response: Uint8Array }> {
-    // Send requestBytes to the supplied URL and return the actual response bytes
-    return { response: new Uint8Array() };
+    // Send requestBytes to the supplied URL and return the actual OCSP or CRL response
+    return { response: revocationResponse };
 }
 
-// Enable LTV using CRL responses and include the public certificates
+// Create a new PDF document
+let document: PdfDocument = new PdfDocument();
+// Add a page to the document
+let page: PdfPage = document.addPage();
+// Create a signature field
+let field: PdfSignatureField = new PdfSignatureField(
+    page,
+    'field',
+    { x: 50, y: 50, width: 100, height: 100 }
+);
+
+// Create a signature using the external-signing callback
+let signature: PdfSignature = PdfSignature.create(
+    externalSignatureCallback,
+    {
+        cryptographicStandard: CryptographicStandard.cms,
+        digestAlgorithm: DigestAlgorithm.sha1,
+        contactInfo: 'johndoe@owned.us',
+        locationInfo: 'Honolulu, Hawaii',
+        reason: 'I am author of this document.',
+        signedName: 'Signature'
+    }
+);
+// Add the signature field to the PDF form
+document.form.add(field);
+// Set the signature to the field
+field.setSignature(signature);
+// Save the externally signed PDF document
+let data: Uint8Array = document.save();
+// Destroy the document
+document.destroy();
+
+// Load the externally signed PDF document
+document = new PdfDocument(data);
+// Get the existing signature field
+field = document.form.fieldAt(0) as PdfSignatureField;
+// Get the existing signature
+signature = field.getSignature();
+
+// Public certificate chain used for long-term validation
+let publicCertificates: Uint8Array[] = [
+    publicCertificate1,
+    publicCertificate2
+];
+
+// Enable LTV using the public certificate chain
 let ltvEnabled: boolean = await signature.enableLTV(
     publicCertificates,
-    RevocationType.crl,
-    true,
     longTermValidationCallback
 );
 if (ltvEnabled) {
@@ -647,28 +780,66 @@ document.destroy();
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 
-// Load the signed PDF document
-var document = new ej.pdf.PdfDocument(data);
-// Access the PDF form
-var form = document.form;
-// Get the signature field
-var field = form.fieldAt(0);
-// Get the signature
-var signature = field.getSignature();
-// Public certificate chain used for validation
-var publicCertificates = [/* your certificates here */];
+// Define a callback function for external signing
+function externalSignatureCallback(data, options) {
+    // Sign the supplied document data using an external signing service
+    return { signedData: externalSignedData };
+}
 
-// Retrieve the revocation response requested by the library
-var longTermValidationCallback = async function (url, requestBytes) {
-    // Send requestBytes to the supplied URL and return the actual response bytes
-    return { response: new Uint8Array() };
-};
+// Define a callback function to retrieve OCSP and CRL responses
+async function longTermValidationCallback(url, requestBytes) {
+    // Send requestBytes to the supplied URL and return the actual OCSP or CRL response
+    return { response: revocationResponse };
+}
 
-// Enable LTV using CRL responses and include the public certificates
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Add a page to the document
+var page = document.addPage();
+// Create a signature field
+var field = new ej.pdf.PdfSignatureField(
+    page,
+    'field',
+    { x: 50, y: 50, width: 100, height: 100 }
+);
+
+// Create a signature using the external-signing callback
+var signature = ej.pdf.PdfSignature.create(
+    externalSignatureCallback,
+    {
+        cryptographicStandard: ej.pdf.CryptographicStandard.cms,
+        digestAlgorithm: ej.pdf.DigestAlgorithm.sha1,
+        contactInfo: 'johndoe@owned.us',
+        locationInfo: 'Honolulu, Hawaii',
+        reason: 'I am author of this document.',
+        signedName: 'Signature'
+    }
+);
+// Add the signature field to the PDF form
+document.form.add(field);
+// Set the signature to the field
+field.setSignature(signature);
+// Save the externally signed PDF document
+var data = document.save();
+// Destroy the document
+document.destroy();
+
+// Load the externally signed PDF document
+document = new ej.pdf.PdfDocument(data);
+// Get the existing signature field
+field = document.form.fieldAt(0);
+// Get the existing signature
+signature = field.getSignature();
+
+// Public certificate chain used for long-term validation
+var publicCertificates = [
+    publicCertificate1,
+    publicCertificate2
+];
+
+// Enable LTV using the public certificate chain
 var ltvEnabled = await signature.enableLTV(
     publicCertificates,
-    ej.pdf.RevocationType.crl,
-    true,
     longTermValidationCallback
 );
 if (ltvEnabled) {
