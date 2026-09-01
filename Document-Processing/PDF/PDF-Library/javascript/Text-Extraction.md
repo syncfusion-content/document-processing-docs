@@ -18,9 +18,9 @@ The JavaScript PDF library allows you to extract text from a particular page or 
 
 N> The `@syncfusion/ej2-pdf-data-extract` add-on package also powers the redaction features available in the JavaScript PDF Library.
 
-## Working with basic text extraction
+## Working with basic text extraction synchronously
 
-This example demonstrates how to extract plain text from a PDF document using the [PdfDataExtractor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor) class. Basic text extraction retrieves text content from the entire PDF document.
+This example demonstrates how to extract plain text from a PDF document synchronously using the [PdfDataExtractor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor) class and the `extractTextSync` method. Basic text extraction retrieves text content from the entire PDF document immediately.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -32,8 +32,8 @@ import { PdfDataExtractor } from '@syncfusion/ej2-pdf-data-extract';
 let document: PdfDocument = new PdfDocument(data);
 // Initialize a new instance of the `PdfDataExtractor` class
 let extractor: PdfDataExtractor = new PdfDataExtractor(document);
-// Extract text content from the PDF document.
-let text: string = extractor.extractText();
+// Extract text content from the PDF document synchronously.
+let text: string = extractor.extractTextSync();
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -46,8 +46,8 @@ document.destroy();
 var document = new ej.pdf.PdfDocument(data);
 // Initialize a new instance of the PdfDataExtractor class
 var extractor = new ej.pdfdataextract.PdfDataExtractor(document);
-// Extract text content from the PDF document
-var text = extractor.extractText();
+// Extract text content from the PDF document synchronously
+var text = extractor.extractTextSync();
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -56,9 +56,47 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-## Extract text from specific page range in a PDF document
+## Working with basic text extraction asynchronously
 
-This example demonstrates how to extract text from a PDF document by specifying a start and end page index. This approach allows you to retrieve text content from a defined range of pages for processing or analysis.
+This example demonstrates how to extract plain text from a PDF document asynchronously using the [PdfDataExtractor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor) class and the `extractText` method. Basic text extraction retrieves text content from the entire PDF document.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+
+import { PdfDocument } from '@syncfusion/ej2-pdf';
+import { PdfDataExtractor } from '@syncfusion/ej2-pdf-data-extract';
+
+// Load an existing PDF document
+let document: PdfDocument = new PdfDocument(data);
+// Initialize a new instance of the `PdfDataExtractor` class
+let extractor: PdfDataExtractor = new PdfDataExtractor(document);
+// Extract text content from the PDF document asynchronously.
+let text: string = await extractor.extractText();
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Load an existing PDF document
+var document = new ej.pdf.PdfDocument(data);
+// Initialize a new instance of the PdfDataExtractor class
+var extractor = new ej.pdfdataextract.PdfDataExtractor(document);
+// Extract text content from the PDF document asynchronously
+var text = await extractor.extractText();
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
+## Extract text from a specific page range in a PDF document synchronously
+
+This example demonstrates how to synchronously extract text from a PDF document by specifying a start and end page index. This approach allows you to retrieve text content from a defined range of pages for processing or analysis.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -69,8 +107,8 @@ import { PdfDataExtractor } from '@syncfusion/ej2-pdf-data-extract';
 let document: PdfDocument = new PdfDocument(data);
 // Initialize a new instance of the `PdfDataExtractor` class
 let extractor: PdfDataExtractor = new PdfDataExtractor(document);
-// Extract text content from the specified page range
-let text: string = extractor.extractText({ startPageIndex: 0, endPageIndex: document.pageCount - 1 });
+// Extract text content from the specified page range synchronously
+let text: string = extractor.extractTextSync({ startPageIndex: 0, endPageIndex: document.pageCount - 1 });
 // Release document resources
 document.destroy();
 
@@ -81,17 +119,17 @@ document.destroy();
 var document = new ej.pdf.PdfDocument(data);
 // Initialize a new instance of the `PdfDataExtractor` class
 var extractor = new ej.pdfdataextract.PdfDataExtractor(document);
-// Extract text content from the specified page range
-var text = extractor.extractText({ startPageIndex: 0, endPageIndex: document.pageCount - 1 });
+// Extract text content from the specified page range synchronously
+var text = extractor.extractTextSync({ startPageIndex: 0, endPageIndex: document.pageCount - 1 });
 // Release document resources
 document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
 
-## Working with layout-based text extraction
+## Extract text from a specific page range in a PDF document asynchronously
 
-This example demonstrates how to extract text from a PDF document using the [PdfDataExtractor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor) class with layout-based options. Layout-based extraction preserves the visual structure of the source document, including line breaks and spacing.
+This example demonstrates how to asynchronously extract text from a PDF document by specifying a start and end page index. This approach allows you to retrieve text content from a defined range of pages for processing or analysis.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -102,8 +140,8 @@ import { PdfDataExtractor } from '@syncfusion/ej2-pdf-data-extract';
 let document: PdfDocument = new PdfDocument(data);
 // Initialize a new instance of the `PdfDataExtractor` class
 let extractor: PdfDataExtractor = new PdfDataExtractor(document);
-// Extract text from the PDF page based on its layout
-let text: string = extractor.extractText({ isLayout: true });
+// Extract text content from the specified page range asynchronously
+let text: string = await extractor.extractText({ startPageIndex: 0, endPageIndex: document.pageCount - 1 });
 // Release document resources
 document.destroy();
 
@@ -114,8 +152,74 @@ document.destroy();
 var document = new ej.pdf.PdfDocument(data);
 // Initialize a new instance of the `PdfDataExtractor` class
 var extractor = new ej.pdfdataextract.PdfDataExtractor(document);
-// Extract text from the PDF page based on its layout
-var text = extractor.extractText({ isLayout: true });
+// Extract text content from the specified page range asynchronously
+var text = await extractor.extractText({ startPageIndex: 0, endPageIndex: document.pageCount - 1 });
+// Release document resources
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
+## Working with layout-based text extraction synchronously
+
+This example demonstrates how to extract text from a PDF document synchronously using the [PdfDataExtractor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor) class with layout-based options. Layout-based extraction preserves the visual structure of the source document, including line breaks and spacing.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { PdfDocument } from '@syncfusion/ej2-pdf';
+import { PdfDataExtractor } from '@syncfusion/ej2-pdf-data-extract';
+
+// Load an existing PDF document
+let document: PdfDocument = new PdfDocument(data);
+// Initialize a new instance of the `PdfDataExtractor` class
+let extractor: PdfDataExtractor = new PdfDataExtractor(document);
+// Extract text from the PDF page based on its layout synchronously
+let text: string = extractor.extractTextSync({ isLayout: true });
+// Release document resources
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Load an existing PDF document
+var document = new ej.pdf.PdfDocument(data);
+// Initialize a new instance of the `PdfDataExtractor` class
+var extractor = new ej.pdfdataextract.PdfDataExtractor(document);
+// Extract text from the PDF page based on its layout synchronously
+var text = extractor.extractTextSync({ isLayout: true });
+// Release document resources
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
+## Working with layout-based text extraction asynchronously
+
+This example demonstrates how to extract text from a PDF document asynchronously using the [PdfDataExtractor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor) class with layout-based options. Layout-based extraction preserves the visual structure of the source document, including line breaks and spacing.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { PdfDocument } from '@syncfusion/ej2-pdf';
+import { PdfDataExtractor } from '@syncfusion/ej2-pdf-data-extract';
+
+// Load an existing PDF document
+let document: PdfDocument = new PdfDocument(data);
+// Initialize a new instance of the `PdfDataExtractor` class
+let extractor: PdfDataExtractor = new PdfDataExtractor(document);
+// Extract text from the PDF page based on its layout asynchronously
+let text: string = await extractor.extractText({ isLayout: true });
+// Release document resources
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Load an existing PDF document
+var document = new ej.pdf.PdfDocument(data);
+// Initialize a new instance of the `PdfDataExtractor` class
+var extractor = new ej.pdfdataextract.PdfDataExtractor(document);
+// Extract text from the PDF page based on its layout asynchronously
+var text = await extractor.extractText({ isLayout: true });
 // Release document resources
 document.destroy();
 
