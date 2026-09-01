@@ -70,7 +70,9 @@ container.documentEditor.editor.insertContentControl('Picture', 'data:image/png;
 
 ## Import content control properties
 
-Replace an existing content control value with a new value using the [`importContentControlData`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#importcontentcontroldata) method. Pass one or more [`ContentControlInfo`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/contentControlInfo) objects and specify the content control title and content control type to identify the content controls and update them with own values.
+Replace an existing content control value with a new value using the [`importContentControlData`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#importcontentcontroldata) method. Pass one or more [`ContentControlInfo`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/contentControlInfo) objects and specify the content control title and content control type to identify the content control and update them with new values.
+
+The following code snippet illustrates how to import the content control properties.
 
 {% highlight js %}
 var data = [];
@@ -81,7 +83,9 @@ container.documentEditor.importContentControlData(data);
 
 ## Export content control properties
 
-Retrieve the content controls properties present in a document using [`exportContentControlData`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#exportcontentcontroldata) method. This method exports all available content controls properties and returns them as a collection of [`ContentControlInfo`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/contentControlInfo) objects, allowing you to access properties such as the content control title, type, tag, and value.
+Retrieve the content controls properties present in a document using [`exportContentControlData`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#exportcontentcontroldata) method. This method returns a collection of [`ContentControlInfo`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/contentControlInfo) objects, allowing you to access properties such as the content control title, type, tag, and value.
+
+The following code snippet illustrates how to export the content control properties.
 
 {% highlight js %}
 var contentControlInfos = container.documentEditor.exportContentControlData();
@@ -90,6 +94,8 @@ var contentControlInfos = container.documentEditor.exportContentControlData();
 ## Reset content control
 
 Restore a content control to its default placeholder text (for example, "Click here or tap to insert text") using the [`resetContentControlData`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#resetcontentcontroldata) method. Pass one or more [`ContentControlInfo`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/contentcontrolinfo) objects and specify the content control title to identify the content controls to reset.
+
+The following code snippet illustrates how to reset the content control properties:
 
 {% highlight js %}
 var data = [];
