@@ -1,4 +1,4 @@
----
+﻿---
 title: Getting Started with Angular PDF Viewer | Syncfusion
 description: Set up and run the standalone Angular PDF Viewer using Syncfusion Essential JS 2 to render and interact with PDF documents in the browser.
 platform: document-processing
@@ -9,7 +9,109 @@ domainurl: ##DomainURL##
 
 # Getting Started with Angular PDF Viewer
 
-This section explains how to create a simple Angular application and add the standalone [Syncfusion® Angular PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/angular-pdf-viewer) component with the minimum required setup.
+[Syncfusion® Angular PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/angular-pdf-viewer) enables you to view, annotate, and interact with PDF documents in web applications. This section guides you through the steps to get started and create a PDF Viewer in an Angular application.
+
+{% tabcontents %}
+
+{% tabcontent Syncfusion CLI %}
+
+## Prerequisites
+
+- [Node.js 24+](https://nodejs.org/en) (LTS recommended).
+- Syncfusion CLI.
+
+## Install the Syncfusion CLI
+
+Install the Syncfusion CLI globally using the following command:
+
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
+npm install -g @syncfusion/syncfusion-cli
+
+{% endhighlight %}
+{% endtabs %}
+
+## Set up the project using Syncfusion CLI
+
+You can create an Angular application using the Syncfusion CLI. The CLI provides two ways to create a project:
+
+### Non-interactive mode
+
+Non-interactive mode allows you to create a project directly using a single command with the required command-line arguments.
+
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+
+sf new syncfusion-angular-app --framework angular --template pdf-viewer
+
+{% endhighlight %}
+{% endtabs %}
+
+In this mode, the project configuration is passed directly in the command. The above command creates an Angular application configured with the Syncfusion<sup style="font-size:70%">&reg;</sup> `PDF Viewer` component.
+
+### Interactive mode
+
+Interactive mode guides you through the project creation process with step-by-step prompts.
+
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+
+sf
+
+{% endhighlight %}
+{% endtabs %}
+
+When you run the `sf` command, the CLI prompts you to select the required project configuration. To create an Angular application with the Syncfusion<sup style="font-size:70%">&reg;</sup> `PDF Viewer` component, select the following options:
+
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+
+√ Project name? ... syncfusion-angular-app
+√ Choose Framework: » Angular
+√ Choose Build Tool: » Webpack
+√ Choose Language: » TypeScript
+√ Choose Template: » PDF Viewer
+√ Choose Theme: » Tailwind3
+√ Choose Style Format: » CSS
+√ Would you like to integrate the Syncfusion MCP Server (AI Assistant) into this project? ... no
+√ Would you like to install Syncfusion Component Skills for AI-powered development? ... no
+√ Install dependencies and start app now? ... no
+
+{% endhighlight %}
+{% endtabs %}
+
+The above selections generate an Angular application configured with the Syncfusion<sup style="font-size:70%">&reg;</sup> `PDF Viewer` component. You can choose different values for language, theme, style format, MCP setup, and skills installation based on your project requirements.
+
+The Syncfusion<sup style="font-size:70%">&reg;</sup> CLI creates the project with a predefined template. After the project is generated, you can customize or replace the component code based on your application requirements.
+
+## Run the project
+
+Once the project is created, navigate to the project directory and run the following commands in your terminal.
+
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+
+cd syncfusion-angular-app
+npm install
+npm start
+
+{% endhighlight %}
+{% endtabs %}
+
+The output will appear as follows:
+
+![Output of Angular PDF Viewer Using Syncfusion CLI](./images/angular-cli-pdfviewer.png)
+
+You can also explore the PDF Viewer interactively using the live sample below.
+
+{% previewsample "/document-processing/samples/pdfviewer/angular/getting-started-cs1-standalone" %}
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/Getting%20started%20-%20Standalone).
+
+{% endtabcontent %}
+
+{% tabcontent Angular CLI %}
 
 ## Prerequisites
 
@@ -40,7 +142,7 @@ cd pdfviewer-app
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** When prompted during project creation, select the default options: **CSS** for stylesheet, **No** for SSR/SSG, and **None** for AI tools. The available prompts may vary by Angular CLI version; accept the default values for any prompts not listed here.
+N> When prompted during project creation, select the default options: **CSS** for stylesheet, **No** for SSR/SSG, and **None** for AI tools. The available prompts may vary by Angular CLI version; accept the default values for any prompts not listed here.
 
 ## Install the Syncfusion® Angular PDF Viewer package
 
@@ -60,9 +162,13 @@ Themes for PDF Viewer can be applied using CSS or SASS files from the [npm theme
 
 This guide uses the `Tailwind 3` theme as an example, sourced from the theme package. In this package, each component includes an `index.css` file that automatically loads all the required dependency styles. To install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
 npm install @syncfusion/ej2-tailwind3-theme
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Add the required PDF Viewer theme style reference to the `src/styles.css` file:
 
@@ -76,11 +182,11 @@ Add the required PDF Viewer theme style reference to the `src/styles.css` file:
 
 N> The `index.css` file automatically includes all required dependent component styles for the PDF Viewer. You do not need to import individual dependency styles such as Base, Buttons, Dropdowns, Inputs, Navigations, Popups, SplitButtons, and Notifications separately.
 
-> **Note:** Refer to the [Themes topic](https://ej2.syncfusion.com/angular/documentation/appearance/overview) to learn more about built-in themes and different ways to refer to themes in an Angular project.
+N> Refer to the [Themes topic](https://ej2.syncfusion.com/angular/documentation/appearance/overview) to learn more about built-in themes and different ways to refer to themes in an Angular project.
 
-## Add the Syncfusion® Angular PDF Viewer component to the application
+## Initialize the PDF Viewer
 
-Add the PDF Viewer component to your Angular application to render and interact with PDF documents. The component requires the **PdfViewerModule** and its associated services (for full functionality).
+Add the PDF Viewer component to your application. The component requires the **PdfViewerModule** and its associated services (for full functionality).
 
 Update `src/app/app.ts` as shown below:
 
@@ -135,19 +241,25 @@ ng serve --open
 {% endhighlight %}
 {% endtabs %}
 
-After the application starts, open `http://localhost` (the default dev server URL) in the browser to view the Angular PDF Viewer component. The output will appear as follows:
+After the application starts, open `http://localhost` (the default dev server URL) in the browser. The Angular PDF Viewer is rendered in the browser with a toolbar and an interactive PDF area, as shown below.
 
-![Rendered PDF Viewer in browser](images/pdfviewer-control.png)
+![Output of Angular PDF Viewer](./images/pdfviewer-control.png)
+
+You can also explore the PDF Viewer interactively using the live sample below.
 
 {% previewsample "/document-processing/samples/pdfviewer/angular/getting-started-cs1-standalone" %}
 
-> [View Sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/Getting%20started%20-%20Standalone)
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/Getting%20started%20-%20Standalone).
 
 ## Video tutorial
 
-If you prefer a video walkthrough, watch the following tutorial to get started quickly with the Angular PDF Viewer.
+To get started quickly with the Angular PDF Viewer, you can watch this video:
 
 {% youtube "https://www.youtube.com/watch?v=riZ1zACc5co" %}
+
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 ## Angular version compatibility
 
@@ -160,7 +272,7 @@ For older Angular versions, refer to the following guides:
 * [Create a Standalone PDF Viewer in Angular 17 and above without the --no-standalone flag](./how-to/create-a-standalone-pdf-viewer-in-angular-17-and-above-without-no-standalone-flag).
 * [Create a Standalone PDF Viewer in Angular 12](./how-to/create-a-standalone-pdf-viewer-in-angular-12)
 
-> Looking for the full Angular PDF Viewer component overview, features, pricing, and documentation? Visit the [Angular PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/angular-pdf-viewer) page.
+N> Looking for the full Angular PDF Viewer component overview, features, pricing, and documentation? Visit the [Angular PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/angular-pdf-viewer) page.
 
 ## See also
 
