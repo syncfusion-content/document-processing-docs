@@ -152,7 +152,7 @@ public render(): void {
 }
 ```
 
-Remember to replace `https://your-sharepoint-site` in `resourceUrl` with the URL of your SharePoint site before serving the web part.
+Remember to replace `https://your-SharePoint-site` in `resourceUrl` with the URL of your SharePoint site before serving the web part.
 
 ## Configure SharePoint Workbench
 
@@ -168,7 +168,7 @@ Open `config/serve.json` and find the `initialPage` entry. Replace the URL with 
 }
 ```
 
-Replace `your-sharepoint-site` with the actual host name of your tenant so that the local debug bundle loads against the correct site.
+Replace `your-SharePoint-site` with the actual host name of your tenant so that the local debug bundle loads against the correct site.
 
 ## Run the Application
 
