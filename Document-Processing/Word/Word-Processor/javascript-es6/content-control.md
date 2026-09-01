@@ -70,7 +70,7 @@ container.documentEditor.editor.insertContentControl('Picture', 'data:image/png;
 
 ## Import content control properties
 
-Content control properties can be set using the [`ContentControlInfo`](https://ej2.syncfusion.com/documentation/api/document-editor#importContentControlData) and imported using [`importContentControlData`](https://ej2.syncfusion.com/documentation/api/document-editor#importContentControlData).
+Replace an existing content control value with a new value using the [`importContentControlData`](https://ej2.syncfusion.com/documentation/api/document-editor#importContentControlData) method. Pass one or more [`ContentControlInfo`](https://ej2.syncfusion.com/documentation/api/document-editor#importContentControlData) objects and specify the content control title and content control type to identify the content controls and update them with own values.
 
 {% highlight ts %}
 let data: ContentControlInfo[] = [];
@@ -81,7 +81,7 @@ container.documentEditor.importContentControlData(data);
 
 ## Export content control properties
 
-Content control properties can be exported using the [`exportContentControlData`](https://ej2.syncfusion.com/documentation/api/document-editor#exportContentControlData).
+Retrieve the content controls properties present in a document using [`exportContentControlData`](https://ej2.syncfusion.com/documentation/api/document-editor#exportContentControlData) method. This method exports all available content controls properties and returns them as a collection of [`ContentControlInfo`](https://ej2.syncfusion.com/documentation/api/document-editor#importContentControlData) objects, allowing you to access properties such as the content control title, type, tag, and value.
 
 {% highlight ts %}
 let contentControlInfos: ContentControlInfo[] = container.documentEditor.exportContentControlData();
@@ -89,7 +89,7 @@ let contentControlInfos: ContentControlInfo[] = container.documentEditor.exportC
 
 ## Reset content control properties
 
-Content control properties can be reset using the [`resetContentControlData`](https://ej2.syncfusion.com/documentation/api/document-editor#resetcontentcontroldata).
+Restore a content control to its default placeholder text (for example, "Click here or tap to insert text") using the [`resetContentControlData`](https://ej2.syncfusion.com/documentation/api/document-editor#resetcontentcontroldata) method. Pass one or more [`ContentControlInfo`](https://ej2.syncfusion.com/documentation/api/document-editor/contentcontrolinfo) objects and specify the content control title to identify the content controls to reset.
 
  
 {% highlight ts %}
