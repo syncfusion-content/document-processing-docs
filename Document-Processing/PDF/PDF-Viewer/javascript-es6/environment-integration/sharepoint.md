@@ -32,7 +32,7 @@ npm install -g yo
 npm install -g @microsoft/generator-sharepoint
 ```
 
-> Note: The examples in this topic were tested with **Node.js 22.x**, **`@microsoft/generator-sharepoint` 1.23.2**, and **`@syncfusion/ej2-pdfviewer` ^34.2.5**. Run `node -v`, `npm -v`, and `yo @microsoft/sharepoint --version` only if you need to confirm the installed versions match.
+> Note: The examples in this topic were tested with **Node.js 22.x**, the **SharePoint Framework generator 1.23.2**, and **Syncfusion EJ2 PDF Viewer ^34.2.5**. To confirm the installed versions on your machine, run `node -v`, `npm -v`, and `yo --version` for the generator.
 
 ## Create a SharePoint Framework Project
 
