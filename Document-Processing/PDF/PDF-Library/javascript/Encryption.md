@@ -26,24 +26,18 @@ The following example encrypts a new PDF document using RC4 128-bit encryption a
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import {
-    PdfBrush,
-    PdfDocument,
-    PdfEncryptionType,
-    PdfFontFamily,
-    PdfFontStyle,
-    PdfSecurityOptions,
-    PdfStandardFont
-} from '@syncfusion/ej2-pdf';
+import { PdfBrush, PdfDocument, PdfEncryptionType, PdfFontFamily, PdfFontStyle, PdfSecurityOptions, PdfStandardFont } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document.
 const document: PdfDocument = new PdfDocument();
 // Add a page to the document.
 const page = document.addPage();
+// Embed the standard font used to draw text.
+const font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 12, PdfFontStyle.regular);
 // Draw text on the page.
 page.graphics.drawString(
     'Encrypted with RC4 128-bit encryption',
-    new PdfStandardFont(PdfFontFamily.helvetica, 12, PdfFontStyle.regular),
+    font,
     { x: 10, y: 20, width: 300, height: 50 },
     new PdfBrush({ r: 0, g: 0, b: 0 })
 );
@@ -54,24 +48,25 @@ const options: PdfSecurityOptions = {
 };
 document.setSecurity(options);
 // Save the encrypted PDF document.
-const data: Uint8Array = document.save('Output.pdf');
+document.save('Output.pdf');
 // Destroy the document and release its resources.
 document.destroy();
 
 {% endhighlight %}
-
 {% highlight javascript tabtitle="JavaScript" %}
 
 // Create a new PDF document.
 const document = new ej.pdf.PdfDocument();
 // Add a page to the document.
 const page = document.addPage();
+// Embed the standard font used to draw text.
+const font = document.embedFont(ej.pdf.PdfFontFamily.helvetica, 12, ej.pdf.PdfFontStyle.regular);
 // Draw text on the page.
 page.graphics.drawString(
     'Encrypted with RC4 128-bit encryption',
-    new ej.pdf.PdfStandardFont(ej.pdf.PdfFontFamily.helvetica, 12, ej.pdf.PdfFontStyle.regular),
+    font,
     { x: 10, y: 20, width: 300, height: 50 },
-    new PdfBrush({ r: 0, g: 0, b: 0 })
+    new ej.pdf.PdfBrush({ r: 0, g: 0, b: 0 })
 );
 // Configure RC4 security using a user password.
 document.setSecurity({
@@ -79,16 +74,25 @@ document.setSecurity({
     userPassword: 'password'
 });
 // Save the encrypted PDF document.
-const data = document.save('Output.pdf');
+document.save('Output.pdf');
 // Destroy the document and release its resources.
 document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
 
-You can restrict document operations by specifying an owner password and permission flags. The following security configuration permits printing and accessibility-based content copying.
+You can restrict document operations by specifying an owner password and permission flags. The following example encrypts a new PDF document using RC4 128-bit encryption and permits only printing and accessibility-based content copying.
 
-```typescript
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+
+import { PdfDocument, PdfEncryptionType, PdfPermissionFlag, PdfSecurityOptions } from '@syncfusion/ej2-pdf';
+
+// Create a new PDF document.
+const document: PdfDocument = new PdfDocument();
+// Add a page to the document.
+document.addPage();
+// Restrict the document operations using an owner password and permission flags.
 const options: PdfSecurityOptions = {
     encryptionType: PdfEncryptionType.rc4Bit128,
     ownerPassword: 'ownerPassword',
@@ -97,7 +101,33 @@ const options: PdfSecurityOptions = {
         PdfPermissionFlag.accessibilityCopyContent
 };
 document.setSecurity(options);
-```
+// Save the encrypted PDF document.
+document.save('Output.pdf');
+// Destroy the document and release its resources.
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Create a new PDF document.
+const document = new ej.pdf.PdfDocument();
+// Add a page to the document.
+document.addPage();
+// Restrict the document operations using an owner password and permission flags.
+document.setSecurity({
+    encryptionType: ej.pdf.PdfEncryptionType.rc4Bit128,
+    ownerPassword: 'ownerPassword',
+    userPassword: 'userPassword',
+    permissions: ej.pdf.PdfPermissionFlag.print |
+        ej.pdf.PdfPermissionFlag.accessibilityCopyContent
+});
+// Save the encrypted PDF document.
+document.save('Output.pdf');
+// Destroy the document and release its resources.
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
 
 N> When both user and owner passwords are specified, use different values for the two passwords.
 
@@ -110,11 +140,7 @@ The following example encrypts a new PDF document using AES 256-bit Revision 5 e
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import {
-    PdfDocument,
-    PdfEncryptionType,
-    PdfSecurityOptions
-} from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfEncryptionType, PdfSecurityOptions } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document.
 const document: PdfDocument = new PdfDocument();
@@ -133,11 +159,6 @@ document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
-
-import {
-    PdfDocument,
-    PdfEncryptionType
-} from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document.
 const document = new ej.pdf.PdfDocument();
@@ -158,22 +179,15 @@ document.destroy();
 
 ## Decrypting an encrypted PDF document
 
-The JavaScript PDF Library supports decrypting a secured PDF document by loading it with a valid password, clearing its passwords, and saving it again. Reset the permission flags when the document restrictions must also be removed.
+The JavaScript PDF Library supports decrypting an encrypted PDF document by removing its owner or user password and restoring all supported permissions. This is particularly useful when you need to access or modify a secured PDF.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import {
-    PdfDocument,
-    PdfPermissionFlag,
-    PdfSecurityOptions
-} from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPermissionFlag, PdfSecurityOptions } from '@syncfusion/ej2-pdf';
 
-// Load the encrypted PDF document data.
-const response: Response = await fetch('Input.pdf');
-const inputData: Uint8Array = new Uint8Array(await response.arrayBuffer());
 // Open the document using a valid password.
-const document: PdfDocument = new PdfDocument(inputData, 'syncfusion');
+const document: PdfDocument = new PdfDocument(inputData, 'password');
 // Clear the passwords and restore all supported permissions.
 const options: PdfSecurityOptions = {
     userPassword: '',
@@ -197,10 +211,7 @@ document.destroy();
 {% highlight javascript tabtitle="JavaScript" %}
 
 // Load the encrypted PDF document data.
-const response = await fetch('Input.pdf');
-const inputData = new Uint8Array(await response.arrayBuffer());
-// Open the document using a valid password.
-const document = new ej.pdf.PdfDocument(inputData, 'syncfusion');
+const document = new ej.pdf.PdfDocument(inputData, 'password');
 // Clear the passwords and restore all supported permissions.
 document.setSecurity({
     userPassword: '',
@@ -224,20 +235,14 @@ document.destroy();
 
 ## Protect an existing PDF document
 
-You can protect an existing PDF document by loading its data, configuring the required encryption type and passwords, and saving the document.
+You can make the existing PDF document password protected by configuring the required encryption type and passwords, and saving the document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import {
-    PdfDocument,
-    PdfEncryptionType,
-    PdfSecurityOptions
-} from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfEncryptionType, PdfSecurityOptions } from '@syncfusion/ej2-pdf';
 
-// Load an existing PDF document.
-const response: Response = await fetch('Input.pdf');
-const inputData: Uint8Array = new Uint8Array(await response.arrayBuffer());
+// Load the existing PDF document
 const document: PdfDocument = new PdfDocument(inputData);
 // Protect the document using AES encryption.
 const options: PdfSecurityOptions = {
@@ -255,8 +260,6 @@ document.destroy();
 {% highlight javascript tabtitle="JavaScript" %}
 
 // Load an existing PDF document.
-const response = await fetch('Input.pdf');
-const inputData = new Uint8Array(await response.arrayBuffer());
 const document = new ej.pdf.PdfDocument(inputData);
 // Protect the document using AES encryption.
 document.setSecurity({
@@ -279,14 +282,9 @@ You can change the user password of an existing encrypted PDF document by loadin
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import {
-    PdfDocument,
-    PdfSecurityOptions
-} from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfSecurityOptions } from '@syncfusion/ej2-pdf';
 
 // Load the password-protected PDF document.
-const response: Response = await fetch('Input.pdf');
-const inputData: Uint8Array = new Uint8Array(await response.arrayBuffer());
 const document: PdfDocument = new PdfDocument(inputData, 'password');
 // Change the user password.
 const options: PdfSecurityOptions = {
@@ -302,62 +300,12 @@ document.destroy();
 {% highlight javascript tabtitle="JavaScript" %}
 
 // Load the password-protected PDF document.
-const response = await fetch('Input.pdf');
-const inputData = new Uint8Array(await response.arrayBuffer());
 const document = new ej.pdf.PdfDocument(inputData, 'password');
 // Change the user password.
 document.setSecurity({
     userPassword: 'NewPassword'
 });
 // Save the password-changed PDF document.
-document.save('Output.pdf');
-// Destroy the document and release its resources.
-document.destroy();
-
-{% endhighlight %}
-{% endtabs %}
-
-## Change the permissions of a PDF document
-
-You can change the permissions of an existing secured PDF document using the `permissions` property of `PdfSecurityOptions`. Load the document using a valid password before updating the permission flags.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-
-import {
-    PdfDocument,
-    PdfPermissionFlag,
-    PdfSecurityOptions
-} from '@syncfusion/ej2-pdf';
-
-// Load the secured PDF document.
-const response: Response = await fetch('Input.pdf');
-const inputData: Uint8Array = new Uint8Array(await response.arrayBuffer());
-const document: PdfDocument = new PdfDocument(inputData, 'syncfusion');
-// Allow content copying and document assembly.
-const options: PdfSecurityOptions = {
-    permissions: PdfPermissionFlag.copyContent |
-        PdfPermissionFlag.assembleDocument
-};
-document.setSecurity(options);
-// Save the PDF document with the updated permissions.
-const data: Uint8Array = document.save('Output.pdf');
-// Destroy the document and release its resources.
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-
-// Load the secured PDF document.
-const response = await fetch('Input.pdf');
-const inputData = new Uint8Array(await response.arrayBuffer());
-const document = new PdfDocument(inputData, 'syncfusion');
-// Allow content copying and document assembly.
-document.setSecurity({
-    permissions: ej.pdf.PdfPermissionFlag.copyContent |
-        ej.pdf.PdfPermissionFlag.assembleDocument
-});
-// Save the PDF document with the updated permissions.
 document.save('Output.pdf');
 // Destroy the document and release its resources.
 document.destroy();
@@ -372,14 +320,9 @@ The `permissions` property of `PdfDocument` returns the permission flags availab
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import {
-    PdfDocument,
-    PdfPermissionFlag
-} from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPermissionFlag } from '@syncfusion/ej2-pdf';
 
 // Load the secured PDF document.
-const response: Response = await fetch('Input.pdf');
-const inputData: Uint8Array = new Uint8Array(await response.arrayBuffer());
 const document: PdfDocument = new PdfDocument(inputData, 'password');
 // Get the document permission flags.
 const permissions: PdfPermissionFlag = document.permissions;
@@ -407,8 +350,6 @@ document.destroy();
 {% highlight javascript tabtitle="JavaScript" %}
 
 // Load the secured PDF document.
-const response = await fetch('Input.pdf');
-const inputData = new Uint8Array(await response.arrayBuffer());
 const document = new ej.pdf.PdfDocument(inputData, 'password');
 // Get the document permission flags.
 const permissions = document.permissions;
@@ -445,28 +386,24 @@ The following flags can be combined when configuring document permissions:
 - `PdfPermissionFlag.assembleDocument`
 - `PdfPermissionFlag.fullQualityPrint`
 
-## Remove the password from a user-password-protected PDF document
+## Change the permissions of a PDF document
 
-You can remove the user password from an encrypted PDF document by loading it with the current password, setting `userPassword` to an empty string, and saving the document.
+You can change the permissions of an existing secured PDF document using the `permissions` property of `PdfSecurityOptions`. Load the document using a valid password before updating the permission flags.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import {
-    PdfDocument,
-    PdfSecurityOptions
-} from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPermissionFlag, PdfSecurityOptions } from '@syncfusion/ej2-pdf';
 
-// Load the password-protected PDF document.
-const response: Response = await fetch('Input.pdf');
-const inputData: Uint8Array = new Uint8Array(await response.arrayBuffer());
-const document: PdfDocument = new PdfDocument(inputData, 'password');
-// Remove the user password.
+// Load the secured PDF document.
+const document: PdfDocument = new PdfDocument(inputData, 'syncfusion');
+// Allow content copying and document assembly.
 const options: PdfSecurityOptions = {
-    userPassword: ''
+    permissions: PdfPermissionFlag.copyContent |
+        PdfPermissionFlag.assembleDocument
 };
 document.setSecurity(options);
-// Save the PDF document without the user password.
+// Save the PDF document with the updated permissions.
 document.save('Output.pdf');
 // Destroy the document and release its resources.
 document.destroy();
@@ -474,23 +411,20 @@ document.destroy();
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 
-// Load the password-protected PDF document.
-const response = await fetch('Input.pdf');
-const inputData = new Uint8Array(await response.arrayBuffer());
-const document = new ej.pdf.PdfDocument(inputData, 'password');
-// Remove the user password.
+// Load the secured PDF document.
+const document = new ej.pdf.PdfDocument(inputData, 'syncfusion');
+// Allow content copying and document assembly.
 document.setSecurity({
-    userPassword: ''
+    permissions: ej.pdf.PdfPermissionFlag.copyContent |
+        ej.pdf.PdfPermissionFlag.assembleDocument
 });
-// Save the PDF document without the user password.
+// Save the PDF document with the updated permissions.
 document.save('Output.pdf');
 // Destroy the document and release its resources.
 document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
-
-N> If the document also has an owner password or permission restrictions, clear the owner password and update the permissions when complete decryption is required.
 
 ## How to determine whether a PDF document is password protected
 
@@ -501,37 +435,25 @@ To determine whether a PDF document requires a password, try loading it without 
 
 import { PdfDocument } from '@syncfusion/ej2-pdf';
 
-// Load the PDF document data.
-const response: Response = await fetch('Input.pdf');
-const inputData: Uint8Array = new Uint8Array(await response.arrayBuffer());
+// Load the PDF document data
 let isPasswordProtected: boolean = false;
-let document: PdfDocument | undefined;
 try {
     // Loading without a password fails when a valid password is required.
-    document = new PdfDocument(inputData);
-} catch (error) {
+    let document = new PdfDocument(inputData);
+} catch (error.message == 'Cannot open an encrypted document. The password is invalid.') {
     isPasswordProtected = true;
-}
-if (document) {
-    document.destroy();
 }
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 
 // Load the PDF document data.
-const response = await fetch('Input.pdf');
-const inputData = new Uint8Array(await response.arrayBuffer());
 let isPasswordProtected = false;
-let document;
 try {
     // Loading without a password fails when a valid password is required.
-    document = new ej.pdf.PdfDocument(inputData);
-} catch (error) {
+    let document = new ej.pdf.PdfDocument(inputData);
+} catch (error.message == 'Cannot open an encrypted document. The password is invalid.') {
     isPasswordProtected = true;
-}
-if (document) {
-    document.destroy();
 }
 
 {% endhighlight %}

@@ -820,90 +820,19 @@ The `validateSignatures` method returns the overall validation status and the in
 The following code example shows how to validate the digital signatures in an existing PDF document.
 
 {% tabs %}
-
-{% highlight javascript tabtitle="JavaScript" %}
-
-import {
-    PdfDocument
-} from '@syncfusion/ej2-pdf';
-
-// Fetch a file and return its content as a Uint8Array.
-async function fetchAsUint8Array(url) {
-    const response = await fetch(url);
-    if (!response.ok) {
-        throw new Error(`Failed to load the file: ${response.statusText}`);
-    }
-    return new Uint8Array(await response.arrayBuffer());
-}
-
-// Load the signed PDF document.
-const documentData = await fetchAsUint8Array('Input.pdf');
-const document = new PdfDocument(documentData);
-
-// Load the trusted certificate.
-const certificateData = await fetchAsUint8Array('PDF.pfx');
-
-// Configure the signature validation options.
-const options = {
-    trustedCertificates: [certificateData],
-    passwords: ['syncfusion']
-};
-
-// Validate the digital signatures in the PDF document.
-const validationResult = document.form.validateSignatures(options);
-
-// Check the validation result of each signature.
-if (validationResult.results !== null &&
-    validationResult.results !== undefined) {
-    validationResult.results.forEach((result) => {
-        console.log('Signature name: ' + result.signatureName);
-        console.log('Signature valid: ' + result.isSignatureValid);
-        console.log('Signature status: ' + result.signatureStatus);
-        console.log('Document modified: ' + result.isDocumentModified);
-        console.log('Revocation result: ', result.revocationResult);
-    });
-}
-
-// Get the overall signature validation status.
-console.log('All signatures valid: ' + validationResult.isValid);
-
-// Destroy the document and release its resources.
-document.destroy();
-
-{% endhighlight %}
-
 {% highlight typescript tabtitle="TypeScript" %}
 
-import {
-    PdfDocument,
-    PdfSignatureValidationOptions
-} from '@syncfusion/ej2-pdf';
-
-// Fetch a file and return its content as a Uint8Array.
-async function fetchAsUint8Array(url: string): Promise<Uint8Array> {
-    const response: Response = await fetch(url);
-    if (!response.ok) {
-        throw new Error(`Failed to load the file: ${response.statusText}`);
-    }
-    return new Uint8Array(await response.arrayBuffer());
-}
+import { PdfDocument, PdfSignatureValidationOptions } from '@syncfusion/ej2-pdf';
 
 // Load the signed PDF document.
-const documentData: Uint8Array = await fetchAsUint8Array('Input.pdf');
 const document: PdfDocument = new PdfDocument(documentData);
-
-// Load the trusted certificate.
-const certificateData: Uint8Array = await fetchAsUint8Array('PDF.pfx');
-
 // Configure the signature validation options.
 const options: PdfSignatureValidationOptions = {
     trustedCertificates: [certificateData],
     passwords: ['syncfusion']
 };
-
 // Validate the digital signatures in the PDF document.
 const validationResult = document.form.validateSignatures(options);
-
 // Check the validation result of each signature.
 if (validationResult.results !== null &&
     validationResult.results !== undefined) {
@@ -915,10 +844,36 @@ if (validationResult.results !== null &&
         console.log('Revocation result: ', result.revocationResult);
     });
 }
-
 // Get the overall signature validation status.
 console.log('All signatures valid: ' + validationResult.isValid);
+// Destroy the document and release its resources.
+document.destroy();
 
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Load the signed PDF document.
+const document = new ej.pdf.PdfDocument(documentData);
+// Configure the signature validation options.
+const options = {
+    trustedCertificates: [certificateData],
+    passwords: ['syncfusion']
+};
+// Validate the digital signatures in the PDF document.
+const validationResult = document.form.validateSignatures(options);
+// Check the validation result of each signature.
+if (validationResult.results !== null &&
+    validationResult.results !== undefined) {
+    validationResult.results.forEach((result) => {
+        console.log('Signature name: ' + result.signatureName);
+        console.log('Signature valid: ' + result.isSignatureValid);
+        console.log('Signature status: ' + result.signatureStatus);
+        console.log('Document modified: ' + result.isDocumentModified);
+        console.log('Revocation result: ', result.revocationResult);
+    });
+}
+// Get the overall signature validation status.
+console.log('All signatures valid: ' + validationResult.isValid);
 // Destroy the document and release its resources.
 document.destroy();
 
@@ -933,122 +888,74 @@ You can validate all digital signatures in a PDF document by calling the `valida
 The following code example shows how to validate all signatures and determine whether the complete PDF document has valid signatures.
 
 {% tabs %}
-
-{% highlight javascript tabtitle="JavaScript" %}
-
-import {
-    PdfDocument
-} from '@syncfusion/ej2-pdf';
-
-// Fetch a file and return its content as a Uint8Array.
-async function fetchAsUint8Array(url) {
-    const response = await fetch(url);
-    if (!response.ok) {
-        throw new Error(`Failed to load the file: ${response.statusText}`);
-    }
-    return new Uint8Array(await response.arrayBuffer());
-}
-
-// Load the PDF document that contains multiple signatures.
-const documentData = await fetchAsUint8Array('Input.pdf');
-const document = new PdfDocument(documentData);
-
-// Load the trusted certificate used for signature validation.
-const certificateData = await fetchAsUint8Array('PDF.pfx');
-
-// Configure the validation options.
-const options = {
-    trustedCertificates: [certificateData],
-    passwords: ['syncfusion']
-};
-
-// Validate all signatures in the PDF document.
-const validationResult = document.form.validateSignatures(options);
-
-if (validationResult.results !== null &&
-    validationResult.results !== undefined) {
-    console.log(
-        'Number of validated signatures: ' +
-        validationResult.results.length
-    );
-
-    validationResult.results.forEach((result) => {
-        console.log(
-            `${result.signatureName}: ${result.isSignatureValid}`
-        );
-    });
-}
-
-// Determine whether all signatures are valid.
-if (validationResult.isValid) {
-    console.log('All signatures in the PDF document are valid.');
-} else {
-    console.log('One or more signatures in the PDF document are invalid.');
-}
-
-// Destroy the document and release its resources.
-document.destroy();
-
-{% endhighlight %}
-
 {% highlight typescript tabtitle="TypeScript" %}
 
-import {
-    PdfDocument,
-    PdfSignatureValidationOptions
-} from '@syncfusion/ej2-pdf';
-
-// Fetch a file and return its content as a Uint8Array.
-async function fetchAsUint8Array(url: string): Promise<Uint8Array> {
-    const response: Response = await fetch(url);
-    if (!response.ok) {
-        throw new Error(`Failed to load the file: ${response.statusText}`);
-    }
-    return new Uint8Array(await response.arrayBuffer());
-}
+import { PdfDocument, PdfSignatureValidationOptions } from '@syncfusion/ej2-pdf';
 
 // Load the PDF document that contains multiple signatures.
-const documentData: Uint8Array = await fetchAsUint8Array('Input.pdf');
 const document: PdfDocument = new PdfDocument(documentData);
-
-// Load the trusted certificate used for signature validation.
-const certificateData: Uint8Array = await fetchAsUint8Array('PDF.pfx');
-
 // Configure the validation options.
 const options: PdfSignatureValidationOptions = {
     trustedCertificates: [certificateData],
     passwords: ['syncfusion']
 };
-
 // Validate all signatures in the PDF document.
 const validationResult = document.form.validateSignatures(options);
-
 if (validationResult.results !== null &&
     validationResult.results !== undefined) {
     console.log(
         'Number of validated signatures: ' +
         validationResult.results.length
     );
-
     validationResult.results.forEach((result) => {
         console.log(
             `${result.signatureName}: ${result.isSignatureValid}`
         );
     });
 }
-
 // Determine whether all signatures are valid.
 if (validationResult.isValid) {
     console.log('All signatures in the PDF document are valid.');
 } else {
     console.log('One or more signatures in the PDF document are invalid.');
 }
-
 // Destroy the document and release its resources.
 document.destroy();
 
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
 
+// Load the PDF document that contains multiple signatures.
+const document = new PdfDocument(documentData);
+// Configure the validation options.
+const options = {
+    trustedCertificates: [certificateData],
+    passwords: ['syncfusion']
+};
+// Validate all signatures in the PDF document.
+const validationResult = document.form.validateSignatures(options);
+if (validationResult.results !== null &&
+    validationResult.results !== undefined) {
+    console.log(
+        'Number of validated signatures: ' +
+        validationResult.results.length
+    );
+    validationResult.results.forEach((result) => {
+        console.log(
+            `${result.signatureName}: ${result.isSignatureValid}`
+        );
+    });
+}
+// Determine whether all signatures are valid.
+if (validationResult.isValid) {
+    console.log('All signatures in the PDF document are valid.');
+} else {
+    console.log('One or more signatures in the PDF document are invalid.');
+}
+// Destroy the document and release its resources.
+document.destroy();
+
+{% endhighlight %}
 {% endtabs %}
 
 ## Inspecting signatures
