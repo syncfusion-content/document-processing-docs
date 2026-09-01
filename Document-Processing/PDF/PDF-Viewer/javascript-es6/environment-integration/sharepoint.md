@@ -22,7 +22,7 @@ Before creating the SharePoint application, ensure that the following software i
 
 References:
 
-- [Set up your SharePoint Framework development environment](https://learn.microsoft.com/sharepoint/dev/spfx/set-up-your-development-environment)
+- [Set up your SharePoint Framework development environment](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-development-environment)
 - [Node.js release schedule](https://nodejs.org/en/about/previous-releases)
 
 Install the required SharePoint Framework tools:
@@ -32,7 +32,7 @@ npm install -g yo
 npm install -g @microsoft/generator-sharepoint
 ```
 
-> Note: The examples in this topic were tested with **Node.js 22.x**, **@microsoft/generator-sharepoint 1.23.2**, and **@syncfusion/ej2-pdfviewer ^34.2.5**. Run `node -v`, `npm -v`, and `yo @microsoft/sharepoint --version` only if you need to confirm the installed versions match.
+> Note: The examples in this topic were tested with **Node.js 22.x**, **`@microsoft/generator-sharepoint` 1.23.2**, and **`@syncfusion/ej2-pdfviewer` ^34.2.5**. Run `node -v`, `npm -v`, and `yo @microsoft/sharepoint --version` only if you need to confirm the installed versions match.
 
 ## Create a SharePoint Framework Project
 
@@ -188,8 +188,8 @@ Add the PdfViewer web part to the page.
 
 ## See Also
 
-- [PDF Viewer Getting Started](../getting-started.md)
-- [Toolbar Customization](../toolbar.md)
-- [Annotations](../annotations.md)
-- [Form Designer](../forms/)
-- [Page Organizer](../organize-pdf.md)
+- [PDF Viewer Getting Started](../getting-started)
+- [Toolbar Customization](../toolbar)
+- [Annotations](../annotations)
+- [Form Designer](../forms/overview)
+- [Page Organizer](../organize-pdf)
