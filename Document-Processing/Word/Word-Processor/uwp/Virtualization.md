@@ -14,6 +14,6 @@ N> UI virtualization is enabled by default; no additional configuration is requi
 
 ## See also
 
-- [Overview of UWP RichTextBox](./Overview)
-- [Getting started with UWP RichTextBox](./Getting-Started)
-- [Import and Export in UWP RichTextBox](./Import-and-Export)
+- [Overview of UWP DOCX Editor](./Overview)
+- [Getting started with UWP DOCX Editor](./Getting-Started)
+- [Import and Export in UWP DOCX Editor](./Import-and-Export)

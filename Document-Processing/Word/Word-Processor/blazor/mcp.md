@@ -16,7 +16,7 @@ These tools speed up development and reinforce best practices for Blazor DOCX Ed
 
 ## Key Benefits
 
-- **Expert DOCX Editor Knowledge** - Deep understanding of Blazor DOCX Editor component (Document Editor) and its implementation patterns.
+- **Expert DOCX Editor Knowledge** - Deep understanding of Blazor DOCX Editor component (DOCX Editor) and its implementation patterns.
 - **Unlimited Usage** - No request limits, time restrictions, or query caps.
 - **Privacy-Focused** - The tools operate based on the user's query and do not store any content, data, or prompts.
 

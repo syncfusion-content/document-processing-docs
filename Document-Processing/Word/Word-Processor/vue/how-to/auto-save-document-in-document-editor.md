@@ -2,7 +2,7 @@
 layout: post
 title: How to Auto Save Document to AWS S3 in Vue DOCX Editor | Syncfusion
 description: Automatically save edited documents to AWS S3 at regular intervals in Syncfusion® Vue DOCX Editor for reliable cloud-based storage.
-control: Auto save document in document editor 
+control: Auto save document in DOCX Editor 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
@@ -148,7 +148,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 * In the server-side, configure the access key and secret key in the `web.config` file and register the profile in `startup.cs`.
 

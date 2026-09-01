@@ -22,7 +22,7 @@ Below are detailed examples for each ribbon customization scenario.
 
 ## File menu customization
 
-Document Editor provides APIs to remove existing built-in File menu items and add new custom items based on your requirements. You can modify the File menu using the [`fileMenuItems`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container#filemenuitems) property.
+DOCX Editor provides APIs to remove existing built-in File menu items and add new custom items based on your requirements. You can modify the File menu using the [`fileMenuItems`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container#filemenuitems) property.
 
 In the example below, the "Open" and "Export" items have been removed from the File Menu Items, and new custom items have been added.
 
@@ -47,7 +47,7 @@ documenteditorContainer.appendTo('#DocumentEditor');
 
 ## Backstage menu customization
 
-The Document Editor provides an [`backStageMenu`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container#backStageMenu) API to add a backstage menu. When the backstage menu is enabled, the default File menu items are automatically hidden.
+The DOCX Editor provides an [`backStageMenu`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container#backStageMenu) API to add a backstage menu. When the backstage menu is enabled, the default File menu items are automatically hidden.
 
 The following code example shows how to add the backstage menu items.
 
@@ -73,11 +73,11 @@ Refer to this documentation to know more about [`backstage items`](https://ej2.s
 
 ## Tab customization
 
-You can customize the ribbon tabs in the Document Editor by showing, hiding, or adding tabs according to your application's requirements.
+You can customize the ribbon tabs in the DOCX Editor by showing, hiding, or adding tabs according to your application's requirements.
 
 ### Show/Hide tab
 
-Document editor provides the [`showTab`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/ribbon#showtab) API to show and hide the existing tab using a `RibbonTabType` and `tabId`.
+DOCX Editor provides the [`showTab`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/ribbon#showtab) API to show and hide the existing tab using a `RibbonTabType` and `tabId`.
 
 The following code example shows how to show/hide an existing tab using the existing tab type and tab id.
 ```js
@@ -90,7 +90,7 @@ container.ribbon.showTab('custom_tab', false);
 
 ### Add tab
 
-The Document Editor provides the [`addTab`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/ribbon#addtab) API, which allows you to insert a new custom tab either between existing tabs or at the end of the ribbon tabs.
+The DOCX Editor provides the [`addTab`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/ribbon#addtab) API, which allows you to insert a new custom tab either between existing tabs or at the end of the ribbon tabs.
 
 ```js
 // To add the tab at end of tab
@@ -123,7 +123,7 @@ You can also customize ribbon groups within a tab to better organize commands or
 
 ### Show/Hide group 
 
-Document Editor provides an [`showGroup`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/ribbon#showgroup) API to show or hide existing groups within a ribbon tab.
+DOCX Editor provides an [`showGroup`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/ribbon#showgroup) API to show or hide existing groups within a ribbon tab.
 
 The following code example shows how to show/hide the group using group Id or [`RibbonGroupInfo`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container#ribbongroupinfo).
 
@@ -176,7 +176,7 @@ You can customize individual items within ribbon groups. This includes showing, 
 
 ### Show/Hide item
 
-Using the [`showItems`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/ribbon#showitems) API in the Document Editor ribbon to show/hide the existing item. Here, you can specify the item Id or [`RibbonItemInfo`].
+Using the [`showItems`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/ribbon#showitems) API in the DOCX Editor ribbon to show/hide the existing item. Here, you can specify the item Id or [`RibbonItemInfo`].
 
 The following code example shows how to show/hide the item using item Id or [`RibbonItemInfo`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container#ribboniteminfo).
 
@@ -193,7 +193,7 @@ container.ribbon.showItems('custom_item', false);
 
 ### Enable/Disable item
 
-Using the [`enableItems`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/ribbon#enableitems) API in the Document Editor ribbon to enable/disable the existing item.
+Using the [`enableItems`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/ribbon#enableitems) API in the DOCX Editor ribbon to enable/disable the existing item.
 
 ```js
 // To disable the underline using ribbon item info
@@ -209,7 +209,7 @@ container.ribbon.enableItems('custom_item', false);
 
 ### Add item
 
-You can use the [`addItem`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/ribbon#additem) API in the Document Editor ribbon to add a new item. Additionally, you can specify the target tab and group where the new item should be placed.
+You can use the [`addItem`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/ribbon#additem) API in the DOCX Editor ribbon to add a new item. Additionally, you can specify the target tab and group where the new item should be placed.
 
 ```js
 
@@ -234,7 +234,7 @@ container.ribbon.addItem({ tabId: 'Home', index: 0 }, ribbonItem, 1);
 
 ## Online demo
 
-Explore how to customize the ribbon in the JavaScript (ES5) Document Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/ribbon-customization.html).
+Explore how to customize the ribbon in the JavaScript (ES5) DOCX Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/ribbon-customization.html).
 
 ## Related links
 

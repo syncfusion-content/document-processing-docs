@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to Disable Drag and Drop in JavaScript DOCX Editor | Syncfusion
-description: Disable drag and drop functionality in Syncfusion® JavaScript DOCX Editor to prevent users from moving content within the document editor component.
+description: Disable drag and drop functionality in Syncfusion® JavaScript DOCX Editor to prevent users from moving content within the DOCX Editor component.
 platform: document-processing
 control: Disable Drag and Drop
 documentation: ug

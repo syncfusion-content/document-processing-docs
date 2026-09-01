@@ -8,10 +8,10 @@ keywords: mini-toolbar,context-menu,formatting,floating-toolbar
 ---
 # Mini Toolbar in WPF DOCX Editor
 
-The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) supports a built-in mini toolbar to provide rich text formatting options such as Bold, Italic, etc. The mini toolbar can be enabled or disabled through the [EnableMiniToolBar](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_EnableMiniToolBar) property. 
+The [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) supports a built-in mini toolbar to provide rich text formatting options such as Bold, Italic, etc. The mini toolbar can be enabled or disabled through the [EnableMiniToolBar](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_EnableMiniToolBar) property. 
 
 The following screenshot shows the built-in mini toolbar of the SfRichTextBoxAdv control.
-![WPF RichTextBox showing the built-in mini toolbar with formatting options above a selected text range](Mini-Toolbar_images/wpf-richtextbox-mini-toolbar.jpeg)
+![WPF DOCX Editor showing the built-in mini toolbar with formatting options above a selected text range](Mini-Toolbar_images/wpf-docx-editor-mini-toolbar.jpeg)
 
 ## Enable/Disable mini toolbar
 
@@ -42,10 +42,10 @@ richTextBoxAdv.EnableMiniToolBar = False
 {% endhighlight %}
 {% endtabs %}
 
-N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
+N> You can refer to our [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF DOCX Editor example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 
 ## See also
 
-- [Getting Started in WPF RichTextBox](./Getting-Started)
-- [Commands in WPF RichTextBox](./Commands)
-- [Document Structure in WPF RichTextBox](./Document-Structure)
+- [Getting Started in WPF DOCX Editor](./Getting-Started)
+- [Commands in WPF DOCX Editor](./Commands)
+- [Document Structure in WPF DOCX Editor](./Document-Structure)

@@ -36,7 +36,7 @@ documenteditor.selection.sectionFormat.bottomMargin = 10;
 documenteditor.selection.sectionFormat.topMargin = 10;
 ```
 
-N> The maximum value of margin is 1584, as per Microsoft Word application, and you can set any value less than or equal to 1584 to this property. If you set any value greater than 1584, then the Syncfusion Document Editor will automatically reset it to 1584.
+N> The maximum value of margin is 1584, as per Microsoft Word application, and you can set any value less than or equal to 1584 to this property. If you set any value greater than 1584, then the Syncfusion DOCX Editor will automatically reset it to 1584.
 
 ## Header distance
 
@@ -70,7 +70,7 @@ container.documentEditor.selection.sectionFormat.lineBetweenColumns = true;
 
 ### Online demo
 
-Explore how to format Word documents with multiple columns using the JavaScript Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/multiple-columns.html).
+Explore how to format Word documents with multiple columns using the JavaScript DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/multiple-columns.html).
 
 ## Breaks
 
@@ -100,7 +100,7 @@ container.documentEditor.editor.insertSectionBreak(SectionBreakType.Continuous);
 
 ## Online demo
 
-Explore how to apply section formatting in Word documents using the JavaScript Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/section-formatting.html).
+Explore how to apply section formatting in Word documents using the JavaScript DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/section-formatting.html).
 
 ## See also
 

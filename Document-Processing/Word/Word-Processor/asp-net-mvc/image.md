@@ -29,13 +29,13 @@ Image files will be internally converted to a base64 string. Whereas, online ima
 
 ## Image resizing
 
-Document Editor provides a built-in image resizer that can be injected into your application based on the requirements. This allows you to resize the image by dragging the resizing points using mouse or touch interactions. This resizer appears as follows.
+DOCX Editor provides a built-in image resizer that can be injected into your application based on the requirements. This allows you to resize the image by dragging the resizing points using mouse or touch interactions. This resizer appears as follows.
 
 ![Image](images/image.JPG)
 
 ## Changing size
 
-Document Editor exposes an API to get or set the size of the selected image.
+DOCX Editor exposes an API to get or set the size of the selected image.
 
 ```typescript
 documenteditor.selection.imageFormat.width = 800;
@@ -50,7 +50,7 @@ Text wrapping refers to how images fit with surrounding text in a document. [Ref
 
 ## Positioning the image
 
-Document Editor preserves the position properties of the image and displays the image based on position properties. It does not support modifying the position properties. Whereas, the image will be automatically moved when the text is edited if it is positioned relative to the line or paragraph.
+DOCX Editor preserves the position properties of the image and displays the image based on position properties. It does not support modifying the position properties. Whereas, the image will be automatically moved when the text is edited if it is positioned relative to the line or paragraph.
 
 ## See Also
 

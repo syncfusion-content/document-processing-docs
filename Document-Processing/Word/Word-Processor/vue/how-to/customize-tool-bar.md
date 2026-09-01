@@ -172,4 +172,4 @@ N> The default value of `toolbarItems` is `['New', 'Open', 'Separator', 'Undo', 
 
 ## Online Demo
 
-Explore how to customize the toolbar in the Vue Document Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/toolbar-customization.html).
+Explore how to customize the toolbar in the Vue DOCX Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/toolbar-customization.html).

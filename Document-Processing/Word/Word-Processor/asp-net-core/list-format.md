@@ -65,13 +65,13 @@ documenteditor.editor.clearList();
 
 ## Editing numbered list
 
-Document Editor restarts the numbering or continues numbering for a numbered list. These options are found in the built-in context menu, if the list value is selected.
+DOCX Editor restarts the numbering or continues numbering for a numbered list. These options are found in the built-in context menu, if the list value is selected.
 
 ![Image](images/list.JPG)
 
 ## Online Demo
 
-Explore how to apply bullets and numbering in Word documents using the ASP.NET Core Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/bulletsandnumbering#/tailwind3).
+Explore how to apply bullets and numbering in Word documents using the ASP.NET Core DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/bulletsandnumbering#/tailwind3).
 
 ## See Also
 

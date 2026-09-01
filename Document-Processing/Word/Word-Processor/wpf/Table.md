@@ -8,7 +8,7 @@ keywords: table,rows,columns,cells,merge,alignment
 ---
 # Tables in WPF DOCX Editor
 
-The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) allows you to add tables to the rich text document. You can insert rows or columns into an existing table and can also delete existing rows and columns. The SfRichTextBoxAdv also allows you to merge the selected cells into one (both vertically and horizontally). The tables are represented using the [TableAdv](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.TableAdv.html) class, with each row represented by [TableRowAdv](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.TableRowAdv.html) and each cell by [TableCellAdv](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.TableCellAdv.html). The cell-level layout is controlled by the [CellFormat](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.CellFormat.html) class.
+The [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) allows you to add tables to the rich text document. You can insert rows or columns into an existing table and can also delete existing rows and columns. The SfRichTextBoxAdv also allows you to merge the selected cells into one (both vertically and horizontally). The tables are represented using the [TableAdv](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.TableAdv.html) class, with each row represented by [TableRowAdv](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.TableRowAdv.html) and each cell by [TableCellAdv](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.TableCellAdv.html). The cell-level layout is controlled by the [CellFormat](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.CellFormat.html) class.
 
 The following code example illustrates how to add tables into the rich text document.
 
@@ -260,10 +260,10 @@ The following code example illustrates how to bind a button UI command for delet
 
 {% endtabs %}
 
-N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
+N> You can refer to our [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF DOCX Editor example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 
 ## See also
 
-- [Commands in WPF RichTextBox](./Commands)
-- [Document Structure in WPF RichTextBox](./Document-Structure)
-- [Document Properties in WPF RichTextBox](./Document-Properties)
+- [Commands in WPF DOCX Editor](./Commands)
+- [Document Structure in WPF DOCX Editor](./Document-Structure)
+- [Document Properties in WPF DOCX Editor](./Document-Properties)

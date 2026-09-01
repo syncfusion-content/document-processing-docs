@@ -3,13 +3,13 @@ layout: post
 title: View in Blazor DOCX Editor | Syncfusion
 description: View in Blazor DOCX Editor enables web layout, ruler display, and heading navigation to enhance document readability and navigation.
 platform: document-processing
-control: Document Editor
+control: DOCX Editor
 documentation: ug
 ---
 
 # View in Blazor DOCX Editor
 
-This topic describes view-related options in the Document Editor, including layout type (Pages or Continuous), displaying the ruler, and enabling the heading navigation pane.
+This topic describes view-related options in the DOCX Editor, including layout type (Pages or Continuous), displaying the ruler, and enabling the heading navigation pane.
 
 ## Web layout
 
@@ -24,7 +24,7 @@ N> The default value of [`LayoutType`](https://help.syncfusion.com/cr/blazor/Syn
 
 ### Online demo
 
-Explore how to view Word documents in web layout using the Blazor Document Editor in this live [Blazor Web Layout demo](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/web-layout?theme=fluent2).
+Explore how to view Word documents in web layout using the Blazor DOCX Editor in this live [Blazor Web Layout demo](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/web-layout?theme=fluent2).
 
 ## Show ruler
 
@@ -46,13 +46,13 @@ The following example illustrates how to enable the ruler in the Document Editor
 
 ### Online demo
 
-Explore how to use the ruler in the Blazor Document Editor for working with Word documents in this live [Blazor Ruler demo](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/ruler?theme=fluent2).
+Explore how to use the ruler in the Blazor DOCX Editor for working with Word documents in this live [Blazor Ruler demo](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/ruler?theme=fluent2).
 
 ## Heading navigation pane
 
 Using the heading navigation pane allows users to quickly navigate documents by heading.
 
-The following example demonstrates how to enable the heading navigation pane in a Document Editor.
+The following example demonstrates how to enable the heading navigation pane in a DOCX Editor.
 
 ```csharp
 <SfDocumentEditorContainer @ref="container" Height="590px" DocumentEditorSettings="@settings">
@@ -66,4 +66,4 @@ The following example demonstrates how to enable the heading navigation pane in 
 
 ### Online demo
 
-Explore how to navigate through headings in Word documents using the Blazor Document Editor in this live [Blazor Heading Navigation demo](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/heading-navigation?theme=fluent2).
+Explore how to navigate through headings in Word documents using the Blazor DOCX Editor in this live [Blazor Heading Navigation demo](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/heading-navigation?theme=fluent2).

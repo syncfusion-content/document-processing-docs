@@ -14,7 +14,7 @@ The [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net
 
 ## Preventing the default keyboard shortcut
 
-The following code shows how to prevent the `CTRL + C` keyboard shortcut for copying the selected content in the Document Editor.
+The following code shows how to prevent the `CTRL + C` keyboard shortcut for copying the selected content in the DOCX Editor.
 
 
 {% tabs %}

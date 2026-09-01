@@ -10,7 +10,7 @@ documentation: ug
 
 # Section Format in ASP.NET MVC DOCX Editor
 
-The Document Editor supports various section formatting options, such as page size and page margins.
+The DOCX Editor supports various section formatting options, such as page size and page margins.
 
 ## Page size
 
@@ -34,7 +34,7 @@ documenteditor.selection.sectionFormat.bottomMargin = 10;
 documenteditor.selection.sectionFormat.topMargin = 10;
 ```
 
-N> The maximum value of the margin is 1584, as per the Microsoft Word application, and you can set any value less than or equal to 1584 for this property. If you set a value greater than 1584, Syncfusion Document Editor automatically resets it to 1584.
+N> The maximum value of the margin is 1584, as per the Microsoft Word application, and you can set any value less than or equal to 1584 for this property. If you set a value greater than 1584, Syncfusion DOCX Editor automatically resets it to 1584.
 
 ## Header distance
 
@@ -54,7 +54,7 @@ documenteditor.selection.sectionFormat.footerDistance = 72;
 
 ## Online Demo
 
-Explore how to apply section formatting in Word documents using the ASP.NET MVC Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/sectionformatting#/tailwind3).
+Explore how to apply section formatting in Word documents using the ASP.NET MVC DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/sectionformatting#/tailwind3).
 
 ## See Also
 

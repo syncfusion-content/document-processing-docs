@@ -33,7 +33,7 @@ You can close the options pane by pressing the `Esc` key.
 
 ## Search
 
-The [`Search`](https://ej2.syncfusion.com/documentation/api/document-editor/search) module of Document Editor exposes the following APIs:
+The [`Search`](https://ej2.syncfusion.com/documentation/api/document-editor/search) module of DOCX Editor exposes the following APIs:
 
 |API Name|Type |Description|
 |---|---|---|
@@ -45,7 +45,7 @@ The [`Search`](https://ej2.syncfusion.com/documentation/api/document-editor/sear
 
 Using [`find()`](https://ej2.syncfusion.com/documentation/api/document-editor/search#find) method, you can find the immediate occurrence of specified text from current cursor position in the document.
 
-The following example code illustrates how to use find in Document editor.
+The following example code illustrates how to use find in DOCX Editor.
 
 ```ts
 documenteditor.search.find('Some text', 'None');
@@ -80,7 +80,7 @@ The [`SearchResults`](https://ej2.syncfusion.com/documentation/api/document-edit
 
 Using [`replaceAll`](https://ej2.syncfusion.com/documentation/api/document-editor/searchResults#replaceall), you can replace all the occurrences with specified text.
 
-The following example code illustrates how to use replace All in Document editor.
+The following example code illustrates how to use replace All in DOCX Editor.
 
 ```ts
 documentEditor.search.findAll('Some text');

@@ -3,7 +3,7 @@ layout: post
 title: List Format in Blazor DOCX Editor | Syncfusion
 description: The list format feature in Blazor DOCX Editor enables users to create and customize bulleted and numbered lists for organized document content.
 platform: document-processing
-control: Document Editor
+control: DOCX Editor
 documentation: ug
 ---
 
@@ -54,14 +54,14 @@ await container.DocumentEditor.Editor.ClearListAsync();
 
 ## Editing numbered lists
 
-The Document Editor provides options for controlling the sequence of numbered lists.
+The DOCX Editor provides options for controlling the sequence of numbered lists.
 
 ### Restarting and continuing numbering
 
 When working with numbered lists, you can choose to restart numbering at "1" or continue the sequence from a previous list. These options are available in the context menu when you right-click a list number.
 
-![Context menu in Blazor Document Editor showing options to restart or continue list numbering.](images/blazor-document-editor-list.jpeg)
+![Context menu in Blazor DOCX Editor showing options to restart or continue list numbering.](images/blazor-document-editor-list.jpeg)
 
 ## Online demo
 
-Explore how to apply bullets and numbering in Word documents using the Blazor Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/bullets-and-numbering?theme=fluent2).
+Explore how to apply bullets and numbering in Word documents using the Blazor DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/bullets-and-numbering?theme=fluent2).

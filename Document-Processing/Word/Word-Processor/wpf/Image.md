@@ -8,7 +8,7 @@ keywords: image,insert-picture,image-resizer,text-wrapping,image-position
 ---
 # Images in WPF DOCX Editor
 
-The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) allows you to insert images of various formats, including bitmap (.bmp), JPEG (.jpg, .jpeg), and PNG (.png). Metafile images (.wmf, .emf) are not supported.
+The [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) allows you to insert images of various formats, including bitmap (.bmp), JPEG (.jpg, .jpeg), and PNG (.png). Metafile images (.wmf, .emf) are not supported.
 
 The following code example illustrates how to insert a picture into the SfRichTextBoxAdv document through the [InsertPictureCommand](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_InsertPictureCommand) UI command.
 
@@ -39,7 +39,7 @@ Dim richTextBoxAdv As New SfRichTextBoxAdv()
 richTextBoxAdv.EditorSettings.EnableImageResizer = False
 {% endhighlight %}
 {% endtabs %}
-![WPF RichTextBox showing an image selected with the built-in image resizer handles](Image_images/wpf-richtextbox-image.jpeg)
+![WPF DOCX Editor showing an image selected with the built-in image resizer handles](Image_images/wpf-docx-editor-image.jpeg)
 
 ## Text wrapping style
 Text wrapping refers to how images fit with surrounding text in a document. Please [refer to this page](/wpf/richtextbox/text-wrapping-style) for more information about text wrapping styles available in Word documents.
@@ -54,11 +54,11 @@ Starting from v19.1.0.x, the SfRichTextBoxAdv preserves the position properties 
 
 > **Behavior:** The image with text wrapping style `InLine` can only be dragged and dropped anywhere in the document.
 
-N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
+N> You can refer to our [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF DOCX Editor example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 
 ## See also
 
-- [Selection in WPF RichTextBox](Selection)
-- [Commands in WPF RichTextBox](Commands)
-- [Clipboard in WPF RichTextBox](Clipboard)
-- [Document Structure in WPF RichTextBox](Document-Structure)
+- [Selection in WPF DOCX Editor](Selection)
+- [Commands in WPF DOCX Editor](Commands)
+- [Clipboard in WPF DOCX Editor](Clipboard)
+- [Document Structure in WPF DOCX Editor](Document-Structure)
