@@ -180,9 +180,9 @@ DocumentEditorContainerComponent.Inject(Toolbar);
 function App() {
   let container = DocumentEditorContainerComponent;
   function onCreate() {
-    container.documentEditor.documentEditorSettings.openAsyncSettings.enable = true;
-    container.documentEditor.documentEditorSettings.openAsyncSettings.initialPageLoadCount = 5;
-    container.documentEditor.documentEditorSettings.openAsyncSettings.incrementalPageLoadCount = 3;
+    container.documentEditorSettings.openAsyncSettings.enable = true;
+    container.documentEditorSettings.openAsyncSettings.initialPageLoadCount = 5;
+    container.documentEditorSettings.openAsyncSettings.incrementalPageLoadCount = 3;
   }
   return (
     <div>

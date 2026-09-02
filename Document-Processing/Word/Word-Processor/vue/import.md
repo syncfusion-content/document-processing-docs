@@ -254,9 +254,9 @@ const serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api
 provide('DocumentEditorContainer', [Toolbar])
 
 const onCreated = function () {
-  container.value.ej2Instances.documentEditor.documentEditorSettings.openAsyncSettings.enable = true;
-  container.value.ej2Instances.documentEditor.documentEditorSettings.openAsyncSettings.initialPageLoadCount = 5;
-  container.value.ej2Instances.documentEditor.documentEditorSettings.openAsyncSettings.incrementalPageLoadCount = 3;
+  container.value.ej2Instances.documentEditorSettings.openAsyncSettings.enable = true;
+  container.value.ej2Instances.documentEditorSettings.openAsyncSettings.initialPageLoadCount = 5;
+  container.value.ej2Instances.documentEditorSettings.openAsyncSettings.incrementalPageLoadCount = 3;
 }
 </script>
 
@@ -288,9 +288,9 @@ export default {
   },
   methods: {
     onCreated: function () {
-      this.$refs.container.ej2Instances.documentEditor.documentEditorSettings.openAsyncSettings.enable = true;
-      this.$refs.container.ej2Instances.documentEditor.documentEditorSettings.openAsyncSettings.initialPageLoadCount = 5;
-      this.$refs.container.ej2Instances.documentEditor.documentEditorSettings.openAsyncSettings.incrementalPageLoadCount = 3;
+      this.$refs.container.ej2Instances.documentEditorSettings.openAsyncSettings.enable = true;
+      this.$refs.container.ej2Instances.documentEditorSettings.openAsyncSettings.initialPageLoadCount = 5;
+      this.$refs.container.ej2Instances.documentEditorSettings.openAsyncSettings.incrementalPageLoadCount = 3;
     },
   },
 };

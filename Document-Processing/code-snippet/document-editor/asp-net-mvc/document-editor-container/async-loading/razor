@@ -7,8 +7,8 @@
     function onCreated() {
         var documenteditorElement = document.getElementById("container");
         container = documenteditorElement.ej2_instances[0];
-        container.documentEditor.documentEditorSettings.openAsyncSettings.enable = false;
-        container.documentEditor.documentEditorSettings.openAsyncSettings.initialPageLoadCount = 5;
-        container.documentEditor.documentEditorSettings.openAsyncSettings.incrementalPageLoadCount = 3;
+        container.documentEditorSettings.openAsyncSettings.enable = true;
+        container.documentEditorSettings.openAsyncSettings.initialPageLoadCount = 5;
+        container.documentEditorSettings.openAsyncSettings.incrementalPageLoadCount = 3;
     }
 </script>

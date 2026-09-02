@@ -172,7 +172,7 @@ import {
 import { DocumentEditorContainerModule } from '@syncfusion/ej2-angular-documenteditor';
 
 @Component({
-  selector: 'app-container',
+  selector: 'app-root',
   standalone: true,
   imports: [DocumentEditorContainerModule],
   providers: [ToolbarService],
@@ -195,9 +195,9 @@ export class AppComponent implements OnInit {
   };
   ngOnInit(): void {}
   onCreate() {
-    this.container?.documentEditor.documentEditorSettings.openAsyncSettings.enable = true;
-    this.container?.documentEditor.documentEditorSettings.openAsyncSettings.initialPageLoadCount = 5;
-    this.container?.documentEditor.documentEditorSettings.openAsyncSettings.incrementalPageLoadCount = 3;
+    this.container.documentEditorSettings.openAsyncSettings.enable = true;
+    this.container.documentEditorSettings.openAsyncSettings.initialPageLoadCount = 5;
+    this.container.documentEditorSettings.openAsyncSettings.incrementalPageLoadCount = 3;
   }
 }
 ```

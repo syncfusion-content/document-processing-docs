@@ -163,9 +163,9 @@ import { DocumentEditorContainer, Toolbar } from '@syncfusion/ej2-documenteditor
 let container: DocumentEditorContainer = new DocumentEditorContainer({ height: '590px' });
 container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 DocumentEditorContainer.Inject(Toolbar);
-container.documentEditor.documentEditorSettings.openAsyncSettings.enable = false;
-container.documentEditor.documentEditorSettings.openAsyncSettings.initialPageLoadCount = 5;
-container.documentEditor.documentEditorSettings.openAsyncSettings.incrementalPageLoadCount = 3;
+container.documentEditorSettings.openAsyncSettings.enable = true;
+container.documentEditorSettings.openAsyncSettings.initialPageLoadCount = 5;
+container.documentEditorSettings.openAsyncSettings.incrementalPageLoadCount = 3;
 container.appendTo('#container');
 ```
 
