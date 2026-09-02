@@ -44,10 +44,37 @@ The same client can be used with different Collaboration Server implementations.
 
 
 ## Installation
-|npm install @syncfusion/ej2\-collaborator |
-|:---|
+npm install @syncfusion/ej2\-collaborator 
+
+## Public API
+
+Product teams touch exactly two surfaces: the **`ICollaborationProvider`** interface they implement, and the **`CollaborationClient`** they instantiate. Everything else (`CollaborationConnection`, `ICollaborationOptions`, `ICollaborationTransport`, `TransportFactory`, `SignalRTransport`, `WebSocketTransport`, `CollaborationEvents`) is internal to the common package.
+
+### `ICollaborationProvider` — implement this in your adapter
+
+| Member | Purpose |
+|---|---|
+| `applyRemoteAction(action: string, data: ICollaborationActionData): void` | Apply a remote action received from the collaboration backend to the local editor. The action payload is exposed under `data.payload`. **This is the only method the common package calls on the adapter at runtime.** |
+
+### `CollaborationClient` — call this from your app
+
+| Member | Purpose |
+|---|---|
+| `constructor(adapter: ICollaborationProvider, options: CollaborationClientOptions)` | Bind an adapter to a transport endpoint and current user. Constructs the underlying transport — does **not** start it. |
+| `joinRoomAsync(roomName: string): Promise<void>` | Connects the transport and sends a `JoinGroup` for `roomName`. Re-emits the server's `connectionId` / `addUser` / `removeUser` / `action` events. **Does not fetch the document** — do that in your adapter or app first if needed. |
 
 
+#### `CollaborationClientOptions` — constructor argument
+
+| Field | Type | Purpose |
+|---|---|---|
+| `serviceUrl` | `string` | URL of the real-time collaboration backend. **Required.** Shape depends on `connectionType` For Example : serviceUrl:"ws://localhost:8080", //node server             serviceUrl:"ws://localhost:62870", //ASP.NET Core + Webscoket        ServiceUrl:"http://localhost:62870", //ASP.NET Core + SignalR 
+| `connectionType` | `'signalr' \| 'websocket'` | Selects the backend. Defaults to `'signalr'`. |
+| `currentUser` | `string` | Display name broadcast to peers when joining the room. **Required.** |
+| `onUserJoined?` | `(user: UserInfo) => void` | Fired when a remote peer enters the same room. **Optional.** |
+| `onUserLeft?` | `(user: UserInfo) => void` | Fired when a remote peer leaves the room. **Optional.** |
+
+> NOTE: `serviceUrl` is the **transport** URL, not a product REST API URL. Each product passes its own REST endpoint through a separate field on its own configuration.
 
 ## Configuration
 
@@ -85,7 +112,6 @@ The adapter acts as a bridge between the Collaboration Client and the EJ2 compon
 ```ts
 public applyRemoteAction( action: string, data: ICollaborationActionData ): void { // Apply the remote action to the host component } 
 ```
-
 
 
 Because of this architecture, the same Collaboration Client can be reused across **Document Editor**, **PDF Viewer**, and **Spreadsheet**, with only the adapter implementation changing for each component.
