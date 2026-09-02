@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## SFDT to DOCX export
 
-Document Editor supports server-side export of **Syncfusion Document Text (.sfdt)** to DOC, DOCX, RTF, TXT, WordML, and HTML formats using the server-side helper component **[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor)** (Document Editor), available with the NuGet packages below for ASP.NET Core, ASP.NET MVC 5, and ASP.NET MVC 4.
+DOCX Editor supports server-side export of **Syncfusion Document Text (.sfdt)** to DOC, DOCX, RTF, TXT, WordML, and HTML formats using the server-side helper component **[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor)** (Document Editor), available with the NuGet packages below for ASP.NET Core, ASP.NET MVC 5, and ASP.NET MVC 4.
 
 * [Syncfusion.EJ2.WordEditor.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Core)
 * [Syncfusion.EJ2.WordEditor.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Mvc5)

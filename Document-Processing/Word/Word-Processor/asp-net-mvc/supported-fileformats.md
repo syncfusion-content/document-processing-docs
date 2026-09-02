@@ -14,7 +14,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC DOCX Editor (Docume
 
 ## Supported file formats
 
-The following table describes the supported formats and indicates whether they can be opened in or exported from the Document Editor.
+The following table describes the supported formats and indicates whether they can be opened in or exported from the DOCX Editor.
 
 | File Format | Open | Export |
 |-------------|------|--------|

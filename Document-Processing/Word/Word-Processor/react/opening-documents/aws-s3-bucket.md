@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Open Documents from AWS S3 in React DOCX Editor
 
-To load a document from AWS S3 in a [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor), you can follow the steps below.
+To load a document from AWS S3 in a [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor), you can follow the steps below.
 
-**Step 1:** Create a simple Document Editor sample in React
+**Step 1:** Create a simple DOCX Editor sample in React
 
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in React. This will give you a basic setup of the Document Editor component. 
+Start by following the steps provided in this [link](../getting-started) to create a simple DOCX Editor sample in React. This will give you a basic setup of the DOCX Editor component. 
 
 **Step 2:** Modify the `DocumentEditorController.cs` file in the web service project
 
@@ -108,7 +108,7 @@ public async Task<string> LoadFromS3([FromBody] Dictionary<string, string> jsonO
 
 N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and **Your Bucket name from AWS S3** with your actual AWS access key, secret key, and bucket name.
 
-**Step 3:**  Modify the index file in the Document Editor sample
+**Step 3:**  Modify the index file in the DOCX Editor sample
 
 On the client side, the document returned from the web service is opened using the [`open`](https://ej2.syncfusion.com/react/documentation/api/document-editor#open) method.
 

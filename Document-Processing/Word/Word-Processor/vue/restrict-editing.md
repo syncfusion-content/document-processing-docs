@@ -14,13 +14,13 @@ domainurl: ##DomainURL##
 
 ## Configure on client side
 
-The Document Editor provides options to protect and unprotect a document using the [enforceProtection](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#enforceprotection) and [stopProtection](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#stopprotection) APIs, enabling various restrict-editing operations.
+The DOCX Editor provides options to protect and unprotect a document using the [enforceProtection](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#enforceprotection) and [stopProtection](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#stopprotection) APIs, enabling various restrict-editing operations.
 
 ### Read-only mode
 
-Document Editor supports protecting a document in read-only mode, where users can only view the content without making changes.
+DOCX Editor supports protecting a document in read-only mode, where users can only view the content without making changes.
 
-The following example code illustrates how to enforce or remove read-only protection in the Document Editor.
+The following example code illustrates how to enforce or remove read-only protection in the DOCX Editor.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -88,9 +88,9 @@ export default {
 
 ### Form filling mode
 
-Document Editor supports protecting a document with form-filling restrictions, allowing users to edit only form fields.
+DOCX Editor supports protecting a document with form-filling restrictions, allowing users to edit only form fields.
 
-The following example code illustrates how to enforce or remove form-filling restrictions in the Document Editor.
+The following example code illustrates how to enforce or remove form-filling restrictions in the DOCX Editor.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -158,9 +158,9 @@ export default {
 
 ### Comments only mode
 
-Document Editor supports protecting a document in comments-only mode, allowing users to add or edit comments only.
+DOCX Editor supports protecting a document in comments-only mode, allowing users to add or edit comments only.
 
-The following example code illustrates how to enforce and remove comments-only protection in the Document Editor.
+The following example code illustrates how to enforce and remove comments-only protection in the DOCX Editor.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -228,9 +228,9 @@ export default {
 
 ### Track changes only mode
 
-Document Editor supports protecting a document in revisions-only mode, allowing users to view the document and make corrections while tracking all changes. Users cannot accept or reject tracked changes; only the author can review and finalize them later.
+DOCX Editor supports protecting a document in revisions-only mode, allowing users to view the document and make corrections while tracking all changes. Users cannot accept or reject tracked changes; only the author can review and finalize them later.
 
-The following example code illustrates how to enforce and remove revisions-only protection in the Document Editor.
+The following example code illustrates how to enforce and remove revisions-only protection in the DOCX Editor.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -298,7 +298,7 @@ export default {
 
 ### Format restrictions
 
-The Document Editor enforces document protection using the specified credentials. In the [enforceProtection](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#enforceprotection-1) method, the second parameter represents `limitToFormatting`, and the third parameter represents `isReadOnly`.
+The DOCX Editor enforces document protection using the specified credentials. In the [enforceProtection](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#enforceprotection-1) method, the second parameter represents `limitToFormatting`, and the third parameter represents `isReadOnly`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -359,7 +359,7 @@ export default {
 
 The above-mentioned hosted Web API URL is for demo and evaluation purposes only. For production, host your own web service as shown below.
 
-The Document Editor client requires a server-side API to generate a hash from the specified password and salt values, which is necessary for the restrict editing functionality.
+The DOCX Editor client requires a server-side API to generate a hash from the specified password and salt values, which is necessary for the restrict editing functionality.
 
 For more information on configuring restrict editing on the server side, refer to the following:
 

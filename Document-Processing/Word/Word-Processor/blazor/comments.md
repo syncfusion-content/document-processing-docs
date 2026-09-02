@@ -3,7 +3,7 @@ layout: post
 title: Comments in Blazor DOCX Editor | Syncfusion
 description: The comments feature in Blazor DOCX Editor enables users to add, review, navigate, reply to, and manage comments within documents.
 platform: document-processing
-control: Document Editor
+control: DOCX Editor
 documentation: ug
 ---
 
@@ -49,9 +49,9 @@ await container.DocumentEditor.Editor.DeleteAllCommentsAsync();
 
 ## Protect the document in comments-only mode
 
-The Document Editor supports a special protection mode that restricts user actions to adding or editing comments only. When `CommentsOnly` protection is active, users cannot change the document content.
+The DOCX Editor supports a special protection mode that restricts user actions to adding or editing comments only. When `CommentsOnly` protection is active, users cannot change the document content.
 
-The Document Editor provides APIs to protect and unprotect the document using [`EnforceProtectionAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_EnforceProtectionAsync_System_String_Syncfusion_Blazor_DocumentEditor_ProtectionType_) and [`StopProtectionAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_StopProtectionAsync_System_String_).
+The DOCX Editor provides APIs to protect and unprotect the document using [`EnforceProtectionAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_EnforceProtectionAsync_System_String_Syncfusion_Blazor_DocumentEditor_ProtectionType_) and [`StopProtectionAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_StopProtectionAsync_System_String_).
 
 The following example code illustrates how to enforce and stop protection in the Document Editor container.
 
@@ -81,4 +81,4 @@ N> In the `EnforceProtection` method, the first parameter is the password and th
 
 ## Online demo
 
-Explore how to add, view, and manage comments in Word documents using the Blazor Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/comments?theme=fluent2).
+Explore how to add, view, and manage comments in Word documents using the Blazor DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/comments?theme=fluent2).

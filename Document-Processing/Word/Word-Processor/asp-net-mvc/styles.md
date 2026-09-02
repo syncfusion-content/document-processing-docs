@@ -10,11 +10,11 @@ documentation: ug
 
 # Styles in ASP.NET MVC DOCX Editor
 
-Styles are useful for applying a set of formatting consistently throughout the document. In the Document Editor, styles are created and added to a document programmatically or via the built-in Styles dialog.
+Styles are useful for applying a set of formatting consistently throughout the document. In the DOCX Editor, styles are created and added to a document programmatically or via the built-in Styles dialog.
 
 ## Styles definition overview
 
-A Style in the Document Editor should have the following properties:
+A Style in the DOCX Editor should have the following properties:
 
 * **name**: Name of the style. All styles in a document have a unique name, which is used as an identifier when applying the style.
 * **type**: Specifies the document elements that the style will target. For example, paragraph or character.
@@ -28,7 +28,7 @@ N> The style type should match the inherited style type. For example, it is not 
 
 ## Default style
 
-The default style for span and paragraph properties is Normal. It internally inherits the default style of the document loaded or the Document Editor component.
+The default style for span and paragraph properties is Normal. It internally inherits the default style of the document loaded or the DOCX Editor component.
 
 ## Style hierarchy
 
@@ -140,4 +140,4 @@ var characterStyles = documentEditor.getStyles('Character');
 
 ## Online demo
 
-Explore how to apply and modify styles in Word documents using the ASP.NET MVC Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/styles#/tailwind3).
+Explore how to apply and modify styles in Word documents using the ASP.NET MVC DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/styles#/tailwind3).

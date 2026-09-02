@@ -25,9 +25,9 @@ Using the [`insertBookmark`](https://ej2.syncfusion.com/documentation/api/docume
 container.documentEditor.editor.insertBookmark("Bookmark1");
 ```
 
-## Select Bookmark
+## Select and Navigate to a Bookmark
 
-You can select a bookmark in the document using the [`selectBookmark`](https://ej2.syncfusion.com/documentation/api/document-editor/selection#selectbookmark) method by providing the bookmark name to select as shown in the following code snippet.
+You can select a bookmark by its name using the [`selectBookmark`](https://ej2.syncfusion.com/documentation/api/document-editor/selection#selectbookmark) method, which also navigates the editor to the bookmark location, as shown in the following code snippet.
 
 ```ts
 container.documentEditor.selection.selectBookmark("Bookmark1", true);
@@ -81,7 +81,7 @@ container.documentEditor.editor.insertText('Hello World');
 
 ## Show or Hide bookmark
 
-You can show or hide square brackets around bookmarked items in the Document Editor component.
+You can show or hide square brackets around bookmarked items in the DOCX Editor component.
 
 The following example code illustrates how to show or hide square brackets around bookmarked items.
 
@@ -91,7 +91,7 @@ container.documentEditorSettings.showBookmarks = true;
 
 ## Bookmark Dialog
 
-The following example shows how to open the Bookmark dialog in the Document Editor.
+The following example shows how to open the Bookmark dialog in the DOCX Editor.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}

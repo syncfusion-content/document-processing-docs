@@ -3,7 +3,7 @@ layout: post
 title: Opening a Document in Blazor DOCX Editor | Syncfusion
 description: Open Word documents in Blazor DOCX Editor from URLs, cloud storage, databases, local files, or during component initialization.
 platform: document-processing
-control: Document Editor
+control: DOCX Editor
 documentation: ug
 ---
 
@@ -13,7 +13,7 @@ You might need to open and view Word documents from various locations. In this s
 
 ## Opening a document from URL
 
-If you have your Word document file in the web, you can open it in [Blazor Document Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) using a URL. The following code example explains how to open a Word document file from a URL.
+If you have your Word document file in the web, you can open it in [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) using a URL. The following code example explains how to open a Word document file from a URL.
 
 ```cshtml
 @using Syncfusion.Blazor.DocumentEditor
@@ -60,7 +60,7 @@ N> As per the discussion thread [#30064](https://github.com/dotnet/aspnetcore/is
 
 You can open the Word documents from cloud storage. The following code example shows how to open and load the Word document file stored in Azure Blob Storage.
 
-To open and save a document from the cloud quickly with the Blazor Document Editor component, you can check the video below.
+To open and save a document from the cloud quickly with the Blazor DOCX Editor component, you can check the video below.
 
 {% youtube "https://www.youtube.com/watch?v=sVINSXKPM4E" %}
 
@@ -290,11 +290,11 @@ The Word document can be opened on control initialization, in this sample, the d
 }
 ```
 
-You can also explore our [Blazor Word Processor](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities) example to see how to render and configure the document editor.
+You can also explore our [Blazor Word Processor](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities) example to see how to render and configure the DOCX Editor.
 
 ## Opening a document with TIFF, EMF and WMF images
 
-Web browsers do not support displaying metafile images like EMF and WMF and TIFF format images. As a fallback approach, you can convert the metafile/TIFF format image to a raster image using any image converter in the `MetafileImageParsed` event and this fallback raster image will be displayed in the client-side Document Editor component.
+Web browsers do not support displaying metafile images like EMF and WMF and TIFF format images. As a fallback approach, you can convert the metafile/TIFF format image to a raster image using any image converter in the `MetafileImageParsed` event and this fallback raster image will be displayed in the client-side DOCX Editor component.
 
 N> In the `MetafileImageParsedEventArgs` event argument, you can get the metafile stream using the `MetafileStream` property and you can get the `IsMetafile` boolean value to determine whether the image is a metafile (WMF, EMF) or a TIFF format image. In the example below, we have converted the TIFF to a raster image in the `ConvertTiffToRasterImage()` method using `BitMiracle https://www.nuget.org/packages/BitMiracle.LibTiff.NET`.
 

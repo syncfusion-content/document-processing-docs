@@ -24,7 +24,7 @@ let editor: DocumentEditor = new DocumentEditor({ enableEditor: true, isReadOnly
 editor.enableEditorHistory = true;
 ```
 
-You can enable or disable history preservation for a Document Editor instance at any time using the `enableEditorHistory` property. Refer to the following sample code.
+You can enable or disable history preservation for a DOCX Editor instance at any time using the `enableEditorHistory` property. Refer to the following sample code.
 
 ```ts
 editor.enableEditorHistory = false;
@@ -32,9 +32,9 @@ editor.enableEditorHistory = false;
 
 ## Undo and redo
 
-You can perform undo and redo using the `Ctrl + Z` and `Ctrl + Y` keyboard shortcuts. The Document Editor exposes an API to do it programmatically.
+You can perform undo and redo using the `Ctrl + Z` and `Ctrl + Y` keyboard shortcuts. The DOCX Editor exposes an API to do it programmatically.
 
-To undo the last editing operation in the Document Editor, refer to the following sample code.
+To undo the last editing operation in the DOCX Editor, refer to the following sample code.
 
 ```ts
 editor.editorHistory.undo();
@@ -48,7 +48,7 @@ editor.editorHistory.redo();
 
 ## Stack size
 
-History of editing actions will be maintained in a stack, so that the last item will be reverted first. By default, the Document Editor limits the size of undo and redo stacks to 500 each, respectively. However, you can customize this limit. Refer to the following sample code.
+History of editing actions will be maintained in a stack, so that the last item will be reverted first. By default, the DOCX Editor limits the size of undo and redo stacks to 500 each, respectively. However, you can customize this limit. Refer to the following sample code.
 
 ```ts
 //Set undo limit.

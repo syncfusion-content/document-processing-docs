@@ -2,14 +2,14 @@
 layout: post
 title: How to Customize Color Picker in React DOCX Editor | Syncfusion
 description: Customize the color picker appearance in Syncfusion® React DOCX Editor using color picker settings to match your application's design.
-control: Customize color picker in Document Editor 
+control: Customize color picker in DOCX Editor 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 # How to Customize Color Picker in React DOCX Editor
 
-[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) provides options to customize the color picker using [`colorPickerSettings`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documentEditorSettingsModel#colorpickersettings) in Document Editor settings. The color picker allows customization of its default appearance by selecting between Picker and Palette modes for font and border colors.
+[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) provides options to customize the color picker using [`colorPickerSettings`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documentEditorSettingsModel#colorpickersettings) in Document Editor settings. The color picker allows customization of its default appearance by selecting between Picker and Palette modes for font and border colors.
 
 Similarly, you can also use the [`documentEditorSettings`](https://ej2.syncfusion.com/react/documentation/api/document-editor#documenteditorsettings) property for the standalone DocumentEditor.
 
@@ -53,7 +53,7 @@ export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 The following table illustrates all the possible properties for the color picker.
 
@@ -70,4 +70,4 @@ N> According to the Word document specifications, it is not possible to modify t
 
 ## Online Demo
 
-Explore how to customize the color picker in the React Document Editor for formatting Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/colorpicker-customization).
+Explore how to customize the color picker in the React DOCX Editor for formatting Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/colorpicker-customization).

@@ -40,6 +40,6 @@ richTextBoxAdv.IsTextPredictionEnabled = False
 
 ## See also
 
-- [Commands in UWP RichTextBox](./Commands)
-- [Importing and exporting documents in UWP RichTextBox](./Import-and-Export)
-- [Getting started with UWP RichTextBox](./Getting-Started)
+- [Commands in UWP DOCX Editor](./Commands)
+- [Importing and exporting documents in UWP DOCX Editor](./Import-and-Export)
+- [Getting started with UWP DOCX Editor](./Getting-Started)

@@ -659,6 +659,46 @@ The following table shows the list of Word document elements supported in Word t
 </tbody>
 </table>
 
+### Preserving Charts, Shapes, and Other Elements as Images
+
+The .NET Word (DocIO) library preserves Word elements such as Chart, Text Box, Shape, Ink, MathML, SmartArt, Canvas, and GroupShape as fallback images when converting a Word document to a Markdown file. This ensures that content which does not have a direct Markdown equivalent is still retained in the output as an image.
+
+N> On Windows, install the [Syncfusion.OfficeChartToImageConverter.WPF](https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.WPF) NuGet package and use the `ChartToImageConverter` to preserve Chart as a fallback image. Text Box, Shape, Ink, MathML, SmartArt, Canvas, and GroupShape are preserved automatically as images without any additional code. On cross-platform (ASP.NET Core, Blazor, .NET MAUI, and WinUI), install the [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) NuGet package and use the `DocIORenderer` to preserve all the Word elements (Chart, Text Box, Shape, Ink, MathML, SmartArt, Canvas, and GroupShape) as images. Preserving Word elements as fallback images is not supported on the UWP platform.
+
+The following code example shows how to preserve charts and other Word elements as fallback images while converting a Word document to a Markdown file.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+// Open an existing Word document.
+using (WordDocument wordDocument = new WordDocument(Path.GetFullPath(@"Data/Input.docx")))
+{
+    // Initialize the DocIORenderer to preserve Word elements (including charts) as images.
+    using DocIORenderer renderer = new DocIORenderer();
+
+    // Save the document as a Markdown file.
+    wordDocument.Save(Path.GetFullPath(@"Output/Output.md"));
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+// Open an existing Word document.
+using (WordDocument wordDocument = new WordDocument("Input.docx", FormatType.Docx))
+{
+    // Initialize the chart-to-image converter to preserve charts as images.
+    wordDocument.ChartToImageConverter = new ChartToImageConverter();
+
+    // Text Box, Shape, Ink, MathML, and SmartArt are preserved automatically on Windows.
+
+    // Save the document as a Markdown file.
+    wordDocument.Save("WordtoMd.md", FormatType.Markdown);
+}
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
+
 ## Online Demo
 
 * Explore how to convert the Word document to Markdown using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/wordtomarkdown#/tailwind).

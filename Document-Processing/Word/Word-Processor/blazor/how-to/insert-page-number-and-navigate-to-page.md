@@ -3,7 +3,7 @@ layout: post
 title: How to Insert Page Numbers in Blazor DOCX Editor | Syncfusion
 description: Insert page numbers and navigate to specific pages in Syncfusion® Blazor DOCX Editor using built-in APIs for efficient document navigation and formatting.
 platform: document-processing
-control: Document Editor
+control: DOCX Editor
 documentation: ug
 ---
 
@@ -15,7 +15,7 @@ You can insert a page number and navigate to a specific page in the [Blazor DOCX
 
 The [`InsertFieldAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_InsertFieldAsync_System_String_System_String_) API in the Editor module is used to insert the page number at the current position. By default, the page number will be inserted in Arabic number style.
 
-N> Currently, the Document Editor has an option to insert a page number at the current cursor position.
+N> Currently, the DOCX Editor has an option to insert a page number at the current cursor position.
 
 The following example code illustrates how to insert a page number in the header.
 

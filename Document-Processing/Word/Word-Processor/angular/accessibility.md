@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Accessibility in Angular DOCX Editor
 
-The accessibility compliance for the [Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) component is outlined below.
+The accessibility compliance for the [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) component is outlined below.
 
 | Accessibility Criteria | Compatibility |
 | -- | -- |
@@ -38,15 +38,15 @@ The accessibility compliance for the [Angular Document Editor](https://www.syncf
 
 ## Keyboard interaction
 
-The Document Editor supports [keyboard shortcuts](./keyboard-shortcut) for navigation and editing without a mouse, including tab navigation, cursor movement, and shortcut key combinations for common editing actions such as copy, paste, undo, and redo.
+The DOCX Editor supports [keyboard shortcuts](./keyboard-shortcut) for navigation and editing without a mouse, including tab navigation, cursor movement, and shortcut key combinations for common editing actions such as copy, paste, undo, and redo.
 
 The following accessibility compliance summary applies to the `@syncfusion/ej2-angular-documenteditor` package.
 
 ## Ensuring accessibility
 
-The Document Editor component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
+The DOCX Editor component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the Document Editor component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/wordprocessor.html) in a new window to evaluate the accessibility of the Document Editor component with accessibility tools.
+The accessibility compliance of the DOCX Editor component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/wordprocessor.html) in a new window to evaluate the accessibility of the DOCX Editor component with accessibility tools.
 
 {% previewsample "/document-processing/samples/document-editor/angular/accessibility-cs1" %}
 

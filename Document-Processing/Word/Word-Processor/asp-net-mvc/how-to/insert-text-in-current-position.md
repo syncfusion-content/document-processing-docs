@@ -9,7 +9,7 @@ documentation: ug
 
 # How to Insert Content at Cursor in ASP.NET MVC DOCX Editor
 
-You can insert text, paragraph, and rich-text content in the Document Editor component.
+You can insert text, paragraph, and rich-text content in the DOCX Editor component.
 
 ## Insert text in current cursor position
 

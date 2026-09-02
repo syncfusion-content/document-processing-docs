@@ -106,6 +106,6 @@ N> You can also use the standard keyboard shortcuts CTRL + X, CTRL + C, and CTRL
 
 ## See also
 
-- [Commands in UWP RichTextBox](./Commands)
-- [Document Structure in UWP RichTextBox](./Document-Structure)
-- [Document Properties in UWP RichTextBox](./Document-Properties)
+- [Commands in UWP DOCX Editor](./Commands)
+- [Document Structure in UWP DOCX Editor](./Document-Structure)
+- [Document Properties in UWP DOCX Editor](./Document-Properties)

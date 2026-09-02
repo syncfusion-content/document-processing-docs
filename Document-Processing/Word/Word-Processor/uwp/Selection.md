@@ -260,7 +260,7 @@ richTextBoxAdv.LostFocusBehavior = LostFocusBehavior.ShowSelection;
 {% endhighlight %}
 {% endtabs %}
 
-N> The `LostFocusBehavior` API is supported from Syncfusion UWP RichTextBox v17.4.0.X onwards.
+N> The `LostFocusBehavior` API is supported from Syncfusion UWP DOCX Editor v17.4.0.X onwards.
 
 ## Determining the editing context type
 
@@ -314,10 +314,10 @@ Dim isDeleted As Boolean = richTextBoxAdv.Selection.Delete()
 {% endhighlight %}
 {% endtabs %}
 
-N> The `Delete` method is supported from Syncfusion UWP RichTextBox v18.2.0.X onwards.
+N> The `Delete` method is supported from Syncfusion UWP DOCX Editor v18.2.0.X onwards.
 
 ## See also
 
-- [Commands in UWP RichTextBox](./Commands)
-- [Find and Replace in UWP RichTextBox](./Find-and-Replace)
-- [Getting started with UWP RichTextBox](./Getting-Started)
+- [Commands in UWP DOCX Editor](./Commands)
+- [Find and Replace in UWP DOCX Editor](./Find-and-Replace)
+- [Getting started with UWP DOCX Editor](./Getting-Started)

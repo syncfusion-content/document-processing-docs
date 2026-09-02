@@ -149,18 +149,18 @@ Examples Prompts:
 
 {% promptcard Interactive Spell Check Editor %}
 
-Design a **RichTextBox control** as the main editing area. Place a toggle switch at the top-left corner of the application to control the spell check feature. When the toggle is turned **on**, enable spell checking in the RichTextBox. When the toggle is turned **off**, disable spell checking. Ensure the toggle reflects the current spell check state and updates the editor behavior in real time. 
+Design a **WPF DOCX Editor control** as the main editing area. Place a toggle switch at the top-left corner of the application to control the spell check feature. When the toggle is turned **on**, enable spell checking in the WPF DOCX Editor. When the toggle is turned **off**, disable spell checking. Ensure the toggle reflects the current spell check state and updates the editor behavior in real time. 
 
 {% endpromptcard %}
 
 {% promptcard Document Viewer Dashboard %}
 
-Design a document dashboard interface using a DataGrid and a RichTextBox control.
+Design a document dashboard interface using a DataGrid and a WPF DOCX Editor control.
 Create a DataGrid with two columns:
 - The first column should display document names (e.g., Document1.docx, Document2.docx).
 - The second column should contain a **View** button for each row.
 
-When the **View** button is clicked, load the corresponding document from the application's local assets folder into the RichTextBox for viewing.
+When the **View** button is clicked, load the corresponding document from the application's local assets folder into the WPF DOCX Editor for viewing.
 Ensure the interaction between the DataGrid and editor is seamless, and maintain a clean, simple layout suitable for browsing and viewing documents efficiently.
 
 {% endpromptcard %}

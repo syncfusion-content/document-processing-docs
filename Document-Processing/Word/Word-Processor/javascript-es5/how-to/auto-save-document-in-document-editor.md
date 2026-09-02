@@ -3,7 +3,7 @@ layout: post
 title: How to Auto Save to AWS S3 in JavaScript DOCX Editor | Syncfusion
 description: Automatically save edited documents to AWS S3 at regular intervals in Syncfusion® JavaScript DOCX Editor for reliable cloud-based storage.
 platform: document-processing
-control: Auto save document in Document Editor 
+control: Auto save document in DOCX Editor 
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -60,7 +60,7 @@ container.contentChange = function () {
 };
 ```
 
-N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 * In server-side, configure the access key and secret key in the `web.config` file and register the profile in `startup.cs`.
 
