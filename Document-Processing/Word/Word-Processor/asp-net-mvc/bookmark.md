@@ -24,9 +24,9 @@ Using the [`insertBookmark`] method, a bookmark can be added to the selected tex
 container.documentEditor.editor.insertBookmark("Bookmark1");
 ```
 
-## Select a bookmark
+## Select and Navigate to a Bookmark
 
-You can select the bookmark in the document using the [`selectBookmark`] method by providing the bookmark name to select as shown in the following code snippet.
+You can select a bookmark by its name using the [`selectBookmark`] method, which also navigates the editor to the bookmark location, as shown in the following code snippet.
 
 ```csharp
 container.documentEditor.selection.selectBookmark("Bookmark1", true);
