@@ -222,6 +222,85 @@ Here's how to handle the server-side action for converting a Word document into 
 
 To know about server-side action, please refer to this [page](./web-services-overview).
 
+## Opening a document in asynchronous mode
+
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) supports asynchronous document loading, which can be enabled using the enable property available in the openAsyncSettings API.
+
+### Properties
+
+**enable:** Enables or disables asynchronous document loading.
+**initialPageLoadCount:** Number of pages to load initially when the document is opened.
+**incrementalPageLoadCount:** Number of pages to load incrementally after initial pages load, during the asynchronous document-loading operation.
+
+The following example shows how to open the document asynchronously in DOCX Editor.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' v-on:created="onCreated" height="590px"
+      id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
+</template>
+<script setup>
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { provide, ref } from 'vue';
+
+const container = ref(null);
+const serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
+
+//Inject required modules.
+provide('DocumentEditorContainer', [Toolbar])
+
+const onCreated = function () {
+  container.value.ej2Instances.documentEditor.documentEditorSettings.openAsyncSettings.enable = true;
+  container.value.ej2Instances.documentEditor.documentEditorSettings.openAsyncSettings.initialPageLoadCount = 5;
+  container.value.ej2Instances.documentEditor.documentEditorSettings.openAsyncSettings.incrementalPageLoadCount = 3;
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' v-on:created="onCreated" height="590px"
+      id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
+</template>
+<script>
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+
+export default {
+  components: {
+    'ejs-documenteditorcontainer': DocumentEditorContainerComponent
+  },
+  data() {
+    return {
+      serviceUrl:
+        'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/',
+    };
+  },
+  provide: {
+    //Inject required modules.
+    DocumentEditorContainer: [Toolbar]
+  },
+  methods: {
+    onCreated: function () {
+      this.$refs.container.ej2Instances.documentEditor.documentEditorSettings.openAsyncSettings.enable = true;
+      this.$refs.container.ej2Instances.documentEditor.documentEditorSettings.openAsyncSettings.initialPageLoadCount = 5;
+      this.$refs.container.ej2Instances.documentEditor.documentEditorSettings.openAsyncSettings.incrementalPageLoadCount = 3;
+    },
+  },
+};
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+N> When asynchronous loading is enabled, the document initially opens in read-only mode, allowing users to view the first set of pages while the remaining pages load in the background. During this time, the document can be viewed but cannot be edited or saved. Once loading is complete, editing and saving become available.
+
 ## Compatibility with Microsoft Word
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor is a minimal viable Word document viewer/editor product for web applications. As the most compatible Word editor, the product vision is adding valuable feature sets of Microsoft Word, and not to cover 100% feature sets of Microsoft Word desktop application. You can even see the feature sets difference between Microsoft Word desktop and their Word online application. So kindly don't misunderstand this component as a complete replacement for Microsoft Word desktop application and expect 100% feature sets of it.
