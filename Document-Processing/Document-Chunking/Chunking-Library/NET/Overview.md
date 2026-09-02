@@ -1,6 +1,6 @@
 ---
 title: About Syncfusion .NET Document Chunking Library | Syncfusion
-description: Learn about the Syncfusion® .NET Document Chunking Library for preparing enterprise documents for Retrieval-Augmented Generation (RAG) workflows using structural block parsing.
+description: Learn how the Syncfusion® .NET Document Chunking Library prepares structured enterprise content for Retrieval-Augmented Generation workflows.
 platform: document-processing
 control: Chunking
 documentation: UG

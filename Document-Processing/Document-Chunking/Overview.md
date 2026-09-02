@@ -6,7 +6,7 @@ control: Chunking
 documentation: UG
 ---
 
-# Document Chunking
+# Overview of Document Chunking
 
 Document chunking is the process of dividing a document into smaller, meaningful units while retaining the context and structure of its content. These chunks can be used in Retrieval-Augmented Generation (RAG), embedding generation, semantic search, vector indexing, hybrid search, document Q&A, grounded AI responses, citation-based retrieval, and enterprise RAG ingestion pipelines.
 

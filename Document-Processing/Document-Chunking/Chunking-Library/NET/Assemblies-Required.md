@@ -22,4 +22,4 @@ The following assembly must be referenced in your application to use the Syncfus
 </table>
 
 N> 1. Using NuGet packages provides frequent bug fixes and simplifies package upgrades.
-N> 2. Refer to [NuGet Package Required](https://help.syncfusion.com/document-processing/document-chunking/chunking-library/net/nuget-packages-required) for more information about the required NuGet package.
+N> 2. Refer to <a href="https://help.syncfusion.com/document-processing/document-chunking/chunking-library/net/nuget-packages-required" aria-label="Document chunking nuget">NuGet Package Required</a> for more information about the required NuGet package.

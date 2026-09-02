@@ -1,6 +1,6 @@
 ---
 title: NuGet Package Required for .NET Document Chunking Library | Syncfusion
-description: Learn about the NuGet package required to use the Syncfusion® .NET Document Chunking Library.
+description: Learn about the NuGet package required to install and use the Syncfusion® .NET Document Chunking Library across supported applications.
 platform: document-processing
 control: Chunking
 documentation: UG
