@@ -9,7 +9,7 @@ documentation: ug
 
 # Find and Replace in Blazor Spreadsheet
 
-The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component provides Find and Replace functionality that helps you search for target text and replace the found text with alternative text within a sheet or workbook. The feature is controlled by the [AllowFindAndReplace](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowFindAndReplace) property, which is set to **true** by default. When set to **false**, the Find and Replace button is hidden from the Ribbon, the Find and Replace dialog cannot be opened, and all related API methods become inactive.
+The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component provides Find and Replace functionality that helps you search for target text and replace the found text with alternative text within a sheet or workbook. You can use the [AllowFindAndReplace](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowFindAndReplace) property to enable or disable Find and Replace functionality.
 
 ## Find
 
@@ -17,10 +17,11 @@ Find is used to select the matched contents of a cell within a sheet or workbook
 
 ### User Interface:
 
-* Click the **Home** tab in the **Ribbon**, then select **Find & Select ▸ Find** to open the Find dialog.
-* Enter the search value in the find textbox.
-* Select the **Find Next** or **Find Previous** button to step through matches in the workbook.
-* Select the **Options** expander in the Find dialog to access the enhanced search options and to open the Find and Replace dialog.
+Find can be done by any of the following ways:
+
+* Select the Search icon in the Ribbon toolbar or using Ctrl + F key to open the Find dialog.
+* Using find Next and find Previous buttons to search the given value in workbook.
+* Select the option button in Find dialog to open the Find and Replace dialog then select the below properties for enhanced searching.
 
 
 | Option | Description |
@@ -68,8 +69,6 @@ The [FindAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsh
 
     public async Task FindMatch()
     {
-      
-        await SpreadsheetInstance.FindAsync("Sales");
         await SpreadsheetInstance.FindAsync(
             searchText: "Error",
             searchScope: SearchScope.EntireWorkbook,
@@ -83,18 +82,18 @@ The [FindAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsh
 {% endhighlight %}
 {% endtabs %}
 
-N> The find operation will not be performed if the [AllowFindAndReplace](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowFindAndReplace) property is set to **false**, the `searchText` is null, empty, or whitespace, or no matching text is found according to the specified search criteria.
 
 ## Replace
 
 Replace is used to change the found contents of a cell within a sheet or workbook. Replace All is used to change all the matched contents of a cell within a sheet or workbook.
 
 ### user interface
+Replace can be done by any of the following ways:
 
-* Click the **Home** tab in the **Ribbon**, then select **Find & Select ▸ Replace** to open the Find and Replace dialog. Alternatively, expand the **Options** in the Find dialog and use the **Replace** fields.
-* Enter the search value in the **Find what** textbox.
-* Enter the alternate value in the **Replace with** textbox.
-* Select the **Replace** button to change the currently found value, or select the **Replace All** button to change all matched values in the sheet or workbook.
+* Using Replace button to change the found value in sheet or workbook.
+* Using ReplaceAll button to change all the found value’s in sheet or workbook.
+* Using replace method to perform replace operation by passing the parameters replace.
+* Using replace method to perform replace all operation by passing the parameter replaceall.
 
 ### Replace programmatically
 
@@ -142,15 +141,13 @@ The [ReplaceAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Sprea
     public async Task ReplaceAllMatches()
     {
         // Replaces all matched occurrences of "Sales" with "Revenue" across the entire workbook.
-        await SpreadsheetInstance.ReplaceAsync("Sales", "Revenue",
-            SearchScope.EntireWorkbook, false, false, true);
+        await SpreadsheetInstance.ReplaceAsync("Sales", "Revenue",SearchScope.EntireWorkbook, false, false, true);
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-N> The replace operation supports undo/redo functionality. It will not be performed if the [AllowFindAndReplace](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowFindAndReplace) property is set to **false**, the `searchText` is null, empty, or whitespace, or no matching text is found according to the specified search criteria.
 
 ## Go to
 
@@ -158,16 +155,15 @@ Go To is used to navigate to a specific cell address in the sheet or workbook.
 
 ### user interface
 
-* Click the **Home** tab in the **Ribbon**, then select **Find & Select ▸ Go To** to open the Go To dialog.
-* Enter the cell address and select **Go To**.
+* Using Ctrl + G key to open the Go To dialog.
+* Using goTo method to perform Go To operation.
 
 ### Go to programmatically
 
 The [GoTo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_GoTo_System_String_) method navigates to the specified cell or range and sets it as the active selection. If a sheet reference is included in the address, the method automatically switches to that sheet before navigating. The `cellAddress` parameter accepts various formats:
 
-* Single cell reference (e.g., `"A1"`, `"B5"`) — Navigates to the specified cell within the active sheet.
-* Cell range (e.g., `"A1:C5"`) — Navigates to and selects the specified range within the active sheet.
-* Sheet-specific reference (e.g., `"Sheet1!A1"`, `"Sheet2!B3:D8"`) — Switches to the specified sheet and navigates to the specified cell or range.
+* Single cell reference (e.g., `"Sheet1!A1"`, `"Sheet1!B5"`) — Navigates to the specified cell within the active sheet.
+* Cell range (e.g., `"Sheet1!A1:C5"`) — Navigates to and selects the specified range within the active sheet.
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
@@ -195,23 +191,19 @@ The [GoTo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.S
     public void GoToCell()
     {
         // Navigates to cell B12 within the active sheet.
-        SpreadsheetInstance.GoTo("B12");
-
-        // Navigates to and selects the range A1:C5 within the active sheet.
-        SpreadsheetInstance.GoTo("A1:C5");
-
-        // Switches to Sheet2 and navigates to cell B12.
-        SpreadsheetInstance.GoTo("Sheet2!B12");
-
-        // Switches to Sheet2 and selects the range B3:D8.
-        SpreadsheetInstance.GoTo("Sheet2!B3:D8");
+        SpreadsheetInstance.GoTo("Sheet1:A1");
     }
 }
 
 {% endhighlight %}
 {% endtabs %}
 
-N> The Go To operation will not be performed if the `cellAddress` is null, empty, or whitespace, the specified sheet name does not exist in the workbook, or the cell address is invalid or outside the worksheet boundaries.
+In the following sample, searching can be done in the following ways:
+
+* Select the Home tab in the Ribbon toolbar, and then select the Search icon.
+* Enter any value in the search textbox.
+* the next (or previous) button to find the entered value in the spreadsheet.
+* You can have more options to find values by selecting the more options in the search toolbar.
 
 ## Limitations
 
