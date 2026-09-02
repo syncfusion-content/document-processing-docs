@@ -12,8 +12,7 @@ In your front\-end project:
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
 
-npm install @syncfusion/ej2\-documenteditor
-npm install @syncfusion/ej2\-collaborator 
+npm install @syncfusion/ej2-collaborator 
 
 {% endhighlight %}
 {% endtabs %}
@@ -33,7 +32,7 @@ import {
 
     Operation
 
-} from '@syncfusion/ej2\-documenteditor';
+} from '@syncfusion/ej2-documenteditor';
 
 
 import {
@@ -42,7 +41,7 @@ import {
 
     ICollaborationActionData
 
-} from '@syncfusion/ej2\-collaborator';
+} from '@syncfusion/ej2-collaborator';
 
 
 export class DocumentEditorAdapter implements ICollaborationProvider {
@@ -59,19 +58,19 @@ export class DocumentEditorAdapter implements ICollaborationProvider {
 
   // Fetch the document from the product's REST API and return the room name. 
 
-    public async loadFromServer(fileName: string): Promise\<string\> {
+    public async loadFromServer(fileName: string): Promise<string> {
 
-        const roomName: string \= this.getRoomName(fileName);
+        const roomName: string = this.getRoomName(fileName);
 
-        const response: Response \= await fetch(
+        const response: Response = await fetch(
 
-            this.serviceUrl \+ 'api/CollaborativeEditing/ImportFile',
+            this.serviceUrl + 'api/CollaborativeEditing/ImportFile',
 
             {
 
                 method: 'POST',
 
-                headers: { 'Content\-Type': 'application/json' },
+                headers: { 'Content-Type': 'application/json' },
 
                 body: JSON.stringify({ fileName, roomName })
 
@@ -85,7 +84,7 @@ export class DocumentEditorAdapter implements ICollaborationProvider {
 
         }
 
-        const responseText: string \= await response.text();
+        const responseText: string = await response.text();
 
         await this.open(responseText, roomName);
 
@@ -96,21 +95,21 @@ export class DocumentEditorAdapter implements ICollaborationProvider {
 
    // Seed the editor and bridge local edits to the editor's sender. 
 
-    public async open(responseText: string, roomName: string): Promise\<void\> {
+    public async open(responseText: string, roomName: string): Promise<void> {
 
-        const data: any \= JSON.parse(responseText);
+        const data: any = JSON.parse(responseText);
 
         this.container?.documentEditor.collaborativeEditingHandlerModule
 
-            ?.updateRoomInfo(roomName, data.version, this.serviceUrl \+ 'api/CollaborativeEditing/');
+            ?.updateRoomInfo(roomName, data.version, this.serviceUrl + 'api/CollaborativeEditing/');
 
         this.container.documentEditor.open(data.sfdt);
 
-        this.container.contentChange \= (args: any) \=\> {
+        this.container.contentChange = (args: any) => {
 
             this.container.documentEditor.collaborativeEditingHandlerModule
 
-                ?.sendActionToServer(args.operations as Operation\[]);
+                ?.sendActionToServer(args.operations as Operation[]);
 
         };
 
@@ -130,16 +129,16 @@ export class DocumentEditorAdapter implements ICollaborationProvider {
 
     private getRoomName(fileName: string): string {
 
-        const urlParams: URLSearchParams \= new URLSearchParams(window.location.search);
+        const urlParams: URLSearchParams = new URLSearchParams(window.location.search);
 
-        let roomId: string | null \= urlParams.get('id');
+        let roomId: string | null = urlParams.get('id');
 
 
         if (!roomId) {
 
-            roomId \= Math.random().toString(32).slice(2);
+            roomId = Math.random().toString(32).slice(2);
 
-            window.history.replaceState({}, '', '?id\=' \+ roomId);
+            window.history.replaceState({}, '', '?id=' + roomId);
 
         }
 
@@ -156,13 +155,13 @@ export class DocumentEditorAdapter implements ICollaborationProvider {
 
 import { DocumentEditorContainer, DocumentEditor, Toolbar, CollaborativeEditingHandler }
 
-    from '@syncfusion/ej2\-documenteditor';
+    from '@syncfusion/ej2-documenteditor';
 
 import { CollaborationClient, UserInfo } from '@syncfusion/ej2\-collaborator';
 
 import { DocumentEditorAdapter } from '../collaboration/DocumentEditorAdapter';
 
-import { TitleBar } from './title\-bar';
+import { TitleBar } from './title-bar';
 
 
 DocumentEditor.Inject(CollaborativeEditingHandler);
@@ -170,10 +169,10 @@ DocumentEditor.Inject(CollaborativeEditingHandler);
 DocumentEditorContainer.Inject(Toolbar);
 
 
-const serviceUrl: string \= 'http://localhost:62870/';
+const serviceUrl: string = 'http://localhost:62870/';
 
 
-const documenteditor: DocumentEditorContainer \= new DocumentEditorContainer({
+const documenteditor: DocumentEditorContainer = new DocumentEditorContainer({
 
     enableToolbar: true,
 
@@ -181,17 +180,17 @@ const documenteditor: DocumentEditorContainer \= new DocumentEditorContainer({
 
     currentUser: currentUser,
 
-    serviceUrl: serviceUrl \+ 'api/documenteditor'   // product REST API (open/save SFDT)
+    serviceUrl: serviceUrl + 'api/documenteditor'   // product REST API (open/save SFDT)
 
 });
 
-documenteditor.appendTo('\#DocumentEditor');
+documenteditor.appendTo('#DocumentEditor');
 
 
-documenteditor.documentEditor.enableCollaborativeEditing \= true;
+documenteditor.documentEditor.enableCollaborativeEditing = true;
 
 
-const titleBar: TitleBar \= new TitleBar(
+const titleBar: TitleBar = new TitleBar(
 
     document.getElementById('documenteditor_titlebar') as HTMLElement,
 
@@ -204,14 +203,14 @@ const titleBar: TitleBar \= new TitleBar(
 titleBar.updateDocumentTitle();
 
 
-const adapter: DocumentEditorAdapter \= new DocumentEditorAdapter(documenteditor, serviceUrl);
+const adapter: DocumentEditorAdapter = new DocumentEditorAdapter(documenteditor, serviceUrl);
 
 
-const client: CollaborationClient \= new CollaborationClient(adapter, {
+const client: CollaborationClient = new CollaborationClient(adapter, {
     
     serviceUrl: "http://localhost:62870",
 
-    connectionType: "signalr",                      // default
+    connectionType: "websocket",                     
 
     currentUser: currentUser,
 
@@ -236,7 +235,7 @@ const client: CollaborationClient \= new CollaborationClient(adapter, {
 
 (async () => {
 
-    const roomName: string \= await adapter.loadFromServer("Giant Panda.docx");
+    const roomName: string = await adapter.loadFromServer("Giant Panda.docx");
 
     await client.joinRoomAsync(roomName);
 
@@ -245,7 +244,8 @@ const client: CollaborationClient \= new CollaborationClient(adapter, {
 ```
 ## Step 4 — Serve the client
 
-Build and serve the front\-end application so the page is reachable at, for example, [http://localhost:4000](http://localhost:4000).
+Build and serve the front\-end application so the page is reachable at, for example, http://localhost:4000
+
 
 # Integrate Collaboration Server
 
@@ -484,9 +484,9 @@ public class DocumentEditorCollaborationAdapter : ICollaborationAdapter
 CollaborativeEditingController is the HTTP bridge between the client control and the Common Collaborator. Every EJ2 content editor component that supports collaboration (Document Editor, PDF Viewer, Spreadsheet) exposes the same three web service methods on its collaboration controller. Each method is required:
 |**Web service method**|**Why it is needed**|
 |:---|:---|
-|ImportFile|Called by a joining client to load the source document and replay any pending actions. Returns the document content and current server version.|
-|UpdateAction|Called by an editing client to send a new collaboration action. The server persists and transforms the action, then broadcasts it to everyone in the same room.|
-|GetActionsFromServer|Called by a joining client to fetch actions newer than its last\-known version, so it can catch up to the current document state.|
+|ImportFile|Loads the source document and applies any pending collaboration actions before sending the latest document state to a newly connected client. Returns the document content and current server version.|
+|UpdateAction|Receives editing actions from connected clients, processes operational transformation, persists the action, and broadcasts the updated action to other participants.|
+|GetActionsFromServer|Retrieves collaboration actions created after the client's last synchronized version so the client can catch up with the latest document state.|
 
 ```C#
 
