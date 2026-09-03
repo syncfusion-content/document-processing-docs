@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Integrate JavaScript PDF Viewer in SharePoint | Syncfusion
-description: Learn how to deploy and integrate the Syncfusion PDF Viewer component in a SharePoint Framework (SPFx) web part using the JavaScript (ES5) distribution and CDN-hosted scripts.
+description: Learn how to deploy and integrate the JavaScript Syncfusion PDF Viewer component in a SharePoint Framework (SPFx)
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -169,7 +169,7 @@ public render(): void {
 }
 ```
 
-Remember to replace `your-site.sharepoint.com/sites/PdfViewerDemo` in both the `script.src` and `resourceUrl` with the actual URL of your SharePoint site before serving the web part.
+Remember to replace `your-site.SharePoint.com/sites/PdfViewerDemo` in both the `script.src` and `resourceUrl` with the actual URL of your SharePoint site before serving the web part.
 
 ## Configure SharePoint Workbench
 
@@ -181,7 +181,7 @@ Open `config/serve.json` and update the `pageUrl` (or `initialPage`) entry to po
 }
 ```
 
-Replace `your-site.sharepoint.com/sites/PdfViewerDemo` with the actual host name and site path of your tenant so that the local debug bundle loads against the correct site.
+Replace `your-site.SharePoint.com/sites/PdfViewerDemo` with the actual host name and site path of your tenant so that the local debug bundle loads against the correct site.
 
 ## Run the Application
 
