@@ -10,7 +10,7 @@ documentation: ug
 
 # How to Customize Toolbar in ASP.NET Core DOCX Editor
 
-## How to customize the existing toolbar in ASP.NET Core DOCX Editor Container
+## How to customize the existing toolbar in ASP.NET Core Document Editor Container
 
 [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) Container allows you to customize (add, show, hide, enable, and disable) existing items in a toolbar.
 
