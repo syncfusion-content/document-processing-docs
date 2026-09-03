@@ -798,7 +798,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-## Draw a borderless table
+## Draw a border less table
 
 Use a zero-width border at grid level.
 
