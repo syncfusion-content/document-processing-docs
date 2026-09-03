@@ -255,7 +255,7 @@ Replace `your-site.sharepoint.com/sites/PdfViewerDemo` with the actual host name
 ## Run the Application
 
 ```bash
-gulp serve
+npm start
 ```
 
 Open:
