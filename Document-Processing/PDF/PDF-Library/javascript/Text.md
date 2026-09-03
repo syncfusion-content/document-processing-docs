@@ -583,6 +583,47 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
+## Search and get the bounds of text in a PDF document
+
+You can search for specific text in a PDF document and retrieve the location of every occurrence using the [findText](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#findtext) method of the [PdfDataExtractor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor) class.
+
+The `findText` method searches the PDF document for the specified text and returns the matching text occurrences along with their page index and bounding rectangles. The returned bounds can be used for operations such as highlighting, redaction, annotation, and document navigation.
+
+The following code example demonstrates how to search for text and retrieve the bounds of all matching occurrences in a PDF document.
+
+{% tabs %}
+
+{% highlight typescript tabtitle="TypeScript" %}
+
+import { PdfDocument } from '@syncfusion/ej2-pdf';
+import { PdfDataExtractor } from '@syncfusion/ej2-pdf-data-extract';
+
+// Load an existing PDF document
+let document: PdfDocument = new PdfDocument(data);
+// Initialize a new instance of the `PdfDataExtractor` class
+let extractor: PdfDataExtractor = new PdfDataExtractor(document);
+// Search for the specified text and retrieve all matching occurrences
+let textSearch = extractor.findText('hello');
+// Release document resources
+document.destroy();
+
+{% endhighlight %}
+
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Load an existing PDF document
+var document = new ej.pdf.PdfDocument(data);
+// Initialize a new instance of the PdfDataExtractor class
+var extractor = new ej.pdfdataextract.PdfDataExtractor(document);
+// Search for the specified text and retrieve all matching occurrences
+var textSearch = extractor.findText('hello');
+// Release document resources
+document.destroy();
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ## Additional Resources
 
 - [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library)
