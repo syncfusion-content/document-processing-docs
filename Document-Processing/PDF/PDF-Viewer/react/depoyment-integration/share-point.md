@@ -1,175 +1,287 @@
 ---
 layout: post
-title: Share Point in React PDF Viewer | Syncfusion
-description: Integrate the Syncfusion React PDF Viewer into a SharePoint Framework (SPFx) web part for use inside Microsoft SharePoint sites.
-control: PDF Viewer
+title: Integrate React PDF Viewer in SharePoint | Syncfusion
+description: Learn how to deploy and integrate the Syncfusion React PDF Viewer component in a SharePoint Framework (SPFx) React web part.
 platform: document-processing
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# React PDF Viewer in SharePoint Framework
+# Deploy and Integrate React PDF Viewer in SharePoint Framework
 
-## Overview
-
-This quickstart shows how to integrate the [React PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/react-pdf-viewer) into a SharePoint Framework (SPFx) React web part. It covers creating the web part, installing the `@syncfusion/ej2-react-pdfviewer` package, adding the required CSS, supplying runtime assets either from the Syncfusion CDN or from Site Assets, and a minimal TypeScript component that renders a PDF in the browser (standalone / client-only).
+This guide shows you how to create a SharePoint Framework (SPFx) React web part and add the Syncfusion React PDF Viewer component to a SharePoint Online page.
 
 ## Prerequisites
 
-- A SharePoint development environment and a Microsoft 365 tenant (for testing/deployment).
-- Node.js compatible with your SPFx version (check SPFx docs).
-- Yeoman and the SPFx generator: `npm install -g yo @microsoft/generator-sharepoint`.
-- Gulp: `npm install -g gulp-cli`.
+Before creating the SharePoint application, ensure that the following software is installed:
 
-## Create an SPFx React web part
+- [Node.js 22.x](https://nodejs.org/en/download)
+- [Yeoman](https://yeoman.io/)
+- [Gulp CLI](https://www.npmjs.com/package/gulp-cli)
+- [SharePoint Framework Generator](https://www.npmjs.com/package/@microsoft/generator-sharepoint)
 
-Run the SharePoint generator and choose the React framework (TypeScript recommended). Example answers shown in parentheses.
+References:
+
+- [Set up your SharePoint Framework development environment](https://learn.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-development-environment)
+- [Node.js release schedule](https://nodejs.org/en/about/previous-releases)
+
+Install the required SharePoint Framework tools:
+
+```bash
+npm install -g yo
+npm install -g gulp-cli
+npm install -g @microsoft/generator-sharepoint
+```
+
+Verify the installed versions:
+
+```bash
+node -v
+npm -v
+yo --version
+```
+
+> Note: The examples in this topic were tested with **Node.js 22.x** and the **SharePoint Framework generator 1.23.2**.
+
+## Create a SharePoint Framework React Project
+
+Create a new project folder:
+
+```bash
+mkdir pdfviewer-spfx-react
+cd pdfviewer-spfx-react
+```
+
+Generate the SharePoint Framework project:
 
 ```bash
 yo @microsoft/sharepoint
-# Solution name: pdfviewer-spfx
-# Target: SharePoint Online only (latest)
-# Component type: WebPart
-# Web part name: PdfViewer
-# Framework: React
 ```
 
-This creates the usual SPFx project tree (no `src/`/`app/` ambiguity): React components live under `src/webparts/pdfViewer/components` and global web part assets are under `src/webparts/pdfViewer/assets`.
+Choose the following options when prompted:
 
-## Install Syncfusion package
+```
+Solution Name:
+pdfviewer-spfx-react
 
-In the project root run:
+Target for component:
+SharePoint Online only (latest)
+
+Place files:
+Use current folder
+
+Deploy solution to all sites immediately:
+No
+
+Permissions:
+No
+
+Component Type:
+WebPart
+
+Web Part Name:
+PdfViewer
+
+Framework:
+React
+```
+
+> Note: The generated project uses TypeScript by default, with the React framework selected.
+
+## Install Syncfusion React PDF Viewer
 
 ```bash
 npm install @syncfusion/ej2-react-pdfviewer --save
 ```
 
-Keep the package version aligned with the runtime assets you host.
+## Add PDF Viewer Resources
 
-## Add Syncfusion CSS
+Download the following files:
 
-Import the Syncfusion theme styles so the viewer is bundled with the web part. Themes for PDF Viewer can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
+- https://cdn.syncfusion.com/ej2/latest/dist/ej2-pdfviewer-lib/pdfium.js
+- https://cdn.syncfusion.com/ej2/latest/dist/ej2-pdfviewer-lib/pdfium.wasm
 
-This guide uses the `Tailwind 3` theme as an example. To install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
+Create the following folder in your SharePoint site assets:
 
-```bash
-npm install @syncfusion/ej2-tailwind3-theme
+```
+SiteAssets
+└── ej2-pdfviewer-lib
+    ├── pdfium.js
+    └── pdfium.wasm
 ```
 
-In your React component file (TypeScript example below) import the CSS from node_modules:
+Upload the downloaded files to the folder. For example:
+
+```
+https://your-site.sharepoint.com/sites/PdfViewerDemo/SiteAssets/ej2-pdfviewer-lib
+```
+
+## Update Component Interface
+
+Open:
+
+```
+src/webparts/pdfViewer/components/IPdfViewerProps.ts
+```
+
+Replace the file contents with an empty props interface:
 
 ```ts
-import '@syncfusion/ej2-tailwind3-theme/styles/pdfviewer/index.css';
+export interface IPdfViewerProps {
+}
 ```
 
-N> The `index.css` file automatically includes all required dependent component styles for the PDF Viewer. You do not need to import individual dependency styles such as Base, Buttons, Dropdowns, Inputs, Navigations, Popups, and SplitButtons separately.
+## Add the PDF Viewer React Component
 
-If your SPFx build configuration forbids direct CSS imports from node_modules, add the `@import` line to your component CSS (for example `PdfViewer.module.css`) using the appropriate path or deploy the CSS from a CDN.
+Open:
 
-## Provide runtime assets and choose rendering mode
-
-SPFx web parts run in the browser, so standalone (client-only) rendering is the natural default: the PDF Viewer runs in the user's browser and uses `resourceUrl` to load runtime assets (pdfium.js, pdfium.wasm and supporting files). The optional server-backed mode uses `serviceUrl` instead, pointing to a PDF rendering web service.
-
-Two deployment options for the runtime assets:
-
-- Recommended — Use the Syncfusion CDN (fast, simplest): set `resourceUrl` to the CDN folder that matches your installed package version, e.g.:
-
-```ts
-resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
+```
+src/webparts/pdfViewer/components/PdfViewer.tsx
 ```
 
-- Self‑hosted — Upload `ej2-pdfviewer-lib` to a public CDN or to a SharePoint library (for example, Site Assets). If you upload to Site Assets, use the full site URL for `resourceUrl`, for example:
+Replace the entire file with the following:
 
-```ts
-resourceUrl = "https://contoso.sharepoint.com/sites/YourSite/SiteAssets/ej2-pdfviewer-lib";
-```
-
-Notes on rendering modes and SPFx:
-
-- Standalone (client-only): fully supported in SPFx — set `resourceUrl` as above and the viewer will render entirely in the browser. This is the recommended, simplest approach for SPFx web parts.
-- Server‑backed (optional): to use server-side rendering, set `serviceUrl` (pointing to your PDF rendering web service) instead of `resourceUrl`.
-
-Important: ensure any host you use serves `.wasm` files with Content-Type `application/wasm` and that tenant/content security policies permit fetching assets from the chosen host.
-
-## Add the React component (TypeScript)
-
-Create `PdfViewerClient.tsx` under `src/webparts/pdfViewer/components` and paste the minimal example below. This component is safe for SPFx, which runs in the browser. The CSS imports are listed in the previous section; the following snippet focuses on the component itself:
-
-{% tabs %}
-{% highlight js tabtitle="Standalone" %}
-{% raw %}
-// src/webparts/pdfViewer/components/PdfViewerClient.tsx
+```tsx
 import * as React from 'react';
+import type { IPdfViewerProps } from './IPdfViewerProps';
+
 import {
   PdfViewerComponent,
   Toolbar,
   Magnification,
   Navigation,
+  LinkAnnotation,
+  BookmarkView,
+  ThumbnailView,
+  Print,
+  TextSelection,
+  TextSearch,
   Annotation,
-  Inject,
+  FormFields,
+  FormDesigner,
+  Inject
 } from '@syncfusion/ej2-react-pdfviewer';
-import '@syncfusion/ej2-pdfviewer/styles/material.css';
 
-export const PdfViewerClient: React.FC = () => {
-  const [mounted, setMounted] = React.useState(false);
-  React.useEffect(() => setMounted(true), []);
-  if (!mounted) return null;
+export default class PdfViewer extends React.Component<IPdfViewerProps> {
+  public render(): React.ReactElement {
 
-  return (
-    <div className="control-section">
+    return (
       <PdfViewerComponent
-        id="container"
+        id="PdfViewer"
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-        style={{ height: '640px' }}
+        resourceUrl="https://your-site.sharepoint.com/sites/PdfViewerDemo/SiteAssets/ej2-pdfviewer-lib"
+        style={{ height: '800px', width: '100%' }}
       >
-        <Inject services={[Toolbar, Magnification, Navigation, Annotation]} />
+        <Inject services={[
+          Toolbar,
+          Magnification,
+          Navigation,
+          LinkAnnotation,
+          BookmarkView,
+          ThumbnailView,
+          Print,
+          TextSelection,
+          TextSearch,
+          Annotation,
+          FormFields,
+          FormDesigner
+        ]} />
       </PdfViewerComponent>
-    </div>
-  );
-};
-
-export default PdfViewerClient;
-{% endraw %}
-{% endhighlight %}
-{% endtabs %}
-
-## Use the component in the web part
-
-Open the generated web part React file (for example `src/webparts/pdfViewer/components/PdfViewer.tsx`) and render `PdfViewerClient`. Replace the default render output with the following:
-
-```ts
-import * as React from 'react';
-import { PdfViewerClient } from './PdfViewerClient';
-
-export default function PdfViewer(): JSX.Element {
-  return (
-    <div className="pdfViewer">
-      <PdfViewerClient />
-    </div>
-  );
+    );
+  }
 }
 ```
 
-## Test and package
+Remember to replace `your-site.sharepoint.com/sites/PdfViewerDemo` in `resourceUrl` with the URL of your SharePoint site before serving the web part.
 
-Run the local workbench for development:
+## Update the Web Part
 
-```bash
-gulp serve
-# open the local workbench or use SharePoint Online workbench for hosted assets
+Open:
+
+```
+src/webparts/pdfViewer/PdfViewerWebPart.ts
 ```
 
-To package for deployment (when using self‑hosted assets make sure they are uploaded to your CDN or Site Assets before installing the package):
+Add a helper method to load the Tailwind 3 theme stylesheet from the Syncfusion CDN at runtime. Place it inside the class:
 
-```bash
-gulp bundle --ship
-gulp package-solution --ship
+```ts
+private loadStyles(): void {
+
+  const linkId = 'ej2-tailwind3-theme';
+
+  if (!document.getElementById(linkId)) {
+
+    const link = document.createElement('link');
+
+    link.id = linkId;
+    link.rel = 'stylesheet';
+    link.href =
+      'https://cdn.syncfusion.com/ej2/34.1.29/tailwind3.css';
+
+    document.head.appendChild(link);
+  }
+}
 ```
 
-## See also
+Update the `render` method so it loads the styles and mounts the React component into the web part's DOM element. Replace the existing element creation code (the block that passes `description`, `isDarkTheme`, `environmentMessage`, and `userDisplayName` props) with an empty props object:
 
-- [Getting started overview](../getting-started-overview)
-- [Creating a Next.js application using React PDF Viewer](./nextjs-getting-started)
-- [Getting started with React PDF Viewer in Preact](./preact)
-- [Getting started with React PDF Viewer in Remix](./remix)
+```ts
+public render(): void {
+
+  this.loadStyles();
+
+  const element: React.ReactElement = React.createElement(
+    PdfViewer,
+    {}
+  );
+
+  ReactDom.render(element, this.domElement);
+}
+```
+
+## Configure SharePoint Workbench
+
+Open `config/serve.json` and update the `pageUrl` (or `initialPage`) entry to point to your SharePoint site:
+
+```json
+{
+  "pageUrl": "https://your-site.sharepoint.com/sites/PdfViewerDemo/_layouts/15/workbench.aspx"
+}
+```
+
+Replace `your-site.sharepoint.com/sites/PdfViewerDemo` with the actual host name and site path of your tenant so that the local debug bundle loads against the correct site.
+
+## Run the Application
+
+```bash
+npm start
+```
+
+Open:
+
+```
+https://your-site.sharepoint.com/sites/PdfViewerDemo/_layouts/15/workbench.aspx
+```
+
+Add the `PdfViewer` web part to the page. The React PDF Viewer loads with the following modules enabled:
+
+- Toolbar
+- Navigation
+- Magnification
+- Text Selection
+- Text Search
+- Print
+- Annotations
+- Form Fields
+- Form Designer
+
+> [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master).
+
+## See Also
+
+- [PDF Viewer Getting Started](../getting-started)
+- [Toolbar Customization](../toolbar)
+- [Annotations](../annotations)
+- [Form Designer](../forms/overview)
+- [Page Organizer](../organize-pdf)
