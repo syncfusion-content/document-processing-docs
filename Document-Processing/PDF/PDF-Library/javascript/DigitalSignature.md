@@ -1237,6 +1237,161 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
+## Digital signature validation
+
+The JavaScript PDF Library supports validating digital signatures in an existing PDF document. Digital signature validation verifies the following information to determine the validity of each signature:
+
+* Document modifications made after signing.
+* The certificate chain against the provided trusted certificates.
+* Timestamp information associated with the signature.
+* Certificate revocation status using Online Certificate Status Protocol (OCSP) and Certificate Revocation List (CRL) information.
+* Multiple digital signatures available in the PDF document.
+
+Use the `validateSignatures` method of `PdfForm` to validate the digital signatures in a PDF document. Configure the trusted certificates and their passwords using `PdfSignatureValidationOptions`.
+
+The `validateSignatures` method returns the overall validation status and the individual validation results. The `isValid` property indicates whether all the validated signatures are valid. The `results` property contains details such as the signature name, signature status, document modification status, and revocation result for each signature.
+
+The following code example shows how to validate the digital signatures in an existing PDF document.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+
+import { PdfDocument, PdfSignatureValidationOptions } from '@syncfusion/ej2-pdf';
+
+// Load the signed PDF document.
+const document: PdfDocument = new PdfDocument(documentData);
+// Configure the signature validation options.
+const options: PdfSignatureValidationOptions = {
+    trustedCertificates: [certificateData],
+    passwords: ['syncfusion']
+};
+// Validate the digital signatures in the PDF document.
+const validationResult = document.form.validateSignatures(options);
+// Check the validation result of each signature.
+if (validationResult.results !== null &&
+    validationResult.results !== undefined) {
+    validationResult.results.forEach((result) => {
+        console.log('Signature name: ' + result.signatureName);
+        console.log('Signature valid: ' + result.isSignatureValid);
+        console.log('Signature status: ' + result.signatureStatus);
+        console.log('Document modified: ' + result.isDocumentModified);
+        console.log('Revocation result: ', result.revocationResult);
+    });
+}
+// Get the overall signature validation status.
+console.log('All signatures valid: ' + validationResult.isValid);
+// Destroy the document and release its resources.
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Load the signed PDF document.
+const document = new ej.pdf.PdfDocument(documentData);
+// Configure the signature validation options.
+const options = {
+    trustedCertificates: [certificateData],
+    passwords: ['syncfusion']
+};
+// Validate the digital signatures in the PDF document.
+const validationResult = document.form.validateSignatures(options);
+// Check the validation result of each signature.
+if (validationResult.results !== null &&
+    validationResult.results !== undefined) {
+    validationResult.results.forEach((result) => {
+        console.log('Signature name: ' + result.signatureName);
+        console.log('Signature valid: ' + result.isSignatureValid);
+        console.log('Signature status: ' + result.signatureStatus);
+        console.log('Document modified: ' + result.isDocumentModified);
+        console.log('Revocation result: ', result.revocationResult);
+    });
+}
+// Get the overall signature validation status.
+console.log('All signatures valid: ' + validationResult.isValid);
+// Destroy the document and release its resources.
+document.destroy();
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## Validate all signatures in a PDF document
+
+You can validate all digital signatures in a PDF document by calling the `validateSignatures` method. The method validates every signature field in the document and returns the individual results through the `results` collection.
+
+The following code example shows how to validate all signatures and determine whether the complete PDF document has valid signatures.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+
+import { PdfDocument, PdfSignatureValidationOptions } from '@syncfusion/ej2-pdf';
+
+// Load the PDF document that contains multiple signatures.
+const document: PdfDocument = new PdfDocument(documentData);
+// Configure the validation options.
+const options: PdfSignatureValidationOptions = {
+    trustedCertificates: [certificateData],
+    passwords: ['syncfusion']
+};
+// Validate all signatures in the PDF document.
+const validationResult = document.form.validateSignatures(options);
+if (validationResult.results !== null &&
+    validationResult.results !== undefined) {
+    console.log(
+        'Number of validated signatures: ' +
+        validationResult.results.length
+    );
+    validationResult.results.forEach((result) => {
+        console.log(
+            `${result.signatureName}: ${result.isSignatureValid}`
+        );
+    });
+}
+// Determine whether all signatures are valid.
+if (validationResult.isValid) {
+    console.log('All signatures in the PDF document are valid.');
+} else {
+    console.log('One or more signatures in the PDF document are invalid.');
+}
+// Destroy the document and release its resources.
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Load the PDF document that contains multiple signatures.
+const document = new PdfDocument(documentData);
+// Configure the validation options.
+const options = {
+    trustedCertificates: [certificateData],
+    passwords: ['syncfusion']
+};
+// Validate all signatures in the PDF document.
+const validationResult = document.form.validateSignatures(options);
+if (validationResult.results !== null &&
+    validationResult.results !== undefined) {
+    console.log(
+        'Number of validated signatures: ' +
+        validationResult.results.length
+    );
+    validationResult.results.forEach((result) => {
+        console.log(
+            `${result.signatureName}: ${result.isSignatureValid}`
+        );
+    });
+}
+// Determine whether all signatures are valid.
+if (validationResult.isValid) {
+    console.log('All signatures in the PDF document are valid.');
+} else {
+    console.log('One or more signatures in the PDF document are invalid.');
+}
+// Destroy the document and release its resources.
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Inspecting signatures
 
 The following examples demonstrate how to read information from existing signatures in a PDF document.
