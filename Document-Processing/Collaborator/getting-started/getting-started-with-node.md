@@ -1,20 +1,29 @@
+---
+layout: post
+title: Getting Started with Node.js Collaboration Server | Syncfusion
+description: Learn how to create a collaborative PDF Viewer backed by the Node.js Collaboration Server using WebSocket transport and Redis storage.
+control: Collaborator
+platform: document-processing
+documentation: ug
+domainurl: ##DomainURL##
+---
 # Getting Started with Node.js Collaboration Server
 
 This walk\-through creates a collaborative PDF Viewer backed by the Node.js Collaboration Server. It uses the common collaborator services on the server and the shared @syncfusion/ej2\-collaborator client on the browser.
 
 The walk\-through uses the **PDF Viewer** as the reference editor component. The DOCX Editor and Spreadsheet do not currently have a Node.js  Server implementation, so this Node.js applies only to the **PDF Viewer**.
 
-# Client Side
+## Client Side
 
-# Integrate Collaboration Server
+## Integrate Collaboration Server
 
-## Step 5 — Install the Node.js package
+### Step 5 — Install the Node.js package
 
 In your Node.js project, install the Node.js Collaboration Server:
 
 npm install ej2\-collaborator\-server
 
-## Step 6 — Create the Node.js server
+### Step 6 — Create the Node.js server
 
 CollaborationServer is the entry point for the Node.js Collaboration Server. It hosts the HTTP \+ WebSocket server, mounts the REST routes under /api/collaboration/\*, and runs the background save worker.
 
@@ -71,7 +80,7 @@ server.start();
 ```
 
 
-## Step 7 — Add the Pdf Viewer adapter 
+### Step 7 — Add the PDF Viewer adapter 
 
 PdfViewerAdapter is the control\-specific translator on the server side. 
 
@@ -232,11 +241,11 @@ function registerCollaborativeEditingRoutes(app, actionService, adapter) {
     });
 
 
-    app.post('/api/CollaborativeEditing/UpdateAction', async (req, res) \=\> {
+    app.post('/api/CollaborativeEditing/UpdateAction', async (req, res) => {
 
         try {
 
-            const action \= await actionService.addOperation(
+            const action = await actionService.addOperation(
 
                 req.body, adapter
 
@@ -255,13 +264,13 @@ function registerCollaborativeEditingRoutes(app, actionService, adapter) {
     });
 
 
-    app.post('/api/CollaborativeEditing/GetActionsFromServer', async (req, res) \=\> {
+    app.post('/api/CollaborativeEditing/GetActionsFromServer', async (req, res) => {
 
         try {
 
-            const { roomName, version } \= req.body;
+            const { roomName, version } = req.body;
 
-            const actions \= await actionService.getEffectivePendingVersion(
+            const actions = await actionService.getEffectivePendingVersion(
 
                 roomName, version
 
@@ -269,7 +278,7 @@ function registerCollaborativeEditingRoutes(app, actionService, adapter) {
 
             res.json(
 
-                actions.map(x \=\> adapter.mapGenericToControlAction(x))
+                actions.map(x => adapter.mapGenericToControlAction(x))
 
             );
 
@@ -286,19 +295,19 @@ function registerCollaborativeEditingRoutes(app, actionService, adapter) {
 }
 
 
-module.exports \= { registerCollaborativeEditingRoutes };
+module.exports = { registerCollaborativeEditingRoutes };
 
 ```
 
 
 |**Method \& path**|**Body**|**Returns**|
 |:---|:---|:---|
-|POST /api/CollaborativeEditing/ImportFile|{ roomName, fileName }|{ version, sfdt, actions\[] }|
+|POST /api/CollaborativeEditing/ImportFile|{ roomName, fileName }|{ version, document data, actions\[] }|
 |POST /api/CollaborativeEditing/UpdateAction|Partial\<CollaborationAction\>|The editor\-specific action produced by adapter.mapGenericToControlAction(...)|
-|POST /api/CollaborativeEditing/GetActionsFromServer|{ roomName, version }|actions\[] (each mapped back through the adapter)|
+|POST /api/CollaborativeEditing/GetActionsFromServer|{ roomName, version }|actions[] (each mapped back through the adapter)|
 
 
-**Step 10 — Run the application**
+### Step 10 — Run the application
 
 After completing the client and server setup:
 

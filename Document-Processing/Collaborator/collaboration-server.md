@@ -1,3 +1,13 @@
+---
+layout: post
+title: Collaboration Server in Syncfusion Collaborator | Syncfusion
+description: The Collaboration Server manages collaboration sessions, synchronizes editing actions, persists changes, and broadcasts updates in real time.
+control: Collaborator
+platform: document-processing
+documentation: ug
+domainurl: ##DomainURL##
+---
+
 # Collaboration Server
 
 The Collaboration Server is the back\-end component of the Collaborator framework. It manages collaboration sessions, synchronizes editing actions, persists changes, and broadcasts updates to connected participants in real time.
@@ -32,7 +42,7 @@ The Collaboration Server uses Redis for operation storage, session synchronizati
 
 The Collaboration Server is control\-agnostic. Each supported EJ2 component integrates through a server adapter that translates component\-specific actions into the common collaboration format. The same collaboration infrastructure can therefore be reused across Document Editor, PDF Viewer, and Spreadsheet with only the adapter implementation changing.
 
-# ASP.NET Core Server
+## ASP.NET Core Server
 
 The ASP.NET Core Collaboration Server is provided through the Syncfusion.Collaborator.Server package. It supports both SignalR and WebSocket transports and is recommended for modern .NET applications.
 
@@ -117,7 +127,7 @@ Register a control\-specific adapter to translate between the EJ2 component and 
 
 
 
-# ASP.NET MVC Server
+## ASP.NET MVC Server
 
 The ASP.NET MVC Collaboration Server provides the collaboration capabilities as the ASP.NET Core server for applications built on .NET Framework and ASP.NET MVC 5.
 
@@ -148,7 +158,7 @@ ServiceCollectionExtensions.RegisterAdapter( new DocumentEditorCollaborationAdap
 
 Register a control\-specific adapter to connect the EJ2 component with the Common Collaborator framework.
 
-# Node.js Server
+## Node.js Server
 
 The Node.js Collaboration Server provides real\-time collaboration capabilities for JavaScript and TypeScript applications.
 

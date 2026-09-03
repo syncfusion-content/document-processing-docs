@@ -1,4 +1,4 @@
-# FAQ
+# Frequently asked questions
 
 ## 1. How should Redis be configured for collaborative editing?
 

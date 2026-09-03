@@ -1,3 +1,13 @@
+---
+layout: post
+title: Collaboration Client in Syncfusion Collaborator | Syncfusion
+description: The Collaboration Client is a browser-side library that enables real-time collaborative editing in Syncfusion EJ2 components using SignalR or WebSocket transports.
+control: Collaborator
+platform: document-processing
+documentation: ug
+domainurl: ##DomainURL##
+---
+
 # Collaboration Client
 
 The Collaboration Client (@syncfusion/ej2\-collaborator) is a browser\-side library that enables real\-time collaborative editing in Syncfusion Essential JS 2 (EJ2) components such as **Document Editor**, **PDF Viewer**, and **Spreadsheet**.
@@ -31,7 +41,7 @@ The Collaboration Client:
 - Keeps content synchronized across all connected users.
 
 
-## Supported Backends
+## Supported Collaboration Servers
 
 The same client can be used with different Collaboration Server implementations.
 |**Connection Type**|**Supported Server**|
@@ -54,7 +64,7 @@ Product teams touch exactly two surfaces: the **`ICollaborationProvider`** inter
 
 | Member | Purpose |
 |---|---|
-| `applyRemoteAction(action: string, data: ICollaborationActionData): void` | Apply a remote action received from the collaboration backend to the local editor. The action payload is exposed under `data.payload`. **This is the only method the common package calls on the adapter at runtime.** |
+| `applyRemoteAction(action: string, data: ICollaborationActionData): void` | Apply a remote action received from the collaboration server to the local editor. The action payload is exposed under `data.payload`. **This is the only method the common package calls on the adapter at runtime.** |
 
 ### `CollaborationClient` — call this from your app
 
@@ -68,7 +78,7 @@ Product teams touch exactly two surfaces: the **`ICollaborationProvider`** inter
 
 | Field | Type | Purpose |
 |---|---|---|
-| `serviceUrl` | `string` | URL of the real-time collaboration backend. **Required.** Shape depends on `connectionType` For Example : serviceUrl:"ws://localhost:8080", //node server             serviceUrl:"ws://localhost:62870", //ASP.NET Core + Webscoket        ServiceUrl:"http://localhost:62870", //ASP.NET Core + SignalR 
+| `serviceUrl` | `string` | URL of the real-time collaboration server. Example : serviceUrl:"ws://localhost:8080", //Node server      ServiceUrl:"http://localhost:62870", //ASP.NET Core 
 | `connectionType` | `'signalr' \| 'websocket'` | Selects the backend. Defaults to `'signalr'`. |
 | `currentUser` | `string` | Display name broadcast to peers when joining the room. **Required.** |
 | `onUserJoined?` | `(user: UserInfo) => void` | Fired when a remote peer enters the same room. **Optional.** |

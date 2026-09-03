@@ -1,4 +1,14 @@
-# Collaborator
+---
+layout: post
+title: Syncfusion Collaborator Overview | Syncfusion
+description: The Syncfusion Collaborator is a real-time collaboration framework that enables multiple users to edit content simultaneously in EJ2 components.
+control: Collaborator
+platform: document-processing
+documentation: ug
+domainurl: ##DomainURL##
+---
+
+# Syncfusion Collaborator
 
 The Syncfusion **Collaborator** is a real\-time collaboration framework that enables multiple users to edit content simultaneously in EJ2 components such as Document Editor, PDF Viewer, and Spreadsheet.
 

@@ -1,12 +1,21 @@
+---
+layout: post
+title: Getting Started with ASP.NET Core Collaboration Server | Syncfusion
+description: Learn how to create a collaborative Document Editor in an ASP.NET Core application using the Collaboration Server with SignalR transport and Redis storage.
+control: Collaborator
+platform: document-processing
+documentation: ug
+domainurl: ##DomainURL##
+---
 # Getting Started with ASP.NET Core Collaboration Server
 
 This walk\-through creates a collaborative Document Editor backed by the ASP.NET Core Collaboration Server (SignalR transport, the default). It uses the Common Collaborator services on the server and the shared @syncfusion/ej2\-collaborator client on the browser.
 
 The walk\-through uses the **DOCX Editor** as the reference editor component. The same pattern applies to the **PDF Viewer** and the **Spreadsheet** only the control\-specific adapter class changes.
 
-# Client Side
+## Client Side
 
-## Step 1 — Install the client packages
+### Step 1 — Install the client packages
 
 In your front\-end project:
 {% tabs %}
@@ -20,7 +29,7 @@ npm install @syncfusion/ej2-collaborator
 @microsoft/signalr is installed automatically as a transitive dependency.
 
 
-## Step 2 — Reference Adapter (DocumentEditorAdapter.ts)
+### Step 2 — Reference Adapter (DocumentEditorAdapter.ts)
 
 The control\-specific translator on the client side. It implements ICollaborationProvider for the EJ2 Document Editor. PDF Viewer / Spreadsheet teams replace this with their own, but the shape is identical. 
  ```ts
@@ -149,7 +158,7 @@ export class DocumentEditorAdapter implements ICollaborationProvider {
 }
 ```
 
-## Step 3 — Client Wiring (app.ts)
+### Step 3 — Client Wiring (app.ts)
 
 ```ts
 
@@ -242,23 +251,23 @@ const client: CollaborationClient = new CollaborationClient(adapter, {
 })();
 
 ```
-## Step 4 — Serve the client
+### Step 4 — Serve the client
 
 Build and serve the front\-end application so the page is reachable at, for example, http://localhost:4000
 
 
-# Integrate Collaboration Server
+## Integrate Collaboration Server
 
-## Step 5 — Install the NuGet packages
+### Step 5 — Install the NuGet packages
 
-In your ASP.NET Core project, add the Collaboration Server and the Document Editor server\-side helper
+In your ASP.NET Core project, add the Collaboration Server and the Document Editor server\-side packages
 
 dotnet add package Syncfusion.Collaborator.Server
 
 dotnet add package [Syncfusion.EJ2.WordEditor.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Core).
 
 
-## Step 6 — Configure Redis
+### Step 6 — Configure Redis
 
 Add the connection string in appsettings.json
 ```C#
@@ -320,7 +329,7 @@ app.Run();
 ```
 By default, the ASP.NET Core Collaboration Server uses SignalR. To use WebSocket transport, configure ConnectionType as WebSocket and enable WebSocket support in the application pipeline and  and call app.UseWebSockets(); before MapCollaborationServer()
 
-## Step 8 — Add the Document Editor adapter
+### Step 8 — Add the Document Editor adapter
 
 DocumentEditorAdapter is the control\-specific translator on the server side. PDF Viewer and Spreadsheet applications provide their own adapter implementation, but the overall structure remains the same.
 
@@ -479,7 +488,7 @@ public class DocumentEditorCollaborationAdapter : ICollaborationAdapter
 ```
 
 
-## Step 9 — Add the collaborative editing controller (web service methods)
+### Step 9 — Add the collaborative editing controller (web service methods)
 
 CollaborativeEditingController is the HTTP bridge between the client control and the Common Collaborator. Every EJ2 content editor component that supports collaboration (Document Editor, PDF Viewer, Spreadsheet) exposes the same three web service methods on its collaboration controller. Each method is required:
 |**Web service method**|**Why it is needed**|

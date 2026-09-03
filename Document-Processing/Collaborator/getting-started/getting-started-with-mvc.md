@@ -1,3 +1,12 @@
+---
+layout: post
+title: Getting Started with ASP.NET MVC Collaboration Server | Syncfusion
+description: Learn how to create a collaborative Document Editor in an ASP.NET MVC application using the Collaboration Server with WebSocket transport and Redis storage.
+control: Collaborator
+platform: document-processing
+documentation: ug
+domainurl: ##DomainURL##
+---
 # Getting Started with ASP.NET MVC Collaboration Server
 
 This walk\-through creates a collaborative Document Editor backed by the ASP.NET MVC 5 Collaboration Server. It uses the same Common Collaborator services on the server and the shared @syncfusion/ej2\-collaborator client on the browser.
@@ -6,9 +15,9 @@ The walk\-through uses the **DOCX Editor** as the reference editor component. 
 
 The ASP.NET MVC server uses the **WebSocket** transport, mounted through an OWIN startup at /ws. No SignalR is required.
 
-# Client Side
+## Client Side
 
-## Step 1 — Install the client packages
+### Step 1 — Install the client packages
 
 In your front\-end project:
 {% tabs %}
@@ -22,7 +31,7 @@ npm install @syncfusion/ej2-collaborator
 @microsoft/signalr is installed automatically as a transitive dependency.
 
 
-## Step 2 — Reference Adapter (DocumentEditorAdapter.ts)
+### Step 2 — Reference Adapter (DocumentEditorAdapter.ts)
 
 The control\-specific translator on the client side. It implements ICollaborationProvider for the EJ2 Document Editor. PDF Viewer / Spreadsheet teams replace this with their own, but the shape is identical. 
  ```ts
@@ -151,7 +160,7 @@ export class DocumentEditorAdapter implements ICollaborationProvider {
 }
 ```
 
-## Step 3 — Client Wiring (app.ts)
+### Step 3 — Client Wiring (app.ts)
 
 ```ts
 
@@ -244,13 +253,13 @@ const client: CollaborationClient = new CollaborationClient(adapter, {
 })();
 
 ```
-## Step 4 — Serve the client
+### Step 4 — Serve the client
 
 Build and serve the front\-end application so the page is reachable at, for example, http://localhost:4000
 
-## Integrate Collaboration Server
+### Integrate Collaboration Server
 
-### Step 5 — Install the NuGet packages
+#### Step 5 — Install the NuGet packages
 
 In your ASP.NET MVC 5 project, add the MVC Collaboration Server and the Document Editor server\-side helper
 
@@ -258,7 +267,7 @@ Install\-Package Syncfusion.Collaborator.Server.MVC
 
 Install\-Package Syncfusion.EJ2.WordEditor.AspNet.MVC
 
-### Step 6 — Register the Collaboration Server
+#### Step 6 — Register the Collaboration Server
 
 Open Global.asax.cs and register the Collaboration Server services during application startup. Configure the Redis connection and select WebSocket as the transport type. For ASP.NET MVC, the WebSocket transport is selected by setting CollaborationConnectionType.WebSocket. The adapter is registered through ServiceCollectionExtensions.RegisterAdapter(...).
 
