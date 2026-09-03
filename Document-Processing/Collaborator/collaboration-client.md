@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Collaboration Client in Syncfusion Collaborator | Syncfusion
-description: The Collaboration Client is a browser-side library that enables real-time collaborative editing in Syncfusion EJ2 components using SignalR or WebSocket transports.
+description: The Collaboration Client is a browser-side library that enables real-time collaborative editing in Syncfusion EJ2 components.
 control: Collaborator
 platform: document-processing
 documentation: ug
@@ -79,7 +79,7 @@ Product teams touch exactly two surfaces: the **`ICollaborationProvider`** inter
 | Field | Type | Purpose |
 |---|---|---|
 | `serviceUrl` | `string` | URL of the real-time collaboration server. Example : serviceUrl:"ws://localhost:8080", //Node server      ServiceUrl:"http://localhost:62870", //ASP.NET Core 
-| `connectionType` | `'signalr' \| 'websocket'` | Selects the backend. Defaults to `'signalr'`. |
+| `connectionType` | `'signalr' \| 'websocket'` | Selects the server. Defaults to `'signalr'`. |
 | `currentUser` | `string` | Display name broadcast to peers when joining the room. **Required.** |
 | `onUserJoined?` | `(user: UserInfo) => void` | Fired when a remote peer enters the same room. **Optional.** |
 | `onUserLeft?` | `(user: UserInfo) => void` | Fired when a remote peer leaves the room. **Optional.** |
