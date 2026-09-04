@@ -1021,7 +1021,7 @@ document.destroy();
 
 ## Cloud Border Style Annotation
 
-A cloud border style can be applied to rectangle, polygon, circle,ellipse and freeText annotations in an existing PDF document by using the [PdfBorderEffect](https://ej2.syncfusion.com/documentation/api/pdf/pdfbordereffect) class. Set the `intensity` property to control the intensity of the cloud effect and set the `style` property to `PdfBorderEffectStyle.cloudy`.
+A cloud border style can be applied to rectangle, polygon, circle, ellipse and freeText annotations in an existing PDF document by using the [PdfBorderEffect](https://ej2.syncfusion.com/documentation/api/pdf/pdfbordereffect) class. Set the `intensity` property to control the intensity of the cloud effect and set the `style` property to `PdfBorderEffectStyle.cloudy`.
 
 The following code example demonstrates how to apply a cloud border style to an existing rectangle annotation in a PDF document.
 

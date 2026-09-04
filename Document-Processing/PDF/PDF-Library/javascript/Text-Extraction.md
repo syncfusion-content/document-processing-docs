@@ -20,7 +20,9 @@ N> The `@syncfusion/ej2-pdf-data-extract` add-on package also powers the redacti
 
 ## Working with basic text extraction synchronously
 
-This example demonstrates how to extract plain text from a PDF document synchronously using the [PdfDataExtractor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor) class and the `extractTextSync` method. Basic text extraction retrieves text content from the entire PDF document immediately.
+The `extractTextSync` method provides the simplest way to retrieve all text content from a PDF document in a single operation. This synchronous approach is ideal when you need immediate access to the complete text and your document size permits blocking execution.
+
+The following example demonstrates how to extract plain text from a PDF document synchronously using the [PdfDataExtractor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor) class:
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -56,16 +58,16 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-### Basic text extraction
-
-| Method | Return Type | Description |
-|---|---|---|
-| [`extractTextSync()`](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#extracttextsync) | `string` | Extracts plain text synchronously from all pages of the PDF document. |
-| [`extractText()`](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#extracttext) | `Promise<string>` | Extracts plain text asynchronously from all pages of the PDF document. |
-
 ## Extract text from a specific page range in a PDF document synchronously
 
-This example demonstrates how to synchronously extract text from a PDF document by specifying a start and end page index. This approach allows you to retrieve text content from a defined range of pages for processing or analysis.
+When working with large PDF documents, you may want to extract text from specific pages rather than processing the entire document. The `extractTextSync` method accepts optional parameters to define the start and end page indices, allowing you to retrieve text content from a targeted page range.
+
+This approach is useful for:
+- Processing specific chapters or sections of a document
+- Reducing memory usage with large files
+- Focusing extraction on relevant content
+
+The following example shows how to extract text from a defined page range synchronously:
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -96,16 +98,11 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-### Text extraction from a specific page range
-
-| Method | Return Type | Description |
-|---|---|---|
-| [`extractTextSync(options)`](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#extracttextsync) | `string` | Extracts plain text synchronously from the page range specified using `startPageIndex` and `endPageIndex`. |
-| [`extractText(options)`](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#extracttext) | `Promise<string>` | Extracts plain text asynchronously from the page range specified using `startPageIndex` and `endPageIndex`. |
-
 ## Working with layout-based text extraction synchronously
 
-This example demonstrates how to extract text from a PDF document synchronously using the [PdfDataExtractor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor) class with layout-based options. Layout-based extraction preserves the visual structure of the source document, including line breaks and spacing.
+For documents where the visual structure and formatting are important to the extracted content, use layout-based text extraction. This method preserves the original document layout, including line breaks, spacing, and paragraph structure—making the extracted text more readable and maintaining its logical organization.
+
+The following example demonstrates how to extract text with layout preservation using the [PdfDataExtractor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor) class:
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -136,20 +133,31 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-### Layout-based text extraction
-
-| Method | Return Type | Description |
-|---|---|---|
-| [`extractTextSync(options)`](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#extracttextsync) | `string` | Extracts text synchronously while preserving the visual layout when `isLayout` is set to `true`. |
-| [`extractText(options)`](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#extracttext) | `Promise<string>` | Extracts text asynchronously while preserving the visual layout when `isLayout` is set to `true`. |
-
 ## Text extraction with bounds
 
-The following sections describe how to extract text along with positional and typographic information using the [extractTextLinesSync](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#extracttextlinessync) and [extractTextLines](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#extracttextlines) methods. The method returns a hierarchical collection of [TextLine](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/textline), [TextWord](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/textword), and [TextGlyph](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/textglyph) objects.
+For advanced use cases that require precise spatial information about text content, use bounds-based extraction. This method returns detailed hierarchical information including positional coordinates (bounds), font properties, size, style, and color for each text element.
 
-### Working with lines synchronously
+Bounds-based extraction is essential for:
+- Highlighting or annotating specific text locations
+- Implementing search result highlighting
+- Applying redactions to sensitive content
+- Programmatically identifying text regions for document analysis
+- Building custom search interfaces with visual feedback
 
-This example demonstrates how to extract text from a PDF page based on individual lines. The [extractTextLinesSync](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#extracttextlinessync) method returns a collection of [TextLine](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/textline) objects, allowing precise access to text content line by line.
+The [extractTextLinesSync](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#extracttextlinessync) and [extractTextLines](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#extracttextlines) methods return hierarchical collections of [TextLine](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/textline), [TextWord](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/textword), and [TextGlyph](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/textglyph) objects, allowing you to work with text at different levels of granularity.
+
+### Working with Lines
+
+Line-level extraction provides structured text content organized by line, with position and formatting information for each line. This granularity is useful for analyzing text structure, implementing line-based highlighting, or processing documents with multi-column layouts.
+
+The [extractTextLinesSync](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#extracttextlinessync) method returns a collection of [TextLine](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/textline) objects. Each TextLine object contains:
+- **text**: The complete text content of the line
+- **bounds**: The rectangular region occupied by the line on the page
+- **pageIndex**: Which page the line appears on
+- **fontName, fontStyle, fontSize**: Typographic information for the line
+- **words**: A collection of word-level objects within the line
+
+The following example demonstrates line-level text extraction:
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -214,18 +222,17 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-### Working with lines
+### Working with Words
 
-| Method | Return Type | Description |
-|---|---|---|
-| [`extractTextLinesSync()`](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#extracttextlinessync) | `TextLine[]` | Extracts text lines synchronously from all pages of the PDF document. |
-| [`extractTextLinesSync(options)`](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#extracttextlinessync) | `TextLine[]` | Extracts text lines synchronously from the page range specified in the extraction options. |
-| [`extractTextLines()`](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#extracttextlines) | `Promise<TextLine[]>` | Extracts text lines asynchronously from all pages of the PDF document. |
-| [`extractTextLines(options)`](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#extracttextlines) | `Promise<TextLine[]>` | Extracts text lines asynchronously from the page range specified in the extraction options. |
+Word-level extraction provides fine-grained access to individual words with their positions and properties. This is particularly useful for text highlighting, word-based search result visualization, spell-checking integration, or linguistic analysis.
 
-### Working with words synchronously
+Each [TextLine](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/textline) contains a collection of [TextWord](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/textword) objects. Each TextWord object includes:
+- **text**: The word content
+- **bounds**: The position of the word on the page
+- **fontName, fontStyle, fontSize**: Font properties for the word
+- **glyphs**: Individual character-level data within the word
 
-This example demonstrates how to extract words from a PDF document using the [extractTextLinesSync](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#extracttextlinessync) method. Each line contains a collection of [TextWord](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/textword) objects.
+The following example demonstrates how to access and process word-level data:
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -288,18 +295,22 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-### Working with words
-
-| Method | Return Type | Description |
-|---|---|---|
-| `extractTextWordsSync()` | `TextWord[]` | Extracts text words synchronously from all pages of the PDF document. |
-| `extractTextWordsSync(options)` | `TextWord[]` | Extracts text words synchronously from the page range specified in the extraction options. |
-| `extractTextWords()` | `Promise<TextWord[]>` | Extracts text words asynchronously from all pages of the PDF document. |
-| `extractTextWords(options)` | `Promise<TextWord[]>` | Extracts text words asynchronously from the page range specified in the extraction options. |
-
 ### Working with characters synchronously
 
-You can retrieve a single character and its properties, including bounds, font name, font size, and text color, using the [extractTextLinesSync](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#extracttextlinessync) method. Refer to the code sample below.
+Character-level (glyph) extraction provides the most granular level of detail, allowing you to access individual characters with their exact positions, colors, and font properties. This level of detail is essential for:
+- Precise text highlighting at the character level
+- Color-aware text extraction
+- Detecting rotated or specially formatted characters
+- Building advanced search and annotation features
+
+Use the [extractTextLinesSync](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#extracttextlinessync) method to retrieve character-level data. Each [TextGlyph](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/textglyph) object contains:
+- **text**: The character content
+- **bounds**: Precise position of the character
+- **fontName, fontStyle, fontSize**: Font properties
+- **color**: The text color
+- **isRotated**: Whether the character is rotated
+
+The following example demonstrates character-level extraction:
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -370,18 +381,24 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-### Working with characters
+## Text Extraction API Reference
 
-| Method | Return Type | Description |
-|---|---|---|
-| `extractTextCharactersSync()` | `TextGlyph[]` | Extracts text characters synchronously from all pages of the PDF document. |
-| `extractTextCharactersSync(options)` | `TextGlyph[]` | Extracts text characters synchronously from the page range specified in the extraction options. |
-| `extractTextCharacters()` | `Promise<TextGlyph[]>` | Extracts text characters asynchronously from all pages of the PDF document. |
-| `extractTextCharacters(options)` | `Promise<TextGlyph[]>` | Extracts text characters asynchronously from the page range specified in the extraction options. |
+The following table provides a comprehensive overview of all text extraction methods available in the `PdfDataExtractor` class:
 
-### Find text synchronously
+| Process | Method Signature | Return Type | Description |
+|---|---|---|---|
+| **Extract Text** | `extractTextSync()` | `string` | Extracts plain text synchronously from the entire PDF document. |
+| **Extract Text** | `extractText()` | `Promise<string>` | Extracts plain text asynchronously from the entire PDF document. |
+| **Extract Text (Page Range)** | `extractTextSync(options: { startPageIndex: number; endPageIndex: number })` | `string` | Extracts plain text synchronously from a specified page range using start and end page indices. |
+| **Extract Text (Page Range)** | `extractText(options: { startPageIndex: number; endPageIndex: number })` | `Promise<string>` | Extracts plain text asynchronously from a specified page range using start and end page indices. |
+| **Extract Layout Text** | `extractTextSync(options: { isLayout: boolean })` | `string` | Extracts layout-based text synchronously, preserving the visual structure and spacing of the source document. |
+| **Extract Layout Text** | `extractText(options: { isLayout: boolean })` | `Promise<string>` | Extracts layout-based text asynchronously, preserving the visual structure and spacing of the source document. |
+| **Extract Text with Bounds** | `extractTextLinesSync(options?: { startPageIndex?: number; endPageIndex?: number })` | `TextLine[]` | Extracts text synchronously with hierarchical line, word, and character-level information including positional bounds. |
+| **Extract Text with Bounds** | `extractTextLines(options?: { startPageIndex?: number; endPageIndex?: number })` | `Promise<TextLine[]>` | Extracts text asynchronously with hierarchical line, word, and character-level information including positional bounds. |
 
-The [findTextSync](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#findtext) method of the [PdfDataExtractor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor) class locates specific text in a PDF document. The method returns the page index and rectangular bounds of each matching text occurrence synchronously.. These details are useful for highlighting text, applying redaction, adding annotations, navigating between search results, and building custom search features.
+### Find text
+
+The `findTextSync` method of the `PdfDataExtractor` class locates specific text in a PDF document. The method returns the page index and rectangular bounds of each matching text occurrence synchronously. These details are useful for highlighting text, applying redaction, adding annotations, navigating between search results, and building custom search features.
 
 The following code example demonstrates how to search for text synchronously in a PDF document.
 
@@ -397,7 +414,7 @@ let document: PdfDocument = new PdfDocument(data);
 // Initialize a new instance of the `PdfDataExtractor` class
 let extractor: PdfDataExtractor = new PdfDataExtractor(document);
 // Search for the specified text and retrieve the matching occurrences synchronously
-let searchResults = extractor.findTextSync('document');
+let searchResults = extractor.findTextSync('PDF', { caseSensitive: false, wholeWord: false, startPageIndex: 0, endPageIndex: document.pageCount - 1 });
 // Release document resources
 document.destroy();
 
@@ -410,7 +427,7 @@ var document = new ej.pdf.PdfDocument(data);
 // Initialize a new instance of the PdfDataExtractor class
 var extractor = new ej.pdfdataextract.PdfDataExtractor(document);
 // Search for the specified text and retrieve the matching occurrences synchronously
-var searchResults = extractor.findTextSync('document');
+var searchResults = extractor.findTextSync('PDF', { caseSensitive: false, wholeWord: false, startPageIndex: 0, endPageIndex: document.pageCount - 1 });
 // Release document resources
 document.destroy();
 
@@ -420,13 +437,13 @@ document.destroy();
 
 N> Use `findTextSync` when the search result is required immediately. For large PDF documents, use the asynchronous `findText` method to avoid blocking execution.
 
-## Search and get the bounds of text in a PDF document
+## Search for multiple text values and get the bounds
 
-You can search for specific text in a PDF document and retrieve the location of every occurrence using the [findTextSync](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#findtextsync) and [findText](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#findtext) methods of the [PdfDataExtractor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor) class.
+You can search for multiple text values in a PDF document and retrieve the location of every occurrence using the `findTextSync` and `findText` methods of the `PdfDataExtractor` class.
 
 The `findTextSync` method searches the PDF document synchronously, while the `findText` method performs the search asynchronously. Both methods accept optional text-search settings and return the searched text together with the bounding rectangles of all matching occurrences grouped by page number. The returned bounds can be used for highlighting, redaction, annotation, and document navigation.
 
-The following code example demonstrates how to search for text synchronously using optional search parameters and retrieve the bounds of all matching occurrences in a PDF document.
+The following code example demonstrates how to search for multiple text values synchronously using optional search parameters and retrieve the bounds of all matching occurrences in a PDF document.
 
 {% tabs %}
 
@@ -439,12 +456,22 @@ import { PdfDataExtractor, TextSearchResult, Rectangle } from '@syncfusion/ej2-p
 let document: PdfDocument = new PdfDocument(data);
 // Initialize a new instance of the PdfDataExtractor class
 let extractor: PdfDataExtractor = new PdfDataExtractor(document);
-// Search for the specified text synchronously using optional search parameters
-let textSearch: TextSearchResult = extractor.findTextSync('hello', { caseSensitive: false, wholeWord: true, startPageIndex: 0, endPageIndex: document.pageCount - 1 });
-// Get the searched text
-let searchText: string = textSearch.searchText;
-// Get the matching bounds grouped by page number
-let searchResults: Map&lt;number, Rectangle[]&gt; = textSearch.searchResults;
+// Search for multiple text values synchronously using optional search parameters
+let textSearchResults: TextSearchResult[] = extractor.findTextSync(['hello', 'world', 'PDF'], { caseSensitive: false, wholeWord: true, startPageIndex: 0, endPageIndex: document.pageCount - 1 });
+// Iterate through each search result
+textSearchResults.forEach((textSearch: TextSearchResult) => {
+    // Get the searched text
+    let searchText: string = textSearch.searchText;
+    // Get the matching bounds grouped by page number
+    let searchResults: Map&lt;number, Rectangle[]&gt; = textSearch.searchResults;
+    // Process the results for each search term
+    searchResults.forEach((bounds: Rectangle[], pageIndex: number) => {
+        // Access bounds for each matching occurrence
+        bounds.forEach((bound: Rectangle) => {
+            console.log(`Found "${searchText}" on page ${pageIndex} at bounds:`, bound);
+        });
+    });
+});
 // Release document resources
 document.destroy();
 
@@ -456,12 +483,22 @@ document.destroy();
 var document = new ej.pdf.PdfDocument(data);
 // Initialize a new instance of the PdfDataExtractor class
 var extractor = new ej.pdfdataextract.PdfDataExtractor(document);
-// Search for the specified text synchronously using optional search parameters
-var textSearch = extractor.findTextSync('hello', { caseSensitive: false, wholeWord: true, startPageIndex: 0, endPageIndex: document.pageCount - 1 });
-// Get the searched text
-var searchText = textSearch.searchText;
-// Get the matching bounds grouped by page number
-var searchResults = textSearch.searchResults;
+// Search for multiple text values synchronously using optional search parameters
+var textSearchResults = extractor.findTextSync(['hello', 'world', 'PDF'], { caseSensitive: false, wholeWord: true, startPageIndex: 0, endPageIndex: document.pageCount - 1 });
+// Iterate through each search result
+textSearchResults.forEach((textSearch) => {
+    // Get the searched text
+    var searchText = textSearch.searchText;
+    // Get the matching bounds grouped by page number
+    var searchResults = textSearch.searchResults;
+    // Process the results for each search term
+    searchResults.forEach((bounds, pageIndex) => {
+        // Access bounds for each matching occurrence
+        bounds.forEach((bound) => {
+            console.log(`Found "${searchText}" on page ${pageIndex} at bounds:`, bound);
+        });
+    });
+});
 // Release document resources
 document.destroy();
 
@@ -477,18 +514,12 @@ Use the following table to select the text-search method that matches your requi
 
 | Method | Return Type | Description |
 |---|---|---|
-| [`findText(text: string)`](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#findtext) | Promise | Searches for the specified text asynchronously throughout the PDF document and returns all matching occurrences with their page indexes and bounds. |
-| [`findText(text: string, options)`](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#findtext) | Promise | Searches for the specified text asynchronously using the supplied text-search options and returns the matching occurrences. |
-| [`findTextSync(text: string)`](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#findtextsync) | Text search result collection | Searches for the specified text synchronously throughout the PDF document and returns all matching occurrences with their page indexes and bounds. |
-| [`findTextSync(text: string, options)`](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor#findtextsync) | Text search result collection | Searches for the specified text synchronously using the supplied text-search options and returns the matching occurrences. |
-Use the following table for text search options in the find text method.
+| `findText(text: string)` | Promise | Searches for the specified text asynchronously throughout the PDF document and returns all matching occurrences with their page indexes and bounds. |
+| `findText(text: string, options)` | Promise | Searches for the specified text asynchronously using the supplied text-search options and returns the matching occurrences. |
+| `findTextSync(text: string)` | Text search result collection | Searches for the specified text synchronously throughout the PDF document and returns all matching occurrences with their page indexes and bounds. |
+| `findTextSync(text: string, options)` | Text search result collection | Searches for the specified text synchronously using the supplied text-search options and returns the matching occurrences. |
 
-| Optional parameter | Type      | Default value   | Description                                                                         |
-| ------------------ | --------- | --------------- | ----------------------------------------------------------------------------------- |
-| `caseSensitive`    | `boolean` | `false`         | Specifies whether the search must match uppercase and lowercase characters exactly. |
-| `wholeWord`        | `boolean` | `false`         | Specifies whether the search must match only complete words.                        |
-| `startPageIndex`   | `number`  | `0`             | Specifies the zero-based index of the first page to search.                         |
-| `endPageIndex`     | `number`  | Last page index | Specifies the zero-based index of the last page to search.                          |
+Use the following table for text search options in the find text method.                      |
 
 ## Additional Resources
 

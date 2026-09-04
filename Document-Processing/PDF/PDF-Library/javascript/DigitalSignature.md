@@ -1091,39 +1091,36 @@ The JavaScript PDF Library supports validating digital signatures in an existing
 * Certificate revocation status using Online Certificate Status Protocol (OCSP) and Certificate Revocation List (CRL) information.
 * Multiple digital signatures available in the PDF document.
 
-Use the `validateSignatures` method of `PdfForm` to validate the digital signatures in a PDF document. Configure the trusted certificates and their passwords using `PdfSignatureValidationOptions`.
+## Validate a signature from a signature field
 
-The `validateSignatures` method returns the overall validation status and the individual validation results. The `isValid` property indicates whether all the validated signatures are valid. The `results` property contains details such as the signature name, signature status, document modification status, and revocation result for each signature.
+You can validate an individual digital signature by accessing a specific signature field and validating its associated signature. This approach is useful when you need to check the validity of a particular signature in a document.
 
-The following code example shows how to validate the digital signatures in an existing PDF document.
+The following code example demonstrates how to retrieve a signature field, extract its signature, and validate it using trusted certificates.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { PdfDocument, PdfSignatureValidationOptions } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfSignatureField, PdfSignature, PdfSignatureValidationOptions } from '@syncfusion/ej2-pdf';
 
 // Load the signed PDF document.
 const document: PdfDocument = new PdfDocument(documentData);
+// Get the first signature field from the form.
+const field: PdfSignatureField = document.form.fieldAt(0) as PdfSignatureField;
+// Get the signature from the field.
+const signature: PdfSignature = field.getSignature();
 // Configure the signature validation options.
 const options: PdfSignatureValidationOptions = {
     trustedCertificates: [certificateData],
     passwords: ['syncfusion']
 };
-// Validate the digital signatures in the PDF document.
-const validationResult = document.form.validateSignatures(options);
-// Check the validation result of each signature.
-if (validationResult.results !== null &&
-    validationResult.results !== undefined) {
-    validationResult.results.forEach((result) => {
-        console.log('Signature name: ' + result.signatureName);
-        console.log('Signature valid: ' + result.isSignatureValid);
-        console.log('Signature status: ' + result.signatureStatus);
-        console.log('Document modified: ' + result.isDocumentModified);
-        console.log('Revocation result: ', result.revocationResult);
-    });
-}
-// Get the overall signature validation status.
-console.log('All signatures valid: ' + validationResult.isValid);
+// Validate the signature.
+const validationResult = signature.validate(options);
+// Check the validation result.
+console.log('Signature name: ' + validationResult.signatureName);
+console.log('Signature valid: ' + validationResult.isSignatureValid);
+console.log('Signature status: ' + validationResult.signatureStatus);
+console.log('Document modified: ' + validationResult.isDocumentModified);
+console.log('Revocation result: ', validationResult.revocationResult);
 // Destroy the document and release its resources.
 document.destroy();
 
@@ -1132,26 +1129,23 @@ document.destroy();
 
 // Load the signed PDF document.
 const document = new ej.pdf.PdfDocument(documentData);
+// Get the first signature field from the form.
+const field = document.form.fieldAt(0);
+// Get the signature from the field.
+const signature = field.getSignature();
 // Configure the signature validation options.
 const options = {
     trustedCertificates: [certificateData],
     passwords: ['syncfusion']
 };
-// Validate the digital signatures in the PDF document.
-const validationResult = document.form.validateSignatures(options);
-// Check the validation result of each signature.
-if (validationResult.results !== null &&
-    validationResult.results !== undefined) {
-    validationResult.results.forEach((result) => {
-        console.log('Signature name: ' + result.signatureName);
-        console.log('Signature valid: ' + result.isSignatureValid);
-        console.log('Signature status: ' + result.signatureStatus);
-        console.log('Document modified: ' + result.isDocumentModified);
-        console.log('Revocation result: ', result.revocationResult);
-    });
-}
-// Get the overall signature validation status.
-console.log('All signatures valid: ' + validationResult.isValid);
+// Validate the signature.
+const validationResult = signature.validate(options);
+// Check the validation result.
+console.log('Signature name: ' + validationResult.signatureName);
+console.log('Signature valid: ' + validationResult.isSignatureValid);
+console.log('Signature status: ' + validationResult.signatureStatus);
+console.log('Document modified: ' + validationResult.isDocumentModified);
+console.log('Revocation result: ', validationResult.revocationResult);
 // Destroy the document and release its resources.
 document.destroy();
 
