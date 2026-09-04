@@ -1031,6 +1031,7 @@ You can embed the fonts used in a Word document directly into the saved file by 
 N> Embedding font is supported on both Windows and cross-platform (ASP.NET Core, Blazor, .NET MAUI, and WinUI) environments.
 N> For cross-platform applications, install the [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) NuGet package.
 N> Initialize the `DocIORenderer` to embed fonts in the document.
+N> It is supported only for DOCX format document
 N> Embedding font is not supported on the UWP platform.
 
 Use the following code to embed fonts before saving the document.
