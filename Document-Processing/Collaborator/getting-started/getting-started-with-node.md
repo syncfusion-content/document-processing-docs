@@ -243,7 +243,7 @@ export class PdfViewerAdapter implements ICollaborationProvider {
 ```
 
 
-### Step 3- PDF Viewer initalization and collaborator client wiring
+### Step 3- PDF Viewer initialization and collaborator client wiring
 ```ts
 import {
     PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView,

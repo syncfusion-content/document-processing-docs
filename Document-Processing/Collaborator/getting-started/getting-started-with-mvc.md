@@ -160,7 +160,7 @@ export class DocumentEditorAdapter implements ICollaborationProvider {
 }
 ```
 
-### Step 3 — Document Editor initalization and collaborator client wiring
+### Step 3 — Document Editor initialization and collaborator client wiring
 
 ```ts
 
@@ -337,20 +337,12 @@ namespace WebApplication1
     }
 
 }
-
+```
 ### Step 7 — Mount the WebSocket endpoint (Startup.cs)
 
 Add an OWIN startup class to expose the Collaboration Server WebSocket endpoint. Incoming WebSocket requests are forwarded to the Collaboration Server transport handler.
+
 ```C#
-
-using Microsoft.Owin;
-using Owin;
-using Syncfusion.Collaboration.Core.Extensions;
-using System.Threading.Tasks;
-using System.Web;
-
-[assembly: OwinStartup(typeof(WebApplication1.Startup))]
-
 namespace WebApplication1
 {
     public class Startup

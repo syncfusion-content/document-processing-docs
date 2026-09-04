@@ -155,7 +155,7 @@ export class DocumentEditorAdapter implements ICollaborationProvider {
 }
 ```
 
-### Step 3 — Document Editor initalization and collaborator client wiring
+### Step 3 — Document Editor initialization and collaborator client wiring
 
 ```ts
 
