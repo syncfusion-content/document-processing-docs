@@ -659,7 +659,7 @@ The following table shows the list of Word document elements supported in Word t
 </tbody>
 </table>
 
-### Preserving Charts, Shapes, and Other Elements as Images
+### Preserve Visual Elements as Images
 
 The .NET Word (DocIO) library preserves Word elements such as Chart, Text Box, Shape, Ink, MathML, SmartArt, Canvas, and GroupShape as fallback images when converting a Word document to a Markdown file. This ensures that content which does not have a direct Markdown equivalent is still retained in the output as an image.
 

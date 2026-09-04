@@ -115,7 +115,7 @@ async void Save(MemoryStream streams, string filename)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Markdown-Conversion/Convert-PPTX-to-Markdown).
 
-### Preserving Charts, SmartArt, and Other Elements as Fallback Images
+### Preserve Visual Elements as Images
 
 The .NET PowerPoint (Presentation) library preserves PowerPoint elements such as Chart, SmartArt, GroupShape, and OLE Object as fallback images when converting a PowerPoint presentation to a Markdown file. This ensures that content which does not have a direct Markdown equivalent is still retained in the output as an image.
 
