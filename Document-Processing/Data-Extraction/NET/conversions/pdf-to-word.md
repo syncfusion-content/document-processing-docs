@@ -1,6 +1,6 @@
 ---
 title: Convert PDF to Word in .NET Smart Data Extractor | Syncfusion
-description: Extract PDF documents as Word using Smart Data Extractor. Convert PDF content into editable, structured Word documents in .NET.
+description: Convert PDF documents to Word using Smart Data Extractor. Transform PDF content into editable, structured Word documents in .NET.
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG
@@ -9,18 +9,18 @@ keywords: Assemblies
 
 # Convert PDF to Word in .NET Smart Data Extractor
 
-Word (DOCX) is a widely used format for creating and editing professional documents. The Syncfusion<sup>&reg;</sup> Smart Data Extractor library supports PDF to Word conversion in .NET, enabling seamless transformation of PDF files into fully editable Word documents while preserving the original layout, tables, images, and text formatting. This feature makes it easier to reuse content, improve accessibility, and integrate document data into downstream applications and business workflows.
+Word (DOCX) is a widely used format for creating and editing professional documents. The Syncfusion<sup>&reg;</sup> Smart Data Extractor library supports PDF to Word conversion in .NET, enabling seamless transformation of PDF files into fully editable Word documents while preserving the original layout, tables and images. This feature makes it easier to reuse content, improve accessibility, and integrate document data into downstream applications and business workflows.
 
 ## Assemblies and NuGet packages required
 
 Refer to the following links for the assemblies and NuGet packages required based on your target platform to extract data as a Word file using the Syncfusion® Smart Data Extractor library.
 
-* [PDF to Word Extraction assemblies](/document-processing/data-extraction/net/Assemblies-required)
-* [PDF to Word Extraction NuGet packages](/document-processing/data-extraction/net/Nuget-packages-required)
+* [PDF to Word Conversion assemblies](/document-processing/data-extraction/net/Assemblies-required)
+* [PDF to Word Conversion NuGet packages](/document-processing/data-extraction/net/Nuget-packages-required)
 
-## Extract Data as Word from PDF or Image
+## Convert PDF or Image to Word Document
 
-To extract structured data from a PDF document or image using the **ExtractDataAsWordDocument** method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class, refer to the following code example:
+To convert a PDF document or image into a Word using the **ExtractDataAsWordDocument** method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class, refer to the following code example:
 
 {% tabs %} 
 
@@ -64,13 +64,11 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %}
 
-N> If you want to extract data from an image instead of a PDF, replace the input stream with the image file (for example, Input.jpg or Input.png). The rest of the code remains unchanged.
+N> If you want to convert an image instead of a PDF, replace the input stream with the image file (for example, Input.jpg or Input.png). The rest of the code remains unchanged.
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Extract-data-as-MD-from-PDF/.NET).
+## Convert PDF or Image to HTML Document 
 
-## Extract data as HTML from PDF or Image 
-
-To extract structured data from a PDF document or image using the **ExtractDataAsHtmlDocument** method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class, refer to the following code example:
+TTo convert a PDF document or image into HTML output using the **ExtractDataAsHtmlDocument** method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class, refer to the following code example:
 
 {% tabs %} 
 
@@ -110,4 +108,5 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %}
 
-N> If you want to extract data from an image instead of a PDF, replace the input stream with the image file (for example, Input.jpg or Input.png). The rest of the code remains unchanged.
+N> If you want to convert an image instead of a PDF, replace the input stream with the image file (for example, Input.jpg or Input.png). The rest of the code remains unchanged.
+
