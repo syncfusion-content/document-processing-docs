@@ -222,6 +222,25 @@ createRoot(document.getElementById('sample')).render(<App />);
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
+## Highlight comments by author
+Highlight the comments by add the settings with 'highlightCommentsByAuthor' as true.
+
+The following example illustrates how to enable comment highlights in the DOCX Editor
+
+```typescript
+let settings =  { highlightCommentsByAuthor : true };
+<DocumentEditorContainerComponent
+    id="container"
+    ref={container}
+    style={{ display: "block" }}
+    height={"590px"}
+    toolbarMode= {"Ribbon"}
+    serviceUrl={hostUrl}
+    enableToolbar={true}
+    showPropertiesPane={false}
+    documentEditorSettings={settings} />
+```
+
 ## Events
 
 DocumentEditor provides the [beforeCommentAction](https://ej2.syncfusion.com/react/documentation/api/document-editor#beforecommentaction) event, which is triggered on comment actions such as Post, edit, reply, resolve, and reopen. This event provides an opportunity to perform custom logic on these comment actions. The event handler receives the [CommentActionEventArgs](https://ej2.syncfusion.com/react/documentation/api/document-editor/commentactioneventargs) object as an argument, which allows access to information about the comment.
