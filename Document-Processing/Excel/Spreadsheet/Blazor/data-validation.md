@@ -32,7 +32,7 @@ The validation settings are defined through the [ValidationRule](https://help.sy
 | Operator | [ValidationOperator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.ValidationOperator.html) | Specifies how the entered value is compared: **Between**, **NotBetween**, **EqualTo**, **NotEqualTo**, **GreaterThan**, **LessThan**, **GreaterThanOrEqualTo**, or **LessThanOrEqualTo**. The default value is **ValidationOperator.Between**. |
 | Value1 | string | Specifies the primary validation value. For **Between** and **NotBetween**, this is the starting value of the range. For **Custom** validation, this specifies the custom formula (for example, `"=AND(B2>10, B2<100)"`). |
 | Value2 | string | Specifies the secondary validation value. It is used only when the selected operator requires both a starting and an ending value (**Between**, **NotBetween**). |
-| ListSource | string | Specifies the source of values for **List** validation. It accepts comma-separated values (for example, `"Cherrypicker, Wheelbarrow, JCB"`) or a cell range reference (for example, `"Sheet2!A2:A10"`). |
+| ListSource | string | Specifies the source of values for **List** validation. It accepts comma-separated values (for example, `"Wheelbarrow, JCB"`) or a cell range reference (for example, `"Sheet2!A2:A10"`). |
 | IgnoreBlank | bool | When set to **true**, blank cells are ignored during validation. The default value is **true**. |
 | ShowInCellDropdown | bool | When set to **true**, an in-cell dropdown is displayed for **List** validation, allowing users to pick a value from the list instead of typing it. The default value is **true**. |
 
@@ -89,7 +89,8 @@ Use the Highlight Invalid Data feature to highlight the previously entered inval
 
 Clear highlight feature is used to remove the highlight from invalid cells.
 
-You can clear the highlighted invalid data by setting the [ShowInvalidDataHighlights](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ShowInvalidDataHighlights) property to **false**. 
+* **Ribbon UI**: Select the Data tab, then choose Highlight Invalid Data.
+* You can clear the highlighted invalid data by setting the [ShowInvalidDataHighlights](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ShowInvalidDataHighlights) property to **false**. 
 
 
 ## Custom Data Validation
