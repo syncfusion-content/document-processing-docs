@@ -538,8 +538,6 @@ async function loadPDFBlobIntoViewer(pdfBlob: Blob): Promise<void> {
 }
 
 ```
-
-
 ### Step 4 — Serve the client
 
 Build and serve the front\-end application so the page is reachable at, for example, http://localhost:4000
