@@ -160,7 +160,7 @@ export class DocumentEditorAdapter implements ICollaborationProvider {
 }
 ```
 
-### Step 3 — Client Wiring (app.ts)
+### Step 3 — Document Editor initalization and collaborator client wiring
 
 ```ts
 

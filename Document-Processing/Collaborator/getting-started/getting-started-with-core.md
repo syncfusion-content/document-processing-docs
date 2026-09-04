@@ -26,9 +26,6 @@ npm install @syncfusion/ej2-collaborator
 {% endhighlight %}
 {% endtabs %}
 
-@microsoft/signalr is installed automatically as a transitive dependency.
-
-
 ### Step 2 — Reference Adapter (DocumentEditorAdapter.ts)
 
 The control\-specific translator on the client side. It implements ICollaborationProvider for the EJ2 Document Editor. PDF Viewer / Spreadsheet teams replace this with their own, but the shape is identical. 
@@ -158,7 +155,7 @@ export class DocumentEditorAdapter implements ICollaborationProvider {
 }
 ```
 
-### Step 3 — Client Wiring (app.ts)
+### Step 3 — Document Editor initalization and collaborator client wiring
 
 ```ts
 
@@ -219,7 +216,7 @@ const client: CollaborationClient = new CollaborationClient(adapter, {
     
     serviceUrl: "http://localhost:62870",
 
-    connectionType: "websocket",                     
+    connectionType: "signalr",                     
 
     currentUser: currentUser,
 
