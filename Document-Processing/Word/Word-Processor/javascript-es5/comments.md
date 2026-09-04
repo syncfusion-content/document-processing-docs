@@ -195,7 +195,7 @@ Selecting a comment highlights the corresponding text in that color. If multiple
 
 The following example illustrates how to enable comment highlights in the DOCX Editor
 
-```typescript
+```js
 var container = new ej.documenteditor.DocumentEditorContainer({
     enableToolbar: true,
     height: '590px',
