@@ -1024,6 +1024,49 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-document/Update-alternate-chunks).
 
+## Embedding Fonts in Word document
+
+You can embed the fonts used in a Word document directly into the saved file by setting `document.SaveOptions.EmbedFonts` to `true`. If the required font is available in the current environment, it will be embedded in the document. As a result, when the document is opened on another machine, it maintains the same appearance and formatting by using the embedded font.
+
+N> Embedding font is supported on both Windows and cross-platform (ASP.NET Core, Blazor, .NET MAUI, and WinUI) environments.
+N> For cross-platform applications, install the [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) NuGet package.
+N> Initialize the `DocIORenderer` to embed fonts in the document.
+N> Embedding font is not supported on the UWP platform.
+
+Use the following code to embed fonts before saving the document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Load an existing Word document.
+using (WordDocument document = new WordDocument("Input.docx", FormatType.Docx))
+{
+    //Initialize the DocIORenderer.
+    using DocIORenderer renderer = new DocIORenderer();
+    //Enable the flag to embed complete TrueType/OpenType fonts used in the document.
+    document.SaveOptions.EmbedFonts = true;
+    //Save the Word document
+    document.Save("Output.docx", FormatType.Docx);
+    document.Close();
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Load an existing Word document.
+using (WordDocument document = new WordDocument("Input.docx", FormatType.Docx))
+{
+    //Enable the flag to embed complete TrueType/OpenType fonts used in the document.
+    document.SaveOptions.EmbedFonts = true;
+    //Save the Word document.
+    document.Save("Output.docx", FormatType.Docx);
+    document.Close();
+}
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from GitHub.
+
 ## Online Demo
 
 * Explore how to clone and merge Word documents using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/cloneandmerge#/tailwind).
