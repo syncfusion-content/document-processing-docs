@@ -1462,51 +1462,114 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## SVG to PDF
 
-The [HTML to PDF converter library](https://www.syncfusion.com/document-sdk/net-pdf-library/html-to-pdf) supports converting SVG to a PDF document. Please refer to the following code example.
+Essential<sup>&reg;</sup> PDF enables you to convert an SVG (Scalable Vector Graphics) file into a PDF document with high-quality rendering, accurate layout preservation, and full cross-platform support. The [SvgConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.SvgConverter.html) class is used to convert an SVG file into a [PdfTemplate](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTemplate.html), which can then be drawn into a PDF page. Please refer to the following code example.
+
+The following namespaces are required to compile the code in this topic.
+
+* using Syncfusion.Pdf
+* using System.Drawing
+* using System.IO
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-using Syncfusion.HtmlConverter;
 using Syncfusion.Pdf;
+using System.Drawing;
+using System.IO;
 
-//Initialize HTML to PDF converter
-HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
-//Convert a SVG file to PDF with HTML converter
-PdfDocument document = htmlConverter.Convert("inputSVG.svg");
-//Save and close the PDF document
-document.Save("SVGToPDF.pdf");
+//Initialize SVG converter.
+SvgConverter converter = new SvgConverter();
+
+//Convert the SVG to Pdf Template.
+PdfTemplate svg = converter.Convert("Input.svg");
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+
+//Update the page settings based on the SVG size.
+document.PageSettings.Margins.All = 0;
+document.PageSettings.Size = new SizeF(svg.Width, svg.Height);
+
+//Add a new page.
+PdfPage page = document.Pages.Add();
+
+//Draw the template to the page.
+page.Graphics.DrawPdfTemplate(svg, new PointF(0, 0), new SizeF(svg.Width, svg.Height));
+
+//Save the document into stream.
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
+
+//Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-using Syncfusion.HtmlConverter;
 using Syncfusion.Pdf;
+using System.Drawing;
+using System.IO;
 
-//Initialize HTML to PDF converter
-HtmlToPdfConverter htmlConverter = new HtmlToPdfConverter();
-//Convert a SVG file to PDF with HTML converter
-PdfDocument document = htmlConverter.Convert("inputSVG.svg");
-//Save and close the PDF document
-document.Save("SVGToPDF.pdf");
+//Initialize SVG converter.
+SvgConverter converter = new SvgConverter();
+
+//Convert the SVG to Pdf Template.
+PdfTemplate svg = converter.Convert("Input.svg");
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+
+//Update the page settings based on the SVG size.
+document.PageSettings.Margins.All = 0;
+document.PageSettings.Size = new SizeF(svg.Width, svg.Height);
+
+//Add a new page.
+PdfPage page = document.Pages.Add();
+
+//Draw the template to the page.
+page.Graphics.DrawPdfTemplate(svg, new PointF(0, 0), new SizeF(svg.Width, svg.Height));
+
+//Save the document into stream.
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
+
+//Close the document.
 document.Close(true);
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-Imports Syncfusion.HtmlConverter
 Imports Syncfusion.Pdf
+Imports System.Drawing
+Imports System.IO
 
-'Initialize HTML to PDF converter 
-Dim htmlConverter As HtmlToPdfConverter = New HtmlToPdfConverter()
-'Convert a SVG file to PDF with HTML converter 
-Dim document As PdfDocument = htmlConverter.Convert("inputSVG.svg")
-'Save and close the PDF document
-document.Save("SVGToPDF.pdf")
+'Initialize SVG converter.
+Dim converter As New SvgConverter()
+
+'Convert the SVG to Pdf Template.
+Dim svg As PdfTemplate = converter.Convert("Input.svg")
+
+'Create a new PDF document.
+Dim document As New PdfDocument()
+
+'Update the page settings based on the SVG size.
+document.PageSettings.Margins.All = 0
+document.PageSettings.Size = New SizeF(svg.Width, svg.Height)
+
+'Add a new page.
+Dim page As PdfPage = document.Pages.Add()
+
+'Draw the template to the page.
+page.Graphics.DrawPdfTemplate(svg, New PointF(0, 0), New SizeF(svg.Width, svg.Height))
+
+'Save the document into stream.
+Dim stream As MemoryStream = New MemoryStream()
+document.Save(stream)
+
+'Close the document.
 document.Close(True)
 
 {% endhighlight %}
