@@ -156,39 +156,22 @@ The following code example shows how to create a PDF document, add an unordered 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import {
-    PdfBitmap,
-    PdfDocument,
-    PdfImageMarker,
-    PdfListItemCollection,
-    PdfUnorderedList
-} from '@syncfusion/ej2-pdf';
+import { PdfBitmap, PdfDocument, PdfImageMarker, PdfListItemCollection, PdfUnorderedList } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document.
 const document: PdfDocument = new PdfDocument();
 // Add a new page to the document.
 const page = document.addPage();
 // Create the items for the unordered list.
-const items: PdfListItemCollection = new PdfListItemCollection([
-    'Essential PDF',
-    'Essential DocIO',
-    'Essential XlsIO'
-]);
+const items: PdfListItemCollection = new PdfListItemCollection([ 'Essential PDF', 'Essential DocIO', 'Essential XlsIO']);
 // Create an unordered list.
 const unorderedList: PdfUnorderedList = new PdfUnorderedList(items);
 // Create an image marker using the loaded image.
-const imageMarker: PdfImageMarker = {
-    image: new PdfBitmap(imageData)
-};
+const imageMarker: PdfImageMarker = {image: new PdfBitmap(imageData)};
 // Set the image as the marker for the unordered list.
 unorderedList.setMarker(imageMarker);
 // Draw the unordered list on the PDF page.
-unorderedList.draw(page, {
-    x: 10,
-    y: 20,
-    width: page.graphics.clientSize.width - 20,
-    height: page.graphics.clientSize.height - 40
-});
+unorderedList.draw(page, { x: 10,y: 20, width: page.graphics.clientSize.width - 20, height: page.graphics.clientSize.height - 40});
 // Save the PDF document.
 document.save('SetImageMarker.pdf');
 // Destroy the document and release its resources.
@@ -202,26 +185,15 @@ const document = new ej.pdf.PdfDocument();
 // Add a new page to the document.
 const page = document.addPage();
 // Create the items for the unordered list.
-const items = new ej.pdf.PdfListItemCollection([
-    'Essential PDF',
-    'Essential DocIO',
-    'Essential XlsIO'
-]);
+const items = new ej.pdf.PdfListItemCollection([ 'Essential PDF', 'Essential DocIO', 'Essential XlsIO']);
 // Create an unordered list.
 const unorderedList = new ej.pdf.PdfUnorderedList(items);
 // Create an image marker using the loaded image.
-const imageMarker = {
-    image: new ej.pdf.PdfBitmap(imageData)
-};
+const imageMarker = { image: new ej.pdf.PdfBitmap(imageData)};
 // Set the image as the marker for the unordered list.
 unorderedList.setMarker(imageMarker);
 // Draw the unordered list on the PDF page.
-unorderedList.draw(page, {
-    x: 10,
-    y: 20,
-    width: page.graphics.clientSize.width - 20,
-    height: page.graphics.clientSize.height - 40
-});
+unorderedList.draw(page, {x: 10, y: 20, width: page.graphics.clientSize.width - 20, height: page.graphics.clientSize.height - 40 });
 // Save the PDF document.
 document.save('SetImageMarker.pdf');
 // Destroy the document and release its resources.

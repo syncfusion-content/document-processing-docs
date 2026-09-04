@@ -192,15 +192,7 @@ const document: PdfDocument = new PdfDocument(inputData, 'password');
 const options: PdfSecurityOptions = {
     userPassword: '',
     ownerPassword: '',
-    permissions: PdfPermissionFlag.print |
-        PdfPermissionFlag.copyContent |
-        PdfPermissionFlag.editContent |
-        PdfPermissionFlag.editAnnotations |
-        PdfPermissionFlag.fillFields |
-        PdfPermissionFlag.accessibilityCopyContent |
-        PdfPermissionFlag.assembleDocument |
-        PdfPermissionFlag.fullQualityPrint
-};
+    permissions: PdfPermissionFlag.default};
 document.setSecurity(options);
 // Save the decrypted PDF document.
 document.save('Output.pdf');
@@ -216,15 +208,7 @@ const document = new ej.pdf.PdfDocument(inputData, 'password');
 document.setSecurity({
     userPassword: '',
     ownerPassword: '',
-    permissions: ej.pdf.PdfPermissionFlag.print |
-        ej.pdf.PdfPermissionFlag.copyContent |
-        ej.pdf.PdfPermissionFlag.editContent |
-        ej.pdf.PdfPermissionFlag.editAnnotations |
-        ej.pdf.PdfPermissionFlag.fillFields |
-        ej.pdf.PdfPermissionFlag.accessibilityCopyContent |
-        ej.pdf.PdfPermissionFlag.assembleDocument |
-        ej.pdf.PdfPermissionFlag.fullQualityPrint
-});
+    permissions: ej.pdf.PdfPermissionFlag.default});
 // Save the decrypted PDF document.
 document.save('Output.pdf');
 // Destroy the document and release its resources.
