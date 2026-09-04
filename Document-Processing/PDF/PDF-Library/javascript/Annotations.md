@@ -1019,6 +1019,60 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
+## Cloud Border Style Annotation
+
+A cloud border style can be applied to rectangle, polygon, circle, ellipse and freeText annotations in an existing PDF document by using the [PdfBorderEffect](https://ej2.syncfusion.com/documentation/api/pdf/pdfbordereffect) class. Set the `intensity` property to control the intensity of the cloud effect and set the `style` property to `PdfBorderEffectStyle.cloudy`.
+
+The following code example demonstrates how to apply a cloud border style to an existing rectangle annotation in a PDF document.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+
+import {PdfBorderEffect, PdfBorderEffectStyle, PdfDocument, PdfPage, PdfRectangleAnnotation} from '@syncfusion/ej2-pdf';
+
+// Load an existing PDF document
+let document: PdfDocument = new PdfDocument(data, password);
+// Get the first page
+let page: PdfPage = document.getPage(0) as PdfPage;
+// Get the first rectangle annotation of the page
+let annotation: PdfRectangleAnnotation = page.annotations.at(0) as PdfRectangleAnnotation;
+// Initialize a new instance of the `PdfBorderEffect` class
+let borderEffect: PdfBorderEffect = new PdfBorderEffect();
+// Set the intensity of the annotation border
+borderEffect.intensity = 2;
+// Set the cloud style of the annotation border
+borderEffect.style = PdfBorderEffectStyle.cloudy;
+// Set the border effect to the annotation
+annotation.borderEffect = borderEffect;
+// Save the document
+document.save('Output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Load an existing PDF document
+var document = new ej.pdf.PdfDocument(data, password);
+// Get the first page
+var page = document.getPage(0);
+// Get the first rectangle annotation of the page
+var annotation = page.annotations.at(0);
+// Initialize a new instance of the PdfBorderEffect class
+var borderEffect = new ej.pdf.PdfBorderEffect();
+// Set the intensity of the annotation border
+borderEffect.intensity = 2;
+// Set the cloud style of the annotation border
+borderEffect.style = ej.pdf.PdfBorderEffectStyle.cloudy;
+// Set the border effect to the annotation
+annotation.borderEffect = borderEffect;
+// Save the document
+document.save('Output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Custom appearance in stamp annotation
 
