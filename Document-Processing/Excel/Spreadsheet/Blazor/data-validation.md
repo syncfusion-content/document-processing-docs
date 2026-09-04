@@ -139,7 +139,7 @@ The following code example demonstrates how to add custom data validation with a
             Type = ValidationType.Custom,
             Value1 = "=AND(B2>10, B2<100)",
             Range = "E2:E5",
-            IgnoreBlank = true
+            
         });
     }
 }
