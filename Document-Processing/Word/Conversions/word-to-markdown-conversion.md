@@ -695,6 +695,19 @@ using (WordDocument wordDocument = new WordDocument("Input.docx", FormatType.Doc
 }
 {% endhighlight %}
 
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Open an existing Word document.
+Using wordDocument As WordDocument = New WordDocument("Input.docx", FormatType.Docx)
+    'Initialize the chart-to-image converter to preserve charts as images.
+    wordDocument.ChartToImageConverter = New ChartToImageConverter()
+
+    'Text Box, Shape, Ink, MathML, and SmartArt are preserved automatically on Windows.
+
+    'Save the document as a Markdown file.
+    wordDocument.Save("WordtoMd.md", FormatType.Markdown)
+End Using
+{% endhighlight %}
+
 {% endtabs %}
 
 You can download a complete working sample from GitHub.

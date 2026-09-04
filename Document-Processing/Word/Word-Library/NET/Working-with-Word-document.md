@@ -1063,6 +1063,17 @@ using (WordDocument document = new WordDocument("Input.docx", FormatType.Docx))
 }
 {% endhighlight %}
 
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Load an existing Word document.
+Using document As WordDocument = New WordDocument("Input.docx", FormatType.Docx)
+    'Enable the flag to embed complete TrueType/OpenType fonts used in the document.
+    document.SaveOptions.EmbedFonts = True
+    'Save the Word document.
+    document.Save("Output.docx", FormatType.Docx)
+    document.Close()
+End Using
+{% endhighlight %}
+
 {% endtabs %}
 
 You can download a complete working sample from GitHub.

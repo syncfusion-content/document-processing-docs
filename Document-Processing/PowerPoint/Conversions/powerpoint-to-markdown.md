@@ -151,6 +151,19 @@ using (IPresentation presentation = Presentation.Open("Input.pptx"))
 }
 {% endhighlight %}
 
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Open an existing PowerPoint Presentation.
+Using presentation As IPresentation = Presentation.Open("Input.pptx")
+    'Initialize the chart-to-image converter to preserve charts as images.
+    presentation.ChartToImageConverter = New ChartToImageConverter()
+
+    'SmartArt, GroupShape, and OLE Object are preserved automatically on Windows.
+
+    'Save the PowerPoint Presentation as a Markdown file.
+    presentation.Save("Output.md")
+End Using
+{% endhighlight %}
+
 {% endtabs %}
 
 You can download a complete working sample from GitHub.
