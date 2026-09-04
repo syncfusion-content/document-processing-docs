@@ -205,8 +205,3 @@ In the following sample, searching can be done in the following ways:
 * the next (or previous) button to find the entered value in the spreadsheet.
 * You can have more options to find values by selecting the more options in the search toolbar.
 
-## Limitations
-
-* The **Ctrl + H** keyboard shortcut is not supported in the Blazor Spreadsheet.
-* Replace All functionality is not restricted to selected range of cells.
-* Find and Replace in **formulas** and **notes** are not supported.
