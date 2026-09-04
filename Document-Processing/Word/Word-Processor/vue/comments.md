@@ -233,6 +233,34 @@ The following example illustrates how to enable mention support in the DOCX Edit
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
+## Highlight comments by author
+
+When `highlightCommentsByAuthor' is enabled, each comment marker and pane border is displayed in the author’s avatar color. 
+Selecting a comment highlights the corresponding text in that color. If multiple comments appear on the same line, the marker retains the first author’s avatar color.
+
+The following example illustrates how to enable comment highlights in the DOCX Editor
+
+```
+<template>
+    <div id="app">
+      <ejs-documenteditorcontainer ref='documenteditor' :serviceUrl='serviceUrl' :documentEditorSettings='settings' height="590px" id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
+    </div>
+</template>
+<script>
+  import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+  export default {
+    data() {
+      return { serviceUrl:'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/',
+      settings: {  highlightCommentsByAuthor : true }},
+    },
+    provide: {
+      //Inject require modules.
+      DocumentEditorContainer: [Toolbar]
+    }
+  }
+</script>
+```
+
 ## Events
 
 DocumentEditor provides [beforeCommentAction](https://ej2.syncfusion.com/vue/documentation/api/document-editor#beforecommentaction) event, which is triggered on comment actions like Post, edit, reply, resolve and reopen. This event provides an opportunity to perform custom logic on comment actions like Post, edit, reply, resolve and reopen. The event handler receives the [CommentActionEventArgs](https://ej2.syncfusion.com/vue/documentation/api/document-editor/commentActionEventArgs) object as an argument, which allows access to information about the comment.
