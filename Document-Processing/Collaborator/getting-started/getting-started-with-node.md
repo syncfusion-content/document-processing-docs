@@ -558,34 +558,20 @@ CollaborationServer is the entry point for the Node.js Collaboration Server. It
 
 // server.js
 
-const { CollaborationServer } \= require('ej2\-collaborator\-server');
+const { CollaborationServer } \= require('ej2\-collaborator-server');
 
 const PdfViewerAdapter = require('./adapters/PdfViewerAdapter');
-
-
 const adapter 
-
-
 const server = new CollaborationServer({
-
     port: 8080,
-
     redis: {
-
         host: '<redis-host>',
-
         port: 6379,
-
         username: 'default',
-
         password: '<redis-password>',
-
         tls: {}
-
     },
-
-    adapter   
-
+    adapter  
 });
 server.app.use(cors());
 registerDocumentEditorRoutes(
@@ -593,16 +579,11 @@ registerDocumentEditorRoutes(
     server.actionService,
     adapter,
     server
-
 );
-
 server.app.get('/api/test', (req, res) => {res.json({status: 'Node Server Running'});
 });
-
 server.start();
 ```
-
-
 ### Step 7 — Add the PDF Viewer adapter 
 
 PdfViewerAdapter is the control\-specific translator on the server side. 
@@ -637,24 +618,15 @@ const {
         };
 
     }
-
-
     mapGenericToControlAction(collaborationAction) {
-
         return {
 
             roomName: collaborationAction.roomName,
-
             connectionId: collaborationAction.connectionId,
-
             currentUser: collaborationAction.currentUser,
-
             version: collaborationAction.version,
-
             clientVersion: collaborationAction.clientVersion,
-
             isTransformed: collaborationAction.isTransformed,
-
             operations: collaborationAction.data
 
                 ? JSON.parse(collaborationAction.data)
@@ -664,25 +636,14 @@ const {
         };
 
     }
-
-
     async transformOperations(actions) {
-
         // The PDF Viewer runs its own OT via its collaborative editing handler.
 
-        // Replace this with the control-specific transform routine.
-
-        
+        // Replace this with the control-specific transform routine.        
     }
-
-
     async processSaveRequestAsync(request) {
-
-        // Replace this with the control-specific save routine.
-      
-
+        // Replace this with the control-specific save routine.    
     }
-
 }
 
 
