@@ -1,0 +1,13 @@
+
+<ejs-documenteditorcontainer id="container" serviceUrl="/api/DocumentEditor/" enableToolbar=true created="onCreated" height="590px"></ejs-documenteditorcontainer>
+
+<script>
+    var documenteditor;
+    var container;
+    function onCreated() {
+        var documenteditorElement = document.getElementById('container');
+        container = documenteditorElement.ej2_instances[0];
+        documenteditor = container.documentEditor;
+        container.documentEditorSettings = { highlightCommentsByAuthor : true };
+    }
+</script>

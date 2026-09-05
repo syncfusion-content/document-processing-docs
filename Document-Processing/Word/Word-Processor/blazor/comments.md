@@ -47,6 +47,27 @@ You can delete all the comments in the document using [`DeleteAllCommentsAsync`]
 await container.DocumentEditor.Editor.DeleteAllCommentsAsync();
 ```
 
+## Highlight comments by author
+
+When `HighlightCommentsByAuthor' is enabled, each comment marker and pane border is displayed in the author’s avatar color. 
+Selecting a comment highlights the corresponding text in that color. If multiple comments appear on the same line, the marker retains the first author’s avatar color.
+
+The following example illustrates how to enable comment highlights in the DOCX Editor
+
+
+```csharp
+
+@using Syncfusion.Blazor.DocumentEditor;
+
+<SfDocumentEditorContainer @ref="container" EnableToolbar=true DocumentEditorSettings="settings"> 
+</SfDocumentEditorContainer>
+
+@code {
+    SfDocumentEditorContainer container;
+    DocumentEditorSettingsModel settings = new DocumentEditorSettingsModel() {  HighlightCommentsByAuthor : true };
+}
+```
+
 ## Protect the document in comments-only mode
 
 The DOCX Editor supports a special protection mode that restricts user actions to adding or editing comments only. When `CommentsOnly` protection is active, users cannot change the document content.
