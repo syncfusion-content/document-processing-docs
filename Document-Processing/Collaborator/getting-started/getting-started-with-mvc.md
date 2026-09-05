@@ -28,7 +28,7 @@ npm install @syncfusion/ej2-collaborator
 {% endhighlight %}
 {% endtabs %}
 
-@microsoft/signalr is installed automatically as a transitive dependency.
+@Microsoft/signalr is installed automatically as a transitive dependency.
 
 
 ### Step 2 — Reference Adapter (DocumentEditorAdapter.ts)

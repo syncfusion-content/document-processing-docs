@@ -259,9 +259,9 @@ Build and serve the front\-end application so the page is reachable at, for exam
 
 In your ASP.NET Core project, add the Collaboration Server and the Document Editor server\-side packages
 
-dotnet add package Syncfusion.Collaborator.Server
+Syncfusion.Collaborator.Server.AspNet.Core
 
-dotnet add package [Syncfusion.EJ2.WordEditor.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Core).
+[Syncfusion.EJ2.WordEditor.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Core).
 
 
 ### Step 6 — Configure Redis
