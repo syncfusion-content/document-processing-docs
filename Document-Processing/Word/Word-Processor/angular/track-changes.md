@@ -245,7 +245,23 @@ export class AppComponent implements OnInit {
   }
 }
 ```
+## Custom Colors for Track Changes
 
+You can set an array of colors to show track changes such as insertions and deletions in the DOCX editor.  
+Each author is assigned a color in order: the first author gets the first color, the second author gets the next, and so on.  
+If there are more authors than colors, the assignment starts again from the beginning of the array.
+
+The following example illustrates how to set the color order for track changes in the DOCX Editor
+```typescript
+ngOnInit() {
+    this.container.documentEditorSettings.revisionSettings.revisionColors = [
+      '#0e76b1',
+      '#bb00ff',
+      '#c14f16'
+    ];
+}
+```
+  
 ## Online Demo
 
 Explore how to track and review changes in Word documents using the Angular DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/track-changes).
