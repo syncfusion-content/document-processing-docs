@@ -210,8 +210,7 @@ export class AppComponent implements OnInit {
 
 ## Highlight comments by author
 
-When `highlightCommentsByAuthor' is enabled, each comment marker and pane border is displayed in the author’s avatar color.
-Selecting a comment highlights the corresponding text in that color. If multiple comments appear on the same line, the marker retains the first author’s avatar color.
+When `highlightCommentsByAuthor' is enabled, each comment marker and pane border is displayed in the author’s avatar color. Selecting a comment highlights the corresponding text in that color. If multiple comments appear on the same line, the marker retains the first author’s avatar color.
 
 The following example illustrates how to enable comment highlights in the DOCX Editor
 
@@ -226,7 +225,7 @@ import { ToolbarService , DocumentEditorSettingsModel } from '@syncfusion/ej2-an
 })
 export class AppComponent implements OnInit {
     
-    public settings: DocumentEditorSettingsModel = { highlightCommentsByAuthor : true };
+    public settings: DocumentEditorSettingsModel = { commentSettings: { highlightCommentsByAuthor : true } };
     ngOnInit(): void {
     }
 }
