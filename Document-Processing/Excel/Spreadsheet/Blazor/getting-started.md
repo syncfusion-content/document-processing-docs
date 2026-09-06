@@ -30,6 +30,8 @@ To add **Syncfusion Blazor Spreadsheet** component in the app, open the NuGet pa
 * [Syncfusion.Blazor.Spreadsheet](https://www.nuget.org/packages/Syncfusion.Blazor.Spreadsheet)
 * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
 
+* [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/)
+
 Alternatively, you can utilize the following package manager command to achieve the same.
 
 {% tabs %}
@@ -37,9 +39,13 @@ Alternatively, you can utilize the following package manager command to achieve 
 
 Install-Package Syncfusion.Blazor.Spreadsheet -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
+Install-Package SkiaSharp.Views.Blazor -Version {{ site.releaseversion }}
 
 {% endhighlight %}
 {% endtabs %}
+
+N>
+* Syncfusion<sup style="font-size:70%">&reg;</sup> uses [SkiaSharp.Views.Blazor version 4.150.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/4.150.1). Ensure this exact version to avoid runtime issues.
 
 {% endtabcontent %}
 
@@ -70,7 +76,7 @@ cd BlazorApp
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
 * Ensure you’re in the project root directory where your `.csproj` file is located.
-* Run the following command to install the [Syncfusion.Blazor.Spreadsheet](https://www.nuget.org/packages/Syncfusion.Blazor.Spreadsheet) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages and ensure all dependencies are installed.
+* Run the following command to install the [Syncfusion.Blazor.Spreadsheet](https://www.nuget.org/packages/Syncfusion.Blazor.Spreadsheet) , [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/4.150.1) (version 4.150.1) NuGet packages and ensure all dependencies are installed.
 
 {% tabs %}
 
@@ -78,13 +84,17 @@ cd BlazorApp
 
 dotnet add package Syncfusion.Blazor.Spreadsheet -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
+dotnet add package SkiaSharp.Views.Blazor -v {{ site.releaseversion }}
+
 dotnet restore
 
 {% endhighlight %}
 
 {% endtabs %}
 
-N> After running `dotnet restore`, ensure there are no error messages in the terminal. If restore fails, verify your NuGet source (`https://api.nuget.org/v3/index.json`) is configured, clear the local cache with `dotnet nuget locals all --clear`, and retry.
+N> 
+* After running `dotnet restore`, ensure there are no error messages in the terminal. If restore fails, verify your NuGet source (`https://api.nuget.org/v3/index.json`) is configured, clear the local cache with `dotnet nuget locals all --clear`, and retry.
+* Syncfusion<sup style="font-size:70%">&reg;</sup> uses [SkiaSharp.Views.Blazor version 4.150.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/4.150.1). Ensure this exact version to avoid runtime issues.
 
 {% endtabcontent %}
 
@@ -121,7 +131,7 @@ After creating the Blazor WebAssembly App, install the required Syncfusion NuGet
 
 * Open a command prompt, terminal, or shell.
 * Ensure you’re in the project root directory where your `.csproj` file is located.
-* Run the following command to install the [Syncfusion.Blazor.Spreadsheet](https://www.nuget.org/packages/Syncfusion.Blazor.Spreadsheet) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet packages and ensure all dependencies are installed.
+* Run the following command to install the [Syncfusion.Blazor.Spreadsheet](https://www.nuget.org/packages/Syncfusion.Blazor.Spreadsheet) , [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/) (version 4.150.1) NuGet packages and ensure all dependencies are installed.
 
 {% tabs %}
 
@@ -129,13 +139,16 @@ After creating the Blazor WebAssembly App, install the required Syncfusion NuGet
 
 dotnet add package Syncfusion.Blazor.Spreadsheet -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
+dotnet add package SkiaSharp.Views.Blazor -v {{ site.releaseversion }}
 dotnet restore
 
 {% endhighlight %}
 
 {% endtabs %}
 
-N> After running `dotnet restore`, ensure there are no error messages in the terminal. If restore fails, verify your NuGet source (`https://api.nuget.org/v3/index.json`) is configured, clear the local cache with `dotnet nuget locals all --clear`, and retry.
+N> 
+* After running `dotnet restore`, ensure there are no error messages in the terminal. If restore fails, verify your NuGet source (`https://api.nuget.org/v3/index.json`) is configured, clear the local cache with `dotnet nuget locals all --clear`, and retry.
+* Syncfusion<sup style="font-size:70%">&reg;</sup> uses [SkiaSharp.Views.Blazor version 4.150.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/4.150.1). Ensure this exact version to avoid runtime issues.
 
 {% endtabcontent %}
 
