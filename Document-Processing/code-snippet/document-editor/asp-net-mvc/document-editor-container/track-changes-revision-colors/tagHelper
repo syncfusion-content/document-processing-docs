@@ -1,0 +1,4 @@
+<ejs-documenteditorcontainer id="container" documentEditorSettings="settings"  height="590px" enableTrackChanges=true></ejs-documenteditorcontainer>
+<script>
+    var settings = { revisionSettings: { revisionColors: [ '#0e76b1', '#bb00ff', '#c14f16' ] } };
+</script>
