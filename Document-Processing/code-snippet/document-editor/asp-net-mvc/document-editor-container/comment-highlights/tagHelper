@@ -8,6 +8,6 @@
         var documenteditorElement = document.getElementById('container');
         container = documenteditorElement.ej2_instances[0];
         documenteditor = container.documentEditor;
-        container.documentEditorSettings = { highlightCommentsByAuthor : true };
+        container.documentEditorSettings = { commentSettings: { highlightCommentsByAuthor : true } };
     }
 </script>

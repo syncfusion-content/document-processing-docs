@@ -49,8 +49,7 @@ await container.DocumentEditor.Editor.DeleteAllCommentsAsync();
 
 ## Highlight comments by author
 
-When `HighlightCommentsByAuthor' is enabled, each comment marker and pane border is displayed in the author’s avatar color. 
-Selecting a comment highlights the corresponding text in that color. If multiple comments appear on the same line, the marker retains the first author’s avatar color.
+When `HighlightCommentsByAuthor' is enabled, each comment marker and pane border is displayed in the author’s avatar color. Selecting a comment highlights the corresponding text in that color. If multiple comments appear on the same line, the marker retains the first author’s avatar color.
 
 The following example illustrates how to enable comment highlights in the DOCX Editor
 
@@ -64,7 +63,7 @@ The following example illustrates how to enable comment highlights in the DOCX E
 
 @code {
     SfDocumentEditorContainer container;
-    DocumentEditorSettingsModel settings = new DocumentEditorSettingsModel() {  HighlightCommentsByAuthor : true };
+    DocumentEditorSettingsModel settings = new DocumentEditorSettingsModel() { commentSettings: { highlightCommentsByAuthor : true } };
 }
 ```
 
