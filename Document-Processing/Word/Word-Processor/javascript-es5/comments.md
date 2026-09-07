@@ -175,9 +175,7 @@ var container = new ej.documenteditor.DocumentEditorContainer({
     enableToolbar: true,
     height: '590px',
     // Enable mention support in document editor
-    documentEditorSettings: {
-        mentionSettings: { dataSource: mentionData, fields: { text: 'Name' } }
-    }
+    documentEditorSettings: { commentSettings: { highlightCommentsByAuthor : true } } 
 });
 
 ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
@@ -221,9 +219,7 @@ var mentionData = [
     { "Name": "Andrew Fuller", "EmailId": "andrew@company.com"}
     ];
     // Initialize DocumentEditorContainer component.
-    var documenteditorContainer = new ej.documenteditor.DocumentEditorContainer({ enableToolbar: true, height: '590px', beforeCommentAction:beforecomment,documentEditorSettings: {
-    mentionSettings: { dataSource: mentionData, fields: { text: 'Name' }},
-  } });
+    var documenteditorContainer = new ej.documenteditor.DocumentEditorContainer({ enableToolbar: true, height: '590px', beforeCommentAction:beforecomment,documentEditorSettings: { commentSettings: { highlightCommentsByAuthor : true } }  });
     ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
     documenteditorContainer.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
     //DocumentEditorContainer control rendering starts
