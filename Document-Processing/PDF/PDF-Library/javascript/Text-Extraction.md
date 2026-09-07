@@ -415,6 +415,8 @@ let document: PdfDocument = new PdfDocument(data);
 let extractor: PdfDataExtractor = new PdfDataExtractor(document);
 // Search for the specified text and retrieve the matching occurrences synchronously
 let searchResults = extractor.findTextSync('PDF', { caseSensitive: false, wholeWord: false, startPageIndex: 0, endPageIndex: document.pageCount - 1 });
+// Display the search results
+console.log(searchResults);
 // Release document resources
 document.destroy();
 
@@ -430,6 +432,8 @@ var extractor = new ej.pdfdataextract.PdfDataExtractor(document);
 var searchResults = extractor.findTextSync('PDF', { caseSensitive: false, wholeWord: false, startPageIndex: 0, endPageIndex: document.pageCount - 1 });
 // Release document resources
 document.destroy();
+// Display the search results
+console.log(searchResults);
 
 {% endhighlight %}
 
@@ -463,7 +467,7 @@ textSearchResults.forEach((textSearch: TextSearchResult) => {
     // Get the searched text
     let searchText: string = textSearch.searchText;
     // Get the matching bounds grouped by page number
-    let searchResults: Map&lt;number, Rectangle[]&gt; = textSearch.searchResults;
+    let searchResults: Map<number, Rectangle[]>; = textSearch.searchResults;
     // Process the results for each search term
     searchResults.forEach((bounds: Rectangle[], pageIndex: number) => {
         // Access bounds for each matching occurrence
