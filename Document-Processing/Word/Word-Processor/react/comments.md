@@ -267,7 +267,7 @@ const Default = () => {
     { Name: 'Andrew James', EmailId: 'james@company.com' },
     { Name: 'Andrew Fuller', EmailId: 'andrew@company.com' },
   ];
-  let settings = {commentSettings: { highlightCommentsByAuthor : true }};
+ let settings = {commentSettings: { highlightCommentsByAuthor : true }};
 
   // Event is triggered on comment actions such as Post, edit, reply, resolve, and reopen
   function beforeComment(args: CommentActionEventArgs) {
