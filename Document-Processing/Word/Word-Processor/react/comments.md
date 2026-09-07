@@ -196,7 +196,10 @@ function App() {
     { Name: 'Andrew James', EmailId: 'james@company.com' },
     { Name: 'Andrew Fuller', EmailId: 'andrew@company.com' },
   ];
-  let settings = {commentSettings: { highlightCommentsByAuthor : true }};
+  let settings = {
+    showRuler: true,
+    mentionSettings: { dataSource: mentionData, fields: { text: 'Name' } },
+  };
   return (
     <div>
       <DocumentEditorContainerComponent
@@ -267,7 +270,10 @@ const Default = () => {
     { Name: 'Andrew James', EmailId: 'james@company.com' },
     { Name: 'Andrew Fuller', EmailId: 'andrew@company.com' },
   ];
- let settings = {commentSettings: { highlightCommentsByAuthor : true }};
+  let settings = {
+    showRuler: true,
+    mentionSettings: { dataSource: mentionData, fields: { text: 'Name' } },
+  };
 
   // Event is triggered on comment actions such as Post, edit, reply, resolve, and reopen
   function beforeComment(args: CommentActionEventArgs) {
