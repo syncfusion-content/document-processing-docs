@@ -48,17 +48,13 @@ export class PdfViewerAdapter implements ICollaborationProvider {
         currentUser: string
     ) {
         this.currentUser = currentUser;
-        this.connectionId = this.generateConnectionId();
-        
+        this.connectionId = this.generateConnectionId();        
         // Initialize the source-level collaboration handler
         this.collaborativeEditingHandler = new CollaborativeEditingHandler(
             viewer,
             currentUser
-        );
+        );       
         
-        console.log(
-            `[PdfViewerAdapter] Initialized - User: ${this.currentUser}, ConnectionId: ${this.connectionId}, ServiceUrl: ${this.serviceUrl}`
-        );
     }
  
     private generateConnectionId(): string {
@@ -72,10 +68,7 @@ export class PdfViewerAdapter implements ICollaborationProvider {
         const roomName: string = this.getRoomName();
         this.currentRoomName = roomName;
 
-        try {
-            console.log(
-                `[PdfViewerAdapter] Joining collaboration - Room: ${roomName}, File: ${this.fileName}, User: ${this.currentUser}`
-            );
+        try {         
 
             const response = await fetch(
                 `${this.serviceUrl}api/collaboration/ImportFile`,
@@ -100,15 +93,9 @@ export class PdfViewerAdapter implements ICollaborationProvider {
             }
 
             const responseText: string = await response.text();
-            await this.open(responseText, roomName);
-
-            console.log(
-                `[PdfViewerAdapter] Successfully joined collaboration room and loaded document state`
-            );
-
+            await this.open(responseText, roomName);           
             return roomName;
-        } catch (error) {
-            console.error('[PdfViewerAdapter] Error loading from server:', error);
+        } catch (error) {           
             throw error;
         }
     }
@@ -126,26 +113,15 @@ export class PdfViewerAdapter implements ICollaborationProvider {
                 version,
                 `${this.serviceUrl}api/collaboration/`
             );
-
-            console.log(
-                `[PdfViewerAdapter] Collaboration context initialized - Room: ${roomName}, Version: ${version}, Operations: ${data.operations.length || 0}`
-            );
-
             // Apply initial state: annotations, form fields, page organizer snapshots
             // These are stored as snapshots, not incremental operations
             if (data.operations && data.operations.length > 0) {
-                console.log(
-                    `[PdfViewerAdapter] Applying ${data.operations.length} pending operation(s)`
-                );
-                for (const op of data.operations) {
+               ( const op of data.operations) {
                     this.applyRemoteAction(op.type, op);
                 }
             }
-
-            this.isDocumentLoaded = true;
-            console.log('[PdfViewerAdapter] Document loaded and collaboration initialized');
-        } catch (error) {
-            console.error('[PdfViewerAdapter] Error initializing document:', error);
+            this.isDocumentLoaded = true;            
+        } catch (error) {            
             throw error;
         }
     }
@@ -157,15 +133,8 @@ export class PdfViewerAdapter implements ICollaborationProvider {
                 console.warn('[PdfViewerAdapter] No operations to send');
                 return;
             }
-
-            console.log(
-                `[PdfViewerAdapter] Sending ${operations.length} operation(s) to server`
-            );
-
             // Delegate to handler which manages routing and UpdateAction API calls
-            await this.collaborativeEditingHandler.sendActionToServer(operations);
-
-            console.log('[PdfViewerAdapter] Successfully sent operations to server');
+            await this.collaborativeEditingHandler.sendActionToServer(operations);           
         } catch (error) {
             console.error('[PdfViewerAdapter] Error sending operations:', error);
             throw error;
@@ -175,25 +144,18 @@ export class PdfViewerAdapter implements ICollaborationProvider {
     
     public applyRemoteAction(action: string, data: ICollaborationActionData | any): void {
         try {
-            if (!data) {
-                console.warn('[PdfViewerAdapter] Empty data received');
+            if (!data) {              
                 return;
             }
 
             // Extract payload if wrapped in ICollaborationActionData
             const payload = (data as ICollaborationActionData).payload || data;
-            const actionType = action || payload.type || 'unknown';
-
-            console.log(
-                `[PdfViewerAdapter] Applying remote action - Type: ${actionType}, User: ${payload.userName}`
-            );
-
+            const actionType = action || payload.type || 'unknown';            
             // Echo detection: filter out sender's own operations
             if (payload.connectionId === this.connectionId) {
-                console.log('[PdfViewerAdapter] Filtering out echo operation from self');
+               
                 return;
             }
-
             // Route based on action type
             if (actionType === 'addUser') {
                 this.handleUserPresence('addUser', payload);
@@ -202,24 +164,18 @@ export class PdfViewerAdapter implements ICollaborationProvider {
             } else if (actionType === 'connectionId') {
                 this.handleConnectionId(payload);
             } else if (actionType === 'Save' || payload.action === 'Save') {
-                // Save actions bypass echo filtering and standard routing
-                console.log(
-                    '[PdfViewerAdapter] Processing Save action from collaboration server'
-                );
+                // Save actions bypass echo filtering and standard routing                
                 this.handleRemoteSaveRequest(payload);
             } else if (payload.type === 'annotation' || payload.type === 'formField' || 
                        payload.type === 'formFieldAction' || payload.type === 'pageOrganizer') {
                 // Standard collaboration operations: delegate to handler
                 this.collaborativeEditingHandler.applyRemoteAction(payload.type, payload);
-            } else {
-                console.warn(`[PdfViewerAdapter] Unknown action type: ${actionType}`);
+            } else {                
             }
         } catch (error) {
             console.error('[PdfViewerAdapter] Error applying remote action:', error);
         }
-    }
-
-   
+    }   
     private getRoomName(fileName?: string): string {
         // Check for browser environment
         if (typeof window !== 'undefined') {
@@ -268,15 +224,12 @@ let adapter: PdfViewerAdapter;
 let client: CollaborationClient;
 
 viewer.resourcesLoaded = async function () {
-    console.log('[Index] Viewer resourcesLoaded event triggered');
+    
 
         try {
             // Get collaboration service URL from environment or use default
             const serviceUrl = 'http://localhost:3000/';
             adapterServiceUrl = serviceUrl;
-
-            console.log(`[Index] Initializing collaboration - User: ${currentUserName}, Service: ${serviceUrl}`);
-
             // Create adapter to bridge PdfViewer with collaboration service
             adapter = new PdfViewerAdapter(viewer, serviceUrl, currentUserName);
 
@@ -299,15 +252,10 @@ viewer.resourcesLoaded = async function () {
                     // Step 1: Load from server (gets room name and pending operations)
                     const roomName = await adapter.loadFromServer();
                     adapterCurrentRoomName = roomName;
-                    console.log(`[Index] Loaded from server - Room: ${roomName}`);
-
                     // Step 2: Join the collaboration room with the client
-                    await client.joinRoomAsync(roomName);
-                    console.log(`[Index] Joined collaboration room: ${roomName}`);
-
+                    await client.joinRoomAsync(roomName);                   
                     // Step 3: Fetch and load the current PDF document state
-                    await fetchAndLoadPDFDocument();
-                    console.log('[Index] PDF document loaded successfully');
+                    await fetchAndLoadPDFDocument();                    
 
                 } catch (error) {
                     console.error('[Index] Error during collaboration initialization:', error);
@@ -322,8 +270,7 @@ viewer.resourcesLoaded = async function () {
 viewer.documentChanged = (args: AnnotationChangedEventArgs | FormFieldChangedEventArgs | FormFieldFocusOutEventArgs | PageOrganizerSavedEventArgs) => {
     try {
         // Handle annotation changes
-        if ('annotationId' in args) {
-            console.log('[Index] Annotation changed:', (args as any).annotationId);
+        if ('annotationId' in args) {       
 
             let operations: any[];
             if ((args as any).action) {
@@ -342,26 +289,20 @@ viewer.documentChanged = (args: AnnotationChangedEventArgs | FormFieldChangedEve
                 }];
             }
 
-            adapter.sendActionToServer(operations);
-            console.log('[Index] Sent annotation operation to server');
+            adapter.sendActionToServer(operations);           
         }
         // Handle form field changes
-        else if ('formField' in args) {
-            console.log('[Index] Form field changed:', (args as any).formField);
-
+        else if ('formField' in args) {        
             const operations = [{
                 action: (args as any).action,
                 formField: (args as any).formField,
                 type: 'formField'
             }];
 
-            adapter.sendActionToServer(operations);
-            console.log('[Index] Sent form field operation to server');
+            adapter.sendActionToServer(operations);          
         }
         // Handle form field value updates (focus out)
-        else if ('fieldName' in args) {
-            console.log('[Index] Form field updated:', (args as any).fieldName);
-
+        else if ('fieldName' in args) {            
             const field: any = args;
             const operations = [{
                 action: 'formFieldUpdate',
@@ -369,12 +310,10 @@ viewer.documentChanged = (args: AnnotationChangedEventArgs | FormFieldChangedEve
                 type: 'formField'
             }];
 
-            adapter.sendActionToServer(operations);
-            console.log('[Index] Sent form field update to server');
+            adapter.sendActionToServer(operations);          
         }
         // Handle page organizer changes
-        else if ('organizePageActions' in args) {
-            console.log('[Index] Page organizer changed');
+        else if ('organizePageActions' in args) {           
 
             const eventData: any = args;
             const actionDetails: any = (args as any).organizePageActions && typeof ((args as any).organizePageActions) === 'string' 
@@ -403,8 +342,7 @@ viewer.documentChanged = (args: AnnotationChangedEventArgs | FormFieldChangedEve
                 return;
             }
 
-            adapter.sendActionToServer(operations);
-            console.log('[Index] Sent page organizer operation to server');
+            adapter.sendActionToServer(operations);        
         }
 
     } catch (error) {
@@ -413,9 +351,7 @@ viewer.documentChanged = (args: AnnotationChangedEventArgs | FormFieldChangedEve
 };
 
 async function fetchAndLoadPDFDocument(): Promise<void> {
-    try {
-        console.log(`[Index] Fetching PDF from room: ${adapterCurrentRoomName}`);
-
+    try {       
         // Build query parameters for GetPDFDocument endpoint
         const queryParams = new URLSearchParams({
             roomName: adapterCurrentRoomName || 'default'
@@ -441,28 +377,20 @@ async function fetchAndLoadPDFDocument(): Promise<void> {
         if (!result.success) {
             throw new Error(`Server error: ${result.error}`);
         }
-
-        console.log(`[Index] PDF retrieved successfully - Size: ${result.contentLength} bytes`);
-
+      
         // Step 1: Decode Base64 content to binary string
         const binaryString = atob(result.content);
 
         // Step 2: Convert binary string to Uint8Array
         const bytes = new Uint8Array(binaryString.length);
         for (let i = 0; i < binaryString.length; i++) {
-            bytes[i] = binaryString.charCodeAt(i);
-        }
+            bytes[i] = binaryString.charCodeAt(i);        }
 
         // Step 3: Create Blob from Uint8Array
-        const pdfBlob = new Blob([bytes], { type: 'application/pdf' });
-        console.log(`[Index] Converted to Blob - Size: ${pdfBlob.size} bytes`);
-
+        const pdfBlob = new Blob([bytes], { type: 'application/pdf' });     
         // Step 4: Load the PDF into the viewer
-        await loadPDFBlobIntoViewer(pdfBlob);
-        console.log('[Index] PDF loaded into viewer');
-
-    } catch (error) {
-        console.error('[Index] Error fetching PDF document:', error);
+        await loadPDFBlobIntoViewer(pdfBlob);      
+    } catch (error) {    
         throw error;
     }
 }
@@ -489,7 +417,6 @@ async function loadPDFBlobIntoViewer(pdfBlob: Blob): Promise<void> {
                     // Attempt to load using viewer.load() with Uint8Array
                     if (viewer.load && typeof viewer.load === 'function') {
                         viewer.load(uint8Array, '');
-                        console.log('[Index] Loaded PDF using viewer.load(Uint8Array)');
                         resolve();
                         return;
                     }
@@ -501,11 +428,9 @@ async function loadPDFBlobIntoViewer(pdfBlob: Blob): Promise<void> {
                             const dataUrl = dataReader.result as string;
 
                             if (viewer.load && typeof viewer.load === 'function') {
-                                viewer.load(dataUrl, '');
-                                console.log('[Index] Loaded PDF using viewer.load(dataUrl)');
+                                viewer.load(dataUrl, '');                              
                                 resolve();
-                            } else {
-                                console.error('[Index] Viewer does not support load method');
+                            } else {                              
                                 reject(new Error('Viewer load method not available'));
                             }
                         } catch (error) {
@@ -674,8 +599,6 @@ function registerCollaborativeEditingRoutes(app, actionService, adapter,server) 
                 return res.status(400).json({ error: 'Room name is required' });
             }
  
-            console.log('[ImportFile] Room:', roomName, 'File:', fileName);
- 
             // Get all pending operations for this room
             const allActions = await actionService.getPendingOperations(roomName, 0, -1);
  
@@ -696,7 +619,6 @@ function registerCollaborativeEditingRoutes(app, actionService, adapter,server) 
   
     app.post('/api/CollaborativeEditing/UpdateAction', async (req, res) => {
         try {
-            console.log('updateAction');
             const request = req.body;
  
             if (!request.roomName) {
@@ -707,13 +629,7 @@ function registerCollaborativeEditingRoutes(app, actionService, adapter,server) 
                 return res.status(400).json({ error: 'Type is required' });
             }
  
-            console.log(
-                '[UpdateAction] Room:', request.roomName,
-                'Type:', request.type,
-                'Connection:', request.connectionId
-            );
- 
-            let data = null;
+           let data = null;
             let actionDescription = '';
  
             // Validate and extract type-specific data
@@ -792,8 +708,6 @@ function registerCollaborativeEditingRoutes(app, actionService, adapter,server) 
  
             // Store in Redis
             await actionService.addOperation(collaborationAction, adapter);
-            console.log('addOperation');
- 
             // Get all pending operations for this room
             const allActions = await actionService.getPendingOperations(request.roomName, 0, -1);
  
@@ -808,7 +722,6 @@ function registerCollaborativeEditingRoutes(app, actionService, adapter,server) 
                 data: data
             };
  
-            console.log('broadcastToRoom');
             // Broadcast to other clients in room
             // Clients filter via connectionId to ignore their own updates
             if (transport && typeof transport.broadcastToRoom === 'function') {
@@ -819,8 +732,7 @@ function registerCollaborativeEditingRoutes(app, actionService, adapter,server) 
                             event: 'action',
                             data: broadcastRequest
                         }
-                    );
-                    console.log('broadcastToRoom   1');
+                    );                   
                 } catch (broadcastError) {
                     console.error('[UpdateAction] Broadcast error:', broadcastError.message);
                     // Continue even if broadcast fails - action is already stored

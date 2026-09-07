@@ -12,17 +12,16 @@ domainurl: ##DomainURL##
 
 The Collaboration Server is the back\-end component of the Collaborator framework. It manages collaboration sessions, synchronizes editing actions, persists changes, and broadcasts updates to connected participants in real time.
 
-The same Common Collaborator framework is shared across all supported server platforms, allowing the collaboration infrastructure to be reused across EJ2 components such as **Document Editor**, **PDF Viewer**, and **Spreadsheet**.
+The same common collaborator framework is shared across all supported server platforms, allowing the collaboration infrastructure to be reused across EJ2 components such as DOCX Editor, PDF Viewer, and Spreadsheet.
 
 ## Packages
-|**Package**|**Description**|
-|:---|:---|
-|Syncfusion.Collaborator.Server|Collaboration server for ASP.NET Core and ASP.NET MVC|
+|Package|Description|
+|---|---|
+|Syncfusion.Collaborator.Server.AspNet.Core|Collaboration server for ASP.NET Core|
+|Syncfusion.Collaborator.Server.AspNet.Mvc|Collaboration server for ASP.NET MVC|
 |ej2\-collaborator\-server|Collaboration server for Node.js|
 
-
-
-**Note**: The Node.js Collaboration Server currently supports PDF Viewer collaborative editing only. Document Editor and Spreadsheet require the ASP.NET\-based web service implementation for document processing, operation transformation, and save operations.
+**Note**: The Node.js Collaboration Server currently supports PDF Viewer collaborative editing only. DOCX Editor and Spreadsheet require the ASP.NET\-based web service implementation for document processing, operation transformation, and save operations.
 
 ## Key Features
 
@@ -36,43 +35,45 @@ The same Common Collaborator framework is shared across all supported server pla
 
 ## Redis Requirement
 
-The Collaboration Server uses Redis for operation storage, session synchronization, and scalable multi\-server deployments.
+Redis is required for the Collaboration Server to store operations, synchronize sessions, and support scalable multi-server deployments.
 
 ## Adapter Integration
 
-The Collaboration Server is control\-agnostic. Each supported EJ2 component integrates through a server adapter that translates component\-specific actions into the common collaboration format. The same collaboration infrastructure can therefore be reused across Document Editor, PDF Viewer, and Spreadsheet with only the adapter implementation changing.
+The Collaboration Server is designed to work with multiple EJ2 components. Each supported EJ2 component integrates through a server adapter that translates component\-specific actions into the common collaboration format. The same collaboration infrastructure can therefore be reused across DOCX Editor, PDF Viewer, and Spreadsheet with only the adapter implementation changing.
 
 ## ASP.NET Core Server
 
-The ASP.NET Core Collaboration Server is provided through the Syncfusion.Collaborator.Server package. It supports both SignalR and WebSocket transports and is recommended for modern .NET applications.
+The ASP.NET Core Collaboration Server is provided through the Syncfusion.Collaborator.Server.AspNet.Core package. It supports both SignalR and WebSocket transports and is recommended for modern .NET applications.
 
 **Installation**
-|dotnet add package Syncfusion.Collaborator.Server|
-|:---|
 
+Install the Collaboration Server package in your ASP.NET Core project:
 
+```bash
+dotnet add package Syncfusion.Collaborator.Server.AspNet.Core
+```
 
 **Supported Transports**
 
-- **SignalR(** default **)** 
+- **SignalR** (default)
 
-- **WebSocket** 
+- **WebSocket**
 
 ## Public API
 
-The interfaces below are what product teams **implement or call**. Everything else is internal.
+The interfaces below represent the public API exposed by the Collaboration Server.
 
-### `ICollaborationAdapter` — the interface (provided by the common package)
+### `ICollaborationAdapter` — adapter contract
 
 | Member | Purpose |
 |---|---|
-| `MapControlToGenericAction(object controlAction)` | Pack control action → common `CollaborationAction` |
-| `MapGenericToControlAction(CollaborationAction action)` | Unpack common → control action |
+| `MapControlToGenericAction(object controlAction)` | Convert a control-specific action into a CollaborationAction. |
+| `MapGenericToControlAction(CollaborationAction action)` | Convert a CollaborationAction into a control-specific action. |
 | `TransformOperations(List<CollaborationAction> actions)` | Run your control's OT over a batch of actions |
-| `SaveOperationsAsync(actions, roomName, partialSave)` | Hand off save to background queue |
-| `ProcessSaveRequestAsync(SaveRequest, cancellationToken)` | Runs the actual save (called by the background hosted service) |
+| `SaveOperationsAsync(actions, roomName, partialSave)` | Queues pending actions for document save processing. |
+| `ProcessSaveRequestAsync(SaveRequest, cancellationToken)` | Processes the queued save request and persists the document. |
 
-### `IActionService` (common, you call)
+### `IActionService` — common service API
 
 | Method | Purpose |
 |---|---|
@@ -92,58 +93,52 @@ The interfaces below are what product teams **implement or call**. Everything el
 | Property | Default | Purpose |
 |---|---|---|
 | `ConnectionString` | `localhost:6379` | Redis connection string used for storage and pub/sub. |
-| `ConnectionType` | `CollaborationConnectionType.SignalR` | Pick **either** `SignalR` **or** `WebSocket`. |
-| `SaveThreshold` | `CollaborativeEditingHelper.SaveThreshold` | Operation list size that triggers a background save. |
+| `ConnectionType` | `CollaborationConnectionType.SignalR` | ConnectionType is a single enum choice — set it to SignalR or WebSocket. |
+| `SaveThreshold` | 100 | The save threshold (in actions) after which a pending save is flushed to the document. |
 
-> `ConnectionType` is a single enum choice — set it to `SignalR` **or** `WebSocket`.
-
-
-**Configuration**:
+**Configuration**
 
 Register the Collaboration Server and configure the Redis connection string during application start.
 
 **SignalR (Default)**
 ```c#
-builder.Services.AddCollaborationServer(options => { options.ConnectionString = "localhost:6379"; }); 
+builder.Services.AddCollaborationServer(options =>
+{
+    options.ConnectionString = "localhost:6379";
+});
 ```
 **WebSocket**
 ```c#
-builder.Services.AddCollaborationServer(options => { options.ConnectionString \= "localhost:6379"; options.ConnectionType = CollaborationConnectionType.WebSocket; }); 
+builder.Services.AddCollaborationServer(options =>
+{
+    options.ConnectionString = "localhost:6379";
+    options.ConnectionType = CollaborationConnectionType.WebSocket;
+});
 ```
-**Configuration Options**
-|**Property**|**Description**|
-|:---|:---|
-|ConnectionString|Redis connection string|
-|ConnectionType|SignalR or WebSocket transport|
-|SaveThreshold|Number of operations before triggering a save|
+### Adapter Integration
 
-
-
-**Adapter Integration**
-
-Register a control\-specific adapter to translate between the EJ2 component and the Common Collaborator framework.
-|builder.Services.AddSingleton\<ICollaborationAdapter, DocumentEditorAdapter\>(); |
-|:---|
-
-
+Register a control\-specific adapter to translate between the EJ2 component and the Common Collaborator framework. Refer to the [getting started with ASP.NET Core page](./getting-started/getting-started-with-core) for more details.
+```C#
+builder.Services.AddSingleton\<ICollaborationAdapter, DocumentEditorAdapter\>(); 
+```
 
 ## ASP.NET MVC Server
 
-The ASP.NET MVC Collaboration Server provides the collaboration capabilities as the ASP.NET Core server for applications built on .NET Framework and ASP.NET MVC 5.
+The ASP.NET MVC Collaboration Server provides the same collaboration capabilities as the ASP.NET Core server for applications built on .NET Framework and ASP.NET MVC 5.
 
 **Requirements**
 
-- .NET Framework 4.6.2 or later
-
+- .NET Framework 4.6.2
 - ASP.NET MVC 5
-
 - Redis
 
 **Installation**
 
-Install\-Package Syncfusion.Collaborator.Server 
+Install the Collaboration Server package in your ASP.NET MVC project:
 
-
+```powershell
+Install-Package Syncfusion.Collaborator.Server.AspNet.Mvc
+```
 **Transport Support**
 
 The ASP.NET MVC Collaboration Server supports **WebSocket** communication for real\-time synchronization between connected users.
@@ -152,17 +147,22 @@ The ASP.NET MVC Collaboration Server supports **WebSocket** communication for re
 
 Configure the Collaboration Server with a Redis connection string and register the required adapter implementation.
 ```c#
-ServiceCollectionExtensions.RegisterAdapter( new DocumentEditorCollaborationAdapter());  ServiceCollectionExtensions.AddCollaborationServer(options => { options.ConnectionString = "<redis-connection-string>"; options.ConnectionType = CollaborationConnectionType.WebSocket; }); 
+ServiceCollectionExtensions.RegisterAdapter(
+    new DocumentEditorCollaborationAdapter());
+
+ServiceCollectionExtensions.AddCollaborationServer(options =>
+{
+    options.ConnectionString = "<redis-connection-string>";
+    options.ConnectionType = CollaborationConnectionType.WebSocket;
+});
 ```
 **Adapter Integration**
 
-Register a control\-specific adapter to connect the EJ2 component with the Common Collaborator framework.
+Register a control\-specific adapter to connect the EJ2 component with the Common Collaborator framework. Refer to the [getting started with MVC page](./getting-started/getting-started-with-mvc) for more details.
 
 ## Node.js Server
 
 The Node.js Collaboration Server provides real\-time collaboration capabilities for JavaScript and TypeScript applications.
-
-**Note:** The Node.js Collaboration Server currently supports PDF Viewer collaborative editing only. Document Editor and Spreadsheet require the ASP.NET\-based web service implementation for document processing, operation transformation, and save operations.
 
 **Requirements**
 
@@ -171,25 +171,28 @@ The Node.js Collaboration Server provides real\-time collaboration capabilities 
 - Redis
 
 **Installation**
-npm install ej2\-collaborator\-server
+
+Install the Collaboration Server package in your Node.js project:
+
+```bash
+npm install ej2-collaborator-server
+```
 
 **Transport Support**
 
-The Node.js Collaboration Server supports **WebSocket** communication for real\-time synchronization and collaboration between connected users.
+The Node.js Collaboration Server supports **WebSocket** communication for real-time synchronization and collaboration between connected users.
 
 ## Public API
 
-The members below are what product teams **call or implement**. Everything
-else is internal to this package.
+The interfaces below represent the public API exposed by the Collaboration Server.
 
-### `ICollaborationAdapter` (base class — implemented by the consumer)
+### `ICollaborationAdapter` — adapter contract
 
 | Member | Purpose |
 | --- | --- |
 | `mapControlToGenericAction(controlAction)` | Pack a control action into the common `CollaborationAction`. |
 | `mapGenericToControlAction(collaborationAction)` | Unpack a common `CollaborationAction` into the control action shape. |
 | `transformOperations(actions)` | Run your control's OT over a batch of actions. Returns the transformed array. |
-| `saveOperationsAsync(actions, roomName, partialSave)` | Hand off save to the background queue. |
 | `processSaveRequestAsync(request)` | Runs the actual save (called by `DocumentSaveWorker`). |
 
 ### `CollaborationServer` (the package entry point)
@@ -206,31 +209,24 @@ else is internal to this package.
 
 | Member | Purpose |
 | --- | --- |
-| `addAction(roomName, action)` | Persist a `CollaborationAction` and bump the room version. |
-| `getActions(roomName)` | Fetch the current action list for a room. |
 | `addOperation(action, adapter)` | Run the Lua-script flow: assign version, transform prior ops via `adapter.transformOperations`, persist, and enqueue a partial save when the threshold is reached. |
 | `getPendingOperations(roomName, startIndex, endIndex)` | Fetch stored actions in a range. |
 | `getEffectivePendingVersion(roomName, startIndex)` | Fetch newer-than-`startIndex` actions for a joining client. |
 | `clearRecords(roomName, partialSave)` | Flush actions after save completes. |
 
-### Configuration (constructor options)
-
-| Property | Default | Purpose |
-| --- | --- | --- |
-| `port` | `process.env.PORT` or `8080` | HTTP/WS port. |
-| `redis` | — | `ioredis` connection options (`host`, `port`, `username`, `password`, `tls`, ...). |
-| `adapter` | — | The `ICollaborationAdapter` instance used by the save worker and REST controller. |
-| `saveThreshold` | `Helper.SAVE_THRESHOLD` (100) | Operations per partial save. A flush fires when the Redis list length is a multiple of `2 * saveThreshold`, moving the first `saveThreshold` actions into the staging list handed to `adapter.processSaveRequestAsync`. Lower values shorten recovery, higher values reduce write pressure. Must be a positive integer. |
-
 **Configuration**
+
+Create the CollaborationServer instance with your Redis connection details and adapter implementation.
 ```ts
 const server = new CollaborationServer({
-     redis: { host: "<redis-host>",
-      port: 6379 },
-       adapter 
-       });
+    redis: {
+        host: "<redis-host>",
+        port: 6379
+    },
+    adapter
+});
 ```
 **Adapter Integration**
 
-Register a control\-specific adapter to connect the EJ2 component with the Common Collaborator framework.
+Register a control\-specific adapter to connect the EJ2 component with the Common Collaborator framework. Refer to the [getting started with Node.js page](./getting-started/getting-started-with-node) for more details.
 

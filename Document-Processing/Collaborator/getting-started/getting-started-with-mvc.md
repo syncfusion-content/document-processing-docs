@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with ASP.NET MVC Collaboration Server | Syncfusion
-description: Learn how to create a collaborative Document Editor in an ASP.NET MVC application using the Collaboration Server with WebSocket transport and Redis storage.
+description: Learn how to create a collaborative DOCX Editor in an ASP.NET MVC application using the Collaboration Server with WebSocket transport and Redis storage.
 control: Collaborator
 platform: document-processing
 documentation: ug
@@ -9,11 +9,11 @@ domainurl: ##DomainURL##
 ---
 # Getting Started with ASP.NET MVC Collaboration Server
 
-This walk\-through creates a collaborative Document Editor backed by the ASP.NET MVC 5 Collaboration Server. It uses the same Common Collaborator services on the server and the shared @syncfusion/ej2\-collaborator client on the browser.
+This walk-through demonstrates how to create a collaborative DOCX Editor application using the ASP.NET MVC Collaboration Server. It uses the common collaboration services on the server and the shared `@syncfusion/ej2-collaborator` client package in the browser.
 
-The walk\-through uses the **DOCX Editor** as the reference editor component. The same pattern applies to the **PDF Viewer** and the **Spreadsheet** — only the control\-specific adapter class changes.
+This guide uses **DOCX Editor** as the reference component. The same collaboration infrastructure can be used with PDF Viewer and Spreadsheet, with only the control-specific adapter implementation changing for each component.
 
-The ASP.NET MVC server uses the **WebSocket** transport, mounted through an OWIN startup at /ws. No SignalR is required.
+The ASP.NET MVC Collaboration Server uses **WebSocket** transport for real-time communication and is hosted through an OWIN-based startup configuration. SignalR is not required.
 
 ## Client Side
 
@@ -28,232 +28,129 @@ npm install @syncfusion/ej2-collaborator
 {% endhighlight %}
 {% endtabs %}
 
-@Microsoft/signalr is installed automatically as a transitive dependency.
+### Step 2 - Reference Adapter (DocumentEditorAdapter.ts)
 
+The adapter acts as a bridge between the Collaboration Client and the EJ2 Document Editor. It implements the `ICollaborationProvider` interface and is responsible for applying remote collaboration actions to the editor.
 
-### Step 2 — Reference Adapter (DocumentEditorAdapter.ts)
+This guide uses the Document Editor adapter as an example. The same integration pattern can be used for PDF Viewer and Spreadsheet by implementing a control-specific adapter that conforms to the `ICollaborationProvider` interface.
 
-The control\-specific translator on the client side. It implements ICollaborationProvider for the EJ2 Document Editor. PDF Viewer / Spreadsheet teams replace this with their own, but the shape is identical. 
  ```ts
 import {
-
     DocumentEditor,
-
     DocumentEditorContainer,
-
     Operation
+} from "@syncfusion/ej2-documenteditor";
 
-} from '@syncfusion/ej2-documenteditor';
-
-
-import {
-
-    ICollaborationProvider,
-
-    ICollaborationActionData
-
-} from '@syncfusion/ej2-collaborator';
-
+import { ICollaborationProvider, ICollaborationActionData } from "@syncfusion/ej2-collaborator";
 
 export class DocumentEditorAdapter implements ICollaborationProvider {
 
-
     constructor(
-
         private container: DocumentEditorContainer,
-
         private serviceUrl: string,
-
     ) { }
-
-
-  // Fetch the document from the product's REST API and return the room name. 
-
+ // Fetch the document from the product's REST API and return the room name. 
     public async loadFromServer(fileName: string): Promise<string> {
-
         const roomName: string = this.getRoomName(fileName);
-
         const response: Response = await fetch(
-
             this.serviceUrl + 'api/CollaborativeEditing/ImportFile',
-
             {
-
                 method: 'POST',
-
-                headers: { 'Content-Type': 'application/json' },
-
+                headers: {
+                    'Content-Type': 'application/json'
+                },
                 body: JSON.stringify({ fileName, roomName })
-
             }
-
         );
-
         if (!response.ok) {
-
             throw new Error('Failed to load document');
-
         }
-
         const responseText: string = await response.text();
-
         await this.open(responseText, roomName);
-
         return roomName;
-
     }
-
-
    // Seed the editor and bridge local edits to the editor's sender. 
-
     public async open(responseText: string, roomName: string): Promise<void> {
-
         const data: any = JSON.parse(responseText);
-
-        this.container?.documentEditor.collaborativeEditingHandlerModule
-
-            ?.updateRoomInfo(roomName, data.version, this.serviceUrl + 'api/CollaborativeEditing/');
-
+        this.container?.documentEditor.collaborativeEditingHandlerModule?.updateRoomInfo(roomName, data.version, this.serviceUrl + 'api/CollaborativeEditing/');
         this.container.documentEditor.open(data.sfdt);
-
         this.container.contentChange = (args: any) => {
-
-            this.container.documentEditor.collaborativeEditingHandlerModule
-
-                ?.sendActionToServer(args.operations as Operation[]);
-
-        };
-
+            console.log('[SENT]', new Date().toISOString());
+            this.container.documentEditor.collaborativeEditingHandlerModule?.sendActionToServer(args.operations as Operation[]);
+        }
     }
-
-
     // The only ICollaborationProvider method — applied for every remote action. 
-
     public applyRemoteAction(action: string, data: ICollaborationActionData): void {
 
-        this.container.documentEditor.collaborativeEditingHandlerModule
-
-            ?.applyRemoteAction(action, data.payload);
-
+        this.container.documentEditor.collaborativeEditingHandlerModule?.applyRemoteAction(action, data.payload);
     }
-
-
     private getRoomName(fileName: string): string {
-
-        const urlParams: URLSearchParams = new URLSearchParams(window.location.search);
-
+        const queryString: string = window.location.search;
+        const urlParams: URLSearchParams = new URLSearchParams(queryString);
         let roomId: string | null = urlParams.get('id');
 
-
         if (!roomId) {
-
             roomId = Math.random().toString(32).slice(2);
-
             window.history.replaceState({}, '', '?id=' + roomId);
-
         }
-
         return roomId;
-
     }
-
 }
+
 ```
 
-### Step 3 — Document Editor initialization and collaborator client wiring
+### Step 3 — DOCX Editor initialization and collaborator client wiring
 
 ```ts
 
-import { DocumentEditorContainer, DocumentEditor, Toolbar, CollaborativeEditingHandler }
-
-    from '@syncfusion/ej2-documenteditor';
-
+// Import the required Document Editor and collaboration client APIs.
+import { DocumentEditorContainer, DocumentEditor, Toolbar, CollaborativeEditingHandler }from '@syncfusion/ej2-documenteditor';
 import { CollaborationClient, UserInfo } from '@syncfusion/ej2\-collaborator';
-
 import { DocumentEditorAdapter } from '../collaboration/DocumentEditorAdapter';
-
 import { TitleBar } from './title-bar';
 
-
+// Register the Document Editor services used by the sample.
 DocumentEditor.Inject(CollaborativeEditingHandler);
-
 DocumentEditorContainer.Inject(Toolbar);
 
-
+// Set the backend service URL used by the adapter and editor.
 const serviceUrl: string = 'http://localhost:62870/';
 
-
+// Create the Document Editor container and enable collaborative editing.
 const documenteditor: DocumentEditorContainer = new DocumentEditorContainer({
-
     enableToolbar: true,
-
     height: '590px',
-
     currentUser: currentUser,
-
     serviceUrl: serviceUrl + 'api/documenteditor'   // product REST API (open/save SFDT)
-
 });
-
 documenteditor.appendTo('#DocumentEditor');
-
-
 documenteditor.documentEditor.enableCollaborativeEditing = true;
 
-
-const titleBar: TitleBar = new TitleBar(
-
-    document.getElementById('documenteditor_titlebar') as HTMLElement,
-
-    documenteditor.documentEditor,
-
-    true
-
-);
-
-titleBar.updateDocumentTitle();
-
-
+// Create the adapter and collaboration client.
 const adapter: DocumentEditorAdapter = new DocumentEditorAdapter(documenteditor, serviceUrl);
-
-
-const client: CollaborationClient = new CollaborationClient(adapter, {
-    
+const client: CollaborationClient = new CollaborationClient(adapter, {    
     serviceUrl: "http://localhost:62870",
-
-    connectionType: "websocket",                     
-
+    connectionType: "websocket",                   
     currentUser: currentUser,
-
     onUserJoined: (user: UserInfo) => {
-
         console.log("User Joined", user);
-
-        titleBar.addUser(user);
-
+       // titleBar.addUser(user);
     },
-
     onUserLeft: (user: UserInfo) => {
-
         console.log("User Left", user);
-
-        titleBar.removeUser(user);
-
+        //titleBar.removeUser(user);
     }
-
 });
 
-
+// Load the document, then join the collaboration room.
 (async () => {
-
     const roomName: string = await adapter.loadFromServer("Giant Panda.docx");
-
     await client.joinRoomAsync(roomName);
-
 })();
 
 ```
-### Step 4 — Serve the client
+
+### Step 4 — Run the client
 
 Build and serve the front\-end application so the page is reachable at, for example, http://localhost:4000
 
@@ -261,11 +158,13 @@ Build and serve the front\-end application so the page is reachable at, for exam
 
 #### Step 5 — Install the NuGet packages
 
-In your ASP.NET MVC 5 project, add the MVC Collaboration Server and the Document Editor server\-side helper
+In your ASP.NET MVC 5 project, install the MVC Collaboration Server package and the DOCX Editor server-side helper package.
 
-Install\-Package Syncfusion.Collaborator.Server.MVC
+```powershell
+Install-Package Syncfusion.Collaborator.Server.Mvc
 
-Install\-Package Syncfusion.EJ2.WordEditor.AspNet.MVC
+Install-Package Syncfusion.EJ2.WordEditor.AspNet.Mvc
+```
 
 #### Step 6 — Register the Collaboration Server
 
@@ -273,69 +172,36 @@ Open Global.asax.cs and register the Collaboration Server services during applic
 
 ```C#
 using Syncfusion.Collaboration.Core.Extensions;
-
 using Syncfusion.Collaboration.Core.Interfaces;
-
 using System.Web.Http;
-
 using System.Web.Mvc;
-
 using System.Web.Optimization;
-
 using System.Web.Routing;
-
 using WebApplication1.Adapter;
 
-
 namespace WebApplication1
-
 {
-
     public class MvcApplication : System.Web.HttpApplication
-
     {
-
         protected void Application_Start()
-
         {
-
             AreaRegistration.RegisterAllAreas();
-
             GlobalConfiguration.Configure(WebApiConfig.Register);
-
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
-
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-
-
             ServiceCollectionExtensions.RegisterAdapter(
-
                 new DocumentEditorCollaborationAdapter());
-
-
             ServiceCollectionExtensions.AddCollaborationServer(options =>
-
             {
-
                 options.ConnectionString =
-
                     System.Configuration.ConfigurationManager
-
                         .ConnectionStrings["Redis"]?.ConnectionString
-
                     ?? "localhost:6379";
-
-
                 options.ConnectionType = CollaborationConnectionType.WebSocket;
-
             });
-
         }
-
     }
-
 }
 ```
 ### Step 7 — Mount the WebSocket endpoint (Startup.cs)
@@ -343,6 +209,7 @@ namespace WebApplication1
 Add an OWIN startup class to expose the Collaboration Server WebSocket endpoint. Incoming WebSocket requests are forwarded to the Collaboration Server transport handler.
 
 ```C#
+[assembly: OwinStartup(typeof(WebApplication1.Startup))]
 namespace WebApplication1
 {
     public class Startup
@@ -354,32 +221,28 @@ namespace WebApplication1
                 map.Run(context =>
                 {
                     var httpContext = HttpContext.Current;
-
                     if (httpContext == null)
                     {
                         context.Response.StatusCode = 500;
                         return Task.CompletedTask;
                     }
-
                     if (!httpContext.IsWebSocketRequest)
                     {
                         context.Response.StatusCode = 400;
                         return context.Response.WriteAsync(
                             "WebSocket connection required.");
-                    }
-                    
+                    }                    
                     httpContext.AcceptWebSocketRequest(
      ServiceCollectionExtensions.MapCollaborationServer());
                     return Task.CompletedTask;
                 });
             });
-        }
-       
+        }       
     }
 }
 ```
 
-### Step 8 — Add the Document Editor adapter
+### Step 8 — Add the DOCX Editor adapter
 
 The collaboration adapter acts as a bridge between control\-specific collaboration actions and the Common Collaborator data model. Each collaborative component implements its own adapter while sharing the same server infrastructure.
 ```C#
@@ -397,8 +260,10 @@ using System.Web;
 
 namespace WebApplication1.Adapter
 {
+    // Translates between Document Editor actions and the common collaboration model.
     public class DocumentEditorCollaborationAdapter : ICollaborationAdapter
     {
+        // Converts a control-specific action into a generic collaboration action.
         public CollaborationAction MapControlToGenericAction(object controlAction)
         {
             var action = (Syncfusion.EJ2.DocumentEditor.ActionInfo)controlAction;
@@ -415,6 +280,7 @@ namespace WebApplication1.Adapter
             };
         }
 
+        // Converts a generic collaboration action back to a Document Editor action.
         public object MapGenericToControlAction(CollaborationAction action)
         {
             return new Syncfusion.EJ2.DocumentEditor.ActionInfo
@@ -429,16 +295,19 @@ namespace WebApplication1.Adapter
             };
         }
 
+        // Saves incoming changes to the server-side store.
         public Task ProcessSaveRequestAsync(SaveRequest request, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }
 
+        // Persists collaboration operations for the active room.
         public Task SaveOperationsAsync(List<CollaborationAction> actions, string roomName, bool partialSave)
         {
             throw new NotImplementedException();
         }
 
+        // Replays untransformed operations so concurrent edits stay in sync.
         public void TransformOperations(List<CollaborationAction> actions)
         {
             var documentActions = actions.Select(x => (Syncfusion.EJ2.DocumentEditor.ActionInfo)MapGenericToControlAction(x)).ToList();
@@ -452,9 +321,9 @@ namespace WebApplication1.Adapter
 
 ### Step 9 — Add the collaborative editing controller (web service methods)
 
-CollaborativeEditingController is the HTTP bridge between the client control and the Common Collaborator. Every EJ2 content editor component that supports collaboration (Document Editor, PDF Viewer, Spreadsheet) exposes the same three web service methods on its collaboration controller. Each method is required:
-|**Web service method**|**Why it is needed**|
-|:---|:---|
+CollaborativeEditingController is the HTTP bridge between the client control and the Common Collaborator. Every EJ2 content editor component that supports collaboration (DOCX Editor, PDF Viewer, Spreadsheet) exposes the same three web service methods on its collaboration controller. Each method is required:
+|Web service method|Why it is needed|
+|---|---|
 |ImportFile|Loads the source document and applies any pending collaboration actions before sending the latest document state to a newly connected client. Returns the document content and current server version.|
 |UpdateAction|Receives editing actions from connected clients, processes operational transformation, persists the action, and broadcasts the updated action to other participants.|
 |GetActionsFromServer|Retrieves collaboration actions created after the client's last synchronized version so the client can catch up with the latest document state.|
@@ -486,11 +355,17 @@ namespace WebApplication1.Controllers
      [RoutePrefix("api/CollaborativeEditing")]
     public class CollaborativeEditingController : ApiController
     {
+        // Stores the source document location under App_Data.
         private static string fileLocation;
 
+        // Handles collaboration operations for the current room.
         private readonly IActionService actionService;
+        // Converts between control actions and common collaboration actions.
         private readonly ICollaborationAdapter adapter;
+        // Broadcasts updates to all connected clients in the room.
         private readonly IActiveTransport transport;
+
+        // Resolves shared services from the collaboration container.
         public CollaborativeEditingController()
         {
             fileLocation = HostingEnvironment.MapPath("~/App_Data");
@@ -504,6 +379,8 @@ namespace WebApplication1.Controllers
             transport =
                 CollaborationServiceContainer.Resolve<IActiveTransport>();
         }
+
+        // Uses dependency injection when the controller is created by the framework.
         public CollaborativeEditingController(
             IActionService actionService,
             ICollaborationAdapter adapter,
@@ -516,6 +393,7 @@ namespace WebApplication1.Controllers
             this.transport = transport;
         }
 
+        // Loads the document and applies any pending collaboration changes.
         [HttpPost]
         [Route("ImportFile")]
         public async Task<HttpResponseMessage> ImportFile(FileInfo param)
@@ -563,6 +441,7 @@ namespace WebApplication1.Controllers
 
 
 
+                // Accepts an editing action, stores it, and sends it to other participants.
         [HttpPost]
         [Route("UpdateAction")]
         public async Task<Syncfusion.EJ2.DocumentEditor.ActionInfo> UpdateAction(Syncfusion.EJ2.DocumentEditor.ActionInfo param)
@@ -580,6 +459,7 @@ namespace WebApplication1.Controllers
 
         }
 
+        // Returns actions that the client has not yet synchronized.
         [HttpPost]
         [Route("GetActionsFromServer")]       
         public async Task<string> GetActionsFromServer(Syncfusion.EJ2.DocumentEditor.ActionInfo param)
@@ -621,6 +501,7 @@ namespace WebApplication1.Controllers
             }
         }
 
+        // Holds the serialized document payload and server version.
         public class DocumentContent
         {
             public int version { get; set; }
@@ -628,12 +509,15 @@ namespace WebApplication1.Controllers
             public string sfdt { get; set; }
         }
 
+        // Contains the file name and room name provided by the client.
         public class FileInfo
         {
             public string fileName { get; set; }
 
             public string roomName { get; set; }
         }
+
+        // Opens the source document from the application data folder.
         internal static EJ2WordDocument GetSourceDocument()
         {
             string path = HostingEnvironment.MapPath("~/App_Data/Giant Panda.docx");
