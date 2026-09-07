@@ -166,9 +166,7 @@ let mentionData: any = [
 ];
 let container: DocumentEditorContainer = new DocumentEditorContainer({ enableToolbar: true,height: '590px',
 // Enable mention support in document editor
-  documentEditorSettings: {
-    mentionSettings: { dataSource: mentionData, fields: { text: 'Name' }},
-  }
+  documentEditorSettings: { commentSettings: { highlightCommentsByAuthor : true } } 
 });
 DocumentEditorContainer.Inject(Toolbar);
 container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
@@ -215,9 +213,7 @@ let mentionData: any = [
 ];
 let container: DocumentEditorContainer = new DocumentEditorContainer({ enableToolbar: true,height: '590px', beforeCommentAction:beforecomment,
 // Enable mention support in document editor
-  documentEditorSettings: {
-    mentionSettings: { dataSource: mentionData, fields: { text: 'Name' }},
-  }
+  documentEditorSettings: { commentSettings: { highlightCommentsByAuthor : true } } 
 });
 DocumentEditorContainer.Inject(Toolbar);
 container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
