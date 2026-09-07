@@ -1575,3 +1575,193 @@ document.Close(True)
 {% endhighlight %}
 
  {% endtabs %}
+
+## Linearizing a PDF document
+
+PDF linearization, also known as fast web view, optimizes a PDF document for incremental loading over the web. Set the `IsLinearized` property to `true` before saving the PDF document.
+
+### Creating a linearized PDF document
+
+The following code snippet illustrates how to create a new linearized PDF document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Grid;
+using Syncfusion.Drawing;
+using System.IO;
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+
+//Add four pages.
+for (int i = 0; i < 4; i++)
+{
+  PdfPage page = document.Pages.Add();
+  PdfGrid grid = new PdfGrid();
+  grid.Columns.Add(2);
+  grid.Headers.Add(1);
+  grid.Headers[0].Cells[0].Value = "Page";
+  grid.Headers[0].Cells[1].Value = "Content";
+  PdfGridRow row = grid.Rows.Add();
+  row.Cells[0].Value = (i + 1).ToString();
+  row.Cells[1].Value = "Linearized PDF";
+  grid.Draw(page, new Syncfusion.Drawing.PointF(10, 10));
+}
+
+//Set Linearization to true for fast web view.
+document.FileStructure.IsLinearized = true;
+
+//Save the document into stream.
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
+
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Grid;
+using System.Drawing;
+using System.IO;
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+
+//Add four pages.
+for (int i = 0; i < 4; i++)
+{
+  PdfPage page = document.Pages.Add();
+  PdfGrid grid = new PdfGrid();
+  grid.Columns.Add(2);
+  grid.Headers.Add(1);
+  grid.Headers[0].Cells[0].Value = "Page";
+  grid.Headers[0].Cells[1].Value = "Content";
+  PdfGridRow row = grid.Rows.Add();
+  row.Cells[0].Value = (i + 1).ToString();
+  row.Cells[1].Value = "Linearized PDF";
+  grid.Draw(page, new PointF(10, 10));
+}
+
+//Set Linearization to true for fast web view.
+document.FileStructure.IsLinearized = true;
+
+//Save the document into stream.
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
+
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Grid
+Imports System.Drawing
+Imports System.IO
+
+'Create a new PDF document.
+Dim document As New PdfDocument()
+
+'Add four pages.
+For i As Integer = 0 To 3
+  Dim page As PdfPage = document.Pages.Add()
+  Dim grid As New PdfGrid()
+  grid.Columns.Add(2)
+  grid.Headers.Add(1)
+  grid.Headers(0).Cells(0).Value = "Page"
+  grid.Headers(0).Cells(1).Value = "Content"
+  Dim row As PdfGridRow = grid.Rows.Add()
+  row.Cells(0).Value = (i + 1).ToString()
+  row.Cells(1).Value = "Linearized PDF"
+  grid.Draw(page, New PointF(10, 10))
+Next
+
+'Set Linearization to true for fast web view.
+document.FileStructure.IsLinearized = True
+
+'Save the document into stream.
+Dim stream As New MemoryStream()
+document.Save(stream)
+
+'Close the document.
+document.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+### Linearizing an existing PDF document
+
+The following code snippet illustrates how to load an existing PDF document and save it as a linearized PDF document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.Pdf.Parsing;
+using System.IO;
+
+// Load the existing PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+
+//Set Linearization to true for fast web view.
+loadedDocument.FileStructure.IsLinearized = true;
+
+//Save the document into stream.
+MemoryStream stream = new MemoryStream();
+loadedDocument.Save(stream);
+
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Parsing;
+using System.IO;
+
+// Load the existing PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+
+//Set Linearization to true for fast web view.
+loadedDocument.FileStructure.IsLinearized = true;
+
+//Save the document into stream.
+MemoryStream stream = new MemoryStream();
+loadedDocument.Save(stream);
+
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+Imports System.IO
+
+'Load the existing PDF document
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+
+'Set Linearization to true for fast web view.
+loadedDocument.FileStructure.IsLinearized = True
+
+'Save the document into stream.
+Dim stream As New MemoryStream()
+loadedDocument.Save(stream)
+
+'Close the document.
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
