@@ -221,7 +221,7 @@ The following example illustrates how to enable mention support in the DOCX Edit
   export default {
     data() {
       return { serviceUrl:'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/',
-      settings: { mentionSettings: { dataSource: mentionData, fields: { text: 'Name' }} }},
+      settings: { commentSettings: { highlightCommentsByAuthor : true } }},
     },
     provide: {
       //Inject require modules.
@@ -289,7 +289,7 @@ let mentionData =  [
                 { "Name": "Andrew Fuller", "EmailId": "andrew@company.com"}
             ];
 provide('DocumentEditorContainer', [Toolbar]);
-const settings= { mentionSettings: { dataSource: mentionData, fields: { text: 'Name' }} };
+const settings: { commentSettings: { highlightCommentsByAuthor : true } };
 const beforeComment = function (args) {
   if(args.type === "Delete" && container.value.ej2Instances.currentUser !== args.author){
     args.cancel = true;
@@ -333,7 +333,7 @@ export default {
   },
   data() {
     return {
-      settings: { mentionSettings: { dataSource: mentionData, fields: { text: 'Name' }} }
+        settings: { commentSettings: { highlightCommentsByAuthor : true } }
     }
   },
   provide: {
