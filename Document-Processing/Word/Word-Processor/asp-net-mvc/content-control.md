@@ -14,8 +14,13 @@ documentation: ug
 
 Content controls can be categorized based on their occurrence in a document as follows:
 
-* `InlineContentControl`: Among inline content inside, as a child of a paragraph.
-* `BlockContentControl`: Among paragraphs and tables, as a child of a Body or HeaderFooter.
+**Inline Content Control:** Inserted within the text of a paragraph and flows together with the surrounding text as shown in below example.
+
+![Inline content control.](images/inline-content-control.png)
+
+**Block Content Control:** Inserted as a standalone element at the block level and can contain one or more paragraphs, tables, images, or other content as shown in below example.
+
+![Block content control.](images/block-content-control.png)
 
 ## Types of Content Controls
 
