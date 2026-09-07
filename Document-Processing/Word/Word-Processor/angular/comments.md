@@ -200,7 +200,7 @@ export class AppComponent implements OnInit {
         { "Name": "Andrew James", "EmailId": "james@company.com" },
         { "Name": "Andrew Fuller", "EmailId": "andrew@company.com"}
     ];
-    public settings: DocumentEditorSettingsModel = { mentionSettings : { dataSource: this.mentionData, fields: { text: 'Name' }}  };
+    public settings: DocumentEditorSettingsModel = { commentSettings: { highlightCommentsByAuthor : true } };
     ngOnInit(): void {
     }
 }
@@ -258,7 +258,7 @@ export class AppComponent implements OnInit {
     { "Name": "Andrew James", "EmailId": "james@company.com" },
     { "Name": "Andrew Fuller", "EmailId": "andrew@company.com" }
   ];
-  public settings: DocumentEditorSettingsModel = { mentionSettings: { dataSource: this.mentionData, fields: { text: 'Name' } } };
+  public settings: DocumentEditorSettingsModel = { commentSettings: { highlightCommentsByAuthor : true } };
   ngOnInit(): void {
     this.container.currentUser="Guest User";
   }
