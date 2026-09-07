@@ -296,16 +296,61 @@ namespace WebApplication1.Adapter
         }
 
         // Saves incoming changes to the server-side store.
-        public Task ProcessSaveRequestAsync(SaveRequest request, CancellationToken cancellationToken)
+        public async Task ProcessSaveRequestAsync(SaveRequest request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
-        }
+        //throw new NotImplementedException();
+        Console.WriteLine("save called");
+        // You can get the document master document 
+        Syncfusion.EJ2.DocumentEditor.WordDocument document = CollaborativeEditingController.GetSourceDocument();
+        CollaborativeEditingHandler handler = new CollaborativeEditingHandler(document);
+        //Get actions from Redis
+        var actions = request.Actions.Select(x => (Syncfusion.EJ2.DocumentEditor.ActionInfo)MapGenericToControlAction(x)).ToList();
+      if (actions.Count > 0)
+      {
+          foreach (var action in actions)
+          {
+              if (!action.IsTransformed)
+              {
+                  CollaborativeEditingHandler.TransformOperation(action, actions);
+              }
+          }
+          //Apply the actions to document 
+          foreach (var action in actions)
+          {
+              handler.UpdateAction(action);
+          }
 
-        // Persists collaboration operations for the active room.
-        public Task SaveOperationsAsync(List<CollaborationAction> actions, string roomName, bool partialSave)
-        {
-            throw new NotImplementedException();
-        }
+          MemoryStream stream = new MemoryStream();
+          //save the updated document in the loaction as per your need. 
+
+          Syncfusion.DocIO.DLS.WordDocument doc = WordDocument.Save(Newtonsoft.Json.JsonConvert.SerializeObject(handler.Document));
+
+          doc.Save(stream, Syncfusion.DocIO.FormatType.Docx);
+
+         // SaveDocument(stream, "Getting Started.docx");
+
+          stream.Close();
+      }
+
+      document.Dispose();
+
+      var actionService = CollaborationServiceContainer.Resolve<IActionService>();
+      await actionService.ClearRecordsAsync(request.RoomName, request.PartialSave);
+  }
+
+  public async Task SaveOperationsAsync(List<CollaborationAction> actions, string roomName, bool partialSave)
+  {
+      var message = new SaveRequest
+      {
+          Actions = actions,
+          PartialSave = partialSave,
+          RoomName = roomName
+      };
+
+      var queue = CollaborationServiceContainer.Resolve<IBackgroundTaskQueue>();
+      await queue.QueueBackgroundWorkItemAsync(message);
+  }
+
 
         // Replays untransformed operations so concurrent edits stay in sync.
         public void TransformOperations(List<CollaborationAction> actions)

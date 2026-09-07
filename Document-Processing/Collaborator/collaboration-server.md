@@ -209,10 +209,10 @@ The interfaces below represent the public API exposed by the Collaboration Serve
 
 | Member | Purpose |
 | --- | --- |
-| `addOperation(action, adapter)` | Run the Lua-script flow: assign version, transform prior ops via `adapter.transformOperations`, persist, and enqueue a partial save when the threshold is reached. |
-| `getPendingOperations(roomName, startIndex, endIndex)` | Fetch stored actions in a range. |
-| `getEffectivePendingVersion(roomName, startIndex)` | Fetch newer-than-`startIndex` actions for a joining client. |
-| `clearRecords(roomName, partialSave)` | Flush actions after save completes. |
+| `addOperation(action, adapter)` | Adds the operation to Redis, assigns a version, transforms prior operations through `adapter.transformOperations`, persists the result, and queues a partial save when the threshold is reached. |
+| `getPendingOperations(roomName, startIndex, endIndex)` | Returns the stored actions in the specified range. |
+| `getEffectivePendingVersion(roomName, startIndex)` | Returns actions newer than `startIndex` for a joining client. |
+| `clearRecords(roomName, partialSave)` | Clears stored actions after the save completes. |
 
 **Configuration**
 
