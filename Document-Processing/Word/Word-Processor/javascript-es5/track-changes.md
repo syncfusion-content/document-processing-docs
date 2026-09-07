@@ -145,9 +145,7 @@ N> 2. For formats other than SFDT (e.g., DOCX), the customData is not preserved,
 
 ## Custom Colors for Track Changes
 
-You can set an array of colors to show track changes such as insertions and deletions in the DOCX editor.  
-Each author is assigned a color in order: the first author gets the first color, the second author gets the next, and so on.  
-If there are more authors than colors, the assignment starts again from the beginning of the array.
+You can set an array of colors to show track changes such as insertions and deletions in the DOCX editor. Each author is assigned a color in order: the first author gets the first color, the second author gets the next, and so on. If there are more authors than colors, the assignment starts again from the beginning of the array.
 
 The following example illustrates how to set the color order for track changes in the DOCX Editor
 
