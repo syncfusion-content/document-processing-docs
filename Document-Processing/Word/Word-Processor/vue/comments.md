@@ -289,7 +289,7 @@ let mentionData =  [
                 { "Name": "Andrew Fuller", "EmailId": "andrew@company.com"}
             ];
 provide('DocumentEditorContainer', [Toolbar]);
-const settings: { commentSettings: { highlightCommentsByAuthor : true } };
+const settings= { commentSettings: { highlightCommentsByAuthor : true } };
 const beforeComment = function (args) {
   if(args.type === "Delete" && container.value.ej2Instances.currentUser !== args.author){
     args.cancel = true;
