@@ -162,7 +162,7 @@ You can also explore the PDF Viewer interactively using the live sample below.
 
 To get started quickly with React PDF Viewer, you can watch this video:
 
-{% youtube "https://www.youtube.com/watch?v=17aW6rOoyWQ" %}
+{% youtube "https://www.youtube.com/watch?v=V_hvDpDvaHA" %}
 
 ## See also
 
