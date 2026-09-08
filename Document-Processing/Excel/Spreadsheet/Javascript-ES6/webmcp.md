@@ -2,7 +2,7 @@
 layout: post
 title: WebMCP Integration in TypeScript Spreadsheet | Syncfusion
 description: WebMCP integration in TypeScript Spreadsheet explains setup, tool registration, configuration, and API reference with code examples.
-platform: spreadsheet
+platform: document-processing
 control: WebMCP
 documentation: ug
 ---
