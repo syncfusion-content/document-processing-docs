@@ -29,8 +29,7 @@ Ensure the following before integrating WebMCP:
 Before you can use WebMCP locally, enable the feature flag and install the browser extension:
 
 1. **Enable WebMCP Flag**
-   - Open `chrome://flags/#enable-webmcp-testing`
-   - Set to **"Enabled"**
+   - Enable WebMCP for testing via `chrome://flags/`
    - Click **"Relaunch"** to restart Chrome
 
 2. **Install WebMCP Extension**
@@ -315,7 +314,7 @@ const spreadsheet = new Spreadsheet({
 - Deploy your application locally (e.g., `http://localhost:3000`)
 - Open your application in the browser
 - Open the WebMCP extension
-- Verify your registered tools appear with your custom prefix (e.g., `myapp_getCellData`)
+- Verify your registered tools appear with your custom prefix (e.g., `gdp_getCellData`)
 - Try a sample prompt specific to your data
 - Test with the Syncfusion Demo - [Syncfusion WebMCP demo](https://npmci.syncfusion.com/development/showcase/react/spreadsheet-editor/gross-pay)
 
@@ -483,7 +482,7 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 | formatCells | Write | Always | Applies formatting (colors, fonts, alignment, borders) to cells |
 | clearFormatting | Write | Always | Removes all formatting from a range |
 | applyConditionalFormatting | Write | Always | Adds conditional formatting rules to a range |
-| autoFit | Write | Always | Auto-sizes column widths or row heights |
+| autoFill | Write | Always | Autofill a target range from a source pattern or series |
 
 ### Data Manipulation Tools
 

@@ -33,7 +33,7 @@ WebMCP is currently available:
 - Experimental status; API and browser behavior may change as the standard evolves
 - Requires secure context (HTTPS or localhost) for development and cross-origin scenarios
 
-For local development, enable WebMCP via `chrome://flags/#enable-webmcp-testing`.
+For local development, enable WebMCP for testing via `chrome://flags/`.
 
 > **Note:** WebMCP is an experimental browser standard. The API and behavior may change as the standard evolves. The Syncfusion Spreadsheet WebMCP integration is a preview feature.
 
@@ -58,7 +58,7 @@ Syncfusion Spreadsheet integration with WebMCP provides significant benefits for
 ### ✅ Key Benefits
 
 - **Universal Tool Access** — AI agents, LLMs, and any MCP-compatible client can discover and invoke spreadsheet operations
-- **Zero Custom Integration** — Inject the WebMcpAdapter module, call `registerWebMcpTools()`, and all tool registration, schema binding, and lifecycle management is automatic
+- **Zero Custom Integration** — Inject the WebMcpAdapter module, call `registerWebMcpTools()`, and all tool registration, schema binding, and life cycle management is automatic
 - **Schema-Validated I/O** — Every tool includes JSON Schema for inputs and outputs, eliminating hallucination and enabling AI clients to validate data reliably
 - **Controlled Execution** — Write operations trigger user confirmation dialogs by default; the `beforeWebMcpToolExecute` event lets applications audit, restrict, or cancel any operation
 - **Multi-Instance Friendly** — Unique prefixes per Spreadsheet prevent tool-name collisions when multiple instances share a page
