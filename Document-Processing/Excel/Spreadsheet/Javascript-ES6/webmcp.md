@@ -314,7 +314,7 @@ const spreadsheet = new Spreadsheet({
 - Deploy your application locally (e.g., `http://localhost:3000`)
 - Open your application in the browser
 - Open the WebMCP extension
-- Verify your registered tools appear with your custom prefix (e.g., `gdp_getCellData`)
+- Verify your registered tools appear with your custom prefix (e.g., `sales_getCellData`)
 - Try a sample prompt specific to your data
 - Test with the Syncfusion Demo - [Syncfusion WebMCP demo](https://npmci.syncfusion.com/development/showcase/react/spreadsheet-editor/gross-pay)
 
