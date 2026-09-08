@@ -267,7 +267,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewe
 
 To get started quickly with React PDF Viewer, you can watch this video:
 
-{% youtube "https://www.youtube.com/watch?v=17aW6rOoyWQ" %}
+{% youtube "https://www.youtube.com/watch?v=V_hvDpDvaHA" %}
 
 {% endtabcontent %}
 
