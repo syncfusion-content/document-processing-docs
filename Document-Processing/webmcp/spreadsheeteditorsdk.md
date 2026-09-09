@@ -60,7 +60,7 @@ Syncfusion Spreadsheet integration with WebMCP provides significant benefits for
 - **Universal Tool Access** — AI agents, LLMs, and any MCP-compatible client can discover and invoke spreadsheet operations
 - **Zero Custom Integration** — Inject the WebMcpAdapter module, call `registerWebMcpTools()`, and all tool registration, schema binding, and life cycle management is automatic
 - **Schema-Validated I/O** — Every tool includes JSON Schema for inputs and outputs, eliminating hallucination and enabling AI clients to validate data reliably
-- **Controlled Execution** — Write operations trigger user confirmation dialogs by default; the `beforeWebMcpToolExecute` event lets applications audit, restrict, or cancel any operation
+- **Controlled Execution** — Write operations can trigger user confirmation dialogs when the `showConfirmationDialog` property is enabled in the `beforeWebMcpToolExecute` event. Applications can use this event to audit, restrict, or cancel any operation
 - **Multi-Instance Friendly** — Unique prefixes per Spreadsheet prevent tool-name collisions when multiple instances share a page
 - **Native Integration** — Write tools participate in Spreadsheet's undo/redo pipeline and clean up automatically on component destruction
 - **Real-Time Feedback** — Tools return immediate structured responses so agents can confirm or chain the next action
