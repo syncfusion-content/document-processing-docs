@@ -9,7 +9,7 @@ documentation: ug
 
 # WebMCP Tools for Spreadsheet Editor SDK
 
-**WebMCP** (Model Context Protocol) brings AI automation capabilities directly into the [Syncfusion® Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk). Instead of AI agents attempting to read the DOM or simulate user clicks, web pages explicitly declare their capabilities through structured tool definitions — giving agents reliable, deterministic ways to interact with applications.
+**WebMCP** (Model Context Protocol) brings AI automation capabilities directly into the Syncfusion® Spreadsheet Editor. Instead of AI agents attempting to read the DOM or simulate user clicks, web pages explicitly declare their capabilities through structured tool definitions — giving agents reliable, deterministic ways to interact with applications.
 
 ## What is WebMCP?
 
