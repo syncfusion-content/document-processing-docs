@@ -1,6 +1,6 @@
 ---
 title: NuGet Packages Required to Convert Word to PDF| Syncfusion
-description: Find answers to common questions about converting Word documents to PDF using using .NET Word library without Microsoft Word or interop dependencies.
+description: Find answers to common questions about converting Word documents to PDF using .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
