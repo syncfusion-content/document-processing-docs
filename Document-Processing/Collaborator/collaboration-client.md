@@ -87,8 +87,8 @@ Applications typically interact with the collaboration framework through two pri
 
 | Field | Type | Purpose |
 |---|---|---|
-| serviceUrl | strin` | URL of the real-time collaboration server. Example : serviceUrl:"ws://localhost:8080", //Node server      ServiceUrl:"http://localhost:62870", //ASP.NET Core/ASP.NET MVC 
-| connectionTyp` | `'signalr' | 'websocket'` | Selects the server transport option. Defaults to 'signalr'. |
+| serviceUrl | string | URL of the real-time collaboration server. Example : serviceUrl:"ws://localhost:8080", //Node server      ServiceUrl:"http://localhost:62870", //ASP.NET Core/ASP.NET MVC 
+| connectionType | `'signalr' | 'websocket'` | Selects the server transport option. Defaults to 'signalr'. |
 | currentUser | string | Display name broadcast to peers when joining the room. |
 | onUserJoined? | (user: UserInfo) => void | Fired when a remote peer enters the same room.|
 | onUserLeft? | (user: UserInfo) => void | Fired when a remote peer leaves the room.|
