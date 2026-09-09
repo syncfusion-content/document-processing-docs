@@ -314,7 +314,7 @@ const spreadsheet = new Spreadsheet({
 - Verify that the registered tools are displayed with your chosen prefix, such as sales_getCellData.
 - Try a sample prompt that matches your data scenario to validate tool execution and response behavior.
 
-Additionally, we have hosted a sample for your reference[Syncfusion WebMCP demo](https://npmci.syncfusion.com/development/showcase/react/spreadsheet-editor/gross-pay).
+Additionally, we have hosted a sample for your reference Syncfusion WebMCP demo.
 
 **Sample Prompts**
 Here are realistic natural language prompts you can test with the WebMCP extension:
