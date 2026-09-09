@@ -17,10 +17,8 @@ WebMCP integrates seamlessly into your TypeScript Spreadsheet application with m
 
 Ensure the following before integrating WebMCP:
 
-- **Syncfusion Spreadsheet component** installed and configured
-- **TypeScript/JavaScript** application environment
-- **Chromium-based browser** (Chrome, Edge, Brave) with WebMCP flag enabled
-- **Basic knowledge** of TypeScript and async/await patterns
+- Syncfusion Spreadsheet component is installed and configured
+- A Chromium-based browser, such as Chrome, Edge, or Brave, has the WebMCP flag enabled
 
 ## Getting Started
 
@@ -316,7 +314,8 @@ const spreadsheet = new Spreadsheet({
 - Open the WebMCP extension
 - Verify your registered tools appear with your custom prefix (e.g., `sales_getCellData`)
 - Try a sample prompt specific to your data
-- Test with the Syncfusion Demo - [Syncfusion WebMCP demo](https://npmci.syncfusion.com/development/showcase/react/spreadsheet-editor/gross-pay)
+
+Additionally, we have hosted a sample for your reference. Kindly check it. [Syncfusion WebMCP demo](https://npmci.syncfusion.com/development/showcase/react/spreadsheet-editor/gross-pay)
 
 **Sample Prompts**
 Here are realistic natural language prompts you can test with the WebMCP extension:
