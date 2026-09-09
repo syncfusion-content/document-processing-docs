@@ -88,12 +88,11 @@ The following example illustrates how to set the color order for track changes i
 
 @code {
     private SfDocumentEditorContainer container;
-
     // Define settings with revision colors
-    private DocumentEditorSettingsModel settings = new DocumentEditorSettingsModel()
+    private DocumentEditorSettingsModel Settings = new DocumentEditorSettingsModel()
     {
-        RevisionSettings = new RevisionSettings()
-        {
+        RevisionSettings = new RevisionSettingsModel() 
+        { 
             RevisionColors = new string[]
             {
                 "#0e76b1",
