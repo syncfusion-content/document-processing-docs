@@ -154,19 +154,19 @@ const client: CollaborationClient = new CollaborationClient(adapter, {
 
 Build and serve the front\-end application so the page is reachable at, for example, http://localhost:4000
 
-### Integrate Collaboration Server
+## Integrate Collaboration Server
 
-#### Step 5 — Install the NuGet packages
+### Step 5 — Install the NuGet packages
 
 In your ASP.NET MVC 5 project, install the MVC Collaboration Server package and the DOCX Editor server-side helper package.
 
 ```powershell
-Install-Package Syncfusion.Collaborator.Server.Mvc
+Install-Package Syncfusion.Collaborator.Server.AspNet.Mvc
 
 Install-Package Syncfusion.EJ2.WordEditor.AspNet.Mvc
 ```
 
-#### Step 6 — Register the Collaboration Server
+### Step 6 — Register the Collaboration Server
 
 Open Global.asax.cs and register the Collaboration Server services during application startup. Configure the Redis connection and select WebSocket as the transport type. For ASP.NET MVC, the WebSocket transport is selected by setting CollaborationConnectionType.WebSocket. The adapter is registered through ServiceCollectionExtensions.RegisterAdapter(...).
 
@@ -364,14 +364,15 @@ namespace WebApplication1.Adapter
 }
 ```
 
-### Step 9 — Add the collaborative editing controller (web service methods)
+### Step 9 — Add the Collaborative Editing Controller (Web Service Methods)
 
-CollaborativeEditingController is the HTTP bridge between the client control and the Common Collaborator. Every EJ2 content editor component that supports collaboration (DOCX Editor, PDF Viewer, Spreadsheet) exposes the same three web service methods on its collaboration controller. Each method is required:
-|Web service method|Why it is needed|
-|---|---|
-|ImportFile|Loads the source document and applies any pending collaboration actions before sending the latest document state to a newly connected client. Returns the document content and current server version.|
-|UpdateAction|Receives editing actions from connected clients, processes operational transformation, persists the action, and broadcasts the updated action to other participants.|
-|GetActionsFromServer|Retrieves collaboration actions created after the client's last synchronized version so the client can catch up with the latest document state.|
+`CollaborativeEditingController` acts as the HTTP bridge between the client control and the Common Collaborator. Every EJ2 content editor component that supports collaboration (DOCX Editor, PDF Viewer, and Spreadsheet) exposes the same three web service methods through its collaboration controller. Each method serves a specific purpose:
+
+| Web Service Method | Purpose |
+| --- | --- |
+| ImportFile | Loads the source document, applies any pending collaboration actions, and returns the latest document state and server version to a newly connected client. |
+| UpdateAction | Receives editing actions from connected clients, performs operational transformation, persists the action, and broadcasts the updated action to other participants. |
+| GetActionsFromServer | Retrieves collaboration actions created after the client's last synchronized version, allowing the client to catch up with the latest document state. |
 
 
 ```C#

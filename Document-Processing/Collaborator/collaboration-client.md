@@ -56,48 +56,52 @@ The same client can be used with different Collaboration Server implementations.
 
 ## Installation
 ```bash
-npm install @syncfusion/ej2\-collaborator 
+npm install @syncfusion/ej2-collaborator 
 ```
 
 ## Public API
 
-Applications typically interact with two public APIs: the `ICollaborationProvider` interface and the `CollaborationClient` class.
+Applications typically interact with the collaboration framework through two primary APIs:
 
-### `ICollaborationProvider` — adapter contract
+`ICollaborationProvider` - Defines the adapter contract between the control and the collaboration framework.
+`CollaborationClient` - Manages session connectivity, synchronization, and communication with the collaboration server.
+
+### ICollaborationProvider — adapter contract
 
 
 | Member | Purpose |
 |---|---|
-| `applyRemoteAction(action: string, data: ICollaborationActionData): void` | Apply a remote action received from the collaboration server to the local editor. The action payload is exposed under `data.payload`.|
+| applyRemoteAction(action: string, data: ICollaborationActionData): void | Apply a remote action received from the collaboration server to the local editor. The action payload is exposed under data.payload.|
 
 ### `CollaborationClient` — client API surface
 
 
 | Member | Purpose |
 |---|---|
-| `constructor(adapter: ICollaborationProvider, options: CollaborationClientOptions)` | Initializes the Collaboration Client with an adapter and connection settings. |
-| `joinRoomAsync(roomName: string): Promise<void>` | Connects the transport and sends a `JoinGroup` for `roomName`. Re-emits the server's `connectionId` / `addUser` / `removeUser` / `action` events. |
+| constructor(adapter: ICollaborationProvider, options: CollaborationClientOptions) | Initializes the Collaboration Client with an adapter and connection settings. |
+| joinRoomAsync(roomName: string): Promise<void> | Connects the transport and sends a JoinGroup for roomName. Re-emits the server's connectionId / addUser / removeUser / action events. |
 
 
-#### `CollaborationClientOptions` — constructor argument
+#### CollaborationClientOptions — constructor argument
 
 
 | Field | Type | Purpose |
 |---|---|---|
-| `serviceUrl` | `string` | URL of the real-time collaboration server. Example : serviceUrl:"ws://localhost:8080", //Node server      ServiceUrl:"http://localhost:62870", //ASP.NET Core/ASP.NET MVC 
-| `connectionType` | `'signalr' | 'websocket'` | Selects the server transport option. Defaults to `'signalr'`. |
-| `currentUser` | `string` | Display name broadcast to peers when joining the room. |
-| `onUserJoined?` | `(user: UserInfo) => void` | Fired when a remote peer enters the same room.|
-| `onUserLeft?` | `(user: UserInfo) => void` | Fired when a remote peer leaves the room.|
+| serviceUrl | strin` | URL of the real-time collaboration server. Example : serviceUrl:"ws://localhost:8080", //Node server      ServiceUrl:"http://localhost:62870", //ASP.NET Core/ASP.NET MVC 
+| connectionTyp` | `'signalr' | 'websocket'` | Selects the server transport option. Defaults to 'signalr'. |
+| currentUser | string | Display name broadcast to peers when joining the room. |
+| onUserJoined? | (user: UserInfo) => void | Fired when a remote peer enters the same room.|
+| onUserLeft? | (user: UserInfo) => void | Fired when a remote peer leaves the room.|
 
 ## Configuration
 
 The Collaboration Client requires the following configuration:
-|Option|Description|
+
+| Option | Description |
 |---|---|
-|serviceUrl|URL of the Collaboration Server endpoint|
-|connectionType|Transport type (signalr or websocket)|
-|currentUser|Display name of the current user|
+| serviceUrl | URL of the Collaboration Server endpoint |
+| connectionType | Transport type (`signalr` or `websocket`) |
+| currentUser | Display name of the current user |
 
 ```ts
 const client = new CollaborationClient(adapter, {

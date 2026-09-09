@@ -399,12 +399,14 @@ public class DocumentEditorCollaborationAdapter : ICollaborationAdapter
 
 ### Step 9 — Add the collaborative editing controller (web service methods)
 
-CollaborativeEditingController is the HTTP bridge between the client control and the Common Collaborator. Every EJ2 content editor component that supports collaboration (DOCX Editor, PDF Viewer, Spreadsheet) exposes the same three web service methods on its collaboration controller. Each method is required:
-|Web service method |Why it is needed|
-|---|---|
-|ImportFile|Loads the source document and applies any pending collaboration actions before sending the latest document state to a newly connected client. Returns the document content and current server version.|
-|UpdateAction|Receives editing actions from connected clients, processes operational transformation, persists the action, and broadcasts the updated action to other participants.|
-|GetActionsFromServer|Retrieves collaboration actions created after the client's last synchronized version so the client can catch up with the latest document state.|
+CollaborativeEditingController is the HTTP bridge between the client control and the Common Collaborator. Every EJ2 content editor component that supports collaboration (DOCX Editor, PDF Viewer, Spreadsheet) exposes the same three web service methods on its collaboration controller. Each method is required:
+
+| Web service method | Why it is needed |
+| --- | --- |
+| ImportFile | Loads the source document and applies any pending collaboration actions before sending the latest document state to a newly connected client. Returns the document content and current server version. |
+| UpdateAction | Receives editing actions from connected clients, processes operational transformation, persists the action, and broadcasts the updated action to other participants. |
+| GetActionsFromServer | Retrieves collaboration actions created after the client's last synchronized version so the client can catch up with the latest document state. |
+
 
 ```C#
 
@@ -591,7 +593,7 @@ public class CollaborativeEditingController : ControllerBase
     }
 }
 ```
-## Step 10 - Run the Application
+### Step 10 - Run the Application
 
 After completing the client and server setup:
 
@@ -599,15 +601,11 @@ After completing the client and server setup:
 2. Run the ASP.NET Core application using `dotnet run`
 3. Run the client application
 4. Open the application in multiple browser windows or tabs.
-Example:
-http://localhost:4000/?name=User1 and 
-http://localhost:4000/?name=User2
-
-5. Open the same document and make changes in one window.
+5. Open the same document and make changes in one window and it will be synced to other users.
 
 ### Result
 
 - Changes are synchronized automatically across all connected users.
 - User join and leave events are reflected in real time.
 - Editing operations are stored in Redis and processed by the Collaboration Server.
-- Document changes are automatically saved when the configured `SaveThreshold` is reached.
+- Document changes are automatically saved when the configured `SaveThreshold` is reached or when all users disconnect.
