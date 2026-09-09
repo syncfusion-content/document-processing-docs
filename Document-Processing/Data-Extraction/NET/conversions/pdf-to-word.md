@@ -68,7 +68,7 @@ N> If you want to convert an image instead of a PDF, replace the input stream wi
 
 ## Convert PDF or Image to HTML Document 
 
-TTo convert a PDF document or image into HTML output using the **ExtractDataAsHtmlDocument** method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class, refer to the following code example:
+To convert a PDF document or image into HTML output using the **ExtractDataAsHtml** method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class, refer to the following code example:
 
 {% tabs %} 
 
@@ -83,8 +83,8 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
   DataExtractor extractor = new DataExtractor(); 
   //Extract data as HTML. 
   string  htmlContent = extractor.ExtractDataAsHtml(stream); 
- //Save the extracted HTML data into an output file. 
- File.WriteAllText("Output.html", htmlContent); 
+  //Save the extracted HTML data into an output file. 
+  File.WriteAllText("Output.html", htmlContent); 
 } 
 
 {% endhighlight %}
