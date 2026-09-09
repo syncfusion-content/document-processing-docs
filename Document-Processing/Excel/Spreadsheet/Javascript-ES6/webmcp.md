@@ -438,16 +438,15 @@ spreadsheet.beforeWebMcpToolExecute = (args: BeforeWebMcpToolExecuteEventArgs) =
     // Example: Prevent writing to specific ranges
     if (toolName === 'editCell' && toolArgs.address === 'A1') {
         args.cancel = true; // Cancel this operation
-        alert('Cannot modify cell A1');
     }
 };
 ```
 
 ## Tool Reference
 
-WebMCP tools are organized by category. The tables below provide an overview of all 28 available tools. For complete input/output schemas, call `getWebMcpTools()` programmatically or consult the implementation specification.
+WebMCP tools are organized by category. The tables below provide an overview of all available tools. For complete input/output schemas, call `getWebMcpTools()` programmatically.
 
-> **Note:** Write operations trigger user confirmation dialogs by default; the `beforeWebMcpToolExecute` event lets applications audit, restrict, or cancel any operation and read tools execute immediately. In the tables below, a condition "Always" indicates a tool that is enabled by default, regardless of component configuration.
+> **Note:** Write operations can trigger user confirmation dialogs when the `showConfirmationDialog` property is enabled in the `beforeWebMcpToolExecute` event. Applications can use this event to audit, restrict, or cancel any operation, whereas read operations execute immediately. In the tables below, the condition "Always" indicates that a tool is enabled by default, regardless of the component configuration.
 
 ### Core Data Tools
 
