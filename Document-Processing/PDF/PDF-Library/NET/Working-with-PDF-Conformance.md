@@ -583,7 +583,7 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/PDF%20Conformance/Creating-the-new-PDFA2U-document).
 
-## PDF/A-3b conformance
+## PDF/A-3b conformance with attachments
 
 The PDF/A-3b conformance supports external files as attachments to the PDF document. You can attach any document format such as Excel, Word, HTML, CAD, or XML files.
 
@@ -699,6 +699,93 @@ document.Close(True)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/PDF%20Conformance/Creating-the-new-PDFA3B-document).
+
+## PDF/A-3b conformance with ZUGFeRD invoice
+
+You can create a PDF/A-3b document with an embedded ZUGFeRD XML invoice by specifying the conformance level as `Pdf_A3B` through the [PdfConformanceLevel](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfConformanceLevel.html) enum and adding the XML file as a `PdfAttachment`, as follows.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/PDF%20Conformance/Creating-PDFA3B-with-ZUGFeRD-invoice/.NET/Creating-PDFA3B-with-ZUGFeRD-invoice/Program.cs" %}
+
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf;
+
+//Create ZUGFeRD invoice PDF document
+PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A3B);
+//Set ZUGFeRD conformance level 
+document.ZugferdConformanceLevel = ZugferdConformanceLevel.Basic;
+
+//Creates an attachment
+FileStream invoiceStream = new FileStream("ZUGFeRD - invoice.xml", FileMode.Open, FileAccess.Read);
+PdfAttachment attachment = new PdfAttachment("ZUGFeRD-invoice.xml", invoiceStream);
+attachment.Relationship = PdfAttachmentRelationship.Alternative;
+attachment.ModificationDate = DateTime.Now;
+attachment.Description = "ZUGFeRD-invoice";
+attachment.MimeType = "application/xml";
+//Add attachment to PDF document
+document.Attachments.Add(attachment);
+
+//Save the document
+document.Save("Output.pdf");
+//Close the document
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf;
+
+//Create ZUGFeRD invoice PDF document
+PdfDocument document = new PdfDocument(PdfConformanceLevel.Pdf_A3B);
+//Set ZUGFeRD conformance level 
+document.ZugferdConformanceLevel = ZugferdConformanceLevel.Basic;
+
+//Creates an attachment
+FileStream invoiceStream = new FileStream("ZUGFeRD - invoice.xml", FileMode.Open, FileAccess.Read);
+PdfAttachment attachment = new PdfAttachment("ZUGFeRD-invoice.xml", invoiceStream);
+attachment.Relationship = PdfAttachmentRelationship.Alternative;
+attachment.ModificationDate = DateTime.Now;
+attachment.Description = "ZUGFeRD-invoice";
+attachment.MimeType = "application/xml";
+//Add attachment to PDF document
+document.Attachments.Add(attachment);
+
+//Save and close the document
+document.Save("Zugferd.pdf");
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf
+
+'Create ZUGFeRD invoice PDF document
+Dim document As PdfDocument = New PdfDocument(PdfConformanceLevel.Pdf_A3B)
+'Set ZUGFeRD conformance level 
+document.ZugferdConformanceLevel = ZugferdConformanceLevel.Basic
+
+'Creates an attachment
+Dim invoiceStream As FileStream = New FileStream("ZUGFeRD - invoice.xml", FileMode.Open, FileAccess.Read)
+Dim attachment As PdfAttachment = New PdfAttachment("ZUGFeRD-invoice.xml", invoiceStream)
+'Add attachment to PDF document.
+document.Attachments.Add(attachment)
+
+'Save and close the document.
+document.Save("Zugferd.pdf")
+document.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/ZUGFeRD/Create-ZUGFeRD-compliment-PDF-invoice).
+
+N> To learn more about generating ZUGFeRD-compliant PDF/A-3 invoices and embedding invoice XML data, see [ZUGFeRD Invoice in .NET PDF Library](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-zugferd-invoice).
 
 ## PDF/A-3a conformance
 
