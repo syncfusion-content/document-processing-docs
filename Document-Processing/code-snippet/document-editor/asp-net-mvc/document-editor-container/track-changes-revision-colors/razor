@@ -1,4 +1,22 @@
-@Html.EJS().DocumentEditorContainer("container").EnableTrackChanges(true).DocumentEditorSettings("settings").Render()
-<script>
-    var settings = { revisionSettings: { revisionColors: [ '#0e76b1', '#bb00ff', '#c14f16' ] } };
-</script>
+<div class="text-center">
+    <!-- DocumentEditorContainer -->
+    @Html.EJS().DocumentEditorContainer("container")
+        .EnableTrackChanges(true)
+        .EnableToolbar(true)
+        .Height("590px")
+        .Render()
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get the container instance
+            var container = document.getElementById("container").ej2_instances[0];
+
+            // Apply revision colors dynamically
+            container.documentEditor.revisionSettings.revisionColors = [
+                '#0000ff', '#bb00ff', '#c14f16'
+            ];
+        });
+    </script>
+}
