@@ -251,12 +251,44 @@ You can set an array of colors to show track changes such as insertions and dele
 
 The following example illustrates how to set the color order for track changes in the DOCX Editor
 ```typescript
-ngOnInit() {
-    this.container.documentEditorSettings.revisionSettings.revisionColors = [
-      '#0e76b1',
-      '#bb00ff',
-      '#c14f16'
-    ];
+import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import {
+  DocumentEditorContainerComponent,
+  DocumentEditorContainerModule,
+  ToolbarService
+} from '@syncfusion/ej2-angular-documenteditor';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [DocumentEditorContainerModule],
+  providers: [ToolbarService],
+  template: `
+    <ejs-documenteditorcontainer
+      #container
+      serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
+      height="600px"
+      [enableToolbar]="true">
+    </ejs-documenteditorcontainer>
+  `
+})
+export class App implements AfterViewInit {
+
+  @ViewChild('container')
+  public container!: DocumentEditorContainerComponent;
+
+  ngAfterViewInit(): void {
+    if(this.container!=null && this.container.documentEditorSettings != null && 
+      this.container.documentEditorSettings.revisionSettings != null) {
+        this.container.documentEditorSettings.revisionSettings.revisionColors = [
+          '#047a18',
+          '#bb00ff',
+          '#c14f16'
+        ];
+    }
+
+    this.container.documentEditor.resize();
+  }
 }
 ```
   
