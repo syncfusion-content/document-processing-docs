@@ -312,8 +312,43 @@ You can set an array of colors to show track changes such as insertions and dele
 The following example illustrates how to set the color order for track changes in the DOCX Editor
 
 ```typescript
-  let container = useRef<DocumentEditorContainerComponent>(null);
-  container.documentEditorSettings.revisionSettings.revisionColors = [ '#0e76b1', '#bb00ff',  '#c14f16'];
+  import { useRef, useEffect } from 'react';
+import {
+  DocumentEditorContainerComponent,
+  Toolbar,
+  Inject
+} from '@syncfusion/ej2-react-documenteditor';
+
+function App() {
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    if (containerRef.current) {
+      // Access the underlying DocumentEditor instance
+      const editor = containerRef.current.documentEditorSettings;
+
+      // Update revision colors dynamically
+      editor.revisionSettings.revisionColors = [
+        '#0000ff',
+        '#bb00ff',
+        '#c14f16'
+      ];
+    }
+  }, []);
+
+  return (
+    <DocumentEditorContainerComponent
+      ref={containerRef}
+      height={'590px'}
+      enableToolbar={true}
+      serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
+    >
+      <Inject services={[Toolbar]} />
+    </DocumentEditorContainerComponent>
+  );
+}
+
+export default App;
 ```
 
 ## Filter Changes by User
