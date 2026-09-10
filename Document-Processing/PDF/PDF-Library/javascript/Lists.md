@@ -147,6 +147,61 @@ document.destroy();
 
 This example demonstrates how to change the marker style of an unordered list in a PDF document using the [PdfUnorderedList](https://ej2.syncfusion.com/documentation/api/pdf/pdfunorderedlist) class. The marker defines the symbol that appears before each list item. You can choose from the predefined marker styles listed below to visually distinguish different list types or emphasize specific content.
 
+### Set image marker
+
+You can use an image as the marker for an unordered list by creating a `PdfImageMarker` with a `PdfBitmap` and passing it to the `setMarker` method of `PdfUnorderedList`.
+
+The following code example shows how to create a PDF document, add an unordered list, set an image as the list marker, and save the document.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+
+import { PdfBitmap, PdfDocument, PdfImageMarker, PdfListItemCollection, PdfUnorderedList } from '@syncfusion/ej2-pdf';
+
+// Create a new PDF document.
+const document: PdfDocument = new PdfDocument();
+// Add a new page to the document.
+const page = document.addPage();
+// Create the items for the unordered list.
+const items: PdfListItemCollection = new PdfListItemCollection([ 'Essential PDF', 'Essential DocIO', 'Essential XlsIO']);
+// Create an unordered list.
+const unorderedList: PdfUnorderedList = new PdfUnorderedList(items);
+// Create an image marker using the loaded image.
+const imageMarker: PdfImageMarker = {image: new PdfBitmap(imageData)};
+// Set the image as the marker for the unordered list.
+unorderedList.setMarker(imageMarker);
+// Draw the unordered list on the PDF page.
+unorderedList.draw(page, { x: 10,y: 20, width: page.graphics.clientSize.width - 20, height: page.graphics.clientSize.height - 40});
+// Save the PDF document.
+document.save('SetImageMarker.pdf');
+// Destroy the document and release its resources.
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Create a new PDF document.
+const document = new ej.pdf.PdfDocument();
+// Add a new page to the document.
+const page = document.addPage();
+// Create the items for the unordered list.
+const items = new ej.pdf.PdfListItemCollection([ 'Essential PDF', 'Essential DocIO', 'Essential XlsIO']);
+// Create an unordered list.
+const unorderedList = new ej.pdf.PdfUnorderedList(items);
+// Create an image marker using the loaded image.
+const imageMarker = { image: new ej.pdf.PdfBitmap(imageData)};
+// Set the image as the marker for the unordered list.
+unorderedList.setMarker(imageMarker);
+// Draw the unordered list on the PDF page.
+unorderedList.draw(page, {x: 10, y: 20, width: page.graphics.clientSize.width - 20, height: page.graphics.clientSize.height - 40 });
+// Save the PDF document.
+document.save('SetImageMarker.pdf');
+// Destroy the document and release its resources.
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
 ### PdfUnorderedListStyle values
 
 | Value | Rendered marker |
