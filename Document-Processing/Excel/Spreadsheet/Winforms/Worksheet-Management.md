@@ -46,9 +46,23 @@ spreadsheet.UnhideSheet("Sheet2");
 {% endhighlight %}
 {% endtabs %}
 
-## Hide or Unhide Sheet Tabs
+## Rename a Sheet programmatically
 
-The Spreadsheet provides support to hide and unhide all the worksheet tabs in the workbook programmatically by using the [ShowSheetTabs](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html#Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_ShowSheetTabs) property. This property can be configured programmatically during control initialization or updated dynamically at runtime. The default value is `true`, which displays all worksheet tabs.
+The Spreadsheet allows you to rename a worksheet in the workbook programmatically by using the [RenameSheet](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html#Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_RenameSheet_System_String_System_String_) method.
+
+{% tabs %}
+	
+{% highlight c# %}
+
+//To Rename a sheet programmatically
+spreadsheet.RenameSheet("ExistingSheetName", "NewSheetName");
+
+{% endhighlight %}
+{% endtabs %}
+
+## Show or Hide Sheet Tabs
+
+The Spreadsheet provides support to show and hide all the worksheet tabs in the workbook programmatically by using the [ShowSheetTabs](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html#Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_ShowSheetTabs) property. This property can be configured programmatically during control initialization or updated dynamically at runtime. The default value is `true`, which displays all worksheet tabs.
 
 The `ShowSheetTabs` property controls the visibility of the sheet tab bar at the bottom of the Spreadsheet. When set to `false`, the entire sheet tab bar is hidden, preventing users from switching between sheets through the tab interface. You can toggle this setting based on your application requirements.
 
@@ -81,20 +95,6 @@ spreadsheet.ShowSheetTabs = true;
 {% endtabs %}
 
 ![Show Sheet Tabs](images/windowsforms-spreadsheet-show-sheet-tabs.png)
-
-## Rename a Sheet programmatically
-
-The Spreadsheet allows you to rename a worksheet in the workbook programmatically by using the [RenameSheet](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html#Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_RenameSheet_System_String_System_String_) method.
-
-{% tabs %}
-	
-{% highlight c# %}
-
-//To Rename a sheet programmatically
-spreadsheet.RenameSheet("ExistingSheetName", "NewSheetName");
-
-{% endhighlight %}
-{% endtabs %}
 
 ## Protection
 
