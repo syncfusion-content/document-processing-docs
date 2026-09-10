@@ -30,7 +30,7 @@ npm install @syncfusion/ej2-collaborator
 The control\-specific translator on the client side. It implements ICollaborationProvider for the EJ2 PDF Viewer
 
 ```ts
-import { PdfViewer } from '"@syncfusion/ej2-pdfviewer"';
+import { PdfViewer } from '@syncfusion/ej2-pdfviewer';
 import { CollaborativeEditingHandler } from '../collaboration/collaborative-editing-handler';
 import { ICollaborationProvider, ICollaborationActionData } from '@syncfusion/ej2-collaborator';
 
@@ -575,15 +575,17 @@ const {
 module.exports = PdfViewerAdapter;
 ```
 
-## Step 9 — Add the collaborative editing controller (web service methods)
+### Step 8 — Add the Collaborative Editing Controller (Web Service Methods)
 
-The Node.js server exposes built\-in REST routes under /api/collaboration/\*, but most consumer apps also add their own surface to bridge their editor's native action shape with the shared CollaborationAction envelope. Every EJ2 content editor component that supports collaboration (Document Editor, PDF Viewer, Spreadsheet) exposes the same three web service methods on its collaboration controller. Each method is required:
-|**Web service method**|**Why it is needed**|
-|:---|:---|
-|ImportFile|Loads the source document and applies any pending collaboration actions before sending the latest document state to a newly connected client. Returns the document content and current server version.|
-|UpdateAction|Receives editing actions from connected clients, processes operational transformation, persists the action, and broadcasts the updated action to other participants.|
-|GetActionsFromServer|Retrieves collaboration actions created after the client's last synchronized version so the client can catch up with the latest document state.|
+The collaboration controller provides the web service endpoints required by the PDF Viewer to participate in a collaborative session. These endpoints load documents, process collaboration actions, and retrieve updates from the server.
 
+The following three web service methods are required:
+
+| Web Service Method | Purpose |
+| --- | --- |
+| ImportFile | Loads the source document, applies any pending collaboration actions, and returns the latest document state and server version to a newly connected client. |
+| UpdateAction | Receives editing actions from connected clients, performs operational transformation, persists the action, and broadcasts the updated action to other participants. |
+| GetActionsFromServer | Retrieves collaboration actions created after the client's last synchronized version, allowing the client to catch up with the latest document state. |
 
 ```ts
 // controllers/collaborative\-editing\-controller.js
@@ -789,7 +791,7 @@ module.exports = { registerCollaborativeEditingRoutes };
 
 ```
 
-### Step 10 — Run the application
+### Step 9 — Run the application
 
 After completing the client and server setup:
 

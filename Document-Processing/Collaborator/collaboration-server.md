@@ -15,11 +15,13 @@ The Collaboration Server is the back\-end component of the Collaborator framewor
 The same common collaborator framework is shared across all supported server platforms, allowing the collaboration infrastructure to be reused across EJ2 components such as DOCX Editor, PDF Viewer, and Spreadsheet.
 
 ## Packages
-|Package|Description|
-|---|---|
-|Syncfusion.Collaborator.Server.AspNet.Core|Collaboration server for ASP.NET Core|
-|Syncfusion.Collaborator.Server.AspNet.Mvc|Collaboration server for ASP.NET MVC|
-|ej2\-collaborator\-server|Collaboration server for Node.js|
+
+| Package | Description |
+| --- | --- |
+| Syncfusion.Collaborator.Server.AspNet.Core | Collaboration server for ASP.NET Core |
+| Syncfusion.Collaborator.Server.AspNet.Mvc | Collaboration server for ASP.NET MVC |
+| ej2-collaborator-server | Collaboration server for Node.js |
+
 
 **Note**: The Node.js Collaboration Server currently supports PDF Viewer collaborative editing only. DOCX Editor and Spreadsheet require the ASP.NET\-based web service implementation for document processing, operation transformation, and save operations.
 
@@ -63,38 +65,38 @@ dotnet add package Syncfusion.Collaborator.Server.AspNet.Core
 
 The interfaces below represent the public API exposed by the Collaboration Server.
 
-### `ICollaborationAdapter` — adapter contract
+### ICollaborationAdapter — adapter contract
 
 | Member | Purpose |
 |---|---|
-| `MapControlToGenericAction(object controlAction)` | Convert a control-specific action into a CollaborationAction. |
-| `MapGenericToControlAction(CollaborationAction action)` | Convert a CollaborationAction into a control-specific action. |
-| `TransformOperations(List<CollaborationAction> actions)` | Run your control's OT over a batch of actions |
-| `SaveOperationsAsync(actions, roomName, partialSave)` | Queues pending actions for document save processing. |
-| `ProcessSaveRequestAsync(SaveRequest, cancellationToken)` | Processes the queued save request and persists the document. |
+| MapControlToGenericAction(object controlAction) | Convert a control-specific action into a CollaborationAction. |
+| MapGenericToControlAction(CollaborationAction action) | Convert a CollaborationAction into a control-specific action. |
+| TransformOperations(List<CollaborationAction> actions) | Run your control's OT over a batch of actions |
+| SaveOperationsAsync(actions, roomName, partialSave) | Queues pending actions for document save processing. |
+| ProcessSaveRequestAsync(SaveRequest, cancellationToken) | Processes the queued save request and persists the document. |
 
-### `IActionService` — common service API
+### IActionService — common service API
 
 | Method | Purpose |
 |---|---|
-| `AddOperationAsync(action, adapter)` | Persist action + return transformed version |
-| `GetPendingOperationsAsync(room, from, to)` | Fetch stored actions in a range |
-| `GetEffectivePendingVersionAsync(room, version)` | Fetch newer-than-version actions for a joining client |
-| `ClearRecordsAsync(roomName, partialSave)` | Flush after save completes |
+| AddOperationAsync(action, adapter) | Persist action + return transformed version |
+| GetPendingOperationsAsync(room, from, to) | Fetch stored actions in a range |
+| GetEffectivePendingVersionAsync(room, version) | Fetch newer-than-version actions for a joining client |
+| ClearRecordsAsync(roomName, partialSave) | Flush after save completes |
 
-### `IActiveTransport` (common, transport-agnostic broadcast)
+### IActiveTransport (common, transport-agnostic broadcast)
 
 | Member | Purpose |
 |---|---|
-| `SendToGroupAsync(roomName, eventName, payload)` | Broadcast to every client in a room. |
+| SendToGroupAsync(roomName, eventName, payload) | Broadcast to every client in a room. |
 
-### `CollaborationOptions` (registration configuration)
+### CollaborationOptions (registration configuration)
 
 | Property | Default | Purpose |
 |---|---|---|
-| `ConnectionString` | `localhost:6379` | Redis connection string used for storage and pub/sub. |
-| `ConnectionType` | `CollaborationConnectionType.SignalR` | ConnectionType is a single enum choice — set it to SignalR or WebSocket. |
-| `SaveThreshold` | 100 | The save threshold (in actions) after which a pending save is flushed to the document. |
+| ConnectionString | localhost:6379 | Redis connection string used for storage and pub/sub. |
+| ConnectionType | CollaborationConnectionType.SignalR | ConnectionType is a single enum choice — set it to SignalR or WebSocket. |
+| SaveThreshold | 100 | The save threshold (in actions) after which a pending save is flushed to the document. |
 
 **Configuration**
 
@@ -186,33 +188,33 @@ The Node.js Collaboration Server supports **WebSocket** communication for real-t
 
 The interfaces below represent the public API exposed by the Collaboration Server.
 
-### `ICollaborationAdapter` — adapter contract
+### ICollaborationAdapter — adapter contract
 
 | Member | Purpose |
 | --- | --- |
-| `mapControlToGenericAction(controlAction)` | Pack a control action into the common `CollaborationAction`. |
-| `mapGenericToControlAction(collaborationAction)` | Unpack a common `CollaborationAction` into the control action shape. |
-| `transformOperations(actions)` | Run your control's OT over a batch of actions. Returns the transformed array. |
-| `processSaveRequestAsync(request)` | Runs the actual save (called by `DocumentSaveWorker`). |
+| mapControlToGenericAction(controlAction) | Pack a control action into the common CollaborationAction. |
+| mapGenericToControlAction(collaborationAction) | Unpack a common CollaborationAction into the control action shape. |
+| transformOperations(actions) | Run your control's OT over a batch of actions. Returns the transformed array. |
+| processSaveRequestAsync(request) | Runs the actual save (called by DocumentSaveWorker). |
 
-### `CollaborationServer` (the package entry point)
-
-| Member | Purpose |
-| --- | --- |
-| `new CollaborationServer({ port, redis, adapter, saveThreshold? })` | Construct the server. The `port` can be overridden by `process.env.PORT`. |
-| `start()` | Start the HTTP + WebSocket server, mount REST routes, and run the background save worker. |
-| `app` | The underlying `express.Express` instance — attach product-specific routes (e.g. `server.app.get('/api/test', ...)`). |
-| `actionService` | The `ActionService` instance wired for you; useful when mounting custom Edit-Control routes. |
-
-
-### `ActionService`
+### CollaborationServer (the package entry point)
 
 | Member | Purpose |
 | --- | --- |
-| `addOperation(action, adapter)` | Adds the operation to Redis, assigns a version, transforms prior operations through `adapter.transformOperations`, persists the result, and queues a partial save when the threshold is reached. |
-| `getPendingOperations(roomName, startIndex, endIndex)` | Returns the stored actions in the specified range. |
-| `getEffectivePendingVersion(roomName, startIndex)` | Returns actions newer than `startIndex` for a joining client. |
-| `clearRecords(roomName, partialSave)` | Clears stored actions after the save completes. |
+| new CollaborationServer({ port, redis, adapter, saveThreshold? }) | Construct the server. The port can be overridden by process.env.PORT. |
+| start() | Start the HTTP + WebSocket server, mount REST routes, and run the background save worker. |
+| app | The underlying express.Express instance — attach product-specific routes (e.g. server.app.get('/api/test', ...)). |
+| actionService | The ActionService instance wired for you; useful when mounting custom Edit-Control routes. |
+
+
+### ActionService
+
+| Member | Purpose |
+| --- | --- |
+| addOperation(action, adapter) | Adds the operation to Redis, assigns a version, transforms prior operations through adapter.transformOperations, persists the result, and queues a partial save when the threshold is reached. |
+| getPendingOperations(roomName, startIndex, endIndex) | Returns the stored actions in the specified range. |
+| getEffectivePendingVersion(roomName, startIndex) | Returns actions newer than startIndex for a joining client. |
+| clearRecords(roomName, partialSave) | Clears stored actions after the save completes. |
 
 **Configuration**
 
