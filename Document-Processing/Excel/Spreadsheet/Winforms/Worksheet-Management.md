@@ -66,21 +66,6 @@ The Spreadsheet provides support to show and hide all the worksheet tabs in the 
 
 The `ShowSheetTabs` property controls the visibility of the sheet tab bar at the bottom of the Spreadsheet. When set to `false`, the entire sheet tab bar is hidden, preventing users from switching between sheets through the tab interface. You can toggle this setting based on your application requirements.
 
-### Hide Sheet Tabs
-
-To hide all the worksheet tabs in the workbook, set the [ShowSheetTabs](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html#Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_ShowSheetTabs) property to `false`.
-
-{% tabs %}
-{% highlight c# %}
-
-//Hide Sheet Tabs
-spreadsheet.ShowSheetTabs = false;
-
-{% endhighlight %}
-{% endtabs %}
-
-![Hide Sheet Tabs](images/windowsforms-spreadsheet-hide-sheet-tabs.png)
-
 ### Show Sheet Tabs
 
 To display all the worksheet tabs in the workbook, set the [ShowSheetTabs](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html#Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_ShowSheetTabs) property to `true`.
@@ -95,6 +80,21 @@ spreadsheet.ShowSheetTabs = true;
 {% endtabs %}
 
 ![Show Sheet Tabs](images/windowsforms-spreadsheet-show-sheet-tabs.png)
+
+### Hide Sheet Tabs
+
+To hide all the worksheet tabs in the workbook, set the [ShowSheetTabs](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html#Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_ShowSheetTabs) property to `false`.
+
+{% tabs %}
+{% highlight c# %}
+
+//Hide Sheet Tabs
+spreadsheet.ShowSheetTabs = false;
+
+{% endhighlight %}
+{% endtabs %}
+
+![Hide Sheet Tabs](images/windowsforms-spreadsheet-hide-sheet-tabs.png)
 
 ## Protection
 
