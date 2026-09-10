@@ -1,6 +1,6 @@
 ---
 title: NuGet Packages Required to Convert Word to Image | Syncfusion
-description: Describe the NuGet packages required for Word-to-image conversion using the Syncfusion .NET Word library
+description: Explain the NuGet packages required for Word-to-image conversion using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
@@ -168,8 +168,8 @@ The following table illustrates the native assets NuGet packages and their appli
   <tbody>
     <tr>
       <td>
-        {{'[SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)'| markdownify }}<br/>
-        {{'[HarfBuzzSharp.NativeAssets.Linux v8.3.1.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.1.2)'| markdownify }}
+        {{'[SkiaSharp.NativeAssets.Linux v4.150.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/4.150.1)'| markdownify }}<br/>
+        {{'[HarfBuzzSharp.NativeAssets.Linux v14.2.1.1](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/14.2.1.1)'| markdownify }}
       </td>
       <td>
         <ul>
@@ -181,7 +181,7 @@ The following table illustrates the native assets NuGet packages and their appli
     </tr>
     <tr>
       <td>
-        {{'[SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1)'| markdownify }}
+        {{'[SkiaSharp.NativeAssets.Linux.NoDependencies v4.150.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/4.150.1)'| markdownify }}
       </td>
       <td>
         <ul>

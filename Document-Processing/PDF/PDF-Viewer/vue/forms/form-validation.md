@@ -5,6 +5,7 @@ description: Enable built-in PDF form field validation in the Vue PDF Viewer and
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Form Validation in Vue PDF Viewer
@@ -22,10 +23,10 @@ Form field validation follows this flow:
 
 ## Enable PDF Form Field Validation
 
-Enable validation by setting the [enableFormFieldsValidation](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#validateformfields) property to `true` and handling the `validateFormFields` event.
+Enable validation by setting the [enableFormFieldsValidation](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#enableformfieldsvalidation) property to `true` and handling the `validateFormFields` event.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div id="app">
     <ejs-pdfviewer
@@ -60,7 +61,7 @@ export default {
   },
   data() {
     return {
-      documentPath: 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf',
+      documentPath: 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf',
       resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
     };
   },
@@ -112,7 +113,7 @@ export default {
 Only fields marked as **required** participate in validation. Use the `isRequired` property when creating or updating a form field.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 // (inside your `onDocumentLoad` method)
 const pdfviewer = this.$refs.pdfviewer.ej2Instances;
 pdfviewer.formDesignerModule.addFormField('Textbox', {
@@ -132,7 +133,7 @@ In the [validateFormFields](https://ej2.syncfusion.com/vue/documentation/api/pdf
 - Set focus to the first unfilled required field
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 // (inside your `onDocumentLoad` or mounted handler)
 const pdfviewer = this.$refs.pdfviewer.ej2Instances;
 pdfviewer.enableFormFieldsValidation = true;

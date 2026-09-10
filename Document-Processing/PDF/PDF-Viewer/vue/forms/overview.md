@@ -5,6 +5,7 @@ description: Learn about introduction of the Syncfusion Vue PDF Viewer Forms sec
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # About Syncfusion Vue PDF Viewer Forms
@@ -22,7 +23,7 @@ See the [Filling PDF Forms](./form-filling) page for full details.
 Use the following code snippet to enable form-filling by injecting the `FormFields` module.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div id="app">
     <ejs-pdfviewer
@@ -94,7 +95,7 @@ See the [Form Designer](./form-designer) page for full details.
 Use the following code snippet to enable Form Designer by injecting the `FormDesigner` module.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div id="app">
     <ejs-pdfviewer
@@ -155,10 +156,10 @@ export default {
 
 Create and customize interactive fields directly on the PDF page.
 - [Create](./manage-form-fields/create-form-fields), [edit](./manage-form-fields/modify-form-fields), or [remove](./manage-form-fields/remove-form-fields) forms
-- [Add a Signature Field](./manage-form-fields/create-form-fields#add-signature-field) 
+- [Add a Signature Field](./manage-form-fields/create-form-fields#add-signature-field)
 - [Edit Form Field](./manage-form-fields/modify-form-fields)
-- [Remove Form Field](./manage-form-fields/remove-form-fields) 
-- [Form Field Constraints](./form-constrain) 
+- [Remove Form Field](./manage-form-fields/remove-form-fields)
+- [Form Field Constraints](./form-constrain)
 
 ## Supported form field types
 

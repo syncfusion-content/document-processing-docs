@@ -48,7 +48,7 @@ Designed form fields can be saved into the PDF document and printed with their a
 To enable form design features, inject the [FormDesigner](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formdesigner) module into the PDF Viewer. After injecting the module, use the `enableFormDesigner` property or API to enable or disable the Form Designer option in the main toolbar (set to `true` to enable). The standalone examples below show `enableFormDesigner` set to `false`; change this to `true` to enable form design in those samples.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <ejs-pdfviewer
@@ -129,7 +129,7 @@ You can control the visibility of the Form Designer toolbar using the [isFormDes
 - Hide the toolbar to provide a cleaner viewing experience
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <button @click="showDesigner">Show Form Designer Toolbar</button>
@@ -186,7 +186,7 @@ This customization helps you limit the available tools and simplify the user int
 - Any toolbar items not listed remain hidden, resulting in a cleaner and more focused UI.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" style="height:640px" />
@@ -247,7 +247,7 @@ You can move, resize, and edit an existing form field directly in the PDF Viewer
 ![Moving and Resizing a form field](../../javascript-es6/images/move-resize-forms.gif)
 
 - Edit a field by selecting it to open the Form Field Properties popover. The popover allows modification of the form field and widget annotation properties. Changes are reflected immediately in the viewer and are saved when the properties popover is closed.
-For more information, see Editing Form Fields.
+For more information, see [Editing Form Fields](./manage-form-fields/modify-form-fields).
 
 ## Deleting Form Fields
 
@@ -261,7 +261,7 @@ For more information, see [Deleting Form Fields](./manage-form-fields/remove-for
 ## See Also
 
 - [Filling PDF Forms](./form-filling)
-- [Create](./manage-form-fields/create-form-fields), [edit](./manage-form-fields/modify-form-fields), [style](./manage-form-fields/style-form-fields) and [remove](./manage-form-fields/remove-form-fields) form fields
+- [Create](./manage-form-fields/create-form-fields), [edit](./manage-form-fields/modify-form-fields) and [remove](./manage-form-fields/remove-form-fields) form fields
 - [Grouping form fields](./group-form-fields)
 - [Form Constraints](./form-constrain)
 - [Form Validation](./form-validation)

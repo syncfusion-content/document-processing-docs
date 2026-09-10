@@ -17,7 +17,7 @@ N> If this is your first time using Google Cloud Platform (GCP), refer to the [G
 Before you begin, make sure you have the following:
 
 * A [Google Cloud Platform (GCP)](https://cloud.google.com/cloud-console?nodebwarning=true) account with billing enabled.
-* The [Google Cloud CLI (`gcloud`)](https://cloud.google.com/sdk/docs/install) installed locally.
+* The [Google Cloud CLI](https://cloud.google.com/sdk/docs/install) installed locally.
 * **.NET SDK 8.0** (or later) installed (the samples target `net8.0`).
 * A valid Syncfusion<sup>&reg;</sup> license key. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering the Syncfusion<sup>&reg;</sup> license key in your application.
 
@@ -37,7 +37,7 @@ NuGet package name<br/></th></tr></thead>
 App Engine<br/></td><td>
 {{'[Convert Word to PDF in Google App Engine](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-google-app-engine)' | markdownify}}<br/></td><td>
 {{'[Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core)' | markdownify}}<br/>
-{{'[SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)' | markdownify}}<br/>{{'[HarfBuzzSharp.NativeAssets.Linux v8.3.1.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.1.2)' |markdownify}} <br/></td></tr>
+{{'[SkiaSharp.NativeAssets.Linux v4.150.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/4.150.1)' | markdownify}}<br/>{{'[HarfBuzzSharp.NativeAssets.Linux v14.2.1.1](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/14.2.1.1)' |markdownify}} <br/></td></tr>
 </table>
 
 ## See also
