@@ -118,6 +118,21 @@ container.documentEditor.selection.navigateNextRevision();
 container.documentEditor.selection.navigatePreviousRevision();
 ```
 
+## Custom Colors for Track Changes
+
+You can set an array of colors to show track changes such as insertions and deletions in the DOCX editor. Each author is assigned a color in order: the first author gets the first color, the second author gets the next, and so on. If there are more authors than colors, the assignment starts again from the beginning of the array.
+
+The following example illustrates how to set the color order for track changes in the DOCX Editor
+
+{% tabs %}
+{% highlight razor tabtitle="CSHTML" %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/track-changes-revision-colors/razor %}
+{% endhighlight %}
+{% highlight c# tabtitle="Track-changes-revision-colors.cs" %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/track-changes-revision-colors/document-editor.cs %}
+{% endhighlight %}
+{% endtabs %}
+
 ## Filtering changes based on user
 
 The DOCX Editor has a built-in review panel that supports filtering changes by user.

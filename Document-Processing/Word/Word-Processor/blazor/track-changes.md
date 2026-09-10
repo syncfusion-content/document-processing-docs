@@ -77,6 +77,36 @@ await container.DocumentEditor.Selection.NavigateNextRevisionAsync();
 await container.DocumentEditor.Selection.NavigatePreviousRevisionAsync();
 ```
 
+## Custom Colors for Track Changes
+
+You can set an array of colors to show track changes such as insertions and deletions in the DOCX editor. Each author is assigned a color in order: the first author gets the first color, the second author gets the next, and so on. If there are more authors than colors, the assignment starts again from the beginning of the array.
+
+The following example illustrates how to set the color order for track changes in the DOCX Editor
+
+```csharp
+@using Syncfusion.Blazor.DocumentEditor
+
+<SfDocumentEditorContainer @ref="container" EnableToolbar="true" DocumentEditorSettings="settings">
+</SfDocumentEditorContainer>
+
+@code {
+    private SfDocumentEditorContainer container;
+    // Define settings with revision colors
+    private DocumentEditorSettingsModel Settings = new DocumentEditorSettingsModel()
+    {
+        RevisionSettings = new RevisionSettingsModel() 
+        { 
+            RevisionColors = new string[]
+            {
+                "#0000ff",
+                "#bb00ff",
+                "#c14f16"
+            }
+        }
+    };
+}
+```
+
 ## Filter changes by user
 
 In the DOCX Editor, we have a built-in review panel in which we have provided support for filtering changes based on the user.
