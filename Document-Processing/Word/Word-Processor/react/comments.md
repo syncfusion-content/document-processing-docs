@@ -196,10 +196,7 @@ function App() {
     { Name: 'Andrew James', EmailId: 'james@company.com' },
     { Name: 'Andrew Fuller', EmailId: 'andrew@company.com' },
   ];
-  let settings = {
-    showRuler: true,
-    mentionSettings: { dataSource: mentionData, fields: { text: 'Name' } },
-  };
+ let settings = {commentSettings: { highlightCommentsByAuthor : true }};
   return (
     <div>
       <DocumentEditorContainerComponent
@@ -221,6 +218,26 @@ createRoot(document.getElementById('sample')).render(<App />);
 ```
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+
+## Highlight comments by author
+
+When `highlightCommentsByAuthor' is enabled, each comment marker and pane border is displayed in the author’s avatar color. Selecting a comment highlights the corresponding text in that color. If multiple comments appear on the same line, the marker retains the first author’s avatar color.
+
+The following example illustrates how to enable comment highlights in the DOCX Editor
+
+```typescript
+let settings =  { commentSettings: { highlightCommentsByAuthor : true } };
+  return (
+        <DocumentEditorContainerComponent 
+            id="container" 
+            height="590px" 
+            // Use the following service URL only for demo purposes
+            serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" 
+            enableToolbar={true}
+            documentEditorSettings={settings} 
+        />
+  );
+```
 
 ## Events
 
@@ -250,10 +267,7 @@ const Default = () => {
     { Name: 'Andrew James', EmailId: 'james@company.com' },
     { Name: 'Andrew Fuller', EmailId: 'andrew@company.com' },
   ];
-  let settings = {
-    showRuler: true,
-    mentionSettings: { dataSource: mentionData, fields: { text: 'Name' } },
-  };
+ let settings = {commentSettings: { highlightCommentsByAuthor : true }};
 
   // Event is triggered on comment actions such as Post, edit, reply, resolve, and reopen
   function beforeComment(args: CommentActionEventArgs) {
