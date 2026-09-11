@@ -159,6 +159,34 @@ this.$refs.container.documentEditor.selection.navigateNextRevision();
 this.$refs.container.documentEditor.selection.navigatePreviousRevision();
 ```
 
+## Custom Colors for Track Changes
+
+You can set an array of colors to show track changes such as insertions and deletions in the DOCX editor. Each author is assigned a color in order: the first author gets the first color, the second author gets the next, and so on. If there are more authors than colors, the assignment starts again from the beginning of the array.
+
+The following example illustrates how to set the color order for track changes in the DOCX Editor
+
+```ts
+<template>
+  <EjsDocumenteditorcontainer 
+    ref="container"
+    height="590px"
+    :serviceUrl="serviceUrl" 
+    :enableToolbar="true"
+    :documentEditorSettings = "settings"
+    :enableTrackChanges="true"> 
+  </EjsDocumenteditorcontainer>
+</template>
+
+<script setup>
+import { provide } from 'vue';
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+
+const serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
+const settings = { revisionSettings: { revisionColors: [ "#0000ff", "#bb00ff", "#c14f16" ] } };
+provide('DocumentEditorContainer', [Toolbar]);
+</script>
+```
+
 ## Filtering changes based on user
 
 In the DOCX Editor, we have built-in review panel in which we have provided support for filtering changes based on the user.

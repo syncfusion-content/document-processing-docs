@@ -180,6 +180,19 @@ Tracked changes only protection can be enabled in the UI by using the [Restrict 
 
 N> In the enforceProtection method, the first parameter denotes the password and the second parameter denotes the protection type. Possible values of the protection type are `NoProtection`, `ReadOnly`, `FormFieldsOnly`, `CommentsOnly`, and `RevisionsOnly`. In the stopProtection method, the parameter denotes the password.
 
+## Custom Colors for Track Changes
+
+You can set an array of colors to show track changes such as insertions and deletions in the DOCX editor. Each author is assigned a color in order: the first author gets the first color, the second author gets the next, and so on. If there are more authors than colors, the assignment starts again from the beginning of the array.
+
+The following example illustrates how to set the color order for track changes in the DOCX Editor
+
+```js
+container.documentEditorSettings.revisionSettings.revisionColors = [
+  '#0e76b1',
+  '#bb00ff',
+  '#c14f16'
+];
+```
 ## Events
 
 DOCX Editor provides the [beforeAcceptRejectChanges](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container#beforeacceptrejectchanges) event, which is triggered before tracked content is accepted or rejected. This event provides an opportunity to perform custom logic before accepting or rejecting changes. The event handler receives the [RevisionActionEventArgs](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/revisionActionEventArgs) object as an argument, which allows access to information about the tracked content.
