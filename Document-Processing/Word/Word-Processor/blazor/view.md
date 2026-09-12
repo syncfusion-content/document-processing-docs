@@ -67,3 +67,10 @@ The following example demonstrates how to enable the heading navigation pane in 
 ### Online demo
 
 Explore how to navigate through headings in Word documents using the Blazor DOCX Editor in this live [Blazor Heading Navigation demo](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/heading-navigation?theme=fluent2).
+
+## See also
+
+* [How to change the document view](./how-to/change-document-view)
+* [Insert page number and navigate to specific page](./how-to/insert-page-number-and-navigate-to-page)
+* [Enable ruler in document editor component](./how-to/enable-ruler-in-document-editor)
+* [Resize the document editor](./how-to/resize-document-editor)

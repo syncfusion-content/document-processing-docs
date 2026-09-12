@@ -163,3 +163,7 @@ Using the exposed APIs, you can customize the find and replace functionality in 
 {% endtabs %}
   
 {% previewsample "/document-processing/samples/document-editor/angular/find-replace-cs2" %}
+
+## See also
+
+* [Change the default search highlight color](./how-to/change-the-default-search-highlight-color)

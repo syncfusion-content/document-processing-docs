@@ -193,3 +193,4 @@ The following sample demonstrates how to delete the table row or columns, merge 
 
 * [Feature modules](./feature-module)
 * [Insert table dialog](./dialog#table-dialog)
+* [Insert text or image programmatically](./how-to/insert-text-or-image-in-table-programmatically)

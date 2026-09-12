@@ -146,3 +146,9 @@ Using the exposed APIs, you can customize the find and replace functionality in 
 {% endtabs %}
         
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/replace-cs1" %}
+
+## See Also
+
+* [Options pane](./dialog#options-pane)
+* [Feature modules](./feature-module)
+* [Change the default search highlight color](./how-to/change-the-default-search-highlight-color)
