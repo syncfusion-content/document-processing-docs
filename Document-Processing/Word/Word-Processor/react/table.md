@@ -287,7 +287,8 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
-## See Also
+## See also
 
 * [Feature modules](./feature-module)
 * [Insert table dialog](./dialog#table-dialog)
+* [Insert text or image programmatically](./how-to/insert-text-or-image-in-table-programmatically)

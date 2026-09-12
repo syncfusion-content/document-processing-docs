@@ -102,6 +102,8 @@ this.$refs.documentEditor.ej2Instances.editor.insertSectionBreak(SectionBreakTyp
 
 Explore how to apply section formatting in Word documents using the Vue DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/section-formatting.html).
 
-## See also
+## See Also
 
 * [Page setup dialog](./dialog#page-setup-dialog)
+* [Set the default format in document editor](./how-to/set-default-format-in-document-editor)
+* [Insert page number and navigate to specific page](./how-to/insert-page-number-and-navigate-to-page)
