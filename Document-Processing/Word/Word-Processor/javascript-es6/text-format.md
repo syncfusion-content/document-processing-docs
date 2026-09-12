@@ -228,3 +228,5 @@ Explore how to apply text formatting in Word documents using the JavaScript DOCX
 * [Feature modules](./feature-module)
 * [Font dialog](./dialog#font-dialog)
 * [Keyboard shortcuts](./keyboard-shortcut#text-formatting)
+* [Set the default format in document editor](./how-to/set-default-format-in-document-editor)
+* [Customize the font family drop down](./how-to/customize-font-family-drop-down)

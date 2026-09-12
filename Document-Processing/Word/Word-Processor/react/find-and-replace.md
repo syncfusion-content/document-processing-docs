@@ -282,3 +282,4 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 * [Options pane](./dialog#options-pane)
 * [Feature modules](./feature-module)
+* [Change the default search highlight color](./how-to/change-the-default-search-highlight-color)

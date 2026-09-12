@@ -112,3 +112,4 @@ Explore how to insert and manage bookmarks in Word documents using the JavaScrip
 
 * [Feature modules](./feature-module)
 * [Bookmark dialog](./dialog#bookmark-dialog)
+* [Retrieve the bookmark and whole document content](./how-to/retrieve-the-bookmark-content-as-text)

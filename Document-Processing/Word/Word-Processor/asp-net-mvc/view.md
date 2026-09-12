@@ -65,3 +65,10 @@ The following example illustrates how to enable the heading navigation pane in t
 ### Online demo
 
 Explore how to navigate through headings in Word documents using the ASP.NET MVC DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/headingnavigation#/tailwind3).
+
+## See also
+
+* [How to change the document view](./how-to/change-document-view)
+* [Insert page number and navigate to specific page](./how-to/insert-page-number-and-navigate-to-page)
+* [Enable ruler in document editor component](./how-to/enable-ruler-in-document-editor-component)
+* [Resize the document editor](./how-to/resize-document-editor)
