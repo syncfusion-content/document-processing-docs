@@ -221,7 +221,7 @@ The following example illustrates how to enable mention support in the DOCX Edit
   export default {
     data() {
       return { serviceUrl:'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/',
-      settings: { mentionSettings: { dataSource: mentionData, fields: { text: 'Name' }} }},
+      settings: { commentSettings: { highlightCommentsByAuthor : true } }},
     },
     provide: {
       //Inject require modules.
@@ -232,6 +232,35 @@ The following example illustrates how to enable mention support in the DOCX Edit
 ```
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+
+## Highlight comments by author
+
+When `highlightCommentsByAuthor' is enabled, each comment marker and pane border is displayed in the author’s avatar color. Selecting a comment highlights the corresponding text in that color. If multiple comments appear on the same line, the marker retains the first author’s avatar color.
+
+The following example illustrates how to enable comment highlights in the DOCX Editor
+
+```
+<template>
+    <div id="app">
+      <ejs-documenteditorcontainer ref='documenteditor' :serviceUrl='serviceUrl' :documentEditorSettings='settings' height="590px" id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
+    </div>
+</template>
+<script>
+  import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+  export default {
+    data() {
+      return {
+      serviceUrl:'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/',
+      settings: { commentSettings: { highlightCommentsByAuthor : true } }
+      },
+    },
+    provide: {
+      //Inject require modules.
+      DocumentEditorContainer: [Toolbar]
+    }
+  }
+</script>
+```
 
 ## Events
 
@@ -260,7 +289,7 @@ let mentionData =  [
                 { "Name": "Andrew Fuller", "EmailId": "andrew@company.com"}
             ];
 provide('DocumentEditorContainer', [Toolbar]);
-const settings= { mentionSettings: { dataSource: mentionData, fields: { text: 'Name' }} };
+const settings= { commentSettings: { highlightCommentsByAuthor : true } };
 const beforeComment = function (args) {
   if(args.type === "Delete" && container.value.ej2Instances.currentUser !== args.author){
     args.cancel = true;
@@ -304,7 +333,7 @@ export default {
   },
   data() {
     return {
-      settings: { mentionSettings: { dataSource: mentionData, fields: { text: 'Name' }} }
+        settings: { commentSettings: { highlightCommentsByAuthor : true } }
     }
   },
   provide: {
