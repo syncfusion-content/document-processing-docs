@@ -99,8 +99,8 @@ npm install @syncfusion/ej2-react-pdfviewer --save
 
 Download the following files:
 
-- https://cdn.syncfusion.com/ej2/latest/dist/ej2-pdfviewer-lib/pdfium.js
-- https://cdn.syncfusion.com/ej2/latest/dist/ej2-pdfviewer-lib/pdfium.wasm
+- https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib/pdfium.js
+- https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib/pdfium.wasm
 
 Create the following folder in your SharePoint site assets:
 
@@ -142,7 +142,9 @@ src/webparts/pdfViewer/components/PdfViewer.tsx
 
 Replace the entire file with the following:
 
-```tsx
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+{% raw %}
 import * as React from 'react';
 import type { IPdfViewerProps } from './IPdfViewerProps';
 
@@ -191,7 +193,9 @@ export default class PdfViewer extends React.Component<IPdfViewerProps> {
     );
   }
 }
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 Remember to replace `your-site.sharepoint.com/sites/PdfViewerDemo` in `resourceUrl` with the URL of your SharePoint site before serving the web part.
 
