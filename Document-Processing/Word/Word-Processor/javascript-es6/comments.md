@@ -166,9 +166,7 @@ let mentionData: any = [
 ];
 let container: DocumentEditorContainer = new DocumentEditorContainer({ enableToolbar: true,height: '590px',
 // Enable mention support in document editor
-  documentEditorSettings: {
-    mentionSettings: { dataSource: mentionData, fields: { text: 'Name' }},
-  }
+  documentEditorSettings: { commentSettings: { highlightCommentsByAuthor : true } } 
 });
 DocumentEditorContainer.Inject(Toolbar);
 container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
@@ -176,6 +174,25 @@ container.appendTo('#container');
 ```
 
 > The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+
+## Highlight comments by author
+
+When `highlightCommentsByAuthor' is enabled, each comment marker and pane border is displayed in the author’s avatar color. Selecting a comment highlights the corresponding text in that color. If multiple comments appear on the same line, the marker retains the first author’s avatar color.
+
+The following example illustrates how to enable comment highlights in the DOCX Editor
+
+```ts
+var container = new ej.documenteditor.DocumentEditorContainer({
+    enableToolbar: true,
+    height: '590px',
+    // Enable mention support in document editor
+    documentEditorSettings: { commentSettings: { highlightCommentsByAuthor : true } }    
+});
+
+ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
+container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
+container.appendTo('#container');
+```
 
 ## Events
 
@@ -196,9 +213,7 @@ let mentionData: any = [
 ];
 let container: DocumentEditorContainer = new DocumentEditorContainer({ enableToolbar: true,height: '590px', beforeCommentAction:beforecomment,
 // Enable mention support in document editor
-  documentEditorSettings: {
-    mentionSettings: { dataSource: mentionData, fields: { text: 'Name' }},
-  }
+  documentEditorSettings: { commentSettings: { highlightCommentsByAuthor : true } } 
 });
 DocumentEditorContainer.Inject(Toolbar);
 container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
