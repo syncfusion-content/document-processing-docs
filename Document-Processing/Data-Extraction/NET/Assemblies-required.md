@@ -27,7 +27,9 @@ The following assemblies need to be referenced in your application to extract da
       </td>
       <td>
         Syncfusion.SmartDataExtractor.Base<br/>
+        Syncfusion.DocIO.Base<br/>
         Syncfusion.Compression.Base<br/>
+        Syncfusion.OfficeChart.Base<br/>
         Syncfusion.ImagePreProcessor.Base<br/>
         Syncfusion.OCRProcessor.Base<br/>
         Syncfusion.Pdf.Base<br/>
@@ -35,6 +37,7 @@ The following assemblies need to be referenced in your application to extract da
         Syncfusion.SmartFormRecognizer.Base<br/>
         Syncfusion.SmartTableExtractor.Base<br/>
         Syncfusion.Markdown<br/>
+        Syncfusion.Telemetry<br/>
       </td>
     </tr>
     <tr>
@@ -44,7 +47,9 @@ The following assemblies need to be referenced in your application to extract da
       </td>
       <td>
         Syncfusion.SmartDataExtractor.Portable<br/>
+        Syncfusion.DocIO.Portable<br/>
         Syncfusion.Compression.Portable<br/>
+        Syncfusion.OfficeChart.Portable<br/>
         Syncfusion.ImagePreProcessor.Portable<br/>
         Syncfusion.OCRProcessor.Portable<br/>
         Syncfusion.Pdf.Imaging.Portable<br/>
@@ -53,6 +58,7 @@ The following assemblies need to be referenced in your application to extract da
         Syncfusion.SmartFormRecognizer.Portable<br/>
         Syncfusion.SmartTableExtractor.Portable<br/>
         Syncfusion.Markdown<br/>
+        Syncfusion.Telemetry<br/>
       </td>
     </tr>
     <tr>
@@ -61,7 +67,9 @@ The following assemblies need to be referenced in your application to extract da
       </td>
       <td>
         Syncfusion.SmartDataExtractor.NET<br/>
+        Syncfusion.DocIO.NET<br/>
         Syncfusion.Compression.NET<br/>
+        Syncfusion.OfficeChart.NET<br/>
         Syncfusion.ImagePreProcessor.NET<br/>
         Syncfusion.OCRProcessor.NET<br/>
         Syncfusion.Pdf.Imaging.NET<br/>
@@ -70,6 +78,7 @@ The following assemblies need to be referenced in your application to extract da
         Syncfusion.SmartFormRecognizer.NET<br/>
         Syncfusion.SmartTableExtractor.NET<br/>
         Syncfusion.Markdown<br/>
+        Syncfusion.Telemetry<br/>
       </td>
     </tr>
   </tbody>

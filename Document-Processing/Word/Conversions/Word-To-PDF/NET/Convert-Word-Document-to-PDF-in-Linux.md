@@ -36,20 +36,20 @@ dotnet new console
 Step 2: Install the following **NuGet packages** in your application from [NuGet.org](https://www.nuget.org/) by executing the following command.
 
 * [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) (latest version)
-* [SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)
-* [HarfBuzzSharp.NativeAssets.Linux v8.3.1.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.1.2)
+* [SkiaSharp.NativeAssets.Linux v4.150.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/4.150.1)
+* [HarfBuzzSharp.NativeAssets.Linux v14.2.1.1](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/14.2.1.1)
 
 {% tabs %}
 {% highlight KCONFIG %}
 
 dotnet add package Syncfusion.DocIORenderer.Net.Core -s https://www.nuget.org/
-dotnet add package SkiaSharp.NativeAssets.Linux -v 3.119.1 -s https://www.nuget.org/
-dotnet add package HarfBuzzSharp.NativeAssets.Linux -v 8.3.1.2 -s https://www.nuget.org/
+dotnet add package SkiaSharp.NativeAssets.Linux -v 4.150.1 -s https://www.nuget.org/
+dotnet add package HarfBuzzSharp.NativeAssets.Linux -v 14.2.1.1 -s https://www.nuget.org/
 
 {% endhighlight %}
 {% endtabs %}
 
-N> 1. From v32.1.19 onward, the dependent SkiaSharp package was upgraded to v3.119.1. The `SkiaSharp.NativeAssets.Linux v3.119.1` and `HarfBuzzSharp.NativeAssets.Linux v8.3.1.2` packages are mandatory in this environment. For other Linux environments (such as AWS Lambda or AWS Elastic Beanstalk), refer to the [documentation](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf#additional-nuget-packages-required-for-linux) for the appropriate native asset packages.
+N> 1. From v32.1.19 onward, the dependent SkiaSharp package was upgraded to v4.150.1. The `SkiaSharp.NativeAssets.Linux v4.150.1` and `HarfBuzzSharp.NativeAssets.Linux v14.2.1.1` packages are mandatory in this environment. For other Linux environments (such as AWS Lambda or AWS Elastic Beanstalk), refer to the [documentation](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf#additional-nuget-packages-required-for-linux) for the appropriate native asset packages.
 N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components.
 N> 3. If you are using a version prior to v23.1.40, please refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/linux-faqs#what-are-the-nuget-packages-to-be-installed-to-perform-word-to-pdf-conversion-in-linux-os) to know about how to perform Word to PDF conversion in Linux.
 
@@ -161,11 +161,11 @@ Step 2: Install the NuGet packages from [NuGet.org](https://www.nuget.org/).
 ![Select the Syncfusion.DocIORenderer.Net.Core NuGet package](Linux-images/Select-Syncfusion.DocIORenderer.Net.Core-NuGet.png)
 
 * Click the **Install** button to complete the installation.
-* Repeat the steps above to install the additional NuGet packages required for Linux: [SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1) and [HarfBuzzSharp.NativeAssets.Linux v8.3.1.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.1.2).
+* Repeat the steps above to install the additional NuGet packages required for Linux: [SkiaSharp.NativeAssets.Linux v4.150.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/4.150.1) and [HarfBuzzSharp.NativeAssets.Linux v14.2.1.1](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/14.2.1.1).
 
 ![Install the Syncfusion.DocIORenderer.Net.Core NuGet package](Linux-images/Install-Syncfusion.DocIORenderer.Net.Core-NuGet.png)
 
-N> 1. From v32.1.19 onward, the dependent SkiaSharp package was upgraded to v3.119.1. The `SkiaSharp.NativeAssets.Linux v3.119.1` and `HarfBuzzSharp.NativeAssets.Linux v8.3.1.2` packages are mandatory in this environment. For other Linux environments (such as AWS Lambda or AWS Elastic Beanstalk), refer to the [documentation](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf#additional-nuget-packages-required-for-linux) for the appropriate native asset packages.
+N> 1. From v32.1.19 onward, the dependent SkiaSharp package was upgraded to v4.150.1. The `SkiaSharp.NativeAssets.Linux v4.150.1` and `HarfBuzzSharp.NativeAssets.Linux v14.2.1.1` packages are mandatory in this environment. For other Linux environments (such as AWS Lambda or AWS Elastic Beanstalk), refer to the [documentation](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf#additional-nuget-packages-required-for-linux) for the appropriate native asset packages.
 N> 2. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 N> 3. If you are using a version prior to v23.1.40, please refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/linux-faqs#what-are-the-nuget-packages-to-be-installed-to-perform-word-to-pdf-conversion-in-linux-os) to know about how to perform Word to PDF conversion in Linux.
 

@@ -1,23 +1,23 @@
 ---
-title: Convert Word to PDF in .NET Word | Syncfusion
-description: This section illustrates how to convert Word document to PDF using the .NET Word library  in Linux Docker
+title: Convert Word to PDF in C# using DocIO | Syncfusion
+description: Learn how to convert a Word document to PDF, PDF/A, and PDF/UA using the .NET Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Convert Word to PDF in .NET Word
+# Convert Word to PDF in .NET using Syncfusion® Word (DocIO) library
 
 The [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) allows you to convert a Word document to PDF within a few lines of code in .NET applications. It does not require Adobe Acrobat or Microsoft Word to be installed on the machine. Using this library, you can create a Word document from scratch or load an existing Word document and then easily convert it to PDF.  
 
-The [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) to PDF converter offers high versatility and seamless performance across various .NET platforms, including [Windows Forms](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-window-forms), [WPF](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-wpf), [ASP.NET](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-asp-net), [ASP.NET MVC](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-asp-net-mvc), [ASP.NET Core](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-asp-net-core), [Blazor](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-blazor), [Xamarin](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-xamarin), [WinUI](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-winui), [.NET MAUI](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-maui). Also, in different environments like [Azure](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-azure), [AWS](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-aws), [Google Cloud](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-google-cloud-platform), [Linux](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-linux), [Docker](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-linux-docker), and [macOS](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-mac). 
+The [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) to PDF converter offers high versatility and seamless performance across various .NET platforms, including [Windows Forms](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-window-forms), [WPF](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-wpf), [ASP.NET](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-asp-net), [ASP.NET MVC](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-asp-net-mvc), [ASP.NET Core](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-asp-net-core), [Blazor](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-blazor), [Xamarin](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-xamarin), [WinUI](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-winui), [.NET MAUI](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-maui). Also, in different environments like [Azure](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-azure), [AWS](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-aws), [Google Cloud](./Convert-Word-Document-to-PDF-in-Google-Cloud-Platform), [Linux](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-linux), [Docker](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-linux-docker), and [macOS](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-mac). 
 
 ## Assemblies and NuGet packages required
 
 Refer to the following links for the assemblies and NuGet packages required based on your platform to convert a Word document to PDF.
 
 * [Word to PDF conversion assemblies](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/assemblies-required-word-to-pdf) 
-* [Word to PDF conversion NuGet packages](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf)
+* [Word to PDF conversion NuGet packages](./Nuget-packages-required-word-to-pdf)
 
 For a quick walkthrough on converting a Word document to a PDF, check out this video:
 {% youtube "https://www.youtube.com/watch?v=8QdevnBxgHk" %}
@@ -43,7 +43,7 @@ For a quick walkthrough on converting a Word document to a PDF, check out this v
 The following prerequisites are required before running the code samples in this section:
 
 * Create a new .NET console, class library, or web application targeting a supported version of .NET Framework, .NET Core.
-* Install the required Syncfusion NuGet packages for your target platform. For details, see [Word to PDF conversion NuGet packages](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf).
+* Install the required Syncfusion NuGet packages for your target platform. For details, see [Word to PDF conversion NuGet packages](./Nuget-packages-required-word-to-pdf).
 
 The following namespaces are required to compile the code:
 

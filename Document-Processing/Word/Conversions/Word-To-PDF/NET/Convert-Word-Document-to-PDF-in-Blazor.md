@@ -1,12 +1,12 @@
 ---			
-title: Convert Word to PDF in Blazor  | Syncfusion
+title: Convert Word to PDF in Blazor | DocIO | Syncfusion
 description: Convert Word to PDF in Blazor using the Syncfusion DocIO library without Microsoft Word or Office interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Convert Word to PDF in Blazor 
+# Convert Word Document to PDF in Blazor
 
 Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to PDF in Blazor**.
 
@@ -40,7 +40,7 @@ To **convert a Word document to PDF in a Blazor Web App Server**, install [Syncf
 
 ![Install Syncfusion.DocIORenderer.Net.Core NuGet Package](Blazor_Images/NugetPackage.png)
 
-N> 1. If deploying the application in a Linux environment, refer to the [documentation](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf#additional-nuget-packages-required-for-linux) for the required additional NuGet packages.
+N> 1. If deploying the application in a Linux environment, refer to the [documentation](./Nuget-packages-required-word-to-pdf#additional-nuget-packages-required-for-linux) for the required additional NuGet packages.
 N> 2. Starting with v16.2.0.x, if Syncfusion<sup>&reg;</sup> assemblies are referenced from trial setup or from the NuGet feed, the "Syncfusion.Licensing" assembly reference must also be added and a license key included in projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
 
 Step 3: Create a Razor file named `DocIO.razor` in the `Pages` folder, which is located inside the `Components` folder (`Components/Pages/DocIO.razor`).
@@ -271,7 +271,7 @@ dotnet add package Syncfusion.DocIORenderer.Net.Core
 
 ![Add Syncfusion.DocIORenderer.Net.Core NuGet package](Blazor_Images/Command-to-add-NuGet-package-for-Server.png)
 
-N> 1. If deploying the application in a Linux environment, refer to the [documentation](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf#additional-nuget-packages-required-for-linux) for the required additional NuGet packages (such as `SkiaSharp.NativeAssets.Linux`).
+N> 1. If deploying the application in a Linux environment, refer to the [documentation](./Nuget-packages-required-word-to-pdf#additional-nuget-packages-required-for-linux) for the required additional NuGet packages (such as `SkiaSharp.NativeAssets.Linux`).
 N> 2. Starting with v16.2.0.x, if Syncfusion<sup>&reg;</sup> assemblies are referenced from trial setup or from the NuGet feed, the `Syncfusion.Licensing` assembly reference must also be added and a license key included in projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
 
 Step 3: Create a Razor file named `DocIO.razor` in the `Pages` folder, which is located inside the `Components` folder.
@@ -523,7 +523,7 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 
 ![Install the Syncfusion.DocIORenderer.Net.Core NuGet package](Blazor_Images/Install-Syncfusion.DocIORenderer.Net.Core-NuGet.png)
 
-N> 1. If deploying the application in a Linux environment, refer to the [documentation](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf#additional-nuget-packages-required-for-linux) for the required additional NuGet packages.
+N> 1. If deploying the application in a Linux environment, refer to the [documentation](./Nuget-packages-required-word-to-pdf#additional-nuget-packages-required-for-linux) for the required additional NuGet packages.
 N> 2. Starting with v16.2.0.x, if Syncfusion<sup>&reg;</sup> assemblies are referenced from trial setup or from the NuGet feed, the "Syncfusion.Licensing" assembly reference must also be added and a license key included in projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
 
 Step 3: Create a Razor file named `DocIO.razor` in the `Pages` folder, which is located inside the `Components` folder (`Components/Pages/DocIO.razor`).
@@ -745,12 +745,12 @@ Select "Blazor WebAssembly Standalone App" from the template and click **Next**.
 
 Step 2: Install the following **NuGet packages** in the application from [NuGet.org](https://www.nuget.org/).
 *   [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) (latest stable version)
-*   [SkiaSharp.Views.Blazor v3.119.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1)
+*   [SkiaSharp.Views.Blazor v4.150.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/4.150.1)
 
 ![Install Syncfusion.DocIORenderer.Net.Core NuGet Package](Blazor_Images/NugetPackage.png)
-![Install SkiaSharp.Views.Blazor v3.119.1 NuGet Package](Blazor_Images/NuGet-Package-WordtoPDF.png)
+![Install SkiaSharp.Views.Blazor v4.150.1 NuGet Package](Blazor_Images/NuGet-Package-WordtoPDF.png)
 
-N> 1. If deploying the application in a Linux environment, refer to the [documentation](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf#additional-nuget-packages-required-for-linux) for the required additional NuGet packages.
+N> 1. If deploying the application in a Linux environment, refer to the [documentation](./Nuget-packages-required-word-to-pdf#additional-nuget-packages-required-for-linux) for the required additional NuGet packages.
 N> 2. Starting with v16.2.0.x, if Syncfusion<sup>&reg;</sup> assemblies are referenced from trial setup or from the NuGet feed, the "Syncfusion.Licensing" assembly reference must also be added and a license key included in projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
 
 
@@ -938,20 +938,20 @@ Step 1: Create a new C# Blazor WebAssembly Standalone app project.
 * Select the project location, type the project name, and press <kbd>Enter</kbd>.
 * Then choose **Create project**.
 
-Step 2: To **convert a Word document to PDF in the Blazor WebAssembly Standalone app**, install [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) and [SkiaSharp.Views.Blazor v3.119.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1) to the Blazor project.
+Step 2: To **convert a Word document to PDF in the Blazor WebAssembly Standalone app**, install [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) and [SkiaSharp.Views.Blazor v4.150.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/4.150.1) to the Blazor project.
 * Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 * Ensure you're in the project root directory where your .csproj file is located.
 * Run the following commands to install the NuGet packages:
   ```
   dotnet add package Syncfusion.DocIORenderer.Net.Core
-  dotnet add package SkiaSharp.Views.Blazor --version 3.119.1
+  dotnet add package SkiaSharp.Views.Blazor --version 4.150.1
   ```
 
 ![Add Syncfusion.DocIORenderer.Net.Core NuGet package](Blazor_Images/Command-to-add-NuGet-package-for-WASM.png)
 
 ![Add SkiaSharp.Views.Blazor NuGet package](Blazor_Images/Command-to-add-NuGet-package-for-SkiaSharp.png)
 
-N> 1. If deploying the application in a Linux environment, refer to the [documentation](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf#additional-nuget-packages-required-for-linux) for the required additional NuGet packages.
+N> 1. If deploying the application in a Linux environment, refer to the [documentation](./Nuget-packages-required-word-to-pdf#additional-nuget-packages-required-for-linux) for the required additional NuGet packages.
 N> 2. Starting with v16.2.0.x, if Syncfusion<sup>&reg;</sup> assemblies are referenced from trial setup or from the NuGet feed, the "Syncfusion.Licensing" assembly reference must also be added and a license key included in projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
 
 
@@ -1170,7 +1170,7 @@ Step 2: Install the NuGet packages from [NuGet.org](https://www.nuget.org/).
 
 ![Install the SkiaSharp.Views.Blazor NuGet package](Blazor_Images/Install-SkiaSharp.Views.Blazor-NuGet.png)
 
-N> 1. If deploying the application in a Linux environment, refer to the [documentation](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/nuget-packages-required-word-to-pdf#additional-nuget-packages-required-for-linux) for the required additional NuGet packages.
+N> 1. If deploying the application in a Linux environment, refer to the [documentation](./Nuget-packages-required-word-to-pdf#additional-nuget-packages-required-for-linux) for the required additional NuGet packages.
 N> 2. Starting with v16.2.0.x, if Syncfusion<sup>&reg;</sup> assemblies are referenced from trial setup or from the NuGet feed, the "Syncfusion.Licensing" assembly reference must also be added and a license key included in projects. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
 
 Step 3: Create a Razor file named `DocIO.razor` in the `Pages` folder.

@@ -1,12 +1,12 @@
 ---
-title: Word to PDF conversion FAQs in .NET Word | Syncfusion
-description: Describe frequently asked questions and solutions related to Word-to-PDF conversion using the Syncfusion .NET Word library
+title: Word-to-PDF conversion FAQs | DocIO | Syncfusion
+description: Learn about the frequently asked questions of Word to PDF conversion in the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Word to PDF conversion FAQs in .NET Word
+# Frequently Asked Questions (Word-to-PDF)
 
 The frequently asked questions about Word to PDF conversion in Essential<sup>&reg;</sup> DocIO are listed below. This page addresses common questions on chart conversion, PDF conformance, font handling, form fields, track changes, and platform-specific issues.
 
@@ -95,8 +95,8 @@ For more details on configuring fallback fonts for missing glyphs, refer to the 
     </tr>
     <tr>
       <td><b>Documentation link</b></td>
-      <td><a href="https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/fallback-fonts-word-to-pdf">Fallback fonts</a></td>
-      <td><a href="https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/font-substituion-word-to-pdf">Font substitution</a></td>
+      <td><a href="https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/fallback-fonts-word-to-pdf" aria-label="Learn about fallback fonts in Word to PDF conversion">Fallback fonts</a></td>
+      <td><a href="https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/font-substituion-word-to-pdf" aria-label="Learn about font substitution in Word to PDF conversion">Font substitution</a></td>
     </tr>
   </tbody>
 </table>
@@ -107,7 +107,7 @@ This exception typically occurs due to version mismatches between SkiaSharp and 
 
 ## Why does System.TypeInitializationException occur during Word to PDF or image conversion in Linux using Syncfusion DocIO?
 
-This error usually occurs due to an incompatible GLIBC version on the Linux system. SkiaSharp, used by DocIO for rendering, requires a minimum GLIBC version to function correctly. For example, SkiaSharp version 3.119.1 requires at least GLIBC version 2.29, which is not available in older Linux distributions like Debian 10. If a lower version is present, the conversion may fail with an error such as `GLIBC_2.29 not found`.
+This error usually occurs due to an incompatible GLIBC version on the Linux system. SkiaSharp, used by DocIO for rendering, requires a minimum GLIBC version to function correctly. For example, SkiaSharp version 4.150.1 requires at least GLIBC version 2.29, which is not available in older Linux distributions like Debian 10. If a lower version is present, the conversion may fail with an error such as `GLIBC_2.29 not found`.
 
 **Resolution:** Ensure the operating system includes the required GLIBC version for the SkiaSharp version being used, or upgrade to a newer Linux distribution. For the list of supported Linux distributions, refer to the [Convert Word document to PDF in Linux](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-linux) documentation.
 

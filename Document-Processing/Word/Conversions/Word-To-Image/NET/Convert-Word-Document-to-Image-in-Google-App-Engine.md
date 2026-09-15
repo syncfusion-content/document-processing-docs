@@ -47,8 +47,8 @@ Step 3: Click the **Create** button.
 Step 4: Install the following **NuGet packages** in your application from [NuGet.org](https://www.nuget.org/).
 
 * [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) 
-* [SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)
-* [HarfBuzzSharp.NativeAssets.Linux v8.3.1.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.1.2)
+* [SkiaSharp.NativeAssets.Linux v4.150.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/4.150.1)
+* [HarfBuzzSharp.NativeAssets.Linux v14.2.1.1](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/14.2.1.1)
 
  ![Install Syncfusion.DocIORenderer.Net.Core NuGet package](Azure-Images/App-Service-Linux/Syncfusion_Nuget_Package_WordtoPDF.png)
  ![Install SkiaSharp.NativeAssets.Linux NuGet package](Azure-Images/App-Service-Linux/SkiaSharp_Nuget-Package_WordtoPDF.png)
