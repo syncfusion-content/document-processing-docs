@@ -16,12 +16,19 @@ Annotation appearance and behavior (for example color, stroke color, thickness, 
 
 Use the annotation toolbar after selecting an annotation:
 - Edit color: changes the annotation fill/text color
+
 ![Edit color](../images/edit_color.png)
+
 - Edit stroke color: changes border or line color for shapes and lines types.
+
 ![Edit stroke color](../images/shape_strokecolor.png)
+
 - Edit thickness: adjusts border or line thickness
+
 ![Edit thickness](../images/shape_thickness.png)
+
 - Edit opacity: adjusts transparency
+
 ![Edit opacity](../images/shape_opacity.png)
 
 Type‑specific options (for example, Line properties) are available from the context menu (right‑click > Properties) where supported.

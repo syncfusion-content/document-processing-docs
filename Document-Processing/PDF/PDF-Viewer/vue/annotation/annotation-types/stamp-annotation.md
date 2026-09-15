@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Stamp Annotation in Vue PDF Viewer
 
-Stamp annotations display predefined or custom stamps in PDF documents. The Vue PDF Viewer supports several stamp types: **Sign Here**, **Witness**, **Approved**, **AsIs**, **Expired**, **NotApproved**, **NotForPublicRelease**, **Confidential**, **TopSecret**, **ForComment**, **Recommended**, and **Custom stamps**.
+Stamp annotations allow you to place predefined or custom stamps (such as **Dynamic**, **Sign Here**, **Standard Business**, or **Custom**) on a PDF to communicate review states, approvals, or instructions. You can add stamps from the toolbar, switch to specific stamp modes programmatically, customize defaults (e.g., opacity/author), edit or lock them, and export them with the document.
 
 ## Enable Stamp in the Viewer
 
@@ -206,7 +206,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-N> Supported image format for custom stamps: **JPEG**. Only the base64-encoded image source is supported; local file paths are not supported.
+N> Supported image format for custom stamps: **JPEG**, **JPG** and **PNG**
 
 ## Customize Stamp Appearance
 

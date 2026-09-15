@@ -1,6 +1,6 @@
 ---
 layout: post
-title: PDF Redaction in Vue PDF Viewer | Syncfusion
+title: Redaction Annotation in Vue PDF Viewer | Syncfusion
 description: Learn to add, edit, delete, and apply redaction annotations in Syncfusion Vue PDF Viewer with UI and programmatic examples.
 platform: document-processing
 control: PDF Viewer
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# PDF Redaction in Vue PDF Viewer
+# Redaction Annotation in Vue PDF Viewer
 
 Redaction annotations permanently remove sensitive content from a PDF. You can draw redaction marks over text or graphics, redact entire pages, customize overlay text and styling, and apply redaction to finalize. 
 
