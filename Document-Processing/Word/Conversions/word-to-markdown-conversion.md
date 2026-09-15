@@ -659,7 +659,7 @@ The following table shows the list of Word document elements supported in Word t
 </tbody>
 </table>
 
-### Preserving Charts, Shapes, and Other Elements as Images
+### Preserve Visual Elements as Images
 
 The .NET Word (DocIO) library preserves Word elements such as Chart, Text Box, Shape, Ink, MathML, SmartArt, Canvas, and GroupShape as fallback images when converting a Word document to a Markdown file. This ensures that content which does not have a direct Markdown equivalent is still retained in the output as an image.
 
@@ -693,6 +693,19 @@ using (WordDocument wordDocument = new WordDocument("Input.docx", FormatType.Doc
     // Save the document as a Markdown file.
     wordDocument.Save("WordtoMd.md", FormatType.Markdown);
 }
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Open an existing Word document.
+Using wordDocument As WordDocument = New WordDocument("Input.docx", FormatType.Docx)
+    'Initialize the chart-to-image converter to preserve charts as images.
+    wordDocument.ChartToImageConverter = New ChartToImageConverter()
+
+    'Text Box, Shape, Ink, MathML, and SmartArt are preserved automatically on Windows.
+
+    'Save the document as a Markdown file.
+    wordDocument.Save("WordtoMd.md", FormatType.Markdown)
+End Using
 {% endhighlight %}
 
 {% endtabs %}
