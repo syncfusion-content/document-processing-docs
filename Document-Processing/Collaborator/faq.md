@@ -11,9 +11,9 @@ domainurl: ##DomainURL##
 
 ## 1. How should Redis be configured for collaborative editing?
 
-In collaborative editing, Redis is used to store temporary data that helps queue editing operations and resolve conflicts using the *Operational Transformation* algorithm.
+In collaborative editing, Redis is used to store temporary data that helps queue editing operations and resolve conflicts using the `Operational Transformation` algorithm.
 
-All editing operations are stored in the Redis cache. To prevent memory buildup, a *SaveThreshold* limit can be configured at the application level. For example, if the SaveThreshold is set to 100, up to twice that number of editing operations are retained in Redis per document. When this limit is exceeded, the first 100 operations (as defined by the save threshold) are removed from the cache and automatically saved to the source document.
+All editing operations are stored in the Redis cache. To prevent memory buildup, a `SaveThreshold` limit can be configured at the application level. For example, if the SaveThreshold is set to 100, up to twice that number of editing operations are retained in Redis per document. When this limit is exceeded, the first 100 operations (as defined by the save threshold) are removed from the cache and automatically saved to the source document.
 
 The configuration and storage size of the Redis cache can be adjusted based on the following considerations:
 
@@ -31,9 +31,9 @@ The configuration and storage size of the Redis cache can be adjusted based on t
 
 To support collaborative editing, it’s crucial to have a backing system that temporarily stores the editing operations of all active users. There are two primary options:
 
-- *Distributed Cache*: Handles more HTTP requests per second than a database approach. For example, a server with 2 vCPUs and 8GB of RAM can process up to 125 requests per second using a distributed cache. We are using distributed cache as a backing system over a database.
+- `Distributed Cache`: Handles more HTTP requests per second than a database approach. For example, a server with 2 vCPUs and 8GB of RAM can process up to 125 requests per second using a distributed cache. We are using distributed cache as a backing system over a database.
 
-- *Database*: With the same server configuration, it can handle up to 50 requests per second.
+- `Database`: With the same server configuration, it can handle up to 50 requests per second.
 
 
 ## 3. How do I estimate the server capacity required for collaborative editing?
