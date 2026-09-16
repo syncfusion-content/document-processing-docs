@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Syncfusion Collaborator
 
-The Syncfusion **Collaborator** is a real\-time collaboration framework that enables multiple users to edit content simultaneously in EJ2 components such as Document Editor, PDF Viewer, and Spreadsheet.
+The Syncfusion **Collaborator** is a real\-time collaboration framework that enables multiple users to edit content simultaneously in EJ2 components such as DOCX Editor, PDF Viewer, and Spreadsheet.
 
 The Collaborator consists of:
 
-- **Collaboration Client** (@syncfusion/ej2\-collaborator) integrated into the EJ2 component.
+- **Collaboration Client** can be integrated into the EJ2 component.
 
 - **Collaboration Server** available for ASP.NET Core, ASP.NET MVC, and Node.js.
 
@@ -28,9 +28,7 @@ Both client and server are built on a shared, control\-agnostic common collabora
 
 - Scalable architecture with Redis support for multi\-server deployments.
 
-- Reusable collaboration framework for Document Editor, PDF Viewer, and Spreadsheet.
-
-- Built\-in support for session management, version tracking, and content persistence.
+- Reusable collaboration framework for DOCX Editor, PDF Viewer, and Spreadsheet.
 
 ## How the Collaborator Works
 
@@ -46,29 +44,15 @@ Both client and server are built on a shared, control\-agnostic common collabora
 
 ## Collaboration Packages
 
+The Syncfusion Collaborator is available as client and server packages. Install the client package in your application and choose the appropriate server package based on your hosting platform.
 
-The Collaborator is available as client and server packages. Install the client package in your application and choose the appropriate server package based on your hosting platform.
-|**Package**|**Description**|
+|Package|Description|
 |:---|:---|
-|@syncfusion/ej2\-collaborator|Client library|
-|Syncfusion.Collaborator.Server|ASP.NET Core / ASP.NET MVC server|
-|ej2\-collaborator\-server\-nodejs|Node.js server|
-
-
-
-### @syncfusion/ej2\-collaborator — Client
-
-A JavaScript/TypeScript client library that enables collaborative editing in EJ2 components such as Document Editor, PDF Viewer, and Spreadsheet.
-
-### Syncfusion.Collaborator.Server — Server (ASP.NET)
-
-A collaboration server for ASP.NET Core and ASP.NET MVC that synchronizes edits, manages collaboration sessions, and broadcasts updates between connected users.
-
-### ej2\-collaborator\-server\-nodejs — Server (Node.js)
-
-A Node.js\-based collaboration server that provides the same real\-time collaboration capabilities as the ASP.NET server using WebSockets and Redis. It is suitable for JavaScript and TypeScript\-based applications. \
- \
-**Note:** The Node.js Collaboration Server currently supports **PDF Viewer** collaborative editing only. **Document Editor** and **Spreadsheet** require the ASP.NET\-based web service implementation for document processing, operation transformation, and save operations.
+|@syncfusion/ej2\-collaborator|JavaScript/TypeScript client library for collaborative editing in EJ2 components such as DOCX Editor, PDF Viewer, and Spreadsheet.|
+|Syncfusion.Collaborator.Server|Collaboration server for ASP.NET Core and ASP.NET MVC that synchronizes edits, manages collaboration sessions, and broadcasts updates between connected users.|
+|ej2\-collaborator\-server|Node.js-based collaboration server for JavaScript and TypeScript applications.|
+ 
+**Note:** The Node.js Collaboration Server currently supports **PDF Viewer** collaborative editing only. **DOCX Editor** and **Spreadsheet** require the ASP.NET\-based web service implementation for document processing, operation transformation, and save operations.
 
 
 ## Prerequisites
@@ -77,26 +61,24 @@ A Node.js\-based collaboration server that provides the same real\-time collabor
 
 - One of the supported server runtimes:
 
-   - .NET 8 SDK (for ASP.NET Core)
+   - .NET 8/9/10 SDK (for ASP.NET Core)
 
-   - .NET Framework 4.6.2 or later with ASP.NET MVC 5 (for ASP.NET MVC)
+   - .NET Framework 4.6.2 ASP.NET MVC 5 (for ASP.NET MVC)
 
    - Node.js 18 or later (for Node.js)
 
-- An EJ2 content editor component (such as the Document Editor, PDF Viewer, or Spreadsheet) configured with the Collaboration Client.
-
 ## What's Next
 
-- Collaboration Client
+- [Collaboration Client](./collaboration-client)
 
-- Collaboration Server
+- [Collaboration Server](./collaboration-server)
 
-- Getting Started
+- [Getting Started](./getting-started/getting-started-with-core)
 
-   - With ASP.NET Core Server
+   - [With ASP.NET Core Server](./getting-started/getting-started-with-core)
 
-   - With ASP.NET MVC Server
+   - [With ASP.NET MVC Server](./getting-started/getting-started-with-mvc)
 
-   - With Node.js Server
+   - [With Node.js Server](./getting-started/getting-started-with-node)
 
-- FAQs
+- [FAQs](./faq)

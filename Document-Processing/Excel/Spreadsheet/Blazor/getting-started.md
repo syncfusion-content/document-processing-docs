@@ -19,6 +19,20 @@ This section briefly explains how to include [Blazor Spreadsheet Editor](https:/
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
 
+### Install the required .NET workloads
+
+If using **WebAssembly** Application, install the required workload for SkiaSharp. Run the following command in a command prompt (Windows), terminal (macOS), or shell (Linux):
+
+{% tabs %}
+{% highlight bash tabtitle="bash" %}
+
+dotnet workload install wasm-tools
+
+{% endhighlight %} 
+{% endtabs %}
+
+The `wasm-tools` workload is installed for the active .NET SDK. When targeting a different .NET SDK version, ensure that the corresponding version-specific workload is installed.
+
 ## Create a new Blazor App in Visual Studio
 
 You can create a **Blazor WebAssembly App (Standalone)** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-7.0&pivots=vs) or the [Blazor Extension](https://blazor.syncfusion.com/documentation/visual-studio-integration/template-studio).
@@ -29,8 +43,7 @@ To add **Syncfusion Blazor Spreadsheet** component in the app, open the NuGet pa
 
 * [Syncfusion.Blazor.Spreadsheet](https://www.nuget.org/packages/Syncfusion.Blazor.Spreadsheet)
 * [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/)
-
-* [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/)
+* [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/) (version 4.150.1)
 
 Alternatively, you can utilize the following package manager command to achieve the same.
 
@@ -39,7 +52,7 @@ Alternatively, you can utilize the following package manager command to achieve 
 
 Install-Package Syncfusion.Blazor.Spreadsheet -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
-Install-Package SkiaSharp.Views.Blazor -Version {{ site.releaseversion }}
+Install-Package SkiaSharp.Views.Blazor -Version {{ 4.150.1 }}
 
 {% endhighlight %}
 {% endtabs %}
@@ -54,6 +67,20 @@ N>
 ## Prerequisites
 
 * [System requirements for Blazor components](https://blazor.syncfusion.com/documentation/system-requirements)
+
+### Install the required .NET workloads
+
+If using **WebAssembly** Application, install the required workload for SkiaSharp. Run the following command in a command prompt (Windows), terminal (macOS), or shell (Linux):
+
+{% tabs %}
+{% highlight bash tabtitle="bash" %}
+
+dotnet workload install wasm-tools
+
+{% endhighlight %} 
+{% endtabs %}
+
+The `wasm-tools` workload is installed for the active .NET SDK. When targeting a different .NET SDK version, ensure that the corresponding version-specific workload is installed.
 
 ## Create a new Blazor App in Visual Studio Code
 
@@ -76,7 +103,7 @@ cd BlazorApp
 
 * Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
 * Ensure you’re in the project root directory where your `.csproj` file is located.
-* Run the following command to install the [Syncfusion.Blazor.Spreadsheet](https://www.nuget.org/packages/Syncfusion.Blazor.Spreadsheet) , [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/4.150.1) (version 4.150.1) NuGet packages and ensure all dependencies are installed.
+* Run the following command to install the [Syncfusion.Blazor.Spreadsheet](https://www.nuget.org/packages/Syncfusion.Blazor.Spreadsheet) , [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/4.150.1) (version `4.150.1`) NuGet packages and ensure all dependencies are installed.
 
 {% tabs %}
 
@@ -84,8 +111,7 @@ cd BlazorApp
 
 dotnet add package Syncfusion.Blazor.Spreadsheet -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
-dotnet add package SkiaSharp.Views.Blazor -v {{ site.releaseversion }}
-
+dotnet add package SkiaSharp.Views.Blazor -v {{ 4.150.1 }}
 dotnet restore
 
 {% endhighlight %}
@@ -112,6 +138,20 @@ dotnet --version
 {% endhighlight %}
 {% endtabs %}
 
+### Install the required .NET workloads
+
+If using **WebAssembly** Application, install the required workload for SkiaSharp. Run the following command in a command prompt (Windows), terminal (macOS), or shell (Linux):
+
+{% tabs %}
+{% highlight bash tabtitle="bash" %}
+
+dotnet workload install wasm-tools
+
+{% endhighlight %} 
+{% endtabs %}
+
+The `wasm-tools` workload is installed for the active .NET SDK. When targeting a different .NET SDK version, ensure that the corresponding version-specific workload is installed.
+
 ## Create a Blazor WebAssembly App using .NET CLI
 
 Run the following command to create a new Blazor WebAssembly App in a command prompt (Windows) or terminal (macOS) or command shell (Linux). For detailed instructions, refer to the [Blazor WASM App Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-app?tabcontent=.net-cli) documentation.
@@ -131,7 +171,7 @@ After creating the Blazor WebAssembly App, install the required Syncfusion NuGet
 
 * Open a command prompt, terminal, or shell.
 * Ensure you’re in the project root directory where your `.csproj` file is located.
-* Run the following command to install the [Syncfusion.Blazor.Spreadsheet](https://www.nuget.org/packages/Syncfusion.Blazor.Spreadsheet) , [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/) (version 4.150.1) NuGet packages and ensure all dependencies are installed.
+* Run the following command to install the [Syncfusion.Blazor.Spreadsheet](https://www.nuget.org/packages/Syncfusion.Blazor.Spreadsheet) , [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) and [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/) (version `4.150.1`) NuGet packages and ensure all dependencies are installed.
 
 {% tabs %}
 
@@ -139,7 +179,7 @@ After creating the Blazor WebAssembly App, install the required Syncfusion NuGet
 
 dotnet add package Syncfusion.Blazor.Spreadsheet -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
-dotnet add package SkiaSharp.Views.Blazor -v {{ site.releaseversion }}
+dotnet add package SkiaSharp.Views.Blazor -v {{ 4.150.1 }}
 dotnet restore
 
 {% endhighlight %}

@@ -1464,18 +1464,12 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 Essential<sup>&reg;</sup> PDF enables you to convert an SVG (Scalable Vector Graphics) file into a PDF document with high-quality rendering, accurate layout preservation, and full cross-platform support. The [SvgConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.SvgConverter.html) class is used to convert an SVG file into a [PdfTemplate](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Graphics.PdfTemplate.html), which can then be drawn into a PDF page. Please refer to the following code example.
 
-The following namespaces are required to compile the code in this topic.
-
-* using Syncfusion.Pdf
-* using System.Drawing
-* using System.IO
-
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
 using Syncfusion.Pdf;
-using System.Drawing;
+using Syncfusion.Drawing;
 using System.IO;
 
 //Initialize SVG converter.
