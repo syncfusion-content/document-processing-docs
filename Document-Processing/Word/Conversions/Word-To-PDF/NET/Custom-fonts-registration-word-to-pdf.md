@@ -1,5 +1,5 @@
-﻿---
-title: Custom Font Registration for Word to PDF Conversion in .NET Word | Syncfusion
+---
+title: Custom font registration for Word-to-PDF in .NET | Syncfusion
 description: This section illustrates how to register custom fonts for Word-to-PDF conversion using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
@@ -53,7 +53,7 @@ Imports Syncfusion.Drawing.Fonts
 
 ## Register Custom Fonts from Streams
 
-Users can register one or more fonts directly from memory streams. This approach is recommended for cloud-hosted, containerized, and serverless applications where access to local font files may be limited.
+Users can register one or more fonts directly from memory streams. This approach is recommended for cloud-hosted, containerized, and cloud-native applications where access to local font files may be limited.
 
 The following code example demonstrates how developers can register fonts from memory streams.
 
@@ -236,7 +236,7 @@ This ensures that registered fonts are preferred over operating system fonts whe
 
 ## Best Practices
 
-* Register fonts during application startup and reuse them throughout the application lifecycle.
+* Register fonts during application startup and reuse them throughout the application life cycle.
 * For cloud-native applications, loading fonts as streams avoids platform-specific font installation requirements.
 * Call `ClearRegisteredFonts(true)` to release memory associated with registered fonts.
 * Use `RegisteredFontNames` to verify that all required fonts have been successfully registered before processing documents.
