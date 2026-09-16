@@ -120,6 +120,6 @@ pdfViewer.IsThumbnailViewVisible = false;
 
 ## See Also
 
-- [Page Navigation](https://help.syncfusionessing/pdf/pdf-viewer/maui/page-navigation)
-- [Document Outline](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/)[View Modes](https://help.syncfusion-processing/pdf/pdf-viewer/maui/view-mode)
-- [Zooming](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/zooms://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/custom-bookmark)
+- [Page Navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/page-navigation)
+- [Document Outline](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/document-outline)
+- [Zooming](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/magnification)
