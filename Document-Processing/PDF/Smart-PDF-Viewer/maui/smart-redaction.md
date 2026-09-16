@@ -14,6 +14,8 @@ The [Smart PDF Viewer](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.Smart
 
 Smart Redaction allows selecting detection patterns (emails, names, phone numbers, and more) and automatically identifies matching content throughout the document. Users can activate the Smart Redaction feature by selecting the **Smart Redaction** button from the **AI Tools** menu in the viewer toolbar, choose the patterns to detect, run a **Scan**, review the detected items in the Redaction panel, and apply redaction selectively.
 
+![Smart redaction](images/Smart-Redaction.gif)
+
 N> The AI service must be configured before using the Smart Redaction feature. Refer to [Getting Started](./getting-started) to learn how to register a chat client in `MauiProgram.cs`.
 
 ## Component usage
