@@ -25,9 +25,12 @@ NuGet provides a convenient way to download and install the Syncfusion<sup>®</s
   </tr>
 </table>
 
-N> The `Syncfusion.DocumentChunking` package is available in the [Syncfusion Nexus Repository](https://nexus.syncfusioninternal.com/#browse/browse:nuget-hosted:Syncfusion.DocumentChunking).
+N> 1. Syncfusion<sup>&reg;</sup> components are available in <a href="https://www.nuget.org/" aria-label="Syncfusion nuget packages">nuget.org</a>.
+N> 2. Starting with v34.x.x, if you reference Syncfusion® assemblies from trial setup or from the NuGet feed, you also have to add “Syncfusion.Licensing” assembly reference and include a license key in your projects. Please refer to this link to know about registering Syncfusion® license key in your application to use our components.
 
 ## NuGet Package Installation and Uninstallation
+
+To use Syncfusion<sup>&reg;</sup> NuGet packages in your project, refer to the NuGet package <a href="https://help.syncfusion.com/extension/syncfusion-nuget-packages/nuget-packages" aria-label="Nuget installation">Installation</a> and <a href="https://help.syncfusion.com/extension/syncfusion-nuget-packages/nuget-uninstallation-process#" aria-label="Nuget uninstallation">Uninstallation</a> sections.
 
 The `Syncfusion.DocumentChunking` package can be installed and uninstalled using Package Manager Console.
 
