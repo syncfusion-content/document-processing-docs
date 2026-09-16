@@ -14,7 +14,7 @@ The [`AssistViewSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.S
 
 The AI Assist View feature of the Smart PDF Viewer is a panel that displays AI-generated content such as summaries and Q&A responses. It provides users with the ability to generate a summary of the PDF document and ask questions about its content. Users can activate the AI assistant by selecting the **AI Assist** button in the viewer toolbar (or from the **AI Tools** menu). The assistant responds to user queries and offers AI-generated suggestions to guide exploration of the document.
 
-![document summaries](images/Documentation-summarize.gif)
+![Document Summarization in .NET MAUI PDFViewer](images/document-summarizer.gif)
 
 N> The AI service must be configured before using the AI Assist feature. Refer to [Getting Started](./getting-started) to learn how to register a chat client in `MauiProgram.cs`.
 
