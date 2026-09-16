@@ -16,7 +16,7 @@ The Syncfusion .NET MAUI AI-powered components can enhance applications with int
 1. **Obtain a DeepSeek API Key**  
    Create an account at [DeepSeek Platform](https://platform.deepseek.com), sign in, and navigate to [API Keys](https://platform.deepseek.com/api_keys) to generate an API key.
 2. **Review Model Specifications**  
-   Refer to [DeepSeek Models Documentation](https://api-docs.deepseek.com/quick_start/pricing) for details on available models (e.g., `deepseek-chat`).
+   Refer to [DeepSeek Models Documentation](https://api-docs.deepseek.com/quick_start/pricing/) for details on available models (e.g., `deepseek-chat`).
 
 ## Define Request and Response Models
 
