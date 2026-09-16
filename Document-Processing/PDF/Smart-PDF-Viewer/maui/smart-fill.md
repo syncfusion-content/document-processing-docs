@@ -14,6 +14,8 @@ Smart Fill accelerates completion of PDF forms by using AI to detect fields and 
 
 Users can trigger Smart Fill by selecting the **Smart Fill** button from the **AI Tools** menu in the viewer toolbar. The feature analyzes the current clipboard content (or the data passed programmatically) and maps the extracted values to the corresponding form fields — including text boxes, combo boxes, radio buttons, and list boxes — in the loaded PDF document.
 
+![Smart Fill in .NET MAUI PDFViewer](images/Smart-Fill.gif)
+
 N> The AI service must be configured before using the Smart Fill feature. Refer to [Getting Started](./getting-started) to learn how to register a chat client in `MauiProgram.cs`.
 
 ## Component usage

@@ -31,7 +31,7 @@ Before proceeding, ensure the following are in place:
 ## Step 2: Install the Syncfusion<sup>&reg;</sup> MAUI Smart PDF Viewer NuGet Package
 
 1.  In **Solution Explorer**, right-click the project and choose **Manage NuGet Packages**.
-2.  Search for [Syncfusion.Maui.SmartPdfViewer](https://www.nuget.org/packages/Syncfusion.Maui.SmartPdfViewer) and install the latest version.
+2.  Search for `Syncfusion.Maui.SmartPdfViewer` and install the latest version.
 3.  Ensure the dependencies ([Syncfusion.Maui.PdfViewer](https://www.nuget.org/packages/Syncfusion.Maui.PdfViewer), [Syncfusion.Maui.SmartComponents](https://www.nuget.org/packages/Syncfusion.Maui.SmartComponents), [Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core)) are installed and the project is restored.
 
 Alternatively, you can utilize the following package manager command to achieve the same.
@@ -46,7 +46,7 @@ Install-Package Syncfusion.Maui.SmartPdfViewer -Version {{ site.releaseversion }
 
 ## Step 3: Register the Syncfusion<sup>&reg;</sup> Core Handler
 
-[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) is automatically installed as a dependency when the [Syncfusion.Maui.SmartPdfViewer](https://www.nuget.org/packages/Syncfusion.Maui.SmartPdfViewer) NuGet is installed.
+[Syncfusion.Maui.Core](https://www.nuget.org/packages/Syncfusion.Maui.Core/) is automatically installed as a dependency when the `Syncfusion.Maui.SmartPdfViewer` NuGet is installed.
 
 1. Add the following namespace in your `MauiProgram.cs` file.
    {% tabs %}
@@ -447,7 +447,7 @@ Before proceeding, ensure the following are set up:
 ## Step 2: Install the Syncfusion<sup>&reg;</sup> MAUI Smart PDF Viewer NuGet Package
 
 1. In **Solution Explorer,** right-click the project and choose **Manage NuGet Packages**.
-2. Search for [Syncfusion.Maui.SmartPdfViewer](https://www.nuget.org/packages/Syncfusion.Maui.SmartPdfViewer) and install the latest version.
+2. Search for `Syncfusion.Maui.SmartPdfViewer` and install the latest version.
 3. Ensure the necessary dependencies are installed correctly, and the project is restored. If not, open the Terminal in Rider and manually run: `dotnet restore`
 
 Alternatively, you can utilize the following dotnet CLI command to achieve the same.
