@@ -11,7 +11,7 @@ documentation: ug
 
 The Smart Components uses a chat inference service resolved from dependency injection to generate contextual suggestions. Register a compatible chat client and an inference adapter in `MauiProgram.cs`.
 
-### Azure OpenAI
+## Azure OpenAI
 
 For **Azure OpenAI**, first [deploy an Azure OpenAI Service resource and model](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource), then values for `azureOpenAIKey`, `azureOpenAIEndpoint` and `azureOpenAIModel` will all be provided to you.
 
@@ -59,7 +59,7 @@ builder.ConfigureSyncfusionAIServices();
 {% endhighlight %}
 {% endtabs %}
 
-### OpenAI
+## OpenAI
 
 For **OpenAI**, create an API key and place it at `openAIApiKey`. The value for `openAIModel` is the model you wish.
 
@@ -108,7 +108,7 @@ builder.ConfigureSyncfusionAIServices();
 {% endhighlight %}
 {% endtabs %}
 
-### Ollama
+## Ollama
 
 To use Ollama for running self hosted models:
 

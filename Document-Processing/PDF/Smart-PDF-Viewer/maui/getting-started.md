@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with .NET MAUI Smart PDF Viewer | Syncfusion
-description: Learn how to get started with the Syncfusion .NET MAUI Smart PDF Viewer control, including package installation, AI service configuration, and loading your first PDF document.
+description: Get started with Syncfusion .NET MAUI Smart PDF Viewer by installing packages, configuring AI services, and loading a PDF document.
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
