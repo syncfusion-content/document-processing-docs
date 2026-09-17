@@ -205,7 +205,7 @@ export default {
 The following example enables or disables the handwritten signature in the PDF Viewer. Setting the value to `false` disables the feature.
 
 {% tabs %}
-{% highlight ts tabtitle="Standalone" %}
+{% highlight html tabtitle="Standalone" %}
 
 <template>
   <div id="app">

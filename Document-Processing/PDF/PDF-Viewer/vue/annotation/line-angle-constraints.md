@@ -11,7 +11,10 @@ documentation: ug
 
 The PDF Viewer control provides angle-constraint functionality for line-type annotations. When enabled, drawing operations snap to configured angle increments, improving accuracy and consistency for technical drawings and measurements.
 
+![Line angle constraint](../../javascript-es6/annotations/annotation-images/line-angle-constraint.gif)
+
 ## Enable line angle constraints
+
 Configure the `enableLineAngleConstraints` property within `annotationDrawingOptions`. When enabled, supported line-type annotations snap to fixed angles.
 
 The following code demonstrates how to enable line angle constraints:
@@ -77,6 +80,33 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
+## Work with constrained annotations
+
+### Drawing behavior
+
+When angle constraints are enabled:
+
+- Begin drawing a supported annotation (Line, Arrow, Polyline, Distance, or Perimeter).
+- The segment snaps to the nearest allowed angle according to `restrictLineAngleTo`.
+- A visual indicator displays the current snapping angle in real time.
+- Release to finalize the annotation.
+
+### Keyboard shortcuts
+
+Desktop platforms:
+
+- `Shift` + drag: toggles snapping during the drag operation. If constraints are disabled, `Shift` temporarily enables snapping; if enabled, `Shift` enforces snapping.
+
+### Modifying constrained annotations
+
+When editing existing line annotations with selectors:
+
+- Constraints apply relative to the annotation's current orientation (the line's direction is the 0° reference).
+- Constraint snapping during modification is supported for Line and Arrow annotations.
+- Adjustments snap according to the configured `restrictLineAngleTo` increment.
+
+N> Refer to the Vue PDF Viewer [feature tour](https://www.syncfusion.com/pdf-viewer-sdk/vue-pdf-viewer) for highlights. See additional [Vue PDF Viewer examples](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples)
+
 ## Configuration Properties
 
 ### enableLineAngleConstraints
@@ -113,29 +143,17 @@ Examples:
 - `restrictLineAngleTo: 45` → snapped angles: 0°, 45°, 90°, 135°, 180°, 225°, 270°, 315°, 360°
 - `restrictLineAngleTo: 100` → snapped angles: 0°, 100°, 200°, 300°, 360°
 
-## Work with constrained annotations
+## See also
 
-### Drawing behavior
-
-When angle constraints are enabled:
-
-- Begin drawing a supported annotation (Line, Arrow, Polyline, Distance, or Perimeter).
-- The segment snaps to the nearest allowed angle according to `restrictLineAngleTo`.
-- A visual indicator displays the current snapping angle in real time.
-- Release to finalize the annotation.
-
-### Keyboard shortcuts
-
-Desktop platforms:
-
-- `Shift` + drag: toggles snapping during the drag operation. If constraints are disabled, `Shift` temporarily enables snapping; if enabled, `Shift` enforces snapping.
-
-### Modifying constrained annotations
-
-When editing existing line annotations with selectors:
-
-- Constraints apply relative to the annotation's current orientation (the line's direction is the 0° reference).
-- Constraint snapping during modification is supported for Line and Arrow annotations.
-- Adjustments snap according to the configured `restrictLineAngleTo` increment.
-
-N> Refer to the Vue PDF Viewer [feature tour](https://www.syncfusion.com/pdf-viewer-sdk/vue-pdf-viewer) for highlights. See additional [Vue PDF Viewer examples](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples)
+- [Annotation Overview](./overview)
+- [Annotation Types](./annotation/annotation-types/area-annotation)
+- [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
+- [Create and Modify Annotation](./create-modify-annotation)
+- [Customize Annotation](./customize-annotation)
+- [Remove Annotation](./delete-annotation)
+- [Handwritten Signature](./signature-annotation)
+- [Export and Import Annotation](./export-import/export-annotation)
+- [Annotation Permission](./annotation-permission)
+- [Annotation in Mobile View](./annotations-in-mobile-view)
+- [Annotation Events](./annotation-event)
+- [Annotation API](./annotations-api)
