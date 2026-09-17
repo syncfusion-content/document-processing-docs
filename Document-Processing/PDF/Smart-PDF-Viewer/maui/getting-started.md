@@ -425,7 +425,7 @@ public static MauiApp CreateMauiApp()
 2.  Press `F5` to run the application.
 3.  The PDF document will be loaded in the Smart PDF Viewer, and the AI-powered features can be accessed from the built-in toolbar and the AI Assist, Smart Redaction, and Smart Fill panels.
 
-N> To run the AI features on **Android**, an additional semantic-search model setup (`model.onnx` and `vocab.txt`) may be required. Refer to the platform-specific notes in the [Smart Components documentation](https://help.syncfusion.com/maui/common/configure-ai-service) for details on copying the local embeddings model to the app data directory at startup.
+N> To run the AI features on **Android**, an additional semantic-search model setup (`model.ONNX` and `vocab.txt`) may be required. Refer to the platform-specific notes in the [Smart Components documentation](https://help.syncfusion.com/maui/common/configure-ai-service) for details on copying the local embeddings model to the app data directory at startup.
 
 {% endtabcontent %}
 {% tabcontent JetBrains Rider %}
