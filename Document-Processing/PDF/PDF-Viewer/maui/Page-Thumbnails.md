@@ -38,6 +38,23 @@ pdfViewer.IsThumbnailViewVisible = true;
 
 {% endtabs %}
 
+Users can close the thumbnail view using the built-in close button available in the thumbnail pane. The thumbnail view can also be hidden programmatically by setting the `IsThumbnailViewVisible` property to `false`.
+
+This property can be used to dynamically show or hide the thumbnail pane based on your application's requirements.
+
+The thumbnail view can also be closed programmatically by setting the `IsThumbnailViewVisible` property to `false`.
+
+{% tabs %}
+
+{% highlight c# %}
+
+pdfViewer.IsThumbnailViewVisible = false;
+
+{% endhighlight %}
+
+{% endtabs %}
+
+
 ## Navigating using page thumbnails
 
 Select a page thumbnail to navigate the PDF Viewer to the corresponding page.
@@ -97,22 +114,6 @@ The page thumbnail view adapts to supported desktop and mobile platforms.
 | Android Tablet | Displays a resizable thumbnail pane beside the PDF document. |
 | iOS | Displays page previews in a touch-optimized layout. |
 | iPadOS | Displays a resizable thumbnail pane beside the PDF document. |
-
-## Closing the thumbnail view
-
-Users can close the page thumbnail view using the built-in close button available in the thumbnail pane.
-
-The thumbnail view can also be closed programmatically by setting the `IsThumbnailViewVisible` property to `false`.
-
-{% tabs %}
-
-{% highlight c# %}
-
-pdfViewer.IsThumbnailViewVisible = false;
-
-{% endhighlight %}
-
-{% endtabs %}
 
 ## Demo
 
