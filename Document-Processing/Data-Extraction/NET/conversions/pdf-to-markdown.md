@@ -9,7 +9,7 @@ keywords: Assemblies
 
 # Convert PDF to Markdown in .NET Smart Data Extractor
 
-Markdown is a lightweight markup language that adds formatting elements to plain text documents. The Syncfusion<sup>&reg;</sup> Smart Data Extractor library extracts structured information from PDF documents and scanned images, and outputs the content as Markdown (MD). It analyzes text blocks, tables, headers, and form fields to preserve layout and formatting.
+Markdown is a lightweight markup language that adds formatting elements to plain text documents. The Syncfusion<sup>&reg;</sup> Smart Data Extractor library extracts structured information from PDF documents and scanned images, and outputs the content as Markdown (MD). It analyzes text blocks, barcodes, tables, headers, and form fields to preserve layout and formatting.
 
 ## Assemblies and NuGet packages required
 
