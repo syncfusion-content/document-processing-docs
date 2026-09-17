@@ -166,7 +166,7 @@ function editLineProgrammatically() {
 ### Delete Line
 
 The PDF Viewer supports deleting existing annotations through the UI and API.
-See [**Delete Annotation**](../remove-annotations) for full behavior and workflows.
+See [**Delete Annotation**](../delete-annotation) for full behavior and workflows.
 
 ### Comments
 
@@ -238,12 +238,12 @@ For the full list of available events and their descriptions, see [**Annotation 
 
 
 ## Export and Import
-The PDF Viewer supports exporting and importing annotations. For details on supported formats and workflows, see [**Export and Import annotations**](../export-import-annotations).
+The PDF Viewer supports exporting and importing annotations. For details on supported formats and workflows, see [**Export and Import annotations**](../export-import/export-annotation).
 
 ## See Also
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)
 - [Customize Context Menu](../../context-menu/custom-context-menu)
 - [Comments Panel](../comments)
 - [Annotation Events](../annotation-event)
-- [Export and Import annotations](../export-import-annotations)
-- [Delete Annotations](../remove-annotations)
+- [Export and Import annotations](../export-import/export-annotation)
+- [Delete Annotations](../delete-annotation)
