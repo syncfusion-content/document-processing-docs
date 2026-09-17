@@ -142,7 +142,7 @@ private void ConvertButton_Click(object sender, RoutedEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Getting%20Started/WinUI).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/html-to-pdf-csharp-examples/tree/master/WinUI).
 
 By executing the program, you will get the PDF document as follows.
 ![Output PDF image](htmlconversion_images/HtmlOutput.png)
