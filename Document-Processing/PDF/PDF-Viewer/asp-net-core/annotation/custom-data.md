@@ -130,7 +130,7 @@ window.onload = function() {
 ## See also
 
 - [Annotation Overview](../overview)
-- [Annotation Types](../annotations/annotation-types/area-annotation)
+- [Annotation Types](../annotation/annotation-types/area-annotation)
 - [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
 - [Create and Modify Annotation](../annotation/create-modify-annotation)
 - [Customize Annotation](../annotation/customize-annotation)

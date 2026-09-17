@@ -224,7 +224,7 @@ Disable text markup annotations (including strikethrough) using the [`enableText
 The PDF viewer provides annotation life-cycle events that notify when strikethrough annotations are added, modified, selected, or removed. For the full list of available events and their descriptions, see [**Annotation Events**](../annotation-event).
 
 ## Export and Import
-The PDF Viewer supports exporting and importing annotations, allowing you to save annotations as a separate file or load existing annotations back into the viewer. For full details on supported formats and steps to export or import annotations, see [**Export and Import Annotation**](../export-import-annotations).
+The PDF Viewer supports exporting and importing annotations, allowing you to save annotations as a separate file or load existing annotations back into the viewer. For full details on supported formats and steps to export or import annotations, see [**Export and Import Annotation**](../export-import/export-annotation).
 
 ## See Also
 
@@ -232,5 +232,5 @@ The PDF Viewer supports exporting and importing annotations, allowing you to sav
 - [Customize Context Menu](../../context-menu/custom-context-menu)
 - [Comments Panel](../comments)
 - [Annotation Events](../annotation-event)
-- [Export and Import annotations](../export-import-annotations)
-- [Delete Annotations](../remove-annotations)
+- [Export and Import annotations](../export-import/export-annotation)
+- [Delete Annotations](../delete-annotation)
