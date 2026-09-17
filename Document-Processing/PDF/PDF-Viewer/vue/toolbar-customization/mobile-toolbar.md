@@ -1,88 +1,86 @@
 ---
 layout: post
-title: Mobile Toolbar in Vue PDF Viewer | Syncfusion
-description: Customize the mobile toolbar in the Vue PDF Viewer to ensure smooth touch interactions and a tailored experience on small screens.
+title: Customize mobile toolbar in Vue PDF Viewer | Syncfusion
+description: Learn how to customize the toolbar for mobile devices in the Syncfusion Vue PDF Viewer and ensure smooth touch interactions.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize the Mobile Toolbar in Vue PDF Viewer
+# Customize mobile toolbar in Vue PDF Viewer
 
-The Mobile PDF Viewer provides features for viewing, searching, annotating, and managing PDF documents on mobile devices. It exposes core tools such as search, download, bookmarking, annotation, and page organization. The desktop toolbar can also be enabled in mobile mode to expose additional actions when required.
+## Overview
 
-## Mobile Mode Toolbar Configuration
+This guide shows you how to enable the desktop toolbar on mobile devices running the Vue PDF Viewer, and how to preserve touch scrolling when the desktop toolbar is used.
 
-In mobile mode, the toolbar is optimized for small screens and presents the most common actions for interacting with a PDF document. The following key features are available in mobile mode:
+**Outcome**: a working Vue example that displays the desktop toolbar on mobile devices with smooth scrolling enabled.
 
-![Mobile toolbar with primary PDF interaction options](../images/mobileToolbar.png)
+## Prerequisites
 
-### Main Toolbar Options
+- EJ2 Vue PDF Viewer installed and added in project. See [getting started guide](../getting-started)
+- For standalone mode: a valid [`resourceUrl`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#resourceurl) hosting the PDF Viewer assets.
+- For server-backed mode: a working [`serviceUrl`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#serviceurl) endpoint.
 
-- OpenOption: Tap to load a PDF document.
-- SearchOption: Access the search bar to find text within the document.
+## Steps
 
-![Search bar displayed for finding text within a PDF](../images/searchOption.png)
+### Step 1: Enable desktop toolbar on mobile
 
-- UndoRedoTool: Quickly undo or redo any annotations made.
-- OrganizePagesTool: Enable or disable page organization features to modify document pages.
+Set [`enableDesktopMode`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#enabledesktopmode) to `true` on the PDF Viewer to display the desktop toolbar on mobile devices.
 
-![Page organization interface for modifying PDF pages](../images/organizePages.png)
+### Step 2: (Optional, recommended) Disable text-selection for smooth scrolling
 
-- AnnotationEditTool: Activate or deactivate annotation editing to add or modify annotations.
+Set [`enableTextSelection`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#enabletextselection) to `false` to preserve smooth touch scrolling and prevent text-selection from capturing touch events.
 
-![Annotation editing toolbar allowing users to add, edit, or delete annotations on a PDF](../images/editAnnotation.png)
+### Step 3: Inject required services
 
-N> In mobile mode, the annotation toolbar is displayed at the bottom of the viewer.
+Inject the [`Toolbar`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbar) and other services required by your toolbar features.
 
-### More Options Menu
-When you open the more options menu, you will see additional actions such as:
-
-- DownloadOption: Download the currently opened PDF document.
-- BookmarkOption: View bookmarks within the document.
-
-![More options menu showing additional actions like download and bookmark](../images/more-options.png)
-
-## Enable Desktop Mode in Mobile
-
-The desktop toolbar can be enabled on mobile devices by setting the `enableDesktopMode` option. Enabling this option exposes desktop-style toolbar actions in the mobile PDF Viewer.
-
-### Steps to Enable Desktop Mode
-
-**Step 1:** Set `enableDesktopMode` to true in the component configuration.
-**Step 2:** The viewer will use the desktop toolbar layout, granting access to additional actions and controls.
+**Complete example:**
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (Standalone)" %}
+{% highlight html tabtitle="Standalone (Composition API - ~/src/App.vue)" %}
 
 <template>
-  <div id="app">
-    <ejs-pdfviewer id="pdfViewer" :documentPath="documentPath" :resourceUrl="resourceUrl" :enableDesktopMode="true">
+  <div>
+    <ejs-pdfviewer
+      id="PdfViewer"
+      ref="pdfviewer"
+      :enableDesktopMode="true"
+      :enableTextSelection="false"
+      :documentPath="documentPath"
+      :resourceUrl="resourceUrl"
+      style="height: 640px; width: 100%; display: block;">
     </ejs-pdfviewer>
   </div>
 </template>
 
 <script setup>
+import { provide } from 'vue';
 import {
   PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
   ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer
 } from '@syncfusion/ej2-vue-pdfviewer';
-import { provide } from 'vue';
 
-const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
+const documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
 
-provide('PdfViewer', [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView,
-  TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]);
+provide('PdfViewer', [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]);
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Options API (Standalone)" %}
+{% highlight html tabtitle="Standalone (Options API - ~/src/App.vue)" %}
 
 <template>
-  <div id="app">
-    <ejs-pdfviewer id="pdfViewer" :documentPath="documentPath" :resourceUrl="resourceUrl" :enableDesktopMode="true">
+  <div>
+    <ejs-pdfviewer
+      id="PdfViewer"
+      ref="pdfviewer"
+      :enableDesktopMode="true"
+      :enableTextSelection="false"
+      :documentPath="documentPath"
+      :resourceUrl="resourceUrl"
+      style="height: 640px; width: 100%; display: block;">
     </ejs-pdfviewer>
   </div>
 </template>
@@ -95,7 +93,9 @@ import {
 
 export default {
   name: 'App',
-  components: { 'ejs-pdfviewer': PdfViewerComponent },
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent
+  },
   data() {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
@@ -103,42 +103,54 @@ export default {
     };
   },
   provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView,
-      TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]
+    PdfViewer: [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]
   }
 }
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Composition API (Server-Backed)" %}
+{% highlight html tabtitle="Server-Backed (Composition API - ~/src/App.vue)" %}
 
 <template>
-  <div id="app">
-    <ejs-pdfviewer id="pdfViewer" :documentPath="documentPath" :serviceUrl="serviceUrl" :enableDesktopMode="true">
+  <div>
+    <ejs-pdfviewer
+      id="PdfViewer"
+      ref="pdfviewer"
+      :enableDesktopMode="true"
+      :enableTextSelection="false"
+      :documentPath="documentPath"
+      :serviceUrl="serviceUrl"
+      style="height: 640px; width: 100%; display: block;">
     </ejs-pdfviewer>
   </div>
 </template>
 
 <script setup>
+import { provide } from 'vue';
 import {
   PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
   ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer
 } from '@syncfusion/ej2-vue-pdfviewer';
-import { provide } from 'vue';
 
-const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
+const documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+const serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
 
-provide('PdfViewer', [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView,
-  TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]);
+provide('PdfViewer', [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]);
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Options API (Server-Backed)" %}
+{% highlight html tabtitle="Server-Backed (Options API - ~/src/App.vue)" %}
 
 <template>
-  <div id="app">
-    <ejs-pdfviewer id="pdfViewer" :documentPath="documentPath" :serviceUrl="serviceUrl" :enableDesktopMode="true">
+  <div>
+    <ejs-pdfviewer
+      id="PdfViewer"
+      ref="pdfviewer"
+      :enableDesktopMode="true"
+      :enableTextSelection="false"
+      :documentPath="documentPath"
+      :serviceUrl="serviceUrl"
+      style="height: 640px; width: 100%; display: block;">
     </ejs-pdfviewer>
   </div>
 </template>
@@ -151,16 +163,17 @@ import {
 
 export default {
   name: 'App',
-  components: { 'ejs-pdfviewer': PdfViewerComponent },
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent
+  },
   data() {
     return {
       documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
+      serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/'
     };
   },
   provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView,
-      TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]
+    PdfViewer: [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]
   }
 }
 </script>
@@ -168,141 +181,32 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## Enable Scrolling in Desktop Mode with Touch Gestures
+## Expected result
 
-To ensure smooth touch scrolling of documents on mobile devices when the desktop toolbar is enabled, set the `enableTextSelection` option to **false**. This disables text-selection interactions that can interfere with touch-based scrolling.
+- The desktop toolbar appears on mobile devices, showing all toolbar features.
+- Touch scrolling is smooth without lag or interference from text selection.
+- All toolbar buttons (Zoom, Navigation, Print, Annotations) function correctly on touch devices.
 
-{% tabs %}
-{% highlight html tabtitle="Composition API (Standalone)" %}
+## Troubleshooting
 
-<template>
-  <div id="app">
-    <ejs-pdfviewer id="pdfViewer" :documentPath="documentPath" :resourceUrl="resourceUrl" :enableDesktopMode="true" :enableTextSelection="false">
-    </ejs-pdfviewer>
-  </div>
-</template>
+- Print option not visible on mobile.
+    - **Cause**: [`enableDesktopMode`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#enabledesktopmode) is `false`; the mobile toolbar omits Print.
+    - **Solution**: set [`enableDesktopMode`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#enabledesktopmode) to `true`.
 
-<script setup>
-import {
-  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-  ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer
-} from '@syncfusion/ej2-vue-pdfviewer';
-import { provide } from 'vue';
+- Touch scrolling is jerky after enabling desktop toolbar.
+    - **Cause**: Text-selection is capturing touch events.
+    - **Solution**: set [`enableTextSelection`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#enabletextselection) to `false` to disable text-selection on touch devices.
 
-const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const resourceUrl = "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib";
+- Missing assets or broken UI.
+    - **Cause**: [`resourceUrl`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#resourceurl) is incorrect or unreachable.
+    - **Solution**: confirm [`resourceUrl`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#resourceurl) points to the correct version of `ej2-pdfviewer-lib` and is reachable from the device.
 
-provide('PdfViewer', [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView,
-  TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]);
-</script>
+- Server errors in server-backed mode.
+    - **Cause**: [`serviceUrl`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#serviceurl) CORS configuration or back-end connectivity issue.
+    - **Solution**: verify [`serviceUrl`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#serviceurl) CORS configuration and that the back end is running.
 
-{% endhighlight %}
-{% highlight html tabtitle="Options API (Standalone)" %}
+## Related topics
 
-<template>
-  <div id="app">
-    <ejs-pdfviewer id="pdfViewer" :documentPath="documentPath" :resourceUrl="resourceUrl" :enableDesktopMode="true" :enableTextSelection="false">
-    </ejs-pdfviewer>
-  </div>
-</template>
-
-<script>
-import {
-  PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-  ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer
-} from '@syncfusion/ej2-vue-pdfviewer';
-
-export default {
-  name: 'App',
-  components: { 'ejs-pdfviewer': PdfViewerComponent },
-  data() {
-    return {
-      documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib'
-    };
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView,
-      TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]
-  }
-}
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Composition API (Server-Backed)" %}
-
-<template>
-  <div id="app">
-    <ejs-pdfviewer id="pdfViewer" :documentPath="documentPath" :serviceUrl="serviceUrl" :enableDesktopMode="true" :enableTextSelection="false">
-    </ejs-pdfviewer>
-  </div>
-</template>
-
-<script setup>
-import {
-  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-  ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer
-} from '@syncfusion/ej2-vue-pdfviewer';
-import { provide } from 'vue';
-
-const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
-const serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer';
-
-provide('PdfViewer', [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView,
-  TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]);
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (Server-Backed)" %}
-
-<template>
-  <div id="app">
-    <ejs-pdfviewer id="pdfViewer" :documentPath="documentPath" :serviceUrl="serviceUrl" :enableDesktopMode="true" :enableTextSelection="false">
-    </ejs-pdfviewer>
-  </div>
-</template>
-
-<script>
-import {
-  PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-  ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer
-} from '@syncfusion/ej2-vue-pdfviewer';
-
-export default {
-  name: 'App',
-  components: { 'ejs-pdfviewer': PdfViewerComponent },
-  data() {
-    return {
-      documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'
-    };
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView,
-      TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]
-  }
-}
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Print Option Not Available in Mobile Mode
-
-The Print option is not available in mobile mode by default. Enabling the desktop toolbar on mobile via `enableDesktopMode` makes the Print option available.
-
-### How to Use Print on Mobile:
-
-- Set `enableDesktopMode` to true to load the desktop toolbar on mobile.
-- After enabling desktop mode, the Print option appears in the toolbar and can be used to print the document from the mobile device.
-
-N> Print functionality remains unavailable in the default mobile toolbar unless desktop mode is enabled.
-
-## See also
-
-* [Primary toolbar customization](./primary-toolbar)
-* [Custom toolbar](./custom-toolbar)
-* [Annotation toolbar customization](./annotation-toolbar)
-* [Form designer toolbar customization](./form-designer-toolbar)
-* [Toolbar customization](../toolbar)
-* [Feature Modules](../feature-module)
+- [Customize form designer toolbar](./form-designer-toolbar)
+- [Customize annotation toolbar](./annotation-toolbar)
+- [Create a custom toolbar](./custom-toolbar)
