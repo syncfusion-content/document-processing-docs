@@ -73,7 +73,7 @@ The PDF Viewer component follows the [keyboard interaction](https://www.w3.org/W
 |||**Shortcuts for Zooming**|
 |<kbd>CONTROL + =</kbd> |<kbd>COMMAND + =</kbd> | Perform zoom-in operation |
 | <kbd>CONTROL + -</kbd> | <kbd>COMMAND + -</kbd> | Perform zoom-out operation |
-|<kbd>CONTROL + 0</kbd> |<kbd>COMMAND + 0</kbd> | Retain the zoom level to 1 |
+|<kbd>CONTROL + 1</kbd> |<kbd>COMMAND + 1</kbd> | Retain the zoom level to 1 |
 |||**Shortcut for Text Search**|
 | <kbd>CONTROL + F</kbd> | <kbd>COMMAND + F</kbd> |Open the search toolbar|
 |||**Shortcut for Text Selection**|

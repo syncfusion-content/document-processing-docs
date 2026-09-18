@@ -72,7 +72,7 @@ The Blazor SfPdfViewer component follows the [keyboard interaction](https://www.
 |||**Shortcuts for Zooming**|
 | <kbd>Ctrl</kbd> + <kbd>=</kbd> | <kbd>⌘</kbd> + <kbd>=</kbd> | Perform zoom-in operation |
 | <kbd>Ctrl</kbd> + <kbd>-</kbd> | <kbd>⌘</kbd> + <kbd>-</kbd> | Perform zoom-out operation |
-|<kbd>Ctrl</kbd> + <kbd>0</kbd> | <kbd>⌘</kbd> + <kbd>0</kbd> | Reset zoom to 100% |
+|<kbd>Ctrl</kbd> + <kbd>1</kbd> | <kbd>⌘</kbd> + <kbd>1</kbd> | Reset zoom to 100% |
 |||**Shortcut for Text Search**|
 | <kbd>Ctrl</kbd> + <kbd>F</kbd> | <kbd>⌘</kbd> + <kbd>F</kbd> | Open the search toolbar|
 |||**Shortcut for Text Selection**|
