@@ -19,6 +19,7 @@ The [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library
 * Ability to [convert a specific range of pages in a Word document to images](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/word-to-image#convert-a-specific-range-of-pages-in-word-to-images).
 * Ability to [convert a Word document to an image using a custom image resolution](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/word-to-image#custom-image-resolution).
 * Set [fallback fonts](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/fallback-fonts-word-to-image) for characters when glyphs are not available.
+* Ability to [register custom fonts](./Custom-fonts-registration-word-to-image) from memory streams or a folder without installing them on the operating system.
 
 ## Assemblies and NuGet packages required
 
@@ -371,6 +372,14 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ## Fallback fonts
 
 During Word to Image conversions, if a glyph of the input text is unavailable in the specified font, the text will not be rendered properly. To address this, the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) allows users to specify fallback fonts. When a glyph is missing, the library will use one of the fallback fonts to render the text correctly in the output image. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-image/net/fallback-fonts-word-to-image).
+
+## Custom font registration
+
+In many deployment environments such as cloud-hosted, containerized, and cross-platform applications, installing fonts on the operating system is not possible or desirable. The [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) allows users to register custom fonts through the `FontManager` API, maintaining a private font repository within the library. This supports TrueType (`.ttf`) and OpenType (`.otf`) formats, registered from memory streams or a folder, and ensures consistent document rendering without depending on system-installed fonts.
+
+N> Register the required fonts during application startup using `FontManager.RegisterFonts` and clear them during shutdown using `FontManager.ClearRegisteredFonts` for optimal performance.
+
+For further information, click [here](./Custom-fonts-registration-word-to-image).
 
 ## Online Demo
 

@@ -1,16 +1,16 @@
 ---
-title: Custom font registration for Word-to-PDF in .NET | Syncfusion
-description: This section illustrates how to register custom fonts for Word-to-PDF conversion using the Syncfusion .NET Word library
+title: Custom font registration for Word-to-Image in .NET | Syncfusion
+description: This section illustrates how to register custom fonts for Word-to-Image conversion using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Custom Font Registration for Word to PDF Conversion in .NET Word
+# Custom Font Registration for Word to Image Conversion in .NET Word
 
-The Syncfusion document processing libraries provide support for registering custom font streams through the `FontManager` API. This feature enables applications to use fonts that are not installed on the operating system by maintaining a private font repository during Word to PDF conversion.
+The Syncfusion document processing libraries provide support for registering custom font streams through the `FontManager` API. This feature enables applications to use fonts that are not installed on the operating system by maintaining a private font repository during Word to Image conversion.
 
-This capability is particularly beneficial for cloud-hosted and cross-platform applications where access to system fonts may be limited or unavailable. Once registered the custom fonts, users can perform Word to PDF conversion normally. Registered fonts are automatically used when available.
+This capability is particularly beneficial for cloud-hosted and cross-platform applications where access to system fonts may be limited or unavailable. Once registered the custom fonts, users can perform Word to Image conversion normally. Registered fonts are automatically used when available.
 
 In many deployment environments, installing fonts on the operating system is either not possible or not desirable. Custom font registration enables applications to:
 
@@ -110,7 +110,7 @@ FontManager.RegisterFonts(fontStreams)
 
 ## Get Registered Font Names
 
-Users can retrieve the names of all fonts currently registered in the custom font repository. This is useful for validating font registration, auditing available fonts, and troubleshooting font-related issues during Word to PDF conversion. Each entry contains the font family name and style information.
+Users can retrieve the names of all fonts currently registered in the custom font repository. This is useful for validating font registration, auditing available fonts, and troubleshooting font-related issues during Word to Image conversion. Each entry contains the font family name and style information.
 
 The following code example shows how to retrieve and iterate through the list of registered font names.
 
@@ -165,10 +165,6 @@ FontManager.ClearRegisteredFonts(true)
 {% endhighlight %}
 
 {% endtabs %}
-
-## Font Embedding Behavior
-
-By default, registered custom fonts are not embedded in generated PDF documents. Customers can configure font embedding behavior according to their requirements. For more details, refer to the [Font embedding settings in Word to PDF conversion](./Word-to-pdf-settings#embedding-fonts) documentation.
 
 ## Recommended Usage Pattern
 
@@ -229,5 +225,5 @@ This ensures that registered fonts are preferred over operating system fonts whe
 
 ## See also
 
-* [Font Substitution in Word to PDF Conversion](Font-substituion-word-to-pdf)
-* [Fallback fonts in Word to PDF Conversion](Fallback-fonts-word-to-pdf)
+* [Font Substitution in Word to Image Conversion](./Font-substituion-word-to-image)
+* [Fallback fonts in Word to Image Conversion](./Fallback-fonts-word-to-image)
