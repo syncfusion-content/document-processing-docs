@@ -82,7 +82,7 @@ The PDF Viewer component follows the [keyboard interaction](https://www.w3.org/W
 | <kbd>CONTROL + F</kbd> | <kbd>COMMAND + F</kbd> | Open the search toolbar |
 | | | **Shortcut for text selection** |
 | <kbd>CONTROL + C</kbd> | <kbd>COMMAND + C</kbd> | Copy selected text, annotation, or form field |
-| <kbd>CONTROL + X</kbd> | <kbd>COMMAND + X</kbd> | Cut selected text, annotation, or form field |
+| <kbd>CONTROL + X</kbd> | <kbd>COMMAND + X</kbd> | Cut selected annotation or form field |
 | <kbd>CONTROL + V</kbd> | <kbd>COMMAND + V</kbd> | Paste selected text, annotation, or form field |
 | | | **Shortcuts for general operations** |
 | <kbd>CONTROL + Z</kbd> | <kbd>COMMAND + Z</kbd> | Undo the action |
