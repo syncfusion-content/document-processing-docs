@@ -166,10 +166,6 @@ FontManager.ClearRegisteredFonts(true)
 
 {% endtabs %}
 
-## Font Rendering Behavior
-
-In Word to Image conversion, the registered custom fonts are used to layout and render the text directly into the generated images. Since the output is a rasterized image, no font embedding is applicable.
-
 ## Recommended Usage Pattern
 
 ### Application Startup

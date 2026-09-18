@@ -263,6 +263,8 @@ During Word to PDF conversions, if a glyph of the input text is unavailable in t
 
 In many deployment environments such as cloud-hosted, containerized, and cross-platform applications, installing fonts on the operating system is not possible or desirable. The [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) allows users to register custom fonts through the `FontManager` API, maintaining a private font repository within the library. This supports TrueType (`.ttf`) and OpenType (`.otf`) formats, registered from memory streams or a folder, and ensures consistent document rendering without depending on system-installed fonts.
 
+N> Register the required fonts during application startup using `FontManager.RegisterFonts` and clear them during shutdown using `FontManager.ClearRegisteredFonts` for optimal performance.
+
 For further information, click [here](./Custom-fonts-registration-word-to-pdf).
 
 ## Unsupported elements in Word to PDF conversion
