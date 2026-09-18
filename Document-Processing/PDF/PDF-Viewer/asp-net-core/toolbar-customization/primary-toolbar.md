@@ -28,7 +28,7 @@ Set [`enableToolbar`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.e
 
 ### 2. Show or hide primary toolbar at runtime
 
-Use the viewer's [`showToolbar()`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbar/#showtoolbar) method to show or hide dynamically.
+Use the viewer's [`showToolbar()`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbar#showtoolbar) method to show or hide dynamically.
 
 **Example with enableToolbar property:**
 
