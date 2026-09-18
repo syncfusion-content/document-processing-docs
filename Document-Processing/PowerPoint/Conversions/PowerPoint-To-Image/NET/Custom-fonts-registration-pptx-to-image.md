@@ -216,10 +216,9 @@ FontManager.ClearRegisteredFonts(true)
 
 During document conversion, fonts are utilized in the following priority order:
 
-1. Embedded Fonts in the input PowerPoint presentation
-2. Registered Custom Fonts
-3. Installed System Fonts
-4. Substituted Fonts
+1. Registered Custom Fonts
+2. Installed System Fonts
+3. Substituted Fonts
 
 This ensures that registered fonts are preferred over operating system fonts whenever a matching font is available.
 
