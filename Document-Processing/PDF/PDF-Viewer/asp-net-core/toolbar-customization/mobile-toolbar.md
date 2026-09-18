@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mobile Toolbar in ASP.NET Core PDF Viewer | Syncfusion
+title: Customize Mobile Toolbar in ASP.NET Core PDF Viewer | Syncfusion
 description: Customize the mobile toolbar in the ASP.NET Core PDF Viewer to ensure smooth touch interactions and a tailored experience on small screens.
 platform: document-processing
 control: PDF Viewer
@@ -85,8 +85,8 @@ To ensure smooth scrolling of PDF documents on a mobile device in desktop mode, 
     - **Solution**: Verify [`resourceUrl`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ResourceUrl) points to the correct version of the `ej2-pdfviewer-lib` and is reachable from the device.
 
 - **Server errors in server-backed mode**
-    - **Cause**: CORS issues or backend service not running.
-    - **Solution**: Verify [`serviceUrl`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ServiceUrl) CORS configuration and that the backend is running.
+    - **Cause**: CORS issues or back-end service not running.
+    - **Solution**: Verify [`serviceUrl`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ServiceUrl) CORS configuration and that the back-end is running.
 
 ## Related topics
 
