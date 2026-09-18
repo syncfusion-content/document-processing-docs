@@ -31,6 +31,7 @@ For a quick walkthrough on converting a Word document to a PDF, check out this v
 * Convert Word headings to [PDF bookmarks](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#word-document-headings-to-pdf-bookmarks), generating PDF documents with bookmarks based on Word document paragraph styles and outline levels. 
 * Support for [font substitution](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/font-substituion-word-to-pdf) when fonts are not available during Word to PDF conversion. 
 * Set [fallback fonts](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/fallback-fonts-word-to-pdf) for characters when glyphs are not available. 
+* Support for [custom fonts registration](./Custom-fonts-registration-word-to-pdf) through the `FontManager` API to register fonts from memory streams or a folder without depending on system-installed fonts.
 * Ability to [optimize identical images](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#identical-image-optimization) to reduce PDF file size. 
 * Option to [include or exclude alternate chunks](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#enable-alternate-chunks) during Word to PDF conversion. 
 * Ability to use custom dictionaries for [text hyphenation](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/word-to-pdf-settings#hyphenation-in-word-to-pdf-conversion) in the converted PDF. 
@@ -257,6 +258,12 @@ To avoid this, the Essential<sup>&reg;</sup> DocIO library allows you to set an 
 ## Fallback fonts
 
 During Word to PDF conversions, if a glyph of the input text is unavailable in the specified font, the text will not be rendered properly. To address this, the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) allows users to specify fallback fonts. When a glyph is missing, the library will use one of the fallback fonts to render the text correctly in the output PDF document. For further information, click [here](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/fallback-fonts-word-to-pdf).
+
+## Custom font registration
+
+In many deployment environments such as cloud-hosted, containerized, and cross-platform applications, installing fonts on the operating system is not possible or desirable. The [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) allows users to register custom fonts through the `FontManager` API, maintaining a private font repository within the library. This supports TrueType (`.ttf`) and OpenType (`.otf`) formats, registered from memory streams or a folder, and ensures consistent document rendering without depending on system-installed fonts.
+
+For further information, click [here](./Custom-fonts-registration-word-to-pdf).
 
 ## Unsupported elements in Word to PDF conversion
 
