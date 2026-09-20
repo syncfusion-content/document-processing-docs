@@ -91,7 +91,9 @@ protected onInit(): Promise<void>{
 
 Add the following code in the `App.tsx` file inside the ~/src/webparts/app/components folder to render the DOCX Editor.
 
-```ts
+{% tabs %}
+{% highlight ts tabtitle="App.tsx" %}
+
 import * as React from 'react';
 import styles from './App.module.scss';
 import { IAppProps } from './IAppProps';
@@ -118,7 +120,9 @@ export default class App extends React.Component<IAppProps, {}> {
     );
   }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Set your tenant domain in the `serve.json` file located in the `config` folder.
 
