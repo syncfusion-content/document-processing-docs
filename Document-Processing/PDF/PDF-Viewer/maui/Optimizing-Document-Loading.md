@@ -8,7 +8,7 @@ documentation: ug
 keywords: .net maui pdf viewer, android pdf viewer, maui pdf viewer performance, optimize pdf loading, large pdf documents, android large heap, sfpdfviewer memory optimization
 ---
 
-# Optimizing document loading on Android
+# Optimizing document loading on Android in .NET MAUI PDF Viewer Control
 
 When your application handles large images, complex graphics, or memory-intensive operations, the default heap size may not be sufficient, leading to performance issues or crashes. Enabling a larger heap allows the app to allocate more memory, ensuring smooth performance and preventing out-of-memory errors in such scenarios. You can enable this by adding the following highlighted attribute in your AndroidManifest.xml under the <application> tag.
 
