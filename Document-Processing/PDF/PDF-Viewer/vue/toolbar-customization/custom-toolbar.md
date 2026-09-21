@@ -8,17 +8,27 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Custom Toolbar in Vue PDF Viewer
+# Create a custom toolbar in Vue PDF Viewer
 
-The PDF Viewer provides APIs for the user interaction options available in its built-in toolbar. Using these APIs, a custom application-level toolbar can be created by hiding the default toolbar and adding Syncfusion EJ2 toolbar components.
+## Overview
 
-Follow these steps to create a custom toolbar for the PDF Viewer:
+This guide shows you how to create a custom toolbar for the EJ2 Vue PDF Viewer. The PDF Viewer provides APIs for all user interaction options available in its built-in toolbar. By hiding the default toolbar and adding Syncfusion EJ2 toolbar components, you can build a custom application-level toolbar that fits your design.
 
-**Step 1: Create a simple PDF Viewer sample.**
+**Outcome**: a working Vue example with a custom toolbar for PDF navigation, magnification, print, and download.
+
+## Prerequisites
+
+- EJ2 Vue PDF Viewer installed and added in project. See [getting started guide](../getting-started)
+- `@syncfusion/ej2-vue-navigations` package installed for toolbar components
+- If using standalone WASM mode, provide [`resourceUrl`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#resourceurl) or a [`serviceUrl`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#serviceurl) for server mode.
+
+## Steps
+
+### Step 1: Create a simple PDF Viewer sample
 
 Create a simple PDF Viewer sample by following the [getting started](https://ej2.syncfusion.com/vue/documentation/pdfviewer/getting-started) guide.
 
-**Step 2: Add template markup for the custom toolbars.**
+### Step 2: Add HTML elements for the custom toolbar
 
 Add toolbar components and the PDF Viewer component to your Vue template. One toolbar handles primary actions, and another handles magnification actions.
 
@@ -106,7 +116,7 @@ Add toolbar components and the PDF Viewer component to your Vue template. One to
 {% endhighlight %}
 {% endtabs %}
 
-**Step 3: Import and register modules.**
+### Step 3: Import and inject the necessary modules
 
 ```ts
 import Vue from "vue";
@@ -120,9 +130,9 @@ Vue.use(PdfViewerPlugin);
 Vue.use(ToolbarPlugin);
 ```
 
-**Step 4: Hide the built-in toolbar.**
+### Step 4: Hide the default toolbar of the PDF Viewer
 
-Use enableToolbar to hide the built-in toolbar and rely on the custom toolbar.
+Set the [`enableToolbar`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#enabletoolbar) property to `false` to hide the built-in toolbar:
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -156,7 +166,8 @@ export default Vue.extend({
 {% endhighlight %}
 {% endtabs %}
 
-**Step 5: Styles for the custom toolbars.**
+### Step 5: Add EJ2 Toolbar for primary actions
+Create a custom `<ejs-toolbar>` component with items for Open, Previous Page, Next Page, Go to Page, Print, and Download. Use the `<e-items>` and `<e-item>` directives to define toolbar items:
 
 ```css
 <style>
@@ -209,9 +220,9 @@ export default Vue.extend({
 
 > The icons are embedded in the font file used in the above code snippet.
 
-**Step 6: Add the script logic for user interactions.**
+### Step 6: Add EJ2 Toolbar for magnification actions
 
-Hook up toolbar button clicks and wire up PDF Viewer APIs.
+Add toolbar items for zoom controls: Fit to Page, Zoom In, and Zoom Out:
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -424,10 +435,29 @@ export default Vue.extend({
 Sample:
 [https://document.syncfusion.com/demos/pdf-viewer/vue/#/tailwind3/pdfviewer/custom-toolbar.html](https://document.syncfusion.com/demos/pdf-viewer/vue/#/tailwind3/pdfviewer/custom-toolbar.html)
 
-## See also
+## Expected result
 
-* [Primary toolbar customization](./primary-toolbar)
-* [Form designer toolbar customization](./form-designer-toolbar)
-* [Mobile toolbar](./mobile-toolbar)
-* [Toolbar customization](../toolbar)
-* [Feature Modules](../feature-module)
+- The custom toolbar appears above the PDF Viewer showing all defined items.
+- Clicking toolbar buttons performs the expected actions: opening files, navigating pages, zooming, printing, and downloading.
+- The page number input validates numeric input and navigates to the entered page on Enter key.
+- Previous and Next buttons disable at the first and last pages respectively.
+
+## Troubleshooting
+
+- Toolbar does not appear.
+    - **Cause**: Toolbar or required services not provided.
+    - **Solution**: ensure Toolbar service and required PDF Viewer services (Magnification, Navigation, etc.) are provided to the component.
+
+- Toolbar item clicks do not work.
+    - **Cause**: `clickHandler` not bound or PDF Viewer reference is undefined.
+    - **Solution**: ensure the toolbar `@clicked` event is bound to `clickHandler` method, and the PDF Viewer is properly referenced as `pdfviewer` (Composition API) or `this.$refs.pdfviewer` (Options API).
+
+- Icons do not display correctly.
+    - **Cause**: Icon font not loaded or incorrect class name.
+    - **Solution**: verify the `prefixIcon` values match Syncfusion icon classes (e.g., `e-icons`, `e-pv-*`) and the icon fonts are included in your project.
+
+## Related topics
+
+- [Primary toolbar customization](./primary-toolbar)
+- [Annotation toolbar customization](./annotation-toolbar)
+- [Form designer toolbar customization](./form-designer-toolbar)
