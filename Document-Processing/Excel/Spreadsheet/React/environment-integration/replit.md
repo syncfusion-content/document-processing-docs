@@ -132,6 +132,18 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React Spreadsheet Editor re
 
 ![React Spreadsheet rendered inside the Replit preview pane](../images/replit-output.png)
 
+## Key Features to Explore
+
+Once your Spreadsheet is running, you can enhance it with:
+
+- **Data Binding**: Bind data from APIs, databases, or CSV files
+- **Formulas**: Add Excel-like formulas for calculations
+- **Cell Formatting**: Apply styles, colors, and borders
+- **Data Validation**: Restrict data entry with validation rules
+- **Filters & Sorting**: Enable filtering and sorting on columns
+- **Charts**: Visualize data with built-in chart support
+- **Export/Import**: Save and load Excel files
+
 ## Tips for working in Replit
 
 * **Shell access:** Use the **Shell** tab to run any `npm` commands, such as installing additional packages or starting/stopping the dev server manually.
