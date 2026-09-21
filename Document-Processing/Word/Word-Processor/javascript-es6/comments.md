@@ -184,13 +184,12 @@ When `highlightCommentsByAuthor` is enabled, each comment marker is displayed in
 The following example illustrates how to enable comment highlights in the DOCX Editor
 
 ```ts
-var container =  new DocumentEditorContainer({   
-    height: '590px',
+let container: DocumentEditorContainer = new DocumentEditorContainer({ enableToolbar: true,toolbarMode: 'Ribbon', height: '590px',
     // Enable highlight comments by author support in document editor
     documentEditorSettings: { commentSettings: { highlightCommentsByAuthor : true } }    
 });
 
-ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
+DocumentEditorContainer.Inject(Toolbar);
 container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 container.appendTo('#container');
 ```
