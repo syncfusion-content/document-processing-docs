@@ -136,8 +136,6 @@ The Syncfusion<sup style="font-size:70%">&reg;</sup> React Spreadsheet Editor re
 
 * **Shell access:** Use the **Shell** tab to run any `npm` commands, such as installing additional packages or starting/stopping the dev server manually.
 * **Persistent storage:** Replit persists your project files automatically. Changes are saved as you type.
-* **Environment variables:** Store sensitive values such as your Syncfusion license key in **Replit Secrets** (the 🔒 **Secrets** tab in the sidebar) rather than hard-coding them. Access the value in code using `import.meta.env.VITE_SF_LICENSE_KEY` after defining it as a Vite env variable.
-* **Deployment:** Use Replit's built-in **Deploy** feature to publish your application to a public URL with a single click.
 
 ## Using Replit Agent (AI assistant)
 
@@ -149,6 +147,28 @@ Install the required packages and render an empty spreadsheet in App.jsx.
 ```
 
 The agent will install the packages, update the component file, and apply the theme import for you. Review the generated code before running the application.
+
+## Environment Variables in Replit
+
+If you need to store sensitive information (API keys, database URLs), use Replit Secrets:
+
+1. Click the **Secrets** icon (lock icon) in the left sidebar
+2. Add your secret with a key and value (e.g., `API_KEY=your_key_here`)
+3. Access it in your code using `process.env.API_KEY`
+
+## Deploy the application in Replit
+
+Replit allows you to publish your application to a live public URL without leaving the browser. To deploy the spreadsheet application:
+
+1. Click the **Deploy** button (🚀) in the top-right corner of the Replit workspace.
+2. Select a deployment type based on your needs:
+   * **Autoscale** — Best for web apps and APIs that scale automatically with traffic. Recommended for most React applications.
+   * **Reserved VM** — Provides a dedicated virtual machine for apps that need persistent processes or long-running build steps.
+   * **Static** — Serves the pre-built production output (`dist/` folder) with fast global hosting. Ensure `npm run build` runs as the build command.
+3. Configure the build and run commands (for a Vite React app, the defaults are `npm run build` and `npm run dev`).
+4. Click **Deploy** and wait for the build to complete. Replit provides a public URL, such as `https://syncfusion-spreadsheet-app.<your-username>.repl.co`, that you can share with users.
+
+> **Note:** Deployment options and availability depend on your Replit plan. The development Repl remains free, and you can continue editing and redeploying after publishing. For the latest deployment types and pricing, refer to the [Replit deployment documentation](https://docs.replit.com/deployments/about-deployments).
 
 ## Troubleshooting
 
@@ -163,8 +183,17 @@ The agent will install the packages, update the component file, and apply the th
 ## See also
 
 * [Getting Started with React Spreadsheet](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/getting-started)
+* [Getting Started with React Spreadsheet in Create React App](./create-react-app)
 * [Getting Started with React Spreadsheet in Next.js](./nextjs-getting-started)
+* [Getting Started with React Spreadsheet in Remix](./remix)
+* [Getting Started with React Spreadsheet in Preact](./preact)
 * [Getting Started with React Spreadsheet in Agentic UI Builder](./agentic-builder)
 * [Open Excel files](../open-excel-files)
 * [Save Excel files](../save-excel-files)
 * [Data Binding](../data-binding)
+* [Formulas and Calculations](../formulas-and-calculations)
+* [Spreadsheet Appearance and Themes](https://ej2.syncfusion.com/react/documentation/appearance/theme)
+* [How to generate a Syncfusion license key](https://help.syncfusion.com/document-processing/licensing/how-to-generate)
+* [How to register a Syncfusion license key in an application](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application)
+* [Replit documentation](https://docs.replit.com/)
+* [Replit deployment overview](https://docs.replit.com/deployments/about-deployments)
