@@ -73,7 +73,11 @@ The following options can be given for the icon sets as type,
 
 ## Formula-based Conditional Format
 
-Formula-based Conditional Formatting allows you to define custom highlighting rules using formulas through the `conditionalFormats` property in the sheet model or the [`conditionalFormat()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#conditionalformat) method. Formatting is automatically applied when the specified formula evaluates to TRUE, enabling advanced highlighting scenarios based on values from other cells or ranges within the worksheet. This feature is currently supported only through the Spreadsheet API and is not available through the Conditional Formatting user interface.
+Formula-based Conditional Formatting enables you to apply custom formatting rules using formulas through the `conditionalFormats` property in the sheet model or the [`conditionalFormat()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#conditionalformat) method.
+
+When the specified formula evaluates to `TRUE`, the defined formatting is automatically applied to the target cells. This allows you to create advanced highlighting scenarios based on values from other cells or ranges within the worksheet.
+
+Currently, Formula-based Conditional Formatting is supported only through the Spreadsheet API and cannot be applied through the Conditional Formatting user interface.
 
 ## Custom Format
 
