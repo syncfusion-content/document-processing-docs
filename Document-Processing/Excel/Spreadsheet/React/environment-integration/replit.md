@@ -19,7 +19,7 @@ This section provides a step-by-step guide for setting up a React application in
 
 Before getting started, ensure the following:
 
-* A free or paid [Replit account](https://replit.com/signup).
+* A free or paid [Replit account](https://replit.com).
 * A valid [Syncfusion license key](https://help.syncfusion.com/document-processing/licensing/overview). You can generate a trial key from the [Syncfusion License Key](https://help.syncfusion.com/document-processing/licensing/how-to-generate) page.
 
 > **Note:** No local Node.js, npm, or IDE installation is required. All development happens inside the Replit browser environment.
