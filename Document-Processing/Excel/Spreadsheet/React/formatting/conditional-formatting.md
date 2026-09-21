@@ -71,6 +71,10 @@ The following options can be given for the icon sets as type,
 
 >* `ThreeArrows`, `ThreeArrowsGray`, `FourArrowsGray`, `FourArrows`, `FiveArrowsGray`, `FiveArrows`, `ThreeTrafficLights1`, `ThreeTrafficLights2`, `ThreeSigns`, `FourTrafficLights`, `FourRedToBlack`, `ThreeSymbols`, `ThreeSymbols2`, `ThreeFlags`, `FourRating`, `FiveQuarters`, `FiveRating`, `ThreeTriangles`, `ThreeStars`, `FiveBoxes`.
 
+## Formula-based Conditional Format
+
+Formula-based Conditional Formatting allows you to define custom highlighting rules using formulas through the `conditionalFormats` property in the sheet model or the [`conditionalFormat()`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#conditionalformat) method. Formatting is automatically applied when the specified formula evaluates to TRUE, enabling advanced highlighting scenarios based on values from other cells or ranges within the worksheet. This feature is currently supported only through the Spreadsheet API and is not available through the Conditional Formatting user interface.
+
 ## Custom Format
 
 Using the custom format for conditional formatting you can set cell styles like color, background color, font style, font weight, and underline.
@@ -78,6 +82,7 @@ Using the custom format for conditional formatting you can set cell styles like 
 In the MAY and JUN columns, we have applied conditional formatting custom format.
 
 >* Custom Format is supported only for **Highlight Cells Rules** and **Top Bottom Rules**.
+
 
 ## Clear Rules
 
@@ -110,7 +115,7 @@ The following code sample shows how to apply different types of conditional form
 The following features have some limitations in Conditional Formatting:
 
 * Insert row/column between the conditional formatting.
-* Conditional formatting with formula support.
+* User Interface support for formula-based conditional formatting.
 * Copy and paste the conditional formatting applied cells.
 * Custom rule support.
 
