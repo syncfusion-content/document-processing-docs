@@ -1,16 +1,16 @@
 ---
-title: Custom font registration for Word-to-PDF in .NET | Syncfusion
-description: This section illustrates how to register custom fonts for Word-to-PDF conversion using the Syncfusion .NET Word library
+title: Custom font registration for PowerPoint-to-PDF in .NET | Syncfusion
+description: This section illustrates how to register custom fonts for PowerPoint-to-PDF conversion using the Syncfusion .NET PowerPoint (Presentation) library
 platform: document-processing
-control: DocIO
+control: PowerPoint
 documentation: UG
 ---
 
-# Custom Font Registration for Word to PDF Conversion in .NET Word
+# Custom Font Registration for PowerPoint to PDF Conversion in .NET
 
-The Syncfusion document processing libraries provide support for registering custom font streams through the `FontManager` API. This feature enables applications to use fonts that are not installed on the operating system by maintaining a private font repository during Word to PDF conversion.
+The Syncfusion document processing libraries provide support for registering custom font streams through the `FontManager` API. This feature enables applications to use fonts that are not installed on the operating system by maintaining a private font repository during PowerPoint to PDF conversion.
 
-This capability is particularly beneficial for cloud-hosted and cross-platform applications where access to system fonts may be limited or unavailable. Once registered the custom fonts, users can perform Word to PDF conversion normally. Registered fonts are automatically used when available.
+This capability is particularly beneficial for cloud-hosted and cross-platform applications where access to system fonts may be limited or unavailable. Once registered the custom fonts, users can perform PowerPoint to PDF conversion normally. Registered fonts are automatically used when available.
 
 In many deployment environments, installing fonts on the operating system is either not possible or not desirable. Custom font registration enables applications to:
 
@@ -110,7 +110,7 @@ FontManager.RegisterFonts(fontStreams)
 
 ## Get Registered Font Names
 
-Users can retrieve the names of all fonts currently registered in the custom font repository. This is useful for validating font registration, auditing available fonts, and troubleshooting font-related issues during Word to PDF conversion. Each entry contains the font family name and style information.
+Users can retrieve the names of all fonts currently registered in the custom font repository. This is useful for validating font registration, auditing available fonts, and troubleshooting font-related issues during PowerPoint to PDF conversion. Each entry contains the font family name and style information.
 
 The following code example shows how to retrieve and iterate through the list of registered font names.
 
@@ -166,10 +166,6 @@ FontManager.ClearRegisteredFonts(true)
 
 {% endtabs %}
 
-## Font Embedding Behavior
-
-By default, registered custom fonts are not embedded in generated PDF documents. Customers can configure font embedding behavior according to their requirements. For more details, refer to the [Font embedding settings in Word to PDF conversion](./Word-to-pdf-settings#embedding-fonts) documentation.
-
 ## Recommended Usage Pattern
 
 ### Application Startup
@@ -220,14 +216,13 @@ FontManager.ClearRegisteredFonts(true)
 
 During document conversion, fonts are utilized in the following priority order:
 
-1. Embedded Fonts in the input Word document
-2. Registered Custom Fonts
-3. Installed System Fonts
-4. Substituted Fonts
+1. Registered Custom Fonts
+2. Installed System Fonts
+3. Substituted Fonts
 
 This ensures that registered fonts are preferred over operating system fonts whenever a matching font is available.
 
 ## See also
 
-* [Font Substitution in Word to PDF Conversion](Font-substituion-word-to-pdf)
-* [Fallback fonts in Word to PDF Conversion](Fallback-fonts-word-to-pdf)
+* [Font Substitution in PowerPoint to PDF Conversion](./Font-Substitution-in-PPTXtoPDF-Conversion)
+* [Fallback fonts in PowerPoint to PDF Conversion](./Fallback-Fonts-in-PPTXtoPDF-Conversion)

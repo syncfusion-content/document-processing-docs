@@ -11,7 +11,7 @@ documentation: UG
 
 Font creation is a primary cause of excessive memory consumption and performance degradation during Office to PDF/Image conversions and PDF processing workflows. This problem is particularly pronounced in multi-threaded web applications where multiple users perform concurrent operations across different threads or browser tabs. 
 
-To address this challenge, Syncfusion Document Processing libraries introduce the [FontManager](https://help.syncfusion.com/cr/document-processing/Syncfusion.Drawing.Fonts.FontManager.html) class, which provides centralized font management shared across all threads and conversion libraries. This approach eliminates duplicate font objects and significantly reduces memory overhead. 
+To address this challenge, Syncfusion Document Processing libraries introduce the [FontManager](https://help.syncfusion.com/cr/document-processing/Syncfusion.Drawing.Fonts.FontManager.html) class, which provides centralized font management shared across all threads and conversion libraries. This approach eliminates duplicate font objects and significantly reduces memory overhead. In addition, during office document conversions, it also allows user to register the custom fonts from memory streams or a folder. 
 
 ## Key Features
 
@@ -20,6 +20,7 @@ To address this challenge, Syncfusion Document Processing libraries introduce th
 * **Performance optimization:** Enables multiple threads to safely reuse the same font instances, improving processing speed. 
 * **Automatic cleanup:** Automatically disposes unused fonts after a configurable delay (FontManager.Delay) to maintain efficiency in long-running applications. 
 * **Manual cache management:** Provides FontManager.ClearCache() to immediately clear all cached fonts when needed (e.g., during server shutdown). 
+* **Custom fonts registration:** Allows registering custom fonts from memory streams or a folder during office document conversions, without depending on system-installed fonts.
 
 ## Supported Conversions and Workflows 
 
@@ -165,6 +166,12 @@ app.Run();
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Unified-font-manager/.NET/).
 
+## Custom font registration
+
+In many deployment environments such as cloud-hosted, containerized, and cross-platform applications, installing fonts on the operating system is not possible or desirable. The .NET Word Library allows users to register custom fonts through the FontManager API, maintaining a private font repository within the library. This supports TrueType (.ttf) and OpenType (.otf) formats, registered from memory streams or a folder, and ensures consistent document rendering without depending on system-installed fonts.
+
+For further information, click [here](../Word/Conversions/Word-To-PDF/NET/Custom-fonts-registration-word-to-pdf).
+
 ## Best Practices
 
 1. Set FontManager.Delay early: Configure the delay property in your application's startup code before any document processing begins (Optional). 
@@ -201,3 +208,7 @@ A: No, FontManager works transparently in the background. Your existing code wil
 
 A: No, Syncfusion Document Processing libraries intentionally do **not** retain or cache private fonts — including fonts embedded within input documents or font streams added through font substitution events. This ensures that sensitive or proprietary font data from one document is never persisted in the shared font cache or made accessible to other operations or threads.
 Only fonts loaded from the system's font directories are managed by the `FontManager` cache.
+
+**Q: Are registered fonts available for a single conversion or for multiple conversions?**
+
+A: Once registered, the fonts are available for every conversion processed by the application, not just the first one. Register them once during application startup and reuse them across all conversions, until the registered fonts are cleared.
