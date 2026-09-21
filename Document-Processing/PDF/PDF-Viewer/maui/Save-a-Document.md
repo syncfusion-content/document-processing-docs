@@ -95,38 +95,6 @@ formField.FlattenOnSave = true;
 
 Currently, when saving a document by flattening that contains sticky note annotations, the sticky note icon always appears as the default [comment](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.StickyNoteIcon.html#Syncfusion_Maui_PdfViewer_StickyNoteIcon_Comment) icon appearance in the saved document.
 
-## Save only when the document is modified
-
-The IsDocumentModified property helps determine whether the currently loaded PDF document contains unsaved user changes. The property becomes true when the user performs supported document modifications such as adding or editing annotations, changing form field values, applying redactions, or adding signatures. It returns false when a document is initially loaded and when all modifications are undone back to the original state. 
-
-You can use this property to enable or disable save operations and avoid saving documents that have no changes. 
-
-{% tabs %}
-{% highlight c# %}
-if (pdfViewer.IsDocumentModified) 
-{ 
-    PdfViewer.SaveDocument(SaveStream); 
-}
-{% endhighlight %}
-{% endtabs %}
-
-### Observe property changes in C# 
-
-You can monitor changes to the IsDocumentModified property by subscribing to the PropertyChanged event of the SfPdfViewer. This is useful when you want to dynamically update the user interface, enable or disable commands, or display unsaved-change indicators whenever the document modification state changes. 
-
-{% tabs %}
-{% highlight c# %}
-pdfViewer.PropertyChanged += (sender, args) => 
-{ 
-    if (args.PropertyName == nameof(pdfViewer.IsDocumentModified)) 
-    { 
-        bool isModified = pdfViewer.IsDocumentModified;  
-    } 
-}; 
-{% endhighlight %}
-{% endtabs %}
-
-
 ## See Also
 - [Annotations Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-overview)
 - [Form Filling Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-overview)
