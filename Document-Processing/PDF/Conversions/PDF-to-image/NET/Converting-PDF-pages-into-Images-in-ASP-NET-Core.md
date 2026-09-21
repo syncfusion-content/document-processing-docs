@@ -31,6 +31,7 @@ Stream outputStream = imageConverter.Convert(0, false, false);
 //Save the image to disk.
 using (FileStream fileStream = new FileStream("Output.png", FileMode.Create, FileAccess.Write))
 {
+	outputStreams[i].Position = 0;
     outputStream.CopyTo(fileStream);
 }
 outputStream.Dispose();
@@ -62,6 +63,7 @@ for (int i = 0; i < outputStreams.Length; i++)
 {
     using (FileStream fileStream = new FileStream("Output_" + i + ".png", FileMode.Create, FileAccess.Write))
     {
+		outputStreams[i].Position = 0;
         outputStreams[i].CopyTo(fileStream);
     }
     outputStreams[i].Dispose();
@@ -92,6 +94,7 @@ Stream outputStream = imageConverter.Convert(0, new SizeF(1836, 2372), false, fa
 //Save the image to disk.
 using (FileStream fileStream = new FileStream("Output.png", FileMode.Create, FileAccess.Write))
 {
+	outputStreams[i].Position = 0;
     outputStream.CopyTo(fileStream);
 }
 outputStream.Dispose();
@@ -127,6 +130,7 @@ Stream outputStream = imageConverter.Convert(0, zoomFactor, tileXCount, tileYCou
 //Save the image to disk.
 using (FileStream fileStream = new FileStream("Output.png", FileMode.Create, FileAccess.Write))
 {
+	outputStreams[i].Position = 0;
     outputStream.CopyTo(fileStream);
 }
 outputStream.Dispose();
