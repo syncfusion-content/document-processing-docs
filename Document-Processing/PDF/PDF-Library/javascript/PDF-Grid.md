@@ -941,7 +941,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-N> Ensure that the nested grid fits within the parent cell. A deeply nested or oversized grid may increase the parent row height or require additional layout space.
+N> Ensure that the nested grid fits within the parent cell. A deeply nested or over-sized grid may increase the parent row height or require additional layout space.
 
 ## Horizontal overflow
 
