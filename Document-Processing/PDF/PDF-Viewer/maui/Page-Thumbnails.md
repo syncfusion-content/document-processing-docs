@@ -42,8 +42,6 @@ Users can close the thumbnail view using the built-in close button available in 
 
 This property can be used to dynamically show or hide the thumbnail pane based on your application's requirements.
 
-The thumbnail view can also be closed programmatically by setting the `IsThumbnailViewVisible` property to `false`.
-
 {% tabs %}
 
 {% highlight c# %}
