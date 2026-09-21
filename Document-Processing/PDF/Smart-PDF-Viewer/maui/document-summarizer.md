@@ -20,7 +20,7 @@ N> The AI service must be configured before using the AI Assist feature. Refer t
 
 ## Component usage
 
-Initialize the Smart PDF Viewer with the `AssistViewSettings` to enable the document summarization and Q&A features. The `IsAIAssistViewVisible` property shows or hides the Assist View panel.
+Initialize the Smart PDF Viewer with the `AssistViewSettings` to enable the document summarization and Q&A features. The `IsAssistViewVisible` property shows or hides the Assist View panel.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -31,7 +31,7 @@ Initialize the Smart PDF Viewer with the `AssistViewSettings` to enable the docu
 
     <syncfusion:SfSmartPdfViewer x:Name="pdfViewer"
                                  DocumentSource="{Binding PdfDocumentStream}"
-                                 IsAIAssistViewVisible="True">
+                                 IsAssistViewVisible="True">
         <syncfusion:SfSmartPdfViewer.AssistViewSettings>
             <syncfusion:AssistViewSettings />
         </syncfusion:SfSmartPdfViewer.AssistViewSettings>
@@ -46,7 +46,7 @@ using Syncfusion.Maui.SmartPdfViewer;
 
 SfSmartPdfViewer pdfViewer = new SfSmartPdfViewer
 {
-    IsAIAssistViewVisible = true,
+    IsAssistViewVisible = true,
     AssistViewSettings = new AssistViewSettings()
 };
 pdfViewer.SetBinding(SfSmartPdfViewer.DocumentSourceProperty, "PdfDocumentStream");
@@ -57,20 +57,20 @@ this.Content = pdfViewer;
 
 ## SfSmartPdfViewer properties
 
-### IsAIAssistViewVisible
+### IsAssistViewVisible
 
-The [`IsAIAssistViewVisible`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartPdfViewer.SfSmartPdfViewer.html#Syncfusion_Maui_SmartPdfViewer_SfSmartPdfViewer_IsAIAssistViewVisible) property (type: `bool`, default: `false`) gets or sets a value indicating whether the AI Assist View panel is visible in the Smart PDF Viewer. When set to `true`, the Assist View panel is displayed, allowing users to interact with AI-powered document assistance features such as document summaries, question answering, and contextual document analysis. When set to `false`, the Assist View panel is hidden from the user interface. The Assist View feature remains enabled and can be shown again by setting this property to `true`. This property controls only the visibility of the Assist View panel and does not disable the underlying Assist View functionality or settings.
+The [`IsAssistViewVisible`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartPdfViewer.SfSmartPdfViewer.html#Syncfusion_Maui_SmartPdfViewer_SfSmartPdfViewer_IsAssistViewVisible) property (type: `bool`, default: `false`) gets or sets a value indicating whether the AI Assist View panel is visible in the Smart PDF Viewer. When set to `true`, the Assist View panel is displayed, allowing users to interact with AI-powered document assistance features such as document summaries, question answering, and contextual document analysis. When set to `false`, the Assist View panel is hidden from the user interface. The Assist View feature remains enabled and can be shown again by setting this property to `true`. This property controls only the visibility of the Assist View panel and does not disable the underlying Assist View functionality or settings.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
 
-<syncfusion:SfSmartPdfViewer x:Name="pdfViewer" IsAIAssistViewVisible="True" />
+<syncfusion:SfSmartPdfViewer x:Name="pdfViewer" IsAssistViewVisible="True" />
 
 {% endhighlight %}
 {% highlight c# tabtitle="MainPage.xaml.cs" %}
 
 // Toggle the Assist View panel visibility at runtime.
-pdfViewer.IsAIAssistViewVisible = !pdfViewer.IsAIAssistViewVisible;
+pdfViewer.IsAssistViewVisible = !pdfViewer.IsAssistViewVisible;
 
 {% endhighlight %}
 {% endtabs %}
@@ -400,7 +400,7 @@ To apply these settings, assign them through the `AssistViewSettings` property o
 <ContentPage xmlns:syncfusion="clr-namespace:Syncfusion.Maui.SmartPdfViewer;assembly=Syncfusion.Maui.SmartPdfViewer">
     <syncfusion:SfSmartPdfViewer x:Name="pdfViewer"
                                  DocumentSource="{Binding PdfDocumentStream}"
-                                 IsAIAssistViewVisible="True">
+                                 IsAssistViewVisible="True">
         <syncfusion:SfSmartPdfViewer.AssistViewSettings>
             <syncfusion:AssistViewSettings ShowPromptSuggestions="True"
                                            Placeholder="Enter your query..."
