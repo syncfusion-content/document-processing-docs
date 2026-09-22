@@ -9,7 +9,8 @@ domainurl: ##DomainURL##
 ---
 
 # Stamp Annotation in React PDF Viewer
-Stamp annotations allow you to place predefined or custom stamps (such as **Dynamic**, **Sign Here**, **Standard Business**, or **Custom**) on a PDF to communicate review states, approvals, or instructions. You can add stamps from the toolbar, switch to specific stamp modes programmatically, customize defaults (e.g., opacity/author), edit or lock them, and export them with the document.
+
+Stamp annotations allow you to place predefined or custom stamps (such as **Dynamic**, **Sign Here**, **Standard Business**, **Text Stamp**, **Image Stamp**, or **Custom**) on a PDF to communicate review states, approvals, or instructions. You can add stamps from the toolbar, switch to specific stamp modes programmatically, customize defaults (e.g., opacity/author), edit or lock them, and export them with the document.
 
 ![Stamp annotations](../../../javascript-es6/images/stamp_annot.png)
 
@@ -141,6 +142,99 @@ function addCustomStamp() {
 {% endtabs %}
 
 N> For **Custom Stamp** via the UI, only **JPG/JPEG** image formats are supported.
+
+## Add Text Stamp and Image Stamp
+
+The Stamp tool includes both **Text Stamp** and **Image Stamp** options alongside the built-in dynamic and business stamps. These features belong to the same Stamp annotation category and are documented on this page instead of as separate pages.
+
+### Add a text stamp in the UI
+
+1. Open the **Annotation Toolbar**.
+2. Click **Stamp** to open the stamp gallery.
+3. Select **Text Stamp**.
+4. In the **Create new text stamp** dialog, configure the title, subtitle, font, color, background, date/time format, and styling options such as bold, underline, and strikeout.
+5. Click **Create** to place the stamp on the page.
+
+![Text Stamp dialog](../../images/text-stamp-dialog.png)
+
+### Add an image stamp in the UI
+
+1. Open the **Annotation Toolbar**.
+2. Click **Stamp** to open the stamp gallery.
+3. Select **Image Stamp**.
+4. Choose an image source or upload the required image.
+5. Click the PDF page to place the image stamp.
+
+![Image Stamp](../../images/Image-text-stamp.png)
+
+### Add predefined text stamps to the submenu
+
+You can add predefined text stamps and show them in the **Text Stamp** submenu by configuring `customTextStamps` in the viewer settings.
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
+viewer.customStampSettings = {
+  customTextStamps: [{
+    title: 'Draft',
+    subtitle: '[$author] DD/MMMM/YYYY, h:mm A',
+    bold: true,
+    textColor: '#000000',
+    backgroundColor: '#1693f8',
+    fontFamily: 'Arial'
+  }]
+};
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+### Add custom text stamp annotation programmatically
+
+Use `addAnnotation('Stamp', ...)` with `customTextStamps` to create a text stamp at a specific location.
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
+viewer.annotation.addAnnotation('Stamp', {
+  offset: { x: 100, y: 200 },
+  pageNumber: 1,
+  customTextStamps: [{
+    title: 'Draft',
+    subtitle: '[$author] DD/MMMM/YYYY, h:mm A',
+    bold: true,
+    textColor: '#000000',
+    backgroundColor: '#1693f8',
+    underline: true,
+    fontFamily: 'Arial',
+    strikeout: true
+  }]
+});
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+### Add image stamp annotation programmatically
+
+Use `addAnnotation('Stamp', ...)` with an image source to insert a custom image stamp.
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
+viewer.annotation.addAnnotation('Stamp', {
+  offset: { x: 100, y: 300 },
+  pageNumber: 1,
+  width: 160,
+  height: 80,
+  customStamps: [{
+    customStampName: 'Image',
+    customStampImageSource: 'data:image/png;base64,REPLACE_WITH_YOUR_BASE64_IMAGE_DATA'
+  }]
+});
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+> The new **Image Stamp** and **Text Stamp** capabilities belong to the same Stamp annotation feature set and are best documented in the existing Stamp annotation page under a dedicated subsection.
 
 ## Customize Stamp Appearance
 Configure default properties using the [`stampSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#stampsettings) property (for example, default **opacity** and **author**).
