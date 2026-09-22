@@ -278,7 +278,7 @@ function addMultipleLinks() {
 
 ## Link Annotation Events
 
-The PDF viewer raises annotation lifecycle events that can be used to monitor when link annotations are added, modified, selected, or removed. For the complete event list and event details, see [Annotation Events](../annotation-event).
+The PDF viewer raises annotation life cycle events that can be used to monitor when link annotations are added, modified, selected, or removed. For the complete event list and event details, see [Annotation Events](../annotation-event).
 
 ## Export and Import
 
