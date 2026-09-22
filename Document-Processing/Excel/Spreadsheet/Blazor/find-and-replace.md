@@ -104,7 +104,7 @@ The method returns an empty string array if any of the following conditions are 
 * The workbook has not been initialized.
 
 {% tabs %}
-{% highlight razor tabtitle="Index.razor %}
+{% highlight razor tabtitle="Index.razor" %}
 
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet
