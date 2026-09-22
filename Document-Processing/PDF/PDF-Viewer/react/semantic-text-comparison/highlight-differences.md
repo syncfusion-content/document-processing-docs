@@ -24,7 +24,7 @@ When you compare two PDF documents using the semantic text comparison feature, d
 
 - Syncfusion React PDF Viewer installed
 - `PdfComparer` component available
-- Button and Uploader components from Syncfusion
+- Button and Upload components from Syncfusion
 - Two PDF documents ready for comparison
 
 ## Steps
