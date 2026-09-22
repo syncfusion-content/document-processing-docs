@@ -117,7 +117,7 @@ cd spreadsheet-app
 
 When prompted, confirm the installation by pressing **Enter**. This scaffolds a React Vite project in your current Replit workspace.
 
-After the project is created, open the **Library** panel on the right side of the workspace. You can open it by clicking **Open Library** option or by pressing **Ctrl + Shift + L** on your keyboard. Then, click the **Files** tab to view, create, edit, and manage the generated project files, such as `src/App.jsx`, `src/main.jsx`, `package.json`, and `vite.config.js`.
+After the project is created, open the **Library** panel on the right side of the workspace. You can open it by clicking the **Open Library** option or by pressing **Ctrl + Shift + L** on your keyboard. Then, click the **Files** tab to view, create, edit, and manage the generated project files, such as `src/App.jsx`, `src/main.jsx`, `package.json`, and `vite.config.js`.
 
 ## Install Dependencies
 
@@ -261,7 +261,7 @@ Replit allows you to publish your application to a live public URL without leavi
 
 | Issue | Resolution |
 |---|---|
-| **Preview shows "Your app is not running"** | If the issue persists, Open the Agent panel and enter error text in preview<br/> <br/>My Vite React app is not starting in Preview. Check the workflow, start the development server, and fix any runtime errors.
+| **Preview shows "Your app is not running"** | If the issue persists, Open the Agent panel and enter error text in preview<br/><br/>My Vite React app is not starting in Preview. Check the workflow, start the development server, and fix any runtime errors.
 | **Preview shows "Blocked request. This host is not allowed"** | Open the Agent panel and enter error text in preview <br/> <br/>The preview shows "Blocked request. This host is not allowed\". Update vite.config.js to allow Replit hosts by configuring server.allowedHosts or server.host and restart the application.|
 | **Blank output / component not visible** | Ensure the theme CSS is imported in `App.css` and that `App.css` is imported in `App.jsx`. |
 | **License warning banner** | Verify that `registerLicense` is called before `createRoot` in `main.jsx`. |
