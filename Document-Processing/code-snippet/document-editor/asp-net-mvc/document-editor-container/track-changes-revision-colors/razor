@@ -14,9 +14,9 @@
             var container = document.getElementById("container").ej2_instances[0];
 
             // Apply revision colors dynamically
-            container.documentEditor.revisionSettings.revisionColors = [
-                '#0000ff', '#bb00ff', '#c14f16'
-            ];
+            container.documentEditorSettings.revisionSettings = {
+                revisionColors: ['#0000ff', '#bb00ff', '#c14f16']
+            };
         });
     </script>
 }
