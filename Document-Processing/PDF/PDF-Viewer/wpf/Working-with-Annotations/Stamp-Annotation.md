@@ -290,6 +290,38 @@ private void AddStamp_Click(object sender, RoutedEventArgs e)
 {% endhighlight %}
 {% endtabs %}
 
+## Adding dynamic stamps using toolbar
+
+You can add a dynamic stamp containing the author name and current date and time by choosing a Dynamic Stamp from the collection available in the Dynamic Stamp category of the toolbar (as shown in the following screenshot). You can change the author name of the dynamic stamp by setting the current user of PdfViewer. Refer in [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/how-to/changing-the-current-user). By default, the author name is obtained from the stamp annotation's author name.
+
+![Dynamic stamps](Annotation-images\dynamic-stamp.png)
+
+## Adding dynamic stamps to the desired page programmatically
+
+PDF Viewer allows the user to add dynamic stamps to the desired page by passing PdfViewerDynamicStampType, page number and position where the dynamic stamp needs to be added as parameters to the `AddDynamicStamp` method. The following code snippet illustrates adding a dynamic stamp to the desired page programmatically.
+
+{% tabs %}
+{% highlight C# %}
+
+private void AddDynamicStamp_Click(object sender, RoutedEventArgs e)
+{
+    //Enter the page number ranges from 1 to page count.
+    int pageNumber = 1;
+    //Adds the dynamic stamp to the desired page.
+    PdfViewer.AddDynamicStamp(PdfViewerDynamicStampType.Approved, pageNumber, new Point(200, 200));
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+Various types of Dynamic stamps:
+* Approved.
+* NotApproved.
+* Reviewed.
+* Received.
+* Revised.
+* Confidential.
+
 ## Events
 
 The PdfViewerControl notifies through events, when `AnnotationChangedAction` such us adding, deleting, select, deselect, moving and resizing made in annotations. It also provides the annotations common information such as annotation name, page number, bounds and action type performed in respective annotation. 
