@@ -23,15 +23,8 @@ When your application handles large images, complex graphics, or memory-intensiv
 {% endhighlight %}
 {% endtabs %}
 
-## Check other PDF opening options
-
-* [Open a document from local storage](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/open-a-document-from-local-storage)
-* [Open a document from a URL](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/open-a-document-from-url)
-* [Open a password-protected document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/open-a-password-protected-document)
-
 ## See Also
-- [Open from URL](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/open-a-document-from-url)
-- [Open from Base64](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/open-a-document-from-base64string)
+
 - [Open from Local Storage](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/open-a-document-from-local-storage)
 - [Open a Password-Protected Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/open-a-password-protected-document)
 - [Document Load Notifications](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/documentloadnotifications)

@@ -156,7 +156,7 @@ N> The default values listed below are the hard-coded fallback strings in the `S
 <td>Connection Error</td>
 </tr>
 <tr>
-<td>DisClaimerContent</td>
+<td>DisclaimerContent</td>
 <td>AI-generated content may contain inaccuracies.</td>
 </tr>
 <tr>
@@ -208,7 +208,7 @@ N> The default values listed below are the hard-coded fallback strings in the `S
 <td>Scan</td>
 </tr>
 <tr>
-<td>SelectThePattern</td>
+<td>RedactViewHeader</td>
 <td>Select the patterns</td>
 </tr>
 <tr>
