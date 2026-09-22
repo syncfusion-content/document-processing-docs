@@ -285,43 +285,31 @@ The chunking result contains the total number of generated chunks and informatio
 The following output shows a shortened example of an Excel document processed using Auto mode:
 
 ```text
-Chunk Count: 23
-ChunkId: chunk_febb0882c5609fba
+Chunk Count: 1
+ChunkId: chunk_d2c3d8ecd4ab81a6
 ChunkIndex: 0
 Content:
-Enterprise Sales Summary
-Citation: ExcelSample.xlsx - Summary
+| Metric | Value |
+| --- | --- |
+| Revenue | $125,000 |
+| Growth | 12.5% |
+Citation: ExcelSample-Simple.xlsx - Summary!A1:B3
 Citation Location Details
-Location Key: blockType, Location Value: Cell
-Location Key: blockId, Location Value: worksheet:1:cell:A1
-Location Key: worksheetNumber, Location Value: 1
+Location Key: blockType, Location Value: Table
 Location Key: worksheetName, Location Value: Summary
-Location Key: cellAddress, Location Value: A1
-Location Key: rowIndex, Location Value: 1
-Location Key: columnIndex, Location Value: 1
-Location Key: cellIndex, Location Value: 1
-Location Key: displayText, Location Value: Enterprise Sales Summary
-Location Key: rawValue, Location Value: Enterprise Sales Summary
-Location Key: calculatedValue, Location Value: Enterprise Sales Summary
-Location Key: numberFormat, Location Value: General
-Location Key: isFormula, Location Value: False
-Location Key: isMerged, Location Value: True
-Location Key: mergeRange, Location Value: 'Summary'!A1:D1
-Location Key: isHidden, Location Value: False
-Location Key: sourceFile, Location Value: ExcelSample.xlsx
+Location Key: cellRange, Location Value: A1:B3
+Location Key: tableName, Location Value: SummaryTable
+Location Key: sourceFile, Location Value: ExcelSample-Simple.xlsx
 Metadata: Syncfusion.DocumentChunking.Models.ChunkMetadata
-Metadata SourceDocumentId: doc_6da758f792fc72a4
-Metadata File Name: ExcelSample.xlsx
+Metadata SourceDocumentId: doc_d273d812e173c69b
+Metadata File Name: ExcelSample-Simple.xlsx
 Metadata File Type: xlsx
-Metadata Token Count: 4
-Metadata Character Count: 24
+Metadata Token Count: 9
+Metadata Character Count: 77
 Metadata Attributes
-Attribute Key: SourceFileName, Attribute Value: ExcelSample.xlsx
+Attribute Key: SourceFileName, Attribute Value: ExcelSample-Simple.xlsx
 Attribute Key: FileExtension, Attribute Value: .xlsx
-Attribute Key: WorksheetCount, Attribute Value: 5
-Attribute Key: LastModified, Attribute Value: 8/27/2026 4:05:36 PM
-Attribute Key: Created, Attribute Value: 8/16/2026 9:52:12 PM
-Attribute Key: Author, Attribute Value: Vinothkumar Sampath
+Attribute Key: WorksheetCount, Attribute Value: 1
 ```
 
 Each generated chunk contains a unique identifier, index, and extracted content. When citations are enabled, the output identifies the original location of the chunk content. When metadata is enabled, the output provides information about the source document and generated chunk.
