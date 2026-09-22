@@ -72,7 +72,7 @@ Create a Syncfusion React Spreadsheet Editor using the Tailwind 3 theme. Install
 
 The agent will:
 - Install the required Syncfusion packages (@syncfusion/ej2-react-spreadsheet, @syncfusion/ej2-tailwind3-theme, etc.)
-- Register the license key before component initialization if mention
+- Register the license key before component initialization if mentioned
 - Import the theme CSS in the correct file
 - Generate the complete Spreadsheet component implementation with your requested features
 - Create sample data and configuration based on your requirements
@@ -117,7 +117,7 @@ cd spreadsheet-app
 
 When prompted, confirm the installation by pressing **Enter**. This scaffolds a React Vite project in your current Replit workspace.
 
-After the project is created, open the **Library** panel on the right side of the workspace. You can open it by clicking **Open Library** option or by pressing **Ctrl + Shift + L** in keyboard. Then, click the **Files** tab to view, create, edit, and manage the generated project files, such as `src/App.jsx`, `src/main.jsx`, `package.json`, and `vite.config.js`.
+After the project is created, open the **Library** panel on the right side of the workspace. You can open it by clicking **Open Library** option or by pressing **Ctrl + Shift + L** on your keyboard. Then, click the **Files** tab to view, create, edit, and manage the generated project files, such as `src/App.jsx`, `src/main.jsx`, `package.json`, and `vite.config.js`.
 
 ## Install Dependencies
 
