@@ -221,7 +221,7 @@ Using these capabilities, AI agents can:
 - **Analyze and summarize** document content intelligently
 - **Automate PDF form** workflows with validation
 - **Protect sensitive information** through intelligent redaction
-- **Manage document lifecycle** with precision and control
+- **Manage document life cycle** with precision and control
 - **Enhance collaboration** through annotations and comments
 
 ## Security & Control
