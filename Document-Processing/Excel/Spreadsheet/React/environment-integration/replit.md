@@ -24,14 +24,16 @@ Before getting started, ensure the following:
 
 > **Note:** No local Node.js, npm, or IDE installation is required. All development happens inside the Replit browser environment.
 
-## Create a React Spreadsheet Application in Replit
+## Create an Empty Project in Replit
 
 1. Sign in to [Replit](https://replit.com).
 2. Click **New** and Select **Empty project**.
-3. Enter a project name (for example, `spreadsheet-app`) or continue with the default generated project name.
-4. If required, you can rename the project later by clicking the project name dropdown and selecting **Edit project details**.
+3. Replit creates an empty project and automatically assigns a default project name.
+4. To change the project name, click the project name dropdown, select **Edit project details**, and enter a name such as `spreadsheet-app`.
 
-This section explains how to create a simple React Spreadsheet application and add the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component with the minimum required setup using two approaches.
+## Create a React Spreadsheet Application in Replit
+
+This below section explains how to add a simple React Spreadsheet application in the previously created empty replit project and and add the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component with the minimum required setup using two approaches
 
 
 {% tabcontents %}
@@ -43,15 +45,13 @@ This section explains how to create a simple React Spreadsheet application and a
 Click the **+** (Tools & files) menu icon in the workspace. A New tab open. then,
 Select **[Shell](https://docs.replit.com/features/workspace-tools/shell)**.
 
-In the Shell tab, you can install Syncfusion Spreadsheet Editor SDK skills using the following methods:
-
-## Install Specific Platform Skill (React Only)
-
-To install only the React Spreadsheet Editor skill for Replit:
+In the Shell tab, you can install Syncfusion Spreadsheet Editor SDK skills using the following commands:
 
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
+
 npx skills add syncfusion/spreadsheet-editor-sdk-skills --skill syncfusion-react-spreadsheet-editor
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -93,33 +93,40 @@ Once the agent finishes generating the code, click the **Run** button (▶) at t
 
 ![React Spreadsheet rendered inside the Replit preview pane](../images/replit-react-agent.png)
 
-### Next Steps
-
 For more information about Spreadsheet Editor SDK Skills, including:
-- Advanced installation options
 - See Supported platforms
-- Skills CLI commands (list, remove, update)
 - Comprehensive example prompts
 - Troubleshooting tips
 
-For More information, See [Agent Skills in Spreadsheet Editor SDK](../../../../Skills/spreadsheet-editor-sdk/component-skills.md)
+See [Agent Skills in Spreadsheet Editor SDK](../../../../Skills/spreadsheet-editor-sdk/component-skills.md)
 
 {% tabcontent Vite CLI %}
 
 ## Initialize a React Application with Vite
 
+Click the **+** (Tools & files) menu icon in the workspace. A New tab open. then,
+Select **[Shell](https://docs.replit.com/features/workspace-tools/shell)**.
+
 In the Shell tab, run the following command to create a new React application using Vite:
 
 {% tabs %}
-{% highlight bash tabtitle="JavaScript" %}
-npm create vite@latest . -- --template react
+{% highlight js tabtitle="JavaScript" %}
+
+npm create vite@latest spreadsheet-app -- --template react
+cd spreadsheet-app
+
 {% endhighlight %}
-{% highlight bash tabtitle="TypeScript" %}
-npm create vite@latest . -- --template react-ts
+{% highlight ts tabtitle="TypeScript" %}
+
+npm create vite@latest spreadsheet-app -- --template react-ts
+cd spreadsheet-app
+
 {% endhighlight %}
 {% endtabs %}
 
 When prompted, confirm the installation by pressing **Enter**. This scaffolds a React Vite project in your current Replit workspace.
+
+After the project is created, open the **Library** panel on the right side of the workspace. You can open it by clicking **Open Library** option or by pressing **Ctrl + Shift + L** in keyboard. Then, click the **Files** tab to view, create, edit, and manage the generated project files, such as `src/App.jsx`, `src/main.jsx`, `package.json`, and `vite.config.js`.
 
 ## Install Dependencies
 
@@ -143,12 +150,17 @@ Open `src/main.jsx` (or `src/main.tsx` for TypeScript) and add the license regis
 
 {% tabs %}
 {% highlight js tabtitle="main.jsx" %}
+
 import { registerLicense } from '@syncfusion/ej2-base';
 registerLicense('YOUR_LICENSE_KEY');
+
 {% endhighlight %}
+
 {% highlight ts tabtitle="main.tsx" %}
+
 import { registerLicense } from '@syncfusion/ej2-base';
 registerLicense('YOUR_LICENSE_KEY');
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -205,7 +217,7 @@ export default function App(): JSX.Element {
 
 ## Run the Application
 
-Click the **Run** button (▶) at the top, or wait for Replit to auto-start the dev server. The React Spreadsheet Editor will render in the preview pane on the right:
+Click the **Run** button (▶) at the top, or wait for Replit to auto-start the dev server. The React Spreadsheet Editor will render in the preview pane:
 
 ![React Spreadsheet rendered inside the Replit preview pane](../images/replit-react_vite.png)
 
@@ -243,7 +255,7 @@ If you need to store sensitive information (API keys, database URLs), use Replit
 
 Replit allows you to publish your application to a live public URL without leaving the browser. To deploy the spreadsheet application:
 
-1. Click the **Deploy** button (🚀) in the top-right corner of the Replit workspace.
+1. Click the **Publish** button (🚀) in the top-right corner of the Replit workspace.
 2. Select a deployment type based on your needs:
    * **Auto scale** - Best for web apps and APIs that scale automatically with traffic. Recommended for most React applications.
    * **Reserved VM** - Provides a dedicated virtual machine for apps that need persistent processes or long-running build steps.
@@ -270,6 +282,5 @@ Replit allows you to publish your application to a live public URL without leavi
 
 * [Getting Started with React Spreadsheet](../getting-started.md)
 [Agent Skills in Spreadsheet Editor SDK](../../../../Skills/spreadsheet-editor-sdk/component-skills.md)
-* [Getting Started with React Spreadsheet in Create React App](./create-react-app)
 * [Replit documentation](https://docs.replit.com/)
 * [Replit deployment overview](https://docs.replit.com/build/publish-your-app)
