@@ -64,8 +64,10 @@ pdfViewer.DigitalSignatureSettings.IsValidationBannerVisible = true;
 
 ### Configure Signature Field Tap Action
 
-The SignatureFieldTapAction property specifies the action performed when a user taps an unsigned signature field while digital signing is enabled using the EnableSigning property.
-When `SignatureFieldTapAction.ESignature` is specified and the user taps an unsigned signature field, the e-signature workflow is initiated, allowing the field to be signed.
+The SignatureFieldTapAction property determines the action performed when a user taps an unsigned signature field.
+When `EnableSigning` is set to true, tapping an unsigned signature field opens the digital signing dialog, allowing the user to digitally sign the document using a certificate.
+If `SignatureFieldTapAction` is set to `SignatureFieldTapAction.ESignature`, tapping an unsigned signature field initiates the electronic signature workflow, allowing the user to add an e-signature instead of opening the digital signing dialog.
+
 By default, the SignatureFieldTapAction property is set to `SignatureFieldTapAction.Auto`.
 
 {% tabs %} 
@@ -78,8 +80,8 @@ Available values:
 
 | Value | Description |
 |---------|-------------|
-| Auto | Uses default interaction Digital signature behavior |
-| ESignature | Changes to electronic signature |
+| Auto | Opens the digital signing dialog when EnableSigning is enabled. Otherwise, uses the default signature field interaction. |
+| ESignature | Initiates the electronic signature workflow when an unsigned signature field is tapped. |
 
 ### Configure Custom Signing Provider
 
