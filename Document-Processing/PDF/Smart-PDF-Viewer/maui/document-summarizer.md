@@ -243,11 +243,11 @@ The [`Timeout`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartPdfView
 
 ## InitialPromptSettings
 
-The [`InitialPromptSettings`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartPdfViewer.InitialPromptSettings.html) class configures the initial behavior of the Assist view in the `SfSmartPdfViewer`. It guides the AI assistant by providing a predefined prompt, suggested queries, and a page range for summarization.
+The `InitialPromptSettings` class configures the initial behavior of the Assist view in the `SfSmartPdfViewer`. It guides the AI assistant by providing a predefined prompt, suggested queries, and a page range for summarization.
 
 ### Prompt
 
-[`Prompt`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartPdfViewer.InitialPromptSettings.html#Syncfusion_Maui_SmartPdfViewer_InitialPromptSettings_Prompt) (type: `string`) sets the initial query shown in the input field when the Assist view opens. This directs the AI assistant to perform a specific task immediately.
+`Prompt` (type: `string`) sets the initial query shown in the input field when the Assist view opens. This directs the AI assistant to perform a specific task immediately.
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
@@ -269,7 +269,7 @@ N> In XAML, nested property-element syntax (for example, `syncfusion:AssistViewS
 
 ### SuggestedPrompts
 
-[`SuggestedPrompts`](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.SmartPdfViewer.InitialPromptSettings.html#Syncfusion_Maui_SmartPdfViewer_InitialPromptSettings_SuggestedPrompts) (type: `string[]`) provides a list of predefined prompts that guide the user and help the AI understand the document context. The default prompts include "Can you provide a summary of this document?", "What are the topics discussed in this document?", and "Could you list the key points from this document?".
+`SuggestedPrompts` (type: `string[]`) provides a list of predefined prompts that guide the user and help the AI understand the document context. The default prompts include "Can you provide a summary of this document?", "What are the topics discussed in this document?", and "Could you list the key points from this document?".
 
 {% tabs %}
 {% highlight xaml tabtitle="MainPage.xaml" %}
