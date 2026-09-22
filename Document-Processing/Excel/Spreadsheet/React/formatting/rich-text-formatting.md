@@ -9,7 +9,9 @@ documentation: ug
 
 # Rich Text Formatting in React Spreadsheet
 
-Rich text formatting allows you to apply different styles to specific portions of text within a single cell to improve readability and presentation. Currently, subscript and superscript formatting are supported, and other rich text font styles are not supported.
+Rich text formatting allows you to apply different styles to specific portions of text within a single cell to improve readability and presentation. Each text segment can have its own formatting, enabling you to combine multiple styles within a single cell.
+
+The Spreadsheet supports rich text formatting options such as font family, font size, font weight, font style, text decoration, font color, subscript, and superscript.
 
 In the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component, rich text formatting is supported through the [`richText`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#richtext) property of the cell model. This property lets you define multiple text segments inside a cell, where each segment can have its own style.
 
@@ -17,6 +19,20 @@ Each `richText` segment contains:
 
 - `text` – Specifies the content of the segment  
 - `style` – Defines formatting using the [`CellStyleModel`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel)
+
+## Supported Rich Text Formats
+
+Rich text formatting supports the following style options through the `style` property of each `richText` segment:
+
+| Format | Description |
+|----------|-------------|
+| `fontFamily` | Specifies the font family of the text segment. |
+| `fontSize` | Specifies the font size of the text segment. |
+| `fontWeight` | Specifies the font weight such as normal or bold. |
+| `fontStyle` | Specifies the font style such as normal or italic. |
+| `textDecoration` | Specifies text decorations such as underline and line-through. |
+| `color` | Specifies the font color of the text segment. |
+| `verticalAlign` | Specifies subscript (`sub`) and superscript (`super`) formatting. |
 
 ## Subscript and Superscript
 
@@ -72,5 +88,4 @@ The following code example shows subscript and superscript formatting in cells o
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/richtext-format-cs1" %}
 
 ## Limitations
-* **Limited formatting support:** Only subscript and superscript formatting are supported within rich text. Other formatting options such as font size, font color, and font weight are not supported.
 * **Edit mode requirement:** Formatting can be applied only while the cell is in edit mode. Selecting text outside of edit mode does not support subscript or superscript formatting.
