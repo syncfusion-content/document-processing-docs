@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Track Document Changes in .NET MAUI PDF Viewer | Syncfusion
-description: Learn how to track document modifications and determine whether a PDF document contains unsaved changes in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer).
+description: Learn how to track document modifications and check whether a PDF contains unsaved changes in the Syncfusion® .NET MAUI PDF Viewer (SfPdfViewer).
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
