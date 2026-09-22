@@ -35,7 +35,7 @@ This section explains how to create a simple React application and add the [Reac
 3. Select **Empty project**.
 4. Enter a project name (for example, `spreadsheet-react-skills` or use the default generated name).
 6. Once the project opens, click the **+** (New Tab) icon in the workspace.
-7. Select **Shell**.
+7. Select **[Shell](https://docs.replit.com/features/workspace-tools/shell)**.
 
 {% tabcontents %}
 
@@ -277,15 +277,14 @@ Replit allows you to publish your application to a live public URL without leavi
 
 1. Click the **Deploy** button (🚀) in the top-right corner of the Replit workspace.
 2. Select a deployment type based on your needs:
-   * **Auto scale** — Best for web apps and APIs that scale automatically with traffic. Recommended for most React applications.
-   * **Reserved VM** — Provides a dedicated virtual machine for apps that need persistent processes or long-running build steps.
-   * **Static** — Serves the pre-built production output (`dist/` folder) with fast global hosting. Ensure `npm run build` runs as the build command.
+   * **Auto scale** - Best for web apps and APIs that scale automatically with traffic. Recommended for most React applications.
+   * **Reserved VM** - Provides a dedicated virtual machine for apps that need persistent processes or long-running build steps.
+   * **Static** - Serves the pre-built production output (`dist/` folder) with fast global hosting. Ensure `npm run build` runs as the build command.
+   * **Scheduled Deployment** - Runs applications or jobs at scheduled intervals.
 3. Configure the build and run commands (for a Vite React app, the defaults are `npm run build` and `npm run dev`).
-4. Click **Deploy** and wait for the build to complete. Replit provides a public URL, such as `https://syncfusion-spreadsheet-app.<your-username>.replit.app`, that you can share with users.
+4. Click **Publish** and wait for the build to complete. Replit provides a public URL, such as `https://syncfusion-spreadsheet-app.<your-username>.replit.app`, that you can share with users.
 
-> **Note:** 4. Click **Deploy** and wait for the build to complete. Replit provides a public URL, such as `https://syncfusion-spreadsheet-app.<your-username>.repl.co`, that you can share with users.
-
-> **Note:** Deployment options and availability depend on your Replit plan. The development Repl remains free, and you can continue editing and redeploying after publishing. For the latest deployment types and pricing, refer to the [Replit deployment documentation](https://docs.replit.com/deployments/about-deployments).
+> **Note:** Publishing options and availability depend on your Replit plan. Replit automatically recommends the most appropriate publishing option based on your project type. For the latest publishing guidance, refer to the [Replit documentation](https://docs.replit.com/home/publish-the-site).
 
 ## Troubleshooting
 
