@@ -19,7 +19,7 @@ NuGet provides a convenient way to download and install the Syncfusion<sup>®</s
     <th>Package Manager Console Command</th>
   </tr>
   <tr>
-    <td>ASP.NET Core</td>
+    <td>WPF, Windows Forms, ASP.NET MVC, ASP.NET Core, Blazor, Universal Windows Platform, Windows UI Library (WinUI) and .NET Multi-platform App UI (.NET MAUI)</td>
     <td><code>Syncfusion.DocumentChunking</code></td>
     <td><code>Install-Package Syncfusion.DocumentChunking</code></td>
   </tr>
