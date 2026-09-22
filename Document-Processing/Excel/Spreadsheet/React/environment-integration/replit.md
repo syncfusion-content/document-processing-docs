@@ -20,7 +20,7 @@ This section provides a step-by-step guide for setting up a React application in
 Before getting started, ensure the following:
 
 * A free or paid [Replit account](https://replit.com).
-* A valid [**Syncfusion license key**](https://help.syncfusion.com/document-processing/licensing/overview) (licensed or trial). You can generate a trial key from the [Syncfusion License Key](https://help.syncfusion.com/document-processing/licensing/how-to-generate) page.
+* A valid [**Syncfusion license key**](https://help.syncfusion.com/document-processing/licensing/overview) (licensed or trial).
 
 > **Note:** No local Node.js, npm, or IDE installation is required. All development happens inside the Replit browser environment.
 
@@ -33,12 +33,13 @@ Before getting started, ensure the following:
 4. To rename the project, click the project name dropdown located at the top of the Replit workspace, select **Edit project details**, and enter a name such as `spreadsheet-app`. <br/><br/>
 ![Edit project details in Replit](../images/edit-project-details-replit.png)
 
-5. Click the **+** icon in the tab bar. and select **[Shell](https://docs.replit.com/features/workspace-tools/shell#usage/)** from the new tab. <br/><br/>
-![Shell tab in Replit](../images/shell-tab-replit.png)
-
 ## Create a React Spreadsheet Application in Replit
 
 This section explains how to add a simple React Spreadsheet application to the current Replit project and integrate the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component with the minimum required setup using either of the following approaches.
+
+Before proceeding, click the **+** icon in the tab bar and select **Shell** from the new tab. The Shell is required for both the Agent Skills and Vite CLI approaches described in the following sections.
+
+![Shell tab in Replit](../images/shell-tab-replit.png)
 
 {% tabcontents %}
 
@@ -46,7 +47,7 @@ This section explains how to add a simple React Spreadsheet application to the c
 
 ## Install Syncfusion® React Spreadsheet Editor SDK Skills
 
-In the Shell tab, run the following command to install the Syncfusion® React Spreadsheet Editor SDK skills:
+In the Shell tab, run the following command to install the Syncfusion® React Spreadsheet Editor SDK [skills](https://github.com/syncfusion/spreadsheet-editor-sdk-skills/tree/master/skills/syncfusion-react-spreadsheet-editor):
 
 {% tabs %}
 {% highlight bash tabtitle="npm" %}
@@ -69,16 +70,16 @@ Once skills are installed, the Replit Agent automatically:
 
 Once skills are installed, the Replit Agent can generate Spreadsheet component code automatically. Open the **Replit Agent** panel and enter a prompt such as:
 
-![Replit Agent panel](../images/replit-agent-panel.png)
-
 **Example Prompts:**
 
 ```
 Create a Syncfusion React Spreadsheet application using the Tailwind 3 theme. Install all required packages and render an empty Spreadsheet component.
 ```
 
+![Replit Agent panel](../images/replit-agent-panel.png)
+
 The agent will:
-- Create a React application using Vite.
+- Create a React application.
 - Install the required Syncfusion packages (@syncfusion/ej2-react-spreadsheet, @syncfusion/ej2-tailwind3-theme, etc.)
 - Register the license key before component initialization if mentioned
 - Import the theme CSS in the correct file
@@ -281,4 +282,3 @@ Replit allows you to publish your application to a live public URL without leavi
 * [Getting Started with React Spreadsheet](../getting-started.md)
 * [Agent Skills in Spreadsheet Editor SDK](../../../../Skills/spreadsheet-editor-sdk/component-skills.md)
 * [Replit documentation](https://docs.replit.com/)
-* [Replit deployment overview](https://docs.replit.com/build/publish-your-app)
