@@ -20,7 +20,7 @@ The following assembly must be referenced in your application to use the Syncfus
 <tbody>
 <tr>
 <td>
-WPF, Windows Forms, ASP.NET MVC, ASP.NET Core, Blazor, Universal Windows Platform, Windows UI Library (WinUI) and .NET Multi-platform App UI (.NET MAUI)
+ASP.NET Core, ASP.NET MVC, Blazor, Windows Forms, WPF, WinUI, and .NET MAUI
 <br/><br/></td>
 <td>
 Syncfusion.DocumentChunking
