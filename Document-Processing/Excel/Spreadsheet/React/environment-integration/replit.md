@@ -13,7 +13,7 @@ This section provides a step-by-step guide for setting up a React application in
 
 ## What is Replit?
 
-[Replit](https://replit.com) is a browser-based, AI-powered development environment (agentic UI builder) that lets you write, run, and deploy applications entirely in the cloud. It requires no local setup and is well suited for users who are new to software development, or who want to prototype and iterate quickly without configuring a local toolchain.
+[Replit](https://replit.com) is a browser-based, AI-powered development environment (agentic UI builder) that lets you write, run, and deploy applications entirely in the cloud. It requires no local setup and is well suited for users who are new to software development, or who want to prototype and iterate quickly without configuring local development tools.
 
 ## Prerequisites
 
@@ -24,18 +24,15 @@ Before getting started, ensure the following:
 
 > **Note:** No local Node.js, npm, or IDE installation is required. All development happens inside the Replit browser environment.
 
-## Create a React application in Replit
-
-This section explains how to create a simple React application and add the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component with the minimum required setup using two approaches.
-
-## Create an Empty Project
+## Create a React Spreadsheet Application in Replit
 
 1. Sign in to [Replit](https://replit.com).
-2. Click **New**.
-3. Select **Empty project**.
-4. Enter a project name (for example, `spreadsheet-react-skills` or use the default generated name).
-6. Once the project opens, click the **+** (New Tab) icon in the workspace.
-7. Select **[Shell](https://docs.replit.com/features/workspace-tools/shell)**.
+2. Click **New** and Select **Empty project**.
+3. Enter a project name (for example, `spreadsheet-app`) or continue with the default generated project name.
+4. If required, you can rename the project later by clicking the project name dropdown and selecting **Edit project details**.
+
+This section explains how to create a simple React Spreadsheet application and add the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component with the minimum required setup using two approaches.
+
 
 {% tabcontents %}
 
@@ -43,21 +40,12 @@ This section explains how to create a simple React application and add the [Reac
 
 ## Install Syncfusion® Spreadsheet Editor SDK Skills
 
-In the Shell tab, you can install Syncfusion Spreadsheet Editor SDK skills using one of the following methods:
+Click the **+** (Tools & files) menu icon in the workspace. A New tab open. then,
+Select **[Shell](https://docs.replit.com/features/workspace-tools/shell)**.
 
-### Method 1: Quick Installation (All Skills)
+In the Shell tab, you can install Syncfusion Spreadsheet Editor SDK skills using the following methods:
 
-To install all Spreadsheet Editor SDK skills at once:
-
-{% tabs %}
-{% highlight bash tabtitle="npm" %}
-npx skills add syncfusion/spreadsheet-editor-sdk-skills -y
-{% endhighlight %}
-{% endtabs %}
-
-This command installs all available framework skills (React, Angular, Blazor, ASP.NET Core, etc.) to your default agent with no prompts.
-
-### Method 2: Install Specific Platform Skill (React Only)
+## Install Specific Platform Skill (React Only)
 
 To install only the React Spreadsheet Editor skill for Replit:
 
@@ -68,26 +56,6 @@ npx skills add syncfusion/spreadsheet-editor-sdk-skills --skill syncfusion-react
 {% endtabs %}
 
 This command installs only the React skill, keeping your setup lightweight and focused.
-
-### Method 3: Interactive Installation (Recommended)
-
-To install skills interactively and select which skills and agent to use:
-
-{% tabs %}
-{% highlight bash tabtitle="npm" %}
-npx skills add syncfusion/spreadsheet-editor-sdk-skills
-{% endhighlight %}
-{% endtabs %}
-
-When prompted:
-1. **Select skills to install:** Use arrow keys to navigate the list, press **space** to select **syncfusion-react-spreadsheet-editor**, then press **Enter** to confirm.
-2. **Choose your AI agent:** Select the agent where skills should be installed (e.g., **Claude Code**, **Augment**, **Continue**, etc.).
-3. **Installation scope:** Choose between:
-   - **Project** (Install in current directory, committed with your project)
-   - **Global** (Install globally on your machine)
-4. **Confirm installation:** Press **Enter** to complete.
-
-The skills will be stored in your selected agent's directory (e.g., `.augment/skills`, or `.continue/skills` or `skills-lock.json`) and automatically loaded by the agent.
 
 ## How Syncfusion® Spreadsheet Editor SDK Skills Work
 
@@ -105,7 +73,7 @@ Once skills are installed, the Replit Agent can generate Spreadsheet component c
 **Example Prompts:**
 
 ```
-Create a Syncfusion React Spreadsheet Editor using the Tailwind 3 theme.Install the required packages and render an empty spreadsheet in App.jsx.
+Create a Syncfusion React Spreadsheet Editor using the Tailwind 3 theme.Install the required packages and render an empty spreadsheet.
 ```
 
 The agent will:
@@ -117,7 +85,7 @@ The agent will:
 
 You can use the agent to apply different spreadsheet actions by entering prompts for data validation, formatting, conditional formatting, open/save operations, and other Spreadsheet features.
 
-**Review and Apply:** Review the generated code and apply it to your project files (`src/App.jsx`, `src/main.jsx`, `src/index.css`, etc.).
+**Review and Modify:** Review the generated code using the file options in the right side panel. Click on files like `src/App.jsx`, `src/main.jsx`, and `src/index.css` to view and edit the generated code if needed.
 
 ## Run the Application
 
@@ -261,7 +229,7 @@ Once your Spreadsheet is running, you can enhance it with:
 
 * **Shell access:** Use the **Shell** tab to run any `npm` commands, such as installing additional packages or starting/stopping the dev server manually.
 * **Persistent storage:** Replit persists your project files automatically. Changes are saved as you type.
-* **View and manage files:** Use the **Library** panel on the right side of the Replit workspace to view all your created files. Click the **Library** option to switch between files, or use the **...** (menu) option to manually create and edit new files. You can also press **Ctrl + Shift + L** to quickly open the Library panel.
+* **View and manage project files:** Use the **Library** panel to access applications, documents, images, and other resources generated by Replit Agent. To view and edit project files, switch to the **Files** tab. You can also use the **...** (More options) menu to create, edit, and manage files. Press **Ctrl + Shift + L** to quickly open the Library panel.
 
 ## Environment Variables in Replit
 
