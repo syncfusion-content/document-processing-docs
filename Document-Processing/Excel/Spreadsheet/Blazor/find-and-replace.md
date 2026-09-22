@@ -85,6 +85,66 @@ The [FindAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsh
 {% endhighlight %}
 {% endtabs %}
 
+### Find all programmatically
+
+The [FindAllAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_FindAllAsync_System_String_Syncfusion_Blazor_Spreadsheet_SearchScope_System_Boolean_System_Boolean_) method searches for all occurrences of the specified text in the spreadsheet and returns a string array of sheet-qualified cell addresses (for example, `"Sheet1!A1"`). This method does not navigate the active cell. The available parameters in the `FindAllAsync()` method are:
+
+| Parameter | Type | Description |
+|---|---|---|
+| searchText | string | Specifies the text to search for. If this parameter is **null**, empty, or contains only whitespace, an empty array is returned. |
+| searchScope | [SearchScope](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SearchScope.html) *(optional)* | Specifies whether to search in the current sheet or the entire workbook. Accepts values from the `SearchScope` enumeration. If unspecified, the default is `SearchScope.CurrentSheet`.<br><br>**Possible values:**<br>• `SearchScope.CurrentSheet` – Searches only within the currently active worksheet.<br>• `SearchScope.EntireWorkbook` – Searches across all worksheets in the workbook. |
+| matchCase | bool *(optional)* | Specifies whether the search should be case-sensitive. If unspecified, the default is `false` (case-insensitive). |
+| matchEntireCell | bool *(optional)* | Specifies whether the search text must match the entire cell content. If unspecified, the default is `false` (partial match allowed). |
+
+The method returns an empty string array if any of the following conditions are met:
+
+* `searchText` is **null**, empty, or contains only whitespace.
+* [AllowFindAndReplace](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AllowFindAndReplace) is set to `false`.
+* No matches are found according to the specified criteria.
+* The workbook has not been initialized.
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor %}
+
+@page "/"
+@using Syncfusion.Blazor.Spreadsheet
+@using Syncfusion.Blazor.Buttons
+
+<SfButton OnClick="FindAllMatches" Content="Find All"></SfButton>
+
+<SfSpreadsheet @ref="SpreadsheetInstance" DataSource="DataSourceBytes">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+    public byte[] DataSourceBytes { get; set; }
+    public SfSpreadsheet SpreadsheetInstance;
+
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sample.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    public async Task FindAllMatches()
+    {
+        // Retrieves all matching cell addresses in the active sheet.
+        string[] matches = await SpreadsheetInstance.FindAllAsync(
+            searchText: "Red",
+            searchScope: SearchScope.CurrentSheet,
+            matchCase: false,
+            matchEntireCell: false);
+
+        foreach (var address in matches)
+        {
+            Console.WriteLine($"Match found at: {address}");
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 
 ## Replace
 
