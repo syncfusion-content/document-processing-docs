@@ -304,4 +304,4 @@ Replit allows you to publish your application to a live public URL without leavi
 [Agent Skills in Spreadsheet Editor SDK](../../../../Skills/spreadsheet-editor-sdk/component-skills.md)
 * [Getting Started with React Spreadsheet in Create React App](./create-react-app)
 * [Replit documentation](https://docs.replit.com/)
-* [Replit deployment overview](https://docs.replit.com/deployments/about-deployments)
+* [Replit deployment overview](https://docs.replit.com/build/publish-your-app)
