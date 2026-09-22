@@ -28,13 +28,12 @@ Before getting started, ensure the following:
 
 1. Sign in to [Replit](https://replit.com).
 2. Click **New** and Select **Empty project**.
-3. Replit creates an empty project with the default generated project name.
-4. To change the project name, click the project name dropdown, select **Edit project details**, and enter a name such as `spreadsheet-app`.
+3. Replit creates an empty project with a default generated name.
+4. To rename the project, click the project name dropdown, select **Edit project details**, and enter a name such as `spreadsheet-app`.
 
 ## Create a React Spreadsheet Application in Replit
 
-This below section explains how to add a simple React Spreadsheet application in the previously created empty replit project and and add the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component with the minimum required setup using two approaches
-
+This section explains how to add a simple React Spreadsheet application to the current Replit project and integrate the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component with the minimum required setup using either of the following approaches.
 
 {% tabcontents %}
 
