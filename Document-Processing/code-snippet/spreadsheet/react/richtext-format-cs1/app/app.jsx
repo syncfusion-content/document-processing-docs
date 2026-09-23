@@ -60,7 +60,7 @@ function App() {
                 { text: 'st', style: { verticalAlign: 'super' } },
                 { text: ' Dec 2026' }
             ]
-        }, 'A4');
+        }, 'A5');
     };
 
     return (

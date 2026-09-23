@@ -60,7 +60,7 @@ function App(): React.ReactElement {
                 { text: 'st', style: { verticalAlign: 'super' } },
                 { text: ' Dec 2026' }
             ]
-        }, 'A4');
+        }, 'A5');
     };
 
     return (

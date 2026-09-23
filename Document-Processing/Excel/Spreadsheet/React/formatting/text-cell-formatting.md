@@ -146,7 +146,7 @@ The following code example demonstrates text overflow in the Spreadsheet.
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/react/text-overflow-cs1" %} 
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/text-overflow-cs1" %}
 
 ## Limitations of Formatting
 

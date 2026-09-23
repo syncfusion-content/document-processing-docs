@@ -77,8 +77,6 @@ Formula-based Conditional Formatting enables you to apply custom formatting rule
 
 When the specified formula evaluates to `TRUE`, the defined formatting is automatically applied to the target cells. This allows you to create advanced highlighting scenarios based on values from other cells or ranges within the worksheet.
 
-Currently, Formula-based Conditional Formatting is supported only through the Spreadsheet API and cannot be applied through the Conditional Formatting user interface.
-
 ## Custom Format
 
 Using the custom format for conditional formatting you can set cell styles like color, background color, font style, font weight, and underline.
