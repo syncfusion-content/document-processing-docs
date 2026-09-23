@@ -105,6 +105,8 @@ For more information about Spreadsheet Editor SDK Skills, including:
 
 See [Agent Skills in Spreadsheet Editor SDK](../../../../Skills/spreadsheet-editor-sdk/component-skills.md)
 
+{% endtabcontent %}
+
 {% tabcontent Vite CLI %}
 
 ## Initialize a React Application with Vite
