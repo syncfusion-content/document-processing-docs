@@ -31,7 +31,9 @@ The comparison provides:
 
 ### Step 1: Initialize the PdfComparer component
 
-```jsx
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% raw %}
 import React from 'react';
 import { PdfComparer, TextComparisonOptions } from '@syncfusion/ej2-react-pdfviewer';
 
@@ -66,13 +68,17 @@ function SemanticTextComparison() {
         <div id="comparer-container" style={{ height: 'calc(100vh - 330px)' }}></div>
     );
 }
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ### Step 2: Access the differences panel
 
 The `PdfComparer` automatically displays a differences panel with categorized results. To access differences programmatically:
 
-```jsx
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% raw %}
 const getDifferencesData = (): void => {
     if (pdfComparerRef.current) {
         // Access the differences from the comparer instance
@@ -93,13 +99,17 @@ const getDifferencesData = (): void => {
         }
     }
 };
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ### Step 3: Process and export differences
 
 Filter and process differences for custom workflows:
 
-```jsx
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% raw %}
 const generateReport = (): void => {
     if (!pdfComparerRef.current) return;
 
@@ -128,13 +138,17 @@ const generateReport = (): void => {
         return report;
     }
 };
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ### Step 4: Display comparison summary
 
 Create a summary component showing difference counts:
 
-```jsx
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% raw %}
 const ComparisonSummary = (): JSX.Element => {
     const [summary, setSummary] = React.useState<any>(null);
 
@@ -170,7 +184,9 @@ const ComparisonSummary = (): JSX.Element => {
         </div>
     );
 };
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Viewing differences
 
@@ -200,7 +216,9 @@ Each difference object contains:
 
 ### Export differences to CSV
 
-```jsx
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% raw %}
 const exportToCSV = (): void => {
     const comparerElement = (pdfComparerRef.current as any);
     const differencesList = comparerElement.getDifferences?.();
@@ -222,11 +240,15 @@ const exportToCSV = (): void => {
     link.click();
     window.URL.revokeObjectURL(url);
 };
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ### Filter differences by type
 
-```jsx
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% raw %}
 const getDifferencesByType = (type: string): any[] => {
     const comparerElement = (pdfComparerRef.current as any);
     const differencesList = comparerElement.getDifferences?.();
@@ -238,11 +260,15 @@ const getDifferencesByType = (type: string): any[] => {
 const addedDifferences = getDifferencesByType('Added');
 const deletedDifferences = getDifferencesByType('Deleted');
 const modifiedDifferences = getDifferencesByType('Modified');
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ### Group differences by page
 
-```jsx
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% raw %}
 const groupDifferencesByPage = (): any => {
     const comparerElement = (pdfComparerRef.current as any);
     const differencesList = comparerElement.getDifferences?.();
@@ -259,13 +285,17 @@ const groupDifferencesByPage = (): any => {
     
     return grouped;
 };
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Error handling
 
 Handle comparison errors gracefully:
 
-```jsx
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% raw %}
 const handleComparison = async (): Promise<void> => {
     try {
         if (!pdfComparerRef.current) {
@@ -285,7 +315,9 @@ const handleComparison = async (): Promise<void> => {
         // Display error to user
     }
 };
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Performance notes
 
