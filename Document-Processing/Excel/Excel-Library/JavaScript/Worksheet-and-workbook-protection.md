@@ -82,7 +82,6 @@ const sheet = workbook.sheet(0);
 
 const editable = sheet.protectedRanges.add({
   name: 'InputCells',
-  sqref: 'B2:B20',
   password: 'range-secret', // optional
 });
 
@@ -102,7 +101,6 @@ const sheet = workbook.sheet(0);
 
 const editable = sheet.protectedRanges.add({
   name: 'InputCells',
-  sqref: 'B2:B20',
   password: 'range-secret',
 });
 
@@ -113,7 +111,7 @@ sheet.protect('sheet-secret');
 {% endhighlight %}
 {% endtabs %}
 
-`ProtectedRanges` also supports `count`, `get(index)`, `remove`, `removeAt`, and `clear`. Multiple areas can be space-separated in the `sqref` address (for example `'A1:B2 D4:E5'`).
+`ProtectedRanges` also supports `count`, `get(index)`, `remove`, `removeAt`, and `clear`.
 
 ## Protect a workbook
 

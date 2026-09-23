@@ -8,9 +8,9 @@ documentation: ug
 
 # Conditional Formatting in JavaScript Excel
 
-Create rules with `sheet.conditionalFormats.add(sqref)` and configure the returned `ConditionalFormat` handle. Pass a cell or range address such as `A1:A10`.
+Create rules with `sheet.conditionalFormats.add` and configure the returned `ConditionalFormat` handle. Pass a cell or range address such as `A1:A10`.
 
-`ConditionalFormatType` and `ConditionalFormatOperator` are **string union types** (for example `'cellIs'`, `'greaterThan'`), not numeric enums. New rules start as a `cellIs` value-comparison rule. Use `firstFormula` / `secondFormula` (or `formulas`) for thresholds — there is no `formula1` property. Apply highlight styling through `format` (`DifferentialFormatInput`: font, fill, border, and `numFmt`).
+`ConditionalFormatType` and `ConditionalFormatOperator` are **string union types** (for example `'cellIs'`, `'greaterThan'`), not numeric enums. New rules start as a `cellIs` value-comparison rule. Use `firstFormula` / `secondFormula` (or `formulas`) for thresholds — there is no `formula1` property. Apply highlight styling through `format` (`DifferentialFormatInput`: font, fill, and border).
 
 ## Cell value rule
 
