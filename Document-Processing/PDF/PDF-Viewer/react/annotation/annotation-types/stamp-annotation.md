@@ -172,12 +172,13 @@ The Stamp tool includes both **Text Stamp** and **Image Stamp** options alongsid
 
 ### Add predefined text stamps to the submenu
 
-You can add predefined text stamps and show them in the **Text Stamp** submenu by configuring `customTextStamps` in the viewer settings.
+You can add predefined text stamps and show them in the **Text Stamp** submenu by configuring `customTextStamps` in the viewer settings. Use `fontFamilyCollection` to provide the font list that should be available for text stamp styling in the UI.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
 {% raw %}
 viewer.customStampSettings = {
+  fontFamilyCollection : ['Arial', 'Times New Roman', 'Courier New'],
   customTextStamps: [{
     title: 'Draft',
     subtitle: '[$author] DD/MMMM/YYYY, h:mm A',

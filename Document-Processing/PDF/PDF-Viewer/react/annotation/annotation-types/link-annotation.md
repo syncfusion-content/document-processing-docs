@@ -21,6 +21,8 @@ To enable Link annotations, inject the following modules into the React PDF View
 - [**Annotation**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#annotation)
 - [**LinkAnnotation**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#linkannotation)
 - [**Toolbar**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#toolbar)
+- [**Magnification**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/magnification)
+- [**Navigation**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/navigation)
 
 This setup enables the annotation toolbar and link annotation behavior.
 
@@ -150,6 +152,8 @@ This adds a link rectangle that opens the specified external URL in the browser 
 
 Link annotations can be customized with optional visual and navigation properties, such as stroke color, thickness, size, destination page, or URL, depending on the type of link you are creating. The `hyperlinkOpenState` property controls how external URLs open: `NewTab` opens the page in a new tab, and `NewWindow` opens it in a separate browser window.
 
+The following example configures the viewer to open external links in a separate browser window.
+
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
 {% raw %}
@@ -186,7 +190,7 @@ This allows the link to be visually aligned with the PDF content without changin
 
 ### Edit Link Annotation Programmatically
 
-Use `editAnnotation()` to update an existing link annotation.
+Use `editAnnotation()` to update an existing link annotation. The following example updates the selected link annotation by changing its color, size, and navigation target.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -194,16 +198,16 @@ Use `editAnnotation()` to update an existing link annotation.
 function editLinkAnnotation() {
   const viewer = document.getElementById('container').ej2_instances[0];
 
-  for (let annot of viewer.annotationCollection) {
-    if (annot.subject === 'Link') {
-      annot.strokeColor = '#1fcbd4';
-      annot.thickness = 2;
-      annot.bounds = { left: 100, top: 100, width: 100, height: 100 };
-      annot.url = 'https://www.google.com';
-      annot.destinationPageIndex = 3;
-      annot.destinationLocation = { x: 300, y: 300 };
-      annot.zoomValue = 1;
-      viewer.annotation.editAnnotation(annot);
+  for (const linkAnnotation of viewer.annotationCollection) {
+    if (linkAnnotation.subject === 'Link') {
+      linkAnnotation.strokeColor = '#1fcbd4';
+      linkAnnotation.thickness = 2;
+      linkAnnotation.bounds = { left: 100, top: 100, width: 100, height: 100 };
+      linkAnnotation.url = 'https://www.google.com';
+      linkAnnotation.destinationPageIndex = 3;
+      linkAnnotation.destinationLocation = { x: 300, y: 300 };
+      linkAnnotation.zoomValue = 1;
+      viewer.annotation.editAnnotation(linkAnnotation);
       break;
     }
   }
@@ -218,29 +222,19 @@ The PDF Viewer supports deleting link annotations through both the UI and API.
 
 ![Delete link annotation](../../images/delete-link.png)
 
-#### Delete all link annotations
+#### Delete a link annotation by ID
 
-{% tabs %}
-{% highlight js tabtitle="Standalone" %}
-{% raw %}
-function deleteAllAnnotations() {
-  const viewer = document.getElementById('container').ej2_instances[0];
-  viewer.deleteAnnotations();
-}
-{% endraw %}
-{% endhighlight %}
-{% endtabs %}
-
-#### Delete by annotation id
+The following example deletes only the first link annotation found in the collection and keeps all other annotations unchanged.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
 {% raw %}
 function deleteLinkById() {
   const viewer = document.getElementById('container').ej2_instances[0];
+  const linkAnnotation = viewer.annotationCollection.find((item) => item.subject === 'Link');
 
-  if (viewer.annotationCollection.length > 0) {
-    viewer.annotation.deleteAnnotationById(viewer.annotationCollection[0].annotationId);
+  if (linkAnnotation) {
+    viewer.annotation.deleteAnnotationById(linkAnnotation.annotationId);
   }
 }
 {% endraw %}
@@ -249,7 +243,7 @@ function deleteLinkById() {
 
 ## Set Properties While Adding an Individual Link
 
-You can set link properties when creating the annotation directly by passing the required fields in the `addAnnotation('Link', ...)` call.
+You can set link properties when creating the annotation directly by passing the required fields in the `addAnnotation('Link', ...)` call. The following example creates two different link annotations: one to an external URL and one to a destination page.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
