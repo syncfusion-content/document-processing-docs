@@ -9,7 +9,7 @@ documentation: ug
 
 # Built-in Formulas and Functions in React Spreadsheet
 
-The Spreadsheet component supports a comprehensive set of built-in formulas organized by category. These formulas can be used to perform calculations, analyze data, manipulate text, process dates and times, evaluate logical conditions, retrieve information, and work with financial, engineering, and database data.
+The Spreadsheet component supports a comprehensive set of built-in formulas organized by category. These formulas can be used to perform calculations, analyze data, manipulate text, process dates and times, evaluate logical conditions, retrieve information, and work with financial, engineering, and database data. The formulas supported in the Spreadsheet component are listed below by category.
 
 ## Math & Trigonometry
 
