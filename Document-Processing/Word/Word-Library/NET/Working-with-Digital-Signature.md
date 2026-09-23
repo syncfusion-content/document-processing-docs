@@ -177,7 +177,7 @@ document.Close()
 
 ## Sign Signature Line (Visible Signature)
 
-The following code example illustrates how to sign a signature line by supplying a custom signature image (for example, a scanned signature or handwritten PNG). The image replaces the default X mark on the signature line. It binds the new signature to the signature line by setting `SignatureSettings.SignatureLineId` to the id of the target signature line.
+The following code example illustrates how to sign a signature line by supplying a custom signature image (for example, a scanned signature or handwritten PNG).  It binds the new signature to the signature line by setting `SignatureSettings.SignatureLineId` to the id of the target signature line.
 
 {% tabs %}
 
