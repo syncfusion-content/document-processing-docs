@@ -50,7 +50,7 @@ settings.Comments = "Approved";
 settings.SignTime = DateTime.Now;
 //Adds an invisible digital signature to the document using the certificate and settings.
 document.AddDigitalSignature(certificate, settings);
-//Saves and closes the Word document instance
+//Saves the Word document to file.
 document.Save("Result.docx", FormatType.Docx);
 //Closes the document
 document.Close();
@@ -137,7 +137,7 @@ settings.AllowComments = true;
 settings.ShowDate = true;
 //Inserts the signature line into the new paragraph with the specified dimensions.
 IWPicture picture = signatureParagraph.AppendSignatureLine(settings, 200, 100);
-//Saves and closes the Word document instance
+//Saves the Word document to file.
 document.Save("Result.docx", FormatType.Docx);
 //Closes the document
 document.Close();
@@ -429,7 +429,7 @@ foreach (Guid signatureLineId in signatureIds)
     //Signs the signature line with the supplied image to apply a visible digital signature.
     document.AddDigitalSignature(certificate, settings);
 }
-//Saves and closes the Word document instance
+//Saves the Word document to file.
 document.Save("Result.docx", FormatType.Docx);
 //Closes the document
 document.Close();
@@ -529,8 +529,6 @@ foreach (OfficeDigitalSignature signature in signatures)
     bool isValid = signature.IsValid;
     Console.WriteLine("Signature is valid : " + isValid);
 }
-//Saves and closes the Word document instance
-document.Save("Result.docx", FormatType.Docx);
 //Closes the document
 document.Close();
 
@@ -551,8 +549,6 @@ For Each signature As OfficeDigitalSignature In signatures
     Dim isValid As Boolean = signature.IsValid
     Console.WriteLine("Signature is valid : " & isValid)
 Next
-'Saves and closes the Word document instance
-document.Save("Result.docx", FormatType.Docx)
 'Closes the document
 document.Close()
 
@@ -585,7 +581,7 @@ document.Close();
 WordDocument document = new WordDocument("SignedDocument.docx");
 //Removes all digital signatures from the document.
 document.RemoveAllDigitalSignatures();
-//Saves and closes the Word document instance
+//Saves the Word document to file.
 document.Save("Result.docx", FormatType.Docx);
 //Closes the document
 document.Close();
