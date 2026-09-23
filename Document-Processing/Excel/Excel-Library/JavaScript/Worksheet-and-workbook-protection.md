@@ -1,6 +1,6 @@
 ---
 title: Protection in JavaScript Excel Library | Syncfusion
-description: Protect worksheets and workbooks with the Syncfusion JavaScript Excel Library.
+description: Protect worksheets and workbooks, set options, and manage protected ranges with the Syncfusion JavaScript Excel Library.
 platform: document-processing
 control: Excel
 documentation: ug
@@ -113,7 +113,7 @@ sheet.protect('sheet-secret');
 {% endhighlight %}
 {% endtabs %}
 
-`ProtectedRanges` also supports `count`, `get(index)`, `remove`, `removeAt`, and `clear`. Multiple areas can be space-separated in `sqref` (for example `'A1:B2 D4:E5'`).
+`ProtectedRanges` also supports `count`, `get(index)`, `remove`, `removeAt`, and `clear`. Multiple areas can be space-separated in the `sqref` address (for example `'A1:B2 D4:E5'`).
 
 ## Protect a workbook
 

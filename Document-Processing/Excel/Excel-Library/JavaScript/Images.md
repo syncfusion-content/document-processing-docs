@@ -1,6 +1,6 @@
 ---
 title: Images in JavaScript Excel Library | Syncfusion
-description: Insert pictures into worksheets with the Syncfusion JavaScript Excel Library.
+description: Insert pictures into worksheets, set placement, and manage image collections with the Syncfusion JavaScript Excel Library.
 platform: document-processing
 control: Excel
 documentation: ug

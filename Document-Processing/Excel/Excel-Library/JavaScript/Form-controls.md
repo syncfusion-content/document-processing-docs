@@ -1,6 +1,6 @@
 ---
 title: Form Controls in JavaScript Excel Library | Syncfusion
-description: Add Excel form controls with the Syncfusion JavaScript Excel Library.
+description: Add and configure Excel form controls such as buttons, check boxes, and list boxes with the Syncfusion JavaScript Excel Library.
 platform: document-processing
 control: Excel
 documentation: ug

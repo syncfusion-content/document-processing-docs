@@ -1,6 +1,6 @@
 ---
 title: Charts in JavaScript Excel Library | Syncfusion
-description: Insert Excel charts with ChartType using the Syncfusion JavaScript Excel Library.
+description: Insert and configure Excel charts with ChartType, series, and layout options using the Syncfusion JavaScript Excel Library.
 platform: document-processing
 control: Excel
 documentation: ug

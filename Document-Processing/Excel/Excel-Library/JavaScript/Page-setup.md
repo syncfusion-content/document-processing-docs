@@ -1,6 +1,6 @@
 ---
 title: Page Setup in JavaScript Excel Library | Syncfusion
-description: Configure print page setup with the Syncfusion JavaScript Excel Library.
+description: Configure print page setup, margins, orientation, and print areas with the Syncfusion JavaScript Excel Library.
 platform: document-processing
 control: Excel
 documentation: ug

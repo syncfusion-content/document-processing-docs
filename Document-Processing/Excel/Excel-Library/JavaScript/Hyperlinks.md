@@ -1,6 +1,6 @@
 ---
 title: Hyperlinks in JavaScript Excel Library | Syncfusion
-description: Add URL, file, UNC, and workbook hyperlinks with the Syncfusion JavaScript Excel Library.
+description: Add URL, file, UNC, and workbook hyperlinks to cells and manage sheet-level links with the Syncfusion JavaScript Excel Library.
 platform: document-processing
 control: Excel
 documentation: ug
@@ -97,7 +97,7 @@ sheet.cell('A5').hyperlink = {
 
 ## Internal workbook link
 
-Use `type: 'workbook'` with `subAddress` (for example `Sheet1!A10`) for navigation inside the same workbook. Do not use `'unc'` for in-workbook locations.
+Use `type: 'workbook'` with `subAddress` (for example `Sheet1!A10`) for navigation inside the same workbook. Do not use a UNC-style link for in-workbook locations.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

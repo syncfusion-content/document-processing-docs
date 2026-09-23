@@ -1,6 +1,6 @@
 ---
 title: Merge Cells in JavaScript Excel Library | Syncfusion
-description: Merge and unmerge cell ranges with the Syncfusion JavaScript Excel Library.
+description: Merge and unmerge cell ranges and inspect merged regions with the Syncfusion JavaScript Excel Library.
 platform: document-processing
 control: Excel
 documentation: ug

@@ -1,6 +1,6 @@
 ---
 title: Formulas in JavaScript Excel Library | Syncfusion
-description: Store and clear Excel formulas without evaluation using the Syncfusion JavaScript Excel Library.
+description: Store and clear Excel formulas on cells without calculation or evaluation using the Syncfusion JavaScript Excel Library.
 platform: document-processing
 control: Excel
 documentation: ug

@@ -1,6 +1,6 @@
 ---
 title: Shapes and Text Boxes in JavaScript Excel | Syncfusion
-description: Add autoshapes and text boxes with the Syncfusion JavaScript Excel Library.
+description: Add AutoShapes and text boxes to worksheets and configure size, fill, and text with the Syncfusion JavaScript Excel Library.
 platform: document-processing
 control: Excel
 documentation: ug
@@ -36,7 +36,7 @@ sheet.removeTextBox(box);
 {% endhighlight %}
 {% endtabs %}
 
-## Autoshapes
+## AutoShapes
 
 ```ts
 sheet.addShape(

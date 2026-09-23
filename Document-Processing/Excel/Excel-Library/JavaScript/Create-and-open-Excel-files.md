@@ -10,7 +10,7 @@ documentation: ug
 
 The [JavaScript Excel Library](https://www.syncfusion.com/document-sdk/javascript-excel-library) creates, opens, and saves Microsoft Excel (`.xlsx`) workbooks through the `Workbook` class. Use `Workbook.create()` for a new workbook and `Workbook.open()` to load an existing file from bytes or a filesystem path.
 
-N> Open and save with a filesystem path require Node.js `fs`. In the browser, open from `Uint8Array` or `ArrayBuffer`, and save with the parameterless `save()` overload that returns bytes.
+N> Open and save with a filesystem path require the Node.js file system module. In the browser, open from `Uint8Array` or `ArrayBuffer`, and save with the parameterless `save()` overload that returns bytes.
 
 ## Create a new workbook
 
