@@ -336,49 +336,53 @@ The following code example illustrates how to add multiple signature lines to a 
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-// Opens an existing Word document.
-WordDocument document = new WordDocument(
-    Path.GetFullPath(@"Data\Template.docx"));
-
-// Gets the last section of the document.
-IWSection section = document.LastSection;
-
-// Stores the signature line IDs and corresponding signature image paths.
-Dictionary<Guid, string> signatureInfo = new Dictionary<Guid, string>();
-
-// Defines the signers.
-string[] signers = { "Tony", "Steve", "Bruce" };
-
-// Defines the signature images corresponding to each signer.
-string[] images =
+// Opens an existing Word document and adds signature lines.
+Dictionary<Guid, string> signatureInfo;
+using (WordDocument document = new WordDocument(Path.GetFullPath(@"Data\Template.docx")))
 {
-    Path.GetFullPath(@"Data\TonySignature.png"),
-    Path.GetFullPath(@"Data\SteveSignature.png"),
-    Path.GetFullPath(@"Data\BruceSignature.png")
-};
+    // Gets the last section of the document.
+    IWSection section = document.LastSection;
 
-// Adds a signature line for each signer.
-for (int i = 0; i < signers.Length; i++)
-{
-    IWParagraph paragraph = section.AddParagraph();
+    // Stores the signature line IDs and corresponding signature image paths.
+    signatureInfo = new Dictionary<Guid, string>();
 
-    IWPicture picture = paragraph.AppendSignatureLine(
-        new SignatureLineSettings()
-        {
-            Signer = signers[i],
-            SignerTitle = "Approver",
-            Email = signers[i] + "@example.com",
-            Instructions = "Please review and sign.",
-            ShowDate = true
-        },
-        192,
-        96);
+    // Defines the signers.
+    string[] signers = { "Tony", "Steve", "Bruce" };
 
-    // Gets the unique identifier of the inserted signature line.
-    Guid signatureLineId = ((WPicture)picture).SignatureLine.Id;
+    // Defines the signature images corresponding to each signer.
+    string[] images =
+    {
+        Path.GetFullPath(@"Data\TonySignature.png"),
+        Path.GetFullPath(@"Data\SteveSignature.png"),
+        Path.GetFullPath(@"Data\BruceSignature.png")
+    };
 
-    // Maps the signature line to its corresponding signature image.
-    signatureInfo.Add(signatureLineId, images[i]);
+    // Adds a signature line for each signer.
+    for (int i = 0; i < signers.Length; i++)
+    {
+        IWParagraph paragraph = section.AddParagraph();
+
+        IWPicture picture = paragraph.AppendSignatureLine(
+            new SignatureLineSettings()
+            {
+                Signer = signers[i],
+                SignerTitle = "Approver",
+                Email = signers[i] + "@example.com",
+                Instructions = "Please review and sign.",
+                ShowDate = true
+            },
+            192,
+            96);
+
+        // Gets the unique identifier of the inserted signature line.
+        Guid signatureLineId = ((WPicture)picture).SignatureLine.Id;
+
+        // Maps the signature line to its corresponding signature image.
+        signatureInfo.Add(signatureLineId, images[i]);
+    }
+
+    // Saves the document after adding the signature lines.
+    document.Save(Path.GetFullPath(@"Output\Result.docx"), FormatType.Docx);
 }
 
 // Loads the signing certificate.
@@ -387,75 +391,78 @@ OfficeDigitalSignatureCertificate certificate =
         Path.GetFullPath(@"Data\Certificate.pfx"),
         "password");
 
-// Signs each signature line using its corresponding signature image.
-foreach (KeyValuePair<Guid, string> item in signatureInfo)
+// Opens the saved document to sign each signature line.
+using (WordDocument document = new WordDocument(Path.GetFullPath(@"Output\Result.docx")))
 {
-    SignatureSettings settings = new SignatureSettings()
+    // Signs each signature line using its corresponding signature image.
+    foreach (KeyValuePair<Guid, string> item in signatureInfo)
     {
-        SignatureLineId = item.Key,
-        SignatureLineImage = File.ReadAllBytes(item.Value),
-        Comments = "Approved",
-        SignTime = DateTime.Now
-    };
+        SignatureSettings settings = new SignatureSettings()
+        {
+            SignatureLineId = item.Key,
+            SignatureLineImage = File.ReadAllBytes(item.Value),
+            Comments = "Approved",
+            SignTime = DateTime.Now
+        };
 
-    document.AddDigitalSignature(certificate, settings);
+        document.AddDigitalSignature(certificate, settings);
+    }
+
+    // Saves the signed document.
+    document.Save(Path.GetFullPath(@"Output\Result.docx"), FormatType.Docx);
 }
-
-// Saves the signed document.
-document.Save(
-    Path.GetFullPath(@"Output\Result.docx"),
-    FormatType.Docx);
-
-// Closes the document.
-document.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-// Opens an existing Word document.
-WordDocument document = new WordDocument(
-    Path.GetFullPath(@"Data\Template.docx"));
-
-// Gets the last section of the document.
-IWSection section = document.LastSection;
-
-// Stores the signature line IDs and corresponding signature image paths.
-Dictionary<Guid, string> signatureInfo = new Dictionary<Guid, string>();
-
-// Defines the signers.
-string[] signers = { "Tony", "Steve", "Bruce" };
-
-// Defines the signature images corresponding to each signer.
-string[] images =
+// Opens an existing Word document and adds signature lines.
+Dictionary<Guid, string> signatureInfo;
+using (WordDocument document = new WordDocument(Path.GetFullPath(@"Data\Template.docx")))
 {
-    Path.GetFullPath(@"Data\TonySignature.png"),
-    Path.GetFullPath(@"Data\SteveSignature.png"),
-    Path.GetFullPath(@"Data\BruceSignature.png")
-};
+    // Gets the last section of the document.
+    IWSection section = document.LastSection;
 
-// Adds a signature line for each signer.
-for (int i = 0; i < signers.Length; i++)
-{
-    IWParagraph paragraph = section.AddParagraph();
+    // Stores the signature line IDs and corresponding signature image paths.
+    signatureInfo = new Dictionary<Guid, string>();
 
-    IWPicture picture = paragraph.AppendSignatureLine(
-        new SignatureLineSettings()
-        {
-            Signer = signers[i],
-            SignerTitle = "Approver",
-            Email = signers[i] + "@example.com",
-            Instructions = "Please review and sign.",
-            ShowDate = true
-        },
-        192,
-        96);
+    // Defines the signers.
+    string[] signers = { "Tony", "Steve", "Bruce" };
 
-    // Gets the unique identifier of the inserted signature line.
-    Guid signatureLineId = ((WPicture)picture).SignatureLine.Id;
+    // Defines the signature images corresponding to each signer.
+    string[] images =
+    {
+        Path.GetFullPath(@"Data\TonySignature.png"),
+        Path.GetFullPath(@"Data\SteveSignature.png"),
+        Path.GetFullPath(@"Data\BruceSignature.png")
+    };
 
-    // Maps the signature line to its corresponding signature image.
-    signatureInfo.Add(signatureLineId, images[i]);
+    // Adds a signature line for each signer.
+    for (int i = 0; i < signers.Length; i++)
+    {
+        IWParagraph paragraph = section.AddParagraph();
+
+        IWPicture picture = paragraph.AppendSignatureLine(
+            new SignatureLineSettings()
+            {
+                Signer = signers[i],
+                SignerTitle = "Approver",
+                Email = signers[i] + "@example.com",
+                Instructions = "Please review and sign.",
+                ShowDate = true
+            },
+            192,
+            96);
+
+        // Gets the unique identifier of the inserted signature line.
+        Guid signatureLineId = ((WPicture)picture).SignatureLine.Id;
+
+        // Maps the signature line to its corresponding signature image.
+        signatureInfo.Add(signatureLineId, images[i]);
+    }
+
+    // Saves the document after adding the signature lines.
+    document.Save(Path.GetFullPath(@"Output\Result.docx"), FormatType.Docx);
 }
 
 // Loads the signing certificate.
@@ -464,82 +471,87 @@ OfficeDigitalSignatureCertificate certificate =
         Path.GetFullPath(@"Data\Certificate.pfx"),
         "password");
 
-// Signs each signature line using its corresponding signature image.
-foreach (KeyValuePair<Guid, string> item in signatureInfo)
+// Opens the saved document to sign each signature line.
+using (WordDocument document = new WordDocument(Path.GetFullPath(@"Output\Result.docx")))
 {
-    SignatureSettings settings = new SignatureSettings()
+    // Signs each signature line using its corresponding signature image.
+    foreach (KeyValuePair<Guid, string> item in signatureInfo)
     {
-        SignatureLineId = item.Key,
-        SignatureLineImage = File.ReadAllBytes(item.Value),
-        Comments = "Approved",
-        SignTime = DateTime.Now
-    };
+        SignatureSettings settings = new SignatureSettings()
+        {
+            SignatureLineId = item.Key,
+            SignatureLineImage = File.ReadAllBytes(item.Value),
+            Comments = "Approved",
+            SignTime = DateTime.Now
+        };
 
-    document.AddDigitalSignature(certificate, settings);
+        document.AddDigitalSignature(certificate, settings);
+    }
+
+    // Saves the signed document.
+    document.Save(Path.GetFullPath(@"Output\Result.docx"), FormatType.Docx);
 }
-
-// Saves the signed document.
-document.Save(
-    Path.GetFullPath(@"Output\Result.docx"),
-    FormatType.Docx);
-
-// Closes the document.
-document.Close();
 
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
-'Opens an existing Word document.
-Dim document As New WordDocument(Path.GetFullPath("Data\Template.docx"))
-'Gets the last section of the document.
-Dim section As IWSection = document.LastSection
-'Stores the signature line IDs and corresponding signature image paths.
-Dim signatureInfo As New Dictionary(Of Guid, String)()
-'Defines the signers.
-Dim signers As String() = { "Tony", "Steve", "Bruce" }
-'Defines the signature images corresponding to each signer.
-Dim images As String() = {
-    Path.GetFullPath("Data\TonySignature.png"),
-    Path.GetFullPath("Data\SteveSignature.png"),
-    Path.GetFullPath("Data\BruceSignature.png")
-}
-'Adds a signature line for each signer.
-For i As Integer = 0 To signers.Length - 1
-    Dim paragraph As IWParagraph = section.AddParagraph()
-    Dim picture As IWPicture = paragraph.AppendSignatureLine(
-        New SignatureLineSettings() With {
-            .Signer = signers(i),
-            .SignerTitle = "Approver",
-            .Email = signers(i) & "@example.com",
-            .Instructions = "Please review and sign.",
-            .ShowDate = True
-        },
-        192,
-        96)
-    'Gets the unique identifier of the inserted signature line.
-    Dim signatureLineId As Guid = DirectCast(picture, WPicture).SignatureLine.Id
-    'Maps the signature line to its corresponding signature image.
-    signatureInfo.Add(signatureLineId, images(i))
-Next
+'Opens an existing Word document and adds signature lines.
+Dim signatureInfo As Dictionary(Of Guid, String)
+Using document As New WordDocument(Path.GetFullPath("Data\Template.docx"))
+    'Gets the last section of the document.
+    Dim section As IWSection = document.LastSection
+    'Stores the signature line IDs and corresponding signature image paths.
+    signatureInfo = New Dictionary(Of Guid, String)()
+    'Defines the signers.
+    Dim signers As String() = { "Tony", "Steve", "Bruce" }
+    'Defines the signature images corresponding to each signer.
+    Dim images As String() = {
+        Path.GetFullPath("Data\TonySignature.png"),
+        Path.GetFullPath("Data\SteveSignature.png"),
+        Path.GetFullPath("Data\BruceSignature.png")
+    }
+    'Adds a signature line for each signer.
+    For i As Integer = 0 To signers.Length - 1
+        Dim paragraph As IWParagraph = section.AddParagraph()
+        Dim picture As IWPicture = paragraph.AppendSignatureLine(
+            New SignatureLineSettings() With {
+                .Signer = signers(i),
+                .SignerTitle = "Approver",
+                .Email = signers(i) & "@example.com",
+                .Instructions = "Please review and sign.",
+                .ShowDate = True
+            },
+            192,
+            96)
+        'Gets the unique identifier of the inserted signature line.
+        Dim signatureLineId As Guid = DirectCast(picture, WPicture).SignatureLine.Id
+        'Maps the signature line to its corresponding signature image.
+        signatureInfo.Add(signatureLineId, images(i))
+    Next
+    'Saves the document after adding the signature lines.
+    document.Save(Path.GetFullPath("Output\Result.docx"), FormatType.Docx)
+End Using
+
 'Loads the signing certificate.
 Dim certificate As New OfficeDigitalSignatureCertificate(
     Path.GetFullPath("Data\Certificate.pfx"),
     "password")
-'Signs each signature line using its corresponding signature image.
-For Each item As KeyValuePair(Of Guid, String) In signatureInfo
-    Dim settings As New SignatureSettings() With {
-        .SignatureLineId = item.Key,
-        .SignatureLineImage = File.ReadAllBytes(item.Value),
-        .Comments = "Approved",
-        .SignTime = DateTime.Now
-    }
-    document.AddDigitalSignature(certificate, settings)
-Next
-'Saves the signed document.
-document.Save(Path.GetFullPath("Output\Result.docx"), FormatType.Docx)
-'Closes the document.
-document.Close()
+'Opens the saved document to sign each signature line.
+Using document As New WordDocument(Path.GetFullPath("Output\Result.docx"))
+    'Signs each signature line using its corresponding signature image.
+    For Each item As KeyValuePair(Of Guid, String) In signatureInfo
+        Dim settings As New SignatureSettings() With {
+            .SignatureLineId = item.Key,
+            .SignatureLineImage = File.ReadAllBytes(item.Value),
+            .Comments = "Approved",
+            .SignTime = DateTime.Now
+        }
+        document.AddDigitalSignature(certificate, settings)
+    Next
+    'Saves the signed document.
+    document.Save(Path.GetFullPath("Output\Result.docx"), FormatType.Docx)
+End Using
 
 {% endhighlight %}
 
