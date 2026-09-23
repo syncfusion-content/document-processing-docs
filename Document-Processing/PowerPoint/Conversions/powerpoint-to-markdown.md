@@ -115,70 +115,9 @@ async void Save(MemoryStream streams, string filename)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Markdown-Conversion/Convert-PPTX-to-Markdown).
 
-### Preserving Charts, SmartArt, and Other Elements as Fallback Images
+### Preserve Visual Elements as Images
 
-The .NET PowerPoint (Presentation) library preserves PowerPoint elements as fallback images when converting a PowerPoint presentation to a Markdown file. This ensures that content which does not have a direct Markdown equivalent is still retained in the output as an image.
-
-By default, SmartArt, GroupShape, and OLE Object are preserved automatically as fallback images during PowerPoint-to-Markdown conversion. Charts require additional initialization depending on the target platform.
-
-N> On Windows, SmartArt, GroupShape, and OLE Object are preserved automatically as images without any additional code. To preserve charts on Windows, use the `ChartToImageConverter`. On cross-platform (ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI), use the `PresentationRenderer` to preserve all PowerPoint elements (Chart, SmartArt, GroupShape, and OLE Object) as images.
-
-The following PowerPoint elements are preserved as fallback images during PowerPoint-to-Markdown conversion.
-
-<table style="width: 760px;">
-<thead>
-<tr>
-<td><strong>Element in PowerPoint presentation</strong></td>
-<td><strong>Notes</strong></td>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Chart</td>
-<td>Preserves charts as fallback images during PowerPoint-to-Markdown conversion.</td>
-</tr>
-<tr>
-<td>SmartArt</td>
-<td>Preserves SmartArt graphics as fallback images during PowerPoint-to-Markdown conversion.</td>
-</tr>
-<tr>
-<td>GroupShape</td>
-<td>Preserves grouped shapes as fallback images during PowerPoint-to-Markdown conversion.</td>
-</tr>
-<tr>
-<td>OLE Object</td>
-<td>Preserves OLE objects as fallback images during PowerPoint-to-Markdown conversion.</td>
-</tr>
-</tbody>
-</table>
-
-**Cross-platform**
-
-On cross-platform platforms, install the **Syncfusion.PresentationRenderer.Net.Core** NuGet package and initialize `PresentationRenderer`. It preserves all supported PowerPoint elements, including charts, as fallback images during PowerPoint-to-Markdown conversion.
-
-NuGet package required
-
-* [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core/)
-
-Initialize PresentationRenderer
-
-```csharp
-presentation.PresentationRenderer = new PresentationRenderer();
-```
-
-**Windows-specific**
-
-On Windows, SmartArt, GroupShape, and OLE Object are preserved automatically without any additional code. For charts, install the **Syncfusion.OfficeChartToImageConverter.WPF** NuGet package and initialize the `ChartToImageConverter`.
-
-NuGet package required
-
-* [Syncfusion.OfficeChartToImageConverter.WPF](https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.WPF/)
-
-Initialize ChartToImageConverter
-
-```csharp
-presentation.ChartToImageConverter = new ChartToImageConverter();
-```
+The .NET PowerPoint (Presentation) library preserves PowerPoint elements such as Chart, SmartArt, GroupShape, and OLE Object as fallback images when converting a PowerPoint presentation to a Markdown file. This ensures that content which does not have a direct Markdown equivalent is still retained in the output as an image.
 
 The following code example shows how to preserve charts and other PowerPoint elements as fallback images while converting a PowerPoint presentation to a Markdown file.
 
@@ -210,9 +149,25 @@ using (IPresentation presentation = Presentation.Open("Input.pptx"))
 }
 {% endhighlight %}
 
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Open an existing PowerPoint Presentation.
+Using presentation As IPresentation = Presentation.Open("Input.pptx")
+    'Initialize the chart-to-image converter to preserve charts as images.
+    presentation.ChartToImageConverter = New ChartToImageConverter()
+
+    'SmartArt, GroupShape, and OLE Object are preserved automatically on Windows.
+
+    'Save the PowerPoint Presentation as a Markdown file.
+    presentation.Save("Output.md")
+End Using
+{% endhighlight %}
+
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+N>
+* On Windows, install the [Syncfusion.OfficeChartToImageConverter.WPF](https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.WPF) NuGet package and use the `ChartToImageConverter` to preserve charts as fallback images. The remaining PowerPoint elements (SmartArt, GroupShape, and OLE Object) are preserved automatically as images without any additional code.
+* On cross-platform (ASP.NET Core, Blazor, .NET MAUI, and WinUI), install either the [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) NuGet package or the [Syncfusion.PresentationRenderer.NET](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.NET) NuGet package based on your project requirements, and use the `PresentationRenderer` to preserve all supported PowerPoint elements as fallback images.
+* Preserving PowerPoint elements as fallback images is not supported on the UWP platform.
 
 ## Save Options
 

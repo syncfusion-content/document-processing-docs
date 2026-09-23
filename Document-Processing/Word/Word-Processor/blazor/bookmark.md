@@ -25,9 +25,9 @@ Use the [`InsertBookmarkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion
 await container.DocumentEditor.Editor.InsertBookmarkAsync("Bookmark1");
 ```
 
-## Navigate to a bookmark
+## Select and Navigate to a bookmark
 
-Use the [`SelectBookmarkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_SelectBookmarkAsync_System_String_) method to navigate to and select a bookmark by its name.
+Use the [`SelectBookmarkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_SelectBookmarkAsync_System_String_) method to select a bookmark by its name and navigate the editor to the bookmark location.
 
 ```csharp
 await container.DocumentEditor.Selection.SelectBookmarkAsync("Bookmark1");

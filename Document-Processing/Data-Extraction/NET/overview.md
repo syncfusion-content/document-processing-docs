@@ -255,6 +255,47 @@ FormObjects represent interactive form fields detected on the page, such as text
 
 N> The **FormObjects** structure is not available in the Smart Table Extractor output.
 
+### BarcodeObjects
+
+BarcodeObjects represent barcodes detected on a page by the Smart Data Extractor. They contain information about the barcode value, barcode type, location on the page, and the confidence score of the detection.
+
+<table>
+    <thead>
+        <tr>
+            <th><b>Attribute</b></th>
+            <th><b>Type</b></th>
+            <th><b>Description</b></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Type</td>
+            <td>String</td>
+            <td>Defines the kind of object detected on the page (<code>Barcode</code>).</td>
+        </tr>
+        <tr>
+            <td>Bounds</td>
+            <td>Array of Floats</td>
+            <td>The bounding box coordinates <code>[X, Y, Width, Height]</code> representing the barcode's position and size on the page.</td>
+        </tr>
+        <tr>
+            <td>Content</td>
+            <td>String</td>
+            <td>The decoded value extracted from the barcode.</td>
+        </tr>
+        <tr>
+            <td>BarcodeType</td>
+            <td>String</td>
+            <td>Specifies the barcode symbology detected, such as <code>RSS_14</code>, <code>QR_CODE</code>, <code>CODE_128</code>, <code>EAN_13</code>, etc.</td>
+        </tr>
+        <tr>
+            <td>Confidence</td>
+            <td>Float</td>
+            <td>Confidence score (0–1) indicating the accuracy of the barcode detection.</td>
+        </tr>
+    </tbody>
+</table>
+
 ### Text Attribute 
 
 Represents the text formatting attributes (font family, font style, font size) applied to the extracted text.

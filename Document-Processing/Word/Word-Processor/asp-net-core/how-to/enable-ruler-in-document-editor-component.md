@@ -27,7 +27,7 @@ The following example illustrates how to enable the ruler in the DOCX Editor.
 
 
 
-## Enable ruler in DOCX Editor Container
+## Enable ruler in Document Editor Container
 
 Using the ruler, you can set specific margins, tab stops, or indentations within a document to ensure consistent formatting in the Document Editor Container.
 

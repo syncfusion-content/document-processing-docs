@@ -167,6 +167,7 @@ Tracked changes only protection can be enabled in UI by using [Restrict Editing 
 ![Enable track changes only protection](images/tracked-changes.png)
 
 N> In the `enforceProtection` method, the first parameter denotes the password and the second parameter denotes the protection type. Possible values of the protection type are `NoProtection | ReadOnly | FormFieldsOnly | CommentsOnly | RevisionsOnly`. In the `stopProtection` method, the parameter denotes the password.
+
 ## Online demo
 
 Explore how to track and review changes in Word documents using the ASP.NET MVC DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/trackchanges#/tailwind3).

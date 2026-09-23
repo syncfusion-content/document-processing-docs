@@ -174,7 +174,7 @@ let menuItems: MenuItemModel[] = [
     ],
   },
 ];
-//Initialize DOCX Editor component.
+//Initialize Document Editor component.
 let container: DocumentEditorContainer = new DocumentEditorContainer({
   enableToolbar: true,
   height: '590px',
@@ -185,7 +185,7 @@ container.created = function () {
   //Adding custom options
   container.documentEditor.contextMenu.addCustomMenu(menuItems, false, true);
 };
-//Render DOCX Editor Container component.
+//Render Document Editor Container component.
 container.appendTo('#DocumentEditor');
 ```
 

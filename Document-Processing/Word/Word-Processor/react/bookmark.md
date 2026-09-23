@@ -27,9 +27,9 @@ Use the [`insertBookmark`](https://ej2.syncfusion.com/react/documentation/api/do
 this.container.documentEditor.editor.insertBookmark("Bookmark1");
 ```
 
-## Select Bookmark
+## Select and Navigate to a Bookmark
 
-You can select the bookmark in the document using [`selectBookmark`](https://ej2.syncfusion.com/react/documentation/api/document-editor/selection#selectbookmark) method by providing the bookmark name to select as shown in the following code snippet.
+You can select a bookmark by its name using the [`selectBookmark`](https://ej2.syncfusion.com/react/documentation/api/document-editor/selection#selectbookmark) method, which also navigates the editor to the bookmark location, as shown in the following code snippet.
 
 ```typescript
 this.container.documentEditor.selection.selectBookmark("Bookmark1", true);

@@ -220,7 +220,8 @@ container.ribbon.addItem({ tabId: 'Home', index: 0 }, ribbonItem);
 
 // To add the item before the specified item index (the item will be added before the Redo item in the Undo group)
 
-container.ribbon.addItem({ tabId: 'Home', index: 0 }, ribbonItem, 1);```
+container.ribbon.addItem({ tabId: 'Home', index: 0 }, ribbonItem, 1);
+```
 
 ## Online Demo
 

@@ -102,9 +102,9 @@ Style: https://cdn.syncfusion.com/ej2/{VERSION}/{PACKAGE_NAME}/styles/{THEME_NAM
 <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-base/styles/tailwind3.css"rel="stylesheet" type="text/css" />
 <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-inputs/styles/tailwind3.css"rel="stylesheet" type="text/css" />
 <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-buttons/styles/tailwind3.css"rel="stylesheet" type="text/css" />
-<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-splitbuttons/styles/tailwind3css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-splitbuttons/styles/tailwind3.css" rel="stylesheet" type="text/css" />
 <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-lists/styles/tailwind3.css"rel="stylesheet" type="text/css" />
-<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-navigations/styles/tailwind3css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-navigations/styles/tailwind3.css" rel="stylesheet" type="text/css" />
 <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-popups/styles/tailwind3.css"rel="stylesheet" type="text/css" />
 <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-dropdowns/styles/tailwind3.css"rel="stylesheet" type="text/css" />
 <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-grids/styles/tailwind3.css"rel="stylesheet" type="text/css" />
@@ -112,7 +112,7 @@ Style: https://cdn.syncfusion.com/ej2/{VERSION}/{PACKAGE_NAME}/styles/{THEME_NAM
 <link href="https://cdn.syncfusion.com/ej2/33.2.3/ej2-spreadsheet/styles/tailwind3.css" rel="stylesheet" type="text/css" />
 <!-- Spreadsheet dependency scripts -->
 <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-buttons/dist/globalej2-buttons.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-buttons/dist/global/ej2-buttons.min.js" type="text/javascript"></script>
 <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-popups/dist/global/ej2-popups.min.js" type="text/javascript"></script>
 <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-splitbuttons/dist/global/ej2-splitbuttons.min.js" type="text/javascript"></script>
 <script src="https://cdn.syncfusion.com/ej2/33.2.3/ej2-inputs/dist/global/ej2-inputs.min.js" type="text/javascript"></script>

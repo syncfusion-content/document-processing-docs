@@ -176,7 +176,7 @@ You can customize individual items within ribbon groups. This includes showing, 
 
 ### Show/Hide item
 
-Using the [`showItems`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/ribbon#showitems) API in the DOCX Editor ribbon to show/hide the existing item. Here, you can specify the item Id or [`RibbonItemInfo`].
+Using the [`showItems`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container/ribbon#showitems) API in the DOCX Editor ribbon to show/hide the existing item. Here, you can specify the item Id or `RibbonItemInfo`.
 
 The following code example shows how to show/hide the item using item Id or [`RibbonItemInfo`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor-container#ribboniteminfo).
 
