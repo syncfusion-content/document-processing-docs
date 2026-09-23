@@ -205,8 +205,6 @@ The Spreadsheet component supports a comprehensive set of built-in formulas orga
 | LOG | Returns the logarithm of a number to the base that you specify. |
 | LOG10 | Returns the base-10 logarithm of a number. |
 | MDETERM | Returns the matrix determinant of an array. |
-| MINVERSE | Returns the matrix inverse of an array. |
-| MMULT | Returns the matrix product of two arrays. |
 | MOD | Returns a remainder after a number is divided by divisor. |
 | MROUND | Returns a number rounded to the desired multiple. |
 | MULTINOMIAL | Returns the multinomial of a set of numbers. |
@@ -235,7 +233,6 @@ The Spreadsheet component supports a comprehensive set of built-in formulas orga
 | SUMXMY2 | Returns the sum of squares of differences of corresponding values in two arrays. |
 | TAN | Returns the tangent of an angle. |
 | TANH | Returns the hyperbolic tangent of a number. |
-| TRANSPOSE | Returns the transpose of an array. |
 | TRUNC | Truncates a supplied number to a specified number of decimal places. |
 
 ### Statistical & Aggregate
@@ -269,20 +266,16 @@ The Spreadsheet component supports a comprehensive set of built-in formulas orga
 | FISHER | Returns the Fisher transformation. |
 | FISHERINV | Returns the inverse of the Fisher transformation. |
 | FORECAST | Returns a value along a linear trend. |
-| FREQUENCY | Returns a frequency distribution as a vertical array (first bin when spill unavailable). |
 | FTEST | Returns the result of an F-test. |
 | GAMMADIST | Returns the gamma distribution. |
 | GAMMAINV | Returns the inverse of the gamma cumulative distribution. |
 | GAMMALN | Returns the natural logarithm of the gamma function. |
 | GEOMEAN | Returns the geometric mean of a given array or range of positive data. |
-| GROWTH | Returns y values along an exponential growth trend (first predicted value when spill unavailable). |
 | HARMEAN | Returns the harmonic mean. |
 | HYPGEOMDIST | Returns the hypergeometric distribution. |
 | INTERCEPT | Calculates the point of the Y-intercept line via linear regression. |
 | KURT | Returns the kurtosis of a data set. |
 | LARGE | Returns the `k-th` largest value in a given array. |
-| LINEST | Returns statistics that describe a linear trend (slope when spill unavailable). |
-| LOGEST | Returns statistics that describe an exponential curve (first coefficient when spill unavailable). |
 | LOGINV | Returns the inverse of the log-normal cumulative distribution. |
 | LOGNORMDIST | Returns the cumulative log-normal distribution. |
 | MAX | Returns the largest number of the given arguments. |
@@ -322,7 +315,6 @@ The Spreadsheet component supports a comprehensive set of built-in formulas orga
 | SUMPRODUCT | Returns the sum of the products of corresponding arrays in given arrays. |
 | TDIST | Returns the Student t-distribution. |
 | TINV | Returns the inverse of the Student t-distribution. |
-| TREND | Returns y values along a linear trend (first predicted value when spill unavailable). |
 | TRIMMEAN | Returns the mean of the interior of a data set. |
 | TTEST | Returns the probability associated with a Student t-test. |
 | VAR | Estimates variance based on a sample. |
@@ -384,7 +376,6 @@ The Spreadsheet component supports a comprehensive set of built-in formulas orga
 | TEXT | Converts the supplied value into text by using the user-specified format. |
 | TEXTBEFORE | Returns text before a given character or string. |
 | TEXTJOIN | Combines text from multiple ranges/strings with a delimiter. |
-| TEXTSPLIT | Splits text into rows or columns using delimiters. |
 | TRIM | Removes spaces from text except for single spaces between words. |
 | UPPER | Converts text to uppercase. |
 | USDOLLAR | Converts a number to text using currency format (US dollar). |
@@ -427,8 +418,6 @@ The Spreadsheet component supports a comprehensive set of built-in formulas orga
 | ADDRESS | Returns a cell reference as text, given specified row and column numbers. |
 | AREAS | Returns the number of areas in a reference. |
 | CHOOSE | Returns a value from list of values, based on index number. |
-| CHOOSECOLS | Returns the specified columns from an array. |
-| CHOOSEROWS | Returns the specified rows from an array. |
 | COLUMN | Returns the column number of a reference. |
 | COLUMNS | Returns the number of columns in a reference. |
 | FORMULATEXT | Returns the formula in a cell as text. |
@@ -442,8 +431,6 @@ The Spreadsheet component supports a comprehensive set of built-in formulas orga
 | ROW | Returns the row number of a reference. |
 | ROWS | Returns the number of rows in a reference. |
 | SORT | Sorts the contents of a column, range, or array in ascending or descending order. |
-| TOCOL | Returns the array in a single column (joined when spill is unavailable). |
-| TOROW | Returns the array in a single row (joined when spill is unavailable). |
 | UNIQUE | Returns unique values from a range or array. |
 | VLOOKUP | Looks for a value in the first column of a lookup range and returns a corresponding value from a different column. |
 | XLOOKUP | Searches a range for a match and returns the corresponding item. |
