@@ -10,13 +10,14 @@ domainurl: ##DomainURL##
 
 # Programmatically Get Differences
 
-The semantic text comparison feature provides programmatic access to all differences found between two PDF documents. You can retrieve structured difference data for custom processing, reporting, or integration with other workflows through the `PdfComparer` instance.
+The semantic text comparison feature provides programmatic access to all differences found between two PDF documents. Using the `semanticTextCompare()` method on `PdfViewerComponent`, you can retrieve structured difference data for custom processing, reporting, or integration with other workflows.
 
 ## Overview
 
 The comparison provides:
 
-- **Difference list access** - All detected differences with type and content
+- **Async comparison API** - Use `semanticTextCompare()` to compare documents programmatically
+- **Difference array access** - Get all detected differences with type and content
 - **Structured data** - Each difference contains text, type, location, and page information
 - **Categorized results** - Differences grouped by type (Added, Deleted, Modified)
 - **Custom processing** - Export, filter, or analyze differences programmatically
@@ -24,166 +25,369 @@ The comparison provides:
 ## Prerequisites
 
 - Syncfusion React PDF Viewer installed
-- `PdfComparer` component initialized
+- `PdfViewerComponent` available
 - Two PDF documents loaded for comparison
+- Semantic text comparison feature enabled
 
 ## Steps
 
-### Step 1: Initialize the PdfComparer component
+### Step 1: Import required components
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
 {% raw %}
-import React from 'react';
-import { PdfComparer, TextComparisonOptions } from '@syncfusion/ej2-react-pdfviewer';
+import { PdfViewerComponent, Inject, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-react-pdfviewer';
+import React, { useRef, useState } from 'react';
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
-function SemanticTextComparison() {
-    const pdfComparerRef = React.useRef<PdfComparer | null>(null);
+### Step 2: Create the dual viewer comparison setup
 
-    const comparisonOptions: TextComparisonOptions = {
-        beforeColor: '#FF0000',
-        afterColor: '#00FF00',
-        beforeColorOpacity: 0.4,
-        afterColorOpacity: 0.4,
-        enableHighlights: true
-    } as TextComparisonOptions;
+Set up two side-by-side PDF viewers with semantic text comparison:
 
-    React.useEffect(() => {
-        initializeComparer();
-    }, []);
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% raw %}
+export default function App() {
+  const viewer1Ref = useRef(null);
+  const viewer2Ref = useRef(null);
+  const [loadedCount, setLoadedCount] = useState(0);
+  const [viewersLoaded, setViewersLoaded] = useState(false);
+  const [synchronizationEnabled, setSynchronizationEnabled] = useState(true);
+  const [highlightsEnabled, setHighlightsEnabled] = useState(true);
 
-    const initializeComparer = async (): Promise<void> => {
-        pdfComparerRef.current = new PdfComparer(
-            'https://cdn.syncfusion.com/content/pdf/original-document.pdf',
-            'https://cdn.syncfusion.com/content/pdf/modified-document.pdf',
-            'https://cdn.syncfusion.com/ej2/34.2.4/dist/ej2-pdfviewer-lib',
-            comparisonOptions,
-            true,
-            true
-        );
-        await pdfComparerRef.current.appendTo('#comparer-container');
-    };
+  const handleDocumentLoad = () => {
+    setLoadedCount((prev) => {
+      const newCount = prev + 1;
+      if (newCount === 2 && viewer1Ref.current && viewer2Ref.current) {
+        setViewersLoaded(true);
+        viewer1Ref.current.syncViewers(viewer2Ref.current, synchronizationEnabled);
+      }
+      return newCount;
+    });
+  };
 
-    return (
-        <div id="comparer-container" style={{ height: 'calc(100vh - 330px)' }}></div>
-    );
+  return (
+    <div style={{ height: '100%', width: '100%' }}>
+      {/* PDF Viewers Container */}
+      <div style={{
+        display: 'flex',
+        height: '600px',
+        gap: 0
+      }}>
+        {/* Viewer 1 - Original Document */}
+        <div style={{ width: '50%', height: '100%', borderRight: '1px solid #ccc' }}>
+          <PdfViewerComponent
+            ref={viewer1Ref}
+            id="pdfViewer1"
+            documentPath="https://cdn.syncfusion.com/content/pdf/original-document.pdf"
+            resourceUrl="https://cdn.syncfusion.com/ej2/34.2.4/dist/ej2-pdfviewer-lib"
+            documentLoad={handleDocumentLoad}
+            style={{ height: '100%', width: '100%' }}
+          >
+            <Inject services={[
+              Toolbar,
+              Magnification,
+              Navigation,
+              Annotation,
+              LinkAnnotation,
+              BookmarkView,
+              ThumbnailView,
+              Print,
+              TextSelection,
+              TextSearch,
+              FormFields,
+              FormDesigner,
+              PageOrganizer
+            ]} />
+          </PdfViewerComponent>
+        </div>
+
+        {/* Viewer 2 - Modified Document */}
+        <div style={{ width: '50%', height: '100%' }}>
+          <PdfViewerComponent
+            ref={viewer2Ref}
+            id="pdfViewer2"
+            documentPath="https://cdn.syncfusion.com/content/pdf/modified-document.pdf"
+            resourceUrl="https://cdn.syncfusion.com/ej2/34.2.4/dist/ej2-pdfviewer-lib"
+            documentLoad={handleDocumentLoad}
+            style={{ height: '100%', width: '100%' }}
+          >
+            <Inject services={[
+              Toolbar,
+              Magnification,
+              Navigation,
+              Annotation,
+              LinkAnnotation,
+              BookmarkView,
+              ThumbnailView,
+              Print,
+              TextSelection,
+              TextSearch,
+              FormFields,
+              FormDesigner,
+              PageOrganizer
+            ]} />
+          </PdfViewerComponent>
+        </div>
+      </div>
+    </div>
+  );
 }
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
-### Step 2: Access the differences panel
+### Step 3: Perform semantic text comparison
 
-The `PdfComparer` automatically displays a differences panel with categorized results. To access differences programmatically:
+Compare the documents programmatically and access differences:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
 {% raw %}
-const getDifferencesData = (): void => {
-    if (pdfComparerRef.current) {
-        // Access the differences from the comparer instance
-        const comparerElement = pdfComparerRef.current;
-        const differencesList = (comparerElement as any).getDifferences?.();
-        
-        if (differencesList) {
-            console.log('Total differences:', differencesList.length);
-            
-            // Categorize by type
-            const added = differencesList.filter((d: any) => d.type === 'Added');
-            const deleted = differencesList.filter((d: any) => d.type === 'Deleted');
-            const modified = differencesList.filter((d: any) => d.type === 'Modified');
-            
-            console.log('Added:', added.length);
-            console.log('Deleted:', deleted.length);
-            console.log('Modified:', modified.length);
-        }
-    }
+const handleCompare = async () => {
+  if (!viewersLoaded || !viewer1Ref.current || !viewer2Ref.current) {
+    return;
+  }
+
+  const options = {
+    beforeColor: '#FF0000',      // Red for original
+    afterColor: '#00FF00',       // Green for modified
+    beforeColorOpacity: 0.4,
+    afterColorOpacity: 0.4,
+    enableHighlights: highlightsEnabled,
+  };
+
+  try {
+    const result = await viewer1Ref.current.semanticTextCompare(viewer2Ref.current, options);
+    console.log('Full Comparison Result:', result);
+
+    // Access annotations from both documents
+    const originalAnnotations = result?.originalDocumentAnnotations || [];
+    const modifiedAnnotations = result?.modifiedDocumentAnnotations || [];
+    const totalTextDiffCount = result?.totalTextDiffCount || 0;
+
+    console.log('Total Text Differences:', totalTextDiffCount);
+
+    // Extract and categorize all differences
+    let addedCount = 0;
+    let deletedCount = 0;
+    let modifiedCount = 0;
+
+    // Process original document annotations (deletions and modifications)
+    originalAnnotations.forEach((pageAnnotations) => {
+      pageAnnotations.differenceAnnotations?.forEach((diff) => {
+        const type = diff.textDiffType;
+        if (type === 'deleted') deletedCount++;
+        if (type === 'modified') modifiedCount++;
+        if (type === 'added') addedCount++;
+      });
+    });
+
+    console.log('Added:', addedCount);
+    console.log('Deleted:', deletedCount);
+    console.log('Modified:', modifiedCount);
+  } catch (error) {
+    console.error('Error during comparison:', error);
+  }
 };
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
-### Step 3: Process and export differences
+### Step 4: Generate comparison report
 
-Filter and process differences for custom workflows:
-
-{% tabs %}
-{% highlight js tabtitle="App.jsx" %}
-{% raw %}
-const generateReport = (): void => {
-    if (!pdfComparerRef.current) return;
-
-    const comparerElement = (pdfComparerRef.current as any);
-    const differencesList = comparerElement.getDifferences?.();
-
-    if (differencesList) {
-        const report = {
-            totalDifferences: differencesList.length,
-            added: differencesList.filter((d: any) => d.type === 'Added').length,
-            deleted: differencesList.filter((d: any) => d.type === 'Deleted').length,
-            modified: differencesList.filter((d: any) => d.type === 'Modified').length,
-            byPage: {} as any
-        };
-
-        // Group by page
-        differencesList.forEach((diff: any) => {
-            const pageNum = diff.pageNumber || 1;
-            if (!report.byPage[pageNum]) {
-                report.byPage[pageNum] = [];
-            }
-            report.byPage[pageNum].push(diff);
-        });
-
-        console.log('Comparison Report:', report);
-        return report;
-    }
-};
-{% endraw %}
-{% endhighlight %}
-{% endtabs %}
-
-### Step 4: Display comparison summary
-
-Create a summary component showing difference counts:
+Generate a detailed report with differences grouped by page:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
 {% raw %}
-const ComparisonSummary = (): JSX.Element => {
-    const [summary, setSummary] = React.useState<any>(null);
+const generateReport = async () => {
+  if (!viewer1Ref.current || !viewer2Ref.current) return;
 
-    const handleShowSummary = (): void => {
-        if (pdfComparerRef.current) {
-            const comparerElement = (pdfComparerRef.current as any);
-            const differencesList = comparerElement.getDifferences?.();
-            
-            if (differencesList) {
-                setSummary({
-                    total: differencesList.length,
-                    added: differencesList.filter((d: any) => d.type === 'Added').length,
-                    deleted: differencesList.filter((d: any) => d.type === 'Deleted').length,
-                    modified: differencesList.filter((d: any) => d.type === 'Modified').length
-                });
-            }
+  const options = {
+    beforeColor: '#FF0000',
+    afterColor: '#00FF00',
+    beforeColorOpacity: 0.4,
+    afterColorOpacity: 0.4,
+    enableHighlights: true,
+  };
+
+  try {
+    const result = await viewer1Ref.current.semanticTextCompare(viewer2Ref.current, options);
+
+    const originalAnnotations = result?.originalDocumentAnnotations || [];
+    const modifiedAnnotations = result?.modifiedDocumentAnnotations || [];
+    const totalTextDiffCount = result?.totalTextDiffCount || 0;
+
+    let addedCount = 0;
+    let deletedCount = 0;
+    let modifiedCount = 0;
+    const byPage = {};
+
+    // Process all annotations
+    originalAnnotations.forEach((pageAnnotations) => {
+      const pageNum = pageAnnotations.pageNumber;
+      if (!byPage[pageNum]) {
+        byPage[pageNum] = { deleted: 0, added: 0, modified: 0 };
+      }
+
+      pageAnnotations.differenceAnnotations?.forEach((diff) => {
+        const type = diff.textDiffType;
+        if (type === 'deleted') {
+          deletedCount++;
+          byPage[pageNum].deleted++;
+        } else if (type === 'added') {
+          addedCount++;
+          byPage[pageNum].added++;
+        } else if (type === 'modified') {
+          modifiedCount++;
+          byPage[pageNum].modified++;
         }
+      });
+    });
+
+    modifiedAnnotations.forEach((pageAnnotations) => {
+      const pageNum = pageAnnotations.pageNumber;
+      if (!byPage[pageNum]) {
+        byPage[pageNum] = { deleted: 0, added: 0, modified: 0 };
+      }
+
+      pageAnnotations.differenceAnnotations?.forEach((diff) => {
+        const type = diff.textDiffType;
+        if (type === 'deleted') {
+          deletedCount++;
+          byPage[pageNum].deleted++;
+        } else if (type === 'added') {
+          addedCount++;
+          byPage[pageNum].added++;
+        } else if (type === 'modified') {
+          modifiedCount++;
+          byPage[pageNum].modified++;
+        }
+      });
+    });
+
+    const report = {
+      totalDifferences: totalTextDiffCount,
+      summary: {
+        added: addedCount,
+        deleted: deletedCount,
+        modified: modifiedCount
+      },
+      byPage: byPage
     };
 
-    if (!summary) {
-        return <button onClick={handleShowSummary}>Show Summary</button>;
-    }
-
-    return (
-        <div style={{ padding: '20px', border: '1px solid #ccc', borderRadius: '4px' }}>
-            <h4>Comparison Summary</h4>
-            <p><strong>Total Differences:</strong> {summary.total}</p>
-            <ul>
-                <li><span style={{ color: '#FF0000' }}>●</span> Deleted: {summary.deleted}</li>
-                <li><span style={{ color: '#00FF00' }}>●</span> Added: {summary.added}</li>
-                <li><span style={{ color: '#FFA500' }}>●</span> Modified: {summary.modified}</li>
-            </ul>
-        </div>
-    );
+    console.log('Comparison Report:', report);
+    return report;
+  } catch (error) {
+    console.error('Error generating report:', error);
+  }
 };
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+### Step 5: Add control buttons and synchronization
+
+Manage synchronization, highlights, and comparison controls:
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% raw %}
+const handleToggleSync = () => {
+  const newSyncState = !synchronizationEnabled;
+  setSynchronizationEnabled(newSyncState);
+
+  if (viewer1Ref.current && viewer2Ref.current) {
+    viewer1Ref.current.syncViewers(viewer2Ref.current, newSyncState);
+  }
+};
+
+const handleToggleHighlights = async () => {
+  const newHighlightsState = !highlightsEnabled;
+  setHighlightsEnabled(newHighlightsState);
+
+  // Re-apply comparison with updated highlight state
+  if (viewersLoaded && viewer1Ref.current && viewer2Ref.current) {
+    const options = {
+      beforeColor: '#FF0000',
+      afterColor: '#00FF00',
+      beforeColorOpacity: 0.4,
+      afterColorOpacity: 0.4,
+      enableHighlights: newHighlightsState,
+    };
+
+    try {
+      // Clear previous comparison
+      viewer1Ref.current.removeSemanticTextCompare?.(viewer2Ref.current);
+      // Apply new comparison with updated highlights state
+      const result = await viewer1Ref.current.semanticTextCompare(viewer2Ref.current, options);
+      console.log('Highlights updated:', result);
+    } catch (error) {
+      console.error('Error updating highlights:', error);
+    }
+  }
+};
+
+const handleClearAnnotations = () => {
+  if (viewer1Ref.current && viewer2Ref.current) {
+    viewer1Ref.current.removeSemanticTextCompare?.(viewer2Ref.current);
+  }
+};
+
+// Control Buttons
+const ControlPanel = () => (
+  <div style={{
+    display: 'flex',
+    gap: '8px',
+    padding: '12px',
+    backgroundColor: '#f5f5f5',
+    borderBottom: '1px solid #ddd'
+  }}>
+    <button onClick={handleCompare} style={{
+      padding: '8px 16px',
+      backgroundColor: '#007bff',
+      color: 'white',
+      border: 'none',
+      borderRadius: '4px',
+      cursor: 'pointer'
+    }}>
+      Compare Documents
+    </button>
+    <button onClick={handleToggleHighlights} style={{
+      padding: '8px 16px',
+      backgroundColor: '#28a745',
+      color: 'white',
+      border: 'none',
+      borderRadius: '4px',
+      cursor: 'pointer'
+    }}>
+      {highlightsEnabled ? 'Disable Highlights' : 'Enable Highlights'}
+    </button>
+    <button onClick={handleToggleSync} style={{
+      padding: '8px 16px',
+      backgroundColor: '#ffc107',
+      color: 'black',
+      border: 'none',
+      borderRadius: '4px',
+      cursor: 'pointer'
+    }}>
+      {synchronizationEnabled ? 'Disable Sync' : 'Enable Sync'}
+    </button>
+    <button onClick={handleClearAnnotations} style={{
+      padding: '8px 16px',
+      backgroundColor: '#dc3545',
+      color: 'white',
+      border: 'none',
+      borderRadius: '4px',
+      cursor: 'pointer'
+    }}>
+      Clear Annotations
+    </button>
+  </div>
+);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
@@ -214,52 +418,77 @@ Each difference object contains:
 
 ## Common use cases
 
-### Export differences to CSV
-
-{% tabs %}
-{% highlight js tabtitle="App.jsx" %}
-{% raw %}
-const exportToCSV = (): void => {
-    const comparerElement = (pdfComparerRef.current as any);
-    const differencesList = comparerElement.getDifferences?.();
-    
-    if (!differencesList) return;
-
-    let csv = 'Page,Type,Text\n';
-    
-    differencesList.forEach((diff: any) => {
-        const text = (diff.text || '').replace(/"/g, '""');
-        csv += `${diff.pageNumber || 1},"${diff.type}","${text}"\n`;
-    });
-
-    const blob = new Blob([csv], { type: 'text/csv' });
-    const url = window.URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = 'differences.csv';
-    link.click();
-    window.URL.revokeObjectURL(url);
-};
-{% endraw %}
-{% endhighlight %}
-{% endtabs %}
-
 ### Filter differences by type
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
 {% raw %}
-const getDifferencesByType = (type: string): any[] => {
-    const comparerElement = (pdfComparerRef.current as any);
-    const differencesList = comparerElement.getDifferences?.();
-    
-    return differencesList?.filter((d: any) => d.type === type) || [];
+const getDifferencesByType = async (type) => {
+    if (!viewer1Ref.current || !viewer2Ref.current) return [];
+
+    const options = {
+        beforeColor: '#FF0000',
+        afterColor: '#00FF00',
+        beforeColorOpacity: 0.4,
+        afterColorOpacity: 0.4,
+        enableHighlights: true,
+    };
+
+    try {
+        const result = await viewer1Ref.current.semanticTextCompare(viewer2Ref.current, options);
+
+        const originalAnnotations = result?.originalDocumentAnnotations || [];
+        const modifiedAnnotations = result?.modifiedDocumentAnnotations || [];
+        const differences = [];
+
+        // Extract differences by type from original annotations
+        originalAnnotations.forEach((pageAnnotations) => {
+          pageAnnotations.differenceAnnotations?.forEach((diff) => {
+            if (diff.textDiffType === type.toLowerCase()) {
+              differences.push({
+                pageNumber: pageAnnotations.pageNumber,
+                type: diff.textDiffType,
+                text: diff.textDiffData,
+                bounds: diff.annotation?.bounds,
+                color: diff.annotation?.color
+              });
+            }
+          });
+        });
+
+        // Extract differences by type from modified annotations
+        modifiedAnnotations.forEach((pageAnnotations) => {
+          pageAnnotations.differenceAnnotations?.forEach((diff) => {
+            if (diff.textDiffType === type.toLowerCase()) {
+              const exists = differences.find(d =>
+                d.pageNumber === pageAnnotations.pageNumber &&
+                d.text === diff.textDiffData
+              );
+              if (!exists) {
+                differences.push({
+                  pageNumber: pageAnnotations.pageNumber,
+                  type: diff.textDiffType,
+                  text: diff.textDiffData,
+                  bounds: diff.annotation?.bounds,
+                  color: diff.annotation?.color
+                });
+              }
+            }
+          });
+        });
+
+        console.log(`${type} differences (${differences.length}):`, differences);
+        return differences;
+    } catch (error) {
+        console.error('Error filtering differences:', error);
+        return [];
+    }
 };
 
 // Usage
-const addedDifferences = getDifferencesByType('Added');
-const deletedDifferences = getDifferencesByType('Deleted');
-const modifiedDifferences = getDifferencesByType('Modified');
+const addedDifferences = await getDifferencesByType('added');
+const deletedDifferences = await getDifferencesByType('deleted');
+const modifiedDifferences = await getDifferencesByType('modified');
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
@@ -269,64 +498,68 @@ const modifiedDifferences = getDifferencesByType('Modified');
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
 {% raw %}
-const groupDifferencesByPage = (): any => {
-    const comparerElement = (pdfComparerRef.current as any);
-    const differencesList = comparerElement.getDifferences?.();
-    
-    const grouped: any = {};
-    
-    differencesList?.forEach((diff: any) => {
-        const pageNum = diff.pageNumber || 1;
-        if (!grouped[pageNum]) {
-            grouped[pageNum] = [];
-        }
-        grouped[pageNum].push(diff);
-    });
-    
-    return grouped;
-};
-{% endraw %}
-{% endhighlight %}
-{% endtabs %}
+const groupDifferencesByPage = async () => {
+    if (!viewer1Ref.current || !viewer2Ref.current) return {};
 
-## Error handling
+    const options = {
+        beforeColor: '#FF0000',
+        afterColor: '#00FF00',
+        beforeColorOpacity: 0.4,
+        afterColorOpacity: 0.4,
+        enableHighlights: true,
+    };
 
-Handle comparison errors gracefully:
-
-{% tabs %}
-{% highlight js tabtitle="App.jsx" %}
-{% raw %}
-const handleComparison = async (): Promise<void> => {
     try {
-        if (!pdfComparerRef.current) {
-            throw new Error('PdfComparer not initialized');
-        }
+        const result = await viewer1Ref.current.semanticTextCompare(viewer2Ref.current, options);
 
-        const comparerElement = (pdfComparerRef.current as any);
-        const differencesList = comparerElement.getDifferences?.();
-        
-        if (!differencesList) {
-            throw new Error('No differences found or comparison not completed');
-        }
+        const originalAnnotations = result?.originalDocumentAnnotations || [];
+        const modifiedAnnotations = result?.modifiedDocumentAnnotations || [];
+        const grouped = {};
 
-        console.log(`Found ${differencesList.length} differences`);
+        // Group original document differences by page
+        originalAnnotations.forEach((pageAnnotations) => {
+          const pageNum = pageAnnotations.pageNumber;
+          if (!grouped[pageNum]) {
+            grouped[pageNum] = { original: [], modified: [] };
+          }
+
+          pageAnnotations.differenceAnnotations?.forEach((diff) => {
+            grouped[pageNum].original.push({
+              type: diff.textDiffType,
+              text: diff.textDiffData,
+              bounds: diff.annotation?.bounds,
+              color: diff.annotation?.color
+            });
+          });
+        });
+
+        // Group modified document differences by page
+        modifiedAnnotations.forEach((pageAnnotations) => {
+          const pageNum = pageAnnotations.pageNumber;
+          if (!grouped[pageNum]) {
+            grouped[pageNum] = { original: [], modified: [] };
+          }
+
+          pageAnnotations.differenceAnnotations?.forEach((diff) => {
+            grouped[pageNum].modified.push({
+              type: diff.textDiffType,
+              text: diff.textDiffData,
+              bounds: diff.annotation?.bounds,
+              color: diff.annotation?.color
+            });
+          });
+        });
+
+        console.log('Differences grouped by page:', grouped);
+        return grouped;
     } catch (error) {
-        console.error('Comparison error:', (error as Error).message);
-        // Display error to user
+        console.error('Error grouping differences:', error);
+        return {};
     }
 };
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
-## Performance notes
-
-For large documents:
-
-- **Comparison is asynchronous** - Wait for comparison to complete before accessing differences
-- **Results are built incrementally** - The differences panel updates as results become available
-- **Efficient processing** - Filter and process differences based on specific needs
-- **Memory optimization** - Export and clear large difference sets when done
 
 ## Related topics
 
