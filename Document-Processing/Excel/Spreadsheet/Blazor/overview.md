@@ -27,7 +27,7 @@ The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sd
 * [Undo Redo](undo-redo): Fast error correction with history tracking up to 25 actions
 * [Hyperlink](hyperlink): Easy navigation across web URLs and worksheets
 * [Worksheet management](worksheet): Complete worksheet management including insert, delete, rename, move, duplicate, and hide/unhide
-* [Wrap text](formatting): Provides the option to display the large content as multiple lines in a single cell.
+* [Wrap text](formatting#cell-formatting): Provides the option to display the large content as multiple lines in a single cell.
 * [Data validation](data-validation): Provides the option to validate edited values based on data validation rules defined for a cell or range of cells.
 * [Find and replace](find-and-replace): Provides the option to find the data and replace it across all sheets in Spreadsheet.
 * [Protection](protection): Robust workbook and sheet protection with password, permissions, and selective locking
