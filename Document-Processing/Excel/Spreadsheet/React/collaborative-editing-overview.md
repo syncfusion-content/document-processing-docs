@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Collaborative Editing in React SpreadsheetEditor | Syncfusion
-description: Learn about real-time collaborative editing in the Syncfusion React SpreadsheetEditor.
+title: React SpreadsheetEditor Collaborative Editing | Syncfusion
+description: Learn how real-time collaborative editing synchronizes workbook changes, user presence, and selections in the React SpreadsheetEditor.
 control: Collaborative Editing
 platform: document-processing
 documentation: ug

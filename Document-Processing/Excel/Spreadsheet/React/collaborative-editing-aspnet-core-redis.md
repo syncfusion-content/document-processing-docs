@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Collaborative Editing React SpreadsheetEditor with ASP.NET Core | Syncfusion
+title: React SpreadsheetEditor Collaborative Editing | Syncfusion
 description: Learn how to configure collaborative editing in React SpreadsheetEditor using ASP.NET Core and Redis.
 control: Collaborative Editing
 platform: document-processing
 documentation: ug
 ---
 
-# Collaborative editing in React SpreadsheetEditor using ASP.NET Core with Redis
+# Collaborative editing with ASP.NET Core and Redis
 
 The React SpreadsheetEditor can use the ASP.NET Core Collaboration Server to synchronize workbook actions among multiple users. SignalR or WebSocket provides real-time communication, while Redis temporarily stores ordered collaboration actions, versions, and room information.
 
