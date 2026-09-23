@@ -5,6 +5,7 @@ platform: document-processing
 control: XlsIO
 documentation: UG
 keywords: c#, vb.net, excel, read excel, edit excel, edit excel cell, excel formula, cell formula, add formula, write excel, update excel, syncfusion, xlsio
+appliesto: Document SDK
 ---
 # Formulas in .NET Excel Library
 

@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Freehand Drawing in Xamarin.iOS PDF Viewer | Syncfusion
 description: PDF viewer Xamarin.iOS allows user to add ink annotation and provides options to edit or remove an existing ink annotation in the PDF file.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 #  Add freehand scribble in PDF using Syncfusion PDF Viewer iOS

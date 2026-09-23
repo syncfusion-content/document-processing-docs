@@ -6,6 +6,7 @@ control: Insert text or image in table programmatically
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Insert Text or Image in Table in Vue DOCX Editor

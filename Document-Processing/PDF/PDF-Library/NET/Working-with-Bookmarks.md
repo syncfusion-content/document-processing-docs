@@ -1,9 +1,10 @@
----
+﻿---
 title: Bookmarks in .NET PDF Library | Syncfusion
 description: Learn how to add, modify, and remove bookmarks in a PDF document using the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Bookmarks in .NET PDF Library
 

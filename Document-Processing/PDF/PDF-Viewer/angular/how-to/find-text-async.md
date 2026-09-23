@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Use FindTextAsync in Angular PDF Viewer | Syncfusion
 description: Search text asynchronously in the Angular PDF Viewer using the findTextAsync method and retrieve the bounds of each match for advanced use.
@@ -6,6 +6,7 @@ platform: document-processing
 control: Find Text Async
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Use FindTextAsync in Angular PDF Viewer

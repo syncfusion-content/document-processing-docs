@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: How to Load custom fonts with Pdfium in Blazor PDF Viewer | Syncfusion
 description: Learn how to load custom fonts in the Blazor PDF Viewer using Pdfium CustomFonts, including hosting fonts in wwwroot or via a CDN.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Load custom fonts with Pdfium in Blazor PDF Viewer

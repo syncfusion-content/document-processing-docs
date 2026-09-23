@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Remix in React PDF Viewer | Syncfusion
 description: Integrate the Syncfusion React PDF Viewer into a React Router v7 (formerly Remix) application using client-only rendering.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Getting Started with React PDF Viewer in React Router

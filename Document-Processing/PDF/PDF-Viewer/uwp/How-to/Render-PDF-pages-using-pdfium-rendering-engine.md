@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: How to Render PDF Pages using the PDFium renderer  | Syncfusion
 description: Learn how to render pdf pages using the pdfium renderer  in Syncfusion UWP PDF Viewer with examples and implementation details.
 platform: document-processing
 control: PDF viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Render PDF Pages using the PDFium renderer in UWP PDF Viewer

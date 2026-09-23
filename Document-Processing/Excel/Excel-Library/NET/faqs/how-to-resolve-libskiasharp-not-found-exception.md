@@ -4,6 +4,7 @@ description: Resolve the LibSkiaSharp not found exception while using the Syncfu
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to resolve LibSkiaSharp exceptions in .NET Excel Library

@@ -6,6 +6,7 @@ control: History
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # History in React DOCX Editor

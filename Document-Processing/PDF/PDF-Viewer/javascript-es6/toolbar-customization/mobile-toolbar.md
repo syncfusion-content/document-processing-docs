@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Customize Mobile Toolbar in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Customize the mobile toolbar in the JavaScript (ES6) PDF Viewer to ensure smooth touch interactions and a tailored experience on small screens.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 # Customize the Mobile Toolbar in JavaScript (ES6) PDF Viewer
 

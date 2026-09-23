@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: How to Disable the Context Menu in ASP.NET Core PDF | Syncfusion
 description: Disable the right-click context menu in the ASP.NET Core PDF Viewer to prevent users from accessing context menu actions on PDF content.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Disable the Context Menu in ASP.NET Core PDF Viewer

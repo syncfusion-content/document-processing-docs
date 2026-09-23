@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Localization in Flutter PDF Viewer | Syncfusion
 description: The localization feature in SfPdfViewer enables users to display built-in UI elements and messages in different languages.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Localization in Flutter PDF Viewer

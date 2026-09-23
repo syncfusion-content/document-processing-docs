@@ -1,4 +1,4 @@
----
+﻿---
 title: Getting Started with .NET PDF Library in C# and VB.NET | Syncfusion
 canonical_url: "https://www.syncfusion.com/document-sdk/net-pdf-library"
 description: Learn how to get started with the Syncfusion .NET PDF Library in C# and VB.NET. Create PDF documents with text, images, and tables.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF
 documentation: UG
 keywords: create pdf, edit pdf, write pdf, merge, pdf form, fill form, digital sign, table, c#, vb.net, dotnet pdf
+appliesto: Document SDK
 ---
 # Create or Generate PDF file in C# and VB.NET
 

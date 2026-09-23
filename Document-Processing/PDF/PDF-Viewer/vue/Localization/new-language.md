@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: New Language in Vue PDF Viewer | Syncfusion
 description: Localize the Vue PDF Viewer to a new language by providing culture-specific resource files through L10n.load and the locale property.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Set a New Language in Vue PDF Viewer

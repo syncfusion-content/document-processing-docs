@@ -4,6 +4,7 @@ description: Learn how to work with paragraphs, lists, and child elements of par
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Paragraphs in .NET Word
 

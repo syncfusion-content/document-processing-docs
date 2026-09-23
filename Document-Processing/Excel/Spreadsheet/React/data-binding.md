@@ -5,6 +5,7 @@ description: Learn about data binding in the Syncfusion React Spreadsheet compon
 control: Data binding 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Data Binding in React Spreadsheet

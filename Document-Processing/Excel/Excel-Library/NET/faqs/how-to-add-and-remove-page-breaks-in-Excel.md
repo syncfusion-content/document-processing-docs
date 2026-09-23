@@ -4,6 +4,7 @@ description: Add and remove page breaks in Excel worksheets using the Syncfusion
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to add and remove page breaks in .NET Excel Library

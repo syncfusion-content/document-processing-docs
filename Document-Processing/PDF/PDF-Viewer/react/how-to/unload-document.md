@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Unload a Document in React PDF Viewer | Syncfusion
 description: Unload the current document in the React PDF Viewer to free resources and prepare the viewer for loading a different PDF document.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Unload a Document in React PDF Viewer

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Delete Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Remove annotations from PDFs in the JavaScript (ES5) PDF Viewer using the context menu, the toolbar, the Delete key, and programmatic APIs.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Remove Annotations in JavaScript (ES5) PDF Viewer

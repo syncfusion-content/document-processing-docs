@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: How to add digital signature in Flutter PDF Viewer | Syncfusion
 description: This guide explains how to capture signatures using SfSignaturePad and add them as annotations to PDF documents in SfPdfViewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to add digital signature in Flutter PDF Viewer

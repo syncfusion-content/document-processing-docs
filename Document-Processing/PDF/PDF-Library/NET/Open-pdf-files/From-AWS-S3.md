@@ -1,10 +1,11 @@
----
+﻿---
 title: Open PDF from AWS S3 | Syncfusion
 description: Learn how to open and load PDF documents stored in AWS S3 buckets using C# with Syncfusion .NET PDF library.
 keywords: aws s3, load pdf, open pdf, c# load pdf
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Open PDF from AWS S3
 

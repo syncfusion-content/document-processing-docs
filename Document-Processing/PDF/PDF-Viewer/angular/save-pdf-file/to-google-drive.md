@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: To Google Drive in Angular PDF Viewer | Syncfusion
 description: Save PDF files from the Angular PDF Viewer to Google Drive using a server-backed web service for authentication and secure uploads.
@@ -6,6 +6,7 @@ platform: document-processing
 control: Save PDF files to Google Drive
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Save PDF Files to Google Drive in Angular PDF Viewer

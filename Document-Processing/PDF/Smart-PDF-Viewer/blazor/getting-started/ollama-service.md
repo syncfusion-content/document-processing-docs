@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion Blazor using Ollama Sm
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Getting Started with Blazor Using Ollama Smart PDF Viewer

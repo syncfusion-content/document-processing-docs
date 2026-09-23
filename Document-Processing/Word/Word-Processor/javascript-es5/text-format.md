@@ -6,6 +6,7 @@ platform: document-processing
 control: Text format 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Text Format in JavaScript DOCX Editor

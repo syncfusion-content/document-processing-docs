@@ -4,6 +4,7 @@ description: Convert Word to PDF in Windows Forms using .NET Word library withou
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert Word to PDF in .NET Word

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Create a Custom PDF Viewer Web Service in Vue PDF | Syncfusion
 description: Create and run a custom PDF Viewer web service for the Vue PDF Viewer, with code samples and configuration tips for common setups.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Create a Custom PDF Viewer Web Service in Vue PDF Viewer

@@ -5,6 +5,7 @@ description: Print worksheets from Windows Forms Spreadsheet with page setup opt
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Printing in Windows Forms Spreadsheet

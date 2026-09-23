@@ -6,6 +6,7 @@ control: Disable header and footer edit in DOCX Editor
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Disable Header and Footer Editing in React DOCX Editor

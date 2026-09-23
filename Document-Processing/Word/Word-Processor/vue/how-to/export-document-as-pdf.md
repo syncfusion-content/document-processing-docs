@@ -6,6 +6,7 @@ control: Export document as pdf
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Export Document as PDF in Vue DOCX Editor

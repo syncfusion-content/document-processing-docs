@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Vite Angular in Angular PDF Viewer | Syncfusion
 description: Learn about the vite angular in the Angular PDF Viewer and how it helps users work with PDF documents more effectively.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Vite Angular in Angular PDF Viewer

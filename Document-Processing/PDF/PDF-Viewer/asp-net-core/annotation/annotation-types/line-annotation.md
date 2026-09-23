@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Line Annotation in ASP.NET Core PDF Viewer | Syncfusion
 description: Enable, apply, customize, and manage Line annotations in the ASP.NET Core PDF Viewer for marking straight paths on a PDF page.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Line Annotation in ASP.NET Core PDF Viewer

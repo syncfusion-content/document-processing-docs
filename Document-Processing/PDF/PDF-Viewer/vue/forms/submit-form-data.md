@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Submit PDF Form Data to a Server using Vue PDF Viewer | Syncfusion
 description: Submit filled PDF form data from the EJ2 Vue PDF Viewer to a backend server, with a complete frontend example.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Submit PDF Form Data to a Server in Vue

@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Free text calllout annotation in UWP PDF Viewer | Syncfusion
 description: Learn about free text callout annotation support in Syncfusion<sup>®</sup> UWP PDF Viewer (SfPdfViewer) control and more.
 platform: document-processing
 control: SfPdfViewerControl
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Free text calllout annotation in UWP PDF Viewer

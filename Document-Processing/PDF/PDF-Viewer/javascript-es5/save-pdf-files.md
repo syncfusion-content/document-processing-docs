@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Save Pdf Files in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Save edited or annotated PDFs from the JavaScript (ES5) PDF Viewer to a server, database, or local file system using the server-backed web service.
@@ -6,6 +6,7 @@ platform: document-processing
 control: Saving PDF files
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Save PDF Files in JavaScript (ES5) PDF Viewer

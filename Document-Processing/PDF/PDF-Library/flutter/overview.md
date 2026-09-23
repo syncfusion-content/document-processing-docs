@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: About Syncfusion Flutter PDF Library | Syncfusion
 description: Learn about the Syncfusion Flutter non-UI PDF library, its features, document processing capabilities, and more.
 platform: document-processing
 control: PDF
 documentation: ug
+appliesto: Document SDK
 ---
 
 # About Syncfusion Flutter PDF Library

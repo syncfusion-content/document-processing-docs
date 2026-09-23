@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Annotation Toolbar in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Customize the annotation toolbar in the JavaScript (ES6) PDF Viewer to show, hide, or replace the default annotation actions for your users.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Customize the Annotation Toolbar in JavaScript (ES6) PDF Viewer

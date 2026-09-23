@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Rtl Language Support in Vue PDF Viewer | Syncfusion
 description: Enable right-to-left (RTL) language support in the Vue PDF Viewer so the UI mirrors correctly for languages such as Arabic and Hebrew.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # RTL Language Support in Vue PDF Viewer

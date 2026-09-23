@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Highlight, Underline, or Strike Out Text in Vue | Syncfusion
 description: Highlight, underline, and strike out text in the Vue PDF Viewer using the built-in text markup tools in the annotation toolbar.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Highlight, Underline, or Strike Out Text in Vue PDF Viewer

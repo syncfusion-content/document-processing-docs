@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Rectangle Annotation (Shape) in Blazor PDF Viewer | Syncfusion
 description: Learn how to add, edit, delete, and programmatically manage rectangle annotations in the Blazor PDF Viewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Rectangle Annotation (Shape) in Blazor PDF Viewer 

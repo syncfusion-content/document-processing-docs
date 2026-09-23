@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: UI Customization in .NET MAUI PDF Viewer | Syncfusion
 description: Learn how to customize the UI of the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control, including the loading indicator and theming.
@@ -6,6 +6,7 @@ platform: document-processing
 control: SfPdfViewer
 documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
+appliesto: PDF Viewer SDK
 ---
 
 # UI Customization in .NET MAUI PDF Viewer

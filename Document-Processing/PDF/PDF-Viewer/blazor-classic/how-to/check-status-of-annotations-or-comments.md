@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: How to Check status of annotations in Blazor PDF Viewer | Syncfusion
 description: Learn here all about how to check the status of annotations or comments in Syncfusion Blazor PDF Viewer component and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Check status of annotations in Blazor PDF Viewer

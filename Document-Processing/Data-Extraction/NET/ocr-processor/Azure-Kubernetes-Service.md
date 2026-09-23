@@ -5,6 +5,7 @@ platform: document-processing
 control: PDF
 documentation: UG
 keywords: Assemblies
+appliesto: Document SDK
 ---
 
 # Getting Started with Azure Kubernetes Service OCR Processor

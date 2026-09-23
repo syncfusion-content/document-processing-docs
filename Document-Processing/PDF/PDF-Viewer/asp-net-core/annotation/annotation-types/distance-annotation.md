@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Distance Annotation in ASP.NET Core PDF Viewer | Syncfusion
 description: Enable, draw, customize, and manage Distance annotations in the ASP.NET Core PDF Viewer to measure straight-line distances on a PDF page.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Distance Annotation in ASP.NET Core PDF Viewer

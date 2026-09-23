@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Common Errors When Ej2 Pdfviewer Lib Assets Are Missing | Syncfusion
 description: Learn about the common errors when ej2 pdfviewer lib assets are missing in the Angular PDF Viewer and how it helps users work with PDF documents more
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Common Errors When Ej2 Pdfviewer Lib Assets Are Missing in Angular

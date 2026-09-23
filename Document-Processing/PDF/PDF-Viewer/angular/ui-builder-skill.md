@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Ui Builder Skill in Angular PDF Viewer | Syncfusion
 description: Install the Syncfusion Angular UI Builder skill to generate production-ready Angular components that include the PDF Viewer from natural-language prompts.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 keywords: Angular UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skills
+appliesto: PDF Viewer SDK
 ---
 
 # Angular UI Builder Skill with PDF Viewer

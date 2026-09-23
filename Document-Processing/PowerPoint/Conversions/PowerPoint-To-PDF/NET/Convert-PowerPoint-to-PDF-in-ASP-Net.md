@@ -4,6 +4,7 @@ description: Convert PowerPoint to PDF in ASP.NET using .NET PowerPoint library 
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert PowerPoint to PDF in ASP.NET

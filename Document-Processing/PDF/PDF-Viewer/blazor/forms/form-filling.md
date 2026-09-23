@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Form filling in Blazor PDF Viewer  | Syncfusion
 description: Learn to view, fill, export, and import PDF form fields in Blazor SfPdfViewer, including disabling interaction and handling signatures.
@@ -6,6 +6,7 @@ platform: document-processing
 control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Fill PDF form fields in Blazor SfPdfViewer

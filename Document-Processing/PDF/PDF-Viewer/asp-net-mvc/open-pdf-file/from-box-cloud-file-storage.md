@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: From Box Cloud File Storage in ASP.NET MVC PDF Viewer | Syncfusion
 description: Load and display PDF files stored in Box cloud storage in the ASP.NET MVC PDF Viewer using a server-backed web service for authentication.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Open PDF from Box Cloud Storage in ASP.NET MVC PDF Viewer

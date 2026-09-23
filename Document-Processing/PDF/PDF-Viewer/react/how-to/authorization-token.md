@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: How to Use an Authorization Token in React PDF Viewer | Syncfusion
 description: Pass an authorization token to the React PDF Viewer to securely access protected PDF documents and authenticated API requests.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Use an Authorization Token in React PDF Viewer

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Open Pdf Files in Vue PDF Viewer | Syncfusion
 description: Load PDF files in the Vue PDF Viewer from URLs, Base64 strings, databases, and other sources so users can open documents from anywhere.
@@ -6,6 +6,7 @@ control: Open PDF files
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Open PDF Files in Vue PDF Viewer

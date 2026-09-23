@@ -1,10 +1,11 @@
----
+﻿---
 title: PDF Redaction in JavaScript PDF |Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
 description: Programmatically redact sensitive content from PDF documents using the Syncfusion JavaScript PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # PDF Redaction in JavaScript PDF

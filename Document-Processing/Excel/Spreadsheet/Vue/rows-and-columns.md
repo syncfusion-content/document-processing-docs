@@ -5,6 +5,7 @@ description: Manage rows and columns in the Syncfusion Vue Spreadsheet, includin
 control: Rows and columns 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Rows and Columns in Vue Spreadsheet

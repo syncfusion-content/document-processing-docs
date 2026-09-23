@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Ink Annotation in Angular PDF Viewer | Syncfusion
 description: Enable, draw, customize, and manage Ink (freehand) annotations in the Angular PDF Viewer for handwritten marks on a PDF page.
@@ -6,6 +6,7 @@ platform: document-processing
 control: Ink annotation
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Ink Annotation in Angular PDF Viewer

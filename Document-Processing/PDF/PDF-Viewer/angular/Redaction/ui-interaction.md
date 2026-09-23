@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Ui Interaction in Angular PDF Viewer | Syncfusion
 description: Learn about the ui interaction in the Angular PDF Viewer and how it helps users work with PDF documents more effectively.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Ui Interaction in Angular PDF Viewer

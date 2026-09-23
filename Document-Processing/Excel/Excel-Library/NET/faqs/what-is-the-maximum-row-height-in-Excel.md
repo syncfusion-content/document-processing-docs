@@ -4,6 +4,7 @@ description: Maximum row height describes Excel's 409-point row height limit and
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Maximum Row Height in .NET Excel Library

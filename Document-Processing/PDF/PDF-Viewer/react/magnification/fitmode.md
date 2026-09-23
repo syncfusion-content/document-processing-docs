@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Fitmode in React PDF Viewer | Syncfusion
 description: Configure fit modes in the React PDF Viewer, including Fit Page and Fit Width, to control the initial view and switch modes at runtime.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Fit Modes in React PDF Viewer

@@ -6,6 +6,7 @@ platform: document-processing
 control: Docker deployment 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Docker Image Overview in ASP.NET Core Spreadsheet

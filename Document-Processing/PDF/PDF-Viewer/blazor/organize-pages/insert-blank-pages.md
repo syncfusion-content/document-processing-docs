@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Insert blank pages in Organize Pages in Blazor PDF Viewer | Syncfusion
 description: How to insert blank pages into a PDF using the Organize Pages UI in the Blazor PDF Viewer.
@@ -6,6 +6,7 @@ platform: document-processing
 control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Insert blank pages using the Organize Pages tool in Blazor PDF Viewer

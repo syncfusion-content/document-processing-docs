@@ -4,6 +4,7 @@ description: Excel to HTML conversion in Syncfusion .NET Excel Library describes
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Excel to HTML Conversion in .NET Excel Library

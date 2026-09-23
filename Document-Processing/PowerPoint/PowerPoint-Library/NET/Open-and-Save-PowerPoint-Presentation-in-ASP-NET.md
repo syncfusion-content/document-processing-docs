@@ -4,6 +4,7 @@ description: Open and save PowerPoint presentation in ASP.NET using .NET PowerPo
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Open and save Presentation in ASP.NET

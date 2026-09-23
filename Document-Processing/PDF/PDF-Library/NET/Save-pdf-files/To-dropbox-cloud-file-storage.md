@@ -1,10 +1,11 @@
----
+﻿---
 title: Save PDF to Dropbox | Syncfusion
 description: Learn how to save PDF files programmatically to Dropbox cloud file storage in C# using Syncfusion .NET PDF library.
 keywords: dropbox, save pdf, c# save pdf, upload pdf
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Save PDF documents to Dropbox
 

@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: How to Select Multi-Page Annotations in JavaScript (ES6) | Syncfusion
 description: Select multiple annotations across pages in the JavaScript (ES6) PDF Viewer so users can perform batch actions like delete or export on the selection.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Select Multi-Page Annotations in JavaScript (ES6) PDF Viewer

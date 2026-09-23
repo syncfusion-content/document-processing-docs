@@ -4,6 +4,7 @@ description: Learn how to convert Excel charts to images, along with different i
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Chart to Image Conversion in .NET Excel Library

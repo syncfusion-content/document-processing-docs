@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Migrate from Xamarin SfPdfViewer to .NET MAUI SfPdfViewer | Syncfusion
 description: Learn how to migrate from the Syncfusion<sup>®</sup> Xamarin SfPdfViewer to the Syncfusion<sup>®</sup> .NET MAUI SfPdfViewer control.
@@ -6,6 +6,7 @@ platform: document-processing
 control: SfPdfViewer
 documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
+appliesto: PDF Viewer SDK
 ---
 
 # Migrate from Xamarin SfPdfViewer to .NET MAUI SfPdfViewer

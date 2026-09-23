@@ -5,6 +5,7 @@ description: Learn here how to customize and manage the user interface in Syncfu
 control: Spreadsheet
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # UI Customization in React Spreadsheet

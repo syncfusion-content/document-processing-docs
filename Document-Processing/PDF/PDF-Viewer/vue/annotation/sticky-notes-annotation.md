@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Sticky Notes Annotation in Vue PDF Viewer | Syncfusion
 description: Learn about the sticky notes annotation in the Vue PDF Viewer and how it helps users work with PDF documents more effectively.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Sticky Notes Annotation in Vue PDF Viewer

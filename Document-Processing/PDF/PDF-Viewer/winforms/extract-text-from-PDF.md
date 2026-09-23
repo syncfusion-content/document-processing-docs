@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Extract Text from PDF Files in WinForms PDF Viewer | Syncfusion
 description: The text extraction feature allows developers to retrieve text content from PDF documents programmatically for searching, analysis, or processing purposes.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Extract Text from PDF Files in WinForms PDF Viewer

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Form Designer Toolbar in Angular PDF Viewer | Syncfusion
 description: Customize the Form Designer toolbar in the Angular PDF Viewer to show, hide, or replace the default form design actions for your users.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Customize the Form Designer Toolbar in Angular PDF Viewer

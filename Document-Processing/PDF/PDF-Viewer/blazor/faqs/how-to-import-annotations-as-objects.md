@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: How Import annotations as objects in PDF Viewer Component | Syncfusion
 description: Learn how to import annotations as objects in the Blazor PDF Viewer component using the ExportAnnotationsAsObjectAsync method.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How Import annotations as objects in PDF Viewer Component 

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Customize Annotation in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Customize the appearance and behavior of annotations in the JavaScript (ES6) PDF Viewer through UI settings and programmatic configuration.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Customize Annotations in JavaScript (ES6) PDF Viewer

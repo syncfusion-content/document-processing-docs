@@ -5,6 +5,7 @@ description: Scrolling in TypeScript Spreadsheet enables smooth navigation acros
 platform: document-processing
 control: Scrolling
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Scrolling in TypeScript Spreadsheet 

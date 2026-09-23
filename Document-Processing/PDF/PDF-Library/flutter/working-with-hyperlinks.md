@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Hyperlinks in Flutter PDF Library | Syncfusion
 description: Learn how to add hyperlinks and web navigation features in PDF documents using Syncfusion Flutter PDF non-UI Library.
 platform: document-processing
 control: PDF
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Hyperlinks in Flutter PDF

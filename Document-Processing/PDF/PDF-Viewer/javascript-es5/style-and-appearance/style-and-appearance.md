@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Style and Appearance in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Learn about the style and appearance in the JavaScript (ES5) PDF Viewer and how it helps users work with PDF documents more effectively.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Style and Appearance in JavaScript (ES5) PDF Viewer

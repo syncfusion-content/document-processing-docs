@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: FAQ Section in Blazor PDF Viewer | Syncfusion
 description: Explore frequently asked questions and answers about the Blazor PDF Viewer  to quickly find solutions and best practices.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Frequently Asked Questions in Blazor PDF Viewer 

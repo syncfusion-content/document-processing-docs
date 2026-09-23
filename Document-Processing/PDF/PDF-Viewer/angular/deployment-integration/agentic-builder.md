@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Agentic Builder in Angular PDF Viewer | Syncfusion
 description: Create an Angular PDF Viewer project with the Agentic UI Builder, a guided workflow that generates code from natural-language prompts.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Create an Angular PDF Viewer with Agentic UI Builder

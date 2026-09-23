@@ -4,6 +4,7 @@ description: Learn about the assemblies required to use the Syncfusion PDF to Im
 platform: document-processing
 control: PDF to image
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Assemblies Required for PDF to Image Converter Library

@@ -5,6 +5,7 @@ description: The Flutter Excel Library lets users calculate and manage time-base
 platform: document-processing
 control: Excel
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Time Function Formulas in Flutter Excel Library

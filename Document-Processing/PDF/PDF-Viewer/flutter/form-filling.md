@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Form filling in Flutter PDF Viewer | Syncfusion
 description: The form filling feature in SfPdfViewer enables users to view, fill, edit, and manage interactive form fields within PDF documents.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Form filling in Flutter PDF Viewer

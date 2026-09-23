@@ -4,6 +4,7 @@ description: Create PowerPoint document in AWS Lambda using .NET Core PowerPoint
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create PowerPoint document in AWS Lambda

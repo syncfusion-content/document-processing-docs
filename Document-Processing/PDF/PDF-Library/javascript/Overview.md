@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: About Syncfusion JavaScript PDF Library | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
@@ -7,6 +7,7 @@ platform: document-processing
 control: PDF
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: Document SDK
 ---
 
 # About Syncfusion JavaScript PDF Library

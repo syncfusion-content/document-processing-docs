@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Optimize PDF Loading on Android in .NET MAUI PDF Viewer | Syncfusion
 description: Learn how to optimize document loading performance in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) by enabling a larger heap size on Android.
@@ -6,6 +6,7 @@ platform: document-processing
 control: SfPdfViewer
 documentation: ug
 keywords: .net maui pdf viewer, android pdf viewer, maui pdf viewer performance, optimize pdf loading, large pdf documents, android large heap, sfpdfviewer memory optimization
+appliesto: PDF Viewer SDK
 ---
 
 # Optimizing document loading on Android in .NET MAUI PDF Viewer Control

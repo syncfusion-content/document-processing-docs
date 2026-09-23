@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Mcp in React PDF Viewer | Syncfusion
 description: Set up the Syncfusion React PDF Viewer MCP server so AI tools can interact with the control using a standardized protocol.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # React PDF Viewer MCP Server Setup

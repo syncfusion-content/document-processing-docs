@@ -1,9 +1,10 @@
----
+﻿---
 title: About Syncfusion JavaScript (ES5) PDF Viewer Control | Syncfusion
 description: Learn about introduction of Syncfusion Essential Studio JavaScript (ES5) PDF Viewer control, its key features, and how to get started with it.
 platform: document-processing
 control: PDF Viewer
 documentation: UG
+appliesto: PDF Viewer SDK
 ---
 
 # About Syncfusion JavaScript (ES5) PDF Viewer Control

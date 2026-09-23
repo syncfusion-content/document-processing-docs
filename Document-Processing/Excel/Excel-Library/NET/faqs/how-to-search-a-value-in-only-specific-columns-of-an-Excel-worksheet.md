@@ -4,6 +4,7 @@ description: Search for a value in different columns of an Excel worksheet using
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to search values in specific columns in .NET Excel Library

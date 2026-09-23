@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Configure Retry Timeout in Angular PDF Viewer | Syncfusion
 description: Configure retry timeout settings in the Angular PDF Viewer so failed requests are retried automatically with a delay you control.
@@ -6,6 +6,7 @@ platform: document-processing
 control: Retry Timeout
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Configure Retry Timeout in Angular PDF Viewer

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Handle the ExtractTextCompleted Event in Angular | Syncfusion
 description: Use the extractTextCompleted event and isExtractText property in the Angular PDF Viewer to extract text and bounds from a loaded PDF.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Handle the ExtractTextCompleted Event in Angular PDF Viewer

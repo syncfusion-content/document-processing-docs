@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Use Local Script and Style References | Syncfusion
 description: Use local script and style references for the JavaScript (ES5) PDF Viewer so it can run in offline or restricted network environments.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Use Local Script and Style References in JavaScript (ES5) PDF

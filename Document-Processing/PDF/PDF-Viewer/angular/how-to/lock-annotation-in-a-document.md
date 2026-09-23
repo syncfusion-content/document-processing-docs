@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Lock Annotations in Angular PDF Viewer | Syncfusion
 description: Lock square or rectangle annotations in the Angular PDF Viewer so users cannot move or resize them after they are placed on the page.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Lock Annotations in Angular PDF Viewer

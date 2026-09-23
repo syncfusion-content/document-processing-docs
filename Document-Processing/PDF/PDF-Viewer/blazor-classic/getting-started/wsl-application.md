@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Getting Started with Blazor WSL Mode PDF Viewer | Syncfusion
 description: Learn how to get started with  the Syncfusion Blazor WSL (Windows Subsystem for Linux) Mode PDF Viewer component. 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 N> Syncfusion<sup style="font-size:70%">&reg;</sup> recommends using [Blazor PDF Viewer (NextGen)](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/server-side-application) Component which provides fast rendering of pages and improved performance. Also, there is no need of external Web service for processing the files and ease out the deployment complexity. It can be used in Blazor Server, WASM and MAUI applications without any changes.

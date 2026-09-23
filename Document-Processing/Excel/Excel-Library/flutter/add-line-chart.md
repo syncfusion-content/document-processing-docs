@@ -5,6 +5,7 @@ description: The Flutter Excel Library allows users create, add, and customize l
 platform: document-processing
 control: Excel
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Line Chart in Syncfusion Excel Library

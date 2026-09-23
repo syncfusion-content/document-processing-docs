@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: About Syncfusion JavaScript (ES5) Manage Form Fields | Syncfusion
 description: Learn about introduction of the Syncfusion JavaScript (ES5) PDF Viewer Manage Form Fields section and the key capabilities it provides.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # About Syncfusion JavaScript (ES5) PDF Viewer Manage Form Fields

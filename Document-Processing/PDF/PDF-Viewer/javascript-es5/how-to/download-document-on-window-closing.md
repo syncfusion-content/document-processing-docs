@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Download the PDF When the Window Is Closing | Syncfusion
 description: Save or download the current PDF in the JavaScript (ES5) PDF Viewer when the browser window is closing so users do not lose unsaved changes.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Download the PDF When the Window Is Closing in JavaScript

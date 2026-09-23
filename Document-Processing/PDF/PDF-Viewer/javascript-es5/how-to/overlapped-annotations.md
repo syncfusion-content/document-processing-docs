@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Handle Overlapped Annotations in JavaScript (ES5) | Syncfusion
 description: Handle overlapping annotations in the JavaScript (ES5) PDF Viewer so users can select, move, and edit the right annotation when several are stacked on a page.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Handle Overlapped Annotations in JavaScript (ES5) PDF Viewer

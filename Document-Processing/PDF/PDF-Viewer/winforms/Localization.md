@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Localization in Windows Forms PDF Viewer | Syncfusion
 description: Localization support enables developers to translate PDF Viewer UI elements and adapt the control for different regional languages and cultures.
 platform: document-processing
 control: PdfViewerControl
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Localization in Windows Forms PDF Viewer

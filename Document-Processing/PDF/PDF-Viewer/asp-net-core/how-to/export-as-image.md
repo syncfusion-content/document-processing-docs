@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: How to Export Pages as Images in ASP.NET Core PDF Viewer | Syncfusion
 description: Export pages as Base64-encoded images from the ASP.NET Core PDF Viewer using the exportAsImage and exportAsImages methods for thumbnails or sharing.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Export Pages as Images in ASP.NET Core PDF Viewer

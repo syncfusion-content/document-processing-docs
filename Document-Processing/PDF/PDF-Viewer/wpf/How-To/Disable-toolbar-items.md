@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: How to Disable toolbar items in WPF PDF Viewer | Syncfusion
 description: Disable or enable the default tool bar items or customize toolbar items in Syncfusion WPF PDF Viewer. 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Disable toolbar items in WPF PDF Viewer 

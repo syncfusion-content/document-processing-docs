@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Programmatic Support in Angular PDF Viewer | Syncfusion
 description: Use the programmatic APIs for Organize Pages in the Angular PDF Viewer to reorder, rotate, insert, delete, and copy pages from TypeScript or JavaScript.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Programmatic Support for Organize Pages in Angular PDF Viewer

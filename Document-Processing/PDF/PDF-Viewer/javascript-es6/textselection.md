@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Textselection in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Learn about the textselection in the JavaScript (ES6) PDF Viewer and how it helps users work with PDF documents more effectively.
@@ -6,6 +6,7 @@ platform: document-processing
 control: Text selection
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 # Textselection in JavaScript (ES6) PDF Viewer
 

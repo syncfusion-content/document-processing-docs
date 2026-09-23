@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: undo,redo,undo-redo,history,undocommand,redocommand,isundoenabled,canundostyle,editorsettings
+appliesto: DOCX Editor SDK
 ---
 # Undo Redo in UWP DOCX Editor
 

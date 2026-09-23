@@ -1,10 +1,11 @@
----
+﻿---
 title: PDF Annotations in JavaScript PDF | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
 description: Create, modify, and remove interactive annotations in PDF documents using Syncfusion JavaScript PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # PDF Annotations in JavaScript PDF
 

@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: How to Deploy the PDF Viewer Server App to Azure App | Syncfusion
 description: Deploy the Syncfusion PDF Viewer server app to Azure App Service directly from Visual Studio for a JavaScript (ES6) application.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Deploy the PDF Viewer Server App to Azure App Service in

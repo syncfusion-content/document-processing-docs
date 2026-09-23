@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Reorder Pages in Vue PDF Viewer | Syncfusion
 description: Reorder pages in the Vue PDF Viewer using drag-and-drop and grouping inside the Organize Pages panel, or through programmatic APIs.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Reorder Pages in Vue PDF Viewer

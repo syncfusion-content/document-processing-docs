@@ -5,6 +5,7 @@ description: The Flutter Excel Library lets users perform mathematical and trigo
 platform: document-processing
 control: Excel
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Math and Trig Formulas in Flutter Excel Library

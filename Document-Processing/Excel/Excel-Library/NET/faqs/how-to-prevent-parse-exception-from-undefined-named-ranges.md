@@ -4,6 +4,7 @@ description: Prevent ParseException when modifying formulas with undefined named
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to prevent ParseException in .NET Excel Library

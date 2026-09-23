@@ -1,10 +1,11 @@
----
+﻿---
 title: PdfGrid Tables in JavaScript PDF | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
 description: Create and customize PDF tables programmatically using PdfGrid in the Syncfusion JavaScript PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # PdfGrid Tables in JavaScript PDF

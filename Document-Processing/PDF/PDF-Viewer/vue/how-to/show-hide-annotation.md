@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Show or Hide Annotations in Vue PDF Viewer | Syncfusion
 description: Show or hide annotations in the Vue PDF Viewer by exporting and importing annotations with a visibility flag for each annotation.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Show or Hide Annotations in Vue PDF Viewer

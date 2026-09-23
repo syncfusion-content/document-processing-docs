@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: From Azure Blob Storage in Vue PDF Viewer | Syncfusion
 description: Load and display PDF files stored in Azure Blob Storage in the Vue PDF Viewer using a server-backed web service for secure access.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Open PDF from Azure Blob Storage in Vue PDF Viewer

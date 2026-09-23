@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Enable or Disable Annotations in Angular PDF | Syncfusion
 description: Enable or disable annotations in the Angular PDF Viewer using the enableAnnotation property to control whether users can add or edit annotations.
@@ -6,6 +6,7 @@ platform: document-processing
 control: How to enable and disable the delete button based on annotation selection and unselection events
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Enable or Disable Annotations in Angular PDF Viewer

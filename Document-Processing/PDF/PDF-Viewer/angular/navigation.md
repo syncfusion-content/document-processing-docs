@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Navigation in Angular PDF Viewer | Syncfusion
 description: Move between pages in the Angular PDF Viewer using page, bookmark, hyperlink, and thumbnail navigation options built into the toolbar.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Navigation in Angular PDF Viewer

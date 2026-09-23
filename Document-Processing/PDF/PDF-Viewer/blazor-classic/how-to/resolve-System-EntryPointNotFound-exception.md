@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Resolve System.EntryPointNotFound exception in PDF Viewer | Syncfusion
 description: Learn here all about how to solve EntryPointNotFound exception in Syncfusion Blazor PDF Viewer component and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Resolve System.EntryPointNotFound exception in PDF Viewer 

@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Forms in Flutter PDF Library | Syncfusion
 description: Learn about different types of forms and form field handling in Syncfusion Flutter PDF non-UI Library.
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Forms in Flutter PDF

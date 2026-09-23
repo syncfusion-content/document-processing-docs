@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Add Custom Fonts in ASP.NET Core PDF Viewer | Syncfusion
 description: Add and load custom TTF fonts for documents displayed in the ASP.NET Core PDF Viewer using the customFonts property and the assets folder.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Add Custom Fonts in ASP.NET Core PDF Viewer

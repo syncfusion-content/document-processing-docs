@@ -4,6 +4,7 @@ description: Style and format pivot tables in an Excel document using the Syncfu
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Styles and Formatting in .NET Excel Library

@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: How to Save the PDF to a URL in JavaScript (ES6) PDF | Syncfusion
 description: Save a PDF document from the JavaScript (ES6) PDF Viewer to a specific URL on a backend server using the downloadStart or saveAsBlob APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Save the PDF to a URL in JavaScript (ES6) PDF Viewer

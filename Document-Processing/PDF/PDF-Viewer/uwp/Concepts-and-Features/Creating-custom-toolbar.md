@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Creating a custom toolbar in UWP Pdf Viewer | Syncfusion
 description: Learn here all about Creating a custom toolbar support in Syncfusion<sup>®</sup> UWP Pdf Viewer (SfPdfViewer) control, its elements, and more.
 platform: document-processing
 control: PDF viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Creating a custom toolbar in UWP Pdf Viewer

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Text Selection Api Events in React PDF Viewer | Syncfusion
 description: Reference documentation for text selection properties, methods, and events in the React PDF Viewer, with examples for common scenarios.
@@ -6,6 +6,7 @@ platform: document-processing
 control: Text Selection
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Text Selection API and Events in React PDF Viewer

@@ -5,6 +5,7 @@ description: Learn about printing in the Syncfusion React Spreadsheet component,
 control: Print
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Print in React Spreadsheet

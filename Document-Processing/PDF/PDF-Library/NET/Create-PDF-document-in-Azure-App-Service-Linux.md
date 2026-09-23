@@ -1,9 +1,10 @@
----
+﻿---
 title: Getting Started with .NET PDF in Azure App Service Linux | Syncfusion
 description: Learn how to get started with the Syncfusion .NET PDF Library in Azure App Service on Linux and create PDF documents without Adobe Acrobat dependencies.
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Getting Started with .NET PDF Library in Azure App Service Linux

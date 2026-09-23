@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Bookmark navigation in Blazor PDF Viewer | Syncfusion
 description: Learn how to get started with the Syncfusion Blazor Server-side application PDF Viewer component. Explore view, comment on PDFs and also fill fields.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Getting Started with Blazor Server App PDF Viewer

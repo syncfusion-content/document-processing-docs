@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: From Azure Active Directory in JavaScript (ES5) PDF | Syncfusion
 description: Learn about the from azure active directory in the JavaScript (ES5) PDF Viewer and how it helps users work with PDF documents more effectively.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # From Azure Active Directory in JavaScript (ES5) PDF Viewer

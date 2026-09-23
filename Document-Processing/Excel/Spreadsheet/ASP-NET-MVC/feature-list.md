@@ -5,6 +5,7 @@ description: Explore the complete feature comparison and capabilities available 
 platform: document-processing
 control: Feature List
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

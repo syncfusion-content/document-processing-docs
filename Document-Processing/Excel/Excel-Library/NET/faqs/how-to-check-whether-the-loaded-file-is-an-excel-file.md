@@ -4,6 +4,7 @@ description: Check whether a loaded file is an Excel document using the Syncfusi
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to check Excel files in .NET Excel Library

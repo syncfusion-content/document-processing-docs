@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Load Pages on Initial Load in Angular PDF Viewer | Syncfusion
 description: Load a specific number of pages during the initial render of the Angular PDF Viewer to improve perceived performance for large documents.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Load Pages on Initial Load in Angular PDF Viewer

@@ -4,6 +4,7 @@ description: Open and save Presentation in .NET Core application on macOS using 
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Open and save a PowerPoint presentation on macOS

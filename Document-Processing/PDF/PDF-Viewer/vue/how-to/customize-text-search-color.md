@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Customize the Text Search Color in Vue PDF Viewer | Syncfusion
 description: Customize the highlight color used for text search matches in the Vue PDF Viewer to match your application design.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Customize the Text Search Color in Vue PDF Viewer

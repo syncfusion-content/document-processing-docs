@@ -5,6 +5,7 @@ description: Select cells, rows, columns, and ranges in Windows Forms Spreadshee
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Selection in Windows Forms Spreadsheet

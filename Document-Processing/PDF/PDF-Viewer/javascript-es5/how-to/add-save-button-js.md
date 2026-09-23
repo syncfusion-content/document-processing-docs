@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Add a Save Button to the Toolbar in JavaScript | Syncfusion
 description: Add, show, hide, enable, and disable a custom Save button in the built-in toolbar of the JavaScript (ES5) PDF Viewer using toolbar settings.
@@ -6,6 +6,7 @@ platform: document-processing
 control: Toolbar
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Add a Save Button to the Toolbar in JavaScript (ES5) PDF Viewer

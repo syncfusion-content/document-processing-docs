@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Clear Annotations in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Clear all annotations or delete specific annotations in the JavaScript (ES6) PDF Viewer using deleteAnnotations and the deleteAnnotationById method.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Clear Annotations in JavaScript (ES6) PDF Viewer

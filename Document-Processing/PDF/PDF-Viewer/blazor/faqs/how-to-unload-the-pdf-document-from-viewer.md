@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Unload PDF document from Viewer in Blazor PDF Viewer | Syncfusion
 description: Learn how to automatically and programmatically unload PDF documents and release resources in the Blazor PDF Viewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Unload PDF document from Viewer in Blazor PDF Viewer

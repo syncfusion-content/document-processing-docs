@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Select and Copy Text in WPF PDF Viewer | Syncfusion
 description: Select and copy text from PDF files in Syncfusion WPF PDF Viewer. Learn text selection events and programmatic text extraction techniques.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Select and Copy Text in PDF files using WPF Pdf Viewer

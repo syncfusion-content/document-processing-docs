@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Underline Annotation in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Enable, apply, customize, and manage Underline annotations in the JavaScript (ES6) PDF Viewer to highlight text with a horizontal line below it.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Underline Annotation in JavaScript (ES6) PDF Viewer

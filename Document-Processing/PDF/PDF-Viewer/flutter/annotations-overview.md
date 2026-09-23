@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Annotations in Flutter PDF Viewer | Syncfusion
 description: The annotations feature in SfPdfViewer provides tools to create, edit, and manage annotations for interactive PDF review.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Annotations in Flutter PDF Viewer

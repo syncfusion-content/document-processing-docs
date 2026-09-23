@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Getting Started with Blazor Hybrid WinForms PDF Viewer | Syncfusion
 description: Learn how to get started with the Syncfusion Blazor Hybrid WinForms App PDF Viewer component. Explore view, comment on and fill PDF forms.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Getting Started with Blazor Hybrid WinForms PDF Viewer

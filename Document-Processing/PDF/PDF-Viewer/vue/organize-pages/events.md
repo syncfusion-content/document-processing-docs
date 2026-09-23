@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Events in Vue PDF Viewer | Syncfusion
 description: Subscribe to Organize Pages events in the Vue PDF Viewer to react to rotate, rearrange, insert, delete, and copy actions on pages.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Organize Pages Events in Vue PDF Viewer

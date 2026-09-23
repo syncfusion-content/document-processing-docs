@@ -5,6 +5,7 @@ description: The Flutter Excel Library lets users save Excel workbooks in suppor
 platform: document-processing
 control: Excel
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Workbook in Flutter Excel Library

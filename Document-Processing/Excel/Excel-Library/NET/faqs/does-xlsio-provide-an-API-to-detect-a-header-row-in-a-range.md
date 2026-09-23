@@ -4,6 +4,7 @@ description: Header row detection describes whether the Syncfusion .NET Excel Li
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Header Row Detection in .NET Excel Library

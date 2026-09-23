@@ -5,6 +5,7 @@ description: Collaborative editing in JavaScript Spreadsheet enables multiple us
 platform: document-processing
 control: Collaborative editing 
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Collaborative editing in JavaScript Spreadsheet 

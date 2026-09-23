@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Handle Signature Select and Unselect Events  | Syncfusion
 description: Handle the signatureSelect and signatureUnselect events in the Vue PDF Viewer to manage the selection state of handwritten signatures.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Handle Signature Select and Unselect Events in Vue PDF Viewer

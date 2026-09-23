@@ -6,6 +6,7 @@ control: Retrieve the bookmark content as text
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Retrieve Bookmark Content as Text in React DOCX Editor

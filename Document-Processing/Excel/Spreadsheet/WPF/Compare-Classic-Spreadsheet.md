@@ -5,6 +5,7 @@ description: Compare the WPF Spreadsheet control with the classic Spreadsheet co
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 # Spreadsheet Comparison in WPF Spreadsheet
 

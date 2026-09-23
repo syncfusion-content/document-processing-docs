@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Create a Standalone PDF Viewer in Angular 12| Syncfusion
 description: Create a standalone Angular PDF Viewer in an Angular 12 application using the Syncfusion Essential JS 2 PDF Viewer component.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Create a Standalone PDF Viewer in Angular 12 in Angular PDF

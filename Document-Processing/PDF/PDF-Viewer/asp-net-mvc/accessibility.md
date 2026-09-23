@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Accessibility in ASP.NET MVC PDF Viewer | Syncfusion
 description: Accessibility features in the ASP.NET MVC PDF Viewer help all users read and interact with PDF content using assistive technologies.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 # Accessibility in ASP.NET MVC PDF Viewer
 

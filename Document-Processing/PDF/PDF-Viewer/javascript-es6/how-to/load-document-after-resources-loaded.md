@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Load a Document After Resources Are Ready | Syncfusion
 description: Load a PDF only after PDFium resources are ready in the standalone JavaScript (ES6) PDF Viewer by using the resourcesLoaded event handler.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Load a Document After Resources Are Ready in JavaScript (ES6)

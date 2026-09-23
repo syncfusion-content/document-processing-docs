@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: To Google Drive in React PDF Viewer | Syncfusion
 description: Save PDF files from the React PDF Viewer to Google Drive using a server-backed web service for authentication and secure uploads.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Save PDF Files to Google Drive in React PDF Viewer

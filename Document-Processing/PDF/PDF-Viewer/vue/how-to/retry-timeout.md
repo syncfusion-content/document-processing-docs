@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Configure Retry Timeout in Vue PDF Viewer | Syncfusion
 description: Configure retry timeout settings in the Vue PDF Viewer so failed requests are retried automatically with a delay you control.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Configure Retry Timeout in Vue PDF Viewer

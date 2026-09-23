@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Customize the Redaction Toolbar in Blazor PDF Viewer | Syncfusion
 description: Learn how to customize the redaction toolbar in the Blazor PDF Viewer by showing or hiding default items with runnable examples.
@@ -6,6 +6,7 @@ platform: document-processing
 control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Customize the Redaction Toolbar in Blazor PDF Viewer

@@ -4,6 +4,7 @@ description: Access an Excel table by its table name using the Syncfusion .NET E
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to access tables by name in .NET Excel Library

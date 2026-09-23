@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Resolve the Unable to Find an Entry Point Error | Syncfusion
 description: Resolve the Unable to find an entry point error after upgrading the Pdfium package in the JavaScript (ES5) PDF Viewer with a clear set of steps.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Resolve the Unable to Find an Entry Point Error in JavaScript

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Getting Started with JavaScript PDF in React app | Syncfusion
 description: Learn how to get started with the Syncfusion JavaScript PDF in React application. Easy steps to create PDF without depending on Adobe.
@@ -7,6 +7,7 @@ platform: document-processing
 documentation: ug
 keywords: javascript, pdf, react
 canonical_url: https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-react
+appliesto: Document SDK
 ---
 
 # Getting Started with JavaScript PDF in React app

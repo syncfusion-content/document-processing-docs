@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: How to Overview of the ASP.NET MVC PDF Viewer | Syncfusion
 description: How-to overview of the ASP.NET MVC PDF Viewer in Syncfusion ASP.NET MVC PDF Viewer (SfPdfViewer) control, with its elements and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Overview of the ASP.NET MVC PDF Viewer

@@ -1,10 +1,11 @@
----
+﻿---
 title: Mcp in Angular PDF Viewer | Syncfusion
 description: Set up the Syncfusion Angular PDF Viewer MCP server so AI tools can interact with the control using a standardized protocol.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Angular PDF Viewer MCP Server Setup

@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: How to Extract Text Using Text Collections in ASP.NET | Syncfusion
 description: Use the extractText method together with text collections in the ASP.NET MVC PDF Viewer to extract text by collection from one or more pages.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 

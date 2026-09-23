@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Integrate JavaScript PDF Viewer in SharePoint | Syncfusion
 description: Learn how to deploy and integrate the JavaScript Syncfusion PDF Viewer component in a SharePoint Framework (SPFx)
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Deploy and Integrate JavaScript PDF Viewer in SharePoint Framework

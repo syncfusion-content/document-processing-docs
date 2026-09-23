@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Hyperlink in ASP.NET MVC PDF Viewer | Syncfusion
 description: Configure hyperlink navigation in the ASP.NET MVC PDF Viewer, including how internal and external links open when users click them.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Hyperlink Navigation in ASP.NET MVC PDF Viewer

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Getting Started with .NET MAUI PDF Viewer | Syncfusion
 description: Learn how to get started with the Syncfusion .NET MAUI PDF Viewer control. Explore setup, features, examples, and customization options.
@@ -6,6 +6,7 @@ platform: document-processing
 control: SfPdfViewer
 documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
+appliesto: PDF Viewer SDK
 ---
 
 # Getting Started with .NET MAUI PDF Viewer

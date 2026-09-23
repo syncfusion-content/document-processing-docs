@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: About Syncfusion ASP.NET Core PDF Viewer Forms | Syncfusion
 description: Learn about introduction of the Syncfusion ASP.NET Core PDF Viewer Forms section and the key capabilities it provides.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # About Syncfusion ASP.NET Core PDF Viewer Forms

@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: How to use WPF features in WinForms PDF Viewer | Syncfusion
 description: This guide explains how to integrate the WPF PDF Viewer in WinForms to access advanced features such as annotations, form filling, and signatures.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 # How to use WPF features in WinForms PDF Viewer
 

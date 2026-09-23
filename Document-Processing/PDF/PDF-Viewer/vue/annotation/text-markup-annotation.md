@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Text Markup Annotation in Vue PDF Viewer | Syncfusion
 description: Use text markup annotations in the Vue PDF Viewer, including highlight, underline, strikethrough, and squiggly, to mark up important content.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Text Markup Annotations in Vue PDF Viewer

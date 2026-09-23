@@ -6,6 +6,7 @@ platform: document-processing
 control: Save document to Box cloud file storage
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Save Documents to Box Cloud File Storage in ASP.NET MVC DOCX Editor

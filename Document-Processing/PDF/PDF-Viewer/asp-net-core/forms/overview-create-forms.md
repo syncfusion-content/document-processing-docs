@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: About Syncfusion ASP.NET Core Manage Form Fields | Syncfusion
 description: Learn about introduction of the Syncfusion ASP.NET Core PDF Viewer Manage Form Fields section and the key capabilities it provides.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Getting Started with JavaScript PDF in ASP.NET MVC app | Syncfusion
 description: Learn how to get started with the Syncfusion JavaScript PDF in ASP.NET MVC application. Easy steps to create PDF without depending on Adobe.
@@ -7,6 +7,7 @@ control: PDF
 documentation: ug
 keywords: mvc, asp.net mvc, javascript, pdf
 canonical_url: https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-asp-net-mvc
+appliesto: Document SDK
 ---
 
 # Getting Started with JavaScript PDF in ASP.NET MVC app

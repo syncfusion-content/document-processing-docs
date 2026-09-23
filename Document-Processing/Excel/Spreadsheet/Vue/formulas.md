@@ -5,6 +5,7 @@ description: Perform calculations and data analysis using built-in formulas in t
 control: Formulas
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Formulas in Vue Spreadsheet

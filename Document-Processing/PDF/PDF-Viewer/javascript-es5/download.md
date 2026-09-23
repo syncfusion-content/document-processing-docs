@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Download in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Enable, disable, and programmatically trigger PDF downloads in the JavaScript (ES5) PDF Viewer, including download events and Base64 handling.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 # Download in JavaScript (ES5) PDF Viewer
 

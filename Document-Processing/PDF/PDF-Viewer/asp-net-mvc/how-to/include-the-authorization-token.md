@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: How to Use an Authorization Token in ASP.NET MVC PDF | Syncfusion
 description: Pass an authorization token to the ASP.NET MVC PDF Viewer to securely access protected PDF documents and authenticated API requests.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Use an Authorization Token in ASP.NET MVC PDF Viewer

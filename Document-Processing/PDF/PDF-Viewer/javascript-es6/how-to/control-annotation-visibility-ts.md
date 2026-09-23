@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Control Annotation Visibility in JavaScript (ES6) | Syncfusion
 description: Control the visibility of PDF annotations in the JavaScript (ES6) PDF Viewer so annotations appear only in the viewer and not in the saved PDF.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Control Annotation Visibility in JavaScript (ES6) PDF Viewer

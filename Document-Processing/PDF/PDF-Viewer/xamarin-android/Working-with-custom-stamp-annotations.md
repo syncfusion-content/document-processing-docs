@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Custom stamp annotations in Xamarin.Android PDF Viewer | Syncfusion
 description: The custom stamp annotation allows the users to include any form of Xamarin.Android widget like Button, Entry, Label, and Image anywhere in the PDF document
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Custom stamp annotations in Xamarin.Android PDF Viewer

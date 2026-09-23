@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: About Syncfusion Angular PDF Viewer Text Search | Syncfusion
 description: Learn about introduction of the Syncfusion Angular PDF Viewer Text Search section and the key capabilities it provides.
@@ -6,6 +6,7 @@ platform: document-processing
 control: Text search
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # About Syncfusion Angular PDF Viewer Text Search

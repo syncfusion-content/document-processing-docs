@@ -1,9 +1,10 @@
----
+﻿---
 title: Open and Save PDF Document in Azure App Service on Linux | Syncfusion
 description: Learn how to open and save PDF documents in Azure App Service on Linux using Syncfusion .NET PDF library without Adobe Acrobat.
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Open and Save PDF Document in Azure App Service on Linux

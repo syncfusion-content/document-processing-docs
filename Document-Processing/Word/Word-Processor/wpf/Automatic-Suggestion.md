@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: automatic-suggestion, @mentions
+appliesto: DOCX Editor SDK
 ---
 # Automatic Suggestion in WPF DOCX Editor
 

@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: How to Handle Overlapped Annotations in ASP.NET Core PDF | Syncfusion
 description: Handle overlapping annotations in the ASP.NET Core PDF Viewer so users can select, move, and edit the right annotation when several are stacked on a page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Handle Overlapped Annotations in ASP.NET Core PDF Viewer

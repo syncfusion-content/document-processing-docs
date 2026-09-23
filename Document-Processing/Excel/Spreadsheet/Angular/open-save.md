@@ -5,6 +5,7 @@ description: Open and save in Angular Spreadsheet enable users to import, edit, 
 platform: document-processing
 control: Open and Save
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Open and Save in Angular Spreadsheet 

@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: How to Save the Original PDF on the Server in ASP.NET | Syncfusion
 description: Save the original PDF document on the server side when users annotate it in the ASP.NET MVC PDF Viewer, preserving the source file.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Save the Original PDF on the Server in ASP.NET MVC PDF Viewer

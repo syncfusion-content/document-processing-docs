@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: About Syncfusion Forms in Blazor PDF Viewer Component | Syncfusion
 description: Learn the Forms features in Blazor SfPdfViewer, including form filling, the Form Designer, supported field types, and how the topics are organized.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # About Syncfusion Forms in Blazor PDF Viewer Component

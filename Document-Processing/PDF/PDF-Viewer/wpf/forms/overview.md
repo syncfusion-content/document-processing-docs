@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Overview of Forms in WPF PDF Viewer Control | Syncfusion
 description: Learn about introduction of Syncfusion Essential Studio WPF PDF Viewer form fields and comprehensive form-filling capabilities.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Overview of Forms in WPF PDF Viewer

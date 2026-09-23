@@ -4,6 +4,7 @@ description: Template markers in .NET Excel Library describes how to import data
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Template Markers in .NET Excel Library
 

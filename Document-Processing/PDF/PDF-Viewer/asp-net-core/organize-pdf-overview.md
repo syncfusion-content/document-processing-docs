@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: About Syncfusion ASP.NET Core PDF Viewer Organize Pages | Syncfusion
 description: Reorder, rotate, insert, delete, and save pages in the ASP.NET Core PDF Viewer using the Organize Pages panel and its programmatic APIs.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # About Syncfusion ASP.NET Core PDF Viewer Organize Pages

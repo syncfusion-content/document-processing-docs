@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Hyperlink Navigation in WPF Pdf Viewer control | Syncfusion
 description: Navigate PDF documents using hyperlinks and URI annotations in Syncfusion WPF PDF Viewer. Learn hyperlink events and interaction handling.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Hyperlink Navigation in WPF Pdf Viewer

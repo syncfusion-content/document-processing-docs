@@ -1,9 +1,10 @@
----
+﻿---
 title: Getting Started with .NET PDF Library in Console App | Syncfusion
 description: Learn how to get started with the Syncfusion .NET PDF Library in a Console Application and generate PDF documents efficiently.
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 --- 
 
 # Getting Started with .NET PDF Library in Console Application

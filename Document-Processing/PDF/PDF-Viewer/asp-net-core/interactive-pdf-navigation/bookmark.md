@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Bookmark in ASP.NET Core PDF Viewer | Syncfusion
 description: Navigate PDF bookmarks in the ASP.NET Core PDF Viewer to jump quickly to specific sections of a document using the bookmark panel.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Bookmark Navigation in ASP.NET Core PDF Viewer

@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Group Form Fields in Angular PDF Viewer | Syncfusion
 description: Group PDF form fields in the Angular PDF Viewer by assigning the same name to multiple widgets so they behave as a single field group.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Group Form Fields in Angular PDF Viewer

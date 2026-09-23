@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: How to Resolve Pdfium Issues in ASP.NET Core PDF Viewer | Syncfusion
 description: Resolve common Pdfium issues in the ASP.NET Core PDF Viewer such as rendering failures, missing dependencies, and version mismatches.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 

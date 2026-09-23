@@ -1,9 +1,10 @@
----
+﻿---
 title: Portfolio in .NET PDF Library | Syncfusion
 description: Learn how to create and manage PDF portfolios by adding, extracting, and removing files from multiple content sources with Syncfusion .NET PDF.
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Portfolio in .NET PDF Library

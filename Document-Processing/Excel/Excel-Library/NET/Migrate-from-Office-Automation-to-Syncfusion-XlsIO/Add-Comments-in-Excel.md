@@ -4,6 +4,7 @@ description: Adding Excel comments programmatically explains how to add comments
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Comments in .NET Excel Library

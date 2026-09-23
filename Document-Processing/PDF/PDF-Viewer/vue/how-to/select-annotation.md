@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Select an Annotation in Vue PDF Viewer | Syncfusion
 description: Select an annotation programmatically in the Vue PDF Viewer using the selectAnnotation API to drive custom UI or workflows.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Select an Annotation in Vue PDF Viewer

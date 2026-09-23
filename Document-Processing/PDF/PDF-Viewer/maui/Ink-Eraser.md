@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Ink Eraser in .NET MAUI PDF Viewer | Syncfusion
 description: Learn how to erase ink (freehand drawing) annotations using the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.
@@ -6,6 +6,7 @@ platform: document-processing
 control: SfPdfViewer
 documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
+appliesto: PDF Viewer SDK
 ---
 
 # Ink Eraser in .NET MAUI PDF Viewer

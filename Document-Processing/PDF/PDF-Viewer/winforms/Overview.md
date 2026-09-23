@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: About Syncfusion Windows Forms PDF Viewer Control | Syncfusion
 description: Learn about introduction of Syncfusion Essential Studio Windows Forms PDF Viewer control and more details.
 platform: document-processing
 control: PdfViewerControl
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # About Syncfusion Windows Forms PDF Viewer Control

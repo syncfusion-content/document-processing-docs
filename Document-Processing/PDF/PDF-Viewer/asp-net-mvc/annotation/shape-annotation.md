@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Shape Annotation in ASP.NET MVC PDF Viewer | Syncfusion
 description: Learn about the shape annotation in the ASP.NET MVC PDF Viewer and how it helps users work with PDF documents more effectively.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Shape Annotation in ASP.NET MVC PDF Viewer

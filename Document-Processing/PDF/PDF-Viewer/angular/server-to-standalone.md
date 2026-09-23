@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Server to Standalone in Angular PDF Viewer | Syncfusion
 description: Migrate an existing Angular PDF Viewer deployment from server-backed mode to standalone mode with clear, step-by-step instructions and code samples.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Migrate from Server-Backed to Standalone Angular PDF Viewer

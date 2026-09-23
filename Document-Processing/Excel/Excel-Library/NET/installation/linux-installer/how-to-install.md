@@ -5,7 +5,7 @@ description: Syncfusion Excel Linux installer installation section explains how 
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
-
+appliesto: Document SDK
 ---
 
 # How to install Linux installer in .NET Excel Library

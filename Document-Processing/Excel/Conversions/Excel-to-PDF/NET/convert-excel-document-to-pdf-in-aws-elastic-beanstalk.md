@@ -4,6 +4,7 @@ description: AWS Elastic Beanstalk Excel to PDF section explains how to convert 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Excel to PDF Conversion in AWS Elastic Beanstalk using Excel Library

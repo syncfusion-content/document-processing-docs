@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: selection,cursor,selection-range,text-position,lost-focus,baseline-alignment
+appliesto: DOCX Editor SDK
 ---
 # Selection in WPF DOCX Editor
 

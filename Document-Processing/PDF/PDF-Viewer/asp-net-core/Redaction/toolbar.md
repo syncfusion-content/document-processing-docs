@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Toolbar in ASP.NET Core PDF Viewer | Syncfusion
 description: Customize the Organize Pages toolbar in the ASP.NET Core PDF Viewer to show, hide, or replace the default actions that appear in the panel.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Customize the Organize Pages Toolbar in ASP.NET Core PDF Viewer

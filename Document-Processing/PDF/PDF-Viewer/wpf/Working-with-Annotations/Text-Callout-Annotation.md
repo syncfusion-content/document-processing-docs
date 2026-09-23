@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Text Callout Annotation in WPF Pdf Viewer control | Syncfusion
 description: The text callout annotation feature in WPF PDF Viewer adds arrowed text boxes to PDF pages, useful for pointing feedback to specific areas.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 # Free Text Callout Annotation in WPF Pdf Viewer
 

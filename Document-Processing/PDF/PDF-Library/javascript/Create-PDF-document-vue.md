@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Getting Started with JavaScript PDF in Vue app | Syncfusion
 description: Learn how to get started with the Syncfusion JavaScript PDF in Vue application. Easy steps to create PDF without depending on Adobe.
@@ -7,6 +7,7 @@ platform: document-processing
 documentation: ug
 keywords: pdf, vue, vue 3, vue 2, javascript
 canonical_url: https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-vue
+appliesto: Document SDK
 ---
 
 # Getting Started with JavaScript PDF in Vue app

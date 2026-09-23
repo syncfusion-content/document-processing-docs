@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion TypeScript Spreadsheet
 platform: document-processing
 control: Getting started 
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Getting Started with the TypeScript Spreadsheet 

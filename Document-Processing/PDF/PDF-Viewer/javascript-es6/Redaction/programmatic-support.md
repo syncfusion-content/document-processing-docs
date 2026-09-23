@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Programmatic Support in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Use the programmatic APIs for Organize Pages in the JavaScript (ES6) PDF Viewer to reorder, rotate, insert, delete, and copy pages from JavaScript.
 platform: document-processing
 control: PdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Programmatic Support for Organize Pages in JavaScript (ES6) PDF Viewer

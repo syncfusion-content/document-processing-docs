@@ -4,6 +4,7 @@ description: Learn how to convert HTML to PDF in AWS Lambda with NET 6 container
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # HTML to PDF conversion in AWS Lambda .NET 6 Container .NET PDF Library

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Digital Signature in .NET MAUI PDF Viewer | Syncfusion
 description: Learn how to validate, inspect, and apply digital signatures in the Syncfusion® .NET MAUI PDF Viewer (SfPdfViewer).
@@ -6,6 +6,7 @@ platform: document-processing
 control: SfPdfViewer
 documentation: ug
 keywords: .net maui pdf viewer, digital signature, pdf signature validation, certificate signing, pdf signing, signature panel
+appliesto: PDF Viewer SDK
 ---
 
 # Digital Signature in .NET MAUI PDF Viewer

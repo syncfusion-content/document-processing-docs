@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Modify Form Fields in Vue PDF Viewer | Syncfusion
 description: Edit PDF form fields in the Vue PDF Viewer using the built-in UI and programmatic APIs to update field properties at runtime.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Modify Form Fields in Vue PDF Viewer

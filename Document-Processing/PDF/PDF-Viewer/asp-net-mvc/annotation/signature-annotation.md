@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Signature Annotation in ASP.NET MVC PDF Viewer | Syncfusion
 description: Add, edit, and manage handwritten signatures in the ASP.NET MVC PDF Viewer, including enabling or disabling the signature tool for users.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Handwritten Signature in ASP.NET MVC PDF Viewer

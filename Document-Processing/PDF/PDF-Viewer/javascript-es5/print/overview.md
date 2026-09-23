@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: About Syncfusion JavaScript (ES5) PDF Viewer Print | Syncfusion
 description: Learn about introduction of the Syncfusion JavaScript (ES5) PDF Viewer Print section and the key capabilities it provides.
@@ -6,6 +6,7 @@ platform: document-processing
 control: Print
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # About Syncfusion JavaScript (ES5) PDF Viewer Print

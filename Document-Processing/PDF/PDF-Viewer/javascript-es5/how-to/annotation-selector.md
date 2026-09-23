@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Customize Annotation Selectors in JavaScript | Syncfusion
 description: Customize annotation selectors in the JavaScript (ES5) PDF Viewer using annotationSelectorSettings to control how users select and resize annotations.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Customize Annotation Selectors in JavaScript (ES5) PDF Viewer

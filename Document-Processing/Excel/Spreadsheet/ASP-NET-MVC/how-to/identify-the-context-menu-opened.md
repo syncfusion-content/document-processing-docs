@@ -5,6 +5,7 @@ description: Identify the context menu opened in ASP.NET MVC Spreadsheet to perf
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # How to Identify Context Menu Opened in ASP.NET MVC Spreadsheet

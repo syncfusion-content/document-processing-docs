@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Arrow Annotation in Angular PDF Viewer | Syncfusion
 description: Enable, apply, customize, and manage Arrow annotations in the Angular PDF Viewer to point at or connect areas of a PDF document.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Arrow Annotation in Angular PDF Viewer

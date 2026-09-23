@@ -6,6 +6,7 @@ control: Keyboard shortcut
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Keyboard Shortcuts in React DOCX Editor

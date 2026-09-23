@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Layers in Flutter PDF Library | Syncfusion
 description: Learn how to add, remove, and modify layers in PDF documents using Syncfusion Flutter PDF non-UI Library.
 platform: document-processing
 control: PDF
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Layers in Flutter PDF

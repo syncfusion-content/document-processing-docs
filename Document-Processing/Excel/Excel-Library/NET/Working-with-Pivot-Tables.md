@@ -4,6 +4,7 @@ description: Pivot table operations in Excel Library describes how to create and
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Pivot Tables in .NET Excel Library
 

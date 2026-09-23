@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: How to Use PDF/A and PDF/X Conformance in JavaScript | Syncfusion
 description: Learn about the PDF/A and PDF/X conformance levels supported in the Syncfusion PDF tools used together with the JavaScript (ES6) PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Use PDF/A and PDF/X Conformance in JavaScript (ES6) PDF Viewer

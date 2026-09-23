@@ -4,6 +4,7 @@ description: Reorder, rearrange, and structure PDF pages programmatically to str
 platform: document-processing
 control: general
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Organize PDF Using Syncfusion Web API

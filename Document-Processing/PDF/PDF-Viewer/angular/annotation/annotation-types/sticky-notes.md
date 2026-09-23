@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Sticky Notes in Angular PDF Viewer | Syncfusion
 description: Enable, add, customize, and manage Sticky Notes annotations in the Angular PDF Viewer for short notes placed anywhere on a PDF page.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Sticky Note Annotation in Angular PDF Viewer

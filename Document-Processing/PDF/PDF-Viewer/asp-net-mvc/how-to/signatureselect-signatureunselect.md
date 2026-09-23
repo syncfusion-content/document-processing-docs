@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: How to Handle Signature Select and Unselect Events | Syncfusion
 description: Handle the signatureSelect and signatureUnselect events in the ASP.NET MVC PDF Viewer to manage the selection state of handwritten signatures.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Handle Signature Select and Unselect Events in ASP.NET MVC PDF

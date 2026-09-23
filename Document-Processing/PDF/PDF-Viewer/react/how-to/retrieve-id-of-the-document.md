@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Retrieve the Document ID in React PDF Viewer | Syncfusion
 description: Retrieve the document ID in the React PDF Viewer to identify, track, and manage loaded PDF documents from custom JavaScript or TypeScript code.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Retrieve the Document ID in React PDF Viewer

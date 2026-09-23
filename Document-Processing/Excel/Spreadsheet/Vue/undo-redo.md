@@ -5,6 +5,7 @@ description: Learn how to revert and restore spreadsheet actions using undo and 
 control: Undo redo
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Undo and Redo in Vue Spreadsheet

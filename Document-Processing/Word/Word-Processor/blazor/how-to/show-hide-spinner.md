@@ -5,6 +5,7 @@ description: Show or hide loading indicators in Syncfusion® Blazor DOCX Editor 
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # How to Show and Hide Spinner in Blazor DOCX Editor

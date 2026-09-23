@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Open the Thumbnail Pane Programmatically  | Syncfusion
 description: Open the thumbnail pane programmatically in the Angular PDF Viewer using openThumbnailPane to show page thumbnails from custom UI controls.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Open the Thumbnail Pane Programmatically in Angular PDF Viewer

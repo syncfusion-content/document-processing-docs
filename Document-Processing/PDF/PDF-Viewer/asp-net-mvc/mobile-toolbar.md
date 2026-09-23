@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Mobile Toolbar in ASP.NET MVC PDF Viewer | Syncfusion
 description: The mobile toolbar in the ASP.NET MVC PDF Viewer adapts the touch interface so users can access core features on small screens.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Mobile Toolbar in ASP.NET MVC PDF Viewer

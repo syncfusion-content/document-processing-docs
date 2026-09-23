@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Images in Flutter PDF Library | Syncfusion
 description: Learn how to draw raster images and apply transparency and rotation using Syncfusion Flutter PDF non-UI Library.
 platform: document-processing
 control: PDF
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Images in Flutter PDF

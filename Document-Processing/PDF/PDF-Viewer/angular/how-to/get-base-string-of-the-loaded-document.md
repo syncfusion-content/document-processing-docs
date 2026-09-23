@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Get the Base64 String of a PDF in Angular PDF | Syncfusion
 description: Retrieve the Base64 string of a loaded PDF in the Angular PDF Viewer using saveAsBlob and FileReader for uploads, sharing, or storage.
@@ -6,6 +6,7 @@ platform: document-processing
 control: Get base string of the loaded document
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Get the Base64 String of a PDF in Angular PDF Viewer

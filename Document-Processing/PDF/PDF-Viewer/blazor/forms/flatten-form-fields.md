@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Flatten PDF form fields in Blazor PDF Viewer | Syncfusion
 description: Learn how to flatten interactive PDF form fields before download in Blazor PDF Viewer component and more details
@@ -6,6 +6,7 @@ platform: document-processing
 control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Flatten PDF form fields in Blazor PDF Viewer

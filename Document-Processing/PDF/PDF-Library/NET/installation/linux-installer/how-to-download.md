@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Download Syncfusion PDF Linux Installer | Syncfusion
 description: Learn how to download the Syncfusion PDF Linux installer using a valid license and prepare it for installation.
@@ -6,6 +6,7 @@ platform: document-processing
 control: Installation and Deployment
 documentation: ug
 
+appliesto: Document SDK
 ---
 
 # How to Download Syncfusion PDF Linux Installer

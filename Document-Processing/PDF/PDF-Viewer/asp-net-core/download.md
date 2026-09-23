@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Download in ASP.NET Core PDF Viewer | Syncfusion
 description: Enable, disable, and programmatically trigger PDF downloads in the ASP.NET Core PDF Viewer, including download events and Base64 handling.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Download in ASP.NET Core PDF Viewer

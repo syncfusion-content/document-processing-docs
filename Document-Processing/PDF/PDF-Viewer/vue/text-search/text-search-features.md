@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Text Search Features in Vue PDF Viewer | Syncfusion
 description: Configure text search features in the Vue PDF Viewer and run programmatic searches to find and highlight text inside a PDF document.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Text Search in Vue PDF Viewer

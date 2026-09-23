@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Add Volume Annotations in Blazor PDF Viewer  | Syncfusion
 description: Learn how to enable, draw, customize, and manage Volume annotations in the Blazor PDF Viewer component and more details.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Add Volume Annotations in Blazor PDF Viewer 

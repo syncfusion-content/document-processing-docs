@@ -4,6 +4,7 @@ description: Use copy and move operations in Excel worksheets using the Syncfusi
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Move and Copy Operations in .NET Excel Library

@@ -1,9 +1,10 @@
----
+﻿---
 title: Brushes in .NET PDF Library | Syncfusion
 description: Learn how to fill shapes in a PDF document with solid, gradient, tiling, and hatch brushes using the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Brushes in .NET PDF Library
 

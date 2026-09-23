@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Navigation in ASP.NET Core PDF Viewer | Syncfusion
 description: Move between pages in the ASP.NET Core PDF Viewer using page, bookmark, hyperlink, and thumbnail navigation options built into the toolbar.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Navigation in ASP.NET Core PDF Viewer

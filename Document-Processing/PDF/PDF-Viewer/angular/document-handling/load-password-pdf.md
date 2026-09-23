@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Load Password Pdf in Angular PDF Viewer | Syncfusion
 description: Open password-protected PDF files in the Angular PDF Viewer by providing the password through the documentPath configuration object.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Load Password-Protected PDF in Angular PDF Viewer

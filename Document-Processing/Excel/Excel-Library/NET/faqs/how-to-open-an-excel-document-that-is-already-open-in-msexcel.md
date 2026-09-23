@@ -4,6 +4,7 @@ description: Open an Excel document already open in Microsoft Excel using the Sy
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to open Excel files already in use in .NET Excel Library

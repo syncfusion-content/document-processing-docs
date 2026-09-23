@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Form Field Events in ASP.NET Core PDF Viewer | Syncfusion
 description: Subscribe to form field events in the ASP.NET Core PDF Viewer to react to focus, change, validation, and other interactions on PDF form fields.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Form Field Events in ASP.NET Core PDF Viewer

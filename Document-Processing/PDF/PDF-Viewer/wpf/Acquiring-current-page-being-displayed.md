@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Acquire current page being displayed in WPF Pdf Viewer | Syncfusion
 description: Get the current page index being displayed in Syncfusion WPF PDF Viewer using CurrentPageIndex property. Learn page tracking.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Acquire the current page being displayed in WPF Pdf Viewer

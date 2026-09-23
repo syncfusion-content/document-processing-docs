@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Export Form Fields in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Export PDF form field data from the JavaScript (ES5) PDF Viewer in FDF, XFDF, and JSON formats, or as a JavaScript object for further processing.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Export Form Data in JavaScript (ES5) PDF Viewer

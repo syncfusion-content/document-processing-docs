@@ -4,6 +4,7 @@ description: The Linux troubleshooting section describes Docker setup, font inst
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Linux FAQ in .NET Excel Library

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Show a Pop-Up After Exporting Form Fields | Syncfusion
 description: Show a confirmation pop-up in the Angular PDF Viewer after exporting form fields so users know the export completed successfully.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Show a Pop-Up After Exporting Form Fields in Angular PDF Viewer

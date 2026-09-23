@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Getting Started with JavaScript PDF in JavaScript app | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
@@ -7,6 +7,7 @@ platform: document-processing
 control: PDF
 documentation: ug
 keywords: javascript, pdf, cdn
+appliesto: Document SDK
 ---
 
 # Getting Started with JavaScript PDF in JavaScript app

@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Hyperlink navigation in Flutter PDF Viewer | Syncfusion
 description: Hyperlink navigation in SfPdfViewer allows users to access linked websites and destinations directly from PDF documents.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Hyperlink Navigation in Flutter PDF Viewer

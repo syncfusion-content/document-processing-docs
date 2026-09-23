@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Preact in React PDF Viewer | Syncfusion
 description: Get started with the Syncfusion React PDF Viewer in a Preact application, with setup steps and the essentials you need to render PDFs.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 

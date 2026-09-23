@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Migrating From Apryse in Angular PDF Viewer | Syncfusion
 description: Migrate an existing application from Apryse WebViewer (PDFTron) to the Syncfusion Angular PDF Viewer with a clear, side-by-side mapping guide.
 platform: document-processing
 documentation: ug
 control: PDF Viewer
+appliesto: PDF Viewer SDK
 ---
 
 # Migrate from Apryse to Angular PDF Viewer

@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: How to Access the File Name of a PDF in ASP.NET MVC PDF | Syncfusion
 description: Access the file name of a PDF loaded into the ASP.NET MVC PDF Viewer so you can show, copy, or use it from custom JavaScript or C# code.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Access the File Name of a PDF in ASP.NET MVC PDF Viewer

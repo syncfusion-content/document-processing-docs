@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Unload a Document in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Unload the current document in the JavaScript (ES6) PDF Viewer to free resources and prepare the viewer for loading a different PDF document.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Unload a Document in JavaScript (ES6) PDF Viewer

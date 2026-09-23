@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Text Selection Api Events in Vue PDF Viewer | Syncfusion
 description: Reference documentation for text selection properties, methods, and events in the Vue PDF Viewer, with examples for common scenarios.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Text Selection API and Events in Vue PDF Viewer

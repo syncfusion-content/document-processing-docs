@@ -6,6 +6,7 @@ control: How to deploy word processor server docker container in Amazon Kubernet
 platform: document-processing
 documentation: ug 
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 # How to Deploy Angular DOCX Editor Docker Image on Amazon Kubernetes
 

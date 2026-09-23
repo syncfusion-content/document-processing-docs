@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Rectangle Annotation in ASP.NET Core PDF Viewer | Syncfusion
 description: Enable, apply, customize, and manage Rectangle annotations in the ASP.NET Core PDF Viewer to outline rectangular regions on a PDF page.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Rectangle Annotation in ASP.NET Core PDF Viewer

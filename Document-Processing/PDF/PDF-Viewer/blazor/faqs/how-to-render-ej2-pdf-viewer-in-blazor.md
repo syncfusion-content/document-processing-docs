@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: How to Render the EJ2 JavaScript in Blazor PDF Viewer | Syncfusion
 description: Learn how to render the EJ2 JavaScript PDF Viewer inside a Blazor page using JavaScript interop, including setup and usage notes.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Render the EJ2 JavaScript in Blazor PDF Viewer

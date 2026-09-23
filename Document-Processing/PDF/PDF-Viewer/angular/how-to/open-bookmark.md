@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Open or Hide the Bookmark Pane in Angular PDF | Syncfusion
 description: Open or close the bookmark pane programmatically in the Angular PDF Viewer using openBookmarkPane and closeBookmarkPane for custom toolbars.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Open or Hide the Bookmark Pane in Angular PDF Viewer

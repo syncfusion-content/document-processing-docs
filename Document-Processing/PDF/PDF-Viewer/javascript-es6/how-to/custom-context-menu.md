@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Customize the Context Menu in JavaScript (ES6) | Syncfusion
 description: Add and customize context menu options in the JavaScript (ES6) PDF Viewer using addCustomMenu, customContextMenuSelect, and related events.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Customize the Context Menu in JavaScript (ES6) PDF Viewer

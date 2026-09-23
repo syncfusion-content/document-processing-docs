@@ -4,6 +4,7 @@ description: Extract embedded OLE objects from Excel worksheets as streams using
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to extract embedded OLE files in .NET Excel Library

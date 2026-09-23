@@ -4,6 +4,7 @@ description: Convert PPTX to PDF in Azure Functions Flex Consumption using .NET 
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert PPTX to PDF in Azure Functions (Flex Consumption)

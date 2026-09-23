@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Events in React PDF Viewer | Syncfusion
 description: Subscribe to print events in the React PDF Viewer to run custom logic before, during, and after a user prints a PDF document.
@@ -6,6 +6,7 @@ platform: document-processing
 control: Print
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Print Events in React PDF Viewer

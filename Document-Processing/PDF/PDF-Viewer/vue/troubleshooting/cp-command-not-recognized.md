@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Cp Command Not Recognized in Vue PDF Viewer | Syncfusion
 description: Resolve the cp is not recognized error in the Vue PDF Viewer by using Windows-native commands such as xcopy or PowerShell Copy-Item.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Resolve cp Not Recognized Error in Vue PDF Viewer

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Search Redact in React PDF Viewer | Syncfusion
 description: Find text and add redaction annotations programmatically in the React PDF Viewer to remove sensitive content across an entire document.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Search and Redact Text in React PDF Viewer

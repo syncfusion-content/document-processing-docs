@@ -6,6 +6,7 @@ control: DocumentEditor
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # MCP Server for React DOCX Editor

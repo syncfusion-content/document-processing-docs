@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: How to Create PDF in the Blazor PDF Viewer Created event | Syncfusion
 description: Learn how to create a PDF document in the Created event of the Blazor PDF Viewer component and load it into the viewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Create PDF in the Blazor PDF Viewer Created event

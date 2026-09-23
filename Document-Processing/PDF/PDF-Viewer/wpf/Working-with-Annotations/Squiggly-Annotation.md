@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Squiggly text in PDF files using WPF Pdf Viewer | Syncfusion
 description: The squiggly annotation feature in WPF PDF Viewer marks text with a wavy underline to highlight inaccuracies, edits, or areas needing attention.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Squiggly text in WPF Pdf Viewer

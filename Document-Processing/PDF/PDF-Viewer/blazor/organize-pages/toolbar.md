@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Organize Page Toolbar in Blazor PDF Viewer  | Syncfusion
 description: Learn here all about how to Organize Page Toolbar Customization in Blazor PDF Viewer component and more details.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Organize Page Toolbar in Blazor PDF Viewer

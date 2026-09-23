@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Ui Interactions in ASP.NET Core PDF Viewer | Syncfusion
 description: Learn about the ui interactions in the ASP.NET Core PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Ui Interactions in ASP.NET Core PDF Viewer

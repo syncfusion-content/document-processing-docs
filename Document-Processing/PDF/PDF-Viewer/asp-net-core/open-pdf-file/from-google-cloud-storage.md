@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: From Google Cloud Storage in ASP.NET Core PDF Viewer | Syncfusion
 description: Load and display PDF files stored in Google Cloud Storage in the ASP.NET Core PDF Viewer using a server-backed web service for authentication.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Open PDF from Google Cloud Storage in ASP.NET Core PDF Viewer

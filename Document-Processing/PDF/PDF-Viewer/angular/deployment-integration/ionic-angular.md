@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Ionic Angular in Angular PDF Viewer | Syncfusion
 description: Learn about the ionic angular in the Angular PDF Viewer and how it helps users work with PDF documents more effectively.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Ionic Angular in Angular PDF Viewer

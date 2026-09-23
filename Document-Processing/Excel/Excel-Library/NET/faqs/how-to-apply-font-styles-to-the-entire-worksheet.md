@@ -4,6 +4,7 @@ description: Apply font settings and fill colors to an entire Excel worksheet us
 platform: document-processing 
 control: XlsIO 
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to apply worksheet styles in .NET Excel Library

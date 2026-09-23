@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Opening PDF file in Blazor PDF Viewer | Syncfusion
 description: Learn how to load PDF files from various locations like database, cloud and remote URL in the Blazor PDF Viewer .
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Opening PDF file in Blazor PDF Viewer

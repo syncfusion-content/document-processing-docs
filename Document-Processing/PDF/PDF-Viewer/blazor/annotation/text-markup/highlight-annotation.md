@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Highlight Text in Blazor PDF Viewer | Syncfusion
 description: Learn how to enable, apply, customize, and manage Highlight annotations in the Blazor PDF Viewer component and more details.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Highlight Annotation in Blazor PDF Viewer 

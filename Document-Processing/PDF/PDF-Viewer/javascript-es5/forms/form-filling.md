@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Form Filling in JavaScript (ES5) PDF Viewer | Syncfusion
 description: View, fill, import, and export PDF form fields in the JavaScript (ES5) PDF Viewer, with options to disable interaction and handle digital signatures.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Fill PDF Form Fields in JavaScript (ES5) PDF Viewer

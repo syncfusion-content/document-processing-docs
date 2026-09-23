@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Area Annotation in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Enable, draw, customize, and manage Area measurement annotations in the JavaScript (ES6) PDF Viewer to measure regions inside a PDF page.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Area Annotation in JavaScript (ES6) PDF Viewer

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Customize mobile toolbar in Blazor PDF Viewer | Syncfusion
 description: Learn how to customize the toolbar for mobile devices in the Blazor PdfViewer and ensure smooth touch interactions.
@@ -6,6 +6,7 @@ platform: document-processing
 control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Customize mobile toolbar in Blazor PDF Viewer

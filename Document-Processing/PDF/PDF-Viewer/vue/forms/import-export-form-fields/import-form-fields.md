@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Import Form Fields in Vue PDF Viewer | Syncfusion
 description: Import PDF form field data into the Vue PDF Viewer from FDF, XFDF, and JSON sources, or directly from a JavaScript object.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Import Form Data in Vue PDF Viewer

@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Save PDF files to Dropbox in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Save PDF files from the JavaScript (ES6) PDF Viewer to Dropbox using standalone and server-backed configurations, with code samples and tips.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Save PDF Files to Dropbox Cloud Storage in JavaScript (ES6) PDF Viewer

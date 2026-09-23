@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Save Pdf Files in Vue PDF Viewer | Syncfusion
 description: Save edited or annotated PDFs from the Vue PDF Viewer to a server, database, or local file system using the server-backed web service.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Save PDF Files in Vue PDF Viewer

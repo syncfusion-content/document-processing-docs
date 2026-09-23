@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Create a Custom PDF Viewer Service in ASP.NET | Syncfusion
 description: Create a custom PDF Viewer web service in ASP.NET Core for the JavaScript (ES6) PDF Viewer, with code samples and configuration tips.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 # How to Create a Custom PDF Viewer Service in ASP.NET Core in
 

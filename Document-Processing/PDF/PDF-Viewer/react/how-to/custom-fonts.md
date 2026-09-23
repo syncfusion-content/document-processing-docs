@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Add Custom Fonts in React PDF Viewer | Syncfusion
 description: Add and load custom TTF fonts for documents displayed in the React PDF Viewer using the customFonts property and the assets folder.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Add Custom Fonts in React PDF Viewer

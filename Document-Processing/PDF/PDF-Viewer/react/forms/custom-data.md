@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Custom Data in React PDF Viewer | Syncfusion
 description: Attach, update, and read custom data on PDF form fields in the React PDF Viewer using the Form Designer UI and the form fields API.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Custom Data on Form Fields in React PDF Viewer

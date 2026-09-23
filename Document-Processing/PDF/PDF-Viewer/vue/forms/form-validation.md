@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Form Validation in Vue PDF Viewer | Syncfusion
 description: Enable built-in PDF form field validation in the Vue PDF Viewer and detect missing required fields while users complete a form.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Form Validation in Vue PDF Viewer

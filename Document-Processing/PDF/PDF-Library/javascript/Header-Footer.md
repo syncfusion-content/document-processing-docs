@@ -1,10 +1,11 @@
----
+﻿---
 title: PDF Headers and Footers in JavaScript PDF | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
 description: Create and apply headers, footers, and automatic fields in PDF documents using the Syncfusion JavaScript PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # PDF Headers and Footers in JavaScript PDF

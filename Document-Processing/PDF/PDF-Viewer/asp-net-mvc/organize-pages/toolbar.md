@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Customize Organize Pages Toolbar in MVC PDF Viewer | Syncfusion
 description: Customize the Organize Pages toolbar in the ASP.NET MVC PDF Viewer to show, hide, or replace the default actions that appear in the panel.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Customize the Organize Pages Toolbar in ASP.NET MVC PDF Viewer

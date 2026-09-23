@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Flatten Annotation in Angular PDF Viewer | Syncfusion
 description: Flatten annotations and form fields in the Angular PDF Viewer before saving a PDF so they become permanent parts of the document content.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Flatten Annotations in Angular PDF Viewer

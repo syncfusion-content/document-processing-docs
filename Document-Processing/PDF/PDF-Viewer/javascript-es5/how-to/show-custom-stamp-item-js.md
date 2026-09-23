@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Show Custom Stamp Items in JavaScript (ES5) PDF | Syncfusion
 description: Display custom items in the custom stamp dropdown in the JavaScript (ES5) PDF Viewer using customStampSettings to provide tailored stamp options.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Show Custom Stamp Items in JavaScript (ES5) PDF Viewer

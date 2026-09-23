@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Strikethrough Annotation in React PDF Viewer | Syncfusion
 description: Enable, apply, customize, and manage Strikethrough annotations in the React PDF Viewer to mark text with a horizontal line through it.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Strikethrough Annotation in React PDF Viewer

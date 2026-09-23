@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: How to Use the ExtractText Method in React PDF Viewer | Syncfusion
 description: Use the extractText method in the React PDF Viewer to extract text and bounds from one or more pages of a loaded PDF document.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Use the ExtractText Method in React PDF Viewer

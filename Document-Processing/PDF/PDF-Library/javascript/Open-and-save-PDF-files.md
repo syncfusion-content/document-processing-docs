@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Open and Save PDF files in JavaScript PDF | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
@@ -6,6 +6,7 @@ description: Load and save PDF documents using Base64 strings or Uint8Array data
 platform: document-processing
 control: PDF
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Open and Save PDF files in JavaScript PDF

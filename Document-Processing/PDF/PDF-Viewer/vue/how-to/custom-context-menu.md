@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Customize the Context Menu in Vue PDF Viewer | Syncfusion
 description: Add and customize context menu options in the Vue PDF Viewer using addCustomMenu, customContextMenuSelect, and related events.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Customize the Context Menu in Vue PDF Viewer

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Page in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Use page navigation in the JavaScript (ES5) PDF Viewer to move between pages and programmatically control the current page from JavaScript or TypeScript.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Page Navigation in JavaScript (ES5) PDF Viewer

@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Line Angle Constraints in Vue PDF Viewer | Syncfusion
 description: Enable line angle constraints in the Vue PDF Viewer so line-type annotations snap to common angles while users draw them.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Line Angle Constraints in Vue PDF Viewer

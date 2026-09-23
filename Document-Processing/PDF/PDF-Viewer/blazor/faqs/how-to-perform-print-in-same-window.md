@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: How to Perform print in the same window using PDF Viewer | Syncfusion
 description: Learn here all about how to print in the same window in the Blazor PDF Viewer Component using PrintMode.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Perform print in the same window using PDF Viewer

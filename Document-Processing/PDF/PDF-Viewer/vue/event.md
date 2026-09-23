@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Event in Vue PDF Viewer | Syncfusion
 description: A complete list of events in the Vue PDF Viewer, with descriptions, arguments, and examples to integrate custom logic into PDF interactions.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Events in Vue PDF Viewer

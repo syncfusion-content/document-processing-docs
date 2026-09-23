@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Feature Module in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Inject feature modules into the JavaScript (ES6) PDF Viewer to enable only the toolbar, search, forms, annotations, and printing capabilities you need.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Feature Modules in JavaScript (ES6) PDF Viewer

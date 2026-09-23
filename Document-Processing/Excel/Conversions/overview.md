@@ -5,6 +5,7 @@ platform: document-processing
 control: general
 documentation: UG
 keywords: Excel, SDK, Automation, API, convert
+appliesto: Document SDK
 ---
 
 # About Syncfusion Excel Document Conversion Library

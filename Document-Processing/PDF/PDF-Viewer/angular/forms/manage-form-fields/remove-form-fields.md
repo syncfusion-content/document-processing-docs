@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Remove Form Fields in Angular PDF Viewer | Syncfusion
 description: Remove PDF form fields in the Angular PDF Viewer using the built-in UI and programmatic APIs to delete fields you no longer need.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Remove Form Fields in Angular PDF Viewer

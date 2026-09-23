@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Localization in UWP PDF Viewer | Syncfusion
 description: Learn here all about Localization support in Syncfusion<sup>®</sup> UWP PDF Viewer (SfPdfViewer) control and more.
@@ -6,6 +6,7 @@ platform: document-processing
 control: SfPdfViewerControl
 documentation: ug
 keywords: localization
+appliesto: PDF Viewer SDK
 ---
 # Localization in UWP PDF Viewer
 

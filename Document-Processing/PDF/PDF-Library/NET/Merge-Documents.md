@@ -1,9 +1,10 @@
----
+﻿---
 title: Merge PDF Documents in .NET PDF Library | Syncfusion
 description: Learn how to merge or combine multiple PDF documents and import pages from one document to another using Syncfusion .NET PDF.
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Merge PDF Documents in .NET PDF Library
 

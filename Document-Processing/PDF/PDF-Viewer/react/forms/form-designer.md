@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Form Designer in React PDF Viewer | Syncfusion
 description: Use the Form Designer in the React PDF Viewer to create, edit, and manage form fields visually, and customize the form designer toolbar.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Form Designer in React PDF Viewer

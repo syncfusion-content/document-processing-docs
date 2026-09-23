@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Enable Resize Text in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Enable or disable text resize inside form fields in the JavaScript (ES6) PDF Viewer using the enableResizeText property for accessibility.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Enable Resize Text in JavaScript (ES6) PDF Viewer

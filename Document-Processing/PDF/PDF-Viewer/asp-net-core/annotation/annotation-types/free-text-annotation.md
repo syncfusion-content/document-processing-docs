@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Free Text Annotation in ASP.NET Core PDF Viewer | Syncfusion
 description: Enable, add, customize, and manage Free Text annotations in the ASP.NET Core PDF Viewer for inline notes and labels on a PDF page.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Free Text Annotation in ASP.NET Core PDF Viewer

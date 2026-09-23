@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Migrating From PDFjs in React PDF Viewer | Syncfusion
 description: Migrate an existing application from PDF.js to the Syncfusion React PDF Viewer, with guidance on architecture, features, and code changes.
 platform: document-processing
 documentation: ug
 control: PDF Viewer
+appliesto: PDF Viewer SDK
 ---
 
 # Migrate from PDF.js to React PDF Viewer

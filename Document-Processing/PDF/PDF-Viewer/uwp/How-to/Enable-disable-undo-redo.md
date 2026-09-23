@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: How to Support to disable the undo and redo operations | Syncfusion
 description: Learn how to support to disable the undo and redo operations in Syncfusion UWP PDF Viewer with examples and implementation details.
 platform: document-processing
 control: PDF viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Support disable undo and redo in UWP PDF Viewer

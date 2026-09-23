@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Page navigation in Flutter PDF Viewer | Syncfusion
 description: The page navigation feature in SfPdfViewer allows users to jump to, access, and navigate pages quickly within PDF documents.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Page Navigation in Flutter PDF Viewer

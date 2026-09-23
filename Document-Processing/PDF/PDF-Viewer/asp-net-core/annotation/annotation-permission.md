@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Annotation Permission in ASP.NET Core PDF Viewer | Syncfusion
 description: Control who can add, edit, or remove annotations in the ASP.NET Core PDF Viewer using permission settings and programmatic APIs.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Annotation Permissions in ASP.NET Core PDF Viewer

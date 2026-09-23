@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title:  ScrollHead in Xamarin.iOS PDF Viewer | Syncfusion
 description: Learn about ScrollHead in the Syncfusion Xamarin.iOS PDF Viewer control, including configuration, navigation, usage, and customization options.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 #  ScrollHead in Xamarin.iOS PDF Viewer

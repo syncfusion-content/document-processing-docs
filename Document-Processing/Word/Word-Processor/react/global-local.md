@@ -6,6 +6,7 @@ control: Global local
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Globalization and Localization in React DOCX Editor

@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Magnification in Blazor PDF Viewer | Syncfusion
 description: Learn how to use magnification in Blazor PDF Viewer zoom options, programmatic zoom, zoom limits, and performance via RestrictZoomRequest.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Magnification in Blazor PDF Viewer 

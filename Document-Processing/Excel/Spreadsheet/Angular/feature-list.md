@@ -5,6 +5,7 @@ description: The feature list in Angular Spreadsheet provides an overview of key
 platform: document-processing
 control: Feature list 
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Feature list in Angular Spreadsheet 

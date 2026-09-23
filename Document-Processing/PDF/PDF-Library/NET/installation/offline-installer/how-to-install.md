@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Install Syncfusion PDF Offline Installer | Syncfusion
 description: Learn how to install the Syncfusion PDF offline installer and set up PDF dependencies in offline environments.
@@ -6,6 +6,7 @@ platform: document-processing
 control: Installation and Deployment
 documentation: ug
 
+appliesto: Document SDK
 ---
 
 # How to Install Syncfusion PDF Offline Installer

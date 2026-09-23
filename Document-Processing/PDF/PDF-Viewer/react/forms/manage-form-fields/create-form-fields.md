@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Create Form Fields in React PDF Viewer | Syncfusion
 description: Add each PDF form field using the React PDF Viewer UI, and learn how to create the same fields programmatically from JavaScript or TypeScript.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Create Form Fields in React PDF Viewer

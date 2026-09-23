@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Free text annotations in Xamarin Pdf Viewer | Syncfusion
 description: Learn here all about Free text annotations support in Syncfusion<sup>®</sup> Xamarin Pdf Viewer (SfPdfViewer) control and more.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Free text annotations in Xamarin Pdf Viewer

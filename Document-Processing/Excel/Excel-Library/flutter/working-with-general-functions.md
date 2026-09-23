@@ -5,6 +5,7 @@ description: The Flutter Excel Library lets users use common Excel functions to 
 platform: document-processing
 control: Excel
 documentation: ug
+appliesto: Document SDK
 ---
 
 # General Function Formulas in Flutter Excel Library

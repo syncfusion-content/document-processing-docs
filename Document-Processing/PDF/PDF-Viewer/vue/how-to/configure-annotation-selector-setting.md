@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Configure Annotation Selectors in Vue PDF Viewer | Syncfusion
 description: Configure annotation selector settings in the Vue PDF Viewer using annotationSelectorSettings to control selection and resize behavior.
@@ -6,6 +6,7 @@ control: AnnotationSelector Setting
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Configure Annotation Selectors in Vue PDF Viewer

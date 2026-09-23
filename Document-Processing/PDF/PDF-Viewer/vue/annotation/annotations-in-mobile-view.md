@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Annotations in Mobile View in Vue PDF Viewer | Syncfusion
 description: Create, edit, and manage annotations in the Vue PDF Viewer when running on mobile devices with the touch-optimized annotation UI.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Annotations in Mobile View in Vue PDF Viewer

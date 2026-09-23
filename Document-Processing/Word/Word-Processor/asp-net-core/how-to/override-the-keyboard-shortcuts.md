@@ -5,6 +5,7 @@ description: Override default keyboard shortcuts in Syncfusion® ASP.NET Core DO
 platform: document-processing
 control: Override The Keyboard Shortcuts
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

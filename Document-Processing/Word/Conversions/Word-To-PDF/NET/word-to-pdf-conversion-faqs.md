@@ -4,6 +4,7 @@ description: Learn about the frequently asked questions of Word to PDF conversio
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Frequently Asked Questions (Word-to-PDF)

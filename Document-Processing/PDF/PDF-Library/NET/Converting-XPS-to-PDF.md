@@ -1,9 +1,10 @@
----
+﻿---
 title: Convert XPS to PDF in .NET | Syncfusion
 description: Learn how to convert XPS documents to PDF format easily using the Syncfusion .NET PDF Library with full feature support.
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Convert XPS to PDF in .NET
 

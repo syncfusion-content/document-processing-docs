@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Attachments in Flutter PDF Library | Syncfusion
 description: Learn how to add, remove, and extract file attachments in Syncfusion Flutter PDF non-UI Library with detailed property management.
 platform: document-processing
 control: PDF
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Attachments in Flutter PDF

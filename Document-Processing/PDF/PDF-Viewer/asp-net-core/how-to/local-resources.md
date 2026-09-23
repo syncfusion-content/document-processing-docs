@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: How to Load the PDF Viewer with Local Resources | Syncfusion
 description: Configure the ASP.NET Core PDF Viewer to load PDF documents and library files from local resources instead of a CDN for offline or restricted networks.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Load the PDF Viewer with Local Resources in ASP.NET Core PDF

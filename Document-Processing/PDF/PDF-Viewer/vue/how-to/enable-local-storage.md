@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Enable Local Storage in Vue PDF Viewer | Syncfusion
 description: Control session-specific data storage in the Vue PDF Viewer using the enableLocalStorage property to balance performance and persistence.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Enable Local Storage in Vue PDF Viewer

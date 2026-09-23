@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Text Markup Annotations in Flutter PDF Viewer | Syncfusion
 description: The text markup annotation feature in SfPdfViewer enables users to highlight, underline, and strike through text for effective PDF review.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Text Markup Annotations in Flutter PDF Viewer

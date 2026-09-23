@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: From Dropbox Cloud File Storage in JavaScript (ES6) PDF | Syncfusion
 description: Load and display PDF files stored in Dropbox cloud storage in the JavaScript (ES6) PDF Viewer using standalone and server-backed approaches.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Open PDF from Dropbox Cloud Storage in JavaScript (ES6) PDF Viewer

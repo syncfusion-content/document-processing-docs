@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Gesture callbacks in Flutter PDF Viewer | Syncfusion
 description: The gesture callbacks in SfPdfViewer provide event notifications for user interactions such as taps during PDF viewing.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Gesture Callbacks in Flutter PDF Viewer

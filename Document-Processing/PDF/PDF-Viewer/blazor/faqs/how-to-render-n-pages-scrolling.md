@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Render multiple pages while scroll using OverscanCount | Syncfusion
 description: Learn how to improve scrolling performance in the Blazor PDF Viewer by preloading pages with the OverscanCount property.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Render multiple pages while scroll using OverscanCount

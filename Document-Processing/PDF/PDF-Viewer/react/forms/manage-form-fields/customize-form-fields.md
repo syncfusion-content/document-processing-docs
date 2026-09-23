@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Customize Form Fields in React PDF Viewer | Syncfusion
 description: Style PDF form fields in the React PDF Viewer by configuring fonts, colors, borders, alignment, and other visual properties through the UI or code.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Customize Form Field Appearance in React PDF Viewer

@@ -1,9 +1,10 @@
----
+﻿---
 title: Layers in .NET PDF Library | Syncfusion
 description: Learn how to manage PDF layers (Optional Content Groups) to add, edit, remove, and control layer visibility using Syncfusion .NET PDF.
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Layers in .NET PDF Library

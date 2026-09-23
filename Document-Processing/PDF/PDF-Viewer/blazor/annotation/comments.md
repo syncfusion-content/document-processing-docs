@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Comments in Blazor PDF Viewer  | Syncfusion
 description: Learn how to add, edit, and manage comments and replies efficiently within the Blazor PDF Viewer component and more details.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Comments in Blazor PDF Viewer 

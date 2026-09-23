@@ -1,10 +1,11 @@
----
+﻿---
 title: Assemblies for .NET PDF Library | Syncfusion
 description: Learn about the Syncfusion assemblies required to work with PDF files and perform conversions like HTML to PDF, Word to PDF, and Excel to PDF.
 platform: document-processing
 control: PDF
 documentation: UG
 keywords: Assemblies
+appliesto: Document SDK
 ---
 # Assemblies for .NET PDF Library
 

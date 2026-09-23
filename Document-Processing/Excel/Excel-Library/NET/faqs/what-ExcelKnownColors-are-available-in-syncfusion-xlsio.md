@@ -4,6 +4,7 @@ description: ExcelKnownColors reference describes the available known colors wit
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # ExcelKnownColors in .NET Excel Library

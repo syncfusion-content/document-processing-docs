@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Builtin Context Menu in React PDF Viewer | Syncfusion
 description: Explore the default context menu items in the React PDF Viewer, including options for text selection, annotations, and form fields.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Built-in Context Menu in React PDF Viewer

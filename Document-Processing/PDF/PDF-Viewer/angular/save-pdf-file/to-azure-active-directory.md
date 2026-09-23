@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: To Azure Active Directory in Angular PDF Viewer | Syncfusion
 description: Learn about the to azure active directory in the Angular PDF Viewer and how it helps users work with PDF documents more effectively.
@@ -6,6 +6,7 @@ platform: document-processing
 control: Save PDF To AAD
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # To Azure Active Directory in Angular PDF Viewer

@@ -4,6 +4,7 @@ description: Retrieve the last row of the used range in an Excel worksheet using
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to retrieve the last row in .NET Excel Library

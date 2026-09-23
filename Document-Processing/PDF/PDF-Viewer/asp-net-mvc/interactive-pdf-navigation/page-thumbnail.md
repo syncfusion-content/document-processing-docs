@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Page Thumbnail in ASP.NET MVC PDF Viewer | Syncfusion
 description: Use page thumbnail navigation in the ASP.NET MVC PDF Viewer to preview and jump to any page through a visual sidebar of page thumbnails.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Page Thumbnail Navigation in ASP.NET MVC PDF Viewer

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: From Google Cloud Storage in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Load and display PDF files stored in Google Cloud Storage in the JavaScript (ES5) PDF Viewer using a server-backed web service for authentication.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Open PDF from Google Cloud Storage in JavaScript (ES5) PDF Viewer

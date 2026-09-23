@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: How to Include Authorization token in Blazor PDF Viewer | Syncfusion
 description: Learn here all about how to include the authorization token in Syncfusion Blazor PDF Viewer component and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Include Authorization token in Blazor PDF Viewer

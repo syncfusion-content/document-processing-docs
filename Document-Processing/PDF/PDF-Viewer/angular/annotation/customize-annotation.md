@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Customize Annotation in Angular PDF Viewer | Syncfusion
 description: Customize the appearance and behavior of annotations in the Angular PDF Viewer through UI settings and programmatic configuration.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Customize Annotations in Angular PDF Viewer

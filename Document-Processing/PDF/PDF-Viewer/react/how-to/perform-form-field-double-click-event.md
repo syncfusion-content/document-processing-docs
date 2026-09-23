@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Handle the Form Field Double-Click Event in React | Syncfusion
 description: Handle the form field double-click event in the React PDF Viewer to customize user interactions and add custom behaviors to PDF form fields.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Handle the Form Field Double-Click Event in React PDF Viewer

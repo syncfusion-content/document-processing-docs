@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Default Language in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Set the default language for the JavaScript (ES6) PDF Viewer UI and learn how localization is applied to all built-in text and messages.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Default Language in JavaScript (ES6) PDF Viewer

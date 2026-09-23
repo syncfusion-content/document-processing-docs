@@ -4,6 +4,7 @@ description: Extract or split PDF pages by ranges quickly using Syncfusion page-
 platform: document-processing
 control: general
 documentation: UG
+appliesto: Document SDK
 ---
 # Splitting PDFs Using Syncfusion WEB API
 

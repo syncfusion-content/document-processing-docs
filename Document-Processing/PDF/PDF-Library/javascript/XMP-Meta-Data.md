@@ -1,10 +1,11 @@
----
+﻿---
 title: PDF XMP Metadata in JavaScript PDF | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
 description: Create, read, edit, and manage XMP metadata in PDF documents using the Syncfusion JavaScript PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # PDF XMP Metadata in JavaScript PDF

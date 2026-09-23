@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Enable Print Rotation in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Enable print rotation in the JavaScript (ES6) PDF Viewer so landscape documents are printed in the correct orientation without manual adjustment.
@@ -6,6 +6,7 @@ platform: document-processing
 control: Print
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Enable Print Rotation in JavaScript (ES6) PDF Viewer

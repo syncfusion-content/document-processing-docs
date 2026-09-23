@@ -5,6 +5,7 @@ description: The section format feature in Blazor DOCX Editor enables users to c
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # Section Format in Blazor DOCX Editor

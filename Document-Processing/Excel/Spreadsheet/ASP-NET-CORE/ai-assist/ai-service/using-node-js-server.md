@@ -5,6 +5,7 @@ description: AI Assist Node.js server setup in ASP.NET Core Spreadsheet explains
 platform: document-processing
 control: AI Assist Node.js Server Setup
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # AI Assist Node.js Server Setup in ASP.NET Core Spreadsheet

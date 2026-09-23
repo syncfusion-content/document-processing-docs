@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: How to Change the CurrentUser in WPF Pdf Viewer | Syncfusion
 description: Change the current user in Syncfusion WPF PDF Viewer using CurrentUser property. Learn user identification for annotation authorship.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Change the CurrentUser in WPF Pdf Viewer

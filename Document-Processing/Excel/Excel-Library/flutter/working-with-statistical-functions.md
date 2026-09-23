@@ -5,6 +5,7 @@ description: The Flutter Excel Library lets users analyze worksheet data and cal
 platform: document-processing
 control: Excel
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Statistical Function Formulas in Flutter Excel Library

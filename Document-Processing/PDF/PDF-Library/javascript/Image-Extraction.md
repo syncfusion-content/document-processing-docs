@@ -1,10 +1,11 @@
----
+﻿---
 title: Image Extraction in JavaScript PDF | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
 description: Extract images from PDF documents and retrieve their properties using the Syncfusion JavaScript PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Image Extraction in JavaScript PDF

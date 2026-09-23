@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Duplicate pages in Organize Pages in Blazor PDF Viewer | Syncfusion
 description: Learn how to duplicate pages using the Organize Pages UI in the Blazor PDF Viewer of Syncfusion and more.
@@ -6,6 +6,7 @@ platform: document-processing
 control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Duplicate Pages in Blazor PDF Viewer

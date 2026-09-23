@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Text Search Events in Angular PDF Viewer | Syncfusion
 description: Handle text search events in the Angular PDF Viewer and run programmatic searches to integrate text search into your Angular application.
@@ -6,6 +6,7 @@ platform: document-processing
 control: Text search
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Text Search Events in Angular PDF Viewer

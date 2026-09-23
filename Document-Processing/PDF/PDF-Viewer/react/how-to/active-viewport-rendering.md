@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Active Viewport Rendering | Syncfusion React PDF Viewer
 description: Learn how to enable and use Active Viewport Rendering in the Syncfusion React PDF Viewer to optimize rendering performance for large PDF documents.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Active Viewport Rendering

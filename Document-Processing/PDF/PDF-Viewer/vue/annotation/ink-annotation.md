@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Ink Annotation in Vue PDF Viewer | Syncfusion
 description: Enable, draw, customize, and manage Ink (freehand) annotations in the Vue PDF Viewer for handwritten marks on a PDF page.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Ink Annotation in Vue PDF Viewer

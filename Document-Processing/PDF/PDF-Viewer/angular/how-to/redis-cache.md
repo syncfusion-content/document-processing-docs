@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Configure Redis Cache for the PDF Viewer Service | Syncfusion
 description: Configure Redis caching for the Angular PDF Viewer web service so document data and rendered pages are served from a fast in-memory cache.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Configure Redis Cache for the PDF Viewer Service in Angular

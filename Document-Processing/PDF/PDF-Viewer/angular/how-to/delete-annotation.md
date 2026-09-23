@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Delete an Annotation in Angular PDF Viewer | Syncfusion
 description: Delete a specific annotation in the Angular PDF Viewer using the deleteAnnotationById method and the annotation identifier from the API.
@@ -6,6 +6,7 @@ platform: document-processing
 control: Delete a specific annotation
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Delete an Annotation in Angular PDF Viewer

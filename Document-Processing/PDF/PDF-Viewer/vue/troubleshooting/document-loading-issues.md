@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Document Loading Issues in Vue PDF Viewer | Syncfusion
 description: Resolve document loading issues in the Vue PDF Viewer v23.1 and later by using dataBind, validating URLs, and checking CORS and CSP settings.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Resolve Document Loading Issues in Vue PDF Viewer

@@ -1,9 +1,10 @@
----
+﻿---
 title: Headers and Footers in .NET PDF Library | Syncfusion
 description: Learn how to create headers and footers in a PDF document programmatically using the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Headers and Footers in .NET PDF Library
 

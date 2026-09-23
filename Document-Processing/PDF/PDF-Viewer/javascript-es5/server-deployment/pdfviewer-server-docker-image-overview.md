@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: About Syncfusion JavaScript (ES5) Server Deployment | Syncfusion
 description: Run and connect to the Syncfusion JavaScript (ES5) PDF Viewer server Docker image, set the license key, and configure Redis cache for the Server Deployment
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 # About Syncfusion JavaScript (ES5) PDF Viewer Server Deployment
 

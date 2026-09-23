@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: About Syncfusion Vue PDF Viewer Redaction | Syncfusion
 description: Learn about introduction of the Syncfusion Vue PDF Viewer Redaction section and the key capabilities it provides.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # About Syncfusion Vue PDF Viewer Redaction

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Text selection API and events in Blazor PDF Viewer | Syncfusion
 description: Reference documentation for text selection properties, methods, and events in the Blazor PDF Viewer.
@@ -6,6 +6,7 @@ platform: document-processing
 control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Text selection API and events in Blazor PDF Viewer

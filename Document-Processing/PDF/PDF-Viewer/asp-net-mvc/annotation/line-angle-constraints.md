@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Line Angle Constraints in ASP.NET MVC PDF Viewer | Syncfusion
 description: Enable line angle constraints in the ASP.NET MVC PDF Viewer so line-type annotations snap to common angles while users draw them.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Line Angle Constraints in ASP.NET MVC PDF Viewer

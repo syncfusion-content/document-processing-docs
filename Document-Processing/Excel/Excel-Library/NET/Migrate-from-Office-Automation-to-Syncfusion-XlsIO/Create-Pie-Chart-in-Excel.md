@@ -4,6 +4,7 @@ description: Creating Excel pie charts programmatically explains how to create a
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Pie Charts in .NET Excel Library

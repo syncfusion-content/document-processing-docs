@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Built-In Toolbar in Xamarin Pdf Viewer Control | Syncfusion
 description: Learn here all about Working with Built-In Toolbar support in Syncfusion<sup>®</sup> Xamarin Pdf Viewer (SfPdfViewer) control and more.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Built-In Toolbar in Xamarin Pdf Viewer Control

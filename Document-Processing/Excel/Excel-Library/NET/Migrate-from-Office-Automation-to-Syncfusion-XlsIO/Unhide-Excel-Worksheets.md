@@ -4,6 +4,7 @@ description: Programmatically unhide hidden Excel worksheets in a workbook using
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Unhiding Worksheets in .NET Excel Library

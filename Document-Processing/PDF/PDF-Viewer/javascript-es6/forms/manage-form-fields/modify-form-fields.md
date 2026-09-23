@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Modify Form Fields in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Edit PDF form fields in the JavaScript (ES6) PDF Viewer using the built-in UI and programmatic APIs to update field properties at runtime.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Modify Form Fields in JavaScript (ES6) PDF Viewer

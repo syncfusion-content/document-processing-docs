@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Add a New Page to a PDF in JavaScript (ES5) PDF | Syncfusion
 description: Add new pages to a loaded PDF in the JavaScript (ES5) PDF Viewer using the addPage API to extend a document with additional content.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Add a New Page to a PDF in JavaScript (ES5) PDF Viewer

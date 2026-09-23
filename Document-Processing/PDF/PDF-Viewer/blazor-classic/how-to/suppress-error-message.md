@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: How to Suppress error dialog in Blazor PDF Viewer Classic | Syncfusion
 description: Learn here all about how to suppress the error dialog in Syncfusion Blazor PDF Viewer component and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Suppress error dialog in Blazor PDF Viewer Classic

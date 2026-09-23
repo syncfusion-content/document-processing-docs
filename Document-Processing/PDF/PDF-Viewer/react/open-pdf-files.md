@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Open Pdf Files in React PDF Viewer | Syncfusion
 description: Load and display PDF files in the React PDF Viewer from URLs, Base64 strings, Blobs, file inputs, or cloud storage providers.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Load and Open PDF Files in React PDF Viewer

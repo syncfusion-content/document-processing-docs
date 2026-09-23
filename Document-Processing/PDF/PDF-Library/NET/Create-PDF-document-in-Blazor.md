@@ -1,9 +1,10 @@
----
+﻿---
 title: Getting Started with .NET PDF Library in Blazor | Syncfusion
 description: Learn how to get started with the Syncfusion .NET PDF Library in Blazor. Create and customize PDF documents without Adobe dependencies.
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Getting Started with .NET PDF Library in Blazor

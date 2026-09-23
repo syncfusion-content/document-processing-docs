@@ -5,6 +5,7 @@ description: The Flutter Excel Library lets users control worksheet input by app
 platform: document-processing
 control: Excel
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Excel Data Validation in Flutter Excel Library

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Insert Blank Pages in React PDF Viewer | Syncfusion
 description: Insert blank pages into a PDF in the React PDF Viewer using the Organize Pages panel to add new empty pages at any position.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Insert Blank Pages in React PDF Viewer

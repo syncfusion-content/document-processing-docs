@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Customize the Toolbar in .NET MAUI PDF Viewer | Syncfusion
 description: Learn how to show, hide, add, remove, and reorder toolbars and toolbar items in the Syncfusion® .NET MAUI PDF Viewer (SfPdfViewer) control.
@@ -6,6 +6,7 @@ platform: document-processing
 control: SfPdfViewer
 documentation: ug
 keywords: .net maui pdf viewer, customize toolbar, show hide toolbar, add toolbar item, remove toolbar item, maui pdf viewer toolbar
+appliesto: PDF Viewer SDK
 ---
 
 # Customize the Toolbar in .NET MAUI PDF Viewer

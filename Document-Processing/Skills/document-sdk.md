@@ -5,6 +5,7 @@ platform: document-processing
 control: Document SDK
 documentation: ug
 keywords: Skills, AI Assistants, Document SDK, Agent Skills
+appliesto: Document SDK
 ---
 
 # Syncfusion Document SDK Agent Skills for AI Assistants

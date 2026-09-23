@@ -1,9 +1,10 @@
----
+﻿---
 title: Text in .NET PDF Library | Syncfusion
 description: Learn how to add text to PDF documents using different fonts, TrueType fonts, and standard fonts with the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Text in .NET PDF Library
 

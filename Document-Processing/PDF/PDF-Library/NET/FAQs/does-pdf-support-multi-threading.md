@@ -1,9 +1,10 @@
----
+﻿---
 title: Multithreading in .NET PDF Library | Syncfusion
 description: Learn about multithreading support and thread-safety capabilities offered by the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Multithreading in .NET PDF Library

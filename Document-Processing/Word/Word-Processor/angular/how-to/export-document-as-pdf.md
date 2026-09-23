@@ -6,6 +6,7 @@ platform: document-processing
 control: Export document as PDF
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Export Document as PDF in Angular DOCX Editor

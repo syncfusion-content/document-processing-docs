@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Custom Toolbar in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Create a custom toolbar in the JavaScript (ES6) PDF Viewer, including adding commands and modifying the built-in tools to match your workflow.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Custom Toolbar in JavaScript (ES6) PDF Viewer

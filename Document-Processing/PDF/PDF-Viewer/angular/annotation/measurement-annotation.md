@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Measurement Annotation in Angular PDF Viewer | Syncfusion
 description: Learn about the measurement annotation in the Angular PDF Viewer and how it helps users work with PDF documents more effectively.
@@ -6,6 +6,7 @@ platform: document-processing
 control: Measurement annotation
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Measurement Annotation in Angular PDF Viewer

@@ -6,6 +6,7 @@ platform: document-processing
 control: Ribbon
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Ribbon in TypeScript DOCX Editor

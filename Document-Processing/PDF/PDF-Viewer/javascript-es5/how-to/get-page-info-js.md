@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Get Page Info in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Retrieve page height, width, and rotation in the JavaScript (ES5) PDF Viewer using the getPageInfo method for custom layout and rendering logic.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Get Page Info in JavaScript (ES5) PDF Viewer

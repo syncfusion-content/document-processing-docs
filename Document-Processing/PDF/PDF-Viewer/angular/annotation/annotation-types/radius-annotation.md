@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Radius Annotation in Angular PDF Viewer | Syncfusion
 description: Enable, draw, customize, and manage Radius measurement annotations in the Angular PDF Viewer to measure the radius of circular regions.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Radius Annotation in Angular PDF Viewer

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Preprocess Pdf in ASP.NET Core PDF Viewer | Syncfusion
 description: Preprocess PDF documents with the Syncfusion PDF Library before displaying them in the ASP.NET Core PDF Viewer to apply changes such as redaction or flattening.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Preprocess PDF Document in ASP.NET Core PDF Viewer

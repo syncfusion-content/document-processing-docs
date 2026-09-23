@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Custom Font Support for Form Fields in Blazor PDF Viewer | Syncfusion
 description: Learn how to integrate the custom font collection for form fields in the Blazor SfPdfViewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Custom Font Support for Form Fields in Blazor PDF Viewer

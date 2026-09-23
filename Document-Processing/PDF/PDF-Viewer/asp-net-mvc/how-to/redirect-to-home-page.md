@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Redirect to the Home Page in ASP.NET MVC PDF | Syncfusion
 description: Redirect the user to the home page from the ASP.NET MVC PDF Viewer after a print, save, or download action completes successfully.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Redirect to the Home Page in ASP.NET MVC PDF Viewer

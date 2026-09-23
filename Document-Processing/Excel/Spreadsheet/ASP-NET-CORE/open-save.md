@@ -5,6 +5,7 @@ description: Learn about open and save operations in the Syncfusion ASP.NET Core
 platform: document-processing
 control: Open Save
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

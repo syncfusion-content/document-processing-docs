@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: PDF Form Handling Best Practices in Blazor PDF Viewer | Syncfusion
 description: Learn the recommended best practices for naming, validating, grouping, importing, and designing form fields in the Blazor PDF Viewer.
@@ -6,6 +6,7 @@ platform: document-processing
 control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # PDF Form Handling Best Practices in Blazor PDF Viewer

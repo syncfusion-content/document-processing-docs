@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Circle Annotation in React PDF Viewer | Syncfusion
 description: Enable, apply, customize, and manage Circle annotations in the React PDF Viewer for marking, highlighting, or measuring areas.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Circle Annotation in React PDF Viewer

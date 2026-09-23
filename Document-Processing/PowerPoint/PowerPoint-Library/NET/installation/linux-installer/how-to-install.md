@@ -5,6 +5,7 @@ description: Learn how to install the Syncfusion® PowerPoint Linux Installer af
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
+appliesto: Document SDK
 
 ---
 

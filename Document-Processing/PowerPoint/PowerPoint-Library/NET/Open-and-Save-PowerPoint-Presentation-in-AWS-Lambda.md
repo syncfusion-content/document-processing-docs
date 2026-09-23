@@ -4,6 +4,7 @@ description: Open and save Presentation in AWS Lambda using .NET Core PowerPoint
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Open and save PowerPoint presentation in AWS Lambda

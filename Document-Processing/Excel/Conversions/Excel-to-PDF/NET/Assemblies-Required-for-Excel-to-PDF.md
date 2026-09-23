@@ -4,6 +4,7 @@ description: The assemblies required for converting Excel workbooks to PDF acros
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Assemblies Required for .NET Excel to PDF Conversion

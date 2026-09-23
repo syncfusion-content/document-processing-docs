@@ -4,6 +4,7 @@ description: PivotTable refresh behavior describes whether Syncfusion .NET Excel
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Pivot Table Refresh in .NET Excel Library

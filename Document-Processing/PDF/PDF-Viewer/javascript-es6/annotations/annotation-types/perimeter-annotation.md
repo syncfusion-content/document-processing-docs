@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Perimeter Annotation in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Enable, draw, customize, and manage Perimeter measurement annotations in the JavaScript (ES6) PDF Viewer to calculate the perimeter of a region.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Perimeter Annotation in JavaScript (ES6) PDF Viewer

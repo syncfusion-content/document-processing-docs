@@ -5,6 +5,7 @@ description: Get selected content as plain text and SFDT rich text in Syncfusion
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # How to Get Selected Content in Blazor DOCX Editor

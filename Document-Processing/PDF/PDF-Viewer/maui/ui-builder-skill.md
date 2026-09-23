@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: UI Builder Skill for AI Assistants in MAUI PDF Viewer | Syncfusion
 description: Learn how to generate production-ready .NET MAUI controls with PDF Viewer from natural-language prompts.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 keywords: MAUI UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skills
+appliesto: PDF Viewer SDK
 ---
 
 # UI Builder Skill for AI Assistants in MAUI PDF Viewer

@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: How to Load a Document in ASP.NET MVC PDF Viewer | Syncfusion
 description: Load or switch PDF documents in the ASP.NET MVC PDF Viewer using the load method to swap documents without reloading the page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Load a Document in ASP.NET MVC PDF Viewer

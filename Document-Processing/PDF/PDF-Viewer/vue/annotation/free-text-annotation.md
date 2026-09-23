@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Free Text Annotation in Vue PDF Viewer | Syncfusion
 description: Enable, add, customize, and manage Free Text annotations in the Vue PDF Viewer for inline notes and labels on a PDF page.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Free Text Annotation in Vue PDF Viewer

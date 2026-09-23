@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Custom Data in Angular PDF Viewer | Syncfusion
 description: Attach, update, and read custom data on PDF form fields in the Angular PDF Viewer using the Form Designer UI and the form fields API.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Custom Data on Form Fields in Angular PDF Viewer

@@ -6,6 +6,7 @@ platform: document-processing
 control: OCRProcessor
 documentation: UG
 keywords: OCR, Optical Character Recognition, Text Recognition
+appliesto: Document SDK
 ---
 
 # About Syncfusion OCR Processing Library

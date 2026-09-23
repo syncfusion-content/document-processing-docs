@@ -5,6 +5,7 @@ description: Performance best practices in Angular Spreadsheet help optimize ren
 platform: document-processing
 control: Performance
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Performance Best Practices in Angular Spreadsheet 

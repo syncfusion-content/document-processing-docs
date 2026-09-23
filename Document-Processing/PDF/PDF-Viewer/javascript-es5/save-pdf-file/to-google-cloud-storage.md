@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: To Google Cloud Storage in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Save PDF files from the JavaScript (ES5) PDF Viewer to Google Cloud Storage using a server-backed web service for authentication and secure uploads.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Save PDF Files to Google Cloud Storage in JavaScript (ES5) PDF Viewer

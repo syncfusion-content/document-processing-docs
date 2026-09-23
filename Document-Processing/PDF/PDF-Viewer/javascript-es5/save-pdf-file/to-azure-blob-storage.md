@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: To Azure Blob Storage in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Save PDF files from the JavaScript (ES5) PDF Viewer to Azure Blob Storage using standalone and server-backed configurations, with code samples and tips.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Save PDF Files to Azure Blob Storage in JavaScript (ES5) PDF Viewer

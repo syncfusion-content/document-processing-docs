@@ -4,6 +4,7 @@ description: Learn about the Syncfusion® .NET PowerPoint to Image conversion fe
 platform: document-processing
 control: Presentation
 documentation: UG
+appliesto: Document SDK
 ---
 
 # About Syncfusion .NET PowerPoint to Image Conversion Library

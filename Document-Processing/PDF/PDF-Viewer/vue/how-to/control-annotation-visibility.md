@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Control Annotation Visibility in Vue PDF Viewer | Syncfusion
 description: Control the visibility of PDF annotations in the Vue PDF Viewer so annotations appear only in the viewer and not in the saved PDF.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Control Annotation Visibility in Vue PDF Viewer

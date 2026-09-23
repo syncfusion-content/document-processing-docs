@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Interaction Mode in ASP.NET MVC PDF Viewer | Syncfusion
 description: Switch between selection mode and panning mode in the ASP.NET MVC PDF Viewer to control how users interact with PDF pages and content.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 

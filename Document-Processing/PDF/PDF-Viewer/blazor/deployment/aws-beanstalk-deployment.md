@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Deploy Blazor PDF Viewer to AWS Elastic Beanstalk | Syncfusion
 description: Add the Blazor PDF Viewer component to a Blazor Server app and deploy it to AWS Elastic Beanstalk on Linux.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Deploy Blazor PDF Viewer to AWS Elastic Beanstalk

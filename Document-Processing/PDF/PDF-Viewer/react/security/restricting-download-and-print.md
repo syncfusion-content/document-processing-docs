@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Restricting Download and Print in React PDF Viewer | Syncfusion
 description: Restrict end users from downloading or printing PDFs displayed by the React PDF Viewer using toolbar settings and event handlers.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Restrict Download or Print in React PDF Viewer

@@ -5,6 +5,7 @@ description: Learn about introduction of the Syncfusion Essential Studio Blazor 
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # About Syncfusion Blazor Spreadsheet Control

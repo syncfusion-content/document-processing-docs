@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Gatsby in React PDF Viewer | Syncfusion
 description: Integrate the Syncfusion React PDF Viewer into a Gatsby site, including package installation, CSS imports, and SSR-safe loading.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Getting Started with React PDF Viewer in Gatsby

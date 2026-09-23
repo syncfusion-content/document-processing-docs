@@ -5,6 +5,7 @@ description: Learn about data validation in the Syncfusion Blazor Spreadsheet co
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Data Validation in Blazor Spreadsheet

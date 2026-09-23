@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Page in Angular PDF Viewer | Syncfusion
 description: Use page navigation in the Angular PDF Viewer to move between pages and programmatically control the current page from TypeScript or JavaScript.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Page Navigation in Angular PDF Viewer

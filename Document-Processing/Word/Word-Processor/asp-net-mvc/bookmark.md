@@ -5,6 +5,7 @@ description: The bookmark feature in ASP.NET MVC DOCX Editor lets users add, man
 platform: document-processing
 control: Bookmark
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

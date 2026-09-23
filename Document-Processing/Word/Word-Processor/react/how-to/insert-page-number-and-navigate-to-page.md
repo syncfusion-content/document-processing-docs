@@ -6,6 +6,7 @@ control: Insert page number and navigate to page
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Insert Page Numbers and Navigate in React DOCX Editor

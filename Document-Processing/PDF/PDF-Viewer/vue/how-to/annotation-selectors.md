@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: How to Customize Annotation Selectors in Vue PDF Viewer | Syncfusion
 description: Customize annotation selectors in the Vue PDF Viewer using annotationSelectorSettings to control how users select and resize annotations.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Customize Annotation Selectors in Vue PDF Viewer

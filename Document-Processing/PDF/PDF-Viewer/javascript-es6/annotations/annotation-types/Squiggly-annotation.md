@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Squiggly Annotation in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Learn about the squiggly annotation in the JavaScript (ES6) PDF Viewer and how it helps users work with PDF documents more effectively.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Squiggly Annotation in JavaScript (ES6) PDF Viewer

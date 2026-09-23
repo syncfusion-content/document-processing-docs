@@ -5,6 +5,7 @@ description: Keep important rows and columns visible while scrolling using freez
 platform: document-processing
 control: Freeze Pane
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

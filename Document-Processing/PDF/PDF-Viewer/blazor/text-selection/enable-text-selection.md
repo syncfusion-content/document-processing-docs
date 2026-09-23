@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Enable or disable text selection in Blazor PDF Viewer | Syncfusion
 description: Learn how to enable or disable text selection in the Blazor PDF Viewer using the EnableTextSelection property.
@@ -6,6 +6,7 @@ control: SfPdfViewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Enable or disable text selection in Blazor PDF Viewer

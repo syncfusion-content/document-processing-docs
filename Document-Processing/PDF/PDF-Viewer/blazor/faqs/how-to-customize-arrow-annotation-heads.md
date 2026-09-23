@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: How to Customize arrow heads in Blazor PDF Viewer | Syncfusion
 description: Learn how to customize or remove the start and end arrow heads in the Blazor PDF Viewer using ArrowSettings and LineHeadStyle.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Customize arrow heads in Blazor PDF Viewer

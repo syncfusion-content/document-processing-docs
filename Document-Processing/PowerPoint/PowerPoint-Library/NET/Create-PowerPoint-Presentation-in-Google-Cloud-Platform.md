@@ -4,6 +4,7 @@ description: Learn how to create PowerPoint in Google Cloud Platform using .NET 
 platform: document-processing
 control: PowerPoint 
 documentation: UG 
+appliesto: Document SDK
 --- 
 
 # Create PowerPoint document in Google Cloud Platform (GCP)

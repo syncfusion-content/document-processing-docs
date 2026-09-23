@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Import Form Fields in React PDF Viewer | Syncfusion
 description: Import PDF form field data into the React PDF Viewer from FDF, XFDF, and JSON sources, or directly from a JavaScript object.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Import Form Data in React PDF Viewer

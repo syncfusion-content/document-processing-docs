@@ -1,9 +1,10 @@
----
+﻿---
 title: Barcodes in .NET PDF Library | Syncfusion
 description: Learn how to add 1D and 2D barcodes to PDF documents, customize appearance, and export them as images using the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Barcodes in .NET PDF Library
 

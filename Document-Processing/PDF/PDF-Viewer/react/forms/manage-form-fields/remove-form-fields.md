@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Remove Form Fields in React PDF Viewer | Syncfusion
 description: Remove PDF form fields in the React PDF Viewer using the built-in UI and programmatic APIs to delete fields you no longer need.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 

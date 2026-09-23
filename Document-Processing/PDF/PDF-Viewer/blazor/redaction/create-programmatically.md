@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Programmatic redaction in Blazor PDF Viewer | Syncfusion
 description: Learn how to add, edit, delete, and apply redaction annotations programmatically in the Blazor PDF Viewer .
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Programmatic Support for Redaction in Blazor PDF Viewer

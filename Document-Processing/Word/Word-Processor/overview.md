@@ -5,6 +5,7 @@ platform: document-processing
 control: general
 documentation: UG
 keywords: Word, SDK, view, edit, read, document-editor
+appliesto: DOCX Editor SDK
 ---
 
 # About Syncfusion DOCX Editor Control

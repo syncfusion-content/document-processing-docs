@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Conformance in Flutter PDF Library | Syncfusion
 description: Learn about different conformance standards and PDF compliance features in Syncfusion Flutter PDF non-UI Library.
 platform: document-processing
 control: PDF
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Conformance in Flutter PDF

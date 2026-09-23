@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Syncfusion React PDF Viewer Semantic Text Comparison | Syncfusion
 description: Learn about the Syncfusion React PDF Viewer Semantic Text Comparison feature for comparing two PDF documents.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Syncfusion React PDF Viewer Semantic Text Comparison

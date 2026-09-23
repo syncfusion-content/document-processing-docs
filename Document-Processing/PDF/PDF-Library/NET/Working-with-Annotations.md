@@ -1,9 +1,10 @@
----
+﻿---
 title: PDF Annotations in .NET PDF Library | Syncfusion
 description: Learn how to create, modify, and remove different types of interactive annotations in PDF documents using the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # PDF Annotations in .NET PDF Library
 

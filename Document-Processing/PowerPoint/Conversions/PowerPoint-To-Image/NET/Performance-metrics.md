@@ -4,6 +4,7 @@ description: Explore the performance benchmark results of PowerPoint to image co
 platform: document-processing
 control: Presentation
 documentation: UG
+appliesto: Document SDK
 ---
 
 # PowerPoint to image performance metrics in .NET PowerPoint Library

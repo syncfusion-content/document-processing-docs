@@ -4,6 +4,7 @@ description: Describe frequently asked questions about creating and managing tab
 platform: document-processing
 control: Word library
 documentation: UG
+appliesto: Document SDK
 ---
 # Compare Word Documents in Java Word
 

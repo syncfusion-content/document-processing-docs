@@ -1,10 +1,11 @@
----
+﻿---
 title: Open and Save PDF Document in Google Cloud Platform | Syncfusion
 description: Learn how to open and save PDF documents in Google Cloud Platform using Syncfusion .NET PDF library without Adobe Acrobat.
 platform: document-processing
 control: PDF
 documentation: UG
 keywords: gcp os save pdf, gcp os load pdf, c# save pdf, c# load pdf
+appliesto: Document SDK
 ---
 # Open and Save PDF Document in Google Cloud Platform
 

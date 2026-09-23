@@ -6,6 +6,7 @@ control: Customize font family drop down
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Customize Font Family in React DOCX Editor

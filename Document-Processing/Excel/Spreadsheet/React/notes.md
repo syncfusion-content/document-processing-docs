@@ -5,6 +5,7 @@ description: Learn about notes in the Syncfusion React Spreadsheet component, in
 control: Notes
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

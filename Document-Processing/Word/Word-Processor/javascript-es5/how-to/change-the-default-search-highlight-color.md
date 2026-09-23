@@ -6,6 +6,7 @@ platform: document-processing
 control: Change the default search highlight color 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Change Search Highlight Color in JavaScript DOCX Editor

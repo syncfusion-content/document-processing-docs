@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Export Form Fields in Vue PDF Viewer | Syncfusion
 description: Export PDF form field data from the Vue PDF Viewer in FDF, XFDF, and JSON formats, or as a JavaScript object for further processing.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Export Form Data in Vue PDF Viewer

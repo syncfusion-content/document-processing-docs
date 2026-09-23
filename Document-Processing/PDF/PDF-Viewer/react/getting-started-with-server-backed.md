@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Getting Started with Server-Backed React PDF Viewer | Syncfusion
 description: Get started with the Syncfusion React PDF Viewer in server-backed mode to process documents through a backend web service.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Getting Started with Server-Backed React PDF Viewer

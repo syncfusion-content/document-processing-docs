@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Form Constrain in Angular PDF Viewer | Syncfusion
 description: Configure form field constraints in the Angular PDF Viewer, including isReadOnly, isRequired, and isPrint flags for each field.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # PDF Form Field Constraints in Angular PDF Viewer

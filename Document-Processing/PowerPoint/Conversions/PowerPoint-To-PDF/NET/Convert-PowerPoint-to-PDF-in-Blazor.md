@@ -4,6 +4,7 @@ description: Convert PowerPoint presentation to PDF in Blazor using .NET Core Po
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert PowerPoint to PDF in Blazor

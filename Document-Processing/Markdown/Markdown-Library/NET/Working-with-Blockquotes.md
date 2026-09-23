@@ -4,6 +4,7 @@ description: Learn how to create, format, and manipulate blockquotes in a Markdo
 platform: document-processing
 control: Markdown
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Blockquotes in .NET Markdown Library

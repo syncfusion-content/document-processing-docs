@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: About Organize pages in Blazor PDF Viewer Component | Syncfusion
 description: Learn how to reorder, rotate, insert, delete, and save pages with the Blazor PDF Viewer component and more details.
@@ -6,6 +6,7 @@ platform: document-processing
 control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 

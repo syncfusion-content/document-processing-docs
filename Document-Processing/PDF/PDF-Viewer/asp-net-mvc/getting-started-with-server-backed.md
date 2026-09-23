@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Getting Started with Server-Backed ASP.NET MVC Viewer | Syncfusion
 description: Get started with the server-backed Syncfusion ASP.NET MVC PDF Viewer. Install NuGet packages, add scripts and styles, configure the controller, and load a PDF
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Getting Started with Server-Backed ASP.NET MVC Viewer

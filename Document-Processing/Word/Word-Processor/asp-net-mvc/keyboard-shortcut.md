@@ -5,6 +5,7 @@ description: The keyboard shortcuts feature in ASP.NET MVC DOCX Editor enables u
 platform: document-processing
 control: Keyboard Shortcut
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

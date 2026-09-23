@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Shapes Drawing in Flutter PDF Library | Syncfusion
 description: Learn how to draw different types of shapes in PDF documents using Syncfusion Flutter PDF non-UI Library.
 platform: document-processing
 control: PDF
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Shapes Drawing in Flutter PDF

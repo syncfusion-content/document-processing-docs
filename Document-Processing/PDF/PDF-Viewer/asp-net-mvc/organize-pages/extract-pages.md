@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Extract Pages in ASP.NET MVC PDF Viewer | Syncfusion
 description: Extract pages from a PDF in the ASP.NET MVC PDF Viewer using the Organize Pages panel to save selected pages as a separate document.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Extract Pages in ASP.NET MVC PDF Viewer

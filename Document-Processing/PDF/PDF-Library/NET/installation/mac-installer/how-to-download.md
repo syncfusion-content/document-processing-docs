@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: How to Download Syncfusion PDF Mac Installer | Syncfusion
 description: Learn how to download the Syncfusion PDF Mac installer using your licensed account and prepare for installation.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
+appliesto: Document SDK
 --- 
 
 # How to Download Syncfusion PDF Mac Installer

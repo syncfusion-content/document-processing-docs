@@ -4,6 +4,7 @@ description: Override an existing Excel document using the Syncfusion .NET Excel
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to override Excel documents in .NET Excel Library

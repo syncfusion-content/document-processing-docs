@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Configure ExtractTextOption in Vue PDF Viewer | Syncfusion
 description: Use the extractTextOption property in the Vue PDF Viewer to control how text is extracted and to manage memory usage during extraction.
@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Configure ExtractTextOption in Vue PDF Viewer

@@ -1,10 +1,11 @@
----
+﻿---
 title: PDF Text in JavaScript PDF | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
 description: Add and format text with standard and TrueType fonts in PDF documents using the Syncfusion JavaScript PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # PDF Text in JavaScript PDF

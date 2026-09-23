@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: How to Overview of the React PDF Viewer | Syncfusion
 description: How-to overview of the React PDF Viewer in Syncfusion React PDF Viewer (SfPdfViewer) control, with its elements and more.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Overview of the React PDF Viewer

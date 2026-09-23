@@ -6,6 +6,7 @@ platform: document-processing
 control: Get the selected content
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Get Selected Content in Angular DOCX Editor

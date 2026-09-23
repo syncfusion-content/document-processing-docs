@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Annotations in Flutter PDF Library | Syncfusion
 description: Learn about interactive annotations in Syncfusion Flutter PDF non-UI Library. Explore how to create, modify, and manage various annotation types.
 platform: document-processing
 control: PDF
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Annotations in Flutter PDF

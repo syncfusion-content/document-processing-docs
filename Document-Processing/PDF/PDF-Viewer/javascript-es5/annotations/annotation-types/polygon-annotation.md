@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Polygon Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Enable, apply, customize, and manage Polygon annotations in the JavaScript (ES5) PDF Viewer to outline irregular shapes on a PDF page.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Polygon Annotation in JavaScript (ES5) PDF Viewer

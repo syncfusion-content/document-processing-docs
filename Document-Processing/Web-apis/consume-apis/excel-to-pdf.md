@@ -4,6 +4,7 @@ description: Convert Excel files to highquality PDFs using Syncfusion Web API. P
 platform: document-processing
 control: general
 documentation: UG
+appliesto: Document SDK
 ---
 # Converting Excel to PDF Using Syncfusion Web API 
 

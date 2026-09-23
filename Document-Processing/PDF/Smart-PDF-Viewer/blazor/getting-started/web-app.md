@@ -5,6 +5,7 @@ description: Learn how to get started with  the Syncfusion Blazor  Web App Smart
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Getting Started with Blazor Web App Smart PDF Viewer

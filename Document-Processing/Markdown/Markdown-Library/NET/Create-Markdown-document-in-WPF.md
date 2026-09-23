@@ -4,6 +4,7 @@ description: Create Markdown document in WPF application using Syncfusion<sup>&r
 platform: document-processing
 control: Markdown
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Markdown document in WPF

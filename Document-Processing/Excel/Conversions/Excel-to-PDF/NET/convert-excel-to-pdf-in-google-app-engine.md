@@ -4,6 +4,7 @@ description: Google App Engine Excel to PDF section explains how to convert Exce
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Excel to PDF Conversion in Google App Engine using Excel Library

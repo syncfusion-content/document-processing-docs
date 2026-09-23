@@ -4,6 +4,7 @@ description: Excel document conversion describes how to convert workbooks, works
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Excel to PDF Conversion in .NET Excel Library
