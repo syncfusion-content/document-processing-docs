@@ -52,7 +52,7 @@ The following code example demonstrates how to create a slide using the predefin
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { Presentation } from '@syncfusion/ej2-pptx';
+import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
 
 // Create a new instance of PowerPoint Presentation file.
 const pptxDoc = Presentation.create();

@@ -19,7 +19,7 @@ The following code example demonstrates how to add a paragraph in a slide.
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { Presentation } from '@syncfusion/ej2-pptx';
+import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
 
 // Creates a PowerPoint Presentation.
 const pptxDoc = Presentation.create();
@@ -88,7 +88,7 @@ The following code example demonstrates how to add text with different formattin
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { Presentation } from '@syncfusion/ej2-pptx';
+import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
 
 // Creates the PowerPoint Presentation instance.
 const pptxDoc = Presentation.create();
