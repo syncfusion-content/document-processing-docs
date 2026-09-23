@@ -74,7 +74,7 @@ export default function App() {
 {% endhighlight %}
 {% endtabs %}
 
-> The `hyperlinkOpenState` property controls how external URLs open when the user clicks a link. `NewTab` is commonly used for browser navigation.
+> The `hyperlinkOpenState` property controls how external URLs open when the user clicks a link. Supported values include `NewTab` and `NewWindow`. Use `NewTab` to open the URL in a new browser tab, or `NewWindow` to open it in a separate browser window.
 
 ## Add Link Annotation
 
@@ -86,7 +86,9 @@ export default function App() {
 4. Set the properties such as **stroke color** and **stroke thickness**.
 5. Click **Insert** to create the link annotation.
 
-![Add Link dialog](../../images/add-link.png)
+![Add Link dialog URL](../../images/add-link.png)
+
+![Add Link dialog Page](../../images/page-link.png)
 
 The inserted link is displayed as a rectangular annotation region. Users can drag and resize it to position it over the desired target text or area in the PDF.
 
@@ -146,7 +148,7 @@ This adds a link rectangle that opens the specified external URL in the browser 
 
 ## Customize Link Appearance
 
-Link annotations can be customized by specifying properties such as `strokeColor`, `thickness`, `width`, `height`, and other navigation-related settings when creating or editing the annotation.
+Link annotations can be customized with optional visual and navigation properties, such as stroke color, thickness, size, destination page, or URL, depending on the type of link you are creating. The `hyperlinkOpenState` property controls how external URLs open: `NewTab` opens the page in a new tab, and `NewWindow` opens it in a separate browser window.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -156,7 +158,7 @@ Link annotations can be customized by specifying properties such as `strokeColor
   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
   resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
   style={{ height: '650px' }}
-  hyperlinkOpenState="NewTab"
+  hyperlinkOpenState="NewWindow"
 >
   <Inject services={[Toolbar, Annotation, LinkAnnotation]} />
 </PdfViewerComponent>
@@ -172,10 +174,13 @@ After a link annotation is inserted, the user can:
 
 - Drag the rectangle to a new position
 - Resize the rectangle
+
+![Resize and edit link annotation](../../images/resize-link.png)
+
 - Modify the stroke color and thickness from the annotation toolbar or property panel
 - Edit the target page or URL from the annotation dialog if supported by the configured UI
 
-![Resize and edit link annotation](../../images/resize-link.png)
+![Edit Link Annotation Context Menu](../../images/edit-link.png)
 
 This allows the link to be visually aligned with the PDF content without changing the document itself.
 
@@ -279,10 +284,6 @@ function addMultipleLinks() {
 ## Link Annotation Events
 
 The PDF viewer raises annotation life cycle events that can be used to monitor when link annotations are added, modified, selected, or removed. For the complete event list and event details, see [Annotation Events](../annotation-event).
-
-## Export and Import
-
-The PDF Viewer supports exporting and importing annotations, including link annotations, so you can save the link data and restore it later. For more information, see [Export and Import Annotation](../export-import/export-annotation).
 
 ## See Also
 
