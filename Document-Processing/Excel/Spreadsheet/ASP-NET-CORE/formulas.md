@@ -345,7 +345,7 @@ The Spreadsheet component supports a comprehensive set of built-in formulas orga
 | ARRAYTOTEXT | Returns the text representation of an array. |
 | ASC | Changes full-width characters to half-width. |
 | CHAR | Returns the character from the specified number. |
-| CLEAN | Removes all nonprintable characters from text. |
+| CLEAN | Removes all non-printable characters from text. |
 | CODE | Returns the numeric code for the first character in a given string. |
 | CONCAT | Concatenates a list or a range of text strings. |
 | CONCATENATE | Combines two or more strings together. |
