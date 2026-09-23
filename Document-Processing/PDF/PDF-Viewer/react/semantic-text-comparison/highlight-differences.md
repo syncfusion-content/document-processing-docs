@@ -23,8 +23,7 @@ When you compare two PDF documents using the semantic text comparison feature, d
 ## Prerequisites
 
 - Syncfusion React PDF Viewer installed
-- `PdfComparer` component available
-- Button and Upload components from Syncfusion
+- `PdfComparerComponent` available
 - Two PDF documents ready for comparison
 
 ## Steps
@@ -35,63 +34,29 @@ When you compare two PDF documents using the semantic text comparison feature, d
 {% highlight js tabtitle="App.jsx" %}
 {% raw %}
 import React from 'react';
-import { PdfComparer, TextComparisonOptions } from '@syncfusion/ej2-react-pdfviewer';
-import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
-import { UploaderComponent } from '@syncfusion/ej2-react-inputs';
+import { PdfComparerComponent } from '@syncfusion/ej2-react-pdfviewer';
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
 ### Step 2: Create the semantic text comparison component
 
-Set up the comparison with file upload capabilities:
+Set up the comparison with basic default highlighting:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
 {% raw %}
 function SemanticTextComparison() {
-    const pdfComparerRef = React.useRef<PdfComparer | null>(null);
-    const originalUploaderRef = React.useRef<UploaderComponent | null>(null);
-    const modifiedUploaderRef = React.useRef<UploaderComponent | null>(null);
-    const [originalFile, setOriginalFile] = React.useState<File | null>(null);
-    const [modifiedFile, setModifiedFile] = React.useState<File | null>(null);
-    const [originalFilePath, setOriginalFilePath] = React.useState<string>(
-        'https://cdn.syncfusion.com/content/pdf/original-document.pdf'
-    );
-    const [modifiedFilePath, setModifiedFilePath] = React.useState<string>(
-        'https://cdn.syncfusion.com/content/pdf/modified-document.pdf'
-    );
-
-    const comparisonOptions: TextComparisonOptions = {
-        beforeColor: '#FF0000',
-        afterColor: '#00FF00',
-        beforeColorOpacity: 0.4,
-        afterColorOpacity: 0.4,
-        enableHighlights: true
-    } as TextComparisonOptions;
-
-    React.useEffect(() => {
-        initializeComparer();
-    }, []);
-
-    const initializeComparer = async (): Promise<void> => {
-        try {
-            pdfComparerRef.current = new PdfComparer(
-                originalFilePath,
-                modifiedFilePath,
-                'https://cdn.syncfusion.com/ej2/34.2.4/dist/ej2-pdfviewer-lib',
-                comparisonOptions,
-                true,
-                true
-            );
-            await pdfComparerRef.current.appendTo('#comparer-container');
-        } catch (error) {
-            console.error('Error initializing PdfComparer:', error);
-        }
-    };
-
     return (
-        <div id="comparer-container" style={{ height: 'calc(100vh - 330px)' }}></div>
+        <PdfComparerComponent
+            id="comparer-container"
+            height="600px"
+            // Specifies the URL (for example, a file from the public folder) or a Base64-encoded PDF.
+            originalDocumentPath="https://cdn.syncfusion.com/content/pdf/original-document.pdf"
+            modifiedDocumentPath="https://cdn.syncfusion.com/content/pdf/modified-document.pdf"
+            // Specifies the path to the PDFium resource files required for the PDF Viewer to function.
+            resourceUrl="https://cdn.syncfusion.com/ej2/34.2.4/dist/ej2-pdfviewer-lib">
+        </PdfComparerComponent>
     );
 }
 
@@ -102,77 +67,42 @@ export default SemanticTextComparison;
 
 ### Step 3: Configure highlight colors and options
 
-Define the `TextComparisonOptions` interface to customize highlighting:
+Define the `comparisonOptions` object to customize highlighting and pass it to the component:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
 {% raw %}
-const comparisonOptions: TextComparisonOptions = {
-    beforeColor: '#FF0000',        // Color for deleted text (red)
-    afterColor: '#00FF00',         // Color for added text (green)
-    beforeColorOpacity: 0.4,       // Transparency for deleted (0-1)
-    afterColorOpacity: 0.4,        // Transparency for added (0-1)
-    enableHighlights: true         // Enable visual highlighting
-};
-{% endraw %}
-{% endhighlight %}
-{% endtabs %}
+function SemanticTextComparison() {
+    const comparisonOptions = {
+        beforeColor: '#FF0000',        // Color for deleted text (red)
+        afterColor: '#00FF00',         // Color for added text (green)
+        beforeColorOpacity: 0.4,       // Transparency for deleted (0-1)
+        afterColorOpacity: 0.4,        // Transparency for added (0-1)
+        enableHighlights: true         // Enable visual highlighting
+    };
 
-### Step 4: Add file upload functionality
+    return (
+        <PdfComparerComponent
+            id="comparer-container"
+            height="600px"
+            originalDocumentPath="https://cdn.syncfusion.com/content/pdf/original-document.pdf"
+            modifiedDocumentPath="https://cdn.syncfusion.com/content/pdf/modified-document.pdf"
+            comparisonOptions={comparisonOptions}
+            resourceUrl="https://cdn.syncfusion.com/ej2/34.2.4/dist/ej2-pdfviewer-lib">
+        </PdfComparerComponent>
+    );
+}
 
-Handle file uploads for custom PDFs:
-
-{% tabs %}
-{% highlight js tabtitle="App.jsx" %}
-{% raw %}
-const handleFileChange = (args: any, isOriginal: boolean): void => {
-    const file = args.filesData?.[0]?.rawFile as File | undefined;
-    if (!file) return;
-
-    // Validate PDF file
-    if (!file.name.toLowerCase().endsWith('.pdf')) {
-        alert('Please select a valid PDF file.');
-        (isOriginal ? originalUploaderRef : modifiedUploaderRef).current?.clearAll();
-        return;
-    }
-
-    // Create file URL
-    const fileUrl = URL.createObjectURL(file);
-
-    if (isOriginal) {
-        setOriginalFile(file);
-        setOriginalFilePath(fileUrl);
-    } else {
-        setModifiedFile(file);
-        setModifiedFilePath(fileUrl);
-    }
-};
-
-const handleCompare = async (): Promise<void> => {
-    if (!originalFile || !modifiedFile) {
-        alert('Please select both Original and Modified PDF files.');
-        return;
-    }
-
-    try {
-        if (pdfComparerRef.current) {
-            (pdfComparerRef.current as any).compare?.(
-                originalFilePath,
-                modifiedFilePath
-            );
-        }
-    } catch (error) {
-        console.error('Error comparing documents:', error);
-        alert('Error comparing the PDF documents. Please try again.');
-    }
-};
+export default SemanticTextComparison;
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
 ## Highlight customization
 
-The highlight appearance is controlled by these options:
+### Comparison options
+
+The highlight appearance is controlled by these options in the `comparisonOptions` object:
 
 | Option | Type | Description | Default |
 |--------|------|-------------|---------|
@@ -182,20 +112,49 @@ The highlight appearance is controlled by these options:
 | `afterColorOpacity` | number | Transparency for added (0-1) | `0.4` |
 | `enableHighlights` | boolean | Enable/disable visual highlighting | `true` |
 
-### Accessibility color recommendations
+### Viewer behavior properties
 
-Use high-contrast colors for better visibility:
+Control the viewer behavior with these properties:
+
+| Property | Type | Description | Default |
+|----------|------|-------------|---------|
+| `enableDifferencePanel` | boolean | Show/hide sidebar panel displaying detected differences | `true` |
+| `enableSyncScrolling` | boolean | Enable synchronized scrolling, navigation, and magnification between viewers | `true` |
+
+### Control the difference panel
+
+Use the `enableDifferencePanel` property to show or hide the sidebar panel that displays all detected differences:
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}
 {% raw %}
-const accessibleOptions: TextComparisonOptions = {
-    beforeColor: '#E31937',      // Strong red for deleted
-    afterColor: '#0070C0',       // Strong blue for added
-    beforeColorOpacity: 0.5,
-    afterColorOpacity: 0.5,
-    enableHighlights: true
-};
+<PdfComparerComponent
+    id="comparer-container"
+    height="600px"
+    originalDocumentPath="https://cdn.syncfusion.com/content/pdf/original-document.pdf"
+    modifiedDocumentPath="https://cdn.syncfusion.com/content/pdf/modified-document.pdf"
+    enableDifferencePanel={false}    // Hide the differences sidebar panel
+    resourceUrl="https://cdn.syncfusion.com/ej2/34.2.4/dist/ej2-pdfviewer-lib">
+</PdfComparerComponent>
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+### Control synchronized scrolling and navigation
+
+Use the `enableSyncScrolling` property to control whether the viewers stay synchronized during scrolling, page navigation, and magnification (zoom):
+
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% raw %}
+<PdfComparerComponent
+    id="comparer-container"
+    height="600px"
+    originalDocumentPath="https://cdn.syncfusion.com/content/pdf/original-document.pdf"
+    modifiedDocumentPath="https://cdn.syncfusion.com/content/pdf/modified-document.pdf"
+    enableSyncScrolling={false}      // Disable synchronized scrolling and navigation
+    resourceUrl="https://cdn.syncfusion.com/ej2/34.2.4/dist/ej2-pdfviewer-lib">
+</PdfComparerComponent>
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
@@ -209,13 +168,6 @@ const accessibleOptions: TextComparisonOptions = {
 - **Color-coded highlighting** - Visual differentiation of added and deleted text (red for deleted, green for added)
 - **Differences panel** - Consolidated list on the right showing all detected differences categorized by type
 - **File upload support** - Upload custom PDFs for comparison
-
-## Expected result
-
-- Deleted text highlighted with the `beforeColor` (default: red)
-- Added text highlighted with the `afterColor` (default: green)
-- Both viewers remain synchronized during navigation
-- Differences panel displays all changes categorized by type
 
 ## Related topics
 
