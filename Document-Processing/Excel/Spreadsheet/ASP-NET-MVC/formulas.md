@@ -169,7 +169,7 @@ The following code example demonstrates how to set the Manual calculation mode i
 
 After running the sample, modify a dependent cell and verify that the formula result remains unchanged until **Calculate Sheet** or **Calculate Workbook** is selected.
 
-## Built-in Formulas
+## Built-in Formulas and Functions
 
 The Spreadsheet component supports a comprehensive set of built-in formulas organized by category. These formulas can be used to perform calculations, analyze data, manipulate text, process dates and times, evaluate logical conditions, retrieve information, and work with financial, engineering, and database data. The formulas supported in the Spreadsheet component are listed below by category.
 

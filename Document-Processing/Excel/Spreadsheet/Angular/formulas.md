@@ -157,7 +157,7 @@ The following code example demonstrates how to set the Manual calculation mode i
   
 {% previewsample "/document-processing/samples/spreadsheet/angular/calculation-cs2" %}
 
-## Built-in Formulas
+## Built-in Formulas and Functions
 
 The Spreadsheet component supports a comprehensive set of built-in formulas organized by category. These formulas can be used to perform calculations, analyze data, manipulate text, process dates and times, evaluate logical conditions, retrieve information, and work with financial, engineering, and database data. The formulas supported in the Spreadsheet component are listed below by category.
 
