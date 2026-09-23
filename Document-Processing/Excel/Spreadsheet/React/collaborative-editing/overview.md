@@ -1,6 +1,6 @@
 ---
 layout: post
-title: React SpreadsheetEditor Collaborative Editing | Syncfusion
+title: Collaborative Editing in React SpreadsheetEditor | Syncfusion
 description: Learn how real-time collaborative editing synchronizes workbook changes, user presence, and selections in the React SpreadsheetEditor.
 control: Collaborative Editing
 platform: document-processing
@@ -9,7 +9,7 @@ documentation: ug
 
 # Collaborative editing in React SpreadsheetEditor
 
-The React SpreadsheetEditor supports real-time collaborative editing, allowing multiple users to work on the same workbook and view synchronized changes, connected users, and selections. It synchronizes supported workbook actions through a collaboration service and maintains a consistent workbook state across users connected to the same room.
+The React SpreadsheetEditor supports real-time collaborative editing, allowing multiple users to work on the same workbook and view synchronized changes, connected users, and selections. Supported workbook actions are synchronized through a collaboration service to maintain a consistent workbook state for users connected to the same room.
 
 ## Key features
 
@@ -32,8 +32,6 @@ Collaborative editing requires:
 - Redis for temporary collaboration action and version storage.
 - WebSocket or SignalR communication.
 - A SpreadsheetEditor-specific server adapter.
-
-> **Note:** SpreadsheetEditor collaborative editing requires an ASP.NET-based Collaboration Server for workbook processing and operational transformation.
 
 ## Core concepts
 
@@ -78,7 +76,7 @@ When the client detects a missing version, the SpreadsheetEditor retrieves and a
 
 The React SpreadsheetEditor captures local workbook actions, sends them to the Collaboration Server, receives remote actions, and displays connected users and their selections.
 
-The `CollaborativeEditingHandler` manages SpreadsheetEditor-specific collaboration behavior. The `SpreadsheetEditorAdapter` connects the SpreadsheetEditor to the common Collaboration Client.
+The `CollaborativeEditingHandler` manages SpreadsheetEditor-specific collaboration behavior. The `SpreadsheetEditorAdapter` connects the SpreadsheetEditor to the Collaboration Client.
 
 ### Real-time communication layer
 
@@ -92,7 +90,7 @@ The Collaboration Server manages rooms and connected users, assigns action versi
 
 Redis temporarily stores collaboration actions, versions, and room-related information. Actions are stored in version order so that late-joining users and users who missed updates can synchronize with the latest workbook state.
 
-## How It Works
+## How it works
 
 1. **User joins a session** - A user opens a workbook and joins a collaboration room using a unique room ID.
 2. **Real-time connection is established** - A WebSocket or SignalR connection is established with the Collaboration Server.
@@ -113,4 +111,5 @@ Collaborative editing is suitable for workflows where multiple users review or u
 
 ## See also
 
-- [Collaborative editing using ASP.NET Core with Redis](./collaborative-editing-aspnet-core-redis)
+- [Collaborative editing integration](./integration)
+- [Using Redis Cache with ASP.NET Core](./aspnet-core-redis)
