@@ -12,6 +12,29 @@ function App(): React.ReactElement {
                 {
                     cells: [
                         {
+                            value: 'Annual Sales Report 2026 (Draft)',
+                            richText: [
+                                { text: 'Annual Sales Report ', style: { fontWeight: 'bold' } },
+                                { text: '2026', style: { color: '#0078D4' } },
+                                { text: ' (Draft)', style: { fontStyle: 'italic' } }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    cells: [
+                        {
+                            value: 'Customer Loyalty Program',
+                            richText: [
+                                { text: 'Customer Loyalty ', style: { textDecoration: 'underline' } },
+                                { text: 'Program', style: { fontFamily: 'Georgia', fontSize: '14pt' } }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    cells: [
+                        {
                             value: 'Mineral Water H2O',
                             richText: [
                                 { text: 'Mineral Water H' },
@@ -20,23 +43,7 @@ function App(): React.ReactElement {
                             ]
                         }
                     ]
-                },
-                {
-                    cells: [
-                        {
-                            value: 'Energy Supplement C6H12O6',
-                            richText: [
-                                { text: 'Energy Supplement C' },
-                                { text: '6', style: { verticalAlign: 'sub' } },
-                                { text: 'H' },
-                                { text: '12', style: { verticalAlign: 'sub' } },
-                                { text: 'O' },
-                                { text: '6', style: { verticalAlign: 'sub' } }
-                            ]
-                        }
-                    ]
-                },
-                { cells: [{ value: 'H2O' }] },
+                }
             ]
         }
     ];
@@ -44,17 +51,21 @@ function App(): React.ReactElement {
     const onCreated = (): void => {
         const spreadsheet = spreadsheetRef.current;
         if (!spreadsheet) return;
-        spreadsheet.updateCell({ richText: [{text: 'H'},{ text: '2', style: { verticalAlign: 'sub' } }, { text: 'O' }
-        ] }, 'A4');
-        spreadsheet.updateCell({ value: 'X2', richText: [
-                { text: 'X' },
-                { text: '2', style: { verticalAlign: 'super' } }
-            ] }, 'A5');
+        spreadsheet.updateCell({
+        value: 'Premium Membership valid until 31st Dec 2026',
+        richText: [
+                { text: 'Premium Membership ', style: { fontWeight: 'bold', color: '#2E7D32' } },
+                { text: 'valid until ', style: { fontStyle: 'italic' } },
+                { text: '31', style: { textDecoration: 'underline' } },
+                { text: 'st', style: { verticalAlign: 'super' } },
+                { text: ' Dec 2026' }
+            ]
+        }, 'A4');
     };
 
     return (
         <div>
-            <SpreadsheetComponent ref={spreadsheetRef} sheets={sheets} showFormulaBar={false} created={onCreated} >
+            <SpreadsheetComponent ref={spreadsheetRef} sheets={sheets} created={onCreated} >
             </SpreadsheetComponent>
         </div>
     );

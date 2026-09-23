@@ -40,14 +40,6 @@ You can align text in cells using the following options:
 | [`textAlign`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/textalign) | Left, Center, Right | Aligns text horizontally from left to right within the cell. |
 | [`verticalAlign`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/verticalalign) | Top, Middle, Bottom | Aligns text from top to bottom within the cell. |
 
-## Text Overflow
-
-When the content of a cell exceeds the available column width, the Spreadsheet automatically displays the text across adjacent empty cells. This behavior helps improve readability without changing the column width.
-
-Text overflow is displayed only when the adjacent cells are empty. If a neighboring cell contains a value, formula, or merged range, the overflow is clipped at the boundary cell.
-
-Text overflow is supported for plain text, rich text, hyperlinks, and RTL layouts, and is automatically updated when cell content or worksheet layout changes.
-
 ## Indents
 
 Indentation helps enhance the visual appearance of text in cells by adding space before the text content. You can apply cell text indentation using the [`textIndent`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel#textindent) property.
@@ -135,13 +127,34 @@ The following code sample shows how to apply different typed border, colors and 
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/border-cs1" %} 
 
+## Text Overflow
+
+When the content of a cell exceeds the available column width, the Spreadsheet automatically displays the text across adjacent empty cells. This behavior helps improve readability without changing the column width.
+
+Text overflow is displayed only when the adjacent cells are empty. If a neighboring cell contains a value, formula, or merged range, the overflow is clipped at the boundary cell.
+
+Text overflow is supported for plain text, rich text, hyperlinks, and RTL layouts, and is automatically updated when cell content or worksheet layout changes.
+
+The following code example demonstrates text overflow in the Spreadsheet.
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+{% include code-snippet/spreadsheet/react/text-overflow-cs1/app/app.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/spreadsheet/react/text-overflow-cs1/app/app.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/text-overflow-cs1" %} 
+
 ## Limitations of Formatting
 
 The following features are not supported in Formatting:
 
 * Insert row/column between the formatting applied cells.
 * Formatting support for row/column.
-* Text overflow is not supported for freeze panes and right-aligned cells.
+* Text overflow across freeze pane boundaries and for right-aligned cells.
 
 ## Note
 

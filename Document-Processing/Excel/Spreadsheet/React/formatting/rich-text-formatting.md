@@ -20,61 +20,78 @@ Each `richText` segment contains:
 - `text` – Specifies the content of the segment  
 - `style` – Defines formatting using the [`CellStyleModel`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/cellstylemodel)
 
-## Supported Rich Text Formats
-
 Rich text formatting supports the following style options through the `style` property of each `richText` segment:
 
-| Format | Description |
-|----------|-------------|
-| `fontFamily` | Specifies the font family of the text segment. |
-| `fontSize` | Specifies the font size of the text segment. |
-| `fontWeight` | Specifies the font weight such as normal or bold. |
-| `fontStyle` | Specifies the font style such as normal or italic. |
-| `textDecoration` | Specifies text decorations such as underline and line-through. |
-| `color` | Specifies the font color of the text segment. |
-| `verticalAlign` | Specifies subscript (`sub`) and superscript (`super`) formatting. |
+## Font Family
+
+You can change the font family of individual rich text segments using the `fontFamily` property. This allows different portions of text within the same cell to be displayed using different typefaces such as `Calibri`, `Arial`, and `Georgia`.
+
+## Font Size
+
+You can customize the size of individual rich text segments using the `fontSize` property to emphasize specific content within a cell.
+
+## Font Weight
+
+You can apply font weight formatting using the `fontWeight` property. This is typically used to display specific text segments in bold.
+
+## Font Style
+
+You can apply font style formatting using the `fontStyle` property. This property supports values such as `normal` and `italic`.
+
+## Text Decoration
+
+You can apply text decorations to individual rich text segments using the `textDecoration` property. Supported decorations include `underline` and `line-through`.
+
+## Font Color
+
+You can customize the color of specific text segments using the `color` property to improve visibility or highlight important information.
 
 ## Subscript and Superscript
 
-Subscript and superscript formatting are supported as part of rich text formatting and can be applied to specific portions of text within a cell.
+You can apply subscript and superscript formatting to individual text segments using the `verticalAlign` property.
 
-To apply these formats, use the `verticalAlign` property within the style of a rich text segment:
+- Use `verticalAlign: 'sub'` to display text as subscript.
+- Use `verticalAlign: 'super'` to display text as superscript.
 
-Set `verticalAlign: 'super'` for superscript and `verticalAlign: 'sub'` for subscript.
+## How to Apply Rich Text Formatting
 
-### How to Apply Subscript and Superscript
+You can apply rich text formatting in following ways:
 
-You can apply subscript and superscript formatting in following ways:
+1. Select the desired portion of text within a cell, then use the available formatting options in the ribbon such as font family, font size, bold, italic, underline, strikethrough, font color, subscript, or superscript.
 
-1. Select the desired portion of text within a cell, then click the Subscript or Superscript option in the ribbon to apply the formatting.
-
-![Subscript and superscript in Spreadsheet](../images/spreadsheet_richtext.gif)
+![Rich text formatting in Spreadsheet](../images/spreadsheet_richtext.gif)
 
 2. You can define the [`richText`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#richtext) property directly while initializing the Spreadsheet. This is useful when you want the formatting to be applied when the data is loaded.
 
 ```javascript
     cells: [
         {
-            value: 'H2O',
+            value: 'Annual Sales Report 2026 Highlights (Draft)',
             richText: [
-                { text: 'H' },
-                { text: '2', style: { verticalAlign: 'sub' } },
-                { text: 'O' }
+                { text: 'Annual Sales Report ', style: { fontWeight: 'bold' } },
+                { text: '2026', style: { color: '#0078D4' } },
+                { text: ' Highlights', style: { textDecoration: 'underline' } },
+                { text: ' (Draft)', style: { fontStyle: 'italic' } }
             ]
         }
     ]
 ```
 
-3. You can also apply subscript and superscript dynamically using the [`updateCell`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#updatecell) method.
+3. You can also apply formatting dynamically using the [`updateCell`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#updatecell) method.
 
 ```javascript
-    spreadsheet.updateCell({ value: 'X2', richText: [
-                    { text: 'X' },
-                    { text: '2', style: { verticalAlign: 'super' } }
-                ] }, 'A5');
+    spreadsheet.updateCell({
+        richText: [
+            { text: 'Premium Membership ', style: { fontWeight: 'bold', color: '#2E7D32' } },
+            { text: 'valid until ', style: { fontStyle: 'italic' } },
+            { text: '31', style: { textDecoration: 'underline' } },
+            { text: 'st', style: { verticalAlign: 'super' } },
+            { text: ' Dec 2026' }
+        ]
+    }, 'A5');
 ```
 
-The following code example shows subscript and superscript formatting in cells of the Spreadsheet.
+The following code example shows how to apply multiple rich text formats in cells of the Spreadsheet.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
