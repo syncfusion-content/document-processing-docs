@@ -52,7 +52,7 @@ console.log('Saved:', outputPath);
 
 ## Replacing Images
 
-An existing picture on a slide can be retargeted with new embedded media while preserving its position, size, and slide layout. 
+An existing picture in a slide can be replaced with a new image while preserving its position, size, and slide layout. 
 
 The following code example demonstrates how to replace an existing image in a slide. The `retargetEmbedded()` method accepts image data that represents the new image to be embedded.
 
