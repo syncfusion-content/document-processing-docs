@@ -1,367 +1,171 @@
 ---
 layout: post
-title: Suspend and Resume UI Refresh in React Spreadsheet | Syncfusion
-description: Improve performance in Syncfusion React Spreadsheet by using suspendRefresh and resumeRefresh to group multiple updates and avoid repeated rendering.
+title: Collaborative Editing React SpreadsheetEditor with ASP.NET Core | Syncfusion
+description: Learn how to configure collaborative editing in React SpreadsheetEditor using ASP.NET Core and Redis.
+control: Collaborative Editing
 platform: document-processing
-control: Spreadsheet
 documentation: ug
 ---
 
-# Collaborative editing in React Spreadsheet using ASP.NET Core with Redis
+# Collaborative editing in React SpreadsheetEditor using ASP.NET Core with Redis
 
-The React Spreadsheet can be connected to the ASP.NET Core Collaboration Server to synchronize workbook actions among multiple users. SignalR is the default real-time transport, and Redis stores ordered collaboration actions and session information.
+The React SpreadsheetEditor can use the ASP.NET Core Collaboration Server to synchronize workbook actions among multiple users. SignalR or WebSocket provides real-time communication, while Redis temporarily stores ordered collaboration actions, versions, and room information.
+
+To enable collaborative editing, set `enableCollaborativeEditing` to `true` and inject the `CollaborativeEditingHandler` module into the SpreadsheetEditor. The `SpreadsheetEditorAdapter` connects the SpreadsheetEditor to the Collaboration Client and applies actions exchanged with the Collaboration Server.
 
 ## Prerequisites
 
 The following are required:
 
-- A React application configured with the Syncfusion React Spreadsheet.
-- .NET 8 or later for the ASP.NET Core service.
-- A Redis instance accessible from the ASP.NET Core service.
-- The `@syncfusion/ej2-collaborator` client package.
-- The ASP.NET Core Collaboration Server and Spreadsheet server-side packages.
+- **SignalR or WebSocket** - Provides real-time communication between clients and the server.
+- **Redis** - Stores collaboration operations, versions, and session information.
+- **Collaboration Client** - Connects the SpreadsheetEditor to a collaboration room.
+- **SpreadsheetEditor server adapter** - Converts and transforms SpreadsheetEditor actions on the server.
 
 ## SignalR
 
-SignalR provides real-time, two-way communication between connected users and the collaboration service. It broadcasts workbook actions and user presence changes to all participants in the same room.
+SignalR maintains a real-time connection between the Collaboration Client and the Collaboration Server. It delivers workbook actions, user presence, selections, and connection updates to users in the same room.
 
-For multi-server deployments, SignalR can be scaled using Azure SignalR Service or a Redis backplane.
-
-### Scale out SignalR using Azure SignalR Service
-
-Install and configure the Azure SignalR package, and register the service in `Program.cs`.
-
-```csharp
-builder.Services
-    .AddSignalR()
-    .AddAzureSignalR(
-        "<your-azure-signalr-service-connection-string>"
-    );
-```
-
-### Scale out SignalR using Redis
-
-Install the following NuGet package:
-
-```powershell
-Microsoft.AspNetCore.SignalR.StackExchangeRedis
-```
-
-Configure the Redis backplane in `Program.cs`:
-
-```csharp
-builder.Services
-    .AddSignalR()
-    .AddStackExchangeRedis(
-        "<your-redis-connection-string>"
-    );
-```
+Configure `CollaborationConnectionType.SignalR` when registering the Collaboration Server and call `AddSignalR` to register the required SignalR services. The client must use the same connection type as the server.
 
 ## Redis
 
-Redis temporarily stores collaboration actions, room versions, connected-user information, and other session-related data required by the Collaboration Server. Actions are maintained in order so that users joining an existing room can receive the latest workbook state and recover missed actions.
+Redis stores collaboration actions in version order together with room and version information. This allows the Collaboration Server to process concurrent actions and return missed operations to users who join late or temporarily lose connection.
 
-The Collaboration Server uses the configured save threshold to queue partial save operations. After actions are successfully processed, the associated Redis records are cleared according to the collaboration lifecycle.
-
-Configure Redis capacity based on the expected number of active rooms, participants, action frequency, and workbook complexity.
-
-## Collaborative editing architecture
-
-Collaborative editing uses three main layers:
-
-### Client
-
-The React Spreadsheet:
-
-- Captures supported workbook actions.
-- Sends local actions to the collaboration service.
-- Receives and applies remote actions.
-- Displays connected users and their selections.
-- Tracks the room and synchronized version.
-
-### Real-time communication
-
-The Collaboration Client:
-
-- Connects through SignalR or WebSocket.
-- Joins a room using a unique room name.
-- Receives connection, user, and action events.
-- Delivers collaboration events to the Spreadsheet adapter.
-
-### Collaboration Server and Redis
-
-The ASP.NET Core service:
-
-- Manages rooms and connected users.
-- Assigns versions to actions.
-- Transforms concurrent Spreadsheet actions.
-- Stores actions in Redis.
-- Broadcasts actions to room participants.
-- Processes queued save requests and clears processed Redis records.
+The `SaveThreshold` setting determines when accumulated actions are queued for processing. Choose the Redis capacity and `SaveThreshold` based on the expected number of active rooms, connected users, workbook complexity, and editing frequency.
 
 ## Integrate collaborative editing on the client
 
 ### Step 1: Install the Collaboration Client
 
-Install the Collaborator package in the React application:
+Install the Collaborator package in the React application.
 
 ```bash
 npm install @syncfusion/ej2-collaborator
 ```
 
-Install the React Spreadsheet package if it is not already available:
+### Step 2: Create the SpreadsheetEditor adapter
 
-```bash
-npm install @syncfusion/ej2-react-spreadsheet
-```
-
-### Step 2: Create the Spreadsheet adapter
-
-Create `SpreadsheetEditorAdapter.ts`. The adapter implements `ICollaborationProvider`, loads the workbook, initializes room information, sends local actions, and applies remote actions.
+Create the `SpreadsheetEditorAdapter.ts` file to load the workbook, initialize the room, send local actions, and apply remote actions.
 
 ```ts
-import {
-    ICollaborationActionData,
-    ICollaborationProvider
-} from '@syncfusion/ej2-collaborator';
-import {
-    SpreadsheetComponent
-} from '@syncfusion/ej2-react-spreadsheet';
+import { ICollaborationActionData, ICollaborationProvider } from '@syncfusion/ej2-collaborator';
+import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 
-export class SpreadsheetEditorAdapter
-    implements ICollaborationProvider {
+export class SpreadsheetEditorAdapter implements ICollaborationProvider {
     public currentRoomName: string = '';
 
-    public constructor(
-        private spreadsheet: SpreadsheetComponent,
-        private serviceUrl: string,
-        private currentUser: string
-    ) {
-        this.serviceUrl = serviceUrl.endsWith('/')
-            ? serviceUrl
-            : serviceUrl + '/';
+    public constructor(private spreadsheet: SpreadsheetComponent, private serviceUrl: string, private currentUser: string) {
+        this.serviceUrl = serviceUrl.endsWith('/') ? serviceUrl : serviceUrl + '/';
     }
 
-    public async loadFromServer(
-        fileName: string
-    ): Promise<string> {
-        const roomName: string =
-            this.getRoomName();
-
-        const response: Response = await fetch(
-            this.serviceUrl +
-            'api/CollaborativeEditing/ImportFile',
-            {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    fileName,
-                    roomName
-                })
-            }
-        );
-
-        if (!response.ok) {
-            throw new Error(
-                'Failed to load the workbook.'
-            );
-        }
-
-        const responseText: string =
-            await response.text();
-        const data: any = JSON.parse(responseText);
-
-        this.currentRoomName = roomName;
-
-        this.spreadsheet
-            .collaborativeEditingModule
-            .updateRoomInfo(
-                roomName,
-                data.version,
-                this.serviceUrl +
-                'api/CollaborativeEditing/'
-            );
-
-        this.spreadsheet
-            .collaborativeEditingModule
-            .setLocalUser(this.currentUser);
-
-        this.spreadsheet.openFromJson({
-            file: data.sfdt
+    public async loadFromServer(fileName: string, roomName: string): Promise<void> {
+        const response: Response = await fetch(this.serviceUrl + 'api/CollaborativeEditing/ImportFile', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ fileName, roomName })
         });
 
-        return roomName;
+        if (!response.ok) {
+            throw new Error('Failed to load the workbook.');
+        }
+
+        const data: any = JSON.parse(await response.text());
+        this.currentRoomName = roomName;
+
+        // Initialize the collaboration room and server version.
+        this.spreadsheet.collaborativeEditingModule.updateRoomInfo(roomName, data.version, this.serviceUrl + 'api/CollaborativeEditing/');
+
+        // Set the name displayed for the local user.
+        this.spreadsheet.collaborativeEditingModule.setLocalUser(this.currentUser);
+
+        // Open the synchronized workbook state.
+        this.spreadsheet.openFromJson({ file: data.sfdt });
     }
 
     public sendActionToServer(action: any): void {
-        if (!action) {
-            return;
-        }
+        if (!action) return;
 
-        this.spreadsheet
-            .collaborativeEditingModule
-            .sendActionToServer(action);
+        // Send a local SpreadsheetEditor action to the server.
+        this.spreadsheet.collaborativeEditingModule.sendActionToServer(action);
     }
 
-    public applyRemoteAction(
-        action: string,
-        data: ICollaborationActionData
-    ): void {
-        if (!data) {
-            return;
-        }
+    public applyRemoteAction(action: string, data: ICollaborationActionData): void {
+        if (!data) return;
 
-        this.spreadsheet
-            .collaborativeEditingModule
-            .applyRemoteAction(
-                action,
-                data.payload
-            );
-    }
-
-    private getRoomName(): string {
-        const currentUrl: URL =
-            new URL(window.location.href);
-
-        let roomId: string = (
-            currentUrl.searchParams.get('id') || ''
-        ).trim();
-
-        if (!roomId) {
-            roomId = Math.random()
-                .toString(32)
-                .slice(2);
-
-            currentUrl.searchParams.set(
-                'id',
-                roomId
-            );
-
-            window.history.replaceState(
-                window.history.state,
-                '',
-                currentUrl.pathname +
-                currentUrl.search +
-                currentUrl.hash
-            );
-        }
-
-        return roomId;
+        // Apply an action received from another user.
+        this.spreadsheet.collaborativeEditingModule.applyRemoteAction(action, data.payload);
     }
 }
 ```
 
-### Step 3: Enable collaborative editing in the Spreadsheet
+### Step 3: Configure the React SpreadsheetEditor
 
-Inject `CollaborativeEditingHandler`, set `enableCollaborativeEditing` to `true`, create the adapter and Collaboration Client, load the workbook, and join the room.
+Enable collaborative editing, inject `CollaborativeEditingHandler`, load the workbook, and join the collaboration room.
 
 ```tsx
-import {
-    Inject,
-    SpreadsheetComponent,
-    CollaborativeEditingHandler
-} from '@syncfusion/ej2-react-spreadsheet';
-import {
-    CollaborationClient
-} from '@syncfusion/ej2-collaborator';
-import {
-    SpreadsheetEditorAdapter
-} from './SpreadsheetEditorAdapter';
 import { useRef } from 'react';
+import { CollaborativeEditingHandler, Inject, SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
+import { CollaborationClient } from '@syncfusion/ej2-collaborator';
+import { SpreadsheetEditorAdapter } from './SpreadsheetEditorAdapter';
 
-const serviceUrl: string =
-    'https://localhost:5001/';
+const serviceUrl: string = '<your-collaboration-service-url>';
 const currentUser: string = 'John';
 
 export default function App() {
-    const spreadsheetRef =
-        useRef<SpreadsheetComponent>(null);
-    const adapterRef =
-        useRef<SpreadsheetEditorAdapter | null>(
-            null
-        );
-    const clientRef =
-        useRef<CollaborationClient | null>(null);
+    const spreadsheetRef = useRef<SpreadsheetComponent>(null);
+    const adapterRef = useRef<SpreadsheetEditorAdapter | null>(null);
 
     const created = async (): Promise<void> => {
-        const spreadsheet =
-            spreadsheetRef.current;
+        const spreadsheet = spreadsheetRef.current;
+        if (!spreadsheet) return;
 
-        if (!spreadsheet) {
-            return;
-        }
+        const roomName: string = new URL(window.location.href).searchParams.get('id') || 'sample-room';
+        const adapter = new SpreadsheetEditorAdapter(spreadsheet, serviceUrl, currentUser);
 
-        const adapter =
-            new SpreadsheetEditorAdapter(
-                spreadsheet,
-                serviceUrl,
-                currentUser
-            );
+        // Load the latest workbook state for the room.
+        await adapter.loadFromServer('Sample', roomName);
 
-        const client = new CollaborationClient(
-            adapter,
-            {
-                serviceUrl,
-                connectionType: 'signalr',
-                currentUser
-            }
-        );
+        const client = new CollaborationClient(adapter, {
+            serviceUrl,
+            connectionType: 'signalr',
+            currentUser
+        });
 
         adapterRef.current = adapter;
-        clientRef.current = client;
 
-        const roomName: string =
-            await adapter.loadFromServer('Sample');
-
+        // Join the collaboration room.
         await client.joinRoomAsync(roomName);
     };
 
     const actionComplete = (args: any): void => {
-        adapterRef.current
-            ?.sendActionToServer(args);
+        adapterRef.current?.sendActionToServer(args);
     };
 
     return (
         <SpreadsheetComponent
             ref={spreadsheetRef}
+            // Enable collaborative editing in the SpreadsheetEditor.
             enableCollaborativeEditing={true}
             created={created}
             actionComplete={actionComplete}
         >
-            <Inject
-                services={[
-                    CollaborativeEditingHandler
-                ]}
-            />
+            {/* Inject the collaborative editing module. */}
+            <Inject services={[CollaborativeEditingHandler]} />
         </SpreadsheetComponent>
     );
 }
 ```
 
-Users who open the application with the same `id` query parameter join the same collaboration room.
+The application is responsible for generating a unique room ID for each collaboration session and sharing the same room ID with all participating users.
 
-## Integrate the ASP.NET Core Collaboration Server
+Users who use the same room ID join the same collaboration session.
 
-### Step 4: Install the required NuGet packages
+## Integrate collaborative editing on the server
 
-Install the ASP.NET Core Collaboration Server package and the Spreadsheet server-side package:
+### Step 1: Configure Redis
 
-```powershell
-dotnet add package Syncfusion.Collaborator.Server.AspNet.Core
-dotnet add package Syncfusion.EJ2.Spreadsheet.AspNet.Core
-```
-
-Install the Redis SignalR backplane package only when the application requires SignalR scale-out:
-
-```powershell
-dotnet add package Microsoft.AspNetCore.SignalR.StackExchangeRedis
-```
-
-### Step 5: Configure Redis
-
-Add the Redis connection string to `appsettings.json`:
+Add the Redis connection string to `appsettings.json`.
 
 ```json
 {
@@ -371,11 +175,11 @@ Add the Redis connection string to `appsettings.json`:
 }
 ```
 
-Store production credentials in a secure secret provider, such as environment variables, Azure App Service settings, or Azure Key Vault.
+Store production credentials in a secure secret provider.
 
-### Step 6: Register the Collaboration Server
+### Step 2: Register the Collaboration Server
 
-Configure the Collaboration Server, register the Spreadsheet adapter, and map the collaboration endpoints in `Program.cs`:
+Configure the Collaboration Server and the SpreadsheetEditor adapter in `Program.cs`.
 
 ```csharp
 using Syncfusion.Collaboration.Core.Extensions;
@@ -383,431 +187,80 @@ using Syncfusion.Collaboration.Core.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Register Redis storage and SignalR communication.
 builder.Services.AddCollaborationServer(options =>
 {
-    options.ConnectionString =
-        builder.Configuration
-            .GetConnectionString("Redis")
-        ?? "localhost:6379";
-
+    options.ConnectionString = builder.Configuration
+        .GetConnectionString("Redis");
     options.ConnectionType =
         CollaborationConnectionType.SignalR;
 });
 
-builder.Services.AddSingleton<
-    ICollaborationAdapter,
-    SpreadsheetCollaborativeAdaptor>();
+// Register the SpreadsheetEditor collaboration adapter.
+builder.Services.AddSingleton<ICollaborationAdapter, SpreadsheetCollaborativeAdaptor>();
 
-builder.Services.AddSignalR();
 builder.Services.AddControllers();
-
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy(
-        "AllowAllOrigins",
-        policy => policy
-            .AllowAnyOrigin()
-            .AllowAnyMethod()
-            .AllowAnyHeader()
-    );
-});
+builder.Services.AddSignalR();
 
 var app = builder.Build();
 
-app.UseHttpsRedirection();
 app.UseRouting();
-app.UseCors("AllowAllOrigins");
-app.UseAuthorization();
-
 app.MapControllers();
+
+// Map the Collaboration Server endpoints.
 app.MapCollaborationServer();
 
 app.Run();
 ```
 
-SignalR is the default transport. To use WebSocket, set `ConnectionType` to `CollaborationConnectionType.WebSocket`, call `app.UseWebSockets()`, and configure the client with `connectionType: 'websocket'`.
+`AddCollaborationServer` configures Redis for collaboration data, while `AddSignalR` registers the real-time communication services. A SignalR Redis backplane is not required for this configuration.
 
-### Step 7: Add the Spreadsheet collaboration adapter
+### Step 3: Implement the SpreadsheetEditor server adapter
 
-The server adapter translates Spreadsheet actions to and from the common collaboration model, transforms concurrent operations, and processes queued save requests.
-
-```csharp
-using Microsoft.Extensions.DependencyInjection;
-using Newtonsoft.Json;
-using Syncfusion.Collaboration.Core.Interfaces;
-using Syncfusion.Collaboration.Core.Models;
-using Syncfusion.Collaboration.Core.Services;
-using Syncfusion.EJ2.Spreadsheet;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
-
-public class SpreadsheetCollaborativeAdaptor :
-    ICollaborationAdapter
-{
-    private readonly IServiceScopeFactory
-        serviceScopeFactory;
-    private readonly IBackgroundTaskQueue
-        saveTaskQueue;
-
-    public SpreadsheetCollaborativeAdaptor(
-        IBackgroundTaskQueue saveTaskQueue,
-        IServiceScopeFactory serviceScopeFactory)
-    {
-        this.saveTaskQueue = saveTaskQueue;
-        this.serviceScopeFactory =
-            serviceScopeFactory;
-    }
-
-    public CollaborationAction
-        MapControlToGenericAction(
-            object controlAction)
-    {
-        ActionInfo action =
-            (ActionInfo)controlAction;
-
-        return new CollaborationAction
-        {
-            RoomName = action.RoomName,
-            ConnectionId = action.ConnectionId,
-            CurrentUser = action.CurrentUser,
-            Version = action.Version,
-            ClientVersion = action.ClientVersion,
-            IsTransformed = action.IsTransformed,
-            Data = JsonConvert.SerializeObject(
-                action.Operations
-            )
-        };
-    }
-
-    public object MapGenericToControlAction(
-        CollaborationAction action)
-    {
-        return new ActionInfo
-        {
-            RoomName = action.RoomName,
-            ConnectionId = action.ConnectionId,
-            CurrentUser = action.CurrentUser,
-            Version = action.Version,
-            ClientVersion = action.ClientVersion,
-            IsTransformed = action.IsTransformed,
-            Operations =
-                JsonConvert.DeserializeObject<
-                    List<SpreadsheetOperation>>(
-                        action.Data
-                    )
-        };
-    }
-
-    public void TransformOperations(
-        List<CollaborationAction> actions)
-    {
-        if (actions == null ||
-            actions.Count < 2)
-        {
-            return;
-        }
-
-        List<ActionInfo> spreadsheetActions =
-            actions
-                .Select(action =>
-                    MapGenericToControlAction(
-                        action
-                    ) as ActionInfo
-                )
-                .Where(action => action != null)
-                .ToList();
-
-        if (CollaborativeEditingHandler
-            .TransformOperations(
-                spreadsheetActions
-            ))
-        {
-            ActionInfo transformedAction =
-                spreadsheetActions.Last();
-            CollaborationAction targetAction =
-                actions.Last();
-
-            targetAction.Data =
-                JsonConvert.SerializeObject(
-                    transformedAction.Operations
-                );
-            targetAction.IsTransformed =
-                transformedAction.IsTransformed;
-        }
-    }
-
-    public async Task SaveOperationsAsync(
-        List<CollaborationAction> actions,
-        string roomName,
-        bool partialSave)
-    {
-        SaveRequest request = new SaveRequest
-        {
-            Actions = actions,
-            RoomName = roomName,
-            PartialSave = partialSave
-        };
-
-        await saveTaskQueue
-            .QueueBackgroundWorkItemAsync(
-                request
-            );
-    }
-
-    public async Task ProcessSaveRequestAsync(
-        SaveRequest request,
-        CancellationToken cancellationToken)
-    {
-        cancellationToken
-            .ThrowIfCancellationRequested();
-
-        // Load the source workbook, apply the actions in
-        // request.Actions, and save the updated workbook
-        // to the required storage location.
-
-        using IServiceScope scope =
-            serviceScopeFactory.CreateScope();
-
-        IActionService actionService =
-            scope.ServiceProvider
-                .GetRequiredService<IActionService>();
-
-        await actionService.ClearRecordsAsync(
-            request.RoomName,
-            request.PartialSave
-        );
-    }
-}
-```
-
-Implement workbook loading and saving in `ProcessSaveRequestAsync` based on the application storage requirements. Clear the Redis records only after the workbook changes are saved successfully.
-
-### Step 8: Add the collaborative editing controller
-
-The controller provides the following required endpoints:
-
-| Endpoint | Purpose |
-| --- | --- |
-| `ImportFile` | Loads the workbook, applies pending room actions, and returns the latest workbook JSON and server version. |
-| `UpdateAction` | Receives, transforms, stores, and broadcasts a Spreadsheet action. |
-| `GetActionsFromServer` | Returns actions created after the client’s last synchronized version. |
-
-A simplified controller structure is shown below. Use the application-specific workbook loading and persistence implementation where indicated.
+Implement `ICollaborationAdapter` to convert SpreadsheetEditor actions, transform concurrent operations, and process queued save requests.
 
 ```csharp
-using Microsoft.AspNetCore.Cors;
-using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
-using Syncfusion.Collaboration.Core.Interfaces;
-using Syncfusion.Collaboration.Core.Models;
-using Syncfusion.Collaboration.Core.Services;
-using Syncfusion.Collaboration.Core.Transports;
-using Syncfusion.EJ2.Spreadsheet;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-[Route("api/[controller]")]
-[ApiController]
-public class CollaborativeEditingController :
-    ControllerBase
+public void TransformOperations(
+    List<CollaborationAction> actions)
 {
-    private readonly IActionService actionService;
-    private readonly ICollaborationAdapter adapter;
-    private readonly IActiveTransport transport;
+    List<ActionInfo> spreadsheetActions = actions
+        .Select(action =>
+            MapGenericToControlAction(action) as ActionInfo
+        )
+        .Where(action => action != null)
+        .ToList();
 
-    public CollaborativeEditingController(
-        IActionService actionService,
-        ICollaborationAdapter adapter,
-        IActiveTransport transport)
+    // Transform related concurrent SpreadsheetEditor actions.
+    if (CollaborativeEditingHandler.TransformOperations(
+        spreadsheetActions
+    ))
     {
-        this.actionService = actionService;
-        this.adapter = adapter;
-        this.transport = transport;
-    }
+        ActionInfo transformedAction =
+            spreadsheetActions.Last();
 
-    [HttpPost]
-    [Route("ImportFile")]
-    [EnableCors("AllowAllOrigins")]
-    public async Task<string> ImportFile(
-        [FromBody] FileInfo param)
-    {
-        List<CollaborationAction> pendingActions =
-            await actionService
-                .GetPendingOperationsAsync(
-                    param.roomName,
-                    0,
-                    -1
-                );
-
-        List<ActionInfo> spreadsheetActions =
-            pendingActions
-                .Select(action =>
-                    adapter.MapGenericToControlAction(
-                        action
-                    ) as ActionInfo
-                )
-                .Where(action => action != null)
-                .OrderBy(action => action.Version)
-                .ToList();
-
-        // Load the source workbook, apply
-        // spreadsheetActions, and convert the latest
-        // workbook to Spreadsheet JSON.
-        string workbookJson = "<workbook-json>";
-
-        int currentVersion =
-            spreadsheetActions.Count > 0
-                ? spreadsheetActions.Max(
-                    action => action.Version
-                )
-                : 0;
-
-        return JsonConvert.SerializeObject(
-            new
-            {
-                sfdt = workbookJson,
-                version = currentVersion
-            }
-        );
-    }
-
-    [HttpPost]
-    [Route("UpdateAction")]
-    [EnableCors("AllowAllOrigins")]
-    public async Task<string> UpdateAction(
-        [FromBody] ActionInfo param)
-    {
-        CollaborationAction commonAction =
-            adapter.MapControlToGenericAction(
-                param
-            );
-
-        CollaborationAction updatedAction =
-            await actionService.AddOperationAsync(
-                commonAction,
-                adapter
-            );
-
-        ActionInfo spreadsheetAction =
-            adapter.MapGenericToControlAction(
-                updatedAction
-            ) as ActionInfo;
-
-        string payload =
+        actions.Last().Data =
             JsonConvert.SerializeObject(
-                spreadsheetAction
+                transformedAction.Operations
             );
-
-        await transport.SendToGroupAsync(
-            param.RoomName,
-            "action",
-            payload
-        );
-
-        return payload;
-    }
-
-    [HttpPost]
-    [Route("GetActionsFromServer")]
-    [EnableCors("AllowAllOrigins")]
-    public async Task<ActionResult<
-        List<ActionInfo>>>
-        GetActionsFromServer(
-            [FromBody] ActionInfo param)
-    {
-        List<CollaborationAction> actions =
-            await actionService
-                .GetEffectivePendingVersionAsync(
-                    param.RoomName,
-                    param.Version
-                );
-
-        List<ActionInfo> spreadsheetActions =
-            actions
-                .Select(action =>
-                    adapter.MapGenericToControlAction(
-                        action
-                    ) as ActionInfo
-                )
-                .Where(action =>
-                    action != null &&
-                    action.Version > param.Version
-                )
-                .OrderBy(action => action.Version)
-                .ToList();
-
-        return Ok(spreadsheetActions);
-    }
-
-    public class FileInfo
-    {
-        public string fileName { get; set; }
-        public string roomName { get; set; }
     }
 }
 ```
 
-### Step 9: Run the application
+Process queued save requests based on the application storage requirements, and clear the associated Redis records only after the operations are processed successfully.
 
-1. Start Redis.
-2. Run the ASP.NET Core collaboration service:
+### Step 4: Add the SpreadsheetEditor collaboration APIs
 
-```bash
-dotnet run
-```
+Create `CollaborativeEditingController.cs` and implement the following endpoints:
 
-3. Run the React application.
-4. Open the application in multiple browser windows or tabs using the same room URL.
-5. Make changes in one Spreadsheet and confirm that the changes are synchronized in the other Spreadsheet instances.
+- **`ImportFile`** - Loads the workbook, applies pending room actions, and returns the latest workbook JSON and room version. This endpoint initializes both new users and users joining an existing room.
+- **`UpdateAction`** - Receives a local SpreadsheetEditor action, assigns its server version, transforms concurrent operations when required, stores the action in Redis, and broadcasts it to the room.
+- **`UpdateSelection`** - Stores the active cell, selected range, and editing presence of a user, then broadcasts the presence update to the other users in the room.
+- **`GetActionsFromServer`** - Returns actions created after the client's last synchronized version so that missed updates can be applied in version order.
 
-## Result
+## Limitation
 
-- Supported Spreadsheet actions are synchronized among users in the same room.
-- User join, leave, selection, and editing presence information is updated in real time.
-- Collaboration actions are stored temporarily in Redis.
-- Concurrent operations are transformed to maintain workbook consistency.
-- Missed actions can be retrieved using the client’s last synchronized version.
-- Queued actions can be applied and saved to the application’s workbook storage according to the configured save threshold and room lifecycle.
-
-## Troubleshooting
-
-### Connection issues
-
-- Verify that the ASP.NET Core service is running and accessible.
-- Verify that the client `serviceUrl` matches the service address.
-- Ensure that the configured client and server connection types match.
-- Confirm that Redis is reachable from the ASP.NET Core service.
-- Review CORS, firewall, proxy, and WebSocket settings.
-
-### Spreadsheet actions are not synchronized
-
-- Verify that `enableCollaborativeEditing` is set to `true`.
-- Verify that `CollaborativeEditingHandler` is injected.
-- Confirm that the user joined the expected room.
-- Verify that `actionComplete` forwards local actions.
-- Confirm that `applyRemoteAction` forwards `data.payload`.
-- Check the `UpdateAction` and `GetActionsFromServer` responses.
-
-### Data consistency
-
-- Verify that room versions increase sequentially.
-- Confirm that pending actions are stored in Redis.
-- Review Spreadsheet operational transformation in the server adapter.
-- Clear Redis records only after queued workbook changes are saved successfully.
-
-### Performance
-
-- Monitor Redis memory usage and active room count.
-- Monitor action frequency and SignalR throughput.
-- Configure the save threshold based on workload and workbook complexity.
-- Use a SignalR scale-out option when hosting the application on multiple servers.
+Undo and redo history is maintained locally and is not synchronized among users. An undo or redo action performed by one user does not modify another user's local undo or redo history.
 
 ## See also
 
 - [Collaborative editing overview](./overview)
-- [Syncfusion Collaborator overview](https://helpstaging.syncfusion.com/document-processing/collaborator/overview)
-- [Collaboration Client](https://helpstaging.syncfusion.com/document-processing/collaborator/collaboration-client)
-- [ASP.NET Core Collaboration Server](https://helpstaging.syncfusion.com/document-processing/collaborator/getting-started/getting-started-with-core)
