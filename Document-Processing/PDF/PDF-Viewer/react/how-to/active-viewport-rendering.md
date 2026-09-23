@@ -35,7 +35,9 @@ Instead of rendering all pages or pre-rendering multiple pages, Active Viewport 
 
 Enable the feature during PDF Viewer initialization:
 
-```jsx
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% raw %}
 import React from 'react';
 import { PdfViewerComponent, Inject, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-react-pdfviewer';
 
@@ -71,13 +73,17 @@ function ActiveViewportExample() {
 }
 
 export default ActiveViewportExample;
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ### Method 2: Using property binding
 
 Bind the property to a state variable for dynamic control:
 
-```jsx
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% raw %}
 function DynamicViewportRendering() {
     const viewerRef = React.useRef(null);
     const [enableViewport, setEnableViewport] = React.useState(true);
@@ -123,7 +129,9 @@ function DynamicViewportRendering() {
 }
 
 export default DynamicViewportRendering;
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Performance benefits
 
@@ -131,7 +139,9 @@ export default DynamicViewportRendering;
 
 Active Viewport Rendering significantly reduces memory usage:
 
-```jsx
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% raw %}
 // Monitor memory usage with Active Viewport Rendering enabled
 function MemoryAwareViewer() {
     const viewerRef = React.useRef(null);
@@ -181,7 +191,9 @@ function MemoryAwareViewer() {
 }
 
 export default MemoryAwareViewer;
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ### Loading speed comparison
 
@@ -207,7 +219,9 @@ interface ActiveViewportConfig {
 
 ### Advanced configuration example
 
-```jsx
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% raw %}
 function AdvancedViewportConfiguration() {
     const viewerRef = React.useRef(null);
 
@@ -251,7 +265,9 @@ function AdvancedViewportConfiguration() {
 }
 
 export default AdvancedViewportConfiguration;
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Use cases
 
@@ -259,7 +275,9 @@ export default AdvancedViewportConfiguration;
 
 Perfect for documents with 100+ pages:
 
-```jsx
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% raw %}
 function LargeDocumentViewer() {
     return (
         <PdfViewerComponent
@@ -287,13 +305,17 @@ function LargeDocumentViewer() {
         </PdfViewerComponent>
     );
 }
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ### Mobile and low-end devices
 
 Optimize for devices with limited resources:
 
-```jsx
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% raw %}
 function MobileOptimizedViewer() {
     const isMobile = /iPhone|iPad|Android/i.test(navigator.userAgent);
 
@@ -325,13 +347,17 @@ function MobileOptimizedViewer() {
 }
 
 export default MobileOptimizedViewer;
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Monitoring performance
 
 ### Track rendering performance
 
-```jsx
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% raw %}
 function PerformanceMonitor() {
     const viewerRef = React.useRef(null);
     const [metrics, setMetrics] = React.useState({
@@ -402,7 +428,9 @@ function PerformanceMonitor() {
 }
 
 export default PerformanceMonitor;
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Best practices
 

@@ -274,10 +274,6 @@ To get started quickly with React PDF Viewer, you can watch this video:
 
 {% endtabcontents %}
 
-{% endtabcontent %}
-
-{% endtabcontents %}
-
 ## See also
 
 - [Getting started with Server-Backed React PDF Viewer](./getting-started-with-server-backed)

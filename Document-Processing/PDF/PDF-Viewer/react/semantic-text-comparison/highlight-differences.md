@@ -32,18 +32,24 @@ When you compare two PDF documents using the semantic text comparison feature, d
 
 ### Step 1: Import required components
 
-```jsx
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% raw %}
 import React from 'react';
 import { PdfComparer, TextComparisonOptions } from '@syncfusion/ej2-react-pdfviewer';
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { UploaderComponent } from '@syncfusion/ej2-react-inputs';
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ### Step 2: Create the semantic text comparison component
 
 Set up the comparison with file upload capabilities:
 
-```jsx
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% raw %}
 function SemanticTextComparison() {
     const pdfComparerRef = React.useRef<PdfComparer | null>(null);
     const originalUploaderRef = React.useRef<UploaderComponent | null>(null);
@@ -91,13 +97,17 @@ function SemanticTextComparison() {
 }
 
 export default SemanticTextComparison;
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ### Step 3: Configure highlight colors and options
 
 Define the `TextComparisonOptions` interface to customize highlighting:
 
-```jsx
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% raw %}
 const comparisonOptions: TextComparisonOptions = {
     beforeColor: '#FF0000',        // Color for deleted text (red)
     afterColor: '#00FF00',         // Color for added text (green)
@@ -105,13 +115,17 @@ const comparisonOptions: TextComparisonOptions = {
     afterColorOpacity: 0.4,        // Transparency for added (0-1)
     enableHighlights: true         // Enable visual highlighting
 };
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ### Step 4: Add file upload functionality
 
 Handle file uploads for custom PDFs:
 
-```jsx
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% raw %}
 const handleFileChange = (args: any, isOriginal: boolean): void => {
     const file = args.filesData?.[0]?.rawFile as File | undefined;
     if (!file) return;
@@ -153,7 +167,9 @@ const handleCompare = async (): Promise<void> => {
         alert('Error comparing the PDF documents. Please try again.');
     }
 };
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Highlight customization
 
@@ -171,7 +187,9 @@ The highlight appearance is controlled by these options:
 
 Use high-contrast colors for better visibility:
 
-```jsx
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% raw %}
 const accessibleOptions: TextComparisonOptions = {
     beforeColor: '#E31937',      // Strong red for deleted
     afterColor: '#0070C0',       // Strong blue for added
@@ -179,7 +197,9 @@ const accessibleOptions: TextComparisonOptions = {
     afterColorOpacity: 0.5,
     enableHighlights: true
 };
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Features
 
