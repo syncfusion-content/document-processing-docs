@@ -240,14 +240,14 @@ Text overflow is supported for plain text, rich text, hyperlinks, and RTL layout
 The following code example demonstrates text overflow in the Spreadsheet.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/javascript-es5/text-overflow-cs1/app/app.jsx %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/spreadsheet/javascript-es5/text-overflow-cs1/index.ts %}
 {% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/javascript-es5/text-overflow-cs1/app/app.tsx %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/javascript-es5/text-overflow-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
-
+        
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/text-overflow-cs1" %}
 
 ### Limitations of Formatting
