@@ -22,9 +22,9 @@ N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-plat
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Opens an existing Word document.
-WordDocument document = new WordDocument("Template.docx");
+WordDocument document = new WordDocument(Path.GetFullPath(@"Data\Template.docx"));
 //Loads the signing certificate from disk.
-OfficeDigitalSignatureCertificate certificate = new OfficeDigitalSignatureCertificate("Certificate.pfx", "password");
+OfficeDigitalSignatureCertificate certificate = new OfficeDigitalSignatureCertificate(Path.GetFullPath(@"Data\Certificate.pfx"), "password");
 //Configures signature settings.
 SignatureSettings settings = new SignatureSettings();
 settings.Comments = "Approved";
@@ -32,7 +32,7 @@ settings.SignTime = DateTime.Now;
 //Adds an invisible digital signature to the document using the certificate and settings.
 document.AddDigitalSignature(certificate, settings);
 //Saves the Word document to file.
-document.Save("Result.docx", FormatType.Docx);
+document.Save(Path.GetFullPath(@"Output\Result.docx"), FormatType.Docx);
 //Closes the document
 document.Close();
 
@@ -41,9 +41,9 @@ document.Close();
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
 //Opens an existing Word document.
-WordDocument document = new WordDocument("Template.docx");
+WordDocument document = new WordDocument(Path.GetFullPath(@"Data\Template.docx"));
 //Loads the signing certificate from disk.
-OfficeDigitalSignatureCertificate certificate = new OfficeDigitalSignatureCertificate("Certificate.pfx", "password");
+OfficeDigitalSignatureCertificate certificate = new OfficeDigitalSignatureCertificate(Path.GetFullPath(@"Data\Certificate.pfx"), "password");
 //Configures signature settings.
 SignatureSettings settings = new SignatureSettings();
 settings.Comments = "Approved";
@@ -51,7 +51,7 @@ settings.SignTime = DateTime.Now;
 //Adds an invisible digital signature to the document using the certificate and settings.
 document.AddDigitalSignature(certificate, settings);
 //Saves the Word document to file.
-document.Save("Result.docx", FormatType.Docx);
+document.Save(Path.GetFullPath(@"Output\Result.docx"), FormatType.Docx);
 //Closes the document
 document.Close();
 
@@ -60,9 +60,9 @@ document.Close();
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 'Opens an existing Word document.
-Dim document As New WordDocument("Template.docx")
+Dim document As New WordDocument(Path.GetFullPath("Data\Template.docx"))
 'Loads the signing certificate from disk.
-Dim certificate As New OfficeDigitalSignatureCertificate("Certificate.pfx", "password")
+Dim certificate As New OfficeDigitalSignatureCertificate(Path.GetFullPath("Data\Certificate.pfx"), "password")
 'Configures signature settings.
 Dim settings As New SignatureSettings()
 settings.Comments = "Approved"
@@ -70,7 +70,7 @@ settings.SignTime = DateTime.Now
 'Adds an invisible digital signature to the document using the certificate and settings.
 document.AddDigitalSignature(certificate, settings)
 'Saves the Word document to file.
-document.Save("Result.docx", FormatType.Docx)
+document.Save(Path.GetFullPath("Output\Result.docx"), FormatType.Docx)
 'Closes the document
 document.Close()
 
@@ -89,7 +89,7 @@ N> A signature line itself is not signed. You must [sign the signature line](#si
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Opens an existing Word document.
-WordDocument document = new WordDocument("Template.docx");
+WordDocument document = new WordDocument(Path.GetFullPath(@"Data\Template.docx"));
 //Gets the first section of the document.
 IWSection section = document.Sections[0];
 //Adds new paragraph to the section.
@@ -109,7 +109,7 @@ settings.ShowDate = true;
 //Inserts the signature line into the new paragraph with the specified dimensions.
 IWPicture picture = signatureParagraph.AppendSignatureLine(settings, 200, 100);
 //Saves the Word document to file.
-document.Save("Result.docx", FormatType.Docx);
+document.Save(Path.GetFullPath(@"Output\Result.docx"), FormatType.Docx);
 //Closes the document
 document.Close();
 
@@ -118,7 +118,7 @@ document.Close();
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
 //Opens an existing Word document.
-WordDocument document = new WordDocument("Template.docx");
+WordDocument document = new WordDocument(Path.GetFullPath(@"Data\Template.docx"));
 //Gets the first section of the document.
 IWSection section = document.Sections[0];
 //Adds new paragraph to the section.
@@ -138,7 +138,7 @@ settings.ShowDate = true;
 //Inserts the signature line into the new paragraph with the specified dimensions.
 IWPicture picture = signatureParagraph.AppendSignatureLine(settings, 200, 100);
 //Saves the Word document to file.
-document.Save("Result.docx", FormatType.Docx);
+document.Save(Path.GetFullPath(@"Output\Result.docx"), FormatType.Docx);
 //Closes the document
 document.Close();
 
@@ -147,7 +147,7 @@ document.Close();
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 'Opens an existing Word document.
-Dim document As New WordDocument("Template.docx")
+Dim document As New WordDocument(Path.GetFullPath("Data\Template.docx"))
 'Gets the first section of the document.
 Dim section As IWSection = document.Sections(0)
 'Adds new paragraph to the section.
@@ -167,7 +167,7 @@ settings.ShowDate = True
 'Inserts the signature line into the new paragraph with the specified dimensions.
 Dim picture As IWPicture = signatureParagraph.AppendSignatureLine(settings, 200, 100)
 'Saves the Word document to file.
-document.Save("Result.docx", FormatType.Docx)
+document.Save(Path.GetFullPath("Output\Result.docx"), FormatType.Docx)
 'Closes the document
 document.Close()
 
@@ -185,7 +185,7 @@ The following code example illustrates how to sign a signature line by supplying
 
 //Opens an existing Word document and adds a signature line.
 Guid signatureLineId;
-using (WordDocument document = new WordDocument("Template.docx"))
+using (WordDocument document = new WordDocument(Path.GetFullPath(@"Data\Template.docx")))
 {
     //Gets the first section of the document.
     IWSection section = document.Sections[0];
@@ -208,24 +208,24 @@ using (WordDocument document = new WordDocument("Template.docx"))
     //Gets the unique identifier of the inserted signature line.
     signatureLineId = ((WPicture)picture).SignatureLine.Id;
     //Saves the Word document that contains the signature line.
-    document.Save("Result.docx", FormatType.Docx);
+    document.Save(Path.GetFullPath(@"Output\Result.docx"), FormatType.Docx);
 }
 
 //Loads the signing certificate from disk.
-OfficeDigitalSignatureCertificate certificate = new OfficeDigitalSignatureCertificate("Certificate.pfx", "password");
+OfficeDigitalSignatureCertificate certificate = new OfficeDigitalSignatureCertificate(Path.GetFullPath(@"Data\Certificate.pfx"), "password");
 //Opens the saved document to sign the signature line.
-using (WordDocument document = new WordDocument("Result.docx"))
+using (WordDocument document = new WordDocument(Path.GetFullPath(@"Output\Result.docx")))
 {
     //Configures signature settings, binds the signature to the signature line, and supplies a custom signature image.
     SignatureSettings settings = new SignatureSettings();
     settings.SignatureLineId = signatureLineId;
-    settings.SignatureLineImage = File.ReadAllBytes("Signature.png");
+    settings.SignatureLineImage = File.ReadAllBytes(Path.GetFullPath(@"Data\Signature.png"));
     settings.Comments = "Approved";
     settings.SignTime = DateTime.Now;
     //Signs the signature line with the supplied image to apply a visible digital signature.
     document.AddDigitalSignature(certificate, settings);
     //Saves the signed Word document to file.
-    document.Save("Result.docx", FormatType.Docx);
+    document.Save(Path.GetFullPath(@"Output\Result.docx"), FormatType.Docx);
 }
 
 {% endhighlight %}
@@ -234,7 +234,7 @@ using (WordDocument document = new WordDocument("Result.docx"))
 
 //Opens an existing Word document and adds a signature line.
 Guid signatureLineId;
-using (WordDocument document = new WordDocument("Template.docx"))
+using (WordDocument document = new WordDocument(Path.GetFullPath(@"Data\Template.docx")))
 {
     //Gets the first section of the document.
     IWSection section = document.Sections[0];
@@ -257,24 +257,24 @@ using (WordDocument document = new WordDocument("Template.docx"))
     //Gets the unique identifier of the inserted signature line.
     signatureLineId = ((WPicture)picture).SignatureLine.Id;
     //Saves the Word document that contains the signature line.
-    document.Save("Result.docx", FormatType.Docx);
+    document.Save(Path.GetFullPath(@"Output\Result.docx"), FormatType.Docx);
 }
 
 //Loads the signing certificate from disk.
-OfficeDigitalSignatureCertificate certificate = new OfficeDigitalSignatureCertificate("Certificate.pfx", "password");
+OfficeDigitalSignatureCertificate certificate = new OfficeDigitalSignatureCertificate(Path.GetFullPath(@"Data\Certificate.pfx"), "password");
 //Opens the saved document to sign the signature line.
-using (WordDocument document = new WordDocument("Result.docx"))
+using (WordDocument document = new WordDocument(Path.GetFullPath(@"Output\Result.docx")))
 {
     //Configures signature settings, binds the signature to the signature line, and supplies a custom signature image.
     SignatureSettings settings = new SignatureSettings();
     settings.SignatureLineId = signatureLineId;
-    settings.SignatureLineImage = File.ReadAllBytes("Signature.png");
+    settings.SignatureLineImage = File.ReadAllBytes(Path.GetFullPath(@"Data\Signature.png"));
     settings.Comments = "Approved";
     settings.SignTime = DateTime.Now;
     //Signs the signature line with the supplied image to apply a visible digital signature.
     document.AddDigitalSignature(certificate, settings);
     //Saves the signed Word document to file.
-    document.Save("Result.docx", FormatType.Docx);
+    document.Save(Path.GetFullPath(@"Output\Result.docx"), FormatType.Docx);
 }
 
 {% endhighlight %}
@@ -283,7 +283,7 @@ using (WordDocument document = new WordDocument("Result.docx"))
 
 'Opens an existing Word document and adds a signature line.
 Dim signatureLineId As Guid
-Using document As New WordDocument("Template.docx")
+Using document As New WordDocument(Path.GetFullPath("Data\Template.docx"))
     'Gets the first section of the document.
     Dim section As IWSection = document.Sections(0)
     'Adds new paragraph to the section.
@@ -305,23 +305,23 @@ Using document As New WordDocument("Template.docx")
     'Gets the unique identifier of the inserted signature line.
     signatureLineId = DirectCast(picture, WPicture).SignatureLine.Id
     'Saves the Word document that contains the signature line.
-    document.Save("Result.docx", FormatType.Docx)
+    document.Save(Path.GetFullPath("Output\Result.docx"), FormatType.Docx)
 End Using
 
 'Loads the signing certificate from disk.
-Dim certificate As New OfficeDigitalSignatureCertificate("Certificate.pfx", "password")
+Dim certificate As New OfficeDigitalSignatureCertificate(Path.GetFullPath("Data\Certificate.pfx"), "password")
 'Opens the saved document to sign the signature line.
-Using document As New WordDocument("Result.docx")
+Using document As New WordDocument(Path.GetFullPath("Output\Result.docx"))
     'Configures signature settings, binds the signature to the signature line, and supplies a custom signature image.
     Dim settings As New SignatureSettings()
     settings.SignatureLineId = signatureLineId
-    settings.SignatureLineImage = File.ReadAllBytes("Signature.png")
+    settings.SignatureLineImage = File.ReadAllBytes(Path.GetFullPath("Data\Signature.png"))
     settings.Comments = "Approved"
     settings.SignTime = DateTime.Now
     'Signs the signature line with the supplied image to apply a visible digital signature.
     document.AddDigitalSignature(certificate, settings)
     'Saves the signed Word document to file.
-    document.Save("Result.docx", FormatType.Docx)
+    document.Save(Path.GetFullPath("Output\Result.docx"), FormatType.Docx)
 End Using
 
 {% endhighlight %}
@@ -336,102 +336,154 @@ The following code example illustrates how to add multiple signature lines to a 
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
-//Opens an existing Word document.
-WordDocument document = new WordDocument("Template.docx");
-//Gets the last section of the document.
+// Opens an existing Word document.
+WordDocument document = new WordDocument(
+    Path.GetFullPath(@"Data\Template.docx"));
+
+// Gets the last section of the document.
 IWSection section = document.LastSection;
-//Stores the unique identifiers of the signature lines.
-List<Guid> signatureIds = new List<Guid>();
-//Defines the list of signers.
+
+// Stores the signature line IDs and corresponding signature image paths.
+Dictionary<Guid, string> signatureInfo = new Dictionary<Guid, string>();
+
+// Defines the signers.
 string[] signers = { "Tony", "Steve", "Bruce" };
-//Adds a signature line for each signer to the document.
-foreach (string signer in signers)
+
+// Defines the signature images corresponding to each signer.
+string[] images =
 {
-    //Adds new paragraph to the section.
+    Path.GetFullPath(@"Data\TonySignature.png"),
+    Path.GetFullPath(@"Data\SteveSignature.png"),
+    Path.GetFullPath(@"Data\BruceSignature.png")
+};
+
+// Adds a signature line for each signer.
+for (int i = 0; i < signers.Length; i++)
+{
     IWParagraph paragraph = section.AddParagraph();
-    //Inserts the signature line into the new paragraph with the specified dimensions.
+
     IWPicture picture = paragraph.AppendSignatureLine(
         new SignatureLineSettings()
         {
-            Signer = signer,
+            Signer = signers[i],
             SignerTitle = "Approver",
-            Email = signer + "@example.com",
+            Email = signers[i] + "@example.com",
             Instructions = "Please review and sign.",
             ShowDate = true
         },
         192,
         96);
-    //Gets the unique identifier of the inserted signature line.
-    signatureIds.Add(((WPicture)picture).SignatureLine.Id);
+
+    // Gets the unique identifier of the inserted signature line.
+    Guid signatureLineId = ((WPicture)picture).SignatureLine.Id;
+
+    // Maps the signature line to its corresponding signature image.
+    signatureInfo.Add(signatureLineId, images[i]);
 }
-//Loads the signing certificate from disk.
-OfficeDigitalSignatureCertificate certificate = new OfficeDigitalSignatureCertificate("Certificate.pfx", "password");
-//Signs each signature line in the document.
-foreach (Guid signatureLineId in signatureIds)
+
+// Loads the signing certificate.
+OfficeDigitalSignatureCertificate certificate =
+    new OfficeDigitalSignatureCertificate(
+        Path.GetFullPath(@"Data\Certificate.pfx"),
+        "password");
+
+// Signs each signature line using its corresponding signature image.
+foreach (KeyValuePair<Guid, string> item in signatureInfo)
 {
-    //Configures signature settings, binds the signature to the signature line, and supplies a custom signature image.
-    SignatureSettings settings = new SignatureSettings();
-    settings.SignatureLineId = signatureLineId;
-    settings.SignatureLineImage = File.ReadAllBytes("Signature.png");
-    settings.Comments = "Approved";
-    settings.SignTime = DateTime.Now;
-    //Signs the signature line with the supplied image to apply a visible digital signature.
+    SignatureSettings settings = new SignatureSettings()
+    {
+        SignatureLineId = item.Key,
+        SignatureLineImage = File.ReadAllBytes(item.Value),
+        Comments = "Approved",
+        SignTime = DateTime.Now
+    };
+
     document.AddDigitalSignature(certificate, settings);
 }
-//Saves the Word document to file.
-document.Save("Result.docx", FormatType.Docx);
-//Closes the document
+
+// Saves the signed document.
+document.Save(
+    Path.GetFullPath(@"Output\Result.docx"),
+    FormatType.Docx);
+
+// Closes the document.
 document.Close();
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
-//Opens an existing Word document.
-WordDocument document = new WordDocument("Template.docx");
-//Gets the last section of the document.
+// Opens an existing Word document.
+WordDocument document = new WordDocument(
+    Path.GetFullPath(@"Data\Template.docx"));
+
+// Gets the last section of the document.
 IWSection section = document.LastSection;
-//Stores the unique identifiers of the signature lines.
-List<Guid> signatureIds = new List<Guid>();
-//Defines the list of signers.
+
+// Stores the signature line IDs and corresponding signature image paths.
+Dictionary<Guid, string> signatureInfo = new Dictionary<Guid, string>();
+
+// Defines the signers.
 string[] signers = { "Tony", "Steve", "Bruce" };
-//Adds a signature line for each signer to the document.
-foreach (string signer in signers)
+
+// Defines the signature images corresponding to each signer.
+string[] images =
 {
-    //Adds new paragraph to the section.
+    Path.GetFullPath(@"Data\TonySignature.png"),
+    Path.GetFullPath(@"Data\SteveSignature.png"),
+    Path.GetFullPath(@"Data\BruceSignature.png")
+};
+
+// Adds a signature line for each signer.
+for (int i = 0; i < signers.Length; i++)
+{
     IWParagraph paragraph = section.AddParagraph();
-    //Inserts the signature line into the new paragraph with the specified dimensions.
+
     IWPicture picture = paragraph.AppendSignatureLine(
         new SignatureLineSettings()
         {
-            Signer = signer,
+            Signer = signers[i],
             SignerTitle = "Approver",
-            Email = signer + "@example.com",
+            Email = signers[i] + "@example.com",
             Instructions = "Please review and sign.",
             ShowDate = true
         },
         192,
         96);
-    //Gets the unique identifier of the inserted signature line.
-    signatureIds.Add(((WPicture)picture).SignatureLine.Id);
+
+    // Gets the unique identifier of the inserted signature line.
+    Guid signatureLineId = ((WPicture)picture).SignatureLine.Id;
+
+    // Maps the signature line to its corresponding signature image.
+    signatureInfo.Add(signatureLineId, images[i]);
 }
-//Loads the signing certificate from disk.
-OfficeDigitalSignatureCertificate certificate = new OfficeDigitalSignatureCertificate("Certificate.pfx", "password");
-//Signs each signature line in the document.
-foreach (Guid signatureLineId in signatureIds)
+
+// Loads the signing certificate.
+OfficeDigitalSignatureCertificate certificate =
+    new OfficeDigitalSignatureCertificate(
+        Path.GetFullPath(@"Data\Certificate.pfx"),
+        "password");
+
+// Signs each signature line using its corresponding signature image.
+foreach (KeyValuePair<Guid, string> item in signatureInfo)
 {
-    //Configures signature settings, binds the signature to the signature line, and supplies a custom signature image.
-    SignatureSettings settings = new SignatureSettings();
-    settings.SignatureLineId = signatureLineId;
-    settings.SignatureLineImage = File.ReadAllBytes("Signature.png");
-    settings.Comments = "Approved";
-    settings.SignTime = DateTime.Now;
-    //Signs the signature line with the supplied image to apply a visible digital signature.
+    SignatureSettings settings = new SignatureSettings()
+    {
+        SignatureLineId = item.Key,
+        SignatureLineImage = File.ReadAllBytes(item.Value),
+        Comments = "Approved",
+        SignTime = DateTime.Now
+    };
+
     document.AddDigitalSignature(certificate, settings);
 }
-//Saves the Word document to file.
-document.Save("Result.docx", FormatType.Docx);
-//Closes the document
+
+// Saves the signed document.
+document.Save(
+    Path.GetFullPath(@"Output\Result.docx"),
+    FormatType.Docx);
+
+// Closes the document.
 document.Close();
 
 {% endhighlight %}
@@ -439,47 +491,54 @@ document.Close();
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 'Opens an existing Word document.
-Dim document As New WordDocument("Template.docx")
+Dim document As New WordDocument(Path.GetFullPath("Data\Template.docx"))
 'Gets the last section of the document.
 Dim section As IWSection = document.LastSection
-'Stores the unique identifiers of the signature lines.
-Dim signatureIds As New List(Of Guid)()
-'Defines the list of signers.
+'Stores the signature line IDs and corresponding signature image paths.
+Dim signatureInfo As New Dictionary(Of Guid, String)()
+'Defines the signers.
 Dim signers As String() = { "Tony", "Steve", "Bruce" }
-'Adds a signature line for each signer to the document.
-For Each signer As String In signers
-    'Adds new paragraph to the section.
+'Defines the signature images corresponding to each signer.
+Dim images As String() = {
+    Path.GetFullPath("Data\TonySignature.png"),
+    Path.GetFullPath("Data\SteveSignature.png"),
+    Path.GetFullPath("Data\BruceSignature.png")
+}
+'Adds a signature line for each signer.
+For i As Integer = 0 To signers.Length - 1
     Dim paragraph As IWParagraph = section.AddParagraph()
-    'Inserts the signature line into the new paragraph with the specified dimensions.
     Dim picture As IWPicture = paragraph.AppendSignatureLine(
         New SignatureLineSettings() With {
-            .Signer = signer,
+            .Signer = signers(i),
             .SignerTitle = "Approver",
-            .Email = signer & "@example.com",
+            .Email = signers(i) & "@example.com",
             .Instructions = "Please review and sign.",
             .ShowDate = True
         },
         192,
         96)
     'Gets the unique identifier of the inserted signature line.
-    signatureIds.Add(DirectCast(picture, WPicture).SignatureLine.Id)
+    Dim signatureLineId As Guid = DirectCast(picture, WPicture).SignatureLine.Id
+    'Maps the signature line to its corresponding signature image.
+    signatureInfo.Add(signatureLineId, images(i))
 Next
-'Loads the signing certificate from disk.
-Dim certificate As New OfficeDigitalSignatureCertificate("Certificate.pfx", "password")
-'Signs each signature line in the document.
-For Each signatureLineId As Guid In signatureIds
-    'Configures signature settings, binds the signature to the signature line, and supplies a custom signature image.
-    Dim settings As New SignatureSettings()
-    settings.SignatureLineId = signatureLineId
-    settings.SignatureLineImage = File.ReadAllBytes("Signature.png")
-    settings.Comments = "Approved"
-    settings.SignTime = DateTime.Now
-    'Signs the signature line with the supplied image to apply a visible digital signature.
+'Loads the signing certificate.
+Dim certificate As New OfficeDigitalSignatureCertificate(
+    Path.GetFullPath("Data\Certificate.pfx"),
+    "password")
+'Signs each signature line using its corresponding signature image.
+For Each item As KeyValuePair(Of Guid, String) In signatureInfo
+    Dim settings As New SignatureSettings() With {
+        .SignatureLineId = item.Key,
+        .SignatureLineImage = File.ReadAllBytes(item.Value),
+        .Comments = "Approved",
+        .SignTime = DateTime.Now
+    }
     document.AddDigitalSignature(certificate, settings)
 Next
-'Saves the Word document to file.
-document.Save("Result.docx", FormatType.Docx)
-'Closes the document
+'Saves the signed document.
+document.Save(Path.GetFullPath("Output\Result.docx"), FormatType.Docx)
+'Closes the document.
 document.Close()
 
 {% endhighlight %}
@@ -495,7 +554,7 @@ The following code example illustrates how to validate digital signatures that a
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Opens the signed Word document.
-WordDocument document = new WordDocument("SignedDocument.docx");
+WordDocument document = new WordDocument(Path.GetFullPath(@"Data\SignedDocument.docx"));
 //Gets the digital signature collection in the document.
 OfficeDigitalSignatureCollection signatures = document.DigitalSignatures;
 //Checks whether every digital signature in the collection is valid.
@@ -516,7 +575,7 @@ document.Close();
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
 //Opens the signed Word document.
-WordDocument document = new WordDocument("SignedDocument.docx");
+WordDocument document = new WordDocument(Path.GetFullPath(@"Data\SignedDocument.docx"));
 //Gets the digital signature collection in the document.
 OfficeDigitalSignatureCollection signatures = document.DigitalSignatures;
 //Checks whether every digital signature in the collection is valid.
@@ -537,7 +596,7 @@ document.Close();
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 'Opens the signed Word document.
-Dim document As New WordDocument("SignedDocument.docx")
+Dim document As New WordDocument(Path.GetFullPath("Data\SignedDocument.docx"))
 'Gets the digital signature collection in the document.
 Dim signatures As OfficeDigitalSignatureCollection = document.DigitalSignatures
 'Checks whether every digital signature in the collection is valid.
@@ -565,11 +624,11 @@ The following code example illustrates how to remove all the digital signatures 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
 
 //Opens the signed Word document.
-WordDocument document = new WordDocument("SignedDocument.docx");
+WordDocument document = new WordDocument(Path.GetFullPath(@"Data\SignedDocument.docx"));
 //Removes all digital signatures from the document.
 document.RemoveAllDigitalSignatures();
 //Saves the Word document to file.
-document.Save("Result.docx", FormatType.Docx);
+document.Save(Path.GetFullPath(@"Output\Result.docx"), FormatType.Docx);
 //Closes the document
 document.Close();
 
@@ -578,11 +637,11 @@ document.Close();
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
 //Opens the signed Word document.
-WordDocument document = new WordDocument("SignedDocument.docx");
+WordDocument document = new WordDocument(Path.GetFullPath(@"Data\SignedDocument.docx"));
 //Removes all digital signatures from the document.
 document.RemoveAllDigitalSignatures();
 //Saves the Word document to file.
-document.Save("Result.docx", FormatType.Docx);
+document.Save(Path.GetFullPath(@"Output\Result.docx"), FormatType.Docx);
 //Closes the document
 document.Close();
 
@@ -591,11 +650,11 @@ document.Close();
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 'Opens the signed Word document.
-Dim document As New WordDocument("SignedDocument.docx")
+Dim document As New WordDocument(Path.GetFullPath("Data\SignedDocument.docx"))
 'Removes all digital signatures from the document.
 document.RemoveAllDigitalSignatures()
 'Saves the Word document to file.
-document.Save("Result.docx", FormatType.Docx)
+document.Save(Path.GetFullPath("Output\Result.docx"), FormatType.Docx)
 'Closes the document
 document.Close()
 
