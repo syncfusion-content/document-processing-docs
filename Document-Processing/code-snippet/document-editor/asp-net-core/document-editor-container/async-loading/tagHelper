@@ -1,0 +1,14 @@
+
+<ejs-documenteditorcontainer id="container" serviceUrl="/api/DocumentEditor/" enableToolbar=true created="onCreated" height="590px"></ejs-documenteditorcontainer>
+
+<script>
+    var container;
+    function onCreated() {
+        var documenteditorElement = document.getElementById("container");
+        container = documenteditorElement.ej2_instances[0];
+        container.documentEditorSettings.openAsyncSettings.enable = true;
+        container.documentEditorSettings.openAsyncSettings.initialPageLoadCount = 5;
+        container.documentEditorSettings.openAsyncSettings.incrementalPageLoadCount = 3;
+    }
+</script>
+

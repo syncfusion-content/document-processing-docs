@@ -151,6 +151,59 @@ Here's how to handle the server-side action for converting a Word document into 
 
 To know about server-side action, please refer to this [page](./web-services-overview).
 
+## Opening a document in asynchronous mode
+
+[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) supports asynchronous document loading, which can be enabled using the enable property available in the openAsyncSettings API.
+
+### Properties
+
+**enable:** Enables or disables asynchronous document loading.
+**initialPageLoadCount:** Number of pages to load initially when the document is opened.
+**incrementalPageLoadCount:** Number of pages to load incrementally after initial pages load, during the asynchronous document-loading operation.
+
+The following example shows how to open the document asynchronously in DOCX Editor.
+
+```typescript
+import { Component, OnInit, ViewChild } from '@angular/core';
+import {
+  ToolbarService,
+  DocumentEditorContainerComponent,
+} from '@syncfusion/ej2-angular-documenteditor';
+import { DocumentEditorContainerModule } from '@syncfusion/ej2-angular-documenteditor';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [DocumentEditorContainerModule],
+  providers: [ToolbarService],
+  template: `
+    <ejs-documenteditorcontainer #documenteditor_default 
+      serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" 
+      height="600px" 
+      style="display:block" 
+      [documentEditorSettings]= "fontFamilies"
+      (created)="onCreate()"
+    [enableToolbar]=true >
+    </ejs-documenteditorcontainer>
+  `,
+})
+export class AppComponent implements OnInit {
+  @ViewChild('documenteditor_default')
+  public container?: DocumentEditorContainerComponent;
+  public fontFamilies = {
+    fontFamilies: ['Algerian', 'Arial', 'Calibri', 'Cambria', 'Windings'],
+  };
+  ngOnInit(): void {}
+  onCreate() {
+    this.container.documentEditorSettings.openAsyncSettings.enable = true;
+    this.container.documentEditorSettings.openAsyncSettings.initialPageLoadCount = 5;
+    this.container.documentEditorSettings.openAsyncSettings.incrementalPageLoadCount = 3;
+  }
+}
+```
+
+N> When asynchronous loading is enabled, the document initially opens in read-only mode, allowing users to view the first set of pages while the remaining pages load in the background. During this time, the document can be viewed but cannot be edited or saved. Once loading is complete, editing and saving become available.
+
 ## Compatibility with Microsoft Word
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor is a minimal viable Word document viewer/editor product for web applications. As the most compatible Word editor, the product vision is adding valuable feature sets of Microsoft Word, and not to cover 100% feature sets of Microsoft Word desktop application. You can even see the feature sets difference between Microsoft Word desktop and their Word online application. So kindly don't misunderstand this component as a complete replacement for Microsoft Word desktop application and expect 100% feature sets of it.
