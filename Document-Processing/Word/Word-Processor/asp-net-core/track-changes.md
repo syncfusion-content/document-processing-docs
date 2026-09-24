@@ -122,6 +122,24 @@ container.documentEditor.selection.navigateNextRevision();
  */
 container.documentEditor.selection.navigatePreviousRevision();
 ```
+## Set colors for revision types
+
+By default, the DOCX Editor uses author-based colors for tracked changes. You can also customize colors for specific revision types, such as inserted content, deleted content, inserted table rows, and deleted table rows.
+ 
+The following example shows how to customize revision type colors instead of using the default author-based colors.
+
+{% tabs %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/track-changes-RevisionTypeColors/tagHelper %}
+{% endhighlight %}
+{% highlight c# tabtitle="Track-changes-RevisionTypeColors.cs" %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/track-changes-RevisionTypeColors/document-editor.cs %}
+{% endhighlight %}
+{% endtabs %}
+
+> **Note**
+> * These settings only affect how revisions are displayed in the DOCX Editor and are not stored in the document.
+> * By default, all revision types use author-specific colors (`'byAuthor'`).
 
 ## Filtering changes based on user
 
