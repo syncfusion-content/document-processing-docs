@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Add Annotations From Text Search in ASP.NET MVC | Syncfusion
 description: Add annotations from text search results in the ASP.NET MVC PDF Viewer by responding to text search events and using the search bounds.

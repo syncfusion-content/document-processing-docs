@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: About Annotation in Blazor PDF Viewer Component | Syncfusion
 description: Learn about Syncfusion Blazor PDF Viewer Annotations and how to add, edit, delete, and configure Annotations in the Blazor PDF Viewer.

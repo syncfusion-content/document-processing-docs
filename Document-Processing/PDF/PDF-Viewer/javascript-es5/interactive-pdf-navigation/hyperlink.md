@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Hyperlink in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Configure hyperlink navigation in the JavaScript (ES5) PDF Viewer, including how internal and external links open when users click them.

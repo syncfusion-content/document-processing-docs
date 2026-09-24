@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Handle the ExtractTextCompleted Event | Syncfusion
 description: Use the extractTextCompleted event and isExtractText property in the JavaScript (ES6) PDF Viewer to extract text and bounds from a loaded PDF.

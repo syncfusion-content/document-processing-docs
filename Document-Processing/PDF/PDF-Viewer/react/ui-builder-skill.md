@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Ui Builder Skill in React PDF Viewer | Syncfusion
 description: Install the Syncfusion React UI Builder skill to generate production-ready React components that include the PDF Viewer from natural-language prompts.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Custom Data in Annotation Blazor PDF Viewer | Syncfusion
 description: Learn how to use custom data in annotations in the Blazor PDF Viewer to attach metadata to annotations.

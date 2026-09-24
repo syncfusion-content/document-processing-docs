@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Import Annotation in Angular PDF Viewer | Syncfusion
 description: Import annotations into the Angular PDF Viewer in supported formats using the built-in UI options and programmatic APIs.

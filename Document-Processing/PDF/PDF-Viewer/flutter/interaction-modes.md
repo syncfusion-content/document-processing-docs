@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Interaction modes in Flutter PDF Viewer | Syncfusion
 description: The interaction modes feature in SfPdfViewer allows users to switch between pan and text selection modes.

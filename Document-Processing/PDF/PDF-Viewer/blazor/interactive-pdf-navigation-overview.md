@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: About Navigation in Blazor PDF Viewer Component | Syncfusion
 description: Learn about how to navigate pages in the Blazor PDF Viewer component using the toolbar, bookmarks, thumbnails, hyperlinks, and the table of contents.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Custom Data in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Attach custom metadata to annotations in the JavaScript (ES6) PDF Viewer and read it back later to drive tailored workflows and integrations.

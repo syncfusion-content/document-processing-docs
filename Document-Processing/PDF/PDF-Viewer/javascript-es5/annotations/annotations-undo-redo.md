@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Annotations Undo Redo in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Undo and redo annotation changes in the JavaScript (ES5) PDF Viewer from the toolbar, keyboard shortcuts, and programmatic APIs.

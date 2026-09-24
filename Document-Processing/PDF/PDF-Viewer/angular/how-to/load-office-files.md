@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Load Office Files in Angular PDF Viewer | Syncfusion
 description: Load Microsoft Office files (Word, Excel, PowerPoint) into the Angular PDF Viewer so users can preview them as PDFs in the browser.

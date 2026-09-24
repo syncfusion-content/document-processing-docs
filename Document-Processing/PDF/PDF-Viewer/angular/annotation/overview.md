@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: About Syncfusion Angular PDF Viewer Annotations | Syncfusion
 description: Learn about introduction of the Syncfusion Angular PDF Viewer Annotations section and the key capabilities it provides.

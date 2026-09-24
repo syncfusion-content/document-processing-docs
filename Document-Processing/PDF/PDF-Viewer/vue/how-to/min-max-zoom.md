@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Configure MinZoom and MaxZoom in Vue PDF Viewer | Syncfusion
 description: Configure the minimum and maximum zoom levels in the Vue PDF Viewer using minZoom and maxZoom to control the zoom range for users.

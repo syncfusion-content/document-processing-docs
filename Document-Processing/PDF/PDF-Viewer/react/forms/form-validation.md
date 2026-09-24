@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Form Validation in React PDF Viewer | Syncfusion
 description: Enable built-in PDF form field validation in the React PDF Viewer and detect missing required fields while users complete a form.

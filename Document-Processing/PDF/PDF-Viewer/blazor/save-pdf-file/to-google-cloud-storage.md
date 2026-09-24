@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Save PDF files to Google Cloud Storage in PDF Viewer | Syncfusion
 description: Learn how to save PDF files to Google Cloud Storage from the Blazor PDF Viewer  with a secure, step-by-step workflow.

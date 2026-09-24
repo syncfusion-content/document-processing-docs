@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Arrow Annotation (Shape) in Blazor PDF Viewer  | Syncfusion
 description: Learn how to enable, apply, customize, and manage Arrow annotations in the Blazor PDF Viewer component and more details.

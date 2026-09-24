@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Programmatically Get Differences | Syncfusion React PDF Viewer
 description: Learn how to programmatically access text differences between two PDF documents in the Syncfusion React PDF Viewer.

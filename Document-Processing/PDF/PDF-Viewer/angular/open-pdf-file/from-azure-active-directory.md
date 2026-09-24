@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: From Azure Active Directory in Angular PDF Viewer | Syncfusion
 description: Learn about the from azure active directory in the Angular PDF Viewer and how it helps users work with PDF documents more effectively.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: From Dropbox Cloud File Storage in Angular PDF Viewer | Syncfusion
 description: Load and display PDF files stored in Dropbox cloud storage in the Angular PDF Viewer using standalone and server-backed approaches.

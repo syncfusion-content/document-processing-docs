@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Magnification in Angular PDF Viewer | Syncfusion
 description: Enable and use magnification in the Angular PDF Viewer, including Zoom In, Zoom Out, Fit to Page, and Fit to Width options.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Content Security Policy in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Configure Content Security Policy headers for the JavaScript (ES5) PDF Viewer so the viewer loads correctly while keeping the host page secure.

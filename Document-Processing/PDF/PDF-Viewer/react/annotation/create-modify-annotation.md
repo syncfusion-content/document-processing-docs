@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Create Modify Annotation in React PDF Viewer | Syncfusion
 description: Create new annotations and modify existing ones in the React PDF Viewer using the built-in UI and programmatic APIs for every supported type.

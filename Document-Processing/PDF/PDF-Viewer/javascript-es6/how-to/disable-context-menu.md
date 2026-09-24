@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Disable the Context Menu in JavaScript (ES6) PDF | Syncfusion
 description: Disable the right-click context menu in the JavaScript (ES6) PDF Viewer to prevent users from accessing context menu actions on PDF content.

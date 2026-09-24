@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Cp Command Not Recognized in Angular PDF Viewer | Syncfusion
 description: Resolve the cp is not recognized error in the Angular PDF Viewer by using Windows-native commands such as xcopy or PowerShell Copy-Item.

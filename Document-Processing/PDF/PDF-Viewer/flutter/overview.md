@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: About Syncfusion Flutter PDF Viewer Control | Syncfusion
 description: Learn about introduction of Syncfusion Essential Studio Flutter PDF Viewer control and more details.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Page Thumbnail in Vue PDF Viewer | Syncfusion
 description: Use page thumbnail navigation in the Vue PDF Viewer to preview and jump to any page through a visual sidebar of page thumbnails.

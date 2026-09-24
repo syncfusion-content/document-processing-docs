@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: To Azure Active Directory in ASP.NET MVC PDF Viewer | Syncfusion
 description: Learn about the to azure active directory in the ASP.NET MVC PDF Viewer and how it helps users work with PDF documents more effectively.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Getting Started with Server-Backed ASP.NET Core Viewer | Syncfusion
 description: Integrate the server-backed PDF Viewer control in an ASP.NET Core application. View and annotate with server-side rendering and document processing.

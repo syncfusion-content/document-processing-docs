@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Show the Bookmark Pane in ASP.NET Core PDF Viewer | Syncfusion
 description: Show or hide the bookmark pane in the ASP.NET Core PDF Viewer using showBookmarkPane to control when users can access document bookmarks.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Resolve the “Client-side error” in .Net 6.0 | Syncfusion
 description: Learn here all about resolve the “Client-side error is found” issue in .Net 6.0 which uses System.Text.Json for serialization.

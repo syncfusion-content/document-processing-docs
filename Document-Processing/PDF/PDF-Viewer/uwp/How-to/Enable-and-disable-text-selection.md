@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Enable or Disable Text Selection in UWP PDF Viewer | Syncfusion
 description: Learn how to enable and disable text selection in uwp pdf viewer in Syncfusion UWP PDF Viewer with examples and implementation details.

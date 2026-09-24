@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Handle Page Render Events in ASP.NET Core PDF | Syncfusion
 description: Use the pageRenderInitiate and pageRenderComplete events in the ASP.NET Core PDF Viewer to track page rendering and coordinate custom UI updates.

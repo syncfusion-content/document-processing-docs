@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Mobile View in ASP.NET MVC PDF Viewer | Syncfusion
 description: Use the Organize Pages panel on mobile devices in the ASP.NET MVC PDF Viewer to rotate, rearrange, add, remove, and duplicate PDF pages.

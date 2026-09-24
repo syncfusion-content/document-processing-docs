@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Export Import Events in Angular PDF Viewer | Syncfusion
 description: Handle import and export events in the Angular PDF Viewer to run custom logic when annotations are loaded or saved from the control.

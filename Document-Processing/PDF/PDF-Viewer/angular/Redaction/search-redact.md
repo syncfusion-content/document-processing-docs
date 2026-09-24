@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Search Redact in Angular PDF Viewer | Syncfusion
 description: Learn about the search redact in the Angular PDF Viewer and how it helps users work with PDF documents more effectively.

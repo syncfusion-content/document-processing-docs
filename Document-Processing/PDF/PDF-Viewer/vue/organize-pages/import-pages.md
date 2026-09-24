@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Import Pages in Vue PDF Viewer | Syncfusion
 description: Import pages from another PDF into the current document in the Vue PDF Viewer using the Organize Pages panel.

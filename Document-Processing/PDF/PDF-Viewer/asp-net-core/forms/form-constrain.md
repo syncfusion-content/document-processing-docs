@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Form Constrain in ASP.NET Core PDF Viewer | Syncfusion
 description: Configure form field constraints in the ASP.NET Core PDF Viewer, including isReadOnly, isRequired, and isPrint flags for each field.

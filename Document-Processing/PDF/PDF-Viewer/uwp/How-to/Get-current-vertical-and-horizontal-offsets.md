@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Get Page Offsets in UWP PDF Viewer | Syncfusion
 description: Learn how to get current vertical and horizontal offsets in uwp pdf viewer in Syncfusion UWP PDF Viewer with examples and implementation details.

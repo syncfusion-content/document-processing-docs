@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Hyperlink in Vue PDF Viewer | Syncfusion
 description: Configure hyperlink navigation in the Vue PDF Viewer, including how internal and external links open when users click them.

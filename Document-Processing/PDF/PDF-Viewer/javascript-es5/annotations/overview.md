@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: About Syncfusion JavaScript (ES5) PDF Viewer Annotations | Syncfusion
 description: Learn about introduction of the Syncfusion JavaScript (ES5) PDF Viewer Annotations section and the key capabilities it provides.

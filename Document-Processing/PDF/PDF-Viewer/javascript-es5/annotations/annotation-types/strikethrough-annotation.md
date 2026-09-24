@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Strikethrough Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Enable, apply, customize, and manage Strikethrough annotations in the JavaScript (ES5) PDF Viewer to mark text with a horizontal line through it.

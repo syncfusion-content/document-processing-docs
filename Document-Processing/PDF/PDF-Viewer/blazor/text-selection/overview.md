@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: About Text selection in Blazor PDF Viewer Component | Syncfusion
 description: Learn about Syncfusion Blazor PDF Viewer text selection concepts, copy behavior, and interaction capabilities of the Blazor PDF Viewer.

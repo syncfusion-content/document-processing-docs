@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Save PDF files to AWS S3 in PDF Viewer  | Syncfusion
 description: Learn here all about how to save PDF files to AWS S3 in Blazor PDF Viewer component and much more details.

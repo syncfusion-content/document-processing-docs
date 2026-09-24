@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Bookmark in Vue PDF Viewer | Syncfusion
 description: Navigate PDF bookmarks in the Vue PDF Viewer to jump quickly to specific sections of a document using the bookmark panel.

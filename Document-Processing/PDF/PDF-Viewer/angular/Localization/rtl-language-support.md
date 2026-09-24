@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Rtl Language Support in Angular PDF Viewer | Syncfusion
 description: Enable right-to-left (RTL) language support in the Angular PDF Viewer so the UI mirrors correctly for languages such as Arabic and Hebrew.

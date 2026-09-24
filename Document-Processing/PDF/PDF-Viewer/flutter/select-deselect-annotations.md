@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Select and Deselect Annotations in Flutter PDF Viewer | Syncfusion
 description: The annotation selection feature in SfPdfViewer enables users to select and deselect annotations for efficient review and annotation management.

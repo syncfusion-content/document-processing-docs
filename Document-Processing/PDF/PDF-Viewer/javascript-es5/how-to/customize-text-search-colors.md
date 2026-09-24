@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Customize the Text Search Colors in JavaScript | Syncfusion
 description: Customize the highlight colors used for text search matches in the JavaScript (ES5) PDF Viewer to match your application design.

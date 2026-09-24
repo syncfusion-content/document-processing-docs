@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Getting Started with Blazor Web App PDF Viewer | Syncfusion
 description: Learn how to get started with the Syncfusion Blazor Web App PDF Viewer component. Explore view, comment on, and fill PDF forms.

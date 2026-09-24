@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Prevent Copy and Print in React PDF Viewer | Syncfusion
 description: Prevent users from copying or printing PDF content in the React PDF Viewer using viewer settings and server-side permission flags.

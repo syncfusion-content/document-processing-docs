@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Right-to-Left Layout in .NET MAUI PDF Viewer | Syncfusion
 description: Learn how to enable right-to-left layout in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.

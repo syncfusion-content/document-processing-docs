@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Localization in .NET MAUI PDF Viewer | Syncfusion
 description: Learn how to localize the static text in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control to other languages.

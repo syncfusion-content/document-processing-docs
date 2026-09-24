@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Underline Annotation in React PDF Viewer | Syncfusion
 description: Enable, apply, customize, and manage Underline annotations in the React PDF Viewer to highlight text with a horizontal line below it.

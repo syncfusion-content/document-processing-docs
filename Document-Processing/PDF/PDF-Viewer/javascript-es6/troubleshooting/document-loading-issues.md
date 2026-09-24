@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Document Loading Issues in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Resolve document loading issues in the JavaScript (ES6) PDF Viewer v23.1 and later by using dataBind, validating URLs, and checking CORS and CSP settings.

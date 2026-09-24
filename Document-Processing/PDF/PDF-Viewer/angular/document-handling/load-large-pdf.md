@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Load Large Pdf in Angular PDF Viewer | Syncfusion
 description: Open PDF files from URL, Base64, Blob, Stream, and cloud storage sources, and load large PDF files efficiently in the Angular PDF Viewer.

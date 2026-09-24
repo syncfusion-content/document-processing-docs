@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Enable Print Rotation in React PDF Viewer | Syncfusion
 description: Enable print rotation in the React PDF Viewer so landscape documents are printed in the correct orientation without manual adjustment.

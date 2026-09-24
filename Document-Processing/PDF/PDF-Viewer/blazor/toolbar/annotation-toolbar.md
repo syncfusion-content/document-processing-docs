@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Customize the Annotation Toolbar in Blazor PDF Viewer | Syncfusion
 description: Learn how to show, hide, and customize the annotation toolbar in the Blazor PDF Viewer, including tool visibility, order, and runtime .

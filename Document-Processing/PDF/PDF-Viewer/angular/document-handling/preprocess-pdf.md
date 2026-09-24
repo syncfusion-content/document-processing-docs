@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Preprocess Pdf in Angular PDF Viewer | Syncfusion
 description: Preprocess PDF documents with the Syncfusion PDF Library before displaying them in the Angular PDF Viewer to apply changes such as redaction or flattening.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Install Packages for the PDF Viewer in ASP.NET | Syncfusion
 description: Install the NuGet packages required to use the ASP.NET Core PDF Viewer control in your Visual Studio project with the correct dependencies.

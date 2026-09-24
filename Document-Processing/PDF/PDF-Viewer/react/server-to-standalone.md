@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Server to Standalone in React PDF Viewer | Syncfusion
 description: Migrate an existing React PDF Viewer deployment from server-backed mode to standalone mode with clear, step-by-step instructions and code samples.

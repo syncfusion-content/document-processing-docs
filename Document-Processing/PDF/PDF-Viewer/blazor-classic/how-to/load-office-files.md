@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Load office files in Blazor PDF Viewer | Syncfusion
 description: Learn here all about how to load the microsoft office files like powerpoint in the Syncfusion Blazor PDF Viewer component and more.

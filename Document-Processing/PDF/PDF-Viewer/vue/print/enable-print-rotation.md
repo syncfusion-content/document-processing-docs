@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Enable Print Rotation in Vue PDF Viewer | Syncfusion
 description: Enable print rotation in the Vue PDF Viewer so landscape documents are printed in the correct orientation without manual adjustment.

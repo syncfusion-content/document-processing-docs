@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: From One Drive in Vue PDF Viewer | Syncfusion
 description: Load and display PDF files stored in OneDrive in the Vue PDF Viewer using a server-backed web service for authentication.

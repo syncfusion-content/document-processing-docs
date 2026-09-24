@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: New Language in Angular PDF Viewer | Syncfusion
 description: Localize the Angular PDF Viewer to a new language by providing culture-specific resource files through L10n.load and the locale property.

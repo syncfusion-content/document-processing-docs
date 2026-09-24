@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Import Annotations in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Import annotations into the JavaScript (ES5) PDF Viewer from supported formats using the built-in UI options and programmatic APIs.

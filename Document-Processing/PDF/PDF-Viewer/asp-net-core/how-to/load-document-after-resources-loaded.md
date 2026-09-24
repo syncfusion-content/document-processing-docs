@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Load a Document After Resources Are Ready | Syncfusion
 description: Load a PDF only after PDFium resources are ready in the standalone ASP.NET Core PDF Viewer by using the resourcesLoaded event handler.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: From Amazon S3 in Vue PDF Viewer | Syncfusion
 description: Load and display PDF files stored in AWS S3 in the Vue PDF Viewer using both standalone and server-backed integration approaches.

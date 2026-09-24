@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Feature Module in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Inject feature modules into the JavaScript (ES5) PDF Viewer to enable only the toolbar, search, forms, annotations, and printing capabilities you need.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Download in Angular PDF Viewer | Syncfusion
 description: Enable, disable, and programmatically trigger PDF downloads in the Angular PDF Viewer, including download events and Base64 handling.

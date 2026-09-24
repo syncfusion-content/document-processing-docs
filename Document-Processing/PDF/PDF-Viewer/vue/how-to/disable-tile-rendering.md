@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Disable Tile Rendering in Vue PDF Viewer | Syncfusion
 description: Disable tile rendering in the Vue PDF Viewer to use the classic full-page rendering mode for simpler PDF display scenarios.

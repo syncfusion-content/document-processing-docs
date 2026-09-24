@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Handle Page Render Events in Vue PDF Viewer | Syncfusion
 description: Use the pageRenderInitiate and pageRenderComplete events in the Vue PDF Viewer to track page rendering and coordinate custom UI updates.

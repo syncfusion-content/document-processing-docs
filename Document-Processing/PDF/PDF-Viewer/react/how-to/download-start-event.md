@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Control File Downloads in React PDF Viewer | Syncfusion
 description: Intercept and control file downloads in the React PDF Viewer using the downloadStart event to add custom headers or cancel the action.

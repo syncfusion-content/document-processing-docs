@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: MCP Server Setup in Blazor PDF Viewer | Syncfusion
 description: Discover the MCP server's advantages, installation requirements, and integration guidance for Blazor PDF Viewer.

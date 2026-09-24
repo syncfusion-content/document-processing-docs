@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Retrieve LoadedDoc in React PDF Viewer | Syncfusion
 description: Retrieve the loaded PDF document instance in the React PDF Viewer through React refs and the documentLoad event for advanced scenarios.

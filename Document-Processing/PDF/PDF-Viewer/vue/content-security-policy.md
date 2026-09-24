@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Content Security Policy in Vue PDF Viewer | Syncfusion
 description: Configure Content Security Policy headers for the Vue PDF Viewer so the viewer loads correctly while keeping the host page secure.

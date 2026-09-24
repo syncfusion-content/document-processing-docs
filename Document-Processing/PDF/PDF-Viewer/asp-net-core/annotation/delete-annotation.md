@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Delete Annotation in ASP.NET Core PDF Viewer | Syncfusion
 description: Remove annotations from PDFs in the ASP.NET Core PDF Viewer using the context menu, the toolbar, the Delete key, and programmatic APIs.

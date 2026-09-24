@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Add Custom Data to form fields in Blazor PDF Viewer | Syncfusion
 description: Learn how to attach, update, and read custom data on PDF form fields using programmatic APIs in the Blazor SfPdfViewer.

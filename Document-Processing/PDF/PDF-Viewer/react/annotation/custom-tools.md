@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Custom Tools in React PDF Viewer | Syncfusion
 description: Build a custom annotation toolbar for the React PDF Viewer and switch between annotation tools programmatically using setAnnotationMode.

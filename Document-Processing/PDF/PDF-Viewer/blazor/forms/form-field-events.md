@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Form Designer events in Blazor PDF Viewer | Syncfusion
 description: Learn about Form Designer events in the Blazor SfPdfViewer, including add, delete, select, resize, validate, import, and export.

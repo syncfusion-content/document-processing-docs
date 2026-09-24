@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Sticky Notes in ASP.NET Core PDF Viewer | Syncfusion
 description: Enable, add, customize, and manage Sticky Notes annotations in the ASP.NET Core PDF Viewer for short notes placed anywhere on a PDF page.

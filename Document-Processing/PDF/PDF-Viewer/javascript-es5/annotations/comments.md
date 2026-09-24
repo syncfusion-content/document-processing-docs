@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Comments in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Add, reply to, edit, set the status of, delete, and read comments attached to annotations in the JavaScript (ES5) PDF Viewer.

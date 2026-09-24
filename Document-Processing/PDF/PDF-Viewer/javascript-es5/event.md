@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Event in JavaScript (ES5) PDF Viewer | Syncfusion
 description: A complete list of events in the JavaScript (ES5) PDF Viewer, with descriptions, arguments, and examples to integrate custom logic into PDF interactions.

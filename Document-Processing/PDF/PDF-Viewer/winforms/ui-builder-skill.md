@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: UI Builder Skill with PDF Viewer in WinForms PDF Viewer | Syncfusion
 description: The UI Builder Skill with PDF Viewer enables developers to generate WinForms interfaces and PDF Viewer integrations from prompts.

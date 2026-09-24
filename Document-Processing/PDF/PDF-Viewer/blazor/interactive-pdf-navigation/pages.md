@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Page Navigation in Blazor PDF Viewer  | Syncfusion
 description: Learn how to navigate PDF pages in Blazor PDF Viewer using toolbar buttons and programmatic APIs—first, previous, next, last, and go to page.

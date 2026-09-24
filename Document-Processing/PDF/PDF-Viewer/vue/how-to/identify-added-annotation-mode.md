@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Identify the Added Annotation Mode in Vue PDF | Syncfusion
 description: Identify the annotation mode that was used to add an annotation in the Vue PDF Viewer so you can branch on the annotation type in your code.

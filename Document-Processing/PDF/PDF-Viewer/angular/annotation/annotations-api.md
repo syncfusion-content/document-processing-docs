@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Annotations Api in Angular PDF Viewer | Syncfusion
 description: Use the annotations API in the Angular PDF Viewer to read, add, update, and delete annotations programmatically from TypeScript or JavaScript.

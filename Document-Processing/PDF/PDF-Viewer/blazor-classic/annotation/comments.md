@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Comments in Blazor PDF Viewer Classic | Syncfusion
 description: Check out and learn here all about comments in Syncfusion Blazor PDF Viewer component and much more details.

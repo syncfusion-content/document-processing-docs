@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Ej1 Api Migration in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Learn about the ej1 api migration in the JavaScript (ES5) PDF Viewer and how it helps users work with PDF documents more effectively.

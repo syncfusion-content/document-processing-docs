@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Ink Eraser in React PDF Viewer | Syncfusion
 description: Use the Ink Eraser tool in the React PDF Viewer to remove or correct freehand drawing strokes with both UI and programmatic control.

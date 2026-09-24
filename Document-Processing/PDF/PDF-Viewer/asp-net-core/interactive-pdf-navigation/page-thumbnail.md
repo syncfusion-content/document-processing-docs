@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Page Thumbnail in ASP.NET Core PDF Viewer | Syncfusion
 description: Use page thumbnail navigation in the ASP.NET Core PDF Viewer to preview and jump to any page through a visual sidebar of page thumbnails.

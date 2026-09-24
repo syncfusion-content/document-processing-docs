@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Text selection in Flutter PDF Viewer | Syncfusion
 description: The text selection feature in SfPdfViewer allows users to select and copy text from PDF documents for easy access and reuse.

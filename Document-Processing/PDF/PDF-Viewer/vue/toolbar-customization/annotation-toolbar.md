@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Annotation Toolbar in Vue PDF Viewer | Syncfusion
 description: Customize the annotation toolbar in the Vue PDF Viewer to show, hide, or replace the default annotation actions for your users.

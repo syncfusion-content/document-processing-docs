@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Open Pdf Files in Angular PDF Viewer | Syncfusion
 description: Load PDF files in the Angular PDF Viewer from URLs, Base64 strings, databases, and other sources so users can open documents from anywhere.

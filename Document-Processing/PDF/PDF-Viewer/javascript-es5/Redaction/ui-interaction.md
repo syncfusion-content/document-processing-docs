@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Ui Interaction in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Learn about the ui interaction in the JavaScript (ES5) PDF Viewer and how it helps users work with PDF documents more effectively.

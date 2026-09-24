@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Highlight Annotation in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Enable, apply, customize, and manage Highlight annotations in the JavaScript (ES6) PDF Viewer to emphasize important text in a PDF.

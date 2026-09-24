@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Import Export Events in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Handle import and export events for PDF form fields in the JavaScript (ES6) PDF Viewer to run custom logic when form data is loaded or saved.

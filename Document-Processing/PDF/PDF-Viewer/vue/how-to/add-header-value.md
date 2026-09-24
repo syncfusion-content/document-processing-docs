@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Add Headers to AJAX Requests in Vue PDF Viewer | Syncfusion
 description: Add custom headers to PDF Viewer AJAX requests in the Vue PDF Viewer using ajaxRequestSettings and the ajaxHeaders configuration object.

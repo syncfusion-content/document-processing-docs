@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Open PDF from Azure Active Directory in MVC PDF Viewer | Syncfusion
 description: Learn how to load and save PDFs using Azure Active Directory (AAD) with the Syncfusion ASP.NET MVC PDF Viewer component.

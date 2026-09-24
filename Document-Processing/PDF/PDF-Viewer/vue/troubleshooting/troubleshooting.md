@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Troubleshooting in Vue PDF Viewer | Syncfusion
 description: Understand why ej2-pdfviewer-lib assets must be copied from node_modules in the Vue PDF Viewer, and how to reference them in your project.

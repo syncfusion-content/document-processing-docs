@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Printing PDF in UWP PDF Viewer | Syncfusion
 description: Learn here all about Printing PDF support in Syncfusion<sup>®</sup> UWP PDF Viewer (SfPdfViewer) control and more.

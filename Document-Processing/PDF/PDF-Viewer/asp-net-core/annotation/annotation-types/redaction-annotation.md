@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Redaction Annotation in ASP.NET Core PDF Viewer | Syncfusion
 description: Add, edit, delete, and apply redaction annotations in the ASP.NET Core PDF Viewer to permanently remove sensitive content from a PDF.

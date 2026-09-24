@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Handle Page Render Events in Angular PDF Viewer | Syncfusion
 description: Use the pageRenderInitiate and pageRenderComplete events in the Angular PDF Viewer to track page rendering and coordinate custom UI updates.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Print Quality in Vue PDF Viewer | Syncfusion
 description: Customize the print quality of PDF documents in the Vue PDF Viewer to balance output fidelity with print performance and size.

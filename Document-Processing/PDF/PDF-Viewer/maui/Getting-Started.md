@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Getting Started with .NET MAUI PDF Viewer | Syncfusion
 description: Learn how to get started with the Syncfusion .NET MAUI PDF Viewer control. Explore setup, features, examples, and customization options.

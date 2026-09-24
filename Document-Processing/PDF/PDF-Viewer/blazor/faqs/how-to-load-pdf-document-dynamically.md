@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Load PDF documents dynamically in Blazor PDF Viewer| Syncfusion
 description: Learn here all about how to load PDF documents dynamically in Blazor PDF Viewer component and more details.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Get page offset collection in UWP PDF Viewer | Syncfusion
 description: Learn how to get page offset collection in uwp pdf viewer in Syncfusion UWP PDF Viewer with examples and implementation details.

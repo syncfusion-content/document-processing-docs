@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: About Syncfusion ASP.NET MVC PDF Viewer Redaction | Syncfusion
 description: Learn about introduction of the Syncfusion ASP.NET MVC PDF Viewer Redaction section and the key capabilities it provides.

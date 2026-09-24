@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Annotation Toolbar in ASP.NET MVC PDF Viewer | Syncfusion
 description: Customize the annotation toolbar in the ASP.NET MVC PDF Viewer to show, hide, or replace the default annotation actions for your users.

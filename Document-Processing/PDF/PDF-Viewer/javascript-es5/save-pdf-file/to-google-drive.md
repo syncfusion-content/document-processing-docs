@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: To Google Drive in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Save PDF files from the JavaScript (ES5) PDF Viewer to Google Drive using a server-backed web service for authentication and secure uploads.

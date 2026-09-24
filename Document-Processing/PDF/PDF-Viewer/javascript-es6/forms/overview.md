@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: About Syncfusion JavaScript (ES6) PDF Viewer Forms | Syncfusion
 description: Learn about introduction of the Syncfusion JavaScript (ES6) PDF Viewer Forms section and the key capabilities it provides.

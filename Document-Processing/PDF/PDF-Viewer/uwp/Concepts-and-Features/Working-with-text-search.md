@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Working with text search in UWP PDF Viewer | Syncfusion
 description: Learn here all about Working with text search support in Syncfusion<sup>®</sup> UWP PDF Viewer (SfPdfViewer) control and more.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Customize the Context Menu in ASP.NET Core PDF | Syncfusion
 description: Add and customize context menu options in the ASP.NET Core PDF Viewer using addCustomMenu, customContextMenuSelect, and related events.

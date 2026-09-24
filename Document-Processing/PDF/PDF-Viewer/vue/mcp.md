@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Mcp in Vue PDF Viewer | Syncfusion
 description: Set up the Syncfusion Vue PDF Viewer MCP server so AI tools can interact with the control using a standardized protocol.

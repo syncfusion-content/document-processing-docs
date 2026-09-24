@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Radius Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Enable, draw, customize, and manage Radius measurement annotations in the JavaScript (ES5) PDF Viewer to measure the radius of circular regions.

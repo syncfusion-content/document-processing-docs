@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Remove Pages in Vue PDF Viewer | Syncfusion
 description: Remove one or more pages from a PDF in the Vue PDF Viewer using the Organize Pages panel, either through the UI or programmatically.

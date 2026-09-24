@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: About Syncfusion Vue PDF Viewer Text Search | Syncfusion
 description: Learn about introduction of the Syncfusion Vue PDF Viewer Text Search section and the key capabilities it provides.

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Opening PDF file in Blazor PDF Viewer  Classic | Syncfusion
 component: "PDF Viewer"
 description: "This page helps you to learn about how to load PDF files from various locations in Syncfusion Blazor PDF Viewer."

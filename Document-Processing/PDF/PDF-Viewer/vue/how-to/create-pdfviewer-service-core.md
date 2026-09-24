@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Create a Custom PDF Viewer Service in ASP.NET | Syncfusion
 description: Create a custom PDF Viewer web service in ASP.NET Core for the Vue PDF Viewer, with code samples and configuration tips for common setups.

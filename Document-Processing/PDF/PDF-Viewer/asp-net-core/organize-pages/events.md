@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Events in ASP.NET Core PDF Viewer | Syncfusion
 description: Subscribe to Organize Pages events in the ASP.NET Core PDF Viewer to react to rotate, rearrange, insert, delete, and copy actions on pages.

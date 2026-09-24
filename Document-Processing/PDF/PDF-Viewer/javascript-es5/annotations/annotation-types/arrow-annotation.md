@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Arrow Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Enable, apply, customize, and manage Arrow annotations in the JavaScript (ES5) PDF Viewer to point at or connect areas of a PDF document.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Enable Resize Text in ASP.NET MVC PDF Viewer | Syncfusion
 description: Enable or disable text resize inside form fields in the ASP.NET MVC PDF Viewer using the enableResizeText property for accessibility.

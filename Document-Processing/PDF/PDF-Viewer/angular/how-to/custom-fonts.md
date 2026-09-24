@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Add Custom Fonts in Angular PDF Viewer | Syncfusion
 description: Add and load custom TTF fonts for documents displayed in the Angular PDF Viewer using the customFonts property and the assets folder.

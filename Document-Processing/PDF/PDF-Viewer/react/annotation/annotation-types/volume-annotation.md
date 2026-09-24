@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Volume Annotation in React PDF Viewer | Syncfusion
 description: Enable, draw, customize, and manage Volume measurement annotations in the React PDF Viewer to calculate the volume of a 3D region.

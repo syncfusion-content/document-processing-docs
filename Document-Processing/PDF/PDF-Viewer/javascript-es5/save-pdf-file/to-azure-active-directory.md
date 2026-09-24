@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: To Azure Active Directory in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Learn about the to azure active directory in the JavaScript (ES5) PDF Viewer and how it helps users work with PDF documents more effectively.

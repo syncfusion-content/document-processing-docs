@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Mobile Toolbar in Angular PDF Viewer | Syncfusion
 description: Customize the mobile toolbar in the Angular PDF Viewer to ensure smooth touch interactions and a tailored experience on small screens.

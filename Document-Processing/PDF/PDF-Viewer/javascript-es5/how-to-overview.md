@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: About how to section of JavaScript (ES5) PDF Viewer | Syncfusion
 description: Learn about the frequently asked questions in how to section of Syncfusion JavaScript (ES5) PDF Viewer control and more.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Export Annotation in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Export annotations from the JavaScript (ES6) PDF Viewer in supported formats using the built-in UI options and programmatic APIs.

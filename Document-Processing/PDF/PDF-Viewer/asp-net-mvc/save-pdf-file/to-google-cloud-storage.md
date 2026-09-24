@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: To Google Cloud Storage in ASP.NET MVC PDF Viewer | Syncfusion
 description: Save PDF files from the ASP.NET MVC PDF Viewer to Google Cloud Storage using a server-backed web service for authentication and secure uploads.

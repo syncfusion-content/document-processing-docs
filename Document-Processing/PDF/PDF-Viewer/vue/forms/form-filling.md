@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Form Filling in Vue PDF Viewer | Syncfusion
 description: View, fill, import, and export PDF form fields in the Vue PDF Viewer, with options to disable interaction and handle digital signatures.

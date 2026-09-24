@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Free text annotations in Blazor PDF Viewer  | Syncfusion
 description: Learn how to add, edit, and delete free text annotations in the Blazor PDF Viewer , including default settings, APIs, and custom font.

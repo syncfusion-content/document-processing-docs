@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Ink Annotation in React PDF Viewer | Syncfusion
 description: Enable, draw, customize, and manage Ink (freehand) annotations in the React PDF Viewer for handwritten marks on a PDF page.

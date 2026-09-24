@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Search Redact in Vue PDF Viewer | Syncfusion
 description: Learn about the search redact in the Vue PDF Viewer and how it helps users work with PDF documents more effectively.

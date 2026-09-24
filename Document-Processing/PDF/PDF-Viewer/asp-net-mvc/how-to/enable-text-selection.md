@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Enable or Disable Text Selection in ASP.NET MVC | Syncfusion
 description: Enable or disable text selection in the ASP.NET MVC PDF Viewer using the enableTextSelection property to control how users interact with PDF text.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Load desired PDF for initial loading in Blazor PDF Viewer | Syncfusion
 description: Learn here all about how to load desired PDF for initial loading in Syncfusion Blazor PDF Viewer component and more.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: About Syncfusion JavaScript (ES6) Organize Pages | Syncfusion
 description: Learn about introduction of the Syncfusion JavaScript (ES6) PDF Viewer Organize Pages section and the key capabilities it provides.

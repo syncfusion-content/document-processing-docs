@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Page Thumbnail in .NET MAUI PDF Viewer | Syncfusion
 description: Learn how to preview and navigate PDF pages using the page thumbnail view in the Syncfusion® .NET MAUI PDF Viewer.

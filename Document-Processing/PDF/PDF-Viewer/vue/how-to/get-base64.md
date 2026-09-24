@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Get the Base64 Value of a PDF in Vue PDF Viewer | Syncfusion
 description: Retrieve the Base64 value of a loaded PDF in the Vue PDF Viewer using saveAsBlob and FileReader for uploads, sharing, or storage.

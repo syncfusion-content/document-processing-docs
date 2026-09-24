@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Control Annotation Visibility in React PDF Viewer | Syncfusion
 description: Control the visibility of PDF annotations in the React PDF Viewer so annotations appear only in the viewer and not in the saved PDF.

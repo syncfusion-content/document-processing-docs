@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Capture the Current Page Number in ASP.NET Core | Syncfusion
 description: Capture the current page number in the ASP.NET Core PDF Viewer when users navigate, annotate, or interact with the document.

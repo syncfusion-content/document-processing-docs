@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: About Syncfusion ASP.NET MVC PDF Viewer Forms | Syncfusion
 description: Learn about introduction of the Syncfusion ASP.NET MVC PDF Viewer Forms section and the key capabilities it provides.

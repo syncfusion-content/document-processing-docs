@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Accessibility in Angular PDF Viewer | Syncfusion
 description: Accessibility features in the Angular PDF Viewer help all users read and interact with PDF content using assistive technologies.

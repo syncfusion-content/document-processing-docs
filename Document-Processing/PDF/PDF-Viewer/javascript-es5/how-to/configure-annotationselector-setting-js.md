@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Configure Annotation Selectors in JavaScript | Syncfusion
 description: Configure annotation selector settings in the JavaScript (ES5) PDF Viewer using annotationSelectorSettings to control selection and resize behavior.

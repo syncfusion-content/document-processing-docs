@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Annotations Api in React PDF Viewer | Syncfusion
 description: Use the annotations API in the React PDF Viewer to read, add, update, and delete annotations programmatically from JavaScript or TypeScript.

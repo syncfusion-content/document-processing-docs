@@ -1,4 +1,4 @@
-﻿---
+---
 title: About Syncfusion Vue PDF Viewer Control | Syncfusion
 description: Learn about introduction of Syncfusion Essential Studio Vue PDF Viewer control, its key features, and how to get started with it.
 platform: document-processing

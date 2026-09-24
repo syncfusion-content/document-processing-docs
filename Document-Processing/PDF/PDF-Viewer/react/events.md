@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Events in React PDF Viewer | Syncfusion
 description: A complete list of events in the React PDF Viewer, with descriptions, arguments, and examples to integrate custom logic into PDF interactions.

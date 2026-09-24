@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Events in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Subscribe to print events in the JavaScript (ES5) PDF Viewer to run custom logic before, during, and after a user prints a PDF document.

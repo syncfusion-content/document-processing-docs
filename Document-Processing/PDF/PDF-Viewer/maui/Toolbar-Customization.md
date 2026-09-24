@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Customize the Toolbar in .NET MAUI PDF Viewer | Syncfusion
 description: Learn how to show, hide, add, remove, and reorder toolbars and toolbar items in the Syncfusion® .NET MAUI PDF Viewer (SfPdfViewer) control.

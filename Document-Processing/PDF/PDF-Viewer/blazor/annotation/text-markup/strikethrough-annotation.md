@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Strikethrough Text in Blazor PDF Viewer | Syncfusion
 description: Learn how to enable, apply, customize, and manage Strikethrough annotations in the Blazor PDF Viewer.

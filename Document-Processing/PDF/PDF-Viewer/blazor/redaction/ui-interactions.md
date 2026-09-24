@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Redaction UI interactions in Blazor PDF Viewer | Syncfusion
 description: Learn about UI interactions in Redaction annotation of the Blazor PDF Viewer component and more details.

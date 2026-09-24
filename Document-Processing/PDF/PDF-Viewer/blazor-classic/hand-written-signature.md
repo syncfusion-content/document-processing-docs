@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Handwritten Signature in Blazor PDF Viewer Classic| Syncfusion
 description: Check out and learn here all about handwritten signature in Syncfusion Blazor PDF Viewer component and much more details.

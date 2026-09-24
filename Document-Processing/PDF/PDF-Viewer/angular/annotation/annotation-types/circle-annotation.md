@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Circle Annotation in Angular PDF Viewer | Syncfusion
 description: Enable, apply, customize, and manage Circle annotations in the Angular PDF Viewer for marking, highlighting, or measuring areas.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Migrating From Apryse in React PDF Viewer | Syncfusion
 description: Migrate an existing application from Apryse WebViewer (PDFTron) to the Syncfusion React PDF Viewer with a clear, side-by-side mapping guide.

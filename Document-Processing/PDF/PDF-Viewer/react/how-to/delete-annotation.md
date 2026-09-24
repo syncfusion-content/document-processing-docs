@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Delete an Annotation in React PDF Viewer | Syncfusion
 description: Delete a specific annotation in the React PDF Viewer using the deleteAnnotationById method and the annotation identifier from the API.

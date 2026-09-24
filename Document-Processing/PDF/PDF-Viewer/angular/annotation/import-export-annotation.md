@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Import Export Annotation in Angular PDF Viewer | Syncfusion
 description: Export annotations from the Angular PDF Viewer in supported formats using the built-in UI options and programmatic APIs.

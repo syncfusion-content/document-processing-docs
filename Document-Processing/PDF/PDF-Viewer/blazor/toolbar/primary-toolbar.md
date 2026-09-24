@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Customize the Primary Toolbar in Blazor PDF Viewer | Syncfusion
 description: Learn how to show or hide, reorder, and add items to the primary toolbar in the Blazor PDF Viewer.

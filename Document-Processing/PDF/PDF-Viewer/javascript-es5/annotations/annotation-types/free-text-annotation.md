@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Free Text Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Enable, add, customize, and manage Free Text annotations in the JavaScript (ES5) PDF Viewer for inline notes and labels on a PDF page.

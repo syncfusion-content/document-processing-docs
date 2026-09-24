@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Distance Annotation in React PDF Viewer | Syncfusion
 description: Enable, draw, customize, and manage Distance annotations in the React PDF Viewer to measure straight-line distances on a PDF page.

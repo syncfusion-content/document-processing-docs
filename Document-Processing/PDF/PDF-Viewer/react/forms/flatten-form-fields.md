@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Flatten Form Fields in React PDF Viewer | Syncfusion
 description: Flatten interactive PDF form fields in the React PDF Viewer before downloading or saving the PDF so the fields become static content.

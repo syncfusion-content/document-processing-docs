@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: From Box Cloud File Storage in ASP.NET Core PDF Viewer | Syncfusion
 description: Load and display PDF files stored in Box cloud storage in the ASP.NET Core PDF Viewer using a server-backed web service for authentication.

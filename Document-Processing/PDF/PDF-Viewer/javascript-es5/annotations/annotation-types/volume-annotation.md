@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Volume Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Enable, draw, customize, and manage Volume measurement annotations in the JavaScript (ES5) PDF Viewer to calculate the volume of a 3D region.

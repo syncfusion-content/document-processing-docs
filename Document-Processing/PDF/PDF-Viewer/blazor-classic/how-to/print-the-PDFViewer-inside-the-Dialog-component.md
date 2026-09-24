@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Print the PDFViewer inside the Dialog in Blazor | Syncfusion
 description: Learn here all about how to print the PDFViewer inside the Dialog in Syncfusion Blazor PDF Viewer component and more.

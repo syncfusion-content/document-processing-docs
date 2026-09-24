@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Print the PDF in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Print the loaded PDF in the JavaScript (ES5) PDF Viewer from custom UI controls using the print method with optional mode and quality settings.

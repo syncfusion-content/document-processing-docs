@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Line Angle Constraints in ASP.NET Core PDF Viewer | Syncfusion
 description: Enable line angle constraints in the ASP.NET Core PDF Viewer so line-type annotations snap to common angles while users draw them.

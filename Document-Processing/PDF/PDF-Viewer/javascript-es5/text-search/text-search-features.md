@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Text Search Features in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Configure text search features in the JavaScript (ES5) PDF Viewer and run programmatic searches to find and highlight text inside a PDF document.

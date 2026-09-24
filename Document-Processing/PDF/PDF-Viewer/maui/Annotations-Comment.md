@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Comments in .NET MAUI PDF Viewer | Syncfusion
 description: Learn how to add and manage comments or replies on annotations in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.

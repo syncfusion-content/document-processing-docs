@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Link Annotation in React PDF Viewer | Syncfusion
 description: Enable, apply, customize, and manage link annotations in the React PDF Viewer for both internal page navigation and external URLs.

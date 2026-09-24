@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Measurement annotations in Blazor PDF Viewer  | Syncfusion
 description: Checkout and learn here all about measurement annotations in Syncfusion Blazor PDF Viewer  and more.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Change Text Highlight Color in Blazor PDF Viewer | Syncfusion
 description: Learn how to change the highlight color of text markup highlights in the Blazor PDF Viewer using the PdfViewerHighlightSettings.

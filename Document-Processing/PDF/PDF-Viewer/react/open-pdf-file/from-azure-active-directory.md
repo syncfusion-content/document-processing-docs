@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: From Azure Active Directory in React PDF Viewer | Syncfusion
 description: Load and save PDF files in the React PDF Viewer through Azure Active Directory (AAD) using a server-backed web service for authentication.

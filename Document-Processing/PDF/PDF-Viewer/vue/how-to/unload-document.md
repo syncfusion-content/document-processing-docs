@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Unload a Document in Vue PDF Viewer | Syncfusion
 description: Unload the current document in the Vue PDF Viewer to free resources and prepare the viewer for loading a different PDF document.

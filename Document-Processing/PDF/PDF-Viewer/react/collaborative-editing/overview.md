@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Collaborative Editing in React PDF Viewer | Syncfusion
 description: Learn about the overview of collaborative editing in Syncfusion React PDF Viewer and real-time multi-user annotation and interaction.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Save Pdf Files in React PDF Viewer | Syncfusion
 description: Save edited PDFs from the React PDF Viewer to a local download or to a server-backed endpoint, with options to control the output name and format.

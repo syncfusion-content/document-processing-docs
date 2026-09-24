@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Print in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Learn about the print in the JavaScript (ES5) PDF Viewer and how it helps users work with PDF documents more effectively.

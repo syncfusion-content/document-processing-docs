@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Getting Started with Server-Backed JS PDF Viewer | Syncfusion
 description: Set up and use the Syncfusion JavaScript (ES5) PDF Viewer in server-backed mode using CDN resources and a web service configuration for document processing.

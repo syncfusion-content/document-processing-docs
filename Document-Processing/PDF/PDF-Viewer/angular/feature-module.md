@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Feature Module in Angular PDF Viewer | Syncfusion
 description: Inject feature modules into the Angular PDF Viewer to enable only the toolbar, search, forms, annotations, and printing capabilities you need.

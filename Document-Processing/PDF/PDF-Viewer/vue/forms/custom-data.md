@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Custom Data in Vue PDF Viewer | Syncfusion
 description: Attach, update, and read custom data on PDF form fields in the Vue PDF Viewer using the Form Designer UI and the form fields API.

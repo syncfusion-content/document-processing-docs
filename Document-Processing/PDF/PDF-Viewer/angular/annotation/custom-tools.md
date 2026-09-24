@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Custom Tools in Angular PDF Viewer | Syncfusion
 description: Build a custom annotation toolbar for the Angular PDF Viewer and switch between annotation tools programmatically using setAnnotationMode.

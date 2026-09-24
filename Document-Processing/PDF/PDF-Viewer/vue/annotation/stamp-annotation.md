@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Stamp Annotation in Vue PDF Viewer | Syncfusion
 description: Enable, apply, customize, and manage Stamp annotations in the Vue PDF Viewer, including dynamic, sign-here, standard business, and custom stamps.

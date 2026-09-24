@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: To Azure Active Directory in ASP.NET Core PDF Viewer | Syncfusion
 description: Learn about the to azure active directory in the ASP.NET Core PDF Viewer and how it helps users work with PDF documents more effectively.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: To Google Cloud Storage in Vue PDF Viewer | Syncfusion
 description: Save PDF files from the Vue PDF Viewer to Google Cloud Storage using a server-backed web service for authentication and secure uploads.

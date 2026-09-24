@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: PDF Rendering Engines in WinForms PDFViewer | Syncfusion
 description: The PDF rendering engines feature in PdfViewerControl supports multiple rendering options to display PDF documents with accuracy and reliability.

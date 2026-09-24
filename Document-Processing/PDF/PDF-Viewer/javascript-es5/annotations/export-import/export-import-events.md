@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Export Import Events in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Handle import and export events in the JavaScript (ES5) PDF Viewer to run custom logic when annotations are loaded or saved from the control.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Globalization and RTL in Blazor PDF Viewer  | Syncfusion
 description: Learn how to localize UI text and enable RTL layout in the Blazor PDF Viewer, including culture setup and API references.

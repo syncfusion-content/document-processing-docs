@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Accessibility in Vue PDF Viewer | Syncfusion
 description: Accessibility features in the Vue PDF Viewer help all users read and interact with PDF content using assistive technologies.

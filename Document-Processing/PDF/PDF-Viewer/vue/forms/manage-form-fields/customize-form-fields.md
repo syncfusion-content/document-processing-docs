@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Customize Form Fields in Vue PDF Viewer | Syncfusion
 description: Style PDF form fields in the Vue PDF Viewer by configuring fonts, colors, borders, alignment, and other visual properties through the UI or code.

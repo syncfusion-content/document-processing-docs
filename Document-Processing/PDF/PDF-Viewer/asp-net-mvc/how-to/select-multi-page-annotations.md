@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Select Multi-Page Annotations in ASP.NET MVC PDF | Syncfusion
 description: Select multiple annotations across pages in the ASP.NET MVC PDF Viewer so users can perform batch actions like delete or export on the selection.

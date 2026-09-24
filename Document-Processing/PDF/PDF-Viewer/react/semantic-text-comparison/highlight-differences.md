@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Highlight Differences in UI | Syncfusion React PDF Viewer
 description: Learn how to highlight text differences in the Syncfusion React PDF Viewer using visual highlighting with customizable colors and opacity.

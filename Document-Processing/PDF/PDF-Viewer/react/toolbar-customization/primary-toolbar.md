@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Primary Toolbar in React PDF Viewer | Syncfusion
 description: Customize the primary toolbar in the React PDF Viewer to show, hide, reorder, or add items so it matches the way users work with PDFs.

@@ -1,4 +1,4 @@
-﻿---
+---
 title: About Syncfusion ASP.NET Core PDF Viewer Control | Syncfusion
 description: Learn about introduction of Syncfusion Essential Studio ASP.NET Core PDF Viewer control, its key features, and how to get started with it.
 platform: document-processing

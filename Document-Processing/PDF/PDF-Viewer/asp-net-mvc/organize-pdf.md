@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Organize Pdf in ASP.NET MVC PDF Viewer | Syncfusion
 description: Learn about the organize pdf in the ASP.NET MVC PDF Viewer and how it helps users work with PDF documents more effectively.

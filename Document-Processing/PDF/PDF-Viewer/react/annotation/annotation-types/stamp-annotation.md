@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Stamp Annotation in React PDF Viewer | Syncfusion
 description: Enable, apply, customize, and manage Stamp annotations in the React PDF Viewer, including dynamic, sign-here, standard business, and custom stamps.

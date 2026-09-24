@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Server to Standalone in Vue PDF Viewer | Syncfusion
 description: Migrate an existing Vue PDF Viewer deployment from server-backed mode to standalone mode with clear, step-by-step instructions and code samples.

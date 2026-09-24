@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Print Modes in Vue PDF Viewer | Syncfusion
 description: Configure print modes in the Vue PDF Viewer to control how PDF documents are printed and to optimize the output for different scenarios.

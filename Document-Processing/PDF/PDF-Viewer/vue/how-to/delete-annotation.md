@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Delete an Annotation in Vue PDF Viewer | Syncfusion
 description: Delete a specific annotation in the Vue PDF Viewer using the deleteAnnotationById method and the annotation identifier from the API.

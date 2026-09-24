@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Text Search in .NET MAUI PDF Viewer | Syncfusion
 description: Learn how to search for text in PDF documents using the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.

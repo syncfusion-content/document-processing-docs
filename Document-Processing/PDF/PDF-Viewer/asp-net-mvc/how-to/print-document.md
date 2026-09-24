@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Print the PDF in ASP.NET MVC PDF Viewer | Syncfusion
 description: Print the loaded PDF in the ASP.NET MVC PDF Viewer from custom UI controls using the print method with optional mode and quality settings.

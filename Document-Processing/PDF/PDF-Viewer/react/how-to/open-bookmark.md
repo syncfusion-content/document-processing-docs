@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Open or Hide the Bookmark Pane in React PDF Viewer | Syncfusion
 description: Open or close the bookmark pane programmatically in the React PDF Viewer using openBookmarkPane and closeBookmarkPane for custom toolbars.

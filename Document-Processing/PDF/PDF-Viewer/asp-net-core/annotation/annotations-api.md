@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Annotations Api in ASP.NET Core PDF Viewer | Syncfusion
 description: Use the annotations API in the ASP.NET Core PDF Viewer to read, add, update, and delete annotations programmatically from C# or JavaScript.

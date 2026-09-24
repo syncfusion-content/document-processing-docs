@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Load Password Pdf in React PDF Viewer | Syncfusion
 description: Open password-protected PDF files in the React PDF Viewer by providing the password through the documentPath configuration object.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: About Document security in Blazor PDF Viewer Component | Syncfusion
 description: Learn about open password-protected PDFs and enforces document permission restrictions like print, copy, and edit.

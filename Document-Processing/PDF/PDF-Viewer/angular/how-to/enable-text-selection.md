@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Enable or Disable Text Selection in Angular PDF | Syncfusion
 description: Enable or disable text selection in the Angular PDF Viewer using the enableTextSelection property to control how users interact with PDF text.

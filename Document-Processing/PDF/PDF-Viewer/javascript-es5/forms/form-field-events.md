@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Form Field Events in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Subscribe to form field events in the JavaScript (ES5) PDF Viewer to react to focus, change, validation, and other interactions on PDF form fields.

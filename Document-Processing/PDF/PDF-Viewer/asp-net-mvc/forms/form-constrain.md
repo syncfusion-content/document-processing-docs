@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Form Constrain in ASP.NET MVC PDF Viewer | Syncfusion
 description: Configure form field constraints in the ASP.NET MVC PDF Viewer, including isReadOnly, isRequired, and isPrint flags for each field.

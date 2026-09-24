@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Download in Blazor PDF Viewer  Classic | Syncfusion
 description: Check out and learn here all about download in Syncfusion Blazor PDF Viewer component and much more details.

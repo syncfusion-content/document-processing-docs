@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Rotate pages in Organize Pages (Blazor PDF Viewer) | Syncfusion
 description: Learn how to rotate one or more pages using the Organize Pages UI in the Blazor PDF Viewer and more.

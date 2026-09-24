@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Reorder pages in Organize Pages in Blazor PDF Viewer | Syncfusion
 description: How to rearrange pages using drag-and-drop in the Organize Pages UI of the Blazor PDF Viewer.

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Getting Started with Server-Backed Angular PDF Viewer | Syncfusion
 description: Set up and run the Syncfusion Angular PDF Viewer in server-backed mode using Essential JS 2 with a backend web service for document processing.
 platform: document-processing

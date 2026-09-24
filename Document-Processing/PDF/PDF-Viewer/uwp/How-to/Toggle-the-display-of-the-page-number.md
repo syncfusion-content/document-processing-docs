@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Toggle Page Number Display in UWP PDF Viewer | Syncfusion
 description: Learn how to toggle the display of the page number in uwp pdf viewer in Syncfusion UWP PDF Viewer with examples and implementation details.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to hide toolbar buttons in WinForms PDF Viewer | Syncfusion
 description: This guide explains how to hide or disable specific toolbar buttons using the ToolbarSettings API in Syncfusion PDF Viewer for WinForms.

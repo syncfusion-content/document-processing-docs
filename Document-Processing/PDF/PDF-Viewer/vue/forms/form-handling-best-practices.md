@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: PDF Form Handling Best Practices in Vue PDF Viewer | Syncfusion
 description: Learn the recommended best practices for naming, validating, grouping, importing, and designing form fields in the Syncfusion Vue PDF Viewer.

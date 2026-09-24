@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Add Annotations From Text Search in React PDF | Syncfusion
 description: Add annotations from text search results in the React PDF Viewer by responding to text search events for a smooth mobile experience.

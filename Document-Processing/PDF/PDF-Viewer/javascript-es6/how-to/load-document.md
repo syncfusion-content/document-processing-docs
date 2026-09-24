@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Load Documents Dynamically in JavaScript (ES6) | Syncfusion
 description: Load or switch PDF documents dynamically in the JavaScript (ES6) PDF Viewer using the load method to swap documents without reloading the page.

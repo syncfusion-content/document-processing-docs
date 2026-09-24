@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Globalization in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Learn about the globalization in the JavaScript (ES6) PDF Viewer and how it helps users work with PDF documents more effectively.

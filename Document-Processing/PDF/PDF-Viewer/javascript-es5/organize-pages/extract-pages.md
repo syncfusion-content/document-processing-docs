@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Extract Pages in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Extract pages from a PDF in the JavaScript (ES5) PDF Viewer using the Organize Pages panel to save selected pages as a separate document.

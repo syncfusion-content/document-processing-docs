@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Getting Started with Quasar and Vue PDF Viewer | Syncfusion
 description: Get started with the Quasar Framework and the Syncfusion Vue PDF Viewer, including setup, configuration, and running examples.

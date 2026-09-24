@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Server to Standalone in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Migrate an existing JavaScript (ES6) PDF Viewer deployment from server-backed mode to standalone mode with clear, step-by-step instructions and code samples.

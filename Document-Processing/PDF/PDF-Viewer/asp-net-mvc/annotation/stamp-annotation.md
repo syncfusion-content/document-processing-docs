@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Stamp Annotation in ASP.NET MVC PDF Viewer | Syncfusion
 description: Enable, apply, customize, and manage Stamp annotations in the ASP.NET MVC PDF Viewer, including dynamic, sign-here, standard business, and custom stamps.

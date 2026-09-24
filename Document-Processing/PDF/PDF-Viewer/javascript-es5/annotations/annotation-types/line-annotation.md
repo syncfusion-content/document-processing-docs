@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Line Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Enable, apply, customize, and manage Line annotations in the JavaScript (ES5) PDF Viewer for marking straight paths on a PDF page.

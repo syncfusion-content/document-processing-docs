@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Add, Remove, and Edit Annotations in Flutter PDF Viewer | Syncfusion
 description: The annotation feature in SfPdfViewer allows users to add, edit, and remove annotations for interactive PDF document review.

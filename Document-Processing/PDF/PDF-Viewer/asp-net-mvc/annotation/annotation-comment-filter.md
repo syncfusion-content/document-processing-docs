@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Annotation Comment Filter in ASP.NET MVC PDF Viewer | Syncfusion
 description: Filter comments and annotations in the ASP.NET MVC PDF Viewer by author, status, type, and date using the comment filter panel and programmatic APIs.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Rectangle Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Enable, apply, customize, and manage Rectangle annotations in the JavaScript (ES5) PDF Viewer to outline rectangular regions on a PDF page.

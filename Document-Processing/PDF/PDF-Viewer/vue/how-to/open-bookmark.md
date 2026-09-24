@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Open or Hide the Bookmark Pane in Vue PDF Viewer | Syncfusion
 description: Open or close the bookmark pane programmatically in the Vue PDF Viewer using openBookmarkPane and closeBookmarkPane for custom toolbars.

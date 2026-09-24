@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Page Thumbnail in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Use page thumbnail navigation in the JavaScript (ES6) PDF Viewer to preview and jump to any page through a visual sidebar of page thumbnails.

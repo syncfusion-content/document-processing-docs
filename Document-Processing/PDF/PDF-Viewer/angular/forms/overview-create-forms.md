@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: About Syncfusion Angular PDF Viewer Manage Form Fields | Syncfusion
 description: Learn about introduction of the Syncfusion Angular PDF Viewer Manage Form Fields section and the key capabilities it provides.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Form Fields Api in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Use the form fields API in the JavaScript (ES6) PDF Viewer to enable, update, retrieve, and clear form fields programmatically from JavaScript or TypeScript.

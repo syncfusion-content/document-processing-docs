@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Get the Base64 Value of a PDF in ASP.NET MVC PDF | Syncfusion
 description: Retrieve the Base64 value of a loaded PDF in the ASP.NET MVC PDF Viewer using saveAsBlob and FileReader for uploads, sharing, or storage.

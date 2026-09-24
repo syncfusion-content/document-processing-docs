@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Form Field Events in .NET MAUI PDF Viewer | Syncfusion
 description: Learn how to handle form field interaction events in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.

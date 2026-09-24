@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Search Redact in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Learn about the search redact in the JavaScript (ES5) PDF Viewer and how it helps users work with PDF documents more effectively.

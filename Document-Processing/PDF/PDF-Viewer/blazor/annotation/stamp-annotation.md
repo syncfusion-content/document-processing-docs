@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Stamp annotations in Blazor PDF Viewer  | Syncfusion
 description: Learn how to add, edit, rotate, and customize stamp annotations in the Blazor PDF Viewer component and more details.

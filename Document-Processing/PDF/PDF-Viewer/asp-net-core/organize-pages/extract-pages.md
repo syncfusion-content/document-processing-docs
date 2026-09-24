@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Extract Pages in ASP.NET Core PDF Viewer | Syncfusion
 description: Extract pages from a PDF in the ASP.NET Core PDF Viewer using the Organize Pages panel to save selected pages as a separate document.

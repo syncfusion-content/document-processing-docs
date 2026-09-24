@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Control File Downloads in JavaScript (ES6) PDF | Syncfusion
 description: Intercept and control file downloads in the JavaScript (ES6) PDF Viewer using the downloadStart event to add custom headers or cancel the action.

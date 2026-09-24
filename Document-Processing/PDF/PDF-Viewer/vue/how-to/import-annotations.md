@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Import Annotations in Vue PDF Viewer | Syncfusion
 description: Import annotations into the Vue PDF Viewer from supported formats using the built-in UI options and programmatic APIs.

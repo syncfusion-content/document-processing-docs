@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Navigation in Vue PDF Viewer | Syncfusion
 description: Move between pages in the Vue PDF Viewer using page, bookmark, hyperlink, and thumbnail navigation options built into the toolbar.

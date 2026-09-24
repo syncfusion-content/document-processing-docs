@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Custom Data in Annotations in ASP.NET Core PDF Viewer | Syncfusion
 description: Attach custom metadata to annotations in the ASP.NET Core PDF Viewer and read it back later to drive tailored workflows and integrations.

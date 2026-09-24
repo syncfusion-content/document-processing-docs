@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to add PdfViewer in FlutterFlow in Flutter PDF Viewer | Syncfusion
 description: This guide explains how to add and configure the SfPdfViewer widget in FlutterFlow to enable PDF viewing within applications.

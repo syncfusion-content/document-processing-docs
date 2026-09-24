@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Radius Annotation in ASP.NET Core PDF Viewer | Syncfusion
 description: Enable, draw, customize, and manage Radius measurement annotations in the ASP.NET Core PDF Viewer to measure the radius of circular regions.

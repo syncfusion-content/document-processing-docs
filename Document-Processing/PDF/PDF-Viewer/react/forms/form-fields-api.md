@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Form Fields Api in React PDF Viewer | Syncfusion
 description: Use the form fields API in the React PDF Viewer to enable, update, retrieve, and clear form fields programmatically from JavaScript or TypeScript.

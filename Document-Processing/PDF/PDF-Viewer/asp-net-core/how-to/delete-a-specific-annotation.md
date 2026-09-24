@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Delete a Specific Annotation in ASP.NET Core PDF | Syncfusion
 description: Delete a specific annotation in the ASP.NET Core PDF Viewer using the deleteAnnotationById method and the annotation identifier from the API.

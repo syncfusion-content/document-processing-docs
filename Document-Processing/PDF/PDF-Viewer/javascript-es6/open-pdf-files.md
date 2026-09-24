@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Open Pdf Files in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Load PDF files in the JavaScript (ES6) PDF Viewer from URLs, Base64 strings, databases, and other sources so users can open documents from anywhere.

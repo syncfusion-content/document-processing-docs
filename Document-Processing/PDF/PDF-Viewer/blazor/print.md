@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Print in Blazor PDF Viewer | Syncfusion
 description: Learn how to print PDF files in the Blazor PDF Viewer component using the toolbar or programmatically.

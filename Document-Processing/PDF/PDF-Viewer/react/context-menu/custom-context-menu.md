@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Custom Context Menu in React PDF Viewer | Syncfusion
 description: Add and customize context menu options in the React PDF Viewer using addCustomMenu, customContextMenuSelect, and related events.

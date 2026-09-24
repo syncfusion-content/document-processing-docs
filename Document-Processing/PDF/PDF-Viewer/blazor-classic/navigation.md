@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Navigation in Blazor PDF Viewer Classic | Syncfusion
 description: Check out and learn here all about navigation in Syncfusion Blazor PDF Viewer component and much more details.

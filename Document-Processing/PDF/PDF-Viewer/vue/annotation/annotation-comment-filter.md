@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Annotation Comment Filter in Vue PDF Viewer | Syncfusion
 description: Filter comments and annotations in the Vue PDF Viewer by author, status, type, and date using the comment filter panel and programmatic APIs.

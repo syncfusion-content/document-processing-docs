@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Sticky notes annotations in Blazor PDF Viewer Classic  | Syncfusion
 description: Checkout and learn here all about sticky notes annotations in Syncfusion Blazor PDF Viewer  and more.

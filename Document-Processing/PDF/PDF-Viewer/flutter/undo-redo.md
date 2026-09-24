@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Undo and redo annotations in the Flutter PDF Viewer | Syncfusion
 description: The undo and redo feature in SfPdfViewer enables users to revert or restore annotation changes for efficient PDF review and editing.

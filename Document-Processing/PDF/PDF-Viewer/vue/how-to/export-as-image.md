@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Export Pages as Images in Vue PDF Viewer | Syncfusion
 description: Export pages as Base64-encoded images from the Vue PDF Viewer using the exportAsImage and exportAsImages methods for thumbnails or sharing.

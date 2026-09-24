@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Migration from PDF Viewer (Classic) to Blazor PDF Viewer | Syncfusion
 description: This section explains the features available in the new PDF Viewer component compared to PDF Viewer (Classic).

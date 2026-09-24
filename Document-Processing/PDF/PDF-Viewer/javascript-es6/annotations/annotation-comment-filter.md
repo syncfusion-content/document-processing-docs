@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Annotation Comment Filter in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Filter comments and annotations in the JavaScript (ES6) PDF Viewer by author, status, type, and date using the comment filter panel and programmatic APIs.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Import pages in Organize Pages in Blazor PDF Viewer | Syncfusion
 description: How to import pages from another PDF into the current document using the Organize Pages UI in the Blazor PDF Viewer.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Redaction Annotation in Angular PDF Viewer | Syncfusion
 description: Add, edit, delete, and apply redaction annotations in the Angular PDF Viewer to permanently remove sensitive content from a PDF.

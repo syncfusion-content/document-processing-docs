@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: UI Customization in Flutter PDF Viewer | Syncfusion
 description: The UI customization feature in SfPdfViewer allows users to customize viewer elements and behaviors to suit application needs.

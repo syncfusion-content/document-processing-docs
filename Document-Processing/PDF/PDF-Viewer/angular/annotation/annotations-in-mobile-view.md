@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Annotations in Mobile View in Angular PDF Viewer | Syncfusion
 description: Create, edit, and manage annotations in the Angular PDF Viewer when running on mobile devices with the touch-optimized annotation UI.

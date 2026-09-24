@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Flatten Annotation in ASP.NET Core PDF Viewer | Syncfusion
 description: Flatten annotations and form fields in the ASP.NET Core PDF Viewer before saving a PDF so they become permanent parts of the document content.

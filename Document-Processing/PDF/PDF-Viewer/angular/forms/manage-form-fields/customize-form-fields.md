@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Customize Form Fields in Angular PDF Viewer | Syncfusion
 description: Style PDF form fields in the Angular PDF Viewer by configuring fonts, colors, borders, alignment, and other visual properties through the UI or code.

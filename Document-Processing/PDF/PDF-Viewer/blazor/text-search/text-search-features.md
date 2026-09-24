@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Text Search Features in Blazor PDF Viewer  | Syncfusion
 description: Learn how to configure text search and run programmatic searches in the Blazor PDF Viewer component and more details.

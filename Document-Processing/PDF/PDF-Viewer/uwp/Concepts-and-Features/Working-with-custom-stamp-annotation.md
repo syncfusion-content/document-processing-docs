@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Custom stamp annotation in UWP PDF Viewer | Syncfusion
 description: Learn about Custom stamp annotation support in Syncfusion<sup>®</sup> UWP PDF Viewer (SfPdfViewer) control and more.

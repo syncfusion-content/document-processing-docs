@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Toolbar Customization in Blazor PDF Viewer Classic | Syncfusion
 description: Check out and learn here all about toolbar customization in Syncfusion Blazor PDF Viewer component and much more details.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Create Modify Annotation in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Create new annotations and modify existing ones in the JavaScript (ES6) PDF Viewer using the built-in UI and programmatic APIs for every supported type.

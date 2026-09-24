@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Accessibility in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Accessibility features in the JavaScript (ES6) PDF Viewer help all users read and interact with PDF content using assistive technologies.

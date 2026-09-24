@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Configure MinZoom and MaxZoom in ASP.NET MVC PDF | Syncfusion
 description: Configure the minimum and maximum zoom levels in the ASP.NET MVC PDF Viewer using minZoom and maxZoom to control the zoom range for users.

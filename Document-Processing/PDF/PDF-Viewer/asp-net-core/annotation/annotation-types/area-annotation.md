@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Area Annotation in ASP.NET Core PDF Viewer | Syncfusion
 description: Enable, draw, customize, and manage Area measurement annotations in the ASP.NET Core PDF Viewer to measure regions inside a PDF page.

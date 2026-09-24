@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Customize arrow heads in Blazor PDF Viewer Classic | Syncfusion
 description: Learn here all about how to increase the connection buffer size in Syncfusion Blazor PDF Viewer component and more.

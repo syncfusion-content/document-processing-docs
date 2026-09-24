@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Form Fields Collection in .NET MAUI PDF Viewer | Syncfusion
 description: Learn how to access and manage the form fields collection in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.

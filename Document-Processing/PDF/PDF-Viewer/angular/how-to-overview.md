@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Overview of the Angular PDF Viewer | Syncfusion
 description: How-to overview of the Angular PDF Viewer in Syncfusion Angular PDF Viewer (SfPdfViewer) control, with its elements and more.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Use Custom Stamp Annotations in Angular PDF Viewer | Syncfusion
 description: Create and apply custom stamp annotations in the Angular PDF Viewer using customStampSettings to provide tailored stamp options.

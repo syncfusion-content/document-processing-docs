@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Form Designer Toolbar in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Customize the Form Designer toolbar in the JavaScript (ES5) PDF Viewer to show, hide, or replace the default form design actions for your users.

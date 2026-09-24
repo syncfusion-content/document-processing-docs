@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Toolbar in React PDF Viewer | Syncfusion
 description: Customize the Organize Pages toolbar in the React PDF Viewer to show, hide, or replace the default actions that appear in the panel.

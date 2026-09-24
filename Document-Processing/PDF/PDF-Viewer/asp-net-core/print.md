@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Print in ASP.NET Core PDF Viewer | Syncfusion
 description: Learn about the print in the ASP.NET Core PDF Viewer and how it helps users work with PDF documents more effectively.

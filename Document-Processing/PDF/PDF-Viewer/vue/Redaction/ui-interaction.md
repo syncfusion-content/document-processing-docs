@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Ui Interaction in Vue PDF Viewer | Syncfusion
 description: Learn about the ui interaction in the Vue PDF Viewer and how it helps users work with PDF documents more effectively.

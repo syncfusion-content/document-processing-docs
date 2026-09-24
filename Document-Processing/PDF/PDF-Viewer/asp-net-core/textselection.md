@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Textselection in ASP.NET Core PDF Viewer | Syncfusion
 description: Learn about the textselection in the ASP.NET Core PDF Viewer and how it helps users work with PDF documents more effectively.

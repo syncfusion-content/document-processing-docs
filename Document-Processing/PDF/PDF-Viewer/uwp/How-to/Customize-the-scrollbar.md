@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Customize the Scrollbar in UWP PDF Viewer | Syncfusion
 description: Learn how to customize the scrollbar in uwp pdf viewer in Syncfusion UWP PDF Viewer with examples and implementation details.

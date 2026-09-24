@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Interaction Mode in React PDF Viewer | Syncfusion
 description: The React PDF Viewer supports Pan and Text Selection modes so users can navigate pages or select text according to the task at hand.

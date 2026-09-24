@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Signature Annotation in Vue PDF Viewer | Syncfusion
 description: Add, edit, and manage handwritten signatures in the Vue PDF Viewer, including enabling or disabling the signature tool for users.

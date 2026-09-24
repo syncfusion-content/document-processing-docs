@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Getting Started with Blazor WASM App PDF Viewer | Syncfusion
 description: Learn how to get started with the Syncfusion Blazor WebAssembly (WASM) App PDF Viewer component. Explore view, annotate and fill PDF forms.

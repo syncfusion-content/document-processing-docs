@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Line Angle Constraints in React PDF Viewer | Syncfusion
 description: Enable line angle constraints in the React PDF Viewer so line-type annotations snap to common angles while users draw them.

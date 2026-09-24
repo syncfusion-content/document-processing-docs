@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Load Pages on Initial Load in ASP.NET MVC PDF | Syncfusion
 description: Load a specific number of pages during the initial render of the ASP.NET MVC PDF Viewer to improve perceived performance for large documents.

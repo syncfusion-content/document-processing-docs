@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Handle Overlapped Annotations in ASP.NET MVC PDF | Syncfusion
 description: Handle overlapping annotations in the ASP.NET MVC PDF Viewer so users can select, move, and edit the right annotation when several are stacked on a page.

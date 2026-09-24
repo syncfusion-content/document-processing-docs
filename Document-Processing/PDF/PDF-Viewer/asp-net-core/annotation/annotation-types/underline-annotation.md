@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Underline Annotation in ASP.NET Core PDF Viewer | Syncfusion
 description: Enable, apply, customize, and manage Underline annotations in the ASP.NET Core PDF Viewer to highlight text with a horizontal line below it.

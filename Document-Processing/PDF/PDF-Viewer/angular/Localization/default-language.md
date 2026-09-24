@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Default Language in Angular PDF Viewer | Syncfusion
 description: Set the default language for the Angular PDF Viewer UI and learn how localization is applied to all built-in text and messages.

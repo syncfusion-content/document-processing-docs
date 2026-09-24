@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Configure ExtractTextOption in React PDF Viewer | Syncfusion
 description: Use the extractTextOption property in the React PDF Viewer to control how text is extracted and to manage memory usage during extraction.

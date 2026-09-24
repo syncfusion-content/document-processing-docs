@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Form filling in Blazor PDF Viewer Classic | Syncfusion
 description: Check out and learn here all about form filling in Syncfusion Blazor PDF Viewer component and much more details.

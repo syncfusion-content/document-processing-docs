@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Highlight Annotation in ASP.NET Core PDF Viewer | Syncfusion
 description: Enable, apply, customize, and manage Highlight annotations in the ASP.NET Core PDF Viewer to emphasize important text in a PDF.

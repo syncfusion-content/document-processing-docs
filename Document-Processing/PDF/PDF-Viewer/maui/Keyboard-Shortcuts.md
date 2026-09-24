@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Keyboard Shortcuts in .NET MAUI PDF Viewer | Syncfusion
 description: Learn the keyboard shortcuts available in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.

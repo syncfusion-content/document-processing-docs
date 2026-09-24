@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Print large page document in PDF Viewer | Syncfusion
 description: Learn how to print large PDF documents in the Blazor PDF Viewer using a custom toolbar action and a Blob URL.

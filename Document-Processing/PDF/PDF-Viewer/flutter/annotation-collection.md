@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Annotation Collection in Flutter PDF Viewer | Syncfusion
 description: The annotation collection feature in SfPdfViewer allows users to access, organize, and manage annotations within PDF documents.

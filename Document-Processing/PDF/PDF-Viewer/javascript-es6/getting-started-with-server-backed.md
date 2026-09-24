@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Getting Started with Server-Backed TS PDF Viewer | Syncfusion
 description: Set up and run the Syncfusion JavaScript (ES6) PDF Viewer in server-backed mode using a PDF Viewer web service for document processing.

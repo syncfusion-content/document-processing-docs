@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Instantiate the PDF Viewer Dynamically in ASP.NET | Syncfusion
 description: Instantiate the ASP.NET MVC PDF Viewer dynamically at runtime using JavaScript or C# code so the control is created only when it is needed.

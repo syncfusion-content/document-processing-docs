@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Change the Selection Border in Angular PDF Viewer | Syncfusion
 description: Change the selection border color and thickness for annotations in the Angular PDF Viewer to match your application design.

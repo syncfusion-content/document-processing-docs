@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Area Annotation in Angular PDF Viewer | Syncfusion
 description: Enable, draw, customize, and manage Area measurement annotations in the Angular PDF Viewer to measure regions inside a PDF page.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Accessibility in React PDF Viewer | Syncfusion
 description: Accessibility features in the React PDF Viewer help all users read and interact with PDF content using assistive technologies.

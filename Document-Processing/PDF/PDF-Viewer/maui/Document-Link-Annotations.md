@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Document Link Navigation in .NET MAUI PDF Viewer | Syncfusion
 description: Learn how to navigate using document link annotations in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.

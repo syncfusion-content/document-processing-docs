@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Events in Blazor PDF Viewer | Syncfusion
 description: Explore all events available in the Blazor PDF Viewer , including lifecycle, navigation, annotation, search, and printing events.

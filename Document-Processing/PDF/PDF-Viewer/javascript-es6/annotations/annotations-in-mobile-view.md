@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Annotations in Mobile View in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Create, edit, and manage annotations in the JavaScript (ES6) PDF Viewer when running on mobile devices with the touch-optimized annotation UI.

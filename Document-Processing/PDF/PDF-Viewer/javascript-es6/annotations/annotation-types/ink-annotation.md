@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Ink Annotation in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Enable, draw, customize, and manage Ink (freehand) annotations in the JavaScript (ES6) PDF Viewer for handwritten marks on a PDF page.

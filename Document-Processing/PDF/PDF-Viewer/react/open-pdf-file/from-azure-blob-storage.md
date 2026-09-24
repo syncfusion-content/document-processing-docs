@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: From Azure Blob Storage in React PDF Viewer | Syncfusion
 description: Load and display PDF files stored in Azure Blob Storage in the React PDF Viewer using a server-backed web service for secure access.

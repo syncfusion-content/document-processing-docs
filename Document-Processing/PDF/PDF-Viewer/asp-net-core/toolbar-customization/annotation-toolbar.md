@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Annotation Toolbar in ASP.NET Core PDF Viewer | Syncfusion
 description: Customize the annotation toolbar in the ASP.NET Core PDF Viewer to show, hide, or replace the default annotation actions for your users.

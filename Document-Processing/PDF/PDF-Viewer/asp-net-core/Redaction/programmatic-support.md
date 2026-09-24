@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Programmatic Support in ASP.NET Core PDF Viewer | Syncfusion
 description: Use the programmatic APIs for Organize Pages in the ASP.NET Core PDF Viewer to reorder, rotate, insert, delete, and copy pages from C# or JavaScript.

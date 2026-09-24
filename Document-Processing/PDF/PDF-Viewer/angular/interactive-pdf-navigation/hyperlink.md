@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Hyperlink in Angular PDF Viewer | Syncfusion
 description: Configure hyperlink navigation in the Angular PDF Viewer, including how internal and external links open when users click them.

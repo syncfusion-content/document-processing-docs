@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Line Annotation (Shape) in Blazor PDF Viewer  | Syncfusion
 description: Learn how to add, edit, delete, and programmatically manage Line annotations in the Blazor PDF Viewer.

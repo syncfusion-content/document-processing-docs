@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Keyboard accessibility in Blazor PDF Viewer | Syncfusion
 description: Check out this guide and learn here all about Keyboard accessibility in Blazor PDF Viewer  component and more.

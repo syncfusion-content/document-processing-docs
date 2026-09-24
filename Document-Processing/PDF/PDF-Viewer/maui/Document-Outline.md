@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Document Outline in .NET MAUI PDF Viewer | Syncfusion
 description: Learn how to use the document outline view for navigation in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.

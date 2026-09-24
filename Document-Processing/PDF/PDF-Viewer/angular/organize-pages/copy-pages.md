@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Copy Pages in Angular PDF Viewer | Syncfusion
 description: Duplicate pages in the Angular PDF Viewer using the Organize Pages panel to copy one or more pages into the same document.

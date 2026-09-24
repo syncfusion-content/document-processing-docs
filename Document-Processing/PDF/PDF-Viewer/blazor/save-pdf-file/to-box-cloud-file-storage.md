@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Save PDF files to Box storage in PDF Viewer  | Syncfusion
 description: Learn how to save PDF files to Box cloud file storage using the Blazor PDF Viewer , including setup, and upload workflow.

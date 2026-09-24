@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Liquid Glass Effect for .NET MAUI PDF Viewer | Syncfusion
 description: Learn how to enable and customize the Liquid Glass Effect in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.

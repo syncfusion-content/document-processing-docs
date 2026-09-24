@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Mobile View in React PDF Viewer | Syncfusion
 description: Use the Organize Pages panel on mobile devices in the React PDF Viewer to rotate, rearrange, add, remove, and duplicate PDF pages.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Import Annotation in React PDF Viewer | Syncfusion
 description: Import annotations into the React PDF Viewer in supported formats using the built-in UI options and programmatic APIs.

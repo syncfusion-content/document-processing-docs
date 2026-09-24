@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: About Syncfusion React PDF Viewer Organize Pages | Syncfusion
 description: Learn about introduction of the Syncfusion React PDF Viewer Organize Pages section and the key capabilities it provides.

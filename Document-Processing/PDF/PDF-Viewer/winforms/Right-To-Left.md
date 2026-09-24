@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Right to Left (RTL) in WinForms PDF Viewer | Syncfusion
 description: The RTL support feature in PdfViewerControl enables right-to-left layout rendering, improving PDF viewing experiences for RTL language users.

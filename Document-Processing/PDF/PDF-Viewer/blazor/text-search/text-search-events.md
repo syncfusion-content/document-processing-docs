@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Text Search Events in Blazor PDF Viewer  | Syncfusion
 description: Learn how to handle text search events, and run programmatic searches in the Blazor PDF Viewer component and more details.

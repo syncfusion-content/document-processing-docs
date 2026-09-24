@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Handle Signature Select and Unselect Events | Syncfusion
 description: Handle the signatureSelect and signatureUnselect events in the JavaScript (ES6) PDF Viewer to manage the selection state of handwritten signatures.

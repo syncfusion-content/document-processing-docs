@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: About Syncfusion JavaScript (ES6) Organize Pages | Syncfusion
 description: Reorder, rotate, insert, delete, and save pages in the JavaScript (ES6) PDF Viewer using the Organize Pages panel and its programmatic APIs.

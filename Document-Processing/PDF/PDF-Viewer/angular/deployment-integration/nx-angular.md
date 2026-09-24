@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Nx Angular in Angular PDF Viewer | Syncfusion
 description: Learn about the nx angular in the Angular PDF Viewer and how it helps users work with PDF documents more effectively.

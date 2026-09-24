@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Use an Authorization Token in Vue PDF Viewer | Syncfusion
 description: Pass an authorization token to the Vue PDF Viewer to securely access protected PDF documents and authenticated API requests.

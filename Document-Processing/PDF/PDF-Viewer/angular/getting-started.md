@@ -1,4 +1,4 @@
-﻿---
+---
 title: Getting Started with Angular PDF Viewer | Syncfusion
 description: Set up and run the standalone Angular PDF Viewer using Syncfusion Essential JS 2 to render and interact with PDF documents in the browser.
 platform: document-processing

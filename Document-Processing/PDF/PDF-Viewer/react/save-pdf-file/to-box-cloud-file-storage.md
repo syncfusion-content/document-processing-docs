@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: To Box Cloud File Storage in React PDF Viewer | Syncfusion
 description: Save PDF files from the React PDF Viewer to Box cloud storage using a server-backed web service for authentication and secure uploads.

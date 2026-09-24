@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Saving PDF file in Blazor PDF Viewer | Syncfusion
 description: Check out and learn here all about saving PDF file in Syncfusion Blazor PDF Viewer component and much more details.

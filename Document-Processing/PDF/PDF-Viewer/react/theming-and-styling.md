@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Theming and Styling in React PDF Viewer | Syncfusion
 description: Apply built-in themes, configure dark mode, and customize the visual style of the React PDF Viewer to match your application design.

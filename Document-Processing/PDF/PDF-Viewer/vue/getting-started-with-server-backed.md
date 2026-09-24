@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Getting Started with Server-Backed Vue PDF Viewer | Syncfusion
 description: Get started with the Syncfusion Vue PDF Viewer in server-backed mode to process documents through a backend web service.

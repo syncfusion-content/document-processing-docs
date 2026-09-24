@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Annotations API in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Use the annotations API in the JavaScript (ES5) PDF Viewer to read, add, update, and delete annotations programmatically from JavaScript or TypeScript.

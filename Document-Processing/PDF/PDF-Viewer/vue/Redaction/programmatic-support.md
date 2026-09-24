@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Programmatic Support in Vue PDF Viewer | Syncfusion
 description: Use the programmatic APIs for Organize Pages in the Vue PDF Viewer to reorder, rotate, insert, delete, and copy pages from JavaScript.

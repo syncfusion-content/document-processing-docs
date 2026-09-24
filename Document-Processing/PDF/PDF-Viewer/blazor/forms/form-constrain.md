@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Form field constraints in Blazor PDF Viewer | Syncfusion
 description: Learn how to configure PDF form field flags such as IsReadOnly and IsRequired in the Blazor SfPdfViewer.

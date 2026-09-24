@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Create Form Fields in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Add each PDF form field using the JavaScript (ES5) PDF Viewer UI, and learn how to create the same fields programmatically from JavaScript or TypeScript.

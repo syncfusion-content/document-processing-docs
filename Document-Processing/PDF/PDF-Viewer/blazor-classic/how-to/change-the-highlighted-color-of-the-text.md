@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Change text highlight color in Blazor PDF Viewer | Syncfusion
 description: Learn here all about how to change the highlighted color of the text in Syncfusion Blazor PDF Viewer component.

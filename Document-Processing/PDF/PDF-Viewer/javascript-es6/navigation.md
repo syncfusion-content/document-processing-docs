@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Navigation in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Move between pages in the JavaScript (ES6) PDF Viewer using page, bookmark, hyperlink, and thumbnail navigation options built into the toolbar.

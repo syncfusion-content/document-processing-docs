@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Module Injection in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Learn about the module injection in the JavaScript (ES6) PDF Viewer and how it helps users work with PDF documents more effectively.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Ink Eraser in ASP.NET Core PDF Viewer | Syncfusion
 description: Use the Ink Eraser tool in the ASP.NET Core PDF Viewer to remove or correct freehand drawing strokes with both UI and programmatic control.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: To Google Drive in ASP.NET Core PDF Viewer | Syncfusion
 description: Save PDF files from the ASP.NET Core PDF Viewer to Google Drive using a server-backed web service for authentication and secure uploads.

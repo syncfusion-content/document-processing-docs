@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Zoom Pages in Angular PDF Viewer | Syncfusion
 description: Adjust the thumbnail zoom level inside the Organize Pages panel in the Angular PDF Viewer so users can preview pages at the right size.

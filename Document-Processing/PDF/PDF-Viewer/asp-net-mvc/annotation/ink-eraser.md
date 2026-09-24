@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Ink Eraser in ASP.NET MVC PDF Viewer | Syncfusion
 description: Use the Ink Eraser tool in the ASP.NET MVC PDF Viewer to remove or correct freehand drawing strokes with both UI and programmatic control.

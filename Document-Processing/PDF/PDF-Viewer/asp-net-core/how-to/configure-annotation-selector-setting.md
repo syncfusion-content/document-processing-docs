@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Configure Annotation Selectors in ASP.NET Core | Syncfusion
 description: Configure annotation selector settings in the ASP.NET Core PDF Viewer using annotationSelectorSettings to control selection and resize behavior.

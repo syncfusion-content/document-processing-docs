@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Feature Module in React PDF Viewer | Syncfusion
 description: The feature module in the React PDF Viewer lets you load only the capabilities you need, keeping the bundle size small and the app fast.

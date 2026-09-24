@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Change the Annotation Author Name in Vue PDF | Syncfusion
 description: Change the author name and related annotation settings in the Vue PDF Viewer using the annotationSettings API and configuration options.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Angular Universal SSR in Angular PDF Viewer | Syncfusion
 description: Learn about the angular universal ssr in the Angular PDF Viewer and how it helps users work with PDF documents more effectively.

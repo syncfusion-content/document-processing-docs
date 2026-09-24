@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Free Text Annotation in Angular PDF Viewer | Syncfusion
 description: Enable, add, customize, and manage Free Text annotations in the Angular PDF Viewer for inline notes and labels on a PDF page.

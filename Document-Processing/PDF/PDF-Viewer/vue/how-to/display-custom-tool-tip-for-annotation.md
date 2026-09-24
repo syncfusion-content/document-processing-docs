@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Display Custom Tooltips for Annotations in Vue | Syncfusion
 description: Display custom tooltips for annotations in the Vue PDF Viewer so users can see helpful information when they hover over each annotation.

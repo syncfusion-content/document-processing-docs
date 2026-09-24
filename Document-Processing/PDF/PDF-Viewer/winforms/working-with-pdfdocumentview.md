@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: PdfDocumentView in WinForms PDF Viewer | Syncfusion
 description: The PDFDocumentView control enables users to load, view, navigate, and interact with PDF documents in Windows Forms applications.

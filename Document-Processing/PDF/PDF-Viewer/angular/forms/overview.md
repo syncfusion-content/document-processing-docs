@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: About Syncfusion Angular PDF Viewer Forms | Syncfusion
 description: Learn about introduction of the Syncfusion Angular PDF Viewer Forms section and the key capabilities it provides.

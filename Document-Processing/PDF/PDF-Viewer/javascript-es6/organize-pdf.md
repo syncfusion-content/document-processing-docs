@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Organize Pdf in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Learn about the organize pdf in the JavaScript (ES6) PDF Viewer and how it helps users work with PDF documents more effectively.

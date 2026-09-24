@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Sticky notes annotations in Blazor PDF Viewer  | Syncfusion
 description: Learn how to create, edit, and manage sticky note annotations in the Blazor PDF Viewer  for effective PDF collaboration and review.

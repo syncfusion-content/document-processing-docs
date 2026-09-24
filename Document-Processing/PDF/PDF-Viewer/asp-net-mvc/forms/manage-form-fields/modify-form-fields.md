@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Modify Form Fields in ASP.NET MVC PDF Viewer | Syncfusion
 description: Edit PDF form fields in the ASP.NET MVC PDF Viewer using the built-in UI and programmatic APIs to update field properties at runtime.

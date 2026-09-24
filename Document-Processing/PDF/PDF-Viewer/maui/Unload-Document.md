@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Unload a PDF Document in .NET MAUI PDF Viewer | Syncfusion
 description: Learn how to unload a PDF document and release associated resources in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.

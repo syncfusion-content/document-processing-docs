@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Circle Annotation in ASP.NET Core PDF Viewer | Syncfusion
 description: Enable, apply, customize, and manage Circle annotations in the ASP.NET Core PDF Viewer for marking, highlighting, or measuring areas.

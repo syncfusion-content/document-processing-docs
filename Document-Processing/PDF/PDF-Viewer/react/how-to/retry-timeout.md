@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Configure Retry Timeout in React PDF Viewer | Syncfusion
 description: Configure retry timeout settings in the React PDF Viewer so failed requests are retried automatically with a delay you control.

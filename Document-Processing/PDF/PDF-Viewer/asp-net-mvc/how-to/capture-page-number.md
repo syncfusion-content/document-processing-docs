@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Capture the Current Page Number in ASP.NET MVC | Syncfusion
 description: Capture the current page number in the ASP.NET MVC PDF Viewer when users navigate, annotate, or interact with the document.

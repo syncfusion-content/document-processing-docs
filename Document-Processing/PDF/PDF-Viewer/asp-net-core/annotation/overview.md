@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: About Syncfusion ASP.NET Core PDF Viewer Annotations | Syncfusion
 description: Learn about introduction of the Syncfusion ASP.NET Core PDF Viewer Annotations section and the key capabilities it provides.

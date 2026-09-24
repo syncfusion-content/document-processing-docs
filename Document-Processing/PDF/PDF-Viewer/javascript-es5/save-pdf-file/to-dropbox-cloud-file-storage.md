@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: To Dropbox Cloud File Storage in JavaScript (ES5) PDF | Syncfusion
 description: Save PDF files from the JavaScript (ES5) PDF Viewer to Dropbox using standalone and server-backed configurations, with code samples and tips.

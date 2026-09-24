@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Annotations in Mobile View in Blazor PDF Viewer | Syncfusion
 description: Learn how to add, edit, and manage annotations in the mobile view of the Blazor PDF Viewer component and more details. 

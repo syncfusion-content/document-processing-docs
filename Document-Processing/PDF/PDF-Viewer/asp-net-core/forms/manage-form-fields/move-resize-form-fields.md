@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Move Resize Form Fields in ASP.NET Core PDF Viewer | Syncfusion
 description: Move and resize PDF form fields in the ASP.NET Core PDF Viewer using the built-in UI and programmatic APIs to control the field layout.

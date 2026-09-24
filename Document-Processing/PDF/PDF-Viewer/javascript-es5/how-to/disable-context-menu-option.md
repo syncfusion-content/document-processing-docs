@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Disable Context Menu Options in JavaScript (ES5) | Syncfusion
 description: Disable specific context menu options in the JavaScript (ES5) PDF Viewer to control which right-click actions are available to your users.

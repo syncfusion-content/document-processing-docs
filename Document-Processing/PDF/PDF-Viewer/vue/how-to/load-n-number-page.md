@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Load Pages on Initial Load in Vue PDF Viewer | Syncfusion
 description: Load a specific number of pages during the initial render of the Vue PDF Viewer to improve perceived performance for large documents.

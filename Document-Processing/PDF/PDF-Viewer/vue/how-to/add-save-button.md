@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Add a Save Button to the Toolbar in Vue PDF Viewer | Syncfusion
 description: Add, show, hide, enable, and disable a custom Save button in the built-in toolbar of the Vue PDF Viewer using toolbar settings.

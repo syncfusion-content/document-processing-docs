@@ -1,4 +1,4 @@
-﻿---
+---
 title: About Syncfusion Angular PDF Viewer Control | Syncfusion
 description: Learn about introduction of Syncfusion Essential Studio Angular PDF Viewer control, its key features, and how to get started with it.
 platform: document-processing

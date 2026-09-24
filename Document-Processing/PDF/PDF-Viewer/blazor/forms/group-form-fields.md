@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Group form fields in the Blazor PDF Viewer  | Syncfusion
 description: Learn how to group PDF form fields in the Blazor SfPdfViewer by assigning the same name to multiple widgets.

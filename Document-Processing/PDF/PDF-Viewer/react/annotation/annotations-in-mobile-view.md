@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Annotations in Mobile View in React PDF Viewer | Syncfusion
 description: Create, edit, and manage annotations in the React PDF Viewer when running on mobile devices with the touch-optimized annotation UI.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Open PDF files from Google Drive in Blazor PDF Viewer | Syncfusion
 description: Learn how to open PDF files from Google Drive in the Blazor PDF Viewer , including setup, and a working example.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Interaction mode in Blazor PDF Viewer Classic | Syncfusion
 description: Check out and learn here all about interaction mode in Syncfusion Blazor PDF Viewer component and much more details.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Form Validation in Angular PDF Viewer | Syncfusion
 description: Enable built-in PDF form field validation in the Angular PDF Viewer and detect missing required fields while users complete a form.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Create a Custom PDF Viewer Service in JavaScript | Syncfusion
 description: Create a custom PDF Viewer web service for the JavaScript (ES5) PDF Viewer, with code samples and configuration tips for common setups.

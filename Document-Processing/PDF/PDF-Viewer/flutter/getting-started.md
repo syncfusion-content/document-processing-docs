@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Getting Started with Flutter PDF Viewer | Syncfusion
 description: The getting started guide for SfPdfViewer introduces its core features, key elements, and essential PDF viewing capabilities.

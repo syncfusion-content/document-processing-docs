@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Download in React PDF Viewer | Syncfusion
 description: Download PDF files in the React PDF Viewer to a local device, with options to control the file name and the download workflow.

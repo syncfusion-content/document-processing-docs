@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Circle Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Enable, apply, customize, and manage Circle annotations in the JavaScript (ES5) PDF Viewer for marking, highlighting, or measuring areas.

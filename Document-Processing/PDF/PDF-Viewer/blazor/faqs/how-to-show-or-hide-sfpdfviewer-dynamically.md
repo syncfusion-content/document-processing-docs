@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Show or hide dynamically in Blazor PDF Viewer  | Syncfusion
 description: Learn how to dynamically show or hide the Blazor PDF Viewer, toggle visibility with a button, and load PDFs from a local file.

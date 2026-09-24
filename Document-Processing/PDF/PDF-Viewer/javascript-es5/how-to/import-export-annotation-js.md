@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Import and Export Annotations in JavaScript (ES5) | Syncfusion
 description: Import and export annotations in the JavaScript (ES5) PDF Viewer as JavaScript objects, JSON strings, or XFDF for backup, sharing, and migration.

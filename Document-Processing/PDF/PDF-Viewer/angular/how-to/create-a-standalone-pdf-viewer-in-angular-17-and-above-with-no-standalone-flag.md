@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Create a Standalone PDF Viewer in Angular 17| Syncfusion
 description: Create a standalone Angular PDF Viewer in Angular 17 and above with the standalone flag enabled using the Syncfusion Essential JS 2 PDF Viewer.

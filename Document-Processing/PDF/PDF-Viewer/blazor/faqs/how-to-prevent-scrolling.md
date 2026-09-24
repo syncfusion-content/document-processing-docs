@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Prevent the PDF from scrolling | Syncfusion
 description: Learn here all about how to prevent scrolling and remove the vertical scrollbar in the PDF Viewer Component.

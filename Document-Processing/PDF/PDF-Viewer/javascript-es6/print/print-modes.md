@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Print Modes in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Configure print modes in the JavaScript (ES6) PDF Viewer to control how PDF documents are printed and to optimize the output for different scenarios.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Interaction Modes in WinForms PDFViewer | Syncfusion
 description: Interaction modes allow users to perform actions such as text selection, panning, and document navigation within the PDF Viewer control.

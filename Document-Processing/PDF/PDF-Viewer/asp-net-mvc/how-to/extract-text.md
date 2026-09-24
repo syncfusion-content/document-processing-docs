@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Use the ExtractText Method in ASP.NET MVC PDF | Syncfusion
 description: Use the extractText method in the ASP.NET MVC PDF Viewer to extract text and bounds from one or more pages of a loaded PDF document.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Server Actions in ASP.NET Core PDF Viewer | Syncfusion
 description: Learn about the server actions in the ASP.NET Core PDF Viewer and how it helps users work with PDF documents more effectively.

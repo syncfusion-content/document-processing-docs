@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Retrieve LoadedDoc in Angular PDF Viewer | Syncfusion
 description: Retrieve the loaded PDF document instance in the Angular PDF Viewer through Angular component references and the documentLoad event for advanced scenarios.

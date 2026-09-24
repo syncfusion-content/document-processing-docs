@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Import and Export Annotations in React PDF Viewer | Syncfusion
 description: Import and export annotations in the React PDF Viewer as JavaScript objects, JSON strings, or XFDF for backup, sharing, and migration.

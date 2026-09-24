@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: About Syncfusion Windows Forms PDF Viewer Control | Syncfusion
 description: Learn about introduction of Syncfusion Essential Studio Windows Forms PDF Viewer control and more details.

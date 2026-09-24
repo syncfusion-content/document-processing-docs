@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Agentic Builder in React PDF Viewer | Syncfusion
 description: Create a React PDF Viewer project with the Agentic UI Builder, a guided workflow that generates code from natural-language prompts.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Configure Annotation Selectors in Angular PDF | Syncfusion
 description: Configure annotation selector settings in the Angular PDF Viewer using annotationSelectorSettings to control selection and resize behavior.

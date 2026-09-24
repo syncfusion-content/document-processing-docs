@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Enable Local Storage in JavaScript (ES5) PDF | Syncfusion
 description: Control session-specific data storage in the JavaScript (ES5) PDF Viewer using the enableLocalStorage property to balance performance and persistence.

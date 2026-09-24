@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Configure Retry Timeout in ASP.NET Core PDF Viewer | Syncfusion
 description: Configure retry timeout settings in the ASP.NET Core PDF Viewer so failed requests are retried automatically with a delay you control.

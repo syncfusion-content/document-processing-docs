@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Squiggly Annotation in React PDF Viewer | Syncfusion
 description: Enable, apply, customize, and manage Squiggly annotations in the React PDF Viewer to mark text with a wavy underline.

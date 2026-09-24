@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Events in Angular PDF Viewer | Syncfusion
 description: Learn about the events in the Angular PDF Viewer and how it helps users work with PDF documents more effectively.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to View the created PDF document | Syncfusion
 description: Learn here all about View the created PDF document in Syncfusion Blazor PDF Viewer component and more.

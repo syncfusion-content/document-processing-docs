@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Export Annotation in React PDF Viewer | Syncfusion
 description: Export annotations from the React PDF Viewer in supported formats using the built-in UI options and programmatic APIs.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Document link annotation in Flutter PDF Viewer | Syncfusion
 description: Document link annotations in SfPdfViewer provide quick navigation between pages and linked destinations within PDF documents.

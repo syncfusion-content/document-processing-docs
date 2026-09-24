@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: About Syncfusion React PDF Viewer Security | Syncfusion
 description: Learn about introduction of the Syncfusion React PDF Viewer Security section and the key capabilities it provides.

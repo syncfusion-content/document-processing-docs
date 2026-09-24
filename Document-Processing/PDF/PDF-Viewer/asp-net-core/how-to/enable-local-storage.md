@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Enable Local Storage in ASP.NET Core PDF Viewer | Syncfusion
 description: Control session-specific data storage in the ASP.NET Core PDF Viewer using the enableLocalStorage property to balance performance and persistence.

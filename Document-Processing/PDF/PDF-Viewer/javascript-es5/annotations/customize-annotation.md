@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Customize Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Customize the appearance and behavior of annotations in the JavaScript (ES5) PDF Viewer through UI settings and programmatic configuration.

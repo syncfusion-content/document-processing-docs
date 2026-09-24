@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: From Azure Active Directory in Vue PDF Viewer | Syncfusion
 description: Learn about the from azure active directory in the Vue PDF Viewer and how it helps users work with PDF documents more effectively.

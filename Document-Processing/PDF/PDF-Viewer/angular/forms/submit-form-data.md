@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Submit Form Data in Angular PDF Viewer | Syncfusion
 description: Submit filled PDF form data from the Angular PDF Viewer to a backend server, with a complete frontend example to get you started.

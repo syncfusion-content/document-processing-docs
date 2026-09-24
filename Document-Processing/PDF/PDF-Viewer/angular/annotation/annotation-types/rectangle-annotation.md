@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Rectangle Annotation in Angular PDF Viewer | Syncfusion
 description: Enable, apply, customize, and manage Rectangle annotations in the Angular PDF Viewer to outline rectangular regions on a PDF page.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Getting Started with ASP.NET Core PDF Viewer | Syncfusion
 description: Learn how to get started with the Syncfusion ASP.NET Core PDF Viewer control. Explore setup, features, examples, and customization options.

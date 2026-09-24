@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Strikethrough Annotation in ASP.NET Core PDF Viewer | Syncfusion
 description: Enable, apply, customize, and manage Strikethrough annotations in the ASP.NET Core PDF Viewer to mark text with a horizontal line through it.

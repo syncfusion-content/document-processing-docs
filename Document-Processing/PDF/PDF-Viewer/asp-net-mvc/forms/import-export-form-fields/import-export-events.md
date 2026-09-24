@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Import Export Events in ASP.NET MVC PDF Viewer | Syncfusion
 description: Handle import and export events for PDF form fields in the ASP.NET MVC PDF Viewer to run custom logic when form data is loaded or saved.

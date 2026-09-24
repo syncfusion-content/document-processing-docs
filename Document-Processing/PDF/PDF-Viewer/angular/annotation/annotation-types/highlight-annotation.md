@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Highlight Annotation in Angular PDF Viewer | Syncfusion
 description: Enable, apply, customize, and manage Highlight annotations in the Angular PDF Viewer to emphasize important text in a PDF.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Create PDF Viewer in a Popup Window in Blazor | Syncfusion
 description: Learn here all about how to integrating the Blazor PDF Viewer Component within a Dialog popup window.

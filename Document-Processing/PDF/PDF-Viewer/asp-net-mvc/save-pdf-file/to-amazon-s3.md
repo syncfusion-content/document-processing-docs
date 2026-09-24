@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: To Amazon S3 in ASP.NET MVC PDF Viewer | Syncfusion
 description: Save PDF files from the ASP.NET MVC PDF Viewer to AWS S3 using standalone and server-backed configurations, with code samples and tips.

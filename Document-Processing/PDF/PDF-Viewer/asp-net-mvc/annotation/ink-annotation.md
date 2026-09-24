@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Ink Annotation in ASP.NET MVC PDF Viewer | Syncfusion
 description: Enable, draw, customize, and manage Ink (freehand) annotations in the ASP.NET MVC PDF Viewer for handwritten marks on a PDF page.

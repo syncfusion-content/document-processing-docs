@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Move Resize Form Fields in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Move and resize PDF form fields in the JavaScript (ES6) PDF Viewer using the built-in UI and programmatic APIs to control the field layout.

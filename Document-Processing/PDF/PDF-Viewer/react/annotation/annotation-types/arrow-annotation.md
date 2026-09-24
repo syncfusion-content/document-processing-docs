@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Arrow Annotation in React PDF Viewer | Syncfusion
 description: Enable, apply, customize, and manage Arrow annotations in the React PDF Viewer to point at or connect areas of a PDF document.

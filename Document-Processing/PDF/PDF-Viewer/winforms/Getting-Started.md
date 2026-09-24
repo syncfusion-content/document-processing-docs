@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Getting Started with WinForms PDF Viewer | Syncfusion
 description: Getting started with the Syncfusion PDF Viewer for WinForms covers setup, key elements, and essential PDF viewing functionality.

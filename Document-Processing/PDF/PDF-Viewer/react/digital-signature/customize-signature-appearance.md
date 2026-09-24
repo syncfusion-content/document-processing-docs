@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Customize Signature Appearance in React PDF Viewer | Syncfusion
 description: Customize the appearance of visible PKI digital signatures in PDFs from a React app using the Syncfusion PDF Library.

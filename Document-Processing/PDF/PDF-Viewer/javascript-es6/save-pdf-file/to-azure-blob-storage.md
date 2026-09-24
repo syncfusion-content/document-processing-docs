@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Save PDFs to Azure Blob Storage in JavaScript (ES6) | Syncfusion
 description: Save PDF files from the JavaScript (ES6) PDF Viewer to Azure Blob Storage using standalone and server-backed configurations, with code samples and tips.

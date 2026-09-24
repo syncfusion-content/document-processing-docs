@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: To Amazon S3 in Angular PDF Viewer | Syncfusion
 description: Save PDF files from the Angular PDF Viewer to AWS S3 using standalone and server-backed configurations, with code samples and tips.

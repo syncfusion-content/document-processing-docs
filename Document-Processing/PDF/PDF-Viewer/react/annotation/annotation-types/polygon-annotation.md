@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Polygon Annotation in React PDF Viewer | Syncfusion
 description: Enable, apply, customize, and manage Polygon annotations in the React PDF Viewer to outline irregular shapes on a PDF page.

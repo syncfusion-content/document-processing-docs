@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Theming and Styling in Angular PDF Viewer | Syncfusion
 description: Apply built-in themes, configure dark mode, and customize the visual style of the Angular PDF Viewer to match your application design.

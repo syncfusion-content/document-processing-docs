@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Customize Style of form fields in the Blazor PDF Viewer | Syncfusion
 description: Learn how to configure typography, colors, borders, alignment, and other style settings for form fields using the UI and Programmatically.

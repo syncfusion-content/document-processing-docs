@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Annotation Events in Blazor PDF Viewer  | Syncfusion
 description: Learn how to subscribe to and handle annotations and signature annotation events in the Blazor PDF Viewer.

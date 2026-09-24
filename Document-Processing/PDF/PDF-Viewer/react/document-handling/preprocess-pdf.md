@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Preprocess Pdf in React PDF Viewer | Syncfusion
 description: Preprocess PDF documents with the Syncfusion PDF Library before displaying them in the React PDF Viewer to apply changes such as redaction or flattening.

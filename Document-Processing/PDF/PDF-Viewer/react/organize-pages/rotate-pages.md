@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Rotate Pages in React PDF Viewer | Syncfusion
 description: Rotate one or more pages in the React PDF Viewer using the Organize Pages panel to change the orientation of pages in a PDF document.

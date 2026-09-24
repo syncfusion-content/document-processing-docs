@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: From Box Cloud File Storage in JavaScript (ES5) PDF | Syncfusion
 description: Load and display PDF files stored in Box cloud storage in the JavaScript (ES5) PDF Viewer using a server-backed web service for authentication.

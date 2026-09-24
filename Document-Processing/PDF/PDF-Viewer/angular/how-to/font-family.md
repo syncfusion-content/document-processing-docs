@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Change the Font Family in Angular PDF Viewer | Syncfusion
 description: Change the default font family used by the Angular PDF Viewer for form fields, signatures, and other text elements to match your application design.

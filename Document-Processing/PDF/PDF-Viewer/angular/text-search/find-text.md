@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Find Text in Angular PDF Viewer | Syncfusion
 description: Configure text search in the Angular PDF Viewer and run programmatic searches to find and highlight matching text inside a PDF document.

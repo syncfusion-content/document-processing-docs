@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Collaborative Editing in React PDF Viewer with Node.js | Syncfusion
 description: Learn how to implement collaborative editing in React PDF Viewer using Node.js with Redis for real-time multi-user PDF annotation and interaction.

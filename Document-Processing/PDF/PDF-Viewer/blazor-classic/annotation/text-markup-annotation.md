@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Text markup annotations in Blazor PDF Viewer  | Syncfusion
 description: Checkout and learn here all about text markup annotations in Syncfusion Blazor PDF Viewer  and more.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Flatten PDF form fields in Vue PDF Viewer | Syncfusion
 description: Learn here all about how to flatten interactive PDF form fields before download or save-as in EJ2 Vue PDF Viewer.

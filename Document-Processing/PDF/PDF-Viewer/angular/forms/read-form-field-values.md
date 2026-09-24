@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Read Form Field Values in Angular PDF Viewer | Syncfusion
 description: Read and extract values from PDF form fields in the Angular PDF Viewer, including text, checkboxes, radio buttons, dropdowns, and signatures.

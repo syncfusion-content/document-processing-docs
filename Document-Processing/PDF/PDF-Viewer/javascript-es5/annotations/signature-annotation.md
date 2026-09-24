@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Signature Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Add, edit, and manage handwritten signatures in the JavaScript (ES5) PDF Viewer, including enabling or disabling the signature tool for users.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Text Search Events in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Handle text search events in the JavaScript (ES5) PDF Viewer and run programmatic searches to integrate text search into your JavaScript application.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Annotation Permissions in Blazor PDF Viewer | Syncfusion
 description: Learn how to use annotation permissions in the Blazor PDF Viewer to  annotation behavior and access.

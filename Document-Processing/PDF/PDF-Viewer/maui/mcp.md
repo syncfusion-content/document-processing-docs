@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Syncfusion MAUI PDF Viewer MCP Server | Syncfusion
 description: Learn how to configure and use Syncfusion MAUI MCP server for intelligent code generation, documentation, and troubleshooting of the MAUI PDF Viewer component.

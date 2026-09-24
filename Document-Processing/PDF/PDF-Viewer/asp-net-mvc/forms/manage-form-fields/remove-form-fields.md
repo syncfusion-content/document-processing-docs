@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Remove Form Fields in ASP.NET MVC PDF Viewer | Syncfusion
 description: Remove PDF form fields in the ASP.NET MVC PDF Viewer using the built-in UI and programmatic APIs to delete fields you no longer need.

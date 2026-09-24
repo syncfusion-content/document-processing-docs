@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Customize Primary Toolbar in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Customize the primary toolbar in the JavaScript (ES6) PDF Viewer to show, hide, reorder, or add items so it matches the way users work with PDFs.

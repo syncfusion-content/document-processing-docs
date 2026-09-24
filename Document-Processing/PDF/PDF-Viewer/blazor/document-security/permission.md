@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Load permission-restricted PDFs in Blazor PDF Viewer | Syncfusion
 description: Learn how Blazor PDF Viewer enforces owner permissions in permission-restricted PDFs, ling print, copy, and edit

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Mobile Toolbar in React PDF Viewer | Syncfusion
 description: The mobile toolbar in the React PDF Viewer adapts the touch interface so users can access core features on small screens.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Getting Started with Next.js and React PDF Viewer | Syncfusion
 description: Create a Next.js application that uses the Syncfusion React PDF Viewer to render and interact with PDF documents in the browser.

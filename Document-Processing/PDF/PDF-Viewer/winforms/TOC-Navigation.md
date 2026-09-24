@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Table of contents Navigation in WinForms PDF Viewer | Syncfusion
 description: Learn about Table of Contents Navigation support in Syncfusion<sup>&reg;</sup>; WinForms Pdf Viewer control, its elements and more.

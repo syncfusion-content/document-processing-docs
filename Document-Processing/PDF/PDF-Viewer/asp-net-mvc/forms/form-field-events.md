@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Form Field Events in ASP.NET MVC PDF Viewer | Syncfusion
 description: Subscribe to form field events in the ASP.NET MVC PDF Viewer to react to focus, change, validation, and other interactions on PDF form fields.

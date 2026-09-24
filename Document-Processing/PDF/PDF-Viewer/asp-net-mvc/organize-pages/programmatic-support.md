@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Programmatic Support in ASP.NET MVC PDF Viewer | Syncfusion
 description: Use the programmatic APIs for Organize Pages in the ASP.NET MVC PDF Viewer to reorder, rotate, insert, delete, and copy pages from C# or JavaScript.

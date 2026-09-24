@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Events in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Subscribe to Organize Pages events in the JavaScript (ES5) PDF Viewer to react to rotate, rearrange, insert, delete, and copy actions on pages.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Free Text Annotation in ASP.NET MVC PDF Viewer | Syncfusion
 description: Enable, add, customize, and manage Free Text annotations in the ASP.NET MVC PDF Viewer for inline notes and labels on a PDF page.

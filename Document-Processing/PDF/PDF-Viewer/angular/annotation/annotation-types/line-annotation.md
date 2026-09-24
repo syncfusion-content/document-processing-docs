@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Line Annotation in Angular PDF Viewer | Syncfusion
 description: Enable, apply, customize, and manage Line annotations in the Angular PDF Viewer for marking straight paths on a PDF page.

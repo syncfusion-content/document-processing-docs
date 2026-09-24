@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Disable Tile Rendering in JavaScript (ES5) PDF | Syncfusion
 description: Disable tile rendering in the JavaScript (ES5) PDF Viewer to use the classic full-page rendering mode for simpler PDF display scenarios.

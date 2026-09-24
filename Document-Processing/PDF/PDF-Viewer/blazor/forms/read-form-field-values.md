@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Read and Extract PDF Form Field Values in Blazor | Syncfusion
 description: Learn how to read and extract values from PDF form fields in the Blazor SfPdfViewer, including text, checkboxes, radio buttons, dropdowns, and signatures.

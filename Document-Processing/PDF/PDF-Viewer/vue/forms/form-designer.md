@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Form Designer in Vue PDF Viewer | Syncfusion
 description: Use the Form Designer in the Vue PDF Viewer to create, edit, and manage form fields visually, and customize the form designer toolbar.

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Annotation Event in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Subscribe to annotation events in the JavaScript (ES5) PDF Viewer to react to add, modify, select, and remove actions on PDF annotations.
 platform: document-processing

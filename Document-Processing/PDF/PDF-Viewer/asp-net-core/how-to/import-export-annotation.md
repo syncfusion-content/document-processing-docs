@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Import and Export Annotations in ASP.NET Core PDF | Syncfusion
 description: Import and export annotations in the ASP.NET Core PDF Viewer as JavaScript objects, JSON strings, or XFDF for backup, sharing, and migration.

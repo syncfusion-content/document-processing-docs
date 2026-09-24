@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: To Amazon S3 in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Save PDF files from the JavaScript (ES6) PDF Viewer to AWS S3 using standalone and server-backed configurations, with code samples and tips.

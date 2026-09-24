@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Squiggly Annotation in Angular PDF Viewer | Syncfusion
 description: Enable, apply, customize, and manage Squiggly annotations in the Angular PDF Viewer to mark text with a wavy underline.

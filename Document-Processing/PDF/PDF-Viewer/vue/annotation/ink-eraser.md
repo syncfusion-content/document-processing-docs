@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Ink Eraser in Vue PDF Viewer | Syncfusion
 description: Use the Ink Eraser tool in the Vue PDF Viewer to remove or correct freehand drawing strokes with both UI and programmatic control.

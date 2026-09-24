@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Annotation Comment Filter in Angular PDF Viewer | Syncfusion
 description: Filter comments and annotations in the Angular PDF Viewer by author, status, type, and date using the comment filter panel and programmatic APIs.

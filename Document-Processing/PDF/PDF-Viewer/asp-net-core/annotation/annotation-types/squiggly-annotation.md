@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Squiggly Annotation in ASP.NET Core PDF Viewer | Syncfusion
 description: Enable, apply, customize, and manage Squiggly annotations in the ASP.NET Core PDF Viewer to mark text with a wavy underline.

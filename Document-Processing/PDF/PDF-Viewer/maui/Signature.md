@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Electronic Signature in .NET MAUI PDF Viewer | Syncfusion
 description: Learn how to add and manage electronic signatures in the Syncfusion<sup>®</sup> .NET MAUI PDF Viewer (SfPdfViewer) control.

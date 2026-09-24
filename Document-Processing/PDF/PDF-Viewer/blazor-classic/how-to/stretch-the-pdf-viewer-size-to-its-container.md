@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Update the PDF Viewer size to its container in PDF Viewer | Syncfusion
 description: Learn here all about how to stretch the PDF Viewer size to its container in Syncfusion Blazor PDF Viewer component.

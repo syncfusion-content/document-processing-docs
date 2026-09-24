@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Working with magnification in UWP PDF Viewer | Syncfusion
 description: Learn here all about Working with magnification support in Syncfusion<sup>®</sup> UWP PDF Viewer (SfPdfViewer) control and more.

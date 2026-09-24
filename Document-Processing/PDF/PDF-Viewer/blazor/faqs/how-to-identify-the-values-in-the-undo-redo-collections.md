@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Determine undo and redo availability in PDF Viewer | Syncfusion
 description: Learn how to determine whether undo and redo actions are available in the Blazor PDF Viewer by binding CanUndo and CanRedo, with a working example.

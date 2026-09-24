@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Perimeter Annotation in Angular PDF Viewer | Syncfusion
 description: Enable, draw, customize, and manage Perimeter measurement annotations in the Angular PDF Viewer to calculate the perimeter of a region.

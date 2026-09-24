@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Globalization and RTL in Blazor PDF Viewer Classic| Syncfusion
 description: Check out and learn here all about globalization and RTL in Syncfusion Blazor PDF Viewer component and much more details.

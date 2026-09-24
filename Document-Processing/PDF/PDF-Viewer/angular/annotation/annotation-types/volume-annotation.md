@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Volume Annotation in Angular PDF Viewer | Syncfusion
 description: Enable, draw, customize, and manage Volume measurement annotations in the Angular PDF Viewer to calculate the volume of a 3D region.

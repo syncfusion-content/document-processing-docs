@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Measurement Annotation in ASP.NET MVC PDF Viewer | Syncfusion
 description: Learn about the measurement annotation in the ASP.NET MVC PDF Viewer and how it helps users work with PDF documents more effectively.

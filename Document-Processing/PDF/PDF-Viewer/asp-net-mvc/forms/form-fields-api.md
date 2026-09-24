@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Form Fields Api in ASP.NET MVC PDF Viewer | Syncfusion
 description: Use the form fields API in the ASP.NET MVC PDF Viewer to enable, update, retrieve, and clear form fields programmatically from C# or JavaScript.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Getting Started with UWP Pdf Viewer control | Syncfusion
 description: Learn how to get started with the Syncfusion<sup>®</sup> UWP PDF Viewer control. Explore setup, features, examples, and customization options.

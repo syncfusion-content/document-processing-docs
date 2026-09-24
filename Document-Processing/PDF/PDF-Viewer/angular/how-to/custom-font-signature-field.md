@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Change the Font for Type Signatures in Angular | Syncfusion
 description: Change the font family for type signatures and initials in the Angular PDF Viewer using typeSignatureFonts and typeInitialFonts properties.

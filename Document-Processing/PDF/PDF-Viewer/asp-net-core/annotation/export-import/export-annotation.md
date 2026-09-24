@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Export Annotation in ASP.NET Core PDF Viewer | Syncfusion
 description: Export annotations from the ASP.NET Core PDF Viewer in supported formats using the built-in UI options and programmatic APIs.
