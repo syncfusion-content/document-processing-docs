@@ -5,7 +5,6 @@ description: The Flutter Excel Library lets users display cell values as dates, 
 platform: document-processing
 control: Excel
 documentation: ug
-appliesto: Document SDK
 ---
 
 # Number Formats in Flutter Excel Library

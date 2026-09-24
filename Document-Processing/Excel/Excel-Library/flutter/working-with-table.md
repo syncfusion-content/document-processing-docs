@@ -5,7 +5,6 @@ description: The Flutter Excel Library lets users create, format, and remove str
 platform: document-processing
 control: Excel
 documentation: ug
-appliesto: Document SDK
 ---
 
 # Excel Tables in Flutter Excel Library

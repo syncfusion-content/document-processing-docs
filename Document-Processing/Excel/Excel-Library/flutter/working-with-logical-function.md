@@ -5,7 +5,6 @@ description: The Flutter Excel Library lets users evaluate conditions in workshe
 platform: document-processing
 control: Excel
 documentation: ug
-appliesto: Document SDK
 ---
 
 # Logical Function Formulas in Flutter Excel Library

@@ -4,7 +4,6 @@ description: Learn how to sort a column by including the first row programmatica
 platform: document-processing
 control: XlsIO
 documentation: UG
-appliesto: Document SDK
 ---
 
 # How to sort columns with the first row in .NET Excel Library

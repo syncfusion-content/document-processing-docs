@@ -6,7 +6,6 @@ platform: document-processing
 control: Ink annotation
 documentation: ug
 domainurl: ##DomainURL##
-appliesto: PDF Viewer SDK
 ---
 
 # Ink Annotation in Angular PDF Viewer

@@ -5,7 +5,6 @@ description: Open in JavaScript Spreadsheet enables users to import and load wor
 platform: document-processing
 control: Open 
 documentation: ug
-appliesto: Spreadsheet Editor SDK
 ---
 
 # Open in Javascript Spreadsheet 

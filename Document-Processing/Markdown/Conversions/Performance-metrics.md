@@ -4,7 +4,6 @@ description: Explore Markdown conversion performance benchmarks across documents
 platform: document-processing
 control: Markdown
 documentation: UG
-appliesto: Document SDK
 ---
 
 # Conversion Performance Benchmarks in .NET Markdown Library

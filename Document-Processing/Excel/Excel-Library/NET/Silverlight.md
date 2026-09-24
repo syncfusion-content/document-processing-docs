@@ -4,7 +4,6 @@ description: Silverlight load and save operations section describes how Excel do
 platform: document-processing
 control: XlsIO
 documentation: UG
-appliesto: Document SDK
 ---
 # Deploying .NET Excel Library in Silverlight
 

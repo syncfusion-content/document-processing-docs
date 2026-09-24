@@ -5,7 +5,6 @@ description: Learn how to get started with the Syncfusion Flutter Excel Library 
 platform: document-processing
 control: Excel
 documentation: ug
-appliesto: Document SDK
 ---
 
 # Getting Started with Flutter Excel Library

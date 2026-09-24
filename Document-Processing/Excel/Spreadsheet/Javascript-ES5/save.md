@@ -5,7 +5,6 @@ description: Save in JavaScript Spreadsheet enables users to export and store wo
 platform: document-processing
 control: Save 
 documentation: ug
-appliesto: Spreadsheet Editor SDK
 ---
 
 # Save in Javascript Spreadsheet 

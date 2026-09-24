@@ -5,7 +5,6 @@ description: The Flutter Excel Library lets users create, access, and modify wor
 platform: document-processing
 control: Excel
 documentation: ug
-appliesto: Document SDK
 ---
 
 # Excel Worksheets in Flutter Excel Library

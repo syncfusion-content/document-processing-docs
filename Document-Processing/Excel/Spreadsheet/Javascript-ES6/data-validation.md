@@ -5,7 +5,6 @@ description: Data validation in TypeScript Spreadsheet restricts cell input base
 platform: document-processing
 control: Data validation 
 documentation: ug
-appliesto: Spreadsheet Editor SDK
 ---
 
 # Data Validation in TypeScript Spreadsheet 

@@ -5,7 +5,6 @@ description: The Flutter Excel Library lets users add, format, and remove images
 platform: document-processing
 control: Excel
 documentation: ug
-appliesto: Document SDK
 ---
 
 # Excel Images in Flutter Excel Library

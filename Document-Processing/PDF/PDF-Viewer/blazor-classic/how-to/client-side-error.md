@@ -5,7 +5,6 @@ description: Learn here all about resolve the “Client-side error is found” i
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-appliesto: PDF Viewer SDK
 ---
 
 # How to Resolve the “Client-side error” in .Net 6.0

@@ -6,7 +6,6 @@ platform: document-processing
 control: Sticky notes annotation
 documentation: ug
 domainurl: ##DomainURL##
-appliesto: PDF Viewer SDK
 ---
 
 # Sticky Notes Annotation in Angular PDF Viewer

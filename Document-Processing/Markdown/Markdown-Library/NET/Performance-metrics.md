@@ -4,7 +4,6 @@ description: Explore .NET Markdown library performance benchmarks across various
 platform: document-processing
 control: Markdown
 documentation: UG
-appliesto: Document SDK
 ---
 
 # Performance Benchmarks in .NET Markdown Library

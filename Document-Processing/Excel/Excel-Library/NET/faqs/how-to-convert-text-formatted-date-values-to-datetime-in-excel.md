@@ -4,7 +4,6 @@ description: Convert text-formatted date values to DateTime values in Excel work
 platform: document-processing
 control: XlsIO
 documentation: UG
-appliesto: Document SDK
 ---
 
 # How to convert dates in .NET Excel Library

@@ -6,7 +6,6 @@ platform: document-processing
 control: Measurement annotation
 documentation: ug
 domainurl: ##DomainURL##
-appliesto: PDF Viewer SDK
 ---
 
 # Measurement Annotation in Angular PDF Viewer

@@ -5,7 +5,6 @@ description: The Flutter Excel Library lets users import data from objects, coll
 platform: document-processing
 control: Excel
 documentation: ug
-appliesto: Document SDK
 ---
 
 # Excel Data in Flutter Excel Library

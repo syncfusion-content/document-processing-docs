@@ -5,7 +5,6 @@ description: Open in TypeScript Spreadsheet enables users to import and load wor
 platform: document-processing
 control: Open 
 documentation: ug
-appliesto: Spreadsheet Editor SDK
 ---
 
 # Open in TypeScript Spreadsheet 

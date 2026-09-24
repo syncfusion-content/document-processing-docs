@@ -5,7 +5,6 @@ description: Learn how to print PDF files in the Blazor PDF Viewer component usi
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-appliesto: PDF Viewer SDK
 ---
 
 # Print in Blazor PDF Viewer 

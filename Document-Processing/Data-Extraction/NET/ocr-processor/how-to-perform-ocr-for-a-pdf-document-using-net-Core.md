@@ -4,7 +4,6 @@ description: This section explains how to perform OCR on an entire PDF document 
 platform: document-processing
 control: PDF
 documentation: UG
-appliesto: Document SDK
 ---
 
 # How to perform OCR on a PDF document using ASP.NET Core

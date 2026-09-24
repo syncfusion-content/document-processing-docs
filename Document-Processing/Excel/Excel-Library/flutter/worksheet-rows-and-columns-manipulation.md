@@ -5,7 +5,6 @@ description: The Flutter Excel Library lets users manipulate rows, columns, and 
 platform: document-processing
 control: Excel
 documentation: ug
-appliesto: Document SDK
 ---
 
 # Worksheet Rows and Columns in Flutter Excel Library

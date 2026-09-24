@@ -6,7 +6,6 @@ platform: document-processing
 control: Stamp annotation
 documentation: ug
 domainurl: ##DomainURL##
-appliesto: PDF Viewer SDK
 ---
 
 # Stamp Annotation in Angular PDF Viewer

@@ -4,7 +4,6 @@ description: Check whether an Excel worksheet is empty using the Syncfusion .NET
 platform: document-processing
 control: XlsIO
 documentation: UG
-appliesto: Document SDK
 ---
 
 # How to check empty worksheets in .NET Excel Library

@@ -5,7 +5,6 @@ description: The Flutter Excel Library lets users protect Excel workbooks and wo
 platform: document-processing
 control: Excel
 documentation: ug
-appliesto: Document SDK
 ---
 
 # Excel Security in Flutter Excel Library

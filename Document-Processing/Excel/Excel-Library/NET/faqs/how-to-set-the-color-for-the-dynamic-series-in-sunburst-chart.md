@@ -4,7 +4,6 @@ description: Apply custom colors to each data point in a Sunburst chart using th
 platform: document-processing
 control: XlsIO
 documentation: UG
-appliesto: Document SDK
 ---
 
 # How to set Sunburst chart series colors in .NET Excel Library

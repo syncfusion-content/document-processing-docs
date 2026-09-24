@@ -4,7 +4,6 @@ description: WinRT load and save operations page describes how Excel documents a
 platform: document-processing
 control: XlsIO
 documentation: UG
-appliesto: Document SDK
 ---
 # Deploying .NET Excel Library in WinRT
 

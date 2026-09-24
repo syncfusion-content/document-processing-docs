@@ -4,7 +4,6 @@ description: Freeze the header row or column of a PivotTable using the Syncfusio
 platform: document-processing
 control: XlsIO
 documentation: UG
-appliesto: Document SDK
 ---
 
 # How to freeze pivot table headers in .NET Excel Library

@@ -5,7 +5,6 @@ description: The Flutter Excel Library allows users create and customize marker-
 platform: document-processing
 control: Excel
 documentation: ug
-appliesto: Document SDK
 ---
 
 # Line Markers Chart in Syncfusion Excel Library

@@ -4,7 +4,6 @@ description: Syncfusion .NET Excel Library supports creating, reading, and editi
 platform: document-processing
 control: XlsIO
 documentation: UG
-appliesto: Document SDK
 ---
 # Create Excel Files in Blazor Web App with Excel Library
 

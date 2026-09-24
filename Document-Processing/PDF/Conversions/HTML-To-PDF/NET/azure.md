@@ -5,7 +5,6 @@ platform: document-processing
 control: PDF
 documentation: UG
 keywords: Assemblies
-appliesto: Document SDK
 ---
 
 # HTML to PDF conversion in Azure .NET PDF Library
