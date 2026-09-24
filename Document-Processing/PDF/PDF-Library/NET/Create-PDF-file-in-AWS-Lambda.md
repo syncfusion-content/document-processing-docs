@@ -1,4 +1,4 @@
-﻿---
+---
 title: Getting Started with .NET PDF Library in AWS Lambda | Syncfusion
 description: Learn how to get started with the Syncfusion .NET PDF Library in AWS Lambda and create PDF documents without Adobe dependencies.
 platform: document-processing

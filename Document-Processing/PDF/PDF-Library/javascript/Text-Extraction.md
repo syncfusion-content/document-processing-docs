@@ -1,4 +1,4 @@
-﻿---
+---
 title: Text Extraction in JavaScript PDF | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
 description: Extract text and text bounds from PDF documents programmatically using the Syncfusion JavaScript PDF Library.

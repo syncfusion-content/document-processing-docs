@@ -1,4 +1,4 @@
-﻿---
+---
 title: PDF Form Fields in JavaScript PDF | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
 description: Create, fill, edit, flatten, import, and export PDF form fields using the Syncfusion JavaScript PDF Library.

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Compression in .NET PDF Library | Syncfusion
 description: Learn how to reduce PDF file size by compressing images, optimizing fonts, and removing metadata with the Syncfusion .NET PDF Library.
 platform: document-processing

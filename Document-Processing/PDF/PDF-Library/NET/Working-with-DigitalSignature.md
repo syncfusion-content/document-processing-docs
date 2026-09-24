@@ -1,4 +1,4 @@
-﻿---
+---
 title: Digital Signature in .NET PDF Library | Syncfusion
 description: Learn how to create a digital signature in a PDF document programmatically using the Syncfusion .NET PDF Library.
 platform: document-processing

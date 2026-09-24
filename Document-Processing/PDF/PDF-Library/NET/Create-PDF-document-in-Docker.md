@@ -1,4 +1,4 @@
-﻿---
+---
 title: Getting Started with .NET PDF Library in Docker | Syncfusion
 description: Learn how to get started with the Syncfusion .NET PDF Library in Docker. Create PDF documents in containerized .NET applications.
 platform: document-processing

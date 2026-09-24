@@ -1,4 +1,4 @@
-﻿---
+---
 title: Getting Started with .NET PDF in Microsoft Azure | Syncfusion
 description: Learn how to get started with the Syncfusion .NET PDF Library in Microsoft Azure and create PDF documents easily using C#.
 platform: document-processing

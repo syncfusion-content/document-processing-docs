@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Document in Flutter PDF Library | Syncfusion
 description: Learn about document settings and configuration options in Syncfusion Flutter PDF non-UI Library for optimal document handling.

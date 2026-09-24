@@ -1,4 +1,4 @@
-﻿---
+---
 title: Migration from .NET Framework to .NET Core | Syncfusion
 description: Learn the key changes when migrating the Syncfusion PDF library codes from .NET Framework to .NET Core.
 control: PDF

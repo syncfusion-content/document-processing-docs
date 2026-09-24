@@ -1,4 +1,4 @@
-﻿---
+---
 title: Metadata in .NET PDF Library | Syncfusion
 description: Learn how to add, modify, and read document information and XMP metadata in PDF documents using the Syncfusion .NET PDF Library.
 platform: document-processing

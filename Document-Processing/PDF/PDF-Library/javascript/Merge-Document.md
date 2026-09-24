@@ -1,4 +1,4 @@
-﻿---
+---
 title: Merging PDF Documents in JavaScript PDF | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
 description: Merge multiple PDF documents and import pages between files using the Syncfusion JavaScript PDF Library.

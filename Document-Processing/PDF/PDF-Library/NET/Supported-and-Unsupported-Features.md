@@ -1,4 +1,4 @@
-﻿---
+---
 title: PDF Features in .NET PDF Library | Syncfusion
 description: Learn about the supported and unsupported features in Syncfusion PDF Library across different platforms and frameworks.
 platform: document-processing

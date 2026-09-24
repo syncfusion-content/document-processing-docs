@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Getting Started with JavaScript PDF in ASP.NET Core app | Syncfusion
 description: Learn how to get started with the Syncfusion JavaScript PDF in ASP.NET Core application. Easy steps to create PDF without depending on Adobe.

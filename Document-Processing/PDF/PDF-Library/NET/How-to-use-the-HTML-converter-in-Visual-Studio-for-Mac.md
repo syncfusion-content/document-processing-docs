@@ -1,4 +1,4 @@
-﻿---
+---
 title: How to Use HTML Converter in .NET PDF Library | Syncfusion
 description: Learn how to use the HTML converter in the Syncfusion .NET PDF Library with Visual Studio for Mac using simple steps.
 platform: document-processing

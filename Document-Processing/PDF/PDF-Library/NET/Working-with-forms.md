@@ -1,4 +1,4 @@
-﻿---
+---
 title: Forms in .NET PDF Library | Syncfusion
 description: Learn how to create, fill, modify, and flatten AcroForm form fields in a PDF document using the Syncfusion .NET PDF Library.
 platform: document-processing

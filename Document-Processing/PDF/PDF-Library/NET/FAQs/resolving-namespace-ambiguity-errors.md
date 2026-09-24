@@ -1,4 +1,4 @@
-﻿---
+---
 title: Namespace Conflicts in .NET PDF library | Syncfusion
 description: Learn how to resolve namespace ambiguity errors caused by using Syncfusion PDF packages in .NET applications.
 platform: document-processing

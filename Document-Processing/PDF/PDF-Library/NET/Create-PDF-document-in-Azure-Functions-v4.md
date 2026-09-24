@@ -1,4 +1,4 @@
-﻿---
+---
 title: Getting Started with .NET PDF in Azure Functions v4 | Syncfusion
 description: Learn how to get started with the Syncfusion .NET PDF Library in Azure Functions v4 and create PDF documents without Adobe Acrobat dependencies.
 platform: document-processing

@@ -1,4 +1,4 @@
-﻿---
+---
 title: PDF Watermarks in JavaScript PDF | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
 description: Add text and image watermarks to PDF documents programmatically using the Syncfusion JavaScript PDF Library.

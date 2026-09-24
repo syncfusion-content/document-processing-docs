@@ -1,4 +1,4 @@
-﻿---
+---
 title: PDF Conformance in .NET PDF Library | Syncfusion
 description: Learn how to create, convert, and validate PDF documents that conform to PDF/A, PDF/X, and PDF/UA standards using Syncfusion .NET PDF.
 platform: document-processing

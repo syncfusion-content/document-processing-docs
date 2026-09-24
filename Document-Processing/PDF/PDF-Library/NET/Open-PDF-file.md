@@ -1,4 +1,4 @@
-﻿---
+---
 title: Open PDF file in C# and VB.NET | Syncfusion
 description: Learn how to open PDF files from the file system, stream, or byte array in C# and VB.NET using Syncfusion .NET PDF.
 platform: document-processing

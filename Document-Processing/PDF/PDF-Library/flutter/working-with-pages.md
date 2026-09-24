@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Pages in Flutter PDF Library | Syncfusion
 description: Learn how to add, rotate pages, and customize page settings in Syncfusion Flutter PDF non-UI Library.

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Open PDF from Google Drive | Syncfusion
 description: Learn how to open PDF files programmatically from Google Drive in C# using Syncfusion .NET PDF library.
 platform: document-processing

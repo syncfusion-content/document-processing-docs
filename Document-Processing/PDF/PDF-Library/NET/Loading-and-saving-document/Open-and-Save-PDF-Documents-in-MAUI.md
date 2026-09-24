@@ -1,4 +1,4 @@
-﻿---
+---
 title: Open and Save PDF Document in .NET MAUI | Syncfusion
 description: Learn how to open and save PDF documents in .NET MAUI applications using Syncfusion .NET PDF library without Adobe Acrobat.
 platform: document-processing

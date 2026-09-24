@@ -1,4 +1,4 @@
-﻿---
+---
 title: Open and Save PDF Document in AWS Lambda | Syncfusion
 description: Learn how to open and save PDF documents in AWS Lambda using Syncfusion .NET PDF library without requiring Adobe Acrobat.
 platform: document-processing

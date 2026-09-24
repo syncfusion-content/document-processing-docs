@@ -1,4 +1,4 @@
-﻿---
+---
 title: Shapes in .NET PDF Library | Syncfusion
 description: Learn how to add shapes like line, curve, path, rectangle, pie, arc, Bezier, ellipse, and polygon in PDF using Syncfusion .NET PDF.
 platform: document-processing

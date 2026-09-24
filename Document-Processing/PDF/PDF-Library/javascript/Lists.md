@@ -1,4 +1,4 @@
-﻿---
+---
 title: PDF Lists in JavaScript PDF | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
 description: Create and manage ordered and unordered lists in PDF documents using the Syncfusion JavaScript PDF Library.

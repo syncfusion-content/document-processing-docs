@@ -1,4 +1,4 @@
-﻿---
+---
 title: Color Spaces in .NET PDF Library | Syncfusion
 description: Learn how to apply CalGray, CalRGB, ICC, and Pantone color spaces when drawing graphics in a PDF using the Syncfusion .NET PDF Library.
 platform: document-processing

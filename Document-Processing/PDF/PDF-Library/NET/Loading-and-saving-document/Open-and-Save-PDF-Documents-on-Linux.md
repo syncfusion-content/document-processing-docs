@@ -1,4 +1,4 @@
-﻿---
+---
 title: Open and Save PDF Document in Linux | Syncfusion
 description: Learn how to open and save PDF documents in .NET Core applications on Linux using Syncfusion .NET PDF library.
 platform: document-processing

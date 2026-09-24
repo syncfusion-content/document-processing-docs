@@ -1,4 +1,4 @@
-﻿---
+---
 title: Getting Started with .NET PDF in ASP.NET Core Web API | Syncfusion
 description: Learn how to get started with the Syncfusion .NET PDF Library in ASP.NET Core Web API. Create PDF documents without Adobe dependencies
 platform: document-processing

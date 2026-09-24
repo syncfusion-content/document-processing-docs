@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Open and Save PDF files in JavaScript PDF | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library

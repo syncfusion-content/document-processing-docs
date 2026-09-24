@@ -1,4 +1,4 @@
-﻿---
+---
 title: PDF Shapes in JavaScript PDF | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
 description: Draw lines, rectangles, polygons, curves, and other shapes in PDF documents using the Syncfusion JavaScript PDF Library.

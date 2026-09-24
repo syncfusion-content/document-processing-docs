@@ -1,4 +1,4 @@
-﻿---
+---
 title: Tables in .NET PDF Library | Syncfusion
 description: Learn the differences between PdfGrid and PdfLightTable models, supported customizations, and how to choose the right table for your scenario.
 platform: document-processing

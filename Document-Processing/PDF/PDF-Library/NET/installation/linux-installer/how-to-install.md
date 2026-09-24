@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Install Syncfusion PDF Linux Installer | Syncfusion
 description: Learn how to install the Syncfusion PDF Linux installer and configure the required components successfully.

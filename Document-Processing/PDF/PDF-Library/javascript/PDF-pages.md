@@ -1,4 +1,4 @@
-﻿---
+---
 title: PDF Pages in JavaScript PDF | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
 description: Add, rearrange, remove, and manage pages in PDF documents using the Syncfusion JavaScript PDF Library.

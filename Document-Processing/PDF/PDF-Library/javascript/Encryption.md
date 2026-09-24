@@ -1,4 +1,4 @@
-﻿---
+---
 title: Encryption in JavaScript PDF Library | Syncfusion
 description: Learn how to protect PDF documents with encryption and set permissions for printing, editing, and copying using Syncfusion JavaScript PDF Library.
 platform: document-processing

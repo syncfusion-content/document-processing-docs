@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Templates in Flutter PDF Library | Syncfusion
 description: Learn how to add headers, footers, and stamps using templates in Syncfusion Flutter PDF non-UI Library.

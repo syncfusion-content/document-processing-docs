@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: How to Install Syncfusion PDF Mac Installer | Syncfusion
 description: Learn how to install the Syncfusion PDF Mac installer and complete the setup process on macOS systems.

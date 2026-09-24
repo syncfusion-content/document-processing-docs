@@ -1,4 +1,4 @@
-﻿---
+---
 title: About Syncfusion .NET PDF Library | Syncfusion
 canonical_url: "https://www.syncfusion.com/document-sdk/net-pdf-library"
 description: Learn about the Syncfusion Essential Studio .NET PDF Library, its features, capabilities, and usage details.

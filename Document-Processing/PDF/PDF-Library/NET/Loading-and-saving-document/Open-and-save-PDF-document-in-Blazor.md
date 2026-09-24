@@ -1,4 +1,4 @@
-﻿---
+---
 title: Open and Save PDF Document in Blazor | Syncfusion
 description: Learn how to open and save PDF documents in Blazor applications using Syncfusion .NET PDF library without Adobe Acrobat.
 platform: document-processing
