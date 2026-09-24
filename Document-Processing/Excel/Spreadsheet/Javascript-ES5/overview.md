@@ -49,6 +49,7 @@ The [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-edito
 * [Multi-line editing](editing): Allows you to insert a line break between paragraphs of the text within a cell in a Spreadsheet.
 * [Calculate range selection](selection): Helps you to select a range or multiple ranges when editing a formula in a cell.
 * [Right-to-left (RTL)](global-local#right-to-left-rtl): Aligns content in the Spreadsheet control from right to left.
+* [Collaborative editing](collaborative-editing/overview): Allows multiple users to edit the same workbook and view synchronized and selections in real time.
 * [Templates](template): Templates can be used to create custom user experiences in the Spreadsheet.
 * [Globalization](global-local): Personalize the Spreadsheet control with different languages, as well as culture-specific number, date, and time formatting.
 * [Accessibility](accessibility): Provides with built-in accessibility support which helps to access all the Spreadsheet control features through the keyboard, screen readers, or other assistive technology devices.
