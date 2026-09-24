@@ -1,236 +1,340 @@
 ---
 layout: post
 title: Collaborative Editing in React PDF Viewer with Node.js | Syncfusion
-description: Learn how to implement collaborative editing in React PDF Viewer using Node.js with Redis for real-time multi-user PDF annotation and interaction.
+description: Learn how to implement React PDF Viewer collaborative editing with the Syncfusion Collaborator client and Node.js server packages.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Collaborative Editing in React PDF Viewer with Node.js and Redis
+# Collaborative Editing in React PDF Viewer with Node.js
 
-The React PDF Viewer supports collaborative editing which allows multiple users to work on the same PDF document simultaneously. This can be done in real-time so that collaborators can see the annotations and interactions as they are made.
+This topic explains how to connect the React PDF Viewer to the Node.js Collaboration Server. The common Collaborator server provides the WebSocket transport, Redis operation storage, room management, synchronization, and save worker. Node.js currently supports collaborative editing for PDF Viewer.
 
 ## Prerequisites
 
-The following are needed to enable collaborative editing in PDF Viewer:
+- A React PDF Viewer application.
+- Node.js 18 or later.
+- A Redis instance.
 
-- **Socket.IO** or **WebSocket** - For real-time communication
-- **Redis** - For distributed caching and operation storage
+## Client-side integration
 
-## Core Concepts
-
-### WebSocket and Socket.IO
-
-- **WebSocket** - A communication protocol that provides full-duplex communication over a single TCP connection
-- **Socket.IO** - A library that provides real-time bidirectional communication with fallback options
-- **Event-based** - Uses event emitters for sending and receiving messages
-- **Broadcasting** - Messages can be sent to one user or broadcast to multiple users
-
-### Operation Transformation in Node.js Context
-
-- **OT Algorithm** - Ensures consistency when multiple users edit simultaneously
-- **Transformation Engine** - Server-side logic that transforms operations based on concurrent changes
-- **Version Vectors** - Track operation versions for each user
-- **Conflict Resolution** - Automatic resolution of concurrent edits
-
-### Room-Based Architecture
-
-- **Rooms** - Isolated collaboration spaces, one per PDF document
-- **Broadcasting within rooms** - Changes sent to all users in a room
-- **Leave on disconnect** - Automatic cleanup when users disconnect
-- **Room state management** - Track all operations and users in each room
-
-### Redis Data Structures
-
-- **Lists** - Store ordered sequence of operations
-- **Hashes** - Store user information and room metadata
-- **Strings** - Store version information and configuration
-- **Sets** - Track active connections and users
-
-## Real-Time Communication Layer
-
-Real-time communication enables instant updates between clients and the server, ensuring seamless collaboration. Socket.IO provides a robust abstraction over WebSockets and can scale across multiple servers using a Redis adapter.
-
-### Scaling Real-Time Communication
-
-Socket.IO with Redis adapter enables horizontal scaling in a Node.js application. It allows you to run multiple instances of your Node.js server while maintaining real-time communication across all connected users.
-
-## Redis
-
-In collaborative editing, Redis is used to store temporary data that helps queue editing operations and resolve conflicts using the `Operational Transformation` algorithm.
-
-All editing operations are stored in the Redis cache. To prevent memory buildup, a `SaveThreshold` limit can be configured at the application level. For example, if the SaveThreshold is set to 100, up to twice that number of editing operations are retained in Redis per document. When this limit is exceeded, the first 100 operations are removed from the cache and automatically saved to the source document.
-
-### Configuration
-
-The configuration and storage size of the Redis cache can be adjusted based on the following considerations:
-
-- **Storage Requirements** - A minimum of 400 KB of cache memory is required per document to store up to 100 editing operations
-- **Operation Size** - Increases with the complexity of PDF annotations and markups
-- **Connection Limits** - Redis has a limit on concurrent connections that should be configured based on your user base
-
-> For better performance, a minimum `SaveThreshold` value of 100 is recommended.
-
-## Collaborative Editing Architecture
-
-Collaborative editing is built using three main components:
-
-### Client (React PDF Viewer)
-
-- Captures user interactions in the PDF document
-- Converts interactions into operations and sends them to the server
-- Receives updates from other users and applies them to stay in sync
-- Manages user presence and awareness of other collaborators
-
-### Real-Time Communication (Socket.IO/WebSocket)
-
-- Acts as the communication layer between clients and server
-- Sends and receives changes instantly
-- Broadcasts updates to all connected users in real-time
-- Handles connection management and user presence tracking
-
-### Distributed Cache (Redis)
-
-- Temporarily stores all editing operations
-- Maintains the correct order of changes
-- Resolves conflicts between multiple users using the OT (Operational Transformation) algorithm
-- Provides operation history for consistency
-
-## Integrate Collaborative Editing in Client Side
-
-### Step 1: Set up React PDF Viewer
-
-Refer to the [React PDF Viewer getting started](../getting-started) documentation to set up the PDF Viewer component in your React application.
-
-### Step 2: Enable collaborative editing
-
-To enable collaborative editing, configure the PDF Viewer component to support real-time collaboration and set up connection parameters for the collaborative session.
-
-### Step 3: Configure real-time communication
-
-Install Socket.IO client library for real-time communication:
+### 1. Install the client package
 
 ```bash
-npm install socket.io-client
+npm install @syncfusion/ej2-collaborator
 ```
 
-### Step 4: Join collaborative session
+### 2. Add the PDF Viewer adapter
 
-Implement logic to join a collaborative editing session using a unique document ID. Users joining the same session will be able to see each other's annotations and interactions in real-time.
+Create `PdfViewerAdapter.ts` in the React application. It implements `ICollaborationProvider` and bridges the PDF Viewer collaborative editing handler with the common Collaboration Client. The adapter must load the PDF state from the application's `ImportFile` endpoint and apply remote actions to the viewer.
 
-### Step 5: Handle real-time updates
+Use the complete [PDF Viewer adapter example](../../../../Collaborator/getting-started/getting-started-with-node) as the reference implementation. The adapter creates a connection ID, posts to `/api/CollaborativeEditing/ImportFile`, updates the PDF Viewer room information, sends operations through the PDF Viewer collaborative editing handler, filters its own broadcast operations, and applies remote actions by type.
 
-Set up event handlers to receive and process updates from other collaborators, including:
+```ts
+import { PdfViewer, CollaborativeEditingHandler } from '@syncfusion/ej2-react-pdfviewer';
+import { ICollaborationActionData, ICollaborationProvider } from '@syncfusion/ej2-collaborator';
 
-- New annotations added by other users
-- Modifications to existing annotations
-- User presence updates
-- Document page navigation and zoom changes
+export class PdfViewerAdapter implements ICollaborationProvider {
+    private collaborativeEditingHandler: CollaborativeEditingHandler;
+    private pendingOperations: any[] = [];
 
-### Step 6: Broadcast local changes
+    public constructor(
+        private viewer: PdfViewer,
+        private serviceUrl: string,
+        private currentUser: string
+    ) {
+        this.collaborativeEditingHandler = new CollaborativeEditingHandler(viewer, currentUser);
+    }
 
-Send local user changes to the server so they can be broadcast to all other collaborators in the session.
+    public async loadFromServer(fileName = 'document.pdf'): Promise<string> {
+        const roomName = new URLSearchParams(window.location.search).get('id')
+            ?? Math.random().toString(32).slice(2);
+        const response = await fetch(`${this.serviceUrl}api/CollaborativeEditing/ImportFile`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ roomName, fileName, currentUser: this.currentUser })
+        });
+        if (!response.ok) {
+            throw new Error(`Failed to join collaboration room: ${response.statusText}`);
+        }
+        const state = await response.json();
+        this.collaborativeEditingHandler.updateRoomInfo(
+            roomName,
+            state.version ?? 0,
+            `${this.serviceUrl}api/CollaborativeEditing/`
+        );
+        this.pendingOperations = state.operations || [];
+        for (const operation of this.pendingOperations) {
+            this.collaborativeEditingHandler.applyRemoteAction(operation.type, operation);
+        }
+        return roomName;
+    }
 
-## Integrate Collaborative Editing in Server Side
+    public applyRemoteAction(action: string, data: ICollaborationActionData): void {
+        const payload = data.payload ?? data;
+        if (action === 'addUser' || action === 'removeUser') {
+            console.log(action, payload);
+            return;
+        }
+        if (payload.type === 'annotation' || payload.type === 'formField' ||
+            payload.type === 'formFieldAction' || payload.type === 'pageOrganizer') {
+            this.collaborativeEditingHandler.applyRemoteAction(payload.type, payload);
+        }
+    }
 
-### Step 1: Create the Node.js web service
+    public sendActionToServer(operations: unknown[]): Promise<void> {
+        return this.collaborativeEditingHandler.sendActionToServer(operations);
+    }
+}
+```
 
-Create a Node.js server application using Express or similar framework to handle server-side operations.
+### 3. Initialize the Collaboration Client
 
-### Step 2: Install required dependencies
+Create the adapter and join the room after the document has loaded:
 
-Install the following Node.js packages for collaborative editing:
+```ts
+import React, { useRef } from 'react';
+import {
+    PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+    BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch,
+    FormFields, FormDesigner, PageOrganizer, Inject
+} from '@syncfusion/ej2-react-pdfviewer';
+import { CollaborationClient, UserInfo } from '@syncfusion/ej2-collaborator';
+import { PdfViewerAdapter } from './PdfViewerAdapter';
+
+const serviceUrl = 'http://localhost:8080/';
+export default function App() {
+    const viewerRef = useRef<any>(null);
+    const adapterRef = useRef<PdfViewerAdapter | null>(null);
+    const clientRef = useRef<CollaborationClient | null>(null);
+    const currentUser = 'John';
+
+    const resourcesLoaded = async () => {
+        const viewer = viewerRef.current;
+        const adapter = new PdfViewerAdapter(viewer, serviceUrl, currentUser);
+        adapterRef.current = adapter;
+        const client = new CollaborationClient(adapter, {
+            serviceUrl,
+            connectionType: 'websocket',
+            currentUser,
+            onUserJoined: (user: UserInfo) => console.log('User joined', user),
+            onUserLeft: (user: UserInfo) => console.log('User left', user)
+        });
+        clientRef.current = client;
+        const roomName = await adapter.loadFromServer();
+        await client.joinRoomAsync(roomName);
+        await loadCurrentPdf(viewer, roomName);
+    };
+
+    const documentChanged = (args: any) => {
+        const operation = operationFromChange(args);
+        if (operation) {
+            void adapterRef.current?.sendActionToServer([operation]);
+        }
+    };
+
+    return <PdfViewerComponent
+        ref={viewerRef}
+        enableCollaborativeEditing={true}
+        resourcesLoaded={resourcesLoaded}
+        documentChanged={documentChanged}
+        resourceUrl="https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib">
+        <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
+            BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, FormFields,
+            FormDesigner, PageOrganizer]} />
+    </PdfViewerComponent>;
+}
+
+function operationFromChange(args: any): any | null {
+    if ('annotationId' in args && args.action) return { action: args.action, annotation: args.annotationId, type: 'annotation', isRedacted: args.isRedacted };
+    if ('formField' in args && !('fieldName' in args)) return { action: args.action, formField: args.formField, type: 'formField' };
+    if ('fieldName' in args) return { action: 'formFieldUpdate', data: args, type: 'formField' };
+    if ('organizePageActions' in args && args.savedDocument !== null) return { action: 'pageOrganizerUpdate', data: args.organizePageActions, type: 'pageOrganizer' };
+    return null;
+}
+
+async function loadCurrentPdf(viewer: any, roomName: string): Promise<void> {
+    const response = await fetch(`${serviceUrl}api/CollaborativeEditing/GetPDFDocument?roomName=${encodeURIComponent(roomName)}`);
+    const result = await response.json();
+    const binary = atob(result.content);
+    viewer.load(Uint8Array.from(binary, character => character.charCodeAt(0)), '');
+}
+```
+
+The running sample initializes this flow from the PDF Viewer's `resourcesLoaded` event. It keeps the adapter and client in React refs, loads the room, joins it, and then loads the current PDF from `GetPDFDocument`.
+
+### 4. Load the current PDF document
+
+`GetPDFDocument` returns Base64-encoded PDF content. Decode it and load it into the viewer after joining the room:
+
+```ts
+const response = await fetch(
+    `${serviceUrl}api/CollaborativeEditing/GetPDFDocument?roomName=${encodeURIComponent(roomName)}`
+);
+const result = await response.json();
+const binary = atob(result.content);
+const bytes = Uint8Array.from(binary, character => character.charCodeAt(0));
+viewer.load(bytes, '');
+```
+
+## Server-side integration
+
+### 1. Install the Collaboration Server package
 
 ```bash
-npm install socket.io redis express
+npm install ej2-collaborator-server @syncfusion/ej2-pdf @xmldom/xmldom
 ```
 
-### Step 3: Configure Redis connection
+### 2. Add the PDF Viewer server adapter
 
-Configure the Redis cache that stores temporary data for the collaborative editing session. Provide the Redis connection details in your environment configuration or server setup.
+Create `adapters/PdfViewerAdapter.js`. The adapter stores the complete `CollaborativeEditingRequest` envelope, keeps PDF Viewer actions unchanged during synchronization, and replays pending operations against the source PDF during save:
 
-### Step 4: Configure Socket.IO for real-time communication
+```js
+const { PdfDocument, PdfTextBoxField, PdfCheckBoxField, PdfRadioButtonListField,
+    PdfComboBoxField, PdfListBoxField, PdfPageSettings, PdfPageImportOptions,
+    PdfRotationAngle, DataFormat } = require('@syncfusion/ej2-pdf');
+const { DOMParser, XMLSerializer } = require('@xmldom/xmldom');
 
-Set up Socket.IO to enable real-time communication between clients and the server. Configure a Redis adapter to enable communication across multiple server instances.
+class PdfViewerAdapter {
+    mapControlToGenericAction(controlAction) {
+        return {
+            roomName: controlAction.roomName,
+            connectionId: controlAction.connectionId,
+            currentUser: controlAction.userName || controlAction.currentUser || '',
+            version: controlAction.currentVersion || 0,
+            data: JSON.stringify(controlAction)
+        };
+    }
 
-### Step 5: Create collaboration rooms
+    mapGenericToControlAction(collaborationAction) {
+        return collaborationAction.data ? JSON.parse(collaborationAction.data) : {};
+    }
 
-Implement room management to group users editing the same PDF document. Each document session has a unique room ID that users join to collaborate.
+    transformOperations(actions) {
+        // PDF Viewer uses independent snapshots and last-write-wins for page organizer actions.
+    }
 
-### Step 6: Manage user sessions
+    async processSaveRequestAsync(request) {
+        const pdfResult = await this.storageService.getPdfAsync(
+            request.fileName || 'document.pdf', request.roomName);
+        const masterPdf = Buffer.from(pdfResult.content, 'base64');
+        const document = new PdfDocument(masterPdf);
 
-Track active users in each collaboration room, including:
+        for (const operation of this.extractValidOperations(request.actions)) {
+            await this.applyOperationToDocument(document, operation);
+        }
 
-- User identification and tracking
-- Connection and disconnection management
-- Presence notifications to other users in the room
-- Session persistence and recovery
+        const updatedPdf = await document.save();
+        await this.storageService.storePdfAsync(
+            Buffer.from(updatedPdf), request.fileName || 'document.pdf', request.roomName);
+    }
 
-### Step 7: Handle operation storage and transformation
+    // Implement extractValidOperations and applyOperationToDocument for
+    // annotation XFDF, form fields, form field actions, and page organizer actions.
+}
 
-Implement logic to:
+module.exports = PdfViewerAdapter;
+```
 
-- Store editing operations in Redis with version tracking
-- Transform concurrent operations to resolve conflicts
-- Retrieve operation history for consistency
-- Clean up operations when save threshold is reached
+The adapter must also initialize `DOMParser` and `XMLSerializer` from `@xmldom/xmldom` for XFDF parsing. Its `applyOperationToDocument` implementation uses `@syncfusion/ej2-pdf` to import XFDF annotations, update or create form fields, and apply page deletion, reordering, rotation, insertion, and copy actions. The common server handles Redis, transport, room membership, versioning, and the background save worker.
 
-### Step 8: Implement background persistence
+### 3. Add the collaboration routes
 
-Create a background service to:
+Create `controllers/collaborative-editing-controller.js` and register the routes used by the React adapter. The running implementation has these behaviors:
 
-- Monitor Redis operation queues
-- Save pending operations to the source PDF document
-- Maintain consistency across collaborative sessions
-- Handle cleanup and cache management
+```js
+function registerRoutes(app, actionService, adapter, transport) {
+    app.post('/api/CollaborativeEditing/ImportFile', async (req, res) => {
+        const { roomName } = req.body;
+        if (!roomName) {
+            return res.status(400).json({ error: 'Room name is required' });
+        }
 
-## Save and Recovery
+        const allActions = await actionService.getPendingOperations(roomName, 0, -1);
+        const operations = (allActions || []).map(action =>
+            adapter.mapGenericToControlAction(action)
+        );
+        return res.json({ roomName, version: allActions.length, operations });
+    });
 
-### Auto-Save Mechanism
+    app.post('/api/CollaborativeEditing/UpdateAction', async (req, res) => {
+        const request = req.body;
+        if (!request.roomName || !request.type) {
+            return res.status(400).json({ error: 'RoomName and Type are required' });
+        }
 
-Collaborative editing includes an automatic save mechanism that:
+        const collaborationAction = adapter.mapControlToGenericAction(request);
+        await actionService.addOperation(collaborationAction, adapter);
 
-- Periodically saves pending operations to the PDF document
-- Clears Redis cache after successful save
-- Recovers unsaved changes if connection is lost
-- Maintains document consistency across all users
+        const broadcastRequest = {
+            roomName: request.roomName,
+            connectionId: request.connectionId,
+            userName: request.userName,
+            type: request.type,
+            currentVersion: request.currentVersion,
+            data: request.data
+        };
+        await transport.broadcastToRoom(request.roomName, {
+            event: 'action',
+            data: broadcastRequest
+        });
+        return res.json({ success: true, data: request.data });
+    });
+}
+```
 
-### Operation History
+The production route validates the type-specific payload before storing it. Supported types are `annotation` with `data.xfdfData`, `formField` with `data.jsonData`, `formFieldAction` with `data.changes`, and `pageOrganizer` with `data`. It broadcasts the original clean request so clients receive strongly typed data.
 
-All editing operations are maintained in order:
+Register the PDF document route as well. It calls the application's PDF storage service and returns `{ success, fileName, roomName, content, contentLength, isDefault }`, where `content` is Base64 encoded:
 
-- New users joining a session receive the full operation history
-- Version numbers track operation sequence
-- Operational transformation ensures consistency
-- Lost messages can be recovered from Redis
+```js
+function registerPdfDocumentRoutes(app, pdfStorageService) {
+    app.get('/api/CollaborativeEditing/GetPDFDocument', async (req, res) => {
+        const result = await pdfStorageService.getPdfAsync(
+            req.query.fileName,
+            req.query.roomName
+        );
+        return result.success ? res.json(result) : res.status(404).json(result);
+    });
+}
+```
 
-## Troubleshooting
+### 4. Create and start the Collaboration Server
 
-### Connection Issues
+```js
+const cors = require('cors');
+const { CollaborationServer } = require('ej2-collaborator-server');
+const PdfViewerAdapter = require('./adapters/PdfViewerAdapter');
 
-- Verify Socket.IO server is running and accessible
-- Check firewall and network configuration
-- Ensure Redis is accessible from the server
-- Review server logs for connection errors
+const pdfStorageService = new PdfStorageService();
+const adapter = new PdfViewerAdapter({ storageService: pdfStorageService });
+const server = new CollaborationServer({
+    port: 8080,
+    redis: {
+        host: '<redis-host>',
+        port: 6379,
+        username: 'default',
+        password: '<redis-password>',
+        tls: {}
+    },
+    adapter
+});
 
-### Data Consistency
+server.app.use(cors());
+registerRoutes(server.app, server.actionService, adapter, server);
+registerPdfDocumentRoutes(server.app, pdfStorageService);
+server.start();
+```
 
-- Verify Redis connection and operation storage
-- Check operational transformation logic
-- Review version numbering and conflict resolution
-- Monitor save threshold and operation cleanup
+The server exposes the collaboration WebSocket endpoint and the REST routes used by the PDF Viewer adapter. Register the document routes before calling `server.start()`.
 
-### Performance
+## Redis configuration
 
-- Monitor Redis memory usage
-- Track operation queue size
-- Review Socket.IO message throughput
-- Adjust SaveThreshold if needed
+Redis is required by `ej2-collaborator-server`. Configure the host, port, credentials, and TLS options in the `CollaborationServer` constructor. Do not add a separate Socket.IO Redis adapter or implement the operation queue in the PDF Viewer application.
 
 ## See Also
 
-- [Collaborative editing overview](./overview)
-- [PDF Viewer annotations](../annotation)
-- [PDF Viewer getting started](../getting-started)
+- [Getting Started with Node.js Collaboration Server](../../../../Collaborator/getting-started/getting-started-with-node)
+- [Collaborative editing with ASP.NET Core](./using-redis-cache-asp-net-core)

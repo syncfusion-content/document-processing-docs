@@ -1,376 +1,257 @@
 ---
 layout: post
-title: Collaborative Editing React PDF Viewer with ASP.NET Core | Syncfusion
-description: Learn how to implement collaborative editing in React PDF Viewer using ASP.NET Core with Redis for real-time multi-user PDF annotation and interaction.
+title: Collaborative Editing in React PDF Viewer with ASP.NET Core | Syncfusion
+description: Learn how to implement React PDF Viewer collaborative editing with the Syncfusion Collaborator client and ASP.NET Core server packages.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Collaborative Editing in React PDF Viewer with Redis in ASP.NET Core
+# Collaborative Editing in React PDF Viewer with ASP.NET Core
 
-The React PDF Viewer supports collaborative editing which allows multiple users to work on the same PDF document simultaneously. This can be done in real-time so that collaborators can see the annotations and interactions as they are made.
+This topic explains how to connect the React PDF Viewer to the ASP.NET Core Collaboration Server. The common Collaborator server manages SignalR, Redis, operation synchronization, and save processing. The application only supplies the PDF Viewer adapter and document endpoints.
 
 ## Prerequisites
 
-The following are needed to enable collaborative editing in PDF Viewer:
+- A React PDF Viewer application.
+- An ASP.NET Core web application.
+- A Redis instance.
 
-- **SignalR** - For real-time communication
-- **Redis** - For distributed caching and operation storage
+## Client-side integration
 
-## SignalR
+### 1. Install the client package
 
-SignalR enables real-time communication by instantly sending and receiving document changes between clients and the server, ensuring seamless collaboration. In distributed environments, it can be scaled using Azure SignalR Service or a Redis backplane.
-
-### Scale-out SignalR using Azure SignalR service
-
-Azure SignalR Service is a scalable, managed service for real-time communication in web applications. It enables real-time messaging between web clients (browsers) and your server-side application (across multiple servers).
-
-The following code snippet demonstrates how to configure Azure SignalR in an ASP.NET Core application using the `AddAzureSignalR` method in the "Program.cs" file of the web service project.
-
-{% tabs %}
-{% highlight C# tabtitle="C#" %}
-
-builder.Services.AddSignalR().AddAzureSignalR("<your-azure-signalr-service-connection-string>", options => { 
-    // Specify the channel name 
-    options.Channels.Add("pdf-viewer-collaboration");
-});
-
-{% endhighlight %}
-{% endtabs %}
-
-### Scale-out SignalR using Redis
-
-A Redis backplane enables horizontal scaling in a SignalR application. SignalR uses Redis to efficiently broadcast messages across multiple servers, allowing the application to support a large number of users with minimal latency.
-
-In the SignalR application, install the following NuGet package:
-
-- Microsoft.AspNetCore.SignalR.StackExchangeRedis
-
-The following code snippet demonstrates how to configure the Redis backplane in an ASP.NET Core application using the `AddStackExchangeRedis` method in the "Program.cs" file of the web service project.
-
-{% tabs %}
-{% highlight C# tabtitle="C#" %}
-
-builder.Services.AddSignalR().AddStackExchangeRedis("<your_redis_connection_string>");
-
-{% endhighlight %}
-{% endtabs %}
-
-Configure the options as required.
- 
-The following example demonstrates how to add a channel prefix using the ConfigurationOptions object.
-
-{% tabs %}
-{% highlight C# tabtitle="C#" %}
-
-builder.Services.AddDistributedMemoryCache().AddSignalR().AddStackExchangeRedis(connectionString, options =>
-{
-   options.Configuration.ChannelPrefix = "pdf-viewer-collaboration";
-});
-
-{% endhighlight %}
-{% endtabs %}
-
-## Redis
-
-In collaborative editing, Redis is used to store temporary data that helps queue editing operations and resolve conflicts using the `Operational Transformation` algorithm.
-
-All editing operations are stored in the Redis cache. To prevent memory buildup, a `SaveThreshold` limit can be configured at the application level. For example, if the SaveThreshold is set to 100, up to twice that number of editing operations are retained in Redis per document. When this limit is exceeded, the first 100 operations (as defined by the save threshold) are removed from the cache and automatically saved to the source document.
-
-### Configuration
-
-The configuration and storage size of the Redis cache can be adjusted based on the following considerations:
-
-- **Storage Requirements** - A minimum of 400 KB of cache memory is required per document to store up to 100 editing operations
-
-- **Operation Size** - Increases with the complexity of PDF annotations and markups
-
-- **Connection Limits** - Redis has a limit on concurrent connections that should be configured based on your user base
-
-> For better performance, a minimum `SaveThreshold` value of 100 is recommended.
-
-## Collaborative Editing Architecture
-
-Collaborative editing is built using three main components:
-
-### Client (React PDF Viewer)
-
-- Captures user interactions in the PDF document
-- Converts interactions into operations and sends them to the server
-- Receives updates from other users and applies them to stay in sync
-- Manages user presence and awareness of other collaborators
-
-### Real-Time Communication (SignalR)
-
-- Acts as the communication layer between clients and server
-- Sends and receives changes instantly
-- Broadcasts updates to all connected users in real-time
-- Handles connection management and user presence tracking
-
-### Distributed Cache (Redis)
-
-- Temporarily stores all editing operations
-- Maintains the correct order of changes
-- Resolves conflicts between multiple users using the OT (Operational Transformation) algorithm
-- Provides operation history for consistency
-
-## Integrate Collaborative Editing in Client Side
-
-### Step 1: Set up React PDF Viewer
-
-Refer to the [React PDF Viewer getting started](../getting-started) documentation to set up the PDF Viewer component in your React application.
-
-### Step 2: Enable collaborative editing
-
-To enable collaborative editing, configure the PDF Viewer component to support real-time collaboration and set up connection parameters for the collaborative session.
-
-### Step 3: Configure SignalR to send and receive changes
-
-To broadcast changes and receive updates from remote users, install the [Microsoft SignalR npm](https://www.npmjs.com/package/@microsoft/signalr) package in your React application.
-
-### Step 4: Initialize SignalR connection
-
-Set up the SignalR connection to establish real-time communication with the ASP.NET Core server.
-
-### Step 5: Join collaborative session
-
-Implement logic to join a collaborative editing session using a unique document ID. Users joining the same session will be able to see each other's annotations and interactions in real-time.
-
-### Step 6: Handle real-time updates
-
-Set up event handlers to receive and process updates from other collaborators, including:
-
-- New annotations added by other users
-- Modifications to existing annotations
-- User presence updates
-- Document page navigation and zoom changes
-
-### Step 7: Broadcast local changes
-
-Send local user changes to the server using SignalR so they can be broadcast to all other collaborators in the session.
-
-## Integrate Collaborative Editing in Server Side
-
-### Step 1: Create the ASP.NET Core web service project
-
-Create an ASP.NET Core web service to handle server-side operations for collaborative PDF editing.
-
-### Step 2: Install required NuGet packages
-
-In the web service app, install the following NuGet packages:
-
-- Microsoft.Azure.SignalR
-- Microsoft.AspNetCore.SignalR.StackExchangeRedis
-- Syncfusion.EJ2.PdfViewer.AspNet.Core
-
-### Step 3: Configure Redis connection
-
-Configure the Redis cache that stores temporary data for the collaborative editing session. Provide the Redis connection string in the `appsettings.json` file.
-
-```json
-
-// other code snippet
-"ConnectionStrings": {
- "RedisConnectionString": "<<Your Redis connection string>>"
-}
-// other code snippet
-
+```bash
+npm install @syncfusion/ej2-collaborator
 ```
 
-### Step 4: Configure SignalR in ASP.NET Core
+### 2. Add the PDF Viewer adapter
 
-Microsoft SignalR is used to broadcast changes. Add the following configuration to the application's "Program.cs" file.
+Create `PdfViewerAdapter.ts` in the React application. The adapter implements `ICollaborationProvider`, loads the PDF through the application's document endpoint, sends local PDF Viewer actions, and applies actions received from other users.
 
-{% tabs %}
-{% highlight C# tabtitle="C#" %}
+The adapter must provide the following behavior. The `loadFromServer` method posts the room and user details to `ImportFile`; the PDF Viewer change handler sends operations to `UpdateAction`; and `applyRemoteAction` forwards remote payloads to the PDF Viewer collaborative editing handler.
 
-using Microsoft.Azure.SignalR;
+```ts
+import { PdfViewer, CollaborativeEditingHandler } from '@syncfusion/ej2-react-pdfviewer';
+import { ICollaborationActionData, ICollaborationProvider } from '@syncfusion/ej2-collaborator';
 
-// other Services
+export class PdfViewerAdapter implements ICollaborationProvider {
+    private collaborativeEditingHandler: CollaborativeEditingHandler;
+    private currentUser: string;
+    private pendingOperations: any[] = [];
 
-// Add signalR services to the container.
-
-builder.Services.AddSignalR().AddStackExchangeRedis("Your Redis Connection String");
-
-// other Services
-
-{% endhighlight %}
-{% endtabs %}
-
-### Step 5: Configure SignalR Hub to create room for collaborative editing session
-
-To manage groups for each PDF document, create a folder named "Hub" and add a file named "PdfViewerHub.cs" inside it.
-
-#### 1. Mapping Hub details
-
-Map PdfViewerHub in "Program.cs" file using the below code
-
-{% tabs %}
-{% highlight C# tabtitle="C#" %}
-
-app.MapHub<PdfViewerHub>("/pdfviewerhub");
-
-{% endhighlight %}
-{% endtabs %}
-
-#### 2. Join room
-
-Join the group using the unique ID of the document with the `JoinGroup` method.
-
-Add the following code to manage SignalR groups using room names for collaborative PDF viewing.
-
-{% tabs %}
-{% highlight C# tabtitle="C#" %}
-
-// Join group based on the room name and store the user details in Redis cache.
-public async Task JoinGroup(ActionInfo info)
-{
-  // Set the connection ID to info
-  info.ConnectionId = Context.ConnectionId;
-  // Add the connection ID to the group
-  await Groups.AddToGroupAsync(Context.ConnectionId, info.RoomName);
-
-  // To ensure whether the room exists in the Redis cache
-  bool roomExists = await _db.KeyExistsAsync(info.RoomName + CollaborativeEditingHelper.UserInfoSuffix);
-  if (roomExists) {
-    // Fetch all connected users from Redis
-    var allUsers = await _db.HashGetAllAsync(info.RoomName + CollaborativeEditingHelper.UserInfoSuffix);
-    var userList = allUsers.Select(u => JsonConvert.DeserializeObject<ActionInfo>(u.Value)).ToList();
-
-    // Send the existing user details to the newly joined user. 
-    await Clients.Caller.SendAsync("dataReceived", "addUser", userList);
-  }
-
-  // Add user to Redis           
-  await _db.HashSetAsync(info.RoomName + CollaborativeEditingHelper.UserInfoSuffix, Context.ConnectionId, JsonConvert.SerializeObject(info));
-
-  // Store the room name with the connection ID
-  await _db.HashSetAsync(CollaborativeEditingHelper.ConnectionIdRoomMappingKey, Context.ConnectionId, info.RoomName);
-
-  // Notify all the existing users in the group about the new user
-  await Clients.GroupExcept(info.RoomName, Context.ConnectionId).SendAsync("dataReceived", "addUser", info);
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-#### 3. Handle user disconnection
-
-The following code snippet demonstrates how to disconnect a connection using SignalR.
-
-{% tabs %}
-{% highlight C# tabtitle="C#" %}
-
-public override async Task OnDisconnectedAsync(Exception ? e)
-{
-  // Get the room name associated with the connection ID
-  string roomName = await _db.HashGetAsync(CollaborativeEditingHelper.ConnectionIdRoomMappingKey, Context.ConnectionId);
-  // Remove user from Redis       
-  await _db.HashDeleteAsync(roomName + CollaborativeEditingHelper.UserInfoSuffix, Context.ConnectionId);
-
-  // Fetch all connected users from Redis
-  var allUsers = await _db.HashGetAllAsync(roomName + CollaborativeEditingHelper.UserInfoSuffix);
-  var userList = allUsers.Select(u => JsonConvert.DeserializeObject<ActionInfo>(u.Value)).ToList();
-
-  // Remove connection to room name mapping
-  await _db.HashDeleteAsync(CollaborativeEditingHelper.ConnectionIdRoomMappingKey, Context.ConnectionId);
-
-  if (userList.Count == 0) {
-    // Auto save the pending operations to source document
-    RedisValue[] pendingOps = await _db.ListRangeAsync(roomName, 0, -1);
-    if (pendingOps.Length > 0) {
-      List < ActionInfo > actions = new List<ActionInfo>();
-      // Prepare the message for adding it in background service queue.
-      foreach(var element in pendingOps)
-      {
-        actions.Add(JsonConvert.DeserializeObject<ActionInfo>(element.ToString()));
-      }
-      var message = new SaveInfo
-      {
-        Action = actions,
-          PartialSave = false,
-          RoomName = roomName,
-                    };
-      // Queue the message for background processing and save the operations to source document in background task
-      _ = saveTaskQueue.QueueBackgroundWorkItemAsync(message);
+    public constructor(private viewer: PdfViewer, private serviceUrl: string, currentUser: string) {
+        this.currentUser = currentUser;
+        this.collaborativeEditingHandler = new CollaborativeEditingHandler(viewer, currentUser);
     }
-  }
-  else {
-    // Notify remaining clients about the user disconnection              
-    await Clients.Group(roomName).SendAsync("dataReceived", "removeUser", Context.ConnectionId);
-  }
-  await base.OnDisconnectedAsync(e);
+
+    public async loadFromServer(fileName = 'document.pdf'): Promise<string> {
+        const roomName = new URLSearchParams(window.location.search).get('id')
+            ?? Math.random().toString(32).slice(2);
+        const response = await fetch(`${this.serviceUrl}api/CollaborativeEditing/ImportFile`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ roomName, fileName, currentUser: this.currentUser })
+        });
+        if (!response.ok) {
+            throw new Error(`Failed to load collaboration room: ${response.statusText}`);
+        }
+        const state = await response.json();
+        this.collaborativeEditingHandler.updateRoomInfo(
+            roomName,
+            state.version ?? 0,
+            `${this.serviceUrl}api/CollaborativeEditing/`
+        );
+        this.pendingOperations = state.operations || [];
+        for (const operation of this.pendingOperations) {
+            this.collaborativeEditingHandler.applyRemoteAction(operation.type, operation);
+        }
+        return roomName;
+    }
+
+    public applyRemoteAction(action: string, data: ICollaborationActionData): void {
+        this.collaborativeEditingHandler.applyRemoteAction(action, data.payload);
+    }
+
+    public sendActionToServer(operations: unknown[]): Promise<void> {
+        return this.collaborativeEditingHandler.sendActionToServer(operations);
+    }
+}
+```
+
+The adapter's `loadFromServer` implementation is application-specific because it selects the source PDF and exposes the document endpoint. Use the same adapter pattern as the [Node.js PDF Viewer adapter](../../../../Collaborator/getting-started/getting-started-with-node).
+
+### 3. Initialize the Collaboration Client
+
+Enable collaborative editing, create the adapter, and join the room after loading the document:
+
+```ts
+import React, { useRef } from 'react';
+import {
+    PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+    BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch,
+    FormFields, FormDesigner, PageOrganizer, Inject
+} from '@syncfusion/ej2-react-pdfviewer';
+import { CollaborationClient, UserInfo } from '@syncfusion/ej2-collaborator';
+import { PdfViewerAdapter } from './PdfViewerAdapter';
+
+const serviceUrl = 'https://localhost:5001/';
+export default function App() {
+    const viewerRef = useRef<any>(null);
+    const adapterRef = useRef<PdfViewerAdapter | null>(null);
+    const currentUser = 'John';
+
+    const resourcesLoaded = async () => {
+        const adapter = new PdfViewerAdapter(viewerRef.current, serviceUrl, currentUser);
+        adapterRef.current = adapter;
+        const client = new CollaborationClient(adapter, {
+            serviceUrl,
+            connectionType: 'signalr',
+            currentUser,
+            onUserJoined: (user: UserInfo) => console.log('User joined', user),
+            onUserLeft: (user: UserInfo) => console.log('User left', user)
+        });
+        const roomName = await adapter.loadFromServer('Giant Panda.pdf');
+        await client.joinRoomAsync(roomName);
+        await loadCurrentPdf(viewerRef.current, roomName);
+    };
+
+    const documentChanged = (args: any) => {
+        const operation = getPdfViewerOperation(args);
+        if (operation) void adapterRef.current?.sendActionToServer([operation]);
+    };
+
+    return <PdfViewerComponent ref={viewerRef} enableCollaborativeEditing={true}
+        resourcesLoaded={resourcesLoaded} documentChanged={documentChanged}>
+        <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
+            BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, FormFields,
+            FormDesigner, PageOrganizer]} />
+    </PdfViewerComponent>;
 }
 
-{% endhighlight %}
-{% endtabs %}
+function getPdfViewerOperation(args: any): any | null {
+    if ('annotationId' in args && args.action) return { action: args.action, annotation: args.annotationId, type: 'annotation', isRedacted: args.isRedacted };
+    if ('formField' in args && !('fieldName' in args)) return { action: args.action, formField: args.formField, type: 'formField' };
+    if ('fieldName' in args) return { action: 'formFieldUpdate', data: args, type: 'formField' };
+    if ('organizePageActions' in args && args.savedDocument !== null) return { action: 'pageOrganizerUpdate', data: args.organizePageActions, type: 'pageOrganizer' };
+    return null;
+}
 
-### Step 6: Configure Web API actions for collaborative editing
+async function loadCurrentPdf(viewer: any, roomName: string): Promise<void> {
+    const response = await fetch(`${serviceUrl}api/CollaborativeEditing/GetPDFDocument?roomName=${encodeURIComponent(roomName)}`);
+    const result = await response.json();
+    const binary = atob(result.content);
+    viewer.load(Uint8Array.from(binary, character => character.charCodeAt(0)), '');
+}
+```
 
-Create "CollaborativeEditingController.cs" in the "Controllers" folder.
+`getPdfViewerOperation` should map the PDF Viewer event to one of the supported action types: `annotation`, `formField`, `formFieldAction`, or `pageOrganizer`. The [Node.js example](./using-redis-cache-nodejs) shows the event mapping used by the running sample.
 
-This file includes the code snippets that handle server-side interactions for collaborative PDF editing.
+## Server-side integration
 
-#### Import PDF Document
+### 1. Install the Collaboration Server package
 
-Used to open PDF documents, verify the Redis cache for pending operations, and retrieve them for the collaborative editing session.
+```bash
+dotnet add package Syncfusion.Collaborator.Server.AspNet.Core
+```
 
-### Step 7: Create helper models and constants
+Install the PDF Viewer server package required by the application's document and save endpoints as described in the [PDF Viewer ASP.NET Core getting started](../getting-started) topic.
 
-This step defines Redis key naming conventions, constants, and helper models to ensure consistency and maintainability across the application. It also sets a save threshold of 100 operations, enabling automatic persistence of changes at optimal intervals without affecting performance. To ensure reliability, a Lua script is used to execute Redis operations atomically, preventing conflicts when multiple users edit the document simultaneously.
+### 2. Configure Redis and the Collaboration Server
 
-### Step 8: Implement background task queue
+Add the Redis connection string to `appsettings.json`:
 
-This step implements a thread-safe, bounded queue to handle document save requests asynchronously without blocking the main application flow. It uses a channel-based approach with a fixed capacity to efficiently manage concurrent operations. The background service processes each save request by loading the document, applying changes, saving the updated file, and clearing the cache to maintain consistency.
+```json
+{
+  "ConnectionStrings": {
+    "Redis": "<your-redis-connection-string>"
+  }
+}
+```
 
-## Save and Recovery
+Register the Collaboration Server and the PDF Viewer server adapter in `Program.cs`:
 
-### Auto-Save Mechanism
+```csharp
+using Syncfusion.Collaboration.Core.Extensions;
+using Syncfusion.Collaboration.Core.Interfaces;
 
-Collaborative editing includes an automatic save mechanism that:
+var builder = WebApplication.CreateBuilder(args);
 
-- Periodically saves pending operations to the PDF document
-- Clears Redis cache after successful save
-- Recovers unsaved changes if connection is lost
-- Maintains document consistency across all users
+builder.Services.AddCollaborationServer(options =>
+{
+    options.ConnectionString = builder.Configuration.GetConnectionString("Redis")
+        ?? "localhost:6379";
+});
 
-### Operation History
+builder.Services.AddSingleton<ICollaborationAdapter, PdfViewerCollaborationAdapter>();
+builder.Services.AddControllers();
 
-All editing operations are maintained in order:
+var app = builder.Build();
+app.UseStaticFiles();
+app.UseRouting();
+app.MapControllers();
+app.MapCollaborationServer();
+app.Run();
+```
 
-- New users joining a session receive the full operation history
-- Version numbers track operation sequence
-- Operational transformation ensures consistency
-- Lost messages can be recovered from Redis
+SignalR is the default transport. To use WebSocket, set `ConnectionType` to `CollaborationConnectionType.WebSocket` and call `app.UseWebSockets()` before `app.MapCollaborationServer()`.
 
-## Troubleshooting
+### 3. Add the PDF Viewer server adapter
 
-### Connection Issues
+Create `PdfViewerCollaborationAdapter.cs`. This adapter maps PDF Viewer actions to the common collaboration model, transforms PDF Viewer operations, and persists saved PDF content. Implement the PDF Viewer-specific mapping and save behavior in this file:
 
-- Verify SignalR server is running and accessible
-- Check firewall and network configuration
-- Ensure Redis is accessible from the server
-- Review server logs for connection errors
+```csharp
+using Syncfusion.Collaboration.Core.Interfaces;
+using Syncfusion.Collaboration.Core.Models;
 
-### Data Consistency
+public sealed class PdfViewerCollaborationAdapter : ICollaborationAdapter
+{
+    public CollaborationAction MapControlToGenericAction(object controlAction)
+    {
+        // Map the PDF Viewer room, connection, version, and operations.
+        throw new NotImplementedException();
+    }
 
-- Verify Redis connection and operation storage
-- Check operational transformation logic
-- Review version numbering and conflict resolution
-- Monitor save threshold and operation cleanup
+    public object MapGenericToControlAction(CollaborationAction action)
+    {
+        // Convert the common action back to the PDF Viewer action shape.
+        throw new NotImplementedException();
+    }
 
-### Performance
+    public List<CollaborationAction> TransformOperations(List<CollaborationAction> actions)
+    {
+        // Apply the PDF Viewer operation transformation rules.
+        throw new NotImplementedException();
+    }
 
-- Monitor Redis memory usage
-- Track operation queue size
-- Review SignalR message throughput
-- Adjust SaveThreshold if needed
+    public Task SaveOperationsAsync(object actions, string roomName, bool partialSave)
+    {
+        // Queue the merged PDF content for persistence.
+        throw new NotImplementedException();
+    }
+
+    public Task ProcessSaveRequestAsync(SaveRequest request, CancellationToken cancellationToken)
+    {
+        // Load, update, and save the source PDF.
+        throw new NotImplementedException();
+    }
+}
+```
+
+The exact mapping and save implementation depends on the application's PDF storage location and document API. Keep those methods in the adapter; the Collaboration Server supplies the common Redis, transport, session, and save-worker services.
+
+### 4. Expose PDF Viewer collaboration endpoints
+
+Add ASP.NET Core equivalents of the following endpoints under `/api/CollaborativeEditing`:
+
+- `POST /ImportFile` - Validate `roomName`, retrieve pending operations through the Collaboration Server action service, and return `{ roomName, version, operations }`.
+- `POST /UpdateAction` - Validate `roomName`, `type`, and type-specific data, map the request through `PdfViewerCollaborationAdapter`, store it with the action service, and broadcast it to the room.
+- `GET /GetPDFDocument` - Return the room's current PDF as `{ success, fileName, roomName, content, contentLength, isDefault }`, where `content` is Base64 encoded.
+
+The client adapter calls `ImportFile` before joining the room and calls `GetPDFDocument` to load the PDF. The Collaboration Server handles collaboration actions after the client joins.
 
 ## See Also
 
-- [Collaborative editing overview](./overview)
-- [Collaborative editing using Node.js with Redis](./using-redis-cache-nodejs)
-- [PDF Viewer annotations](../annotation)
-- [PDF Viewer getting started](../getting-started)
+- [Collaborative editing with Node.js](./using-redis-cache-nodejs)
+- [Getting Started with ASP.NET Core Collaboration Server](../../../../Collaborator/getting-started/getting-started-with-core)
