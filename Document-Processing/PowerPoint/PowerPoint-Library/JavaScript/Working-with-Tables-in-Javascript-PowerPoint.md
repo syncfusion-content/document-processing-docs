@@ -10,6 +10,8 @@ documentation: UG
 
 The `JavaScript PowerPoint Library` provides comprehensive support to create, edit, and remove tables in a PowerPoint slide, enabling complete control over tabular content within presentations. A table in a PowerPoint presentation is used to arrange document content in rows and columns. A table instance represents a table in a PowerPoint presentation. A table must contain at least one row.
 
+T> The table xfrm bounds are expressed in EMU (914400 EMU = 1 inch). Convert with 1 pt = 12700 EMU so the table renders at the intended visible size.
+
 ## Create a table by adding rows
 
 The `JavaScript PowerPoint Library` supports creating and editing tables in PowerPoint slides by adding rows. 
@@ -22,10 +24,8 @@ The following code example demonstrates how to create a table by adding rows.
 import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
 import { addTable } from '@syncfusion/ej2-pptx/tables';
 
-// The table xfrm bounds are expressed in EMU (914400 EMU = 1 inch).
-// Convert with 1 pt = 12700 EMU so the table renders at the intended visible size.
-const PT = 12700; // EMU per point
-
+// EMU per point
+const PT = 12700;
 // Creates a PowerPoint presentation.
 const pptxDoc = Presentation.create();
 // Adds a slide to the presentation.
@@ -35,7 +35,6 @@ const table = addTable(slide, {
     rows: 2, columns: 2,
     xfrm: { x: 100 * PT, y: 120 * PT, width: 300 * PT, height: 200 * PT },
 });
-
 // Iterates row-wise cells and adds text to each.
 for (let rowIndex = 0; rowIndex < table.rowCount; rowIndex++) {
     for (let colIndex = 0; colIndex < table.columnCount; colIndex++) {
@@ -47,7 +46,6 @@ for (let rowIndex = 0; rowIndex < table.rowCount; rowIndex++) {
         }
     }
 }
-
 // Saves the PowerPoint presentation.
 await pptxDoc.save('temp/TableModified1.pptx');
 
@@ -64,10 +62,8 @@ The following code example demonstrates how to create a simple table in a PowerP
 import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
 import { addTable } from '@syncfusion/ej2-pptx/tables';
 
-// The table xfrm bounds are expressed in EMU (914400 EMU = 1 inch).
-// Convert with 1 pt = 12700 EMU so the table renders at the intended visible size.
-const PT = 12700; // EMU per point
-
+// EMU per point
+const PT = 12700;
 // Creates a PowerPoint presentation.
 const pptxDoc = Presentation.create();
 // Adds a slide to the presentation.
@@ -77,7 +73,6 @@ const table = addTable(slide, {
     rows: 2, columns: 2,
     xfrm: { x: 100 * PT, y: 120 * PT, width: 300 * PT, height: 200 * PT },
 });
-
 // Iterates column-wise cells and adds text to each.
 for (let colIndex = 0; colIndex < table.columnCount; colIndex++) {
     for (let rowIndex = 0; rowIndex < table.rowCount; rowIndex++) {
@@ -146,7 +141,6 @@ import { asTable } from '@syncfusion/ej2-pptx/tables';
 // Loads or opens a PowerPoint presentation.
 const bytes = readFileSync('temp/Data/Table.pptx');
 const pptxDoc = await open(bytes);
-
 // Gets the table in the slide.
 const slide = pptxDoc.slides[0];
 const table = asTable(slide.shapes[0]);
