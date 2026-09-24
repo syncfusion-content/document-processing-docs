@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Collaborative Editing in Vue using ASP.NET Core | Syncfusion
-description: The collaborative editing feature in Vue DOCX Editor supports real-time multi-user document editing using the Syncfusion Collaborator common packages with Redis and ASP.NET Core.
+description: The collaborative editing feature in Vue DOCX Editor supports real-time multi-user document editing using Redis with ASP.NET Core.
 platform: document-processing
 control: Collaborative Editing 
 documentation: ug
