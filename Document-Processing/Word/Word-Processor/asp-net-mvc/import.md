@@ -114,15 +114,19 @@ internal static FormatType GetFormatType(string format)
 
 ## Opening a document in asynchronous mode
 
-[ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) supports asynchronous document loading, which can be enabled using the enable property available in the openAsyncSettings API.
+Documents can be loaded asynchronously using the `openAsyncSettings` API to improve the initial loading experience by opening the document while remaining pages load in the background.
 
 ### Properties
 
-**enable:** Enables or disables asynchronous document loading.
-**initialPageLoadCount:** Number of pages to load initially when the document is opened.
-**incrementalPageLoadCount:** Number of pages to load incrementally after initial pages load, during the asynchronous document-loading operation.
+Configure asynchronous loading using these properties:
 
-The following example shows how to open the document asynchronously in DOCX Editor.
+| Property | Type | Default | Description |
+|----------|------|---------|-------------|
+| **enable** | boolean | `false` | Enables or disables asynchronous document loading. |
+| **initialPageLoadCount** | number | `5` | Number of pages to load immediately when the document opens. Recommended values: 3-10 |
+| **incrementalPageLoadCount** | number | `3` | Number of pages to load in each batch during background loading. Recommended values: 2-5 |
+
+The following example demonstrates how to configure and enable asynchronous document loading:
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -132,7 +136,7 @@ The following example shows how to open the document asynchronously in DOCX Edit
 {% endhighlight %}
 {% endtabs %}
 
-N> When asynchronous loading is enabled, the document initially opens in read-only mode, allowing users to view the first set of pages while the remaining pages load in the background. During this time, the document can be viewed but cannot be edited or saved. Once loading is complete, editing and saving become available.
+N> When asynchronous loading is enabled, the document initially opens in read-only mode, allowing users to view the first set of pages while the remaining pages continue loading in the background. During this loading process, editing and saving are disabled. Once the document has fully loaded, all content becomes editable and the document can be saved.
 
 ## See Also
 
