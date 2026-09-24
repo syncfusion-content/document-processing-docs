@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Smart Form Recognizer in Blazor Smart PDF Viewer | Syncfusion
-description: Learn how to detect and add interactive form fields automatically from scanned or image-based PDF documents using Smart Form Recognizer in the Syncfusion Blazor Smart PDF Viewer.
+description: Learn how to automatically detect forms in image-based PDFs and add interactive form fields using Smart Form Recognizer in Syncfusion Blazor Smart PDF Viewer.
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
