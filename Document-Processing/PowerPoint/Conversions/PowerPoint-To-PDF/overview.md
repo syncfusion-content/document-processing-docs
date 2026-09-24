@@ -21,6 +21,7 @@ The Syncfusion<sup>&reg;</sup> PowerPoint to PDF converter offers high versatili
 * Embed fonts in a PowerPoint file into the converted PDF document to avoid font-related issues across different machines and different platforms.
 * Convert a PowerPoint document to PDF with the [PDF-A1B](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/presentation-to-pdf#pdf-conformance) conformance standards.
 * Specify [fallback fonts](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/fallback-fonts-in-pptxtopdf-conversion) to be used in place of missing fonts.
+* Support for [custom fonts registration](./NET/Custom-fonts-registration-pptx-to-pdf) through the `FontManager` API, enabling use of fonts that are not installed on the operating system.
 * Skip or include [hidden slides](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/presentation-to-pdf#include-hidden-slides).
 * Set the [quality of images](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/presentation-to-pdf#optimizing-the-converted-pdf-document-size) in the PowerPoint slides to reduce the converted PDF document size.
 
@@ -126,6 +127,14 @@ When a font used in a PowerPoint presentation is unavailable in the environment 
 ## Fallback fonts
 
 During PowerPoint to PDF conversions, if a glyph of the input text is unavailable in the specified font, the text will not be rendered properly. To address this, the Syncfusion<sup>&reg;</sup> PowerPoint (Presentation) library allows users to specify fallback fonts. When a glyph is missing, the library will use one of the fallback fonts to render the text correctly in the output PDF document. For further information, click [here](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/fallback-fonts-in-pptxtopdf-conversion).
+
+## Custom font registration
+
+In many deployment environments such as cloud-hosted, containerized, and cross-platform applications, installing fonts on the operating system is not possible or desirable. The [Syncfusion .NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) allows users to register custom fonts through the `FontManager` API, maintaining a private font repository within the library. This supports TrueType (`.ttf`) and OpenType (`.otf`) formats, registered from memory streams or a folder, and ensures consistent document rendering without depending on system-installed fonts.
+
+N> Register the required fonts during application startup using `FontManager.RegisterFonts` and clear them during shutdown using `FontManager.ClearRegisteredFonts` for optimal performance.
+
+For further information, click [here](./NET/Custom-fonts-registration-pptx-to-pdf).
 
 ## Show Warning for unsupported elements
 
