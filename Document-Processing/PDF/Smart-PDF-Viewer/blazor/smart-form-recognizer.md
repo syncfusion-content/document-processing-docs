@@ -19,7 +19,15 @@ This helps you convert static forms into editable, fillable PDF forms without ma
 
 The Smart Form Recognizer feature depends on the Syncfusion Smart Form Recognition library.
 
-Install the required NuGet package and import the namespace in your application:
+Install the required NuGet package and import the namespace in your application.
+
+{% tabs %}
+{% highlight c# tabtitle="Package Manager" %}
+
+Install-Package Syncfusion.SmartFormRecognizer.NET -Version {{ site.releaseversion }}
+
+{% endhighlight %}
+{% endtabs %}
 
 ```cs
 @using Syncfusion.SmartFormRecognizer
@@ -115,14 +123,6 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-smart-pd
 
 The `DetectAndAddFormFieldsAsync` method analyzes the currently loaded PDF document, detects form elements, and automatically adds interactive form fields to the PDF Viewer.
 
-### Method Signature
-
-```csharp
-Task DetectAndAddFormFieldsAsync(
-    IFormRecognizer formRecognizer,
-    SmartFormRecognizerOptions options)
-```
-
 ### Example
 
 ```csharp
@@ -138,14 +138,6 @@ After detection, the generated fields work like manually created form fields and
 ## Extract Form Fields as JSON
 
 The `ExtractFormFieldsAsync` method detects form fields from the loaded document and returns the extracted field information as a JSON string.
-
-### Method Signature
-
-```csharp
-Task<string> ExtractFormFieldsAsync(
-    IFormRecognizer formRecognizer,
-    SmartFormRecognizerOptions options)
-```
 
 ### Example
 
