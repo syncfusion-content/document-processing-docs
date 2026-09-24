@@ -10,8 +10,6 @@ documentation: UG
 
 The `JavaScript PowerPoint Library` provides comprehensive support to create, edit, and remove tables in a PowerPoint slide, enabling complete control over tabular content within presentations. A table in a PowerPoint presentation is used to arrange document content in rows and columns. A table instance represents a table in a PowerPoint presentation. A table must contain at least one row.
 
-T> The table xfrm bounds are expressed in EMU (914400 EMU = 1 inch). Convert with 1 pt = 12700 EMU so the table renders at the intended visible size.
-
 ## Create a table by adding rows
 
 The `JavaScript PowerPoint Library` supports creating and editing tables in PowerPoint slides by adding rows. 
