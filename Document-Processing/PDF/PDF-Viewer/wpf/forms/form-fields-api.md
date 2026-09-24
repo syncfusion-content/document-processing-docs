@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: Form Fields API in WPF PDF Viewer | Syncfusion
 description: Learn how to use the Form Fields API in the Syncfusion WPF PDF Viewer to access, modify, and manage form fields effectively in your PDF applications.
@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Form Fields API in WPF Pdf Viewer

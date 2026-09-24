@@ -4,6 +4,7 @@ description: Chart series settings describes how the Syncfusion .NET Excel Libra
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Chart Series in .NET Excel Library

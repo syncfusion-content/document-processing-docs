@@ -5,6 +5,7 @@ description: Customize annotation selectors in the JavaScript (ES6) PDF Viewer u
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Customize Annotation Selectors in JavaScript (ES6) PDF Viewer

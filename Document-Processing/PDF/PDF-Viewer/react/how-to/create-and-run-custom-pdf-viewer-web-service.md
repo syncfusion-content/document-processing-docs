@@ -5,6 +5,7 @@ description: Create and run a custom PDF Viewer web service for the React PDF Vi
 control: PDF Viewer
 platform: document-processing
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Create a Custom PDF Viewer Web Service in React PDF Viewer

@@ -4,6 +4,7 @@ description: Learn how to convert a Word document to RTF and vice versa using th
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert Word to RTF and vice versa in .NET Word

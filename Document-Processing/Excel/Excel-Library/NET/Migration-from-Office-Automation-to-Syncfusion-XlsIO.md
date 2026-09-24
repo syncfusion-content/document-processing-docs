@@ -4,6 +4,7 @@ description: Excel Interop migration page describes how to move from Microsoft E
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Office Automation Migration in .NET Excel Library

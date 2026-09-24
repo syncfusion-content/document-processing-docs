@@ -5,6 +5,7 @@ description: Fields in Blazor DOCX Editor enable inserting and updating document
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # Fields in Blazor DOCX Editor

@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Commands in WPF Pdf Viewer control | Syncfusion
 description: The command binding feature in WPF PDF Viewer enables binding PDF viewer commands like page navigation and zoom to custom UI buttons.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Commands in WPF Pdf Viewer control

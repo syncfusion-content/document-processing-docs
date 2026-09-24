@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion ASP.NET Core Spreadshe
 platform: document-processing
 control: ASP.NET Core Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

@@ -6,6 +6,7 @@ platform: document-processing
 control: Open PDF files from Dropbox cloud file storage
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Open PDF from Dropbox Cloud Storage in Angular PDF Viewer

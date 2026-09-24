@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: hyperlink,insert-hyperlink,requestnavigate,screentip,editor-settings
+appliesto: DOCX Editor SDK
 ---
 # Hyperlinks in UWP DOCX Editor
 

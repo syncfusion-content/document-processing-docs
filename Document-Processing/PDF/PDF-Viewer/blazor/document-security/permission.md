@@ -5,6 +5,7 @@ description: Learn how Blazor PDF Viewer enforces owner permissions in permissio
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Load permission-restricted PDFs in Blazor PDF Viewer

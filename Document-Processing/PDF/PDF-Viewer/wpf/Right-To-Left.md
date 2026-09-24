@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: RTL Support in WPF PDF Viewer | Syncfusion
 description: Enable right-to-left (RTL) layout in Syncfusion WPF PDF Viewer for RTL languages. Learn FlowDirection configuration and RTL rendering options.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Right to Left (RTL) in WPF Pdf Viewer

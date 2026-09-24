@@ -5,6 +5,7 @@ description: Learn about free text callout annotation support in Syncfusion<sup>
 platform: document-processing
 control: SfPdfViewerControl
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Free text calllout annotation in UWP PDF Viewer

@@ -4,6 +4,7 @@ description: Programmatically rotate text in Excel cells using Interop and Syncf
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Text Rotation in .NET Excel Library

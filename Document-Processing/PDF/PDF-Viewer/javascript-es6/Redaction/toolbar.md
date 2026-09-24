@@ -5,6 +5,7 @@ description: Customize the Organize Pages toolbar in the JavaScript (ES6) PDF Vi
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Customize the Organize Pages Toolbar in JavaScript (ES6) PDF Viewer

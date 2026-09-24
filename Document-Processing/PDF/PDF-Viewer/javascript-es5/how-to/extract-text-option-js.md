@@ -5,6 +5,7 @@ description: Use the extractTextOption property in the JavaScript (ES5) PDF View
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Configure ExtractTextOption in JavaScript (ES5) PDF Viewer

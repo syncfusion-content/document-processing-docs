@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: scroll-to-bottom,scroll,verticalscrollbar,horizontalscrollbar,scrollbar,scrolling-events
+appliesto: DOCX Editor SDK
 ---
 
 # How to Detect Scrolling to the Bottom in UWP DOCX Editor

@@ -5,6 +5,7 @@ platform: document-processing
 control: general
 documentation: UG
 keywords: markdown, SDK, Automation, API, create, read
+appliesto: Document SDK
 ---
 
 # About Syncfusion Markdown Document Processing Solutions

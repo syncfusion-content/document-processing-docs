@@ -5,6 +5,7 @@ description: Learn how to use annotation permissions in the Blazor PDF Viewer to
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Annotation permissions in Blazor PDF Viewer 

@@ -5,6 +5,7 @@ description: Learn how to print worksheets and configure print options in the Sy
 platform: document-processing
 control: Print
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

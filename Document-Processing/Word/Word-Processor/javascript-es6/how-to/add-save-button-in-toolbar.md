@@ -6,6 +6,7 @@ platform: document-processing
 control: Add Save Button in Toolbar
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Add Save Button in Toolbar in TypeScript DOCX Editor

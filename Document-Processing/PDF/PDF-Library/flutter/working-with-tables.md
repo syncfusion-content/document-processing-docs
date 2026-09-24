@@ -5,6 +5,7 @@ description: Learn how to draw and customize tables, cells, rows, and columns in
 platform: document-processing
 control: PDF
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Tables in Flutter PDF

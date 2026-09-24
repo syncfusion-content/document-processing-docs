@@ -4,6 +4,7 @@ description: Learn about Document Object Model representation in the Syncfusion 
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 # Document Object Model representation in Java Word
 

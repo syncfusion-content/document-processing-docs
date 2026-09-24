@@ -5,6 +5,7 @@ description: Syncfusion Excel Mac installer installation section explains how to
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
+appliesto: Document SDK
 ---
 
 # How to install Mac installer in .NET Excel Library

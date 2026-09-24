@@ -4,6 +4,7 @@ description: Describe common questions and answers related to HTML and EPUB conv
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # FAQ about HTML and EPUB Conversions in .NET Word
 

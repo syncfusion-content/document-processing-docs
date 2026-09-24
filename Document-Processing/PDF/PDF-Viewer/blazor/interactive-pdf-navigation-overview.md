@@ -5,6 +5,7 @@ description: Learn about how to navigate pages in the Blazor PDF Viewer componen
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # About Syncfusion Navigation in Blazor PDF Viewer Component

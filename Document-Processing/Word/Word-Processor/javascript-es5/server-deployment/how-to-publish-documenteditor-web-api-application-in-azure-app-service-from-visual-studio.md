@@ -6,6 +6,7 @@ platform: document-processing
 control: How to publish documenteditor web api application in azure app service from visual studio
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Publish JavaScript DOCX Editor Web API to Azure App

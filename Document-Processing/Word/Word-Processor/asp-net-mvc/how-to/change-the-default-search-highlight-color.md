@@ -5,6 +5,7 @@ description: Change the default search highlight color in Syncfusion® ASP.NET M
 platform: document-processing
 control: Change The Default Search Highlight Color
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # How to Change Search Highlight Color in ASP.NET MVC DOCX Editor

@@ -4,6 +4,7 @@ description: Edit existing external workbook reference links in Excel documents 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to edit workbook reference links in .NET Excel Library

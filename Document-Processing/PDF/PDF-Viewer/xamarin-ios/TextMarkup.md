@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title:  Add & modify text markups PDF viewer Xamarin.iOS | Syncfusion
 description: PDF viewer Xamarin.iOS allows user to highlight, underline and strikethrough the text content in the PDF document.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 #  Add & modify text markups PDF viewer Xamarin.iOS

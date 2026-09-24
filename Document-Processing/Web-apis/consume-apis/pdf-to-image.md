@@ -4,6 +4,7 @@ description: Export PDF pages to high‑quality JPEG, PNG, or TIFF formats for p
 platform: document-processing
 control: general
 documentation: UG
+appliesto: Document SDK
 ---
 # Convert PDF to Image Using Syncfusion Web API
 

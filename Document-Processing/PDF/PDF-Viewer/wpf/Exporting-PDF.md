@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Exporting PDF pages in WPF Pdf Viewer control | Syncfusion
 description: Export PDF pages to image formats in Syncfusion WPF PDF Viewer. Learn to convert single and multiple pages to JPG, PNG, TIFF, and BMP formats.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Exporting PDF pages in WPF Pdf Viewer

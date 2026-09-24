@@ -6,6 +6,7 @@ platform: document-processing
 control: XlsIO
 documentation: UG
 keywords: Excel, SDK, Automation, API, create, read, write
+appliesto: Document SDK
 ---
 
 # About Syncfusion Excel Document Processing Library

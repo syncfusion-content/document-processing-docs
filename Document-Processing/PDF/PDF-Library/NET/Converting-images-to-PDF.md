@@ -4,6 +4,7 @@ description: Learn how to convert raster and vector images to PDF documents usin
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Converting Images to PDF in .NET

@@ -5,6 +5,7 @@ description: The accessibility feature in SfPdfViewer supports screen readers, k
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Accessibility in Flutter PDF Viewer

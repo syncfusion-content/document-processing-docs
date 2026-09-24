@@ -6,6 +6,7 @@ platform: document-processing
 control: Section format 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Section Format in TypeScript DOCX Editor

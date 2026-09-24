@@ -5,6 +5,7 @@ description: Load and display PDF files stored in Box cloud storage in the ASP.N
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Open PDF from Box Cloud Storage in ASP.NET Core PDF Viewer

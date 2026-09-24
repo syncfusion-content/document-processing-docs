@@ -4,6 +4,7 @@ description: Learn how to convert Word document to ODT file using the .NET Word 
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert Word document to ODT in .NET Word

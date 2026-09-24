@@ -5,6 +5,7 @@ description: Find and Replace in Angular Spreadsheet helps users quickly locate 
 platform: document-processing
 control: Searching 
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Find and Replace in Angular Spreadsheet 

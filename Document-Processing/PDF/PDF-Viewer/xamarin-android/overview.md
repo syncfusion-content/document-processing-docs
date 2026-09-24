@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: About Syncfusion Xamarin.Android PDF Viewer Control | Syncfusion
 description: Learn about the introduction and overview of the Syncfusion Xamarin.Android PDF Viewer control, its key features, capabilities, and usage.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # About Syncfusion Xamarin.Android PDF Viewer Control

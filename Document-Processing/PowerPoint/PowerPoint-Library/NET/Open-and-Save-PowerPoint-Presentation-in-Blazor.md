@@ -4,6 +4,7 @@ description: Open and save Presentation in Blazor using .NET Core PowerPoint lib
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Open and Save PowerPoint Presentation in Blazor

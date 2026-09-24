@@ -5,6 +5,7 @@ description: Learn about accessibility in the Syncfusion React Spreadsheet compo
 control: Accessibility 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Accessibility in React Spreadsheet

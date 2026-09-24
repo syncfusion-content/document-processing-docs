@@ -4,6 +4,7 @@ description: Create, read and edit PowerPoint slides in CSharp; Adding and modif
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 # Working with Slides in PowerPoint  
 

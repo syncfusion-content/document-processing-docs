@@ -6,6 +6,7 @@ platform: document-processing
 control: Keyboard shortcut 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Keyboard Shortcuts in TypeScript DOCX Editor

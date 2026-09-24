@@ -4,6 +4,7 @@ description: Learn how to modify the appearance of axes in a chart in a PowerPoi
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Chart Axis in PowerPoint

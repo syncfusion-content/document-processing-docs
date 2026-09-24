@@ -5,6 +5,7 @@ description: Learn how to undo and redo annotation changes in the Blazor PDF Vie
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Undo and Redo Annotations in Blazor PDF Viewer 

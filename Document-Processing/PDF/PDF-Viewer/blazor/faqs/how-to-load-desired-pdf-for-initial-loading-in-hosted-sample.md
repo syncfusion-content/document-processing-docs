@@ -5,6 +5,7 @@ description: Learn how to display a specific PDF on initial load and switch docu
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Load a PDF on initial load in Blazor PDF Viewer

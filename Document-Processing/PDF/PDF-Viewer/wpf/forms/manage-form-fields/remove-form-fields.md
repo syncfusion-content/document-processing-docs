@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Remove form fields in WPF PDF Viewer component | Syncfusion
 description: Learn how to remove PDF form fields programmatically using the Syncfusion WPF PDF Viewer API to simplify form handling and automate PDF form cleanup.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 

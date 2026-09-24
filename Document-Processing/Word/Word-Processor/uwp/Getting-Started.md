@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: getting started, docx editor
+appliesto: DOCX Editor SDK
 ---
 # Getting Started with UWP DOCX Editor
 

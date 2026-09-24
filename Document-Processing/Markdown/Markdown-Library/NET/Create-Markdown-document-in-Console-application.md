@@ -4,6 +4,7 @@ description: Create a Markdown document in Console Application using .NET Markdo
 platform: document-processing
 control: Markdown
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Markdown document in Console Application

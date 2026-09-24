@@ -4,6 +4,7 @@ description: Import a data table with its data type using template markers in th
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to import data types with template markers in .NET Excel Library

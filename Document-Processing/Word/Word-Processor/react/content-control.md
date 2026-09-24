@@ -6,6 +6,7 @@ control: Content Control
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Content Controls in React DOCX Editor

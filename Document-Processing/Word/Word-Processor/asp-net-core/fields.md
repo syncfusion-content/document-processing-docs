@@ -5,6 +5,7 @@ description: Fields in ASP.NET Core DOCX Editor enable inserting and updating do
 platform: document-processing
 control: Fields
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # Fields in ASP.NET Core DOCX Editor

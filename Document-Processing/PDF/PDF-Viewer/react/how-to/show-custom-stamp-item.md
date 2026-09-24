@@ -5,6 +5,7 @@ description: Display custom items in the custom stamp dropdown in the React PDF 
 control: PDF Viewer
 platform: document-processing
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 

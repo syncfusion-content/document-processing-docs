@@ -5,6 +5,7 @@ description: Insert text, paragraphs, and rich-text content in the current curso
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # How to Insert Content at Cursor in Blazor DOCX Editor

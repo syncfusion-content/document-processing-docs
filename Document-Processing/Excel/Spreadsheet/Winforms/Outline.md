@@ -5,6 +5,7 @@ description: Group rows and columns in Windows Forms Spreadsheet with outline op
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Outline in Windows Forms Spreadsheet

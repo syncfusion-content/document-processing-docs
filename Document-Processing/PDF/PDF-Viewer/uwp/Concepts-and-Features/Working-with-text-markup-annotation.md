@@ -5,6 +5,7 @@ description: Learn here all about Working with text markup annotations support i
 platform: document-processing
 control: PDF viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Text markup annotations in UWP Pdf Viewer Control

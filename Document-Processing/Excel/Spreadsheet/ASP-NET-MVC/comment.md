@@ -5,6 +5,7 @@ description: Learn how to add, edit, and manage comments in the Syncfusion ASP.N
 platform: document-processing
 control: Comment
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Comments in ASP.NET MVC Spreadsheet

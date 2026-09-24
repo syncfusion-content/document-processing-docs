@@ -5,6 +5,7 @@ description: The export feature in ASP.NET MVC DOCX Editor enables users to save
 platform: document-processing
 control: Export
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

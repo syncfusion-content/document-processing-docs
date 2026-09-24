@@ -4,6 +4,7 @@ description: Open and save Word document in Google App Engine using .NET Core Wo
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Open and save Word documents in Google App Engine 

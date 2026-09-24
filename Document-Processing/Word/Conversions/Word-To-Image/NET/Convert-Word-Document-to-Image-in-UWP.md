@@ -4,6 +4,7 @@ description: Describe how to convert Word documents to images in UWP application
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert Word to Image in UWP 

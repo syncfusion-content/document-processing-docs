@@ -4,6 +4,7 @@ description: Learn how to set the invert if negative option for a chart programm
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to set invert-if-negative in charts in .NET Excel Library

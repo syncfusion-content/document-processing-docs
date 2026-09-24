@@ -5,6 +5,7 @@ description: Learn how to flatten PDF annotations and form fields before saving 
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Flatten annotations in Blazor PDF Viewer 

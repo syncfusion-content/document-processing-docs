@@ -5,6 +5,7 @@ description: Learn how to get page offset collection in uwp pdf viewer in Syncfu
 platform: document-processing
 control: PDF viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Get page offset collection in UWP PDF Viewer

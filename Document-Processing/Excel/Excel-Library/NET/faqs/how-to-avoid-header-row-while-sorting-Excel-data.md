@@ -4,6 +4,7 @@ description: Avoid sorting the header row when sorting Excel worksheet data usin
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to exclude header rows while sorting in .NET Excel Library

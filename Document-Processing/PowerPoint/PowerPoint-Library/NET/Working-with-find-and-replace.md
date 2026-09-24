@@ -5,6 +5,7 @@ platform: document-processing
 control: Presentation
 documentation: UG
 keywords: find, replace, regex, highlight, PowerPoint, .NET, Syncfusion, presentation, text, search
+appliesto: Document SDK
 ---
 # Working with Find and Replace
 

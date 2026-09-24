@@ -5,6 +5,7 @@ description: Headers and footers in ASP.NET Core DOCX Editor enable adding and c
 platform: document-processing
 control: Header Footer
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

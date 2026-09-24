@@ -4,6 +4,7 @@ description: Apply superscript to specific text in an Excel cell using the Syncf
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to apply superscript text in .NET Excel Library

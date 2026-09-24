@@ -5,6 +5,7 @@ description: Learn about secure worksheets and cells using sheet protection feat
 control: Protect sheet 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Sheet Protection in Vue Spreadsheet

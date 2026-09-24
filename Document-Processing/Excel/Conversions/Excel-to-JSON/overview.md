@@ -4,6 +4,7 @@ description: Learn about introduction of converting Excel workbooks, worksheets,
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # About Syncfusion .NET Excel to JSON Conversion

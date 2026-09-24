@@ -5,6 +5,7 @@ description: Customize the color picker appearance in Syncfusion® ASP.NET Core 
 platform: document-processing
 control: Customize Color Picker
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

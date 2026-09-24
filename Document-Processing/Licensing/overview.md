@@ -5,6 +5,7 @@ description: Learn about overview of Syncfusion License for Document Processing 
 platform: document-processing
 control: Essential Studio
 documentation: ug
+appliesto: Document SDK, PDF Viewer SDK, DOCX Editor SDK, Spreadsheet Editor SDK
 ---
 
 <style>

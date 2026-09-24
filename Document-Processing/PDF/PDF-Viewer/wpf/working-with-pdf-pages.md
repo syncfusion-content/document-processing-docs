@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: PDF Pages in WPF Pdf Viewer control | Syncfusion
 description: Customize PDF pages in Syncfusion WPF PDF Viewer with page borders and styling. Learn page customization options and border properties.
 platform: document-processing
 control: PDF Viewer
 documentation: UG
+appliesto: PDF Viewer SDK
 ---
 
 # PDF Pages in WPF Pdf Viewer control

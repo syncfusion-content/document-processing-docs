@@ -5,6 +5,7 @@ description: Locking and unlocking annotations in SfPdfViewer helps protect PDF 
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Lock and Unlock Annotations in Flutter PDF Viewer

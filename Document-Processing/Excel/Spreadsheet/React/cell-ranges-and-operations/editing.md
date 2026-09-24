@@ -5,6 +5,7 @@ description: Learn about editing in the Syncfusion React Spreadsheet component a
 control: Editing 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Editing in React Spreadsheet

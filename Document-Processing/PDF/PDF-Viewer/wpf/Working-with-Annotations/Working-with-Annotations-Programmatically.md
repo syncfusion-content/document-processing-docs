@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Annotations in WPF PDF Viewer | Syncfusion
 description: The programmatic annotations feature in WPF PDF Viewer enables adding, selecting, and modifying annotation properties via the PdfViewerControl API.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Annotations in WPF PDF Viewer

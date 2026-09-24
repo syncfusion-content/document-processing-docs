@@ -4,6 +4,7 @@ description: Understand why line breaks in cell text are not preserved when savi
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to preserve line breaks in CSV export in .NET Excel Library

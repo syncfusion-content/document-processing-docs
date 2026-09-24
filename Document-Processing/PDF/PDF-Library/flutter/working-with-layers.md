@@ -5,6 +5,7 @@ description: Learn how to add, remove, and modify layers in PDF documents using 
 platform: document-processing
 control: PDF
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Layers in Flutter PDF

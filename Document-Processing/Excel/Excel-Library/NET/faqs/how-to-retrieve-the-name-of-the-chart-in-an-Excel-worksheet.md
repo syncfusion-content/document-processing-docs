@@ -4,6 +4,7 @@ description: Retrieve the name of a chart in an Excel worksheet using the Syncfu
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to retrieve chart names in .NET Excel Library

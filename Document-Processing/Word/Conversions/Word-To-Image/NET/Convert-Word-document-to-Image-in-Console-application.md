@@ -4,6 +4,7 @@ description: Convert Word to image in Console application using .NET Word librar
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert Word to Image in Console Application

@@ -4,6 +4,7 @@ description: Open and save Presentation in ASP.NET Core using .NET Core PowerPoi
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Open and save Presentation in ASP.NET Core

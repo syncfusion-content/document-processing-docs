@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion ASP.NET MVC DOCX Edito
 platform: document-processing
 control: Getting Started
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # Getting Started with ASP.NET MVC DOCX Editor

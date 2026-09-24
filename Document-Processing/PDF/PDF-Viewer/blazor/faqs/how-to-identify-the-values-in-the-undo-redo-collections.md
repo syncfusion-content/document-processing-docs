@@ -5,6 +5,7 @@ description: Learn how to determine whether undo and redo actions are available 
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Determine undo and redo availability in PDF Viewer

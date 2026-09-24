@@ -5,6 +5,7 @@ description: Learn about hyperlinks in the Syncfusion ASP.NET Core Spreadsheet c
 platform: document-processing
 control: Link
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

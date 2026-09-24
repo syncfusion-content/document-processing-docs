@@ -5,6 +5,7 @@ description: Learn how to draw and customize headers and footers in PDF document
 platform: document-processing
 control: PDF
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Headers and Footers in Flutter PDF

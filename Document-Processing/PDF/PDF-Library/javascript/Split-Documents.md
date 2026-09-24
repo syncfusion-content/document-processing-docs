@@ -5,6 +5,7 @@ description: Split PDF documents into pages, page ranges, or fixed-size sections
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Splitting PDF files in the JavaScript PDF

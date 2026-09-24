@@ -6,6 +6,7 @@ platform: document-processing
 control: Change the cursor color in DOCX Editor 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Change Cursor Color in JavaScript DOCX Editor

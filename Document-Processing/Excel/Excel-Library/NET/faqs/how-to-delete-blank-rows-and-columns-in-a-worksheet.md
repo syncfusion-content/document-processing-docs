@@ -4,6 +4,7 @@ description: Delete blank rows and columns in Excel worksheets using the Syncfus
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to delete blank rows and columns in .NET Excel Library

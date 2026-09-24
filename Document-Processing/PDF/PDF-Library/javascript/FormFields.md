@@ -5,6 +5,7 @@ description: Create, fill, edit, flatten, import, and export PDF form fields usi
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # PDF Form Fields in JavaScript PDF

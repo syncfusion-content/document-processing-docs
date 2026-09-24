@@ -6,6 +6,7 @@ platform: document-processing
 control: Link 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Hyperlinks in Angular DOCX Editor

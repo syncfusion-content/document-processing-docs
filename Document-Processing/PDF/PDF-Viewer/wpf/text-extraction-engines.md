@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Text Extraction Engines in WPF Pdf Viewer control | Syncfusion
 description: Configure text extraction engines in Syncfusion WPF PDF Viewer. Choose between PDFium and SfPdf for optimal text processing performance.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Text Extraction Engines in WPF Pdf Viewer

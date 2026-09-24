@@ -5,6 +5,7 @@ description: Learn how to acquire number of pages in the document being displaye
 platform: document-processing
 control: PDF viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Acquire number of pages in the UWP PDF Viewer

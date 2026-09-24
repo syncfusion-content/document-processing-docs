@@ -5,6 +5,7 @@ description: Edit PDF form fields in the React PDF Viewer using the built-in UI 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Modify Form Fields in React PDF Viewer

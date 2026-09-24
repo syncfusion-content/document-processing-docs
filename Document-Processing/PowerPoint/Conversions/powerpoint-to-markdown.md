@@ -4,6 +4,7 @@ description: Convert PowerPoint presentations to Markdown format using the Syncf
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # PowerPoint to Markdown Conversion in .NET PowerPoint

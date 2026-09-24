@@ -5,6 +5,7 @@ description: Learn how to update PDF form fields at runtime using a context menu
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Update form field using context menu in PDF Viewer

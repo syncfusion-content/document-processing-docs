@@ -5,6 +5,7 @@ description: Learn here about the recommended places to get and register the lic
 platform: document-processing
 control: Essential Studio
 documentation: ug
+appliesto: Document SDK, PDF Viewer SDK, DOCX Editor SDK, Spreadsheet Editor SDK
 ---
 
 # Where can I get a license key for Document Solutions

@@ -4,6 +4,7 @@ description: Convert Word to Image in Azure Functions Flex Consumption using .NE
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert Word to Image in Azure Functions 

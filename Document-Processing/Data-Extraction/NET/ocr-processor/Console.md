@@ -4,6 +4,7 @@ description: Learn how to get started with the Syncfusion Console OCR Processor.
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 --- 
 
 # Getting Started with Console OCR Processor

@@ -5,6 +5,7 @@ description: The table format feature in ASP.NET MVC DOCX Editor enables customi
 platform: document-processing
 control: Table Format
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

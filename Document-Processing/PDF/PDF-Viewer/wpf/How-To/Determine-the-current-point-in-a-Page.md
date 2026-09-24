@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: How to Get clicked location in a page in WPF Pdf Viewer | Syncfusion
 description: Determine and get the page clicked location or position in Syncfusion WPF PDF Viewer using PageClicked event.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Getting the clicked location in a page in WPF Pdf Viewer 

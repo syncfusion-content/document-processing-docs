@@ -5,6 +5,7 @@ platform: document-processing
 control: DataExtraction
 documentation: UG
 keywords: Assemblies
+appliesto: Document SDK
 ---
 
 # NuGet Packages required for .NET Smart Data Extractor

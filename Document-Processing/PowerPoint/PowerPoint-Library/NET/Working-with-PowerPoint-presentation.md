@@ -4,6 +4,7 @@ description: Essential® Presentation uses points to position slide elements and
 platform: document-processing
 control: Presentation
 documentation: UG
+appliesto: Document SDK
 ---
 # Working with PowerPoint Presentation
 

@@ -5,6 +5,7 @@ description: Comments in JavaScript Spreadsheet allow users to add notes to cell
 platform: document-processing
 control: Comment
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Comments in JavaScript Spreadsheet 

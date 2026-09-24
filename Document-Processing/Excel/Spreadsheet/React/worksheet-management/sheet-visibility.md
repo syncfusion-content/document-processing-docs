@@ -5,6 +5,7 @@ description: Learn about worksheet visibility options that are supported in the 
 control: Worksheet 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Sheet Visibility in React Spreadsheet Component

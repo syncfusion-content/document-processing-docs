@@ -5,6 +5,7 @@ description: Learn here all about how to print the PDF Viewer inside a Syncfusio
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Print the PDF Viewer inside the Dialog component

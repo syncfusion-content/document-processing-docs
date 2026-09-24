@@ -5,6 +5,7 @@ description: Learn here all about Creating a custom toolbar support in Syncfusio
 platform: document-processing
 control: PDF viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Creating a custom toolbar in UWP Pdf Viewer

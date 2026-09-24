@@ -4,6 +4,7 @@ description: CSV to Excel conversion in .NET Excel Library describes how to conv
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # CSV to Excel Conversion in .NET Excel Library

@@ -6,6 +6,7 @@ platform: document-processing
 control: Toolbar
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Add a Save Button to the Toolbar in JavaScript (ES5) PDF Viewer

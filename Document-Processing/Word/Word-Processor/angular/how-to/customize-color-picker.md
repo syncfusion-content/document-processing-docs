@@ -6,6 +6,7 @@ platform: document-processing
 control: Customize color picker 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Customize Color Picker in Angular DOCX Editor

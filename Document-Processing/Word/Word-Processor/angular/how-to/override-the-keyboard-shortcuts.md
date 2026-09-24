@@ -6,6 +6,7 @@ platform: document-processing
 control: Override the keyboard shortcuts
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Override Keyboard Shortcuts in Angular DOCX Editor

@@ -6,6 +6,7 @@ platform: document-processing
 control: Right to left 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Right to Left in Angular DOCX Editor

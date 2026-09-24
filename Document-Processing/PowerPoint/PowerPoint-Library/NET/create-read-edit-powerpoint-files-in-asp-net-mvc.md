@@ -4,6 +4,7 @@ description: ASP.NET MVC PowerPoint library to create, read, edit and convert Po
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create, read and edit a PowerPoint file in ASP.NET MVC

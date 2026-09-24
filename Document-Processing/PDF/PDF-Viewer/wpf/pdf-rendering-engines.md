@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: PDF Rendering Engines in WPF Pdf Viewer control | Syncfusion
 description: Choose between PDFium and SfPdf rendering engines in Syncfusion WPF PDF Viewer for optimal PDF rendering and performance.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # PDF Rendering Engines in WPF Pdf Viewer

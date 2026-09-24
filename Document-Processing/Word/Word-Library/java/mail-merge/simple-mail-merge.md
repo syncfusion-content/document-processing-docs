@@ -4,6 +4,7 @@ description: This section illustrates frequently asked questions about working w
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Simple Mail merge in Java Word

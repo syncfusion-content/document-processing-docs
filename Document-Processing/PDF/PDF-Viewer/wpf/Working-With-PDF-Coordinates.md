@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: PDF Coordinates in WPF PDF Viewer control | Syncfusion
 description: Work with PDF coordinates in Syncfusion WPF PDF Viewer by converting between client and page coordinates. Learn coordinate conversion APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Working With PDF Coordinates in the WPF Pdf Viewer

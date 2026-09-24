@@ -4,6 +4,7 @@ description: Open and save Presentation in Azure Blob Cloud Storage using .NET C
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Open and Save Presentation in Azure Blob Cloud Storage

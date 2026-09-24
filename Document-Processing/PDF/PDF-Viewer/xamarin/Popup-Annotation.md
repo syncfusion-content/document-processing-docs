@@ -1,10 +1,11 @@
----
+﻿---
 layout: post
 title: Popup annotations in Xamarin Pdf Viewer | Syncfusion
 description: Learn here all about Popup annotations support in Syncfusion<sup>®</sup> Xamarin Pdf Viewer (SfPdfViewer) control and more.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Popup annotations in Xamarin Pdf Viewer

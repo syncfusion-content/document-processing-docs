@@ -4,6 +4,7 @@ description: Learn how to create, fill, edit, and modify form fields in XFA docu
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # XFA Forms in .NET PDF Library
 

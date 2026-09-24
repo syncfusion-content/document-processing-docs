@@ -4,6 +4,7 @@ description: A .NET Core PowerPoint library to create, read and edit PowerPoint 
 platform: document-processing
 control: PowerPoint
 documentation: ug
+appliesto: Document SDK
 ---
 # Create, read and edit a PowerPoint file in WinUI
 

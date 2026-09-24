@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: search,find,replace-text,find-options,regex-find
+appliesto: DOCX Editor SDK
 ---
 # Find and Replace in WPF DOCX Editor
 

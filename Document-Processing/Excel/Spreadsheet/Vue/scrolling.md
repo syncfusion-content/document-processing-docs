@@ -5,6 +5,7 @@ description: Learn about explore scrolling functionality in the Syncfusion Vue S
 control: Scrolling 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Scrolling in Vue Spreadsheet

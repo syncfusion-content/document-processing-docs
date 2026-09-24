@@ -6,6 +6,7 @@ platform: document-processing
 control: Save document to Azure Blob Storage
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Save Documents to Azure Blob Storage in JavaScript DOCX Editor

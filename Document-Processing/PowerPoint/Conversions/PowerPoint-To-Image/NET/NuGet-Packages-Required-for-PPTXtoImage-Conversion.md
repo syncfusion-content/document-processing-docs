@@ -4,6 +4,7 @@ description: Learn about the NuGet packages required to convert PowerPoint to Im
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 # NuGet Packages Required for PPTX to Image Conversion
 

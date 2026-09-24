@@ -5,6 +5,7 @@ description: Resolve document loading issues in the React PDF Viewer v23.1 and l
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Resolve Document Loading Issues in React PDF Viewer

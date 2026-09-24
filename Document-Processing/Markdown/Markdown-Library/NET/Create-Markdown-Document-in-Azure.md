@@ -4,6 +4,7 @@ description: Learn how to create a Markdown document in Azure services using Syn
 platform: document-processing
 control: Markdown
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Markdown document in Microsoft Azure

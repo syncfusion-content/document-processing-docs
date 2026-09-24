@@ -4,6 +4,7 @@ description: Open and save Word document in Azure App Service on Windows using .
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Open and Save Word Document in Azure App Service Windows

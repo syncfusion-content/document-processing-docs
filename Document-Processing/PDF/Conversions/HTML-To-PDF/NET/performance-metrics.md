@@ -4,6 +4,7 @@ description: This section provides a detailed overview of the performance metric
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # HTML to PDF Performance metrics in .NET PDF Library 

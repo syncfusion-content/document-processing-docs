@@ -5,6 +5,7 @@ description: Learn how to add, remove, and extract file attachments in Syncfusio
 platform: document-processing
 control: PDF
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Attachments in Flutter PDF

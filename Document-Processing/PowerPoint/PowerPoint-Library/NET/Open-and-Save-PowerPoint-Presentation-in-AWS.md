@@ -4,6 +4,7 @@ description: Learn how to open and save Presentation in Amazon Web Services (AWS
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Open and save Presentation in Amazon Web Services (AWS)

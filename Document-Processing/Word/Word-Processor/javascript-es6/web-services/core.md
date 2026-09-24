@@ -6,6 +6,7 @@ platform: document-processing
 control: Core 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # ASP.NET Core Web Service in TypeScript DOCX Editor

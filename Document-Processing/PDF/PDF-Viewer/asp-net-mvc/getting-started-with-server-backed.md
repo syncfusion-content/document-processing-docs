@@ -5,6 +5,7 @@ description: Get started with the server-backed Syncfusion ASP.NET MVC PDF Viewe
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Getting Started with Server-Backed ASP.NET MVC Viewer

@@ -4,6 +4,7 @@ description: Learn how to create and use PDF templates for headers, footers, ove
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # PDF Templates in .NET PDF Library

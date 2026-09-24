@@ -5,6 +5,7 @@ description: Learn how to add, edit, and programmatically manage ink annotations
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Ink Annotation in the Blazor PDF Viewer 

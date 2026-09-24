@@ -5,6 +5,7 @@ description: Hyperlink in Angular Spreadsheet allow users to insert and manage h
 platform: document-processing
 control: Link 
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Hyperlink in Angular Spreadsheet 
