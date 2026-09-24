@@ -176,13 +176,17 @@ The following example configures the viewer to open external links in a separate
 
 After a link annotation is inserted, the user can:
 
+- Right-click the selected link annotation to open the context menu
+- Choose **Select** option from the context menu
 - Drag the rectangle to a new position
-- Resize the rectangle
+- Resize the rectangle using resize handles
 
-![Resize and edit link annotation](../../images/resize-link.png)
+![Resize link annotation](../../images/resize-link.png)
 
-- Modify the stroke color and thickness from the annotation toolbar or property panel
-- Edit the target page or URL from the annotation dialog if supported by the configured UI
+- Right-click the selected link annotation to open the context menu
+- Choose **Edit** option from the context menu
+- Modify the stroke color and thickness in the property panel
+- Edit the target page or URL from the dialog box
 
 ![Edit Link Annotation Context Menu](../../images/edit-link.png)
 
