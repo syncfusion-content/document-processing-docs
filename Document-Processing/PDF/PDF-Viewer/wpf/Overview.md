@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: About WPF Pdf Viewer control | Syncfusion
 description: Learn about the introduction of the Syncfusion Essential Studio WPF PDF Viewer control and more details.

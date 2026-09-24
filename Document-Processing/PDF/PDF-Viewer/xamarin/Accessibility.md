@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Accessibility in Xamarin Pdf Viewer | Syncfusion
 description: Learn here all about Accessibility support in Syncfusion<sup>®</sup> Xamarin Pdf Viewer (SfPdfViewer) control and more.

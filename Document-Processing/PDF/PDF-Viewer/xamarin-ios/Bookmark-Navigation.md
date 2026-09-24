@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title:  Bookmark Navigation in Xamarin.iOS PDF Viewer | Syncfusion
 description: Bookmark navigation allows users to view the bookmarks and navigate to the destination saved in the bookmarks in PDF Viewer Xamarin.iOS

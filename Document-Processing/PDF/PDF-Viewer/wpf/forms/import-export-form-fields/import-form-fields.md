@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Import form data in WPF PDF Viewer component | Syncfusion
 description: The PDF Viewer enables importing PDF form field data from FDF, XFDF, JSON, and XML files, allowing users to populate and restore form data efficiently.

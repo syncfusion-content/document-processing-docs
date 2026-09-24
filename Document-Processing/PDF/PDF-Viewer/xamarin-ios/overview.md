@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: About Syncfusion Xamarin.iOS PDF Viewer Control | Syncfusion
 description: Learn about the introduction and overview of the Syncfusion Xamarin.iOS PDF Viewer control, its key features, capabilities, and usage.

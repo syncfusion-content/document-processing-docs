@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Toggle visibility of the tool bar in WPF Pdf Viewer | Syncfusion
 description: Toggle toolbar visibility in Syncfusion WPF PDF Viewer for customized UI. Learn ShowToolbar property configuration and toolbar customization.

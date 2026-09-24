@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: PDF Layers in WPF Pdf Viewer control | Syncfusion
 description: Manage PDF layers in Syncfusion WPF PDF Viewer by toggling visibility of individual and group layers. Learn layer interaction and customization.

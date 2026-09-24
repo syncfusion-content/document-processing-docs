@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Customizing context menu in WPF Pdf Viewer | Syncfusion
 description: Customize context menus in Syncfusion WPF PDF Viewer by adding, removing, and hiding menu items. Learn context menu event handling.

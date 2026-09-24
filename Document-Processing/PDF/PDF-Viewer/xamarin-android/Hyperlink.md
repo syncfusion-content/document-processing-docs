@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title:  Hyperlink navigation in PDF viewer Xamarin.Android | Syncfusion
 description: Hyperlink navigation support in PDF Viewer Xamarin.Android detects hyperlinks present in PDF and on tapping it, will open the URL in the browser.
