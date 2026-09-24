@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Collaborative Editing in React PDF Viewer with ASP.NET Core
+title: Collaborative Editing in Syncfusion React PDF Viewer with ASP.NET Core
 description: Learn how to implement React PDF Viewer collaborative editing with the Syncfusion Collaborator client and ASP.NET Core server packages.
 platform: document-processing
 control: PDF Viewer
