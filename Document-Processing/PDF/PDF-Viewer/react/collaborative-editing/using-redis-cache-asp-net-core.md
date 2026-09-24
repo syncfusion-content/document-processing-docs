@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Collaborative Editing in React PDF Viewer with ASP.NET Core | Syncfusion
+title: Collaborative Editing in React PDF Viewer with ASP.NET Core
 description: Learn how to implement React PDF Viewer collaborative editing with the Syncfusion Collaborator client and ASP.NET Core server packages.
 platform: document-processing
 control: PDF Viewer
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Collaborative Editing in React PDF Viewer with ASP.NET Core
 
-This topic explains how to connect the React PDF Viewer to the ASP.NET Core Collaboration Server. The server manages SignalR, Redis, operation synchronization, and save processing. The React application supplies the PDF Viewer adapter and document endpoints.
+This topic explains how to connect the React PDF Viewer to the ASP.NET Core Collaboration Server. The server manages real-time communication, Redis, operation synchronization, and save processing. The React application supplies the PDF Viewer adapter and document endpoints.
 
 ## Prerequisites
 
@@ -137,7 +137,7 @@ export class PdfViewerAdapter implements ICollaborationProvider {
 
 ### 3. Initialize the React PDF Viewer
 
-Use the supplied JavaScript React lifecycle. For ASP.NET Core, the only client configuration difference is `SERVICE_URL` and the `signalr` connection type.
+Use the supplied JavaScript React life cycle. For ASP.NET Core, the only client configuration difference is `SERVICE_URL` and the real-time connection type.
 
 ```jsx
 import {
@@ -254,7 +254,7 @@ app.MapCollaborationServer();
 app.Run();
 ```
 
-SignalR is the default transport. For WebSocket, set `ConnectionType` to `CollaborationConnectionType.WebSocket` and call `app.UseWebSockets()` before `app.MapCollaborationServer()`.
+The default transport uses the real-time connection. For WebSocket, set `ConnectionType` to `CollaborationConnectionType.WebSocket` and call `app.UseWebSockets()` before `app.MapCollaborationServer()`.
 
 ### 2. Add the PDF Viewer server adapter and routes
 
