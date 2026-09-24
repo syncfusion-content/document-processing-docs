@@ -9,7 +9,7 @@ keywords: Assemblies
 
 # Convert PDF to JSON in .NET Smart Data Extractor
 
-JavaScript Object Notation (JSON) is a lightweight data‑interchange format that is easy for humans to read and write, and simple for machines to parse and generate. The Syncfusion<sup>&reg;</sup> Smart Data Extractor library extracts structured information from PDF documents and scanned images, and outputs the content as JSON. It analyzes text blocks, tables, headers, and form fields to preserve structure, enabling developers to integrate PDF to JSON extraction into their applications.
+JavaScript Object Notation (JSON) is a lightweight data‑interchange format that is easy for humans to read and write, and simple for machines to parse and generate. The Syncfusion<sup>&reg;</sup> Smart Data Extractor library extracts structured information from PDF documents and scanned images, and outputs the content as JSON. It analyzes text blocks, barcodes, tables, headers, and form fields to preserve structure, enabling developers to integrate PDF to JSON extraction into their applications.
 
 ## Assemblies and NuGet packages required
 

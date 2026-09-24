@@ -381,22 +381,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-## Text Extraction API Reference
-
-The following table provides a comprehensive overview of all text extraction methods available in the `PdfDataExtractor` class:
-
-| Process | Method Signature | Return Type | Description |
-|---|---|---|---|
-| **Extract Text** | `extractTextSync()` | `string` | Extracts plain text synchronously from the entire PDF document. |
-| **Extract Text** | `extractText()` | `Promise<string>` | Extracts plain text asynchronously from the entire PDF document. |
-| **Extract Text (Page Range)** | `extractTextSync(options: { startPageIndex: number; endPageIndex: number })` | `string` | Extracts plain text synchronously from a specified page range using start and end page indices. |
-| **Extract Text (Page Range)** | `extractText(options: { startPageIndex: number; endPageIndex: number })` | `Promise<string>` | Extracts plain text asynchronously from a specified page range using start and end page indices. |
-| **Extract Layout Text** | `extractTextSync(options: { isLayout: boolean })` | `string` | Extracts layout-based text synchronously, preserving the visual structure and spacing of the source document. |
-| **Extract Layout Text** | `extractText(options: { isLayout: boolean })` | `Promise<string>` | Extracts layout-based text asynchronously, preserving the visual structure and spacing of the source document. |
-| **Extract Text with Bounds** | `extractTextLinesSync(options?: { startPageIndex?: number; endPageIndex?: number })` | `TextLine[]` | Extracts text synchronously with hierarchical line, word, and character-level information including positional bounds. |
-| **Extract Text with Bounds** | `extractTextLines(options?: { startPageIndex?: number; endPageIndex?: number })` | `Promise<TextLine[]>` | Extracts text asynchronously with hierarchical line, word, and character-level information including positional bounds. |
-
-### Find text
+## Find text
 
 The `findTextSync` method of the `PdfDataExtractor` class locates specific text in a PDF document. The method returns the page index and rectangular bounds of each matching text occurrence synchronously. These details are useful for highlighting text, applying redaction, adding annotations, navigating between search results, and building custom search features.
 
@@ -441,7 +426,7 @@ console.log(searchResults);
 
 N> Use `findTextSync` when the search result is required immediately. For large PDF documents, use the asynchronous `findText` method to avoid blocking execution.
 
-## Search for multiple text values and get the bounds
+### Search for multiple text values and get the bounds
 
 You can search for multiple text values in a PDF document and retrieve the location of every occurrence using the `findTextSync` and `findText` methods of the `PdfDataExtractor` class.
 
@@ -511,6 +496,21 @@ document.destroy();
 {% endtabs %}
 
 N> The `findTextSync()` and `findText()` methods also accept a collection of text values as a `string[]`. When multiple text values are provided, `findTextSync()` returns a `TextSearchResult[]`, while `findText()` returns a `Promise<TextSearchResult[]>`. Each item in the returned collection corresponds to one input text value and contains the searched text in `searchText` and the matching bounding rectangles grouped by page number in `searchResults`.
+
+## Text Extraction API Reference
+
+The following table provides a comprehensive overview of all text extraction methods available in the `PdfDataExtractor` class:
+
+| Process | Method Signature | Return Type | Description |
+|---|---|---|---|
+| **Extract Text** | `extractTextSync()` | `string` | Extracts plain text synchronously from the entire PDF document. |
+| **Extract Text** | `extractText()` | `Promise<string>` | Extracts plain text asynchronously from the entire PDF document. |
+| **Extract Text (Page Range)** | `extractTextSync(options: { startPageIndex: number; endPageIndex: number })` | `string` | Extracts plain text synchronously from a specified page range using start and end page indices. |
+| **Extract Text (Page Range)** | `extractText(options: { startPageIndex: number; endPageIndex: number })` | `Promise<string>` | Extracts plain text asynchronously from a specified page range using start and end page indices. |
+| **Extract Layout Text** | `extractTextSync(options: { isLayout: boolean })` | `string` | Extracts layout-based text synchronously, preserving the visual structure and spacing of the source document. |
+| **Extract Layout Text** | `extractText(options: { isLayout: boolean })` | `Promise<string>` | Extracts layout-based text asynchronously, preserving the visual structure and spacing of the source document. |
+| **Extract Text with Bounds** | `extractTextLinesSync(options?: { startPageIndex?: number; endPageIndex?: number })` | `TextLine[]` | Extracts text synchronously with hierarchical line, word, and character-level information including positional bounds. |
+| **Extract Text with Bounds** | `extractTextLines(options?: { startPageIndex?: number; endPageIndex?: number })` | `Promise<TextLine[]>` | Extracts text asynchronously with hierarchical line, word, and character-level information including positional bounds. |
 
 ## FindText Module API Reference
 
