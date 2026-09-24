@@ -184,7 +184,7 @@ viewer.load(bytes, '');
 ### 1. Install the Collaboration Server package
 
 ```bash
-npm install ej2-collaborator-server @syncfusion/ej2-pdf @xmldom/xmldom
+npm install ej2-collaborator-server
 ```
 
 ### 2. Add the PDF Viewer server adapter
