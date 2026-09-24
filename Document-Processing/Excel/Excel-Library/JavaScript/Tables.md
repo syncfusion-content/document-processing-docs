@@ -8,9 +8,11 @@ documentation: ug
 
 # Tables in JavaScript Excel
 
-Create workbook tables with `sheet.tables.add(name, range, headerRowCount?)`.
+Tables turn a cell range into a named, structured data region. Optional header and totals rows, plus table styles, make related records easier to read and maintain in Excel.
 
 ## Create a table
+
+A table turns a cell range into a structured data region with optional header and totals rows. Table styles make related rows easier to read and maintain.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -57,6 +59,8 @@ table.totalsRowShown = true;
 `style` is a `TableStyle` object (`name` plus optional banding flags). Authored tables are ordinary worksheet tables.
 
 ## Access and remove tables
+
+After tables exist on a sheet, you can find them by name, list every table, or remove tables you no longer need without clearing the underlying cell values unless you choose to.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

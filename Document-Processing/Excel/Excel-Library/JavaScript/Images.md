@@ -8,13 +8,15 @@ documentation: ug
 
 # Images in JavaScript Excel
 
-Add a floating picture with `sheet.addImage(bytes, row, column, width, height)`.
+Images place floating pictures on a worksheet so logos and other visuals appear when the file opens in Excel. Provide image bytes and position the picture with row, column, width, and height.
 
 * `bytes` — raw image file content as a `Uint8Array`. The library detects the format from the bytes.
 * `row` / `column` — 1-based anchor cell for the top-left of the picture.
 * `width` / `height` — size in **points** (72 points = 1 inch).
 
 ## Add an image
+
+Images place pictures as floating drawings on the worksheet. Embed image bytes so logos, charts exported as pictures, or other visuals appear when the file opens in Excel.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -38,6 +40,8 @@ const picture = sheet.addImage(imageBytes, 1, 1, 200, 120);
 {% endtabs %}
 
 ## Remove an image
+
+Remove an image when it is no longer needed so the worksheet layout stays clean. You can target a specific picture or remove one by its position among images on the sheet.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
