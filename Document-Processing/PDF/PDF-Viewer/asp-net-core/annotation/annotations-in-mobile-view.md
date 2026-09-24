@@ -5,6 +5,7 @@ description: Create, edit, and manage annotations in the ASP.NET Core PDF Viewer
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Annotations in Mobile View in ASP.NET Core PDF Viewer

@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: printing,printmanager,printdocument,print-task,print-preview
+appliesto: DOCX Editor SDK
 ---
 # Printing Contents in UWP DOCX Editor
 

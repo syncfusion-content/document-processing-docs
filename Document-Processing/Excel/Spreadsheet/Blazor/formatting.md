@@ -5,6 +5,7 @@ description: Apply cell, text, number, and conditional formatting in the Syncfus
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Formatting in Blazor Spreadsheet

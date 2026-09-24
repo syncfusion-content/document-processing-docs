@@ -5,6 +5,7 @@ description: Highlight, underline, and strike out text in the JavaScript (ES6) P
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Highlight, Underline, or Strike Out Text in JavaScript (ES6)

@@ -5,6 +5,7 @@ description: Learn about how to print worksheets and configure print settings in
 control: Print
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Printing in Vue Spreadsheet

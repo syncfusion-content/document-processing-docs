@@ -5,6 +5,7 @@ description: The annotation selection feature in SfPdfViewer enables users to se
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Select and Deselect Annotations in Flutter PDF Viewer

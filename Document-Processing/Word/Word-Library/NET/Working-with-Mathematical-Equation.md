@@ -4,6 +4,7 @@ description: Learn how to add and modify mathematical equations in a Word docume
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Mathematical Equation in .NET Word
 

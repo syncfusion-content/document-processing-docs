@@ -5,6 +5,7 @@ description: Add and customize context menu options in the ASP.NET Core PDF View
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Customize the Context Menu in ASP.NET Core PDF Viewer

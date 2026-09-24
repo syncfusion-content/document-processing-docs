@@ -5,6 +5,7 @@ description: Learn how to dynamically show or hide the Blazor PDF Viewer, toggle
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Show or hide dynamically in Blazor PDF Viewer

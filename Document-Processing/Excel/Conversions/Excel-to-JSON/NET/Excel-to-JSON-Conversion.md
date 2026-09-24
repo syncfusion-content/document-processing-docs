@@ -4,6 +4,7 @@ description: Excel to JSON conversion describes how Syncfusion .NET Excel Librar
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Excel to JSON Conversion in .NET Excel Library

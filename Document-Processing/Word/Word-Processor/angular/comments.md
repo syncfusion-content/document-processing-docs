@@ -6,6 +6,7 @@ platform: document-processing
 control: Comments 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Comments in Angular DOCX Editor

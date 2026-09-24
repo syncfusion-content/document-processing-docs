@@ -5,6 +5,7 @@ description: Explore scrolling functionality in the Syncfusion ASP.NET MVC Sprea
 platform: document-processing
 control: Scrolling
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

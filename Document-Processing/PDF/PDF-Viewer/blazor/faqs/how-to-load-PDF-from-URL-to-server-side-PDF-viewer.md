@@ -5,6 +5,7 @@ description: Learn how to download a PDF from a server-side URL and load it into
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Load PDF from a URL in a server-side PDF Viewer

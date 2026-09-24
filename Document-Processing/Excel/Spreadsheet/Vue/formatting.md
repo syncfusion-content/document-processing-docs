@@ -5,6 +5,7 @@ description: Apply cell, text, number, and conditional formatting in the Syncfus
 control: Formatting 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Formatting in Vue Spreadsheet

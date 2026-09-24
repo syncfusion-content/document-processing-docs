@@ -5,6 +5,7 @@ description: Learn how to create and apply digital signatures to PDF documents u
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # PDF Digital Signatures in JavaScript PDF

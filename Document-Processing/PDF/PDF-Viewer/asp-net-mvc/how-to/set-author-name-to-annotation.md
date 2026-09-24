@@ -5,6 +5,7 @@ description: Set a custom author name for annotations in the ASP.NET MVC PDF Vie
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Set the Author Name for Annotations in ASP.NET MVC PDF Viewer

@@ -5,6 +5,7 @@ description: Learn how to merge and unmerge cells in the Syncfusion Blazor Sprea
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Merge Cells in Blazor Spreadsheet

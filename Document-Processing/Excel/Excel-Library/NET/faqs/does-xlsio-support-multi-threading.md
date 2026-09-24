@@ -4,6 +4,7 @@ description: Multithreading in the Syncfusion .NET Excel Library explains whethe
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Multithreading in .NET Excel Library

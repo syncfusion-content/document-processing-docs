@@ -5,6 +5,7 @@ description: Learn about freeze panes in the Syncfusion ASP.NET Core Spreadsheet
 platform: document-processing
 control: Freeze Pane
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

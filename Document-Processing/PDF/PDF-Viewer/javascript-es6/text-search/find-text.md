@@ -6,6 +6,7 @@ platform: document-processing
 control: Text search
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Find Text in JavaScript (ES6) PDF Viewer

@@ -4,6 +4,7 @@ description: Save a file to stream using the Syncfusion .NET Excel Library while
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to save files to streams in .NET Excel Library

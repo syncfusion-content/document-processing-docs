@@ -5,6 +5,7 @@ description: Bookmark navigation in PdfViewerControl enables users to quickly ju
 platform: document-processing
 control: PdfViewerControl
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Bookmark Navigation in WinForms PDF Viewer

@@ -4,6 +4,7 @@ description: Recognize form elements from PDF and scanned images using Smart For
 platform: document-processing
 control: SmartFormRecognizer
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Form Recognition in .NET Smart Data Extractor

@@ -5,6 +5,7 @@ description: The magnification feature in SfPdfViewer allows users to adjust zoo
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Magnification in Flutter PDF Viewer

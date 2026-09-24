@@ -5,6 +5,7 @@ description: Cell templates in JavaScript Spreadsheet enable embedding HTML elem
 platform: document-processing
 control: Template
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Cell Templates in JavaScript Spreadsheet 

@@ -4,6 +4,7 @@ description: Learn how to add, insert, reorder, remove, and split PDF pages with
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Pages in .NET PDF Library

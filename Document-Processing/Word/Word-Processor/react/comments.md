@@ -6,6 +6,7 @@ control: Comments
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Comments in React DOCX Editor

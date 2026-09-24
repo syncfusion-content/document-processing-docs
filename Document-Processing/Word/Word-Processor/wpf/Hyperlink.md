@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: hyperlink,insert-hyperlink,screen-tip,request-navigate
+appliesto: DOCX Editor SDK
 ---
 # Hyperlinks in WPF DOCX Editor
 

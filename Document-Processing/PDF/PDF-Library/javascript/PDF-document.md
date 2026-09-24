@@ -5,6 +5,7 @@ description: Programmatically create, configure, and manage PDF documents using 
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create PDF files in JavaScript PDF

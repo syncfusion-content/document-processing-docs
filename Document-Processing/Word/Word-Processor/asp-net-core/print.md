@@ -5,6 +5,7 @@ description: Print feature in ASP.NET Core DOCX Editor enables printing document
 platform: document-processing
 control: Print
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

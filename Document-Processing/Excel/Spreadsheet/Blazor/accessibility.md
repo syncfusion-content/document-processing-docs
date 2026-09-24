@@ -5,6 +5,7 @@ description: Learn about accessibility support in the Syncfusion Blazor Spreadsh
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Accessibility in Blazor Spreadsheet

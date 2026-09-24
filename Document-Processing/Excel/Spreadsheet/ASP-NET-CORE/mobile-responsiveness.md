@@ -5,6 +5,7 @@ description: Learn about mobile responsiveness in the Syncfusion ASP.NET Core Sp
 platform: document-processing
 control: Mobile Responsiveness
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

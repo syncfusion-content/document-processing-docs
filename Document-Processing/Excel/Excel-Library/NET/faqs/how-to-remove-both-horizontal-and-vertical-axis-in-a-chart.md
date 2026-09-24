@@ -4,6 +4,7 @@ description: Remove horizontal and vertical axes from an Excel chart using the S
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to remove chart axes in .NET Excel Library

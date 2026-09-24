@@ -4,6 +4,7 @@ description: Use the Auto Fill feature in Excel using the Syncfusion .NET Excel 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Auto Fill in .NET Excel Library

@@ -4,6 +4,7 @@ description: Convert PowerPoint to image in Xamarin using Xamarin PowerPoint lib
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert PowerPoint to Image in Xamarin

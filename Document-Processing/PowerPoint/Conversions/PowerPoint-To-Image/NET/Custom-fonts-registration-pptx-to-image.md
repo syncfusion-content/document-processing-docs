@@ -4,6 +4,7 @@ description: This section illustrates how to register custom fonts for PowerPoin
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Custom Font Registration for PowerPoint to Image Conversion in .NET

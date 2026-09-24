@@ -5,6 +5,7 @@ description: Data binding in Angular Spreadsheet enables seamless integration wi
 platform: document-processing
 control: Data binding
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Data Binding in Angular Spreadsheet 

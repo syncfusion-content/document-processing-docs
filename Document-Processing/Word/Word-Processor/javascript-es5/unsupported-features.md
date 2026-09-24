@@ -6,6 +6,7 @@ control: Unsupported features
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Unsupported Features in JavaScript DOCX Editor

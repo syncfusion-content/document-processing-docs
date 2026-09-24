@@ -5,6 +5,7 @@ description: Create, open, and save Excel workbooks in the  UWP Spreadsheet cont
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Workbook Operations in UWP Spreadsheet

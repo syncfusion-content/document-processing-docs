@@ -5,6 +5,7 @@ description: Learn here all about Shape annotations support in Syncfusion<sup>®
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Shape annotations in Xamarin Pdf Viewer

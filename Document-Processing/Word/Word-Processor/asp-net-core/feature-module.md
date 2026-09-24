@@ -5,6 +5,7 @@ description: Modules in ASP.NET Core DOCX Editor enable selective injection of e
 platform: document-processing
 control: Feature Module
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

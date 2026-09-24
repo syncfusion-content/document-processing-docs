@@ -4,6 +4,7 @@ description: Convert PowerPoint to image in ASP.NET MVC using .NET PowerPoint li
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert PowerPoint to Image in ASP.NET MVC

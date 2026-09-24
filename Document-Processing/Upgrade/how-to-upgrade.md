@@ -5,6 +5,7 @@ description: Learn here about the how upgrade Syncfusion Document Processing ins
 platform: document-processing
 control: Essential Studio
 documentation: ug
+appliesto: Document SDK, PDF Viewer SDK, DOCX Editor SDK, Spreadsheet Editor SDK
 ---
 
 # How to upgrade Document Processing installer to latest

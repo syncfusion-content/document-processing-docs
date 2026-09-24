@@ -4,6 +4,7 @@ description: Merge a range using the Syncfusion .NET Excel Library while keeping
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to merge cells with formatting in .NET Excel Library

@@ -6,6 +6,7 @@ control: Navigation
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Navigation in Vue PDF Viewer

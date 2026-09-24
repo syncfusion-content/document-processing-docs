@@ -4,6 +4,7 @@ description: PivotTable expand buttons describes whether expand controls are pre
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Pivot Table Expand Buttons in .NET Excel Library

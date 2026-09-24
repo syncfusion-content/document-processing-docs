@@ -5,6 +5,7 @@ description: Learn about the known limitations in the WPF Spreadsheet control, i
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Limitations in WPF Spreadsheet

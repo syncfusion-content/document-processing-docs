@@ -5,6 +5,7 @@ description: Customize the highlight color used for text search matches in the A
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Customize the Text Search Color in ASP.NET Core PDF Viewer

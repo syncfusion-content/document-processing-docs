@@ -5,6 +5,7 @@ description: Pass an authorization token to the ASP.NET Core PDF Viewer to secur
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Use an Authorization Token in ASP.NET Core PDF Viewer

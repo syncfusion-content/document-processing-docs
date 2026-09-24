@@ -5,6 +5,7 @@ description: Learn how to work with cell ranges in the Syncfusion ASP.NET MVC Sp
 platform: document-processing
 control: Cell Range
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

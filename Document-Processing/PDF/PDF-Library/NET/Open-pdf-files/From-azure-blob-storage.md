@@ -4,6 +4,7 @@ description: Learn how to open PDF files programmatically from Azure Blob Storag
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Open PDF from Azure Blob Storage
 

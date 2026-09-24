@@ -5,6 +5,7 @@ description: Learn about selection in the Syncfusion ASP.NET Core Spreadsheet co
 platform: document-processing
 control: Selection
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

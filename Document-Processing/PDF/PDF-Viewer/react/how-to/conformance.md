@@ -5,6 +5,7 @@ description: Learn about the PDF/A and PDF/X conformance levels supported in the
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Use PDF/A and PDF/X Conformance in React PDF Viewer

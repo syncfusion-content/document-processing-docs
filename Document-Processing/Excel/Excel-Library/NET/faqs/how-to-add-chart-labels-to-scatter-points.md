@@ -4,6 +4,7 @@ description: Add chart labels to scatter points in Excel charts using the Syncfu
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to add labels to scatter charts in .NET Excel Library

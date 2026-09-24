@@ -4,6 +4,7 @@ description: Retain cell values after removing formulas from Excel worksheets us
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to retain values after removing formulas in .NET Excel Library

@@ -6,6 +6,7 @@ control: Content control
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Content Controls in Vue DOCX Editor

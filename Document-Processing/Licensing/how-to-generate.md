@@ -5,6 +5,7 @@ description: Learn here about how to generate Syncfusion Document Processing lic
 platform: document-processing
 control: Essential Studio
 documentation: ug
+appliesto: Document SDK, PDF Viewer SDK, DOCX Editor SDK, Spreadsheet Editor SDK
 ---
 
 # How to generate license key for Document Solutions

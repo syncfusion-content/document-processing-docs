@@ -6,6 +6,7 @@ control: Security advisories
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Security Advisories in Vue DOCX Editor

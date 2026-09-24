@@ -5,6 +5,7 @@ description: Create, edit, and manage hyperlinks in the Syncfusion ASP.NET MVC S
 platform: document-processing
 control: Link
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

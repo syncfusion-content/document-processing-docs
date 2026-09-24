@@ -5,6 +5,7 @@ description: Sorting in Angular Spreadsheet enables users to arrange data in asc
 platform: document-processing
 control: Sort 
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Sort in Angular Spreadsheet 

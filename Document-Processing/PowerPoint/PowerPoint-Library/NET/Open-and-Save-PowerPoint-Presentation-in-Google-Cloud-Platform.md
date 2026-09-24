@@ -4,6 +4,7 @@ description: Learn how to open and save PowerPoint presentations in Google Cloud
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Open and Save PowerPoint Presentation in Google Cloud Platform (GCP)

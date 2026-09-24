@@ -6,6 +6,7 @@ platform: document-processing
 control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Create and modify annotations in Blazor PDF Viewer

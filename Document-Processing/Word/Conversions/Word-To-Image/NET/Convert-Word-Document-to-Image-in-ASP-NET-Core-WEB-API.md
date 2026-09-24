@@ -4,6 +4,7 @@ description: Convert Word to image in ASP.NET  Core Web API using .NET Word l
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert Word to Image in ASP.NET  Core Web API 

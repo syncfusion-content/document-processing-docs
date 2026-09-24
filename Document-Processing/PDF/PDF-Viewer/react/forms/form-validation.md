@@ -5,6 +5,7 @@ description: Enable built-in PDF form field validation in the React PDF Viewer a
 platform: react
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Form Validation in React PDF Viewer

@@ -5,6 +5,7 @@ description: Load and display PDF files stored in Google Cloud Storage in the Ja
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Open PDF from Google Cloud Storage in JavaScript (ES6) PDF Viewer

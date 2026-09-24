@@ -5,6 +5,7 @@ description: Get the current page index being displayed in Syncfusion WPF PDF Vi
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Acquire the current page being displayed in WPF Pdf Viewer

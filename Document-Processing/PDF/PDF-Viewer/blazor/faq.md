@@ -5,6 +5,7 @@ description: Explore frequently asked questions and answers about the Blazor PDF
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Frequently Asked Questions in Blazor PDF Viewer 

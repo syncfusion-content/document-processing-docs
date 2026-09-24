@@ -7,6 +7,7 @@ control: PDF Viewer
 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Change the Annotation Author Name in Vue PDF Viewer

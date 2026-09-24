@@ -5,6 +5,7 @@ description: Print in JavaScript Spreadsheet enables users to print worksheet co
 platform: document-processing
 control: Print
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Print in JavaScript Spreadsheet

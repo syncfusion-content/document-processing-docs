@@ -5,6 +5,7 @@ description: Add a custom save button to the toolbar in Syncfusion® ASP.NET Cor
 platform: document-processing
 control: Add save button tool bar 
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

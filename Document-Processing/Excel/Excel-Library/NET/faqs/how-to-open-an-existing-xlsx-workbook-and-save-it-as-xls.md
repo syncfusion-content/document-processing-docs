@@ -4,6 +4,7 @@ description: Open an existing XLSX workbook and save it as XLS using the Syncfus
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to save XLSX files as XLS in .NET Excel Library

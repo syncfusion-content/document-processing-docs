@@ -5,6 +5,7 @@ description: Customize the mobile toolbar in the ASP.NET Core PDF Viewer to ensu
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 # Customize the Mobile Toolbar in ASP.NET Core PDF Viewer
 

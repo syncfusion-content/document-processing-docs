@@ -4,6 +4,7 @@ description: Excel to PDF benchmark results describes performance metrics for co
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Performance Metrics for Excel to PDF in .NET Excel Library

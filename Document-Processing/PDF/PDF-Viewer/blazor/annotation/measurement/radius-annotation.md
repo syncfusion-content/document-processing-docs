@@ -5,6 +5,7 @@ description: Learn how to enable, draw, customize, and manage Radius annotations
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Add Radius Annotations in Blazor PDF Viewer 

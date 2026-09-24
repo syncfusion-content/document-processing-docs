@@ -6,6 +6,7 @@ control: Accessibility
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Accessibility in JavaScript DOCX Editor

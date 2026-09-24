@@ -5,6 +5,7 @@ platform: document-processing
 control: general
 documentation: UG
 keywords: Excel, SDK, view, edit, read, Spreadsheet
+appliesto: Spreadsheet Editor SDK
 ---
 
 # About Syncfusion Spreadsheet Component

@@ -6,6 +6,7 @@ platform: document-processing
 control: Print
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Customize Print Quality in Angular PDF Viewer

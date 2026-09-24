@@ -6,6 +6,7 @@ control: Collaborative Editing Java
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Collaborative Editing in Vue DOCX Editor with Redis in Java

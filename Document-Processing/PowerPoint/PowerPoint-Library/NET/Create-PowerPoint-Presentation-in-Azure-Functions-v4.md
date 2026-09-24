@@ -4,6 +4,7 @@ description: Create PowerPoint document in Azure Functions v4 using .NET PowerPo
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create PowerPoint document in Azure Functions v4

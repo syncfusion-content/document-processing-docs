@@ -6,6 +6,7 @@ control: document loading issue with 404 error
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Document Loading Issue in Vue DOCX Editor

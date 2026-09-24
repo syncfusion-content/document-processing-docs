@@ -4,6 +4,7 @@ description: Learn how to convert a Word document to PDF in Google Cloud Platfor
 platform: document-processing
 control: DocIO 
 documentation: UG 
+appliesto: Document SDK
 --- 
 
 # Convert Word to PDF in Google Cloud Platform (GCP)

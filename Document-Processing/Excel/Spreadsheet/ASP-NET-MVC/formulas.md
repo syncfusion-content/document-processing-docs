@@ -5,6 +5,7 @@ description: Learn how to use built-in formulas and calculations in the Syncfusi
 platform: document-processing
 control: Formulas
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

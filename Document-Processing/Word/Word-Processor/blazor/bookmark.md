@@ -5,6 +5,7 @@ description: The bookmark feature in Blazor DOCX Editor lets users add, manage, 
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # Bookmarks in Blazor DOCX Editor

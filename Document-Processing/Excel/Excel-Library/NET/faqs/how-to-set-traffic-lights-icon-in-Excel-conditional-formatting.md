@@ -4,6 +4,7 @@ description: Set traffic lights icons in Excel conditional formatting using the 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to set traffic light icons in .NET Excel Library

@@ -5,6 +5,7 @@ description: Move and resize PDF form fields in the Vue PDF Viewer using the bui
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Move and Resize Form Fields in Vue PDF Viewer

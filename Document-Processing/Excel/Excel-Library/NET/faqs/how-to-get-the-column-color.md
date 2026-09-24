@@ -4,6 +4,7 @@ description: Get the styled column color when column cells have different colors
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to get column colors in .NET Excel Library

@@ -5,6 +5,7 @@ description: Accessibility in TypeScript Spreadsheet supports keyboard navigatio
 platform: document-processing
 control: Accessibility
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Accessibility in TypeScript Spreadsheet 

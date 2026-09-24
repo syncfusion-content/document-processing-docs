@@ -5,6 +5,7 @@ description: Configure annotation selector settings in the ASP.NET MVC PDF Viewe
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Configure Annotation Selectors in ASP.NET MVC PDF Viewer

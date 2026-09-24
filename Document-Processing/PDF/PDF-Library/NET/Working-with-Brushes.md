@@ -4,6 +4,7 @@ description: Learn how to fill shapes in a PDF document with solid, gradient, ti
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Brushes in .NET PDF Library
 

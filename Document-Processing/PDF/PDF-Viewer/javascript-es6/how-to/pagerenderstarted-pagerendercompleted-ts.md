@@ -5,6 +5,7 @@ description: Use the pageRenderInitiate and pageRenderComplete events in the Jav
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Handle Page Render Events in JavaScript (ES6) PDF Viewer

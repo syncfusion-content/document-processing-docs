@@ -5,6 +5,7 @@ description: Learn here all about how to update form field using context menu in
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Update form field using context menu in Blazor PDF Viewer 

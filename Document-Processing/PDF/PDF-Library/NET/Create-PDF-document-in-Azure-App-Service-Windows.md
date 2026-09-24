@@ -4,6 +4,7 @@ description: Learn how to get started with the Syncfusion .NET PDF Library in Az
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Getting Started with .NET PDF Library in Azure App Service Windows

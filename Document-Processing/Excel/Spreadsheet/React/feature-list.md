@@ -5,6 +5,7 @@ description: Learn about the features available in the Syncfusion React Spreadsh
 control: Feature list 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Feature list in React Spreadsheet

@@ -5,6 +5,7 @@ description: Learn about how to hide and show rows and columns in Excel document
 control: Rows and Columns 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # How to Hide and Show Rows and Columns in React Spreadsheet

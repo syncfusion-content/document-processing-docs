@@ -5,6 +5,7 @@ description: Save PDF files from the JavaScript (ES6) PDF Viewer to OneDrive usi
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Save PDF Files to OneDrive in JavaScript (ES6) PDF Viewer

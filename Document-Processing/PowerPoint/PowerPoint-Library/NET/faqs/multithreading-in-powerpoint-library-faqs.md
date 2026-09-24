@@ -4,6 +4,7 @@ description: Learn about the FAQs on multithreading support for opening, editing
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # FAQ about multithreading in the PowerPoint library

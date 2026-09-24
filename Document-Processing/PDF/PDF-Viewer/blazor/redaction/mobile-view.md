@@ -5,6 +5,7 @@ description: Learn how to add, customize, and apply redactions in mobile view us
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Redaction in mobile view in Blazor PDF Viewer 

@@ -4,6 +4,7 @@ description: Learn how to resolve namespace ambiguity errors caused by using Syn
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Namespace Conflicts in .NET PDF library

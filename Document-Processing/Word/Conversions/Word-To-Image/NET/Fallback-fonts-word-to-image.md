@@ -4,6 +4,7 @@ description: Explain how to configure fallback fonts for Word-to-image conversio
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Fallback fonts in Word to Image conversion in .NET Word

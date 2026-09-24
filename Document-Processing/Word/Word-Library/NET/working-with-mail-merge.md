@@ -4,6 +4,7 @@ description: Learn how to mail merge Word document to create reports (letters, e
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Mail merge a Word document in .NET Word Library
 

@@ -6,6 +6,7 @@ control: Read only by default
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Open Vue DOCX Editor in Read-Only Mode

@@ -5,6 +5,7 @@ description: Learn about the from azure active directory in the ASP.NET Core PDF
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # From Azure Active Directory in ASP.NET Core PDF Viewer

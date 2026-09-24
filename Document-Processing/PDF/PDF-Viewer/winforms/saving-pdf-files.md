@@ -5,6 +5,7 @@ description: The PDF saving feature in PdfViewerControl enables users to save PD
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Saving PDF Files in Windows Forms PDF Viewer

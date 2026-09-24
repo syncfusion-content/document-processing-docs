@@ -5,6 +5,7 @@ description: Change the default cursor color in Syncfusion® ASP.NET MVC DOCX Ed
 platform: document-processing
 control: Change The Cursor Color
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # How to Change Cursor Color in ASP.NET MVC DOCX Editor

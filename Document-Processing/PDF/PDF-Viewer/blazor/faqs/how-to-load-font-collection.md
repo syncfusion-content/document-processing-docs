@@ -5,6 +5,7 @@ description: Learn how to load multiple fallback fonts using FallbackFontCollect
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Load a font collection in Blazor PDF Viewer

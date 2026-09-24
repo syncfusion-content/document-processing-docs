@@ -5,6 +5,7 @@ description: The comments feature in ASP.NET Core DOCX Editor enables users to a
 platform: document-processing
 control: Comments
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

@@ -5,6 +5,7 @@ description: View in Blazor DOCX Editor enables web layout, ruler display, and h
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # View in Blazor DOCX Editor

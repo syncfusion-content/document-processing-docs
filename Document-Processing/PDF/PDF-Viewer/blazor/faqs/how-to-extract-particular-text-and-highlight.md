@@ -5,6 +5,7 @@ description: Learn here all about how to extract specific text and highlight it 
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 #  How to Extract and Highlight Text in Blazor PDF Viewer

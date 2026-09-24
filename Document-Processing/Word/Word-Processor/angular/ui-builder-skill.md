@@ -6,6 +6,7 @@ control: DOCX Editor
 platform: document-processing
 documentation: ug
 keywords: Angular UI Builder, Skills, AI Assistants, DOCX Editor, Agent Skills
+appliesto: DOCX Editor SDK
 ---
 
 # UI Builder Skill with Angular DOCX Editor

@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: out-of-memory-exception,out-of-memory,large-documents,ui-virtualization,memory-limit
+appliesto: DOCX Editor SDK
 ---
 # Memory Issues with Large Documents in UWP DOCX Editor
 

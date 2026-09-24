@@ -6,6 +6,7 @@ platform: document-processing
 control: Dialog 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Dialogs in JavaScript DOCX Editor

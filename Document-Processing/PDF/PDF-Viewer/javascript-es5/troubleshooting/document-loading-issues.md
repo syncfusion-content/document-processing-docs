@@ -5,6 +5,7 @@ description: Resolve document loading issues in the JavaScript (ES5) PDF Viewer 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Resolve Document Loading Issues in JavaScript (ES5) PDF Viewer

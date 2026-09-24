@@ -5,6 +5,7 @@ platform: document-processing
 control: PDF to image
 documentation: UG
 keywords: Assemblies
+appliesto: Document SDK
 ---
 
 # Getting Started with ASP.NET MVC PDF to Image Library

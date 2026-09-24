@@ -4,6 +4,7 @@ description: ASP.NET PowerPoint library to create, read, edit and convert PowerP
 platform: document-processing
 control: PowerPoint
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Create, read and edit a PowerPoint file in ASP.NET

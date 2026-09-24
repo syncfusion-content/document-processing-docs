@@ -5,6 +5,7 @@ description: Learn about overview of the Syncfusion Flutter Excel Library for cr
 platform: document-processing
 control: Excel
 documentation: ug
+appliesto: Document SDK
 ---
 
 # About Syncfusion Flutter Excel Library

@@ -5,6 +5,7 @@ description: Apply built-in and custom themes to Syncfusion WPF PDF Viewer. Expl
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 # Themes in WPF Pdf Viewer 
 

@@ -6,6 +6,7 @@ platform: document-processing
 control: general
 documentation: UG
 keywords: PDF, SDK, Automation, API, create, read, write
+appliesto: Document SDK
 ---
 
 # About Syncfusion PDF Document Processing Library

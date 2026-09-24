@@ -4,6 +4,7 @@ description: Resolve the Can't open PivotTable source file error in Excel docume
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to resolve PivotTable source file errors in .NET Excel Library

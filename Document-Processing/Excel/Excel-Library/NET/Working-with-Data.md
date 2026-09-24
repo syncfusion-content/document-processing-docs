@@ -4,6 +4,7 @@ description: Data import and export section describes how the Syncfusion .NET Ex
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Excel Data in .NET Excel Library

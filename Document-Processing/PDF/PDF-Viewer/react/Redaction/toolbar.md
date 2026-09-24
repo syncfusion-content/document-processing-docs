@@ -5,6 +5,7 @@ description: Customize the redaction toolbar in the React PDF Viewer by showing 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Customize the Redaction Toolbar in React PDF Viewer

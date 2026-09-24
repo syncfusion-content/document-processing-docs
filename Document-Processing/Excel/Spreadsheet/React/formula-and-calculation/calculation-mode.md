@@ -5,6 +5,7 @@ description: Learn about calculation modes in the Syncfusion React Spreadsheet c
 control: Formulas
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Calculation Mode in React Spreadsheet

@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: use-sfrichtextboxadv-like-richtextbox,standard-richtextbox,toolbar
+appliesto: DOCX Editor SDK
 ---
 
 # How to Use UWP DOCX Editor as a Standard Editor

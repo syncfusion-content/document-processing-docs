@@ -4,6 +4,7 @@ description: This section illustrates Word file format conversion capabilities s
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 
 

@@ -5,6 +5,7 @@ description: Learn how to enable and use Right-to-Left (RTL) layout in the Blazo
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # RTL in Blazor Smart PDF Viewer

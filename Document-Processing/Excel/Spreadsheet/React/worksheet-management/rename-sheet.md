@@ -5,6 +5,7 @@ description: Learn about how to rename worksheets in an Excel document using the
 control: Worksheet 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Rename Worksheet in React Spreadsheet

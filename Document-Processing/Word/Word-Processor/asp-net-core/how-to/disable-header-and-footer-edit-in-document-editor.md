@@ -5,6 +5,7 @@ description: Disable header and footer editing in Syncfusion® ASP.NET Core DOCX
 platform: document-processing
 control: Disable Header And Footer
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # How to Disable Header and Footer Editing in ASP.NET Core DOCX Editor

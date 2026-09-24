@@ -5,6 +5,7 @@ description: Learn how to add, edit, delete, and programmatically manage Line an
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Line Annotation (Shape) in Blazor PDF Viewer 

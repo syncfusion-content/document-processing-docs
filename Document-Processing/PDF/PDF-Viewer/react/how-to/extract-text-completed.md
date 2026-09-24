@@ -5,6 +5,7 @@ description: Use the extractTextCompleted event and isExtractText property in th
 control: PDF Viewer
 platform: document-processing
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Handle the ExtractTextCompleted Event in React PDF Viewer

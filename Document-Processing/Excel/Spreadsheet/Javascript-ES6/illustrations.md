@@ -5,6 +5,7 @@ description: Illustrations in TypeScript Spreadsheet enable users to add and man
 platform: document-processing
 control: Illustrations
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Illustrations in TypeScript Spreadsheet 

@@ -5,6 +5,7 @@ description: Formulas in TypeScript Spreadsheet enable users to perform calculat
 platform: document-processing
 control: Formulas
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Formulas in TypeScript Spreadsheet 

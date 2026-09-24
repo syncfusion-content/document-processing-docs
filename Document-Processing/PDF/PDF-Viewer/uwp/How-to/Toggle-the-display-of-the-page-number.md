@@ -5,6 +5,7 @@ description: Learn how to toggle the display of the page number in uwp pdf viewe
 platform: document-processing
 control: PDF viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Toggle the display of the page number in UWP PDF Viewer

@@ -5,6 +5,7 @@ description: Create and use custom formulas in the WPF Spreadsheet control to pe
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Custom Formula in WPF Spreadsheet 

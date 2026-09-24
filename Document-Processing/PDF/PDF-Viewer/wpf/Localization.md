@@ -5,6 +5,7 @@ description: Localize WPF PDF Viewer control to multiple languages using resourc
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Localization in WPF Pdf Viewer

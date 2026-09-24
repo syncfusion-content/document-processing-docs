@@ -5,6 +5,7 @@ description: Learn how to download the Syncfusion® PowerPoint Mac installer fro
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
+appliesto: Document SDK
 --- 
 
 # How to Download Syncfusion PowerPoint Mac Installer

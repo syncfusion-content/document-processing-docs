@@ -6,6 +6,7 @@ platform: document-processing
 control: Fields
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Fields in TypeScript DOCX Editor

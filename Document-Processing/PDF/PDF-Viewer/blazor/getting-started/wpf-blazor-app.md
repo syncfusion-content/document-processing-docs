@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion Blazor Hybrid WPF App 
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Getting Started with Blazor Hybrid WPF App PDF Viewer

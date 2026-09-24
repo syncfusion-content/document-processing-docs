@@ -4,6 +4,7 @@ description: This section outlines the NuGet packages required to perform HTML t
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # NuGet Packages Required for HTML to PDF Converter
 

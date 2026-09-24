@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: list,numbered-list,bulleted-list,multilevel-list,list-format
+appliesto: DOCX Editor SDK
 ---
 # List in WPF DOCX Editor
 

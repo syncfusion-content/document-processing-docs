@@ -4,6 +4,7 @@ description: Azure Functions v4 Excel to PDF section explains how to convert Exc
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Excel to PDF Conversion in Azure Functions v4 using Excel Library

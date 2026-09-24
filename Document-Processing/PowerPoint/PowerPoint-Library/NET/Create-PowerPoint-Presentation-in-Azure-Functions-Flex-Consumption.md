@@ -4,6 +4,7 @@ description: Create PowerPoint in Azure Functions Flex Consumption using .NET Co
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create PowerPoint Presentation in Azure Functions (Flex Consumption)

@@ -4,6 +4,7 @@ description: Resolve the document processing is not valid error when opening the
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to resolve Excel file open errors in .NET Excel Library

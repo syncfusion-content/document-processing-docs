@@ -4,6 +4,7 @@ description: MacOS Excel to PDF section explains how to convert Excel documents 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Excel to PDF Conversion in Mac using Excel Library
 

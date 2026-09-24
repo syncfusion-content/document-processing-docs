@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: spell-check,spelling,dictionary,multilingual,language
+appliesto: DOCX Editor SDK
 ---
 # Spell Check in WPF DOCX Editor
 

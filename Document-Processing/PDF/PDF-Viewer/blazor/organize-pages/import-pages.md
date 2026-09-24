@@ -6,6 +6,7 @@ platform: document-processing
 control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Import pages using the Organize Pages tool in Blazor PDF Viewer

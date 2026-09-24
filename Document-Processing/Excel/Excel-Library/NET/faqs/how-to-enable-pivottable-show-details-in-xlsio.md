@@ -4,6 +4,7 @@ description: Enable the PivotTable show details option in Excel worksheets using
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to enable PivotTable details in .NET Excel Library

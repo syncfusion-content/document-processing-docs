@@ -5,6 +5,7 @@ description: Scrolling in JavaScript Spreadsheet enables smooth navigation acros
 platform: document-processing
 control: Scrolling
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Scrolling in  JavaScript Spreadsheet 

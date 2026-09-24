@@ -5,6 +5,7 @@ description: Learn about deleting rows, columns, cells, and worksheet content in
 control: Rows and Columns 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Delete in React Spreadsheet

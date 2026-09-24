@@ -4,6 +4,7 @@ description: Learn how to work with form fields such as Text, Checkbox and Drop-
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Form Fields in .NET Word
 

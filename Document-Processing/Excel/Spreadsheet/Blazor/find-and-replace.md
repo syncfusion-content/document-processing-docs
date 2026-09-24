@@ -5,6 +5,7 @@ description: Learn how to search and replace cell values in a sheet or workbook 
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Find and Replace in Blazor Spreadsheet
