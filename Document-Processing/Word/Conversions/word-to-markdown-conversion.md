@@ -663,8 +663,6 @@ The following table shows the list of Word document elements supported in Word t
 
 The .NET Word (DocIO) library preserves Word elements such as Chart, Text Box, Shape, Ink, MathML, SmartArt, Canvas, and GroupShape as fallback images when converting a Word document to a Markdown file. This ensures that content which does not have a direct Markdown equivalent is still retained in the output as an image.
 
-N> On Windows, install the [Syncfusion.OfficeChartToImageConverter.WPF](https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.WPF) NuGet package and use the `ChartToImageConverter` to preserve Chart as a fallback image. Text Box, Shape, Ink, MathML, SmartArt, Canvas, and GroupShape are preserved automatically as images without any additional code. On cross-platform (ASP.NET Core, Blazor, .NET MAUI, and WinUI), install the [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) NuGet package and use the `DocIORenderer` to preserve all the Word elements (Chart, Text Box, Shape, Ink, MathML, SmartArt, Canvas, and GroupShape) as images. Preserving Word elements as fallback images is not supported on the UWP platform.
-
 The following code example shows how to preserve charts and other Word elements as fallback images while converting a Word document to a Markdown file.
 
 {% tabs %}
@@ -710,7 +708,10 @@ End Using
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+N>
+* On Windows, install the [Syncfusion.OfficeChartToImageConverter.WPF](https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.WPF) NuGet package and use the `ChartToImageConverter` to preserve charts as fallback images. The remaining Word elements (Text Box, Shape, Ink, MathML, SmartArt, Canvas, and GroupShape) are preserved automatically as images without any additional code.
+* On cross-platform (ASP.NET Core, Blazor, .NET MAUI, and WinUI), install either the [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) NuGet package or the [Syncfusion.DocIORenderer.NET](https://www.nuget.org/packages/Syncfusion.DocIORenderer.NET) NuGet package based on your project requirements, and use the `DocIORenderer` to preserve all supported Word elements as fallback images.
+* Preserving Word elements as fallback images is not supported on the UWP platform.
 
 ## Online Demo
 
