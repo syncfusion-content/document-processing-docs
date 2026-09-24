@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Collaborative Editing in TypeScript SpreadsheetEditor | Syncfusion
-description: Learn how real-time collaborative editing synchronizes workbook changes, user presence, and selections in the TypeScript SpreadsheetEditor.
+title: Collaborative Editing in ASP.NET MVC SpreadsheetEditor | Syncfusion
+description: Learn how real-time collaborative editing synchronizes workbook changes, user presence, and selections in the ASP.NET MVC SpreadsheetEditor.
 control: Collaborative Editing
 platform: document-processing
 documentation: ug
 ---
 
-# Collaborative editing in TypeScript SpreadsheetEditor
+# Collaborative editing in ASP.NET MVC SpreadsheetEditor
 
-The TypeScript SpreadsheetEditor supports real-time collaborative editing, allowing multiple users to work on the same workbook and view synchronized changes, connected users, and selections. Supported workbook actions are synchronized through a collaboration service to maintain a consistent workbook state for users connected to the same room.
+The ASP.NET MVC SpreadsheetEditor supports real-time collaborative editing, allowing multiple users to work on the same workbook and view synchronized changes, connected users, and selections. Supported workbook actions are synchronized through a collaboration service to maintain a consistent workbook state for users connected to the same room.
 
 ## Key features
 
@@ -18,11 +18,18 @@ The TypeScript SpreadsheetEditor supports real-time collaborative editing, allow
 - **User presence and selections** - Displays connected users and highlights their active cells, editing cells, or selected ranges using participant-specific colors.
 - **Conflict resolution** - Transforms concurrent operations to maintain a consistent workbook state.
 - **Action recovery** - Retrieves and applies actions missed by a user.
-- **Late-join synchronization** - Synchronizes users who join an existing session with the latest workbook state.
+- **Late-join synchronization** - Synchronizes users who join an existing collaboration session with the latest workbook state.
 
 ## Prerequisites
 
-Collaborative editing requires the TypeScript SpreadsheetEditor package, the `@syncfusion/ej2-collaborator` package, an ASP.NET Core Collaboration Server, Redis, WebSocket or SignalR communication, and a SpreadsheetEditor-specific server adapter.
+Collaborative editing requires:
+
+- The ASP.NET MVC SpreadsheetEditor package.
+- The `@syncfusion/ej2-collaborator` package.
+- An ASP.NET Core Collaboration Server.
+- Redis for temporary collaboration action and version storage.
+- WebSocket or SignalR communication.
+- A SpreadsheetEditor-specific server adapter.
 
 > **Note:** SpreadsheetEditor collaborative editing requires an ASP.NET-based Collaboration Server for workbook processing and operational transformation.
 
@@ -30,33 +37,33 @@ Collaborative editing requires the TypeScript SpreadsheetEditor package, the `@s
 
 ### Operational transformation
 
-The Collaboration Server transforms related concurrent actions that affect cells, ranges, rows, columns, or sheets before storing and broadcasting them. This helps all users in the room maintain a consistent workbook state.
+The Collaboration Server uses operational transformation to process concurrent SpreadsheetEditor actions. When related actions affect cells, ranges, rows, columns, or sheets, the server transforms the operations before storing and broadcasting them. This ensures that users connected to the same room receive a consistent workbook state.
 
 ### Session management
 
-Each session is identified by a room ID. Users connected to the same room receive shared workbook actions and presence updates. A session manages connected users, join and leave events, selections, editing presence, action versions, recovery, and late-joining users.
+Each collaboration session is identified by a room ID. Users connected to the same room receive shared workbook actions and presence updates. A session manages connected users, join and leave events, selections, editing presence, action versions, missed-action recovery, and late-joining users.
 
 ### Action types
 
-Collaborative editing supports cell values, formulas, formatting, clipboard actions, sorting, filtering, row, column, and sheet operations, validation, conditional formatting, comments, notes, hyperlinks, defined names, images, charts, display settings, and protection changes.
+Collaborative editing supports cell value, formula, formatting, clipboard, sorting, filtering, row, column, sheet, data validation, conditional formatting, comment, note, hyperlink, defined name, image, chart, display, and protection actions.
 
 ### Consistency model
 
-The server assigns an authoritative version to each action. Clients apply actions in version order and retrieve missing versions before continuing.
+The Collaboration Server assigns an authoritative version to each workbook action. Connected users apply actions in version order. When a client detects a missing version, the SpreadsheetEditor retrieves and applies the missed actions before continuing.
 
 ## Architecture
 
-### Client - TypeScript SpreadsheetEditor
+### Client - ASP.NET MVC SpreadsheetEditor
 
-The SpreadsheetEditor captures local actions, sends them to the Collaboration Server, receives remote actions, and displays connected users and selections. The collaborative editing module manages SpreadsheetEditor-specific behavior, while `SpreadsheetEditorAdapter` connects the SpreadsheetEditor to the Collaboration Client.
+The SpreadsheetEditor captures local workbook actions, sends them to the Collaboration Server, receives remote actions, and displays connected users and selections. `CollaborativeEditingHandler` manages SpreadsheetEditor-specific collaboration behavior, while `SpreadsheetEditorAdapter` connects the SpreadsheetEditor to the Collaboration Client.
 
 ### Real-time communication layer
 
-The `@syncfusion/ej2-collaborator` package connects the client through WebSocket or SignalR and manages room connections, user events, action delivery, presence, and selections.
+The `@syncfusion/ej2-collaborator` package connects the client to the Collaboration Server through WebSocket or SignalR. It manages room connections, user events, workbook action delivery, presence updates, and selection updates.
 
 ### Collaboration Server
 
-The server manages rooms and users, assigns versions, transforms concurrent operations, stores actions in Redis, broadcasts actions, and returns missed actions.
+The Collaboration Server manages rooms and connected users, assigns action versions, transforms concurrent operations, stores actions in Redis, broadcasts actions, and returns missed actions using the client's last synchronized version.
 
 ### Redis distributed cache
 
@@ -64,19 +71,19 @@ Redis temporarily stores collaboration actions, versions, and room information i
 
 ## How it works
 
-1. **User joins a session** - A user opens a workbook and joins a room using a unique room ID.
-2. **Real-time connection is established** - A WebSocket or SignalR connection is established with the server.
-3. **Actions are synchronized** - Supported SpreadsheetEditor actions are sent to the server.
-4. **Conflicts are resolved** - The server versions and transforms concurrent actions.
-5. **Updates are broadcast** - Processed actions are sent to other users and applied in version order.
+1. **User joins a session** - A user opens a workbook and joins a collaboration room using a unique room ID.
+2. **Real-time connection is established** - A WebSocket or SignalR connection is established with the Collaboration Server.
+3. **Actions are synchronized** - Supported SpreadsheetEditor actions are sent to the server as users edit the workbook.
+4. **Conflicts are resolved** - The server assigns versions and transforms concurrent actions using operational transformation.
+5. **Updates are broadcast** - Processed actions are sent to other users in the same room and applied in version order.
 6. **Actions are stored and recovered** - Redis supports late-join synchronization and missed-update recovery.
 
 ## Use cases
 
 - **Financial planning** - Update budgets, forecasts, and financial reports.
-- **Project tracking** - Maintain schedules, tasks, status updates, and resources.
-- **Inventory management** - Update stock availability and order details.
-- **Data review** - Review, correct, format, and annotate workbook data.
+- **Project tracking** - Maintain schedules, tasks, status updates, and resource information.
+- **Inventory management** - Update stock quantities, availability, and order details.
+- **Data review** - Review, correct, format, and annotate shared workbook data.
 - **Reporting** - Prepare and validate reports with multiple participants.
 
 ## See also
