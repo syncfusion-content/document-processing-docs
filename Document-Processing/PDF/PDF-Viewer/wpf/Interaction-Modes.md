@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Interaction Modes in WPF Pdf Viewer control | Syncfusion
 description:  Explore interaction modes in Syncfusion WPF PDF Viewer control including selection, panning, and marquee zoom modes for enhanced user experience.

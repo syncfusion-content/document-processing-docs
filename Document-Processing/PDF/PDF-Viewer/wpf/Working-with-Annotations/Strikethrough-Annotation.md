@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Strikethrough text in WPF PDF Viewer | Syncfusion
 description: The strikethrough annotation feature in WPF PDF Viewer marks text with a horizontal line to indicate deletions, edits, or completed items.

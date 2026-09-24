@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Getting Started with Xamarin.iOS PDF Viewer | Syncfusion
 description: Learn how to get started with the Syncfusion Xamarin.iOS PDF Viewer control. Explore setup, features, examples, and customization options.

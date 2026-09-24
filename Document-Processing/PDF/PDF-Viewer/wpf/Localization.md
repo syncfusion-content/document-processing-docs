@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Localization in WPF Pdf Viewer control | Syncfusion
 description: Localize WPF PDF Viewer control to multiple languages using resource files. Explore culture-specific UI customization and translation options.

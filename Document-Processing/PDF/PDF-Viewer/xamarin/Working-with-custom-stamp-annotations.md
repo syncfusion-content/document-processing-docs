@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Custom stamp annotations in Xamarin Pdf Viewer | Syncfusion
 description: Learn here all about Working with custom stamp annotations support in Syncfusion<sup>®</sup> Xamarin Pdf Viewer (SfPdfViewer) control and more.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: WPF UI Builder Skill with PDF Viewer for AI Assistants | Syncfusion
 description: Install Syncfusion® WPF UI Builder to generate production-ready WPF controls with PDF Viewer from natural-language prompts.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Ink Annotation in WPF Pdf Viewer control | Syncfusion
 description: The ink annotation feature in WPF PDF Viewer enables freehand drawing and handwritten notes directly on PDF pages for markup and feedback.

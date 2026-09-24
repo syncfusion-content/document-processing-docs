@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Rendering PDF pages using pdfium in Xamarin Pdf Viewer | Syncfusion
 description: Learn here all about Rendering PDF pages using pdfium support on UWP platform in Syncfusion<sup>®</sup> Xamarin Pdf Viewer (SfPdfViewer) control and more.

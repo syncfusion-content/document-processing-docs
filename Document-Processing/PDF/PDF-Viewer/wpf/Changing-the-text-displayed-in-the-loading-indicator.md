@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Change the text displayed in WPF Pdf Viewer | Syncfusion
 description: Change loading indicator text in Syncfusion WPF PDF Viewer for custom UI messages. Learn text customization and configuration.

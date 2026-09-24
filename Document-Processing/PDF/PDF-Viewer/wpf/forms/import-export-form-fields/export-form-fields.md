@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Export form data in WPF PDF Viewer component | Syncfusion
 description: Learn how to export PDF form field data (FDF, XFDF, JSON, and XML) using the Syncfusion WPF PDF Viewer component.

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Underline text in WPF PDF Viewer | Syncfusion
 description: The underline annotation feature in WPF PDF Viewer emphasizes important text in PDFs with a clear underline for emphasis and reference.

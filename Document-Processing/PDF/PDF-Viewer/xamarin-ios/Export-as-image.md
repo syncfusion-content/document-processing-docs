@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: PDF to images conversion using PDF Viewer Xamarin.iOS | Syncfusion
 description: Convert pages of the PDF to image stream with custom scale factor using Syncfusion<sup>®</sup> Xamarin.iOS PDF Viewer 

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Import and Export Data in Xamarin.Android PDF Viewer | Syncfusion
 description: Learn about importing and exporting data support in Syncfusion<sup>®</sup> Xamarin.Android Pdf Viewer (SfPdfViewer) control and more details. 

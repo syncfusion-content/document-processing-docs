@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Annotation Comments in WPF PDF Viewer | Syncfusion
 description: The annotation comments feature in WPF PDF Viewer provides a dedicated pane to add, edit, expand, collapse, and manage notes on PDF annotations.

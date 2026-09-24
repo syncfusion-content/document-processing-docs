@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Hyperlink Navigation in Xamarin Pdf Viewer | Syncfusion
 description: Learn here all about Hyperlink Navigation support in Syncfusion<sup>®</sup> Xamarin Pdf Viewer (SfPdfViewer) control and more.
