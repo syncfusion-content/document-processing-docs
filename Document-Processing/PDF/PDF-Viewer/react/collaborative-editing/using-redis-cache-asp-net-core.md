@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Collaborative Editing in React PDF Viewer with ASP.NET Core
 
-This topic explains how to connect the React PDF Viewer to the ASP.NET Core Collaboration Server. The common Collaborator server manages SignalR, Redis, operation synchronization, and save processing. The application only supplies the PDF Viewer adapter and document endpoints.
+This topic explains how to connect the React PDF Viewer to the ASP.NET Core Collaboration Server. The server manages SignalR, Redis, operation synchronization, and save processing. The React application supplies the PDF Viewer adapter and document endpoints.
 
 ## Prerequisites
 
@@ -28,139 +28,203 @@ npm install @syncfusion/ej2-collaborator
 
 ### 2. Add the PDF Viewer adapter
 
-Create `PdfViewerAdapter.ts` in the React application. The adapter implements `ICollaborationProvider`, loads the PDF through the application's document endpoint, sends local PDF Viewer actions, and applies actions received from other users.
-
-The adapter must provide the following behavior. The `loadFromServer` method posts the room and user details to `ImportFile`; the PDF Viewer change handler sends operations to `UpdateAction`; and `applyRemoteAction` forwards remote payloads to the PDF Viewer collaborative editing handler.
+Create `pdfViewerAdapter.ts` with the following client adapter:
 
 ```ts
 import { PdfViewer, CollaborativeEditingHandler } from '@syncfusion/ej2-react-pdfviewer';
-import { ICollaborationActionData, ICollaborationProvider } from '@syncfusion/ej2-collaborator';
+import { ICollaborationProvider, ICollaborationActionData } from '@syncfusion/ej2-collaborator';
 
 export class PdfViewerAdapter implements ICollaborationProvider {
     private collaborativeEditingHandler: CollaborativeEditingHandler;
-    private currentUser: string;
-    private pendingOperations: any[] = [];
+    private fileName: string = '';
+    public currentRoomName: string = '';
+    private isDocumentLoaded: boolean = false;
+    private currentUser: string = '';
+    private pendingOperations: any;
 
-    public constructor(private viewer: PdfViewer, private serviceUrl: string, currentUser: string) {
+    constructor(
+        private viewer: PdfViewer,
+        private serviceUrl: string,
+        currentUser: string
+    ) {
         this.currentUser = currentUser;
         this.collaborativeEditingHandler = new CollaborativeEditingHandler(viewer, currentUser);
     }
 
-    public async loadFromServer(fileName = 'document.pdf'): Promise<string> {
-        const roomName = new URLSearchParams(window.location.search).get('id')
-            ?? Math.random().toString(32).slice(2);
+    public async loadFromServer(fileName?: string): Promise<string> {
+        this.isDocumentLoaded = false;
+        this.fileName = fileName || 'document.pdf';
+        const roomName: string = this.getRoomName();
+        this.currentRoomName = roomName;
         const response = await fetch(`${this.serviceUrl}api/CollaborativeEditing/ImportFile`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ roomName, fileName, currentUser: this.currentUser })
+            body: JSON.stringify({ roomName, fileName: this.fileName, currentUser: this.currentUser })
         });
-        if (!response.ok) {
-            throw new Error(`Failed to load collaboration room: ${response.statusText}`);
-        }
-        const state = await response.json();
-        this.collaborativeEditingHandler.updateRoomInfo(
-            roomName,
-            state.version ?? 0,
-            `${this.serviceUrl}api/CollaborativeEditing/`
-        );
-        this.pendingOperations = state.operations || [];
-        for (const operation of this.pendingOperations) {
-            this.collaborativeEditingHandler.applyRemoteAction(operation.type, operation);
-        }
+        if (!response.ok) throw new Error(`Failed to join collaboration room: ${response.statusText}`);
+        await this.open(await response.text(), roomName);
         return roomName;
     }
 
+    public async open(responseText: string, roomName: string): Promise<void> {
+        const data: any = JSON.parse(responseText);
+        const version = data.version || data.currentVersion || 0;
+        this.collaborativeEditingHandler.updateRoomInfo(roomName, version, `${this.serviceUrl}api/CollaborativeEditing/`);
+        this.pendingOperations = data.operations;
+        if (data.operations && data.operations.length > 0) {
+            for (const op of data.operations) {
+                this.collaborativeEditingHandler.applyRemoteAction(op.type, op);
+            }
+        }
+        this.isDocumentLoaded = true;
+    }
+
+    public async sendActionToServer(operations: any[]): Promise<void> {
+        if (!operations || operations.length === 0) {
+            console.warn('[PdfViewerAdapter] No operations to send');
+            return;
+        }
+        await this.collaborativeEditingHandler.sendActionToServer(operations);
+    }
+
     public applyRemoteAction(action: string, data: ICollaborationActionData): void {
+        if (action === 'addUser') {
+            if ((data as any).payload.length > 0) {
+                ((data as any).payload as any[]).forEach((user: any) => {
+                    user.image = this.getUserImage(user.currentUser);
+                });
+            } else {
+                (data as any).payload.image = this.getUserImage((data as any).payload.currentUser);
+            }
+        } else if (action === 'connectionId') {
+            data.payload = { payload: data.payload, image: this.getUserImage(this.currentUser) } as any;
+        }
         this.collaborativeEditingHandler.applyRemoteAction(action, data.payload);
     }
 
-    public sendActionToServer(operations: unknown[]): Promise<void> {
-        return this.collaborativeEditingHandler.sendActionToServer(operations);
+    private getRoomName(fileName?: string): string {
+        if (typeof window !== 'undefined') {
+            const urlParams: URLSearchParams = new URLSearchParams(window.location.search);
+            let roomId: string | null = urlParams.get('id');
+            if (!roomId) {
+                roomId = Math.random().toString(32).slice(2);
+                window.history.replaceState({}, '', `?id=${roomId}`);
+            }
+            return roomId;
+        }
+        return Math.random().toString(32).slice(2);
+    }
+
+    private getUserImage(userName: string): string {
+        const images: { [key: string]: string } = {
+            RIO: 'https://ej2.syncfusion.com/demos/src/avatar/images/pic01.png',
+            JOHN: 'https://ej2.syncfusion.com/demos/src/avatar/images/pic03.png',
+            MAXY: 'https://ej2.syncfusion.com/demos/src/avatar/images/pic02.png',
+            SHAI: 'https://ej2.syncfusion.com/demos/src/avatar/images/pic04.png'
+        };
+        return images[userName] || '';
+    }
+
+    public updatePendingOperations(): any {
+        if (this.pendingOperations && this.pendingOperations.length > 0) {
+            for (const op of this.pendingOperations) {
+                this.collaborativeEditingHandler.applyRemoteAction(op.type, op);
+            }
+        }
     }
 }
 ```
 
-The adapter's `loadFromServer` implementation is application-specific because it selects the source PDF and exposes the document endpoint. Use the same adapter pattern as the [Node.js PDF Viewer adapter](../../../../Collaborator/getting-started/getting-started-with-node).
+### 3. Initialize the React PDF Viewer
 
-### 3. Initialize the Collaboration Client
+Use the supplied JavaScript React lifecycle. For ASP.NET Core, the only client configuration difference is `SERVICE_URL` and the `signalr` connection type.
 
-Enable collaborative editing, create the adapter, and join the room after loading the document:
-
-```ts
-import React, { useRef } from 'react';
+```jsx
 import {
-    PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
-    BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch,
-    FormFields, FormDesigner, PageOrganizer, Inject
+    PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+    ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner,
+    PageOrganizer, Inject
 } from '@syncfusion/ej2-react-pdfviewer';
-import { CollaborationClient, UserInfo } from '@syncfusion/ej2-collaborator';
-import { PdfViewerAdapter } from './PdfViewerAdapter';
+import { CollaborationClient } from '@syncfusion/ej2-collaborator';
+import React, { useRef, useState } from 'react';
+import { PdfViewerAdapter } from './pdfViewerAdapter';
 
-const serviceUrl = 'https://localhost:5001/';
+const SERVICE_URL = 'https://localhost:5001/';
+const currentUserName = 'JOHN';
+
 export default function App() {
-    const viewerRef = useRef<any>(null);
-    const adapterRef = useRef<PdfViewerAdapter | null>(null);
-    const currentUser = 'John';
+    const viewerRef = useRef(null);
+    const adapterRef = useRef(null);
+    const roomNameRef = useRef('');
+    const [isDocumentLoaded, setIsDocumentLoaded] = useState(false);
 
-    const resourcesLoaded = async () => {
-        const adapter = new PdfViewerAdapter(viewerRef.current, serviceUrl, currentUser);
-        adapterRef.current = adapter;
-        const client = new CollaborationClient(adapter, {
-            serviceUrl,
-            connectionType: 'signalr',
-            currentUser,
-            onUserJoined: (user: UserInfo) => console.log('User joined', user),
-            onUserLeft: (user: UserInfo) => console.log('User left', user)
-        });
-        const roomName = await adapter.loadFromServer('Giant Panda.pdf');
-        await client.joinRoomAsync(roomName);
-        await loadCurrentPdf(viewerRef.current, roomName);
+    const loadPdf = async () => {
+        const response = await fetch(`${SERVICE_URL}api/CollaborativeEditing/GetPDFDocument?roomName=${encodeURIComponent(roomNameRef.current)}`);
+        const result = await response.json();
+        const binary = atob(result.content);
+        const bytes = new Uint8Array(binary.length);
+        for (let index = 0; index < binary.length; index++) bytes[index] = binary.charCodeAt(index);
+        viewerRef.current.load(bytes, '');
     };
 
-    const documentChanged = (args: any) => {
-        const operation = getPdfViewerOperation(args);
-        if (operation) void adapterRef.current?.sendActionToServer([operation]);
+    const handleResourcesLoaded = async () => {
+        if (isDocumentLoaded) return;
+        setIsDocumentLoaded(true);
+        const adapter = new PdfViewerAdapter(viewerRef.current, SERVICE_URL, currentUserName);
+        adapterRef.current = adapter;
+        const client = new CollaborationClient(adapter, {
+            serviceUrl: SERVICE_URL,
+            connectionType: 'signalr',
+            currentUser: currentUserName,
+            onUserJoined: user => console.log('User joined', user),
+            onUserLeft: user => console.log('User left', user)
+        });
+        roomNameRef.current = await adapter.loadFromServer();
+        await client.joinRoomAsync(roomNameRef.current);
+        await loadPdf();
+    };
+
+    const handleDocumentChanged = args => {
+        let operations = [];
+        if (args && 'annotationId' in args) {
+            operations = args.action
+                ? [{ action: args.action, annotation: args.annotationId, type: 'annotation', isRedacted: args.isRedacted }]
+                : [{ type: 'removeUser', currentUser: currentUserName }];
+        } else if (args && 'formField' in args && !('fieldName' in args)) {
+            operations = [{ action: args.action, formField: args.formField, type: 'formField' }];
+        } else if (args && 'fieldName' in args) {
+            operations = [{ action: 'formFieldUpdate', data: args, type: 'formField' }];
+        } else if (args && 'organizePageActions' in args) {
+            const details = typeof args.organizePageActions === 'string' ? JSON.parse(args.organizePageActions) : '';
+            if (args.savedDocument === null && details.action === 'applyCancelled') {
+                operations = [{ type: 'removeUser', currentUser: currentUserName }];
+            } else if (args.savedDocument !== null && details.length > 0 && details[0].action !== 'applyCancelled') {
+                operations = [{ action: 'pageOrganizerUpdate', data: args.organizePageActions, type: 'pageOrganizer' }];
+            }
+        }
+        if (operations.length > 0) adapterRef.current.sendActionToServer(operations);
     };
 
     return <PdfViewerComponent ref={viewerRef} enableCollaborativeEditing={true}
-        resourcesLoaded={resourcesLoaded} documentChanged={documentChanged}>
+        resourcesLoaded={handleResourcesLoaded} documentChanged={handleDocumentChanged}>
         <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
             BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, FormFields,
             FormDesigner, PageOrganizer]} />
     </PdfViewerComponent>;
 }
-
-function getPdfViewerOperation(args: any): any | null {
-    if ('annotationId' in args && args.action) return { action: args.action, annotation: args.annotationId, type: 'annotation', isRedacted: args.isRedacted };
-    if ('formField' in args && !('fieldName' in args)) return { action: args.action, formField: args.formField, type: 'formField' };
-    if ('fieldName' in args) return { action: 'formFieldUpdate', data: args, type: 'formField' };
-    if ('organizePageActions' in args && args.savedDocument !== null) return { action: 'pageOrganizerUpdate', data: args.organizePageActions, type: 'pageOrganizer' };
-    return null;
-}
-
-async function loadCurrentPdf(viewer: any, roomName: string): Promise<void> {
-    const response = await fetch(`${serviceUrl}api/CollaborativeEditing/GetPDFDocument?roomName=${encodeURIComponent(roomName)}`);
-    const result = await response.json();
-    const binary = atob(result.content);
-    viewer.load(Uint8Array.from(binary, character => character.charCodeAt(0)), '');
-}
 ```
 
-`getPdfViewerOperation` should map the PDF Viewer event to one of the supported action types: `annotation`, `formField`, `formFieldAction`, or `pageOrganizer`. The [Node.js example](./using-redis-cache-nodejs) shows the event mapping used by the running sample.
+The `documentChanged` handler sends annotation, form field value, form field designer, page organizer, and cancellation operations. This complete action mapping is required for the collaboration handler to synchronize all supported PDF Viewer interactions.
 
 ## Server-side integration
 
-### 1. Install the Collaboration Server package
+### 1. Install and configure the Collaboration Server
 
 ```bash
 dotnet add package Syncfusion.Collaborator.Server.AspNet.Core
 ```
 
-Install the PDF Viewer server package required by the application's document and save endpoints as described in the [PDF Viewer ASP.NET Core getting started](../getting-started) topic.
-
-### 2. Configure Redis and the Collaboration Server
-
-Add the Redis connection string to `appsettings.json`:
+Add the Redis connection to `appsettings.json`:
 
 ```json
 {
@@ -170,21 +234,16 @@ Add the Redis connection string to `appsettings.json`:
 }
 ```
 
-Register the Collaboration Server and the PDF Viewer server adapter in `Program.cs`:
+Register the server in `Program.cs`:
 
 ```csharp
 using Syncfusion.Collaboration.Core.Extensions;
-using Syncfusion.Collaboration.Core.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
-
 builder.Services.AddCollaborationServer(options =>
 {
-    options.ConnectionString = builder.Configuration.GetConnectionString("Redis")
-        ?? "localhost:6379";
+    options.ConnectionString = builder.Configuration.GetConnectionString("Redis") ?? "localhost:6379";
 });
-
-builder.Services.AddSingleton<ICollaborationAdapter, PdfViewerCollaborationAdapter>();
 builder.Services.AddControllers();
 
 var app = builder.Build();
@@ -195,63 +254,22 @@ app.MapCollaborationServer();
 app.Run();
 ```
 
-SignalR is the default transport. To use WebSocket, set `ConnectionType` to `CollaborationConnectionType.WebSocket` and call `app.UseWebSockets()` before `app.MapCollaborationServer()`.
+SignalR is the default transport. For WebSocket, set `ConnectionType` to `CollaborationConnectionType.WebSocket` and call `app.UseWebSockets()` before `app.MapCollaborationServer()`.
 
-### 3. Add the PDF Viewer server adapter
+### 2. Add the PDF Viewer server adapter and routes
 
-Create `PdfViewerCollaborationAdapter.cs`. This adapter maps PDF Viewer actions to the common collaboration model, transforms PDF Viewer operations, and persists saved PDF content. Implement the PDF Viewer-specific mapping and save behavior in this file:
+Create a PDF Viewer collaboration adapter implementing the ASP.NET Core `ICollaborationAdapter` contract. It must map the complete PDF Viewer request envelope, preserve snapshot operations, transform them using the PDF Viewer rules, and process save requests against the source PDF.
 
-```csharp
-using Syncfusion.Collaboration.Core.Interfaces;
-using Syncfusion.Collaboration.Core.Models;
+Expose these routes under `/api/CollaborativeEditing`:
 
-public sealed class PdfViewerCollaborationAdapter : ICollaborationAdapter
-{
-    public CollaborationAction MapControlToGenericAction(object controlAction)
-    {
-        // Map the PDF Viewer room, connection, version, and operations.
-        throw new NotImplementedException();
-    }
+- `POST /ImportFile` returns the room name, current version, and pending operations.
+- `POST /UpdateAction` validates `annotation`, `formField`, `formFieldAction`, and `pageOrganizer` payloads, stores the request through the action service, and broadcasts the clean request.
+- `GET /GetPDFDocument` returns `{ success, fileName, roomName, content, contentLength, isDefault }`, with `content` encoded as Base64.
 
-    public object MapGenericToControlAction(CollaborationAction action)
-    {
-        // Convert the common action back to the PDF Viewer action shape.
-        throw new NotImplementedException();
-    }
-
-    public List<CollaborationAction> TransformOperations(List<CollaborationAction> actions)
-    {
-        // Apply the PDF Viewer operation transformation rules.
-        throw new NotImplementedException();
-    }
-
-    public Task SaveOperationsAsync(object actions, string roomName, bool partialSave)
-    {
-        // Queue the merged PDF content for persistence.
-        throw new NotImplementedException();
-    }
-
-    public Task ProcessSaveRequestAsync(SaveRequest request, CancellationToken cancellationToken)
-    {
-        // Load, update, and save the source PDF.
-        throw new NotImplementedException();
-    }
-}
-```
-
-The exact mapping and save implementation depends on the application's PDF storage location and document API. Keep those methods in the adapter; the Collaboration Server supplies the common Redis, transport, session, and save-worker services.
-
-### 4. Expose PDF Viewer collaboration endpoints
-
-Add ASP.NET Core equivalents of the following endpoints under `/api/CollaborativeEditing`:
-
-- `POST /ImportFile` - Validate `roomName`, retrieve pending operations through the Collaboration Server action service, and return `{ roomName, version, operations }`.
-- `POST /UpdateAction` - Validate `roomName`, `type`, and type-specific data, map the request through `PdfViewerCollaborationAdapter`, store it with the action service, and broadcast it to the room.
-- `GET /GetPDFDocument` - Return the room's current PDF as `{ success, fileName, roomName, content, contentLength, isDefault }`, where `content` is Base64 encoded.
-
-The client adapter calls `ImportFile` before joining the room and calls `GetPDFDocument` to load the PDF. The Collaboration Server handles collaboration actions after the client joins.
+The ASP.NET Core adapter should follow the same request envelope and replay rules as the supplied Node.js adapter. The client adapter calls `ImportFile`, joins the room, loads `GetPDFDocument`, and sends all `documentChanged` operations to `UpdateAction`.
 
 ## See Also
 
+- [Collaborative editing overview](./overview)
 - [Collaborative editing with Node.js](./using-redis-cache-nodejs)
 - [Getting Started with ASP.NET Core Collaboration Server](../../../../Collaborator/getting-started/getting-started-with-core)

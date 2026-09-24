@@ -38,7 +38,7 @@ Install the shared client package in the React application:
 npm install @syncfusion/ej2-collaborator
 ```
 
-Create a `PdfViewerAdapter.ts` file that implements `ICollaborationProvider`, then create a `CollaborationClient` with the adapter and join the room after the PDF document has been loaded. See the platform-specific pages for the adapter and initialization examples:
+Create a `pdfViewerAdapter.ts` file that implements the collaboration provider contract, then create a `CollaborationClient` with the adapter and join the room after the PDF document has been loaded. See the platform-specific pages for the adapter and initialization examples:
 
 - [Collaborative editing with ASP.NET Core](./using-redis-cache-asp-net-core)
 - [Collaborative editing with Node.js](./using-redis-cache-nodejs)
