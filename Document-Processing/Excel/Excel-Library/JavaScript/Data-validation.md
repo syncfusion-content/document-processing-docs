@@ -8,11 +8,13 @@ documentation: ug
 
 # Data Validation in JavaScript Excel
 
-Add a rule with `sheet.dataValidations.add(address)`, then set type, operator, formulas, and messages on the returned handle.
+Data validation limits what users can enter in a cell or range. You can restrict values by type, range, or list, and show input tips or error messages when the workbook is opened in Excel.
 
 N> Validation formulas are opaque text. The library does not evaluate them. New rules start with `showErrorMessage = true`.
 
 ## Whole-number range
+
+Whole-number validation limits entries to integers within the bounds you set. Input prompts and error messages help users enter valid values when the workbook is opened in Excel.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -21,6 +23,7 @@ import { Workbook } from '@syncfusion/ej2-xlsx';
 const workbook: Workbook = Workbook.create();
 const sheet = workbook.sheet(0);
 
+// Address is the A1 range the rule applies to
 const rule = sheet.dataValidations.add('A1:A20');
 rule.type = 'whole';
 rule.operator = 'between';
@@ -39,6 +42,7 @@ import { Workbook } from '@syncfusion/ej2-xlsx';
 const workbook = Workbook.create();
 const sheet = workbook.sheet(0);
 
+// Address is the A1 range the rule applies to
 const rule = sheet.dataValidations.add('A1:A20');
 rule.type = 'whole';
 rule.operator = 'between';
@@ -54,6 +58,8 @@ rule.showInputMessage = true;
 {% endtabs %}
 
 ## List validation
+
+List validation restricts a cell to a fixed set of choices. A drop-down list in Excel helps users pick an allowed value instead of typing free text.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -82,8 +88,8 @@ list.showListDropdown = true;
 
 ## Supported types and operators
 
-**Types:** `none`, `whole`, `decimal`, `list`, `date`, `time`, `textLength`, `custom`.
+Validation can target whole numbers, decimals, lists, dates, times, text length, or a custom formula. Pair the type with an operator and one or two formulas to define the allowed values.
 
-**Operators:** `between`, `notBetween`, `equal`, `notEqual`, `lessThan`, `lessThanOrEqual`, `greaterThan`, `greaterThanOrEqual`.
+Set `rule.operator` when the type compares values: `between`, `notBetween`, `equal`, `notEqual`, `lessThan`, `lessThanOrEqual`, `greaterThan`, or `greaterThanOrEqual`.
 
-**Error styles:** `stop`, `warning`, `information`.
+Set `rule.errorStyle` to control how Excel presents invalid input: `stop`, `warning`, or `information`.

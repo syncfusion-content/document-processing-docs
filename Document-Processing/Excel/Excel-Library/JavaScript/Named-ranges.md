@@ -8,9 +8,11 @@ documentation: ug
 
 # Named Ranges in JavaScript Excel
 
-Defined names (named ranges and named formulas) are available on `workbook.names`.
+Named ranges and named formulas give friendly labels to cell areas or expressions. Names make formulas easier to read and can be scoped to the whole workbook or to one worksheet.
 
 ## Add a workbook-scoped name
+
+A workbook-scoped name is a friendly label for a range or formula that every sheet can use. Named references make formulas easier to read and maintain than raw cell addresses.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -41,13 +43,14 @@ workbook.names.add('SalesData', 'Sales!$A$1:$A$10');
 
 ## Sheet-scoped names
 
-Pass the zero-based sheet index as the third argument to scope a name to one worksheet.
+A sheet-scoped name belongs to one worksheet only. Use it when the same label should mean different ranges on different sheets.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import { Workbook } from '@syncfusion/ej2-xlsx';
 
 const workbook: Workbook = Workbook.create();
+// Third argument: zero-based sheet index for sheet-scoped names
 workbook.names.add('LocalTotal', 'Sheet1!$C$1', 0);
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
@@ -59,6 +62,8 @@ workbook.names.add('LocalTotal', 'Sheet1!$C$1', 0);
 {% endtabs %}
 
 ## Look up and remove names
+
+After names are defined, you can look them up, list every definition, or remove outdated entries so name references stay accurate across the workbook.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

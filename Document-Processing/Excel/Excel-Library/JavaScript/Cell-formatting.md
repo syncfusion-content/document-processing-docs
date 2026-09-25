@@ -8,9 +8,13 @@ documentation: ug
 
 # Cell Formatting in JavaScript Excel
 
-Format cells through `cell.style` and `cell.numberFormat`. Prefer these APIs over the internal workbook styles table.
+Cell formatting controls how values look in Excel, including font, fill, borders, alignment, and number display. Apply formatting on individual cells so reports stay readable without changing the stored values.
+
+`numberFormat` accepts standard Excel format codes (for example `#,##0.00`, `yyyy-mm-dd`, `0%`). Colors on style objects use `{ rgb: 'RRGGBB' }` or theme-based color objects where supported.
 
 ## Apply a cell style
+
+A cell style groups font, fill, border, and alignment settings so you can present values consistently. Partial style updates keep any fields you do not change.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -81,6 +85,8 @@ cell.style = {
 
 ## Number formats
 
+Number formats control how values appear as currency, percent, date, or custom display patterns when the workbook opens in Excel. The stored value stays the same; only the display pattern changes.
+
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import { Workbook } from '@syncfusion/ej2-xlsx';
@@ -110,7 +116,7 @@ sheet.cell('B1').numberFormat = 'yyyy-mm-dd';
 
 ## Clear formatting
 
-Assign `undefined` to `style` to clear the cell style without changing the value.
+Clearing formatting removes the cell style while leaving the cell value in place. Use this when you need a plain appearance without deleting the data.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -133,7 +139,7 @@ sheet.cell('A1').style = undefined;
 
 ## Rich text
 
-Use `workbook.createFont()` and `cell.richText.characters()` to format parts of the cell text.
+Rich text applies different font settings to parts of the same cell value. Use it when a single cell needs mixed emphasis, such as bold keywords inside a longer label.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
