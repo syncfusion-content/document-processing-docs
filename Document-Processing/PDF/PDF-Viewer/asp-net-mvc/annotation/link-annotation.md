@@ -19,7 +19,8 @@ This guide explains how to enable, add, customize, and manage link annotations i
 To enable link annotations in the viewer, render the PDF Viewer with the required configuration and set `hyperlinkOpenState` as required.
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight cshtml tabtitle="Standalone" %}
+
 <div style="width:100%;height:650px">
     @Html.EJS().PdfViewer("pdfviewer")
         .DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf")
@@ -27,15 +28,7 @@ To enable link annotations in the viewer, render the PDF Viewer with the require
         .HyperlinkOpenState(HyperlinkOpenState.NewTab)
         .Render()
 </div>
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-<div style="width:100%;height:650px">
-    @Html.EJS().PdfViewer("pdfviewer")
-        .DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf")
-        .ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/"))
-        .HyperlinkOpenState(HyperlinkOpenState.NewTab)
-        .Render()
-</div>
+
 {% endhighlight %}
 {% endtabs %}
 
