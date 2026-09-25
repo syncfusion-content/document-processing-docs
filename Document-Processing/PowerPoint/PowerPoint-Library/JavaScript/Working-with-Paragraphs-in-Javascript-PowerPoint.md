@@ -20,7 +20,7 @@ The following code example demonstrates how to add a paragraph in a slide.
 {% highlight typescript tabtitle="TypeScript" %}
 
 import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
- 
+
 // Creates a PowerPoint Presentation.
 const pptxDoc = Presentation.create();
 // Adds a slide to the PowerPoint.
@@ -49,7 +49,7 @@ The following code example demonstrates how to format a paragraph in a PowerPoin
 {% highlight typescript tabtitle="TypeScript" %}
 
 import { Presentation, HorizontalAlignmentType } from '@syncfusion/ej2-pptx';
- 
+
 // data is a Uint8Array or ArrayBuffer of an .pptx file
 // Loads or opens a PowerPoint Presentation.
 const pptxDoc = await Presentation.open(data);

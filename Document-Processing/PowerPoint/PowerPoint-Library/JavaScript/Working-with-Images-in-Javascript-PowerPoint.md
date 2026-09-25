@@ -19,18 +19,19 @@ The following code example demonstrates how to add a new image to the presentati
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { Presentation } from '@syncfusion/ej2-pptx';
- 
-// data is a Uint8Array or ArrayBuffer of an .pptx file
-// Opens the presentation.
-const pptxDoc = await Presentation.open(data);
-// Retrieves the first slide from the Presentation.
-const slide = pptxDoc.slides[0];
-// Retrieves the picture from the slide.
-const picture = slide.shapes[3]?.asPicture();
-// newBytes is the bytes of new picture to be replaced
-// Replaces the existing embedded image with a new image.
-picture.replaceImageData({ data: newBytes });
+import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
+
+// Creates an instance of Presentation.
+const pptxDoc = Presentation.create();
+// Adds a blank slide.
+const slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
+// pictureBytes is the raw binary data of the image read from the file system.
+// Adds the picture to the slide by specifying its size and position.
+const picture = slide.shapes.addPicture({
+    data: pictureBytes,
+    contentType: 'image/jpeg',
+    bounds: { x: 0, y: 0, width: 250, height: 250 },
+});
 // Saves the PowerPoint Presentation to a file.
 await pptxDoc.save('Output.pptx');
 

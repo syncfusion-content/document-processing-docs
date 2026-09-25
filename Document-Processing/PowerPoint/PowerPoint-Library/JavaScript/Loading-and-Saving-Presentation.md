@@ -42,16 +42,6 @@ pptxDoc.slides.add();
 {% endhighlight %}
 {% endtabs %}
 
-## Open the encrypted document
-
-A password-protected PowerPoint presentation can be opened by providing the password along with the file bytes to the `open()` function. The following code example demonstrates how to open a password-protected PowerPoint presentation.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-
-{% endhighlight %}
-{% endtabs %}
-
 ## Save the document
 
 A modified PowerPoint presentation can be saved to the file system by passing the destination path to the `save()` function. The following code example demonstrates how to save a PowerPoint presentation.
