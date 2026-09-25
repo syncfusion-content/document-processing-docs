@@ -367,7 +367,7 @@ const addMultipleLinks = () => {
 
 ## Link Annotation Events
 
-The PDF Viewer raises annotation lifecycle events that can be used to monitor when link annotations are added, modified, selected, or removed. See [Annotation Events](../annotation-event).
+The PDF Viewer raises annotation life cycle events that can be used to monitor when link annotations are added, modified, selected, or removed. See [Annotation Events](../annotation-event).
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/Annotations/Link%20Annotation)
 

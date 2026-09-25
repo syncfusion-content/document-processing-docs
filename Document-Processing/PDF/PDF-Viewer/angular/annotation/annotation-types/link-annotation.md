@@ -332,7 +332,7 @@ addMultipleLinks(): void {
 
 ## Link Annotation Events
 
-The PDF Viewer raises annotation lifecycle events for link annotations. For the complete event list and details, see [Annotation Events](../annotation-event).
+The PDF Viewer raises annotation life cycle events for link annotations. For the complete event list and details, see [Annotation Events](../annotation-event).
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/Annotations)
 

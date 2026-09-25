@@ -215,7 +215,7 @@ viewer.annotation.addAnnotation('Link', {
 
 The PDF Viewer raises annotation life cycle events that can be used to monitor when link annotations are added, modified, selected, or removed. For the complete event list, see [Annotation Events](../annotation-event).
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/Annotations/Link%20Annotation)
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/Annotations)
 
 ## See Also
 
