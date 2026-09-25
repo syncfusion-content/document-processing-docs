@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with JavaScript PowerPoint in React app | Syncfusion
-description: Learn how to get started with the Syncfusion JavaScript PowerPoint in React application. Easy steps to create PowerPoint presentation without depending on Microsoft PowerPoint.
+description: Learn how to get started with the Syncfusion JavaScript PowerPoint Library in React and create PowerPoint presentations without Microsoft PowerPoint.
 control: PowerPoint
 platform: document-processing
 documentation: ug
