@@ -129,9 +129,8 @@ The following example shows how to customize revision type colors instead of usi
     };
 }
 ```
-> **Note**
-> * These settings only affect how revisions are displayed in the DOCX Editor and are not stored in the document.
-> * By default, all revision types use author-specific colors (`'byAuthor'`).
+N> 1. These settings only affect how revisions are displayed in the DOCX Editor and are not stored in the document.
+N> 2. By default, all revision types use author-specific colors ('byAuthor').
 
 ## Filter changes by user
 
