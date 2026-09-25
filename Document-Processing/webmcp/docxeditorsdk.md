@@ -124,43 +124,6 @@ When you invoke a WebMCP tool, the following happens behind the scenes:
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-## Common Use Cases
-
-### AI-Assisted Data Analysis
-Agents analyze datasets, create summaries, and apply formatting via natural language prompts.
-
-**Example:** "Analyze the sales data and show me the top 3 performing regions with their total revenue."
-
-### Automated Reporting
-Transform raw data into professionally formatted reports with charts and conditional highlighting.
-
-**Example:** "Create a summary report: highlight top performers, add a total row, and insert a chart showing performance by department."
-
-### Data Entry Automation
-Populate documents from external sources while respecting data validation rules.
-
-**Example:** "Import the customer list and apply data validation for email addresses."
-
-### Multi-Step Workflows
-Orchestrate complex operations in sequence based on user intent.
-
-**Example:** "Sort by sales amount, filter for items above $1000, apply conditional formatting to highlight top 10%, and create a chart."
-
-## Supported Features
-
-WebMCP tools are organized into six categories, covering 28 operations:
-
-| Category | Tools | Example |
-|----------|-------|---------|
-| **Core Data** | getCellData, getRangeData, getSheetInfo, getCellFormula, evaluateFormula | Read cell values and formulas programmatically |
-| **Editing** | editCell, editRange, insertRows, insertColumns, insertSheet, deleteRows, deleteColumns, deleteSheet, renameSheet | Modify document structure and content |
-| **Formatting** | formatCells, clearFormatting, applyConditionalFormatting, autoFit | Apply styles and conditional rules |
-| **Data Manipulation** | sortRange, filterData, find, replace, freezePanes, unfreezePanes | Transform and navigate data |
-| **Charting & Shapes** | insertChart, editChart, deleteChart, insertShape | Create visualizations |
-| **Workbook & Utility** | saveWorkbook, undo, redo, getSheetList | Manage workbook and history |
-
-For complete tool reference with schemas, see [WebMCP Integration — Tool Reference](./integration#tool-reference).
-
 ## Writing Effective Prompts
 
 AI responses are only as good as the prompt you provide. Vague requests like *"fix this"* give the AI very little context. More specific prompts produce reliable, accurate results.
