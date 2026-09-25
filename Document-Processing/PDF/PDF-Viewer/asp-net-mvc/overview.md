@@ -28,6 +28,7 @@ The [`ASP.NET MVC`](https://www.syncfusion.com/pdf-viewer-sdk) PDF Viewer is a l
     * [Shape annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/annotation/shape-annotation): rectangle, circle, polygon, line, and arrow
     * [Stamp annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/annotation/stamp-annotation)
     * [Free text annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/annotation/free-text-annotation)
+    * [Link annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/annotation/link-annotation)
     * [Comments](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/annotation/comments) and [sticky notes](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/annotation/sticky-notes-annotation)
 * [Form filling](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/forms/form-filling)
 * [Form designer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/forms/form-designer)
