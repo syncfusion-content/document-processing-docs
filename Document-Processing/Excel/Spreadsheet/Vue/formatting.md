@@ -180,12 +180,34 @@ The following code example shows the style formatting in text and cells of the s
         
 {% previewsample "/document-processing/code-snippet/spreadsheet/vue/cell-format-cs1" %}
 
+## Text Overflow
+
+When the content of a cell exceeds the available column width, the Spreadsheet automatically displays the text across adjacent empty cells. This behavior helps improve readability without changing the column width.
+
+Text overflow is displayed only when the adjacent cells are empty. If a neighboring cell contains a value, formula, or merged range, the overflow is clipped at the boundary cell.
+
+Text overflow is supported for plain text, rich text, hyperlinks, and RTL layouts, and is automatically updated when cell content or worksheet layout changes.
+
+The following code example demonstrates text overflow in the Spreadsheet.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/text-overflow-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/text-overflow-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/text-overflow-cs1" %}
+
 ### Limitations of Formatting
 
 The following features are not supported in Formatting:
 
 * Insert row/column between the formatting applied cells.
 * Formatting support for row/column.
+* Text overflow across freeze pane boundaries and for right-aligned cells.
 
 ## Conditional Formatting
 
@@ -251,6 +273,12 @@ The following options can be given for the icon sets as type,
 
 >* 'ThreeArrows', 'ThreeArrowsGray', 'FourArrowsGray', 'FourArrows', 'FiveArrowsGray', 'FiveArrows', 'ThreeTrafficLights1', 'ThreeTrafficLights2', 'ThreeSigns', 'FourTrafficLights', 'FourRedToBlack', 'ThreeSymbols', 'ThreeSymbols2', 'ThreeFlags', 'FourRating', 'FiveQuarters', 'FiveRating', 'ThreeTriangles', 'ThreeStars', 'FiveBoxes'.
 
+### Formula-based Conditional Format
+
+Formula-based Conditional Formatting enables you to apply custom formatting rules using formulas through the `conditionalFormats` property in the sheet model or the [`conditionalFormat()`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#conditionalformat) method.
+
+When the specified formula evaluates to `TRUE`, the defined formatting is automatically applied to the target cells. This allows you to create advanced highlighting scenarios based on values from other cells or ranges within the worksheet.
+
 ### Custom Format
 
 Using the custom format for conditional formatting you can set cell styles like color, background color, font style, font weight, and underline.
@@ -282,63 +310,93 @@ You can clear the defined rules by using one of the following ways:
 The following features have some limitations in Conditional Formatting:
 
 * Insert row/column between the conditional formatting.
-* Conditional formatting with formula support.
+* User Interface support for formula-based conditional formatting.
 * Copy and paste the conditional formatting applied cells.
 * Custom rule support.
 
 ## Rich Text Formatting
 
-Rich text formatting allows you to apply different styles to specific portions of text within a single cell to improve readability and presentation. Currently, subscript and superscript formatting are supported, and other rich text font styles are not supported.
+Rich text formatting allows you to apply different styles to specific portions of text within a single cell to improve readability and presentation. Each text segment can have its own formatting, enabling you to combine multiple styles within a single cell.
 
-In the **Syncfusion Vue Spreadsheet**, rich text formatting is supported through the [`richText`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#richtext) property of the cell model. This property lets you define multiple text segments inside a cell, where each segment can have its own style.
+In the **Syncfusion Vue Spreadsheet**, rich text formatting is supported through the [`richText`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#richtext) property of the cell model.
 
 Each `richText` segment contains:
 
 - `text` – Specifies the content of the segment  
 - `style` – Defines formatting using the [`CellStyleModel`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#richtext)
 
+Rich text formatting supports the following style options through the `style` property of each `richText` segment:
+
+## Font Family
+
+You can change the font family of individual rich text segments using the `fontFamily` property. This allows different portions of text within the same cell to be displayed using different typefaces such as `Calibri`, `Arial`, and `Georgia`.
+
+## Font Size
+
+You can customize the size of individual rich text segments using the `fontSize` property to emphasize specific content within a cell.
+
+## Font Weight
+
+You can apply font weight formatting using the `fontWeight` property. This is typically used to display specific text segments in bold.
+
+## Font Style
+
+You can apply font style formatting using the `fontStyle` property. This property supports values such as `normal` and `italic`.
+
+## Text Decoration
+
+You can apply text decorations to individual rich text segments using the `textDecoration` property. Supported decorations include `underline` and `line-through`.
+
+## Font Color
+
+You can customize the color of specific text segments using the `color` property to improve visibility or highlight important information.
+
 ## Subscript and Superscript
 
-Subscript and superscript formatting are supported as part of rich text formatting and can be applied to specific portions of text within a cell.
+You can apply subscript and superscript formatting to individual text segments using the `verticalAlign` property.
 
-To apply these formats, use the `verticalAlign` property within the style of a rich text segment:
+- Use `verticalAlign: 'sub'` to display text as subscript.
+- Use `verticalAlign: 'super'` to display text as superscript. 
 
-- Set `verticalAlign: 'super'` for superscript  
-- Set `verticalAlign: 'sub'` for subscript  
+### How to Apply Rich Text Formatting
 
-### How to Apply Subscript and Superscript
+You can apply rich text formatting in following ways:
 
-You can apply subscript and superscript formatting in the following ways:
+1. Select the desired portion of text within a cell, then use the available formatting options in the ribbon such as font family, font size, bold, italic, underline, strikethrough, font color, subscript, or superscript.
 
-1. Select the desired portion of text within a cell, then click the **Subscript** or **Superscript** option in the **Home** tab of the ribbon to apply the formatting.
-
-![Subscript and superscript in Spreadsheet](./images/spreadsheet_richtext.gif)
+![Rich text formatting in Spreadsheet](./images/spreadsheet_richtext.gif)
 
 2. You can define the [`richText`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#richtext) property directly while initializing the Spreadsheet. This is useful when you want the formatting to be applied when the data is loaded.
 
 ```js
-cells: [
-    {
-        value: 'H2O',
-        richText: [
-            { text: 'H' },
-            { text: '2', style: { verticalAlign: 'sub' } },
-            { text: 'O' }
-        ]
-    }
-]
+    cells: [
+        {
+            value: 'Annual Sales Report 2026 Highlights (Draft)',
+            richText: [
+                { text: 'Annual Sales Report ', style: { fontWeight: 'bold' } },
+                { text: '2026', style: { color: '#0078D4' } },
+                { text: ' Highlights', style: { textDecoration: 'underline' } },
+                { text: ' (Draft)', style: { fontStyle: 'italic' } }
+            ]
+        }
+    ]
 ```
 
-3. You can also apply subscript and superscript dynamically using the [`updateCell`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#updatecell) method.
+3. You can also apply formatting dynamically using the [`updateCell`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#updatecell) method.
 
 ```javascript
-    spreadsheet.updateCell({ value: 'X2', richText: [
-                    { text: 'X' },
-                    { text: '2', style: { verticalAlign: 'super' } }
-                ] }, 'A5');
+    spreadsheet.updateCell({
+        richText: [
+            { text: 'Premium Membership ', style: { fontWeight: 'bold', color: '#2E7D32' } },
+            { text: 'valid until ', style: { fontStyle: 'italic' } },
+            { text: '31', style: { textDecoration: 'underline' } },
+            { text: 'st', style: { verticalAlign: 'super' } },
+            { text: ' Dec 2026' }
+        ]
+    }, 'A5');
 ```
 
-The following code example shows the subscript and superscript formatting in cells of the spreadsheet.
+The following code example shows how to apply multiple rich text formats in cells of the Spreadsheet.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -352,7 +410,6 @@ The following code example shows the subscript and superscript formatting in cel
 {% previewsample "/document-processing/code-snippet/spreadsheet/vue/richtext-format-cs1" %}
 
 ## Limitations
-* **Limited formatting support:** Only subscript and superscript formatting are supported within rich text. Other formatting options such as font size, font color, and font weight are not supported.
 * **Edit mode requirement:** Formatting can be applied only while the cell is in edit mode. Selecting text outside of edit mode does not support subscript or superscript formatting.
 
 ## Note

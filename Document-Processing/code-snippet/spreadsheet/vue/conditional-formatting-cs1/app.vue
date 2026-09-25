@@ -13,6 +13,7 @@
           <e-conditionalformat type="Bottom10Items" cFColor="YellowFT" value="4"
             range="C2:C9"></e-conditionalformat>
           <e-conditionalformat type="BlueDataBar" range="D2:D9"></e-conditionalformat>
+          <e-conditionalformat type="Formula" cFColor="GreenFT" value="=H2>AVG(H2:H9)" range="H2:H5"></e-conditionalformat>
         </e-conditionalformats>
       </e-sheet>
     </e-sheets>
@@ -57,6 +58,7 @@ export default {
         type: 'Bottom10Items', value: '1',
         format: { style: { color: '#ffffff', backgroundColor: '#c68d53', fontWeight: 'bold' } }, range: 'G2:G9'
       });
+      spreadsheet.conditionalFormat({ type: 'Formula', value: '=H6>5000', cFColor: 'RedT', range: 'H6:H9' });
     }
   }
 }
