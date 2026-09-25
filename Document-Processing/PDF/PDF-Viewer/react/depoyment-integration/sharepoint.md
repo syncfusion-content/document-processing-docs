@@ -197,7 +197,7 @@ export default class PdfViewer extends React.Component<IPdfViewerProps> {
 {% endhighlight %}
 {% endtabs %}
 
-Remember to replace `your-site.sharepoint.com/sites/PdfViewerDemo` in `resourceUrl` with the URL of your SharePoint site before serving the web part.
+Remember to replace `your-site.SharePoint.com/sites/PdfViewerDemo` in `resourceUrl` with the URL of your SharePoint site before serving the web part.
 
 ## Update the Web Part
 
@@ -254,7 +254,7 @@ Open `config/serve.json` and update the `pageUrl` (or `initialPage`) entry to po
 }
 ```
 
-Replace `your-site.sharepoint.com/sites/PdfViewerDemo` with the actual host name and site path of your tenant so that the local debug bundle loads against the correct site.
+Replace `your-site.SharePoint.com/sites/PdfViewerDemo` with the actual host name and site path of your tenant so that the local debug bundle loads against the correct site.
 
 ## Run the Application
 

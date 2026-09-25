@@ -14,14 +14,34 @@ NuGet provides a convenient way to download and install the Syncfusion<sup>®</s
 
 <table>
   <tr>
-    <th>Platform</th>
+    <th>Platform(s)</th>
     <th>Package Name</th>
     <th>Package Manager Console Command</th>
   </tr>
   <tr>
-    <td>ASP.NET Core</td>
-    <td><code>Syncfusion.DocumentChunking</code></td>
-    <td><code>Install-Package Syncfusion.DocumentChunking</code></td>
+    <td>ASP.NET Core and Blazor</td>
+    <td>Syncfusion.DocumentChunking.Net.Core</td>
+    <td>Install-Package Syncfusion.DocumentChunking.Net.Core</td>
+  </tr>
+  <tr>
+    <td>.NET MAUI and WinUI</td>
+    <td>Syncfusion.DocumentChunking.Net</td>
+    <td>Install-Package Syncfusion.DocumentChunking.Net</td>
+  </tr>
+  <tr>
+    <td>Windows Forms</td>
+    <td>Syncfusion.DocumentChunking.WinForms</td>
+    <td>Install-Package Syncfusion.DocumentChunking.WinForms</td>
+  </tr>
+  <tr>
+    <td>WPF</td>
+    <td>Syncfusion.DocumentChunking.Wpf</td>
+    <td>Install-Package Syncfusion.DocumentChunking.Wpf</td>
+  </tr>
+  <tr>
+    <td>ASP.NET MVC</td>
+    <td>Syncfusion.DocumentChunking.AspNet.Mvc5</td>
+    <td>Install-Package Syncfusion.DocumentChunking.AspNet.Mvc5</td>
   </tr>
 </table>
 

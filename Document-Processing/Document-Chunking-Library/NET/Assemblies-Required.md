@@ -11,14 +11,22 @@ documentation: UG
 The following assembly must be referenced in your application to use the Syncfusion<sup>®</sup> .NET Document Chunking Library.
 
 <table>
-  <tr>
-    <th>Platform</th>
-    <th>Assembly</th>
-  </tr>
-  <tr>
-    <td>ASP.NET Core</td>
-    <td><code>Syncfusion.DocumentChunking</code></td>
-  </tr>
+<thead>
+<tr>
+<th>Platform(s)<br/><br/></th>
+<th>Assembly<br/><br/></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+ASP.NET Core, ASP.NET MVC, Blazor, Windows Forms, WPF, WinUI, and .NET MAUI
+<br/><br/></td>
+<td>
+Syncfusion.DocumentChunking
+<br/><br/></td>
+</tr>
+</tbody>
 </table>
 
 N> 1. Using NuGet packages provides frequent bug fixes and simplifies package upgrades.
