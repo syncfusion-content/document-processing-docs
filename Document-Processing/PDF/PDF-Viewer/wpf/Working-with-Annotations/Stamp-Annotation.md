@@ -292,7 +292,9 @@ private void AddStamp_Click(object sender, RoutedEventArgs e)
 
 ## Adding dynamic stamps using toolbar
 
-You can add a dynamic stamp containing the author name and current date and time by choosing a Dynamic Stamp from the collection available in the Dynamic Stamp category of the toolbar (as shown in the following screenshot). You can change the author name of the dynamic stamp by setting the current user of PdfViewer. Refer in [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/how-to/changing-the-current-user). By default, the author name is obtained from the stamp annotation's author name.
+You can add a dynamic stamp containing the author name and the current date time by selecting a stamp from the Dynamic Stamp category in the toolbar, as shown in the following screenshot.
+
+N> The author name can be customized either by changing the annotation settings or by setting the PdfViewer's current user. For more information, refer to the [documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/how-to/changing-the-current-user). By default, the author name is taken from the stamp annotation's author property.
 
 ![Dynamic stamps](Annotation-images\dynamic-stamp.png)
 
@@ -313,14 +315,6 @@ private void AddDynamicStamp_Click(object sender, RoutedEventArgs e)
 
 {% endhighlight %}
 {% endtabs %}
-
-Various types of Dynamic stamps:
-* Approved.
-* NotApproved.
-* Reviewed.
-* Received.
-* Revised.
-* Confidential.
 
 ## Events
 
