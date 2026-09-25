@@ -155,6 +155,7 @@ Use the `enableSyncScrolling` property to control whether the viewers stay synch
     [enableSyncScrolling]="false"
     resourceUrl="https://cdn.syncfusion.com/ej2/34.2.4/dist/ej2-pdfviewer-lib">
 </ejs-pdfcomparer>
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 

@@ -176,7 +176,7 @@ export class PdfViewerAdapter implements ICollaborationProvider {
 
 ### 3. Initialize the React PDF Viewer
 
-Create `App.jsx` with the complete React component. It uses the full lifecycle: initializes collaboration from `resourcesLoaded`, loads the room, joins it, retrieves the current PDF, and sends every supported PDF Viewer action from `documentChanged`.
+Create `App.jsx` with the complete React component. It uses the full life cycle: initializes collaboration from `resourcesLoaded`, loads the room, joins it, retrieves the current PDF, and sends every supported PDF Viewer action from `documentChanged`.
 
 {% tabs %}
 {% highlight js tabtitle="App.jsx" %}

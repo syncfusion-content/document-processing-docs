@@ -23,7 +23,7 @@ This topic explains how to connect the Vue PDF Viewer to the Node.js Collaborati
 ### 1. Install the client packages
 
 ```bash
-npm install @syncfusion/ej2-collaborator @syncfusion/ej2-pdf @xmldom/xmldom
+npm install ej2-collaborator-server
 ```
 
 ### 2. Add the PDF Viewer adapter
@@ -137,7 +137,7 @@ export class PdfViewerAdapter implements ICollaborationProvider {
 
 ### 3. Initialize the Vue PDF Viewer
 
-The following example uses the complete Vue lifecycle: it initializes collaboration from `mounted`, loads the room, joins it, retrieves the current PDF, and sends every supported PDF Viewer action from `documentChanged`.
+The following example uses the complete Vue life cycle: it initializes collaboration from `mounted`, loads the room, joins it, retrieves the current PDF, and sends every supported PDF Viewer action from `documentChanged`.
 
 ```vue
 <template>
@@ -277,7 +277,9 @@ npm install ej2-collaborator-server
 
 Create `adapters/PdfViewerAdapter.js` with the following server adapter structure. It stores each complete request envelope, broadcasts it unchanged, and replays pending operations against the source PDF during save.
 
-```js
+{% tabs %}
+{% highlight html tabtitle="JS" %}
+{% raw %}
 const { PdfDocument, PdfRotationAngle, DataFormat } = require('@syncfusion/ej2-pdf');
 const { DOMParser, XMLSerializer } = require('@xmldom/xmldom');
 
@@ -403,7 +405,9 @@ class PdfViewerAdapter {
         await this.storageService.storePdfAsync(buffer, request.fileName || 'document.pdf', request.roomName);
     }
 }
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 Complete `_applyFormFieldUpdates` with the PDF-specific form field creation, update, and delete logic from the running server implementation. The common server manages Redis, transport, room membership, versioning, and the save worker.
 
@@ -411,7 +415,9 @@ Complete `_applyFormFieldUpdates` with the PDF-specific form field creation, upd
 
 Create `controllers/collaborative-editing-controller.js`:
 
-```js
+{% tabs %}
+{% highlight html tabtitle="JS" %}
+{% raw %}
 function registerRoutes(app, actionService, adapter, transport) {
     app.post('/api/CollaborativeEditing/ImportFile', async (req, res) => {
         try {
@@ -466,11 +472,15 @@ function registerPdfDocumentRoutes(app, pdfStorageService) {
 }
 
 module.exports = { registerRoutes, registerPdfDocumentRoutes };
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ### 4. Start the server
 
-```js
+{% tabs %}
+{% highlight html tabtitle="JS" %}
+{% raw %}
 const cors = require('cors');
 const { CollaborationServer } = require('ej2-collaborator-server');
 const PdfViewerAdapter = require('./adapters/PdfViewerAdapter');
@@ -487,9 +497,9 @@ server.app.use(cors());
 registerRoutes(server.app, server.actionService, adapter, server);
 registerPdfDocumentRoutes(server.app, pdfStorageService);
 server.start();
-```
-
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/Collaborative%20Editing).
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ## See Also
 
