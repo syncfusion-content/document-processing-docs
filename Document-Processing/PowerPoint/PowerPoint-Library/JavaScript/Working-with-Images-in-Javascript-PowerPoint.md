@@ -8,7 +8,7 @@ documentation: UG
 
 # Working with Images in JavaScript PowerPoint
 
-The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) provides comprehensive support to add, replace, and remove images in a PowerPoint slide, enabling complete control over image management within presentations.
+The `JavaScript PowerPoint Library` provides comprehensive support to add, replace, and remove images in a PowerPoint slide, enabling complete control over image management within presentations.
 
 ## Adding Images
 
@@ -25,17 +25,13 @@ import { fileURLToPath } from 'node:url';
 import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-
-// The JS library expresses shape/picture bounds in EMU (914400 EMU = 1 inch).
-// The original .NET snippet used points; convert with 1 pt = 12700 EMU so the
-// picture renders at the intended visible size.
-const PT = 12700; // EMU per point
-
+// EMU per point
+const PT = 12700; 
 // Creates an instance of Presentation.
 const pptxDoc = Presentation.create();
 // Adds a blank slide.
 const slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
-// Reads the picture bytes (JS has no FileStream; read the file directly).
+// Reads the picture bytes.
 const pictureBytes = readFileSync(resolve(__dirname, 'Data/Image.jpg'));
 // Adds the picture to the slide by specifying its size and position.
 const picture = slide.shapes.addPicture({
@@ -45,7 +41,6 @@ const picture = slide.shapes.addPicture({
 // Saves the PowerPoint Presentation to a file.
 const outputPath = resolve(__dirname, 'Data/PictureSample.pptx');
 await pptxDoc.save(outputPath);
-console.log('Saved:', outputPath);
 
 {% endhighlight %}
 {% endtabs %}
@@ -65,7 +60,6 @@ import { fileURLToPath } from 'node:url';
 import { open } from '@syncfusion/ej2-pptx';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-
 // Opens an existing PowerPoint Presentation.
 const bytes = readFileSync(resolve(__dirname, 'Data/ReplacePicInput.pptx'));
 const pptxDoc = await open(bytes);
@@ -81,7 +75,6 @@ picture.retargetEmbedded({ data: newBytes, contentType: 'image/jpeg' });
 // Saves the PowerPoint Presentation to a file.
 const outputPath = resolve(__dirname, 'Data/PictureReplaced.pptx');
 await pptxDoc.save(outputPath);
-console.log('Saved:', outputPath);
 
 {% endhighlight %}
 {% endtabs %}
@@ -101,7 +94,6 @@ import { fileURLToPath } from 'node:url';
 import { open } from '@syncfusion/ej2-pptx';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-
 // Opens an existing PowerPoint Presentation.
 const bytes = readFileSync(resolve(__dirname, 'Data/Sample.pptx'));
 const pptxDoc = await open(bytes);
@@ -118,7 +110,6 @@ for (const shape of slide.shapes) {
 // Saves the PowerPoint Presentation to a file.
 const outputPath = resolve(__dirname, 'Data/PictureRemoved.pptx');
 await pptxDoc.save(outputPath);
-console.log('Saved:', outputPath);
 
 {% endhighlight %}
 {% endtabs %}

@@ -22,12 +22,8 @@ The following code example demonstrates how to add an AutoShape to the shape col
 import { readFileSync } from 'node:fs';
 import { Presentation, SlideLayoutType, AutoShapeType } from '@syncfusion/ej2-pptx';
 
-// The JS library expresses shape/picture bounds in EMU (914400 EMU = 1 inch).
-// The original .NET snippet used points; convert with 1 pt = 12700 EMU so the
-// shape and picture render at the intended visible size.
 // EMU per point
 const PT = 12700; 
-
 // Creates an instance for PowerPoint.
 const pptxDoc = Presentation.create();
 // Adds a blank slide to the Presentation.
@@ -64,7 +60,6 @@ import { open } from '@syncfusion/ej2-pptx';
 // Loads or opens a PowerPoint Presentation.
 const bytes = readFileSync('temp/Data/Sample.pptx');
 const pptxDoc = await open(bytes);
-
 // Iterates through the shapes in a slide and detects their type.
 const slide = pptxDoc.slides[0];
 for (const shape of slide.shapes) {
@@ -95,10 +90,7 @@ import { open } from '@syncfusion/ej2-pptx';
 // Loads or opens a PowerPoint Presentation.
 const bytes = readFileSync('temp/Data/Sample.pptx');
 const pptxDoc = await open(bytes);
-
-// Iterates through the shapes in a slide and removes the first AutoShape
-// that is not a placeholder (placeholders are refuse-by-default per the
-// library's remove matrix).
+// Iterates through the shapes in a slide and removes the first AutoShape that is not a placeholder
 const slide = pptxDoc.slides[0];
 for (const shape of slide.shapes) {
     if (shape.kind === 'shape' && !shape.isPlaceholder) {
@@ -106,7 +98,6 @@ for (const shape of slide.shapes) {
         break;
     }
 }
-
 // Saves the Presentation to the file system.
 await pptxDoc.save('ShapeOutput2.pptx');
 
