@@ -129,11 +129,11 @@ The following code sample shows how to apply different typed border, colors and 
 
 ## Text Overflow
 
-When the content of a cell exceeds the available column width, the Spreadsheet automatically displays the text across adjacent empty cells. This behavior helps improve readability without changing the column width.
+When cell content exceeds the column width, the Spreadsheet automatically displays the overflowing text across adjacent empty cells. This preserves readability without altering the column width.
 
-Text overflow is displayed only when the adjacent cells are empty. If a neighboring cell contains a value, formula, or merged range, the overflow is clipped at the boundary cell.
+Text overflows only into adjacent empty cells. If a neighboring cell contains a value, formula, or merged range, the text is clipped at the cell boundary.
 
-Text overflow is supported for plain text, rich text, hyperlinks, and RTL layouts, and is automatically updated when cell content or worksheet layout changes.
+Text overflow is supported for plain text, rich text, hyperlinks, and RTL (right-to-left) layouts, and updates automatically whenever cell content, formatting, or column widths change.
 
 The following code example demonstrates text overflow in the Spreadsheet.
 

@@ -231,11 +231,11 @@ The following code example shows the style formatting in text and cells of the s
 
 ## Text Overflow
 
-When the content of a cell exceeds the available column width, the Spreadsheet automatically displays the text across adjacent empty cells. This behavior helps improve readability without changing the column width.
+When cell content exceeds the column width, the Spreadsheet automatically displays the overflowing text across adjacent empty cells. This preserves readability without altering the column width.
 
-Text overflow is displayed only when the adjacent cells are empty. If a neighboring cell contains a value, formula, or merged range, the overflow is clipped at the boundary cell.
+Text overflows only into adjacent empty cells. If a neighboring cell contains a value, formula, or merged range, the text is clipped at the cell boundary.
 
-Text overflow is supported for plain text, rich text, hyperlinks, and RTL layouts, and is automatically updated when cell content or worksheet layout changes.
+Text overflow is supported for plain text, rich text, hyperlinks, and RTL (right-to-left) layouts, and updates automatically whenever cell content, formatting, or column widths change.
 
 The following code example demonstrates text overflow in the Spreadsheet.
 
@@ -326,9 +326,9 @@ The following options can be given for the icon sets as type,
 
 ### Formula-based Conditional Format
 
-Formula-based Conditional Formatting enables you to apply custom formatting rules using formulas through the `conditionalFormats` property in the sheet model or the [`conditionalFormat()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#conditionalformat) method.
+Formula-based Conditional Formatting allows you to apply custom formatting rules using formulas through the `conditionalFormats` property in the sheet model or the [`conditionalFormat()`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#conditionalformat) method.
 
-When the specified formula evaluates to `TRUE`, the defined formatting is automatically applied to the target cells. This allows you to create advanced highlighting scenarios based on values from other cells or ranges within the worksheet.
+When the specified formula rule evaluates to `TRUE`, the defined formatting is automatically applied to the target cells. This allows you to create advanced highlighting scenarios based on values from other cells or ranges within the worksheet.
 
 ### Custom Format
 
