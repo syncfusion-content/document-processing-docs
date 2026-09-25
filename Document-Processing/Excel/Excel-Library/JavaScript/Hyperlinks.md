@@ -10,7 +10,7 @@ documentation: ug
 
 Hyperlinks turn a cell into a clickable link to a web page, file, network path, or location inside the workbook. You can set the destination, the text users see, optional hover text, and an in-document location when needed.
 
-`HyperlinkType` is the string union `'url' | 'file' | 'unc' | 'workbook'`. When `type` is omitted, the library infers it from `target` (for example `https://…` → `'url'`, `mailto:…` as a URL-style external link, UNC paths → `'unc'`, and workbook locations → `'workbook'`).
+`HyperlinkType` is a string union that identifies URL, file, network, and workbook links. When `type` is omitted, the library determines the hyperlink type from `target`.
 
 N> Setting `displayText` on a single-cell hyperlink also updates that cell’s visible value.
 
@@ -63,7 +63,7 @@ await workbook.save('./HyperlinkUrl.xlsx');
 {% endhighlight %}
 {% endtabs %}
 
-Email links use a `mailto:` target with the same URL pattern:
+Email links follow the same URL pattern:
 
 ```ts
 sheet.cell('A2').hyperlink = {

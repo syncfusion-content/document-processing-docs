@@ -65,6 +65,8 @@ const count = sorter.count;
 const existing = sheet.dataSorter;
 sheet.removeDataSorter();
 {% endhighlight %}
+{% endtabs %}
+
 Set `condition.sortBy` to `'value'`, `'cellColor'`, `'fontColor'`, or `
 
 `SortBy` is `'value' | 'cellColor' | 'fontColor' | 'icon'`. A worksheet holds at most one sort-state record. Use `sorter.clear()`, `remove`, or `removeAt` to drop conditions without removing the sorter itself.

@@ -131,7 +131,7 @@ await workbook.save('./ProtectedRanges.xlsx');
 
 `ProtectedRanges` also supports `count`, `get(index)`, `remove`, `removeAt`, and `clear`.
 
-N> `sqref` is the OOXML attribute name for the editable cell areas. Keep this identifier as-is when reading or writing protected-range metadata.
+N> Editable cell areas are stored in the protected-range metadata. Preserve the original identifier when reading or writing this metadata.
 
 ## Protect a workbook
 
