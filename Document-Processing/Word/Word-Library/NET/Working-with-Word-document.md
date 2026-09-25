@@ -1028,13 +1028,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 You can embed the fonts used in a Word document directly into the saved file by setting `document.SaveOptions.EmbedFonts` to `true`. If the required font is available in the current environment, it will be embedded in the document. As a result, when the document is opened on another machine, it maintains the same appearance and formatting by using the embedded font.
 
-N> Embedding font is supported on both Windows and cross-platform (ASP.NET Core, Blazor, .NET MAUI, and WinUI) environments.
-N> For cross-platform applications, install the [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) NuGet package.
-N> Initialize the `DocIORenderer` to embed fonts in the document.
-N> It is supported only for DOCX format document
-N> Embedding font is not supported on the UWP platform.
-
-Use the following code to embed fonts before saving the document.
+Use the following code to embed fonts in the Word document.
 
 {% tabs %}
 
@@ -1077,7 +1071,12 @@ End Using
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub.
+N>
+* Embedding fonts is supported on both cross-platform environments.
+* For cross-platform applications, install either the [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) NuGet package or the [Syncfusion.DocIORenderer.NET](https://www.nuget.org/packages/Syncfusion.DocIORenderer.NET) NuGet package based on your project requirements.
+* Initialize the `DocIORenderer` to embed fonts in the document.
+* This feature is supported only for the DOCX format document.
+* Embedding fonts is not supported on the UWP platform.
 
 ## Online Demo
 
