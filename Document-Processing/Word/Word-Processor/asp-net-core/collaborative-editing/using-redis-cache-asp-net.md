@@ -85,11 +85,7 @@ The transport is selected when constructing the `CollaborationClient` on the cli
 
 The client side uses the shared [Collaboration Client](https://help.syncfusion.com/document-processing/collaborator/collaboration-client) (`@syncfusion/ej2-collaborator`) together with a DOCX Editor adapter that implements the `ICollaborationProvider` interface. The Collaboration Client handles transport connectivity, room management, and synchronization, while the adapter bridges the DOCX Editor to the common collaboration framework.
 
-### Step 1: Integrate DOCX Editor
-
-Refer to the following documentation to get started with the [ASP.NET Core DOCX Editor](https://help.syncfusion.com/document-processing/word/word-processor/asp-net-core/getting-started-core).
-
-### Step 2: Enable collaborative editing
+### Step 1: Enable collaborative editing in DOCX Editor
 
 To enable collaborative editing, inject `CollaborativeEditingHandler` and set the `enableCollaborativeEditing` property to true in the DOCX Editor.
 
@@ -101,7 +97,7 @@ The following code snippet demonstrates how to enable collaborative editing in t
 {% endhighlight %}
 {% endtabs %}
 
-### Step 3: Install the Collaboration Client package
+### Step 2: Install the Collaboration Client package
 
 Install the shared [Collaboration Client](https://www.npmjs.com/package/@syncfusion/ej2-collaborator) npm package in your application.
 
@@ -113,7 +109,7 @@ npm install @syncfusion/ej2-collaborator
 {% endhighlight %}
 {% endtabs %}
 
-### Step 4: Create the Document Editor adapter
+### Step 3: Create the Document Editor adapter
 
 The adapter acts as a bridge between the Collaboration Client and the DOCX Editor. It implements the `ICollaborationProvider` interface and is responsible for loading the document from the server, bridging local edits to the editor's sender, and applying remote collaboration actions to the editor.
 
@@ -181,7 +177,7 @@ export class DocumentEditorAdapter implements ICollaborationProvider {
 
 ```
 
-### Step 5: Wire the Collaboration Client
+### Step 4: Wire the Collaboration Client
 
 With collaborative editing enabled in the DOCX Editor (Step 2), create the adapter and initialize the [Collaboration Client](https://www.syncfusion.com/document-processing/word/collaborator/collaboration-client) with the desired transport. The Collaboration Client connects to the server, joins the collaboration room, and tracks user join/leave events. After the document is loaded through the adapter, join the collaboration room.
 
