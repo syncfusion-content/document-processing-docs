@@ -8,9 +8,11 @@ documentation: ug
 
 # Merge Cells in JavaScript Excel
 
-Merge a rectangular area with `sheet.range(ref).merge()`, or manage merges through `sheet.merges`.
+Merging combines a rectangular block of adjacent cells into one display area. You can merge or unmerge ranges and review every merged region on the worksheet.
 
 ## Merge and unmerge a range
+
+Merging combines adjacent cells into a single cell area. The value and formatting of the top-left cell are retained for the merged area. Unmerging restores the individual cells.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -40,6 +42,8 @@ sheet.range('A1:C1').unmerge();
 {% endtabs %}
 
 ## Work with the merges collection
+
+Merged cells combine two or more adjacent cells into a single area. You can inspect merged regions to understand how cells are grouped within a worksheet.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

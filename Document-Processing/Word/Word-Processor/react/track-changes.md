@@ -305,6 +305,99 @@ createRoot(document.getElementById('sample')).render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
+## Custom Colors for Track Changes
+
+You can set an array of colors to show track changes such as insertions and deletions in the DOCX editor. Each author is assigned a color in order: the first author gets the first color, the second author gets the next, and so on. If there are more authors than colors, the assignment starts again from the beginning of the array.
+
+The following example illustrates how to set the color order for track changes in the DOCX Editor
+
+```typescript
+import { useRef, useEffect } from 'react';
+import {
+  DocumentEditorContainerComponent,
+  Toolbar,
+  Inject
+} from '@syncfusion/ej2-react-documenteditor';
+
+function App() {
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    if (containerRef.current) {
+      // Access the underlying DocumentEditor instance
+      const editor = containerRef.current.documentEditorSettings;
+
+      // Update revision colors dynamically
+      editor.revisionSettings.revisionColors = [
+        '#0000ff',
+        '#bb00ff',
+        '#c14f16'
+      ];
+    }
+  }, []);
+
+  return (
+    <DocumentEditorContainerComponent
+      ref={containerRef}
+      height={'590px'}
+      enableToolbar={true}
+      serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
+    >
+      <Inject services={[Toolbar]} />
+    </DocumentEditorContainerComponent>
+  );
+}
+
+export default App;
+```
+
+## Set colors for revision types
+
+By default, the DOCX Editor uses author-based colors for tracked changes. You can also customize colors for specific revision types, such as inserted content, deleted content, inserted table rows, and deleted table rows.
+ 
+The following example shows how to customize revision type colors instead of using the default author-based colors.
+ 
+```typescript
+import {
+  DocumentEditorContainerComponent,
+  Toolbar
+} from '@syncfusion/ej2-react-documenteditor';
+import { useRef } from 'react';
+
+function App() {
+  const containerRef = useRef<DocumentEditorContainerComponent>(null);
+
+  const onCreated = () => {
+    const container = containerRef.current;
+
+    if (container) {
+      container.documentEditor.revisionSettings = {
+        insertRevisionColor: '#22C55E',
+        deleteRevisionColor: '#EF4444',
+        insertedRowColor: '#7C3AED',
+        deletedRowColor: '#F97316'
+      };
+    }
+  };
+
+  return (
+    <DocumentEditorContainerComponent
+      id="container"
+      ref={containerRef}
+      enableToolbar={true}
+      created={onCreated}
+      serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
+    />
+  );
+}
+
+export default App;
+```
+> **Note**
+> * These settings only affect how revisions are displayed in the DOCX Editor and are not stored in the document.
+> * By default, all revision types use author-specific colors (`'byAuthor'`).
+
+
 ## Filter Changes by User
 
 The built-in review panel in the DOCX Editor supports filtering changes based on the user.
