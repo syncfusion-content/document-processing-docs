@@ -6,6 +6,7 @@ platform: document-processing
 control: SfPdfViewer
 documentation: ug
 keywords: .net maui pdf viewer, customize toolbar, show hide toolbar, add toolbar item, remove toolbar item, maui pdf viewer toolbar
+appliesto: PDF Viewer SDK
 ---
 
 # Customize the Toolbar in .NET MAUI PDF Viewer

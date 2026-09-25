@@ -5,6 +5,7 @@ description: Style PDF form fields in the Angular PDF Viewer by configuring font
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Customize Form Field Appearance in Angular PDF Viewer

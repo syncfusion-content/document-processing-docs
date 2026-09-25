@@ -4,6 +4,7 @@ description: Load and save operations section describes the available ways to op
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Loading and Saving Workbooks in .NET Excel Library

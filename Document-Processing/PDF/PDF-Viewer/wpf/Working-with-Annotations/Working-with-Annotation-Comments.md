@@ -5,6 +5,7 @@ description: The annotation comments feature in WPF PDF Viewer provides a dedica
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Annotation Comments in WPF PDF Viewer

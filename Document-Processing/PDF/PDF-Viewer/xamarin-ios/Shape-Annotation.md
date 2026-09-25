@@ -5,6 +5,7 @@ description: PDF viewer Xamarin.iOS allows user to add, move and delete shapes s
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 #  Add & modify shapes using PDF viewer Xamarin.iOS

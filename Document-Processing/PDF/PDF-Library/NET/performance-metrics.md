@@ -4,6 +4,7 @@ description: Learn about the detailed performance metrics and processing capabil
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Performance Metrics in .NET PDF Library

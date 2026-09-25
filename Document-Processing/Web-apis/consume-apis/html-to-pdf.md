@@ -4,6 +4,7 @@ description: Convert HTML with full CSS, JavaScript, and media support into pixe
 platform: document-processing
 control: general
 documentation: UG
+appliesto: Document SDK
 ---
 # Converting HTML to PDF Using Syncfusion Web API 
 

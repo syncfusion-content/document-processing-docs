@@ -5,6 +5,7 @@ description: Improve performance in Syncfusion React Spreadsheet by using suspen
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Suspend and Resume UI Refresh in React Spreadsheet

@@ -6,6 +6,7 @@ platform: document-processing
 control: Table 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Tables in TypeScript DOCX Editor

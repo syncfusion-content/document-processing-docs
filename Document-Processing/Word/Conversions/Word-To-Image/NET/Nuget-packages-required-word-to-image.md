@@ -4,6 +4,7 @@ description: Explain the NuGet packages required for Word-to-image conversion us
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # NuGet Packages Required to Convert Word to Image

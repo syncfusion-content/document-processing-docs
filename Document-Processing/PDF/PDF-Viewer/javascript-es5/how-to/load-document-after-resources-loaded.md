@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Load a Document After Resources Are Ready in JavaScript (ES5)

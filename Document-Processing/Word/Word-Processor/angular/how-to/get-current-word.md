@@ -6,6 +6,7 @@ platform: document-processing
 control: Get current word
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Get Current Word in Angular DOCX Editor

@@ -6,6 +6,7 @@ platform: document-processing
 control: Retrieve the Bookmark Content as Text
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Retrieve Bookmark Content as Text in JavaScript DOCX Editor

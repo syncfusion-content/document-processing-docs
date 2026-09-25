@@ -5,6 +5,7 @@ description: The annotation feature in SfPdfViewer allows users to add, edit, an
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Add, Remove, Edit Annotations in Flutter PDF Viewer

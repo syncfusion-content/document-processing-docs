@@ -5,6 +5,7 @@ description: Configure the WPF Spreadsheet MCP Server to access documentation, A
 platform: WindowsForms
 control: Getting started with Syncfusion WinForms Spreadsheet MCP Server
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # MCP Server in Windows Forms Spreadsheet

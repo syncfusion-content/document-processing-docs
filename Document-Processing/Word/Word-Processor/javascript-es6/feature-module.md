@@ -6,6 +6,7 @@ platform: document-processing
 control: Feature Module
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Feature Modules in TypeScript DOCX Editor

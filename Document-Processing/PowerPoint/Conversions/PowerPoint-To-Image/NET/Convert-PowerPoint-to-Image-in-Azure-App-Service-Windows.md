@@ -4,6 +4,7 @@ description: Convert PPTX to image in Azure App Service on Windows using .NET Co
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert PPTX to Image in Azure App Service on Windows

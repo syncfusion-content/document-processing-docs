@@ -4,6 +4,7 @@ description: Retrieve the first cell in the used range of an Excel worksheet usi
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to retrieve the first used cell in .NET Excel Library

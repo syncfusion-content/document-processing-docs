@@ -4,6 +4,7 @@ description: Programmatically protect an Excel workbook with a password using In
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Workbook Protection in .NET Excel Library

@@ -4,6 +4,7 @@ description: A complete list of events in the ASP.NET Core PDF Viewer, with desc
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Events in ASP.NET Core PDF Viewer

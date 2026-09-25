@@ -4,6 +4,7 @@ description: Zip all files in subfolders using the Syncfusion.Compression.Zip na
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to zip files in subfolders with Syncfusion Compression

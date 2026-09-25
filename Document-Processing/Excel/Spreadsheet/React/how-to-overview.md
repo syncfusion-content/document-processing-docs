@@ -5,6 +5,7 @@ description: In this section, you can find answers to frequently asked questions
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # React Spreadsheet – How-to Guides Overview

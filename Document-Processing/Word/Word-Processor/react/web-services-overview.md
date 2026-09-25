@@ -6,6 +6,7 @@ control: Web services
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Web Services in Syncfusion React DOCX Editor Control

@@ -6,6 +6,7 @@ description: The collaborative editing feature in ASP.NET Core DOCX Editor suppo
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Collaborative Editing in ASP.NET Core DOCX Editor with Redis

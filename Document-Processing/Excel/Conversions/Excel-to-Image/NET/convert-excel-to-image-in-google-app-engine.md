@@ -4,6 +4,7 @@ description: Google App Engine Excel to Image section explains how to convert Ex
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Excel to Image Conversion in Google App Engine using Excel Library

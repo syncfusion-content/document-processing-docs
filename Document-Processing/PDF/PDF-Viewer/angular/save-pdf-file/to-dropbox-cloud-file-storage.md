@@ -6,6 +6,7 @@ platform: document-processing
 control: Save PDF files to Dropbox cloud file storage
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Save PDF Files to Dropbox in Angular PDF Viewer

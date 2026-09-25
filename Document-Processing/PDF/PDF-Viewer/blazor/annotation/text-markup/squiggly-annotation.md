@@ -5,6 +5,7 @@ description: Learn how to enable, apply, customize, and manage Squiggly annotati
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Squiggly Annotation in Blazor PDF Viewer 

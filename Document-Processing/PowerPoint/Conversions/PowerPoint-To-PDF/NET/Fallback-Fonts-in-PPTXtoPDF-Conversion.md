@@ -4,6 +4,7 @@ description: Learn about how to specify fallback fonts during PowerPoint to PDF 
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Fallback fonts in PowerPoint to PDF conversion

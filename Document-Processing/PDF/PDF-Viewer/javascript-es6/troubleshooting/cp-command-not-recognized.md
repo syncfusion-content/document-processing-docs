@@ -5,6 +5,7 @@ description: Resolve the cp is not recognized error in the JavaScript (ES6) PDF 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Resolve cp Not Recognized Error in JavaScript (ES6) PDF Viewer

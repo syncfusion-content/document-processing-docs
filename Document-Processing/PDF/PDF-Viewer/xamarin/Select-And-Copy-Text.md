@@ -5,6 +5,7 @@ description: Learn here all about Select and Copy the Text support in Syncfusion
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Select and Copy the Text in Xamarin Pdf Viewer

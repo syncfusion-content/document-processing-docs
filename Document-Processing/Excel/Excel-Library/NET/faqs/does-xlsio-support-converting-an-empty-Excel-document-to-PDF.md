@@ -4,6 +4,7 @@ description: Empty workbook conversion explains whether Syncfusion .NET Excel Li
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Empty Excel to PDF Conversion in .NET Excel Library

@@ -5,6 +5,7 @@ description: Learn about the supported file formats in ASP.NET MVC DOCX Editor f
 platform: document-processing
 control: Unsupported file
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # Supported File Formats in ASP.NET MVC DOCX Editor

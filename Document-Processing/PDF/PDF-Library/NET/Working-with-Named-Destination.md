@@ -4,6 +4,7 @@ description: Learn how to add, remove, and modify named destinations in PDF docu
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Named Destinations in .NET PDF Library
 

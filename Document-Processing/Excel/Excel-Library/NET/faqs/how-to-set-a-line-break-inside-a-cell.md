@@ -4,6 +4,7 @@ description: Set a line break inside a cell using the Syncfusion .NET Excel Libr
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to set line breaks in cells in .NET Excel Library

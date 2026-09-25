@@ -5,6 +5,7 @@ description: Learn about changing column header text in the Syncfusion React Spr
 control: Rows and Columns 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Change Column Header Text in React Spreadsheet

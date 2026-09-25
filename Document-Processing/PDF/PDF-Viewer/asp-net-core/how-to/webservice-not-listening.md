@@ -5,6 +5,7 @@ description: Resolve the Web-service is not listening error in the ASP.NET Core 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Resolve the Web-Service Is Not Listening Error in ASP.NET Core

@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: touch,touch-manipulation,manipulation-mode,manipulationmodes
+appliesto: DOCX Editor SDK
 ---
 # Touch in UWP DOCX Editor
 

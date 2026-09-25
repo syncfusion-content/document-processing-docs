@@ -5,6 +5,7 @@ description: Explore all events available in the Blazor PDF Viewer , including l
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Events in Blazor PDF Viewer 

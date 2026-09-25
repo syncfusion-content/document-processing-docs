@@ -5,6 +5,7 @@ description: Retrieve the loaded PDF document instance in the ASP.NET Core PDF V
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Retrieve the Loaded Document in ASP.NET Core PDF Viewer

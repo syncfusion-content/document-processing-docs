@@ -4,6 +4,7 @@ description: Vary colors by point for line and column charts using the Syncfusio
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to vary colors by point in .NET Excel Library

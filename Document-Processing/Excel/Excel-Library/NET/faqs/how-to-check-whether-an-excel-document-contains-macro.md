@@ -4,6 +4,7 @@ description: Check whether an Excel document contains macros using the Syncfusio
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to check for macros in .NET Excel Library

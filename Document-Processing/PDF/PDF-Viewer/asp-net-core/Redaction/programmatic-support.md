@@ -5,6 +5,7 @@ description: Use the programmatic APIs for Organize Pages in the ASP.NET Core PD
 platform: document-processing
 control: PdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Programmatic Support for Organize Pages in ASP.NET Core PDF Viewer

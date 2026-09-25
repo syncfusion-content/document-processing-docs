@@ -4,6 +4,7 @@ description: Linux Excel to Image section explains how to convert Excel document
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Excel to Image Conversion in Linux using Excel Library
 

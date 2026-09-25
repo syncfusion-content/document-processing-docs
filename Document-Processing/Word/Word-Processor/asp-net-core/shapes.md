@@ -5,6 +5,7 @@ description: The shapes feature in ASP.NET Core DOCX Editor preserve shape eleme
 platform: document-processing
 control: Shapes
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

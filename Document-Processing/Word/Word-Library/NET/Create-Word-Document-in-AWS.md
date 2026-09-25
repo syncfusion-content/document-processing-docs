@@ -4,6 +4,7 @@ description: Describe how to convert Word documents to images in WPF application
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Word document in AWS

@@ -5,6 +5,7 @@ platform: document-processing
 control: Presentation
 documentation: UG
 keywords: Working with Notes
+appliesto: Document SDK
 ---
 
 # Working with PowerPoint Notes

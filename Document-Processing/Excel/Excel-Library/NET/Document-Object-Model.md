@@ -4,6 +4,7 @@ description: The document object model page describes the structure used to crea
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Document Object Model in .NET Excel Library
 

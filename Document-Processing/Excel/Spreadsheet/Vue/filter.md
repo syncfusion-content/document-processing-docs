@@ -5,6 +5,7 @@ description: Filter and analyze spreadsheet data efficiently using built-in filt
 control: Filter 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Filtering in Vue Spreadsheet

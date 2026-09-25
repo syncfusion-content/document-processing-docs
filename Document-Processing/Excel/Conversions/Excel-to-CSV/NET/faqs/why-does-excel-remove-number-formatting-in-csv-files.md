@@ -4,6 +4,7 @@ description: CSV number formatting explains why Microsoft Excel removes number f
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # CSV Number Formatting in .NET Excel Library

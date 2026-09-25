@@ -4,6 +4,7 @@ description: Learn how to create tagged PDF documents programmatically to comply
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Tagged PDF in .NET PDF Library

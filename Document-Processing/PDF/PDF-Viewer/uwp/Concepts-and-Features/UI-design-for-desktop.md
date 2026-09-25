@@ -5,6 +5,7 @@ description: Learn here all about Desktop support in Syncfusion<sup>®</sup> UWP
 platform: document-processing
 control: PDF viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Desktop in UWP Pdf Viewer

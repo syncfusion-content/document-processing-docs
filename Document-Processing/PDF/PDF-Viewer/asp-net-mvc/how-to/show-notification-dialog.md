@@ -5,6 +5,7 @@ description: Show a notification dialog in the ASP.NET MVC PDF Viewer after a sa
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Show a Notification Dialog in ASP.NET MVC PDF Viewer

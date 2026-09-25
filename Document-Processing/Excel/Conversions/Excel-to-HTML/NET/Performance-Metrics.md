@@ -4,6 +4,7 @@ description: Excel to HTML benchmark results provides the performance metrics fo
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Performance Metrics for Excel to HTML in .NET Excel Library

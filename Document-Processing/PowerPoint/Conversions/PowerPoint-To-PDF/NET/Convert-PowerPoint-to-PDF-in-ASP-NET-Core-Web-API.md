@@ -4,6 +4,7 @@ description: Convert PowerPoint to PDF in ASP.NET Core Web API using .NET Core P
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert PowerPoint to PDF in ASP.NET Core Web API

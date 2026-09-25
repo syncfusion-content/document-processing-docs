@@ -4,6 +4,7 @@ description: Handle empty display text in Excel hyperlinks using the Syncfusion 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to handle empty hyperlink text in .NET Excel Library

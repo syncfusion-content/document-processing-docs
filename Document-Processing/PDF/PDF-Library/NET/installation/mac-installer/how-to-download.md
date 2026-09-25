@@ -5,6 +5,7 @@ description: Learn how to download the Syncfusion PDF Mac installer using your l
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
+appliesto: Document SDK
 --- 
 
 # How to Download Syncfusion PDF Mac Installer

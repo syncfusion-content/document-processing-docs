@@ -4,6 +4,7 @@ description: Learn how to work with content controls, such as rich text, date pi
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Content Controls in .NET Word

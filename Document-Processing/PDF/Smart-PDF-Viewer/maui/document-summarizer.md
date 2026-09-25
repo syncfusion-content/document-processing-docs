@@ -6,6 +6,7 @@ platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
 keywords: .net maui smart pdf viewer, ai summarization, document summarizer maui, ai assist view maui, question answering pdf maui
+appliesto: PDF Viewer SDK
 ---
 
 # Document Summaries and Q&A in .NET MAUI Smart PDF Viewer

@@ -5,6 +5,7 @@ description: Learn how to enable, draw, customize, and manage Area annotations i
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Add Area Annotations in Blazor PDF Viewer 

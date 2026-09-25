@@ -4,6 +4,7 @@ description: Learn about the overview of the Syncfusion Java Word Document Proce
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 # About Syncfusion Java Word Document Processing Library
 

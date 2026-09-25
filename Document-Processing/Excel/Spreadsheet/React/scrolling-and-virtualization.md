@@ -5,6 +5,7 @@ description: Learn about scrolling and virtualization in the Syncfusion React Sp
 control: Scrolling
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Scrolling and Virtualization in React Spreadsheet

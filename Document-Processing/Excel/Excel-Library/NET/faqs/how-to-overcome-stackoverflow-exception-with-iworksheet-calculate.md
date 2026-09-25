@@ -4,6 +4,7 @@ description: Overcome StackOverflowException while calling the Calculate method 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to fix StackOverflow errors in .NET Excel Library

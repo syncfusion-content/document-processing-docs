@@ -4,6 +4,7 @@ description: Format as Before or After behavior describes why cells are not merg
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Cell Merging During Row and Column Insertions in .NET Excel Library

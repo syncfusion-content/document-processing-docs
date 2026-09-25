@@ -4,6 +4,7 @@ description: Open and save Presentation in AWS Elastic Beanstalk using .NET Core
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Open and Save Presentation in AWS Elastic Beanstalk

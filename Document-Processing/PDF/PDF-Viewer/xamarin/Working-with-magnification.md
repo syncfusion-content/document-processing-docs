@@ -5,6 +5,7 @@ description: Learn here all about Working with magnification support in Syncfusi
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Working with magnification in Xamarin Pdf Viewer

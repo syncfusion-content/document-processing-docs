@@ -4,6 +4,7 @@ description: Blazor Excel file handling section explains how to load and save Ex
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Loading and Saving Workbooks in Blazor
 

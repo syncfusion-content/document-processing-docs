@@ -5,6 +5,7 @@ platform: document-processing
 control: DataExtraction
 documentation: UG
 keywords: Assemblies
+appliesto: Document SDK
 ---
 # Assemblies Required in Data Extraction
 

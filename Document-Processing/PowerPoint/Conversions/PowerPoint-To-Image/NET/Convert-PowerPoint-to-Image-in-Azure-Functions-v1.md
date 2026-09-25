@@ -4,6 +4,7 @@ description: Convert PPTX to image in Azure Functions v1 using .NET PowerPoint l
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert PowerPoint Presentation to Image in Azure Functions v1

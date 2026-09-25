@@ -6,6 +6,7 @@ control: Customize color picker in DOCX Editor
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 # How to Customize Color Picker in React DOCX Editor
 

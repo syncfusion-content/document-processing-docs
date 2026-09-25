@@ -4,6 +4,7 @@ description: Open and save Word document in AWS S3 Cloud Storage using Syncfusio
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Open and save Word document in AWS S3 Storage 

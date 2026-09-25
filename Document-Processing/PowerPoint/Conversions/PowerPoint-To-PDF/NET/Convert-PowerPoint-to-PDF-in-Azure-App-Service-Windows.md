@@ -4,6 +4,7 @@ description: Convert PPTX to PDF in Azure App Service on Windows using .NET Core
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert PowerPoint Presentation to PDF in Azure App Service on Windows

@@ -6,6 +6,7 @@ platform: document-processing
 control: Open document from AWS S3
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Open Documents from AWS S3 in TypeScript DOCX Editor

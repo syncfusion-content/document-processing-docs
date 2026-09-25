@@ -5,6 +5,7 @@ description: Enable or disable text resize inside form fields in the ASP.NET Cor
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Enable Resize Text in ASP.NET Core PDF Viewer

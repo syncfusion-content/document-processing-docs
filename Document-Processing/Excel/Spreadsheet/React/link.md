@@ -5,6 +5,7 @@ description: Learn about hyperlinks in the Syncfusion React Spreadsheet componen
 control: Link 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 # Hyperlink in React Spreadsheet
 

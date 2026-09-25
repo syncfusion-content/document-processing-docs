@@ -4,6 +4,7 @@ description: Convert PowerPoint to image in ASP.NET Core Web API using .NET Core
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert PowerPoint to Image in ASP.NET Core Web API

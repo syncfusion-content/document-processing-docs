@@ -6,6 +6,7 @@ platform: document-processing
 control: Document management
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Document Management in Angular DOCX Editor

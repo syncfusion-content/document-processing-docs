@@ -4,6 +4,7 @@ description: Learn how to modify the appearance of series in a chart in a PowerP
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Chart Series in PowerPoint

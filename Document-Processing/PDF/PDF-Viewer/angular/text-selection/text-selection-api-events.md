@@ -6,6 +6,7 @@ platform: document-processing
 control: Text selection
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Text Selection API and Events in Angular PDF Viewer

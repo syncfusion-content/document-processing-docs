@@ -5,6 +5,7 @@ description: Customize the annotation toolbar in the ASP.NET Core PDF Viewer to 
 platform: document-processing
 control: Annotation Toolbar Customization
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Customize the Annotation Toolbar in ASP.NET Core PDF Viewer

@@ -5,6 +5,7 @@ description: Find and replace cell content in the UWP Spreadsheet control to qui
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Find and Replace in UWP Spreadsheet 

@@ -5,6 +5,7 @@ description: Learn how to save PDF files to Azure Blob Storage using the Blazor 
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Save PDF file to Azure Blob Storage in Blazor PDF Viewer 

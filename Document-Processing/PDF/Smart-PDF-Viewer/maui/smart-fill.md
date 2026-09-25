@@ -6,6 +6,7 @@ platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
 keywords: .net maui smart pdf viewer, smart fill maui, ai form filling, automatic form fill, pdf forms maui
+appliesto: PDF Viewer SDK
 ---
 
 # Smart Fill in .NET MAUI Smart PDF Viewer

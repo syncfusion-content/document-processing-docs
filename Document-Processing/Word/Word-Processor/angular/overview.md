@@ -6,6 +6,7 @@ platform: document-processing
 control: Index 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # About Syncfusion Angular DOCX Editor Control

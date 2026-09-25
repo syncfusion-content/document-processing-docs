@@ -6,6 +6,7 @@ platform: document-processing
 control: Header footer 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Headers and Footers in JavaScript DOCX Editor

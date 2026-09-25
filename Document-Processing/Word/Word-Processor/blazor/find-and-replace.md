@@ -5,6 +5,7 @@ description: The find and replace feature in Blazor DOCX Editor helps users quic
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # Find and Replace in Blazor DOCX Editor

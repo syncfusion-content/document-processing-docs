@@ -4,6 +4,7 @@ description: Row and column limits describes the maximum supported range of rows
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Maximum Rows and Columns in .NET Excel Library

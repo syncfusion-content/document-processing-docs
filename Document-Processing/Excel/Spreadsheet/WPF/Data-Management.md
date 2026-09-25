@@ -5,6 +5,7 @@ description: Import worksheet data from DataTable sources and export spreadsheet
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Data Management in WPF Spreadsheet 

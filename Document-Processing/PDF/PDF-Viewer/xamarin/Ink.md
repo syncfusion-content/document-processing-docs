@@ -5,6 +5,7 @@ description: Learn here all about Ink annotations support in Syncfusion<sup>®</
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Ink annotations in Xamarin Pdf Viewer

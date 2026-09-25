@@ -7,6 +7,7 @@ platform: document-processing
 control: Enable Ruler
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Enable Ruler in JavaScript DOCX Editor

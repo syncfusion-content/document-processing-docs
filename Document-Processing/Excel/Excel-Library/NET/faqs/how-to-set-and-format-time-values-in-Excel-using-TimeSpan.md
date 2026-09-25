@@ -4,6 +4,7 @@ description: Learn how to set and format time values in Excel using TimeSpan in 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 # How to set time values using TimeSpan in .NET Excel Library
 You can set a TimeSpan value into an Excel worksheet cell and format it to display as time using the Syncfusion XlsIO library. The following code examples demonstrate how to do this in C# (cross-platform and Windows-specific) and VB.NET.

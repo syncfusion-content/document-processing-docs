@@ -5,6 +5,7 @@ description: EJ1 API migration in Angular Spreadsheet helps transition existing 
 platform: document-processing
 control: Ej1 api migration 
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # EJ1 API migration in Angular Spreadsheet 

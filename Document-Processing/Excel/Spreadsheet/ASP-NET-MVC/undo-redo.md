@@ -5,6 +5,7 @@ description: Learn how to revert and restore spreadsheet actions using undo and 
 platform: document-processing
 control: Undo Redo
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

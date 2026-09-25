@@ -6,6 +6,7 @@ platform: document-processing
 control: Ribbon Customization
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Customize Ribbon in Angular DOCX Editor

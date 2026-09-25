@@ -5,6 +5,7 @@ description: Use the pageRenderInitiate and pageRenderComplete events in the Rea
 control: PDF Viewer
 platform: document-processing
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Handle Page Render Events in React PDF Viewer

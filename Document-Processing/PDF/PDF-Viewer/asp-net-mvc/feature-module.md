@@ -5,6 +5,7 @@ description: Inject feature modules into the ASP.NET MVC PDF Viewer to enable on
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 

@@ -5,6 +5,7 @@ platform: document-processing
 control: PowerPoint
 documentation: UG
 keywords: Working with presentation library in Xamarin Platform
+appliesto: Document SDK
 ---
 # Create, read and edit a PowerPoint file in Xamarin
 

@@ -4,6 +4,7 @@ description: Custom paper size exception describes why a parameter not valid err
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Parameter Not Valid Exception in .NET Excel Library

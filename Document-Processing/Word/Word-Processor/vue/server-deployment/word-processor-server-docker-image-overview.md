@@ -6,6 +6,7 @@ control: Word processor server docker image overview
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Docker Image of Syncfusion Vue DOCX Editor Control

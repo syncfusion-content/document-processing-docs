@@ -6,6 +6,7 @@ platform: document-processing
 control: Chart
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Charts in TypeScript DOCX Editor

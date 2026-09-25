@@ -4,6 +4,7 @@ description: This section illustrates how to perform RTF to Word conversion and 
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert Word to RTF and vice versa in Java Word

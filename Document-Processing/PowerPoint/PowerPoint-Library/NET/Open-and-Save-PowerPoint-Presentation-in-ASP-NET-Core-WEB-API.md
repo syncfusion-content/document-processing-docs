@@ -4,6 +4,7 @@ description: Learn how to open and save Presentation in ASP .NET Core Web API ap
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Open and save Presentation in ASP.NET Core Web API

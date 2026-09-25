@@ -5,6 +5,7 @@ description: Learn about the print in the ASP.NET MVC PDF Viewer and how it help
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Print in ASP.NET MVC PDF Viewer

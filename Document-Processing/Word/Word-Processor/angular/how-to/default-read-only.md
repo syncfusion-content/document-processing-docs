@@ -6,6 +6,7 @@ platform: document-processing
 control: Default read-only
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Open Angular DOCX Editor in Read-Only Mode

@@ -5,6 +5,7 @@ description: Learn here all about how to load desired PDF for initial loading in
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Load desired PDF for initial loading in Blazor PDF Viewer

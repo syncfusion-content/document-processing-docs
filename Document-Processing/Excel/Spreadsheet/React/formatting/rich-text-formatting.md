@@ -5,6 +5,7 @@ description: Learn about rich text formatting in the Syncfusion React Spreadshee
 control: Formatting
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Rich Text Formatting in React Spreadsheet

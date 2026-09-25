@@ -5,6 +5,7 @@ description: Explore how to intelligently redact sensitive information using AI-
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Smart Redaction in Blazor Smart PDF Viewer

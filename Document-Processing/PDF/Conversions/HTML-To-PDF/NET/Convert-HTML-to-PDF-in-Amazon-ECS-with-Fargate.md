@@ -4,6 +4,7 @@ description: Learn how to convert HTML to PDF in Amazon ECS with Fargate using S
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # HTML to PDF conversion  in Amazon ECS with Fargate .NET PDF Library

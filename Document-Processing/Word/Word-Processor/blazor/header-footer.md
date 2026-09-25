@@ -5,6 +5,7 @@ description: Headers and footers in Blazor DOCX Editor enable adding and customi
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # Headers and Footers in Blazor DOCX Editor

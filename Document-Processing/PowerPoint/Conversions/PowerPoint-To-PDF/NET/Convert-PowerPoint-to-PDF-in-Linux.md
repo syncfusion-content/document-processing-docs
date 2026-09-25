@@ -4,6 +4,7 @@ description: Convert PowerPoint to PDF in Linux using .NET Core PowerPoint libra
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert PowerPoint to PDF in Linux

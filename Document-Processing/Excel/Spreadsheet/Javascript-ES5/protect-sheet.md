@@ -5,6 +5,7 @@ description: Protect sheet in JavaScript Spreadsheet restricts editing and contr
 platform: document-processing
 control: Protect sheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Protect Sheet in JavaScript Spreadsheet

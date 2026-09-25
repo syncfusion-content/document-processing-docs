@@ -5,6 +5,7 @@ platform: document-processing
 control: PDF
 documentation: UG
 keywords: gcp os save pdf, gcp os load pdf, c# save pdf, c# load pdf
+appliesto: Document SDK
 ---
 # Open and Save PDF Document in Google Cloud Platform
 

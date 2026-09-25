@@ -5,6 +5,7 @@ description: Add each PDF form field using the ASP.NET Core PDF Viewer UI, and l
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Create Form Fields in ASP.NET Core PDF Viewer

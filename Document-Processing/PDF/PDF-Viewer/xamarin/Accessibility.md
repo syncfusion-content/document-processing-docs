@@ -5,6 +5,7 @@ description: Learn here all about Accessibility support in Syncfusion<sup>®</su
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Accessibility in Xamarin Pdf Viewer

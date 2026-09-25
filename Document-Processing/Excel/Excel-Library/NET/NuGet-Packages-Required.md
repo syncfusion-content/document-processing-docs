@@ -4,6 +4,7 @@ description: The NuGet packages section describes the packages required to use t
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 # NuGet Packages Required for .NET Excel Library
 

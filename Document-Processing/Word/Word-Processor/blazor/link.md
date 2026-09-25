@@ -5,6 +5,7 @@ description: The hyperlink feature in Blazor DOCX Editor enables users to insert
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # Hyperlinks in Blazor DOCX Editor

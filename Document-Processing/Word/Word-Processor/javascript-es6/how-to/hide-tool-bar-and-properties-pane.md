@@ -6,6 +6,7 @@ platform: document-processing
 control: Hide Toolbar and Properties Pane
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Hide Toolbar and Properties Pane in TypeScript DOCX Editor

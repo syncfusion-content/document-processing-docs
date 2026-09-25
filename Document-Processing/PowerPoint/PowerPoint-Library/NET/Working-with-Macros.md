@@ -5,6 +5,7 @@ platform: document-processing
 control: Presentation
 documentation: UG
 keywords: macros in powerpoint, pptm, potm, vba, hasmacros, removemacros
+appliesto: Document SDK
 ---
 # Working with Macros in PowerPoint Presentation
 

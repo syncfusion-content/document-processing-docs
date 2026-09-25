@@ -6,6 +6,7 @@ platform: document-processing
 control: Open a Default Document
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Open a Default Document in JavaScript DOCX Editor

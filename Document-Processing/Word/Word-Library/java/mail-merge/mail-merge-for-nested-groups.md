@@ -4,6 +4,7 @@ description: Describe how to migrate applications from .NET Framework to .NET Co
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Mail merge for nested groups in Java Word

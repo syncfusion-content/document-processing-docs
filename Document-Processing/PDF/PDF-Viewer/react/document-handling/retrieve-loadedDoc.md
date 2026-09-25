@@ -5,6 +5,7 @@ description: Retrieve the loaded PDF document instance in the React PDF Viewer t
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Retrieve the Loaded Document in React PDF Viewer

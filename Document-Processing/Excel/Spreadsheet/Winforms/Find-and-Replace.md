@@ -5,6 +5,7 @@ description: Search worksheet content and replace matching values across cells a
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Find and Replace in Windows Forms Spreadsheet

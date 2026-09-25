@@ -4,6 +4,7 @@ description: Learn about overview of creating, editing, reading, and converting 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # About Syncfusion .NET Excel to PDF Conversion

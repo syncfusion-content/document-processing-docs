@@ -6,6 +6,7 @@ platform: document-processing
 control: Customize Toolbar
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Customize Toolbar in TypeScript DOCX Editor

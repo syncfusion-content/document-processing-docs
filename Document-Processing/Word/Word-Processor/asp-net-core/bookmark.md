@@ -5,6 +5,7 @@ description: The bookmark feature in ASP.NET Core DOCX Editor lets users add, ma
 platform: document-processing
 control: Bookmark
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

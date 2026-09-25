@@ -5,6 +5,7 @@ description: Learn here all about how to check the editing status of the documen
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Check the document editing status in PDF Viewer

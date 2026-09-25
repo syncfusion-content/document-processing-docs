@@ -5,6 +5,7 @@ description: Hide the toolbar and properties pane in Syncfusion® Blazor DOCX Ed
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # How to Hide Toolbar and Properties Pane in Blazor DOCX Editor

@@ -5,6 +5,7 @@ description: Apply cell, row, and column formatting in the Syncfusion ASP.NET MV
 platform: document-processing
 control: Formatting
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

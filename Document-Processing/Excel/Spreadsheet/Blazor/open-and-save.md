@@ -5,6 +5,7 @@ description: Learn about how to open, edit, and save Excel documents using the S
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Open and Save in Blazor Spreadsheet

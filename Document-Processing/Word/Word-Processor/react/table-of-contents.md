@@ -6,6 +6,7 @@ control: Table of contents
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Table of Contents in React DOCX Editor

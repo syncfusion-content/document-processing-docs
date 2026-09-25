@@ -5,6 +5,7 @@ description: The table format feature in Blazor DOCX Editor enables customizing 
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # Table format in Blazor DOCX Editor

@@ -5,6 +5,7 @@ description: Cell range in JavaScript Spreadsheet enables selecting, accessing, 
 platform: document-processing
 control: Cell range
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Cell range in JavaScript Spreadsheet 

@@ -5,6 +5,7 @@ description: Enable built-in PDF form field validation in the ASP.NET Core PDF V
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Form Validation in ASP.NET Core PDF Viewer

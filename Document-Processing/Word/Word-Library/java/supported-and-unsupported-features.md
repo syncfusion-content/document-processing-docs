@@ -4,6 +4,7 @@ description: This section describes the supported and unsupported Word document 
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 # Supported and Unsupported Features in Java Word
 

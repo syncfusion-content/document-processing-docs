@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: text-prediction,is-text-prediction-enabled
+appliesto: DOCX Editor SDK
 ---
 # Text Prediction in UWP DOCX Editor
 

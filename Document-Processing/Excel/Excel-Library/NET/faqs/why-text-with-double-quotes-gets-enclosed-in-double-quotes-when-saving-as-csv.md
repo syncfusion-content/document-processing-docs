@@ -4,6 +4,7 @@ description: CSV export behavior of Syncfusion .NET Excel library explains why E
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # CSV Text Qualifiers in .NET Excel Library

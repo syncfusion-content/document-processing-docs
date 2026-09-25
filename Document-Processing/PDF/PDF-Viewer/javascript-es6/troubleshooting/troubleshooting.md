@@ -5,6 +5,7 @@ description: Understand why ej2-pdfviewer-lib assets must be copied from node_mo
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Why Manual File Copying Is Required in JavaScript (ES6) PDF Viewer

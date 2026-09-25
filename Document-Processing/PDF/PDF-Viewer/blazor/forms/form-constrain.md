@@ -5,6 +5,7 @@ description: Learn how to configure PDF form field flags such as IsReadOnly and 
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # PDF form field flags in Blazor PDF Viewer

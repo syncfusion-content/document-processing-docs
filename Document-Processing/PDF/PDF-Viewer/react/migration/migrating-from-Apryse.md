@@ -5,6 +5,7 @@ description: Migrate an existing application from Apryse WebViewer (PDFTron) to 
 platform: document-processing
 documentation: ug
 control: PDF Viewer
+appliesto: PDF Viewer SDK
 ---
 
 # Migrate from Apryse to React PDF Viewer

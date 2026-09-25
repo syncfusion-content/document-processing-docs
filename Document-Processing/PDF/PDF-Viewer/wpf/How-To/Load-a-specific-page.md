@@ -5,6 +5,7 @@ description: Load a specific page ranges in loaded document in Syncfusion WPF PD
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Load a specific page in WPF PDF Viewer

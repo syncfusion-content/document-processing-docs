@@ -4,6 +4,7 @@ description: Learn how to add or replace raster and vector images in PDF documen
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Images in .NET PDF Library

@@ -5,6 +5,7 @@ description:  Print PDF files using Syncfusion WPF PDF Viewer with toolbar print
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Printing PDF Files in WPF Pdf Viewer

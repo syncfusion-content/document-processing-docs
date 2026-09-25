@@ -5,6 +5,7 @@ platform: document-processing
 control: PDF
 documentation: UG
 keywords: docker getting started, docker sample project, container basics, docker tutorial, docker setup, run docker app, docker beginner guide
+appliesto: Document SDK
 ---
 
 # Getting Started with .NET PDF Library in Docker

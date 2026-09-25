@@ -5,6 +5,7 @@ description: Learn how to add headers, footers, and stamps using templates in Sy
 platform: document-processing
 control: PDF
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Templates in Flutter PDF

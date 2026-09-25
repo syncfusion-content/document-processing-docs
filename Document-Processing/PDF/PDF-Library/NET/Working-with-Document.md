@@ -4,6 +4,7 @@ description: Learn about Syncfusion .NET PDF page setup, sections, document prop
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Document in .NET PDF Library
 

@@ -4,6 +4,7 @@ description: Learn how to modify the appearance of plot area in a chart in a Pow
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Chart Plot Area in PowerPoint
