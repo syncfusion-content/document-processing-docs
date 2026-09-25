@@ -22,15 +22,21 @@ This topic explains how to connect the Vue PDF Viewer to the Node.js Collaborati
 
 ### 1. Install the client packages
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="Shell" %}
+{% raw %}
 npm install ej2-collaborator-server
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ### 2. Add the PDF Viewer adapter
 
 Create `pdfViewerAdapter.ts` with the following client adapter:
 
-```ts
+{% tabs %}
+{% highlight ts tabtitle="TS" %}
+{% raw %}
 import { PdfViewer, CollaborativeEditingHandler } from '@syncfusion/ej2-vue-pdfviewer';
 import { ICollaborationProvider, ICollaborationActionData } from '@syncfusion/ej2-collaborator';
 
@@ -133,13 +139,17 @@ export class PdfViewerAdapter implements ICollaborationProvider {
         }
     }
 }
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ### 3. Initialize the Vue PDF Viewer
 
 The following example uses the complete Vue life cycle: it initializes collaboration from `mounted`, loads the room, joins it, retrieves the current PDF, and sends every supported PDF Viewer action from `documentChanged`.
 
-```vue
+{% tabs %}
+{% highlight html tabtitle="App.vue" %}
+{% raw %}
 <template>
     <ejs-pdfviewer
         ref="pdfViewer"
@@ -262,16 +272,21 @@ export default {
     }
 };
 </script>
-```
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Server-side integration
 
 ### 1. Install the Collaboration Server
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="Shell" %}
+{% raw %}
 npm install ej2-collaborator-server
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ### 2. Add the PDF Viewer server adapter
 
