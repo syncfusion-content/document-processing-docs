@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Collaborative Editing in React PDF Viewer | Syncfusion
-description: Learn about the overview of collaborative editing in Syncfusion React PDF Viewer and real-time multi-user annotation and interaction.
+description: Learn how to configure real-time collaborative editing in the Syncfusion React PDF Viewer with the Syncfusion Collaborator packages.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -10,120 +10,71 @@ domainurl: ##DomainURL##
 
 # Collaborative Editing in Syncfusion React PDF Viewer
 
-The React PDF Viewer supports collaborative editing features that allow multiple users to work on the same PDF document simultaneously. This enables real-time collaboration where users can see annotations, markups, and interactions from other collaborators as they are made.
-
-## Key Features
-
-Collaborative editing in React PDF Viewer provides:
-
-- **Real-time synchronization** - Multiple users can view and interact with the same PDF document
-- **Instant updates** - Changes made by one user are immediately visible to all collaborators
-- **User presence tracking** - See which users are currently viewing and editing the document
-- **Shared annotations** - Add, modify, and delete annotations that are visible to all users
-- **Conflict resolution** - Automatic handling of simultaneous edits using operational transformation
-- **Session management** - Room-based collaboration where users join a document session
-
-## Prerequisites
-
-To enable collaborative editing in PDF Viewer, you need:
-
-- **Real-Time Transport Protocol** - Enables instant communication between clients and the server
-  - Manages active connections for seamless collaboration
-  - Broadcasts changes to all connected users in real-time
-  
-- **Distributed Cache or Database** - Stores and queues collaborative editing operations
-  - Distributed Cache: Recommended for better performance (handles ~125 requests/second on 2 vCPU, 8GB RAM)
-  - Database: Alternative option (handles ~50 requests/second on same configuration)
-
-## Core Concepts
-
-### Operational Transformation (OT)
-
-Operational Transformation is the algorithm used to resolve conflicts when multiple users edit the document simultaneously. It ensures that all users see the same final state of the document regardless of the order in which operations arrive.
-
-- **Transformation Function** - Transforms operations based on concurrent changes to maintain consistency
-- **Version Control** - Each operation is assigned a version number to track sequence
-- **Conflict Resolution** - Automatically reconciles conflicting edits from different users
-- **Consistency Guarantee** - All users converge to the same document state
-
-### Session Management
-
-Sessions represent collaborative editing contexts where multiple users work together on a PDF document.
-
-- **Room-based sessions** - Each document has a unique room ID that users join
-- **User tracking** - Active users in a session are identified and displayed
-- **Operation queuing** - All changes are queued and applied in order
-- **State synchronization** - New users receive the complete operation history when joining
-
-### Operation Types
-
-Different types of operations that can occur in collaborative editing:
-
-- **Annotation Operations** - Adding, modifying, or deleting annotations (highlights, comments, stamps)
-- **Interaction Operations** - Page navigation, zoom changes, scroll position
-- **Navigation Operations** - Page changes, view adjustments
-- **Metadata Operations** - User presence, cursor position, selection state
-
-### Consistency Models
-
-- **Strong Consistency** - All users see the same state at the same time
-- **Eventual Consistency** - Users may temporarily see different states but converge to the same state
-- **Causal Consistency** - Causally related operations maintain their order
+The React PDF Viewer supports real-time collaborative editing through the Syncfusion Collaborator framework. The framework uses a shared client package and a platform-specific Collaboration Server to synchronize PDF Viewer actions between users.
 
 ## Architecture
 
-Collaborative editing consists of three main components:
+Collaborative editing uses the following components:
 
-### Client (React PDF Viewer)
-- Captures user interactions (annotations, markups, zoom, page navigation)
-- Converts interactions into operations and sends them to the server
-- Receives updates from other users and applies them in real-time
+- **Collaboration Client** - The `@syncfusion/ej2-collaborator` package connects the React PDF Viewer to the Collaboration Server.
+- **PDF Viewer adapter** - A client-side `PdfViewerAdapter` implements `ICollaborationProvider` and translates actions between the PDF Viewer and the Collaboration Client.
+- **Collaboration Server** - Use `Syncfusion.Collaborator.Server.AspNet.Core` for ASP.NET Core or `ej2-collaborator-server` for Node.js.
+- **Redis** - Required by the Collaboration Server for operation storage, synchronization, and scale-out.
 
-### Real-Time Communication Layer
-- Facilitates instant two-way communication between clients and server
-- Broadcasts user changes to all connected collaborators
-- Manages connection lifecycle and user presence
+The Collaboration Server manages the transport, collaboration sessions, operation synchronization, and save processing. The PDF Viewer application supplies the control adapter and document routes. Do not add a separate Socket.IO Redis adapter or implement the collaboration operation queue in the PDF Viewer application.
 
-### Distributed Cache/Database
-- Temporarily stores all editing operations in order
-- Maintains operation history for new users joining sessions
-- Resolves conflicts between simultaneous edits using Operational Transformation algorithm
+## Prerequisites
 
-## How It Works
+- A React PDF Viewer application.
+- A Redis instance reachable from the server.
+- .NET 8, 9, or 10 for ASP.NET Core, or Node.js 18 or later for Node.js.
+- A PDF Viewer adapter on the client and server. The adapter is the control-specific bridge; the common Collaborator packages provide the collaboration infrastructure.
 
-1. **User joins session** - A user opens a PDF document and joins a collaborative room using a unique session ID
+## Client package
 
-2. **Real-time connection established** - WebSocket connection is opened with the server for instant communication
+Install the shared client package in the React application:
 
-3. **Operations are synchronized** - When a user makes changes (annotations, markups), operations are sent to server
+```bash
+npm install @syncfusion/ej2-collaborator
+```
 
-4. **Conflict resolution** - Server resolves concurrent edits using operational transformation
+Create a `pdfViewerAdapter.ts` file that implements the collaboration provider contract, then create a `CollaborationClient` with the adapter and join the room after the PDF document has been loaded. See the platform-specific pages for the adapter and initialization examples:
 
-5. **Broadcasting updates** - All changes are broadcast to other connected users in the same session
+- [Collaborative editing with ASP.NET Core](./using-redis-cache-asp-net-core)
+- [Collaborative editing with Node.js](./using-redis-cache-nodejs)
 
-6. **Persistence** - Operations are saved to the distributed cache/database and can be recovered if connections drop
+## Server packages
 
-## Use Cases
+Choose one of the following Collaboration Server implementations:
 
-- **Document review and approval** - Multiple reviewers can annotate and comment on the same PDF
-- **Real-time collaboration** - Teams working together on document analysis and markup
-- **Shared training sessions** - Instructors and participants collaborating on document review
-- **Legal document annotation** - Multiple attorneys reviewing and marking legal documents
-- **Publishing workflows** - Editorial teams collaborating on document editing and markup
+| Server | Package | Transport |
+| --- | --- | --- |
+| ASP.NET Core | `Syncfusion.Collaborator.Server.AspNet.Core` | SignalR by default, or WebSocket |
+| Node.js | `ej2-collaborator-server` | WebSocket |
 
-## Performance Considerations
+Both server implementations require Redis. Configure the Redis connection and register the PDF Viewer server adapter before starting the server.
 
-For estimating your application's capacity:
+## Collaboration flow
 
-- Average user edit rate: 2-5 requests per second per user
-- Example: 1000 concurrent users = 2000-5000 requests per second total
-- Choose a distributed cache configuration that supports your expected traffic
+1. The adapter posts to `ImportFile` with the room name, PDF file name, and user name.
+2. The server returns the current version and pending PDF Viewer action snapshots.
+3. The client joins the room with `CollaborationClient.joinRoomAsync`.
+4. The PDF Viewer `documentChanged` event sends annotation, form field, form field action, or page organizer operations to `UpdateAction`.
+5. The server stores the operation and broadcasts the clean action request to the other users in the room.
+6. The adapter applies remote actions through the PDF Viewer collaborative editing handler.
+7. `GetPDFDocument` returns the current PDF content for the room, including the finalized document when it is available.
 
-> For better reliability and performance, use a distributed cache (like Redis) instead of a database for storing operations.
+The Node.js sample uses the following routes under `/api/CollaborativeEditing`:
+
+| Route | Purpose |
+| --- | --- |
+| `POST /ImportFile` | Loads the room state and returns pending operations. |
+| `POST /UpdateAction` | Validates, stores, and broadcasts a PDF Viewer operation. |
+| `GET /GetPDFDocument` | Retrieves the PDF content for a room as Base64. |
 
 ## See Also
 
-- [Collaborative editing using ASP.NET Core with Redis](./using-redis-cache-asp-net-core)
-- [Collaborative editing using Node.js with Redis](./using-redis-cache-nodejs)
-- [PDF Viewer getting started](../getting-started)
-- [Annotations and markup](../annotation)
+- [Collaborative editing with ASP.NET Core](./using-redis-cache-asp-net-core)
+- [Collaborative editing with Node.js](./using-redis-cache-nodejs)
+- [Collaboration Client](../../../../Collaborator/collaboration-client)
+- [Collaboration Server](../../../../Collaborator/collaboration-server)
