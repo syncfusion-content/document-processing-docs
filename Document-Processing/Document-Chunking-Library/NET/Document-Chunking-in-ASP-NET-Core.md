@@ -14,10 +14,9 @@ This section explains how to create an ASP.NET Core application, install the req
 
 ## Prerequisites
 
-- Visual Studio 2022 with the **ASP.NET and web development** workload installed.
+- Visual Studio 2022 (17.0 or later).
 - .NET 8.0 SDK or later.
 - A supported Excel, Word, PDF, PowerPoint, or Markdown document.
-- Access to the Syncfusion Nexus Repository containing the `Syncfusion.DocumentChunking` package.
 
 ## Create an ASP.NET Core Application
 
@@ -31,11 +30,7 @@ Step 1: Create a new **ASP.NET Core Web App (Model-View-Controller)** project.
 
 Step 2: Select **.NET 8.0** or a later framework version, and create the project.
 
-Step 3: Configure the Syncfusion Nexus Repository as a package source and install the `Syncfusion.DocumentChunking` NuGet package in the application.
-
-```powershell
-Install-Package Syncfusion.DocumentChunking
-```
+Step 3: Install the `Syncfusion.DocumentChunking.Net.Core` NuGet package with the latest stable version as a reference to your ASP.NET Core application from <a href="https://www.nuget.org" aria-label="NuGet">NuGet.org</a>.
 
 Step 4: Add the following namespace to the `HomeController.cs` file.
 
@@ -70,7 +65,7 @@ Step 5: Open `Views/Home/Index.cshtml` and add the following form to upload a su
         <input id="document"
                name="document"
                type="file"
-               accept=".xlsx,.xls,.xlsm,.xltx,.xltm,.csv,.tsv,.docx,.doc,.dotx,.dotm,.rtf,.pdf,.pptx,.md"
+               accept=".xlsx,.xls,.xlsm,.xlsb,.docx,.doc,.pdf,.ppt,.pptx,.pptm,.potx,.md"
                required />
     </div>
     <br />
@@ -117,10 +112,7 @@ public IActionResult ChunkDocument(IFormFile document)
         case ".xlsx":
         case ".xls":
         case ".xlsm":
-        case ".xltx":
-        case ".xltm":
-        case ".csv":
-        case ".tsv":
+        case ".xlsb":
             options.MaxTokens = 50;
             options.SourceOptions =
                 new ExcelChunkingOptions
@@ -132,9 +124,6 @@ public IActionResult ChunkDocument(IFormFile document)
 
         case ".docx":
         case ".doc":
-        case ".dotx":
-        case ".dotm":
-        case ".rtf":
             options.SourceOptions =
                 new WordChunkingOptions
                 {
@@ -153,6 +142,9 @@ public IActionResult ChunkDocument(IFormFile document)
             break;
 
         case ".pptx":
+        case ".ppt":
+        case ".pptm":
+        case ".potx":
             options.SourceOptions =
                 new PowerPointChunkingOptions
                 {
@@ -240,4 +232,4 @@ Step 7: Run the application, select a supported document, and click **Chunk Docu
 
 The application selects a source option and chunking mode based on the uploaded document format. The generated chunk content, metadata, and citation details are displayed in the application console.
 
-N> To use a different chunking mode, replace the format-specific `ChunkingMode` value in the `switch` statement. For more information about the supported modes, see <a href="https://help.syncfusion.com/document-processing/document-chunking/chunking-library/net/chunking-modes" aria-label="Document chunking modes">Chunking modes</a>.
+N> To use a different chunking mode, replace the format-specific `ChunkingMode` value in the `switch` statement. For more information about the supported modes, see <a href="https://help.syncfusion.com/document-processing/document-chunking-library/net/chunking-modes" aria-label="Document chunking modes">Chunking modes</a>.
