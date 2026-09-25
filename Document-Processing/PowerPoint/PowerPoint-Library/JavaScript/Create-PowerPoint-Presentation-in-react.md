@@ -113,7 +113,7 @@ textPart1.font.fontName = 'Calibri';
 textPart1.font.bold = true;
 textPart1.font.fontSize = 36;
  
-const bytes = await pptxDoc.save();
+const bytes = await pptxDoc.save("Output.pptx");
 };
   return (
     <div style={{ padding: '1.5rem' }}>
@@ -139,7 +139,5 @@ npm run dev
 Vite serves the application at `http://localhost:5173`. Open this URL in a browser and click **Create PowerPoint document** to download the generated file as `Output.pptx`.
 
 The generated PowerPoint presentation contains a single slide with the text "Hello World!!!".
-
-![Output PowerPoint document](Getting_started_images/Output.png)
 
 N> If you used Create-React-App instead of Vite, the run command is `npm start` and the default URL is `http://localhost:3000`.
