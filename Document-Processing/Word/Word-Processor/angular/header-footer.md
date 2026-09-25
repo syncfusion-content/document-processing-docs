@@ -92,3 +92,4 @@ Explore how to add and customize headers and footers in Word documents using the
 ## See also
 
 * [Working with Section Formatting](./section-format)
+* [Disable header footer edit in document](./how-to/disable-header-and-footer-edit-in-document-editor)

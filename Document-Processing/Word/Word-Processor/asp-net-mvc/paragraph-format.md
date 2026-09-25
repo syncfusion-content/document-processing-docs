@@ -165,3 +165,4 @@ Explore how to apply paragraph formatting in Word documents using the ASP.NET MV
 * [Feature modules](./feature-module)
 * [Paragraph dialog](./dialog#paragraph-dialog)
 * [Keyboard shortcuts](./keyboard-shortcut)
+* [Set the default format in document editor](./how-to/set-default-format-in-document-editor)

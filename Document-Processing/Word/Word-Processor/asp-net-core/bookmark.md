@@ -111,3 +111,4 @@ Explore how to insert and manage bookmarks in Word documents using the ASP.NET C
 
 * [Feature modules](../asp-net-core/feature-module)
 * [Bookmark dialog](../asp-net-core/dialog#bookmark-dialog)
+* [Retrieve the bookmark and whole document content](./how-to/retrieve-the-bookmark-content-as-text)
