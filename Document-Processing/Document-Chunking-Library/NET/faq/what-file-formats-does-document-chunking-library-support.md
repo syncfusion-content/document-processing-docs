@@ -6,7 +6,7 @@ control: Chunking
 documentation: UG
 ---
 
-# Which File Formats Are Supported for Document Chunking?
+# What File Formats Does Document Chunking Library Support?
 
 The Syncfusion<sup>®</sup> .NET Document Chunking Library supports Excel, Word, PDF, PowerPoint, and Markdown documents.
 
