@@ -330,7 +330,7 @@ These review patterns are especially useful in content editing, design review, l
 - [Remove Annotation](../annotation/delete-annotation)  
 - [Handwritten Signature](../annotation/signature-annotation)  
 - [Export and Import Annotation](../annotation/export-import/export-annotation)  
-- [Annotation Permission](../annotationsannotation-permission)  
+- [Annotation Permission](../annotation/annotation-permission)  
 - [Annotation in Mobile View](../annotation/annotations-in-mobile-view)  
 - [Annotation Events](../annotation/annotation-event)  
 - [Annotation API](../annotation/annotations-api)
