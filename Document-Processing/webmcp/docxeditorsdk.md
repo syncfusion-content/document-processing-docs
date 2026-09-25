@@ -154,4 +154,3 @@ AI responses are only as good as the prompt you provide. Vague requests like *"f
 
 * [Official WebMCP Specification](https://github.com/webmachinelearning/webmcp)
 * [Chrome Developer Documentation](https://developer.chrome.com/docs/ai/webmcp/)
-* [AI Assist](../ai-assist/overview) — Alternative AI-powered feature with backend-driven workflows
