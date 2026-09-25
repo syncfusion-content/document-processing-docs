@@ -12,7 +12,7 @@ The `JavaScript PowerPoint Library` provides support to open existing presentati
 
 ## Opening an existing presentation
 
-An existing PowerPoint presentation can be opened by reading its bytes from the file system and passing them to the `open()` function. The following code example demonstrates how to open a PowerPoint presentation from the file system.
+Open an existing PowerPoint presentation by passing the Presentation data to the `open()` function. The function accepts presentation data as a Base64-encoded string or a Uint8Array. The following code example demonstrates how to open a PowerPoint presentation
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -22,22 +22,6 @@ import { Presentation } from '@syncfusion/ej2-pptx';
 // data is a Uint8Array or ArrayBuffer of an .pptx file
 // Loads or opens a PowerPoint Presentation.
 const pptxDoc = await Presentation.open(data);
-
-{% endhighlight %}
-{% endtabs %}
-
-Once the presentation is opened, its slides, shapes, paragraphs, and other content can be modified using the same APIs used to build a presentation from scratch. The following code example demonstrates how to add a slide to an opened presentation.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-
-import { Presentation } from '@syncfusion/ej2-pptx';
- 
-// data is a Uint8Array or ArrayBuffer of an .pptx file
-// Loads or opens a PowerPoint Presentation.
-const pptxDoc = await Presentation.open(data);
-// Adds a new slide to the opened presentation.
-pptxDoc.slides.add();
 
 {% endhighlight %}
 {% endtabs %}
