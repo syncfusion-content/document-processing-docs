@@ -139,7 +139,9 @@ export class PdfViewerAdapter implements ICollaborationProvider {
 
 The following example uses the complete React life cycle: it initializes collaboration from `resourcesLoaded`, loads the room, joins it, retrieves the current PDF, and sends every supported PDF Viewer action from `documentChanged`.
 
-```jsx
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% raw %}
 import {
     PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
     ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner,
@@ -247,7 +249,9 @@ export default function App() {
             FormDesigner, PageOrganizer]} />
     </PdfViewerComponent>;
 }
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Server-side integration
 
