@@ -168,7 +168,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Custom font registration
 
-In many deployment environments such as cloud-hosted, containerized, and cross-platform applications, installing fonts on the operating system is not possible or desirable. During Office document conversion, users can register custom fonts through the FontManager API, maintaining a private font repository within the conversion framework. This supports TrueType (.ttf) and OpenType (.otf) formats, registered from memory streams or a folder, and ensures consistent document rendering without depending on system-installed fonts.
+In many deployment environments such as cloud-hosted, containerized, and cross-platform applications, installing fonts on the operating system is not possible or desirable. During Office document conversion, users can register custom fonts through the FontManager API, maintaining a private font repository within the library. This supports TrueType (.ttf) and OpenType (.otf) formats, registered from memory streams or a folder, and ensures consistent document rendering without depending on system-installed fonts.
 
 Learn more about registering custom fonts for Office document conversion in the following documentation:
 
