@@ -123,6 +123,63 @@ When you invoke a WebMCP tool, the following happens behind the scenes:
 │     → Error: { error: 'Error message' }                         │
 └─────────────────────────────────────────────────────────────────┘
 ```
+## Common Use Cases
+
+### AI-Assisted Document Authoring
+
+Agents create, update, and structure document content using natural language prompts while preserving document formatting and layout.
+
+**Example:** "Insert an executive summary at the beginning of the document, add a hyperlink to the company website, and create a bookmark named 'SummarySection'."
+
+### Document Review & Content Refinement
+
+Review and update document content by searching, replacing, and extracting information across the document.
+
+**Example:** "Find all occurrences of 'Q1 Report', replace them with 'FY26 Q1 Report', and return the updated content for review."
+
+### Automated Document Formatting
+
+Apply consistent character and paragraph formatting to improve document readability and presentation.
+
+**Example:** "Select all heading paragraphs, apply bold formatting, increase spacing after each heading, and center-align the document title."
+
+### Document Navigation & Information Retrieval
+
+Locate pages, bookmarks, or selected content and retrieve document information for analysis or downstream processing.
+
+**Example:** "Go to page 12, select the current paragraph, and extract the selected content for summarization."
+
+### Document Assembly & Enrichment
+
+Generate rich documents by inserting text, images, fields, hyperlinks, and bookmarks at specified locations.
+
+**Example:** "Insert the company logo at the top of the document, add a hyperlink to the product page, and create a bookmark for the pricing section."
+
+### Secure Document Workflows
+
+Protect documents from unauthorized modifications while allowing controlled editing in designated regions.
+
+**Example:** "Protect the document in read-only mode and create an editing region so the legal team can update contract clauses."
+
+### Multi-Step Workflows
+
+Orchestrate multiple document operations in sequence based on user intent.
+
+**Example:** "Find all placeholders named '[Customer Name]', replace them with 'Contoso Ltd.', insert the approved logo, format the updated paragraphs, create a bookmark for the contract section, and save the document."
+
+## Supported Features
+
+WebMCP tools are organized into six categories, covering 27 operations:
+
+| Category | Tools | Example |
+|----------|-------|---------|
+| **Document Management** | saveDocument, print, pageCount, goToPage, configureDocumentEditorSettings | Save documents, access page information, print, and configure editor behavior |
+| **Content Editing** | insertText, paste, insertField, insertImage, insertHyperlink | Add and modify document content, images, fields, and links |
+| **Formatting** | formatCharacter, formatParagraph | Apply text styling and paragraph formatting |
+| **Search & Data Manipulation** | find, findAll, replaceAll, getSelectionText, getSelectionSfdt | Search, replace, and retrieve document content |
+| **Navigation & Selection** | select, selectAll, selectCurrentWord, selectParagraph, selectBookmark | Navigate and select specific content within the document |
+| **Bookmarks & Document Structure** | insertBookmark, getDocumentBookmarks | Create and manage document bookmarks for quick navigation |
+| **Protection & Controlled Editing** | enforceProtection, stopProtection, insertEditingRegion | Restrict editing and define editable regions for authorized users |
 
 ## Writing Effective Prompts
 
