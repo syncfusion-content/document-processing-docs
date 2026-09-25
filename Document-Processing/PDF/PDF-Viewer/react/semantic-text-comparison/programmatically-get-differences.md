@@ -561,6 +561,8 @@ const groupDifferencesByPage = async () => {
 {% endhighlight %}
 {% endtabs %}
 
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Semantic%20Text%20Comparison/Programmatically%20get%20differences).
+
 ## Related topics
 
 - [Overview of semantic text comparison](./overview)
