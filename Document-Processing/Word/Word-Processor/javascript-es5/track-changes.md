@@ -143,6 +143,38 @@ The Track Changes pane will display the author name along with the custom metada
 N> 1. When you export the document as SFDT, the customData value is stored in the revision collection. When you reopen the SFDT, the custom data is automatically restored and displayed in the Track Changes pane.
 N> 2. For formats other than SFDT (e.g., DOCX), the customData is not preserved, as it is specific to the DOCX Editor component.
 
+## Set colors for revision types
+
+By default, the DOCX Editor uses author-based colors for tracked changes. You can also customize colors for specific revision types, such as inserted content, deleted content, inserted table rows, and deleted table rows.
+ 
+The following example shows how to customize revision type colors instead of using the default author-based colors.
+ 
+```js
+// Inject toolbar
+ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
+
+// Initialize Document Editor Container component
+var documenteditorContainer = new ej.documenteditor.DocumentEditorContainer({ 
+    enableToolbar: true,
+    height: '590px'
+});
+
+// Use the following service URL only for demo purposes
+documenteditorContainer.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
+documenteditorContainer.documentEditorSettings.revisionSettings = {
+  insertRevisionColor: '#22C55E',
+  deleteRevisionColor: '#EF4444',
+  insertedRowColor: '#f6fa06',
+  deletedRowColor: '#3a02bb'
+};
+
+// Render the Document Editor Container
+documenteditorContainer.appendTo('#DocumentEditor');
+```
+> **Note**
+> * These settings only affect how revisions are displayed in the DOCX Editor and are not stored in the document.
+> * By default, all revision types use author-specific colors (`'byAuthor'`).
+
 ## Filtering changes based on user
 
 DOCX Editor provides a built-in review panel with support for filtering changes based on the user.

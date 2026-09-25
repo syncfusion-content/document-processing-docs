@@ -1,0 +1,21 @@
+<ejs-documenteditorcontainer id="container"
+	 height="590px"
+	 enableTrackChanges="true"
+	 enableToolbar="true">
+</ejs-documenteditorcontainer>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get the container instance by ID
+            var container = document.getElementById("container").ej2_instances[0];
+			
+            container.documentEditorSettings.revisionSettings = {
+                insertRevisionColor: '#22C55E',
+				deleteRevisionColor: '#EF4444',
+				nsertedRowColor: '#f6fa06',
+				deletedRowColor: '#3a02bb'  
+            };
+        });
+    </script>
+}
