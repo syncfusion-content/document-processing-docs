@@ -283,6 +283,8 @@ function addMultipleLinks() {
 
 The PDF viewer raises annotation life cycle events that can be used to monitor when link annotations are added, modified, selected, or removed. For the complete event list and event details, see [Annotation Events](../annotation-event).
 
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Annotations/Link%20Annotation).
+
 ## See Also
 
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)

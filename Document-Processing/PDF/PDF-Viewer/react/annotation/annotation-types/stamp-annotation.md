@@ -261,6 +261,8 @@ Configure default properties using the [`stampSettings`](https://ej2.syncfusion.
 
 N> After changing opacity via the **Edit Opacity** tool in the toolbar, the updated value becomes the working default for subsequent placements in the current session.
 
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Annotations/Text%20and%20Image%20Stamp%20Annotation).
+
 ## Manage Stamp (Move, Resize, Rotate, Lock/Unlock, Delete)
 
 ### Edit Stamp Annotation
