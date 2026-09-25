@@ -1,0 +1,4 @@
+@Html.EJS().DocumentEditorContainer("container").EnableTrackChanges(true).DocumentEditorSettings("settings").Render()
+<script>
+    var settings = { revisionSettings: { insertRevisionColor: '#22C55E', deleteRevisionColor: '#EF4444', insertedRowColor: '#f6fa06', deletedRowColor: '#3a02bb' };
+</script>

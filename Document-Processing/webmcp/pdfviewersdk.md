@@ -37,21 +37,6 @@ For local development, enable WebMCP for testing via `chrome://flags/`.
 
 > **Note:** WebMCP is an experimental browser standard. The API and behavior may change as the standard evolves. The Syncfusion PDF Viewer WebMCP integration is a preview feature.
 
-## Integration
-
-WebMCP integrates seamlessly into Syncfusion PDF Viewer applications across all major platforms. Choose your framework below to get started with platform-specific setup instructions, API references, code examples, and sample prompts.
-
-### Supported Platforms
-
-- **[WebMCP Integration for React PDF Viewer](../PDF/PDF-Viewer/react/webmcp)** — React-based PDF Viewer
-- **[WebMCP Integration for Angular PDF Viewer](../PDF/PDF-Viewer/angular/webmcp)** — Angular-based PDF Viewer
-- **[WebMCP Integration for Vue PDF Viewer](../PDF/PDF-Viewer/vue/webmcp)** — Vue.js-based PDF Viewer
-- **[WebMCP Integration for Blazor PDF Viewer](../PDF/PDF-Viewer/blazor/webmcp)** — Blazor-based PDF Viewer
-- **[WebMCP Integration for TypeScript PDF Viewer](../PDF/PDF-Viewer/javascript-es6/webmcp)** — TypeScript/ES6 PDF Viewer
-- **[WebMCP Integration for JavaScript PDF Viewer](../PDF/PDF-Viewer/javascript-es5/webmcp)** — Vanilla JavaScript/ES5 PDF Viewer
-- **[WebMCP Integration for ASP.NET Core PDF Viewer](../PDF/PDF-Viewer/asp-net-core/webmcp)** — ASP.NET Core PDF Viewer
-- **[WebMCP Integration for ASP.NET MVC PDF Viewer](../PDF/PDF-Viewer/asp-net-mvc/webmcp)** — ASP.NET MVC PDF Viewer
-
 ## Why Use WebMCP for PDF Viewer?
 
 Syncfusion PDF Viewer integration with WebMCP provides significant benefits for building AI-powered PDF applications:
@@ -63,7 +48,6 @@ Syncfusion PDF Viewer integration with WebMCP provides significant benefits for 
 - **Schema-Validated I/O** — Every tool includes JSON Schema for inputs and outputs, eliminating hallucination and enabling AI clients to validate data reliably
 - **Controlled Execution** — Write operations (annotations, redaction, form fields) can trigger user confirmation dialogs when enabled. Applications can use events to audit, restrict, or cancel any operation
 - **Multi-Instance Friendly** — Unique prefixes per PDF Viewer prevent tool-name collisions when multiple instances share a page
-- **Native Integration** — Write tools participate in PDF Viewer's undo/redo pipeline and clean up automatically on component destruction
 - **Real-Time Feedback** — Tools return immediate structured responses so agents can confirm or chain the next action
 - **Security-Focused** — User confirmation required for sensitive operations, maintaining document integrity and compliance
 
@@ -112,10 +96,10 @@ When you invoke a WebMCP tool, the following happens behind the scenes:
 └─────────────────────────────────────────────────────────────────┘
                               ↓
 ┌─────────────────────────────────────────────────────────────────┐
-│  5. Confirmation & Execution                                   │
+│  5. Confirmation & Execution                                    │
 │     For Write Tools (Annotations, Forms, Redaction):            │
 │     → Shows user confirmation dialog by default                 │
-│     → Executes via PDF Viewer API (undo/redo support)           │
+│     → Executes via PDF Viewer API                               │
 │     For Read Tools (Navigation, Extraction):                    │
 │     → Executes immediately                                      │
 └─────────────────────────────────────────────────────────────────┘
@@ -176,34 +160,34 @@ WebMCP tools enable AI agents to interact with PDF documents and automate PDF-re
 ## Common Use Cases
 
 ### AI-Assisted Document Analysis
-Agents analyze PDFs, extract key information, summarize content, and identify important sections via natural language prompts.
+Analyze PDF content, extract key information, identify important entities, and generate concise summaries.
 
-**Example:** "Analyze this contract and extract key terms: parties, dates, payment amounts, and termination clauses."
+**Example:** "Analyze the currently opened PDF document and provide a clear summary of its purpose, main topics, key findings, important dates, entities, and action items."
 
-### Automated Document Review
-Transform documents through annotations, highlights, and comments for team review workflows.
+### Smart Text Search & Highlighting
+Find text, keywords, dates, and values throughout a document and apply visual markup for easier review.
 
-**Example:** "Review this form, highlight missing fields in red, add comments for sections that need clarification, and create a summary of issues."
+**Example:** "Search for all dates in the document and highlight them in yellow, then highlight every occurrence of 'Payment due:' in green."
 
-### Intelligent Form Processing
-Populate forms automatically while respecting validation rules and maintaining data integrity.
+### Automated Annotation & Review
+Add highlights, comments, sticky notes, free text, underlines, strikeouts, and drawing annotations to support document review workflows.
 
-**Example:** "Fill this application form with the customer data, validate email and phone fields, and flag any inconsistencies."
+**Example:** "Highlight the text 'please register' in yellow, add a review comment, and create a sticky note annotation for follow-up."
 
-### Sensitive Data Protection
-Identify and redact sensitive information automatically while maintaining document usability.
+### Intelligent Form Creation & Processing
+Create, populate, validate, and manage interactive PDF forms while maintaining data integrity and compliance.
 
-**Example:** "Find all phone numbers, social security numbers, and email addresses in this document and apply redaction to protect privacy."
+**Example:** "Add a required customerName textbox, create a country dropdown with predefined values, populate the form with customer data."
 
-### Multi-Step Document Workflows
-Orchestrate complex operations in sequence based on user intent.
+### Sensitive Data Protection & Redaction
+Identify confidential information and securely apply redactions to protect sensitive content before sharing documents.
 
-**Example:** "Extract pages 5-10, add review comments, highlight discrepancies, create a summary document, and prepare for download."
+**Example:** "Find all email addresses and payment amounts, create redaction markers, and permanently apply the redactions so the underlying content cannot be recovered."
 
-### Document Comparison & Reconciliation
-Compare multiple PDFs and identify differences or missing content.
+### Multi-Step PDF Workflows
+Execute multiple PDF operations in sequence through a single prompt, streamlining complex document processes.
 
-**Example:** "Compare original and modified versions of this agreement, highlight differences, and create an annotated summary of changes."
+**Example:** "Search for 'Invoice number:', highlight all matches in yellow, add review comments, create a summary of findings, and download the updated PDF."
 
 ## Primary WebMCP Capabilities
 
@@ -222,17 +206,6 @@ Using these capabilities, AI agents can:
 - **Automate PDF form** workflows with validation
 - **Protect sensitive information** through intelligent redaction
 - **Manage document life cycle** with precision and control
-- **Enhance collaboration** through annotations and comments
-
-## Security & Control
-
-Developers and users retain complete control over AI-driven operations through:
-
-- **Review & Approval** — User confirmation dialogs for sensitive operations
-- **Customization** — Custom handlers and event listeners for specific behaviors
-- **Audit Logging** — Track all AI-driven operations for compliance
-- **Undo/Redo Support** — Revert unwanted AI actions instantly
-- **Schema Validation** — Ensure data integrity with JSON Schema validation
 
 This ensures **secure, controlled, and efficient** interaction with PDF documents while maintaining data integrity and user control.
 
