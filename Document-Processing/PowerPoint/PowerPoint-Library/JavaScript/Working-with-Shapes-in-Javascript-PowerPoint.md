@@ -19,34 +19,26 @@ The following code example demonstrates how to add an AutoShape to the shape col
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { readFileSync } from 'node:fs';
 import { Presentation, SlideLayoutType, AutoShapeType } from '@syncfusion/ej2-pptx';
-
-// The JS library expresses shape/picture bounds in EMU (914400 EMU = 1 inch).
-// The original .NET snippet used points; convert with 1 pt = 12700 EMU so the
-// shape and picture render at the intended visible size.
-// EMU per point
-const PT = 12700; 
-
+ 
 // Creates an instance for PowerPoint.
 const pptxDoc = Presentation.create();
 // Adds a blank slide to the Presentation.
 const slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
 // Adds a normal shape to the slide.
 slide.shapes.addShape(AutoShapeType.Rectangle, {
-    x: 50 * PT, y: 200 * PT, width: 300 * PT, height: 300 * PT
+    x: 50, y: 200, width: 300, height: 300
 });
-// Reads the image bytes.
-const imageBytes = readFileSync('temp/Data/Image.jpg');
-// Add picture to the shape collection.
+// imageBytes is the contents of the image path to be added.
+// Adds a picture to the slide's shape collection.
 const picture = slide.shapes.addPicture({
     data: imageBytes, contentType: 'image/jpeg',
     bounds: {
-        x: 373 * PT, y: 83 * PT, width: 526 * PT, height: 382 * PT
+        x: 373, y: 83, width: 526, height: 382
     }
 });
 // Saves the Presentation to the file system.
-await pptxDoc.save('temp/Data/ShapeSample.pptx');
+await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
 {% endtabs %}
@@ -58,24 +50,22 @@ The shapes in a PowerPoint slide can be iterated through. The following code exa
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { readFileSync, writeFileSync } from 'node:fs';
-import { open } from '@syncfusion/ej2-pptx';
-
-// Loads or opens a PowerPoint Presentation.
-const bytes = readFileSync('temp/Data/Sample.pptx');
-const pptxDoc = await open(bytes);
-
-// Iterates through the shapes in a slide and detects their type.
+import { Presentation } from '@syncfusion/ej2-pptx';
+ 
+// data is a Uint8Array or ArrayBuffer of an .pptx file
+// Opens the presentation.
+const pptxDoc = await Presentation.open(data);
+// Iterates through the shapes in the first slide and detects their kind.
 const slide = pptxDoc.slides[0];
 for (const shape of slide.shapes) {
     if (shape.kind === 'picture') {
         // Picture shape detected.
     } else if (shape.kind === 'shape') {
-        // AutoShape detected.
+        // AutoShape / text-box shape detected.
+    } else {
+        // Other kind (table, chart, diagram, ole, media, unknown).
     }
 }
-// Saves the Presentation to the file system.
-await pptxDoc.save('ShapeOutput1.pptx');
 
 {% endhighlight %}
 {% endtabs %}
@@ -89,16 +79,13 @@ The following code example demonstrates how to remove the shapes from a slide.
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { readFileSync } from 'node:fs';
-import { open } from '@syncfusion/ej2-pptx';
-
+import { Presentation } from '@syncfusion/ej2-pptx';
+ 
+// data is a Uint8Array or ArrayBuffer of an .pptx file
 // Loads or opens a PowerPoint Presentation.
-const bytes = readFileSync('temp/Data/Sample.pptx');
-const pptxDoc = await open(bytes);
-
+const pptxDoc = await Presentation.open(data);
 // Iterates through the shapes in a slide and removes the first AutoShape
-// that is not a placeholder (placeholders are refuse-by-default per the
-// library's remove matrix).
+// that is not a placeholder.
 const slide = pptxDoc.slides[0];
 for (const shape of slide.shapes) {
     if (shape.kind === 'shape' && !shape.isPlaceholder) {
@@ -106,9 +93,8 @@ for (const shape of slide.shapes) {
         break;
     }
 }
-
 // Saves the Presentation to the file system.
-await pptxDoc.save('ShapeOutput2.pptx');
+await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
 {% endtabs %}

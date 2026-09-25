@@ -19,37 +19,34 @@ The following code example demonstrates how to create a table by adding rows.
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
+// Side-effect import: registers the tables feature (`slide.addTable` / `slide.removeTable`)
+import '@syncfusion/ej2-pptx/src/features/tables';
+ 
 import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
-import { addTable } from '@syncfusion/ej2-pptx/tables';
-
-// The table xfrm bounds are expressed in EMU (914400 EMU = 1 inch).
-// Convert with 1 pt = 12700 EMU so the table renders at the intended visible size.
-const PT = 12700; // EMU per point
-
+ 
 // Creates a PowerPoint presentation.
 const pptxDoc = Presentation.create();
-// Adds a slide to the presentation.
+// Adds a blank slide to the presentation.
 const slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
-// Adds a table to the slide (2 rows x 2 columns).
-const table = addTable(slide, {
-    rows: 2, columns: 2,
-    xfrm: { x: 100 * PT, y: 120 * PT, width: 300 * PT, height: 200 * PT },
+// Adds a 2x2 table to the slide.
+const table = slide.addTable({
+    rows: 2,
+    columns: 2,
+    xfrm: { x: 100, y: 120, width: 300, height: 200 },
 });
-
 // Iterates row-wise cells and adds text to each.
 for (let rowIndex = 0; rowIndex < table.rowCount; rowIndex++) {
     for (let colIndex = 0; colIndex < table.columnCount; colIndex++) {
-        const cell = table.cell(rowIndex, colIndex);
+        const cell = table.getCell(rowIndex, colIndex);
         const textBody = cell.textBody;
         if (textBody) {
-            const paragraph = textBody.addParagraph();
+            const paragraph = textBody.paragraphs[0];
             paragraph.addTextPart(`(${rowIndex} , ${colIndex})`);
         }
     }
 }
-
 // Saves the PowerPoint presentation.
-await pptxDoc.save('temp/TableModified1.pptx');
+await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
 {% endtabs %}
@@ -61,36 +58,33 @@ The following code example demonstrates how to create a simple table in a PowerP
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
+// Side-effect import: registers the tables feature (`slide.addTable` / `slide.removeTable`)
+import '@syncfusion/ej2-pptx/src/features/tables';
+ 
 import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
-import { addTable } from '@syncfusion/ej2-pptx/tables';
-
-// The table xfrm bounds are expressed in EMU (914400 EMU = 1 inch).
-// Convert with 1 pt = 12700 EMU so the table renders at the intended visible size.
-const PT = 12700; // EMU per point
 
 // Creates a PowerPoint presentation.
 const pptxDoc = Presentation.create();
-// Adds a slide to the presentation.
+// Adds a blank slide to the presentation.
 const slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
-// Adds a table to the slide (2 rows x 2 columns).
-const table = addTable(slide, {
+// Adds a 2x2 table to the slide.
+const table = slide.addTable({
     rows: 2, columns: 2,
-    xfrm: { x: 100 * PT, y: 120 * PT, width: 300 * PT, height: 200 * PT },
+    xfrm: { x: 100, y: 120, width: 300, height: 200 },
 });
-
 // Iterates column-wise cells and adds text to each.
 for (let colIndex = 0; colIndex < table.columnCount; colIndex++) {
     for (let rowIndex = 0; rowIndex < table.rowCount; rowIndex++) {
-        const cell = table.cell(rowIndex, colIndex);
+        const cell = table.getCell(rowIndex, colIndex);
         const textBody = cell.textBody;
         if (textBody) {
-            const paragraph = textBody.addParagraph();
+            const paragraph = textBody.paragraphs[0];
             paragraph.addTextPart(`(${rowIndex} , ${colIndex})`);
         }
     }
 }
 // Saves the PowerPoint presentation.
-await pptxDoc.save('temp/TableModified2.pptx');
+await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
 {% endtabs %}
@@ -102,13 +96,15 @@ A new row can be appended at the end of an existing PowerPoint table using the `
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { readFileSync } from 'node:fs';
-import { open } from '@syncfusion/ej2-pptx';
-import { asTable } from '@syncfusion/ej2-pptx/tables';
-
+import { Presentation } from '@syncfusion/ej2-pptx';
+ 
+// Importing the tables feature module both registers `slide.addTable` / `slide.removeTable`
+// on the Slide prototype (side effect) and exports the `asTable` detector.
+import { asTable } from '@syncfusion/ej2-pptx/src/features/tables';
+ 
+// data is a Uint8Array or ArrayBuffer of an .pptx file
 // Loads or opens a PowerPoint presentation.
-const bytes = readFileSync('temp/Data/Table.pptx');
-const pptxDoc = await open(bytes);
+const pptxDoc = await Presentation.open(data);
 // Gets the first shape on the first slide and binds it as a table.
 const slide = pptxDoc.slides[0];
 const table = asTable(slide.shapes[0]);
@@ -118,16 +114,16 @@ if (table) {
     table.addRow();
     // Iterates the new row's cells and adds text to each.
     for (let colIndex = 0; colIndex < table.columnCount; colIndex++) {
-        const cell = table.cell(newRowIndex, colIndex);
+        const cell = table.getCell(newRowIndex, colIndex);
         const textBody = cell.textBody;
         if (textBody) {
-            const paragraph = textBody.addParagraph();
+            const paragraph = textBody.paragraphs[0];
             paragraph.addTextPart(String(newRowIndex));
         }
     }
 }
 // Saves the PowerPoint presentation.
-await pptxDoc.save('temp/TableModified3.pptx');
+await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
 {% endtabs %}
@@ -139,14 +135,16 @@ A row can be inserted at a specified index position of an existing PowerPoint ta
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { readFileSync } from 'node:fs';
-import { open } from '@syncfusion/ej2-pptx';
-import { asTable } from '@syncfusion/ej2-pptx/tables';
-
+import { Presentation } from '@syncfusion/ej2-pptx';
+ 
+// Importing the tables feature module (since the package
+// has no `exports` map) both registers `slide.addTable` / `slide.removeTable`
+// on the Slide prototype (side effect) and exports the `asTable` detector.
+import { asTable } from '@syncfusion/ej2-pptx/src/features/tables';
+ 
+// data is a Uint8Array or ArrayBuffer of an .pptx file
 // Loads or opens a PowerPoint presentation.
-const bytes = readFileSync('temp/Data/Table.pptx');
-const pptxDoc = await open(bytes);
-
+const pptxDoc = await Presentation.open(data);
 // Gets the table in the slide.
 const slide = pptxDoc.slides[0];
 const table = asTable(slide.shapes[0]);
@@ -155,7 +153,7 @@ if (table) {
     table.insertRowAt(1);
 }
 // Saves the PowerPoint presentation.
-await pptxDoc.save('temp/TableModified4.pptx');
+await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
 {% endtabs %}
@@ -167,13 +165,17 @@ A column can be inserted at a specified index position of an existing PowerPoint
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { readFileSync } from 'node:fs';
-import { open } from '@syncfusion/ej2-pptx';
-import { asTable } from '@syncfusion/ej2-pptx/tables';
-
+// Side-effect import: registers the tables feature module (`@syncfusion/ej2-pptx/tables`).
+// The package has no `exports` map, so import the feature module by its
+// source path (esbuild resolves the full module graph at bundle time).
+import '@syncfusion/ej2-pptx/src/features/tables';
+ 
+import { Presentation } from '@syncfusion/ej2-pptx';
+import { asTable } from '@syncfusion/ej2-pptx/src/features/tables';
+ 
+// data is a Uint8Array or ArrayBuffer of an .pptx file
 // Loads or opens a PowerPoint presentation.
-const bytes = readFileSync('temp/Data/Table.pptx');
-const pptxDoc = await open(bytes);
+const pptxDoc = await Presentation.open(data);
 // Gets the table in the slide.
 const slide = pptxDoc.slides[0];
 const table = asTable(slide.shapes[0]);
@@ -182,7 +184,7 @@ if (table) {
     table.insertColumnAt(1);
 }
 // Saves the PowerPoint presentation.
-await pptxDoc.save('temp/TableModified5.pptx');
+await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
 {% endtabs %}
@@ -194,13 +196,17 @@ A table can be removed from a slide by passing its instance to the `removeTable(
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { readFileSync } from 'node:fs';
-import { open } from '@syncfusion/ej2-pptx';
-import { asTable, removeTable } from '@syncfusion/ej2-pptx/tables';
-
+// Side-effect import: registers the tables feature module (`@syncfusion/ej2-pptx/tables`).
+// The package has no `exports` map, so import the feature module by its
+// source path (esbuild resolves the full module graph at bundle time).
+import '@syncfusion/ej2-pptx/src/features/tables';
+ 
+import { Presentation } from '@syncfusion/ej2-pptx';
+import { asTable, removeTable } from '@syncfusion/ej2-pptx/src/features/tables';
+ 
+// data is a Uint8Array or ArrayBuffer of an .pptx file
 // Loads or opens a PowerPoint presentation.
-const bytes = readFileSync('temp/Data/Table.pptx');
-const pptxDoc = await open(bytes);
+const pptxDoc = await Presentation.open(data);
 // Gets the slide from the presentation.
 const slide = pptxDoc.slides[0];
 // Gets the table from the slide (first shape, bound as a table).
@@ -210,7 +216,7 @@ if (table) {
     removeTable(slide, table);
 }
 // Saves the PowerPoint presentation.
-await pptxDoc.save('temp/TableModified6.pptx');
+await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
 {% endtabs %}
