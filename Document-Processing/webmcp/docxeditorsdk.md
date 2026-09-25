@@ -169,7 +169,7 @@ Orchestrate multiple document operations in sequence based on user intent.
 
 ## Supported Features
 
-WebMCP tools are organized into six categories, covering 27 operations:
+WebMCP tools are organized into seven categories and provide 27 document editing operations.
 
 | Category | Tools | Example |
 |----------|-------|---------|
