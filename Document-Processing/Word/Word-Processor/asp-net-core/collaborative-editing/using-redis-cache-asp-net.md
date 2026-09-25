@@ -18,7 +18,7 @@ This topic walks through integrating collaborative editing in a ASP.NET Core DOC
 
 The following are needed to enable collaborative editing in DOCX Editor using the Syncfusion Collaborator (common collaboration packages).
 
-- [Syncfusion Collaborator](https://www.syncfusion.com/document-processing/word/collaborator) client and server packages:
+- [Syncfusion Collaborator](https://help.syncfusion.com/document-processing/collaborator/overview) client and server packages:
    - `@syncfusion/ej2-collaborator` (client library)
    - `Syncfusion.Collaborator.Server.AspNet.Core` (ASP.NET Core Collaboration Server)
 - Redis
@@ -179,7 +179,7 @@ export class DocumentEditorAdapter implements ICollaborationProvider {
 
 ### Step 4: Wire the Collaboration Client
 
-With collaborative editing enabled in the DOCX Editor (Step 2), create the adapter and initialize the [Collaboration Client](https://www.syncfusion.com/document-processing/word/collaborator/collaboration-client) with the desired transport. The Collaboration Client connects to the server, joins the collaboration room, and tracks user join/leave events. After the document is loaded through the adapter, join the collaboration room.
+With collaborative editing enabled in the DOCX Editor (Step 2), create the adapter and initialize the [Collaboration Client](https://help.syncfusion.com/document-processing/collaborator/collaboration-client) with the desired transport. The Collaboration Client connects to the server, joins the collaboration room, and tracks user join/leave events. After the document is loaded through the adapter, join the collaboration room.
 
 The `connectionType` option selects the transport:
 - `'signalr'` — uses SignalR (default). The server must be registered with `AddCollaborationServer` (default transport) and mapped with `app.MapCollaborationServer()`.
@@ -225,7 +225,7 @@ The Collaboration Client internally manages the transport connection, room joini
 
 ## Integrate collaborative editing in server side
 
-The server side uses the shared [Collaboration Server](https://www.syncfusion.com/document-processing/word/collaborator/collaboration-server) (`Syncfusion.Collaborator.Server.AspNet.Core`) and a DOCX Editor-specific server adapter that implements the `ICollaborationAdapter` interface. The common collaboration framework handles Redis storage, Operational Transformation, versioning, and broadcast, while the adapter translates Document Editor actions to and from the common collaboration model.
+The server side uses the shared [Collaboration Server](https://help.syncfusion.com/document-processing/collaborator/collaboration-server) (`Syncfusion.Collaborator.Server.AspNet.Core`) and a DOCX Editor-specific server adapter that implements the `ICollaborationAdapter` interface. The common collaboration framework handles Redis storage, Operational Transformation, versioning, and broadcast, while the adapter translates Document Editor actions to and from the common collaboration model.
 
 ### Step 1: Create the DOCX Editor web service project 
 

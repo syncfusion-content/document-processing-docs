@@ -18,7 +18,7 @@ This topic walks through integrating collaborative editing in an Angular DOCX Ed
 
 The following are needed to enable collaborative editing in DOCX Editor using the Syncfusion Collaborator (common collaboration packages).
 
-- [Syncfusion Collaborator](https://www.syncfusion.com/document-processing/word/collaborator) client and server packages:
+- Syncfusion Collaborator client and server packages:
    - `@syncfusion/ej2-collaborator` (client library)
    - `Syncfusion.Collaborator.Server.AspNet.Core` (ASP.NET Core Collaboration Server)
 - Redis
@@ -308,7 +308,7 @@ The complete version of the code discussed above is available at the following [
 
 ## Integrate collaborative editing in server side
 
-The server side uses the shared [Collaboration Server](https://www.syncfusion.com/document-processing/word/collaborator/collaboration-server) (`Syncfusion.Collaborator.Server.AspNet.Core`) and a DOCX Editor-specific server adapter that implements the `ICollaborationAdapter` interface. The common collaboration framework handles Redis storage, Operational Transformation, versioning, and broadcast, while the adapter translates Document Editor actions to and from the common collaboration model.
+The server side uses the shared [Collaboration Server](https://help.syncfusion.com/document-processing/collaborator/collaboration-server) (`Syncfusion.Collaborator.Server.AspNet.Core`) and a DOCX Editor-specific server adapter that implements the `ICollaborationAdapter` interface. The common collaboration framework handles Redis storage, Operational Transformation, versioning, and broadcast, while the adapter translates Document Editor actions to and from the common collaboration model.
 
 ### Step 1: Create the DOCX Editor web service project 
 

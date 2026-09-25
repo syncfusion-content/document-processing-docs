@@ -18,7 +18,7 @@ This topic walks through integrating collaborative editing in a ASP.NET MVC DOCX
 
 The following are needed to enable collaborative editing in DOCX Editor using the Syncfusion Collaborator (common collaboration packages).
 
-- [Syncfusion Collaborator](https://www.syncfusion.com/document-processing/word/collaborator) client and server packages:
+- [Syncfusion Collaborator](https://help.syncfusion.com/document-processing/collaborator/overview) client and server packages:
    - `@syncfusion/ej2-collaborator` (client library)
    - `Syncfusion.Collaborator.Server.AspNet.Mvc` (ASP.NET MVC Collaboration Server)
 - Redis
@@ -176,7 +176,7 @@ export class DocumentEditorAdapter implements ICollaborationProvider {
 
 ### Step 4: Wire the Collaboration Client
 
-With collaborative editing enabled in the DOCX Editor (Step 2), create the adapter and initialize the [Collaboration Client](https://www.syncfusion.com/document-processing/word/collaborator/collaboration-client) with the desired transport. The Collaboration Client connects to the server, joins the collaboration room, and tracks user join/leave events. After the document is loaded through the adapter, join the collaboration room.
+With collaborative editing enabled in the DOCX Editor (Step 2), create the adapter and initialize the [Collaboration Client](https://help.syncfusion.com/document-processing/collaborator/collaboration-server) with the desired transport. The Collaboration Client connects to the server, joins the collaboration room, and tracks user join/leave events. After the document is loaded through the adapter, join the collaboration room.
 
 The `connectionType` option selects the transport:
 - `'websocket'` — uses WebSocket. The server must be registered with `ConnectionType = CollaborationConnectionType.WebSocket`
