@@ -31,6 +31,7 @@ The frequently asked questions in Essential<sup>&reg;</sup> PDF Viewer are liste
 * [Resolve unable to find an entry point named FPDFText_GetCharAngle error](./how-to/resolve-unable-to-find-an-entry-point-error)
 * [How to clear the Web-service is not listening error](./how-to/webservice-not-listening)
 * [Load N number of pages on initial loading](./how-to/load-n-number-page)
+* [Active Viewport Rendering](./how-to/active-viewport-rendering)
 * [Retry Timeout](./how-to/retry-timeout)
 * [Configure Redis Cache](./how-to/redis-cache)
 * [Supported conformance documents](./how-to/conformance)

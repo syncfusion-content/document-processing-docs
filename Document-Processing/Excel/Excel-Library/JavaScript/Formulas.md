@@ -14,7 +14,7 @@ N> Setting `cell.value` clears any formula. Plain text that looks like a formula
 
 ## Set a formula
 
-Assign an expression to `formula`. A single leading `=` is optional and is stripped for storage.
+A formula stores a calculation expression on a cell so Excel can evaluate it when the file opens. A leading equals sign is optional and is normalized when the expression is saved.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -43,7 +43,7 @@ sheet.cell('A3').formula = 'SUM(A1:A2)';
 
 ## Read a formula and cached result
 
-For formula cells, reading `value` returns the last saved calculated result (if any). The library does not recalculate.
+Formula cells keep both the expression and any last saved calculated result. The library stores these values and does not recalculate; Excel updates results when the workbook is opened.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -68,7 +68,7 @@ const cached = sheet.cell('B2').value;
 
 ## Clear a formula
 
-Set `formula` to `undefined` to remove the formula while keeping any cached value.
+Clearing a formula removes the expression while keeping any cached calculated value on the cell. Use this when the stored result should remain but the formula should no longer recalculate in Excel.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

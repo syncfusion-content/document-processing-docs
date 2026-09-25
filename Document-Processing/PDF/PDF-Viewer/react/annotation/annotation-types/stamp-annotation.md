@@ -119,7 +119,7 @@ function addStandardBusinessStamp() {
   viewer.annotation.addAnnotation('Stamp', { offset: { x: 200, y: 340 }, pageNumber: 1 }, undefined, undefined, 'Approved');
 }
 
-// Custom stamp (JPG/JPEG only)
+// Image stamp (JPG/JPEG only)
 function addCustomStamp() {
   const viewer = document.getElementById('container').ej2_instances[0];
   viewer.annotation.addAnnotation('Stamp', {
@@ -141,7 +141,7 @@ function addCustomStamp() {
 {% endhighlight %}
 {% endtabs %}
 
-N> For **Custom Stamp** via the UI, only **JPG/JPEG** image formats are supported.
+N> For **Image Stamp** via the UI, only **JPG/JPEG** image formats are supported.
 
 ## Add Text Stamp and Image Stamp
 
@@ -153,6 +153,9 @@ The Stamp tool includes both **Text Stamp** and **Image Stamp** options alongsid
 2. Click **Stamp** to open the stamp gallery.
 3. Select **Text Stamp**.
 4. In the **Create new text stamp** dialog, configure the title, subtitle, font, color, background, date/time format, and styling options such as bold, underline, and strikeout.
+
+![Text Stamp](../../images/Image-text-stamp.png)
+
 5. Click **Create** to place the stamp on the page.
 
 ![Text Stamp dialog](../../images/text-stamp-dialog.png)
@@ -165,16 +168,17 @@ The Stamp tool includes both **Text Stamp** and **Image Stamp** options alongsid
 4. Choose an image source or upload the required image.
 5. Click the PDF page to place the image stamp.
 
-![Image Stamp](../../images/Image-text-stamp.png)
+![Image Stamp](../../images/image-stamp.png)
 
 ### Add predefined text stamps to the submenu
 
-You can add predefined text stamps and show them in the **Text Stamp** submenu by configuring `customTextStamps` in the viewer settings.
+You can add predefined text stamps and show them in the **Text Stamp** submenu by configuring `customTextStamps` in the viewer settings. Use `fontFamilyCollection` to provide the font list that should be available for text stamp styling in the UI.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
 {% raw %}
 viewer.customStampSettings = {
+  fontFamilyCollection : ['Arial', 'Times New Roman', 'Courier New'],
   customTextStamps: [{
     title: 'Draft',
     subtitle: '[$author] DD/MMMM/YYYY, h:mm A',
@@ -256,6 +260,8 @@ Configure default properties using the [`stampSettings`](https://ej2.syncfusion.
 {% endtabs %}
 
 N> After changing opacity via the **Edit Opacity** tool in the toolbar, the updated value becomes the working default for subsequent placements in the current session.
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Annotations/Text%20and%20Image%20Stamp%20Annotation).
 
 ## Manage Stamp (Move, Resize, Rotate, Lock/Unlock, Delete)
 

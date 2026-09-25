@@ -139,7 +139,9 @@ export class PdfViewerAdapter implements ICollaborationProvider {
 
 Use the supplied JavaScript React life cycle. For ASP.NET Core, the only client configuration difference is `SERVICE_URL` and the real-time connection type.
 
-```jsx
+{% tabs %}
+{% highlight js tabtitle="App.jsx" %}
+{% raw %}
 import {
     PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
     ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner,
@@ -212,7 +214,9 @@ export default function App() {
             FormDesigner, PageOrganizer]} />
     </PdfViewerComponent>;
 }
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 The `documentChanged` handler sends annotation, form field value, form field designer, page organizer, and cancellation operations. This complete action mapping is required for the collaboration handler to synchronize all supported PDF Viewer interactions.
 

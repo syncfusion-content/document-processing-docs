@@ -31,6 +31,7 @@ The frequently asked questions for the Essential<sup>&reg;</sup> PDF Viewer are 
 * [How to delete a specific annotation from the PDF document?](./how-to/delete-annotation)
 * [How to disable the context menu?](./how-to/disable-context-menu)
 * [How to disable tile rendering in PDF Viewer?](./how-to/disable-tile-rendering)
+* [Active Viewport Rendering](./how-to/active-viewport-rendering)
 * [How to display custom tooltip for annotation?](./how-to/display-custom-tool-tip-for-annotation)
 * [How to get the download start event?](./how-to/download-start-event-ts)
 * [How to enable or disable the local storage?](./how-to/enable-local-storage-ts)
