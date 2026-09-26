@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Collaborative Editing in React PDF Viewer | Syncfusion
-description: Learn how to configure real-time collaborative editing in the Syncfusion React PDF Viewer with the Syncfusion Collaborator packages.
+title: Collaborative Editing in Angular PDF Viewer | Syncfusion
+description: Learn how to configure real-time collaborative editing in the Syncfusion Angular PDF Viewer with the Syncfusion Collaborator packages.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Collaborative Editing in Syncfusion React PDF Viewer
+# Collaborative Editing in Syncfusion Angular PDF Viewer
 
-The React PDF Viewer supports real-time collaborative editing through the Syncfusion Collaborator framework. The framework uses a shared client package and a platform-specific Collaboration Server to synchronize PDF Viewer actions between users.
+The Angular PDF Viewer supports real-time collaborative editing through the Syncfusion Collaborator framework. The framework uses a shared client package and a platform-specific Collaboration Server to synchronize PDF Viewer actions between users.
 
 ![Collaborative Editing in Angular PDF Viewer](../images/collaborative-editing-pdf-viewer.gif)
 
@@ -18,7 +18,7 @@ The React PDF Viewer supports real-time collaborative editing through the Syncfu
 
 Collaborative editing uses the following components:
 
-- **Collaboration Client** - The `@syncfusion/ej2-collaborator` package connects the React PDF Viewer to the Collaboration Server.
+- **Collaboration Client** - The `@syncfusion/ej2-collaborator` package connects the Angular PDF Viewer to the Collaboration Server.
 - **PDF Viewer adapter** - A client-side `PdfViewerAdapter` implements `ICollaborationProvider` and translates actions between the PDF Viewer and the Collaboration Client.
 - **Collaboration Server** - Use `ej2-collaborator-server` for Node.js.
 - **Redis** - Required by the Collaboration Server for operation storage, synchronization, and scale-out.
@@ -35,14 +35,14 @@ Users can collaborate on the same PDF room and see shared changes to:
 
 ## Prerequisites
 
-- A React PDF Viewer application.
+- An Angular PDF Viewer application.
 - A Redis instance reachable from the server.
 - Node.js 18 or later.
 - A PDF Viewer adapter on the client and server. The adapter is the control-specific bridge; the common Collaborator packages provide the collaboration infrastructure.
 
 ## Client package
 
-Install the shared client package in the React application:
+Install the shared client package in the Angular application:
 
 ```bash
 npm install @syncfusion/ej2-collaborator

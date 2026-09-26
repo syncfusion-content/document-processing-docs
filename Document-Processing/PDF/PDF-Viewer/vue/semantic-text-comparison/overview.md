@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Syncfusion React PDF Viewer Semantic Text Comparison | Syncfusion
-description: Learn about the Syncfusion React PDF Viewer Semantic Text Comparison feature for comparing two PDF documents.
+title: Syncfusion Vue PDF Viewer Semantic Text Comparison | Syncfusion
+description: Learn about the Syncfusion Vue PDF Viewer Semantic Text Comparison feature for comparing two PDF documents.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Syncfusion React PDF Viewer Semantic Text Comparison
+# Syncfusion Vue PDF Viewer Semantic Text Comparison
 
-The React PDF Viewer includes a semantic text comparison feature that enables comparing text content between two PDF documents side-by-side. The comparison uses a Longest Common Subsequence (LCS) algorithm to identify differences (added, deleted, modified text) and present them with visual highlighting and programmatic access.
+The Vue PDF Viewer includes a semantic text comparison feature that enables comparing text content between two PDF documents side-by-side. The comparison uses a Longest Common Subsequence (LCS) algorithm to identify differences (added, deleted, modified text) and present them with visual highlighting and programmatic access.
 
 ![Semantic text comparison interface](../images/semantic-text-comparison.png)
 
