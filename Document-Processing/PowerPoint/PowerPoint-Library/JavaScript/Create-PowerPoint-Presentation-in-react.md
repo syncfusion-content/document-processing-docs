@@ -95,15 +95,14 @@ const createPPTX = async () => {
 const pptxDoc = Presentation.create();
 // Adds a slide to the PowerPoint presentation.
 const slide = pptxDoc.slides.add();
-const PT = 12700;
 // Adds a textbox for the title.
 const titleShape = slide.shapes.addTextBox({
     name: 'Title',
     bounds: {
-                x: 55 * PT,
-                y: 25 * PT,
-                width: 850 * PT,
-                height: 72 * PT,
+                x: 55,
+                y: 25,
+                width: 850,
+                height: 72,
         },
     });
 const paragraph = titleShape.textBody.addParagraph();
