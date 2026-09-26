@@ -32,7 +32,7 @@ npm install ej2-collaborator-server
 
 ### 2. Add the PDF Viewer adapter
 
-Create `pdfViewerAdapter.ts` with the following client adapter:
+Create `pdfViewerAdapter.ts` with the following basic structure:
 
 {% tabs %}
 {% highlight ts tabtitle="TS" %}
@@ -62,12 +62,17 @@ export class PdfViewerAdapter implements ICollaborationProvider {
         this.fileName = fileName || 'document.pdf';
         const roomName: string = this.getRoomName();
         this.currentRoomName = roomName;
-        const response = await fetch(`${this.serviceUrl}api/CollaborativeEditing/ImportFile`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ roomName, fileName: this.fileName, currentUser: this.currentUser })
-        });
-        if (!response.ok) throw new Error(`Failed to join collaboration room: ${response.statusText}`);
+
+        const response = await fetch(
+            `${this.serviceUrl}api/CollaborativeEditing/ImportFile`,
+            {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ roomName, fileName: this.fileName, currentUser: this.currentUser })
+            }
+        );
+
+        if (!response.ok) throw new Error(`Failed to join room: ${response.statusText}`);
         await this.open(await response.text(), roomName);
         return roomName;
     }
@@ -76,6 +81,7 @@ export class PdfViewerAdapter implements ICollaborationProvider {
         const data: any = JSON.parse(responseText);
         const version = data.version || data.currentVersion || 0;
         this.collaborativeEditingHandler.updateRoomInfo(roomName, version, `${this.serviceUrl}api/CollaborativeEditing/`);
+
         this.pendingOperations = data.operations;
         if (data.operations && data.operations.length > 0) {
             for (const op of data.operations) {
@@ -86,52 +92,45 @@ export class PdfViewerAdapter implements ICollaborationProvider {
     }
 
     public async sendActionToServer(operations: any[]): Promise<void> {
-        if (!operations || operations.length === 0) {
-            console.warn('[PdfViewerAdapter] No operations to send');
-            return;
-        }
+        if (!operations || operations.length === 0) return;
         await this.collaborativeEditingHandler.sendActionToServer(operations);
     }
 
     public applyRemoteAction(action: string, data: ICollaborationActionData): void {
-        if (action === 'addUser') {
-            if ((data as any).payload.length > 0) {
-                ((data as any).payload as any[]).forEach((user: any) => {
-                    user.image = this.getUserImage(user.currentUser);
-                });
-            } else {
-                (data as any).payload.image = this.getUserImage((data as any).payload.currentUser);
-            }
-        } else if (action === 'connectionId') {
-            data.payload = { payload: data.payload, image: this.getUserImage(this.currentUser) } as any;
+        if (action === 'addUser' || action === 'connectionId') {
+            this._assignUserImages(data);
         }
-        this.collaborativeEditingHandler.applyRemoteAction(action, data.payload);
+        this.collaborativeEditingHandler.applyRemoteAction(action, (data as any).payload || data);
     }
 
-    private getRoomName(fileName?: string): string {
-        if (typeof window !== 'undefined') {
-            const urlParams: URLSearchParams = new URLSearchParams(window.location.search);
-            let roomId: string | null = urlParams.get('id');
-            if (!roomId) {
-                roomId = Math.random().toString(32).slice(2);
-                window.history.replaceState({}, '', `?id=${roomId}`);
-            }
-            return roomId;
-        }
-        return Math.random().toString(32).slice(2);
-    }
-
-    private getUserImage(userName: string): string {
+    private _assignUserImages(data: ICollaborationActionData): void {
         const images: { [key: string]: string } = {
-            RIO: 'https://ej2.syncfusion.com/demos/src/avatar/images/pic01.png',
-            JOHN: 'https://ej2.syncfusion.com/demos/src/avatar/images/pic03.png',
-            MAXY: 'https://ej2.syncfusion.com/demos/src/avatar/images/pic02.png',
-            SHAI: 'https://ej2.syncfusion.com/demos/src/avatar/images/pic04.png'
+            'RIO': 'https://ej2.syncfusion.com/demos/src/avatar/images/pic01.png',
+            'JOHN': 'https://ej2.syncfusion.com/demos/src/avatar/images/pic03.png',
+            'MAXY': 'https://ej2.syncfusion.com/demos/src/avatar/images/pic02.png',
+            'SHAI': 'https://ej2.syncfusion.com/demos/src/avatar/images/pic04.png'
         };
-        return images[userName] || '';
+
+        const payload = (data as any).payload;
+        if (Array.isArray(payload)) {
+            payload.forEach((user: any) => { user.image = images[user.currentUser]; });
+        } else if (payload) {
+            payload.image = images[payload.currentUser] || images[this.currentUser];
+        }
     }
 
-    public updatePendingOperations(): any {
+    private getRoomName(): string {
+        if (typeof window !== 'undefined') {
+            const roomId = new URLSearchParams(window.location.search).get('id');
+            if (roomId) return roomId;
+            const newId = Math.random().toString(36).substring(2, 15);
+            window.history.replaceState({}, '', `?id=${newId}`);
+            return newId;
+        }
+        return Math.random().toString(36).substring(2, 15);
+    }
+
+    public updatePendingOperations(): void {
         if (this.pendingOperations && this.pendingOperations.length > 0) {
             for (const op of this.pendingOperations) {
                 this.collaborativeEditingHandler.applyRemoteAction(op.type, op);
@@ -143,72 +142,83 @@ export class PdfViewerAdapter implements ICollaborationProvider {
 {% endhighlight %}
 {% endtabs %}
 
+N>For the complete adapter implementation with error handling and detailed logging, refer to the [Vue PDF Viewer Collaborative Editing Sample](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples).
+
 ### 3. Initialize the Vue PDF Viewer
 
-The following example uses the complete Vue life cycle: it initializes collaboration from `mounted`, loads the room, joins it, retrieves the current PDF, and sends every supported PDF Viewer action from `documentChanged`.
+Create `App.vue` to initialize the PDF Viewer with collaboration support:
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
 {% raw %}
 <template>
+  <div>
+    <div style="padding: 10px; background: #f5f5f5; border-bottom: 1px solid #ddd;">
+      <strong>User:</strong> {{ currentUser }} | 
+      <strong>Status:</strong> {{ collaborationStatus }} |
+      <strong>Room:</strong> {{ roomName }}
+    </div>
     <ejs-pdfviewer
-        ref="pdfViewer"
-        id="container"
-        :resourceUrl="resourceUrl"
-        :enableCollaborativeEditing="true"
-        @resourcesLoaded="handleResourcesLoaded"
-        @documentChanged="handleDocumentChanged">
+      ref="pdfViewerRef"
+      id="pdfViewer"
+      :resourceUrl="resourceUrl"
+      :enableCollaborativeEditing="true"
+      @resourcesLoaded="handleResourcesLoaded"
+      @documentChanged="handleDocumentChanged"
+      style="height: calc(100vh - 50px);">
     </ejs-pdfviewer>
+  </div>
 </template>
 
 <script>
-import {
-    PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-    ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner,
-    PageOrganizer
-} from '@syncfusion/ej2-vue-pdfviewer';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, 
+         BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch, 
+         FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
 import { CollaborationClient } from '@syncfusion/ej2-collaborator';
 import { PdfViewerAdapter } from './pdfViewerAdapter';
 
-const userList = ['RIO', 'JOHN', 'MAXY', 'SHAI', 'SRI'];
-const currentUserName = userList[Math.floor(Math.random() * userList.length)];
 const SERVICE_URL = 'http://localhost:8081/';
 
 export default {
-    components: {
-        'ejs-pdfviewer': PdfViewerComponent
-    },
+    components: { 'ejs-pdfviewer': PdfViewerComponent },
     data() {
         return {
             resourceUrl: 'https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib',
+            currentUser: ['RIO', 'JOHN', 'MAXY', 'SHAI'][Math.floor(Math.random() * 4)],
+            collaborationStatus: 'initializing',
+            roomName: '',
             adapter: null,
             client: null,
-            roomName: '',
-            isDocumentLoaded: false,
-            currentUser: currentUserName,
-            collaborationStatus: 'initializing',
-            connectedUsers: []
+            isDocumentLoaded: false
         };
     },
-    mounted() {
-        // Component mounted
+    provide() {
+        return { PdfViewer: [Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
+                            BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
+                            FormFields, FormDesigner, PageOrganizer] };
     },
     methods: {
-        async fetchAndLoadPDFDocument() {
-            const query = new URLSearchParams({ roomName: this.roomName || 'default' });
-            const response = await fetch(`${SERVICE_URL}api/CollaborativeEditing/GetPDFDocument?${query}`, {
-                headers: { Accept: 'application/json' }
-            });
-            if (!response.ok) throw new Error(`HTTP Error: ${response.status} ${response.statusText}`);
+        getViewer() {
+            return this.$refs.pdfViewerRef?.ej2Instances || null;
+        },
+        
+        async fetchAndLoadPDF() {
+            const response = await fetch(
+                `${SERVICE_URL}api/CollaborativeEditing/GetPDFDocument?roomName=${this.roomName}`,
+                { headers: { 'Accept': 'application/json' } }
+            );
             const result = await response.json();
-            if (!result.success) throw new Error(`Server error: ${result.error}`);
-            const binary = atob(result.content);
-            const bytes = new Uint8Array(binary.length);
-            for (let index = 0; index < binary.length; index++) bytes[index] = binary.charCodeAt(index);
+            if (!result.success) throw new Error(result.error);
+            
+            const bytes = new Uint8Array(atob(result.content).split('').map(c => c.charCodeAt(0)));
             const blob = new Blob([bytes], { type: 'application/pdf' });
             const reader = new FileReader();
+            
             await new Promise((resolve, reject) => {
-                reader.onload = () => resolve(this.$refs.pdfViewer.load(new Uint8Array(reader.result), ''));
+                reader.onload = () => {
+                    this.getViewer().load(new Uint8Array(reader.result), '');
+                    resolve();
+                };
                 reader.onerror = reject;
                 reader.readAsArrayBuffer(blob);
             });
@@ -217,57 +227,47 @@ export default {
         async handleResourcesLoaded() {
             if (this.isDocumentLoaded) return;
             this.isDocumentLoaded = true;
-            this.collaborationStatus = 'loading';
+            this.collaborationStatus = 'connecting...';
+
             try {
-                const adapter = new PdfViewerAdapter(this.$refs.pdfViewer, SERVICE_URL, this.currentUser);
+                const viewer = this.getViewer();
+                const adapter = new PdfViewerAdapter(viewer, SERVICE_URL, this.currentUser);
                 this.adapter = adapter;
-                const client = new CollaborationClient(adapter, {
+
+                this.client = new CollaborationClient(adapter, {
                     serviceUrl: SERVICE_URL,
                     connectionType: 'websocket',
-                    currentUser: this.currentUser,
-                    onUserJoined: user => this.connectedUsers = [...new Set([...this.connectedUsers, user.userName || user.currentUser])],
-                    onUserLeft: user => this.connectedUsers = this.connectedUsers.filter(name => name !== (user.userName || user.currentUser))
+                    currentUser: this.currentUser
                 });
-                this.client = client;
-                const roomName = await adapter.loadFromServer();
-                this.roomName = roomName;
-                await client.joinRoomAsync(roomName);
-                await this.fetchAndLoadPDFDocument();
+
+                this.roomName = await adapter.loadFromServer();
+                await this.client.joinRoomAsync(this.roomName);
+                await this.fetchAndLoadPDF();
+                
                 this.collaborationStatus = 'connected';
-                this.connectedUsers = [this.currentUser];
             } catch (error) {
-                console.error('[App] Error during collaboration initialization:', error);
+                console.error('Collaboration error:', error);
                 this.collaborationStatus = 'error';
             }
         },
 
         handleDocumentChanged(args) {
-            try {
-                let operations = [];
-                if (args && 'annotationId' in args) {
-                    operations = args.action
-                        ? [{ action: args.action, annotation: args.annotationId, type: 'annotation', isRedacted: args.isRedacted }]
-                        : [{ type: 'removeUser', currentUser: this.currentUser }];
-                } else if (args && 'formField' in args && !('fieldName' in args)) {
-                    operations = [{ action: args.action, formField: args.formField, type: 'formField' }];
-                } else if (args && 'fieldName' in args) {
-                    operations = [{ action: 'formFieldUpdate', data: args, type: 'formField' }];
-                } else if (args && 'organizePageActions' in args) {
-                    const actionDetails = typeof args.organizePageActions === 'string'
-                        ? JSON.parse(args.organizePageActions) : '';
-                    if (args.savedDocument === null && actionDetails.action === 'applyCancelled') {
-                        operations = [{ type: 'removeUser', currentUser: this.currentUser }];
-                    } else if (args.savedDocument !== null && actionDetails.length > 0 && actionDetails[0].action !== 'applyCancelled') {
-                        operations = [{ action: 'pageOrganizerUpdate', data: args.organizePageActions, type: 'pageOrganizer' }];
-                    }
-                }
-                if (operations.length > 0) {
-                    this.adapter.sendActionToServer(operations).catch(error =>
-                        console.error('[App] Error sending operation:', error));
-                }
-            } catch (error) {
-                console.error('[App] Error processing document change:', error);
+            let operations = [];
+            if (args && 'annotationId' in args) {
+                operations = [{ action: args.action, annotation: args.annotationId, type: 'annotation' }];
+            } else if (args && 'formField' in args) {
+                operations = [{ action: args.action, formField: args.formField, type: 'formField' }];
+            } else if (args && 'organizePageActions' in args) {
+                operations = [{ action: 'pageOrganizerUpdate', data: args.organizePageActions, type: 'pageOrganizer' }];
             }
+            if (operations.length > 0 && this.adapter) {
+                this.adapter.sendActionToServer(operations).catch(err => console.error('Error:', err));
+            }
+        }
+    },
+    beforeUnmount() {
+        if (this.client) {
+            this.client.leaveRoomAsync(this.roomName);
         }
     }
 };
@@ -276,26 +276,29 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
+N>For complete implementation details, refer to the [Vue Collaborative PDF Editing Sample on GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples).
+
 ## Server-side integration
 
-### 1. Install the Collaboration Server
+### 1. Install dependencies
 
 {% tabs %}
 {% highlight bash tabtitle="Shell" %}
 {% raw %}
-npm install ej2-collaborator-server
+npm install express cors @syncfusion/ej2-collaborator-server @syncfusion/ej2-pdf @xmldom/xmldom redis
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
-### 2. Add the PDF Viewer server adapter
+### 2. Create the PDF Viewer adapter
 
-Create `adapters/PdfViewerAdapter.js` with the following server adapter structure. It stores each complete request envelope, broadcasts it unchanged, and replays pending operations against the source PDF during save.
+Create `adapters/PdfViewerAdapter.js` to handle operation replay and PDF manipulation:
 
 {% tabs %}
-{% highlight html tabtitle="JS" %}
+{% highlight js tabtitle="PdfViewerAdapter.js" %}
 {% raw %}
-const { PdfDocument, PdfRotationAngle, DataFormat } = require('@syncfusion/ej2-pdf');
+const { PdfDocument, PdfRotationAngle, DataFormat, PdfTextBoxField, PdfCheckBoxField,
+        PdfRadioButtonListField, PdfComboBoxField, PdfListBoxField } = require('@syncfusion/ej2-pdf');
 const { DOMParser, XMLSerializer } = require('@xmldom/xmldom');
 
 if (typeof global.DOMParser === 'undefined') global.DOMParser = DOMParser;
@@ -303,15 +306,10 @@ if (typeof global.XMLSerializer === 'undefined') global.XMLSerializer = XMLSeria
 
 class PdfViewerAdapter {
     constructor(options = {}) {
-        this.saveTaskQueue = options.saveTaskQueue || null;
-        this.transport = options.transport || null;
         this.storageService = options.storageService;
     }
 
     mapControlToGenericAction(controlAction) {
-        if (!controlAction || typeof controlAction !== 'object') {
-            throw new Error(`Expected CollaborativeEditingRequest, got ${typeof controlAction}`);
-        }
         return {
             roomName: controlAction.roomName || '',
             connectionId: controlAction.connectionId || '',
@@ -325,106 +323,92 @@ class PdfViewerAdapter {
         try {
             return collaborationAction.data ? JSON.parse(collaborationAction.data) : {};
         } catch (error) {
-            console.error('[PdfViewerAdapter] Error parsing action:', error.message);
+            console.error('Error parsing action:', error.message);
             return {};
         }
     }
 
     transformOperations(actions) {
-        // PDF Viewer actions are stored as snapshots. Page organizer state uses last-write-wins.
         return actions;
     }
 
     async replayOperationsAndUpdateDocument(masterPdfBase64, operations) {
-        if (!masterPdfBase64) throw new Error('Master PDF is empty or not provided');
+        if (!masterPdfBase64) throw new Error('Master PDF not provided');
+        
         const document = new PdfDocument(Buffer.from(masterPdfBase64, 'base64'));
-        const validOperations = this._extractValidOperations(operations);
-        for (const operation of validOperations) {
+        const validOps = this._extractValidOperations(operations);
+        
+        for (const op of validOps) {
             try {
-                await this.applyOperationToDocument(document, operation);
+                await this.applyOperationToDocument(document, op);
             } catch (error) {
-                console.error(`[ReplayOps] Failed to apply ${operation.type}:`, error.message);
+                console.error(`Failed to apply ${op.type}:`, error.message);
             }
         }
-        const updatedPdf = await document.save();
-        if (!updatedPdf || updatedPdf.length === 0) throw new Error('Failed to save updated PDF');
-        return new Blob([updatedPdf], { type: 'application/pdf' });
+        
+        const updated = await document.save();
+        return new Blob([updated], { type: 'application/pdf' });
     }
 
     _extractValidOperations(operations) {
         if (!Array.isArray(operations)) return [];
-        return operations.flatMap(operation => {
-            if (!operation) return [];
-            if (operation.type && operation.data) return [operation];
-            if (!operation.data || typeof operation.data !== 'string') return [];
-            try {
-                const request = JSON.parse(operation.data);
-                if (request.type === 'annotation') {
-                    return [{ type: 'annotation', data: request.data.xfdfData, action: request.data.action }];
-                }
-                if (request.type === 'formField') {
-                    return [{ type: 'formField', data: JSON.parse(request.data.jsonData), action: request.data.action }];
-                }
-                if (request.type === 'formFieldAction') {
-                    const changes = JSON.parse(request.data.changes);
-                    const data = changes.created?.[0] || changes.updated?.[0] || changes.deleted?.[0];
-                    const action = changes.created?.length ? 'created' : changes.updated?.length ? 'updated' : 'deleted';
-                    return data ? [{ type: 'formFieldAction', data, action }] : [];
-                }
-                if (request.type === 'pageOrganizer') {
-                    const data = typeof request.data === 'string' ? JSON.parse(request.data) : request.data;
-                    return [{ type: 'pageOrganizer', data: Array.isArray(data) ? data[0] : data, action: 'update' }];
-                }
-            } catch (error) {
-                console.warn('[ExtractOps] Invalid operation:', error.message);
-            }
-            return [];
-        });
+        return operations.filter(op => op && op.type && op.data);
     }
 
     async applyOperationToDocument(document, operation) {
-        const type = (operation.type || '').toLowerCase();
-        if (type === 'annotation' || type === 'annotationupdate') {
-            await this._importAnnotationsFromXfdf(document, operation.data, operation.action);
-        } else if (type === 'formfield' || type === 'formfieldaction' || type === 'formfieldupdate') {
-            await this._applyFormFieldUpdates(document, operation.data, operation.type, operation.action);
-        } else if (type === 'pageorganizer' || type === 'pageorganizeractions') {
-            await this._applyPageOrganizerActions(document, operation.data);
+        switch ((operation.type || '').toLowerCase()) {
+            case 'annotation':
+                await this._applyAnnotations(document, operation.data);
+                break;
+            case 'formfield':
+            case 'formfieldaction':
+                await this._applyFormFields(document, operation.data);
+                break;
+            case 'pageorganizer':
+                await this._applyPageOrganizer(document, operation.data);
+                break;
         }
     }
 
-    async _importAnnotationsFromXfdf(document, xfdfData, action) {
-        const xmlDocument = new DOMParser().parseFromString(xfdfData, 'text/xml');
-        const serialized = new XMLSerializer().serializeToString(xmlDocument);
-        if (serialized) document.importAnnotations(new TextEncoder().encode(serialized), DataFormat.xfdf);
+    async _applyAnnotations(document, xfdfData) {
+        const xmlDoc = new DOMParser().parseFromString(xfdfData, 'text/xml');
+        const serialized = new XMLSerializer().serializeToString(xmlDoc);
+        if (serialized) {
+            document.importAnnotations(new TextEncoder().encode(serialized), DataFormat.xfdf);
+        }
     }
 
-    async _applyFormFieldUpdates(document, data, type, action) {
-        // Apply formField values and formFieldAction create/update/delete operations
-        // using the PdfTextBoxField, PdfCheckBoxField, PdfComboBoxField,
-        // PdfListBoxField, and PdfRadioButtonListField APIs.
+    async _applyFormFields(document, data) {
+        // Form field updates applied here
+        // Use PdfTextBoxField, PdfCheckBoxField, etc. to update fields
     }
 
-    async _applyPageOrganizerActions(document, data) {
-        if (data.action === 'delete') document.removePage(data.originalPageIndex);
-        if (data.action === 'reorder' || data.action === 'rearrange') document.reorderPages(data.pageIndices);
-        if (data.action === 'rotate') document.getPage(data.originalPageIndex).rotation = PdfRotationAngle[`angle${data.rotateAngle}`];
-        if (data.action === 'insert') document.addPage(data.targetIndex, data.pageSize);
+    async _applyPageOrganizer(document, data) {
+        if (data.action === 'delete') {
+            document.removePage(data.originalPageIndex);
+        } else if (data.action === 'reorder') {
+            document.reorderPages(data.pageIndices);
+        } else if (data.action === 'rotate') {
+            document.getPage(data.originalPageIndex).rotation = data.rotateAngle;
+        } else if (data.action === 'insert') {
+            document.addPage(data.targetIndex);
+        }
     }
 
     async processSaveRequestAsync(request) {
-        const result = await this.storageService.getPdfAsync(request.fileName || 'document.pdf', request.roomName);
-        if (!result.success) throw new Error(result.error || 'Failed to retrieve PDF');
-        const updatedPdf = await this.replayOperationsAndUpdateDocument(result.content, request.actions);
-        const buffer = Buffer.from(await updatedPdf.arrayBuffer());
+        const pdf = await this.storageService.getPdfAsync(request.fileName || 'document.pdf', request.roomName);
+        if (!pdf.success) throw new Error(pdf.error);
+        
+        const updated = await this.replayOperationsAndUpdateDocument(pdf.content, request.actions);
+        const buffer = Buffer.from(await updated.arrayBuffer());
         await this.storageService.storePdfAsync(buffer, request.fileName || 'document.pdf', request.roomName);
     }
 }
+
+module.exports = PdfViewerAdapter;
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
-Complete `_applyFormFieldUpdates` with the PDF-specific form field creation, update, and delete logic from the running server implementation. The common server manages Redis, transport, room membership, versioning, and the save worker.
 
 ### 3. Register the collaboration routes
 
@@ -515,6 +499,15 @@ server.start();
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
+
+> N> The simplified adapter above shows the core patterns. For complete production implementation with:
+> - Comprehensive form field handling (all property types)
+> - XFDF annotation import with changeset processing
+> - Signature rendering (text, image, and freehand draw with zoom/rotation)
+> - Advanced page organizer operations (delete, reorder, rotate, insert, copy)
+> - Redis cleanup strategies and partial save workflows
+
+> Refer to the [PDF Viewer Collaboration Server sample](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples) on GitHub.
 
 ## See Also
 

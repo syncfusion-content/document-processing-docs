@@ -47,11 +47,11 @@ Set up the comparison with basic default highlighting:
 {% raw %}
 <template>
     <ejs-pdfcomparer
-        id="comparer-container"
+        id="container"
         height="600px"
-        :originalDocumentPath="'https://cdn.syncfusion.com/content/pdf/original-document.pdf'"
-        :modifiedDocumentPath="'https://cdn.syncfusion.com/content/pdf/modified-document.pdf'"
-        resourceUrl="https://cdn.syncfusion.com/ej2/34.2.4/dist/ej2-pdfviewer-lib">
+        :originalDocumentPath="originalDocumentPath"
+        :modifiedDocumentPath="modifiedDocumentPath"
+        :resourceUrl="resourceUrl">
     </ejs-pdfcomparer>
 </template>
 
@@ -61,9 +61,20 @@ import { PdfComparerComponent } from '@syncfusion/ej2-vue-pdfviewer';
 export default {
     components: {
         'ejs-pdfcomparer': PdfComparerComponent
+    },
+    data() {
+        return {
+            originalDocumentPath: 'https://cdn.syncfusion.com/content/pdf/original-document.pdf',
+            modifiedDocumentPath: 'https://cdn.syncfusion.com/content/pdf/modified-document.pdf',
+            resourceUrl: 'https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib'
+        };
     }
 };
 </script>
+
+<style>
+  @import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/pdfviewer/index.css';
+</style>
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
@@ -77,12 +88,12 @@ Define the `comparisonOptions` object to customize highlighting and pass it to t
 {% raw %}
 <template>
     <ejs-pdfcomparer
-        id="comparer-container"
+        id="container"
         height="600px"
-        :originalDocumentPath="'https://cdn.syncfusion.com/content/pdf/original-document.pdf'"
-        :modifiedDocumentPath="'https://cdn.syncfusion.com/content/pdf/modified-document.pdf'"
+        :originalDocumentPath="originalDocumentPath"
+        :modifiedDocumentPath="modifiedDocumentPath"
         :comparisonOptions="comparisonOptions"
-        resourceUrl="https://cdn.syncfusion.com/ej2/34.2.4/dist/ej2-pdfviewer-lib">
+        :resourceUrl="resourceUrl">
     </ejs-pdfcomparer>
 </template>
 
@@ -95,6 +106,9 @@ export default {
     },
     data() {
         return {
+            originalDocumentPath: 'https://cdn.syncfusion.com/content/pdf/original-document.pdf',
+            modifiedDocumentPath: 'https://cdn.syncfusion.com/content/pdf/modified-document.pdf',
+            resourceUrl: 'https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib',
             comparisonOptions: {
                 beforeColor: '#FF0000',        // Color for deleted text (red)
                 afterColor: '#00FF00',         // Color for added text (green)
@@ -106,6 +120,10 @@ export default {
     }
 };
 </script>
+
+<style>
+  @import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/pdfviewer/index.css';
+</style>
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
