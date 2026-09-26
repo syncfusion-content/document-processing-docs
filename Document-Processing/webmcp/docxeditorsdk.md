@@ -124,6 +124,20 @@ When you invoke a WebMCP tool, the following happens behind the scenes:
 └─────────────────────────────────────────────────────────────────┘
 ```
 
+## Supported Features
+
+WebMCP tools are organized into seven categories and provide 27 document editing operations.
+
+| Category | Tools | Example |
+|----------|-------|---------|
+| **Document Management** | saveDocument, print, pageCount, goToPage, configureDocumentEditorSettings | Save documents, access page information, print, and configure editor behavior |
+| **Content Editing** | insertText, paste, insertField, insertImage, insertHyperlink | Add and modify document content, images, fields, and links |
+| **Formatting** | formatCharacter, formatParagraph | Apply text styling and paragraph formatting |
+| **Search & Data Manipulation** | find, findAll, replaceAll, getSelectionText, getSelectionSfdt | Search, replace, and retrieve document content |
+| **Navigation & Selection** | select, selectAll, selectCurrentWord, selectParagraph, selectBookmark | Navigate and select specific content within the document |
+| **Bookmarks & Document Structure** | insertBookmark, getDocumentBookmarks | Create and manage document bookmarks for quick navigation |
+| **Protection & Controlled Editing** | enforceProtection, stopProtection, insertEditingRegion | Restrict editing and define editable regions for authorized users |
+
 ## Writing Effective Prompts
 
 AI responses are only as good as the prompt you provide. Vague requests like *"fix this"* give the AI very little context. More specific prompts produce reliable, accurate results.
