@@ -21,6 +21,29 @@
 
                 <e-spreadsheet-row>
                     <e-spreadsheet-cells>
+                        <e-spreadsheet-cell value="Annual Sales Report 2026 (Draft)">
+                            <e-richtextsettings>
+                                <e-richtext text="Annual Sales Report " fontWeight="Bold"></e-richtext>
+                                <e-richtext text="2026" color="#0078D4"></e-richtext>
+                                <e-richtext text=" (Draft)" fontStyle="Italic"></e-richtext>
+                            </e-richtextsettings>
+                        </e-spreadsheet-cell>
+                    </e-spreadsheet-cells>
+                </e-spreadsheet-row>
+
+                <e-spreadsheet-row>
+                    <e-spreadsheet-cells>
+                        <e-spreadsheet-cell value="Customer Loyalty Program">
+                            <e-richtextsettings>
+                                <e-richtext text="Customer Loyalty " textDecoration="Underline"></e-richtext>
+                                <e-richtext text="Program" fontFamily="Georgia" fontSize="14pt"></e-richtext>
+                            </e-richtextsettings>
+                        </e-spreadsheet-cell>
+                    </e-spreadsheet-cells>
+                </e-spreadsheet-row>
+
+                <e-spreadsheet-row>
+                    <e-spreadsheet-cells>
                         <e-spreadsheet-cell value="Mineral Water H2O">
                             <e-richtextsettings>
                                 <e-richtext text="Mineral Water H"></e-richtext>
@@ -28,27 +51,6 @@
                                 <e-richtext text="O"></e-richtext>
                             </e-richtextsettings>
                         </e-spreadsheet-cell>
-                    </e-spreadsheet-cells>
-                </e-spreadsheet-row>
-
-                <e-spreadsheet-row>
-                    <e-spreadsheet-cells>
-                        <e-spreadsheet-cell value="Energy Supplement C6H12O6">
-                            <e-richtextsettings>
-                                <e-richtext text="Energy Supplement C"></e-richtext>
-                                <e-richtext text="6" verticalAlign="Sub"></e-richtext>
-                                <e-richtext text="H"></e-richtext>
-                                <e-richtext text="12" verticalAlign="Sub"></e-richtext>
-                                <e-richtext text="O"></e-richtext>
-                                <e-richtext text="6" verticalAlign="Sub"></e-richtext>
-                            </e-richtextsettings>
-                        </e-spreadsheet-cell>
-                    </e-spreadsheet-cells>
-                </e-spreadsheet-row>
-
-                <e-spreadsheet-row>
-                    <e-spreadsheet-cells>
-                        <e-spreadsheet-cell value="H2O"></e-spreadsheet-cell>
                     </e-spreadsheet-cells>
                 </e-spreadsheet-row>
 
@@ -68,20 +70,37 @@
 
 <script>
     function created() {
-
         this.updateCell({
+            value: 'Premium Membership valid until 31st Dec 2026',
             richText: [
-                { text: 'H' },
-                { text: '2', style: { verticalAlign: 'sub' } },
-                { text: 'O' }
-            ]
-        }, 'A4');
-
-        this.updateCell({
-            value: 'X2',
-            richText: [
-                { text: 'X' },
-                { text: '2', style: { verticalAlign: 'super' } }
+                {
+                    text: 'Premium Membership ',
+                    style: {
+                        fontWeight: 'bold',
+                        color: '#2E7D32'
+                    }
+                },
+                {
+                    text: 'valid until ',
+                    style: {
+                        fontStyle: 'italic'
+                    }
+                },
+                {
+                    text: '31',
+                    style: {
+                        textDecoration: 'underline'
+                    }
+                },
+                {
+                    text: 'st',
+                    style: {
+                        verticalAlign: 'super'
+                    }
+                },
+                {
+                    text: ' Dec 2026'
+                }
             ]
         }, 'A5');
     }

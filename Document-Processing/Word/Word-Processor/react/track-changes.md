@@ -393,9 +393,8 @@ function App() {
 
 export default App;
 ```
-> **Note**
-> * These settings only affect how revisions are displayed in the DOCX Editor and are not stored in the document.
-> * By default, all revision types use author-specific colors (`'byAuthor'`).
+N> 1. These settings only affect how revisions are displayed in the DOCX Editor and are not stored in the document.
+N> 2. By default, all revision types use author-specific colors ('byAuthor').
 
 
 ## Filter Changes by User

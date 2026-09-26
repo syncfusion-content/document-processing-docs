@@ -35,13 +35,13 @@ Step 3: Select the framework and click **Create** button.
 Step 4: Install the following NuGet packages in your application from [NuGet.org](https://www.nuget.org/) by executing the following commands:
 
 * [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core)
-* [SkiaSharp.NativeAssets.Linux](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)
+* [SkiaSharp.NativeAssets.Linux](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/4.150.1)
 * [HarfBuzzSharp.NativeAssets.Linux](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.1.1)
 
 {% tabs %}
 {% highlight text %}
 dotnet add package Syncfusion.XlsIORenderer.Net.Core -v 30.1.37 -s https://www.nuget.org/
-dotnet add package SkiaSharp.NativeAssets.Linux -v 3.119.1 -s https://www.nuget.org/
+dotnet add package SkiaSharp.NativeAssets.Linux -v 4.150.1 -s https://www.nuget.org/
 dotnet add package HarfBuzzSharp.NativeAssets.Linux -v 8.3.1.1 -s https://www.nuget.org/
 {% endhighlight %}
 {% endtabs %}
@@ -111,13 +111,13 @@ cd ConvertExcelToImage
 Step 3: Install the following NuGet packages in your application from [NuGet.org](https://www.nuget.org/) by executing the following commands:
 
 * [Syncfusion.XlsIORenderer.NET.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.NET.Core)
-* [SkiaSharp.NativeAssets.Linux](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)
+* [SkiaSharp.NativeAssets.Linux](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/4.150.1)
 * [HarfBuzzSharp.NativeAssets.Linux](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.1.1)
 
 {% tabs %}
 {% highlight text %}
 dotnet add package Syncfusion.XlsIORenderer.Net.Core -v 30.1.37 -s https://www.nuget.org/
-dotnet add package SkiaSharp.NativeAssets.Linux -v 3.119.1 -s https://www.nuget.org/
+dotnet add package SkiaSharp.NativeAssets.Linux -v 4.150.1 -s https://www.nuget.org/
 dotnet add package HarfBuzzSharp.NativeAssets.Linux -v 8.3.1.1 -s https://www.nuget.org/
 {% endhighlight %}
 {% endtabs %}

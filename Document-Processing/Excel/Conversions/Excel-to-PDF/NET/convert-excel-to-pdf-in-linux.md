@@ -29,13 +29,13 @@ Step 3: Select the framework and click **Create**.
 Step 4: Install the following NuGet packages in your application from [NuGet.org](https://www.nuget.org/) by running the following commands. The version numbers below are examples; use the latest stable versions in production.
 
 * [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core)
-* [SkiaSharp.NativeAssets.Linux](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)
+* [SkiaSharp.NativeAssets.Linux](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/4.150.1)
 * [HarfBuzzSharp.NativeAssets.Linux](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.1.1)
 
 {% tabs %}
 {% highlight bash %}
 dotnet add package Syncfusion.XlsIORenderer.Net.Core -v 29.1.41 -s https://www.nuget.org/
-dotnet add package SkiaSharp.NativeAssets.Linux -v 3.119.1 -s https://www.nuget.org/
+dotnet add package SkiaSharp.NativeAssets.Linux -v 4.150.1 -s https://www.nuget.org/
 dotnet add package HarfBuzzSharp.NativeAssets.Linux -v 8.3.1.1 -s https://www.nuget.org/
 {% endhighlight %}
 {% endtabs %}
@@ -98,13 +98,13 @@ cd Convert-Excel-to-PDF
 Step 3: Install the following NuGet packages in your application from [NuGet.org](https://www.nuget.org/) by running the following commands. The version numbers below are examples; use the latest stable versions in production.
 
 * [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core)
-* [SkiaSharp.NativeAssets.Linux](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)
+* [SkiaSharp.NativeAssets.Linux](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/4.150.1)
 * [HarfBuzzSharp.NativeAssets.Linux](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.1.1)
 
 {% tabs %}
 {% highlight bash %}
 dotnet add package Syncfusion.XlsIORenderer.Net.Core -v 29.1.41 -s https://www.nuget.org/
-dotnet add package SkiaSharp.NativeAssets.Linux -v 3.119.1 -s https://www.nuget.org/
+dotnet add package SkiaSharp.NativeAssets.Linux -v 4.150.1 -s https://www.nuget.org/
 dotnet add package HarfBuzzSharp.NativeAssets.Linux -v 8.3.1.1 -s https://www.nuget.org/
 {% endhighlight %}
 {% endtabs %}
