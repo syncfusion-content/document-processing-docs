@@ -1,4 +1,4 @@
-<div class="text-center">
+<div>
     <ejs-documenteditorcontainer id="container"
                                  height="590px"
                                  enableTrackChanges="true"
