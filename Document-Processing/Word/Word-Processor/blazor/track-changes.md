@@ -11,6 +11,17 @@ documentation: ug
 
 Track Changes allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject the modifications. It is a useful tool for managing changes made by several reviewers to the same document. If the track changes option is enabled, all editing operations are preserved as revisions in [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor).
 
+Starting from v35.1.xx, the default value of table row insertion and deletion colors are changed based on author. To retain the previous static colors, add the following code.
+
+```csharp
+container.DocumentEditorSettings.RevisionSettings = new RevisionSettingsModel() {
+        InsertRevisionColor = "byAuthor",
+        DeleteRevisionColor = "byAuthor",
+        InsertedRowColor = "#0078D4", 
+        DeletedRowColor = "#E3008C" 
+      };
+```
+
 ## Enable track changes in DOCX Editor
 
 The following example demonstrates how to enable track changes.
