@@ -56,25 +56,6 @@ All Syncfusion<sup>&reg;</sup> JS 2 packages are published in the `npmjs.com` re
 npm install @syncfusion/ej2-pptx --save
 ```
 
-### Transitive Dependencies
-
-The following packages are included automatically by `@syncfusion/ej2-pptx` and do not need to be installed separately:
-
-- `@syncfusion/ej2-base` — common utilities used by the library.
-- `@syncfusion/ej2-compression` — compression support used by PowerPoint features.
-
-## License Registration
-
-If your project requires a Syncfusion license, register the license key before using the PowerPoint API. Add the following code at the top of `App.jsx`:
-
-```javascript
-import { registerLicense } from '@syncfusion/ej2-base';
-
-registerLicense('YOUR_LICENSE_KEY');
-```
-
-Replace `YOUR_LICENSE_KEY` with the key from your Syncfusion account. For more information, see the [Syncfusion licensing documentation](https://help.syncfusion.com/document-processing/licensing/overview).
-
 ## Create a PowerPoint Presentation Document
 
 Replace the contents of `App.jsx` with the following code. The file imports the Presentation classes as named exports from `@syncfusion/ej2-pptx` and creates a PowerPoint presentation.
@@ -84,11 +65,8 @@ Replace the contents of `App.jsx` with the following code. The file imports the 
 {% raw %}
 
 import React from 'react';
-import { registerLicense } from '@syncfusion/ej2-base';
 import { Presentation, HorizontalAlignmentType } from '@syncfusion/ej2-pptx';
 
-// Optional: register the Syncfusion license key (required for commercial usage)
-registerLicense('YOUR_LICENSE_KEY');
 export default function App() {
 const createPPTX = async () => {
 // Creates a Presentation instance.
