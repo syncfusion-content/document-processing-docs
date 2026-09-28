@@ -1,0 +1,21 @@
+<div class="text-center">
+    <ejs-documenteditorcontainer id="container"
+                                 height="590px"
+                                 enableTrackChanges="true"
+                                 enableToolbar="true">
+    </ejs-documenteditorcontainer>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get the container instance by ID
+            var container = document.getElementById("container").ej2_instances[0];
+
+            // Apply revision colors dynamically
+            container.documentEditorSettings.revisionSettings = {
+                revisionColors: ['#0000ff', '#bb00ff', '#c14f16']
+            };
+        });
+    </script>
+}

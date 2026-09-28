@@ -28,6 +28,7 @@ The [`Vue PDF Viewer`](https://www.syncfusion.com/pdf-viewer-sdk) component is a
     * [Shape annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/annotation/shape-annotation): rectangle, circle, polygon, line, and arrow
     * [Stamp annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/annotation/stamp-annotation)
     * [Free text annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/annotation/free-text-annotation)
+    * [Link annotations](./annotation/link-annotation)
     * [Comments](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/annotation/comments) and [sticky notes](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/annotation/sticky-notes-annotation)
 * [Form filling](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/forms/form-filling)
 * [Form designer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/forms/form-designer)

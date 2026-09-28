@@ -8,11 +8,13 @@ documentation: ug
 
 # Page Setup in JavaScript Excel
 
-Use `sheet.pageSetup` to control paper size, orientation, margins, headers and footers, fit-to-page scaling, and print area.
+Page setup controls how a worksheet prints, including paper size, orientation, margins, headers and footers, fit-to-page scaling, and the print area. These settings travel with the workbook and apply when users print from Excel.
 
 N> Page margins are authored in **points** (72 points = 1 inch), the same unit used for chart and shape sizes. SpreadsheetML stores margins in inches on save.
 
 ## Paper, orientation, and margins
+
+Paper size, orientation, and margins control how a worksheet prints on the page. Centering, gridlines, and row or column headings refine the printed layout without changing cell content.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -56,9 +58,11 @@ setup.printHeadings = true;
 {% endhighlight %}
 {% endtabs %}
 
-`orientation` is `'default' | 'portrait' | 'landscape'`.
+Set `orientation` to `'default'`, `'portrait'`, or `'landscape'` to control print layout.
 
 ## Fit to page and print area
+
+Fit-to-page scaling shrinks content to a set number of printed pages. A print area limits what prints, and repeating title rows or columns keeps labels visible on every page.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -96,6 +100,8 @@ setup.pageOrder = 'downThenOver';
 {% endtabs %}
 
 ## Headers and footers
+
+Headers and footers print text at the top and bottom of each page. Place content on the left, center, or right, including dynamic items such as the date and page numbers.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

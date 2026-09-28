@@ -169,6 +169,8 @@ Use the `enableSyncScrolling` property to control whether the viewers stay synch
 - **Differences panel** - Consolidated list on the right showing all detected differences categorized by type
 - **File upload support** - Upload custom PDFs for comparison
 
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Semantic%20Text%20Comparison/Highlight%20differences%20in%20UI).
+
 ## Related topics
 
 - [Overview of semantic text comparison](./overview)

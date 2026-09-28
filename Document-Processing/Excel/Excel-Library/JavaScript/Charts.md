@@ -8,7 +8,7 @@ documentation: ug
 
 # Charts in JavaScript Excel
 
-Add a chart with:
+Charts turn worksheet data into visual comparisons that open in Excel. Place a chart on the sheet, point it at a data range, and set the chart type to match the story you want to show.
 
 ```ts
 sheet.addChart(type, row, column, width, height, data, values?)
@@ -21,6 +21,8 @@ sheet.addChart(type, row, column, width, height, data, values?)
 * `values` — optional values formula when `data` holds category labels.
 
 ## Column chart
+
+A column chart compares values across categories as vertical bars. Clustering related series side by side makes it easy to contrast groups in the same chart.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -79,7 +81,7 @@ N> The chart title property is `chart.chartTitle` (not `title`). Series and axes
 
 ## Common chart types
 
-Import `ChartType` from `@syncfusion/ej2-xlsx`. Prefer non-deprecated members such as:
+Common chart types cover column, bar, line, pie, area, scatter, and related layouts. Choose the type that best matches how you want categories and values compared.
 
 * Column: `ColumnClustered`, `ColumnStacked`, `ColumnPercentStacked`
 * Bar: `BarClustered`, `BarStacked`, `BarPercentStacked`
@@ -90,9 +92,9 @@ Import `ChartType` from `@syncfusion/ej2-xlsx`. Prefer non-deprecated members su
 * 3-D layouts: `Column3D`, `Pie3D`, `Line3D`, and related members
 * Extended: `Funnel`, `Waterfall`, `BoxAndWhisker`, `Pareto`, `Sunburst`, `TreeMap`
 
-## Series, legend, and axes
+## Configure series, legend, and axes
 
-Configure series, axes, legend, and data labels on the returned `Chart`.
+After a chart exists, you can refine series, axes, the legend, and data labels so the visual matches your report. Titles and layout options help readers understand each series at a glance.
 
 * `addSeries(title?)` appends a series; set `categoryLabels` and `values` on the returned `ChartSeries`.
 * Axis titles use `primaryCategoryAxis.title` / `primaryValueAxis.title` (not `chartTitle`).

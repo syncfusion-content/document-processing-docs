@@ -168,9 +168,16 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Custom font registration
 
-In many deployment environments such as cloud-hosted, containerized, and cross-platform applications, installing fonts on the operating system is not possible or desirable. The .NET Word Library allows users to register custom fonts through the FontManager API, maintaining a private font repository within the library. This supports TrueType (.ttf) and OpenType (.otf) formats, registered from memory streams or a folder, and ensures consistent document rendering without depending on system-installed fonts.
+In many deployment environments such as cloud-hosted, containerized, and cross-platform applications, installing fonts on the operating system is not possible or desirable. During Office document conversion, users can register custom fonts through the FontManager API, maintaining a private font repository within the library. This supports TrueType (.ttf) and OpenType (.otf) formats, registered from memory streams or a folder, and ensures consistent document rendering without depending on system-installed fonts.
 
-For further information, click [here](../Word/Conversions/Word-To-PDF/NET/Custom-fonts-registration-word-to-pdf).
+Learn more about registering custom fonts for Office document conversion in the following documentation:
+
+- [Word to PDF](../Word/Conversions/Word-To-PDF/NET/Custom-fonts-registration-word-to-pdf)
+- [Word to Image](../Word/Conversions/Word-To-Image/NET/Custom-fonts-registration-word-to-image)
+- [Excel to PDF](../Excel/Conversions/Excel-to-PDF/NET/Excel-to-PDF-Conversion#register-custom-fonts)
+- [Excel to Image](../Excel/Conversions/Excel-to-Image/NET/Worksheet-to-Image-Conversion#register-custom-fonts)
+- [PowerPoint to PDF](../PowerPoint/Conversions/PowerPoint-To-PDF/NET/Custom-fonts-registration-pptx-to-pdf)
+- [PowerPoint to Image](../PowerPoint/Conversions/PowerPoint-To-Image/NET/Custom-fonts-registration-pptx-to-image)
 
 ## Best Practices
 

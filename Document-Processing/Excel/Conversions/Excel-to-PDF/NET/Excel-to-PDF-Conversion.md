@@ -854,7 +854,7 @@ In Linux OS, the Excel to PDF conversion can be performed using .NET Core (Targe
 
 In addition to the previous NuGet packages, the SkiaSharp.Linux helper NuGet package is required. It can be generated with the following steps:
 
-1. Download `libSkiaSharp.so` from the [SkiaSharp release page](https://github.com/mono/SkiaSharp/releases/tag/v3.119.1). The native binary should be placed in the folder structure `SkiaSharp.Linux/runtimes/linux-x64/native/libSkiaSharp.so` (the filename must be exactly `libSkiaSharp.so`).
+1. Download `libSkiaSharp.so` from the [SkiaSharp release page](https://github.com/mono/SkiaSharp/releases/tag/v4.150.1). The native binary should be placed in the folder structure `SkiaSharp.Linux/runtimes/linux-x64/native/libSkiaSharp.so` (the filename must be exactly `libSkiaSharp.so`).
 2. Create a folder named `SkiaSharp.Linux` containing the `runtimes/linux-x64/native/libSkiaSharp.so` file from step 1.
 3. Create a nuspec file named `SkiaSharp.Linux.nuspec` inside the `SkiaSharp.Linux` folder using the following metadata. The nuspec can be customized.
 
@@ -864,7 +864,7 @@ In addition to the previous NuGet packages, the SkiaSharp.Linux helper NuGet pac
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>SkiaSharp.Linux</id>
-    <version>3.119.1</version>
+    <version>4.150.1</version>
     <title>SkiaSharp for Linux</title>
     <authors>Syncfusion Inc.</authors>
     <owners>Syncfusion Inc.</owners>
@@ -873,7 +873,7 @@ In addition to the previous NuGet packages, the SkiaSharp.Linux helper NuGet pac
     <tags>linux,cross-platform,skiasharp,net-standard,net-core,excel-to-pdf</tags>
     <dependencies>
       <group targetFramework=".NETStandard1.4">
-        <dependency id="SkiaSharp" version="3.119.1" />
+        <dependency id="SkiaSharp" version="4.150.1" />
       </group>
     </dependencies>
   </metadata>

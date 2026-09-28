@@ -12,22 +12,32 @@ domainurl: ##DomainURL##
 
 The React PDF Viewer supports real-time collaborative editing through the Syncfusion Collaborator framework. The framework uses a shared client package and a platform-specific Collaboration Server to synchronize PDF Viewer actions between users.
 
+![Collaborative Editing in Angular PDF Viewer](../images/collaborative-editing-pdf-viewer.gif)
+
 ## Architecture
 
 Collaborative editing uses the following components:
 
 - **Collaboration Client** - The `@syncfusion/ej2-collaborator` package connects the React PDF Viewer to the Collaboration Server.
 - **PDF Viewer adapter** - A client-side `PdfViewerAdapter` implements `ICollaborationProvider` and translates actions between the PDF Viewer and the Collaboration Client.
-- **Collaboration Server** - Use `Syncfusion.Collaborator.Server.AspNet.Core` for ASP.NET Core or `ej2-collaborator-server` for Node.js.
+- **Collaboration Server** - Use `ej2-collaborator-server` for Node.js.
 - **Redis** - Required by the Collaboration Server for operation storage, synchronization, and scale-out.
 
 The Collaboration Server manages the transport, collaboration sessions, operation synchronization, and save processing. The PDF Viewer application supplies the control adapter and document routes. Do not add a separate Socket.IO Redis adapter or implement the collaboration operation queue in the PDF Viewer application.
+
+## Collaborative features
+
+Users can collaborate on the same PDF room and see shared changes to:
+
+- **Annotations** - Comments, highlights, drawings, and stamps
+- **Form field interactions** - Form field changes and value updates
+- **Page Organizer operations** - Page reordering, page rotation, and page changes
 
 ## Prerequisites
 
 - A React PDF Viewer application.
 - A Redis instance reachable from the server.
-- .NET 8, 9, or 10 for ASP.NET Core, or Node.js 18 or later for Node.js.
+- Node.js 18 or later.
 - A PDF Viewer adapter on the client and server. The adapter is the control-specific bridge; the common Collaborator packages provide the collaboration infrastructure.
 
 ## Client package
@@ -40,19 +50,17 @@ npm install @syncfusion/ej2-collaborator
 
 Create a `pdfViewerAdapter.ts` file that implements the collaboration provider contract, then create a `CollaborationClient` with the adapter and join the room after the PDF document has been loaded. See the platform-specific pages for the adapter and initialization examples:
 
-- [Collaborative editing with ASP.NET Core](./using-redis-cache-asp-net-core)
 - [Collaborative editing with Node.js](./using-redis-cache-nodejs)
 
 ## Server packages
 
-Choose one of the following Collaboration Server implementations:
+Choose the following Collaboration Server implementation:
 
 | Server | Package | Transport |
 | --- | --- | --- |
-| ASP.NET Core | `Syncfusion.Collaborator.Server.AspNet.Core` | SignalR by default, or WebSocket |
 | Node.js | `ej2-collaborator-server` | WebSocket |
 
-Both server implementations require Redis. Configure the Redis connection and register the PDF Viewer server adapter before starting the server.
+The server implementation requires Redis. Configure the Redis connection and register the PDF Viewer server adapter before starting the server.
 
 ## Collaboration flow
 
@@ -74,7 +82,6 @@ The Node.js sample uses the following routes under `/api/CollaborativeEditing`:
 
 ## See Also
 
-- [Collaborative editing with ASP.NET Core](./using-redis-cache-asp-net-core)
 - [Collaborative editing with Node.js](./using-redis-cache-nodejs)
 - [Collaboration Client](../../../../Collaborator/collaboration-client)
 - [Collaboration Server](../../../../Collaborator/collaboration-server)

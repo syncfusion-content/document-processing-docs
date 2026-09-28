@@ -237,6 +237,24 @@ The following code example shows the style formatting in text and cells of the s
 {% endhighlight %}
 {% endtabs %}
 
+## Text Overflow
+
+When cell content exceeds the column width, the Spreadsheet automatically displays the overflowing text across adjacent empty cells. This preserves readability without altering the column width.
+
+Text overflows only into adjacent empty cells. If a neighboring cell contains a value, formula, or merged range, the text is clipped at the cell boundary.
+
+Text overflow is supported for plain text, rich text, hyperlinks, and RTL (right-to-left) layouts, and updates automatically whenever cell content, formatting, or column widths change.
+
+The following code example demonstrates text overflow in the Spreadsheet.
+
+{% tabs %}
+{% highlight razor tabtitle="CSHTML" %}
+{% include code-snippet/spreadsheet/asp-net-mvc/text-overflow-cs1/razor %}
+{% endhighlight %}
+{% highlight c# tabtitle="textOverflowController.cs" %}
+{% include code-snippet/spreadsheet/asp-net-mvc/text-overflow-cs1/textOverflowController.cs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 ### Limitations of Formatting
@@ -245,6 +263,7 @@ The following features are not supported in Formatting:
 
 * Insert row/column between the formatting applied cells.
 * Formatting support for row/column.
+* Text overflow across freeze pane boundaries and for right-aligned cells.
 
 ## Conditional Formatting
 
@@ -310,6 +329,12 @@ The following options can be given for the icon sets as type,
 
 N>* 'ThreeArrows', 'ThreeArrowsGray', 'FourArrowsGray', 'FourArrows', 'FiveArrowsGray', 'FiveArrows', 'ThreeTrafficLights1', 'ThreeTrafficLights2', 'ThreeSigns', 'FourTrafficLights', 'FourRedToBlack', 'ThreeSymbols', 'ThreeSymbols2', 'ThreeFlags', 'FourRating', 'FiveQuarters', 'FiveRating', 'ThreeTriangles', 'ThreeStars', 'FiveBoxes'.
 
+### Formula-based Conditional Format
+
+Formula-based Conditional Formatting allows you to apply custom formatting rules using formulas through the `conditionalFormats` property in the sheet model or the [`conditionalFormat()`](https://ej2.syncfusion.com/documentation/api/spreadsheet#conditionalformat) method.
+
+When the specified formula rule evaluates to `TRUE`, the defined formatting is automatically applied to the target cells. This allows you to create advanced highlighting scenarios based on values from other cells or ranges within the worksheet.
+
 ### Custom Format
 
 Using custom format for conditional formatting you can set cell styles like color, background color, font style, font weight and underline.
@@ -341,36 +366,61 @@ You can clear the defined rules by using one of the following ways,
 The following features have some limitations in Conditional Formatting:
 
 * Insert row/column between the conditional formatting.
-* Conditional formatting with formula support.
+* User Interface support for formula-based conditional formatting.
 * Copy and paste the conditional formatting applied cells.
 * Custom rule support.
 
 ## Rich Text Formatting
 
-Rich text formatting allows you to apply different styles to specific portions of text within a single cell to improve readability and presentation. Currently, subscript and superscript formatting are supported, and other rich text font styles are not supported.
+Rich text formatting allows you to apply different styles to specific portions of text within a single cell to improve readability and presentation. Each text segment can have its own formatting, enabling you to combine multiple styles within a single cell.
 
-In the **Syncfusion ASP.NET MVC Spreadsheet**, rich text formatting is supported through the `richText` property of the cell model. This property allows you to define multiple text segments inside a cell, where each segment can have its own style.
+In the **Syncfusion ASP.NET MVC Spreadsheet**, rich text formatting is supported through the `richText` property of the cell model.
 
 Each `richText` segment contains:
 
 - `text` – Specifies the content of the segment  
 - `style` – Defines formatting using the `CellStyleModel`
 
+Rich text formatting supports the following style options through the `style` property of each `richText` segment:
+
+## Font Family
+
+You can change the font family of individual rich text segments using the `fontFamily` property. This allows different portions of text within the same cell to be displayed using different typefaces such as `Calibri`, `Arial`, and `Georgia`.
+
+## Font Size
+
+You can customize the size of individual rich text segments using the `fontSize` property to emphasize specific content within a cell.
+
+## Font Weight
+
+You can apply font weight formatting using the `fontWeight` property. This is typically used to display specific text segments in bold.
+
+## Font Style
+
+You can apply font style formatting using the `fontStyle` property. This property supports values such as `normal` and `italic`.
+
+## Text Decoration
+
+You can apply text decorations to individual rich text segments using the `textDecoration` property. Supported decorations include `underline` and `line-through`.
+
+## Font Color
+
+You can customize the color of specific text segments using the `color` property to improve visibility or highlight important information.
+
 ## Subscript and Superscript
 
-Subscript and superscript formatting are supported as part of rich text formatting and can be applied to specific portions of text within a cell.
+You can apply subscript and superscript formatting to individual text segments using the `verticalAlign` property.
 
-To apply these formats, use the `verticalAlign` property within the style of a rich text segment:
+- Use `verticalAlign: 'sub'` to display text as subscript.
+- Use `verticalAlign: 'super'` to display text as superscript.
 
-Set `verticalAlign: 'super'` for superscript and `verticalAlign: 'sub'` for subscript.
+### How to Apply Rich Text Formatting
 
-### How to Apply Subscript and Superscript
+You can apply rich text formatting in following ways:
 
-You can apply subscript and superscript formatting in following ways:
+1. Select the desired portion of text within a cell, then use the available formatting options in the ribbon such as font family, font size, bold, italic, underline, strikethrough, font color, subscript, or superscript.
 
-* Select the desired portion of text within a cell, then click the Subscript or Superscript option in the ribbon to apply the formatting.
-
-![Subscript and superscript in Spreadsheet](./images/spreadsheet_richtext.gif)
+![Rich text formatting in Spreadsheet](./images/spreadsheet_richtext.gif)
 
 * Using the `richText` property, you can define rich text formatting while initializing the Spreadsheet. This is useful when you want the formatting to be applied when the data is loaded.
 
@@ -378,30 +428,33 @@ You can apply subscript and superscript formatting in following ways:
 cells = new List<object>()
 {
     new {
-        value = "H2O",
+        value: "Annual Sales Report 2026 Highlights",
         richText = new List<object>()
         {
-            new { text = "H" },
-            new { text = "2", style = new { verticalAlign = "sub" } },
-            new { text = "O" }
+            new { text = 'Annual Sales Report ', style = new { fontWeight: 'bold' } },
+            new { text = '2026', style = new { color: '#0078D4' } },
+            new { text = ' Highlights', style = new { textDecoration: 'underline' } },
+            new { text = ' (Draft)', style = new { fontStyle: 'italic' } }
         }
     }
-};
+}
 ```
 
 You can also apply subscript and superscript dynamically using the `updateCell` method.
 
 ```js
-spreadsheet.updateCell({
-    value: 'X2',
-    richText: [
-        { text: 'X' },
-        { text: '2', style: { verticalAlign: 'super' } }
-    ]
-}, 'A5');
+    spreadsheet.updateCell({
+        richText: [
+            { text: 'Premium Membership ', style: { fontWeight: 'bold', color: '#2E7D32' } },
+            { text: 'valid until ', style: { fontStyle: 'italic' } },
+            { text: '31', style: { textDecoration: 'underline' } },
+            { text: 'st', style: { verticalAlign: 'super' } },
+            { text: ' Dec 2026' }
+        ]
+    }, 'A5');
 ```
 
-The following code example shows the subscript and superscript formatting in cells of the spreadsheet.
+The following code example shows how to apply multiple rich text formats in cells of the Spreadsheet.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
@@ -413,7 +466,6 @@ The following code example shows the subscript and superscript formatting in cel
 {% endtabs %}
 
 ## Limitations
-* **Limited formatting support:** Only subscript and superscript formatting are supported within rich text. Other formatting options such as font size, font color, and font weight are not supported.
 * **Edit mode requirement:** Formatting can be applied only while the cell is in edit mode. Selecting text outside of edit mode does not support subscript or superscript formatting.
 
 ## See Also
