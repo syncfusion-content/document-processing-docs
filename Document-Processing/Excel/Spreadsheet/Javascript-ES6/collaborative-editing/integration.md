@@ -11,8 +11,9 @@ documentation: ug
 
 The TypeScript SpreadsheetEditor integrates with the `@syncfusion/ej2-collaborator` package to exchange workbook actions, user presence, and selection updates with the Collaboration Server.
 
-
 ## Install the Collaboration Client
+
+Install the Collaborator package in the TypeScript application.
 
 ```bash
 npm install @syncfusion/ej2-collaborator
@@ -20,7 +21,33 @@ npm install @syncfusion/ej2-collaborator
 
 For details about connection types, room management, and collaboration events, refer to the [Collaboration Client documentation](https://help.syncfusion.com/document-processing/collaborator/collaboration-client).
 
+## Collaboration Client configuration
+
+The `CollaborationClient` connects the SpreadsheetEditor to the Collaboration Server and manages the collaboration session. Configure it with the following options:
+
+- `serviceUrl` - Specifies the Collaboration Server URL.
+- `connectionType` - Specifies `signalr` or `websocket`. The client and server must use the same transport.
+- `currentUser` - Specifies the display name of the current user.
+- `onUserJoined` - Invoked when another user joins the room.
+- `onUserLeft` - Invoked when another user leaves the room.
+
+```ts
+const client = new CollaborationClient(adapter, {
+    serviceUrl,
+    connectionType: 'signalr',
+    currentUser,
+    onUserJoined: (user) => {
+        console.log('User joined', user);
+    },
+    onUserLeft: (user) => {
+        console.log('User left', user);
+    }
+});
+```
+
 ## Create the SpreadsheetEditor adapter
+
+The `SpreadsheetEditorAdapter` implements `ICollaborationProvider` and connects the Collaboration Client with the SpreadsheetEditor. It loads the synchronized workbook, sends local SpreadsheetEditor actions, and applies remote actions received through `data.payload`.
 
 ```ts
 import {
@@ -109,7 +136,9 @@ export class SpreadsheetEditorAdapter
 }
 ```
 
-## Inject and enable collaborative editing
+## Configure the TypeScript SpreadsheetEditor
+
+Set `enableCollaborativeEditing` to `true`, inject `CollaborativeEditingHandler`, load the workbook, initialize the Collaboration Client, and join the collaboration room.
 
 ```ts
 import {
@@ -160,7 +189,17 @@ spreadsheet.appendTo('#spreadsheet');
 
 ## Manage the collaboration room
 
-The application must provide a room ID for each collaboration session and share the same room ID with all participants. Users who use the same room ID join the same collaboration session.
+The application must provide a room ID for each collaboration session and share the same room ID with all participating users. Users who use the same room ID join the same collaboration session. The room ID can be provided through a query parameter or another application-specific session mechanism.
+
+## Join a collaboration room
+
+Call `joinRoomAsync` with the shared room ID after loading the latest workbook state and room version.
+
+```ts
+await client.joinRoomAsync(roomName);
+```
+
+After joining the room, supported local actions are sent through `actionComplete`, and remote actions are applied through `SpreadsheetEditorAdapter.applyRemoteAction`.
 
 ## See also
 
