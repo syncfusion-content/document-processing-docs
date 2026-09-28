@@ -1,17 +1,17 @@
 ---
 layout: post
-title: WebMCP Integration in TypeScript Spreadsheet | Syncfusion
-description: WebMCP integration in TypeScript Spreadsheet explains setup, tool registration, configuration, and API reference with code examples.
+title: WebMCP Integration in JavaScript Spreadsheet | Syncfusion
+description: WebMCP integration in JavaScript Spreadsheet explains setup, tool registration, configuration, and API reference with code examples.
 platform: document-processing
 control: WebMCP
 documentation: ug
 ---
 
-# WebMCP Integration in TypeScript Spreadsheet
+# WebMCP Integration in JavaScript Spreadsheet
 
 ## Integration
 
-WebMCP integrates seamlessly into your TypeScript Spreadsheet application with minimal configuration. This section covers the required setup, tool discovery, registration, and complete API reference.
+WebMCP integrates seamlessly into your JavaScript Spreadsheet application with minimal configuration. This section covers the required setup, tool discovery, registration, and complete API reference.
 
 ### Prerequisites
 
@@ -42,36 +42,32 @@ Before you can use WebMCP locally, enable the feature flag and install the brows
 
 ### Step 2: Inject the WebMCP Module
 
-Import and inject the `WebMcpSpreadsheet` module into your Spreadsheet:
+Inject the `WebMcpSpreadsheet` module into the Spreadsheet. This registers the WebMCP feature and makes it available in your application.
 
-```typescript
-import { Spreadsheet, WebMcpSpreadsheet } from '@syncfusion/ej2-react-spreadsheet';
-
-// Inject the WebMCP module to enable MCP tool support
-Spreadsheet.Inject(WebMcpSpreadsheet);
+```js
+ej.spreadsheet.Spreadsheet.Inject(ej.spreadsheet.WebMcpSpreadsheet);
 ```
 
 ### Step 3: Enable WebMCP
 
 Set the `enableWebMcp` property to `true` in your Spreadsheet configuration. When enabled, all WebMCP tools are registered automatically:
 
-```typescript
-const spreadsheet = new Spreadsheet({
-    enableWebMcp: true,  // Enable WebMCP integration — registers all tools automatically
-    sheets: [{
-        name: 'Sales Data',
-        ranges: [{ dataSource: salesData }]
-    }],
-    // ... other configuration
+```js
+ej.spreadsheet.Spreadsheet.Inject(ej.spreadsheet.WebMcpSpreadsheet);
+
+var spreadsheet = new ej.spreadsheet.Spreadsheet({
+    enableWebMcp: true  // Enable WebMCP integration — registers all tools automatically
 });
+
+spreadsheet.appendTo('#spreadsheet');
 ```
 
 ### Step 4: Configure WebMCP Settings
 
 Use the `webMcpSettings` property to customize tool registration — set a unique name prefix, restrict which tools are exposed, or configure cross-origin access:
 
-```typescript
-export const grossPay: Object[] = [
+```js
+var grossPay = [
     {
         "EMPLOYEE ID": "1001",
         "EMPLOYEE NAME": "Vin Diesel",
@@ -293,14 +289,19 @@ export const grossPay: Object[] = [
         "GROSS PAY WITH OVERTIME(15/hour)": "=H23+((G23-8)*15)"
     }
 ];
-const spreadsheet = new Spreadsheet({
+
+ej.spreadsheet.Spreadsheet.Inject(ej.spreadsheet.WebMcpSpreadsheet);
+
+var spreadsheet = new ej.spreadsheet.Spreadsheet({
     enableWebMcp: true,
-    webMcpSettings: { name: 'sales' }, 
+    webMcpSettings: { name: 'sales' },
     sheets: [{
         name: 'Gross Pay',
-        ranges: [{ dataSource: grosspay }]
+        ranges: [{ dataSource: grossPay }]
     }]
 });
+
+spreadsheet.appendTo('#spreadsheet');
 ```
 
 ### Step 5: Test Your Setup
@@ -308,7 +309,7 @@ const spreadsheet = new Spreadsheet({
 **Test with Your Local Setup**
 - Run the application locally and open it in a Chromium-based browser such as Chrome, Edge, or Brave.
 - Launch the WebMCP extension and confirm that it connects to your application successfully.
-- Verify that the registered tools are displayed with your chosen prefix, such as sales_getCellData.
+- Verify that the registered tools are displayed with your chosen prefix, such as `sales_getCellData`.
 - Try a sample prompt that matches your data scenario to validate tool execution and response behavior.
 
 Additionally, we have hosted a sample for your reference Syncfusion WebMCP demo.
@@ -346,12 +347,12 @@ Add formulas to calculate the Gross Pay with Overtime based on Hours Worked
 
 Use `getWebMcpTools()` to retrieve available tool schemas:
 
-```typescript
+```js
 // Get all tool schemas
-const allTools = spreadsheet.getWebMcpTools();
+var allTools = spreadsheet.getWebMcpTools();
 
 // Get specific tools only
-const tools = spreadsheet.getWebMcpTools(['getCellData', 'editCell', 'formatCells']);
+var tools = spreadsheet.getWebMcpTools(['getCellData', 'editCell', 'formatCells']);
 
 console.log(allTools[0]);
 // Output:
@@ -380,17 +381,23 @@ Use the `webMcpSettings` property to customize tool registration. When `enableWe
 ### Usage Examples
 
 **Register all tools:**
-```typescript
-const spreadsheet = new Spreadsheet({
+```js
+ej.spreadsheet.Spreadsheet.Inject(ej.spreadsheet.WebMcpSpreadsheet);
+
+var spreadsheet = new ej.spreadsheet.Spreadsheet({
     enableWebMcp: true,
     webMcpSettings: { name: 'sales' }
     // Tools registered as: sales_getCellData, sales_editCell, ...
 });
+
+spreadsheet.appendTo('#spreadsheet');
 ```
 
 **Register specific tools only:**
-```typescript
-const spreadsheet = new Spreadsheet({
+```js
+ej.spreadsheet.Spreadsheet.Inject(ej.spreadsheet.WebMcpSpreadsheet);
+
+var spreadsheet = new ej.spreadsheet.Spreadsheet({
     enableWebMcp: true,
     webMcpSettings: {
         name: 'sales',
@@ -398,28 +405,36 @@ const spreadsheet = new Spreadsheet({
     }
     // Only these 3 tools are registered, reducing attack surface
 });
+
+spreadsheet.appendTo('#spreadsheet');
 ```
 
 **Multi-instance setup:**
-```typescript
-const spreadsheet1 = new Spreadsheet({
+```js
+ej.spreadsheet.Spreadsheet.Inject(ej.spreadsheet.WebMcpSpreadsheet);
+
+var spreadsheet1 = new ej.spreadsheet.Spreadsheet({
     enableWebMcp: true,
     webMcpSettings: { name: 'sales' }
     // sales_getCellData, sales_editCell, ...
 });
+spreadsheet1.appendTo('#spreadsheet1');
 
-const spreadsheet2 = new Spreadsheet({
+var spreadsheet2 = new ej.spreadsheet.Spreadsheet({
     enableWebMcp: true,
     webMcpSettings: { name: 'inventory' }
     // inventory_getCellData, inventory_editCell, ...
 });
+spreadsheet2.appendTo('#spreadsheet2');
 
 // No tool-name collisions; both spreadsheets can share a page safely
 ```
 
 **Cross-origin access:**
-```typescript
-const spreadsheet = new Spreadsheet({
+```js
+ej.spreadsheet.Spreadsheet.Inject(ej.spreadsheet.WebMcpSpreadsheet);
+
+var spreadsheet = new ej.spreadsheet.Spreadsheet({
     enableWebMcp: true,
     webMcpSettings: {
         name: 'sales',
@@ -430,30 +445,31 @@ const spreadsheet = new Spreadsheet({
     }
     // Tools are accessible from these origins (requires HTTPS)
 });
+
+spreadsheet.appendTo('#spreadsheet');
 ```
 
 ### Understanding the `beforeWebMcpToolExecute` Event
 
 Hook into tool execution for auditing, restrictions, or custom logic:
 
-```typescript
-const spreadsheet = new Spreadsheet({
+```js
+ej.spreadsheet.Spreadsheet.Inject(ej.spreadsheet.WebMcpSpreadsheet);
+
+var spreadsheet = new ej.spreadsheet.Spreadsheet({
     enableWebMcp: true,
     webMcpSettings: { name: 'sales' },
-    // ... config
+    beforeWebMcpToolExecute: function (args) {
+        console.log('Tool ' + args.toolName + ' invoked with:', args.toolArgs);
+
+        // Example: Prevent writing to a specific cell
+        if (args.toolName === 'editCell' && args.toolArgs.address === 'A1') {
+            args.cancel = true; // Cancel this operation
+        }
+    }
 });
 
-// Listen for tool execution attempts
-spreadsheet.beforeWebMcpToolExecute = (args: BeforeWebMcpToolExecuteEventArgs) => {
-    const { toolName, toolArgs } = args;
-    
-    console.log(`Tool ${toolName} invoked with:`, toolArgs);
-    
-    // Example: Prevent writing to specific ranges
-    if (toolName === 'editCell' && toolArgs.address === 'A1') {
-        args.cancel = true; // Cancel this operation
-    }
-};
+spreadsheet.appendTo('#spreadsheet');
 ```
 
 ## Tool Reference
@@ -465,18 +481,18 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 ### Core Data Tools
 
 | Tool Name | Type | Condition | Description |
-|----|----|----|-----|
+|-----------|------|-----------|-------------|
 | getCellData | Read | Always | Returns the value, formula, display text, and optional format of a single cell |
-| getRangeData | Read | Always | Returns cell values, formulas, and display text for a cell ranges (capped at 200 rows) |
+| getRangeData | Read | Always | Returns cell values, formulas, and display text for a cell range (capped at 200 rows) |
 | getSheetInfo | Read | Always | Returns structural metadata of a sheet — row count, column count, used range, and optional cell data |
 | sheetList | Read | Always | Returns the ordered list of all sheet names in the workbook |
 | evaluateFormula | Read | Always | Evaluates a formula expression and returns the result |
-| find | Searches a sheet or range for a value and returns all matching cell addresses |
+| find | Read | Always | Searches a sheet or range for a value and returns all matching cell addresses |
 
 ### Editing Tools
 
 | Tool Name | Type | Condition | Description |
-|----|----|----|-----|
+|-----------|------|-----------|-------------|
 | editCell | Write | Always | Writes a value or formula into a single cell |
 | insertRowsColumns | Write | Always | Inserts one or more blank rows or columns at a specified position |
 | deleteRowsColumns | Write | Always | Deletes one or more rows or columns at a specified position |
@@ -490,7 +506,7 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 ### Formatting Tools
 
 | Tool Name | Type | Condition | Description |
-|----|----|----|-----|
+|-----------|------|-----------|-------------|
 | formatCells | Write | Always | Applies visual formatting (bold, italic, font, color, background) to a range without changing values |
 | setNumberFormat | Write | Always | Applies a named number format (Currency, Percentage, Date, etc.) to a range |
 | addConditionalFormat | Write | Always | Adds a rule-based conditional formatting highlight that updates dynamically as values change |
@@ -500,7 +516,7 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 ### Data Manipulation Tools
 
 | Tool Name | Type | Condition | Description |
-|----|----|----|-----|
+|-----------|------|-----------|-------------|
 | sortRange | Write | Always | Reorders the rows of a range by the values in a specified column |
 | filterRange | Write | Always | Applies a column filter to show only rows matching a condition, or clears an existing filter |
 | addDataValidation | Write | Always | Attaches an input validation rule to a range to restrict what values can be entered |
@@ -509,14 +525,14 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 ### Charting & Shapes Tools
 
 | Tool Name | Type | Condition | Description |
-|----|----|----|-----|
+|-----------|------|-----------|-------------|
 | insertChart | Write | Always | Creates and inserts a chart bound to a data range into the active sheet |
 | insertHyperlink | Write | Always | Inserts a clickable hyperlink into a cell with a display label |
 
 ### Workbook & Utility Tools
 
 | Tool Name | Type | Condition | Description |
-|----|----|----|-----|
+|-----------|------|-----------|-------------|
 | save | Write | Always | Opens the export dialog so the user can save the workbook in a chosen format (xlsx, csv, pdf, etc.) |
 | undo | Write | Always | Reverses the last action performed on the spreadsheet |
 
@@ -524,23 +540,20 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 
 ### Example 1: Basic Setup
 
-Set up a Spreadsheet with WebMCP enabled and all tools registered automatically on creation.
+Set up a Spreadsheet with WebMCP enabled and all tools registered automatically.
 
-```typescript
-import { Spreadsheet, WebMcpSpreadsheet } from '../../../../src/index';
-import { defaultData } from '../../../common/data-source';
+```js
+ej.spreadsheet.Spreadsheet.Inject(ej.spreadsheet.WebMcpSpreadsheet);
 
-// Inject WebMCP module globally
-Spreadsheet.Inject(WebMcpSpreadsheet);
-
-const spreadsheet: Spreadsheet = new Spreadsheet({
+var spreadsheet = new ej.spreadsheet.Spreadsheet({
     enableWebMcp: true,
     webMcpSettings: { name: 'sales' },
     sheets: [{
-        name: 'Price Details',
+        name: 'Sales Data',
         ranges: [{ dataSource: defaultData }]
     }]
 });
+
 spreadsheet.appendTo('#spreadsheet');
 ```
 
@@ -548,47 +561,49 @@ spreadsheet.appendTo('#spreadsheet');
 
 Register only read-only tools to reduce exposure.
 
-```typescript
+```js
 // Register only read tools (safer for public applications)
-const readOnlyTools = [
+var readOnlyTools = [
     'getCellData',
     'getRangeData',
     'getSheetInfo',
-    'getCellFormula',
+    'sheetList',
     'evaluateFormula',
-    'find',
-    'getSheetList',
-    'undo',
-    'redo'
+    'find'
 ];
 
-const spreadsheet = new Spreadsheet({
+ej.spreadsheet.Spreadsheet.Inject(ej.spreadsheet.WebMcpSpreadsheet);
+
+var spreadsheet = new ej.spreadsheet.Spreadsheet({
     enableWebMcp: true,
     webMcpSettings: {
         name: 'analytics',
         tools: readOnlyTools
-    },
-    // ... other config
+    }
+    // Only read tools are registered — safer for public applications
 });
+
+spreadsheet.appendTo('#spreadsheet');
 ```
 
 ### Example 3: Multi-Instance Setup
 
-Shows how to use different prefixes for multiple Spreadsheet instances.
+Shows how to use different prefixes for multiple Spreadsheet instances on the same page.
 
-```typescript
-// Two spreadsheets on the same page with different prefixes
-const salesSpreadsheet = new Spreadsheet({
-    enableWebMcp: true,
-    webMcpSettings: { name: 'sales' },
-    sheets: [...],
-});
+```js
+ej.spreadsheet.Spreadsheet.Inject(ej.spreadsheet.WebMcpSpreadsheet);
 
-const inventorySpreadsheet = new Spreadsheet({
+var spreadsheet1 = new ej.spreadsheet.Spreadsheet({
     enableWebMcp: true,
-    webMcpSettings: { name: 'inventory' },
-    sheets: [...],
+    webMcpSettings: { name: 'sales' }
 });
+spreadsheet1.appendTo('#spreadsheet1');
+
+var spreadsheet2 = new ej.spreadsheet.Spreadsheet({
+    enableWebMcp: true,
+    webMcpSettings: { name: 'inventory' }
+});
+spreadsheet2.appendTo('#spreadsheet2');
 
 // Tools are now:
 // sales_getCellData, sales_editCell, ...
@@ -599,55 +614,63 @@ const inventorySpreadsheet = new Spreadsheet({
 
 Demonstrates how to intercept tool execution and block restricted actions.
 
-```typescript
-spreadsheet.beforeWebMcpToolExecute = (args: WebMcpToolExecuteEventArgs) => {
-    const { toolName, toolArgs } = args;
+```js
+ej.spreadsheet.Spreadsheet.Inject(ej.spreadsheet.WebMcpSpreadsheet);
 
-    // Log all tool invocations
-    console.log(`[WebMCP] Executing: ${toolName}`, toolArgs);
+var spreadsheet = new ej.spreadsheet.Spreadsheet({
+    enableWebMcp: true,
+    webMcpSettings: { name: 'sales' },
+    beforeWebMcpToolExecute: function (args) {
+        // Log all tool invocations
+        console.log('[WebMCP] Executing: ' + args.toolName, args.toolArgs);
 
-    // Block sensitive operations
-    if (toolName === 'deleteSheet') {
-        if (!userHasAdminPermission()) {
+        // Block sensitive operations
+        if (args.toolName === 'deleteSheet') {
+            if (!userHasAdminPermission()) {
+                args.cancel = true;
+            }
+        }
+
+        // Restrict editing to specific ranges
+        if (args.toolName === 'editCell' && !isEditableRange(args.toolArgs.address)) {
             args.cancel = true;
-            logSecurityEvent('Unauthorized sheet deletion attempt', toolArgs);
         }
     }
+});
 
-    // Restrict editing to specific ranges
-    if (toolName === 'editCell' && !isEditableRange(toolArgs.address)) {
-        args.cancel = true;
-    }
-};
+spreadsheet.appendTo('#spreadsheet');
+
+function userHasAdminPermission() { return false; }
+function isEditableRange(address) { return true; }
 ```
 
 ### Example 5: Error Handling
 
 Shows how to call a tool manually and handle success or failure.
 
-```typescript
-async function invokeToolManually(toolName: string, toolArgs: any) {
+```js
+async function invokeToolManually(toolName, toolArgs) {
     try {
         // Get tool from context
-        const tool = await document.modelContext.getTool(toolName);
-        
+        var tool = await document.modelContext.getTool(toolName);
+
         if (!tool) {
-            console.error(`Tool not found: ${toolName}`);
+            console.error('Tool not found: ' + toolName);
             return null;
         }
 
         // Invoke the tool
-        const result = await tool.execute(toolArgs, {});
-        
+        var result = await tool.execute(toolArgs, {});
+
         // Handle response
         if (result.error) {
-            console.error(`Tool error: ${result.error}`);
+            console.error('Tool error: ' + result.error);
             return null;
         }
 
-        const responseText = result.content[0].text;
-        const responseData = JSON.parse(responseText);
-        
+        var responseText = result.content[0].text;
+        var responseData = JSON.parse(responseText);
+
         console.log('Tool result:', responseData);
         return responseData;
     } catch (error) {
@@ -676,11 +699,11 @@ async function invokeToolManually(toolName: string, toolArgs: any) {
 ### Q: The extension doesn't show my registered tools
 
 **A:**
-1. Verify `enableWebMcp: true` in your Spreadsheet config
-2. Confirm `registerWebMcpTools()` is called after Spreadsheet creation
+1. Verify `enableWebMcp: true` is set in the Spreadsheet configuration
+2. Confirm `ej.spreadsheet.Spreadsheet.Inject(ej.spreadsheet.WebMcpSpreadsheet)` is called before creating the Spreadsheet instance
 3. Open DevTools (F12) → Console, check for errors
 4. Try refreshing the page and opening the extension again
-5. Verify the tool prefix is correct (check console logs)
+5. Verify the tool prefix is correct in `webMcpSettings.name` (check console logs)
 
 ---
 
@@ -705,7 +728,7 @@ async function invokeToolManually(toolName: string, toolArgs: any) {
 **A:**
 - WebMCP requires HTTPS in production or localhost for development
 - If using cross-origin tools, both sites must be HTTPS
-- Test locally using `localhost:3000` or similar
+- Test locally using `http://localhost:3000` or the port you are using
 
 ---
 
@@ -714,20 +737,20 @@ async function invokeToolManually(toolName: string, toolArgs: any) {
 **A:**
 1. Verify that write tools are registered (they have `confirmation: Yes`)
 2. Check that your browser isn't blocking dialogs
-3. Ensure the `beforeWebMcpToolExecute` event isn't canceling operations
+3. Ensure the `beforeWebMcpToolExecute` event handler isn't setting `args.cancel = true`
 
 ---
 
 ### Q: Multi-instance tools have naming conflicts
 
 **A:**
-- Always use different name values in `webMcpSettings` for each Spreadsheet instance:
-```typescript
-// Spreadsheet 1
-webMcpSettings: { name: 'sales' }
-// Spreadsheet 2
-webMcpSettings: { name: 'inventory' }
-```
+- Always use different `name` values in `webMcpSettings` for each Spreadsheet instance:
+  ```js
+  // Spreadsheet 1
+  webMcpSettings: { name: 'sales' }
+  // Spreadsheet 2
+  webMcpSettings: { name: 'inventory' }
+  ```
 - Never use the same name for multiple instances on the same page
 
 ---
@@ -738,8 +761,8 @@ webMcpSettings: { name: 'inventory' }
 1. Use selective tool registration — restrict to necessary tools via `webMcpSettings.tools`
 2. Limit data ranges: Instead of "read entire sheet", specify "A1:Z100"
 3. For large datasets, use `getRangeData()` instead of looping `getCellData()`
-4. Avoid fetch all operations; filter or paginate when possible
-5. Write batches: Use `editRange()` instead of multiple `editCell()` calls
+4. Avoid fetch-all operations; filter or paginate when possible
+5. Write batches: Use `editCell` with targeted addresses rather than broad range operations
 
 ---
 
@@ -748,13 +771,20 @@ webMcpSettings: { name: 'inventory' }
 **A:**
 Yes, use the `beforeWebMcpToolExecute` event:
 
-```typescript
-spreadsheet.beforeWebMcpToolExecute = (args: WebMcpToolExecuteEventArgs) => {
-    const restrictedTools = ['deleteSheet', 'saveWorkbook'];
-    if (restrictedTools.includes(args.toolName)) {
-        args.cancel = true;
+```js
+ej.spreadsheet.Spreadsheet.Inject(ej.spreadsheet.WebMcpSpreadsheet);
+
+var spreadsheet = new ej.spreadsheet.Spreadsheet({
+    enableWebMcp: true,
+    beforeWebMcpToolExecute: function (args) {
+        var restrictedTools = ['deleteSheet', 'save'];
+        if (restrictedTools.indexOf(args.toolName) !== -1) {
+            args.cancel = true;
+        }
     }
-};
+});
+
+spreadsheet.appendTo('#spreadsheet');
 ```
 
 ## See Also
