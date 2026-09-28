@@ -1,7 +1,7 @@
 ---
 layout: post
-title: JavaScript SpreadsheetEditor ASP.NET Core Redis Setup | Syncfusion
-description: Learn how to configure the ASP.NET Core Collaboration Server and Redis for JavaScript SpreadsheetEditor collaborative editing.
+title: Angular SpreadsheetEditor ASP.NET Core Redis Setup | Syncfusion
+description: Learn how to configure the ASP.NET Core Collaboration Server and Redis for Angular SpreadsheetEditor collaborative editing.
 control: Collaborative Editing
 platform: document-processing
 documentation: ug
@@ -9,22 +9,24 @@ documentation: ug
 
 # Using Redis Cache with ASP.NET Core
 
-The ASP.NET Core Collaboration Server processes SpreadsheetEditor actions, manages rooms, and exchanges real-time updates through SignalR or WebSocket. Redis temporarily stores ordered actions, versions, and room information.
+The ASP.NET Core Collaboration Server processes SpreadsheetEditor actions, manages collaboration rooms, and exchanges real-time updates through SignalR or WebSocket. Redis temporarily stores ordered collaboration actions, versions, and room information.
+
+For package installation, service registration, transport configuration, and endpoint mapping, refer to [Getting Started with ASP.NET Core Collaboration Server](https://help.syncfusion.com/document-processing/collaborator/getting-started/getting-started-with-core).
 
 ## Prerequisites
 
 - An ASP.NET Core Collaboration Server.
-- Redis for action, version, and room storage.
+- Redis for collaboration action, version, and room storage.
 - SignalR or WebSocket for real-time communication.
 - A SpreadsheetEditor server adapter for action conversion and operational transformation.
 
 ## SignalR
 
-SignalR delivers workbook actions, user presence, selections, and connection updates to users in the same room. Configure `CollaborationConnectionType.SignalR` and register the required services with `AddSignalR`.
+SignalR delivers workbook actions, user presence, selections, and connection updates to users in the same room. Configure `CollaborationConnectionType.SignalR` and call `AddSignalR` to register the required services.
 
 ## Redis
 
-Redis stores actions in version order. The `SaveThreshold` setting determines when accumulated actions are queued for processing.
+Redis stores collaboration actions in version order together with room and version information. The `SaveThreshold` setting determines when accumulated actions are queued for processing.
 
 ## Configure Redis
 
@@ -62,7 +64,9 @@ app.MapCollaborationServer();
 app.Run();
 ```
 
-`AddCollaborationServer` configures Redis for collaboration data, while `AddSignalR` registers real-time communication services.
+`AddCollaborationServer` configures Redis for collaboration data, while `AddSignalR` registers real-time communication services. A SignalR Redis backplane is not required for this configuration.
+
+For more information about room management, operation processing, and supported transports, refer to the [Collaboration Server documentation](https://help.syncfusion.com/document-processing/collaborator/collaboration-server).
 
 ## Implement the SpreadsheetEditor server adapter
 
@@ -84,7 +88,7 @@ public void TransformOperations(List<CollaborationAction> actions)
 }
 ```
 
-Process queued save requests based on application storage requirements and clear Redis records after successful processing.
+Process queued save requests according to application storage requirements and clear Redis records after successful processing.
 
 ## Add the SpreadsheetEditor collaboration APIs
 
@@ -95,9 +99,12 @@ Process queued save requests based on application storage requirements and clear
 
 ## Limitation
 
-Undo and redo history is local and is not synchronized among users.
+Undo and redo history is maintained locally and is not synchronized among users.
 
 ## See also
 
 - [Collaborative editing overview](./overview)
 - [Collaborative editing integration](./integration)
+- [Collaboration Server](https://help.syncfusion.com/document-processing/collaborator/collaboration-server)
+- [Getting Started with ASP.NET Core Collaboration Server](https://help.syncfusion.com/document-processing/collaborator/getting-started/getting-started-with-core)
+- [Collaborator frequently asked questions](https://help.syncfusion.com/document-processing/collaborator/faq)

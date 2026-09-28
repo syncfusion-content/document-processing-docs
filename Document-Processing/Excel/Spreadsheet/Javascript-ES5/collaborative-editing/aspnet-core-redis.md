@@ -1,85 +1,110 @@
 ---
 layout: post
-title: Collaborative Editing in JavaScript SpreadsheetEditor | Syncfusion
-description: Learn how real-time collaborative editing synchronizes workbook changes, user presence, and selections in the JavaScript SpreadsheetEditor.
+title: JavaScript SpreadsheetEditor ASP.NET Core Redis Setup | Syncfusion
+description: Learn how to configure the ASP.NET Core Collaboration Server and Redis for JavaScript SpreadsheetEditor collaborative editing.
 control: Collaborative Editing
 platform: document-processing
 documentation: ug
 ---
 
-# Collaborative editing in JavaScript SpreadsheetEditor
+# Using Redis Cache with ASP.NET Core
 
-The JavaScript SpreadsheetEditor supports real-time collaborative editing, allowing multiple users to work on the same workbook and view synchronized changes, connected users, and selections. Supported workbook actions are synchronized through a collaboration service to maintain a consistent workbook state for users connected to the same room.
+The ASP.NET Core Collaboration Server processes SpreadsheetEditor actions, manages collaboration rooms, and exchanges real-time updates through SignalR or WebSocket. Redis temporarily stores ordered collaboration actions, versions, and room information.
 
-## Key features
-
-- **Real-time workbook updates** - Reflects supported workbook changes across users connected to the same collaboration room.
-- **Action synchronization** - Synchronizes supported SpreadsheetEditor actions in server-defined version order.
-- **User presence and selections** - Displays connected users and highlights their active cells, editing cells, or selected ranges using participant-specific colors.
-- **Conflict resolution** - Transforms concurrent operations to maintain a consistent workbook state.
-- **Action recovery** - Retrieves and applies actions missed by a user.
-- **Late-join synchronization** - Synchronizes users who join an existing session with the latest workbook state.
+For package installation, service registration, transport configuration, and endpoint mapping, refer to [Getting Started with ASP.NET Core Collaboration Server](https://help.syncfusion.com/document-processing/collaborator/getting-started/getting-started-with-core).
 
 ## Prerequisites
 
-Collaborative editing requires the JavaScript SpreadsheetEditor package, the `@syncfusion/ej2-collaborator` package, an ASP.NET Core Collaboration Server, Redis, WebSocket or SignalR communication, and a SpreadsheetEditor-specific server adapter.
+- An ASP.NET Core Collaboration Server.
+- Redis for collaboration action, version, and room storage.
+- SignalR or WebSocket for real-time communication.
+- A SpreadsheetEditor server adapter for action conversion and operational transformation.
 
-> **Note:** SpreadsheetEditor collaborative editing requires an ASP.NET-based Collaboration Server for workbook processing and operational transformation.
+## SignalR
 
-## Core concepts
+SignalR delivers workbook actions, user presence, selections, and connection updates to users in the same room. Configure `CollaborationConnectionType.SignalR` and call `AddSignalR` to register the required services.
 
-### Operational transformation
+## Redis
 
-The Collaboration Server transforms related concurrent actions that affect cells, ranges, rows, columns, or sheets before storing and broadcasting them. This helps all users in the room maintain a consistent workbook state.
+Redis stores collaboration actions in version order together with room and version information. The `SaveThreshold` setting determines when accumulated actions are queued for processing.
 
-### Session management
+## Configure Redis
 
-Each session is identified by a room ID. Users connected to the same room receive shared workbook actions and presence updates. A session manages connected users, join and leave events, selections, editing presence, action versions, recovery, and late-joining users.
+```json
+{
+  "ConnectionStrings": {
+    "Redis": "<your-redis-connection-string>"
+  }
+}
+```
 
-### Action types
+## Register the Collaboration Server
 
-Collaborative editing supports cell values, formulas, formatting, clipboard actions, sorting, filtering, row, column, and sheet operations, validation, conditional formatting, comments, notes, hyperlinks, defined names, images, charts, display settings, and protection changes.
+```csharp
+using Syncfusion.Collaboration.Core.Extensions;
+using Syncfusion.Collaboration.Core.Interfaces;
 
-### Consistency model
+var builder = WebApplication.CreateBuilder(args);
 
-The server assigns an authoritative version to each action. Clients apply actions in version order and retrieve missing versions before continuing.
+builder.Services.AddCollaborationServer(options =>
+{
+    options.ConnectionString = builder.Configuration
+        .GetConnectionString("Redis");
+    options.ConnectionType = CollaborationConnectionType.SignalR;
+});
 
-## Architecture
+builder.Services.AddSingleton<ICollaborationAdapter, SpreadsheetCollaborativeAdaptor>();
+builder.Services.AddControllers();
+builder.Services.AddSignalR();
 
-### Client - JavaScript SpreadsheetEditor
+var app = builder.Build();
+app.UseRouting();
+app.MapControllers();
+app.MapCollaborationServer();
+app.Run();
+```
 
-The SpreadsheetEditor captures local actions, sends them to the Collaboration Server, receives remote actions, and displays connected users and selections. The collaborative editing module manages SpreadsheetEditor-specific behavior, while `SpreadsheetEditorAdapter` connects the SpreadsheetEditor to the Collaboration Client.
+`AddCollaborationServer` configures Redis for collaboration data, while `AddSignalR` registers real-time communication services. A SignalR Redis backplane is not required for this configuration.
 
-### Real-time communication layer
+For more information about room management, operation processing, and supported transports, refer to the [Collaboration Server documentation](https://help.syncfusion.com/document-processing/collaborator/collaboration-server).
 
-The `@syncfusion/ej2-collaborator` package connects the client through WebSocket or SignalR and manages room connections, user events, action delivery, presence, and selections.
+## Implement the SpreadsheetEditor server adapter
 
-### Collaboration Server
+```csharp
+public void TransformOperations(List<CollaborationAction> actions)
+{
+    List<ActionInfo> spreadsheetActions = actions
+        .Select(action => MapGenericToControlAction(action) as ActionInfo)
+        .Where(action => action != null)
+        .ToList();
 
-The server manages rooms and users, assigns versions, transforms concurrent operations, stores actions in Redis, broadcasts actions, and returns missed actions.
+    if (CollaborativeEditingHandler.TransformOperations(spreadsheetActions))
+    {
+        ActionInfo transformedAction = spreadsheetActions.Last();
+        actions.Last().Data = JsonConvert.SerializeObject(
+            transformedAction.Operations
+        );
+    }
+}
+```
 
-### Redis distributed cache
+Process queued save requests according to application storage requirements and clear Redis records after successful processing.
 
-Redis temporarily stores collaboration actions, versions, and room information in version order for late-join synchronization and missed-action recovery.
+## Add the SpreadsheetEditor collaboration APIs
 
-## How it works
+- **`ImportFile`** - Loads the workbook, applies pending actions, and returns the workbook JSON and room version.
+- **`UpdateAction`** - Versions, transforms, stores, and broadcasts local actions.
+- **`UpdateSelection`** - Stores and broadcasts the active cell, selection, and editing presence.
+- **`GetActionsFromServer`** - Returns actions created after the client's last synchronized version.
 
-1. **User joins a session** - A user opens a workbook and joins a room using a unique room ID.
-2. **Real-time connection is established** - A WebSocket or SignalR connection is established with the server.
-3. **Actions are synchronized** - Supported SpreadsheetEditor actions are sent to the server.
-4. **Conflicts are resolved** - The server versions and transforms concurrent actions.
-5. **Updates are broadcast** - Processed actions are sent to other users and applied in version order.
-6. **Actions are stored and recovered** - Redis supports late-join synchronization and missed-update recovery.
+## Limitation
 
-## Use cases
-
-- **Financial planning** - Update budgets, forecasts, and financial reports.
-- **Project tracking** - Maintain schedules, tasks, status updates, and resources.
-- **Inventory management** - Update stock availability and order details.
-- **Data review** - Review, correct, format, and annotate workbook data.
-- **Reporting** - Prepare and validate reports with multiple participants.
+Undo and redo history is maintained locally and is not synchronized among users.
 
 ## See also
 
+- [Collaborative editing overview](./overview)
 - [Collaborative editing integration](./integration)
-- [Using Redis Cache with ASP.NET Core](./aspnet-core-redis)
+- [Collaboration Server](https://help.syncfusion.com/document-processing/collaborator/collaboration-server)
+- [Getting Started with ASP.NET Core Collaboration Server](https://help.syncfusion.com/document-processing/collaborator/getting-started/getting-started-with-core)
+- [Collaborator frequently asked questions](https://help.syncfusion.com/document-processing/collaborator/faq)

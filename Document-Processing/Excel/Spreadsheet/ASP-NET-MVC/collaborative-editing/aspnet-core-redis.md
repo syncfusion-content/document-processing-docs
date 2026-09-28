@@ -11,10 +11,12 @@ documentation: ug
 
 The ASP.NET Core Collaboration Server processes SpreadsheetEditor actions, manages collaboration rooms, and exchanges real-time updates through SignalR or WebSocket. Redis temporarily stores ordered collaboration actions, versions, and room information.
 
+For package installation, service registration, transport configuration, and endpoint mapping, refer to [Getting Started with ASP.NET Core Collaboration Server](https://help.syncfusion.com/document-processing/collaborator/getting-started/getting-started-with-core).
+
 ## Prerequisites
 
 - An ASP.NET Core Collaboration Server.
-- Redis for action, version, and room storage.
+- Redis for collaboration action, version, and room storage.
 - SignalR or WebSocket for real-time communication.
 - A SpreadsheetEditor server adapter for action conversion and operational transformation.
 
@@ -24,7 +26,7 @@ SignalR delivers workbook actions, user presence, selections, and connection upd
 
 ## Redis
 
-Redis stores actions in version order. The `SaveThreshold` setting determines when accumulated actions are queued for processing.
+Redis stores collaboration actions in version order together with room and version information. The `SaveThreshold` setting determines when accumulated actions are queued for processing.
 
 ## Configure Redis
 
@@ -62,7 +64,9 @@ app.MapCollaborationServer();
 app.Run();
 ```
 
-`AddCollaborationServer` configures Redis for collaboration data, while `AddSignalR` registers real-time communication services.
+`AddCollaborationServer` configures Redis for collaboration data, while `AddSignalR` registers real-time communication services. A SignalR Redis backplane is not required for this configuration.
+
+For more information about room management, operation processing, and supported transports, refer to the [Collaboration Server documentation](https://help.syncfusion.com/document-processing/collaborator/collaboration-server).
 
 ## Implement the SpreadsheetEditor server adapter
 
@@ -101,3 +105,6 @@ Undo and redo history is maintained locally and is not synchronized among users.
 
 - [Collaborative editing overview](./overview)
 - [Collaborative editing integration](./integration)
+- [Collaboration Server](https://help.syncfusion.com/document-processing/collaborator/collaboration-server)
+- [Getting Started with ASP.NET Core Collaboration Server](https://help.syncfusion.com/document-processing/collaborator/getting-started/getting-started-with-core)
+- [Collaborator frequently asked questions](https://help.syncfusion.com/document-processing/collaborator/faq)

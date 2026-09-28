@@ -9,7 +9,7 @@ documentation: ug
 
 # Collaborative editing in ASP.NET MVC SpreadsheetEditor
 
-The ASP.NET MVC SpreadsheetEditor supports real-time collaborative editing, allowing multiple users to work on the same workbook and view synchronized changes, connected users, and selections. Supported workbook actions are synchronized through a collaboration service to maintain a consistent workbook state for users connected to the same room.
+The ASP.NET MVC SpreadsheetEditor supports real-time collaborative editing, allowing multiple users to work on the same workbook and view synchronized changes, connected users, and selections. It uses [Syncfusion Collaborator](https://help.syncfusion.com/document-processing/collaborator/overview) to manage real-time communication, collaboration sessions, and synchronized actions. Supported workbook actions are synchronized through a collaboration service to maintain a consistent workbook state for users connected to the same room.
 
 ## Key features
 
@@ -31,13 +31,11 @@ Collaborative editing requires:
 - WebSocket or SignalR communication.
 - A SpreadsheetEditor-specific server adapter.
 
-> **Note:** SpreadsheetEditor collaborative editing requires an ASP.NET-based Collaboration Server for workbook processing and operational transformation.
-
 ## Core concepts
 
 ### Operational transformation
 
-The Collaboration Server uses operational transformation to process concurrent SpreadsheetEditor actions. When related actions affect cells, ranges, rows, columns, or sheets, the server transforms the operations before storing and broadcasting them. This ensures that users connected to the same room receive a consistent workbook state.
+The Collaboration Server uses operational transformation to process concurrent SpreadsheetEditor actions. When related actions affect cells, ranges, rows, columns, or sheets, the server transforms the operations before storing and broadcasting them. This ensures that all users connected to the same room receive a consistent workbook state.
 
 ### Session management
 
@@ -45,7 +43,7 @@ Each collaboration session is identified by a room ID. Users connected to the sa
 
 ### Action types
 
-Collaborative editing supports cell value, formula, formatting, clipboard, sorting, filtering, row, column, sheet, data validation, conditional formatting, comment, note, hyperlink, defined name, image, chart, display, and protection actions.
+Collaborative editing supports cell value, formula, formatting, clipboard, sorting, filtering, row, column, sheet, validation, conditional formatting, comment, note, hyperlink, defined name, image, chart, display, and protection actions.
 
 ### Consistency model
 
@@ -55,7 +53,7 @@ The Collaboration Server assigns an authoritative version to each workbook actio
 
 ### Client - ASP.NET MVC SpreadsheetEditor
 
-The SpreadsheetEditor captures local workbook actions, sends them to the Collaboration Server, receives remote actions, and displays connected users and selections. `CollaborativeEditingHandler` manages SpreadsheetEditor-specific collaboration behavior, while `SpreadsheetEditorAdapter` connects the SpreadsheetEditor to the Collaboration Client.
+The SpreadsheetEditor captures local workbook actions, sends them to the Collaboration Server, receives remote actions, and displays connected users and selections. The collaborative editing module manages SpreadsheetEditor-specific behavior, while `SpreadsheetEditorAdapter` connects the SpreadsheetEditor to the Collaboration Client.
 
 ### Real-time communication layer
 
@@ -63,7 +61,7 @@ The `@syncfusion/ej2-collaborator` package connects the client to the Collaborat
 
 ### Collaboration Server
 
-The Collaboration Server manages rooms and connected users, assigns action versions, transforms concurrent operations, stores actions in Redis, broadcasts actions, and returns missed actions using the client's last synchronized version.
+The Collaboration Server manages rooms and users, assigns action versions, transforms concurrent operations, stores actions in Redis, broadcasts actions, and returns missed actions using the client's last synchronized version.
 
 ### Redis distributed cache
 
@@ -90,3 +88,5 @@ Redis temporarily stores collaboration actions, versions, and room information i
 
 - [Collaborative editing integration](./integration)
 - [Using Redis Cache with ASP.NET Core](./aspnet-core-redis)
+- [Syncfusion Collaborator overview](https://help.syncfusion.com/document-processing/collaborator/overview)
+- [Collaborator frequently asked questions](https://help.syncfusion.com/document-processing/collaborator/faq)

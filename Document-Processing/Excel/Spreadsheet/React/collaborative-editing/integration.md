@@ -19,6 +19,8 @@ Install the Collaborator package in the React application.
 npm install @syncfusion/ej2-collaborator
 ```
 
+For details about the client package, connection types, room management, and collaboration events, refer to the [Collaboration Client documentation](https://help.syncfusion.com/document-processing/collaborator/collaboration-client).
+
 ## Create the SpreadsheetEditor adapter
 
 Create the `SpreadsheetEditorAdapter.ts` file to load the workbook, initialize the collaboration room, send local actions, and apply remote actions.
@@ -144,7 +146,9 @@ Create `CollaborationClient` after the latest workbook state and room version ar
 
 ```ts
 const client = new CollaborationClient(adapter, {
+    serviceUrl,
     connectionType: 'signalr', // or 'websocket'
+    currentUser
 });
 ```
 
@@ -162,3 +166,4 @@ After joining the room, supported local actions are sent through `actionComplete
 
 - [Collaborative editing overview](./overview)
 - [Using Redis Cache with ASP.NET Core](./aspnet-core-redis)
+- [Collaboration Client](https://help.syncfusion.com/document-processing/collaborator/collaboration-client)

@@ -9,7 +9,7 @@ documentation: ug
 
 # Collaborative editing in React SpreadsheetEditor
 
-The React SpreadsheetEditor supports real-time collaborative editing, allowing multiple users to work on the same workbook and view synchronized changes, connected users, and selections. Supported workbook actions are synchronized through a collaboration service to maintain a consistent workbook state for users connected to the same room.
+The React SpreadsheetEditor supports real-time collaborative editing, allowing multiple users to work on the same workbook and view synchronized changes, connected users, and selections. It uses [Syncfusion Collaborator](https://help.syncfusion.com/document-processing/collaborator/overview) to manage real-time communication, collaboration sessions, and synchronized actions. Supported workbook actions are synchronized through a collaboration service to maintain a consistent workbook state for users connected to the same room.
 
 ## Key features
 
@@ -113,3 +113,5 @@ Collaborative editing is suitable for workflows where multiple users review or u
 
 - [Collaborative editing integration](./integration)
 - [Using Redis Cache with ASP.NET Core](./aspnet-core-redis)
+- [Syncfusion Collaborator overview](https://help.syncfusion.com/document-processing/collaborator/overview)
+- [Collaborator frequently asked questions](https://help.syncfusion.com/document-processing/collaborator/faq)
