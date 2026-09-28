@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Highlight Differences in UI | Syncfusion React PDF Viewer
-description: Learn how to highlight text differences in the Syncfusion React PDF Viewer using visual highlighting with customizable colors and opacity.
+title: Highlight Differences in UI | Syncfusion Vue PDF Viewer
+description: Learn how to highlight text differences in the Syncfusion Vue PDF Viewer using visual highlighting with customizable colors and opacity.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -22,7 +22,7 @@ When you compare two PDF documents using the semantic text comparison feature, d
 
 ## Prerequisites
 
-- Syncfusion React PDF Viewer installed
+- Syncfusion Vue PDF Viewer installed
 - `PdfComparerComponent` available
 - Two PDF documents ready for comparison
 
@@ -31,10 +31,9 @@ When you compare two PDF documents using the semantic text comparison feature, d
 ### Step 1: Import required components
 
 {% tabs %}
-{% highlight js tabtitle="App.jsx" %}
+{% highlight vue tabtitle="App.vue" %}
 {% raw %}
-import React from 'react';
-import { PdfComparerComponent } from '@syncfusion/ej2-react-pdfviewer';
+import { PdfComparerComponent } from '@syncfusion/ej2-vue-pdfviewer';
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
@@ -44,23 +43,38 @@ import { PdfComparerComponent } from '@syncfusion/ej2-react-pdfviewer';
 Set up the comparison with basic default highlighting:
 
 {% tabs %}
-{% highlight js tabtitle="App.jsx" %}
+{% highlight html tabtitle="App.vue" %}
 {% raw %}
-function SemanticTextComparison() {
-    return (
-        <PdfComparerComponent
-            id="comparer-container"
-            height="600px"
-            // Specifies the URL (for example, a file from the public folder) or a Base64-encoded PDF.
-            originalDocumentPath="https://cdn.syncfusion.com/content/pdf/original-document.pdf"
-            modifiedDocumentPath="https://cdn.syncfusion.com/content/pdf/modified-document.pdf"
-            // Specifies the path to the PDFium resource files required for the PDF Viewer to function.
-            resourceUrl="https://cdn.syncfusion.com/ej2/34.2.4/dist/ej2-pdfviewer-lib">
-        </PdfComparerComponent>
-    );
-}
+<template>
+    <ejs-pdfcomparer
+        id="container"
+        height="600px"
+        :originalDocumentPath="originalDocumentPath"
+        :modifiedDocumentPath="modifiedDocumentPath"
+        :resourceUrl="resourceUrl">
+    </ejs-pdfcomparer>
+</template>
 
-export default SemanticTextComparison;
+<script>
+import { PdfComparerComponent } from '@syncfusion/ej2-vue-pdfviewer';
+
+export default {
+    components: {
+        'ejs-pdfcomparer': PdfComparerComponent
+    },
+    data() {
+        return {
+            originalDocumentPath: 'https://cdn.syncfusion.com/content/pdf/original-document.pdf',
+            modifiedDocumentPath: 'https://cdn.syncfusion.com/content/pdf/modified-document.pdf',
+            resourceUrl: 'https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib'
+        };
+    }
+};
+</script>
+
+<style>
+  @import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/pdfviewer/index.css';
+</style>
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
@@ -70,30 +84,46 @@ export default SemanticTextComparison;
 Define the `comparisonOptions` object to customize highlighting and pass it to the component:
 
 {% tabs %}
-{% highlight js tabtitle="App.jsx" %}
+{% highlight html tabtitle="App.vue" %}
 {% raw %}
-function SemanticTextComparison() {
-    const comparisonOptions = {
-        beforeColor: '#FF0000',        // Color for deleted text (red)
-        afterColor: '#00FF00',         // Color for added text (green)
-        beforeColorOpacity: 0.4,       // Transparency for deleted (0-1)
-        afterColorOpacity: 0.4,        // Transparency for added (0-1)
-        enableHighlights: true         // Enable visual highlighting
-    };
+<template>
+    <ejs-pdfcomparer
+        id="container"
+        height="600px"
+        :originalDocumentPath="originalDocumentPath"
+        :modifiedDocumentPath="modifiedDocumentPath"
+        :comparisonOptions="comparisonOptions"
+        :resourceUrl="resourceUrl">
+    </ejs-pdfcomparer>
+</template>
 
-    return (
-        <PdfComparerComponent
-            id="comparer-container"
-            height="600px"
-            originalDocumentPath="https://cdn.syncfusion.com/content/pdf/original-document.pdf"
-            modifiedDocumentPath="https://cdn.syncfusion.com/content/pdf/modified-document.pdf"
-            comparisonOptions={comparisonOptions}
-            resourceUrl="https://cdn.syncfusion.com/ej2/34.2.4/dist/ej2-pdfviewer-lib">
-        </PdfComparerComponent>
-    );
-}
+<script>
+import { PdfComparerComponent } from '@syncfusion/ej2-vue-pdfviewer';
 
-export default SemanticTextComparison;
+export default {
+    components: {
+        'ejs-pdfcomparer': PdfComparerComponent
+    },
+    data() {
+        return {
+            originalDocumentPath: 'https://cdn.syncfusion.com/content/pdf/original-document.pdf',
+            modifiedDocumentPath: 'https://cdn.syncfusion.com/content/pdf/modified-document.pdf',
+            resourceUrl: 'https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib',
+            comparisonOptions: {
+                beforeColor: '#FF0000',        // Color for deleted text (red)
+                afterColor: '#00FF00',         // Color for added text (green)
+                beforeColorOpacity: 0.4,       // Transparency for deleted (0-1)
+                afterColorOpacity: 0.4,        // Transparency for added (0-1)
+                enableHighlights: true         // Enable visual highlighting
+            }
+        };
+    }
+};
+</script>
+
+<style>
+  @import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/pdfviewer/index.css';
+</style>
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
@@ -126,16 +156,16 @@ Control the viewer behavior with these properties:
 Use the `enableDifferencePanel` property to show or hide the sidebar panel that displays all detected differences:
 
 {% tabs %}
-{% highlight js tabtitle="App.jsx" %}
+{% highlight html tabtitle="App.vue" %}
 {% raw %}
-<PdfComparerComponent
+<ejs-pdfcomparer
     id="comparer-container"
     height="600px"
-    originalDocumentPath="https://cdn.syncfusion.com/content/pdf/original-document.pdf"
-    modifiedDocumentPath="https://cdn.syncfusion.com/content/pdf/modified-document.pdf"
-    enableDifferencePanel={false}    // Hide the differences sidebar panel
+    :originalDocumentPath="'https://cdn.syncfusion.com/content/pdf/original-document.pdf'"
+    :modifiedDocumentPath="'https://cdn.syncfusion.com/content/pdf/modified-document.pdf'"
+    :enableDifferencePanel="false"
     resourceUrl="https://cdn.syncfusion.com/ej2/34.2.4/dist/ej2-pdfviewer-lib">
-</PdfComparerComponent>
+</ejs-pdfcomparer>
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
@@ -145,16 +175,16 @@ Use the `enableDifferencePanel` property to show or hide the sidebar panel that 
 Use the `enableSyncScrolling` property to control whether the viewers stay synchronized during scrolling, page navigation, and magnification (zoom):
 
 {% tabs %}
-{% highlight js tabtitle="App.jsx" %}
+{% highlight html tabtitle="App.vue" %}
 {% raw %}
-<PdfComparerComponent
+<ejs-pdfcomparer
     id="comparer-container"
     height="600px"
-    originalDocumentPath="https://cdn.syncfusion.com/content/pdf/original-document.pdf"
-    modifiedDocumentPath="https://cdn.syncfusion.com/content/pdf/modified-document.pdf"
-    enableSyncScrolling={false}      // Disable synchronized scrolling and navigation
+    :originalDocumentPath="'https://cdn.syncfusion.com/content/pdf/original-document.pdf'"
+    :modifiedDocumentPath="'https://cdn.syncfusion.com/content/pdf/modified-document.pdf'"
+    :enableSyncScrolling="false"
     resourceUrl="https://cdn.syncfusion.com/ej2/34.2.4/dist/ej2-pdfviewer-lib">
-</PdfComparerComponent>
+</ejs-pdfcomparer>
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
@@ -168,8 +198,6 @@ Use the `enableSyncScrolling` property to control whether the viewers stay synch
 - **Color-coded highlighting** - Visual differentiation of added and deleted text (red for deleted, green for added)
 - **Differences panel** - Consolidated list on the right showing all detected differences categorized by type
 - **File upload support** - Upload custom PDFs for comparison
-
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Semantic%20Text%20Comparison/Highlight%20differences%20in%20UI).
 
 ## Related topics
 
