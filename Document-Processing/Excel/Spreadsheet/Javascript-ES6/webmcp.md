@@ -42,22 +42,22 @@ Before you can use WebMCP locally, enable the feature flag and install the brows
 
 ### Step 2: Inject the WebMCP Module
 
-Import and inject the `WebMcpAdapter` module into your Spreadsheet:
+Import and inject the `WebMcpSpreadsheet` module into your Spreadsheet:
 
 ```typescript
-import { Spreadsheet, WebMcpAdapter } from '@syncfusion/ej2-react-spreadsheet';
+import { Spreadsheet, WebMcpSpreadsheet } from '@syncfusion/ej2-react-spreadsheet';
 
 // Inject the WebMCP module to enable MCP tool support
-Spreadsheet.Inject(WebMcpAdapter);
+Spreadsheet.Inject(WebMcpSpreadsheet);
 ```
 
 ### Step 3: Enable WebMCP
 
-Set the `enableWebMcp` property to `true` in your Spreadsheet configuration:
+Set the `enableWebMcp` property to `true` in your Spreadsheet configuration. When enabled, all WebMCP tools are registered automatically:
 
 ```typescript
 const spreadsheet = new Spreadsheet({
-    enableWebMcp: true,  // Enable WebMCP integration
+    enableWebMcp: true,  // Enable WebMCP integration — registers all tools automatically
     sheets: [{
         name: 'Sales Data',
         ranges: [{ dataSource: salesData }]
@@ -66,9 +66,9 @@ const spreadsheet = new Spreadsheet({
 });
 ```
 
-### Step 4: Register Tools
+### Step 4: Configure WebMCP Settings
 
-Call the `registerWebMcpTools()` method after the Spreadsheet initializes inside created event:
+Use the `webMcpSettings` property to customize tool registration — set a unique name prefix, restrict which tools are exposed, or configure cross-origin access:
 
 ```typescript
 export const grossPay: Object[] = [
@@ -295,14 +295,11 @@ export const grossPay: Object[] = [
 ];
 const spreadsheet = new Spreadsheet({
     enableWebMcp: true,
+    webMcpSettings: { name: 'sales' }, 
     sheets: [{
         name: 'Gross Pay',
         ranges: [{ dataSource: grosspay }]
-    }],
-    created: (): void => {
-        // Register all WebMCP tools with instance prefix 'sales'
-        spreadsheet.registerWebMcpTools('sales');
-    }
+    }]
 });
 ```
 
@@ -368,14 +365,9 @@ console.log(allTools[0]);
 // }
 ```
 
-### Registering Tools
+### WebMCP Settings
 
-Use `registerWebMcpTools()` to register tools on `document.modelContext`:
-
-**Signature:**
-```typescript
-public registerWebMcpTools(prefix?: string, toolNames?: string[], exposedTo?: string[]): void
-```
+Use the `webMcpSettings` property to customize tool registration. When `enableWebMcp` is `true`, all tools are registered automatically. Use `webMcpSettings` to control the prefix, restrict tool exposure, or allow cross-origin access.
 
 **Parameters:**
 
@@ -389,34 +381,55 @@ public registerWebMcpTools(prefix?: string, toolNames?: string[], exposedTo?: st
 
 **Register all tools:**
 ```typescript
-spreadsheet.registerWebMcpTools('sales');
-// Tools registered as: sales_getCellData, sales_editCell, ...
+const spreadsheet = new Spreadsheet({
+    enableWebMcp: true,
+    webMcpSettings: { name: 'sales' }
+    // Tools registered as: sales_getCellData, sales_editCell, ...
+});
 ```
 
 **Register specific tools only:**
 ```typescript
-spreadsheet.registerWebMcpTools('sales', ['getCellData', 'editCell', 'formatCells']);
-// Only these 3 tools are registered, reducing attack surface
+const spreadsheet = new Spreadsheet({
+    enableWebMcp: true,
+    webMcpSettings: {
+        name: 'sales',
+        tools: ['getCellData', 'editCell', 'formatCells']
+    }
+    // Only these 3 tools are registered, reducing attack surface
+});
 ```
 
 **Multi-instance setup:**
 ```typescript
-const spreadsheet1 = new Spreadsheet({ ... });
-const spreadsheet2 = new Spreadsheet({ ... });
+const spreadsheet1 = new Spreadsheet({
+    enableWebMcp: true,
+    webMcpSettings: { name: 'sales' }
+    // sales_getCellData, sales_editCell, ...
+});
 
-spreadsheet1.registerWebMcpTools('sales');     // sales_getCellData, sales_editCell, ...
-spreadsheet2.registerWebMcpTools('inventory'); // inventory_getCellData, inventory_editCell, ...
+const spreadsheet2 = new Spreadsheet({
+    enableWebMcp: true,
+    webMcpSettings: { name: 'inventory' }
+    // inventory_getCellData, inventory_editCell, ...
+});
 
 // No tool-name collisions; both spreadsheets can share a page safely
 ```
 
 **Cross-origin access:**
 ```typescript
-spreadsheet.registerWebMcpTools('sales', undefined, [
-    'https://trusted.example.com',
-    'https://analytics.example.com'
-]);
-// Tools are accessible from these origins (requires HTTPS)
+const spreadsheet = new Spreadsheet({
+    enableWebMcp: true,
+    webMcpSettings: {
+        name: 'sales',
+        exposedTo: [
+            'https://trusted.example.com',
+            'https://analytics.example.com'
+        ]
+    }
+    // Tools are accessible from these origins (requires HTTPS)
+});
 ```
 
 ### Understanding the `beforeWebMcpToolExecute` Event
@@ -426,6 +439,7 @@ Hook into tool execution for auditing, restrictions, or custom logic:
 ```typescript
 const spreadsheet = new Spreadsheet({
     enableWebMcp: true,
+    webMcpSettings: { name: 'sales' },
     // ... config
 });
 
@@ -451,108 +465,83 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 ### Core Data Tools
 
 | Tool Name | Type | Condition | Description |
-|-----------|------|--------------|-----------|-------------|
-| getCellData | Read | Always | Retrieves data from a single cell by address |
-| getRangeData | Read | Always | Retrieves data from a range as a 2D array |
-| getSheetInfo | Read | Always | Gets metadata about the current sheet (name, rows, columns, etc.) |
-| getCellFormula | Read | Always | Retrieves the formula string from a cell |
+|----|----|----|-----|
+| getCellData | Read | Always | Returns the value, formula, display text, and optional format of a single cell |
+| getRangeData | Read | Always | Returns cell values, formulas, and display text for a cell ranges (capped at 200 rows) |
+| getSheetInfo | Read | Always | Returns structural metadata of a sheet — row count, column count, used range, and optional cell data |
+| sheetList | Read | Always | Returns the ordered list of all sheet names in the workbook |
 | evaluateFormula | Read | Always | Evaluates a formula expression and returns the result |
+| find | Searches a sheet or range for a value and returns all matching cell addresses |
 
 ### Editing Tools
 
 | Tool Name | Type | Condition | Description |
-|-----------|------|--------------|-----------|-------------|
-| editCell | Write | Always | Edits the value of a single cell |
-| editRange | Write | Always | Edits values in multiple cells at once |
-| insertRows | Write | Always | Inserts new rows at a specified position |
-| insertColumns | Write | Always | Inserts new columns at a specified position |
-| insertSheet | Write | Always | Adds a new sheet to the workbook |
-| deleteRows | Write | Always | Removes rows from the spreadsheet |
-| deleteColumns | Write | Always | Removes columns from the spreadsheet |
-| deleteSheet | Write | Always | Removes a sheet from the workbook |
-| renameSheet | Write | Always | Renames a sheet |
+|----|----|----|-----|
+| editCell | Write | Always | Writes a value or formula into a single cell |
+| insertRowsColumns | Write | Always | Inserts one or more blank rows or columns at a specified position |
+| deleteRowsColumns | Write | Always | Deletes one or more rows or columns at a specified position |
+| insertSheet | Write | Always | Inserts one or more new blank sheets into the workbook at a given position |
+| cut | Write | Always | Cuts a range to the internal clipboard, ready for paste |
+| copy | Write | Always | Copies a range to the internal clipboard without removing source data |
+| paste | Write | Always | Pastes the current clipboard content into the specified destination range |
+| autofill | Write | Always | Extends a data pattern or series from a source range into an adjacent target range |
+| findReplace | Write | Always | Finds all occurrences of a value in the active sheet and replaces them with a new value |
 
 ### Formatting Tools
 
 | Tool Name | Type | Condition | Description |
-|-----------|------|--------------|-----------|-------------|
-| formatCells | Write | Always | Applies formatting (colors, fonts, alignment, borders) to cells |
-| clearFormatting | Write | Always | Removes all formatting from a range |
-| applyConditionalFormatting | Write | Always | Adds conditional formatting rules to a range |
-| autoFill | Write | Always | Autofill a target range from a source pattern or series |
+|----|----|----|-----|
+| formatCells | Write | Always | Applies visual formatting (bold, italic, font, color, background) to a range without changing values |
+| setNumberFormat | Write | Always | Applies a named number format (Currency, Percentage, Date, etc.) to a range |
+| addConditionalFormat | Write | Always | Adds a rule-based conditional formatting highlight that updates dynamically as values change |
+| mergeCells | Write | Always | Merges a group of cells into one spanning cell |
+| toggleWrap | Write | Always | Enables or disables text wrapping within cells of a range |
 
 ### Data Manipulation Tools
 
 | Tool Name | Type | Condition | Description |
-|-----------|------|--------------|-----------|-------------|
-| sortRange | Write | Always | Sorts cells in a range by specified columns |
-| filterData | Write | Always | Applies auto-filter to a range |
-| find | Read | Always | Searches for text in the spreadsheet |
-| replace | Write | Always | Finds and replaces text |
-| freezePanes | Write | Always | Freezes rows and columns for scrolling |
-| unfreezePanes | Write | Always | Removes frozen panes |
+|----|----|----|-----|
+| sortRange | Write | Always | Reorders the rows of a range by the values in a specified column |
+| filterRange | Write | Always | Applies a column filter to show only rows matching a condition, or clears an existing filter |
+| addDataValidation | Write | Always | Attaches an input validation rule to a range to restrict what values can be entered |
+| freezePanes | Write | Always | Freezes or unfreezes rows, columns, or both so they remain visible while scrolling |
 
 ### Charting & Shapes Tools
 
 | Tool Name | Type | Condition | Description |
-|-----------|------|--------------|-----------|-------------|
-| insertChart | Write | Always | Inserts a chart based on a data range |
-| editChart | Write | Always | Modifies chart properties and data |
-| deleteChart | Write | Always | Removes a chart from the sheet |
-| insertShape | Write | Always | Adds a shape (rectangle, circle, etc.) to the sheet |
+|----|----|----|-----|
+| insertChart | Write | Always | Creates and inserts a chart bound to a data range into the active sheet |
+| insertHyperlink | Write | Always | Inserts a clickable hyperlink into a cell with a display label |
 
 ### Workbook & Utility Tools
 
 | Tool Name | Type | Condition | Description |
-|-----------|------|--------------|-----------|-------------|
-| save | Write | Always | Saves the workbook file |
-| undo | Write | Always | Reverts the last action |
-| getSheetList | Read | Always | Returns a list of all sheet names in the workbook |
+|----|----|----|-----|
+| save | Write | Always | Opens the export dialog so the user can save the workbook in a chosen format (xlsx, csv, pdf, etc.) |
+| undo | Write | Always | Reverses the last action performed on the spreadsheet |
 
 ## Code Examples
 
 ### Example 1: Basic Setup
 
-Set up a Spreadsheet with WebMCP enabled and registers tools on creation.
+Set up a Spreadsheet with WebMCP enabled and all tools registered automatically on creation.
 
 ```typescript
-import React, { useRef } from 'react';
-import { Spreadsheet, WebMcpAdapter, SheetModel } from '@syncfusion/ej2-react-spreadsheet';
+import { Spreadsheet, WebMcpSpreadsheet } from '../../../../src/index';
+import { defaultData } from '../../../common/data-source';
 
 // Inject WebMCP module globally
-Spreadsheet.Inject(WebMcpAdapter);
+Spreadsheet.Inject(WebMcpSpreadsheet);
 
-const spreadsheetData = [
-    { OrderID: 10248, CustomerID: 'VINET', Amount: 32.38 },
-    { OrderID: 10249, CustomerID: 'TOMSP', Amount: 11.61 },
-];
-
-export const BasicSetup = () => {
-    const spreadsheetRef = useRef<Spreadsheet>(null);
-
-    const onCreated = () => {
-        if (spreadsheetRef.current) {
-            // Register all WebMCP tools with 'sales' prefix
-            spreadsheetRef.current.registerWebMcpTools('sales');
-        }
-    };
-
-    const sheets: SheetModel[] = [
-        {
-            name: 'Sales Data',
-            ranges: [{ dataSource: spreadsheetData }],
-        },
-    ];
-
-    return (
-        <Spreadsheet
-            ref={spreadsheetRef}
-            sheets={sheets}
-            enableWebMcp={true}
-            created={onCreated}
-        />
-    );
-};
+const spreadsheet: Spreadsheet = new Spreadsheet({
+    enableWebMcp: true,
+    webMcpSettings: { name: 'sales' },
+    sheets: [{
+        name: 'Price Details',
+        ranges: [{ dataSource: defaultData }]
+    }]
+});
+spreadsheet.appendTo('#spreadsheet');
 ```
 
 ### Example 2: Selective Tool Registration
@@ -573,7 +562,14 @@ const readOnlyTools = [
     'redo'
 ];
 
-spreadsheet.registerWebMcpTools('analytics', readOnlyTools);
+const spreadsheet = new Spreadsheet({
+    enableWebMcp: true,
+    webMcpSettings: {
+        name: 'analytics',
+        tools: readOnlyTools
+    },
+    // ... other config
+});
 ```
 
 ### Example 3: Multi-Instance Setup
@@ -584,18 +580,14 @@ Shows how to use different prefixes for multiple Spreadsheet instances.
 // Two spreadsheets on the same page with different prefixes
 const salesSpreadsheet = new Spreadsheet({
     enableWebMcp: true,
+    webMcpSettings: { name: 'sales' },
     sheets: [...],
-    created: () => {
-        salesSpreadsheet.registerWebMcpTools('sales');
-    }
 });
 
 const inventorySpreadsheet = new Spreadsheet({
     enableWebMcp: true,
+    webMcpSettings: { name: 'inventory' },
     sheets: [...],
-    created: () => {
-        inventorySpreadsheet.registerWebMcpTools('inventory');
-    }
 });
 
 // Tools are now:
@@ -608,7 +600,7 @@ const inventorySpreadsheet = new Spreadsheet({
 Demonstrates how to intercept tool execution and block restricted actions.
 
 ```typescript
-spreadsheet.beforeWebMcpToolExecute = (args) => {
+spreadsheet.beforeWebMcpToolExecute = (args: WebMcpToolExecuteEventArgs) => {
     const { toolName, toolArgs } = args;
 
     // Log all tool invocations
@@ -726,31 +718,24 @@ async function invokeToolManually(toolName: string, toolArgs: any) {
 
 ---
 
-### Q: "InvalidStateError" when registering tools
-
-**A:**
-- This occurs if tools are registered before Spreadsheet initializes
-- Call `registerWebMcpTools()` inside the `created` event or after initialization
-- Ensure `document.modelContext` is available
-
----
-
 ### Q: Multi-instance tools have naming conflicts
 
 **A:**
-- Always use different prefixes for each Spreadsheet instance:
-  ```typescript
-  spreadsheet1.registerWebMcpTools('sales');
-  spreadsheet2.registerWebMcpTools('inventory');
-  ```
-- Never register the same instance multiple times
+- Always use different name values in `webMcpSettings` for each Spreadsheet instance:
+```typescript
+// Spreadsheet 1
+webMcpSettings: { name: 'sales' }
+// Spreadsheet 2
+webMcpSettings: { name: 'inventory' }
+```
+- Never use the same name for multiple instances on the same page
 
 ---
 
 ### Q: How do I avoid performance issues with large datasets?
 
 **A:**
-1. Use selective tool registration—register only necessary tools
+1. Use selective tool registration — restrict to necessary tools via `webMcpSettings.tools`
 2. Limit data ranges: Instead of "read entire sheet", specify "A1:Z100"
 3. For large datasets, use `getRangeData()` instead of looping `getCellData()`
 4. Avoid fetch all operations; filter or paginate when possible
@@ -764,7 +749,7 @@ async function invokeToolManually(toolName: string, toolArgs: any) {
 Yes, use the `beforeWebMcpToolExecute` event:
 
 ```typescript
-spreadsheet.beforeWebMcpToolExecute = (args) => {
+spreadsheet.beforeWebMcpToolExecute = (args: WebMcpToolExecuteEventArgs) => {
     const restrictedTools = ['deleteSheet', 'saveWorkbook'];
     if (restrictedTools.includes(args.toolName)) {
         args.cancel = true;

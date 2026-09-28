@@ -58,7 +58,7 @@ Syncfusion Spreadsheet integration with WebMCP provides significant benefits for
 ### ✅ Key Benefits
 
 - **Universal Tool Access** — AI agents, LLMs, and any MCP-compatible client can discover and invoke spreadsheet operations
-- **Zero Custom Integration** — Inject the WebMcpAdapter module, call `registerWebMcpTools()`, and all tool registration, schema binding, and life cycle management is automatic
+- **Zero Custom Integration** — Inject the `WebMcpSpreadsheet` module, set `enableWebMcp: true`, and all tool registration, schema binding, and life cycle management is automatic
 - **Schema-Validated I/O** — Every tool includes JSON Schema for inputs and outputs, eliminating hallucination and enabling AI clients to validate data reliably
 - **Controlled Execution** — Write operations can trigger user confirmation dialogs when the `showConfirmationDialog` property is enabled in the `beforeWebMcpToolExecute` event. Applications can use this event to audit, restrict, or cancel any operation
 - **Multi-Instance Friendly** — Unique prefixes per Spreadsheet prevent tool-name collisions when multiple instances share a page
@@ -89,8 +89,8 @@ When you invoke a WebMCP tool, the following happens behind the scenes:
                               ↓
 ┌─────────────────────────────────────────────────────────────────┐
 │  2. Tool Registration                                           │
-│     spreadsheet.registerWebMcpTools(prefix, tools, exposedTo)   │
-│     → Registers tools on document.modelContext                  │
+│     webMcpSettings: { name, tools, exposedTo }                  │
+│     → Registers tools on document.modelContext automatically    │
 │     → Prefixes each tool name (e.g., sales_getCellData)         │
 │     → Binds execute callbacks                                   │
 └─────────────────────────────────────────────────────────────────┘
@@ -103,7 +103,7 @@ When you invoke a WebMCP tool, the following happens behind the scenes:
                               ↓
 ┌─────────────────────────────────────────────────────────────────┐
 │  4. Adapter Routing                                             │
-│     WebMcpAdapter.executeHandler() routes the call              │
+│     WebMcpSpreadsheet.executeHandler() routes the call          │
 │     → Strips prefix from tool name                              │
 │     → Fires beforeWebMcpToolExecute event                       │
 │     → Dispatches to appropriate handler                         │
@@ -152,14 +152,15 @@ Orchestrate complex operations in sequence based on user intent.
 
 WebMCP tools are organized into six categories, covering 28 operations:
 
+
 | Category | Tools | Example |
 |----------|-------|---------|
-| **Core Data** | getCellData, getRangeData, getSheetInfo, getCellFormula, evaluateFormula | Read cell values and formulas programmatically |
-| **Editing** | editCell, editRange, insertRows, insertColumns, insertSheet, deleteRows, deleteColumns, deleteSheet, renameSheet | Modify spreadsheet structure and content |
-| **Formatting** | formatCells, clearFormatting, applyConditionalFormatting, autoFit | Apply styles and conditional rules |
-| **Data Manipulation** | sortRange, filterData, find, replace, freezePanes, unfreezePanes | Transform and navigate data |
-| **Charting & Shapes** | insertChart, editChart, deleteChart, insertShape | Create visualizations |
-| **Workbook & Utility** | saveWorkbook, undo, redo, getSheetList | Manage workbook and history |
+| **Core Data** | getCellData, getRangeData, getSheetInfo, sheetList, evaluateFormula, find | Read cell values, formulas, sheet metadata, and search content |
+| **Editing** | editCell, insertRowsColumns, deleteRowsColumns, insertSheet, cut, copy, paste, autofill, findReplace | Modify spreadsheet content and structure |
+| **Formatting** | formatCells, setNumberFormat, addConditionalFormat, mergeCells, toggleWrap | Apply styles, number formats, conditional rules, and cell layout |
+| **Data Operations** | sortRange, filterRange, addDataValidation, freezePanes | Sort, filter, validate, and lock data for navigation |
+| **Charting & Links** | insertChart, insertHyperlink | Create visualizations and insert clickable links |
+| **Workbook & Utility** | save, undo | Export the workbook and manage action history |
 
 For complete tool reference with schemas, see [WebMCP Integration — Tool Reference](./integration#tool-reference).
 
