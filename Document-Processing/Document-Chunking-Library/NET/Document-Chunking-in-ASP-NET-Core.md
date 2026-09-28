@@ -232,4 +232,8 @@ Step 7: Run the application, select a supported document, and click **Chunk Docu
 
 The application selects a source option and chunking mode based on the uploaded document format. The generated chunk content, metadata, and citation details are displayed in the application console.
 
+{% endtabcontent %}
+
+{% endtabcontents %}
+
 N> To use a different chunking mode, replace the format-specific `ChunkingMode` value in the `switch` statement. For more information about the supported modes, see <a href="https://help.syncfusion.com/document-processing/document-chunking-library/net/chunking-modes" aria-label="Document chunking modes">Chunking modes</a>.
