@@ -1,5 +1,5 @@
 ---
-title: Get Started with .NET Document Chunking | Syncfusion
+title: Get Started with .NET Document Chunking in ASP.NET Core | Syncfusion
 description: Learn how to use the Syncfusion® .NET Document Chunking Library to chunk Excel, Word, PDF, PowerPoint, and Markdown documents in an ASP.NET Core application.
 platform: document-processing
 control: Chunking
@@ -231,5 +231,9 @@ private static void DisplayChunkingResult( IChunkingResult result)
 Step 7: Run the application, select a supported document, and click **Chunk Document**.
 
 The application selects a source option and chunking mode based on the uploaded document format. The generated chunk content, metadata, and citation details are displayed in the application console.
+
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 N> To use a different chunking mode, replace the format-specific `ChunkingMode` value in the `switch` statement. For more information about the supported modes, see <a href="https://help.syncfusion.com/document-processing/document-chunking-library/net/chunking-modes" aria-label="Document chunking modes">Chunking modes</a>.

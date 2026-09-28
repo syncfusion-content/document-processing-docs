@@ -180,7 +180,7 @@ The following code example shows the style formatting in text and cells of the s
         
 {% previewsample "/document-processing/code-snippet/spreadsheet/vue/cell-format-cs1" %}
 
-## Text Overflow
+### Text Overflow
 
 When the content of a cell exceeds the available column width, the Spreadsheet automatically displays the text across adjacent empty cells. This behavior helps improve readability without changing the column width.
 
@@ -327,31 +327,31 @@ Each `richText` segment contains:
 
 Rich text formatting supports the following style options through the `style` property of each `richText` segment:
 
-## Font Family
+### Font Family
 
 You can change the font family of individual rich text segments using the `fontFamily` property. This allows different portions of text within the same cell to be displayed using different typefaces such as `Calibri`, `Arial`, and `Georgia`.
 
-## Font Size
+### Font Size
 
 You can customize the size of individual rich text segments using the `fontSize` property to emphasize specific content within a cell.
 
-## Font Weight
+### Font Weight
 
 You can apply font weight formatting using the `fontWeight` property. This is typically used to display specific text segments in bold.
 
-## Font Style
+### Font Style
 
 You can apply font style formatting using the `fontStyle` property. This property supports values such as `normal` and `italic`.
 
-## Text Decoration
+### Text Decoration
 
 You can apply text decorations to individual rich text segments using the `textDecoration` property. Supported decorations include `underline` and `line-through`.
 
-## Font Color
+### Font Color
 
 You can customize the color of specific text segments using the `color` property to improve visibility or highlight important information.
 
-## Subscript and Superscript
+### Subscript and Superscript
 
 You can apply subscript and superscript formatting to individual text segments using the `verticalAlign` property.
 
