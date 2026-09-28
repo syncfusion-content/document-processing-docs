@@ -9,7 +9,9 @@ documentation: ug
 
 # Collaborative editing in React SpreadsheetEditor
 
-The React SpreadsheetEditor supports real-time collaborative editing, allowing multiple users to work on the same workbook and view synchronized changes, connected users, and selections. It uses [Syncfusion Collaborator](https://help.syncfusion.com/document-processing/collaborator/overview) to manage real-time communication, collaboration sessions, and synchronized actions. Supported workbook actions are synchronized through a collaboration service to maintain a consistent workbook state for users connected to the same room.
+The React SpreadsheetEditor supports real-time collaborative editing, allowing multiple users to work on the same workbook and view synchronized changes, connected users, and selections. 
+
+It uses [Syncfusion Collaborator](https://help.syncfusion.com/document-processing/collaborator/overview), a reusable collaboration framework that manages real-time communication, collaboration sessions, action synchronization, and user presence. Supported workbook actions are synchronized through a collaboration service to maintain a consistent workbook state for users connected to the same room.
 
 ## Key features
 
@@ -80,7 +82,7 @@ The `CollaborativeEditingHandler` manages SpreadsheetEditor-specific collaborati
 
 ### Real-time communication layer
 
-The `@syncfusion/ej2-collaborator` package connects the client to the Collaboration Server through WebSocket or SignalR. It manages room connections, user join and leave events, workbook action delivery, presence updates, and selection updates.
+The `@syncfusion/ej2-collaborator` package connects the SpreadsheetEditor to the Collaboration Server through SignalR or WebSocket. The Collaboration Client joins and leaves collaboration rooms, sends local actions, receives remote actions, and reports user join and leave events.
 
 ### Collaboration Server
 

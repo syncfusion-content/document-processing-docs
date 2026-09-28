@@ -17,7 +17,7 @@ For package installation, service registration, transport configuration, and end
 
 The following are required:
 
-- An ASP.NET Core Collaboration Server.
+- `Syncfusion.Collaborator.Server.AspNet.Core` for the ASP.NET Core Collaboration Server.
 - Redis for collaboration action, version, and room storage.
 - SignalR or WebSocket for real-time communication.
 - A SpreadsheetEditor server adapter for action conversion and operational transformation.
@@ -48,6 +48,14 @@ Add the Redis connection string to `appsettings.json`.
 
 Store production credentials in a secure secret provider.
 
+## Collaboration Server configuration
+
+The Collaboration Server uses `CollaborationOptions` to configure Redis, the real-time transport, and the save threshold:
+
+- `ConnectionString` - Specifies the Redis connection string.
+- `ConnectionType` - Specifies SignalR or WebSocket. SignalR is the default.
+- `SaveThreshold` - Specifies the action count after which pending actions are queued for save processing. The default value is `100`.
+
 ## Register the Collaboration Server
 
 Configure the Collaboration Server and SpreadsheetEditor adapter in `Program.cs`.
@@ -63,8 +71,7 @@ builder.Services.AddCollaborationServer(options =>
 {
     options.ConnectionString = builder.Configuration
         .GetConnectionString("Redis");
-    options.ConnectionType =
-        CollaborationConnectionType.SignalR;
+    options.ConnectionType =  CollaborationConnectionType.SignalR;
 });
 
 // Register the SpreadsheetEditor collaboration adapter.
@@ -119,10 +126,10 @@ Process queued save requests based on the application storage requirements, and 
 
 Create `CollaborativeEditingController.cs` and implement the following endpoints:
 
-- **`ImportFile`** - Loads the workbook, applies pending room actions, and returns the latest workbook JSON and room version. This endpoint initializes new users and users joining an existing room.
-- **`UpdateAction`** - Receives a local SpreadsheetEditor action, assigns its server version, transforms concurrent operations when required, stores the action in Redis, and broadcasts it to the room.
-- **`UpdateSelection`** - Stores a user's active cell, selected range, and editing presence, and broadcasts the presence update to the other users in the room.
-- **`GetActionsFromServer`** - Returns actions created after the client's last synchronized version so that missed updates can be applied in version order.
+- **`ImportFile`** - Loads the workbook, applies pending room actions, and returns the latest workbook JSON and server version.
+- **`UpdateAction`** - Receives a local SpreadsheetEditor action, assigns its server version, transforms concurrent operations, stores the action in Redis, and broadcasts it to the room.
+- **`UpdateSelection`** - Stores and broadcasts the active cell, selected range, and editing presence of a user.
+- **`GetActionsFromServer`** - Returns actions created after the client's last synchronized version so missed updates can be applied in order.
 
 ## Limitation
 
