@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Programmatically Get Differences
+# Programmatically Get Differences in Vue PDF Viewer
 
 The semantic text comparison feature provides programmatic access to all differences found between two PDF documents. Using the `semanticTextCompare()` method on `PdfViewerComponent`, you can retrieve structured difference data for custom processing, reporting, or integration with other workflows.
 
@@ -34,7 +34,7 @@ The comparison provides:
 ### Step 1: Import required components
 
 {% tabs %}
-{% highlight vue tabtitle="App.vue" %}
+{% highlight html tabtitle="App.vue" %}
 {% raw %}
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
 {% endraw %}
