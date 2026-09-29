@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Collaborative Editing in React SpreadsheetEditor | Syncfusion
-description: Learn how real-time collaborative editing synchronizes workbook changes, user presence, and selections in the React SpreadsheetEditor.
+title: Collaborative Editing in JavaScript SpreadsheetEditor | Syncfusion
+description: Learn how real-time collaborative editing synchronizes workbook changes, user presence, and selections in the JavaScript SpreadsheetEditor.
 control: Collaborative Editing
 platform: document-processing
 documentation: ug
 ---
 
-# Collaborative editing in React SpreadsheetEditor
+# Collaborative editing in JavaScript SpreadsheetEditor
 
-The React SpreadsheetEditor supports real-time collaborative editing, allowing multiple users to work on the same workbook and view synchronized changes, connected users, and selections. 
+The JavaScript SpreadsheetEditor supports real-time collaborative editing, allowing multiple users to work on the same workbook and view synchronized changes, connected users, and selections.
 
 It uses [Syncfusion Collaborator](https://help.syncfusion.com/document-processing/collaborator/overview), a reusable collaboration framework that manages real-time communication, collaboration sessions, action synchronization, and user presence. Supported workbook actions are synchronized through a collaboration service to maintain a consistent workbook state for users connected to the same room.
 
 ## Key features
 
-The React SpreadsheetEditor collaborative editing feature provides:
+The JavaScript SpreadsheetEditor collaborative editing feature provides:
 
 - **Real-time workbook updates** - Reflects supported workbook changes across users connected to the same collaboration room.
 - **Action synchronization** - Synchronizes supported SpreadsheetEditor actions in server-defined version order.
@@ -28,7 +28,7 @@ The React SpreadsheetEditor collaborative editing feature provides:
 
 Collaborative editing requires:
 
-- The React SpreadsheetEditor package.
+- The JavaScript SpreadsheetEditor package.
 - The `@syncfusion/ej2-collaborator` package.
 - An ASP.NET Core Collaboration Server.
 - Redis for temporary collaboration action and version storage.
@@ -70,13 +70,13 @@ Collaborative editing supports SpreadsheetEditor actions such as:
 
 The Collaboration Server assigns an authoritative version to each workbook action. Connected users apply actions in version order.
 
-When the client detects a missing version, the SpreadsheetEditor retrieves and applies the missed actions before continuing. This helps all connected users converge to the same workbook state.
+When a client detects a missing version, the SpreadsheetEditor retrieves and applies the missed actions before continuing. This helps all connected users converge to the same workbook state.
 
 ## Architecture
 
-### Client - React SpreadsheetEditor
+### Client - JavaScript SpreadsheetEditor
 
-The React SpreadsheetEditor captures local workbook actions, sends them to the Collaboration Server, receives remote actions, and displays connected users and their selections.
+The SpreadsheetEditor captures local workbook actions, sends them to the Collaboration Server, receives remote actions, and displays connected users and their selections.
 
 The `CollaborativeEditingHandler` manages SpreadsheetEditor-specific collaboration behavior. The `SpreadsheetEditorAdapter` connects the SpreadsheetEditor to the Collaboration Client.
 
@@ -106,8 +106,8 @@ Redis temporarily stores collaboration actions, versions, and room-related infor
 Collaborative editing is suitable for workflows where multiple users review or update the same workbook, including:
 
 - **Financial planning** - Update budgets, forecasts, and financial reports.
-- **Project tracking** - Maintain shared schedules, task lists, status updates, and resource information.
-- **Inventory management** - Update stock quantities, item availability, and order details.
+- **Project tracking** - Maintain schedules, tasks, status updates, and resource information.
+- **Inventory management** - Update stock quantities, availability, and order details.
 - **Data review** - Review, correct, format, and annotate shared workbook data.
 - **Reporting** - Prepare and validate operational or business reports with multiple participants.
 
