@@ -130,7 +130,7 @@ SpreadsheetEditorAdapter.prototype.applyRemoteAction =
 
 Set `enableCollaborativeEditing` to `true`, inject `CollaborativeEditingHandler`, load the workbook, initialize the Collaboration Client, and join the collaboration room.
 
-```razor
+```html
 <script>
     var module =
         ej.spreadsheet.CollaborativeEditing ||
