@@ -106,7 +106,7 @@ export class SpreadsheetEditorAdapter implements ICollaborationProvider {
 
 Set `enableCollaborativeEditing` to `true`, inject `CollaborativeEditingHandler`, load the workbook, initialize the Collaboration Client, and join the collaboration room.
 
-```tsx
+```ts
 import { useRef } from 'react';
 import { CollaborativeEditingHandler, Inject, SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 import { CollaborationClient } from '@syncfusion/ej2-collaborator';
