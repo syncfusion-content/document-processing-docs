@@ -37,25 +37,11 @@ For local development, enable WebMCP for testing via `chrome://flags/`.
 
 > **Note:** WebMCP is an experimental browser standard. The API and behavior may change as the standard evolves. The Syncfusion Spreadsheet WebMCP integration is a preview feature.
 
-## Integration
-
-WebMCP integrates seamlessly into Syncfusion Spreadsheet applications across all major platforms. Choose your framework below to get started with platform-specific setup instructions, API references, code examples, and sample prompts.
-
-### Supported Platforms
-
-- **[WebMCP Integration for React Spreadsheet](../Excel/Spreadsheet/react/webmcp)** — React-based Spreadsheet Editor
-- **[WebMCP Integration for Angular Spreadsheet](../Excel/Spreadsheet/angular/webmcp)** — Angular-based Spreadsheet Editor
-- **[WebMCP Integration for Vue Spreadsheet](../Excel/Spreadsheet/vue/webmcp)** — Vue.js-based Spreadsheet Editor
-- **[WebMCP Integration for TypeScript Spreadsheet](../Excel/Spreadsheet/javascript-es6/webmcp)** — TypeScript/ES6 Spreadsheet Editor
-- **[WebMCP Integration for JavaScript Spreadsheet](../Excel/Spreadsheet/javascript-es5/webmcp)** — Vanilla JavaScript/ES5 Spreadsheet Editor
-- **[WebMCP Integration for ASP.NET Core Spreadsheet](../Excel/Spreadsheet/asp-net-core/webmcp)** — ASP.NET Core Spreadsheet Editor
-- **[WebMCP Integration for ASP.NET MVC Spreadsheet](../Excel/Spreadsheet/asp-net-mvc/webmcp)** — ASP.NET MVC Spreadsheet Editor
-
 ## Why Use WebMCP for Spreadsheet?
 
 Syncfusion Spreadsheet integration with WebMCP provides significant benefits for building AI-powered spreadsheet applications:
 
-### ✅ Key Benefits
+### Key Benefits
 
 - **Universal Tool Access** — AI agents, LLMs, and any MCP-compatible client can discover and invoke spreadsheet operations
 - **Zero Custom Integration** — Inject the `WebMcpSpreadsheet` module, set `enableWebMcp: true`, and all tool registration, schema binding, and life cycle management is automatic
@@ -80,51 +66,17 @@ When you invoke a WebMCP tool, the following happens behind the scenes:
 5. **Confirmation & Execution** — Write tools are confirmed through `beforeWebMcpToolExecute`, while read tools execute immediately
 6. **Response Formatting** — Returns structured response with success or error
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│  1. Tool Discovery                                              │
-│     spreadsheet.getWebMcpTools(toolNames?)                      │
-│     → Returns available tool schemas, optionally filtered       │
-└─────────────────────────────────────────────────────────────────┘
-                              ↓
-┌─────────────────────────────────────────────────────────────────┐
-│  2. Tool Registration                                           │
-│     webMcpSettings: { name, tools, exposedTo }                  │
-│     → Registers tools on document.modelContext automatically    │
-│     → Prefixes each tool name (e.g., sales_getCellData)         │
-│     → Binds execute callbacks                                   │
-└─────────────────────────────────────────────────────────────────┘
-                              ↓
-┌─────────────────────────────────────────────────────────────────┐
-│  3. Tool Invocation                                             │
-│     AI Agent calls tool via document.modelContext               │
-│     → Sends tool name and input parameters                      │
-└─────────────────────────────────────────────────────────────────┘
-                              ↓
-┌─────────────────────────────────────────────────────────────────┐
-│  4. Adapter Routing                                             │
-│     WebMcpSpreadsheet.executeHandler() routes the call          │
-│     → Strips prefix from tool name                              │
-│     → Fires beforeWebMcpToolExecute event                       │
-│     → Dispatches to appropriate handler                         │
-└─────────────────────────────────────────────────────────────────┘
-                              ↓
-┌─────────────────────────────────────────────────────────────────┐
-│  5. Confirmation & Execution                                   │
-│     For Write Tools:                                            │
-│     → Shows user confirmation dialog by default                 │
-│     → Executes via CommandExecutor (undo/redo support)          │
-│     For Read Tools:                                             │
-│     → Executes immediately                                      │
-└─────────────────────────────────────────────────────────────────┘
-                              ↓
-┌─────────────────────────────────────────────────────────────────┐
-│  6. Response Formatting                                         │
-│     Returns structured WebMcpToolResponse                       │
-│     → Success: { content: [{ type: 'text', text: JSON }] }      │
-│     → Error: { error: 'Error message' }                         │
-└─────────────────────────────────────────────────────────────────┘
-```
+## Integration
+
+WebMCP integrates seamlessly into Syncfusion Spreadsheet applications across all major platforms. Choose your framework below to get started with platform-specific setup instructions, API references, code examples, and sample prompts.
+
+### Supported Platforms
+
+- **[WebMCP Integration for React Spreadsheet](hhttps://ej2.syncfusion.com/react/documentation/webmcp/overview)** — React-based Spreadsheet Editor
+- **[WebMCP Integration for Angular Spreadsheet](https://ej2.syncfusion.com/angular/documentation/webmcp/overview)** — Angular-based Spreadsheet Editor
+- **[WebMCP Integration for Vue Spreadsheet](https://ej2.syncfusion.com/vue/documentation/webmcp/overview)** — Vue.js-based Spreadsheet Editor
+- **[WebMCP Integration for TypeScript Spreadsheet](https://ej2.syncfusion.com/documentation/webmcp/overview)** — TypeScript/ES6 Spreadsheet Editor
+- **[WebMCP Integration for JavaScript Spreadsheet](https://ej2.syncfusion.com/javascript/documentation/webmcp/overview)** — Vanilla JavaScript/ES5 Spreadsheet Editor
 
 ## Common Use Cases
 
@@ -162,7 +114,7 @@ WebMCP tools are organized into six categories, covering 28 operations:
 | **Charting & Links** | insertChart, insertHyperlink | Create visualizations and insert clickable links |
 | **Workbook & Utility** | save, undo | Export the workbook and manage action history |
 
-For complete tool reference with schemas, see [WebMCP Integration — Tool Reference](./integration#tool-reference).
+For complete tool reference, see [WebMCP Integration — Tool Reference](https://ej2.syncfusion.com/react/documentation/webmcp/components#spreadsheet).
 
 ## Writing Effective Prompts
 
