@@ -26,16 +26,8 @@ By default, `toolbarMode` is `Toolbar`.
 To use Ribbon mode, add the DOCX Editor component and its dependent component styles available in the **../node_modules/@syncfusion** package folder. This can be referenced in [src/styles.css] using the following code.
 
 ```css
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-angular-documenteditor/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-ribbon/styles/material.css';/* Required for Ribbon */
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/document-editor/index.css";
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/document-editor-container/index.css";
 ```
 
 The following code shows how to enable the `Ribbon` in the DOCX Editor.
