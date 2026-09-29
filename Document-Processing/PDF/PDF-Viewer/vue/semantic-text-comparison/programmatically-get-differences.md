@@ -34,7 +34,7 @@ The comparison provides:
 ### Step 1: Import required components
 
 {% tabs %}
-{% highlight vue tabtitle="App.vue" %}
+{% highlight html tabtitle="App.vue" %}
 {% raw %}
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
 {% endraw %}

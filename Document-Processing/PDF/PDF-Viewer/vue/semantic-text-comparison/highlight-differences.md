@@ -31,7 +31,7 @@ When you compare two PDF documents using the semantic text comparison feature, d
 ### Step 1: Import required components
 
 {% tabs %}
-{% highlight vue tabtitle="App.vue" %}
+{% highlight html tabtitle="App.vue" %}
 {% raw %}
 import { PdfComparerComponent } from '@syncfusion/ej2-vue-pdfviewer';
 {% endraw %}
