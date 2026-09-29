@@ -602,7 +602,7 @@ registerPdfDocumentRoutes(server.app, pdfStorageService);
 server.start();
 ```
 
->N For complete production implementation with comprehensive form field handling, XFDF annotation import, signature rendering with path/image/text support, and advanced page organizer operations, refer to the [GitHub sample](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Collaborative%20Editing).
+N> For complete production implementation with comprehensive form field handling, XFDF annotation import, signature rendering with path/image/text support, and advanced page organizer operations, refer to the [GitHub sample](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Collaborative%20Editing).
 
 ## See Also
 
