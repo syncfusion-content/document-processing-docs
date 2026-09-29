@@ -3,7 +3,7 @@ layout: post
 title: Clipboard in Blazor DOCX Editor | Syncfusion
 description: The clipboard support in Blazor DOCX Editor provides copy, cut, paste, and local paste operations for efficient content management.
 platform: document-processing
-control: Document Editor
+control: DOCX Editor
 documentation: ug
 ---
 
@@ -13,14 +13,14 @@ The [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-
 
 ## Local vs. System Clipboard
 
-The Document Editor supports two clipboard modes to handle content transfer:
+The DOCX Editor supports two clipboard modes to handle content transfer:
 
-To copy or paste content from other applications, use the system clipboard. To copy or paste content within the Document Editor component, use the local clipboard.
+To copy or paste content from other applications, use the system clipboard. To copy or paste content within the DOCX Editor component, use the local clipboard.
 
 Let’s see how to invoke each clipboard operation using code.
 
 *   **Local Clipboard (Default)**: This is a built-in clipboard that is optimized for performance when cutting, copying, and pasting content **within** the editor itself. It is enabled by default.
-*   **System Clipboard**: This is the operating system's standard clipboard, which allows for transferring content between the Document Editor and other applications.
+*   **System Clipboard**: This is the operating system's standard clipboard, which allows for transferring content between the DOCX Editor and other applications.
 
 To use the system clipboard, set the [`EnableLocalPaste`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_EnableLocalPaste) property to `false`. When this property is `false`, all clipboard operations will use the system clipboard.
 
@@ -71,6 +71,6 @@ The [`PasteAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Docum
 *   If `true` (default), it pastes from the editor's local clipboard.
 *   If `false`, it pastes from the system clipboard.
 
-N> When you paste content from an external source into the Document Editor, some formatting or elements may not appear as expected because certain elements are not supported. Refer to the [unsupported features](./unsupported-features) documentation to learn more about unsupported elements.
+N> When you paste content from an external source into the DOCX Editor, some formatting or elements may not appear as expected because certain elements are not supported. Refer to the [unsupported features](./unsupported-features) documentation to learn more about unsupported elements.
 
-Explore the [Blazor Word Processor example](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities) to see how to render and configure the Document Editor.
+Explore the [Blazor Word Processor example](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities) to see how to render and configure the DOCX Editor.

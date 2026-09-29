@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Import in Angular DOCX Editor
 
-In [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor), the documents are stored in Document Editor's own format called **Syncfusion Document Text (SFDT)**.
+In [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor), the documents are stored in DOCX Editor's own format called **Syncfusion Document Text (SFDT)**.
 
-The following example shows how to open SFDT data in Document Editor.
+The following example shows how to open SFDT data in DOCX Editor.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
@@ -46,7 +46,7 @@ The following example shows how to import a document from the local machine.
 
 You can convert Word documents into SFDT format using the .NET Standard library [`Syncfusion.EJ2.WordEditor.AspNet.Core`](<https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Core/>) by the web API service implementation. This library helps you to convert Word documents (.dotx,.docx,.docm,.dot,.doc), rich text format documents (.rtf), and text documents (.txt) into SFDT format.
 
-N> The Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word).
+N> The Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word).
 
 Please refer to the following example for converting Word documents into SFDT.
 
@@ -153,19 +153,19 @@ To know about server-side action, please refer to this [page](./web-services-ove
 
 ## Compatibility with Microsoft Word
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor is a minimal viable Word document viewer/editor product for web applications. As the most compatible Word editor, the product vision is adding valuable feature sets of Microsoft Word, and not to cover 100% feature sets of Microsoft Word desktop application. You can even see the feature sets difference between Microsoft Word desktop and their Word online application. So kindly don't misunderstand this component as a complete replacement for Microsoft Word desktop application and expect 100% feature sets of it.
+Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor is a minimal viable Word document viewer/editor product for web applications. As the most compatible Word editor, the product vision is adding valuable feature sets of Microsoft Word, and not to cover 100% feature sets of Microsoft Word desktop application. You can even see the feature sets difference between Microsoft Word desktop and their Word online application. So kindly don't misunderstand this component as a complete replacement for Microsoft Word desktop application and expect 100% feature sets of it.
 
-### How Syncfusion<sup style="font-size:70%">&reg;</sup> accepts the feature requests for Document Editor
+### How Syncfusion<sup style="font-size:70%">&reg;</sup> accepts the feature requests for DOCX Editor
 
 Syncfusion accepts new feature requests as valid based on feature value and technological feasibility, then plans to implement unsupported features incrementally in future releases in a phase-by-phase manner.
 
-### How to report problems in Document Editor
+### How to report problems in DOCX Editor
 
-You can report problems with displaying or editing Word documents in Document Editor component through [`feedback portal`](https://www.syncfusion.com/feedback). Kindly share the Word document for replicating the problem easily in minimal time. If you have confidential data, you can replace it and attach the document.
+You can report problems with displaying or editing Word documents in DOCX Editor component through [`feedback portal`](https://www.syncfusion.com/feedback). Kindly share the Word document for replicating the problem easily in minimal time. If you have confidential data, you can replace it and attach the document.
 
 ### Why the document pagination differs from Microsoft Word
 
-For your understanding about the Word document structure and the workflow of Word viewer/editor components, the Word document is a flow document in which content will not be preserved page by page; instead, the content will be preserved sequentially like an HTML file. Only the Word viewer/editor paginates the content of the Word document page by page dynamically, when opened for viewing or editing and this page-wise position information will not be preserved at the document level (it is Word file format specification standard). Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component also does the same.
+For your understanding about the Word document structure and the workflow of Word viewer/editor components, the Word document is a flow document in which content will not be preserved page by page; instead, the content will be preserved sequentially like an HTML file. Only the Word viewer/editor paginates the content of the Word document page by page dynamically, when opened for viewing or editing and this page-wise position information will not be preserved at the document level (it is Word file format specification standard). Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor component also does the same.
   
 At present there is a known technical limitation related to slight difference in text size calculated using HTML element based text measuring approach. Even though the text size is calculated with correct font and font size values, the difference lies; it is as low as 0.00XX to 0.XXXX values compared to that of Microsoft Word application’s display. Hence the document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application.
 

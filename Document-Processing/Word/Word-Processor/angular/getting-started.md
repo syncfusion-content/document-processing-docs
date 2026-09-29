@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with Angular DOCX Editor
 
-[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a Document Editor in an Angular application. 
+[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in an Angular application. 
 
 {% tabcontents %}
 
@@ -150,11 +150,11 @@ In this guide, CSS is selected as the stylesheet format.
 cd documenteditor-app
 ```
 
-## Install the Document Editor packages
+## Install the DOCX Editor packages
 
-The Document Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-angular-documenteditor).
+The DOCX Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-angular-documenteditor).
 
-To install the Document Editor component, use the following command:
+To install the DOCX Editor component, use the following command:
 
 ```bash
 npm install @syncfusion/ej2-angular-documenteditor --save
@@ -190,9 +190,9 @@ The required styles for the DOCX Editor are imported in the **src/styles.css** f
 {% endhighlight %}
 {% endtabs %}
 
-## Initialize the Document Editor
+## Initialize the DOCX Editor
 
-Modify `src/app/app.ts` to render the Document Editor component by adding the Angular DOCX Editor selector in its template section.
+Modify `src/app/app.ts` to render the DOCX Editor component by adding the Angular DOCX Editor selector in its template section.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
@@ -241,7 +241,7 @@ After the application starts, open the localhost URL shown in the terminal. The 
 
 {% endtabcontents %}
 
-You can also explore the Document Editor interactively using the live sample below.
+You can also explore the DOCX Editor interactively using the live sample below.
 
 {% previewsample "/document-processing/samples/document-editor/angular/document-editor-container-cs2" %}
 
@@ -249,7 +249,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Angular-DOCX-Ed
 
 ## Server-side dependencies
 
-The Document Editor component requires server-side interactions for the following operations:
+The DOCX Editor component requires server-side interactions for the following operations:
 
 * Open file formats other than SFDT
 * Paste with formatting

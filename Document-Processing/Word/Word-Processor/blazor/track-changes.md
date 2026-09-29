@@ -3,7 +3,7 @@ layout: post
 title: Track Changes in Blazor DOCX Editor | Syncfusion
 description: Track changes in Blazor DOCX Editor records document modifications and enables reviewers to accept or reject revisions efficiently.
 platform: document-processing
-control: Document Editor
+control: DOCX Editor
 documentation: ug
 ---
 
@@ -11,7 +11,7 @@ documentation: ug
 
 Track Changes allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject the modifications. It is a useful tool for managing changes made by several reviewers to the same document. If the track changes option is enabled, all editing operations are preserved as revisions in [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor).
 
-## Enable track changes in Document Editor
+## Enable track changes in DOCX Editor
 
 The following example demonstrates how to enable track changes.
 
@@ -40,7 +40,7 @@ N> Track changes are document level settings. When opening a document, if the do
 
 ## Show or Hide revisions pane
 
-The Show or Hide Revisions Pane feature in the Document Editor allows users to toggle the visibility of the revisions pane, providing flexibility in managing tracked changes within the document.
+The Show or Hide Revisions Pane feature in the DOCX Editor allows users to toggle the visibility of the revisions pane, providing flexibility in managing tracked changes within the document.
 
 The following example code illustrates how to show or hide the revisions pane.
 
@@ -79,13 +79,13 @@ await container.DocumentEditor.Selection.NavigatePreviousRevisionAsync();
 
 ## Filter changes by user
 
-In the Document Editor, we have a built-in review panel in which we have provided support for filtering changes based on the user.
+In the DOCX Editor, we have a built-in review panel in which we have provided support for filtering changes based on the user.
 
-![Track changes in Blazor Document Editor](images/track-changes.png)
+![Track changes in Blazor DOCX Editor](images/track-changes.png)
 
 ## Add custom metadata with the author
 
-The Document Editor provides options to customize revisions using [`RevisionSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.DocumentEditorSettingsModel.html#Syncfusion_Blazor_DocumentEditor_DocumentEditorSettingsModel_RevisionSettings). The `CustomData` property allows you to attach additional metadata to tracked revisions in the Word Processor. This metadata can represent roles, tags, or any custom identifier for the revision. To display this metadata along with the author name in the Track Changes pane, you must enable the `ShowCustomDataWithAuthor` property.
+The DOCX Editor provides options to customize revisions using [`RevisionSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.DocumentEditorSettingsModel.html#Syncfusion_Blazor_DocumentEditor_DocumentEditorSettingsModel_RevisionSettings). The `CustomData` property allows you to attach additional metadata to tracked revisions in the Word Processor. This metadata can represent roles, tags, or any custom identifier for the revision. To display this metadata along with the author name in the Track Changes pane, you must enable the `ShowCustomDataWithAuthor` property.
 
 The following example code illustrates how to enable and update custom metadata for track changes revisions.
 
@@ -107,13 +107,13 @@ The Track Changes pane will display the author name along with the custom metada
 
 N> When you export the document as SFDT, the customData value is stored in the revision collection. When you reopen the SFDT, the custom data is automatically restored and displayed in the Track Changes pane.
 
-N> Other than SFDT export (e.g., DOCX and others), the customData is not preserved, as it is specific to the Document Editor component.
+N> Other than SFDT export (e.g., DOCX and others), the customData is not preserved, as it is specific to the DOCX Editor component.
 
 ## Protect the document in track changes only mode
 
-Document Editor provides support for protecting the document with `RevisionsOnly` protection. In this protection, users can view the document and make their corrections, but they cannot accept or reject any tracked changes in the document. Later, the author can view their corrections and accept or reject the changes.
+DOCX Editor provides support for protecting the document with `RevisionsOnly` protection. In this protection, users can view the document and make their corrections, but they cannot accept or reject any tracked changes in the document. Later, the author can view their corrections and accept or reject the changes.
 
-Document Editor provides an option to protect and unprotect the document using [`EnforceProtectionAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_EnforceProtectionAsync_System_String_Syncfusion_Blazor_DocumentEditor_ProtectionType_) and [`StopProtectionAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_StopProtectionAsync_System_String_) APIs.
+DOCX Editor provides an option to protect and unprotect the document using [`EnforceProtectionAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_EnforceProtectionAsync_System_String_Syncfusion_Blazor_DocumentEditor_ProtectionType_) and [`StopProtectionAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_StopProtectionAsync_System_String_) APIs.
 
 The following example code illustrates how to enforce and stop protection in the Document Editor container.
 
@@ -143,4 +143,4 @@ N> In enforce Protection method, first parameter denotes password and second par
 
 ## Online demo
 
-Explore how to track and review changes in Word documents using the Blazor Document Editor in this live [Blazor Track Changes demo](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/track-changes?theme=fluent2).
+Explore how to track and review changes in Word documents using the Blazor DOCX Editor in this live [Blazor Track Changes demo](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/track-changes?theme=fluent2).

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Text Format in React DOCX Editor
 
-[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports several formatting options for text like bold, italic, font color, highlight color, and more. This section describes how to modify the formatting for selected text in detail.
+[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports several formatting options for text like bold, italic, font color, highlight color, and more. This section describes how to modify the formatting for selected text in detail.
 
 ## Bold
 
@@ -145,7 +145,7 @@ The size of selected text can be retrieved or set using the following code.
 
 ### Change Font Color by UI Option
 
-In the Document Editor, the Text Properties pane features two icons for managing text color within the user interface (UI):
+In the DOCX Editor, the Text Properties pane features two icons for managing text color within the user interface (UI):
 
 * **Colored Box:** This icon visually represents the **current color** applied to the selected text.
 * **Text (A) Icon:** Clicking this icon allows users **to modify the color** of the selected text by choosing a new color from the available options.
@@ -347,7 +347,7 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ## Online Demo
 
-Explore how to apply text formatting in Word documents using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/character-formatting).
+Explore how to apply text formatting in Word documents using the React DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/character-formatting).
 
 ## See Also
 

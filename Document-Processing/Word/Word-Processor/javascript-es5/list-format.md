@@ -56,7 +56,7 @@ documenteditor.editor.clearList();
 
 ## Working with lists
 
-The following sample demonstrates how to create bulleted and numbered lists in Document Editor.
+The following sample demonstrates how to create bulleted and numbered lists in DOCX Editor.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -71,13 +71,13 @@ The following sample demonstrates how to create bulleted and numbered lists in D
 
 ## Editing numbered list
 
-Document Editor restarts the numbering or continues numbering for a numbered list. These options are found in the built-in context menu if the list value is selected. Refer to the following screenshot.
+DOCX Editor restarts the numbering or continues numbering for a numbered list. These options are found in the built-in context menu if the list value is selected. Refer to the following screenshot.
 
 ![Image](images/list.png)
 
 ## Online demo
 
-Explore how to apply bullets and numbering in Word documents using the JavaScript (ES5) Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/bullets-and-numbering.html).
+Explore how to apply bullets and numbering in Word documents using the JavaScript (ES5) DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/bullets-and-numbering.html).
 
 ## See also
 

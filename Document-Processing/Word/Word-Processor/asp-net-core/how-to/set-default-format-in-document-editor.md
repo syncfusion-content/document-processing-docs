@@ -3,7 +3,7 @@ layout: post
 title: How to Set Default Format in ASP.NET Core DOCX Editor | Syncfusion
 description: Set default character, paragraph, and section formatting in Syncfusion® ASP.NET Core DOCX Editor for consistent document styling across documents.
 platform: document-processing
-control: Set Default Format In Document Editor
+control: Set Default Format In DOCX Editor
 documentation: ug
 ---
 
@@ -14,7 +14,7 @@ You can set the default character format, paragraph format and section format in
 
 ## Set the default character format
 
-You can use the `setDefaultCharacterFormat` method to set the default character format. For example, the Document Editor default font size is 11 and you can change it to any valid value.
+You can use the `setDefaultCharacterFormat` method to set the default character format. For example, the DOCX Editor default font size is 11 and you can change it to any valid value.
 
 
 {% tabs %}

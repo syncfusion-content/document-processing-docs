@@ -3,7 +3,7 @@ layout: post
 title: How to Auto Save Document in JavaScript DOCX Editor | Syncfusion
 description: Automatically save edited documents to the server at regular intervals in Syncfusion® JavaScript DOCX Editor to prevent data loss.
 platform: document-processing
-control: Auto save document in Document Editor 
+control: Auto save document in DOCX Editor 
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -64,7 +64,7 @@ container.contentChange = (): void => {
 };
 ```
 
-N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 * In server-side, receive the stream content from the client side and process it to save the document in server or database from the received stream. Add Web API in the controller file like below to save the document.
 
@@ -86,7 +86,7 @@ public string AutoSave()
 
 ## Online Demo
 
-Explore how to automatically save Word documents using the JavaScript (ES5) Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/index.html#/tailwind3/document-editor/default.html).
+Explore how to automatically save Word documents using the JavaScript (ES5) DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/index.html#/tailwind3/document-editor/default.html).
 
 ## See Also
 * [Auto save document in DocumentEditor](../how-to/auto-save-document-in-document-editor)

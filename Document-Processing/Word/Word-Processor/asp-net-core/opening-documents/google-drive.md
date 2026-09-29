@@ -17,9 +17,9 @@ To load a document from Google Drive in a [ASP.NET Core DOCX Editor](https://www
 You must set up a project in the Google Developers Console and enable the Google Drive API. Obtain the necessary credentials to access the API. For more information, see the official [documentation](https://developers.google.com/drive/api/guides/enable-sdk).
 
 
-**Step 2:** Create a Simple Document Editor Sample in ASP.NET Core
+**Step 2:** Create a Simple DOCX Editor Sample in ASP.NET Core
 
-Start by following the steps provided in this [link](../../document-editor/getting-started-core) to create a simple Document Editor sample in ASP.NET Core. This will give you a basic setup of the Document Editor component. 
+Start by following the steps provided in this [link](../../document-editor/getting-started-core) to create a simple DOCX Editor sample in ASP.NET Core. This will give you a basic setup of the DOCX Editor component. 
 
 
 **Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
@@ -134,7 +134,7 @@ N> Replace **Your Google Drive Folder ID**, **Your Application name**, and **You
 
 N> The **FolderId** part is the unique identifier for the folder. For example, if your folder URL is: `https://drive.google.com/drive/folders/abc123xyz456`, then the folder ID is `abc123xyz456`.
 
-**Step 4:**  Modify the Index.cshtml File in the Document Editor sample
+**Step 4:**  Modify the Index.cshtml File in the DOCX Editor sample
 
 On the client side, the document returned from the web service is opened using the `open` method.
 

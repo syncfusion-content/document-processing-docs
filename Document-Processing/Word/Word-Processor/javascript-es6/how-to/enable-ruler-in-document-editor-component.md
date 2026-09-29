@@ -13,7 +13,7 @@ domainurl: ##DomainURL##
 
 Using the ruler, you can set specific margins, tab stops, or indentations within a document to ensure consistent formatting in the [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor).
 
-The following example illustrates how to enable the ruler in the Document Editor.
+The following example illustrates how to enable the ruler in the DOCX Editor.
 
  
 

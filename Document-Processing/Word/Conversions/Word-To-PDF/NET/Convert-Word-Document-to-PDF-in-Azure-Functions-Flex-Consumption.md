@@ -29,7 +29,7 @@ Step 2: Enter a project name and select the location.
 Step 3: In the **Additional information** dialog, select the function worker as **.NET 8.0 (Long Term Support) (Isolated)** and choose **Flex Consumption** as the hosting plan. Then click **Create**.
 ![Select function worker and hosting plan](Azure-Images/Functions-Flex-Consumption/Additional_Information_Word_to_PDF.png)
 
-Step 4: Install the [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) and [SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1) NuGet packages as references to your project from [NuGet.org](https://www.nuget.org/).
+Step 4: Install the [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) and [SkiaSharp.NativeAssets.Linux.NoDependencies v4.150.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/4.150.1) NuGet packages as references to your project from [NuGet.org](https://www.nuget.org/).
 ![Install NuGet packages](Azure-Images/Functions-Flex-Consumption/Nuget_Package_Word_to_PDF.png)
 ![Install NuGet packages](Azure-Images/Functions-Flex-Consumption/Nuget_Package_SkiaSharp_Native_Linux_NoDependencies.png)
 

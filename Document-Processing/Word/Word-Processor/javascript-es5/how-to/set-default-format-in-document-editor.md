@@ -3,7 +3,7 @@ layout: post
 title: How to Set Default Format in JavaScript DOCX Editor | Syncfusion
 description: Set default character, paragraph, and section formatting in Syncfusion® JavaScript DOCX Editor for consistent document styling across documents.
 platform: document-processing
-control: Set default format in document editor 
+control: Set default format in DOCX Editor 
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -14,9 +14,9 @@ You can set the default character format, paragraph format, and section format i
 
 ## Set the default character format
 
-You can use [`setDefaultCharacterFormat`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#setdefaultcharacterformat) method to set the default character format. For example, the Document Editor's default font size is 11 and you can change it to any valid value.
+You can use [`setDefaultCharacterFormat`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#setdefaultcharacterformat) method to set the default character format. For example, the DOCX Editor's default font size is 11 and you can change it to any valid value.
 
-The following example code illustrates how to change the default font size in the Document Editor.
+The following example code illustrates how to change the default font size in the DOCX Editor.
 
 ```js
 var container = new ej.documenteditor.DocumentEditorContainer({ height: "590px" });
@@ -27,11 +27,11 @@ container.setDefaultCharacterFormat({ fontSize: 20 });
 container.appendTo('#container');
 ```
 
-N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 Similarly, you can change the required [`CharacterFormatProperties`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/characterFormatProperties) default values.
 
-The following example code illustrates how to change the other character format default values in the Document Editor.
+The following example code illustrates how to change the other character format default values in the DOCX Editor.
 
 ```js
 var container = new ej.documenteditor.DocumentEditorContainer({ height: "590px" });
@@ -51,13 +51,13 @@ container.setDefaultCharacterFormat(defaultCharacterFormat);
 container.appendTo('#container');
 ```
 
-N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 ## Set the default paragraph format
 
 You can use [`setDefaultParagraphFormat`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#setdefaultparagraphformat) API to set the default paragraph format. You can change the required [`ParagraphFormatProperties`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/paragraphFormatProperties) default values.
 
-The following example code illustrates how to change the paragraph format (before spacing, line spacing, etc.) default values in the Document Editor.
+The following example code illustrates how to change the paragraph format (before spacing, line spacing, etc.) default values in the DOCX Editor.
 
 ```js
 var container = new ej.documenteditor.DocumentEditorContainer({ height: "590px" });
@@ -74,13 +74,13 @@ container.setDefaultParagraphFormat(defaultParagraphFormat);
 container.appendTo('#container');
 ```
 
-N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 ## Set the default section format
 
 You can use [`setDefaultSectionFormat`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#setdefaultsectionformat) API to set the default section format. You can change the required [`SectionFormatProperties`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/sectionFormatProperties) default values.
 
-The following example code illustrates how to change the section format (header and footer distance, page width and height, etc.) default values in the Document Editor.
+The following example code illustrates how to change the section format (header and footer distance, page width and height, etc.) default values in the DOCX Editor.
 
 ```js
 var container = new ej.documenteditor.DocumentEditorContainer({ height: "590px" });
@@ -102,4 +102,4 @@ container.setDefaultSectionFormat(defaultSectionFormat);
 container.appendTo('#container');
 ```
 
-N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.

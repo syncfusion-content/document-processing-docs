@@ -15,7 +15,7 @@ To save a document to Azure Blob Storage, follow these steps:
 
 **Step 1:** Create a Simple [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) Sample in ASP.NET Core
 
-Follow the steps in this [link](../../document-editor/getting-started-core) to create a simple Document Editor sample in ASP.NET Core. This will give you a basic setup of the Document Editor component.
+Follow the steps in this [link](../../document-editor/getting-started-core) to create a simple DOCX Editor sample in ASP.NET Core. This will give you a basic setup of the DOCX Editor component.
 
 
 **Step 2:** Modify the `DocumentEditorController.cs` File in the Web Service Project
@@ -98,7 +98,7 @@ public void SaveToAzure(IFormCollection data)
 
 N> Replace **Your Connection string from Azure** with the actual connection string for your Azure Blob Storage account, and **Your container name in Azure** with the actual container name.
 
-**Step 3:**  Modify the Index.cshtml File in the Document Editor sample
+**Step 3:**  Modify the Index.cshtml File in the DOCX Editor sample
 
 On the client side, export the document to a blob using `saveAsBlob` and send it to the server for saving in the Azure Blob Storage container.
 

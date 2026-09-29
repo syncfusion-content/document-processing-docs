@@ -3,7 +3,7 @@ layout: post
 title: Bookmarks in Blazor DOCX Editor | Syncfusion
 description: The bookmark feature in Blazor DOCX Editor lets users add, manage, and navigate bookmarks for quick access to specific document sections.
 platform: document-processing
-control: Document Editor
+control: DOCX Editor
 documentation: ug
 ---
 
@@ -25,9 +25,9 @@ Use the [`InsertBookmarkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion
 await container.DocumentEditor.Editor.InsertBookmarkAsync("Bookmark1");
 ```
 
-## Navigate to a bookmark
+## Select and Navigate to a bookmark
 
-Use the [`SelectBookmarkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_SelectBookmarkAsync_System_String_) method to navigate to and select a bookmark by its name.
+Use the [`SelectBookmarkAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SelectionModule.html#Syncfusion_Blazor_DocumentEditor_SelectionModule_SelectBookmarkAsync_System_String_) method to select a bookmark by its name and navigate the editor to the bookmark location.
 
 ```csharp
 await container.DocumentEditor.Selection.SelectBookmarkAsync("Bookmark1");
@@ -54,4 +54,4 @@ N> The boolean parameter of `GetBookmarksAsync` specifies whether to include hid
 
 ## Online demo
 
-Explore how to insert and manage bookmarks in Word documents using the Blazor Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/hyperlinks-and-bookmarks?theme=fluent2).
+Explore how to insert and manage bookmarks in Word documents using the Blazor DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/hyperlinks-and-bookmarks?theme=fluent2).

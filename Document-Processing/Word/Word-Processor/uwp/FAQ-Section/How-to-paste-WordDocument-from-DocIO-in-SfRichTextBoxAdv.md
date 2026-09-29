@@ -86,5 +86,5 @@ N> This feature is supported from v22.2.5.
 
 - [PasteCommand API Reference](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_UI_Xaml_RichTextBoxAdv_SfRichTextBoxAdv_PasteCommand)
 - [.NET Word Library (DocIO) Documentation](https://help.syncfusion.com/file-formats/docio/overview)
-- [UWP RichTextBox Feature Tour](https://www.syncfusion.com/docx-editor-sdk/uwp-docx-editor)
-- [UWP RichTextBox Examples](https://github.com/syncfusion/docx-editor-sdk-uwp-demos)
+- [UWP DOCX Editor Feature Tour](https://www.syncfusion.com/docx-editor-sdk/uwp-docx-editor)
+- [UWP DOCX Editor Examples](https://github.com/syncfusion/docx-editor-sdk-uwp-demos)

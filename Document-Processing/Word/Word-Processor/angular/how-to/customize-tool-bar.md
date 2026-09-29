@@ -137,4 +137,4 @@ export class AppComponent implements OnInit {
 
 ## Online Demo
 
-Explore how to customize the toolbar in the Angular Document Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/toolbar-customization).
+Explore how to customize the toolbar in the Angular DOCX Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/toolbar-customization).

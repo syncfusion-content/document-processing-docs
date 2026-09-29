@@ -15,11 +15,11 @@ This document describes the security updates available for Syncfusion<sup style=
 
 ## Security Updates
 
-The following security updates are available for the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor and are listed by release version.
+The following security updates are available for the Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor and are listed by release version.
 
 ### 2024 Volume 2 (v26.2.4) - July 25, 2024
 
-This release resolves critical and moderate security vulnerabilities affecting the Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor Docker image.
+This release resolves critical and moderate security vulnerabilities affecting the Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor Docker image.
 
 **Threat:**
 

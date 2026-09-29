@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Scrolling and Zooming in React DOCX Editor
 
-The [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) renders the document page by page. You can scroll through the pages by mouse wheel or touch interactions. You can also scroll through the pages by using the `scrollToPage()` method of the document editor instance. Refer to the following code example.
+The [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) renders the document page by page. You can scroll through the pages by mouse wheel or touch interactions. You can also scroll through the pages by using the `scrollToPage()` method of the DOCX Editor instance. Refer to the following code example.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -28,7 +28,7 @@ The [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-ed
 
 N> Calling this method brings the specified page into view but doesn't move selection. Hence this method will work by default. That is, it works even if selection is not enabled.
 
-If you wish to move the selection to any page in the document editor and bring it into view, you can use the `goToPage()` method of the selection instance. Refer to the following code example.
+If you wish to move the selection to any page in the DOCX Editor and bring it into view, you can use the `goToPage()` method of the selection instance. Refer to the following code example.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -46,7 +46,7 @@ If you wish to move the selection to any page in the document editor and bring i
 
 ## Zooming
 
-You can scale the contents in the document editor ranging from 10% to 500% of the actual size. You can achieve this using mouse or touch interactions. You can also use the `zoomFactor` property of the document editor instance. The value can be specified in a range from 0.1 to 5. Refer to the following code example.
+You can scale the contents in the DOCX Editor ranging from 10% to 500% of the actual size. You can achieve this using mouse or touch interactions. You can also use the `zoomFactor` property of the DOCX Editor instance. The value can be specified in a range from 0.1 to 5. Refer to the following code example.
 
 
 {% raw %}
@@ -109,7 +109,7 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ## Page Fit Type
 
-Apart from specifying the zoom factor as a value, the Document Editor provides an option to specify page fit options such as fit to full page or fit to page width. You can set this option using the `fitPage` method of the document editor instance. Refer to the following code example.
+Apart from specifying the zoom factor as a value, the DOCX Editor provides an option to specify page fit options such as fit to full page or fit to page width. You can set this option using the `fitPage` method of the DOCX Editor instance. Refer to the following code example.
 
 
 {% raw %}
@@ -166,7 +166,7 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ## Zoom option using UI
 
-The following code example shows how to provide zoom options in the document editor.
+The following code example shows how to provide zoom options in the DOCX Editor.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}

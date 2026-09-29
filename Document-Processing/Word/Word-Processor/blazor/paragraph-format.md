@@ -3,7 +3,7 @@ layout: post
 title: Paragraph Format in Blazor DOCX Editor | Syncfusion
 description: The paragraph format feature in Blazor DOCX Editor enables users to customize alignment, indentation, spacing, and layout for well-structured content.
 platform: document-processing
-control: Document Editor
+control: DOCX Editor
 documentation: ug
 ---
 
@@ -81,7 +81,7 @@ await documentEditor.Selection.ParagraphFormat.SetAfterSpacingAsync(24);
 
 ## Show or hide paragraph marks
 
-You can show or hide the hidden formatting symbols like spaces, tab, paragraph marks, and breaks in the Document Editor component. These marks help identify the start and end of paragraphs and all the hidden formatting symbols in a Word document.
+You can show or hide the hidden formatting symbols like spaces, tab, paragraph marks, and breaks in the DOCX Editor component. These marks help identify the start and end of paragraphs and all the hidden formatting symbols in a Word document.
 
 The following example code illustrates how to show or hide paragraph marks.
 
@@ -97,4 +97,4 @@ The following example code illustrates how to show or hide paragraph marks.
 
 ## Online demo
 
-Explore how to apply paragraph formatting in Word documents using the Blazor Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/paragraph-format?theme=fluent2).
+Explore how to apply paragraph formatting in Word documents using the Blazor DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/paragraph-format?theme=fluent2).

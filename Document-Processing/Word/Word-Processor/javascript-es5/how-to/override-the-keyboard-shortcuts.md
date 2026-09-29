@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 ## Preventing the Default Keyboard Shortcut
 
-The following code shows how to prevent the `Ctrl + C` keyboard shortcut for copying selected content in the Document Editor.
+The following code shows how to prevent the `Ctrl + C` keyboard shortcut for copying selected content in the DOCX Editor.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}

@@ -157,6 +157,6 @@ The following table contains the list of available UI Commands in SfRichTextBoxA
 
 ## See also
 
-- [Clipboard support in UWP RichTextBox](./Clipboard)
-- [Table support in UWP RichTextBox](./Table)
-- [Comments in UWP RichTextBox](./Comment)
+- [Clipboard support in UWP DOCX Editor](./Clipboard)
+- [Table support in UWP DOCX Editor](./Table)
+- [Comments in UWP DOCX Editor](./Comment)

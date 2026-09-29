@@ -15,7 +15,7 @@ To save a document to AWS S3, follow these steps:
 
 **Step 1:** Create a Simple [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) Sample in ASP.NET Core
 
-Follow the steps in this [link](../../document-editor/getting-started-core) to create a simple Document Editor sample in ASP.NET Core. This will give you a basic setup of the Document Editor component.
+Follow the steps in this [link](../../document-editor/getting-started-core) to create a simple DOCX Editor sample in ASP.NET Core. This will give you a basic setup of the DOCX Editor component.
 
 
 **Step 2:** Modify the `DocumentEditorController.cs` File in the Web Service Project
@@ -118,7 +118,7 @@ private string GetValue(IFormCollection data, string key)
 
 N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and **Your Bucket name from AWS S3** with your actual AWS access key, secret key, and bucket name.
 
-**Step 3:**  Modify the Index.cshtml File in the Document Editor sample
+**Step 3:**  Modify the Index.cshtml File in the DOCX Editor sample
 
 On the client side, export the document to a blob using `saveAsBlob` and send it to the server for saving in the AWS S3 bucket.
 

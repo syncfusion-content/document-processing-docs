@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 ## Preventing default keyboard shortcut
 
-The following code shows how to prevent the `Ctrl + C` keyboard shortcut for copying selected content in the Document Editor.
+The following code shows how to prevent the `Ctrl + C` keyboard shortcut for copying selected content in the DOCX Editor.
 
  
 

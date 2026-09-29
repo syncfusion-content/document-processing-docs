@@ -16,7 +16,7 @@ This article explains how to export the document as PDF format. You can export t
 
 Use [`pdf export component`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-export) in application level to export the document as PDF using `exportAsImage` API. Here, all pages will be converted to image and inserted as PDF pages (works like print as PDF).
 
-N> 1. The Document Editor exports PDFs by converting pages into images on the client side, which may slightly increase file size compared to text-based PDFs.
+N> 1. The DOCX Editor exports PDFs by converting pages into images on the client side, which may slightly increase file size compared to text-based PDFs.
 N> 2. Text search is not supported in the exported PDF, as the content is stored as images.
 N> 3. You can install the PDF export packages from this [`link`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-export).
 

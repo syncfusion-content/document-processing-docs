@@ -3,7 +3,7 @@ layout: post
 title: Form Fields in Blazor DOCX Editor | Syncfusion
 description: Form fields in Blazor DOCX Editor allow users to create, update, and protect fillable fields for structured data entry.
 platform: document-processing
-control: Document Editor
+control: DOCX Editor
 documentation: ug
 ---
 
@@ -75,9 +75,9 @@ await container.DocumentEditor.ResetFormFieldsAsync();
 
 ## Protect the document in form filling mode
 
-Document Editor provides support for protecting the document with `FormFieldsOnly` protection. In this protection, the user can only fill form fields in the document.
+DOCX Editor provides support for protecting the document with `FormFieldsOnly` protection. In this protection, the user can only fill form fields in the document.
 
-The Document Editor provides an option to protect and unprotect a document using the [`EnforceProtectionAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_EnforceProtectionAsync_System_String_Syncfusion_Blazor_DocumentEditor_ProtectionType_) and [`StopProtectionAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_StopProtectionAsync_System_String_) APIs.
+The DOCX Editor provides an option to protect and unprotect a document using the [`EnforceProtectionAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_EnforceProtectionAsync_System_String_Syncfusion_Blazor_DocumentEditor_ProtectionType_) and [`StopProtectionAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_StopProtectionAsync_System_String_) APIs.
 
 The following example code illustrates how to enforce and stop protection in the Document Editor container.
 
@@ -103,4 +103,4 @@ N> In the `EnforceProtection` method, the first parameter denotes the password a
 
 ## Online Demo
 
-Explore how to insert and manage form fields in Word documents using the Blazor Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/form-fields?theme=fluent2).
+Explore how to insert and manage form fields in Word documents using the Blazor DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/form-fields?theme=fluent2).

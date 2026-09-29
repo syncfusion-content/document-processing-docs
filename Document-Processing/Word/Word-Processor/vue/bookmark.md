@@ -25,9 +25,9 @@ Using [`insertBookmark`](https://ej2.syncfusion.com/vue/documentation/api/docume
 this.$refs.container.ej2Instances.documentEditor.editor.insertBookmark("Bookmark1");
 ```
 
-## Select Bookmark
+## Select and Navigate to a Bookmark
 
-You can select the bookmark in the document using [`selectBookmark`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/selection#selectbookmark) method by providing Bookmark name to select as shown in the following code snippet.
+You can select a bookmark by its name using the [`selectBookmark`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/selection#selectbookmark) method, which also navigates the editor to the bookmark location, as shown in the following code snippet.
 
 ```c#
 this.$refs.container.ej2Instances.documentEditor.selection.selectBookmark("Bookmark1", true);
@@ -79,7 +79,7 @@ this.$refs.container.ej2Instances.documentEditor.editor.insertText('Hello World'
 
 ## Show or Hide bookmark
 
-You can show or hide the square brackets around bookmarked items in Document Editor component.
+You can show or hide the square brackets around bookmarked items in DOCX Editor component.
 
 The following example code illustrates how to show or hide square brackets around bookmarked items.
 
@@ -89,7 +89,7 @@ this.$refs.container.ej2Instances.documentEditorSettings.showBookmarks = true;
 
 ## Bookmark Dialog
 
-The following example shows how to open bookmark dialog in Document Editor.
+The following example shows how to open bookmark dialog in DOCX Editor.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -104,7 +104,7 @@ The following example shows how to open bookmark dialog in Document Editor.
 
 ## Online Demo
 
-Explore how to insert and manage bookmarks in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/links-and-bookmarks.html).
+Explore how to insert and manage bookmarks in Word documents using the Vue DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/links-and-bookmarks.html).
 
 ## See Also
 

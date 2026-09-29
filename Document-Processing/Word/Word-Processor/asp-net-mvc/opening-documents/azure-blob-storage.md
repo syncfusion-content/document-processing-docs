@@ -10,12 +10,12 @@ domainurl: ##DomainURL##
 
 # Open Documents from Azure Blob Storage in ASP.NET MVC DOCX Editor
 
-To load a document from Azure Blob Storage in an [ASP.NET MVC Document Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor), you can follow the steps below.
+To load a document from Azure Blob Storage in an [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor), you can follow the steps below.
 
 
-**Step 1:** Create a Simple Document Editor Sample in ASP.NET MVC
+**Step 1:** Create a Simple DOCX Editor Sample in ASP.NET MVC
 
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in ASP.NET MVC. This will give you a basic setup of the Document Editor component. 
+Start by following the steps provided in this [link](../getting-started) to create a simple DOCX Editor sample in ASP.NET MVC. This will give you a basic setup of the DOCX Editor component. 
 
 
 
@@ -95,7 +95,7 @@ public IActionResult LoadFromAzure([FromBody] Dictionary<string, string> jsonObj
 
 N> Replace **Your Connection string from Azure** with the actual connection string for your Azure Blob Storage account and **Your container name in Azure** with the actual container name 
 
-**Step 3:** Modify the Index.cshtml file in the Document Editor sample
+**Step 3:** Modify the Index.cshtml file in the DOCX Editor sample
 
 On the client side, the document returned from the web service is opened using `open` method.
 

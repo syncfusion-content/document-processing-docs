@@ -16,14 +16,14 @@ You can switch between the **Toolbar** and **Ribbon** UI, and choose between **C
 
 ## Enable Ribbon Mode
 
-To enable the `Ribbon` in the Document Editor, use the `toolbarMode` property of `DocumentEditorContainer`. The available toolbar modes are:
+To enable the `Ribbon` in the DOCX Editor, use the `toolbarMode` property of `DocumentEditorContainer`. The available toolbar modes are:
 
 - **`'Toolbar'`** - The traditional toolbar UI.
 - **`'Ribbon'`** - The Ribbon UI, which provides a tabbed interface with grouped commands.
 
 By default, `toolbarMode` is `Toolbar`.
 
-The following example shows how to enable the `Ribbon` in the Document Editor.
+The following example shows how to enable the `Ribbon` in the DOCX Editor.
 
 ```typescript
 
@@ -35,14 +35,14 @@ The following example shows how to enable the `Ribbon` in the Document Editor.
 
 ## Ribbon Layouts
 
-The Document Editor provides two different Ribbon layouts:
+The DOCX Editor provides two different Ribbon layouts:
 
 - **Classic**: A traditional, Office-like ribbon with detailed grouping and larger icons.
 - **Simplified**: A more compact ribbon design with streamlined controls.
 
 By default, `ribbonLayout` is set to `Simplified`.
 
-The following example shows how to configure the ribbon layout in the Document Editor:
+The following example shows how to configure the ribbon layout in the DOCX Editor:
 
 ```typescript
 

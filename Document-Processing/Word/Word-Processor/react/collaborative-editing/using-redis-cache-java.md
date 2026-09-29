@@ -14,16 +14,16 @@ This feature allows multiple users to work on the same document simultaneously i
 
 ## Prerequisites
 
-The following are needed to enable collaborative editing in [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor).
+The following are needed to enable collaborative editing in [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor).
 
 - `SockJS`
 - `Redis`
 
 ## How to enable collaborative editing in client side
 
-### Step 1: Enable collaborative editing in Document Editor
+### Step 1: Enable collaborative editing in DOCX Editor
 
-To enable collaborative editing, inject `CollaborativeEditingHandler` and set the property `enableCollaborativeEditing` to true in the Document Editor, like in the code snippet below.
+To enable collaborative editing, inject `CollaborativeEditingHandler` and set the property `enableCollaborativeEditing` to true in the DOCX Editor, like in the code snippet below.
 
 ```typescript
 import { DocumentEditorContainerComponent, Toolbar, CollaborativeEditingHandler, ContainerContentChangeEventArgs, Operation, Inject, ToolbarItem } from '@syncfusion/ej2-react-documenteditor';
@@ -129,7 +129,7 @@ public connectToRoom(data: any) {
 
 ### Step 4: Broadcast current editing changes to remote users
 
-Changes made on the client-side need to be sent to the server-side to broadcast them to other connected users. To send the changes made to the server, use the method shown below from the Document Editor using the `contentChange` event.
+Changes made on the client-side need to be sent to the server-side to broadcast them to other connected users. To send the changes made to the server, use the method shown below from the DOCX Editor using the `contentChange` event.
 
 ```typescript
 this.container.contentChange = (args: ContainerContentChangeEventArgs) => {

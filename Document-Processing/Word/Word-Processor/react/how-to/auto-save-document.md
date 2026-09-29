@@ -2,7 +2,7 @@
 layout: post
 title: How to Auto Save Document in React DOCX Editor | Syncfusion
 description: Automatically save edited documents to the server at regular intervals in Syncfusion® React DOCX Editor to prevent data loss.
-control: Auto save document in Document Editor 
+control: Auto save document in DOCX Editor 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
@@ -81,7 +81,7 @@ export default App;
 ReactDOM.render(<App />, document.getElementById('sample'));
  ```
  
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 * On the server side, receive the stream content from the client side and process it to save the document in AWS S3. Add Web API in the controller file like below to save the document in AWS S3.
 
@@ -103,7 +103,7 @@ public string AutoSave()
 
 ## Online Demo
 
-Explore how to automatically save Word documents using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/material3/document-editor/default).
+Explore how to automatically save Word documents using the React DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/material3/document-editor/default).
 
 ## See Also
 * [Auto save document in DocumentEditor](../how-to/auto-save-document-in-document-editor)

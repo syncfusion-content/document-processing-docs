@@ -14,14 +14,14 @@ domainurl: ##DomainURL##
 
 Two save APIs are provided as mentioned below.
 
-|API name|Purpose|Code Snippet for Document Editor|Code Snippet for Document Editor Container|
+|API name|Purpose|Code Snippet for DOCX Editor|Code Snippet for Document Editor Container|
 |--------|---------|----------|----------|
 |save(filename,FormatType):void<br>FormatType: Sfdt or Docx or Txt|Creates the document with specified file name and format type. Then, the created file is downloaded in the client browser by default.|documenteditor.save('sample', 'Docx')|container.documenteditor.save('sample', 'Docx')|
 |saveAsBlob(FormatType):Blob|Creates the document in specified format type and returns the created document as Blob.<br>This blob can be uploaded to your required server, database, or file path.|documenteditor.saveAsBlob('Docx')|container.documenteditor.saveAsBlob('Docx')|
 
 ## SFDT export
 
-The following example shows how to export documents in the Document Editor as Syncfusion Document Text (.sfdt).
+The following example shows how to export documents in the DOCX Editor as Syncfusion Document Text (.sfdt).
 
  
 
@@ -51,7 +51,7 @@ The following example shows how to export documents in the Document Editor as Sy
 
 The following example shows how to export the document as a Word document (.docx).
 
-N> The JavaScript Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of the Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
+N> The JavaScript DOCX Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of the Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
 
  
 
@@ -81,7 +81,7 @@ N> The JavaScript Document Editor component's document pagination (page-by-page 
 
 The following example shows how to export the document as Word Template (.dotx).
 
->Note: The JavaScript Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
+>Note: The JavaScript DOCX Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
 
  
 
@@ -137,7 +137,7 @@ The following example shows how to export document as text document (.txt).
 
 ## Export as blob
 
-Document Editor also supports API to store the document into a blob. Refer to the following sample to export document into blob in client-side.
+DOCX Editor also supports API to store the document into a blob. Refer to the following sample to export document into blob in client-side.
 
 ```ts
 import { DocumentEditor, FormatType, WordExport, SfdtExport } from '@syncfusion/ej2-documenteditor';
@@ -242,7 +242,7 @@ function download(fileName: string, extension: string, buffer: Blob, downloadLin
 
 ## Online Demo
 
-Explore how to export Word documents in various formats using the JavaScript Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/advanced-exporting.html).
+Explore how to export Word documents in various formats using the JavaScript DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/advanced-exporting.html).
 
 ## See Also
 

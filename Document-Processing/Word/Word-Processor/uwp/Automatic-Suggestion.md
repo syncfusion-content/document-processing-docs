@@ -277,7 +277,7 @@ richTextboxadv.SuggestionSettings.SuggestionProviders.Add(suggestionProviderAppT
 ## Display error message when suggestions are empty
 When the entered item is not in the suggestion list, the suggestion box displays the message "We couldn't find the person you were looking for." The text to be displayed for this can be customized using the `SuggestionBoxErrorMessage` property in the resource file (`.resx`).
 * Right-click your project and add a new folder named `Resources`.
-* Add the [default resource file](https://github.com/syncfusion/uwp-controls-localization-resource-files/tree/master/Syncfusion.SfRichTextBoxAdv.UWP) of the RichTextBox control into the `Resources` folder.
+* Add the [default resource file](https://github.com/syncfusion/uwp-controls-localization-resource-files/tree/master/Syncfusion.SfRichTextBoxAdv.UWP) of the UWP DOCX Editor control into the `Resources` folder.
 * Modify the value of the resource key `SuggestionBoxErrorMessage` in the resource file.
 
 ![Display message](Automatic-Suggestion_images/autosuggestion5.PNG)
@@ -457,6 +457,6 @@ N> This feature is supported from V18.4.0.30.
 
 ## See also
 
-- [Commands in UWP RichTextBox](./Commands)
-- [Document Structure in UWP RichTextBox](./Document-Structure)
-- [Document Properties in UWP RichTextBox](./Document-Properties)
+- [Commands in UWP DOCX Editor](./Commands)
+- [Document Structure in UWP DOCX Editor](./Document-Structure)
+- [Document Properties in UWP DOCX Editor](./Document-Properties)

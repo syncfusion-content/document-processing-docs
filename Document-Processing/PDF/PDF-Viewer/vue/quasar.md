@@ -59,30 +59,30 @@ npm install @syncfusion/ej2-vue-pdfviewer --save
 {% endhighlight %}
 {% endtabs %}
 
-## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
+## Import the required CSS styles
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Vue components support multiple theme options. In this example, the `Material 3` theme is applied using CSS styles from the installed packages. Import the required Material 3 CSS styles for the PDF Viewer and its dependencies into the `<style>` section of the `src/App.vue` file.
+Themes for PDF Viewer can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/vue/documentation/appearance/theme#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/vue/documentation/appearance/theme).
 
+This guide uses the `Tailwind 3` theme as an example, sourced from the theme package. In this package, each component includes an `index.css` file that automatically loads all the required dependency styles. To install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
+
+```bash
+npm install @syncfusion/ej2-tailwind3-theme
+```
+
+Import the PDF Viewer theme styles into the `<style>` section of the `src/App.vue` file:
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
 
 <style>
-  @import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
-  @import '../node_modules/@syncfusion/ej2-buttons/styles/material3.css';
-  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css';
-  @import '../node_modules/@syncfusion/ej2-inputs/styles/material3.css';
-  @import '../node_modules/@syncfusion/ej2-navigations/styles/material3.css';
-  @import '../node_modules/@syncfusion/ej2-popups/styles/material3.css';
-  @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css';
-  @import '../node_modules/@syncfusion/ej2-lists/styles/material3.css';
-  @import '../node_modules/@syncfusion/ej2-vue-pdfviewer/styles/material3.css';
+  @import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/pdfviewer/index.css';
 </style>
 
 {% endhighlight %}
 {% endtabs %}
 
-N> The order of importing CSS styles should be in line with their dependency graph.
+N> The `index.css` file automatically includes all required dependent component styles for the PDF Viewer. You do not need to import individual dependency styles such as Base, Buttons, Dropdowns, Inputs, Navigations, Popups, SplitButtons, and Lists separately.
+
 N> Refer to the [Themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to learn more about built-in themes and different ways to refer to themes in a Vue project.
 
 ## Add the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue component

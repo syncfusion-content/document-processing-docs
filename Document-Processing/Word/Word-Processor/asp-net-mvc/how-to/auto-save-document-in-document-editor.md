@@ -3,7 +3,7 @@ layout: post
 title: How to Auto Save to AWS S3 in ASP.NET MVC DOCX Editor | Syncfusion
 description: Automatically save edited documents to AWS S3 at regular intervals in Syncfusion® ASP.NET MVC DOCX Editor for reliable cloud-based storage.
 platform: document-processing
-control: Auto Save Document In Document Editor
+control: Auto Save Document In DOCX Editor
 documentation: ug
 ---
 

@@ -1024,6 +1024,60 @@ End Using
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-document/Update-alternate-chunks).
 
+## Embedding Fonts in Word document
+
+You can embed the fonts used in a Word document directly into the saved file by setting `document.SaveOptions.EmbedFonts` to `true`. If the required font is available in the current environment, it will be embedded in the document. As a result, when the document is opened on another machine, it maintains the same appearance and formatting by using the embedded font.
+
+Use the following code to embed fonts in the Word document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Load an existing Word document.
+using (WordDocument document = new WordDocument("Input.docx", FormatType.Docx))
+{
+    //Initialize the DocIORenderer.
+    using DocIORenderer renderer = new DocIORenderer();
+    //Enable the flag to embed complete TrueType/OpenType fonts used in the document.
+    document.SaveOptions.EmbedFonts = true;
+    //Save the Word document
+    document.Save("Output.docx", FormatType.Docx);
+    document.Close();
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Load an existing Word document.
+using (WordDocument document = new WordDocument("Input.docx", FormatType.Docx))
+{
+    //Enable the flag to embed complete TrueType/OpenType fonts used in the document.
+    document.SaveOptions.EmbedFonts = true;
+    //Save the Word document.
+    document.Save("Output.docx", FormatType.Docx);
+    document.Close();
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Load an existing Word document.
+Using document As WordDocument = New WordDocument("Input.docx", FormatType.Docx)
+    'Enable the flag to embed complete TrueType/OpenType fonts used in the document.
+    document.SaveOptions.EmbedFonts = True
+    'Save the Word document.
+    document.Save("Output.docx", FormatType.Docx)
+    document.Close()
+End Using
+{% endhighlight %}
+
+{% endtabs %}
+
+N>
+* Embedding fonts is supported on both cross-platform environments.
+* For cross-platform applications, install either the [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) NuGet package or the [Syncfusion.DocIORenderer.NET](https://www.nuget.org/packages/Syncfusion.DocIORenderer.NET) NuGet package based on your project requirements.
+* Initialize the `DocIORenderer` to embed fonts in the document.
+* This feature is supported only for the DOCX format document.
+* Embedding fonts is not supported on the UWP platform.
+
 ## Online Demo
 
 * Explore how to clone and merge Word documents using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/cloneandmerge#/tailwind).

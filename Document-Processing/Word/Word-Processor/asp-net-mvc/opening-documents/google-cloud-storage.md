@@ -10,12 +10,12 @@ domainurl: ##DomainURL##
 
 # Open Documents from Google Cloud Storage in ASP.NET MVC DOCX Editor
 
-To load a document from Google Cloud Storage in a Document Editor, you can follow the steps below.
+To load a document from Google Cloud Storage in a DOCX Editor, you can follow the steps below.
 
 
-**Step 1:** Create a Simple Document Editor Sample in ASP.NET MVC
+**Step 1:** Create a Simple DOCX Editor Sample in ASP.NET MVC
 
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in ASP.NET MVC. This will give you a basic setup of the Document Editor component. 
+Start by following the steps provided in this [link](../getting-started) to create a simple DOCX Editor sample in ASP.NET MVC. This will give you a basic setup of the DOCX Editor component. 
 
 
 **Step 2:** Modify the `DocumentEditorController.cs` File in the Web Service Project
@@ -109,7 +109,7 @@ N> Replace **Your Bucket name from Google Cloud Storage** with the actual name o
 
 N> Replace **path/to/service-account-key.json** with the actual file path to your service account key JSON file. Make sure to provide the correct path and filename.
 
-**Step 3:**  Modify the Index.cshtml File in the Document Editor sample
+**Step 3:**  Modify the Index.cshtml File in the DOCX Editor sample
 
 In the client-side, the document returned from the web service is opened using the `open` method.
 

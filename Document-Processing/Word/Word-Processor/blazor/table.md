@@ -3,13 +3,13 @@ layout: post
 title: Tables in Blazor DOCX Editor | Syncfusion
 description: Tables in Blazor DOCX Editor enable adding and managing rows, columns, and cells to present information in a structured format.
 platform: document-processing
-control: Document Editor
+control: DOCX Editor
 documentation: ug
 ---
 
 # Tables in Blazor DOCX Editor
 
-Tables are an efficient way to present information. The Document Editor can display and edit tables. You can select and edit tables through a keyboard, mouse, or touch interactions. [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) exposes a rich set of APIs to perform these operations programmatically.
+Tables are an efficient way to present information. The DOCX Editor can display and edit tables. You can select and edit tables through a keyboard, mouse, or touch interactions. [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) exposes a rich set of APIs to perform these operations programmatically.
 
 ## Create a table
 
@@ -101,7 +101,7 @@ await documentEditor.Selection.SelectCellAsync();
 
 ## Delete table
 
-The Document Editor allows you to delete the entire table. You can use the [`DeleteTableAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_DeleteTableAsync) method of the editor instance, if the selection is in a table. Refer to the following sample code.
+The DOCX Editor allows you to delete the entire table. You can use the [`DeleteTableAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_DeleteTableAsync) method of the editor instance, if the selection is in a table. Refer to the following sample code.
 
 ```csharp
 await documentEditor.Editor.DeleteTableAsync();
@@ -109,7 +109,7 @@ await documentEditor.Editor.DeleteTableAsync();
 
 ## Delete row
 
-The Document Editor allows you to delete the selected number of rows. You can use the [`DeleteRowAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_DeleteRowAsync) method of the editor instance to delete the selected number of rows, if the selection is in a table. Refer to the following sample code.
+The DOCX Editor allows you to delete the selected number of rows. You can use the [`DeleteRowAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_DeleteRowAsync) method of the editor instance to delete the selected number of rows, if the selection is in a table. Refer to the following sample code.
 
 ```csharp
 await documentEditor.Editor.DeleteRowAsync();
@@ -117,7 +117,7 @@ await documentEditor.Editor.DeleteRowAsync();
 
 ## Delete column
 
-The Document Editor allows you to delete the selected number of columns. You can use the [`DeleteColumnAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_DeleteColumnAsync) method of the editor instance to delete the selected number of columns, if the selection is in a table. Refer to the following sample code.
+The DOCX Editor allows you to delete the selected number of columns. You can use the [`DeleteColumnAsync()`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_DeleteColumnAsync) method of the editor instance to delete the selected number of columns, if the selection is in a table. Refer to the following sample code.
 
 ```csharp
 await documentEditor.Editor.DeleteColumnAsync();
@@ -132,4 +132,4 @@ Refer to the following sample code.
 await documentEditor.Editor.MergeCellsAsync();
 ```
 
-You can also explore our [Blazor Document Editor](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities) example to know how to render and configure the Document Editor.
+You can also explore our [Blazor DOCX Editor](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities) example to know how to render and configure the DOCX Editor.

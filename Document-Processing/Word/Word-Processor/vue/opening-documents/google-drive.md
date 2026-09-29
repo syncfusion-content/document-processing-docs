@@ -16,9 +16,9 @@ To load a document from Google Drive in a [Vue DOCX Editor](https://www.syncfusi
 
 You must set up a project in the Google Developers Console and enable the Google Drive API. Obtain the necessary credentials to access the API. For more information, view the official [link](https://developers.google.com/drive/api/guides/enable-sdk).
 
-**Step 2:** Create a Simple Document Editor Sample in Vue
+**Step 2:** Create a Simple DOCX Editor Sample in Vue
 
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in vue. This will give you a basic setup of the Document Editor component.
+Start by following the steps provided in this [link](../getting-started) to create a simple DOCX Editor sample in vue. This will give you a basic setup of the DOCX Editor component.
 
 **Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
 
@@ -134,7 +134,7 @@ N> Replace **Your Google Drive Folder ID**, **Your Application name**, and **You
 
 N> The **FolderId** part is the unique identifier for the folder. For example, if your folder URL is: `https://drive.google.com/drive/folders/abc123xyz456`, then the folder ID is `abc123xyz456`.
 
-**Step 4:**  Modify the index File in the Document Editor sample
+**Step 4:**  Modify the index File in the DOCX Editor sample
 
 In the client-side, the document is returned from the web service is opening using [`open`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#open) method.
 

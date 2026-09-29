@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # How to Perform Mail Merge in React DOCX Editor
 
-You can perform mail merge in the [React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) using the following approaches:
+You can perform mail merge in the [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) using the following approaches:
 
-1. Insert merge fields programmatically using Document Editor APIs.
+1. Insert merge fields programmatically using DOCX Editor APIs.
 
 2. Execute the mail merge on the Word document using the server-side Word Library (DocIO).
 
-3. Finally, view the merged document in the Document Editor.
+3. Finally, view the merged document in the DOCX Editor.
 
 ## Insert merge fields
 
@@ -38,10 +38,10 @@ For more information about Fields, refer to this [page](https://help.syncfusion.
 
 ## Perform the mail merge
 
-Once the necessary merge fields are inserted, the template is ready for mail merge. Perform the mail merge on the template using the supported data sources on the server side with DocIO. After the mail merge operation is completed, the merged document can be loaded into the Document Editor for viewing. The Document Editor also supports exporting the mail-merged document to [supported formats](../supported-fileformats).
+Once the necessary merge fields are inserted, the template is ready for mail merge. Perform the mail merge on the template using the supported data sources on the server side with DocIO. After the mail merge operation is completed, the merged document can be loaded into the DOCX Editor for viewing. The DOCX Editor also supports exporting the mail-merged document to [supported formats](../supported-fileformats).
 
 For detailed information about mail merge functionality in DocIO, refer to this [page](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-mail-merge).
 
 ## Online Demo
 
-Explore how to insert merge fields in the Document Editor and execute the mail merge using DocIO through the live demo provided [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/mail-merge).
+Explore how to insert merge fields in the DOCX Editor and execute the mail merge using DocIO through the live demo provided [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/mail-merge).

@@ -14,7 +14,7 @@ The table of contents in a document is the same as the list of chapters at the b
 
 ## Inserting table of contents
 
-Angular Document Editor exposes an API to insert table of contents at cursor position programmatically. You can specify the settings for table of contents explicitly. Otherwise, the default settings will be applied.
+Angular DOCX Editor exposes an API to insert table of contents at cursor position programmatically. You can specify the settings for table of contents explicitly. Otherwise, the default settings will be applied.
 
 [`TableOfContentsSettings`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/tableOfContentsSettings) contain the following properties:
 * **startLevel**: Specifies the start level for constructing table of contents.
@@ -25,7 +25,7 @@ Angular Document Editor exposes an API to insert table of contents at cursor pos
 * **tabLeader**: Specifies the tab leader styles such as none, dot, hyphen, and underscore.
 * **includeOutlineLevels**: Specifies whether the outline levels are included.
 
-The following code illustrates how to insert a table of contents in the document editor.
+The following code illustrates how to insert a table of contents in the DOCX Editor.
 
 ```typescript
 let tocSettings: TableOfContentsSettings =
@@ -71,7 +71,7 @@ N> Same method is used for inserting, updating, and editing table of contents. T
 
 ## Online demo
 
-Explore how to insert and update table of contents in Word documents using the Angular Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/table-of-contents).
+Explore how to insert and update table of contents in Word documents using the Angular DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/table-of-contents).
 
 ## See also
 

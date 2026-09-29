@@ -146,17 +146,18 @@ npm install @syncfusion/ej2-react-pdfviewer
 
 Add CSS references and local resources
 
-Syncfusion PDF Viewer requires several CSS packages and (for local hosting) the `ej2-pdfviewer-lib` resources. Add the CSS imports to `src/index.css` and copy the `ej2-pdfviewer-lib` folder into your `public` directory if you host resources locally.
+Themes for PDF Viewer can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
+
+Install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package:
+
+```bash
+npm install @syncfusion/ej2-tailwind3-theme
+```
+
+Syncfusion PDF Viewer requires the theme package CSS and (for local hosting) the `ej2-pdfviewer-lib` resources. Add the CSS import to `src/index.css` and copy the `ej2-pdfviewer-lib` folder into your `public` directory if you host resources locally. The `index.css` file automatically includes all required dependent component styles for the PDF Viewer. You do not need to import individual dependency styles such as Base, Buttons, Dropdowns, Inputs, Navigations, Popups, and SplitButtons separately.
 
 ```css
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css";
+@import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/pdfviewer/index.css';
 ```
 
 To host local resources, copy the `ej2-pdfviewer-lib` folder:

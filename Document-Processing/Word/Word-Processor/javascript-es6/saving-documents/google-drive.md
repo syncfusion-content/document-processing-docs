@@ -18,9 +18,9 @@ You must set up a project in the Google Developers Console and enable the Google
 
  
 
-**Step 2:** Create a simple Document Editor sample in TypeScript
+**Step 2:** Create a simple DOCX Editor sample in TypeScript
 
-Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in TypeScript. This will give you a basic setup of the Document Editor component.
+Follow the instructions provided in this [link](../getting-started) to create a simple DOCX Editor sample in TypeScript. This will give you a basic setup of the DOCX Editor component.
 
 **Step 3:** Modify the `DocumentEditorController.cs` file in the web service project
 
@@ -144,7 +144,7 @@ N> 1. Replace **Your Google Drive Folder ID**, **Your Application Name**, and **
 N> 2. The **FolderId** part is the unique identifier for the folder. For example, if your folder URL is: `https://drive.google.com/drive/folders/abc123xyz456`, then the folder ID is `abc123xyz456`.
 N> 3. You must use a unique `Client_ID` from the JSON file to interface your application with the Google Drive API in order to save the document directly to Google Drive. This Client_ID will serve as the authentication key, allowing you to save files securely.
 
-**Step 4:**  Modify the index file in the Document Editor sample
+**Step 4:**  Modify the index file in the DOCX Editor sample
 
 On the client side, export the document as a blob using [`saveAsBlob`](https://ej2.syncfusion.com/documentation/api/document-editor#saveAsBlob) and send it to the server side for saving to Google Drive.
 

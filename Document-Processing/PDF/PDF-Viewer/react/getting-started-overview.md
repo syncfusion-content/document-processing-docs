@@ -1,16 +1,14 @@
 ---
 layout: post
-title: Getting Started with React PDF Viewer | Syncfusion
-description: Learn how to get started with the Syncfusion React PDF Viewer control. Explore setup, features, examples, and customization options.
+title:  React PDF Viewer Getting Started | Syncfusion
+description: Learn here all about how to get started with the Syncfusion React PDF Viewer. Explore setup, features, examples, and customization options.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-
-# Getting Started with React PDF Viewer
-
+# React PDF Viewer Getting Started
 
 If you're starting to integrate the React PDF Viewer into your application, choose the path below that matches how you'll run the viewer in your app (client-only or via a web service) and follow the linked tutorial. 
 

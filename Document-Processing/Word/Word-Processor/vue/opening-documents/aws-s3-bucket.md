@@ -12,9 +12,9 @@ domainurl: ##DomainURL##
 
 To load a document from AWS S3 in a [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor), you can follow the steps below
 
-**Step 1:** Create a Simple Document Editor Sample in Vue
+**Step 1:** Create a Simple DOCX Editor Sample in Vue
 
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in Vue. This will give you a basic setup of the Document Editor component. 
+Start by following the steps provided in this [link](../getting-started) to create a simple DOCX Editor sample in Vue. This will give you a basic setup of the DOCX Editor component. 
 
 **Step 2:** Modify the `DocumentEditorController.cs` File in the Web Service Project
 
@@ -108,7 +108,7 @@ public async Task<string> LoadFromS3([FromBody] Dictionary<string, string> jsonO
 
 N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and **Your Bucket name from AWS S3** with your actual AWS access key, secret key and bucket name
 
-**Step 3:**  Modify the index File in the Document Editor sample
+**Step 3:**  Modify the index File in the DOCX Editor sample
 
 In the client-side, the document is returned from the web service is opening using [`open`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#open) method.
 

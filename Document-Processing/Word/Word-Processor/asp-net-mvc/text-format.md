@@ -10,7 +10,7 @@ documentation: ug
 
 # Text Format in ASP.NET MVC DOCX Editor
 
-Document Editor supports several formatting options for text like bold, italic, font color, highlight color, and more. This section describes how to modify the formatting for selected text in detail.
+DOCX Editor supports several formatting options for text like bold, italic, font color, highlight color, and more. This section describes how to modify the formatting for selected text in detail.
 
 ## Bold
 
@@ -125,7 +125,7 @@ documenteditor.selection.characterFormat.fontSize = 32;
 
 ### Change font color by UI option
 
-In the Document Editor, the Text Properties pane contains two icons for managing text color within the user interface (UI):
+In the DOCX Editor, the Text Properties pane contains two icons for managing text color within the user interface (UI):
 
 * **Colored Box:** This icon visually represents the **current color** applied to the selected text.
 * **Text (A) Icon:** Clicking this icon allows users to **change the** color of the selected text **using the color picker**.
@@ -185,7 +185,7 @@ documenteditor.selection.characterFormat.bidi = true;
 
 ## Online demo
 
-Explore how to apply text formatting in Word documents using the ASP.NET MVC Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/characterformatting#/tailwind3).
+Explore how to apply text formatting in Word documents using the ASP.NET MVC DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/characterformatting#/tailwind3).
 
 ## See also
 

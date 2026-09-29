@@ -22,7 +22,7 @@ Below are detailed examples for each ribbon customization scenario.
 
 ## File menu customization
 
-The Document Editor provides APIs to remove existing File menu items and add new custom items based on your requirements. You can modify the File menu using the `fileMenuItems` property.
+The DOCX Editor provides APIs to remove existing File menu items and add new custom items based on your requirements. You can modify the File menu using the `fileMenuItems` property.
 
 In the following code example, the `Open` and `Export` items have been removed from the File Menu Items, and new custom items have been added.
 
@@ -38,7 +38,7 @@ In the following code example, the `Open` and `Export` items have been removed f
 
 ## Backstage menu customization
 
-The Document Editor provides a `backStageMenu` API to add a backstage menu. When the backstage menu is enabled, the default File menu items are automatically hidden.
+The DOCX Editor provides a `backStageMenu` API to add a backstage menu. When the backstage menu is enabled, the default File menu items are automatically hidden.
 
 The following code example shows how to add the backstage menu items.
 
@@ -56,11 +56,11 @@ Refer to this documentation to know more about [`backstage items`](https://ej2.s
 
 ## Tab customization
 
-You can customize the ribbon tabs in the Document Editor by showing, hiding, or adding tabs according to your application's requirements.
+You can customize the ribbon tabs in the DOCX Editor by showing, hiding, or adding tabs according to your application's requirements.
 
 ### Show/Hide tab
 
-The Document Editor provides the `showTab` API to show and hide the existing tab using the existing `RibbonTabType` and `tabId`.
+The DOCX Editor provides the `showTab` API to show and hide the existing tab using the existing `RibbonTabType` and `tabId`.
 
 The following code example shows how to show or hide an existing tab using the existing tab type and tab id.
 
@@ -75,7 +75,7 @@ container.ribbon.showTab('custom_tab', false);
 
 ### Add tab
 
-The Document Editor provides the `addTab` API, which allows you to insert a new custom tab either between existing tabs or at the end of the ribbon tabs.
+The DOCX Editor provides the `addTab` API, which allows you to insert a new custom tab either between existing tabs or at the end of the ribbon tabs.
 
 ```typescript
 
@@ -120,7 +120,7 @@ You can also customize ribbon groups within a tab to better organize commands or
 
 ### Show/Hide group
 
-The Document Editor provides a `showGroup` API to show or hide existing groups within a ribbon tab.
+The DOCX Editor provides a `showGroup` API to show or hide existing groups within a ribbon tab.
 
 The following code example shows how to show or hide a group using the group Id or `RibbonGroupInfo`.
 
@@ -181,7 +181,7 @@ You can customize individual items within ribbon groups. This includes showing, 
 
 ### Show/Hide item
 
-Using the `showItems` API in the Document Editor ribbon, you can show or hide the existing item. Here, you can specify the item Id or `RibbonItemInfo`.
+Using the `showItems` API in the DOCX Editor ribbon, you can show or hide the existing item. Here, you can specify the item Id or `RibbonItemInfo`.
 
 The following code example shows how to show or hide an item using the item Id or `RibbonItemInfo`.
 
@@ -198,7 +198,7 @@ container.ribbon.showItems('custom_item', false);
 
 ### Enable/Disable item
 
-Using the `enableItems` API in the Document Editor ribbon, you can enable or disable the existing item.
+Using the `enableItems` API in the DOCX Editor ribbon, you can enable or disable the existing item.
 
 ```typescript
 // To disable the underline using ribbon item info
@@ -214,7 +214,7 @@ container.ribbon.enableItems('custom_item', false);
 
 ### Add item
 
-You can use the `addItem` API in the Document Editor ribbon to add a new item. Additionally, you can specify the target tab and group where the new item should be placed.
+You can use the `addItem` API in the DOCX Editor ribbon to add a new item. Additionally, you can specify the target tab and group where the new item should be placed.
 
 ```typescript
 
@@ -248,7 +248,7 @@ You can use the `addItem` API in the Document Editor ribbon to add a new item. A
 
 ## Online demo
 
-Explore how to customize the ribbon in the ASP.NET Core Document Editor for working with Word documents in this live [ASP.NET Core Ribbon Customization demo](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/ribboncustomization#/tailwind3).
+Explore how to customize the ribbon in the ASP.NET Core DOCX Editor for working with Word documents in this live [ASP.NET Core Ribbon Customization demo](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/ribboncustomization#/tailwind3).
 
 ## See also
 

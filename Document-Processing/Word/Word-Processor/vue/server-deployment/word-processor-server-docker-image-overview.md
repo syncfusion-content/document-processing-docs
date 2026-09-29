@@ -141,7 +141,7 @@ You can copy the required template Word documents into the docker container whil
 
 N> Place the word files in the data folder mentioned in the volumes section (e.g., C:/Docker/Data) of the docker-compose.yml file. All the files present in the folder path (C:/Docker/Data) mentioned in the volumes section of the 'docker-compose.yml' file will be copied to the respective folder (/app/Data) of the docker container. The Word documents copied to the docker container can be processed using the 'LoadDocument' web API.
 
-The following code example shows how to use the LoadDocument() API in Document Editor.
+The following code example shows how to use the LoadDocument() API in DOCX Editor.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

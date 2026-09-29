@@ -17,17 +17,17 @@ domainurl: ##DomainURL##
 let docEdit: DocumentEditor = new DocumentEditor({ layoutType: 'Continuous'});
 ```
 
-N> The default value of [`layoutType`](https://ej2.syncfusion.com/documentation/api/document-editor#layouttype) in the Document Editor component is [`Pages`](https://ej2.syncfusion.com/documentation/api/document-editor/layoutType).
+N> The default value of [`layoutType`](https://ej2.syncfusion.com/documentation/api/document-editor#layouttype) in the DOCX Editor component is [`Pages`](https://ej2.syncfusion.com/documentation/api/document-editor/layoutType).
 
 ### Online demo
 
-Explore how to view Word documents in web layout using the JavaScript Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/web-layout.html).
+Explore how to view Word documents in web layout using the JavaScript DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/web-layout.html).
 
 ## Ruler
 
-The ruler helps you set specific margins, tab stops, and indentations within a document to ensure consistent formatting in the Document Editor.
+The ruler helps you set specific margins, tab stops, and indentations within a document to ensure consistent formatting in the DOCX Editor.
 
-The following example illustrates how to enable the ruler in the Document Editor.
+The following example illustrates how to enable the ruler in the DOCX Editor.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -42,13 +42,13 @@ The following example illustrates how to enable the ruler in the Document Editor
 
 ### Online demo
 
-Explore how to use the ruler in the JavaScript Document Editor for working with Word documents in this [live demo](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/ruler.html).
+Explore how to use the ruler in the JavaScript DOCX Editor for working with Word documents in this [live demo](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/ruler.html).
 
 ## Navigation pane
 
 The heading navigation pane allows users to quickly navigate documents by heading, making it easier to move through the document.
 
-The following example demonstrates how to enable the heading navigation pane in the Document Editor.
+The following example demonstrates how to enable the heading navigation pane in the DOCX Editor.
 
 ```ts
 let container: DocumentEditorContainer = new DocumentEditorContainer({ enableToolbar: true,height: '590px',
@@ -62,8 +62,8 @@ container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor
 container.appendTo('#container');
 ```
 
-N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 ### Online demo
 
-Explore how to navigate through headings in Word documents using the JavaScript Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/heading-navigation.html).
+Explore how to navigate through headings in Word documents using the JavaScript DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/heading-navigation.html).

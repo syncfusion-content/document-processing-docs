@@ -72,7 +72,7 @@ documenteditor.selection.cellFormat.verticalAlignment= 'Bottom';
 
 ## Table alignment
 
-The tables are aligned in document editor to `Left`, `Right`, or `Center`.
+The tables are aligned in DOCX Editor to `Left`, `Right`, or `Center`.
 
 ```typescript
 documenteditor.selection.tableFormat.tableAlignment='Center';
@@ -109,7 +109,7 @@ You can set the desired width of a table in `Point` or `Percent` type.
 
 ## Apply borders
 
-Document editor exposes APIs to customize the borders for table cells by specifying the settings.
+DOCX Editor exposes APIs to customize the borders for table cells by specifying the settings.
 
 
 {% tabs %}
@@ -123,7 +123,7 @@ Document editor exposes APIs to customize the borders for table cells by specify
 
 ## Working with row formatting
 
-Document editor allows various row formatting such as height and repeat header.
+DOCX Editor allows various row formatting such as height and repeat header.
 
 ### Row height
 
@@ -157,7 +157,7 @@ documenteditor.selection.rowFormat.allowRowBreakAcrossPages=false;
 
 ### Title
 
-Document Editor exposes APIs to get or set the table title of the selected table. Refer to the following sample code to set title.
+DOCX Editor exposes APIs to get or set the table title of the selected table. Refer to the following sample code to set title.
 
 ```typescript
 documenteditor.selection.tableFormat.title = 'Shipping Details';
@@ -165,7 +165,7 @@ documenteditor.selection.tableFormat.title = 'Shipping Details';
 
 ### Description
 
-Document Editor exposes APIs to get or set the table description of the selected table. Refer to the following sample code to set description.
+DOCX Editor exposes APIs to get or set the table description of the selected table. Refer to the following sample code to set description.
 
 ```typescript
 documenteditor.selection.tableFormat.description = 'Freight cost and shipping details';
@@ -173,7 +173,7 @@ documenteditor.selection.tableFormat.description = 'Freight cost and shipping de
 
 ## Online demo
 
-Explore how to format tables in Word documents using the ASP.NET Core Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/tableformat#/tailwind3).
+Explore how to format tables in Word documents using the ASP.NET Core DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/tableformat#/tailwind3).
 
 ## See also
 

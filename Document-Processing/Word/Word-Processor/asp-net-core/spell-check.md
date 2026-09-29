@@ -10,7 +10,7 @@ documentation: ug
 
 # Spell Check in ASP.NET Core DOCX Editor
 
-[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) supports performing spell checking for any input text. Spell check is supported on the input text in the Document Editor and provides suggestions for misspelled words through the dialog and the context menu.
+[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) supports performing spell checking for any input text. Spell check is supported on the input text in the DOCX Editor and provides suggestions for misspelled words through the dialog and the context menu.
 
 
 {% tabs %}
@@ -27,11 +27,11 @@ documentation: ug
 
 ## Enable spellCheck
 
-To enable spell check in the Document Editor, set `enableSpellCheck` to `true` and configure `SpellCheckSettings`.
+To enable spell check in the DOCX Editor, set `enableSpellCheck` to `true` and configure `SpellCheckSettings`.
 
 ## Disable spellCheck
 
-To disable spell check in the Document Editor, set `enableSpellCheck` to `false` or remove the `enableSpellCheck` property initialization code. The default value of this property is false.
+To disable spell check in the DOCX Editor, set `enableSpellCheck` to `false` or remove the `enableSpellCheck` property initialization code. The default value of this property is false.
 
 ## Spell check settings
 
@@ -45,7 +45,7 @@ this.container.documentEditor.spellChecker.removeUnderline = true;
 
 ### AllowSpellCheckAndSuggestion
 
-By default, when you perform a spell check in the Document Editor, both the spelling and suggestions for misspelled words are retrieved, and the words can be corrected through the context menu suggestions. You can modify this behavior using the `allowSpellCheckAndSuggestion` API, which performs only the spell check.
+By default, when you perform a spell check in the DOCX Editor, both the spelling and suggestions for misspelled words are retrieved, and the words can be corrected through the context menu suggestions. You can modify this behavior using the `allowSpellCheckAndSuggestion` API, which performs only the spell check.
 
 ```typescript
 this.container.documentEditor.spellChecker.allowSpellCheckAndSuggestion = false;
@@ -53,7 +53,7 @@ this.container.documentEditor.spellChecker.allowSpellCheckAndSuggestion = false;
 
 ### LanguageID
 
-The Document Editor supports multi-language spell check. You can add as many languages (dictionaries) on the server side; to use a language for spell checking in the Document Editor, it must match the `languageID` you pass to the Document Editor.
+The DOCX Editor supports multi-language spell check. You can add as many languages (dictionaries) on the server side; to use a language for spell checking in the DOCX Editor, it must match the `languageID` you pass to the DOCX Editor.
 
 ```typescript
 this.container.documentEditor.spellChecker.languageID = 1033; //LCID of "en-us";
@@ -61,7 +61,7 @@ this.container.documentEditor.spellChecker.languageID = 1033; //LCID of "en-us";
 
 ### EnableOptimizedSpellCheck
 
-The Document Editor provides an option to spellcheck page by page when loading the documents. The default value of this property is false, so when opening the document spellcheck web API will be called for each word in the document. To optimize the frequency of spellcheck web API calls, you can enable this property.
+The DOCX Editor provides an option to spellcheck page by page when loading the documents. The default value of this property is false, so when opening the document spellcheck web API will be called for each word in the document. To optimize the frequency of spellcheck web API calls, you can enable this property.
 
 ```typescript
 this.container.documentEditor.spellChecker.enableOptimizedSpellCheck = true;

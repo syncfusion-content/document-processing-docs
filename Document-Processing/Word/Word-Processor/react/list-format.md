@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # List Format in React DOCX Editor
 
-[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports both single-level and multilevel lists. Lists are used to organize data as step-by-step instructions in documents for easy understanding of key points. You can apply a list to paragraphs using the supported APIs.
+[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports both single-level and multilevel lists. Lists are used to organize data as step-by-step instructions in documents for easy understanding of key points. You can apply a list to paragraphs using the supported APIs.
 
 ## Create bullet list
 
@@ -56,7 +56,7 @@ documenteditor.editor.clearList();
 
 ## Working with lists
 
-The following sample demonstrates how to create bulleted and numbered lists in Document Editor.
+The following sample demonstrates how to create bulleted and numbered lists in DOCX Editor.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -74,13 +74,13 @@ The following sample demonstrates how to create bulleted and numbered lists in D
 
 ## Editing numbered list
 
-Document Editor restarts the numbering or continues numbering for a numbered list. These options are found in the built-in context menu if the list value is selected. Refer to the following screenshot.
+DOCX Editor restarts the numbering or continues numbering for a numbered list. These options are found in the built-in context menu if the list value is selected. Refer to the following screenshot.
 
 ![Image](images/list.png)
 
 ## Online Demo
 
-Explore how to apply bullets and numbering in Word documents using the React Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/bullets-and-numbering).
+Explore how to apply bullets and numbering in Word documents using the React DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/bullets-and-numbering).
 
 ## See Also
 

@@ -14,11 +14,11 @@ In this article, we are going to see how to open a default document when the Doc
 
 ## Opening a default document in DocumentEditor
 
-By default, the [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) will open a blank document. You can use the [`open`](https://ej2.syncfusion.com/documentation/api/document-editor#open) API in the Document Editor to open the SFDT content.
+By default, the [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) will open a blank document. You can use the [`open`](https://ej2.syncfusion.com/documentation/api/document-editor#open) API in the DOCX Editor to open the SFDT content.
 
-The Document Editor has a [`created`](https://ej2.syncfusion.com/documentation/api/document-editor#created) event which gets triggered once the Document Editor control is created. So, if you want to open the document by default, you can use the [`open`](https://ej2.syncfusion.com/documentation/api/document-editor#open) and [`created`](https://ej2.syncfusion.com/documentation/api/document-editor#created) APIs.
+The DOCX Editor has a [`created`](https://ej2.syncfusion.com/documentation/api/document-editor#created) event which gets triggered once the DOCX Editor control is created. So, if you want to open the document by default, you can use the [`open`](https://ej2.syncfusion.com/documentation/api/document-editor#open) and [`created`](https://ej2.syncfusion.com/documentation/api/document-editor#created) APIs.
 
-The following example illustrates how to open the default SFDT content once the Document Editor control is created.
+The following example illustrates how to open the default SFDT content once the DOCX Editor control is created.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -35,7 +35,7 @@ The following example illustrates how to open the default SFDT content once the 
 
 ## Opening a default document in DocumentEditorContainer
 
-By default, the Document Editor Container will open a blank document. You can use the [`open`](https://ej2.syncfusion.com/documentation/api/document-editor#open) API in the Document Editor to open the SFDT content.
+By default, the Document Editor Container will open a blank document. You can use the [`open`](https://ej2.syncfusion.com/documentation/api/document-editor#open) API in the DOCX Editor to open the SFDT content.
 
 The Document Editor Container has a [`created`](https://ej2.syncfusion.com/documentation/api/document-editor-container#created) event which gets triggered once the Document Editor Container control is created. So, if you want to open the document by default, you can use the [`open`](https://ej2.syncfusion.com/documentation/api/document-editor#open) and [`created`](https://ej2.syncfusion.com/documentation/api/document-editor-container#created) APIs.
 

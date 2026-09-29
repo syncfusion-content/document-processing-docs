@@ -13,7 +13,7 @@ You can get the current word or paragraph content from the [ASP.NET Core DOCX Ed
 
 ## Select and get the word in current cursor position
 
-You can use the [`selectCurrentWord`] API in the selection module to select the current word at the cursor position and use the [`text`] API to get the selected content as plain text from the Document Editor component.
+You can use the [`selectCurrentWord`] API in the selection module to select the current word at the cursor position and use the [`text`] API to get the selected content as plain text from the DOCX Editor component.
 
 The following example code illustrates how to select and get the current word as plain text.
 
@@ -30,7 +30,7 @@ The following example code illustrates how to select and get the current word as
 
 ## Select and get the paragraph in current cursor position
 
-You can use the [`selectParagraph`] API in the selection module to select the current paragraph at the cursor position and use the [`text`] API or the [`sfdt`] API to get the selected content as plain text or SFDT from the Document Editor component.
+You can use the [`selectParagraph`] API in the selection module to select the current paragraph at the cursor position and use the [`text`] API or the [`sfdt`] API to get the selected content as plain text or SFDT from the DOCX Editor component.
 
 The following example code illustrates how to select and get the current paragraph as SFDT.
 

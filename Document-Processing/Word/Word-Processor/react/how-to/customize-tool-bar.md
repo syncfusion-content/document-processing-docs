@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## How to customize existing toolbar in DocumentEditorContainer
 
-[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) Container allows you to customize (add, show, hide, enable, and disable) existing items in a toolbar.
+[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) Container allows you to customize (add, show, hide, enable, and disable) existing items in a toolbar.
 
 * Add - New items can be defined by [`CustomToolbarItemModel`](https://ej2.syncfusion.com/react/documentation/api/document-editor/customToolbarItemModel) and with existing items in [`toolbarItems`](https://ej2.syncfusion.com/react/documentation/api/document-editor-container#toolbaritems) property. Newly added item click action can be defined in [`toolbarClick`](https://ej2.syncfusion.com/react/documentation/api/toolbar/clickEventArgs).
 
@@ -125,4 +125,4 @@ N> Default value of `toolbarItems` is `['New', 'Open', 'Separator', 'Undo', 'Red
 
 ## Online Demo
 
-Explore how to customize the toolbar in the React Document Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/toolbar-customization).
+Explore how to customize the toolbar in the React DOCX Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/toolbar-customization).

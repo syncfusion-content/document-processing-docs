@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Save to Google Drive in ASP.NET MVC DOCX Editor | Syncfusion
-description: Save documents to Google Drive from React DOCX Editor, enabling cloud storage integration and streamlined document management.
+description: Save documents to Google Drive from ASP .NET MVC DOCX Editor, enabling cloud storage integration and streamlined document management.
 platform: document-processing
 control: Save document to Google Drive
 documentation: ug
@@ -17,9 +17,9 @@ To save a document to Google Drive, follow these steps:
 Set up a project in the Google Developers Console and enable the Google Drive API. Then obtain the necessary credentials to access the API. For more information, see the official [link](https://developers.google.com/drive/api/guides/enable-sdk).
 
 
-**Step 2:** Create a Simple Document Editor Sample in ASP.NET MVC
+**Step 2:** Create a Simple DOCX Editor Sample in ASP.NET MVC
 
-Follow the steps in this [link](../getting-started) to create a simple Document Editor sample in ASP.NET MVC. This gives you a basic setup of the Document Editor component.
+Follow the steps in this [link](../getting-started) to create a simple DOCX Editor sample in ASP.NET MVC. This gives you a basic setup of the DOCX Editor component.
 
 
 **Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
@@ -145,7 +145,7 @@ N> The **FolderId** part is the unique identifier for the folder. For example, i
 
 N> You must use a unique `Client_ID` from the JSON file to interface your application with the Google Drive API in order to save a document directly to Google Drive. This `Client_ID` serves as the authentication key, allowing you to save files securely.
 
-**Step 4:** Modify the Index.cshtml File in the Document Editor Sample
+**Step 4:** Modify the Index.cshtml File in the DOCX Editor Sample
 
 On the client side, export the document to a blob using `saveAsBlob`, and send it to the server to save it in Google Drive.
 

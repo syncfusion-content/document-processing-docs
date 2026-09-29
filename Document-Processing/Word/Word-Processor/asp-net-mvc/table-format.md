@@ -10,7 +10,7 @@ documentation: ug
 
 # Table format in ASP.NET MVC DOCX Editor
 
-Document Editor allows you to customize the formatting of tables or table cells, such as table width, cell margins, cell spacing, background color, and table alignment. This section describes how to customize these formats for selected cells, rows, or a table in detail.
+DOCX Editor allows you to customize the formatting of tables or table cells, such as table width, cell margins, cell spacing, background color, and table alignment. This section describes how to customize these formats for selected cells, rows, or a table in detail.
 
 ## Cell margins
 
@@ -72,7 +72,7 @@ documenteditor.selection.cellFormat.verticalAlignment= 'Bottom';
 
 ## Table alignment
 
-Tables are aligned in the Document Editor to `Left`, `Right`, or `Center`.
+Tables are aligned in the DOCX Editor to `Left`, `Right`, or `Center`.
 
 ```typescript
 documenteditor.selection.tableFormat.tableAlignment='Center';
@@ -110,7 +110,7 @@ You can set the desired width of a table in `Point` or `Percent` type.
 
 ## Apply borders
 
-Document Editor exposes an API to customize the borders for table cells by specifying the settings.
+DOCX Editor exposes an API to customize the borders for table cells by specifying the settings.
 
 
 {% tabs %}
@@ -125,7 +125,7 @@ Document Editor exposes an API to customize the borders for table cells by speci
 
 ## Working with row formatting
 
-Document Editor allows various row formatting options, such as height and repeating headers.
+DOCX Editor allows various row formatting options, such as height and repeating headers.
 
 ### Row height
 
@@ -160,7 +160,7 @@ documenteditor.selection.rowFormat.allowRowBreakAcrossPages=false;
 
 ### Title
 
-Document Editor exposes an API to get or set the title of the selected table. Refer to the following sample code to set the title.
+DOCX Editor exposes an API to get or set the title of the selected table. Refer to the following sample code to set the title.
 
 ```typescript
 documenteditor.selection.tableFormat.title = 'Shipping Details';
@@ -168,7 +168,7 @@ documenteditor.selection.tableFormat.title = 'Shipping Details';
 
 ### Description
 
-Document Editor exposes an API to get or set the description of the selected table. Refer to the following sample code to set the description.
+DOCX Editor exposes an API to get or set the description of the selected table. Refer to the following sample code to set the description.
 
 ```typescript
 documenteditor.selection.tableFormat.description = 'Freight cost and shipping details';
@@ -176,7 +176,7 @@ documenteditor.selection.tableFormat.description = 'Freight cost and shipping de
 
 ## Online demo
 
-Explore how to format tables in Word documents using the ASP.NET MVC Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/tableformatting#/tailwind3).
+Explore how to format tables in Word documents using the ASP.NET MVC DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/tableformatting#/tailwind3).
 
 ## See also
 

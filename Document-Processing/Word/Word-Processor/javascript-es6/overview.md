@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) is a feature-rich, user-interactive component that enables creating, editing, viewing, and printing Word documents with advanced formatting, editing capabilities, and broad support for document import and export formats.
 
-![Overview image of TypeScript Document Editor](./images/Typescript-docx-editor-overview-image.png)
+![Overview image of TypeScript DOCX Editor](./images/Typescript-docx-editor-overview-image.png)
 
 
 ## Key Features
@@ -39,7 +39,7 @@ The [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascri
 
 ## Supported platforms for server-side dependencies
 
-The Document Editor component requires server-side interactions for the following operations:
+The DOCX Editor component requires server-side interactions for the following operations:
 
 * Open file formats other than SFDT
 * Paste with formatting
@@ -47,7 +47,7 @@ The Document Editor component requires server-side interactions for the followin
 * Spell check
 * Save as file formats other than SFDT and DOCX
 
-You can deploy web APIs for the server-side dependencies of the Document Editor component on the following platforms.
+You can deploy web APIs for the server-side dependencies of the DOCX Editor component on the following platforms.
 
 * [ASP.NET Core](./web-services/core)
 * [ASP.NET MVC](./web-services/mvc)

@@ -52,5 +52,5 @@ private void VerticalScrollBar_ValueChanged(object sender, RangeBaseValueChanged
 
 ## See also
 
-- [UWP RichTextBox Feature Tour](https://www.syncfusion.com/docx-editor-sdk/uwp-docx-editor)
-- [UWP RichTextBox Examples](https://github.com/syncfusion/docx-editor-sdk-uwp-demos)
+- [UWP DOCX Editor Feature Tour](https://www.syncfusion.com/docx-editor-sdk/uwp-docx-editor)
+- [UWP DOCX Editor Examples](https://github.com/syncfusion/docx-editor-sdk-uwp-demos)

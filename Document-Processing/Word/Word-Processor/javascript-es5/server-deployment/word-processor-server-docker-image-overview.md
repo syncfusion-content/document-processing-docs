@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 # Docker Image of Syncfusion JavaScript DOCX Editor Control
 
-The [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) (also known as Document Editor) is a component with editing capabilities like Microsoft Word. It is used to create, edit, view, and print Word documents. It provides all the common word processing abilities, including editing text; formatting contents; resizing images and tables; finding and replacing text; importing, exporting, and printing Word documents; and using bookmarks and tables of contents.
+The [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) is a component with editing capabilities like Microsoft Word. It is used to create, edit, view, and print Word documents. It provides all the common word processing abilities, including editing text; formatting contents; resizing images and tables; finding and replacing text; importing, exporting, and printing Word documents; and using bookmarks and tables of contents.
 
 This Docker image is the preconfigured Docker container of Syncfusion's Word Processor backend. You can deploy it quickly to your infrastructure.
 
@@ -198,7 +198,7 @@ You can copy the required template Word documents into the Docker container when
 
 N> Place the Word files in the `data` folder mentioned in the `volumes` section (i.e., `C:/Docker/Data`) of the `docker-compose.yml` file. All the files present in the folder path (`C:/Docker/Data`) mentioned in the `volumes` section of the `docker-compose.yml` file will be copied to the corresponding folder (`/app/Data`) of the Docker container. The Word documents copied to the Docker container can be processed using the `LoadDocument` web API.
 
-The following code example shows how to use LoadDocument() API in Document Editor.
+The following code example shows how to use LoadDocument() API in DOCX Editor.
 
 ```ts
 import { DocumentEditorContainer, Toolbar } from '@syncfusion/ej2-documenteditor';

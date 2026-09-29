@@ -78,7 +78,7 @@ N> If a form field already exists in the document with the new name specified, t
 
 ## Form Field Shading
 
-You can customize form field shading at the application level using the [`formFieldSettings`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#formFieldSettings) property.
+You can customize form field shading at the application level using the [`formFieldSettings`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/formfieldsettings) property.
 
 The example code below demonstrates how to set a custom shading color and how to disable shading (by default, shading is enabled).
 
@@ -122,9 +122,9 @@ documentEditor.resetFormFields();
 
 ## Protect the document in form filling mode
 
-Document Editor provides support for protecting the document with `FormFieldsOnly` protection. In this protection, user can only fill form fields in the document.
+DOCX Editor provides support for protecting the document with `FormFieldsOnly` protection. In this protection, user can only fill form fields in the document.
 
-Document Editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#stopprotection) API.
+DOCX Editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#stopprotection) API.
 
 The following example code illustrates how to enforce and stop protection in Document Editor container.
 
@@ -144,10 +144,10 @@ container.documentEditor.editor.enforceProtection('123', 'FormFieldsOnly');
 //stop the document protection
 container.documentEditor.editor.stopProtection('123');
 ```
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 >Note: In enforce Protection method, first parameter denotes password and second parameter denotes protection type. Possible values of protection type are `NoProtection |ReadOnly |FormFieldsOnly |CommentsOnly`. In stop protection method, parameter denotes the password.
 
 ## Online Demo
 
-Explore how to insert and manage form fields in Word documents using the JavaScript (ES5) Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/form-fields.html).
+Explore how to insert and manage form fields in Word documents using the JavaScript (ES5) DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/tailwind3/document-editor/form-fields.html).

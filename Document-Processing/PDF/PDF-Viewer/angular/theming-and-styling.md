@@ -25,18 +25,14 @@ The PDF Viewer styles the toolbar, buttons, panels, annotations, and dialogs bas
 
 **Step 1:** Create an Angular PDF Viewer application by following the [Angular PDF Viewer getting started guide](./getting-started).
 
-**Step 2:** Import the required theme CSS files in `angular.json` or `styles.css`. Example for Tailwind theme:
+**Step 2:** Install the Tailwind 3 theme package and import its CSS in `angular.json` or `styles.css`. The `index.css` file automatically includes all required dependent component styles for the PDF Viewer.
+
+```bash
+npm install @syncfusion/ej2-tailwind3-theme
+```
 
 ```css
-@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-angular-pdfviewer/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/pdfviewer/index.css';
 ```
 
 ## Tutorial

@@ -74,7 +74,7 @@ documentEditor.editor.insertReplyComment(comment.id, 'Hello world', commentPrope
 
 ## Get Comments
 
-The Document Editor allows you to get the comments along with their reply and comment properties using [`getComments`](https://ej2.syncfusion.com/documentation/api/document-editor#getComments).
+The DOCX Editor allows you to get the comments along with their reply and comment properties using [`getComments`](https://ej2.syncfusion.com/documentation/api/document-editor#getComments).
 
 {% highlight ts %}
 //Get Comments in the document along with the properties author, date, status.
@@ -123,9 +123,9 @@ documentEditor.editor.deleteAllComments();
 
 ## Protect the document in comments-only mode
 
-The Document Editor provides support for protecting the document with `CommentsOnly` protection. In this protection, the user is allowed to add or edit comments alone in the document.
+The DOCX Editor provides support for protecting the document with `CommentsOnly` protection. In this protection, the user is allowed to add or edit comments alone in the document.
 
-The Document Editor provides an option to protect and unprotect the document using [`enforceProtection`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#stopprotection) API.
+The DOCX Editor provides an option to protect and unprotect the document using [`enforceProtection`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#stopprotection) API.
 
 The following example code illustrates how to enforce and stop protection in the Document Editor container.
 
@@ -156,7 +156,7 @@ N> In the enforce Protection method, the first parameter denotes the password an
 
 Mention support displays a list of items that users can select or tag from the suggested list. To use this feature, type the @ character in the comment box and select or tag the user from the suggestion list.
 
-The following example illustrates how to enable mention support in the Document Editor.
+The following example illustrates how to enable mention support in the DOCX Editor.
 
 ```ts
 let mentionData: any = [
@@ -175,11 +175,11 @@ container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor
 container.appendTo('#container');
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 ## Events
 
-The Document Editor provides [beforeCommentAction](https://ej2.syncfusion.com/documentation/api/document-editor-container#beforecommentaction) event, which is triggered on comment actions like post, edit, reply, resolve, and reopen. This event provides an opportunity to perform custom logic on comment actions like post, edit, reply, resolve, and reopen. The event handler receives the [CommentActionEventArgs](https://ej2.syncfusion.com/documentation/api/document-editor/commentActionEventArgs) object as an argument, which allows access to information about the comment.
+The DOCX Editor provides [beforeCommentAction](https://ej2.syncfusion.com/documentation/api/document-editor-container#beforecommentaction) event, which is triggered on comment actions like post, edit, reply, resolve, and reopen. This event provides an opportunity to perform custom logic on comment actions like post, edit, reply, resolve, and reopen. The event handler receives the [CommentActionEventArgs](https://ej2.syncfusion.com/documentation/api/document-editor/commentActionEventArgs) object as an argument, which allows access to information about the comment.
 
 To demonstrate a specific use case, let's consider an example where we want to restrict the delete functionality based on the author's name. The following code snippet illustrates how to allow only the author of a comment to delete:
 
@@ -215,8 +215,8 @@ function beforecomment(args : CommentActionEventArgs){
 }
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 ## Online Demo
 
-Explore how to add, view, and manage comments in Word documents using the JavaScript Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/comments.html).
+Explore how to add, view, and manage comments in Word documents using the JavaScript DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/comments.html).

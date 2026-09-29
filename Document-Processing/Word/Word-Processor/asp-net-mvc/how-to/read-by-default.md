@@ -10,11 +10,11 @@ documentation: ug
 
 # How to Open ASP.NET MVC DOCX Editor in Read-Only Mode
 
-This article explains how to open a document in read-only mode by default in Document Editor & Document Editor Container.
+This article explains how to open a document in read-only mode by default in DOCX Editor & Document Editor Container.
 
-## Opening a document in read-only mode by default in Document Editor
+## Opening a document in read-only mode by default in DOCX Editor
 
-Using the [`isReadOnly`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditor.html#Syncfusion_EJ2_DocumentEditor_DocumentEditor_IsReadOnly) property in the Document Editor allows you to enable or disable read-only mode in the Document Editor.
+Using the [`isReadOnly`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditor.html#Syncfusion_EJ2_DocumentEditor_DocumentEditor_IsReadOnly) property in the DOCX Editor allows you to enable or disable read-only mode in the DOCX Editor.
 
 
 {% tabs %}

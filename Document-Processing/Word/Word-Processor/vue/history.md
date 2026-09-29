@@ -67,7 +67,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-You can enable or disable history preservation for a Document Editor instance any time using the `enableEditorHistory` property. Refer to the following sample code.
+You can enable or disable history preservation for a DOCX Editor instance any time using the `enableEditorHistory` property. Refer to the following sample code.
 
 ```javascript
 this.$refs.documenteditor.enableEditorHistory = false;
@@ -75,9 +75,9 @@ this.$refs.documenteditor.enableEditorHistory = false;
 
 ## Undo and redo
 
-You can perform undo and redo by `CTRL+Z` and `CTRL+Y` keyboard shortcuts. Document Editor exposes API to do it programmatically.
+You can perform undo and redo by `CTRL+Z` and `CTRL+Y` keyboard shortcuts. DOCX Editor exposes API to do it programmatically.
 
-To undo the last editing operation in Document Editor, refer to the following sample code.
+To undo the last editing operation in DOCX Editor, refer to the following sample code.
 
 ```javascript
 this.$refs.documenteditor.ej2Instances.editorHistory.undo();
@@ -91,7 +91,7 @@ this.$refs.documenteditor.ej2Instances.editorHistory.redo();
 
 ## Stack size
 
-History of editing actions will be maintained in a stack, so that the last item is reverted first. By default, Document Editor limits the size of undo and redo stacks to 500 each respectively. However, you can customize this limit. Refer to the following sample code.
+History of editing actions will be maintained in a stack, so that the last item is reverted first. By default, DOCX Editor limits the size of undo and redo stacks to 500 each respectively. However, you can customize this limit. Refer to the following sample code.
 
 ```javascript
 this.$refs.documenteditor.ej2Instances.editorHistory.undoLimit = 400;

@@ -13,9 +13,9 @@ domainurl: ##DomainURL##
 To load a document from AWS S3 in a [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor), you can follow the steps below.
 
 
-**Step 1:** Create a Simple Document Editor Sample in ASP.NET Core
+**Step 1:** Create a Simple DOCX Editor Sample in ASP.NET Core
 
-Start by following the steps provided in this [link](../../document-editor/getting-started-core) to create a simple Document Editor sample in ASP.NET Core. This will give you a basic setup of the Document Editor component. 
+Start by following the steps provided in this [link](../../document-editor/getting-started-core) to create a simple DOCX Editor sample in ASP.NET Core. This will give you a basic setup of the DOCX Editor component. 
 
 
 
@@ -109,7 +109,7 @@ public async Task<string> LoadFromS3([FromBody] Dictionary<string, string> onObj
 
 N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and **Your Bucket name from AWS S3** with your actual AWS access key, secret key, and bucket name.
 
-**Step 3:**  Modify the Index.cshtml File in the Document Editor sample
+**Step 3:**  Modify the Index.cshtml File in the DOCX Editor sample
 
 On the client side, the document returned from the web service is opened using the `open` method.
 

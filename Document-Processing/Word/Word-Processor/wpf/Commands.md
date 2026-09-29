@@ -8,7 +8,7 @@ keywords: commands
 ---
 # Commands in WPF DOCX Editor
 
-Commands are a way to handle user interface (UI) actions. They are a loosely coupled way to bind the UI to the logic that performs the action. The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) supports commands for mostly used operations which are classified below.
+Commands are a way to handle user interface (UI) actions. They are a loosely coupled way to bind the UI to the logic that performs the action. The [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) supports commands for mostly used operations which are classified below.
 
 * Character Formatting – Bold, Italic, Underline, Strike through, Baseline alignment, Font family, Font size, Font color and Highlight color.
 
@@ -1501,10 +1501,10 @@ The {{'[TextAlignment](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Con
 </tbody>
 </table>
 
-N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
+N> You can refer to our [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF DOCX Editor example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 
 ## See also
 
-- [Document Properties in WPF RichTextBox](./Document-Properties)
-- [Document Structure in WPF RichTextBox](./Document-Structure)
-- [Selection in WPF RichTextBox](./Selection)
+- [Document Properties in WPF DOCX Editor](./Document-Properties)
+- [Document Structure in WPF DOCX Editor](./Document-Structure)
+- [Selection in WPF DOCX Editor](./Selection)

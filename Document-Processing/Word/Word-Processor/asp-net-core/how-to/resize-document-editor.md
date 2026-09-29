@@ -3,7 +3,7 @@ layout: post
 title: How to Resize in ASP.NET Core DOCX Editor | Syncfusion
 description: Adjust the height and width of the Syncfusion® ASP.NET Core DOCX Editor to create responsive layouts and customize the document editing experience.
 platform: document-processing
-control: Resize Document Editor
+control: Resize DOCX Editor
 documentation: ug
 ---
 
@@ -12,9 +12,9 @@ documentation: ug
 
 This section explains how to change height and width of [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor).
 
-## Change height of Document Editor
+## Change height of DOCX Editor
 
-DocumentEditorContainer initially renders with a default height. You can change the height of the Document Editor using the `height` property, the value of which is in pixels.
+DocumentEditorContainer initially renders with a default height. You can change the height of the DOCX Editor using the `height` property, the value of which is in pixels.
 
 
 {% tabs %}
@@ -29,9 +29,9 @@ DocumentEditorContainer initially renders with a default height. You can change 
 
 Similarly, you can use the `height` property for DocumentEditor also.
 
-## Change width of Document Editor
+## Change width of DOCX Editor
 
-DocumentEditorContainer initially renders with a default width. You can change the width of the Document Editor using the `width` property, the value of which is in percent.
+DocumentEditorContainer initially renders with a default width. You can change the width of the DOCX Editor using the `width` property, the value of which is in percent.
 
 
 
@@ -47,9 +47,9 @@ DocumentEditorContainer initially renders with a default width. You can change t
 
 Similarly, you can use the `width` property for DocumentEditor also.
 
-## Resize Document Editor
+## Resize DOCX Editor
 
-Using the `resize` method, you can change the height and width of the Document Editor.
+Using the `resize` method, you can change the height and width of the DOCX Editor.
 
 
 {% tabs %}

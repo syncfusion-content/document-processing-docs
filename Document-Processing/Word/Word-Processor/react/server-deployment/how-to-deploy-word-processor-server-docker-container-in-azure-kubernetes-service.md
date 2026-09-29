@@ -52,7 +52,7 @@ az aks get-credentials --resource-group documenteditorresourcegroup --name docum
 
 **Step 4:** Create Kubernetes Services and Deployments
 
-[`Kubernetes Services`](https://kubernetes.io/docs/concepts/services-networking/service/) and [`Deployments`](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) can be configured in a file. To run the Document Editor server, you must define a Service and a Deployment documenteditorserver. To do this, create the documenteditor-server.yml file in the current directory using the following code.
+[`Kubernetes Services`](https://kubernetes.io/docs/concepts/services-networking/service/) and [`Deployments`](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) can be configured in a file. To run the DOCX Editor server, you must define a Service and a Deployment documenteditorserver. To do this, create the documenteditor-server.yml file in the current directory using the following code.
 
 ```yaml
 apiVersion: apps/v1
@@ -95,20 +95,20 @@ spec:
   type: LoadBalancer
 ```
 
-**Step 5:** To create all Services and Deployments needed to run the Document Editor server, execute the following.
+**Step 5:** To create all Services and Deployments needed to run the DOCX Editor server, execute the following.
 
 ```
 kubectl create -f ./documenteditor-server.yml
 ```
 
-Run the following command to get the Kubernetes cluster deployed service details and copy the external IP address of the Document Editor service.
+Run the following command to get the Kubernetes cluster deployed service details and copy the external IP address of the DOCX Editor service.
 
 ```
 kubectl get all
 ```
 
-Browse to the copied external IP address and navigate to the Document Editor Web API control `http://<external-ip>/api/documenteditor`. It returns the default GET method response.
+Browse to the copied external IP address and navigate to the DOCX Editor Web API control `http://<external-ip>/api/documenteditor`. It returns the default GET method response.
 
-**Step 6:** Append the Kubernetes service running URL `http://<external-ip>/api/documenteditor/` to the service URL in the client-side Document Editor control. For more information about the Document Editor control, refer to this [`getting started page`](../getting-started).
+**Step 6:** Append the Kubernetes service running URL `http://<external-ip>/api/documenteditor/` to the service URL in the client-side DOCX Editor control. For more information about the DOCX Editor control, refer to this [`getting started page`](../getting-started).
 
 For more details about the Azure Kubernetes service, refer to the [`Azure Kubernetes Service`](https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough) for a production-ready setup.

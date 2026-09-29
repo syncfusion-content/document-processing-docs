@@ -8,7 +8,7 @@ keywords: import, export, load, save, async-load, document-events, file-formats
 ---
 # Import and Export in WPF DOCX Editor
 
-The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) allows you to import or export Word documents (.docx, .doc), Rich Text Format documents (.rtf), HTML documents (.htm, .html), XAML documents (.xaml), and text documents (.txt). 
+The [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) allows you to import or export Word documents (.docx, .doc), Rich Text Format documents (.rtf), HTML documents (.htm, .html), XAML documents (.xaml), and text documents (.txt). 
 
 The import and export operations are exposed through the [Load](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_Load_System_String_), [Save](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_Save_System_String_), [LoadAsync](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_LoadAsync_System_String_), and [SaveAsync](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_SaveAsync_System_String_) API members.
 
@@ -222,10 +222,10 @@ End Sub
 
 N> This API is supported starting from release version v18.2.0.X.
 
-N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
+N> You can refer to our [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF DOCX Editor example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 
 ## See also
 
-- [Commands in WPF RichTextBox](./Commands)
-- [Clipboard in WPF RichTextBox](./Clipboard)
-- [Document Structure in WPF RichTextBox](./Document-Structure)
+- [Commands in WPF DOCX Editor](./Commands)
+- [Clipboard in WPF DOCX Editor](./Clipboard)
+- [Document Structure in WPF DOCX Editor](./Document-Structure)

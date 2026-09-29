@@ -3,7 +3,7 @@ layout: post
 title: Hide Toolbar and Properties Pane in Blazor DOCX Editor | Syncfusion
 description: Hide the toolbar and properties pane in Syncfusion® Blazor DOCX Editor to create a custom user interface and streamline the document editing experience.
 platform: document-processing
-control: Document Editor
+control: DOCX Editor
 documentation: ug
 ---
 
@@ -11,7 +11,7 @@ documentation: ug
 
 **[Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) container** provides the main document view area along with the built-in toolbar and properties pane.
 
-**Document Editor** provides just the main document view area. Here, the user can compose, view, and edit the Word documents. Use this component when you want to design your own UI options for your application.
+**DOCX Editor** provides just the main document view area. Here, the user can compose, view, and edit the Word documents. Use this component when you want to design your own UI options for your application.
 
 ## Hide the properties pane
 

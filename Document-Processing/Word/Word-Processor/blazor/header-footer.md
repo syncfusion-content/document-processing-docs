@@ -3,7 +3,7 @@ layout: post
 title: Headers and Footers in Blazor DOCX Editor | Syncfusion
 description: Headers and footers in Blazor DOCX Editor enable adding and customizing content at the top and bottom of document pages.
 platform: document-processing
-control: Document Editor
+control: DOCX Editor
 documentation: ug
 ---
 
@@ -60,4 +60,4 @@ await container.DocumentEditor.Selection.CloseHeaderFooterAsync();
 
 ## Online demo
 
-Explore how to add and customize headers and footers in Word documents using the Blazor Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/headers-and-footers?theme=fluent2).
+Explore how to add and customize headers and footers in Word documents using the Blazor DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/headers-and-footers?theme=fluent2).

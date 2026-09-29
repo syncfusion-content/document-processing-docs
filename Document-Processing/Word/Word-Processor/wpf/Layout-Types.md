@@ -8,7 +8,7 @@ keywords: layout-types,pages,continuous,block,layout-type
 ---
 # Layout Types in WPF DOCX Editor
 
-The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) control allows you to choose between the following layout types through the [LayoutType](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_LayoutType) property. The default `LayoutType` is `Pages`.
+The [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) control allows you to choose between the following layout types through the [LayoutType](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_LayoutType) property. The default `LayoutType` is `Pages`.
 
 * Pages
 
@@ -48,7 +48,7 @@ richTextBoxAdv.LayoutType = LayoutType.Pages
 
 {% endtabs %}
 
-![WPF RichTextBox rendered in Pages layout, showing paginated content](Layout-Types_images/wpf-richtextbox-page-layout.jpeg)
+![WPF DOCX Editor rendered in Pages layout, showing paginated content](Layout-Types_images/wpf-docx-editor-page-layout.jpeg)
 
 ## Continuous
 
@@ -79,7 +79,7 @@ richTextBoxAdv.LayoutType = LayoutType.Continuous
 
 {% endtabs %}
 
-![WPF RichTextBox rendered in Continuous layout, showing all content on a single scrollable page](Layout-Types_images/wpf-richtextbox-continuous-layout.jpeg)
+![WPF DOCX Editor rendered in Continuous layout, showing all content on a single scrollable page](Layout-Types_images/wpf-docx-editor-continuous-layout.jpeg)
 
 ## Block
 
@@ -110,12 +110,12 @@ richTextBoxAdv.LayoutType = LayoutType.Block
 
 {% endtabs %}
 
-![WPF RichTextBox rendered in Block layout, showing read-only rich-text content in a single block](Layout-Types_images/wpf-richtextbox-box-layout.jpeg)
+![WPF DOCX Editor rendered in Block layout, showing read-only rich-text content in a single block](Layout-Types_images/wpf-docx-editor-box-layout.jpeg)
 
-N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
+N> You can refer to our [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF DOCX Editor example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 
 ## See also
 
-- [Commands in WPF RichTextBox](./Commands)
-- [Clipboard in WPF RichTextBox](./Clipboard)
-- [Document Structure in WPF RichTextBox](./Document-Structure)
+- [Commands in WPF DOCX Editor](./Commands)
+- [Clipboard in WPF DOCX Editor](./Clipboard)
+- [Document Structure in WPF DOCX Editor](./Document-Structure)

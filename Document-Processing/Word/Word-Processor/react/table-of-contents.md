@@ -14,7 +14,7 @@ The table of contents in a document is the same as the list of chapters at the b
 
 ## Inserting table of contents
 
-[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) exposes an API to insert a table of contents at the cursor position programmatically. You can specify the settings for table of contents explicitly. Otherwise, the default settings will be applied.
+[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) exposes an API to insert a table of contents at the cursor position programmatically. You can specify the settings for table of contents explicitly. Otherwise, the default settings will be applied.
 
 [`TableOfContentsSettings`](https://ej2.syncfusion.com/react/documentation/api/document-editor/tableOfContentsSettings) contain the following properties:
 * **startLevel**: Specifies the start level for constructing table of contents.
@@ -25,7 +25,7 @@ The table of contents in a document is the same as the list of chapters at the b
 * **tabLeader**: Specifies the tab leader styles such as none, dot, hyphen, and underscore.
 * **includeOutlineLevels**: Specifies whether the outline levels are included.
 
-The following code illustrates how to insert a table of contents in the Document Editor.
+The following code illustrates how to insert a table of contents in the DOCX Editor.
 
 ```ts
 let tocSettings: TableOfContentsSettings =
@@ -131,7 +131,7 @@ N> The same method is used for inserting, updating, and editing table of content
 
 ## Online Demo
 
-Explore how to insert and update table of contents in Word documents using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/table-of-contents).
+Explore how to insert and update table of contents in Word documents using the React DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/table-of-contents).
 
 ## See Also
 

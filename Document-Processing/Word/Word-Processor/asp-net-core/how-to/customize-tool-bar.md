@@ -3,7 +3,7 @@ layout: post
 title: How to Customize Toolbar in ASP.NET Core DOCX Editor | Syncfusion
 description: Customize the toolbar in Syncfusion® ASP.NET Core DOCX Editor by adding, removing, showing, hiding, enabling, and disabling toolbar items.
 platform: document-processing
-control: Document Editor
+control: DOCX Editor
 documentation: ug
 ---
 
@@ -34,4 +34,4 @@ N> The default value of `ToolbarItems` is `['New', 'Open', 'Separator', 'Undo', 
 
 ## Online demo
 
-Explore how to customize the toolbar in the ASP.NET Core Document Editor for working with Word documents in this live [ASP.NET Core Toolbar Customization demo](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/toolbarcustomization#/tailwind3).
+Explore how to customize the toolbar in the ASP.NET Core DOCX Editor for working with Word documents in this live [ASP.NET Core Toolbar Customization demo](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/toolbarcustomization#/tailwind3).

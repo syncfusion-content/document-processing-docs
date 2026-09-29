@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Charts in Angular DOCX Editor
 
-[Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) provides chart preservation support. Using the Document Editor, you can view chart reports from your Word document.
+[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) provides chart preservation support. Using the DOCX Editor, you can view chart reports from your Word document.
 
-The following example shows chart preservation in the Document Editor.
+The following example shows chart preservation in the DOCX Editor.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
@@ -28,7 +28,7 @@ The following example shows chart preservation in the Document Editor.
 
 ## Supported Chart Types
 
-The following chart types are supported in the Document Editor:
+The following chart types are supported in the DOCX Editor:
 * Scatter_Markers
 * Bubble
 * Area
@@ -51,4 +51,4 @@ The following chart types are supported in the Document Editor:
 
 ## Online Demo
 
-Explore how to preserve charts in Word documents using the Angular Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/chart).
+Explore how to preserve charts in Word documents using the Angular DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/chart).

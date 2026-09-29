@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Paragraph Format in React DOCX Editor
 
-[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports various paragraph formatting options such as text alignment, indentation, paragraph spacing, and more.
+[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports various paragraph formatting options such as text alignment, indentation, paragraph spacing, and more.
 
 ## Indentation
 
@@ -117,7 +117,7 @@ documenteditor.selection.paragraphFormat.borders.bottom.lineWidth = 3;
 documenteditor.selection.paragraphFormat.borders.bottom.color = "#000000";
 ```
 
-N> At present, the Document Editor component displays all the border styles as single line. But you can apply any border style and get the proper display in Microsoft Word app when opening the exported Word document.
+N> At present, the DOCX Editor component displays all the border styles as single line. But you can apply any border style and get the proper display in Microsoft Word app when opening the exported Word document.
 
 ## Pagination properties
 
@@ -137,7 +137,7 @@ documenteditor.selection.paragraphFormat.keepLinesTogether = true;
 
 ## Show or Hide Paragraph marks
 
-You can show or hide the hidden formatting symbols like spaces, tab, paragraph marks, and breaks in Document Editor component. These marks indicate the start and end of a paragraph, as well as all the hidden formatting symbols in a Word document.
+You can show or hide the hidden formatting symbols like spaces, tab, paragraph marks, and breaks in DOCX Editor component. These marks indicate the start and end of a paragraph, as well as all the hidden formatting symbols in a Word document.
 
 The following example code illustrates how to show or hide paragraph marks.
 
@@ -315,7 +315,7 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ## Online Demo
 
-Explore how to apply paragraph formatting in Word documents using the React Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/paragraph-formatting).
+Explore how to apply paragraph formatting in Word documents using the React DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/paragraph-formatting).
 
 ## See Also
 

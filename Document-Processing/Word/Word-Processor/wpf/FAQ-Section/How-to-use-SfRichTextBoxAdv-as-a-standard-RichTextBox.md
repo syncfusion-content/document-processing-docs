@@ -116,5 +116,5 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/WPF-RichTextBox
 
 ## See also
 
-- [WPF RichTextBox Feature Tour](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor)
-- [WPF RichTextBox Examples](https://github.com/syncfusion/docx-editor-sdk-wpf-demos)
+- [WPF DOCX Editor Feature Tour](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor)
+- [WPF DOCX Editor Examples](https://github.com/syncfusion/docx-editor-sdk-wpf-demos)

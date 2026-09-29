@@ -9,11 +9,11 @@ documentation: ug
 
 # How to Enable Ruler in React ASP.NET MVC Editor
 
-To enable the ruler, set the [`showRuler`](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditorSettings.html) property to `true` in the `documentEditorSettings` of the Document Editor component. By default, the ruler is disabled. The ruler can be used to set specific margins, tab stops, or indentations within a document to ensure consistent formatting.
+To enable the ruler, set the [`showRuler`](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditorSettings.html) property to `true` in the `documentEditorSettings` of the DOCX Editor component. By default, the ruler is disabled. The ruler can be used to set specific margins, tab stops, or indentations within a document to ensure consistent formatting.
 
-## How to enable ruler in the Document Editor component
+## How to enable ruler in the DOCX Editor component
 
-The following example illustrates how to enable the ruler in the Document Editor.
+The following example illustrates how to enable the ruler in the DOCX Editor.
 
 
 {% tabs %}

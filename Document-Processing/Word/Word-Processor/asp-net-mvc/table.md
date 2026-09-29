@@ -10,7 +10,7 @@ documentation: ug
 
 # Tables in ASP.NET MVC DOCX Editor
 
-Tables are an efficient way to present information. The Document Editor can display and edit tables. You can select and edit tables through keyboard, mouse, or touch interactions. It exposes a rich set of APIs to perform these operations programmatically.
+Tables are an efficient way to present information. The DOCX Editor can display and edit tables. You can select and edit tables through keyboard, mouse, or touch interactions. It exposes a rich set of APIs to perform these operations programmatically.
 
 ## Create a table
 
@@ -23,7 +23,7 @@ You can create and insert a table at the cursor position by specifying the requi
 ## Set the maximum number of Rows when inserting a table
 
 
-You can use the `maximumRows` property to set the maximum number of rows allowed while inserting a table in the Document Editor component.
+You can use the `maximumRows` property to set the maximum number of rows allowed while inserting a table in the DOCX Editor component.
 
 ```ts
 <div>
@@ -51,7 +51,7 @@ N> The maximum number of rows is 32767, as per Microsoft Word application, and y
 ## Set the maximum number of Columns when inserting a table
 
 
-You can use the `maximumColumns` property to set the maximum number of columns allowed while inserting a table in the Document Editor component.
+You can use the `maximumColumns` property to set the maximum number of columns allowed while inserting a table in the DOCX Editor component.
 
 Refer to the following sample code.
 
@@ -155,7 +155,7 @@ documenteditor.selection.selectCell();
 
 ## Delete table
 
-The Document Editor allows you to delete the entire table. You can use the `deleteTable()` method of the editor instance if the selection is in a table.
+The DOCX Editor allows you to delete the entire table. You can use the `deleteTable()` method of the editor instance if the selection is in a table.
 
 ```typescript
 documenteditor.editor.deleteTable();
@@ -163,7 +163,7 @@ documenteditor.editor.deleteTable();
 
 ## Delete row
 
-The Document Editor allows you to delete the selected number of rows. You can use the `deleteRow()` method of the editor instance to delete the selected number of rows, if the selection is in a table.
+The DOCX Editor allows you to delete the selected number of rows. You can use the `deleteRow()` method of the editor instance to delete the selected number of rows, if the selection is in a table.
 
 ```typescript
 documenteditor.editor.deleteRow();
@@ -171,7 +171,7 @@ documenteditor.editor.deleteRow();
 
 ## Delete column
 
-The Document Editor allows you to delete the selected number of columns. You can use the `deleteColumn()` method of the editor instance to delete the selected number of columns, if the selection is in a table.
+The DOCX Editor allows you to delete the selected number of columns. You can use the `deleteColumn()` method of the editor instance to delete the selected number of columns, if the selection is in a table.
 
 ```typescript
 documenteditor.editor.deleteColumn();
@@ -187,7 +187,7 @@ documenteditor.editor.mergeCells();
 
 ## Positioning the table
 
-Document Editor preserves the position properties of the table and displays the table based on the position properties. It does not support modifying the position properties. The table will be automatically moved along with the text while editing if it is positioned relative to the paragraph.
+DOCX Editor preserves the position properties of the table and displays the table based on the position properties. It does not support modifying the position properties. The table will be automatically moved along with the text while editing if it is positioned relative to the paragraph.
 
 ## How to work with tables
 

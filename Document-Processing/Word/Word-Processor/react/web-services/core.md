@@ -24,9 +24,9 @@ This section explains how to create the service for DocumentEditor in ASP.NET Co
 
 ## Importing Word documents
 
-As the Document Editor client-side script requires the document in SFDT file format, you can convert the Word documents (.dotx,.docx,.docm,.dot,.doc), rich text format documents (.rtf), and text documents (.txt) into SFDT format by using this Web API.
+As the DOCX Editor client-side script requires the document in SFDT file format, you can convert the Word documents (.dotx,.docx,.docm,.dot,.doc), rich text format documents (.rtf), and text documents (.txt) into SFDT format by using this Web API.
 
-The following example code illustrates how to write a Web API for importing Word documents into the Document Editor component.
+The following example code illustrates how to write a Web API for importing Word documents into the DOCX Editor component.
 
 ```csharp
     [AcceptVerbs("Post")]
@@ -54,7 +54,7 @@ The following example code illustrates how to write a Web API for importing Word
 
 ### Import a document with TIFF, EMF, and WMF images
 
-Web browsers do not support displaying metafile images like EMF and WMF, or TIFF format images. As a fallback approach, you can convert the metafile/TIFF format image to a raster image using any image converter in the `MetafileImageParsed` event, and this fallback raster image will be displayed in the client-side Document Editor component.
+Web browsers do not support displaying metafile images like EMF and WMF, or TIFF format images. As a fallback approach, you can convert the metafile/TIFF format image to a raster image using any image converter in the `MetafileImageParsed` event, and this fallback raster image will be displayed in the client-side DOCX Editor component.
 
 N> In the `MetafileImageParsedEventArgs` event argument, you can get the metafile stream using the `MetafileStream` property, and you can get the `IsMetafile` boolean value to determine whether the image is a metafile image (WMF, EMF) or a TIFF format image. In the example below, the TIFF is converted to a raster image in the `ConvertTiffToRasterImage()` method using [BitMiracle.LibTiff.NET](https://www.nuget.org/packages/BitMiracle.LibTiff.NET).
 
@@ -214,11 +214,11 @@ The following example code illustrates how to write a Web API for paste with for
     }
 ```
 
-N> Web browsers do not support displaying metafile images like EMF and WMF. As a fallback approach, you can convert the metafile to a raster image using any image converter in the `MetafileImageParsed` event, and this fallback raster image will be displayed in the client-side Document Editor component.
+N> Web browsers do not support displaying metafile images like EMF and WMF. As a fallback approach, you can convert the metafile to a raster image using any image converter in the `MetafileImageParsed` event, and this fallback raster image will be displayed in the client-side DOCX Editor component.
 
 ## Restrict editing
 
-This Web API generates a hash from the specified password and salt value which is required for the restrict editing functionality of the Document Editor component.
+This Web API generates a hash from the specified password and salt value which is required for the restrict editing functionality of the DOCX Editor component.
 
 The following example code illustrates how to write a Web API to restrict editing.
 
@@ -244,17 +244,17 @@ The following example code illustrates how to write a Web API to restrict editin
 
 ## Spell Check
 
-Document Editor supports spell checking for input text. It identifies misspelled words and provides suggestions through a dialog and the context menu. The Document Editor client-side script requires this Web API to display error words and suggestions. This Web API returns a JSON response containing details about misspelled words and their suggestions.
+DOCX Editor supports spell checking for input text. It identifies misspelled words and provides suggestions through a dialog and the context menu. The DOCX Editor client-side script requires this Web API to display error words and suggestions. This Web API returns a JSON response containing details about misspelled words and their suggestions.
 
 ### Dictionary setup
 
-The Document Editor performs spell checking using [Hunspell dictionary files](https://github.com/wooorm/dictionaries). These dictionaries can be obtained from their respective sources. 
+The DOCX Editor performs spell checking using [Hunspell dictionary files](https://github.com/wooorm/dictionaries). These dictionaries can be obtained from their respective sources. 
 
 To set up spell checking, place the required dictionary files, including the .dic, .aff, and JSON configuration file, inside the `App_Data` folder in your project. To support a personal dictionary, place an empty .dic file in the same `App_Data` folder.
 
 Refer to the following screenshot for the folder structure.
 
-![Dictionary setup in React Document Editor](../images/spellcheck-dictionary-setup.png)
+![Dictionary setup in React DOCX Editor](../images/spellcheck-dictionary-setup.png)
 
 The JSON file should contain the configuration details in the following format:
 
@@ -323,7 +323,7 @@ public Startup(IConfiguration configuration, IWebHostEnvironment env)
 
 ### Web API for word-by-word spell check 
 
-This Web API performs spell checking word by word and returns a JSON response containing information about error words and suggestions, if any. By default, word-by-word spell checking is performed in the Document Editor when spell check is enabled on the client side.
+This Web API performs spell checking word by word and returns a JSON response containing information about error words and suggestions, if any. By default, word-by-word spell checking is performed in the DOCX Editor when spell check is enabled on the client side.
 
 The following example code illustrates how to write a Web API for word-by-word spell checking.
 

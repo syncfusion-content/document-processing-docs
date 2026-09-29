@@ -3,7 +3,7 @@ layout: post
 title: Restrict Editing in Blazor DOCX Editor | Syncfusion
 description: Restrict editing feature in Blazor DOCX Editor enables read-only access, form filling, comments, and editable regions to protect document content.
 platform: document-processing
-control: Document Editor
+control: DOCX Editor
 documentation: ug
 ---
 
@@ -80,4 +80,4 @@ The following code example demonstrates how to enable or disable editable region
 
 ## Online Demo
 
-Explore how to restrict editing and protect Word documents using the Blazor Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/document-protection?theme=fluent2).
+Explore how to restrict editing and protect Word documents using the Blazor DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/document-protection?theme=fluent2).

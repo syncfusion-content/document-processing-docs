@@ -180,6 +180,6 @@ N> Currently, the SfRichTextBoxAdv does not support the options pane on Phone de
 
 ## See also
 
-- [Getting started with UWP RichTextBox](./Getting-Started)
-- [Selection in UWP RichTextBox](./Selection)
-- [Commands in UWP RichTextBox](./Commands)
+- [Getting started with UWP DOCX Editor](./Getting-Started)
+- [Selection in UWP DOCX Editor](./Selection)
+- [Commands in UWP DOCX Editor](./Commands)

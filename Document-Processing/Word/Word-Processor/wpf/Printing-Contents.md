@@ -8,7 +8,7 @@ keywords: printing,print-dialog,print-completed,print-comments
 ---
 # Printing Contents in WPF DOCX Editor
 
-The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) supports an API to print the rich text content as pages using the print dialog through the [PrintDocument](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_PrintDocument) method.
+The [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) supports an API to print the rich text content as pages using the print dialog through the [PrintDocument](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_PrintDocument) method.
 
 ## Print
 
@@ -103,10 +103,10 @@ richTextBoxAdv.EditorSettings.PrintComments = False
 
 N> In order to invoke printing, the standard keyboard shortcut CTRL + P can also be used.
 
-You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
+You can refer to our [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF DOCX Editor example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 
 ## See also
 
-- [Getting Started in WPF RichTextBox](./Getting-Started)
-- [Commands in WPF RichTextBox](./Commands)
-- [Document Structure in WPF RichTextBox](./Document-Structure)
+- [Getting Started in WPF DOCX Editor](./Getting-Started)
+- [Commands in WPF DOCX Editor](./Commands)
+- [Document Structure in WPF DOCX Editor](./Document-Structure)

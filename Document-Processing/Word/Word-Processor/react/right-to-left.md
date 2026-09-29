@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Right to Left in React DOCX Editor
 
-[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) provides RTL (right-to-left) support. This can be enabled using the `enableRtl` property.
+[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) provides RTL (right-to-left) support. This can be enabled using the `enableRtl` property.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -28,4 +28,4 @@ domainurl: ##DomainURL##
 
 ## Online Demo
 
-Explore how to enable right-to-left layout in Word documents using the React Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/right-to-left).
+Explore how to enable right-to-left layout in Word documents using the React DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/right-to-left).

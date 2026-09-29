@@ -57,6 +57,6 @@ Then, click **Go** and select the **CMD** option under **Debug console**.
 
 **Step 8:** Browse to the app.
 
-Browse to the deployed app at `http://<app_name>.azurewebsites.net` (for example, `http://documenteditorjava.azurewebsites.net`). Navigating to this link opens the Document Editor Web API at `http://documenteditorjava.azurewebsites.net/tomcat-0.0.1-SNAPSHOT`, which returns the default GET-method response.
+Browse to the deployed app at `http://<app_name>.azurewebsites.net` (for example, `http://documenteditorjava.azurewebsites.net`). Navigating to this link opens the DOCX Editor Web API at `http://documenteditorjava.azurewebsites.net/tomcat-0.0.1-SNAPSHOT`, which returns the default GET-method response.
 
-Append the running App Service URL `http://documenteditorjava.azurewebsites.net/tomcat-0.0.1-SNAPSHOT` to the `serviceUrl` in the client-side Document Editor control. For more information about the Document Editor control, refer to the [`Getting Started` page](../getting-started).
+Append the running App Service URL `http://documenteditorjava.azurewebsites.net/tomcat-0.0.1-SNAPSHOT` to the `serviceUrl` in the client-side DOCX Editor control. For more information about the DOCX Editor control, refer to the [`Getting Started` page](../getting-started).

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Print in React DOCX Editor
 
-To print the document, use the [`print`](https://ej2.syncfusion.com/react/documentation/api/document-editor#print) method from the Document Editor instance.
+To print the document, use the [`print`](https://ej2.syncfusion.com/react/documentation/api/document-editor#print) method from the DOCX Editor instance.
 
 Refer to the following example for showing a document and printing it.
 
@@ -45,11 +45,11 @@ Refer to the following example for creating a document and printing it.
 {% previewsample "/document-processing/code-snippet/document-editor/react/print-cs2" %}
 
 N> 1. DocumentEditor features are segregated into individual feature-wise modules. To use print, inject the `Print` module using `DocumentEditor.Inject(Print)`.
-N> 2. To enable print for a Document Editor instance, set `enablePrint` as true.
+N> 2. To enable print for a DOCX Editor instance, set `enablePrint` as true.
 
 ## Improve print quality
 
-The Document Editor provides an option to improve the print quality using [`printDevicePixelRatio`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documentEditorSettingsModel#printdevicepixelratio) in Document Editor settings. The Document Editor uses a canvas approach to render content. The canvas is then converted to an image and processed for print. Using the `printDevicePixelRatio` API, you can increase the image quality based on your requirement.
+The DOCX Editor provides an option to improve the print quality using [`printDevicePixelRatio`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documentEditorSettingsModel#printdevicepixelratio) in Document Editor settings. The DOCX Editor uses a canvas approach to render content. The canvas is then converted to an image and processed for print. Using the `printDevicePixelRatio` API, you can increase the image quality based on your requirement.
 
 The following example code illustrates how to improve the print quality in the Document Editor container.
 
@@ -78,13 +78,13 @@ export default App;
 createRoot(document.getElementById('sample')).render(<App />);
 ```
 
-N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 N> By default, the `printDevicePixelRatio` value is 1.
 
 ## Print using window object
 
-You can print the document in the Document Editor by passing the window instance. This is useful to implement print in third-party frameworks such as Electron, where the window instance will be available. Refer to the following example.
+You can print the document in the DOCX Editor by passing the window instance. This is useful to implement print in third-party frameworks such as Electron, where the window instance will be available. Refer to the following example.
 
 ```ts
 import * as ReactDOM from 'react-dom';
@@ -216,7 +216,7 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 ```
 
-By customizing margins, papers, and layouts, the layout of the document will be changed in the Document Editor. To modify these options during the print operation, serialize the document as SFDT using the [`serialize`](https://ej2.syncfusion.com/react/documentation/api/document-editor#serialize) method in the Document Editor instance and open the SFDT data in another instance of the Document Editor in a separate window.
+By customizing margins, papers, and layouts, the layout of the document will be changed in the DOCX Editor. To modify these options during the print operation, serialize the document as SFDT using the [`serialize`](https://ej2.syncfusion.com/react/documentation/api/document-editor#serialize) method in the DOCX Editor instance and open the SFDT data in another instance of the DOCX Editor in a separate window.
 
 The following example shows how to customize layout options only for printing.
 
@@ -236,7 +236,7 @@ The following example shows how to customize layout options only for printing.
 
 ## Online Demo
 
-Explore how to print Word documents using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/print).
+Explore how to print Word documents using the React DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/print).
 
 ## See Also
 

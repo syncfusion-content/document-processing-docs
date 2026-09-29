@@ -24,9 +24,9 @@ Using the [`insertBookmark`] method, bookmark can be added to the selected text.
 container.documentEditor.editor.insertBookmark("Bookmark1");
 ```
 
-## Select Bookmark
+## Select and Navigate to a Bookmark
 
-You can select the bookmark in the document using the [`selectBookmark`] method by providing the bookmark name to select as shown in the following code snippet.
+You can select a bookmark by its name using the [`selectBookmark`] method, which also navigates the editor to the bookmark location, as shown in the following code snippet.
 
 ```csharp
 container.documentEditor.selection.selectBookmark("Bookmark1", true);
@@ -62,7 +62,7 @@ container.documentEditor.selection.getBookmarks(false);
 
 ## Show or Hide Bookmark
 
-You can show or hide the bookmark indicators around bookmarked items in Document Editor component.
+You can show or hide the bookmark indicators around bookmarked items in DOCX Editor component.
 
 The following example code illustrates how to show or hide the bookmark indicators around bookmarked items.
 
@@ -92,7 +92,7 @@ container.documentEditor.editor.insertText("Hello World");
 
 ## Bookmark Dialog
 
-The following example shows how to open the bookmark dialog in Document Editor.
+The following example shows how to open the bookmark dialog in DOCX Editor.
 
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
@@ -105,7 +105,7 @@ The following example shows how to open the bookmark dialog in Document Editor.
 
 ## Online Demo
 
-Explore how to insert and manage bookmarks in Word documents using the ASP.NET Core Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/hyperlinksandbookmarks#/tailwind3).
+Explore how to insert and manage bookmarks in Word documents using the ASP.NET Core DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/hyperlinksandbookmarks#/tailwind3).
 
 ## See Also
 

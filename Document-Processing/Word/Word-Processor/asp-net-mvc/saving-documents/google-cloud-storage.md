@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Save to Google Cloud Storage in ASP.NET MVC DOCX Editor | Syncfusion
-description: Learn how to save a document to Google Cloud Storage in the Syncfusion ASP.NET MVC Document Editor of Syncfusion Essential JS 2 and more details.
+description: Learn how to save a document to Google Cloud Storage in the Syncfusion ASP.NET MVC DOCX Editor of Syncfusion Essential JS 2 and more details.
 platform: document-processing
 control: Save document to Google Cloud Storage
 documentation: ug
@@ -13,9 +13,9 @@ domainurl: ##DomainURL##
 To save a document to Google Cloud Storage, follow these steps:
 
 
-**Step 1:** Create a Simple Document Editor Sample in ASP.NET MVC
+**Step 1:** Create a Simple DOCX Editor Sample in ASP.NET MVC
 
-Follow the steps in this [link](../getting-started) to create a simple Document Editor sample in ASP.NET MVC. This gives you a basic setup of the Document Editor component.
+Follow the steps in this [link](../getting-started) to create a simple DOCX Editor sample in ASP.NET MVC. This gives you a basic setup of the DOCX Editor component.
 
 
 **Step 2:** Create the `DocumentEditorController.cs` File in the Web Service Project
@@ -120,7 +120,7 @@ N> Replace **Your Bucket name from Google Cloud Storage** with the actual name o
 
 N> Replace **path/to/service-account-key.json** with the actual file path to your service account key JSON file. Make sure to provide the correct path and filename.
 
-**Step 3:** Modify the Index.cshtml File in the Document Editor Sample
+**Step 3:** Modify the Index.cshtml File in the DOCX Editor Sample
 
 On the client side, export the document to a blob using `saveAsBlob`, and send it to the server to save it in Google Cloud Storage.
 

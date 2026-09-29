@@ -87,7 +87,7 @@ this.$refs.documenteditor.ej2Instances.selection.closeHeaderFooter()
 
 ## Online Demo
 
-Explore how to add and customize headers and footers in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/headers-and-footers.html).
+Explore how to add and customize headers and footers in Word documents using the Vue DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/headers-and-footers.html).
 
 ## See Also
 

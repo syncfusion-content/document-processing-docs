@@ -8,7 +8,7 @@ keywords: undo-redo,history,undo,redo,editor-settings,is-undo-enabled
 ---
 # Undo Redo in WPF DOCX Editor
 
-The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) provides history preservation support, which means each editing operation performed on its document content will be preserved in history. The undo and redo behavior is configured through the [EditorSettings](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.EditorSettings.html) class. You can easily undo any editing action. The undone actions will also be preserved in a separate stack enabling you to redo the action.
+The [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) provides history preservation support, which means each editing operation performed on its document content will be preserved in history. The undo and redo behavior is configured through the [EditorSettings](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.EditorSettings.html) class. You can easily undo any editing action. The undone actions will also be preserved in a separate stack enabling you to redo the action.
 
 N> Currently, the number of actions that can be preserved in both undo and redo stacks is limited to 500.
 
@@ -99,10 +99,10 @@ richTextBoxAdv.EditorSettings.CanUndoStyle = False
 
 N> This API is supported starting from release version v18.1.0.X.
 
-N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
+N> You can refer to our [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF DOCX Editor example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 
 ## See also
 
-- [Commands in WPF RichTextBox](./Commands)
-- [Document Structure in WPF RichTextBox](./Document-Structure)
-- [Document Properties in WPF RichTextBox](./Document-Properties)
+- [Commands in WPF DOCX Editor](./Commands)
+- [Document Structure in WPF DOCX Editor](./Document-Structure)
+- [Document Properties in WPF DOCX Editor](./Document-Properties)

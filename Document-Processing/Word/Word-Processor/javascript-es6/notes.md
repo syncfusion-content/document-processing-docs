@@ -18,7 +18,7 @@ Footnotes and endnotes are both ways of adding extra bits of information to your
 
 ## Insert footnotes
 
-Document Editor exposes an API to insert footnotes at the cursor position programmatically, or they can be inserted at the end of selected text.
+DOCX Editor exposes an API to insert footnotes at the cursor position programmatically, or they can be inserted at the end of selected text.
 
 ```ts
 import { DocumentEditorContainer, Toolbar } from '@syncfusion/ej2-documenteditor';
@@ -35,7 +35,7 @@ container.documentEditor.editor.insertFootnote();
 
 ## Insert endnotes
 
-Document Editor exposes an API to insert endnotes at the cursor position programmatically, or they can be inserted at the end of selected text.
+DOCX Editor exposes an API to insert endnotes at the cursor position programmatically, or they can be inserted at the end of selected text.
 
 ```ts
 import { DocumentEditorContainer, Toolbar } from '@syncfusion/ej2-documenteditor';
@@ -58,4 +58,4 @@ You can update or edit the footnotes and endnotes using the built-in context men
 
 ## Online Demo
 
-Explore how to add and manage notes in Word documents using the JavaScript Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/notes.html).
+Explore how to add and manage notes in Word documents using the JavaScript DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/notes.html).

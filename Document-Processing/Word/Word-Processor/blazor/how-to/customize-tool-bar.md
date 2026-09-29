@@ -3,7 +3,7 @@ layout: post
 title: How to Customize Toolbar in Blazor DOCX Editor | Syncfusion
 description: Customize the toolbar in Syncfusion® Blazor DOCX Editor by adding, removing, showing, hiding, enabling, and disabling toolbar items.
 platform: document-processing
-control: Document Editor
+control: DOCX Editor
 documentation: ug
 ---
 
@@ -45,4 +45,4 @@ N> The default value of `ToolbarItems` is `['New', 'Open', 'Separator', 'Undo', 
 
 ## Online Demo
 
-Explore how to customize the toolbar in the Blazor Document Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/toolbar-customization?theme=fluent2).
+Explore how to customize the toolbar in the Blazor DOCX Editor for working with Word documents in this live demo [here](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/toolbar-customization?theme=fluent2).

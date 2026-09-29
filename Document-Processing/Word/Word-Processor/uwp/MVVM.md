@@ -305,6 +305,6 @@ The following code example demonstrates how to create a XAML view with SfRichTex
 
 ## See also
 
-- [Commands in UWP RichTextBox](./Commands)
-- [Document properties in UWP RichTextBox](./Document-Properties)
-- [Getting started with UWP RichTextBox](./Getting-Started)
+- [Commands in UWP DOCX Editor](./Commands)
+- [Document properties in UWP DOCX Editor](./Document-Properties)
+- [Getting started with UWP DOCX Editor](./Getting-Started)

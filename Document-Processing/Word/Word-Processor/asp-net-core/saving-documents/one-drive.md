@@ -16,9 +16,9 @@ To save a document to OneDrive, follow these steps:
 
 Create a Microsoft Graph API application and obtain the application ID and tenant ID. Follow the steps provided in the [Microsoft Graph training](https://learn.microsoft.com/en-us/training/modules/msgraph-access-file-data/3-exercise-access-files-onedrive) to create the application and obtain the required IDs.
 
-**Step 2:** Create a Simple Document Editor Sample in ASP.NET Core
+**Step 2:** Create a Simple DOCX Editor Sample in ASP.NET Core
 
-Start by following the steps provided in this [link](../../document-editor/getting-started-core) to create a simple Document Editor sample in ASP.NET Core. This will give you a basic setup of the Document Editor component. 
+Start by following the steps provided in this [link](../../document-editor/getting-started-core) to create a simple DOCX Editor sample in ASP.NET Core. This will give you a basic setup of the DOCX Editor component. 
 
 
 **Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
@@ -134,7 +134,7 @@ private string GetValue(IFormCollection data, string key)
 
 N> Replace **Your_Tenant_ID**, **Your_Application_ID**, and **Your_Folder_Name_To_Access_The_Files_In_OneDrive** with your actual tenant ID, application ID, and folder name.
 
-**Step 4:**  Modify the Index.cshtml File in the Document Editor sample
+**Step 4:**  Modify the Index.cshtml File in the DOCX Editor sample
 
 On the client side, export the document to a blob using `saveAsBlob` and send it to the server for saving in OneDrive.
 

@@ -3,7 +3,7 @@ layout: post
 title: Disable Header Footer Editing in TypeScript DOCX Editor | Syncfusion
 description: Disable header and footer editing in Syncfusion® TypeScript DOCX Editor based on selection context to restrict modifications within document sections.
 platform: document-processing
-control: Disable Header and Footer Edit in Document Editor
+control: Disable Header and Footer Edit in DOCX Editor
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -68,7 +68,7 @@ container.selectionChange = (): void => {
 
 ## Disable header and footer edit in a DocumentEditor instance
 
-Like `restrictEditing`, you can use the [`isReadOnly`](https://ej2.syncfusion.com/documentation/api/document-editor#isreadonly) property in the Document Editor to disable header and footer editing.
+Like `restrictEditing`, you can use the [`isReadOnly`](https://ej2.syncfusion.com/documentation/api/document-editor#isreadonly) property in the DOCX Editor to disable header and footer editing.
 
 The following example code illustrates how to disable header and footer editing in a `DocumentEditor` instance.
 

@@ -19,9 +19,9 @@ To create a Dropbox API App, you should follow the official [Dropbox .NET tutori
 N> 1. In the Dropbox App Console, configure your app's permissions/scopes to grant folder access (e.g., `files.content.write`) required for uploading files. Without these scopes, the upload will fail with a permission error.
 N> 2. Generate the **Access Token** from the App Console after creating your app. For production use, use the OAuth 2.0 authorization flow to obtain tokens dynamically. Refer to the [Dropbox .NET tutorial](https://www.dropbox.com/developers/documentation/dotnet#tutorial) for details.
 
-**Step 2:** Create a Simple Document Editor sample in Angular
+**Step 2:** Create a Simple DOCX Editor sample in Angular
 
-Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in Angular. This will give you a basic setup of the Document Editor component.
+Follow the instructions provided in this [link](../getting-started) to create a simple DOCX Editor sample in Angular. This will give you a basic setup of the DOCX Editor component.
 
 **Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
 
@@ -131,7 +131,7 @@ private string GetValue(IFormCollection data, string key)
 
 N> Replace **Your_Dropbox_Access_Token** with your actual Dropbox access token and **Your_Folder_Name** with your folder name.
 
-**Step 4:**  Modify the index File in the Document Editor sample
+**Step 4:**  Modify the index File in the DOCX Editor sample
 
 On the client side, export the document to a blob using [`saveAsBlob`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#saveasblob) and send it to the server side for saving in Dropbox cloud file storage.
 

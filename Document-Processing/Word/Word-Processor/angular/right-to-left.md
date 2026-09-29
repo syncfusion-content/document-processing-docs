@@ -26,4 +26,4 @@ domainurl: ##DomainURL##
 
 ## Online demo
 
-Explore how to enable right-to-left layout in Word documents using the Angular Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/right-to-left).
+Explore how to enable right-to-left layout in Word documents using the Angular DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/right-to-left).

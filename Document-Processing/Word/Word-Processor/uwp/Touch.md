@@ -105,6 +105,6 @@ richTextBoxAdv.ManipulationMode = ManipulationModes.Scale | ManipulationModes.Sc
 
 ## See also
 
-- [Getting started with UWP RichTextBox](./Getting-Started)
-- [Overview of UWP RichTextBox](./Overview)
-- [Selection in UWP RichTextBox](./Selection)
+- [Getting started with UWP DOCX Editor](./Getting-Started)
+- [Overview of UWP DOCX Editor](./Overview)
+- [Selection in UWP DOCX Editor](./Selection)

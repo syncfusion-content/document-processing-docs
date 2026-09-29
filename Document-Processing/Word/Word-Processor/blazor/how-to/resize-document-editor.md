@@ -3,40 +3,40 @@ layout: post
 title: How to Resize in Blazor DOCX Editor | Syncfusion
 description: Adjust the height and width of the Syncfusion® Blazor DOCX Editor to create responsive layouts and customize the document editing experience.
 platform: document-processing
-control: Document Editor
+control: DOCX Editor
 documentation: ug
 ---
 
 # How to Resize in Blazor DOCX Editor 
 
-In this article, we are going to see how to change the height and width of the Document Editor.
+In this article, we are going to see how to change the height and width of the DOCX Editor.
 
-## Change height of Document Editor
+## Change height of DOCX Editor
 
-[`Blazor Document Editor`](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) component initially renders with a default height. You can change the height of the Document Editor using the [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditorContainer.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditorContainer_Height) property; the value is in pixels.
+[`Blazor DOCX Editor`](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) component initially renders with a default height. You can change the height of the DOCX Editor using the [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditorContainer.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditorContainer_Height) property; the value is in pixels.
 
-The following example code illustrates how to change the height of the Document Editor.
+The following example code illustrates how to change the height of the DOCX Editor.
 
 ```csharp
 <SfDocumentEditorContainer @ref="container" EnableToolbar="true" Height="590px">
 </SfDocumentEditorContainer>
 ```
 
-Similarly, you can use the [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_Height) property for the Document Editor also.
+Similarly, you can use the [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_Height) property for the DOCX Editor also.
 
-## Change width of Document Editor
+## Change width of DOCX Editor
 
-Blazor Document Editor initially renders with a default width. You can change the width of the Document Editor using the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditorContainer.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditorContainer_Width) property; the value is in percent.
+Blazor DOCX Editor initially renders with a default width. You can change the width of the DOCX Editor using the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditorContainer.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditorContainer_Width) property; the value is in percent.
 
-The following example code illustrates how to change the width of the Document Editor.
+The following example code illustrates how to change the width of the DOCX Editor.
 
 ```csharp
 <SfDocumentEditorContainer @ref="container" EnableToolbar="true" Height="590px" Width="80%">
 </SfDocumentEditorContainer>
 ```
 
-Similarly, you can use the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_Width) property for the Document Editor also.
+Similarly, you can use the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditor.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditor_Width) property for the DOCX Editor also.
 
-## Resize Document Editor
+## Resize DOCX Editor
 
-Using the [`ResizeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditorContainer.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditorContainer_ResizeAsync_System_Nullable_System_Double__System_Nullable_System_Double__) method, you can change the height and width of the Document Editor.
+Using the [`ResizeAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditorContainer.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditorContainer_ResizeAsync_System_Nullable_System_Double__System_Nullable_System_Double__) method, you can change the height and width of the DOCX Editor.

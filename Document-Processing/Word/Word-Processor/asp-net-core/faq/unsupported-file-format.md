@@ -9,14 +9,14 @@ documentation: ug
 
 # Supported File Formats in ASP.NET Core DOCX Editor
 
-If you receive the message "The file format you have selected isn't supported. Please choose a valid format." when opening a document in the [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor), it typically indicates that the document format is not supported by the current version of the Document Editor. Here are some common reasons for this warning:
+If you receive the message "The file format you have selected isn't supported. Please choose a valid format." when opening a document in the [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor), it typically indicates that the document format is not supported by the current version of the DOCX Editor. Here are some common reasons for this warning:
 
-1.	Unsupported File Format: The document you are trying to open might be in a format that the Document Editor does not support. Ensure you are using a supported format, such as SFDT.
+1.	Unsupported File Format: The document you are trying to open might be in a format that the DOCX Editor does not support. Ensure you are using a supported format, such as SFDT.
 2.	Corrupted Document: The document file might be corrupted or improperly formatted. Try opening a different document to see if the issue persists.
 
-To avoid this warning, always use the recommended document formats and features supported by the Document Editor. 
+To avoid this warning, always use the recommended document formats and features supported by the DOCX Editor. 
 
-Document Editor supports the following file formats:
+DOCX Editor supports the following file formats:
 
 * Word Document (*.docx)
 * Syncfusion Document Text (*.sfdt)
@@ -28,4 +28,4 @@ Document Editor supports the following file formats:
 * Word 97-2003 Template (*.dot)
 * Word 97-2003 Document (*.doc)
 
-By using these supported formats, you can ensure compatibility and avoid unsupported-format warning messages when opening documents in the Document Editor.
+By using these supported formats, you can ensure compatibility and avoid unsupported-format warning messages when opening documents in the DOCX Editor.

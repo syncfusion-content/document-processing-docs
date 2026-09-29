@@ -16,11 +16,11 @@ This document provides a description of the security updates available for Syncf
 
 ## Security updates
 
-The following security updates are available for the [TypeScript Document Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) control and are listed based on the release version.
+The following security updates are available for the [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) control and are listed based on the release version.
 
 ### 2024 Volume 2 (v26.2.4) - July 25, 2024
 
-This release resolves critical and moderate security vulnerabilities affecting the JavaScript (ES6) Document Editor Docker Image.
+This release resolves critical and moderate security vulnerabilities affecting the JavaScript (ES6) DOCX Editor Docker Image.
 
 **Threat:**
 

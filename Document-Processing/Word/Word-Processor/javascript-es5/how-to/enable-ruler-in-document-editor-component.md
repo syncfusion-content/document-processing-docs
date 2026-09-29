@@ -13,7 +13,7 @@ domainurl: ##DomainURL##
 
 The ruler allows you to set specific margins, tab stops, or indentations within a document to ensure consistent formatting in [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor).
 
-The following example illustrates how to enable the ruler in the Document Editor.
+The following example illustrates how to enable the ruler in the DOCX Editor.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}

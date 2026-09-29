@@ -10,7 +10,7 @@ documentation: ug
 
 # Text Wrapping Style in ASP.NET MVC DOCX Editor
 
-Text wrapping refers to how images and shapes are fitted with surrounding text in a document. Currently, Document Editor has only preservation support for image and text box shapes with the following wrapping styles.
+Text wrapping refers to how images and shapes are fitted with surrounding text in a document. Currently, DOCX Editor has only preservation support for image and text box shapes with the following wrapping styles.
 
 ## In-Line with text
 
@@ -46,6 +46,6 @@ N> Starting from v19.2.0.x, behind text wrapping style is supported.
 
 In this option, text wraps around the image or text box in a square shape.
 
-N> Tight and Through styles will be preserved as the square wrapping style in Document Editor, which is supported from v19.2.0.x.
+N> Tight and Through styles will be preserved as the square wrapping style in DOCX Editor, which is supported from v19.2.0.x.
 
 ![view of shape with square wrapping style in DocumentEditor](images/Text-Wrapping-Style_images/square-textwrapping.PNG)

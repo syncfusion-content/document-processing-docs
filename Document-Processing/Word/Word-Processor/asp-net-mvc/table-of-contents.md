@@ -14,7 +14,7 @@ The table of contents in a document is the same as the list of chapters at the b
 
 ## Inserting table of contents
 
-Document Editor exposes an API to insert a table of contents at the cursor position programmatically. You can specify the settings for the table of contents explicitly. Otherwise, the default settings will be applied.
+DOCX Editor exposes an API to insert a table of contents at the cursor position programmatically. You can specify the settings for the table of contents explicitly. Otherwise, the default settings will be applied.
 
 `TableOfContentsSettings` contains the following properties:
 * **startLevel**: Specifies the start level for constructing table of contents.
@@ -69,7 +69,7 @@ N> Same method is used for inserting, updating, and editing table of contents. T
 
 ## Online demo
 
-Explore how to insert and update table of contents in Word documents using the ASP.NET MVC Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/tableofcontents#/tailwind3).
+Explore how to insert and update table of contents in Word documents using the ASP.NET MVC DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/tableofcontents#/tailwind3).
 
 ## See also
 

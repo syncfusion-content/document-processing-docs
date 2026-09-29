@@ -87,7 +87,7 @@ this.documentEditor.selection.closeHeaderFooter();
 
 ## Online demo
 
-Explore how to add and customize headers and footers in Word documents using the Angular Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/headers-footers).
+Explore how to add and customize headers and footers in Word documents using the Angular DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/headers-footers).
 
 ## See also
 

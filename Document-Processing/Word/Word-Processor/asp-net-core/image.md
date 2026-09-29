@@ -26,20 +26,20 @@ Image files will be internally converted to base64 string. Whereas, online image
 
 ## Image resizing
 
-Document Editor provides a built-in image resizer that can be injected into your application based on the requirements. This allows you to resize the image by dragging the resizing points using mouse or touch interactions. This resizer appears as follows.
+DOCX Editor provides a built-in image resizer that can be injected into your application based on the requirements. This allows you to resize the image by dragging the resizing points using mouse or touch interactions. This resizer appears as follows.
 
 ![Image](images/image.JPG)
 
 ## Changing size
 
-Document Editor exposes an API to get or set the size of the selected image. Refer to the following sample code.
+DOCX Editor exposes an API to get or set the size of the selected image. Refer to the following sample code.
 
 ```typescript
 documenteditor.selection.imageFormat.width = 800;
 documenteditor.selection.imageFormat.height = 800;
 ```
 
-N> Images are stored and processed (read/write) as a base64 string in Document Editor. The online image URL is preserved as a URL in Document Editor upon saving.
+N> Images are stored and processed (read/write) as a base64 string in DOCX Editor. The online image URL is preserved as a URL in DOCX Editor upon saving.
 
 ## Text wrapping style
 
@@ -47,7 +47,7 @@ Text wrapping refers to how images fit with surrounding text in a document. Plea
 
 ## Positioning the image
 
-Document Editor preserves the position properties of the image and displays the image based on those position properties. It does not support modifying the position properties. Whereas, the image will be automatically moved along with the text being edited if it is positioned relative to the line or paragraph.
+DOCX Editor preserves the position properties of the image and displays the image based on those position properties. It does not support modifying the position properties. Whereas, the image will be automatically moved along with the text being edited if it is positioned relative to the line or paragraph.
 
 ## See Also
 

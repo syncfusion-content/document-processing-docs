@@ -9,13 +9,13 @@ keywords: shapes,text-box,rectangle,text-wrapping,shape-resizer
 # Shapes in UWP DOCX Editor
 Shapes are drawing objects such as text boxes, rectangles, lines, curves, and circles. Shapes follow a preset or custom geometry. [`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html) does not support inserting shapes. However, if the document contains a shape during import, the shape is preserved.
 
-N> Shape preservation is supported starting from Syncfusion UWP RichTextBox v18.3.0.X.
+N> Shape preservation is supported starting from Syncfusion UWP DOCX Editor v18.3.0.X.
 
 ## Supported shapes
 
 `SfRichTextBoxAdv` has preservation support for text box and rectangle shapes.
 
-![List of supported shapes in RichTextBox](Shapes_images/Supported_Shapes.PNG)
+![List of supported shapes in UWP DOCX Editor](Shapes_images/Supported_Shapes.PNG)
 
 ## Text box shape
 
@@ -35,12 +35,12 @@ Text wrapping refers to how shapes are positioned relative to the surrounding te
 
 ## Positioning the shape
 
-Starting from Syncfusion UWP RichTextBox v19.1.0.X, `SfRichTextBoxAdv` preserves the position properties of the shape and displays the shape based on those properties. It does not support modifying the position properties. A shape positioned relative to the line or paragraph is automatically moved as the surrounding text is edited.
+Starting from Syncfusion UWP DOCX Editor v19.1.0.X, `SfRichTextBoxAdv` preserves the position properties of the shape and displays the shape based on those properties. It does not support modifying the position properties. A shape positioned relative to the line or paragraph is automatically moved as the surrounding text is edited.
 
 N> At present, a shape with the `Inline` text wrapping style can be dragged and dropped anywhere in the document.
 
 ## See also
 
-- [Text wrapping style in UWP RichTextBox](./Text-Wrapping-Style)
-- [Importing and exporting documents in UWP RichTextBox](./Import-and-Export)
-- [Image support in UWP RichTextBox](./Image)
+- [Text wrapping style in UWP DOCX Editor](./Text-Wrapping-Style)
+- [Importing and exporting documents in UWP DOCX Editor](./Import-and-Export)
+- [Image support in UWP DOCX Editor](./Image)

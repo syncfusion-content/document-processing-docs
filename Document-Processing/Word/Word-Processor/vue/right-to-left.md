@@ -25,4 +25,4 @@ domainurl: ##DomainURL##
 
 ## Online demo
 
-Explore how to enable right-to-left layout in Word documents using the Vue Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/right-to-left.html).
+Explore how to enable right-to-left layout in Word documents using the Vue DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/right-to-left.html).

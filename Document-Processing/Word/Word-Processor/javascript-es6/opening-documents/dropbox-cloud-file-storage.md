@@ -18,9 +18,9 @@ To create a Dropbox API App, you can follow the official Dropbox documentation [
 
  
 
-**Step 2:** Create a simple Document Editor sample in JavaScript (ES6)
+**Step 2:** Create a simple DOCX Editor sample in JavaScript (ES6)
 
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in JavaScript (ES6). This will give you a basic setup of the Document Editor component.
+Start by following the steps provided in this [link](../getting-started) to create a simple DOCX Editor sample in JavaScript (ES6). This will give you a basic setup of the DOCX Editor component.
 
 **Step 3:** Modify the `DocumentEditorController.cs` file in the web service project
 
@@ -107,7 +107,7 @@ public async Task<string> LoadFromDropBox([FromBody] Dictionary<string, string> 
 
 N> Replace **Your_Dropbox_Access_Token** with your actual Dropbox access token and **Your_Folder_Name** with your folder name.
 
-**Step 4:** Modify the index file in the Document Editor sample
+**Step 4:** Modify the index file in the DOCX Editor sample
 
 On the client side, the document returned from the web service is opened using the [`open`](https://ej2.syncfusion.com/documentation/api/document-editor#open) method.
 

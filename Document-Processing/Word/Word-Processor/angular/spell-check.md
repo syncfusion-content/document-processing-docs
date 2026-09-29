@@ -60,7 +60,7 @@ this.container.documentEditor.spellChecker.removeUnderline = false;
 
 ### AllowSpellCheckAndSuggestion
 
-By default, on performing spell check in Document Editor, both spelling and suggestions of the mis-spelled words will be retrieved, and this mis-spelled words can be corrected through context menu suggestions. You can modify this behavior using the [`allowSpellCheckAndSuggestion`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/spellChecker#allowspellcheckandsuggestion) API, which will perform only spell check.
+By default, on performing spell check in DOCX Editor, both spelling and suggestions of the mis-spelled words will be retrieved, and this mis-spelled words can be corrected through context menu suggestions. You can modify this behavior using the [`allowSpellCheckAndSuggestion`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/spellChecker#allowspellcheckandsuggestion) API, which will perform only spell check.
 
 ```typescript
 this.container.documentEditor.spellChecker.allowSpellCheckAndSuggestion = false;
@@ -68,7 +68,7 @@ this.container.documentEditor.spellChecker.allowSpellCheckAndSuggestion = false;
 
 ### LanguageID
 
-Document Editor provides multi-language spell check support. You can add as many languages (dictionaries) in the server-side and to use that language for spell checking in Document Editor, it must be matched with [`languageID`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/spellChecker#languageid) you pass in the Document Editor.
+DOCX Editor provides multi-language spell check support. You can add as many languages (dictionaries) in the server-side and to use that language for spell checking in DOCX Editor, it must be matched with [`languageID`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/spellChecker#languageid) you pass in the DOCX Editor.
 
 ```typescript
 this.container.documentEditor.spellChecker.languageID = 1033; //LCID of "en-us";
@@ -76,7 +76,7 @@ this.container.documentEditor.spellChecker.languageID = 1033; //LCID of "en-us";
 
 ### EnableOptimizedSpellCheck
 
-Document Editor provides option to spellcheck page by page when loading the documents. The default value of this property is false, so when opening the document spellcheck web API will be called for each word in the document. To optimize the frequency of spellcheck web API calls, you can enable this property.
+DOCX Editor provides option to spellcheck page by page when loading the documents. The default value of this property is false, so when opening the document spellcheck web API will be called for each word in the document. To optimize the frequency of spellcheck web API calls, you can enable this property.
 
 The following code example illustrates how to enable optimized spell checking.
 

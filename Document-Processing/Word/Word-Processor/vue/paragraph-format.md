@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Paragraph Format in Vue DOCX Editor
 
-[Vue Document Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) supports various paragraph formatting options such as text alignment, indentation, paragraph spacing, and more.
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) supports various paragraph formatting options such as text alignment, indentation, paragraph spacing, and more.
 
 ## Indentation
 
@@ -137,11 +137,11 @@ this.$refs.documenteditor.selection.paragraphFormat.borders.bottom.lineWidth = 3
 this.$refs.documenteditor.selection.paragraphFormat.borders.bottom.color = "#000000";
 ```
 
-N> At present, the Document Editor component displays all the border styles as single line. But you can apply any border style and get the proper display in Microsoft Word app when opening the exported Word document.
+N> At present, the DOCX Editor component displays all the border styles as single line. But you can apply any border style and get the proper display in Microsoft Word app when opening the exported Word document.
 
 ## Show or Hide Paragraph marks
 
-You can show or hide the hidden formatting symbols like spaces, tab, paragraph marks, and breaks in Document Editor component. These marks indicate the start and end of a paragraph, as well as all the hidden formatting symbols in a Word document.
+You can show or hide the hidden formatting symbols like spaces, tab, paragraph marks, and breaks in DOCX Editor component. These marks indicate the start and end of a paragraph, as well as all the hidden formatting symbols in a Word document.
 
 The following example code illustrates how to show or hide paragraph marks.
 
@@ -386,7 +386,7 @@ export default {
 
 ## Online Demo
 
-Explore how to apply paragraph formatting in Word documents using the Vue Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/paragraph-formatting.html).
+Explore how to apply paragraph formatting in Word documents using the Vue DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/paragraph-formatting.html).
 
 ## See Also
 

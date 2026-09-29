@@ -3,7 +3,7 @@ layout: post
 title: Images in Blazor DOCX Editor | Syncfusion
 description: Images in Blazor DOCX Editor enable resizing and text wrapping while preserving image positions for accurate document layouts.
 platform: document-processing
-control: Document Editor
+control: DOCX Editor
 documentation: ug
 ---
 
@@ -19,13 +19,13 @@ Image files are internally converted to a base64 string. However, online images 
 
 ## Image resizing
 
-The Document Editor provides a built-in image resizer that can be injected into your application based on the requirements. This allows the image to be resized by dragging the resizing points using mouse or touch interactions. This resizer appears as follows.
+The DOCX Editor provides a built-in image resizer that can be injected into your application based on the requirements. This allows the image to be resized by dragging the resizing points using mouse or touch interactions. This resizer appears as follows.
 
-![Image Resizing in Blazor Document Editor](images/blazor-document-editor-image-resizing.jpeg)
+![Image Resizing in Blazor DOCX Editor](images/blazor-document-editor-image-resizing.jpeg)
 
 ## Changing size
 
-The Document Editor exposes APIs to get or resize the selected image. Width and height values are in points. Refer to the following sample code.
+The DOCX Editor exposes APIs to get or resize the selected image. Width and height values are in points. Refer to the following sample code.
 
 ```csharp
 int height = await container.DocumentEditor.Selection.ImageFormat.GetHeightAsync();
@@ -39,6 +39,6 @@ Text wrapping refers to how images fit with surrounding text in a document. [Ref
 
 ## Positioning the image
 
-The Document Editor preserves the position properties of the image and displays the image based on the position properties. It does not support modifying the position properties. However, the image will be automatically moved along with the text edited if it is positioned relative to the line or paragraph.
+The DOCX Editor preserves the position properties of the image and displays the image based on the position properties. It does not support modifying the position properties. However, the image will be automatically moved along with the text edited if it is positioned relative to the line or paragraph.
 
-You can also explore our [`Blazor Word Processor`](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities) example to know how to render and configure the document editor.
+You can also explore our [`Blazor Word Processor`](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities) example to know how to render and configure the DOCX Editor.

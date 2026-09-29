@@ -16,9 +16,9 @@ To save a document to Box cloud file storage, you can follow the steps below.
 
 To access Box storage programmatically, you'll need a developer account with Box. Go to the [Box Developer Console](https://developer.box.com/), sign in or create a new account, and then create a new Box application. This application will provide you with the necessary credentials — Client ID and Client Secret — to authenticate and access Box APIs. Before accessing files, you need to authenticate your application to access your Box account. Box API supports `OAuth 2.0 authentication` for this purpose.
 
-**Step 2:** Create a Simple Document Editor sample in Angular
+**Step 2:** Create a Simple DOCX Editor sample in Angular
 
-Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in Angular. This will give you a basic setup of the Document Editor component.
+Follow the instructions provided in this [link](../getting-started) to create a simple DOCX Editor sample in Angular. This will give you a basic setup of the DOCX Editor component.
 
 **Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
 
@@ -127,7 +127,7 @@ private string GetValue(IFormCollection data, string key)
 
 N> replace **Your_Box_Storage_Access_Token** with your actual box access token, and **Your_Folder_ID** with the ID of the folder in your box storage where you want to perform specific operations. Remember to use your valid box API credentials, as **Your_Box_Storage_ClientID** and **Your_Box_Storage_ClientSecret"** are placeholders for your application's API key and secret.
 
-**Step 4:**  Modify the index File in the Document Editor sample
+**Step 4:**  Modify the index File in the DOCX Editor sample
 
 On the client side, export the document to a blob using [`saveAsBlob`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#saveasblob) and send it to the server side for saving in Box cloud file storage.
 

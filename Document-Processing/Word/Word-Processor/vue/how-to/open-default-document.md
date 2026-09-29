@@ -14,11 +14,11 @@ In this article, we are going to see how to open a default document when Documen
 
 ## Opening a default document in DocumentEditor
 
-By default, [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) will open a blank document. You can use [`open`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#open) API in Document Editor to open the SFDT content.
+By default, [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) will open a blank document. You can use [`open`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#open) API in DOCX Editor to open the SFDT content.
 
-Document Editor has [`created`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#created) event which gets triggered once Document Editor control is created. So, if you want to open the document by default, you can use the [`open`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#open) and [`created`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#created) APIs.
+DOCX Editor has [`created`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#created) event which gets triggered once DOCX Editor control is created. So, if you want to open the document by default, you can use the [`open`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#open) and [`created`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#created) APIs.
 
-The following example illustrates how to open the default SFDT content once Document Editor control gets created.
+The following example illustrates how to open the default SFDT content once DOCX Editor control gets created.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -31,7 +31,7 @@ The following example illustrates how to open the default SFDT content once Docu
         
 {% previewsample "/document-processing/code-snippet/document-editor/vue/open-default-document-cs1" %}
 
-N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 ## Opening a default document in DocumentEditorContainer
 
@@ -46,4 +46,4 @@ N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-ed
         
 {% previewsample "/document-processing/code-snippet/document-editor/vue/open-default-document-cs2" %}
 
-N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.

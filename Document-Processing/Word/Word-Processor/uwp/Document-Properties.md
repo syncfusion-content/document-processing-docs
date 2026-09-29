@@ -106,6 +106,6 @@ End Sub
 
 ## See also
 
-- [Getting started with UWP RichTextBox](./Getting-Started)
-- [Selection in UWP RichTextBox](./Selection)
-- [Table support in UWP RichTextBox](./Table)
+- [Getting started with UWP DOCX Editor](./Getting-Started)
+- [Selection in UWP DOCX Editor](./Selection)
+- [Table support in UWP DOCX Editor](./Table)

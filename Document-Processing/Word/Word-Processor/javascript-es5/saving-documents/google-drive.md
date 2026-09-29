@@ -22,7 +22,7 @@ You must set up a project in the Google Developers Console and enable the Google
 
 **Step 2:** Create a Simple [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) sample in JavaScript (ES5)
 
-Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in JavaScript. This will give you a basic setup of the Document Editor component.
+Follow the instructions provided in this [link](../getting-started) to create a simple DOCX Editor sample in JavaScript. This will give you a basic setup of the DOCX Editor component.
 
 **Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
 
@@ -148,7 +148,7 @@ N> 2. The **FolderId** is the unique identifier for the folder. For example, if 
 N> 3. The `CredentialPath` value in `appsettings.json` must point to the full OAuth 2.0 Client IDs credentials JSON file downloaded from the Google Cloud Console. This JSON file contains the unique `Client_ID` and `Client_Secret` used to authenticate with the Google Drive API and securely save files.
 N> 4. The **Google.Apis.Drive.v3** (v1.68.0.XXXX or later) NuGet package must be installed in your application to use the previous code example.
 
-**Step 4:**  Modify the index file in the Document Editor sample
+**Step 4:**  Modify the index file in the DOCX Editor sample
 
 On the client side, export the document to a blob using [`saveAsBlob`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#saveAsBlob) and send it to the server side for saving in Google Drive.
 

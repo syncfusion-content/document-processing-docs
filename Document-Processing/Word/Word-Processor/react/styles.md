@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Styles in React DOCX Editor
 
-Styles are useful for applying a set of formatting consistently throughout the document. In the Document Editor, styles are created and added to a document programmatically or via the built-in Styles dialog.
+Styles are useful for applying a set of formatting consistently throughout the document. In the DOCX Editor, styles are created and added to a document programmatically or via the built-in Styles dialog.
 
 ## Styles definition overview
 
-A style in the Document Editor should have the following properties:
+A style in the DOCX Editor should have the following properties:
 
 * **name**: Name of the style. All styles in a document have a unique name, which is used as an identifier when applying the style.
 * **type**: Specifies the document elements that the style will target. For example, paragraph or character.
@@ -28,7 +28,7 @@ N> The style type should match the inherited style type. For example, it is not 
 
 ## Default style
 
-The default style for span and paragraph properties is the Normal style. It internally inherits the default style of the document loaded or Document Editor component.
+The default style for span and paragraph properties is the Normal style. It internally inherits the default style of the document loaded or DOCX Editor component.
 
 ## Style hierarchy
 
@@ -275,4 +275,4 @@ let characterStyles = documentEditor.getStyles('Character');
 
 ## Online Demo
 
-Explore how to apply and modify styles in Word documents using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/styles).
+Explore how to apply and modify styles in Word documents using the React DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/styles).

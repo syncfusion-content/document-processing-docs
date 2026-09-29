@@ -8,7 +8,7 @@ keywords: list,numbered-list,bulleted-list,multilevel-list,list-format
 ---
 # List in WPF DOCX Editor
 
-The [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) supports both single-level and multilevel lists similar to those in Microsoft Word. Lists are used to organize data as step-by-step instructions in documents for easier understanding of key points. 
+The [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) supports both single-level and multilevel lists similar to those in Microsoft Word. Lists are used to organize data as step-by-step instructions in documents for easier understanding of key points. 
 
 The list APIs are exposed through the [Lists](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.DocumentAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_DocumentAdv_Lists) and [AbstractLists](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.DocumentAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_DocumentAdv_AbstractLists) collections of the [DocumentAdv](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.DocumentAdv.html) class, and the [LevelOverrideAdv](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.LevelOverrideAdv.html) type. Up to **nine levels** can be defined in a multilevel list, matching the Microsoft Word limit.
 
@@ -31,10 +31,10 @@ The list style is determined by the [ListLevelPattern](https://help.syncfusion.c
 
 The character that appears between the list marker and the list text is set by the [FollowCharacter](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.FollowCharacterType.html) property of a list level. The available values are `Tab`, `Space`, and `Nothing`.
 The following screenshot shows single level bulleted list.
-![WPF RichTextBox showing a single-level bulleted list with dot bullets](List_images/wpf-richtextbox-bullet-list.jpeg)
+![WPF DOCX Editor showing a single-level bulleted list with dot bullets](List_images/wpf-docx-editor-bullet-list.jpeg)
 
 The following screenshot shows single level numbered list.
-![WPF RichTextBox showing a single-level numbered list with sequential numbers](List_images/wpf-richtextbox-number-list.jpeg)
+![WPF DOCX Editor showing a single-level numbered list with sequential numbers](List_images/wpf-docx-editor-number-list.jpeg)
 
 ## Multilevel List
 
@@ -43,7 +43,7 @@ Multilevel means defining a list within a list where up to nine levels can be de
 Each level of a multilevel list uses its own [ListLevelPattern](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.ListLevelPattern.html) value, so you can mix `Bullet` for one level, `Arabic` for another, and `LowLetter` for a third, as Microsoft Word does.
 
 The following screenshot shows multilevel list.
-![WPF RichTextBox showing a multilevel list with three indented levels, mixing bullet and number styles](List_images/wpf-richtextbox-multilevel-list.jpeg)
+![WPF DOCX Editor showing a multilevel list with three indented levels, mixing bullet and number styles](List_images/wpf-docx-editor-multilevel-list.jpeg)
 
 ## Adding List
 
@@ -361,10 +361,10 @@ richTextBoxAdv.Selection.ParagraphFormat.ListLevelNumber = 0
 {% endhighlight %}
 {% endtabs %}
 
-N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
+N> You can refer to our [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF DOCX Editor example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
 
 ## See also
 
-- [Document Structure in WPF RichTextBox](./Document-Structure)
-- [Selection in WPF RichTextBox](./Selection)
-- [Commands in WPF RichTextBox](./Commands)
+- [Document Structure in WPF DOCX Editor](./Document-Structure)
+- [Selection in WPF DOCX Editor](./Selection)
+- [Commands in WPF DOCX Editor](./Commands)

@@ -1646,6 +1646,151 @@ Malgun Gothic, Batang
 </tr>
 </table>
 
+## Register custom fonts
+
+The .NET Excel library allows TrueType (`.ttf`) and OpenType (`.otf`) font files to be registered as custom fonts. The registered fonts are used during Excel-to-PDF conversion when the required fonts are not installed on the system.
+
+The following code example shows how to register custom fonts and use them during Excel-to-PDF conversion.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Excel%20to%20PDF/Custom%20Font/.NET/Custom%20Font/Custom%20Font/Program.cs,180" %}
+// Create a collection to store the custom font streams
+List<Stream> fontStreams = new List<Stream>();
+
+// Retrieve all font files from the specified directory
+foreach (string file in Directory.GetFiles(Path.GetFullPath(@"Data/MyFonts")))
+{
+    string extension = Path.GetExtension(file);
+
+    // Load only TrueType and OpenType font files
+    if (extension.Equals(".ttf", StringComparison.OrdinalIgnoreCase) ||
+        extension.Equals(".otf", StringComparison.OrdinalIgnoreCase))
+    {
+        // Read the font file and copy its content to a memory stream
+        FileStream fileStream = new FileStream(file, FileMode.OpenOrCreate, FileAccess.Read);
+        Stream stream = new MemoryStream();
+        fileStream.CopyTo(stream);
+        stream.Position = 0;
+        fontStreams.Add(stream);
+    }
+}
+
+// Register the custom fonts for use during Excel-to-PDF conversion
+FontManager.RegisterFonts(fontStreams);
+
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+    IApplication application = excelEngine.Excel;
+    application.DefaultVersion = ExcelVersion.Xlsx;
+
+    IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/Input.xlsx"));
+
+    XlsIORenderer renderer = new XlsIORenderer();
+
+    PdfDocument pdfDocument = renderer.ConvertToPDF(workbook);
+
+    pdfDocument.Save(Path.GetFullPath("Output/WorkbookToPDF.pdf"));
+
+    pdfDocument.Close();
+    workbook.Close();
+}
+
+// Clear the registered fonts and dispose their associated streams
+FontManager.ClearRegisteredFonts(true);
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+// Create a collection to store the custom font streams
+List<Stream> fontStreams = new List<Stream>();
+
+// Retrieve all font files from the specified directory
+foreach (string file in Directory.GetFiles(Path.GetFullPath(@"Data/MyFonts")))
+{
+    string extension = Path.GetExtension(file);
+
+    // Load only TrueType and OpenType font files
+    if (extension.Equals(".ttf", StringComparison.OrdinalIgnoreCase) ||
+        extension.Equals(".otf", StringComparison.OrdinalIgnoreCase))
+    {
+        // Read the font file and copy its content to a memory stream
+        FileStream fileStream = new FileStream(file, FileMode.OpenOrCreate, FileAccess.Read);
+        Stream stream = new MemoryStream();
+        fileStream.CopyTo(stream);
+        stream.Position = 0;
+        fontStreams.Add(stream);
+    }
+}
+
+// Register the custom fonts for use during Excel-to-PDF conversion
+FontManager.RegisterFonts(fontStreams);
+using (ExcelEngine excelEngine = new ExcelEngine())
+{
+    Telemetry.Disable();
+    IApplication application = excelEngine.Excel;
+    application.DefaultVersion = ExcelVersion.Xlsx;
+    IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/Input.xlsx"));
+
+    ExcelToPdfConverter converter = new ExcelToPdfConverter(workbook);
+    PdfDocument pdfDocument = converter.Convert();
+
+    pdfDocument.Save(Path.GetFullPath("Output/WorkbookToPDF.pdf"));
+
+    pdfDocument.Close();
+    workbook.Close();
+}
+FontManager.ClearRegisteredFonts(true);
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+' Create a collection to store the custom font streams
+Dim fontStreams As New List(Of Stream)()
+
+' Retrieve all font files from the specified directory
+For Each file As String In Directory.GetFiles(Path.GetFullPath("Data/MyFonts"))
+
+    Dim extension As String = Path.GetExtension(file)
+
+    ' Load only TrueType and OpenType font files
+    If extension.Equals(".ttf", StringComparison.OrdinalIgnoreCase) OrElse
+extension.Equals(".otf", StringComparison.OrdinalIgnoreCase) Then
+
+        ' Read the font file and copy its content to a memory stream
+        Using fileStream As New FileStream(file, FileMode.Open, FileAccess.Read)
+
+            Dim stream As Stream = New MemoryStream()
+            fileStream.CopyTo(stream)
+            stream.Position = 0
+            fontStreams.Add(stream)
+        End Using
+    End If
+Next
+
+' Register the custom fonts for use during Excel-to-PDF conversion
+FontManager.RegisterFonts(fontStreams)
+
+Using excelEngine As New ExcelEngine()
+
+    Dim application As IApplication = excelEngine.Excel
+    application.DefaultVersion = ExcelVersion.Xlsx
+
+    Dim workbook As IWorkbook = application.Workbooks.Open(Path.GetFullPath("Data/Input.xlsx"))
+
+    Dim converter As New ExcelToPdfConverter(workbook)
+    Dim pdfDocument As PdfDocument = converter.Convert()
+
+    pdfDocument.Save(Path.GetFullPath("Output/WorkbookToPDF.pdf"))
+
+    pdfDocument.Close()
+    workbook.Close()
+End Using
+
+' Clear the registered fonts and dispose their associated streams
+FontManager.ClearRegisteredFonts(True)
+{% endhighlight %}
+{% endtabs %}
+
+A complete working example of registering custom fonts in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Excel%20to%20PDF/Custom%20Font/.NET/Custom%20Font" aria-label="GitHub example for registering custom fonts during Excel-to-PDF conversion">this GitHub page</a>.
+
 ## Supported elements
 
 This feature supports the following elements:
@@ -1692,7 +1837,6 @@ The following list contains unsupported elements that presently not preserved in
 * Sparklines
 * Pivot charts
 * SmartArt graphics
-* Different first page headers
 * Different odd and even pages
 * Tables
 	* Custom styles

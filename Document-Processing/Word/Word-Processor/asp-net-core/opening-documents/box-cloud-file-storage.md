@@ -17,9 +17,9 @@ To load a document from Box cloud file storage in a [ASP.NET Core DOCX Editor](h
 To access Box storage programmatically, a Box developer account is required. Go to the [Box Developer Console](https://developer.box.com/guides), sign in or create a new account, and then create a new Box application. This application provides the necessary credentials — Client ID and Client Secret — to authenticate and access Box APIs. Before accessing files, the application must be authenticated to access your Box account. Box uses OAuth 2.0 for authentication.
 
 
-**Step 2:** Create a Simple Document Editor Sample in ASP.NET Core
+**Step 2:** Create a Simple DOCX Editor Sample in ASP.NET Core
 
-Start by following the steps provided in this [link](../../document-editor/getting-started-core) to create a simple Document Editor sample in ASP.NET Core. This will give you a basic setup of the Document Editor component. 
+Start by following the steps provided in this [link](../../document-editor/getting-started-core) to create a simple DOCX Editor sample in ASP.NET Core. This will give you a basic setup of the DOCX Editor component. 
 
 
 **Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
@@ -120,7 +120,7 @@ public async Task<string> LoadFromBoxCloud([FromBody] Dictionary<string, string>
 
 N> Replace **Your_Box_Storage_Access_Token** with your actual Box access token, and **Your_Folder_ID** with the ID of the folder in your Box storage where you want to perform specific operations. Remember to use your valid Box API credentials, as **Your_Box_Storage_ClientID** and **Your_Box_Storage_ClientSecret** are placeholders for your application's API key and secret, respectively.
 
-**Step 4:**  Modify the Index.cshtml File in the Document Editor sample
+**Step 4:**  Modify the Index.cshtml File in the DOCX Editor sample
 
 On the client side, the document returned from the web service is opened using the `open` method.
 

@@ -24,11 +24,11 @@ let fieldResult: string = '«First Name»';
 documenteditor.editor.insertField(fieldCode, fieldResult);
 ```
 
-N> The Document Editor does not validate/process the field code/field result. It simply inserts the field with the specified field information.
+N> The DOCX Editor does not validate/process the field code/field result. It simply inserts the field with the specified field information.
 
 ## Update fields
 
-The Document Editor provides support for updating bookmark cross-reference fields. The following example code illustrates how to update bookmark cross-reference fields.
+The DOCX Editor provides support for updating bookmark cross-reference fields. The following example code illustrates how to update bookmark cross-reference fields.
 
 ```ts
 //Update all the bookmark cross reference field in the document.
@@ -39,7 +39,7 @@ Bookmark cross-reference fields can be updated through the UI by using the Updat
 
 ![Update bookmark cross reference field.](images/updatefields.png)
 
-The following types of fields are automatically updated in the Document Editor.
+The following types of fields are automatically updated in the DOCX Editor.
 
 * NUMPAGES
 * SECTION

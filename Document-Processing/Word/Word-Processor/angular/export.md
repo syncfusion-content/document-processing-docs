@@ -21,7 +21,7 @@ Two types of save APIs are provided as mentioned below.
 
 ## SFDT export
 
-The following example shows how to export documents in the Document Editor as Syncfusion<sup style="font-size:70%">&reg;</sup> document text (.sfdt).
+The following example shows how to export documents in the DOCX Editor as Syncfusion<sup style="font-size:70%">&reg;</sup> document text (.sfdt).
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
@@ -39,7 +39,7 @@ The following example shows how to export documents in the Document Editor as Sy
 
 The following example shows how to export the document as a Word document (.docx).
 
-N> The Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component's document pagination (page-by-page display) can't be guaranteed for all Word documents to match the pagination of the Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
+N> The Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor component's document pagination (page-by-page display) can't be guaranteed for all Word documents to match the pagination of the Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
@@ -57,7 +57,7 @@ N> The Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor componen
 
 The following example shows how to export the document as a Word Template (.dotx).
 
-N> The Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component's document pagination (page-by-page display) can't be guaranteed for all Word documents to match the pagination of the Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
+N> The Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor component's document pagination (page-by-page display) can't be guaranteed for all Word documents to match the pagination of the Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
@@ -89,7 +89,7 @@ The following example shows how to export the document as a text document (.txt)
 
 ## Export as blob
 
-Document Editor also supports an API to store the document into a blob. Refer to the following sample to export the document into a blob on the client side.
+DOCX Editor also supports an API to store the document into a blob. Refer to the following sample to export the document into a blob on the client side.
 
 ```typescript
 import { Component, ViewEncapsulation, ViewChild } from '@angular/core';
@@ -198,7 +198,7 @@ function download(fileName: string, extension: string, buffer: Blob, downloadLin
 
 ## Online demo
 
-Explore how to export Word documents in various formats using the Angular Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/advanced-exporting).
+Explore how to export Word documents in various formats using the Angular DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/advanced-exporting).
 
 ## See also
 

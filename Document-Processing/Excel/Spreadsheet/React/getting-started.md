@@ -129,7 +129,7 @@ cd spreadsheet-app
 Install the [Syncfusion® React Spreadsheet](https://www.npmjs.com/package/@syncfusion/ej2-react-spreadsheet) package from npm using the following command:
 
 ```
-npm install @syncfusion/ej2-react-spreadsheet
+npm install @syncfusion/ej2-react-spreadsheet --save
 ```
 
 ## Register a Syncfusion License Key
@@ -139,24 +139,21 @@ Before initializing the Syncfusion React Spreadsheet component, generate a Syncf
 - [Generate a Syncfusion License Key](https://help.syncfusion.com/document-processing/licensing/how-to-generate)
 - [Register a Syncfusion License Key in a React Application](https://help.syncfusion.com/document-processing/licensing/how-to-register-in-an-application#reactjs)
 
-## Add CSS references
+## Import the required CSS styles
 
-Add the following Spreadsheet and dependent component styles to `src/index.css` file. Replace the existing content with the theme import code below.
+Themes for Spreadsheet can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
 
-```css
-@import '@syncfusion/ej2-base/styles/tailwind3.css';
-@import '@syncfusion/ej2-inputs/styles/tailwind3.css';
-@import '@syncfusion/ej2-buttons/styles/tailwind3.css';
-@import '@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
-@import '@syncfusion/ej2-lists/styles/tailwind3.css';
-@import '@syncfusion/ej2-navigations/styles/tailwind3.css';
-@import '@syncfusion/ej2-popups/styles/tailwind3.css';
-@import '@syncfusion/ej2-dropdowns/styles/tailwind3.css';
-@import '@syncfusion/ej2-grids/styles/tailwind3.css';
-@import '@syncfusion/ej2-react-spreadsheet/styles/tailwind3.css';
+This guide uses the `Tailwind 3` theme as an example, sourced from the theme package. In this package, each component includes an `index.css` file that automatically loads all the required dependency styles. To install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
+
+```bash
+npm install @syncfusion/ej2-tailwind3-theme
 ```
 
-> **Note:** This example uses the `Tailwind3` theme. To use a different built-in theme, replace the `tailwind3.css` references with the corresponding theme stylesheets. Refer to the [Themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme) for information about the available themes and the different ways to include theme styles in a React application.
+Add the required Spreadsheet theme style reference to `src/index.css` file. Replace the existing content with the theme import code below.
+
+```css
+@import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/spreadsheet/index.css';
+```
 
 ## Add the Syncfusion® React Spreadsheet component
 

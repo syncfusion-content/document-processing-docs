@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Section Format in React DOCX Editor
 
-[React Document Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports various section formatting such as page size, page margins, and more.
+[React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports various section formatting such as page size, page margins, and more.
 
 ## Page size
 
@@ -36,7 +36,7 @@ documenteditor.selection.sectionFormat.bottomMargin = 10;
 documenteditor.selection.sectionFormat.topMargin = 10;
 ```
 
-N> The maximum value of margin is 1584, as per Microsoft Word application, and you can set any value less than or equal to 1584 to this property. If you set any value greater than 1584, then the Syncfusion Document Editor will automatically reset it to 1584.
+N> The maximum value of margin is 1584, as per Microsoft Word application, and you can set any value less than or equal to 1584 to this property. If you set any value greater than 1584, then the Syncfusion DOCX Editor will automatically reset it to 1584.
 
 ## Header distance
 
@@ -70,7 +70,7 @@ documentEditor.selection.sectionFormat.lineBetweenColumns = true;
 
 ### Online Demo
 
-Explore how to format Word documents with multiple columns using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/multiple-columns).
+Explore how to format Word documents with multiple columns using the React DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/multiple-columns).
 
 ## Breaks
 
@@ -100,7 +100,7 @@ documenteditor.editor.insertSectionBreak(SectionBreakType.Continuous);
 
 ## Online Demo
 
-Explore how to apply section formatting in Word documents using the React Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/section-formatting).
+Explore how to apply section formatting in Word documents using the React DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/section-formatting).
 
 
 ## See Also

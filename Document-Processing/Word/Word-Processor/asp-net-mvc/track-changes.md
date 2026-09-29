@@ -9,9 +9,9 @@ documentation: ug
 
 # Track Changes in ASP.NET MVC DOCX Editor
 
-Track Changes allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject the modifications. It is a useful tool for managing changes made by several reviewers to the same document. If the Track Changes option is enabled, all editing operations are preserved as revisions in the Document Editor.
+Track Changes allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject the modifications. It is a useful tool for managing changes made by several reviewers to the same document. If the Track Changes option is enabled, all editing operations are preserved as revisions in the DOCX Editor.
 
-## Enable track changes in Document Editor
+## Enable track changes in DOCX Editor
 
 The following example demonstrates how to enable Track Changes.
 
@@ -38,7 +38,7 @@ N> Track changes are document-level settings. When opening a document, if the do
 {% endtabs %}
 ## Show/Hide revisions pane
 
-The Show/Hide Revisions Pane feature in the Document Editor allows users to toggle the visibility of the revisions pane, providing flexibility in reviewing tracked changes in the document.
+The Show/Hide Revisions Pane feature in the DOCX Editor allows users to toggle the visibility of the revisions pane, providing flexibility in reviewing tracked changes in the document.
  
 The following example code illustrates how to show/hide the revisions pane.
 
@@ -85,7 +85,7 @@ revisions.rejectAll();
 
 ## Accept or reject a specific revision
 
-The following example demonstrates how to accept or reject a specific revision in the Document Editor.
+The following example demonstrates how to accept or reject a specific revision in the DOCX Editor.
 
 ```typescript
 /**
@@ -120,13 +120,13 @@ container.documentEditor.selection.navigatePreviousRevision();
 
 ## Filtering changes based on user
 
-The Document Editor has a built-in review panel that supports filtering changes by user.
+The DOCX Editor has a built-in review panel that supports filtering changes by user.
 
 ![Track changes](images/track-changes.png)
 
 ## Custom metadata along with author
 
-The Document Editor provides a `revisionSettings` property to customize revisions. The `customData` property allows you to attach additional metadata to tracked revisions in the Word Processor. This metadata can represent roles, tags, or any custom identifier for the revision. To display this metadata along with the author name in the Track Changes pane, you must enable the `showCustomDataWithAuthor` property.
+The DOCX Editor provides a `revisionSettings` property to customize revisions. The `customData` property allows you to attach additional metadata to tracked revisions in the Word Processor. This metadata can represent roles, tags, or any custom identifier for the revision. To display this metadata along with the author name in the Track Changes pane, you must enable the `showCustomDataWithAuthor` property.
 
 The following example code illustrates how to enable and update custom metadata for track changes revisions.
 
@@ -143,13 +143,13 @@ The Track Changes pane will display the author name along with the custom metada
 
 ![Custom metadata along with author](images/track-changes-customData.png)
 
-N> When you export the document as SFDT, the `customData` value is stored in the revision collection. When you reopen the SFDT, the custom data is restored automatically and displayed in the Track Changes pane. Other than SFDT export (e.g., DOCX and others), the `customData` is not preserved, as it is specific to the Document Editor component.
+N> When you export the document as SFDT, the `customData` value is stored in the revision collection. When you reopen the SFDT, the custom data is restored automatically and displayed in the Track Changes pane. Other than SFDT export (e.g., DOCX and others), the `customData` is not preserved, as it is specific to the DOCX Editor component.
 
 ## Protect the document in track changes only mode
 
-The Document Editor provides support for protecting the document with `RevisionsOnly` protection. In this protection, all users can view the document and make corrections, but they cannot accept or reject any tracked changes in the document. Later, the author can view their corrections and accept or reject the changes.
+The DOCX Editor provides support for protecting the document with `RevisionsOnly` protection. In this protection, all users can view the document and make corrections, but they cannot accept or reject any tracked changes in the document. Later, the author can view their corrections and accept or reject the changes.
 
-The Document Editor provides options to protect and unprotect a document using the `enforceProtection` and `stopProtection` APIs.
+The DOCX Editor provides options to protect and unprotect a document using the `enforceProtection` and `stopProtection` APIs.
 
 The following example code illustrates how to enforce and stop protection in the Document Editor container.
 
@@ -167,6 +167,7 @@ Tracked changes only protection can be enabled in UI by using [Restrict Editing 
 ![Enable track changes only protection](images/tracked-changes.png)
 
 N> In the `enforceProtection` method, the first parameter denotes the password and the second parameter denotes the protection type. Possible values of the protection type are `NoProtection | ReadOnly | FormFieldsOnly | CommentsOnly | RevisionsOnly`. In the `stopProtection` method, the parameter denotes the password.
+
 ## Online demo
 
-Explore how to track and review changes in Word documents using the ASP.NET MVC Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/trackchanges#/tailwind3).
+Explore how to track and review changes in Word documents using the ASP.NET MVC DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/trackchanges#/tailwind3).

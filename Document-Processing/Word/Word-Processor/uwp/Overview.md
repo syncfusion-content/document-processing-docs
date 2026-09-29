@@ -8,9 +8,9 @@ keywords: overview, richtextboxadv, sfrichtextboxadv
 ---
 # About Syncfusion UWP DOCX Editor Control
 
-The Syncfusion <sup style="font-size:70%">&reg;</sup> [UWP RichTextBox](https://www.syncfusion.com/docx-editor-sdk/uwp-docx-editor) (SfRichTextBoxAdv) is a feature-rich, user-interactive control that enables viewing, editing, and printing rich text content. It supports advanced formatting and layout for elements such as text, images, tables, paragraphs, and comments.
+The Syncfusion <sup style="font-size:70%">&reg;</sup> [UWP DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/uwp-docx-editor) (SfRichTextBoxAdv) is a feature-rich, user-interactive control that enables viewing, editing, and printing rich text content. It supports advanced formatting and layout for elements such as text, images, tables, paragraphs, and comments.
 
-![SfRichTextBoxAdv overview showing the Pages layout with a sample document](Overview_images/uwp-richtextbox.png)
+![SfRichTextBoxAdv overview showing the Pages layout with a sample document](Overview_images/uwp-docx-editor.png)
 
 ## Key features
 
@@ -32,4 +32,4 @@ The Syncfusion <sup style="font-size:70%">&reg;</sup> [UWP RichTextBox](https://
 
 > **Limitation:** The SfRichTextBoxAdv cannot currently edit rich text in headers and footers of a document.
 
-N> You can refer to our [UWP RichTextBox](https://www.syncfusion.com/docx-editor-sdk/uwp-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [UWP RichTextBox example](https://github.com/syncfusion/docx-editor-sdk-uwp-demos) to know how to render and configure the editing tool.
+N> You can refer to our [UWP DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/uwp-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [UWP DOCX Editor example](https://github.com/syncfusion/docx-editor-sdk-uwp-demos) to know how to render and configure the editing tool.

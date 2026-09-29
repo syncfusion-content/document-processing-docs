@@ -10,7 +10,7 @@ documentation: ug
 
 # Restrict Editing in ASP.NET MVC DOCX Editor
 
-Document Editor provides support to restrict editing. When the protected document includes range permission, then only a unique user or user group is authorized to edit a separate text area.
+DOCX Editor provides support to restrict editing. When the protected document includes range permission, then only a unique user or user group is authorized to edit a separate text area.
 
 ## Set current user
 
@@ -82,7 +82,7 @@ Restrict Editing Pane provides the following options to manage the document:
 
 ## Online Demo
 
-Explore how to restrict editing and protect Word documents using the ASP.NET MVC Document Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/documentprotection#/tailwind3).
+Explore how to restrict editing and protect Word documents using the ASP.NET MVC DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/documentprotection#/tailwind3).
 
 * [How to protect the document in form filling mode](./form-fields#protect-the-document-in-form-filling-mode)
 * [How to protect the document in comments only mode](./comments#protect-the-document-in-comments-only-mode)

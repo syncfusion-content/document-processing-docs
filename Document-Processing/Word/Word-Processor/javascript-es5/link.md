@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 ## Navigate a hyperlink
 
-Document Editor triggers the `requestNavigate` event whenever the user presses the Ctrl key or taps a hyperlink within the document. This event provides the necessary details about link type, navigation URL, and local URL (if any) as arguments, and allows you to easily customize the hyperlink navigation functionality.
+DOCX Editor triggers the `requestNavigate` event whenever the user presses the Ctrl key or taps a hyperlink within the document. This event provides the necessary details about link type, navigation URL, and local URL (if any) as arguments, and allows you to easily customize the hyperlink navigation functionality.
 
 ### Add the requestNavigate event for DocumentEditor
 
@@ -70,7 +70,7 @@ documenteditor.selection.navigateHyperlink();
 
 ## Copy link
 
-Document Editor copies the link text of a hyperlink field to the clipboard if the selection is in a hyperlink. Refer to the following example.
+DOCX Editor copies the link text of a hyperlink field to the clipboard if the selection is in a hyperlink. Refer to the following example.
 
 ```js
 documenteditor.selection.copyHyperlink();
@@ -78,7 +78,7 @@ documenteditor.selection.copyHyperlink();
 
 ## Add hyperlink
 
-To create a basic hyperlink in the document, press `ENTER` / `SPACEBAR` / `SHIFT + ENTER` / `TAB` key after typing the address, for instance [`http://www.google.com`](http://www.google.com). Document Editor automatically converts this address to a hyperlink field. The text can be considered as a valid URL if it starts with any of the following.
+To create a basic hyperlink in the document, press `ENTER` / `SPACEBAR` / `SHIFT + ENTER` / `TAB` key after typing the address, for instance [`http://www.google.com`](http://www.google.com). DOCX Editor automatically converts this address to a hyperlink field. The text can be considered as a valid URL if it starts with any of the following.
 
 > `<http://>`<br>
 > `<https://>`<br>
@@ -99,7 +99,7 @@ Refer to the following example.
 
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/hyperlink-cs2" %}
 
-Also Document Editor exposes the [`insertHyperlink()`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#inserthyperlink) API to insert a hyperlink.
+Also DOCX Editor exposes the [`insertHyperlink()`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/editor#inserthyperlink) API to insert a hyperlink.
 
 Refer to the following sample code.
 
@@ -129,7 +129,7 @@ documenteditor.editor.removeHyperlink();
 
 ## Hyperlink dialog
 
-Document Editor provides dialog support to insert or edit a hyperlink. Refer to the following example.
+DOCX Editor provides dialog support to insert or edit a hyperlink. Refer to the following example.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -150,7 +150,7 @@ You can use the following keyboard shortcut to open the hyperlink dialog if the 
 
 ## Online demo
 
-Explore how to insert and manage hyperlinks in Word documents using the JavaScript (ES5) Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/links-and-bookmarks.html).
+Explore how to insert and manage hyperlinks in Word documents using the JavaScript (ES5) DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/links-and-bookmarks.html).
 
 ## See also
 

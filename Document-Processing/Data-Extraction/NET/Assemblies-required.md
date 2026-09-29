@@ -35,6 +35,7 @@ The following assemblies need to be referenced in your application to extract da
         Syncfusion.SmartFormRecognizer.Base<br/>
         Syncfusion.SmartTableExtractor.Base<br/>
         Syncfusion.Markdown<br/>
+        Syncfusion.Telemetry<br/>
       </td>
     </tr>
     <tr>
@@ -53,6 +54,7 @@ The following assemblies need to be referenced in your application to extract da
         Syncfusion.SmartFormRecognizer.Portable<br/>
         Syncfusion.SmartTableExtractor.Portable<br/>
         Syncfusion.Markdown<br/>
+        Syncfusion.Telemetry<br/>
       </td>
     </tr>
     <tr>
@@ -70,6 +72,7 @@ The following assemblies need to be referenced in your application to extract da
         Syncfusion.SmartFormRecognizer.NET<br/>
         Syncfusion.SmartTableExtractor.NET<br/>
         Syncfusion.Markdown<br/>
+        Syncfusion.Telemetry<br/>
       </td>
     </tr>
   </tbody>

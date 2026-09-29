@@ -3,7 +3,7 @@ layout: post
 title: Supported File Formats in Blazor DOCX Editor | Syncfusion
 description: Learn about the supported file formats in Blazor DOCX Editor for importing, and exporting documents.
 platform: document-processing
-control: Document Editor
+control: DOCX Editor
 documentation: ug
 ---
 
@@ -11,12 +11,12 @@ documentation: ug
 
 If the message “The file format you have selected isn’t supported. Please choose a valid format.” appears when opening a document in the [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor), it generally indicates that the file is not provided in a supported format for the current workflow. Here are some common reasons:
 
-1. **Unsupported File Format**: The document you are trying to open might be in a format that the Document Editor does not support. Ensure you are using a supported format, such as SFDT.
+1. **Unsupported File Format**: The document you are trying to open might be in a format that the DOCX Editor does not support. Ensure you are using a supported format, such as SFDT.
 2. **Corrupted Document**: The document file might be corrupted or improperly formatted. Try opening a different document to see if the issue persists.
 
-To avoid this warning, always use the recommended document formats and features supported by the Document Editor.
+To avoid this warning, always use the recommended document formats and features supported by the DOCX Editor.
 
-The Document Editor supports the following file formats:
+The DOCX Editor supports the following file formats:
 
 * Word Document (*.docx)
 * Syncfusion Document Text (*.sfdt)
@@ -28,4 +28,4 @@ The Document Editor supports the following file formats:
 * Word 97-2003 Template (*.dot)
 * Word 97-2003 Document (*.doc)
 
-By using these supported formats, you can ensure compatibility and avoid unsupported warning messages when opening documents in the Document Editor.
+By using these supported formats, you can ensure compatibility and avoid unsupported warning messages when opening documents in the DOCX Editor.

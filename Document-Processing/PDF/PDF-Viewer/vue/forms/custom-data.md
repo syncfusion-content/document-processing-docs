@@ -30,7 +30,7 @@ This page explains how to:
 You can attach custom data at the time of field creation by passing a `customData` object in the settings parameter of [addFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#addformfields).
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" @documentLoad="onDocumentLoad" style="height:640px" />
@@ -90,7 +90,7 @@ When users add form fields using the [Form Designer toolbar](../toolbar-customiz
 - [initialFieldSettings](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#initialfieldsettings)
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" @documentLoad="onDocumentLoad" style="height:640px" />
@@ -146,7 +146,7 @@ export default {
 You can modify the `customData` of an existing form field by using the [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) method. The field can be identified using either its object reference or field ID.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" @documentLoad="onDocumentLoad" style="height:640px" />
@@ -203,7 +203,7 @@ You can access the customData property from any form field at any point in your 
 - While performing validation or conditional routing
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" @documentLoad="onDocumentLoad" style="height:640px" />

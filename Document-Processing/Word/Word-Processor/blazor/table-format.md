@@ -3,7 +3,7 @@ layout: post
 title: Table Format in Blazor DOCX Editor | Syncfusion
 description: The table format feature in Blazor DOCX Editor enables customizing cell margins, spacing, alignment, borders, and sizing to create structured tables.
 platform: document-processing
-control: Document Editor
+control: DOCX Editor
 documentation: ug
 ---
 
@@ -71,7 +71,7 @@ await documentEditor.Selection.CellFormat.SetVerticalAlignmentAsync(CellVertical
 
 ## Table alignment
 
-The tables are aligned in the Document Editor to `Left`, `Right`, or `Center`. Refer to the following sample code.
+The tables are aligned in the DOCX Editor to `Left`, `Right`, or `Center`. Refer to the following sample code.
 
 ```csharp
 await documentEditor.Selection.TableFormat.SetTableAlignmentAsync(TableAlignment.Center);
@@ -121,7 +121,7 @@ You can set the desired width of a table in `Point` or `Percent` type. Refer to 
 
 ## Working with row formatting
 
-The Document Editor supports various row formatting options such as height and repeat header.
+The DOCX Editor supports various row formatting options such as height and repeat header.
 
 ## Row height
 
@@ -162,7 +162,7 @@ await documentEditor.Selection.RowFormat.SetAllowBreakAcrossPagesAsync(false);
 
 ### Title
 
-The Document Editor exposes API to get or set the table title of the selected table. Refer to the following sample code to set the title.
+The DOCX Editor exposes API to get or set the table title of the selected table. Refer to the following sample code to set the title.
 
 ```csharp
 await documentEditor.Selection.TableFormat.SetTitleAsync("Shipping Details");
@@ -170,7 +170,7 @@ await documentEditor.Selection.TableFormat.SetTitleAsync("Shipping Details");
 
 ### Description
 
-The Document Editor exposes API to get or set the table description of the selected table. Refer to the following sample code to set the description.
+The DOCX Editor exposes API to get or set the table description of the selected table. Refer to the following sample code to set the description.
 
 ```csharp
 await documentEditor.Selection.TableFormat.SetDescriptionAsync("Freight cost and shipping details");
@@ -178,4 +178,4 @@ await documentEditor.Selection.TableFormat.SetDescriptionAsync("Freight cost and
 
 ## Online demo
 
-Explore how to format tables in Word documents using the Blazor Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/table-format?theme=fluent2).
+Explore how to format tables in Word documents using the Blazor DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/table-format?theme=fluent2).

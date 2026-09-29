@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Content Controls in Angular DOCX Editor
 
-[Angular Document Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) provides support for inserting, editing content controls.
+[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) provides support for inserting, editing content controls.
 
 Content controls can be categorized based on their occurrence in a document as follows:
 

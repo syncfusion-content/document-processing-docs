@@ -22,13 +22,13 @@ N> The default value of [`layoutType`](https://ej2.syncfusion.com/vue/documentat
 
 ### Online demo
 
-Explore how to view Word documents in web layout using the Vue Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/web-layout).
+Explore how to view Word documents in web layout using the Vue DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/web-layout).
 
 ## Ruler
 
-The ruler helps you set specific margins, tab stops, and indentations within a document to ensure consistent formatting in the Document Editor.
+The ruler helps you set specific margins, tab stops, and indentations within a document to ensure consistent formatting in the DOCX Editor.
 
-The following example illustrates how to enable the ruler in the Document Editor.
+The following example illustrates how to enable the ruler in the DOCX Editor.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -38,17 +38,17 @@ The following example illustrates how to enable the ruler in the Document Editor
         
 {% previewsample "/document-processing/code-snippet/document-editor/vue/ruler-cs1" %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 ### Online demo
 
-Explore how to use the ruler in the Vue Document Editor for working with Word documents in this [live demo](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/ruler).
+Explore how to use the ruler in the Vue DOCX Editor for working with Word documents in this [live demo](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/ruler).
 
 ## Heading navigation pane
 
 The heading navigation pane allows users to quickly navigate documents by heading, making it easier to move through the document.
 
-The following example demonstrates how to enable the heading navigation pane in a Document Editor.
+The following example demonstrates how to enable the heading navigation pane in a DOCX Editor.
 
 ```
 <template>
@@ -75,8 +75,8 @@ The following example demonstrates how to enable the heading navigation pane in 
 </script>
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 ### Online demo
 
-Explore how to navigate through headings in Word documents using the Vue Document Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/heading-navigation.html).
+Explore how to navigate through headings in Word documents using the Vue DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/heading-navigation.html).

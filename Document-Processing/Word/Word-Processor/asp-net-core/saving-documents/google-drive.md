@@ -17,9 +17,9 @@ To save a document to Google Drive, follow these steps:
 You must set up a project in the Google Developers Console and enable the Google Drive API. Obtain the necessary credentials to access the API. For more information, refer to the official [Enable the Drive API](https://developers.google.com/drive/api/guides/enable-sdk) guide.
 
 
-**Step 2:** Create a Simple Document Editor Sample in ASP.NET Core
+**Step 2:** Create a Simple DOCX Editor Sample in ASP.NET Core
 
-Follow the steps in this [link](../../document-editor/getting-started-core) to create a simple Document Editor sample in ASP.NET Core. This will give you a basic setup of the Document Editor component.
+Follow the steps in this [link](../../document-editor/getting-started-core) to create a simple DOCX Editor sample in ASP.NET Core. This will give you a basic setup of the DOCX Editor component.
 
 
 **Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
@@ -152,7 +152,7 @@ N> The **FolderId** is the unique identifier for the folder. For example, if you
 
 N> The JSON file (`credentials.json`) downloaded from the Google Cloud Console contains your OAuth 2.0 **Client ID** and **Client Secret**. Use these credentials to interface your application with the Google Drive API.
 
-**Step 4:**  Modify the Index.cshtml File in the Document Editor sample
+**Step 4:**  Modify the Index.cshtml File in the DOCX Editor sample
 
 On the client side, export the document to a blob using `saveAsBlob` and send it to the server for saving in Google Drive.
 

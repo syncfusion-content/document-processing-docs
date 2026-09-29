@@ -9,7 +9,7 @@ keywords: embedded-image-html
 
 # How to Export Embedded Images in HTML in WPF DOCX Editor
 
-This page explains how to export the inserted image as an Embedded image in HTML in [WPF RichTextBox](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv).
+This page explains how to export the inserted image as an Embedded image in HTML in [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv).
 
 In the SfRichTextBoxAdv control, the control provides an option to specify HTML export settings. By utilizing the [ImageNodeVisited](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.ImageNodeVisitedEventArgs.html) event of the [HtmlImportExportSettings](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.HtmlImportExportSettings.html) instance, you can both retrieve and define the image stream and image source. When setting the image source as Empty, the inserted picture can be exported as an embedded image in the HTML.
 
@@ -40,5 +40,5 @@ richTextBoxAdv.HtmlImportExportSettings.ImageNodeVisited -= HtmlImportExportSett
 
 ## See also
 
-- [WPF RichTextBox Feature Tour](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor)
-- [WPF RichTextBox Examples](https://github.com/syncfusion/docx-editor-sdk-wpf-demos)
+- [WPF DOCX Editor Feature Tour](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor)
+- [WPF DOCX Editor Examples](https://github.com/syncfusion/docx-editor-sdk-wpf-demos)

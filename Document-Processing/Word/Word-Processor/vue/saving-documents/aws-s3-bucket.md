@@ -14,7 +14,7 @@ To save a document to AWS S3, follow the steps below.
 
 **Step 1:** Create a simple [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) sample in Vue.
 
-Follow the instructions provided in this [link](../getting-started) to create a simple Document Editor sample in Vue. This will give you a basic setup of the Document Editor component.
+Follow the instructions provided in this [link](../getting-started) to create a simple DOCX Editor sample in Vue. This will give you a basic setup of the DOCX Editor component.
 
 **Step 2:** Modify the `DocumentEditorController.cs` file in the web service project.
 
@@ -116,7 +116,7 @@ private string GetValue(IFormCollection data, string key)
 
 N> Replace **Your Access Key from AWS S3**, **Your Secret Key from AWS S3**, and **Your Bucket name from AWS S3** with your actual AWS access key, secret key, and bucket name.
 
-**Step 3:** Modify the index file in the Document Editor sample
+**Step 3:** Modify the index file in the DOCX Editor sample
 
 On the client side, export the document to a blob using [`saveAsBlob`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#saveAsBlob) and send it to the server side for saving in an AWS S3 Bucket.
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to Disable Auto Focus in TypeScript DOCX Editor
 
-[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) gets focused automatically when the page loads. If you want the Document Editor not to be focused automatically, it can be customized.
+[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) gets focused automatically when the page loads. If you want the DOCX Editor not to be focused automatically, it can be customized.
 
 The following example illustrates how to disable auto focus in the DocumentEditorContainer.
 

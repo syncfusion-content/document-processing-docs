@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Java Web Service in Vue DOCX Editor
 
-This page illustrates how to create a web service in Java for the server-side dependencies of the Word Processor component (a.k.a. Document Editor). Document Editor depends on server-side interactions for the operations listed below, which can be written in Java using the `syncfusion-ej2-wordprocessor.jar` file.
+This page illustrates how to create a web service in Java for the server-side dependencies of the Word Processor component (a.k.a. Document Editor). DOCX Editor depends on server-side interactions for the operations listed below, which can be written in Java using the `syncfusion-ej2-wordprocessor.jar` file.
 
 * Import Word Document
 * Paste with formatting
@@ -107,11 +107,11 @@ This section explains how to create the Java web service for DocumentEditor.
 
 ## Importing Word Documents
 
-As the Document Editor client-side script requires the document in SFDT file format, you can convert the Word documents (.dotx,.docx,.docm), rich text format documents (.rtf), and text documents (.txt) into SFDT format by using this Web API.
+As the DOCX Editor client-side script requires the document in SFDT file format, you can convert the Word documents (.dotx,.docx,.docm), rich text format documents (.rtf), and text documents (.txt) into SFDT format by using this Web API.
 
-N> The Document Editor Java library does not support the **DOC format** Word document. As the DOC format is an older file format, we recommend using the DOCX file format to take advantage of the latest features.
+N> The DOCX Editor Java library does not support the **DOC format** Word document. As the DOC format is an older file format, we recommend using the DOCX file format to take advantage of the latest features.
 
-The following example code illustrates how to write a Web API for importing Word documents into the Document Editor component.
+The following example code illustrates how to write a Web API for importing Word documents into the DOCX Editor component.
 
 ```java
     @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -128,7 +128,7 @@ The following example code illustrates how to write a Web API for importing Word
 
 ### Import a document with TIFF, EMF, and WMF images
 
-Web browsers do not support displaying metafile images like EMF and WMF, or TIFF format images. As a fallback approach, you can convert the metafile/TIFF format image to a raster image using any image converter in the `MetafileImageParsed` event, and this fallback raster image will be displayed in the client-side Document Editor component.
+Web browsers do not support displaying metafile images like EMF and WMF, or TIFF format images. As a fallback approach, you can convert the metafile/TIFF format image to a raster image using any image converter in the `MetafileImageParsed` event, and this fallback raster image will be displayed in the client-side DOCX Editor component.
 
 N> In the `MetafileImageParsedEventArgs` event argument, you can get the metafile stream using the `getMetafileStream()` property, and you can get the `getIsMetafile()` boolean value to determine whether the image is a metafile image (WMF, EMF) or a TIFF format image. In the example below, the TIFF is converted to a raster image in the `ConvertTiffToRasterImage()` method using the TwelveMonkeys ImageIO TIFF library.
 
@@ -283,7 +283,7 @@ The following example code illustrates how to write a Web API for paste with for
 
 ## Restrict editing
 
-This Web API generates a hash from the specified password and salt value which is required for the restrict editing functionality of the Document Editor component.
+This Web API generates a hash from the specified password and salt value which is required for the restrict editing functionality of the DOCX Editor component.
 
 The following example code illustrates how to write a Web API to restrict editing.
 
@@ -330,7 +330,7 @@ The following example code illustrates how to write a Web API to restrict editin
 
 ## Spell check
 
-Document Editor supports performing spell checking for any input text. You can perform spell checking for the text in Document Editor and it will provide suggestions for the misspelled words through a dialog and the context menu. The Document Editor client-side script requires this Web API to display error words and list suggestions in the context menu. This Web API returns a JSON response containing details about the spell-checked words, including error words and suggestions if any.
+DOCX Editor supports performing spell checking for any input text. You can perform spell checking for the text in DOCX Editor and it will provide suggestions for the misspelled words through a dialog and the context menu. The DOCX Editor client-side script requires this Web API to display error words and list suggestions in the context menu. This Web API returns a JSON response containing details about the spell-checked words, including error words and suggestions if any.
 
 To know more about configuring spell check, refer to this [link](https://github.com/SyncfusionExamples/EJ2-Document-Editor-Web-Services/tree/master/Java#steps-to-configure-spell-checker).
 
@@ -361,11 +361,11 @@ In the controller file, you can configure the spell check files as below:
     }
 ```
 
-Document Editor provides options to spell check word by word and spell check page by page when loading documents.
+DOCX Editor provides options to spell check word by word and spell check page by page when loading documents.
 
 ### Spell check word by word
 
-This Web API performs the spell check word by word and returns the JSON which contains information about error words and suggestions if any. By default, spell check word by word is performed in the Document Editor when spell check is enabled on the client side.
+This Web API performs the spell check word by word and returns the JSON which contains information about error words and suggestions if any. By default, spell check word by word is performed in the DOCX Editor when spell check is enabled on the client side.
 
 The following example code illustrates how to write a Web API for spell check word by word.
 

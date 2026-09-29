@@ -12,13 +12,13 @@ documentation: ug
 
 ## Localization
 
-The [`Localization`](https://ej2.syncfusion.com/aspnetcore/documentation/common/localization) library allows you to localize the default text content of the Document Editor. The [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) component has static text on some features (such as find & replace, context menu, and dialogs) that can be changed to other cultures (Arabic, German, French, and more) by defining the locale value and translation object. To see the editor rendered with right-to-left flow, refer to the [Right-to-Left (RTL) sample](https://ej2.syncfusion.com/aspnetcore/DocumentEditor/RightToLeft#/material).
+The [`Localization`](https://ej2.syncfusion.com/aspnetcore/documentation/common/localization) library allows you to localize the default text content of the DOCX Editor. The [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) component has static text on some features (such as find & replace, context menu, and dialogs) that can be changed to other cultures (Arabic, German, French, and more) by defining the locale value and translation object. To see the editor rendered with right-to-left flow, refer to the [Right-to-Left (RTL) sample](https://ej2.syncfusion.com/aspnetcore/DocumentEditor/RightToLeft#/material).
 
 N> Refer the [Locale](https://github.com/syncfusion/ej2-locale).
 
-## Document Editor
+## DOCX Editor
 
-The following list of properties and its values are used in the Document Editor.
+The following list of properties and its values are used in the DOCX Editor.
 
 Locale keywords |Text
 -----|-----

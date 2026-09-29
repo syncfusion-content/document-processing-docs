@@ -15,7 +15,7 @@ You can insert a page number and navigate to a specific page in the [ASP.NET MVC
 
 You can use the [`insertPageNumber`] API in the editor module to insert the page number at the current cursor position. By default, the page number will be inserted in Arabic number style. You can change it by providing the number style in the parameter.
 
-N> Currently, the Document Editor has options to insert a page number at the current cursor position.
+N> Currently, the DOCX Editor has options to insert a page number at the current cursor position.
 
 The following example code illustrates how to insert page number in header.
 

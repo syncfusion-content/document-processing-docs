@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 ## Prerequisites
 
-The following are needed to enable collaborative editing in the Document Editor:
+The following are needed to enable collaborative editing in the DOCX Editor:
 
 - SignalR
 - Redis
@@ -81,15 +81,15 @@ N> For better performance, a minimum `SaveThreshold` value of 100 is recommended
 
 ## Integrate collaborative editing in client side
 
-### Step 1: Integrate Document Editor
+### Step 1: Integrate DOCX Editor
 
 Refer to the following documentation to get started with the [ASP.NET MVC DOCX Editor](https://help.syncfusion.com/document-processing/word/word-processor/asp-net-mvc/getting-started).
 
 ### Step 2: Enable collaborative editing
 
-To enable collaborative editing, inject `CollaborativeEditingHandler` and set the `enableCollaborativeEditing` property to true in the Document Editor.
+To enable collaborative editing, inject `CollaborativeEditingHandler` and set the `enableCollaborativeEditing` property to true in the DOCX Editor.
 
-The following code snippet demonstrates how to enable collaborative editing in the Document Editor.
+The following code snippet demonstrates how to enable collaborative editing in the DOCX Editor.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
@@ -102,9 +102,9 @@ The following code snippet demonstrates how to enable collaborative editing in t
 
 ### Step 3: Configure SignalR to send and receive changes
 
-To broadcast changes and receive updates from remote users, configure SignalR in the Document Editor.
+To broadcast changes and receive updates from remote users, configure SignalR in the DOCX Editor.
 
-The following code snippet demonstrates how to configure SignalR in the Document Editor.
+The following code snippet demonstrates how to configure SignalR in the DOCX Editor.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
@@ -128,7 +128,7 @@ The following code snippet demonstrates how to generate a unique ID and open a d
 
 Changes made on the client side must be transmitted to the server to be broadcast to other connected users.
 
-The following code snippet demonstrates how to send changes to the server using the `contentChange` event in the Document Editor.
+The following code snippet demonstrates how to send changes to the server using the `contentChange` event in the DOCX Editor.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
