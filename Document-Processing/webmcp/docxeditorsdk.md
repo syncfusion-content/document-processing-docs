@@ -142,7 +142,7 @@ Navigate through pages and bookmarks, or select words, paragraphs, ranges, and t
  
 Quickly locate specific words and perform document-wide updates using search and replace operations.
  
-**Example:** "Find all occurrences of 'Cylces' and replace them with 'Cycles'."
+**Example:** "Find all occurrences of 'customer' and replace them with 'client' throughout the document."
 
 
 ## Supported Features
