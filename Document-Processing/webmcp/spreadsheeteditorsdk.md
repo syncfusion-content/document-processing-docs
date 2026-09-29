@@ -104,7 +104,6 @@ Orchestrate complex operations in sequence based on user intent.
 
 WebMCP tools are organized into six categories, covering 28 operations:
 
-
 | Category | Tools | Example |
 |----------|-------|---------|
 | **Core Data** | getCellData, getRangeData, getSheetInfo, sheetList, evaluateFormula, find | Read cell values, formulas, sheet metadata, and search content |
@@ -130,7 +129,7 @@ AI responses are only as good as the prompt you provide. Vague requests like *"f
 
 - **Be Specific** — Include exact column names, cell ranges, colors, and formatting details
 - **Provide Context** — Mention the sheet, data type, or business objective
-- **One Goal at a Time** — Complex prompts may confuse the AI; break into steps
+- **One Goal at a Time** — Complex prompts may confuse the AI; break them into steps
 - **Reference Cells Clearly** — Use specific addresses (e.g., "A1:C10") instead of vague ranges
 - **State Expectations** — Clarify sort order, filter criteria, or output format
 
@@ -138,7 +137,7 @@ AI responses are only as good as the prompt you provide. Vague requests like *"f
 
 - **Operates on the active sheet only** — WebMCP actions are scoped to the currently open sheet. Multi-sheet operations require separate prompts.
 
-- **Prompt clarity affects result quality** — The AI interprets your request as written, so the quality of the output depends on how clearly the prompt is phrased.
+- **Prompt clarity affects result quality** — The AI interprets your request literally, so output quality depends directly on how clearly the prompt is written.
 
 - **Experimental status** — WebMCP is a preview standard. APIs and browser support may change as the specification evolves.
 
