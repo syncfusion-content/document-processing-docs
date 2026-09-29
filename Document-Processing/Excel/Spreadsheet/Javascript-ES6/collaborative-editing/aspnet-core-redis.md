@@ -1,7 +1,7 @@
 ---
 layout: post
-title: React SpreadsheetEditor ASP.NET Core Redis Setup | Syncfusion
-description: Learn how to configure the ASP.NET Core Collaboration Server and Redis for React SpreadsheetEditor collaborative editing.
+title: TypeScript SpreadsheetEditor ASP.NET Core Redis Setup | Syncfusion
+description: Learn how to configure the ASP.NET Core Collaboration Server and Redis for TypeScript SpreadsheetEditor collaborative editing.
 control: Collaborative Editing
 platform: document-processing
 documentation: ug
@@ -66,34 +66,27 @@ using Syncfusion.Collaboration.Core.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Register Redis storage and SignalR communication.
 builder.Services.AddCollaborationServer(options =>
 {
     options.ConnectionString = builder.Configuration
         .GetConnectionString("Redis");
-    options.ConnectionType =  CollaborationConnectionType.SignalR;
+    options.ConnectionType = CollaborationConnectionType.SignalR;
 });
 
-// Register the SpreadsheetEditor collaboration adapter.
 builder.Services.AddSingleton<ICollaborationAdapter, SpreadsheetCollaborativeAdaptor>();
-
 builder.Services.AddControllers();
 builder.Services.AddSignalR();
 
 var app = builder.Build();
-
 app.UseRouting();
 app.MapControllers();
-
-// Map the Collaboration Server endpoints.
 app.MapCollaborationServer();
-
 app.Run();
 ```
 
-`AddCollaborationServer` configures Redis for collaboration data, while `AddSignalR` registers the real-time communication services. A SignalR Redis backplane is not required for this configuration.
+`AddCollaborationServer` configures Redis for collaboration data, while `AddSignalR` registers real-time communication services. A SignalR Redis backplane is not required for this configuration.
 
-For more information about server configuration, room management, operation processing, and supported transports, refer to the [Collaboration Server documentation](https://help.syncfusion.com/document-processing/collaborator/collaboration-server).
+For more information about room management, operation processing, and supported transports, refer to the [Collaboration Server documentation](https://help.syncfusion.com/document-processing/collaborator/collaboration-server).
 
 ## Implement the SpreadsheetEditor server adapter
 
@@ -103,19 +96,16 @@ Implement `ICollaborationAdapter` to convert SpreadsheetEditor actions, transfor
 public void TransformOperations(List<CollaborationAction> actions)
 {
     List<ActionInfo> spreadsheetActions = actions
-        .Select(action =>
-            MapGenericToControlAction(action) as ActionInfo
-        )
+        .Select(action => MapGenericToControlAction(action) as ActionInfo)
         .Where(action => action != null)
         .ToList();
 
-    // Transform related concurrent SpreadsheetEditor actions.
     if (CollaborativeEditingHandler.TransformOperations(spreadsheetActions))
     {
-        ActionInfo transformedAction =
-            spreadsheetActions.Last();
-
-        actions.Last().Data = JsonConvert.SerializeObject(transformedAction.Operations);
+        ActionInfo transformedAction = spreadsheetActions.Last();
+        actions.Last().Data = JsonConvert.SerializeObject(
+            transformedAction.Operations
+        );
     }
 }
 ```
