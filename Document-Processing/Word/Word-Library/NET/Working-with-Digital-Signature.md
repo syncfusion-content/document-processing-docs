@@ -78,6 +78,8 @@ document.Close()
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Digital-Signature/Add-digital-signature-invisible/.NET).
+
 ## Insert Signature Line
 
 A signature line is a placeholder that lets signers add their visible signature to the document. The following code example illustrates how to insert a signature line into a Word document with signer information such as name, title, instructions, and email.
@@ -175,13 +177,15 @@ document.Close()
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Digital-Signature/Insert-signature-line/.NET).
+
 ## Sign Signature Line (Visible Signature)
 
 The following code example illustrates how to sign a signature line by supplying a custom signature image (for example, a scanned signature or handwritten PNG).  It binds the new signature to the signature line by setting `SignatureSettings.SignatureLineId` to the id of the target signature line.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Digital-Signature/Sign-signature-line/.NET/Sign-signature-line/Program.cs" %}
 
 //Opens an existing Word document with signature line.
 using (WordDocument document =
@@ -350,6 +354,8 @@ End Using
 {% endhighlight %}
 
 {% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Digital-Signature/Sign-signature-line/.NET).
 
 ## Sign Multiple Signature Lines
 
@@ -580,6 +586,83 @@ End Using
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Digital-Signature/Sign-multiple-signature-lines/.NET).
+
+## Specify the Digital Signature Standard
+
+The following code example illustrates how to set the XmlDSig level for a digital signature in a Word document.
+Use `XmlDsigLevel.XmlDsig` for a standard XMLDSig signature or `XmlDsigLevel.XAdEsEpes` for an XAdES-EPES signature with an explicit signature policy.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//Opens an existing Word document.
+WordDocument document = new WordDocument(Path.GetFullPath(@"Data\Template.docx"));
+//Loads the signing certificate from disk.
+OfficeDigitalSignatureCertificate certificate = new OfficeDigitalSignatureCertificate(Path.GetFullPath(@"Data\Certificate.pfx"), "password");
+//Configures signature settings.
+SignatureSettings settings = new SignatureSettings();
+settings.Comments = "Approved";
+settings.SignTime = DateTime.Now;
+//Configures the XmlDSig level for the digital signature.
+settings.XmlDsigLevel = XmlDsigLevel.XAdEsEpes;
+//Adds an invisible digital signature to the document using the certificate and settings.
+document.AddDigitalSignature(certificate, settings);
+//Saves the Word document to file.
+document.Save(Path.GetFullPath(@"Output\XmlDsigLevelSignature.docx"), FormatType.Docx);
+//Closes the document
+document.Close();
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Opens an existing Word document.
+WordDocument document = new WordDocument(Path.GetFullPath(@"Data\Template.docx"));
+//Loads the signing certificate from disk.
+OfficeDigitalSignatureCertificate certificate = new OfficeDigitalSignatureCertificate(Path.GetFullPath(@"Data\Certificate.pfx"), "password");
+//Configures signature settings.
+SignatureSettings settings = new SignatureSettings();
+settings.Comments = "Approved";
+settings.SignTime = DateTime.Now;
+//Configures the XmlDSig level for the digital signature.
+settings.XmlDsigLevel = XmlDsigLevel.XAdEsEpes;
+//Adds an invisible digital signature to the document using the certificate and settings.
+document.AddDigitalSignature(certificate, settings);
+//Saves the Word document to file.
+document.Save(Path.GetFullPath(@"Output\XmlDsigLevelSignature.docx"), FormatType.Docx);
+//Closes the document
+document.Close();
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Opens an existing Word document.
+Dim document As New WordDocument(Path.GetFullPath("Data\Template.docx"))
+'Loads the signing certificate from disk.
+Dim certificate As New OfficeDigitalSignatureCertificate(Path.GetFullPath("Data\Certificate.pfx"), "password")
+'Configures signature settings.
+Dim settings As New SignatureSettings()
+settings.Comments = "Approved"
+settings.SignTime = DateTime.Now
+'Configures the XmlDSig level for the digital signature.
+settings.XmlDsigLevel = XmlDsigLevel.XAdEsEpes
+'Adds an invisible digital signature to the document using the certificate and settings.
+document.AddDigitalSignature(certificate, settings)
+'Saves the Word document to file.
+document.Save(Path.GetFullPath("Output\XmlDsigLevelSignature.docx"), FormatType.Docx)
+'Closes the document
+document.Close()
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Digital-Signature/Specify-digital-signature-standard/.NET).
+
+
 ## Validate Digital Signature
 
 The following code example illustrates how to validate digital signatures that are present in a Word document.
@@ -649,6 +732,8 @@ document.Close()
 {% endhighlight %}
 
 {% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Digital-Signature/Validate-digital-signature/.NET).
 
 ## Inspect Digital Signature
 
@@ -739,6 +824,8 @@ document.Close()
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Digital-Signature/Inspect-digital-signature/.NET).
+
 ## Remove Digital Signature
 
 The following code example illustrates how to remove all the digital signatures from a Word document.
@@ -785,6 +872,8 @@ document.Close()
 {% endhighlight %}
 
 {% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Digital-Signature/Remove-digital-signature/.NET).
 
 ## Limitations
 
