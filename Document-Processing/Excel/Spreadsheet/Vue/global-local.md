@@ -485,7 +485,7 @@ const created = function () {
 </script>
 
 <style>
- @import '../node_modules/@syncfusion/ej2-material-theme/styles/spreadsheet/index.css';
+ @import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/spreadsheet/index.css';
 </style>
 
 {% endhighlight %}
@@ -581,7 +581,7 @@ export default {
 }
 </script>
 <style>
- @import '../node_modules/@syncfusion/ej2-material-theme/styles/spreadsheet/index.css';
+ @import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/spreadsheet/index.css';
 </style>
 
 {% endhighlight %}

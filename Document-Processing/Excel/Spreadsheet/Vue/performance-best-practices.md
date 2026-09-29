@@ -131,7 +131,7 @@ const beforeSave = function (args) {
 </script>
 
 <style>
-@import '../node_modules/@syncfusion/ej2-material-theme/styles/spreadsheet/index.css';
+@import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/spreadsheet/index.css';
 </style>
 
 {% endhighlight %}
@@ -167,7 +167,7 @@ export default {
 </script>
 
 <style>
-@import '../node_modules/@syncfusion/ej2-material-theme/styles/spreadsheet/index.css';
+@import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/spreadsheet/index.css';
 </style>
 
 {% endhighlight %}
@@ -223,7 +223,7 @@ const saveUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor
 </script>
 
 <style>
-@import '../node_modules/@syncfusion/ej2-material-theme/styles/spreadsheet/index.css';
+@import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/spreadsheet/index.css';
 </style>
 
 {% endhighlight %}
@@ -256,7 +256,7 @@ export default {
 </script>
 
 <style>
-@import '../node_modules/@syncfusion/ej2-material-theme/styles/spreadsheet/index.css';
+@import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/spreadsheet/index.css';
 </style>
 
 {% endhighlight %}
