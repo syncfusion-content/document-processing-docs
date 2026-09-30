@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Programmatically Get Differences
+# Programmatically Get Differences in TypeScript PDF Viewer
 
 The semantic text comparison feature provides programmatic access to all differences found between two PDF documents. Using the `semanticTextCompare()` method on `PdfViewer`, you can retrieve structured difference data for custom processing, reporting, or integration with other workflows.
 

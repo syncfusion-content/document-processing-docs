@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Programmatically Get Differences | Syncfusion ES5 JavaScript PDF Viewer
+title: Programmatically Get Differences in JavaScript PDF Viewer | Syncfusion
 description: Learn how to programmatically access text differences between two PDF documents in the Syncfusion ES5 JavaScript PDF Viewer.
 platform: document-processing
 control: PDF Viewer
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Programmatically Get Differences
+# Programmatically Get Differences in JavaScript PDF Viewer
 
 The semantic text comparison feature provides programmatic access to all differences found between two PDF documents. Using the `semanticTextCompare()` method on the PDF Viewer, you can retrieve structured difference data for custom processing, reporting, or integration with other workflows.
 
@@ -22,20 +22,15 @@ The comparison provides:
 - **Categorized results** - Differences grouped by type (Added, Deleted, Modified)
 - **Custom processing** - Export, filter, or analyze differences programmatically
 
-## Prerequisites
-
-- Updated `ej2.min.js` from CDN or CRG
-- Two PDF documents loaded for comparison
-- Semantic text comparison feature enabled
-
 ## Steps
 
-### Step 1: Create the HTML structure
+### Step 1: Create the HTML structure with styles and dual viewers
+
+Create an HTML page with CSS styling and two side-by-side PDF viewers:
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
 {% raw %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,110 +40,64 @@ The comparison provides:
   <script src="https://cdn.syncfusion.com/ej2/35.1.37/dist/ej2.min.js" type="text/javascript"></script>
 </head>
 <body>
-  <div id="pdfViewer1"></div>
-  <div id="pdfViewer2"></div>
+  <div id="app">
+    <!-- Control Panel with Buttons -->
+    <div class="control-panel">
+      <button id="btnCompare">Compare Documents</button>
+      <button id="btnToggleHighlights">Disable Highlights</button>
+      <button id="btnToggleSync">Disable Sync</button>
+      <button id="btnClearAnnotations">Clear Annotations</button>
+      <button id="btnGetAdded">Get Added</button>
+      <button id="btnGetDeleted">Get Deleted</button>
+      <button id="btnGetModified">Get Modified</button>
+      <button id="btnGroupByPage">Group by Page</button>
+      <button id="btnGenerateReport">Generate Report</button>
+    </div>
+
+    <!-- PDF Viewers Container -->
+    <div class="viewers-container">
+      <!-- Viewer 1 - Original Document -->
+      <div class="viewer-wrapper">
+        <div class="viewer-title">Original Document</div>
+        <div class="viewer-content">
+          <div id="pdfViewer1"></div>
+        </div>
+      </div>
+
+      <!-- Viewer 2 - Modified Document -->
+      <div class="viewer-wrapper">
+        <div class="viewer-title">Modified Document</div>
+        <div class="viewer-content">
+          <div id="pdfViewer2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="index.js" type="text/javascript"></script>
 </body>
 </html>
-
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
-### Step 2: Initialize viewers and perform comparison
+### Step 2: Initialize viewers and manage state
 
-Create `index.js` to initialize dual PDF viewers and perform semantic text comparison:
+Create `index.js` to initialize dual PDF viewers and manage comparison state:
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
 {% raw %}
-
+// Global state management
 var viewer1 = null;
 var viewer2 = null;
+var loadedCount = 0;
+var viewersLoaded = false;
+var synchronizationEnabled = true;
+var highlightsEnabled = true;
 
-function handleDocumentLoad() {
-    // Wait for both viewers to load
-    if (viewer1 && viewer2 && viewer1.isDocumentLoaded && viewer2.isDocumentLoaded) {
-        performComparison();
-    }
-}
-
-async function performComparison() {
-    try {
-        var options = {
-            beforeColor: '#FF0000',
-            afterColor: '#00FF00',
-            beforeColorOpacity: 0.4,
-            afterColorOpacity: 0.4,
-            enableHighlights: true
-        };
-
-        var result = await viewer1.semanticTextCompare(viewer2, options);
-        
-        var originalAnnotations = result.originalDocumentAnnotations || [];
-        var totalTextDiffCount = result.totalTextDiffCount || 0;
-
-        var addedCount = 0, deletedCount = 0, modifiedCount = 0;
-
-        originalAnnotations.forEach(function(pageAnnotations) {
-            if (pageAnnotations.differenceAnnotations) {
-                pageAnnotations.differenceAnnotations.forEach(function(diff) {
-                    if (diff.textDiffType === 'deleted') deletedCount++;
-                    if (diff.textDiffType === 'added') addedCount++;
-                    if (diff.textDiffType === 'modified') modifiedCount++;
-                });
-            }
-        });
-
-        console.log('Comparison Results:');
-        console.log('Total Differences: ' + totalTextDiffCount);
-        console.log('Added: ' + addedCount);
-        console.log('Deleted: ' + deletedCount);
-        console.log('Modified: ' + modifiedCount);
-
-    } catch (error) {
-        console.error('Error during comparison:', error);
-    }
-}
-
-async function getDifferencesByType(type) {
-    try {
-        var options = {
-            beforeColor: '#FF0000',
-            afterColor: '#00FF00',
-            beforeColorOpacity: 0.4,
-            afterColorOpacity: 0.4,
-            enableHighlights: true
-        };
-
-        var result = await viewer1.semanticTextCompare(viewer2, options);
-        var originalAnnotations = result.originalDocumentAnnotations || [];
-        var differences = [];
-
-        originalAnnotations.forEach(function(pageAnnotations) {
-            if (pageAnnotations.differenceAnnotations) {
-                pageAnnotations.differenceAnnotations.forEach(function(diff) {
-                    if (diff.textDiffType === type.toLowerCase()) {
-                        differences.push({
-                            pageNumber: pageAnnotations.pageNumber,
-                            type: diff.textDiffType,
-                            text: diff.textDiffData
-                        });
-                    }
-                });
-            }
-        });
-
-        console.log(type + ' differences (' + differences.length + '):', differences);
-        return differences;
-
-    } catch (error) {
-        console.error('Error filtering differences:', error);
-        return [];
-    }
-}
-
+// Initialize viewers when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize viewer 1
     viewer1 = new ej.pdfviewer.PdfViewer({
         documentPath: 'https://cdn.syncfusion.com/content/pdf/original-document.pdf',
         resourceUrl: 'https://cdn.syncfusion.com/ej2/35.1.37/dist/ej2-pdfviewer-lib',
@@ -173,6 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     viewer1.appendTo('#pdfViewer1');
 
+    // Initialize viewer 2
     viewer2 = new ej.pdfviewer.PdfViewer({
         documentPath: 'https://cdn.syncfusion.com/content/pdf/modified-document.pdf',
         resourceUrl: 'https://cdn.syncfusion.com/ej2/35.1.37/dist/ej2-pdfviewer-lib',
@@ -196,114 +146,364 @@ document.addEventListener('DOMContentLoaded', function() {
     );
 
     viewer2.appendTo('#pdfViewer2');
+
+    // Attach control button event listeners
+    attachEventListeners();
 });
+
+// Attach event listeners to all control buttons
+function attachEventListeners() {
+    document.getElementById('btnCompare').addEventListener('click', handleCompare);
+    document.getElementById('btnToggleHighlights').addEventListener('click', handleToggleHighlights);
+    document.getElementById('btnToggleSync').addEventListener('click', handleToggleSync);
+    document.getElementById('btnClearAnnotations').addEventListener('click', handleClearAnnotations);
+    document.getElementById('btnGetAdded').addEventListener('click', function() {
+        getDifferencesByType('added');
+    });
+    document.getElementById('btnGetDeleted').addEventListener('click', function() {
+        getDifferencesByType('deleted');
+    });
+    document.getElementById('btnGetModified').addEventListener('click', function() {
+        getDifferencesByType('modified');
+    });
+    document.getElementById('btnGroupByPage').addEventListener('click', groupDifferencesByPage);
+    document.getElementById('btnGenerateReport').addEventListener('click', generateReport);
+}
+
+// Handle document load event
+function handleDocumentLoad() {
+    loadedCount++;
+    if (loadedCount === 2 && viewer1 && viewer2) {
+        viewersLoaded = true;
+        if (viewer1.syncViewers) {
+            viewer1.syncViewers(viewer2, synchronizationEnabled);
+        }
+    }
+}
 
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
-## Accessing Comparison Results
+### Step 3: Perform semantic text comparison
 
-The comparison provides structured data through the result object returned by `semanticTextCompare()`:
+Compare the documents programmatically and access differences:
 
-```javascript
-{
-    totalTextDiffCount: 5,
-    originalDocumentAnnotations: [ /* page-by-page differences */ ],
-    modifiedDocumentAnnotations: [ /* page-by-page differences */ ],
-}
-```
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% raw %}
+// Perform semantic text comparison
+async function handleCompare() {
+    if (!viewersLoaded || !viewer1 || !viewer2) {
+        console.warn('Viewers not loaded yet');
+        return;
+    }
 
-Each annotation contains:
-- `pageNumber` - Page where the difference was found
-- `differenceAnnotations` - Array of differences on that page
-- Each difference has `textDiffType` ('added', 'deleted', 'modified'), `textDiffData` (the text), and `annotation.bounds` (location)
-
-## How to Get Differences
-
-### Retrieve added text differences
-
-```javascript
-var added = await getDifferencesByType('Added');
-```
-
-### Retrieve deleted text differences
-
-```javascript
-var deleted = await getDifferencesByType('Deleted');
-```
-
-### Retrieve modified text differences
-
-```javascript
-var modified = await getDifferencesByType('Modified');
-```
-
-## Related topics
-
-- [Overview of semantic text comparison](./overview)
-- [Highlight differences in UI](./highlight-differences)
-
-N> For complete production implementation with custom reporting, refer to the [GitHub sample](https://github.com/SyncfusionExamples/pdf-viewer-examples).
+    var options = {
+        beforeColor: '#FF0000',      // Red for original
+        afterColor: '#00FF00',       // Green for modified
+        beforeColorOpacity: 0.4,
         afterColorOpacity: 0.4,
-        enableHighlights: true,
+        enableHighlights: highlightsEnabled
     };
 
     try {
-        const result = await viewer1Ref.current.semanticTextCompare(viewer2Ref.current, options);
+        var result = await viewer1.semanticTextCompare(viewer2, options);
+        console.log('Full Comparison Result:', result);
 
-        const originalAnnotations = result?.originalDocumentAnnotations || [];
-        const modifiedAnnotations = result?.modifiedDocumentAnnotations || [];
-        const differences = [];
+        // Access annotations from both documents
+        var originalAnnotations = result.originalDocumentAnnotations || [];
+        var modifiedAnnotations = result.modifiedDocumentAnnotations || [];
+        var totalTextDiffCount = result.totalTextDiffCount || 0;
+
+        console.log('Total Text Differences: ' + totalTextDiffCount);
+
+        // Extract and categorize all differences
+        var addedCount = 0, deletedCount = 0, modifiedCount = 0;
+
+        // Process original document annotations (deletions and modifications)
+        originalAnnotations.forEach(function(pageAnnotations) {
+            if (pageAnnotations.differenceAnnotations) {
+                pageAnnotations.differenceAnnotations.forEach(function(diff) {
+                    var type = diff.textDiffType;
+                    if (type === 'deleted') deletedCount++;
+                    if (type === 'modified') modifiedCount++;
+                    if (type === 'added') addedCount++;
+                });
+            }
+        });
+
+        console.log('Added: ' + addedCount);
+        console.log('Deleted: ' + deletedCount);
+        console.log('Modified: ' + modifiedCount);
+    } catch (error) {
+        console.error('Error during comparison:', error);
+    }
+}
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+### Step 4: Generate comparison report
+
+Generate a detailed report with differences grouped by page:
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% raw %}
+// Generate detailed report with differences grouped by page
+async function generateReport() {
+    if (!viewer1 || !viewer2) {
+        console.warn('Viewers not loaded');
+        return;
+    }
+
+    var options = {
+        beforeColor: '#FF0000',
+        afterColor: '#00FF00',
+        beforeColorOpacity: 0.4,
+        afterColorOpacity: 0.4,
+        enableHighlights: true
+    };
+
+    try {
+        var result = await viewer1.semanticTextCompare(viewer2, options);
+        var originalAnnotations = result.originalDocumentAnnotations || [];
+        var modifiedAnnotations = result.modifiedDocumentAnnotations || [];
+        var totalTextDiffCount = result.totalTextDiffCount || 0;
+
+        var addedCount = 0, deletedCount = 0, modifiedCount = 0;
+        var byPage = {};
+
+        // Process all annotations
+        originalAnnotations.forEach(function(pageAnnotations) {
+            var pageNum = pageAnnotations.pageNumber;
+            if (!byPage[pageNum]) {
+                byPage[pageNum] = { deleted: 0, added: 0, modified: 0 };
+            }
+
+            if (pageAnnotations.differenceAnnotations) {
+                pageAnnotations.differenceAnnotations.forEach(function(diff) {
+                    var type = diff.textDiffType;
+                    if (type === 'deleted') {
+                        deletedCount++;
+                        byPage[pageNum].deleted++;
+                    } else if (type === 'added') {
+                        addedCount++;
+                        byPage[pageNum].added++;
+                    } else if (type === 'modified') {
+                        modifiedCount++;
+                        byPage[pageNum].modified++;
+                    }
+                });
+            }
+        });
+
+        modifiedAnnotations.forEach(function(pageAnnotations) {
+            var pageNum = pageAnnotations.pageNumber;
+            if (!byPage[pageNum]) {
+                byPage[pageNum] = { deleted: 0, added: 0, modified: 0 };
+            }
+
+            if (pageAnnotations.differenceAnnotations) {
+                pageAnnotations.differenceAnnotations.forEach(function(diff) {
+                    var type = diff.textDiffType;
+                    if (type === 'deleted') {
+                        deletedCount++;
+                        byPage[pageNum].deleted++;
+                    } else if (type === 'added') {
+                        addedCount++;
+                        byPage[pageNum].added++;
+                    } else if (type === 'modified') {
+                        modifiedCount++;
+                        byPage[pageNum].modified++;
+                    }
+                });
+            }
+        });
+
+        var report = {
+            totalDifferences: totalTextDiffCount,
+            summary: {
+                added: addedCount,
+                deleted: deletedCount,
+                modified: modifiedCount
+            },
+            byPage: byPage
+        };
+
+        console.log('Comparison Report:', report);
+        return report;
+    } catch (error) {
+        console.error('Error generating report:', error);
+    }
+}
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+### Step 5: Add control buttons and synchronization
+
+Manage synchronization, highlights, and comparison controls:
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% raw %}
+// Toggle synchronization
+function handleToggleSync() {
+    synchronizationEnabled = !synchronizationEnabled;
+    var btnToggleSync = document.getElementById('btnToggleSync');
+    btnToggleSync.textContent = synchronizationEnabled ? 'Disable Sync' : 'Enable Sync';
+
+    if (viewer1 && viewer2 && viewer1.syncViewers) {
+        viewer1.syncViewers(viewer2, synchronizationEnabled);
+    }
+}
+
+// Toggle highlights
+async function handleToggleHighlights() {
+    highlightsEnabled = !highlightsEnabled;
+    var btnToggleHighlights = document.getElementById('btnToggleHighlights');
+    btnToggleHighlights.textContent = highlightsEnabled ? 'Disable Highlights' : 'Enable Highlights';
+
+    if (viewersLoaded && viewer1 && viewer2) {
+        var options = {
+            beforeColor: '#FF0000',
+            afterColor: '#00FF00',
+            beforeColorOpacity: 0.4,
+            afterColorOpacity: 0.4,
+            enableHighlights: highlightsEnabled
+        };
+
+        try {
+            // Clear previous comparison
+            if (viewer1.removeSemanticTextCompare) {
+                viewer1.removeSemanticTextCompare(viewer2);
+            }
+            // Apply new comparison with updated highlights state
+            var result = await viewer1.semanticTextCompare(viewer2, options);
+            console.log('Highlights updated:', result);
+        } catch (error) {
+            console.error('Error updating highlights:', error);
+        }
+    }
+}
+
+// Clear annotations
+function handleClearAnnotations() {
+    if (viewer1 && viewer2) {
+        if (viewer1.removeSemanticTextCompare) {
+            viewer1.removeSemanticTextCompare(viewer2);
+        }
+    }
+}
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+## Viewing differences
+
+![Differences panel shows all detected changes](../images/semantic-text-comparison.png)
+
+The differences panel on the right displays all detected differences categorized by type:
+- **Deleted** - Text removed from the original document (shown in red in the document)
+- **Replaced** - Text that was modified or changed
+- Each item shows the page number and change details
+
+## Difference object structure
+
+Each difference object contains:
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `type` | string | Type of difference: 'Added', 'Deleted', or 'Modified' |
+| `text` | string | The actual text content of the difference |
+| `pageNumber` | number | Page number where difference is located (1-based) |
+| `bounds` | object | Position and size of the difference |
+| `bounds.x` | number | X coordinate of the difference |
+| `bounds.y` | number | Y coordinate of the difference |
+| `bounds.width` | number | Width of the text bounding box |
+| `bounds.height` | number | Height of the text bounding box |
+
+## Common use cases
+
+### Filter differences by type
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% raw %}
+// Get differences filtered by type
+async function getDifferencesByType(type) {
+    if (!viewer1 || !viewer2) return [];
+
+    var options = {
+        beforeColor: '#FF0000',
+        afterColor: '#00FF00',
+        beforeColorOpacity: 0.4,
+        afterColorOpacity: 0.4,
+        enableHighlights: true
+    };
+
+    try {
+        var result = await viewer1.semanticTextCompare(viewer2, options);
+        var originalAnnotations = result.originalDocumentAnnotations || [];
+        var modifiedAnnotations = result.modifiedDocumentAnnotations || [];
+        var differences = [];
 
         // Extract differences by type from original annotations
-        originalAnnotations.forEach((pageAnnotations) => {
-          pageAnnotations.differenceAnnotations?.forEach((diff) => {
-            if (diff.textDiffType === type.toLowerCase()) {
-              differences.push({
-                pageNumber: pageAnnotations.pageNumber,
-                type: diff.textDiffType,
-                text: diff.textDiffData,
-                bounds: diff.annotation?.bounds,
-                color: diff.annotation?.color
-              });
+        originalAnnotations.forEach(function(pageAnnotations) {
+            if (pageAnnotations.differenceAnnotations) {
+                pageAnnotations.differenceAnnotations.forEach(function(diff) {
+                    if (diff.textDiffType === type.toLowerCase()) {
+                        differences.push({
+                            pageNumber: pageAnnotations.pageNumber,
+                            type: diff.textDiffType,
+                            text: diff.textDiffData,
+                            bounds: diff.annotation ? diff.annotation.bounds : null,
+                            color: diff.annotation ? diff.annotation.color : null
+                        });
+                    }
+                });
             }
-          });
         });
 
         // Extract differences by type from modified annotations
-        modifiedAnnotations.forEach((pageAnnotations) => {
-          pageAnnotations.differenceAnnotations?.forEach((diff) => {
-            if (diff.textDiffType === type.toLowerCase()) {
-              const exists = differences.find(d =>
-                d.pageNumber === pageAnnotations.pageNumber &&
-                d.text === diff.textDiffData
-              );
-              if (!exists) {
-                differences.push({
-                  pageNumber: pageAnnotations.pageNumber,
-                  type: diff.textDiffType,
-                  text: diff.textDiffData,
-                  bounds: diff.annotation?.bounds,
-                  color: diff.annotation?.color
+        modifiedAnnotations.forEach(function(pageAnnotations) {
+            if (pageAnnotations.differenceAnnotations) {
+                pageAnnotations.differenceAnnotations.forEach(function(diff) {
+                    if (diff.textDiffType === type.toLowerCase()) {
+                        var exists = differences.some(function(d) {
+                            return d.pageNumber === pageAnnotations.pageNumber && d.text === diff.textDiffData;
+                        });
+                        if (!exists) {
+                            differences.push({
+                                pageNumber: pageAnnotations.pageNumber,
+                                type: diff.textDiffType,
+                                text: diff.textDiffData,
+                                bounds: diff.annotation ? diff.annotation.bounds : null,
+                                color: diff.annotation ? diff.annotation.color : null
+                            });
+                        }
+                    }
                 });
-              }
             }
-          });
         });
 
-        console.log(`${type} differences (${differences.length}):`, differences);
+        console.log(type + ' differences (' + differences.length + '):', differences);
         return differences;
     } catch (error) {
         console.error('Error filtering differences:', error);
         return [];
     }
-};
+}
 
 // Usage
-const addedDifferences = await getDifferencesByType('added');
-const deletedDifferences = await getDifferencesByType('deleted');
-const modifiedDifferences = await getDifferencesByType('modified');
+var addedDifferences = await getDifferencesByType('added');
+var deletedDifferences = await getDifferencesByType('deleted');
+var modifiedDifferences = await getDifferencesByType('modified');
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
@@ -311,58 +511,62 @@ const modifiedDifferences = await getDifferencesByType('modified');
 ### Group differences by page
 
 {% tabs %}
-{% highlight js tabtitle="App.jsx" %}
+{% highlight js tabtitle="index.js" %}
 {% raw %}
-const groupDifferencesByPage = async () => {
-    if (!viewer1Ref.current || !viewer2Ref.current) return {};
+// Group differences by page
+async function groupDifferencesByPage() {
+    if (!viewer1 || !viewer2) return {};
 
-    const options = {
+    var options = {
         beforeColor: '#FF0000',
         afterColor: '#00FF00',
         beforeColorOpacity: 0.4,
         afterColorOpacity: 0.4,
-        enableHighlights: true,
+        enableHighlights: true
     };
 
     try {
-        const result = await viewer1Ref.current.semanticTextCompare(viewer2Ref.current, options);
-
-        const originalAnnotations = result?.originalDocumentAnnotations || [];
-        const modifiedAnnotations = result?.modifiedDocumentAnnotations || [];
-        const grouped = {};
+        var result = await viewer1.semanticTextCompare(viewer2, options);
+        var originalAnnotations = result.originalDocumentAnnotations || [];
+        var modifiedAnnotations = result.modifiedDocumentAnnotations || [];
+        var grouped = {};
 
         // Group original document differences by page
-        originalAnnotations.forEach((pageAnnotations) => {
-          const pageNum = pageAnnotations.pageNumber;
-          if (!grouped[pageNum]) {
-            grouped[pageNum] = { original: [], modified: [] };
-          }
+        originalAnnotations.forEach(function(pageAnnotations) {
+            var pageNum = pageAnnotations.pageNumber;
+            if (!grouped[pageNum]) {
+                grouped[pageNum] = { original: [], modified: [] };
+            }
 
-          pageAnnotations.differenceAnnotations?.forEach((diff) => {
-            grouped[pageNum].original.push({
-              type: diff.textDiffType,
-              text: diff.textDiffData,
-              bounds: diff.annotation?.bounds,
-              color: diff.annotation?.color
-            });
-          });
+            if (pageAnnotations.differenceAnnotations) {
+                pageAnnotations.differenceAnnotations.forEach(function(diff) {
+                    grouped[pageNum].original.push({
+                        type: diff.textDiffType,
+                        text: diff.textDiffData,
+                        bounds: diff.annotation ? diff.annotation.bounds : null,
+                        color: diff.annotation ? diff.annotation.color : null
+                    });
+                });
+            }
         });
 
         // Group modified document differences by page
-        modifiedAnnotations.forEach((pageAnnotations) => {
-          const pageNum = pageAnnotations.pageNumber;
-          if (!grouped[pageNum]) {
-            grouped[pageNum] = { original: [], modified: [] };
-          }
+        modifiedAnnotations.forEach(function(pageAnnotations) {
+            var pageNum = pageAnnotations.pageNumber;
+            if (!grouped[pageNum]) {
+                grouped[pageNum] = { original: [], modified: [] };
+            }
 
-          pageAnnotations.differenceAnnotations?.forEach((diff) => {
-            grouped[pageNum].modified.push({
-              type: diff.textDiffType,
-              text: diff.textDiffData,
-              bounds: diff.annotation?.bounds,
-              color: diff.annotation?.color
-            });
-          });
+            if (pageAnnotations.differenceAnnotations) {
+                pageAnnotations.differenceAnnotations.forEach(function(diff) {
+                    grouped[pageNum].modified.push({
+                        type: diff.textDiffType,
+                        text: diff.textDiffData,
+                        bounds: diff.annotation ? diff.annotation.bounds : null,
+                        color: diff.annotation ? diff.annotation.color : null
+                    });
+                });
+            }
         });
 
         console.log('Differences grouped by page:', grouped);
@@ -371,7 +575,7 @@ const groupDifferencesByPage = async () => {
         console.error('Error grouping differences:', error);
         return {};
     }
-};
+}
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}

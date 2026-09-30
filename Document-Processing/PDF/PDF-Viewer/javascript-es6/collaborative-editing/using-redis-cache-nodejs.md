@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Collaborative Editing in TypeScript PDF Viewer with Node.js | Syncfusion
+title: TypeScript PDF Viewer Collaborative Editing with Node.js | Syncfusion
 description: Learn how to implement TypeScript PDF Viewer collaborative editing with the Syncfusion Collaborator client and Node.js server packages.
 platform: document-processing
 control: PDF Viewer

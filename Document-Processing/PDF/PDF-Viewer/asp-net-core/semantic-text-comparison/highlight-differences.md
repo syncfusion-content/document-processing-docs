@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Highlight Differences in UI
+# Highlight Differences in ASP.NET Core PDF Viewer UI
 
 The semantic text comparison feature highlights differences between two PDF documents with customizable colors and opacity, making it easy to identify changes at a glance.
 
@@ -19,12 +19,6 @@ When you compare two PDF documents using the semantic text comparison feature, d
 - **Deleted text** - Highlighted in one color (default: red)
 - **Added text** - Highlighted in another color (default: green)
 - **Synchronized viewers** - Both documents remain aligned during comparison
-
-## Prerequisites
-
-- ASP.NET Core web application with Syncfusion tag helpers
-- `ejs-pdfcomparer` tag helper available
-- Two PDF documents ready for comparison
 
 ## Steps
 

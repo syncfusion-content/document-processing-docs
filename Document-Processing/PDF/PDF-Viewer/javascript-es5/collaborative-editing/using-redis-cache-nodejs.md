@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Collaborative Editing in ES5 JavaScript PDF Viewer with Node.js | Syncfusion
+title: Collaborative Editing in ES5 PDF Viewer with Node.js | Syncfusion
 description: Learn how to implement ES5 JavaScript PDF Viewer collaborative editing with Syncfusion CDN scripts and Node.js server packages.
 platform: document-processing
 control: PDF Viewer

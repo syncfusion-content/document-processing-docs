@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Syncfusion ES5 JavaScript PDF Viewer Semantic Text Comparison | Syncfusion
+title: ES5 JavaScript PDF Viewer Semantic Text Comparison | Syncfusion
 description: Learn about the Syncfusion ES5 JavaScript PDF Viewer Semantic Text Comparison feature for comparing two PDF documents.
 platform: document-processing
 control: PDF Viewer

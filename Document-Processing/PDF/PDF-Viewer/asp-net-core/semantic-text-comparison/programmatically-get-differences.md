@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Programmatically Get Differences
+# Programmatically Get Differences in ASP.NET Core PDF Viewer
 
 The semantic text comparison feature provides programmatic access to all differences found between two PDF documents. Using the `semanticTextCompare()` method on the PDF Viewer, you can retrieve structured difference data for custom processing, reporting, or integration with other workflows.
 
@@ -22,16 +22,9 @@ The comparison provides:
 - **Categorized results** - Differences grouped by type (Added, Deleted, Modified)
 - **Custom processing** - Export, filter, or analyze differences programmatically
 
-## Prerequisites
-
-- ASP.NET Core web application with Syncfusion tag helpers
-- `ejs-pdfviewer` tag helper available
-- Two PDF documents loaded for comparison
-- Semantic text comparison feature enabled
-
 ## Steps
 
-### Step 1: Create the Razor view with styles and dual viewers
+### Step 1: Add required styles and HTML structure
 
 Create an ASP.NET Core Razor view with CSS styling and two side-by-side PDF viewers:
 
@@ -39,79 +32,6 @@ Create an ASP.NET Core Razor view with CSS styling and two side-by-side PDF view
 {% highlight html tabtitle="Index.cshtml" %}
 {% raw %}
 @page
-@model IndexModel
-@{
-    ViewData["Title"] = "PDF Comparison - Semantic Text Difference";
-}
-
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body, html {
-        height: 100%;
-        width: 100%;
-        overflow: hidden;
-    }
-
-    #app {
-        height: 100vh;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .control-panel {
-        display: flex;
-        gap: 8px;
-        padding: 12px;
-        background-color: #f5f5f5;
-        border-bottom: 1px solid #ddd;
-        flex-wrap: wrap;
-        align-items: center;
-        min-height: 50px;
-    }
-
-
-
-    .viewers-container {
-        display: flex;
-        flex: 1;
-        gap: 0;
-        overflow: hidden;
-    }
-
-    .viewer-wrapper {
-        width: 50%;
-        height: 100%;
-        border-right: 1px solid #ccc;
-    }
-
-        .viewer-wrapper:last-child {
-            border-right: none;
-        }
-
-    .viewer-title {
-        padding: 8px 12px;
-        background-color: #e9ecef;
-        border-bottom: 1px solid #dee2e6;
-        font-size: 13px;
-        font-weight: 600;
-        color: #333;
-    }
-
-    .viewer-content {
-        height: calc(100% - 35px);
-    }
-
-    .ejs-pdfviewer {
-        height: 100%;
-        width: 100%;
-    }
-</style>
 
 <div id="app">
     <!-- Control Panel with Buttons -->
@@ -163,7 +83,7 @@ Create an ASP.NET Core Razor view with CSS styling and two side-by-side PDF view
     let synchronizationEnabled = true;
     let highlightsEnabled = true;
 
-    // Initialize when DOM is ready
+    // Initialize viewers when DOM is ready
     document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => {
             viewer1 = document.getElementById('pdfViewer1').ej2_instances[0];
@@ -175,18 +95,23 @@ Create an ASP.NET Core Razor view with CSS styling and two side-by-side PDF view
                 viewer2.documentLoad = handleDocumentLoad;
 
                 // Attach control button event listeners
-                document.getElementById('btnCompare').addEventListener('click', handleCompare);
-                document.getElementById('btnToggleHighlights').addEventListener('click', handleToggleHighlights);
-                document.getElementById('btnToggleSync').addEventListener('click', handleToggleSync);
-                document.getElementById('btnClearAnnotations').addEventListener('click', handleClearAnnotations);
-                document.getElementById('btnGetAdded').addEventListener('click', () => getDifferencesByType('Added'));
-                document.getElementById('btnGetDeleted').addEventListener('click', () => getDifferencesByType('Deleted'));
-                document.getElementById('btnGetModified').addEventListener('click', () => getDifferencesByType('Modified'));
-                document.getElementById('btnGroupByPage').addEventListener('click', groupDifferencesByPage);
-                document.getElementById('btnGenerateReport').addEventListener('click', generateReport);
+                attachEventListeners();
             }
         }, 500);
     });
+
+    // Attach event listeners to all control buttons
+    function attachEventListeners() {
+        document.getElementById('btnCompare').addEventListener('click', handleCompare);
+        document.getElementById('btnToggleHighlights').addEventListener('click', handleToggleHighlights);
+        document.getElementById('btnToggleSync').addEventListener('click', handleToggleSync);
+        document.getElementById('btnClearAnnotations').addEventListener('click', handleClearAnnotations);
+        document.getElementById('btnGetAdded').addEventListener('click', () => getDifferencesByType('added'));
+        document.getElementById('btnGetDeleted').addEventListener('click', () => getDifferencesByType('deleted'));
+        document.getElementById('btnGetModified').addEventListener('click', () => getDifferencesByType('modified'));
+        document.getElementById('btnGroupByPage').addEventListener('click', groupDifferencesByPage);
+        document.getElementById('btnGenerateReport').addEventListener('click', generateReport);
+    }
 
     // Handle document load event
     function handleDocumentLoad() {
@@ -196,6 +121,55 @@ Create an ASP.NET Core Razor view with CSS styling and two side-by-side PDF view
             if (viewer1.syncViewers) {
                 viewer1.syncViewers(viewer2, synchronizationEnabled);
             }
+        }
+    }
+
+    // Perform semantic text comparison
+    async function handleCompare() {
+        if (!viewersLoaded || !viewer1 || !viewer2) {
+            console.warn('Viewers not loaded yet');
+            return;
+        }
+
+        const options = {
+            beforeColor: '#FF0000',      // Red for original
+            afterColor: '#00FF00',       // Green for modified
+            beforeColorOpacity: 0.4,
+            afterColorOpacity: 0.4,
+            enableHighlights: highlightsEnabled,
+        };
+
+        try {
+            const result = await viewer1.semanticTextCompare(viewer2, options);
+            console.log('Full Comparison Result:', result);
+
+            // Access annotations from both documents
+            const originalAnnotations = result?.originalDocumentAnnotations || [];
+            const modifiedAnnotations = result?.modifiedDocumentAnnotations || [];
+            const totalTextDiffCount = result?.totalTextDiffCount || 0;
+
+            console.log('Total Text Differences:', totalTextDiffCount);
+
+            // Extract and categorize all differences
+            let addedCount = 0;
+            let deletedCount = 0;
+            let modifiedCount = 0;
+
+            // Process original document annotations (deletions and modifications)
+            originalAnnotations.forEach((pageAnnotations) => {
+                pageAnnotations.differenceAnnotations?.forEach((diff) => {
+                    const type = diff.textDiffType;
+                    if (type === 'deleted') deletedCount++;
+                    if (type === 'modified') modifiedCount++;
+                    if (type === 'added') addedCount++;
+                });
+            });
+
+            console.log('Added:', addedCount);
+            console.log('Deleted:', deletedCount);
+            console.log('Modified:', modifiedCount);
+        } catch (error) {
+            console.error('Error during comparison:', error);
         }
     }
 
@@ -248,7 +222,7 @@ Create an ASP.NET Core Razor view with CSS styling and two side-by-side PDF view
         }
     }
 
-    // Get differences by type
+    // Get differences filtered by type
     async function getDifferencesByType(type) {
         if (!viewer1 || !viewer2) return [];
 
@@ -285,7 +259,6 @@ Create an ASP.NET Core Razor view with CSS styling and two side-by-side PDF view
             modifiedAnnotations.forEach((pageAnnotations) => {
                 pageAnnotations.differenceAnnotations?.forEach((diff) => {
                     if (diff.textDiffType === type.toLowerCase()) {
-                        // Avoid duplicates
                         const exists = differences.find(d =>
                             d.pageNumber === pageAnnotations.pageNumber &&
                             d.text === diff.textDiffData
@@ -335,6 +308,7 @@ Create an ASP.NET Core Razor view with CSS styling and two side-by-side PDF view
                 if (!grouped[pageNum]) {
                     grouped[pageNum] = { original: [], modified: [] };
                 }
+
                 pageAnnotations.differenceAnnotations?.forEach((diff) => {
                     grouped[pageNum].original.push({
                         type: diff.textDiffType,
@@ -351,6 +325,7 @@ Create an ASP.NET Core Razor view with CSS styling and two side-by-side PDF view
                 if (!grouped[pageNum]) {
                     grouped[pageNum] = { original: [], modified: [] };
                 }
+
                 pageAnnotations.differenceAnnotations?.forEach((diff) => {
                     grouped[pageNum].modified.push({
                         type: diff.textDiffType,
@@ -369,78 +344,7 @@ Create an ASP.NET Core Razor view with CSS styling and two side-by-side PDF view
         }
     }
 
-    // Main comparison handler
-    async function handleCompare() {
-        if (!viewersLoaded || !viewer1 || !viewer2) {
-            console.warn('Viewers not loaded yet');
-            return;
-        }
-
-        const options = {
-            beforeColor: '#FF0000',      // Red for original
-            afterColor: '#00FF00',       // Green for modified
-            beforeColorOpacity: 0.4,
-            afterColorOpacity: 0.4,
-            enableHighlights: highlightsEnabled,
-        };
-
-        try {
-            const result = await viewer1.semanticTextCompare(viewer2, options);
-            console.log('Full Comparison Result:', result);
-
-            // Parse the result structure
-            const originalAnnotations = result?.originalDocumentAnnotations || [];
-            const modifiedAnnotations = result?.modifiedDocumentAnnotations || [];
-            const totalTextDiffCount = result?.totalTextDiffCount || 0;
-
-            console.log('Total Text Differences:', totalTextDiffCount);
-            console.log('Original Document Pages:', originalAnnotations.length);
-            console.log('Modified Document Pages:', modifiedAnnotations.length);
-
-            // Extract and categorize all differences
-            let addedCount = 0;
-            let deletedCount = 0;
-            let modifiedCount = 0;
-
-            // Process original document annotations (deletions and modifications)
-            originalAnnotations.forEach((pageAnnotations) => {
-                const pageNum = pageAnnotations.pageNumber;
-                console.log(`\nOriginal Document - Page ${pageNum}:`);
-                pageAnnotations.differenceAnnotations?.forEach((diff) => {
-                    const type = diff.textDiffType;
-                    const text = diff.textDiffData;
-                    if (type === 'deleted') deletedCount++;
-                    if (type === 'modified') modifiedCount++;
-                    if (type === 'added') addedCount++;
-                    console.log(`  - ${type.toUpperCase()}: "${text?.substring(0, 50)}..."`);
-                });
-            });
-
-            // Process modified document annotations (additions and modifications)
-            modifiedAnnotations.forEach((pageAnnotations) => {
-                const pageNum = pageAnnotations.pageNumber;
-                console.log(`\nModified Document - Page ${pageNum}:`);
-                pageAnnotations.differenceAnnotations?.forEach((diff) => {
-                    const type = diff.textDiffType;
-                    const text = diff.textDiffData;
-                    if (type === 'added' && !addedCount) addedCount++;
-                    if (type === 'modified' && !modifiedCount) modifiedCount++;
-                    console.log(`  - ${type.toUpperCase()}: "${text?.substring(0, 50)}..."`);
-                });
-            });
-
-            // Summary
-            console.log('\n=== COMPARISON SUMMARY ===');
-            console.log(`Total Differences: ${totalTextDiffCount}`);
-            console.log(`Deleted: ${deletedCount}`);
-            console.log(`Added: ${addedCount}`);
-            console.log(`Modified: ${modifiedCount}`);
-        } catch (error) {
-            console.error('Error during comparison:', error);
-        }
-    }
-
-    // Generate detailed report
+    // Generate detailed report with differences grouped by page
     async function generateReport() {
         if (!viewer1 || !viewer2) {
             console.warn('Viewers not loaded');
@@ -470,54 +374,42 @@ Create an ASP.NET Core Razor view with CSS styling and two side-by-side PDF view
             originalAnnotations.forEach((pageAnnotations) => {
                 const pageNum = pageAnnotations.pageNumber;
                 if (!byPage[pageNum]) {
-                    byPage[pageNum] = { deleted: 0, added: 0, modified: 0, details: [] };
+                    byPage[pageNum] = { deleted: 0, added: 0, modified: 0 };
                 }
+
                 pageAnnotations.differenceAnnotations?.forEach((diff) => {
                     const type = diff.textDiffType;
                     if (type === 'deleted') {
                         deletedCount++;
                         byPage[pageNum].deleted++;
-                    }
-                    else if (type === 'added') {
+                    } else if (type === 'added') {
                         addedCount++;
                         byPage[pageNum].added++;
-                    }
-                    else if (type === 'modified') {
+                    } else if (type === 'modified') {
                         modifiedCount++;
                         byPage[pageNum].modified++;
                     }
-                    byPage[pageNum].details.push({
-                        type,
-                        text: diff.textDiffData?.substring(0, 100),
-                        color: diff.annotation?.color
-                    });
                 });
             });
 
             modifiedAnnotations.forEach((pageAnnotations) => {
                 const pageNum = pageAnnotations.pageNumber;
                 if (!byPage[pageNum]) {
-                    byPage[pageNum] = { deleted: 0, added: 0, modified: 0, details: [] };
+                    byPage[pageNum] = { deleted: 0, added: 0, modified: 0 };
                 }
+
                 pageAnnotations.differenceAnnotations?.forEach((diff) => {
                     const type = diff.textDiffType;
                     if (type === 'deleted') {
                         deletedCount++;
                         byPage[pageNum].deleted++;
-                    }
-                    else if (type === 'added') {
+                    } else if (type === 'added') {
                         addedCount++;
                         byPage[pageNum].added++;
-                    }
-                    else if (type === 'modified') {
+                    } else if (type === 'modified') {
                         modifiedCount++;
                         byPage[pageNum].modified++;
                     }
-                    byPage[pageNum].details.push({
-                        type,
-                        text: diff.textDiffData?.substring(0, 100),
-                        color: diff.annotation?.color
-                    });
                 });
             });
 
@@ -531,16 +423,7 @@ Create an ASP.NET Core Razor view with CSS styling and two side-by-side PDF view
                 byPage: byPage
             };
 
-            console.log('=== DETAILED COMPARISON REPORT ===');
-            console.log(`Total Text Differences: ${report.totalDifferences}`);
-            console.log(`Added: ${report.summary.added}`);
-            console.log(`Deleted: ${report.summary.deleted}`);
-            console.log(`Modified: ${report.summary.modified}`);
-            console.log('\nBreakdown by Page:');
-            Object.entries(byPage).forEach(([pageNum, data]) => {
-                console.log(`  Page ${pageNum}: +${data.added} -${data.deleted} ~${data.modified}`);
-            });
-            console.log('\nFull Report:', report);
+            console.log('Comparison Report:', report);
             return report;
         } catch (error) {
             console.error('Error generating report:', error);
@@ -551,108 +434,240 @@ Create an ASP.NET Core Razor view with CSS styling and two side-by-side PDF view
 {% endhighlight %}
 {% endtabs %}
 
-### Step 2: Customize document paths
+### Step 2: Perform semantic text comparison
 
-Update the `documentPath` and `resourceUrl` attributes in the Razor view to point to your PDF documents:
+Compare the documents programmatically and access differences:
 
-```html
-<ejs-pdfviewer id="pdfViewer1"
-               documentPath="your-original-document-path.pdf"
-               resourceUrl="https://cdn.syncfusion.com/ej2/34.2.4/dist/ej2-pdfviewer-lib"
-               style="height:100%; width:100%;">
-</ejs-pdfviewer>
-```
+{% tabs %}
+{% highlight js tabtitle="app.js" %}
+{% raw %}
+const handleCompare = async () => {
+  if (!viewersLoaded || !viewer1 || !viewer2) {
+    return;
+  }
 
-## API Reference
+  const options = {
+    beforeColor: '#FF0000',      // Red for original
+    afterColor: '#00FF00',       // Green for modified
+    beforeColorOpacity: 0.4,
+    afterColorOpacity: 0.4,
+    enableHighlights: highlightsEnabled,
+  };
 
-### Comparison Options
+  try {
+    const result = await viewer1.semanticTextCompare(viewer2, options);
+    console.log('Full Comparison Result:', result);
 
-The `semanticTextCompare()` method accepts comparison options:
+    // Access annotations from both documents
+    const originalAnnotations = result?.originalDocumentAnnotations || [];
+    const modifiedAnnotations = result?.modifiedDocumentAnnotations || [];
+    const totalTextDiffCount = result?.totalTextDiffCount || 0;
 
-| Option | Type | Description |
-|--------|------|-------------|
-| `beforeColor` | string | Color for deleted text (hex format) |
-| `afterColor` | string | Color for added text (hex format) |
-| `beforeColorOpacity` | number | Transparency for deleted (0-1) |
-| `afterColorOpacity` | number | Transparency for added (0-1) |
-| `enableHighlights` | boolean | Enable/disable visual highlighting |
+    console.log('Total Text Differences:', totalTextDiffCount);
 
-### Result Structure
+    // Extract and categorize all differences
+    let addedCount = 0;
+    let deletedCount = 0;
+    let modifiedCount = 0;
 
-The comparison result contains:
+    // Process original document annotations (deletions and modifications)
+    originalAnnotations.forEach((pageAnnotations) => {
+      pageAnnotations.differenceAnnotations?.forEach((diff) => {
+        const type = diff.textDiffType;
+        if (type === 'deleted') deletedCount++;
+        if (type === 'modified') modifiedCount++;
+        if (type === 'added') addedCount++;
+      });
+    });
 
-```javascript
-{
-    totalTextDiffCount: number,
-    originalDocumentAnnotations: Array<PageAnnotations>,
-    modifiedDocumentAnnotations: Array<PageAnnotations>
-}
-```
+    console.log('Added:', addedCount);
+    console.log('Deleted:', deletedCount);
+    console.log('Modified:', modifiedCount);
+  } catch (error) {
+    console.error('Error during comparison:', error);
+  }
+};
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
-## Key Functions
+### Step 3: Generate comparison report
 
-### handleCompare()
-Main comparison handler - performs semantic text comparison and logs results to console.
+Generate a detailed report with differences grouped by page:
 
-### getDifferencesByType(type)
-Filters differences by type ('Added', 'Deleted', 'Modified') and returns an array.
+{% tabs %}
+{% highlight js tabtitle="app.js" %}
+{% raw %}
+const generateReport = async () => {
+  if (!viewer1 || !viewer2) return;
 
-### groupDifferencesByPage()
-Groups all differences organized by page number for easy navigation.
+  const options = {
+    beforeColor: '#FF0000',
+    afterColor: '#00FF00',
+    beforeColorOpacity: 0.4,
+    afterColorOpacity: 0.4,
+    enableHighlights: true,
+  };
 
-### generateReport()
-Creates a detailed report with summary counts and page-by-page breakdown.
+  try {
+    const result = await viewer1.semanticTextCompare(viewer2, options);
 
-### handleToggleSync()
-Toggles synchronization between the two PDF viewers.
+    const originalAnnotations = result?.originalDocumentAnnotations || [];
+    const modifiedAnnotations = result?.modifiedDocumentAnnotations || [];
+    const totalTextDiffCount = result?.totalTextDiffCount || 0;
 
-### handleToggleHighlights()
-Toggles visual highlighting of differences.
+    let addedCount = 0;
+    let deletedCount = 0;
+    let modifiedCount = 0;
+    const byPage = {};
 
-### handleClearAnnotations()
-Clears all comparison annotations from both viewers.
+    // Process all annotations
+    originalAnnotations.forEach((pageAnnotations) => {
+      const pageNum = pageAnnotations.pageNumber;
+      if (!byPage[pageNum]) {
+        byPage[pageNum] = { deleted: 0, added: 0, modified: 0 };
+      }
 
-## Complete Integration
+      pageAnnotations.differenceAnnotations?.forEach((diff) => {
+        const type = diff.textDiffType;
+        if (type === 'deleted') {
+          deletedCount++;
+          byPage[pageNum].deleted++;
+        } else if (type === 'added') {
+          addedCount++;
+          byPage[pageNum].added++;
+        } else if (type === 'modified') {
+          modifiedCount++;
+          byPage[pageNum].modified++;
+        }
+      });
+    });
 
-For a complete working example with all comparison features, buttons, and styling included, refer to the [GitHub sample](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/Semantic%20Text%20Comparison/Programmatically%20Get%20Differences).
+    modifiedAnnotations.forEach((pageAnnotations) => {
+      const pageNum = pageAnnotations.pageNumber;
+      if (!byPage[pageNum]) {
+        byPage[pageNum] = { deleted: 0, added: 0, modified: 0 };
+      }
 
-The sample includes:
-- Complete Razor view with CSS styling
-- Full comparison script with all event handlers
-- Console-based results logging
-- Test buttons for each comparison function
-- Real-time difference highlighting
+      pageAnnotations.differenceAnnotations?.forEach((diff) => {
+        const type = diff.textDiffType;
+        if (type === 'deleted') {
+          deletedCount++;
+          byPage[pageNum].deleted++;
+        } else if (type === 'added') {
+          addedCount++;
+          byPage[pageNum].added++;
+        } else if (type === 'modified') {
+          modifiedCount++;
+          byPage[pageNum].modified++;
+        }
+      });
+    });
 
-## See Also
+    const report = {
+      totalDifferences: totalTextDiffCount,
+      summary: {
+        added: addedCount,
+        deleted: deletedCount,
+        modified: modifiedCount
+      },
+      byPage: byPage
+    };
 
-- [Overview of semantic text comparison](./overview)
-- [Highlight differences in UI](./highlight-differences)
+    console.log('Comparison Report:', report);
+    return report;
+  } catch (error) {
+    console.error('Error generating report:', error);
+  }
+};
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
-        originalAnnotations.forEach((pageAnnotations) => {
-            pageAnnotations.differenceAnnotations?.forEach((diff) => {
-                const type = diff.textDiffType;
-                if (type === 'deleted') deletedCount++;
-                if (type === 'modified') modifiedCount++;
-                if (type === 'added') addedCount++;
-            });
-        });
+### Step 4: Add control buttons and synchronization
 
-        console.log('\n=== COMPARISON SUMMARY ===');
-        console.log(`Total Differences: ${totalTextDiffCount}`);
-        console.log(`Deleted: ${deletedCount}`);
-        console.log(`Added: ${addedCount}`);
-        console.log(`Modified: ${modifiedCount}`);
+Manage synchronization, highlights, and comparison controls:
+
+{% tabs %}
+{% highlight js tabtitle="app.js" %}
+{% raw %}
+const handleToggleSync = () => {
+  const newSyncState = !synchronizationEnabled;
+  setSynchronizationEnabled(newSyncState);
+
+  if (viewer1 && viewer2) {
+    viewer1.syncViewers(viewer2, newSyncState);
+  }
+};
+
+const handleToggleHighlights = async () => {
+  const newHighlightsState = !highlightsEnabled;
+  setHighlightsEnabled(newHighlightsState);
+
+  // Re-apply comparison with updated highlight state
+  if (viewersLoaded && viewer1 && viewer2) {
+    const options = {
+      beforeColor: '#FF0000',
+      afterColor: '#00FF00',
+      beforeColorOpacity: 0.4,
+      afterColorOpacity: 0.4,
+      enableHighlights: newHighlightsState,
+    };
+
+    try {
+      // Clear previous comparison
+      viewer1.removeSemanticTextCompare?.(viewer2);
+      // Apply new comparison with updated highlights state
+      const result = await viewer1.semanticTextCompare(viewer2, options);
+      console.log('Highlights updated:', result);
     } catch (error) {
-        console.error('Error during comparison:', error);
+      console.error('Error updating highlights:', error);
     }
-}
+  }
+};
 
-// Generate detailed report
-async function generateReport() {
-    if (!viewer1 || !viewer2) {
-        console.warn('Viewers not loaded');
-        return;
-    }
+const handleClearAnnotations = () => {
+  if (viewer1 && viewer2) {
+    viewer1.removeSemanticTextCompare?.(viewer2);
+  }
+};
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+## Viewing differences
+
+![Differences panel shows all detected changes](../images/semantic-text-comparison.png)
+
+The differences panel on the right displays all detected differences categorized by type:
+- **Deleted** - Text removed from the original document (shown in red in the document)
+- **Replaced** - Text that was modified or changed
+- Each item shows the page number and change details
+
+## Difference object structure
+
+Each difference object contains:
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `type` | string | Type of difference: 'Added', 'Deleted', or 'Modified' |
+| `text` | string | The actual text content of the difference |
+| `pageNumber` | number | Page number where difference is located (1-based) |
+| `bounds` | object | Position and size of the difference |
+| `bounds.x` | number | X coordinate of the difference |
+| `bounds.y` | number | Y coordinate of the difference |
+| `bounds.width` | number | Width of the text bounding box |
+| `bounds.height` | number | Height of the text bounding box |
+
+## Common use cases
+
+### Filter differences by type
+
+{% tabs %}
+{% highlight js tabtitle="app.js" %}
+{% raw %}
+const getDifferencesByType = async (type) => {
+    if (!viewer1 || !viewer2) return [];
 
     const options = {
         beforeColor: '#FF0000',
@@ -664,127 +679,134 @@ async function generateReport() {
 
     try {
         const result = await viewer1.semanticTextCompare(viewer2, options);
+
         const originalAnnotations = result?.originalDocumentAnnotations || [];
         const modifiedAnnotations = result?.modifiedDocumentAnnotations || [];
-        const totalTextDiffCount = result?.totalTextDiffCount || 0;
+        const differences = [];
 
-        let addedCount = 0;
-        let deletedCount = 0;
-        let modifiedCount = 0;
-        const byPage = {};
-
+        // Extract differences by type from original annotations
         originalAnnotations.forEach((pageAnnotations) => {
-            const pageNum = pageAnnotations.pageNumber;
-            if (!byPage[pageNum]) {
-                byPage[pageNum] = { deleted: 0, added: 0, modified: 0, details: [] };
+          pageAnnotations.differenceAnnotations?.forEach((diff) => {
+            if (diff.textDiffType === type.toLowerCase()) {
+              differences.push({
+                pageNumber: pageAnnotations.pageNumber,
+                type: diff.textDiffType,
+                text: diff.textDiffData,
+                bounds: diff.annotation?.bounds,
+                color: diff.annotation?.color
+              });
             }
-            pageAnnotations.differenceAnnotations?.forEach((diff) => {
-                const type = diff.textDiffType;
-                if (type === 'deleted') {
-                    deletedCount++;
-                    byPage[pageNum].deleted++;
-                }
-                else if (type === 'added') {
-                    addedCount++;
-                    byPage[pageNum].added++;
-                }
-                else if (type === 'modified') {
-                    modifiedCount++;
-                    byPage[pageNum].modified++;
-                }
-                byPage[pageNum].details.push({
-                    type,
-                    text: diff.textDiffData?.substring(0, 100),
-                    color: diff.annotation?.color
-                });
-            });
+          });
         });
 
+        // Extract differences by type from modified annotations
         modifiedAnnotations.forEach((pageAnnotations) => {
-            const pageNum = pageAnnotations.pageNumber;
-            if (!byPage[pageNum]) {
-                byPage[pageNum] = { deleted: 0, added: 0, modified: 0, details: [] };
-            }
-            pageAnnotations.differenceAnnotations?.forEach((diff) => {
-                const type = diff.textDiffType;
-                if (type === 'deleted') {
-                    deletedCount++;
-                    byPage[pageNum].deleted++;
-                }
-                else if (type === 'added') {
-                    addedCount++;
-                    byPage[pageNum].added++;
-                }
-                else if (type === 'modified') {
-                    modifiedCount++;
-                    byPage[pageNum].modified++;
-                }
-                byPage[pageNum].details.push({
-                    type,
-                    text: diff.textDiffData?.substring(0, 100),
-                    color: diff.annotation?.color
+          pageAnnotations.differenceAnnotations?.forEach((diff) => {
+            if (diff.textDiffType === type.toLowerCase()) {
+              const exists = differences.find(d =>
+                d.pageNumber === pageAnnotations.pageNumber &&
+                d.text === diff.textDiffData
+              );
+              if (!exists) {
+                differences.push({
+                  pageNumber: pageAnnotations.pageNumber,
+                  type: diff.textDiffType,
+                  text: diff.textDiffData,
+                  bounds: diff.annotation?.bounds,
+                  color: diff.annotation?.color
                 });
-            });
+              }
+            }
+          });
         });
 
-        const report = {
-            totalDifferences: totalTextDiffCount,
-            summary: {
-                added: addedCount,
-                deleted: deletedCount,
-                modified: modifiedCount
-            },
-            byPage: byPage
-        };
-
-        console.log('=== DETAILED COMPARISON REPORT ===');
-        console.log(`Total Text Differences: ${report.totalDifferences}`);
-        console.log(`Added: ${report.summary.added}`);
-        console.log(`Deleted: ${report.summary.deleted}`);
-        console.log(`Modified: ${report.summary.modified}`);
-        console.log('\nBreakdown by Page:');
-        Object.entries(byPage).forEach(([pageNum, data]) => {
-            console.log(`  Page ${pageNum}: +${data.added} -${data.deleted} ~${data.modified}`);
-        });
-        console.log('\nFull Report:', report);
-        return report;
+        console.log(`${type} differences (${differences.length}):`, differences);
+        return differences;
     } catch (error) {
-        console.error('Error generating report:', error);
+        console.error('Error filtering differences:', error);
+        return [];
     }
-}
+};
+
+// Usage
+const addedDifferences = await getDifferencesByType('added');
+const deletedDifferences = await getDifferencesByType('deleted');
+const modifiedDifferences = await getDifferencesByType('modified');
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
-## API Reference
+### Group differences by page
 
-### Comparison Options
+{% tabs %}
+{% highlight js tabtitle="app.js" %}
+{% raw %}
+const groupDifferencesByPage = async () => {
+    if (!viewer1 || !viewer2) return {};
 
-The `semanticTextCompare()` method accepts comparison options:
+    const options = {
+        beforeColor: '#FF0000',
+        afterColor: '#00FF00',
+        beforeColorOpacity: 0.4,
+        afterColorOpacity: 0.4,
+        enableHighlights: true,
+    };
 
-| Option | Type | Description |
-|--------|------|-------------|
-| `beforeColor` | string | Color for deleted text (hex format) |
-| `afterColor` | string | Color for added text (hex format) |
-| `beforeColorOpacity` | number | Transparency for deleted (0-1) |
-| `afterColorOpacity` | number | Transparency for added (0-1) |
-| `enableHighlights` | boolean | Enable/disable visual highlighting |
+    try {
+        const result = await viewer1.semanticTextCompare(viewer2, options);
 
-### Result Structure
+        const originalAnnotations = result?.originalDocumentAnnotations || [];
+        const modifiedAnnotations = result?.modifiedDocumentAnnotations || [];
+        const grouped = {};
 
-The comparison result contains:
+        // Group original document differences by page
+        originalAnnotations.forEach((pageAnnotations) => {
+          const pageNum = pageAnnotations.pageNumber;
+          if (!grouped[pageNum]) {
+            grouped[pageNum] = { original: [], modified: [] };
+          }
 
-```javascript
-{
-    totalTextDiffCount: number,
-    originalDocumentAnnotations: Array<PageAnnotations>,
-    modifiedDocumentAnnotations: Array<PageAnnotations>
-}
-```
+          pageAnnotations.differenceAnnotations?.forEach((diff) => {
+            grouped[pageNum].original.push({
+              type: diff.textDiffType,
+              text: diff.textDiffData,
+              bounds: diff.annotation?.bounds,
+              color: diff.annotation?.color
+            });
+          });
+        });
 
-N> For a complete working implementation with styling, control buttons, and all comparison features, refer to the [GitHub sample](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/Semantic%20Text%20Comparison/Programmatically%20get%20differences).
+        // Group modified document differences by page
+        modifiedAnnotations.forEach((pageAnnotations) => {
+          const pageNum = pageAnnotations.pageNumber;
+          if (!grouped[pageNum]) {
+            grouped[pageNum] = { original: [], modified: [] };
+          }
 
-## See Also
+          pageAnnotations.differenceAnnotations?.forEach((diff) => {
+            grouped[pageNum].modified.push({
+              type: diff.textDiffType,
+              text: diff.textDiffData,
+              bounds: diff.annotation?.bounds,
+              color: diff.annotation?.color
+            });
+          });
+        });
+
+        console.log('Differences grouped by page:', grouped);
+        return grouped;
+    } catch (error) {
+        console.error('Error grouping differences:', error);
+        return {};
+    }
+};
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/Semantic%20Text%20Comparison/Programmatically%20get%20differences).
+
+## Related topics
 
 - [Overview of semantic text comparison](./overview)
 - [Highlight differences in UI](./highlight-differences)
