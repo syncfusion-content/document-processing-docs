@@ -5,6 +5,7 @@ description: Describes how PDF Viewer in Xamarin.Android supports rendering the 
 platform: document-processing
 control: SfPdfViewer
 documentation: UG
+appliesto: PDF Viewer SDK
 ---
 
 # PDFium rendering in PDF Viewer Xamarin.Android

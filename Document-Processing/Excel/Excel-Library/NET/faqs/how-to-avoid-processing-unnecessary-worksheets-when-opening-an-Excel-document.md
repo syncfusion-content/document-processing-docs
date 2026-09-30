@@ -4,6 +4,7 @@ description: Avoid processing unnecessary worksheets when opening Excel document
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 # How to skip unnecessary worksheets in .NET Excel Library
 XlsIO provides support to avoid processing unnecessary worksheets when opening an Excel. The following code snippet illustrates this.

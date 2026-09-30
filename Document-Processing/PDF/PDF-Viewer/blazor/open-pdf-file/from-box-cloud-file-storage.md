@@ -5,6 +5,7 @@ description: Learn how to open PDF files from Box cloud storage in the Blazor PD
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Open PDF files from cloud storage in Blazor PDF Viewer 

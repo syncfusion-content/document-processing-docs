@@ -4,6 +4,7 @@ description: Learn how to split large PDF documents into smaller ones with singl
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Split PDF Documents in .NET PDF Library

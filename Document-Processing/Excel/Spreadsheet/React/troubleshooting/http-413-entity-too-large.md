@@ -5,6 +5,7 @@ description: Learn how to resolve HTTP 413 (Entity Too Large) errors when export
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # HTTP 413 Error in React Spreadsheet

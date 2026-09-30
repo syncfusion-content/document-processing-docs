@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion JavaScript Spreadsheet
 platform: document-processing
 control: Getting started 
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Getting Started with the JavaScript Spreadsheet 

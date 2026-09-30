@@ -5,6 +5,7 @@ description: Learn about the supported file formats in ASP.NET Core DOCX Editor 
 platform: document-processing
 control: Unsupported file
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # Supported File Formats in ASP.NET Core DOCX Editor

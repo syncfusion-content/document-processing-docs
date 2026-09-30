@@ -5,6 +5,7 @@ description: The PDF Viewer Xamarin.Android allows the users to perform almost a
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 #  Built-in toolbar in PDF viewer Xamarin.Android

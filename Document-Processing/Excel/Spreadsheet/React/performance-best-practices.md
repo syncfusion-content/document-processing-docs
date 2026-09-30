@@ -5,6 +5,7 @@ description: Learn about performance best practices in the Syncfusion React Spre
 platform: document-processing
 control: Performance
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Performance Best Practices in React Spreadsheet

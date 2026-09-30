@@ -5,6 +5,7 @@ description: The PDF opening feature in SfPdfViewer enables users to load and di
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Open a Document in Flutter PDF Viewer

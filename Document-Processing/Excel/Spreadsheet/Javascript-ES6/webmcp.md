@@ -5,6 +5,7 @@ description: WebMCP integration in TypeScript Spreadsheet explains setup, tool r
 platform: document-processing
 control: WebMCP
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # WebMCP Integration in TypeScript Spreadsheet

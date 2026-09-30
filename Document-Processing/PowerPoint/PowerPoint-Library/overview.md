@@ -6,6 +6,7 @@ platform: document-processing
 control: general
 documentation: UG
 keywords: PowerPoint, Presentation, slides, SDK, Automation, API, create, read, write, edit, convert, PPTX to PDF, Blazor, MAUI, Linux, WPF, WinForms
+appliesto: Document SDK
 ---
 
 # About Syncfusion PowerPoint Presentation Library

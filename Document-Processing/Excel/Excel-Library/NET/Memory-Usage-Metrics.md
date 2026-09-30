@@ -4,6 +4,7 @@ description: Memory usage details section describes peak memory consumption whil
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Memory Usage Metrics in .NET Excel Library

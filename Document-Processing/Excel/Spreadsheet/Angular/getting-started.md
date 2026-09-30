@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion Angular Spreadsheet co
 platform: document-processing
 control: Getting started
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Getting Started with Angular Spreadsheet

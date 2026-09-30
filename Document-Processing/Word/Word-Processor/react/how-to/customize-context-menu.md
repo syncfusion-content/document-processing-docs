@@ -6,6 +6,7 @@ control: Customize Context Menu
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Customize Context Menu in React DOCX Editor

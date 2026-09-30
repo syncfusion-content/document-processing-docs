@@ -4,6 +4,7 @@ description: Convert HTML documents to Markdown using Syncfusion Web API. Preser
 platform: document-processing
 control: general
 documentation: UG
+appliesto: Document SDK
 ---
 # HTML to Markdown Conversion Using Syncfusion Web API
 

@@ -4,6 +4,7 @@ description: Learn about introduction of Syncfusion Essential Studio Vue PDF Vie
 platform: document-processing
 control: PDF Viewer
 documentation: UG
+appliesto: PDF Viewer SDK
 ---
 
 # About Syncfusion Vue PDF Viewer Control

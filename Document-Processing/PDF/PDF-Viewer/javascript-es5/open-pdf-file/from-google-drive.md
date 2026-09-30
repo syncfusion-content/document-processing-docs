@@ -5,6 +5,7 @@ description: Load and display PDF files stored in Google Drive in the JavaScript
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Open PDF from Google Drive in JavaScript (ES5) PDF Viewer

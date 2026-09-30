@@ -5,6 +5,7 @@ description: Learn about keyboard shortcuts in the Syncfusion ASP.NET Core Sprea
 platform: document-processing
 control: Keyboard Shortcuts
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

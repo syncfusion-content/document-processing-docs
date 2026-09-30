@@ -4,6 +4,7 @@ description: Troubleshoot HTML to PDF conversion issues with the Blink rendering
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Troubleshoot HTML to PDF conversion in .NET PDF Library

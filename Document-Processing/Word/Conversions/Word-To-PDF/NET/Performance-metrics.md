@@ -4,6 +4,7 @@ description: Describe the NuGet packages required for Word-to-PDF conversion usi
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Word to PDF performance benchmark in .NET Word

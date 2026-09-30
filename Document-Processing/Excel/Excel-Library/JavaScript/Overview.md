@@ -4,6 +4,7 @@ description: Learn about the Syncfusion JavaScript Excel Library, including key 
 platform: document-processing
 control: Excel
 documentation: ug
+appliesto: Document SDK
 ---
 
 # About Syncfusion JavaScript Excel Library

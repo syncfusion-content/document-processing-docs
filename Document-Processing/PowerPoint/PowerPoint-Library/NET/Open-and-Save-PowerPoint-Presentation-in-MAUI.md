@@ -4,6 +4,7 @@ description: Open and save Presentation in .NET MAUI using .NET PowerPoint libra
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Open and save Presentation in .NET MAUI

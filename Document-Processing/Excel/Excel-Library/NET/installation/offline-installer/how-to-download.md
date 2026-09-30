@@ -5,7 +5,7 @@ description: Syncfusion Excel offline installer download section explains how to
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
-
+appliesto: Document SDK
 ---
 
 # How to download offline installer in .NET Excel Library

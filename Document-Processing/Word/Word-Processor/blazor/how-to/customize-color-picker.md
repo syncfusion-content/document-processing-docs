@@ -5,6 +5,7 @@ description: Customize the color picker appearance in Syncfusion® Blazor DOCX E
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # How to Customize Color Picker in Blazor DOCX Editor

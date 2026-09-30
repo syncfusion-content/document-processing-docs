@@ -5,6 +5,7 @@ description: Export documents as PDF in Syncfusion® ASP.NET Core DOCX Editor us
 platform: document-processing
 control: Export Document As PDF
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

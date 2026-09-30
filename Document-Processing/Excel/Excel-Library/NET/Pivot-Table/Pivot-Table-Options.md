@@ -4,6 +4,7 @@ description: Use various pivot table options in an Excel document using the Sync
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Pivot Table Options in .NET Excel Library

@@ -4,6 +4,7 @@ description: This section illustrates how to create, access, and modify bookmark
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 # Bookmarks in Java Word
 

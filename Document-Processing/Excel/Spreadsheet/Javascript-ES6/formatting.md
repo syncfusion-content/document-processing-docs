@@ -5,6 +5,7 @@ description: Formatting in TypeScript Spreadsheet allows users to customize cell
 platform: document-processing
 control: Formatting
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Formatting in TypeScript Spreadsheet 

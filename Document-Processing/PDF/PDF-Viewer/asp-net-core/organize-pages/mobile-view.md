@@ -5,6 +5,7 @@ description: Use the Organize Pages panel on mobile devices in the ASP.NET Core 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Organize Pages in Mobile View in ASP.NET Core PDF Viewer

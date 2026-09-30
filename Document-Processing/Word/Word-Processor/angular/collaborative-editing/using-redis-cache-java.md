@@ -6,6 +6,7 @@ platform: document-processing
 control: Collaborative Editing Java
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Collaborative Editing in Angular DOCX Editor with Redis in Java

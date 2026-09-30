@@ -5,6 +5,7 @@ description: Learn about create, manage, and customize worksheets using  the Syn
 platform: document-processing
 control: Worksheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

@@ -5,6 +5,7 @@ description: Learn about the introduction and overview of Syncfusion Essential S
 platform: document-processing
 control: Index 
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # About Syncfusion JavaScript Spreadsheet Control

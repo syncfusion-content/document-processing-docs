@@ -6,6 +6,7 @@ control: Link
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Hyperlinks in React DOCX Editor

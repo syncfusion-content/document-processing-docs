@@ -4,6 +4,7 @@ description: Set rounded corners for a chart in an Excel document using the Sync
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to set rounded chart corners in .NET Excel Library

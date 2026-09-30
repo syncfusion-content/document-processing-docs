@@ -4,6 +4,7 @@ description: Learn how to create headers and footers in a PDF document programma
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Headers and Footers in .NET PDF Library
 

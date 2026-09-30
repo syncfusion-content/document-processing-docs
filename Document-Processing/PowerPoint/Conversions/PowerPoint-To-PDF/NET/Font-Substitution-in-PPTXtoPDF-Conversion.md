@@ -4,6 +4,7 @@ description: Learn about how to substitute font during PowerPoint to PDF convers
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Font substitution for unavailable fonts in PPTX to PDF conversion

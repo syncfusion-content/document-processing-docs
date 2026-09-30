@@ -4,6 +4,7 @@ description: Convert Word to PDF in Azure Functions Flex Consumption using .NET 
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert Word to PDF in Azure Functions 

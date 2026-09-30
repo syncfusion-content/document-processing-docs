@@ -4,6 +4,7 @@ description: Learn how to create, format, and manage paragraphs and text content
 platform: document-processing
 control: Presentation
 documentation: UG
+appliesto: Document SDK
 ---
 # Working with Paragraphs
 

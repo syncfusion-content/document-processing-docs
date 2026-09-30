@@ -5,6 +5,7 @@ description: Text wrapping styles in ASP.NET Core DOCX Editor preserve inline, s
 platform: document-processing
 control: Text Wrapping Style
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

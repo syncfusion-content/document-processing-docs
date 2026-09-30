@@ -5,6 +5,7 @@ description: Learn about scrolling in the Syncfusion ASP.NET Core Spreadsheet co
 platform: document-processing
 control: Scrolling
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

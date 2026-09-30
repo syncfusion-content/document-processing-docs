@@ -5,6 +5,7 @@ description: The programmatic annotations feature in WPF PDF Viewer enables addi
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Annotations in WPF PDF Viewer

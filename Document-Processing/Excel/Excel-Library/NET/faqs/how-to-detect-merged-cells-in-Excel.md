@@ -4,6 +4,7 @@ description: Detect merged cells in Excel documents using the Syncfusion .NET Ex
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to detect merged cells in .NET Excel Library

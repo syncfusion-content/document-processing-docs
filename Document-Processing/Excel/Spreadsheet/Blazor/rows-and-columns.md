@@ -5,6 +5,7 @@ description: Learn how to manage rows and columns in the Syncfusion Blazor Sprea
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Rows and Columns in Blazor Spreadsheet

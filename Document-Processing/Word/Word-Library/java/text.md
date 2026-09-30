@@ -4,6 +4,7 @@ description: This section illustrates how to perform Word document to Text conve
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Word document to Text Conversion in Java Word

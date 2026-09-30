@@ -5,6 +5,7 @@ description: Apply themes in the WPF Spreadsheet control to customize its appear
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Themes in WPF Spreadsheet

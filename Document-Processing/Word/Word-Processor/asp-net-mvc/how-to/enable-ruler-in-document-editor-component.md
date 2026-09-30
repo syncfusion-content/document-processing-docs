@@ -5,6 +5,7 @@ description: Enable the ruler in Syncfusion® ASP.NET MVC DOCX Editor to set mar
 platform: document-processing
 control: Enable Ruler
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # How to Enable Ruler in React ASP.NET MVC Editor

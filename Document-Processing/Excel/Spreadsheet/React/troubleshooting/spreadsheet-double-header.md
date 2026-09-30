@@ -5,6 +5,7 @@ description: Learn about how to resolve double header rendering issues using  th
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Double Header Issue in React Spreadsheet

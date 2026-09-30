@@ -5,6 +5,7 @@ description: Load or switch PDF documents in the ASP.NET MVC PDF Viewer using th
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Load a Document in ASP.NET MVC PDF Viewer

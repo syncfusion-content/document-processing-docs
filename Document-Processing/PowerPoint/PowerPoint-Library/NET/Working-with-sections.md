@@ -5,6 +5,7 @@ platform: document-processing
 control: Presentation
 documentation: UG
 keywords: sections in PowerPoint presentation
+appliesto: Document SDK
 ---
 # Working with Sections in PowerPoint Library
 

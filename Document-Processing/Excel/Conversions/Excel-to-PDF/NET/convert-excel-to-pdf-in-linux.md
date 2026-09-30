@@ -4,6 +4,7 @@ description: Linux Excel to PDF section explains how to convert Excel documents 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Excel to PDF Conversion in Linux using Excel Library
 

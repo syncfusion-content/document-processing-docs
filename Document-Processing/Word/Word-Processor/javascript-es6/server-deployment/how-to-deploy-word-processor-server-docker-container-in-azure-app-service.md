@@ -6,6 +6,7 @@ platform: document-processing
 control: How to deploy word processor server docker container in azure app service 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 # How to Deploy TypeScript DOCX Editor Docker image on Azure App
 

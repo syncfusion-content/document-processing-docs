@@ -4,6 +4,7 @@ description: Learn about the Syncfusion® .NET Markdown Library for converting M
 platform: document-processing
 control: general
 documentation: UG
+appliesto: Document SDK
 ---
 
 # About Syncfusion .NET Markdown Conversion Library

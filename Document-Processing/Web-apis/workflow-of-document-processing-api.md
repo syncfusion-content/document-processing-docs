@@ -4,6 +4,7 @@ description: Explore Syncfusion's Document Processing API workflow for handling 
 platform: document-processing
 control: general
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Workflow of Document Processing API

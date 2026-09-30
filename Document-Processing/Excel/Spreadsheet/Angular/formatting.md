@@ -5,6 +5,7 @@ description: Formatting in Angular Spreadsheet allows users to customize cell ap
 platform: document-processing
 control: Formatting 
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Formatting in Angular Spreadsheet 

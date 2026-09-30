@@ -4,6 +4,7 @@ description: Platform compatibility page describes supported and unsupported Syn
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Supported Platforms in .NET Excel Library

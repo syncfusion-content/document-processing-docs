@@ -6,6 +6,7 @@ control: Open PDF files
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Open PDF Files in Vue PDF Viewer

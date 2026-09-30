@@ -5,6 +5,7 @@ description: Learn about introduction of the Syncfusion Angular PDF Viewer Manag
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # About Syncfusion Angular PDF Viewer Manage Form Fields

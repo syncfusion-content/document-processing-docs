@@ -5,6 +5,7 @@ description: The text extraction feature allows developers to retrieve text cont
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Extract Text from PDF Files in WinForms PDF Viewer

@@ -5,6 +5,7 @@ description: Form fields in Blazor DOCX Editor allow users to create, update, an
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # Form Fields in Blazor DOCX Editor

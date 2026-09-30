@@ -4,6 +4,7 @@ description: Benchmark results section describes Syncfusion .NET Excel Library p
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Performance Metrics in .NET Excel Library

@@ -5,6 +5,7 @@ description: Edit PDF form fields in the JavaScript (ES5) PDF Viewer using the b
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Modify Form Fields in JavaScript (ES5) PDF Viewer

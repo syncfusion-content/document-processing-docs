@@ -6,6 +6,7 @@ platform: document-processing
 control: Java 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Java Web Service in  Angular DOCX Editor

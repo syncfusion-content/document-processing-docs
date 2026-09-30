@@ -4,6 +4,7 @@ description: Dropbox Cloud Storage Excel file handling section explains how to l
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Loading and Saving Files in Dropbox
 

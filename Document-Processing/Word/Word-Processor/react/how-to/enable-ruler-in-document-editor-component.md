@@ -6,6 +6,7 @@ control: Enable Ruler
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Enable Ruler in React DOCX Editor

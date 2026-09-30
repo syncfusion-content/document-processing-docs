@@ -4,6 +4,7 @@ description: Switch chart series data interpretation from rows to columns in Exc
 platform: document-processing 
 control: XlsIO 
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to switch chart data orientation in .NET Excel Library

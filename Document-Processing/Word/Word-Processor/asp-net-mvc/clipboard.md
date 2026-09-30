@@ -5,6 +5,7 @@ description: The clipboard support in ASP.NET MVC DOCX Editor provides copy, cut
 platform: document-processing
 control: Clipboard
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

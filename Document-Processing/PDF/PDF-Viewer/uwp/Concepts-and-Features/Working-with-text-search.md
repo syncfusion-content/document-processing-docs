@@ -5,6 +5,7 @@ description: Learn here all about Working with text search support in Syncfusion
 platform: document-processing
 control: PDF viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Working with text search in UWP PDF Viewer

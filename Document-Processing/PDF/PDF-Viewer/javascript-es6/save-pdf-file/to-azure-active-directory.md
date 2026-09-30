@@ -5,6 +5,7 @@ description: Learn about the to azure active directory in the JavaScript (ES6) P
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # To Azure Active Directory in JavaScript (ES6) PDF Viewer

@@ -5,6 +5,7 @@ description: Open a document from a URL in Syncfusion® ASP.NET Core DOCX Editor
 platform: document-processing
 control: Open Document By Address
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 
