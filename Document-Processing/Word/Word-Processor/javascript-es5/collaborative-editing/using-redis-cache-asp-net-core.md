@@ -232,19 +232,20 @@ The complete version of the code discussed above is available at the following [
 
 ## Integrate collaborative editing in server side
 
+The server side uses the shared [Collaboration Server](https://help.syncfusion.com/document-processing/collaborator/collaboration-server) (`Syncfusion.Collaborator.Server.AspNet.Core`) and a DOCX Editor-specific server adapter that implements the `ICollaborationAdapter` interface. The common collaboration framework handles Redis storage, Operational Transformation, versioning, and broadcast, while the adapter translates Document Editor actions to and from the common collaboration model.
+
 ### Step 1: Create the DOCX Editor web service project 
 
-Create an ASP.NET Core web service to handle server-side operations.
+Create an ASP.NET Core web service to handle server-side operations. Refer to the [ASP.NET Core web service for TypeScript DOCX Editor](https://help.syncfusion.com/document-processing/word/word-processor/javascript-es6/web-services/core) documentation to create the web service project.
 
 ### Step 2: Install required NuGet packages
 
-In the web service app, install the following NuGet package:
+In the web service app, install the following NuGet packages:
 
-- Microsoft.Azure.SignalR
+- Syncfusion.Collaborator.Server.AspNet.Core
+- [Syncfusion.EJ2.WordEditor.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Core)
 
-- Microsoft.AspNetCore.SignalR.StackExchangeRedis
-
-- Syncfusion.EJ2.WordEditor.AspNet.Core
+The common Collaboration Server package internally takes care of SignalR, the Redis backplane, the action service, and the background save worker, so separate SignalR/Redis NuGet packages no longer need to be referenced manually for the collaboration workflow.
 
 ### Step 3: Configure Redis connection
 
@@ -254,308 +255,405 @@ Configure the Redis that stores temporary data for the collaborative editing ses
 
 // other code snippet
 "ConnectionStrings": {
- "RedisConnectionString": "<<Your Redis connection string>>"
+ "Redis": "<Provide your redis connection string>"
 }
 // other code snippet
 
 ``` 
 
-### Step 4:  Configure SignalR in ASP.NET Core
+### Step 4: Register the Collaboration Server
 
-Microsoft SignalR is used to broadcast changes. Add the following configuration to the application's "Program.cs" file.
+Register the Collaboration Server and configure the Redis connection string during application startup. The common `AddCollaborationServer` extension registers the shared collaboration services, the SignalR transport (default), the Redis-backed `IActionService`, the `IActiveTransport` broadcast, and the background save worker. SignalR is configured internally by the common package.
 
-{% tabs %}
-{% highlight C# tabtitle="C#" %}
+The following code snippet demonstrates the configuration in the "Program.cs" file.
 
-using Microsoft.Azure.SignalR;
+```C#
 
-// other Services
+using Syncfusion.Collaboration.Core.Extensions;
+// other usings
 
-// Add signalR services to the container.
-
-builder.Services.AddSignalR().AddStackExchangeRedis("Your Redis Connection String");
+var builder = WebApplication.CreateBuilder(args);
 
 // other Services
 
-{% endhighlight %}
-{% endtabs %}
-
-### Step 5: Configure SignalR Hub to create room for collaborative editing session
-
-To manage groups for each document, create a folder named "Hub" and add a file named `DocumentEditorHub.cs` inside it.
-
-#### 1. Mapping Hub details
-
-Map DocumentEditorHub in the "Program.cs" file using the following code.
-
-{% tabs %}
-{% highlight C# tabtitle="C#" %}
-
-app.MapHub<DocumentEditorHub>("/documenteditorhub");
-
-{% endhighlight %}
-{% endtabs %}
-
-#### 2. Join room
-
-Join the group using the unique ID of the document with the `JoinGroup` method.
-
-Add the following code to the file to manage SignalR groups using room names.
-
-{% tabs %}
-{% highlight C# tabtitle="C#" %}
-
-// Join group based on the room name and store the user details in Redis cache.
-public async Task JoinGroup(ActionInfo info)
+// Register the Collaboration Server with the Redis connection string.
+// SignalR transport is used by default.
+builder.Services.AddCollaborationServer(options =>
 {
-  // Set the connection ID to info
-  info.ConnectionId = Context.ConnectionId;
-  // Add the connection ID to the group
-  await Groups.AddToGroupAsync(Context.ConnectionId, info.RoomName);
+    options.ConnectionString =
+        builder.Configuration.GetConnectionString("Redis")
+        ?? "localhost:6379";
 
-  // To ensure whether the room exists in the Redis cache
-  bool roomExists = await _db.KeyExistsAsync(info.RoomName + CollaborativeEditingHelper.UserInfoSuffix);
-  if (roomExists) {
-    // Fetch all connected users from Redis
-    var allUsers = await _db.HashGetAllAsync(info.RoomName + CollaborativeEditingHelper.UserInfoSuffix);
-    var userList = allUsers.Select(u => JsonConvert.DeserializeObject<ActionInfo>(u.Value)).ToList();
+    // options.ConnectionType = CollaborationConnectionType.SignalR; // default
+    // options.SaveThreshold = 100; // default
+});
 
-    // Send the existing user details to the newly joined user. 
-    await Clients.Caller.SendAsync("dataReceived", "addUser", userList);
-  }
+// Register the control-specific server adapter that translates
+// Document Editor actions to and from the common collaboration model.
+builder.Services.AddSingleton<ICollaborationAdapter, DocumentEditorCollaborationAdapter>();
 
-  // Add user to Redis           
-  await _db.HashSetAsync(info.RoomName + CollaborativeEditingHelper.UserInfoSuffix, Context.ConnectionId, JsonConvert.SerializeObject(info));
+builder.Services.AddControllers();
 
-  // Store the room name with the connection ID
-  await _db.HashSetAsync(CollaborativeEditingHelper.ConnectionIdRoomMappingKey, Context.ConnectionId, info.RoomName);
+var app = builder.Build();
 
-  // Notify all the existing users in the group about the new user
-  await Clients.GroupExcept(info.RoomName, Context.ConnectionId).SendAsync("dataReceived", "addUser", info);
-}
+app.UseStaticFiles();
+app.UseRouting();
+app.MapControllers();
 
-{% endhighlight %}
-{% endtabs %}
+// Map the collaboration hub ( SignalR endpoint used by the Collaboration Client ).
+app.MapCollaborationServer();  // maps /collaborationhub
 
-#### 3. Handle user disconnection 
+app.Run();
 
-The following code snippet demonstrates how to disconnect a connection using SignalR.
+```
 
-{% tabs %}
-{% highlight C# tabtitle="C#" %}
+By default, the ASP.NET Core Collaboration Server uses SignalR. To use WebSocket transport, configure `ConnectionType` as `WebSocket` and call `app.UseWebSockets()` before `MapCollaborationServer()`.
 
-public override async Task OnDisconnectedAsync(Exception ? e)
+### Step 5: Add the DOCX Editor server adapter
+
+Create a folder named "Adapter" and add a file named `DocumentEditorCollaborationAdapter.cs` inside it. This adapter is the control-specific translator on the server side. It implements `ICollaborationAdapter` and converts Document Editor actions to and from the common `CollaborationAction`, runs Operational Transformation, and queues save requests for background processing.
+
+```C#
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
+using WebApplication1.Controllers;
+using Microsoft.AspNetCore.Hosting;
+using Newtonsoft.Json;
+using Syncfusion.Collaboration.Core.Interfaces;
+using Syncfusion.Collaboration.Core.Models;
+using Syncfusion.Collaboration.Core.Services;
+using Syncfusion.EJ2.DocumentEditor;
+
+namespace WebApplication1.Adapters;
+
+// Translates Document Editor actions to and from the common collaboration model.
+public class DocumentEditorCollaborationAdapter : ICollaborationAdapter
 {
-  // Get the room name associated with the connection ID
-  string roomName = await _db.HashGetAsync(CollaborativeEditingHelper.ConnectionIdRoomMappingKey, Context.ConnectionId);
-  // Remove user from Redis       
-  await _db.HashDeleteAsync(roomName + CollaborativeEditingHelper.UserInfoSuffix, Context.ConnectionId);
+    // Used to load the source document and persist the merged result.
+    private readonly IActionService actionService;
+    // Queues save operations so document persistence can happen in the background.
+    private readonly IBackgroundTaskQueue saveTaskQueue;
+    // Stores the wwwroot path for saving generated documents.
+    static string fileLocation;
 
-  // Fetch all connected users from Redis
-  var allUsers = await _db.HashGetAllAsync(roomName + CollaborativeEditingHelper.UserInfoSuffix);
-  var userList = allUsers.Select(u => JsonConvert.DeserializeObject<ActionInfo>(u.Value)).ToList();
+    private readonly IWebHostEnvironment _hostingEnvironment;
 
-  // Remove connection to room name mapping
-  await _db.HashDeleteAsync(CollaborativeEditingHelper.ConnectionIdRoomMappingKey, Context.ConnectionId);
-
-  if (userList.Count == 0) {
-    // Auto save the pending operations to source document
-    RedisValue[] pendingOps = await _db.ListRangeAsync(roomName, 0, -1);
-    if (pendingOps.Length > 0) {
-      List < ActionInfo > actions = new List<ActionInfo>();
-      // Prepare the message for adding it in background service queue.
-      foreach(var element in pendingOps)
-      {
-        actions.Add(JsonConvert.DeserializeObject<ActionInfo>(element.ToString()));
-      }
-      var message = new SaveInfo
-      {
-        Action = actions,
-          PartialSave = false,
-          RoomName = roomName,
-                    };
-      // Queue the message for background processing and save the operations to source document in background task
-      _ = saveTaskQueue.QueueBackgroundWorkItemAsync(message);
+    public DocumentEditorCollaborationAdapter(IWebHostEnvironment hostingEnvironment, IBackgroundTaskQueue saveTaskQueue)
+    {
+        _hostingEnvironment = hostingEnvironment;
+        fileLocation = _hostingEnvironment.WebRootPath;
+        this.saveTaskQueue = saveTaskQueue;
     }
-  }
-  else {
-    // Notify remaining clients about the user disconnection              
-    await Clients.Group(roomName).SendAsync("dataReceived", "removeUser", Context.ConnectionId);
-  }
-  await base.OnDisconnectedAsync(e);
+
+    // Converts a control-specific action into the shared collaboration action format.
+    public CollaborationAction MapControlToGenericAction(object controlAction)
+    {
+        var action = (Syncfusion.EJ2.DocumentEditor.ActionInfo)controlAction;
+        return new CollaborationAction
+        {
+            RoomName = action.RoomName,
+            ConnectionId = action.ConnectionId,
+            CurrentUser = action.CurrentUser,
+            Version = action.Version,
+            ClientVersion = action.ClientVersion,
+            IsTransformed = action.IsTransformed,
+            Data = JsonConvert.SerializeObject(action.Operations)
+        };
+    }
+
+    // Converts a shared collaboration action back into a Document Editor action.
+    public object MapGenericToControlAction(CollaborationAction action)
+    {
+        return new Syncfusion.EJ2.DocumentEditor.ActionInfo
+        {
+            RoomName = action.RoomName,
+            ConnectionId = action.ConnectionId,
+            CurrentUser = action.CurrentUser,
+            Version = action.Version,
+            ClientVersion = action.ClientVersion,
+            IsTransformed = action.IsTransformed,
+            Operations = JsonConvert.DeserializeObject<List<DocumentOperation>>(action.Data)
+        };
+    }
+
+    // Transforms the incoming actions before they are applied to the document.
+    public void TransformOperations(List<CollaborationAction> actions)
+    {
+        var documentActions = actions
+            .Select(x => (Syncfusion.EJ2.DocumentEditor.ActionInfo)MapGenericToControlAction(x)).ToList();
+        documentActions
+            .Where(x => !x.IsTransformed).ToList()
+            .ForEach(x => CollaborativeEditingHandler.TransformOperation(x, documentActions));
+    }
+
+    // Queues a save request so the updated document can be processed in the background.
+    public async Task SaveOperationsAsync(List<CollaborationAction> actions, string roomName, bool partialSave)
+    {
+        var message = new SaveRequest
+        {
+            Actions = actions,
+            PartialSave = partialSave,
+            RoomName = roomName
+        };
+        await saveTaskQueue.QueueBackgroundWorkItemAsync(message);
+    }
+
+    // Applies the pending collaboration actions and saves the updated document.
+    public async Task ProcessSaveRequestAsync(SaveRequest request, CancellationToken ct)
+    {
+        // Load the source document.
+        Syncfusion.EJ2.DocumentEditor.WordDocument document = CollaborativeEditingController.GetSourceDocument();
+        CollaborativeEditingHandler handler = new CollaborativeEditingHandler(document);
+
+        // Get actions from Redis through the common action service.
+        var actions = request.Actions
+            .Select(x => (Syncfusion.EJ2.DocumentEditor.ActionInfo)MapGenericToControlAction(x)).ToList();
+
+        if (actions.Count > 0)
+        {
+            foreach (var action in actions)
+            {
+                if (!action.IsTransformed)
+                {
+                    CollaborativeEditingHandler.TransformOperation(action, actions);
+                }
+            }
+            // Apply the actions to the document.
+            foreach (var action in actions)
+            {
+                handler.UpdateAction(action);
+            }
+
+            MemoryStream stream = new MemoryStream();
+            // Save the updated document in the location as per your need.
+            Syncfusion.DocIO.DLS.WordDocument doc =
+                WordDocument.Save(Newtonsoft.Json.JsonConvert.SerializeObject(handler.Document));
+            doc.Save(stream, Syncfusion.DocIO.FormatType.Docx);
+            SaveDocument(stream, "Getting Started.docx");
+            stream.Close();
+        }
+
+        document.Dispose();
+
+        // Clear the processed actions for the room in Redis.
+        await actionService.ClearRecordsAsync(request.RoomName, request.PartialSave);
+    }
+
+    // Document is stored in file stream. Modify this to store the document to any location based on your requirement.
+    private void SaveDocument(Stream document, string fileName)
+    {
+        string filePath = Path.IsPathRooted(fileName) ? fileName : Path.Combine(fileLocation, fileName);
+
+        var dir = Path.GetDirectoryName(filePath);
+        if (!string.IsNullOrEmpty(dir) && !Directory.Exists(dir))
+        {
+            Directory.CreateDirectory(dir);
+        }
+
+        using (FileStream file = new FileStream(filePath, FileMode.Create, FileAccess.Write))
+        {
+            document.Position = 0;
+            document.CopyTo(file);
+        }
+    }
 }
 
-{% endhighlight %}
-{% endtabs %}
+```
 
 ### Step 6: Configure Web API actions for collaborative editing
 
 Create "CollaborativeEditingController.cs" in the "Controllers" folder. 
 
-This file includes the code snippets that handle server-side interactions for collaborative editing.
+This controller is the HTTP bridge between the client control and the common Collaboration Server. It depends on the shared `IActionService`, the control-specific `ICollaborationAdapter`, and the `IActiveTransport` for broadcasting. The three required web service methods are:
 
-#### Import File
+| Web service method | Why it is needed |
+| --- | --- |
+| ImportFile | Loads the source document and applies any pending collaboration actions before sending the latest document state to a newly connected client. Returns the document content and current server version. |
+| UpdateAction | Receives editing actions from connected clients, processes operational transformation, persists the action, and broadcasts the updated action to other participants. |
+| GetActionsFromServer | Retrieves collaboration actions created after the client's last synchronized version so the client can catch up with the latest document state. |
 
-Used to open DOCX documents, verify the Redis cache for pending operations, and retrieve them for the collaborative editing session.
+```C#
 
-The following code snippet demonstrates how to open the document.
+using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
+using Syncfusion.Collaboration.Core.Interfaces;
+using Syncfusion.Collaboration.Core.Models;
+using Syncfusion.Collaboration.Core.Services;
+using Syncfusion.Collaboration.Core.Transports;
+using Syncfusion.EJ2.DocumentEditor;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 
-{% tabs %}
-{% highlight C# tabtitle="C#" %}
+namespace WebApplication1.Controllers;
 
-public async Task < string > ImportFile([FromBody] FileInfo param)
+[Route("api/[controller]")]
+[ApiController]
+public class CollaborativeEditingController : ControllerBase
 {
-  try {
-    // Create a new instance of DocumentContent to hold the document data
-    DocumentContent content = new DocumentContent();
-    // Retrieve the source document to be edited
-    // In this case, the file from the wwwroot folder is opened.
-    // We can modify the code to retrieve the document from a different location or source.
-    Syncfusion.EJ2.DocumentEditor.WordDocument document = GetSourceDocument();
-    // Get the list of pending operations for the document
-    List < ActionInfo > actions = await GetPendingOperations(param.fileName, 0, -1);
-    if (actions != null && actions.Count > 0) {
-      // If there are any pending actions, update the document with these actions
-      document.UpdateActions(actions);
+    private static string fileLocation;
+    private readonly IWebHostEnvironment _hostingEnvironment;
+    // Stores and retrieves collaboration actions through the common action service.
+    private readonly IActionService actionService;
+    // Converts between Document Editor actions and common collaboration actions.
+    private readonly ICollaborationAdapter adapter;
+    // Broadcasts updated actions to other connected clients.
+    private readonly IActiveTransport _transport;
+
+    public CollaborativeEditingController(IWebHostEnvironment hostingEnvironment,
+        IConfiguration config, IActionService actionService, ICollaborationAdapter adapter, IActiveTransport transport)
+    {
+        _hostingEnvironment = hostingEnvironment;
+        fileLocation = _hostingEnvironment.WebRootPath;
+        this.adapter = adapter;
+        this.actionService = actionService;
+        _transport = transport;
     }
-    // Serialize the updated document to SFDT format
-    string sfdt = Newtonsoft.Json.JsonConvert.SerializeObject(document);
-    content.version = 0;
-    content.sfdt = sfdt;
-    // Dispose of the document to free resources
-    document.Dispose();
-    // Return the serialized content as a JSON string
-    return Newtonsoft.Json.JsonConvert.SerializeObject(content);
-  }
-  catch {
-    return null;
-  }
+
+    // Loads the source document and applies any pending collaboration actions.
+    [HttpPost]
+    [Route("ImportFile")]
+    [EnableCors("AllowAllOrigins")]
+    public async Task<string> ImportFile([FromBody] FileInfo param)
+    {
+        try
+        {
+            DocumentContent content = new DocumentContent();
+            Syncfusion.EJ2.DocumentEditor.WordDocument document = GetSourceDocument();
+
+            // Get the pending operations for the room from Redis through the common action service.
+            List<CollaborationAction> collaborationActions =
+                await actionService.GetPendingOperationsAsync(param.roomName, 0, -1);
+
+            List<Syncfusion.EJ2.DocumentEditor.ActionInfo> actions =
+                collaborationActions
+                    .Select(x => (Syncfusion.EJ2.DocumentEditor.ActionInfo)adapter.MapGenericToControlAction(x))
+                    .ToList();
+
+            if (actions != null && actions.Count > 0)
+            {
+                // Apply any pending actions to the document.
+                document.UpdateActions(actions);
+            }
+            // Serialize the updated document to SFDT format.
+            string sfdt = Newtonsoft.Json.JsonConvert.SerializeObject(document);
+            content.version = 0;
+            content.sfdt = sfdt;
+            document.Dispose();
+            return Newtonsoft.Json.JsonConvert.SerializeObject(content);
+        }
+        catch
+        {
+            return null;
+        }
+    }
+
+    // Receives a local editing action, transforms it, stores it, and broadcasts it.
+    [HttpPost]
+    [Route("UpdateAction")]
+    [EnableCors("AllowAllOrigins")]
+    public async Task<Syncfusion.EJ2.DocumentEditor.ActionInfo> UpdateAction(
+        Syncfusion.EJ2.DocumentEditor.ActionInfo param)
+    {
+        // Convert the Document Editor action to the common collaboration action.
+        CollaborationAction collaborationAction =
+            (CollaborationAction)adapter.MapControlToGenericAction(param);
+
+        // Persist + transform through the common action service and server adapter.
+        CollaborationAction modifiedAction =
+            await actionService.AddOperationAsync(collaborationAction, adapter);
+
+        // Convert the transformed action back to the Document Editor action.
+        var documentAction =
+            (Syncfusion.EJ2.DocumentEditor.ActionInfo)adapter.MapGenericToControlAction(modifiedAction);
+
+        // Broadcast the transformed action to all participants in the room.
+        await _transport.SendToGroupAsync(param.RoomName, "action", documentAction);
+        return documentAction;
+    }
+
+    // Returns actions that the client has not yet synchronized.
+    [HttpPost]
+    [Route("GetActionsFromServer")]
+    [EnableCors("AllowAllOrigins")]
+    public async Task<string> GetActionsFromServer(Syncfusion.EJ2.DocumentEditor.ActionInfo param)
+    {
+        try
+        {
+            string roomName = param.RoomName;
+            int lastSyncedVersion = param.Version;
+            int clientVersion = param.Version;
+
+            // Fetch actions newer than the last synced version from Redis.
+            List<CollaborationAction> collaborationActions =
+                await actionService.GetEffectivePendingVersionAsync(roomName, lastSyncedVersion);
+
+            List<Syncfusion.EJ2.DocumentEditor.ActionInfo> actions =
+                collaborationActions
+                    .Select(x => (Syncfusion.EJ2.DocumentEditor.ActionInfo)adapter.MapGenericToControlAction(x))
+                    .ToList();
+
+            // Increment the version for each action sequentially.
+            actions.ForEach(action => action.Version = ++clientVersion);
+
+            // Keep only actions newer than the client's last known version.
+            actions = actions.Where(action => action.Version > lastSyncedVersion).ToList();
+
+            // Transform actions that have not been transformed yet.
+            actions.Where(action => !action.IsTransformed).ToList()
+                .ForEach(action => CollaborativeEditingHandler.TransformOperation(action, actions));
+
+            return Newtonsoft.Json.JsonConvert.SerializeObject(actions);
+        }
+        catch
+        {
+            return "{}";
+        }
+    }
+
+    internal static Syncfusion.EJ2.DocumentEditor.WordDocument GetSourceDocument()
+    {
+        string path = fileLocation + "\\Giant Panda.docx";
+        Stream stream = System.IO.File.Open(path, FileMode.Open, FileAccess.Read, FileShare.Read);
+        Syncfusion.EJ2.DocumentEditor.WordDocument document =
+            Syncfusion.EJ2.DocumentEditor.WordDocument.Load(stream, FormatType.Docx);
+        stream.Dispose();
+        return document;
+    }
+
+    public class DocumentContent
+    {
+        public int version { get; set; }
+        public string sfdt { get; set; }
+    }
+
+    public class FileInfo
+    {
+        public string fileName { get; set; }
+        public string roomName { get; set; }
+    }
 }
 
-{% endhighlight %}
-{% endtabs %}
+```
 
-#### Update editing records to Redis cache
+### Step 7: Run the Application
 
-Each edit operation made by the user is sent to the server and pushed into a Redis list data structure. Each operation is assigned a version number upon insertion into Redis.
+After completing the client and server setup:
 
-The following code snippet demonstrates how the operations are cached and updated.
-
-{% tabs %}
-{% highlight C# tabtitle="C#" %}
-
-public async Task < ActionInfo > UpdateAction([FromBody] ActionInfo param)
-{
-  try {
-    ActionInfo modifiedAction = await AddOperationsToCache(param);
-    //After transformation broadcast changes to all users in the group
-    await _hubContext.Clients.Group(param.RoomName).SendAsync("dataReceived", "action", modifiedAction);
-    return modifiedAction;
-  }
-  catch {
-    return null;
-  }
-}
-
-private async Task < ActionInfo > AddOperationsToCache(ActionInfo action)
-{
-  int clientVersion = action.Version;
-  // Initialize the database connection
-  IDatabase database = _redisConnection.GetDatabase();
-  // Define the keys for Redis operations based on the action's room name
-  RedisKey[] keys = new RedisKey[] { action.RoomName + CollaborativeEditingHelper.VersionInfoSuffix, action.RoomName, action.RoomName + CollaborativeEditingHelper.RevisionInfoSuffix, action.RoomName + CollaborativeEditingHelper.ActionsToRemoveSuffix };
-  // Serialize the action and prepare values for the Redis script
-  RedisValue[] values = new RedisValue[] { JsonConvert.SerializeObject(action), clientVersion.ToString(), CollaborativeEditingHelper.SaveThreshold.ToString() };
-  // Execute the Lua script in Redis and store the results
-  RedisResult[] results = (RedisResult[])await database.ScriptEvaluateAsync(CollaborativeEditingHelper.InsertScript, keys, values);
-
-  // Parse the version number from the script results
-  int version = int.Parse(results[0].ToString());
-  // Deserialize the list of previous operations from the script results
-  List<ActionInfo> previousOperations = ((RedisResult[])results[1]).Select(value => JsonConvert.DeserializeObject<ActionInfo>(value.ToString())).ToList();
-  // Increment the version for each previous operation
-  previousOperations.ForEach(op => op.Version = ++clientVersion);
-
-  // Check if there are multiple previous operations to determine if transformation is needed
-  if (previousOperations.Count > 1) {
-    // Set the current action to the last operation in the list
-    action = previousOperations.Last();
-    // Transform operations that have not been transformed yet
-    previousOperations.Where(op => !op.IsTransformed).ToList().ForEach(op => CollaborativeEditingHandler.TransformOperation(op, previousOperations));
-  }
-  // Update the action's version and mark it as transformed
-  action.Version = version;
-  action.IsTransformed = true;
-
-  // Other code snippets
-
-  // Return the updated action
-  return action;
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-#### Web API to retrieve previous operations (Backup for lost operations)
-
-On the client side, messages broadcast using SignalR may be received out of order or lost due to network issues. In such cases, a backup mechanism is required to retrieve missing operations from Redis.
-
-Using the following method, all operations performed after the last successfully synchronized client version can be retrieved, ensuring that any missing operations are returned to the requesting client.
-
-The following code snippet demonstrates how to track and retrieve pending operations.
-
-{% tabs %}
-{% highlight C# tabtitle="C#" %}
-
-  public async Task<string> GetActionsFromServer(ActionInfo param)
-  {
-      try
-      {
-          // Initialize necessary variables from the parameters and helper class
-          int saveThreshold = CollaborativeEditingHelper.SaveThreshold;
-          string roomName = param.RoomName;
-          int lastSyncedVersion = param.Version;
-          int clientVersion = param.Version;
-
-          // Retrieve the database connection
-          IDatabase database = _redisConnection.GetDatabase();
-
-          // Fetch actions that are effective and pending based on the last synced version
-          List<ActionInfo> actions = await GetEffectivePendingVersion(roomName, lastSyncedVersion, database);
-
-          // Increment the version for each action sequentially
-          actions.ForEach(action => action.Version = ++clientVersion);
-
-          // Filter actions to only include those that are newer than the client's last known version
-          actions = actions.Where(action => action.Version > lastSyncedVersion).ToList();
-
-          // Transform actions that have not been transformed yet
-          actions.Where(action => !action.IsTransformed).ToList()
-              .ForEach(action => CollaborativeEditingHandler.TransformOperation(action, actions));
-
-          // Serialize the filtered and transformed actions to JSON and return
-          return Newtonsoft.Json.JsonConvert.SerializeObject(actions);
-      }
-      catch
-      {
-          // In case of an exception, return an empty JSON object
-          return "{}";
-      }
-  }
-
-{% endhighlight %}
-{% endtabs %}
-
-### Step 7: Create helper models and constants
-
-This step defines Redis key naming conventions, constants, and helper models to ensure consistency and maintainability across the application. It also sets a save threshold of 100 operations, enabling automatic persistence of changes at optimal intervals without affecting performance. To ensure reliability, a Lua script is used to execute Redis operations atomically, preventing conflicts when multiple users edit the document simultaneously.
-
-For more details about code snippet, please refer this [link](https://github.com/SyncfusionExamples/EJ2-Document-Editor-Collaborative-Editing/blob/master/Server%20side%20with%20distributed%20cache/ASP.NET%20Core/Using%20Redis/Model/CollaborativeEditingHelper.cs)
-
-### Step 8: Implement background task queue
-
-This step implements a thread-safe, bounded queue to handle document save requests asynchronously without blocking the main application flow. It uses a channel-based approach with a fixed capacity to efficiently manage concurrent operations. The background service processes each save request by loading the document, applying changes, saving the updated file, and clearing the cache to maintain consistency.
-
-For more details about this code logic, please refer this [link](https://github.com/SyncfusionExamples/EJ2-Document-Editor-Collaborative-Editing/tree/master/Server%20side%20with%20distributed%20cache/ASP.NET%20Core/Using%20Redis/Services)
+1. Run the ASP.NET Core application using `dotnet run`.
+2. Run the client application using `npm start`
+3. Open the application in multiple browser windows or tabs.
+4. Open the same document and make changes in one window; the changes will be synced to other users.
 
 N> [View sample in GitHub](https://github.com/SyncfusionExamples/EJ2-Document-Editor-Collaborative-Editing/tree/master/Server%20side%20with%20distributed%20cache/ASP.NET%20Core/Using%20Redis).
