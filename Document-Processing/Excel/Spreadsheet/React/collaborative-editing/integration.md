@@ -19,9 +19,37 @@ Install the Collaborator package in the React application.
 npm install @syncfusion/ej2-collaborator
 ```
 
+For details about the client package, connection types, room management, and collaboration events, refer to the [Collaboration Client documentation](https://help.syncfusion.com/document-processing/collaborator/collaboration-client).
+
+## Collaboration Client configuration
+
+The `CollaborationClient` connects the SpreadsheetEditor to the Collaboration Server and manages the collaboration session. Configure it with the following options:
+
+- `serviceUrl` - Specifies the Collaboration Server URL.
+- `connectionType` - Specifies `signalr` or `websocket`. The client and server must use the same transport.
+- `currentUser` - Specifies the display name of the current user.
+- `onUserJoined` - Invoked when another user joins the room.
+- `onUserLeft` - Invoked when another user leaves the room.
+
+```ts
+const client = new CollaborationClient(adapter, {
+    serviceUrl,
+    connectionType: 'signalr',
+    currentUser,
+    onUserJoined: (user) => {
+        console.log('User joined', user);
+    },
+    onUserLeft: (user) => {
+        console.log('User left', user);
+    }
+});
+```
+
 ## Create the SpreadsheetEditor adapter
 
-Create the `SpreadsheetEditorAdapter.ts` file to load the workbook, initialize the collaboration room, send local actions, and apply remote actions.
+The `SpreadsheetEditorAdapter` implements `ICollaborationProvider` and connects the Collaboration Client with the SpreadsheetEditor. It loads the synchronized workbook, sends local SpreadsheetEditor actions, and applies remote actions received through `data.payload`.
+
+Create the `SpreadsheetEditorAdapter.ts` file.
 
 ```ts
 import { ICollaborationActionData, ICollaborationProvider } from '@syncfusion/ej2-collaborator';
@@ -78,7 +106,7 @@ export class SpreadsheetEditorAdapter implements ICollaborationProvider {
 
 Set `enableCollaborativeEditing` to `true`, inject `CollaborativeEditingHandler`, load the workbook, initialize the Collaboration Client, and join the collaboration room.
 
-```tsx
+```ts
 import { useRef } from 'react';
 import { CollaborativeEditingHandler, Inject, SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 import { CollaborationClient } from '@syncfusion/ej2-collaborator';
@@ -134,23 +162,11 @@ export default function App() {
 
 ## Manage the collaboration room
 
-The application is responsible for generating a unique room ID for each collaboration session and sharing the same room ID with all participating users.
-
-Users who use the same room ID join the same collaboration session. The room ID can be provided through a query parameter or another application-specific session mechanism.
-
-## Initialize the Collaboration Client
-
-Create `CollaborationClient` after the latest workbook state and room version are loaded. The client and server must use the same connection type.
-
-```ts
-const client = new CollaborationClient(adapter, {
-    connectionType: 'signalr', // or 'websocket'
-});
-```
+The application must provide a room ID for each collaboration session and share the same room ID with all participating users. Users who use the same room ID join the same collaboration session. The room ID can be provided through a query parameter or another application-specific session mechanism.
 
 ## Join a collaboration room
 
-Call `joinRoomAsync` with the shared room ID to connect the user to the collaboration session.
+Call `joinRoomAsync` with the shared room ID after loading the latest workbook state and room version.
 
 ```ts
 await client.joinRoomAsync(roomName);
@@ -162,3 +178,4 @@ After joining the room, supported local actions are sent through `actionComplete
 
 - [Collaborative editing overview](./overview)
 - [Using Redis Cache with ASP.NET Core](./aspnet-core-redis)
+- [Collaboration Client](https://help.syncfusion.com/document-processing/collaborator/collaboration-client)
