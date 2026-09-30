@@ -9,15 +9,26 @@ documentation: ug
 
 # Customize the Form Designer Toolbar in ASP.NET Core PDF Viewer
 
-The form designer toolbar can be customized by showing or hiding default items and by controlling their order.
+## Overview
 
-## Show or hide the form designer toolbar
+This guide shows how to show or hide the form designer toolbar, and how to configure which tools appear and their order.
+
+**Outcome**: A working ASP.NET Core example customizing the form designer toolbar.
+
+## Prerequisites
+
+- EJ2 ASP.NET Core PDF Viewer installed and added to your project. See [getting started guide](../getting-started)
+- A valid [`resourceUrl`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ResourceUrl) or [`serviceUrl`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ServiceUrl) for accessing PDF Viewer assets
+
+## Steps
+
+### 1. Show or hide Form Designer toolbar at initialization
 
 Toggle the form designer toolbar programmatically during initialization or at runtime.
 
-Use the [EnableFormDesigner](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_EnableFormDesigner) property or the [showFormDesignerToolbar](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbar#showformdesignertoolbar) method to change visibility.
+Use the [`enableFormDesigner`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_EnableFormDesigner) property or the [`showFormDesignerToolbar`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/toolbar#showformdesignertoolbar) method to change visibility.
 
-The following code snippet shows how to enable the form designer toolbar using the `EnableFormDesigner` property.
+**Example using the `enableFormDesigner` property:**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -30,26 +41,19 @@ The following code snippet shows how to enable the form designer toolbar using t
 </div>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   serviceUrl='/Index'
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   enableFormDesigner="true">
-    </ejs-pdfviewer>
-</div>
-
-{% endhighlight %}
 {% endtabs %}
 
-## How to customize the form designer toolbar
+### 2. Show or hide Form Designer toolbar at runtime
 
-Choose which tools appear and control their order in the form designer toolbar.
+Set the [`enableFormDesigner`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_EnableFormDesigner) property on the viewer's instance to toggle form designer visibility at runtime.
 
-Configure the [`PdfViewerToolbarSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html) with the [`FormDesignerToolbarItems`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html#Syncfusion_EJ2_PdfViewer_PdfViewerToolbarSettings_FormDesignerToolbarItems) property to specify which form design tools are available. The property accepts a list of `FormDesignerToolbarItem` values; included items are displayed and rendered in the order listed while omitted items are hidden. This yields a streamlined form-design experience across devices.
+### 3. Show or hide form designer toolbar items
 
-The following example demonstrates how to customize the form designer toolbar by configuring specific tools using `FormDesignerToolbarItem`.
+Use [`formDesignerToolbarItems`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html#Syncfusion_EJ2_PdfViewer_PdfViewerToolbarSettings_FormDesignerToolbarItems) and supply an ordered list of [`FormDesignerToolbarItem`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html) values.
+
+Configure the [`toolbarSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings.html) property to specify which form design tools are available. The property accepts a list of `FormDesignerToolbarItem` values; included items are displayed and rendered in the order listed while omitted items are hidden. This yields a streamlined form-design experience across devices.
+
+**Example customizing the form designer toolbar:**
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
@@ -62,15 +66,25 @@ The following example demonstrates how to customize the form designer toolbar by
 </div>
 
 {% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer"
-                   serviceUrl='/Index'
-                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   toolbarSettings="@(new Syncfusion.EJ2.PdfViewer.PdfViewerToolbarSettings { FormDesignerToolbarItems = "TextboxTool PasswordTool CheckBoxTool RadioButtonTool DropdownTool ListboxTool DrawSignatureTool DeleteTool" })">
-    </ejs-pdfviewer>
-</div>
-
-{% endhighlight %}
 {% endtabs %}
+
+## Expected result
+
+- The form designer toolbar appears (or is hidden) according to [`enableFormDesigner`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_EnableFormDesigner).
+- Only the listed tools appear.
+
+## Troubleshooting
+
+- **Toolbar or form designer tools do not appear**
+    - **Cause**: [`FormDesigner`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.FormDesigner.html) or [`Toolbar`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.Toolbar.html) service not injected or enabled.
+    - **Solution**: Ensure [`enableFormDesigner`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_EnableFormDesigner) is set to `true` and the Toolbar service is enabled in the PDF Viewer.
+
+- **Form designer tools not responding to clicks**
+    - **Cause**: Form designer module not fully loaded or document doesn't support form fields.
+    - **Solution**: Ensure the document is loaded before enabling form designer mode, and verify the PDF supports form fields.
+
+## Related topics
+
+- [Customize primary toolbar](./primary-toolbar)
+- [Customize annotation toolbar](./annotation-toolbar)
+- [Customize mobile toolbar](./mobile-toolbar)
