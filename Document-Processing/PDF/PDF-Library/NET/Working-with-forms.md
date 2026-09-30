@@ -1714,6 +1714,231 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Adding-button-field-in-an-existing-PDF-document).
 
+### Adding the barcode field
+
+The [PdfBarcodeField](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfBarcodeField.html) class is used to create a barcode field in PDF forms. You can set the barcode data, caption, and resolution, and disable the default appearance so the barcode is rendered from the field properties.
+
+The following code snippet illustrates how to add a barcode field to a new PDF document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using System.IO;
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+//Add a new page to the PDF document.
+PdfPage page = document.Pages.Add();
+//Disable the default appearance for form fields.
+document.Form.SetDefaultAppearance(false);
+
+//Create a barcode field and set the properties.
+PdfBarcodeField field = new PdfBarcodeField(page, "uniqueName")
+{
+    Bounds = new RectangleF(50, 50, 100, 100),
+    Text = "barcodefield",
+    Caption = "ScanMe",
+    Resolution = 300f,
+};
+//Add the form field to the document.
+document.Form.Fields.Add(field);
+
+//Save the document into stream.
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using System.IO;
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+//Add a new page to the PDF document.
+PdfPage page = document.Pages.Add();
+//Disable the default appearance for form fields.
+document.Form.SetDefaultAppearance(false);
+
+//Create a barcode field and set the properties.
+PdfBarcodeField field = new PdfBarcodeField(page, "uniqueName")
+{
+    Bounds = new RectangleF(50, 50, 100, 100),
+    Text = "barcodefield",
+    Caption = "ScanMe",
+    Resolution = 300f,
+};
+//Add the form field to the document.
+document.Form.Fields.Add(field);
+
+//Save the document into stream.
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports System.IO
+
+'Create a new PDF document.
+Dim document As New PdfDocument()
+'Add a new page to the PDF document.
+Dim page As PdfPage = document.Pages.Add()
+'Disable the default appearance for form fields.
+document.Form.SetDefaultAppearance(False)
+
+'Create a barcode field and set the properties.
+Dim field As New PdfBarcodeField(page, "uniqueName") With {
+    .Bounds = New RectangleF(50, 50, 100, 100),
+    .Text = "barcodefield",
+    .Caption = "ScanMe",
+    .Resolution = 300.0F
+}
+'Add the form field to the document.
+document.Form.Fields.Add(field)
+
+'Save the document into stream.
+Dim stream As New MemoryStream()
+document.Save(stream)
+'Close the document.
+document.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+The following code snippet illustrates how to add a barcode field to an existing PDF document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+using System.IO;
+
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Create the form if the form does not exist in the loaded document.
+if (loadedDocument.Form == null)
+    loadedDocument.CreateForm();
+//Load the page.
+PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
+//Disable the default appearance for form fields.
+loadedDocument.Form.SetDefaultAppearance(false);
+
+//Create a barcode field and set the properties.
+PdfBarcodeField field = new PdfBarcodeField(loadedPage, "uniqueName")
+{
+    Bounds = new RectangleF(50, 50, 100, 100),
+    Text = "barcodefield",
+    Caption = "ScanMe",
+    Resolution = 300f,
+};
+//Add the form field to the existing PDF document.
+loadedDocument.Form.Fields.Add(field);
+
+//Save the document into stream.
+MemoryStream stream = new MemoryStream();
+loadedDocument.Save(stream);
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Parsing;
+using System.IO;
+
+//Load the existing PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Create the form if the form does not exist in the loaded document.
+if (loadedDocument.Form == null)
+    loadedDocument.CreateForm();
+//Load the page.
+PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
+//Disable the default appearance for form fields.
+loadedDocument.Form.SetDefaultAppearance(false);
+
+//Create a barcode field and set the properties.
+PdfBarcodeField field = new PdfBarcodeField(loadedPage, "uniqueName")
+{
+    Bounds = new RectangleF(50, 50, 100, 100),
+    Text = "barcodefield",
+    Caption = "ScanMe",
+    Resolution = 300f,
+};
+//Add the form field to the existing PDF document.
+loadedDocument.Form.Fields.Add(field);
+
+//Save the document into stream.
+MemoryStream stream = new MemoryStream();
+loadedDocument.Save(stream);
+//Close the document.
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Parsing
+Imports System.IO
+
+'Load the existing PDF document.
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+'Create the form if the form does not exist in the loaded document.
+If loadedDocument.Form Is Nothing Then
+    loadedDocument.CreateForm()
+End If
+'Load the page.
+Dim loadedPage As PdfLoadedPage = TryCast(loadedDocument.Pages(0), PdfLoadedPage)
+'Disable the default appearance for form fields.
+loadedDocument.Form.SetDefaultAppearance(False)
+
+'Create a barcode field and set the properties.
+Dim field As New PdfBarcodeField(loadedPage, "uniqueName") With {
+    .Bounds = New RectangleF(50, 50, 100, 100),
+    .Text = "barcodefield",
+    .Caption = "ScanMe",
+    .Resolution = 300.0F
+}
+'Add the form field to the existing PDF document.
+loadedDocument.Form.Fields.Add(field)
+
+'Save the document into stream.
+Dim stream As New MemoryStream()
+loadedDocument.Save(stream)
+'Close the document.
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ### Complex script support for form fields
 
 You can add a complex script language text in PDF AcroForm fields by using the [ComplexScript](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Interactive.PdfTextBoxField.html#Syncfusion_Pdf_Interactive_PdfTextBoxField_ComplexScript) property of the form field instance. The following code snippet illustrates this.
