@@ -83,3 +83,7 @@ public class InputParameter
 ```
 
 N> The above example illustrates inserting HTML content. Similarly, you can insert any rich-text content by converting any of the supported file formats (DOCX, DOC, WordML, HTML, RTF) to SFDT.
+
+## See Also
+
+- [How to insert HTML table into ASP.NET Core DOCX Editor by converting HTML to SFDT](https://support.syncfusion.com/kb/article/25556/how-to-insert-html-table-into-aspnet-core-docx-editor-by-converting-html-to-sfdt)
