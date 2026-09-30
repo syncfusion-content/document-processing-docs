@@ -143,5 +143,10 @@ To run the project, use the following command:
 npm start
 ```
 
+The output will appear as follows:
+![DOCX Editor running in SPFx React web](../images/docxeditor-sharepoint.png)
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/React-DOCX-Editor-Examples/tree/master/documenteditor-spfx-react).
+
 ## See Also
 * [Getting Started with React DOCX Editor](../getting-started)
