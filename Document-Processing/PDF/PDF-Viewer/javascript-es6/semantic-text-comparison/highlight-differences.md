@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Highlight Differences in UI | Syncfusion Angular PDF Viewer
-description: Learn how to highlight text differences in the Syncfusion Angular PDF Viewer using visual highlighting with customizable colors and opacity.
+title: Highlight Differences in UI | Syncfusion TypeScript PDF Viewer
+description: Learn how to highlight text differences in the Syncfusion TypeScript PDF Viewer using visual highlighting with customizable colors and opacity.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Highlight Differences in Angular PDF Viewer UI
+# Highlight Differences in TypeScript PDF Viewer UI
 
 The semantic text comparison feature highlights differences between two PDF documents with customizable colors and opacity, making it easy to identify changes at a glance.
 
@@ -22,8 +22,8 @@ When you compare two PDF documents using the semantic text comparison feature, d
 
 ## Prerequisites
 
-- Syncfusion Angular PDF Viewer installed
-- `PdfComparerComponent` available
+- Syncfusion TypeScript PDF Viewer installed
+- `PdfComparer` class available
 - Two PDF documents ready for comparison
 
 ## Steps
@@ -31,10 +31,11 @@ When you compare two PDF documents using the semantic text comparison feature, d
 ### Step 1: Import required components
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight typescript tabtitle="app.ts" %}
 {% raw %}
-import { Component } from '@angular/core';
-import { PdfComparerComponent } from '@syncfusion/ej2-angular-pdfviewer';
+
+import { PdfComparer } from '@syncfusion/ej2-pdfviewer';
+
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
@@ -44,56 +45,56 @@ import { PdfComparerComponent } from '@syncfusion/ej2-angular-pdfviewer';
 Set up the comparison with basic default highlighting:
 
 {% tabs %}
-{% highlight html tabtitle="app.component.html" %}
+{% highlight typescript tabtitle="app.ts" %}
 {% raw %}
-<ejs-pdfcomparer
-    id="comparer-container"
-    height="600px"
-    [originalDocumentPath]="'https://cdn.syncfusion.com/content/pdf/original-document.pdf'"
-    [modifiedDocumentPath]="'https://cdn.syncfusion.com/content/pdf/modified-document.pdf'"
-    resourceUrl="https://cdn.syncfusion.com/ej2/34.2.4/dist/ej2-pdfviewer-lib">
-</ejs-pdfcomparer>
+
+let pdfComparers: PdfComparer = new PdfComparer();
+
+pdfComparers.originalDocumentPath = 'https://cdn.syncfusion.com/content/pdf/original-document.pdf';
+pdfComparers.modifiedDocumentPath = 'https://cdn.syncfusion.com/content/pdf/modified-document.pdf';
+
+pdfComparers.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+
+pdfComparers.appendTo('#PdfViewer');
+
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
 ### Step 3: Configure highlight colors and options
 
-Define the `comparisonOptions` object to customize highlighting and pass it to the component:
+Define the comparison options to customize highlighting:
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight typescript tabtitle="app.ts" %}
 {% raw %}
-import { Component } from '@angular/core';
 
-@Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html'
-})
-export class AppComponent {
-    comparisonOptions = {
-        beforeColor: '#FF0000',        // Color for deleted text (red)
-        afterColor: '#00FF00',         // Color for added text (green)
-        beforeColorOpacity: 0.4,       // Transparency for deleted (0-1)
-        afterColorOpacity: 0.4,        // Transparency for added (0-1)
-        enableHighlights: true         // Enable visual highlighting
-    };
+interface ComparisonOptions {
+    beforeColor: string;
+    afterColor: string;
+    beforeColorOpacity: number;
+    afterColorOpacity: number;
+    enableHighlights: boolean;
 }
-{% endraw %}
-{% endhighlight %}
-{% endtabs %}
 
-{% tabs %}
-{% highlight html tabtitle="app.component.html" %}
-{% raw %}
-<ejs-pdfcomparer
-    id="comparer-container"
-    height="600px"
-    [originalDocumentPath]="'https://cdn.syncfusion.com/content/pdf/original-document.pdf'"
-    [modifiedDocumentPath]="'https://cdn.syncfusion.com/content/pdf/modified-document.pdf'"
-    [comparisonOptions]="comparisonOptions"
-    resourceUrl="https://cdn.syncfusion.com/ej2/34.2.4/dist/ej2-pdfviewer-lib">
-</ejs-pdfcomparer>
+const comparisonOptions: ComparisonOptions = {
+    beforeColor: '#FF0000',        // Color for deleted text (red)
+    afterColor: '#00FF00',         // Color for added text (green)
+    beforeColorOpacity: 0.4,       // Transparency for deleted (0-1)
+    afterColorOpacity: 0.4,        // Transparency for added (0-1)
+    enableHighlights: true         // Enable visual highlighting
+};
+
+let pdfComparers: PdfComparer = new PdfComparer();
+
+pdfComparers.originalDocumentPath = 'https://cdn.syncfusion.com/content/pdf/original-document.pdf';
+pdfComparers.modifiedDocumentPath = 'https://cdn.syncfusion.com/content/pdf/modified-document.pdf';
+pdfComparers.comparisonOptions = comparisonOptions;
+
+pdfComparers.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+
+pdfComparers.appendTo('#PdfViewer');
+
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
@@ -126,16 +127,19 @@ Control the viewer behavior with these properties:
 Use the `enableDifferencePanel` property to show or hide the sidebar panel that displays all detected differences:
 
 {% tabs %}
-{% highlight html tabtitle="app.component.html" %}
+{% highlight typescript tabtitle="app.ts" %}
 {% raw %}
-<ejs-pdfcomparer
-    id="comparer-container"
-    height="600px"
-    [originalDocumentPath]="'https://cdn.syncfusion.com/content/pdf/original-document.pdf'"
-    [modifiedDocumentPath]="'https://cdn.syncfusion.com/content/pdf/modified-document.pdf'"
-    [enableDifferencePanel]="false"
-    resourceUrl="https://cdn.syncfusion.com/ej2/34.2.4/dist/ej2-pdfviewer-lib">
-</ejs-pdfcomparer>
+
+let pdfComparers: PdfComparer = new PdfComparer();
+
+pdfComparers.originalDocumentPath = 'https://cdn.syncfusion.com/content/pdf/original-document.pdf';
+pdfComparers.modifiedDocumentPath = 'https://cdn.syncfusion.com/content/pdf/modified-document.pdf';
+pdfComparers.enableDifferencePanel = false;    // Hide the differences sidebar panel
+
+pdfComparers.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+
+pdfComparers.appendTo('#PdfViewer');
+
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
@@ -145,16 +149,19 @@ Use the `enableDifferencePanel` property to show or hide the sidebar panel that 
 Use the `enableSyncScrolling` property to control whether the viewers stay synchronized during scrolling, page navigation, and magnification (zoom):
 
 {% tabs %}
-{% highlight html tabtitle="app.component.html" %}
+{% highlight typescript tabtitle="app.ts" %}
 {% raw %}
-<ejs-pdfcomparer
-    id="comparer-container"
-    height="600px"
-    [originalDocumentPath]="'https://cdn.syncfusion.com/content/pdf/original-document.pdf'"
-    [modifiedDocumentPath]="'https://cdn.syncfusion.com/content/pdf/modified-document.pdf'"
-    [enableSyncScrolling]="false"
-    resourceUrl="https://cdn.syncfusion.com/ej2/34.2.4/dist/ej2-pdfviewer-lib">
-</ejs-pdfcomparer>
+
+let pdfComparers: PdfComparer = new PdfComparer();
+
+pdfComparers.originalDocumentPath = 'https://cdn.syncfusion.com/content/pdf/original-document.pdf';
+pdfComparers.modifiedDocumentPath = 'https://cdn.syncfusion.com/content/pdf/modified-document.pdf';
+pdfComparers.enableSyncScrolling = false;      // Disable synchronized scrolling and navigation
+
+pdfComparers.resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+
+pdfComparers.appendTo('#PdfViewer');
+
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
@@ -169,7 +176,7 @@ Use the `enableSyncScrolling` property to control whether the viewers stay synch
 - **Differences panel** - Consolidated list on the right showing all detected differences categorized by type
 - **File upload support** - Upload custom PDFs for comparison
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/Semantic%20Text%20Comparison/Highlight%20differences%20in%20UI).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master/Semantic%20Text%20Comparison/Highlight%20differences%20in%20UI).
 
 ## Related topics
 
