@@ -126,24 +126,20 @@ When you invoke a WebMCP tool, the following happens behind the scenes:
 
 ## Common Use Cases
 
-### Multi-Step Document Workflows
- 
+### Multi-Step Document Workflows 
 Combine multiple WebMCP tools to automate complex document operations in sequence based on user intent.
  
 **Example:** "Find all occurrences of 'Demo', highlight each occurrence in yellow, insert a bookmark for each occurrence, and save the document as a DOCX file."
  
-### Document Navigation and Selection
- 
+### Document Navigation and Selection 
 Navigate through pages and bookmarks, or select words, paragraphs, ranges, and the entire document for subsequent operations.
  
 **Example:** "Go to page 5, select the first paragraph, and make the text bold."
 
- ### Document Search and Content Updates
- 
+### Document Search and Content Updates 
 Quickly locate specific words and perform document-wide updates using search and replace operations.
  
 **Example:** "Find all occurrences of 'customer' and replace them with 'client' throughout the document."
-
 
 ## Supported Features
 
