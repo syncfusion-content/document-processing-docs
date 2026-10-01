@@ -1,15 +1,24 @@
 ---
 layout: post
 title: Programmatic Support in ASP.NET Core PDF Viewer | Syncfusion
-description: Use the programmatic APIs for Organize Pages in the ASP.NET Core PDF Viewer to reorder, rotate, insert, delete, and copy pages from C# or JavaScript.
+description: Add, delete, update, and apply redaction annotations in the ASP.NET Core PDF Viewer programmatically from JavaScript code.
 platform: document-processing
 control: PdfViewer
 documentation: ug
 ---
 
-# Programmatic Support for Organize Pages in ASP.NET Core PDF Viewer
+# Programmatic Redaction in ASP.NET Core PDF Viewer
 
-The Syncfusion ASP.NET Core PDF Viewer provides APIs to add, update, delete, and apply redaction annotations programmatically. The viewer also supports page redaction, configuration of default properties, and interaction with the redaction property panel.
+## Overview
+
+This guide shows how to add, edit, delete, mark full pages, and apply redaction annotations programmatically in the ASP.NET Core PDF Viewer.
+
+**Outcome**: You will have working code to control redactions from UI buttons and to set default redaction properties.
+
+## Prerequisites
+
+- Syncfusion ASP.NET Core PDF Viewer installed and configured in your project. See [getting started guide](../getting-started).
+- A `resourceUrl` or service endpoint if using remote viewer assets (examples below use the Syncfusion CDN). Ensure browser access to the CDN.
 
 ## Enable the redaction toolbar
 
@@ -319,10 +328,16 @@ The redaction property panel allows users to update annotation properties throug
 
 ![Redaction Property Panel](./redaction-annotations-images/redaction-property-panel-icon.png)
 
-## See also
+## Troubleshooting
 
-* [Overview of Redaction](./overview)
-* [Redaction UI interactions](./ui-interaction)
-* [Redaction Toolbar](./toolbar)
-* [Redaction in Mobile view](./mobile-view)
-* [Search Text and Redact](./search-redact)
+- No viewer assets / missing icons: confirm `resourceUrl` is reachable from the browser and points to a compatible `ej2-pdfviewer-lib` version.
+- `window.viewer` is undefined: ensure the `ejs-pdfviewer` has finished initialization before calling APIs (call APIs from event handlers or after the `documentLoad` event).
+- Applying redactions fails: ensure the viewer has finished loading the document and that any server-side redaction workflows (if used) are available. Always back up originals before applying.
+
+## Related topics
+
+- [Overview of Redaction](./overview)
+- [Redaction UI interactions](./ui-interaction)
+- [Redaction Toolbar](./toolbar)
+- [Redaction in Mobile view](./mobile-view)
+- [Search Text and Redact](./search-redact)
