@@ -1,6 +1,6 @@
 ---
 layout: post
-title: About Syncfusion JavaScript Word Document Processing Library | Syncfusion
+title: About Syncfusion JavaScript Word Document Processing Library
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-word-library
 description: Learn about the JavaScript Word Document Processing Library, including its key capabilities, supported environments, and document processing features.
 platform: document-processing
