@@ -12,66 +12,16 @@ domainurl: ##DomainURL##
 
 [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) supports collaborative editing which allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made.
 
+This topic walks through integrating collaborative editing in a JavaScript DOCX Editor using the [Syncfusion Collaborator](https://help.syncfusion.com/document-processing/collaborator/overview) common packages — the `@syncfusion/ej2-collaborator` client library and the `Syncfusion.Collaborator.Server.AspNet.Core` ASP.NET Core Collaboration Server with Redis as the distributed cache.
+
 ## Prerequisites
 
-The following are needed to enable collaborative editing in DOCX Editor.
+The following are needed to enable collaborative editing in DOCX Editor using the Syncfusion Collaborator (common collaboration packages).
 
-- SignalR
+- Syncfusion Collaborator client and server packages:
+   - `@syncfusion/ej2-collaborator` (client library)
+   - `Syncfusion.Collaborator.Server.AspNet.Core` (ASP.NET Core Collaboration Server)
 - Redis
-
-## SignalR
-
-SignalR enables real-time communication by instantly sending and receiving document changes between clients and the server, ensuring seamless collaboration. In distributed environments, it can be scaled using Azure SignalR Service or a Redis backplane.
-
-### Scale-out SignalR using Azure SignalR service
-
-Azure SignalR Service is a scalable, managed service for real-time communication in web applications. It enables real-time messaging between web clients (browsers) and your server-side application (across multiple servers).
-
-The following code snippet demonstrates how to configure Azure SignalR in an ASP.NET Core application using the `AddAzureSignalR` method in the "Program.cs" file of the web service project.
-
-{% tabs %}
-{% highlight C# tabtitle="C#" %}
-
-builder.Services.AddSignalR().AddAzureSignalR("<your-azure-signalr-service-connection-string>", options => { 
-    // Specify the channel name 
-    options.Channels.Add("document-editor");
-});
-
-{% endhighlight %}
-{% endtabs %}
-
-### Scale-out SignalR using Redis
-
-A Redis backplane enables horizontal scaling in a SignalR application. SignalR uses Redis to efficiently broadcast messages across multiple servers, allowing the application to support a large number of users with minimal latency.
-
-In the SignalR application, install the following NuGet package:
-
-- Microsoft.AspNetCore.SignalR.StackExchangeRedis
-
-The following code snippet demonstrates how to configure the Redis backplane in an ASP.NET Core application using the `AddStackExchangeRedis` method in the "Program.cs" file of the web service project.
-
-{% tabs %}
-{% highlight C# tabtitle="C#" %}
-
-builder.Services.AddSignalR().AddStackExchangeRedis("<your_redis_connection_string>");
-
-{% endhighlight %}
-{% endtabs %}
-
-Configure the options as required.
- 
-The following example demonstrates how to add a channel prefix using the ConfigurationOptions object.
-
-{% tabs %}
-{% highlight C# tabtitle="C#" %}
-
-builder.Services.AddDistributedMemoryCache().AddSignalR().AddStackExchangeRedis(connectionString, options =>
-{
-   options.Configuration.ChannelPrefix = "document-editor";
-});
-
-{% endhighlight %}
-{% endtabs %}
 
 ## Redis
 
@@ -93,33 +43,48 @@ The configuration and storage size of the Redis cache can be adjusted based on t
 
 ## Collaborative editing architecture 
 
-Collaborative editing is built using three main components:
+Collaborative editing with the common Syncfusion Collaborator packages is built using three main components:
 
-### Client (JavaScript ES5 DOCX Editor)
+### Client (Collaboration Client + DOCX Editor adapter)
 
-- Captures user edits in the document
+The browser side uses the shared [Collaboration Client](https://help.syncfusion.com/document-processing/collaborator/collaboration-client) (`@syncfusion/ej2-collaborator`) wired to the JavaScript DOCX Editor through a control-specific **adapter** that implements the `ICollaborationProvider` interface.
 
-- Converts edits into operations and sends them to the server
+- Captures user edits in the DOCX Editor.
+- Bridges local edits to the Collaboration Client through a `DocumentEditorAdapter`.
+- Sends local editing actions to the Collaboration Server.
+- Receives remote actions and applies them to the editor through `applyRemoteAction`.
+- Keeps the document synchronized across all connected users.
 
-- Receives updates from other users and applies them to stay in sync
+### Collaboration Server (common collaborator framework)
 
-### Real-time communication (SignalR)
+The ASP.NET Core [Collaboration Server](https://help.syncfusion.com/document-processing/collaborator/collaboration-server) (`Syncfusion.Collaborator.Server.AspNet.Core`) hosts the shared, control-agnostic collaboration services and uses a control-specific **server adapter** (`ICollaborationAdapter`) to translate Document Editor actions to and from the common collaboration model.
 
-- Acts as the communication layer between clients and server
+- Receives editing actions from the Collaboration Client.
+- Runs Operational Transformation through the server adapter and common `IActionService`.
+- Persists actions and assigns version numbers.
+- Broadcasts the transformed action to all participants in the room using `IActiveTransport`.
 
-- Sends and receives changes instantly
+### Real-time communication (transport layer)
 
-- Broadcasts updates to all connected users in real time 
+Acts as the transport layer between the Collaboration Client and the Collaboration Server. The common Collaborator framework supports two transports — **SignalR** (default) and **WebSocket**. Both transports deliver the same collaboration behavior; only the connection configuration differs.
+
+- Sends and receives editing changes instantly between clients and server.
+- Broadcasts updates to all connected users in real time.
+- With SignalR, scaling across multiple servers can be achieved using the Redis backplane.
+- With WebSocket, ensure WebSocket support is enabled on the host (`app.UseWebSockets()`) before mapping the collaboration server.
+
+The transport is selected when constructing the `CollaborationClient` on the client side (`connectionType: 'signalr' | 'websocket'`) and through `CollaborationOptions.ConnectionType` on the server side. Refer to the [Collaboration Client](https://help.syncfusion.com/document-processing/collaborator/collaboration-client) and [Collaboration Server](https://help.syncfusion.com/document-processing/collaborator/collaboration-server) topics for more details.
 
 ### Distributed cache (Redis)
 
-- Temporarily stores all editing operations
-
-- Maintains the correct order of changes
-
-- Resolves conflicts between multiple users using the OT algorithm
+- Temporarily stores all editing operations.
+- Maintains the correct order of changes.
+- Resolves conflicts between multiple users using the OT algorithm.
 
 ## Integrate collaborative editing in client side
+
+The client side uses the shared [Collaboration Client](https://help.syncfusion.com/document-processing/collaborator/collaboration-client) (`@syncfusion/ej2-collaborator`) together with a DOCX Editor adapter that implements the `ICollaborationProvider` interface. The Collaboration Client handles transport connectivity, room management, and synchronization, while the adapter bridges the DOCX Editor to the common collaboration framework.
+
 
 ### Step 1: Integrate DOCX Editor in JavaScript ES5 sample
 
@@ -137,41 +102,131 @@ The following code snippet demonstrates how to enable collaborative editing in t
 {% endhighlight %}
 {% endtabs %}
 
-### Step 3: Configure SignalR to send and receive changes
+### Step 3: Install the Collaboration Client package
 
-To broadcast changes and receive updates from remote users, configure SignalR in the DOCX Editor.
-
-The following code snippet demonstrates how to configure SignalR in the DOCX Editor.
+Install the shared [Collaboration Client](https://www.npmjs.com/package/@syncfusion/ej2-collaborator) npm package in your JavaScript application.
 
 {% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/collaborative-editing-cs1/script-1.js %}
+{% highlight bash tabtitle="npm" %}
+
+npm install @syncfusion/ej2-collaborator
+
 {% endhighlight %}
 {% endtabs %}
 
-### Step 4: Join SignalR room while opening the document
+### Step 4: Create the Document Editor adapter
 
-When opening a document, a unique ID must be generated for each document. These unique IDs are then used to create rooms using SignalR, which facilitates real-time communication and collaborative editing among multiple users.
+The adapter acts as a bridge between the Collaboration Client and the JavaScript DOCX Editor. It implements the `ICollaborationProvider` interface and is responsible for loading the document from the server, bridging local edits to the editor's sender, and applying remote collaboration actions to the editor.
 
-The following code snippet demonstrates how to generate a unique ID and open a document.
+The following code snippet demonstrates the `DocumentEditorAdapter`.
 
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/collaborative-editing-cs1/script-2.js %}
-{% endhighlight %}
-{% endtabs %}
+ ```js
 
-### Step 5: Broadcast current editing changes to remote users
+export class DocumentEditorAdapter {
+    constructor(container, serviceUrl) {
+        this.container = container;
+        this.serviceUrl = serviceUrl;
+    }
 
-Changes made on the client side must be transmitted to the server to be broadcast to other connected users. 
+    // The only ICollaborationProvider method — applied for every remote action. 
+    applyRemoteAction(action, data) {
+        this.container.documentEditor.collaborativeEditingHandlerModule?.applyRemoteAction(action, data.payload);
+    }
 
-The following code snippet demonstrates how to send changes to the server using the [contentChange](https://ej2.syncfusion.com/documentation/api/document-editor/index-default#contentchange) event in the DOCX Editor.
+    // Fetch the document from the product's REST API and return the room name. 
+    async loadFromServer(fileName) {
+        const roomName = this.getRoomName(fileName);
+        const response = await fetch(
+            this.serviceUrl + 'api/CollaborativeEditing/ImportFile',
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ fileName, roomName })
+            }
+        );
+        if (!response.ok) {
+            throw new Error('Failed to load document');
+        }
+        const responseText = await response.text();
+        await this.open(responseText, roomName);
+        return roomName;
+    }
 
-{% tabs %}
-{% highlight js tabtitle="index.js" %}
-{% include code-snippet/document-editor/javascript-es5/collaborative-editing-cs1/script-3.js %}
-{% endhighlight %}
-{% endtabs %}
+    // Seed the editor and bridge local edits to the editor's sender. 
+    async open(responseText, roomName) {
+        const data = JSON.parse(responseText);
+        this.container?.documentEditor.collaborativeEditingHandlerModule?.updateRoomInfo(roomName, data.version, this.serviceUrl + 'api/CollaborativeEditing/');
+        this.container.documentEditor.open(data.sfdt);
+        this.container.contentChange = (args) => {
+            console.log('[SENT]', new Date().toISOString());
+            this.container.documentEditor.collaborativeEditingHandlerModule?.sendActionToServer(args.operations);
+        }
+    }
+
+    getRoomName(fileName) {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        let roomId = urlParams.get('id');
+
+        if (!roomId) {
+            roomId = Math.random().toString(32).slice(2);
+            window.history.replaceState({}, '', '?id=' + roomId);
+        }
+
+        return roomId;
+    }
+}
+
+
+```
+### Step 5: Wire the Collaboration Client
+
+With collaborative editing enabled in the DOCX Editor (Step 2), create the adapter and initialize the [Collaboration Client](https://help.syncfusion.com/document-processing/collaborator/collaboration-client) with the desired transport. The Collaboration Client connects to the server, joins the collaboration room, and tracks user join/leave events. After the document is loaded through the adapter, join the collaboration room.
+
+The `connectionType` option selects the transport:
+- `'signalr'` — uses SignalR (default). The server must be registered with `AddCollaborationServer` (default transport) and mapped with `app.MapCollaborationServer()`.
+- `'websocket'` — uses WebSocket. The server must be registered with `ConnectionType = CollaborationConnectionType.WebSocket`, WebSocket support enabled with `app.UseWebSockets()`, and mapped with `app.MapCollaborationServer()`.
+
+The following code snippet demonstrates how to wire the Collaboration Client with SignalR transport in the DOCX Editor.
+
+```js
+
+var container = new ej.documenteditor.DocumentEditorContainer({ height: "590px", enableToolbar: true, showPropertiesPane: false, currentUser: 'Guest User' });
+container.serviceUrl = serviceUrl + 'api/documenteditor/';
+ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
+container.appendTo('#container');
+
+//Injecting collaborative editing module
+ej.documenteditor.DocumentEditor.Inject(ej.documenteditor.CollaborativeEditingHandler);
+//Enable collaborative editing in DocumentEditor
+container.documentEditor.enableCollaborativeEditing = true;
+
+container.documentEditor.documentName = 'Getting Started';
+
+const adapter = new DocumentEditorAdapter(container, 'http://localhost:5212/');
+const client = new CollaborationClient(adapter, {
+    serviceUrl: 'http://localhost:5212/',
+    currentUser: 'Guest User',
+    connectionType: "signalr",
+    onUserJoined: (user) => {
+        console.log("User Joined", user);
+    },
+    onUserLeft: (user) => {
+        console.log("User Left", user);
+    }
+});
+
+(async () => {
+    const roomName = await adapter.loadFromServer("Giant Panda.docx");
+    await client.joinRoomAsync(roomName);
+    console.log("Loaded document from room:", roomName);
+})();
+
+```
+
+The Collaboration Client internally manages the transport connection, room joining, and the `dataReceived` events (`connectionId`, `addUser`, `removeUser`, and `action`). For each remote action received from the server, it calls the adapter's `applyRemoteAction` method, which applies the action to the DOCX Editor through the `CollaborativeEditingHandler`. Local edits are bridged to the editor's sender through the `contentChange` handler in the adapter, so there is no need to configure SignalR or WebSocket manually.
 
 The complete version of the code discussed above is available at the following [GitHub repository](https://github.com/SyncfusionExamples/EJ2-Document-Editor-Collaborative-Editing/tree/master/Client%20side%20with%20dotnet/Javascript).
 

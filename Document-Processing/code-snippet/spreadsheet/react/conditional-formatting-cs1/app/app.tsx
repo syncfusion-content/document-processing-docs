@@ -20,6 +20,7 @@ function App() {
                 type: 'Bottom10Items', value: '1',
                 format: { style: { color: '#ffffff', backgroundColor: '#c68d53', fontWeight: 'bold' } }, range: 'G2:G9'
             });
+            spreadsheet.conditionalFormat({ type: 'Formula', value: '=H6>5000', cFColor: 'RedT', range: 'H6:H9' });
         }
     }, []);
 
@@ -35,6 +36,7 @@ function App() {
                             <ConditionalFormatDirective type='GreaterThan' cFColor='RedFT' value='700' range='B2:B9'></ConditionalFormatDirective>
                             <ConditionalFormatDirective type='Bottom10Items' cFColor='YellowFT' value='4' range='C2:C9'></ConditionalFormatDirective>
                             <ConditionalFormatDirective type='BlueDataBar' range='D2:D9'></ConditionalFormatDirective>
+                            <ConditionalFormatDirective type='Formula' cFColor='GreenFT' value='=H2>AVG(H2:H9)' range='H2:H5'></ConditionalFormatDirective>
                         </ConditionalFormatsDirective>
                         <ColumnsDirective>
                             <ColumnDirective width={120}></ColumnDirective>

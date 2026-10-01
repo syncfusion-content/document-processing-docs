@@ -71,20 +71,6 @@ PdfViewer.DocumentSource = await response.Content.ReadAsByteArrayAsync();
 {% endhighlight %}
 {% endtabs %}
 
-## Unload a document
-
-The [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) allows you to unload and clear the resources occupied by the PDF document loaded using the [UnloadDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_UnloadDocument) method, as shown below.
-
-N> 1. While changing or opening different documents on the same page, the previously loaded document will be unloaded automatically by the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html). 
-N> 2. And, if you are using multiple pages in your application, then make sure to unload the document from the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html) while leaving the page that has it to release the memory and resources consumed by the PDF document that is loaded.  The unloading of documents can be done by calling the [UnloadDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_UnloadDocument) method. 
-
-{% tabs %}
-{% highlight c# %}
-//Unload the document from the PDF viewer.
-PdfViewer.UnloadDocument();
-{% endhighlight %}
-{% endtabs %}
-
 ## Opening a unsupported annotations
 
 The .NET MAUI PDF Viewer it is possible to view the unsupported annotations like 3D, rich media and sound annotations in a non-interactive manner. To achieve this, provide the [flattenOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.FlattenOptions.html) (an optional parameter) as [Unsupported](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.FlattenOptions.html#Syncfusion_Maui_PdfViewer_FlattenOptions_Unsupported) in the [LoadDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_LoadDocument_System_IO_Stream_System_String_System_Nullable_Syncfusion_Maui_PdfViewer_FlattenOptions__) methods. See the following code example:
@@ -102,21 +88,6 @@ The .NET MAUI PDF Viewer it is possible to view the unsupported annotations like
 
 N> * All the [LoadDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_LoadDocument_System_IO_Stream_System_String_System_Nullable_Syncfusion_Maui_PdfViewer_FlattenOptions__) methods accept the flatten options parameter.
 N> * Refer to this [section](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/migration#upcoming-features) for the upcoming annotation features in the [SfPdfViewer](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html).
-
-## Optimizing document loading on Android
-
-When your application handles large images, complex graphics, or memory-intensive operations, the default heap size may not be sufficient, leading to performance issues or crashes. Enabling a larger heap allows the app to allocate more memory, ensuring smooth performance and preventing out-of-memory errors in such scenarios. You can enable this by adding the following highlighted attribute in your AndroidManifest.xml under the <application> tag.
-
-{% tabs %}
-{% highlight xml hl_lines="4" %}
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
-	<application android:allowBackup="true" android:icon="@mipmap/appicon" android:roundIcon="@mipmap/appicon_round" 
-        android:largeHeap="true" ></application>
-	https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui.
-</manifest>
-{% endhighlight %}
-{% endtabs %}
 
 ## Check other PDF opening options
 

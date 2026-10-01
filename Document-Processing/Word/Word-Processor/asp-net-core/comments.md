@@ -157,6 +157,20 @@ The following example illustrates how to enable mention support in DOCX Editor
 {% endhighlight %}
 {% endtabs %}
 
+## Highlight comments by author
+
+When `highlightCommentsByAuthor` is enabled, each comment marker is displayed in the author's avatar color. Selecting a comment highlights the corresponding text and comment pane border in that color. If multiple comments appear on the same line, the marker retains the first author's avatar color.
+
+The following example illustrates how to enable comment highlights in the DOCX Editor
+
+{% tabs %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/comment-highlights/tagHelper %}
+{% endhighlight %}
+{% highlight c# tabtitle="comment-highlights.cs" %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/comment-highlights/document-editor.cs %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Events
 
