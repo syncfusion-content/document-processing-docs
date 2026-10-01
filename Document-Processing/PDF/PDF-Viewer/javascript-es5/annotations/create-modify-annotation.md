@@ -42,8 +42,7 @@ Measurement annotations:
 Other annotations:
 
 - Redaction: [Redaction annotation](./annotation-types/redaction-annotation)
-- Free text: [Free text annotation](./annotation-types/free-text-annotation)
-- Ink (freehand): [Ink annotation](./annotation-types/ink-annotation)
+- Free text: [Free text annotation](./annotation-types/free-text-annotation)- Link: [Link annotation](./annotation-types/link-annotation)- Ink (freehand): [Ink annotation](./annotation-types/ink-annotation)
 - Stamp: [Stamp annotation](./annotation-types/stamp-annotation)
 - Sticky notes: [Sticky notes annotation](./annotation-types/sticky-notes-annotation)
 

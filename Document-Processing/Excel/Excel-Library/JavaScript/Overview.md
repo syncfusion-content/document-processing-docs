@@ -1,6 +1,6 @@
 ---
 title: About Syncfusion JavaScript Excel Library | Syncfusion
-description: Learn about the JavaScript Excel Library, including its key capabilities and supported platforms.
+description: Learn about the Syncfusion JavaScript Excel Library, including key capabilities, features, and supported platforms.
 platform: document-processing
 control: Excel
 documentation: ug

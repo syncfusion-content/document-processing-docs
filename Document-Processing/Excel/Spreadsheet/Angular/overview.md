@@ -48,6 +48,7 @@ The [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-s
 * [Password protection](protect-sheet#protect-workbook): Allows you to protect the workbook with a password.
 * [Multi-line editing](editing): Allows you to insert a line break between paragraphs of the text within a cell in a Spreadsheet.
 * [Calculate range selection](selection): Helps you to select a range or multiple ranges when editing a formula in a cell.
+* [Collaborative editing](collaborative-editing/overview): Allows multiple users to edit the same workbook and view synchronized and selections in real time.
 * [Right-to-left (RTL)](global-local#right-to-left-rtl): Aligns content in the Spreadsheet component from right to left.
 * [Templates](template): Templates can be used to create custom user experiences in the Spreadsheet.
 * [Globalization](global-local): Personalize the Spreadsheet component with different languages, as well as culture-specific number, date, and time formatting.

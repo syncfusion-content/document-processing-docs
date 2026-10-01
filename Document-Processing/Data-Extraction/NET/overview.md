@@ -10,13 +10,13 @@ keywords: Assemblies
 
 # About Syncfusion .NET Smart Data Extraction Library
 
-.NET **Smart Data Extractor** is a high‑performance, deterministic C# library for extracting structured document content from **PDFs** and **images**. Tailored for modern .NET workflows, it interprets visual layout patterns—lines, boxes, labels, and alignment—to accurately identify and extract **tables**, **text elements**, **images**, **headers**, **footers**, and **form fields**. Each extracted element includes per‑field confidence scores, ensuring reliable validation, seamless export, and smooth integration into applications.
+.NET **Smart Data Extractor** is a high‑performance, deterministic C# library for extracting structured document content from **PDFs** and **images**. Tailored for modern .NET workflows, it interprets visual layout patterns—lines, boxes, labels, and alignment—to accurately identify and extract **tables**, **text elements**, **images**, **headers**, **footers**, **barcodes**, and **form fields**. Each extracted element includes per‑field confidence scores, ensuring reliable validation, seamless export, and smooth integration into applications.
 
 ## Key Features of Syncfusion<sup>&reg;</sup> Smart Data Extractor
 
 The following list highlights the core capabilities of the Syncfusion<sup>&reg;</sup> Smart Data Extractor:
 
-* **Document structure extraction:** detects text elements, images, headers/footers, and complete table structures (regions, header rows, columns, cell boundaries, merged cells).  
+* **Document structure extraction:** detects text elements, images, headers/footers, barcodes, and complete table structures (regions, header rows, columns, cell boundaries, merged cells).  
 * **File format support:** works with PDF and common image formats such as JPEG and PNG.  
 * **Table extraction:** specialized parsing to recover table rows, columns, header detection, and cell spans.  
 * **Form recognition:** detects and extracts form fields (text inputs, checkboxes, radio buttons) with field types and values.  
@@ -26,7 +26,7 @@ The following list highlights the core capabilities of the Syncfusion<sup>&reg;<
  
 ## JSON Output Structure and Attributes
 
-The Syncfusion® Data Extraction libraries process PDFs and scanned images to extract structured document data—including tables, form fields, text elements, images, headers, and footers—by analyzing layout patterns, table regions, borders, alignment cues, and cell structures. The extracted output is returned as structured JSON with per‑field and per‑cell confidence scores, along with complete document and table hierarchies, making it ready for immediate review, export, or integration into downstream workflows.
+The Syncfusion® Data Extraction libraries process PDFs and scanned images to extract structured document data—including tables, form fields, text elements, images, headers, and footers—by analyzing layout patterns, barcodes, table regions, borders, alignment cues, and cell structures. The extracted output is returned as structured JSON with per‑field and per‑cell confidence scores, along with complete document and table hierarchies, making it ready for immediate review, export, or integration into downstream workflows.
 
 ### Root Structure
 
