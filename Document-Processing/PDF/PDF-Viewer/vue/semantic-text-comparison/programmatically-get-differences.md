@@ -652,15 +652,7 @@ The `semanticTextCompare()` method returns data with this structure:
 }
 ```
 
-## Usage examples
-
-The methods `getDifferencesByType()`, `groupDifferencesByPage()`, and `generateReport()` are already included in the code from **Step 3**. These methods demonstrate how to:
-
-- **Filter by type** - Get all added, deleted, or modified differences
-- **Group by page** - Organize differences by page number
-- **Generate reports** - Create detailed comparison summaries with breakdown by page
-
-All methods are accessible via the test buttons in the control panel for quick testing and validation.
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/Semantic%20Text%20Comparison/Highlight%20differences%20in%20UI).
 
 ## Related topics
 

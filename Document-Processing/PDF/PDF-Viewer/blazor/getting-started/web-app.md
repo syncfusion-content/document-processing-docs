@@ -56,7 +56,7 @@ Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
 
 N>
 * For **WebAssembly** or **Auto** render modes, install packages in the **client project**.
-* Syncfusion<sup style="font-size:70%">&reg;</sup> uses [SkiaSharp.Views.Blazor version 3.119.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1). Ensure your project references this version.
+* Syncfusion<sup style="font-size:70%">&reg;</sup> uses [SkiaSharp.Views.Blazor version 4.150.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/4.150.1). Ensure your project references this version.
 
 {% endtabcontent %}
 
