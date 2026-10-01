@@ -28,7 +28,8 @@ let section = document.sections[0];
 let firstParagraph = section.body.appendParagraph();
 
 // Add an image to the paragraph and set height and width
-let imageBytes = new Uint8Array(readFileSync('Image.png'));
+let response = await fetch('Image.png');
+let imageBytes = new Uint8Array(await response.arrayBuffer());
 let picture = firstParagraph.appendImage(imageBytes, {
     width: 200,
     height: 100,
@@ -73,7 +74,8 @@ for (let paragraph of textBody.paragraphs) {
                 picture.height = 100;
 
                 // Load image data and replace the existing image
-                let imageBytes = new Uint8Array(readFileSync('Image.png'));
+                let response = await fetch('Image.png');
+                let imageBytes = new Uint8Array(await response.arrayBuffer());
                 picture.loadImage(imageBytes);
             }
         }
@@ -145,7 +147,8 @@ let section = document.sections[0];
 let paragraph = section.body.appendParagraph();
 paragraph.appendText('This paragraph has picture. ');
 // Append a new picture
-let imageBytes = new Uint8Array(readFileSync('Image.png'));
+let response = await fetch('Image.png');
+let imageBytes = new Uint8Array(await response.arrayBuffer());
 let picture = paragraph.appendImage(imageBytes);
 // Set text wrapping style – when the wrapping style is inline, the image is not absolutely positioned
 picture.textWrappingStyle = TextWrappingStyle.Square;
@@ -239,7 +242,8 @@ let section = document.sections[0];
 let firstParagraph = section.body.appendParagraph();
 
 // Load image data from the specified file
-let imageBytes = new Uint8Array(readFileSync('Image.png'));
+let response = await fetch('Image.png');
+let imageBytes = new Uint8Array(await response.arrayBuffer());
 
 // Insert an image into the paragraph with the specified dimensions
 let picture = firstParagraph.appendImage(imageBytes, {

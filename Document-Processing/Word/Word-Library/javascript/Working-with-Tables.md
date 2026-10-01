@@ -165,7 +165,8 @@ table.rows[0].cells[1].appendParagraph().appendText('Product Image');
 table.rows[1].cells[0].appendParagraph().appendText('Apple Juice');
 
 // Insert an image into the cell (second row, second cell)
-let imageBytes = new Uint8Array(readFileSync('Image.png'));
+let response = await fetch('Image.png');
+let imageBytes = new Uint8Array(await response.arrayBuffer());
 let picture = table.rows[1].cells[1].appendParagraph().appendImage(imageBytes);
 picture.height = 75;
 picture.width = 60;

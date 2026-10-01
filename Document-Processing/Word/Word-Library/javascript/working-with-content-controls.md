@@ -51,7 +51,8 @@ let table = blockContentControl.body.appendTable();
 table.resetCells(2, 3);
 
 let imageParagraph = blockContentControl.body.appendParagraph();
-let imageBytes = new Uint8Array(readFileSync('Image.png'));
+const response = await fetch('Image.png');
+let imageBytes = new Uint8Array(await response.arrayBuffer());
 
 imageParagraph.appendImage(imageBytes, { width: 200, height: 100 });
 

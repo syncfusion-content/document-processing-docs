@@ -56,8 +56,9 @@ import { readFileSync } from 'node:fs';
 import { TextRange, WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing document
-let bytes = readFileSync('Input.docx');
-let document = WordDocument.openSync(new Uint8Array(bytes));
+let response = await fetch('Input.docx');
+let bytes = new Uint8Array(await response.arrayBuffer());
+let document = WordDocument.open(bytes);
 
 let section = document.sections[0];
 let paragraph = section.body.paragraphs[0];
@@ -87,8 +88,9 @@ import { readFileSync } from 'node:fs';
 import { Color, Paragraph, ParagraphAlignment, WordDocument } from '@syncfusion/ej2-docx';
 
 // Load the document
-let bytes = readFileSync('Input.docx');
-let document = WordDocument.openSync(new Uint8Array(bytes));
+let response = await fetch('Input.docx');
+let bytes = new Uint8Array(await response.arrayBuffer());
+let document = WordDocument.open(bytes);
 let bodyItems = document.sections[0].body.items;
 
 // Apply spacing, indentation, shading, and alignment to paragraph 5 (index 4)
@@ -162,8 +164,9 @@ import { readFileSync } from 'node:fs';
 import { Paragraph, WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing document
-let bytes = readFileSync('Template.docx');
-let document = WordDocument.openSync(new Uint8Array(bytes));
+let response = await fetch('Template.docx');
+let bytes = new Uint8Array(await response.arrayBuffer());
+let document = WordDocument.open(bytes);
 
 // Access the second body item (index 1)
 let paragraph = document.sections[0].body.items[1];
@@ -193,8 +196,9 @@ import { readFileSync } from 'node:fs';
 import { Color, ParagraphStyle, WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-let bytes = readFileSync('Input_AccessStyle_Template.docx');
-let document = WordDocument.openSync(new Uint8Array(bytes));
+let response = await fetch('Input_AccessStyle_Template.docx');
+let bytes = new Uint8Array(await response.arrayBuffer());
+let document = WordDocument.open(bytes);
 
 let styles = document.styles;
 let style = styles.findByName('Heading1');
@@ -218,8 +222,9 @@ import { readFileSync } from 'node:fs';
 import { Color, ParagraphAlignment, WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-let bytes = readFileSync('Template.docx');
-let document = WordDocument.openSync(new Uint8Array(bytes));
+let response = await fetch('Template.docx');
+let bytes = new Uint8Array(await response.arrayBuffer());
+let document = WordDocument.open(bytes);
 
 // Create a custom paragraph style
 let myStyle = document.styles.addParagraphStyle('MyStyle');
@@ -250,8 +255,9 @@ import { readFileSync } from 'node:fs';
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-let bytes = readFileSync('Input_Emphasis_Template.docx');
-let document = WordDocument.openSync(new Uint8Array(bytes));
+let response = await fetch('Input_Emphasis_Template.docx');
+let bytes = new Uint8Array(await response.arrayBuffer());
+let document = WordDocument.open(bytes);
 
 // Apply the built-in Emphasis style
 document.lastParagraph.applyStyle('Emphasis');
@@ -271,8 +277,9 @@ import { readFileSync } from 'node:fs';
 import { ParagraphStyle, WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-let bytes = readFileSync('Template.docx');
-let document = WordDocument.openSync(new Uint8Array(bytes));
+let response = await fetch('Template.docx');
+let bytes = new Uint8Array(await response.arrayBuffer());
+let document = WordDocument.open(bytes);
 
 let styles = document.styles;
 let style = styles.findByName('Style1');
@@ -322,8 +329,9 @@ import { readFileSync } from 'node:fs';
 import { Paragraph, TextRange, WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing document
-let bytes = readFileSync('Template.docx');
-let document = WordDocument.openSync(new Uint8Array(bytes));
+let response = await fetch('Template.docx');
+let imageBytes = new Uint8Array(await response.arrayBuffer());
+let document = WordDocument.open(bytes));
 
 // Modify the first text range of the paragraph at body index 3
 let block = document.sections[0].body.items[3];
