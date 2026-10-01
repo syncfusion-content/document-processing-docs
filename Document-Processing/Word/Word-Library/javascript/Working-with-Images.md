@@ -21,15 +21,15 @@ import { readFileSync } from 'node:fs';
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Create a new Word document
-const document = WordDocument.create();
+let document = WordDocument.create();
 // Access the first section
-const section = document.sections[0]!;
+let section = document.sections[0]!;
 // Add a new paragraph to the section
-const firstParagraph = section.body.appendParagraph();
+let firstParagraph = section.body.appendParagraph();
 
 // Add an image to the paragraph and set height and width
-const imageBytes = new Uint8Array(readFileSync('Image.png'));
-const picture = firstParagraph.appendImage(imageBytes, {
+let imageBytes = new Uint8Array(readFileSync('Image.png'));
+let picture = firstParagraph.appendImage(imageBytes, {
     width: 200,
     height: 100,
 });
@@ -53,18 +53,18 @@ import { readFileSync } from 'node:fs';
 import { EntityType, WordDocument, Picture } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-const document = WordDocument.openSync('Template.docx');
+let document = WordDocument.openSync('Template.docx');
 
 // Get the body of the first section
-const textBody = document.sections[0]!.body;
+let textBody = document.sections[0]!.body;
 
 // Iterate through all paragraphs in the text body
-for (const paragraph of textBody.paragraphs) {
+for (let paragraph of textBody.paragraphs) {
     // Iterate through all paragraph items
-    for (const paraItem of paragraph.items) {
+    for (let paraItem of paragraph.items) {
         // Check whether the current paragraph item is a picture
         if (paraItem.type === EntityType.Picture) {
-            const picture = paraItem as Picture;
+            let picture = paraItem as Picture;
 
             // Find the picture whose title matches the specified value
             if (picture.title === 'Bookmark') {
@@ -73,7 +73,7 @@ for (const paragraph of textBody.paragraphs) {
                 picture.height = 100;
 
                 // Load image data and replace the existing image
-                const imageBytes = new Uint8Array(readFileSync('Image.png'));
+                let imageBytes = new Uint8Array(readFileSync('Image.png'));
                 picture.loadImage(imageBytes);
             }
         }
@@ -96,17 +96,17 @@ The following code example shows how to remove images from paragraph items.
 import { EntityType, WordDocument } from '@syncfusion/ej2-docx';
 
 // Open a Word document
-const document = WordDocument.openSync('Template.docx');
+let document = WordDocument.openSync('Template.docx');
 
 // Get the body of the first section
-const textBody = document.sections[0]!.body;
+let textBody = document.sections[0]!.body;
 
 // Iterate through all paragraphs in the section body
-for (const paragraph of textBody.paragraphs) {
+for (let paragraph of textBody.paragraphs) {
    // Iterates through all paragraphs in the section body. 
-   for (const paragraph of textBody.paragraphs) { 
+   for (let paragraph of textBody.paragraphs) { 
        // Iterates through all items in the paragraph. 
-       for (const paraItem of paragraph.items) { 
+       for (let paraItem of paragraph.items) { 
             // Checks whether the current item is an image. 
             if (paraItem.type === EntityType.Picture) { 
                 // Removes the image from the paragraph. 
@@ -138,15 +138,15 @@ import { WordDocument,
     VerticalOrigin } from '@syncfusion/ej2-docx';
 
 // Create a new Word document
-const document = WordDocument.create();
+let document = WordDocument.create();
 // WordDocument.create() already seeds section 0
-const section = document.sections[0]!;
+let section = document.sections[0]!;
 // Add a new paragraph to the section
-const paragraph = section.body.appendParagraph();
+let paragraph = section.body.appendParagraph();
 paragraph.appendText('This paragraph has picture. ');
 // Append a new picture
-const imageBytes = new Uint8Array(readFileSync('Image.png'));
-const picture = paragraph.appendImage(imageBytes);
+let imageBytes = new Uint8Array(readFileSync('Image.png'));
+let picture = paragraph.appendImage(imageBytes);
 // Set text wrapping style – when the wrapping style is inline, the image is not absolutely positioned
 picture.textWrappingStyle = TextWrappingStyle.Square;
 // Set horizontal and vertical origin
@@ -189,16 +189,16 @@ The following code example shows how to find an image by title.
 import { EntityType, WordDocument, Picture } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-const document = WordDocument.openSync('Template.docx');
+let document = WordDocument.openSync('Template.docx');
 
-const textBody = document.sections[0]!.body;
+let textBody = document.sections[0]!.body;
 
 // Iterate paragraphs in the body
-for (const paragraph of textBody.paragraphs) {
+for (let paragraph of textBody.paragraphs) {
     // Iterate paragraph items
-    for (const paraItem of paragraph.items) {
+    for (let paraItem of paragraph.items) {
         if (paraItem.type === EntityType.Picture) {
-            const picture = paraItem as Picture;
+            let picture = paraItem as Picture;
             // Match the picture title
             if (picture.title === 'Bookmark') {
                 picture.width = 150;
@@ -230,19 +230,19 @@ import { WordDocument, CaptionNumberingFormat,
     CaptionPosition } from '@syncfusion/ej2-docx';
 
 // Create a new Word document
-const document = WordDocument.create();
+let document = WordDocument.create();
 
 // Get the first section in the document
-const section = document.sections[0]!;
+let section = document.sections[0]!;
 
 // Append a new paragraph to the section body
-const firstParagraph = section.body.appendParagraph();
+let firstParagraph = section.body.appendParagraph();
 
 // Load image data from the specified file
-const imageBytes = new Uint8Array(readFileSync('Image.png'));
+let imageBytes = new Uint8Array(readFileSync('Image.png'));
 
 // Insert an image into the paragraph with the specified dimensions
-const picture = firstParagraph.appendImage(imageBytes, {
+let picture = firstParagraph.appendImage(imageBytes, {
     width: 200,
     height: 100,
 });

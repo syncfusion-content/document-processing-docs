@@ -27,10 +27,10 @@ import {
 } from '@syncfusion/ej2-docx';
 
 // Creates a new Word document
-const document = WordDocument.create();
+let document = WordDocument.create();
 
 // Get the last section
-const section = document.lastSection;
+let section = document.lastSection;
 
 // Sets page setup options
 section.pageSetup.orientation = PageOrientation.Landscape;
@@ -45,7 +45,7 @@ section.pageSetup.firstPageTray = PrinterPaperTray.EnvelopeFeed;
 section.pageSetup.otherPagesTray = PrinterPaperTray.MiddleBin;
 
 // Adds a paragraph to the created section
-const paragraph = section.body.appendParagraph();
+let paragraph = section.body.appendParagraph();
 
 // Appends the text to the created paragraph
 paragraph.appendText(
@@ -66,10 +66,10 @@ The following code example shows how to add multiple columns to a section and in
 import { BreakType, WordDocument } from '@syncfusion/ej2-docx';
 
 // Creates a new Word document
-const document = WordDocument.create();
+let document = WordDocument.create();
 
 // Get the last section
-const section = document.lastSection;
+let section = document.lastSection;
 
 // Adds three equal-width columns with a 20-point spacing between them
 section.addColumn(150, 20);
@@ -78,7 +78,7 @@ section.addColumn(150, 20);
 
 // Adds a paragraph to the created section
 let paragraph = section.body.appendParagraph();
-const paraText =
+let paraText =
   'AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.';
 
 // Appends the text to the created paragraph
@@ -114,17 +114,17 @@ import {
 } from '@syncfusion/ej2-docx';
 
 // Creates a new Word document
-const document = WordDocument.create();
+let document = WordDocument.create();
 
 // Get the last section
-const section = document.lastSection;
+let section = document.lastSection;
 
 // Sets the page size and orientation for the section
 section.pageSetup.pageSize = PageSize.A4;
 section.pageSetup.orientation = PageOrientation.Portrait;
 
 // Adds a paragraph to the section
-const paragraph = section.body.appendParagraph();
+let paragraph = section.body.appendParagraph();
 
 // Appends the text to the created paragraph
 paragraph.appendText(
@@ -145,14 +145,14 @@ The following code example shows how to add a default header and a default foote
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Creates a new Word document
-const document = WordDocument.create();
+let document = WordDocument.create();
 
 // Adds the first section to the document
 let section = document.addSection();
 
 // Adds a paragraph to the section
 let paragraph = section.body.appendParagraph();
-const paraText =
+let paraText =
   'AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.';
 
 // Appends text to the first page in the document
@@ -190,10 +190,10 @@ The following code example shows how to iterate through every section in a docum
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Open an existing Word document
-const document = WordDocument.open('Input.docx');
+let document = WordDocument.open('Input.docx');
 
 // Iterate through every section in the Word document
-for (const section of document.sections) {
+for (let section of document.sections) {
   // Remove the first page header
   section.headersFooters.firstPageHeader.items.clear();
 
@@ -231,7 +231,7 @@ import {
 } from '@syncfusion/ej2-docx';
 
 // Create a new Word document
-const document = WordDocument.create();
+let document = WordDocument.create();
 
 // Get the last section
 let section = document.lastSection;
@@ -273,10 +273,10 @@ The following code example shows how to apply a colored page border to a section
 import { BorderStyle, Color, WordDocument } from '@syncfusion/ej2-docx';
 
 // Create a new Word document
-const document = WordDocument.create();
+let document = WordDocument.create();
 
 // Get the last section
-const section = document.lastSection;
+let section = document.lastSection;
 
 // Set the borders style
 section.pageSetup.borders.borderType = BorderStyle.Single;
@@ -315,10 +315,10 @@ The following code example shows how to configure line numbering for every secti
 import { LineNumberingMode, WordDocument } from '@syncfusion/ej2-docx';
 
 // Open an existing Word document
-const document = WordDocument.open('Input.docx');
+let document = WordDocument.open('Input.docx');
 
 // Iterate through every section in the Word document
-for (const section of document.sections) {
+for (let section of document.sections) {
   // Set the line number distance from the text
   section.pageSetup.lineNumberingDistanceFromText = 10;
 
@@ -346,7 +346,7 @@ The following code example shows how to remove a specific section from a documen
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Open an existing Word document
-const document = WordDocument.open('Input.docx');
+let document = WordDocument.open('Input.docx');
 
 // Removes the second section from the collection
 document.sections.removeAt(1);

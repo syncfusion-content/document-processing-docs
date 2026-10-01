@@ -16,16 +16,16 @@ You can create a new Word document by using the `WordDocument.create()` method.
 {% highlight typescript tabtitle="TypeScript" %}
 import { WordDocument } from '@syncfusion/ej2-docx';
 
-const document = WordDocument.create();
+let document = WordDocument.create();
 
 // Access first section
-const section = document.sections[0]!;
+let section = document.sections[0]!;
 
 // Add new paragraph to section
-const firstParagraph = section.body.appendParagraph();
+let firstParagraph = section.body.appendParagraph();
 
 // Add text ranges to the paragraph
-const firstText = firstParagraph.appendText('Hello World');
+let firstText = firstParagraph.appendText('Hello World');
 {% endhighlight %}
 
 {% endtabs %}
@@ -41,10 +41,10 @@ You can load an existing Word document from a `Uint8Array`, `ArrayBuffer`, files
 {% highlight typescript tabtitle="TypeScript" %}
 import { WordDocument } from '@syncfusion/ej2-docx';
 
-const response = await fetch('/input.docx');
-const bytes = new Uint8Array(await response.arrayBuffer());
+let response = await fetch('/input.docx');
+let bytes = new Uint8Array(await response.arrayBuffer());
 
-const document = WordDocument.openSync(bytes);
+let document = WordDocument.openSync(bytes);
 {% endhighlight %}
 
 {% endtabs %}
@@ -54,10 +54,10 @@ const document = WordDocument.openSync(bytes);
 {% highlight typescript tabtitle="TypeScript" %}
 import { WordDocument } from '@syncfusion/ej2-docx';
 
-const response = await fetch('/input.docx');
-const bytes = new Uint8Array(await response.arrayBuffer());
+let response = await fetch('/input.docx');
+let bytes = new Uint8Array(await response.arrayBuffer());
 
-const document = WordDocument.load(bytes);
+let document = WordDocument.load(bytes);
 {% endhighlight %}
 
 {% endtabs %}
@@ -68,7 +68,7 @@ const document = WordDocument.load(bytes);
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Node.js — open from a file path
-const document = WordDocument.openSync('./input.docx');
+let document = WordDocument.openSync('./input.docx');
 {% endhighlight %}
 
 {% endtabs %}
@@ -80,14 +80,14 @@ Both methods accept an optional `LoadOptions` object.
 {% highlight typescript tabtitle="TypeScript" %}
 import { WordDocument, type LoadOptions } from '@syncfusion/ej2-docx';
 
-const options: LoadOptions = {
+let options: LoadOptions = {
   limits: {
     totalUncompressedSize: 50 * 1024 * 1024,
     singlePartUncompressedSize: 25 * 1024 * 1024,
   },
 };
 
-const document = WordDocument.openSync(bytes, options);
+let document = WordDocument.openSync(bytes, options);
 {% endhighlight %}
 
 {% endtabs %}
@@ -101,17 +101,17 @@ After loading, you can use the document body to add or remove content.
 {% highlight typescript tabtitle="TypeScript" %}
 import { WordDocument } from '@syncfusion/ej2-docx';
 
-const document = WordDocument.openSync(bytes);
+let document = WordDocument.openSync(bytes);
 
 // Access first section
-const section = document.sections[0]!;
+let section = document.sections[0]!;
 
 // Add new paragraph to section
-const firstParagraph = section.body.appendParagraph();
+let firstParagraph = section.body.appendParagraph();
 
 // Add text ranges to the paragraph
-const firstText = firstParagraph.appendText('Appended after load. ');
-const secondText = firstParagraph.appendText('Second text range');
+let firstText = firstParagraph.appendText('Appended after load. ');
+let secondText = firstParagraph.appendText('Second text range');
 {% endhighlight %}
 
 {% endtabs %}
@@ -125,18 +125,18 @@ You can serialize the document to `.docx` bytes by using `saveSync()`.
 {% highlight typescript tabtitle="TypeScript" %}
 import { WordDocument } from '@syncfusion/ej2-docx';
 
-const document = WordDocument.create();
+let document = WordDocument.create();
 
 // Access first section
-const section = document.sections[0]!;
+let section = document.sections[0]!;
 
 // Add new paragraph to section
-const firstParagraph = section.body.appendParagraph();
+let firstParagraph = section.body.appendParagraph();
 
 // Add text ranges to the paragraph
-const firstText = firstParagraph.appendText('Generated in memory');
+let firstText = firstParagraph.appendText('Generated in memory');
 
-const bytes = document.saveSync();
+let bytes = document.saveSync();
 {% endhighlight %}
 
 {% endtabs %}
@@ -152,18 +152,18 @@ You can also use `save()` when you want a promise-based API.
 {% highlight typescript tabtitle="TypeScript" %}
 import { WordDocument } from '@syncfusion/ej2-docx';
 
-const document = WordDocument.create();
+let document = WordDocument.create();
 
 // Access first section
-const section = document.sections[0];
+let section = document.sections[0];
 
 // Add new paragraph to section
-const firstParagraph = section.body.appendParagraph();
+let firstParagraph = section.body.appendParagraph();
 
 // Add text ranges to the paragraph
-const firstText = firstParagraph.appendText('Generated in memory');
+let firstText = firstParagraph.appendText('Generated in memory');
 
-const bytes = await document.save();
+let bytes = await document.save();
 {% endhighlight %}
 
 {% endtabs %}
@@ -179,16 +179,16 @@ In Node.js, you can pass a file path to `save()` to write the document directly 
 {% highlight typescript tabtitle="TypeScript" %}
 import { WordDocument } from '@syncfusion/ej2-docx';
 
-const document = WordDocument.create();
+let document = WordDocument.create();
 
 // Access first section
-const section = document.sections[0]!;
+let section = document.sections[0]!;
 
 // Add new paragraph to section
-const firstParagraph = section.body.appendParagraph();
+let firstParagraph = section.body.appendParagraph();
 
 // Add text ranges to the paragraph
-const firstText = firstParagraph.appendText('Saved to disk');
+let firstText = firstParagraph.appendText('Saved to disk');
 
 await document.save('./output.docx');
 {% endhighlight %}
@@ -206,18 +206,18 @@ In browser-based or custom runtime scenarios, use `saveSync()` and write the byt
 {% highlight typescript tabtitle="TypeScript" %}
 import { WordDocument } from '@syncfusion/ej2-docx';
 
-const document = WordDocument.create();
+let document = WordDocument.create();
 
 // Access first section
-const section = document.sections[0]!;
+let section = document.sections[0]!;
 
 // Add new paragraph to section
-const firstParagraph = section.body.appendParagraph();
+let firstParagraph = section.body.appendParagraph();
 
 // Add text ranges to the paragraph
-const firstText = firstParagraph.appendText('Download me');
+let firstText = firstParagraph.appendText('Download me');
 
-const bytes = document.saveSync();
+let bytes = document.saveSync();
 {% endhighlight %}
 
 {% endtabs %}

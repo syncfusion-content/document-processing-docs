@@ -24,10 +24,10 @@ The following example shows how to create a simple bulleted list.
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Creates a new Word document.
-const document = WordDocument.create();
+let document = WordDocument.create();
 
 // Access section of document.
-const section = document.sections[0];
+let section = document.sections[0];
 
 // Adds the first paragraph at level 0.
 let paragraph = section.body.appendParagraph();
@@ -70,9 +70,9 @@ The following example shows how to create a simple numbered list.
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Creates a new Word document.
-const document = WordDocument.create();
+let document = WordDocument.create();
 // Access section of document.
-const section = document.sections[0]!;
+let section = document.sections[0]!;
 
 // Adds the first paragraph at level 0.
 let paragraph = section.body.appendParagraph();
@@ -109,10 +109,10 @@ The following example shows how to create a multilevel bulleted list.
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Creates a new Word document.
-const document = WordDocument.create();
+let document = WordDocument.create();
 
 // Access section of document.
-const section = document.sections[0]!;
+let section = document.sections[0]!;
 
 // Adds the first paragraph at level 0.
 let paragraph = section.body.appendParagraph();
@@ -145,10 +145,10 @@ The following example shows how to create a multilevel numbered list.
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Creates a new Word document.
-const document = WordDocument.create();
+let document = WordDocument.create();
 
 // Access section of document.
-const section = document.sections[0]!;
+let section = document.sections[0]!;
 
 // Adds the first paragraph at level 0.
 let paragraph = section.body.appendParagraph();
@@ -181,7 +181,7 @@ The following example shows how to create numbered list styles with different pa
 import { ListPatternType, ListType, WordDocument } from '@syncfusion/ej2-docx';
 
 // Creates a new Word document.
-const document = WordDocument.create();
+let document = WordDocument.create();
 
 // --- CardinalText (One, Two, Three, ...) ---
 let listStyle = document.addListStyle(ListType.Numbered, 'CardinalText');
@@ -190,7 +190,7 @@ levelOne.patternType = ListPatternType.CardinalText;
 levelOne.startAt = 1;
 
 // Access section of document.
-const section = document.sections[0];
+let section = document.sections[0];
 
 let paragraph = section.body.appendParagraph();
 paragraph.appendText('List pattern Cardinal Text');
@@ -278,12 +278,12 @@ import {
 } from '@syncfusion/ej2-docx';
 
 // Creates a new Word document
-const document = WordDocument.create();
+let document = WordDocument.create();
 
 // Adds new list style to the document
-const listStyle = document.addListStyle(ListType.Numbered, 'UserDefinedList');
+let listStyle = document.addListStyle(ListType.Numbered, 'UserDefinedList');
 
-const levelOne = listStyle.levels.getItem(0);
+let levelOne = listStyle.levels.getItem(0);
 // Defines the follow character, prefix, suffix, start index for level 0
 levelOne.followCharacter = FollowCharacterType.Tab;
 levelOne.numberPrefix = '(';
@@ -293,7 +293,7 @@ levelOne.startAt = 1;
 levelOne.tabSpaceAfter = 5;
 levelOne.numberAlignment = ListNumberAlignment.Center;
 
-const levelTwo = listStyle.levels.getItem(1);
+let levelTwo = listStyle.levels.getItem(1);
 // Defines the follow character, suffix, pattern, start index for level 1
 levelTwo.followCharacter = FollowCharacterType.Tab;
 levelTwo.numberSuffix = '}';
@@ -301,7 +301,7 @@ levelTwo.patternType = ListPatternType.LetterLow;
 levelTwo.startAt = 2;
 
 // Access section of document.
-const section = document.sections[0];
+let section = document.sections[0];
 
 // Adds the first paragraph at level 0.
 let paragraph = section.body.appendParagraph();
@@ -327,10 +327,10 @@ You can change list levels with `increaseIndentLevel()` and `decreaseIndentLevel
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Creates a new Word document.
-const document = WordDocument.create();
+let document = WordDocument.create();
 
 // Access section of document.
-const section = document.sections[0];
+let section = document.sections[0];
 
 // Adds the first paragraph at level 0.
 let paragraph = section.body.appendParagraph();
@@ -373,25 +373,25 @@ The following example shows how to create a custom bulleted list style with bull
 import { ListPatternType, ListType, WordDocument } from '@syncfusion/ej2-docx';
 
 // Create a new Word document.
-const document = WordDocument.create();
+let document = WordDocument.create();
 
 // Add a new list style to the document.
-const listStyle = document.addListStyle(ListType.Bulleted, 'UserDefinedList');
+let listStyle = document.addListStyle(ListType.Bulleted, 'UserDefinedList');
 
-const levelOne = listStyle.levels.getItem(0);
+let levelOne = listStyle.levels.getItem(0);
 // Define the pattern, bullet character, and start index for level 0.
 levelOne.patternType = ListPatternType.Bullet;
 levelOne.bulletCharacter = '*';
 levelOne.startAt = 1;
 
-const levelTwo = listStyle.levels.getItem(1);
+let levelTwo = listStyle.levels.getItem(1);
 // Define the pattern, bullet character, and start index for level 1.
 levelTwo.patternType = ListPatternType.Bullet;
 levelTwo.bulletCharacter = '\u00A9';
 levelTwo.characterFormat.fontName = 'Wingdings';
 levelTwo.startAt = 1;
 
-const levelThree = listStyle.levels.getItem(2);
+let levelThree = listStyle.levels.getItem(2);
 // Define the pattern, bullet character, and start index for level 2.
 levelThree.patternType = ListPatternType.Bullet;
 levelThree.bulletCharacter = '\u0076';
@@ -399,7 +399,7 @@ levelThree.characterFormat.fontName = 'Wingdings';
 levelThree.startAt = 1;
 
 // Access section of document.
-const section = document.sections[0];
+let section = document.sections[0];
 
 // Adds the first paragraph at level 0.
 let paragraph = section.body.appendParagraph();
@@ -431,25 +431,25 @@ The following example shows how to create a custom multilevel numbered list that
 import { FollowCharacterType, ListPatternType, ListType, WordDocument } from '@syncfusion/ej2-docx';
 
 // Create a new Word document.
-const document = WordDocument.create();
+let document = WordDocument.create();
 
 // Add a new list style to the document.
-const listStyle = document.addListStyle(ListType.Numbered, 'UserDefinedList');
+let listStyle = document.addListStyle(ListType.Numbered, 'UserDefinedList');
 
-const levelOne = listStyle.levels.getItem(0);
+let levelOne = listStyle.levels.getItem(0);
 // Define the follow character, pattern, and start index for level 0.
 levelOne.followCharacter = FollowCharacterType.Nothing;
 levelOne.patternType = ListPatternType.Arabic;
 levelOne.startAt = 1;
 
-const levelTwo = listStyle.levels.getItem(1);
+let levelTwo = listStyle.levels.getItem(1);
 // Define the follow character, prefix from previous level, pattern, and start index for level 1.
 levelTwo.followCharacter = FollowCharacterType.Nothing;
 levelTwo.numberPrefix = '\u0000.';
 levelTwo.patternType = ListPatternType.Arabic;
 levelTwo.startAt = 1;
 
-const levelThree = listStyle.levels.getItem(2);
+let levelThree = listStyle.levels.getItem(2);
 // Define the follow character, prefix from previous level, pattern, and start index for level 2.
 levelThree.followCharacter = FollowCharacterType.Nothing;
 levelThree.numberPrefix = '\u0000.\u0001.';
@@ -457,7 +457,7 @@ levelThree.patternType = ListPatternType.Arabic;
 levelThree.startAt = 1;
 
 // Access section of document.
-const section = document.sections[0];
+let section = document.sections[0];
 
 // Level 0
 let paragraph = section.body.appendParagraph();
@@ -489,10 +489,10 @@ The following example shows how to get the display string of a list value for a 
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document.
-const document = WordDocument.openSync('Template.docx');
+let document = WordDocument.openSync('Template.docx');
 
 // Get the string that represents the appearance of the list value of the last paragraph.
-const listString = document.lastParagraph.listString;
+let listString = document.lastParagraph.listString;
 console.log('listString:', JSON.stringify(listString));
 
 document.save('Output.docx');

@@ -19,11 +19,11 @@ The following code example shows how to create a simple table with a predefined 
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Create a new document
-const document = WordDocument.create();
-const section = document.lastSection;
+let document = WordDocument.create();
+let section = document.lastSection;
 
 // Add a table and create a 3 x 2 grid
-const table = section.body.appendTable();
+let table = section.body.appendTable();
 table.resetCells(3, 2);
 
 // Header row
@@ -50,14 +50,14 @@ The following code example shows how to create a table by adding rows dynamicall
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Create a new document
-const document = WordDocument.create();
-const section = document.lastSection;
+let document = WordDocument.create();
+let section = document.lastSection;
 
 section.body.appendParagraph().appendText('Price Details');
 section.body.appendParagraph();
 
 // Create a table with one header row and two columns
-const table = section.body.appendTable();
+let table = section.body.appendTable();
 table.resetCells(1, 2);
 
 table.rows[0]!.cells[0]!.width = 200;
@@ -66,15 +66,15 @@ table.rows[0]!.cells[1]!.width = 200;
 table.rows[0]!.cells[1]!.appendParagraph().appendText('Price($)');
 
 // Add the remaining rows dynamically
-const fruits: Array<[string, string]> = [
+let fruits: Array<[string, string]> = [
     ['Apple', '50'],
     ['Orange', '30'],
     ['Banana', '20'],
     ['Grapes', '70'],
 ];
 
-for (const [name, price] of fruits) {
-    const row = table.appendRow();
+for (let [name, price] of fruits) {
+    let row = table.appendRow();
     row.cells[0]!.width = 200;
     row.cells[0]!.appendParagraph().appendText(name);
     row.cells[1]!.width = 200;
@@ -95,14 +95,14 @@ You can create a nested table by adding a table inside a cell.
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Create a new document
-const document = WordDocument.create();
+let document = WordDocument.create();
 
 // Get the last section
-const section = document.lastSection;
+let section = document.lastSection;
 
 document.lastParagraph.appendText('Price Details');
 
-const table = section.body.appendTable();
+let table = section.body.appendTable();
 table.resetCells(3, 2);
 
 table.rows[0]!.cells[0]!.appendParagraph().appendText('Item');
@@ -110,7 +110,7 @@ table.rows[0]!.cells[1]!.appendParagraph().appendText('Price($)');
 table.rows[1]!.cells[0]!.appendParagraph().appendText('Items with same price');
 
 // Add a nested table into the cell (second row, first cell)
-const nestTable = table.rows[1]!.cells[0]!.appendTable();
+let nestTable = table.rows[1]!.cells[0]!.appendTable();
 
 // Create the specified number of rows and columns for the nested table
 nestTable.resetCells(3, 1);
@@ -152,12 +152,12 @@ import { readFileSync } from 'node:fs';
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Create a new Word document
-const document = WordDocument.create();
+let document = WordDocument.create();
 
 // Get the last section
-const section = document.lastSection;
+let section = document.lastSection;
 
-const table = section.body.appendTable();
+let table = section.body.appendTable();
 table.resetCells(2, 2);
 
 table.rows[0]!.cells[0]!.appendParagraph().appendText('Product Name');
@@ -165,8 +165,8 @@ table.rows[0]!.cells[1]!.appendParagraph().appendText('Product Image');
 table.rows[1]!.cells[0]!.appendParagraph().appendText('Apple Juice');
 
 // Insert an image into the cell (second row, second cell)
-const imageBytes = new Uint8Array(readFileSync('Image.png'));
-const picture = table.rows[1]!.cells[1]!.appendParagraph().appendImage(imageBytes);
+let imageBytes = new Uint8Array(readFileSync('Image.png'));
+let picture = table.rows[1]!.cells[1]!.appendParagraph().appendImage(imageBytes);
 picture.height = 75;
 picture.width = 60;
 
@@ -184,12 +184,12 @@ The following code example shows how to apply formatting such as title, descript
 import { BorderStyle, Color, Table, TableCellVerticalAlignment, TableRow, TableRowHeightRule, WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-const document = WordDocument.openSync('Template.docx');
+let document = WordDocument.openSync('Template.docx');
 
 // Access the first section
-const section = document.sections[0]!;
+let section = document.sections[0]!;
 // Access the first table
-const table = section.tables[0] as Table;
+let table = section.tables[0] as Table;
 // Specify the title for the table
 table.title = 'PriceDetails';
 // Specify the description of the table
@@ -213,13 +213,13 @@ table.tableFormat.borders.vertical.color = Color.Red;
 // Specify border style
 table.tableFormat.borders.borderType = BorderStyle.Double;
 // Access the first row
-const row = table.rows[0] as TableRow;
+let row = table.rows[0] as TableRow;
 // Specify row height
 row.height = 20;
 // Specify row height type
 row.heightType = TableRowHeightRule.AtLeast;
 // Apply vertical alignment to cells in the first row
-for (const cell of table.rows[0]!.cells) {
+for (let cell of table.rows[0]!.cells) {
     cell.cellFormat.verticalAlignment = TableCellVerticalAlignment.Center;
 }
 // Save the document
@@ -236,9 +236,9 @@ The following code example shows how to resize tables using auto fit options.
 import { AutoFitType, Table, TableRowHeightRule, WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-const document = WordDocument.openSync('Template.docx');
+let document = WordDocument.openSync('Template.docx');
 // Access the first section
-const section = document.sections[0]!;
+let section = document.sections[0]!;
 // Access the first table and resize it to fit its contents
 let table = section.tables[0] as Table;
 table.autoFit(AutoFitType.FitToContent);
@@ -264,11 +264,11 @@ The following code example shows how to apply a built-in table style.
 import { BuiltinTableStyle, Table, WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-const document = WordDocument.openSync('Template.docx');
+let document = WordDocument.openSync('Template.docx');
 // Access the first section
-const section = document.sections[0]!;
+let section = document.sections[0]!;
 // Access the first table
-const table = section.tables[0] as Table;
+let table = section.tables[0] as Table;
 // Apply the LightShading built-in style
 table.applyStyle(BuiltinTableStyle.LightShading);
 // Save the document
@@ -285,11 +285,11 @@ The following code example shows how to enable or disable special formatting opt
 import { BuiltinTableStyle, Table, WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-const document = WordDocument.openSync('Template.docx');
+let document = WordDocument.openSync('Template.docx');
 // Access the first section
-const section = document.sections[0]!;
+let section = document.sections[0]!;
 // Access the first table
-const table = section.tables[0] as Table;
+let table = section.tables[0] as Table;
 // Apply the LightShading built-in style to the table
 table.applyStyle(BuiltinTableStyle.LightShading);
 // Enable special formatting for banded columns of the table
@@ -318,13 +318,13 @@ The following code example shows how to create a custom table style with conditi
 import { Color, ConditionalFormattingType, Table, WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-const document = WordDocument.openSync('Template.docx');
+let document = WordDocument.openSync('Template.docx');
 // Access the first section
-const section = document.sections[0]!;
+let section = document.sections[0]!;
 // Access the first table
-const table = section.tables[0] as Table;
+let table = section.tables[0] as Table;
 // Add a new custom table style
-const tableStyle = document.addTableStyle('CustomStyle');
+let tableStyle = document.addTableStyle('CustomStyle');
 // Apply formatting for the whole table
 tableStyle.tableProperties.rowStripe = 1;
 tableStyle.tableProperties.columnStripe = 1;
@@ -333,15 +333,15 @@ tableStyle.tableProperties.paddings.bottom = 0;
 tableStyle.tableProperties.paddings.left = 5.4;
 tableStyle.tableProperties.paddings.right = 5.4;
 // Apply conditional formatting for the first row
-const firstRowStyle = tableStyle.conditionalFormattingStyles.add(ConditionalFormattingType.FirstRow);
+let firstRowStyle = tableStyle.conditionalFormattingStyles.add(ConditionalFormattingType.FirstRow);
 firstRowStyle.characterFormat.bold = true;
 firstRowStyle.characterFormat.textColor = Color.White;
 firstRowStyle.cellProperties.backgroundColor = Color.Blue;
 // Apply conditional formatting for the first column
-const firstColumnStyle = tableStyle.conditionalFormattingStyles.add(ConditionalFormattingType.FirstColumn);
+let firstColumnStyle = tableStyle.conditionalFormattingStyles.add(ConditionalFormattingType.FirstColumn);
 firstColumnStyle.characterFormat.bold = true;
 // Apply conditional formatting for odd row bands
-const oddRowBandingStyle = tableStyle.conditionalFormattingStyles.add(ConditionalFormattingType.OddRowBand);
+let oddRowBandingStyle = tableStyle.conditionalFormattingStyles.add(ConditionalFormattingType.OddRowBand);
 oddRowBandingStyle.cellProperties.backgroundColor = Color.WhiteSmoke;
 // Apply the custom style to the table
 table.applyStyle('CustomStyle');
@@ -359,8 +359,8 @@ The following code example shows how to apply a built-in or custom style as the 
 import { BuiltinTableStyle, Color, ConditionalFormattingType, ParagraphAlignment, WordDocument } from '@syncfusion/ej2-docx';
 
 // Create a new document
-const document = WordDocument.create();
-const section = document.lastSection;
+let document = WordDocument.create();
+let section = document.lastSection;
 // Add the first table
 let table = section.body.appendTable();
 table.resetCells(3, 2);
@@ -373,10 +373,10 @@ table.rows[2]!.cells[1]!.appendParagraph().appendText('Row 3 Cell 2');
 // Create a custom table style
 let tableStyle = document.addTableStyle('CustomStyle1');
 // First row formatting
-const firstRowStyle = tableStyle.conditionalFormattingStyles.add(ConditionalFormattingType.FirstRow);
+let firstRowStyle = tableStyle.conditionalFormattingStyles.add(ConditionalFormattingType.FirstRow);
 firstRowStyle.characterFormat.bold = true;
 // Odd row formatting
-const oddRowBandingStyle = tableStyle.conditionalFormattingStyles.add(ConditionalFormattingType.OddRowBand);
+let oddRowBandingStyle = tableStyle.conditionalFormattingStyles.add(ConditionalFormattingType.OddRowBand);
 oddRowBandingStyle.characterFormat.italic = true;
 // Apply a built-in table style as the base style
 tableStyle.applyBaseStyle(BuiltinTableStyle.TableGrid);
@@ -397,19 +397,19 @@ table.rows[2]!.cells[1]!.appendParagraph().appendText('Row 3 Cell 2');
 tableStyle = document.addTableStyle('CustomStyle2');
 tableStyle.tableProperties.rowStripe = 1;
 // First row formatting
-const firstRowStyle1 = tableStyle.conditionalFormattingStyles.add(ConditionalFormattingType.FirstRow);
+let firstRowStyle1 = tableStyle.conditionalFormattingStyles.add(ConditionalFormattingType.FirstRow);
 firstRowStyle1.paragraphFormat.horizontalAlignment = ParagraphAlignment.Center;
 // Odd row formatting
-const oddRowBandingStyle1 = tableStyle.conditionalFormattingStyles.add(ConditionalFormattingType.OddRowBand);
+let oddRowBandingStyle1 = tableStyle.conditionalFormattingStyles.add(ConditionalFormattingType.OddRowBand);
 oddRowBandingStyle1.characterFormat.textColor = Color.Red;
 // Create a third custom style
-const tableStyle2 = document.addTableStyle('CustomStyle3');
+let tableStyle2 = document.addTableStyle('CustomStyle3');
 tableStyle2.tableProperties.rowStripe = 1;
 // First row formatting
-const firstRowStyle2 = tableStyle2.conditionalFormattingStyles.add(ConditionalFormattingType.FirstRow);
+let firstRowStyle2 = tableStyle2.conditionalFormattingStyles.add(ConditionalFormattingType.FirstRow);
 firstRowStyle2.cellProperties.backgroundColor = Color.Blue;
 // Odd row formatting
-const oddRowStyle2 = tableStyle2.conditionalFormattingStyles.add(ConditionalFormattingType.OddRowBand);
+let oddRowStyle2 = tableStyle2.conditionalFormattingStyles.add(ConditionalFormattingType.OddRowBand);
 oddRowStyle2.cellProperties.backgroundColor = Color.Yellow;
 // Apply a custom style as the base style
 tableStyle2.applyBaseStyle('CustomStyle2');
@@ -433,10 +433,10 @@ The following code example shows how to merge contiguous cells in a row.
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Create a new document
-const document = WordDocument.create();
-const section = document.lastSection;
+let document = WordDocument.create();
+let section = document.lastSection;
 // Add a table
-const table = section.body.appendTable();
+let table = section.body.appendTable();
 table.resetCells(5, 5);
 // Merge cells in row index 2 from cell index 1 through 4
 table.applyHorizontalMerge(2, 1, 4);
@@ -454,11 +454,11 @@ The following code example shows how to merge contiguous cells in a column.
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Create a new document
-const document = WordDocument.create();
+let document = WordDocument.create();
 document.lastParagraph.appendText('Vertical merging of Table cells');
-const section = document.lastSection;
+let section = document.lastSection;
 // Add a table
-const table = section.body.appendTable();
+let table = section.body.appendTable();
 table.resetCells(5, 5);
 // Merge cells in column index 2 from row index 1 through 4
 table.applyVerticalMerge(2, 1, 4);
@@ -476,12 +476,12 @@ The following code example shows how to mark the first row as a header row so it
 import { TableRowHeightRule, WordDocument } from '@syncfusion/ej2-docx';
 
 // Create a new document
-const document = WordDocument.create();
-const section = document.lastSection;
+let document = WordDocument.create();
+let section = document.lastSection;
 // Add a table
-const table = section.body.appendTable();
+let table = section.body.appendTable();
 table.resetCells(50, 1);
-const headerRow = table.rows[0]!;
+let headerRow = table.rows[0]!;
 // Specify the first row as a header row of the table
 headerRow.isHeader = true;
 headerRow.height = 20;
@@ -489,10 +489,10 @@ headerRow.heightType = TableRowHeightRule.AtLeast;
 headerRow.cells[0]!.appendParagraph().appendText('Header Row');
 
 for (let i = 1; i < 50; i++) {
-    const row = table.rows[i]!;
+    let row = table.rows[i]!;
     row.height = 20;
     row.heightType = TableRowHeightRule.AtLeast;
-    const paragraph = row.cells[0]!.appendParagraph();
+    let paragraph = row.cells[0]!.appendParagraph();
     paragraph.appendText(`Text in Row${i}`);
 }
 
@@ -510,12 +510,12 @@ The following code example shows how to prevent table rows from breaking across 
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-const document = WordDocument.openSync('Template.docx');
-const section = document.sections[0]!;
-const table = section.tables[0]!;
+let document = WordDocument.openSync('Template.docx');
+let section = document.sections[0]!;
+let table = section.tables[0]!;
 
 // Disable breaking across pages for all rows in the table
-for (const row of table.rows) {
+for (let row of table.rows) {
     row.rowFormat.isBreakAcrossPages = false;
 }
 
@@ -533,16 +533,16 @@ The following code example shows how to iterate through rows, cells, and paragra
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-const document = WordDocument.openSync('Template.docx');
-const section = document.sections[0]!;
-const table = section.tables[0]!;
+let document = WordDocument.openSync('Template.docx');
+let section = document.sections[0]!;
+let table = section.tables[0]!;
 
 // Iterate through the rows of the table
-for (const row of table.rows) {
+for (let row of table.rows) {
     // Iterate through the cells of the row
-    for (const cell of row.cells) {
+    for (let cell of row.cells) {
         // Iterate through the paragraphs of the cell
-        for (const paragraph of cell.paragraphs) {
+        for (let paragraph of cell.paragraphs) {
             // When the paragraph contains the text 'panda', apply green background color to the cell
             if (paragraph.text.includes('panda')) {
                 cell.cellFormat.backColor = '#008000';
@@ -565,9 +565,9 @@ The following code example shows how to remove a table from a section body.
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-const document = WordDocument.openSync('Template.docx');
-const section = document.sections[0]!;
-const table = section.tables[0]!;
+let document = WordDocument.openSync('Template.docx');
+let section = document.sections[0]!;
+let table = section.tables[0]!;
 
 // Remove the table from the body
 section.body.items.remove(table);
@@ -586,9 +586,9 @@ The following code example shows how to remove a table row by index.
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-const document = WordDocument.openSync('Template.docx');
-const section = document.sections[0]!;
-const table = section.tables[0]!;
+let document = WordDocument.openSync('Template.docx');
+let section = document.sections[0]!;
+let table = section.tables[0]!;
 // Remove the row at index 3
 table.rows.removeAt(3);
 // Save the document

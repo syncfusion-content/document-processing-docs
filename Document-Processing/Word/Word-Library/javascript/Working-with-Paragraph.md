@@ -35,10 +35,10 @@ The following code example shows how to add a new paragraph.
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Create a new document
-const document = WordDocument.create();
-const section = document.sections[0];
+let document = WordDocument.create();
+let section = document.sections[0];
 // Add a paragraph and append text to it
-const paragraph = section.body.appendParagraph();
+let paragraph = section.body.appendParagraph();
 paragraph.appendText('Adding new paragraph to the document');
 
 // Save the document
@@ -56,14 +56,14 @@ import { readFileSync } from 'node:fs';
 import { TextRange, WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing document
-const bytes = readFileSync('Input.docx');
-const document = WordDocument.openSync(new Uint8Array(bytes));
+let bytes = readFileSync('Input.docx');
+let document = WordDocument.openSync(new Uint8Array(bytes));
 
-const section = document.sections[0];
-const paragraph = section.body.paragraphs[0];
+let section = document.sections[0];
+let paragraph = section.body.paragraphs[0];
 
 // Apply bold formatting to the first text range
-for (const item of paragraph.items) {
+for (let item of paragraph.items) {
     if (item instanceof TextRange) {
         item.characterFormat.bold = true;
         break;
@@ -87,12 +87,12 @@ import { readFileSync } from 'node:fs';
 import { Color, Paragraph, ParagraphAlignment, WordDocument } from '@syncfusion/ej2-docx';
 
 // Load the document
-const bytes = readFileSync('Input.docx');
-const document = WordDocument.openSync(new Uint8Array(bytes));
-const bodyItems = document.sections[0].body.items;
+let bytes = readFileSync('Input.docx');
+let document = WordDocument.openSync(new Uint8Array(bytes));
+let bodyItems = document.sections[0].body.items;
 
 // Apply spacing, indentation, shading, and alignment to paragraph 5 (index 4)
-const paragraph5 = bodyItems[4];
+let paragraph5 = bodyItems[4];
 if (paragraph5 instanceof Paragraph) {
     paragraph5.paragraphFormat.beforeSpacing = 18;
     paragraph5.paragraphFormat.afterSpacing = 18;
@@ -103,13 +103,13 @@ if (paragraph5 instanceof Paragraph) {
 }
 
 // Keep paragraph 7 (index 6) with the next paragraph
-const paragraph7 = bodyItems[6];
+let paragraph7 = bodyItems[6];
 if (paragraph7 instanceof Paragraph) {
     paragraph7.paragraphFormat.keepFollow = true;
 }
 
 // Keep paragraph 8 (index 7) lines together
-const paragraph8 = bodyItems[7];
+let paragraph8 = bodyItems[7];
 if (paragraph8 instanceof Paragraph) {
     paragraph8.paragraphFormat.keepLines = true;
 }
@@ -132,8 +132,8 @@ The following code example shows how to add tab stops to a paragraph.
 import { TabJustification, TabLeader, WordDocument } from '@syncfusion/ej2-docx';
 
 // Create a new document and add a paragraph
-const document = WordDocument.create();
-const paragraph = document.sections[0].body.appendParagraph();
+let document = WordDocument.create();
+let paragraph = document.sections[0].body.appendParagraph();
 
 // Add tab stops to the paragraph
 paragraph.paragraphFormat.tabs.addTab(11, TabJustification.Left, TabLeader.Dot);
@@ -162,12 +162,12 @@ import { readFileSync } from 'node:fs';
 import { Paragraph, WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing document
-const bytes = readFileSync('Template.docx');
-const document = WordDocument.openSync(new Uint8Array(bytes));
+let bytes = readFileSync('Template.docx');
+let document = WordDocument.openSync(new Uint8Array(bytes));
 
 // Access the second body item (index 1)
-const paragraph = document.sections[0].body.items[1];
-const isRTL = paragraph.paragraphFormat.bidi; 
+let paragraph = document.sections[0].body.items[1];
+let isRTL = paragraph.paragraphFormat.bidi; 
 
 if (!isRTL) { 
 paragraph.paragraphFormat.bidi = true; 
@@ -193,11 +193,11 @@ import { readFileSync } from 'node:fs';
 import { Color, ParagraphStyle, WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-const bytes = readFileSync('Input_AccessStyle_Template.docx');
-const document = WordDocument.openSync(new Uint8Array(bytes));
+let bytes = readFileSync('Input_AccessStyle_Template.docx');
+let document = WordDocument.openSync(new Uint8Array(bytes));
 
-const styles = document.styles;
-const style = styles.findByName('Heading1');
+let styles = document.styles;
+let style = styles.findByName('Heading1');
 if (style instanceof ParagraphStyle) {
     style.characterFormat.textColor = Color.DarkBlue;
     style.paragraphFormat.firstLineIndent = 36;
@@ -218,11 +218,11 @@ import { readFileSync } from 'node:fs';
 import { Color, ParagraphAlignment, WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-const bytes = readFileSync('Template.docx');
-const document = WordDocument.openSync(new Uint8Array(bytes));
+let bytes = readFileSync('Template.docx');
+let document = WordDocument.openSync(new Uint8Array(bytes));
 
 // Create a custom paragraph style
-const myStyle = document.styles.addParagraphStyle('MyStyle');
+let myStyle = document.styles.addParagraphStyle('MyStyle');
 myStyle.characterFormat.fontSize = 16;
 myStyle.characterFormat.textColor = Color.DarkBlue;
 myStyle.paragraphFormat.horizontalAlignment = ParagraphAlignment.Right;
@@ -250,8 +250,8 @@ import { readFileSync } from 'node:fs';
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-const bytes = readFileSync('Input_Emphasis_Template.docx');
-const document = WordDocument.openSync(new Uint8Array(bytes));
+let bytes = readFileSync('Input_Emphasis_Template.docx');
+let document = WordDocument.openSync(new Uint8Array(bytes));
 
 // Apply the built-in Emphasis style
 document.lastParagraph.applyStyle('Emphasis');
@@ -271,11 +271,11 @@ import { readFileSync } from 'node:fs';
 import { ParagraphStyle, WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-const bytes = readFileSync('Template.docx');
-const document = WordDocument.openSync(new Uint8Array(bytes));
+let bytes = readFileSync('Template.docx');
+let document = WordDocument.openSync(new Uint8Array(bytes));
 
-const styles = document.styles;
-const style = styles.findByName('Style1');
+let styles = document.styles;
+let style = styles.findByName('Style1');
 if (style instanceof ParagraphStyle) {
     style.remove();
 }
@@ -296,11 +296,11 @@ The following code example shows how to append text to a paragraph.
 import { Color, WordDocument } from '@syncfusion/ej2-docx';
 
 // Create a new document and add a paragraph
-const document = WordDocument.create();
-const paragraph = document.sections[0].body.appendParagraph();
+let document = WordDocument.create();
+let paragraph = document.sections[0].body.appendParagraph();
 
 // Add text and get the created text range
-const text = paragraph.appendText('A new text is added to the paragraph.');
+let text = paragraph.appendText('A new text is added to the paragraph.');
 
 // Apply character formatting to the text range
 text.characterFormat.fontSize = 14;
@@ -322,13 +322,13 @@ import { readFileSync } from 'node:fs';
 import { Paragraph, TextRange, WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing document
-const bytes = readFileSync('Template.docx');
-const document = WordDocument.openSync(new Uint8Array(bytes));
+let bytes = readFileSync('Template.docx');
+let document = WordDocument.openSync(new Uint8Array(bytes));
 
 // Modify the first text range of the paragraph at body index 3
-const block = document.sections[0].body.items[3];
+let block = document.sections[0].body.items[3];
 if (block instanceof Paragraph) {
-    for (const item of block.items) {
+    for (let item of block.items) {
         if (item instanceof TextRange) {
             item.text = 'First text range of the last paragraph is replaced';
             item.characterFormat.fontSize = 14;
@@ -368,18 +368,18 @@ import {
 } from '@syncfusion/ej2-docx';
 
 // Create a new document and add the first paragraph
-const document = WordDocument.create();
-const firstParagraph = document.sections[0].body.appendParagraph();
+let document = WordDocument.create();
+let firstParagraph = document.sections[0].body.appendParagraph();
 
 // Add the first text range and apply formatting
-const firstText = firstParagraph.appendText('This is the first text range. ');
+let firstText = firstParagraph.appendText('This is the first text range. ');
 firstText.characterFormat.bold = true;
 firstText.characterFormat.fontSize = 14;
 firstText.characterFormat.shadow = true;
 firstText.characterFormat.smallCaps = true;
 
 // Add the second text range and apply formatting
-const secondText = firstParagraph.appendText('This is the second text range');
+let secondText = firstParagraph.appendText('This is the second text range');
 secondText.characterFormat.highlightColor = Color.Green;
 secondText.characterFormat.underlineStyle = UnderlineStyle.DotDash;
 secondText.characterFormat.italic = true;
@@ -387,20 +387,20 @@ secondText.characterFormat.fontName = 'Times New Roman';
 secondText.characterFormat.textColor = Color.Green;
 
 // Add the second paragraph with RTL text formatting
-const secondParagraph = document.sections[0].body.appendParagraph();
-const thirdText = secondParagraph.appendText('שלום עולם');
+let secondParagraph = document.sections[0].body.appendParagraph();
+let thirdText = secondParagraph.appendText('שלום עולם');
 thirdText.characterFormat.bidi = true;
 
 // Add the third paragraph and apply superscript formatting
-const thirdParagraph = document.sections[0].body.appendParagraph();
+let thirdParagraph = document.sections[0].body.appendParagraph();
 thirdParagraph.appendText('X');
-const fifthText = thirdParagraph.appendText('2');
+let fifthText = thirdParagraph.appendText('2');
 fifthText.characterFormat.subSuperScript = SubSuperScript.SuperScript;
 
 // Add the fourth paragraph and apply subscript formatting
-const fourthParagraph = document.sections[0].body.appendParagraph();
+let fourthParagraph = document.sections[0].body.appendParagraph();
 fourthParagraph.appendText('m');
-const seventhText = fourthParagraph.appendText('3');
+let seventhText = fourthParagraph.appendText('3');
 seventhText.characterFormat.subSuperScript = SubSuperScript.SubScript;
 
 // Save the document

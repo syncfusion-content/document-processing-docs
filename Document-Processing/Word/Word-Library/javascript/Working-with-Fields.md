@@ -29,10 +29,10 @@ import {
 } from '@syncfusion/ej2-docx';
 
 // Creates a new Word document
-const document = WordDocument.create();
+let document = WordDocument.create();
 
 // Gets the last section of the document
-const section = document.lastSection;
+let section = document.lastSection;
 
 // Gets the last paragraph of the section (or append one if needed)
 let paragraph = document.lastParagraph;
@@ -44,12 +44,12 @@ if (paragraph == null) {
 paragraph.appendText('Page number: ');
 
 // Inserts a PAGE field and keeps the insertion index
-const fieldIndex = paragraph.items.count;
+let fieldIndex = paragraph.items.count;
 paragraph.appendField('Page', FieldType.Page);
 
 // Formats text ranges in the field result (between the field and its end mark)
 for (let i = fieldIndex + 1; i < paragraph.items.count; i++) {
-  const item = paragraph.items[i];
+  let item = paragraph.items[i];
   if (item instanceof TextRange) {
     item.characterFormat.fontSize = 6;
   } else if (item instanceof FieldMark && item.fieldMarkType === FieldMarkType.End) {
@@ -73,7 +73,7 @@ The following code example illustrates how to add IF fields that compare text or
 import { FieldType, WordDocument } from '@syncfusion/ej2-docx';
 
 // Creates a new Word document
-const document = WordDocument.create();
+let document = WordDocument.create();
 
 // Gets the last paragraph (creates the default body paragraph when present)
 let paragraph = document.lastParagraph;
@@ -86,7 +86,7 @@ paragraph.appendText(
   'If field that compares a string value and displays the result.'
 );
 paragraph = document.lastSection.body.appendParagraph();
-const ifField = paragraph.appendField('If', FieldType.If);
+let ifField = paragraph.appendField('If', FieldType.If);
 // Expression: IF "100" = "100" "correct" "not correct"
 ifField.fieldCode = 'IF "100" = "100" "correct" "not correct"';
 
@@ -96,7 +96,7 @@ paragraph.appendText(
   'If field that compares a number value and displays the result.'
 );
 paragraph = document.lastSection.body.appendParagraph();
-const ifField2 = paragraph.appendField('If', FieldType.If);
+let ifField2 = paragraph.appendField('If', FieldType.If);
 // Expression: IF 100 >= 50 "correct" "not correct"
 ifField2.fieldCode = 'IF 100 >= 50 "correct" "not correct"';
 
@@ -116,7 +116,7 @@ The following code example illustrates how to add merge fields.
 import { FieldType, WordDocument } from '@syncfusion/ej2-docx';
 
 // Creates a new Word document
-const document = WordDocument.create();
+let document = WordDocument.create();
 
 // Gets the last paragraph
 let paragraph = document.lastParagraph;

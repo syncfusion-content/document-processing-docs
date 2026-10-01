@@ -37,21 +37,21 @@ The following code example shows how to add a rich text block content control to
 import { readFileSync } from 'node:fs';
 import { ContentControlType, WordDocument } from '@syncfusion/ej2-docx';
 
-const document = WordDocument.create();
+let document = WordDocument.create();
 
-const section = document.sections[0];
-const blockContentControl = section.body.addBlockContentControl(
+let section = document.sections[0];
+let blockContentControl = section.body.addBlockContentControl(
   ContentControlType.RichText
 );
 
-const paragraph = blockContentControl.body.appendParagraph();
+let paragraph = blockContentControl.body.appendParagraph();
 paragraph.appendText('Block content control');
 
-const table = blockContentControl.body.appendTable();
+let table = blockContentControl.body.appendTable();
 table.resetCells(2, 3);
 
-const imageParagraph = blockContentControl.body.appendParagraph();
-const imageBytes = new Uint8Array(readFileSync('Image.png'));
+let imageParagraph = blockContentControl.body.appendParagraph();
+let imageBytes = new Uint8Array(readFileSync('Image.png'));
 
 imageParagraph.appendImage(imageBytes, { width: 200, height: 100 });
 
@@ -72,15 +72,15 @@ import {
   WordDocument,
 } from '@syncfusion/ej2-docx';
 
-const document = WordDocument.create();
-const paragraph = document.lastParagraph;
+let document = WordDocument.create();
+let paragraph = document.lastParagraph;
 paragraph.appendText('A new text is added to the paragraph. ');
 
-const inlineContentControl = paragraph.appendInlineContentControl(
+let inlineContentControl = paragraph.appendInlineContentControl(
   ContentControlType.RichText
 );
 
-const textRange = new TextRange(document);
+let textRange = new TextRange(document);
 textRange.text = 'Inline content control';
 inlineContentControl.paragraphItems.add(textRange);
 
@@ -102,15 +102,15 @@ import {
   WordDocument,
 } from '@syncfusion/ej2-docx';
 
-const document = WordDocument.create();
-const paragraph = document.lastParagraph;
+let document = WordDocument.create();
+let paragraph = document.lastParagraph;
 paragraph.appendText('A new text is added to the paragraph. ');
 
-const contentControl = paragraph.appendInlineContentControl(
+let contentControl = paragraph.appendInlineContentControl(
   ContentControlType.RichText
 );
 
-const textRange = new TextRange(document);
+let textRange = new TextRange(document);
 textRange.text = 'Rich text content control.';
 contentControl.paragraphItems.add(textRange);
 
@@ -121,7 +121,7 @@ contentControl.contentControlProperties.title = 'Text';
 contentControl.contentControlProperties.color = Color.Magenta;
 
 // Reads the resolved control type
-const controlType = contentControl.contentControlProperties.type;
+let controlType = contentControl.contentControlProperties.type;
 
 // Locks the content control and its content
 contentControl.contentControlProperties.lockContentControl = true;
@@ -159,15 +159,15 @@ import {
   WordDocument,
 } from '@syncfusion/ej2-docx';
 
-const document = WordDocument.create();
-const paragraph = document.lastParagraph;
+let document = WordDocument.create();
+let paragraph = document.lastParagraph;
 paragraph.appendText('A new text is added to the paragraph. ');
 
-const richTextControl = paragraph.appendInlineContentControl(
+let richTextControl = paragraph.appendInlineContentControl(
   ContentControlType.RichText
 );
 
-const textRange = new TextRange(document);
+let textRange = new TextRange(document);
 textRange.text = 'Rich text content control.';
 richTextControl.paragraphItems.add(textRange);
 
@@ -185,15 +185,15 @@ import {
   WordDocument,
 } from '@syncfusion/ej2-docx';
 
-const document = WordDocument.create();
-const paragraph = document.lastParagraph;
+let document = WordDocument.create();
+let paragraph = document.lastParagraph;
 paragraph.appendText('A new text is added to the paragraph. ');
 
-const plainTextControl = paragraph.appendInlineContentControl(
+let plainTextControl = paragraph.appendInlineContentControl(
   ContentControlType.Text
 );
 
-const textRange = new TextRange(document);
+let textRange = new TextRange(document);
 textRange.text = 'Plain text content control.';
 plainTextControl.paragraphItems.add(textRange);
 
@@ -207,11 +207,11 @@ document.save('Result.docx');
 {% highlight typescript tabtitle="TypeScript" %}
 import { ContentControlType, WordDocument } from '@syncfusion/ej2-docx';
 
-const document = WordDocument.create();
-const paragraph = document.lastParagraph;
+let document = WordDocument.create();
+let paragraph = document.lastParagraph;
 paragraph.appendText('A new text is added to the paragraph. ');
 
-const checkBox = paragraph.appendInlineContentControl(
+let checkBox = paragraph.appendInlineContentControl(
   ContentControlType.CheckBox
 );
 checkBox.contentControlProperties.isChecked = true;
@@ -232,13 +232,13 @@ import {
   WordDocument,
 } from '@syncfusion/ej2-docx';
 
-const document = WordDocument.create();
-const paragraph = document.lastParagraph;
+let document = WordDocument.create();
+let paragraph = document.lastParagraph;
 paragraph.appendText('Select Date: ');
 
-const datePicker = paragraph.appendInlineContentControl(ContentControlType.Date);
+let datePicker = paragraph.appendInlineContentControl(ContentControlType.Date);
 
-const textRange = new TextRange(document);
+let textRange = new TextRange(document);
 textRange.text = new Date().toLocaleDateString('en-US');
 datePicker.paragraphItems.add(textRange);
 
@@ -261,53 +261,53 @@ import {
   WordDocument,
 } from '@syncfusion/ej2-docx';
 
-const document = WordDocument.create();
-const paragraph = document.lastParagraph;
+let document = WordDocument.create();
+let paragraph = document.lastParagraph;
 paragraph.appendText('Choose your platform: ');
 
-const dropdown = paragraph.appendInlineContentControl(
+let dropdown = paragraph.appendInlineContentControl(
   ContentControlType.DropDownList
 );
 
-const dropdownText = new TextRange(document);
+let dropdownText = new TextRange(document);
 dropdownText.text = 'Choose an item';
 dropdown.paragraphItems.add(dropdownText);
 
-const item1 = new ContentControlListItem();
+let item1 = new ContentControlListItem();
 item1.displayText = 'ASP.NET MVC';
 item1.value = '1';
 dropdown.contentControlProperties.contentControlListItems.add(item1);
 
-const item2 = new ContentControlListItem();
+let item2 = new ContentControlListItem();
 item2.displayText = 'Windows Forms';
 item2.value = '2';
 dropdown.contentControlProperties.contentControlListItems.add(item2);
 
-const item3 = new ContentControlListItem();
+let item3 = new ContentControlListItem();
 item3.displayText = 'WPF';
 item3.value = '3';
 dropdown.contentControlProperties.contentControlListItems.add(item3);
 
-const paragraph2 = document.sections[0].body.appendParagraph();
+let paragraph2 = document.sections[0].body.appendParagraph();
 paragraph2.appendText('Choose the conversion: ');
 
-const comboBox = paragraph2.appendInlineContentControl(ContentControlType.ComboBox);
+let comboBox = paragraph2.appendInlineContentControl(ContentControlType.ComboBox);
 
-const comboText = new TextRange(document);
+let comboText = new TextRange(document);
 comboText.text = 'Choose an item';
 comboBox.paragraphItems.add(comboText);
 
-const item4 = new ContentControlListItem();
+let item4 = new ContentControlListItem();
 item4.displayText = 'Word to HTML';
 item4.value = '1';
 comboBox.contentControlProperties.contentControlListItems.add(item4);
 
-const item5 = new ContentControlListItem();
+let item5 = new ContentControlListItem();
 item5.displayText = 'Word to Image';
 item5.value = '2';
 comboBox.contentControlProperties.contentControlListItems.add(item5);
 
-const item6 = new ContentControlListItem();
+let item6 = new ContentControlListItem();
 item6.displayText = 'Word to PDF';
 item6.value = '3';
 comboBox.contentControlProperties.contentControlListItems.add(item6);
@@ -333,9 +333,9 @@ import {
 } from '@syncfusion/ej2-docx';
 
 // Open an existing Word document
-const document = WordDocument.open('Input.docx');
+let document = WordDocument.open('Input.docx');
 
-for (const section of document.sections) {
+for (let section of document.sections) {
   iterateBodyItems(section.body.items);
 }
 
@@ -350,7 +350,7 @@ import {
 } from '@syncfusion/ej2-docx';
 
 function iterateBodyItems(items: BodyItemCollection): void {
-  for (const item of items) {
+  for (let item of items) {
     if (item instanceof Paragraph) {
       iterateParagraph(item);
     } else if (item instanceof Table) {
@@ -365,8 +365,8 @@ function iterateBodyItems(items: BodyItemCollection): void {
 import { BodyItemCollection, Table } from '@syncfusion/ej2-docx';
 
 function iterateTable(table: Table): void {
-  for (const row of table.rows) {
-    for (const cell of row.cells) {
+  for (let row of table.rows) {
+    for (let cell of row.cells) {
       iterateBodyItems(cell.items);
     }
   }
@@ -384,7 +384,7 @@ function iterateParagraph(paragraph: Paragraph): void {
 }
 
 function iterateParagraphItems(items: ParagraphItemCollection): void {
-  for (const item of items) {
+  for (let item of items) {
     if (item instanceof InlineContentControl) {
       if (item.contentControlProperties.title === 'ReplaceText') {
         replaceTextWithInlineContentControl('Hello World', item);
@@ -408,7 +408,7 @@ function replaceTextWithInlineContentControl(
   let characterFormat: CharacterFormat | undefined;
 
   // Capture the first text range's character format so the replacement matches
-  for (const item of inlineContentControl.paragraphItems) {
+  for (let item of inlineContentControl.paragraphItems) {
     if (item instanceof TextRange) {
       characterFormat = item.characterFormat;
       break;
@@ -418,7 +418,7 @@ function replaceTextWithInlineContentControl(
   // Replace the existing content with the new text
   inlineContentControl.paragraphItems.clear();
 
-  const textRange = new TextRange(inlineContentControl.document);
+  let textRange = new TextRange(inlineContentControl.document);
   textRange.text = text;
 
   if (characterFormat) {

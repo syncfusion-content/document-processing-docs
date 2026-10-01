@@ -19,12 +19,12 @@ The following code example shows how to add preset shapes to a document and inse
 import { BreakType, Color, WordDocument, AutoShapeType } from '@syncfusion/ej2-docx';
 
 // Create a new Word document
-const document = WordDocument.create();
+let document = WordDocument.create();
 // Access section
-const section = document.sections[0]!;
+let section = document.sections[0]!;
 // Add a rounded rectangle shape
-const rectangleParagraph = section.body.appendParagraph();
-const rectangle = rectangleParagraph.appendShape(
+let rectangleParagraph = section.body.appendParagraph();
+let rectangle = rectangleParagraph.appendShape(
     AutoShapeType.RoundedRectangle,
     150,
     100,
@@ -35,22 +35,22 @@ rectangle.horizontalPosition = 72;
 rectangle.verticalPosition = 72;
 
 // Add text content inside the shape
-const rectangleTextParagraph = rectangle.textBody.appendParagraph();
-const rectangleText = rectangleTextParagraph.appendText(
+let rectangleTextParagraph = rectangle.textBody.appendParagraph();
+let rectangleText = rectangleTextParagraph.appendText(
     'This text is in rounded rectangle shape',
 );
 rectangleText.characterFormat.textColor = Color.Green;
 rectangleText.characterFormat.bold = true;
 
 // Add a pentagon shape in the first section body
-const pentagonParagraph = document.sections[0]!.body.appendParagraph();
+let pentagonParagraph = document.sections[0]!.body.appendParagraph();
 pentagonParagraph.appendBreak(BreakType.LineBreak);
 
-const pentagon = pentagonParagraph.appendShape(AutoShapeType.Pentagon, 100, 100);
+let pentagon = pentagonParagraph.appendShape(AutoShapeType.Pentagon, 100, 100);
 pentagon.horizontalPosition = 72;
 pentagon.verticalPosition = 200;
 
-const pentagonTextParagraph = pentagon.textBody.appendParagraph();
+let pentagonTextParagraph = pentagon.textBody.appendParagraph();
 pentagonTextParagraph.appendText('This text is in pentagon shape');
 
 // Save the Word document
@@ -77,12 +77,12 @@ import { Color, WordDocument, AutoShapeType,
     VerticalOrigin, } from '@syncfusion/ej2-docx';
 
 // Create a new Word document
-const document = WordDocument.create();
+let document = WordDocument.create();
 // Access section
-const section = document.sections[0]!;
+let section = document.sections[0]!;
 // Add a rounded rectangle shape
-const paragraph = section.body.appendParagraph();
-const rectangle = paragraph.appendShape(
+let paragraph = section.body.appendParagraph();
+let rectangle = paragraph.appendShape(
     AutoShapeType.RoundedRectangle,
     150,
     100,
@@ -92,8 +92,8 @@ rectangle.horizontalPosition = 72;
 rectangle.verticalPosition = 72;
 
 // Add text inside the shape
-const textParagraph = rectangle.textBody.appendParagraph();
-const text = textParagraph.appendText(
+let textParagraph = rectangle.textBody.appendParagraph();
+let text = textParagraph.appendText(
     'This text is in rounded rectangle shape',
 );
 text.characterFormat.textColor = Color.Green;
@@ -138,12 +138,12 @@ The following code example shows how to rotate and flip a shape.
 import { WordDocument, AutoShapeType } from '@syncfusion/ej2-docx';
 
 // Create a new Word document
-const document = WordDocument.create();
+let document = WordDocument.create();
 // Access section
-const section = document.sections[0]!;
+let section = document.sections[0]!;
 // Add a rounded rectangle shape
-const paragraph = section.body.appendParagraph();
-const rectangle = paragraph.appendShape(
+let paragraph = section.body.appendParagraph();
+let rectangle = paragraph.appendShape(
     AutoShapeType.RoundedRectangle,
     150,
     100,
@@ -160,7 +160,7 @@ rectangle.rotation = 90;
 rectangle.flipHorizontal = true;
 
 // Add text to the shape
-const textParagraph = rectangle.textBody.appendParagraph();
+let textParagraph = rectangle.textBody.appendParagraph();
 textParagraph.appendText('This text is in rounded rectangle shape');
 
 // Save the Word document

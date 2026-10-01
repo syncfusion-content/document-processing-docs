@@ -24,10 +24,10 @@ The following code example shows how to insert a web hyperlink.
 import { HyperlinkType, WordDocument } from '@syncfusion/ej2-docx';
 
 // Create a new Word document
-const document = WordDocument.create();
+let document = WordDocument.create();
 
 // Access the last section
-const section = document.lastSection;
+let section = document.lastSection;
 
 // Access the last paragraph
 let paragraph = document.lastParagraph;
@@ -56,10 +56,10 @@ The following code example shows how to add an email hyperlink.
 import { HyperlinkType, WordDocument } from '@syncfusion/ej2-docx';
 
 // Create a new Word document
-const document = WordDocument.create();
+let document = WordDocument.create();
 
 // Access the last section
-const section = document.lastSection;
+let section = document.lastSection;
 
 // Access the last paragraph
 let paragraph = document.lastParagraph;
@@ -88,10 +88,10 @@ The following code example shows how to add a file hyperlink.
 import { HyperlinkType, WordDocument } from '@syncfusion/ej2-docx';
 
 // Create a new Word document
-const document = WordDocument.create();
+let document = WordDocument.create();
 
 // Access the last section
-const section = document.lastSection;
+let section = document.lastSection;
 
 // Access the last paragraph
 let paragraph = document.lastParagraph;
@@ -120,16 +120,16 @@ The following code example shows how to add a bookmark hyperlink.
 import { HyperlinkType, WordDocument } from '@syncfusion/ej2-docx';
 
 // Create a new Word document
-const document = WordDocument.create();
+let document = WordDocument.create();
 
 // Access the last section
-const section = document.lastSection;
+let section = document.lastSection;
 
 // Access the last paragraph
 let paragraph = document.lastParagraph;
 
 // Create a bookmark
-const bookmarkStart = paragraph.appendBookmarkStart('Introduction');
+let bookmarkStart = paragraph.appendBookmarkStart('Introduction');
 paragraph.appendText('Hyperlink');
 paragraph.appendBookmarkEnd(bookmarkStart);
 paragraph.appendText(

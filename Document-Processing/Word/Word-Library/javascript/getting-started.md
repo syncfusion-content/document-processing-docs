@@ -69,17 +69,17 @@ import {WordDocument} from '@syncfusion/ej2-docx';
 
 export default function App() {
 
-  const createDocument = async () => {
+  let createDocument = async () => {
 
     // Creates a Word document.
-    const document = WordDocument.create();
-    const section = document.sections[0]!;
+    let document = WordDocument.create();
+    let section = document.sections[0]!;
  
     // Add paragraph
-    const paragraph = section.body.appendParagraph();
+    let paragraph = section.body.appendParagraph();
  
     // Add text run and format it
-    const run = paragraph.appendTextRange();
+    let run = paragraph.appendTextRange();
     run.text = 'Hello World!!';
     run.characterFormat.bold = true;
     run.characterFormat.fontSize = 24;

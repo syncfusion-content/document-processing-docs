@@ -41,15 +41,15 @@ import {
 } from '@syncfusion/ej2-docx';
 
 // Open an existing Word document
-const document = WordDocument.open('Template.docx');
+let document = WordDocument.open('Template.docx');
 
 // Process the body contents for each section in the Word document
-for (const section of document.sections) {
+for (let section of document.sections) {
   // Walks the main body of the section
   iterateTextBody(section.body);
 
   // Walks the text body of the odd header and odd footer when present
-  const hf = section.headersFooters;
+  let hf = section.headersFooters;
   if (hf.oddHeader) iterateTextBody(hf.oddHeader);
   if (hf.oddFooter) iterateTextBody(hf.oddFooter);
 }
@@ -65,7 +65,7 @@ import { BlockContentControl, Body, Paragraph, Table } from '@syncfusion/ej2-doc
 function iterateTextBody(body: Body) {
   // Iterate in reverse so removing items while iterating stays safe
   for (let i = body.items.count - 1; i >= 0; i--) {
-    const item = body.items[i];
+    let item = body.items[i];
 
     // A text body has three kinds of block-level children:
     // paragraph, table, and block content control.
@@ -98,8 +98,8 @@ import { Body, Table } from '@syncfusion/ej2-docx';
 
 // Iterates the row and cell collection of a table
 function iterateTable(table: Table) {
-  for (const row of table.rows) {
-    for (const cell of row.cells) {
+  for (let row of table.rows) {
+    for (let cell of row.cells) {
       // A table cell is also a text body; reuse the body iteration
       iterateTextBody(cell);
     }
@@ -111,7 +111,7 @@ import { ParagraphItemCollection, TextRange } from '@syncfusion/ej2-docx';
 
 // Iterates the paragraph items
 function iterateParagraph(paraItems: ParagraphItemCollection) {
-  for (const child of paraItems) {
+  for (let child of paraItems) {
     if (child instanceof TextRange) {
       // Modify or read text in a text range
       if (child.text === 'Andrew') {
@@ -148,12 +148,12 @@ import {
 } from '@syncfusion/ej2-docx';
 
 // Open an existing Word document
-const document = WordDocument.open('Template.docx');
+let document = WordDocument.open('Template.docx');
 
-for (const section of document.sections) {
+for (let section of document.sections) {
   iterateTextBody(section.body);
 
-  const hf = section.headersFooters;
+  let hf = section.headersFooters;
   if (hf.oddHeader) iterateTextBody(hf.oddHeader);
   if (hf.oddFooter) iterateTextBody(hf.oddFooter);
 }
@@ -166,7 +166,7 @@ import { BlockContentControl, Body, Paragraph, Table } from '@syncfusion/ej2-doc
 
 function iterateTextBody(body: Body) {
   for (let i = body.items.count - 1; i >= 0; i--) {
-    const item = body.items[i];
+    let item = body.items[i];
 
     if (item instanceof Paragraph) {
       if (item.styleId === 'Heading1') {
@@ -193,8 +193,8 @@ function iterateTextBody(body: Body) {
 import { Body, Table } from '@syncfusion/ej2-docx';
 
 function iterateTable(table: Table) {
-  for (const row of table.rows) {
-    for (const cell of row.cells) {
+  for (let row of table.rows) {
+    for (let cell of row.cells) {
       iterateTextBody(cell);
     }
   }
@@ -212,7 +212,7 @@ import {
 } from '@syncfusion/ej2-docx';
 
 function iterateParagraph(paraItems: ParagraphItemCollection) {
-  for (const child of paraItems) {
+  for (let child of paraItems) {
     // Plain text run: modify or read the text
     if (child instanceof TextRange) {
       if (child.text === 'Andrew') {
@@ -223,7 +223,7 @@ function iterateParagraph(paraItems: ParagraphItemCollection) {
 
     // Field: a HYPERLINK field is exposed through the Hyperlink facade
     if (child instanceof Field) {
-      const link = new Hyperlink(child);
+      let link = new Hyperlink(child);
       if (
         link.type === HyperlinkType.WebLink &&
         link.textToDisplay === 'HTML'
