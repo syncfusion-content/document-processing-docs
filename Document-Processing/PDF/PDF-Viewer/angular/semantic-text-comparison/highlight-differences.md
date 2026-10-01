@@ -59,7 +59,7 @@ Set up the comparison with basic default highlighting:
 
 ### Step 3: Configure highlight colors and options
 
-Define the `comparisonOptions` object to customize highlighting and pass it to the component:
+Define the [`comparisonOptions`](https://ej2.syncfusion.com/angular/documentation/api/pdfcomparer/index-default#comparisonoptions) object to customize highlighting and pass it to the component:
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
@@ -102,7 +102,7 @@ export class AppComponent {
 
 ### Comparison options
 
-The highlight appearance is controlled by these options in the `comparisonOptions` object:
+The highlight appearance is controlled by these options in the [`comparisonOptions`](https://ej2.syncfusion.com/angular/documentation/api/pdfcomparer/index-default#comparisonoptions) object:
 
 | Option | Type | Description | Default |
 |--------|------|-------------|---------|
@@ -123,7 +123,7 @@ Control the viewer behavior with these properties:
 
 ### Control the difference panel
 
-Use the `enableDifferencePanel` property to show or hide the sidebar panel that displays all detected differences:
+Use the [`enableDifferencePanel`](https://ej2.syncfusion.com/angular/documentation/api/pdfcomparer/index-default#enabledifferencepanel) property to show or hide the sidebar panel that displays all detected differences:
 
 {% tabs %}
 {% highlight html tabtitle="app.component.html" %}
@@ -142,7 +142,7 @@ Use the `enableDifferencePanel` property to show or hide the sidebar panel that 
 
 ### Control synchronized scrolling and navigation
 
-Use the `enableSyncScrolling` property to control whether the viewers stay synchronized during scrolling, page navigation, and magnification (zoom):
+Use the [`enableSyncScrolling`](https://ej2.syncfusion.com/angular/documentation/api/pdfcomparer/index-default#enablesyncscrolling) property to control whether the viewers stay synchronized during scrolling, page navigation, and magnification (zoom):
 
 {% tabs %}
 {% highlight html tabtitle="app.component.html" %}

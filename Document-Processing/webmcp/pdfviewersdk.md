@@ -41,10 +41,10 @@ For local development, enable WebMCP for testing via `chrome://flags/`.
 
 Syncfusion PDF Viewer integration with WebMCP provides significant benefits for building AI-powered PDF applications:
 
-### ✅ Key Benefits
+### Key Benefits
 
 - **Universal Tool Access** — AI agents, LLMs, and any MCP-compatible client can discover and invoke PDF operations
-- **Zero Custom Integration** — Inject the WebMcpAdapter module, call `registerWebMcpTools()`, and all tool registration, schema binding, and life cycle management is automatic
+- **Zero Custom Integration** — Inject the `WebMcpPdfViewer` module, set `enableWebMcp: true`, and all tool registration, schema binding, and life cycle management is automatic
 - **Schema-Validated I/O** — Every tool includes JSON Schema for inputs and outputs, eliminating hallucination and enabling AI clients to validate data reliably
 - **Controlled Execution** — Write operations (annotations, redaction, form fields) can trigger user confirmation dialogs when enabled. Applications can use events to audit, restrict, or cancel any operation
 - **Multi-Instance Friendly** — Unique prefixes per PDF Viewer prevent tool-name collisions when multiple instances share a page
@@ -62,55 +62,888 @@ When you invoke a WebMCP tool, the following happens behind the scenes:
 1. **Tool Discovery** — Retrieve available tool schemas via `getWebMcpTools()`
 2. **Tool Registration** — Register tools on `document.modelContext` with unique prefixes
 3. **Tool Invocation** — AI Agent calls tool via `document.modelContext`
-4. **Adapter Routing** — WebMcpAdapter strips prefix and fires `beforeWebMcpToolExecute` event
+4. **Adapter Routing** — WebMcpPdfViewer strips prefix and fires `beforeWebMcpToolExecute` event
 5. **Confirmation & Execution** — Write tools are confirmed through `beforeWebMcpToolExecute`, while read tools execute immediately
 6. **Response Formatting** — Returns structured response with success or error
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│  1. Tool Discovery                                              │
-│     viewer.getWebMcpTools(toolNames?)                           │
-│     → Returns available tool schemas, optionally filtered       │
-└─────────────────────────────────────────────────────────────────┘
-                              ↓
-┌─────────────────────────────────────────────────────────────────┐
-│  2. Tool Registration                                           │
-│     viewer.registerWebMcpTools(prefix, tools, exposedTo)        │
-│     → Registers tools on document.modelContext                  │
-│     → Prefixes each tool name (e.g., pdf_navigateToPage)        │
-│     → Binds execute callbacks                                   │
-└─────────────────────────────────────────────────────────────────┘
-                              ↓
-┌─────────────────────────────────────────────────────────────────┐
-│  3. Tool Invocation                                             │
-│     AI Agent calls tool via document.modelContext               │
-│     → Sends tool name and input parameters                      │
-└─────────────────────────────────────────────────────────────────┘
-                              ↓
-┌─────────────────────────────────────────────────────────────────┐
-│  4. Adapter Routing                                             │
-│     WebMcpAdapter.executeHandler() routes the call              │
-│     → Strips prefix from tool name                              │
-│     → Fires beforeWebMcpToolExecute event                       │
-│     → Dispatches to appropriate handler                         │
-└─────────────────────────────────────────────────────────────────┘
-                              ↓
-┌─────────────────────────────────────────────────────────────────┐
-│  5. Confirmation & Execution                                    │
-│     For Write Tools (Annotations, Forms, Redaction):            │
-│     → Shows user confirmation dialog by default                 │
-│     → Executes via PDF Viewer API                               │
-│     For Read Tools (Navigation, Extraction):                    │
-│     → Executes immediately                                      │
-└─────────────────────────────────────────────────────────────────┘
-                              ↓
-┌─────────────────────────────────────────────────────────────────┐
-│  6. Response Formatting                                         │
-│     Returns structured WebMcpToolResponse                       │
-│     → Success: { content: [{ type: 'text', text: JSON }] }      │
-│     → Error: { error: 'Error message' }                         │
-└─────────────────────────────────────────────────────────────────┘
-```
+## Integration
+
+WebMCP integrates seamlessly into Syncfusion PDF Viewer applications across all major platforms. Choose your framework below to get started with platform-specific setup instructions, API references, code examples, and sample prompts.
+
+{% tabcontents %}
+
+{% tabcontent React %}
+
+### Step 1: Enable WebMCP support
+
+Import the WebMCP module and inject it into the component to make WebMCP functionality available.
+
+{% tabs %}
+{% highlight jsx tabtitle="App.jsx" %}
+{% raw %}
+import { PdfViewerComponent, PdfViewer, WebMcpPdfViewer } from '@syncfusion/ej2-react-pdfviewer';
+
+PdfViewer.Inject(WebMcpPdfViewer);
+
+function App() {
+    return (
+        <PdfViewerComponent
+            documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+            resourceUrl="https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib"
+            style={{ height: '640px' }}>
+        </PdfViewerComponent>
+    );
+}
+
+export default App;
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+### Step 2: Register component tools
+
+Set the `enableWebMcp` property to `true` to register the component's available tools with the WebMCP runtime.
+
+When `enableWebMcp` is enabled, supported component tools are automatically registered with the WebMCP runtime and become discoverable by authorized WebMCP clients.
+
+For example, the PDF Viewer component may expose tools such as:
+
+- `navigateToPage`
+- `extractTextContent`
+- `addAnnotation`
+
+An AI assistant can discover these tools and invoke them based on user prompts.
+
+{% tabs %}
+{% highlight jsx tabtitle="App.jsx" %}
+{% raw %}
+import { PdfViewerComponent, PdfViewer, WebMcpPdfViewer } from '@syncfusion/ej2-react-pdfviewer';
+
+PdfViewer.Inject(WebMcpPdfViewer);
+
+function App() {
+    return (
+        <PdfViewerComponent enableWebMcp={true}
+            documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+            resourceUrl="https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib"
+            style={{ height: '640px' }}>
+        </PdfViewerComponent>
+    );
+}
+
+export default App;
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+### Step 3: Customize tool registration
+
+Use the `webMcpSettings` property to customize how WebMCP tools are exposed to AI agents. The available settings are listed below.
+
+| Property | Description |
+|-----------|-------------|
+| `name` | Prefix applied to registered tool names. If name: `sales` is specified, a tool such as `navigateToPage` may be registered as `sales_navigateToPage`, allowing multiple component instances to coexist without tool name conflicts. |
+| `tools` | List of tool names to expose. Any supported tools not included in this list will not be registered. |
+| `exposeTo` | List of trusted domains that are allowed to interact with the component through WebMCP. |
+
+{% tabs %}
+{% highlight jsx tabtitle="App.jsx" %}
+{% raw %}
+import { PdfViewerComponent, PdfViewer, WebMcpPdfViewer } from '@syncfusion/ej2-react-pdfviewer';
+
+PdfViewer.Inject(WebMcpPdfViewer);
+
+function App() {
+    return (
+        <PdfViewerComponent enableWebMcp={true}
+            webMcpSettings={{
+                name: 'sales',
+                tools: ['navigateToPage', 'extractTextContent', 'addAnnotation'],
+                exposeTo: ['https://www.syncfusion.com/']
+            }}
+            documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+            resourceUrl="https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib"
+            style={{ height: '640px' }}>
+        </PdfViewerComponent>
+    );
+}
+
+export default App;
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+> Use the `exposeTo` property to restrict WebMCP access to trusted domains. This helps prevent unauthorized WebMCP clients from interacting with your component tools.
+
+### Step 4: Monitor and control tool execution
+
+The `beforeWebMcpToolExecute` event is triggered before a tool is executed. This event allows you to:
+
+- Audit tool usage.
+- Validate incoming requests.
+- Cancel tool execution when necessary.
+- Apply custom business rules and security policies.
+
+> AI-generated requests should always be validated before executing write operations. Restrict access using `exposeTo` and perform additional authorization checks within `beforeWebMcpToolExecute` when modifying application data.
+
+{% tabs %}
+{% highlight jsx tabtitle="App.jsx" %}
+{% raw %}
+import { PdfViewerComponent, PdfViewer, WebMcpPdfViewer } from '@syncfusion/ej2-react-pdfviewer';
+
+PdfViewer.Inject(WebMcpPdfViewer);
+
+function App() {
+    const beforeWebMcpToolExecute = (args) => {
+        // Example business rule
+        if (args.toolName.includes('addAnnotation')) {
+            const hour = new Date().getHours();
+            if (hour < 9 || hour > 17) {
+                args.cancel = true;
+                console.log('Adding annotations is allowed only between 9:00 AM and 5:00 PM.');
+            }
+        }
+    };
+
+    return (
+        <PdfViewerComponent enableWebMcp={true}
+            webMcpSettings={{
+                name: 'sales',
+                tools: ['navigateToPage', 'extractTextContent', 'addAnnotation'],
+                exposeTo: ['https://www.syncfusion.com/']
+            }}
+            beforeWebMcpToolExecute={beforeWebMcpToolExecute}
+            documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+            resourceUrl="https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib"
+            style={{ height: '640px' }}>
+        </PdfViewerComponent>
+    );
+}
+
+export default App;
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% tabcontent Angular %}
+
+### Step 1: Enable WebMCP support
+
+Import the WebMCP module and inject it into the component to make WebMCP functionality available.
+
+{% tabs %}
+{% highlight ts tabtitle="app.component.ts" %}
+{% raw %}
+import { Component } from '@angular/core';
+import {
+  PdfViewerModule,
+  PdfViewer,
+  WebMcpPdfViewer
+} from '@syncfusion/ej2-angular-pdfviewer';
+
+PdfViewer.Inject(WebMcpPdfViewer);
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [PdfViewerModule],
+  template: `
+    <ejs-pdfviewer
+      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      resourceUrl="https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib"
+      style="height:640px; display:block">
+    </ejs-pdfviewer>
+  `
+})
+export class AppComponent {}
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+### Step 2: Register component tools
+
+Set the `enableWebMcp` property to `true` to register the component's available tools with the WebMCP runtime.
+
+When `enableWebMcp` is enabled, supported component tools are automatically registered with the WebMCP runtime and become discoverable by authorized WebMCP clients.
+
+For example, the PDF Viewer component may expose tools such as:
+
+- `navigateToPage`
+- `extractTextContent`
+- `addAnnotation`
+
+An AI assistant can discover these tools and invoke them based on user prompts.
+
+{% tabs %}
+{% highlight ts tabtitle="app.component.ts" %}
+{% raw %}
+import { Component } from '@angular/core';
+import {
+  PdfViewerModule,
+  PdfViewer,
+  WebMcpPdfViewer
+} from '@syncfusion/ej2-angular-pdfviewer';
+
+PdfViewer.Inject(WebMcpPdfViewer);
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [PdfViewerModule],
+  template: `
+    <ejs-pdfviewer
+      [enableWebMcp]="true"
+      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      resourceUrl="https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib"
+      style="height:640px; display:block">
+    </ejs-pdfviewer>
+  `
+})
+export class AppComponent {}
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+### Step 3: Customize tool registration
+
+Use the `webMcpSettings` property to customize how WebMCP tools are exposed to AI agents. The available settings are listed below.
+
+| Property | Description |
+|-----------|-------------|
+{% tabs %}
+{% highlight ts tabtitle="app.component.ts" %}
+{% raw %}
+import { Component } from '@angular/core';
+import {
+  PdfViewerModule,
+  PdfViewer,
+  WebMcpPdfViewer
+} from '@syncfusion/ej2-angular-pdfviewer';
+
+PdfViewer.Inject(WebMcpPdfViewer);
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [PdfViewerModule],
+  template: `
+    <ejs-pdfviewer
+      [enableWebMcp]="true"
+      [webMcpSettings]="webMcpSettings"
+      (beforeWebMcpToolExecute)="beforeWebMcpToolExecute($event)"
+      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      resourceUrl="https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib"
+      style="height:640px; display:block">
+    </ejs-pdfviewer>
+  `
+})
+export class AppComponent {
+  public webMcpSettings = {
+    name: 'sales',
+    tools: ['navigateToPage', 'extractTextContent', 'addAnnotation'],
+    exposeTo: ['https://www.syncfusion.com/']
+  };
+
+  public beforeWebMcpToolExecute(args: any): void {
+    if (args.toolName.includes('addAnnotation')) {
+      const hour = new Date().getHours();
+
+      if (hour < 9 || hour > 17) {
+        args.cancel = true;
+        console.log('Adding annotations is allowed only between 9:00 AM and 5:00 PM.');
+      }
+    }
+  }
+}
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+> Use the `exposeTo` property to restrict WebMCP access to trusted domains. This helps prevent unauthorized WebMCP clients from interacting with your component tools.
+
+### Step 4: Monitor and control tool execution
+
+The `beforeWebMcpToolExecute` event is triggered before a tool is executed. This event allows you to:
+
+- Audit tool usage.
+- Validate incoming requests.
+- Cancel tool execution when necessary.
+{% tabs %}
+{% highlight ts tabtitle="app.component.ts" %}
+{% raw %}
+import { Component } from '@angular/core';
+import {
+  PdfViewerModule,
+  PdfViewer,
+  WebMcpPdfViewer
+} from '@syncfusion/ej2-angular-pdfviewer';
+
+PdfViewer.Inject(WebMcpPdfViewer);
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [PdfViewerModule],
+  template: `
+    <ejs-pdfviewer
+      [enableWebMcp]="true"
+      [webMcpSettings]="webMcpSettings"
+      (beforeWebMcpToolExecute)="beforeWebMcpToolExecute($event)"
+      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      resourceUrl="https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib"
+      style="height:640px; display:block">
+    </ejs-pdfviewer>
+  `
+})
+export class AppComponent {
+  public webMcpSettings = {
+    name: 'sales',
+    tools: ['navigateToPage', 'extractTextContent', 'addAnnotation'],
+    exposeTo: ['https://www.syncfusion.com/']
+  };
+
+  public beforeWebMcpToolExecute(args: any): void {
+    if (args.toolName.includes('addAnnotation')) {
+      const hour = new Date().getHours();
+
+      if (hour < 9 || hour > 17) {
+        args.cancel = true;
+        console.log('Adding annotations is allowed only between 9:00 AM and 5:00 PM.');
+      }
+    }
+  }
+}
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% tabcontent JavaScript %}
+
+### Step 1: Enable WebMCP support
+
+Import the WebMCP module and inject it into the control to make WebMCP functionality available.
+
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
+{% raw %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Essential JS 2</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+</head>
+
+<body>
+    <div>
+        <div id="pdfViewer" style="height:640px; width:100%"></div>
+    </div>
+</body>
+
+</html>
+{% endraw %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.js" %}
+{% raw %}
+import { PdfViewer, WebMcpPdfViewer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(WebMcpPdfViewer);
+
+const pdfViewer = new PdfViewer({
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib'
+});
+
+pdfViewer.appendTo('#pdfViewer');
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+### Step 2: Register control tools
+
+Set the `enableWebMcp` property to `true` to register the control's available tools with the WebMCP runtime.
+
+When `enableWebMcp` is enabled, supported control tools are automatically registered with the WebMCP runtime and become discoverable by authorized WebMCP clients.
+
+For example, the PDF Viewer control may expose tools such as:
+
+- `navigateToPage`
+- `extractTextContent`
+- `addAnnotation`
+
+An AI assistant can discover these tools and invoke them based on user prompts.
+
+{% tabs %}
+{% highlight ts tabtitle="index.js" %}
+{% raw %}
+import { PdfViewer, WebMcpPdfViewer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(WebMcpPdfViewer);
+
+const pdfViewer = new PdfViewer({
+    enableWebMcp: true,
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib'
+});
+
+pdfViewer.appendTo('#pdfViewer');
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+### Step 3: Customize tool registration
+
+Use the `webMcpSettings` property to customize how WebMCP tools are exposed to AI agents. The available settings are listed below.
+
+| Property | Description |
+|-----------|-------------|
+| `name` | Prefix applied to registered tool names. If name: `sales` is specified, a tool such as `navigateToPage` may be registered as `sales_navigateToPage`, allowing multiple control instances to coexist without tool name conflicts. |
+| `tools` | List of tool names to expose. Any supported tools not included in this list will not be registered. |
+| `exposeTo` | List of trusted domains that are allowed to interact with the control through WebMCP. |
+
+{% tabs %}
+{% highlight ts tabtitle="index.js" %}
+{% raw %}
+import { PdfViewer, WebMcpPdfViewer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(WebMcpPdfViewer);
+
+const pdfViewer = new PdfViewer({
+    enableWebMcp: true,
+    webMcpSettings: {
+        name: 'sales',
+        tools: ['navigateToPage', 'extractTextContent', 'addAnnotation'],
+        exposeTo: ['https://www.syncfusion.com/']
+    },
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib'
+});
+
+pdfViewer.appendTo('#pdfViewer');
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+> Use the `exposeTo` property to restrict WebMCP access to trusted domains. This helps prevent unauthorized WebMCP clients from interacting with your control tools.
+
+### Step 4: Monitor and control tool execution
+
+The `beforeWebMcpToolExecute` event is triggered before a tool is executed. This event allows you to:
+
+- Audit tool usage.
+- Validate incoming requests.
+- Cancel tool execution when necessary.
+{% tabs %}
+{% highlight ts tabtitle="index.js" %}
+{% raw %}
+import { PdfViewer, WebMcpPdfViewer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(WebMcpPdfViewer);
+
+const pdfViewer = new PdfViewer({
+    enableWebMcp: true,
+    webMcpSettings: {
+        name: 'sales',
+        tools: ['navigateToPage', 'extractTextContent', 'addAnnotation'],
+        exposeTo: ['https://www.syncfusion.com/']
+    },
+    beforeWebMcpToolExecute: (args) => {
+        // Example business rule
+        if (args.toolName.includes('addAnnotation')) {
+            const hour = new Date().getHours();
+
+            if (hour < 9 || hour > 17) {
+                args.cancel = true;
+                console.log(
+                    'Adding annotations is allowed only between 9:00 AM and 5:00 PM.'
+                );
+            }
+        }
+    },
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib'
+});
+
+pdfViewer.appendTo('#pdfViewer');
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% tabcontent TypeScript %}
+
+### Step 1: Enable WebMCP support
+
+Import the WebMCP module and inject it into the control to make WebMCP functionality available.
+
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
+{% raw %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Essential JS 2</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+</head>
+
+<body>
+    <div>
+        <div id="pdfViewer" style="height:640px; width:100%"></div>
+    </div>
+</body>
+
+</html>
+{% endraw %}
+{% endhighlight %}
+{% highlight ts tabtitle="index.ts" %}
+{% raw %}
+import { PdfViewer, WebMcpPdfViewer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(WebMcpPdfViewer);
+
+const pdfViewer: PdfViewer = new PdfViewer({
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib'
+});
+
+pdfViewer.appendTo('#pdfViewer');
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+### Step 2: Register control tools
+
+Set the `enableWebMcp` property to `true` to register the control's available tools with the WebMCP runtime.
+
+When `enableWebMcp` is enabled, supported control tools are automatically registered with the WebMCP runtime and become discoverable by authorized WebMCP clients.
+
+For example, the PDF Viewer control may expose tools such as:
+
+- `navigateToPage`
+- `extractTextContent`
+- `addAnnotation`
+
+An AI assistant can discover these tools and invoke them based on user prompts.
+
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% raw %}
+import { PdfViewer, WebMcpPdfViewer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(WebMcpPdfViewer);
+
+const pdfViewer: PdfViewer = new PdfViewer({
+    enableWebMcp: true,
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib'
+});
+
+pdfViewer.appendTo('#pdfViewer');
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+### Step 3: Customize tool registration
+
+Use the `webMcpSettings` property to customize how WebMCP tools are exposed to AI agents. The available settings are listed below.
+
+| Property | Description |
+|-----------|-------------|
+| `name` | Prefix applied to registered tool names. If name: `sales` is specified, a tool such as `navigateToPage` may be registered as `sales_navigateToPage`, allowing multiple control instances to coexist without tool name conflicts. |
+| `tools` | List of tool names to expose. Any supported tools not included in this list will not be registered. |
+| `exposeTo` | List of trusted domains that are allowed to interact with the control through WebMCP. |
+
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% raw %}
+import { PdfViewer, WebMcpPdfViewer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(WebMcpPdfViewer);
+
+const pdfViewer: PdfViewer = new PdfViewer({
+    enableWebMcp: true,
+    webMcpSettings: {
+        name: 'sales',
+        tools: ['navigateToPage', 'extractTextContent', 'addAnnotation'],
+        exposeTo: ['https://www.syncfusion.com/']
+    },
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib'
+});
+
+pdfViewer.appendTo('#pdfViewer');
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+> Use the `exposeTo` property to restrict WebMCP access to trusted domains. This helps prevent unauthorized WebMCP clients from interacting with your control tools.
+
+### Step 4: Monitor and control tool execution
+
+The `beforeWebMcpToolExecute` event is triggered before a tool is executed. This event allows you to:
+
+- Audit tool usage.
+- Validate incoming requests.
+- Cancel tool execution when necessary.
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% raw %}
+import { PdfViewer, WebMcpPdfViewer } from '@syncfusion/ej2-pdfviewer';
+
+PdfViewer.Inject(WebMcpPdfViewer);
+
+const pdfViewer: PdfViewer = new PdfViewer({
+    enableWebMcp: true,
+    webMcpSettings: {
+        name: 'sales',
+        tools: ['navigateToPage', 'extractTextContent', 'addAnnotation'],
+        exposeTo: ['https://www.syncfusion.com/']
+    },
+    beforeWebMcpToolExecute: (args) => {
+        // Example business rule
+        if (args.toolName.includes('addAnnotation')) {
+            const hour = new Date().getHours();
+
+            if (hour < 9 || hour > 17) {
+                args.cancel = true;
+                console.log(
+                    'Adding annotations is allowed only between 9:00 AM and 5:00 PM.'
+                );
+            }
+        }
+    },
+    documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib'
+});
+
+pdfViewer.appendTo('#pdfViewer');
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% tabcontent Vue %}
+
+### Step 1: Enable WebMCP support
+
+Import the WebMCP module and inject it into the component to make WebMCP functionality available.
+
+{% tabs %}
+{% highlight html tabtitle="App.vue" %}
+{% raw %}
+<template>
+  <div>
+    <ejs-pdfviewer
+      :documentPath="documentPath"
+      :resourceUrl="resourceUrl"
+      style="height:640px; display:block">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import { PdfViewerComponent, PdfViewer, WebMcpPdfViewer } from '@syncfusion/ej2-vue-pdfviewer';
+
+PdfViewer.Inject(WebMcpPdfViewer);
+
+export default {
+  name: 'App',
+  components: { 'ejs-pdfviewer': PdfViewerComponent },
+  data() {
+    return {
+      documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib'
+    };
+  }
+};
+</script>
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+### Step 2: Register component tools
+
+Set the `enableWebMcp` property to `true` to register the component's available tools with the WebMCP runtime.
+
+When `enableWebMcp` is enabled, supported component tools are automatically registered with the WebMCP runtime and become discoverable by authorized WebMCP clients.
+
+For example, the PDF Viewer component may expose tools such as:
+
+- `navigateToPage`
+- `extractTextContent`
+- `addAnnotation`
+
+An AI assistant can discover these tools and invoke them based on user prompts.
+
+{% tabs %}
+{% highlight html tabtitle="App.vue" %}
+{% raw %}
+<template>
+  <div>
+    <ejs-pdfviewer
+      :enableWebMcp="true"
+      :documentPath="documentPath"
+      :resourceUrl="resourceUrl"
+      style="height:640px; display:block">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import { PdfViewerComponent, PdfViewer, WebMcpPdfViewer } from '@syncfusion/ej2-vue-pdfviewer';
+
+PdfViewer.Inject(WebMcpPdfViewer);
+
+export default {
+  name: 'App',
+  components: { 'ejs-pdfviewer': PdfViewerComponent },
+  data() {
+    return {
+      documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib'
+    };
+  }
+};
+</script>
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+### Step 3: Customize tool registration
+
+Use the `webMcpSettings` property to customize how WebMCP tools are exposed to AI agents. The available settings are listed below.
+
+| Property | Description |
+|-----------|-------------|
+| `name` | Prefix applied to registered tool names. If name: `sales` is specified, a tool such as `navigateToPage` may be registered as `sales_navigateToPage`, allowing multiple component instances to coexist without tool name conflicts. |
+| `tools` | List of tool names to expose. Any supported tools not included in this list will not be registered. |
+| `exposeTo` | List of trusted domains that are allowed to interact with the component through WebMCP. |
+
+{% tabs %}
+{% highlight html tabtitle="App.vue" %}
+{% raw %}
+<template>
+  <div>
+    <ejs-pdfviewer
+      :enableWebMcp="true"
+      :webMcpSettings="webMcpSettings"
+      :beforeWebMcpToolExecute="beforeWebMcpToolExecute"
+      :documentPath="documentPath"
+      :resourceUrl="resourceUrl"
+      style="height:640px; display:block">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import { PdfViewerComponent, PdfViewer, WebMcpPdfViewer } from '@syncfusion/ej2-vue-pdfviewer';
+
+PdfViewer.Inject(WebMcpPdfViewer);
+
+export default {
+  name: 'App',
+  components: { 'ejs-pdfviewer': PdfViewerComponent },
+  data() {
+    return {
+      documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib',
+      webMcpSettings: {
+        name: 'sales',
+        tools: ['navigateToPage', 'extractTextContent', 'addAnnotation'],
+        exposeTo: ['https://www.syncfusion.com/']
+      }
+    };
+  },
+  methods: {
+    beforeWebMcpToolExecute(args) {
+      if (args.toolName.includes('addAnnotation')) {
+        const hour = new Date().getHours();
+        if (hour < 9 || hour > 17) {
+          args.cancel = true;
+          console.log('Adding annotations is allowed only between 9:00 AM and 5:00 PM.');
+        }
+      }
+    }
+  }
+};
+</script>
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+> Use the `exposeTo` property to restrict WebMCP access to trusted domains. This helps prevent unauthorized WebMCP clients from interacting with your component tools.
+
+### Step 4: Monitor and control tool execution
+
+The `beforeWebMcpToolExecute` event is triggered before a tool is executed. This event allows you to:
+
+- Audit tool usage.
+- Validate incoming requests.
+- Cancel tool execution when necessary.
+{% tabs %}
+{% highlight html tabtitle="App.vue" %}
+{% raw %}
+<template>
+  <div>
+    <ejs-pdfviewer
+      :enableWebMcp="true"
+      :webMcpSettings="webMcpSettings"
+      :beforeWebMcpToolExecute="beforeWebMcpToolExecute"
+      :documentPath="documentPath"
+      :resourceUrl="resourceUrl"
+      style="height:640px; display:block">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import { PdfViewerComponent, PdfViewer, WebMcpPdfViewer } from '@syncfusion/ej2-vue-pdfviewer';
+
+PdfViewer.Inject(WebMcpPdfViewer);
+
+export default {
+  name: 'App',
+  components: { 'ejs-pdfviewer': PdfViewerComponent },
+  data() {
+    return {
+      documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib',
+      webMcpSettings: {
+        name: 'sales',
+        tools: ['navigateToPage', 'extractTextContent', 'addAnnotation'],
+        exposeTo: ['https://www.syncfusion.com/']
+      }
+    };
+  },
+  methods: {
+    beforeWebMcpToolExecute(args) {
+      if (args.toolName.includes('addAnnotation')) {
+        const hour = new Date().getHours();
+        if (hour < 9 || hour > 17) {
+          args.cancel = true;
+          console.log('Adding annotations is allowed only between 9:00 AM and 5:00 PM.');
+        }
+      }
+    }
+  }
+};
+</script>
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% endtabcontents %}
 
 ## Supported WebMCP Tools
 

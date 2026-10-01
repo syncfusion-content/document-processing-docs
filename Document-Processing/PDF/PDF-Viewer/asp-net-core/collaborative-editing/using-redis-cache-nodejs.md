@@ -522,7 +522,7 @@ npm install ej2-collaborator-server
 {% endhighlight %}
 {% endtabs %}
 
-### Step 4: Add the PDF Viewer server adapter
+### 2: Add the PDF Viewer server adapter
 
 Create `adapters/PdfViewerAdapter.js` with the server adapter. For complete implementation with form field handling, XFDF import, signature rendering, and page organizer operations, refer to the [GitHub sample](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/Collaborative%20Editing).
 
@@ -746,7 +746,7 @@ server.start();
 {% endhighlight %}
 {% endtabs %}
 
->N For complete production implementation with comprehensive form field handling, XFDF annotation import, signature rendering with path/image/text support, and advanced page organizer operations, refer to the [GitHub sample](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/Collaborative%20Editing).
+N> For complete production implementation with comprehensive form field handling, XFDF annotation import, signature rendering with path/image/text support, and advanced page organizer operations, refer to the [GitHub sample](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/Collaborative%20Editing).
 
 ## See Also
 
