@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Programmatically Get Differences
+# Programmatically Get Differences in Angular PDF Viewer
 
-The semantic text comparison feature provides programmatic access to all differences found between two PDF documents. Using the `semanticTextCompare()` method on `PdfViewerComponent`, you can retrieve structured difference data for custom processing, reporting, or integration with other workflows.
+The semantic text comparison feature provides programmatic access to all differences found between two PDF documents. Using the [`semanticTextCompare()`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#semantictextcompare) method on `PdfViewerComponent`, you can retrieve structured difference data for custom processing, reporting, or integration with other workflows.
 
 ## Overview
 
