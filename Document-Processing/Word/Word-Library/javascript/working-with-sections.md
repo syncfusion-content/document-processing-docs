@@ -1,6 +1,6 @@
 ---
 title: Working with Sections in JavaScript Word | Syncfusion
-description: Learn how to configure page setup, columns, headers and footers, page numbers, page borders, line numbers, and section removal in a Word document using the Syncfusion JavaScript Word library.
+description: Configure page setup, columns, headers, footers, page numbers, borders, line numbers, and manage sections in Word documents.
 platform: document-processing
 control: Word Library
 documentation: ug

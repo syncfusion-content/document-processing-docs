@@ -1,6 +1,6 @@
 ---
 title: Content Controls in JavaScript Word | Syncfusion
-description: Learn how to create and edit block, inline, rich text, plain text, check box, date picker, drop-down list, and combo box content controls in a Word document using the Syncfusion JavaScript Word library.
+description: Create and edit rich text, plain text, check box, date picker, drop-down, combo box, block, and inline content controls in Word documents.
 platform: document-processing
 control: Word Library
 documentation: ug
