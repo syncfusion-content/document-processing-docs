@@ -2,7 +2,7 @@
 title: List in JavaScript Word | Syncfusion
 description: Learn how to create and customize numbered and bulleted lists in Word documents using the Syncfusion JavaScript Word library.
 platform: document-processing
-control: DocIO
+control: Word Library
 documentation: UG
 ---
 
@@ -21,36 +21,43 @@ The following example shows how to create a simple bulleted list.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { writeFileSync } from 'node:fs';
-import { Buffer } from 'node:buffer';
-import { Document } from 'docx-js';
-import 'docx-js/numbering';
+import { WordDocument } from '@syncfusion/ej2-docx';
 
-// Create a new Word document
-const doc = Document.create();
+// Creates a new Word document.
+const document = WordDocument.create();
 
-// Add the first bulleted list item
-let paragraph = doc.body.appendParagraph();
-paragraph.listFormat = { listType: 'bullet' };
+// Access section of document.
+const section = document.sections[0];
+
+// Adds the first paragraph at level 0.
+let paragraph = section.body.appendParagraph();
+
+// Applies the default bulleted list style.
+paragraph.listFormat.applyDefBulletStyle();
+
+// Adds text to the first list item.
 paragraph.appendText('List item 1');
 
-// Get the list ID to continue the same list
-const listId = paragraph.listFormat?.listId;
+// Adds the second paragraph.
+paragraph = section.body.appendParagraph();
 
-// Add the second bulleted list item
-paragraph = doc.body.appendParagraph();
-paragraph.listFormat = { listId };
+// Adds text to the second list item.
 paragraph.appendText('List item 2');
 
-// Add the third bulleted list item
-paragraph = doc.body.appendParagraph();
-paragraph.listFormat = { listId };
+// Continues the previously defined bullet list.
+paragraph.listFormat.continueListNumbering();
+
+// Adds the third paragraph.
+paragraph = section.body.appendParagraph();
+
+// Adds text to the third list item.
 paragraph.appendText('List item 3');
 
-// Save the document
-const saveBytes = doc.saveSync();
-writeFileSync('Sample.docx', saveBytes);
+// Continues the previously defined bullet list.
+paragraph.listFormat.continueListNumbering();
 
+// Saves the Word document.
+document.save('Output.docx');
 {% endhighlight %}
 {% endtabs %}
 
@@ -60,36 +67,36 @@ The following example shows how to create a simple numbered list.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { writeFileSync } from 'node:fs';
-import { Buffer } from 'node:buffer';
-import { Document } from 'docx-js';
-import 'docx-js/numbering';
+import { WordDocument } from '@syncfusion/ej2-docx';
 
-// Create a new Word document
-const doc = Document.create();
+// Creates a new Word document.
+const document = WordDocument.create();
+// Access section of document.
+const section = document.sections[0]!;
 
-// Add the first numbered list item
-let paragraph = doc.body.appendParagraph();
-paragraph.listFormat = { listType: 'decimal' };
+// Adds the first paragraph at level 0.
+let paragraph = section.body.appendParagraph();
+// Applies the default numbered list style.
+paragraph.listFormat.applyDefNumberedStyle();
+// Adds text to the first list item.
 paragraph.appendText('List item 1');
 
-// Get the list ID to continue the same list
-const listId = paragraph.listFormat?.listId;
-
-// Add the second numbered list item
-paragraph = doc.body.appendParagraph();
-paragraph.listFormat = { listId };
+// Adds the second paragraph.
+paragraph = section.body.appendParagraph();
+// Adds text to the second list item.
 paragraph.appendText('List item 2');
+// Continues the previously defined list.
+paragraph.listFormat.continueListNumbering();
 
-// Add the third numbered list item
-paragraph = doc.body.appendParagraph();
-paragraph.listFormat = { listId };
+// Adds the third paragraph.
+paragraph = section.body.appendParagraph();
+// Adds text to the third list item.
 paragraph.appendText('List item 3');
+// Continues the previously defined list.
+paragraph.listFormat.continueListNumbering();
 
-// Save the document
-const saveBytes = doc.saveSync();
-writeFileSync('Sample.docx', saveBytes);
-
+// Saves the Word document.
+document.save('Output.docx');
 {% endhighlight %}
 {% endtabs %}
 
@@ -99,35 +106,33 @@ The following example shows how to create a multilevel bulleted list.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { writeFileSync } from 'node:fs';
-import { Document } from 'docx-js';
-import 'docx-js/numbering';
+import { WordDocument } from '@syncfusion/ej2-docx';
 
-// Create a new Word document
-const doc = Document.create();
+// Creates a new Word document.
+const document = WordDocument.create();
 
-// Add a level 0 bulleted list item
-let paragraph = doc.body.appendParagraph();
-paragraph.listFormat = { listType: 'bullet', level: 0 };
+// Access section of document.
+const section = document.sections[0]!;
+
+// Adds the first paragraph at level 0.
+let paragraph = section.body.appendParagraph();
 paragraph.appendText('List item 1 - Level 0');
+paragraph.listFormat.applyDefBulletStyle();
 
-// Get the list ID to continue the same list
-const listId = paragraph.listFormat?.listId;
-
-// Add a level 1 bulleted list item
-paragraph = doc.body.appendParagraph();
-paragraph.listFormat = { listId, level: 1 };
+// Adds the second paragraph and continues the previous list.
+paragraph = section.body.appendParagraph();
 paragraph.appendText('List item 2 - Level 1');
+paragraph.listFormat.continueListNumbering();
+paragraph.listFormat.increaseIndentLevel();
 
-// Add a level 2 bulleted list item
-paragraph = doc.body.appendParagraph();
-paragraph.listFormat = { listId, level: 2 };
+// Adds the third paragraph and continues at the next level.
+paragraph = section.body.appendParagraph();
 paragraph.appendText('List item 3 - Level 2');
+paragraph.listFormat.continueListNumbering();
+paragraph.listFormat.increaseIndentLevel();
 
-// Save the document
-const saveBytes = doc.saveSync();
-writeFileSync('Sample.docx', saveBytes);
-
+// Saves the Word document.
+document.save('Output.docx');
 {% endhighlight %}
 {% endtabs %}
 
@@ -137,77 +142,359 @@ The following example shows how to create a multilevel numbered list.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { writeFileSync } from 'node:fs';
-import { Document } from 'docx-js';
-import 'docx-js/numbering';
+import { WordDocument } from '@syncfusion/ej2-docx';
 
-// Create a new Word document
-const doc = Document.create();
+// Creates a new Word document.
+const document = WordDocument.create();
 
-// Add a level 0 numbered list item
-let paragraph = doc.body.appendParagraph();
-paragraph.listFormat = { listType: 'decimal', level: 0 };
+// Access section of document.
+const section = document.sections[0]!;
+
+// Adds the first paragraph at level 0.
+let paragraph = section.body.appendParagraph();
 paragraph.appendText('List item 1 - Level 0');
+paragraph.listFormat.applyDefNumberedStyle();
 
-// Get the list ID to continue the same list
-const listId = paragraph.listFormat?.listId;
-
-// Add a level 1 numbered list item
-paragraph = doc.body.appendParagraph();
-paragraph.listFormat = { listId, level: 1 };
+// Adds the second paragraph and continues the numbered list.
+paragraph = section.body.appendParagraph();
 paragraph.appendText('List item 2 - Level 1');
+paragraph.listFormat.continueListNumbering();
+paragraph.listFormat.increaseIndentLevel();
 
-// Add a level 2 numbered list item
-paragraph = doc.body.appendParagraph();
-paragraph.listFormat = { listId, level: 2 };
+// Adds the third paragraph and continues at the next level.
+paragraph = section.body.appendParagraph();
 paragraph.appendText('List item 3 - Level 2');
+paragraph.listFormat.continueListNumbering();
+paragraph.listFormat.increaseIndentLevel();
 
-// Save the document
-const saveBytes = doc.saveSync();
-writeFileSync('Sample.docx', saveBytes);
+// Saves the Word document.
+document.save('Output.docx');
+{% endhighlight %}
+{% endtabs %}
 
+## List Number Format
+
+The following example shows how to create numbered list styles with different pattern types and apply them to paragraphs.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { ListPatternType, ListType, WordDocument } from '@syncfusion/ej2-docx';
+
+// Creates a new Word document.
+const document = WordDocument.create();
+
+// --- CardinalText (One, Two, Three, ...) ---
+let listStyle = document.addListStyle(ListType.Numbered, 'CardinalText');
+let levelOne = listStyle.levels.getItem(0);
+levelOne.patternType = ListPatternType.CardinalText;
+levelOne.startAt = 1;
+
+// Access section of document.
+const section = document.sections[0];
+
+let paragraph = section.body.appendParagraph();
+paragraph.appendText('List pattern Cardinal Text');
+
+paragraph = section.body.appendParagraph();
+paragraph.appendText('List item 1');
+paragraph.listFormat.applyStyle('CardinalText');
+
+paragraph = section.body.appendParagraph();
+paragraph.appendText('List item 2');
+paragraph.listFormat.applyStyle('CardinalText');
+paragraph.listFormat.continueListNumbering();
+
+paragraph = section.body.appendParagraph();
+paragraph.appendText('List item 3');
+paragraph.listFormat.applyStyle('CardinalText');
+paragraph.listFormat.continueListNumbering();
+
+section.body.appendParagraph();
+
+// --- HindiLetter1 ---
+listStyle = document.addListStyle(ListType.Numbered, 'HindiLetter1');
+levelOne = listStyle.levels.getItem(0);
+levelOne.patternType = ListPatternType.HindiLetter1;
+levelOne.startAt = 1;
+
+paragraph = section.body.appendParagraph();
+paragraph.appendText('List pattern Hindi Letter');
+
+paragraph = section.body.appendParagraph();
+paragraph.appendText('List item 1');
+paragraph.listFormat.applyStyle('HindiLetter1');
+
+paragraph = section.body.appendParagraph();
+paragraph.appendText('List item 2');
+paragraph.listFormat.applyStyle('HindiLetter1');
+paragraph.listFormat.continueListNumbering();
+
+paragraph = section.body.appendParagraph();
+paragraph.appendText('List item 3');
+paragraph.listFormat.applyStyle('HindiLetter1');
+paragraph.listFormat.continueListNumbering();
+
+section.body.appendParagraph();
+
+// --- Hebrew1 ---
+listStyle = document.addListStyle(ListType.Numbered, 'Hebrew1');
+levelOne = listStyle.levels.getItem(0);
+levelOne.patternType = ListPatternType.Hebrew1;
+levelOne.startAt = 1;
+
+paragraph = section.body.appendParagraph();
+paragraph.appendText('List pattern Hebrew');
+
+paragraph = section.body.appendParagraph();
+paragraph.appendText('List item 1');
+paragraph.listFormat.applyStyle('Hebrew1');
+
+paragraph = section.body.appendParagraph();
+paragraph.appendText('List item 2');
+paragraph.listFormat.applyStyle('Hebrew1');
+paragraph.listFormat.continueListNumbering();
+
+paragraph = section.body.appendParagraph();
+paragraph.appendText('List item 3');
+paragraph.listFormat.applyStyle('Hebrew1');
+paragraph.listFormat.continueListNumbering();
+
+document.save('Output.docx');
+{% endhighlight %}
+{% endtabs %}
+
+## Customize List
+
+The following example shows how to create a custom numbered list style with follow character, prefix, suffix, alignment, and pattern settings.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import {
+  FollowCharacterType,
+  ListNumberAlignment,
+  ListPatternType,
+  ListType,
+  WordDocument,
+} from '@syncfusion/ej2-docx';
+
+// Creates a new Word document
+const document = WordDocument.create();
+
+// Adds new list style to the document
+const listStyle = document.addListStyle(ListType.Numbered, 'UserDefinedList');
+
+const levelOne = listStyle.levels.getItem(0);
+// Defines the follow character, prefix, suffix, start index for level 0
+levelOne.followCharacter = FollowCharacterType.Tab;
+levelOne.numberPrefix = '(';
+levelOne.numberSuffix = ')';
+levelOne.patternType = ListPatternType.RomanLow;
+levelOne.startAt = 1;
+levelOne.tabSpaceAfter = 5;
+levelOne.numberAlignment = ListNumberAlignment.Center;
+
+const levelTwo = listStyle.levels.getItem(1);
+// Defines the follow character, suffix, pattern, start index for level 1
+levelTwo.followCharacter = FollowCharacterType.Tab;
+levelTwo.numberSuffix = '}';
+levelTwo.patternType = ListPatternType.LetterLow;
+levelTwo.startAt = 2;
+
+// Access section of document.
+const section = document.sections[0];
+
+// Adds the first paragraph at level 0.
+let paragraph = section.body.appendParagraph();
+paragraph.appendText('User defined list - Level 0');
+paragraph.listFormat.applyStyle('UserDefinedList');
+
+// Level 1 item: continue prior list, then increase indent
+paragraph = section.body.appendParagraph();
+paragraph.appendText('User defined list - Level 1');
+paragraph.listFormat.continueListNumbering();
+paragraph.listFormat.increaseIndentLevel();
+
+document.save('Output.docx');
 {% endhighlight %}
 {% endtabs %}
 
 ## Change List Levels
 
-You can create multilevel lists by assigning different values to the `level` property of the `listFormat` object. The following example demonstrates how to change list levels within the same numbered list.
+You can change list levels with `increaseIndentLevel()` and `decreaseIndentLevel()`. The following example demonstrates how to change list levels within the same numbered list.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { writeFileSync } from 'node:fs';
-import { Document } from 'docx-js';
-import 'docx-js/numbering';
+import { WordDocument } from '@syncfusion/ej2-docx';
 
-// Create a new Word document
-const doc = Document.create();
+// Creates a new Word document.
+const document = WordDocument.create();
 
-// Add a level 0 numbered list item
-let paragraph = doc.body.appendParagraph();
-paragraph.listFormat = { listType: 'decimal', level: 0 };
+// Access section of document.
+const section = document.sections[0];
+
+// Adds the first paragraph at level 0.
+let paragraph = section.body.appendParagraph();
+
 paragraph.appendText('Multilevel numbered list - Level 0');
+paragraph.listFormat.applyDefNumberedStyle();
 
-// Get the list ID to continue the same list
-const listId = paragraph.listFormat?.listId;
+// Adds the second paragraph at level 1.
+paragraph = section.body.appendParagraph();
 
-// Change to level 1
-paragraph = doc.body.appendParagraph();
-paragraph.listFormat = { listId, level: 1 };
 paragraph.appendText('Multilevel numbered list - Level 1');
+paragraph.listFormat.continueListNumbering();
+paragraph.listFormat.increaseIndentLevel();
 
-// Change back to level 0
-paragraph = doc.body.appendParagraph();
-paragraph.listFormat = { listId, level: 0 };
+// Adds the third paragraph at level 0.
+paragraph = section.body.appendParagraph();
+
 paragraph.appendText('Multilevel numbered list - Level 0');
+paragraph.listFormat.continueListNumbering();
+paragraph.listFormat.decreaseIndentLevel();
 
-// Change again to level 1
-paragraph = doc.body.appendParagraph();
-paragraph.listFormat = { listId, level: 1 };
+// Adds the fourth paragraph at level 1.
+paragraph = section.body.appendParagraph();
+
 paragraph.appendText('Multilevel numbered list - Level 1');
+paragraph.listFormat.continueListNumbering();
+paragraph.listFormat.increaseIndentLevel();
 
-// Save the document
-const saveBytes = doc.saveSync();
-writeFileSync('Sample.docx', saveBytes);
+// Saves the Word document.
+document.save('Output.docx');
+{% endhighlight %}
+{% endtabs %}
 
+## Custom Bulleted List
+
+The following example shows how to create a custom bulleted list style with bullet characters and fonts.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { ListPatternType, ListType, WordDocument } from '@syncfusion/ej2-docx';
+
+// Create a new Word document.
+const document = WordDocument.create();
+
+// Add a new list style to the document.
+const listStyle = document.addListStyle(ListType.Bulleted, 'UserDefinedList');
+
+const levelOne = listStyle.levels.getItem(0);
+// Define the pattern, bullet character, and start index for level 0.
+levelOne.patternType = ListPatternType.Bullet;
+levelOne.bulletCharacter = '*';
+levelOne.startAt = 1;
+
+const levelTwo = listStyle.levels.getItem(1);
+// Define the pattern, bullet character, and start index for level 1.
+levelTwo.patternType = ListPatternType.Bullet;
+levelTwo.bulletCharacter = '\u00A9';
+levelTwo.characterFormat.fontName = 'Wingdings';
+levelTwo.startAt = 1;
+
+const levelThree = listStyle.levels.getItem(2);
+// Define the pattern, bullet character, and start index for level 2.
+levelThree.patternType = ListPatternType.Bullet;
+levelThree.bulletCharacter = '\u0076';
+levelThree.characterFormat.fontName = 'Wingdings';
+levelThree.startAt = 1;
+
+// Access section of document.
+const section = document.sections[0];
+
+// Adds the first paragraph at level 0.
+let paragraph = section.body.appendParagraph();
+paragraph.appendText('User defined list - Level 0');
+paragraph.listFormat.applyStyle('UserDefinedList');
+
+// Level 1
+paragraph = section.body.appendParagraph();
+paragraph.appendText('User defined list - Level 1');
+paragraph.listFormat.continueListNumbering();
+paragraph.listFormat.increaseIndentLevel();
+
+// Level 2
+paragraph = section.body.appendParagraph();
+paragraph.appendText('User defined list - Level 2');
+paragraph.listFormat.continueListNumbering();
+paragraph.listFormat.increaseIndentLevel();
+
+document.save('Output.docx');
+{% endhighlight %}
+{% endtabs %}
+
+## Number List with Prefixes
+
+The following example shows how to create a custom multilevel numbered list that includes previous level numbers in the prefix.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { FollowCharacterType, ListPatternType, ListType, WordDocument } from '@syncfusion/ej2-docx';
+
+// Create a new Word document.
+const document = WordDocument.create();
+
+// Add a new list style to the document.
+const listStyle = document.addListStyle(ListType.Numbered, 'UserDefinedList');
+
+const levelOne = listStyle.levels.getItem(0);
+// Define the follow character, pattern, and start index for level 0.
+levelOne.followCharacter = FollowCharacterType.Nothing;
+levelOne.patternType = ListPatternType.Arabic;
+levelOne.startAt = 1;
+
+const levelTwo = listStyle.levels.getItem(1);
+// Define the follow character, prefix from previous level, pattern, and start index for level 1.
+levelTwo.followCharacter = FollowCharacterType.Nothing;
+levelTwo.numberPrefix = '\u0000.';
+levelTwo.patternType = ListPatternType.Arabic;
+levelTwo.startAt = 1;
+
+const levelThree = listStyle.levels.getItem(2);
+// Define the follow character, prefix from previous level, pattern, and start index for level 2.
+levelThree.followCharacter = FollowCharacterType.Nothing;
+levelThree.numberPrefix = '\u0000.\u0001.';
+levelThree.patternType = ListPatternType.Arabic;
+levelThree.startAt = 1;
+
+// Access section of document.
+const section = document.sections[0];
+
+// Level 0
+let paragraph = section.body.appendParagraph();
+paragraph.appendText('User defined list - Level 0');
+paragraph.listFormat.applyStyle('UserDefinedList');
+
+// Level 1
+paragraph = section.body.appendParagraph();
+paragraph.appendText('User defined list - Level 1');
+paragraph.listFormat.continueListNumbering();
+paragraph.listFormat.increaseIndentLevel();
+
+// Level 2
+paragraph = section.body.appendParagraph();
+paragraph.appendText('User defined list - Level 2');
+paragraph.listFormat.continueListNumbering();
+paragraph.listFormat.increaseIndentLevel();
+
+document.save('Output.docx');
+{% endhighlight %}
+{% endtabs %}
+
+## Get List Value
+
+The following example shows how to get the display string of a list value for a paragraph.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { WordDocument } from '@syncfusion/ej2-docx';
+
+// Load an existing Word document.
+const document = WordDocument.openSync('Template.docx');
+
+// Get the string that represents the appearance of the list value of the last paragraph.
+const listString = document.lastParagraph.listString;
+console.log('listString:', JSON.stringify(listString));
+
+document.save('Output.docx');
 {% endhighlight %}
 {% endtabs %}

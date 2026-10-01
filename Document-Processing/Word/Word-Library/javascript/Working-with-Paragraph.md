@@ -1,12 +1,12 @@
 ---
 title: Paragraphs in JavaScript Word | Syncfusion
-description: Learn how to work with paragraphs, lists, and child elements of paragraphs in a Word document using the JavaScript Word library.
+description: Learn how to work with paragraphs, paragraph formatting, text runs, styles, and tab stops in a Word document using the Syncfusion JavaScript Word library.
 platform: document-processing
-control: DocIO
+control: Word Library
 documentation: UG
 ---
 
-# Paragraphs in JavaScript Word
+# Paragraphs in JavaScript Word Library
 
 Paragraph is the basic element in a Word document that contains textual and graphical content. Each paragraph has its own formatting such as line spacing, alignment, indentation, and more. Within a paragraph, the contents are represented by one or more child elements.
 
@@ -26,99 +26,96 @@ The following elements can be the child elements of a paragraph:
 * Form Fields
 * Bookmarks
 
+## Add a new paragraph
+
 The following code example shows how to add a new paragraph.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { writeFileSync } from 'node:fs';
-import { Buffer } from 'node:buffer';
-import { Document } from 'docx-js';
+import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Create a new document
-const doc = Document.create();
+const document = WordDocument.create();
+const section = document.sections[0];
 // Add a paragraph and append text to it
-doc.body.appendParagraph().appendText('Adding new paragraph to the document');
+const paragraph = section.body.appendParagraph();
+paragraph.appendText('Adding new paragraph to the document');
 
 // Save the document
-const saveBytes = doc.saveSync();
-writeFileSync('Sample.docx', Buffer.from(saveBytes));
+await document.save('Sample.docx');
 {% endhighlight %}
 {% endtabs %}
+
+## Modify an existing paragraph
 
 The following code example shows how to modify an existing paragraph.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { readFileSync, writeFileSync } from 'node:fs';
-import { Buffer } from 'node:buffer';
-import { Document } from 'docx-js';
+import { readFileSync } from 'node:fs';
+import { TextRange, WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing document
 const bytes = readFileSync('Input.docx');
-const doc = Document.loadSync(new Uint8Array(bytes));
+const document = WordDocument.openSync(new Uint8Array(bytes));
 
-// Get the document body items
-const items = doc.body.items;
-// Modify the first paragraph
-if (items[0].type === 'paragraph') {
-    for (const childItem of items[0].paragraph.items) {
-        if (childItem.type === 'run') {
-            // Apply bold formatting to the text run
-            childItem.run.bold = true;
-            break;
-        }
+const section = document.sections[0];
+const paragraph = section.body.paragraphs[0];
+
+// Apply bold formatting to the first text range
+for (const item of paragraph.items) {
+    if (item instanceof TextRange) {
+        item.characterFormat.bold = true;
+        break;
     }
 }
 
 // Save the document
-const saveBytes = doc.saveSync();
-writeFileSync('Sample.docx', Buffer.from(saveBytes));
+document.save('Sample.docx');
 {% endhighlight %}
 {% endtabs %}
 
 ## Applying paragraph formatting
 
-As in Microsoft Word, the Word library provides support for all paragraph formatting options such as line spacing, indentation, spacing before and after, keep with next, and more.
+As in Microsoft Word, the Word library provides support for paragraph formatting options such as line spacing, indentation, spacing before and after, keep with next, and more.
 
 The following code example shows how to apply formatting to a paragraph.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { readFileSync, writeFileSync } from 'node:fs';
-import { Buffer } from 'node:buffer';
-import {
-    Document,
-    ParagraphAlignment,
-    Pt
-} from 'docx-js';
+import { readFileSync } from 'node:fs';
+import { Color, Paragraph, ParagraphAlignment, WordDocument } from '@syncfusion/ej2-docx';
 
 // Load the document
 const bytes = readFileSync('Input.docx');
-const doc = Document.loadSync(new Uint8Array(bytes));
-const items = doc.body.items;
+const document = WordDocument.openSync(new Uint8Array(bytes));
+const bodyItems = document.sections[0].body.items;
 
 // Apply spacing, indentation, shading, and alignment to paragraph 5 (index 4)
-if (items[4]?.type === 'paragraph') {
-    const paragraph = items[4].paragraph;
-    paragraph.spacing = { before: Pt(18), after: Pt(18), lineSpacing: Pt(10) };
-    paragraph.indentation = { firstLine: Pt(10) };
-    paragraph.paragraphShading = { backgroundColor: 'D3D3D3' };
-    paragraph.alignment = ParagraphAlignment.End;
-}
-
-// Keep paragraph 8 (index 7) lines together
-if (items[7]?.type === 'paragraph') {
-    items[7].paragraph.keepLines = true;
+const paragraph5 = bodyItems[4];
+if (paragraph5 instanceof Paragraph) {
+    paragraph5.paragraphFormat.beforeSpacing = 18;
+    paragraph5.paragraphFormat.afterSpacing = 18;
+    paragraph5.paragraphFormat.lineSpacing = 10;
+    paragraph5.paragraphFormat.firstLineIndent = 10;
+    paragraph5.paragraphFormat.backColor = Color.LightGray;
+    paragraph5.paragraphFormat.horizontalAlignment = ParagraphAlignment.Right;
 }
 
 // Keep paragraph 7 (index 6) with the next paragraph
-if (items[6]?.type === 'paragraph') {
-    items[6].paragraph.keepNext = true;
+const paragraph7 = bodyItems[6];
+if (paragraph7 instanceof Paragraph) {
+    paragraph7.paragraphFormat.keepFollow = true;
+}
+
+// Keep paragraph 8 (index 7) lines together
+const paragraph8 = bodyItems[7];
+if (paragraph8 instanceof Paragraph) {
+    paragraph8.paragraphFormat.keepLines = true;
 }
 
 // Save the document
-const saveBytes = doc.saveSync();
-writeFileSync('Sample.docx', Buffer.from(saveBytes));
+document.save('Sample.docx');
 {% endhighlight %}
 {% endtabs %}
 
@@ -132,26 +129,24 @@ The following code example shows how to add tab stops to a paragraph.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { writeFileSync } from 'node:fs';
-import { Buffer } from 'node:buffer';
-import { Document, Pt } from 'docx-js';
+import { TabJustification, TabLeader, WordDocument } from '@syncfusion/ej2-docx';
 
 // Create a new document and add a paragraph
-const doc = Document.create();
-const paragraph = doc.body.appendParagraph();
+const document = WordDocument.create();
+const paragraph = document.sections[0].body.appendParagraph();
 
 // Add tab stops to the paragraph
-paragraph.tabStops = [
-    { position: Pt(11), alignment: 'left', leader: 'dot' },
-    { position: Pt(62), alignment: 'left', leader: 'hyphen' }
-];
+paragraph.paragraphFormat.tabs.addTab(11, TabJustification.Left, TabLeader.Dot);
+paragraph.paragraphFormat.tabs.addTab(62, TabJustification.Left, TabLeader.Single);
 
 // Add text that uses the tab stops
-paragraph.appendText('This sample illustrates the use of tabs in the paragraph. Tabs can be inserted or removed from the paragraph.');
+paragraph.appendText('This sample\t illustrates the use of tabs in the paragraph. Tabs\t can be inserted or removed from the paragraph.');
+
+// Optionally remove a tab stop by position
+paragraph.paragraphFormat.tabs.removeByPosition(11);
 
 // Save the document
-const saveBytes = doc.saveSync();
-writeFileSync('Sample.docx', Buffer.from(saveBytes));
+document.save('Sample.docx');
 {% endhighlight %}
 {% endtabs %}
 
@@ -162,93 +157,187 @@ You can set the RTL (right-to-left) direction for a paragraph in a Word document
 The following code example shows how to set the RTL (right-to-left) direction for a paragraph in a Word document.
 
 {% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-import { readFileSync, writeFileSync } from 'node:fs';
-import { Buffer } from 'node:buffer';
-import { Document } from 'docx-js';
+{% highlight typescript tabtitle="TypeScript" %}import { readFileSync } from 'node:fs';
+import { Paragraph, WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing document
 const bytes = readFileSync('Template.docx');
-const doc = Document.loadSync(new Uint8Array(bytes));
+const document = WordDocument.openSync(new Uint8Array(bytes));
 
-// Get the document body items
-const items = doc.body.items;
-// Access the second paragraph (index 1)
-if (items[1]?.type === 'paragraph') {
-    const paragraph = items[1].paragraph;
-    // Check whether the paragraph direction is already RTL
-    const isRTL = paragraph.bidi;
-    // Set RTL if it is not already enabled
-    if (!isRTL) {
-        paragraph.bidi = true;
-    }
+// Access the second body item (index 1)
+const paragraph = document.sections[0].body.items[1];
+const isRTL = paragraph.paragraphFormat.bidi; 
+
+if (!isRTL) { 
+paragraph.paragraphFormat.bidi = true; 
+
+} 
+
+// Save the document
+await document.save('Sample.docx');
+{% endhighlight %}
+{% endtabs %}
+
+## Working with styles
+
+Styles define reusable character and paragraph formatting. You can access built-in styles, create custom paragraph styles, apply styles to paragraphs, and remove styles from a document.
+
+### Access styles
+
+The following code example shows how to access a style and modify its formatting.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { readFileSync } from 'node:fs';
+import { Color, ParagraphStyle, WordDocument } from '@syncfusion/ej2-docx';
+
+// Load an existing Word document
+const bytes = readFileSync('Input_AccessStyle_Template.docx');
+const document = WordDocument.openSync(new Uint8Array(bytes));
+
+const styles = document.styles;
+const style = styles.findByName('Heading1');
+if (style instanceof ParagraphStyle) {
+    style.characterFormat.textColor = Color.DarkBlue;
+    style.paragraphFormat.firstLineIndent = 36;
 }
 
 // Save the document
-const saveBytes = doc.saveSync();
-writeFileSync('Sample.docx', Buffer.from(saveBytes));
+document.save('Output.docx');
+{% endhighlight %}
+{% endtabs %}
+
+### Creating a new paragraph style
+
+The following code example shows how to create a custom paragraph style and apply it.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { readFileSync } from 'node:fs';
+import { Color, ParagraphAlignment, WordDocument } from '@syncfusion/ej2-docx';
+
+// Load an existing Word document
+const bytes = readFileSync('Template.docx');
+const document = WordDocument.openSync(new Uint8Array(bytes));
+
+// Create a custom paragraph style
+const myStyle = document.styles.addParagraphStyle('MyStyle');
+myStyle.characterFormat.fontSize = 16;
+myStyle.characterFormat.textColor = Color.DarkBlue;
+myStyle.paragraphFormat.horizontalAlignment = ParagraphAlignment.Right;
+
+// Append content to the last paragraph
+document.lastParagraph.appendText(
+    'AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.'
+);
+
+// Apply the style to the paragraph
+document.lastParagraph.applyStyle('MyStyle');
+
+// Save the document
+document.save('Output.docx');
+{% endhighlight %}
+{% endtabs %}
+
+### Applying built-in styles
+
+The following code example shows how to apply a built-in style to a paragraph.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { readFileSync } from 'node:fs';
+import { WordDocument } from '@syncfusion/ej2-docx';
+
+// Load an existing Word document
+const bytes = readFileSync('Input_Emphasis_Template.docx');
+const document = WordDocument.openSync(new Uint8Array(bytes));
+
+// Apply the built-in Emphasis style
+document.lastParagraph.applyStyle('Emphasis');
+
+// Save the document
+document.save('Output.docx');
+{% endhighlight %}
+{% endtabs %}
+
+### Remove styles
+
+The following code example shows how to remove a style from a document.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { readFileSync } from 'node:fs';
+import { ParagraphStyle, WordDocument } from '@syncfusion/ej2-docx';
+
+// Load an existing Word document
+const bytes = readFileSync('Template.docx');
+const document = WordDocument.openSync(new Uint8Array(bytes));
+
+const styles = document.styles;
+const style = styles.findByName('Style1');
+if (style instanceof ParagraphStyle) {
+    style.remove();
+}
+
+// Save the document
+document.save('Output.docx');
 {% endhighlight %}
 {% endtabs %}
 
 ## Working with text
 
-Text within a paragraph is represented by one or more text runs. Each text run can have its own font and text formatting.
+Text within a paragraph is represented by one or more text ranges. Each text range can have its own font and text formatting.
 
 The following code example shows how to append text to a paragraph.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { writeFileSync } from 'node:fs';
-import { Buffer } from 'node:buffer';
-import { Document, Pt } from 'docx-js';
+import { Color, WordDocument } from '@syncfusion/ej2-docx';
 
 // Create a new document and add a paragraph
-const doc = Document.create();
-const paragraph = doc.body.appendParagraph();
+const document = WordDocument.create();
+const paragraph = document.sections[0].body.appendParagraph();
 
-// Add text and get the created text run
+// Add text and get the created text range
 const text = paragraph.appendText('A new text is added to the paragraph.');
 
-// Apply character formatting to the text run
-text.fontSize = Pt(14);
-text.bold = true;
-text.color = { value: '008000' };
+// Apply character formatting to the text range
+text.characterFormat.fontSize = 14;
+text.characterFormat.bold = true;
+text.characterFormat.textColor = Color.Green;
 
 // Save the document
-const saveBytes = doc.saveSync();
-writeFileSync('Sample.docx', Buffer.from(saveBytes));
+document.save('Sample.docx');
 {% endhighlight %}
 {% endtabs %}
 
 Text in a paragraph can be modified or replaced with new text by iterating through the paragraph items.
 
-The following code example shows how to replace the text of a text run.
+The following code example shows how to replace the text of a text range.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { readFileSync, writeFileSync } from 'node:fs';
-import { Buffer } from 'node:buffer';
-import { Document, Pt } from 'docx-js';
+import { readFileSync } from 'node:fs';
+import { Paragraph, TextRange, WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing document
 const bytes = readFileSync('Template.docx');
-const doc = Document.loadSync(new Uint8Array(bytes));
+const document = WordDocument.openSync(new Uint8Array(bytes));
 
-// Modify the first text run of the paragraph
-if (doc.body.items[3].type === 'paragraph') {
-    const paragraph = doc.body.items[3].paragraph;
-    for (const item of paragraph.items) {
-        if (item.type === 'run') {
-            item.run.text = 'First text range of the last paragraph is replaced';
-            item.run.fontSize = Pt(14);
+// Modify the first text range of the paragraph at body index 3
+const block = document.sections[0].body.items[3];
+if (block instanceof Paragraph) {
+    for (const item of block.items) {
+        if (item instanceof TextRange) {
+            item.text = 'First text range of the last paragraph is replaced';
+            item.characterFormat.fontSize = 14;
             break;
         }
     }
 }
 
 // Save the document
-const saveBytes = doc.saveSync();
-writeFileSync('Sample.docx', Buffer.from(saveBytes));
+document.save('Sample.docx');
 {% endhighlight %}
 {% endtabs %}
 
@@ -270,52 +359,50 @@ The following code example shows how to apply formatting to text.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { writeFileSync } from 'node:fs';
-import { Buffer } from 'node:buffer';
 import {
-    Document,
-    Pt,
-    BreakType
-} from 'docx-js';
+    Color,
+    SubSuperScript,
+    UnderlineStyle,
+    WordDocument
+} from '@syncfusion/ej2-docx';
 
 // Create a new document and add the first paragraph
-const doc = Document.create();
-const firstParagraph = doc.body.appendParagraph();
+const document = WordDocument.create();
+const firstParagraph = document.sections[0].body.appendParagraph();
 
 // Add the first text range and apply formatting
 const firstText = firstParagraph.appendText('This is the first text range. ');
-firstText.bold = true;
-firstText.fontSize = Pt(14);
-firstText.shadow = true;
-firstText.smallCaps = true;
+firstText.characterFormat.bold = true;
+firstText.characterFormat.fontSize = 14;
+firstText.characterFormat.shadow = true;
+firstText.characterFormat.smallCaps = true;
 
 // Add the second text range and apply formatting
 const secondText = firstParagraph.appendText('This is the second text range');
-secondText.highlight = 'green';
-secondText.underline = { style: 'dotDash' };
-secondText.italic = true;
-secondText.fonts = { ascii: 'Times New Roman', hAnsi: 'Times New Roman' };
-secondText.color = { value: '008000' };
+secondText.characterFormat.highlightColor = Color.Green;
+secondText.characterFormat.underlineStyle = UnderlineStyle.DotDash;
+secondText.characterFormat.italic = true;
+secondText.characterFormat.fontName = 'Times New Roman';
+secondText.characterFormat.textColor = Color.Green;
 
 // Add the second paragraph with RTL text formatting
-const secondParagraph = doc.body.appendParagraph();
+const secondParagraph = document.sections[0].body.appendParagraph();
 const thirdText = secondParagraph.appendText('שלום עולם');
-thirdText.language = { bidi: 'he-IL' };
+thirdText.characterFormat.bidi = true;
 
 // Add the third paragraph and apply superscript formatting
-const thirdParagraph = doc.body.appendParagraph();
+const thirdParagraph = document.sections[0].body.appendParagraph();
 thirdParagraph.appendText('X');
 const fifthText = thirdParagraph.appendText('2');
-fifthText.verticalAlignment = 'superscript';
+fifthText.characterFormat.subSuperScript = SubSuperScript.SuperScript;
 
 // Add the fourth paragraph and apply subscript formatting
-const fourthParagraph = doc.body.appendParagraph();
+const fourthParagraph = document.sections[0].body.appendParagraph();
 fourthParagraph.appendText('m');
 const seventhText = fourthParagraph.appendText('3');
-seventhText.verticalAlignment = 'subscript';
+seventhText.characterFormat.subSuperScript = SubSuperScript.SubScript;
 
 // Save the document
-const saveBytes = doc.saveSync();
-writeFileSync('Sample.docx', Buffer.from(saveBytes));
+document.save('Sample.docx');
 {% endhighlight %}
 {% endtabs %}
