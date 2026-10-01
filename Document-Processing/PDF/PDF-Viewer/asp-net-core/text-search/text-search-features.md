@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The text search feature in the ASP.NET Core PDF Viewer locates and highlights matching content within a document. Toggle the feature using the [`enableTextSearch`](https://help.syncfusion.com/cr/aspnetcore-js/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_EnableTextSearch) property (default: `true`), as shown in the snippet below.
 
-![Text Search](../images/textSearch.gif)
+![Text Search](../../javascript-es6/images/textSearch.gif)
 
 N> The text search functionality is built into the EJ2 PDF Viewer component for ASP.NET Core. Ensure that the PDF Viewer is properly initialized with the required services and that the search feature is enabled.
 
@@ -34,7 +34,7 @@ After typing in the search box, the popup lists relevant matches. Selecting an i
 
 Dynamic text search is enabled during the initial loading of the document when the document text collection has not yet been fully loaded in the background.
 
-![Dynamic text search in progress](../images/dynamic-textSearch.gif)
+![Dynamic text search in progress](../../javascript-es6/images/dynamic-textSearch.gif)
 
 ### Search text with the Match Case option
 
