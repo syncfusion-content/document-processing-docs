@@ -7,7 +7,9 @@ documentation: ug
 keywords: javascript, word, iterate, sections, paragraphs, tables, content controls
 ---
 
-# Iterating Word document elements in JavaScript Word Library
+# Word document in JavaScript Word Library
+
+## Iterating Word document elements in JavaScript Word Library
 
 Iterating Word document elements lets you walk every section, body item, table, and paragraph item in a document. The JavaScript Word library exposes a strongly-typed object model that you can traverse recursively to read, modify, or remove content based on its type, style, or value.
 
@@ -22,7 +24,7 @@ A Word document is a tree of text bodies. The following element types are encoun
 
 The following examples use `@syncfusion/ej2-docx` to walk the document and apply changes at each level. Each helper is shown in its own tab so it can be copied independently.
 
-## Remove paragraph with style
+### Remove paragraph with style
 
 The following example shows how to iterate through the document and remove any paragraph that uses a particular style. The traversal walks every section, the section body, the odd header, and the odd footer, and forwards table cells and block content controls to the same traversal.
 
@@ -122,7 +124,7 @@ function iterateParagraph(paraItems: ParagraphItemCollection) {
 {% endhighlight %}
 {% endtabs %}
 
-## Modify hyperlink URI
+### Modify hyperlink URI
 
 The following example extends the previous traversal to also iterate through paragraph items and modify the `Hyperlink` URI as well as the displayed text of a `TextRange`. The same `iterateTextBody` and `iterateTable` helpers are reused; only `iterateParagraph` is expanded to handle `Field`, `Shape`, and `InlineContentControl`.
 
