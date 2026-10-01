@@ -157,7 +157,8 @@ You can set the RTL (right-to-left) direction for a paragraph in a Word document
 The following code example shows how to set the RTL (right-to-left) direction for a paragraph in a Word document.
 
 {% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}import { readFileSync } from 'node:fs';
+{% highlight typescript tabtitle="TypeScript" %}
+import { readFileSync } from 'node:fs';
 import { Paragraph, WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing document
