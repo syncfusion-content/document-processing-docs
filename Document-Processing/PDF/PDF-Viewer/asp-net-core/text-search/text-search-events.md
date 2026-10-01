@@ -153,7 +153,7 @@ The following code snippet demonstrates how to handle all three text search even
 {% endhighlight %}
 {% endtabs %}
 
-[View Sample in GitHub](https://github.com/SyncfusionExamples/ej2-aspnetcore-pdf-viewer-examples)
+[View Sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples)
 
 ## See Also
 
