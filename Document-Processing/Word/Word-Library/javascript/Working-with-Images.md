@@ -23,7 +23,7 @@ import { WordDocument } from '@syncfusion/ej2-docx';
 // Create a new Word document
 let document = WordDocument.create();
 // Access the first section
-let section = document.sections[0]!;
+let section = document.sections[0];
 // Add a new paragraph to the section
 let firstParagraph = section.body.appendParagraph();
 
@@ -56,7 +56,7 @@ import { EntityType, WordDocument, Picture } from '@syncfusion/ej2-docx';
 let document = WordDocument.openSync('Template.docx');
 
 // Get the body of the first section
-let textBody = document.sections[0]!.body;
+let textBody = document.sections[0].body;
 
 // Iterate through all paragraphs in the text body
 for (let paragraph of textBody.paragraphs) {
@@ -99,7 +99,7 @@ import { EntityType, WordDocument } from '@syncfusion/ej2-docx';
 let document = WordDocument.openSync('Template.docx');
 
 // Get the body of the first section
-let textBody = document.sections[0]!.body;
+let textBody = document.sections[0].body;
 
 // Iterate through all paragraphs in the section body
 for (let paragraph of textBody.paragraphs) {
@@ -140,7 +140,7 @@ import { WordDocument,
 // Create a new Word document
 let document = WordDocument.create();
 // WordDocument.create() already seeds section 0
-let section = document.sections[0]!;
+let section = document.sections[0];
 // Add a new paragraph to the section
 let paragraph = section.body.appendParagraph();
 paragraph.appendText('This paragraph has picture. ');
@@ -191,7 +191,7 @@ import { EntityType, WordDocument, Picture } from '@syncfusion/ej2-docx';
 // Load an existing Word document
 let document = WordDocument.openSync('Template.docx');
 
-let textBody = document.sections[0]!.body;
+let textBody = document.sections[0].body;
 
 // Iterate paragraphs in the body
 for (let paragraph of textBody.paragraphs) {
@@ -233,7 +233,7 @@ import { WordDocument, CaptionNumberingFormat,
 let document = WordDocument.create();
 
 // Get the first section in the document
-let section = document.sections[0]!;
+let section = document.sections[0];
 
 // Append a new paragraph to the section body
 let firstParagraph = section.body.appendParagraph();

@@ -72,7 +72,7 @@ import { WordDocument } from '@syncfusion/ej2-docx';
 // Creates a new Word document.
 let document = WordDocument.create();
 // Access section of document.
-let section = document.sections[0]!;
+let section = document.sections[0];
 
 // Adds the first paragraph at level 0.
 let paragraph = section.body.appendParagraph();
@@ -112,7 +112,7 @@ import { WordDocument } from '@syncfusion/ej2-docx';
 let document = WordDocument.create();
 
 // Access section of document.
-let section = document.sections[0]!;
+let section = document.sections[0];
 
 // Adds the first paragraph at level 0.
 let paragraph = section.body.appendParagraph();
@@ -148,7 +148,7 @@ import { WordDocument } from '@syncfusion/ej2-docx';
 let document = WordDocument.create();
 
 // Access section of document.
-let section = document.sections[0]!;
+let section = document.sections[0];
 
 // Adds the first paragraph at level 0.
 let paragraph = section.body.appendParagraph();

@@ -21,7 +21,7 @@ import { BreakType, Color, WordDocument, AutoShapeType } from '@syncfusion/ej2-d
 // Create a new Word document
 let document = WordDocument.create();
 // Access section
-let section = document.sections[0]!;
+let section = document.sections[0];
 // Add a rounded rectangle shape
 let rectangleParagraph = section.body.appendParagraph();
 let rectangle = rectangleParagraph.appendShape(
@@ -43,7 +43,7 @@ rectangleText.characterFormat.textColor = Color.Green;
 rectangleText.characterFormat.bold = true;
 
 // Add a pentagon shape in the first section body
-let pentagonParagraph = document.sections[0]!.body.appendParagraph();
+let pentagonParagraph = document.sections[0].body.appendParagraph();
 pentagonParagraph.appendBreak(BreakType.LineBreak);
 
 let pentagon = pentagonParagraph.appendShape(AutoShapeType.Pentagon, 100, 100);
@@ -79,7 +79,7 @@ import { Color, WordDocument, AutoShapeType,
 // Create a new Word document
 let document = WordDocument.create();
 // Access section
-let section = document.sections[0]!;
+let section = document.sections[0];
 // Add a rounded rectangle shape
 let paragraph = section.body.appendParagraph();
 let rectangle = paragraph.appendShape(
@@ -140,7 +140,7 @@ import { WordDocument, AutoShapeType } from '@syncfusion/ej2-docx';
 // Create a new Word document
 let document = WordDocument.create();
 // Access section
-let section = document.sections[0]!;
+let section = document.sections[0];
 // Add a rounded rectangle shape
 let paragraph = section.body.appendParagraph();
 let rectangle = paragraph.appendShape(

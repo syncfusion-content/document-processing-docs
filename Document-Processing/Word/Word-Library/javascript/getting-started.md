@@ -73,7 +73,7 @@ export default function App() {
 
     // Creates a Word document.
     let document = WordDocument.create();
-    let section = document.sections[0]!;
+    let section = document.sections[0];
  
     // Add paragraph
     let paragraph = section.body.appendParagraph();

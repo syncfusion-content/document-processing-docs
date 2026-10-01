@@ -19,7 +19,7 @@ import { WordDocument } from '@syncfusion/ej2-docx';
 let document = WordDocument.create();
 
 // Access first section
-let section = document.sections[0]!;
+let section = document.sections[0];
 
 // Add new paragraph to section
 let firstParagraph = section.body.appendParagraph();
@@ -104,7 +104,7 @@ import { WordDocument } from '@syncfusion/ej2-docx';
 let document = WordDocument.openSync(bytes);
 
 // Access first section
-let section = document.sections[0]!;
+let section = document.sections[0];
 
 // Add new paragraph to section
 let firstParagraph = section.body.appendParagraph();
@@ -128,7 +128,7 @@ import { WordDocument } from '@syncfusion/ej2-docx';
 let document = WordDocument.create();
 
 // Access first section
-let section = document.sections[0]!;
+let section = document.sections[0];
 
 // Add new paragraph to section
 let firstParagraph = section.body.appendParagraph();
@@ -182,7 +182,7 @@ import { WordDocument } from '@syncfusion/ej2-docx';
 let document = WordDocument.create();
 
 // Access first section
-let section = document.sections[0]!;
+let section = document.sections[0];
 
 // Add new paragraph to section
 let firstParagraph = section.body.appendParagraph();
@@ -209,7 +209,7 @@ import { WordDocument } from '@syncfusion/ej2-docx';
 let document = WordDocument.create();
 
 // Access first section
-let section = document.sections[0]!;
+let section = document.sections[0];
 
 // Add new paragraph to section
 let firstParagraph = section.body.appendParagraph();

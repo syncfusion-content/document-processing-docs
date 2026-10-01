@@ -27,14 +27,14 @@ let table = section.body.appendTable();
 table.resetCells(3, 2);
 
 // Header row
-table.rows[0]!.cells[0]!.appendParagraph().appendText('Item');
-table.rows[0]!.cells[1]!.appendParagraph().appendText('Price($)');
+table.rows[0].cells[0].appendParagraph().appendText('Item');
+table.rows[0].cells[1].appendParagraph().appendText('Price($)');
 
 // Data rows
-table.rows[1]!.cells[0]!.appendParagraph().appendText('Apple');
-table.rows[1]!.cells[1]!.appendParagraph().appendText('50');
-table.rows[2]!.cells[0]!.appendParagraph().appendText('Orange');
-table.rows[2]!.cells[1]!.appendParagraph().appendText('30');
+table.rows[1].cells[0].appendParagraph().appendText('Apple');
+table.rows[1].cells[1].appendParagraph().appendText('50');
+table.rows[2].cells[0].appendParagraph().appendText('Orange');
+table.rows[2].cells[1].appendParagraph().appendText('30');
 
 // Save the document
 document.save('Sample.docx');
@@ -60,10 +60,10 @@ section.body.appendParagraph();
 let table = section.body.appendTable();
 table.resetCells(1, 2);
 
-table.rows[0]!.cells[0]!.width = 200;
-table.rows[0]!.cells[0]!.appendParagraph().appendText('Item');
-table.rows[0]!.cells[1]!.width = 200;
-table.rows[0]!.cells[1]!.appendParagraph().appendText('Price($)');
+table.rows[0].cells[0].width = 200;
+table.rows[0].cells[0].appendParagraph().appendText('Item');
+table.rows[0].cells[1].width = 200;
+table.rows[0].cells[1].appendParagraph().appendText('Price($)');
 
 // Add the remaining rows dynamically
 let fruits: Array<[string, string]> = [
@@ -75,10 +75,10 @@ let fruits: Array<[string, string]> = [
 
 for (let [name, price] of fruits) {
     let row = table.appendRow();
-    row.cells[0]!.width = 200;
-    row.cells[0]!.appendParagraph().appendText(name);
-    row.cells[1]!.width = 200;
-    row.cells[1]!.appendParagraph().appendText(price);
+    row.cells[0].width = 200;
+    row.cells[0].appendParagraph().appendText(name);
+    row.cells[1].width = 200;
+    row.cells[1].appendParagraph().appendText(price);
 }
 
 // Save the document
@@ -105,37 +105,37 @@ document.lastParagraph.appendText('Price Details');
 let table = section.body.appendTable();
 table.resetCells(3, 2);
 
-table.rows[0]!.cells[0]!.appendParagraph().appendText('Item');
-table.rows[0]!.cells[1]!.appendParagraph().appendText('Price($)');
-table.rows[1]!.cells[0]!.appendParagraph().appendText('Items with same price');
+table.rows[0].cells[0].appendParagraph().appendText('Item');
+table.rows[0].cells[1].appendParagraph().appendText('Price($)');
+table.rows[1].cells[0].appendParagraph().appendText('Items with same price');
 
 // Add a nested table into the cell (second row, first cell)
-let nestTable = table.rows[1]!.cells[0]!.appendTable();
+let nestTable = table.rows[1].cells[0].appendTable();
 
 // Create the specified number of rows and columns for the nested table
 nestTable.resetCells(3, 1);
 
 // Nested table cell (first row, first cell)
-let nestedCell = nestTable.rows[0]!.cells[0];
-nestedCell!.width = 200;
-nestedCell!.appendParagraph().appendText('Apple');
+let nestedCell = nestTable.rows[0].cells[0];
+nestedCell.width = 200;
+nestedCell.appendParagraph().appendText('Apple');
 
 // Nested table cell (second row, first cell)
-nestedCell = nestTable.rows[1]!.cells[0];
-nestedCell!.width = 200;
-nestedCell!.appendParagraph().appendText('Orange');
+nestedCell = nestTable.rows[1].cells[0];
+nestedCell.width = 200;
+nestedCell.appendParagraph().appendText('Orange');
 
 // Nested table cell (third row, first cell)
-nestedCell = nestTable.rows[2]!.cells[0];
-nestedCell!.width = 200;
-nestedCell!.appendParagraph().appendText('Mango');
+nestedCell = nestTable.rows[2].cells[0];
+nestedCell.width = 200;
+nestedCell.appendParagraph().appendText('Mango');
 
 // Parent table cell (second row, second cell)
-nestedCell = table.rows[1]!.cells[1];
-nestedCell!.appendParagraph().appendText('85');
+nestedCell = table.rows[1].cells[1];
+nestedCell.appendParagraph().appendText('85');
 
-table.rows[2]!.cells[0]!.appendParagraph().appendText('Pomegranate');
-table.rows[2]!.cells[1]!.appendParagraph().appendText('70');
+table.rows[2].cells[0].appendParagraph().appendText('Pomegranate');
+table.rows[2].cells[1].appendParagraph().appendText('70');
 
 // Save the document
 document.save('Output.docx');
@@ -160,13 +160,13 @@ let section = document.lastSection;
 let table = section.body.appendTable();
 table.resetCells(2, 2);
 
-table.rows[0]!.cells[0]!.appendParagraph().appendText('Product Name');
-table.rows[0]!.cells[1]!.appendParagraph().appendText('Product Image');
-table.rows[1]!.cells[0]!.appendParagraph().appendText('Apple Juice');
+table.rows[0].cells[0].appendParagraph().appendText('Product Name');
+table.rows[0].cells[1].appendParagraph().appendText('Product Image');
+table.rows[1].cells[0].appendParagraph().appendText('Apple Juice');
 
 // Insert an image into the cell (second row, second cell)
 let imageBytes = new Uint8Array(readFileSync('Image.png'));
-let picture = table.rows[1]!.cells[1]!.appendParagraph().appendImage(imageBytes);
+let picture = table.rows[1].cells[1].appendParagraph().appendImage(imageBytes);
 picture.height = 75;
 picture.width = 60;
 
@@ -187,7 +187,7 @@ import { BorderStyle, Color, Table, TableCellVerticalAlignment, TableRow, TableR
 let document = WordDocument.openSync('Template.docx');
 
 // Access the first section
-let section = document.sections[0]!;
+let section = document.sections[0];
 // Access the first table
 let table = section.tables[0] as Table;
 // Specify the title for the table
@@ -219,7 +219,7 @@ row.height = 20;
 // Specify row height type
 row.heightType = TableRowHeightRule.AtLeast;
 // Apply vertical alignment to cells in the first row
-for (let cell of table.rows[0]!.cells) {
+for (let cell of table.rows[0].cells) {
     cell.cellFormat.verticalAlignment = TableCellVerticalAlignment.Center;
 }
 // Save the document
@@ -238,7 +238,7 @@ import { AutoFitType, Table, TableRowHeightRule, WordDocument } from '@syncfusio
 // Load an existing Word document
 let document = WordDocument.openSync('Template.docx');
 // Access the first section
-let section = document.sections[0]!;
+let section = document.sections[0];
 // Access the first table and resize it to fit its contents
 let table = section.tables[0] as Table;
 table.autoFit(AutoFitType.FitToContent);
@@ -249,7 +249,7 @@ table.autoFit(AutoFitType.FitToWindow);
 table = section.tables[2] as Table;
 table.autoFit(AutoFitType.FixedColumnWidth);
 // Specify row height type
-table.rows[0]!.heightType = TableRowHeightRule.AtLeast;
+table.rows[0].heightType = TableRowHeightRule.AtLeast;
 // Save the document
 document.save('Output.docx');
 {% endhighlight %}
@@ -266,7 +266,7 @@ import { BuiltinTableStyle, Table, WordDocument } from '@syncfusion/ej2-docx';
 // Load an existing Word document
 let document = WordDocument.openSync('Template.docx');
 // Access the first section
-let section = document.sections[0]!;
+let section = document.sections[0];
 // Access the first table
 let table = section.tables[0] as Table;
 // Apply the LightShading built-in style
@@ -287,7 +287,7 @@ import { BuiltinTableStyle, Table, WordDocument } from '@syncfusion/ej2-docx';
 // Load an existing Word document
 let document = WordDocument.openSync('Template.docx');
 // Access the first section
-let section = document.sections[0]!;
+let section = document.sections[0];
 // Access the first table
 let table = section.tables[0] as Table;
 // Apply the LightShading built-in style to the table
@@ -320,7 +320,7 @@ import { Color, ConditionalFormattingType, Table, WordDocument } from '@syncfusi
 // Load an existing Word document
 let document = WordDocument.openSync('Template.docx');
 // Access the first section
-let section = document.sections[0]!;
+let section = document.sections[0];
 // Access the first table
 let table = section.tables[0] as Table;
 // Add a new custom table style
@@ -364,12 +364,12 @@ let section = document.lastSection;
 // Add the first table
 let table = section.body.appendTable();
 table.resetCells(3, 2);
-table.rows[0]!.cells[0]!.appendParagraph().appendText('Row 1 Cell 1');
-table.rows[0]!.cells[1]!.appendParagraph().appendText('Row 1 Cell 2');
-table.rows[1]!.cells[0]!.appendParagraph().appendText('Row 2 Cell 1');
-table.rows[1]!.cells[1]!.appendParagraph().appendText('Row 2 Cell 2');
-table.rows[2]!.cells[0]!.appendParagraph().appendText('Row 3 Cell 1');
-table.rows[2]!.cells[1]!.appendParagraph().appendText('Row 3 Cell 2');
+table.rows[0].cells[0].appendParagraph().appendText('Row 1 Cell 1');
+table.rows[0].cells[1].appendParagraph().appendText('Row 1 Cell 2');
+table.rows[1].cells[0].appendParagraph().appendText('Row 2 Cell 1');
+table.rows[1].cells[1].appendParagraph().appendText('Row 2 Cell 2');
+table.rows[2].cells[0].appendParagraph().appendText('Row 3 Cell 1');
+table.rows[2].cells[1].appendParagraph().appendText('Row 3 Cell 2');
 // Create a custom table style
 let tableStyle = document.addTableStyle('CustomStyle1');
 // First row formatting
@@ -387,12 +387,12 @@ section.body.appendParagraph();
 // Create the second table
 table = section.body.appendTable();
 table.resetCells(3, 2);
-table.rows[0]!.cells[0]!.appendParagraph().appendText('Row 1 Cell 1');
-table.rows[0]!.cells[1]!.appendParagraph().appendText('Row 1 Cell 2');
-table.rows[1]!.cells[0]!.appendParagraph().appendText('Row 2 Cell 1');
-table.rows[1]!.cells[1]!.appendParagraph().appendText('Row 2 Cell 2');
-table.rows[2]!.cells[0]!.appendParagraph().appendText('Row 3 Cell 1');
-table.rows[2]!.cells[1]!.appendParagraph().appendText('Row 3 Cell 2');
+table.rows[0].cells[0].appendParagraph().appendText('Row 1 Cell 1');
+table.rows[0].cells[1].appendParagraph().appendText('Row 1 Cell 2');
+table.rows[1].cells[0].appendParagraph().appendText('Row 2 Cell 1');
+table.rows[1].cells[1].appendParagraph().appendText('Row 2 Cell 2');
+table.rows[2].cells[0].appendParagraph().appendText('Row 3 Cell 1');
+table.rows[2].cells[1].appendParagraph().appendText('Row 3 Cell 2');
 // Create another custom style
 tableStyle = document.addTableStyle('CustomStyle2');
 tableStyle.tableProperties.rowStripe = 1;
@@ -481,18 +481,18 @@ let section = document.lastSection;
 // Add a table
 let table = section.body.appendTable();
 table.resetCells(50, 1);
-let headerRow = table.rows[0]!;
+let headerRow = table.rows[0];
 // Specify the first row as a header row of the table
 headerRow.isHeader = true;
 headerRow.height = 20;
 headerRow.heightType = TableRowHeightRule.AtLeast;
-headerRow.cells[0]!.appendParagraph().appendText('Header Row');
+headerRow.cells[0].appendParagraph().appendText('Header Row');
 
 for (let i = 1; i < 50; i++) {
-    let row = table.rows[i]!;
+    let row = table.rows[i];
     row.height = 20;
     row.heightType = TableRowHeightRule.AtLeast;
-    let paragraph = row.cells[0]!.appendParagraph();
+    let paragraph = row.cells[0].appendParagraph();
     paragraph.appendText(`Text in Row${i}`);
 }
 
@@ -511,8 +511,8 @@ import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
 let document = WordDocument.openSync('Template.docx');
-let section = document.sections[0]!;
-let table = section.tables[0]!;
+let section = document.sections[0];
+let table = section.tables[0];
 
 // Disable breaking across pages for all rows in the table
 for (let row of table.rows) {
@@ -534,8 +534,8 @@ import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
 let document = WordDocument.openSync('Template.docx');
-let section = document.sections[0]!;
-let table = section.tables[0]!;
+let section = document.sections[0];
+let table = section.tables[0];
 
 // Iterate through the rows of the table
 for (let row of table.rows) {
@@ -566,8 +566,8 @@ import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
 let document = WordDocument.openSync('Template.docx');
-let section = document.sections[0]!;
-let table = section.tables[0]!;
+let section = document.sections[0];
+let table = section.tables[0];
 
 // Remove the table from the body
 section.body.items.remove(table);
@@ -587,8 +587,8 @@ import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
 let document = WordDocument.openSync('Template.docx');
-let section = document.sections[0]!;
-let table = section.tables[0]!;
+let section = document.sections[0];
+let table = section.tables[0];
 // Remove the row at index 3
 table.rows.removeAt(3);
 // Save the document
