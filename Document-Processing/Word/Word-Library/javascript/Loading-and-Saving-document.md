@@ -12,11 +12,11 @@ The JavaScript Word Library enables you to open existing Word documents, modify 
 
 > The Word Library works with Office Open XML `.docx` packages. The `open` and `load` methods do not read a filesystem path directly. In Node.js, read the file by using the host filesystem API and pass the resulting bytes to the library.
 
-### Opening an existing Word document
+## Opening an existing Word document
 
 Open an existing Word document by passing its data to `WordDocument.open`. The method accepts a `Uint8Array`, an `ArrayBuffer`, or a Base64-encoded string. To open a browser `File` or `Blob`, use the asynchronous `WordDocument.openAsync` method.
 
-#### Using Uint8Array
+### Using Uint8Array
 
 Open an existing Word document by passing the document data as a `Uint8Array`.
 
@@ -43,7 +43,7 @@ const document = ej.docx.WordDocument.open(data);
 {% endhighlight %}
 {% endtabs %}
 
-#### Using ArrayBuffer
+### Using ArrayBuffer
 
 Open an existing Word document by passing the document data as an `ArrayBuffer`.
 
@@ -70,7 +70,7 @@ const document = ej.docx.WordDocument.open(data);
 {% endhighlight %}
 {% endtabs %}
 
-#### Using a Base64 string
+### Using a Base64 string
 
 Open an existing Word document from a Base64-encoded string by passing `{ format: 'base64' }` to `WordDocument.open`. A Base64 data URL prefix is optional.
 
@@ -91,7 +91,7 @@ const document = ej.docx.WordDocument.open(data, { format: 'base64' });
 
 > A string passed without `{ format: 'base64' }` is not treated as a file path. Direct filesystem-path loading is not supported.
 
-#### Using a browser File or Blob
+### Using a browser File or Blob
 
 Use `WordDocument.openAsync` to open a browser `File` or `Blob`. The following example opens a `File` selected through an HTML file input. The method reads the object by using its `arrayBuffer()` method.
 
@@ -127,7 +127,7 @@ input.addEventListener('change', async () => {
 {% endhighlight %}
 {% endtabs %}
 
-### Opening a document asynchronously
+## Opening a document asynchronously
 
 Use `WordDocument.openAsync` when a Promise-based API is required. It accepts a `Uint8Array`, an `ArrayBuffer`, a Base64 string with `{ format: 'base64' }`, or a browser `File` or `Blob`.
 
@@ -154,7 +154,7 @@ const document = await ej.docx.WordDocument.openAsync(data);
 {% endhighlight %}
 {% endtabs %}
 
-### Opening a document with resource limits
+## Opening a document with resource limits
 
 Use `LoadOptions` to override resource limits while opening a document. Resource limits help restrict the total uncompressed package size and the uncompressed size of an individual package part.
 
@@ -195,7 +195,7 @@ const document = ej.docx.WordDocument.open(data, options);
 {% endhighlight %}
 {% endtabs %}
 
-### Editing an opened Word document
+## Editing an opened Word document
 
 After opening a document, access its sections and body to add or modify content.
 
@@ -230,7 +230,7 @@ paragraph.appendText('Appended after opening the document.');
 {% endhighlight %}
 {% endtabs %}
 
-### Saving and downloading a Word document in the browser
+## Saving and downloading a Word document in the browser
 
 Save and download a Word document in the browser by passing a file name to the asynchronous `save` method.
 
@@ -269,11 +269,11 @@ await document.save('output.docx');
 
 > Passing a file name to `save` starts a browser download. It does not write to a Node.js filesystem path.
 
-### Saving a Word document as a Uint8Array
+## Saving a Word document as a Uint8Array
 
 Save the document to memory as a `Uint8Array` by using `saveSync` or the parameterless `save` method. Use the returned bytes to upload the document, store it, process it further, or write it by using the host application's file APIs.
 
-#### Saving synchronously
+### Saving synchronously
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -292,7 +292,7 @@ const data = document.saveSync();
 {% endhighlight %}
 {% endtabs %}
 
-#### Saving asynchronously
+### Saving asynchronously
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -311,7 +311,7 @@ const data = await document.save();
 {% endhighlight %}
 {% endtabs %}
 
-### Saving a Word document as a Base64 string
+## Saving a Word document as a Base64 string
 
 Pass `{ format: 'base64' }` to `saveSync` or `save` to serialize the document as a Base64-encoded string. Both synchronous and asynchronous save methods support this format.
 
@@ -340,7 +340,7 @@ const asyncBase64 = await document.save({ format: 'base64' });
 {% endhighlight %}
 {% endtabs %}
 
-### Reading and writing Word documents in Node.js
+## Reading and writing Word documents in Node.js
 
 The Word Library does not open or save filesystem paths directly. In Node.js, use the host filesystem APIs to read a `.docx` file, pass its bytes to `WordDocument.open`, and write the bytes returned by `save` or `saveSync`.
 
@@ -381,6 +381,6 @@ await writeFile('./output.docx', output);
 {% endhighlight %}
 {% endtabs %}
 
-### Alternative load methods
+## Alternative load methods
 
 The library also provides `load`, `loadSync`, and `loadAsync` as aliases for `open`, `openSync`, and `openAsync`, respectively. The alias methods support the same corresponding input types. Use either the `open` naming style or the `load` naming style consistently within an application.
