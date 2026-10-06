@@ -674,7 +674,7 @@ The repository also ships runnable sample scripts in `pythonnet-wrapper/samples/
 | `05_powerpoint_to_pdf.py` | Convert a PPTX presentation to PDF (auto-generates a sample deck if needed). |
 | `06_watermark_pdf.py` | Overlay a diagonal text watermark on every page of an existing PDF. |
 
-Run them as modules from the approach's root folder (run inside the venv where `pythonnet` is installed):
+Run the modules from the approach's root folder using a Python environment where pythonnet is installed:
 
 {% tabs %}
 {% highlight bash %}
