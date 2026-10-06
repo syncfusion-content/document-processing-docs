@@ -381,6 +381,10 @@ Saved: /repo/local-dotnet-worker/output/Sample.docx
 * `--format docx` produces `output/Sample.docx`.
 * `--format pdf` produces `output/Sample.pdf`.
 
+## GitHub sample
+
+A complete working sample demonstrating Syncfusion .NET Document SDK integration with Python using a local .NET worker is available on GitHub. For more details, see the [GitHub sample](https://github.com/SyncfusionExamples/python-syncfusion-document-sdk-samples).
+
 ## Extending the Integration to Other Syncfusion Document Libraries
 
 | Use case | Package | Build API |

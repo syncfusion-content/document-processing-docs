@@ -327,6 +327,10 @@ Saved: /repo/pythonnet-wrapper/output/Sample.docx
 
 Open `Sample.docx` in Microsoft Word or any compatible editor; open `Sample.pdf` in any PDF reader. When running in trial mode (`--trial`), an **evaluation watermark** may appear at the top of the document. Register a license key to remove it.
 
+## GitHub sample
+
+A complete working sample demonstrating Syncfusion .NET Document SDK integration with Python using Python.NET is available on GitHub. For more details, see the [GitHub sample](https://github.com/SyncfusionExamples/python-syncfusion-document-sdk-samples).
+
 ## Extending the Integration to Other Syncfusion Document Libraries
 
 To use a different Syncfusion document library, swap the package reference in `WordBridge.csproj` and add the corresponding build logic to `DocumentCreator.cs`:
