@@ -5,6 +5,7 @@ description: Learn how to export PDF form field data (FDF, XFDF, JSON, and XML) 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Export PDF Form Data in WPD Pdf Viewer

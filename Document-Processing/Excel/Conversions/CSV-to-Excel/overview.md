@@ -4,6 +4,7 @@ description: Learn about introduction of converting CSV or TSV documents to Exce
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # About Syncfusion .NET CSV to Excel Conversion

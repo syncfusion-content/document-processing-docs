@@ -4,6 +4,7 @@ description: Learn here about how to convert HTML to PDF in AWS Lambda using Syn
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # HTML to PDF conversion in AWS Lambda .NET PDF Library

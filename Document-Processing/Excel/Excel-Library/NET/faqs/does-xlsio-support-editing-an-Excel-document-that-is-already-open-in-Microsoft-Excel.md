@@ -4,6 +4,7 @@ description: Open workbook editing explains whether the Syncfusion .NET Excel Li
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Editing Open Excel Files in .NET Excel Library

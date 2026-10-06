@@ -5,6 +5,7 @@ description: Learn about formatting in the Syncfusion React Spreadsheet componen
 control: Formatting 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Formatting in React Spreadsheet

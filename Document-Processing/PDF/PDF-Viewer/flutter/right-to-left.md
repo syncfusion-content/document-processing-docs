@@ -5,6 +5,7 @@ description: The RTL support feature in SfPdfViewer enables right-to-left layout
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Right to Left (RTL) in Flutter PDF Viewer

@@ -5,6 +5,7 @@ description: Chart support in ASP.NET MVC DOCX Editor ensures accurate rendering
 platform: document-processing
 control: Chart
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

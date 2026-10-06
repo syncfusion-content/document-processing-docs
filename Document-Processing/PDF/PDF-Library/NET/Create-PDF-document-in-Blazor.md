@@ -4,6 +4,7 @@ description: Learn how to get started with the Syncfusion .NET PDF Library in Bl
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Getting Started with .NET PDF Library in Blazor

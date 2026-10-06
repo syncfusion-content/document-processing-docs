@@ -5,6 +5,7 @@ description: Customize the font family drop down list in Syncfusion® ASP.NET Co
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

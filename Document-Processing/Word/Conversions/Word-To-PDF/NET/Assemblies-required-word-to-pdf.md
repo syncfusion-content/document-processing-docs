@@ -4,6 +4,7 @@ description: Describe the assemblies required to convert Word documents to PDF u
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Assemblies required to convert Word to PDF in .NET Word
 

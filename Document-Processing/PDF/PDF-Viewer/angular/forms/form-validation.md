@@ -5,6 +5,7 @@ description: Enable built-in PDF form field validation in the Angular PDF Viewer
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Form Validation in Angular PDF Viewer

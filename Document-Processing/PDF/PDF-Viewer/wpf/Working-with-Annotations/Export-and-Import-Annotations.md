@@ -5,6 +5,7 @@ description: The export and import annotations feature in WPF PDF Viewer enables
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Exporting and Importing Annotations

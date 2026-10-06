@@ -5,6 +5,7 @@ description: Learn about undo and redo operations in the Syncfusion ASP.NET Core
 platform: document-processing
 control: Undo Redo
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

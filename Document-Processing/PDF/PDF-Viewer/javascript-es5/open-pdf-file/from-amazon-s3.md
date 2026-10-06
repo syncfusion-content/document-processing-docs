@@ -5,6 +5,7 @@ description: Load and display PDF files stored in AWS S3 in the JavaScript (ES5)
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Open PDF from AWS S3 in JavaScript (ES5) PDF Viewer

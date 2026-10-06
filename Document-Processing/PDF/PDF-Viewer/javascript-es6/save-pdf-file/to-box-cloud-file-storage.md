@@ -5,6 +5,7 @@ description: Save PDF files from the JavaScript (ES6) PDF Viewer to Box cloud st
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Save PDF Files to Box Cloud Storage in JavaScript (ES6) PDF Viewer

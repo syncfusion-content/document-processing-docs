@@ -5,6 +5,7 @@ description: Learn about the to azure active directory in the ASP.NET MVC PDF Vi
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # To Azure Active Directory in ASP.NET MVC PDF Viewer

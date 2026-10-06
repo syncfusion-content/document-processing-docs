@@ -6,6 +6,7 @@ platform: document-processing
 control: Right to Left
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Right to Left in JavaScript DOCX Editor

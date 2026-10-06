@@ -5,6 +5,7 @@ description: Retrieve bookmark content as plain text and retrieve document data 
 platform: document-processing
 control: Retrieve the Whole Document and Bookmark Content as Text
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # How to Retrieve Bookmark Content as Text in ASP.NET MVC DOCX Editor

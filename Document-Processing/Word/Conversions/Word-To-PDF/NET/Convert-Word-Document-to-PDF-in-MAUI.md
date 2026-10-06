@@ -4,6 +4,7 @@ description: Convert Word to PDF in .NET MAUI using .NET MAUI Word library witho
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert Word document to PDF in .NET MAUI 

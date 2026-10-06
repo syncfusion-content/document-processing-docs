@@ -4,6 +4,7 @@ description: ExportQualityImage property describes how image quality is affected
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # ExportQualityImage Property in .NET Excel Library

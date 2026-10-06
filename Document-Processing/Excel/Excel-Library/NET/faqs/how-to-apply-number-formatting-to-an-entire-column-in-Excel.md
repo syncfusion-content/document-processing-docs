@@ -4,6 +4,7 @@ description: Apply number formatting to an entire Excel column using the Syncfus
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to apply column number formats in .NET Excel Library

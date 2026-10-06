@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: layout-types,pages,continuous,block,layout-type
+appliesto: DOCX Editor SDK
 ---
 # Layout Types in WPF DOCX Editor
 

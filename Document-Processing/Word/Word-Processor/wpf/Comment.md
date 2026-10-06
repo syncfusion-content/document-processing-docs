@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: comment
+appliesto: DOCX Editor SDK
 ---
 # Comments in WPF DOCX Editor
 

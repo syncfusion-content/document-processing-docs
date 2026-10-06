@@ -4,6 +4,7 @@ description: Copy the used range from one Excel workbook to another using the Sy
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to copy used ranges between workbooks in .NET Excel Library

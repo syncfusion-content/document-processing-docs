@@ -4,6 +4,7 @@ description: Convert PPTX to PDF in Azure Functions v4 using .NET Core PowerPoin
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert PowerPoint Presentation to PDF in Azure Functions v4

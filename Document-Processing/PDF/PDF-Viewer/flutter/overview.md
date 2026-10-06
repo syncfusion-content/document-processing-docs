@@ -5,6 +5,7 @@ description: Learn about introduction of Syncfusion Essential Studio Flutter PDF
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # About Syncfusion Flutter PDF Viewer Control

@@ -4,6 +4,7 @@ description: Convert Excel files with uninstalled fonts to PDF or images using E
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to convert missing fonts to PDF/Image in .NET Excel Library

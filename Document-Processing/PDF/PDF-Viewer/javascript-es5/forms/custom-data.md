@@ -5,6 +5,7 @@ description: Attach, update, and read custom data on PDF form fields in the Java
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Custom Data on Form Fields in JavaScript (ES5) PDF Viewer

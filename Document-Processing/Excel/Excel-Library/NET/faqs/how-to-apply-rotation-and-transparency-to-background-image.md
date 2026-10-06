@@ -4,6 +4,7 @@ description: Apply rotation and transparency to background images in Excel works
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to rotate and make images transparent in .NET Excel Library

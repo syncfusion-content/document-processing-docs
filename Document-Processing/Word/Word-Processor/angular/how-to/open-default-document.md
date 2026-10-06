@@ -6,6 +6,7 @@ platform: document-processing
 control: Open default document
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Open a Default Document in Angular DOCX Editor

@@ -4,6 +4,7 @@ description: Hyperlink management describes how the Syncfusion .NET Excel Librar
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Hyperlinks in .NET Excel Library

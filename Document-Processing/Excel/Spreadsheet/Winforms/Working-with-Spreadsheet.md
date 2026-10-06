@@ -6,6 +6,7 @@ description: Access worksheets, grids, cells, ranges, values, and formulas while
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Working With Spreadsheet in Windows Forms Spreadsheet

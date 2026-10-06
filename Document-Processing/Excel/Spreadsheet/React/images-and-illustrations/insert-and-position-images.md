@@ -5,6 +5,7 @@ description: Learn about inserting and positioning images in the Syncfusion Reac
 control: Images
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Insert and Position images in React Spreadsheet

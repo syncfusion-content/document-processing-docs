@@ -4,6 +4,7 @@ description: This section illustrates how to substitute fonts during Word-to-PDF
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Font Substitution in Word to PDF Conversion

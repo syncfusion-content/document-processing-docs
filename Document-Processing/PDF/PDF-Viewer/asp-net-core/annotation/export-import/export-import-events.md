@@ -5,6 +5,7 @@ description: Handle import and export events in the ASP.NET Core PDF Viewer to r
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Annotation Import and Export Events in ASP.NET Core PDF Viewer

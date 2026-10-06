@@ -5,6 +5,7 @@ description: Learn about find and replace in the Syncfusion ASP.NET Core Spreads
 platform: document-processing
 control: Searching
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

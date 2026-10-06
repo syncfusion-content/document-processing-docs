@@ -4,6 +4,7 @@ description: Learn how to convert PDF pages into image files in Blazor using the
 platform: document-processing
 control: PDF to image
 documentation: UG
+appliesto: Document SDK
 ---
 
 # PDF Page to Image Conversion in Blazor

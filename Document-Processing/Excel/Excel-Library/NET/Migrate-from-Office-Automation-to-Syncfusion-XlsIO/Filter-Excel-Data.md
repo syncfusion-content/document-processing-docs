@@ -4,6 +4,7 @@ description: Filtering Excel data programmatically explains how to show or hide 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Data Filtering in .NET Excel Library

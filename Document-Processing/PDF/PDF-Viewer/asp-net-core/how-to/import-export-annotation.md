@@ -5,6 +5,7 @@ description: Import and export annotations in the ASP.NET Core PDF Viewer as Jav
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Import and Export Annotations in ASP.NET Core PDF Viewer

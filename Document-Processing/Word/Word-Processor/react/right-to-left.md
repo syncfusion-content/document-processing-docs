@@ -6,6 +6,7 @@ control: Right to Left
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Right to Left in React DOCX Editor

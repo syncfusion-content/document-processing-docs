@@ -5,6 +5,7 @@ description: Display a PDF in the ASP.NET MVC PDF Viewer without downloading the
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Display a PDF Without Downloading in ASP.NET MVC PDF Viewer

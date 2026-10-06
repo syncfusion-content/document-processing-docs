@@ -4,6 +4,7 @@ description: Learn how to convert a PPTX to image in Azure services using .NET P
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert PowerPoint Presentation to Image in Azure

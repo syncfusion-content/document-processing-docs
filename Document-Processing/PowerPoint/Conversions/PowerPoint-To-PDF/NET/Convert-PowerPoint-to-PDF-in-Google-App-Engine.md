@@ -4,6 +4,7 @@ description: Convert PPTX to PDF in Google App Engine using .NET Core PowerPoint
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert PowerPoint Presentation to PDF in Google App Engine

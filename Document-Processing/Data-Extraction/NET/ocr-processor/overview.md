@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF
 documentation: UG
 keywords: Assemblies 
+appliesto: Document SDK
 ---
 
 # About Syncfusion .NET OCR Processor 

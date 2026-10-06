@@ -5,6 +5,7 @@ description: Select and copy text support allows user to select the text in the 
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 #  Select & copy text using PDF viewer Xamarin.iOS

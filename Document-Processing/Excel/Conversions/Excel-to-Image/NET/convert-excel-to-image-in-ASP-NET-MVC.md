@@ -4,6 +4,7 @@ description: ASP.NET MVC Excel to Image section explains how to convert Excel do
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Excel to Image Conversion in ASP.NET MVC using Excel Library

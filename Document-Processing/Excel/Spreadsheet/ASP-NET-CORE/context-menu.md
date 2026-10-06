@@ -5,6 +5,7 @@ description: Learn about the context menu in the Syncfusion ASP.NET Core Spreads
 platform: document-processing
 control: Context Menu
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

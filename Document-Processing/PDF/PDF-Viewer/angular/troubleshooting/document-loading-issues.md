@@ -5,6 +5,7 @@ description: Resolve document loading issues in the Angular PDF Viewer v23.1 and
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Resolve Document Loading Issues in Angular PDF Viewer

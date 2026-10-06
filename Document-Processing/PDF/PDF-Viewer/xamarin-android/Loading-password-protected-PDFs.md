@@ -5,6 +5,7 @@ description: The Syncfusion<sup>®</sup> PDF Viewer allows the user to load and 
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Load encrypted PDFs using SfPdfViewer in Xamarin.Android

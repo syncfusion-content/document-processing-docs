@@ -5,6 +5,7 @@ description: Learn here all about how to load PDF documents dynamically in Blazo
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Load PDF documents dynamically in Blazor PDF Viewer

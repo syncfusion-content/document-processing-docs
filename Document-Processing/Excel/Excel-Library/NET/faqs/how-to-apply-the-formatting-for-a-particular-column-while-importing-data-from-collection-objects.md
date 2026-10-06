@@ -4,6 +4,7 @@ description: Apply formatting to a specific Excel column while importing collect
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to format columns during import in .NET Excel Library

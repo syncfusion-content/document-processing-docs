@@ -4,6 +4,7 @@ description: Multiline headers and footers explains how the Syncfusion .NET Exce
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Multiline Headers and Footers in .NET Excel Library

@@ -5,6 +5,7 @@ description: Navigate using table of contents in Syncfusion WPF PDF Viewer. Lear
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Table of contents navigation in WPF Pdf Viewer

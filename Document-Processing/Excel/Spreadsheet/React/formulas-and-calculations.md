@@ -5,6 +5,7 @@ description: Learn about formulas in the Syncfusion React Spreadsheet component,
 control: Formulas 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Formulas in React Spreadsheet

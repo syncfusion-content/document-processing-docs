@@ -5,6 +5,7 @@ description: Learn about cell templates in the Syncfusion ASP.NET Core Spreadshe
 platform: document-processing
 control: Template
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

@@ -6,6 +6,7 @@ control: Insert text in current position
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Insert Content at Cursor in Vue DOCX Editor

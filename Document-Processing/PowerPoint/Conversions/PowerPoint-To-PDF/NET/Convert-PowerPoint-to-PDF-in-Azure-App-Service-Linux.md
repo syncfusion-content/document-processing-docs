@@ -4,6 +4,7 @@ description: Convert PPTX to PDF in Azure App Service on Linux using .NET Core P
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert PowerPoint Presentation to PDF in Azure App Service on Linux

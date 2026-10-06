@@ -4,6 +4,7 @@ description: This section explains how to add hyperlink in the PowerPoint slide 
 platform: document-processing
 control: Presentation
 documentation: UG
+appliesto: Document SDK
 ---
 # Working with Hyperlinks
 

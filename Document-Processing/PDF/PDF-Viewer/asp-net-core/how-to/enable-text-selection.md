@@ -5,6 +5,7 @@ description: Enable or disable text selection in the ASP.NET Core PDF Viewer usi
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Enable or Disable Text Selection in ASP.NET Core PDF Viewer

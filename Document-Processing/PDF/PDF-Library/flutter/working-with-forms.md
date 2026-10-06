@@ -5,6 +5,7 @@ description: Learn about different types of forms and form field handling in Syn
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Forms in Flutter PDF

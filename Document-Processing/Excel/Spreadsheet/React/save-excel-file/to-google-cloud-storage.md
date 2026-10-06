@@ -5,6 +5,7 @@ description: Learn how to save Excel files from the Syncfusion React Spreadsheet
 platform: document-processing
 control: Save file to Google Cloud Storage
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Save Excel to Google Cloud Storage in React Spreadsheet

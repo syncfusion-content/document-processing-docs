@@ -4,6 +4,7 @@ description: Create Markdown document in ASP.NET Core application on macOS using
 platform: document-processing
 control: Markdown
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Markdown document on macOS

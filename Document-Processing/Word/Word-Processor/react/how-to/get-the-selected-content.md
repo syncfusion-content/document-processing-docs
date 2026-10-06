@@ -6,6 +6,7 @@ control: Get the selected content
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Get Selected Content in React DOCX Editor

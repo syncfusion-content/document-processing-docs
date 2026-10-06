@@ -5,6 +5,7 @@ description: Learn about rows and columns in the Syncfusion React Spreadsheet co
 control: Rows and columns 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Rows and Columns in React Spreadsheet

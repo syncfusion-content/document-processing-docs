@@ -4,6 +4,7 @@ description: Programmatically merge a range of Excel cells into a single cell us
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Merging Cells in .NET Excel Library

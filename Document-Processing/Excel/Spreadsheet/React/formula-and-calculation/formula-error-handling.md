@@ -5,6 +5,7 @@ description: Learn about formula error handling in the Syncfusion React Spreadsh
 control: Formulas 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Formula Error Handling in React Spreadsheet

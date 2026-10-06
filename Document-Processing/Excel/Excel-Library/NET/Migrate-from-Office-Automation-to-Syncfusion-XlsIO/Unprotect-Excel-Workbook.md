@@ -4,6 +4,7 @@ description: Unprotect a password-protected Excel workbook using Interop and Syn
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Workbook Unprotection in .NET Excel Library

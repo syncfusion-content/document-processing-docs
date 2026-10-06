@@ -4,6 +4,7 @@ description: Azure Functions v4 Excel to Image section explains how to convert E
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Excel to Image Conversion in Azure Functions v4 using Excel Library

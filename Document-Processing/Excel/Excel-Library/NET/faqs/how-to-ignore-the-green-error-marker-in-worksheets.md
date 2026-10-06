@@ -4,6 +4,7 @@ description: Learn how to ignore the green error marker in Excel worksheets usin
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to ignore green error markers in .NET Excel Library

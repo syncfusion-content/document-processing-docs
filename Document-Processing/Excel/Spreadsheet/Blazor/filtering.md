@@ -5,6 +5,7 @@ description: Filter and analyze spreadsheet data efficiently using the built-in 
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Filtering in Blazor Spreadsheet

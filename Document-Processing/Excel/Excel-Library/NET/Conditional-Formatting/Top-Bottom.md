@@ -4,6 +4,7 @@ description: Advanced conditional formatting describes how Syncfusion .NET Excel
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Top and Bottom Rules in .NET Excel Library

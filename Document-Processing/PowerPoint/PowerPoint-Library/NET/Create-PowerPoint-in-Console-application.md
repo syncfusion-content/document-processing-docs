@@ -4,6 +4,7 @@ description: Create a PowerPoint in Console application using .NET PowerPoint li
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create a PowerPoint in Console application

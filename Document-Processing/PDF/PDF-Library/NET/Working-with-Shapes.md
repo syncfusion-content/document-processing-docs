@@ -4,6 +4,7 @@ description: Learn how to add shapes like line, curve, path, rectangle, pie, arc
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Shapes in .NET PDF Library
 

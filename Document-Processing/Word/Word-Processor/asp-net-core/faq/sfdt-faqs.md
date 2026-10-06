@@ -6,6 +6,7 @@ control: SFDT format
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # FAQs about SFDT in ASP.NET Core DOCX Editor

@@ -5,6 +5,7 @@ description: Images in Blazor DOCX Editor enable resizing and text wrapping whil
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # Images in Blazor DOCX Editor

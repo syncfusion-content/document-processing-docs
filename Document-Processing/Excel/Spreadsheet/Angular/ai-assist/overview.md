@@ -5,6 +5,7 @@ description: Learn about the AI Assist feature in Syncfusion Angular Spreadsheet
 platform: document-processing
 control: AI Assist
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # About Syncfusion Angular Spreadsheet AI Assist

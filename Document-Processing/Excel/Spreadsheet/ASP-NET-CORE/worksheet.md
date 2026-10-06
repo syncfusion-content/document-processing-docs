@@ -5,6 +5,7 @@ description: Learn about worksheets in the Syncfusion ASP.NET Core Spreadsheet c
 platform: document-processing
 control: Worksheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

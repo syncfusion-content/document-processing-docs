@@ -4,6 +4,7 @@ description: Row and column manipulation in Excel Library describes how to inser
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Worksheet Rows and Columns in .NET Excel Library
