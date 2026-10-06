@@ -13,6 +13,8 @@ appliesto: PDF Viewer SDK
 
 The React PDF Viewer includes a semantic text comparison feature that enables comparing text content between two PDF documents side-by-side. The comparison uses a Longest Common Subsequence (LCS) algorithm to identify differences (added, deleted, modified text) and present them with visual highlighting and programmatic access.
 
+![Semantic text comparison interface](../images/semantic-text-comparison.png)
+
 ## Key capabilities
 
 The semantic text comparison feature provides:

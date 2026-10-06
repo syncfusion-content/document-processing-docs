@@ -651,6 +651,95 @@ document.Close()
 
 {% endtabs %}
 
+## Inspect Digital Signature
+
+The following code example illustrates how to inspect digital signature details in a Word document, including comments, signing time, and the certificate's subject and issuer.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+//Opens the signed Word document.
+WordDocument document = new WordDocument(Path.GetFullPath(@"Data\SignedDocument.docx"));
+// Gets the digital signature collection in the document.
+OfficeDigitalSignatureCollection signatures = document.DigitalSignatures;
+
+// Checks whether every digital signature in the collection is valid.
+bool allValid = signatures.IsValid;
+Console.WriteLine("All signatures are valid: " + allValid);
+
+// Displays details of each signature.
+foreach (OfficeDigitalSignature signature in signatures)
+{
+    Console.WriteLine("Signature comments: " + signature.Comments);
+    Console.WriteLine("Time of signing: " + signature.SigningTime);
+    Console.WriteLine("Subject name: " +
+        signature.Certificate.Subject);
+    Console.WriteLine("Issuer name: " +
+        signature.Certificate.Issuer);
+    Console.WriteLine();
+}
+
+// Closes the document.
+document.Close();
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+//Opens the signed Word document.
+WordDocument document = new WordDocument(Path.GetFullPath(@"Data\SignedDocument.docx"));
+// Gets the digital signature collection in the document.
+OfficeDigitalSignatureCollection signatures = document.DigitalSignatures;
+
+// Checks whether every digital signature in the collection is valid.
+bool allValid = signatures.IsValid;
+Console.WriteLine("All signatures are valid: " + allValid);
+
+// Displays details of each signature.
+foreach (OfficeDigitalSignature signature in signatures)
+{
+    Console.WriteLine("Signature comments: " + signature.Comments);
+    Console.WriteLine("Time of signing: " + signature.SigningTime);
+    Console.WriteLine("Subject name: " +
+        signature.Certificate.Subject);
+    Console.WriteLine("Issuer name: " +
+        signature.Certificate.Issuer);
+    Console.WriteLine();
+}
+
+// Closes the document.
+document.Close();
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Opens the signed Word document.
+Dim document As New WordDocument(Path.GetFullPath("Data\SignedDocument.docx"))
+'Gets the digital signature collection in the document.
+Dim signatures As OfficeDigitalSignatureCollection = document.DigitalSignatures
+
+'Checks whether every digital signature in the collection is valid.
+Dim allValid As Boolean = signatures.IsValid
+Console.WriteLine("All signatures are valid: " & allValid)
+
+'Displays details of each signature.
+For Each signature As OfficeDigitalSignature In signatures
+    Console.WriteLine("Signature comments: " & signature.Comments)
+    Console.WriteLine("Time of signing: " & signature.SigningTime)
+    Console.WriteLine("Subject name: " & signature.Certificate.Subject)
+    Console.WriteLine("Issuer name: " & signature.Certificate.Issuer)
+    Console.WriteLine()
+Next
+
+'Closes the document.
+document.Close()
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ## Remove Digital Signature
 
 The following code example illustrates how to remove all the digital signatures from a Word document.

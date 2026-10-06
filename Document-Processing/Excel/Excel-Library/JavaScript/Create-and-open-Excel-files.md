@@ -8,13 +8,13 @@ documentation: ug
 
 # Create and Open Excel Files in JavaScript
 
-The [JavaScript Excel Library](https://www.syncfusion.com/document-sdk/javascript-excel-library) creates, opens, and saves Microsoft Excel (`.xlsx`) workbooks through the `Workbook` class. Use `Workbook.create()` for a new workbook and `Workbook.open()` to load an existing file from bytes or a filesystem path.
+The [JavaScript Excel Library](https://www.syncfusion.com/document-sdk/javascript-excel-library) creates, opens, and saves Microsoft Excel (`.xlsx`) workbooks in Node.js and browser environments. You can start from a blank workbook or load an existing file from bytes or a file path, then save the result as bytes or back to disk.
 
 N> Open and save with a filesystem path require the Node.js file system module. In the browser, open from `Uint8Array` or `ArrayBuffer`, and save with the parameterless `save()` overload that returns bytes.
 
 ## Create a new workbook
 
-`Workbook.create()` returns a workbook with one visible worksheet named `Sheet1`.
+A new workbook starts with one visible worksheet named Sheet1. You can write cells on that sheet immediately, then add more sheets as needed.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -47,7 +47,7 @@ const bytes = await workbook.save();
 
 ## Open from bytes
 
-Pass a `Uint8Array` or `ArrayBuffer` to `Workbook.open()`. This path works in both browser and Node.js environments.
+Opening from bytes loads an existing .xlsx file from memory. This approach works in both browser and Node.js environments when the file is already available as binary data.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -74,7 +74,7 @@ const value = sheet.cell('A1').value;
 
 ## Open from a file path (Node.js)
 
-In Node.js, pass a path string to `Workbook.open()`. The parent directory must exist when saving to a path.
+In Node.js, you can open a workbook from a path on disk and save changes to a path. The parent folder must already exist when you save to a new location.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -105,7 +105,7 @@ await workbook.save('./data/Output.xlsx');
 
 ## Save as bytes
 
-The parameterless `save()` method returns a `Promise<Uint8Array>` that you can download in the browser, upload to a server, or write with your own file API.
+Saving as bytes produces the complete .xlsx package in memory. Use the result for browser downloads, uploads, or any custom storage path you control.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -130,7 +130,7 @@ const bytes = await workbook.save();
 
 ## Workbook author and document properties
 
-Set metadata through `builtInDocumentProperties` or the `author` shortcut.
+Document properties store workbook metadata such as author, keywords, and comments. These values travel with the file and appear in Excel document information.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -159,7 +159,7 @@ N> Some document-property fields are package-internal and are stripped from the 
 
 ## Date system (1904)
 
-`date1904` controls how date serial numbers are interpreted. The default is `false` (1900 date system).
+Excel can interpret date serial numbers with the 1900 or 1904 date system. The 1900 system is the default; switch only when you need compatibility with workbooks that use 1904 dates.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -178,7 +178,7 @@ workbook.date1904 = false;
 
 ## Active sheet
 
-`activeSheet` is the worksheet Excel shows when the file opens.
+The active sheet is the worksheet Excel displays first when the workbook opens. Set it when users should land on a specific tab instead of the first sheet.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

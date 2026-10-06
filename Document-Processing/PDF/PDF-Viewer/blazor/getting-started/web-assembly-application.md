@@ -40,7 +40,7 @@ You can create a **Blazor WebAssembly App** using Visual Studio via [Microsoft T
 
 ## Install Blazor SfPdfViewer and Themes NuGet Packages
 
-To add the **Blazor SfPdfViewer (Next-Gen)** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer), [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/), and [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/) (version `3.119.1`).
+To add the **Blazor SfPdfViewer (Next-Gen)** component in the app, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer), [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/), and [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/) (version `4.150.1`).
 
 Alternatively, you can use the following package manager command.
 
@@ -49,14 +49,14 @@ Alternatively, you can use the following package manager command.
 
 Install-Package Syncfusion.Blazor.SfPdfViewer -Version {{ site.releaseversion }}
 Install-Package Syncfusion.Blazor.Themes -Version {{ site.releaseversion }}
-Install-Package SkiaSharp.Views.Blazor -Version 3.119.1
+Install-Package SkiaSharp.Views.Blazor -Version 4.150.1
 
 {% endhighlight %}
 {% endtabs %}
 
 N>
 * Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) for a list of available packages.
-* Syncfusion<sup style="font-size:70%">&reg;</sup> uses [SkiaSharp.Views.Blazor version 3.119.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1). Ensure this exact version to avoid runtime issues.
+* Syncfusion<sup style="font-size:70%">&reg;</sup> uses [SkiaSharp.Views.Blazor version 4.150.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/4.150.1). Ensure this exact version to avoid runtime issues.
 
 {% endtabcontent %}
 
@@ -103,7 +103,7 @@ cd BlazorApp
 Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Studio Code.
 
 * Ensure you are in the project root directory where your `.csproj` file is located.
-* Run the following command to install [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer), [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/), and [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/) (version `3.119.1`), and to ensure all dependencies are restored.
+* Run the following command to install [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer), [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/), and [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/) (version `4.150.1`), and to ensure all dependencies are restored.
 
 {% tabs %}
 
@@ -111,7 +111,7 @@ Press <kbd>Ctrl</kbd>+<kbd>`</kbd> to open the integrated terminal in Visual Stu
 
 dotnet add package Syncfusion.Blazor.SfPdfViewer -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
-dotnet add package SkiaSharp.Views.Blazor -v 3.119.1
+dotnet add package SkiaSharp.Views.Blazor -v 4.150.1
 dotnet restore
 
 {% endhighlight %}
@@ -120,7 +120,7 @@ dotnet restore
 
 N>
 * Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) for a list of available packages.
-* Syncfusion<sup style="font-size:70%">&reg;</sup> uses [SkiaSharp.Views.Blazor version 3.119.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1). Ensure this exact version to avoid runtime issues.
+* Syncfusion<sup style="font-size:70%">&reg;</sup> uses [SkiaSharp.Views.Blazor version 4.150.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/4.150.1). Ensure this exact version to avoid runtime issues.
 
 {% endtabcontent %}
 
@@ -171,7 +171,7 @@ After creating the Blazor WebAssembly App, install the required Syncfusion NuGet
 
 * Open a command prompt, terminal, or shell.
 * Ensure you are in the project root directory where your `.csproj` file is located.
-* Run the following command to install [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer), [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/), and [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/) (version `3.119.1`), and to ensure all dependencies are restored.
+* Run the following command to install [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer), [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/), and [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/) (version `4.150.1`), and to ensure all dependencies are restored.
 
 {% tabs %}
 
@@ -179,14 +179,14 @@ After creating the Blazor WebAssembly App, install the required Syncfusion NuGet
 
 dotnet add package Syncfusion.Blazor.SfPdfViewer -v {{ site.releaseversion }}
 dotnet add package Syncfusion.Blazor.Themes -v {{ site.releaseversion }}
-dotnet add package SkiaSharp.Views.Blazor -v 3.119.1
+dotnet add package SkiaSharp.Views.Blazor -v 4.150.1
 dotnet restore
 
 {% endhighlight %}
 
 {% endtabs %}
 
-N> Syncfusion<sup style="font-size:70%">&reg;</sup> uses [SkiaSharp.Views.Blazor version 3.119.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1). Ensure this exact version to avoid runtime issues.
+N> Syncfusion<sup style="font-size:70%">&reg;</sup> uses [SkiaSharp.Views.Blazor version 4.150.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/4.150.1). Ensure this exact version to avoid runtime issues.
 
 {% endtabcontent %}
 

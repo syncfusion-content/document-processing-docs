@@ -8,9 +8,11 @@ documentation: ug
 
 # Worksheets in JavaScript Excel
 
-Worksheets are managed through `Workbook`. Access sheets by zero-based index or name with `sheet()`, list them with `worksheets`, and change tab order with `moveSheet`.
+Worksheets are the tabs inside a workbook where cells, charts, and other content live. You can open a sheet by order or name, list every sheet, and change tab order as the workbook structure grows.
 
 ## Access worksheets
+
+Worksheets can be opened by tab order or by name so you can target the correct sheet for reading or editing. Listing worksheets shows every sheet currently in the workbook.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -43,7 +45,9 @@ const all = workbook.worksheets;
 {% endhighlight %}
 {% endtabs %}
 
-## Add, remove, and move sheets
+## Add, remove, and reorder sheets
+
+You can add new worksheets, reorder tabs, and remove sheets you no longer need. A workbook must always keep at least one worksheet.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -82,6 +86,8 @@ N> A workbook must always keep at least one worksheet. Removing the last sheet t
 
 ## Rename a worksheet
 
+Renaming a worksheet updates the tab caption users see in Excel. Names must be unique in the workbook and follow Excel sheet-naming rules.
+
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import { Workbook } from '@syncfusion/ej2-xlsx';
@@ -100,6 +106,8 @@ sheet.name = 'January';
 {% endtabs %}
 
 ## Visibility and view settings
+
+Visibility and view settings control whether a sheet tab is shown and how the grid appears while editing. Gridlines, headers, zero display, layout direction, and zoom shape the on-screen experience without changing cell data.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -136,7 +144,7 @@ sheet.zoom = 125;
 
 ## Column width and row height
 
-Column width uses Excel character units. Row height uses points. Setting width or height does not create cells.
+Column width and row height control how much space each column and row occupies on the sheet. Width uses Excel character units and height uses points; changing size does not create cell content by itself.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -169,7 +177,9 @@ const height = sheet.getRowHeight(1);
 {% endhighlight %}
 {% endtabs %}
 
-## Freeze panes
+## Freeze rows and columns
+
+Freezing rows or columns keeps selected worksheet areas visible while the remaining content is scrolled. This is useful for keeping headings or labels visible in large worksheets.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

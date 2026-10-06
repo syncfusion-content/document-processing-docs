@@ -38,28 +38,14 @@ For local development, enable WebMCP for testing via `chrome://flags/`.
 
 > **Note:** WebMCP is an experimental browser standard. The API and behavior may change as the standard evolves. The Syncfusion Spreadsheet WebMCP integration is a preview feature.
 
-## Integration
-
-WebMCP integrates seamlessly into Syncfusion Spreadsheet applications across all major platforms. Choose your framework below to get started with platform-specific setup instructions, API references, code examples, and sample prompts.
-
-### Supported Platforms
-
-- **[WebMCP Integration for React Spreadsheet](../Excel/Spreadsheet/react/webmcp)** — React-based Spreadsheet Editor
-- **[WebMCP Integration for Angular Spreadsheet](../Excel/Spreadsheet/angular/webmcp)** — Angular-based Spreadsheet Editor
-- **[WebMCP Integration for Vue Spreadsheet](../Excel/Spreadsheet/vue/webmcp)** — Vue.js-based Spreadsheet Editor
-- **[WebMCP Integration for TypeScript Spreadsheet](../Excel/Spreadsheet/javascript-es6/webmcp)** — TypeScript/ES6 Spreadsheet Editor
-- **[WebMCP Integration for JavaScript Spreadsheet](../Excel/Spreadsheet/javascript-es5/webmcp)** — Vanilla JavaScript/ES5 Spreadsheet Editor
-- **[WebMCP Integration for ASP.NET Core Spreadsheet](../Excel/Spreadsheet/asp-net-core/webmcp)** — ASP.NET Core Spreadsheet Editor
-- **[WebMCP Integration for ASP.NET MVC Spreadsheet](../Excel/Spreadsheet/asp-net-mvc/webmcp)** — ASP.NET MVC Spreadsheet Editor
-
 ## Why Use WebMCP for Spreadsheet?
 
 Syncfusion Spreadsheet integration with WebMCP provides significant benefits for building AI-powered spreadsheet applications:
 
-### ✅ Key Benefits
+### Key Benefits
 
 - **Universal Tool Access** — AI agents, LLMs, and any MCP-compatible client can discover and invoke spreadsheet operations
-- **Zero Custom Integration** — Inject the WebMcpAdapter module, call `registerWebMcpTools()`, and all tool registration, schema binding, and life cycle management is automatic
+- **Zero Custom Integration** — Inject the `WebMcpSpreadsheet` module, set `enableWebMcp: true`, and all tool registration, schema binding, and life cycle management is automatic
 - **Schema-Validated I/O** — Every tool includes JSON Schema for inputs and outputs, eliminating hallucination and enabling AI clients to validate data reliably
 - **Controlled Execution** — Write operations can trigger user confirmation dialogs when the `showConfirmationDialog` property is enabled in the `beforeWebMcpToolExecute` event. Applications can use this event to audit, restrict, or cancel any operation
 - **Multi-Instance Friendly** — Unique prefixes per Spreadsheet prevent tool-name collisions when multiple instances share a page
@@ -81,51 +67,17 @@ When you invoke a WebMCP tool, the following happens behind the scenes:
 5. **Confirmation & Execution** — Write tools are confirmed through `beforeWebMcpToolExecute`, while read tools execute immediately
 6. **Response Formatting** — Returns structured response with success or error
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│  1. Tool Discovery                                              │
-│     spreadsheet.getWebMcpTools(toolNames?)                      │
-│     → Returns available tool schemas, optionally filtered       │
-└─────────────────────────────────────────────────────────────────┘
-                              ↓
-┌─────────────────────────────────────────────────────────────────┐
-│  2. Tool Registration                                           │
-│     spreadsheet.registerWebMcpTools(prefix, tools, exposedTo)   │
-│     → Registers tools on document.modelContext                  │
-│     → Prefixes each tool name (e.g., sales_getCellData)         │
-│     → Binds execute callbacks                                   │
-└─────────────────────────────────────────────────────────────────┘
-                              ↓
-┌─────────────────────────────────────────────────────────────────┐
-│  3. Tool Invocation                                             │
-│     AI Agent calls tool via document.modelContext               │
-│     → Sends tool name and input parameters                      │
-└─────────────────────────────────────────────────────────────────┘
-                              ↓
-┌─────────────────────────────────────────────────────────────────┐
-│  4. Adapter Routing                                             │
-│     WebMcpAdapter.executeHandler() routes the call              │
-│     → Strips prefix from tool name                              │
-│     → Fires beforeWebMcpToolExecute event                       │
-│     → Dispatches to appropriate handler                         │
-└─────────────────────────────────────────────────────────────────┘
-                              ↓
-┌─────────────────────────────────────────────────────────────────┐
-│  5. Confirmation & Execution                                   │
-│     For Write Tools:                                            │
-│     → Shows user confirmation dialog by default                 │
-│     → Executes via CommandExecutor (undo/redo support)          │
-│     For Read Tools:                                             │
-│     → Executes immediately                                      │
-└─────────────────────────────────────────────────────────────────┘
-                              ↓
-┌─────────────────────────────────────────────────────────────────┐
-│  6. Response Formatting                                         │
-│     Returns structured WebMcpToolResponse                       │
-│     → Success: { content: [{ type: 'text', text: JSON }] }      │
-│     → Error: { error: 'Error message' }                         │
-└─────────────────────────────────────────────────────────────────┘
-```
+## Integration
+
+WebMCP integrates seamlessly into Syncfusion Spreadsheet applications across all major platforms. Choose your framework below to get started with platform-specific setup instructions, API references, code examples, and sample prompts.
+
+### Supported Platforms
+
+- **[WebMCP Integration for React Spreadsheet](hhttps://ej2.syncfusion.com/react/documentation/webmcp/overview)** — React-based Spreadsheet Editor
+- **[WebMCP Integration for Angular Spreadsheet](https://ej2.syncfusion.com/angular/documentation/webmcp/overview)** — Angular-based Spreadsheet Editor
+- **[WebMCP Integration for Vue Spreadsheet](https://ej2.syncfusion.com/vue/documentation/webmcp/overview)** — Vue.js-based Spreadsheet Editor
+- **[WebMCP Integration for TypeScript Spreadsheet](https://ej2.syncfusion.com/documentation/webmcp/overview)** — TypeScript/ES6 Spreadsheet Editor
+- **[WebMCP Integration for JavaScript Spreadsheet](https://ej2.syncfusion.com/javascript/documentation/webmcp/overview)** — Vanilla JavaScript/ES5 Spreadsheet Editor
 
 ## Common Use Cases
 
@@ -155,14 +107,14 @@ WebMCP tools are organized into six categories, covering 28 operations:
 
 | Category | Tools | Example |
 |----------|-------|---------|
-| **Core Data** | getCellData, getRangeData, getSheetInfo, getCellFormula, evaluateFormula | Read cell values and formulas programmatically |
-| **Editing** | editCell, editRange, insertRows, insertColumns, insertSheet, deleteRows, deleteColumns, deleteSheet, renameSheet | Modify spreadsheet structure and content |
-| **Formatting** | formatCells, clearFormatting, applyConditionalFormatting, autoFit | Apply styles and conditional rules |
-| **Data Manipulation** | sortRange, filterData, find, replace, freezePanes, unfreezePanes | Transform and navigate data |
-| **Charting & Shapes** | insertChart, editChart, deleteChart, insertShape | Create visualizations |
-| **Workbook & Utility** | saveWorkbook, undo, redo, getSheetList | Manage workbook and history |
+| **Core Data** | getCellData, getRangeData, getSheetInfo, sheetList, evaluateFormula, find | Read cell values, formulas, sheet metadata, and search content |
+| **Editing** | editCell, insertRowsColumns, deleteRowsColumns, insertSheet, cut, copy, paste, autofill, findReplace | Modify spreadsheet content and structure |
+| **Formatting** | formatCells, setNumberFormat, addConditionalFormat, mergeCells, toggleWrap | Apply styles, number formats, conditional rules, and cell layout |
+| **Data Operations** | sortRange, filterRange, addDataValidation, freezePanes | Sort, filter, validate, and lock data for navigation |
+| **Charting & Links** | insertChart, insertHyperlink | Create visualizations and insert clickable links |
+| **Workbook & Utility** | save, undo | Export the workbook and manage action history |
 
-For complete tool reference with schemas, see [WebMCP Integration — Tool Reference](./integration#tool-reference).
+For complete tool reference, see [WebMCP Integration — Tool Reference](https://ej2.syncfusion.com/react/documentation/webmcp/components#spreadsheet).
 
 ## Writing Effective Prompts
 
@@ -178,7 +130,7 @@ AI responses are only as good as the prompt you provide. Vague requests like *"f
 
 - **Be Specific** — Include exact column names, cell ranges, colors, and formatting details
 - **Provide Context** — Mention the sheet, data type, or business objective
-- **One Goal at a Time** — Complex prompts may confuse the AI; break into steps
+- **One Goal at a Time** — Complex prompts may confuse the AI; break them into steps
 - **Reference Cells Clearly** — Use specific addresses (e.g., "A1:C10") instead of vague ranges
 - **State Expectations** — Clarify sort order, filter criteria, or output format
 
@@ -186,7 +138,7 @@ AI responses are only as good as the prompt you provide. Vague requests like *"f
 
 - **Operates on the active sheet only** — WebMCP actions are scoped to the currently open sheet. Multi-sheet operations require separate prompts.
 
-- **Prompt clarity affects result quality** — The AI interprets your request as written, so the quality of the output depends on how clearly the prompt is phrased.
+- **Prompt clarity affects result quality** — The AI interprets your request literally, so output quality depends directly on how clearly the prompt is written.
 
 - **Experimental status** — WebMCP is a preview standard. APIs and browser support may change as the specification evolves.
 

@@ -225,8 +225,7 @@ For WebAssembly applications, include the following properties in the project **
 </table>
 
 N>
-* For WebAssembly applications, install the [SkiaSharp.NativeAssets.WebAssembly](https://www.nuget.org/packages/SkiaSharp.NativeAssets.WebAssembly) NuGet package.
-* When hosting in certain environments (for example, Azure App Service), consider using [SkiaSharp.Views.Blazor](https://www.nuget.org/packages/SkiaSharp.Views.Blazor) instead of [SkiaSharp.NativeAssets.WebAssembly](https://www.nuget.org/packages/SkiaSharp.NativeAssets.WebAssembly). Align native asset versions in the project file with the installed package version.
+* For WebAssembly applications, install the [SkiaSharp.Views.Blazor version 4.150.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/4.150.1) NuGet package.
 
 ## See also
 

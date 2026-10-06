@@ -8,13 +8,13 @@ documentation: ug
 
 # Sort and Filter in JavaScript Excel
 
-The JavaScript Excel Library authors **sort state** and **AutoFilter criteria** as workbook metadata so Excel can apply them when the file is opened.
+Sort and filter settings are stored as workbook metadata so spreadsheet applications can apply them when the file opens. Use sort state to define ordered columns and AutoFilter criteria to store which rows should be shown.
 
 N> Calling sort or filter APIs does **not** rearrange rows or hide filtered rows inside the library. Cell values stay as stored. Excel (or another consumer) applies the persisted state.
 
-## Sort state (`DataSorter`)
+## Configure sort state
 
-Add sort state with `sheet.addDataSorter(range)`, then define a condition with `sorter.add(range)`. Authored sort state keeps one modeled condition (`add` replaces prior conditions). Configure direction and comparison on the returned `SortCondition`.
+Sort state describes how a range should be ordered when Excel applies sorting. Define the target range, the sort key, and the direction so the intended order is ready when the workbook opens.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -24,14 +24,15 @@ import type { SortBy } from '@syncfusion/ej2-xlsx';
 const workbook: Workbook = Workbook.create();
 const sheet = workbook.sheet(0);
 
-// Populate data in A1:B10 …
+// Populate data in A1:B10 first, then author sort metadata
 const sorter = sheet.addDataSorter('A1:B10');
 sorter.isCaseSensitive = false;
-sorter.isColumnSort = false;
+sorter.isColumnSort = false; // false = sort rows (default Excel behavior)
 
+// add() defines the condition range; only one condition is modeled
 const condition = sorter.add('A1:B10');
 condition.isDescending = true;
-const by: SortBy = 'value';
+const by: SortBy = 'value'; // 'value' | 'cellColor' | 'fontColor' | 'icon'
 condition.sortBy = by;
 // Optional custom order, for example:
 // condition.customList = 'Low,Medium,High';
@@ -48,13 +49,15 @@ import { Workbook } from '@syncfusion/ej2-xlsx';
 const workbook = Workbook.create();
 const sheet = workbook.sheet(0);
 
+// Populate data in A1:B10 first, then author sort metadata
 const sorter = sheet.addDataSorter('A1:B10');
 sorter.isCaseSensitive = false;
-sorter.isColumnSort = false;
+sorter.isColumnSort = false; // false = sort rows (default Excel behavior)
 
+// add() defines the condition range; only one condition is modeled
 const condition = sorter.add('A1:B10');
 condition.isDescending = true;
-condition.sortBy = 'value';
+condition.sortBy = 'value'; // 'value' | 'cellColor' | 'fontColor' | 'icon'
 
 const conditions = sorter.list();
 const count = sorter.count;
@@ -64,11 +67,13 @@ sheet.removeDataSorter();
 {% endhighlight %}
 {% endtabs %}
 
+Set `condition.sortBy` to `'value'`, `'cellColor'`, `'fontColor'`, or `
+
 `SortBy` is `'value' | 'cellColor' | 'fontColor' | 'icon'`. A worksheet holds at most one sort-state record. Use `sorter.clear()`, `remove`, or `removeAt` to drop conditions without removing the sorter itself.
 
-## AutoFilter
+## Configure AutoFilter criteria
 
-Add a worksheet AutoFilter with `sheet.addAutoFilter(range)`, then configure columns with `addFilterColumn(columnIndex)` (zero-based within the filter range).
+AutoFilter criteria define the filtering settings stored in the workbook. Spreadsheet applications can use these settings when displaying worksheet data.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -77,10 +82,11 @@ import { Workbook } from '@syncfusion/ej2-xlsx';
 const workbook: Workbook = Workbook.create();
 const sheet = workbook.sheet(0);
 
-// Header row + data in A1:D20 …
+// Header row + data in A1:D20 first
 const filter = sheet.addAutoFilter('A1:D20');
 
-const statusCol = filter.addFilterColumn(0); // first column of the filter range
+// columnIndex is zero-based within the filter range (0 = column A here)
+const statusCol = filter.addFilterColumn(0);
 statusCol.addValue('Delivered');
 statusCol.addValues(['Pending', 'Shipped']);
 statusCol.isBlank = false;
@@ -98,8 +104,10 @@ import { Workbook } from '@syncfusion/ej2-xlsx';
 const workbook = Workbook.create();
 const sheet = workbook.sheet(0);
 
+// Header row + data in A1:D20 first
 const filter = sheet.addAutoFilter('A1:D20');
 
+// columnIndex is zero-based within the filter range (0 = column A here)
 const statusCol = filter.addFilterColumn(0);
 statusCol.addValue('Delivered');
 statusCol.addValues(['Pending', 'Shipped']);

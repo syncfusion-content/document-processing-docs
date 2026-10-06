@@ -8,9 +8,11 @@ documentation: ug
 
 # Shapes and Text Boxes in JavaScript Excel
 
-Worksheets support DrawingML text boxes and preset autoshapes. Sizes use **points** (72 pt = 1 inch). Anchors are **1-based** row and column.
+Worksheets support DrawingML text boxes and preset AutoShapes. Sizes use **points** (72 pt = 1 inch). Anchors are **1-based** row and column.
 
 ## Text boxes
+
+Text boxes place free-form text as floating drawings on the worksheet. Use them for callouts, titles, or notes that sit outside the cell grid.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -37,6 +39,8 @@ sheet.removeTextBox(box);
 {% endtabs %}
 
 ## AutoShapes
+
+AutoShapes are preset geometric drawings such as rectangles, arrows, and stars. Add them to highlight content, build simple diagrams, or label areas of the sheet.
 
 ```ts
 sheet.addShape(
@@ -95,6 +99,8 @@ sheet.removeShape(shape);
 {% endtabs %}
 
 ## Common `AutoShapeType` values
+
+Common preset shapes cover rectangles, polygons, stars, arrows, and basic three-dimensional forms. Choose the type that matches the callout or diagram you need.
 
 * Rectangles and ovals: `Rectangle`, `RoundedRectangle`, `Oval`, `Circle`
 * Polygons: `Triangle`, `Diamond`, `Pentagon`, `Hexagon`, `Octagon`
