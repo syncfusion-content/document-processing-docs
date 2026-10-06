@@ -8,6 +8,13 @@ keywords: syncfusion python, use syncfusion from python, python document process
 ---
 
 # Can I Use Syncfusion Document Libraries from Python?
- 
-* Run Document SDK using Python .NET
-* Run DOcument SDK using Local .NET Worker
+
+ Yes. Syncfusion Document Processing libraries can be accessed from Python using either:
+
+* Python.NET, which directly invokes .NET assemblies from Python.
+* A Local .NET Worker service, where Python communicates with a .NET process for document operations.
+
+Refer to the following guides:
+
+* [Run Document SDK using Python.NET](../python-integration/Run-DocumentSDK-using-Local-NET-Worker)
+* [Run Document SDK using Local .NET Worker](../python-integration/Run-DocumentSDK-using-Python-NET)
