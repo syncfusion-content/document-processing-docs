@@ -4,6 +4,7 @@ description: Learn how to add, remove, and extract file attachments in a PDF doc
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Attachments in .NET PDF Library
 

@@ -6,6 +6,7 @@ platform: document-processing
 control: R t l 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Right to Left in TypeScript DOCX Editor

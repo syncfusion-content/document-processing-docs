@@ -6,6 +6,7 @@ platform: document-processing
 control: Show hide spinner 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Show and Hide Spinner in JavaScript DOCX Editor

@@ -6,6 +6,7 @@ control: Export
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Export in React DOCX Editor

@@ -5,6 +5,7 @@ description: Images in ASP.NET Core DOCX Editor enable resizing and text wrappin
 platform: document-processing
 control: Image
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

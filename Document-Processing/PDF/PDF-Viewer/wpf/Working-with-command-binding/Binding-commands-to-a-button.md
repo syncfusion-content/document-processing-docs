@@ -5,6 +5,7 @@ description: The command binding feature in WPF PDF Viewer enables binding PDF v
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Commands in WPF Pdf Viewer control

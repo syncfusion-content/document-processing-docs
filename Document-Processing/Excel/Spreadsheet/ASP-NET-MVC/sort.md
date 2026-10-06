@@ -5,6 +5,7 @@ description: Sort spreadsheet data efficiently using built-in sorting capabiliti
 platform: document-processing
 control: Sort
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

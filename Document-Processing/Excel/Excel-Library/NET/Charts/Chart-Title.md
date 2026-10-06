@@ -4,6 +4,7 @@ description: Chart title settings describes how the Syncfusion .NET Excel Librar
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Chart Title in .NET Excel Library

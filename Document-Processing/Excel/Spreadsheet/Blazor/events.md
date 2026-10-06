@@ -5,6 +5,7 @@ description: Learn about the available events in the Syncfusion Blazor Spreadshe
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Events in Blazor Spreadsheet

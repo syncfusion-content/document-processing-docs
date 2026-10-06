@@ -5,6 +5,7 @@ description: This guide explains how to retrieve the page count of a loaded PDF 
 platform: document-processing
 control: PdfViewerControl
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to get page count in WinForms PDF Viewer

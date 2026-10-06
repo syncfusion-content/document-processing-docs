@@ -5,6 +5,7 @@ description: Learn here all about Customizing progress ring support in Syncfusio
 platform: document-processing
 control: PDF viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Customizing progress ring in UWP PDF Viewer

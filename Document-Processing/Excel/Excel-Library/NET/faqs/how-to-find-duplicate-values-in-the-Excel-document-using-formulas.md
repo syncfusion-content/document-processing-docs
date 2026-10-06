@@ -4,6 +4,7 @@ description: Find duplicate values in an Excel document using formulas with the 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to find duplicate values in .NET Excel Library

@@ -5,6 +5,7 @@ description: Step-by-step migration guide from Blazor PDF Viewer (Classic) to PD
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Migrate from (Classic) PDFViewer to Blazor PDF Viewer

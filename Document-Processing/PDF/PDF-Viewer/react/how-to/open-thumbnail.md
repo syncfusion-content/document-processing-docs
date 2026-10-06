@@ -5,6 +5,7 @@ description: Open the thumbnail pane programmatically in the React PDF Viewer us
 control: PDF Viewer
 platform: document-processing
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Open the Thumbnail Pane Programmatically in React PDF Viewer

@@ -5,6 +5,7 @@ description: Learn here about Syncfusion common licensing errors which appears o
 platform: document-processing
 control: Essential Studio
 documentation: ug
+appliesto: Document SDK, PDF Viewer SDK, DOCX Editor SDK, Spreadsheet Editor SDK
 ---
 
 # Licensing errors Possible in Document Solutions

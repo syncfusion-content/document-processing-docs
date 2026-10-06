@@ -4,6 +4,7 @@ description: Convert PowerPoint to PDF in .NET Core application on macOS using .
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert PowerPoint to PDF on macOS

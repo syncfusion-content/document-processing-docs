@@ -5,6 +5,7 @@ platform: document-processing
 control: Presentation
 documentation: UG
 keywords: OLE Object in PowerPoint presentation
+appliesto: Document SDK
 ---
 # Working with OLE Objects
 

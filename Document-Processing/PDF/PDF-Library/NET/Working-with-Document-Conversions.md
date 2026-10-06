@@ -4,6 +4,7 @@ description: Learn how to convert Word, Excel, RTF, TIFF, XPS, and HTML document
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Document Conversion in .NET PDF Library
 

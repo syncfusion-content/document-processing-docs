@@ -4,6 +4,7 @@ description: Learn how to convert a Word document to a PDF in Azure services usi
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert Word document to PDF in Azure 

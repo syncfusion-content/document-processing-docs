@@ -5,6 +5,7 @@ description: Performance best practices in JavaScript Spreadsheet help optimize 
 platform: document-processing
 control: Performance
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Performance Best Practices in JavaScript Spreadsheet 

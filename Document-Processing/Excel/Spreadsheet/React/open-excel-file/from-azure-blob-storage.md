@@ -5,6 +5,7 @@ description: Learn how to open Excel files stored in Azure Blob Storage using th
 platform: document-processing
 control: Open file from Azure Blob Storage
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Open Excel from Azure Blob Storage in React Spreadsheet

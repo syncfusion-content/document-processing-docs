@@ -5,6 +5,7 @@ description: Retrieve the Base64 value of a loaded PDF in the ASP.NET MVC PDF Vi
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Get the Base64 Value of a PDF in ASP.NET MVC PDF Viewer

@@ -4,6 +4,7 @@ description: Learn how to implement multithreading in the Syncfusion PdfToImageC
 platform: document-processing
 control: PDF to image
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to Perform Multithreading in PdfToImageConverter Library

@@ -4,6 +4,7 @@ description: Describe the assemblies required to convert Word documents to image
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Assemblies required to convert Word document to Image
 

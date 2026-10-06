@@ -4,6 +4,7 @@ description: Explore the performance benchmark results of Word-to-Image conversi
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Word to Image Performance Benchmark in .NET Word

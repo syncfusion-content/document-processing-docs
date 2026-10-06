@@ -5,6 +5,7 @@ description: The hyperlink support feature in PdfViewerControl enables users to 
 platform: document-processing
 control: PdfViewerControl
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Hyperlinks in Windows Forms PDF Viewer

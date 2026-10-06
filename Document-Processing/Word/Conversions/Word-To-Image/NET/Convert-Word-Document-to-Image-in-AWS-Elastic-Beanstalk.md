@@ -4,6 +4,7 @@ description: Convert Word to image without Microsoft Word or interop dependencie
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert Word to Image in AWS Elastic Beanstalk 

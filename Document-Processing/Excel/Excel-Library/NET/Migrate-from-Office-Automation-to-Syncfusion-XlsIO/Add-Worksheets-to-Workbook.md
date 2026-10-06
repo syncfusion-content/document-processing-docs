@@ -4,6 +4,7 @@ description: Adding worksheets to template Excel documents explains how to updat
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Worksheets in .NET Excel Library

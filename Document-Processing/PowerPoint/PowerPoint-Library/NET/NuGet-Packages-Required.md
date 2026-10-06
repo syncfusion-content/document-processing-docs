@@ -4,6 +4,7 @@ description: Learn about the NuGet packages required to use the Syncfusion® .NE
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 # Required NuGet Packages in .NET PowerPoint Presentation
 

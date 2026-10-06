@@ -5,6 +5,7 @@ description: Find and Replace in TypeScript Spreadsheet helps users quickly loca
 platform: document-processing
 control: Searching
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Find and Replace in TypeScript Spreadsheet 

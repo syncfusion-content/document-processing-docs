@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: text-wrapping,text-wrapping-style,inline,square,top-and-bottom,behind
+appliesto: DOCX Editor SDK
 ---
 # Text Wrapping Style in WPF DOCX Editor
 Text wrapping refers to how images and shapes are fit with surrounding text in a document. Currently, [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) has only preservation support for image and textbox shape with below wrapping styles.

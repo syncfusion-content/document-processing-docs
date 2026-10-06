@@ -5,6 +5,7 @@ platform: document-processing
 control: Syncfusion<sup>&reg;</sup> PowerPoint presentation
 documentation: 
 keywords: PowerPoint, slide, connectors, pptx, shapes
+appliesto: Document SDK
 ---
 
 # Connectors in .NET PowerPoint Presentation

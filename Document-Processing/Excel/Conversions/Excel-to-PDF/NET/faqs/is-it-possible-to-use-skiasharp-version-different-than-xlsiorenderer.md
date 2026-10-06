@@ -4,6 +4,7 @@ description: SkiaSharp compatibility explains runtime errors caused by incompati
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # SkiaSharp Version Support in .NET Excel Library

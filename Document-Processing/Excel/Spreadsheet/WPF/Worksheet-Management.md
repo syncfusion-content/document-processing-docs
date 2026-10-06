@@ -5,6 +5,7 @@ description: Manage worksheets in the WPF Spreadsheet control by adding, removin
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Worksheet Management in WPF Spreadsheet

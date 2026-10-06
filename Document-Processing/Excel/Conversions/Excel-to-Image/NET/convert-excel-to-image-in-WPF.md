@@ -4,6 +4,7 @@ description: WPF Excel to Image section explains how to convert Excel documents 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Excel to Image Conversion in WPF using Excel Library

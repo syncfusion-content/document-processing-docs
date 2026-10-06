@@ -4,6 +4,7 @@ description: Configure Docker environment variables for deploying Syncfusion Doc
 platform: document-processing
 control: general
 documentation: UG
+appliesto: Document SDK
 ---
 # Docker Image Environment Variables and Configuration
 

@@ -5,6 +5,7 @@ description: Learn how to deploy the Syncfusion Spreadsheet server Docker image 
 control: How to deploy spreadsheet server to AWS EKS using Docker
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Deploy Spreadsheet Docker to AWS EKS Cluster

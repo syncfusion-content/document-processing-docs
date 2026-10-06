@@ -5,6 +5,7 @@ platform: document-processing
 control: general
 documentation: UG
 keywords: PDF, SDK, view, edit, read
+appliesto: PDF Viewer SDK
 ---
 
 # About Syncfusion PDF Viewer Component

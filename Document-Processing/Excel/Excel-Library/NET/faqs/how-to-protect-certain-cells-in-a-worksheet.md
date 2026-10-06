@@ -4,6 +4,7 @@ description: Protect certain cells in an Excel worksheet using the Syncfusion .N
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to protect cells in .NET Excel Library

@@ -5,6 +5,7 @@ description: Learn here some information about the process of installing, managi
 platform: document-processing
 control: NuGet Packages
 documentation: ug
+appliesto: Document SDK, PDF Viewer SDK, DOCX Editor SDK, Spreadsheet Editor SDK
 ---
 
 # NuGet Packages of Document Processing Solutions

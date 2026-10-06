@@ -5,6 +5,7 @@ platform: document-processing
 control: PDF
 documentation: UG
 keywords: google app engine save pdf, app engine load pdf, c# save pdf, c# load pdf
+appliesto: Document SDK
 ---
 
 # Open and Save PDF Document in Google App Engine

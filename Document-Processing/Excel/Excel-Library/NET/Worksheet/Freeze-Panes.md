@@ -4,6 +4,7 @@ description: Use freeze panes in Excel worksheets programmatically using the Syn
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Freeze and Unfreeze Panes in .NET Excel Library

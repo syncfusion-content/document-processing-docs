@@ -4,6 +4,7 @@ description: Deleting Excel comments programmatically explains how to remove com
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Deleting Comments in .NET Excel Library

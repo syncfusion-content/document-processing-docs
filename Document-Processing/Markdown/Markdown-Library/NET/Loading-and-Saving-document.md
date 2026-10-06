@@ -4,6 +4,7 @@ description: Learn how to load and save a Markdown document in C# and VB.NET usi
 platform: document-processing
 control: Markdown
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Loading and Saving Documents in .NET Markdown Library

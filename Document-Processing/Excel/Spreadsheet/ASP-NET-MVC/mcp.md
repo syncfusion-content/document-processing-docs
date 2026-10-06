@@ -6,6 +6,7 @@ control: Spreadsheet
 platform: document-processing
 documentation: ug
 keywords: ASP.NET MVC Agentic UI Builder, MCP Server, search docs, Spreadsheet SDK, Server Packages
+appliesto: Spreadsheet Editor SDK
 ---
 
 # MCP Server Setup in ASP.NET MVC Spreadsheet

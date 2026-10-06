@@ -6,6 +6,7 @@ platform: document-processing
 control: Disable context menu
 
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Disable the Context Menu in ASP.NET MVC PDF Viewer

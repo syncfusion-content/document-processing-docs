@@ -5,6 +5,7 @@ description: The keyboard shortcuts feature in ASP.NET Core DOCX Editor enables 
 platform: document-processing
 control: Keyboard Shortcut
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

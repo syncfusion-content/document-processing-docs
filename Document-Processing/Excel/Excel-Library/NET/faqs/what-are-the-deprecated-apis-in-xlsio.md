@@ -4,6 +4,7 @@ description: Deprecated API details describes old .NET Excel Library APIs and th
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Deprecated APIs in .NET Excel Library

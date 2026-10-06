@@ -4,6 +4,7 @@ description: Sort and filter pivot tables in an Excel document using the Syncfus
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Sorting and Filtering in .NET Excel Library

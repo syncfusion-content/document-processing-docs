@@ -5,6 +5,7 @@ description: Learn about the Syncfusion® .NET PowerPoint Presentation Library f
 platform: document-processing
 control: Presentation
 documentation: UG
+appliesto: Document SDK
 ---
 # About Syncfusion .NET PowerPoint Presentation Library
 

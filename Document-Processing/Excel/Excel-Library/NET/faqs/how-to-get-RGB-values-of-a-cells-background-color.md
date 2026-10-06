@@ -4,6 +4,7 @@ description: Get RGB values of a cell background color using the Syncfusion .NET
 platform: document-processing 
 control: XlsIO 
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to get RGB values in .NET Excel Library

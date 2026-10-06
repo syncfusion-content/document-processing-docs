@@ -6,6 +6,7 @@ platform: document-processing
 control: Opening from Box cloud file storage
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 --- 
 
 # Open Documents from Box Cloud File Storage in TypeScript DOCX Editor

@@ -4,6 +4,7 @@ description: Learn how to modify the appearance of legend in a chart in a Word d
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Modify the Appearance of Series in .NET Word

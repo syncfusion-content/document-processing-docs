@@ -5,6 +5,7 @@ description: Deploy the Syncfusion PDF Viewer server app to Azure App Service di
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Deploy the PDF Viewer Server App to Azure App Service in

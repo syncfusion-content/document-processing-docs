@@ -4,6 +4,7 @@ description: Convert JPG, PNG, BMP, and TIFF images into single or multi‑page 
 platform: document-processing
 control: general
 documentation: UG
+appliesto: Document SDK
 ---
 # Convert Image to PDF Using Syncfusion Web API
 

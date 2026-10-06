@@ -5,6 +5,7 @@ description: Learn about how to add and manage images and visual elements in the
 control: Illustrations
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Illustrations in Vue Spreadsheet

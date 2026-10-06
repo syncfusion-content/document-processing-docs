@@ -6,6 +6,7 @@ control: SfPdfViewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # About Syncfusion  Toolbar in Blazor PDF Viewer Component

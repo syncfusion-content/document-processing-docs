@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF
 documentation: UG
 keywords: create pdf, edit pdf, write pdf, merge, pdf form, fill form, digital sign, table, c#, vb.net, dotnet pdf
+appliesto: Document SDK
 ---
 # Create or Generate PDF file in C# and VB.NET
 

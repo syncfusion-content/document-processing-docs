@@ -5,6 +5,7 @@ description: Open the thumbnail pane programmatically in the JavaScript (ES6) PD
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Open the Thumbnail Pane Programmatically in JavaScript (ES6)

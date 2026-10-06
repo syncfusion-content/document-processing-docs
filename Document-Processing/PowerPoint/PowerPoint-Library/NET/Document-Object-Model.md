@@ -4,6 +4,7 @@ description: Learn about the document object model in the Syncfusion® .NET Powe
 platform: document-processing
 control: Presentation
 documentation: UG
+appliesto: Document SDK
 ---
 # Document Object Model in .NET PowerPoint Presentation
 

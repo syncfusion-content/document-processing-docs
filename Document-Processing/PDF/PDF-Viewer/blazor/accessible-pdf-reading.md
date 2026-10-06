@@ -5,6 +5,7 @@ description: Learn about accessible PDF reading in Blazor PDF Viewer using Micro
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Accessible PDF Reading in Blazor PDF Viewer

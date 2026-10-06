@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion Xamarin.Android PDF Vi
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Getting Started with Xamarin.Android PDF Viewer

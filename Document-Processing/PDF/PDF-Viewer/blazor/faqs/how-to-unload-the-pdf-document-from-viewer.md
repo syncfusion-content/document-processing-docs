@@ -5,6 +5,7 @@ description: Learn how to automatically and programmatically unload PDF document
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Unload PDF document from Viewer in Blazor PDF Viewer

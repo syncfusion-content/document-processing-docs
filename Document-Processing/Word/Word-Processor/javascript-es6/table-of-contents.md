@@ -6,6 +6,7 @@ platform: document-processing
 control: Table of contents 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Table of Contents in TypeScript DOCX Editor

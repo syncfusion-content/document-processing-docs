@@ -4,6 +4,7 @@ description: Apply custom filters to string data in Excel worksheets using the S
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to apply custom string filters in .NET Excel Library

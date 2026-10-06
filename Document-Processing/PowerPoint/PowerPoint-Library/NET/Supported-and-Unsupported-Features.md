@@ -5,6 +5,7 @@ platform: document-processing
 control: Presentation
 documentation: UG
 keywords: Supported and Unsupported Features of Presentation library
+appliesto: Document SDK
 ---
 
 # Feature Support in .NET PowerPoint Presentation

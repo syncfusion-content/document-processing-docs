@@ -5,6 +5,7 @@ description: Tables in ASP.NET MVC DOCX Editor enable adding and managing rows, 
 platform: document-processing
 control: Table
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

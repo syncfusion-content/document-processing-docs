@@ -4,6 +4,7 @@ description: The assemblies required for .NET Excel library that allows to creat
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Assemblies Required for .NET Excel Library

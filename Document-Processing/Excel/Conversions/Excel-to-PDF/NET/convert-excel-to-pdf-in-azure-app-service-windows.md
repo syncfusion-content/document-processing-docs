@@ -4,6 +4,7 @@ description: Azure App Service on Windows Excel to PDF section explains how to c
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Excel to PDF Conversion in Azure Windows using Excel Library

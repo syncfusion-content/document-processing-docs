@@ -4,6 +4,7 @@ description: Learn about overview of converting Excel charts to images using the
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # About Syncfusion .NET Excel Chart to Image Conversion

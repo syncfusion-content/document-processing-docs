@@ -6,6 +6,7 @@ description: The collaborative editing feature in ASP.NET MVC DOCX Editor suppor
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Collaborative Editing in ASP.NET MVC DOCX Editor with Redis

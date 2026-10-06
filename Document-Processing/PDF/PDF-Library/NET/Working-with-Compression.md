@@ -4,6 +4,7 @@ description: Learn how to reduce PDF file size by compressing images, optimizing
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Compression in .NET PDF Library
 

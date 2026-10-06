@@ -4,6 +4,7 @@ description: Learn about the Syncfusion® .NET Markdown Library for creating, re
 platform: document-processing
 control: Markdown
 documentation: UG
+appliesto: Document SDK
 ---
 # About Syncfusion .NET Markdown Library
 

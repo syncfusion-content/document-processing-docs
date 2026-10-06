@@ -4,6 +4,7 @@ description: Learn about overview of Syncfusion Docker-based solution for effici
 platform: document-processing
 control: general
 documentation: UG
+appliesto: Document SDK
 ---
 # About Ready-to-Deploy Docker Image for Document Processing Web APIs
 

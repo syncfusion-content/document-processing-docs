@@ -5,6 +5,7 @@ description: Learn here all about Feature List in Syncfusion ASP.NET Core Spread
 platform: document-processing
 control: Feature List
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

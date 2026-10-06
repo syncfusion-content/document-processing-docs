@@ -6,6 +6,7 @@ control: Notes
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Footnotes and Endnotes in React DOCX Editor

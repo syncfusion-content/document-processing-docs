@@ -5,6 +5,7 @@ description: Formulas in Angular Spreadsheet enable users to perform calculation
 platform: document-processing
 control: Formulas
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Formulas in Angular Spreadsheet 

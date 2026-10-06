@@ -5,6 +5,7 @@ description: Import PDF form field data into the JavaScript (ES6) PDF Viewer fro
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Import Form Data in JavaScript (ES6) PDF Viewer

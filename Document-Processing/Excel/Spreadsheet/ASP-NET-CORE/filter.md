@@ -5,6 +5,7 @@ description: Learn about filtering in the Syncfusion ASP.NET Core Spreadsheet co
 platform: document-processing
 control: Filter
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

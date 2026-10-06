@@ -6,6 +6,7 @@ description: Learn how to get started with the Syncfusion Windows Forms Spreadsh
 platform:  document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Getting Started with Windows Forms Spreadsheet

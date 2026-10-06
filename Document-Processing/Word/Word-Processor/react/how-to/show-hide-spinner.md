@@ -6,6 +6,7 @@ control: Show hide spinner
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Show and Hide Spinner in React DOCX Editor

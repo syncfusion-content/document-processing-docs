@@ -4,6 +4,7 @@ description: Convert PPTX to image in AWS Elastic Beanstalk using .NET Core Powe
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert PowerPoint Presentation to Image in AWS Elastic Beanstalk
