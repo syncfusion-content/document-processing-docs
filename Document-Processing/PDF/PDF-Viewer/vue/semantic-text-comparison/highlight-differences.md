@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Highlight Differences in UI
+# Highlight Differences in UI in Vue PDF Viewer
 
 The semantic text comparison feature highlights differences between two PDF documents with customizable colors and opacity, making it easy to identify changes at a glance.
 
@@ -31,7 +31,7 @@ When you compare two PDF documents using the semantic text comparison feature, d
 ### Step 1: Import required components
 
 {% tabs %}
-{% highlight vue tabtitle="App.vue" %}
+{% highlight html tabtitle="App.vue" %}
 {% raw %}
 import { PdfComparerComponent } from '@syncfusion/ej2-vue-pdfviewer';
 {% endraw %}
@@ -198,6 +198,8 @@ Use the `enableSyncScrolling` property to control whether the viewers stay synch
 - **Color-coded highlighting** - Visual differentiation of added and deleted text (red for deleted, green for added)
 - **Differences panel** - Consolidated list on the right showing all detected differences categorized by type
 - **File upload support** - Upload custom PDFs for comparison
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/Semantic%20Text%20Comparison/Highlight%20differences%20in%20UI/pdf-comparer-ui).
 
 ## Related topics
 
