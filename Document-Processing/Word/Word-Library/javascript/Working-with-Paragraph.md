@@ -57,8 +57,8 @@ import { TextRange, WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing document
 let response = await fetch('Input.docx');
-let bytes = new Uint8Array(await response.arrayBuffer());
-let document = WordDocument.open(bytes);
+let arrayBuffer = await response.arrayBuffer();
+let document = await WordDocument.openAsync(arrayBuffer);
 
 let section = document.sections[0];
 let paragraph = section.body.paragraphs[0];
@@ -89,8 +89,8 @@ import { Color, Paragraph, ParagraphAlignment, WordDocument } from '@syncfusion/
 
 // Load the document
 let response = await fetch('Input.docx');
-let bytes = new Uint8Array(await response.arrayBuffer());
-let document = WordDocument.open(bytes);
+let arrayBuffer = await response.arrayBuffer();
+let document = await WordDocument.openAsync(arrayBuffer);
 let bodyItems = document.sections[0].body.items;
 
 // Apply spacing, indentation, shading, and alignment to paragraph 5 (index 4)
@@ -165,8 +165,8 @@ import { Paragraph, WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing document
 let response = await fetch('Template.docx');
-let bytes = new Uint8Array(await response.arrayBuffer());
-let document = WordDocument.open(bytes);
+let arrayBuffer = await response.arrayBuffer();
+let document = await WordDocument.openAsync(arrayBuffer);
 
 // Access the second body item (index 1)
 let paragraph = document.sections[0].body.items[1];
@@ -197,8 +197,8 @@ import { Color, ParagraphStyle, WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
 let response = await fetch('Input_AccessStyle_Template.docx');
-let bytes = new Uint8Array(await response.arrayBuffer());
-let document = WordDocument.open(bytes);
+let arrayBuffer = await response.arrayBuffer();
+let document = await WordDocument.openAsync(arrayBuffer);
 
 let styles = document.styles;
 let style = styles.findByName('Heading1');
@@ -223,8 +223,8 @@ import { Color, ParagraphAlignment, WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
 let response = await fetch('Template.docx');
-let bytes = new Uint8Array(await response.arrayBuffer());
-let document = WordDocument.open(bytes);
+let arrayBuffer = await response.arrayBuffer();
+let document = await WordDocument.openAsync(arrayBuffer);
 
 // Create a custom paragraph style
 let myStyle = document.styles.addParagraphStyle('MyStyle');
@@ -256,8 +256,8 @@ import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
 let response = await fetch('Input_Emphasis_Template.docx');
-let bytes = new Uint8Array(await response.arrayBuffer());
-let document = WordDocument.open(bytes);
+let arrayBuffer = await response.arrayBuffer();
+let document = await WordDocument.openAsync(arrayBuffer);
 
 // Apply the built-in Emphasis style
 document.lastParagraph.applyStyle('Emphasis');
@@ -278,8 +278,8 @@ import { ParagraphStyle, WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
 let response = await fetch('Template.docx');
-let bytes = new Uint8Array(await response.arrayBuffer());
-let document = WordDocument.open(bytes);
+let arrayBuffer = await response.arrayBuffer();
+let document = await WordDocument.openAsync(arrayBuffer);
 
 let styles = document.styles;
 let style = styles.findByName('Style1');
@@ -330,8 +330,8 @@ import { Paragraph, TextRange, WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing document
 let response = await fetch('Template.docx');
-let imageBytes = new Uint8Array(await response.arrayBuffer());
-let document = WordDocument.open(bytes));
+let arrayBuffer = await response.arrayBuffer();
+let document = await WordDocument.openAsync(arrayBuffer);
 
 // Modify the first text range of the paragraph at body index 3
 let block = document.sections[0].body.items[3];

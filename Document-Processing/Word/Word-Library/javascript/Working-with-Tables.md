@@ -185,7 +185,9 @@ The following code example shows how to apply formatting such as title, descript
 import { BorderStyle, Color, Table, TableCellVerticalAlignment, TableRow, TableRowHeightRule, WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-let document = WordDocument.openSync('Template.docx');
+let response = await fetch('Template.docx');
+let arrayBuffer = await response.arrayBuffer();
+let document = await WordDocument.openAsync(arrayBuffer);
 
 // Access the first section
 let section = document.sections[0];
@@ -237,7 +239,9 @@ The following code example shows how to resize tables using auto fit options.
 import { AutoFitType, Table, TableRowHeightRule, WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-let document = WordDocument.openSync('Template.docx');
+let response = await fetch('Template.docx');
+let arrayBuffer = await response.arrayBuffer();
+let document = await WordDocument.openAsync(arrayBuffer);
 // Access the first section
 let section = document.sections[0];
 // Access the first table and resize it to fit its contents
@@ -265,7 +269,9 @@ The following code example shows how to apply a built-in table style.
 import { BuiltinTableStyle, Table, WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-let document = WordDocument.openSync('Template.docx');
+let response = await fetch('Template.docx');
+let arrayBuffer = await response.arrayBuffer();
+let document = await WordDocument.openAsync(arrayBuffer);
 // Access the first section
 let section = document.sections[0];
 // Access the first table
@@ -286,7 +292,9 @@ The following code example shows how to enable or disable special formatting opt
 import { BuiltinTableStyle, Table, WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-let document = WordDocument.openSync('Template.docx');
+let response = await fetch('Template.docx');
+let arrayBuffer = await response.arrayBuffer();
+let document = await WordDocument.openAsync(arrayBuffer);
 // Access the first section
 let section = document.sections[0];
 // Access the first table
@@ -319,7 +327,9 @@ The following code example shows how to create a custom table style with conditi
 import { Color, ConditionalFormattingType, Table, WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-let document = WordDocument.openSync('Template.docx');
+let response = await fetch('Template.docx');
+let arrayBuffer = await response.arrayBuffer();
+let document = await WordDocument.openAsync(arrayBuffer);
 // Access the first section
 let section = document.sections[0];
 // Access the first table
@@ -511,7 +521,9 @@ The following code example shows how to prevent table rows from breaking across 
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-let document = WordDocument.openSync('Template.docx');
+let response = await fetch('Template.docx');
+let arrayBuffer = await response.arrayBuffer();
+let document = await WordDocument.openAsync(arrayBuffer);
 let section = document.sections[0];
 let table = section.tables[0];
 
@@ -534,7 +546,9 @@ The following code example shows how to iterate through rows, cells, and paragra
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-let document = WordDocument.openSync('Template.docx');
+let response = await fetch('Template.docx');
+let arrayBuffer = await response.arrayBuffer();
+let document = await WordDocument.openAsync(arrayBuffer);
 let section = document.sections[0];
 let table = section.tables[0];
 
@@ -566,7 +580,9 @@ The following code example shows how to remove a table from a section body.
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-let document = WordDocument.openSync('Template.docx');
+let response = await fetch('Template.docx');
+let arrayBuffer = await response.arrayBuffer();
+let document = await WordDocument.openAsync(arrayBuffer);
 let section = document.sections[0];
 let table = section.tables[0];
 
@@ -587,7 +603,9 @@ The following code example shows how to remove a table row by index.
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-let document = WordDocument.openSync('Template.docx');
+let response = await fetch('Template.docx');
+let arrayBuffer = await response.arrayBuffer();
+let document = await WordDocument.openAsync(arrayBuffer);
 let section = document.sections[0];
 let table = section.tables[0];
 // Remove the row at index 3
