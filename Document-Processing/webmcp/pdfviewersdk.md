@@ -79,7 +79,7 @@ WebMCP integrates seamlessly into Syncfusion PDF Viewer applications across all 
 Import the WebMCP module and inject it into the component to make WebMCP functionality available.
 
 {% tabs %}
-{% highlight jsx tabtitle="App.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% raw %}
 import { PdfViewerComponent, PdfViewer, WebMcpPdfViewer } from '@syncfusion/ej2-react-pdfviewer';
 
@@ -115,7 +115,7 @@ For example, the PDF Viewer component may expose tools such as:
 An AI assistant can discover these tools and invoke them based on user prompts.
 
 {% tabs %}
-{% highlight jsx tabtitle="App.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% raw %}
 import { PdfViewerComponent, PdfViewer, WebMcpPdfViewer } from '@syncfusion/ej2-react-pdfviewer';
 
@@ -147,7 +147,7 @@ Use the `webMcpSettings` property to customize how WebMCP tools are exposed to A
 | `exposeTo` | List of trusted domains that are allowed to interact with the component through WebMCP. |
 
 {% tabs %}
-{% highlight jsx tabtitle="App.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% raw %}
 import { PdfViewerComponent, PdfViewer, WebMcpPdfViewer } from '@syncfusion/ej2-react-pdfviewer';
 
@@ -187,7 +187,7 @@ The `beforeWebMcpToolExecute` event is triggered before a tool is executed. This
 > AI-generated requests should always be validated before executing write operations. Restrict access using `exposeTo` and perform additional authorization checks within `beforeWebMcpToolExecute` when modifying application data.
 
 {% tabs %}
-{% highlight jsx tabtitle="App.jsx" %}
+{% highlight js tabtitle="App.jsx" %}
 {% raw %}
 import { PdfViewerComponent, PdfViewer, WebMcpPdfViewer } from '@syncfusion/ej2-react-pdfviewer';
 
