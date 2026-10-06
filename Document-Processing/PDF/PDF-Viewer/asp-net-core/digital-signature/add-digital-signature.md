@@ -60,7 +60,7 @@ When the user clicks the field, a dialog appears where they can **Draw**, **Type
 
 ## Apply PKI Digital Signature (.NET PDF Library)
 
-Digital signature must be applied using the **Syncfusion .NET PDF Library** in server-side code (for example, an ASP.NET Core controller or middleware).
+Digital signature must be applied using the **Syncfusion .NET PDF Library** in server-side code (for example, an ASP.NET Core controller or middle ware).
 
 ```csharp
 using Syncfusion.Pdf;

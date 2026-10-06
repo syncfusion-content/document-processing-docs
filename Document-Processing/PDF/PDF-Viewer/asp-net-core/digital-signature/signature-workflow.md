@@ -33,7 +33,7 @@ The Viewer requires **FormFields** and **FormDesigner** services for form intera
 
 2. **Place a signature field (UI or API)**
    - **UI:** Open **Form Designer** → choose **Signature Field** → click to place → configure properties like required, tooltip, and thickness.
-   ![Signature Field](../../images/signature_properties.png)
+   ![Signature Field](../../react/images/ui-signature-edit.png)
    - **API:** Use `formDesignerModule.addFormField('SignatureField', options)` to create a signature field programmatically.
 
 ```html
@@ -91,14 +91,14 @@ public byte[] SignPdf(byte[] pdfBytes, byte[] pfxBytes, string password)
 }
 ```
 
-N> For sequential or multi‑user flows and digital signature appearances, see these live demos in the ASP.NET Core Sample Browser: [eSigning PDF Form](https://document.syncfusion.com/demos/pdf-viewer/asp-net-core/#/bootstrap5/pdfviewer/esigning-pdf-forms), [Invisible Signature](https://document.syncfusion.com/demos/pdf-viewer/asp-net-core/#/bootstrap5/pdfviewer/invisible-digital-signature) and [Visible Signature](https://document.syncfusion.com/demos/pdf-viewer/asp-net-core/#/bootstrap5/pdfviewer/visible-digital-signature).
+N> For sequential or multi‑user flows and digital signature appearances, see these live demos: [eSigning PDF Form](https://document.syncfusion.com/demos/pdf-viewer/asp-net-core/pdfviewer/esigningpdfforms#/tailwind3), [Invisible Signature](https://document.syncfusion.com/demos/pdf-viewer/asp-net-core/pdfviewer/invisibledigitalsignature#/tailwind3) and [Visible Signature](https://document.syncfusion.com/demos/pdf-viewer/asp-net-core/pdfviewer/visibledigitalsignature#/tailwind3) in the React Sample Browser.
 
 ## How‑to guides
 
 ### Add a signature field (UI)
 Use the Form Designer toolbar to place a **Signature Field** where signing is required. Configure indicator text, required state, and tooltip in the properties pane.
 
-![Signature Field](../../images/signature.png)
+![Signature Field](../../react/images/ui-signature.png)
 
 ### Add a signature field (API)
 
@@ -122,15 +122,15 @@ Adds a signature field programmatically at the given bounds.
 
 When users click a signature field at runtime, the Viewer's dialog lets them **draw**, **type**, or **upload** a handwritten signature image—no plugin required—making it ideal for quick approvals.
 
-![Signature Image](../../images/handwritten_sign.png)
+![Signature Image](../../react/images/handwritten-sign.png)
 
-N> For a ready‑to‑try flow that routes two users to sign their own fields and then finalize, open [eSigning PDF Form](https://document.syncfusion.com/demos/pdf-viewer/asp-net-core/#/bootstrap5/pdfviewer/esigning-pdf-forms) in the sample browser.
+N> For a ready‑to‑try flow that routes two users to sign their own fields and then finalize, open [eSigning PDF Form](https://document.syncfusion.com/demos/pdf-viewer/asp-net-core/pdfviewer/esigningpdfforms#/tailwind3) in the sample browser.
 
 ### Apply a PKI digital signature
 
 Use the **.NET PDF Library** to apply a cryptographic signature on a field, with or without a visible appearance. See the **Digital Signature** documentation for additional options (external signing callbacks, digest algorithms, etc.).
 
-N> To preview visual differences, check the [Invisible Signature](https://document.syncfusion.com/demos/pdf-viewer/asp-net-core/#/bootstrap5/pdfviewer/invisible-digital-signature) and [Visible Signature](https://document.syncfusion.com/demos/pdf-viewer/asp-net-core/#/bootstrap5/pdfviewer/visible-digital-signature) in our Sample Browser. Digital Signature samples in the ASP.NET Core sample browser.
+N> To preview visual differences, check the [Invisible Signature](https://document.syncfusion.com/demos/pdf-viewer/asp-net-core/pdfviewer/invisibledigitalsignature#/tailwind3) and [Visible Signature](https://document.syncfusion.com/demos/pdf-viewer/asp-net-core/pdfviewer/visibledigitalsignature#/tailwind3) in our Sample Browser. Digital Signature samples in the React sample browser.
 
 ### Finalize a signed document (lock)
 
@@ -150,11 +150,11 @@ Different business scenarios require different signature types. Consider the pur
 
 - **Handwritten/typed (electronic) signature** – Best for informal approvals, acknowledgments, and internal flows. (Captured via the Viewer's signature dialog.)
 
-  ![Handwritten Signature](../../images/handwritten_sign.png)
+  ![Handwritten Signature](../../react/images/handwritten-sign.png)
 
 - **Digital certificate signature (PKI)** – Required for legally binding contracts and tamper detection with a verifiable signer identity. (Created with the .NET PDF Library.)
 
-N> You can explore and try out live demos for [Invisible Signature](https://document.syncfusion.com/demos/pdf-viewer/asp-net-core/#/bootstrap5/pdfviewer/invisible-digital-signature) and [Visible Signature](https://document.syncfusion.com/demos/pdf-viewer/asp-net-core/#/bootstrap5/pdfviewer/visible-digital-signature) in our Sample Browser.
+N> You can explore and try out live demos for [Invisible Signature](https://document.syncfusion.com/demos/pdf-viewer/asp-net-core/pdfviewer/invisibledigitalsignature#/tailwind3) and [Visible Signature](https://document.syncfusion.com/demos/pdf-viewer/asp-net-core/pdfviewer/visibledigitalsignature#/tailwind3) in our Sample Browser.
 
 ### Pre‑signing validation checklist
 
@@ -167,12 +167,12 @@ To prevent rework, validate the PDF before enabling signatures:
 ### Role‑based authorization flow
 
 - **Reviewer** – Reviews the document and adds [comments/markups](../annotation/comments). Avoid placing signatures until issues are resolved.
-  ![Reviewer using highlights and comments](../../images/comment-panel.png)
+  ![Reviewer using highlights and comments](../../react/images/highlight-comments.png)
 - **Approver** – Ensures feedback is addressed and signs when finalized.
-  ![Signature Image](../../images/handwritten_sign.png)
+  ![Signature Image](../../react/images/handwritten-sign.png)
 - **Final Approver** – Verifies requirements, then [Lock Signature](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-digitalsignature#lock-signature) to make signatures permanent and restrict further edits.
 
-N> **Implementation tip:** Use the PDF Library's `Flatten` when saving to make [annotations](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-annotations#flatten-annotation) and [form fields](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-form-fields#flatten-form-fields) permanent before the last signature.
+N> **Implementation tip:** Use the PDF Library's `Flatten` when saving to make [annotations](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-annotations#flatten-annotation) and form fields permanent before the last signature.
 
 ### Multi‑signer patterns and iterative approvals
 - Route the document through a defined **sequence of signers**.
@@ -180,7 +180,7 @@ N> **Implementation tip:** Use the PDF Library's `Flatten` when saving to make [
 - For external participants, share only annotation data (XFDF/JSON) when appropriate instead of the full PDF.
 - After all signatures, **[Lock Signature](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-digitalsignature#lock-signature)** to make the file read-only.
 
-N> Refer to [eSigning PDF Forms](https://document.syncfusion.com/demos/pdf-viewer/asp-net-core/#/bootstrap5/pdfviewer/esigning-pdf-forms) sample that shows two signers filling only their designated fields and finalizing the document.
+N> Refer to [eSigning PDF Forms](https://document.syncfusion.com/demos/pdf-viewer/react/#/bootstrap5/pdfviewer/esigning-pdf-forms) sample that shows two signers filling only their designated fields and finalizing the document.
 
 ### Security, deployment, and audit considerations
 
