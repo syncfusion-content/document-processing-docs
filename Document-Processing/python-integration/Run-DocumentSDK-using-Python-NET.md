@@ -16,12 +16,6 @@ This guide provides a comprehensive, step-by-step workflow for integrating Syncf
 
 Python.NET loads the published .NET assembly (`WordBridge.dll`) and its runtime configuration into the Python process. Python can then call static C# methods (e.g., `DocumentCreator.CreateDocx`) as if they were native Python functions. All document generation and conversion happens in-process, with .NET exceptions surfaced as Python exceptions.
 
-```mermaid
-flowchart LR
-    A[Python Application] -- "pythonnet/clr" --> B[WordBridge.dll<br/>.NET assembly]
-    B -- "Syncfusion Library" --> C[Output Document]
-```
-
 ## Prerequisites
 
 * [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download) (or later) — required to build the .NET assembly
