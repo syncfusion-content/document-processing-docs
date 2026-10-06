@@ -32,16 +32,10 @@ The following code example shows how to iterate through the Word document and re
 
 {% tabs %}
 {% highlight typescript tabtitle="Driver" %}
-import {
-  BlockContentControl,
-  Body,
-  Paragraph,
-  Table,
-  WordDocument,
-} from '@syncfusion/ej2-docx';
+import { WordDocument, BlockContentControl, Body, Paragraph, Table } from '@syncfusion/ej2-docx';
 
 // Open an existing Word document
-let document = WordDocument.open('Template.docx');
+let document = WordDocument.open(data);
 
 // Process the body contents for each section in the Word document
 for (let section of document.sections) {
@@ -132,23 +126,10 @@ The following code example shows how to iterate throughout the paragraph and mod
 
 {% tabs %}
 {% highlight typescript tabtitle="Driver" %}
-import {
-  BlockContentControl,
-  Body,
-  Field,
-  Hyperlink,
-  HyperlinkType,
-  InlineContentControl,
-  Paragraph,
-  ParagraphItemCollection,
-  Shape,
-  Table,
-  TextRange,
-  WordDocument,
-} from '@syncfusion/ej2-docx';
+import { WordDocument, BlockContentControl, Body, Field, Hyperlink, HyperlinkType, InlineContentControl, Paragraph, ParagraphItemCollection, Shape, Table, TextRange } from '@syncfusion/ej2-docx';
 
 // Open an existing Word document
-let document = WordDocument.open('Template.docx');
+let document = WordDocument.open(data);
 
 for (let section of document.sections) {
   iterateTextBody(section.body);
@@ -201,15 +182,7 @@ function iterateTable(table: Table) {
 }
 {% endhighlight %}
 {% highlight typescript tabtitle="iterateParagraph" %}
-import {
-  Field,
-  Hyperlink,
-  HyperlinkType,
-  InlineContentControl,
-  ParagraphItemCollection,
-  Shape,
-  TextRange,
-} from '@syncfusion/ej2-docx';
+import {Field, Hyperlink, HyperlinkType, InlineContentControl, ParagraphItemCollection, Shape, TextRange } from '@syncfusion/ej2-docx';
 
 function iterateParagraph(paraItems: ParagraphItemCollection) {
   for (let child of paraItems) {

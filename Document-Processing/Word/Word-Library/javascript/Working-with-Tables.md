@@ -148,7 +148,6 @@ The following code example shows how to insert an image into a table cell.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { readFileSync } from 'node:fs';
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Create a new Word document
@@ -182,10 +181,10 @@ The following code example shows how to apply formatting such as title, descript
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { BorderStyle, Color, Table, TableCellVerticalAlignment, TableRow, TableRowHeightRule, WordDocument } from '@syncfusion/ej2-docx';
+import { WordDocument, BorderStyle, Color, Table, TableCellVerticalAlignment, TableRow, TableRowHeightRule } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-let document = WordDocument.openSync('Template.docx');
+let document = WordDocument.open(data);
 
 // Access the first section
 let section = document.sections[0];
@@ -234,10 +233,10 @@ The following code example shows how to resize tables using auto fit options.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { AutoFitType, Table, TableRowHeightRule, WordDocument } from '@syncfusion/ej2-docx';
+import { WordDocument, AutoFitType, Table, TableRowHeightRule } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-let document = WordDocument.openSync('Template.docx');
+let document = WordDocument.open(data);
 // Access the first section
 let section = document.sections[0];
 // Access the first table and resize it to fit its contents
@@ -262,10 +261,10 @@ The following code example shows how to apply a built-in table style.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { BuiltinTableStyle, Table, WordDocument } from '@syncfusion/ej2-docx';
+import { WordDocument, BuiltinTableStyle, Table } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-let document = WordDocument.openSync('Template.docx');
+let document = WordDocument.open(data);
 // Access the first section
 let section = document.sections[0];
 // Access the first table
@@ -283,10 +282,10 @@ The following code example shows how to enable or disable special formatting opt
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { BuiltinTableStyle, Table, WordDocument } from '@syncfusion/ej2-docx';
+import { WordDocument, BuiltinTableStyle, Table } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-let document = WordDocument.openSync('Template.docx');
+let document = WordDocument.open(data);
 // Access the first section
 let section = document.sections[0];
 // Access the first table
@@ -316,10 +315,10 @@ The following code example shows how to create a custom table style with conditi
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { Color, ConditionalFormattingType, Table, WordDocument } from '@syncfusion/ej2-docx';
+import { WordDocument, Color, ConditionalFormattingType, Table } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-let document = WordDocument.openSync('Template.docx');
+let document = WordDocument.open(data);
 // Access the first section
 let section = document.sections[0];
 // Access the first table
@@ -357,7 +356,7 @@ The following code example shows how to apply a built-in or custom style as the 
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { BuiltinTableStyle, Color, ConditionalFormattingType, ParagraphAlignment, WordDocument } from '@syncfusion/ej2-docx';
+import { WordDocument, BuiltinTableStyle, Color, ConditionalFormattingType, ParagraphAlignment } from '@syncfusion/ej2-docx';
 
 // Create a new document
 let document = WordDocument.create();
@@ -474,7 +473,7 @@ The following code example shows how to mark the first row as a header row so it
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { TableRowHeightRule, WordDocument } from '@syncfusion/ej2-docx';
+import { WordDocument, TableRowHeightRule } from '@syncfusion/ej2-docx';
 
 // Create a new document
 let document = WordDocument.create();
@@ -511,7 +510,7 @@ The following code example shows how to prevent table rows from breaking across 
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-let document = WordDocument.openSync('Template.docx');
+let document = WordDocument.open(data);
 let section = document.sections[0];
 let table = section.tables[0];
 
@@ -534,7 +533,7 @@ The following code example shows how to iterate through rows, cells, and paragra
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-let document = WordDocument.openSync('Template.docx');
+let document = WordDocument.open(data);
 let section = document.sections[0];
 let table = section.tables[0];
 
@@ -566,7 +565,7 @@ The following code example shows how to remove a table from a section body.
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-let document = WordDocument.openSync('Template.docx');
+let document = WordDocument.open(data);
 let section = document.sections[0];
 let table = section.tables[0];
 
@@ -587,7 +586,7 @@ The following code example shows how to remove a table row by index.
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-let document = WordDocument.openSync('Template.docx');
+let document = WordDocument.open(data);
 let section = document.sections[0];
 let table = section.tables[0];
 // Remove the row at index 3

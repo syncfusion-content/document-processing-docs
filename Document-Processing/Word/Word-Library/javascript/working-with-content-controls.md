@@ -34,8 +34,7 @@ The following code example shows how to add a rich text block content control to
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { readFileSync } from 'node:fs';
-import { ContentControlType, WordDocument } from '@syncfusion/ej2-docx';
+import { WordDocument, ContentControlType } from '@syncfusion/ej2-docx';
 
 let document = WordDocument.create();
 
@@ -67,11 +66,7 @@ The following code example shows how to append an inline rich text content contr
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {
-  ContentControlType,
-  TextRange,
-  WordDocument,
-} from '@syncfusion/ej2-docx';
+import { WordDocument, ContentControlType, TextRange } from '@syncfusion/ej2-docx';
 
 let document = WordDocument.create();
 let paragraph = document.lastParagraph;
@@ -95,13 +90,7 @@ A content control exposes a common set of properties through its `contentControl
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {
-  Color,
-  ContentControlAppearance,
-  ContentControlType,
-  TextRange,
-  WordDocument,
-} from '@syncfusion/ej2-docx';
+import { WordDocument, Color, ContentControlAppearance, ContentControlType, TextRange } from '@syncfusion/ej2-docx';
 
 let document = WordDocument.create();
 let paragraph = document.lastParagraph;
@@ -154,11 +143,7 @@ The JavaScript Word library supports five inline content control types in additi
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {
-  ContentControlType,
-  TextRange,
-  WordDocument,
-} from '@syncfusion/ej2-docx';
+import { WordDocument, ContentControlType, TextRange } from '@syncfusion/ej2-docx';
 
 let document = WordDocument.create();
 let paragraph = document.lastParagraph;
@@ -180,11 +165,7 @@ document.save('Result.docx');
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {
-  ContentControlType,
-  TextRange,
-  WordDocument,
-} from '@syncfusion/ej2-docx';
+import { WordDocument, ContentControlType, TextRange } from '@syncfusion/ej2-docx';
 
 let document = WordDocument.create();
 let paragraph = document.lastParagraph;
@@ -206,7 +187,7 @@ document.save('Result.docx');
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { ContentControlType, WordDocument } from '@syncfusion/ej2-docx';
+import { WordDocument, ContentControlType } from '@syncfusion/ej2-docx';
 
 let document = WordDocument.create();
 let paragraph = document.lastParagraph;
@@ -225,13 +206,7 @@ document.save('Result.docx');
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {
-  CalendarType,
-  ContentControlType,
-  LocaleIDs,
-  TextRange,
-  WordDocument,
-} from '@syncfusion/ej2-docx';
+import { WordDocument, CalendarType, ContentControlType, LocaleIDs, TextRange } from '@syncfusion/ej2-docx';
 
 let document = WordDocument.create();
 let paragraph = document.lastParagraph;
@@ -255,12 +230,7 @@ document.save('Result.docx');
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {
-  ContentControlListItem,
-  ContentControlType,
-  TextRange,
-  WordDocument,
-} from '@syncfusion/ej2-docx';
+import { WordDocument, ContentControlListItem, ContentControlType, TextRange } from '@syncfusion/ej2-docx';
 
 let document = WordDocument.create();
 let paragraph = document.lastParagraph;
@@ -323,18 +293,10 @@ You can edit the contents of an inline content control by iterating the document
 
 {% tabs %}
 {% highlight typescript tabtitle="Driver" %}
-import {
-  BlockContentControl,
-  BodyItemCollection,
-  InlineContentControl,
-  Paragraph,
-  ParagraphItemCollection,
-  Table,
-  WordDocument,
-} from '@syncfusion/ej2-docx';
+import { WordDocument, BlockContentControl, BodyItemCollection, InlineContentControl, Paragraph, ParagraphItemCollection, Table } from '@syncfusion/ej2-docx';
 
 // Open an existing Word document
-let document = WordDocument.open('Input.docx');
+let document = WordDocument.open(data);
 
 for (let section of document.sections) {
   iterateBodyItems(section.body.items);

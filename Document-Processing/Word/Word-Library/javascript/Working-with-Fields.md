@@ -20,13 +20,7 @@ The following code example illustrates how to format the result of a `PAGE` fiel
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {
-  FieldMark,
-  FieldMarkType,
-  FieldType,
-  TextRange,
-  WordDocument
-} from '@syncfusion/ej2-docx';
+import { WordDocument, FieldMark, FieldMarkType, FieldType, TextRange } from '@syncfusion/ej2-docx';
 
 // Creates a new Word document
 let document = WordDocument.create();
@@ -70,7 +64,7 @@ The following code example illustrates how to add IF fields that compare text or
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { FieldType, WordDocument } from '@syncfusion/ej2-docx';
+import { WordDocument, FieldType } from '@syncfusion/ej2-docx';
 
 // Creates a new Word document
 let document = WordDocument.create();
@@ -113,7 +107,7 @@ The following code example illustrates how to add merge fields.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { FieldType, WordDocument } from '@syncfusion/ej2-docx';
+import { WordDocument, FieldType } from '@syncfusion/ej2-docx';
 
 // Creates a new Word document
 let document = WordDocument.create();

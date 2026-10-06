@@ -16,7 +16,7 @@ The following code example shows how to add preset shapes to a document and inse
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { BreakType, Color, WordDocument, AutoShapeType } from '@syncfusion/ej2-docx';
+import { WordDocument, BreakType, Color, AutoShapeType } from '@syncfusion/ej2-docx';
 
 // Create a new Word document
 let document = WordDocument.create();
@@ -69,12 +69,7 @@ The following code example shows how to apply formatting options to a shape.
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { Color, WordDocument, AutoShapeType,
-    HorizontalOrigin,
-    LineDashing,
-    TextWrappingStyle,
-    TextWrappingType,
-    VerticalOrigin, } from '@syncfusion/ej2-docx';
+import { WordDocument, Color, AutoShapeType, HorizontalOrigin, LineDashing, TextWrappingStyle, TextWrappingType, VerticalOrigin } from '@syncfusion/ej2-docx';
 
 // Create a new Word document
 let document = WordDocument.create();
@@ -84,8 +79,7 @@ let section = document.sections[0];
 let paragraph = section.body.appendParagraph();
 let rectangle = paragraph.appendShape(
     AutoShapeType.RoundedRectangle,
-    150,
-    100,
+    150, 100
 );
 
 rectangle.horizontalPosition = 72;

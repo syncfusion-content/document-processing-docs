@@ -52,13 +52,10 @@ The following code example shows how to modify an existing paragraph.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { readFileSync } from 'node:fs';
-import { TextRange, WordDocument } from '@syncfusion/ej2-docx';
+import { WordDocument, TextRange } from '@syncfusion/ej2-docx';
 
 // Load an existing document
-let response = await fetch('Input.docx');
-let bytes = new Uint8Array(await response.arrayBuffer());
-let document = WordDocument.open(bytes);
+let document = WordDocument.open(data);
 
 let section = document.sections[0];
 let paragraph = section.body.paragraphs[0];
@@ -84,13 +81,10 @@ The following code example shows how to apply formatting to a paragraph.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { readFileSync } from 'node:fs';
-import { Color, Paragraph, ParagraphAlignment, WordDocument } from '@syncfusion/ej2-docx';
+import { WordDocument, Color, Paragraph, ParagraphAlignment } from '@syncfusion/ej2-docx';
 
 // Load the document
-let response = await fetch('Input.docx');
-let bytes = new Uint8Array(await response.arrayBuffer());
-let document = WordDocument.open(bytes);
+let document = WordDocument.open(data);
 let bodyItems = document.sections[0].body.items;
 
 // Apply spacing, indentation, shading, and alignment to paragraph 5 (index 4)
@@ -131,7 +125,7 @@ The following code example shows how to add tab stops to a paragraph.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { TabJustification, TabLeader, WordDocument } from '@syncfusion/ej2-docx';
+import { WordDocument, TabJustification, TabLeader } from '@syncfusion/ej2-docx';
 
 // Create a new document and add a paragraph
 let document = WordDocument.create();
@@ -160,13 +154,10 @@ The following code example shows how to set the RTL (right-to-left) direction fo
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { readFileSync } from 'node:fs';
-import { Paragraph, WordDocument } from '@syncfusion/ej2-docx';
+import { WordDocument, Paragraph } from '@syncfusion/ej2-docx';
 
 // Load an existing document
-let response = await fetch('Template.docx');
-let bytes = new Uint8Array(await response.arrayBuffer());
-let document = WordDocument.open(bytes);
+let document = WordDocument.open(data);
 
 // Access the second body item (index 1)
 let paragraph = document.sections[0].body.items[1];
@@ -192,13 +183,10 @@ The following code example shows how to access a style and modify its formatting
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { readFileSync } from 'node:fs';
-import { Color, ParagraphStyle, WordDocument } from '@syncfusion/ej2-docx';
+import { WordDocument, Color, ParagraphStyle } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-let response = await fetch('Input_AccessStyle_Template.docx');
-let bytes = new Uint8Array(await response.arrayBuffer());
-let document = WordDocument.open(bytes);
+let document = WordDocument.open(data);
 
 let styles = document.styles;
 let style = styles.findByName('Heading1');
@@ -218,13 +206,10 @@ The following code example shows how to create a custom paragraph style and appl
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { readFileSync } from 'node:fs';
-import { Color, ParagraphAlignment, WordDocument } from '@syncfusion/ej2-docx';
+import { WordDocument, Color, ParagraphAlignment } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-let response = await fetch('Template.docx');
-let bytes = new Uint8Array(await response.arrayBuffer());
-let document = WordDocument.open(bytes);
+let document = WordDocument.open(data);
 
 // Create a custom paragraph style
 let myStyle = document.styles.addParagraphStyle('MyStyle');
@@ -251,13 +236,10 @@ The following code example shows how to apply a built-in style to a paragraph.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { readFileSync } from 'node:fs';
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-let response = await fetch('Input_Emphasis_Template.docx');
-let bytes = new Uint8Array(await response.arrayBuffer());
-let document = WordDocument.open(bytes);
+let document = WordDocument.open(data);
 
 // Apply the built-in Emphasis style
 document.lastParagraph.applyStyle('Emphasis');
@@ -273,13 +255,10 @@ The following code example shows how to remove a style from a document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { readFileSync } from 'node:fs';
-import { ParagraphStyle, WordDocument } from '@syncfusion/ej2-docx';
+import { WordDocument, ParagraphStyle } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-let response = await fetch('Template.docx');
-let bytes = new Uint8Array(await response.arrayBuffer());
-let document = WordDocument.open(bytes);
+let document = WordDocument.open(data);
 
 let styles = document.styles;
 let style = styles.findByName('Style1');
@@ -300,7 +279,7 @@ The following code example shows how to append text to a paragraph.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { Color, WordDocument } from '@syncfusion/ej2-docx';
+import { WordDocument, Color } from '@syncfusion/ej2-docx';
 
 // Create a new document and add a paragraph
 let document = WordDocument.create();
@@ -325,13 +304,10 @@ The following code example shows how to replace the text of a text range.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { readFileSync } from 'node:fs';
-import { Paragraph, TextRange, WordDocument } from '@syncfusion/ej2-docx';
+import { WordDocument, Paragraph, TextRange } from '@syncfusion/ej2-docx';
 
 // Load an existing document
-let response = await fetch('Template.docx');
-let imageBytes = new Uint8Array(await response.arrayBuffer());
-let document = WordDocument.open(bytes));
+let document = WordDocument.open(data));
 
 // Modify the first text range of the paragraph at body index 3
 let block = document.sections[0].body.items[3];
@@ -368,12 +344,7 @@ The following code example shows how to apply formatting to text.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {
-    Color,
-    SubSuperScript,
-    UnderlineStyle,
-    WordDocument
-} from '@syncfusion/ej2-docx';
+import { WordDocument, Color, SubSuperScript, UnderlineStyle } from '@syncfusion/ej2-docx';
 
 // Create a new document and add the first paragraph
 let document = WordDocument.create();

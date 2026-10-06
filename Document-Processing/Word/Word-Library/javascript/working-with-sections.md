@@ -19,12 +19,7 @@ The following code example shows how to create a Word document and set the page 
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {
-  BorderStyle,
-  PageOrientation,
-  PrinterPaperTray,
-  WordDocument,
-} from '@syncfusion/ej2-docx';
+import { WordDocument, BorderStyle, PageOrientation, PrinterPaperTray } from '@syncfusion/ej2-docx';
 
 // Creates a new Word document
 let document = WordDocument.create();
@@ -48,9 +43,7 @@ section.pageSetup.otherPagesTray = PrinterPaperTray.MiddleBin;
 let paragraph = section.body.appendParagraph();
 
 // Appends the text to the created paragraph
-paragraph.appendText(
-  'AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.'
-);
+paragraph.appendText('AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.');
 
 // Saves the Word document
 document.save('PageProperties.docx');
@@ -63,7 +56,7 @@ The following code example shows how to add multiple columns to a section and in
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { BreakType, WordDocument } from '@syncfusion/ej2-docx';
+import { WordDocument, BreakType } from '@syncfusion/ej2-docx';
 
 // Creates a new Word document
 let document = WordDocument.create();
@@ -107,11 +100,7 @@ The following code example shows how to create a Word document with a single sec
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {
-  PageOrientation,
-  PageSize,
-  WordDocument,
-} from '@syncfusion/ej2-docx';
+import { WordDocument, PageOrientation, PageSize } from '@syncfusion/ej2-docx';
 
 // Creates a new Word document
 let document = WordDocument.create();
@@ -127,9 +116,7 @@ section.pageSetup.orientation = PageOrientation.Portrait;
 let paragraph = section.body.appendParagraph();
 
 // Appends the text to the created paragraph
-paragraph.appendText(
-  'AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.'
-);
+paragraph.appendText('AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.');
 
 // Saves the Word document
 document.save('DifferentPageSettings.docx');
@@ -152,8 +139,7 @@ let section = document.addSection();
 
 // Adds a paragraph to the section
 let paragraph = section.body.appendParagraph();
-let paraText =
-  'AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.';
+let paraText = 'AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.';
 
 // Appends text to the first page in the document
 paragraph.appendText('\r\r[ First Page ] \r\r' + paraText);
@@ -190,7 +176,7 @@ The following code example shows how to iterate through every section in a docum
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Open an existing Word document
-let document = WordDocument.open('Input.docx');
+let document = WordDocument.open(data);
 
 // Iterate through every section in the Word document
 for (let section of document.sections) {
@@ -224,11 +210,7 @@ The following code example shows how to enable page numbering for a section and 
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {
-  FieldType,
-  PageNumberStyle,
-  WordDocument,
-} from '@syncfusion/ej2-docx';
+import { WordDocument, FieldType, PageNumberStyle } from '@syncfusion/ej2-docx';
 
 // Create a new Word document
 let document = WordDocument.create();
@@ -255,9 +237,7 @@ paragraph.appendField('Page', FieldType.Page);
 paragraph = section.body.appendParagraph();
 
 // Appends the text to the created paragraph
-paragraph.appendText(
-  'AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.'
-);
+paragraph.appendText('AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.');
 
 // Saves the Word document
 document.save('Result.docx');
@@ -270,7 +250,7 @@ The following code example shows how to apply a colored page border to a section
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { BorderStyle, Color, WordDocument } from '@syncfusion/ej2-docx';
+import { WordDocument, BorderStyle, Color } from '@syncfusion/ej2-docx';
 
 // Create a new Word document
 let document = WordDocument.create();
@@ -297,9 +277,7 @@ section.pageSetup.borders.left.space = 5;
 let paragraph = section.body.appendParagraph();
 
 // Appends the text to the created paragraph
-paragraph.appendText(
-  'AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.'
-);
+paragraph.appendText('AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.');
 
 // Saves the Word document
 document.save('Result.docx');
@@ -312,10 +290,10 @@ The following code example shows how to configure line numbering for every secti
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { LineNumberingMode, WordDocument } from '@syncfusion/ej2-docx';
+import { WordDocument, LineNumberingMode } from '@syncfusion/ej2-docx';
 
 // Open an existing Word document
-let document = WordDocument.open('Input.docx');
+let document = WordDocument.open(data);
 
 // Iterate through every section in the Word document
 for (let section of document.sections) {
@@ -346,7 +324,7 @@ The following code example shows how to remove a specific section from a documen
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Open an existing Word document
-let document = WordDocument.open('Input.docx');
+let document = WordDocument.open(data);
 
 // Removes the second section from the collection
 document.sections.removeAt(1);

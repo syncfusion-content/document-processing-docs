@@ -269,13 +269,7 @@ The following example shows how to create a custom numbered list style with foll
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {
-  FollowCharacterType,
-  ListNumberAlignment,
-  ListPatternType,
-  ListType,
-  WordDocument,
-} from '@syncfusion/ej2-docx';
+import { FollowCharacterType, ListNumberAlignment, ListPatternType, ListType, WordDocument } from '@syncfusion/ej2-docx';
 
 // Creates a new Word document
 let document = WordDocument.create();
@@ -489,7 +483,7 @@ The following example shows how to get the display string of a list value for a 
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document.
-let document = WordDocument.openSync('Template.docx');
+let document = WordDocument.open(data);
 
 // Get the string that represents the appearance of the list value of the last paragraph.
 let listString = document.lastParagraph.listString;

@@ -17,7 +17,6 @@ The following code example shows how to add an image to a paragraph.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { readFileSync } from 'node:fs';
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Create a new Word document
@@ -50,11 +49,10 @@ The following code example shows how to replace an existing image.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { readFileSync } from 'node:fs';
-import { EntityType, WordDocument, Picture } from '@syncfusion/ej2-docx';
+import { WordDocument, Picture, EntityType } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-let document = WordDocument.openSync('Template.docx');
+let document = WordDocument.open(data);
 
 // Get the body of the first section
 let textBody = document.sections[0].body;
@@ -95,10 +93,10 @@ The following code example shows how to remove images from paragraph items.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { EntityType, WordDocument } from '@syncfusion/ej2-docx';
+import { WordDocument, EntityType } from '@syncfusion/ej2-docx';
 
 // Open a Word document
-let document = WordDocument.openSync('Template.docx');
+let document = WordDocument.open(data);
 
 // Get the body of the first section
 let textBody = document.sections[0].body;
@@ -131,13 +129,7 @@ The following code example shows how to apply picture formatting.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { readFileSync } from 'node:fs';
-import { WordDocument, 
- HorizontalAlignment,
-    HorizontalOrigin,
-    TextWrappingStyle,
-    VerticalAlignment,
-    VerticalOrigin } from '@syncfusion/ej2-docx';
+import { WordDocument, HorizontalAlignment, HorizontalOrigin, TextWrappingStyle, VerticalAlignment, VerticalOrigin } from '@syncfusion/ej2-docx';
 
 // Create a new Word document
 let document = WordDocument.create();
@@ -189,10 +181,10 @@ The following code example shows how to find an image by title.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { EntityType, WordDocument, Picture } from '@syncfusion/ej2-docx';
+import { WordDocument, Picture, EntityType } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-let document = WordDocument.openSync('Template.docx');
+let document = WordDocument.open(data);
 
 let textBody = document.sections[0].body;
 
@@ -228,9 +220,7 @@ The following code example shows how to add a caption to an image.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { readFileSync } from 'node:fs';
-import { WordDocument, CaptionNumberingFormat,
-    CaptionPosition } from '@syncfusion/ej2-docx';
+import { WordDocument, CaptionNumberingFormat, CaptionPosition } from '@syncfusion/ej2-docx';
 
 // Create a new Word document
 let document = WordDocument.create();
@@ -252,11 +242,7 @@ let picture = firstParagraph.appendImage(imageBytes, {
 });
 
 // Add a caption above the image using Arabic numbering
-picture.addCaption(
-    'Figure',
-    CaptionNumberingFormat.Arabic,
-    CaptionPosition.Above,
-);
+picture.addCaption('Figure', CaptionNumberingFormat.Arabic, CaptionPosition.Above);
 
 // Save the document
 document.save('Output.docx');

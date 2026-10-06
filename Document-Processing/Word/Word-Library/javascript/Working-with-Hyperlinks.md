@@ -21,7 +21,7 @@ The following code example shows how to insert a web hyperlink.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { HyperlinkType, WordDocument } from '@syncfusion/ej2-docx';
+import { WordDocument, HyperlinkType } from '@syncfusion/ej2-docx';
 
 // Create a new Word document
 let document = WordDocument.create();
@@ -53,7 +53,7 @@ The following code example shows how to add an email hyperlink.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { HyperlinkType, WordDocument } from '@syncfusion/ej2-docx';
+import { WordDocument, HyperlinkType } from '@syncfusion/ej2-docx';
 
 // Create a new Word document
 let document = WordDocument.create();
@@ -85,7 +85,7 @@ The following code example shows how to add a file hyperlink.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { HyperlinkType, WordDocument } from '@syncfusion/ej2-docx';
+import { WordDocument, HyperlinkType } from '@syncfusion/ej2-docx';
 
 // Create a new Word document
 let document = WordDocument.create();
@@ -117,7 +117,7 @@ The following code example shows how to add a bookmark hyperlink.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { HyperlinkType, WordDocument } from '@syncfusion/ej2-docx';
+import { WordDocument, HyperlinkType } from '@syncfusion/ej2-docx';
 
 // Create a new Word document
 let document = WordDocument.create();
