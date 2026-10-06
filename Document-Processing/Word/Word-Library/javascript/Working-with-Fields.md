@@ -25,14 +25,8 @@ import { WordDocument, FieldMark, FieldMarkType, FieldType, TextRange } from '@s
 // Creates a new Word document
 let document = WordDocument.create();
 
-// Gets the last section of the document
-let section = document.lastSection;
-
-// Gets the last paragraph of the section (or append one if needed)
-let paragraph = document.lastParagraph;
-if (paragraph == null) {
-  paragraph = section.body.appendParagraph();
-}
+// Gets the paragraph of the section
+let paragraph = document.sections[0].body.paragraphs[0];
 
 // Appends text before the field
 paragraph.appendText('Page number: ');
@@ -69,27 +63,27 @@ import { WordDocument, FieldType } from '@syncfusion/ej2-docx';
 // Creates a new Word document
 let document = WordDocument.create();
 
-// Gets the last paragraph (creates the default body paragraph when present)
-let paragraph = document.lastParagraph;
-if (paragraph == null) {
-  paragraph = document.lastSection.body.appendParagraph();
-}
+// Access first section
+let section = document.sections[0];
+
+// Gets the default paragraph
+let paragraph = section.body.paragraphs[0];
 
 // Appends a description and an IF field that compares text
 paragraph.appendText(
   'If field that compares a string value and displays the result.'
 );
-paragraph = document.lastSection.body.appendParagraph();
+paragraph = section.body.appendParagraph();
 let ifField = paragraph.appendField('If', FieldType.If);
 // Expression: IF "100" = "100" "correct" "not correct"
 ifField.fieldCode = 'IF "100" = "100" "correct" "not correct"';
 
 // Appends another IF field that compares numbers
-paragraph = document.lastSection.body.appendParagraph();
+paragraph = section.body.appendParagraph();
 paragraph.appendText(
   'If field that compares a number value and displays the result.'
 );
-paragraph = document.lastSection.body.appendParagraph();
+paragraph = section.body.appendParagraph();
 let ifField2 = paragraph.appendField('If', FieldType.If);
 // Expression: IF 100 >= 50 "correct" "not correct"
 ifField2.fieldCode = 'IF 100 >= 50 "correct" "not correct"';
@@ -112,15 +106,15 @@ import { WordDocument, FieldType } from '@syncfusion/ej2-docx';
 // Creates a new Word document
 let document = WordDocument.create();
 
-// Gets the last paragraph
-let paragraph = document.lastParagraph;
-if (paragraph == null) {
-  paragraph = document.lastSection.body.appendParagraph();
-}
+// Access first section
+let section = document.sections[0];
+
+// Gets the default paragraph
+let paragraph = section.body.paragraphs[0];
 
 // Inserts merge fields for Name and Address
 paragraph.appendField('Name', FieldType.MergeField);
-paragraph = document.lastSection.body.appendParagraph();
+paragraph = section.body.appendParagraph();
 paragraph.appendField('Address', FieldType.MergeField);
 
 // Saves the Word document to disk

@@ -37,8 +37,8 @@ import { WordDocument } from '@syncfusion/ej2-docx';
 // Create a new document
 let document = WordDocument.create();
 let section = document.sections[0];
-// Add a paragraph and append text to it
-let paragraph = section.body.appendParagraph();
+// Get paragraph and append text to it
+let paragraph = section.body.paragraphs[0];
 paragraph.appendText('Adding new paragraph to the document');
 
 // Save the document
@@ -127,9 +127,9 @@ The following code example shows how to add tab stops to a paragraph.
 {% highlight typescript tabtitle="TypeScript" %}
 import { WordDocument, TabJustification, TabLeader } from '@syncfusion/ej2-docx';
 
-// Create a new document and add a paragraph
+// Create a new document and access the paragraph
 let document = WordDocument.create();
-let paragraph = document.sections[0].body.appendParagraph();
+let paragraph = document.sections[0].body.paragraphs[0];
 
 // Add tab stops to the paragraph
 paragraph.paragraphFormat.tabs.addTab(11, TabJustification.Left, TabLeader.Dot);
@@ -281,9 +281,9 @@ The following code example shows how to append text to a paragraph.
 {% highlight typescript tabtitle="TypeScript" %}
 import { WordDocument, Color } from '@syncfusion/ej2-docx';
 
-// Create a new document and add a paragraph
+// Create a new document and access the paragraph
 let document = WordDocument.create();
-let paragraph = document.sections[0].body.appendParagraph();
+let paragraph = document.sections[0].body.paragraphs[0];
 
 // Add text and get the created text range
 let text = paragraph.appendText('A new text is added to the paragraph.');
@@ -346,9 +346,9 @@ The following code example shows how to apply formatting to text.
 {% highlight typescript tabtitle="TypeScript" %}
 import { WordDocument, Color, SubSuperScript, UnderlineStyle } from '@syncfusion/ej2-docx';
 
-// Create a new document and add the first paragraph
+// Create a new document and get the first paragraph
 let document = WordDocument.create();
-let firstParagraph = document.sections[0].body.appendParagraph();
+let firstParagraph = document.sections[0].body.paragraphs[0];
 
 // Add the first text range and apply formatting
 let firstText = firstParagraph.appendText('This is the first text range. ');

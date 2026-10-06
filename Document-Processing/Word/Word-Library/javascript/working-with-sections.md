@@ -24,8 +24,8 @@ import { WordDocument, BorderStyle, PageOrientation, PrinterPaperTray } from '@s
 // Creates a new Word document
 let document = WordDocument.create();
 
-// Get the last section
-let section = document.lastSection;
+// Get the default section
+let section = document.sections[0];
 
 // Sets page setup options
 section.pageSetup.orientation = PageOrientation.Landscape;
@@ -39,10 +39,10 @@ section.pageSetup.firstPageTray = PrinterPaperTray.EnvelopeFeed;
 // Sets the PrinterPaperTray value for OtherPagesTray in page setup options
 section.pageSetup.otherPagesTray = PrinterPaperTray.MiddleBin;
 
-// Adds a paragraph to the created section
-let paragraph = section.body.appendParagraph();
+// Get a paragraph from the default section
+let paragraph = section.body.paragraphs[0];
 
-// Appends the text to the created paragraph
+// Appends the text to the default paragraph
 paragraph.appendText('AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.');
 
 // Saves the Word document
@@ -62,19 +62,19 @@ import { WordDocument, BreakType } from '@syncfusion/ej2-docx';
 let document = WordDocument.create();
 
 // Get the last section
-let section = document.lastSection;
+let section = document.sections[0];
 
 // Adds three equal-width columns with a 20-point spacing between them
 section.addColumn(150, 20);
 section.addColumn(150, 20);
 section.addColumn(150, 20);
 
-// Adds a paragraph to the created section
-let paragraph = section.body.appendParagraph();
+// Get a paragraph from the default section
+let paragraph = section.body.paragraphs[0];
 let paraText =
   'AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.';
 
-// Appends the text to the created paragraph
+// Appends the text to the default paragraph
 paragraph.appendText(paraText);
 
 // Adds a column break to push the next paragraph to the next column
@@ -105,17 +105,17 @@ import { WordDocument, PageOrientation, PageSize } from '@syncfusion/ej2-docx';
 // Creates a new Word document
 let document = WordDocument.create();
 
-// Get the last section
-let section = document.lastSection;
+// Get the default section
+let section = document.sections[0];
 
 // Sets the page size and orientation for the section
 section.pageSetup.pageSize = PageSize.A4;
 section.pageSetup.orientation = PageOrientation.Portrait;
 
-// Adds a paragraph to the section
-let paragraph = section.body.appendParagraph();
+// Get a paragraph from the section
+let paragraph = section.body.paragraphs[0];
 
-// Appends the text to the created paragraph
+// Appends the text to the default paragraph
 paragraph.appendText('AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.');
 
 // Saves the Word document
@@ -215,8 +215,8 @@ import { WordDocument, FieldType, PageNumberStyle } from '@syncfusion/ej2-docx';
 // Create a new Word document
 let document = WordDocument.create();
 
-// Get the last section
-let section = document.lastSection;
+// Get the default section
+let section = document.section[0];
 
 section.pageSetup.pageStartingNumber = 1;
 section.pageSetup.restartPageNumbering = true;
@@ -233,8 +233,8 @@ paragraph.appendText('Copyright Northwind Inc. 2001 - 2015');
 paragraph.appendText('\tPage ');
 paragraph.appendField('Page', FieldType.Page);
 
-// Adds a paragraph to the body of the section
-paragraph = section.body.appendParagraph();
+// Get a paragraph from the body of the section
+paragraph = section.body.paragraphs[0];
 
 // Appends the text to the created paragraph
 paragraph.appendText('AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.');
@@ -255,8 +255,8 @@ import { WordDocument, BorderStyle, Color } from '@syncfusion/ej2-docx';
 // Create a new Word document
 let document = WordDocument.create();
 
-// Get the last section
-let section = document.lastSection;
+// Get the default section
+let section = document.sections[0];
 
 // Set the borders style
 section.pageSetup.borders.borderType = BorderStyle.Single;
@@ -273,8 +273,8 @@ section.pageSetup.borders.bottom.space = 5;
 section.pageSetup.borders.right.space = 5;
 section.pageSetup.borders.left.space = 5;
 
-// Adds a paragraph to the section
-let paragraph = section.body.appendParagraph();
+// Get a paragraph from the section
+let paragraph = section.body.paragraphs[0];
 
 // Appends the text to the created paragraph
 paragraph.appendText('AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.');

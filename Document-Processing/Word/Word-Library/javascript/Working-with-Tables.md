@@ -20,7 +20,7 @@ import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Create a new document
 let document = WordDocument.create();
-let section = document.lastSection;
+let section = document.sections[0];
 
 // Add a table and create a 3 x 2 grid
 let table = section.body.appendTable();
@@ -51,7 +51,7 @@ import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Create a new document
 let document = WordDocument.create();
-let section = document.lastSection;
+let section = document.sections[0];
 
 section.body.appendParagraph().appendText('Price Details');
 section.body.appendParagraph();
@@ -97,8 +97,8 @@ import { WordDocument } from '@syncfusion/ej2-docx';
 // Create a new document
 let document = WordDocument.create();
 
-// Get the last section
-let section = document.lastSection;
+// Get the default section
+let section = document.sections[0];
 
 document.lastParagraph.appendText('Price Details');
 
@@ -153,8 +153,8 @@ import { WordDocument } from '@syncfusion/ej2-docx';
 // Create a new Word document
 let document = WordDocument.create();
 
-// Get the last section
-let section = document.lastSection;
+// Get the default section
+let section = document.sections[0];
 
 let table = section.body.appendTable();
 table.resetCells(2, 2);
@@ -360,7 +360,7 @@ import { WordDocument, BuiltinTableStyle, Color, ConditionalFormattingType, Para
 
 // Create a new document
 let document = WordDocument.create();
-let section = document.lastSection;
+let section = document.sections[0];
 // Add the first table
 let table = section.body.appendTable();
 table.resetCells(3, 2);
@@ -434,7 +434,7 @@ import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Create a new document
 let document = WordDocument.create();
-let section = document.lastSection;
+let section = document.sections[0];
 // Add a table
 let table = section.body.appendTable();
 table.resetCells(5, 5);
@@ -456,7 +456,7 @@ import { WordDocument } from '@syncfusion/ej2-docx';
 // Create a new document
 let document = WordDocument.create();
 document.lastParagraph.appendText('Vertical merging of Table cells');
-let section = document.lastSection;
+let section = document.sections[0];
 // Add a table
 let table = section.body.appendTable();
 table.resetCells(5, 5);
@@ -477,7 +477,7 @@ import { WordDocument, TableRowHeightRule } from '@syncfusion/ej2-docx';
 
 // Create a new document
 let document = WordDocument.create();
-let section = document.lastSection;
+let section = document.sections[0];
 // Add a table
 let table = section.body.appendTable();
 table.resetCells(50, 1);

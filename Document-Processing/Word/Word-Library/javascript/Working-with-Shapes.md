@@ -23,7 +23,7 @@ let document = WordDocument.create();
 // Access section
 let section = document.sections[0];
 // Add a rounded rectangle shape
-let rectangleParagraph = section.body.appendParagraph();
+let rectangleParagraph = section.body.paragraphs[0];
 let rectangle = rectangleParagraph.appendShape(
     AutoShapeType.RoundedRectangle,
     150,
@@ -76,7 +76,7 @@ let document = WordDocument.create();
 // Access section
 let section = document.sections[0];
 // Add a rounded rectangle shape
-let paragraph = section.body.appendParagraph();
+let paragraph = section.body.paragraphs[0];
 let rectangle = paragraph.appendShape(
     AutoShapeType.RoundedRectangle,
     150, 100
@@ -136,7 +136,7 @@ let document = WordDocument.create();
 // Access section
 let section = document.sections[0];
 // Add a rounded rectangle shape
-let paragraph = section.body.appendParagraph();
+let paragraph = section.body.paragraphs[0];
 let rectangle = paragraph.appendShape(
     AutoShapeType.RoundedRectangle,
     150,

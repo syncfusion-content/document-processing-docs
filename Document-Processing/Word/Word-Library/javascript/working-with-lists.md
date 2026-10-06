@@ -30,7 +30,7 @@ let document = WordDocument.create();
 let section = document.sections[0];
 
 // Adds the first paragraph at level 0.
-let paragraph = section.body.appendParagraph();
+let paragraph = section.body.paragraphs[0];
 
 // Applies the default bulleted list style.
 paragraph.listFormat.applyDefBulletStyle();
@@ -75,7 +75,7 @@ let document = WordDocument.create();
 let section = document.sections[0];
 
 // Adds the first paragraph at level 0.
-let paragraph = section.body.appendParagraph();
+let paragraph = section.body.paragraphs[0];
 // Applies the default numbered list style.
 paragraph.listFormat.applyDefNumberedStyle();
 // Adds text to the first list item.
@@ -115,7 +115,7 @@ let document = WordDocument.create();
 let section = document.sections[0];
 
 // Adds the first paragraph at level 0.
-let paragraph = section.body.appendParagraph();
+let paragraph = section.body.paragraphs[0];
 paragraph.appendText('List item 1 - Level 0');
 paragraph.listFormat.applyDefBulletStyle();
 
@@ -151,7 +151,7 @@ let document = WordDocument.create();
 let section = document.sections[0];
 
 // Adds the first paragraph at level 0.
-let paragraph = section.body.appendParagraph();
+let paragraph = section.body.paragraphs[0];
 paragraph.appendText('List item 1 - Level 0');
 paragraph.listFormat.applyDefNumberedStyle();
 
@@ -192,7 +192,7 @@ levelOne.startAt = 1;
 // Access section of document.
 let section = document.sections[0];
 
-let paragraph = section.body.appendParagraph();
+let paragraph = section.body.paragraphs[0];
 paragraph.appendText('List pattern Cardinal Text');
 
 paragraph = section.body.appendParagraph();
@@ -298,7 +298,7 @@ levelTwo.startAt = 2;
 let section = document.sections[0];
 
 // Adds the first paragraph at level 0.
-let paragraph = section.body.appendParagraph();
+let paragraph = section.body.paragraphs[0];
 paragraph.appendText('User defined list - Level 0');
 paragraph.listFormat.applyStyle('UserDefinedList');
 
@@ -327,7 +327,7 @@ let document = WordDocument.create();
 let section = document.sections[0];
 
 // Adds the first paragraph at level 0.
-let paragraph = section.body.appendParagraph();
+let paragraph = section.body.paragraphs[0];
 
 paragraph.appendText('Multilevel numbered list - Level 0');
 paragraph.listFormat.applyDefNumberedStyle();
@@ -396,7 +396,7 @@ levelThree.startAt = 1;
 let section = document.sections[0];
 
 // Adds the first paragraph at level 0.
-let paragraph = section.body.appendParagraph();
+let paragraph = section.body.paragraphs[0];
 paragraph.appendText('User defined list - Level 0');
 paragraph.listFormat.applyStyle('UserDefinedList');
 
@@ -454,7 +454,7 @@ levelThree.startAt = 1;
 let section = document.sections[0];
 
 // Level 0
-let paragraph = section.body.appendParagraph();
+let paragraph = section.body.paragraphs[0];
 paragraph.appendText('User defined list - Level 0');
 paragraph.listFormat.applyStyle('UserDefinedList');
 

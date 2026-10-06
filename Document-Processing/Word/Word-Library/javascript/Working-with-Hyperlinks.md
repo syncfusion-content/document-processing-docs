@@ -26,11 +26,11 @@ import { WordDocument, HyperlinkType } from '@syncfusion/ej2-docx';
 // Create a new Word document
 let document = WordDocument.create();
 
-// Access the last section
-let section = document.lastSection;
+// Access the default section
+let section = document.sections[0];
 
-// Access the last paragraph
-let paragraph = document.lastParagraph;
+// Access the default paragraph
+let paragraph = section.body.paragraphs[0];
 paragraph.appendText('Web hyperlink:  ');
 
 paragraph = section.body.appendParagraph();
@@ -58,11 +58,11 @@ import { WordDocument, HyperlinkType } from '@syncfusion/ej2-docx';
 // Create a new Word document
 let document = WordDocument.create();
 
-// Access the last section
-let section = document.lastSection;
+// Access the default section
+let section = document.sections[0];
 
-// Access the last paragraph
-let paragraph = document.lastParagraph;
+// Access the default paragraph
+let paragraph = section.body.paragraphs[0];
 paragraph.appendText('Email hyperlink:  ');
 
 paragraph = section.body.appendParagraph();
@@ -90,11 +90,11 @@ import { WordDocument, HyperlinkType } from '@syncfusion/ej2-docx';
 // Create a new Word document
 let document = WordDocument.create();
 
-// Access the last section
-let section = document.lastSection;
+// Access the default section
+let section = document.sections[0];
 
-// Access the last paragraph
-let paragraph = document.lastParagraph;
+// Access the default paragraph
+let paragraph = section.body.paragraphs[0];
 paragraph.appendText('File hyperlink:  ');
 
 paragraph = section.body.appendParagraph();
@@ -122,11 +122,11 @@ import { WordDocument, HyperlinkType } from '@syncfusion/ej2-docx';
 // Create a new Word document
 let document = WordDocument.create();
 
-// Access the last section
-let section = document.lastSection;
+// Access the default section
+let section = document.sections[0];
 
-// Access the last paragraph
-let paragraph = document.lastParagraph;
+// Access the default paragraph
+let paragraph = section.body.paragraphs[0];
 
 // Create a bookmark
 let bookmarkStart = paragraph.appendBookmarkStart('Introduction');

@@ -23,8 +23,8 @@ import { WordDocument } from '@syncfusion/ej2-docx';
 let document = WordDocument.create();
 // Access the first section
 let section = document.sections[0];
-// Add a new paragraph to the section
-let firstParagraph = section.body.appendParagraph();
+// Get a paragraph from the section
+let firstParagraph = section.body.paragraphs[0];
 
 // Add an image to the paragraph and set height and width
 let response = await fetch('Image.png');
@@ -135,8 +135,8 @@ import { WordDocument, HorizontalAlignment, HorizontalOrigin, TextWrappingStyle,
 let document = WordDocument.create();
 // WordDocument.create() already seeds section 0
 let section = document.sections[0];
-// Add a new paragraph to the section
-let paragraph = section.body.appendParagraph();
+// Get a paragraph from the section
+let paragraph = section.body.paragraphs[0];
 paragraph.appendText('This paragraph has picture. ');
 // Append a new picture
 let response = await fetch('Image.png');
@@ -228,8 +228,8 @@ let document = WordDocument.create();
 // Get the first section in the document
 let section = document.sections[0];
 
-// Append a new paragraph to the section body
-let firstParagraph = section.body.appendParagraph();
+// Access a paragraph from the section body
+let firstParagraph = section.body.paragraphs[0];
 
 // Load image data from the specified file
 let response = await fetch('Image.png');

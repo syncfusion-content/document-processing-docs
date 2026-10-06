@@ -211,8 +211,8 @@ if (!response.ok) {
 const data: Uint8Array = new Uint8Array(await response.arrayBuffer());
 const document: WordDocument = WordDocument.open(data);
 
-// Access the first section and append a paragraph.
-const paragraph = document.sections[0].body.appendParagraph();
+// Access the first section and a paragraph.
+const paragraph = document.sections[0].body.paragraphs[0];
 paragraph.appendText('Appended after opening the document.');
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
@@ -224,8 +224,8 @@ if (!response.ok) {
 const data = new Uint8Array(await response.arrayBuffer());
 const document = ej.docx.WordDocument.open(data);
 
-// Access the first section and append a paragraph.
-const paragraph = document.sections[0].body.appendParagraph();
+// Access the first section and a paragraph.
+const paragraph = document.sections[0].body.paragraphs[0];
 paragraph.appendText('Appended after opening the document.');
 {% endhighlight %}
 {% endtabs %}

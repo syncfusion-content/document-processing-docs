@@ -75,8 +75,8 @@ export default function App() {
     let document = WordDocument.create();
     let section = document.sections[0];
  
-    // Add paragraph
-    let paragraph = section.body.appendParagraph();
+    // Get paragraph from section
+    let paragraph = section.body.paragraphs[0];
  
     // Add text run and format it
     let run = paragraph.appendTextRange();

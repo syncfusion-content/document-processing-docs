@@ -69,7 +69,7 @@ The following code example shows how to append an inline rich text content contr
 import { WordDocument, ContentControlType, TextRange } from '@syncfusion/ej2-docx';
 
 let document = WordDocument.create();
-let paragraph = document.lastParagraph;
+let paragraph = document.sections[0].body.paragraphs[0];
 paragraph.appendText('A new text is added to the paragraph. ');
 
 let inlineContentControl = paragraph.appendInlineContentControl(
@@ -93,7 +93,7 @@ A content control exposes a common set of properties through its `contentControl
 import { WordDocument, Color, ContentControlAppearance, ContentControlType, TextRange } from '@syncfusion/ej2-docx';
 
 let document = WordDocument.create();
-let paragraph = document.lastParagraph;
+let paragraph = document.sections[0].body.paragraphs[0];
 paragraph.appendText('A new text is added to the paragraph. ');
 
 let contentControl = paragraph.appendInlineContentControl(
@@ -146,7 +146,7 @@ The JavaScript Word library supports five inline content control types in additi
 import { WordDocument, ContentControlType, TextRange } from '@syncfusion/ej2-docx';
 
 let document = WordDocument.create();
-let paragraph = document.lastParagraph;
+let paragraph = document.sections[0].body.paragraphs[0];
 paragraph.appendText('A new text is added to the paragraph. ');
 
 let richTextControl = paragraph.appendInlineContentControl(
@@ -168,7 +168,7 @@ document.save('Result.docx');
 import { WordDocument, ContentControlType, TextRange } from '@syncfusion/ej2-docx';
 
 let document = WordDocument.create();
-let paragraph = document.lastParagraph;
+let paragraph = document.sections[0].body.paragraphs[0];
 paragraph.appendText('A new text is added to the paragraph. ');
 
 let plainTextControl = paragraph.appendInlineContentControl(
@@ -190,7 +190,7 @@ document.save('Result.docx');
 import { WordDocument, ContentControlType } from '@syncfusion/ej2-docx';
 
 let document = WordDocument.create();
-let paragraph = document.lastParagraph;
+let paragraph = document.sections[0].body.paragraphs[0];
 paragraph.appendText('A new text is added to the paragraph. ');
 
 let checkBox = paragraph.appendInlineContentControl(
@@ -209,7 +209,7 @@ document.save('Result.docx');
 import { WordDocument, CalendarType, ContentControlType, LocaleIDs, TextRange } from '@syncfusion/ej2-docx';
 
 let document = WordDocument.create();
-let paragraph = document.lastParagraph;
+let paragraph = document.sections[0].body.paragraphs[0];
 paragraph.appendText('Select Date: ');
 
 let datePicker = paragraph.appendInlineContentControl(ContentControlType.Date);
@@ -233,7 +233,7 @@ document.save('Result.docx');
 import { WordDocument, ContentControlListItem, ContentControlType, TextRange } from '@syncfusion/ej2-docx';
 
 let document = WordDocument.create();
-let paragraph = document.lastParagraph;
+let paragraph = document.sections[0].body.paragraphs[0];
 paragraph.appendText('Choose your platform: ');
 
 let dropdown = paragraph.appendInlineContentControl(
