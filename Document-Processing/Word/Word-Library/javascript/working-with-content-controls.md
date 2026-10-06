@@ -334,9 +334,7 @@ import {
 } from '@syncfusion/ej2-docx';
 
 // Open an existing Word document
-let response = await fetch('Input.docx');
-let arrayBuffer = await response.arrayBuffer();
-let document = await WordDocument.openAsync(arrayBuffer);
+let document = WordDocument.open('Input.docx');
 
 for (let section of document.sections) {
   iterateBodyItems(section.body.items);

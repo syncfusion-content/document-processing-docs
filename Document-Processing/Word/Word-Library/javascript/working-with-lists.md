@@ -489,9 +489,7 @@ The following example shows how to get the display string of a list value for a 
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document.
-let response = await fetch('Template.docx');
-let arrayBuffer = await response.arrayBuffer();
-let document = await WordDocument.openAsync(arrayBuffer);
+let document = WordDocument.openSync('Template.docx');
 
 // Get the string that represents the appearance of the list value of the last paragraph.
 let listString = document.lastParagraph.listString;

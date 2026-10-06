@@ -54,9 +54,7 @@ import { readFileSync } from 'node:fs';
 import { EntityType, WordDocument, Picture } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-let response = await fetch('Template.docx');
-let arrayBuffer = await response.arrayBuffer();
-let document = await WordDocument.openAsync(arrayBuffer);
+let document = WordDocument.openSync('Template.docx');
 
 // Get the body of the first section
 let textBody = document.sections[0].body;
@@ -100,9 +98,7 @@ The following code example shows how to remove images from paragraph items.
 import { EntityType, WordDocument } from '@syncfusion/ej2-docx';
 
 // Open a Word document
-let response = await fetch('Template.docx');
-let arrayBuffer = await response.arrayBuffer();
-let document = await WordDocument.openAsync(arrayBuffer);
+let document = WordDocument.openSync('Template.docx');
 
 // Get the body of the first section
 let textBody = document.sections[0].body;
@@ -196,9 +192,7 @@ The following code example shows how to find an image by title.
 import { EntityType, WordDocument, Picture } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
-let response = await fetch('Template.docx');
-let arrayBuffer = await response.arrayBuffer();
-let document = await WordDocument.openAsync(arrayBuffer);
+let document = WordDocument.openSync('Template.docx');
 
 let textBody = document.sections[0].body;
 

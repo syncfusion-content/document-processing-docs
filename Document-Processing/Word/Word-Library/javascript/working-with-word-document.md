@@ -41,9 +41,7 @@ import {
 } from '@syncfusion/ej2-docx';
 
 // Open an existing Word document
-let response = await fetch('Template.docx');
-let arrayBuffer = await response.arrayBuffer();
-let document = await WordDocument.openAsync(arrayBuffer);
+let document = WordDocument.open('Template.docx');
 
 // Process the body contents for each section in the Word document
 for (let section of document.sections) {
@@ -150,9 +148,7 @@ import {
 } from '@syncfusion/ej2-docx';
 
 // Open an existing Word document
-let response = await fetch('Template.docx');
-let arrayBuffer = await response.arrayBuffer();
-let document = await WordDocument.openAsync(arrayBuffer);
+let document = WordDocument.open('Template.docx');
 
 for (let section of document.sections) {
   iterateTextBody(section.body);

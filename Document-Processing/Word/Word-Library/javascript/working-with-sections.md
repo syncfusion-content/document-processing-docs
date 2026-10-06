@@ -190,9 +190,7 @@ The following code example shows how to iterate through every section in a docum
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Open an existing Word document
-let response = await fetch('Input.docx');
-let arrayBuffer = await response.arrayBuffer();
-let document = await WordDocument.openAsync(arrayBuffer);
+let document = WordDocument.open('Input.docx');
 
 // Iterate through every section in the Word document
 for (let section of document.sections) {
@@ -317,9 +315,7 @@ The following code example shows how to configure line numbering for every secti
 import { LineNumberingMode, WordDocument } from '@syncfusion/ej2-docx';
 
 // Open an existing Word document
-let response = await fetch('Input.docx');
-let arrayBuffer = await response.arrayBuffer();
-let document = await WordDocument.openAsync(arrayBuffer);
+let document = WordDocument.open('Input.docx');
 
 // Iterate through every section in the Word document
 for (let section of document.sections) {
@@ -350,9 +346,7 @@ The following code example shows how to remove a specific section from a documen
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Open an existing Word document
-let response = await fetch('Input.docx');
-let arrayBuffer = await response.arrayBuffer();
-let document = await WordDocument.openAsync(arrayBuffer);
+let document = WordDocument.open('Input.docx');
 
 // Removes the second section from the collection
 document.sections.removeAt(1);

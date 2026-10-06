@@ -42,9 +42,9 @@ You can load an existing Word document from a `Uint8Array`, `ArrayBuffer`, files
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 let response = await fetch('/input.docx');
-let arrayBuffer = await response.arrayBuffer();
+let bytes = new Uint8Array(await response.arrayBuffer());
 
-let document = await WordDocument.openAsync(arrayBuffer);
+let document = WordDocument.openSync(bytes);
 {% endhighlight %}
 
 {% endtabs %}
@@ -55,9 +55,9 @@ let document = await WordDocument.openAsync(arrayBuffer);
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 let response = await fetch('/input.docx');
-let arrayBuffer = await response.arrayBuffer();
+let bytes = new Uint8Array(await response.arrayBuffer());
 
-let document = await WordDocument.openAsync(arrayBuffer);
+let document = WordDocument.load(bytes);
 {% endhighlight %}
 
 {% endtabs %}
@@ -68,8 +68,7 @@ let document = await WordDocument.openAsync(arrayBuffer);
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Node.js — open from a file path
-let bytes = readFileSync('./input.docx');
-let document = await WordDocument.openAsync(bytes);
+let document = WordDocument.openSync('./input.docx');
 {% endhighlight %}
 
 {% endtabs %}
@@ -88,7 +87,7 @@ let options: LoadOptions = {
   },
 };
 
-let document = await WordDocument.openAsync(bytes, options);
+let document = WordDocument.openSync(bytes, options);
 {% endhighlight %}
 
 {% endtabs %}
@@ -102,7 +101,7 @@ After loading, you can use the document body to add or remove content.
 {% highlight typescript tabtitle="TypeScript" %}
 import { WordDocument } from '@syncfusion/ej2-docx';
 
-let document = await WordDocument.openAsync(arrayBuffer);
+let document = WordDocument.openSync(bytes);
 
 // Access first section
 let section = document.sections[0];
