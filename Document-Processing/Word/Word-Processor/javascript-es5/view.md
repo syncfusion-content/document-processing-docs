@@ -67,3 +67,10 @@ N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-ed
 ### Online Demo
 
 Explore how to navigate through headings in Word documents using the JavaScript (ES5) DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/heading-navigation.html).
+
+## See also
+
+* [How to change the document view](./how-to/change-document-view)
+* [Insert page number and navigate to specific page](./how-to/insert-page-number-and-navigate-to-page)
+* [Enable ruler in document editor component](./how-to/enable-ruler-in-document-editor-component)
+* [Resize the document editor](./how-to/resize-document-editor)

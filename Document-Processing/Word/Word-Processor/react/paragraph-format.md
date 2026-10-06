@@ -317,8 +317,9 @@ ReactDOM.render(<App />, document.getElementById('sample'));
 
 Explore how to apply paragraph formatting in Word documents using the React DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/paragraph-formatting).
 
-## See Also
+## See also
 
 * [Feature modules](./feature-module)
 * [Paragraph dialog](./dialog#paragraph-dialog)
 * [Keyboard shortcuts](./keyboard-shortcut#paragraph-formatting)
+* [Set the default format in document editor](./how-to/set-default-format-in-document-editor)

@@ -247,3 +247,6 @@ Explore how to export Word documents in various formats using the JavaScript DOC
 ## See Also
 
 * [Feature modules](./feature-module)
+* [Export the document as PDF](./how-to/export-document-as-pdf)
+* [Auto save the document in server](./how-to/auto-save-document)
+* [Auto save the document in AWS S3](./how-to/auto-save-document-in-document-editor)

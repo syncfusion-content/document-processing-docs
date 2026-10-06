@@ -137,3 +137,4 @@ Using the exposed APIs, you can customize the find and replace functionality in 
 
 * [Options pane](../asp-net-core/dialog#options-pane)
 * [Feature modules](../asp-net-core/feature-module)
+* [Change the default search highlight color](./how-to/change-the-default-search-highlight-color)

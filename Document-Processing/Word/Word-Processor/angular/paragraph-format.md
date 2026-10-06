@@ -170,3 +170,4 @@ Explore how to apply paragraph formatting in Word documents using the Angular DO
 * [Feature modules](./feature-module)
 * [Paragraph dialog](./dialog#paragraph-dialog)
 * [Keyboard shortcuts](./keyboard-shortcut#paragraph-formatting)
+* [Set the default format in document editor](./how-to/set-default-format-in-document-editor)

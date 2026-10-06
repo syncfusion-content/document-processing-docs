@@ -59,3 +59,5 @@ Explore how to apply section formatting in Word documents using the ASP.NET MVC 
 ## See Also
 
 * [Page Setup Dialog](./dialog#page-setup-dialog)
+* [Set the default format in document editor](./how-to/set-default-format-in-document-editor)
+* [Insert page number and navigate to specific page](./how-to/insert-page-number-and-navigate-to-page)

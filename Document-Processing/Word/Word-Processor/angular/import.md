@@ -184,3 +184,6 @@ The following table illustrates the reasons for pagination (page-by-page display
 
 * [Feature modules](./feature-module)
 * [How to show and hide spinner while opening document in DocumentEditor](./how-to/show-hide-spinner)
+* [How to open default document](./how-to/open-default-document)
+* [How to open document in read only by default](./how-to/default-read-only)
+* [How to open document from URL](./how-to/open-document-by-address)
