@@ -1,13 +1,13 @@
 ---
-title: Integrate Syncfusion .NET Document Libraries into Python via a Local Worker | Syncfusion
-description: Learn how to generate Word and PDF documents from Python using the Syncfusion .NET Document SDK through a local out-of-process worker, without Microsoft Office or any pip packages.
+title: Use Syncfusion .NET Libraries in Python via Local Worker | Syncfusion
+description: Learn how to generate Word and PDF documents from Python using Syncfusion Document SDK through a local worker, without Microsoft Office or pip packages.
 platform: document-processing
 control: Document SDK
 documentation: UG
 Keywords: python generate word, python generate pdf, local dotnet worker, syncfusion python integration, docio python, pdf renderer python, subprocess dotnet
 ---
 
-# Integrate Syncfusion .NET Document Libraries into Python via a Local Worker
+# Use Syncfusion .NET Document SDK in Python via Local Worker
 
 The [Syncfusion .NET Document SDK](https://www.syncfusion.com/document-sdk) lets you create, read, and edit Word (`.docx`), PDF, Excel, and PowerPoint documents programmatically without Microsoft Office or Adobe Acrobat. Because the libraries are written in .NET, Python applications communicate with them through a small out-of-process **local worker** — a console assembly built from the SDK that Python launches with the built-in `subprocess` module. No pip packages, Python.NET, or a web server are required.
 

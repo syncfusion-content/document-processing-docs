@@ -1,6 +1,6 @@
 ---
 title: Use Syncfusion Document Libraries from Python | Syncfusion
-description: Learn how to use Syncfusion .NET Document Libraries from Python to generate, manipulate, and convert Word and PDF documents through a local .NET worker, without Microsoft Office or additional Python packages.
+description: Use Syncfusion .NET Document Libraries from Python to create, process, and convert Word and PDF documents through a local worker or Python.NET.
 platform: document-processing
 control: Document SDK
 documentation: UG
