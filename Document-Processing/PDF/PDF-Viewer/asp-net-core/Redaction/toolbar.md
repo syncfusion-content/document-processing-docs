@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Toolbar in ASP.NET Core PDF Viewer | Syncfusion
+title: Redaction Toolbar in ASP.NET Core PDF Viewer | Syncfusion
 description: Customize the redaction toolbar in the ASP.NET Core PDF Viewer by showing or hiding the default redaction actions to fit your scenario.
 platform: document-processing
 control: PDF Viewer
