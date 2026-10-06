@@ -15,7 +15,7 @@ This guide walks through the full workflow: prerequisites, project structure, en
 
 ## How the integration works
 
-Python serializes a JSON request to the worker's standard input, the worker builds the document with the Syncfusion libraries, writes the file to disk, and returns an exit code. Errors are reported on stderr. The worker process exits after each call, so there is no long-running server to manage.
+Python serializes a JSON request to the worker's standard input, the worker builds the document with the Syncfusion libraries, writes the file to disk, and returns an exit code. Errors are reported on the standard error stream. The worker process exits after each call, so there is no long-running server to manage.
 
 ```mermaid
 flowchart LR
