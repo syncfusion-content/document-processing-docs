@@ -12,6 +12,17 @@ domainurl: ##DomainURL##
 
 [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) supports Track Changes functionality, which allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject these modifications. It is a useful tool for managing changes made by several reviewers to the same document. When the Track Changes option is enabled, all editing operations are preserved as revisions.
 
+Starting from v35.1.xx, the default value of table row insertion and deletion colors are changed based on author. To retain the previous static colors, add the following code.
+
+```typescript
+container.documentEditorSettings.revisionSettings = {
+        insertRevisionColor: 'byAuthor',
+        deleteRevisionColor: 'byAuthor',
+        insertedRowColor: '#0078D4', 
+        deletedRowColor: '#E3008C' 
+      };
+```
+
 ## Enable Track changes
 
 Track Changes can be enabled using the [enableTrackChanges](https://ej2.syncfusion.com/react/documentation/api/document-editor-container/index-default#enabletrackchanges) property. When enabled, all editing operations are recorded and preserved as revisions in the DOCX Editor.
@@ -325,10 +336,10 @@ function App() {
   useEffect(() => {
     if (containerRef.current) {
       // Access the underlying DocumentEditor instance
-      const editor = containerRef.current.documentEditorSettings;
+      const editorSettings = containerRef.current.documentEditorSettings;
 
       // Update revision colors dynamically
-      editor.revisionSettings.revisionColors = [
+      editorSettings.revisionSettings.revisionColors = [
         '#0000ff',
         '#bb00ff',
         '#c14f16'
@@ -371,7 +382,7 @@ function App() {
     const container = containerRef.current;
 
     if (container) {
-      container.documentEditor.revisionSettings = {
+      container.documentEditorSettings.revisionSettings = {
         insertRevisionColor: '#22C55E',
         deleteRevisionColor: '#EF4444',
         insertedRowColor: '#7C3AED',
