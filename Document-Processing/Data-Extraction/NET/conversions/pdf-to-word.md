@@ -35,11 +35,12 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
   //Initialize the Data Extractor.
   DataExtractor extractor = new DataExtractor();
   //Extract data as WordDocument.
-  WordDocument word = extractor.ExtractDataAsWordDocument(stream);
+  WordDocument document = extractor.ExtractDataAsWordDocument(stream);
+  using MemoryStream saveStream = new MemoryStream();
   //Save the extracted Word data into an output file.
-  word.Save("Output.docx");
-  word.Close();
-} 
+  document.Save(saveStream, FormatType.Docx);
+  document.Close();
+}
 
 {% endhighlight %}
 
@@ -54,11 +55,12 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
   //Initialize the Data Extractor.
   DataExtractor extractor = new DataExtractor();
   //Extract data as WordDocument.
-  WordDocument word = extractor.ExtractDataAsWordDocument(stream);
-  //Save the output file.
-  word.Save("Output.docx");
-  word.Close();
-} 
+  WordDocument document = extractor.ExtractDataAsWordDocument(stream);
+  using MemoryStream saveStream = new MemoryStream();
+  //Save the extracted Word data into an output file.
+  document.Save(saveStream, FormatType.Docx);
+  document.Close();
+}
 
 {% endhighlight %}
 
@@ -89,8 +91,9 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     extractor.PageRange = new int[,] { { 2, 4 } };
     //Convert the selected pages into a Word document.
     WordDocument document = extractor.ExtractDataAsWordDocument(stream);
-    //Save the Word document.
-    document.Save("Output.docx");
+    using MemoryStream saveStream = new MemoryStream();
+    //Save the extracted Word data into an output file.
+	document.Save(saveStream, FormatType.Docx);
     document.Close();
 }
 
@@ -112,7 +115,9 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     //Convert the selected pages to a Word document.
     WordDocument document = extractor.ExtractDataAsWordDocument(stream);
     //Save the Word document.
-    document.Save("Output.docx");
+    using MemoryStream saveStream = new MemoryStream();
+    //Save the extracted Word data into an output file.
+	document.Save(saveStream, FormatType.Docx);
     document.Close();
 }
 
