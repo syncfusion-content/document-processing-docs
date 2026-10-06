@@ -6,7 +6,7 @@ control: Word Library
 documentation: UG
 ---
 
-## Open and Save Word documents in JavaScript Word
+# Open and Save Word documents in JavaScript Word
 
 The JavaScript Word Library enables you to open existing Word documents, modify their content, and save the updated documents. This guide demonstrates how to open a Word document from supported input types and save it as a browser download, a `Uint8Array`, or a Base64 string.
 
