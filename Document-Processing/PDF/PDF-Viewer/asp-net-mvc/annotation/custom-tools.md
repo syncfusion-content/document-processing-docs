@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Custom Annotation Tools in ASP.NET MVC PDF Viewer | Syncfusion
-description: Add and configure custom annotation tools in the ASP.NET MVC PDF Viewer annotation toolbar.
+description: Add and configure custom annotation tools in the ASP.NET MVC PDF Viewer toolbar to extend the annotation feature set.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

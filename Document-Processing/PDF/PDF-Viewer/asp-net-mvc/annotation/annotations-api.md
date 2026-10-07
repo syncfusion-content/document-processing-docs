@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotations APIs in ASP.NET MVC PDF Viewer | Syncfusion
-description: Reference for the annotation-related APIs available in the ASP.NET MVC PDF Viewer.
+description: Reference for the annotation-related APIs in the ASP.NET MVC PDF Viewer, including methods, properties, and modes for managing annotations programmatically.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
