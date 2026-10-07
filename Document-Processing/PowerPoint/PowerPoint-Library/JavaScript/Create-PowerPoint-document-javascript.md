@@ -11,53 +11,41 @@ keywords: javascript, powerpoint, cdn
 
 # Getting Started with JavaScript PowerPoint in JavaScript app
 
-Syncfusion<sup>&reg;</sup> JS 2 (global script) is an ES5-formatted distribution of the [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) that runs directly in any modern web browser without a build step or bundler. The all-in-one `ej2.min.js` bundle exposes the `ej.pptx` namespace, which contains the Presentation, Slide, Shape, and TextPart classes.
+The `JavaScript PowerPoint Library` facilitates the creation of a simple PowerPoint presentation with basic elements from scratch.
 
-This guide explains how to integrate the [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) into a static HTML page. The generated PowerPoint presentation is downloaded directly from the browser; no server-side PowerPoint rendering is required.
+This guide explains how to integrate the [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) into a JavaScript application using NPM and a module bundler like **Parcel**. The generated PowerPoint presentation is downloaded directly from the browser; no server-side PowerPoint rendering is required.
 
 ## Prerequisites
 
-Before you begin, make sure you have the following:
+Before you begin, make sure you have the following installed:
 
+- Node.js 18 or later.
+- npm 9 or later.
 - A modern web browser such as the latest versions of Microsoft Edge, Google Chrome, Mozilla Firefox, or Safari.
-- A static file server. The page must be served over `http://` or `https://` (not opened directly from disk) because the CDN scripts and the presentation download use APIs that are restricted under the `file://` protocol.
 - A text editor such as Visual Studio Code, Code Studio, or Notepad.
 
-Common static-server options include:
+To verify your Node.js and npm versions, run the following commands:
 
-- **Node.js** (recommended): `npx serve` (no install required)
-- **VS Code**: the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension
+```bash
+node --version
+npm --version
+```
 
-## CDN Syntax
+## Project Setup
 
-The JS 2 global scripts and styles are hosted on the Syncfusion CDN in the following format:
+Create a folder for your project and initialize it with npm. Then install the required dependencies:
 
-**Syntax:**
-> Script: `https://cdn.syncfusion.com/ej2/{Version}/dist/{PACKAGE_NAME}.min.js`
+```bash
+mkdir my-pptx-app
+cd my-pptx-app
+npm init -y
+npm install @syncfusion/ej2-pptx
+npm install -D parcel
+```
 
-**Example:**
-> Script: [`https://cdn.syncfusion.com/ej2/31.2.15/dist/ej2.min.js`](https://cdn.syncfusion.com/ej2/31.2.15/dist/ej2.min.js)
+## Create a PowerPoint Presentation Document
 
-N> The example uses the all-in-one `ej2.min.js` bundle, which exposes the `ej.pptx` namespace along with other Essential JS 2 controls. A PowerPoint-only CDN bundle is not provided separately. Replace `31.2.15` with the latest available version when starting a new project.
-
-## Create a PowerPoint Presentation
-
-### Step 1: Create the HTML Page
-
-Create a folder named `my-app` for your project. Add the CDN reference in the `<head>` of `index.html` (the file is created in the next step).
-
-{% tabs %}
-{% highlight html tabtitle="index.html" %}
-<head>
-    <!-- JavaScript PowerPoint Library (CDN) -->
-    <script src="https://cdn.syncfusion.com/ej2/31.2.15/dist/ej2.min.js"></script>
-</head>
-{% endhighlight %}
-{% endtabs %}
-
-### Step 2: Create the HTML and Script
-
-Create a complete `index.html` inside `my-app` with the following content. The CDN reference is loaded in the `<head>` and the PowerPoint generation script is placed at the end of `<body>` so the button exists before the click handler is attached.
+Create `index.html` in your project root with a button to generate the PowerPoint file. Use the following code with ES modules to import the PowerPoint library:
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -65,20 +53,19 @@ Create a complete `index.html` inside `my-app` with the following content. The C
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Create PowerPoint document</title>
-    <!-- JavaScript PowerPoint Library (CDN) -->
-    <script src="https://cdn.syncfusion.com/ej2/31.2.15/dist/ej2.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create PowerPoint Document</title>
 </head>
 <body>
-    <div class="container py-4">
-        <h1 class="h4 mb-3">Create PowerPoint document</h1>
-        <p class="text-muted">Click the button to generate and download a PowerPoint presentation.</p>
-        <button id="createPptx" class="btn btn-primary">Generate PowerPoint document</button>
-    </div>
-    <script>
+    <h1>Create PowerPoint Document</h1>
+    <button id="createPptx">Generate PowerPoint Document</button>
+
+    <script type="module">
+        import { Presentation, HorizontalAlignmentType } from '@syncfusion/ej2-pptx';
+
         document.getElementById('createPptx').addEventListener('click', async function () {
             // Creates a Presentation instance
-            const pptxDoc = ej.pptx.Presentation.create();
+            const pptxDoc = Presentation.create();
             // Adds a slide to the presentation
             const slide = pptxDoc.slides.add();
             // Adds a textbox for the title
@@ -92,8 +79,8 @@ Create a complete `index.html` inside `my-app` with the following content. The C
                 }
             });
             // Adds a paragraph to the textbox
-            const paragraph = titleShape.textBody.addParagraph();
-            paragraph.horizontalAlignment = ej.pptx.HorizontalAlignmentType.Center;
+            const paragraph = titleShape.textBody?.addParagraph();
+            paragraph.horizontalAlignment = HorizontalAlignmentType.Center;
             // Adds text to the paragraph
             const textPart = paragraph.addTextPart('Hello World!!!');
             textPart.font.fontName = 'Calibri';
@@ -130,35 +117,36 @@ Create a complete `index.html` inside `my-app` with the following content. The C
 {% endhighlight %}
 {% endtabs %}
 
-N> save()` — saves the presentation as bytes and **triggers a client-side browser download** with the specified file name. The file is sent to the browser's default downloads folder; nothing is written to the server.
+N> The `save()` method saves the presentation and returns the bytes, which are then converted to a Blob for browser download. The file is sent to the browser's default downloads folder.
 
-## Run the Sample
+## Run the Application
 
-Step 4: Open a terminal in the `my-app` folder and start a static file server.
+Update the `package.json` to add a dev script for Parcel:
 
-Using `npx serve` (no install required):
-
-```bash
-npx serve
+```json
+"scripts": {
+  "start": "parcel index.html --port 5000"
+}
 ```
 
-Step 5: Open the served URL in your browser. For `npx serve`, the default URL is `http://localhost:3000`. For Python, the default URL is `http://localhost:8000`.
-### Step 3: Start the Server
+Then start the development server:
 
+```bash
+npm start
+```
 
-Click **Generate PowerPoint document**. The browser downloads `Output.pptx`, which contains a single slide with the text "Hello World!!!" in the title area.
+Parcel serves the application at `http://localhost:5000`. Open this URL in a browser and click **Generate PowerPoint document** to download the generated file as `Output.pptx`.
+
+The generated PowerPoint presentation contains a single slide with the text "Hello World!!!".
 
 ## Troubleshooting
 
 | Problem | Cause | Resolution |
 |---|---|---|
-| `ej is not defined` in the browser console | The CDN script tag is missing or blocked | Confirm the `<script src="https://cdn.syncfusion.com/ej2/.../ej2.min.js"></script>` reference is reachable and not blocked by an ad blocker or network policy |
-### Step 4: View the Result
-
- click does nothing | The script runs before the button is in the DOM | Move the `<script>` tag to the end of `<body>`, or wrap the listener in a `DOMContentLoaded` event |
+| `Cannot find module '@syncfusion/ej2-pptx'` | The package is not installed | Run `npm install @syncfusion/ej2-pptx --save` |
+| Button click does nothing | The script runs before the button is in the DOM | Ensure the `<script type="module">` tag is at the end of `<body>` |
 | `Output.pptx` does not download | The browser blocks the download | Check the browser's download settings and the downloads folder |
-| CORS or `file://` errors | The page is opened directly from disk | Serve the folder over `http://` using `npx serve` or a similar static server |
-| CDN version mismatch with other Syncfusion packages | The CDN version is out of sync with installed Syncfusion packages | Use the same Syncfusion version across CDN and any other Syncfusion packages you reference |
+| Build fails with module errors | Parcel is not installed or the project structure is incorrect | Run `npm install -D parcel` and confirm `index.html` is in the project root |
 
 ## See Also
 

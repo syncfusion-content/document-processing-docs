@@ -100,43 +100,42 @@ Add the following button to `app.component.html`:
 
 {% tabs %}
 {% highlight html tabtitle="app.component.html" %}
-<button id="normalButton">Create PowerPoint document</button>
+<button (click)="createPowerPoint()">Create PowerPoint document</button>
 {% endhighlight %}
 {% endtabs %}
 
-### Step 2: Add the Imports
+### Step 2: Add the Component Code
 
-Include the following namespaces in `app.component.ts`:
-
-{% tabs %}
-{% highlight ts tabtitle="~/app.component.ts" %}
-import { Presentation, HorizontalAlignmentType } from '@syncfusion/ej2-pptx';
-{% endhighlight %}
-### Step 3: Add the Code Handler
-
-Include the following code in the click event of the button in `app.component.ts` to generate a PowerPoint document:
-
-* Include the following code in the click event of the button in `app.component.ts` to generate a PowerPoint document.
+Update `app.component.ts` with the following code that imports the Presentation classes and creates a PowerPoint presentation:
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-document.getElementById('normalButton').onclick = async (): Promise<void> => {
+import { Component } from '@angular/core';
+import { Presentation, HorizontalAlignmentType } from '@syncfusion/ej2-pptx';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.css'
+})
+export class AppComponent {
+  async createPowerPoint(): Promise<void> {
     // Creates a Presentation instance
     const pptxDoc = Presentation.create();
     // Adds a slide to the presentation
     const slide = pptxDoc.slides.add();
     // Adds a textbox for the title
     const titleShape = slide.shapes.addTextBox({
-        name: 'Title',
-        bounds: {
-            x: 55,
-            y: 25,
-            width: 850,
-            height: 72
-        }
+      name: 'Title',
+      bounds: {
+        x: 55,
+        y: 25,
+        width: 850,
+        height: 72
+      }
     });
     // Adds a paragraph to the textbox
-    const paragraph = titleShape.textBody.addParagraph();
+    const paragraph = titleShape.textBody?.addParagraph();
     paragraph.horizontalAlignment = HorizontalAlignmentType.Center;
     // Adds text to the paragraph
     const textPart = paragraph.addTextPart('Hello World!!!');
@@ -145,31 +144,34 @@ document.getElementById('normalButton').onclick = async (): Promise<void> => {
     textPart.font.fontSize = 36;
 
     try {
-        // Saves the presentation
-        const bytes = await pptxDoc.save();
+      // Saves the presentation
+      const bytes = await pptxDoc.save();
 
-        // Creates a blob from the bytes
-        const blob = new Blob([bytes], {
-            type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-        });
+      // Creates a blob from the bytes
+      const blob = new Blob([bytes as Uint8Array], {
+        type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+      });
 
-        // Creates a download link
-        const url = window.URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = 'Output.pptx';
+      // Creates a download link
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'Output.pptx';
 
-        // Triggers the download
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        window.URL.revokeObjectURL(url);
+      // Triggers the download
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
     } catch (error) {
-        console.error('Error creating PowerPoint file:', error);
+      console.error('Error creating PowerPoint file:', error);
     }
-};
+  }
+}
 {% endhighlight %}
-{% save()` — saves the presentation and triggers a browser download with the specified file name. The file is sent to the browser's default downloads folder.
+{% endtabs %}
+
+N> The `save()` method saves the presentation and returns the bytes, which are then converted to a Blob for browser download. The file is sent to the browser's default downloads folder.
 
 ## Run the Application
 
@@ -187,10 +189,9 @@ When you click **Create PowerPoint document**, the PowerPoint file is generated 
 |---|---|---|
 | `TS2304: Cannot find name 'Presentation'` (or similar) | The import line is missing or the package is not installed | Confirm `npm install @syncfusion/ej2-pptx` ran successfully and that the import is in `app.component.ts` |
 | `Error: Cannot find module '@syncfusion/ej2-pptx'` | The package is not installed | Run `npm install @syncfusion/ej2-pptx --save` |
-| Button click does nothing | The button ID does not match the ID used in `getElementById` | Confirm the button's `id` is `normalButton` |
+| Button click does nothing | The method `createPowerPoint()` is missing or not bound correctly | Confirm the `(click)="createPowerPoint()"` binding exists in `app.component.html` and the method exists in `app.component.ts` |
 | PowerPoint file does not download | The browser blocks the download | Check the browser's download settings and the downloads folder |
 | Build fails with TypeScript errors | The Angular TypeScript version is incompatible with the PowerPoint package | Update Angular to 20 or later and run `npm install` again |
-| `registerLicense` warning at runtime | The license key is missing or invalid | Confirm the key is set in `main.ts` and is the correct key for your Syncfusion account |
 
 ## Additional Resources
 

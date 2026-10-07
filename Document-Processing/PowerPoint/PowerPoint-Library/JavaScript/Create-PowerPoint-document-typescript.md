@@ -149,7 +149,7 @@ document.getElementById('normalButton').onclick = async (): Promise<void> => {
     }
   });
   // Adds a paragraph to the textbox
-  const paragraph = titleShape.textBody.addParagraph();
+  const paragraph = titleShape.textBody?.addParagraph();
   paragraph.horizontalAlignment = HorizontalAlignmentType.Center;
   // Adds text to the paragraph
   const textPart = paragraph.addTextPart('Hello World!!!');
@@ -162,7 +162,7 @@ document.getElementById('normalButton').onclick = async (): Promise<void> => {
     const bytes = await pptxDoc.save();
 
     // Creates a blob from the bytes
-    const blob = new Blob([bytes], {
+    const blob = new Blob([bytes as Uint8Array], {
       type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
     });
 

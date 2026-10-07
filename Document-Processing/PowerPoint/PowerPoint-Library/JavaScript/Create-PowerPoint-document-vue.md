@@ -130,7 +130,7 @@ export default {
       });
 
       // Adds a paragraph to the textbox
-      const paragraph = titleShape.textBody.addParagraph();
+      const paragraph = titleShape.textBody?.addParagraph();
       paragraph.horizontalAlignment = HorizontalAlignmentType.Center;
 
       // Adds text to the paragraph
