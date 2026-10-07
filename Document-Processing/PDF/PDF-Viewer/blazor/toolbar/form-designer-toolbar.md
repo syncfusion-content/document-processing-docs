@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize the Form Designer Toolbar in Blazor PDF Viewer | Syncfusion
-description: Learn how to show or hide and customize the Form Designer toolbar in the Blazor PDF Viewer.
+description: Learn how to show or hide and customize the Form Designer toolbar in the Blazor PDF Viewer component.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
