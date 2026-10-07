@@ -25,9 +25,9 @@ This sample follows the Python.NET pattern because it avoids a separate worker a
 
 ## License and trial mode
 
-The `--trial` flag is the Python-side convenience switch for evaluation mode. Internally, it is passed to the .NET method as `allowTrial=true`. This does not bypass licensing enforcement; it simply allows Syncfusion evaluation mode when no license key is present.
+By default every operation runs in Syncfusion's **trial mode** — no license is required, and the produced documents carry a Syncfusion evaluation watermark. This is the supported way to evaluate the SDK without a purchased license.
 
-For licensed production scenarios, set the `SYNCFUSION_LICENSE_KEY` environment variable and run without `--trial`.
+For licensed production use, set the `SYNCFUSION_LICENSE_KEY` environment variable in the Python process before importing this module (Python.NET forwards process environment variables to the embedded CoreCLR). The .NET code reads the variable directly and registers it via `SyncfusionLicenseProvider.RegisterLicense(key)`; Python callers do not need to change.
 
 ```bash
 # Windows PowerShell
@@ -39,7 +39,7 @@ export SYNCFUSION_LICENSE_KEY="YOUR_KEY_HERE"
 python document_sdk.py create-docx
 ```
 
-The .NET code reads this variable directly and calls `SyncfusionLicenseProvider.RegisterLicense(key)`. Do not pass the license key on the command line.
+The key is never passed on the command line. When unset, every operation runs in Syncfusion's trial mode — register a key to remove the watermark.
 
 ## Project structure
 
@@ -77,7 +77,7 @@ Python.NET loads the published .NET assembly (`DocumentBridge.dll`) and its runt
 * [.NET SDK 8.0](https://dotnet.microsoft.com/en-us/download) (or later) — required to build the .NET assembly
 * **Python 3.9 or later** (CPython)
 * [`pythonnet>=3.1.0`](https://pypi.org/project/pythonnet/) (see `requirements.txt`)
-* An active [Syncfusion&reg; license key](https://www.syncfusion.com/sales/communitylicense) (a free 30-day trial is available; use `--trial` to evaluate without a key)
+* An active [Syncfusion&reg; license key](https://www.syncfusion.com/sales/communitylicense) to remove the evaluation watermark (a free 30-day trial is available; the worker runs in trial mode by default if the key is absent)
 * **Supported platforms:** Windows 10/11 x64, macOS Apple Silicon, Linux Ubuntu x64
 
 ## Environment setup
@@ -158,39 +158,25 @@ artifacts/
 
 ## .NET assembly configuration
 
-The bridge project (`DocumentBridge.csproj`) declares the Syncfusion Document SDK packages and the native rendering assets required on Linux hosts. It is a **class library** (not an executable), loaded in-process by Python.NET. `OutputType=Library` and `UseAppHost=false` prevent `dotnet publish` from emitting a platform apphost executable next to `DocumentBridge.dll`.
+The bridge project lives at `DocumentBridge/DocumentBridge.csproj`. It is a small .NET 8 **class library** with the following responsibilities:
 
-{% tabs %}
-{% highlight xml tabtitle="DocumentBridge.csproj" %}
+* Targets `net8.0` and `<OutputType>Library</OutputType>`.
+* Sets `<UseAppHost>false</UseAppHost>` to prevent `dotnet publish` from emitting a platform apphost executable alongside `DocumentBridge.dll` — the assembly is loaded in-process by Python.NET, never run as a standalone executable.
+* Pins the assembly name to `DocumentBridge` so the published `artifacts/` folder contains `DocumentBridge.dll` and `DocumentBridge.runtimeconfig.json`.
+* Declares the Syncfusion Document SDK NuGet packages and the native Linux rendering assets.
 
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
-    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-    <!-- Library: loaded in-process by Python.NET, not run standalone.
-         Explicit OutputType=Library + UseAppHost=false prevents `dotnet publish`
-         from emitting a platform apphost executable next to DocumentBridge.dll. -->
-    <OutputType>Library</OutputType>
-    <UseAppHost>false</UseAppHost>
-    <AssemblyName>DocumentBridge</AssemblyName>
-    <RootNamespace>DocumentInterop</RootNamespace>
-  </PropertyGroup>
-  <ItemGroup>
-    <!-- Library: loaded in-process by Python.NET, not run standalone. -->
-    <PackageReference Include="Syncfusion.DocIORenderer.Net.Core" Version="34.2.5" />
-    <PackageReference Include="Syncfusion.XlsIORenderer.Net.Core" Version="34.2.5" />
-    <PackageReference Include="Syncfusion.PresentationRenderer.Net.Core" Version="34.2.5" />
-    <PackageReference Include="Syncfusion.Pdf.Net.Core" Version="34.2.5" />
-    <PackageReference Include="SkiaSharp.NativeAssets.Linux" Version="3.119.1" />
-    <PackageReference Include="HarfBuzzSharp.NativeAssets.Linux" Version="8.3.1.2" />
-  </ItemGroup>
-</Project>
+### Reference packages
 
-{% endhighlight %}
-{% endtabs %}
+| Package | Purpose |
+|---|---|
+| `Syncfusion.DocIORenderer.Net.Core` | Word generation (`.docx`) and Word → PDF rendering. |
+| `Syncfusion.XlsIORenderer.Net.Core` | Excel → PDF conversion. |
+| `Syncfusion.PresentationRenderer.Net.Core` | PowerPoint → PDF conversion. |
+| `Syncfusion.Pdf.Net.Core` | PDF loading and graphics (used by the watermark operation). |
+| `SkiaSharp.NativeAssets.Linux` | Native rendering assets required on Linux hosts. Harmless on Windows/macOS. |
+| `HarfBuzzSharp.NativeAssets.Linux` | Text shaping assets required on Linux hosts. Harmless on Windows/macOS. |
+
+For the full source of `DocumentBridge.csproj`, see [`pythonnet-wrapper/DocumentBridge/DocumentBridge.csproj`](https://github.com/SyncfusionExamples/python-syncfusion-document-sdk-samples/blob/master/pythonnet-wrapper/DocumentBridge/DocumentBridge.csproj) in the companion GitHub sample.
 
 ## Code implementation
 
@@ -222,28 +208,32 @@ namespace DocumentInterop;
 /// Exposed to Python via Python.NET (pythonnet). The methods are static and
 /// can be invoked directly from Python:
 ///     from DocumentInterop import DocumentCreator
-///     DocumentCreator.CreateDocx(text, path, allowTrial)
-///     DocumentCreator.ExcelToPdf(input, output, allowTrial)
-///     DocumentCreator.PowerPointToPdf(input, output, allowTrial)
-///     DocumentCreator.WatermarkPdf(input, output, label, allowTrial)
+///     DocumentCreator.CreateDocx(text, path)
+///     DocumentCreator.ExcelToPdf(input, output)
+///     DocumentCreator.PowerPointToPdf(input, output)
+///     DocumentCreator.WatermarkPdf(input, output, label)
+///
+/// License registration is driven entirely by the ``SYNCFUSION_LICENSE_KEY``
+/// environment variable; when unset, every operation runs in Syncfusion's
+/// trial mode (evaluation watermarks may be added to the output).
 /// </summary>
 public static class DocumentCreator
 {
     // ---- Word: build from a string ----------------------------------------------------
 
     // Build a new Word document and save it directly as DOCX.
-    public static void CreateDocx(string text, string outputPath, bool allowTrial)
+    public static void CreateDocx(string text, string outputPath)
     {
-        ConfigureLicense(allowTrial);
+        ConfigureLicense();
         using var document = CreateDocument(text);
         using var output = OpenOutput(outputPath);
         document.Save(output, Syncfusion.DocIO.FormatType.Docx);
     }
 
     // Build a new Word document and render it straight to PDF via DocIORenderer.
-    public static void CreatePdf(string text, string outputPath, bool allowTrial)
+    public static void CreatePdf(string text, string outputPath)
     {
-        ConfigureLicense(allowTrial);
+        ConfigureLicense();
         using var document = CreateDocument(text);
         using var renderer = new DocIORenderer();
         using var pdf = renderer.ConvertToPDF(document);
@@ -265,9 +255,9 @@ public static class DocumentCreator
     // ---- Excel: convert an existing XLSX file to PDF ----------------------------------
 
     // Convert an XLSX workbook to PDF using its own print settings.
-    public static void ExcelToPdf(string inputPath, string outputPath, bool allowTrial)
+    public static void ExcelToPdf(string inputPath, string outputPath)
     {
-        ConfigureLicense(allowTrial);
+        ConfigureLicense();
         if (!File.Exists(inputPath))
             throw new FileNotFoundException("Input workbook not found.", inputPath);
         using var engine = new ExcelEngine();
@@ -287,9 +277,9 @@ public static class DocumentCreator
     // ---- PowerPoint: convert an existing PPTX file to PDF -----------------------------
 
     // Convert a PPTX presentation to PDF using Syncfusion's presentation renderer.
-    public static void PowerPointToPdf(string inputPath, string outputPath, bool allowTrial)
+    public static void PowerPointToPdf(string inputPath, string outputPath)
     {
-        ConfigureLicense(allowTrial);
+        ConfigureLicense();
         if (!File.Exists(inputPath))
             throw new FileNotFoundException("Input presentation not found.", inputPath);
         using var stream = File.OpenRead(inputPath);
@@ -302,9 +292,9 @@ public static class DocumentCreator
     // ---- PDF: overlay a diagonal text watermark on every page -------------------------
 
     // Draw a translucent diagonal label on every page of an existing PDF.
-    public static void WatermarkPdf(string inputPath, string outputPath, string label, bool allowTrial)
+    public static void WatermarkPdf(string inputPath, string outputPath, string label)
     {
-        ConfigureLicense(allowTrial);
+        ConfigureLicense();
         ArgumentException.ThrowIfNullOrWhiteSpace(label);
         if (!File.Exists(inputPath))
             throw new FileNotFoundException("Input PDF not found.", inputPath);
@@ -344,9 +334,9 @@ public static class DocumentCreator
 
     // Build a tiny XLSX with one cell of text. Lets the samples run end-to-end without
     // shipping a binary fixture in the repository.
-    public static void CreateSampleXlsx(string outputPath, bool allowTrial)
+    public static void CreateSampleXlsx(string outputPath)
     {
-        ConfigureLicense(allowTrial);
+        ConfigureLicense();
         using var engine = new ExcelEngine();
         engine.Excel.DefaultVersion = ExcelVersion.Xlsx;
         var book = engine.Excel.Workbooks.Create();
@@ -364,9 +354,9 @@ public static class DocumentCreator
 
     // Build a tiny PPTX with a single slide. Lets the samples run end-to-end without
     // shipping a binary fixture in the repository.
-    public static void CreateSamplePptx(string outputPath, bool allowTrial)
+    public static void CreateSamplePptx(string outputPath)
     {
-        ConfigureLicense(allowTrial);
+        ConfigureLicense();
         var deck = Presentation.Create();
         var slide = deck.Slides.Add(SlideLayoutType.Blank);
         var shape = slide.Shapes.AddTextBox(40, 40, 600, 80);
@@ -386,27 +376,27 @@ public static class DocumentCreator
         return new FileStream(path, FileMode.Create, FileAccess.Write);
     }
 
-    // License registration is process-global and idempotent. Cache the result
-    // so high-volume callers (e.g. batch conversions) don't re-read the env
-    // variable and re-register on every operation.
+    // License registration is process-global. Cache the result so high-volume
+    // callers (e.g. batch conversions) don't re-read the env variable and
+    // re-register on every operation. The cache flag is only set once a key
+    // has actually been registered successfully; if no key is configured, the
+    // worker stays in trial mode and we keep the flag false so a key added
+    // later (e.g. via the process environment) can still take effect.
     private static bool s_licenseRegistered;
 
-    private static void ConfigureLicense(bool allowTrial)
+    private static void ConfigureLicense()
     {
         if (s_licenseRegistered) return;
-        s_licenseRegistered = true;
         string? key = Environment.GetEnvironmentVariable("SYNCFUSION_LICENSE_KEY");
-        if (!string.IsNullOrWhiteSpace(key))
+        if (string.IsNullOrWhiteSpace(key))
         {
-            SyncfusionLicenseProvider.RegisterLicense(key);
+            // No key: continue in trial mode. Syncfusion will add evaluation
+            // watermarks to the output documents. Leave s_licenseRegistered
+            // false so a key set later can still be picked up.
+            return;
         }
-        else if (!allowTrial)
-        {
-            // Reset the flag so a subsequent retry with allowTrial=true still works.
-            s_licenseRegistered = false;
-            throw new InvalidOperationException(
-                "Set SYNCFUSION_LICENSE_KEY or pass AllowTrial=true to evaluate without a license.");
-        }
+        SyncfusionLicenseProvider.RegisterLicense(key);
+        s_licenseRegistered = true;
     }
 }
 
@@ -429,6 +419,10 @@ C# static methods natively without spawning separate processes.
 
 The public API mirrors the local .NET worker sample (``DocumentService``) so
 that the same caller code can be used with either approach.
+
+By default every operation runs in Syncfusion's **trial mode** (no license
+required). To use a real license, set the ``SYNCFUSION_LICENSE_KEY`` environment
+variable before importing this module; the C# worker picks it up automatically.
 """
 from __future__ import annotations
 
@@ -477,39 +471,39 @@ class DocumentService:
 
     # ---- Word: build from a string -------------------------------------------------
 
-    def create_docx(self, text: str, output: Path, allow_trial: bool = True) -> None:
+    def create_docx(self, text: str, output: Path) -> None:
         """Create a new Word document and save it as DOCX."""
-        self._creator.CreateDocx(str(text), str(output), bool(allow_trial))
+        self._creator.CreateDocx(str(text), str(output))
 
-    def create_pdf(self, text: str, output: Path, allow_trial: bool = True) -> None:
+    def create_pdf(self, text: str, output: Path) -> None:
         """Create a new Word document in memory and render it directly to PDF."""
-        self._creator.CreatePdf(str(text), str(output), bool(allow_trial))
+        self._creator.CreatePdf(str(text), str(output))
 
     # ---- Excel / PowerPoint: convert an existing file to PDF -----------------------
 
-    def excel_to_pdf(self, source: Path, output: Path, allow_trial: bool = True) -> None:
+    def excel_to_pdf(self, source: Path, output: Path) -> None:
         """Convert an XLSX workbook to PDF using its own print settings."""
-        self._creator.ExcelToPdf(str(source), str(output), bool(allow_trial))
+        self._creator.ExcelToPdf(str(source), str(output))
 
-    def powerpoint_to_pdf(self, source: Path, output: Path, allow_trial: bool = True) -> None:
+    def powerpoint_to_pdf(self, source: Path, output: Path) -> None:
         """Convert a PPTX presentation to PDF via Syncfusion's presentation renderer."""
-        self._creator.PowerPointToPdf(str(source), str(output), bool(allow_trial))
+        self._creator.PowerPointToPdf(str(source), str(output))
 
     # ---- PDF: overlay a diagonal text watermark on every page ----------------------
 
-    def watermark_pdf(self, source: Path, output: Path, label: str, allow_trial: bool = True) -> None:
+    def watermark_pdf(self, source: Path, output: Path, label: str) -> None:
         """Draw a translucent diagonal label on every page of an existing PDF."""
-        self._creator.WatermarkPdf(str(source), str(output), str(label), bool(allow_trial))
+        self._creator.WatermarkPdf(str(source), str(output), str(label))
 
     # ---- Sample input helpers -------------------------------------------------------
 
-    def create_sample_xlsx(self, output: Path, allow_trial: bool = True) -> None:
+    def create_sample_xlsx(self, output: Path) -> None:
         """Build a tiny XLSX so the samples run end-to-end without a binary fixture."""
-        self._creator.CreateSampleXlsx(str(output), bool(allow_trial))
+        self._creator.CreateSampleXlsx(str(output))
 
-    def create_sample_pptx(self, output: Path, allow_trial: bool = True) -> None:
+    def create_sample_pptx(self, output: Path) -> None:
         """Build a tiny PPTX so the samples run end-to-end without a binary fixture."""
-        self._creator.CreateSamplePptx(str(output), bool(allow_trial))
+        self._creator.CreateSamplePptx(str(output))
 
 
 def load_service(bundle: Path | None = None) -> DocumentService:
@@ -545,7 +539,6 @@ def main() -> None:
                         help="Text for create-docx / create-pdf.")
     parser.add_argument("--label", default="CONFIDENTIAL",
                         help="Label for watermark-pdf.")
-    parser.add_argument("--trial", action="store_true", help="Evaluate without a license key.")
     parser.add_argument("--bundle", type=Path, help="Folder containing the published DocumentBridge.")
     args = parser.parse_args()
 
@@ -564,7 +557,7 @@ def main() -> None:
             parser.error(f"Input file does not exist: {source}")
 
     service = load_service(args.bundle)
-    kwargs: dict = {"output": output, "allow_trial": args.trial}
+    kwargs: dict = {"output": output}
     if input_ext is not None:
         kwargs["source"] = source
     if method_name in ("create_docx", "create_pdf"):
@@ -588,8 +581,8 @@ from pathlib import Path
 import document_sdk
 
 service = document_sdk.load_service()
-service.create_docx("Hello from Python.NET and DocIO!", Path("output/Hello.docx"), allow_trial=True)
-service.create_pdf("Quarterly Sales Report", Path("output/Report.pdf"), allow_trial=True)
+service.create_docx("Hello from Python.NET and DocIO!", Path("output/Hello.docx"))
+service.create_pdf("Quarterly Sales Report", Path("output/Report.pdf"))
 ```
 
 ## Execution steps
@@ -614,19 +607,21 @@ Step 3: Create a Word document, or create a PDF directly (no intermediate DOCX f
 {% tabs %}
 {% highlight bash %}
 
-python document_sdk.py create-docx --trial
-python document_sdk.py create-pdf  --trial
+python document_sdk.py create-docx
+python document_sdk.py create-pdf
 
 {% endhighlight %}
 {% endtabs %}
+
+> Both commands run in Syncfusion's trial mode by default. No flag or argument is required to evaluate the SDK — an evaluation watermark will appear in the output until you export `SYNCFUSION_LICENSE_KEY`.
 
 Step 4: Convert an existing Excel workbook or PowerPoint presentation to PDF. `--input` is required for conversion operations.
 
 {% tabs %}
 {% highlight bash %}
 
-python document_sdk.py excel-to-pdf      --input documents/input.xlsx --output output/workbook.pdf --trial
-python document_sdk.py powerpoint-to-pdf --input documents/input.pptx --output output/slides.pdf  --trial
+python document_sdk.py excel-to-pdf      --input documents/input.xlsx --output output/workbook.pdf
+python document_sdk.py powerpoint-to-pdf --input documents/input.pptx --output output/slides.pdf
 
 {% endhighlight %}
 {% endtabs %}
@@ -636,7 +631,7 @@ Step 5: Watermark an existing PDF with a translucent diagonal label.
 {% tabs %}
 {% highlight bash %}
 
-python document_sdk.py watermark-pdf --input output/workbook.pdf --output output/watermarked.pdf --label CONFIDENTIAL --trial
+python document_sdk.py watermark-pdf --input output/workbook.pdf --output output/watermarked.pdf --label CONFIDENTIAL
 
 {% endhighlight %}
 {% endtabs %}
@@ -646,12 +641,12 @@ Step 6: Customize the body text and the output path. The extension must match th
 {% tabs %}
 {% highlight bash %}
 
-python document_sdk.py create-pdf --text "Quarterly Sales Report - Q1" --output output/Report.pdf --trial
+python document_sdk.py create-pdf --text "Quarterly Sales Report - Q1" --output output/Report.pdf
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Run as a licensed user (no `--trial` flag). Set the environment variable first — see [License and trial mode](#license-and-trial-mode).
+Step 7: Run as a licensed user. Set `SYNCFUSION_LICENSE_KEY` first — see [License and trial mode](#license-and-trial-mode).
 
 {% tabs %}
 {% highlight bash %}
@@ -699,7 +694,7 @@ Saved: /repo/pythonnet-wrapper/output/Sample.docx
 * `create-pdf` produces `output/Sample.pdf`.
 * `excel-to-pdf` / `powerpoint-to-pdf` / `watermark-pdf` produce the PDF you pass via `--output`.
 
-Open `Sample.docx` in Microsoft Word or any compatible editor; open `Sample.pdf` in any PDF reader. When running in trial mode (`--trial`), an **evaluation watermark** may appear at the top of the document. Register a license key to remove it.
+Open `Sample.docx` in Microsoft Word or any compatible editor; open `Sample.pdf` in any PDF reader. When running without `SYNCFUSION_LICENSE_KEY`, the worker falls back to Syncfusion's trial mode and the generated document carries an **evaluation watermark** at the top. Register a license key to remove it.
 
 ## GitHub sample
 
@@ -735,7 +730,7 @@ Publish the .NET assembly before running Python. If you publish to a custom fold
 ModuleNotFoundError: No module named 'pythonnet'
 ```
 
-Install pythonnet with `pip install -r requirements.txt`. If you see errors about CoreCLR, ensure the .NET runtime is installed and the correct `runtimeconfig.json` is present. Note that CoreCLR can only be initialized once per process — if you need a different `runtime_config`, restart the Python process.
+Install pythonnet with `pip install -r requirements.txt`.
 
 ### Samples fail with `ModuleNotFoundError: No module named 'document_sdk'`
 
@@ -746,15 +741,11 @@ cd pythonnet-wrapper
 python -m samples.01_hello_world
 ```
 
-Also make sure the venv where `pythonnet` is installed is active.
+Also ensure that the Python virtual environment where `pythonnet` is installed is activated.
 
-### License error when not using `--trial`
+### Evaluation watermark appears in the output
 
-```
-InvalidOperationException: Set SYNCFUSION_LICENSE_KEY or pass AllowTrial=true...
-```
-
-Either export `SYNCFUSION_LICENSE_KEY` in the environment or add `--trial` to the Python command. The .NET code reads the variable itself; do **not** put the key on the command line.
+The document renders correctly but shows a red Syncfusion watermark. Register a valid license key via `SYNCFUSION_LICENSE_KEY` (export it before importing `document_sdk`) and re-run to remove it. Because CoreCLR is only initialized once per process, restart the Python process after exporting the variable.
 
 ### Output extension does not match the operation
 
@@ -763,10 +754,6 @@ error: --output must have extension .pdf.
 ```
 
 Each subcommand expects a fixed output extension, e.g. pass `--output output/Report.pdf` with `create-pdf` (`.docx` with `create-docx`). Conversion operations also validate `--input` (`.xlsx` for `excel-to-pdf`, `.pptx` for `powerpoint-to-pdf`, `.pdf` for `watermark-pdf`).
-
-### Evaluation watermark appears in the output
-
-The document renders correctly but shows a red Syncfusion watermark. Register a valid license key via `SYNCFUSION_LICENSE_KEY` and drop `--trial` to remove it.
 
 ### Encoding issues with non-ASCII text
 
