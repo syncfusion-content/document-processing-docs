@@ -1,13 +1,27 @@
 ---
 layout: post
 title: Ui Interaction in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn about the ui interaction in the ASP.NET Core PDF Viewer and how it helps users work with PDF documents more effectively.
+description: Add, edit, and modify redaction annotations in the ASP.NET Core PDF Viewer through the built-in UI for interactive redaction workflows.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Ui Interaction in ASP.NET Core PDF Viewer
+# Redaction UI Interactions in ASP.NET Core PDF Viewer
+
+## Overview
+
+This guide explains how to use the Redaction UI in the ASP.NET Core PDF Viewer: drawing redaction marks, customizing their appearance, deleting marks, redacting whole pages, and applying redaction. The page provides step-by-step UI instructions to redact a PDF.
+
+## Prerequisites
+
+- An ASP.NET Core project with the PDF Viewer added to it. See [getting started guide](../getting-started).
+- The Syncfusion ASP.NET Core PDF Viewer version you use must include the Redaction feature.
+
+## Steps
+
+1. Enable the Redaction tool in the toolbar (see [Toolbar guide](./toolbar#enable-redaction-toolbar)).
+2. Draw, customize, and manage redaction annotations using the UI options documented below.
 
 ## Add redaction annotations from the toolbar
 
@@ -113,12 +127,14 @@ After choosing the range, click **Save** to apply redaction marks to the selecte
 
 ## Apply redaction from the toolbar
 
-The **Apply Redaction** button permanently removes all marked content from the document.
+The **Apply Redaction** button permanently removes all marked content from the document. You can also apply redaction by right-clicking a redaction annotation and choosing **Apply Redactions** from the context menu.
 
 * The button is disabled when no redaction annotations exist.  
 * It automatically enables once at least one annotation is present.
 
 ![Redact Button Icon](redaction-annotations-images/redact-button-icon.png)
+
+![Redact option in context menu](redaction-annotations-images/apply-redaction-context-menu.png)
 
 A confirmation dialog appears before applying redaction to ensure you acknowledge the irreversible nature of the process.
 
@@ -126,10 +142,16 @@ A confirmation dialog appears before applying redaction to ensure you acknowledg
 
 N> Redaction is permanent. Once applied, the original content cannot be restored.
 
-## See also
+## Troubleshooting
 
-* [Overview of Redaction](./overview)
-* [Programmatic Support in Redaction](./programmatic-support)
-* [Redaction in Mobile View](./mobile-view)
-* [Redaction Toolbar](./toolbar)
-* [Search Text and Redact](./search-redact)
+- Redaction tool not visible: ensure you added `RedactionEditTool` to `toolbarSettings.toolbarItems` and injected required services.
+- Apply Redaction disabled: there are no redaction annotations present; add at least one mark.
+- Final redacted content not editable: this is expected — applied redaction flattens content and becomes read‑only. Keep a backup of the original file before applying.
+
+## Related topics
+
+- [Overview of Redaction](./overview)
+- [Programmatic Support in Redaction](./programmatic-support)
+- [Redaction in Mobile View](./mobile-view)
+- [Redaction Toolbar](./toolbar)
+- [Search Text and Redact](./search-redact)
