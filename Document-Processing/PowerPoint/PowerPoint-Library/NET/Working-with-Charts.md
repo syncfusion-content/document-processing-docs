@@ -4,6 +4,7 @@ description: Working with Charts in PowerPoint Presentation. Essential<sup>&reg;
 platform: document-processing
 control: Presentation
 documentation: UG
+appliesto: Document SDK
 ---
 # Working with charts in PowerPoint presentations
 

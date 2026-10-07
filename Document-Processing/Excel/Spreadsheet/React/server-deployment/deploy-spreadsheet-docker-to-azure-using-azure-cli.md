@@ -5,6 +5,7 @@ description: Learn how to deploy the Syncfusion Spreadsheet Server Docker image 
 control: How to deploy Spreadsheet Server Docker Image to Azure App Service using Azure CLI
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Deploy Spreadsheet Docker to Azure App Service using CLI

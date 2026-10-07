@@ -4,6 +4,7 @@ description: Apply number formats to an entire Excel row using the Syncfusion .N
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to apply row number formats in .NET Excel Library

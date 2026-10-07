@@ -5,6 +5,7 @@ description: Learn about themes and styling options in the Syncfusion React Spre
 control: Spreadsheet 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Theme and Style in React Spreadsheet

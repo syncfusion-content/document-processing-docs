@@ -5,6 +5,7 @@ description: Learn how to retrieve filtered row data from the Syncfusion React S
 control: Spreadsheet 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # How to Retrieve Filtered Row Data in React Spreadsheet

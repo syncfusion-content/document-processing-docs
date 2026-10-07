@@ -5,6 +5,7 @@ description: Learn how to open Excel documents that are stored in AWS S3 using t
 platform: document-processing
 control: Open file from AWS S3
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Open Excel from AWS S3 in React Spreadsheet

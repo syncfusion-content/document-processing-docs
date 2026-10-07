@@ -4,6 +4,7 @@ description: Pictures section describes how to add images to worksheets along wi
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Pictures in .NET Excel Library
 

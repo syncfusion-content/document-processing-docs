@@ -5,6 +5,7 @@ platform: document-processing
 control: PDF to image
 documentation: UG
 keywords: Assemblies
+appliesto: Document SDK
 ---
 
 # About Syncfusion PDF-to-Image Conversion Library

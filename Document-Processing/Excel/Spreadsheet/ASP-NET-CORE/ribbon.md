@@ -5,6 +5,7 @@ description: Learn about the ribbon in the Syncfusion ASP.NET Core Spreadsheet c
 platform: document-processing
 control: Ribbon
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

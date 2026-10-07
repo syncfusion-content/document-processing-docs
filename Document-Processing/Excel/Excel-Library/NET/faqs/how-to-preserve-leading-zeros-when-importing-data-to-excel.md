@@ -4,6 +4,7 @@ description: Keep leading zeros in text when importing a DataTable to Excel usin
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to preserve leading zeros in .NET Excel Library

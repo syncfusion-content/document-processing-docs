@@ -5,6 +5,7 @@ description: Learn about the ui interaction in the Vue PDF Viewer and how it hel
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Ui Interaction in Vue PDF Viewer

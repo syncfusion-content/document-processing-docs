@@ -4,6 +4,7 @@ description: Convert PPTX to PDF in AWS Elastic Beanstalk using .NET Core PowerP
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert PowerPoint Presentation to PDF in AWS Elastic Beanstalk

@@ -5,6 +5,7 @@ description: Learn about number formatting in the Syncfusion React Spreadsheet c
 control: Formatting
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Number Formatting in React Spreadsheet

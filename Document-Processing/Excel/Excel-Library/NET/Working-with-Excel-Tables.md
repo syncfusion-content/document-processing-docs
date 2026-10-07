@@ -4,6 +4,7 @@ description: Excel tables section describes how Syncfusion .NET Excel Library cr
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Excel Tables in .NET Excel Library
 

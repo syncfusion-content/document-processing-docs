@@ -5,6 +5,7 @@ description: Freeze panes in JavaScript Spreadsheet keep selected rows and colum
 platform: document-processing
 control: Freeze Panes 
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Freeze Panes in JavaScript Spreadsheet 

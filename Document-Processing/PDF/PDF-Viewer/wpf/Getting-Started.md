@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion WPF PDF Viewer control
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Getting Started with WPF PDF Viewer

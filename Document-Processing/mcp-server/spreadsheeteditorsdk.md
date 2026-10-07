@@ -5,6 +5,7 @@ description: The Spreadsheet Editor SDK MCP Server provides installation guidanc
 platform: document-processing
 control: AI coding assistant
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Syncfusion Spreadsheet Editor SDK MCP Server

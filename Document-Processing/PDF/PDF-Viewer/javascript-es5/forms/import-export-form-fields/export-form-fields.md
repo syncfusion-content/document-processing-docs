@@ -5,6 +5,7 @@ description: Export PDF form field data from the JavaScript (ES5) PDF Viewer in 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Export Form Data in JavaScript (ES5) PDF Viewer

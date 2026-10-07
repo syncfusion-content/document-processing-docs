@@ -6,6 +6,7 @@ platform: document-processing
 control: Insert Page Number and Navigate to Page
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Insert Page Numbers and Navigate in TypeScript DOCX Editor

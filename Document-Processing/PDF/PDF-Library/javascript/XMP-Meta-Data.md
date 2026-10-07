@@ -5,6 +5,7 @@ description: Create, read, edit, and manage XMP metadata in PDF documents using 
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # PDF XMP Metadata in JavaScript PDF

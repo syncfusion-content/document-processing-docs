@@ -4,6 +4,7 @@ description: ASP.NET Core Excel file handling section explains how to load and s
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Loading and Saving Workbooks in ASP.NET Core
 

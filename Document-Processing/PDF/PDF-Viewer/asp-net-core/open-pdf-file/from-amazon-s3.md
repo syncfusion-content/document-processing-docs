@@ -5,6 +5,7 @@ description: Load and display PDF files stored in AWS S3 in the ASP.NET Core PDF
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Open PDF from AWS S3 in ASP.NET Core PDF Viewer

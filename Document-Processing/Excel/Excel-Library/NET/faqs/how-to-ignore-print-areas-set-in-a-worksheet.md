@@ -4,6 +4,7 @@ description: Ignore print areas set in an Excel worksheet using the Syncfusion .
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to ignore print areas in .NET Excel Library

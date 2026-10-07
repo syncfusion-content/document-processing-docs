@@ -4,6 +4,7 @@ description: Learn how to get started with the Syncfusion Windows Forms OCR Proc
 platform: document-processing
 documentation: UG
 keywords: Assemblies
+appliesto: Document SDK
 --- 
 
 # Getting Started with Windows Forms OCR Processor

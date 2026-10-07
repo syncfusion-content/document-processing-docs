@@ -6,6 +6,7 @@ platform: document-processing
 control: Scrolling zooming
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Scrolling and Zooming in Angular DOCX Editor

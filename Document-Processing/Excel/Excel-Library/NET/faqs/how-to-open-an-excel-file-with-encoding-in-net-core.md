@@ -4,6 +4,7 @@ description: Learn how to open an Excel file with encoding using the Syncfusion 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to open encoded Excel files in .NET Excel Library

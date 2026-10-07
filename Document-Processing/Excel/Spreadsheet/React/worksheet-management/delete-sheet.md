@@ -5,6 +5,7 @@ description: Learn about how to delete worksheets in Excel document using the Sy
 control: Worksheet 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

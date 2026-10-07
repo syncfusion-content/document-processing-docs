@@ -5,6 +5,7 @@ description: Discover the MCP server’s advantages, installation requirements, 
 platform: document-processing
 control: AI coding assistant
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # DOCX Editor SDK MCP Server Setup

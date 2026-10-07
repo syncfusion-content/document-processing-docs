@@ -4,6 +4,7 @@ description: Create and open Excel template files using the Syncfusion .NET Exce
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to create Excel templates in .NET Excel Library

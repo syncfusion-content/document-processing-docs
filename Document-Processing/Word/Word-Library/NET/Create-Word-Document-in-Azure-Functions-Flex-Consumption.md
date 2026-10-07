@@ -4,6 +4,7 @@ description: Describe how to substitute missing fonts during Word-to-image conve
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Word document in Azure Functions

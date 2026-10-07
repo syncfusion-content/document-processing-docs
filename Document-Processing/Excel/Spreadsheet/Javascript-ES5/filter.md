@@ -5,6 +5,7 @@ description: Filtering in JavaScript Spreadsheet enables users to display specif
 platform: document-processing
 control: Filter
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Filtering in JavaScript Spreadsheet

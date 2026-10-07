@@ -5,6 +5,7 @@ description: Worksheets in Angular Spreadsheet enable users to organize, manage,
 platform: document-processing
 control: Worksheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Worksheet in Angular Spreadsheet 

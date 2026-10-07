@@ -5,6 +5,7 @@ description: Accessibility features in the ASP.NET MVC PDF Viewer help all users
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 # Accessibility in ASP.NET MVC PDF Viewer
 

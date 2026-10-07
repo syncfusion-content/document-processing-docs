@@ -4,6 +4,7 @@ description: Learn about multithreading and thread-safety support in Word to PDF
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # FAQ about multithreading in Word to PDF in .NET Word
 

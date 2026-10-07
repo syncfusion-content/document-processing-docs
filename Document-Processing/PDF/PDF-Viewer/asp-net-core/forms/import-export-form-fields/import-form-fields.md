@@ -5,6 +5,7 @@ description: Import PDF form field data into the ASP.NET Core PDF Viewer from FD
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Import Form Data in ASP.NET Core PDF Viewer

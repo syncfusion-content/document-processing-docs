@@ -4,6 +4,7 @@ description: Image-based autofit describes whether Syncfusion .NET Excel Library
 platform: document-processing 
 control: XlsIO 
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Image-Based Autofit in .NET Excel Library

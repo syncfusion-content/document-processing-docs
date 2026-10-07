@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion<sup>®</sup> UWP PDF V
 platform: document-processing
 control: PDF viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Getting Started with UWP PDF Viewer

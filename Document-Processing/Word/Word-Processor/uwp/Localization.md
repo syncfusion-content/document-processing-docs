@@ -6,6 +6,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: localization,resw,resource-file,culture,language,resources
+appliesto: DOCX Editor SDK
 ---
 # Localization in UWP DOCX Editor
 

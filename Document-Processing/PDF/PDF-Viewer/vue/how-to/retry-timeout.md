@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Configure Retry Timeout in Vue PDF Viewer

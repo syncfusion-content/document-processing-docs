@@ -5,6 +5,7 @@ platform: document-processing
 control: Word Library
 documentation: UG
 keywords: 
+appliesto: Document SDK
 ---
 # Document Shapes in Java Word
 

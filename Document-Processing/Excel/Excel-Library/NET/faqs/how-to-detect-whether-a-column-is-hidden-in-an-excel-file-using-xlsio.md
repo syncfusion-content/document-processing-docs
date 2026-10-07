@@ -4,6 +4,7 @@ description: Detect hidden Excel columns using the Syncfusion .NET Excel Library
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to detect hidden columns in .NET Excel Library

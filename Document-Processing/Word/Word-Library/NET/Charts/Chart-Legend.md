@@ -4,6 +4,7 @@ description: Learn how to modify the appearance of axes in a chart in a Word doc
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Modify the Appearance of Legend in .NET Word

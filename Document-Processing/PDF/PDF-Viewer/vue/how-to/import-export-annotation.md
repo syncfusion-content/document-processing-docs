@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Import and Export Annotations in Vue PDF Viewer

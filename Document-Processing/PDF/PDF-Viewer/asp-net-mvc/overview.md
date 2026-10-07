@@ -4,6 +4,7 @@ description: Learn about introduction of Syncfusion Essential Studio ASP.NET MVC
 platform: document-processing
 control: PDF Viewer
 documentation: UG
+appliesto: PDF Viewer SDK
 ---
 
 # About Syncfusion ASP.NET MVC PDF Viewer Control

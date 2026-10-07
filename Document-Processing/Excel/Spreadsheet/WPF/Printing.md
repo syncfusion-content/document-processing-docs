@@ -5,6 +5,7 @@ description: Print workbook data in the WPF Spreadsheet control by converting wo
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Printing in WPF Spreadsheet

@@ -4,6 +4,7 @@ description: Learn how to manage PDF layers (Optional Content Groups) to add, ed
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Layers in .NET PDF Library

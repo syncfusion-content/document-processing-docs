@@ -5,6 +5,7 @@ description: Customize and use the ribbon interface in the Syncfusion ASP.NET MV
 platform: document-processing
 control: Ribbon
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

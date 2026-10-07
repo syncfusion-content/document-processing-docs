@@ -5,6 +5,7 @@ description: The list format feature in ASP.NET Core DOCX Editor enables users t
 platform: document-processing
 control: List Format
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

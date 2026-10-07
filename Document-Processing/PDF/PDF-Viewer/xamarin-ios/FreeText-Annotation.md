@@ -5,6 +5,7 @@ description: Learn about free text annotations support in Syncfusion<sup>®</sup
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 #  Freetext annotations in Xamarin.iOS PDF Viewer

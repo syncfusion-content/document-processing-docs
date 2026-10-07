@@ -6,6 +6,7 @@ control: Export document as PDF
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Export Document as PDF in React DOCX Editor

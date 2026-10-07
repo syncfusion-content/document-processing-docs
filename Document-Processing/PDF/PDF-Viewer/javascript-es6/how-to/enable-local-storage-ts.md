@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Enable Local Storage in JavaScript (ES6) PDF Viewer

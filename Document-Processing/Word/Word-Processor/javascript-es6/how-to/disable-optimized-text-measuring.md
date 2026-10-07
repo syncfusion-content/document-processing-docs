@@ -6,6 +6,7 @@ platform: document-processing
 control: Disable Optimized Text Measuring
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Disable Optimized Text Measuring in TypeScript DOCX Editor

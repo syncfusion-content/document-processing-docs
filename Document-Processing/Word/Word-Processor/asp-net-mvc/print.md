@@ -5,6 +5,7 @@ description: Print feature in ASP.NET MVC DOCX Editor enables printing documents
 platform: document-processing
 control: Print
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

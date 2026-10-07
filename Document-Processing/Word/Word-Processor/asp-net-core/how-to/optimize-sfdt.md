@@ -5,6 +5,7 @@ description: Optimize SFDT files in Syncfusion® ASP.NET Core DOCX Editor to red
 platform: document-processing
 control: Optimize the SFDT file
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # How to Optimize SFDT Files in ASP.NET Core DOCX Editor

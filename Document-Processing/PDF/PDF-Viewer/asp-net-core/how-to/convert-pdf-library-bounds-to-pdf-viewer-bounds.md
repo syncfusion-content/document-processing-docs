@@ -5,6 +5,7 @@ description: Convert PDF Library bounds to PDF Viewer bounds when exporting anno
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Convert PDF Library Bounds to PDF Viewer Bounds in ASP.NET

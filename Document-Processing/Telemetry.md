@@ -4,6 +4,7 @@ description: Learn about introduction of Syncfusion Essential Studio .NET Teleme
 platform: document-processing
 control: general
 documentation: UG
+appliesto: Document SDK, PDF Viewer SDK, DOCX Editor SDK, Spreadsheet Editor SDK
 ---
 
 # About Syncfusion .NET Telemetry

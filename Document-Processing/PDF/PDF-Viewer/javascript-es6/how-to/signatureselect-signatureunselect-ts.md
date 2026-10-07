@@ -5,6 +5,7 @@ description: Handle the signatureSelect and signatureUnselect events in the Java
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Handle Signature Select and Unselect Events in JavaScript

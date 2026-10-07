@@ -5,6 +5,7 @@ description: The PDF Viewer allows the users to magnify the PDF documents in mul
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 #  Working with magnification in PDF Viewer Xamarin.iOS

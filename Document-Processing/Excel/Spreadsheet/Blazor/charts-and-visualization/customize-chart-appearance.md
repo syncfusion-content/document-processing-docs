@@ -5,6 +5,7 @@ description: Learn how to customize charts in the Syncfusion Blazor Spreadsheet 
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # How to Customize a Chart in Blazor Spreadsheet

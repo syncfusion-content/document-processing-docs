@@ -5,6 +5,7 @@ description: The spell check feature in ASP.NET MVC DOCX Editor enables spelling
 platform: document-processing
 control: Spell Check
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

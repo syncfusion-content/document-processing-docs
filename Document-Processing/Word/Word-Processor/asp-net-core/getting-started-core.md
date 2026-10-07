@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion ASP.NET Core DOCX Edit
 platform: document-processing
 control: Getting Started Core
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # Getting Started with ASP.NET Core DOCX Editor

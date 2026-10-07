@@ -5,6 +5,7 @@ description: Keep important rows and columns visible while scrolling using freez
 control: Freeze pane
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Freeze Panes in Vue Spreadsheet

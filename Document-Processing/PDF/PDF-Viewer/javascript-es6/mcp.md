@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # JavaScript (ES6) PDF Viewer MCP Server Setup

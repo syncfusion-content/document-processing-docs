@@ -5,6 +5,7 @@ description: The getting started guide for SfPdfViewer introduces its core featu
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Getting Started with Flutter PDF Viewer

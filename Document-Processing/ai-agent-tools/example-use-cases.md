@@ -4,6 +4,7 @@ description: Explore example use cases for building document automation agents u
 platform: document-processing
 control: AI Agent Tools
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Example Use Cases of Document SDK AI Agent Tools

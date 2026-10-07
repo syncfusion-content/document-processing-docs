@@ -4,6 +4,7 @@ description: Excel to PDF NuGet packages describes the packages required for PDF
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # NuGet Packages Required for Excel to PDF Conversion

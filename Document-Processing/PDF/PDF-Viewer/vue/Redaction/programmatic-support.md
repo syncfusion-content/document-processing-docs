@@ -5,6 +5,7 @@ description: Use the programmatic APIs for Organize Pages in the Vue PDF Viewer 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Programmatic Support for Organize Pages in Vue PDF Viewer

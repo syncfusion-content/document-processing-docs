@@ -6,6 +6,7 @@ control: Java
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Java Web Service in React DOCX Editor

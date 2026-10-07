@@ -5,6 +5,7 @@ description: Manage worksheet rows and columns in Windows Forms Spreadsheet by i
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Rows and Columns in Windows Forms Spreadsheet

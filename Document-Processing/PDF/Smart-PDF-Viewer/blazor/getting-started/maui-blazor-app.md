@@ -5,6 +5,7 @@ description: Learn how to get started with  the Syncfusion Blazor .NET MAUI App 
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Getting Started with Blazor MAUI App Smart PDF Viewer

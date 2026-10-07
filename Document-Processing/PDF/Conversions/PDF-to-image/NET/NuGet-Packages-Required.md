@@ -4,6 +4,7 @@ description: Learn about the NuGet packages required to use the Syncfusion PDF t
 platform: document-processing
 control: PDF to image
 documentation: UG
+appliesto: Document SDK
 ---
 
 # NuGet Packages required for PDF to Image Converter

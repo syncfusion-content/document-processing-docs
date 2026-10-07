@@ -4,6 +4,7 @@ description: Learn how to Mail merge for a group - replace merge fields in a reg
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Group Mail merge in .NET Word Library

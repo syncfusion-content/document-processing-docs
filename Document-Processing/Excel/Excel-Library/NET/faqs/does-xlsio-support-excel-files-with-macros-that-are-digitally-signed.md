@@ -4,6 +4,7 @@ description: Digitally signed macros explains whether Syncfusion .NET Excel Libr
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Digitally Signed Macros in .NET Excel Library

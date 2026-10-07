@@ -6,6 +6,7 @@ platform: document-processing
 control: Save document to AWS S3
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Save Documents to AWS S3 in Vue DOCX Editor

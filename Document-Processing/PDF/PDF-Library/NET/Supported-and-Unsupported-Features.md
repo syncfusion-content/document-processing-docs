@@ -4,6 +4,7 @@ description: Learn about the supported and unsupported features in Syncfusion PD
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # PDF Features in .NET PDF Library
 

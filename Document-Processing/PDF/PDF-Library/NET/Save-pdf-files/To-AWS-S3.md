@@ -5,6 +5,7 @@ keywords: aws s3, save pdf, c# save pdf, upload pdf
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Save PDF documents to AWS S3
 

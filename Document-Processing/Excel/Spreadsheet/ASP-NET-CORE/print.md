@@ -5,6 +5,7 @@ description: Learn about printing in the Syncfusion ASP.NET Core Spreadsheet con
 platform: document-processing
 control: Print
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

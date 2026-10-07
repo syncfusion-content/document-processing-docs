@@ -5,6 +5,7 @@ description: Explore editing capabilities in the Syncfusion ASP.NET MVC Spreadsh
 platform: document-processing
 control: Editing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 
