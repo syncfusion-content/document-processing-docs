@@ -49,7 +49,7 @@ The following code example shows how to replace an existing image.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { WordDocument, Picture, EntityType } from '@syncfusion/ej2-docx';
+import { WordDocument, Picture } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
 let document = WordDocument.open(data);
@@ -62,7 +62,7 @@ for (let paragraph of textBody.paragraphs) {
     // Iterate through all paragraph items
     for (let paraItem of paragraph.items) {
         // Check whether the current paragraph item is a picture
-        if (paraItem.type === EntityType.Picture) {
+        if (paraItem instanceof Picture) {
             let picture = paraItem as Picture;
 
             // Find the picture whose title matches the specified value
@@ -93,7 +93,7 @@ The following code example shows how to remove images from paragraph items.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { WordDocument, EntityType } from '@syncfusion/ej2-docx';
+import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Open a Word document
 let document = WordDocument.open(data);
@@ -108,7 +108,7 @@ for (let paragraph of textBody.paragraphs) {
        // Iterates through all items in the paragraph. 
        for (let paraItem of paragraph.items) { 
             // Checks whether the current item is an image. 
-            if (paraItem.type === EntityType.Picture) { 
+            if (paraItem instanceof Picture) { 
                 // Removes the image from the paragraph. 
                 paragraph.items.remove(paraItem); 
             } 
@@ -181,7 +181,7 @@ The following code example shows how to find an image by title.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { WordDocument, Picture, EntityType } from '@syncfusion/ej2-docx';
+import { WordDocument, Picture } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document
 let document = WordDocument.open(data);
