@@ -127,51 +127,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 N> If you want to convert an image instead of a PDF, replace the input stream with the image file (for example, Input.jpg or Input.png). The rest of the code remains unchanged.
 
-## Convert PDF or Image to HTML Document 
 
-To convert a PDF document or image into HTML output using the **ExtractDataAsHtml** method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class, refer to the following code example:
-
-{% tabs %} 
-
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/refs/heads/master/Data-Extraction/Smart-Data-Extractor/Convert-data-as-HTML-from-PDF/.NET/Convert-data-as-HTML-from-PDF/Program.cs" %}
-
-using Syncfusion.SmartDataExtractor; 
-
-//Open the input PDF file as a stream. 
-using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read)) 
-{ 
-  //Initialize the Data Extractor. 
-  DataExtractor extractor = new DataExtractor(); 
-  //Extract data as HTML. 
-  string  htmlContent = extractor.ExtractDataAsHtml(stream); 
-  //Save the extracted data into the HTML file. 
-  File.WriteAllText("Output.html", htmlContent); 
-} 
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.SmartDataExtractor; 
-
-//Open the input PDF file as a stream. 
-using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read)) 
-{ 
-  //Initialize the Data Extractor. 
-  DataExtractor extractor = new DataExtractor(); 
-  //Extract data as HTML. 
-  string htmlContent = extractor.ExtractDataAsHtml(stream); 
-  //Save the extracted data into the HTML file. 
-  File.WriteAllText("Output.html", htmlContent); 
-} 
-		
-{% endhighlight %}
-
-{% endtabs %}
-
-N> If you want to convert an image instead of a PDF, replace the input stream with the image file (for example, Input.jpg or Input.png). The rest of the code remains unchanged.
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Convert-data-as-HTML-from-PDF/.NET).
 
 ## Supported and Unsupported PDF Elements
 
