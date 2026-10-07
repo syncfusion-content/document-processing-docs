@@ -8,23 +8,7 @@ documentation: UG
 
 # Paragraphs in JavaScript Word Library
 
-Paragraph is the basic element in a Word document that contains textual and graphical content. Each paragraph has its own formatting such as line spacing, alignment, indentation, and more. Within a paragraph, the contents are represented by one or more child elements.
-
-The following elements can be the child elements of a paragraph:
-
-* Text
-* Image
-* Comments
-* Hyperlink
-* Symbols
-* Breaks
-* OLE Object
-* Shapes
-* TextBox
-* Chart
-* Fields
-* Form Fields
-* Bookmarks
+Paragraph is the basic element in a Word document that contains textual and graphical content. Each paragraph has its own formatting such as line spacing, alignment, indentation, and more. It can also contain various child elements, including text, images, hyperlinks, breaks, shapes, fields, and more.
 
 ## Add a new paragraph
 

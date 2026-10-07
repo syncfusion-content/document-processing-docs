@@ -192,7 +192,7 @@ let textBody = document.sections[0].body;
 for (let paragraph of textBody.paragraphs) {
     // Iterate paragraph items
     for (let paraItem of paragraph.items) {
-        if (paraItem.type === EntityType.Picture) {
+        if (paraItem instanceof Picture) {
             let picture = paraItem as Picture;
             // Match the picture title
             if (picture.title === 'Bookmark') {
