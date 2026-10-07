@@ -730,7 +730,7 @@ Publish the .NET assembly before running Python. If you publish to a custom fold
 ModuleNotFoundError: No module named 'pythonnet'
 ```
 
-Install pythonnet with `pip install -r requirements.txt`. If you see errors about CoreCLR, ensure the .NET runtime is installed and the correct `runtimeconfig.json` is present. Note that CoreCLR can only be initialized once per process — if you need a different `runtime_config`, restart the Python process.
+Install pythonnet with `pip install -r requirements.txt`.
 
 ### Samples fail with `ModuleNotFoundError: No module named 'document_sdk'`
 
@@ -741,7 +741,7 @@ cd pythonnet-wrapper
 python -m samples.01_hello_world
 ```
 
-Also make sure the venv where `pythonnet` is installed is active.
+Also ensure that the Python virtual environment where `pythonnet` is installed is activated.
 
 ### Evaluation watermark appears in the output
 
