@@ -709,6 +709,8 @@ End Using
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Markdown-conversion/Convert-Word-to-Markdown-with-Word-Elements/.NET).
+
 N>
 * On Windows, install the [Syncfusion.OfficeChartToImageConverter.WPF](https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.WPF) NuGet package and use the `ChartToImageConverter` to preserve charts as fallback images. The remaining Word elements (Text Box, Shape, Ink, MathML, SmartArt, Canvas, and GroupShape) are preserved automatically as images without any additional code.
 * On cross-platform (ASP.NET Core, Blazor, .NET MAUI, and WinUI), install either the [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) NuGet package or the [Syncfusion.DocIORenderer.NET](https://www.nuget.org/packages/Syncfusion.DocIORenderer.NET) NuGet package based on your project requirements, and use the `DocIORenderer` to preserve all supported Word elements as fallback images.
