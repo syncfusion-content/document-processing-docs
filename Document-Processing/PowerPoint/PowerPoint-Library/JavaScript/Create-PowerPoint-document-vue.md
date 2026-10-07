@@ -90,28 +90,11 @@ npm install @syncfusion/ej2-pptx --save
 yarn add @syncfusion/ej2-pptx
 ```
 
-### Transitive Dependencies
-
-The following packages are included automatically by `@syncfusion/ej2-pptx` and do not need to be installed separately:
-
-- `@syncfusion/ej2-base` — common utilities used by the library.
-- `@syncfusion/ej2-compression` — compression support used by PowerPoint features.
-
-## License Registration
-
-If your project requires a Syncfusion license, register the license key before using the PowerPoint API. Add the following code at the top of `src/App.vue`'s `<script>` block:
-
-```js
-import { registerLicense } from '@syncfusion/ej2-base';
-
-registerLicense('YOUR_LICENSE_KEY');
-```
-
-Replace `YOUR_LICENSE_KEY` with the key from your Syncfusion account. For more information, see the [Syncfusion licensing documentation](https://help.syncfusion.com/document-processing/licensing/overview).
-
 ## Create a PowerPoint Document
 
-Replace the contents of `src/App.vue` with the following code. The script imports the PowerPoint classes as named exports from `@syncfusion/ej2-pptx` and creates a one-slide presentation in a click handler. The same code works for both Vue 2 and Vue 3.
+### Step 1: Create the Vue Component
+
+Replace the contents of `src/App.vue` with the following code. The script imports the PowerPoint classes as named exports from `@syncfusion/ej2-pptx` and creates a one-slide presentation in a click handler. The same code works for both Vue 2 and Vue 3:
 
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
@@ -195,18 +178,6 @@ export default {
 N> This sample uses **named imports** from the npm package (`import { Presentation, ... } from '@syncfusion/ej2-pptx'`). The npm package does not expose a global `ej` namespace; using `ej.pptx.Presentation` without an import will throw `ReferenceError: ej is not defined` in a Vite or Vue CLI build. If you prefer the UMD-style global, load `ej2.min.js` from the Syncfusion CDN in `index.html` (or `public/index.html`) instead of importing the npm package.
 
 N> A click handler is used in this example, so no additional setup is required. The PowerPoint classes load when the import runs at module evaluation time, which happens before any user interaction.
-
-## Code Explanation
-
-- `registerLicense(key)` — registers the Syncfusion license key at application startup. Required for commercial usage.
-- `Presentation.create()` — creates a new presentation instance.
-- `pptxDoc.slides.add()` — appends a blank slide to the presentation and returns the `Slide` object.
-- `slide.shapes.addTextBox(options)` — adds a text box shape at the specified bounds and returns the `TextBox` object.
-- `titleShape.textBody.addParagraph()` — adds a paragraph to the text box and returns the `Paragraph` object.
-- `paragraph.horizontalAlignment` — sets the text alignment (here, Center).
-- `paragraph.addTextPart(text)` — adds formatted text to the paragraph and returns a `TextPart` object.
-- `textPart.font` — accesses font properties such as name, size, bold, and italic.
-- `save()` — saves the presentation and triggers a browser download with the specified file name. The file is sent to the browser's default downloads folder.
 
 ## Run the Application
 

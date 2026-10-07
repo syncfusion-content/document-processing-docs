@@ -40,11 +40,11 @@ The JS 2 global scripts and styles are hosted on the Syncfusion CDN in the follo
 
 N> The example uses the all-in-one `ej2.min.js` bundle, which exposes the `ej.pptx` namespace along with other Essential JS 2 controls. A PowerPoint-only CDN bundle is not provided separately. Replace `31.2.15` with the latest available version when starting a new project.
 
-## Create the HTML Page
+## Create a PowerPoint Presentation
 
-Step 1: Create a folder named `my-app` for your project.
+### Step 1: Create the HTML Page
 
-Step 2: Add the CDN reference in the `<head>` of `index.html` (the file is created in the next step).
+Create a folder named `my-app` for your project. Add the CDN reference in the `<head>` of `index.html` (the file is created in the next step).
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -55,7 +55,9 @@ Step 2: Add the CDN reference in the `<head>` of `index.html` (the file is creat
 {% endhighlight %}
 {% endtabs %}
 
-Step 3: Create a complete `index.html` inside `my-app` with the following content. The CDN reference is loaded in the `<head>` and the PowerPoint generation script is placed at the end of `<body>` so the button exists before the click handler is attached.
+### Step 2: Create the HTML and Script
+
+Create a complete `index.html` inside `my-app` with the following content. The CDN reference is loaded in the `<head>` and the PowerPoint generation script is placed at the end of `<body>` so the button exists before the click handler is attached.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -128,18 +130,7 @@ Step 3: Create a complete `index.html` inside `my-app` with the following conten
 {% endhighlight %}
 {% endtabs %}
 
-N> The script tag is placed at the end of `<body>` so that `document.getElementById('createPptx')` finds the button. If you prefer to put the script in `<head>`, wrap the listener registration in a `DOMContentLoaded` event.
-
-## Code Explanation
-
-- `ej.pptx.Presentation.create()` — creates a new presentation instance.
-- `pptxDoc.slides.add()` — appends a blank slide to the presentation and returns the `Slide` object.
-- `slide.shapes.addTextBox(options)` — adds a text box shape at the specified bounds and returns the `TextBox` object.
-- `titleShape.textBody.addParagraph()` — adds a paragraph to the text box and returns the `Paragraph` object.
-- `paragraph.horizontalAlignment` — sets the text alignment (here, Center).
-- `paragraph.addTextPart(text)` — adds formatted text to the paragraph and returns a `TextPart` object.
-- `textPart.font` — accesses font properties such as name, size, bold, and italic.
-- `save()` — saves the presentation as bytes and **triggers a client-side browser download** with the specified file name. The file is sent to the browser's default downloads folder; nothing is written to the server.
+N> save()` — saves the presentation as bytes and **triggers a client-side browser download** with the specified file name. The file is sent to the browser's default downloads folder; nothing is written to the server.
 
 ## Run the Sample
 
@@ -152,6 +143,8 @@ npx serve
 ```
 
 Step 5: Open the served URL in your browser. For `npx serve`, the default URL is `http://localhost:3000`. For Python, the default URL is `http://localhost:8000`.
+### Step 3: Start the Server
+
 
 Click **Generate PowerPoint document**. The browser downloads `Output.pptx`, which contains a single slide with the text "Hello World!!!" in the title area.
 
@@ -160,7 +153,9 @@ Click **Generate PowerPoint document**. The browser downloads `Output.pptx`, whi
 | Problem | Cause | Resolution |
 |---|---|---|
 | `ej is not defined` in the browser console | The CDN script tag is missing or blocked | Confirm the `<script src="https://cdn.syncfusion.com/ej2/.../ej2.min.js"></script>` reference is reachable and not blocked by an ad blocker or network policy |
-| Button click does nothing | The script runs before the button is in the DOM | Move the `<script>` tag to the end of `<body>`, or wrap the listener in a `DOMContentLoaded` event |
+### Step 4: View the Result
+
+ click does nothing | The script runs before the button is in the DOM | Move the `<script>` tag to the end of `<body>`, or wrap the listener in a `DOMContentLoaded` event |
 | `Output.pptx` does not download | The browser blocks the download | Check the browser's download settings and the downloads folder |
 | CORS or `file://` errors | The page is opened directly from disk | Serve the folder over `http://` using `npx serve` or a similar static server |
 | CDN version mismatch with other Syncfusion packages | The CDN version is out of sync with installed Syncfusion packages | Use the same Syncfusion version across CDN and any other Syncfusion packages you reference |

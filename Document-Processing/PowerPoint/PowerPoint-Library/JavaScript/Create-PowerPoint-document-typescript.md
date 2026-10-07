@@ -94,30 +94,13 @@ All Syncfusion<sup>&reg;</sup> JS 2 packages are published in the `npmjs.com` re
 npm install @syncfusion/ej2-pptx --save
 ```
 
-### Transitive Dependencies
-
-The following packages are included automatically by `@syncfusion/ej2-pptx` and do not need to be installed separately:
-
-- `@syncfusion/ej2-base` — common utilities used by the library.
-- `@syncfusion/ej2-compression` — compression support used by PowerPoint features.
-
-## License Registration
-
-If your project requires a Syncfusion license, register the license key before using the PowerPoint API. Add the following code at the top of your entry point (e.g., `index.ts`):
-
-```ts
-import { registerLicense } from '@syncfusion/ej2-base';
-
-registerLicense('YOUR_LICENSE_KEY');
-```
-
-Replace `YOUR_LICENSE_KEY` with the key from your Syncfusion account. For more information, see the [Syncfusion licensing documentation](https://help.syncfusion.com/document-processing/licensing/overview).
-
-## Create a PowerPoint document using TypeScript
+## Create a PowerPoint Document
 
 This sample is intended for **browser-based** TypeScript applications. It is not designed for server-side rendering or Node.js-only execution.
 
-* Add a simple button to `index.html` and a `<script type="module">` tag that loads `index.ts`. The button must exist before the click handler in `index.ts` runs.
+### Step 1: Create the HTML
+
+Add a simple button to `index.html` and a `<script type="module">` tag that loads `index.ts`. The button must exist before the click handler in `index.ts` runs.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -133,7 +116,9 @@ This sample is intended for **browser-based** TypeScript applications. It is not
 {% endhighlight %}
 {% endtabs %}
 
-* Include the following namespaces in `index.ts` file.
+### Step 2: Add the Imports and Code
+
+Include the following namespaces in `index.ts` file.
 
 {% tabs %}
 {% highlight typescript tabtitle="index.ts" %}
@@ -141,7 +126,7 @@ This sample is intended for **browser-based** TypeScript applications. It is not
 import { Presentation, HorizontalAlignmentType } from '@syncfusion/ej2-pptx';
 
 {% endhighlight %}
-{% endtabs %}
+Include the following code example in the click event of the button in `index.ts` to generate a PowerPoint document:
 
 * Include the following code example in the click event of the button in `index.ts` to generate a PowerPoint document
 
@@ -200,19 +185,7 @@ document.getElementById('normalButton').onclick = async (): Promise<void> => {
 {% endhighlight %}
 {% endtabs %}
 
-## Code Explanation
-
-- `registerLicense(key)` — registers the Syncfusion license key at application startup. Required for commercial usage.
-- `Presentation.create()` — creates a new presentation instance.
-- `pptxDoc.slides.add()` — appends a blank slide to the presentation and returns the `Slide` object.
-- `slide.shapes.addTextBox(options)` — adds a text box shape at the specified bounds and returns the `TextBox` object.
-- `titleShape.textBody.addParagraph()` — adds a paragraph to the text box and returns the `Paragraph` object.
-- `paragraph.horizontalAlignment` — sets the text alignment (here, Center).
-- `paragraph.addTextPart(text)` — adds formatted text to the paragraph and returns a `TextPart` object.
-- `textPart.font` — accesses font properties such as name, size, bold, and italic.
-- `save()` — saves the presentation and triggers a browser download with the specified file name. The file is sent to the browser's default downloads folder.
-
-## Run the application
+## Run the Application
 
 The quickstart project is configured to compile and run in the browser. Use the following command from the project root to start the application:
 

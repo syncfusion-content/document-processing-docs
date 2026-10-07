@@ -76,18 +76,6 @@ npm install @syncfusion/ej2-pptx --save
 yarn add @syncfusion/ej2-pptx
 ```
 
-## Add the Syncfusion License Key
-
-If your project requires a Syncfusion license, register the license key before using the PowerPoint API. Add the license registration code in your startup file, such as `main.ts`.
-
-```ts
-import { registerLicense } from '@syncfusion/ej2-base';
-
-registerLicense('YOUR_LICENSE_KEY');
-```
-
-Replace `YOUR_LICENSE_KEY` with the key from your Syncfusion account. For more information, see the [Syncfusion licensing documentation](https://help.syncfusion.com/document-processing/licensing/overview).
-
 ## Browser and Environment Compatibility
 
 | Environment | Supported version |
@@ -106,7 +94,9 @@ Replace `YOUR_LICENSE_KEY` with the key from your Syncfusion account. For more i
 
 Add a button to the Angular template and attach a click handler that uses the [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) to create a new PowerPoint document.
 
-* Add the following button to `app.component.html`.
+### Step 1: Create the Template
+
+Add the following button to `app.component.html`:
 
 {% tabs %}
 {% highlight html tabtitle="app.component.html" %}
@@ -114,13 +104,17 @@ Add a button to the Angular template and attach a click handler that uses the [J
 {% endhighlight %}
 {% endtabs %}
 
-* Include the following namespaces in `app.component.ts`.
+### Step 2: Add the Imports
+
+Include the following namespaces in `app.component.ts`:
 
 {% tabs %}
 {% highlight ts tabtitle="~/app.component.ts" %}
 import { Presentation, HorizontalAlignmentType } from '@syncfusion/ej2-pptx';
 {% endhighlight %}
-{% endtabs %}
+### Step 3: Add the Code Handler
+
+Include the following code in the click event of the button in `app.component.ts` to generate a PowerPoint document:
 
 * Include the following code in the click event of the button in `app.component.ts` to generate a PowerPoint document.
 
@@ -175,18 +169,7 @@ document.getElementById('normalButton').onclick = async (): Promise<void> => {
     }
 };
 {% endhighlight %}
-{% endtabs %}
-
-## Code Explanation
-
-- `Presentation.create()` — creates a new presentation instance.
-- `pptxDoc.slides.add()` — appends a blank slide to the presentation and returns the `Slide` object.
-- `slide.shapes.addTextBox(options)` — adds a text box shape at the specified bounds and returns the `TextBox` object.
-- `titleShape.textBody.addParagraph()` — adds a paragraph to the text box and returns the `Paragraph` object.
-- `paragraph.horizontalAlignment` — sets the text alignment (here, Center).
-- `paragraph.addTextPart(text)` — adds formatted text to the paragraph and returns a `TextPart` object.
-- `textPart.font` — accesses font properties such as name, size, bold, and italic.
-- `save()` — saves the presentation and triggers a browser download with the specified file name. The file is sent to the browser's default downloads folder.
+{% save()` — saves the presentation and triggers a browser download with the specified file name. The file is sent to the browser's default downloads folder.
 
 ## Run the Application
 

@@ -1,150 +1,90 @@
 ---
-layout: post
-title: Getting Started with JavaScript PowerPoint in React app | Syncfusion
-description: Learn how to get started with the Syncfusion JavaScript PowerPoint Library in React and create PowerPoint presentations without Microsoft PowerPoint.
-control: PowerPoint
+title: Getting Started with JavaScript PowerPoint Library | Syncfusion
+description: Learn how to create a simple PowerPoint presentation with basic elements from scratch using the Syncfusion JavaScript PowerPoint Library.
 platform: document-processing
-documentation: ug
-keywords: javascript, powerpoint, react
+control: PowerPoint
+documentation: UG
 ---
 
-# Getting Started with JavaScript PowerPoint Library in React app
+# Getting Started with JavaScript PowerPoint Library
 
-The `JavaScript PowerPoint Library` facilitates the creation of a simple PowerPoint presentation with basic elements from scratch.
+The `JavaScript PowerPoint Library` facilitates the creation of a simple PowerPoint presentation with basic elements from scratch. The library supports both Node.js and browser environments for programmatic generation of PowerPoint presentations.
 
-This guide explains how to integrate the `JavaScript PowerPoint Library` into a React application that runs in the browser. The generated PowerPoint presentation is downloaded directly from the browser; no server-side PowerPoint rendering is required.
+## Creating a simple PowerPoint Presentation with basic elements from scratch
 
-## Prerequisites
-
-Before you begin, make sure you have the following installed:
-
-- Node.js 18 or later.
-- npm 9 or later, or Yarn 1.22 or later.
-- React 18 or later.
-- Visual Studio Code, Code Studio, or another code editor.
-- A supported browser such as the latest versions of Microsoft Edge, Google Chrome, or Mozilla Firefox.
-
-To verify your Node.js and npm versions, run:
-
-```bash
-node --version
-npm --version
-```
-
-## Create a React Project
-
-This guide uses [Vite](https://vitejs.dev/) to scaffold the React project. Run the following command in a terminal:
-
-```bash
-npm create vite@latest my-pptx-app -- --template react
-cd my-pptx-app
-```
-
-After the project is created, install its dependencies:
-
-```bash
-npm install
-```
-
-## Install the JavaScript PowerPoint Library
-
-All Syncfusion<sup>&reg;</sup> JS 2 packages are published in the `npmjs.com` registry. The `npm install` command below resolves `@syncfusion/ej2-pptx` to the latest stable version compatible with React 18 or later.
-
-* To install the `JavaScript PowerPoint Library`, use the following command.
-
-```bash
-npm install @syncfusion/ej2-pptx --save
-```
-
-## Create a PowerPoint Presentation Document
-
-Replace the contents of `App.jsx` with the following code. The file imports the Presentation classes as named exports from `@syncfusion/ej2-pptx` and creates a PowerPoint presentation.
+Include the following imports in your TypeScript code as shown below.
 
 {% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% raw %}
+{% highlight typescript tabtitle="TypeScript" %}
 
-import React from 'react';
-import { Presentation, HorizontalAlignmentType } from '@syncfusion/ej2-pptx';
+import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
 
-export default function App() {
-    const createPPTX = async () => {
-        // Creates a Presentation instance.
-        const pptxDoc = Presentation.create();
-        // Adds a slide to the PowerPoint presentation.
-        const slide = pptxDoc.slides.add();
-        // Adds a textbox for the title.
-        const titleShape = slide.shapes.addTextBox({
-            name: 'Title',
-            bounds: {
-                x: 55,
-                y: 25,
-                width: 850,
-                height: 72,
-            },
-        });
-        const paragraph = titleShape.textBody.addParagraph();
-        paragraph.horizontalAlignment = HorizontalAlignmentType.Center;
-        const textPart1 = paragraph.addTextPart('Hello World!!!');
-        textPart1.font.fontName = 'Calibri';
-        textPart1.font.bold = true;
-        textPart1.font.fontSize = 36;
-
-        try {
-
-            const bytes = await pptxDoc.save();
-
-            const blob = new Blob(
-                [bytes],
-                {
-                    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-                }
-            );
-
-            const url = window.URL.createObjectURL(blob);
-
-            const link = document.createElement('a');
-
-            link.href = url;
-            link.download = 'Output.pptx';
-
-            document.body.appendChild(link);
-
-            link.click();
-
-            document.body.removeChild(link);
-
-            window.URL.revokeObjectURL(url);
-
-        } catch (error) {
-
-            console.error('Error creating PowerPoint file:', error);
-
-        }
-    };
-    return (
-        <div style={{ padding: '1.5rem' }}>
-            <button onClick={createPPTX}>Create PowerPoint document</button>
-        </div>
-    );
-}
-
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
-N> This sample uses **named imports** from the npm package (`import { Presentation, ... } from '@syncfusion/ej2-pptx'`). The npm package does not expose a global `ej` namespace; using `ej.pptx.Presentation` without an import will throw `ReferenceError: ej is not defined` in a Vite or Create-React-App build. If you prefer the UMD-style global, load `ej2.min.js` from the Syncfusion CDN in `index.html` instead of importing the npm package.
+An entire PowerPoint Presentation is represented by an instance of `Presentation` and it is the root element of the JavaScript PowerPoint Library's DOM.
 
-## Run the Application
+The following code example demonstrates how to create an instance of the `Presentation`.
 
-Open a terminal in the project root and start the Vite development server:
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
 
-```bash
-npm run dev
-```
+// Creates a new instance of PowerPoint presentation.
+const pptxDoc = Presentation.create();
 
-Vite serves the application at `http://localhost:5173`. Open this URL in a browser and click **Create PowerPoint document** to download the generated file as `Output.pptx`.
+{% endhighlight %}
+{% endtabs %}
 
-The generated PowerPoint presentation contains a single slide with the text "Hello World!!!".
+A `Presentation` instance has a slide collection that represents the individual slides present within a PowerPoint presentation. A slide may contain textual and other graphics contents like shapes, images, charts etc.
 
-N> If you used Create-React-App instead of Vite, the run command is `npm start` and the default URL is `http://localhost:3000`.
+The following code example demonstrates how to add a blank slide to a PowerPoint Presentation.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+
+// Adds a slide to the PowerPoint Presentation.
+const firstSlide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
+
+{% endhighlight %}
+{% endtabs %}
+
+All the textual contents in a Presentation document are represented by paragraphs. Within the paragraph, textual contents are grouped into one or more child elements as `TextParts`. Each `TextPart` represents a region of text with a common set of formatted text.
+
+The following code example demonstrates how to add text into a presentation.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+
+// Adds a textbox in a slide by specifying its position and size.
+const textShape = firstSlide.shapes.addTextBox({
+   bounds: { x: 100, y: 75, width: 756, height: 200 }
+});
+// Adds a paragraph into the textShape.
+const paragraph = textShape.textBody.addParagraph();
+// Adds a textPart in the paragraph.
+const textPart = paragraph.addTextPart('');
+// Applies font formatting to the text.
+textPart.text = 'Hello Presentation';
+
+{% endhighlight %}
+{% endtabs %}
+
+The presentation is then saved to a file. The following code example demonstrates how to save a PowerPoint Presentation.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+
+// Saves the Presentation to a file.
+await pptxDoc.save('Output.pptx');
+
+{% endhighlight %}
+{% endtabs %}
+
+## See Also
+
+- [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library)
+- [JavaScript PowerPoint Library documentation](https://help.syncfusion.com/document-processing/presentation/pptx-library/javascript/overview)
+- [JavaScript PowerPoint Library API reference](https://ej2.syncfusion.com/documentation/api/powerpoint)
+- [JavaScript PowerPoint Library examples](https://document.syncfusion.com/demos/powerpoint/react/#/fluent2/powerpoint/default)
+
+For environment-specific setup and workflows (React, Vue, Angular, TypeScript, JavaScript), see the corresponding guides in the [JavaScript PowerPoint Library documentation](https://help.syncfusion.com/document-processing/presentation/pptx-library/javascript/overview).
