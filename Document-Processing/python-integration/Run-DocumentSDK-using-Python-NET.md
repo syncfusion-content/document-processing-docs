@@ -176,7 +176,7 @@ The bridge project lives at `DocumentBridge/DocumentBridge.csproj`. It is a smal
 | `SkiaSharp.NativeAssets.Linux` | Native rendering assets required on Linux hosts. Harmless on Windows/macOS. |
 | `HarfBuzzSharp.NativeAssets.Linux` | Text shaping assets required on Linux hosts. Harmless on Windows/macOS. |
 
-For the full source of `DocumentBridge.csproj`, see [`pythonnet-wrapper/DocumentBridge/DocumentBridge.csproj`](https://github.com/SyncfusionExamples/python-syncfusion-document-sdk-samples/tree/main/pythonnet-wrapper/DocumentBridge/DocumentBridge.csproj) in the companion GitHub sample.
+For the full source of `DocumentBridge.csproj`, see [`pythonnet-wrapper/DocumentBridge/DocumentBridge.csproj`](https://github.com/SyncfusionExamples/python-syncfusion-document-sdk-samples/blob/master/pythonnet-wrapper/DocumentBridge/DocumentBridge.csproj) in the companion GitHub sample.
 
 ## Code implementation
 
