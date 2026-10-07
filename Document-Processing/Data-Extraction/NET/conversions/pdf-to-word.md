@@ -24,7 +24,7 @@ To convert a PDF document or Image into a Word using the **ExtractDataAsWordDocu
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/refs/heads/master/Data-Extraction/Smart-Data-Extractor/Convert-data-as-Word-from-PDF/.NET/Convert-data-as-Word-from-PDF/Program.cs" %}
 
 using Syncfusion.SmartDataExtractor;
 using Syncfusion.DocIO.DLS;
@@ -35,11 +35,12 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
   //Initialize the Data Extractor.
   DataExtractor extractor = new DataExtractor();
   //Extract data as WordDocument.
-  WordDocument word = extractor.ExtractDataAsWordDocument(stream);
+  WordDocument document = extractor.ExtractDataAsWordDocument(stream);
+  using MemoryStream saveStream = new MemoryStream();
   //Save the extracted Word data into an output file.
-  word.Save("Output.docx");
-  word.Close();
-} 
+  document.Save(saveStream, FormatType.Docx);
+  document.Close();
+}
 
 {% endhighlight %}
 
@@ -54,11 +55,12 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
   //Initialize the Data Extractor.
   DataExtractor extractor = new DataExtractor();
   //Extract data as WordDocument.
-  WordDocument word = extractor.ExtractDataAsWordDocument(stream);
-  //Save the output file.
-  word.Save("Output.docx");
-  word.Close();
-} 
+  WordDocument document = extractor.ExtractDataAsWordDocument(stream);
+  using MemoryStream saveStream = new MemoryStream();
+  //Save the extracted Word data into an output file.
+  document.Save(saveStream, FormatType.Docx);
+  document.Close();
+}
 
 {% endhighlight %}
 
@@ -66,6 +68,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 N> If you want to convert an image instead of a PDF, replace the input stream with the image file (for example, Input.jpg or Input.png). The rest of the code remains unchanged.
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Convert-data-as-Word-from-PDF/.NET).
 
 ## Convert a range of PDF pages to Word
 
@@ -88,8 +91,9 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     extractor.PageRange = new int[,] { { 2, 4 } };
     //Convert the selected pages into a Word document.
     WordDocument document = extractor.ExtractDataAsWordDocument(stream);
-    //Save the Word document.
-    document.Save("Output.docx");
+    using MemoryStream saveStream = new MemoryStream();
+    //Save the extracted Word data into an output file.
+	document.Save(saveStream, FormatType.Docx);
     document.Close();
 }
 
@@ -111,7 +115,9 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     //Convert the selected pages to a Word document.
     WordDocument document = extractor.ExtractDataAsWordDocument(stream);
     //Save the Word document.
-    document.Save("Output.docx");
+    using MemoryStream saveStream = new MemoryStream();
+    //Save the extracted Word data into an output file.
+	document.Save(saveStream, FormatType.Docx);
     document.Close();
 }
 
@@ -127,7 +133,7 @@ To convert a PDF document or image into HTML output using the **ExtractDataAsHtm
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/refs/heads/master/Data-Extraction/Smart-Data-Extractor/Convert-data-as-HTML-from-PDF/.NET/Convert-data-as-HTML-from-PDF/Program.cs" %}
 
 using Syncfusion.SmartDataExtractor; 
 
@@ -164,6 +170,8 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 {% endtabs %}
 
 N> If you want to convert an image instead of a PDF, replace the input stream with the image file (for example, Input.jpg or Input.png). The rest of the code remains unchanged.
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Convert-data-as-HTML-from-PDF/.NET).
 
 ## Supported and Unsupported PDF Elements
 
