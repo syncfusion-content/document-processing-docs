@@ -145,24 +145,32 @@ document.save('Result.docx');
 {% highlight typescript tabtitle="iterateTextBody" %}
 import { BlockContentControl, Body, Paragraph, Table } from '@syncfusion/ej2-docx';
 
+// Iterates through the body items in the specified body.
 function iterateTextBody(body: Body) {
+  // Iterates through the body items in reverse order.
   for (let i = body.items.count - 1; i >= 0; i--) {
     let item = body.items[i];
 
+    // Processes paragraph items.
     if (item instanceof Paragraph) {
+      // Removes paragraphs with the Heading1 style.
       if (item.styleId === 'Heading1') {
         body.items.removeAt(i);
         continue;
       }
+
+      // Iterates through the paragraph items.
       iterateParagraph(item.items);
       continue;
     }
 
+    // Processes table items.
     if (item instanceof Table) {
       iterateTable(item);
       continue;
     }
 
+    // Processes block content controls recursively.
     if (item instanceof BlockContentControl) {
       iterateTextBody((item as BlockContentControl).body);
       continue;
@@ -173,9 +181,13 @@ function iterateTextBody(body: Body) {
 {% highlight typescript tabtitle="iterateTable" %}
 import { Body, Table } from '@syncfusion/ej2-docx';
 
+// Iterates through all rows in the table.
 function iterateTable(table: Table) {
+  // Iterates through each row.
   for (let row of table.rows) {
+    // Iterates through each cell in the row.
     for (let cell of row.cells) {
+      // Iterates through the body items in the table cell.
       iterateTextBody(cell);
     }
   }
@@ -184,19 +196,25 @@ function iterateTable(table: Table) {
 {% highlight typescript tabtitle="iterateParagraph" %}
 import {Field, Hyperlink, HyperlinkType, InlineContentControl, ParagraphItemCollection, Shape, TextRange } from '@syncfusion/ej2-docx';
 
+// Iterates through the paragraph items collection.
 function iterateParagraph(paraItems: ParagraphItemCollection) {
+  // Iterates through each paragraph item.
   for (let child of paraItems) {
-    // Plain text run: modify or read the text
+    // Processes text ranges.
     if (child instanceof TextRange) {
+      // Replaces the specified text.
       if (child.text === 'Andrew') {
         child.text = 'Fuller';
       }
       continue;
     }
 
-    // Field: a HYPERLINK field is exposed through the Hyperlink facade
+    // Processes fields as hyperlinks.
     if (child instanceof Field) {
+      // Creates a hyperlink facade from the field.
       let link = new Hyperlink(child);
+
+      // Updates the hyperlink URL when the display text matches.
       if (
         link.type === HyperlinkType.WebLink &&
         link.textToDisplay === 'HTML'
@@ -206,18 +224,18 @@ function iterateParagraph(paraItems: ParagraphItemCollection) {
       continue;
     }
 
-    // Shape / text box: the nested body is available through textBody
+    // Processes shapes and text boxes.
     if (child instanceof Shape) {
       try {
-        // Promotes the shape to a text box if needed
+        // Iterates through the text body of the shape.
         iterateTextBody(child.textBody);
       } catch {
-        // A non-text-box shape may reject access to textBody
+        // Ignores shapes that do not expose a text body.
       }
       continue;
     }
 
-    // Inline content control: recurse into its paragraph items
+    // Processes inline content controls recursively.
     if (child instanceof InlineContentControl) {
       iterateParagraph(child.paragraphItems);
     }
