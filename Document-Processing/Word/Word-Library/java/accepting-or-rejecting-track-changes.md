@@ -4,6 +4,7 @@ description: This section illustrates how to Accept or Reject the Track changes 
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 # Track Changes in Java Word
 

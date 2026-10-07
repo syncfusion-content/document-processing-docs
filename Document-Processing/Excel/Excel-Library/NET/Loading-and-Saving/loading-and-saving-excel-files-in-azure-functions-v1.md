@@ -4,6 +4,7 @@ description: Azure Functions v1 Excel file handling section explains how to load
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Loading and Saving Files in Azure Functions v1
 

@@ -5,6 +5,7 @@ description: Attach, update, and read custom data on PDF form fields in the Vue 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Custom Data on Form Fields in Vue PDF Viewer

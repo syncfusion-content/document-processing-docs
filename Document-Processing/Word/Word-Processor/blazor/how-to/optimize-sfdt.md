@@ -5,6 +5,7 @@ description: Optimize SFDT files in Syncfusion® Blazor DOCX Editor to reduce fi
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # How to Optimize SFDT Files in Blazor DOCX Editor

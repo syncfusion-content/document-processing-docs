@@ -5,6 +5,7 @@ description: The paragraph format feature in ASP.NET MVC DOCX Editor enables use
 platform: document-processing
 control: Paragraph Format
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

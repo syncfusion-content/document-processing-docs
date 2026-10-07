@@ -5,6 +5,7 @@ description: Learn about explore cell, row, column, and range selection options 
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Selection in Blazor Spreadsheet

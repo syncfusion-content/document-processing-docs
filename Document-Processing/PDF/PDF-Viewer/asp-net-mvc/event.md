@@ -5,6 +5,7 @@ description: A complete list of events in the ASP.NET MVC PDF Viewer, with descr
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Events in ASP.NET MVC PDF Viewer

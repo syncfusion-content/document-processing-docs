@@ -5,6 +5,7 @@ description: Learn how to scroll the scrollbar precisely to the location of anno
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Move scrollbar to the exact annotations location

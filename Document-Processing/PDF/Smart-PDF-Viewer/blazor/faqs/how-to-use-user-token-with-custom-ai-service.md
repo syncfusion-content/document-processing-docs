@@ -5,6 +5,7 @@ description: Implement a user token with a custom Azure OpenAI service in the Sy
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 # User Token with Azure OpenAI Service in Smart PDF Viewer
 

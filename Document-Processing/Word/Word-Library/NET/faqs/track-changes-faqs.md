@@ -4,6 +4,7 @@ description: Describe frequently asked questions about creating and managing tab
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # FAQ about Track Changes in .NET Word
 

@@ -5,6 +5,7 @@ description: Containerize and deploy the Blazor PDF Viewer (Server and WebAssemb
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Deploy Blazor PDF Viewer to Azure Container (Linux)

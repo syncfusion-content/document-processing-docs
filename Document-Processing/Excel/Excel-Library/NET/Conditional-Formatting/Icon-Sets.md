@@ -4,6 +4,7 @@ description: Icon-set conditional formatting describes how Syncfusion .NET Excel
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Icon Sets in .NET Excel Library

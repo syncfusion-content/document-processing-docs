@@ -6,6 +6,7 @@ platform: document-processing
 control: Save document to Google Cloud Storage
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Save Documents to Google Cloud Storage in React DOCX Editor

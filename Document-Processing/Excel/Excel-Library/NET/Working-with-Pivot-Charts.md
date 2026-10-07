@@ -4,6 +4,7 @@ description: Pivot charts in Syncfusion .NET Excel Library describes how to crea
 platform: document-processing
 control: XlsIO
 documentation: UG 
+appliesto: Document SDK
 ---
 
 # Pivot Charts in .NET Excel Library

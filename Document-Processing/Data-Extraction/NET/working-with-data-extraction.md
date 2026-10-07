@@ -5,7 +5,7 @@ platform: document-processing
 control: SmartDataExtractor
 documentation: UG
 keywords: Assemblies
-
+appliesto: Document SDK
 ---
 
 # Data Extraction in .NET Smart Data Extractor

@@ -4,6 +4,7 @@ description: Zip files using the Syncfusion.Compression.Zip namespace for file c
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to zip files in .NET Excel Library

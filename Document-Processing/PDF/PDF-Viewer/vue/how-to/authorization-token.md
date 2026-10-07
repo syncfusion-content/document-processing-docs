@@ -6,6 +6,7 @@ control: Authorization token
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Use an Authorization Token in Vue PDF Viewer

@@ -5,6 +5,7 @@ description: Learn here all about Text markup annotations support in Syncfusion<
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Text markup annotations in Xamarin Pdf Viewer

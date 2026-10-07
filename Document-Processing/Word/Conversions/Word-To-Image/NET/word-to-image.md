@@ -4,6 +4,7 @@ description: Learn how to convert a Word document to an image using the .NET Wor
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert Word to Image in .NET Word

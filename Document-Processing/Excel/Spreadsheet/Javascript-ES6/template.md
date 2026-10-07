@@ -5,6 +5,7 @@ description: Cell Templates in TypeScript Spreadsheet allow embedding HTML eleme
 platform: document-processing
 control: Template 
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Cell Templates in TypeScript Spreadsheet 

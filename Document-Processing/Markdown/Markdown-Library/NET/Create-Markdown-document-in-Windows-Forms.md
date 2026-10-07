@@ -4,6 +4,7 @@ description: Create Markdown documents without external dependencies in a Window
 platform: document-processing
 control: Markdown
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Markdown document in Windows Forms

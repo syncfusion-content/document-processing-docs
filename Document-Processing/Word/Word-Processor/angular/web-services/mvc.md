@@ -6,6 +6,7 @@ platform: document-processing
 control: Mvc 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # ASP.NET MVC Web Service in  Angular DOCX Editor

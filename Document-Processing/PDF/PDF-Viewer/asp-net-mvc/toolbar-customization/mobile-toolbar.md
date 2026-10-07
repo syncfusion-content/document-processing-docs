@@ -5,6 +5,7 @@ description: Customize the mobile toolbar in the ASP.NET MVC PDF Viewer to ensur
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Customize the Mobile Toolbar in ASP.NET MVC PDF Viewer

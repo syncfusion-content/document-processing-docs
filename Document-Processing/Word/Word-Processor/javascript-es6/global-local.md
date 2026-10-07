@@ -6,6 +6,7 @@ platform: document-processing
 control: Global and Local
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Globalization and Localization in TypeScript DOCX Editor

@@ -4,6 +4,7 @@ title: Context Menu in Blazor Spreadsheet | Syncfusion
 description: Learn how to use and customize context menus for cells, rows, columns, and sheets in the Syncfusion Blazor Spreadsheet.
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Context Menu in Blazor Spreadsheet

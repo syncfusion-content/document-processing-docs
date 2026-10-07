@@ -5,6 +5,7 @@ description: Headers and footers in ASP.NET MVC DOCX Editor enable adding and cu
 platform: document-processing
 control: Header Footer
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

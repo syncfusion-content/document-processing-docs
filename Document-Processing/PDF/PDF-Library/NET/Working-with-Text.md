@@ -4,6 +4,7 @@ description: Learn how to add text to PDF documents using different fonts, TrueT
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Text in .NET PDF Library
 

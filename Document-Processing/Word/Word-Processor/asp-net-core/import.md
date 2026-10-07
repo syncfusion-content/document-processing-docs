@@ -5,6 +5,7 @@ description: The Import feature in ASP.NET Core DOCX Editor enables users to loa
 platform: document-processing
 control: Import
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

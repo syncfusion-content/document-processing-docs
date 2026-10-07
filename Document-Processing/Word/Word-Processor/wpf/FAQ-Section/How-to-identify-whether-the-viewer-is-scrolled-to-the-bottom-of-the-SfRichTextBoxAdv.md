@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: scroll-to-bottom
+appliesto: DOCX Editor SDK
 ---
 
 # How to Detect Scrolling to the Bottom in WPF DOCX Editor

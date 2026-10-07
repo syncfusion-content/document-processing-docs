@@ -5,6 +5,7 @@ description: Learn how to customize PDF annotations in Blazor PDF Viewer using U
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Customize Annotations in Blazor PDF Viewer 

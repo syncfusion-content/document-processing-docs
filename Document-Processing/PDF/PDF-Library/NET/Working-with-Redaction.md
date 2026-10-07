@@ -4,6 +4,7 @@ description: Learn how to redact sensitive text, images, and patterns in PDF doc
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Redaction in .NET PDF Library

@@ -5,6 +5,7 @@ description: Illustrations in Angular Spreadsheet enable users to add and manage
 platform: document-processing
 control: Illustrations 
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Illustrations in Angular Spreadsheet 

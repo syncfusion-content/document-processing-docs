@@ -5,6 +5,7 @@ description: Load or switch PDF documents dynamically in the React PDF Viewer us
 control: PDF Viewer
 platform: document-processing
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Load Documents Dynamically in React PDF Viewer

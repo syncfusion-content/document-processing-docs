@@ -5,6 +5,7 @@ description: Learn about formulas in the Syncfusion ASP.NET Core Spreadsheet con
 platform: document-processing
 control: Formulas
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

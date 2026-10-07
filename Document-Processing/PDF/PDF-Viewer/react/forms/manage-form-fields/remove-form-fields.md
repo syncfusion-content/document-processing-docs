@@ -5,6 +5,7 @@ description: Remove PDF form fields in the React PDF Viewer using the built-in U
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 

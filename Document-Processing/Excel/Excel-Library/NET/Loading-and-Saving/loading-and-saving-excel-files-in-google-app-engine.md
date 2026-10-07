@@ -4,6 +4,7 @@ description: Google App Engine Excel file handling section explains how to load 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Loading and Saving Files in Google App Engine

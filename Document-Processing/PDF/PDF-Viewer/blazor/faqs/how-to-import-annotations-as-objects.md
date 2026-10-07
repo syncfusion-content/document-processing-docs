@@ -5,6 +5,7 @@ description: Learn how to import annotations as objects in the Blazor PDF Viewer
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How Import annotations as objects in PDF Viewer Component 

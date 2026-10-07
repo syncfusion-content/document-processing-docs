@@ -5,6 +5,7 @@ description: Learn about find and replace in the Syncfusion React Spreadsheet co
 control: Searching
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Find and Replace in React Spreadsheet

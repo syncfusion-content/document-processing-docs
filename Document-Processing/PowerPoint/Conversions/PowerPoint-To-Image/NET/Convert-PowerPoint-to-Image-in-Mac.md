@@ -4,6 +4,7 @@ description: Convert PPTX to image in .NET Core application on macOS using .NET 
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert PowerPoint to Image on macOS

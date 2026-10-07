@@ -4,6 +4,7 @@ description: This section illustrates the available customization options for Wo
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Customizing Word to PDF Conversion in .NET Word
 

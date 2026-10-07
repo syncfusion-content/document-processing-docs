@@ -4,6 +4,7 @@ description: Create Markdown document in Azure Functions v4 using .NET Markdown 
 platform: document-processing
 control: Markdown
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Markdown document in Azure Functions v4
@@ -158,7 +159,7 @@ Step 10: Click the **Create** button.
 
 Step 11: After the **App Service** is created, click the **Finish** button.
 
-![Creating app service](Azure-Images/Functions-v1/App-Create-Word-Document.png)
+![Creating app service](Azure-Images/Functions-v1/App-Create-Markdown-Document.png)
 
 Step 12: Click the **Publish** button.
 

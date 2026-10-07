@@ -5,6 +5,7 @@ description: Select multiple annotations across pages in the ASP.NET Core PDF Vi
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Select Multi-Page Annotations in ASP.NET Core PDF Viewer

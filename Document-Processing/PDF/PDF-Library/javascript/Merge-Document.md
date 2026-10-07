@@ -5,6 +5,7 @@ description: Merge multiple PDF documents and import pages between files using t
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Merging PDF Documents in JavaScript PDF
 

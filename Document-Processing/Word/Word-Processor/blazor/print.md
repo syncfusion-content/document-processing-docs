@@ -5,6 +5,7 @@ description: Print feature in Blazor DOCX Editor enables printing documents with
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # Print in Blazor DOCX Editor

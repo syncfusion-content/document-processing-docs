@@ -5,6 +5,7 @@ description: Change the document view to web layout or print layout in Syncfusio
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # How to Change Document View in Blazor DOCX Editor

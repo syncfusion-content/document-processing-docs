@@ -4,6 +4,7 @@ description: The performance section describes best practices for reading, writi
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Performance Optimization in .NET Excel Library
 

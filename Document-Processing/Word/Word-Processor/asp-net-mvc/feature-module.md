@@ -5,6 +5,7 @@ description: Modules in ASP.NET MVC DOCX Editor enable selective injection of ed
 platform: document-processing
 control: Feature Module
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

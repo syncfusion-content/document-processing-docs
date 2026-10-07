@@ -4,6 +4,7 @@ description: Remove all ListObjects or Excel tables from a worksheet by iteratin
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to remove ListObjects in .NET Excel Library

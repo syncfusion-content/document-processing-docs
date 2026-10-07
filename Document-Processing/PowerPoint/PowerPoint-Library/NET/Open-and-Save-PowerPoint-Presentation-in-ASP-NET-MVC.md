@@ -4,6 +4,7 @@ description: Open and save Presentation in ASP.NET MVC using .NET PowerPoint lib
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Open and save Presentation in ASP.NET MVC

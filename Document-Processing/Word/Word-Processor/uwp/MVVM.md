@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: mvvm,viewmodel,data-binding,contentchanged,extension-class
+appliesto: DOCX Editor SDK
 ---
 # MVVM in UWP DOCX Editor
 

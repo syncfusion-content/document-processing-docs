@@ -5,6 +5,7 @@ description: Learn about formatting in the Syncfusion ASP.NET Core Spreadsheet c
 platform: document-processing
 control: Formatting
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

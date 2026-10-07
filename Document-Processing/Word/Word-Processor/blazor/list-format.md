@@ -5,6 +5,7 @@ description: The list format feature in Blazor DOCX Editor enables users to crea
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # List Format in Blazor DOCX Editor

@@ -5,6 +5,7 @@ description: Create, manage, annotate, lock, unlock, and organize PDF layers usi
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # PDF Layers in JavaScript PDF

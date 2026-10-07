@@ -5,6 +5,7 @@ description: Learn about how to create, manage, and customize worksheets in the 
 control: Worksheet
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Worksheet Operations in Vue Spreadsheet

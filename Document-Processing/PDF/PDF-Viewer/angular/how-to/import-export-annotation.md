@@ -6,6 +6,7 @@ platform: document-processing
 control: Import export annotation
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Import and Export Annotations in Angular PDF Viewer

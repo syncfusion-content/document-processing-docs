@@ -6,6 +6,7 @@ platform: document-processing
 control: SfPdfViewer
 documentation: ug
 keywords: .net maui pdf viewer, digital signature, pdf signature validation, certificate signing, pdf signing, signature panel
+appliesto: PDF Viewer SDK
 ---
 
 # Digital Signature in .NET MAUI PDF Viewer

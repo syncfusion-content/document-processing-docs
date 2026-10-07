@@ -5,6 +5,7 @@ description: Identify whether the loaded PDF in the ASP.NET MVC PDF Viewer has b
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Identify if the PDF Has Been Edited in ASP.NET MVC PDF Viewer

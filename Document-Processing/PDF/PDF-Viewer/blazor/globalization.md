@@ -5,6 +5,7 @@ description: Learn how to localize UI text and enable RTL layout in the Blazor P
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Globalization and RTL in Blazor PDF Viewer 

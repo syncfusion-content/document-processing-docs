@@ -5,6 +5,7 @@ description: Learn about illustrations in the Syncfusion ASP.NET Core Spreadshee
 platform: document-processing
 control: Illustrations
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

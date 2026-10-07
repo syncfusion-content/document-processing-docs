@@ -4,6 +4,7 @@ description: Convert Markdown content to PowerPoint presentations using the Sync
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Markdown to PowerPoint Conversion in .NET PowerPoint
