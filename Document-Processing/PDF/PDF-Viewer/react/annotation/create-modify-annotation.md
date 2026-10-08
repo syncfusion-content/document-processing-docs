@@ -37,7 +37,7 @@ Measurement annotations:
 - Perimeter: [Perimeter annotation](./annotation-types/perimeter-annotation)
 - Area: [Area annotation](./annotation-types/area-annotation)
 - Radius: [Radius annotation](./annotation-types/ra)
-- Volume: [Volume annotation](./annotation-types/vo)
+- Volume: [Volume annotation](./annotation-types/volume-annotation)
 
 Other annotations:
 
