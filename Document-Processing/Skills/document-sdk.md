@@ -42,6 +42,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK Skills eliminate c
       <td>
         <a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-excel">syncfusion-dotnet-excel</a><br>
         <a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-flutter-excel">syncfusion-flutter-excel</a>
+        <a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-javascript-excel">syncfusion-javascript-excel</a>
       </td>
     </tr>
     <tr>
@@ -51,6 +52,10 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK Skills eliminate c
     <tr>
       <td><a href="https://help.syncfusion.com/document-processing/word/word-library/net/convert-markdown-to-word-document-in-csharp">Markdown</a></td>
       <td><a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-markdown">syncfusion-dotnet-markdown</a></td>
+    </tr>
+     <tr>
+      <td><a href="https://help.syncfusion.com/document-processing/document-chunking-library/overview">Document Chunking</a></td>
+      <td><a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-document-chunking">syncfusion-dotnet-document-chunking</a></td>
     </tr>
     <tr>
       <td><a href="https://help.syncfusion.com/document-processing/data-extraction/overview">Smart Data Extraction</a></td>
@@ -115,8 +120,11 @@ Select skills to install (space to toggle)
 │  ◻ syncfusion-dotnet-pdf
 │  ◻ syncfusion-dotnet-word
 │  ◻ syncfusion-dotnet-excel
+│  ◻ syncfusion-flutter-excel
+│  ◻ syncfusion-javascript-excel
 │  ◻ syncfusion-dotnet-powerpoint
 │  ◻ syncfusion-dotnet-markdown
+│  ◻ syncfusion-dotnet-document-chunking
 │  ◻ syncfusion-dotnet-smart-data-extraction
 │  ◻ syncfusion-dotnet-calculate
 │  ◻ syncfusion-java-word
