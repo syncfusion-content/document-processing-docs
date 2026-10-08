@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tauri Integration with Angular PDF Viewer | Syncfusion
-description: Learn how to create a Tauri desktop application and integrate the Syncfusion Angular PDF Viewer component.
+description: Learn how to create a Tauri desktop and mobile application and integrate the Syncfusion Angular PDF Viewer component.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Tauri Integration for Angular PDF Viewer
 
-This guide shows you how to create a [Tauri](https://tauri.app/) desktop application and add the [Syncfusion Angular PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/angular-pdf-viewer) component to the web frontend. Tauri wraps a web view (WebView2 on Windows, WebKit on macOS, and WebKitGTK on Linux) in a lightweight native shell, so the same Angular code you ship to the browser can run as a desktop app with full filesystem and dialog access through Tauri plugin.
+This guide shows you how to create a [Tauri](https://tauri.app/) desktop and mobile application and add the [Syncfusion Angular PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/angular-pdf-viewer) component to the web frontend. Tauri wraps a web view (WebView2 on Windows, WebKit on macOS, and WebKitGTK on Linux for desktop, and WKWebView on iOS and Android System WebView on Android) in a lightweight native shell, so the same Angular code you ship to the browser can run as a desktop or mobile app with full filesystem and dialog access through Tauri plugin.
 
 ## Prerequisites
 
@@ -25,7 +25,6 @@ Before creating the Tauri application, ensure the following software is installe
 References:
 
 - [Tauri prerequisites](https://tauri.app/start/prerequisites/#rust)
-- [Rust installation](https://rust-lang.org/tools/install/)
 - [Create a Tauri project](https://tauri.app/start/create-project/)
 
 Verify the installed versions:
@@ -48,9 +47,6 @@ Choose the following options when prompted:
 Project name:
 tauri-angular-pdfviewer
 
-Choose which language to use for your frontend:
-TypeScript / JavaScript
-
 Choose your package manager:
 npm
 
@@ -58,17 +54,14 @@ Choose your UI template:
 Angular
 ```
 
-> Note: The exact wording of the prompts depends on the installed version of `create-tauri-app`. Pick **Angular** as the UI template and **TypeScript** as the flavor. The example below assumes a TypeScript Angular + Vite project.
+> Note: The exact wording of the prompts depends on the installed version of `create-tauri-app`. Pick **Angular** as the UI template. The example below assumes a TypeScript Angular + Vite project.
 
 After the scaffold finishes, install the dependencies and verify the project builds:
 
 ```bash
 cd tauri-angular-pdfviewer
 npm install
-npm run tauri dev
 ```
-
-> The first run of `npm run tauri dev` compiles the Rust back end, which may take a few minutes. Subsequent runs are much faster.
 
 ## Install Syncfusion Angular PDF Viewer
 
@@ -99,7 +92,7 @@ Open `src/app/app.component.css` (or your top-level global stylesheet) and add t
 Open `src/app/app.component.ts` and replace its contents with the following code. The viewer is mounted inside an Angular standalone component and configured to load a public sample PDF and the runtime assets from the Syncfusion CDN.
 
 {% tabs %}
-{% highlight ts tabtitle="src/app/app.ts" %}
+{% highlight ts tabtitle="app.component.ts" %}
 {% raw %}
 import { Component } from '@angular/core';
 import { PdfViewerModule, LinkAnnotationService, BookmarkViewService,
@@ -129,7 +122,7 @@ export class App {
   public documentPath: string =
     'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
   public resourcesUrl: string =
-    'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+    'https://cdn.syncfusion.com/ej2/35.1.37/dist/ej2-pdfviewer-lib';
 }
 {% endraw %}
 {% endhighlight %}
@@ -142,18 +135,6 @@ Run the following command from the project root to launch the Tauri desktop app 
 ```bash
 npm run tauri dev
 ```
-
-Tauri compiles the Rust back end, starts the Angular dev server, and opens a native window. The Angular PDF Viewer loads with the following modules enabled:
-
-- Toolbar
-- Navigation
-- Magnification
-- Text Selection
-- Text Search
-- Print
-- Annotations
-- Form Fields
-- Form Designer
 
 ## Build the Application for Production
 

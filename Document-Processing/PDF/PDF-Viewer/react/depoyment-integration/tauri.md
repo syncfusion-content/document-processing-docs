@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tauri Integration with React PDF Viewer | Syncfusion
-description: Learn how to create a Tauri desktop application and integrate the Syncfusion React PDF Viewer component.
+description: Learn how to create a Tauri desktop and mobile application and integrate the Syncfusion React PDF Viewer component.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Tauri Integration for React PDF Viewer
 
-This guide shows you how to create a [Tauri](https://tauri.app/) desktop application and add the [Syncfusion React PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/react-pdf-viewer) component to the web frontend. Tauri wraps a web view (WebView2 on Windows, WebKit on macOS, and WebKitGTK on Linux) in a lightweight native shell, so the same React code you ship to the browser can run as a desktop app with full filesystem and dialog access through Tauri plugin.
+This guide shows you how to create a [Tauri](https://tauri.app/) desktop and mobile application and add the [Syncfusion React PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/react-pdf-viewer) component to the web frontend. Tauri wraps a web view (WebView2 on Windows, WebKit on macOS, and WebKitGTK on Linux for desktop, and WKWebView on iOS and Android System WebView on Android) in a lightweight native shell, so the same React code you ship to the browser can run as a desktop or mobile app with full filesystem and dialog access through Tauri plugin.
 
 ## Prerequisites
 
@@ -24,7 +24,6 @@ Before creating the Tauri application, ensure the following software is installe
 References:
 
 - [Tauri prerequisites](https://tauri.app/start/prerequisites/#rust)
-- [Rust installation](https://rust-lang.org/tools/install/)
 - [Create a Tauri project](https://tauri.app/start/create-project/)
 
 Verify the installed versions:
@@ -67,10 +66,7 @@ After the scaffold finishes, install the dependencies and verify the project bui
 ```bash
 cd tauri-react-pdfviewer
 npm install
-npm run tauri dev
 ```
-
-> The first run of `npm run tauri dev` compiles the Rust back end, which may take a few minutes. Subsequent runs are much faster.
 
 ## Install Syncfusion React PDF Viewer
 
@@ -101,7 +97,7 @@ Open `src/App.css` (or your top-level global stylesheet) and add the following i
 Open `src/App.tsx` and replace its contents with the following code. The viewer is mounted inside a React component and configured to load a public sample PDF and the runtime assets copied to `public/ej2-pdfviewer-lib`.
 
 {% tabs %}
-{% highlight ts tabtitle="src/App.tsx" %}
+{% highlight ts tabtitle="App.tsx" %}
 {% raw %}
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
          ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner,
@@ -113,7 +109,7 @@ export default function App() {
       // Specifies the URL (for example, a file from the public folder) or a Base64-encoded PDF.
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       // Specifies the path to the PDFium resource files required for the PDF Viewer to function.
-      resourceUrl="https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib">
+      resourceUrl="https://cdn.syncfusion.com/ej2/35.1.37/dist/ej2-pdfviewer-lib">
       <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
                           BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
                           FormFields, FormDesigner, PageOrganizer ]}/>
@@ -131,18 +127,6 @@ Run the following command from the project root to launch the Tauri desktop app 
 ```bash
 npm run tauri dev
 ```
-
-Tauri compiles the Rust back end, starts the Vite dev server, and opens a native window. The React PDF Viewer loads with the following modules enabled:
-
-- Toolbar
-- Navigation
-- Magnification
-- Text Selection
-- Text Search
-- Print
-- Annotations
-- Form Fields
-- Form Designer
 
 ## Build the Application for Production
 
