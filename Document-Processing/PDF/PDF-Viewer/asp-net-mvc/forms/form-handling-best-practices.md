@@ -2,7 +2,7 @@
 layout: post
 title: Form Handling Best Practices in ASP.NET MVC PDF Viewer | Syncfusion
 description: Recommended best practices for naming, validating, grouping, importing, and designing form fields in the ASP.NET MVC PDF Viewer.
-platform: asp-mvc
+platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##

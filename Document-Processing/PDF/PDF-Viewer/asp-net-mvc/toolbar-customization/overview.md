@@ -1,6 +1,6 @@
 ---
 layout: post
-title: About Syncfusion ASP.NET MVC PDF Viewer Toolbar Customization | Syncfusion
+title: Toolbar Customization in ASP.NET MVC PDF Viewer | Syncfusion
 description: Learn about introduction of the Syncfusion ASP.NET MVC PDF Viewer Toolbar Customization section and the key capabilities it provides.
 control: PDF Viewer
 platform: document-processing
@@ -52,7 +52,7 @@ Form designer toolbar provides form-field authoring controls used when designing
 
 - Annotation toolbar in mobile mode appears at the bottom of the PDF Viewer component.
 
-    ![mobile annotation toolbar](../images/mobile-annotation-toolbar.png)
+    ![mobile annotation toolbar](../../react/images/mobile-annotation-toolbar.png)
 
 ## Show or hide toolbar items
 
