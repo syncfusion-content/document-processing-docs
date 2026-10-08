@@ -4,6 +4,7 @@ description: Excel workbook section explains the elements and options available 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Loading and Saving Workbooks in macOS
 

@@ -5,6 +5,7 @@ description: Draw lines, rectangles, polygons, curves, and other shapes in PDF d
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # PDF Shapes in JavaScript PDF
 

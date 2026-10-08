@@ -6,6 +6,7 @@ control: SfPdfViewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Create a custom toolbar in Blazor PDF Viewer

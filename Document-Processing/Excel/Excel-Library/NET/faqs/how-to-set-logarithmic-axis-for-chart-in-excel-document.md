@@ -4,6 +4,7 @@ description: Set a logarithmic axis for a chart in an Excel document using the S
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to set logarithmic chart axes in .NET Excel Library

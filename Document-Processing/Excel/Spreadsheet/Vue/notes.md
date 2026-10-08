@@ -5,6 +5,7 @@ description: Add and manage notes in the Syncfusion Vue Spreadsheet to provide c
 control: Notes
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

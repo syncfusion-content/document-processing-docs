@@ -5,6 +5,7 @@ description: Toggle scroll bar visibility in Syncfusion WPF PDF Viewer for touch
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Toggle visibility of the scroll bar in WPF Pdf Viewer

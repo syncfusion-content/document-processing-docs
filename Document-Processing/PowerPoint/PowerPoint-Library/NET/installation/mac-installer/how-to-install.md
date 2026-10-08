@@ -5,6 +5,7 @@ description: Learn how to install the Syncfusion® PowerPoint (Document Processi
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
+appliesto: Document SDK
 ---
 
 # How to Install Syncfusion PowerPoint Mac Installer

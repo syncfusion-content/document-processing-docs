@@ -5,6 +5,7 @@ description: Learn how to select cells, rows, columns, and ranges in the Syncfus
 platform: document-processing
 control: Selection
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

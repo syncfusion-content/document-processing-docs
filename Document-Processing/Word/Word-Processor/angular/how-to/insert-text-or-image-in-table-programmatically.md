@@ -6,6 +6,7 @@ platform: document-processing
 control: Insert text or image in table programmatically
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Insert Text or Image in Table in Angular DOCX Editor

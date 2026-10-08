@@ -4,6 +4,7 @@ description: Learn about the NuGet packages required to use Syncfusion PDF Libra
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # NuGet Packages for .NET PDF Library
 

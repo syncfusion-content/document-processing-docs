@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Set a New Language in JavaScript (ES5) PDF Viewer

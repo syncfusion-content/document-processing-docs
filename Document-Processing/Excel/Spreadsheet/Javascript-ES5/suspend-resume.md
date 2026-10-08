@@ -5,6 +5,7 @@ description: Suspend and resume UI refresh in JavaScript Spreadsheet improve per
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Suspend and Resume UI Refresh in the JavaScript Spreadsheet

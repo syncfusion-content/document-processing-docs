@@ -5,6 +5,7 @@ description: Learn about different conformance standards and PDF compliance feat
 platform: document-processing
 control: PDF
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Conformance in Flutter PDF

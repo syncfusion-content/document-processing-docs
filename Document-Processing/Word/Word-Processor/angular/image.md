@@ -6,6 +6,7 @@ platform: document-processing
 control: Image 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Images in Angular DOCX Editor

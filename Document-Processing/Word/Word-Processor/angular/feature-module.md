@@ -6,6 +6,7 @@ platform: document-processing
 control: Feature module 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Feature Modules in Angular DOCX Editor

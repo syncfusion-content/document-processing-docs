@@ -4,6 +4,7 @@ description: Learn how to save PDF files to the file system or stream in C# and 
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Save PDF file in C# and VB.NET
 

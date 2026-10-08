@@ -4,6 +4,7 @@ description: Windows Forms Excel to PDF section explains how to convert Excel do
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Excel to PDF Conversion in Windows Forms using Excel Library

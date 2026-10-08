@@ -5,6 +5,7 @@ description: Learn how to open Excel files stored in Google Cloud Storage using 
 platform: document-processing
 control: Open file from Google Cloud Storage
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Open Excel from Google Cloud Storage in React Spreadsheet

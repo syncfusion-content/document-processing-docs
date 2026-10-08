@@ -5,6 +5,7 @@ description: The Table of Contents feature in Blazor DOCX Editor enables users t
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # Table of Contents in Blazor DOCX Editor

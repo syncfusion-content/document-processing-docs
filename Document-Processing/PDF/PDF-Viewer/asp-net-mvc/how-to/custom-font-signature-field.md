@@ -5,6 +5,7 @@ description: Change the font family for type signatures and initials in the ASP.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Change the Font for Type Signatures in ASP.NET MVC PDF Viewer

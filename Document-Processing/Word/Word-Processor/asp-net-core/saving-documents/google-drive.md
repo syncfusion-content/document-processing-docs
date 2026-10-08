@@ -6,6 +6,7 @@ platform: document-processing
 control: Save document to Google Drive
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Save Documents to Google Drive in ASP.NET Core DOCX Editor

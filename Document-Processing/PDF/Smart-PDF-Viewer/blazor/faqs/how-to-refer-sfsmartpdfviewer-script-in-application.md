@@ -5,6 +5,7 @@ description: Learn how to include the SfSmartPdfViewer script in a Syncfusion Bl
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Reference the Blazor Smart PDF Viewer script

@@ -4,6 +4,7 @@ description: Open and save PowerPoint in Azure App Service on Linux using .NET C
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Open and save PowerPoint in Azure App Service on Linux

@@ -4,6 +4,7 @@ description: A .NET Core PowerPoint library to create, read, and edit PowerPoint
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create PowerPoint Document in Blazor

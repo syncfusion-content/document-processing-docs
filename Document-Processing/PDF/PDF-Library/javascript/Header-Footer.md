@@ -5,6 +5,7 @@ description: Create and apply headers, footers, and automatic fields in PDF docu
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # PDF Headers and Footers in JavaScript PDF

@@ -5,6 +5,7 @@ description: Learn about removing charts in the Syncfusion React Spreadsheet com
 control: Spreadsheet
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Remove Charts in React Spreadsheet

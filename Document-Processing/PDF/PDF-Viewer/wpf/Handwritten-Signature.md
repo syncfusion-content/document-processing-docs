@@ -5,6 +5,7 @@ description: Add and manage handwritten signatures in Syncfusion WPF PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Handwritten Signature in WPF Pdf Viewer

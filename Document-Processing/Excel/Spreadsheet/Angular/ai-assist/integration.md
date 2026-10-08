@@ -5,6 +5,7 @@ description: AI Assist integration in Angular Spreadsheet explains AI-powered fe
 platform: document-processing
 control: AI Assist
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # AI Assist Integration in Angular Spreadsheet 

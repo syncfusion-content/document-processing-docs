@@ -5,6 +5,7 @@ description: The export feature in ASP.NET Core DOCX Editor enables users to sav
 platform: document-processing
 control: Export
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

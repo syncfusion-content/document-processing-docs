@@ -5,6 +5,7 @@ description: The PDF loading from memory feature in SfPdfViewer enables users to
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Open a Document From Memory in Flutter PDF Viewer

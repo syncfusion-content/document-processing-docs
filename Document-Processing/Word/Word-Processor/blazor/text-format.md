@@ -5,6 +5,7 @@ description: Text format properties in Blazor DOCX Editor enables customizing te
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # Text Format in Blazor DOCX Editor

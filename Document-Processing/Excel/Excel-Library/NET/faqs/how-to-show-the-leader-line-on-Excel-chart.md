@@ -4,6 +4,7 @@ description: Show leader lines on an Excel chart using the Syncfusion .NET Excel
 platform: document-processing 
 control: XlsIO 
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to show leader lines in .NET Excel Library

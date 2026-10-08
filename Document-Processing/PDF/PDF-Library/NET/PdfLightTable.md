@@ -4,6 +4,7 @@ description: Learn how to create tables in PDF with built-in styles, pagination,
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # PdfLightTable in .NET PDF Library

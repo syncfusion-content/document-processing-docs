@@ -4,6 +4,7 @@ description: This section illustrates how to work with Content Controls in Word 
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Content Controls in Java Word

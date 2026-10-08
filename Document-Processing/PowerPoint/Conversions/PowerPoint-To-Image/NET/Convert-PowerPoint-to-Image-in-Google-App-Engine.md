@@ -4,6 +4,7 @@ description: Convert PPTX to image in Google App Engine using .NET Core PowerPoi
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert PowerPoint Presentation to Image in Google App Engine

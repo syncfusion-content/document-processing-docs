@@ -6,6 +6,7 @@ platform: document-processing
 control: Move selection to specific position 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Move Selection to a Position in Angular DOCX Editor

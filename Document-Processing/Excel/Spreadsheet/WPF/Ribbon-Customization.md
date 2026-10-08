@@ -5,6 +5,7 @@ description: Personalize the WPF Spreadsheet control by customizing ribbon tabs,
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Ribbon Customization in WPF Spreadsheet

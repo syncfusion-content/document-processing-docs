@@ -4,6 +4,7 @@ description: Convert PPTX to image in Azure App Service on Linux using .NET Core
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert PowerPoint Presentation to Image in Azure App Service on Linux

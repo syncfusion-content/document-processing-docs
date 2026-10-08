@@ -4,6 +4,7 @@ description: Convert PPTX to PDF in Azure Functions v1 using .NET PowerPoint lib
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert PowerPoint Presentation to PDF in Azure Functions v1

@@ -5,6 +5,7 @@ description: Learn about configuring ASP.NET Core web services for open and save
 control: Web Services 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Connecting Web Services for Spreadsheet Open and Save in ASP.NET Core

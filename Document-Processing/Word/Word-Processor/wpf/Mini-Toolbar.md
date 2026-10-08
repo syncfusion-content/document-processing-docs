@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: mini-toolbar,context-menu,formatting,floating-toolbar
+appliesto: DOCX Editor SDK
 ---
 # Mini Toolbar in WPF DOCX Editor
 

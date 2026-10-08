@@ -5,6 +5,7 @@ description: The page layout and scrolling feature in SfPdfViewer enables users 
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Page Layout and Scrolling Options in Flutter PDF Viewer

@@ -5,6 +5,7 @@ description: Add each PDF form field using the React PDF Viewer UI, and learn ho
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Create Form Fields in React PDF Viewer

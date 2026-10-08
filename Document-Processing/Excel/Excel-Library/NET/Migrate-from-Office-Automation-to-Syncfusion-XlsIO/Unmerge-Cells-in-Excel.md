@@ -4,6 +4,7 @@ description: Programmatically unmerge cells in Excel using Interop and Syncfusio
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Unmerging Cells in .NET Excel Library

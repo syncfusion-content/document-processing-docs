@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Programmatic Support for Organize Pages in ASP.NET Core PDF Viewer

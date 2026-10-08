@@ -6,6 +6,7 @@ platform: document-processing
 control: Web services 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Web Services in Syncfusion TypeScript DOCX Editor Control

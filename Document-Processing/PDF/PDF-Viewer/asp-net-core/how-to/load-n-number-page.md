@@ -5,6 +5,7 @@ description: Load a specific number of pages during the initial render of the AS
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Load Pages on Initial Load in ASP.NET Core PDF Viewer

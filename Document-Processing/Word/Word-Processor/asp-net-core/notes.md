@@ -5,6 +5,7 @@ description: The footnote and endnote support in ASP.NET Core DOCX Editor enable
 platform: document-processing
 control: Notes
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

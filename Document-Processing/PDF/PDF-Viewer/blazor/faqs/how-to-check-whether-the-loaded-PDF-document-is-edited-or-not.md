@@ -5,6 +5,7 @@ description: Learn how to check whether a loaded PDF is edited using the IsDocum
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Check document editing status in Blazor PDF Viewer

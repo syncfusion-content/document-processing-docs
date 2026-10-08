@@ -4,6 +4,7 @@ description: Row height and column width units describes the default measurement
 platform: document-processing 
 control: XlsIO 
 documentation: UG 
+appliesto: Document SDK
 --- 
 
 # Row Height and Column Width Units in .NET Excel Library

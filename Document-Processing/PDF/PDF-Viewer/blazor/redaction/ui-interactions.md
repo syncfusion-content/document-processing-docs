@@ -5,6 +5,7 @@ description: Learn about UI interactions in Redaction annotation of the Blazor P
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Redaction UI interactions in Blazor PDF Viewer

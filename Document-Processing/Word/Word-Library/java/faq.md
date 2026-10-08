@@ -4,6 +4,7 @@ description: Describe common questions and answers about using the Syncfusion Ja
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 # FAQ Section in Java Word
 

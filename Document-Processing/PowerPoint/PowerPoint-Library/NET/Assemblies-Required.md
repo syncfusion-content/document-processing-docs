@@ -5,6 +5,7 @@ platform: document-processing
 control: Presentation
 documentation: UG
 keywords: Assemblies
+appliesto: Document SDK
 ---
 # Assemblies Required for .NET PowerPoint Presentation
 

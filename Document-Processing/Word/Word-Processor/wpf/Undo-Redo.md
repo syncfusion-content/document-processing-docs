@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: undo-redo,history,undo,redo,editor-settings,is-undo-enabled
+appliesto: DOCX Editor SDK
 ---
 # Undo Redo in WPF DOCX Editor
 

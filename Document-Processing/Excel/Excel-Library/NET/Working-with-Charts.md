@@ -4,6 +4,7 @@ description: Excel charts section describes how the Syncfusion .NET Excel Librar
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Charts in .NET Excel Library
 

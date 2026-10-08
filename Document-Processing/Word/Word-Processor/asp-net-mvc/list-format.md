@@ -5,6 +5,7 @@ description: The list format feature in ASP.NET MVC DOCX Editor enables users to
 platform: document-processing
 control: List Format
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

@@ -4,6 +4,7 @@ description: Explore the performance benchmark results of PowerPoint to PDF conv
 platform: document-processing
 control: Presentation
 documentation: UG
+appliesto: Document SDK
 ---
 
 # PowerPoint to PDF Performance Metrics

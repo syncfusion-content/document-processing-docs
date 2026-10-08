@@ -6,6 +6,7 @@ platform: document-processing
 control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Text selection API and events in Blazor PDF Viewer

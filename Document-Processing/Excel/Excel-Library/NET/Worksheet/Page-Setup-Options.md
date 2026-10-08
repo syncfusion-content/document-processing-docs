@@ -4,6 +4,7 @@ description: Use various page setup options in Excel worksheets using the Syncfu
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Page Setup Options in .NET Excel Library

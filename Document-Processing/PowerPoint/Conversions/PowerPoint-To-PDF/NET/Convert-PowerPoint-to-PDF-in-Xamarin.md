@@ -4,6 +4,7 @@ description: Convert PowerPoint to PDF in Xamarin using Xamarin PowerPoint libra
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert PowerPoint to PDF in Xamarin

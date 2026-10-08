@@ -6,6 +6,7 @@ platform: document-processing
 control: Load PDF From AAD
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # From Azure Active Directory in Angular PDF Viewer

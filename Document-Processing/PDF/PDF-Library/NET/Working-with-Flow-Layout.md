@@ -4,6 +4,7 @@ description: Learn how to create PDF documents using the flow layout model with 
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Flow Layout in .NET PDF Library
 

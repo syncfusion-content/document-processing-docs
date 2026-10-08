@@ -4,6 +4,7 @@ description: Copy a range from one Excel workbook to another using the Syncfusio
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to copy ranges between workbooks in .NET Excel Library

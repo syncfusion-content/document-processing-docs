@@ -4,6 +4,7 @@ description: Handle leading and trailing spaces explains how to use spaces in Ex
 platform: document-processing 
 control: XlsIO 
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to handle spaces in cell values in .NET Excel Library

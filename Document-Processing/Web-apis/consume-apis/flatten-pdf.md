@@ -4,6 +4,7 @@ description: Flatten annotations, form fields, and signatures to secure PDF cont
 platform: document-processing
 control: general
 documentation: UG
+appliesto: Document SDK
 ---
 # Flattening PDFs Using Syncfusion Web API 
 

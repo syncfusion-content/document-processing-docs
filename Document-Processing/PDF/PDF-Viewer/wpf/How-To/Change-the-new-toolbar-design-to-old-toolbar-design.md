@@ -5,6 +5,7 @@ description: Change from new to old toolbar design in Syncfusion WPF PDF Viewer 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Changing the toolbar design in WPF Pdf Viewer

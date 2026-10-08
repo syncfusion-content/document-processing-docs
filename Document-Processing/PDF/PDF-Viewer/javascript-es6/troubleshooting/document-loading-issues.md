@@ -5,6 +5,7 @@ description: Resolve document loading issues in the JavaScript (ES6) PDF Viewer 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Troubleshoot Document Load Issues in TypeScript PDF Viewer v23.1+

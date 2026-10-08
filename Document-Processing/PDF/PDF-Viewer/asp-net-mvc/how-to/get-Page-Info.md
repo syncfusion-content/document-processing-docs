@@ -5,6 +5,7 @@ description: Retrieve page height, width, and rotation in the ASP.NET MVC PDF Vi
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Get Page Info in ASP.NET MVC PDF Viewer
