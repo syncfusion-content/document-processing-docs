@@ -80,26 +80,6 @@ Install the Syncfusion React PDF Viewer package from npm:
 npm install @syncfusion/ej2-react-pdfviewer --save
 ```
 
-## Add the PDF Viewer Runtime Assets
-
-The Syncfusion PDF Viewer depends on a small set of runtime files (`pdfium.js`, `pdfium.wasm`, and the supporting `ej2-pdfviewer-lib` assets). Copy them from the installed package into a folder that Tauri can serve to the web view.
-
-Windows PowerShell:
-
-```powershell
-New-Item -ItemType Directory -Force -Path public\ej2-pdfviewer-lib
-Copy-Item -Path .\node_modules\@syncfusion\ej2-pdfviewer\dist\ej2-pdfviewer-lib\* -Destination .\public\ej2-pdfviewer-lib -Recurse -Force
-```
-
-Unix / macOS (or Git Bash / WSL):
-
-```bash
-mkdir -p public/ej2-pdfviewer-lib
-cp -R ./node_modules/@syncfusion/ej2-pdfviewer/dist/ej2-pdfviewer-lib/* public/ej2-pdfviewer-lib
-```
-
-Confirm `public/ej2-pdfviewer-lib` contains `pdfium.js` and `pdfium.wasm`. Tauri serves the contents of the Vite `public` folder alongside the frontend bundle, so the `resourceUrl` can resolve them as a relative path.
-
 ## Import the Required CSS
 
 Install the Tailwind 3 theme package and add the styles to your global stylesheet. If your project already uses a different Syncfusion theme, replace the import with that theme.
@@ -163,6 +143,20 @@ Tauri compiles the Rust backend, starts the Vite dev server, and opens a native 
 - Annotations
 - Form Fields
 - Form Designer
+
+## Build the Application for Production
+
+Run the following command from the project root to produce a release build of the Tauri desktop app:
+
+```bash
+npm run tauri build
+```
+
+Tauri compiles the Rust backend in release mode, bundles the frontend assets, and outputs platform-specific installers (such as `.msi` on Windows, `.dmg` on macOS, and `.deb`/`.AppImage` on Linux) under `src-tauri/target/release/bundle/`.
+
+## Use with Preact
+
+The same viewer also works in a Tauri app that uses [Preact](https://preactjs.com/) as the frontend, because Preact provides React compatibility through the `preact/compat` shim — no changes to the viewer's code or props are required.
 
 ## See Also
 
