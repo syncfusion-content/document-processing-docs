@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Programmatically Get Differences in TypeScript PDF Viewer
 
-The semantic text comparison feature provides programmatic access to all differences found between two PDF documents. Using the `semanticTextCompare()` method on `PdfViewer`, you can retrieve structured difference data for custom processing, reporting, or integration with other workflows.
+The semantic text comparison feature provides programmatic access to all differences found between two PDF documents. Using the [`semanticTextCompare()`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#semantictextcompare) method on `PdfViewer`, you can retrieve structured difference data for custom processing, reporting, or integration with other workflows.
 
 ## Overview
 
 The comparison provides:
 
-- **Async comparison API** - Use `semanticTextCompare()` to compare documents programmatically
+- **Async comparison API** - Use [`semanticTextCompare()`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#semantictextcompare) to compare documents programmatically
 - **Difference array access** - Get all detected differences with type and content
 - **Structured data** - Each difference contains text, type, location, and page information
 - **Categorized results** - Differences grouped by type (Added, Deleted, Modified)

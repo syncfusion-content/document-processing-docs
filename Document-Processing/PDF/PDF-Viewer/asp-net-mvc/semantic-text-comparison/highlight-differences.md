@@ -23,45 +23,32 @@ When you compare two PDF documents using the semantic text comparison feature, d
 ## Prerequisites
 
 - An MVC application with HTML views
-- CDN ej2.min.js library loaded
+- Syncfusion EJ2 MVC package installed
 - Two PDF documents ready for comparison
 
 ## Steps
 
 ### Step 1: Create the MVC view
 
-Create an MVC view (e.g., `SemanticComparison.cshtml`) and load the Syncfusion library from CDN:
+Create an MVC view (e.g., `SemanticComparison.cshtml`) and add the Syncfusion styles, script references, and the Script Manager at the end of the view:
 
 {% tabs %}
 {% highlight html tabtitle="View.cshtml" %}
 {% raw %}
-<link href="https://cdn.syncfusion.com/ej2/35.1.37/tailwind3.css" rel="stylesheet" />
-<script src="https://cdn.syncfusion.com/ej2/35.1.37/dist/ej2.min.js"></script>
-
 <div id="container">
-    <div id="PdfComparer" style="height:600px;width:100%;"></div>
+    @Html.EJS().PdfComparer("pdfviewer").OriginalDocumentPath("https://cdn.syncfusion.com/content/pdf/original-document.pdf").ModifiedDocumentPath("https://cdn.syncfusion.com/content/pdf/modified-document.pdf").ResourceUrl("https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib").Render()
 </div>
-
-<script src="~/Scripts/comparer.js"></script>
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
 ### Step 2: Initialize the PDF Comparer with default highlighting
 
-Create `comparer.js` with basic default highlighting:
+Render the PDF Comparer with the original and modified document paths:
 
 {% tabs %}
-{% highlight javascript tabtitle="comparer.js" %}
-{% raw %}
-var pdfComparer = new ej.pdfviewer.PdfComparer({
-    originalDocumentPath: 'https://cdn.syncfusion.com/content/pdf/original-document.pdf',
-    modifiedDocumentPath: 'https://cdn.syncfusion.com/content/pdf/modified-document.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib'
-});
-
-pdfComparer.appendTo('#PdfComparer');
-{% endraw %}
+{% highlight csharp tabtitle="View.cshtml" %}
+@Html.EJS().PdfComparer("pdfviewer").OriginalDocumentPath("https://cdn.syncfusion.com/content/pdf/original-document.pdf").ModifiedDocumentPath("https://cdn.syncfusion.com/content/pdf/modified-document.pdf").ResourceUrl("https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib").Render()
 {% endhighlight %}
 {% endtabs %}
 
@@ -70,25 +57,19 @@ pdfComparer.appendTo('#PdfComparer');
 Customize highlighting by setting comparison options:
 
 {% tabs %}
-{% highlight javascript tabtitle="comparer.js" %}
-{% raw %}
-var comparisonOptions = {
-    beforeColor: '#FF0000',
-    afterColor: '#00FF00',
-    beforeColorOpacity: 0.4,
-    afterColorOpacity: 0.4,
-    enableHighlights: true
-};
+{% highlight csharp tabtitle="View.cshtml" %}
+@{
+    PdfViewerTextComparisonOptions comparisonOptions = new PdfViewerTextComparisonOptions()
+    {
+        BeforeColor = "#FF0000",
+        AfterColor = "#00FF00",
+        BeforeColorOpacity = 0.4,
+        AfterColorOpacity = 0.4,
+        EnableHighlights = true
+    };
+}
 
-var pdfComparer = new ej.pdfviewer.PdfComparer({
-    originalDocumentPath: 'https://cdn.syncfusion.com/content/pdf/original-document.pdf',
-    modifiedDocumentPath: 'https://cdn.syncfusion.com/content/pdf/modified-document.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib',
-    comparisonOptions: comparisonOptions
-});
-
-pdfComparer.appendTo('#PdfComparer');
-{% endraw %}
+@Html.EJS().PdfComparer("pdfviewer").OriginalDocumentPath("https://cdn.syncfusion.com/content/pdf/original-document.pdf").ModifiedDocumentPath("https://cdn.syncfusion.com/content/pdf/modified-document.pdf").ResourceUrl("https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib").ComparisonOptions(comparisonOptions).Render()
 {% endhighlight %}
 {% endtabs %}
 
@@ -96,15 +77,15 @@ pdfComparer.appendTo('#PdfComparer');
 
 ### Comparison options
 
-The highlight appearance is controlled by these options in the `comparisonOptions` object:
+The highlight appearance is controlled by these options in the `ComparisonOptions` object:
 
 | Option | Type | Description | Default |
-|--------|------|-------------|---------|
-| `beforeColor` | string | Color for deleted text (hex format) | `#FF0000` |
-| `afterColor` | string | Color for added text (hex format) | `#00FF00` |
-| `beforeColorOpacity` | number | Transparency for deleted (0-1) | `0.4` |
-| `afterColorOpacity` | number | Transparency for added (0-1) | `0.4` |
-| `enableHighlights` | boolean | Enable/disable visual highlighting | `true` |
+|--------|------|-------------|--------|
+| `BeforeColor` | string | Color for deleted text (hex format) | `#FF0000` |
+| `AfterColor` | string | Color for added text (hex format) | `#00FF00` |
+| `BeforeColorOpacity` | number | Transparency for deleted (0-1) | `0.4` |
+| `AfterColorOpacity` | number | Transparency for added (0-1) | `0.4` |
+| `EnableHighlights` | boolean | Enable/disable visual highlighting | `true` |
 
 ### Viewer behavior properties
 
@@ -112,44 +93,26 @@ Control the viewer behavior with these properties:
 
 | Property | Type | Description | Default |
 |----------|------|-------------|---------|
-| `enableDifferencePanel` | boolean | Show/hide sidebar panel displaying detected differences | `true` |
-| `enableSyncScrolling` | boolean | Enable synchronized scrolling, navigation, and magnification between viewers | `true` |
+| `EnableDifferencePanel` | boolean | Show/hide sidebar panel displaying detected differences | `true` |
+| `EnableSyncScrolling` | boolean | Enable synchronized scrolling, navigation, and magnification between viewers | `true` |
 
 ### Control the difference panel
 
-Use the `enableDifferencePanel` property to show or hide the sidebar panel that displays all detected differences:
+Use the `EnableDifferencePanel` property to show or hide the sidebar panel that displays all detected differences:
 
 {% tabs %}
-{% highlight javascript tabtitle="comparer.js" %}
-{% raw %}
-var pdfComparer = new ej.pdfviewer.PdfComparer({
-    originalDocumentPath: 'https://cdn.syncfusion.com/content/pdf/original-document.pdf',
-    modifiedDocumentPath: 'https://cdn.syncfusion.com/content/pdf/modified-document.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib',
-    enableDifferencePanel: false
-});
-
-pdfComparer.appendTo('#PdfComparer');
-{% endraw %}
+{% highlight csharp tabtitle="View.cshtml" %}
+@Html.EJS().PdfComparer("pdfviewer").OriginalDocumentPath("https://cdn.syncfusion.com/content/pdf/original-document.pdf").ModifiedDocumentPath("https://cdn.syncfusion.com/content/pdf/modified-document.pdf").ResourceUrl("https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib").EnableDifferencePanel(false).Render()
 {% endhighlight %}
 {% endtabs %}
 
 ### Control synchronized scrolling and navigation
 
-Use the `enableSyncScrolling` property to control whether the viewers stay synchronized during scrolling, page navigation, and magnification (zoom):
+Use the `EnableSyncScrolling` property to control whether the viewers stay synchronized during scrolling, page navigation, and magnification (zoom):
 
 {% tabs %}
-{% highlight javascript tabtitle="comparer.js" %}
-{% raw %}
-var pdfComparer = new ej.pdfviewer.PdfComparer({
-    originalDocumentPath: 'https://cdn.syncfusion.com/content/pdf/original-document.pdf',
-    modifiedDocumentPath: 'https://cdn.syncfusion.com/content/pdf/modified-document.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib',
-    enableSyncScrolling: false
-});
-
-pdfComparer.appendTo('#PdfComparer');
-{% endraw %}
+{% highlight csharp tabtitle="View.cshtml" %}
+@Html.EJS().PdfComparer("pdfviewer").OriginalDocumentPath("https://cdn.syncfusion.com/content/pdf/original-document.pdf").ModifiedDocumentPath("https://cdn.syncfusion.com/content/pdf/modified-document.pdf").ResourceUrl("https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib").EnableSyncScrolling(false).Render()
 {% endhighlight %}
 {% endtabs %}
 
