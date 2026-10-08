@@ -47,9 +47,9 @@ The following features have some limitations in the Chart:
 * Insert row/delete row between the chart data source will not reflect the chart.
 * Copy/paste into the chart data source will not reflect the chart.
 * Corner resizing option in chart element.
-* Non-contiguous data range support in chart data source.
-* Chart theme changes will not be retained after save and reopen.
-* Custom chart template as default chart style.
+* Non-contiguous data range support is not available in chart data source.
+* Retaining chart theme changes after save and reopen is not supported.
+* Custom chart template as default chart style is not supported.
 
 ## See Also
 * [Images](../illustrations)
