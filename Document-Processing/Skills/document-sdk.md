@@ -22,48 +22,48 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK Skills eliminate c
   </thead>
   <tbody>
     <tr>
-      <td><a href="https://help.syncfusion.com/document-processing/word/word-library/overview">Word (DocIO)</a></td>
+      <td><a href="https://help.syncfusion.com/document-processing/word/word-library/overview" aria-label="Word DocIO library overview">Word (DocIO)</a></td>
       <td>
-        <a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-word">syncfusion-dotnet-word</a><br>
-        <a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-java-word">syncfusion-java-word</a>
+        <a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-word" aria-label="Syncfusion .NET Word skill">syncfusion-dotnet-word</a><br>
+        <a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-java-word" aria-label="Syncfusion Java Word skill">syncfusion-java-word</a>
       </td>
     </tr>
     <tr>
-      <td><a href="https://help.syncfusion.com/document-processing/pdf/pdf-library/overview">PDF</a></td>
+      <td><a href="https://help.syncfusion.com/document-processing/pdf/pdf-library/overview" aria-label="PDF library overview">PDF</a></td>
       <td>
-        <a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-pdf">syncfusion-dotnet-pdf</a><br>
-        <a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-pdf-to-image">syncfusion-dotnet-pdf-to-image</a><br>
-        <a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-flutter-pdf">syncfusion-flutter-pdf</a><br>
-        <a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-javascript-pdf">syncfusion-javascript-pdf</a>
+        <a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-pdf" aria-label="Syncfusion .NET PDF skill">syncfusion-dotnet-pdf</a><br>
+        <a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-pdf-to-image" aria-label="Syncfusion .NET PDF to image skill">syncfusion-dotnet-pdf-to-image</a><br>
+        <a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-flutter-pdf" aria-label="Syncfusion Flutter PDF skill">syncfusion-flutter-pdf</a><br>
+        <a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-javascript-pdf" aria-label="Syncfusion JavaScript PDF skill">syncfusion-javascript-pdf</a>
       </td>
     </tr>
     <tr>
-      <td><a href="https://help.syncfusion.com/document-processing/excel/excel-library/overview">Excel (XlsIO)</a></td>
+      <td><a href="https://help.syncfusion.com/document-processing/excel/excel-library/overview" aria-label="Excel XlsIO library overview">Excel (XlsIO)</a></td>
       <td>
-        <a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-excel">syncfusion-dotnet-excel</a><br>
-        <a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-flutter-excel">syncfusion-flutter-excel</a>
-        <a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-javascript-excel">syncfusion-javascript-excel</a>
+        <a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-excel" aria-label="Syncfusion .NET Excel skill">syncfusion-dotnet-excel</a><br>
+        <a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-flutter-excel" aria-label="Syncfusion Flutter Excel skill">syncfusion-flutter-excel</a>
+        <a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-javascript-excel" aria-label="Syncfusion JavaScript Excel skill">syncfusion-javascript-excel</a>
       </td>
     </tr>
     <tr>
-      <td><a href="https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/overview">PowerPoint (Presentation)</a></td>
-      <td><a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-powerpoint">syncfusion-dotnet-powerpoint</a></td>
+      <td><a href="https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/overview" aria-label="PowerPoint Presentation library overview">PowerPoint (Presentation)</a></td>
+      <td><a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-powerpoint" aria-label="Syncfusion .NET PowerPoint skill">syncfusion-dotnet-powerpoint</a></td>
     </tr>
     <tr>
-      <td><a href="https://help.syncfusion.com/document-processing/word/word-library/net/convert-markdown-to-word-document-in-csharp">Markdown</a></td>
-      <td><a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-markdown">syncfusion-dotnet-markdown</a></td>
+      <td><a href="https://help.syncfusion.com/document-processing/word/word-library/net/convert-markdown-to-word-document-in-csharp" aria-label="Markdown library overview">Markdown</a></td>
+      <td><a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-markdown" aria-label="Syncfusion .NET Markdown skill">syncfusion-dotnet-markdown</a></td>
     </tr>
      <tr>
-      <td><a href="https://help.syncfusion.com/document-processing/document-chunking-library/overview">Document Chunking</a></td>
-      <td><a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-document-chunking">syncfusion-dotnet-document-chunking</a></td>
+      <td><a href="https://help.syncfusion.com/document-processing/document-chunking-library/overview" aria-label="Document Chunking library overview">Document Chunking</a></td>
+      <td><a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-document-chunking" aria-label="Syncfusion .NET Document Chunking skill">syncfusion-dotnet-document-chunking</a></td>
     </tr>
     <tr>
-      <td><a href="https://help.syncfusion.com/document-processing/data-extraction/overview">Smart Data Extraction</a></td>
-      <td><a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-smart-data-extraction">syncfusion-dotnet-smart-data-extraction</a></td>
+      <td><a href="https://help.syncfusion.com/document-processing/data-extraction/overview" aria-label="Smart Data Extraction library overview">Smart Data Extraction</a></td>
+      <td><a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-smart-data-extraction" aria-label="Syncfusion .NET Smart Data Extraction skill">syncfusion-dotnet-smart-data-extraction</a></td>
     </tr>
     <tr>
-      <td><a href="https://help.syncfusion.com/windowsforms/calculation-engine/overview">Calculate</a></td>
-      <td><a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-calculate">syncfusion-dotnet-calculate</a></td>
+      <td><a href="https://help.syncfusion.com/windowsforms/calculation-engine/overview" aria-label="Calculate library overview">Calculate</a></td>
+      <td><a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-calculate" aria-label="Syncfusion .NET Calculate skill">syncfusion-dotnet-calculate</a></td>
     </tr>
   </tbody>
 </table>
