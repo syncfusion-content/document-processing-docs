@@ -802,5 +802,5 @@ View the complete custom toolbar implementation in action: [PDF Viewer Custom To
 
 ## See also
 
-* [Toolbar customization](./how-to/toolbar-customization)
+* [Toolbar customization](./toolbar-customization/custom-toolbar)
 * [Feature Modules](./feature-module)
