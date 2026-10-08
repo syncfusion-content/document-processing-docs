@@ -20,7 +20,7 @@ A Word document is a tree of text bodies. The following element types are encoun
 * **Paragraph**: the primary block-level element. A paragraph holds an ordered list of paragraph items.
 * **Table**: a collection of rows and cells; each cell is itself a text body.
 * **Block content control**: a structured document tag (SDT) that wraps a text body.
-* **Paragraph items**: the in-line children of a paragraph: `TextRange`, `Field` (with the `Hyperlink` facade), `Shape` (including text boxes), and `InlineContentControl`.
+* **Paragraph items**: the in-line children of a paragraph: `TextRange`, `Field` (with the `Hyperlink` facade), `Shape`, and `InlineContentControl`.
 
 The following examples use `@syncfusion/ej2-docx` to walk the document and apply changes at each level. Each helper is shown in its own tab so it can be copied independently.
 
