@@ -176,7 +176,7 @@ Tauri compiles the Rust back end in release mode, bundles the frontend assets, a
 
 ## Use with Preact
 
-The same viewer also works in a Tauri app that uses [Preact](https://preactjs.com/) as the frontend, because Preact provides React compatibility through the `preact/compact` shim — no changes to the viewer's code or props are required.
+The same viewer also works in a Tauri app that uses [Preact](https://preactjs.com/) as the frontend, because Preact provides React compatibility.
 
 ## See Also
 
