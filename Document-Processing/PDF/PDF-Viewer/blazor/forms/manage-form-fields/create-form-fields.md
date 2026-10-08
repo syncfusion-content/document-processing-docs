@@ -553,5 +553,5 @@ N> For a hands-on reference with working code examples, explore the sample proje
 - [Style form fields](./customize-form-fields)
 - [Remove form fields](./remove-form-fields)
 - [Group form fields](../group-form-fields)
-- [Form validation](../form-validation)
+- [Form validation](../forms/overview)
 - [Form Fields API](../form-fields-api)

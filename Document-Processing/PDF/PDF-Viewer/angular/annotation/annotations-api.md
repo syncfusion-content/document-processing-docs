@@ -3079,6 +3079,6 @@ export class AppComponent {
 - [Customize Annotation](../../annotation/customize-annotation)
 - [Remove Annotation](../../annotation/delete-annotation)
 - [Handwritten Signature](../../annotation/signature-annotation)
-- [Export and Import Annotation](../../annotation/export-import/export-annotation)
+- [Export and Import Annotation](../../annotation/import-export-annotation)
 - [Annotation in Mobile View](../../annotation/annotations-in-mobile-view)
 - [Annotation Events](../../annotation/annotation-event)
