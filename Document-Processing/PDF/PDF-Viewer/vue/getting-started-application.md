@@ -216,7 +216,7 @@ To get started quickly with Vue PDF Viewer, you can watch this video:
 
 ## Tauri Integration
 
-This section explains how to wrap the Vue 3 PDF Viewer in a [Tauri](https://tauri.app/) desktop application. Tauri pairs a Rust-built native shell with a web view (WebView2 on Windows, WebKit on macOS, and WebKitGTK on Linux), so the same Vue code that runs in the browser also runs as a desktop app with full filesystem and dialog access through Tauri plugins.
+This section explains how to wrap the Vue 3 PDF Viewer in a [Tauri](https://tauri.app/) desktop application. Tauri pairs a Rust-built native shell with a web view (WebView2 on Windows, WebKit on macOS, and WebKitGTK on Linux), so the same Vue code that runs in the browser also runs as a desktop app with full filesystem and dialog access through Tauri plugin.
 
 ## Prerequisites
 
@@ -224,7 +224,7 @@ Before creating the Tauri application, ensure the following software is installe
 
 - [Node.js 22+](https://nodejs.org/en/download) (LTS recommended)
 - A package manager: `npm`, `yarn`, or `pnpm`
-- [Rust toolchain](https://tauri.app/start/prerequisites/#rust) (install via [rustup](https://rust-lang.org/tools/install/))
+- [Rust tool chain](https://tauri.app/start/prerequisites/#rust) (install via [rust up](https://rust-lang.org/tools/install/))
 - Platform-specific Tauri prerequisites (see the [Tauri prerequisites](https://tauri.app/start/prerequisites/) page for Windows / macOS / Linux requirements such as WebView2, Xcode Command Line Tools, or `webkit2gtk-4.1`)
 
 References:
@@ -241,7 +241,7 @@ node -v
 
 ## Create a Tauri Project
 
-Tauri ships a project scaffolder that creates a desktop shell around a frontend framework. The official scaffolder is interactive, so the prompts vary by tool. Run the following command to start the scaffolder:
+Tauri ships a project scaffold that creates a desktop shell around a frontend framework. The official scaffold is interactive, so the prompts vary by tool. Run the following command to start the scaffold:
 
 ```bash
 npm create tauri-app@latest
@@ -265,7 +265,7 @@ Vue
 
 > Note: The exact wording of the prompts depends on the installed version of `create-tauri-app`. Pick **Vue** as the UI template and **TypeScript** as the flavor. The example below assumes a TypeScript Vue 3 + Vite project.
 
-After the scaffolder finishes, install the dependencies and verify the project builds:
+After the scaffold finishes, install the dependencies and verify the project builds:
 
 ```bash
 cd tauri-vue-pdfviewer
@@ -273,7 +273,7 @@ npm install
 npm run tauri dev
 ```
 
-> The first run of `npm run tauri dev` compiles the Rust backend, which may take a few minutes. Subsequent runs are much faster.
+> The first run of `npm run tauri dev` compiles the Rust back end, which may take a few minutes. Subsequent runs are much faster.
 
 ## Install Syncfusion Vue PDF Viewer
 
@@ -347,7 +347,7 @@ Run the following command from the project root to launch the Tauri desktop app 
 npm run tauri dev
 ```
 
-Tauri compiles the Rust backend, starts the Vue dev server, and opens a native window. The Vue PDF Viewer loads with the following modules enabled:
+Tauri compiles the Rust back end, starts the Vue dev server, and opens a native window. The Vue PDF Viewer loads with the following modules enabled:
 
 - Toolbar
 - Navigation
@@ -367,7 +367,7 @@ Run the following command from the project root to produce a release build of th
 npm run tauri build
 ```
 
-Tauri compiles the Rust backend in release mode, bundles the frontend assets, and outputs platform-specific installers (such as `.msi` on Windows, `.dmg` on macOS, and `.deb`/`.AppImage` on Linux) under `src-tauri/target/release/bundle/`.
+Tauri compiles the Rust back end in release mode, bundles the frontend assets, and outputs platform-specific installers (such as `.msi` on Windows, `.dmg` on macOS, and `.deb`/`.AppImage` on Linux) under `src-tauri/target/release/bundle/`.
 
 ## See also
 
