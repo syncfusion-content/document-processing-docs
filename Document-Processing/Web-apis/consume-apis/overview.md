@@ -4,6 +4,7 @@ description: Learn about overview of consuming Syncfusion Document Processing We
 platform: document-processing
 control: general
 documentation: UG
+appliesto: Document SDK
 ---
 # About Consuming Syncfusion Document Processing Web APIs
 

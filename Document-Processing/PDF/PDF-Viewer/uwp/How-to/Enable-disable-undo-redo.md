@@ -5,6 +5,7 @@ description: Learn how to support to disable the undo and redo operations in Syn
 platform: document-processing
 control: PDF viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Support disable undo and redo in UWP PDF Viewer

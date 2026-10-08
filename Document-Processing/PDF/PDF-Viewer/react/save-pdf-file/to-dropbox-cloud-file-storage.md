@@ -5,6 +5,7 @@ description: Save PDF files from the React PDF Viewer to Dropbox using standalon
 control: PDF Viewer
 platform: document-processing
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Save PDF Files to Dropbox in React PDF Viewer

@@ -4,6 +4,7 @@ description: Azure App Service on Linux Excel to Image section explains how to c
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Excel to Image Conversion in Azure Linux using Excel Library

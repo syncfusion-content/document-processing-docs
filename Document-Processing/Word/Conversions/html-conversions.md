@@ -4,6 +4,7 @@ description: Learn how to convert Word document to HTML file and vice versa usin
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert Word to HTML and vice versa in .NET Word

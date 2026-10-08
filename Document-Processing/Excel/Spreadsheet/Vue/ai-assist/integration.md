@@ -5,6 +5,7 @@ description: AI Assist integration in Vue Spreadsheet explains AI-powered featur
 platform: document-processing
 control: AI Assist
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # AI Assist Integration in Vue Spreadsheet

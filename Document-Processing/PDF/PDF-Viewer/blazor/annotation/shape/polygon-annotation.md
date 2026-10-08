@@ -5,6 +5,7 @@ description: Learn how to add, edit, delete, and programmatically manage polygon
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Polygon Annotation (Shape) in Blazor PDF Viewer 

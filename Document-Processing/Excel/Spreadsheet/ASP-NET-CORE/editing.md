@@ -5,6 +5,7 @@ description: Learn about editing in the Syncfusion ASP.NET Core Spreadsheet cont
 platform: document-processing
 control: Editing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

@@ -4,6 +4,7 @@ description: Learn how to modify the appearance of chart title in a chart in a P
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Chart Title in PowerPoint

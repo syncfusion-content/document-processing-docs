@@ -6,6 +6,7 @@ platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
 keywords: .net maui smart pdf viewer, localization maui, localize smart pdf viewer, maui resx localization
+appliesto: PDF Viewer SDK
 ---
 
 # Localization in .NET MAUI Smart PDF Viewer

@@ -4,6 +4,7 @@ description: Apply wrap text in Excel to fit long text in a single cell using In
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Wrap Text in .NET Excel Library

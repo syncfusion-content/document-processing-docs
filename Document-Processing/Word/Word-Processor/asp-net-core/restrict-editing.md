@@ -5,6 +5,7 @@ description: Restrict editing feature in ASP.NET Core DOCX Editor enables read-o
 platform: document-processing
 control: RestrictEditing
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

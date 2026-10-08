@@ -4,6 +4,7 @@ description: Add barcode images to Excel documents using the Syncfusion .NET Exc
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 # How to add barcodes in .NET Excel Library
 You can embed barcode images into an Excel worksheet using Syncfusion XlsIO. The following code snippets illustrate how to insert barcodes at specified locations and save the workbook.

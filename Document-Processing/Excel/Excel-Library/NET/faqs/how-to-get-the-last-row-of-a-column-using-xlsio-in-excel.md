@@ -4,6 +4,7 @@ description: Find the last row with data in a specific Excel worksheet column us
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to get the last row of a column in .NET Excel Library

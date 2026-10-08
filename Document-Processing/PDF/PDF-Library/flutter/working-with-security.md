@@ -5,6 +5,7 @@ description: Learn how to add encryption and set permissions for secure PDF docu
 platform: document-processing
 control: PDF
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Security in Flutter PDF

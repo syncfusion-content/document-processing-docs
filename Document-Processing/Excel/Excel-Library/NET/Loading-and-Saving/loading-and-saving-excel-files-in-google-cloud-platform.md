@@ -4,6 +4,7 @@ description: GCP Excel file handling section explains how to load and save Excel
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Loading and Saving Files in GCP

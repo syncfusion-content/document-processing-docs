@@ -4,6 +4,7 @@ description: Learn how to add, validate, and remove digital signatures and signa
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Digital signature in .NET Word library
 

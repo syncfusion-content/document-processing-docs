@@ -4,6 +4,7 @@ description: Find and replace text in Excel hyperlinks using the Syncfusion .NET
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to find and replace hyperlinks in .NET Excel Library

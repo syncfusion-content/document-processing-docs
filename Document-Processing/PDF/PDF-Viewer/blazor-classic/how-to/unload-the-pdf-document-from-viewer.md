@@ -5,6 +5,7 @@ description: Learn here all about Unload the PDF document from Viewer in Syncfus
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Unload the PDF document from Viewer in Blazor PDF Viewer 

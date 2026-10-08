@@ -4,6 +4,7 @@ description: Merge several Excel files from more than one workbook into a single
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to merge multiple workbooks in .NET Excel Library

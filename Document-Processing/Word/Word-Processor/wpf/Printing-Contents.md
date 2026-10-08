@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: printing,print-dialog,print-completed,print-comments
+appliesto: DOCX Editor SDK
 ---
 # Printing Contents in WPF DOCX Editor
 

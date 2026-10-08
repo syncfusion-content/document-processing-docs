@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion ASP.NET Core Smart Dat
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Getting Started with ASP.NET Core Smart Data Extractor

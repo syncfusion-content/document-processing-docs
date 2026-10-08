@@ -4,6 +4,7 @@ description: Convert Word to PDF in Console application using .NET Word library 
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert Word to PDF in Console Application

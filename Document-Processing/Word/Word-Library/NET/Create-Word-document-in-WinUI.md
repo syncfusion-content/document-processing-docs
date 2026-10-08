@@ -4,6 +4,7 @@ description: Describe common questions and solutions related to mail merge opera
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Word document in WinUI

@@ -4,6 +4,7 @@ description: Open and save Word document in ASP.NET  Core Web API application
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Open and save Word document in ASP.NET  Core Web API

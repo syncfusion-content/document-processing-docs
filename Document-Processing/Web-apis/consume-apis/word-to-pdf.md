@@ -4,6 +4,7 @@ description: Convert Word documents to highquality PDFs using Syncfusion Web API
 platform: document-processing
 control: general
 documentation: UG
+appliesto: Document SDK
 ---
 # Converting Word to PDF Using Syncfusion Web API 
 

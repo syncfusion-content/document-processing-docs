@@ -6,6 +6,7 @@ control: Dialog
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Dialogs in Vue DOCX Editor

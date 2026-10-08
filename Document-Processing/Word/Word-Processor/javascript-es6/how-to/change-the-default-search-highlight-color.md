@@ -6,6 +6,7 @@ platform: document-processing
 control: Change the Default Search Highlight Color
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Change Search Highlight Color in TypeScript DOCX Editor

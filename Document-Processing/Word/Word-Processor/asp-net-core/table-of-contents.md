@@ -5,6 +5,7 @@ description: The Table of Contents feature in ASP.NET Core DOCX Editor enables u
 platform: document-processing
 control: Table Of Contents
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

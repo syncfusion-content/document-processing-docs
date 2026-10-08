@@ -6,6 +6,7 @@ platform: document-processing
 control: Disable optimized text measuring
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Disable Optimized Text Measuring in Angular DOCX Editor

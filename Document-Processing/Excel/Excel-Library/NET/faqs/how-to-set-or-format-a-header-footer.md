@@ -4,6 +4,7 @@ description: Set or format the header and footer in an Excel document using the 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to set headers and footers in .NET Excel Library

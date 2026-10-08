@@ -5,6 +5,7 @@ description: The Syncfusion®Blazor MCP Server provides setup guidance, integrat
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # MCP Server for Blazor DOCX Editor

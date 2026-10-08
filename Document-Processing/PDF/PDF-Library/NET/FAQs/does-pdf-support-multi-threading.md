@@ -4,6 +4,7 @@ description: Learn about multithreading support and thread-safety capabilities o
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Multithreading in .NET PDF Library

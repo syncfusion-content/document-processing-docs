@@ -4,6 +4,7 @@ description: Learn how to extract text and its bounds from a page or the entire 
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Text Extraction in .NET PDF Library
 

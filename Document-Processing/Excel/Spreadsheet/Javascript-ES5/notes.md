@@ -5,6 +5,7 @@ description: Notes in JavaScript Spreadsheet allow users to add contextual infor
 platform: document-processing
 control: Notes
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

@@ -5,6 +5,7 @@ description: Learn about how to export and import form field data in the Blazor 
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Export and import form field data in Blazor PDF Viewer

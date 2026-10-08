@@ -4,6 +4,7 @@ description: Learn about the FAQs regarding the support of multithreading in Pow
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Frequently asked questions about multithreading in PowerPoint to PDF

@@ -4,6 +4,7 @@ description: Learn how to convert a PPTX to PDF in Google Cloud Platform (GCP) u
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert PowerPoint Presentation to PDF in Google Cloud Platform (GCP)

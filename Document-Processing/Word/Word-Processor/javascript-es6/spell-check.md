@@ -6,6 +6,7 @@ platform: document-processing
 control: Spell check 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Spell Check in TypeScript DOCX Editor

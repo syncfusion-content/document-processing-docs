@@ -5,6 +5,7 @@ description: Learn here all about Hyperlink Navigation support in Syncfusion<sup
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Hyperlink Navigation in Xamarin Pdf Viewer

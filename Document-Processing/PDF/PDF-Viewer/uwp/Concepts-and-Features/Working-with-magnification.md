@@ -5,6 +5,7 @@ description: Learn here all about Working with magnification support in Syncfusi
 platform: document-processing
 control: PDF viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Working with magnification in UWP PDF Viewer

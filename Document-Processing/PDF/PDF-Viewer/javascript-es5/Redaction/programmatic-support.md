@@ -5,6 +5,7 @@ description: Use the programmatic APIs for Organize Pages in the JavaScript (ES5
 platform: document-processing
 control: PdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Programmatic Support for Organize Pages in JavaScript (ES5) PDF Viewer

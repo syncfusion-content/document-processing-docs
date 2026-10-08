@@ -5,6 +5,7 @@ description: Access worksheets, grids, and associated events in the  UWP Spreads
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Working with Spreadsheet in UWP Spreadsheet 

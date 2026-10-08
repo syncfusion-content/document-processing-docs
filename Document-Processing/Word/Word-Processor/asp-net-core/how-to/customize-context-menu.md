@@ -5,6 +5,7 @@ description: Customize the context menu in Syncfusion® ASP .NET Core DOCX Edito
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

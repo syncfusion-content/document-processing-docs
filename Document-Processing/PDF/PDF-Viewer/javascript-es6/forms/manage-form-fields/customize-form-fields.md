@@ -5,6 +5,7 @@ description: Style PDF form fields in the JavaScript (ES6) PDF Viewer by configu
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Customize Form Field Appearance in JavaScript (ES6) PDF Viewer

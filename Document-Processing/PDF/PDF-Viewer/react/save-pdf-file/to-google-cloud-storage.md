@@ -5,6 +5,7 @@ description: Save PDF files from the React PDF Viewer to Google Cloud Storage us
 control: PDF Viewer
 platform: document-processing
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Save PDF Files to Google Cloud Storage in React PDF Viewer

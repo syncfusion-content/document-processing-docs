@@ -6,6 +6,7 @@ platform: document-processing
 control: Restrict editing 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Restrict Editing in JavaScript DOCX Editor

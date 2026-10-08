@@ -5,6 +5,7 @@ description: Customize spreadsheet cells with templates in the Syncfusion ASP.NE
 platform: document-processing
 control: Template
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

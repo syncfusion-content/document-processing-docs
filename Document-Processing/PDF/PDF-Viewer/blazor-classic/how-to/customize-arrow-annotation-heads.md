@@ -5,6 +5,7 @@ description: Learn here all about how to increase the connection buffer size in 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Customize arrow heads in Blazor PDF Viewer Classic

@@ -5,6 +5,7 @@ description: Learn about single page view mode support in Syncfusion<sup>®</sup
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Single page view mode in PDF Viewer Xamarin.Android

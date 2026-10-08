@@ -5,6 +5,7 @@ platform: document-processing
 control: PDF to image
 documentation: UG
 keywords: PDF to Image, PdfToImageConverter, Convert method
+appliesto: Document SDK
 ---
 
 # Convert PDF to Image

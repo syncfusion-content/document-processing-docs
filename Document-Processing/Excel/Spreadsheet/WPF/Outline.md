@@ -5,6 +5,7 @@ description: Group and ungroup rows and columns in the WPF Spreadsheet control u
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Outlines in WPF Spreadsheet

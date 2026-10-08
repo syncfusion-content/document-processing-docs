@@ -5,6 +5,7 @@ description: Cell range in Angular Spreadsheet enables selecting, accessing, and
 platform: document-processing
 control: Cell range
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Cell Range in Angular Spreadsheet 

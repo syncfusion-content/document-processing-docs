@@ -5,6 +5,7 @@ description: Customize the Organize Pages toolbar in the Vue PDF Viewer to show,
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Customize the Organize Pages Toolbar in Vue PDF Viewer

@@ -5,6 +5,7 @@ description: The ink annotation feature in WPF PDF Viewer enables freehand drawi
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Ink Annotation in WPF Pdf Viewer

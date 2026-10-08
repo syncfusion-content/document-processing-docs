@@ -6,6 +6,7 @@ control: Unsupported file
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Supported File Formats in Angular DOCX Editor

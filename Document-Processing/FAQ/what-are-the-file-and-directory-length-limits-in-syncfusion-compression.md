@@ -4,6 +4,7 @@ description: Describes supported file and directory name length limits in Syncfu
 platform: document-processing
 control: Compression
 documentation: UG
+appliesto: Document SDK
 ---
 
 # What are the File and directory name length limits in Compression?

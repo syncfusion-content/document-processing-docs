@@ -4,6 +4,7 @@ description: Get the RGB color value for the applied cell color in an Excel docu
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to get RGB cell colors in .NET Excel Library

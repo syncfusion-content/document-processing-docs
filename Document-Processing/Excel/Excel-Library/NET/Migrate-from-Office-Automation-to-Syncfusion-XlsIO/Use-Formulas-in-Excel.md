@@ -4,6 +4,7 @@ description: Use formulas and predefined functions in Excel worksheets using Int
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Formulas in .NET Excel Library

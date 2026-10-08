@@ -4,6 +4,7 @@ description: Merge multiple PDF files into a single structured document with pre
 platform: document-processing
 control: general
 documentation: UG
+appliesto: Document SDK
 ---
 # Merging PDFs Using Syncfusion WEB API 
 

@@ -5,6 +5,7 @@ description: Create custom formulas in Windows Forms Spreadsheet to calculate wo
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Custom Formula in Windows Forms Spreadsheet
