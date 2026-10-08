@@ -28,21 +28,31 @@ References:
 
 Verify the installed versions:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="CLI" %}
+
 node -v
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Create a Tauri Project
 
 Tauri ships a project scaffold that creates a desktop shell around a frontend framework. The official scaffold is interactive, so the prompts vary by tool. Run the following command to start the scaffold:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
 npm create tauri-app@latest
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Choose the following options when prompted:
 
-```
+{% tabs %}
+{% highlight bash tabtitle="CMD" %}
+
 Project name:
 tauri-vue-pdfviewer
 
@@ -54,38 +64,58 @@ npm
 
 Choose your UI template:
 Vue
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 > Note: The exact wording of the prompts depends on the installed version of `create-tauri-app`. Pick **Vue** as the UI template and **TypeScript** (or JavaScript) as the flavor. The example below assumes a TypeScript Vue + Vite project.
 
 After the scaffold finishes, install the dependencies and verify the project builds:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
 cd tauri-vue-pdfviewer
 npm install
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Install Syncfusion Vue PDF Viewer
 
 Install the Syncfusion Vue PDF Viewer package from npm:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
 npm install @syncfusion/ej2-vue-pdfviewer --save
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Import the Required CSS
 
 Install the Tailwind 3 theme package and add the styles to your global stylesheet. If your project already uses a different Syncfusion theme, replace the import with that theme.
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
 npm install @syncfusion/ej2-tailwind3-theme
-```
 
-The required PDF Viewer theme styles are imported into the <style> section of the `src/App.vue` file:
+{% endhighlight %}
+{% endtabs %}
 
-```css
-@import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/pdfviewer/index.css';
-```
+The required PDF Viewer theme styles are imported into the `<style>` section of the `src/App.vue` file:
+
+{% tabs %}
+{% highlight html tabtitle="App.vue" %}
+
+<style>
+  @import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/pdfviewer/index.css';
+</style>
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Add the Syncfusion Vue PDF Viewer
 
@@ -133,17 +163,25 @@ export default {
 
 Run the following command from the project root to launch the Tauri desktop app in development mode:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
 npm run tauri dev
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Build the Application for Production
 
 Run the following command from the project root to produce a release build of the Tauri desktop app:
 
-```bash
+{% tabs %}
+{% highlight bash tabtitle="npm" %}
+
 npm run tauri build
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Tauri compiles the Rust back end in release mode, bundles the frontend assets, and outputs platform-specific installers (such as `.msi` on Windows, `.dmg` on macOS, and `.deb`/`.AppImage` on Linux) under `src-tauri/target/release/bundle/`.
 
