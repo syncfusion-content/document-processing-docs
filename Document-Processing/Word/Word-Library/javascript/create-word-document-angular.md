@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with JavaScript Word in Angular app | Syncfusion
-description: Learn how to get started with the Syncfusion JavaScript Word Library in Angular application. Easy steps to create Word documents without depending on Microsoft Office.
+description: Learn how to get started with the Syncfusion JavaScript Word Library in Angular application. Steps to create Word documents without depending on Ms Office.
 platform: document-processing
 control: Word
 documentation: ug
