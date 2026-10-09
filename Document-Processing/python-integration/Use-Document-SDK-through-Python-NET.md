@@ -1,7 +1,7 @@
 ---
-title: Use Syncfusion Document Processing in Python with Python.NET | Syncfusion
+title: Use Document Processing in Python with Python.NET
 description: Learn how to use Syncfusion Document Processing libraries in-process from Python with Python.NET and the published DocumentBridge assembly.
-platform: python
+platform: document-processing
 documentation: UG
 ---
 
@@ -13,7 +13,7 @@ Use the **Python.NET** approach when you want direct in-process calls from Pytho
 
 Ensure the following prerequisites are installed:
 
-* **[.NET 10.0 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)** (LTS). Earlier LTS releases (8.0 and 9.0) are also supported.
+* **[.NET 10.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)** (LTS). Earlier LTS releases (8.0 and 9.0) are also supported.
 * **[Python 3.9 or later](https://www.python.org/downloads/)** (CPython distribution recommended).
 * **[pythonnet](https://pypi.org/project/pythonnet/)** installed in the active Python environment.
 * An active [Syncfusion&reg; license key](https://www.syncfusion.com/sales/communitylicense) (a free 30-day trial is available).
@@ -269,7 +269,7 @@ public static class DocumentCreator
 
 ## Step 5: Publish the Class Library
 
-Publish the class library to an `artifacts` folder. The Python wrapper loads the published DLL and its `DocumentBridge.runtimeconfig.json` at runtime.
+Publish the class library to an `artifacts` folder. The Python wrapper loads the published DLL and the generated runtime configuration file at runtime.
 
 {% tabs %}
 {% highlight bash tabtitle="Windows" %}
@@ -512,7 +512,7 @@ N> The first call may take a few seconds while CoreCLR loads.
 
 ## See Also
 
-* [Syncfusion Document Processing .NET Documentation](https://help.syncfusion.com/document-processing/overview)
+* [Syncfusion Document Processing .NET Documentation](https://help.syncfusion.com/document-processing)
 * [Local .NET Worker Integration](Use-Document-SDK-through-Local-NET-Worker.md)
 * [Runnable sample on GitHub](https://github.com/SyncfusionExamples/python-syncfusion-document-sdk-samples)
 * [Syncfusion Licensing Overview](https://help.syncfusion.com/common/essential-studio/licensing/overview)

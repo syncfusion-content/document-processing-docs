@@ -1,7 +1,7 @@
 ---
-title: Use Syncfusion Document Processing in Python with a Local .NET Worker | Syncfusion
+title: Use Document Processing in Python with a Local .NET Worker
 description: Learn how to run Syncfusion Document Processing from Python through a local .NET worker process with no extra Python packages.
-platform: python
+platform: document-processing
 documentation: UG
 ---
 
@@ -13,7 +13,7 @@ Use the **Local .NET Worker** approach when you want Python to start a published
 
 Ensure the following prerequisites are installed:
 
-* **[.NET 10.0 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)** (LTS). Earlier LTS releases (8.0 and 9.0) are also supported.
+* **[.NET 10.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)** (LTS). Earlier LTS releases (8.0 and 9.0) are also supported.
 * **[Python 3.9 or later](https://www.python.org/downloads/)** (CPython distribution recommended).
 * **No additional pip packages** - the worker uses Python's built-in `subprocess` and `json` modules.
 * An active [Syncfusion&reg; license key](https://www.syncfusion.com/sales/communitylicense) (a free 30-day trial is available).
@@ -622,7 +622,7 @@ N> The first run may take a few seconds while the .NET runtime loads.
 
 ## See Also
 
-* [Syncfusion Document Processing .NET Documentation](https://help.syncfusion.com/document-processing/overview)
+* [Syncfusion Document Processing .NET Documentation](https://help.syncfusion.com/document-processing)
 * [Python.NET Wrapper Integration](Use-Document-SDK-through-Python-NET.md)
 * [Runnable sample on GitHub](https://github.com/SyncfusionExamples/python-syncfusion-document-sdk-samples)
 * [Syncfusion Licensing Overview](https://help.syncfusion.com/common/essential-studio/licensing/overview)
