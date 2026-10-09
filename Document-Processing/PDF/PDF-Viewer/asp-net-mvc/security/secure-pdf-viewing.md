@@ -36,7 +36,7 @@ This section outlines common security controls and how they interact with the vi
 
 - Client vs server enforcement: Client-side settings that disable print in the viewer improve user experience but are not a security boundary. True protection requires server-side changes that actually enforce the restrictions (encryption, permissions, redaction).
 
-- Usability vs. security: Heavy sanitization and strong encryption can break some workflows (search, form interactivity). Choose operations appropriate to the document life cycle.
+- Usability vs. security: Heavy sanitation and strong encryption can break some workflows (search, form interactivity). Choose operations appropriate to the document life cycle.
 
 - Irreversible redaction: Redaction is irreversible, so keep originals securely archived if needed for audit.
 
