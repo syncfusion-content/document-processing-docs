@@ -1,0 +1,103 @@
+---
+layout: post
+title: Clipboard in JavaScript Spreadsheet | Syncfusion
+description: Clipboard in JavaScript Spreadsheet enables copying, cutting, and pasting cell data efficiently while preserving formatting and content.
+platform: document-processing
+control: Clipboard
+documentation: ug
+---
+
+# Clipboard in JavaScript Spreadsheet 
+
+The Spreadsheet provides support for the clipboard operations (cut, copy, and paste). Clipboard operations can be enabled or disabled by setting the [`enableClipboard`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#enableclipboard) property in Spreadsheet.
+ 
+> The default value for `enableClipboard` property is `true`.
+
+## Cut
+
+It is used to cut the data from selected range of cells, rows or columns in a spreadsheet and make it available in the clipboard.
+
+**User Interface**:
+
+Cut can be performed in one of the following ways.
+
+* Using Cut button in the Ribbon's HOME tab to perform cut operation.
+* Using Cut option in the Context Menu.
+* Using `Ctrl + X` or `Command + X` keyboard shortcut.
+* Using the [`cut`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#cut) method.
+
+## Copy
+
+It is used to copy the data from a selected range of cells, rows, or columns in the Spreadsheet and places it on the clipboard.
+
+**User Interface**:
+
+Copy can be performed in one of the following ways:
+
+* Using Copy button in the Ribbon's HOME tab to perform copy operation.
+* Using Copy option in the Context Menu.
+* Using `Ctrl + C` or `Command + C` keyboard shortcut.
+* Using the [`copy`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#copy) method.
+
+## Paste
+
+It is used to paste the clipboard data to the selected range, rows, or columns. You have the following options in Paste,
+
+* `Paste Special` - You can paste the values with formatting.
+* `Paste` - You can paste only the values without formatting.
+
+It also performs for external clipboard operation. If you perform cut and paste, clipboard data will be cleared, whereas in copy and paste the clipboard contents will be maintained. If you perform paste inside the copied range, the clipboard data will be cleared.
+
+**User Interface**:
+
+Paste can be performed in one of the following ways:
+
+* Using Paste button in the Ribbon's HOME tab to perform paste operation.
+* Using Paste option in the Context Menu.
+* Using `Ctrl + V` or `Command + V` keyboard shortcut.
+* Using the [`paste`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#paste) method.
+
+> If you use the Keyboard shortcut key for cut (`Ctrl + X`) | copy (`Ctrl + C`) from other sources, you should use `Ctrl + V` shortcut while pasting into the spreadsheet.
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/spreadsheet/javascript-es5/clipboard-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/javascript-es5/clipboard-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/clipboard-cs1" %}
+
+## Prevent the paste functionality
+
+The following example shows, how to prevent the paste action in the Spreadsheet. In [`actionBegin`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#actionbegin) event, you can set `cancel` argument as false in paste request type.
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/spreadsheet/javascript-es5/clipboard-cs2/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/javascript-es5/clipboard-cs2/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/clipboard-cs2" %}
+
+## Limitations
+
+* The external clipboard is not fully supported when copying data from another source and pasting into the Spreadsheet; only basic operations are supported (Values, Number formatting, cell formatting, and Text formatting).
+* If you copy =SUM(A2,B2) and paste, the formula reference will change depending on the pasted cell address but we don't have support for nested formula(formula reference will be same).
+* Clipboard operations are not supported with conditional formatting; only values are pasted.
+* We have limitation while copying the whole sheet data and pasting it into another sheet.
+
+## Note
+
+You can refer to our [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) feature tour page for its feature representations.
+
+## See Also
+
+* [Cell Range](./cell-ranges-and-operations)
+* [Editing](./editing)
+* [Formatting](../formatting)
