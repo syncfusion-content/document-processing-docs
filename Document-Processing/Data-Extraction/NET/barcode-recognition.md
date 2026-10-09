@@ -103,3 +103,5 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 {% endhighlight %}
 
 {% endtabs %}
+
+N> In Markdown output, barcodes are rendered as images and will not be preserved as actual barcode objects.
