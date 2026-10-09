@@ -66,10 +66,10 @@ Follow the steps below to add the component:
 
 Step 1: Create Angular component files inside the `~/src/webparts/App/` folder. 
 
-Create `docxeditor.component.ts` file:
+Create `docx-editor.component.ts` file:
 
 {% tabs %}
-{% highlight ts tabtitle="docxeditor.component.ts" %}
+{% highlight ts tabtitle="docx-editor.component.ts" %}
 
 import { Component } from '@angular/core';
 import {
@@ -104,7 +104,7 @@ Create `main.ts` file:
 
 import '@angular/compiler';
 import { bootstrapApplication } from '@angular/platform-browser';
-import { DOCXEditorComponent } from './docxeditor.component';
+import { DOCXEditorComponent } from './docx-editor.component';
 
 export function bootstrapAngular(): void{
   bootstrapApplication(DOCXEditorComponent)
