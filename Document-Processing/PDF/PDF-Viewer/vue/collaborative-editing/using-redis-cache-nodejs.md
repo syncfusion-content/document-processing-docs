@@ -142,7 +142,7 @@ export class PdfViewerAdapter implements ICollaborationProvider {
 {% endhighlight %}
 {% endtabs %}
 
-N>For the complete adapter implementation with error handling and detailed logging, refer to the [Vue PDF Viewer Collaborative Editing Sample](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples).
+N>For the complete adapter implementation with error handling and detailed logging, refer to the [Vue PDF Viewer Collaborative Editing Sample](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/Collaborative%20Editing).
 
 ### 3. Initialize the Vue PDF Viewer
 
@@ -276,7 +276,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-N>For complete implementation details, refer to the [Vue Collaborative PDF Editing Sample on GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples).
+N>For complete implementation details, refer to the [Vue Collaborative PDF Editing Sample on GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/Collaborative%20Editing).
 
 ## Server-side integration
 
@@ -500,14 +500,7 @@ server.start();
 {% endhighlight %}
 {% endtabs %}
 
-> N> The simplified adapter above shows the core patterns. For complete production implementation with:
-> - Comprehensive form field handling (all property types)
-> - XFDF annotation import with changeset processing
-> - Signature rendering (text, image, and freehand draw with zoom/rotation)
-> - Advanced page organizer operations (delete, reorder, rotate, insert, copy)
-> - Redis cleanup strategies and partial save workflows
-
-> Refer to the [PDF Viewer Collaboration Server sample](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples) on GitHub.
+> Refer to the [PDF Viewer Collaboration Server sample](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/Collaborative%20Editing) on GitHub.
 
 ## See Also
 
