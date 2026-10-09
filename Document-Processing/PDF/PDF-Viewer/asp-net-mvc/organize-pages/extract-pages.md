@@ -137,7 +137,7 @@ The following example extracts pages 1 and 2, then immediately loads the extract
 {% endhighlight %}
 {% endtabs %}
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/asp-net-mvc-pdf-viewer-examples/tree/master/How%20to)
+[View sample in GitHub](https://github.com/SyncfusionExamples/asp-net-mvc-pdf-viewer-examples/tree/master/How%20to/Extract%20Pages)
 
 ## See also
 
