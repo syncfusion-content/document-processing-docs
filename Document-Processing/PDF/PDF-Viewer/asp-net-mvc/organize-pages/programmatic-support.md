@@ -13,20 +13,21 @@ The PDF Viewer provides comprehensive programmatic support for organizing pages,
 
 ## Enable or disable the page organizer
 
-The page organizer feature can be enabled or disabled using the `enablePageOrganizer` property. By default, this feature is enabled.
+The page organizer feature can be enabled or disabled using the `EnablePageOrganizer` property. By default, the page organizer is enabled.
 
 {% tabs %}
-{% highlight cshtml tabtitle="Standalone" %}
+{% highlight cshtml tabtitle="Index.cshtml" %}
 
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").EnablePageOrganizer(true).Render()
-</div>
+@{
+    ViewBag.Title = "PDF Viewer";
+}
 
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").EnablePageOrganizer(true).Render()
+<div class="control-section">
+    @Html.EJS().PdfViewer("pdfviewer")
+        .DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf")
+        .ServiceUrl(ViewBag.ServiceUrl)
+        .EnablePageOrganizer(true)
+        .Render()
 </div>
 
 {% endhighlight %}
@@ -34,20 +35,21 @@ The page organizer feature can be enabled or disabled using the `enablePageOrgan
 
 ## Open the page organizer on document load
 
-You can control whether the page organizer dialog opens automatically when a document is loaded using the `isPageOrganizerOpen` property. The default value is `false`.
+Use the `IsPageOrganizerOpen` property to control whether the page organizer opens automatically when a document loads. The default value is `false`.
 
 {% tabs %}
-{% highlight cshtml tabtitle="Standalone" %}
+{% highlight cshtml tabtitle="Index.cshtml" %}
 
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").IsPageOrganizerOpen(true).Render()
-</div>
+@{
+    ViewBag.Title = "PDF Viewer";
+}
 
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").IsPageOrganizerOpen(true).Render()
+<div class="control-section">
+    @Html.EJS().PdfViewer("pdfviewer")
+        .DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf")
+        .ServiceUrl(ViewBag.ServiceUrl)
+        .IsPageOrganizerOpen(true)
+        .Render()
 </div>
 
 {% endhighlight %}
@@ -55,56 +57,48 @@ You can control whether the page organizer dialog opens automatically when a doc
 
 ## Customize page organizer settings
 
-The `pageOrganizerSettings` API allows you to customize the page management functionalities. You can enable or disable actions such as deleting, inserting, rotating, copying, importing, and rearranging pages, as well as configure thumbnail zoom settings. By default, all actions are enabled, and standard zoom settings are applied.
+The `PageOrganizerSettings` API customizes page-management capabilities. Use it to enable or disable actions (delete, insert, rotate, copy, import, rearrange) and to configure thumbnail zoom settings. By default, actions are enabled and standard zoom settings apply.
 
 {% tabs %}
-{% highlight cshtml tabtitle="Standalone" %}
+{% highlight cshtml tabtitle="Index.cshtml" %}
 
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").PageOrganizerSettings(new { CanDelete = false, CanInsert = false, CanRotate = false, CanCopy = false, CanRearrange = false, CanImport = false, imageZoom = 1, showImageZoomingSlider = true, imageZoomMin = 1, imageZoomMax = 5 }).Render()
+@{
+    ViewBag.Title = "PDF Viewer";
+}
+
+<div class="control-section">
+    @Html.EJS().PdfViewer("pdfviewer")
+        .DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf")
+        .ServiceUrl(ViewBag.ServiceUrl)
+        .PageOrganizerSettings(settings => settings
+            .CanDelete(true)
+            .CanInsert(true)
+            .CanRotate(true)
+            .CanCopy(true)
+            .CanRearrange(true)
+            .CanImport(true)
+            .ImageZoom(1)
+            .ShowImageZoomingSlider(true)
+            .ImageZoomMin(1)
+            .ImageZoomMax(5))
+        .Render()Index.cshtml" %}
+
+@{
+    ViewBag.Title = "PDF Viewer";
+}
+
+<div class="control-section">
+    <button onclick="openPageOrganizer()">Open PageOrganizer Pane</button>
+    @Html.EJS().PdfViewer("pdfviewer")
+        .DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf")
+        .ServiceUrl(ViewBag.ServiceUrl)
+        .Render()
 </div>
 
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").PageOrganizerSettings(new { CanDelete = false, CanInsert = false, CanRotate = false, CanCopy = false, CanRearrange = false, CanImport = false, imageZoom = 1, showImageZoomingSlider = true, imageZoomMin = 1, imageZoomMax = 5 }).Render()
-</div>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Open the page organizer dialog
-
-The `openPageOrganizer` method programmatically opens the page organizer dialog, providing access to page management tools.
-
-{% tabs %}
-{% highlight cshtml tabtitle="Standalone" %}
-
-<button id="openPageOrganizer" onclick="openPageOrganizer()">OpenPageOrganizer</button>
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-</div>
-
-<script>
+<script type="text/javascript">
     function openPageOrganizer() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.pageOrganizer.openPageOrganizer();
-    }
-</script>
-
-{% endhighlight %}
-{% highlight cshtml tabtitle="Server-Backed" %}
-
-<button id="openPageOrganizer" onclick="openPageOrganizer()">OpenPageOrganizer</button>
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
-</div>
-
-<script>
-    function openPageOrganizer() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.pageOrganizer.openPageOrganizer();
+        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+        viewer.pageOrganizer.openPageOrganizer();
     }
 </script>
 
@@ -116,17 +110,24 @@ The `openPageOrganizer` method programmatically opens the page organizer dialog,
 The `closePageOrganizer` method programmatically closes the page organizer dialog.
 
 {% tabs %}
-{% highlight cshtml tabtitle="Standalone" %}
+{% highlight cshtml tabtitle="Index.cshtml" %}
 
-<button id="closePageOrganizer" onclick="closePageOrganizer()">Close PageOrganizer</button>
-<div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
+@{
+    ViewBag.Title = "PDF Viewer";
+}
+
+<div class="control-section">
+    <button onclick="closePageOrganizer()">Close PageOrganizer Pane</button>
+    @Html.EJS().PdfViewer("pdfviewer")
+        .DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf")
+        .ServiceUrl(ViewBag.ServiceUrl)
+        .Render()
 </div>
 
-<script>
+<script type="text/javascript">
     function closePageOrganizer() {
-        var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        pdfViewer.pageOrganizer.closePageOrganizer();
+        var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+        viewer.pageOrganizer.closePageOrganizer();
     }
 </script>
 
