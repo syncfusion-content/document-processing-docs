@@ -80,16 +80,7 @@ import * as React from 'react';
 import { IAppProps } from './IAppProps';
 import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 
-require('@syncfusion/ej2-base/styles/tailwind3.css');
-require('@syncfusion/ej2-inputs/styles/tailwind3.css');
-require('@syncfusion/ej2-buttons/styles/tailwind3.css');
-require('@syncfusion/ej2-splitbuttons/styles/tailwind3.css');
-require('@syncfusion/ej2-lists/styles/tailwind3.css');
-require('@syncfusion/ej2-navigations/styles/tailwind3.css');
-require('@syncfusion/ej2-popups/styles/tailwind3.css');
-require('@syncfusion/ej2-dropdowns/styles/tailwind3.css');
-require('@syncfusion/ej2-grids/styles/tailwind3.css');
-require('@syncfusion/ej2-react-spreadsheet/styles/tailwind3.css');
+require('@syncfusion/ej2-tailwind3-theme/styles/spreadsheet/index.css');
 
 export default class App extends React.Component<IAppProps, {}> {
   
