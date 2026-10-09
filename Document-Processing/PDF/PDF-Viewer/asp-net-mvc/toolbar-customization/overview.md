@@ -1,0 +1,72 @@
+---
+layout: post
+title: Toolbar Customization in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn about introduction of the Syncfusion ASP.NET MVC PDF Viewer Toolbar Customization section and the key capabilities it provides.
+control: PDF Viewer
+platform: document-processing
+documentation: ug
+domainurl: ##DomainURL##
+---
+
+# About Syncfusion ASP.NET MVC PDF Viewer Toolbar Customization
+
+## Overview
+
+This page provides a concise reference describing the toolbars available in the EJ2 ASP.NET MVC PDF Viewer component. It also explains what each toolbar is for and when it appears.
+
+**Scope**: covers available toolbars and their functions.
+
+## List of available toolbars
+
+- [Primary toolbar](#primary-toolbar)
+- [Annotation toolbar](#annotation-toolbar)
+- [Form Designer toolbar](#form-designer-toolbar)
+- [Mobile toolbar](#mobile-toolbar)
+- [Custom toolbar](./custom-toolbar)
+
+## Functional overview of each toolbar
+
+### Primary toolbar
+
+The primary toolbar presents core viewer actions such as open/load, page navigation, zoom controls, and print. It appears in standard desktop layouts and at the top of the viewer. Typical actions: page forward/back, zoom in/out, fit-to-page, print.
+
+![primary desktop toolbar](../images/pdfviewer-primary-toolbar.png)
+
+### Annotation toolbar
+
+The annotation toolbar surfaces annotation-related tools for adding, editing, and deleting annotations (text markup, shapes, stamps). It appears when annotation services are enabled and when a user opens annotation mode. Typical actions: highlight, underline, draw shape, add sticky note, delete annotation.
+
+![annotation desktop toolbar](../images/annotation-toolbar.png)
+
+### Form Designer toolbar
+
+Form designer toolbar provides form-field authoring controls used when designing or editing form fields inside a PDF. It appears when Form Designer is enabled (design mode) and contains actions for adding form field controls.
+
+![form designer toolbar](../images/form-deigner-toolbar.png)
+
+### Mobile toolbar
+
+- A compact toolbar layout optimized for small screens and touch interactions. It appears automatically on mobile-sized view ports (or when a mobile layout is explicitly chosen) and contains the most frequently used actions in a space-efficient arrangement.
+
+    ![mobile toolbar](../images/mobileToolbar.png)
+
+- Annotation toolbar in mobile mode appears at the bottom of the PDF Viewer component.
+
+    ![mobile annotation toolbar](../../react/images/mobile-annotation-toolbar.png)
+
+## Show or hide toolbar items
+
+The following quick links describe how to customize, show, or hide specific toolbar items. Each linked page defines custom toolbar configurations and examples.
+
+- [Show or hide annotation toolbar items](./annotation-toolbar#show-or-hide-the-annotation-toolbar)
+- [Show or hide form designer toolbar items](./form-designer-toolbar#show-or-hide-the-form-designer-toolbar)
+- [Show or hide primary toolbar items](./primary-toolbar#show-or-hide-the-primary-toolbar)
+- [Add a custom primary toolbar item](./primary-toolbar#show-or-hide-the-primary-toolbar)
+
+## Further Reading
+
+- [Customize annotation toolbar](./annotation-toolbar)
+- [Customize form designer toolbar](./form-designer-toolbar)
+- [Customize mobile toolbar](./mobile-toolbar)
+- [Customize primary toolbar](./primary-toolbar)
+- [Create a custom toolbar](./custom-toolbar)
