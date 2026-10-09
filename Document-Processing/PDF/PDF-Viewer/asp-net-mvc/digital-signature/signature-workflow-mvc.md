@@ -132,8 +132,6 @@ using (PdfLoadedDocument document = new PdfLoadedDocument(pdfBytes))
 }
 ```
 
-N> For sequential or multi‑user flows and digital signature appearances, see these live demos: [eSigning PDF Form](https://document.syncfusion.com/demos/pdf-viewer/asp-net-mvc/#/bootstrap5/pdfviewer/esigning-pdf-forms), [Invisible Signature](https://document.syncfusion.com/demos/pdf-viewer/asp-net-mvc/#/bootstrap5/pdfviewer/invisible-digital-signature) and [Visible Signature](https://document.syncfusion.com/demos/pdf-viewer/asp-net-mvc/#/bootstrap5/pdfviewer/visible-digital-signature) in the ASP.NET MVC Sample Browser.
-
 ## How‑to guides
 
 ### Add a signature field (UI)
@@ -196,13 +194,9 @@ When users click a signature field at runtime, the Viewer’s dialog lets them *
 
   ![Signature Image](../../react/images/handwritten-sign.png)
 
-N> For a ready‑to‑try flow that routes two users to sign their own fields and then finalize, open [eSigning PDF Form](https://document.syncfusion.com/demos/pdf-viewer/asp-net-mvc/#/bootstrap5/pdfviewer/esigning-pdf-forms) in the sample browser.
-
 ### Apply a PKI digital signature
 
 Use the **.NET PDF Library** to apply a cryptographic signature on a field, with or without a visible appearance. See the **Digital Signature** documentation for additional options (external signing callbacks, digest algorithms, etc.).
-
-N> To preview visual differences, check the [Invisible Signature](https://document.syncfusion.com/demos/pdf-viewer/asp-net-mvc/#/bootstrap5/pdfviewer/invisible-digital-signature) and [Visible Signature](https://document.syncfusion.com/demos/pdf-viewer/asp-net-mvc/#/bootstrap5/pdfviewer/visible-digital-signature) in our Sample Browser. Digital Signature samples in the ASP.NET MVC sample browser.
 
 ### Finalize a signed document (lock)
 
@@ -240,8 +234,6 @@ Different business scenarios require different signature types. Consider the pur
 
 - **Digital certificate signature (PKI)** – Required for legally binding contracts and tamper detection with a verifiable signer identity. (Created with the .NET PDF Library.)
 
-N> You can explore and try out live demos for [Invisible Signature](https://document.syncfusion.com/demos/pdf-viewer/asp-net-mvc/#/bootstrap5/pdfviewer/invisible-digital-signature) and [Visible Signature](https://document.syncfusion.com/demos/pdf-viewer/asp-net-mvc/#/bootstrap5/pdfviewer/visible-digital-signature) in our Sample Browser.
-
 ### Pre‑signing validation checklist
 
 To prevent rework, validate the PDF before enabling signatures:
@@ -265,8 +257,6 @@ N> **Implementation tip:** Use the PDF Library’s `Flatten` option when saving 
 - Use [comments and replies](../annotation/comments#add-comments-and-replies) for feedback without altering document content.
 - For external participants, share only annotation data (XFDF/JSON) when appropriate instead of the full PDF.
 - After all signatures, **[Lock Signature](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-digitalsignature#lock-signature)** to make the file read-only.
-
-N> Refer to [eSigning PDF Forms](https://document.syncfusion.com/demos/pdf-viewer/asp-net-mvc/#/bootstrap5/pdfviewer/esigning-pdf-forms) sample that shows two signers filling only their designated fields and finalizing the document.
 
 ### Security, deployment, and audit considerations
 
