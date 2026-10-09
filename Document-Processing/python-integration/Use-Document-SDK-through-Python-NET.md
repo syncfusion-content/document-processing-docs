@@ -5,7 +5,7 @@ platform: document-processing
 documentation: UG
 ---
 
-# Use Syncfusion Document Processing in Python with Python.NET
+# Use Syncfusion Document Processing from Python with Python.NET
 
 Use the **Python.NET** approach when you want direct in-process calls from Python into .NET. The published `DocumentBridge.dll` is loaded with [`pythonnet`](https://pypi.org/project/pythonnet/), so Python can call Syncfusion APIs without launching a separate worker process.
 
