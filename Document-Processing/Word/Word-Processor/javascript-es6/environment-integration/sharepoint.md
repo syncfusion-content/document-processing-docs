@@ -158,5 +158,7 @@ The output will appear as follows:
 
 ![TypeScript DOCX Editor running in SPFx Web](../images/docxeditor-sharepoint.png)
 
+>[View sample in GitHub](https://github.com/SyncfusionExamples/JavaScript-ES6-DOCX-Editor-Examples/tree/master/sharepoint-integration).
+
 ## See Also
 * [Getting Started with TypeScript DOCX Editor](../getting-started)
