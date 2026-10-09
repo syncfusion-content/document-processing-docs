@@ -71,7 +71,7 @@ SiteAssets
 ```
 Upload the downloaded files to the matching folders. For example:
 
-- https://your-Sharepoint-site/SiteAssets/ej2.min.js
+- https://your-SharePoint-site/SiteAssets/ej2.min.js
 
 ## Add DOCX Editor into WebPart
 
@@ -147,7 +147,7 @@ npm start
 Open:
 
 ```
-https://your-Sharepoint-site/_layouts/15/workbench.aspx?debugManifestsFile=https://localhost:4321/temp/build/manifests.js&debug=true&noredir=true
+https://your-SharePoint-site/_layouts/15/workbench.aspx?debugManifestsFile=https://localhost:4321/temp/build/manifests.js&debug=true&noredir=true
 ```
 
 Add the DOCXEditor (named as App) web part to the page.
