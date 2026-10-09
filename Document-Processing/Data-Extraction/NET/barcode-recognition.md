@@ -58,4 +58,4 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %}
 
-N> When content is extracted to Markdown format, barcodes are preserved as images and cannot be retrieved as actual barcode objects.
+N> In PDF-to-Markdown conversion, barcodes are retained as images only. Barcode values and metadata are not included in the Markdown output.
