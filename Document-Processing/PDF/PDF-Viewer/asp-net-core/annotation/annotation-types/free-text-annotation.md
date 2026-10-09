@@ -129,7 +129,7 @@ N> To tailor right‑click options, see [**Customize Context Menu**](../../conte
 
 - **Move/Resize**: Drag the box or use the resize handles.
 - **Edit Text**: Click inside the box and type.
-- **Delete**: Use the toolbar or context menu options. For deletion workflows and API details, see [**Delete Annotation**](../remove-annotations).
+- **Delete**: Use the toolbar or context menu options. For deletion workflows and API details, see [**Delete Annotation**](../delete-annotation).
 
 ### Edit Free Text
 
@@ -192,7 +192,7 @@ N> Free Text annotations do **not** modify the original PDF text; they overlay e
 
 ### Delete Free Text
 
-Delete Free Text via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
+Delete Free Text via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../delete-annotation).
 
 ## Set Default Properties During Initialization
 Apply defaults for new text boxes using the [`freeTextSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_FreeTextSettings) property. You can also enable **Auto‑fit** so the box expands with content.
@@ -226,12 +226,12 @@ Listen to add/modify/select/remove events for Free Text and handle them as neede
 
 ## Export and Import
 
-Free Text annotations can be exported or imported just like other annotations. For supported formats and steps, see [**Export and Import annotations**](../export-import-annotations).
+Free Text annotations can be exported or imported just like other annotations. For supported formats and steps, see [**Export and Import annotations**](../export-import/export-annotation).
 
 ## See Also
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)
 - [Customize Context Menu](../../context-menu/custom-context-menu)
 - [Comments Panel](../comments)
 - [Annotation Events](../annotation-event)
-- [Export and Import annotations](../export-import-annotations)
-- [Delete Annotations](../remove-annotations)
+- [Export and Import annotations](../export-import/export-annotation)
+- [Delete Annotations](../delete-annotation)

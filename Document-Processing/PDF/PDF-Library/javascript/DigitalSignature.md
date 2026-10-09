@@ -422,6 +422,292 @@ var signedDocumentData = ej.pdf.PdfSignature.replaceEmptySignature(
 
 N> The two-step process is required when the signing operation cannot complete inside the `PdfSignature.create(...)` callback — for example, when the private key lives on a remote HSM with high latency. First, reserve the signature field with an empty signature dictionary; then, after the remote signer returns the signed bytes, call `replaceEmptySignature(...)` to embed them in the previously reserved field.
 
+## Long-Term Validation (LTV)
+
+The JavaScript PDF Library supports Long-Term Validation for digital signatures through the [enableLTV()](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature#enableltv) method of the `PdfSignature` class. LTV helps preserve signature validity by embedding revocation information such as OCSP and CRL responses into the document.
+
+
+### Enable Long Term Validation (LTV) PDF signature
+
+The JavaScript PDF Library supports enabling Long-Term Validation for a digital signature after the signature has been created. Save and reload the signed PDF document, retrieve the signature from its signature field, and call [enableLTV()](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature#enableltv) with a callback that returns the requested OCSP or CRL response.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { PdfDocument, PdfPage, PdfForm, PdfSignatureField, PdfSignature, DigestAlgorithm, CryptographicStandard } from '@syncfusion/ej2-pdf';
+
+// Create a new PDF document
+let document: PdfDocument = new PdfDocument();
+// Add a new page to the document
+let page: PdfPage = document.addPage();
+// Access the PDF form
+let form: PdfForm = document.form;
+// Create a new signature field
+let field: PdfSignatureField = new PdfSignatureField(page, 'Signature', { x: 10, y: 10, width: 100, height: 50 });
+// Create a digital signature using PFX data and a private key
+let signature: PdfSignature = PdfSignature.create(certData, password, { cryptographicStandard: CryptographicStandard.cms, digestAlgorithm: DigestAlgorithm.sha256 });
+// Set the signature to the field
+field.setSignature(signature);
+// Add the signature field to the PDF form
+form.add(field);
+// Save the signed PDF document
+let data: Uint8Array = document.save();
+// Destroy the document
+document.destroy();
+
+// Load the signed PDF document
+let loadedDocument: PdfDocument = new PdfDocument(data);
+// Access the PDF form
+let loadedForm: PdfForm = loadedDocument.form;
+// Get the signature field
+let loadedField: PdfSignatureField = loadedForm.fieldAt(0) as PdfSignatureField;
+// Get the PDF signature
+let loadedSignature: PdfSignature = loadedField.getSignature();
+// Retrieve the OCSP or CRL response requested by the library
+async function longTermValidationCallback(url: string, requestBytes?: Uint8Array): Promise<{ response: Uint8Array }> {
+    // Send requestBytes to the supplied URL and return the actual response bytes
+    return { response: revocationResponse };
+}
+// Enable LTV for the created signature
+let ltvEnabled: boolean = await loadedSignature.enableLTV(longTermValidationCallback);
+// Save the LTV-enabled PDF document
+loadedDocument.save('output.pdf');
+// Destroy the loaded document
+loadedDocument.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Add a new page to the document
+var page = document.addPage();
+// Access the PDF form
+var form = document.form;
+// Create a new signature field
+var field = new ej.pdf.PdfSignatureField(page, 'Signature', { x: 10, y: 10, width: 100, height: 50 });
+// Create a digital signature using PFX data and a private key
+var signature = ej.pdf.PdfSignature.create(certData, password, { cryptographicStandard: ej.pdf.CryptographicStandard.cms, digestAlgorithm: ej.pdf.DigestAlgorithm.sha256 });
+// Set the signature to the field
+field.setSignature(signature);
+// Add the signature field to the PDF form
+form.add(field);
+// Save the signed PDF document
+var data = document.save();
+// Destroy the document
+document.destroy();
+
+// Load the signed PDF document
+document = new ej.pdf.PdfDocument(data);
+// Get the signature field
+field = document.form.fieldAt(0);
+// Get the PDF signature
+signature = field.getSignature();
+// Retrieve the OCSP or CRL response requested by the library
+var longTermValidationCallback = async function (url, requestBytes) {
+    // Send requestBytes to the supplied URL and return the actual response bytes
+    return { response: revocationResponse };
+};
+// Enable LTV for the created signature
+var ltvEnabled = await signature.enableLTV(longTermValidationCallback);
+// Save the LTV-enabled PDF document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
+### Create Long Term Validation (LTV) when signing PDF documents externally
+
+You can enable Long-Term Validation after creating a PDF signature through an external signing service. After externally signing and saving the PDF document, reload it, retrieve the created signature, and call [enableLTV()](https://ej2.syncfusion.com/documentation/api/pdf/pdfsignature#enableltv)  with a callback that returns the requested OCSP or CRL response.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { PdfDocument, PdfPage, PdfSignatureField, PdfSignature, DigestAlgorithm, CryptographicStandard } from '@syncfusion/ej2-pdf';
+
+// Define a callback function for external signing
+function externalSignatureCallback(data: Uint8Array, options: { algorithm: DigestAlgorithm, cryptographicStandard: CryptographicStandard }): { signedData: Uint8Array; timestampData?: Uint8Array } {
+    // Sign the supplied document data using an external signing service
+    return { signedData: externalSignedData };
+}
+// Define a callback function to retrieve OCSP or CRL responses
+async function longTermValidationCallback(url: string, requestBytes?: Uint8Array): Promise<{ response: Uint8Array }> {
+    // Send requestBytes to the supplied URL and return the actual OCSP or CRL response
+    return { response: revocationResponse };
+}
+// Create a new PDF document
+let document: PdfDocument = new PdfDocument();
+// Add a new page to the document
+let page: PdfPage = document.addPage();
+// Create a signature field
+let field: PdfSignatureField = new PdfSignatureField(page, 'Signature', { x: 50, y: 50, width: 100, height: 100 });
+// Create a signature using the external-signing callback
+let signature: PdfSignature = PdfSignature.create(externalSignatureCallback, { cryptographicStandard: CryptographicStandard.cms, digestAlgorithm: DigestAlgorithm.sha256, contactInfo: 'johndoe@owned.us', locationInfo: 'Honolulu, Hawaii', reason: 'I am author of this document.', signedName: 'Signature' });
+// Add the signature field to the PDF form
+document.form.add(field);
+// Set the signature to the field
+field.setSignature(signature);
+// Save the externally signed PDF document
+let data: Uint8Array = document.save();
+// Destroy the document
+document.destroy();
+
+// Load the externally signed PDF document
+document = new PdfDocument(data);
+// Get the created signature field
+field = document.form.fieldAt(0) as PdfSignatureField;
+// Get the created signature
+signature = field.getSignature();
+// Enable LTV using the available OCSP or CRL response
+let ltvEnabled: boolean = await signature.enableLTV(longTermValidationCallback);
+// Save the LTV-enabled PDF document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Define a callback function for external signing
+function externalSignatureCallback(data, options) {
+    // Sign the supplied document data using an external signing service
+    return { signedData: externalSignedData };
+}
+// Define a callback function to retrieve OCSP or CRL responses
+async function longTermValidationCallback(url, requestBytes) {
+    // Send requestBytes to the supplied URL and return the actual OCSP or CRL response
+    return { response: revocationResponse };
+}
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Add a new page to the document
+var page = document.addPage();
+// Create a signature field
+var field = new ej.pdf.PdfSignatureField(page, 'Signature', { x: 50, y: 50, width: 100, height: 100 });
+// Create a signature using the external-signing callback
+var signature = ej.pdf.PdfSignature.create(externalSignatureCallback, { cryptographicStandard: ej.pdf.CryptographicStandard.cms, digestAlgorithm: ej.pdf.DigestAlgorithm.sha256, contactInfo: 'johndoe@owned.us', locationInfo: 'Honolulu, Hawaii', reason: 'I am author of this document.', signedName: 'Signature' });
+// Add the signature field to the PDF form
+document.form.add(field);
+// Set the signature to the field
+field.setSignature(signature);
+// Save the externally signed PDF document
+var data = document.save();
+// Destroy the document
+document.destroy();
+
+// Load the externally signed PDF document
+document = new ej.pdf.PdfDocument(data);
+// Get the created signature field
+field = document.form.fieldAt(0);
+// Get the created signature
+signature = field.getSignature();
+// Enable LTV using the available OCSP or CRL response
+var ltvEnabled = await signature.enableLTV(longTermValidationCallback);
+// Save the LTV-enabled PDF document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
+### Enable Long Term Validation (LTV) with public certificates
+
+You can provide the public certificate chain while enabling LTV for an externally signed PDF document. Load the existing signed PDF document, retrieve the required signature, and call `enableLTV()` with the public certificates and a callback that returns the requested OCSP or CRL response.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { PdfDocument, PdfPage, PdfSignatureField, PdfSignature, DigestAlgorithm, CryptographicStandard, RevocationType } from '@syncfusion/ej2-pdf';
+
+// Define a callback function for external signing
+function externalSignatureCallback(data: Uint8Array, options: { algorithm: DigestAlgorithm, cryptographicStandard: CryptographicStandard }): { signedData: Uint8Array; timestampData?: Uint8Array } {
+    // Sign the supplied document data using an external signing service
+    return { signedData: externalSignedData };
+}
+// Define a callback function to retrieve OCSP or CRL responses
+async function longTermValidationCallback(url: string, requestBytes?: Uint8Array): Promise<{ response: Uint8Array }> {
+    // Send requestBytes to the supplied URL and return the actual OCSP or CRL response
+    return { response: revocationResponse };
+}
+// Create a new PDF document
+let document: PdfDocument = new PdfDocument();
+// Add a new page to the document
+let page: PdfPage = document.addPage();
+// Create a signature field
+let field: PdfSignatureField = new PdfSignatureField(page, 'Signature', { x: 50, y: 50, width: 100, height: 100 });
+// Create a signature using the external-signing callback
+let signature: PdfSignature = PdfSignature.create(externalSignatureCallback, { cryptographicStandard: CryptographicStandard.cms, digestAlgorithm: DigestAlgorithm.sha256, contactInfo: 'johndoe@owned.us', locationInfo: 'Honolulu, Hawaii', reason: 'I am author of this document.', signedName: 'Signature' });
+// Add the signature field to the PDF form
+document.form.add(field);
+// Set the signature to the field
+field.setSignature(signature);
+// Save the externally signed PDF document
+let data: Uint8Array = document.save();
+// Destroy the document
+document.destroy();
+
+// Load the externally signed PDF document
+document = new PdfDocument(data);
+// Get the created signature field
+field = document.form.fieldAt(0) as PdfSignatureField;
+// Get the created signature
+signature = field.getSignature();
+// Define the public certificate chain used for long-term validation
+let publicCertificates: Uint8Array[] = [publicCertificate1, publicCertificate2];
+// Enable LTV using the public certificates and available OCSP or CRL response
+let ltvEnabled: boolean = await signature.enableLTV(publicCertificates, RevocationType.ocspOrCrl, longTermValidationCallback);
+// Save the LTV-enabled PDF document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Define a callback function for external signing
+function externalSignatureCallback(data, options) {
+    // Sign the supplied document data using an external signing service
+    return { signedData: externalSignedData };
+}
+// Define a callback function to retrieve OCSP or CRL responses
+async function longTermValidationCallback(url, requestBytes) {
+    // Send requestBytes to the supplied URL and return the actual OCSP or CRL response
+    return { response: revocationResponse };
+}
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Add a new page to the document
+var page = document.addPage();
+// Create a signature field
+var field = new ej.pdf.PdfSignatureField(page, 'Signature', { x: 50, y: 50, width: 100, height: 100 });
+// Create a signature using the external-signing callback
+var signature = ej.pdf.PdfSignature.create(externalSignatureCallback, { cryptographicStandard: ej.pdf.CryptographicStandard.cms, digestAlgorithm: ej.pdf.DigestAlgorithm.sha256, contactInfo: 'johndoe@owned.us', locationInfo: 'Honolulu, Hawaii', reason: 'I am author of this document.', signedName: 'Signature' });
+// Add the signature field to the PDF form
+document.form.add(field);
+// Set the signature to the field
+field.setSignature(signature);
+// Save the externally signed PDF document
+var data = document.save();
+// Destroy the document
+document.destroy();
+
+// Load the externally signed PDF document
+document = new ej.pdf.PdfDocument(data);
+// Get the created signature field
+field = document.form.fieldAt(0);
+// Get the created signature
+signature = field.getSignature();
+// Define the public certificate chain used for long-term validation
+var publicCertificates = [publicCertificate1, publicCertificate2];
+// Enable LTV using the public certificates and available OCSP or CRL response
+var ltvEnabled = await signature.enableLTV(publicCertificates, ej.pdf.RevocationType.ocspOrCrl, longTermValidationCallback);
+// Save the LTV-enabled PDF document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
+N> Enable LTV only after the target signature has been created or loaded from the PDF document. When a PDF document contains multiple signatures, call `enableLTV()` for each signature that requires long-term validation
+
 ## Signature options
 
 The following examples demonstrate the signature-creation options available in `PdfSignatureOptions`.
@@ -798,6 +1084,155 @@ document.form.add(field);
 // Save the document
 document.save('output.pdf');
 // Release document resources
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
+## Digital signature validation
+
+The JavaScript PDF Library supports validating digital signatures in an existing PDF document. Digital signature validation verifies the following information to determine the validity of each signature:
+
+* Document modifications made after signing.
+* The certificate chain against the provided trusted certificates.
+* Timestamp information associated with the signature.
+* Certificate revocation status using Online Certificate Status Protocol (OCSP) and Certificate Revocation List (CRL) information.
+* Multiple digital signatures available in the PDF document.
+
+## Validate a signature from a signature field
+
+You can validate an individual digital signature by accessing a specific signature field and validating its associated signature. This approach is useful when you need to check the validity of a particular signature in a document.
+
+The following code example demonstrates how to retrieve a signature field, extract its signature, and validate it using trusted certificates.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+
+import { PdfDocument, PdfSignatureField, PdfSignature, PdfSignatureValidationOptions } from '@syncfusion/ej2-pdf';
+
+// Load the signed PDF document.
+const document: PdfDocument = new PdfDocument(documentData);
+// Get the first signature field from the form.
+const field: PdfSignatureField = document.form.fieldAt(0) as PdfSignatureField;
+// Get the signature from the field.
+const signature: PdfSignature = field.getSignature();
+// Configure the signature validation options.
+const options: PdfSignatureValidationOptions = {
+    trustedCertificates: [certificateData],
+    passwords: ['syncfusion']
+};
+// Validate the signature.
+const validationResult = signature.validate(options);
+// Check the validation result.
+console.log('Signature name: ' + validationResult.signatureName);
+console.log('Signature valid: ' + validationResult.isSignatureValid);
+console.log('Signature status: ' + validationResult.signatureStatus);
+console.log('Document modified: ' + validationResult.isDocumentModified);
+console.log('Revocation result: ', validationResult.revocationResult);
+// Destroy the document and release its resources.
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Load the signed PDF document.
+const document = new ej.pdf.PdfDocument(documentData);
+// Get the first signature field from the form.
+const field = document.form.fieldAt(0);
+// Get the signature from the field.
+const signature = field.getSignature();
+// Configure the signature validation options.
+const options = {
+    trustedCertificates: [certificateData],
+    passwords: ['syncfusion']
+};
+// Validate the signature.
+const validationResult = signature.validate(options);
+// Check the validation result.
+console.log('Signature name: ' + validationResult.signatureName);
+console.log('Signature valid: ' + validationResult.isSignatureValid);
+console.log('Signature status: ' + validationResult.signatureStatus);
+console.log('Document modified: ' + validationResult.isDocumentModified);
+console.log('Revocation result: ', validationResult.revocationResult);
+// Destroy the document and release its resources.
+document.destroy();
+
+{% endhighlight %}
+
+{% endtabs %}
+
+## Validate all signatures in a PDF document
+
+You can validate all digital signatures in a PDF document by calling the `validateSignatures` method. The method validates every signature field in the document and returns the individual results through the `results` collection.
+
+The following code example shows how to validate all signatures and determine whether the complete PDF document has valid signatures.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+
+import { PdfDocument, PdfSignatureValidationOptions } from '@syncfusion/ej2-pdf';
+
+// Load the PDF document that contains multiple signatures.
+const document: PdfDocument = new PdfDocument(documentData);
+// Configure the validation options.
+const options: PdfSignatureValidationOptions = {
+    trustedCertificates: [certificateData],
+    passwords: ['syncfusion']
+};
+// Validate all signatures in the PDF document.
+const validationResult = document.form.validateSignatures(options);
+if (validationResult.results !== null &&
+    validationResult.results !== undefined) {
+    console.log(
+        'Number of validated signatures: ' +
+        validationResult.results.length
+    );
+    validationResult.results.forEach((result) => {
+        console.log(
+            `${result.signatureName}: ${result.isSignatureValid}`
+        );
+    });
+}
+// Determine whether all signatures are valid.
+if (validationResult.isValid) {
+    console.log('All signatures in the PDF document are valid.');
+} else {
+    console.log('One or more signatures in the PDF document are invalid.');
+}
+// Destroy the document and release its resources.
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Load the PDF document that contains multiple signatures.
+const document = new PdfDocument(documentData);
+// Configure the validation options.
+const options = {
+    trustedCertificates: [certificateData],
+    passwords: ['syncfusion']
+};
+// Validate all signatures in the PDF document.
+const validationResult = document.form.validateSignatures(options);
+if (validationResult.results !== null &&
+    validationResult.results !== undefined) {
+    console.log(
+        'Number of validated signatures: ' +
+        validationResult.results.length
+    );
+    validationResult.results.forEach((result) => {
+        console.log(
+            `${result.signatureName}: ${result.isSignatureValid}`
+        );
+    });
+}
+// Determine whether all signatures are valid.
+if (validationResult.isValid) {
+    console.log('All signatures in the PDF document are valid.');
+} else {
+    console.log('One or more signatures in the PDF document are invalid.');
+}
+// Destroy the document and release its resources.
 document.destroy();
 
 {% endhighlight %}

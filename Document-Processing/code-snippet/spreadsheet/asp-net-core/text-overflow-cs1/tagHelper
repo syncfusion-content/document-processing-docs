@@ -1,0 +1,77 @@
+<ejs-spreadsheet id="spreadsheet">
+
+    <e-spreadsheet-sheets>
+        <e-spreadsheet-sheet name="Famous Quotes">
+
+            <e-spreadsheet-columns>
+                <e-spreadsheet-column width="160"></e-spreadsheet-column>
+                <e-spreadsheet-column width="110"></e-spreadsheet-column>
+                <e-spreadsheet-column width="110"></e-spreadsheet-column>
+                <e-spreadsheet-column width="100"></e-spreadsheet-column>
+                <e-spreadsheet-column width="100"></e-spreadsheet-column>
+                <e-spreadsheet-column width="110"></e-spreadsheet-column>
+            </e-spreadsheet-columns>
+
+            <e-spreadsheet-rows>
+
+                <e-spreadsheet-row>
+                    <e-spreadsheet-cells>
+                        <e-spreadsheet-cell
+                            value="Famous Quotes"
+                            fontWeight="Bold"
+                            fontSize="16pt">
+                        </e-spreadsheet-cell>
+                    </e-spreadsheet-cells>
+                </e-spreadsheet-row>
+
+                <e-spreadsheet-row>
+                    <e-spreadsheet-cells>
+                        <e-spreadsheet-cell
+                            value="Success is the sum of small efforts repeated day after day."
+                            fontSize="14pt">
+                        </e-spreadsheet-cell>
+                    </e-spreadsheet-cells>
+                </e-spreadsheet-row>
+
+                <e-spreadsheet-row>
+                    <e-spreadsheet-cells>
+                        <e-spreadsheet-cell
+                            value="Quality is never an accident it is always the result of intelligent effort."
+                            fontSize="14pt">
+                        </e-spreadsheet-cell>
+                    </e-spreadsheet-cells>
+                </e-spreadsheet-row>
+
+                <e-spreadsheet-row>
+                    <e-spreadsheet-cells>
+                        <e-spreadsheet-cell
+                            value="The future depends on what you do today and how consistently you do it."
+                            fontSize="14pt">
+                        </e-spreadsheet-cell>
+                    </e-spreadsheet-cells>
+                </e-spreadsheet-row>
+
+                <e-spreadsheet-row>
+                    <e-spreadsheet-cells>
+                        <e-spreadsheet-cell
+                            value="Well organized information helps teams make better decisions and achieve goals."
+                            fontSize="14pt">
+                        </e-spreadsheet-cell>
+                    </e-spreadsheet-cells>
+                </e-spreadsheet-row>
+
+                <e-spreadsheet-row>
+                    <e-spreadsheet-cells>
+                        <e-spreadsheet-cell
+                            value="Great achievements are built through planning persistence and continuous improvement."
+                            fontSize="14pt">
+                        </e-spreadsheet-cell>
+                    </e-spreadsheet-cells>
+                </e-spreadsheet-row>
+
+            </e-spreadsheet-rows>
+
+        </e-spreadsheet-sheet>
+    </e-spreadsheet-sheets>
+
+</ejs-spreadsheet>

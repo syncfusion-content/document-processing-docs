@@ -1,12 +1,12 @@
 ---
-title: NuGet Packages Required to Convert Word to PDF| Syncfusion
-description: Find answers to common questions about converting Word documents to PDF using using .NET Word library without Microsoft Word or interop dependencies.
+title: NuGet Packages Required to Convert Word to PDF | Syncfusion
+description: Learn the NuGet packages required to Convert Word document to PDF using the .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# NuGet Packages Required to Convert Word to PDF| Syncfusion
+# NuGet Packages Required to Convert Word to PDF
 
 ## Converting a Word Document to PDF
 
@@ -32,7 +32,7 @@ Package manager console command
 {{'[Windows Forms](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-window-forms)'| Â markdownify }}, Console Application (Targeting .NET Framework)
 </td>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.DocToPdfConverter.WinForms">Syncfusion.DocToPdfConverter.WinForms</a>
+<a href="https://www.nuget.org/packages/Syncfusion.DocToPdfConverter.WinForms" aria-label="Syncfusion DocToPdfConverter WinForms">Syncfusion.DocToPdfConverter.WinForms</a>
 </td>
 <td>
 Install-Package Syncfusion.DocToPdfConverter.WinForms
@@ -43,7 +43,7 @@ Install-Package Syncfusion.DocToPdfConverter.WinForms
 {{'[WPF](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-wpf)'| Â markdownify }}
 </td>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.DocToPdfConverter.Wpf">Syncfusion.DocToPdfConverter.Wpf</a>
+<a href="https://www.nuget.org/packages/Syncfusion.DocToPdfConverter.Wpf" aria-label="Syncfusion DocToPdfConverter Wpf">Syncfusion.DocToPdfConverter.Wpf</a>
 </td>
 <td>
 Install-Package Syncfusion.DocToPdfConverter.Wpf
@@ -55,7 +55,7 @@ Install-Package Syncfusion.DocToPdfConverter.Wpf
 {{'[ASP.NET MVC5](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-asp-net-mvc)'| Â markdownify }}
 </td>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.DocToPdfConverter.AspNet.Mvc5">Syncfusion.DocToPdfConverter.AspNet.Mvc5</a>
+<a href="https://www.nuget.org/packages/Syncfusion.DocToPdfConverter.AspNet.Mvc5" aria-label="Syncfusion DocToPdfConverter AspNet Mvc5">Syncfusion.DocToPdfConverter.AspNet.Mvc5</a>
 </td>
 <td>
 Install-Package Syncfusion.DocToPdfConverter.AspNet.Mvc5
@@ -66,7 +66,7 @@ Install-Package Syncfusion.DocToPdfConverter.AspNet.Mvc5
 {{'[ASP.NET Core](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-asp-net-core)'| Â markdownify }}, Console Application (Targeting .NET Core) and {{'[Blazor](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-blazor)'| Â markdownify }}
 </td>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core">Syncfusion.DocIORenderer.Net.Core</a><br/>
+<a href="https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core" aria-label="Syncfusion DocIORenderer Net Core">Syncfusion.DocIORenderer.Net.Core</a><br/>
 <br/>
 <i>Note:</i><br/>
 <i>Please refer {{'[here](https://help.syncfusion.com/document-processing/word/word-library/net/faq#what-are-the-nuget-packages-to-be-installed-to-perform-word-to-pdf-conversion-in-linux-os)'|Â markdownify }} to know about the NuGet packages that need to be installed to perform Word to PDF conversion in Linux OS.</i><br/>
@@ -80,7 +80,7 @@ Install-Package Syncfusion.DocIORenderer.Net.Core
 {{'[Windows UI Library (WinUI)](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-winui)'| Â markdownify }}<br/> {{'[.NET Multi-platform App UI (.NET MAUI)](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-maui)'| Â markdownify }}
 </td>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.DocIORenderer.NET">Syncfusion.DocIORenderer.NET</a>
+<a href="https://www.nuget.org/packages/Syncfusion.DocIORenderer.NET" aria-label="Syncfusion DocIORenderer NET">Syncfusion.DocIORenderer.NET</a>
 </td>
 <td>
 Install-Package Syncfusion.DocIORenderer.NET
@@ -91,7 +91,7 @@ Install-Package Syncfusion.DocIORenderer.NET
 
 T> If you encounter issues while using the .NET Word library in ASP.NET Core, refer to the [troubleshooting guide](https://support.syncfusion.com/kb/article/16012/troubleshoot-guide-for-aspnet-core-word-docio-library-issues#things-to-check-while-facing-an-issue-in-word-library) for recommended checks and solutions.
 
-#### Retired Platforms
+### Retired Platforms
 
 The following NuGet packages need to be included in your application based on the platform.
 
@@ -114,7 +114,7 @@ Package manager console command
 {{'[ASP.NET](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-asp-net)' | markdownify}}<br/>
 </td>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.DocToPdfConverter.AspNet">Syncfusion.DocToPdfConverter.AspNet</a>
+<a href="https://www.nuget.org/packages/Syncfusion.DocToPdfConverter.AspNet" aria-label="Syncfusion DocToPdfConverter AspNet">Syncfusion.DocToPdfConverter.AspNet</a>
 </td>
 <td>
 Install-Package Syncfusion.DocToPdfConverter.AspNet
@@ -125,7 +125,7 @@ Install-Package Syncfusion.DocToPdfConverter.AspNet
 {{'[ASP.NET MVC4](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-asp-net-mvc)'| Â markdownify }}
 </td>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.DocToPdfConverter.AspNet.Mvc4">Syncfusion.DocToPdfConverter.AspNet.Mvc4</a>
+<a href="https://www.nuget.org/packages/Syncfusion.DocToPdfConverter.AspNet.Mvc4" aria-label="Syncfusion DocToPdfConverter AspNet Mvc4">Syncfusion.DocToPdfConverter.AspNet.Mvc4</a>
 </td>
 <td>
 Install-Package Syncfusion.DocToPdfConverter.AspNet.Mvc4
@@ -136,7 +136,7 @@ Install-Package Syncfusion.DocToPdfConverter.AspNet.Mvc4
 {{'[Xamarin](https://help.syncfusion.com/document-processing/word/conversions/word-to-pdf/net/convert-word-document-to-pdf-in-xamarin)'| Â markdownify }}<br/>
 </td>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.Xamarin.DocIORenderer">Syncfusion.Xamarin.DocIORenderer</a>
+<a href="https://www.nuget.org/packages/Syncfusion.Xamarin.DocIORenderer" aria-label="Syncfusion Xamarin DocIORenderer">Syncfusion.Xamarin.DocIORenderer</a>
 </td>
 <td>
 Install-Package Syncfusion.Xamarin.DocIORenderer
@@ -148,7 +148,7 @@ Install-Package Syncfusion.Xamarin.DocIORenderer
 N>  1. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add the "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering the Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 N> 2. Syncfusion<sup>&reg;</sup> components are available in [nuget.org](https://www.nuget.org/)
 N> 3. Please refer the procedure to deploy your .NET Core application in Linux OS from [here](https://support.syncfusion.com/kb/article/7626/how-to-deploy-net-core-application-with-word-to-pdf-conversion-capabilities-in-linux-os).
-N> 4. From v32.1.19, the dependent package SkiaSharp is upgraded from 3.116.1 to 3.119.1 version and it is mandatory to use SkiaSharp.NativeAssets.Linux v3.119.1 and HarfBuzzSharp.NativeAssets.Linux v8.3.1.2 packages for converting Word documents into PDF in Linux environment.
+N> 4. From v32.1.19, the dependent package SkiaSharp is upgraded from 3.116.1 to 4.150.1 version and it is mandatory to use SkiaSharp.NativeAssets.Linux v4.150.1 and HarfBuzzSharp.NativeAssets.Linux v14.2.1.1 packages for converting Word documents into PDF in Linux environment.
 N> 5. "DocIO supports Word to PDF conversion in a UWP application using DocIORenderer." For further information, please refer [here](https://support.syncfusion.com/kb/article/8902/how-to-convert-word-document-to-pdf-in-uwp)
 N> 6. Syncfusion has **deprecated the Syncfusion.DocToPdfConverter.AspNet package**. We strongly recommend upgrading your applications to ASP.NET Core. Refer [here](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/migrate-from-net-framework-to-net-core) to migrate from .NET Framework to .NET Core.
 
@@ -160,13 +160,13 @@ Run one of the following commands in the Package Manager Console (or use `dotnet
 
 ```powershell
 // Common Linux distributions, Azure App Service, Google App Engine
-Install-Package SkiaSharp.NativeAssets.Linux -Version 3.119.1
-Install-Package HarfBuzzSharp.NativeAssets.Linux -Version 8.3.1.2
+Install-Package SkiaSharp.NativeAssets.Linux -Version 4.150.1
+Install-Package HarfBuzzSharp.NativeAssets.Linux -Version 14.2.1.1
 ```
 
 ```powershell
 // AWS Lambda, AWS Elastic Beanstalk (use the NoDependencies variant)
-Install-Package SkiaSharp.NativeAssets.Linux.NoDependencies -Version 3.119.1
+Install-Package SkiaSharp.NativeAssets.Linux.NoDependencies -Version 4.150.1
 ```
 
 The following table illustrates the native assets NuGet packages and their applicable Linux environments:
@@ -181,8 +181,8 @@ The following table illustrates the native assets NuGet packages and their appli
   <tbody>
     <tr>
       <td>
-        {{'[SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)'| markdownify }}<br/>
-        {{'[HarfBuzzSharp.NativeAssets.Linux v8.3.1.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/8.3.1.2)'| markdownify }}
+        {{'[SkiaSharp.NativeAssets.Linux v4.150.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/4.150.1)'| markdownify }}<br/>
+        {{'[HarfBuzzSharp.NativeAssets.Linux v14.2.1.1](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/14.2.1.1)'| markdownify }}
       </td>
       <td>
         <ul>
@@ -194,7 +194,7 @@ The following table illustrates the native assets NuGet packages and their appli
     </tr>
     <tr>
       <td>
-        {{'[SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1)'| markdownify }}
+        {{'[SkiaSharp.NativeAssets.Linux.NoDependencies v4.150.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/4.150.1)'| markdownify }}
       </td>
       <td>
         <ul>
@@ -231,7 +231,7 @@ Package manager console command
 Windows Forms, Console Application (Targeting .NET Framework)
 </td>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.WinForms">Syncfusion.OfficeChartToImageConverter.WinForms</a>
+<a href="https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.WinForms" aria-label="Syncfusion OfficeChartToImageConverter WinForms">Syncfusion.OfficeChartToImageConverter.WinForms</a>
 </td>
 <td>
 Install-Package Syncfusion.OfficeChartToImageConverter.WinForms
@@ -242,7 +242,7 @@ Install-Package Syncfusion.OfficeChartToImageConverter.WinForms
 WPF
 </td>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.Wpf">Syncfusion.OfficeChartToImageConverter.Wpf</a>
+<a href="https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.Wpf" aria-label="Syncfusion OfficeChartToImageConverter Wpf">Syncfusion.OfficeChartToImageConverter.Wpf</a>
 </td>
 <td>
 Install-Package Syncfusion.OfficeChartToImageConverter.Wpf
@@ -253,7 +253,7 @@ Install-Package Syncfusion.OfficeChartToImageConverter.Wpf
 ASP.NET MVC5
 </td>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.AspNet.Mvc5">Syncfusion.OfficeChartToImageConverter.AspNet.Mvc5</a>
+<a href="https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.AspNet.Mvc5" aria-label="Syncfusion OfficeChartToImageConverter AspNet Mvc5">Syncfusion.OfficeChartToImageConverter.AspNet.Mvc5</a>
 </td>
 <td>
 Install-Package Syncfusion.OfficeChartToImageConverter.AspNet.Mvc5
@@ -262,7 +262,7 @@ Install-Package Syncfusion.OfficeChartToImageConverter.AspNet.Mvc5
 </tbody>
 </table>
 
-#### Retired Platforms (Charts)
+### Retired Platforms (Charts)
 
 The following NuGet packages need to be included in your application based on the retired platform.
 
@@ -285,7 +285,7 @@ Package manager console command
 ASP.NET<br/>
 </td>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.AspNet">Syncfusion.OfficeChartToImageConverter.AspNet</a>
+<a href="https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.AspNet" aria-label="Syncfusion OfficeChartToImageConverter AspNet">Syncfusion.OfficeChartToImageConverter.AspNet</a>
 </td>
 <td>
 Install-Package Syncfusion.OfficeChartToImageConverter.AspNet
@@ -296,7 +296,7 @@ Install-Package Syncfusion.OfficeChartToImageConverter.AspNet
 ASP.NET MVC4
 </td>
 <td>
-<a href="https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.AspNet.Mvc4">Syncfusion.OfficeChartToImageConverter.AspNet.Mvc4</a>
+<a href="https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.AspNet.Mvc4" aria-label="Syncfusion OfficeChartToImageConverter AspNet Mvc4">Syncfusion.OfficeChartToImageConverter.AspNet.Mvc4</a>
 </td>
 <td>
 Install-Package Syncfusion.OfficeChartToImageConverter.AspNet.Mvc4

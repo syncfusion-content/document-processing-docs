@@ -132,7 +132,7 @@ function editStickyNotesProgrammatically() {
 
 ### Delete Sticky Notes Annotation
 
-Delete Sticky Notes Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
+Delete Sticky Notes Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../delete-annotation).
 
 ## Set Default Properties During Initialization
 Configure default properties for Sticky Notes using [`stickyNotesSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#stickyNotesSettings).
@@ -158,12 +158,12 @@ Configure default properties for Sticky Notes using [`stickyNotesSettings`](http
 Listen to annotation life-cycle events and filter for sticky notes. See [**Annotation Events**](../annotation-event) for the full list and argument details. 
 
 ## Export and Import
-Sticky Notes are included when exporting or importing annotations. For supported formats and workflows, see [**Export and Import annotations**](../export-import-annotations). 
+Sticky Notes are included when exporting or importing annotations. For supported formats and workflows, see [**Export and Import annotations**](../export-import/export-annotation). 
 
 ## See Also
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)
 - [Customize Context Menu](../../context-menu/custom-context-menu)
 - [Comments Panel](../comments)
 - [Annotation Events](../annotation-event)
-- [Export and Import annotations](../export-import-annotations)
-- [Delete Annotations](../remove-annotations)
+- [Export and Import annotations](../export-import/export-annotation)
+- [Delete Annotations](../delete-annotation)

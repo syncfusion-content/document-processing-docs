@@ -79,6 +79,30 @@ Comment only protection can be enabled in UI by using `Restrict Editing pane`
 
 N> In the `EnforceProtection` method, the first parameter is the password and the second parameter is the protection type. Possible values of protection type are `NoProtection | ReadOnly | FormFieldsOnly | CommentsOnly`. In the `StopProtection` method, the parameter is the password.
 
+## Highlight comments by author
+
+When `highlightCommentsByAuthor` is enabled, each comment marker is displayed in the author's avatar color. Selecting a comment highlights the corresponding text and comment pane border in that color. If multiple comments appear on the same line, the marker retains the first author's avatar color.
+
+The following example illustrates how to enable comment highlights in the DOCX Editor
+
+```csharp
+
+@using Syncfusion.Blazor.DocumentEditor;
+
+<SfDocumentEditorContainer @ref="container" EnableToolbar=true DocumentEditorSettings="Settings"> 
+</SfDocumentEditorContainer>
+
+@code {
+    private DocumentEditorSettingsModel Settings = new DocumentEditorSettingsModel
+    {
+        CommentSettings = new CommentSettingsModel
+        {
+            HighlightCommentsByAuthor = true
+        }
+    };
+}
+```
+
 ## Online demo
 
 Explore how to add, view, and manage comments in Word documents using the Blazor DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/comments?theme=fluent2).

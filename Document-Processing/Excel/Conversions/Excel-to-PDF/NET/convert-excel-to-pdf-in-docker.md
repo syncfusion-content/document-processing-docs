@@ -23,7 +23,7 @@ Step 2: Name the project.
 Step 3: Install the following NuGet packages as references to your project from [NuGet.org](https://www.nuget.org/).
 
 * [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core)
-* [SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1) (this package transitively pulls in `SkiaSharp`, `HarfBuzzSharp.NativeAssets.Linux`, and the native `.so` files for the target architecture)
+* [SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/4.150.1) (this package transitively pulls in `SkiaSharp`, `HarfBuzzSharp.NativeAssets.Linux`, and the native `.so` files for the target architecture)
 
 ![Install Syncfusion.XlsIORenderer.Net.Core NuGet Package](Docker_Images/docker_images_img3.png)
 ![Install SkiaSharp.NativeAssets.Linux v2.80.2 NuGet Package](Docker_Images/docker_images_img4.png)

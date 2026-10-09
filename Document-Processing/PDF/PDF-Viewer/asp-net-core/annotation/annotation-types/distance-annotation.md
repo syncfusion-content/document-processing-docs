@@ -153,22 +153,26 @@ function editDistanceProgrammatically() {
 
 ### Delete Distance Annotation
 
-Delete Distance Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
+Delete Distance Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../delete-annotation).
 
 ## Set Default Properties During Initialization
 Apply defaults for Distance using the [`distanceSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_DistanceSettings) property.
 
 {% tabs %}
-{% highlight js tabtitle="Standalone" %}
-<PdfViewerComponent
-  id="container"
-  documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-  resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
-  distanceSettings={{ fillColor: 'blue', strokeColor: 'green', opacity: 0.6 }}
-  style={{ height: '650px' }}
->
-  <Inject services={[Toolbar, Annotation]} />
-</PdfViewerComponent>
+{% highlight cshtml tabtitle="Standalone" %}
+<div style="width:100%;height:650px">
+    <ejs-pdfviewer id="pdfviewer"
+                   style="height:650px"
+                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib">
+    </ejs-pdfviewer>
+</div>
+<script>
+window.onload = function () {
+  var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+  viewer.distanceSettings = { fillColor: 'blue', strokeColor: 'green', opacity: 0.6 };
+}
+</script>
 {% endhighlight %}
 {% endtabs %}
 
@@ -228,12 +232,12 @@ viewer.measurementSettings = { scaleRatio: 2, conversionUnit: 'cm', displayUnit:
 Listen to annotation life-cycle events (add/modify/select/remove). For the full list and parameters, see [**Annotation Events**](../annotation-event).
 
 ## Export and Import
-Distance measurements can be exported or imported with other annotations. For workflows and supported formats, see [**Export and Import annotations**](../export-import-annotations).
+Distance measurements can be exported or imported with other annotations. For workflows and supported formats, see [**Export and Import annotations**](../export-import/export-annotation).
 
 ## See Also
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)
 - [Customize Context Menu](../../context-menu/custom-context-menu)
 - [Comments Panel](../comments)
 - [Annotation Events](../annotation-event)
-- [Export and Import annotations](../export-import-annotations)
-- [Delete Annotations](../remove-annotations)
+- [Export and Import annotations](../export-import/export-annotation)
+- [Delete Annotations](../delete-annotation)

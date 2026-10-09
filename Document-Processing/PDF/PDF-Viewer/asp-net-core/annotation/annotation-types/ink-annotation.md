@@ -156,7 +156,7 @@ function editInkProgrammatically() {
 
 ### Delete Ink
 
-Delete Ink via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
+Delete Ink via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../delete-annotation).
 
 ## Ink Annotation Events
 
@@ -166,12 +166,12 @@ For the full list of available events and their descriptions, see [**Annotation 
 ## Export and Import
 
 Ink annotations can be exported or imported along with other annotations.
-See [Export and Import annotations](../export-import-annotations).
+See [Export and Import annotations](../export-import/export-annotation).
 
 ## See Also
 
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)
 - [Customize Context Menu](../../context-menu/custom-context-menu)
 - [Annotation Events](../annotation-event)
-- [Export and Import annotations](../export-import-annotations)
-- [Delete Annotation](../remove-annotations)
+- [Export and Import annotations](../export-import/export-annotation)
+- [Delete Annotation](../delete-annotation)

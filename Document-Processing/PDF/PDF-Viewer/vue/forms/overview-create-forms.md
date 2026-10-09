@@ -5,6 +5,7 @@ description: Learn about introduction of the Syncfusion Vue PDF Viewer Manage Fo
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # About Syncfusion Vue PDF Viewer Manage Form Fields

@@ -31,7 +31,7 @@ Form field values can be updated programmatically using the [updateFormFieldsVal
 The following example demonstrates how to update PDF form field values programmatically:
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <button @click="fillForm">Fill Form Fields</button>
@@ -101,7 +101,7 @@ The PDF Viewer can import form field data into an existing PDF document using th
 Imported data is mapped to PDF form fields by field name. The imported values appear in the viewer and remain editable if the document permits modification. Refer to Import Form Data for details about expected data formats and mapping rules.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <button @click="importJson">Import JSON</button>
@@ -165,7 +165,7 @@ Validation applies to all field types: a textbox is considered empty if it conta
 Enable [enableFormFieldsValidation](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#enableformfieldsvalidation) and handle the event to cancel submit/download actions when required fields are missing.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" style="height:640px" @documentLoad="onDocumentLoad" />
@@ -239,7 +239,6 @@ export default {
 - [Form Designer overview](./overview)
 - [Form Designer Toolbar](../toolbar-customization/form-designer-toolbar)
 - [Create](./manage-form-fields/create-form-fields), [edit](./manage-form-fields/modify-form-fields), [style](./manage-form-fields/customize-form-fields) and [remove](./manage-form-fields/remove-form-fields) form fields
-- [Edit form fields](./manage-form-fields/edit-form-fields)
 - [Group form fields](./group-form-fields)
 - [Add custom data to form fields](./custom-data)
 - [Form Constrain](./form-constrain)

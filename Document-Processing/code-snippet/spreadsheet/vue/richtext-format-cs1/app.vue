@@ -8,46 +8,49 @@
 
         <e-rows>
           <e-row>
-            <e-cells>
-              <e-cell value="Plain Text"></e-cell>
-            </e-cells>
+              <e-cells>
+                  <e-cell value="Plain Text"></e-cell>
+              </e-cells>
           </e-row>
 
           <e-row>
-            <e-cells>
-              <e-cell
-                value="Mineral Water H2O"
-                :richText="[
-                  { text: 'Mineral Water H' },
-                  { text: '2', style: { verticalAlign: 'sub' } },
-                  { text: 'O' }
-                ]"
-              ></e-cell>
-            </e-cells>
+              <e-cells>
+                  <e-cell
+                      value="Annual Sales Report 2026 (Draft)"
+                      :richText="[
+                          { text: 'Annual Sales Report ', style: { fontWeight: 'bold' } },
+                          { text: '2026', style: { color: '#0078D4' } },
+                          { text: ' (Draft)', style: { fontStyle: 'italic' } }
+                      ]"
+                  ></e-cell>
+              </e-cells>
           </e-row>
 
           <e-row>
-            <e-cells>
-              <e-cell
-                value="Energy Supplement C6H12O6"
-                :richText="[
-                  { text: 'Energy Supplement C' },
-                  { text: '6', style: { verticalAlign: 'sub' } },
-                  { text: 'H' },
-                  { text: '12', style: { verticalAlign: 'sub' } },
-                  { text: 'O' },
-                  { text: '6', style: { verticalAlign: 'sub' } }
-                ]"
-              ></e-cell>
-            </e-cells>
+              <e-cells>
+                  <e-cell
+                      value="Customer Loyalty Program"
+                      :richText="[
+                          { text: 'Customer Loyalty ', style: { textDecoration: 'underline' } },
+                          { text: 'Program', style: { fontFamily: 'Georgia', fontSize: '14pt' } }
+                      ]"
+                  ></e-cell>
+              </e-cells>
           </e-row>
 
           <e-row>
-            <e-cells>
-              <e-cell value="H2O"></e-cell>
-            </e-cells>
+              <e-cells>
+                  <e-cell
+                      value="Mineral Water H2O"
+                      :richText="[
+                          { text: 'Mineral Water H' },
+                          { text: '2', style: { verticalAlign: 'sub' } },
+                          { text: 'O' }
+                      ]"
+                  ></e-cell>
+              </e-cells>
           </e-row>
-        </e-rows>
+      </e-rows>
       </e-sheet>
     </e-sheets>
   </ejs-spreadsheet>
@@ -72,28 +75,34 @@ export default {
   },
   methods: {
     created: function () {
-      const spreadsheet = this.$refs.spreadsheet;
+    const spreadsheet = this.$refs.spreadsheet;
 
-      spreadsheet.updateCell(
-        {
-          richText: [
-            { text: "H" },
-            { text: "2", style: { verticalAlign: "sub" } },
-            { text: "O" }
-          ]
-        },
-        "A4"
-      );
-
-      spreadsheet.updateCell(
-        {
-          value: "X2",
-          richText: [
-            { text: "X" },
-            { text: "2", style: { verticalAlign: "super" } }
-          ]
-        },
-        "A5"
+    spreadsheet.updateCell(
+          {
+              value: 'Premium Membership valid until 31st Dec 2026',
+              richText: [
+                  {
+                      text: 'Premium Membership ',
+                      style: { fontWeight: 'bold', color: '#2E7D32' }
+                  },
+                  {
+                      text: 'valid until ',
+                      style: { fontStyle: 'italic' }
+                  },
+                  {
+                      text: '31',
+                      style: { textDecoration: 'underline' }
+                  },
+                  {
+                      text: 'st',
+                      style: { verticalAlign: 'super' }
+                  },
+                  {
+                      text: ' Dec 2026'
+                  }
+              ]
+          },
+          'A5'
       );
     }
   }

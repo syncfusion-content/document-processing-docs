@@ -5,6 +5,7 @@ description: Handle import and export events for PDF form fields in the Vue PDF 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Form Field Import and Export Events in Vue PDF Viewer
@@ -26,7 +27,7 @@ Each event provides detailed context through event arguments such as [ImportStar
 **Example: Handle Import Events**
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <ejs-pdfviewer
@@ -92,7 +93,7 @@ export default {
 **Example: Handle Export Events**
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <ejs-pdfviewer
@@ -164,5 +165,4 @@ export default {
 - [Add custom data to form fields](../custom-data)
 - [Import form fields](./import-form-fields)
 - [Export form fields](./export-form-fields)
-- [Form validation](../form-validation)
 - [Form fields API](../form-fields-api)

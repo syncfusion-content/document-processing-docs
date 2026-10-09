@@ -18,6 +18,7 @@ The Syncfusion<sup>&reg;</sup> PowerPoint to Image converter offers high versati
 * Support to convert [specific slide](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/presentation-to-image#convert-a-slide-to-image) of PowerPoint Presentation document to image.
 * Set [fallback fonts](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/fallback-fonts-in-pptxtoimage-conversion) for characters when glyphs are not available.
 * Support for [font substitution](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/font-substitution-in-pptxtoimage-conversion) when fonts are not available during PowerPoint to image conversion.
+* Support for [custom fonts registration](./Custom-fonts-registration-pptx-to-image) through the `FontManager` API, enabling use of fonts that are not installed on the operating system.
 
 ## Assemblies and NuGet packages required
 
@@ -396,6 +397,14 @@ To avoid this, the Essential<sup>&reg;</sup> Presentation library allows you to 
 ## Fallback fonts
 
 During PowerPoint to Image conversions, if a glyph of the input text is unavailable in the specified font, the text will not be rendered properly. To address this, the Syncfusion PowerPoint (Presentation) library allows users to specify fallback fonts. When a glyph is missing, the library will use one of the fallback fonts to render the text correctly in the output image. For further information, click [here](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/fallback-fonts-in-pptxtoimage-conversion).
+
+## Custom font registration
+
+In many deployment environments such as cloud-hosted, containerized, and cross-platform applications, installing fonts on the operating system is not possible or desirable. The [Syncfusion .NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) allows users to register custom fonts through the `FontManager` API, maintaining a private font repository within the library. This supports TrueType (`.ttf`) and OpenType (`.otf`) formats, registered from memory streams or a folder, and ensures consistent document rendering without depending on system-installed fonts.
+
+N> Register the required fonts during application startup using `FontManager.RegisterFonts` and clear them during shutdown using `FontManager.ClearRegisteredFonts` for optimal performance.
+
+For further information, click [here](./Custom-fonts-registration-pptx-to-image).
 
 ## Online Demo
 
