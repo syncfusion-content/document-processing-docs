@@ -122,11 +122,36 @@ Open `src/App.css` (or your top-level global stylesheet) and add the following i
 
 ## Add the Syncfusion React PDF Viewer
 
-Open `src/App.tsx` and replace its contents with the following code. The viewer is mounted inside a React component and configured to load a public sample PDF and the runtime assets copied to `public/ej2-pdfviewer-lib`.
+Open `src/App.tsx` (or `src/App.jsx` if you are using the JavaScript flavor) and replace its contents with the following code. The viewer is mounted inside a React component and configured to load a public sample PDF and the runtime assets copied to `public/ej2-pdfviewer-lib`.
 
 {% tabs %}
-{% highlight ts tabtitle="App.tsx" %}
+{% highlight js tabtitle="JSX" %}
 {% raw %}
+
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+         ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner,
+         PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
+
+export default function App() {
+    return (
+      <PdfViewerComponent id="container"
+        // Specifies the URL (for example, a file from the public folder) or a Base64-encoded PDF.
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        // Specifies the path to the PDFium resource files required for the PDF Viewer to function.
+        resourceUrl="https://cdn.syncfusion.com/ej2/35.1.37/dist/ej2-pdfviewer-lib">
+
+         <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
+                             BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
+                             FormFields, FormDesigner, PageOrganizer ]}/>
+      </PdfViewerComponent>
+    );
+}
+
+{% endraw %}
+{% endhighlight %}
+{% highlight js tabtitle="TSX" %}
+{% raw %}
+
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
          ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner,
          PageOrganizer, Inject } from '@syncfusion/ej2-react-pdfviewer';
@@ -144,6 +169,7 @@ export default function App() {
     </PdfViewerComponent>
   );
 }
+
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
