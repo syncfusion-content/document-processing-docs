@@ -316,12 +316,8 @@ Create a file named `app.py` that uses the `DocumentService` to generate a PDF d
 {% tabs %}
 {% highlight python tabtitle="app.py" %}
 
-import os
 from pathlib import Path
 from document_sdk import load_service
-
-# Optional: set the Syncfusion license key (remove if not required).
-os.environ["SYNCFUSION_LICENSE_KEY"] = "YOUR_LICENSE_KEY"
 
 
 def main() -> None:
