@@ -196,5 +196,7 @@ The output will appear as follows:
 
 ![Angular DOCX Editor running in SPFx Web](../images/docxeditor-sharepoint.png)
 
+>[View sample in GitHub](https://github.com/SyncfusionExamples/Angular-DOCX-Editor-Examples/tree/master/sharepoint-integration).
+
 ## See Also
 * [Getting Started with Angular DOCX Editor](../getting-started)
