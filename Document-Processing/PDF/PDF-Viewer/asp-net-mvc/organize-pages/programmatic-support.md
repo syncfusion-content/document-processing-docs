@@ -132,7 +132,6 @@ The `closePageOrganizer` method programmatically closes the page organizer dialo
 </script>
 
 {% endhighlight %}
-{% endtabs %}
 {% highlight cshtml tabtitle="Server-Backed" %}
 
 <button id="closePageOrganizer" onclick="closePageOrganizer()">Close PageOrganizer</button>
