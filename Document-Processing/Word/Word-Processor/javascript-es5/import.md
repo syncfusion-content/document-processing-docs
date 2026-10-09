@@ -150,6 +150,30 @@ Here's how to handle the server-side action for converting a Word document into 
 
 To know about server-side action, please refer to this [page](./web-services-overview).
 
+## Opening a document in asynchronous mode
+
+[JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) supports asynchronous document loading, which can be enabled using the enable property available in the openAsyncSettings API.
+
+### Properties
+
+**enable:** Enables or disables asynchronous document loading.
+**initialPageLoadCount:** Number of pages to load initially when the document is opened.
+**incrementalPageLoadCount:** Number of pages to load incrementally after initial pages load, during the asynchronous document-loading operation.
+
+The following example shows how to open the document asynchronously in DOCX Editor.
+
+```js
+var container = new ej.documenteditor.DocumentEditorContainer({ height: "590px" });
+container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
+ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
+container.documentEditorSettings.openAsyncSettings.enable = true;
+container.documentEditorSettings.openAsyncSettings.initialPageLoadCount = 5;
+container.documentEditorSettings.openAsyncSettings.incrementalPageLoadCount = 3;
+container.appendTo('#container');
+```
+
+N> When asynchronous loading is enabled, the document initially opens in read-only mode, allowing users to view the first set of pages while the remaining pages load in the background. During this time, the document can be viewed but cannot be edited or saved. Once loading is complete, editing and saving become available.
+
 ## Compatibility with Microsoft Word
 
 Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor is a minimal viable Word document viewer/editor product for web applications. As the most compatible Word editor, the product vision is adding valuable feature sets of Microsoft Word, and not to cover 100% feature sets of Microsoft Word desktop application. You can even see the feature sets difference between Microsoft Word desktop and their Word online application. So kindly don't misunderstand this component as a complete replacement for Microsoft Word desktop application and expect 100% feature sets of it.

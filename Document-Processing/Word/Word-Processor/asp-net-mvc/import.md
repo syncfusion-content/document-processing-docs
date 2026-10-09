@@ -112,6 +112,28 @@ internal static FormatType GetFormatType(string format)
 }
 ```
 
+## Opening a document in asynchronous mode
+
+[ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) supports asynchronous document loading, which can be enabled using the enable property available in the openAsyncSettings API.
+
+### Properties
+
+**enable:** Enables or disables asynchronous document loading.
+**initialPageLoadCount:** Number of pages to load initially when the document is opened.
+**incrementalPageLoadCount:** Number of pages to load incrementally after initial pages load, during the asynchronous document-loading operation.
+
+The following example shows how to open the document asynchronously in DOCX Editor.
+
+{% tabs %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/async-loading/razor %}
+{% endhighlight %}
+{% highlight c# tabtitle="Async-loading.cs" %}
+{% endhighlight %}
+{% endtabs %}
+
+N> When asynchronous loading is enabled, the document initially opens in read-only mode, allowing users to view the first set of pages while the remaining pages load in the background. During this time, the document can be viewed but cannot be edited or saved. Once loading is complete, editing and saving become available.
+
 ## See Also
 
 * [Feature modules](./feature-module)
