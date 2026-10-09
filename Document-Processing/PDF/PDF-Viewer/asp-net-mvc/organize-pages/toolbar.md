@@ -121,7 +121,7 @@ The `CanRearrange` property controls the rearrange tool visibility. Set it to `f
 {% endhighlight %}
 {% endtabs %}
 
-## Enable or disablezoom pages option
+## Enable or disable zoom pages option
 
 The `ShowImageZoomingSlider` property controls the zoom slider visibility. Set it to `false` to hide the zoom slider.
 

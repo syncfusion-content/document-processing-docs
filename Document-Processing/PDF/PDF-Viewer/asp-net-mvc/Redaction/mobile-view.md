@@ -7,7 +7,7 @@ control: PdfViewer
 documentation: ug
 ---
 
-# Organize Pages in Mobile View in ASP.NET MVC PDF Viewer
+# Redaction in Mobile View in ASP.NET MVC PDF Viewer
 
 The Redaction Tool enables users to permanently mark and remove sensitive content from PDF documents in mobile view using the ASP.NET MVC PdfViewer component. This feature is optimized for touch interactions and provides a streamlined redaction workflow specifically designed for mobile devices.
 

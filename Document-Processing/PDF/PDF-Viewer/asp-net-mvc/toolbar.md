@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Customize the Organize Pages Toolbar in ASP.NET MVC PDF Viewer
+# Customize the Main PDF Viewer Toolbar in ASP.NET MVC PDF Viewer
 
 The PDF Viewer includes a built-in, responsive toolbar that surfaces common PDF actions and provides entry points to feature-specific toolbars. It adapts across desktop, tablet, and mobile, and can be customized to show or hide items, reorder commands, add custom items, and handle toolbar events.
 
