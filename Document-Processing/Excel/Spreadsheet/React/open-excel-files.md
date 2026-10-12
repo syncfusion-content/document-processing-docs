@@ -97,7 +97,7 @@ Please find the below table for the [beforeOpen](https://ej2.syncfusion.com/reac
 
 The Spreadsheet component supports client-side opening of Excel files without requiring a server endpoint. Using the [Syncfusion EJ2 Xlsx library](https://www.nuget.org/packages/Syncfusion.EJ2.Xlsx), you can open Excel files directly in the browser and convert them to JSON format for the Spreadsheet to render.
 
-When you do **not** configure the [`openUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openurl) property, the Spreadsheet component will automatically perform client-side processing of Excel files. This approach is useful for scenarios where you want to avoid server dependencies or handle file processing directly on the client.
+Omitting the [`openUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openurl) property enables fully client-based processing of Excel files without any server interaction. This approach is ideal for maintaining complete data privacy and reducing infrastructure overhead.
 
 **Key Benefits of Client Open:**
 - No server infrastructure required
@@ -174,7 +174,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** When the `openUrl` property is not configured, the Spreadsheet component will process the file on the client side using the Syncfusion Xlsx library. This eliminates the need for a server endpoint but requires the `@syncfusion/ej2-xlsx` package to be installed in your project.
+> **Note:** Client-based file opening operates entirely on the browser without server interaction. The `@syncfusion/ej2-xlsx` package is required for this functionality.
 
 ## Open Excel files programmatically
 

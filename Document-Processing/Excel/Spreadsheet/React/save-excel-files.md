@@ -104,7 +104,7 @@ Please find the below table for the [`beforeSave`](https://ej2.syncfusion.com/re
 
 The Spreadsheet component supports client-side saving of Excel files without requiring a server endpoint. Using the [Syncfusion EJ2 Xlsx library](https://www.nuget.org/packages/Syncfusion.EJ2.Xlsx), you can convert the Spreadsheet data directly to an Excel file in the browser and download it to the local file system.
 
-When you do **not** configure the [`saveUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveurl) property, the Spreadsheet component will automatically perform client-side processing of save operations. This approach is useful for scenarios where you want to avoid server dependencies or handle file generation directly on the client.
+Omitting the [`saveUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveurl) property enables fully client-based processing of save operations without any server interaction. This approach is ideal for maintaining complete data privacy and reducing infrastructure overhead.
 
 **Key Benefits of Client Save:**
 - No server infrastructure required
@@ -203,7 +203,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** When the `saveUrl` property is not configured, the Spreadsheet component will process the save operation on the client side using the Syncfusion Xlsx library. This eliminates the need for a server endpoint but requires the `@syncfusion/ej2-xlsx` package to be installed in your project. The file will be automatically downloaded to the local file system.
+> **Note:** Client-based file saving operates entirely on the browser without server interaction. The `@syncfusion/ej2-xlsx` package is required for this functionality. The generated file will be automatically downloaded to the local file system.
 
 ## Save Excel files programmatically
 
