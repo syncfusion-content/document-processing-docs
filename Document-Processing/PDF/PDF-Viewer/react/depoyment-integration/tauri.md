@@ -138,7 +138,7 @@ export default function App() {
         // Specifies the URL (for example, a file from the public folder) or a Base64-encoded PDF.
         documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
         // Specifies the path to the PDFium resource files required for the PDF Viewer to function.
-        resourceUrl="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/dist/ej2-pdfviewer-lib">
+        resourceUrl="https://cdn.syncfusion.com/ej2/35.1.37/dist/ej2-pdfviewer-lib">
 
          <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
                              BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
@@ -162,7 +162,7 @@ export default function App() {
       // Specifies the URL (for example, a file from the public folder) or a Base64-encoded PDF.
       documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       // Specifies the path to the PDFium resource files required for the PDF Viewer to function.
-      resourceUrl="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/dist/ej2-pdfviewer-lib">
+      resourceUrl="https://cdn.syncfusion.com/ej2/35.1.37/dist/ej2-pdfviewer-lib">
       <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
                           BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
                           FormFields, FormDesigner, PageOrganizer ]}/>
