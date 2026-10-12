@@ -284,7 +284,7 @@ Please find below the code to retrieve blob data from the Spreadsheet control be
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/save-as-blobdata-cs1" %}
 
-> **Note:** Currently, we support saving .xlsx format files for client-side operations.
+> **Note:** Client-based file saving operates entirely on the browser without server interaction. The `@syncfusion/ej2-xlsx` package is required for this functionality. The generated file will be automatically downloaded to the local file system.
 
 ### Save Workbook as JSON
 

@@ -266,7 +266,7 @@ You can achieve to access the remote Excel file by using the [`created`](https:/
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/open-save-cs2" %}
 
-> **Note:** Currently, we support opening .xlsx format files for client-side operations.
+> **Note:** Client-based file opening operates entirely on the browser without server interaction. The `@syncfusion/ej2-xlsx` package is required for this functionality.
 
 ### Open Excel files from Blob Data
 
