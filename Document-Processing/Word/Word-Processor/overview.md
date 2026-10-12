@@ -1,11 +1,13 @@
 ---
 title: About Syncfusion DOCX Editor Control | Syncfusion
-description: Learn about the introduction of Syncfusion Essential Studio DOCX Editor control and more details.
+description: Learn here all about the introduction of Syncfusion Essential Studio DOCX Editor control and more details.
 platform: document-processing
 control: general
 documentation: UG
 keywords: Word, SDK, view, edit, read, document-editor
 ---
+
+> With the Essential Studio 2027 Volume 1 release, we will discontinue support for .NET 8.0 and .NET 9.0 in ASP.NET Core, Blazor, .NET MAUI, WinUI, WinForms, WPF, and Document Processing Libraries. Please plan to upgrade to .NET 10.0 or higher.
 
 # About Syncfusion DOCX Editor Control
 
@@ -34,4 +36,3 @@ keywords: Word, SDK, view, edit, read, document-editor
 {% enddoccards %}
 
 Syncfusion<sup>&reg;</sup> DOCX Editor component is a Microsoft Word-like GUI component used to view, edit and print Word documents in WPF, JavaScript, Angular, React, Vue, ASP.NET MVC, ASP.NET Core, and Blazor applications that works without Microsoft Office dependencies. It eases you developers to just integrate this Word editor component to achieve the required Word document viewing, editing functionalities and concentrate on core logics of your application.
-
