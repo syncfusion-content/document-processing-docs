@@ -8,11 +8,13 @@ documentation: ug
 
 # Conditional Formatting in JavaScript Excel
 
-Create rules with `sheet.conditionalFormats.add` and configure the returned `ConditionalFormat` handle. Pass a cell or range address such as `A1:A10`.
+Conditional formatting applies visual styles when cell values meet a rule you define. Use it to highlight thresholds, trends, or exceptions across a selected range when the workbook opens in Excel.
 
-`ConditionalFormatType` and `ConditionalFormatOperator` are **string union types** (for example `'cellIs'`, `'greaterThan'`), not numeric enums. New rules start as a `cellIs` value-comparison rule. Use `firstFormula` / `secondFormula` (or `formulas`) for thresholds — there is no `formula1` property. Apply highlight styling through `format` (`DifferentialFormatInput`: font, fill, and border).
+`ConditionalFormatType` and `ConditionalFormatOperator` are **string union types** (for example `'cellIs'`, `'greaterThan'`), not numeric enums. New rules start as a `cellIs` value-comparison rule. Use `firstFormula` / `secondFormula` (or the `formulas` array) for thresholds. Apply highlight styling through `format` (`DifferentialFormatInput`: font, fill, and border).
 
 ## Cell value rule
+
+A cell value rule compares cell values with one or more specified values. When a cell meets the selected condition, the specified formatting is applied.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -77,7 +79,7 @@ Common `ConditionalFormatType` values include `'cellIs'`, `'expression'`, `'colo
 
 ## Color scale, data bar, and icon set
 
-Set `type` to enable the matching visual handle (`colorScale`, `dataBar`, or `iconSet`). Configure thresholds and colors on that handle after the type is set.
+Color scales, data bars, and icon sets add visual cues across a range so patterns and relative magnitude stand out at a glance. Each style maps value thresholds to colors, bar lengths, or icons.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -116,6 +118,8 @@ iconRule.type = 'iconSet';
 {% endtabs %}
 
 ## Manage rules
+
+After rules are defined, you can review which ones apply to a cell, remove outdated rules, or clear the full set so formatting stays aligned with the current worksheet design.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

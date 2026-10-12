@@ -94,48 +94,32 @@ Install-Package Azure.AI.OpenAI
 {% endhighlight %}
 {% endtabs %}
 
-* To configure the Azure OpenAI service, add the following settings to the `MauiProgram.cs` file.
+To configure the AI services, you must call the `ConfigureSyncfusionAIServices()` method in the `MauiProgram.cs` file.
+
+Add the following namespaces:
 
 {% tabs %}
-{% highlight c# tabtitle="MauiProgram.cs" hl_lines="2 15 21" %}
-
-using Azure.AI.OpenAI;
-using Microsoft.Extensions.AI;
-using Syncfusion.Maui.Core.Hosting;
+{% highlight c# %}
 using Syncfusion.Maui.SmartComponents.Hosting;
-using System.ClientModel;
+using Azure.AI.OpenAI;
+using Azure;
+{% endhighlight %}
+{% endtabs %}
 
-public static class MauiProgram
-{
-    public static MauiApp CreateMauiApp()
-    {
-        var builder = MauiApp.CreateBuilder();
-        builder
-            .UseMauiApp<App>()
-            .ConfigureFonts(fonts =>
-            {
-                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-            });
+In the `CreateMauiApp` method, add the following code to configure the Azure AI service:
 
-        builder.ConfigureSyncfusionCore();
+{% tabs %}
+{% highlight c# %}
+string key = "<MENTION-YOUR-KEY>";
+Uri azureEndPoint = new Uri("<MENTION-YOUR-URL>");
+string deploymentName = "<MENTION-YOUR-DEPLOYMENT-NAME>";
 
-        // Azure OpenAI configuration values
-        string azureOpenAIKey = "AZURE_OPENAI_KEY";
-        string azureOpenAIEndpoint = "AZURE_OPENAI_ENDPOINT";
-        string azureOpenAIModel = "AZURE_OPENAI_MODEL";
-        AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(
-            new Uri(azureOpenAIEndpoint),
-            new ApiKeyCredential(azureOpenAIKey));
-        IChatClient azureOpenAIChatClient = azureOpenAIClient.GetChatClient(azureOpenAIModel).AsIChatClient();
+// Shows how to configure Azure AI service to the Smart Components.
+AzureOpenAIClient azureOpenAIClient = new AzureOpenAIClient(azureEndPoint, new AzureKeyCredential(key));
+IChatClient azureChatClient = azureOpenAIClient.GetChatClient(deploymentName).AsIChatClient();
 
-        // Register the chat client used by the Smart PDF Viewer.
-        builder.Services.AddChatClient(azureOpenAIChatClient);
-        builder.ConfigureSyncfusionAIServices();
-
-        return builder.Build();
-    }
-}
-
+builder.Services.AddChatClient(azureChatClient);
+builder.ConfigureSyncfusionAIServices();
 {% endhighlight %}
 {% endtabs %}
 

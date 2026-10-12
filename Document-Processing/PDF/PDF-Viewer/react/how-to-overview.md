@@ -38,6 +38,7 @@ The following how-to articles and frequently asked questions for the Syncfusion 
 * [How to get the page information of the loaded document?](./how-to/getPageInfo)
 * [How to import and export annotations in PDF Viewer?](./how-to/import-export-annotation)
 * [How to load a PDF document in PDF Viewer?](./how-to/load-document)
+* [Active Viewport Rendering](./how-to/active-viewport-rendering)
 * [How to set the minimum and maximum zoom percentage?](./how-to/min-max-zoom)
 * [How to open the bookmark pane when the document is loaded?](./how-to/open-bookmark)
 * [How to open the thumbnail pane when the document is loaded?](./how-to/open-thumbnail)

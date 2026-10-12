@@ -8,13 +8,13 @@ documentation: ug
 
 # Worksheet and Workbook Protection in JavaScript Excel
 
-Protect a sheet with `sheet.protect(password?, options?)` and a workbook with `workbook.protect(password?, options?)`.
+Worksheet and workbook protection store restrictions that control the changes users can make when the workbook is opened in a spreadsheet application. Sheet protection controls editing on a worksheet, while workbook protection can lock structure, windows, or revision tracking. Optional passwords strengthen these limits.
 
 N> Protection is **not** file encryption. It stores protection flags (and optional password hashes) so Excel enforces allowed actions. It does not encrypt package contents.
 
 ## Protect a worksheet
 
-Sheet protection options use **allow** polarity: `true` means the user may perform that action while the sheet is protected.
+Worksheet protection stores restrictions that control the changes users can make when the workbook is opened in a spreadsheet application. You can allow specific actions while protected and optionally require a password to unprotect the sheet.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -22,6 +22,8 @@ import { Workbook, SheetProtectionOptions } from '@syncfusion/ej2-xlsx';
 
 const workbook: Workbook = Workbook.create();
 const sheet = workbook.sheet(0);
+
+sheet.cell('A1').value = 'Protected sheet sample';
 
 const options: SheetProtectionOptions = {
   allowsSelectLockedCells: true,
@@ -33,16 +35,19 @@ const options: SheetProtectionOptions = {
   allowsAutoFilter: true,
 };
 
+// Protect the sheet; Excel enforces these flags when the file opens
 sheet.protect('sheet-secret', options);
 
-// Later
-sheet.unprotect('sheet-secret');
+// Later: sheet.unprotect('sheet-secret');
+await workbook.save('./SheetProtected.xlsx');
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 import { Workbook } from '@syncfusion/ej2-xlsx';
 
 const workbook = Workbook.create();
 const sheet = workbook.sheet(0);
+
+sheet.cell('A1').value = 'Protected sheet sample';
 
 sheet.protect('sheet-secret', {
   allowsSelectLockedCells: true,
@@ -54,7 +59,8 @@ sheet.protect('sheet-secret', {
   allowsAutoFilter: true,
 });
 
-sheet.unprotect('sheet-secret');
+// Later: sheet.unprotect('sheet-secret');
+await workbook.save('./SheetProtected.xlsx');
 {% endhighlight %}
 {% endtabs %}
 
@@ -71,27 +77,35 @@ Cell-level locked / hidden formula settings belong on cell style protection, not
 
 ## Allow-edit ranges (`protectedRanges`)
 
-Use `sheet.protectedRanges` to define named cell areas users may edit while the rest of the sheet stays protected.
+Allow-edit ranges store named cell areas that remain editable when sheet protection is enforced by a spreadsheet application. Optional range passwords can further control who may edit those areas.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import { Workbook } from '@syncfusion/ej2-xlsx';
+import type { ProtectedRangeInput } from '@syncfusion/ej2-xlsx';
 
 const workbook: Workbook = Workbook.create();
 const sheet = workbook.sheet(0);
 
-const editable = sheet.protectedRanges.add({
+// Cells users may still edit after the sheet is protected
+const input: ProtectedRangeInput = {
   name: 'InputCells',
+  sqref: 'B2:B10 C2:C10', // required A1 sqref (space-separated multi-area)
   password: 'range-secret', // optional
-});
+};
+
+const editable = sheet.protectedRanges.add(input);
 
 // Later: editable.setPassword(undefined) to clear the range password
 // editable.verifyPassword('range-secret') when a password is set
+// editable.sqref = 'D2:D20'; // update areas after add
 
 const byName = sheet.protectedRanges.getByName('InputCells');
 const all = sheet.protectedRanges.list();
+const count = sheet.protectedRanges.count;
 
 sheet.protect('sheet-secret');
+await workbook.save('./ProtectedRanges.xlsx');
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 import { Workbook } from '@syncfusion/ej2-xlsx';
@@ -99,29 +113,36 @@ import { Workbook } from '@syncfusion/ej2-xlsx';
 const workbook = Workbook.create();
 const sheet = workbook.sheet(0);
 
+// Cells users may still edit after the sheet is protected
 const editable = sheet.protectedRanges.add({
   name: 'InputCells',
+  sqref: 'B2:B10 C2:C10', // required A1 sqref (space-separated multi-area)
   password: 'range-secret',
 });
 
 const byName = sheet.protectedRanges.getByName('InputCells');
 const all = sheet.protectedRanges.list();
+const count = sheet.protectedRanges.count;
 
 sheet.protect('sheet-secret');
+await workbook.save('./ProtectedRanges.xlsx');
 {% endhighlight %}
 {% endtabs %}
 
 `ProtectedRanges` also supports `count`, `get(index)`, `remove`, `removeAt`, and `clear`.
 
+N> Editable cell areas are stored in the protected-range metadata. Preserve the original identifier when reading or writing this metadata.
+
 ## Protect a workbook
 
-Workbook options use **lock** polarity: `true` locks that capability.
+Workbook protection stores flags for structure, window arrangement, and revision tracking. By default, structure is locked so spreadsheet applications can prevent users from adding, deleting, or reordering sheets without unprotecting the workbook.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import { Workbook, WorkbookProtectionOptions } from '@syncfusion/ej2-xlsx';
 
 const workbook: Workbook = Workbook.create();
+workbook.addSheet('Sales');
 
 const options: WorkbookProtectionOptions = {
   lockStructure: true,
@@ -132,12 +153,14 @@ const options: WorkbookProtectionOptions = {
 workbook.protect('wb-secret', options);
 
 // workbook.workbookProtection is defined while protection is on
-workbook.unprotect('wb-secret');
+// workbook.unprotect('wb-secret');
+await workbook.save('./WorkbookProtected.xlsx');
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 import { Workbook } from '@syncfusion/ej2-xlsx';
 
 const workbook = Workbook.create();
+workbook.addSheet('Sales');
 
 workbook.protect('wb-secret', {
   lockStructure: true,
@@ -145,7 +168,8 @@ workbook.protect('wb-secret', {
   lockRevision: false,
 });
 
-workbook.unprotect('wb-secret');
+// workbook.unprotect('wb-secret');
+await workbook.save('./WorkbookProtected.xlsx');
 {% endhighlight %}
 {% endtabs %}
 

@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Programmatically Get Differences
+# Programmatically Get Differences in React PDF Viewer
 
 The semantic text comparison feature provides programmatic access to all differences found between two PDF documents. Using the `semanticTextCompare()` method on `PdfViewerComponent`, you can retrieve structured difference data for custom processing, reporting, or integration with other workflows.
 
@@ -560,6 +560,8 @@ const groupDifferencesByPage = async () => {
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Semantic%20Text%20Comparison/Programmatically%20get%20differences).
 
 ## Related topics
 

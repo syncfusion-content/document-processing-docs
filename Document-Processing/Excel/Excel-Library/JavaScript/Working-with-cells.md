@@ -8,9 +8,11 @@ documentation: ug
 
 # Working with Cells in JavaScript Excel
 
-Access cells with `sheet.cell()` using an A1 address or 1-based row and column indexes. Storage is allocated only when you set a value or other cell content.
+Cells hold values, formulas, and formatting on a worksheet. You can address a cell by A1 notation or by 1-based row and column position; reading an empty address still gives you a cell you can write to.
 
 ## Get a cell
+
+You can address any cell by A1 notation or by row and column position. Reading an empty address still gives you a cell to work with so you can set values or formatting as needed.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -51,7 +53,7 @@ console.log(a1.address); // 'A1'
 
 ## Set values
 
-`value` accepts a number, string, boolean, cell error, or `null` (empty). Setting a value replaces any formula on the cell. Strings are never turned into formulas automatically.
+Cell values can be text, numbers, booleans, errors, or empty. Setting a value replaces any formula on that cell, and plain text is not treated as a formula unless you set a formula explicitly.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -88,7 +90,7 @@ sheet.cell('B2').number = 19.5;
 
 ## Dates
 
-`dateTime` reads and writes JavaScript `Date` values as Excel serial numbers and applies a default date-time number format when you set a date.
+Date values are stored as Excel serial numbers and shown with a date-time display format. Reading and writing dates this way keeps calendar values compatible with Excel.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -115,7 +117,7 @@ N> Date serial conversion respects `workbook.date1904`.
 
 ## Cell errors
 
-Known error codes can be stored as cell values. Use `isCellError` to detect them when reading.
+Cells can store known Excel error codes such as #N/A. Detecting error values when reading helps you handle missing or invalid results without treating them as ordinary text.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -148,7 +150,7 @@ if (isCellError(v)) {
 
 ## Clear cell content
 
-`clear()` removes the value and formula while leaving formatting in place. It does not remove hyperlinks.
+Clearing a cell removes its value and formula while leaving formatting in place. Hyperlinks are not removed by a content clear, so links must be cleared separately when needed.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

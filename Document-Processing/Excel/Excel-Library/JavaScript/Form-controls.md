@@ -8,11 +8,13 @@ documentation: ug
 
 # Form Controls in JavaScript Excel
 
-Worksheet form controls are authored as classic Excel (VML) controls and written on save. Geometry uses **points**; anchors are **1-based**.
+Form controls place interactive choices on a worksheet, such as check boxes, lists, and buttons. Sizes use points, and placement anchors use 1-based row and column positions so controls align with the grid when the file opens in Excel.
 
 N> Button `onAction` stores a macro **name** only. This library does not execute macros.
 
 ## Check box
+
+A check box captures a yes-or-no choice on the worksheet. Linking it to a cell stores the checked state so formulas and other logic can use the selection.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -51,9 +53,11 @@ const checkBox = sheet.addCheckBox(
 {% endhighlight %}
 {% endtabs %}
 
-`CheckState` is `'unchecked' | 'checked' | 'mixed'`.
+Pass the check state as a string: `'unchecked'`, `'checked'`, or `'mixed'` (tri-state). The last argument links the control to a cell address when you need a linked value.
 
 ## Combo box and drop-down
+
+Combo boxes and drop-downs let users pick a value from a list source on the sheet. Choose a fixed list, a linked selection, or an editable field based on how free the input should be.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -88,6 +92,8 @@ const comboEdit = sheet.addComboEditBox(8, 3, 120, 20, 'ColorEdit', 'A1:A3');
 
 ## Option button, group box, and label
 
+Option buttons present mutually exclusive choices within a group. Group boxes organize those options visually, and labels provide static captions beside the controls.
+
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import { Workbook } from '@syncfusion/ej2-xlsx';
@@ -114,6 +120,8 @@ sheet.addFormLabel(6, 2, 120, 18, 'PlanLabel', 'Choose a plan');
 {% endtabs %}
 
 ## Button, list box, scroll bar, spin button, edit box
+
+Buttons, list boxes, scroll bars, spin buttons, and edit boxes complete the classic form control set. They support actions, multi-item selection, numeric adjustment, and free-text input on the worksheet.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -144,4 +152,4 @@ sheet.addEditBox(8, 2, 160, 24, 'NotesEdit', '', 'E8', true);
 
 ## Collections and removal
 
-Read snapshots such as `sheet.checkBoxes`, `sheet.comboBoxes`, `sheet.optionButtons`, `sheet.buttons`, `sheet.listBoxes`, `sheet.groupBoxes`, `sheet.formLabels`, `sheet.scrollBars`, `sheet.spinButtons`, and `sheet.editBoxes`. Remove with the matching `remove*` method (handle or zero-based index).
+After controls are on a sheet, you can list each control type and remove controls you no longer need. Removal targets a specific control or its position in that control list.

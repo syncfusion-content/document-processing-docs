@@ -21,6 +21,8 @@ To enable Link annotations, inject the following modules into the React PDF View
 - [**Annotation**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#annotation)
 - [**LinkAnnotation**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#linkannotation)
 - [**Toolbar**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#toolbar)
+- [**Magnification**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/magnification)
+- [**Navigation**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/navigation)
 
 This setup enables the annotation toolbar and link annotation behavior.
 
@@ -74,7 +76,7 @@ export default function App() {
 {% endhighlight %}
 {% endtabs %}
 
-> The `hyperlinkOpenState` property controls how external URLs open when the user clicks a link. `NewTab` is commonly used for browser navigation.
+> The `hyperlinkOpenState` property controls how external URLs open when the user clicks a link. Supported values include `NewTab` and `NewWindow`. Use `NewTab` to open the URL in a new browser tab, or `NewWindow` to open it in a separate browser window.
 
 ## Add Link Annotation
 
@@ -86,7 +88,9 @@ export default function App() {
 4. Set the properties such as **stroke color** and **stroke thickness**.
 5. Click **Insert** to create the link annotation.
 
-![Add Link dialog](../../images/add-link.png)
+![Add Link dialog URL](../../images/add-link.png)
+
+![Add Link dialog Page](../../images/page-link.png)
 
 The inserted link is displayed as a rectangular annotation region. Users can drag and resize it to position it over the desired target text or area in the PDF.
 
@@ -146,7 +150,9 @@ This adds a link rectangle that opens the specified external URL in the browser 
 
 ## Customize Link Appearance
 
-Link annotations can be customized by specifying properties such as `strokeColor`, `thickness`, `width`, `height`, and other navigation-related settings when creating or editing the annotation.
+Link annotations can be customized with optional visual and navigation properties, such as stroke color, thickness, size, destination page, or URL, depending on the type of link you are creating. The `hyperlinkOpenState` property controls how external URLs open: `NewTab` opens the page in a new tab, and `NewWindow` opens it in a separate browser window.
+
+The following example configures the viewer to open external links in a separate browser window.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -156,7 +162,7 @@ Link annotations can be customized by specifying properties such as `strokeColor
   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
   resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
   style={{ height: '650px' }}
-  hyperlinkOpenState="NewTab"
+  hyperlinkOpenState="NewWindow"
 >
   <Inject services={[Toolbar, Annotation, LinkAnnotation]} />
 </PdfViewerComponent>
@@ -170,18 +176,25 @@ Link annotations can be customized by specifying properties such as `strokeColor
 
 After a link annotation is inserted, the user can:
 
+- Right-click the selected link annotation to open the context menu
+- Choose **Select** option from the context menu
 - Drag the rectangle to a new position
-- Resize the rectangle
-- Modify the stroke color and thickness from the annotation toolbar or property panel
-- Edit the target page or URL from the annotation dialog if supported by the configured UI
+- Resize the rectangle using resize handles
 
-![Resize and edit link annotation](../../images/resize-link.png)
+![Resize link annotation](../../images/resize-link.png)
+
+- Right-click the selected link annotation to open the context menu
+- Choose **Edit** option from the context menu
+- Modify the stroke color and thickness in the property panel
+- Edit the target page or URL from the dialog box
+
+![Edit Link Annotation Context Menu](../../images/edit-link.png)
 
 This allows the link to be visually aligned with the PDF content without changing the document itself.
 
 ### Edit Link Annotation Programmatically
 
-Use `editAnnotation()` to update an existing link annotation.
+Use `editAnnotation()` to update an existing link annotation. The following example updates the selected link annotation by changing its color, size, and navigation target.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -189,16 +202,16 @@ Use `editAnnotation()` to update an existing link annotation.
 function editLinkAnnotation() {
   const viewer = document.getElementById('container').ej2_instances[0];
 
-  for (let annot of viewer.annotationCollection) {
-    if (annot.subject === 'Link') {
-      annot.strokeColor = '#1fcbd4';
-      annot.thickness = 2;
-      annot.bounds = { left: 100, top: 100, width: 100, height: 100 };
-      annot.url = 'https://www.google.com';
-      annot.destinationPageIndex = 3;
-      annot.destinationLocation = { x: 300, y: 300 };
-      annot.zoomValue = 1;
-      viewer.annotation.editAnnotation(annot);
+  for (const linkAnnotation of viewer.annotationCollection) {
+    if (linkAnnotation.subject === 'Link') {
+      linkAnnotation.strokeColor = '#1fcbd4';
+      linkAnnotation.thickness = 2;
+      linkAnnotation.bounds = { left: 100, top: 100, width: 100, height: 100 };
+      linkAnnotation.url = 'https://www.google.com';
+      linkAnnotation.destinationPageIndex = 3;
+      linkAnnotation.destinationLocation = { x: 300, y: 300 };
+      linkAnnotation.zoomValue = 1;
+      viewer.annotation.editAnnotation(linkAnnotation);
       break;
     }
   }
@@ -213,29 +226,19 @@ The PDF Viewer supports deleting link annotations through both the UI and API.
 
 ![Delete link annotation](../../images/delete-link.png)
 
-#### Delete all link annotations
+#### Delete a link annotation by ID
 
-{% tabs %}
-{% highlight js tabtitle="Standalone" %}
-{% raw %}
-function deleteAllAnnotations() {
-  const viewer = document.getElementById('container').ej2_instances[0];
-  viewer.deleteAnnotations();
-}
-{% endraw %}
-{% endhighlight %}
-{% endtabs %}
-
-#### Delete by annotation id
+The following example deletes only the first link annotation found in the collection and keeps all other annotations unchanged.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
 {% raw %}
 function deleteLinkById() {
   const viewer = document.getElementById('container').ej2_instances[0];
+  const linkAnnotation = viewer.annotationCollection.find((item) => item.subject === 'Link');
 
-  if (viewer.annotationCollection.length > 0) {
-    viewer.annotation.deleteAnnotationById(viewer.annotationCollection[0].annotationId);
+  if (linkAnnotation) {
+    viewer.annotation.deleteAnnotationById(linkAnnotation.annotationId);
   }
 }
 {% endraw %}
@@ -244,7 +247,7 @@ function deleteLinkById() {
 
 ## Set Properties While Adding an Individual Link
 
-You can set link properties when creating the annotation directly by passing the required fields in the `addAnnotation('Link', ...)` call.
+You can set link properties when creating the annotation directly by passing the required fields in the `addAnnotation('Link', ...)` call. The following example creates two different link annotations: one to an external URL and one to a destination page.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -280,9 +283,7 @@ function addMultipleLinks() {
 
 The PDF viewer raises annotation life cycle events that can be used to monitor when link annotations are added, modified, selected, or removed. For the complete event list and event details, see [Annotation Events](../annotation-event).
 
-## Export and Import
-
-The PDF Viewer supports exporting and importing annotations, including link annotations, so you can save the link data and restore it later. For more information, see [Export and Import Annotation](../export-import/export-annotation).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Annotations/Link%20Annotation).
 
 ## See Also
 

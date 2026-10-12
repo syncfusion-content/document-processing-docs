@@ -12,6 +12,17 @@ domainurl: ##DomainURL##
 
 [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) supports Track Changes functionality, which allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject these modifications. It is a useful tool for managing changes made by several reviewers to the same document. When the Track Changes option is enabled, all editing operations are preserved as revisions.
 
+Starting from v35.1.xx, the default value of table row insertion and deletion colors are changed based on author. To retain the previous static colors, add the following code.
+
+```typescript
+this.container.documentEditorSettings.revisionSettings = {
+        insertRevisionColor: 'byAuthor',
+        deleteRevisionColor: 'byAuthor',
+        insertedRowColor: '#0078D4', 
+        deletedRowColor: '#E3008C' 
+      };
+```
+
 ## Enable Track changes
 
 Track changes can be enabled using the [enableTrackChanges](https://ej2.syncfusion.com/angular/documentation/api/document-editor-container/index-default#enabletrackchanges) property. When enabled, all editing operations are recorded and preserved as revisions in the DOCX Editor.
@@ -245,6 +256,94 @@ export class AppComponent implements OnInit {
   }
 }
 ```
+
+## Custom Colors for Track Changes
+
+You can set an array of colors to show track changes such as insertions and deletions in the DOCX editor. Each author is assigned a color in order: the first author gets the first color, the second author gets the next, and so on. If there are more authors than colors, the assignment starts again from the beginning of the array.
+
+The following example illustrates how to set the color order for track changes in the DOCX Editor
+
+```typescript
+import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import {
+  DocumentEditorContainerComponent,
+  DocumentEditorContainerModule,
+  ToolbarService
+} from '@syncfusion/ej2-angular-documenteditor';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [DocumentEditorContainerModule],
+  providers: [ToolbarService],
+  template: `
+    <ejs-documenteditorcontainer
+      #container
+      serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
+      height="600px"
+      [enableToolbar]="true">
+    </ejs-documenteditorcontainer>
+  `
+})
+export class App implements AfterViewInit {
+
+  @ViewChild('container')
+  public container!: DocumentEditorContainerComponent;
+
+  ngAfterViewInit(): void {
+    if(this.container!=null && this.container.documentEditorSettings != null && 
+      this.container.documentEditorSettings.revisionSettings != null) {
+        this.container.documentEditorSettings.revisionSettings.revisionColors = [
+          '#047a18',
+          '#bb00ff',
+          '#c14f16'
+        ];
+    }
+
+    this.container.documentEditor.resize();
+  }
+}
+```
+
+## Set colors for revision types
+
+By default, the DOCX Editor uses author-based colors for tracked changes. You can also customize colors for specific revision types, such as inserted content, deleted content, inserted table rows, and deleted table rows.
+ 
+The following example shows how to customize revision type colors instead of using the default author-based colors.
+ 
+```typescript
+import { Component } from '@angular/core';
+import {
+  DocumentEditorContainerModule,
+  ToolbarService
+} from '@syncfusion/ej2-angular-documenteditor';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [DocumentEditorContainerModule],
+  providers: [ToolbarService],
+  template: `
+    <ejs-documenteditorcontainer
+      serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
+      height="600px"
+      [enableToolbar]="true"
+      [enableTrackChanges]="true"
+      [documentEditorSettings]="settings">
+    </ejs-documenteditorcontainer>
+  `
+})
+export class App {
+   settings = { revisionSettings: {
+        insertRevisionColor: '#22C55E',
+        deleteRevisionColor: '#EF4444',
+        insertedRowColor: '#ffff00',
+        deletedRowColor: '#0000ff'
+    }};
+}
+```
+N> 1. These settings only affect how revisions are displayed in the DOCX Editor and are not stored in the document.
+N> 2. By default, all revision types use author-specific colors ('byAuthor').
 
 ## Online Demo
 

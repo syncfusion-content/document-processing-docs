@@ -164,6 +164,8 @@ End Using
 
 {% endtabs %}
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Markdown-Conversion/Convert-PPTX-to-Markdown-with-PPTX-Elements/.NET).
+
 N>
 * On Windows, install the [Syncfusion.OfficeChartToImageConverter.WPF](https://www.nuget.org/packages/Syncfusion.OfficeChartToImageConverter.WPF) NuGet package and use the `ChartToImageConverter` to preserve charts as fallback images. The remaining PowerPoint elements (SmartArt, GroupShape, and OLE Object) are preserved automatically as images without any additional code.
 * On cross-platform (ASP.NET Core, Blazor, .NET MAUI, and WinUI), install either the [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) NuGet package or the [Syncfusion.PresentationRenderer.NET](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.NET) NuGet package based on your project requirements, and use the `PresentationRenderer` to preserve all supported PowerPoint elements as fallback images.

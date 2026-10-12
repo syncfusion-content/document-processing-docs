@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Highlight Differences in UI
+# Highlight Differences in React PDF Viewer UI
 
 The semantic text comparison feature highlights differences between two PDF documents with customizable colors and opacity, making it easy to identify changes at a glance.
 
@@ -168,6 +168,8 @@ Use the `enableSyncScrolling` property to control whether the viewers stay synch
 - **Color-coded highlighting** - Visual differentiation of added and deleted text (red for deleted, green for added)
 - **Differences panel** - Consolidated list on the right showing all detected differences categorized by type
 - **File upload support** - Upload custom PDFs for comparison
+
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Semantic%20Text%20Comparison/Highlight%20differences%20in%20UI).
 
 ## Related topics
 

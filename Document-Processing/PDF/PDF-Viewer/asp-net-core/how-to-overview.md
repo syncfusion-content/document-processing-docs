@@ -24,6 +24,7 @@ The following frequently asked questions address common ASP.NET Core PDF Viewer 
 * [How to customize text search highlight color in PDF Viewer?](./how-to/customize-text-search-color)
 * [How to disable the context menu?](./how-to/disable-context-menu)
 * [How to disable tile rendering in PDF Viewer?](./how-to/disable-tile-rendering)
+* [Active Viewport Rendering](./how-to/active-viewport-rendering)
 * [How to get the download start event?](./how-to/download-start-event)
 * [How to enable or disable the local storage?](./how-to/enable-local-storage)
 * [How to enable the resizer for text markup annotation?](./how-to/enable-resize)

@@ -8,9 +8,11 @@ documentation: ug
 
 # Comments in JavaScript Excel
 
-Classic Excel notes use `cell.comment` / `addComment`. Modern threaded comments use `threadedComment` / `addThreadedComment`.
+Comments attach notes to cells without changing the cell value. Classic notes are single-body annotations, while threaded comments support a chain of replies for review discussions.
 
 ## Classic comments (notes)
+
+Classic comments are single-body notes attached to a cell. They are useful for short annotations such as review feedback or reminders without changing the cell value.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -48,6 +50,8 @@ cell.removeComment();
 {% endtabs %}
 
 ## Threaded comments
+
+Threaded comments support a conversation of replies on a cell. Use them when multiple reviewers need to discuss the same value over time.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
