@@ -6,6 +6,8 @@ control: Chunking
 documentation: UG
 ---
 
+> With the Essential Studio 2027 Volume 1 release, we will discontinue support for .NET 8.0 and .NET 9.0 in ASP.NET Core, Blazor, .NET MAUI, WinUI, WinForms, WPF, and Document Processing Libraries. Please plan to upgrade to .NET 10.0 or higher.
+
 # Syncfusion Document Chunking Library
 
 The Syncfusion<sup>®</sup> Document Chunking Library provides a unified solution for dividing Excel, Word, PDF, PowerPoint, and Markdown documents into meaningful and structured chunks.

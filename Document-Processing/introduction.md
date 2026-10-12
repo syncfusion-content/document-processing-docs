@@ -30,13 +30,13 @@ Document SDK
 </td>
 <td>
 <ul>
-<li><a href="https://help.syncfusion.com/document-processing/pdf/pdf-library/overview">PDF Library</a> is a class library used to create, read, and write PDF files and <a href="https://help.syncfusion.com/document-processing/pdf/conversions/overview">convert</a> office (Word, Excel, PowerPoint) to PDF in .NET Framework [Windows Forms, WPF, ASP.NET MVC], .NET Core, UWP, WinUI, .NET MAUI, JavaScript, Flutter, and Blazor applications.</li>
-<li><a href="https://help.syncfusion.com/document-processing/word/word-library/overview">Word(DocIO) Library</a> is a class library used to create, read, edit, and <a href="https://help.syncfusion.com/document-processing/word/conversions/overview">convert</a> Microsoft Word files in .NET Framework [Windows Forms, WPF, ASP.NET MVC], .NET Core, UWP, WinUI, .NET MAUI, Java, and Blazor applications.</li>
-<li><a href="https://help.syncfusion.com/document-processing/excel/excel-library/overview">Excel(XlsIO) Library</a> is a class library  used to create, read, edit, write, and <a href="https://help.syncfusion.com/document-processing/excel/conversions/overview">convert</a> Microsoft Excel files in .NET Framework [Windows Forms, WPF, ASP.NET MVC], .NET Core, UWP, WinUI, .NET MAUI, Flutter, and Blazor applications.</li>
-<li><a href="https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/overview">PowerPoint Library</a> is a .NET class library used to create, read, edit, and <a href="https://help.syncfusion.com/document-processing/powerpoint/conversions/overview">convert</a> Microsoft PowerPoint (PPTX) files in .NET Framework [Windows Forms, WPF, ASP.NET MVC], .NET Core, UWP, WinUI, .NET MAUI, and Blazor applications.</li>
-<li><a href="https://help.syncfusion.com/document-processing/pdf/conversions/overview">PDF Converter</a> is a .NET class library that converts several file formats such as HTML, Word, Excel, PowerPoint, Markdown, and images to PDF documents. It also supports conversion of PDF documents to images in .NET Framework [Windows Forms, WPF, ASP.NET MVC], .NET Core, WinUI, .NET MAUI, and Blazor applications.</li>
-<li><a href="https://help.syncfusion.com/document-processing/data-extraction/overview">Smart Data Extraction Library</a> is a .NET class library used to extract structured and unstructured data (such as text, tables, form fields, and layout information) from various document formats including PDFs and scanned images. It also supports conversion of PDF documents to Markdown in .NET Framework [Windows Forms, WPF, ASP.NET MVC], .NET Core, WinUI, .NET MAUI, and Blazor applications.</li>
-<li>The <a href="https://help.syncfusion.com/document-processing/data-extraction/net/ocr-processor/overview">OCR (Optical Character Recognition)</a> Processor extracts text from scanned PDF documents and images, making the content searchable and editable. It uses advanced image processing techniques to improve recognition accuracy and convert image-based content into reliable, machine-readable text.</li>
+<li><a href="https://help.syncfusion.com/document-processing/pdf/pdf-library/overview" aria-label="PDF Library">PDF Library</a> is a class library used to create, read, and write PDF files and <a href="https://help.syncfusion.com/document-processing/pdf/conversions/overview" aria-label="convert">convert</a> office (Word, Excel, PowerPoint) to PDF in .NET Framework [Windows Forms, WPF, ASP.NET MVC], .NET Core, UWP, WinUI, .NET MAUI, JavaScript, Flutter, and Blazor applications.</li>
+<li><a href="https://help.syncfusion.com/document-processing/word/word-library/overview" aria-label="Word(DocIO) Library">Word(DocIO) Library</a> is a class library used to create, read, edit, and <a href="https://help.syncfusion.com/document-processing/word/conversions/overview" aria-label="convert">convert</a> Microsoft Word files in .NET Framework [Windows Forms, WPF, ASP.NET MVC], .NET Core, UWP, WinUI, .NET MAUI, Java, and Blazor applications.</li>
+<li><a href="https://help.syncfusion.com/document-processing/excel/excel-library/overview" aria-label="Excel(XlsIO) Library">Excel(XlsIO) Library</a> is a class library  used to create, read, edit, write, and <a href="https://help.syncfusion.com/document-processing/excel/conversions/overview" aria-label="convert">convert</a> Microsoft Excel files in .NET Framework [Windows Forms, WPF, ASP.NET MVC], .NET Core, UWP, WinUI, .NET MAUI, Flutter, and Blazor applications.</li>
+<li><a href="https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/overview" aria-label="PowerPoint Library">PowerPoint Library</a> is a .NET class library used to create, read, edit, and <a href="https://help.syncfusion.com/document-processing/powerpoint/conversions/overview" aria-label="convert">convert</a> Microsoft PowerPoint (PPTX) files in .NET Framework [Windows Forms, WPF, ASP.NET MVC], .NET Core, UWP, WinUI, .NET MAUI, and Blazor applications.</li>
+<li><a href="https://help.syncfusion.com/document-processing/pdf/conversions/overview" aria-label="PDF Converter">PDF Converter</a> is a .NET class library that converts several file formats such as HTML, Word, Excel, PowerPoint, Markdown, and images to PDF documents. It also supports conversion of PDF documents to images in .NET Framework [Windows Forms, WPF, ASP.NET MVC], .NET Core, WinUI, .NET MAUI, and Blazor applications.</li>
+<li><a href="https://help.syncfusion.com/document-processing/data-extraction/overview" aria-label="Smart Data Extraction Library">Smart Data Extraction Library</a> is a .NET class library used to extract structured and unstructured data (such as text, tables, form fields, and layout information) from various document formats including PDFs and scanned images. It also supports conversion of PDF documents to Markdown in .NET Framework [Windows Forms, WPF, ASP.NET MVC], .NET Core, WinUI, .NET MAUI, and Blazor applications.</li>
+<li>The <a href="https://help.syncfusion.com/document-processing/data-extraction/net/ocr-processor/overview" aria-label="OCR (Optical Character Recognition)">OCR (Optical Character Recognition)</a> Processor extracts text from scanned PDF documents and images, making the content searchable and editable. It uses advanced image processing techniques to improve recognition accuracy and convert image-based content into reliable, machine-readable text.</li>
 <li>Markdown Library is a .NET class library  used to create, read, edit, and convert Markdown files to other formats. It enables seamless Markdown processing in .NET Framework [Windows Forms, WPF, ASP.NET MVC], .NET Core, UWP, WinUI, .NET MAUI, and Blazor applications.</li>
 </ul>
 </td>
@@ -46,7 +46,7 @@ Document SDK
 PDF Viewer SDK
 </td>
 <td>
-The <a href="https://help.syncfusion.com/document-processing/pdf/pdf-viewer/overview">PDF Viewer</a> component designed for viewing, reviewing, and annotating PDF documents across web, desktop, and mobile applications. It offers advanced capabilities such as text search, form filling, and annotations for smooth and interactive PDF handling. The component can be easily integrated with platforms like ASP.NET Core, Blazor, JavaScript, Angular, React, WinForms, WPF, and various mobile frameworks, all without the need for external dependencies.
+The <a href="https://help.syncfusion.com/document-processing/pdf/pdf-viewer/overview" aria-label="PDF Viewer">PDF Viewer</a> component designed for viewing, reviewing, and annotating PDF documents across web, desktop, and mobile applications. It offers advanced capabilities such as text search, form filling, and annotations for smooth and interactive PDF handling. The component can be easily integrated with platforms like ASP.NET Core, Blazor, JavaScript, Angular, React, WinForms, WPF, and various mobile frameworks, all without the need for external dependencies.
 </td>
 </tr>
 <tr>
@@ -54,7 +54,7 @@ The <a href="https://help.syncfusion.com/document-processing/pdf/pdf-viewer/over
 DOCX Editor SDK
 </td>
 <td>
-The <a href="https://help.syncfusion.com/document-processing/word/word-processor/overview">DOCX Editor</a> is a Microsoft Word-like component for viewing, editing, and printing documents across WPF, JavaScript, Angular, React, Vue, ASP.NET MVC, ASP.NET Core, and Blazor applications-without requiring Microsoft Office. It offers rich features such as formatting, tables, images, track changes, and real-time collaboration, with easy integration so developers can focus on core application logic.
+The <a href="https://help.syncfusion.com/document-processing/word/word-processor/overview" aria-label="DOCX Editor">DOCX Editor</a> is a Microsoft Word-like component for viewing, editing, and printing documents across WPF, JavaScript, Angular, React, Vue, ASP.NET MVC, ASP.NET Core, and Blazor applications-without requiring Microsoft Office. It offers rich features such as formatting, tables, images, track changes, and real-time collaboration, with easy integration so developers can focus on core application logic.
 </td>
 </tr>
 <tr>
@@ -62,7 +62,7 @@ The <a href="https://help.syncfusion.com/document-processing/word/word-processor
 Spreadsheet Editor SDK
 </td>
 <td>
-The <a href="https://help.syncfusion.com/document-processing/excel/spreadsheet/overview">Spreadsheet Editor</a> is a powerful, Excel‑like component for creating, viewing, editing, and formatting Microsoft Excel files directly within web applications. It offers a wide range of advanced features, including formulas, charts, sorting, filtering, data validation, and worksheet protection, enabling users to work with data efficiently. Designed for versatility, it supports integration across modern frameworks and platforms such as ASP.NET Core, Blazor, Angular, React, JavaScript, Vue, ASP.NET MVC, WinForms, WPF, and UWP, all without requiring external dependencies, making it a lightweight and flexible solution for delivering rich spreadsheet functionality.
+The <a href="https://help.syncfusion.com/document-processing/excel/spreadsheet/overview" aria-label="Spreadsheet Editor">Spreadsheet Editor</a> is a powerful, Excel‑like component for creating, viewing, editing, and formatting Microsoft Excel files directly within web applications. It offers a wide range of advanced features, including formulas, charts, sorting, filtering, data validation, and worksheet protection, enabling users to work with data efficiently. Designed for versatility, it supports integration across modern frameworks and platforms such as ASP.NET Core, Blazor, Angular, React, JavaScript, Vue, ASP.NET MVC, WinForms, WPF, and UWP, all without requiring external dependencies, making it a lightweight and flexible solution for delivering rich spreadsheet functionality.
 </td>
 </tr>
 </table>
@@ -82,10 +82,10 @@ The <a href="https://help.syncfusion.com/document-processing/excel/spreadsheet/o
 Ground your AI coding assistant (GitHub Copilot, Cursor, Claude, and others) in verified Syncfusion APIs - eliminating hallucinated methods. Install one with pre-built document and code skills and generate production-ready document code without leaving your IDE. It also allows executing document operations directly via CSX scripts.
 <br><br>Learn more about:<br><br>
 <ul>
-<li><a href="https://help.syncfusion.com/document-processing/skills/document-sdk">Document SDK Skills</a></li>
-<li><a href="https://help.syncfusion.com/document-processing/skills/pdf-viewer-sdk/component-skills">PDF Viewer SDK Skills</a></li>
-<li><a href="https://help.syncfusion.com/document-processing/skills/docx-editor-sdk/component-skills">DOCX Editor SDK Skills</a></li>
-<li><a href="https://help.syncfusion.com/document-processing/skills/spreadsheet-editor-sdk/component-skills">Spreadsheet Editor SDK Skills</a></li>
+<li><a href="https://help.syncfusion.com/document-processing/skills/document-sdk" aria-label="Document SDK Skills">Document SDK Skills</a></li>
+<li><a href="https://help.syncfusion.com/document-processing/skills/pdf-viewer-sdk/component-skills" aria-label="PDF Viewer SDK Skills">PDF Viewer SDK Skills</a></li>
+<li><a href="https://help.syncfusion.com/document-processing/skills/docx-editor-sdk/component-skills" aria-label="DOCX Editor SDK Skills">DOCX Editor SDK Skills</a></li>
+<li><a href="https://help.syncfusion.com/document-processing/skills/spreadsheet-editor-sdk/component-skills" aria-label="Spreadsheet Editor SDK Skills">Spreadsheet Editor SDK Skills</a></li>
 </ul>
 </td>
 </tr>
@@ -96,9 +96,9 @@ Ground your AI coding assistant (GitHub Copilot, Cursor, Claude, and others) in 
 Transforms natural-language prompts into production-ready UIs using real Syncfusion<sup>&reg;</sup> components. Generates structured, responsive layouts with maintainable architecture by default. Integrates with AI-powered IDEs to produce accurate code while following best practices, accessibility guidelines, and enterprise UI standards. Helps developers quickly move from idea to fully functional interfaces within their workflow.
 <br><br>Learn more about:<br><br>
 <ul>
-<li><a href="https://help.syncfusion.com/document-processing/skills/pdf-viewer-sdk/ui-builder-skills">PDF Viewer UI Builder</a></li>
-<li><a href="https://help.syncfusion.com/document-processing/skills/docx-editor-sdk/ui-builder-skills">DOCX Editor UI Builder</a></li>
-<li><a href="https://help.syncfusion.com/document-processing/skills/spreadsheet-editor-sdk/ui-builder-skills">Spreadsheet UI Builder</a></li>
+<li><a href="https://help.syncfusion.com/document-processing/skills/pdf-viewer-sdk/ui-builder-skills" aria-label="PDF Viewer UI Builder">PDF Viewer UI Builder</a></li>
+<li><a href="https://help.syncfusion.com/document-processing/skills/docx-editor-sdk/ui-builder-skills" aria-label="DOCX Editor UI Builder">DOCX Editor UI Builder</a></li>
+<li><a href="https://help.syncfusion.com/document-processing/skills/spreadsheet-editor-sdk/ui-builder-skills" aria-label="Spreadsheet UI Builder">Spreadsheet UI Builder</a></li>
 </ul>
 </td>
 </tr>
@@ -106,8 +106,8 @@ Transforms natural-language prompts into production-ready UIs using real Syncfus
 <tr>
 <td>AI Agent Tools (Document SDK)</td>
 <td>
-Enables AI agents to autonomously execute document tasks at runtime - generate reports, convert files, and extract form data - without requiring manual processing logic. Integrate the <a href="https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools">Syncfusion.DocumentSDK.AIAgentTools</a> NuGet package to extend your agent’s document processing capabilities.
-<br><br>Learn more about <a href="https://help.syncfusion.com/document-processing/ai-agent-tools/overview">AI Agent Tools</a>.
+Enables AI agents to autonomously execute document tasks at runtime - generate reports, convert files, and extract form data - without requiring manual processing logic. Integrate the <a href="https://www.nuget.org/packages/Syncfusion.DocumentSDK.AI.AgentTools" aria-label="Syncfusion.DocumentSDK.AIAgentTools">Syncfusion.DocumentSDK.AIAgentTools</a> NuGet package to extend your agent’s document processing capabilities.
+<br><br>Learn more about <a href="https://help.syncfusion.com/document-processing/ai-agent-tools/overview" aria-label="AI Agent Tools">AI Agent Tools</a>.
 </td>
 </tr>
 
@@ -115,7 +115,7 @@ Enables AI agents to autonomously execute document tasks at runtime - generate r
 <td>AI Coding Assistant (MCP Server)</td>
 <td>
 Integrates with Visual Studio, VS Code, and JetBrains Rider through MCP Server. Describe your document processing requirement and receive documentation-backed, production-ready C# code instantly.
-<br><br>Learn more about <a href="https://help.syncfusion.com/document-processing/mcp-server/ai-coding-assistant/overview">AI Coding Assistant</a>.
+<br><br>Learn more about <a href="https://help.syncfusion.com/document-processing/mcp-server/ai-coding-assistant/overview" aria-label="AI Coding Assistant">AI Coding Assistant</a>.
 </td>
 </tr>
 
