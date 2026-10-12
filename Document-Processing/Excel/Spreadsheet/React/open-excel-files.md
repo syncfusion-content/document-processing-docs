@@ -122,11 +122,11 @@ const App = () => {
       .then((response) => response.blob())
       .then((fileBlob) => {
         const file = new File([fileBlob], 'Sample.xlsx');
-        // Client-side open without openUrl property
         spreadsheetRef.current?.open({ file });
       });
   };
 
+  // Client-side open without openUrl property
   return (
     <SpreadsheetComponent
       ref={spreadsheetRef}
@@ -154,11 +154,11 @@ const App = () => {
       .then((response) => response.blob())
       .then((fileBlob) => {
         const file = new File([fileBlob], 'Sample.xlsx');
-        // Client-side open without openUrl property
         spreadsheetRef.current?.open({ file });
       });
   };
 
+  // Client-side open without openUrl property
   return (
     <SpreadsheetComponent
       ref={spreadsheetRef}

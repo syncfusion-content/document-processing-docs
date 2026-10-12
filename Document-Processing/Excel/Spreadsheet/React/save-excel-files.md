@@ -130,13 +130,13 @@ const App = () => {
   const spreadsheetRef = useRef(null);
 
   const onClick = () => {
-    // Client-side save without saveUrl property
     spreadsheetRef.current?.save({
       fileName: 'Worksheet',
       saveType: 'Xlsx'
     });
   };
 
+  // Client-side save without saveUrl property
   return (
     <div>
       <SpreadsheetComponent ref={spreadsheetRef}>
@@ -173,13 +173,13 @@ const App = () => {
   const spreadsheetRef = useRef(null);
 
   const onClick = () => {
-    // Client-side save without saveUrl property
     spreadsheetRef.current?.save({
       fileName: 'Worksheet',
       saveType: 'Xlsx'
     });
   };
 
+  // Client-side save without saveUrl property
   return (
     <div>
       <SpreadsheetComponent ref={spreadsheetRef}>
