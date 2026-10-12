@@ -112,17 +112,7 @@ When you do **not** configure the [`saveUrl`](https://ej2.syncfusion.com/react/d
 - Reduced server load and latency
 - Privacy-friendly approach (files remain on the client)
 
-**Install the EJ2 Xlsx Package**
-
-To enable client-side saving, install the `@syncfusion/ej2-xlsx` package:
-
-```bash
-npm install @syncfusion/ej2-xlsx
-```
-
-**Client Save Example**
-
-The following example demonstrates how to save an Excel file using client-side processing without a `saveUrl` property. The file is generated entirely in the browser using the Syncfusion Xlsx library and automatically downloaded:
+The following example demonstrates how to save an Excel file using client-side processing without a `saveUrl` property:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

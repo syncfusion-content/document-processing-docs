@@ -105,17 +105,7 @@ When you do **not** configure the [`openUrl`](https://ej2.syncfusion.com/react/d
 - Reduced latency for file opening operations
 - Privacy-friendly approach (files remain on the client)
 
-**Install the EJ2 Xlsx Package**
-
-To enable client-side opening, install the `@syncfusion/ej2-xlsx` package:
-
-```bash
-npm install @syncfusion/ej2-xlsx
-```
-
-**Client Open Example**
-
-The following example demonstrates how to open an Excel file using client-side processing without an `openUrl` property. The file is processed entirely in the browser using the Syncfusion Xlsx library:
+The following example demonstrates how to open an Excel file using client-side processing without an `openUrl` property:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
