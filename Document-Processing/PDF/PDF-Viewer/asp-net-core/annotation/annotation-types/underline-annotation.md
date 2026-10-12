@@ -151,7 +151,7 @@ function editUnderlineProgrammatically() {
 {% endtabs %}
 
 ### Delete Underline
-The PDF Viewer supports deleting existing annotations through both the UI and API. For detailed behavior, supported deletion workflows, and API reference, see [**Delete Annotation**](../remove-annotations).
+The PDF Viewer supports deleting existing annotations through both the UI and API. For detailed behavior, supported deletion workflows, and API reference, see [**Delete Annotation**](../delete-annotation).
 
 ### Comments
 Use the [**Comments panel**](../comments) to add, view, and reply to threaded discussions linked to underline annotations. It provides a dedicated UI for reviewing feedback, tracking conversations, and collaborating on annotation–related notes within the PDF Viewer.
@@ -205,12 +205,12 @@ Disable text markup annotations (including underline) using the `enableTextMarku
 The PDF viewer provides annotation life-cycle events that notify when underline annotations are added, modified, selected, or removed. For the full list of available events and their descriptions, see [**Annotation Events**](../annotation-event).
 
 ## Export and Import
-The PDF Viewer supports exporting and importing annotations, allowing you to save annotations as a separate file or load existing annotations back into the viewer. For full details on supported formats and steps to export or import annotations, see [**Export and Import Annotation**](../export-import-annotations)
+The PDF Viewer supports exporting and importing annotations, allowing you to save annotations as a separate file or load existing annotations back into the viewer. For full details on supported formats and steps to export or import annotations, see [**Export and Import Annotation**](../export-import/export-annotation)
 
 ## See Also
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)
 - [Customize Context Menu](../../context-menu/custom-context-menu)
 - [Comments Panel](../comments)
 - [Annotation Events](../annotation-event)
-- [Export and Import annotations](../export-import-annotations)
-- [Delete Annotations](../remove-annotations)
+- [Export and Import annotations](../export-import/export-annotation)
+- [Delete Annotations](../delete-annotation)

@@ -73,12 +73,12 @@ The PDF Viewer component follows the [keyboard interaction](https://www.w3.org/W
 | | | **Shortcuts for zooming** |
 | <kbd>CONTROL + =</kbd> | <kbd>COMMAND + =</kbd> | Perform zoom-in operation |
 | <kbd>CONTROL + -</kbd> | <kbd>COMMAND + -</kbd> | Perform zoom-out operation |
-| <kbd>CONTROL + 0</kbd> | <kbd>COMMAND + 0</kbd> | Reset zoom level to 100% |
+| <kbd>CONTROL + 1</kbd> | <kbd>COMMAND + 1</kbd> | Reset zoom level to 100% |
 | | | **Shortcut for text search** |
 | <kbd>CONTROL + F</kbd> | <kbd>COMMAND + F</kbd> | Open the search toolbar |
 | | | **Shortcut for text selection** |
 | <kbd>CONTROL + C</kbd> | <kbd>CONTROL + C</kbd> | Copy selected text, annotation, or form field |
-| <kbd>CONTROL + X</kbd> | <kbd>CONTROL + X</kbd> | Cut selected text, annotation, or form field |
+| <kbd>CONTROL + X</kbd> | <kbd>CONTROL + X</kbd> | Cut selected annotation or form field |
 | <kbd>CONTROL + V</kbd> | <kbd>COMMAND + V</kbd> | Paste selected text, annotation, or form field |
 | | | **Shortcuts for general operations** |
 | <kbd>CONTROL + Z</kbd> | <kbd>COMMAND + Z</kbd> | Undo the action |

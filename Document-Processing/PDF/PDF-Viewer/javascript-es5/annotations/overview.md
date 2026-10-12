@@ -19,6 +19,7 @@ The PDF Viewer provides a complete set of annotation tools for reviewing, measur
 - Text markup: [Highlight](../annotations/annotation-types/highlight-annotation), [Underline](../annotations/annotation-types/underline-annotation), [Squiggly](../annotations/annotation-types/Squiggly-annotation), [Strikethrough](../annotations/annotation-types/strikethrough-annotation)
 - Shapes: [Line](../annotations/annotation-types/line-annotation), [Arrow](../annotations/annotation-types/arrow-annotation), [Rectangle](../annotations/annotation-types/rectangle-annotation), [Circle](../annotations/annotation-types/circle-annotation), [Polygon](../annotations/annotation-types/polygon-annotation)
 - Text boxes: [Free Text](../annotations/annotation-types/free-text-annotation)
+- Links: [Link](../annotations/annotation-types/link-annotation)
 - Drawing: [Ink](../annotations/annotation-types/ink-annotation) (freehand)
 - Stamps: [Standard and custom stamps](../annotations/annotation-types/stamp-annotation)
 - Notes: [Sticky Notes](../annotations/annotation-types/sticky-notes-annotation) (comments)

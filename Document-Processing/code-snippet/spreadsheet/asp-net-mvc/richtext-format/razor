@@ -2,13 +2,49 @@
 
 @Html.EJS().Spreadsheet("spreadsheet").ShowFormulaBar(false).Created("created").Sheets(sheet =>
     {
-        sheet.Name("Sheet1").Ranges(ranges =>
-        {
-            ranges.DataSource((IEnumerable<object>)ViewBag.DefaultData).Add();
-        })
+        sheet.Name("Sheet1")
         .Columns(column =>
         {
-            column.Width(200).Add();
+            column.Width(250).Add();
+        })
+        .Rows(rows =>
+        {
+            rows.Cells(cell =>
+            {
+                cell.Value("Plain Text").Add();
+            }).Add();
+
+            rows.Cells(cell =>
+            {
+                cell.Value("Annual Sales Report 2026 (Draft)")
+                    .RichText(new List<object>
+                    {
+                        new { text = "Annual Sales Report ", style = new { fontWeight = "bold" } },
+                        new { text = "2026", style = new { color = "#0078D4" } },
+                        new { text = " (Draft)", style = new { fontStyle = "italic" } }
+                    }).Add();
+            }).Add();
+
+            rows.Cells(cell =>
+            {
+                cell.Value("Customer Loyalty Program")
+                    .RichText(new List<object>
+                    {
+                        new { text = "Customer Loyalty ", style = new { textDecoration = "underline" } },
+                        new { text = "Program", style = new { fontFamily = "Georgia", fontSize = "14pt" } }
+                    }).Add();
+            }).Add();
+
+            rows.Cells(cell =>
+            {
+                cell.Value("Mineral Water H2O")
+                    .RichText(new List<object>
+                    {
+                        new { text = "Mineral Water H" },
+                        new { text = "2", style = new { verticalAlign = "sub" } },
+                        new { text = "O" }
+                    }).Add();
+            }).Add();
         }).Add();
     }).Render()
 
@@ -17,18 +53,36 @@ function created() {
     var spreadsheet = this;
 
     spreadsheet.updateCell({
+        value: 'Premium Membership valid until 31st Dec 2026',
         richText: [
-            { text: 'H' },
-            { text: '2', style: { verticalAlign: 'sub' } },
-            { text: 'O' }
-        ]
-    }, 'A4');
-
-    spreadsheet.updateCell({
-        value: 'X2',
-        richText: [
-            { text: 'X' },
-            { text: '2', style: { verticalAlign: 'super' } }
+            {
+                text: 'Premium Membership ',
+                style: {
+                    fontWeight: 'bold',
+                    color: '#2E7D32'
+                }
+            },
+            {
+                text: 'valid until ',
+                style: {
+                    fontStyle: 'italic'
+                }
+            },
+            {
+                text: '31',
+                style: {
+                    textDecoration: 'underline'
+                }
+            },
+            {
+                text: 'st',
+                style: {
+                    verticalAlign: 'super'
+                }
+            },
+            {
+                text: ' Dec 2026'
+            }
         ]
     }, 'A5');
 }

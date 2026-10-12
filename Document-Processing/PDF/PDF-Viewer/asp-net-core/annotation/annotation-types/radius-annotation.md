@@ -149,7 +149,7 @@ function editRadiusProgrammatically() {
 
 ### Delete Radius Annotation
 
-Delete Radius Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
+Delete Radius Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../delete-annotation).
 
 ## Set Default Properties During Initialization
 Apply defaults for Radius using the [`radiusSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_RadiusSettings) property.
@@ -225,13 +225,13 @@ window.onload = function () {
 Listen to annotation life-cycle events (add/modify/select/remove). For the full list and parameters, see [**Annotation Events**](../annotation-event).
 
 ## Export and Import
-Radius measurements can be exported or imported with other annotations. For workflows and supported formats, see [**Export and Import annotations**](../export-import-annotations).
+Radius measurements can be exported or imported with other annotations. For workflows and supported formats, see [**Export and Import annotations**](../export-import/export-annotation).
 
 ## See Also
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)
 - [Customize Context Menu](../../context-menu/custom-context-menu)
 - [Comments Panel](../comments)
 - [Annotation Events](../annotation-event)
-- [Export and Import annotations](../export-import-annotations)
-- [Delete Annotations](../remove-annotations)
+- [Export and Import annotations](../export-import/export-annotation)
+- [Delete Annotations](../delete-annotation)
 

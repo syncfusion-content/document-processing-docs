@@ -88,8 +88,8 @@ npm install @syncfusion/ej2-pdfviewer
 
 Download the following files:
 
-- https://cdn.syncfusion.com/ej2/latest/dist/ej2-pdfviewer-lib/pdfium.js
-- https://cdn.syncfusion.com/ej2/latest/dist/ej2-pdfviewer-lib/pdfium.wasm
+- https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib/pdfium.js
+- https://cdn.syncfusion.com/ej2/34.1.29/dist/ej2-pdfviewer-lib/pdfium.wasm
 
 Create the following folder in your SharePoint site assets:
 

@@ -60,10 +60,10 @@ The undo action can also be performed programmatically by calling the [Undo()](h
         DataSourceBytes = File.ReadAllBytes(filePath);
     }
 
-    public async Task PerformUndo()
+    public void PerformUndo()
     {
         // Reverses the most recent action in the active worksheet.
-        await SpreadsheetInstance.Undo();
+        SpreadsheetInstance.Undo();
     }
 }
 
@@ -111,10 +111,10 @@ The redo action can also be performed programmatically by calling the [Redo()](h
         DataSourceBytes = File.ReadAllBytes(filePath);
     }
 
-    public async Task PerformRedo()
+    public void PerformRedo()
     {
         // Reapplies the most recently undone action in the active worksheet.
-        await SpreadsheetInstance.Redo();
+        SpreadsheetInstance.Redo();
     }
 }
 
