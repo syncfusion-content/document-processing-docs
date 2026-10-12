@@ -224,13 +224,13 @@ To know about server-side action, please refer to this [page](./web-services-ove
 
 ## Opening a document in asynchronous mode
 
-[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) supports asynchronous document loading, which can be enabled using the enable property available in the openAsyncSettings API.
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) supports asynchronous document loading, which can be enabled using the enable property available in the [`openAsyncSettings`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/openasyncsettingsmodel) API.
 
 ### Properties
 
-**enable:** Enables or disables asynchronous document loading.
-**initialPageLoadCount:** Number of pages to load initially when the document is opened.
-**incrementalPageLoadCount:** Number of pages to load incrementally after initial pages load, during the asynchronous document-loading operation.
+- **[`enable`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/openasyncsettingsmodel#enable):** Enables or disables asynchronous document loading.
+- **[`initialPageLoadCount`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/openasyncsettingsmodel#initialpageloadcount):** Number of pages to load initially when the document is opened.
+- **[`incrementalPageLoadCount`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/openasyncsettingsmodel#incrementalpageloadcount):** Number of pages to load incrementally after initial pages load, during the asynchronous document-loading operation.
 
 The following example shows how to open the document asynchronously in DOCX Editor.
 
