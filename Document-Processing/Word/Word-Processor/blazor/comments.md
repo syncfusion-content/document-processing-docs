@@ -83,7 +83,7 @@ N> In the `EnforceProtection` method, the first parameter is the password and th
 
 When `highlightCommentsByAuthor` is enabled, each comment marker is displayed in the author's avatar color. Selecting a comment highlights the corresponding text and comment pane border in that color. If multiple comments appear on the same line, the marker retains the first author's avatar color.
 
-The following example illustrates how to enable comment highlights in the DOCX Editor
+The following example illustrates how to enable comment highlights in the DOCX Editor using the [`highlightCommentsByAuthor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.CommentSettingsModel.html#Syncfusion_Blazor_DocumentEditor_CommentSettingsModel_HighlightCommentsByAuthor) property in the [CommentSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.CommentSettingsModel.html) API Reference.
 
 ```csharp
 
