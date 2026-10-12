@@ -121,7 +121,7 @@ N> The `save()` method saves the presentation and returns the bytes, which are t
 
 ## Run the Application
 
-Update the `package.json` to add a dev script for Parcel:
+Update the `package.json` to add a Dev script for Parcel:
 
 ```json
 "scripts": {
