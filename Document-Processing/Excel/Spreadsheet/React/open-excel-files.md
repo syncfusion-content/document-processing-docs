@@ -174,8 +174,6 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** Client-based file opening operates entirely on the browser without server interaction. The `@syncfusion/ej2-xlsx` package is required for this functionality.
-
 ## Open Excel files programmatically
 
 To open Excel files programmatically in the Spreadsheet, you can use the [`open`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#open) method of the Spreadsheet component. Before invoking this method, ensure that the [`openUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openurl) property is properly configured, as it is required for processing the file on the server.
@@ -266,7 +264,7 @@ You can achieve to access the remote Excel file by using the [`created`](https:/
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/open-save-cs2" %}
 
-> **Note:** Client-based file opening operates entirely on the browser without server interaction. The `@syncfusion/ej2-xlsx` package is required for this functionality.
+> **Note:** Currently, we support opening .xlsx format files for client-side operations.
 
 ### Open Excel files from Blob Data
 

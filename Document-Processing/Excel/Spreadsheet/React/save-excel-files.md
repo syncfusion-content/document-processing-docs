@@ -203,8 +203,6 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** Client-based file saving operates entirely on the browser without server interaction. The `@syncfusion/ej2-xlsx` package is required for this functionality. The generated file will be automatically downloaded to the local file system.
-
 ## Save Excel files programmatically
 
 To save Excel files programmatically in the Spreadsheet, you can use the [`save`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#save) method of the Spreadsheet component. Before invoking this method, ensure that the [`saveUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveurl) property is properly configured, as it is required for processing and generating the file on the server.
@@ -284,7 +282,7 @@ Please find below the code to retrieve blob data from the Spreadsheet control be
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/save-as-blobdata-cs1" %}
 
-> **Note:** Client-based file saving operates entirely on the browser without server interaction. The `@syncfusion/ej2-xlsx` package is required for this functionality. The generated file will be automatically downloaded to the local file system.
+> **Note:** Currently, we support saving .xlsx format files for client-side operations.
 
 ### Save Workbook as JSON
 
