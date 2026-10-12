@@ -266,6 +266,8 @@ You can achieve to access the remote Excel file by using the [`created`](https:/
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/open-save-cs2" %}
 
+> **Note:** Currently, we support opening .xlsx format files for client-side operations.
+
 ### Open Excel files from Blob Data
 
 By default, the Spreadsheet component provides an option to browse files from the local file system and open them within the component. If you want to open an Excel file from blob data, you need to fetch the blob data from the server or another source and convert this blob data into a `File` object. Then, you can use the [open](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#open) method in the Spreadsheet component to load that `File` object.

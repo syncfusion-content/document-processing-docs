@@ -284,6 +284,8 @@ Please find below the code to retrieve blob data from the Spreadsheet control be
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/save-as-blobdata-cs1" %}
 
+> **Note:** Currently, we support saving .xlsx format files for client-side operations.
+
 ### Save Workbook as JSON
 
 Our Spreadsheet component allows you to export an entire workbook as a JSON object. This JSON output includes all workbook details such as sheets, cell values, formulas, styles, and formatting.
