@@ -214,6 +214,8 @@ FontManager.ClearRegisteredFonts(true)
 
 {% endtabs %}
 
+You can download a complete working sample from GitHub(https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-PDF-conversion/Custom-font-registration/.NET).
+
 During document conversion, fonts are utilized in the following priority order:
 
 1. Registered Custom Fonts
