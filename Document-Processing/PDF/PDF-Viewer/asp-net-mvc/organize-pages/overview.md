@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # About Syncfusion ASP.NET MVC PDF Viewer Organize Pages
 
-The ASP.NET MVC PDF Viewer component provides an Organize Pages panel that helps you prepare documents before sharing them. Use it to tidy scanned files, move pages into the right order, and duplicate important content without leaving the viewer.
+The ASP.NET MVC PDF Viewer includes an Organize Pages panel for preparing documents before sharing. Use this panel to reorder pages, correct orientation, insert or remove pages, and duplicate content without leaving the viewer.
 
-To open the Organize Pages panel, load a document, ensure that the Organize Pages toolbar item is enabled, and choose **Organize Pages** from the left vertical toolbar. The document must allow page-level edits; otherwise, the toolbar item is hidden.
+To open the Organize Pages panel, load a document and choose **Organize Pages** from the left vertical toolbar (when enabled).
 
 The Organize Pages panel supports the following actions:
 
@@ -26,3 +26,10 @@ The Organize Pages panel supports the following actions:
 * **Save updates**: Review changes in real time and use **Save** or **Save As** to download the revised document.
 
 After completing the changes, apply them by selecting **Save** to overwrite the current document or **Save As** to download a new copy that retains the updated page order.
+
+See also:
+
+- [Toolbar customization for Organize Pages](./toolbar)
+- [Programmatic support for Organize Pages](./programmatic-support)
+- [Organize Pages events](./events)
+- [Organize Pages in mobile view](./mobile-view)
