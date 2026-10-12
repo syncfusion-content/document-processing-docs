@@ -100,7 +100,7 @@ Please find the below table for the [`beforeSave`](https://ej2.syncfusion.com/re
 > * The default value of [allowSave](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowsave) property is `true`. For demonstration purpose, we have showcased the [allowSave](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowsave) property in previous code snippet.
 > * Demo purpose only, we have used the online web service url link.
 
-## Client Save
+## Save Excel Files Without a Server Endpoint
 
 The Spreadsheet component supports client-side saving of Excel files without requiring a server endpoint. Using the `ej2-xlsx` package, you can convert the Spreadsheet data directly to an Excel file in the browser and download it to the local file system.
 

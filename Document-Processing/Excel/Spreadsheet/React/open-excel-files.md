@@ -93,7 +93,7 @@ Please find the below table for the [beforeOpen](https://ej2.syncfusion.com/reac
 > * Use `Ctrl + O` keyboard shortcut to open Excel documents.
 > * The default value of the [allowOpen](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowopen) property is `true`. For demonstration purpose, we have showcased the [allowOpen](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowopen) property in previous code snippet.
 
-## Client Open
+## Open Excel Files Without a Server Endpoint
 
 The Spreadsheet component supports client-side opening of Excel files without requiring a server endpoint. Using the `ej2-xlsx` package, you can open Excel files directly in the browser and convert them to JSON format for the Spreadsheet to render.
 
