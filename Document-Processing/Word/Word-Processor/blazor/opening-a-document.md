@@ -396,13 +396,13 @@ The following example code illustrates how to use `MetafileImageParsed` event fo
 
 ## Opening a document in asynchronous mode
 
-[Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) supports asynchronous document loading, which can be enabled using the enable property available in the openAsyncSettings API.
+[Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) supports asynchronous document loading, which can be enabled using the enable property available in the [`openAsyncSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.OpenAsyncSettingsModel.html) API.
 
 ### Properties
 
-**enable:** Enables or disables asynchronous document loading.
-**initialPageLoadCount:** Number of pages to load initially when the document is opened.
-**incrementalPageLoadCount:** Number of pages to load incrementally after initial pages load, during the asynchronous document-loading operation.
+- **[`enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.OpenAsyncSettingsModel.html#Syncfusion_Blazor_DocumentEditor_OpenAsyncSettingsModel_Enable):** Enables or disables asynchronous document loading.
+- **[`initialPageLoadCount`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.OpenAsyncSettingsModel.html#Syncfusion_Blazor_DocumentEditor_OpenAsyncSettingsModel_InitialPageLoadCount):** Number of pages to load initially when the document is opened.
+- **[`incrementalPageLoadCount`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.OpenAsyncSettingsModel.html#Syncfusion_Blazor_DocumentEditor_OpenAsyncSettingsModel_IncrementalPageLoadCount):** Number of pages to load incrementally after initial pages load, during the asynchronous document-loading operation.
 
 The following example shows how to open the document asynchronously in DOCX Editor.
 
