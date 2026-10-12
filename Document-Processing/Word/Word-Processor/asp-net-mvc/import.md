@@ -118,9 +118,9 @@ internal static FormatType GetFormatType(string format)
 
 ### Properties
 
-**enable:** Enables or disables asynchronous document loading.
-**initialPageLoadCount:** Number of pages to load initially when the document is opened.
-**incrementalPageLoadCount:** Number of pages to load incrementally after initial pages load, during the asynchronous document-loading operation.
+- **enable:** Enables or disables asynchronous document loading.
+- **initialPageLoadCount:** Number of pages to load initially when the document is opened.
+- **incrementalPageLoadCount:** Number of pages to load incrementally after initial pages load, during the asynchronous document-loading operation.
 
 The following example shows how to open the document asynchronously in DOCX Editor.
 
