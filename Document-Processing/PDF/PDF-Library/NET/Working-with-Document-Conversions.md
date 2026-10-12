@@ -1572,7 +1572,7 @@ document.Close(True)
 
 ## Linearizing a PDF document
 
-PDF linearization, also known as fast web view, optimizes a PDF document for incremental loading over the web. Set the `IsLinearized` property to `true` before saving the PDF document.
+Linearized PDF, also known as fast web view, optimizes a PDF document for incremental loading over the web. Set the `IsLinearized` property to `true` before saving the PDF document.
 
 ### Creating a linearized PDF document
 
