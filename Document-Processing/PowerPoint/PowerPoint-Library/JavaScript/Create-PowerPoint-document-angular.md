@@ -15,11 +15,6 @@ The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/java
 
 This guide explains how to integrate the [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) into an Angular application that runs in the browser. The generated PowerPoint presentation is downloaded directly from the browser; no server-side PowerPoint rendering is involved.
 
-## Video Tutorial
-
-Watch the following video to learn how to create a PowerPoint file in an Angular application using the JavaScript PowerPoint Library.
-
-{% youtube "https://www.youtube.com/watch?v=..." %}
 
 ## Prerequisites
 
@@ -196,7 +191,5 @@ When you click **Create PowerPoint document**, the PowerPoint file is generated 
 ## Additional Resources
 
 - [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library)
-- [JavaScript PowerPoint Library documentation](https://help.syncfusion.com/document-processing/presentation/pptx-library/javascript/overview)
-- [JavaScript PowerPoint Library API reference](https://ej2.syncfusion.com/documentation/api/powerpoint)
-- [JavaScript PowerPoint Library examples](https://document.syncfusion.com/demos/powerpoint/angular/#/fluent2/powerpoint/default)
+- [JavaScript PowerPoint Library documentation](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/overview)
 - [Syncfusion licensing documentation](https://help.syncfusion.com/document-processing/licensing/overview)

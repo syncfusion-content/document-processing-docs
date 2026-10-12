@@ -83,8 +83,5 @@ await pptxDoc.save('Output.pptx');
 ## See Also
 
 - [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library)
-- [JavaScript PowerPoint Library documentation](https://help.syncfusion.com/document-processing/presentation/pptx-library/javascript/overview)
-- [JavaScript PowerPoint Library API reference](https://ej2.syncfusion.com/documentation/api/powerpoint)
-- [JavaScript PowerPoint Library examples](https://document.syncfusion.com/demos/powerpoint/react/#/fluent2/powerpoint/default)
 
-For environment-specific setup and workflows (React, Vue, Angular, TypeScript, JavaScript), see the corresponding guides in the [JavaScript PowerPoint Library documentation](https://help.syncfusion.com/document-processing/presentation/pptx-library/javascript/overview).
+For environment-specific setup and workflows (React, Vue, Angular, TypeScript, JavaScript), see the corresponding guides in the [JavaScript PowerPoint Library documentation](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/overview).

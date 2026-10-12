@@ -219,7 +219,5 @@ The generated PowerPoint contains a single slide with the text "Hello World!!!" 
 ## See Also
 
 - [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library)
-- [JavaScript PowerPoint Library documentation](https://help.syncfusion.com/document-processing/presentation/pptx-library/javascript/overview)
-- [JavaScript PowerPoint Library API reference](https://ej2.syncfusion.com/documentation/api/powerpoint)
-- [JavaScript PowerPoint Library examples](https://document.syncfusion.com/demos/powerpoint/vue/#/fluent2/powerpoint/default)
+- [JavaScript PowerPoint Library documentation](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/overview)
 - [Syncfusion licensing documentation](https://help.syncfusion.com/document-processing/licensing/overview)

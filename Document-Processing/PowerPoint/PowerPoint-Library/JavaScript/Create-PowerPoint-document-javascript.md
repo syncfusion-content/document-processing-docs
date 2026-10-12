@@ -151,8 +151,7 @@ The generated PowerPoint presentation contains a single slide with the text "Hel
 ## See Also
 
 - [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library)
-- [JavaScript PowerPoint Library documentation](https://help.syncfusion.com/document-processing/presentation/pptx-library/javascript/overview)
-- [JavaScript PowerPoint Library API reference](https://ej2.syncfusion.com/documentation/api/powerpoint)
-- [JavaScript PowerPoint Library examples](https://document.syncfusion.com/demos/powerpoint/react/#/fluent2/powerpoint/default)
+- [JavaScript PowerPoint Library documentation](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/overview)
 
-For build-tool-based workflows (React, Vue, Angular, TypeScript, Node.js), see the corresponding guides in the [JavaScript PowerPoint Library documentation](https://help.syncfusion.com/document-processing/presentation/pptx-library/javascript/overview).
+
+For build-tool-based workflows (React, Vue, Angular, TypeScript, Node.js), see the corresponding guides in the [JavaScript PowerPoint Library documentation](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/overview).
