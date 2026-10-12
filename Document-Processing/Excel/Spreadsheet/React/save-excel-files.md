@@ -102,7 +102,7 @@ Please find the below table for the [`beforeSave`](https://ej2.syncfusion.com/re
 
 ## Save Excel Files Without a Server Endpoint
 
-The Spreadsheet component supports client-side saving of Excel files without requiring a server endpoint. Using the `ej2-xlsx` package, you can convert the Spreadsheet data directly to an Excel file in the browser and download it to the local file system.
+The Spreadsheet component supports saving Excel files directly in the browser without requiring a server endpoint. For client-side save operations, the Spreadsheet uses the ej2-xlsx package to generate Excel files and download them to the local file system.
 
 Omitting the [`saveUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveurl) property enables fully client-based processing of save operations without any server interaction. This approach is ideal for maintaining complete data privacy and reducing infrastructure overhead.
 
