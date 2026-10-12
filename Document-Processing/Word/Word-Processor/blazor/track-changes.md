@@ -89,7 +89,7 @@ await container.DocumentEditor.Selection.NavigatePreviousRevisionAsync();
 ```
 ## Custom Colors for Track Changes
 
-You can set an array of colors to show track changes such as insertions and deletions in the DOCX editor. Each author is assigned a color in order: the first author gets the first color, the second author gets the next, and so on. If there are more authors than colors, the assignment starts again from the beginning of the array.
+You can set an array of colors to show track changes such as insertions and deletions in the DOCX editor by configuring the [`revisionColors`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.RevisionSettingsModel.html#Syncfusion_Blazor_DocumentEditor_RevisionSettingsModel_RevisionColors) property in [RevisionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.RevisionSettingsModel.html). Each author is assigned a color in order: the first author gets the first color, the second author gets the next, and so on. If there are more authors than colors, the assignment starts again from the beginning of the array.
 
 The following example illustrates how to set the color order for track changes in the DOCX Editor
 
@@ -119,7 +119,13 @@ The following example illustrates how to set the color order for track changes i
 
 ## Set colors for revision types
 
-By default, the DOCX Editor uses author-based colors for tracked changes. You can also customize colors for specific revision types, such as inserted content, deleted content, inserted table rows, and deleted table rows.
+By default, the DOCX Editor uses author-based colors for tracked changes. You can also customize colors for specific revision types, such as inserted content, deleted content, inserted table rows, and deleted table rows by configuring the corresponding properties in [RevisionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.RevisionSettingsModel.html):
+
+- [`insertRevisionColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.RevisionSettingsModel.html#Syncfusion_Blazor_DocumentEditor_RevisionSettingsModel_InsertRevisionColor): Sets the color for inserted content.
+- [`deleteRevisionColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.RevisionSettingsModel.html#Syncfusion_Blazor_DocumentEditor_RevisionSettingsModel_DeleteRevisionColor): Sets the color for deleted content.
+- [`insertedRowColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.RevisionSettingsModel.html#Syncfusion_Blazor_DocumentEditor_RevisionSettingsModel_InsertedRowColor): Sets the background color for inserted table rows.
+- [`deletedRowColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.RevisionSettingsModel.html#Syncfusion_Blazor_DocumentEditor_RevisionSettingsModel_DeletedRowColor): Sets the background color for deleted table rows.
+
  
 The following example shows how to customize revision type colors instead of using the default author-based colors.
  
