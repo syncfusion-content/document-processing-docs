@@ -24,7 +24,7 @@ To convert a PDF document or Image into a PowerPoint using the **ExtractDataAsPr
 
 {% tabs %} 
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/refs/heads/master/Data-Extraction/Smart-Data-Extractor/Convert-data-as-Presentation-from-PDF/.NET/Convert-data-as-Presentation-from-PDF/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 using Syncfusion.SmartDataExtractor;
 using Syncfusion.Presentation;
@@ -68,7 +68,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 N> If you want to convert an image instead of a PDF, replace the input stream with the image file (for example, Input.jpg or Input.png). The rest of the code remains unchanged.
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Convert-data-as-Presentation-from-PDF/.NET).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Convert-data-as-PPTX-from-PDF/.NET).
 
 ## Convert a range of PDF pages to PowerPoint
 

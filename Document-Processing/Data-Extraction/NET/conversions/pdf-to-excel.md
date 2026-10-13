@@ -22,6 +22,7 @@ To extract structured data from a PDF document using the **ExtractDataAsExcel** 
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
+
 using Syncfusion.SmartDataExtractor;
 using Syncfusion.XlsIO;
 
@@ -41,7 +42,7 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 {% endhighlight %}
 {% endtabs %}
 
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Extract-data-as-MD-from-PDF/.NET).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Data-Extraction/Smart-Data-Extractor/Convert-data-as-Excel-from-PDF/.NET).
 
 ## Extract Data as ExcelWorkbook from Image
 
