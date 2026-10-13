@@ -207,3 +207,4 @@ The following sample demonstrates how to delete the table row or columns, merge 
 
 * [Feature modules](../asp-net-core/feature-module)
 * [Insert table dialog](../asp-net-core/dialog#table-dialog)
+* [Insert text or image programmatically](./how-to/insert-text-or-image-in-table-programmatically)

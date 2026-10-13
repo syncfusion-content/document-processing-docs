@@ -143,3 +143,4 @@ Using the exposed APIs, you can customize the find and replace functionality in 
 
 * [Options pane](./dialog)
 * [Feature modules](./feature-module)
+* [Change the default search highlight color](./how-to/change-the-default-search-highlight-color)

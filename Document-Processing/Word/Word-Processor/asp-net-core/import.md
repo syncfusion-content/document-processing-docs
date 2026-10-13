@@ -105,9 +105,9 @@ internal static FormatType GetFormatType(string format)
 
 ### Properties
 
-**enable:** Enables or disables asynchronous document loading.
-**initialPageLoadCount:** Number of pages to load initially when the document is opened.
-**incrementalPageLoadCount:** Number of pages to load incrementally after initial pages load, during the asynchronous document-loading operation.
+- **enable:** Enables or disables asynchronous document loading.
+- **initialPageLoadCount:** Number of pages to load initially when the document is opened.
+- **incrementalPageLoadCount:** Number of pages to load incrementally after initial pages load, during the asynchronous document-loading operation.
 
 The following example shows how to open the document asynchronously in DOCX Editor.
 
@@ -124,3 +124,7 @@ N> When asynchronous loading is enabled, the document initially opens in read-on
 ## See Also
 
 * [Feature modules](../asp-net-core/feature-module)
+* [How to show and hide spinner while opening document in DocumentEditor](./how-to/show-hide-spinner)
+* [How to open default document](./how-to/open-default-document)
+* [How to open document in read only by default](./how-to/read-by-default)
+* [How to open document from URL](./how-to/open-document-by-address)

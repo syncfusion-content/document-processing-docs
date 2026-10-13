@@ -55,3 +55,7 @@ N> The boolean parameter of `GetBookmarksAsync` specifies whether to include hid
 ## Online demo
 
 Explore how to insert and manage bookmarks in Word documents using the Blazor DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/hyperlinks-and-bookmarks?theme=fluent2).
+
+## See Also
+
+* [Retrieve the bookmark and whole document content](./how-to/retrieve-the-bookmark-content-as-text)
