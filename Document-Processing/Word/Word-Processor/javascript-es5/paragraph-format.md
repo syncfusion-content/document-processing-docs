@@ -181,3 +181,4 @@ Explore how to apply paragraph formatting in Word documents using the JavaScript
 * [Paragraph dialog](./dialog#paragraph-dialog)
 * [Keyboard shortcuts](./keyboard-shortcut#paragraph-formatting)
 * [Set the default format in document editor](./how-to/set-default-format-in-document-editor)
+* [How to apply external fonts in Document editor](https://support.syncfusion.com/kb/article/11395/)

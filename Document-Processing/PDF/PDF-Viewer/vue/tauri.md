@@ -136,7 +136,7 @@ export default {
   },
   data() {
     return {
-      resourceUrl: "https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/dist/ej2-pdfviewer-lib",
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/35.1.37/dist/ej2-pdfviewer-lib',
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },

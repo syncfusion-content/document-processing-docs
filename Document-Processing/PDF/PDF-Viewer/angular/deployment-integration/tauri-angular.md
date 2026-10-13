@@ -150,7 +150,7 @@ export class App {
   public documentPath: string =
     'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
   public resourcesUrl: string =
-    "https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/dist/ej2-pdfviewer-lib";
+    'https://cdn.syncfusion.com/ej2/35.1.37/dist/ej2-pdfviewer-lib';
 }
 {% endraw %}
 {% endhighlight %}

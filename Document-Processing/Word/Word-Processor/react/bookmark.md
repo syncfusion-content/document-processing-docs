@@ -148,3 +148,5 @@ Explore how to insert and manage bookmarks in Word documents using the React DOC
 * [Feature modules](./feature-module)
 * [Bookmark dialog](./dialog#bookmark-dialog)
 * [Retrieve the bookmark and whole document content](./how-to/retrieve-the-bookmark-content-as-text)
+* [Navigate Between Highlighted Paragraphs using Python](https://support.syncfusion.com/kb/article/24683/)
+* [Hyperlink and Highlight the Selected Text](https://support.syncfusion.com/kb/article/24682/)
