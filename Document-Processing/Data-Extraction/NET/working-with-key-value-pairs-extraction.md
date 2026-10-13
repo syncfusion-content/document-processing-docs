@@ -1,6 +1,6 @@
 ---
 title: Key-Value Pair Extraction in .NET Smart Data Extractor | Syncfusion
-description: Extract key-value pairs from PDFs and images using Smart Data Extractor. Get structured key-value data in JSON format with bounding coordinates and confidence scores.
+description: Extract key-value pairs from PDFs and images using Smart Data Extractor. Output structured JSON with bounding boxes and confidence scores.
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG

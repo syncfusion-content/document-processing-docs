@@ -9,7 +9,7 @@ keywords: Assemblies
 
 # Convert PDF to PowerPoint in .NET Smart Data Extractor
 
-PowerPoint (PPTX) is a widely used format for creating and editing professional presentations. The Syncfusion<sup>&reg;</sup> Smart Data Extractor library supports converting PDF and Images into PowerPoint format in .NET, enabling seamless transformation of PDF files into fully editable PowerPoint presentations while preserving the original layout, tables, images, and content structure. This feature makes it easier to repurpose content, create presentations from documents, and integrate document data into .NET applications and business workflows.
+PowerPoint (PPTX) is a presentation format used to create and edit slides. The Syncfusion® Smart Data Extractor library converts PDF files and images to PowerPoint in .NET, so you can edit the extracted text, tables, and images as slides.
 
 ## Assemblies and NuGet packages required
 
