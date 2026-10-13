@@ -91,35 +91,24 @@ export default function App() {
         textPart1.font.fontSize = 36;
 
         try {
-
             const bytes = await pptxDoc.save();
-
             const blob = new Blob(
                 [bytes],
                 {
                     type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
                 }
             );
-
             const url = window.URL.createObjectURL(blob);
-
             const link = document.createElement('a');
-
             link.href = url;
             link.download = 'Output.pptx';
-
             document.body.appendChild(link);
-
             link.click();
-
             document.body.removeChild(link);
-
             window.URL.revokeObjectURL(url);
 
         } catch (error) {
-
             console.error('Error creating PowerPoint file:', error);
-
         }
     };
     return (
