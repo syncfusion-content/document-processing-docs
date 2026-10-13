@@ -126,6 +126,7 @@ Include the following namespaces in `index.ts` file.
 import { Presentation, HorizontalAlignmentType } from '@syncfusion/ej2-pptx';
 
 {% endhighlight %}
+{% endtabs %}
 Include the following code example in the click event of the button in `index.ts` to generate a PowerPoint document:
 
 * Include the following code example in the click event of the button in `index.ts` to generate a PowerPoint document
