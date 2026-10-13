@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with JavaScript Word in TypeScript app | Syncfusion
-description: Learn how to get started with the Syncfusion JavaScript Word Library in a TypeScript application. Steps to create Word documents without depending on Microsoft Word.
+description: Learn how to get started with the Syncfusion JavaScript Word Library in a TypeScript app. Steps to create Word documents without depend on Microsoft Word.
 platform: document-processing
 control: Word
 documentation: ug
@@ -11,9 +11,9 @@ canonical_url: https://help.syncfusion.com/document-processing/word/word-library
 
 # Getting Started with JavaScript Word Library in TypeScript app
 
-The [JavaScript Word Library](https://www.syncfusion.com/document-sdk/javascript-word-library) is used to create, read, and edit Word documents.
+The JavaScript Word Library is used to create, read, and edit Word documents.
 
-This guide explains how to integrate the [JavaScript Word Library](https://www.syncfusion.com/document-sdk/javascript-word-library) into a TypeScript application that runs in the browser. The generated Word document is downloaded directly from the browser; no server-side rendering is required.
+This guide explains how to integrate the JavaScript Word Library into a TypeScript application that runs in the browser. The generated Word document is downloaded directly from the browser; no server-side rendering is required.
 
 ## Prerequisites
 
@@ -195,6 +195,5 @@ N> The first run may take a few seconds while Vite optimizes dependencies. Subse
 
 ## See Also
 
-- [JavaScript Word Library](https://www.syncfusion.com/document-sdk/javascript-word-library)
 - [JavaScript Word Library documentation](https://help.syncfusion.com/document-processing/word/word-library/javascript/overview)
 - [Syncfusion licensing documentation](https://help.syncfusion.com/document-processing/licensing/overview)

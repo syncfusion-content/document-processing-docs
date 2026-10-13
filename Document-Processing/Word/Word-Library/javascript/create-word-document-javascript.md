@@ -2,7 +2,7 @@
 layout: post
 title: Getting Started with JavaScript Word in JavaScript app | Syncfusion
 canonical_url: https://help.syncfusion.com/document-processing/word/word-library/javascript/create-word-document-javascript
-description: Learn how to get started with the Syncfusion JavaScript Word Library in a JavaScript application. Steps to create Word documents without depending on Microsoft Word.
+description: Learn how to get started with the Syncfusion JavaScript Word Library in a JavaScript app. Steps to create Word documents without depend on Microsoft Word.
 platform: document-processing
 control: Word
 documentation: ug
@@ -11,9 +11,9 @@ keywords: javascript create word, javascript generate docx, javascript word libr
 
 # Getting Started with JavaScript Word Library in JavaScript app
 
-Syncfusion<sup>&reg;</sup> JS 2 (global script) is an ES5-formatted distribution of the [JavaScript Word Library](https://www.syncfusion.com/document-sdk/javascript-word-library) that runs directly in any modern web browser without a build step or bundler. The all-in-one `ej2.min.js` bundle exposes the `ej.docx` namespace, which contains the Word document classes.
+Syncfusion<sup>&reg;</sup> JS 2 (global script) is an ES5-formatted distribution of the JavaScript Word Library that runs directly in any modern web browser without a build step or bundler. The all-in-one `ej2.min.js` bundle exposes the `ej.docx` namespace, which contains the Word document classes.
 
-This guide explains how to integrate the [JavaScript Word Library](https://www.syncfusion.com/document-sdk/javascript-word-library) into a static HTML page. The generated Word document is downloaded directly from the browser; no server-side rendering is required.
+This guide explains how to integrate the JavaScript Word Library into a static HTML page. The generated Word document is downloaded directly from the browser; no server-side rendering is required.
 
 ## Prerequisites
 
@@ -119,7 +119,6 @@ N> This guide uses the CDN distribution of the JavaScript Word Library. No clien
 
 ## See Also
 
-- [JavaScript Word Library](https://www.syncfusion.com/document-sdk/javascript-word-library)
 - [JavaScript Word Library documentation](https://help.syncfusion.com/document-processing/word/word-library/javascript/overview)
 
 For build-tool-based workflows (React, Vue, Angular, TypeScript, Node.js), see the corresponding guides in the [JavaScript Word Library documentation](https://help.syncfusion.com/document-processing/word/word-library/javascript/overview).

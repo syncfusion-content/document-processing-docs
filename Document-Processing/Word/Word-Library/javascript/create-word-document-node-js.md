@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with JavaScript Word in Node.js app | Syncfusion
-description: Learn how to get started with the Syncfusion JavaScript Word Library in a Node.js application. Steps to create Word documents without depending on Microsoft Word.
+description: Learn how to get started with the Syncfusion JavaScript Word Library in a Node.js application. Steps to create Word documents without depend on Microsoft Word.
 platform: document-processing
 control: Word
 documentation: ug
@@ -198,6 +198,5 @@ Clicking **Create Word document** triggers the `fetch('/generate-word')` call. T
 
 ## See Also
 
-- [JavaScript Word Library](https://www.syncfusion.com/document-sdk/javascript-word-library)
 - [JavaScript Word Library documentation](https://help.syncfusion.com/document-processing/word/word-library/javascript/overview)
 - [Syncfusion licensing documentation](https://help.syncfusion.com/document-processing/licensing/overview)
