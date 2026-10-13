@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to Auto Save Document in TypeScript DOCX Editor
+# How to Auto Save Document to AWS S3 in TypeScript DOCX Editor
 
 In this article, we are going to see how to auto save the document in AWS S3. You can automatically save the edited content in regular intervals of time. It helps reduce the risk of data loss by saving an open document automatically at customizable intervals.
 
