@@ -86,24 +86,6 @@ npm install @syncfusion/ej2-docx --save
 yarn add @syncfusion/ej2-docx
 ```
 
-### Transitive Dependencies
-
-The following package is included automatically by `@syncfusion/ej2-docx` and does not need to be installed separately:
-
-- `@syncfusion/ej2-base` — common utilities used by the library.
-
-## License Registration
-
-If your project requires a Syncfusion license, register the license key before using the Word API. Add the following code at the top of `src/App.vue`'s `<script>` block:
-
-```js
-import { registerLicense } from '@syncfusion/ej2-base';
-
-registerLicense('YOUR_LICENSE_KEY');
-```
-
-Replace `YOUR_LICENSE_KEY` with the key from your Syncfusion account. For more information, see the [Syncfusion licensing documentation](https://help.syncfusion.com/document-processing/licensing/overview).
-
 ## Create a Word Document
 
 Replace the contents of `src/App.vue` with the following code. The script imports `WordDocument` as a named export from `@syncfusion/ej2-docx` and creates a Word document in a click handler. The same code works for both Vue 2 and Vue 3.
@@ -111,11 +93,7 @@ Replace the contents of `src/App.vue` with the following code. The script import
 {% tabs %}
 {% highlight html tabtitle="App.vue" %}
 <script>
-import { registerLicense } from '@syncfusion/ej2-base';
 import { WordDocument } from '@syncfusion/ej2-docx';
-
-// Optional: register the Syncfusion license key (required for commercial usage)
-registerLicense('YOUR_LICENSE_KEY');
 
 export default {
   name: 'App',
@@ -150,7 +128,6 @@ N> A click handler is used in this example, so no additional setup is required. 
 
 ## Code Explanation
 
-- `registerLicense(key)` — registers the Syncfusion license key at application startup. Required for commercial usage.
 - `WordDocument.create()` — creates a new Word document instance.
 - `document.section[0]` — accesses the first section of the document.
 - `section.body.paragraphs[0]` — accesses the first paragraph in the section body.
@@ -189,11 +166,9 @@ The generated Word document contains a single paragraph with the text "Hello Wor
 | `Error: Cannot find module '@syncfusion/ej2-docx'` | The package is not installed | Run `npm install @syncfusion/ej2-docx --save` |
 | Button click does nothing | The click handler is not wired | Confirm the button uses `@click="createDocument"` and that `createDocument` is defined in the `methods` block |
 | `Output.docx` does not download | The browser blocks the download | Check the browser's download settings and the downloads folder |
-| `registerLicense` warning at runtime | The license key is missing or invalid | Confirm the key is set in `App.vue` and is the correct key for your Syncfusion account |
 | Port already in use (`5173` or `8080`) | Another process is using the port | Stop the conflicting process or change the port in `vite.config.js` / `vue.config.js` |
 | `npm install` warns about deprecated packages on Vue 2 | Vue 2 and `@vue/cli` are in maintenance / EOL | Migrate to Vue 3 using `npm create vue@latest` |
 
 ## See Also
 
 - [JavaScript Word Library documentation](https://help.syncfusion.com/document-processing/word/word-library/javascript/overview)
-- [Syncfusion licensing documentation](https://help.syncfusion.com/document-processing/licensing/overview)

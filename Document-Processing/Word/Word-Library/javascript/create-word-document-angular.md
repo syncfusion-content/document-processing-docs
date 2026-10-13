@@ -70,24 +70,6 @@ npm install @syncfusion/ej2-docx --save
 yarn add @syncfusion/ej2-docx
 ```
 
-### Transitive Dependencies
-
-The following package is included automatically by `@syncfusion/ej2-docx` and does not need to be installed separately:
-
-- `@syncfusion/ej2-base` — common utilities used by the library.
-
-## License Registration
-
-If your project requires a Syncfusion license, register the license key before using the Word API. Add the following code at the top of `src/App.vue`'s `<script>` block:
-
-```js
-import { registerLicense } from '@syncfusion/ej2-base';
-
-registerLicense('YOUR_LICENSE_KEY');
-```
-
-Replace `YOUR_LICENSE_KEY` with the key from your Syncfusion account. For more information, see the [Syncfusion licensing documentation](https://help.syncfusion.com/document-processing/licensing/overview).
-
 ## Browser and Environment Compatibility
 
 | Environment | Supported version |
@@ -172,4 +154,3 @@ When you click **Create Word document**, the Word file is generated in the brows
 ## See Also
 
 - [JavaScript Word Library documentation](https://help.syncfusion.com/document-processing/word/word-library/javascript/overview)
-- [Syncfusion licensing documentation](https://help.syncfusion.com/document-processing/licensing/overview)

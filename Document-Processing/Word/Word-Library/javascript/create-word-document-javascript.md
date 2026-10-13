@@ -103,10 +103,6 @@ Step 4: Open the served URL in your browser. For `npx serve`, the default URL is
 
 Click **Create Word document**. The browser downloads `Output.docx`, which contains a single paragraph with the text "Hello World!!!".
 
-## License Registration
-
-N> This guide uses the CDN distribution of the JavaScript Word Library. No client-side `registerLicense` call is required when loading the library from the Syncfusion CDN. If you switch to the NPM-based packages, add a `registerLicense('YOUR_LICENSE_KEY')` call in your entry script.
-
 ## Troubleshooting
 
 | Problem | Cause | Resolution |

@@ -92,24 +92,6 @@ All Syncfusion<sup>&reg;</sup> JS 2 packages are published in the `npmjs.com` re
 npm install @syncfusion/ej2-docx --save
 ```
 
-### Transitive Dependencies
-
-The following package is included automatically by `@syncfusion/ej2-docx` and does not need to be installed separately:
-
-- `@syncfusion/ej2-base` — common utilities used by the library.
-
-## License Registration
-
-If your project requires a Syncfusion license, register the license key before using the Word API. Add the following code at the top of your entry point (for example, `index.ts`):
-
-```ts
-import { registerLicense } from '@syncfusion/ej2-base';
-
-registerLicense('YOUR_LICENSE_KEY');
-```
-
-Replace `YOUR_LICENSE_KEY` with the key from your Syncfusion account. For more information, see the [Syncfusion licensing documentation](https://help.syncfusion.com/document-processing/licensing/overview).
-
 ## Create a Word document using TypeScript
 
 This sample is intended for **browser-based** TypeScript applications. It is not designed for server-side rendering or Node.js-only execution.
@@ -159,7 +141,6 @@ document.getElementById('normalButton').onclick = (): void => {
 
 ## Code Explanation
 
-- `registerLicense(key)` — registers the Syncfusion license key at application startup. Required for commercial usage.
 - `WordDocument.create()` — creates a new Word document instance.
 - `document.section[0]` — accesses the first section of the document.
 - `section.body.paragraphs[0]` — accesses the first paragraph in the section body.
@@ -191,9 +172,7 @@ N> The first run may take a few seconds while Vite optimizes dependencies. Subse
 | `ReferenceError: document is not defined` | The code ran in a Node-only context | This sample is browser-only; run it in a browser via `npm start` |
 | `Cannot GET /` | The dev server is not running | Run `npm start` and wait for the local URL |
 | Word document does not download | The browser blocks the download | Check the browser's download settings and the downloads folder |
-| `registerLicense` warning at runtime | The license key is missing or invalid | Confirm the key is set in `index.ts` and is the correct key for your Syncfusion account |
 
 ## See Also
 
 - [JavaScript Word Library documentation](https://help.syncfusion.com/document-processing/word/word-library/javascript/overview)
-- [Syncfusion licensing documentation](https://help.syncfusion.com/document-processing/licensing/overview)

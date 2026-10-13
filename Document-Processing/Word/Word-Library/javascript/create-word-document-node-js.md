@@ -11,9 +11,9 @@ canonical_url: https://help.syncfusion.com/document-processing/word/word-library
 
 # Getting Started with JavaScript Word Library in Node.js app
 
-The [JavaScript Word Library](https://www.syncfusion.com/document-sdk/javascript-word-library) is used to create, read, and edit Word documents.
+The JavaScript Word Library is used to create, read, and edit Word documents.
 
-This guide explains how to integrate the [JavaScript Word Library](https://www.syncfusion.com/document-sdk/javascript-word-library) into a Node.js server-side application that exposes a Word generation endpoint and delivers the file to the browser.
+This guide explains how to integrate the JavaScript Word Library into a Node.js server-side application that exposes a Word generation endpoint and delivers the file to the browser.
 
 ## Prerequisites
 
@@ -53,7 +53,7 @@ word-node-app/
 
 ## Install Dependencies
 
-Install the [JavaScript Word Library](https://www.syncfusion.com/document-sdk/javascript-word-library) and Express. Express is required to host the HTTP endpoint that generates and serves the Word document.
+Install the JavaScript Word Library and Express. Express is required to host the HTTP endpoint that generates and serves the Word document.
 
 ```bash
 npm install @syncfusion/ej2-docx express --save
@@ -61,21 +61,10 @@ npm install @syncfusion/ej2-docx express --save
 
 ### Required Dependencies
 
-The following packages are required to use the [JavaScript Word Library](https://www.syncfusion.com/document-sdk/javascript-word-library) in a Node.js application:
+The following packages are required to use the JavaScript Word Library in a Node.js application:
 
 - `@syncfusion/ej2-docx` — the core JavaScript Word Library
-- `@syncfusion/ej2-base` — base utilities used by the Word Library
 - `express` — HTTP server used to expose the Word generation endpoint
-
-## License Registration
-
-If you are using a commercial Syncfusion license, register the license key at application startup. Add the following line near the top of `server.js`, before any other Syncfusion imports.
-
-```javascript
-require('@syncfusion/ej2-base').registerLicense('YOUR_LICENSE_KEY');
-```
-
-Replace `YOUR_LICENSE_KEY` with the key from your Syncfusion account. For more information, see the [Syncfusion licensing documentation](https://help.syncfusion.com/document-processing/licensing/overview).
 
 ## Create a Node.js Server Application to Generate a Word Document
 
@@ -121,9 +110,6 @@ N> The `fetch` call uses a relative path (`/generate-word`) because the frontend
 
 {% tabs %}
 {% highlight javascript tabtitle="server.js" %}
-
-// Register the Syncfusion license key (required for commercial usage)
-require('@syncfusion/ej2-base').registerLicense('YOUR_LICENSE_KEY');
 
 const express = require('express');
 const { WordDocument } = require('@syncfusion/ej2-docx');
@@ -199,4 +185,3 @@ Clicking **Create Word document** triggers the `fetch('/generate-word')` call. T
 ## See Also
 
 - [JavaScript Word Library documentation](https://help.syncfusion.com/document-processing/word/word-library/javascript/overview)
-- [Syncfusion licensing documentation](https://help.syncfusion.com/document-processing/licensing/overview)
