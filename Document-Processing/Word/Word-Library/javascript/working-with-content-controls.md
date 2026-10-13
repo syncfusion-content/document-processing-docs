@@ -67,6 +67,39 @@ imageParagraph.appendImage(imageBytes, { width: 200, height: 100 });
 // Saves the Word document.
 document.save('Result.docx');
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Creates a new Word document.
+let document = ej.docx.WordDocument.create();
+
+// Gets the first section.
+let section = document.sections[0];
+
+// Adds a rich text block content control.
+let blockContentControl = section.body.addBlockContentControl(
+  ej.docx.ContentControlType.RichText
+);
+
+// Adds a paragraph to the content control.
+let paragraph = blockContentControl.body.appendParagraph();
+paragraph.appendText('Block content control');
+
+// Adds a table to the content control.
+let table = blockContentControl.body.appendTable();
+table.resetCells(2, 3);
+
+// Adds a paragraph for the image.
+let imageParagraph = blockContentControl.body.appendParagraph();
+
+// Loads the image from the specified path.
+const response = await fetch('Image.png');
+let imageBytes = new Uint8Array(await response.arrayBuffer());
+
+// Appends the image to the paragraph.
+imageParagraph.appendImage(imageBytes, { width: 200, height: 100 });
+
+// Saves the Word document.
+document.save('Result.docx');
+{% endhighlight %}
 {% endtabs %}
 
 ### Inline Content Control
@@ -92,6 +125,31 @@ let inlineContentControl = paragraph.appendInlineContentControl(
 
 // Creates a new text range.
 let textRange = new TextRange(document);
+textRange.text = 'Inline content control';
+
+// Adds the text range to the inline content control.
+inlineContentControl.paragraphItems.add(textRange);
+
+// Saves the Word document.
+document.save('Result.docx');
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Creates a new Word document.
+let document = ej.docx.WordDocument.create();
+
+// Gets the first paragraph in the document.
+let paragraph = document.sections[0].body.paragraphs[0];
+
+// Appends text to the paragraph.
+paragraph.appendText('A new text is added to the paragraph. ');
+
+// Adds an inline rich text content control.
+let inlineContentControl = paragraph.appendInlineContentControl(
+  ej.docx.ContentControlType.RichText
+);
+
+// Creates a new text range.
+let textRange = new ej.docx.TextRange(document);
 textRange.text = 'Inline content control';
 
 // Adds the text range to the inline content control.
@@ -135,6 +193,44 @@ contentControl.contentControlProperties.appearance = ContentControlAppearance.Ta
 contentControl.contentControlProperties.tag = 'Rich Text';
 contentControl.contentControlProperties.title = 'Text';
 contentControl.contentControlProperties.color = Color.Magenta;
+
+// Reads the resolved content control type.
+let controlType = contentControl.contentControlProperties.type;
+
+// Locks the content control and its content.
+contentControl.contentControlProperties.lockContentControl = true;
+contentControl.contentControlProperties.lockContents = true;
+
+// Saves the Word document.
+document.save('Result.docx');
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Creates a new Word document.
+let document = ej.docx.WordDocument.create();
+
+// Gets the first paragraph in the document.
+let paragraph = document.sections[0].body.paragraphs[0];
+
+// Appends text to the paragraph.
+paragraph.appendText('A new text is added to the paragraph. ');
+
+// Adds an inline rich text content control.
+let contentControl = paragraph.appendInlineContentControl(
+  ej.docx.ContentControlType.RichText
+);
+
+// Creates a new text range.
+let textRange = new ej.docx.TextRange(document);
+textRange.text = 'Rich text content control.';
+
+// Adds the text range to the content control.
+contentControl.paragraphItems.add(textRange);
+
+// Sets the common content control properties.
+contentControl.contentControlProperties.appearance = ej.docx.ContentControlAppearance.Tags;
+contentControl.contentControlProperties.tag = 'Rich Text';
+contentControl.contentControlProperties.title = 'Text';
+contentControl.contentControlProperties.color = ej.docx.Color.Magenta;
 
 // Reads the resolved content control type.
 let controlType = contentControl.contentControlProperties.type;
@@ -195,6 +291,31 @@ richTextControl.paragraphItems.add(textRange);
 // Saves the Word document.
 document.save('Result.docx');
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Creates a new Word document.
+let document = ej.docx.WordDocument.create();
+
+// Gets the first paragraph in the document.
+let paragraph = document.sections[0].body.paragraphs[0];
+
+// Appends text to the paragraph.
+paragraph.appendText('A new text is added to the paragraph. ');
+
+// Adds an inline rich text content control.
+let richTextControl = paragraph.appendInlineContentControl(
+  ej.docx.ContentControlType.RichText
+);
+
+// Creates a new text range.
+let textRange = new ej.docx.TextRange(document);
+textRange.text = 'Rich text content control.';
+
+// Adds the text range to the rich text content control.
+richTextControl.paragraphItems.add(textRange);
+
+// Saves the Word document.
+document.save('Result.docx');
+{% endhighlight %}
 {% endtabs %}
 
 ### Plain Text
@@ -226,6 +347,31 @@ plainTextControl.paragraphItems.add(textRange);
 // Saves the Word document.
 document.save('Result.docx');
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Creates a new Word document.
+let document = ej.docx.WordDocument.create();
+
+// Gets the first paragraph in the document.
+let paragraph = document.sections[0].body.paragraphs[0];
+
+// Appends text to the paragraph.
+paragraph.appendText('A new text is added to the paragraph. ');
+
+// Adds an inline plain text content control.
+let plainTextControl = paragraph.appendInlineContentControl(
+  ej.docx.ContentControlType.Text
+);
+
+// Creates a new text range.
+let textRange = new ej.docx.TextRange(document);
+textRange.text = 'Plain text content control.';
+
+// Adds the text range to the plain text content control.
+plainTextControl.paragraphItems.add(textRange);
+
+// Saves the Word document.
+document.save('Result.docx');
+{% endhighlight %}
 {% endtabs %}
 
 ### Check Box
@@ -245,6 +391,27 @@ paragraph.appendText('A new text is added to the paragraph. ');
 // Adds an inline check box content control.
 let checkBox = paragraph.appendInlineContentControl(
   ContentControlType.CheckBox
+);
+
+// Sets the check box as checked.
+checkBox.contentControlProperties.isChecked = true;
+
+// Saves the Word document.
+document.save('Result.docx');
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Creates a new Word document.
+let document = ej.docx.WordDocument.create();
+
+// Gets the first paragraph in the document.
+let paragraph = document.sections[0].body.paragraphs[0];
+
+// Appends text to the paragraph.
+paragraph.appendText('A new text is added to the paragraph. ');
+
+// Adds an inline check box content control.
+let checkBox = paragraph.appendInlineContentControl(
+  ej.docx.ContentControlType.CheckBox
 );
 
 // Sets the check box as checked.
@@ -287,6 +454,38 @@ datePicker.contentControlProperties.dateDisplayFormat = 'M/d/yyyy';
 
 // Sets the date display locale.
 datePicker.contentControlProperties.dateDisplayLocale = LocaleIDs.en_US;
+
+// Saves the Word document.
+document.save('Result.docx');
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Creates a new Word document.
+let document = ej.docx.WordDocument.create();
+
+// Gets the first paragraph in the document.
+let paragraph = document.sections[0].body.paragraphs[0];
+
+// Appends text to the paragraph.
+paragraph.appendText('Select Date: ');
+
+// Adds a date picker content control.
+let datePicker = paragraph.appendInlineContentControl(ej.docx.ContentControlType.Date);
+
+// Creates a new text range.
+let textRange = new ej.docx.TextRange(document);
+textRange.text = new Date().toLocaleDateString('en-US');
+
+// Adds the text range to the date picker content control.
+datePicker.paragraphItems.add(textRange);
+
+// Sets the calendar type.
+datePicker.contentControlProperties.dateCalendarType = ej.docx.CalendarType.Gregorian;
+
+// Sets the date display format.
+datePicker.contentControlProperties.dateDisplayFormat = 'M/d/yyyy';
+
+// Sets the date display locale.
+datePicker.contentControlProperties.dateDisplayLocale = ej.docx.LocaleIDs.en_US;
 
 // Saves the Word document.
 document.save('Result.docx');
@@ -386,6 +585,95 @@ comboBox.contentControlProperties.contentControlListItems.add(item6);
 // Saves the Word document.
 document.save('Result.docx');
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Creates a new Word document.
+let document = ej.docx.WordDocument.create();
+
+// Gets the first paragraph in the document.
+let paragraph = document.sections[0].body.paragraphs[0];
+
+// Appends text to the paragraph.
+paragraph.appendText('Choose your platform: ');
+
+// Adds a drop-down list content control.
+let dropdown = paragraph.appendInlineContentControl(
+  ej.docx.ContentControlType.DropDownList
+);
+
+// Creates a placeholder text range.
+let dropdownText = new ej.docx.TextRange(document);
+dropdownText.text = 'Choose an item';
+
+// Adds the placeholder text to the drop-down list.
+dropdown.paragraphItems.add(dropdownText);
+
+// Creates the first drop-down list item.
+let item1 = new ej.docx.ContentControlListItem();
+item1.displayText = 'ASP.NET MVC';
+item1.value = '1';
+
+// Adds the first item to the drop-down list.
+dropdown.contentControlProperties.contentControlListItems.add(item1);
+
+// Creates the second drop-down list item.
+let item2 = new ej.docx.ContentControlListItem();
+item2.displayText = 'Windows Forms';
+item2.value = '2';
+
+// Adds the second item to the drop-down list.
+dropdown.contentControlProperties.contentControlListItems.add(item2);
+
+// Creates the third drop-down list item.
+let item3 = new ej.docx.ContentControlListItem();
+item3.displayText = 'WPF';
+item3.value = '3';
+
+// Adds the third item to the drop-down list.
+dropdown.contentControlProperties.contentControlListItems.add(item3);
+
+// Adds a new paragraph.
+let paragraph2 = document.sections[0].body.appendParagraph();
+
+// Appends text to the paragraph.
+paragraph2.appendText('Choose the conversion: ');
+
+// Adds a combo box content control.
+let comboBox = paragraph2.appendInlineContentControl(ej.docx.ContentControlType.ComboBox);
+
+// Creates a placeholder text range.
+let comboText = new ej.docx.TextRange(document);
+comboText.text = 'Choose an item';
+
+// Adds the placeholder text to the combo box.
+comboBox.paragraphItems.add(comboText);
+
+// Creates the first combo box item.
+let item4 = new ej.docx.ContentControlListItem();
+item4.displayText = 'Word to HTML';
+item4.value = '1';
+
+// Adds the first item to the combo box.
+comboBox.contentControlProperties.contentControlListItems.add(item4);
+
+// Creates the second combo box item.
+let item5 = new ej.docx.ContentControlListItem();
+item5.displayText = 'Word to Image';
+item5.value = '2';
+
+// Adds the second item to the combo box.
+comboBox.contentControlProperties.contentControlListItems.add(item5);
+
+// Creates the third combo box item.
+let item6 = new ej.docx.ContentControlListItem();
+item6.displayText = 'Word to PDF';
+item6.value = '3';
+
+// Adds the third item to the combo box.
+comboBox.contentControlProperties.contentControlListItems.add(item6);
+
+// Saves the Word document.
+document.save('Result.docx');
+{% endhighlight %}
 {% endtabs %}
 
 ## Edit Content Control
@@ -398,6 +686,19 @@ import { WordDocument, BlockContentControl, BodyItemCollection, InlineContentCon
 
 // Opens an existing Word document.
 let document = WordDocument.open(data);
+
+// Iterates through all sections in the document.
+for (let section of document.sections) {
+  // Iterates through the body items in the current section.
+  iterateBodyItems(section.body.items);
+}
+
+// Saves the Word document.
+document.save('Result.docx');
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Opens an existing Word document.
+let document = ej.docx.WordDocument.open(data);
 
 // Iterates through all sections in the document.
 for (let section of document.sections) {
@@ -435,11 +736,44 @@ function iterateBodyItems(items: BodyItemCollection): void {
   }
 }
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Iterates through the body items collection.
+function iterateBodyItems(items) {
+  // Iterates through each body item.
+  for (let item of items) {
+    // Processes paragraph items.
+    if (item instanceof ej.docx.Paragraph) {
+      iterateParagraph(item);
+    }
+    // Processes table items.
+    else if (item instanceof ej.docx.Table) {
+      iterateTable(item);
+    }
+    // Processes block content controls recursively.
+    else if (item instanceof ej.docx.BlockContentControl) {
+      iterateBodyItems(item.body.items);
+    }
+  }
+}
+{% endhighlight %}
 {% highlight typescript tabtitle="iterateTable" %}
 import { BodyItemCollection, Table } from '@syncfusion/ej2-docx';
 
 // Iterates through all rows in the table.
 function iterateTable(table: Table): void {
+  // Iterates through each row.
+  for (let row of table.rows) {
+    // Iterates through each cell in the row.
+    for (let cell of row.cells) {
+      // Iterates through the body items in the cell.
+      iterateBodyItems(cell.items);
+    }
+  }
+}
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Iterates through all rows in the table.
+function iterateTable(table) {
   // Iterates through each row.
   for (let row of table.rows) {
     // Iterates through each cell in the row.
@@ -477,6 +811,27 @@ function iterateParagraphItems(items: ParagraphItemCollection): void {
   }
 }
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Iterates through the paragraph items in the specified paragraph.
+function iterateParagraph(paragraph) {
+  iterateParagraphItems(paragraph.items);
+}
+
+// Iterates through the paragraph item collection.
+function iterateParagraphItems(items) {
+  // Iterates through each paragraph item.
+  for (let item of items) {
+    // Processes inline content controls.
+    if (item instanceof ej.docx.InlineContentControl) {
+      // Checks whether the content control title matches the specified value.
+      if (item.contentControlProperties.title === 'ReplaceText') {
+        // Replaces the content of the inline content control.
+        replaceTextWithInlineContentControl('Hello World', item);
+      }
+    }
+  }
+}
+{% endhighlight %}
 {% highlight typescript tabtitle="replaceTextWithInlineContentControl" %}
 import {
   CharacterFormat,
@@ -505,6 +860,38 @@ function replaceTextWithInlineContentControl(
 
   // Creates a new text range with the replacement text.
   let textRange = new TextRange(inlineContentControl.document);
+  textRange.text = text;
+
+  // Applies the original character format to the new text range.
+  if (characterFormat) {
+    textRange.applyCharacterFormat(characterFormat);
+  }
+
+  // Adds the new text range to the inline content control.
+  inlineContentControl.paragraphItems.add(textRange);
+}
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Replaces the content of the specified inline content control with new text.
+function replaceTextWithInlineContentControl(
+  text,
+  inlineContentControl: ej.docx.InlineContentControl
+) {
+  let characterFormat;
+
+  // Captures the character format from the first text range.
+  for (let item of inlineContentControl.paragraphItems) {
+    if (item instanceof ej.docx.TextRange) {
+      characterFormat = item.characterFormat;
+      break;
+    }
+  }
+
+  // Clears the existing content from the inline content control.
+  inlineContentControl.paragraphItems.clear();
+
+  // Creates a new text range with the replacement text.
+  let textRange = new ej.docx.TextRange(inlineContentControl.document);
   textRange.text = text;
 
   // Applies the original character format to the new text range.

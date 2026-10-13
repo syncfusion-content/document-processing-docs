@@ -51,6 +51,24 @@ for (let section of document.sections) {
 // Save the resulting document
 document.save('Result.docx');
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Open an existing Word document
+let document = ej.docx.WordDocument.open(data);
+
+// Process the body contents for each section in the Word document
+for (let section of document.sections) {
+  // Walks the main body of the section
+  iterateTextBody(section.body);
+
+  // Walks the text body of the odd header and odd footer when present
+  let hf = section.headersFooters;
+  if (hf.oddHeader) iterateTextBody(hf.oddHeader);
+  if (hf.oddFooter) iterateTextBody(hf.oddFooter);
+}
+
+// Save the resulting document
+document.save('Result.docx');
+{% endhighlight %}
 {% highlight typescript tabtitle="iterateTextBody" %}
 import { BlockContentControl, Body, Paragraph, Table } from '@syncfusion/ej2-docx';
 
@@ -87,11 +105,56 @@ function iterateTextBody(body: Body) {
   }
 }
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Walks a text body (section body, header, footer, table cell, or block content control)
+// and dispatches each item to the appropriate handler.
+function iterateTextBody(body) {
+  // Iterate in reverse so removing items while iterating stays safe
+  for (let i = body.items.count - 1; i >= 0; i--) {
+    let item = body.items[i];
+
+    // A text body has three kinds of block-level children:
+    // paragraph, table, and block content control.
+    if (item instanceof ej.docx.Paragraph) {
+      // Checks for a particular style id and removes the paragraph from the DOM
+      if (item.styleId === 'Heading1') {
+        body.items.removeAt(i);
+        continue;
+      }
+      iterateParagraph(item.items);
+      continue;
+    }
+
+    if (item instanceof ej.docx.Table) {
+      // A table is a collection of rows and cells
+      iterateTable(item);
+      continue;
+    }
+
+    if (item instanceof ej.docx.BlockContentControl) {
+      // Recurse into the body of the block content control
+      iterateTextBody(item.body);
+      continue;
+    }
+  }
+}
+{% endhighlight %}
 {% highlight typescript tabtitle="iterateTable" %}
 import { Body, Table } from '@syncfusion/ej2-docx';
 
 // Iterates the row and cell collection of a table
 function iterateTable(table: Table) {
+  for (let row of table.rows) {
+    for (let cell of row.cells) {
+      // A table cell is also a text body; reuse the body iteration
+      iterateTextBody(cell);
+    }
+  }
+}
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Iterates the row and cell collection of a table
+function iterateTable(table) {
   for (let row of table.rows) {
     for (let cell of row.cells) {
       // A table cell is also a text body; reuse the body iteration
@@ -116,6 +179,20 @@ function iterateParagraph(paraItems: ParagraphItemCollection) {
   }
 }
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Iterates the paragraph items
+function iterateParagraph(paraItems) {
+  for (let child of paraItems) {
+    if (child instanceof ej.docx.TextRange) {
+      // Modify or read text in a text range
+      if (child.text === 'Andrew') {
+        child.text = 'Fuller';
+      }
+      continue;
+    }
+  }
+}
+{% endhighlight %}
 {% endtabs %}
 
 ### Modify hyperlink URI
@@ -130,6 +207,21 @@ import { WordDocument, BlockContentControl, Body, Field, Hyperlink, HyperlinkTyp
 
 // Open an existing Word document
 let document = WordDocument.open(data);
+
+for (let section of document.sections) {
+  iterateTextBody(section.body);
+
+  let hf = section.headersFooters;
+  if (hf.oddHeader) iterateTextBody(hf.oddHeader);
+  if (hf.oddFooter) iterateTextBody(hf.oddFooter);
+}
+
+// Save the resulting document
+document.save('Result.docx');
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Open an existing Word document
+let document = ej.docx.WordDocument.open(data);
 
 for (let section of document.sections) {
   iterateTextBody(section.body);
@@ -178,11 +270,58 @@ function iterateTextBody(body: Body) {
   }
 }
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Iterates through the body items in the specified body.
+function iterateTextBody(body) {
+  // Iterates through the body items in reverse order.
+  for (let i = body.items.count - 1; i >= 0; i--) {
+    let item = body.items[i];
+
+    // Processes paragraph items.
+    if (item instanceof ej.docx.Paragraph) {
+      // Removes paragraphs with the Heading1 style.
+      if (item.styleId === 'Heading1') {
+        body.items.removeAt(i);
+        continue;
+      }
+
+      // Iterates through the paragraph items.
+      iterateParagraph(item.items);
+      continue;
+    }
+
+    // Processes table items.
+    if (item instanceof ej.docx.Table) {
+      iterateTable(item);
+      continue;
+    }
+
+    // Processes block content controls recursively.
+    if (item instanceof ej.docx.BlockContentControl) {
+      iterateTextBody(item.body);
+      continue;
+    }
+  }
+}
+{% endhighlight %}
 {% highlight typescript tabtitle="iterateTable" %}
 import { Body, Table } from '@syncfusion/ej2-docx';
 
 // Iterates through all rows in the table.
 function iterateTable(table: Table) {
+  // Iterates through each row.
+  for (let row of table.rows) {
+    // Iterates through each cell in the row.
+    for (let cell of row.cells) {
+      // Iterates through the body items in the table cell.
+      iterateTextBody(cell);
+    }
+  }
+}
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Iterates through all rows in the table.
+function iterateTable(table) {
   // Iterates through each row.
   for (let row of table.rows) {
     // Iterates through each cell in the row.
@@ -237,6 +376,53 @@ function iterateParagraph(paraItems: ParagraphItemCollection) {
 
     // Processes inline content controls recursively.
     if (child instanceof InlineContentControl) {
+      iterateParagraph(child.paragraphItems);
+    }
+  }
+}
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Iterates through the paragraph items collection.
+function iterateParagraph(paraItems) {
+  // Iterates through each paragraph item.
+  for (let child of paraItems) {
+    // Processes text ranges.
+    if (child instanceof ej.docx.TextRange) {
+      // Replaces the specified text.
+      if (child.text === 'Andrew') {
+        child.text = 'Fuller';
+      }
+      continue;
+    }
+
+    // Processes fields as hyperlinks.
+    if (child instanceof ej.docx.Field) {
+      // Creates a hyperlink facade from the field.
+      let link = new ej.docx.Hyperlink(child);
+
+      // Updates the hyperlink URL when the display text matches.
+      if (
+        link.type === ej.docx.HyperlinkType.WebLink &&
+        link.textToDisplay === 'HTML'
+      ) {
+        link.uri = 'http://www.google.com';
+      }
+      continue;
+    }
+
+    // Processes shapes and text boxes.
+    if (child instanceof ej.docx.Shape) {
+      try {
+        // Iterates through the text body of the shape.
+        iterateTextBody(child.textBody);
+      } catch {
+        // Ignores shapes that do not expose a text body.
+      }
+      continue;
+    }
+
+    // Processes inline content controls recursively.
+    if (child instanceof ej.docx.InlineContentControl) {
       iterateParagraph(child.paragraphItems);
     }
   }
