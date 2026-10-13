@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with JavaScript PowerPoint in TypeScript app | Syncfusion
-description: Learn how to get started with the Syncfusion JavaScript PowerPoint in TypeScript application. Easy steps to create presentations without depending on Microsoft Office.
+title: Getting Started with JavaScript PowerPoint for TypeScript | Syncfusion
+description: Learn how to create PowerPoint presentations in a TypeScript app using the Syncfusion JavaScript PowerPoint Library without Microsoft Office.
 platform: document-processing
 control: PowerPoint
 documentation: ug
@@ -126,6 +126,7 @@ Include the following namespaces in `index.ts` file.
 import { Presentation, HorizontalAlignmentType } from '@syncfusion/ej2-pptx';
 
 {% endhighlight %}
+{% endtabs %}
 Include the following code example in the click event of the button in `index.ts` to generate a PowerPoint document:
 
 * Include the following code example in the click event of the button in `index.ts` to generate a PowerPoint document

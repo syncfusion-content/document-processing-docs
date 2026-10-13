@@ -70,10 +70,6 @@ vue create quickstart
 cd quickstart
 ```
 
-When prompted, choose `Default ([Vue 2] babel, es-lint)`.
-
-![Vue 2 project](Getting_started_images/vue2-terminal.png)
-
 ## Install the JavaScript PowerPoint Library
 
 All Syncfusion<sup>&reg;</sup> JS 2 packages are published in the `npmjs.com` registry. The `npm install` command below resolves `@syncfusion/ej2-pptx` to the latest stable version compatible with Vue 2.7+ or Vue 3.4+.

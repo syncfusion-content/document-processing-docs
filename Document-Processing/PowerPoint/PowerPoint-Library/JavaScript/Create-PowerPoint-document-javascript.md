@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Getting Started with JavaScript PowerPoint in JavaScript app | Syncfusion
+title: Getting Started with JavaScript PowerPoint Library | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-powerpoint-library
-description: Learn how to get started with the Syncfusion JavaScript PowerPoint Library in JavaScript application. Easy steps to create presentations without depending on Microsoft Office.
+description: Learn how to create PowerPoint presentations in a JavaScript app using the Syncfusion PowerPoint Library without Microsoft Office.
 platform: document-processing
 control: PowerPoint
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with JavaScript PowerPoint in Angular app | Syncfusion
-description: Learn how to get started with the Syncfusion JavaScript PowerPoint in Angular application. Easy steps to create presentations without depending on Microsoft Office.
+description: Learn how to create PowerPoint presentations in an Angular app using the Syncfusion JavaScript PowerPoint Library without Microsoft Office.
 platform: document-processing
 control: PowerPoint
 documentation: ug
