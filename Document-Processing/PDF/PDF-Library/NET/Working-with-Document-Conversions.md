@@ -1570,6 +1570,88 @@ document.Close(True)
 
  {% endtabs %}
 
+
+## Embedding custom fonts in SVG to PDF
+
+The font resolution order used by `SvgConverter` is:
+
+1. Font embedded in the SVG (`@font-face` or inline font data).
+2. The `SubstituteFont` event (on .NET Core / portable runtimes).
+3. A standard PDF base font.
+
+When a PDF/A conformance level is enabled, the converter always attempts to embed a resolved font (steps 1 and 2) before falling back to a standard font.
+
+The following code example shows how to subscribe to the `SubstituteFont` event and embed a custom font during SVG to PDF conversion.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Document%20conversion/SVG-to-PDF/Embedding-custom-fonts-in-SVG-to-PDF/.NET/Program.cs" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Drawing;
+using System.IO;
+
+//Initialize SVG converter.
+SvgConverter converter = new SvgConverter();
+
+//Subscribe to the SubstituteFont event to provide custom fonts.
+converter.SubstituteFont += Converter_SubstituteFont;
+
+//Convert the SVG to PdfTemplate.
+PdfTemplate svg = converter.Convert("Input.svg");
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+
+//Update the page settings based on the SVG size.
+document.PageSettings.Margins.All = 0;
+document.PageSettings.Size = new SizeF(svg.Width, svg.Height);
+
+//Add a new page.
+PdfPage page = document.Pages.Add();
+
+//Draw the template to the page.
+page.Graphics.DrawPdfTemplate(svg, new PointF(0, 0), new SizeF(svg.Width, svg.Height));
+
+//Save the document into stream.
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
+
+//Close the document.
+document.Close(true);
+
+void Converter_SubstituteFont(object sender, PdfFontEventArgs args)
+{
+    //Read the font name requested by the SVG.
+    string fontName = args.FontName.Split(',')[0];
+
+    //Resolve the typeface from a known location (for example, an embedded resource
+    //or a file shipped with the application) and open its stream.
+    string fontFilePath = Path.Combine("Fonts", fontName + ".ttf");
+    if (File.Exists(fontFilePath))
+    {
+        //Provide the font program to the converter so it can be embedded into the PDF.
+        args.FontStream = new FileStream(fontFilePath, FileMode.Open, FileAccess.Read);
+    }
+}
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Embedding custom fonts in SVG to PDF via the SubstituteFont event is supported
+'on .NET Core / portable targets. VB.NET samples for this feature are not
+'currently available.
+
+{% endhighlight %}
+
+{% endtabs %}
+
+N> 1. The `SubstituteFont` event is raised on .NET Core / portable runtimes. On classic .NET Framework, the converter resolves fonts directly from the system font catalog, so the event is not raised.
+N> 2. When `PdfConformanceLevel` is set (for example, PDF/A), the converter will throw a `PdfException` if a font is required but cannot be embedded. Always handle `SubstituteFont` and assign a valid `FontStream` for any font referenced by the SVG when targeting PDF/A.
+N> 3. The font data supplied through `args.FontStream` is embedded in the output PDF, so the resulting document renders with the chosen typeface on any viewer without requiring the font to be installed locally.
+
 ## Linearizing a PDF document
 
 Linearized PDF, also known as fast web view, optimizes a PDF document for incremental loading over the web. Set the `IsLinearized` property to `true` before saving the PDF document.
