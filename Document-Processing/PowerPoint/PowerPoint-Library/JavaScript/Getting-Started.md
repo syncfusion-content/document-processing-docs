@@ -68,28 +68,28 @@ import React from 'react';
 import { Presentation, HorizontalAlignmentType } from '@syncfusion/ej2-pptx';
 
 export default function App() {
-    const createPPTX = async () => {
-        // Creates a Presentation instance.
-        const pptxDoc = Presentation.create();
-        // Adds a slide to the PowerPoint presentation.
-        const slide = pptxDoc.slides.add();
-        // Adds a textbox for the title.
-        const titleShape = slide.shapes.addTextBox({
-            name: 'Title',
-            bounds: {
+const createPPTX = async () => {
+// Creates a Presentation instance.
+const pptxDoc = Presentation.create();
+// Adds a slide to the PowerPoint presentation.
+const slide = pptxDoc.slides.add();
+// Adds a textbox for the title.
+const titleShape = slide.shapes.addTextBox({
+    name: 'Title',
+    bounds: {
                 x: 55,
                 y: 25,
                 width: 850,
                 height: 72,
-            },
-        });
-        const paragraph = titleShape.textBody.addParagraph();
-        paragraph.horizontalAlignment = HorizontalAlignmentType.Center;
-        const textPart1 = paragraph.addTextPart('Hello World!!!');
-        textPart1.font.fontName = 'Calibri';
-        textPart1.font.bold = true;
-        textPart1.font.fontSize = 36;
-
+        },
+    });
+const paragraph = titleShape.textBody.addParagraph();
+paragraph.horizontalAlignment = HorizontalAlignmentType.Center; 
+const textPart1 = paragraph.addTextPart('Hello World!!!');
+textPart1.font.fontName = 'Calibri';
+textPart1.font.bold = true;
+textPart1.font.fontSize = 36;
+ 
         try {
             const bytes = await pptxDoc.save();
             const blob = new Blob(
