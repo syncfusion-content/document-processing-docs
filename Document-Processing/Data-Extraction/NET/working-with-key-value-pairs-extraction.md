@@ -35,24 +35,6 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     File.WriteAllText("Output.json", data, Encoding.UTF8);
 }
 {% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-using System.Text;
-using Syncfusion.SmartDataExtractor;
-
-//Open the input PDF file as a stream.
-using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
-{
-    //Initialize the Data Extractor.
-    DataExtractor extractor = new DataExtractor();
-
-    //Extract data as Key-Value Pairs.
-    string data = extractor.ExtractKeyValuePairs(stream);
-
-    //Save the extracted JSON data into an output file.
-    File.WriteAllText("Output.json", data, Encoding.UTF8);
-}
-{% endhighlight %}
 {% endtabs %}
 
 ## JSON Output Structure and Attributes
