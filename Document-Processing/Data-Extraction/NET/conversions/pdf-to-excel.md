@@ -1,5 +1,5 @@
 ---
-title: Extract data as ExcelWorkbook from PDF or Image in .NET Smart Data Extractor | Syncfusion
+title: Convert PDF to ExcelWorkbook in .NET Smart Data Extractor |Syncfusion
 description: Extract structured data from PDF documents and images as ExcelWorkbook using Smart Data Extractor in .NET.
 platform: document-processing
 control: SmartDataExtractor
@@ -18,7 +18,7 @@ This section covers two scenarios:
 
 ## Extract Data as ExcelWorkbook from PDF
 
-To extract structured data from a PDF document using the **ExtractDataAsExcel** method of the **DataExtractor** class, refer to the following code example:
+To extract structured data from a PDF document using the **ExtractDataAsExcel** method of the [DataExtractor](https://help.syncfusion.com/cr/document-processing/Syncfusion.SmartDataExtractor.DataExtractor.html) class, refer to the following code example:
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" %}
@@ -31,10 +31,8 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 {
     //Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();
-
     //Extract data as ExcelWorkbook.
     IWorkbook excel = extractor.ExtractDataAsExcel(stream);
-
     //Save the extracted Excel data into an output file.
     excel.SaveAs("Output.xlsx");
     excel.Close();
@@ -58,10 +56,8 @@ using (FileStream stream = new FileStream("Input.png", FileMode.Open, FileAccess
 {
     //Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();
-
     //Extract data as ExcelWorkbook.
     IWorkbook excel = extractor.ExtractDataAsExcel(stream);
-
     //Save the extracted Excel data into an output file.
     excel.SaveAs("Output.xlsx");
     excel.Close();
