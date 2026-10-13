@@ -35,6 +35,7 @@ The following assemblies need to be referenced in your application to extract da
         Syncfusion.Pdf.Base<br/>
         Syncfusion.PdfToImageConverter.Base<br/>
         Syncfusion.Presentation.Base<br/>
+        Syncfusion.XlsIO.Base<br/>
         Syncfusion.SmartFormRecognizer.Base<br/>
         Syncfusion.SmartTableExtractor.Base<br/>
         Syncfusion.Markdown<br/>
@@ -57,6 +58,7 @@ The following assemblies need to be referenced in your application to extract da
         Syncfusion.Pdf.Portable<br/>
         Syncfusion.PdfToImageConverter.Portable<br/>
         Syncfusion.Presentation.Portable<br/>
+        Syncfusion.XlsIO.Portable<br/>
         Syncfusion.SmartFormRecognizer.Portable<br/>
         Syncfusion.SmartTableExtractor.Portable<br/>
         Syncfusion.Markdown<br/>
@@ -78,6 +80,7 @@ The following assemblies need to be referenced in your application to extract da
         Syncfusion.Pdf.NET<br/>
         Syncfusion.PdfToImageConverter.NET<br/>
         Syncfusion.Presentation.NET<br/>
+        Syncfusion.XlsIO.NET<br/>
         Syncfusion.SmartFormRecognizer.NET<br/>
         Syncfusion.SmartTableExtractor.NET<br/>
         Syncfusion.Markdown<br/>
