@@ -22,16 +22,19 @@ A Word document is a tree of text bodies. The following element types are encoun
 * **Block content control**: a structured document tag (SDT) that wraps a text body.
 * **Paragraph items**: the in-line children of a paragraph: `TextRange`, `Field` (with the `Hyperlink` facade), `Shape`, and `InlineContentControl`.
 
-The following examples use `@syncfusion/ej2-docx` to walk the document and apply changes at each level. Each helper is shown in its own tab so it can be copied independently.
+The following examples use `@syncfusion/ej2-docx` to walk the document and apply changes at each level.
 
-### Remove paragraph with style
+N> Refer to the appropriate tabs in the code snippets section: **TypeScript** for TypeScript applications and **JavaScript** for JavaScript applications.
+
+## Remove paragraph with style
 
 The following example shows how to iterate through the document and remove any paragraph that uses a particular style. The traversal walks every section, the section body, the odd header, and the odd footer, and forwards table cells and block content controls to the same traversal.
 
 The following code example shows how to iterate through the Word document and remove the paragraph with a particular style.
 
 {% tabs %}
-{% highlight typescript tabtitle="Driver" %}
+
+{% highlight typescript tabtitle="TypeScript" %}
 import { WordDocument, BlockContentControl, Body, Paragraph, Table } from '@syncfusion/ej2-docx';
 
 // Open an existing Word document
@@ -51,6 +54,7 @@ for (let section of document.sections) {
 // Save the resulting document
 document.save('Result.docx');
 {% endhighlight %}
+
 {% highlight javascript tabtitle="JavaScript" %}
 // Open an existing Word document
 let document = ej.docx.WordDocument.open(data);
@@ -69,7 +73,14 @@ for (let section of document.sections) {
 // Save the resulting document
 document.save('Result.docx');
 {% endhighlight %}
-{% highlight typescript tabtitle="iterateTextBody" %}
+
+{% endtabs %}
+
+The following code example provides supporting methods for the above code.
+
+{% tabs %}
+
+{% highlight typescript tabtitle="TypeScript" %}
 import { BlockContentControl, Body, Paragraph, Table } from '@syncfusion/ej2-docx';
 
 // Walks a text body (section body, header, footer, table cell, or block content control)
@@ -105,6 +116,7 @@ function iterateTextBody(body: Body) {
   }
 }
 {% endhighlight %}
+
 {% highlight javascript tabtitle="JavaScript" %}
 // Walks a text body (section body, header, footer, table cell, or block content control)
 // and dispatches each item to the appropriate handler.
@@ -139,7 +151,14 @@ function iterateTextBody(body) {
   }
 }
 {% endhighlight %}
-{% highlight typescript tabtitle="iterateTable" %}
+
+{% endtabs %}
+
+The following code example provides supporting methods for the above code.
+
+{% tabs %}
+
+{% highlight typescript tabtitle="TypeScript" %}
 import { Body, Table } from '@syncfusion/ej2-docx';
 
 // Iterates the row and cell collection of a table
@@ -152,6 +171,7 @@ function iterateTable(table: Table) {
   }
 }
 {% endhighlight %}
+
 {% highlight javascript tabtitle="JavaScript" %}
 // Iterates the row and cell collection of a table
 function iterateTable(table) {
@@ -163,7 +183,14 @@ function iterateTable(table) {
   }
 }
 {% endhighlight %}
-{% highlight typescript tabtitle="iterateParagraph" %}
+
+{% endtabs %}
+
+The following code example provides supporting methods for the above code.
+
+{% tabs %}
+
+{% highlight typescript tabtitle="TypeScript" %}
 import { ParagraphItemCollection, TextRange } from '@syncfusion/ej2-docx';
 
 // Iterates the paragraph items
@@ -179,6 +206,7 @@ function iterateParagraph(paraItems: ParagraphItemCollection) {
   }
 }
 {% endhighlight %}
+
 {% highlight javascript tabtitle="JavaScript" %}
 // Iterates the paragraph items
 function iterateParagraph(paraItems) {
@@ -193,16 +221,19 @@ function iterateParagraph(paraItems) {
   }
 }
 {% endhighlight %}
+
 {% endtabs %}
 
-### Modify hyperlink URI
+
+## Modify Hyperlink Uri
 
 The following example extends the previous traversal to also iterate through paragraph items and modify the `Hyperlink` URI as well as the displayed text of a `TextRange`. The same `iterateTextBody` and `iterateTable` helpers are reused; only `iterateParagraph` is expanded to handle `Field`, `Shape`, and `InlineContentControl`.
 
 The following code example shows how to iterate throughout the paragraph and modify the hyperlink (`Hyperlink`) URI and specific text (`TextRange`) with another.
 
 {% tabs %}
-{% highlight typescript tabtitle="Driver" %}
+
+{% highlight typescript tabtitle="TypeScript" %}
 import { WordDocument, BlockContentControl, Body, Field, Hyperlink, HyperlinkType, InlineContentControl, Paragraph, ParagraphItemCollection, Shape, Table, TextRange } from '@syncfusion/ej2-docx';
 
 // Open an existing Word document
@@ -219,6 +250,7 @@ for (let section of document.sections) {
 // Save the resulting document
 document.save('Result.docx');
 {% endhighlight %}
+
 {% highlight javascript tabtitle="JavaScript" %}
 // Open an existing Word document
 let document = ej.docx.WordDocument.open(data);
@@ -234,7 +266,14 @@ for (let section of document.sections) {
 // Save the resulting document
 document.save('Result.docx');
 {% endhighlight %}
-{% highlight typescript tabtitle="iterateTextBody" %}
+
+{% endtabs %}
+
+The following code example provides supporting methods for the above code.
+
+{% tabs %}
+
+{% highlight typescript tabtitle="TypeScript" %}
 import { BlockContentControl, Body, Paragraph, Table } from '@syncfusion/ej2-docx';
 
 // Iterates through the body items in the specified body.
@@ -270,6 +309,7 @@ function iterateTextBody(body: Body) {
   }
 }
 {% endhighlight %}
+
 {% highlight javascript tabtitle="JavaScript" %}
 // Iterates through the body items in the specified body.
 function iterateTextBody(body) {
@@ -304,7 +344,14 @@ function iterateTextBody(body) {
   }
 }
 {% endhighlight %}
-{% highlight typescript tabtitle="iterateTable" %}
+
+{% endtabs %}
+
+The following code example provides supporting methods for the above code.
+
+{% tabs %}
+
+{% highlight typescript tabtitle="TypeScript" %}
 import { Body, Table } from '@syncfusion/ej2-docx';
 
 // Iterates through all rows in the table.
@@ -319,6 +366,7 @@ function iterateTable(table: Table) {
   }
 }
 {% endhighlight %}
+
 {% highlight javascript tabtitle="JavaScript" %}
 // Iterates through all rows in the table.
 function iterateTable(table) {
@@ -332,7 +380,14 @@ function iterateTable(table) {
   }
 }
 {% endhighlight %}
-{% highlight typescript tabtitle="iterateParagraph" %}
+
+{% endtabs %}
+
+The following code example provides supporting methods for the above code.
+
+{% tabs %}
+
+{% highlight typescript tabtitle="TypeScript" %}
 import {Field, Hyperlink, HyperlinkType, InlineContentControl, ParagraphItemCollection, Shape, TextRange } from '@syncfusion/ej2-docx';
 
 // Iterates through the paragraph items collection.
@@ -381,6 +436,7 @@ function iterateParagraph(paraItems: ParagraphItemCollection) {
   }
 }
 {% endhighlight %}
+
 {% highlight javascript tabtitle="JavaScript" %}
 // Iterates through the paragraph items collection.
 function iterateParagraph(paraItems) {
@@ -428,6 +484,5 @@ function iterateParagraph(paraItems) {
   }
 }
 {% endhighlight %}
+
 {% endtabs %}
-
-
