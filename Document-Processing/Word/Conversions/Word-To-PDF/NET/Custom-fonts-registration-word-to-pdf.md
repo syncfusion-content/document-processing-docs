@@ -218,7 +218,7 @@ FontManager.ClearRegisteredFonts(true)
 
 {% endtabs %}
 
-You can download a complete working sample from GitHub(https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Custom-font-registration/.NET).
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-PDF-Conversion/Custom-font-registration/.NET).
 
 During document conversion, fonts are utilized in the following priority order:
 
