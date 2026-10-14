@@ -138,4 +138,4 @@ Close the project, reopen it, and run it in WSL mode. It should run properly.
 
 * [Getting started with the Blazor PDF Viewer in a Blazor Web app Server app](../getting-started/server-side-application)
 * [Getting started with the Blazor PDF Viewer in a Blazor WebAssembly app](../getting-started/web-assembly-application)
-* [Getting started with the Blazor PDF Viewer in Docker](./docker-deployment)
+* [Getting started with the Blazor PDF Viewer in Docker](./azure-container-deployment)

@@ -315,5 +315,5 @@ For full details on supported formats and steps to export or import annotations,
 - [Customize Context Menu](../../context-menu/custom-context-menu)
 - [Comments Panel](../comments)
 - [Annotation Events](../annotation-event)
-- [Export and Import annotations](../export-import-annotations)
+- [Export and Import annotations](../annotation/export-import/export-annotation)
 - [Delete Annotations](../remove-annotations)

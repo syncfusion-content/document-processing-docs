@@ -322,7 +322,7 @@ export class AppComponent implements AfterViewInit {
 - [Form Designer overview](./overview)
 - [Form Designer Toolbar](../toolbar-customization/form-designer-toolbar)
 - [Create form fields](./overview-create-forms)
-- [Group form fields](../group-form-fields)
+- [Group form fields](../forms/group-form-fields)
 - [Form flags](./form-constrain)
 - [Form validation](./form-validation)
 - [Form fields API](./form-fields-api)

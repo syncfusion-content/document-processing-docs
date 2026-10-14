@@ -423,7 +423,7 @@ Use [UpdateFormFieldsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 ## See also
 
 - [Form Designer overview](../overview)
-- [Create form fields programmatically](../create-form-fields-programmatically)
+- [Create form fields programmatically](../create-form-fields)
 - [Create form fields](./create-form-fields)
 - [Remove form Fields](./remove-form-fields)
 - [Style form fields](./customize-form-fields)
