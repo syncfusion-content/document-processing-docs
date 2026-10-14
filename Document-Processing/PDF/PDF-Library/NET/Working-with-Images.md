@@ -1205,9 +1205,12 @@ N> Removing images from an existing PDF document in ASP.NET Core requires the [S
 
 ## Troubleshooting and FAQs
 
-### Does the Syncfusion PDF Library support converting HEIC, HEIF, or HEVC images directly to PDF?
+### Does the Syncfusion PDF Library support converting HEIC, HEIF, or HEVC files directly to PDF?
 
-No. The Syncfusion PDF Library does not currently support converting HEIC, HEIF, or HEVC-formatted images directly to PDF.
-The library supports commonly used raster image formats such as BMP, JPEG, GIF, PNG, TIFF, and ICO. HEIC, HEIF, and HEVC formats are not currently supported.
-As a workaround, you can first convert the HEIC/HEIF image to a supported format such as JPEG or PNG using a third-party image-processing library. You can then load the converted image using PdfBitmap and add it to the PDF document with the Syncfusion PDF Library.
-Please note that HEVC is primarily a video compression format, so its content must also be decoded or converted to a supported image format before it can be added to a PDF.
+No. The Syncfusion PDF Library does not currently support converting HEIC, HEIF, or HEVC files directly to PDF.
+
+The library supports commonly used raster image formats, including BMP, JPEG, GIF, PNG, TIFF, and ICO.
+
+As a workaround, convert the HEIC or HEIF image to a supported format, such as JPEG or PNG, using a third-party image-processing library. You can then load the converted image using PdfBitmap and add it to the PDF document using the Syncfusion PDF Library.
+
+HEVC is primarily a video compression format. To add HEVC content to a PDF, first extract the required video frame and convert it to a supported image format.
