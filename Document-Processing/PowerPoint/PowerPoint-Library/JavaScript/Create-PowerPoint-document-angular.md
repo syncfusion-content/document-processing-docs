@@ -52,7 +52,7 @@ cd my-pptx-app
 If you already have an Angular project, open its root folder and continue with the package installation steps:
 
 ```bash
-cd path/to/your-existing-app
+cd my-pptx-app
 ```
 
 ## Installing the JavaScript PowerPoint Library package
@@ -121,7 +121,6 @@ export class AppComponent {
     const slide = pptxDoc.slides.add();
     // Adds a textbox for the title
     const titleShape = slide.shapes.addTextBox({
-      name: 'Title',
       bounds: {
         x: 55,
         y: 25,
@@ -130,7 +129,7 @@ export class AppComponent {
       }
     });
     // Adds a paragraph to the textbox
-    const paragraph = titleShape.textBody?.addParagraph();
+    const paragraph = titleShape.textBody.addParagraph();
     paragraph.horizontalAlignment = HorizontalAlignmentType.Center;
     // Adds text to the paragraph
     const textPart = paragraph.addTextPart('Hello World!!!');

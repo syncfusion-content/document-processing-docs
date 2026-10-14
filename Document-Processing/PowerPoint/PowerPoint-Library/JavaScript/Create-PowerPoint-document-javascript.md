@@ -70,7 +70,6 @@ Create `index.html` in your project root with a button to generate the PowerPoin
             const slide = pptxDoc.slides.add();
             // Adds a textbox for the title
             const titleShape = slide.shapes.addTextBox({
-                name: 'Title',
                 bounds: {
                     x: 55,
                     y: 25,
@@ -79,7 +78,7 @@ Create `index.html` in your project root with a button to generate the PowerPoin
                 }
             });
             // Adds a paragraph to the textbox
-            const paragraph = titleShape.textBody?.addParagraph();
+            const paragraph = titleShape.textBody.addParagraph();
             paragraph.horizontalAlignment = HorizontalAlignmentType.Center;
             // Adds text to the paragraph
             const textPart = paragraph.addTextPart('Hello World!!!');

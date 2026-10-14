@@ -89,8 +89,6 @@ import {
   HorizontalAlignmentType
 } from '@syncfusion/ej2-pptx';
 
-// Optional: register the Syncfusion license key (required for commercial usage)
-registerLicense('YOUR_LICENSE_KEY');
 
 export default {
   name: 'App',
@@ -104,7 +102,6 @@ export default {
 
       // Adds a textbox for the title
       const titleShape = slide.shapes.addTextBox({
-        name: 'Title',
         bounds: {
           x: 55,
           y: 25,
@@ -114,7 +111,7 @@ export default {
       });
 
       // Adds a paragraph to the textbox
-      const paragraph = titleShape.textBody?.addParagraph();
+      const paragraph = titleShape.textBody.addParagraph();
       paragraph.horizontalAlignment = HorizontalAlignmentType.Center;
 
       // Adds text to the paragraph

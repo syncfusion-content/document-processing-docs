@@ -141,7 +141,6 @@ document.getElementById('normalButton').onclick = async (): Promise<void> => {
   const slide = pptxDoc.slides.add();
   // Adds a textbox for the title
   const titleShape = slide.shapes.addTextBox({
-    name: 'Title',
     bounds: {
       x: 55,
       y: 25,
@@ -150,7 +149,7 @@ document.getElementById('normalButton').onclick = async (): Promise<void> => {
     }
   });
   // Adds a paragraph to the textbox
-  const paragraph = titleShape.textBody?.addParagraph();
+  const paragraph = titleShape.textBody.addParagraph();
   paragraph.horizontalAlignment = HorizontalAlignmentType.Center;
   // Adds text to the paragraph
   const textPart = paragraph.addTextPart('Hello World!!!');
