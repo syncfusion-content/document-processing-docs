@@ -102,17 +102,18 @@ Please find the below table for the [`beforeSave`](https://ej2.syncfusion.com/re
 
 ## Save Excel Files Without a Server Endpoint
 
-The Spreadsheet component supports saving Excel files directly in the browser without requiring a server endpoint. For client-side save operations, the Spreadsheet uses the ej2-xlsx package to generate Excel files and download them to the local file system.
+The Spreadsheet component supports saving Excel files directly in the browser without requiring a server endpoint. For client-side saving, the component uses the `ej2-xlsx` package to generate Excel files and download them to the local file system.
 
-Omitting the [`saveUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveurl) property enables fully client-based processing of save operations without any server interaction. This approach is ideal for maintaining complete data privacy and reducing infrastructure overhead.
+When the `saveUrl` property is not configured, save operations are processed entirely on the client without any server interaction. This approach helps maintain data privacy and eliminates the need for server-side infrastructure.
 
-**Key Benefits of Client Save:**
+**Key Benefits of Client-Side Saving:**
+
 - No server infrastructure required
 - Immediate file generation and download
 - Reduced server load and latency
-- Privacy-friendly approach (files remain on the client)
+- Privacy-friendly approach, as files remain on the client
 
-The following example demonstrates how to save an Excel file using client-side processing without a `saveUrl` property:
+The following example demonstrates how to save an Excel file entirely on the client side without configuring the `saveUrl` property:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -203,7 +204,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** Client-side saving currently supports only .xlsx files
+> **Note:** Client-side export currently supports only .xlsx files. To save files in other formats, configure the saveUrl property and use server-side processing.
 
 ## Save Excel files programmatically
 

@@ -95,17 +95,18 @@ Please find the below table for the [beforeOpen](https://ej2.syncfusion.com/reac
 
 ## Open Excel Files Without a Server Endpoint
 
-The Spreadsheet component supports opening Excel files directly in the browser without requiring a server endpoint. For client-side open operations, the Spreadsheet uses the ej2-xlsx package to parse Excel files and load the workbook data into the Spreadsheet.
+The Spreadsheet component supports opening Excel files directly in the browser without requiring a server endpoint. For client-side file opening, the component uses the `ej2-xlsx` package to parse Excel files and load workbook data into the Spreadsheet.
 
-Omitting the [`openUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openurl) property enables fully client-based processing of Excel files without any server interaction. This approach is ideal for maintaining complete data privacy and reducing infrastructure overhead.
+When the `openUrl` property is not configured, Excel files are processed entirely on the client without any server interaction. This approach helps maintain data privacy and eliminates the need for server-side infrastructure.
 
-**Key Benefits of Client Open:**
+**Key Benefits of Client-Side Opening:**
+
 - No server infrastructure required
 - Immediate file processing in the browser
 - Reduced latency for file opening operations
-- Privacy-friendly approach (files remain on the client)
+- Privacy-friendly approach, as files remain on the client
 
-The following example demonstrates how to open an Excel file using client-side processing without an `openUrl` property:
+The following example demonstrates how to open an Excel file entirely on the client side without configuring the `openUrl` property:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -174,7 +175,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-> **Note:** Client-side opening currently supports only .xlsx files.
+> **Note:** Client-side import currently supports only `.xlsx` files. Other Excel formats require server-side processing through the `openUrl` endpoint.
 
 ## Open Excel files programmatically
 
