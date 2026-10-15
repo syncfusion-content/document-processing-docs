@@ -423,3 +423,8 @@ Explore how to track and review changes in Word documents using the React DOCX E
 To learn more about Track Changes in the DOCX Editor component, refer to the video below.
 
 {% youtube "https://www.youtube.com/watch?v=Ke27Mip4bN0" %}
+
+## See Also
+
+* [How to customize track changes color](https://support.syncfusion.com/kb/article/25232/)
+* [How to restrict track changes for users](https://support.syncfusion.com/kb/article/21708/)
