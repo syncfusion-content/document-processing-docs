@@ -48,6 +48,33 @@ for (let i = fieldIndex + 1; i < paragraph.items.count; i++) {
 // Saves the Word document to disk
 document.save('FormattingField.docx');
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Creates a new Word document
+let document = ej.docx.WordDocument.create();
+
+// Gets the paragraph of the section
+let paragraph = document.sections[0].body.paragraphs[0];
+
+// Appends text before the field
+paragraph.appendText('Page number: ');
+
+// Inserts a PAGE field and keeps the insertion index
+let fieldIndex = paragraph.items.count;
+paragraph.appendField('Page', ej.docx.FieldType.Page);
+
+// Formats text ranges in the field result (between the field and its end mark)
+for (let i = fieldIndex + 1; i < paragraph.items.count; i++) {
+  let item = paragraph.items[i];
+  if (item instanceof ej.docx.TextRange) {
+    item.characterFormat.fontSize = 6;
+  } else if (item instanceof ej.docx.FieldMark && item.fieldMarkType === ej.docx.FieldMarkType.End) {
+    break;
+  }
+}
+
+// Saves the Word document to disk
+document.save('FormattingField.docx');
+{% endhighlight %}
 {% endtabs %}
 
 ## IF field
@@ -91,6 +118,38 @@ ifField2.fieldCode = 'IF 100 >= 50 "correct" "not correct"';
 // Saves the Word document to disk
 document.save('IfField.docx');
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Creates a new Word document
+let document = ej.docx.WordDocument.create();
+
+// Access first section
+let section = document.sections[0];
+
+// Gets the default paragraph
+let paragraph = section.body.paragraphs[0];
+
+// Appends a description and an IF field that compares text
+paragraph.appendText(
+  'If field that compares a string value and displays the result.'
+);
+paragraph = section.body.appendParagraph();
+let ifField = paragraph.appendField('If', ej.docx.FieldType.If);
+// Expression: IF "100" = "100" "correct" "not correct"
+ifField.fieldCode = 'IF "100" = "100" "correct" "not correct"';
+
+// Appends another IF field that compares numbers
+paragraph = section.body.appendParagraph();
+paragraph.appendText(
+  'If field that compares a number value and displays the result.'
+);
+paragraph = section.body.appendParagraph();
+let ifField2 = paragraph.appendField('If', ej.docx.FieldType.If);
+// Expression: IF 100 >= 50 "correct" "not correct"
+ifField2.fieldCode = 'IF 100 >= 50 "correct" "not correct"';
+
+// Saves the Word document to disk
+document.save('IfField.docx');
+{% endhighlight %}
 {% endtabs %}
 
 ## Merge field
@@ -116,6 +175,24 @@ let paragraph = section.body.paragraphs[0];
 paragraph.appendField('Name', FieldType.MergeField);
 paragraph = section.body.appendParagraph();
 paragraph.appendField('Address', FieldType.MergeField);
+
+// Saves the Word document to disk
+document.save('MergeField.docx');
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Creates a new Word document
+let document = ej.docx.WordDocument.create();
+
+// Access first section
+let section = document.sections[0];
+
+// Gets the default paragraph
+let paragraph = section.body.paragraphs[0];
+
+// Inserts merge fields for Name and Address
+paragraph.appendField('Name', ej.docx.FieldType.MergeField);
+paragraph = section.body.appendParagraph();
+paragraph.appendField('Address', ej.docx.FieldType.MergeField);
 
 // Saves the Word document to disk
 document.save('MergeField.docx');
