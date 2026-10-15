@@ -301,7 +301,9 @@ On the client side, you can consume this web service and save the document as a 
 
 Explore how to export Word documents in various formats using the React DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/react/#/tailwind3/document-editor/advanced-exporting).
 
-## See Also
+## See also
 
 * [Feature modules](./feature-module)
-* [How to export the document as pdf?](./how-to/export-document-as-pdf)
+* [Export the document as PDF](./how-to/export-document-as-pdf)
+* [Auto save the document in server](./how-to/auto-save-document)
+* [Auto save the document in AWS S3](./how-to/auto-save-document-in-document-editor)

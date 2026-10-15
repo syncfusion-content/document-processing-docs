@@ -80,3 +80,10 @@ The following example demonstrates how to enable the heading navigation pane in 
 ### Online demo
 
 Explore how to navigate through headings in Word documents using the Vue DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/heading-navigation.html).
+
+## See also
+
+* [How to change the document view](./how-to/change-document-view)
+* [Insert page number and navigate to specific page](./how-to/insert-page-number-and-navigate-to-page)
+* [Enable ruler in document editor component](./how-to/enable-ruler-in-document-editor-component)
+* [Resize the document editor](./how-to/resize-document-editor)
