@@ -61,3 +61,7 @@ await container.DocumentEditor.Selection.CloseHeaderFooterAsync();
 ## Online demo
 
 Explore how to add and customize headers and footers in Word documents using the Blazor DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/headers-and-footers?theme=fluent2).
+
+## See Also
+
+* [Working with Section Formatting](./section-format)

@@ -89,7 +89,7 @@ documenteditor.selection.closeHeaderFooter()
 
 Explore how to add and customize headers and footers in Word documents using the ASP.NET Core DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/headersandfooters#/tailwind3).
 
-
 ## See Also
 
-* [Working with Section Formatting](../asp-net-core/section-format)
+* [Working with Section Formatting](./section-format)
+* [Disable header footer edit in document](./how-to/disable-header-and-footer-edit-in-document-editor)
