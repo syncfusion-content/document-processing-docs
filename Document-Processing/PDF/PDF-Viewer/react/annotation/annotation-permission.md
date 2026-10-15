@@ -131,7 +131,7 @@ Behavior notes
 
 ## See also
 
-- [Annotation Overview](/overview)
+- [Annotation Overview](/annotation/overview)
 - [Annotation Types](annotation-types/area-annotation)
 - [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
 - [Create and Modify Annotation](create-modify-annotation)

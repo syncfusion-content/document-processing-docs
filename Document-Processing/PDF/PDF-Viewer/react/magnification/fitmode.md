@@ -543,5 +543,5 @@ N> Fit modes automatically recalculate based on the current page dimensions and 
 
 - [Magnification overview](./magnification)
 - [Zoom how-to](./zoom)
-- [Toolbar items](./toolbar)
+- [Toolbar items](./magnification)
 - [Feature Modules](./feature-module)

@@ -67,7 +67,7 @@ N> After redaction is applied the original content cannot be recovered.
 
 Redaction annotations can include comments using the built‑in comment panel. This helps you add notes, track reviews, or record the reason for redaction.  
 
-Comments can be added through the UI or API. For more details, see the [Comments documentation](../annotations/comments).
+Comments can be added through the UI or API. For more details, see the [Comments documentation](/annotation/comments).
 
 ## Import and Export Redaction Annotations
 
