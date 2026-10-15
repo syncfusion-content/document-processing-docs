@@ -220,7 +220,7 @@ The selected form field and its associated widget annotation are permanently rem
 ## See Also
 
 - [Filling PDF Forms](./form-filling)
-- [Create](./manage-form-fields/create-form-fields), [edit](./manage-form-fields/modify-form-fields), [style](./manage-form-fields/style-form-fields) and [remove](./manage-form-fields/remove-form-fields) form fields
+- [Create](./manage-form-fields/create-form-fields), [edit](./manage-form-fields/modify-form-fields), [style](./manage-form-fields/customize-form-fields) and [remove](./manage-form-fields/remove-form-fields) form fields
 - [Grouping form fields](./group-form-fields)
 - [Form Constrains](./form-constrain)
 - [Form Validation](./form-validation)

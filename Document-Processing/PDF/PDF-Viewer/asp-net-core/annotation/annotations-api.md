@@ -1164,6 +1164,6 @@ window.onload = function () {
 - [Customize Annotation](customize-annotation)
 - [Remove Annotation](delete-annotation)
 - [Handwritten Signature](signature-annotation)
-- [Export and Import Annotation](export-import/export-annotation)
+- [Export and Import Annotation](/annotation/export-import/export-annotation)
 - [Annotation in Mobile View](annotations-in-mobile-view)
 - [Annotation Events](annotation-event)
