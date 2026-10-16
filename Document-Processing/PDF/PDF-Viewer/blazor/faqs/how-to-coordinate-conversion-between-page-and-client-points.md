@@ -5,6 +5,7 @@ description: Learn how to convert between page and client coordinates in the Bla
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Convert between page and client coordinates

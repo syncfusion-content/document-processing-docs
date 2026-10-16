@@ -4,6 +4,7 @@ description: Chart axis adjustment describes whether Syncfusion .NET Excel Libra
 platform: document-processing 
 control: XlsIO 
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Chart Axis Auto Adjustment in .NET Excel Library

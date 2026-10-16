@@ -5,6 +5,7 @@ description: Learn how to navigate PDF pages in Blazor PDF Viewer using toolbar 
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Page navigation in Blazor PDF Viewer

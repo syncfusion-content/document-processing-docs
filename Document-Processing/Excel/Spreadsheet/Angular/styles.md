@@ -5,6 +5,7 @@ description: Styles in Angular Spreadsheet enable users to customize cell appear
 platform: document-processing
 control: Styles
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Styles in Angular Spreadsheet 

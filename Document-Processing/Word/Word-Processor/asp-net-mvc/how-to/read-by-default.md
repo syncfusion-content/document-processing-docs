@@ -5,6 +5,7 @@ description: Open Syncfusion® ASP.NET MVC DOCX Editor in read-only mode to prev
 platform: document-processing
 control: Read by Default
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

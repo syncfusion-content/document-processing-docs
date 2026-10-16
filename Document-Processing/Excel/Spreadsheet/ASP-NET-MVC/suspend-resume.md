@@ -5,6 +5,7 @@ description: Improve Spreadsheet performance by using the suspendRefresh and res
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Suspend and Resume UI Refresh in ASP.NET MVC Spreadsheet

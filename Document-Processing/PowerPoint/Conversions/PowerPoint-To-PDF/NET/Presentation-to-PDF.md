@@ -4,6 +4,7 @@ description: Learn how to convert PowerPoint Presentation documents to PDFs in t
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert PowerPoint to PDF using Syncfusion® .NET PowerPoint library

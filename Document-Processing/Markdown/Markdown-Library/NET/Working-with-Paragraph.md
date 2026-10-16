@@ -4,6 +4,7 @@ description: Learn how to add, format, and modify paragraphs in a Markdown docum
 platform: document-processing
 control: Markdown
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Paragraphs in .NET Markdown Library

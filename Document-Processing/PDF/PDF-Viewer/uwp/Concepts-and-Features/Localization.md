@@ -6,6 +6,7 @@ platform: document-processing
 control: SfPdfViewerControl
 documentation: ug
 keywords: localization
+appliesto: PDF Viewer SDK
 ---
 # Localization in UWP PDF Viewer
 

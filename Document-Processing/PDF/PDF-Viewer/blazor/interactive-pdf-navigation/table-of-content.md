@@ -5,6 +5,7 @@ description: Learn how to use the table of contents in the Blazor PDF Viewer to 
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Table of contents navigation in Blazor PDF Viewer

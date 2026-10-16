@@ -5,6 +5,7 @@ description: Create an object structure in Vue Spreadsheet to organize workbook 
 control: Create a object structure 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # How to Create an Object Structure in Vue Spreadsheet

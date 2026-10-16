@@ -5,6 +5,7 @@ description: Print the loaded PDF in the ASP.NET Core PDF Viewer from custom UI 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Print the PDF in ASP.NET Core PDF Viewer

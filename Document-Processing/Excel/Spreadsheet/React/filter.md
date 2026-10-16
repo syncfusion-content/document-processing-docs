@@ -5,6 +5,7 @@ description: Learn about filtering in the Syncfusion React Spreadsheet component
 control: Filter 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Filtering in React Spreadsheet

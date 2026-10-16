@@ -5,6 +5,7 @@ description: Insert text, paragraphs, and rich text content at the current curso
 platform: document-processing
 control: Insert Text Or Image In Table
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # How to Insert Text or Image in Table in ASP.NET Core DOCX Editor

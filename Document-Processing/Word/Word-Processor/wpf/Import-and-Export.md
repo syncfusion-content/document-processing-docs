@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: import, export, load, save, async-load, document-events, file-formats
+appliesto: DOCX Editor SDK
 ---
 # Import and Export in WPF DOCX Editor
 

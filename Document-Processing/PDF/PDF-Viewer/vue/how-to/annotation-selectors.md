@@ -5,6 +5,7 @@ description: Customize annotation selectors in the Vue PDF Viewer using annotati
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Customize Annotation Selectors in Vue PDF Viewer

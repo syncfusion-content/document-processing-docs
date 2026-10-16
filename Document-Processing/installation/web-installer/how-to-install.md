@@ -5,6 +5,7 @@ description: Learn here about how to install the Syncfusion Document Processing 
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
+appliesto: Document SDK, PDF Viewer SDK, DOCX Editor SDK, Spreadsheet Editor SDK
 ---
 
 # How to install Document Solutions Web installer

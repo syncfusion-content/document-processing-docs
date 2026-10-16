@@ -5,6 +5,7 @@ description: The stamp annotation feature in WPF PDF Viewer applies visual stamp
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Stamp Annotation in WPF Pdf Viewer

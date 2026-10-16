@@ -5,6 +5,7 @@ description: Convert spreadsheet documents in the WPF Spreadsheet control betwee
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Conversion in WPF Spreadsheet 

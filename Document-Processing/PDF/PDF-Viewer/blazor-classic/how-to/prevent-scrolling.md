@@ -5,6 +5,7 @@ description: Learn how to prevent scrolling and remove the vertical scrollbar in
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Prevent Scrolling in Blazor PDF Viewer

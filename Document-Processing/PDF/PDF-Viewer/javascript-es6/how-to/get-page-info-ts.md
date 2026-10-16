@@ -5,6 +5,7 @@ description: Retrieve page height, width, and rotation in the JavaScript (ES6) P
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Get Page Info in JavaScript (ES6) PDF Viewer

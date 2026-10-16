@@ -5,6 +5,7 @@ description: Learn about free text annotation support in Syncfusion<sup>®</sup>
 platform: document-processing
 control: SfPdfViewerControl
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Free text annotation in UWP PDF Viewer

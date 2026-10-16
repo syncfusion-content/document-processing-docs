@@ -4,6 +4,7 @@ description: Resolve the file does not contain workbook stream error when openin
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to resolve workbook stream errors in .NET Excel Library

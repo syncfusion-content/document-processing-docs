@@ -5,6 +5,7 @@ description: Handle import and export events for PDF form fields in the JavaScri
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Form Field Import and Export Events in JavaScript (ES5) PDF Viewer

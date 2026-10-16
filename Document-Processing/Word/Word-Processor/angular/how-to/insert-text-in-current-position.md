@@ -6,6 +6,7 @@ platform: document-processing
 control: Insert text in current position
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Insert Content at Cursor in Angular DOCX Editor

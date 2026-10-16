@@ -6,6 +6,7 @@ description: Learn how to get started with the Syncfusion WPF Spreadsheet contro
 platform:  document-processing
 control: SfSpreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Getting Started with WPF Spreadsheet

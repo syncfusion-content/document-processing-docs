@@ -6,6 +6,7 @@ control: Optimize the SFDT file
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Optimize SFDT Files in Vue DOCX Editor

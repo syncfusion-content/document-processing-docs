@@ -4,6 +4,7 @@ description: The FAQ section provides answers to common questions about creating
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # FAQ Section in .NET Excel Library

@@ -6,6 +6,7 @@ platform: document-processing
 control: Disable Header and Footer Edit in DOCX Editor
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Disable Header and Footer Editing in TypeScript DOCX Editor

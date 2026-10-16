@@ -6,6 +6,7 @@ platform: document-processing
 control: Text search
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Text Search in Angular PDF Viewer

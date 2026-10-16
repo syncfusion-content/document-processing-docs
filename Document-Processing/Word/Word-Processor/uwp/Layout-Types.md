@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: layout-types,pages,continuous,block,forum,blog
+appliesto: DOCX Editor SDK
 ---
 # Layout Types in UWP DOCX Editor
 

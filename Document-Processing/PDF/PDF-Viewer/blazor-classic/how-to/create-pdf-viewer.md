@@ -5,6 +5,7 @@ description: Learn here all about View the created PDF document in Syncfusion Bl
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to View the created PDF document

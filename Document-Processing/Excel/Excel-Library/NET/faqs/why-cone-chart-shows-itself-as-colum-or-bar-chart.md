@@ -4,6 +4,7 @@ description: Explain why a cone chart appears as a column or bar chart in Excel 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to fix cone charts displayed as bar charts in .NET Excel Library

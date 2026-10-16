@@ -5,6 +5,7 @@ description: Learn about rendering, styling, and file processing performance met
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Performance Metrics in Blazor Spreadsheet

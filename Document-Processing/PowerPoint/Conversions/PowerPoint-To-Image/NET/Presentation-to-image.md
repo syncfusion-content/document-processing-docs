@@ -4,6 +4,7 @@ description: This section illustrates how to convert PowerPoint Presentation doc
 platform: document-processing
 control: Presentation
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert PowerPoint to Image using Syncfusion® PowerPoint Library

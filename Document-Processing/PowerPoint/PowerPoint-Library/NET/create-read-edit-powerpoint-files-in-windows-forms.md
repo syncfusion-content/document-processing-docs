@@ -4,6 +4,7 @@ description: Windows Forms PowerPoint library to create, read, edit and convert 
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create, read and edit a PowerPoint file in Windows Forms

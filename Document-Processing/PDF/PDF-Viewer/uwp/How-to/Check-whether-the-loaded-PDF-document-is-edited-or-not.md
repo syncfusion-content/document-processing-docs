@@ -5,6 +5,7 @@ description: Learn how to check whether the loaded pdf document is edited or not
 platform: document-processing
 control: PDF viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to check whether loaded PDF document is edited in UWP PDF Viewer

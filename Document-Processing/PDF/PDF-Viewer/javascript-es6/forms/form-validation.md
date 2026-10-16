@@ -5,6 +5,7 @@ description: Enable built-in PDF form field validation in the JavaScript (ES6) P
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Form Validation in JavaScript (ES6) PDF Viewer

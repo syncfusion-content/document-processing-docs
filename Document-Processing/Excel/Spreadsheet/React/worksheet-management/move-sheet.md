@@ -5,6 +5,7 @@ description: Learn about moving worksheets in an Excel document using the Syncfu
 control: Worksheet 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Move Worksheet in React Spreadsheet

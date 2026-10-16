@@ -4,6 +4,7 @@ description: Convert PowerPoint to image in WPF using .NET PowerPoint library (P
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert PowerPoint to Image in WPF

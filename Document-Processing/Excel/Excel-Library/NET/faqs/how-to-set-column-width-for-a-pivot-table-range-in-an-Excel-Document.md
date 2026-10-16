@@ -4,6 +4,7 @@ description: Set column width for a PivotTable range in an Excel document using 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to set pivot table column widths in .NET Excel Library

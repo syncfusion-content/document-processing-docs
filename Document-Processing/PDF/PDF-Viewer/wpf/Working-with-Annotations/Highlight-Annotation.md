@@ -5,6 +5,7 @@ description: The highlight annotation feature in WPF PDF Viewer allows users to 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Highlight text in PDF files using WPF Pdf Viewer

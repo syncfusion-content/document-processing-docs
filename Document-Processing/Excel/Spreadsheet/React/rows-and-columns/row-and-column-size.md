@@ -5,6 +5,7 @@ description: Learn about resizing rows and columns in the Syncfusion React Sprea
 control: Rows and Columns 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Row and Column Resize in React Spreadsheet

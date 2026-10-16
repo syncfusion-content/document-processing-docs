@@ -5,6 +5,7 @@ description: AI Assist integration in JavaScript Spreadsheet explains AI-powered
 platform: document-processing
 control: AI Assist
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # AI Assist Integration in JavaScript Spreadsheet 

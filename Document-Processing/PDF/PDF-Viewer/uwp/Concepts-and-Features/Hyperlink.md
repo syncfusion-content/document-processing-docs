@@ -5,6 +5,7 @@ description: Learn here all about the Hyperlink support in the Syncfusion<sup>®
 platform: document-processing
 control: SfPdfViewerControl
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Hyperlink in UWP PDF Viewer

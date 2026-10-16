@@ -4,6 +4,7 @@ description: This section illustrates how to load, edit, and save Word documents
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 # Loading and Saving Word document in Java Word
 

@@ -4,6 +4,7 @@ description: Find and highlight data in Excel worksheets using the Syncfusion .N
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to find and highlight data in .NET Excel Library

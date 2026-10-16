@@ -4,6 +4,7 @@ description: Convert Word to image in WinUI using WinUI Word library without Mic
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert Word to Image in WinUI 

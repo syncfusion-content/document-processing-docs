@@ -5,6 +5,7 @@ description: Move the document selection to a specific position in Syncfusion® 
 platform: document-processing
 control: Move The Selection To Specific Position
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # How to Move Selection to a Position in ASP.NET Core DOCX Editor

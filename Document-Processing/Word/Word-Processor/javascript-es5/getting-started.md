@@ -6,6 +6,7 @@ platform: document-processing
 control: Getting started 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Getting Started with JavaScript DOCX Editor

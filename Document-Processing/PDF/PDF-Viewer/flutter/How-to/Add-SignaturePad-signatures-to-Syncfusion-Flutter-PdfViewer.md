@@ -5,6 +5,7 @@ description: This guide explains how to capture signatures using SfSignaturePad 
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to add digital signature in Flutter PDF Viewer

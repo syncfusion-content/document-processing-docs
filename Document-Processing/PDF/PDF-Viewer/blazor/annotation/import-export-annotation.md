@@ -5,6 +5,7 @@ description: Learn how to import and export annotations as JSON in the Blazor PD
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Import and Export annotations in Blazor PDF Viewer 

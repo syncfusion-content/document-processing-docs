@@ -4,6 +4,7 @@ description: Excel slicers section describe slicers and their various features i
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Excel Slicers in .NET Excel Library

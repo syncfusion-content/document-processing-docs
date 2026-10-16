@@ -5,6 +5,7 @@ description: Save PDF files from the React PDF Viewer to Box cloud storage using
 control: PDF Viewer
 platform: document-processing
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Save PDF Files to Box Cloud Storage in React PDF Viewer

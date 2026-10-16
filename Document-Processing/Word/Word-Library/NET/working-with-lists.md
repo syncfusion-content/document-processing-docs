@@ -4,6 +4,7 @@ description: Describe how to create and customize numbered and bulleted lists in
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # List in .NET Word library in .NET

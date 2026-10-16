@@ -6,6 +6,7 @@ platform: document-processing
 control: Auto Save Document in DOCX Editor
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Auto Save Document to AWS S3 in TypeScript DOCX Editor

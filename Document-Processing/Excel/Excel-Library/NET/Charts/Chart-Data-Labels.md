@@ -4,6 +4,7 @@ description: Chart data labels describes how the Syncfusion .NET Excel Library d
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Chart Data Labels in .NET Excel Library

@@ -5,6 +5,7 @@ description: Import and export annotations in the ASP.NET MVC PDF Viewer as Java
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Import and Export Annotations in ASP.NET MVC PDF Viewer

@@ -5,6 +5,7 @@ description: Fill PDF forms in Syncfusion WPF PDF Viewer through UI, programmati
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Filling PDF Forms in WPF Pdf Viewer

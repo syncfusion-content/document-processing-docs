@@ -6,6 +6,7 @@ control: Auto save document in DOCX Editor
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Auto Save Document to AWS S3 in Vue DOCX Editor

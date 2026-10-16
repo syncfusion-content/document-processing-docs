@@ -6,6 +6,7 @@ platform: document-processing
 control: Form fields
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Form Fields in Angular DOCX Editor

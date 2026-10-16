@@ -6,6 +6,7 @@ platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
 keywords: .net maui smart pdf viewer, smart redaction maui, ai redaction, pii detection, pdf redact maui
+appliesto: PDF Viewer SDK
 ---
 
 # Smart Redaction in .NET MAUI Smart PDF Viewer

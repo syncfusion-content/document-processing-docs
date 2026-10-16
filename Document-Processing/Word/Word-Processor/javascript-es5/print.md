@@ -6,6 +6,7 @@ platform: document-processing
 control: Print 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Print in JavaScript DOCX Editor

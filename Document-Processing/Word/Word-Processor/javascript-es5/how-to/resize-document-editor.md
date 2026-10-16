@@ -6,6 +6,7 @@ platform: document-processing
 control: Resize DOCX Editor
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Resize in JavaScript DOCX Editor 

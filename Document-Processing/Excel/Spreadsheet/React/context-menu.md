@@ -5,6 +5,7 @@ description: Learn about the context menu in the Syncfusion React Spreadsheet co
 control: Context menu 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Context Menu in React Spreadsheet

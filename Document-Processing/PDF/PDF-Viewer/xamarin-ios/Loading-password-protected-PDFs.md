@@ -5,6 +5,7 @@ description: PDF Viewer allows the user to load and view the password protected 
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Loading encrypted PDFs using SfPdfViewer in Xamarin.iOS

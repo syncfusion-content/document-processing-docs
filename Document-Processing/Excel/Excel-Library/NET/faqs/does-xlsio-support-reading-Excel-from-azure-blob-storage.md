@@ -4,6 +4,7 @@ description: Azure Blob Storage access explains whether Syncfusion .NET Excel Li
 platform: document-processing 
 control: XlsIO 
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Excel Files from Azure Blob Storage in .NET Excel Library

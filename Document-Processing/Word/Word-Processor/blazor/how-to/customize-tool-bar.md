@@ -5,6 +5,7 @@ description: Customize the toolbar in Syncfusion® Blazor DOCX Editor by adding,
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # How to Customize Toolbar in Blazor DOCX Editor

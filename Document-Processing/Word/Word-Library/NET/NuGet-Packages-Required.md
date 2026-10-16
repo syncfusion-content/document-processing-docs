@@ -4,6 +4,7 @@ description: Learn the NuGet packages required to use .NET Word (DocIO) library 
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # NuGet Packages Required for Word Library

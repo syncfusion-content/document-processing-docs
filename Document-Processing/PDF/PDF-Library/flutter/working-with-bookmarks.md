@@ -5,6 +5,7 @@ description: Learn how to add, insert, and remove bookmarks in PDF documents usi
 platform: document-processing
 control: PDF
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Bookmarks in Flutter PDF

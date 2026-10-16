@@ -5,7 +5,7 @@ description: Learn here about how to install Syncfusion Document Processing offl
 platform: document-sdk
 control: Installation and Deployment
 documentation: ug
-
+appliesto: Document SDK, PDF Viewer SDK, DOCX Editor SDK, Spreadsheet Editor SDK
 ---
 
 # How to install Document Solutions Offline installer

@@ -5,6 +5,7 @@ description: Learn how to install the Syncfusion PDF Mac installer and complete 
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
+appliesto: Document SDK
 ---
 
 # How to Install Syncfusion PDF Mac Installer

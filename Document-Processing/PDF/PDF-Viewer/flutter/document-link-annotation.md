@@ -5,6 +5,7 @@ description: Document link annotations in SfPdfViewer provide quick navigation b
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Document Link Annotation in Flutter PDF Viewer

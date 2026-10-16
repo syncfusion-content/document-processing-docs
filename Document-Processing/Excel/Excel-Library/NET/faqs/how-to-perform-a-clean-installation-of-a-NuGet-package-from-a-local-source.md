@@ -4,6 +4,7 @@ description: Perform a clean installation of a NuGet package from a local source
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to install NuGet packages for .NET Excel Library

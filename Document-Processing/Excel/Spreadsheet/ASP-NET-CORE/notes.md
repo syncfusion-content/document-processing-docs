@@ -5,6 +5,7 @@ description: Learn about notes in the Syncfusion ASP.NET Core Spreadsheet contro
 platform: document-processing
 control: Notes
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Notes in ASP.NET Core Spreadsheet

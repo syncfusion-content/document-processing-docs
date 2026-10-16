@@ -5,6 +5,7 @@ description: Learn here how to generate and register the license key for Documen
 platform: document-processing
 control: Essential Studio
 documentation: ug
+appliesto: Document SDK, PDF Viewer SDK, DOCX Editor SDK, Spreadsheet Editor SDK
 ---
 
 # Register license for Document Solutions NuGet packages

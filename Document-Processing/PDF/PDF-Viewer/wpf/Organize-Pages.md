@@ -5,6 +5,7 @@ description: Organize PDF pages in Syncfusion WPF PDF Viewer by rotating, rearra
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Organize Pages in WPF Pdf Viewer

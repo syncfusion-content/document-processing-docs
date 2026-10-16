@@ -4,6 +4,7 @@ description: Describe frequently asked questions about working with sections in 
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # FAQ about Sections in .NET Word
 

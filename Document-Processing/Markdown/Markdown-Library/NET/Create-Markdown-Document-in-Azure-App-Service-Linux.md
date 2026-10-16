@@ -4,6 +4,7 @@ description: Create Markdown document in Azure App Service on Linux using .NET C
 platform: document-processing
 control: Markdown
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Markdown document in Azure App Service on Linux

@@ -5,6 +5,7 @@ description: Learn keyboard shortcuts and navigation options in the Syncfusion A
 platform: document-processing
 control: Keyboard Shortcuts
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 
