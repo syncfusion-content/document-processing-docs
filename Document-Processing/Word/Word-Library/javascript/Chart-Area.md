@@ -1,6 +1,6 @@
 ---
 title: Modify the Appearance of Chart Area in JavaScript Word | Syncfusion
-description: Learn how to customize the chart area appearance including border, color, and plot area in Syncfusion JavaScript Word library.
+description: Learn how to customize the chart area appearance including border and color in Syncfusion JavaScript Word library.
 platform: document-processing
 control: Word Library
 documentation: UG
@@ -176,82 +176,6 @@ chart.chartArea.fill.foreColor = "#D3D3D3";
 
 // Set the transparency of the chart area.
 chart.chartArea.fill.transparency = 0.5;
-
-// Saves the Word document.
-const documentBytes = document.saveSync();
-writeFileSync('ChartArea.docx', documentBytes);
-
-{% endhighlight %}
-{% endtabs %}
-
-## Customization of Plot Area
-
-The following code snippet illustrates how to customize the plot area within a chart.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-
-import { WordDocument, Chart } from '@syncfusion/ej2-docx';
-import { readFileSync, writeFileSync } from 'fs';
-
-// Opens the Word document.
-const fileBytes: Uint8Array = new Uint8Array(readFileSync('Template.docx'));
-let document = WordDocument.open(fileBytes);
-
-// Gets the last paragraph in the document.
-let paragraph = document.lastParagraph;
-
-// Gets the first chart from the paragraph items.
-let chart = paragraph.items[0] as Chart;
-
-// Modifies the chart height and width.
-chart.height = 300;
-chart.width = 500;
-
-// Sets the chart plot area border.
-chart.plotArea.line.color = "#0000FF";
-chart.plotArea.line.weightPt = 2;
-
-// Applies a fill to the chart plot area.
-chart.plotArea.fill.type = 'solid';
-chart.plotArea.fill.foreColor = "#D3D3D3";
-
-// Set the transparency of the chart plot area.
-chart.plotArea.fill.transparency = 0.5;
-
-// Saves the Word document.
-const documentBytes: Uint8Array = document.saveSync();
-writeFileSync('ChartArea.docx', documentBytes);
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-
-const { readFileSync, writeFileSync } = require('fs');
-
-// Opens the Word document.
-const fileBytes = new Uint8Array(readFileSync('Template.docx'));
-let document = ej.docx.WordDocument.open(fileBytes);
-
-// Gets the last paragraph in the document.
-let paragraph = document.lastParagraph;
-
-// Gets the first chart from the paragraph items.
-let chart = paragraph.items[0];
-
-// Modifies the chart height and width.
-chart.height = 300;
-chart.width = 500;
-
-// Sets the chart plot area border.
-chart.plotArea.line.color = "#0000FF";
-chart.plotArea.line.weightPt = 2;
-
-// Applies a fill to the chart plot area.
-chart.plotArea.fill.type = 'solid';
-chart.plotArea.fill.foreColor = "#D3D3D3";
-
-// Set the transparency of the chart plot area.
-chart.plotArea.fill.transparency = 0.5;
 
 // Saves the Word document.
 const documentBytes = document.saveSync();
