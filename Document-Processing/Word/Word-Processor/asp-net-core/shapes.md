@@ -26,6 +26,34 @@ A text box is a rectangular area on the document where you can enter text. When 
 
 <img src="images/Shapes_images/textbox_shape.png" alt="Text box shape view in DocumentEditor" style="width:550px">
 
+## Insert Text Box
+
+The **Text Box** option is available in the **Insert** tab of the ribbon. It allows users to insert a text box into the document by configuring the required properties through a dedicated dialog.
+
+### Insert Text Box Using the UI
+
+1. Navigate to the **Insert** tab in the ribbon.
+2. Click **Text Box**.
+3. The **Insert Text Box** dialog opens.
+4. Configure the required text box properties.
+5. Click **Insert** to add the text box to the document.
+
+After insertion, the text box is added to the document with the configured settings.
+
+<img src="images/insert-text-box-dialog.png" alt="Insert Text Box Dialog in DOCX Editor" style="width:550px">
+
+### Insert Text Box Using API
+
+The **DOCX Editor** also provides an API to open the **Insert Text Box** dialog programmatically. This is useful when integrating custom toolbar items, buttons, or application workflows.
+
+Use the following code snippet to open the **Insert Text Box** dialog:
+
+```csharp
+container.documentEditor.showDialog('TextBox');
+```
+
+When invoked, the same **Insert Text Box** dialog available from the ribbon interface is displayed, allowing users to configure and insert a text box into the document.
+
 ## Shape resizer
 
 The DOCX Editor also supports a built-in shape resizer to resize the shapes present in the document. The shape resizer accepts both touch and mouse interactions.
