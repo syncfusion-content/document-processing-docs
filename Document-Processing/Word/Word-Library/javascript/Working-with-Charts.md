@@ -149,12 +149,9 @@ You can modify an existing chart's data values by opening the Word document, acc
 {% highlight typescript tabtitle="TypeScript" %}
 
 import { WordDocument, Chart } from '@syncfusion/ej2-docx';
-import { readFileSync, writeFileSync } from 'fs';
 
-const fileBytes: Uint8Array = new Uint8Array(readFileSync('Template.docx'));
-
-// Opens the Word document.
-let document = WordDocument.open(fileBytes);
+// Load an existing document
+let document = WordDocument.open(data);
 
 // Gets the last paragraph in the document.
 let paragraph = document.lastParagraph;
@@ -173,12 +170,8 @@ document.save('Output.docx');
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 
-const { readFileSync, writeFileSync } = require('fs');
-
-const fileBytes = new Uint8Array(readFileSync('Template.docx'));
-
-// Opens the Word document.
-let document = ej.docx.WordDocument.open(fileBytes);
+// Load an existing document
+let document = ej.docx.WordDocument.open(data);
 
 // Gets the last paragraph in the document.
 let paragraph = document.lastParagraph;
@@ -205,11 +198,9 @@ You can remove an existing chart from a Word document by accessing it and removi
 {% highlight typescript tabtitle="TypeScript" %}
 
 import { WordDocument, Chart } from '@syncfusion/ej2-docx';
-import { readFileSync, writeFileSync } from 'fs';
 
-const fileBytes: Uint8Array = new Uint8Array(readFileSync('Template.docx'));
-
-let document = WordDocument.open(fileBytes);
+// Load an existing document
+let document = WordDocument.open(data);
 
 // Gets the last paragraph in the document.
 let paragraph = document.lastParagraph;
@@ -227,11 +218,8 @@ document.save('Result.docx');
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 
-const { readFileSync, writeFileSync } = require('fs');
-
-const fileBytes = new Uint8Array(readFileSync('Template.docx'));
-
-let document = ej.docx.WordDocument.open(fileBytes);
+// Load an existing document
+let document = ej.docx.WordDocument.open(data);
 
 // Gets the last paragraph in the document.
 let paragraph = document.lastParagraph;

@@ -18,11 +18,9 @@ The following code snippet illustrates how to modify the border of the chart are
 {% highlight typescript tabtitle="TypeScript" %}
 
 import { WordDocument, Chart } from '@syncfusion/ej2-docx';
-import { readFileSync, writeFileSync } from 'fs';
 
-// Opens the Word document.
-const fileBytes: Uint8Array = new Uint8Array(readFileSync('Template.docx'));
-let document = WordDocument.open(fileBytes);
+// Load an existing document
+let document = WordDocument.open(data);
 
 // Gets the last paragraph in the document.
 let paragraph = document.lastParagraph;
@@ -37,11 +35,8 @@ chart.chartArea.line.weightPt = 2;
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 
-const { readFileSync, writeFileSync } = require('fs');
-
-// Opens the Word document.
-const fileBytes = new Uint8Array(readFileSync('Template.docx'));
-let document = ej.docx.WordDocument.open(fileBytes);
+// Load an existing document
+let document = ej.docx.WordDocument.open(data);
 
 // Gets the last paragraph in the document.
 let paragraph = document.lastParagraph;
@@ -64,11 +59,9 @@ The following code snippet illustrates how to fill the chart area with color.
 {% highlight typescript tabtitle="TypeScript" %}
 
 import { WordDocument, Chart } from '@syncfusion/ej2-docx';
-import { readFileSync, writeFileSync } from 'fs';
 
-// Opens the Word document.
-const fileBytes: Uint8Array = new Uint8Array(readFileSync('Template.docx'));
-let document = WordDocument.open(fileBytes);
+// Load an existing document
+let document = WordDocument.open(data);
 
 // Gets the last paragraph in the document.
 let paragraph = document.lastParagraph;
@@ -86,11 +79,8 @@ chart.chartArea.fill.transparency = 0.5;
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 
-const { readFileSync, writeFileSync } = require('fs');
-
-// Opens the Word document.
-const fileBytes = new Uint8Array(readFileSync('Template.docx'));
-let document = ej.docx.WordDocument.open(fileBytes);
+// Load an existing document
+let document = ej.docx.WordDocument.open(data);
 
 // Gets the last paragraph in the document.
 let paragraph = document.lastParagraph;
@@ -116,11 +106,9 @@ The complete code snippet illustrating chart area customization with borders and
 {% highlight typescript tabtitle="TypeScript" %}
 
 import { WordDocument, Chart } from '@syncfusion/ej2-docx';
-import { readFileSync } from 'fs';
 
-// Opens the Word document.
-const fileBytes: Uint8Array = new Uint8Array(readFileSync('Template.docx'));
-let document = WordDocument.open(fileBytes);
+// Load an existing document
+let document = WordDocument.open(data);
 
 // Gets the last paragraph in the document.
 let paragraph = document.lastParagraph;
@@ -149,11 +137,8 @@ document.save('ChartArea.docx');
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 
-const { readFileSync } = require('fs');
-
-// Opens the Word document.
-const fileBytes = new Uint8Array(readFileSync('Template.docx'));
-let document = ej.docx.WordDocument.open(fileBytes);
+// Load an existing document
+let document = ej.docx.WordDocument.open(data);
 
 // Gets the last paragraph in the document.
 let paragraph = document.lastParagraph;

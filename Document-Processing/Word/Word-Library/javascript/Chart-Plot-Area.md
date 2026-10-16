@@ -18,11 +18,9 @@ The following code snippet illustrates how to modify the border of the plot area
 {% highlight typescript tabtitle="TypeScript" %}
 
 import { WordDocument, Chart } from '@syncfusion/ej2-docx';
-import { readFileSync, writeFileSync } from 'fs';
 
-// Opens the Word document.
-const fileBytes: Uint8Array = new Uint8Array(readFileSync('Template.docx'));
-let document = WordDocument.open(fileBytes);
+// Load an existing document
+let document = WordDocument.open(data);
 
 // Gets the last paragraph in the document.
 let paragraph = document.lastParagraph;
@@ -37,11 +35,8 @@ chart.plotArea.line.weightPt = 2;
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 
-const { readFileSync, writeFileSync } = require('fs');
-
-// Opens the Word document.
-const fileBytes = new Uint8Array(readFileSync('Template.docx'));
-let document = ej.docx.WordDocument.open(fileBytes);
+// Load an existing document
+let document = ej.docx.WordDocument.open(data);
 
 // Gets the last paragraph in the document.
 let paragraph = document.lastParagraph;
@@ -64,11 +59,9 @@ The following code snippet illustrates how to fill the plot area with color.
 {% highlight typescript tabtitle="TypeScript" %}
 
 import { WordDocument, Chart } from '@syncfusion/ej2-docx';
-import { readFileSync, writeFileSync } from 'fs';
 
-// Opens the Word document.
-const fileBytes: Uint8Array = new Uint8Array(readFileSync('Template.docx'));
-let document = WordDocument.open(fileBytes);
+// Load an existing document
+let document = WordDocument.open(data);
 
 // Gets the last paragraph in the document.
 let paragraph = document.lastParagraph;
@@ -86,11 +79,8 @@ chart.plotArea.fill.transparency = 0.5;
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 
-const { readFileSync, writeFileSync } = require('fs');
-
-// Opens the Word document.
-const fileBytes = new Uint8Array(readFileSync('Template.docx'));
-let document = ej.docx.WordDocument.open(fileBytes);
+// Load an existing document
+let document = ej.docx.WordDocument.open(data);
 
 // Gets the last paragraph in the document.
 let paragraph = document.lastParagraph;

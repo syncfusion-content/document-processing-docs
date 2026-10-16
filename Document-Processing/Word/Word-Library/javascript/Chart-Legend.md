@@ -68,11 +68,9 @@ The following code snippet illustrates how to customize the chart legend appeara
 {% highlight typescript tabtitle="TypeScript" %}
 
 import { WordDocument, Chart, LegendPosition } from '@syncfusion/ej2-docx';
-import { readFileSync } from 'fs';
 
-// Opens the Word document.
-const fileBytes: Uint8Array = new Uint8Array(readFileSync('Template.docx'));
-let document = WordDocument.open(fileBytes);
+// Load an existing document
+let document = WordDocument.open(data);
 
 // Gets the last paragraph in the document.
 let paragraph = document.lastParagraph;
@@ -101,11 +99,8 @@ document.save('Legend.docx');
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 
-const { readFileSync } = require('fs');
-
-// Opens the Word document.
-const fileBytes = new Uint8Array(readFileSync('Template.docx'));
-let document = ej.docx.WordDocument.open(fileBytes);
+// Load an existing document
+let document = ej.docx.WordDocument.open(data);
 
 // Gets the last paragraph in the document.
 let paragraph = document.lastParagraph;
