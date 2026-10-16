@@ -10,46 +10,15 @@ documentation: UG
 
 A Chart is a graphical representation of data where the data is represented as symbols such as bars, lines, etc. Charts can represent numerical data, functions, or some kinds of qualitative structures. The JavaScript Word Library supports the following chart types:
 
-## Supported Chart Types
-
-### Column Charts
-* ColumnClustered
-* ColumnStacked
-* ColumnPercentStacked
-
-### Bar Charts
-* BarClustered
-* BarStacked
-* BarPercentStacked
-
-### Line Charts
-* Line
-* LineStacked
-* LineMarkers
-* LineMarkersStacked
-* LinePercentStacked
-
-### Pie and Doughnut Charts
-* Pie
-* PieExploded
-* Doughnut
-* PieOfPie
-* BarOfPie
-
-### Scatter and Bubble Charts
-* ScatterMarkers
-* ScatterLine
-* Bubble
-
-### Area Charts
-* Area
-* AreaStacked
-* AreaPercentStacked
-
-### 3-D Charts
-* Column3D
-* Pie3D
-* Line3D
+* Column chart
+* Bar chart
+* Line chart
+* Pie chart
+* Doughnut chart
+* Scatter chart
+* Bubble chart
+* Area chart
+* 3D chart
 
 > The Word Library works with Office Open XML `.docx` packages.
 
