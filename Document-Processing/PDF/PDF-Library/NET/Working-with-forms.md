@@ -132,7 +132,7 @@ textBoxField.ToolTip = "First Name";
 loadedDocument.Form.Fields.Add(textBoxField);
 
 //Save the document.
-loadedDocument.Save("Form.pdf");
+loadedDocument.Save("Output.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
@@ -160,7 +160,7 @@ textBoxField.ToolTip = "First Name";
 loadedDocument.Form.Fields.Add(textBoxField);
 
 //Save the document.
-loadedDocument.Save("Form.pdf");
+loadedDocument.Save("Output.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
@@ -189,7 +189,7 @@ textBoxField.ToolTip = "First Name"
 loadedDocument.Form.Fields.Add(textBoxField)
 
 'Save the document
-loadedDocument.Save("Form.pdf")
+loadedDocument.Save("Output.pdf")
 'Close the document
 loadedDocument.Close(True)
 
@@ -335,7 +335,7 @@ comboBoxField.Items.Add(new PdfListFieldItem("Documentation", "content"));
 loadedDocument.Form.Fields.Add(comboBoxField);
 
 //Save the document.
-loadedDocument.Save("Form.pdf");
+loadedDocument.Save("Output.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
@@ -369,7 +369,7 @@ comboBoxField.Items.Add(new PdfListFieldItem("Documentation", "content"));
 loadedDocument.Form.Fields.Add(comboBoxField);
 
 //Save the document.
-loadedDocument.Save("Form.pdf");
+loadedDocument.Save("Output.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
@@ -434,7 +434,7 @@ PdfLoadedComboBoxField comboField = doc.Form.Fields["EmployeeCombo"] as PdfLoade
 // Set text alignment to center for the combo box field.
 comboField.TextAlignment = PdfTextAlignment.Center;
 // Save the updated document.
-doc.Save("Form.pdf");
+doc.Save("Output.pdf");
 doc.Close(true);
 
 {% endhighlight %}
@@ -452,7 +452,7 @@ PdfLoadedComboBoxField comboField = doc.Form.Fields["EmployeeCombo"] as PdfLoade
 // Set text alignment to center for the combo box field.
 comboField.TextAlignment = PdfTextAlignment.Center;
 // Save the updated document.
-doc.Save("Form.pdf");
+doc.Save("Output.pdf");
 doc.Close(true);
 
 {% endhighlight %}
@@ -470,7 +470,7 @@ Dim comboField As PdfLoadedComboBoxField = TryCast(doc.Form.Fields("EmployeeComb
 ' Set text alignment to center for the combo box field.
 comboField.TextAlignment = PdfTextAlignment.Center
 ' Save the updated document.
-doc.Save("Form.pdf")
+doc.Save("Output.pdf")
 doc.Close(True)
 
 {% endhighlight %}
@@ -511,7 +511,7 @@ employeesRadioList.Items.Add(radioButtonItem1);
 employeesRadioList.Items.Add(radioButtonItem2);
 
 //Save the document.
-document.Save("Form.pdf");
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
@@ -614,7 +614,7 @@ employeesRadioList.Items.Add(radioButtonItem1);
 employeesRadioList.Items.Add(radioButtonItem2);
 
 //Save the document.
-loadedDocument.Save("Form.pdf");
+loadedDocument.Save("Output.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
@@ -648,7 +648,7 @@ employeesRadioList.Items.Add(radioButtonItem1);
 employeesRadioList.Items.Add(radioButtonItem2);
 
 //Save the document.
-loadedDocument.Save("Form.pdf");
+loadedDocument.Save("Output.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
@@ -683,7 +683,7 @@ employeesRadioList.Items.Add(radioButtonItem1)
 employeesRadioList.Items.Add(radioButtonItem2)
 
 'Save the document
-loadedDocument.Save("Form.pdf")
+loadedDocument.Save("Output.pdf")
 'Close the document
 loadedDocument.Close(True)
 
@@ -872,7 +872,7 @@ listBoxField.MultiSelect = true;
 document.Form.Fields.Add(listBoxField);
 
 //Save the document.
-document.Save("Form.pdf");
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
@@ -1446,6 +1446,113 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Adding-the-signatre-field-in-existing-PDF-document).
 
+
+### Add an image field to a PDF form
+
+This section explains how to add an image field to a PDF form using the Syncfusion PDF library. The image field enables an image to be displayed within a specified area of the PDF form.
+
+The following code example illustrates how to add an image field to a PDF form.
+
+{% tabs %}  
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Add-an-image-field-to-a-PDF-form/.NET/Add-an-image-field-to-a-PDF-form/Program.cs" %}
+
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Graphics;
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+//Add a new page to PDF document.
+PdfPage page = document.Pages.Add();
+
+//Create a Button.
+PdfButtonField buttonField = new PdfButtonField(page, "Click");
+//Set properties to the Button field.
+buttonField.Bounds = new RectangleF(0, 150, 90, 20);
+buttonField.Text = "Click";
+PdfBitmap image = new PdfBitmap(new FileStream("header-image.png", FileMode.Open));
+buttonField.Appearance.Normal.Graphics.DrawImage(image, 0, 0, 90, 20);
+
+//Add the form field to the document.
+document.Form.Fields.Add(buttonField);
+//Disable the default appearance of the form fields in the document.
+document.Form.SetDefaultAppearance(false);
+
+//Save the document.
+document.Save("Output.pdf");
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+using Syncfusion.Pdf.Graphics;
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+//Add a new page to PDF document.
+PdfPage page = document.Pages.Add();
+
+//Create a Button.
+PdfButtonField buttonField = new PdfButtonField(page, "Click");
+//Set properties to the Button field.
+buttonField.Bounds = new RectangleF(0, 150, 90, 20);
+buttonField.Text = "Click";
+PdfBitmap image = new PdfBitmap(new FileStream("header-image.png", FileMode.Open));
+buttonField.Appearance.Normal.Graphics.DrawImage(image, 0, 0, 90, 20);
+
+//Add the form field to the document.
+document.Form.Fields.Add(buttonField);
+//Disable the default appearance of the form fields in the document.
+document.Form.SetDefaultAppearance(false);
+
+//Save the document.
+document.Save("Output.pdf");
+//Close the document.
+document.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+Imports Syncfusion.Pdf.Graphics
+
+'Create a new PDF document.
+Dim document As New PdfDocument()
+'Add a new page to PDF document.
+Dim page As PdfPage = document.Pages.Add()
+
+'Create a Button.
+Dim buttonField As New PdfButtonField(page, "Click")
+'Set properties to the Button field.
+buttonField.Bounds = New RectangleF(0, 150, 90, 20)
+buttonField.Text = "Click"
+Dim image As New PdfBitmap(New FileStream("header-image.png", FileMode.Open))
+buttonField.Appearance.Normal.Graphics.DrawImage(image, 0, 0, 90, 20)
+'Add the form field to the document.
+document.Form.Fields.Add(buttonField)
+'Disable the default appearance of the form fields in the document.
+document.Form.SetDefaultAppearance(False)
+
+'Save the document.
+document.Save("Output.pdf")
+'Close the document.
+document.Close(True)
+
+{% endhighlight %}
+{% endtabs %}  
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Add-an-image-field-to-a-PDF-form/.NET).
+
 ### Customize the signed date
 
 The signedDate parameter in the [PdfSignature](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSignature.html) class allows you to specify a custom date when signing a PDF document. Refer to the following example for more details.
@@ -1527,6 +1634,97 @@ document.Close(True)
 {% endtabs %}  
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Digital%20Signature/Customize-the-signed-date/.NET).
+
+## Add a date field to a PDF form
+
+This section explains how to add a date text box field to a PDF form using the Syncfusion PDF library. The field is initialized with a sample date and uses JavaScript-based formatting to enforce the date format, validate input, and automatically format user entries.
+
+The following code example illustrates how to add a date field to a PDF form.
+
+{% tabs %}  
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Add-a-date-field-to-a-PDF/.NET/Add-a-date-field-to-a-PDF/Program.cs" %}
+
+using System.IO;
+using Syncfusion.Drawing;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
+// Create a new PDF document
+using (PdfDocument pdfDocument = new PdfDocument())
+{
+    // Add a new page to the PDF document
+    PdfPage pdfPage = pdfDocument.Pages.Add();
+    // Create a text box field for entering the date
+    PdfTextBoxField nameField = new PdfTextBoxField(pdfPage, "DateField");
+    nameField.Bounds = new RectangleF(10, 40, 70, 20);
+    nameField.ToolTip = "Date";
+    nameField.Text = "12/01/1995";
+    //Set the JavaScript actions to format and validate the date.
+    nameField.Actions.KeyPressed = new PdfJavaScriptAction("AFDate_KeystrokeEx(\"mm/dd/yyyy\")");
+    nameField.Actions.Format = new PdfJavaScriptAction("AFDate_FormatEx(\"mm/dd/yyyy\")");
+    nameField.Actions.Validate = new PdfJavaScriptAction("AFDate_Validate(\"mm/dd/yyyy\")");
+    // Add the field to the form
+    pdfDocument.Form.Fields.Add(nameField);
+    // Save the PDF document
+    pdfDocument.Save(Path.GetFullPath(@"Output/Output.pdf"));
+}
+{% endhighlight %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using System.Drawing;
+using System.IO;
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Interactive;
+
+// Create a new PDF document
+using (PdfDocument pdfDocument = new PdfDocument())
+{
+    // Add a new page to the PDF document
+    PdfPage pdfPage = pdfDocument.Pages.Add();
+    // Create a text box field for entering the date
+    PdfTextBoxField nameField = new PdfTextBoxField(pdfPage, "DateField");
+    nameField.Bounds = new RectangleF(10, 40, 70, 20);
+    nameField.ToolTip = "Date";
+    nameField.Text = "12/01/1995";
+    //Set the JavaScript actions to format and validate the date.
+    nameField.Actions.KeyPressed = new PdfJavaScriptAction("AFDate_KeystrokeEx(\"mm/dd/yyyy\")");
+    nameField.Actions.Format = new PdfJavaScriptAction("AFDate_FormatEx(\"mm/dd/yyyy\")");
+    nameField.Actions.Validate = new PdfJavaScriptAction("AFDate_Validate(\"mm/dd/yyyy\")");
+    // Add the field to the form
+    pdfDocument.Form.Fields.Add(nameField);
+    // Save the PDF document
+    pdfDocument.Save(Path.GetFullPath(@"Output/Output.pdf"));
+}
+{% endhighlight %}
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports System.Drawing
+Imports System.IO
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Interactive
+
+'Create a new PDF document
+Using pdfDocument As New PdfDocument()
+    'Add a new page to the PDF document
+    Dim pdfPage As PdfPage = pdfDocument.Pages.Add()
+    'Create a text box field for entering the date
+    Dim nameField As New PdfTextBoxField(pdfPage, "DateField")
+    nameField.Bounds = New RectangleF(10, 40, 70, 20)
+    nameField.ToolTip = "Date"
+    nameField.Text = "12/01/1995"
+    'Set the JavaScript actions to format and validate the date.
+    nameField.Actions.KeyPressed = New PdfJavaScriptAction("AFDate_KeystrokeEx(\"mm/dd/yyyy\")")
+    nameField.Actions.Format = New PdfJavaScriptAction("AFDate_FormatEx(\"mm/dd/yyyy\")")
+    nameField.Actions.Validate = New PdfJavaScriptAction("AFDate_Validate(\"mm/dd/yyyy\")")
+    'Add the field to the form
+    pdfDocument.Form.Fields.Add(nameField)
+    'Save the PDF document
+    pdfDocument.Save(Path.GetFullPath("Output/Output.pdf"))
+End Using
+{% endhighlight %}
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Add-a-date-field-to-a-PDF/.NET).
 
 ### Adding the button field 
 
@@ -1751,7 +1949,7 @@ document.Form.Fields.Add(textField);
 document.Form.SetDefaultAppearance(false);
 
 //Save the document.
-document.Save("Form.pdf");
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
@@ -1786,7 +1984,7 @@ document.Form.Fields.Add(textField);
 document.Form.SetDefaultAppearance(false);
 
 //Save the PDF document.
-document.Save("Form.pdf");
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
@@ -1821,7 +2019,7 @@ document.Form.Fields.Add(textField)
 document.Form.SetDefaultAppearance(False)
 
 'Save the PDF document.
-document.Save("Form.pdf")
+document.Save("Output.pdf")
 'Close the document.
 document.Close(True)
 
@@ -1873,7 +2071,7 @@ document.Form.SetDefaultAppearance(false);
 document.Form.ComplexScript = true;
 
 //Save the document.
-document.Save("Form.pdf");
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
@@ -1908,7 +2106,7 @@ document.Form.SetDefaultAppearance(false);
 document.Form.ComplexScript = true;
 
 //Save the PDF document.
-document.Save("Form.pdf");
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
@@ -1943,7 +2141,7 @@ document.Form.SetDefaultAppearance(False)
 document.Form.ComplexScript = True
 
 'Save the PDF document.
-document.Save("Form.pdf")
+document.Save("Output.pdf")
 'Close the document.
 document.Close(True)
 
@@ -1972,7 +2170,7 @@ lForm.ComplexScript = true;
 lForm.Flatten = true;
 
 //Save the document.
-loadedDocument.Save("flatten.pdf");
+loadedDocument.Save("Output.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
@@ -1994,7 +2192,7 @@ lForm.ComplexScript = true;
 lForm.Flatten = true;
 
 //Save the document.
-loadedDocument.Save("flatten.pdf");
+loadedDocument.Save("Output.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
@@ -2016,7 +2214,7 @@ lForm.ComplexScript = True
 lForm.Flatten = True
 
 'Save the document.
-loadedDocument.Save("flatten.pdf")
+loadedDocument.Save("Output.pdf")
 'Close the document.
 loadedDocument.Close(True)
 
@@ -3067,7 +3265,7 @@ PdfColor backColor = loadedTextBoxField.BackColor;
 loadedTextBoxField.BackColor = new PdfColor(Color.Green);
 
 //Save the document.
-loadedDocument.Save("flatten.pdf");
+loadedDocument.Save("Output.pdf");
 //Close the document.
 loadedDocument.Close(true);         
 
@@ -3096,7 +3294,7 @@ PdfColor backColor = loadedTextBoxField.BackColor;
 loadedTextBoxField.BackColor = new PdfColor(Color.Green);
 
 //Save the document.
-loadedDocument.Save("Form.pdf");
+loadedDocument.Save("Output.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
@@ -3125,7 +3323,7 @@ Dim backColor As PdfColor = loadedTextBoxField.BackColor
 loadedTextBoxField.BackColor = New PdfColor(Color.Green)
 
 'Save the document
-loadedDocument.Save("Form.pdf")
+loadedDocument.Save("Output.pdf")
 'Close the document
 loadedDocument.Close(True)
 
@@ -3201,7 +3399,7 @@ foreach (PdfLoadedRadioButtonItem item in radioButtonField.Items)
 }
 
 //Save and close the PDF document.
-doc.Save("Form.pdf");
+doc.Save("Output.pdf");
 doc.Close(true);
 
 {% endhighlight %}
@@ -3230,7 +3428,7 @@ End If
 Next
 
 'Save and close the PDF document.
-doc.Save("Form.pdf")
+doc.Save("Output.pdf")
 doc.Close(True)
 
 {% endhighlight %}
@@ -3602,7 +3800,7 @@ string fieldValue = string.Empty;
 fieldCollection.TryGetValue("FirstName", out fieldValue);
 
 //Save the document.
-loadedDocument.Save("flatten.pdf");
+loadedDocument.Save("Output.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
@@ -3813,7 +4011,7 @@ loadedForm.Fields.Remove(loadedTextBoxField);
 loadedForm.Fields.RemoveAt(0);
 
 //Save the document.
-loadedDocument.Save("flatten.pdf");
+loadedDocument.Save("Output.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
@@ -3839,7 +4037,7 @@ loadedForm.Fields.Remove(loadedTextBoxField);
 loadedForm.Fields.RemoveAt(0);
 
 //Save the document.
-loadedDocument.Save("Form.pdf");
+loadedDocument.Save("Output.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
@@ -3865,7 +4063,7 @@ loadedForm.Fields.Remove(loadedTextBoxField)
 loadedForm.Fields.RemoveAt(0);
 
 'Save the document
-loadedDocument.Save("Form.pdf")
+loadedDocument.Save("Output.pdf")
 'Close the document
 loadedDocument.Close(True)
 
@@ -3903,7 +4101,7 @@ document.Form.Flatten = true;
 document.Form.Fields.Add(textBoxField);
 
 //Save the document.
-document.Save("Form.pdf");
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
@@ -3929,7 +4127,7 @@ document.Form.Flatten = true;
 document.Form.Fields.Add(textBoxField);
 
 //Save the document.
-document.Save("Form.pdf");
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
@@ -3955,7 +4153,7 @@ document.Form.Flatten = True
 document.Form.Fields.Add(textBoxField)
 
 'Save the PDF document.
-document.Save("Form.pdf")
+document.Save("Output.pdf")
 'Close the document.
 document.Close(True)
 
@@ -3987,7 +4185,7 @@ loadedTextBoxField.Text = "Text";
 loadedForm.Flatten = true;
 
 //Save the document.
-loadedDocument.Save("flatten.pdf");
+loadedDocument.Save("Output.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
@@ -4145,7 +4343,7 @@ textBoxField.Text = "john";
 document.Form.Fields.Add(textBoxField);
 
 //Save the document.
-document.Save("Form.pdf");
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
@@ -4174,7 +4372,7 @@ textBoxField.Text = "john";
 document.Form.Fields.Add(textBoxField);
 
 //Save the document.
-document.Save("Form.pdf");
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
@@ -4203,7 +4401,7 @@ textBoxField.Text = "john"
 document.Form.Fields.Add(textBoxField)
 
 'Save the document.
-document.Save("Form.pdf")
+document.Save("Output.pdf")
 'Close the document.
 document.Close(True)
 
@@ -4231,7 +4429,7 @@ PdfLoadedForm loadedForm = loadedDocument.Form;
 loadedForm.ReadOnly = true;
 
 //Save the document.
-loadedDocument.Save("flatten.pdf");
+loadedDocument.Save("Output.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
@@ -4251,7 +4449,7 @@ PdfLoadedForm loadedForm = loadedDocument.Form;
 loadedForm.ReadOnly = true;
 
 //Save the document.
-loadedDocument.Save("Sample.pdf");
+loadedDocument.Save("Output.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
@@ -4271,7 +4469,7 @@ Dim loadedForm As PdfLoadedForm = loadedDocument.Form
 loadedForm.ReadOnly = True
 
 'Save the document.
-loadedDocument.Save("Sample.pdf")
+loadedDocument.Save("Output.pdf")
 'Close the document.
 loadedDocument.Close(True)
 
@@ -4579,97 +4777,6 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Export_checkbox_values/.NET).
 
-## Add a date field to a PDF form
-
-This section explains how to add a date text box field to a PDF form using the Syncfusion PDF library. The field is initialized with a sample date and uses JavaScript-based formatting to enforce the date format, validate input, and automatically format user entries.
-
-The following code example illustrates how to add a date field to a PDF form.
-
-{% tabs %}  
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Add-a-date-field-to-a-PDF/.NET/Add-a-date-field-to-a-PDF/Program.cs" %}
-
-using System.IO;
-using Syncfusion.Drawing;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Interactive;
-
-// Create a new PDF document
-using (PdfDocument pdfDocument = new PdfDocument())
-{
-    // Add a new page to the PDF document
-    PdfPage pdfPage = pdfDocument.Pages.Add();
-    // Create a text box field for entering the date
-    PdfTextBoxField nameField = new PdfTextBoxField(pdfPage, "DateField");
-    nameField.Bounds = new RectangleF(10, 40, 70, 20);
-    nameField.ToolTip = "Date";
-    nameField.Text = "12/01/1995";
-    //Set the JavaScript actions to format and validate the date.
-    nameField.Actions.KeyPressed = new PdfJavaScriptAction("AFDate_KeystrokeEx(\"mm/dd/yyyy\")");
-    nameField.Actions.Format = new PdfJavaScriptAction("AFDate_FormatEx(\"mm/dd/yyyy\")");
-    nameField.Actions.Validate = new PdfJavaScriptAction("AFDate_Validate(\"mm/dd/yyyy\")");
-    // Add the field to the form
-    pdfDocument.Form.Fields.Add(nameField);
-    // Save the PDF document
-    pdfDocument.Save(Path.GetFullPath(@"Output/Output.pdf"));
-}
-{% endhighlight %}
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using System.Drawing;
-using System.IO;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Interactive;
-
-// Create a new PDF document
-using (PdfDocument pdfDocument = new PdfDocument())
-{
-    // Add a new page to the PDF document
-    PdfPage pdfPage = pdfDocument.Pages.Add();
-    // Create a text box field for entering the date
-    PdfTextBoxField nameField = new PdfTextBoxField(pdfPage, "DateField");
-    nameField.Bounds = new RectangleF(10, 40, 70, 20);
-    nameField.ToolTip = "Date";
-    nameField.Text = "12/01/1995";
-    //Set the JavaScript actions to format and validate the date.
-    nameField.Actions.KeyPressed = new PdfJavaScriptAction("AFDate_KeystrokeEx(\"mm/dd/yyyy\")");
-    nameField.Actions.Format = new PdfJavaScriptAction("AFDate_FormatEx(\"mm/dd/yyyy\")");
-    nameField.Actions.Validate = new PdfJavaScriptAction("AFDate_Validate(\"mm/dd/yyyy\")");
-    // Add the field to the form
-    pdfDocument.Form.Fields.Add(nameField);
-    // Save the PDF document
-    pdfDocument.Save(Path.GetFullPath(@"Output/Output.pdf"));
-}
-{% endhighlight %}
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports System.Drawing
-Imports System.IO
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Interactive
-
-' Create a new PDF document
-Using pdfDocument As New PdfDocument()
-    ' Add a new page to the PDF document
-    Dim pdfPage As PdfPage = pdfDocument.Pages.Add()
-    ' Create a text box field for entering the date
-    Dim nameField As New PdfTextBoxField(pdfPage, "DateField")
-    nameField.Bounds = New RectangleF(10, 40, 70, 20)
-    nameField.ToolTip = "Date"
-    nameField.Text = "12/01/1995"
-    ' Set the JavaScript actions to format and validate the date.
-    nameField.Actions.KeyPressed = New PdfJavaScriptAction("AFDate_KeystrokeEx(\"mm/dd/yyyy\")")
-    nameField.Actions.Format = New PdfJavaScriptAction("AFDate_FormatEx(\"mm/dd/yyyy\")")
-    nameField.Actions.Validate = New PdfJavaScriptAction("AFDate_Validate(\"mm/dd/yyyy\")")
-    ' Add the field to the form
-    pdfDocument.Form.Fields.Add(nameField)
-    ' Save the PDF document
-    pdfDocument.Save(Path.GetFullPath("Output/Output.pdf"))
-End Using
-{% endhighlight %}
-{% endtabs %}
-
-You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Add-a-date-field-to-a-PDF/.NET).
-
 ## Unified radio button selection
 
 Syncfusion<sup>&reg;</sup> PDF allows radio buttons within the same group that have identical export values to be selected or deselected simultaneously.
@@ -4878,7 +4985,7 @@ PdfLoadedTextBoxField loadedTextBoxField = loadedForm.Fields[0] as PdfLoadedText
 loadedTextBoxField.Text ="text";
 
 //Save the document.
-loadedDocument.Save("Form.pdf");
+loadedDocument.Save("Output.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
@@ -4902,7 +5009,7 @@ PdfLoadedTextBoxField loadedTextBoxField = loadedForm.Fields[0] as PdfLoadedText
 loadedTextBoxField.Text = "Text";
 
 //Save the document.
-loadedDocument.Save("Form.pdf");
+loadedDocument.Save("Output.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
@@ -4926,7 +5033,7 @@ Dim loadedTextBoxField As PdfLoadedTextBoxField = TryCast(loadedForm.Fields(0), 
 loadedTextBoxField.Text = "Text"
 
 'Save the document.
-loadedDocument.Save("Form.pdf")
+loadedDocument.Save("Output.pdf")
 'Close the document.
 loadedDocument.Close(True)
 
@@ -5210,10 +5317,10 @@ PdfLoadedTextBoxField loadedField = loadedDocument.Form.Fields[0] as PdfLoadedTe
 //Enable auto resize.
 loadedField.AutoResizeText = true;
 //Flatten the form.
-form.Flatten = true;
+loadedForm.Flatten = true;
 
 //Save the document.
-loadedDocument.Save("flatten.pdf");
+loadedDocument.Save("Output.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
@@ -5238,7 +5345,7 @@ loadedField.AutoResizeText = true;
 form.Flatten = true;
 
 //Save the document.
-doc.Save("Form.pdf");
+doc.Save("Output.pdf");
 //Close the document.
 doc.Close(true);
  
@@ -5262,7 +5369,7 @@ loadedField.AutoResizeText = True
 form.Flatten = True
 
 'Save the document.
-doc.Save("Form.pdf")
+doc.Save("Output.pdf")
 'Close the document.
 doc.Close(True)
 
@@ -5429,7 +5536,7 @@ document.Form.Fields.Add(textBoxField);
 document.Form.SetDefaultAppearance(false);
 
 //Save the document.
-document.Save("Form.pdf");
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
@@ -5455,7 +5562,7 @@ document.Form.Fields.Add(textBoxField);
 document.Form.SetDefaultAppearance(false);
 
 //Save the document.
-document.Save("Form.pdf");
+document.Save("Output.pdf");
 //Close the document.
 document.Close(true);
 
@@ -5481,7 +5588,7 @@ document.Form.Fields.Add(textBoxField)
 document.Form.SetDefaultAppearance(False)
 
 'Save the document.
-document.Save("Form.pdf")
+document.Save("Output.pdf")
 'Close the document.
 document.Close(True)
 
@@ -5513,7 +5620,7 @@ loadedTextBoxField.Text = "First Name";
 loadedDocument.Form.SetDefaultAppearance(false);
 
 //Save the document.
-loadedDocument.Save("flatten.pdf");
+loadedDocument.Save("Output.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
@@ -5537,7 +5644,7 @@ loadedTextBoxField.Text = "First Name";
 loadedDocument.Form.SetDefaultAppearance(false);
 
 //Save the document.
-loadedDocument.Save("Sample.pdf");
+loadedDocument.Save("Output.pdf");
 //Close the document.
 loadedDocument.Close(true);
 
@@ -5561,7 +5668,7 @@ loadedTextBoxField.Text = "First Name"
 loadedDocument.Form.SetDefaultAppearance(False)
 
 'Save the document.
-loadedDocument.Save("Sample.pdf")
+loadedDocument.Save("Output.pdf")
 'Close the document.
 loadedDocument.Close(True)
 
