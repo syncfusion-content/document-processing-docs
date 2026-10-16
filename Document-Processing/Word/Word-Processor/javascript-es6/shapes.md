@@ -34,11 +34,12 @@ The **Text Box** option is available in the **Insert** tab of the ribbon. It all
 
 ### Insert Text Box Using the UI
 
-1. Navigate to the **Insert** tab in the ribbon.
-2. Click **Text Box**.
-3. The **Insert Text Box** dialog opens.
-4. Configure the required text box properties.
-5. Click **Insert** to add the text box to the document.
+You can insert a text box from either the Ribbon or Toolbar:
+
+1. Click **Text Box** from the **Insert** tab in the **Ribbon** or from the **Toolbar**.
+2. The **Insert Text Box** dialog opens.
+3. Configure the required text box properties.
+4. Click **Insert** to add the text box to the document.
 
 After insertion, the text box is added to the document with the configured settings.
 
