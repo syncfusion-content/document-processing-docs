@@ -4,6 +4,7 @@ description: This section illustrates how to convert Word documents to images on
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Word document in AWS Elastic Beanstalk

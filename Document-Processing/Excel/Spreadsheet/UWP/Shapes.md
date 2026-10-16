@@ -5,6 +5,7 @@ description: Import charts, sparklines, pictures, and text boxes into the UWP Sp
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Shapes in UWP Spreadsheet 

@@ -4,6 +4,7 @@ description: Learn how to sort two or more columns in a PivotTable programmatica
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to sort multiple columns in pivot tables in .NET Excel Library

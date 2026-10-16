@@ -6,6 +6,7 @@ platform: document-processing
 control: Get Current Word
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Get Current Word in TypeScript DOCX Editor

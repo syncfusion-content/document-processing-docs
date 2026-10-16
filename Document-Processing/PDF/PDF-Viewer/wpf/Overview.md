@@ -5,6 +5,7 @@ description: Learn about the introduction of the Syncfusion Essential Studio WPF
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # WPF Pdf Viewer Overview

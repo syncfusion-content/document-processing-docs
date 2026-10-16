@@ -4,6 +4,7 @@ description: Open and save Presentation in Google Drive Cloud Storage using .NET
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Open and Save Presentation in Google Drive Cloud Storage

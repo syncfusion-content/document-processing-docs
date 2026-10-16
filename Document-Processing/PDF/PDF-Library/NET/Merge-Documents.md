@@ -4,6 +4,7 @@ description: Learn how to merge or combine multiple PDF documents and import pag
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Merge PDF Documents in .NET PDF Library
 

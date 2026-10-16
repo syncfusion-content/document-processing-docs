@@ -4,6 +4,7 @@ description: Get all worksheet names, visible worksheet names, or hidden workshe
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to get worksheet names in .NET Excel Library

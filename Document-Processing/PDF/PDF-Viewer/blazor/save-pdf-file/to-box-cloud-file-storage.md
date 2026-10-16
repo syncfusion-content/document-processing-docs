@@ -5,6 +5,7 @@ description: Learn how to save PDF files to Box cloud file storage using the Bla
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Save PDF to Box cloud storage in Blazor PDF Viewer 

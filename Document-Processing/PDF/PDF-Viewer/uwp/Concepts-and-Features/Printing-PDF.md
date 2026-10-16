@@ -5,6 +5,7 @@ description: Learn here all about Printing PDF support in Syncfusion<sup>®</sup
 platform: document-processing
 control: PDF viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Printing PDF in UWP PDF Viewer

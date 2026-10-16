@@ -6,6 +6,7 @@ control: Text wrapping style
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Text Wrapping Style in React DOCX Editor

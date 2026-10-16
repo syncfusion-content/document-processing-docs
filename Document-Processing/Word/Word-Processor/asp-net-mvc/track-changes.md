@@ -5,6 +5,7 @@ description: Track changes in ASP.NET MVC DOCX Editor records document modificat
 platform: document-processing
 control: Track Changes
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # Track Changes in ASP.NET MVC DOCX Editor

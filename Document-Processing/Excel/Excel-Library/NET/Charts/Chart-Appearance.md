@@ -4,6 +4,7 @@ description: Chart appearance describes how the Syncfusion .NET Excel Library cu
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Chart Appearance in .NET Excel Library

@@ -5,6 +5,7 @@ description: Configure form field constraints in the JavaScript (ES6) PDF Viewer
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # PDF Form Field Constraints in JavaScript (ES6) PDF Viewer

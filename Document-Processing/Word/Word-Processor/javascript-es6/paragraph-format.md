@@ -6,6 +6,7 @@ platform: document-processing
 control: Paragraph format 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Paragraph Format in TypeScript DOCX Editor

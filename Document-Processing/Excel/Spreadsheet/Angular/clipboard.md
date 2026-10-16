@@ -5,6 +5,7 @@ description: Clipboard in Angular Spreadsheet enables copying, cutting, and past
 platform: document-processing
 control: Clipboard
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Clipboard in Angular Spreadsheet 

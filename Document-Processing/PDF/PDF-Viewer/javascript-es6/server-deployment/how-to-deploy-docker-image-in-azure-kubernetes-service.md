@@ -5,6 +5,7 @@ description: Deploy the Syncfusion PDF Viewer Docker image to Azure Kubernetes S
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Deploy the PDF Viewer Docker Image to Azure Kubernetes Service

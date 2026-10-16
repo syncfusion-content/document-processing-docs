@@ -5,6 +5,7 @@ description: Learn about introduction of Syncfusion Essential Studio ASP.NET MVC
 platform: document-processing
 control: Index
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # About Syncfusion ASP.NET MVC Spreadsheet Control

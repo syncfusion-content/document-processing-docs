@@ -5,6 +5,7 @@ description: Discover how Smart Fill enhances form filling in the Syncfusion Bla
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Smart Fill in Blazor Smart PDF Viewer

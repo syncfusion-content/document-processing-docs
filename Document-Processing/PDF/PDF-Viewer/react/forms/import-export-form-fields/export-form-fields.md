@@ -5,6 +5,7 @@ description: Export PDF form field data from the React PDF Viewer in FDF, XFDF, 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Export Form Data in React PDF Viewer

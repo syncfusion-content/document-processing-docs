@@ -4,6 +4,7 @@ description: Convert XPS documents into searchable, printed PDF files with accur
 platform: document-processing
 control: general
 documentation: UG
+appliesto: Document SDK
 ---
 # Converting XPS to PDF Using Syncfusion Web API 
 

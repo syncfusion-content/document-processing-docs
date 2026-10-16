@@ -5,6 +5,7 @@ description: Learn how the Blazor PDF Viewer handles hyperlinks, including exter
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Hyperlink navigation in Blazor PDF Viewer 

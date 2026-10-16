@@ -5,6 +5,7 @@ description: The styles feature in ASP.NET Core DOCX Editor enables users to app
 platform: document-processing
 control: Styles
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

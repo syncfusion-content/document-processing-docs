@@ -5,6 +5,7 @@ description: Resolve the ERR_OSSL_EVP_UNSUPPORTED error in the React PDF Viewer 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Resolve ERR_OSSL_EVP_UNSUPPORTED Error in React PDF Viewer

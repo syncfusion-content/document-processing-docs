@@ -5,6 +5,7 @@ description: Learn here all about Handwritten signatures support in Syncfusion<s
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Handwritten signatures in Xamarin Pdf Viewer

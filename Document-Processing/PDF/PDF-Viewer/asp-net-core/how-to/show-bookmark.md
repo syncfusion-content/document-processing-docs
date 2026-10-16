@@ -5,6 +5,7 @@ description: Show or hide the bookmark pane in the ASP.NET Core PDF Viewer using
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Show the Bookmark Pane in ASP.NET Core PDF Viewer

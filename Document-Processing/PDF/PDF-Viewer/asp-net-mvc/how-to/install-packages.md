@@ -5,6 +5,7 @@ description: Install the NuGet packages required to use the ASP.NET MVC PDF View
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Install Packages for the PDF Viewer in ASP.NET MVC PDF Viewer

@@ -5,6 +5,7 @@ description: Interaction modes allow users to perform actions such as text selec
 platform: document-processing
 control: PDF Viewer
 documentation: UG
+appliesto: PDF Viewer SDK
 ---
 
 # Interaction Modes in WinForms PDF Viewer

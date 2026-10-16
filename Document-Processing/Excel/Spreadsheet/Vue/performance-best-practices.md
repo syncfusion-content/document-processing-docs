@@ -5,6 +5,7 @@ description: Improve application performance with optimization techniques and be
 platform: document-processing
 control: Performance
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Performance Best Practices in Vue Spreadsheet

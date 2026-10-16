@@ -4,6 +4,7 @@ description: Learn how to add document and form field actions in the .NET PDF Li
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Actions in .NET PDF Library
 

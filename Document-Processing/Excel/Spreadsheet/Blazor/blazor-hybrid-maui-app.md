@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion Spreadsheet component 
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Getting Started with .NET MAUI Blazor Hybrid Spreadsheet

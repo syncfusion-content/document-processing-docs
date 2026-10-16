@@ -5,6 +5,7 @@ description: Learn how to configure the Command Manager to add custom keyboard s
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Command Manager in Blazor PDF Viewer

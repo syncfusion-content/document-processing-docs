@@ -5,6 +5,7 @@ description: History in ASP.NET Core DOCX Editor tracks editing actions to enabl
 platform: document-processing
 control: History
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

@@ -4,6 +4,7 @@ description: Learn how to get started with the Syncfusion Console Smart Data Ext
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG
+appliesto: Document SDK
 --- 
 
 # Getting Started with Console Smart Data Extractor

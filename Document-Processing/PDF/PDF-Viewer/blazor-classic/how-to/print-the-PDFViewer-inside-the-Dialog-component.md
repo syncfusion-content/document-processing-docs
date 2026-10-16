@@ -5,6 +5,7 @@ description: Learn here all about how to print the PDFViewer inside the Dialog i
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Print the PDFViewer inside the Dialog in Blazor

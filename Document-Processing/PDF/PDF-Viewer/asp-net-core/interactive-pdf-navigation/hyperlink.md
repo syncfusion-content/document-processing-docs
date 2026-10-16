@@ -5,6 +5,7 @@ description: Configure hyperlink navigation in the ASP.NET Core PDF Viewer, incl
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Hyperlink Navigation in ASP.NET Core PDF Viewer

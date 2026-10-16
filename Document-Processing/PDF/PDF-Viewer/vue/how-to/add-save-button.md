@@ -6,6 +6,7 @@ control: Toolbar
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Add a Save Button to the Toolbar in Vue PDF Viewer

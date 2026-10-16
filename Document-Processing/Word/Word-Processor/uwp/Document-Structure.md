@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: document-structure
+appliesto: DOCX Editor SDK
 ---
 # Document Structure in UWP DOCX Editor
 

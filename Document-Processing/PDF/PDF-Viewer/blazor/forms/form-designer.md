@@ -6,6 +6,7 @@ platform: document-processing
 control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Form Designer in Blazor PDF Viewer

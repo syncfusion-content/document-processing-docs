@@ -5,6 +5,7 @@ description: Learn how to create, edit, and manage hyperlinks in Excel documents
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Hyperlink in Blazor Spreadsheet

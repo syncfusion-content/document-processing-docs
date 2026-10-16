@@ -5,6 +5,7 @@ description: Notes in Angular Spreadsheet allow users to add contextual informat
 platform: document-processing
 control: Notes
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Notes in Angular Spreadsheet 

@@ -5,6 +5,7 @@ description: Use the Organize Pages panel on mobile devices in the JavaScript (E
 platform: document-processing
 control: PdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Organize Pages in Mobile View in JavaScript (ES5) PDF Viewer

@@ -5,6 +5,7 @@ description: Select multiple annotations across pages in the ASP.NET MVC PDF Vie
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Select Multi-Page Annotations in ASP.NET MVC PDF Viewer

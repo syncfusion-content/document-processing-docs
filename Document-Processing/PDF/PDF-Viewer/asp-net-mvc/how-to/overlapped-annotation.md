@@ -5,6 +5,7 @@ description: Handle overlapping annotations in the ASP.NET MVC PDF Viewer so use
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Handle Overlapped Annotations in ASP.NET MVC PDF Viewer

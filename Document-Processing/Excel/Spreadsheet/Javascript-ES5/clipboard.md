@@ -5,6 +5,7 @@ description: Clipboard in JavaScript Spreadsheet enables copying, cutting, and p
 platform: document-processing
 control: Clipboard
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Clipboard in JavaScript Spreadsheet 

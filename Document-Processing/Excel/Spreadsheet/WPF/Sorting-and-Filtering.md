@@ -5,6 +5,7 @@ description: Sort and filter worksheet data in the WPF Spreadsheet control to qu
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Sorting and Filtering in WPF Spreadsheet

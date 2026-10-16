@@ -5,6 +5,7 @@ description: Learn about the text selection in the ASP.NET MVC PDF Viewer and ho
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Text Selection in ASP.NET MVC PDF Viewer

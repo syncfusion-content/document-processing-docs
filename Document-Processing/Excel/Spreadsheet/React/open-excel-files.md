@@ -5,6 +5,7 @@ description: Learn about opening Excel files in the Syncfusion React Spreadsheet
 platform: document-processing
 control: Open
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Open Excel Files in React Spreadsheet

@@ -4,6 +4,7 @@ description: Describe how to configure fallback fonts during Word-to-PDF convers
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Word document in Console Application

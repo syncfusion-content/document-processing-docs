@@ -4,6 +4,7 @@ description: Create, read and edit PowerPoint files in .NET Core application on 
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 # Create, read and edit a PowerPoint file on Linux
 

@@ -5,6 +5,7 @@ description: Freeze panes in TypeScript Spreadsheet keep selected rows and colum
 platform: document-processing
 control: Freeze pane
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Freeze panes in TypeScript Spreadsheet 

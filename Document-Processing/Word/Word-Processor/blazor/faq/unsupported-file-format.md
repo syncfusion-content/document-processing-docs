@@ -5,6 +5,7 @@ description: Learn about the supported file formats in Blazor DOCX Editor for im
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # Supported File Formats in Blazor DOCX Editor

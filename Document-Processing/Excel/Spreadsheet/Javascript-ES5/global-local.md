@@ -5,6 +5,7 @@ description: Globalization in JavaScript Spreadsheet enables adapting the user i
 platform: document-processing
 control: Global local 
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Globalization in JavaScript Spreadsheet

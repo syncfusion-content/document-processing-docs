@@ -5,6 +5,7 @@ description: The text markup annotation feature in SfPdfViewer enables users to 
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Text Markup Annotations in Flutter PDF Viewer

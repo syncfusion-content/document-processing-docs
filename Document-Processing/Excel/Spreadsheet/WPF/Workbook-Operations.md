@@ -5,6 +5,7 @@ description: Create, open, and save Excel workbooks in the WPF Spreadsheet contr
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 # Workbook Operations in WPF Spreadsheet
 

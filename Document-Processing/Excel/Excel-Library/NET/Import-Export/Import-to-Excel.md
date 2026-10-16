@@ -4,6 +4,7 @@ description: Data import in Excel Library explains how to load data from DataTab
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Importing Data to Worksheets in .NET Excel Library

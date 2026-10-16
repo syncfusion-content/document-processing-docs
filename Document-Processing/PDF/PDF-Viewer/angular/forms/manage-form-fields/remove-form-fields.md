@@ -5,6 +5,7 @@ description: Remove PDF form fields in the Angular PDF Viewer using the built-in
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Remove Form Fields in Angular PDF Viewer

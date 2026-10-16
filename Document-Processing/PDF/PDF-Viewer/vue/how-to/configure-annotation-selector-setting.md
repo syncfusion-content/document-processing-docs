@@ -6,6 +6,7 @@ control: AnnotationSelector Setting
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Configure Annotation Selectors in Vue PDF Viewer

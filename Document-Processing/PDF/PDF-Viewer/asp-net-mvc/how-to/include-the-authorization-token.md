@@ -5,6 +5,7 @@ description: Pass an authorization token to the ASP.NET MVC PDF Viewer to secure
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Use an Authorization Token in ASP.NET MVC PDF Viewer

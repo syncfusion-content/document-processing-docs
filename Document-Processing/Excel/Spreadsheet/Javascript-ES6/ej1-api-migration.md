@@ -5,6 +5,7 @@ description: EJ1 API migration in TypeScript Spreadsheet helps transition existi
 platform: document-processing
 control: Ej1 api migration 
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # EJI API Migration in TypeScript Spreadsheet 

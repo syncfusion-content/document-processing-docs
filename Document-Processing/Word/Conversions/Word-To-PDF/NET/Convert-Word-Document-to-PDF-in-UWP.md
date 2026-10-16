@@ -4,6 +4,7 @@ description: Convert Word document to PDF in UWP using Syncfusion DocIO library 
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert Word document to PDF in UWP 

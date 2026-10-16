@@ -6,6 +6,7 @@ platform: document-processing
 control: Disable drag and drop in DOCX Editor
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Disable Drag and Drop in React DOCX Editor

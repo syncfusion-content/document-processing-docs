@@ -5,6 +5,7 @@ description: Understand why ej2-pdfviewer-lib assets must be copied from node_mo
 control: PDF Viewer
 platform: document-processing
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Why Manual File Copying Is Required in React PDF Viewer

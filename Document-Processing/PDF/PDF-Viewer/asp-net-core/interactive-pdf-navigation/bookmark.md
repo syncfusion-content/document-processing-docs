@@ -5,6 +5,7 @@ description: Navigate PDF bookmarks in the ASP.NET Core PDF Viewer to jump quick
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Bookmark Navigation in ASP.NET Core PDF Viewer

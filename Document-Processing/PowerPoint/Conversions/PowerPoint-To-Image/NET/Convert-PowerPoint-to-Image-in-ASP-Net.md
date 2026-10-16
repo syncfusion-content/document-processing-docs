@@ -4,6 +4,7 @@ description: Convert PowerPoint to image in ASP.NET using .NET PowerPoint librar
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert PowerPoint to Image in ASP.NET

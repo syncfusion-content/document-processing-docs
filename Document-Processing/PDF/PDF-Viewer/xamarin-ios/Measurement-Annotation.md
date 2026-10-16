@@ -5,6 +5,7 @@ description: PDF Viewer Xamarin.iOS allows user to add, move and delete measurem
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 #  Add and modify measurements using PDF Viewer Xamarin.iOS

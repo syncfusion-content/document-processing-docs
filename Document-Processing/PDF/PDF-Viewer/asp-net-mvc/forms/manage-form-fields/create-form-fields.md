@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Create Form Fields in ASP.NET MVC PDF Viewer

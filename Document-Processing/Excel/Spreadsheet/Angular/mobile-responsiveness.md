@@ -5,6 +5,7 @@ description: Mobile responsiveness in Angular Spreadsheet adapts layouts and int
 platform: document-processing
 control: Mobile responsiveness
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Mobile responsiveness in Angular Spreadsheet 

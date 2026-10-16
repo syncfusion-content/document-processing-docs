@@ -6,6 +6,7 @@ platform: document-processing
 control: Table format 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Table format in JavaScript DOCX Editor

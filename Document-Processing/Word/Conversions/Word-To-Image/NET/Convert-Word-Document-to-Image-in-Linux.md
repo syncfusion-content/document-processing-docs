@@ -4,6 +4,7 @@ description: This section explains how to render Word documents as images on Lin
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert Word to Image in Linux

@@ -4,6 +4,7 @@ description: Hide columns by column name in an Excel worksheet programmatically 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to hide columns by name in .NET Excel Library

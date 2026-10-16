@@ -5,6 +5,7 @@ platform: document-processing
 control: PDF
 documentation: UG
 keywords: Assemblies
+appliesto: Document SDK
 ---
 
 # HTML to PDF conversion in WinUI .NET Library

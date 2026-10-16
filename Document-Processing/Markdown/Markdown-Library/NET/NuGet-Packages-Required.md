@@ -4,6 +4,7 @@ description: Learn the required NuGet packages for creating, reading, editing, a
 platform: document-processing
 control: Markdown
 documentation: UG
+appliesto: Document SDK
 ---
 
 # NuGet Packages Required for .NET Markdown Library

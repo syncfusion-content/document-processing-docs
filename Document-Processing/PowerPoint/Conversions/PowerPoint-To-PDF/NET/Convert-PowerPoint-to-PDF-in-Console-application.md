@@ -4,6 +4,7 @@ description: Convert PowerPoint to PDF in Console application using .NET PowerPo
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert PowerPoint to PDF in Console application

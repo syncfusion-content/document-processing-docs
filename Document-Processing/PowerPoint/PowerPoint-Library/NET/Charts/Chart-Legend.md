@@ -4,6 +4,7 @@ description: Learn how to modify the appearance of the legend in a PowerPoint ch
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Chart Legend in PowerPoint

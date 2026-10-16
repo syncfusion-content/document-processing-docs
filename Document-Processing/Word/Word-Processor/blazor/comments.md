@@ -5,6 +5,7 @@ description: The comments feature in Blazor DOCX Editor enables users to add, re
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # Comments in Blazor DOCX Editor

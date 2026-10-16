@@ -6,6 +6,7 @@ platform: document-processing
 control: Open PDF files from Azure Blob Storage
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Open PDF from Azure Blob Storage in Angular PDF Viewer

@@ -6,6 +6,7 @@ control: How to publish documenteditor web api application in azure app service 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Publish Vue DOCX Editor Web API to Azure App

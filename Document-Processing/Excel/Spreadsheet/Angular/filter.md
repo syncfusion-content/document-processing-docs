@@ -5,6 +5,7 @@ description: Filtering in Angular Spreadsheet enables users to display specific 
 platform: document-processing
 control: Filter 
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Filtering in Angular Spreadsheet 

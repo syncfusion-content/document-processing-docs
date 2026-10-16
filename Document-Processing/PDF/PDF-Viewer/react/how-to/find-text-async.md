@@ -5,6 +5,7 @@ description: Search text asynchronously in the React PDF Viewer using the findTe
 control: PDF Viewer
 platform: document-processing
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Use FindTextAsync in React PDF Viewer

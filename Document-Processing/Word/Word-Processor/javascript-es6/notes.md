@@ -6,6 +6,7 @@ platform: document-processing
 control: Notes 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Footnotes and Endnotes in TypeScript DOCX Editor

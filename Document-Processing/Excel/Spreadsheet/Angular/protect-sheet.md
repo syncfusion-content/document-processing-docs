@@ -5,6 +5,7 @@ description: Protect sheet in Angular Spreadsheet restricts editing and controls
 platform: document-processing
 control: Protect sheet 
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Protect sheet in Angular Spreadsheet 

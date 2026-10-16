@@ -5,6 +5,7 @@ description: Load or switch PDF documents dynamically in the JavaScript (ES6) PD
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Load Documents Dynamically in JavaScript (ES6) PDF Viewer

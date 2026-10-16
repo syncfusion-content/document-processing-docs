@@ -5,6 +5,7 @@ description: Learn how to increase the SignalR connection buffer size (MaximumRe
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Increase buffer size in Blazor PDF Viewer
