@@ -116,7 +116,7 @@ The complete code snippet illustrating the plot area customization with borders 
 {% highlight typescript tabtitle="TypeScript" %}
 
 import { WordDocument, Chart } from '@syncfusion/ej2-docx';
-import { readFileSync, writeFileSync } from 'fs';
+import { readFileSync } from 'fs';
 
 // Opens the Word document.
 const fileBytes: Uint8Array = new Uint8Array(readFileSync('Template.docx'));
@@ -144,13 +144,12 @@ chart.plotArea.fill.foreColor = "#D3D3D3";
 chart.plotArea.fill.transparency = 0.5;
 
 // Saves the Word document.
-const documentBytes: Uint8Array = document.saveSync();
-writeFileSync('ChartPlotArea.docx', documentBytes);
+document.save('ChartPlotArea.docx');
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 
-const { readFileSync, writeFileSync } = require('fs');
+const { readFileSync } = require('fs');
 
 // Opens the Word document.
 const fileBytes = new Uint8Array(readFileSync('Template.docx'));
@@ -178,8 +177,7 @@ chart.plotArea.fill.foreColor = "#D3D3D3";
 chart.plotArea.fill.transparency = 0.5;
 
 // Saves the Word document.
-const documentBytes = document.saveSync();
-writeFileSync('ChartPlotArea.docx', documentBytes);
+document.save('ChartPlotArea.docx');
 
 {% endhighlight %}
 {% endtabs %}

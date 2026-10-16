@@ -68,7 +68,7 @@ The following code snippet illustrates how to customize the chart legend appeara
 {% highlight typescript tabtitle="TypeScript" %}
 
 import { WordDocument, Chart, LegendPosition } from '@syncfusion/ej2-docx';
-import { readFileSync, writeFileSync } from 'fs';
+import { readFileSync } from 'fs';
 
 // Opens the Word document.
 const fileBytes: Uint8Array = new Uint8Array(readFileSync('Template.docx'));
@@ -96,13 +96,12 @@ chart.legend.textArea.fontName = 'Times New Roman';
 chart.legend.textArea.size = 10;
 
 // Saves the Word document.
-const documentBytes: Uint8Array = document.saveSync();
-writeFileSync('Legend.docx', documentBytes);
+document.save('Legend.docx');
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 
-const { readFileSync, writeFileSync } = require('fs');
+const { readFileSync } = require('fs');
 
 // Opens the Word document.
 const fileBytes = new Uint8Array(readFileSync('Template.docx'));
@@ -130,8 +129,7 @@ chart.legend.textArea.fontName = 'Times New Roman';
 chart.legend.textArea.size = 10;
 
 // Saves the Word document.
-const documentBytes = document.saveSync();
-writeFileSync('Legend.docx', documentBytes);
+document.save('Legend.docx');
 
 {% endhighlight %}
 {% endtabs %}

@@ -168,8 +168,7 @@ chart.chartData.setValue(3, 2, 60);
 chart.chartData.setValue(4, 2, 70);
 
 // Saves the Word document.
-const documentBytes: Uint8Array = document.saveSync();
-writeFileSync('Output.docx', documentBytes);
+document.save('Output.docx');
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
@@ -193,8 +192,7 @@ chart.chartData.setValue(3, 2, 60);
 chart.chartData.setValue(4, 2, 70);
 
 // Saves the Word document.
-const documentBytes = document.saveSync();
-writeFileSync('Output.docx', documentBytes);
+document.save('Output.docx');
 
 {% endhighlight %}
 {% endtabs %}
@@ -224,8 +222,7 @@ for (let item of paragraph.items) {
 }
 
 // Saves the Word document.
-const documentBytes: Uint8Array = document.saveSync();
-writeFileSync('Result.docx', documentBytes);
+document.save('Result.docx');
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
@@ -247,8 +244,7 @@ for (let item of paragraph.items) {
 }
 
 // Saves the Word document.
-const documentBytes = document.saveSync();
-writeFileSync('Result.docx', documentBytes);
+document.save('Result.docx');
 
 {% endhighlight %}
 {% endtabs %}

@@ -98,7 +98,6 @@ You can remove the chart title by setting an empty string value to the chartTitl
 {% highlight typescript tabtitle="TypeScript" %}
 
 import { WordDocument, ChartType } from '@syncfusion/ej2-docx';
-import { writeFileSync } from 'fs';
 
 // Creates an empty Word document.
 let document = WordDocument.create();
@@ -124,13 +123,10 @@ pieSeries.categoryLabels = chart.chartData.getRange(2, 1, 3, 1);
 pieSeries.values = chart.chartData.getRange(2, 2, 3, 2);
 
 // Saves the Word document.
-const documentBytes: Uint8Array = document.saveSync();
-writeFileSync('Result.docx', documentBytes);
+document.save('Result.docx');
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
-
-const { writeFileSync } = require('fs');
 
 // Creates an empty Word document.
 let document = ej.docx.WordDocument.create();
@@ -156,8 +152,7 @@ pieSeries.categoryLabels = chart.chartData.getRange(2, 1, 3, 1);
 pieSeries.values = chart.chartData.getRange(2, 2, 3, 2);
 
 // Saves the Word document.
-const documentBytes = document.saveSync();
-writeFileSync('Result.docx', documentBytes);
+document.save('Result.docx');
 
 {% endhighlight %}
 {% endtabs %}
