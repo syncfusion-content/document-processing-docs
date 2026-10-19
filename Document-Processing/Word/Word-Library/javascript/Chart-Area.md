@@ -30,7 +30,6 @@ let chart = paragraph.items[0] as Chart;
 
 // Sets the chart-area border.
 chart.chartArea.line.color = "#0000FF";
-chart.chartArea.line.weightPt = 2;
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
@@ -46,7 +45,6 @@ let chart = paragraph.items[0];
 
 // Sets the chart-area border.
 chart.chartArea.line.color = "#0000FF";
-chart.chartArea.line.weightPt = 2;
 
 {% endhighlight %}
 {% endtabs %}
@@ -122,7 +120,6 @@ chart.width = 500;
 
 // Sets the chart-area border.
 chart.chartArea.line.color = "#0000FF";
-chart.chartArea.line.weightPt = 1.5;
 
 // Applies a fill to the chart area.
 chart.chartArea.fill.type = 'solid';
@@ -152,7 +149,6 @@ chart.width = 500;
 
 // Sets the chart-area border.
 chart.chartArea.line.color = "#0000FF";
-chart.chartArea.line.weightPt = 1.5;
 
 // Applies a fill to the chart area.
 chart.chartArea.fill.type = 'solid';
