@@ -11,6 +11,10 @@ documentation: ug
 
 The Radio Button form control allows selecting a single option from a group of mutually exclusive choices within a worksheet.
 
+## Code Snippet
+
+<iframe src="https://github.com/SyncfusionExamples/document-processing-docs/blob/development/Document-Processing/code-snippet/spreadsheet/react/form-controls-radio-button-cs1" style="height:600px;" width="100%"></iframe>
+
 ## Inserting Radio Button
 
 To insert a Radio Button form control:
