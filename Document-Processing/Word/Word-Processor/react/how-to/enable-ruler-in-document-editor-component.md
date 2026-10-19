@@ -5,6 +5,7 @@ description: "Learn how to enable ruler in React Document Editor component."
 control: Enable Ruler 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: Learn here all about Change document view in Syncfusion React Docum
 control: Change document view 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

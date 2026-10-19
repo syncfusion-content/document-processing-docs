@@ -5,6 +5,7 @@ description: Learn here all about Get current word in Syncfusion React Document 
 control: Get current word 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

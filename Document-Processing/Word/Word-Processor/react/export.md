@@ -5,6 +5,7 @@ description: Learn here all about export in Syncfusion Essential React Document 
 control: Export 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

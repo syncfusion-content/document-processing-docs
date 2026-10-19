@@ -5,6 +5,7 @@ description: Learn here all about Unsupported file in Syncfusion React Document 
 control: Unsupported file 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

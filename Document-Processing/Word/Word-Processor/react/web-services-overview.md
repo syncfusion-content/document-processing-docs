@@ -5,6 +5,7 @@ description: Learn here all about Web services in Syncfusion React Document edit
 control: Web services 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

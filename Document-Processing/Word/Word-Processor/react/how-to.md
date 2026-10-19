@@ -5,6 +5,7 @@ description: Learn here all about How to in Syncfusion React Document editor com
 control: How to 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

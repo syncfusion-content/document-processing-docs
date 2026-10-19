@@ -5,6 +5,7 @@ description: Learn how to enable collaborative editing in Syncfusion React Docum
 control: Collaborative Editing Java
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

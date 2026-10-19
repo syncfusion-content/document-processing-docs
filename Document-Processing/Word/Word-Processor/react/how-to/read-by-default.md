@@ -5,6 +5,7 @@ description: Learn here all about Read by default in Syncfusion React Document e
 control: Read by default 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

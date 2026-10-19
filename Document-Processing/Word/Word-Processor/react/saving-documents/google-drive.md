@@ -5,6 +5,7 @@ description:  Learn about how to Save document to Google Drive in React Document
 platform: document-processing
 control: Save document to Google Drive
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

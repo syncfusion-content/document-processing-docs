@@ -5,6 +5,7 @@ description: Learn here all about Keyboard shortcut in Syncfusion React Document
 control: Keyboard shortcut 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

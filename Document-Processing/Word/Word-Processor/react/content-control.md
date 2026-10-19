@@ -5,6 +5,7 @@ description: Learn here all about Content Control in Syncfusion React Document e
 control: Content Control 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

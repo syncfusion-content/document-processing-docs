@@ -5,6 +5,7 @@ description: Learn here all about Open document by address in Syncfusion React D
 control: Open document by address 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

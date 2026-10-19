@@ -5,6 +5,7 @@ description: Learn here all about Chart in Syncfusion React Document editor comp
 control: Chart 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

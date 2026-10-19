@@ -5,6 +5,7 @@ description: Learn here all about Document management in Syncfusion React Docume
 control: Document management 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 
