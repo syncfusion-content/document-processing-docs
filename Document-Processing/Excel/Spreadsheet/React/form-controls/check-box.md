@@ -66,10 +66,6 @@ When a cell link is configured, the linked cell reflects the state of the Check 
 
 The linked cell value is automatically synchronized whenever the Check Box state changes.
 
-## Check Box Group Behavior
-
-When multiple Check Box controls are present within the worksheet, only one Check Box can be selected at a time through user interaction.
-
 ## Common Check Box Operations
 
 ### Moving and Resizing
