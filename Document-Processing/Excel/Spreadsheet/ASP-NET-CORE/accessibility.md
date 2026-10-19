@@ -5,6 +5,7 @@ description: "Documentation for the accessibility in the Essential JS2 Spreadshe
 platform: document-processing
 control: Accessibility
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Accessibility in EJ2 ASP.NET CORE Spreadsheet Control
