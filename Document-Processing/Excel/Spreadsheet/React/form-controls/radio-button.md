@@ -107,7 +107,7 @@ Radio Button controls support Right-to-Left (RTL) layouts. When RTL mode is enab
 
 * [Form Controls Overview](./overview)
 * [Check Box](./check-box)
-* [Combo Box](./combo-box)
+* [Combo Box (Dropdown)](./combo-box)
 * [Data Validation](../data-validation)
 * [Cell Formatting](../formatting/text-cell-formatting)
 * [Events](../events)

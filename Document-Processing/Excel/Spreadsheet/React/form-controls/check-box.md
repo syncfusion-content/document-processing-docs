@@ -105,7 +105,7 @@ Check Box controls support Right-to-Left (RTL) layouts. When RTL mode is enabled
 
 * [Form Controls Overview](./overview)
 * [Radio Button](./radio-button)
-* [Combo Box](./combo-box)
+* [Combo Box (Dropdown)](./combo-box)
 * [Data Validation](../data-validation)
 * [Cell Formatting](../formatting/text-cell-formatting)
 * [Events](../events)
