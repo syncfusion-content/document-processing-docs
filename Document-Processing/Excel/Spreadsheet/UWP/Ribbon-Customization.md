@@ -5,6 +5,7 @@ description: Personalize the  UWP Spreadsheet control by customizing ribbon tabs
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Ribbon Customization in UWP Spreadsheet 

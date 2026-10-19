@@ -5,6 +5,7 @@ description: Use clipboard operations in the Syncfusion Vue Spreadsheet to cut, 
 control: Clipboard 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Clipboard in Vue Spreadsheet

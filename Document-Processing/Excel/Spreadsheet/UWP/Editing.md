@@ -5,6 +5,7 @@ description: Edit worksheet data in the UWP Spreadsheet control with interactive
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Editing in UWP Spreadsheet

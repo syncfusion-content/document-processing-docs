@@ -4,6 +4,7 @@ description: Learn about the introduction of the Syncfusion Essential Studio Spr
 platform: document-processing
 control: general
 documentation: UG
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 keywords: Excel, SDK, view, edit, read, Spreadsheet
 ---
 

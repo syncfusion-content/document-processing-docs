@@ -5,6 +5,7 @@ description: Identify the context menu opened in Vue Spreadsheet to perform cust
 control: Spreadsheet
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # How to Identify Context Menu Opened in Vue Spreadsheet

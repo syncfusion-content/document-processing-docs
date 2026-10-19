@@ -5,6 +5,7 @@ description: Create new Excel workbooks, open existing files from different sour
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Workbook Operations in Windows Forms Spreadsheet
