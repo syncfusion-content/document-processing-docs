@@ -104,11 +104,9 @@ The complete code snippet illustrating the plot area customization with borders 
 {% highlight typescript tabtitle="TypeScript" %}
 
 import { WordDocument, Chart } from '@syncfusion/ej2-docx';
-import { readFileSync } from 'fs';
 
 // Opens the Word document.
-const fileBytes: Uint8Array = new Uint8Array(readFileSync('Template.docx'));
-let document = WordDocument.open(fileBytes);
+let document = WordDocument.open(data);
 
 // Gets the last paragraph in the document.
 let paragraph = document.lastParagraph;
@@ -136,11 +134,8 @@ document.save('ChartPlotArea.docx');
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 
-const { readFileSync } = require('fs');
-
 // Opens the Word document.
-const fileBytes = new Uint8Array(readFileSync('Template.docx'));
-let document = ej.docx.WordDocument.open(fileBytes);
+let document = ej.docx.WordDocument.open(data);
 
 // Gets the last paragraph in the document.
 let paragraph = document.lastParagraph;
