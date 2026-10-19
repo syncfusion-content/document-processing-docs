@@ -5,6 +5,7 @@ description: Learn here all about optimize the SFDT file in Syncfusion Angular D
 control: Optimize the SFDT file
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

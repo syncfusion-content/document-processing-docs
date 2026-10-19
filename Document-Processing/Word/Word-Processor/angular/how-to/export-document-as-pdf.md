@@ -5,6 +5,7 @@ description: Learn here all about Export document as pdf in Syncfusion Angular D
 platform: document-processing
 control: Export document as pdf 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

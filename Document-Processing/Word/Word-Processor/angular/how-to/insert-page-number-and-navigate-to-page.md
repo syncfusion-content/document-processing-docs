@@ -5,6 +5,7 @@ description: Learn here all about Insert page number and navigate to page in Syn
 platform: document-processing
 control: Insert page number and navigate to page 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

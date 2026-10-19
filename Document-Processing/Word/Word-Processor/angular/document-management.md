@@ -5,6 +5,7 @@ description: Learn here all about Document management in Syncfusion Angular Docu
 platform: document-processing
 control: Document management 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

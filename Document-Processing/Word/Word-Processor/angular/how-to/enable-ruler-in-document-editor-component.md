@@ -5,6 +5,7 @@ description: "Learn how to enable ruler in Angular Document Editor component."
 platform: document-processing
 control: Enable ruler
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

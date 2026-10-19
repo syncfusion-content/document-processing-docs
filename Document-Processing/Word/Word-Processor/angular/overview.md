@@ -5,6 +5,7 @@ description: Learn here all about Index in Syncfusion Angular Document editor co
 platform: document-processing
 control: Index 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

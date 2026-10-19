@@ -5,6 +5,7 @@ description: Learn here all about Core in Syncfusion Angular Document editor com
 platform: document-processing
 control: Core 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

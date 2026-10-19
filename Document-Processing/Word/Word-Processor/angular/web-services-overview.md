@@ -5,6 +5,7 @@ description: Learn here all about Web services in Syncfusion Angular Document ed
 platform: document-processing
 control: Web services 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

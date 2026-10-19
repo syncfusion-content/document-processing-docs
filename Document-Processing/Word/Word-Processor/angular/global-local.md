@@ -5,6 +5,7 @@ description: Learn here all about Global local in Syncfusion Angular Document ed
 platform: document-processing
 control: Global local 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

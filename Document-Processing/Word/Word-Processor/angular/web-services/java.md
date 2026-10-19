@@ -5,6 +5,7 @@ description: Learn here all about Java in Syncfusion Angular Document editor com
 platform: document-processing
 control: Java 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

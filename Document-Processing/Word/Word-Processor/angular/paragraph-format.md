@@ -5,6 +5,7 @@ description: Learn here all about Paragraph format in Syncfusion Angular Documen
 platform: document-processing
 control: Paragraph format 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

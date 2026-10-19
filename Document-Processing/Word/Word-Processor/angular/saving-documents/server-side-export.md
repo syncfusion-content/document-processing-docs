@@ -5,6 +5,7 @@ description: Learn here all about Server side export in Syncfusion Angular Docum
 platform: document-processing
 control: Server side export 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 
