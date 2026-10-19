@@ -5,6 +5,7 @@ description: Learn here all about history in Syncfusion Document Editor componen
 platform: document-processing
 control: History
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

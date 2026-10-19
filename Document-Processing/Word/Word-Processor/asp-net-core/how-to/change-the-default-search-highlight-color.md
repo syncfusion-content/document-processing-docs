@@ -5,6 +5,7 @@ description: Learn how to change the default search highlight color in ASP.NET C
 platform: document-processing
 control: Change The Default Search Highlight Color
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to change the default search highlight color in Document Editor

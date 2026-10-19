@@ -5,6 +5,7 @@ description: Check out and learn about getting started with Document Editor cont
 platform: document-processing
 control: Getting Started Core
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

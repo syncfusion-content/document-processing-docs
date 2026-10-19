@@ -5,6 +5,7 @@ description: Learn here all about how to customize Tool Bar in Syncfusion Docume
 platform: document-processing
 control: Customize Tool Bar
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

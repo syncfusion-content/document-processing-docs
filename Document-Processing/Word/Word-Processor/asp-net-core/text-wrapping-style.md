@@ -5,6 +5,7 @@ description: Learn here all about text wrapping style in Syncfusion Document Edi
 platform: document-processing
 control: Text Wrapping Style
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

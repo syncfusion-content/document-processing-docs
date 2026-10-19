@@ -5,6 +5,7 @@ description: Learn here all about image in Syncfusion Document Editor component 
 platform: document-processing
 control: Image
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

@@ -5,6 +5,7 @@ description: Learn here all about how to change document view in Syncfusion Docu
 platform: document-processing
 control: Change Document View
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

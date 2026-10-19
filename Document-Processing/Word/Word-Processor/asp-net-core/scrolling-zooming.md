@@ -5,6 +5,7 @@ description: Learn here all about scrolling zooming in Syncfusion Document Edito
 platform: document-processing
 control: Scrolling Zooming
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

@@ -5,6 +5,7 @@ description: Learn how to insert text, paragraph and rich-text content in Docume
 platform: document-processing
 control: Insert Text, Paragraph And Rich-Text Content
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to insert text, paragraph and rich-text content in Document Editor component

@@ -5,6 +5,7 @@ description: Learn here all about Content Control in Syncfusion Document Editor 
 platform: document-processing
 control: Content Control
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

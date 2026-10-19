@@ -5,6 +5,7 @@ description: Learn here all about Feature Module in Syncfusion Document Editor c
 platform: document-processing
 control: Feature Module
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

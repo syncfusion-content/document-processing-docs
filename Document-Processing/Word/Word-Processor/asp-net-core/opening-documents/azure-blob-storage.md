@@ -5,6 +5,7 @@ description:  Learn about how to Open document from Azure Blob Storage in ASP.NE
 platform: document-processing
 control: Open document from Azure Blob Storage
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

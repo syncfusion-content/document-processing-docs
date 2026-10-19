@@ -5,6 +5,7 @@ description:  Learn about how to Save document to Dropbox cloud file storage in 
 platform: document-processing
 control: Save document to Dropbox cloud file storage
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: Learn here all about List Format in Syncfusion Document Editor comp
 platform: document-processing
 control: List Format
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

@@ -5,6 +5,7 @@ description: Learn here all about how to customize context menu in Syncfusion Do
 platform: document-processing
 control: Customize Context Menu
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

@@ -5,6 +5,7 @@ description: Learn about how to Open document from Google Drive in ASP.NET Core 
 platform: document-processing
 control: Open document from Google Drive
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

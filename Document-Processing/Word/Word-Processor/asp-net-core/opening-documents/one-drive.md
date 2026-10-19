@@ -5,6 +5,7 @@ description: Learn about how to Open document from One Drive in ASP.NET Core Doc
 platform: document-processing
 control: Open document from One Drive
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

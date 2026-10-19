@@ -5,6 +5,7 @@ description: Learn here all about Restrict Editing in Syncfusion Document Editor
 platform: document-processing
 control: Restrict Editing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

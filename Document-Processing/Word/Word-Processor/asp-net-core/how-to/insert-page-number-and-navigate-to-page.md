@@ -5,6 +5,7 @@ description: Learn how to Insert Page number and Navigate to specific page from 
 platform: document-processing
 control: Insert Page number And Navigate To Specific Page
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to insert page number and navigate to specific page in Document Editor component

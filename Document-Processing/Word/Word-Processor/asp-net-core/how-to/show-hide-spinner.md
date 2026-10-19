@@ -5,6 +5,7 @@ description: Learn here all about how to show hide spinner in Syncfusion Documen
 platform: document-processing
 control: Show Hide Spinner
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

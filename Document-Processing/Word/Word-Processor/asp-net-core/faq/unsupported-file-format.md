@@ -5,6 +5,7 @@ description: Learn here all about Unsupported file in Syncfusion Document Editor
 platform: document-processing
 control: Unsupported file
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Why does my ASP.NET Core show unsupported message for document?

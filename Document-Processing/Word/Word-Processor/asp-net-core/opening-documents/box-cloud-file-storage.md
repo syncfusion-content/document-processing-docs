@@ -5,6 +5,7 @@ description: Learn here to open a document from Box cloud file storage in Syncfu
 platform: document-processing
 control: Opening from Box cloud file storage
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---  
 
