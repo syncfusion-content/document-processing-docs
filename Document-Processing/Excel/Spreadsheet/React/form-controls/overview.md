@@ -17,7 +17,7 @@ The Spreadsheet supports the following form controls:
 
 - **[Check Box](./check-box)**: Allows toggling between checked and unchecked states.
 - **[Radio Button](./radio-button)**: Allows selecting a single option from a group of choices.
-- **[Drop Down](./drop-down)**: Allows selecting from a predefined list of values.
+- **[Combo Box](./combo-box)**: Allows selecting from a predefined list of values.
 
 ## Inserting Form Controls
 
@@ -25,7 +25,7 @@ Form controls can be inserted through the ribbon menu:
 
 **Ribbon → Insert → Form Controls**
 
-Select the required control type (Check Box, Radio Button, or Drop Down) and click on the desired cell location to place the control.
+Select the required control type (Check Box, Radio Button, or Combo Box) and click on the desired cell location to place the control.
 
 ## General Form Control Operations
 
@@ -46,7 +46,7 @@ Form controls are worksheet-specific. A form control created in one worksheet ex
 - Worksheet-based form controls
 - Check Box with mixed state
 - Radio Button selection
-- Drop Down with input ranges
+- Combo Box with input ranges
 - Cell Link integration
 - Excel import and export support
 - RTL support
@@ -57,7 +57,7 @@ Form controls are worksheet-specific. A form control created in one worksheet ex
 
 * [Check Box](./check-box)
 * [Radio Button](./radio-button)
-* [Drop Down](./drop-down)
+* [Combo Box](./combo-box)
 * [Data Validation](../data-validation)
 * [Formatting Overview](../formatting-overview)
 * [Events](../events)
