@@ -13,6 +13,12 @@ Redacting a PDF is the process of permanently removing sensitive or confidential
 
 N> For redaction features, you need to install the `@syncfusion/ej2-pdf-data-extract` package as an add-on.
 
+## Video Tutorial
+
+Watch the following video to learn how to redact content in a PDF document using the JavaScript PDF Library.
+
+{% youtube "https://www.youtube.com/watch?v=pTfR0sKiHjs" %}
+
 ## Remove sensitive content from the PDF document
 
 The [`PdfRedactor`](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfredactor) and [`PdfRedactionRegion`](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfredactionregion) classes let you mark specific areas on a page and then apply irreversible redaction to the document.
