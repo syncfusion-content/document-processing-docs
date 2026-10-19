@@ -36,9 +36,9 @@ The JS 2 global scripts are hosted on the Syncfusion CDN in the following format
 > Script: `https://cdn.syncfusion.com/ej2/{Version}/dist/{PACKAGE_NAME}.min.js`
 
 **Example:**
-> Script: [`https://cdn.syncfusion.com/ej2/31.2.15/dist/ej2.min.js`](https://cdn.syncfusion.com/ej2/31.2.15/dist/ej2.min.js)
+> Script: [`https://cdn.syncfusion.com/ej2/33.1.44/dist/ej2.min.js`](https://cdn.syncfusion.com/ej2/33.1.44/dist/ej2.min.js)
 
-N> The example uses the all-in-one `ej2.min.js` bundle, which exposes the `ej.docx` namespace along with other Essential JS 2 controls. Replace `31.2.15` with the latest available version when starting a new project.
+N> The example uses the all-in-one `ej2.min.js` bundle, which exposes the `ej.docx` namespace along with other Essential JS 2 controls. Replace `33.1.44` with the latest available version when starting a new project.
 
 ## Create the HTML Page
 
@@ -54,7 +54,7 @@ Step 2: Create `index.html` inside `my-app`. The CDN reference is loaded in the 
     <meta charset="UTF-8">
     <title>Create Word document</title>
     <!-- JavaScript Word Library (CDN) -->
-    <script src="https://cdn.syncfusion.com/ej2/31.2.15/dist/ej2.min.js"></script>
+    <script src="https://cdn.syncfusion.com/ej2/33.1.44/dist/ej2.min.js"></script>
 </head>
 <body>
     <div>
