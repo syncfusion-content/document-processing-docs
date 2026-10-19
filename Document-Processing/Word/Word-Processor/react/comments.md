@@ -226,7 +226,8 @@ createRoot(document.getElementById('sample')).render(<App />);
 
 When `highlightCommentsByAuthor` is enabled, each comment marker is displayed in the author's avatar color. Selecting a comment highlights the corresponding text and comment pane border in that color. If multiple comments appear on the same line, the marker retains the first author's avatar color.
 
-The following example illustrates how to enable comment highlights in the DOCX Editor
+The following example illustrates how to enable comment highlights in the DOCX Editor using the [`highlightCommentsByAuthor`](https://ej2.syncfusion.com/react/documentation/api/document-editor/commentsettings#highlightcommentsbyauthor) property in the [CommentSettings]([https://ej2.syncfusion.com/angular/documentation/api/document-editor/commentsettings](https://ej2.syncfusion.com/react/documentation/api/document-editor/commentsettings) API Reference.
+
 ```typescript
 let settings =  { commentSettings: { highlightCommentsByAuthor : true } };
   return (
