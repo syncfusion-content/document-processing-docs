@@ -33,7 +33,7 @@ npm --version
 
 ## Create a React Project
 
-This guide uses https://vitejs.dev/ to scaffold the React project. Run the following command in a terminal:
+This guide uses [Vite](https://vitejs.dev/) to scaffold the React project. Run the following command in a terminal:
 
 ```bash
 npm create vite@latest my-docx-app -- --template react
