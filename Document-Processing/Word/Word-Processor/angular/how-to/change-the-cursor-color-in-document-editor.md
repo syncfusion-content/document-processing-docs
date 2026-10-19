@@ -5,6 +5,7 @@ description: Learn here all about Change the cursor color in document editor in 
 platform: document-processing
 control: Change the cursor color in document editor 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

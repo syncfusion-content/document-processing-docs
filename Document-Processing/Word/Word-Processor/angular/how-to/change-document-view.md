@@ -5,6 +5,7 @@ description: Learn here all about Change document view in Syncfusion Angular Doc
 platform: document-processing
 control: Change document view 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: Learn here all about Text format in Syncfusion Angular Document edi
 platform: document-processing
 control: Text format 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

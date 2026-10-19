@@ -5,6 +5,7 @@ description: Learn here all about Track changes in Syncfusion Angular Document e
 platform: document-processing
 control: Track changes 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

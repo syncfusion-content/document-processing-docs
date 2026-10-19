@@ -5,6 +5,7 @@ description: Learn here all about Resize document editor in Syncfusion Angular D
 platform: document-processing
 control: Resize document editor 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

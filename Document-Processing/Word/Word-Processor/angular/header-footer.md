@@ -5,6 +5,7 @@ description: Learn here all about Header footer in Syncfusion Angular Document e
 platform: document-processing
 control: Header footer 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

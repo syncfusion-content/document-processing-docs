@@ -5,6 +5,7 @@ description: Learn here all about Disable optimized text measuring in Syncfusion
 platform: document-processing
 control: Disable optimized text measuring 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

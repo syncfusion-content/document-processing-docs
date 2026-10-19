@@ -5,6 +5,7 @@ description: Learn here all about Mvc in Syncfusion Angular Document editor comp
 platform: document-processing
 control: Mvc 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

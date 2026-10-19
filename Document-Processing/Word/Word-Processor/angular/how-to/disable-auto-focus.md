@@ -5,6 +5,7 @@ description: Learn here all about How to disable and enable auto focus in Syncfu
 platform: document-processing
 control: How to disable auto focus in document editor 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

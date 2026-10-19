@@ -5,6 +5,7 @@ description: Learn here all about Restrict editing in Syncfusion Angular Documen
 platform: document-processing
 control: Restrict editing 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

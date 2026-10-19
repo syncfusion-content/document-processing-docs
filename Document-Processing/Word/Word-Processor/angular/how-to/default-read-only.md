@@ -5,6 +5,7 @@ description: Learn here all about Default read only in Syncfusion Angular Docume
 platform: document-processing
 control: Default read only 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

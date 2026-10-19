@@ -5,6 +5,7 @@ description: Learn here to add save button in Syncfusion Angular Document editor
 platform: document-processing
 control: Add save button tool bar 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 
