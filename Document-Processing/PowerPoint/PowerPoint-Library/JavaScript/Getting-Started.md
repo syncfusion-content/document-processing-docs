@@ -75,7 +75,6 @@ export default function App() {
 		const slide = pptxDoc.slides.add();
 		// Adds a textbox for the title.
 		const titleShape = slide.shapes.addTextBox({
-			name: 'Title',
 			bounds: {
 						x: 55,
 						y: 25,

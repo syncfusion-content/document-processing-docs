@@ -15,6 +15,12 @@ The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-
 
 This guide explains how to integrate the [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) into a React application that runs in the browser. The generated PDF is downloaded directly from the browser; no server-side PDF rendering is required.
 
+## Video Tutorial
+
+Watch the following video to learn how to create a PDF file in an React application using the JavaScript PDF Library.
+
+{% youtube "https://www.youtube.com/watch?v=awC2NcRWZ60" %}
+
 ## Prerequisites
 
 Before you begin, make sure you have the following installed:
