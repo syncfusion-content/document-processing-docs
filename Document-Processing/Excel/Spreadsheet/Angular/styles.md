@@ -5,6 +5,7 @@ description: Learn here all about Styles in Syncfusion Angular Spreadsheet compo
 platform: document-processing
 control: Styles 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Styles in Angular Spreadsheet component

@@ -5,6 +5,7 @@ description: Learn here all about print feature in Syncfusion Angular Spreadshee
 platform: document-processing
 control: Print 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Print in Angular Spreadsheet component

@@ -5,6 +5,7 @@ description: Learn here all about Illustrations in Syncfusion Angular Spreadshee
 platform: document-processing
 control: Illustrations 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Illustrations in Angular Spreadsheet component

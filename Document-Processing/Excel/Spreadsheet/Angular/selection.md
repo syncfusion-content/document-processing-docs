@@ -5,6 +5,7 @@ description: Learn here all about Selection in Syncfusion Angular Spreadsheet co
 platform: document-processing
 control: Selection 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Selection in Angular Spreadsheet component

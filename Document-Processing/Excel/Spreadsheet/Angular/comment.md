@@ -5,6 +5,7 @@ description: Learn here all about Comment feature in Syncfusion Angular Spreadsh
 platform: document-processing
 control: Comment 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Comment in Angular Spreadsheet component

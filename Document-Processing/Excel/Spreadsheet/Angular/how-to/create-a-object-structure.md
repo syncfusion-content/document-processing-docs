@@ -5,6 +5,7 @@ description: Learn here all about Create a object structure in Syncfusion Angula
 platform: document-processing
 control: Create a object structure 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Create an object structure in Angular Spreadsheet Component

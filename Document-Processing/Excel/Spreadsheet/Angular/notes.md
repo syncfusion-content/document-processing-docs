@@ -5,6 +5,7 @@ description: Learn here all about the notes feature in Syncfusion Angular Spread
 platform: document-processing
 control: Notes 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Notes in Angular Spreadsheet component

@@ -5,6 +5,7 @@ description: Learn here all about Freeze pane in Syncfusion Angular Spreadsheet 
 platform: document-processing
 control: Freeze pane 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Freeze pane in Angular Spreadsheet component

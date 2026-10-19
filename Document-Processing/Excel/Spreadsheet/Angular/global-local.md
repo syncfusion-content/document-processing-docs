@@ -5,6 +5,7 @@ description: Learn here all about Global local in Syncfusion Angular Spreadsheet
 platform: document-processing
 control: Global local 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Global local in Angular Spreadsheet component

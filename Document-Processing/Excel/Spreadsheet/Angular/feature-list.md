@@ -5,6 +5,7 @@ description: Learn here all about Feature list in Syncfusion Angular Spreadsheet
 platform: document-processing
 control: Feature list 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Feature list in Angular Spreadsheet component

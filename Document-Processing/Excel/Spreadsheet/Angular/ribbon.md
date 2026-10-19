@@ -5,6 +5,7 @@ description: Learn here all about Ribbon in Syncfusion Angular Spreadsheet compo
 platform: document-processing
 control: Ribbon 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Ribbon in Angular Spreadsheet component

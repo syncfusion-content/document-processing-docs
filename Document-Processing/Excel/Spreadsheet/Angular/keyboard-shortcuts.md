@@ -5,6 +5,7 @@ description: Learn here all about Keyboard shortcuts in Syncfusion Angular Sprea
 platform: document-processing
 control: Keyboard shortcuts 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Keyboard shortcuts in Angular Spreadsheet component

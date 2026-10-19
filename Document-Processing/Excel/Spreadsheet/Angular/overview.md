@@ -5,6 +5,7 @@ description: Learn here all about overview of the Syncfusion Angular Spreadsheet
 platform: document-processing
 control: Index 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Overview of the Angular Spreadsheet component

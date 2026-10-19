@@ -5,6 +5,7 @@ description: Learn here all about cell range in Syncfusion Essential Angular Spr
 platform: document-processing
 control: Cell range 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Cell Range in Angular Spreadsheet Component

@@ -5,6 +5,7 @@ description: Learn here all about Filter in Syncfusion Angular Spreadsheet compo
 platform: document-processing
 control: Filter 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Filter in Angular Spreadsheet component

@@ -5,6 +5,7 @@ description: Learn here all about Sort in Syncfusion Angular Spreadsheet compone
 platform: document-processing
 control: Sort 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Sort in Angular Spreadsheet component

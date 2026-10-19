@@ -5,6 +5,7 @@ description: Learn here all about performance best practices in the Syncfusion A
 platform: document-processing
 control: Performance 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Performance Best Practices in Angular Spreadsheet Component

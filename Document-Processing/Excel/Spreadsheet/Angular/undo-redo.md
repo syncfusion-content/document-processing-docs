@@ -5,6 +5,7 @@ description: Learn here all about Undo redo in Syncfusion Angular Spreadsheet co
 platform: document-processing
 control: Undo redo 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Undo redo in Angular Spreadsheet component

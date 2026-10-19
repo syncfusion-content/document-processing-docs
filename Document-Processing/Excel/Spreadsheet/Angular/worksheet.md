@@ -5,6 +5,7 @@ description: Learn here all about Worksheet in Syncfusion Angular Spreadsheet co
 platform: document-processing
 control: Worksheet 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Worksheet in Angular Spreadsheet component

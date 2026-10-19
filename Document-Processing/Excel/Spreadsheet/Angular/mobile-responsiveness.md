@@ -5,6 +5,7 @@ description: Learn here all about Mobile responsiveness in Syncfusion Angular Sp
 platform: document-processing
 control: Mobile responsiveness 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Mobile responsiveness in Angular Spreadsheet component

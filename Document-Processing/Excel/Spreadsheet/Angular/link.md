@@ -5,6 +5,7 @@ description: Learn here all about Link in Syncfusion Angular Spreadsheet compone
 platform: document-processing
 control: Link 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Link in Angular Spreadsheet component

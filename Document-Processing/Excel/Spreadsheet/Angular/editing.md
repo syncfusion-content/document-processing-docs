@@ -5,6 +5,7 @@ description: Learn here all about Editing in Syncfusion Angular Spreadsheet comp
 platform: document-processing
 control: Editing 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Editing in Angular Spreadsheet component

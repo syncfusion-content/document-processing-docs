@@ -5,6 +5,7 @@ description: Learn here all about Rows and columns in Syncfusion Angular Spreads
 platform: document-processing
 control: Rows and columns 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Rows and columns in Angular Spreadsheet component

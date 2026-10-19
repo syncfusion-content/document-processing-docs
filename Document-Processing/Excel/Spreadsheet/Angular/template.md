@@ -5,6 +5,7 @@ description: Learn here all about Template in Syncfusion Angular Spreadsheet com
 platform: document-processing
 control: Template 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Template in Angular Spreadsheet component

@@ -5,6 +5,7 @@ description: Learn here all about Clipboard in Syncfusion Angular Spreadsheet co
 platform: document-processing
 control: Clipboard 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Clipboard in Angular Spreadsheet component

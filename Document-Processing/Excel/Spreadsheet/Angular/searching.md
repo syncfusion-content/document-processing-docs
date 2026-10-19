@@ -5,6 +5,7 @@ description: Learn here all about Searching in Syncfusion Angular Spreadsheet co
 platform: document-processing
 control: Searching 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Searching in Angular Spreadsheet component

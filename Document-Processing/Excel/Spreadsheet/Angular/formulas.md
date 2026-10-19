@@ -5,6 +5,7 @@ description: Learn here all about Formulas in Syncfusion Angular Spreadsheet com
 platform: document-processing
 control: Formulas 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Formulas in Angular Spreadsheet component

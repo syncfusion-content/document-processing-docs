@@ -5,6 +5,7 @@ description: Learn here all about Context menu in Syncfusion Angular Spreadsheet
 platform: document-processing
 control: Context menu 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Context menu in Angular Spreadsheet component

@@ -5,6 +5,7 @@ description: Learn here all about how to identify the context menu opened in Syn
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Identify the context menu opened in Angular Spreadsheet Component

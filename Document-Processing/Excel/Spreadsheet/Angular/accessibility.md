@@ -5,6 +5,7 @@ description: Learn here all about Accessibility in Syncfusion Angular Spreadshee
 platform: document-processing
 control: Accessibility 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Accessibility in Angular Spreadsheet component

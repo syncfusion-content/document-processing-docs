@@ -5,6 +5,7 @@ description: Learn here all about changing the active sheet index while importin
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Change active sheet when importing Angular Spreadsheet

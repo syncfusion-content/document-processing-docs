@@ -5,6 +5,7 @@ description: Learn here all about Data binding in Syncfusion Angular Spreadsheet
 platform: document-processing
 control: Data binding 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Data binding in Angular Spreadsheet component

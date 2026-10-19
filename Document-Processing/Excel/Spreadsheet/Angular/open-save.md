@@ -5,6 +5,7 @@ description: Learn here all about Open save in Syncfusion Angular Spreadsheet co
 platform: document-processing
 control: Open save 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Open save in Angular Spreadsheet component

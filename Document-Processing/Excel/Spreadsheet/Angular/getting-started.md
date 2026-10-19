@@ -5,6 +5,7 @@ description: Checkout and learn here all about getting started with Syncfusion E
 platform: document-processing
 control: Getting started 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Getting started with Angular Spreadsheet component
