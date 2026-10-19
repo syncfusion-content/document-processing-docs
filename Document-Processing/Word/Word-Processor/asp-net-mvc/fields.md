@@ -1,7 +1,11 @@
 ---
-title: "Fields"
-component: "DocumentEditor"
-description: "Learn how to use fields in JavaScript document editor"
+layout: post
+title: Fields in ASP.NET MVC DOCX Editor | Syncfusion
+description: Fields in ASP.NET MVC DOCX Editor enable inserting and updating document fields to manage dynamic content efficiently.
+platform: document-processing
+control: Fields
+documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Fields
