@@ -139,7 +139,7 @@ Drop Down controls are worksheet-specific. A Drop Down created in one worksheet 
 
 ## Import and Export Support
 
-Drop Down form controls are supported during Spreadsheet import and export operations. Drop Down controls retain their Input Range and Cell Link settings during import and export.
+Drop Down form controls are supported during Excel import and export operations. Drop Down controls retain their Input Range and Cell Link settings during import and export.
 
 ## RTL Support
 

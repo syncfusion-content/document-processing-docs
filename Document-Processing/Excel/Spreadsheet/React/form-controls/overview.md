@@ -48,9 +48,9 @@ Form controls are worksheet-specific. A form control created in one worksheet ex
 - Radio Button selection
 - Drop Down with input ranges
 - Cell Link integration
-- Import and Export support
+- Excel import and export support
 - RTL support
-- Editable captions
+- Editable captions for Check Box and Radio Button controls
 - Clipboard operations
 
 ## See Also

@@ -9,7 +9,7 @@ documentation: ug
 
 # Check Box Form Control in React Spreadsheet
 
-The Check Box form control allows toggling between checked and unchecked states within a worksheet cell.
+The Check Box form control allows users to represent checked, unchecked, and mixed states within a worksheet.
 
 ## Inserting Check Box
 
@@ -88,7 +88,7 @@ Check Box controls are worksheet-specific. A Check Box created in one worksheet 
 
 ## Import and Export Support
 
-Check Box form controls are supported during Spreadsheet import and export operations. Check Box controls retain their configuration, caption, and cell link settings during import and export.
+Check Box form controls are supported during Excel import and export operations. Check Box controls retain their configuration, caption, and cell link settings during import and export.
 
 ## RTL Support
 

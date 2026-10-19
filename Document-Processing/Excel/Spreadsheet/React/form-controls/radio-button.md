@@ -62,7 +62,7 @@ The linked cell value is automatically updated whenever the Radio Button state c
 
 ## Selection Behavior
 
-Once a Radio Button is selected, clicking the same Radio Button again does not uncheck it. Only one Radio Button in a group of controls can be selected at a time. Selecting a different Radio Button automatically deselects the previously selected one.
+Once a Radio Button is selected, clicking the same Radio Button again does not uncheck it.
 
 ## Common Radio Button Operations
 
@@ -86,7 +86,7 @@ Radio Button controls are worksheet-specific. Radio Buttons created in one works
 
 ## Import and Export Support
 
-Radio Button form controls are supported during Spreadsheet import and export operations. Radio Button controls retain their configuration, caption, and cell link settings during import and export.
+Radio Button form controls are supported during Excel import and export operations. Radio Button controls retain their configuration, caption, and cell link settings during import and export.
 
 ## RTL Support
 
