@@ -506,6 +506,68 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
+### DateTime Picker Field
+- UI: Field type (Date / Time), display format string, value, font, colors, border, alignment, required/read-only, print visibility.
+![DateTime Picker properties panel showing format and field type](../../../javascript-es6/images/ui-datetime-edit.png)
+- API: [`updateFormField()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/formdesigner#updateformfield) for value, format script, typography, colors, borders.
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+import * as ReactDOM from 'react-dom/client';
+import React, { useRef } from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, Inject } from '@syncfusion/ej2-react-pdfviewer';
+
+export function App() {
+  const viewerRef = useRef(null);
+
+  const onEditDateTime = () => {
+    const viewer = viewerRef.current;
+    if (!viewer) return;
+    const fields = viewer.retrieveFormFields();
+    const dateField = fields.find(f => f.name === 'DateField1');
+    if (dateField) {
+      viewer.formDesignerModule.updateFormField(dateField, {
+        value: '10/19/2026',
+        isDateField: true,
+        isReadOnly: false,
+        isRequired: true,
+        isPrint: true,
+        fontFamily: 'Helvetica',
+        fontSize: 10,
+        color: 'black',
+        backgroundColor: '#daeaf7ff',
+        borderColor: '#303030',
+        thickness: 1,
+        alignment: 'Left',
+        tooltip: 'Select a date',
+        actions: {
+          format: { script: 'AFDate_FormatEx("m/d/yy")' }
+        }
+      });
+    }
+  };
+
+  return (
+    <div className='control-section'>
+      <button onClick={onEditDateTime}>Edit DateTime</button>
+      <PdfViewerComponent
+        ref={viewerRef}
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+        style={{ height: '680px' }}
+      >
+        <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner]} />
+      </PdfViewerComponent>
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+{% endhighlight %}
+{% endtabs %}
+
 [View Sample on GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples)
 
 ## Related topics
