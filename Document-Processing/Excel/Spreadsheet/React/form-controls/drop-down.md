@@ -11,6 +11,10 @@ documentation: ug
 
 The Drop Down form control presents a predefined list of options to select from within a worksheet cell.
 
+## Code Snippet
+
+<iframe src="https://github.com/SyncfusionExamples/document-processing-docs/blob/development/Document-Processing/code-snippet/spreadsheet/react/form-controls-dropdown-cs1" style="height:600px;" width="100%"></iframe>
+
 ## Inserting Drop Down
 
 To insert a Drop Down form control:

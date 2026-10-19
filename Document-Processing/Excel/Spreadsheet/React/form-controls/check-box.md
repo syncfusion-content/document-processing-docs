@@ -11,6 +11,10 @@ documentation: ug
 
 The Check Box form control allows users to represent checked, unchecked, and mixed states within a worksheet.
 
+## Code Snippet
+
+<iframe src="https://github.com/SyncfusionExamples/document-processing-docs/blob/development/Document-Processing/code-snippet/spreadsheet/react/form-controls-check-box-cs1" style="height:600px;" width="100%"></iframe>
+
 ## Inserting Check Box
 
 To insert a Check Box form control:
