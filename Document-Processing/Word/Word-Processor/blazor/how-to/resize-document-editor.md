@@ -5,6 +5,7 @@ description: Learn how to change the height and width of Syncfusion Blazor Docum
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to change height and width of Blazor Document Editor component

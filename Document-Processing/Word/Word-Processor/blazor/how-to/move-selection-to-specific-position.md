@@ -5,6 +5,7 @@ description: Learn how to Move to selection position in Syncfusion Blazor Docume
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Move selection to specific position in Blazor Document editor

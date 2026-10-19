@@ -5,6 +5,7 @@ description: Learn how to print a document and improve print quality in the Sync
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Printing a Document in Blazor DocumentEditor

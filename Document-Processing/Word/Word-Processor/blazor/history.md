@@ -5,6 +5,7 @@ description: Checkout and learn here all about Undo and redo in Syncfusion Blazo
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Undo and Redo in Blazor DocumentEditor Component

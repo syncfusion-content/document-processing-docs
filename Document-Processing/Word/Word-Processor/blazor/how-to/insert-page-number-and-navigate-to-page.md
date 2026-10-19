@@ -5,6 +5,7 @@ description: Learn how to Insert Page number and Navigate to specific page from 
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Insert page number and navigate to page in Blazor Document Editor

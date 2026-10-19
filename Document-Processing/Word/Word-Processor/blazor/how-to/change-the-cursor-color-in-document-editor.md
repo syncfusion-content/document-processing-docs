@@ -5,6 +5,7 @@ description: Learn how to change the cursor color in the Syncfusion Blazor Docum
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Change the Cursor Color in Blazor Document Editor

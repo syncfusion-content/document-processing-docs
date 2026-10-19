@@ -5,6 +5,7 @@ description: Checkout and learn here all about Find and Replace in Syncfusion Bl
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Find and Replace in Blazor DocumentEditor Component

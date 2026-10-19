@@ -5,6 +5,7 @@ description: Learn how to customize context menu with document editor in real ti
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Context Menu Customization in Blazor DocumentEditor Component

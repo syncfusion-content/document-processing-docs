@@ -5,6 +5,7 @@ description: Learn how to hide the built-in toolbar properties pane in the Syncf
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to hide the Toolbar and Properties Pane in Blazor Document Editor

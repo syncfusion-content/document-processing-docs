@@ -5,6 +5,7 @@ description: Learn how to customize the color picker in Syncfusion Blazor Docume
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Customize the Color Picker in Blazor Document Editor Component

@@ -5,6 +5,7 @@ description: Learn here all about Auto save document in document editor in Syncf
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 # Auto save document in Blazor Document editor component
 

@@ -5,6 +5,7 @@ description: Checkout and learn here all about Opening a document in Syncfusion 
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Opening a Document in Blazor DocumentEditor Component

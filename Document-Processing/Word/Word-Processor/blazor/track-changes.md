@@ -5,6 +5,7 @@ description: Checkout and learn here all about Track Changes in Syncfusion Blazo
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Track Changes in Blazor DocumentEditor Component

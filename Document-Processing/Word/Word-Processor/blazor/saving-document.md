@@ -5,6 +5,7 @@ description: Checkout and learn here all about saving document in Syncfusion Bla
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Saving a Document in Blazor DocumentEditor Component

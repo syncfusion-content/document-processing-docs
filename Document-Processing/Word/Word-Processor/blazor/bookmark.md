@@ -5,6 +5,7 @@ description: Learn how to add, navigate, and manage bookmarks in the Syncfusion 
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Bookmarks in Blazor DocumentEditor Component

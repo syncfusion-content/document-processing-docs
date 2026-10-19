@@ -5,6 +5,7 @@ description: Learn how to export the document as PDF in Syncfusion Blazor Docume
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to export the document as PDF in Blazor Document Editor

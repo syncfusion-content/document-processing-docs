@@ -5,6 +5,7 @@ description: Checkout and learn here all about Table of contents in Syncfusion B
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Table of Contents in Blazor DocumentEditor Component

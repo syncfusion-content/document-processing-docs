@@ -5,6 +5,7 @@ description: Checkout and learn here all about Tables in Syncfusion Blazor Docum
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Working with Tables in Blazor DocumentEditor Component

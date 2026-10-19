@@ -5,6 +5,7 @@ description: Checkout and learn here all about working with lists in Syncfusion 
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Working with Lists in Blazor DocumentEditor Component

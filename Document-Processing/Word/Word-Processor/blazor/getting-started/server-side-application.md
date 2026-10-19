@@ -5,6 +5,7 @@ description: Checkout and learn about getting started with Blazor DocumentEditor
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Getting Started with Blazor DocumentEditor Component in Blazor Server

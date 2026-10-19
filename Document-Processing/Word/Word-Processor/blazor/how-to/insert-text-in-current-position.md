@@ -5,6 +5,7 @@ description: Learn how to insert text, paragraph and rich-text content in Blazor
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Insert Text and Rich-Text Content in Blazor DocumentEditor

@@ -5,6 +5,7 @@ description: Learn how to preserve, update, and manage fields like merge fields 
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Working with Fields in Blazor DocumentEditor Component

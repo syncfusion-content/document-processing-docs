@@ -5,6 +5,7 @@ description: Learn how to select and retrieve current word and Paragraph in the 
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to select and retrieve the word and paragraph in Document Editor
