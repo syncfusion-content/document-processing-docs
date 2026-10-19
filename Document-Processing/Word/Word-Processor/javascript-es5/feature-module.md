@@ -5,6 +5,7 @@ description: Learn here all about Feature module in Syncfusion JavaScript (ES5) 
 platform: document-processing
 control: Feature module 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: Learn here all about Disable drag and drop in Syncfusion JavaScript
 platform: document-processing
 control: Disable drag and drop 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

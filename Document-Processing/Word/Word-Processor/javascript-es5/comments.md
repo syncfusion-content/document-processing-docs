@@ -5,6 +5,7 @@ description: Learn here all about Comments in Syncfusion JavaScript (ES5) Docume
 platform: document-processing
 control: Comments 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

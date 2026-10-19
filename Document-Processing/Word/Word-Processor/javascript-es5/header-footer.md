@@ -5,6 +5,7 @@ description: Learn here all about Header footer in Syncfusion JavaScript (ES5) D
 platform: document-processing
 control: Header footer 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

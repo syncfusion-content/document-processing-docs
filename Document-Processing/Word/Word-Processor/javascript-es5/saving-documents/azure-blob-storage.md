@@ -5,6 +5,7 @@ description:  Learn about how to Save document to Azure Blob Storage in JavaScri
 platform: document-processing
 control: Save document to Azure Blob Storage
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

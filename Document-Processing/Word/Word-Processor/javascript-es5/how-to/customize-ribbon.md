@@ -5,6 +5,7 @@ description: Learn how to customize the ribbon in Syncfusion JavaScript (ES5) Do
 platform: document-processing
 control: Ribbon Customization
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

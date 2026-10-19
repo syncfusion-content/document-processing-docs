@@ -5,6 +5,7 @@ description: Learn here all about Set default format in document editor in Syncf
 platform: document-processing
 control: Set default format in document editor 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

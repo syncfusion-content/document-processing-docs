@@ -5,6 +5,7 @@ description: Learn here all about Link in Syncfusion JavaScript (ES5) Document e
 platform: document-processing
 control: Link 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

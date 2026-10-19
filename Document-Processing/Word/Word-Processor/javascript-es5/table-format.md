@@ -5,6 +5,7 @@ description: Learn here all about Table format in Syncfusion JavaScript (ES5) Do
 platform: document-processing
 control: Table format 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

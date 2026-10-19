@@ -5,6 +5,7 @@ description: Learn here all about Word processor server docker image overview in
 platform: document-processing
 control: Word processor server docker image overview 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 # Word processor server docker image overview in JavaScript (ES5) Document editor control

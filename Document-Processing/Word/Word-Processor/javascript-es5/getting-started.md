@@ -5,6 +5,7 @@ description: Checkout and learn about Getting started with JavaScript (ES5) Docu
 platform: document-processing
 control: Getting started 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

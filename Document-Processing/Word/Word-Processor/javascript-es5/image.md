@@ -5,6 +5,7 @@ description: Learn here all about Image in Syncfusion JavaScript (ES5) Document 
 platform: document-processing
 control: Image 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

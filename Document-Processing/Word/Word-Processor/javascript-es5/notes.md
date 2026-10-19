@@ -5,6 +5,7 @@ description: Learn here all about Notes in Syncfusion JavaScript (ES5) Document 
 platform: document-processing
 control: Notes 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

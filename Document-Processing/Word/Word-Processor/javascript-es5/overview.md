@@ -5,6 +5,7 @@ description: Document editor for JavaScript (ES5) is used to create, edit, view 
 platform: document-processing
 control: Index 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

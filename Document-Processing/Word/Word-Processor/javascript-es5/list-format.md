@@ -5,6 +5,7 @@ description: Learn here all about List format in Syncfusion JavaScript (ES5) Doc
 platform: document-processing
 control: List format 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 
