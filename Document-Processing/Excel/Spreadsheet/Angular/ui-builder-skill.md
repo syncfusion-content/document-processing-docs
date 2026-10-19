@@ -5,6 +5,7 @@ description: UI Builder Skill in Angular Spreadsheet generates production-ready 
 control: Spreadsheet
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 keywords: Angular UI Builder, Skills, AI Assistants, Spreadsheet SDK, Agent Skills
 ---
 
