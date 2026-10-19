@@ -19,13 +19,13 @@ keywords: SmartDataExtractor, PDF to JSON, PDF to Markdown
 
 {% doccard text="PDF to HTML" link="/document-processing/data-extraction/net/conversions/pdf-to-html" icon="/document-processing/Data-Extraction/net/conversions/Images/pdf-to-html.svg" %}
 
-{% doccard text="Image to JSON" link="/document-processing/data-extraction/net/conversions/image-to-json" icon="/document-processing/Data-Extraction/net/conversions/Images/image-to-json.svg" %}
+{% doccard text="Image to JSON" link="/document-processing/data-extraction/net/conversions/pdf-to-json" icon="/document-processing/Data-Extraction/net/conversions/Images/image-to-json.svg" %}
 
-{% doccard text="Image to Markdown" link="/document-processing/data-extraction/net/conversions/image-to-markdown" icon="/document-processing/Data-Extraction/net/conversions/Images/image-to-markdown.svg" %}
+{% doccard text="Image to Markdown" link="/document-processing/data-extraction/net/conversions/pdf-to-markdown" icon="/document-processing/Data-Extraction/net/conversions/Images/image-to-markdown.svg" %}
 
-{% doccard text="Image to Word" link="/document-processing/data-extraction/net/conversions/image-to-word" icon="/document-processing/Data-Extraction/net/conversions/Images/image-to-word.svg" %}
+{% doccard text="Image to Word" link="/document-processing/data-extraction/net/conversions/pdf-to-word" icon="/document-processing/Data-Extraction/net/conversions/Images/image-to-word.svg" %}
 
-{% doccard text="Image to HTML" link="/document-processing/data-extraction/net/conversions/image-to-html" icon="/document-processing/Data-Extraction/net/conversions/Images/image-to-html.svg" %}
+{% doccard text="Image to HTML" link="/document-processing/data-extraction/net/conversions/pdf-to-html" icon="/document-processing/Data-Extraction/net/conversions/Images/image-to-html.svg" %}
 
 {% enddoccards %}
  

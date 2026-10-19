@@ -8,6 +8,8 @@ documentation: UG
 keywords: Excel, SDK, Automation, API, create, read, write
 ---
 
+> With the Essential Studio 2027 Volume 1 release, we will discontinue support for .NET 8.0 and .NET 9.0 in ASP.NET Core, Blazor, .NET MAUI, WinUI, WinForms, WPF, and Document Processing Libraries. Please plan to upgrade to .NET 10.0 or higher.
+
 # About Syncfusion Excel Document Processing Library
 
 Syncfusion<sup>®</sup> Excel Library (XlsIO) is a class library that lets you create, read, edit, and convert Excel files programmatically in .NET (Windows Forms, WPF, ASP.NET MVC, ASP.NET Core, Blazor, .NET MAUI, WinUI, UWP) and Flutter applications without Microsoft Office dependencies. Use the platform-specific quick-start links below to get started.

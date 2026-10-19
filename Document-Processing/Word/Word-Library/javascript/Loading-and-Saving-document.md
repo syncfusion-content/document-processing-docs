@@ -24,21 +24,27 @@ Open an existing Word document by passing the document data as a `Uint8Array`.
 {% highlight typescript tabtitle="TypeScript" %}
 import { WordDocument } from '@syncfusion/ej2-docx';
 
+// Loads the Word document from the specified path.
 const response: Response = await fetch('/input.docx');
 if (!response.ok) {
     throw new Error(`Unable to load input.docx (${response.status})`);
 }
 
+// Converts the response content to a Uint8Array.
 const data: Uint8Array = new Uint8Array(await response.arrayBuffer());
+// Opens the Word document.
 const document: WordDocument = WordDocument.open(data);
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+// Loads the Word document from the specified path.
 const response = await fetch('/input.docx');
 if (!response.ok) {
     throw new Error(`Unable to load input.docx (${response.status})`);
 }
 
+// Converts the response content to a Uint8Array.
 const data = new Uint8Array(await response.arrayBuffer());
+// Opens the Word document.
 const document = ej.docx.WordDocument.open(data);
 {% endhighlight %}
 {% endtabs %}
@@ -51,12 +57,15 @@ Open an existing Word document by passing the document data as an `ArrayBuffer`.
 {% highlight typescript tabtitle="TypeScript" %}
 import { WordDocument } from '@syncfusion/ej2-docx';
 
+// Loads the Word document from the specified path.
 const response: Response = await fetch('/input.docx');
 if (!response.ok) {
     throw new Error(`Unable to load input.docx (${response.status})`);
 }
 
+// Gets the document data as an ArrayBuffer.
 const data: ArrayBuffer = await response.arrayBuffer();
+// Opens the Word document.
 const document: WordDocument = WordDocument.open(data);
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
@@ -65,7 +74,9 @@ if (!response.ok) {
     throw new Error(`Unable to load input.docx (${response.status})`);
 }
 
+// Gets the document data as an ArrayBuffer.
 const data = await response.arrayBuffer();
+// Opens the Word document.
 const document = ej.docx.WordDocument.open(data);
 {% endhighlight %}
 {% endtabs %}
@@ -80,11 +91,13 @@ import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Sample Base64-encoded DOCX data.
 const data: string = 'UEsDBBQAAAAI...';
+// Opens the Word document.
 const document: WordDocument = WordDocument.open(data, { format: 'base64' });
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 // Sample Base64-encoded DOCX data.
 const data = 'UEsDBBQAAAAI...';
+// Opens the Word document.
 const document = ej.docx.WordDocument.open(data, { format: 'base64' });
 {% endhighlight %}
 {% endtabs %}
@@ -121,7 +134,7 @@ input.addEventListener('change', async () => {
     if (!file) {
         return;
     }
-
+    // Opens the Word document.
     const wordDocument = await ej.docx.WordDocument.openAsync(file);
 });
 {% endhighlight %}
@@ -135,21 +148,27 @@ Use `WordDocument.openAsync` when a Promise-based API is required. It accepts a 
 {% highlight typescript tabtitle="TypeScript" %}
 import { WordDocument } from '@syncfusion/ej2-docx';
 
+// Loads the Word document from the specified path.
 const response: Response = await fetch('/input.docx');
 if (!response.ok) {
     throw new Error(`Unable to load input.docx (${response.status})`);
 }
 
+// Gets the document data as an ArrayBuffer.
 const data: ArrayBuffer = await response.arrayBuffer();
+// Opens the Word document asynchronously.
 const document: WordDocument = await WordDocument.openAsync(data);
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+// Loads the Word document from the specified path.
 const response = await fetch('/input.docx');
 if (!response.ok) {
     throw new Error(`Unable to load input.docx (${response.status})`);
 }
 
+// Gets the document data as an ArrayBuffer.
 const data = await response.arrayBuffer();
+// Opens the Word document asynchronously.
 const document = await ej.docx.WordDocument.openAsync(data);
 {% endhighlight %}
 {% endtabs %}
@@ -162,12 +181,15 @@ Use `LoadOptions` to override resource limits while opening a document. Resource
 {% highlight typescript tabtitle="TypeScript" %}
 import { WordDocument, type LoadOptions } from '@syncfusion/ej2-docx';
 
+// Loads the Word document from the specified path.
 const response: Response = await fetch('/input.docx');
 if (!response.ok) {
     throw new Error(`Unable to load input.docx (${response.status})`);
 }
 
+// Converts the response content to a Uint8Array.
 const data: Uint8Array = new Uint8Array(await response.arrayBuffer());
+// Configures the resource limits for loading the document.
 const options: LoadOptions = {
     limits: {
         totalUncompressedSize: 50 * 1024 * 1024,
@@ -175,15 +197,19 @@ const options: LoadOptions = {
     }
 };
 
+// Opens the Word document with the specified load options.
 const document: WordDocument = WordDocument.open(data, options);
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+// Loads the Word document from the specified path.
 const response = await fetch('/input.docx');
 if (!response.ok) {
     throw new Error(`Unable to load input.docx (${response.status})`);
 }
 
+// Converts the response content to a Uint8Array.
 const data = new Uint8Array(await response.arrayBuffer());
+// Configures the resource limits for loading the document.
 const options = {
     limits: {
         totalUncompressedSize: 50 * 1024 * 1024,
@@ -191,6 +217,7 @@ const options = {
     }
 };
 
+// Opens the Word document with the specified load options.
 const document = ej.docx.WordDocument.open(data, options);
 {% endhighlight %}
 {% endtabs %}
@@ -203,29 +230,36 @@ After opening a document, access its sections and body to add or modify content.
 {% highlight typescript tabtitle="TypeScript" %}
 import { WordDocument } from '@syncfusion/ej2-docx';
 
+// Loads the Word document from the specified path.
 const response: Response = await fetch('/input.docx');
 if (!response.ok) {
     throw new Error(`Unable to load input.docx (${response.status})`);
 }
-
+// Converts the response content to a Uint8Array.
 const data: Uint8Array = new Uint8Array(await response.arrayBuffer());
+// Opens the Word document.
 const document: WordDocument = WordDocument.open(data);
 
 // Access the first section and a paragraph.
 const paragraph = document.sections[0].body.paragraphs[0];
+// Appends text to the paragraph.
 paragraph.appendText('Appended after opening the document.');
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+// Loads the Word document from the specified path.
 const response = await fetch('/input.docx');
 if (!response.ok) {
     throw new Error(`Unable to load input.docx (${response.status})`);
 }
 
+// Converts the response content to a Uint8Array.
 const data = new Uint8Array(await response.arrayBuffer());
+// Opens the Word document.
 const document = ej.docx.WordDocument.open(data);
 
 // Access the first section and a paragraph.
 const paragraph = document.sections[0].body.paragraphs[0];
+// Appends text to the paragraph.
 paragraph.appendText('Appended after opening the document.');
 {% endhighlight %}
 {% endtabs %}
@@ -238,12 +272,15 @@ Save and download a Word document in the browser by passing a file name to the a
 {% highlight typescript tabtitle="TypeScript" %}
 import { WordDocument } from '@syncfusion/ej2-docx';
 
+// Loads the Word document from the specified path.
 const response: Response = await fetch('/input.docx');
 if (!response.ok) {
     throw new Error(`Unable to load input.docx (${response.status})`);
 }
 
+// Converts the response content to a Uint8Array.
 const data: Uint8Array = new Uint8Array(await response.arrayBuffer());
+// Opens the Word document.
 const document: WordDocument = WordDocument.open(data);
 
 // To-Do: Modify the document.
@@ -252,12 +289,15 @@ const document: WordDocument = WordDocument.open(data);
 await document.save('output.docx');
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+// Loads the Word document from the specified path.
 const response = await fetch('/input.docx');
 if (!response.ok) {
     throw new Error(`Unable to load input.docx (${response.status})`);
 }
 
+// Converts the response content to a Uint8Array.
 const data = new Uint8Array(await response.arrayBuffer());
+// Opens the Word document.
 const document = ej.docx.WordDocument.open(data);
 
 // To-Do: Modify the document.
@@ -279,15 +319,21 @@ Save the document to memory as a `Uint8Array` by using `saveSync` or the paramet
 {% highlight typescript tabtitle="TypeScript" %}
 import { WordDocument } from '@syncfusion/ej2-docx';
 
+// Creates a new Word document.
 const document: WordDocument = WordDocument.create();
+// Appends text to the last paragraph.
 document.lastParagraph.appendText('Generated in memory.');
 
+// Saves the document as a Uint8Array.
 const data: Uint8Array = document.saveSync();
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+// Creates a new Word document.
 const document = ej.docx.WordDocument.create();
+// Appends text to the last paragraph.
 document.lastParagraph.appendText('Generated in memory.');
 
+// Saves the document as a Uint8Array.
 const data = document.saveSync();
 {% endhighlight %}
 {% endtabs %}
@@ -297,16 +343,21 @@ const data = document.saveSync();
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import { WordDocument } from '@syncfusion/ej2-docx';
-
+// Creates a new Word document.
 const document: WordDocument = WordDocument.create();
+// Appends text to the last paragraph.
 document.lastParagraph.appendText('Generated in memory.');
 
+// Saves the document as a Uint8Array.
 const data: Uint8Array = await document.save();
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+// Creates a new Word document.
 const document = ej.docx.WordDocument.create();
+// Appends text to the last paragraph.
 document.lastParagraph.appendText('Generated in memory.');
 
+// Saves the document as a Uint8Array.
 const data = await document.save();
 {% endhighlight %}
 {% endtabs %}
@@ -319,7 +370,9 @@ Pass `{ format: 'base64' }` to `saveSync` or `save` to serialize the document as
 {% highlight typescript tabtitle="TypeScript" %}
 import { WordDocument } from '@syncfusion/ej2-docx';
 
+// Creates a new Word document.
 const document: WordDocument = WordDocument.create();
+// Appends text to the last paragraph.
 document.lastParagraph.appendText('Generated as Base64.');
 
 // Save synchronously as Base64.
@@ -329,7 +382,9 @@ const syncBase64: string = document.saveSync({ format: 'base64' });
 const asyncBase64: string = await document.save({ format: 'base64' });
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+// Creates a new Word document.
 const document = ej.docx.WordDocument.create();
+// Appends text to the last paragraph.
 document.lastParagraph.appendText('Generated as Base64.');
 
 // Save synchronously as Base64.
@@ -354,6 +409,7 @@ const { WordDocument } = require('@syncfusion/ej2-docx');
 
 // Read the DOCX package using the Node.js filesystem API.
 const input: Uint8Array = await readFile('./input.docx');
+// Opens the Word document.
 const document = WordDocument.open(input);
 
 // To-Do: Modify the document.
@@ -371,6 +427,7 @@ const { WordDocument } = require('@syncfusion/ej2-docx');
 
 // Read the DOCX package using the Node.js filesystem API.
 const input = await readFile('./input.docx');
+// Opens the Word document.
 const document = WordDocument.open(input);
 
 // To-Do: Modify the document.

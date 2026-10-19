@@ -22,7 +22,6 @@ The following are the key features of this JavaScript Word Library.
 * Create Word documents from scratch.
 * Load, edit, and save existing Word documents.
 * Preserve document content and formatting during read and write operations.
-* Work with the Word document model and document-level operations.
 * Work with sections and section-based layout.
 * Work with paragraphs, text, and paragraph formatting.
 * Create and manage lists.
@@ -55,12 +54,7 @@ The library supports common Word document tasks such as:
 * Managing headers, footers, and page numbering.
 * Building structured tables and nested table content.
 * Inserting and managing images and shapes.
-* Adding hyperlinks, bookmarks, and cross-document navigation.
-* Working with fields, form-style content, and document metadata.
-* Processing comments, revisions, and review-related content.
-* Performing mail merge operations.
-* Applying watermarks and document branding.
-* Preserving custom XML and other unsupported content when possible.
+* Adding hyperlinks, and fields.
 
 ## Compatibility
 

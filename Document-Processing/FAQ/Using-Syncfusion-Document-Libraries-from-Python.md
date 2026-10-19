@@ -16,5 +16,5 @@ keywords: syncfusion python, use syncfusion from python, python document process
 
 Refer to the following guides:
 
-* [Run Document SDK using Python.NET](../python-integration/Run-DocumentSDK-using-Python-NET)
-* [Run Document SDK using Local .NET Worker](../python-integration/Run-DocumentSDK-using-Local-NET-Worker)
+* [Use Document SDK through Python.NET](../python-integration/Use-Document-SDK-through-Python-NET)
+* [Use Document SDK through Local .NET Worker](../python-integration/Use-Document-SDK-through-Local-NET-Worker)
