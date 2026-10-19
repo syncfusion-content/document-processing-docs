@@ -1,19 +1,21 @@
 ---
+layout: post
 title: Working with Charts in JavaScript PowerPoint | Syncfusion
 description: Learn how to create and customize charts in a PowerPoint presentation using the Syncfusion JavaScript PowerPoint Library.
 platform: document-processing
 control: PowerPoint
-documentation: UG
+documentation: ug
+keywords: javascript, powerpoint
 ---
 
-# Working with Charts
+# Working with Charts in JavaScript PowerPoint
 
 ## Creating a chart from scratch
 
 An instance of Chart can be used to create or modify the charts in PowerPoint Presentation. The following code example demonstrates how to create a simple chart by adding data from scratch.
 
 {% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
+{% highlight js tabtitle="index.js" %}
 
 import { Presentation } from '@syncfusion/ej2-pptx';
 import {
@@ -66,9 +68,8 @@ await chart.addSeries({
 });
 await chart.setSeriesValueCells(2, [80, 60, 80]);
 
-// Category axis labels.
+// Category axis title.
 const categoryAxis = chart.primaryCategoryAxis;
-categoryAxis.categoryLabels = 'Sheet1!$A$2:$A$4';
 categoryAxis.title = 'Year';
 await chart.commitPrimaryCategoryAxis(categoryAxis);
 await chart.commitPrimaryValueAxis({
@@ -78,8 +79,19 @@ await chart.commitPrimaryValueAxis({
 
 await chart.refresh();
 
-// Saves the PowerPoint Presentation to a file.
-await pptxDoc.save('Output.pptx');
+// Saves the presentation and downloads it in the browser.
+const bytes = await pptxDoc.save();
+const blob = new Blob([bytes], {
+    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+});
+const url = window.URL.createObjectURL(blob);
+const link = document.createElement('a');
+link.href = url;
+link.download = 'Output.pptx';
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+window.URL.revokeObjectURL(url);
 
 {% endhighlight %}
 {% endtabs %}
@@ -101,7 +113,7 @@ A chart is composed of various elements such as legends, axes, series, etc. Each
 Chart title is a concise description at the top of a chart, offering context and clarity for the data displayed. The following code snippet illustrates how to set the chart title name on a chart named chart.
 
 {% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
+{% highlight js tabtitle="index.js" %}
 
 import { Presentation } from '@syncfusion/ej2-pptx';
 import {
@@ -130,7 +142,19 @@ const chart = await addChart(slide, {
 await chart.applyChartTitle('Purchase Details');
 
 // Saves the Presentation to a file.
-await pptxDoc.save('ChartTitle.pptx');
+// Saves the presentation and downloads it in the browser.
+const bytes = await pptxDoc.save();
+const blob = new Blob([bytes], {
+    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+});
+const url = window.URL.createObjectURL(blob);
+const link = document.createElement('a');
+link.href = url;
+link.download = 'ChartTitle.pptx';
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+window.URL.revokeObjectURL(url);
 
 {% endhighlight %}
 {% endtabs %}
@@ -142,7 +166,7 @@ Chart area refers to the space that contains the chart or graph you've inserted 
 The following code snippet illustrates how to modify the border and fill of the chart area.
 
 {% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
+{% highlight js tabtitle="index.js" %}
 
 import { Presentation } from '@syncfusion/ej2-pptx';
 import {
@@ -174,7 +198,19 @@ await chart.commitChartArea({
 });
 
 // Saves the Presentation to a file.
-await pptxDoc.save('ChartArea.pptx');
+// Saves the presentation and downloads it in the browser.
+const bytes = await pptxDoc.save();
+const blob = new Blob([bytes], {
+    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+});
+const url = window.URL.createObjectURL(blob);
+const link = document.createElement('a');
+link.href = url;
+link.download = 'ChartArea.pptx';
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+window.URL.revokeObjectURL(url);
 
 {% endhighlight %}
 {% endtabs %}
@@ -184,7 +220,7 @@ await pptxDoc.save('ChartArea.pptx');
 The plot area refers to the region that represents the plotted data in a chart. The following code snippet illustrates how to modify the border and fill of the plot area.
 
 {% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
+{% highlight js tabtitle="index.js" %}
 
 import { Presentation } from '@syncfusion/ej2-pptx';
 import {
@@ -215,7 +251,19 @@ await chart.commitPlotArea({
 });
 
 // Saves the Presentation to a file.
-await pptxDoc.save('ChartPlotArea.pptx');
+// Saves the presentation and downloads it in the browser.
+const bytes = await pptxDoc.save();
+const blob = new Blob([bytes], {
+    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+});
+const url = window.URL.createObjectURL(blob);
+const link = document.createElement('a');
+link.href = url;
+link.download = 'ChartPlotArea.pptx';
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+window.URL.revokeObjectURL(url);
 
 {% endhighlight %}
 {% endtabs %}
@@ -225,7 +273,7 @@ await pptxDoc.save('ChartPlotArea.pptx');
 Legends are visual keys that provide viewers with information that helps them understand a chart. The following code snippet illustrates how to set the legend position in a chart. Position strings are lowercase engine values: `bottom`, `top`, `left`, `right`, and `corner`.
 
 {% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
+{% highlight js tabtitle="index.js" %}
 
 import { Presentation } from '@syncfusion/ej2-pptx';
 import {
@@ -255,7 +303,19 @@ await chart.applyHasLegend(true);
 await chart.commitLegend({ position: 'bottom' });
 
 // Saves the Presentation to a file.
-await pptxDoc.save('ChartLegend.pptx');
+// Saves the presentation and downloads it in the browser.
+const bytes = await pptxDoc.save();
+const blob = new Blob([bytes], {
+    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+});
+const url = window.URL.createObjectURL(blob);
+const link = document.createElement('a');
+link.href = url;
+link.download = 'ChartLegend.pptx';
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+window.URL.revokeObjectURL(url);
 
 {% endhighlight %}
 {% endtabs %}
@@ -265,7 +325,7 @@ await pptxDoc.save('ChartLegend.pptx');
 Data labels make a chart easier to understand by displaying the values of each data point. The following code snippet illustrates how to make the data labels visible in a chart.
 
 {% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
+{% highlight js tabtitle="index.js" %}
 
 import { Presentation } from '@syncfusion/ej2-pptx';
 import {
@@ -294,7 +354,19 @@ const chart = await addChart(slide, {
 await chart.commitSeriesDataLabels(0, { isValue: true });
 
 // Saves the Presentation to a file.
-await pptxDoc.save('ChartDataLabels.pptx');
+// Saves the presentation and downloads it in the browser.
+const bytes = await pptxDoc.save();
+const blob = new Blob([bytes], {
+    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+});
+const url = window.URL.createObjectURL(blob);
+const link = document.createElement('a');
+link.href = url;
+link.download = 'ChartDataLabels.pptx';
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+window.URL.revokeObjectURL(url);
 
 {% endhighlight %}
 {% endtabs %}
@@ -309,7 +381,7 @@ Charts typically have two axes that are used to measure and categorize data.
 The following code snippet illustrates how to set the title of an axis.
 
 {% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
+{% highlight js tabtitle="index.js" %}
 
 import { Presentation } from '@syncfusion/ej2-pptx';
 import {
@@ -339,7 +411,19 @@ await chart.commitPrimaryCategoryAxis({ title: 'Year' });
 await chart.commitPrimaryValueAxis({ title: 'Sales' });
 
 // Saves the Presentation to a file.
-await pptxDoc.save('ChartAxis.pptx');
+// Saves the presentation and downloads it in the browser.
+const bytes = await pptxDoc.save();
+const blob = new Blob([bytes], {
+    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+});
+const url = window.URL.createObjectURL(blob);
+const link = document.createElement('a');
+link.href = url;
+link.download = 'ChartAxis.pptx';
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+window.URL.revokeObjectURL(url);
 
 {% endhighlight %}
 {% endtabs %}

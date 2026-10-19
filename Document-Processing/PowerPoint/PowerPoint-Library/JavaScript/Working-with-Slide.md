@@ -1,12 +1,14 @@
 ---
+layout: post
 title: Working with Slides in JavaScript PowerPoint | Syncfusion
 description: Learn how to add, remove, and access slides and master slides in a PowerPoint presentation using the Syncfusion JavaScript PowerPoint Library.
 platform: document-processing
 control: PowerPoint
-documentation: UG
+documentation: ug
+keywords: javascript, powerpoint
 ---
 
-# Working with Slides in PowerPoint
+# Working with Slides in JavaScript PowerPoint
 
 ## Adding a slide to a PowerPoint presentation
 
@@ -15,7 +17,7 @@ In a PowerPoint presentation, a slide is a container for elements such as shapes
 The following code example demonstrates how to add a blank slide to the Presentation. By default, the `slides.add()` overload adds a slide using the default layout of the master.
 
 {% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
+{% highlight js tabtitle="index.js" %}
 
 import { Presentation } from '@syncfusion/ej2-pptx';
 
@@ -25,8 +27,19 @@ const pptxDoc = Presentation.create();
 // Adds a slide to the PowerPoint presentation.
 const slide = pptxDoc.slides.add();
 
-// Saves the Presentation to the file system.
-await pptxDoc.save('Output.pptx');
+// Saves the presentation and downloads it in the browser.
+const bytes = await pptxDoc.save();
+const blob = new Blob([bytes], {
+    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+});
+const url = window.URL.createObjectURL(blob);
+const link = document.createElement('a');
+link.href = url;
+link.download = 'Output.pptx';
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+window.URL.revokeObjectURL(url);
 
 {% endhighlight %}
 {% endtabs %}
@@ -50,7 +63,7 @@ The JavaScript PowerPoint Library supports the following predefined slide layout
 The following example demonstrates how to access a slide from the predefined blank slide layout type.
 
 {% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
+{% highlight js tabtitle="index.js" %}
 
 import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
 
@@ -61,7 +74,19 @@ const pptxDoc = Presentation.create();
 const slide1 = pptxDoc.slides.add({ layout: SlideLayoutType.Title });
 
 // Save the PowerPoint file.
-await pptxDoc.save('Output.pptx');
+// Saves the presentation and downloads it in the browser.
+const bytes = await pptxDoc.save();
+const blob = new Blob([bytes], {
+    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+});
+const url = window.URL.createObjectURL(blob);
+const link = document.createElement('a');
+link.href = url;
+link.download = 'Output.pptx';
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+window.URL.revokeObjectURL(url);
 
 {% endhighlight %}
 {% endtabs %}
@@ -71,7 +96,7 @@ await pptxDoc.save('Output.pptx');
 The JavaScript PowerPoint Library provides the ability to delete a slide by its instance or by its index position in the slide collection. The following code demonstrates how to delete a slide from a presentation.
 
 {% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
+{% highlight js tabtitle="index.js" %}
 
 import { Presentation } from '@syncfusion/ej2-pptx';
 
@@ -93,7 +118,19 @@ pptxDoc.slides.remove(slide);
 pptxDoc.slides.removeAt(1);
 
 // Save the Presentation to the file system.
-await pptxDoc.save('Output.pptx');
+// Saves the presentation and downloads it in the browser.
+const bytes = await pptxDoc.save();
+const blob = new Blob([bytes], {
+    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+});
+const url = window.URL.createObjectURL(blob);
+const link = document.createElement('a');
+link.href = url;
+link.download = 'Output.pptx';
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+window.URL.revokeObjectURL(url);
 
 {% endhighlight %}
 {% endtabs %}
@@ -105,7 +142,7 @@ In a PowerPoint presentation, the MasterSlide is the top slide that controls all
 The following code example demonstrates how to access the MasterSlide in a PowerPoint presentation. The `name` property returns the name of the shape as a string and is used here only for demonstration.
 
 {% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
+{% highlight js tabtitle="index.js" %}
 
 import { Presentation } from '@syncfusion/ej2-pptx';
 
@@ -119,7 +156,19 @@ const masterSlide = pptxDoc.slideMasters[0];
 const shapeName = masterSlide.shapes[0].name;
 
 // Save the PowerPoint presentation to a file.
-await pptxDoc.save('Output.pptx');
+// Saves the presentation and downloads it in the browser.
+const bytes = await pptxDoc.save();
+const blob = new Blob([bytes], {
+    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+});
+const url = window.URL.createObjectURL(blob);
+const link = document.createElement('a');
+link.href = url;
+link.download = 'Output.pptx';
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+window.URL.revokeObjectURL(url);
 
 {% endhighlight %}
 {% endtabs %}

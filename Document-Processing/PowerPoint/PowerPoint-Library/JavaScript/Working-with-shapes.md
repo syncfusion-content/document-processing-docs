@@ -1,12 +1,14 @@
 ---
+layout: post
 title: Working with Shapes in JavaScript PowerPoint | Syncfusion
 description: Learn how to add, iterate, and remove shapes in a PowerPoint slide using the Syncfusion JavaScript PowerPoint Library.
 platform: document-processing
 control: PowerPoint
-documentation: UG
+documentation: ug
+keywords: javascript, powerpoint
 ---
 
-# Working with Shapes
+# Working with Shapes in JavaScript PowerPoint
 
 ## Adding shapes to a slide
 
@@ -15,7 +17,7 @@ In every slide, there is a shape collection that can contain any form of graphic
 The following code example demonstrates how to add an AutoShape to the shape collection of a slide.
 
 {% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
+{% highlight js tabtitle="index.js" %}
 
 import { Presentation, SlideLayoutType, AutoShapeType } from '@syncfusion/ej2-pptx';
 
@@ -39,8 +41,19 @@ const picture = slide.shapes.addPicture({
     }
 });
 
-// Saves the Presentation to the file system.
-await pptxDoc.save('ShapeSample.pptx');
+// Saves the presentation and downloads it in the browser.
+const bytes = await pptxDoc.save();
+const blob = new Blob([bytes], {
+    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+});
+const url = window.URL.createObjectURL(blob);
+const link = document.createElement('a');
+link.href = url;
+link.download = 'ShapeSample.pptx';
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+window.URL.revokeObjectURL(url);
 
 {% endhighlight %}
 {% endtabs %}
@@ -50,7 +63,7 @@ await pptxDoc.save('ShapeSample.pptx');
 You can iterate through the shapes in a PowerPoint slide. The following code example demonstrates how to iterate through the shapes present in a slide and detect each shape based on its type.
 
 {% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
+{% highlight js tabtitle="index.js" %}
 
 import { Presentation } from '@syncfusion/ej2-pptx';
 
@@ -68,8 +81,19 @@ for (const shape of slide.shapes) {
     }
 }
 
-// Saves the Presentation to the file system.
-await pptxDoc.save('ShapeOutput1.pptx');
+// Saves the presentation and downloads it in the browser.
+const bytes = await pptxDoc.save();
+const blob = new Blob([bytes], {
+    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+});
+const url = window.URL.createObjectURL(blob);
+const link = document.createElement('a');
+link.href = url;
+link.download = 'ShapeOutput1.pptx';
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+window.URL.revokeObjectURL(url);
 
 {% endhighlight %}
 {% endtabs %}
@@ -79,7 +103,7 @@ await pptxDoc.save('ShapeOutput1.pptx');
 The shapes can be removed from a slide by its instance or by its index position in the shape collection. The following code example demonstrates how to remove the shapes from a slide.
 
 {% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
+{% highlight js tabtitle="index.js" %}
 
 import { Presentation } from '@syncfusion/ej2-pptx';
 
@@ -95,8 +119,19 @@ for (const shape of slide.shapes) {
     }
 }
 
-// Saves the Presentation to the file system.
-await pptxDoc.save('ShapeOutput2.pptx');
+// Saves the presentation and downloads it in the browser.
+const bytes = await pptxDoc.save();
+const blob = new Blob([bytes], {
+    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+});
+const url = window.URL.createObjectURL(blob);
+const link = document.createElement('a');
+link.href = url;
+link.download = 'ShapeOutput2.pptx';
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+window.URL.revokeObjectURL(url);
 
 {% endhighlight %}
 {% endtabs %}

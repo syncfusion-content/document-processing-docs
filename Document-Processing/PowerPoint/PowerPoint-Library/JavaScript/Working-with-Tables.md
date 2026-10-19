@@ -1,12 +1,14 @@
 ---
+layout: post
 title: Working with Tables in JavaScript PowerPoint | Syncfusion
 description: Learn how to create, edit, and remove tables in a PowerPoint slide using the Syncfusion JavaScript PowerPoint Library.
 platform: document-processing
 control: PowerPoint
-documentation: UG
+documentation: ug
+keywords: javascript, powerpoint
 ---
 
-# Working with Tables
+# Working with Tables in JavaScript PowerPoint
 
 A table in PowerPoint presentation is used to arrange document content in rows and columns. Table instance represents a table in PowerPoint presentation. A table must contain at least one row.
 
@@ -15,7 +17,7 @@ A table in PowerPoint presentation is used to arrange document content in rows a
 The JavaScript PowerPoint Library supports creating and editing tables in PowerPoint slides by adding rows. Refer to the following code example.
 
 {% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
+{% highlight js tabtitle="index.js" %}
 
 import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
 import { addTable } from '@syncfusion/ej2-pptx/tables';
@@ -35,7 +37,7 @@ const table = addTable(slide, {
 // Iterate row-wise cells and add text to each.
 for (let rowIndex = 0; rowIndex < table.rowCount; rowIndex++) {
     for (let colIndex = 0; colIndex < table.columnCount; colIndex++) {
-        const cell = table.cell(rowIndex, colIndex);
+        const cell = table.getCell(rowIndex, colIndex);
         const textBody = cell.textBody;
         if (textBody) {
             const paragraph = textBody.addParagraph();
@@ -44,8 +46,19 @@ for (let rowIndex = 0; rowIndex < table.rowCount; rowIndex++) {
     }
 }
 
-// Save the PowerPoint Presentation.
-await pptxDoc.save('TableModified1.pptx');
+// Saves the presentation and downloads it in the browser.
+const bytes = await pptxDoc.save();
+const blob = new Blob([bytes], {
+    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+});
+const url = window.URL.createObjectURL(blob);
+const link = document.createElement('a');
+link.href = url;
+link.download = 'TableModified1.pptx';
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+window.URL.revokeObjectURL(url);
 
 {% endhighlight %}
 {% endtabs %}
@@ -55,7 +68,7 @@ await pptxDoc.save('TableModified1.pptx');
 The following code example demonstrates how to create a simple table in a PowerPoint slide by adding columns.
 
 {% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
+{% highlight js tabtitle="index.js" %}
 
 import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
 import { addTable } from '@syncfusion/ej2-pptx/tables';
@@ -75,7 +88,7 @@ const table = addTable(slide, {
 // Iterate column-wise cells and add text to each.
 for (let colIndex = 0; colIndex < table.columnCount; colIndex++) {
     for (let rowIndex = 0; rowIndex < table.rowCount; rowIndex++) {
-        const cell = table.cell(rowIndex, colIndex);
+        const cell = table.getCell(rowIndex, colIndex);
         const textBody = cell.textBody;
         if (textBody) {
             const paragraph = textBody.addParagraph();
@@ -84,8 +97,19 @@ for (let colIndex = 0; colIndex < table.columnCount; colIndex++) {
     }
 }
 
-// Save the PowerPoint Presentation.
-await pptxDoc.save('TableModified2.pptx');
+// Saves the presentation and downloads it in the browser.
+const bytes = await pptxDoc.save();
+const blob = new Blob([bytes], {
+    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+});
+const url = window.URL.createObjectURL(blob);
+const link = document.createElement('a');
+link.href = url;
+link.download = 'TableModified2.pptx';
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+window.URL.revokeObjectURL(url);
 
 {% endhighlight %}
 {% endtabs %}
@@ -95,7 +119,7 @@ await pptxDoc.save('TableModified2.pptx');
 You can append new rows at the end of an existing PowerPoint table. Refer to the following code sample.
 
 {% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
+{% highlight js tabtitle="index.js" %}
 
 import { Presentation } from '@syncfusion/ej2-pptx';
 import { asTable } from '@syncfusion/ej2-pptx/tables';
@@ -114,7 +138,7 @@ if (table) {
 
     // Iterate the new row's cells and add text to each.
     for (let colIndex = 0; colIndex < table.columnCount; colIndex++) {
-        const cell = table.cell(newRowIndex, colIndex);
+        const cell = table.getCell(newRowIndex, colIndex);
         const textBody = cell.textBody;
         if (textBody) {
             const paragraph = textBody.addParagraph();
@@ -123,8 +147,19 @@ if (table) {
     }
 }
 
-// Save the PowerPoint Presentation.
-await pptxDoc.save('TableModified3.pptx');
+// Saves the presentation and downloads it in the browser.
+const bytes = await pptxDoc.save();
+const blob = new Blob([bytes], {
+    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+});
+const url = window.URL.createObjectURL(blob);
+const link = document.createElement('a');
+link.href = url;
+link.download = 'TableModified3.pptx';
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+window.URL.revokeObjectURL(url);
 
 {% endhighlight %}
 {% endtabs %}
@@ -134,7 +169,7 @@ await pptxDoc.save('TableModified3.pptx');
 You can insert a row at the specified index position of a table. Refer to the following code example.
 
 {% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
+{% highlight js tabtitle="index.js" %}
 
 import { Presentation } from '@syncfusion/ej2-pptx';
 import { asTable } from '@syncfusion/ej2-pptx/tables';
@@ -152,8 +187,19 @@ if (table) {
     table.insertRowAt(1);
 }
 
-// Save the PowerPoint Presentation.
-await pptxDoc.save('TableModified4.pptx');
+// Saves the presentation and downloads it in the browser.
+const bytes = await pptxDoc.save();
+const blob = new Blob([bytes], {
+    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+});
+const url = window.URL.createObjectURL(blob);
+const link = document.createElement('a');
+link.href = url;
+link.download = 'TableModified4.pptx';
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+window.URL.revokeObjectURL(url);
 
 {% endhighlight %}
 {% endtabs %}
@@ -163,7 +209,7 @@ await pptxDoc.save('TableModified4.pptx');
 You can insert a column at the specified index position of a table. Refer to the following code example.
 
 {% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
+{% highlight js tabtitle="index.js" %}
 
 import { Presentation } from '@syncfusion/ej2-pptx';
 import { asTable } from '@syncfusion/ej2-pptx/tables';
@@ -181,8 +227,19 @@ if (table) {
     table.insertColumnAt(1);
 }
 
-// Save the PowerPoint Presentation.
-await pptxDoc.save('TableModified5.pptx');
+// Saves the presentation and downloads it in the browser.
+const bytes = await pptxDoc.save();
+const blob = new Blob([bytes], {
+    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+});
+const url = window.URL.createObjectURL(blob);
+const link = document.createElement('a');
+link.href = url;
+link.download = 'TableModified5.pptx';
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+window.URL.revokeObjectURL(url);
 
 {% endhighlight %}
 {% endtabs %}
@@ -192,7 +249,7 @@ await pptxDoc.save('TableModified5.pptx');
 You can remove a table from a slide by passing its instance to `removeTable`. The following code example demonstrates how to remove a table from a slide.
 
 {% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
+{% highlight js tabtitle="index.js" %}
 
 import { Presentation } from '@syncfusion/ej2-pptx';
 import { asTable, removeTable } from '@syncfusion/ej2-pptx/tables';
@@ -212,8 +269,19 @@ if (table) {
     removeTable(slide, table);
 }
 
-// Save the PowerPoint Presentation.
-await pptxDoc.save('TableModified6.pptx');
+// Saves the presentation and downloads it in the browser.
+const bytes = await pptxDoc.save();
+const blob = new Blob([bytes], {
+    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+});
+const url = window.URL.createObjectURL(blob);
+const link = document.createElement('a');
+link.href = url;
+link.download = 'TableModified6.pptx';
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+window.URL.revokeObjectURL(url);
 
 {% endhighlight %}
 {% endtabs %}

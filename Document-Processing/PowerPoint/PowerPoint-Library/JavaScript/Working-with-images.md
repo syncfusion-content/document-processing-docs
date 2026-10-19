@@ -1,19 +1,21 @@
 ---
+layout: post
 title: Working with Images in JavaScript PowerPoint | Syncfusion
 description: Learn how to add, replace, and remove images in a PowerPoint presentation using the Syncfusion JavaScript PowerPoint Library.
 platform: document-processing
 control: PowerPoint
-documentation: UG
+documentation: ug
+keywords: javascript, powerpoint
 ---
 
-# Working with Images
+# Working with Images in JavaScript PowerPoint
 
 ## Adding Images
 
 The JavaScript PowerPoint Library facilitates adding or modifying the images in a PowerPoint Presentation. The following code example demonstrates how to add a new image to the presentation.
 
 {% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
+{% highlight js tabtitle="index.js" %}
 
 import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
 
@@ -30,8 +32,19 @@ const picture = slide.shapes.addPicture({
     bounds: { x: 0, y: 0, width: 250, height: 250 }
 });
 
-// Saves the PowerPoint Presentation to a file.
-await pptxDoc.save('PictureSample.pptx');
+// Saves the presentation and downloads it in the browser.
+const bytes = await pptxDoc.save();
+const blob = new Blob([bytes], {
+    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+});
+const url = window.URL.createObjectURL(blob);
+const link = document.createElement('a');
+link.href = url;
+link.download = 'PictureSample.pptx';
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+window.URL.revokeObjectURL(url);
 
 {% endhighlight %}
 {% endtabs %}
@@ -41,7 +54,7 @@ await pptxDoc.save('PictureSample.pptx');
 The following code example demonstrates how to replace an existing image in a slide. The `Picture.replaceImageData` method accepts image data that represents the new image.
 
 {% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
+{% highlight js tabtitle="index.js" %}
 
 import { Presentation } from '@syncfusion/ej2-pptx';
 
@@ -62,8 +75,19 @@ if (!picture) {
 // Replaces the existing embedded image with the new image.
 picture.replaceImageData({ data: newBytes });
 
-// Saves the PowerPoint Presentation to a file.
-await pptxDoc.save('PictureReplaced.pptx');
+// Saves the presentation and downloads it in the browser.
+const bytes = await pptxDoc.save();
+const blob = new Blob([bytes], {
+    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+});
+const url = window.URL.createObjectURL(blob);
+const link = document.createElement('a');
+link.href = url;
+link.download = 'PictureReplaced.pptx';
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+window.URL.revokeObjectURL(url);
 
 {% endhighlight %}
 {% endtabs %}
@@ -73,7 +97,7 @@ await pptxDoc.save('PictureReplaced.pptx');
 The following code example demonstrates how to remove an existing image in a PowerPoint slide.
 
 {% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
+{% highlight js tabtitle="index.js" %}
 
 import { Presentation } from '@syncfusion/ej2-pptx';
 
@@ -93,8 +117,19 @@ for (const shape of slide.shapes) {
     }
 }
 
-// Saves the PowerPoint Presentation to a file.
-await pptxDoc.save('PictureRemoved.pptx');
+// Saves the presentation and downloads it in the browser.
+const bytes = await pptxDoc.save();
+const blob = new Blob([bytes], {
+    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+});
+const url = window.URL.createObjectURL(blob);
+const link = document.createElement('a');
+link.href = url;
+link.download = 'PictureRemoved.pptx';
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+window.URL.revokeObjectURL(url);
 
 {% endhighlight %}
 {% endtabs %}

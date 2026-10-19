@@ -1,12 +1,14 @@
 ---
+layout: post
 title: Working with Paragraphs in JavaScript PowerPoint | Syncfusion
 description: Learn how to add, format, modify, and remove paragraphs and text in a PowerPoint presentation using the Syncfusion JavaScript PowerPoint Library.
 platform: document-processing
 control: PowerPoint
-documentation: UG
+documentation: ug
+keywords: javascript, powerpoint
 ---
 
-# Working with Paragraphs
+# Working with Paragraphs in JavaScript PowerPoint
 
 ## Adding paragraph to slide
 
@@ -15,7 +17,7 @@ All the textual contents in a Presentation document is represented by Paragraphs
 The following code example demonstrates how to add a paragraph in a slide.
 
 {% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
+{% highlight js tabtitle="index.js" %}
 
 import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
 
@@ -39,8 +41,19 @@ const textPart = paragraph.addTextPart('AdventureWorks Cycles, the fictitious co
 // Gets text from the TextPart.
 const paraText = textPart.text;
 
-// Saves the PowerPoint Presentation to a file.
-await pptxDoc.save('Output.pptx');
+// Saves the presentation and downloads it in the browser.
+const bytes = await pptxDoc.save();
+const blob = new Blob([bytes], {
+    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+});
+const url = window.URL.createObjectURL(blob);
+const link = document.createElement('a');
+link.href = url;
+link.download = 'Output.pptx';
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+window.URL.revokeObjectURL(url);
 
 {% endhighlight %}
 {% endtabs %}
@@ -50,7 +63,7 @@ await pptxDoc.save('Output.pptx');
 Each paragraph in a slide can have its own formatting types such as alignment, indent, and so on. The following code example demonstrates how to format a paragraph in a PowerPoint presentation.
 
 {% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
+{% highlight js tabtitle="index.js" %}
 
 import { Presentation, HorizontalAlignmentType } from '@syncfusion/ej2-pptx';
 
@@ -79,8 +92,19 @@ paragraph.leftIndent = 8;
 // Modifies the end paragraph font name.
 paragraph.endParagraphFont.fontName = 'Times New Roman';
 
-// Saves the PowerPoint Presentation to a file.
-await pptxDoc.save('Output.pptx');
+// Saves the presentation and downloads it in the browser.
+const bytes = await pptxDoc.save();
+const blob = new Blob([bytes], {
+    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+});
+const url = window.URL.createObjectURL(blob);
+const link = document.createElement('a');
+link.href = url;
+link.download = 'Output.pptx';
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+window.URL.revokeObjectURL(url);
 
 {% endhighlight %}
 {% endtabs %}
@@ -92,7 +116,7 @@ With the JavaScript PowerPoint Library, you can add or modify text in a Presenta
 The following code example demonstrates how to add text with different formatting into a single paragraph.
 
 {% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
+{% highlight js tabtitle="index.js" %}
 
 import { Presentation, SlideLayoutType, TextUnderlineType } from '@syncfusion/ej2-pptx';
 
@@ -137,8 +161,19 @@ textPartFormatting2.font.color = '#0000FF';
 // Sets the underline type.
 textPartFormatting2.font.underline = TextUnderlineType.WavyDouble;
 
-// Saves the PowerPoint Presentation to a file.
-await pptxDoc.save('Output.pptx');
+// Saves the presentation and downloads it in the browser.
+const bytes = await pptxDoc.save();
+const blob = new Blob([bytes], {
+    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+});
+const url = window.URL.createObjectURL(blob);
+const link = document.createElement('a');
+link.href = url;
+link.download = 'Output.pptx';
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+window.URL.revokeObjectURL(url);
 
 {% endhighlight %}
 {% endtabs %}
@@ -148,7 +183,7 @@ await pptxDoc.save('Output.pptx');
 You can modify text by accessing the existing paragraphs in a Presentation. The following code example demonstrates how to modify the content in a paragraph.
 
 {% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
+{% highlight js tabtitle="index.js" %}
 
 import { Presentation } from '@syncfusion/ej2-pptx';
 
@@ -172,8 +207,19 @@ const textPart = paragraph.textParts[0];
 // Modifies the text content of the TextPart.
 textPart.text = 'Hello Presentation';
 
-// Saves the PowerPoint Presentation to a file.
-await pptxDoc.save('Output.pptx');
+// Saves the presentation and downloads it in the browser.
+const bytes = await pptxDoc.save();
+const blob = new Blob([bytes], {
+    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+});
+const url = window.URL.createObjectURL(blob);
+const link = document.createElement('a');
+link.href = url;
+link.download = 'Output.pptx';
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+window.URL.revokeObjectURL(url);
 
 {% endhighlight %}
 {% endtabs %}
@@ -183,7 +229,7 @@ await pptxDoc.save('Output.pptx');
 The following code example demonstrates how to remove a paragraph from a slide.
 
 {% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
+{% highlight js tabtitle="index.js" %}
 
 import { Presentation } from '@syncfusion/ej2-pptx';
 
@@ -204,8 +250,19 @@ const textBody = shape.textBody;
 const paragraph = textBody.paragraphs[0];
 textBody.paragraphs.remove(paragraph);
 
-// Saves the PowerPoint Presentation to a file.
-await pptxDoc.save('Output.pptx');
+// Saves the presentation and downloads it in the browser.
+const bytes = await pptxDoc.save();
+const blob = new Blob([bytes], {
+    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+});
+const url = window.URL.createObjectURL(blob);
+const link = document.createElement('a');
+link.href = url;
+link.download = 'Output.pptx';
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+window.URL.revokeObjectURL(url);
 
 {% endhighlight %}
 {% endtabs %}
