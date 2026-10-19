@@ -5,6 +5,7 @@ description: Learn here all about Get current word in Syncfusion JavaScript (ES6
 platform: document-processing
 control: Get current word 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

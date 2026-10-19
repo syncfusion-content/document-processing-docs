@@ -5,6 +5,7 @@ description: Learn here all about Table in Syncfusion JavaScript (ES6) Document 
 platform: document-processing
 control: Table 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

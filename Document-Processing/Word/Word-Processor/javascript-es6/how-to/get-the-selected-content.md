@@ -5,6 +5,7 @@ description: Learn here all about Get the selected content in Syncfusion JavaScr
 platform: document-processing
 control: Get the selected content 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

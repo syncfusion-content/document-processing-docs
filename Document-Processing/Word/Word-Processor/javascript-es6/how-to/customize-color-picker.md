@@ -5,6 +5,7 @@ description: Learn here all about Customize color picker in Syncfusion JavaScrip
 platform: document-processing
 control: Customize Color Picker 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

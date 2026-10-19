@@ -5,6 +5,7 @@ description: Learn here all about the Ribbon UI in Syncfusion JavaScript (ES6) D
 platform: document-processing
 control: Ribbon
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

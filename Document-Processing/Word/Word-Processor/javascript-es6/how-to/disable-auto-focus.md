@@ -5,6 +5,7 @@ description: Learn here all about Disable auto focus in Syncfusion JavaScript (E
 platform: document-processing
 control: Disable auto focus 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: Learn here all about Text format in Syncfusion JavaScript (ES6) Doc
 platform: document-processing
 control: Text format 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

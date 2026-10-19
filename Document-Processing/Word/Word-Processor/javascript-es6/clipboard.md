@@ -5,6 +5,7 @@ description: Learn here all about Clipboard in Syncfusion JavaScript (ES6) Docum
 platform: document-processing
 control: Clipboard 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

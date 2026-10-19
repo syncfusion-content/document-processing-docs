@@ -5,6 +5,7 @@ description: Learn here all about Insert text in current position in Syncfusion 
 platform: document-processing
 control: Insert text in current position 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

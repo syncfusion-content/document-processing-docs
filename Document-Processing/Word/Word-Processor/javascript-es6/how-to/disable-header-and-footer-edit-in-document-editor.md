@@ -5,6 +5,7 @@ description: Learn here all about disabling editing in header and footer JavaScr
 platform: document-processing
 control: Disable header and footer edit in document editor 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

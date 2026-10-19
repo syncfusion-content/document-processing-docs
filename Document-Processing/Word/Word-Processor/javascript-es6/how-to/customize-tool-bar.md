@@ -5,6 +5,7 @@ description: Learn here all about Customize tool bar in Syncfusion JavaScript (E
 platform: document-processing
 control: Customize tool bar 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

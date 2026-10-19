@@ -5,6 +5,7 @@ description: Learn here all about Form fields in Syncfusion JavaScript (ES6) Doc
 platform: document-processing
 control: Form fields 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

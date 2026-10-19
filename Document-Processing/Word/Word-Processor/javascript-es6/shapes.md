@@ -5,6 +5,7 @@ description: Learn here all about Shapes in Syncfusion JavaScript (ES6) Document
 platform: document-processing
 control: Shapes 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: Learn here all about Java in Syncfusion JavaScript (ES6) Document e
 platform: document-processing
 control: Java 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 
