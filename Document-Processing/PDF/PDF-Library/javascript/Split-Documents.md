@@ -11,6 +11,12 @@ documentation: UG
 
 The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) supports splitting a PDF file into individual pages, a user-defined range of pages, or a fixed number of pages per output document.
 
+## Video Tutorial
+
+Watch the following video to learn how to split a PDF document using the JavaScript PDF Library.
+
+{% youtube "https://www.youtube.com/watch?v=lptJZKgwk_4" %}
+
 ## Choosing a split method
 
 The library provides three methods on the `PdfDocument` class. Use the table below to pick the one that matches your scenario.
