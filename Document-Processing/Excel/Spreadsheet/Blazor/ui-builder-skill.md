@@ -5,6 +5,7 @@ description: Generate production-ready Blazor Spreadsheet using the Syncfusion U
 control: SfSpreadsheet
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 keywords: Blazor UI Builder, Skills, AI Assistants, Spreadsheet SDK, Agent Skills
 ---
 

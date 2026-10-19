@@ -5,6 +5,7 @@ description: Styles in JavaScript Spreadsheet enable users to customize cell app
 platform: document-processing
 control: Styles
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Styles in JavaScript Spreadsheet 
