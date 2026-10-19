@@ -5,6 +5,7 @@ description: Learn here all about table format in Syncfusion ASP.NET MVC Documen
 platform: document-processing
 control: Table Format
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

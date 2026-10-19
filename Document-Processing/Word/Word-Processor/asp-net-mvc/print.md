@@ -5,6 +5,7 @@ description: Learn here all about print in Syncfusion ASP.NET MVC Document Edito
 platform: document-processing
 control: Print
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

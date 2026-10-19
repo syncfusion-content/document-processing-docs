@@ -5,6 +5,7 @@ description: Learn here all about scrolling zooming in Syncfusion ASP.NET MVC Do
 platform: document-processing
 control: Scrolling Zooming
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

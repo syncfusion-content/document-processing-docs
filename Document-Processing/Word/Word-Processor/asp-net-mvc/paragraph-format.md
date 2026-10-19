@@ -5,6 +5,7 @@ description: Learn here all about paragraph format in Syncfusion ASP.NET MVC Doc
 platform: document-processing
 control: Paragraph Format
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

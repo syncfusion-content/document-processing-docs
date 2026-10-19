@@ -5,6 +5,7 @@ description: Learn here all about Global Local in Syncfusion ASP.NET MVC Documen
 platform: document-processing
 control: Global Local
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

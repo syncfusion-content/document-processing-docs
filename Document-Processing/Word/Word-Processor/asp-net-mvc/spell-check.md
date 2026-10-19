@@ -5,6 +5,7 @@ description: Learn here all about spell check in Syncfusion ASP.NET MVC Document
 platform: document-processing
 control: Spell Check
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

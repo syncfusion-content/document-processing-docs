@@ -5,6 +5,7 @@ description: Learn here all about styles in Syncfusion ASP.NET MVC Document Edit
 platform: document-processing
 control: Styles
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

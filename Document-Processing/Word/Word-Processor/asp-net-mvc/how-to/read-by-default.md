@@ -5,6 +5,7 @@ description: Learn here all about read by default in Syncfusion ASP.NET MVC Docu
 platform: document-processing
 control: Read By Default
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

@@ -5,6 +5,7 @@ description: Learn here all about Feature Module in Syncfusion ASP.NET MVC Docum
 platform: document-processing
 control: Feature Module
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

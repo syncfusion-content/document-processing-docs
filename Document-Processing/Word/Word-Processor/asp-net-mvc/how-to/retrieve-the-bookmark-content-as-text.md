@@ -5,6 +5,7 @@ description: Learn how to retrieve the whole document and bookmark content as te
 platform: document-processing
 control: Retrieve The Whole Document And Bookmark Content As Text
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to retrieve the whole document and bookmark content as text in  Document Editor component

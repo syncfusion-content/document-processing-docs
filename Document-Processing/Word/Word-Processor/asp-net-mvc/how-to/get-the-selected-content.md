@@ -5,6 +5,7 @@ description: Learn here all about get the selected content in Syncfusion ASP.NET
 platform: document-processing
 control: Get The Selected Content
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

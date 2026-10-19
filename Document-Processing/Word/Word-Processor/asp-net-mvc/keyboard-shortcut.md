@@ -5,6 +5,7 @@ description: Learn here all about keyboard shortcut in Syncfusion ASP.NET MVC Do
 platform: document-processing
 control: Keyboard Shortcut
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

@@ -5,6 +5,7 @@ description: Learn how to move the selection to specific position in Document fr
 platform: document-processing
 control: Move The Selection To Specific Position
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to move the selection to specific position in Document Editor component

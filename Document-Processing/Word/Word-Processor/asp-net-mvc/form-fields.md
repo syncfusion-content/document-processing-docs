@@ -5,6 +5,7 @@ description: Learn here all about Form Fields in Syncfusion ASP.NET MVC Document
 platform: document-processing
 control: Form Fields
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

@@ -5,6 +5,7 @@ description: Learn here all about Link in Syncfusion ASP.NET MVC Document Editor
 platform: document-processing
 control: Link
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

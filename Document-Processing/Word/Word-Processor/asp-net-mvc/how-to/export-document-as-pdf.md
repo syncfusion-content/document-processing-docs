@@ -5,6 +5,7 @@ description: Learn here all about export document as PDF in Syncfusion ASP.NET M
 platform: document-processing
 control: Export Document As PDF
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 
