@@ -506,7 +506,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-### DateTime Picker Field
+### DateTime Picker
 - UI: Field type (Date / Time), display format string, value, font, colors, border, alignment, required/read-only, print visibility.
 ![DateTime Picker properties panel showing format and field type](../../../javascript-es6/images/ui-datetime-edit.png)
 - API: [`updateFormField()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/formdesigner#updateformfield) for value, format script, typography, colors, borders.

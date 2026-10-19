@@ -16,7 +16,7 @@ Create or add new form fields visually with the Form Designer UI or programmatic
 The guide explains the following:
 - How to add fields with the Form Designer UI.
 - How to add and edit fields programmatically (API).
-- How to add common field types: Textbox, Password, CheckBox, RadioButton, ListBox, DropDown, Signature, Initial, DateTime Picker.
+- How to add common field types: Textbox, Password, CheckBox, RadioButton, ListBox, DropDown, Signature, Initial, DateTime picker.
 
 ## Steps
 
@@ -490,7 +490,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-### DateTime Picker Field
+### DateTime Picker
 
 **Add via UI**: Open Form Designer toolbar → select DateTime Picker → click on a PDF page to place the field → configure the field type (Date or Time) and format string in the **Properties** panel.
 
@@ -534,7 +534,7 @@ The **Format** tab in the Properties panel lets you:
 
 #### Form Designer Appearance
 
-Placed DateTime Picker fields have a distinct visual appearance in Form Designer mode, including:
+Placed DateTime pickers have a distinct visual appearance in Form Designer mode, including:
 
 - Colored background
 - Visible border
