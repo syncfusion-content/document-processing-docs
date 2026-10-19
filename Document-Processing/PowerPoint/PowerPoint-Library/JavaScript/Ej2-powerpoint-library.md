@@ -1,7 +1,7 @@
 ---
 layout: post
 title: JavaScript PowerPoint Library | Syncfusion
-description: Learn how to create and edit slides, paragraphs, text, shapes, images, tables, and charts in a PowerPoint presentation using the Syncfusion JavaScript PowerPoint Library.
+description: Create and edit slides, text, shapes, images, tables, and charts with the Syncfusion JavaScript PowerPoint Library.
 platform: document-processing
 control: PowerPoint
 documentation: ug
