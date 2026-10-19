@@ -116,3 +116,7 @@ Vite serves the application at `http://localhost:5173`. Open this URL in a brows
 The generated Word document contains a single paragraph with the text **"Hello World!!!"**.
 
 > **Note:** If you used Create-React-App instead of Vite, the run command is `npm start` and the default URL is `http://localhost:3000`.
+
+## See Also
+
+- [JavaScript Word Library documentation](https://help.syncfusion.com/document-processing/word/word-library/javascript/overview)
