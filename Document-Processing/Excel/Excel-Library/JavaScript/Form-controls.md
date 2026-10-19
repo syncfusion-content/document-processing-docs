@@ -4,6 +4,7 @@ description: Add and configure Excel form controls such as buttons, check boxes,
 platform: document-processing
 control: Excel
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Form Controls in JavaScript Excel

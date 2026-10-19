@@ -4,6 +4,7 @@ description: Avoid version conflicts when using multiple Syncfusion libraries by
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to avoid Syncfusion version conflicts in .NET Excel Library

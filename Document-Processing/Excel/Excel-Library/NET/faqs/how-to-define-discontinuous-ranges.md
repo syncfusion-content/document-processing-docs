@@ -4,6 +4,7 @@ description: Define discontinuous ranges in Excel worksheets using the Syncfusio
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to define discontinuous ranges in .NET Excel Library

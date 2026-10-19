@@ -4,6 +4,7 @@ description: Hyperlink limit describes the maximum number of hyperlinks supporte
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Maximum Hyperlinks in .NET Excel Library

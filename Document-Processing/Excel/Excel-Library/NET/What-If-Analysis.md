@@ -4,6 +4,7 @@ description: What-If Analysis Scenario Manager section describes how Syncfusion 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # What-If Analysis in .NET Excel Library

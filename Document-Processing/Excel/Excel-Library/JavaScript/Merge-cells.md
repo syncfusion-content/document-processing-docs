@@ -4,6 +4,7 @@ description: Merge and unmerge cell ranges and inspect merged regions with the S
 platform: document-processing
 control: Excel
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Merge Cells in JavaScript Excel

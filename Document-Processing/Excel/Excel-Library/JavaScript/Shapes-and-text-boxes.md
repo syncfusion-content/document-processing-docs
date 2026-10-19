@@ -4,6 +4,7 @@ description: Add AutoShapes and text boxes to worksheets and configure size, fil
 platform: document-processing
 control: Excel
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Shapes and Text Boxes in JavaScript Excel

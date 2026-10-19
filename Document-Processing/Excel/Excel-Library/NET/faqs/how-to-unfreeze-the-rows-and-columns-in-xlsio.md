@@ -4,6 +4,7 @@ description: Unfreeze rows and columns in Excel worksheets using the Syncfusion 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to unfreeze rows and columns in .NET Excel Library

@@ -4,6 +4,7 @@ description: Cell manipulation in the Syncfusion .NET Excel Library describes ho
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 keywords: c#, vb.net, excel, read excel, edit excel, edit excel cell, write excel cell, fill excel, write excel, update excel, syncfusion, xlsio
 ---
 

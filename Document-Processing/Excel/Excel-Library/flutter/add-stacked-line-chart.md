@@ -5,6 +5,7 @@ description: The Flutter Excel Library allows users create and customize stacked
 platform: document-processing
 control: Excel
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Stacked Line Chart in Syncfusion Excel Library

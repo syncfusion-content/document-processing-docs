@@ -5,6 +5,7 @@ description: Learn about introduction of Syncfusion .NET Excel Library Excel Lib
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 keywords: Excel, SDK, Automation, API, create, read, write
 ---
 

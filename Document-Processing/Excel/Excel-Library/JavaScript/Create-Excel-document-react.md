@@ -5,6 +5,7 @@ description: Learn how to create and download an Excel workbook in a React appli
 control: Excel
 platform: document-processing
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Getting Started with JavaScript Excel in React app
