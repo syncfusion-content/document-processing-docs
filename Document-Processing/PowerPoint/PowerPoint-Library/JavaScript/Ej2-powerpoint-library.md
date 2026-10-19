@@ -577,7 +577,7 @@ console.log('Saved:', outputPath);
 
 ### Replacing Images
 
-The following code example demonstrates how to replace an existing image in a slide. The Picture image data accepts a byte array that represents the new image data.
+The following code example demonstrates how to replace an existing image in a slide. The Picture.ImageData property accepts a byte array that represents the new image data. In this library, pass that byte array to `retargetEmbedded`.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -990,15 +990,138 @@ await pptxDoc.save('Output.pptx');
 
 You can also create a chart with the data from an existing excel worksheet. The following code example demonstrates the same.
 
+Pass the worksheet bytes in `from.bytes`, and set `from.sheet` and `from.range` to the cells that contain the categories and values. When `range` is omitted, the default range is `A2:B4`. The library copies the cell values into a new embedded workbook. It does not copy the entire Excel package.
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+
+import { readFileSync } from 'node:fs';
+import { Presentation } from '@syncfusion/ej2-pptx';
+import {
+  detectCharts,
+  enableCharts,
+  loadXlsxRoot,
+  addChart
+} from '@syncfusion/ej2-pptx/charts';
+
+// Enable classic chart authoring (optional charts module + xlsx root).
+detectCharts();
+enableCharts();
+await loadXlsxRoot();
+
+// Creates a Presentation instance and adds a blank slide.
+const pptxDoc = Presentation.create();
+const slide = pptxDoc.slides.add();
+
+// Reads an existing Excel worksheet.
+const excelBytes = readFileSync('Data/Sales.xlsx');
+
+// Creates a chart from the worksheet range (categories in column A, values in column B).
+const chart = await addChart(slide, {
+  type: 'ColumnClustered',
+  name: 'Sales Chart',
+  bounds: { x: 100, y: 10, width: 700, height: 500 },
+  from: {
+    bytes: excelBytes,
+    sheet: 'Sheet1',
+    range: 'A2:B4'
+  }
+});
+
+// Saves the PowerPoint Presentation to a file.
+await pptxDoc.save('Output.pptx');
+
+{% endhighlight %}
+{% endtabs %}
+
+`from.bytes` supplies the Excel file. `sheet` selects the worksheet, and `range` is the inclusive A1 range used for the chart data.
+
 ### Refreshing the chart
 
 Sometimes, the charts do not represent the actual data. In those cases, the charts in PowerPoint Presentation should be refreshed.
 
 The following code example demonstrates how to refresh the charts in PowerPoint Presentation.
 
+`refresh()` rebuilds the chart from its embedded workbook. It does not run a full Excel calculation.
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+
+import { readFileSync } from 'node:fs';
+import { open } from '@syncfusion/ej2-pptx';
+import {
+  detectCharts,
+  enableCharts,
+  loadXlsxRoot,
+  asChart
+} from '@syncfusion/ej2-pptx/charts';
+
+// Enable classic chart authoring (optional charts module + xlsx root).
+detectCharts();
+enableCharts();
+await loadXlsxRoot();
+
+// Opens a presentation that already contains a chart.
+const bytes = readFileSync('Data/ChartSample.pptx');
+const pptxDoc = await open(bytes);
+const slide = pptxDoc.slides[0];
+
+// Resolves the first chart on the slide and refreshes it from the embedded data.
+const chart = await asChart(slide.shapes[0], pptxDoc);
+if (chart) {
+  await chart.refresh();
+}
+
+// Saves the PowerPoint Presentation to a file.
+await pptxDoc.save('Output.pptx');
+
+{% endhighlight %}
+{% endtabs %}
+
+`asChart` binds the shape as a chart. `refresh()` updates the chart from the embedded package.
+
 ### Editing the Chart Data
 
 You can change the data for an existing chart. The code example demonstrates how to modify the chart in a slide.
+
+`applyDataRange` sets the category and value range and writes both the chart part and the embedded workbook. `setSeriesValueCells` replaces the values of one series.
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+
+import { readFileSync } from 'node:fs';
+import { open } from '@syncfusion/ej2-pptx';
+import {
+  detectCharts,
+  enableCharts,
+  loadXlsxRoot,
+  asChart
+} from '@syncfusion/ej2-pptx/charts';
+
+// Enable classic chart authoring (optional charts module + xlsx root).
+detectCharts();
+enableCharts();
+await loadXlsxRoot();
+
+// Opens a presentation that already contains a chart.
+const bytes = readFileSync('Data/ChartSample.pptx');
+const pptxDoc = await open(bytes);
+const slide = pptxDoc.slides[0];
+const chart = await asChart(slide.shapes[0], pptxDoc);
+if (!chart) throw new Error('No chart on the slide.');
+
+// Points the chart at a new data range and replaces series 0 values.
+await chart.applyDataRange('Sheet1!$A$2:$B$4');
+await chart.setSeriesValueCells(0, [60, 80, 60]);
+await chart.refresh();
+
+// Saves the PowerPoint Presentation to a file.
+await pptxDoc.save('Output.pptx');
+
+{% endhighlight %}
+{% endtabs %}
+
+`applyDataRange` requires an embedded package. `setSeriesValueCells` writes the new values for series 0 before `refresh()`.
 
 ### Customizing the chart
 
@@ -1277,16 +1400,58 @@ const chart = await addChart(slide, {
 });
 
 // --- snippet begin ---
-// Enable value data labels on series 0.
-await chart.commitSeriesDataLabels(0, { isValue: true });
+// Set the category (x) axis title and the value (y) axis title.
+await chart.commitPrimaryCategoryAxis({ title: 'Year' });
+await chart.commitPrimaryValueAxis({ title: 'Sales' });
 // --- snippet end ---
 
 // Saves the Presentation to a file.
-await pptxDoc.save('ChartDataLabels.pptx');
+await pptxDoc.save('ChartAxis.pptx');
 
 {% endhighlight %}
 {% endtabs %}
 
+`commitPrimaryCategoryAxis` sets the horizontal axis title. `commitPrimaryValueAxis` sets the vertical axis title.
+
 ### Removing the chart from slide
 
 The following code example demonstrates removing a chart from a slide.
+
+`removeChart` removes the chart instance from the slide shape collection.
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+
+import { readFileSync } from 'node:fs';
+import { open } from '@syncfusion/ej2-pptx';
+import {
+  detectCharts,
+  enableCharts,
+  loadXlsxRoot,
+  asChart,
+  removeChart
+} from '@syncfusion/ej2-pptx/charts';
+
+// Enable classic chart authoring (optional charts module + xlsx root).
+detectCharts();
+enableCharts();
+await loadXlsxRoot();
+
+// Opens a presentation that already contains a chart.
+const bytes = readFileSync('Data/ChartSample.pptx');
+const pptxDoc = await open(bytes);
+const slide = pptxDoc.slides[0];
+
+// Resolves the chart and removes it from the slide.
+const chart = await asChart(slide.shapes[0], pptxDoc);
+if (chart) {
+  removeChart(slide, chart);
+}
+
+// Saves the PowerPoint Presentation to a file.
+await pptxDoc.save('Output.pptx');
+
+{% endhighlight %}
+{% endtabs %}
+
+`asChart` returns the chart on the slide. `removeChart(slide, chart)` deletes that chart.
