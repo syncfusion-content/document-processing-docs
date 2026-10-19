@@ -5,6 +5,7 @@ description: Learn here all about Docker image deployment in Syncfusion ASP.NET 
 platform: document-processing
 control: Docker deployment 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 
