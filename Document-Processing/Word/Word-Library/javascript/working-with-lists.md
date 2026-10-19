@@ -183,82 +183,97 @@ import { ListPatternType, ListType, WordDocument } from '@syncfusion/ej2-docx';
 // Creates a new Word document.
 let document = WordDocument.create();
 
-// --- CardinalText (One, Two, Three, ...) ---
+// Creates a numbered list style with the CardinalText pattern.
 let listStyle = document.addListStyle(ListType.Numbered, 'CardinalText');
 let levelOne = listStyle.levels.getItem(0);
 levelOne.patternType = ListPatternType.CardinalText;
 levelOne.startAt = 1;
 
-// Access section of document.
+// Gets the first section of the document.
 let section = document.sections[0];
 
+// Gets the first paragraph in the section.
 let paragraph = section.body.paragraphs[0];
 paragraph.appendText('List pattern Cardinal Text');
 
+// Adds the first list item.
 paragraph = section.body.appendParagraph();
 paragraph.appendText('List item 1');
 paragraph.listFormat.applyStyle('CardinalText');
 
+// Adds the second list item and continues numbering.
 paragraph = section.body.appendParagraph();
 paragraph.appendText('List item 2');
 paragraph.listFormat.applyStyle('CardinalText');
 paragraph.listFormat.continueListNumbering();
 
+// Adds the third list item and continues numbering.
 paragraph = section.body.appendParagraph();
 paragraph.appendText('List item 3');
 paragraph.listFormat.applyStyle('CardinalText');
 paragraph.listFormat.continueListNumbering();
 
+// Adds an empty paragraph as a separator.
 section.body.appendParagraph();
 
-// --- HindiLetter1 ---
+// Creates a numbered list style with the HindiLetter1 pattern.
 listStyle = document.addListStyle(ListType.Numbered, 'HindiLetter1');
 levelOne = listStyle.levels.getItem(0);
 levelOne.patternType = ListPatternType.HindiLetter1;
 levelOne.startAt = 1;
 
+// Adds a heading paragraph for the Hindi letter list.
 paragraph = section.body.appendParagraph();
 paragraph.appendText('List pattern Hindi Letter');
 
+// Adds the first list item.
 paragraph = section.body.appendParagraph();
 paragraph.appendText('List item 1');
 paragraph.listFormat.applyStyle('HindiLetter1');
 
+// Adds the second list item and continues numbering.
 paragraph = section.body.appendParagraph();
 paragraph.appendText('List item 2');
 paragraph.listFormat.applyStyle('HindiLetter1');
 paragraph.listFormat.continueListNumbering();
 
+// Adds the third list item and continues numbering.
 paragraph = section.body.appendParagraph();
 paragraph.appendText('List item 3');
 paragraph.listFormat.applyStyle('HindiLetter1');
 paragraph.listFormat.continueListNumbering();
 
+// Adds an empty paragraph as a separator.
 section.body.appendParagraph();
 
-// --- Hebrew1 ---
+// Creates a numbered list style with the Hebrew1 pattern.
 listStyle = document.addListStyle(ListType.Numbered, 'Hebrew1');
 levelOne = listStyle.levels.getItem(0);
 levelOne.patternType = ListPatternType.Hebrew1;
 levelOne.startAt = 1;
 
+// Adds a heading paragraph for the Hebrew list.
 paragraph = section.body.appendParagraph();
 paragraph.appendText('List pattern Hebrew');
 
+// Adds the first list item.
 paragraph = section.body.appendParagraph();
 paragraph.appendText('List item 1');
 paragraph.listFormat.applyStyle('Hebrew1');
 
+// Adds the second list item and continues numbering.
 paragraph = section.body.appendParagraph();
 paragraph.appendText('List item 2');
 paragraph.listFormat.applyStyle('Hebrew1');
 paragraph.listFormat.continueListNumbering();
 
+// Adds the third list item and continues numbering.
 paragraph = section.body.appendParagraph();
 paragraph.appendText('List item 3');
 paragraph.listFormat.applyStyle('Hebrew1');
 paragraph.listFormat.continueListNumbering();
 
+// Saves the Word document.
 document.save('Output.docx');
 {% endhighlight %}
 {% endtabs %}
@@ -308,6 +323,7 @@ paragraph.appendText('User defined list - Level 1');
 paragraph.listFormat.continueListNumbering();
 paragraph.listFormat.increaseIndentLevel();
 
+// Saves the Word document.
 document.save('Output.docx');
 {% endhighlight %}
 {% endtabs %}
@@ -412,6 +428,7 @@ paragraph.appendText('User defined list - Level 2');
 paragraph.listFormat.continueListNumbering();
 paragraph.listFormat.increaseIndentLevel();
 
+// Saves the Word document.
 document.save('Output.docx');
 {% endhighlight %}
 {% endtabs %}
@@ -470,6 +487,7 @@ paragraph.appendText('User defined list - Level 2');
 paragraph.listFormat.continueListNumbering();
 paragraph.listFormat.increaseIndentLevel();
 
+// Saves the Word document.
 document.save('Output.docx');
 {% endhighlight %}
 {% endtabs %}
@@ -489,6 +507,7 @@ let document = WordDocument.open(data);
 let listString = document.lastParagraph.listString;
 console.log('listString:', JSON.stringify(listString));
 
+// Saves the Word document.
 document.save('Output.docx');
 {% endhighlight %}
 {% endtabs %}
