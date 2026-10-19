@@ -5,6 +5,7 @@ description: Learn about mobile responsiveness in the Syncfusion React Spreadshe
 control: Mobile responsiveness 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Mobile Responsiveness in React Spreadsheet

@@ -5,6 +5,7 @@ description: Learn about autofill in the Syncfusion React Spreadsheet component 
 control: Spreadsheet
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Autofill in React Spreadsheet

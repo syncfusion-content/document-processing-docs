@@ -5,6 +5,7 @@ description: Learn about Conditional formatting rules, data bars, color scales a
 control: Formatting
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Conditional Formatting in React Spreadsheet

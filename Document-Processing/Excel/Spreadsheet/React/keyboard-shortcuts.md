@@ -5,6 +5,7 @@ description: Learn about keyboard shortcuts in the Syncfusion React Spreadsheet 
 control: Keyboard shortcuts
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Keyboard shortcuts in React Spreadsheet

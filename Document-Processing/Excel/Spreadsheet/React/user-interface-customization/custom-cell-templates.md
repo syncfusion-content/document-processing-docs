@@ -5,6 +5,7 @@ description: Learn about custom templates in the Syncfusion React Spreadsheet co
 control: Spreadsheet 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Custom Templates in React Spreadsheet

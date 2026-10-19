@@ -5,6 +5,7 @@ description: Learn about charts and visualizations in the Syncfusion React Sprea
 control: Spreadsheet
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Charts and Visualizations in React Spreadsheet
