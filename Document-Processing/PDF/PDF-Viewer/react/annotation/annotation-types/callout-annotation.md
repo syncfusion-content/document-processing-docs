@@ -12,6 +12,8 @@ domainurl: ##DomainURL##
 
 Callout annotations let users place an editable text box on a PDF page and connect it to a target point with one or more callout leader lines. They combine the inline commenting experience of a Free Text annotation with a connector that visually points to the content being annotated, making them ideal for review notes, labels, and call-outs that reference specific areas of a document without altering the original content.
 
+![Callout Annotation Overview](../../images/ui-callout.png)
+
 ## Enable Callout Annotation in the Viewer
 
 To enable Callout annotations, inject the following modules into the React PDF Viewer:
@@ -50,6 +52,9 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 
 1. Open the **Annotation Toolbar**.
 2. Select the **Callout Annotation** tool.
+
+   ![Callout Annotation tool in the annotation toolbar](../../images/ui-callout.png)
+
 3. Click on the PDF page to place the text box.
 4. Type the annotation text into the box.
 5. Drag or resize the text box as needed.
@@ -124,6 +129,18 @@ function addCalloutProgrammatically() {
 ## Customize Callout Annotation Appearance
 
 Customize the appearance of a Callout Annotation when adding it programmatically by passing values such as `borderColor`, `borderWidth`, `borderStyle`, `opacity`, `lineEndingStyle`, and `calloutLines` to [`addAnnotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation). These values control the leader line and text box rendered on the page.
+
+To edit a callout after placing it, select the annotation and use the annotation toolbar to change its text formatting and appearance.
+
+![Selected Callout Annotation with text formatting controls](../../images/edit-callout.png)
+
+Use the color controls to change the selected callout's color.
+
+![Color control for a selected Callout Annotation](../../images/edit-color-callout.png)
+
+To change the leader line's arrowhead or line style, open its line properties.
+
+![Callout line properties for arrowhead and line style](../../images/line-properties-callout.png)
 
 N> To tailor right‑click options, see [**Customize Context Menu**](../../context-menu/custom-context-menu).
 
