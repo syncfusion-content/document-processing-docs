@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Include the Authorization token in Blazor PDF Viewer | Syncfusion
+title: How to Include Authorization token in Blazor PDF Viewer | Syncfusion
 description: Learn here all about how to include the authorization token in Syncfusion Blazor PDF Viewer component and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Include the Authorization token in Blazor PDF Viewer Component
+# How to Include Authorization token in Blazor PDF Viewer
 
 The Syncfusion&reg; Blazor PDF Viewer component allows to include the authorization token in the PDF viewer AJAX request using the properties of the ajaxRequest header available in [`AjaxRequestSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.PdfViewerBase.html#Syncfusion_Blazor_PdfViewer_PdfViewerBase_AjaxRequestSettings), and it will be included in every AJAX request send from PDF Viewer.
 

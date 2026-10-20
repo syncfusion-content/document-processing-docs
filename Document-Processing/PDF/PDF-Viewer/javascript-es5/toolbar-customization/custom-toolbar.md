@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Custom Toolbar in Javascript PDF Viewer | Syncfusion
-description: Learn here all about Custom Toolbar in Syncfusion Javascript PDF Viewer of Syncfusion Essential JS 2 and more.
+title: Custom Toolbar in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Create a custom toolbar in the JavaScript (ES5) PDF Viewer, including adding commands and modifying the built-in tools to match your workflow.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## Custom Toolbar
+# Custom Toolbar in JavaScript (ES5) PDF Viewer
 
 The PDF Viewer provides APIs for the user interaction options available in its built-in toolbar. Using these APIs, a custom application-level toolbar can be created by hiding the default toolbar and adding Syncfusion EJ2 toolbar components.
 
@@ -68,7 +68,6 @@ Hide the default toolbar using `enableToolbar` and `enableNavigationToolbar` pro
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
-```javascript
 var pdfviewer = new ej.pdfviewer.PdfViewer({
     enableToolbar: false,
     enableNavigationToolbar: false,
@@ -76,10 +75,8 @@ var pdfviewer = new ej.pdfviewer.PdfViewer({
 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation,ej.pdfviewer.Print);
 pdfviewer.appendTo('#PdfViewer');
-```
 {% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
-```javascript
 var pdfviewer = new ej.pdfviewer.PdfViewer({
     enableToolbar: false,
     enableNavigationToolbar: false,
@@ -88,7 +85,6 @@ var pdfviewer = new ej.pdfviewer.PdfViewer({
 });
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Navigation,ej.pdfviewer.Print);
 pdfviewer.appendTo('#PdfViewer');
-```
 {% endhighlight %}
 {% endtabs %}
 
@@ -96,7 +92,7 @@ pdfviewer.appendTo('#PdfViewer');
 
 Add Syncfusion EJ2 Toolbar components to perform primary actions like Open, Previous page, Next page, Go to page, Print, and Download:
 
-```javascript
+```js
 
 var toolbarObj = new ej.navigations.Toolbar({
     items: [
@@ -105,7 +101,7 @@ var toolbarObj = new ej.navigations.Toolbar({
         { prefixIcon: 'e-pv-previous-page-navigation-icon', id: 'previousPage', tooltipText: 'Previous Page', align: 'Center', click: previousClicked.bind(this) },
         { prefixIcon: 'e-pv-next-page-navigation-icon', id: 'nextPage', tooltipText: 'Next Page', align: 'Center', click: nextClicked.bind(this) },
         { template: inputTemplate, tooltipText: 'Page Number', align: 'Center' },
-        { template: ele, tooltipText: 'Page Number', align: 'Center' },
+        { template: totalPageNum, tooltipText: 'Page Number', align: 'Center' },
         { prefixIcon: 'e-pv-search-icon', tooltipText: 'Text Search', align: 'Right', click: searchClicked.bind(this) },
         { prefixIcon: 'e-pv-print-document-icon', tooltipText: 'Print', align: 'Right', click: printClicked.bind(this) },
         { prefixIcon: 'e-pv-download-document-icon', tooltipText: 'Download', align: 'Right', click: downloadClicked.bind(this) }
@@ -119,7 +115,7 @@ toolbarObj.appendTo('#topToolbar');
 
 Add Syncfusion EJ2 Toolbar components to perform magnification actions in the PDF Viewer:
 
-```javascript
+```js
 
 var magnificationToolbar = new ej.navigations.Toolbar({
     items: [
@@ -309,9 +305,6 @@ Add the following scripts for handling user interactions with the custom toolbar
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
-
-```javascript
-
 var inputTemplate = '<div class=""><input type="text" class="e-input-group e-pv-current-page-number" id="currentPage" /></div>';
 var totalPageNum = '<div class=""><span class="e-pv-total-page-number" id="totalPage">of 0</span></div>';
 var isBookmarkOpen = false;
@@ -653,13 +646,8 @@ bookmarkPopup.hide();
 textSearchPopup.hide();
 enableNextButton(false);
 enablePrevButton(false);
-
-```
 {% endhighlight %}
 {% highlight js tabtitle="Server-Backed" %}
-
-```javascript
-
 var inputTemplate = '<div class=""><input type="text" class="e-input-group e-pv-current-page-number" id="currentPage" /></div>';
 var totalPageNum = '<div class=""><span class="e-pv-total-page-number" id="totalPage">of 0</span></div>';
 var isBookmarkOpen = false;
@@ -1005,12 +993,10 @@ bookmarkPopup.hide();
 textSearchPopup.hide();
 enableNextButton(false);
 enablePrevButton(false);
-
-```
 {% endhighlight %}
 {% endtabs %}
 
-Sample :
+Sample:
 [https://document.syncfusion.com/demos/pdf-viewer/javascript-es5/#/tailwind3/pdfviewer/custom-toolbar.html](https://document.syncfusion.com/demos/pdf-viewer/javascript-es5/#/tailwind3/pdfviewer/custom-toolbar.html)
 
 ## See also

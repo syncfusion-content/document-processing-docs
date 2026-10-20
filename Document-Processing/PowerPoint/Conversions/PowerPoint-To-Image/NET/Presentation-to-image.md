@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert PowerPoint to Image using Syncfusion® PowerPoint Library
 
-Syncfusion<sup>&reg;</sup> PowerPoint library (Presentation) allows you to convert PowerPoint Presentation document to Image within a few lines of code in .NET applications and also it does not require Microsoft PowerPoint application to be installed in the machine. Using this, you can create an input PowerPoint Presentation document from scratch or load an existing PowerPoint Presentation document and then easily convert to Image.
+The [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) allows you to convert PowerPoint Presentation document to Image within a few lines of code in .NET applications and also it does not require Microsoft PowerPoint application to be installed in the machine. Using this, you can create an input PowerPoint Presentation document from scratch or load an existing PowerPoint Presentation document and then easily convert to Image.
 
 The Syncfusion<sup>&reg;</sup> PowerPoint to Image converter offers high versatility and seamless performance across various .NET platforms, including [Windows Forms](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-windows-forms), [WPF](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-wpf), [ASP.NET](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-asp-net), [ASP.NET MVC](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-asp-net-mvc), [ASP.NET Core](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-asp-net-core), [Blazor](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-blazor), [Xamarin](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-xamarin), [WinUI](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-winui), [.NET MAUI](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-maui). Also, in different environments like [Azure](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-azure), [AWS](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-aws), [Google Cloud](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-google-cloud-platform), [Linux](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-linux), and [macOS](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/convert-powerpoint-to-image-in-mac). 
 
@@ -18,6 +18,7 @@ The Syncfusion<sup>&reg;</sup> PowerPoint to Image converter offers high versati
 * Support to convert [specific slide](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/presentation-to-image#convert-a-slide-to-image) of PowerPoint Presentation document to image.
 * Set [fallback fonts](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/fallback-fonts-in-pptxtoimage-conversion) for characters when glyphs are not available.
 * Support for [font substitution](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/font-substitution-in-pptxtoimage-conversion) when fonts are not available during PowerPoint to image conversion.
+* Support for [custom fonts registration](./Custom-fonts-registration-pptx-to-image) through the `FontManager` API, enabling use of fonts that are not installed on the operating system.
 
 ## Assemblies and NuGet packages required
 
@@ -138,8 +139,8 @@ using Syncfusion.Presentation;
 using Syncfusion.PresentationRenderer;
 using System.IO;
 
-//Open the existing PowerPoint presentation with stream.
-using (IPresentation pptxDoc = Presentation.Open(fileStreamInput))
+//Open the existing PowerPoint presentation.
+using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
 {
     //Initialize the PresentationRenderer to perform image conversion.
     pptxDoc.PresentationRenderer = new PresentationRenderer();
@@ -198,7 +199,7 @@ image.Save("slide1.png")
 'Disposes the image
 image.Dispose()
 'Closes the Presentation instance
-Presentation_1.Close()
+pptxDoc.Close()
 {% endhighlight %}
 
 {% endtabs %}
@@ -221,9 +222,13 @@ The following code snippet demonstrates how to convert a PowerPoint slide to ima
 
 {% tabs %}
 
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//The Essential Presentation Library does not provides support to custom image resolution in C# [Cross-platform] platforms.
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Loads the PowerPoint presentation
-IPresentation pptxDoc = Presentation.Open("Output.pptx");
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
 //Declare variables to hold custom width and height
 int customWidth = 1500;
 int customHeight = 1000;
@@ -245,7 +250,7 @@ pptxDoc.Close();
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Loads the PowerPoint presentation
-Dim pptxDoc As IPresentation = Presentation.Open("Output.pptx")
+Dim pptxDoc As IPresentation = Presentation.Open("Sample.pptx")
 'Declare variables to hold custom width and height
 Dim customWidth As Integer = 1500
 Dim customHeight As Integer = 1000
@@ -271,7 +276,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Convert PowerPoint Animations to Images
 
-The .NET PowerPoint Library (Presentation) allows you to convert PowerPoint slides into images based on the sequence of entrance animation effects applied to each element.
+The [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) allows you to convert PowerPoint slides into images based on the sequence of entrance animation effects applied to each element.
 
 For instance, if a slide includes bulleted paragraphs, each having entrance animation effects, the Presentation library converts every bulleted paragraph into a separate image.
 
@@ -385,7 +390,7 @@ PowerPoint slides can be converted to images in UWP platform by using Essential<
 
 ## Font Substitution
 
-When a font used in a PowerPoint presentation is unavailable in the environment where it is converted to image, then the library substitutes the ‘Microsoft Sans Serif’ as a default font for text rendering. This leads to a difference in text layouts of PowerPoint presentation and the converted image. 
+When a font used in a PowerPoint presentation is unavailable in the environment where it is converted to image, then the library substitutes the ‘Microsoft Sans Serif’ as a default font for text rendering. This leads to a difference in text layouts of PowerPoint presentation and the converted image.
 
 To avoid this, the Essential<sup>&reg;</sup> Presentation library allows you to set an alternate font for the missing font used in the PowerPoint presentation. For further information, click [here](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/font-substitution-in-pptxtoimage-conversion).
 
@@ -393,9 +398,17 @@ To avoid this, the Essential<sup>&reg;</sup> Presentation library allows you to 
 
 During PowerPoint to Image conversions, if a glyph of the input text is unavailable in the specified font, the text will not be rendered properly. To address this, the Syncfusion PowerPoint (Presentation) library allows users to specify fallback fonts. When a glyph is missing, the library will use one of the fallback fonts to render the text correctly in the output image. For further information, click [here](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-image/net/fallback-fonts-in-pptxtoimage-conversion).
 
+## Custom font registration
+
+In many deployment environments such as cloud-hosted, containerized, and cross-platform applications, installing fonts on the operating system is not possible or desirable. The [Syncfusion .NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) allows users to register custom fonts through the `FontManager` API, maintaining a private font repository within the library. This supports TrueType (`.ttf`) and OpenType (`.otf`) formats, registered from memory streams or a folder, and ensures consistent document rendering without depending on system-installed fonts.
+
+N> Register the required fonts during application startup using `FontManager.RegisterFonts` and clear them during shutdown using `FontManager.ClearRegisteredFonts` for optimal performance.
+
+For further information, click [here](./Custom-fonts-registration-pptx-to-image).
+
 ## Online Demo
 
-* Explore how to convert the PowerPoint presentation to an image using the .NET PowerPoint Library (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/pptxtoimage#/tailwind).
+* Explore how to convert the PowerPoint presentation to an image using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/pptxtoimage#/tailwind).
 
 ## See Also
 

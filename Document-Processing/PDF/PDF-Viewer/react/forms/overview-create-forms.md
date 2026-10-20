@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview of Create form fields in React PDF Viewer | Syncfusion
-description: Learn how to create edit each form field using the PDF Viewer UI and how to create them programmatically in the Syncfusion React PDF Viewer.
+title: About Syncfusion React PDF Viewer Manage Form Fields | Syncfusion
+description: Learn about introduction of the Syncfusion React PDF Viewer Manage Form Fields section and the key capabilities it provides.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Create, edit, style, and remove form fields in React PDF Viewer
+# About Syncfusion React PDF Viewer Manage Form Fields
 
 The [React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/overview) enables creation of interactive PDF form fields, modification of their behavior and appearance, and removal when no longer required. All form-field operations can be performed using either the [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/react/#/tailwind3/pdfviewer/form-designer) or the React APIs.
 

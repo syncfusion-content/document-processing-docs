@@ -1,14 +1,13 @@
 ---
 layout: post
-title: Delete an annotation in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to delete a specific annotation in the Syncfusion ASP.NET MVC PDF Viewer using the deleteAnnotationById method.
+title: How to Delete a Specific Annotation in ASP.NET MVC PDF | Syncfusion
+description: Delete a specific annotation in the ASP.NET MVC PDF Viewer using the deleteAnnotationById method and the annotation identifier from the API.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Delete an annotation in the ASP.NET MVC PDF Viewer
+# How to Delete a Specific Annotation in ASP.NET MVC PDF Viewer
 
 Use the `deleteAnnotationById()` method to remove a specific annotation from a PDF document by its id.
 
@@ -16,7 +15,7 @@ Use the `deleteAnnotationById()` method to remove a specific annotation from a P
 
 **Step 1:** Follow the steps provided in the [Syncfusion ASP.NET MVC PDF Viewer getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started) to create a simple PDF Viewer sample.
 
-**Step 2:** Use the following code to delete a specific annotation using `deleteAnnotationById()`.
+**Step 2:** Use the following code to delete a specific annotation using `deleteAnnotationById()`. The example deletes the first annotation in the collection; replace `[0]` with the index of the annotation you want to remove.
 
 
 {% tabs %}

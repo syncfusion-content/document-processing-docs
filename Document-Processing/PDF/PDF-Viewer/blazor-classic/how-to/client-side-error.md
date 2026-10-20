@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Resolve the “Client-side error” in .Net 6.0 | Syncfusion
+title: How to Resolve the “Client-side error” in .Net 6.0 | Syncfusion
 description: Learn here all about resolve the “Client-side error is found” issue in .Net 6.0 which uses System.Text.Json for serialization.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Resolve the “Client-side error…” issue in .Net 6.0
+# How to Resolve the “Client-side error” in .Net 6.0
 
 Issue: “Client-side error is found. Check the custom headers provided in the AjaxRequestSettings property and web action methods in the ServerActionSettings” issue in .Net 6.0 which uses System.Text.Json for serialization instead of Newtonsoft.Json
 

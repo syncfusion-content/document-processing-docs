@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add custom fonts in Core PDF Viewer | Syncfusion
-description: Learn how to add and load custom TTF fonts for documents displayed in the Core PDF Viewer using the customFonts property.
+title: How to Add Custom Fonts in ASP.NET Core PDF Viewer | Syncfusion
+description: Add and load custom TTF fonts for documents displayed in the ASP.NET Core PDF Viewer using the customFonts property and the assets folder.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add custom fonts to PDF forms in ASP.NET Core PDF Viewer
+# How to Add Custom Fonts in ASP.NET Core PDF Viewer
 
 The Syncfusion ASP.NET Core PDF Viewer supports loading, editing, and saving custom fonts in interactive form fields such as [TextBox](../forms/manage-form-fields/create-form-fields#textbox), [ListBox](../forms/manage-form-fields/create-form-fields#listbox), and [DropDown](../forms/manage-form-fields/create-form-fields#dropdown). Use the `customFonts` property to ensure consistent text rendering even when specific fonts are not installed on the user's system.
 
@@ -31,7 +31,7 @@ The custom font workflow in the PDF Viewer involves these key steps:
 
 ### Step 1: Add TTF font files
 
-Place the TTF font files in the resource path used by the PDF Viewer. Fonts can be referenced in two ways:
+Place the TTF font files in the resource path used by the PDF Viewer (for example, the `wwwroot` folder in a typical ASP.NET Core project). Fonts can be referenced in two ways:
 
 * **Relative Path:** (for example: `calibri.ttf` or `fallback-fonts/calibri.ttf`)
 * **Absolute URL:** Host fonts on a secure server and reference them using a fully qualified URL. Ensure that the hosting server has **CORS** enabled.

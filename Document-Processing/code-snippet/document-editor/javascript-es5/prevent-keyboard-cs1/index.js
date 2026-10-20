@@ -1,6 +1,6 @@
 ej.documenteditor.DocumentEditor.Inject(ej.documenteditor.Selection,ej.documenteditor.Editor,ej.documenteditor.SfdtExport)
 
-var documentEditor = new ej.documenteditor.DocumentEditor({ enableSfdtExport: true, enableSelection: true, enableEditor: true, isReadOnly: false });
+var documentEditor = new ej.documenteditor.DocumentEditor({ enableSfdtExport: true, enableSelection: true, enableEditor: true, isReadOnly: false, height: '370px' });
 
 documentEditor.appendTo('#DocumentEditor');
 

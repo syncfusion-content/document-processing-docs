@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Supported PDF conformance levels | Syncfusion
-description: Learn about the supported PDF/A and PDF/X conformance levels in the React PDF Viewer component.
+title: How to Use PDF/A and PDF/X Conformance in React PDF | Syncfusion
+description: Learn about the PDF/A and PDF/X conformance levels supported in the Syncfusion PDF tools used together with the React PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Supported PDF conformance in React PDF Viewer
+# How to Use PDF/A and PDF/X Conformance in React PDF Viewer
 
-The Angular PDF Viewer supports the following PDF/A and PDF/X conformance levels:
+The React PDF Viewer supports the following PDF/A and PDF/X conformance levels:
 
 * PDF/A-1a
 * PDF/A-1b

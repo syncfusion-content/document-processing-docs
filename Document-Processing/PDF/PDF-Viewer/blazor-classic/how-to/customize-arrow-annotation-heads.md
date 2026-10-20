@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize the arrow annotation heads in Blazor PDF Viewer | Syncfusion
+title: How to Customize arrow heads in Blazor PDF Viewer Classic | Syncfusion
 description: Learn here all about how to increase the connection buffer size in Syncfusion Blazor PDF Viewer component and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Customize the arrow annotation heads in Blazor PDF Viewer Component
+# How to Customize arrow heads in Blazor PDF Viewer Classic
 
 You can customize the arrow annotation using the ArrowSettings API.
 

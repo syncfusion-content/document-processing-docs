@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Save PDF files to Box cloud storage in TypeScript PDF Viewer | Syncfusion
-description: Learn how to save PDF files to Box cloud storage using the Syncfusion TypeScript PDF Viewer component with a server-backed web service.
+title: Save PDFs to Box Storage in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Save PDF files from the JavaScript (ES6) PDF Viewer to Box cloud storage using a server-backed web service for authentication and secure uploads.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Save PDF files to Box cloud storage
+# Save PDF Files to Box Cloud Storage in JavaScript (ES6) PDF Viewer
 
-The JavaScript PDF Viewer component supports saving PDF files to Box cloud file storage using a server-backed web service. This article describes a recommended server-client pattern that keeps credentials secure and shows how to upload viewer documents to a Box folder.
+The TypeScript PDF Viewer component supports saving PDF files to Box cloud file storage using a server-backed web service. This article describes a recommended server-client pattern that keeps credentials secure and shows how to upload viewer documents to a Box folder.
 
 **Step 1:** Set up a Box developer account and create a Box application
 
@@ -55,7 +55,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Download()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#download) method to save the downloaded PDF file to the Box cloud storage folder.
+5. Modify the [Download()] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#download) method to save the downloaded PDF file to the Box cloud storage folder.
 
 ```csharp
 [HttpPost("Download")]
@@ -94,7 +94,7 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
 }
 ```
 
-6. Open the `appsettings.json` file in your web service project, add the required settings below the existing `"AllowedHosts"` configuration
+6. Open the `appsettings.json` file in your web service project, add the required settings below the existing `"AllowedHosts"` configuration.
 
 ```json
 {

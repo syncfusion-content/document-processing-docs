@@ -1,13 +1,13 @@
 ---
-title: Find and replace in Word document | DocIO | Syncfusion
-description: Learn how to find a text and replace it with another text, image, or table in a Word document using the .NET Word (DocIO) library.
+title: Find and replace in Word document in .NET Word | Syncfusion
+description: Learn how to find a text and replace it with another text, image, or table in a Word document using the .NET Word library.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Working with Find and Replace
+# Find and replace in Word document in .NET Word
 
-You can search a particular text you like to change and replace it with another text or part of the document.
+You can search for particular text you want to change and replace it with another text or part of the document.
 
 To quickly get started with the Find and Replace options in a Word document, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=EJDihId35nI" %}
@@ -23,142 +23,142 @@ The following table illustrates the supported overloads for Find and Replace fun
 </tr>
 <tbody>
 <tr>
-<td>{{ '[Find(string given, bool caseSensitive, bool wholeWord)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Find_System_String_System_Boolean_System_Boolean_)' | markdownify }}</td>
+<td>{{ '[Find(string given, bool caseSensitive, bool wholeWord)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Find_System_String_System_Boolean_System_Boolean_)' | markdownify }}</td>
 <td>Finds the text based on specified string, taking into the consideration of caseSensitive and wholeWord options.</td>
 <td>{{ '[Find first occurrence using string example.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-text-in-Word-document)' | markdownify }}</td>
 </tr>
 <tr>
-<td>{{ '[Find(Regex pattern)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Find_System_Text_RegularExpressions_Regex_)' | markdownify }}</td>
+<td>{{ '[Find(Regex pattern)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Find_System_Text_RegularExpressions_Regex_)' | markdownify }}</td>
 <td>Finds the text based on specified regular expression.</td>
 <td>{{ '[Find first occurrence using regex example.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-replace-text-with-formatted-text)' | markdownify }}</td>
 </tr>
 <tr>
-<td>{{ '[FindAll(string given, bool caseSensitive, bool wholeWord)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindAll_System_String_System_Boolean_System_Boolean_)' | markdownify }}</td>
+<td>{{ '[FindAll(string given, bool caseSensitive, bool wholeWord)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindAll_System_String_System_Boolean_System_Boolean_)' | markdownify }}</td>
 <td>Finds and returns all entries of the specified string, taking into the consideration of caseSensitive and wholeWord options.</td>
 <td>{{ '[Find and highlight all](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-highlight-all)' | markdownify }}</td>
 </tr>
 <tr>
-<td>{{ '[FindAll(Regex pattern)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindAll_System_Text_RegularExpressions_Regex_)' | markdownify }}</td>
+<td>{{ '[FindAll(Regex pattern)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindAll_System_Text_RegularExpressions_Regex_)' | markdownify }}</td>
 <td>Finds and returns all entries of the specified regular expression.</td>
 <td>{{ '[Find all and replace text with merge field.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-replace-with-merge-field)' | markdownify }}</td>
 </tr>
 <tr>
-<td>{{ '[FindNext(TextBodyItem startTextBodyItem, string given, bool caseSensitive, bool wholeWord)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindNext_Syncfusion_DocIO_DLS_TextBodyItem_System_String_System_Boolean_System_Boolean_)' | markdownify }}</td>
+<td>{{ '[FindNext(TextBodyItem startTextBodyItem, string given, bool caseSensitive, bool wholeWord)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindNext_Syncfusion_DocIO_DLS_TextBodyItem_System_String_System_Boolean_System_Boolean_)' | markdownify }}</td>
 <td>Finds the next entry of the specified text from the specified text body item, taking into the consideration of caseSensitive and wholeWord options.</td>
 <td>{{ '[Find next occurrence using string example.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-next)' | markdownify }}</td>
 </tr>
 <tr>
-<td>{{ '[FindNext(TextBodyItem startBodyItem, Regex pattern)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindNext_Syncfusion_DocIO_DLS_TextBodyItem_System_Text_RegularExpressions_Regex_)' | markdownify }}</td>
+<td>{{ '[FindNext(TextBodyItem startBodyItem, Regex pattern)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindNext_Syncfusion_DocIO_DLS_TextBodyItem_System_Text_RegularExpressions_Regex_)' | markdownify }}</td>
 <td>Finds the next entry of the specified regular expression from the specified text body item.</td>
 <td>{{ '[Find next occurrence using regex example.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-next-and-replace-with-formatted-text)' | markdownify }}</td>
 </tr>
 <tr>
-<td>{{ '[FindSingleLine(string given, bool caseSensitive, bool wholeWord)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindSingleLine_System_String_System_Boolean_System_Boolean_)' | markdownify }}</td>
+<td>{{ '[FindSingleLine(string given, bool caseSensitive, bool wholeWord)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindSingleLine_System_String_System_Boolean_System_Boolean_)' | markdownify }}</td>
 <td>Finds the first entry of specified pattern of text in single-line mode which is extended to several paragraph in the document, taking into the consideration of caseSensitive and wholeWord options.</td>
 <td>{{ '[Find first text using string that extend to several paragraphs.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-find-next-paragraphs)' | markdownify }}</td>
 </tr>
 <tr>
-<td>{{ '[FindSingleLine(Regex pattern)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindSingleLine_System_Text_RegularExpressions_Regex_)' | markdownify }}</td>
+<td>{{ '[FindSingleLine(Regex pattern)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindSingleLine_System_Text_RegularExpressions_Regex_)' | markdownify }}</td>
 <td>Finds the first entry of specified pattern of text in single-line mode which is extended to several paragraph in the document.</td>
 <td>{{ '[Find first text using string that extend to several paragraphs.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Replace-text-extended-to-several-paragraphs)' | markdownify }}</td>
 </tr>
 <tr>
-<td>{{ '[FindNextSingleLine(TextBodyItem startTextBodyItem, string given, bool caseSensitive, bool wholeWord)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindNextSingleLine_Syncfusion_DocIO_DLS_TextBodyItem_System_String_System_Boolean_System_Boolean_)' | markdownify }}</td>
+<td>{{ '[FindNextSingleLine(TextBodyItem startTextBodyItem, string given, bool caseSensitive, bool wholeWord)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindNextSingleLine_Syncfusion_DocIO_DLS_TextBodyItem_System_String_System_Boolean_System_Boolean_)' | markdownify }}</td>
 <td>Finds the next entry of the specified text from the specified text body item in single-line mode which is extended to several paragraph in the document, taking into the consideration of caseSensitive and wholeWord options.</td>
 <td>{{ '[Find next using string that extended to several paragraphs.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-find-next-paragraphs)' | markdownify }}</td>
 </tr>
 <tr>
-<td>{{ '[FindNextSingleLine(TextBodyItem startBodyItem, Regex pattern)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindNextSingleLine_Syncfusion_DocIO_DLS_TextBodyItem_System_Text_RegularExpressions_Regex_)' | markdownify }}</td>
+<td>{{ '[FindNextSingleLine(TextBodyItem startBodyItem, Regex pattern)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindNextSingleLine_Syncfusion_DocIO_DLS_TextBodyItem_System_Text_RegularExpressions_Regex_)' | markdownify }}</td>
 <td>Finds the next entry of the specified pattern of text in single-line mode which is extended to several paragraph in the document.</td>
 <td>{{ '[Find next using regex that extended to several paragraphs.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-next-multiline-text-and-replace-text)' | markdownify }}</td>
 </tr>
 <tr>
-<td>{{ '[Replace(string given, IWordDocument replaceDoc, bool caseSensitive, bool wholeWord)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_String_Syncfusion_DocIO_DLS_IWordDocument_System_Boolean_System_Boolean_)' | markdownify }}</td>
+<td>{{ '[Replace(string given, IWordDocument replaceDoc, bool caseSensitive, bool wholeWord)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_String_Syncfusion_DocIO_DLS_IWordDocument_System_Boolean_System_Boolean_)' | markdownify }}</td>
 <td>Replaces all entries of given string in the document with another Word document, taking into consideration case sensitive, whole word options.</td>
 <td>{{ '[Find and replace text with Word document.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-replace-with-Word-document)' | markdownify }}</td>
 </tr>
 <tr>
-<td>{{ '[Replace(string given, IWordDocument replaceDoc, bool caseSensitive, bool wholeWord, bool saveFormatting)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_String_Syncfusion_DocIO_DLS_IWordDocument_System_Boolean_System_Boolean_System_Boolean_)' | markdownify }}</td>
+<td>{{ '[Replace(string given, IWordDocument replaceDoc, bool caseSensitive, bool wholeWord, bool saveFormatting)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_String_Syncfusion_DocIO_DLS_IWordDocument_System_Boolean_System_Boolean_System_Boolean_)' | markdownify }}</td>
 <td>Replaces all entries of given string in the document with another Word document, taking into consideration case sensitive, whole word and formatting options.</td>
 <td>{{ '[Find and replace text with Word document with formatting.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Replace-text-with-Word-document)' | markdownify }}</td>
 </tr>
 <tr>
-<td>{{ '[Replace(string given, TextBodyPart bodyPart, bool caseSensitive, bool wholeWord)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_String_Syncfusion_DocIO_DLS_TextBodyPart_System_Boolean_System_Boolean_)' | markdownify }}</td>
+<td>{{ '[Replace(string given, TextBodyPart bodyPart, bool caseSensitive, bool wholeWord)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_String_Syncfusion_DocIO_DLS_TextBodyPart_System_Boolean_System_Boolean_)' | markdownify }}</td>
 <td>Replaces all entries of given string in the document with TextBodyPart, taking into consideration case sensitive, whole word options.</td>
 <td>{{ '[Find and replace text with image.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-replace-text-with-image)' | markdownify }}</td>
 </tr>
 <tr>
-<td>{{ '[Replace(string given, TextBodyPart bodyPart, bool caseSensitive, bool wholeWord, bool saveFormatting)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_String_Syncfusion_DocIO_DLS_TextBodyPart_System_Boolean_System_Boolean_System_Boolean_)' | markdownify }}</td>
+<td>{{ '[Replace(string given, TextBodyPart bodyPart, bool caseSensitive, bool wholeWord, bool saveFormatting)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_String_Syncfusion_DocIO_DLS_TextBodyPart_System_Boolean_System_Boolean_System_Boolean_)' | markdownify }}</td>
 <td>Replaces all entries of given string in the document with TextBodyPart, taking into consideration case sensitive, whole word and formatting options.</td>
 <td>{{ '[Find and replace text with document element with formatting.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Replace-text-with-body-part)' | markdownify }}</td>
 </tr>
 <tr>
-<td>{{ '[Replace(string given, TextSelection textSelection, bool caseSensitive, bool wholeWord)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_String_Syncfusion_DocIO_DLS_TextSelection_System_Boolean_System_Boolean_)' | markdownify }}</td>
+<td>{{ '[Replace(string given, TextSelection textSelection, bool caseSensitive, bool wholeWord)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_String_Syncfusion_DocIO_DLS_TextSelection_System_Boolean_System_Boolean_)' | markdownify }}</td>
 <td>Replaces all entries of given string in the document with TextSelection, taking into consideration case sensitive and whole word options.</td>
 <td>{{ '[Find and replace text with another selected text.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-next-multiline-text-and-replace-text)' | markdownify }}</td>
 </tr>
 <tr>
-<td>{{ '[Replace(string given, TextSelection textSelection, bool caseSensitive, bool wholeWord, bool saveFormatting)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_String_Syncfusion_DocIO_DLS_TextSelection_System_Boolean_System_Boolean_System_Boolean_)' | markdownify }}</td>
+<td>{{ '[Replace(string given, TextSelection textSelection, bool caseSensitive, bool wholeWord, bool saveFormatting)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_String_Syncfusion_DocIO_DLS_TextSelection_System_Boolean_System_Boolean_System_Boolean_)' | markdownify }}</td>
 <td>Replaces all entries of given string in the document with TextSelection, taking into consideration case sensitive, whole word and formatting options.</td>
 <td>{{ '[Find and replace text with another selected text with formatting.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-replace-text-with-formatted-text)' | markdownify }}</td>
 </tr>
 <tr>
-<td>{{ '[Replace(string given, string replace, bool caseSensitive, bool wholeWord)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_String_System_String_System_Boolean_System_Boolean_)' | markdownify }}</td>
+<td>{{ '[Replace(string given, string replace, bool caseSensitive, bool wholeWord)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_String_System_String_System_Boolean_System_Boolean_)' | markdownify }}</td>
 <td>Replaces all entries of given string in the document with replace string, taking into consideration of case sensitive and whole word options.</td>
 <td>{{ '[Find and replace text with another text.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-replace-all)' | markdownify }}</td>
 </tr>
 <tr>
-<td>{{ '[Replace(Regex pattern, IWordDocument replaceDoc, bool saveFormatting)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_Text_RegularExpressions_Regex_Syncfusion_DocIO_DLS_IWordDocument_System_Boolean_)' | markdownify }}</td>
+<td>{{ '[Replace(Regex pattern, IWordDocument replaceDoc, bool saveFormatting)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_Text_RegularExpressions_Regex_Syncfusion_DocIO_DLS_IWordDocument_System_Boolean_)' | markdownify }}</td>
 <td>Replaces all entries of given regular expression in the document with the another word document along with its formatting.</td>
 <td>{{ '[Find and replace text with HTML.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Replace-text-in-Word-with-HTML)' | markdownify }}</td>
 </tr>
 <tr>
-<td>{{ '[Replace(Regex pattern, TextBodyPart bodyPart)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_Text_RegularExpressions_Regex_Syncfusion_DocIO_DLS_TextBodyPart_)' | markdownify }}</td>
+<td>{{ '[Replace(Regex pattern, TextBodyPart bodyPart)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_Text_RegularExpressions_Regex_Syncfusion_DocIO_DLS_TextBodyPart_)' | markdownify }}</td>
 <td>Replaces all entries of given regular expression in the document with the TextBodyPart.</td>
 <td>{{ '[Replace text with content control.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Replace-text-with-content-control)' | markdownify }}</td>
 </tr>
 <tr>
-<td>{{ '[Replace(Regex pattern, TextBodyPart bodyPart, bool saveFormatting)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_Text_RegularExpressions_Regex_Syncfusion_DocIO_DLS_TextBodyPart_System_Boolean_)' | markdownify }}</td>
+<td>{{ '[Replace(Regex pattern, TextBodyPart bodyPart, bool saveFormatting)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_Text_RegularExpressions_Regex_Syncfusion_DocIO_DLS_TextBodyPart_System_Boolean_)' | markdownify }}</td>
 <td>Replaces all entries of given regular expression in the document with the TextBodyPart along with its formatting.</td>
 <td>{{ '[Replace text in headers and footers.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Replace-text-in-headers-and-footers)' | markdownify }}</td>
 </tr>
 <tr>
-<td>{{ '[Replace(Regex pattern, TextSelection textSelection)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_Text_RegularExpressions_Regex_Syncfusion_DocIO_DLS_TextSelection_)' | markdownify }}</td>
+<td>{{ '[Replace(Regex pattern, TextSelection textSelection)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_Text_RegularExpressions_Regex_Syncfusion_DocIO_DLS_TextSelection_)' | markdownify }}</td>
 <td>Replaces the specified regular expression with a TextSelection in the document.</td>
 <td>{{ '[Replace text within table.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-replace-text-within-table)' | markdownify }}</td>
 </tr>
 <tr>
-<td>{{ '[Replace(Regex pattern, string replace)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_Text_RegularExpressions_Regex_System_String_)' | markdownify }}</td>
+<td>{{ '[Replace(Regex pattern, string replace)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Replace_System_Text_RegularExpressions_Regex_System_String_)' | markdownify }}</td>
 <td>Replaces all entries of the given System.Text.RegularExpressions.Regex with the replace string.</td>
 <td>{{ '[Find and replace all using regex.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Replace-pattern-text-with-normal-text)' | markdownify }}</td>
 </tr>
 <tr>
-<td>{{ '[ReplaceSingleLine(string given, TextBodyPart replacement, bool caseSensitive, bool wholeWord)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_ReplaceSingleLine_System_String_Syncfusion_DocIO_DLS_TextBodyPart_System_Boolean_System_Boolean_)' | markdownify }}</td>
+<td>{{ '[ReplaceSingleLine(string given, TextBodyPart replacement, bool caseSensitive, bool wholeWord)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_ReplaceSingleLine_System_String_Syncfusion_DocIO_DLS_TextBodyPart_System_Boolean_System_Boolean_)' | markdownify }}</td>
 <td>Replaces all entries of given string which is extended to several paragraphs in the document with TextBodyPart, taking into consideration case sensitive, whole word options.</td>
 <td>{{ '[Find and replace multiple paragraphs.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-replace-multiple-paragraphs)' | markdownify }}</td>
 </tr>
 <tr>
-<td>{{ '[ReplaceSingleLine(string given, TextSelection replacement, bool caseSensitive, bool wholeWord)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_ReplaceSingleLine_System_String_Syncfusion_DocIO_DLS_TextSelection_System_Boolean_System_Boolean_)' | markdownify }}</td>
+<td>{{ '[ReplaceSingleLine(string given, TextSelection replacement, bool caseSensitive, bool wholeWord)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_ReplaceSingleLine_System_String_Syncfusion_DocIO_DLS_TextSelection_System_Boolean_System_Boolean_)' | markdownify }}</td>
 <td>Replaces all entries of given string which is extended to several paragraph in the document with TextSelection, taking into consideration case sensitive and whole word options.</td>
 <td>{{ '[Replace text with another formatted text.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-next-and-replace-with-formatted-text)' | markdownify }}</td>
 </tr>
 <tr>
-<td>{{ '[ReplaceSingleLine(string given, string replace, bool caseSensitive, bool wholeWord)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_ReplaceSingleLine_System_String_System_String_System_Boolean_System_Boolean_)' | markdownify }}</td>
+<td>{{ '[ReplaceSingleLine(string given, string replace, bool caseSensitive, bool wholeWord)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_ReplaceSingleLine_System_String_System_String_System_Boolean_System_Boolean_)' | markdownify }}</td>
 <td>Replaces all entries of given string which is extended to several paragraphs in the document with replace string, taking into consideration of case sensitive and whole word options.</td>
 <td>{{ '[Replace paragraphs with text.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-replace-paragraphs-with-text)' | markdownify }}</td>
 </tr>
 <tr>
-<td>{{ '[ReplaceSingleLine(Regex pattern, TextBodyPart replacement)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_ReplaceSingleLine_System_Text_RegularExpressions_Regex_Syncfusion_DocIO_DLS_TextBodyPart_)' | markdownify }}</td>
+<td>{{ '[ReplaceSingleLine(Regex pattern, TextBodyPart replacement)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_ReplaceSingleLine_System_Text_RegularExpressions_Regex_Syncfusion_DocIO_DLS_TextBodyPart_)' | markdownify }}</td>
 <td>Replaces all entries of given regular expression text which is extended to several paragraph in the document with the TextBodyPart.</td>
 <td>{{ '[Find and replace text with page break.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Find-and-replace-text-with-page-break)'| markdownify }}</td>
 </tr>
 <tr>
-<td>{{ '[ReplaceSingleLine(Regex pattern, TextSelection replacement)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_ReplaceSingleLine_System_Text_RegularExpressions_Regex_Syncfusion_DocIO_DLS_TextSelection_)' | markdownify }}</td>
+<td>{{ '[ReplaceSingleLine(Regex pattern, TextSelection replacement)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_ReplaceSingleLine_System_Text_RegularExpressions_Regex_Syncfusion_DocIO_DLS_TextSelection_)' | markdownify }}</td>
 <td>Replaces all entries of given regular expression text which is extended to several paragraph in the document with the TextSelection.</td>
 <td>{{ '[Replace text extended to several paragraphs.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Replace-text-extended-to-several-paragraphs)' | markdownify }}</td>
 </tr>
 <tr>
-<td>{{ '[ReplaceSingleLine(Regex pattern, string replace)](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_ReplaceSingleLine_System_Text_RegularExpressions_Regex_System_String_)' | markdownify }}</td>
+<td>{{ '[ReplaceSingleLine(Regex pattern, string replace)](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_ReplaceSingleLine_System_Text_RegularExpressions_Regex_System_String_)' | markdownify }}</td>
 <td>Replaces all entries of the specified pattern text, which is extended to several paragraph, with replace text.</td>
 <td>{{ '[Replace multiline text with single line.](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Find-and-Replace/Replace-multiline-text-with-single-line)' | markdownify }}</td>
 </tr>
@@ -336,7 +336,7 @@ document.Close();
 'Loads the template document
 Dim document As New WordDocument("Template.docx", FormatType.Docx)
 'Find the first occurrence of a particular text in the document
-Dim textSelection As TextSelection = document.Find("AdventureWorks", false, true)
+Dim textSelection As TextSelection = document.Find("AdventureWorks", False, True)
 'Gets the found text as single text range
 Dim textRange As WTextRange = textSelection.GetAsOneRange()
 'Modifies the text
@@ -790,7 +790,7 @@ using (WordDocument document = new WordDocument("Input.docx", FormatType.Docx))
 'Load an existing Word document. 
 Using document As WordDocument = New WordDocument("Input.docx", FormatType.Docx)
     'Replace all occurrences of non-breaking spaces with regular spaces.
-    document.Replace(ControlChar.NonBreakingSpace, ControlChar.Space, false, False)
+    document.Replace(ControlChar.NonBreakingSpace, ControlChar.Space, False, False)
     'Save the Word document.
     document.Save("Sample.docx", FormatType.Docx)
 End Using
@@ -803,7 +803,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 ### Find and replace text with an image
 You can find placeholder text in a Word document and replace it with any desired image.
 
-The following code example illustrates how to find and replace text in a word document with an image
+The following code example illustrates how to find and replace text in a Word document with an image.
 
 {% tabs %}
 
@@ -855,7 +855,7 @@ document.Close();
 Dim document As WordDocument = New WordDocument("Template.docx")
 'Finds all the image placeholder text in the Word document
 Dim textSelections() As TextSelection = document.FindAll(New Regex("^//(.*)"))
-For i As Integer = 0 To textSelections.Length – 1
+For i As Integer = 0 To textSelections.Length - 1
     'Replaces the image placeholder text with desired image
     Dim paragraph As WParagraph = New WParagraph(document)
     Dim picture As WPicture = CType(paragraph.AppendPicture(Image.FromFile("Filepath" + textSelections(i).SelectedText + ".png")), WPicture)
@@ -867,64 +867,6 @@ Next
 'Saves and closes the document
 document.Save("Sample.docx", FormatType.Docx)
 document.Close()
-{% endhighlight %}
-
-{% highlight c# tabtitle="Xamarin" %}
-//"App" is the class of Portable project
-Assembly assembly = typeof(App).GetTypeInfo().Assembly;
-//Opens an existing wod document
-WordDocument document = new WordDocument(assembly.GetManifestResourceStream("Sample.Assets.Template.docx"), FormatType.Automatic);
-//Finds all the image placeholder text in the Word document
-TextSelection[] textSelections = document.FindAll(new Regex("^//(.*)"));
-for (int i = 0; i < textSelections.Length; i++)
-{
-    //Replaces the image placeholder text with desired image
-    WParagraph paragraph = new WParagraph(document);
-    Stream imageStream = assembly.GetManifestResourceStream("Sample.Assets."+ textSelections[i].SelectedText.Trim('/') + ".png");
-    WPicture picture = paragraph.AppendPicture(imageStream) as WPicture;
-    TextSelection newSelection = new TextSelection(paragraph, 0, 1);
-    TextBodyPart bodyPart = new TextBodyPart(document);
-    bodyPart.BodyItems.Add(paragraph);
-    document.Replace(textSelections[i].SelectedText, bodyPart, true, true);
-}
-//Saves the Word document to MemoryStream
-MemoryStream stream = new MemoryStream();
-document.Save(stream, FormatType.Docx);
-//Save the stream as a file in the device and invoke it for viewing
-Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView("Sample.docx", "application/msword", stream);
-//Closes the document instance
-document.Close();
-//Please download the helper files from the below link to save the stream as file and open the file for viewing in Xamarin platform
-//https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-xamarin#helper-files-for-xamarin
-{% endhighlight %}
-
-{% highlight c# tabtitle="UWP" %}
-//"App" is the class of Portable project
-Assembly assembly = typeof(App).GetTypeInfo().Assembly;
-//Opens an existing word document 
-WordDocument document = new WordDocument(assembly.GetManifestResourceStream("Sample.Assets.Template.docx"), FormatType.Docx);
-//Finds all the image placeholder text in the Word document
-TextSelection[] textSelections = document.FindAll(new Regex("^//(.*)"));
-for (int i = 0; i < textSelections.Length; i++)
-{
-    //Replaces the image placeholder text with desired image
-    WParagraph paragraph = new WParagraph(document);
-    Stream imageStream = assembly.GetManifestResourceStream("Sample.Assets." + textSelections[i].SelectedText.Trim('/') + ".png");
-    WPicture picture = paragraph.AppendPicture(imageStream) as WPicture;
-    TextSelection newSelection = new TextSelection(paragraph, 0, 1);
-    TextBodyPart bodyPart = new TextBodyPart(document);
-    bodyPart.BodyItems.Add(paragraph);
-    document.Replace(textSelections[i].SelectedText, bodyPart, true, true);
-}
-//Saves the Word file to MemoryStream
-MemoryStream stream = new MemoryStream();
-await document.SaveAsync(stream, FormatType.Docx);
-//Saves the stream as Word document file in local machine
-Save(stream, "Sample.docx");
-//Closes the document instance
-document.Close();
-//Please refer the below link to save Word document in UWP platform
-//https://help.syncfusion.com/document-processing/word/word-library/net/create-word-document-in-uwp#save-word-document-in-uwp
 {% endhighlight %}
 
 {% endtabs %}
@@ -995,7 +937,7 @@ document.Close();
 'Loads the template document
 Dim document As WordDocument = New WordDocument("Template.docx")
 'Finds all the placeholder text enclosed within '«' and '»' in the Word document
-Dim textSelections() As TextSelection = document.FindAll(New Regex("([(?i)image(?-i)]*:*[a-zA-Z0-9 ]*:*[a-zA-Z0-9 ]+)»"))
+Dim textSelections() As TextSelection = document.FindAll(New Regex("«([(?i)image(?-i)]*:*[a-zA-Z0-9 ]*:*[a-zA-Z0-9 ]+)»"))
 Dim searchedPlaceholders() As String = New String(textSelections.Length - 1) {}
 For i As Integer = 0 To textSelections.Length - 1
     searchedPlaceholders(i) = textSelections(i).SelectedText
@@ -1004,7 +946,7 @@ For i As Integer = 0 To searchedPlaceholders.Length - 1
     'Replaces the placeholder text enclosed within '«' and '»' with desired merge field
     Dim paragraph As WParagraph = New WParagraph(document)
     paragraph.AppendField(searchedPlaceholders(i).TrimStart("«").TrimEnd("»"), FieldType.FieldMergeField)
-    Dim newSelection As TextSelection = New TextSelection(paragraph, 0, 	paragraph.Items.Count)
+    Dim newSelection As TextSelection = New TextSelection(paragraph, 0, paragraph.Items.Count)
     Dim bodyPart As TextBodyPart = New TextBodyPart(document)
     bodyPart.BodyItems.Add(paragraph)
     document.Replace(searchedPlaceholders(i), bodyPart, True, True, True)
@@ -1117,7 +1059,7 @@ Dim bodyPart As TextBodyPart = New TextBodyPart(document)
 bodyPart.BodyItems.Add(table)
 document.Replace("[Suppliers table]", bodyPart, True, True, True)
 'Saves the Word document
-document.Save("Result.docx", FormatType.Docx)
+document.Save("Sample.docx", FormatType.Docx)
 'Closes the document
 document.Close()
 {% endhighlight %}
@@ -1251,7 +1193,7 @@ The following code example provides supporting methods for the above code.
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" %}
-Private void ImportDataToRow(XmlReader reader, WTableRow tableRow)
+private void ImportDataToRow(XmlReader reader, WTableRow tableRow)
 {
     if (reader == null)
         throw new Exception("reader");
@@ -1302,7 +1244,7 @@ Private void ImportDataToRow(XmlReader reader, WTableRow tableRow)
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-Private void ImportDataToRow(XmlReader reader, WTableRow tableRow)
+private void ImportDataToRow(XmlReader reader, WTableRow tableRow)
 {
     if (reader == null)
         throw new Exception("reader");
@@ -1439,8 +1381,8 @@ for (int i = 0; i < textSelections.Length; i++)
     document.Replace(textSelections[i].SelectedText, subDocument, true, true);
     subDocument.Dispose();
 }
-//Saves and closes the document instance
-document.Save("Result.docx");
+//Saves and closes the document
+document.Save("Sample.docx");
 document.Close();
 {% endhighlight %}
 
@@ -1455,8 +1397,8 @@ For i As Integer = 0 To textSelections.Length - 1
     document.Replace(textSelections(i).SelectedText, subDocument, True, True)
     subDocument.Dispose()
 Next
-'Saves and closes the document instance
-document.Save("Result.docx")
+'Saves and closes the document
+document.Save("Sample.docx")
 document.Close()
 {% endhighlight %}
 
@@ -1520,7 +1462,7 @@ Dim subDocument As WordDocument = New WordDocument("Source.docx", FormatType.Doc
 Dim replacePart As TextBodyPart = New TextBodyPart(subDocument)
 'Gets the content from another Word document 
 For Each bodyItem As TextBodyItem In subDocument.LastSection.Body.ChildEntities
-    replacePart.BodyItems.Add(bodyItem.Clone)
+    replacePart.BodyItems.Add(bodyItem.Clone())
 Next
 Dim placeholderText As String = "Suppliers/Vendors of Northwind" + "Customers of Northwind" + "Employee details of Northwind traders" + "The product information" + "The inventory details" + "The shippers" + "Purchase Order transactions" + "Sales Order transaction" + "Inventory transactions" + "Invoices" + "[end replace]"
 'Finds the text that extends to several paragraphs and replaces it with desired content
@@ -1602,7 +1544,7 @@ The following code example illustrates how to replace the pattern of text with n
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Find-and-Replace/Replace-pattern-text-with-normal-text/.NET/Replace-pattern-text-with-normal-text/Program.cs" %}
-//Open the file as Stream.
+//Open the file as a Stream.
 using (FileStream docStream = new FileStream("Template.docx", FileMode.Open, FileAccess.Read))
 {
     //Load the file stream into a Word document.
@@ -1864,11 +1806,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Find and format text
 
-You can able to find and format the text in Word document using DocIO.
+You can find and format the text in a Word document using DocIO.
 
 ### Find and highlight all in Word document
 
-You can find text in a Word document and format or highlight it .You can find the first occurrence of text using the [FindAll](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindAll_System_String_System_Boolean_System_Boolean_) method. Find the next occurrences of the text using the [FindNext](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindNext_Syncfusion_DocIO_DLS_TextBodyItem_System_String_System_Boolean_System_Boolean_) method.
+You can find text in a Word document and format or highlight it. You can find the first occurrence of text using the [FindAll](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindAll_System_String_System_Boolean_System_Boolean_) method. Find the next occurrences of the text using the [FindNext](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_FindNext_Syncfusion_DocIO_DLS_TextBodyItem_System_String_System_Boolean_System_Boolean_) method.
 
 The following code example illustrates how to find all occurrences of a length of text and highlight it.
 
@@ -1926,9 +1868,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* Explore how to find a specific text pattern using regular expression and highlight it in an existing Word document using find functionality using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/findandhighlight#/tailwind).
-* See how to replace a specific text in the Word document with another text using the find and replace functionality using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/simplereplace#/tailwind).
-* See how to replace a specific content in the Word document with another document using the find and replace functionality using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/advancedreplace#/tailwind).
+* Explore how to find a specific text pattern using regular expression and highlight it in an existing Word document using find functionality using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/findandhighlight#/tailwind).
+* See how to replace a specific text in the Word document with another text using the find and replace functionality using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/simplereplace#/tailwind).
+* See how to replace a specific content in the Word document with another document using the find and replace functionality using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/advancedreplace#/tailwind).
 
 ## See Also
 

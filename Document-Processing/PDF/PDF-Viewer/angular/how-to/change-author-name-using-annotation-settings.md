@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Change Author Name via Annotation Settings | Syncfusion
-description: Learn how to change the author name and related annotation settings using the annotationSettings API in the Angular PDF Viewer.
+title: How to Change the Annotation Author Name in Angular PDF | Syncfusion
+description: Change the author name and related annotation settings in the Angular PDF Viewer using the annotationSettings API and configuration options.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -9,13 +9,13 @@ domainurl: ##DomainURL##
 ---
 
 
-# Change author name using annotation settings in Angular PDF Viewer
+# How to Change the Annotation Author Name in Angular PDF Viewer
 
 The `annotationSettings` API provides a central way to configure properties that apply to all annotations in the viewer.
 
 API name: annotationSettings
 
-| Property Name | Data type & Default Value | Description |
+| Property Name | Data type and Default Value | Description |
 |---|---|---|
 | author | String ("Guest") | Specifies the author of the annotation. |
 | minWidth | Number (0) | Specifies the minimum width of the annotation. |
@@ -23,8 +23,8 @@ API name: annotationSettings
 | minHeight | Number (0) | Specifies the minimum height of the annotation. |
 | maxHeight | Number (0) | Specifies the maximum height of the annotation. |
 | isLock | Boolean (false) | Specifies whether the annotation is locked. If true, the annotation cannot be selected. |
-| isPrint | Boolean (true) | Specifies whether the annotation is included in print actions. |
-| isDownload | Boolean (true) | Specifies whether the annotation is included in download actions. |
+| skipPrint | Boolean (true) | Specifies whether the annotation is included in print actions. |
+| skipDownload | Boolean (true) | Specifies whether the annotation is included in download actions. |
 | Free Text Settings |
 | allowOnlyTextInput | Boolean (false) | Specifies text-only mode for free text annotations. If true, moving or resizing is disabled. |
 
@@ -80,8 +80,8 @@ import { AnnotationService, AnnotationSettingsModel, BookmarkViewService, FormFi
   `
 })
 export class AppComponent {
-  public serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-  public docPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+  public serviceUrl: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
+  public docPath: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
   public annotationSettings: AnnotationSettingsModel = {
     author: 'syncfusion', minHeight: 30, maxHeight: 500, minWidth: 30, maxWidth: 500, isLock: false, skipPrint: false, skipDownload: false
   };

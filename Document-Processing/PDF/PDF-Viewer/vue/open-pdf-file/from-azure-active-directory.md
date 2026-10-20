@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Open PDF from Azure Active Directory in Vue PDF Viewer | Syncfusion
-description: Learn how to load and save PDFs using Azure Active Directory (AAD) with the Syncfusion Vue PDF Viewer component.
+title: From Azure Active Directory in Vue PDF Viewer | Syncfusion
+description: Learn about the from azure active directory in the Vue PDF Viewer and how it helps users work with PDF documents more effectively.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF from Azure Active Directory
+# From Azure Active Directory in Vue PDF Viewer
 
-### Overview
+## Overview
 
-This article explains how to load and save PDF files from Azure Active Directory (AAD) into the Syncfusion Vue PDF Viewer using a secure server-side component. It covers application registration, storage configuration, server and client setup, common pitfalls, and recommended security practices.
+This article explains how to load and save PDF files from Azure Active Directory (AAD) into the Vue PDF Viewer using a secure server-side component. It covers application registration, storage configuration, server and client setup, common pitfalls, and recommended security practices.
 
 ---
 
@@ -62,7 +62,7 @@ This article explains how to load and save PDF files from Azure Active Directory
   - In the Storage account, open **Containers**, create or select a container, and upload the PDF document intended for viewing.
 
 2. **Upload the PDF file**:
-  - Create a new container and upload the PDF document the want to access in the PDF Viewer.
+  - Create a new container, and upload the PDF document you want to access in the PDF Viewer.
 
   ![Upload PDF to Azure Blob container](../images/upload-pdf.png)
 ---
@@ -85,7 +85,7 @@ This article explains how to load and save PDF files from Azure Active Directory
 ### Step 6: Client-side configuration
 
 1. **Run the Vue sample**:
-   - Start the Vue sample that includes the Syncfusion PDF Viewer component.
+   - Start the Vue sample that includes the PDF Viewer component.
 
 2. **Load a PDF from AAD**:
    - When the user selects **Load From AAD**, the Vue client sends an HTTP request to the server-side API to fetch the PDF from Azure Blob Storage.

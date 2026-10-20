@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor PDF Viewer Component | Syncfusion
-description: Check out and learn here all about accessibility in the Syncfusion Blazor PDF Viewer component and more.
+title: Accessibility in Blazor PDF Viewer Classic| Syncfusion
+description: Check out and learn here all about accessibility in the Syncfusion Blazor PDF Viewer component and much more details.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Accessibility in Syncfusion® Blazor PDF Viewer Component
+# Accessibility in Syncfusion® Blazor PDF Viewer Classic
 
 The Blazor PDF Viewer component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
@@ -68,12 +68,12 @@ The Blazor PDF Viewer component followed the [keyboard interaction](https://www.
 |||**Shortcuts for Zooming**|
 |<kbd>CONTROL + =</kbd> |<kbd>COMMAND + =</kbd> | Perform zoom-in operation |
 | <kbd>CONTROL + -</kbd> | <kbd>COMMAND + -</kbd> | Perform zoom-out operation |
-|<kbd>CONTROL + 0</kbd> |<kbd>COMMAND + 0</kbd> | Retain the zoom level to 1 |
+|<kbd>CONTROL + 1</kbd> |<kbd>COMMAND + 1</kbd> | Retain the zoom level to 1 |
 |||**Shortcut for Text Search**|
 | <kbd>CONTROL + F</kbd> | <kbd>COMMAND + F</kbd> |Open the search toolbar|
 |||**Shortcut for Text Selection**|
 |<kbd>CONTROL + C</kbd> |<kbd>CONTROL + C</kbd> | Copy the selected text or annotation |
-| <kbd>CONTROL + X</kbd> | <kbd>CONTROL + X</kbd> |Cut the selected text or annotation |
+| <kbd>CONTROL + X</kbd> | <kbd>CONTROL + X</kbd> |Cut the selected annotation or form field |
 |<kbd>CONTROL + Y</kbd> |<kbd>CONTROL + Y</kbd> |Paste the selected text or annotation |
 |||**Shortcuts for the general operation**|
 | <kbd>CONTROL + Z</kbd> | <kbd>CONTROL + Z</kbd> |Undo the action|
@@ -85,7 +85,7 @@ The Blazor PDF Viewer component followed the [keyboard interaction](https://www.
 
 The Blazor PDF Viewer component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
 
-The accessibility compliance of the Blazor PDF Viewer component is shown in the following sample. Open the [sample](https://blazor.syncfusion.com/accessibility/pdfviewer) in a new window to evaluate the accessibility of the Blazor PDF Viewer component with accessibility tools.
+The accessibility compliance of the Blazor PDF Viewer component is shown in the following sample. Open the [sample](https://document.syncfusion.com/demos/pdf-viewer/blazor-server/accessible-pdf-reading?theme=fluent2) in a new window to evaluate the accessibility of the Blazor PDF Viewer component with accessibility tools.
 
 ## See also
 

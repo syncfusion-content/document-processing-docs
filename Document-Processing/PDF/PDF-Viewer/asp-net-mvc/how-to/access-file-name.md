@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Access or Change File Name in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to access the loaded PDF filename and change the download filename using the events in the Syncfusion ASP.NET MVC PDF Viewer.
+title: How to Access the File Name of a PDF in ASP.NET MVC PDF | Syncfusion
+description: Access the file name of a PDF loaded into the ASP.NET MVC PDF Viewer so you can show, copy, or use it from custom JavaScript or C# code.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Access or change the PDF filename
+# How to Access the File Name of a PDF in ASP.NET MVC PDF Viewer
 
-The Syncfusion ASP.NET MVC PDF Viewer allows you to access the filename of the loaded PDF document, and to customize the filename used when the document is downloaded. This is achieved using the `DocumentLoad` and `DownloadEnd` events.
+The Syncfusion ASP.NET MVC PDF Viewer allows you to access the filename of the loaded PDF document, and to customize the filename used when the document is downloaded. This is achieved using the `DocumentLoad` event.
 
 The following steps demonstrate how to access and modify the filename in the PDF Viewer:
 
@@ -17,7 +17,7 @@ The following steps demonstrate how to access and modify the filename in the PDF
 
 **Step 2:** Access and change the filename using the code snippets below.
 
-In the `DocumentLoad` or `DownloadEnd` event handler, you can access the original filename from `args.fileName`. To change the filename for download, set the `viewer.downloadFileName` property.
+In the `DocumentLoad` event handler, you can access the original filename from `args.fileName`. To change the filename for download, set the `viewer.downloadFileName` property.
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}

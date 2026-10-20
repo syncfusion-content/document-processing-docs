@@ -1,12 +1,12 @@
 ---
-title: Convert Excel to Image in AWS Lambda | Syncfusion
-description: Convert Excel to Image in AWS Lambda using .NET Core Excel (XlsIO) library without Microsoft Excel or interop dependencies.
+title: Excel to Image conversion in AWS Lambda | Syncfusion
+description: AWS Lambda Excel to Image section explains how to convert Excel files to images in AWS Lambda using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Convert Excel document to Image in AWS Lambda
+# Excel to Image Conversion in AWS Lambda using Excel Library
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert a Excel document to Image in AWS Lambda**.
 
@@ -27,7 +27,7 @@ Step 3: Select Blueprint as Empty Function and click **Finish**.
 Step 4: Install the following **NuGet packages** in your application from [Nuget.org](https://www.nuget.org/).
 
 * [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) 
-* [SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)
+* [SkiaSharp.NativeAssets.Linux v4.150.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/4.150.1)
 * [HarfBuzzSharp.NativeAssets.Linux v2.8.2.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/2.8.2.2)
 
 ![Install Syncfusion.XlsIORenderer.Net.Core NuGet package](AWS_Images/Lambda_Images/Install_NuGet_Image.png)

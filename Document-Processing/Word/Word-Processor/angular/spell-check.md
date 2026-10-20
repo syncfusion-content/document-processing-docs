@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Spell check in Angular Document editor component | Syncfusion
-description: Learn here all about Spell check in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: Spell Check in Angular DOCX Editor | Syncfusion
+description: The spell check feature in Angular DOCX Editor enables spelling verification and suggestion workflows to help create error-free documents.
 platform: document-processing
-control: Spell check 
+control: Spell check
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Spell check in Angular Document editor component
+# Spell Check in Angular DOCX Editor
 
-Document Editor supports performing spell checking for any input text. You can perform spell checking for the text in Document Editor and it will provide suggestions for the mis-spelled words through dialog and in context menu. Document editor's spell checker is compatible with [hunspell dictionary files](https://github.com/wooorm/dictionaries).
+[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) supports spell checking for document content. It identifies misspelled words and provides suggestions through a dialog and the context menu. The spell checker is compatible with [Hunspell](https://github.com/wooorm/dictionaries) dictionary files.
 
 ```typescript
 import { Component, ViewEncapsulation, ViewChild } from '@angular/core';
@@ -36,20 +36,21 @@ export class AppComponent {
 
 ## Features
 
-* Supports context menu suggestions.
-* Provides built-in options to Ignore, Ignore All, Change, Change All for error words in spell checker dialog.
+* Supports context menu suggestions for misspelled words.
 
-## Enable SpellCheck
+* Provides options such as Ignore, Ignore All, Change, and Change All in the spell check dialog.
+
+## Enable spellCheck
 
 To enable spell check in DocumentEditor, set [`enableSpellCheck`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/index-default#enablespellcheck) property as `true` and then configure SpellCheckSettings.
 
-## Disable SpellCheck
+## Disable spellCheck
 
 To disable spell check in DocumentEditor, set [`enableSpellCheck`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/index-default#enablespellcheck) property as `false` or remove [`enableSpellCheck`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/index-default#enablespellcheck) property initialization code. The default value of this property is false.
 
 ## Spell check settings
 
-### Remove Underline
+### Remove underline
 
 By default, mis-spelled words are marked with squiggly line. You can also disable this behavior by enabling the [`removeUnderline`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/spellChecker#removeunderline) API and now, the squiggly lines will never be rendered for mis-spelled words.
 
@@ -59,7 +60,7 @@ this.container.documentEditor.spellChecker.removeUnderline = false;
 
 ### AllowSpellCheckAndSuggestion
 
-By default, on performing spell check in Document Editor, both spelling and suggestions of the mis-spelled words will be retrieved, and this mis-spelled words can be corrected through context menu suggestions. You can modify this behavior using the [`allowSpellCheckAndSuggestion`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/spellChecker#allowspellcheckandsuggestion) API, which will perform only spell check.
+By default, on performing spell check in DOCX Editor, both spelling and suggestions of the mis-spelled words will be retrieved, and this mis-spelled words can be corrected through context menu suggestions. You can modify this behavior using the [`allowSpellCheckAndSuggestion`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/spellChecker#allowspellcheckandsuggestion) API, which will perform only spell check.
 
 ```typescript
 this.container.documentEditor.spellChecker.allowSpellCheckAndSuggestion = false;
@@ -67,7 +68,7 @@ this.container.documentEditor.spellChecker.allowSpellCheckAndSuggestion = false;
 
 ### LanguageID
 
-Document Editor provides multi-language spell check support. You can add as many languages (dictionaries) in the server-side and to use that language for spell checking in Document Editor, it must be matched with [`languageID`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/spellChecker#languageid) you pass in the Document Editor.
+DOCX Editor provides multi-language spell check support. You can add as many languages (dictionaries) in the server-side and to use that language for spell checking in DOCX Editor, it must be matched with [`languageID`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/spellChecker#languageid) you pass in the DOCX Editor.
 
 ```typescript
 this.container.documentEditor.spellChecker.languageID = 1033; //LCID of "en-us";
@@ -75,7 +76,7 @@ this.container.documentEditor.spellChecker.languageID = 1033; //LCID of "en-us";
 
 ### EnableOptimizedSpellCheck
 
-Document Editor provides option to spellcheck page by page when loading the documents. The default value of this property is false, so when opening the document spellcheck web API will be called for each word in the document. To optimize the frequency of spellcheck web API calls, you can enable this property.
+DOCX Editor provides option to spellcheck page by page when loading the documents. The default value of this property is false, so when opening the document spellcheck web API will be called for each word in the document. To optimize the frequency of spellcheck web API calls, you can enable this property.
 
 The following code example illustrates how to enable optimized spell checking.
 
@@ -121,10 +122,7 @@ Previously on every `SpellChecker.GetSuggestion()` method call, the `.aff` and d
 
 If you find any root word is missing in the dictionary file, then you can add that new root word and the rule to form the possible words to dictionary file using `AddNewWord` API in the server-side Spell check library.
 
->Note:
->1. The rules are framed automatically using the root word, the possible words and affix file.
->2. If you pass null for the parameters `affPath` and `possibleWords`, then it will add a single root word to dictionary.
->3. This API is included starting from `v20.2.0.xx`.
+N> The rules are framed automatically using the root word, the possible words and affix file. If you pass null for the parameters `affPath` and `possibleWords`, then it will add a single root word to dictionary. This API is included starting from `v20.2.0.xx`.
 
 The following code example demonstrates how to add a new root word to the dictionary along with the rule to form the possible words.
 
@@ -144,7 +142,7 @@ Right click on error word to open the context menu with spell check options. Ple
 
 Context menu shows the suggestions for mis-spelled words. By clicking on the required word from suggestion, the error word gets replaced automatically.
 
-### Add To Dictionary
+### Add to dictionary
 
 Using this option, you can add the current word to the dictionary. So that the spell checker does not consider that word as error in future.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Working with PDF forms in Xamarin Pdf Viewer control | Syncfusion
+title: Working with PDF forms in Xamarin Pdf Viewer | Syncfusion
 description: Learn here all about Working with PDF forms support in Syncfusion<sup>®</sup> Xamarin Pdf Viewer (SfPdfViewer) control and more.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Working with PDF forms in Xamarin Pdf Viewer (SfPdfViewer)
+# Working with PDF forms in Xamarin Pdf Viewer
 
 [Xamarin PDF Viewer](https://www.syncfusion.com/xamarin-ui-controls/xamarin-pdf-viewer) supports adding/modifying the existing forms fields content present in the PDF document. By default, it detects the form fields present in the PDF document and enables modifying or filling the values.
 

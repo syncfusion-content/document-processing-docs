@@ -1,33 +1,32 @@
 ---
 layout: post
-title: Getting started with Syncfusion React PDF Viewer component| Syncfusion
-description: Learn here all about Getting started with Syncfusion React PDF Viewer component of Syncfusion Essential JS 2 and more details.
+title:  React PDF Viewer Getting Started | Syncfusion
+description: Learn here all about how to get started with the Syncfusion React PDF Viewer. Explore setup, features, examples, and customization options.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
+# React PDF Viewer Getting Started
 
-# Getting started with Syncfusion React PDF Viewer
+If you're starting to integrate the React PDF Viewer into your application, choose the path below that matches how you'll run the viewer in your app (client-only or via a web service) and follow the linked tutorial. 
 
+## Choose your setup
 
-If you're starting to integrate the Syncfusion<sup style="font-size:70%">&reg;</sup> React PDF Viewer into your application, choose the path below that matches how you'll run the viewer in your app (client-only or via a web service) and follow that tutorial.
-
-- **Standalone** — Run the viewer entirely in the browser (no server rendering). This mode delivers excellent runtime performance and responsiveness because rendering and interaction happen on the client; it is ideal for quick prototyping and simple integrations.
-- **Server‑backed** — Use a web service to perform PDF Viewer operations (rendering, document processing, or streaming). Choose this path when you need server-side processing for PDF Viewer operations.
-
-This page is intentionally a short introduction — choose a path and follow its tutorial:
+- **Standalone** — Run the viewer entirely in the browser (no dedicated PDF processing service). This mode delivers excellent runtime performance and responsiveness because rendering and interaction happen on the client; it is ideal for quick prototyping and simple integrations. Choose this path when documents are not sensitive, sizes are moderate, and you do not need shared server-side processing.
+- **Server-backed** — Use a web service to perform PDF Viewer operations (rendering, document processing, or streaming). Choose this path when you need server-side processing for PDF Viewer operations.
 
 - [Standalone tutorial](./getting-started)
-- [Server‑backed tutorial](./getting-started-with-server-backed)
+- [Server-backed tutorial](./getting-started-with-server-backed)
 
-**Related**
-
-- [Annotations](./annotation/text-markup-annotation)
-- [Form designer](./forms/form-designer)
-- [Organize pages](./organize-pages/overview)
-
-**See also**
+## Related links
 
 - [PDF Viewer overview](../overview)
+- [Annotations overview](./annotation/overview)
+- [Form designer](./forms/form-designer)
+- [Organize pages](./organize-pages/overview)
+- [Troubleshooting](./troubleshooting/troubleshooting)
+- [Migration guides](./migration/migrating-from-PDFjs)
+
+Looking for the full [React PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/react-pdf-viewer) component overview, features, pricing, and documentation? Visit the React PDF Viewer page.

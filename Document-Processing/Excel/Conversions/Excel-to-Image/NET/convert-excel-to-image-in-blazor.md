@@ -1,12 +1,12 @@
 ---
-title: Convert Excel to Image in Blazor Server Web application | Syncfusion
-description: Learn how to convert Excel to Image in Blazor Server Web application using .NET Core Excel library (XlsIO) without Microsoft Excel or interop dependencies.
+title: Excel to Image conversion in Blazor Server | Syncfusion
+description: Blazor Server Excel to Image section explains how to convert Excel files to images in Blazor Server using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Convert Excel document to Image in Blazor Server Web application
+# Excel to Image Conversion in Blazor Server using Excel Library
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to Image in Blazor Server Web application**.
 
@@ -14,21 +14,24 @@ Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.sync
 
 Step 1: Create a new C# Blazor Web application project.
 
-![Create Blazor Server Side web application in Visual Studio](Blazor_images/Blazor_Server_Web_img1.png)
+![Create a Blazor Server-Side web application in Visual Studio](Blazor_images/Blazor_Server_Web_img1.png)
 
 Step 2: Name the project.
 
-![Name the Blazor Web Server Side application in Visual Studio](Blazor_images/Blazor_Server_Web_img2.png)
+![Name the Blazor Server-Side application in Visual Studio](Blazor_images/Blazor_Server_Web_img2.png)
 
-Step 3: Select the framework and click Create button.
+Step 3: Select the framework and click **Create**.
 
-![Select the framework in Blazor Server Side application in Visual Studio](Blazor_images/Blazor_Server_Web_img3.png)
+![Select the framework in the Blazor Server-Side application in Visual Studio](Blazor_images/Blazor_Server_Web_img3.png)
 
-Step 4: Install the [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) NuGet package as reference to your Blazor web application from [NuGet.org](https://www.nuget.org).
+Step 4: Install the [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core) NuGet package as a reference to your Blazor web application from [NuGet.org](https://www.nuget.org/). This package transitively pulls in the required `Syncfusion.XlsIO.Net.Core` and `Syncfusion.Pdf.Net.Core` assemblies.
 
-![Install Syncfusion.XlsIORenderer.Net.Core Nuget Package](Blazor_images/Blazor_Server_Web_img4.png)
+![Install Syncfusion.XlsIORenderer.Net.Core NuGet Package](Blazor_images/Blazor_Server_Web_img4.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your applications to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must also add the `Syncfusion.Licensing` reference and register a license key. Refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn how to register the Syncfusion<sup>&reg;</sup> license key. The simplest approach is to add the following call in `Program.cs` before `app.Run()`:
+> ```csharp
+> Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR_LICENSE_KEY");
+> ```
 
 Step 5: Create a razor file with name as ``Excel`` under ``Pages`` folder, which is located inside the ``Components`` folder and include the following namespaces in the file.
 
@@ -51,8 +54,8 @@ Step 6: Add the following code to create a new button.
 {% capture codesnippet2 %}
 {% tabs %}
 {% highlight CSHTML %}
-<h2>Syncfusion Excel library (Essential XlsIO)</h2>
-<p>Syncfusion Excel library (Essential XlsIO)  is a Blazor Excel library used to create, read, edit, and convert Excel files in your applications without Microsoft Office dependencies.</p>
+<h2>.NET Excel Library</h2>
+<p>.NET Excel Library is a Blazor Excel library used to create, read, edit, and convert Excel files in your applications without Microsoft Office dependencies.</p>
 <button class="btn btn-primary" @onclick="@ConvertExceltoImage">Convert Excel to Image</button>
 {% endhighlight %}
 {% endtabs %}
@@ -193,4 +196,4 @@ builder.Services.AddScoped<ConvertExceltoImage.Components.Data.ExcelService>();
 {% endhighlight %}
 {% endtabs %}     
 
-A complete working example of how to convert Excel to Image in Blazor Server web application in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/Server%20Side/ConvertExceltoImage">this GitHub page</a>.
+A complete working example of how to convert Excel to Image in Blazor Server web application in C# is present on <a href="https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Getting%20Started/Blazor/Server%20Side/ConvertExceltoImage" aria-label="GitHub demo link">this GitHub page</a>.

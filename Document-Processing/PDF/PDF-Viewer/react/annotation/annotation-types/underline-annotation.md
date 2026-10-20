@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Underline Text in React PDF Viewer | Syncfusion
-description: Learn how to enable, apply, customize, and manage Underline annotations in the Syncfusion React PDF Viewer.
+title: Underline Annotation in React PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Underline annotations in the React PDF Viewer to highlight text with a horizontal line below it.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Underline Annotation (Text Markup) in React PDF Viewer
+# Underline Annotation in React PDF Viewer
 
 This guide explains how to **enable**, **apply**, **customize**, and **manage** *Underline* text markup annotations in the Syncfusion **React PDF Viewer**. You can underline text using the toolbar or context menu, programmatically invoke underline mode, customize default settings, handle events, and export the PDF with annotations.
 
@@ -60,7 +60,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 
 ![Underline tool](../../../javascript-es6/annotations/annotation-images/underline-tool.gif)
 
-### Apply underline using Context Menu
+### Add Underline Using the Context Menu
 Right-click a selected text region → select **Underline**.
 
 ![Underline Context](../../../javascript-es6/annotations/annotation-images/underline-context.gif)
@@ -169,12 +169,12 @@ function editUnderlineProgrammatically() {
 {% endtabs %}
 
 ### Delete Underline
-The PDF Viewer supports deleting existing annotations through both the UI and API. For detailed behavior, supported deletion workflows, and API reference, see [**Delete Annotation**](../remove-annotations).
+The PDF Viewer supports deleting existing annotations through both the UI and API. For detailed behavior, supported deletion workflows, and API reference, see [**Delete Annotation**](../delete-annotation).
 
 ### Comments
 Use the [**Comments panel**](../comments) to add, view, and reply to threaded discussions linked to underline annotations. It provides a dedicated UI for reviewing feedback, tracking conversations, and collaborating on annotation–related notes within the PDF Viewer.
 
-## Set properties while adding Individual Annotation
+## Set Properties While Adding Individual Annotation
 Set properties for individual annotations when adding them programmatically by supplying fields on each `addAnnotation('Underline', …)` call.
 
 {% tabs %}
@@ -226,12 +226,12 @@ Disable text markup annotations (including underline) using the [`enableTextMark
 The PDF viewer provides annotation life-cycle events that notify when underline annotations are added, modified, selected, or removed. For the full list of available events and their descriptions, see [**Annotation Events**](../annotation-event).
 
 ## Export and Import
-The PDF Viewer supports exporting and importing annotations, allowing you to save annotations as a separate file or load existing annotations back into the viewer. For full details on supported formats and steps to export or import annotations, see [**Export and Import Annotation**](../export-import-annotations)
+The PDF Viewer supports exporting and importing annotations, allowing you to save annotations as a separate file or load existing annotations back into the viewer. For full details on supported formats and steps to export or import annotations, see [**Export and Import Annotation**](../export-import/export-annotation)
 
 ## See Also
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)
 - [Customize Context Menu](../../context-menu/custom-context-menu)
 - [Comments Panel](../comments)
 - [Annotation Events](../annotation-event)
-- [Export and Import annotations](../export-import-annotations)
-- [Delete Annotations](../remove-annotations)
+- [Export and Import annotations](../export-import/export-annotation)
+- [Delete Annotations](../delete-annotation)

@@ -1,19 +1,26 @@
 ---
-title: Syncfusion Chart to Image Conversion using XlsIO | Syncfusion
-description: This page explains about how to convert charts from Excel documents to images using XlsIO. It allows to specify the image quality and format.
+title: About Syncfusion .NET Chart to Image Conversion | Syncfusion
+description: Learn about overview of converting Excel charts to images using the Syncfusion .NET Excel Library and setting image quality and format.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Chart to Image Conversion in XlsIO
+# About Syncfusion .NET Excel Chart to Image Conversion
 
-Refer to the following links for assemblies/nuget packages required based on platforms to convert the chart to image.
+XlsIO exposes two API surfaces for converting an Excel chart to an image:
 
-* [Assemblies Information](https://help.syncfusion.com/document-processing/excel/excel-library/net/assemblies-required#converting-excel-chart-to-image) 
+* **`XlsIORenderer`** — the cross-platform / .NET Standard API. Use this for ASP.NET Core, Blazor, WinUI, and .NET MAUI apps.
+* **`ChartToImageConverter`** — the Windows-specific / .NET Framework API. Provides additional chart-quality settings through `ScalingMode`.
+
+Refer to the following links for the assemblies and NuGet packages required to convert a chart to an image, per platform:
+
+* [Assemblies Information](https://help.syncfusion.com/document-processing/excel/excel-library/net/assemblies-required#converting-excel-chart-to-image)
 * [NuGet Information](https://help.syncfusion.com/document-processing/excel/excel-library/net/nuget-packages-required#converting-charts-in-xlsio)
 
-The following code snippet shows how to convert an Excel chart to an image using the [ChartToImageConverter](https://help.syncfusion.com/cr/document-processing/Syncfusion.ExcelChartToImageConverter.ChartToImageConverter.html) class.
+N> IMPORTANT: Before running the samples on this page, install the required NuGet package for your target platform and register your Syncfusion license key. For more information, see the [Licensing overview](https://help.syncfusion.com/document-processing/licensing/overview).
+
+The following code snippets show how to convert an Excel chart to an image using `XlsIORenderer` (cross-platform) or [`ChartToImageConverter`](https://help.syncfusion.com/cr/document-processing/Syncfusion.ExcelChartToImageConverter.ChartToImageConverter.html) (Windows-specific).
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/XlsIO-Examples/master/Chart%20to%20Image/Chart%20to%20Image/.NET/Chart%20to%20Image/Chart%20to%20Image/Program.cs,180" %}
@@ -22,25 +29,19 @@ using (ExcelEngine excelEngine = new ExcelEngine())
 	IApplication application = excelEngine.Excel;
 	application.DefaultVersion = ExcelVersion.Xlsx;
 
-	// Initialize XlsIORenderer
+	// Initialize XlsIORenderer and set the chart image format to PNG.
 	application.XlsIORenderer = new XlsIORenderer();
-
-	//Set converter chart image format to PNG
 	application.XlsIORenderer.ChartRenderingOptions.ImageFormat = ExportImageFormat.Png;
 
 	IWorkbook workbook = application.Workbooks.Open(Path.GetFullPath(@"Data/InputTemplate.xlsx"));
 	IWorksheet worksheet = workbook.Worksheets[0];
-
 	IChart chart = worksheet.Charts[0];
 
-	#region Save
-	//Saving the workbook
-	FileStream outputStream = new FileStream(Path.GetFullPath("Output/Image.png"), FileMode.Create, FileAccess.Write);
-	chart.SaveAsImage(outputStream);
-	#endregion
-
-	//Dispose streams
-	outputStream.Dispose();
+	// Save the chart as a PNG image.
+	using (FileStream outputStream = new FileStream(Path.GetFullPath("Output/Image.png"), FileMode.Create, FileAccess.Write))
+	{
+		chart.SaveAsImage(outputStream);
+	}
 }
 {% endhighlight %}
 
@@ -57,15 +58,19 @@ using (ExcelEngine excelEngine = new ExcelEngine())
   IWorksheet worksheet = workbook.Worksheets[0];
   IChart chart = worksheet.Charts[0];
 
-  //Creating the memory stream for chart image
-  MemoryStream stream = new MemoryStream();
+  // Create the memory stream for the chart image.
+  using (MemoryStream stream = new MemoryStream())
+  {
+    chart.SaveAsImage(stream);
+    using (Image image = Image.FromStream(stream))
+    {
+      // Persist the rendered chart to disk.
+      image.Save("Output.png");
+    }
+  }
 
-  //Saving the chart as image
-  chart.SaveAsImage(stream);
-  Image image = Image.FromStream(stream);
-
-  //Saving image stream to file
-  image.Save("Output.png");
+  // Alternatively, write directly to disk:
+  // chart.SaveAsImage("Output.png");
 }
 {% endhighlight %}
 
@@ -74,28 +79,30 @@ Using excelEngine As ExcelEngine = New ExcelEngine()
   Dim application As IApplication = excelEngine.Excel
   application.DefaultVersion = ExcelVersion.Xlsx
 
-  Dim ChartToImageConverter As chartToImageConverter = New ChartToImageConverter()
-  application.ChartToImageConverter = ChartToImageConverter
+  Dim chartConverter As New ChartToImageConverter()
+  application.ChartToImageConverter = chartConverter
   application.ChartToImageConverter.ScalingMode = ScalingMode.Best
 
   Dim workbook As IWorkbook = application.Workbooks.Open("Sample.xlsx")
   Dim worksheet As IWorksheet = workbook.Worksheets(0)
   Dim chart As IChart = worksheet.Charts(0)
 
-  'Creating the memory stream for chart image
-  Dim stream As New MemoryStream()
+  ' Create the memory stream for the chart image.
+  Using stream As New MemoryStream()
+    chart.SaveAsImage(stream)
+    Using image As Image = Image.FromStream(stream)
+      ' Persist the rendered chart to disk.
+      image.Save("Output.png")
+    End Using
+  End Using
 
-  'Saving the chart as image
-  chart.SaveAsImage(stream)
-  Dim image As Image = Image.FromStream(stream)
-
-  'Saving image stream to file
-  image.Save("Output.png")
+  ' Alternatively, write directly to disk:
+  ' chart.SaveAsImage("Output.png")
 End Using
 {% endhighlight %}
-{% endtabs %}  
+{% endtabs %}
 
-A complete working example to convert Excel chart to image in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Chart%20to%20Image/Chart%20to%20Image/.NET/Chart%20to%20Image).  
+A complete working example to convert an Excel chart to an image in C# is present on [this GitHub page](https://github.com/SyncfusionExamples/XlsIO-Examples/tree/master/Chart%20to%20Image/Chart%20to%20Image/.NET/Chart%20to%20Image).
 
 N> 1. Instance of [XlsIORenderer](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.XlsIORenderer.XlsIORenderer.html) class is mandatory to convert the chart to image using .NET Standard 2.0 assemblies.
 N> 2. In .NET Standard, the Image format and quality can be specified using the [ChartRenderingOptions](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.XlsIORenderer.XlsIORenderer.html#Syncfusion_XlsIORenderer_XlsIORenderer_ChartRenderingOptions) property of XlsIORenderer class. By default the [ImageFormat](https://help.syncfusion.com/cr/document-processing/Syncfusion.Drawing.ImageFormat.html) for chart is set to JPEG and [ScalingMode](https://help.syncfusion.com/cr/document-processing/Syncfusion.XlsIO.ScalingMode.html) is set to Best.

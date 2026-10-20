@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with PDF Viewer in Blazor Server App | Syncfusion
-description: Learn how to getting started with PDF Viewer control in Blazor Server-side application. You can view and comment on PDFs in ease and also can fill fields.
+title: Getting Started with Blazor Server App PDF Viewer | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor Server-side application PDF Viewer component. Explore view, comment on PDFs and also fill fields.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 N> Syncfusion<sup style="font-size:70%">&reg;</sup> recommends using [Blazor PDF Viewer (NextGen)](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/server-side-application) Component which provides fast rendering of pages and improved performance. Also, there is no need of external Web service for processing the files and ease out the deployment complexity. It can be used in Blazor Server, WASM and MAUI applications without any changes.
 
-# Getting Started with Blazor PDF Viewer Component in Blazor Server App
+# Getting Started with Blazor Server App PDF Viewer
 
 This section briefly explains about how to integrate [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) component in your Blazor Server App using Visual Studio.
 

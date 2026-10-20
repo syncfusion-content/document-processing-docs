@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Convert PDF Library bounds to PDF Viewer bounds | Syncfusion
-description: Learn how to convert PDF Library bounds into PDF Viewer bounds when exporting annotations, ensuring accurate placement in the React PDF Viewer.
+title: How to Convert PDF Library Bounds to PDF Viewer Bounds | Syncfusion
+description: Convert PDF Library bounds to PDF Viewer bounds when exporting annotations in the React PDF Viewer so coordinates map correctly.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Convert PDF Library bounds to PDF Viewer bounds
+# How to Convert PDF Library Bounds to PDF Viewer Bounds in React PDF
 
-When exporting annotations from the PDF Library, convert the annotation bounds into the PDF Viewer coordinate system so exported annotations appear at the correct position and scale in the viewer.
+The Syncfusion PDF Library reports annotation bounds in PDF coordinates (points, origin at the bottom-left of the page), while the PDF Viewer renders them in pixel coordinates (origin at the top-left). When exporting annotations from the PDF Library, convert the annotation bounds into the PDF Viewer coordinate system so that exported annotations appear at the correct position and scale in the viewer.
 
 Steps to convert bounds values
 
@@ -58,7 +58,7 @@ class App extends React.Component {
         console.log(args.exportData);
         const blobURL = args.exportData;
 
-        // Converting the exported blob into object
+        // Converting the exported blob into an object
         this.convertBlobURLToObject(blobURL)
             .then((objectData) => {
                 console.log(objectData);
@@ -91,7 +91,7 @@ class App extends React.Component {
                                 height: Math.abs(pdfEndY - pdfStartY),
                             };
                         }
-                        console.log(data.name, rect, '-------------------------');
+                        console.log('Converted bounds for', data.name, rect);
                     }
                 });
             })
@@ -100,7 +100,7 @@ class App extends React.Component {
             });
     };
 
-    // Function to convert Blob URL to object
+    // Function to convert a Blob URL to a JSON object
     convertBlobURLToObject(blobURL) {
         return fetch(blobURL)
             .then((response) => response.blob())

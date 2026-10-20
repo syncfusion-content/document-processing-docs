@@ -1,28 +1,28 @@
 ---
 layout: post
-title: Localization in Flutter PDF Viewer widget | Syncfusion
-description: Learn here all about localization feature of Syncfusion® Flutter PDF Viewer (SfPdfViewer) widget and more.
+title: Localization in Flutter PDF Viewer | Syncfusion
+description: The localization feature in SfPdfViewer enables users to display built-in UI elements and messages in different languages.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Localization in Flutter PDF Viewer (SfPdfViewer)
+# Localization in Flutter PDF Viewer
 
-By default, the `SfPdfViewer` widget supports US English localization. You can change the other languages by specifying the `MaterialApp` properties and adding the `flutter_localizations` and `syncfusion_localizations` packages to your application. 
+By default, the `SfPdfViewer` widget supports US English localization. You can change to other languages by specifying the `MaterialApp` properties and adding the `flutter_localizations` and `syncfusion_localizations` packages to your application. 
 
 To use `flutter_localizations` and `syncfusion_localizations`, add the packages as a dependency to the `pubspec.yaml` file.
 
 {% highlight dart %}
 
 dependencies:
-flutter_localizations:
-  sdk: flutter
-syncfusion_localizations: ^XX.X.XX
+  flutter_localizations:
+    sdk: flutter
+  syncfusion_localizations: ^XX.X.XX
 
 {% endhighlight %}
 
-Next, import the `flutter_localizations` and `syncfusion_localizations` library and specify the `localizationsDelegates` and `supportedLocales` for `MaterialApp` to localize the contents in the `SfPdfViewer` (page navigation dialog and bookmark view).
+Next, import the `flutter_localizations` and `syncfusion_localizations` libraries and specify the `localizationsDelegates` and `supportedLocales` for `MaterialApp` to localize the contents in the `SfPdfViewer` (page navigation dialog and bookmark view).
 
 {% tabs %}
 {% highlight dart hl_lines="1 2 7 8 9 10 11 12 13 14 15 16 17" %}

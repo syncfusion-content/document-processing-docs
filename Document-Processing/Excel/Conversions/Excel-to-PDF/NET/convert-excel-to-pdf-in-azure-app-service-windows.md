@@ -1,12 +1,12 @@
 ---
-title: Convert Excel to PDF in Azure App Service on Windows | Syncfusion
-description: Convert Excel to PDF in Azure App Service on Windows using .NET Core Excel library (XlsIO) without Microsoft Excel or interop dependencies.
+title: Excel to PDF conversion in Azure Windows | Syncfusion
+description: Azure App Service on Windows Excel to PDF section explains how to convert Excel files to PDF in Azure App Service on Windows without Microsoft Excel.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Convert Excel document to PDF in Azure App Service on Windows
+# Excel to PDF Conversion in Azure Windows using Excel Library
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to PDF in Azure App Service on Windows**.
 

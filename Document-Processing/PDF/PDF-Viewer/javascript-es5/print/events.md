@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Print Events in JavaScript PDF Viewer | Syncfusion
-description: Configure print events, cancel print, and track print usage in the Syncfusion JavaScript PDF Viewer component.
+title: Events in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Subscribe to print events in the JavaScript (ES5) PDF Viewer to run custom logic before, during, and after a user prints a PDF document.
 platform: document-processing
 control: Print
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print events in JavaScript PDF Viewer
+# Print Events in JavaScript (ES5) PDF Viewer
 
-Subscribe to print lifecycle events to track usage and implement custom workflows.
+Subscribe to print life cycle events to track usage and implement custom workflows.
 
 | Name         | Description |
 |--------------|-------------|
@@ -43,7 +43,8 @@ ej.pdfviewer.PdfViewer.Inject(
     ej.pdfviewer.LinkAnnotation,
     ej.pdfviewer.ThumbnailView,
     ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.Print
 );
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
@@ -68,7 +69,8 @@ ej.pdfviewer.PdfViewer.Inject(
     ej.pdfviewer.LinkAnnotation,
     ej.pdfviewer.ThumbnailView,
     ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.Print
 );
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
@@ -107,7 +109,8 @@ ej.pdfviewer.PdfViewer.Inject(
     ej.pdfviewer.LinkAnnotation,
     ej.pdfviewer.ThumbnailView,
     ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.Print
 );
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
@@ -130,7 +133,8 @@ ej.pdfviewer.PdfViewer.Inject(
     ej.pdfviewer.LinkAnnotation,
     ej.pdfviewer.ThumbnailView,
     ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.Print
 );
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({

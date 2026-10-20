@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Supported PDF conformance levels | Syncfusion
-description: Learn about the supported PDF/A and PDF/X conformance levels in the JavaScript PDF Viewer component.
+title: How to Use PDF/A and PDF/X Conformance in JavaScript | Syncfusion
+description: Learn about the PDF/A and PDF/X conformance levels supported in the Syncfusion PDF tools used together with the JavaScript (ES5) PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Supported PDF conformance in JavaScript PDF Viewer
+# How to Use PDF/A and PDF/X Conformance in JavaScript (ES5) PDF Viewer
 
 The PDF Viewer supports the following conformance levels:
 

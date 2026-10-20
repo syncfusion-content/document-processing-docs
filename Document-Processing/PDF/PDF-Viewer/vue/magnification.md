@@ -1,16 +1,16 @@
 ---
 layout: post
 title: Magnification in Vue PDF Viewer | Syncfusion
-description: Learn how to enable and use magnification in the Syncfusion Vue PDF Viewer, including Zoom In, Zoom Out, Fit to Page, and Fit to Width options.
+description: Enable and use magnification in the Vue PDF Viewer, including Zoom In, Zoom Out, Fit to Page, and Fit to Width options.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Magnification in Vue PDF viewer control
+# Magnification in Vue PDF Viewer
 
-The PDF Viewer includes magnification controls—ZoomIn, ZoomOut, Zoom, FitPage, and FitWidth—in the default toolbar. The magnification controls can be shown or hidden in the toolbar.
+The PDF Viewer includes magnification controls—ZoomIn, ZoomOut, Zoom, FitPage, FitWidth, and Auto in the default toolbar. The magnification controls can be shown or hidden in the toolbar.
 
 The following examples show how to enable magnification in the PDF Viewer.
 

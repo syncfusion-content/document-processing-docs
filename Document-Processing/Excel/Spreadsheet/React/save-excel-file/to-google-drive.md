@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Save excel to Google Drive in React Spreadsheet control | Syncfusion
-description: Learn about how to Save an Excel file to Google Drive from React Spreadsheet control of Syncfusion Essential JS 2.
+title: Save Excel to Google Drive in React Spreadsheet | Syncfusion
+description: Learn about how to save Excel documents using the Syncfusion React Spreadsheet control to Google Drive.
 platform: document-processing
 control: Save file to Google Drive
 documentation: ug
 ---
 
-# Save file to Google Drive
+# Save Excel to Google Drive in React Spreadsheet
 
 To save a file to Google Drive in a Spreadsheet Component, you can follow the steps below
 

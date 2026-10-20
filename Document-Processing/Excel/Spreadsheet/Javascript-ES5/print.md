@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Print in EJ2 Javascript Spreadsheet control | Syncfusion
-description: Learn here all about print feature in EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Print in JavaScript Spreadsheet | Syncfusion
+description: Print in JavaScript Spreadsheet enables users to print worksheet content and preview documents directly from the application.
 platform: document-processing
 control: Print
 documentation: ug
 ---
 
-# Print in EJ2 Javascript Spreadsheet control
+# Print in JavaScript Spreadsheet
 
 The printing functionality allows end-users to print all contents, such as tables, charts, images, and formatted contents, available in the active worksheet or entire workbook in the Spreadsheet. You can enable or disable print functionality by using the `allowPrint` property, which defaults to **true**.
 
@@ -19,7 +19,7 @@ The active worksheet in the Spreadsheet can be printed by selecting the **File >
 
 ## Custom printing
 
-The active worksheet or entire workbook can be printed with customized options using the `print` method. The `print` method takes one parameter, that is, `printOptions`, which can be used for customization.
+The active worksheet or entire workbook can be printed with customized options using the [`print`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#print) method. The `print` method takes one parameter, that is, `printOptions`, which can be used for customization.
 
 The `printOptions` contain three properties, as described below.
 
@@ -42,7 +42,7 @@ The `printOptions` contain three properties, as described below.
 
 ## Disable printing
 
-The printing functionality in the Spreadsheet can be disabled by setting the [`allowPrint`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/#allowprint) property to **false**. After disabling, the **"Print"** option will not be available in the **"File"** menu of the ribbon and as a keyboard shortcut.
+The printing functionality in the Spreadsheet can be disabled by setting the [`allowPrint`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowprint) property to **false**. After disabling, the **Print** option is removed from the **File** menu of the ribbon, and as a keyboard shortcut.
 
 ![Spreadsheet with print option disabled](./images/spreadsheet_print_disable.png)
 

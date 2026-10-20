@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Unload the PDF document from Viewer in Blazor PDF Viewer Component
+# Unload the PDF document from Viewer in Blazor PDF Viewer 
 
 The PDF Viewer component will automatically unload and clear the resources occupied by the PDF document when the control is disposed. Also, when loading another PDF file, the resources occupied by previous loaded file in viewer will be automatically unloaded and cleared.
 

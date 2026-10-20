@@ -1,17 +1,17 @@
 ---
-title: Open and save PDF document in UWP | Syncfusion
-description: Open and save PDF document in UWP application using Syncfusion UWP PDF library without the dependency of Adobe Acrobat. 
+title: Open and Save PDF Document in UWP | Syncfusion
+description: Learn how to open and save PDF documents in UWP applications using Syncfusion UWP PDF library without Adobe Acrobat dependency.
 platform: document-processing
 control: PDF
 documentation: UG
 keywords: save pdf in mvc, load pdf in mvc, c# save pdf, c# load pdf
 ---
 
-# Open and Save PDF document in UWP
+# Open and Save PDF Document in UWP
 
-The [Syncfusion<sup>&reg;</sup> UWP PDF library](https://www.syncfusion.com/document-processing/pdf-framework/uwp) is used to create, read, and edit PDF documents programatically without the dependency of Adobe Acrobat. Using this library, you can **open and save PDF document in UWP**. 
+The [UWP PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **open and save a PDF document in UWP**.
 
-## Steps to open and save PDF document programatically:
+## Steps to open and save PDF document programmatically:
 
 Step 1: Create a new C# Blank App (Universal Windows) project.
 ![Create UWP application in Visual Studio](Images/Create_UWP_application.png) 
@@ -25,7 +25,7 @@ Step 3: Create button in `MainPage.Xaml` page using below code example and creat
 
 {% tabs %}
 
-{% highlight XML %}
+{% highlight XAML %}
 
 <Grid>
     <Button Content="OpenAndSavePDF" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="150" Height="100" Click="Button_Click" />
@@ -58,6 +58,10 @@ Step 5: Include the below code snippet in the click event of the button in MainP
 //Load an existing PDF document.
 Stream docStream = typeof(MainPage).GetTypeInfo().Assembly.GetManifestResourceStream("Sample.Assets.Input.pdf");
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+//Get the first page from the document.
+PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
+//Create PDF graphics for the page.
+PdfGraphics graphics = loadedPage.Graphics;
 
 {% endhighlight %}
 
@@ -99,13 +103,13 @@ Step 7: Add below code example to **save the PDF document in UWP**.
 
 {% highlight c# tabtitle="C#" %}
 
-//Create memory stream.
+//Create a memory stream.
 MemoryStream ms = new MemoryStream();
-//Open the document in browser after saving it.
+//Open the document in the browser after saving it.
 loadedDocument.Save(ms);
 //Close the document.
 loadedDocument.Close(true);
-//Save the PDF document. 
+//Save the PDF document.
 Save(ms, "Sample.pdf");
 
 {% endhighlight %}
@@ -118,7 +122,7 @@ Step 8: Add below code example to save the PDF document as a physical file and o
 
 {% highlight c# tabtitle="C#" %}
 
-//Save the stream to physical file and open the file for viewing. 
+//Save the stream to a physical file and open the file for viewing.
 public async void Save(Stream stream, string filename)
 {
     stream.Position = 0;
@@ -166,7 +170,7 @@ public async void Save(Stream stream, string filename)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Open%20and%20Save%20PDF%20document/UWP).
 
-By executing the program, you will get the **Word document** as follows.
-![UWP open and save output Word document](Images/Open_and_save_output.png)
+By executing the program, you will get the **PDF document** as follows.
+![UWP open and save output PDF document](Images/Open_and_save_output.png)
 
 Click [here](https://www.syncfusion.com/document-processing/pdf-framework/uwp) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.

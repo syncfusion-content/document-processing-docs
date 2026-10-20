@@ -7,7 +7,7 @@ control: PDF viewer
 documentation: ug
 ---
 
-# Working with popup annotations in UWP PDF Viewer (SfPdfViewer)
+# Working with popup annotations in UWP Pdf Viewer
 
 PDF Viewer allows you to include popup annotations in a PDF document and provides options to modify or remove the existing popup annotations.
 
@@ -188,3 +188,8 @@ private void PdfViewer_PopupEdited(object sender, PopupEditedEventArgs e)
 }
 
 {% endhighlight %}
+
+## See Also
+- [Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-annotations)
+- [Undo and Redo](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/how-to/enable-disable-undo-redo)
+- [Print PDF](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/printing-pdf)

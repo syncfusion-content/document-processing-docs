@@ -1,14 +1,14 @@
 ---
-title: Convert Word to Image in Xamarin | Syncfusion
-description: Convert Word to image in Xamarin using Xamarin Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Convert Word to Image in Xamarin  | Syncfusion
+description: Convert Word to image in Xamarin using Xamarin Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Convert Word Document to Image in Xamarin
+# Convert Word to Image in Xamarin 
 
-Syncfusion<sup>&reg;</sup> DocIO is a [Xamarin Word library](https://www.syncfusion.com/document-processing/word-framework/xamarin/word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or **interop** dependencies. Using this library, you can **convert a Word document to image in Xamarin**.
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or **interop** dependencies. Using this library, you can **convert a Word document to image in Xamarin**.
 
 ## Steps to convert Word document to Image in Xamarin
 
@@ -28,7 +28,7 @@ Step 3: Install [Syncfusion.Xamarin.DocIORenderer ](https://www.nuget.org/packag
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: Add new Forms XAML page in **portable project**. If there is no XAML page is defined in the App class. Otherwise proceed to the next step.
+Step 4: Add new Forms XAML page in **portable project**. If no XAML page is defined in the App class, follow the sub-steps below. Otherwise proceed to the next step.
 <ul>
 <li>
 To add the new XAML page, right click on the project and select <b>Add > New Item</b> and add a Forms XAML Page from the list. Name it as MainXamlPage.
@@ -178,7 +178,7 @@ Refer the below helper files and add them into the mentioned project. These help
   </tr>
 </table>
 
-Compile and execute the application. Now this application **convert a Word document to image**.
+Compile and execute the application. Now this application **converts a Word document to image**.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Convert-Word-to-image/Xamarin).
 
@@ -186,6 +186,6 @@ By executing the program, you will get the **image** as follows.
 
 ![Word to Image in Xamarin](WordToPDF_images/Output-WordtoImage.png)      
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/xamarin) to explore the rich set of Syncfusion<sup>&reg;</sup> Word library (DocIO) features. 
+Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page.
 
 An online sample link to [convert Word document to image](https://document.syncfusion.com/demos/word/wordtoimage#/tailwind) in ASP.NET Core. 

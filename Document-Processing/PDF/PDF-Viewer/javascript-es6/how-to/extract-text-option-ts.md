@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Configure extractTextOption in TypeScript PDF Viewer | Syncfusion
-description: Learn how to use the extractTextOption property in the Syncfusion TypeScript PDF Viewer to control text extraction and memory usage.
+title: How to Configure ExtractTextOption in JavaScript (ES6) | Syncfusion
+description: Use the extractTextOption property in the JavaScript (ES6) PDF Viewer to control how text is extracted and to manage memory usage during extraction.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Extract text option in the JavaScript PDF Viewer
+# How to Configure ExtractTextOption in JavaScript (ES6) PDF Viewer
 
 The `extractTextOption` property controls the amount of text and layout information returned by the viewer. Adjusting this value helps balance memory usage and the level of detail required for downstream processing. The viewer exposes four options:
 
-### Available Options:
+## Available Options:
 
 - **None** — Do not extract or return any text or layout data. Use this option to minimize memory usage when textual information is not required.
 - **TextOnly** — Return plain text only; layout and bounds are omitted. Note: using `TextOnly` may disable some viewer text features such as synchronous `findText`; use `findTextAsync` when asynchronous search is required.
@@ -49,8 +49,8 @@ N> Text search: When using the `extractTextOption.TextOnly` or `extractTextOptio
 
 ## See Also
 
-[Text Search Features](../text-search/text-search-features)
-[Find Text](../text-search/find-text)
-[Text Search Events](../text-search/text-search-events)
-[Extract Text](../how-to/extract-text-ts.md)
-[Extract Text Completed](./extract-text-completed-ts)
+- [Text Search Features](../text-search/text-search-features)
+- [Find Text](../text-search/find-text)
+- [Text Search Events](../text-search/text-search-events)
+- [Extract Text](../how-to/extract-text-ts.md)
+- [Extract Text Completed](./extract-text-completed-ts.md)

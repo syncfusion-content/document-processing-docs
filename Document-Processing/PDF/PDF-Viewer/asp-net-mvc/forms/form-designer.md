@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Form Designer and Toolbar Customization in MVC | Syncfusion
-description: Learn here all about form designer and toolbar in Syncfusion MVC PDF Viewer of Syncfusion Essential JS 2 and more.
+title: Form Designer in ASP.NET MVC PDF Viewer | Syncfusion
+description: Use the Form Designer in the ASP.NET MVC PDF Viewer to create, edit, and manage form fields visually, and customize the form designer toolbar.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form Designer in MVC PDF Viewer
+# Form Designer in ASP.NET MVC PDF Viewer
 
-When **Form Designer mode** is enabled in the Syncfusion MVC PDF Viewer, a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/asp-net-mvc/pdfviewer/default#/tailwind3) is displayed. This UI includes a built in toolbar for adding form fields such as text boxes, password fields, check boxes, radio buttons, drop down lists, list boxes, and signature and initial fields.
+When **Form Designer mode** is enabled in the Syncfusion MVC PDF Viewer, a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/asp-net-mvc/pdfviewer/default#/tailwind3) is displayed. This UI includes a built-in toolbar for adding form fields such as text boxes, password fields, check boxes, radio buttons, drop down lists, list boxes, and signature and initial fields.
 
 Using the Form Designer UI, users can place form fields on the PDF, move and resize them, configure field and widget properties, preview the designed form, and remove fields when required. The Form Designer toolbar can also be shown or hidden and customized to control the available tools based on application requirements, enabling flexible and interactive form design directly within the viewer.
 
@@ -67,7 +67,7 @@ To enable form design features, use the MVC PDF Viewer helper to render the view
 
 ## Form Designer UI
 
-When Form Designer mode is enabled in the Syncfusion MVC PDF Viewer, a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/asp-net-mvc/pdfviewer/default#/tailwind3) is displayed. This UI provides a built in toolbar for adding common form fields such as text boxes, check boxes, radio buttons, drop down lists, and signature fields. Users can place fields on the PDF, select them, resize or move them, and configure their properties using the available editing options, enabling interactive form creation directly within the viewer.
+When Form Designer mode is enabled in the Syncfusion MVC PDF Viewer, a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/asp-net-mvc/pdfviewer/default#/tailwind3) is displayed. This UI provides a built-in toolbar for adding common form fields such as text boxes, check boxes, radio buttons, drop down lists, and signature fields. Users can place fields on the PDF, select them, resize or move them, and configure their properties using the available editing options, enabling interactive form creation directly within the viewer.
 
 ![FormDesigner](../../javascript-es6/images/FormDesigner.gif)
 
@@ -189,10 +189,10 @@ You can move, resize, and edit an existing form field directly in the PDF Viewer
 
 - Resize a field using the handles displayed on the field boundary.
 
-![Moveing and Resizing a form field](../../javascript-es6/images/move-resize-forms.gif)
+![Moving and Resizing a form field](../../javascript-es6/images/move-resize-forms.gif)
 
 - Edit a field by selecting it to open the Form Field Properties popover. The popover allows you to modify the form field and widget annotation properties. Changes are reflected immediately in the viewer and are saved when the properties popover is closed.
-For more information, see Editing Form Fields
+For more information, see [Editing form fields](./manage-form-fields/modify-form-fields)
 
 ## Deleting Form Fields
 
@@ -208,8 +208,8 @@ For more information, see  [Deleting Form Fields](./manage-form-fields/remove-fo
 - [Filling PDF Forms](./form-filling)
 - [Create](./manage-form-fields/create-form-fields), [edit](./manage-form-fields/modify-form-fields), [style](./manage-form-fields/style-form-fields) and [remove](./manage-form-fields/remove-form-fields) form fields
 - [Grouping form fields](./group-form-fields)
-- [Form Constrains](./form-constrain)
-- [Form Validation](./form-validation)
+- [Form Constraints](./form-constrain)
+- [Form validation](./form-validation)
 - [Custom Data](./custom-data)
 - [Import](./import-export-form-fields/import-form-fields)/[Export Form Data](./import-export-form-fields/export-form-fields)
 - [Form field events](./form-field-events)

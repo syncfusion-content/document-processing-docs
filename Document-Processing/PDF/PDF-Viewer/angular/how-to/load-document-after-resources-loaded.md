@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Load document after resources Loaded Angular PDF Viewer | Syncfusion
-description: Learn here all about how to Load document after loading assets in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: How to Load a Document After Resources Are Ready | Syncfusion
+description: Load a PDF only after PDFium resources are ready in the standalone Angular PDF Viewer by using the resourcesLoaded event handler.
 platform: document-processing
 control: PDF Viewer 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load a PDF only after PDFium resources are ready in Angular
+# How to Load a Document After Resources Are Ready in Angular PDF Viewer
 
 When using the Standalone PDF Viewer, the component downloads the PDFium runtime assets (scripts/wasm) from the path specified in `resourceUrl`. Attempting to load a document before those assets are available can cause errors. Use the `resourcesLoaded` event to defer document loading until all required assets are ready.
 
@@ -36,7 +36,7 @@ The `resourcesLoaded` event fires once the viewer finishes loading all required 
 ```ts
 // app.ts
 import { Component, ViewChild } from '@angular/core';
-import { PdfViewerComponent, ToolbarService, MagnificationService, NavigationService, LinkAnnotationService, ThumbnailViewService, BookmarkViewService, TextSelectionService, AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
+import { PdfViewerModule, PdfViewerComponent, ToolbarService, MagnificationService, NavigationService, LinkAnnotationService, ThumbnailViewService, BookmarkViewService, TextSelectionService, AnnotationService, FormDesignerService, FormFieldsService, PageOrganizerService } from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
   selector: 'app-root',

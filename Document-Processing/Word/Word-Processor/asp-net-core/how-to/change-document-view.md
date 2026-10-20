@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Change Document View in Document Editor Component | Syncfusion
-description: Learn here all about how to change document view in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: How to Change Document View in ASP.NET Core DOCX Editor | Syncfusion
+description: Change the document view to web layout or print layout in Syncfusion® ASP.NET Core DOCX Editor using layout type settings.
 platform: document-processing
 control: Change Document View
 documentation: ug
 ---
 
 
-# Change document view
+# How to Change Document View in ASP.NET Core DOCX Editor
 
 ## How to change the document view in DocumentEditor component
 
-DocumentEditor allows to change the view to web layout and print using the [`layoutType`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditor.html#Syncfusion_EJ2_DocumentEditor_DocumentEditor_LayoutType) property with the supported [`LayoutType`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.LayoutType.html)
+[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) allows you to switch the document view between page layout (`Pages`) and continuous web layout (`Continuous`) using the [`layoutType`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditor.html#Syncfusion_EJ2_DocumentEditor_DocumentEditor_LayoutType) property with the supported [`LayoutType`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.LayoutType.html) values.
 
 
 {% tabs %}
@@ -26,11 +26,11 @@ DocumentEditor allows to change the view to web layout and print using the [`lay
 
 
 
-N> Default value of [`layoutType`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditorContainer.html#Syncfusion_EJ2_DocumentEditor_DocumentEditorContainer_LayoutType) in DocumentEditor component is [`Pages`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.LayoutType.html).
+N> Default value of [`layoutType`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditor.html#Syncfusion_EJ2_DocumentEditor_DocumentEditor_LayoutType) in DocumentEditor and DocumentEditorContainer components is [`Pages`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.LayoutType.html).
 
 ## How to change the document view in DocumentEditorContainer component
 
-DocumentEditorContainer component allows to change the view to web layout and print using the [`layoutType`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditorContainer.html#Syncfusion_EJ2_DocumentEditor_DocumentEditorContainer_LayoutType) property with the supported [`LayoutType`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.LayoutType.html)
+DocumentEditorContainer component allows you to switch the document view between page layout (`Pages`) and continuous web layout (`Continuous`) using the [`layoutType`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditorContainer.html#Syncfusion_EJ2_DocumentEditor_DocumentEditorContainer_LayoutType) property with the supported [`LayoutType`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.LayoutType.html) values.
 
 
 {% tabs %}

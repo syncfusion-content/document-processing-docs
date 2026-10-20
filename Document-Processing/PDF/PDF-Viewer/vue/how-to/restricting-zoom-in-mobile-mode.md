@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Restrict zoom percentage on mobile devices | Syncfusion
-description: Learn how to restrict zoom percentage on mobile devices using minZoom and maxZoom in the Syncfusion Vue PDF Viewer.
+title: How to Restrict Zoom on Mobile Devices in Vue PDF Viewer | Syncfusion
+description: Restrict the zoom percentage on mobile devices in the Vue PDF Viewer using minZoom and maxZoom to keep the UI usable on small screens.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to restrict zoom percentage on mobile devices
+# How to Restrict Zoom on Mobile Devices in Vue PDF Viewer
 
 Use `minZoom` and `maxZoom` to restrict zoom levels on mobile devices and improve scrolling performance and perceived load time. Restricting zoom prevents extreme zoom levels that can degrade rendering performance on constrained devices.
 
@@ -35,7 +35,6 @@ import { PdfViewerPlugin, Toolbar, Magnification, Navigation,
          Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
 import {Browser} from '@syncfusion/ej2-base';
 Vue.use(PdfViewerPlugin);
-var viewer;
 
 export default {
   name: 'app',
@@ -51,7 +50,7 @@ export default {
 
   methods: {
     documentLoad: function (args) {
-      viewer = this.$refs.pdfviewer.ej2Instances;
+      const viewer = this.$refs.pdfviewer.ej2Instances;
       if (Browser.isDevice && !viewer.enableDesktopMode) {
         viewer.maxZoom = 200;
         viewer.minZoom = 10;
@@ -86,7 +85,6 @@ import { PdfViewerPlugin, Toolbar, Magnification, Navigation,
          Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
 import {Browser} from '@syncfusion/ej2-base';
 Vue.use(PdfViewerPlugin);
-var viewer;
 
 export default {
   name: 'app',
@@ -102,7 +100,7 @@ export default {
 
   methods: {
     documentLoad: function (args) {
-      viewer = this.$refs.pdfviewer.ej2Instances;
+      const viewer = this.$refs.pdfviewer.ej2Instances;
       if (Browser.isDevice && !viewer.enableDesktopMode) {
         viewer.maxZoom = 200;
         viewer.minZoom = 10;

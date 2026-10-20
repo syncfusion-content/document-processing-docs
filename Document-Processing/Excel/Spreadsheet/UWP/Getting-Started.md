@@ -1,19 +1,73 @@
 ---
 layout: post
-title: Getting Started with UWP Spreadsheet control | Syncfusion®
-description: Learn here about getting started with Syncfusion® UWP Spreadsheet (SfSpreadsheet) control, its elements and more.
+title: Getting Started with UWP Spreadsheet Control | Syncfusion®
+description: Learn how to get started with the Syncfusion UWP Spreadsheet control. Explore setup, workbook management, features, and customization options.
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---
 
-# Getting Started with UWP Spreadsheet (SfSpreadsheet)
+# Getting Started with UWP Spreadsheet 
 
-This section helps you to get started with the SfSpreadsheet
+This section briefly explains how to include the [UWP Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/uwp-spreadsheet-editor) component in UWP App using Visual Studio
+
+## Prerequisites
+* [System requirements for UWP components](https://help.syncfusion.com/uwp/system-requirements)
+
+## Create a new UWP App in Visual Studio
+
+1. Open **Visual Studio** and click **Create a new project**.
+2. Select **Blank App (Universal Windows)** from the project templates and click **Next**.
+3. Enter a **Project name** (for example, `SpreadsheetApp`), choose a **Location**, and click **Create**.
+4. In the **New Universal Windows Platform Project** dialog, select the required **Target version** and **Minimum version** (Windows 10, version 1903 or later is recommended) and click **OK**.
+
+For more information, see [Microsoft templates](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-uwp?view=visualstudio&tabs=vs-2022-17.10) or [Syncfusion<sup style="font-size:70%">&reg;</sup> UWP project creation](https://help.syncfusion.com/uwp/visual-studio-integration/create-project).
 
 ## Assemblies Deployment
 
-Below table describes, list of assemblies required to be added in project when the SfSpreadsheet control is used in your application.
+You can add a UWP spreadsheet component to your application by installing it via NuGet packages (recommended) or by manually adding the required assemblies to the project.
+
+{% tabcontents %}
+
+{% tabcontent NuGet Package %}
+
+### Install Syncfusion<sup style="font-size:70%">&reg;</sup> UWP Spreadsheet NuGet Package
+
+To add the **UWP Spreadsheet** component to the application, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install:
+
+•	[Syncfusion.SfSpreadsheet.UWP](https://www.nuget.org/packages/Syncfusion.SfSpreadsheet.UWP)
+
+The following table lists the optional NuGet packages that enable additional features in the SfSpreadsheet control.
+
+<table>
+<tr>
+<th>
+Optional NuGet Packages</th><th>
+Description</th></tr>
+<tr>
+<td>
+{{'[Syncfusion.SfSpreadsheetHelper.UWP](https://www.nuget.org/packages/Syncfusion.SfSpreadsheetHelper.UWP)' | markdownify}}</td><td>
+Contains the classes responsible for importing charts and sparklines into SfSpreadsheet.</td></tr>
+<tr>
+<td>
+{{'[Syncfusion.ExcelChartToImageConverter.UWP](https://www.nuget.org/packages/Syncfusion.ExcelChartToImageConverter.UWP)' | markdownify}}</td><td>
+Contains the classes responsible for converting charts to images.</td></tr>
+<tr>
+<td>
+{{'[Syncfusion.SfChart.UWP](https://www.nuget.org/packages/Syncfusion.SfChart.UWP)' | markdownify}}</td><td>
+Contains the classes responsible for importing chart types such as line charts, pie charts, and sparklines.</td></tr>
+</table>
+
+{% endtabcontent %}
+
+{% tabcontent Assemblies (.dll) %}
+
+### Add Syncfusion<sup style="font-size:70%">&reg;</sup> UWP Spreadsheet Assemblies
+
+To manually add the assemblies:
+
+
+The table below lists the assemblies required to be added to the project when the UWP Spreadsheet control is used in your application.
 
 <table>
 <tr>
@@ -23,37 +77,38 @@ Description</th></tr>
 <tr>
 <td>
 Syncfusion.SfCellGrid.UWP.dll</td><td>
-Contains the base and fundamental classes which holds the underlying architecture for displaying cells with virtualized behavior and selection/interaction of cells.</td></tr>
+Contains the base classes that provide the virtualized cell-display architecture and cell selection/interaction behavior.</td></tr>
 <tr>
 <td>
 Syncfusion.SfGridCommon.UWP.dll</td><td>
-Covers the classes which holds the properties of scroll viewer and disposable elements</td></tr>
+Contains the classes that expose the scroll viewer properties and disposable elements.</td></tr>
 <tr>
 <td>
 Syncfusion.SfSpreadsheet.UWP.dll</td><td>
-Contains the classes that handles all the UI Operations of SfSpreadsheet such as importing of sheets, applying formulas/styles etc.</td></tr>
+Contains the classes that handle the UI operations of SfSpreadsheet, such as importing sheets and applying formulas and styles.</td></tr>
 <tr>
 <td>
 Syncfusion.SfShared.UWP.dll</td><td>
-Contains the classes which holds the properties and operations of the controls like SfUpDown, SfNavigator, Looping control etc</td></tr>
+Contains the classes that hold the properties and operations of controls such as SfUpDown, SfNavigator, and the Looping control.</td></tr>
 <tr>
 <td>
 Syncfusion.SfInput.UWP.dll</td><td>
-Contains the classes which holds the controls like SfDropDownButton, SfTextBoxExt,SfMaskedEdit etc.</td></tr>
+Contains the input control classes such as SfDropDownButton, SfTextBoxExt, and SfMaskedEdit.</td></tr>
 <tr>
 <td>
 Syncfusion.SfRibbon.UWP.dll</td><td>
-Covers the classes which holds the Ribbon controls such as SfRibbon, SfRibbonMenu, SfRibbonGalleryItem etc.</td></tr>
+Contains the Ribbon control classes such as SfRibbon, SfRibbonMenu, and SfRibbonGalleryItem.</td></tr>
 <tr>
 <td>
 Syncfusion.SfTabControl.UWP.dll</td><td>
-Covers the classes which holds the controls like SfTabControl, SfTabItem etc</td></tr>
+Contains the tab control classes such as SfTabControl and SfTabItem.</td></tr>
 <tr>
 <td>
 Syncfusion.XlsIO.UWP.dll</td><td>
-Contains the base classes which is responsible for read and write in Excel files, Worksheet Manipulations, Formula calculations etc.</td></tr>
+Contains the base classes responsible for reading and writing Excel files, worksheet manipulation, and formula calculation.</td></tr>
 </table>
-Below are the assemblies list that can be added when you want to enable certain features in SfSpreadsheet control. 
+
+The following optional assemblies enable additional features such as charts and sparklines:
 
 <table>
 <tr>
@@ -63,238 +118,196 @@ Description</th></tr>
 <tr>
 <td>
 Syncfusion.SfSpreadsheetHelper.UWP.dll</td><td>
-Contains the classes which is responsible for importing charts and sparklines into SfSpreadsheet</td></tr>
+Contains the classes responsible for importing charts and sparklines into SfSpreadsheet.</td></tr>
 <tr>
 <td>
 Syncfusion.ExcelChartToImageConverter.UWP.dll</td><td>
-Contains the classes which is responsible for converting charts as image</td></tr>
+Contains the classes responsible for converting charts to images.</td></tr>
 <tr>
 <td>
 Syncfusion.SfChart.UWP.dll</td><td>
-Contains the classes which is responsible for importing charts like Line charts, Pie charts, Sparklines etc.</td></tr>
+Contains the classes responsible for importing chart types such as line charts, pie charts, and sparklines.</td></tr>
 </table>
 
+{% endtabcontent %}
 
-## Create a Simple Application with SfSpreadsheet
+{% endtabcontents %}
 
-SfSpreadsheet control can be added into the application either via designer or via coding. 
+## Add UWP Spreadsheet component
 
+UWP Spreadsheet control can be added to an application either through the designer (XAML) or programmatically using code.
 
-### Adding a Control via Designer
+N> In all of the XAML snippets below, replace `YourNamespace` (in `xmlns:local="using:YourNamespace"` and `x:Class="YourNamespace.MainPage"`) with the actual namespace of your project (for example, `App1`).
 
-1.Create new UWP application in Visual Studio.
+{% tabcontents %}
 
-2.Open the Visual Studio **Tool** **box**. Navigate to “Syncfusion<sup>®</sup> Controls” tab, and find the  SfSpreadsheet/SfSpreadsheetRibbon toolbox items
+{% tabcontent Via Designer %}
 
-![Getting-Started_img1](Getting-Started_images/Getting-Started_img1.jpg)
+1. Open the **MainPage.xaml** file.
 
-3.Drag `SfSpreadsheet` and drop in to the Designer area from the Toolbox
+2. Open the Visual Studio **Toolbox**. Navigate to the **Syncfusion<sup>®</sup> Controls for UWP** tab and find the **SfSpreadsheet** / **SfSpreadsheetRibbon** toolbox items.
 
-_For_ _Spreadsheet:_
+   ![Getting-Started_img1](Getting-Started_images/Getting-Started_img1.jpg)
 
-{% tabs %}
-{% highlight xaml %}
+3.Drag **SfSpreadsheet** from the Toolbox and drop it into the Designer area.
 
-    <syncfusion:SfSpreadsheet  x:Name="spreadsheet"  />
+   **For Spreadsheet:**
 
-{% endhighlight %}
-{% endtabs %}
+   {% tabs %}
+   {% highlight xaml tabtitle="MainPage.xaml" %}
 
-4.Ribbon can be added to the application by dragging and dropping `SfSpreadsheetRibbon` to the Designer area.
+       <Page
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+           xmlns:local="using:YourNamespace"
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           xmlns:Spreadsheet="using:Syncfusion.UI.Xaml.Spreadsheet"
+           x:Class="YourNamespace.MainPage"
+           mc:Ignorable="d"
+           Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+           <Grid>
+               <Spreadsheet:SfSpreadsheet  x:Name="spreadsheet" />
+           </Grid>
+       </Page>
+
+   {% endhighlight %}
+   {% endtabs %}
+
+   N> Assign a name (for example, `spreadsheet`) so you can reference the control from code-behind.
+
+4.Drag **SfSpreadsheetRibbon** from the Toolbox and drop it into the Designer area.
+
+   **For Ribbon:**
+
+   {% tabs %}
+   {% highlight xaml tabtitle="MainPage.xaml" %}
+
+       <Page
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+           xmlns:local="using:YourNamespace"
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           xmlns:Spreadsheet="using:Syncfusion.UI.Xaml.Spreadsheet"
+           x:Class="YourNamespace.MainPage"
+           mc:Ignorable="d"
+           Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+           <Grid>
+               <Spreadsheet:SfSpreadsheetRibbon />
+           </Grid>
+       </Page>
+
+   {% endhighlight %}
+   {% endtabs %}
 
 5.To make an interaction between Ribbon items and SfSpreadsheet, need to bind the `SfSpreadsheet` as DataContext to the `SfSpreadsheetRibbon`.
 
-_For_ _Ribbon:_
+   {% tabs %}
+   {% highlight xaml tabtitle="MainPage.xaml" %}
 
-{% tabs %}
-{% highlight xaml %}
+       <Page
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+           xmlns:local="using:YourNamespace"
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           xmlns:Spreadsheet="using:Syncfusion.UI.Xaml.Spreadsheet"
+           x:Class="YourNamespace.MainPage"
+           mc:Ignorable="d"
+           Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <syncfusion:SfSpreadsheetRibbon DataContext="{Binding ElementName=spreadsheet}"  />
+           <Grid>
+               <Spreadsheet:SfSpreadsheet  x:Name="spreadsheet" />
+               <Spreadsheet:SfSpreadsheetRibbon DataContext="{Binding ElementName=spreadsheet}" />
+           </Grid>
+       </Page>
 
 {% endhighlight %}
 {% endtabs %}
 
+{% endtabcontent %}
 
-### Adding Control Via Coding
+{% tabcontent Via Coding %}
 
-Spreadsheet is available in the following namespace “_Syncfusion_._UI_._Xaml_._Spreadsheet_” and it can be created programmatically either by using XAML or C# code.
+Spreadsheet is available in the following namespace [_Syncfusion_._UI_._Xaml_._Spreadsheet_](https://help.syncfusion.com/cr/UWP/Syncfusion.UI.Xaml.Spreadsheet.html) and it can be created programmatically either by using XAML or C# code.
 
 {% tabs %}
 
-{% highlight xaml %}
+{% highlight xaml tabtitle="MainPage.xaml" %}
 
-<Page
-    x:Class="SfSpreadsheetDemo.MainPage"
+    <Page
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="using:App1"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Spreadsheet="using:Syncfusion.UI.Xaml.Spreadsheet"
+        x:Class="App1.MainPage"
+        mc:Ignorable="d"
+        Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:SfSpreadsheetDemo"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:tools="using:Syncfusion.UI.Xaml.Controls.Navigation"
-    xmlns:syncfusion="using:Syncfusion.UI.Xaml.Spreadsheet"
-    mc:Ignorable="d">
-
-    <syncfusion:SfSpreadsheet x:Name="spreadsheet" FormulaBarVisibility="Visible" />
-</Page>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Spreadsheet:SfSpreadsheet Name="spreadsheet" Grid.Row="1" />
+            <Spreadsheet:SfSpreadsheetRibbon DataContext="{Binding ElementName=spreadsheet}" Grid.Row="0" />
+        </Grid>
+    </Page>
 
 {% endhighlight %}
 
-{% highlight c# %}
+{% highlight c# tabtitle="MainPage.xaml.cs" %}
 
-SfSpreadsheet spreadsheet = new SfSpreadsheet();
-this.grid.Children.Add(spreadsheet);
+....
+using Syncfusion.UI.Xaml.Spreadsheet;
+....
+
+public MainPage()
+{
+    this.InitializeComponent();
+
+    Grid grid = new Grid();
+
+    grid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
+    grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(1, GridUnitType.Star) });
+
+    SfSpreadsheet spreadsheet = new SfSpreadsheet();
+    SfSpreadsheetRibbon ribbon = new SfSpreadsheetRibbon() { SfSpreadsheet = spreadsheet };
+
+    Grid.SetRow(ribbon, 0);
+    Grid.SetRow(spreadsheet, 1);
+
+    grid.Children.Add(ribbon);
+    grid.Children.Add(spreadsheet);
+
+    this.Content = grid;
+}
 
 {% endhighlight %}
 
 {% endtabs %}
 
-_You_ _can_ _get_ _the_ _following_ _output_ _when_ _execute_ _the_ _application._
+N> To load the SfSpreadsheet in Windows Mobile, add the above code in MainPage.xaml file in DeviceFamily-Mobile folder.
+
+{% endtabcontent %}
+
+{% endtabcontents %}
+
+## Build and run the application
+
+1. Build the solution by pressing <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> (or *Build → Build Solution*). Resolve any missing-reference errors that appear in the **Error List**.
+2. To launch the application without the debugger, press <kbd>Ctrl</kbd>+<kbd>F5</kbd>. The output will appear as follows:
 
 ![Getting-Started_img2](Getting-Started_images/Getting-Started_img2.jpg)
 
-N> To load the SfSpreadsheet in Windows Mobile, add the below code in MainPage.xaml file in DeviceFamily-Mobile folder.
+To learn how to create, open, and save files in the UWP Spreadsheet Component, see [Workbook Operations](Workbook-Operations.md).
 
-{% tabs %}
-{% highlight xaml %}
+N> [View the UWP Spreadsheet sample in GitHub](https://github.com/SyncfusionExamples/uwp-spreadsheet-examples).
 
-<Page
-    x:Class="SfSpreadsheetDemo.MainPage"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:SfSpreadsheetDemo"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:tools="using:Syncfusion.UI.Xaml.Controls.Navigation"
-    xmlns:syncfusion="using:Syncfusion.UI.Xaml.Spreadsheet"
-
-    mc:Ignorable="d">
-
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Syncfusion:SfSpreadsheetRibbon DataContext="{Binding ElementName=spreadsheet}">
-            <Syncfusion:SfSpreadsheetRibbon.Content>
-                <Syncfusion:SfSpreadsheet x:Name="spreadsheet"/>
-            </Syncfusion:SfSpreadsheetRibbon.Content>
-        </Syncfusion:SfSpreadsheetRibbon>
-    </Grid>
-</Page>
-
-{% endhighlight %}
-{% endtabs %}
-
-
-## Creating a new Excel Workbook
-
-A new workbook can be created by using a `Create` method with specified number of worksheets. By default, a workbook will be created with single worksheet.
-
-{% tabs %}
-{% highlight c# %}
-
-    spreadsheet.Create(2);
-
-{% endhighlight %}
-{% endtabs %}
-
-## Opening an existing Excel Workbook
-
-The Excel Workbook can be opened in SfSpreadsheet using the `Open` method in various ways,
-
-{% tabs %}
-{% highlight c# %}
-
-//Using Stream, 
-spreadsheet.Open (Stream file)
-
-//Using StorageFile,
-spreadsheet.Open (StorageFile file)
-
-//Using Workbook,
-spreadsheet.Open(IWorkbook workbook)
-
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight c# %}
-
-Stream fileStream = typeof(MainPage).GetTypeInfo().Assembly.GetManifestResourceStream("SfSpreadsheetDemo.Assets.BidDetails.xlsx");
-this.spreadsheet.Open(fileStream);
-
-{% endhighlight %}
-{% endtabs %}
-
-![Getting-Started_img4](Getting-Started_images/Getting-Started_img4.jpg)
-
-
-## Saving the Excel Workbook
-
-The Excel workbook can be saved in SfSpreadsheet using `Save` method. If the workbook already exists in the system drive, it will be saved in the same location, otherwise Save Dialog box opens to save the workbook in user specified location.
-
-{% tabs %}
-{% highlight c# %}
-
-    spreadsheet.Save();
-
-{% endhighlight %}
-{% endtabs %}
-
-You can also use `SaveAs` method directly to save the existing excel file with modifications.
-
-The `SaveAs` method in SfSpreadsheet can be used in various ways,
-
-{% tabs %}
-{% highlight c# %}
-
-//Using Storage File,
-spreadsheet.SaveAs (StorageFile file);
-
-//Using String,
-spreadsheet.SaveAs (string file);
-
-//For Dialog box,
-spreadsheet.SaveAs();
-      
-{% endhighlight %}
-{% endtabs %}
-
-## Displaying Charts and Sparklines
-
-For importing charts and sparklines in SfSpreadsheet, add the following assembly as reference into the application.
- 
-Assembly: **Syncfusion.SfSpreadsheetHelper.UWP.dll**  
-
-### Charts
- 
-Create an instance of `Syncfusion.UI.Xaml.SpreadsheetHelper.GraphicChartCellRenderer` and add that renderer into `GraphicCellRenderers` collection by using the helper method `AddGraphicChartCellRenderer` which is available under the namespace `Syncfusion.UI.Xaml.Spreadsheet.GraphicCells`. 
-
-{% tabs %}
-{% highlight c# %}
-
-public MainWindow()
-{
-  InitializeComponent();
-  
-  //For importing charts,
-  this.spreadsheet.AddGraphicChartCellRenderer(new GraphicChartCellRenderer());
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-### Sparklines
-
-Create an instance of `Syncfusion.UI.Xaml.SpreadsheetHelper.SparklineCellRenderer` and add that renderer into the Spreadsheet by using the helper method `AddSparklineCellRenderer` which is available under the namespace `Syncfusion.UI.Xaml.Spreadsheet.GraphicCells`.
-
-{% tabs %}
-{% highlight c# %}
-
-public MainWindow()
-{
-  InitializeComponent();
-      
-  //For importing sparklines,
-  this.spreadsheet.AddSparklineCellRenderer(new SparklineCellRenderer());
-}
-
-{% endhighlight %}
-{% endtabs %}
+## See Also
+* [Display Charts and Sparklines](Shapes.md)

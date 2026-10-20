@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Highlight annotation in JavaScript PDF Viewer | Syncfusion
-description: Learn to add, edit, delete, and customize Highlight text markup annotations in Syncfusion JavaScript PDF Viewer, with UI and programmatic examples.
+title: Highlight Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Highlight annotations in the JavaScript (ES5) PDF Viewer to emphasize important text in a PDF.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Highlight annotation in JavaScript PDF Viewer
+# Highlight Annotation in JavaScript (ES5) PDF Viewer
 
 The PDF Viewer provides options to add, edit, and delete Highlight annotations on text. You can add highlights via the UI (context menu or annotation toolbar) and programmatically. You can also customize color, opacity, author/subject, and default settings, and use undo/redo, save, print, or disable highlights as needed.
 
@@ -27,10 +27,11 @@ Add highlights in two ways:
 ![Alt text](../../../javascript-es6/annotations/annotation-images/highlight-context.gif)
 
 2. Using the annotation toolbar
-Use the annotation toolbar to:
-- Click the **Edit Annotation** button in the PDF Viewer toolbar to open the annotation toolbar.
-- Select **Highlight** to enable highlight mode.
-- Select text to add the highlight annotation, or select text first and then click **Highlight**.
+Use the annotation toolbar to add a highlight annotation:
+
+1. Click the **Edit Annotation** button in the PDF Viewer toolbar to open the annotation toolbar.
+2. Select **Highlight** to enable highlight mode.
+3. Select text to add the highlight annotation, or select text first and then click **Highlight**.
 
 ![Alt text](../../../javascript-es6/annotations/annotation-images/highlight-tool.gif)
 
@@ -70,7 +71,7 @@ document.getElementById('set').addEventListener('click', function () {
 {% endhighlight %}
 {% endtabs %}
 
-N> To set up the **server-backed PDF Viewer**, add the below `serviceUrl` in the `index.ts` file: `pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
+N> To set up the **server-backed PDF Viewer**, add the below `serviceUrl` in the `index.js` file: `pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
 {% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/text-markup-annotation/highlight-mode-cs1" %}
 
@@ -112,7 +113,7 @@ document.getElementById('setNone').addEventListener('click', function () {
 {% endhighlight %}
 {% endtabs %}
 
-N> To set up the **server-backed PDF Viewer**, add the below `serviceUrl` in the `index.ts` file:
+N> To set up the **server-backed PDF Viewer**, add the below `serviceUrl` in the `index.js` file:
 `pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';`
 
 {% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/text-markup-annotation/highlight-normal-mode-cs1" %}
@@ -336,17 +337,17 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Set properties while adding Individual Annotation
 
-Set properties for individual annotations before creating the control using `highlightSettings`.
+Set properties for individual annotations while adding the annotation using `addAnnotation()`.
 
 N> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
 
-Refer to the following code snippet to set the default highlight settings.
+Refer to the following code snippet to set the properties while adding a Highlight annotation.
 
 ```html
 <button id="highlight">Add Highlight</button>
 ```
 {% tabs %}
-{% highlight ts tabtitle="Standalone" %}
+{% highlight js tabtitle="Standalone" %}
 ej.pdfviewer.PdfViewer.Inject(
     ej.pdfviewer.Toolbar,
     ej.pdfviewer.Magnification,
@@ -385,7 +386,7 @@ document.getElementById('highlight')?.addEventListener('click', function () {
     });
 });
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
+{% highlight js tabtitle="Server-Backed" %}
 ej.pdfviewer.PdfViewer.Inject(
     ej.pdfviewer.Toolbar,
     ej.pdfviewer.Magnification,

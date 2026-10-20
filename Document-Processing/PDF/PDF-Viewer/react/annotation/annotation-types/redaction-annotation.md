@@ -1,14 +1,14 @@
 ---
 layout: post
-title: PDF Redaction in React PDF Viewer | Syncfusion
-description: Learn to add, edit, delete, and apply redaction annotations in Syncfusion React PDF Viewer with UI and programmatic examples.
+title: Redaction Annotation in React PDF Viewer | Syncfusion
+description: Add, edit, delete, and apply redaction annotations in the React PDF Viewer to permanently remove sensitive content from a PDF.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Redaction annotation in React PDF Viewer
+# Redaction Annotation in React PDF Viewer
 
 Redaction annotations permanently remove sensitive content from a PDF. You can draw redaction marks over text or graphics, redact entire pages, customize overlay text and styling, and apply redaction to finalize. 
 
@@ -192,11 +192,11 @@ Configure defaults with the `redactionSettings` **component prop**:
 - [Annotation Overview](../overview)
 - [Redaction Overview](../../Redaction/overview)
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)
-- [Create and Modify Annotation](../../annotations/create-modify-annotation)
-- [Customize Annotation](../../annotations/customize-annotation)
-- [Remove Annotation](../../annotations/delete-annotation)
-- [Handwritten Signature](../../annotations/signature-annotation)
-- [Export and Import Annotation](../../annotations/export-import/export-annotation)
-- [Annotation in Mobile View](../../annotations/annotations-in-mobile-view)
-- [Annotation Events](../../annotations/annotation-event)
-- [Annotation API](../../annotations/annotations-api)
+- [Create and Modify Annotation](../../annotation/create-modify-annotation)
+- [Customize Annotation](../../annotation/customize-annotation)
+- [Remove Annotation](../../annotation/delete-annotation)
+- [Handwritten Signature](../../annotation/signature-annotation)
+- [Export and Import Annotation](../../annotation/export-import/export-annotation)
+- [Annotation in Mobile View](../../annotation/annotations-in-mobile-view)
+- [Annotation Events](../../annotation/annotation-event)
+- [Annotation API](../../annotation/annotations-api)

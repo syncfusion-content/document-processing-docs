@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Annotations Permission in TypeScript PDF Viewer | Syncfusion
-description: Learn how to use annotation permissions in Syncfusion TypeScript PDF Viewer using programmatic APIs.
+title: Annotation Permission in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Control who can add, edit, or remove annotations in the JavaScript (ES6) PDF Viewer using permission settings and programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotation permissions
+# Annotation Permissions in JavaScript (ES6) PDF Viewer
 
 Use [annotationSettings](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#annotationsettings) to control creation-time permissions and default behavior for annotations in the PDF Viewer. These settings establish defaults for annotations created through the UI and programmatic flows.
 
@@ -62,7 +62,7 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailVi
 
 const pdfviewer: PdfViewer = new PdfViewer({
   documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-  resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib",
+  resourceUrl: "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib",
   // Text markup defaults
   highlightSettings: { author: 'QA', subject: 'Review', color: '#ffff00', opacity: 0.6 },
   strikethroughSettings: { author: 'QA', subject: 'Remove', color: '#ff0000', opacity: 0.6 },

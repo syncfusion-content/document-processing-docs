@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Import form data in the ASP.NET Core PDF Viewer component | Syncfusion
-description: Learn how to import PDF form field data (FDF, XFDF, JSON, and from an object) using the Syncfusion ASP.NET Core PDF Viewer component.
+title: Import Form Fields in ASP.NET Core PDF Viewer | Syncfusion
+description: Import PDF form field data into the ASP.NET Core PDF Viewer from FDF, XFDF, and JSON sources, or directly from a JavaScript object.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Import PDF Form Data into ASP.NET Core PDF Viewer
+# Import Form Data in ASP.NET Core PDF Viewer
 
 The **PDF Viewer** lets you import values into interactive form fields in the currently loaded PDF. You can import data from these formats:
 
-- [FDF](#import-as-fdf)
+- [FDF](#import-fdf)
 - [XFDF](#import-xfdf)
 - [JSON](#import-json)
 
-## API to use
+## Available methods
 - [importFormFields](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#importformfields)(sourceOrObject, format)
 
 N>If you’re using a **server-backed viewer**, set serviceUrl before importing.
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
 - [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)
 - [Export form fields](./export-form-fields)
 - [Import Export Events](./import-export-events)
-- [Create Edit form fields](../overview-create-forms)
+- [Create and edit form fields](../overview-create-forms)
 - [Group form fields](../group-form-fields)
 - [Form validation](../form-validation)
 - [Add custom data to form fields](../custom-data)

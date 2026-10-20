@@ -1,16 +1,15 @@
 ---
 layout: post
-title: Import and export annotations in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to import and export annotations as objects, JSON, or XFDF in the Syncfusion ASP.NET MVC PDF Viewer.
+title: How to Import and Export Annotations in ASP.NET MVC PDF | Syncfusion
+description: Import and export annotations in the ASP.NET MVC PDF Viewer as JavaScript objects, JSON strings, or XFDF for backup, sharing, and migration.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Import and export annotations in the ASP.NET MVC PDF Viewer
+# How to Import and Export Annotations in ASP.NET MVC PDF Viewer
 
-Import annotations from objects or streams instead of files. To import such objects, first export annotations as objects using the [**exportAnnotationsAsObject()**](https://ej2.syncfusion.com/documentation/api/pdfviewer/#exportannotationsasobject) method. Only objects exported from the PDF Viewer can be imported.
+Import annotations from objects or streams instead of files. To import such objects, first export annotations as objects using the [**exportAnnotationsAsObject()**] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#exportannotationsasobject) method. Only objects exported from the PDF Viewer can be imported.
 
 Use the following steps to import and export annotations as objects, JSON, or XFDF.
 
@@ -71,10 +70,10 @@ Use the following steps to import and export annotations as objects, JSON, or XF
     ViewData["Title"] = "Home page";
 }
 
-<button type="button" onclick="exportAsJson()">Export Annoatation As Json</button>
-<button type="button" onclick="exportAsXfdf()">Export Annoatation As Xfdf</button>
-<button type="button" onclick="exportAnnotation()">Export Annoatation</button>
-<button type="button" onclick="importAnnotation()">Import Annoatation</button>
+<button type="button" onclick="exportAsJson()">Export Annotation As Json</button>
+<button type="button" onclick="exportAsXfdf()">Export Annotation As Xfdf</button>
+<button type="button" onclick="exportAnnotation()">Export Annotation</button>
+<button type="button" onclick="importAnnotation()">Import Annotation</button>
 
 <div id="e-pv-e-sign-pdfViewer-div">
     @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()

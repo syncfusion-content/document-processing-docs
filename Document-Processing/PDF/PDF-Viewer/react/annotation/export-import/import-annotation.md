@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Import annotations in React PDF Viewer | Syncfusion
-description: Learn how to import annotations in Syncfusion React PDF Viewer using UI options and programmatic APIs.
+title: Import Annotation in React PDF Viewer | Syncfusion
+description: Import annotations into the React PDF Viewer in supported formats using the built-in UI options and programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
-# Import annotations in React PDF Viewer
+# Import Annotations in React PDF Viewer
 
 Annotations can be imported into the PDF Viewer using the built-in UI or programmatically. The UI accepts JSON and XFDF files from the Comments panel; programmatic import accepts an annotation object previously exported by the viewer.
 
@@ -18,7 +19,7 @@ The Comments panel provides import options in its overflow menu:
 - Import annotations from JSON file
 - Import annotations from XFDF file
 
-Steps:
+To import annotations, follow these steps:
 1. Open the Comments panel in the PDF Viewer.
 2. Click the overflow menu (three dots) at the top of the panel.
 3. Choose the appropriate import option and select the file.
@@ -97,15 +98,15 @@ N> Only objects produced by the viewer (for example, by `exportAnnotationsAsObje
 ## See also
 
 - [Annotation Overview](../../overview)
-- [Annotation Types](../../annotations/annotation-types/area-annotation)
+- [Annotation Types](../annotation-types/area-annotation)
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)
-- [Create and Modify Annotation](../../annotations/create-modify-annotation)
-- [Customize Annotation](../../annotations/customize-annotation)
-- [Remove Annotation](../../annotations/delete-annotation)
-- [Handwritten Signature](../../annotations/signature-annotation)
-- [Export Annotation](../export-import/export-annotation)
-- [Import Export Events](../export-import/export-import-events)
-- [Annotation Permission](../../annotations/annotation-permission)
-- [Annotation in Mobile View](../../annotations/annotations-in-mobile-view)
-- [Annotation Events](../../annotations/annotation-event)
-- [Annotation API](../../annotations/annotations-api)
+- [Create and Modify Annotation](../create-modify-annotation)
+- [Customize Annotation](../customize-annotation)
+- [Remove Annotation](../delete-annotation)
+- [Handwritten Signature](../signature-annotation)
+- [Export Annotation](./export-annotation)
+- [Import Export Events](./export-import-events)
+- [Annotation Permission](../annotation-permission)
+- [Annotation in Mobile View](../annotations-in-mobile-view)
+- [Annotation Events](../annotation-event)
+- [Annotation API](../annotations-api)

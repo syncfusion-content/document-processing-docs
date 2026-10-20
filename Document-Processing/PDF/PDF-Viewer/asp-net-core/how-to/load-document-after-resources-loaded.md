@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Load document after resources Loaded Core PDF Viewer | Syncfusion
-description: Learn here how to load a PDF only after assets are ready in the Syncfusion ASP.NET Core PDF Viewer (Standalone) using the resourcesLoaded event.
+title: How to Load a Document After Resources Are Ready | Syncfusion
+description: Load a PDF only after PDFium resources are ready in the standalone ASP.NET Core PDF Viewer by using the resourcesLoaded event handler.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Defer document loading until PDFium resources are ready
+# How to Load a Document After Resources Are Ready in ASP.NET Core PDF
 
 In Standalone mode, the Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer downloads the required PDFium runtime assets (scripts and WebAssembly) from the location specified in the [`resourceUrl`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ResourceUrl) property. Attempting to load a document before these assets are fully initialized can lead to errors. Use the `resourcesLoaded` event to ensure the document is only loaded once the viewer's runtime is fully prepared.
 
@@ -67,7 +67,7 @@ Follow these steps to synchronize document loading with asset readiness:
 ## Best practices
 
 *   **Path Verification:** Ensure the `resourceUrl` is accurate and accessible. If the network blocks the asset location or the path is incorrect, the `resourcesLoaded` event will not fire.
-*   **One-Time Lifecycle:** The `resourcesLoaded` event typically fires once during the component's lifecycle initialization. Subsequent document loads (e.g., in response to user selection) do not need to wait for this event if it has already occurred.
+*   **One-Time Life cycle:** The `resourcesLoaded` event typically fires once during the component's life cycle initialization. Subsequent document loads (e.g., in response to user selection) do not need to wait for this event if it has already occurred.
 *   **Error Handling:** For mission-critical viewers, monitor network failures for the `resourceUrl` to provide appropriate fallback messages to the user.
 
 ## See also

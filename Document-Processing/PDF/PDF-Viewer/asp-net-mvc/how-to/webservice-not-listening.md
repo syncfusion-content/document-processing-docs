@@ -1,18 +1,17 @@
 ---
 layout: post
-title: Resolve “Web service is not listening” error in ASP.NET MVC PDF Viewer | Syncfusion
-description: Troubleshoot the “Web service is not listening” error in the Syncfusion ASP.NET MVC PDF Viewer by validating network requests, cache configuration, and server availability.
+title: How to Resolve the Web-Service Is Not Listening Error | Syncfusion
+description: Resolve the Web-service is not listening error in the ASP.NET MVC PDF Viewer with a clear troubleshooting checklist and configuration tips.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Resolve “Web service is not listening” error
+# How to Resolve the Web-Service Is Not Listening Error in ASP.NET MVC
 
 ![Browser showing the Web service is not listening error](../images/webservice.png)
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC PDF Viewer displays the **Web service is not listening** message when the viewer cannot reach its backend service or the service returns an unexpected error. Use the following steps to diagnose the request, review server responses, and apply the appropriate fix.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET MVC PDF Viewer displays the **Web service is not listening** message when the viewer cannot reach its back-end service or the service returns an unexpected error. Use the following steps to diagnose the request, review server responses, and apply the appropriate fix.
 
 ## Diagnose the service response
 
@@ -58,7 +57,7 @@ The Document pointer does not exist in the cache exception in the Syncfusion<sup
 
 To resolve this issue, you can follow these steps:
 
-**Step 1: Clear the cache.***
+**Step 1: Clear the cache.**
 Locate the cache directory, which is specified in the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer’s settings or configuration files. Once found, delete the contents of the folder to remove any corrupted or outdated cache data.
 
 **Step 2: Reload the document.**

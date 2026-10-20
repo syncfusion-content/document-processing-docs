@@ -10,13 +10,13 @@ documentation: UG
 
 Syncfusion<sup>&reg;</sup> PowerPoint is a [Xamarin PowerPoint library](https://www.syncfusion.com/powerpoint-framework/xamarin/powerpoint-library) used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **open and save a Presentation in Xamarin**.
 
-## Steps to open and save PowerPoint Presentation programmatically
+## Steps to open and save a PowerPoint presentation programmatically
 
 Step 1: Create a new C# **Xamarin.Forms** application project.
 
 ![Create Xamarin project](Workingwith-Xamarin/Project-Open-and-Save.png)
 
-Step 2: Select a project template and required platforms to deploy the application. In this application the portable assemblies to be shared across multiple platforms, the .NET Standard code sharing strategy has been selected. For more details about code sharing refer [here](https://docs.microsoft.com/en-us/xamarin/cross-platform/app-fundamentals/code-sharing).
+Step 2: Select a project template and the required platforms to deploy the application. In this application, the .NET Standard code-sharing strategy is selected so that portable assemblies are shared across multiple platforms. For more details about code sharing, refer [here](https://learn.microsoft.com/en-us/xamarin/cross-platform/app-fundamentals/code-sharing).
 
 ![Create Xamarin CodeSharing Option](Workingwith-Xamarin/Template-Project-Open-and-Save.png)
 
@@ -26,10 +26,10 @@ Step 3: Install [Syncfusion.Xamarin.Presentation](https://www.nuget.org/packages
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: Add new Forms XAML page in portable project If there is no XAML page is defined in the App class. Otherwise proceed to the next step.
+Step 4: Add a new Forms XAML page to the portable project if no XAML page is defined in the App class. Otherwise, proceed to the next step.
 <ul>
-<li>To add the new XAML page, right click on the project and select <b>Add > New Item</b> and add a Forms XAML Page from the list. Name it as MainXamlPage.</li>
-<li>In App class of <b>portable project</b> (App.cs), replace the existing constructor of App class with the code snippet given below which invokes the <b>MainXamlPage</b>.</li>
+<li>To add the new XAML page, right-click the project and select <b>Add > New Item</b>, then add a Forms XAML Page from the list. Name it <b>MainXamlPage</b>.</li>
+<li>In the <b>App</b> class of the <b>portable project</b> (App.cs), replace the existing constructor of the App class with the code snippet given below, which invokes the <b>MainXamlPage</b>.</li>
 </ul>
 
 {% tabs %}
@@ -47,12 +47,12 @@ public App()
 Step 5: In the **MainXamlPage.xaml** add new button as shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Read_and_edit_PowerPoint_presentation.MainPage">
+             x:Class="Read_and_edit_PowerPoint_presentation.MainXamlPage">
     <StackLayout VerticalOptions="Center">
         <Button Text="Open and Save Presentation" Clicked="OpenAndSavePresentation" HorizontalOptions="Center"/>
     </StackLayout>
@@ -61,17 +61,20 @@ Step 5: In the **MainXamlPage.xaml** add new button as shown below.
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the following namespace in the MainXamlPage.xaml.cs file.
+Step 6: Include the following namespaces in the MainXamlPage.xaml.cs file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+using System.IO;
+using System.Reflection;
 using Syncfusion.Presentation;
+using Xamarin.Forms;
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Include the below code snippet in the click event of the button in MainXamlPage.xaml.cs, to **open an existing PowerPoint Presentation in Xamarin**.
+Step 7: Include the below code snippet in the click event of the button in MainXamlPage.xaml.cs, to **open an existing PowerPoint presentation in Xamarin**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -84,7 +87,7 @@ IPresentation pptxDoc = Presentation.Open(assembly.GetManifestResourceStream("Re
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Add below code snippet demonstrates accessing a shape from a slide and changing the text within it.
+Step 8: Add the code snippet below, which demonstrates accessing a shape from a slide and changing the text within it.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -100,7 +103,7 @@ if (shape.TextBody.Text == "Company History")
 {% endhighlight %}
 {% endtabs %}
 
-Step 9: Add below code example to **save the PowerPoint Presentation in Xamarin**.
+Step 9: Add the code example below to **save the PowerPoint presentation in Xamarin**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -149,7 +152,7 @@ Refer the below helper files and add them into the mentioned project. These help
     {{'[iOS Project](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/Xamarin/Read-and-edit-PowerPoint-presentation/Read-and-edit-PowerPoint-presentation.iOS)'| markdownify }}
   </td>
   <td>
-    {{'[SaveIOS.cs]https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/Xamarin/Read-and-edit-PowerPoint-presentation/Read-and-edit-PowerPoint-presentation.iOS/SaveIOS.cs)'| markdownify }}
+    {{'[SaveIOS.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/Xamarin/Read-and-edit-PowerPoint-presentation/Read-and-edit-PowerPoint-presentation.iOS/SaveIOS.cs)'| markdownify }}
   </td>
   <td>
     Save implementation for iOS device
@@ -160,7 +163,7 @@ Refer the below helper files and add them into the mentioned project. These help
     {{'[PreviewControllerDS.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/Xamarin/Read-and-edit-PowerPoint-presentation/Read-and-edit-PowerPoint-presentation.iOS/PreviewControllerDS.cs)'| markdownify }}
   </td>
   <td>
-    Helper class for viewing the <b>PowerPoint Presenatation</b> in iOS device
+    Helper class for viewing the <b>PowerPoint Presentation</b> in iOS device
   </td>
   </tr>
   <tr>
@@ -191,5 +194,8 @@ By executing the program, you will get the **PowerPoint document** as follows.
 
 ![Xamarin output PowerPoint document](Workingwith-Core/Open-and-Save-output-image.png)      
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/xamarin) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
+## Related Links
+
+- [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library)
+- [Create, read, and edit a PowerPoint file in .NET MAUI](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/create-read-edit-powerpoint-files-in-maui) 
 

@@ -1,0 +1,124 @@
+---
+layout: post
+title: How to Load the PDF Viewer with Local Resources in React | Syncfusion
+description: Configure the React PDF Viewer to load PDF documents and library files from local resources instead of a CDN for offline or restricted networks.
+control: PDF Viewer
+platform: document-processing
+documentation: ug
+---
+
+# How to Load the PDF Viewer with Local Resources in React PDF Viewer
+
+This guide shows how to configure the PDF Viewer to load resources from your local application instead of a CDN.
+
+## Prerequisites
+
+Follow the [getting started guide](../getting-started) to create a basic React PDF Viewer application.
+
+## Configuration Steps
+
+### Step 1: Copy the Resource Files
+
+From the root directory of your React project, run one of the following commands to copy the `ej2-pdfviewer-lib` folder into `public/assets/`:
+
+{% tabs %}
+{% highlight bash tabtitle="Windows" %}
+
+xcopy /E /I node_modules\@syncfusion\ej2-pdfviewer\dist\ej2-pdfviewer-lib public\assets\ej2-pdfviewer-lib
+
+{% endhighlight %}
+{% highlight bash tabtitle="Mac/Linux" %}
+
+cp -R ./node_modules/@syncfusion/ej2-pdfviewer/dist/ej2-pdfviewer-lib public/assets/ej2-pdfviewer-lib
+
+{% endhighlight %}
+{% endtabs %}
+
+### Step 2: Add Your PDF Document
+
+Place your PDF file in the `public/assets/` folder.
+
+**Your folder structure:**
+
+```
+public/
+  └── assets/
+      ├── ej2-pdfviewer-lib/
+      │   ├── pdfium.js
+      │   └── pdfium.wasm
+      └── pdfsuccinctly.pdf
+```
+
+### Step 3: Update PDF Viewer Component
+
+Configure the PDF Viewer to use local paths:
+
+{% tabs %}
+{% highlight js tabtitle="JSX" %}
+{% raw %}
+
+import * as ReactDOM from 'react-dom/client';
+import * as React from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+        BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch,
+        FormFields, FormDesigner, Inject} from '@syncfusion/ej2-react-pdfviewer';
+
+function App() {
+    return (<div>
+    <div className='control-section'>
+      <PdfViewerComponent
+        id="container"
+        // URL of the PDF document to load
+        documentPath={window.location.origin + "/assets/pdfsuccinctly.pdf"}
+        // URL of the PDFium library folder
+        resourceUrl={window.location.origin + "/assets/ej2-pdfviewer-lib"}
+        style={{ 'height': '640px' }}>
+
+         <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]}/>
+
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+
+{% endraw %}
+{% endhighlight %}
+{% highlight js tabtitle="TSX" %}
+{% raw %}
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import  { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+          BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch,
+          FormFields, FormDesigner, Inject} from '@syncfusion/ej2-react-pdfviewer';
+
+export function App() {
+  return (<div>
+    <div className='control-section'>
+      <PdfViewerComponent
+        id="container"
+        // URL of the PDF document to load
+        documentPath={window.location.origin + "/assets/pdfsuccinctly.pdf"}
+        // URL of the PDFium library folder
+        resourceUrl={window.location.origin + "/assets/ej2-pdfviewer-lib"}
+        style={{ 'height': '640px' }}>
+
+         <Inject services={[ Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]}/>
+
+      </PdfViewerComponent>
+    </div>
+  </div>);
+}
+const rootElement = document.getElementById('sample')!;
+const root = ReactDOM.createRoot(rootElement);
+root.render(<App />);
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+[View Sample on GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to/Refer%20resource%20url%20locally)

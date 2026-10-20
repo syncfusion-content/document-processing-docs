@@ -1,0 +1,107 @@
+<ejs-spreadsheet id="spreadsheet" created="created" showFormulaBar="false">
+
+    <e-spreadsheet-sheets>
+        <e-spreadsheet-sheet>
+
+            <e-spreadsheet-columns>
+                <e-spreadsheet-column width="200"></e-spreadsheet-column>
+            </e-spreadsheet-columns>
+
+            <e-spreadsheet-ranges>
+                <e-spreadsheet-range dataSource="ViewBag.DefaultData"></e-spreadsheet-range>
+            </e-spreadsheet-ranges>
+
+            <e-spreadsheet-rows>
+
+                <e-spreadsheet-row>
+                    <e-spreadsheet-cells>
+                        <e-spreadsheet-cell value="Plain Text"></e-spreadsheet-cell>
+                    </e-spreadsheet-cells>
+                </e-spreadsheet-row>
+
+                <e-spreadsheet-row>
+                    <e-spreadsheet-cells>
+                        <e-spreadsheet-cell value="Annual Sales Report 2026 (Draft)">
+                            <e-richtextsettings>
+                                <e-richtext text="Annual Sales Report " fontWeight="Bold"></e-richtext>
+                                <e-richtext text="2026" color="#0078D4"></e-richtext>
+                                <e-richtext text=" (Draft)" fontStyle="Italic"></e-richtext>
+                            </e-richtextsettings>
+                        </e-spreadsheet-cell>
+                    </e-spreadsheet-cells>
+                </e-spreadsheet-row>
+
+                <e-spreadsheet-row>
+                    <e-spreadsheet-cells>
+                        <e-spreadsheet-cell value="Customer Loyalty Program">
+                            <e-richtextsettings>
+                                <e-richtext text="Customer Loyalty " textDecoration="Underline"></e-richtext>
+                                <e-richtext text="Program" fontFamily="Georgia" fontSize="14pt"></e-richtext>
+                            </e-richtextsettings>
+                        </e-spreadsheet-cell>
+                    </e-spreadsheet-cells>
+                </e-spreadsheet-row>
+
+                <e-spreadsheet-row>
+                    <e-spreadsheet-cells>
+                        <e-spreadsheet-cell value="Mineral Water H2O">
+                            <e-richtextsettings>
+                                <e-richtext text="Mineral Water H"></e-richtext>
+                                <e-richtext text="2" verticalAlign="Sub"></e-richtext>
+                                <e-richtext text="O"></e-richtext>
+                            </e-richtextsettings>
+                        </e-spreadsheet-cell>
+                    </e-spreadsheet-cells>
+                </e-spreadsheet-row>
+
+                <e-spreadsheet-row>
+                    <e-spreadsheet-cells>
+                        <e-spreadsheet-cell></e-spreadsheet-cell>
+                    </e-spreadsheet-cells>
+                </e-spreadsheet-row>
+
+            </e-spreadsheet-rows>
+
+        </e-spreadsheet-sheet>
+    </e-spreadsheet-sheets>
+
+</ejs-spreadsheet>
+
+
+<script>
+    function created() {
+        this.updateCell({
+            value: 'Premium Membership valid until 31st Dec 2026',
+            richText: [
+                {
+                    text: 'Premium Membership ',
+                    style: {
+                        fontWeight: 'bold',
+                        color: '#2E7D32'
+                    }
+                },
+                {
+                    text: 'valid until ',
+                    style: {
+                        fontStyle: 'italic'
+                    }
+                },
+                {
+                    text: '31',
+                    style: {
+                        textDecoration: 'underline'
+                    }
+                },
+                {
+                    text: 'st',
+                    style: {
+                        verticalAlign: 'super'
+                    }
+                },
+                {
+                    text: ' Dec 2026'
+                }
+            ]
+        }, 'A5');
+    }
+</script>

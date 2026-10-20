@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Custom Toolbar in Angular PDF Viewer | Syncfusion
-description: Learn here all about Custom Toolbar in Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+description: Create a custom toolbar in the Angular PDF Viewer, including adding commands and modifying the built-in tools to match your workflow.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -67,7 +67,11 @@ import {
   PrintService,
   TextSelectionService,
   TextSearchService,
+  PageChangeEventArgs,
+  LoadEventArgs
 } from '@syncfusion/ej2-angular-pdfviewer';
+import { ToolbarComponent } from '@syncfusion/ej2-angular-navigations';
+import { ClickEventArgs } from '@syncfusion/ej2-buttons';
 
 ```
 
@@ -295,7 +299,7 @@ Add Syncfusion EJ2 Toolbar components to perform magnification actions in the PD
 
 >The icons are embedded in the font file used in the previous code snippet.
 
-**Step 7:** Add the following code snippet in `app.ts` file for performing a user interaction in PDF Viewer in code behind.
+**Step 8: Add scripts for PDF Viewer user interaction.**
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -452,9 +456,9 @@ private updateZoomButtons(): void {
 // tslint:disable-next-line
 private readFile(args: any): void {
   // tslint:disable-next-line
-  let upoadedFiles: any = args.target.files;
+  let uploadedFiles: any = args.target.files;
   if(args.target.files[0] !== null) {
-  let uploadedFile: File = upoadedFiles[0];
+  let uploadedFile: File = uploadedFiles[0];
   if (uploadedFile) {
     let reader: FileReader = new FileReader();
     reader.readAsDataURL(uploadedFile);
@@ -626,9 +630,9 @@ private updateZoomButtons(): void {
 // tslint:disable-next-line
 private readFile(args: any): void {
   // tslint:disable-next-line
-  let upoadedFiles: any = args.target.files;
+  let uploadedFiles: any = args.target.files;
   if(args.target.files[0] !== null) {
-  let uploadedFile: File = upoadedFiles[0];
+  let uploadedFile: File = uploadedFiles[0];
   if (uploadedFile) {
     let reader: FileReader = new FileReader();
     reader.readAsDataURL(uploadedFile);

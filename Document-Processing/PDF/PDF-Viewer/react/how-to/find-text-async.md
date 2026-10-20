@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Use findTextAsync in React PDF Viewer | Syncfusion
-description: Learn how to search text asynchronously with findTextAsync in the Syncfusion React PDF Viewer and retrieve match bounds.
+title: How to Use FindTextAsync in React PDF Viewer | Syncfusion
+description: Search text asynchronously in the React PDF Viewer using the findTextAsync method and retrieve the bounds of each match for advanced use.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 ---
 
-# Find text with findTextAsync in React PDF Viewer
+# How to Use FindTextAsync in React PDF Viewer
 
 The `findTextAsync` method performs an asynchronous text search within a PDF document. It returns a Promise that resolves with an array of result objects describing each match. Each match object contains information such as the page index and the bounding rectangles for the matched text, which can be used to highlight or navigate to occurrences. By default, the search runs across all pages; supply the optional `pageIndex` parameter to limit the search to a specific page.
 
@@ -17,9 +17,9 @@ Here is an example of how to use `findTextAsync`:
 <body>
   <button onclick="findText()">findText</button>
   <button onclick="findTexts()">findTexts</button>
-    <div id='sample'>
-        <div id='loader'>Loading....</div>
-    </div>
+  <div id='sample'>
+      <div id='loader'>Loading....</div>
+  </div>
 </body>
 
 <script>
@@ -48,6 +48,7 @@ import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import './index.css';
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject } from '@syncfusion/ej2-react-pdfviewer';
+
 export function App() {
   return (<div>
     <div className='control-section'>
@@ -72,7 +73,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-### Description
+## Description
 
 The `findTextAsync` method is designed for performing an asynchronous text search within a PDF document. You can use it to search for a single string or multiple strings, with the ability to control case sensitivity. By default, the search is applied to all pages of the document. However, you can adjust this behavior by specifying the page number (pageIndex), which allows you to search only a specific page if needed.
 
@@ -86,16 +87,12 @@ The `findTextAsync` method is designed for performing an asynchronous text searc
 
 ### Example workflow
 
-**findTextAsync('pdf', false):**
-This will search for the term "pdf" in a case-insensitive manner across all pages of the document.
+**findTextAsync('pdf', false):** Searches for the term "pdf" in a case-insensitive manner across all pages of the document.
 
-**findTextAsync(['pdf', 'the'], false):**
-This will search for the terms "pdf" and "the" in a case-insensitive manner across all pages of the document.
+**findTextAsync(['pdf', 'the'], false):** Searches for the terms "pdf" and "the" in a case-insensitive manner across all pages of the document.
 
-**findTextAsync('pdf', false, 0):**
-This will search for the term "pdf" in a case-insensitive manner only on the first page (page 0).
+**findTextAsync('pdf', false, 0):** Searches for the term "pdf" in a case-insensitive manner only on the first page (page 0).
 
-**findTextAsync(['pdf', 'the'], false, 1):**
-This will search for the terms "pdf" and "the" in a case-insensitive manner only on the second page (page 1).
+**findTextAsync(['pdf', 'the'], false, 1):** Searches for the terms "pdf" and "the" in a case-insensitive manner only on the second page (page 1).
 
 [View Sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to)

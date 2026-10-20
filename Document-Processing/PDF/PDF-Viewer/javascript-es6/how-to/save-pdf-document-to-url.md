@@ -1,23 +1,23 @@
 ---
 layout: post
-title: Save a PDF document to a URL in TypeScript PDF Viewer | Syncfusion
-description: Learn how to save a PDF document to a specific URL using the Syncfusion TypeScript PDF Viewer and a web service endpoint.
+title: How to Save the PDF to a URL in JavaScript (ES6) PDF | Syncfusion
+description: Save a PDF document from the JavaScript (ES6) PDF Viewer to a specific URL on a backend server using the downloadStart or saveAsBlob APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Save a PDF document to a URL in TypeScript PDF Viewer
+# How to Save the PDF to a URL in JavaScript (ES6) PDF Viewer
 
 Save the loaded PDF document to a specific URL using a custom web service endpoint.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started/) to create simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create simple PDF Viewer sample.
 
-**Step 2:** Follow the steps in the [Create PDF Viewer web service](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/how-to/create-pdfviewer-service/) guide to create the PDF Viewer web service.
+**Step 2:** Follow the steps in the [Create PDF Viewer web service](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/how-to/create-pdfviewer-service) guide to create the PDF Viewer web service.
 
 **Step 3:** Add the below code snippet in the PDF Viewer controller code to save the PDF document to the URL.
 
-```ts
+```csharp
 
 [HttpPost]
 [EnableCors("AllowAllOrigins")]
@@ -57,7 +57,7 @@ public async Task<IActionResult> SaveUrl([FromBody] Dictionary<string, string> j
 
 **Step 4:** Add the following code in your file server to rewrite the content.
 
-```ts
+```csharp
 
 [AcceptVerbs("Put")]
 [HttpPut]

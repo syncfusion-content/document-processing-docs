@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Document Processing NuGet Packages | Syncfusion
-description: Learn here some information about the process of installing, managing, and upgrading the Syncfusion NuGet Packages
+title: NuGet Packages of Document Processing Solutions | Syncfusion
+description: Learn here some information about the process of installing, managing, and upgrading the Syncfusion Document Processing NuGet Packages
 platform: document-processing
 control: NuGet Packages
 documentation: ug
 ---
 
-# Syncfusion<sup>&reg;</sup> NuGet Packages
+# NuGet Packages of Document Processing Solutions
 
 [NuGet](https://www.nuget.org/) can be used to automatically add files and references to your Visual Studio projects. You can use the Syncfusion<sup>&reg;</sup> NuGet packages without installing the Essential Studio<sup>&reg;</sup> or platform installation to development with the Syncfusion<sup>&reg;</sup> controls. From v16.2.0.46 (2018 Volume 2 Service Pack 1) onwards, all the Syncfusion<sup>&reg;</sup> components are available as NuGet packages at [nuget.org](https://www.nuget.org/). 
 

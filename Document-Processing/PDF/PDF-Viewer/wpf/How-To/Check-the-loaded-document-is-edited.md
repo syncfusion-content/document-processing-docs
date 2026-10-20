@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Check the loaded document is edited in PdfViewer | Syncfusion<sup>&reg;</sup>;
-description: Learn about how to Check the loaded document is edited in Syncfusion<sup>&reg;</sup>; WPF Pdf Viewer control using IsDocumentEdited property.
+title: How to Check the document is edited in WPF Pdf Viewer | Syncfusion
+description: Check if a loaded document has been edited in Syncfusion WPF PDF Viewer using IsDocumentEdited property. 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Check the loaded document is edited or not
+# How to Check the loaded document is edited in WPF Pdf Viewer 
 
 The PDF Viewer allows you to check whether the loaded PDF document has been modified during the viewing session. This helps determine if you need to prompt the user to save changes before exiting or closing the document.The [IsDocumentEdited](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_IsDocumentEdited) property of the PDF Viewer provides a simple way to determine whether the loaded document has been modified it's returning true,and false if no modifications have occurred.
 

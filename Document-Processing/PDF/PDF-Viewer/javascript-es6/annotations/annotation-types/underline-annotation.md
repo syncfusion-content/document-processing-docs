@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Underline annotation in TypeScript PDF Viewer | Syncfusion
-description: Learn to add, edit, delete, and customize Underline text markup annotations in Syncfusion TypeScript PDF Viewer, with UI and programmatic examples.
+title: Underline Annotation in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Underline annotations in the JavaScript (ES6) PDF Viewer to highlight text with a horizontal line below it.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Underline annotation in TypeScript PDF Viewer
+# Underline Annotation in JavaScript (ES6) PDF Viewer
 
 The PDF Viewer provides options to add, edit, and delete Underline annotations on text. You can add underlines via the UI (context menu or annotation toolbar) and programmatically. You can also customize color, opacity, author/subject, and default settings, and use undo/redo, save, print, or disable them as needed.
 
@@ -357,7 +357,7 @@ Refer to the following code snippet to set the default highlight settings.
 {% highlight ts tabtitle="Standalone" %}
 import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, UnderlineSettings} from '@syncfusion/ej2-pdfviewer';
 
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
 
 const pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
@@ -386,7 +386,7 @@ document.getElementById('underline')?.addEventListener('click', function () {
 {% highlight ts tabtitle="Server-Backed" %}
 import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, UnderlineSettings} from '@syncfusion/ej2-pdfviewer';
 
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
 
 const pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
@@ -428,7 +428,7 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailVi
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
-pdfviewer.enableTextMarkupAnnotation: false;
+pdfviewer.enableTextMarkupAnnotation = false;
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}
@@ -441,7 +441,7 @@ PdfViewer.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailVi
 let pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 pdfviewer.serviceUrl = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-pdfviewer.enableTextMarkupAnnotation: false;
+pdfviewer.enableTextMarkupAnnotation = false;
 pdfviewer.appendTo('#PdfViewer');
 
 {% endhighlight %}

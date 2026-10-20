@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Hyperlink Navigation in ASP.NET Core PDF Viewer | Syncfusion
-description: Configure hyperlink and table-of-contents navigation in ASP.NET Core PDF Viewer. Learn how to enable/disable links and handle hyperlink events.
+title: Hyperlink in ASP.NET Core PDF Viewer | Syncfusion
+description: Configure hyperlink navigation in the ASP.NET Core PDF Viewer, including how internal and external links open when users click them.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Hyperlink navigation in ASP.NET Core PDF Viewer
+# Hyperlink Navigation in ASP.NET Core PDF Viewer
 
 The PDF Viewer consolidates hyperlink-driven experiences, including inline links and table-of-contents (TOC) entries that target in-document destinations. These elements surface contextual entry points so users can jump directly to relevant sections without manual scrolling.
 
@@ -19,11 +19,7 @@ Inject the following modules to enable both navigation experiences: `Toolbar`, `
 
 ## Table of contents navigation in PDF Viewer
 
-The PDF Viewer supports a built-in table of contents (TOC) experience to help users jump to sections defined by the document’s bookmarks or outline.
-
-## Table of contents navigation
-
-Use the table of contents to quickly navigate to headings and sections defined in the PDF. When the document contains a bookmarks/outline structure, the viewer exposes those entries in the table of contents (Bookmarks) pane. Selecting an entry navigates directly to the mapped destination. If the PDF does not include a table of contents, the pane will not list any entries.
+The PDF Viewer supports a built-in table of contents (TOC) experience to help users jump to sections defined by the document's bookmarks or outline. When the document contains a bookmarks/outline structure, the viewer exposes those entries in the table of contents (Bookmarks) pane. Selecting an entry navigates directly to the mapped destination. If the PDF does not include a table of contents, the pane will not list any entries.
 
 ![Table of contents pane in PDF Viewer](../images/toc.png)
 
@@ -51,7 +47,7 @@ When `enableHyperlink` is set to `false`, all hyperlinks in the document become 
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   enableHyperlink="true">
+                   enableHyperlink="false">
     </ejs-pdfviewer>
 </div>
 
@@ -62,7 +58,7 @@ When `enableHyperlink` is set to `false`, all hyperlinks in the document become 
     <ejs-pdfviewer id="pdfviewer"
                    serviceUrl='/Index'
                    documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-                   enableHyperlink="true">
+                   enableHyperlink="false">
     </ejs-pdfviewer>
 </div>
 

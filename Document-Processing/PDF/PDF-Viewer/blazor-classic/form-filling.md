@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Form filling in Blazor PDF Viewer Component | Syncfusion
-description: Checkout and learn here all about form filling in Syncfusion Blazor PDF Viewer component and much more.
+title: Form filling in Blazor PDF Viewer Classic | Syncfusion
+description: Check out and learn here all about form filling in Syncfusion Blazor PDF Viewer component and much more details.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 N> Syncfusion<sup style="font-size:70%">&reg;</sup> recommends using [Blazor PDF Viewer (NextGen)](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/server-side-application) Component which provides fast rendering of pages and improved performance. Also, there is no need of external Web service for processing the files and ease out the deployment complexity. It can be used in Blazor Server, WASM and MAUI applications without any changes.
 
-# Form filling in Blazor PDF Viewer Component
+# Form filling in Blazor PDF Viewer Classic
 
 PDF Viewer component allows to display the form fields available in the PDF document. By using this, you can edit and download the form fields.
 

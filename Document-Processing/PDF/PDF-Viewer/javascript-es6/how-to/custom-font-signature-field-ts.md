@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Change font family in TypeScript PDF Viewer | Syncfusion
-description: Learn how to change the font family for form field type signatures and initials in the TypeScript PDF Viewer using typeSignatureFonts and typeInitialFonts.
+title: How to Change the Font for Type Signatures in JavaScript | Syncfusion
+description: Change the font family for type signatures and initials in the JavaScript (ES6) PDF Viewer using typeSignatureFonts and typeInitialFonts properties.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change the font family for type signatures in TypeScript
+# How to Change the Font for Type Signatures in JavaScript (ES6) PDF
 
 Change the font family for Type Signature and Initial fields by loading the desired fonts and assigning them in the PDF Viewer configuration. Include font stylesheet links (for example, Google Fonts) in the HTML head before initializing the viewer.
 
-### Signature field property
+## Signature field property
 
 The PDF Viewer supports changing fonts for Signature and Initial fields using the `typeSignatureFonts` and `typeInitialFonts` properties.
 
@@ -29,6 +29,8 @@ The PDF Viewer supports changing fonts for Signature and Initial fields using th
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sacramento">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inspiration">
 ```
+
+N> Add the preceding `<link>` elements inside the `<head>` of your `index.html` so the fonts are available before the PDF Viewer is initialized.
 
 ```ts
 import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer} from '@syncfusion/ej2-pdfviewer';

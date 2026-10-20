@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Customize the context menu in Angular PDF Viewer | Syncfusion
-description: Learn how to add and customize custom context menu options in the Angular PDF Viewer using addCustomMenu, customContextMenuSelect, and related events.
+title: How to Customize the Context Menu in Angular PDF Viewer | Syncfusion
+description: Add and customize context menu options in the Angular PDF Viewer using addCustomMenu, customContextMenuSelect, and related events.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize the context menu in Angular PDF Viewer
+# How to Customize the Context Menu in Angular PDF Viewer
 
-The PDF Viewer supports adding custom options to the context menu using the `addCustomMenu()` method; define custom actions with `customContextMenuSelect()`. See the addCustomMenu and [customContextMenuSelect()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#customcontextmenuselect) API.
+The PDF Viewer supports adding custom options to the context menu using the `addCustomMenu()` method; define custom actions with `customContextMenuSelect()`. See the `addCustomMenu()` and [customContextMenuSelect()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#customcontextmenuselect) API.
 
-### Add a custom option
+## Add a custom option
 
 The following example adds custom options to the context menu.
 
@@ -99,7 +99,7 @@ Toggle the display of the default context menu. When the addCustomMenu parameter
   }
 ```
 
-#### show or hide custom items before opening
+#### Show or hide custom items before opening
 
 Use [customContextMenuBeforeOpen()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer#customcontextmenubeforeopen) to hide or show custom options dynamically.
 
@@ -222,7 +222,7 @@ The following is the output of the custom context menu with customization.
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer**,
-Add the below serviceUrl in the `app.ts` file
+Add the serviceUrl below in the `app.ts` file
 `public service: string = 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer'`;
 Within the template, configure the PDF Viewer by adding the `[serviceUrl]='service'` attribute inside the div element.
 

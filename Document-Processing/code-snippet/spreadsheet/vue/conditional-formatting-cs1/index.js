@@ -20,6 +20,7 @@ new Vue({
         <e-conditionalformat type="GreaterThan", cFColor="RedFT", value="700", range="B2:B9" ></e-conditionalformat>
         <e-conditionalformat type="Bottom10Items", cFColor="YellowFT", value="4", range="C2:C9"></e-conditionalformat>
         <e-conditionalformat type="BlueDataBar", range="D2:D9"></e-conditionalformat>
+        <e-conditionalformat type="Formula", cFColor="GreenFT", value="=H2>AVG(H2:H9)", range="H2:H5"></e-conditionalformat>
       </e-conditionalformats>
     </e-sheet>
   </e-sheets>
@@ -37,11 +38,12 @@ new Vue({
       spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'A1:N1');
       spreadsheet.conditionalFormat({ type: "RYGColorScale", range: 'E2:E9' });
       spreadsheet.conditionalFormat({ type: "ThreeArrows", range: 'H2:H9' });
-    //Custom format
-        spreadsheet.conditionalFormat({ type: 'Top10Items', value: '1',
-            format: { style: { color: '#ffffff', backgroundColor: '#009999', fontWeight: 'bold'}}, range: 'F2:F9' });
-        spreadsheet.conditionalFormat({ type: 'Bottom10Items', value: '1',
-            format: { style: { color: '#ffffff', backgroundColor: '#c68d53', fontWeight: 'bold'}}, range: 'G2:G9' });
+      //Custom format
+      spreadsheet.conditionalFormat({ type: 'Top10Items', value: '1',
+          format: { style: { color: '#ffffff', backgroundColor: '#009999', fontWeight: 'bold'}}, range: 'F2:F9' });
+      spreadsheet.conditionalFormat({ type: 'Bottom10Items', value: '1',
+          format: { style: { color: '#ffffff', backgroundColor: '#c68d53', fontWeight: 'bold'}}, range: 'G2:G9' });
+      spreadsheet.conditionalFormat({ type: 'Formula', value: '=H6>5000', cFColor: 'RedT', range: 'H6:H9' });
       }
     }
 

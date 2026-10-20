@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Open document from Azure Blob Storage in Vue Document editor | Syncfusion
-description:  Learn about how to Open document from Azure Blob Storage in Vue Document editor control of Syncfusion Essential JS 2 and more details.
+title: Open Documents from Azure Blob in Vue DOCX Editor | Syncfusion
+description: Open documents from Azure Blob Storage in Vue DOCX Editor, enabling scalable cloud storage integration and document access.
 platform: document-processing
 control: Open document from Azure Blob Storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from Azure Blob Storage in Vue Document editor
+# Open Documents from Azure Blob Storage in Vue DOCX Editor
 
-To load document from Azure Blob Storage in a Document Editor, you can follow the steps below
+To load document from Azure Blob Storage in a [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor), you can follow the steps below
 
-**Step 1:** Create a Simple Document Editor Sample in Vue
+**Step 1:** Create a Simple DOCX Editor Sample in Vue
 
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in vue. This will give you a basic setup of the Document Editor component. 
+Start by following the steps provided in this [link](../getting-started) to create a simple DOCX Editor sample in vue. This will give you a basic setup of the DOCX Editor component. 
 
 **Step 2:** Modify the `DocumentEditorController.cs` File in the Web Service Project
 
@@ -94,7 +94,7 @@ public IActionResult LoadFromAzure([FromBody] Dictionary<string, string> jsonObj
 
 N> Replace **Your Connection string from Azure** with the actual connection string for your Azure Blob Storage account and **Your container name in Azure** with the actual container name 
 
-**Step 3:**  Modify the index File in the Document Editor sample
+**Step 3:**  Modify the index File in the DOCX Editor sample
 
 In the client-side, the document is returned from the web service is opening using [`open`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#open) method.
 

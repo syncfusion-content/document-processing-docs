@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Volume annotation in JavaScript PDF Viewer | Syncfusion
-description: Learn to add, edit, and customize Volume measurement annotations in Syncfusion JavaScript PDF Viewer with UI and programmatic examples.
+title: Volume Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Enable, draw, customize, and manage Volume measurement annotations in the JavaScript (ES5) PDF Viewer to calculate the volume of a 3D region.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Volume annotation in JavaScript PDF Viewer
+# Volume Annotation in JavaScript (ES5) PDF Viewer
 
 Volume is a measurement annotation used to calculate the volume of a rectangular prism area in the PDF.
 

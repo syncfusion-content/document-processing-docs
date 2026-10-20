@@ -1,6 +1,6 @@
 ---
 title: Convert PowerPoint to Image in .NET MAUI | Syncfusion
-description: Convert PowerPoint to image in .NET MAUI using .NET MAUI PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
+description: Convert PowerPoint to image in .NET MAUI using .NET PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
 documentation: UG
@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert PowerPoint to Image in .NET MAUI
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET MAUI PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/maui/powerpoint-library) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to image in .NET MAUI**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to image in .NET MAUI**.
 
 ## Steps to convert PowerPoint to Image programmatically
 
@@ -20,9 +20,9 @@ Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET MAUI PowerPoint library](https:
 
 * Visual Studio 2022.
 * Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
-* For more details about installation, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin).
+* For more details about installation, refer [here](https://learn.microsoft.com/en-us/dotnet/maui/get-started/installation?view=net-maui-8.0&tabs=vswin).
 
-Step 1: Create a new C# .NET MAUI app. Select **.NET MAUI App (Preview)** from the template and click the **Next** button.
+Step 1: Create a new C# .NET MAUI app. Select **.NET MAUI App** from the template and click the **Next** button.
 
 ![Create the MAUI app in Visual Studio](Workingwith-MAUI/Create_Project.png)
 
@@ -39,7 +39,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 Step 4: Add a new button to the **MainPage.xaml** as shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -100,7 +100,7 @@ using (IPresentation pptxDoc = Presentation.Open(assembly.GetManifestResourceStr
 
 Step 7: Run the Application.
 
-1. Select the target framework, device or emulator.
+1. Select the target framework and a device or emulator.
 2. Press <kbd>F5</kbd> to run the application.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/.NET-MAUI).
@@ -219,7 +219,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 Step 3: Add a new button to the **MainPage.xaml** as shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -280,7 +280,7 @@ using (IPresentation pptxDoc = Presentation.Open(assembly.GetManifestResourceStr
 
 Step 6: Run the Application.
 
-1. Select the target framework, device or emulator.
+1. Select the target framework and a device or emulator.
 2. Press <kbd>F5</kbd> to run the application.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/.NET-MAUI).
@@ -407,7 +407,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial se
 Step 3: Add a new button to the **MainPage.xaml** as shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -561,6 +561,6 @@ Refer the below helper files and add them into the mentioned project. These help
 
 {% endtabcontents %}
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/maui/powerpoint-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page. 
 
 An online sample link to [convert PowerPoint Presentation to image](https://document.syncfusion.com/demos/powerpoint/pptxtoimage#/tailwind) in ASP.NET Core. 

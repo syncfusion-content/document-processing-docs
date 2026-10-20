@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Configure extractTextOption in Vue PDF Viewer | Syncfusion
-description: Learn how to use the extractTextOption property in the Syncfusion Vue PDF Viewer to control text extraction and memory usage.
+title: How to Configure ExtractTextOption in Vue PDF Viewer | Syncfusion
+description: Use the extractTextOption property in the Vue PDF Viewer to control how text is extracted and to manage memory usage during extraction.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Extract text option in the Vue PDF Viewer
+# How to Configure ExtractTextOption in Vue PDF Viewer
 
 The `extractTextOption` property controls the amount of text and layout information returned by the viewer. Adjusting this value helps balance memory usage and the level of detail required for downstream processing. The viewer exposes four options:
 
-### Available Options:
+## Available Options:
 
 - **None** — Do not extract or return any text or layout data. Use this option to minimize memory usage when textual information is not required.
-- **TextOnly** — Return plain text only; layout and bounds are omitted. Using `TextOnly` may disable some viewer text features such as synchronous `findText`; use `findTextAsync` when asynchronous search is required.
+- **TextOnly** — Return plain text only; layout and bounds are omitted. Using `TextOnly` disables text search functionality such as the synchronous `findText` method; use `findTextAsync` when asynchronous search is required.
 - **BoundsOnly** — Return layout and positional data (bounds) without the plain text content.
 - **TextAndBounds** — Return both plain text and its positional information (bounds). This is the default and is useful when both content and layout are required.
 

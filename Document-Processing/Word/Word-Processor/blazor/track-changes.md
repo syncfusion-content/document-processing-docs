@@ -1,17 +1,28 @@
 ---
 layout: post
-title: Track Changes in Blazor DocumentEditor Component | Syncfusion
-description: Checkout and learn here all about Track Changes in Syncfusion Blazor DocumentEditor component and more.
+title: Track Changes in Blazor DOCX Editor | Syncfusion
+description: Track changes in Blazor DOCX Editor records document modifications and enables reviewers to accept or reject revisions efficiently.
 platform: document-processing
-control: DocumentEditor
+control: DOCX Editor
 documentation: ug
 ---
 
-# Track Changes in Blazor DocumentEditor Component
+# Track Changes in Blazor DOCX Editor
 
-Track Changes allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject the modifications. It is a useful tool for managing changes made by several reviewers to the same document. If track changes option is enabled, all editing operations are preserved as revisions in Document Editor.
+Track Changes allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject the modifications. It is a useful tool for managing changes made by several reviewers to the same document. If the track changes option is enabled, all editing operations are preserved as revisions in [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor).
 
-## Enable track changes in Document Editor
+Starting from v35.1.xx, the default value of table row insertion and deletion colors are changed based on author. To retain the previous static colors, add the following code.
+
+```csharp
+container.DocumentEditorSettings.RevisionSettings = new RevisionSettingsModel() {
+        InsertRevisionColor = "byAuthor",
+        DeleteRevisionColor = "byAuthor",
+        InsertedRowColor = "#0078D4", 
+        DeletedRowColor = "#E3008C" 
+      };
+```
+
+## Enable track changes in DOCX Editor
 
 The following example demonstrates how to enable track changes.
 
@@ -19,7 +30,7 @@ The following example demonstrates how to enable track changes.
 <SfDocumentEditorContainer ID="cont" @ref="container" EnableTrackChanges="true" EnableToolbar="true">
 </SfDocumentEditorContainer>
 ```
->Track changes are document level settings. When opening a document, if the document does not have track changes enabled, then enableTrackChanges will be disabled even if we set EnableTrackChanges="true" in the initial rendering. If you want to enable track changes for all the documents, then we recommend enabling track changes during the document change event. The following example demonstrates how to enable Track changes for the all the Document while Opening.
+N> Track changes are document level settings. When opening a document, if the document does not have track changes enabled, then `EnableTrackChanges` is reset to `false` even if we set `EnableTrackChanges="true"` in the initial rendering. If you want to enable track changes for all the documents, we recommend enabling track changes inside the `DocumentChanged` event. The following example demonstrates how to enable Track Changes for all the documents while opening.
 
 ```csharp
 <SfDocumentEditorContainer @ref="container" Height="590px" EnableToolbar=true>
@@ -38,14 +49,13 @@ The following example demonstrates how to enable track changes.
 };
 ```
 
-## Show/Hide Revisions Pane
- 
-The Show/Hide Revisions Pane feature in the Document Editor allows users to toggle the visibility of the revisions pane, providing flexibility in managing tracked changes within the document.
- 
-The following example code illustrates how to show/hide the revisions pane.
+## Show or Hide revisions pane
 
-```typescript
+The Show or Hide Revisions Pane feature in the DOCX Editor allows users to toggle the visibility of the revisions pane, providing flexibility in managing tracked changes within the document.
 
+The following example code illustrates how to show or hide the revisions pane.
+
+```csharp
 @using Syncfusion.Blazor.DocumentEditor
 <SfDocumentEditorContainer @ref="container" EnableToolbar=true EnableTrackChanges=true>
     <DocumentEditorContainerEvents Created="OnLoad"></DocumentEditorContainerEvents>
@@ -59,13 +69,12 @@ The following example code illustrates how to show/hide the revisions pane.
         container.DocumentEditor.ShowRevisions=false; // To hide revisions pane
     }
 }
-
 ```
 
 
-## Navigate between the tracked changes
+## Navigate between tracked changes
 
-The following example demonstrates how to navigate tracked revision programmatically.
+The following example demonstrates how to navigate tracked revisions programmatically.
 
 ```csharp
 /**
@@ -78,20 +87,81 @@ await container.DocumentEditor.Selection.NavigateNextRevisionAsync();
  */
 await container.DocumentEditor.Selection.NavigatePreviousRevisionAsync();
 ```
+## Custom Colors for Track Changes
 
-## Filtering changes based on user
+You can set an array of colors to show track changes such as insertions and deletions in the DOCX editor by configuring the [`revisionColors`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.RevisionSettingsModel.html#Syncfusion_Blazor_DocumentEditor_RevisionSettingsModel_RevisionColors) property in [RevisionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.RevisionSettingsModel.html). Each author is assigned a color in order: the first author gets the first color, the second author gets the next, and so on. If there are more authors than colors, the assignment starts again from the beginning of the array.
 
-In DocumentEditor, we have built-in review panel in which we have provided support for filtering changes based on the user.
+The following example illustrates how to set the color order for track changes in the DOCX Editor
 
-![Track changes in Blazor DocumentEditor](images/track-changes.png)
+```csharp
+@using Syncfusion.Blazor.DocumentEditor
 
-## Custom metadata along with author
+<SfDocumentEditorContainer @ref="container" EnableToolbar="true" DocumentEditorSettings="settings">
+</SfDocumentEditorContainer>
 
-The Document Editor provides options to customize revisions using [`RevisionSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.DocumentEditorSettingsModel.html#Syncfusion_Blazor_DocumentEditor_DocumentEditorSettingsModel_RevisionSettings). The `CustomData` property allows you to attach additional metadata to tracked revisions in the Word Processor. This metadata can represent roles, tags, or any custom identifier for the revision. To display this metadata along with the author name in the Track Changes pane, you must enable the `ShowCustomDataWithAuthor` property.
+@code {
+    private SfDocumentEditorContainer container;
+    // Define settings with revision colors
+    private DocumentEditorSettingsModel Settings = new DocumentEditorSettingsModel()
+    {
+        RevisionSettings = new RevisionSettingsModel() 
+        { 
+            RevisionColors = new string[]
+            {
+                "#0000ff",
+                "#bb00ff",
+                "#c14f16"
+            }
+        }
+    };
+}
+```
+
+## Set colors for revision types
+
+By default, the DOCX Editor uses author-based colors for tracked changes. You can also customize colors for specific revision types, such as inserted content, deleted content, inserted table rows, and deleted table rows by configuring the corresponding properties in [RevisionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.RevisionSettingsModel.html):
+
+- [`insertRevisionColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.RevisionSettingsModel.html#Syncfusion_Blazor_DocumentEditor_RevisionSettingsModel_InsertRevisionColor): Sets the color for inserted content.
+- [`deleteRevisionColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.RevisionSettingsModel.html#Syncfusion_Blazor_DocumentEditor_RevisionSettingsModel_DeleteRevisionColor): Sets the color for deleted content.
+- [`insertedRowColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.RevisionSettingsModel.html#Syncfusion_Blazor_DocumentEditor_RevisionSettingsModel_InsertedRowColor): Sets the background color for inserted table rows.
+- [`deletedRowColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.RevisionSettingsModel.html#Syncfusion_Blazor_DocumentEditor_RevisionSettingsModel_DeletedRowColor): Sets the background color for deleted table rows.
+
+ 
+The following example shows how to customize revision type colors instead of using the default author-based colors.
+ 
+```csharp
+
+<SfDocumentEditorContainer EnableToolbar=true Height="890px" EnableTrackChanges="true" DocumentEditorSettings="@Settings"></SfDocumentEditorContainer>
+
+@code{
+    private DocumentEditorSettingsModel Settings = new DocumentEditorSettingsModel
+    {
+        RevisionSettings = new RevisionSettingsModel()
+        {
+            InsertRevisionColor = "#22C55E",
+            DeleteRevisionColor = "#EF4444",
+            InsertedRowColor = "#f6fa06",
+            DeletedRowColor = "#3a02bb"
+        }
+    };
+}
+```
+N> 1. These settings only affect how revisions are displayed in the DOCX Editor and are not stored in the document.
+N> 2. By default, all revision types use author-specific colors ('byAuthor').
+
+## Filter changes by user
+
+In the DOCX Editor, we have a built-in review panel in which we have provided support for filtering changes based on the user.
+
+![Track changes in Blazor DOCX Editor](images/track-changes.png)
+
+## Add custom metadata with the author
+
+The DOCX Editor provides options to customize revisions using [`RevisionSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.DocumentEditorSettingsModel.html#Syncfusion_Blazor_DocumentEditor_DocumentEditorSettingsModel_RevisionSettings). The `CustomData` property allows you to attach additional metadata to tracked revisions in the Word Processor. This metadata can represent roles, tags, or any custom identifier for the revision. To display this metadata along with the author name in the Track Changes pane, you must enable the `ShowCustomDataWithAuthor` property.
 
 The following example code illustrates how to enable and update custom metadata for track changes revisions.
 
-```ts
+```csharp
 @using Syncfusion.Blazor.DocumentEditor
 
 <SfDocumentEditorContainer @ref="container" Height="590px" DocumentEditorSettings="@settings" EnableTrackChanges="true"></SfDocumentEditorContainer> 
@@ -99,7 +169,7 @@ The following example code illustrates how to enable and update custom metadata 
 @code {
     SfDocumentEditorContainer container; 
     DocumentEditorSettingsModel settings = new DocumentEditorSettingsModel() 
-    { RevisionSettings= { CustomData = "Developer", ShowCustomDataWithAuthor = true}};
+    { RevisionSettings= { CustomData = "Developer", ShowCustomDataWithAuthor = true }};
 }
 ```
 
@@ -107,19 +177,19 @@ The Track Changes pane will display the author name along with the custom metada
 
 ![Custom metadata along with author](images/track-changes-customData.png)
 
->Note:
-* When you export the document as SFDT, the customData value is stored in the revision collection. When you reopen the SFDT, the custom data is automatically restored and displayed in the Track Changes pane.
-* Other than SFDT export (e.g. DOCX and other), the customData is not preserved, as it is specific to the Document Editor component.
+N> When you export the document as SFDT, the customData value is stored in the revision collection. When you reopen the SFDT, the custom data is automatically restored and displayed in the Track Changes pane.
+
+N> Other than SFDT export (e.g., DOCX and others), the customData is not preserved, as it is specific to the DOCX Editor component.
 
 ## Protect the document in track changes only mode
 
-Document Editor provides support for protecting the document with `RevisionsOnly` protection. In this protection, all the users are allowed to view the document and do their corrections, but they cannot accept or reject any tracked changes in the document. Later, the author can view their corrections and accept or reject the changes.
+DOCX Editor provides support for protecting the document with `RevisionsOnly` protection. In this protection, users can view the document and make their corrections, but they cannot accept or reject any tracked changes in the document. Later, the author can view their corrections and accept or reject the changes.
 
-Document editor provides an option to protect and unprotect document using [`EnforceProtectionAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_EnforceProtectionAsync_System_String_Syncfusion_Blazor_DocumentEditor_ProtectionType_) and [`StopProtectionAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_StopProtectionAsync_System_String_) API.
+DOCX Editor provides an option to protect and unprotect the document using [`EnforceProtectionAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_EnforceProtectionAsync_System_String_Syncfusion_Blazor_DocumentEditor_ProtectionType_) and [`StopProtectionAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.EditorModule.html#Syncfusion_Blazor_DocumentEditor_EditorModule_StopProtectionAsync_System_String_) APIs.
 
-The following example code illustrates how to enforce and stop protection in Document editor container.
+The following example code illustrates how to enforce and stop protection in the Document Editor container.
 
-```typescript
+```csharp
 @using Syncfusion.Blazor.DocumentEditor
 
 <button @onclick="protectDocument">Protection</button>
@@ -142,6 +212,10 @@ Tracked changes only protection can be enabled in UI by using [Restrict Editing 
 ![Enable track changes only protection](images/tracked-changes.png)
 
 N> In enforce Protection method, first parameter denotes password and second parameter denotes protection type. Possible values of protection type are `NoProtection |ReadOnly |FormFieldsOnly |CommentsOnly |RevisionsOnly`. In stop protection method, parameter denotes the password.
+
+## Online demo
+
+Explore how to track and review changes in Word documents using the Blazor DOCX Editor in this live [Blazor Track Changes demo](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/track-changes?theme=fluent2).
 
 ## See Also
 

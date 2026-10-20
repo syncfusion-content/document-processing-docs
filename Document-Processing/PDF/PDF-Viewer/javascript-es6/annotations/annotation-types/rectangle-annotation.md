@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Rectangle annotation in TypeScript PDF Viewer | Syncfusion
-description: Learn to add, edit, and customize Rectangle annotations in Syncfusion TypeScript PDF Viewer with UI and programmatic examples.
+title: Rectangle Annotation in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Rectangle annotations in the JavaScript (ES6) PDF Viewer to outline rectangular regions on a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Rectangle annotation in TypeScript PDF Viewer
+# Rectangle Annotation in JavaScript (ES6) PDF Viewer
 
 Rectangle is a shape annotation used to highlight regions, group content, or draw callout boxes.
 
@@ -269,7 +269,7 @@ Refer to the following code snippet to set the default rectangle settings.
 {% highlight ts tabtitle="Standalone" %}
 import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, RectangleSettings} from '@syncfusion/ej2-pdfviewer';
 
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
 
 const pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
@@ -284,7 +284,7 @@ document.getElementById('Rectangle')?.addEventListener('click', function () {
         height: 75,
         opacity: 0.5,
         strokeColor: '#FF0000',
-        fillColor: '#000fff#',
+        fillColor: '#000FFF',
         author: 'User1'
     } as RectangleSettings);
 });
@@ -292,7 +292,7 @@ document.getElementById('Rectangle')?.addEventListener('click', function () {
 {% highlight ts tabtitle="Server-Backed" %}
 import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, RectangleSettings} from '@syncfusion/ej2-pdfviewer';
 
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
 
 const pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
@@ -307,7 +307,7 @@ document.getElementById('Rectangle')?.addEventListener('click', function () {
         height: 75,
         opacity: 0.5,
         strokeColor: '#FF0000',
-        fillColor: '#000fff#',
+        fillColor: '#000FFF',
         author: 'User1'
     } as RectangleSettings);
 });

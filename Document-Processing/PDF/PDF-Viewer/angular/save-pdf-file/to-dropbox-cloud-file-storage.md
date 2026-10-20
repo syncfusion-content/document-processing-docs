@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Save PDF to Dropbox cloud storage in Angular PDF Viewer | Syncfusion
-description: Learn here all about how to save PDF files to Dropbox cloud file storage in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: To Dropbox Cloud File Storage in Angular PDF Viewer | Syncfusion
+description: Save PDF files from the Angular PDF Viewer to Dropbox using standalone and server-backed configurations, with code samples and tips.
 platform: document-processing
 control: Save PDF files to Dropbox cloud file storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save PDF files to Dropbox cloud storage in Angular
+# Save PDF Files to Dropbox in Angular PDF Viewer
 
 The Angular PDF Viewer component supports saving PDF files to Dropbox using either the standalone or server-backed configuration. The following steps demonstrate both approaches.
 
@@ -32,7 +32,7 @@ Follow the instructions provided in this [link](https://help.syncfusion.com/docu
 import { Dropbox } from 'dropbox';
 ```
 
-2. Configure a custom toolbar item for the download function to save a PDF file in Azure Blob Storage.
+2. Configure a custom toolbar item for the download function to save a PDF file in Dropbox cloud storage.
 
 ```typescript
 @Component({
@@ -79,8 +79,8 @@ export class AppComponent implements OnInit {
 N> Replace **Your Access Token** with the actual access token for the Dropbox app.
 
 ```typescript
-saveDocument() {
-  var proxy = this
+SavePdfToBlob() {
+  var proxy = this;
   var viewer = (<any>document.getElementById("pdfViewer")).ej2_instances[0];
   this.fileName = viewer.fileName;
   viewer.saveAsBlob().then((value: Blob) => {
@@ -131,7 +131,7 @@ using Dropbox.Api;
 using Dropbox.Api.Files;
 ```
 
-4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields and constructor parameters to the `PdfViewerController` class. In the constructor, assign the values from the configuration to the corresponding fields
 
 ```csharp
 private IConfiguration _configuration;
@@ -142,7 +142,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 {
   _hostingEnvironment = hostingEnvironment;
   _cache = cache;
-   _configuration = configuration;
+  _configuration = configuration;
   _accessToken = _configuration.GetValue<string>("AccessToken");
   _folderName = _configuration.GetValue<string>("FolderName");
 }

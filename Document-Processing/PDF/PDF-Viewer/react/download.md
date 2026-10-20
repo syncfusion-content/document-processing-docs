@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Download edited PDF in React PDF Viewer | Syncfusion
-description: Learn here all about Download in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
+title: Download in React PDF Viewer | Syncfusion
+description: Download PDF files in the React PDF Viewer to a local device, with options to control the file name and the download workflow.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Download edited PDF in React PDF Viewer
+# Download PDF in React PDF Viewer
 
 The React PDF Viewer allows users to download the currently loaded PDF, including any annotations, form‑field edits, ink drawings, comments, or page reorganizations. Downloading produces a local PDF file containing all applied changes. This guide shows ways to download a PDF displayed in the PDF Viewer: using the built-in toolbar, and programmatically after editing.
 
@@ -174,5 +174,5 @@ export default function App() {
 
 ## See also
 
-- [Toolbar items](./toolbar)
+- [Toolbar items](./toolbar-customization/overview)
 - [Feature Modules](./feature-module)

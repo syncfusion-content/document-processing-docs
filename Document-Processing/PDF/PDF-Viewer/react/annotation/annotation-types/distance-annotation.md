@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add Distance Annotations in React PDF Viewer \ Syncfusion
-description: Learn how to enable, measure, customize, and manage Distance annotations in the Syncfusion React PDF Viewer.
+title: Distance Annotation in React PDF Viewer | Syncfusion
+description: Enable, draw, customize, and manage Distance annotations in the React PDF Viewer to measure straight-line distances on a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add Distance Annotations in React PDF Viewer
+# Distance Annotation in React PDF Viewer
 Distance is a measurement annotation used to measure the length between two points on a PDF page. Use it for precise reviews, markups, or engineering measurements.
 
 ![Distance overview](../../../javascript-es6/annotations/annotation-images/distance-annot.png)
@@ -105,7 +105,7 @@ function addDistance() {
 {% endtabs %}
 
 ## Customize Distance Appearance
-Configure default properties using the [`Distance Settings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#distancesettings) property (for example, default **fill color**, **stroke color**, **opacity**).
+Configure default properties using the [`distanceSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#distancesettings) property (for example, default **fill color**, **stroke color**, **opacity**).
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -167,7 +167,7 @@ function editDistanceProgrammatically() {
 
 ### Delete Distance Annotation
 
-Delete Distance Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
+Delete Distance Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../delete-annotation).
 
 ## Set Default Properties During Initialization
 Apply defaults for Distance using the [`distanceSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#distancesettings) property.
@@ -244,12 +244,12 @@ Configure scale defaults using `measurementSettings`.
 Listen to annotation life-cycle events (add/modify/select/remove). For the full list and parameters, see [**Annotation Events**](../annotation-event).
 
 ## Export and Import
-Distance measurements can be exported or imported with other annotations. For workflows and supported formats, see [**Export and Import annotations**](../export-import-annotations).
+Distance measurements can be exported or imported with other annotations. For workflows and supported formats, see [**Export and Import annotations**](../export-import/export-annotation).
 
 ## See Also
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)
 - [Customize Context Menu](../../context-menu/custom-context-menu)
 - [Comments Panel](../comments)
 - [Annotation Events](../annotation-event)
-- [Export and Import annotations](../export-import-annotations)
-- [Delete Annotations](../remove-annotations)
+- [Export and Import annotations](../export-import/export-annotation)
+- [Delete Annotations](../delete-annotation)

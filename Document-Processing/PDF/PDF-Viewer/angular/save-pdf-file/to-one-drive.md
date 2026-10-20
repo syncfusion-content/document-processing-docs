@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Save PDF files to One Drive in Angular PDF Viewer Component | Syncfusion
-description: Learn here all about how to save PDF files to One Drive in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: To One Drive in Angular PDF Viewer | Syncfusion
+description: Save PDF files from the Angular PDF Viewer to OneDrive using a server-backed web service for authentication and secure uploads.
 platform: document-processing
 control: Save PDF files to One Drive
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save PDF files to OneDrive
+# Save PDF Files to OneDrive in Angular PDF Viewer
 
 This article describes how to save a PDF file to OneDrive from the Syncfusion Angular PDF Viewer using a server-side web service. Follow the steps below.
 
@@ -101,7 +101,7 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
 }
 ```
 
-6. Open `appsettings.json` in the web service project and add the following keys below the existing `AllowedHosts` configuration
+6. Open `appsettings.json` in the web service project and add the following keys below the existing `AllowedHosts` configuration.
 
 ```json
 {
@@ -113,7 +113,7 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
   },
   "AllowedHosts": "*",
   "TenantId": "Your_Tenant_ID",
-  "applApplicationIdicationId": "Your_Application_ID",
+  "ApplicationId": "Your_Application_ID",
   "FolderName": "Your_Folder_Name_To_Access_The_Files_In_Onedrive"
 }
 

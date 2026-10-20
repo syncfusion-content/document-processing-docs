@@ -12,7 +12,8 @@ let sheets: SheetModel[] = [{
     conditionalFormats: [
             { type: 'GreaterThan', cFColor: 'RedFT', value: '700', range: 'B2:B9' },
             { type: 'Bottom10Items', cFColor: 'YellowFT', value: '4', range: 'C2:C9' },
-            { type: 'BlueDataBar', range: 'D2:D9' }
+            { type: 'BlueDataBar', range: 'D2:D9' },
+            { type: 'Formula', cFColor: 'GreenFT', value: '=H2>AVG(H2:H9)', range: 'H2:H5' }
         ],
     columns: [{ width: 120 }]}];
 
@@ -29,6 +30,7 @@ let spreadsheet: Spreadsheet = new Spreadsheet({
             format: { style: { color: '#ffffff', backgroundColor: '#009999', fontWeight: 'bold'}}, range: 'F2:F9' });
         spreadsheet.conditionalFormat({ type: 'Bottom10Items', value: '1',
             format: { style: { color: '#ffffff', backgroundColor: '#c68d53', fontWeight: 'bold'}}, range: 'G2:G9' });
+        spreadsheet.conditionalFormat({ type: 'Formula', value: '=H6>5000', cFColor: 'RedT', range: 'H6:H9' });
     }
 });
 

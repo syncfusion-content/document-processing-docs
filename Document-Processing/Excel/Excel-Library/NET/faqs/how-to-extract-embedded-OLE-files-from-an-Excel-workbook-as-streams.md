@@ -1,12 +1,12 @@
 ---
-title: Extract embedded OLE files from Excel as streams | Syncfusion
-description: This page shows how to extract embedded OLE objects from Excel as streams using the Syncfusion .NET Excel (XlsIO) library.
+title: How to Extract OLE Files in .NET Excel Library | Syncfusion
+description: Extract embedded OLE objects from Excel worksheets as streams using the Syncfusion .NET Excel Library in .NET applications.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to extract embedded OLE files from an Excel workbook as streams?
+# How to extract embedded OLE files in .NET Excel Library
 
 You can extract OLE objects in an Excel workbook as streams using XlsIO. The following example demonstrates how to retrieve embedded files from a worksheet.
 {% tabs %}  

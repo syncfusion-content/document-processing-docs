@@ -1,20 +1,20 @@
 ---
 layout: post
-title: PDF Viewer in Angular 17+ with no-standalone | Syncfusion
-description: Checkout and learn about Create a Standalone PDF Viewer in Angular 17 and above with --no-standalone flag of Syncfusion Essential JS 2 and more details.
+title: How to Create a Standalone PDF Viewer in Angular 17| Syncfusion
+description: Create a standalone Angular PDF Viewer in Angular 17 and above with the standalone flag enabled using the Syncfusion Essential JS 2 PDF Viewer.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create a PDF Viewer in Angular 17 and above with --no-standalone flag
+# How to Create a Standalone PDF Viewer in Angular 17 and Above in
 
 This article describes the steps required to create a standalone Angular PDF Viewer for Angular 17 and later using the `--no-standalone` option.
 
-## Setup Angular Environment
+## Set up Angular Environment
 
-You can use the [`Angular CLI`](https://github.com/angular/angular-cli) to setup your Angular applications.
+You can use the [`Angular CLI`](https://github.com/angular/angular-cli) to set up your Angular applications.
 To install the latest Angular CLI globally use the following command.
 
 ```bash
@@ -80,18 +80,18 @@ export class AppModule { }
 
 ## Adding CSS reference
 
-Add the Angular PDF Viewer component’s styles as given below in `src/styles.css` file.
+Themes for PDF Viewer can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/angular/documentation/appearance/overview#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/angular/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/angular/documentation/appearance/overview#theme-packages).
+
+This guide uses the `Tailwind 3` theme as an example. Install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package:
+
+```bash
+npm install @syncfusion/ej2-tailwind3-theme
+```
+
+Add the PDF Viewer theme style reference to `src/styles.css`. The `index.css` file automatically includes all required dependent component styles for the PDF Viewer. You do not need to import individual dependency styles such as Base, Buttons, Dropdowns, Inputs, Navigations, Popups, SplitButtons, and Notifications separately:
 
 ```css
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-notifications/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/pdfviewer/index.css';
 ```
 
 ## Adding PDF Viewer component
@@ -133,7 +133,7 @@ export class AppComponent implements OnInit {
 
 Use the following command to run the application in the browser.
 
-```javascript
+```bash
 ng serve --open
 ```
 

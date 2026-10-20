@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Comments in Vue PDF Viewer component | Syncfusion
-description: Learn about comments, replies, and status in the Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
-control: Comments
+title: Comments in Vue PDF Viewer | Syncfusion
+description: Add, reply to, edit, set the status of, delete, and read comments attached to annotations in the Vue PDF Viewer.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Comments in Vue PDF Viewer control
+# Comments in Vue PDF Viewer
 
 The PDF Viewer control provides options to add, edit, and delete comments for the following annotations in PDF documents:
 
@@ -105,7 +105,7 @@ Edit comments and replies in the following ways:
 * Click More options in the comment or reply container.
 * Select Delete from the context menu.
 
-![CommentDelete](../images/commentsdelete.png)
+![Delete a comment from the comment panel](../images/commentsdelete.png)
 
 N> Deleting the root comment from the comment panel also deletes the associated annotation.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Conformance in Flutter PDF library | Syncfusion
-description: Learn here all about different types of Conformance feature of Syncfusion Flutter PDF non-UI library and more.
+title: Conformance in Flutter PDF Library | Syncfusion
+description: Learn about different conformance standards and PDF compliance features in Syncfusion Flutter PDF non-UI Library.
 platform: document-processing
 control: PDF
 documentation: ug
@@ -15,13 +15,14 @@ The Syncfusion<sup>&reg;</sup> Flutter PDF currently supports the following PDF 
 * PDF/A-2b conformance
 * PDF/A-3b conformance
 
-N> To know more details about PDF/A standard refer [`https://en.wikipedia.org/wiki/PDF/A#Description`](https://en.wikipedia.org/wiki/PDF/A#Description)
+N> To know more details about the PDF/A standard, refer to [PDF/A standard](https://en.wikipedia.org/wiki/PDF/A#Description)
 
 ## PDF/A-1b conformance
 
 You can create a PDF/A-1b document by specifying the conformance level as a1b through PdfConformanceLevel enum when creating the new PDF document as follows.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Creates a new document with the PDF/A-1b standard
 PdfDocument document = PdfDocument(conformanceLevel: PdfConformanceLevel.a1b)
@@ -36,12 +37,14 @@ File('output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## PDF/A-2b conformance
 
 You can create a PDF/A-2b document by specifying the conformance level as a2b through PdfConformanceLevel enum when creating the new PDF document as follows.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Creates a new document with the PDF/A-2b standard
 PdfDocument document = PdfDocument(conformanceLevel: PdfConformanceLevel.a2b)
@@ -56,14 +59,16 @@ File('output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## PDF/A-3b conformance
 
-The PDF/A-3b conformance supports the external files as attachment to the PDF document, so you can attach any document format such as Excel, Word, HTML, CAD, or XML files.
+The PDF/A-3b conformance supports external files as attachments to the PDF document, so you can attach any document format such as Excel, Word, HTML, CAD, or XML files.
 
 You can create a PDF/A-3b document by specifying the conformance level as a3b through PdfConformanceLevel enum when creating the new PDF document as follows.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Creates a new document with the PDF/A-3b standard
 PdfDocument document = PdfDocument(conformanceLevel: PdfConformanceLevel.a3b)
@@ -74,7 +79,7 @@ PdfDocument document = PdfDocument(conformanceLevel: PdfConformanceLevel.a3b)
 //Creates an attachment
 PdfAttachment attachment = PdfAttachment(
     'input.txt', File('input.txt').readAsBytesSync(),
-    description: 'Input text', mimeType: 'application/txt')
+    description: 'Input text', mimeType: 'text/plain')
   ..relationship = PdfAttachmentRelationship.alternative
   ..modificationDate = DateTime.now();
 
@@ -88,3 +93,4 @@ File('output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}

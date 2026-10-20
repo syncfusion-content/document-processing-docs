@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Import/Export events in the TypeScript PDF Viewer | Syncfusion
-description: Learn how to handle Import/Export events for PDF form fields in the Syncfusion TypeScript PDF Viewer component.
+title: Import Export Events in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Handle import and export events for PDF form fields in the JavaScript (ES6) PDF Viewer to run custom logic when form data is loaded or saved.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# PDF form import and export events in TypeScript
+# Form Field Import and Export Events in JavaScript (ES6) PDF Viewer
 
 Import/export events let users track and customize the lifecycle of form data imported into or exported from the PDF Viewer.
 Use these events to:
@@ -27,15 +27,15 @@ Each event provides detailed context through typed event arguments such as [Impo
 
 ```ts
 // ...viewer initialization...
-viewer.importStart = (args: any) => {
+viewer.importStart = (args: ImportStartEventArgs) => {
   console.log('Import started', args);
   // e.g. show spinner, validate inputs
 };
-viewer.importSuccess = (args: any) => {
+viewer.importSuccess = (args: ImportSuccessEventArgs) => {
   console.log('Import success', args);
   // e.g. hide spinner, show toast
 };
-viewer.importFailed = (args: any) => {
+viewer.importFailed = (args: ImportFailureEventArgs) => {
   console.error('Import failed', args);
   // e.g. show error dialog
 };
@@ -50,15 +50,15 @@ viewer.importFailed = (args: any) => {
 
 ```ts
 // ...viewer initialization...
-viewer.exportStart = (args: any) => {
+viewer.exportStart = (args: ExportStartEventArgs) => {
   console.log('Export started', args);
   // e.g. disable export UI
 };
-viewer.exportSuccess = (args: any) => {
+viewer.exportSuccess = (args: ExportSuccessEventArgs) => {
   console.log('Export success', args);
   // e.g. enable UI, provide download link
 };
-viewer.exportFailed = (args: any) => {
+viewer.exportFailed = (args: ExportFailureEventArgs) => {
   console.error('Export failed', args);
   // e.g. re-enable UI, notify user
 };
@@ -78,5 +78,4 @@ viewer.exportFailed = (args: any) => {
 - [Add custom data to form fields](../custom-data)
 - [Import form fields](./import-form-fields)
 - [Export form fields](./export-form-fields)
-- [Form validation](../form-validation)
 - [Form fields API](../form-fields-api)

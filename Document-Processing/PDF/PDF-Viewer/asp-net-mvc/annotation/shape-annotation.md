@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Shape annotation in ASP.NET MVC PDF Viewer control | Syncfusion
-description: Learn about shape annotations in the Syncfusion ASP.NET MVC PDF Viewer (Essential JS 2), including add, edit, delete, and default settings.
+title: Shape Annotation in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn about the shape annotation in the ASP.NET MVC PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
-# Shape annotation in ASP.NET MVC PDF Viewer control
+# Shape Annotation in ASP.NET MVC PDF Viewer
 
 The PDF Viewer control provides options to add, edit, and delete shape annotations. The supported shape annotation types are:
 
@@ -76,11 +77,11 @@ Here is an example showing how to add shape annotations programmatically using *
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
 
-<button onclick="addLineAnnotation()">add Line Annotation programatically</button>
-<button onclick="addArrowAnnotation()">add Arrow Annotation programatically</button>
-<button onclick="addRectangleAnnotation()">add Rectangle Annotation programatically</button>
-<button onclick="addCircleAnnotation()">add Circle Annotation programatically</button>
-<button onclick="addPolygonAnnotation()">add Polygon Annotation programatically</button>
+<button onclick="addLineAnnotation()">add Line Annotation programmatically</button>
+<button onclick="addArrowAnnotation()">add Arrow Annotation programmatically</button>
+<button onclick="addRectangleAnnotation()">add Rectangle Annotation programmatically</button>
+<button onclick="addCircleAnnotation()">add Circle Annotation programmatically</button>
+<button onclick="addPolygonAnnotation()">add Polygon Annotation programmatically</button>
 
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
@@ -132,11 +133,11 @@ Here is an example showing how to add shape annotations programmatically using *
 {% endhighlight %}
 {% highlight html tabtitle="Server-Backed" %}
 
-<button onclick="addLineAnnotation()">add Line Annotation programatically</button>
-<button onclick="addArrowAnnotation()">add Arrow Annotation programatically</button>
-<button onclick="addRectangleAnnotation()">add Rectangle Annotation programatically</button>
-<button onclick="addCircleAnnotation()">add Circle Annotation programatically</button>
-<button onclick="addPolygonAnnotation()">add Polygon Annotation programatically</button>
+<button onclick="addLineAnnotation()">add Line Annotation programmatically</button>
+<button onclick="addArrowAnnotation()">add Arrow Annotation programmatically</button>
+<button onclick="addRectangleAnnotation()">add Rectangle Annotation programmatically</button>
+<button onclick="addCircleAnnotation()">add Circle Annotation programmatically</button>
+<button onclick="addPolygonAnnotation()">add Polygon Annotation programmatically</button>
 
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
@@ -198,11 +199,11 @@ Here is an example of using **editAnnotation()**:
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
 
-<button onclick="editLineAnnotation()">edit Line Annotation programatically</button>
-<button onclick="editArrowAnnotation()">edit Arrow Annotation programatically</button>
-<button onclick="editRectangleAnnotation()">edit Rectangle Annotation programatically</button>
-<button onclick="editCircleAnnotation()">edit Circle Annotation programatically</button>
-<button onclick="editPolygonAnnotation()">edit Polygon Annotation programatically</button>
+<button onclick="editLineAnnotation()">edit Line Annotation programmatically</button>
+<button onclick="editArrowAnnotation()">edit Arrow Annotation programmatically</button>
+<button onclick="editRectangleAnnotation()">edit Rectangle Annotation programmatically</button>
+<button onclick="editCircleAnnotation()">edit Circle Annotation programmatically</button>
+<button onclick="editPolygonAnnotation()">edit Polygon Annotation programmatically</button>
 
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
@@ -274,11 +275,11 @@ Here is an example of using **editAnnotation()**:
 {% endhighlight %}
 {% highlight html tabtitle="Server-Backed" %}
 
-<button onclick="editLineAnnotation()">edit Line Annotation programatically</button>
-<button onclick="editArrowAnnotation()">edit Arrow Annotation programatically</button>
-<button onclick="editRectangleAnnotation()">edit Rectangle Annotation programatically</button>
-<button onclick="editCircleAnnotation()">edit Circle Annotation programatically</button>
-<button onclick="editPolygonAnnotation()">edit Polygon Annotation programatically</button>
+<button onclick="editLineAnnotation()">edit Line Annotation programmatically</button>
+<button onclick="editArrowAnnotation()">edit Arrow Annotation programmatically</button>
+<button onclick="editRectangleAnnotation()">edit Rectangle Annotation programmatically</button>
+<button onclick="editCircleAnnotation()">edit Circle Annotation programmatically</button>
+<button onclick="editPolygonAnnotation()">edit Polygon Annotation programmatically</button>
 
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()

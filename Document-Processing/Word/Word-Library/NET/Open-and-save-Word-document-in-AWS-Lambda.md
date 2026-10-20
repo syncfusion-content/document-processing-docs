@@ -1,14 +1,14 @@
 ---
-title: Open and save Word document in AWS Lambda | Syncfusion
-description: Open and save Word document in AWS Lambda using .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Open and save Word document in AWS Lambda  | Syncfusion
+description: Open and save Word document in AWS Lambda using .NET Core Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Open and save Word document in AWS Lambda
+# Open and save Word document in AWS Lambda 
 
-Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-processing/word-framework/net-core/word-library) used to create, read, edit and convert Word documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **open and save a Word document in AWS Lambda**.
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit and convert Word documents programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **open and save a Word document in AWS Lambda**.
 
 ## Steps to open and save Word document in AWS Lambda
 
@@ -40,7 +40,7 @@ using Syncfusion.DocIO.DLS;
 {% endhighlight %}
 {% endtabs %}
 
-step 7: Add the following code snippet in **Function.cs** to **open a Word document in AWS Lambda**.
+Step 7: Add the following code snippet in **Function.cs** to **open a Word document in AWS Lambda**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -91,12 +91,12 @@ Step 11: Create a new AWS profile in the Upload Lambda Function Window. After cr
 ![Upload Lambda Function](AWS_Images/Lambda_Images/Upload-Lampda-WordtoPDF.png)
 
 Step 12: In the Advanced Function Details window, specify the **Role Name** as based on AWS Managed policy. After selecting the role, click the **Upload** button to deploy your application.
-![Advance Function Details](AWS_Images/Lambda_Images/Advanced-AWS-WordtoPDF.png)
+![Advanced Function Details](AWS_Images/Lambda_Images/Advanced-AWS-WordtoPDF.png)
 
 Step 13: After deploying the application, you can see the published Lambda function in **AWS console**.
 ![After deploying the application](AWS_Images/Lambda_Images/Function-WordtoPDF.png)
 
-Step 14: Edit Memory size and Timeout as maximum in General configuration of the AWS Lambda function.
+Step 14: Increase the **Memory size** and **Timeout** values in the General configuration of the AWS Lambda function, as needed for your workload.
 ![AWS Lambda Function](AWS_Images/Lambda_Images/General-configuration-WordtoPDF.png)
 
 ## Steps to post the request to AWS Lambda
@@ -104,7 +104,7 @@ Step 14: Edit Memory size and Timeout as maximum in General configuration of the
 Step 1: Create a new console project.
 ![Create a console project](AWS_Images/Lambda_Images/Console-APP-WordtoPDF.png)
 
-step 2: Install the following **Nuget packages** in your application from [Nuget.org](https://www.nuget.org/).
+Step 2: Install the following **NuGet packages** in your application from [NuGet.org](https://www.nuget.org/).
 
 * [AWSSDK.Core](https://www.nuget.org/packages/AWSSDK.Core/)
 * [AWSSDK.Lambda](https://www.nuget.org/packages/AWSSDK.Lambda/)
@@ -122,6 +122,8 @@ using Amazon;
 using Amazon.Lambda;
 using Amazon.Lambda.Model;
 using Newtonsoft.Json;
+using System.IO;
+using System.Diagnostics;
 
 {% endhighlight %}
 {% endtabs %}
@@ -132,7 +134,7 @@ Step 4: Add the following code snippet in **Program.cs** to invoke the published
 {% highlight c# tabtitle="C#" %}
 
 //Create a new AmazonLambdaClient
-AmazonLambdaClient client = new AmazonLambdaClient("awsaccessKeyID", "awsSecreteAccessKey", RegionEndpoint.USEast2);
+AmazonLambdaClient client = new AmazonLambdaClient("awsAccessKeyID", "awsSecretAccessKey", RegionEndpoint.USEast2);
 //Create new InvokeRequest with published function name.
 InvokeRequest invoke = new InvokeRequest
 {
@@ -145,12 +147,12 @@ InvokeResponse response = client.Invoke(invoke);
 //Read the response stream
 var stream = new StreamReader(response.Payload);
 JsonReader reader = new JsonTextReader(stream);
-var serilizer = new JsonSerializer();
-var responseText = serilizer.Deserialize(reader);
+var serializer = new JsonSerializer();
+var responseText = serializer.Deserialize(reader);
 //Convert Base64String into Word document
 byte[] bytes = Convert.FromBase64String(responseText.ToString());
-FileStream fileStream = new FileStream("Sample.docx", FileMode.Create);
-BinaryWriter writer = new BinaryWriter(fileStream);
+using FileStream fileStream = new FileStream("Sample.docx", FileMode.Create);
+using BinaryWriter writer = new BinaryWriter(fileStream);
 writer.Write(bytes, 0, bytes.Length);
 writer.Close();
 System.Diagnostics.Process.Start("Sample.docx");
@@ -164,4 +166,4 @@ By executing the program, you will get the **Word document** as follows.
 
 From GitHub, you can download the [console application](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Read-and-Save-document/Open-and-save-Word-document/AWS/Console_Application) and [AWS Lambda](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Read-and-Save-document/Open-and-save-Word-document/AWS/AWS_Lambda) project.
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> Word library (DocIO) features. 
+Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page. 

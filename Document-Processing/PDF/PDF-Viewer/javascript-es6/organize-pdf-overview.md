@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Organize pages in TypeScript PDF Viewer | Syncfusion
-description: Learn how to reorder, rotate, insert, delete, and save pages with the Syncfusion TypeScript PDF Viewer component.
+title: About Syncfusion JavaScript (ES6) Organize Pages | Syncfusion
+description: Reorder, rotate, insert, delete, and save pages in the JavaScript (ES6) PDF Viewer using the Organize Pages panel and its programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Organize pages in TypeScript PDF Viewer
+# About Syncfusion JavaScript (ES6) PDF Viewer Organize Pages
 
 The TypeScript PDF Viewer component provides an Organize Pages panel for preparing documents before sharing. Use it to tidy scanned files, move pages into the correct order, and duplicate content without leaving the viewer.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Navigation in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to implement page navigation, bookmarks, thumbnails, hyperlinks, and table of contents in the ASP.NET Core PDF Viewer component for seamless document exploration.
+description: Move between pages in the ASP.NET Core PDF Viewer using page, bookmark, hyperlink, and thumbnail navigation options built into the toolbar.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

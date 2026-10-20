@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize the context menu in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to add and customize context menu options in the ASP.NET Core PDF Viewer using addCustomMenu, customContextMenuSelect, and related events.
+title: How to Customize the Context Menu in ASP.NET Core PDF | Syncfusion
+description: Add and customize context menu options in the ASP.NET Core PDF Viewer using addCustomMenu, customContextMenuSelect, and related events.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Customize the context menu in ASP.NET Core PDF Viewer
+# How to Customize the Context Menu in ASP.NET Core PDF Viewer
 
 Extend the PDF Viewer's context menu with custom options using the `addCustomMenu()` method. Handle custom menu item clicks through the `customContextMenuSelect()` event to implement custom functionality.
 
@@ -206,7 +206,7 @@ Use the `customContextMenuBeforeOpen()` event to conditionally display or hide m
 </script>
 ```
 
-## Sample: Custom context menu output
+## Sample: Custom context menu
 
 The following complete sample demonstrates a customized context menu with action handlers for all menu items:
 

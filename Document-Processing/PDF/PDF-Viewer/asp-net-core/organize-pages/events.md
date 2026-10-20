@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Organize Pages Events in ASP.NET Core PDF Viewer | Syncfusion
-description: Organize pages in Syncfusion ASP.NET Core PDF Viewer—rotate, rearrange, insert, delete, and copy pages on mobile devices.
+title: Events in ASP.NET Core PDF Viewer | Syncfusion
+description: Subscribe to Organize Pages events in the ASP.NET Core PDF Viewer to react to rotate, rearrange, insert, delete, and copy actions on pages.
 platform: document-processing
 control: PDF Viewer
 
@@ -73,8 +73,8 @@ The `pageOrganizerZoomChanged` event is triggered when the zoom level of the pag
 
 Event arguments:
 
-- `previousZoomValue`: The previous zoom value.
-- `currentZoomValue`: The current zoom value.
+- `previousZoom`: The previous zoom value.
+- `currentZoom`: The current zoom value.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}

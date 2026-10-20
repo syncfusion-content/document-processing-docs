@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Mobile responsiveness in React Spreadsheet component | Syncfusion
-description: Learn here all about Mobile responsiveness in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Mobile Responsiveness in React Spreadsheet | Syncfusion
+description: Learn about mobile responsiveness in the Syncfusion React Spreadsheet component, including adaptive layouts and touch interactions.
 control: Mobile responsiveness 
 platform: document-processing
 documentation: ug
 ---
 
-# Mobile responsiveness in React Spreadsheet component
+# Mobile Responsiveness in React Spreadsheet
 
 The Spreadsheet control rendered in desktop mode will be adaptive in all mobile devices where the layout gets adjusted based on their parent element’s dimensions to accommodate any resolution.
 

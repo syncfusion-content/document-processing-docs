@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Free text annotation in JavaScript PDF Viewer | Syncfusion
-description: Learn to add, edit, delete, and customize Free Text annotations in Syncfusion JavaScript PDF Viewer, with UI and programmatic examples.
+title: Free Text Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Enable, add, customize, and manage Free Text annotations in the JavaScript (ES5) PDF Viewer for inline notes and labels on a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Free text annotation in JavaScript PDF Viewer
+# Free Text Annotation in JavaScript (ES5) PDF Viewer
 
 Free Text is a text box annotation used to place formatted text anywhere on the page for notes, labels, or callouts.
 
@@ -18,10 +18,11 @@ Free Text is a text box annotation used to place formatted text anywhere on the 
 
 ### Add Free Text annotation via UI
 
-Use the annotation toolbar to:
-- Click the **Edit Annotation** button in the PDF Viewer toolbar.
-- Click the **Free Text Annotation** button to enable Free Text mode.
-- Click on the page to add text.
+Use the annotation toolbar to add a Free Text annotation:
+
+1. Click the **Edit Annotation** button in the PDF Viewer toolbar.
+2. Click the **Free Text Annotation** button to enable Free Text mode.
+3. Click on the page to add text.
 
 N> When in pan mode, selecting Free Text switches the viewer to text select mode.
 
@@ -247,7 +248,9 @@ Edit opacity using the range slider in the Edit Opacity tool.
 
 ### Edit Free Text annotation programmatically
 
-Use editAnnotation to update existing Free Text content.
+To modify an existing Free Text annotation programmatically, use the editAnnotation() method.
+
+Here is an example of using editAnnotation():
 
 ```html
 <button id="changeContent">Change Content</button>
@@ -317,10 +320,6 @@ document.getElementById('changeContent').addEventListener('click', function () {
 {% endhighlight %}
 {% endtabs %}
 
-
-
-
-
 ## Default Free Text settings during initialization
 
 Set default Free Text properties before creating the control using freeTextSettings.
@@ -374,17 +373,17 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Set properties while adding Individual Annotation
 
-Set properties for individual annotations before creating the control using `FreeTextSettings`.
+Set properties for individual annotations while adding the annotation using `addAnnotation()`.
 
 N> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
 
-Refer to the following code snippet to set the default FreeText settings.
+Refer to the following code snippet to set the properties while adding a FreeText annotation.
 
 ```html
 <button id="FreeText">Add FreeText</button>
 ```
 {% tabs %}
-{% highlight ts tabtitle="Standalone" %}
+{% highlight js tabtitle="Standalone" %}
 ej.pdfviewer.PdfViewer.Inject(
     ej.pdfviewer.Toolbar,
     ej.pdfviewer.Magnification,
@@ -421,7 +420,7 @@ document.getElementById('FreeText')?.addEventListener('click', function () {
   });
 });
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
+{% highlight js tabtitle="Server-Backed" %}
 ej.pdfviewer.PdfViewer.Inject(
     ej.pdfviewer.Toolbar,
     ej.pdfviewer.Magnification,

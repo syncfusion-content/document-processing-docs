@@ -1,21 +1,50 @@
 ---
-title: Wrap Text in Excel | Syncfusion
-description: Explains with an example on how to apply wrap text in Excel that allows to fit a long text in a single cell using Interop and XlsIO.
+title: Text Wrapping in .NET Excel Library | Syncfusion
+description: Apply wrap text in Excel to fit long text in a single cell using Interop and Syncfusion .NET Excel Library cell formatting options.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to apply Wrap Text in Excel
+# Wrap Text in .NET Excel Library
 
-When a text is too long for the width of a cell, the lengthy text will spill over into the cell right to it, if it is an empty cell. But, if the cell right to is occupied, only a portion of the lengthy text appears. Wrapping text is a key feature, which wraps text in Excel and allows fitting a long text in a single cell.
+When text is too long for the width of a cell, the lengthy text will spill over into the cell to its right when that cell is empty. If the cell to the right is occupied, only a portion of the lengthy text appears. Wrapping text in Excel is a key feature that allows you to fit long text in a single cell.
 
 The following code shows the comparison of some lengthy text in a cell with and without wrapping using Interop and XlsIO for .NET.
 
 ## Interop
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+private void WrapText()
+{
+    //Instantiate the application object
+    var excelApp = new Microsoft.Office.Interop.Excel.Application();
+
+    //Add a workbook
+    Workbook workbook = excelApp.Workbooks.Add(System.Reflection.Missing.Value);
+
+    //Get the first sheet
+    Worksheet sheet = (Worksheet)workbook.Sheets["Sheet1"];
+
+    //Place some text in cell A1 without wrapping
+    Microsoft.Office.Interop.Excel.Range cellA1 = sheet.Cells.get_Range("A1");
+    cellA1.Value = "Sample Text Unwrapped";
+
+    //Place some text in cell A2 with wrapping
+    Microsoft.Office.Interop.Excel.Range cellA2 = sheet.Cells.get_Range("A2");
+    cellA2.Value = "Sample Text Wrapped";
+    cellA2.WrapText = true;
+
+    //Save the Excel file
+    workbook.SaveCopyAs("InteropOutput_WrapText.xlsx");
+
+    //Quit the application
+    excelApp.Quit();
+}
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 private void WrapText()
 {
   //Instantiate the application object
@@ -44,7 +73,7 @@ private void WrapText()
 }
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Private Sub WrapText()
   'Instantiate the application object
   Dim excelApp = New Microsoft.Office.Interop.Excel.Application()
@@ -76,34 +105,61 @@ End Sub
 ## XlsIO
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 private void WrapText()
 {
-  using (ExcelEngine excelEngine = new ExcelEngine())
-  {
-    //Instantiate the application object
-    IApplication application = excelEngine.Excel;
+    using (ExcelEngine excelEngine = new ExcelEngine())
+    {
+        //Instantiate the application object
+        IApplication application = excelEngine.Excel;
 
-    //Create a workbook
-    IWorkbook workbook = application.Workbooks.Create(1);
+        //Create a workbook
+        IWorkbook workbook = application.Workbooks.Create(1);
 
-    //Get the first sheet
-    IWorksheet worksheet = workbook.Worksheets[0];
+        //Get the first sheet
+        IWorksheet worksheet = workbook.Worksheets[0];
 
-    //Place some text in cell A1 without wrapping
-    worksheet.SetValue(1, 1, "Sample Text Unwrapped");
+        //Place some text in cell A1 without wrapping
+        worksheet.SetValue(1, 1, "Sample Text Unwrapped");
 
-    //Place some text in cell A2 with wrapping
-    worksheet.SetValue(2, 1, "Sample Text Wrapped");
-    cellA2.WrapText = true;
+        //Place some text in cell A2 with wrapping
+        worksheet.SetValue(2, 1, "Sample Text Wrapped");
+        worksheet[2, 1].WrapText = true;
 
-    //Save the workbook
-    workbook.SaveAs("XlsIOOutput_WrapText.xlsx");
-  }
+        //Save the workbook
+        workbook.SaveAs("XlsIOOutput_WrapText.xlsx");
+    }
 }
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+private void WrapText()
+{
+    using (ExcelEngine excelEngine = new ExcelEngine())
+    {
+        //Instantiate the application object
+        IApplication application = excelEngine.Excel;
+
+        //Create a workbook
+        IWorkbook workbook = application.Workbooks.Create(1);
+
+        //Get the first sheet
+        IWorksheet worksheet = workbook.Worksheets[0];
+
+        //Place some text in cell A1 without wrapping
+        worksheet.SetValue(1, 1, "Sample Text Unwrapped");
+
+        //Place some text in cell A2 with wrapping
+        worksheet.SetValue(2, 1, "Sample Text Wrapped");
+        worksheet[2, 1].WrapText = true;
+
+        //Save the workbook
+        workbook.SaveAs("XlsIOOutput_WrapText.xlsx");
+    }
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Private Sub WrapText()
   Using excelEngine As ExcelEngine = New ExcelEngine()
     'Instantiate the application object
@@ -120,7 +176,7 @@ Private Sub WrapText()
 
     'Place some text in cell A2 with wrapping
     worksheet.SetValue(2, 1, "Sample Text Wrapped")
-    cellA2.WrapText = True
+    worksheet(2,1).WrapText = True
 
     'Save as Excel file
     workbook.SaveAs("XlsIOOutput_WrapText.xlsx")
@@ -128,3 +184,9 @@ Private Sub WrapText()
 End Sub
 {% endhighlight %}
 {% endtabs %}
+
+## See also
+
+- [Wrap text in XlsIO](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-cell-or-range-formatting#apply-wrap-text)
+- [Syncfusion XlsIO overview](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview)
+- [Licensing requirements](https://help.syncfusion.com/document-processing/licensing/overview)

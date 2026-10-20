@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Working with custom stamp annotations
+# Custom stamp annotations | PDF Viewer | Xamarin.iOS
 
 PDF Viewer allows you to include any form of Xamarin.iOS UIView that is Button, Entry, Label, Image and more anywhere in the pages of the PDF Viewer as custom stamp annotation. You can perform operations like add, move, resize, and delete the custom stamp annotations. Also, you can save and load the existing custom stamp annotation that is associated with the PDF document
 

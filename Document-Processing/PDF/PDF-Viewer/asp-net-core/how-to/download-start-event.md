@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Control file downloads in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to intercept and control file downloads in the Syncfusion ASP.NET Core PDF Viewer using the downloadStart event.
+title: How to Control File Downloads in ASP.NET Core PDF Viewer | Syncfusion
+description: Intercept and control file downloads in the ASP.NET Core PDF Viewer using the downloadStart event to add custom headers or cancel the action.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Control file downloads in ASP.NET Core PDF Viewer
+# How to Control File Downloads in ASP.NET Core PDF Viewer
 
 Intercept PDF downloads and apply custom logic using the `downloadStart` event. Set `args.cancel = true` to prevent the download from proceeding. By default, `args.cancel` is `false`, allowing downloads to proceed.
 

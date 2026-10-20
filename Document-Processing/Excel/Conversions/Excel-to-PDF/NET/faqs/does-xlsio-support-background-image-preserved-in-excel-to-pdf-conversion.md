@@ -1,11 +1,11 @@
 ---
-title: Does XlsIO support background image in PDF conversion? | Syncfusion
-description: This page explains whether the Syncfusion .NET Excel library (XlsIO) provides support for watermark and background image in Excel to Pdf conversion.
+title: PDF Background Images in .NET Excel Library | Syncfusion
+description: Excel to PDF conversion explains whether the Syncfusion .NET Excel Library supports watermarks and background images.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Does XlsIO library support watermark and background image in Excel to Pdf conversion?
+# Watermarks and Background Images in .NET Excel Library
 
 No, The watermark or background image in Excel does not preserved in Excel to PDF conversion. The same behavior is followed by XlsIO.

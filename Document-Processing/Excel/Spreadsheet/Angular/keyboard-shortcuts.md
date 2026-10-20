@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Keyboard shortcuts in Angular Spreadsheet component | Syncfusion
-description: Learn here all about Keyboard shortcuts in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Keyboard shortcuts in Angular Spreadsheet| Syncfusion
+description: Keyboard shortcuts in Angular Spreadsheet help users perform common actions quickly, improving productivity and navigation efficiency.
 platform: document-processing
-control: Keyboard shortcuts 
+control: Keyboard shortcuts
 documentation: ug
 ---
 
-# Keyboard shortcuts in Angular Spreadsheet component
+# Keyboard shortcuts in Angular Spreadsheet
 
 The keyboard shortcuts supported in the spreadsheet are,
 
@@ -117,7 +117,7 @@ The keyboard shortcuts supported in the spreadsheet are,
 
 ## Note
 
-You can refer to our [Angular Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/angular/#/bootstrap5/spreadsheet/default) to knows how to present and manipulate data.
+You can refer to our [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/angular/#/bootstrap5/spreadsheet/default) to knows how to present and manipulate data.
 
 ## See Also
 

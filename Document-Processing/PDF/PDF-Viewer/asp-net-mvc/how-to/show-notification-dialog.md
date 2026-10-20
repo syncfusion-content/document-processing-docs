@@ -1,14 +1,13 @@
 ---
 layout: post
-title: Show Notification Dialog for Empty Form Fields in ASP.NET MVC PDF Viewer
-description: Learn how to display a notification dialog when form fields are empty in the Syncfusion ASP.NET MVC PDF Viewer, enhancing user experience during form filling.
+title: How to Show a Notification Dialog in ASP.NET MVC PDF | Syncfusion
+description: Show a notification dialog in the ASP.NET MVC PDF Viewer after a save, download, or print action completes so users see the result clearly.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Show Notification Dialog for Empty Form Fields
+# How to Show a Notification Dialog in ASP.NET MVC PDF Viewer
 
 The PDF Viewer component enables displaying a notification dialog in the user interface when form fields in a PDF document are empty or unfilled. Use this feature to improve user experience during form completion by guiding users to complete required fields.
 
@@ -22,7 +21,7 @@ Supported form field types include text fields, checkboxes, radio buttons, drop-
 
 Follow these steps to show the notification dialog when form fields are empty.
 
-**Step 1:** Follow the steps provided in the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started/) to create a basic PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [getting started guide](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/getting-started) to create a basic PDF Viewer sample.
 
 **Step 2:** Use the following code snippet to customize notification display on form validation.
 
@@ -34,7 +33,7 @@ Follow these steps to show the notification dialog when form fields are empty.
     function validateFormFields(args) {
         var nonfilledFormFields = args.nonFillableFields;
         var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        var errorMessage = "Kindly fill all the form fieds";
+        var errorMessage = "Kindly fill all the form fields";
         viewer.showNotificationPopup(errorMessage);
     }
 </script>

@@ -1,12 +1,12 @@
 ---
-title: Convert Excel to Image in Azure App Service on Linux | Syncfusion
-description: Convert Excel to Image in Azure App Service on Linux using .NET Core Excel library (XlsIO) without Microsoft Excel or interop dependencies.
+title: Excel to Image conversion in Azure Linux | Syncfusion
+description: Azure App Service on Linux Excel to Image section explains how to convert Excel files to images in Azure App Service on Linux using Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Convert Excel document to Image in Azure App Service on Linux
+# Excel to Image Conversion in Azure Linux using Excel Library
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to Image in Azure App Service on Linux**.
 
@@ -27,7 +27,7 @@ Step 3: Select the framework and click **Create** button.
 Step 4: Install the following NuGet packages as reference to your project from [NuGet.org](https://www.nuget.org/).
 
 * [Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core)
-* [SkiaSharp.NativeAssets.Linux](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)
+* [SkiaSharp.NativeAssets.Linux](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/4.150.1)
 * [HarfBuzzSharp.NativeAssets.Linux](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/2.8.2.3)
 
 ![Install Syncfusion.XlsIORenderer.Net.Core NuGet Package](Azure-Images/App-Service-Linux/Install_NuGet_Image.png)

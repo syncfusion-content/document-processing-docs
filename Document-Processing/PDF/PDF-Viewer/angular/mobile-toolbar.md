@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Mobile Toolbar Interface in Angular PDF Viewer component | Syncfusion
-description: Learn All About the Mobile Toolbar Interface in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Mobile Toolbar in Angular PDF Viewer | Syncfusion
+description: The mobile toolbar in the Angular PDF Viewer adapts the touch interface so users can access core features on small screens.
 platform: document-processing
-control: Mobile Toolbar Interface
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Mobile Toolbar Interface in Angular PDF Viewer component
+# Mobile Toolbar in Angular PDF Viewer
 
 The Mobile PDF Viewer offers a variety of features for viewing, searching, annotating, and managing PDF documents on mobile devices. It includes Essential<sup style="font-size:70%">&reg;</sup> tools like search, download, bookmarking, annotation, and page organization. Users also have the option to enable desktop toolbar features in mobile mode, providing a more extensive set of actions.
 
-## Mobile Mode Toolbar Configuration
+## Mobile mode toolbar configuration
 In mobile mode, the toolbar is optimized for ease of use on small screens, presenting users with the most common actions for interacting with a PDF document. Below are the key features available in mobile mode:
 
 ![Mobile toolbar with primary PDF interaction options](images/mobileToolbar.png)
 
-### Main Toolbar Options:
+### Main toolbar options
 
 **OpenOption:** Tap to load a PDF document.
 
@@ -37,7 +37,7 @@ In mobile mode, the toolbar is optimized for ease of use on small screens, prese
 
 N> In mobile mode, the annotation toolbar is conveniently displayed at the bottom of the viewer.
 
-### More Options Menu:
+### More options menu
 When you open the "more options" menu, you will see additional actions such as:
 
 **DownloadOption:** Tap to download the currently opened PDF document.

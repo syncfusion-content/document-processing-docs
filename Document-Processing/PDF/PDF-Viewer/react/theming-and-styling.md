@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Theming and styling in React PDF Viewer component | Syncfusion
-description: Learn how to apply built-in themes, configure dark mode, and customize the UI styles of the Syncfusion React PDF Viewer component.
+title: Theming and Styling in React PDF Viewer | Syncfusion
+description: Apply built-in themes, configure dark mode, and customize the visual style of the React PDF Viewer to match your application design.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -25,30 +25,27 @@ The PDF Viewer applies styles to the toolbar, buttons, panels, annotations, and 
 
 **Step-1:** Create a PDF Viewer sample by following the [React PDF Viewer getting started guide](./getting-started).
 
-**Step-2:** To change the theme to tailwind, add the imports to tailwind theme in `app.css`.
+**Step-2:** To change the theme to tailwind, install the Tailwind 3 theme package and add its import to `app.css`. The `index.css` file automatically includes all required dependent component styles for the PDF Viewer.
+
+```bash
+npm install @syncfusion/ej2-tailwind3-theme
+```
 
 ```css
-@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
-@import "../node_modules/@syncfusion/ej2-pdfviewer/styles/tailwind3.css";
+@import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/pdfviewer/index.css';
 ```
 
 ### Tutorial
 
 This short, guided walkthrough shows a minimal end-to-end customization flow:
 
-1. Create a new React app and install the viewer
+1. Create a new React app and install the viewer.
 
-2. Add the Tailwind theme imports to your global CSS (see Quick start).
+2. Add the Tailwind theme import to your global CSS (see Quick start).
 
 3. Render the PDF Viewer in `src/App` and verify the default look.
 
-4. Add a theme switcher using the dark-mode logic in later shown in this file
+4. Add a theme switcher using the dark-mode logic shown later in this file
 
 5. Add additional CSS rules under `.e-custom-style` and load it after the theme CSS, and verify appearance and accessibility.
 
@@ -218,4 +215,4 @@ This section explains the rationale behind the recommendations and common pitfal
 
 ### Reference
 
-* [Theme Studio for Syncfusion<sup style="font-size:70%">&reg;</sup> React components](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio)
+* [Theme Studio for React components](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio)

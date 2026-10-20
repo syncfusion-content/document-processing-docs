@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Keyboard shortcuts in EJ2 TypeScript Spreadsheet control | Syncfusion
-description: Learn here all about Keyboard shortcuts in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Keyboard Shortcuts in TypeScript Spreadsheet | Syncfusion
+description: Keyboard shortcuts in TypeScript Spreadsheet help users perform common actions quickly, improving productivity and navigation efficiency.
 platform: document-processing
-control: Keyboard shortcuts 
+control: Keyboard shortcuts
 documentation: ug
 ---
 
-# Keyboard shortcuts in EJ2 TypeScript Spreadsheet control
+# Keyboard shortcuts in TypeScript Spreadsheet 
 
 The keyboard shortcuts supported in the spreadsheet are,
 
 | Shortcut | Description |
 |-------|---------|
-| Ctrl + O | Displays dialog to open a file. |
+| Ctrl + O | Displays a dialog to open a file. |
 | Ctrl + S / Alt + F2 | Saves the workbook. |
 | Ctrl + P | Print the active worksheet when the spreadsheet is in focus. |
 | F2 | Enables edit mode. |

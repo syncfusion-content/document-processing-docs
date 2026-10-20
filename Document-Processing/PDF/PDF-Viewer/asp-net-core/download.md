@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Download PDF Documents with EJ2 ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to enable PDF document downloads in the ASP.NET Core PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Download in ASP.NET Core PDF Viewer | Syncfusion
+description: Enable, disable, and programmatically trigger PDF downloads in the ASP.NET Core PDF Viewer, including download events and Base64 handling.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Downloading PDF documents in PDF Viewer
+# Download in ASP.NET Core PDF Viewer
 
 The PDF Viewer component enables users to download the currently loaded PDF document. Downloads can be triggered through the user interface or programmatically via code. This feature allows end users to save documents locally for offline access or archival purposes.
 

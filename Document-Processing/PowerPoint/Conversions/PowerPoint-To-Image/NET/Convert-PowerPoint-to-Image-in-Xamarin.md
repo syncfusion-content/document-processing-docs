@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert PowerPoint to Image in Xamarin
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [Xamarin PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/xamarin/powerpoint-library) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to image in Xamarin**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to an image in Xamarin**.
 
 ## Steps to convert PowerPoint to Image programmatically
 
@@ -26,7 +26,7 @@ Step 3: Install [Syncfusion.Xamarin.PresentationRenderer](https://www.nuget.org/
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: Add new Forms XAML page in portable project If there is no XAML page is defined in the App class. Otherwise proceed to the next step.
+Step 4: Add a new Forms XAML page in the portable project if no XAML page is defined in the App class. Otherwise, proceed to the next step.
 <ul>
 <li>To add the new XAML page, right click on the project and select <b>Add > New Item</b> and add a Forms XAML Page from the list. Name it as MainXamlPage.</li>
 <li>In App class of <b>portable project</b> (App.cs), replace the existing constructor of App class with the code snippet given below which invokes the <b>MainXamlPage</b>.</li>
@@ -47,7 +47,7 @@ public App()
 Step 5: In the **MainXamlPage.xaml** add new button as shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -61,18 +61,27 @@ Step 5: In the **MainXamlPage.xaml** add new button as shown below.
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Include the following namespace in the MainXamlPage.xaml.cs file.
+Step 6: Include the following namespaces in the **MainXamlPage.xaml.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+using System.IO;
+using System.Reflection;
 using Syncfusion.Presentation;
 using Syncfusion.PresentationRenderer;
+using Xamarin.Forms;
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Include the below code snippet in the click event of the button in MainXamlPage.xaml.cs, to **convert a PowerPoint to image in Xamarin**.
+Step 7: Include the below code snippet in the click event of the button in **MainXamlPage.xaml.cs**, to **convert a PowerPoint to an image in Xamarin**. The `PresentationRenderer` performs the slide-to-image conversion and the `ISave` service (defined in the helper files below) saves the resulting image to the device.
+
+Step 8: Register the platform-specific `ISave` implementation using `DependencyService` so it can be resolved at runtime. Add the appropriate attribute above the namespace declaration in each platform-specific helper file:
+
+* iOS (`SaveIOS.cs`): `[assembly: Dependency(typeof(SaveIOS))]`
+* Android (`SaveAndroid.cs`): `[assembly: Dependency(typeof(SaveAndroid))]`
+* UWP (`SaveWindows.cs`): `[assembly: Dependency(typeof(SaveWindows))]`
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -82,8 +91,9 @@ Assembly assembly = typeof(App).GetTypeInfo().Assembly;
 //Open the existing PowerPoint presentation with loaded stream.
 using (IPresentation pptxDoc = Presentation.Open(assembly.GetManifestResourceStream("Convert-PowerPoint-Presentation-to-Image.Assets.Input.pptx")))
 {
+    //Initialize the PresentationRenderer.
     pptxDoc.PresentationRenderer = new PresentationRenderer();
-    //Convert PowerPoint slide to image as stream.
+    //Convert the first PowerPoint slide to a stream.
     using (Stream stream = pptxDoc.Slides[0].ConvertToImage(ExportImageFormat.Jpeg))
     {
         //Reset the stream position.
@@ -92,10 +102,10 @@ using (IPresentation pptxDoc = Presentation.Open(assembly.GetManifestResourceStr
         using (MemoryStream imageStream = new MemoryStream())
         {
             stream.CopyTo(imageStream);
-            //Save the stream as a file in the device and invoke it for viewing.
+            //Save the stream as a file on the device and invoke it for viewing.
             Xamarin.Forms.DependencyService.Get<ISave>().SaveAndView("PPTXtoImage.Jpeg", "application/jpeg", imageStream);
         }
-    }                   
+    }
 }
 
 {% endhighlight %}
@@ -124,7 +134,7 @@ Refer the below helper files and add them into the mentioned project. These help
   <td>
     {{'[ISave.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/Xamarin/Convert-PowerPoint-Presentation-to-Image/Convert-PowerPoint-Presentation-to-Image/ISave.cs)'| markdownify }}
   </td>
-  <td>Represent the base interface for save operation
+  <td>Represents the base interface for the save operation.
   </td>
   </tr>
   <tr>
@@ -135,7 +145,7 @@ Refer the below helper files and add them into the mentioned project. These help
     {{'[SaveIOS.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/Xamarin/Convert-PowerPoint-Presentation-to-Image/Convert-PowerPoint-Presentation-to-Image.iOS/SaveIOS.cs)'| markdownify }}
   </td>
   <td>
-    Save implementation for iOS device
+    Save implementation for iOS.
   </td>
   </tr>
   <tr>
@@ -143,7 +153,7 @@ Refer the below helper files and add them into the mentioned project. These help
     {{'[PreviewControllerDS.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/Xamarin/Convert-PowerPoint-Presentation-to-Image/Convert-PowerPoint-Presentation-to-Image.iOS/PreviewControllerDS.cs)'| markdownify }}
   </td>
   <td>
-    Helper class for viewing the <b>PowerPoint Presentation</b> in iOS device
+    Helper class for viewing the <b>PowerPoint Presentation</b> on iOS.
   </td>
   </tr>
   <tr>
@@ -153,7 +163,7 @@ Refer the below helper files and add them into the mentioned project. These help
   <td>
    {{'[SaveAndroid.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/Xamarin/Convert-PowerPoint-Presentation-to-Image/Convert-PowerPoint-Presentation-to-Image.Android/SaveAndroid.cs)'| markdownify }}
   </td>
-  <td>Save implementation for Android device
+  <td>Save implementation for Android.
   </td>
   </tr>
   <tr>
@@ -163,7 +173,7 @@ Refer the below helper files and add them into the mentioned project. These help
   <td>
     {{'[SaveWindows.cs](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/Xamarin/Convert-PowerPoint-Presentation-to-Image/Convert-PowerPoint-Presentation-to-Image.UWP/SaveWindows.cs)'| markdownify }}
   </td>
-  <td>Save implementation for UWP device.
+  <td>Save implementation for UWP.
   </td>
   </tr>
 </table>
@@ -176,7 +186,7 @@ By executing the program, you will get the **image** as follows.
 
 ![PowerPoint to Image in Xamarin](PPTXtoPDF_images/Output_PowerPoint_Presentation_to-Image.png)
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/xamarin) to explore the rich set of Syncfusion PowerPoint Library (Presentation) features. 
+Click [here](https://www.syncfusion.com/document-sdk/net-powerpoint-library) to explore the rich set of Syncfusion PowerPoint Library (Presentation) features. 
 
 An online sample link to [convert PowerPoint Presentation to image](https://document.syncfusion.com/demos/powerpoint/pptxtoimage#/tailwind) in ASP.NET Core. 
 

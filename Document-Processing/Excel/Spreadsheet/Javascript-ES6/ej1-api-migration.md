@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Ej1 api migration in EJ2 TypeScript Spreadsheet control | Syncfusion
-description: Learn here all about Ej1 api migration in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: EJ1 API Migration in TypeScript Spreadsheet | Syncfusion
+description: EJ1 API migration in TypeScript Spreadsheet helps transition existing applications to Essential JS 2 with updated APIs and features.
 platform: document-processing
 control: Ej1 api migration 
 documentation: ug
 ---
 
-# Ej1 api migration in EJ2 TypeScript Spreadsheet control
+# EJI API Migration in TypeScript Spreadsheet 
 
 This article describes the API migration process of the Spreadsheet component from Essential<sup style="font-size:70%">&reg;</sup> JS 1 to Essential<sup style="font-size:70%">&reg;</sup> JS 2.
 
@@ -107,7 +107,7 @@ This article describes the API migration process of the Spreadsheet component fr
 |--------- | ----------- | ----------- |
 | Enables or disables the find & replace feature | **Property:** *allowSearching* <br><br>`new ej.Spreadsheet($("#sheet"), { allowSearching: true });`| **Property:** *allowFindAndReplace* <br><br>`new Spreadsheet({ allowFindAndReplace: true });`|
 | Find the next occurrence of the given value | **Method:** *XLSearch.findNext* <br><br>`let xlObj = $("#sheet").data("ejSpreadsheet");  xlObj.XLSearch.findNext("g", {isCSen: false, isEMatch: false, type: "value", mode: "sheet", searchBy: "rows"}, 1);`| **Method:** *find* <br><br>`let ssObj: Spreadsheet = document.getElementById("sheet").ej2_instances[0];`<br>`ssObj.find({ value: "Jenna Schoolfield", sheetIndex: 1, findOpt: "next", mode: "Sheet", isCSen: false, isEMatch: false, searchBy: "By Row" });`|
-| Find the previous occurrence of the  given value | **Method:** *XLSearch.findPrevious* <br><br>`let xlObj = $("#sheet").data("ejSpreadsheet");  xlObj.XLSearch.findPrevious("g", {isCSen: true, isEMatch: false, type: "value", mode: "sheet", searchBy: "columns"}, 1);`| **Method:** *find* <br><br>`let ssObj: Spreadsheet = document.getElementById("sheet").ej2_instances[0];`<br>`ssObj.find({ value: "Jenna Schoolfield", sheetIndex: 1, findOpt: "previous", mode: "Sheet", isCSen: false, isEMatch: false, searchBy: "By Row" });`|
+| Find the previous occurrence of the given value | **Method:** *XLSearch.findPrevious* <br><br>`let xlObj = $("#sheet").data("ejSpreadsheet");  xlObj.XLSearch.findPrevious("g", {isCSen: true, isEMatch: false, type: "value", mode: "sheet", searchBy: "columns"}, 1);`| **Method:** *find* <br><br>`let ssObj: Spreadsheet = document.getElementById("sheet").ej2_instances[0];`<br>`ssObj.find({ value: "Jenna Schoolfield", sheetIndex: 1, findOpt: "previous", mode: "Sheet", isCSen: false, isEMatch: false, searchBy: "By Row" });`|
 | Find and replace all the data by sheet | **Method:** *XLSearch.replaceAllBySheet* <br><br>`let xlObj = $("#sheet").data("ejSpreadsheet");  xlObj.XLSearch.replaceAllBySheet("Sheet", "Spreadsheet", true, false);`| **Method:** *replace* <br><br>`let ssObj: Spreadsheet = document.getElementById("sheet").ej2_instances[0];`<br>`ssObj.replace({replaceValue: 'new value', mode: 'Sheet', replaceBy: 'replaceAll', value: '10'});`|
 | Find and replace all the data by workbook | **Method:** *XLSearch.replaceAllByBook* <br><br>`let xlObj = $("#sheet").data("ejSpreadsheet");  xlObj.XLSearch.replaceAllByBook("Sheet", "Spreadsheet", true, false);`| **Method:** *replace* <br><br>`let ssObj: Spreadsheet = document.getElementById("sheet").ej2_instances[0];`<br>`ssObj.replace({replaceValue: 'new value', mode: 'Workbook', replaceBy: 'replaceAll', value: '10'});`|
 

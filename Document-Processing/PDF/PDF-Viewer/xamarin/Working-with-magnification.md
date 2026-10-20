@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Working with magnification in Xamarin Pdf Viewer control | Syncfusion
+title: Working with magnification in Xamarin Pdf Viewer | Syncfusion
 description: Learn here all about Working with magnification support in Syncfusion<sup>®</sup> Xamarin Pdf Viewer (SfPdfViewer) control and more.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Working with magnification in Xamarin Pdf Viewer (SfPdfViewer)
+# Working with magnification in Xamarin Pdf Viewer
 
 Magnification of the PDF document can be done in multiple ways and the different ways are explained below. By default, the PdfViewer supports panning and Ctrl+ mouse scroll (in XForms.UWP) to manipulate the magnification of the document.
 

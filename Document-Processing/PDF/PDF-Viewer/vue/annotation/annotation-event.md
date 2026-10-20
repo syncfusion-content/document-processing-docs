@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Annotation Events in Vue PDF Viewer control | Syncfusion
-description: Learn here all about Annotation Events in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
-control: Annotation Events
+title: Annotation Event in Vue PDF Viewer | Syncfusion
+description: Subscribe to annotation events in the Vue PDF Viewer to react to add, modify, select, and remove actions on PDF annotations.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# PDF Viewer annotation events in Vue
+# Annotation Events in Vue PDF Viewer
 
 The PDF Viewer control supports several annotation events that enable applications to respond to user interactions—adding, moving, resizing, selecting, and removing annotations. Examples in this article reference the resource URL shown in the code samples.
 
@@ -33,13 +33,13 @@ The annotation events supported by the PDF Viewer control are:
 | [resizeSignature](#resizesignature)                  | Triggers when a signature is resized.                             |
 | [signaturePropertiesChange](#signaturepropertieschange) | Triggers when signature properties change.                        |
 | [signatureSelect](#signatureselect)                  | Triggers when a signature is selected.                            |
-| [signatureUnselect](#signatureunselect)              | Triggers when a signature is unselected.                          |            |
+| [signatureUnselect](#signatureunselect)              | Triggers when a signature is unselected.                          |
 
-### annotationAdd
+## annotationAdd
 
 The [annotationAdd](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#annotationadd) event triggers when an annotation is added to a PDF document's page.
 
-#### Event Arguments
+### Event Arguments
 
 For event data, see [AnnotationAddEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationAddEventArgs). It provides properties such as `annotationId`, `pageNumber`, `annotationType`, and `bounds`.
 
@@ -114,11 +114,11 @@ The following example illustrates how to handle the `annotationAdd` event.
 {% endhighlight %}
 {% endtabs %}
 
-### annotationDoubleClick
+## annotationDoubleClick
 
 The [annotationDoubleClick](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#annotationdoubleclick) event triggers when an annotation is double-clicked.
 
-#### Event Arguments
+### Event Arguments
 
 For event data, see [AnnotationDoubleClickEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationDoubleClickEventArgs).
 
@@ -191,11 +191,11 @@ The following example illustrates how to handle the `annotationDoubleClick` even
 {% endhighlight %}
 {% endtabs %}
 
-### annotationMouseLeave
+## annotationMouseLeave
 
 The [annotationMouseLeave](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#annotationmouseleave) event triggers when the mouse cursor leaves an annotation.
 
-#### Event Arguments
+### Event Arguments
 
 For event data, see [AnnotationMouseLeaveEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationMouseLeaveEventArgs).
 
@@ -268,11 +268,11 @@ The following example illustrates how to handle the `annotationMouseLeave` event
 {% endhighlight %}
 {% endtabs %}
 
-### annotationMouseover
+## annotationMouseover
 
 The [annotationMouseover](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#annotationmouseover) event triggers when the mouse cursor moves over an annotation.
 
-#### Event Arguments
+### Event Arguments
 
 For event data, see [AnnotationMouseOverEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationMouseOverEventArgs).
 
@@ -345,11 +345,11 @@ The following example illustrates how to handle the `annotationMouseover` event.
 {% endhighlight %}
 {% endtabs %}
 
-### annotationMove
+## annotationMove
 
 The [annotationMove](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#annotationmove) event triggers when an annotation is moved.
 
-#### Event Arguments
+### Event Arguments
 
 For event data, see [AnnotationMoveEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationMoveEventArgs).
 
@@ -422,11 +422,11 @@ The following example illustrates how to handle the `annotationMove` event.
 {% endhighlight %}
 {% endtabs %}
 
-### annotationMoving
+## annotationMoving
 
 The [annotationMoving](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#annotationmoving) event triggers while an annotation is being moved.
 
-#### Event Arguments
+### Event Arguments
 
 For event data, see [AnnotationMovingEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationMovingEventArgs).
 
@@ -499,11 +499,11 @@ The following example illustrates how to handle the `annotationMoving` event.
 {% endhighlight %}
 {% endtabs %}
 
-### annotationPropertiesChange
+## annotationPropertiesChange
 
 The [annotationPropertiesChange](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#annotationpropertieschange) event triggers when an annotation’s properties are changed.
 
-#### Event Arguments
+### Event Arguments
 
 For event data, see [AnnotationPropertiesChangeEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationPropertiesChangeEventArgs). It provides properties such as `annotationId`, `pageNumber`, and `action`.
 
@@ -578,11 +578,11 @@ The following example illustrates how to handle the `annotationPropertiesChange`
 {% endhighlight %}
 {% endtabs %}
 
-### annotationRemove
+## annotationRemove
 
 The [annotationRemove](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#annotationremove) event triggers when an annotation is removed.
 
-#### Event Arguments
+### Event Arguments
 
 For event data, see [AnnotationRemoveEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationRemoveEventArgs). It provides properties such as `annotationId` and `pageNumber`.
 
@@ -655,11 +655,11 @@ The following example illustrates how to handle the `annotationRemove` event.
 {% endhighlight %}
 {% endtabs %}
 
-### annotationResize
+## annotationResize
 
 The [annotationResize](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#annotationresize) event triggers when an annotation is resized.
 
-#### Event Arguments
+### Event Arguments
 
 For event data, see [AnnotationResizeEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationResizeEventArgs).
 
@@ -732,11 +732,11 @@ The following example illustrates how to handle the `annotationResize` event.
 {% endhighlight %}
 {% endtabs %}
 
-### annotationSelect
+## annotationSelect
 
 The [annotationSelect](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#annotationselect) event triggers when an annotation is selected.
 
-#### Event Arguments
+### Event Arguments
 
 For event data, see [AnnotationSelectEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationSelectEventArgs).
 
@@ -809,11 +809,11 @@ The following example illustrates how to handle the `annotationSelect` event.
 {% endhighlight %}
 {% endtabs %}
 
-### annotationUnselect
+## annotationUnselect
 
 The [annotationUnselect](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#annotationunselect) event triggers when an annotation is unselected.
 
-#### Event Arguments
+### Event Arguments
 
 For event data, see [AnnotationUnSelectEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotationUnSelectEventArgs).
 
@@ -886,11 +886,11 @@ The following example illustrates how to handle the `annotationUnselect` event.
 {% endhighlight %}
 {% endtabs %}
 
-### beforeAddFreeText
+## beforeAddFreeText
 
 The [beforeAddFreeText](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#beforeaddfreetext) event triggers before adding free text to the PDF Viewer.
 
-#### Event Arguments
+### Event Arguments
 
 For event data, see [BeforeAddFreeTextEventArgs](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/beforeAddFreeTextEventArgs).
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Rendering PDF pages using PDFium renderer | Syncfusion
-description: The Syncfusion Essential<sup>®</sup> UWP PDF viewer provides option to render the PDF pages using PDFium rendering engine. 
+title: How to Render PDF Pages using the PDFium renderer  | Syncfusion
+description: Learn how to render pdf pages using the pdfium renderer  in Syncfusion UWP PDF Viewer with examples and implementation details.
 platform: document-processing
 control: PDF viewer
 documentation: ug
 ---
 
-# Render PDF Pages using the PDFium renderer 
+# How to Render PDF Pages using the PDFium renderer in UWP PDF Viewer
 
 The [`SfPdfViewerControl`](https://help.syncfusion.com/cr/uwp/Syncfusion.Windows.PdfViewer.SfPdfViewerControl.html) allows the users to render the PDF pages using the PDFium rendering engine. The `IPdfRenderer` interface defines the methods and properties which provides the necessary values and perform the necessary operations to render the pages using the PDFium library. The user needs to add a class in their application which must implement this interface and assign an instance of this class to the Renderer property of the [`SfPdfViewerControl`](https://help.syncfusion.com/cr/uwp/Syncfusion.Windows.PdfViewer.SfPdfViewerControl.html). 
 
@@ -231,3 +231,8 @@ The sample that illustrates loading a PDF using the Pdfium renderer can be downl
 <https://www.syncfusion.com/downloads/support/directtrac/general/ze/PdfiumRenderer-36218231.zip> 
 
 N> Please ensure that the proper file path for the pdfium.dll assembly is provided in the `Initialize` method of the `CustomerPdfRenderer` class before running the application. Also make sure that you are using the appropriate pdfium.dll assembly with respect to their architecture (x86 or x64).
+
+## See Also
+- [Viewing PDF](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/viewing-pdf)
+- [Navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-page-navigation)
+- [Custom toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/creating-custom-toolbar)

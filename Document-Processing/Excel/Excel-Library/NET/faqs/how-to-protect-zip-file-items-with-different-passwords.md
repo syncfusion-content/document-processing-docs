@@ -1,18 +1,46 @@
 ---
-title: Protect zip file items with different password | Syncfusion
-description: This page demonstrates how to protect zip file items with different password using Syncfusion.Compression.Base.
+title: How to Protect ZIP Items in .NET Excel Library | Syncfusion
+description: Protect zip file items with different passwords using Syncfusion.Compression.Base for item-level protection.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to protect zip file items with different passwords using C#?
+# How to protect ZIP items in .NET Excel Library
 
 Syncfusion.Compression allows users to set a unique password for each item when creating a compressed Zip file. When the zip file is decompressed, the user can enter the password for each zip item and extract the zip items.
 
 The following complete code snippet explains how to protect a zip file and its items with passwords using the ZipCrypto encryption algorithm.
 
 {% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+using Syncfusion.Compression;
+using Syncfusion.Compression.Zip;
+class Program
+{
+  static void Main(string[] args)
+  {
+        //Initialize ZipArchive
+        ZipArchive zipArchive = new ZipArchive();
+        zipArchive.DefaultCompressionLevel = CompressionLevel.Best;
+
+        //Add the file without password you want to zip.
+        zipArchive.AddFile(@"../../Data/InputTemplate1.xlsx");
+
+        //Add the file with password you want to zip
+        zipArchive.AddFile(@"../../Data/InputTemplate2.xlsx", "password2");
+        zipArchive.AddFile(@"../../Data/InputTemplate3.xlsx", "password3");
+
+        //Protect the ZipArchive with password
+        zipArchive.Protect("password", EncryptionAlgorithm.ZipCrypto);
+
+        //Save the ZipArchive
+        zipArchive.Save(@"../../Output/Output.zip");
+        zipArchive.Close();
+    }
+}
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 using Syncfusion.Compression;
 using Syncfusion.Compression.Zip;

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Open the thumbnail pane programmatically | Syncfusion
-description: Learn how to open the thumbnail pane programmatically in the Syncfusion TypeScript PDF Viewer using openThumbnailPane.
+title: How to Open the Thumbnail Pane Programmatically | Syncfusion
+description: Open the thumbnail pane programmatically in the JavaScript (ES6) PDF Viewer using openThumbnailPane to show page thumbnails from custom UI controls.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Open the thumbnail pane programmatically
+# How to Open the Thumbnail Pane Programmatically in JavaScript (ES6)
 
 The PDF Viewer exposes a `openThumbnailPane()` API to open the thumbnail pane from application code. Use this API when the UI needs to show the thumbnail pane in response to user actions or programmatic workflows.
 

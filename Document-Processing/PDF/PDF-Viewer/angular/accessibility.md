@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Angular PDF Viewer component | Syncfusion
-description: Learn here all about accessibility in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Accessibility in Angular PDF Viewer | Syncfusion
+description: Accessibility features in the Angular PDF Viewer help all users read and interact with PDF content using assistive technologies.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessible PDF Viewing with Syncfusion Angular Components
+# Accessibility in Angular PDF Viewer
 
 The PDF Viewer component follows accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/), and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) commonly used to evaluate accessibility.
 
@@ -56,7 +56,7 @@ The accessibility compliance for the PDF Viewer component is outlined below.
 | `aria-valuemax` | Indicates the Maximum value of the PDF Viewer. |
 | `aria-valuemin` | Indicates the Minimum value of the PDF Viewer. |
 | `aria-valuenow` | Indicates the current value of the PDF Viewer. |
-| `aria-controls` | Attribute is set to the button and it points to the corresponding content. |
+| `aria-controls` | Identifies the element whose contents are controlled by the button. |
 
 ## Keyboard interaction
 
@@ -75,12 +75,12 @@ The PDF Viewer follows the [keyboard interaction](https://www.w3.org/WAI/ARIA/ap
 |||**Shortcuts for Zooming**|
 |<kbd>CONTROL + =</kbd> |<kbd>COMMAND + =</kbd> | Perform zoom-in operation |
 | <kbd>CONTROL + -</kbd> | <kbd>COMMAND + -</kbd> | Perform zoom-out operation |
-|<kbd>CONTROL + 0</kbd> |<kbd>COMMAND + 0</kbd> | Retain the zoom level to 1 |
+|<kbd>CONTROL + 1</kbd> |<kbd>COMMAND + 1</kbd> | Retain the zoom level to 1 |
 |||**Shortcut for Text Search**|
 | <kbd>CONTROL + F</kbd> | <kbd>COMMAND + F</kbd> |Open the search toolbar|
 |||**Shortcut for Text Selection**|
 |<kbd>CONTROL + C</kbd> |<kbd>CONTROL + C</kbd> | Copy the selected text or annotation or form field |
-| <kbd>CONTROL + X</kbd> | <kbd>CONTROL + X</kbd> |Cut the selected text or annotation of the form field|
+| <kbd>CONTROL + X</kbd> | <kbd>CONTROL + X</kbd> |Cut the selected annotation or form field|
 |<kbd>CONTROL + Y</kbd> |<kbd>CONTROL + Y</kbd> |Paste the selected text or annotation or form field|
 |||**Shortcuts for the general operation**|
 | <kbd>CONTROL + Z</kbd> | <kbd>CONTROL + Z</kbd> |Undo the action|
@@ -241,7 +241,7 @@ Each `keyboardCommand` object consists of a name property, specifying the `name`
 
 For example, the first command named `customCopy` is associated with the **G** key and requires both the **Shift** and **Alt** modifier keys to be pressed simultaneously.
 
-Additionally, there's an explanation of the key modifiers used in the gestures:
+The key modifiers used in the gestures are as follows:
 
 * Ctrl corresponds to the Control key, represented by the value `1`.
 * Alt corresponds to the Alt key, represented by the value `2`.
@@ -256,4 +256,4 @@ The PDF Viewer component's accessibility levels are ensured through an [accessib
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Angular components](../common/accessibility)
+* [Accessibility in Angular components](../common/accessibility)

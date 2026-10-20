@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Open PDF from Azure Blob Storage in TypeScript PDF Viewer | Syncfusion
-description: Learn how to load PDFs from Azure Blob Storage in the Syncfusion TypeScript PDF Viewer component using standalone and server-backed approaches.
+title: From Azure Blob Storage in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Load and display PDF files stored in Azure Blob Storage in the JavaScript (ES6) PDF Viewer using a server-backed web service for secure access.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Open PDF from Azure Blob Storage
+# Open PDF from Azure Blob Storage in JavaScript (ES6) PDF Viewer
 
 The TypeScript PDF Viewer component supports loading PDF files from Azure Blob Storage using either the standalone or the server-backed PDF Viewer. The following steps demonstrate both approaches.
 
@@ -23,7 +23,7 @@ Start by following the steps provided in this [link](https://help.syncfusion.com
 
 1. Add the following private properties to the `app.ts`, and assign the values from the configuration to the corresponding properties
 
-N> Replace **Your account name in Azure** with the actual account name for your Azure Blob Storage account and **Your container name in Azure** with the actual container name and **Your Blob name in Azure** with the actual container name.
+N> Replace **Your account name in Azure** with the actual account name for your Azure Blob Storage account and **Your container name in Azure** with the actual container name and **Your Blob name in Azure** with the actual blob name.
 
 ```typescript
 private accountName: string = "*Your account name in Azure*";
@@ -112,7 +112,7 @@ using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Specialized;
 ```
 
-4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields and constructor parameters to the `PdfViewerController` class. In the constructor, assign the values from the configuration to the corresponding fields
 
 ```csharp
 private readonly string _storageConnectionString;
@@ -127,7 +127,7 @@ public PdfViewerController(IConfiguration configuration, ILogger<PdfViewerContro
 }
 ```
 
-5. Modify the [Load()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to load PDF files from Azure Blob Storage.
+5. Modify the [Load()] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to load PDF files from Azure Blob Storage.
 
 ```csharp
 
@@ -163,7 +163,7 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonObject)
 }
 ```
 
-6. Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+6. Open the `appsettings.json` file in your web service project. Add the following lines below the existing `"AllowedHosts"` configuration
 
 ```json
 {
@@ -183,7 +183,7 @@ N> Replace the placeholders with your actual values: Azure storage connection st
 
 **Step 3:** Configure the PDF Viewer component
 
-Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from Azure Blob Storage. Ensure the document name exists in your Azure container.
+Set the [serviceUrl] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from Azure Blob Storage. Ensure the document name exists in your Azure container.
 
 ```typescript
 

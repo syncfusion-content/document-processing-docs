@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Save PDF files to Box cloud storage in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to save PDF files to Box cloud storage using the Syncfusion ASP.NET Core PDF Viewer component with a server-backed web service.
+title: To Box Cloud File Storage in ASP.NET Core PDF Viewer | Syncfusion
+description: Save PDF files from the ASP.NET Core PDF Viewer to Box cloud storage using a server-backed web service for authentication and secure uploads.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Save PDF files to Box cloud storage
+# Save PDF Files to Box Cloud Storage in ASP.NET Core PDF Viewer
 
 To save a PDF file to Box cloud storage using the ASP.NET Core PDF Viewer, follow the steps below. This approach uses a server-backed web service.
 
@@ -124,6 +124,6 @@ Set the `documentPath` property of the PDF Viewer component to the desired PDF f
 
 N> Install the **Box.V2.Core** NuGet package in the application to use the previous code example.
 
-N> Replace `PDF_Succinctly.pdf` with the actual document name to load from Box cloud storage. Pass the document name from the Box folder to the `documentPath` property of the `React PDF Viewer` component.
+N> Replace `PDF_Succinctly.pdf` with the actual document name to load from Box cloud storage. Pass the document name from the Box folder to the `documentPath` property of the `ASP.NET Core PDF Viewer` component.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-box-cloud-file-storage)

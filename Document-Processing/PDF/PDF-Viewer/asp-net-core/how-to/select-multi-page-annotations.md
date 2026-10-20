@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Select multi page annotations in ASP.NET Core PDF Viewer control | Syncfusion
-description: Learn here all about Select multi page annotations in Syncfusion ASP.NET Core PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: How to Select Multi-Page Annotations in ASP.NET Core PDF | Syncfusion
+description: Select multiple annotations across pages in the ASP.NET Core PDF Viewer so users can perform batch actions like delete or export on the selection.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Select multi-page annotations in ASP.NET Core PDF Viewer
+# How to Select Multi-Page Annotations in ASP.NET Core PDF Viewer
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer allows you to treat TextMarkup annotations that span multiple pages as a single, unified annotation entity. This feature simplifies the interaction, selection, and management of highlights or underlines that cross page boundaries.
 

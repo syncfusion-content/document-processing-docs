@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Measurement annotation in Vue PDF Viewer control | Syncfusion
-description: Learn about measurement annotations in the Syncfusion Vue PDF Viewer (Essential JS 2): distance, perimeter, area, radius, and volume.
+title: Measurement Annotation in Vue PDF Viewer | Syncfusion
+description: Learn about the measurement annotation in the Vue PDF Viewer and how it helps users work with PDF documents more effectively.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Measurement annotation in Vue PDF Viewer control
+# Measurement Annotation in Vue PDF Viewer
 
 The PDF Viewer provides options to add measurement annotations. The supported measurement annotations are:
 
@@ -211,11 +211,11 @@ Here is an example showing how to add measurement annotations programmatically u
 
 <template>
   <div id="app">
-    <button v-on:click="addDistanceAnnotation">Add Distance Annotation programatically</button>
-    <button v-on:click="addPerimeterAnnotation">Add Perimeter Annotation programatically</button>
-    <button v-on:click="addAreaAnnotation">Add Area Annotation programatically</button>
-    <button v-on:click="addRadiusAnnotation">Add Radius Annotation programatically</button>
-    <button v-on:click="addVolumeAnnotation">Add Volume Annotation programatically</button>
+    <button v-on:click="addDistanceAnnotation">Add Distance Annotation programmatically</button>
+    <button v-on:click="addPerimeterAnnotation">Add Perimeter Annotation programmatically</button>
+    <button v-on:click="addAreaAnnotation">Add Area Annotation programmatically</button>
+    <button v-on:click="addRadiusAnnotation">Add Radius Annotation programmatically</button>
+    <button v-on:click="addVolumeAnnotation">Add Volume Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl">
     </ejs-pdfviewer>
   </div>
@@ -283,11 +283,11 @@ const addVolumeAnnotation = function () {
 
 <template>
   <div id="app">
-    <button v-on:click="addDistanceAnnotation">Add Distance Annotation programatically</button>
-    <button v-on:click="addPerimeterAnnotation">Add Perimeter Annotation programatically</button>
-    <button v-on:click="addAreaAnnotation">Add Area Annotation programatically</button>
-    <button v-on:click="addRadiusAnnotation">Add Radius Annotation programatically</button>
-    <button v-on:click="addVolumeAnnotation">Add Volume Annotation programatically</button>
+    <button v-on:click="addDistanceAnnotation">Add Distance Annotation programmatically</button>
+    <button v-on:click="addPerimeterAnnotation">Add Perimeter Annotation programmatically</button>
+    <button v-on:click="addAreaAnnotation">Add Area Annotation programmatically</button>
+    <button v-on:click="addRadiusAnnotation">Add Radius Annotation programmatically</button>
+    <button v-on:click="addVolumeAnnotation">Add Volume Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl">
     </ejs-pdfviewer>
   </div>
@@ -362,11 +362,11 @@ export default {
 
 <template>
   <div id="app">
-    <button v-on:click="addDistanceAnnotation">Add Distance Annotation programatically</button>
-    <button v-on:click="addPerimeterAnnotation">Add Perimeter Annotation programatically</button>
-    <button v-on:click="addAreaAnnotation">Add Area Annotation programatically</button>
-    <button v-on:click="addRadiusAnnotation">Add Radius Annotation programatically</button>
-    <button v-on:click="addVolumeAnnotation">Add Volume Annotation programatically</button>
+    <button v-on:click="addDistanceAnnotation">Add Distance Annotation programmatically</button>
+    <button v-on:click="addPerimeterAnnotation">Add Perimeter Annotation programmatically</button>
+    <button v-on:click="addAreaAnnotation">Add Area Annotation programmatically</button>
+    <button v-on:click="addRadiusAnnotation">Add Radius Annotation programmatically</button>
+    <button v-on:click="addVolumeAnnotation">Add Volume Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl">
     </ejs-pdfviewer>
   </div>
@@ -434,11 +434,11 @@ const addVolumeAnnotation = function () {
 
 <template>
   <div id="app">
-    <button v-on:click="addDistanceAnnotation">Add Distance Annotation programatically</button>
-    <button v-on:click="addPerimeterAnnotation">Add Perimeter Annotation programatically</button>
-    <button v-on:click="addAreaAnnotation">Add Area Annotation programatically</button>
-    <button v-on:click="addRadiusAnnotation">Add Radius Annotation programatically</button>
-    <button v-on:click="addVolumeAnnotation">Add Volume Annotation programatically</button>
+    <button v-on:click="addDistanceAnnotation">Add Distance Annotation programmatically</button>
+    <button v-on:click="addPerimeterAnnotation">Add Perimeter Annotation programmatically</button>
+    <button v-on:click="addAreaAnnotation">Add Area Annotation programmatically</button>
+    <button v-on:click="addRadiusAnnotation">Add Radius Annotation programmatically</button>
+    <button v-on:click="addVolumeAnnotation">Add Volume Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl">
     </ejs-pdfviewer>
   </div>
@@ -521,11 +521,11 @@ Here is an example of using editAnnotation():
 
 <template>
   <div id="app">
-    <button v-on:click="editDistanceAnnotation">Edit Distance Annotation programatically</button>
-    <button v-on:click="editPerimeterAnnotation">Edit Perimeter Annotation programatically</button>
-    <button v-on:click="editAreaAnnotation">Edit Area Annotation programatically</button>
-    <button v-on:click="editRadiusAnnotation">Edit Radius Annotation programatically</button>
-    <button v-on:click="editVolumeAnnotation">Edit Volume Annotation programatically</button>
+    <button v-on:click="editDistanceAnnotation">Edit Distance Annotation programmatically</button>
+    <button v-on:click="editPerimeterAnnotation">Edit Perimeter Annotation programmatically</button>
+    <button v-on:click="editAreaAnnotation">Edit Area Annotation programmatically</button>
+    <button v-on:click="editRadiusAnnotation">Edit Radius Annotation programmatically</button>
+    <button v-on:click="editVolumeAnnotation">Edit Volume Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl">
     </ejs-pdfviewer>
   </div>
@@ -613,11 +613,11 @@ const editVolumeAnnotation = function () {
 
 <template>
   <div id="app">
-    <button v-on:click="editDistanceAnnotation">Edit Distance Annotation programatically</button>
-    <button v-on:click="editPerimeterAnnotation">Edit Perimeter Annotation programatically</button>
-    <button v-on:click="editAreaAnnotation">Edit Area Annotation programatically</button>
-    <button v-on:click="editRadiusAnnotation">Edit Radius Annotation programatically</button>
-    <button v-on:click="editVolumeAnnotation">Edit Volume Annotation programatically</button>
+    <button v-on:click="editDistanceAnnotation">Edit Distance Annotation programmatically</button>
+    <button v-on:click="editPerimeterAnnotation">Edit Perimeter Annotation programmatically</button>
+    <button v-on:click="editAreaAnnotation">Edit Area Annotation programmatically</button>
+    <button v-on:click="editRadiusAnnotation">Edit Radius Annotation programmatically</button>
+    <button v-on:click="editVolumeAnnotation">Edit Volume Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl">
     </ejs-pdfviewer>
   </div>
@@ -715,11 +715,11 @@ export default {
 
 <template>
   <div id="app">
-    <button v-on:click="editDistanceAnnotation">Edit Distance Annotation programatically</button>
-    <button v-on:click="editPerimeterAnnotation">Edit Perimeter Annotation programatically</button>
-    <button v-on:click="editAreaAnnotation">Edit Area Annotation programatically</button>
-    <button v-on:click="editRadiusAnnotation">Edit Radius Annotation programatically</button>
-    <button v-on:click="editVolumeAnnotation">Edit Volume Annotation programatically</button>
+    <button v-on:click="editDistanceAnnotation">Edit Distance Annotation programmatically</button>
+    <button v-on:click="editPerimeterAnnotation">Edit Perimeter Annotation programmatically</button>
+    <button v-on:click="editAreaAnnotation">Edit Area Annotation programmatically</button>
+    <button v-on:click="editRadiusAnnotation">Edit Radius Annotation programmatically</button>
+    <button v-on:click="editVolumeAnnotation">Edit Volume Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl">
     </ejs-pdfviewer>
   </div>
@@ -811,11 +811,11 @@ const editVolumeAnnotation = function () {
 
 <template>
   <div id="app">
-    <button v-on:click="editDistanceAnnotation">Edit Distance Annotation programatically</button>
-    <button v-on:click="editPerimeterAnnotation">Edit Perimeter Annotation programatically</button>
-    <button v-on:click="editAreaAnnotation">Edit Area Annotation programatically</button>
-    <button v-on:click="editRadiusAnnotation">Edit Radius Annotation programatically</button>
-    <button v-on:click="editVolumeAnnotation">Edit Volume Annotation programatically</button>
+    <button v-on:click="editDistanceAnnotation">Edit Distance Annotation programmatically</button>
+    <button v-on:click="editPerimeterAnnotation">Edit Perimeter Annotation programmatically</button>
+    <button v-on:click="editAreaAnnotation">Edit Area Annotation programmatically</button>
+    <button v-on:click="editRadiusAnnotation">Edit Radius Annotation programmatically</button>
+    <button v-on:click="editVolumeAnnotation">Edit Volume Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl">
     </ejs-pdfviewer>
   </div>
@@ -1123,7 +1123,7 @@ The PDF Viewer supports the following measurement units:
 
 ## Setting default scale ratio settings during control initialization
 
-The properties of scale ratio for measurement annotation can be set before creating the control using ScaleRatioSettings as shown in the following code snippet,
+The properties of scale ratio for measurement annotation can be set before creating the control using ScaleRatioSettings as shown in the following code snippet.
 
 
 {% tabs %}

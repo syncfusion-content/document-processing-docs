@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Highlight, underline, and strikeout text in TypeScript PDF Viewer | Syncfusion
-description: Learn how to programmatically highlight, underline, and strikeout text in the Syncfusion TypeScript PDF Viewer using setAnnotationMode.
+title: How to Highlight, Underline, or Strike Out Text | Syncfusion
+description: Highlight, underline, and strike out text in the JavaScript (ES6) PDF Viewer using the built-in text markup tools in the annotation toolbar.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Highlight, underline, and strikeout text in TypeScript PDF Viewer
+# How to Highlight, Underline, or Strike Out Text in JavaScript (ES6)
 
-Use the [setAnnotationMode()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#setannotationmode) method to programmatically highlight, underline, and strike through text in a loaded PDF document.
+Use the [setAnnotationMode()] (https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#setannotationmode) method to programmatically highlight, underline, and strikethrough text in a loaded PDF document.
 
-**Step 1:** Follow the steps in the [Get started with JavaScript ES6 PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started/) guide to create a sample.
+**Step 1:** Follow the steps in the [Get started with JavaScript ES6 PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) guide to create a sample.
 
 **Step 2:** Add the following code snippet to highlight, underline, and strikeout text in index.ts file with button click events.
 

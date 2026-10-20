@@ -1,12 +1,12 @@
 ---
-title: Convert Excel to Image in Google Cloud Platform (GCP) | Syncfusion
-description: Learn how to convert an Excel document to Image in Google Cloud Platform (GCP) using .NET Core Excel library (XlsIO).
+title: Excel to Image conversion in GCP | Syncfusion
+description: GCP Excel to Image section explains how to convert Excel documents to images in GCP using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Convert Excel to Image in Google Cloud Platform (GCP)
+# Excel to Image Conversion in GCP using Excel Library
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core/excel-library) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, you can **convert an Excel document to Image in Google Cloud Platform (GCP)** within a few lines of code.
 
@@ -16,7 +16,7 @@ N> If this is your first time working with Google Cloud Platform (GCP), please r
 
 Before we begin, make sure you have the following.
 
-* A [Google Cloud Platform (GCP)](https://console.cloud.google.com/getting-started) account with access to the App Engine service.
+* A [Google Cloud Platform (GCP)](https://cloud.google.com/cloud-console?nodebwarning=true) account with access to the App Engine service.
 
 ## Google Cloud Platform (GCP)
 
@@ -31,5 +31,5 @@ NuGet package name<br/></th></tr></thead>
 App Engine
 <br/></td><td>
 {{'[Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core)' | markdownify}}<br/>
-{{'[SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)' | markdownify}}<br/>{{'[HarfBuzzSharp.NativeAssets.Linux v7.3.0](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/7.3.0)' |markdownify}} <br/></td></tr>
+{{'[SkiaSharp.NativeAssets.Linux v4.150.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/4.150.1)' | markdownify}}<br/>{{'[HarfBuzzSharp.NativeAssets.Linux v7.3.0](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/7.3.0)' |markdownify}} <br/></td></tr>
 </table>

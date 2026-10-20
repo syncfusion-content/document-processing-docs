@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Search text and redact in Core PDF Viewer | Syncfusion
-description: Learn how to find text and add redaction annotations programmatically in the Syncfusion ASP.NET Core PDF Viewer.
+title: Search Redact in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn about the search redact in the ASP.NET Core PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Search text and redact in ASP.NET Core PdfViewer
+# Search Redact in ASP.NET Core PDF Viewer
 
-Search for a keyword in the loaded PDF and automatically add redaction annotations for each match. The example below wires the `extractTextCompleted` event, triggers text extraction, performs a search, and adds redaction annotations for every result.
+Search for a keyword in the loaded PDF and automatically add redaction annotations for each match. The example below calls `findTextAsync` to perform the search and then adds a redaction annotation for every returned text bound.
 
 N> Prerequisites: Add the PdfViewer control to the ASP.NET Core application and ensure a document is loaded. Confirm the redaction feature is available in the used product version. Applying redaction permanently removes the selected content.
 

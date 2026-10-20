@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Installing Syncfusion PDF linux installer-Syncfusion
-description: Learn here about how to install Syncfusion PDF linux installer after downloading from our Syncfusion website.
+title: How to Install Syncfusion PDF Linux Installer | Syncfusion
+description: Learn how to install the Syncfusion PDF Linux installer and configure the required components successfully.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 
 ---
 
-# Installing Syncfusion<sup>&reg;</sup> PDF Linux installer
+# How to Install Syncfusion PDF Linux Installer
 
 ## Step-by-Step Installation
 

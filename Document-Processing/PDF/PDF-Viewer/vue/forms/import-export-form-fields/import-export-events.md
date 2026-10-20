@@ -1,15 +1,16 @@
 ---
 layout: post
-title: Import/Export events in the Vue PDF Viewer | Syncfusion
-description: Learn how to handle Import/Export events for PDF form fields in the Syncfusion Vue PDF Viewer component.
+title: Import Export Events in Vue PDF Viewer | Syncfusion
+description: Handle import and export events for PDF form fields in the Vue PDF Viewer to run custom logic when form data is loaded or saved.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
-# PDF Form Import and Export Events in Vue
+# Form Field Import and Export Events in Vue PDF Viewer
 
-Import/Export events let you **track and customize the entire life cycle** of form data being imported into or exported from the PDF Viewer.
+Import/Export events let you **track the entire life cycle and respond to it** for form data being imported into or exported from the PDF Viewer.
 Use these events to:
 - Validate inputs before processing.
 - Show progress indicators.
@@ -26,7 +27,7 @@ Each event provides detailed context through event arguments such as [ImportStar
 **Example: Handle Import Events**
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <ejs-pdfviewer
@@ -92,7 +93,7 @@ export default {
 **Example: Handle Export Events**
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <ejs-pdfviewer
@@ -156,7 +157,7 @@ export default {
 
 ## See also
 
-- [Form Designer overview](../overview)
+- [Form fields overview](../overview)
 - [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)
 - [Create form fields](../overview-create-forms)
 - [Group form fields](../group-form-fields)
@@ -164,6 +165,4 @@ export default {
 - [Add custom data to form fields](../custom-data)
 - [Import form fields](./import-form-fields)
 - [Export form fields](./export-form-fields)
-- [Form validation](../form-validation)
-- [Form fields API](../form-fields-api)
 - [Form fields API](../form-fields-api)

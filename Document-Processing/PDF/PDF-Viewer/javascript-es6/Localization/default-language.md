@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Localization in JavaScript ES6 PDF Viewer | Syncfusion
-description: Learn about the default language culture and localization in Syncfusion JavaScript ES6 PDF Viewer component.
+title: Default Language in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Set the default language for the JavaScript (ES6) PDF Viewer UI and learn how localization is applied to all built-in text and messages.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Localization in the TypeScript PDF Viewer 
+# Default Language in JavaScript (ES6) PDF Viewer
 
 The PDF Viewer supports localization of UI text, tooltips, and messages using culture-specific string collections so the interface matches users' language and regional settings.
 
@@ -30,7 +30,7 @@ PdfViewer.Inject(TextSelection, TextSearch, Print, Navigation, Toolbar, Magnific
 const pdfviewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     resourceUrl: "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib",
-    locale: 'en-US', //Using locale update culture
+    locale: 'en-US', // Using locale to update culture
 });
 pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
@@ -42,8 +42,8 @@ PdfViewer.Inject(TextSelection, TextSearch, Print, Navigation, Toolbar, Magnific
 
 const pdfviewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/';
-    locale: 'en-US' //Using locale update culture
+    serviceUrl: 'https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer/',
+    locale: 'en-US' // Using locale to update culture
 });
 pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
@@ -108,7 +108,7 @@ The following table lists the default text values used by the PDF Viewer in the 
 |Highlight context|Highlight|
 |Underline context|Underline|
 |Strikethrough context|Strike through|
-|Server error|Web-service is not listening. PDF Viewer depends on web-service for all it's features. Please start the web service to continue.|
+|Server error|Web-service is not listening. PDF Viewer depends on web-service for all its features. Please start the web service to continue.|
 |Open text|Open|
 |First text|First Page|
 |Previous text|Previous Page|

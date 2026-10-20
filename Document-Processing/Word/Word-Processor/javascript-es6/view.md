@@ -1,31 +1,33 @@
 ---
 layout: post
-title: View in JavaScript (ES6) Document editor control | Syncfusion
-description: Learn here all about View in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
+title: View in TypeScript DOCX Editor | Syncfusion
+description: View in TypeScript DOCX Editor enables web layout, ruler display, and heading navigation to enhance document readability and navigation.
 platform: document-processing
 control: View 
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# View in JavaScript (ES6) Document editor control
+# View in TypeScript DOCX Editor
 
 ## Web layout
 
-DocumentEditor allows you to change the view to web layout and print using the [`layoutType`](https://ej2.syncfusion.com/documentation/api/document-editor#layouttype) property with the supported [`LayoutType`](https://ej2.syncfusion.com/documentation/api/document-editor/layoutType/).
+[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) allows you to change the view to web layout and print using the [`layoutType`](https://ej2.syncfusion.com/documentation/api/document-editor#layouttype) property with the supported [`LayoutType`](https://ej2.syncfusion.com/documentation/api/document-editor/layoutType).
 
 ```ts
 let docEdit: DocumentEditor = new DocumentEditor({ layoutType: 'Continuous'});
 ```
 
->Note: Default value of [`layoutType`](https://ej2.syncfusion.com/documentation/api/document-editor#layouttype) in DocumentEditor component is [`Pages`](https://ej2.syncfusion.com/documentation/api/document-editor/layoutType/).
+N> The default value of [`layoutType`](https://ej2.syncfusion.com/documentation/api/document-editor#layouttype) in the DOCX Editor component is [`Pages`](https://ej2.syncfusion.com/documentation/api/document-editor/layoutType).
+
+### Online demo
+
+Explore how to view Word documents in web layout using the JavaScript DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/web-layout.html).
 
 ## Ruler
 
-Using ruler we can refer to setting specific margins, tab stops, or indentations within a document to ensure consistent formatting in Document Editor.
+The ruler helps you set specific margins, tab stops, and indentations within a document to ensure consistent formatting in the DOCX Editor.
 
-The following example illustrates how to enable ruler in Document Editor
-
- 
+The following example illustrates how to enable the ruler in the DOCX Editor.
 
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
@@ -35,14 +37,18 @@ The following example illustrates how to enable ruler in Document Editor
 {% include code-snippet/document-editor/javascript-es6/ruler-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/ruler-cs1" %}
 
-## Navigation Pane
+### Online demo
 
-Using the heading navigation pane allows users to swiftly navigate documents by heading, enhancing their ability to move through the document efficiently.
+Explore how to use the ruler in the JavaScript DOCX Editor for working with Word documents in this [live demo](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/ruler.html).
 
-The following example illustrates how to enable heading navigation pane in Document Editor
+## Navigation pane
+
+The heading navigation pane allows users to quickly navigate documents by heading, making it easier to move through the document.
+
+The following example demonstrates how to enable the heading navigation pane in the DOCX Editor.
 
 ```ts
 let container: DocumentEditorContainer = new DocumentEditorContainer({ enableToolbar: true,height: '590px',
@@ -55,4 +61,16 @@ DocumentEditorContainer.Inject(Toolbar);
 container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 container.appendTo('#container');
 ```
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+
+### Online demo
+
+Explore how to navigate through headings in Word documents using the JavaScript DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/heading-navigation.html).
+
+## See also
+
+* [How to change the document view](./how-to/change-document-view)
+* [Insert page number and navigate to specific page](./how-to/insert-page-number-and-navigate-to-page)
+* [Enable ruler in document editor component](./how-to/enable-ruler-in-document-editor-component)
+* [Resize the document editor](./how-to/resize-document-editor)

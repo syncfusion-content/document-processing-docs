@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Import in Document Editor Component | Syncfusion
-description: Learn here all about import in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: Import in ASP.NET Core DOCX Editor | Syncfusion
+description: The Import feature in ASP.NET Core DOCX Editor enables users to load and edit documents from supported formats while preserving content structure.
 platform: document-processing
 control: Import
 documentation: ug
 ---
 
 
-# Import in Document Editor Component
+# Import in ASP.NET Core DOCX Editor
 
-In Document Editor, the documents are stored in its own format called **Syncfusion Document Text (SFDT)**.
+In [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor), the documents are stored in its own format called **Syncfusion Document Text (SFDT)**.
 
 
 {% tabs %}
@@ -37,9 +37,9 @@ In Document Editor, the documents are stored in its own format called **Syncfusi
 
 
 
-## Convert word documents into SFDT
+## Convert Word documents into SFDT
 
-You can convert word documents into SFDT format using the .NET Standard library [`Syncfusion.EJ2.WordEditor.AspNet.Core`](<https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Core/>) by the web API service implementation. This library helps to convert word documents (.dotx,.docx,.docm,.dot,.doc), rich text format documents (.rtf), and text documents (.txt) into SFDT format.
+You can convert Word documents into SFDT format using the .NET Standard library [`Syncfusion.EJ2.WordEditor.AspNet.Core`](<https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Core/>) by the web API service implementation. This library helps you convert Word documents (.dotx, .docx, .docm, .dot, .doc), rich text format documents (.rtf), and text documents (.txt) into SFDT format.
 
 
 {% tabs %}
@@ -52,7 +52,7 @@ You can convert word documents into SFDT format using the .NET Standard library 
 {% endtabs %}
 
 
-Here’s how to handle the server-side action for converting word document into SFDT.
+Here’s how to handle the server-side action for converting a Word document into SFDT.
 
 ```csharp
 [AcceptVerbs("Post")]
@@ -99,6 +99,32 @@ internal static FormatType GetFormatType(string format)
 }
 ```
 
+## Opening a document in asynchronous mode
+
+[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) supports asynchronous document loading, which can be enabled using the enable property available in the openAsyncSettings API.
+
+### Properties
+
+- **enable:** Enables or disables asynchronous document loading.
+- **initialPageLoadCount:** Number of pages to load initially when the document is opened.
+- **incrementalPageLoadCount:** Number of pages to load incrementally after initial pages load, during the asynchronous document-loading operation.
+
+The following example shows how to open the document asynchronously in DOCX Editor.
+
+{% tabs %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/document-editor/asp-net-core/document-editor-container/async-loading/tagHelper %}
+{% endhighlight %}
+{% highlight c# tabtitle="Async-loading.cs" %}
+{% endhighlight %}
+{% endtabs %}
+
+N> When asynchronous loading is enabled, the document initially opens in read-only mode, allowing users to view the first set of pages while the remaining pages load in the background. During this time, the document can be viewed but cannot be edited or saved. Once loading is complete, editing and saving become available.
+
 ## See Also
 
 * [Feature modules](../asp-net-core/feature-module)
+* [How to show and hide spinner while opening document in DocumentEditor](./how-to/show-hide-spinner)
+* [How to open default document](./how-to/open-default-document)
+* [How to open document in read only by default](./how-to/read-by-default)
+* [How to open document from URL](./how-to/open-document-by-address)

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Arrow annotation in JavaScript PDF Viewer | Syncfusion
-description: Learn to add, edit, and customize Arrow annotations in Syncfusion JavaScript PDF Viewer with UI and programmatic examples.
+title: Arrow Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Arrow annotations in the JavaScript (ES5) PDF Viewer to point at or connect areas of a PDF document.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Arrow annotation in JavaScript PDF Viewer
+# Arrow Annotation in JavaScript (ES5) PDF Viewer
 
 Arrow is a shape annotation used to point, direct attention, or indicate flow. Common use cases include callouts, direction markers, and connectors in technical reviews.
 
@@ -18,10 +18,11 @@ Arrow is a shape annotation used to point, direct attention, or indicate flow. C
 
 ### Add arrow annotation via UI
 
-Use the annotation toolbar to:
-- Click the **Edit Annotation** button in the PDF Viewer toolbar.
-- Open the **Shape Annotation** dropdown.
-- Choose **Arrow**, then draw on the page.
+Use the annotation toolbar to add an arrow annotation:
+
+1. Click the **Edit Annotation** button in the PDF Viewer toolbar.
+2. Open the **Shape Annotation** dropdown.
+3. Choose **Arrow**, then draw on the page.
 
 N> When in pan mode, selecting a shape annotation switches the viewer to text select mode.
 
@@ -171,7 +172,7 @@ You can select, move, and resize Arrow annotations directly in the viewer:
 
 The fill color, stroke color, thickness, and opacity of arrow shape annotations can be edited using the Edit Color, Edit Stroke Color, Edit Thickness, and Edit Opacity tools in the annotation toolbar.
 
-##### Editing fill color
+#### Editing fill color
 
 The fill color of the annotation can be edited using the color palette provided in the Edit Color tool.
 
@@ -335,11 +336,11 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Set properties while adding Individual Annotation
 
-Set properties for individual annotations before creating the control using `ArrowSettings`.
+Set properties for individual annotations while adding the annotation using `addAnnotation()`.
 
 N> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
 
-Refer to the following code snippet to set the default arrow settings.
+Refer to the following code snippet to set the properties while adding an arrow annotation.
 
 ```html
 <button id="arrow">Add Arrow</button>

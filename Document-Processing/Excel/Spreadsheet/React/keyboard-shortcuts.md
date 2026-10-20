@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Keyboard shortcuts in React Spreadsheet component | Syncfusion
-description: Learn here all about Keyboard shortcuts in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
-control: Keyboard shortcuts 
+title: Keyboard Shortcuts in React Spreadsheet | Syncfusion
+description: Learn about keyboard shortcuts in the Syncfusion React Spreadsheet component for efficient navigation and editing.
+control: Keyboard shortcuts
 platform: document-processing
 documentation: ug
 ---
 
-# Keyboard shortcuts in React Spreadsheet component
+# Keyboard shortcuts in React Spreadsheet
 
 The keyboard shortcuts supported in the spreadsheet are,
 
@@ -72,7 +72,7 @@ The keyboard shortcuts supported in the spreadsheet are,
 
 ## Note
 
-You can refer to our [React Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [React Spreadsheet example](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) to knows how to present and manipulate data.
+You can refer to our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) feature tour page for its groundbreaking feature representations.
 
 ## See Also
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Polygon annotation in TypeScript PDF Viewer | Syncfusion
-description: Learn to add, edit, and customize Polygon annotations in Syncfusion TypeScript PDF Viewer with UI and programmatic examples.
+title: Polygon Annotation in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Polygon annotations in the JavaScript (ES6) PDF Viewer to outline irregular shapes on a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Polygon annotation in TypeScript PDF Viewer
+# Polygon Annotation in JavaScript (ES6) PDF Viewer
 
 Polygon is a shape annotation used to outline irregular regions, highlight areas, or create custom callouts.
 
@@ -273,7 +273,7 @@ Refer to the following code snippet to set the default Polygon settings.
 {% highlight ts tabtitle="Standalone" %}
 import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PolygonSettings} from '@syncfusion/ej2-pdfviewer';
 
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
 
 const pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
@@ -287,16 +287,16 @@ document.getElementById('Polygon')?.addEventListener('click', function () {
         vertexPoints: [
             { x: 200, y: 800 }, { x: 242, y: 771 }, { x: 289, y: 799 }, { x: 278, y: 842 }, { x: 211, y: 842 }, { x: 200, y: 800 }
         ],
-        fillColor:'#ff000',
+        fillColor:'#FF0000',
         opacity: 0.9,
-        strokeColor:'##ff000'
+        strokeColor:'#FF0000'
     } as PolygonSettings);
 });
 {% endhighlight %}
 {% highlight ts tabtitle="Server-Backed" %}
 import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PolygonSettings} from '@syncfusion/ej2-pdfviewer';
 
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
 
 const pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
@@ -310,9 +310,9 @@ document.getElementById('Polygon')?.addEventListener('click', function () {
         vertexPoints: [
             { x: 200, y: 800 }, { x: 242, y: 771 }, { x: 289, y: 799 }, { x: 278, y: 842 }, { x: 211, y: 842 }, { x: 200, y: 800 }
         ],
-        fillColor:'#ff000',
+        fillColor:'#FF0000',
         opacity: 0.9,
-        strokeColor:'##ff000'
+        strokeColor:'#FF0000'
     } as PolygonSettings);
 });
 {% endhighlight %}

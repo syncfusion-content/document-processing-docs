@@ -1,26 +1,25 @@
 ---
-title: Working with Ink elements in .NET Word (DocIO) library | Syncfusion
-description: Learn how to create and edit Ink elements in a Word document using the .NET Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Ink elements in .NET Word library | Syncfusion
+description: Learn how to create and edit Ink elements in a Word document using the .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Working with Ink Elements
+# Ink elements in .NET Word library
 
-An Ink annotation is a freehand drawing or handwritten input composed of stroke points that conveys signatures, notes, or sketches directly on a page. You can add and modify Ink in Word documents using Syncfusion<sup>&reg;</sup> Word library (DocIO).
+An Ink annotation is a freehand drawing or handwritten input composed of stroke points that conveys signatures, notes, or sketches directly on a page. You can add and modify Ink in Word documents using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO).
 
 N> DocIO supports Ink only in DOCX format documents.
 
-You can insert Ink elements in the document by using the drawing tools available under the **Draw** tab in Word.
-![Process](Ink_images/Ink-tab.png)
-
 ## Create Ink
 
-The following code example illustrating how to create an Ink in a Word document. 
+The following code example illustrates how to create an Ink in a Word document. 
+
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/refs/heads/main/Ink/Create-ink/.NET/Create-ink/Program.cs" %}
 
 //Creates a new Word document.
 WordDocument document = new WordDocument();
@@ -125,16 +124,18 @@ document.Close()
 
 {% endtabs %}
 
-By running the above code, you will generate a a document with **Ink elements** as shown below.
+By running the above code, you will generate a document with **Ink elements** as shown below.
 ![Process](Ink_images/Create-Ink.png)
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Ink/Create-ink/.NET/).
 
 ## Create Ink with Multiple Traces 
 
-The following code example illustrating how to create an Ink with Multiple Traces (strokes) in a Word document. 
+The following code example illustrates how to create an Ink with Multiple Traces (strokes) in a Word document. 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/refs/heads/main/Ink/Create-ink-with-multipletraces/.NET/Create-ink-with-multipletraces/Program.cs" %}
 
 //Creates a new Word document.
 WordDocument document = new WordDocument();
@@ -247,10 +248,12 @@ document.Close()
 
 {% endtabs %}
 
-By running the above code, you will generate an **Ink with multiple trace points** as shown below.
+By running the above code, you will generate an **Ink with multiple traces** as shown below.
 ![Process](Ink_images/Ink-multipletraces.png)
 
-The following code example shows GetPoints method which is used to get trace points.
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Ink/Create-ink-with-multipletraces/.NET/).
+
+The following code example shows the `GetPoints` method, which is used to get trace points.
 
 {% tabs %}
 
@@ -369,7 +372,7 @@ End Function
 
 ## Modify Ink
 
-You can modify the appearance of Ink by changing the trace ink effects, color, size, points.  
+You can modify the appearance of Ink by changing the trace ink effects, color, size, and points.  
 
 ### Modify Ink Effect
 
@@ -377,7 +380,7 @@ The following code example demonstrates how to customize the Ink Effect.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/refs/heads/main/Ink/Modify-ink-effect/.NET/Modify-ink-effect/Program.cs" %}
 
 //Opens the template document
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
@@ -439,13 +442,15 @@ document.Close()
 By running the above code, you will generate a **Modified ink effect** as shown below.
 ![Process](Ink_images/Modify-ink-effect.png)
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Ink/Modify-ink-effect/.NET/).
+
 ### Modify Ink Color
 
 The following code example demonstrates how to customize the Ink Color. 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/refs/heads/main/Ink/Modify-ink-color/.NET/Modify_ink_color/Program.cs" %}
 
 //Opens the template document
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
@@ -509,13 +514,15 @@ document.Close()
 By running the above code, you will generate a **Modified ink color** as shown below.
 ![Process](Ink_images/Modify-ink-color.png)
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Ink/Modify-ink-color/.NET/).
+
 ### Modify Ink Thickness
 
 The following code example demonstrates how to customize the Ink thickness.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/refs/heads/main/Ink/Modify-ink-thickness/.NET/Modify-ink-thickness/Program.cs" %}
 
 //Opens the template document
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
@@ -546,10 +553,10 @@ WSection section = document.Sections[0];
 WInk ink = section.Paragraphs[0].ChildEntities[0] as WInk;
 // Gets the ink trace from the ink object.
 IOfficeInkTrace inkTrace = ink.Traces[0];
-// Modify the ink size (thickness) to 1 point.
+//Modify the ink size (thickness) to 1 point.
 inkTrace.Brush.Size = new SizeF(1f, 1f);
 //Saves and closes the Word document instance
-document.Save("Sample.docx");
+document.Save("Result.docx");
 //Closes the document
 document.Close();
 
@@ -568,7 +575,7 @@ Dim inkTrace As IOfficeInkTrace = ink.Traces(0)
 ' Modify the ink size (thickness) to 1 point.
 inkTrace.Brush.Size = New SizeF(1F, 1F)
 'Saves and closes the Word document instance
-document.Save("Sample.docx")
+document.Save("Result.docx")
 'Closes the document
 document.Close()
 
@@ -579,13 +586,15 @@ document.Close()
 By running the above code, you will generate a **Modified ink thickness** as shown below.
 ![Process](Ink_images/Modify-ink-thickness.png)
 
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Ink/Modify-ink-thickness/.NET/).
+
 ### Modify Ink Points 
 
 The following code example demonstrates how to customize the Ink Points. 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/refs/heads/main/Ink/Modify-ink-points/.NET/Modify-ink-Points/Program.cs" %}
 
 //Opens the template document
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
@@ -619,7 +628,7 @@ IOfficeInkTrace inkTrace = ink.Traces[0];
 // Close the ink stroke by setting the last point to be the same as the first point
 inkTrace.Points[inkTrace.Points.Length - 1] = new PointF(inkTrace.Points[0].X, inkTrace.Points[0].Y);
 //Saves and closes the Word document instance
-document.Save("Sample.docx");
+document.Save("Result.docx");
 //Closes the document
 document.Close();
 
@@ -638,7 +647,7 @@ Dim inkTrace As IOfficeInkTrace = ink.Traces(0)
 ' Close the ink stroke by setting the last point to be the same as the first point
 inkTrace.Points(inkTrace.Points.Length - 1) = New PointF(inkTrace.Points(0).X, inkTrace.Points(0).Y)
 'Saves and closes the Word document instance
-document.Save("Sample.docx")
+document.Save("Result.docx")
 'Closes the document
 document.Close()
 
@@ -646,8 +655,10 @@ document.Close()
 
 {% endtabs %}
 
-By running the above code,  you will generate **modified ink points** as shown below.
+By running the above code, you will generate **modified ink points** as shown below.
 ![Process](Ink_images/Modify-ink-points.png)
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Ink/Modify-ink-points/.NET/).
 
 ## Remove Ink
 
@@ -655,7 +666,7 @@ You can remove ink by iterating through Ink objects or specifying an index. The 
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/refs/heads/main/Ink/Remove-ink/.NET/Remove_ink/Program.cs" %}
 
 //Opens the template document
 FileStream fileStreamPath = new FileStream("Template.docx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
@@ -697,7 +708,7 @@ for (int i = 0; i < paragraph.ChildEntities.Count; i++)
     }
 }
 //Saves and closes the Word document instance
-document.Save("Sample.docx");
+document.Save("Result.docx");
 //Closes the document
 document.Close();
 
@@ -720,20 +731,19 @@ While i < paragraph.ChildEntities.Count
     i += 1
 End While
 'Saves and closes the Word document instance
-document.Save("Sample.docx")
-'Closes the document
-document.Close()
-
+document.Save("Result.docx")
 {% endhighlight %}
 
 {% endtabs %}
 
 By running the above code, you will generate a **Remove Ink** as shown below.
 ![Process](Ink_images/Remove-ink.png)
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Ink/Remove-ink/.NET/).
 																																						  
 ## Limitations
 
-The .NET Word Library (DocIO) has the following limitations when creating Ink programmatically or processing Ink from an existing Word document.
+The [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) has the following limitations when creating Ink programmatically or processing Ink from an existing Word document.
 
 **Document Processing Functionalities**
 
@@ -756,5 +766,10 @@ During Word-to-PDF and Word-to-Image conversions, Syncfusion Word Library uses f
 * [What is Ink Trace?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#what-is-ink-trace)
 * [How Ink Width and Height Work](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#how-ink-width-and-height-work)
 * [How Trace Points Are Calculated?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#how-trace-points-are-calculated)
-* [Example: Triangle Ink Trace Points](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#example:-triangle-ink-trace-points)
+* [Example: Triangle Ink Trace Points](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#example-triangle-ink-trace-points)
 * [How to Set Stroke Thickness?](https://help.syncfusion.com/document-processing/word/word-library/net/faqs/paragraph-and-paragraph-items-faqs#how-to-set-stroke-thickness)
+
+## Online Demo
+
+* Explore how to create a Word document with Ink using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/createink#/tailwind). 
+* Explore how to edit a Word document with Ink using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/editink#/tailwind).

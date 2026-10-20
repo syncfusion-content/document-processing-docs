@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Create a object structure in React Spreadsheet component | Syncfusion
-description: Learn here all about Create a object structure in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: How to Create an Object Structure in React Spreadsheet | Syncfusion
+description: Learn how to create an object structure in the Syncfusion React Spreadsheet component for organizing spreadsheet data.
 control: Create a object structure 
 platform: document-processing
 documentation: ug
 ---
 
-# Create a object structure in React Spreadsheet component
+# How to Create an Object Structure in React Spreadsheet
 
-This topic guides you to construct a JSON structure that can be passed to the [`openFromJson`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/#openfromjson) method to render the spreadsheet. The JSON structure is an object with the key as `Workbook` and the [`properties`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#properties) of the spreadsheet as value.
+This topic guides you to construct a JSON structure that can be passed to the [`openFromJson`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#openfromjson) method to render the spreadsheet. The JSON structure is an object with the key as `Workbook` and the [`properties`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#properties) of the spreadsheet as the value.
 
 ```js
 { Workbook: {} }
@@ -34,10 +34,10 @@ The following table defines each property of the `Sheet`.
 | showHeaders | boolean | Specifies to show or hide column and row headers in the sheet. |
 | showGridLines | boolean | Specifies to show or hide gridlines in the sheet. |
 | isProtected | boolean | Specifies to protect the cells in the sheet. |
-| state | [`SheetState`](./worksheet/#sheet-visibility) | Specifies the sheet visibility state. There must be at least one visible sheet in Spreadsheet. |
+| state | `SheetState` | Specifies the sheet visibility state. There must be at least one visible sheet in Spreadsheet. |
 | columns | `Column[]` | Contains a list of column properties |
 | rows | `Row[]` | Contains a list of row properties |
-| protectSettings | [`ProtectSettings`](./protect-sheet/#protect-sheet) | Configures protect and its options. |
+| protectSettings | `ProtectSettings` | Configures protect and its options. |
 | conditionalFormats | `ConditionalFormat[]` | Specifies the conditional formatting for the sheet. |
 
 The following table defines each property of the `Column`.

@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Free text annotation in EJ2 ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn about free text annotations in the Syncfusion ASP.NET MVC PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
+title: Free Text Annotation in ASP.NET MVC PDF Viewer | Syncfusion
+description: Enable, add, customize, and manage Free Text annotations in the ASP.NET MVC PDF Viewer for inline notes and labels on a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
-# Free text annotation in ASP.NET MVC PDF Viewer control
+# Free Text Annotation in ASP.NET MVC PDF Viewer
 
 The PDF Viewer control provides options to add, edit, and delete free text annotations.
 
@@ -62,7 +63,7 @@ The following example switches to free text annotation mode using a button click
 
 ## Add a free text annotation programmatically to the PDF document
 
-The PDF Viewer library allows adding a free text annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#annotation) method.
+The PDF Viewer library allows adding a free text annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#addannotation) method.
 
 Here is an example of adding a free text annotation programmatically using addAnnotation():
 

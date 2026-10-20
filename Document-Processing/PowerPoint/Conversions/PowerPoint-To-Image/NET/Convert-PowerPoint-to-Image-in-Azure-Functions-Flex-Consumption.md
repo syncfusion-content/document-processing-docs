@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert PPTX to Image in Azure Functions (Flex Consumption)
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) used to create, read, edit and **convert PowerPoint documents** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint Presentation to image in Azure Functions deployed on Flex (Consumption) plan**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and **convert PowerPoint documents** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint Presentation to image in Azure Functions deployed on Flex (Consumption) plan**.
 
 ## Steps to convert a PowerPoint Presentation to Image in Azure Functions (Flex Consumption)
 
@@ -21,7 +21,7 @@ Step 2: Create a project name and select the location.
 Step 3: Select function worker as **.NET 8.0 (Long Term Support)** (isolated worker) and target Flex/Consumption hosting suitable for isolated worker.
 ![Select function worker](Azure-Images/Functions-Flex-Consumption/Additional_Information_PowerPoint_Presentation_to_Image.png)
 
-Step 4: Install the [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) and [SkiaSharp.NativeAssets.Linux.NoDependencies v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/3.119.1) NuGet packages as references to your project from [NuGet.org](https://www.nuget.org/).
+Step 4: Install the [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) and [SkiaSharp.NativeAssets.Linux.NoDependencies v4.150.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux.NoDependencies/4.150.1) NuGet packages as references to your project from [NuGet.org](https://www.nuget.org/).
 ![Install NuGet packages](Azure-Images/Functions-Flex-Consumption/Nuget_Package_PowerPoint_Presentation_to_Image.png)
 ![Install NuGet packages](Azure-Images/Functions-Flex-Consumption/Nuget_Package_SkiaSharp_Native_Linux_NoDependencies.png)
 
@@ -32,6 +32,10 @@ Step 5: Include the following namespaces in the **Function1.cs** file.
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Azure.Functions.Worker;
+using Microsoft.Extensions.Logging;
 using Syncfusion.Presentation;
 using Syncfusion.PresentationRenderer;
 using SkiaSharp;
@@ -94,7 +98,7 @@ public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "
         }
     }
     /// <summary>
-    /// Event handler for font substitution during PDF conversion
+    /// Event handler for font substitution during Image conversion
     /// </summary>
     /// <param name="sender"></param>
     /// <param name="args"></param>
@@ -113,7 +117,6 @@ public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Function, "
             args.AlternateFontStream = File.OpenRead(Path.Combine(fontsFolder, "Times New Roman.ttf"));
         }
     }
-	
 {% endhighlight %}
 {% endtabs %}
 
@@ -138,8 +141,8 @@ Step 12: After creating app service then click **Finish** button.
 Step 13: Click the **Publish** button.
 ![Click Publish Button](Azure-Images/Functions-Flex-Consumption/Before_Publish_PowerPoint_Presentation_to_Image.png)
 
-Step 14: Publish has been succeed.
-![Publish succeeded](Azure-Images/Functions-Flex-Consumption/After_Publish_PowerPoint_Presentation_to_Image.png)
+Step 14: Publish has succeeded.
+![Publish has succeeded](Azure-Images/Functions-Flex-Consumption/After_Publish_PowerPoint_Presentation_to_Image.png)
 
 Step 15: Now, go to Azure portal and select the App Services. After running the service, click **Get function URL by copying it**. Then, paste it in the below client sample (which will request the Azure Functions, to perform **PowerPoint Presentation to image conversion** using the template PowerPoint document). You will get the output **image** as follows.
 
@@ -194,6 +197,6 @@ static async Task Main()
 
 From GitHub, you can download the [console application](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/Azure/Azure_Functions/Console_App_Flex_Consumption) and [Azure Functions Flex Consumption](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-Image-conversion/Convert-PowerPoint-presentation-to-Image/Azure/Azure_Functions/Azure_Function_Flex_Consumption).
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page. 
 
 An online sample link to [convert PowerPoint Presentation to image](https://document.syncfusion.com/demos/powerpoint/pptxtoimage#/tailwind) in ASP.NET Core.
