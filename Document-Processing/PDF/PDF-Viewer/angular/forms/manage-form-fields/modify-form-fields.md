@@ -657,6 +657,85 @@ export class AppComponent {
 {% endhighlight %}
 {% endtabs %}
 
+### DateTime Picker
+- UI: Field type (Date / Time), display format string, value, font, colors, border, alignment, required/read-only, print visibility.
+![DateTime Picker properties panel showing format and field type](../../../javascript-es6/images/ui-datetime-edit.png)
+- API: [updateFormField()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#updateformfields) for value, format script, typography, colors, borders.
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+import { Component, ViewChild } from '@angular/core';
+import {
+  ToolbarService,
+  MagnificationService,
+  NavigationService,
+  AnnotationService,
+  TextSelectionService,
+  TextSearchService,
+  FormFieldsService,
+  FormDesignerService,
+  PdfViewerModule,
+  PdfViewerComponent,
+} from '@syncfusion/ej2-angular-pdfviewer';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [PdfViewerModule],
+  template: `
+    <div class="content-wrapper">
+      <button (click)="editDateTime()">Edit DateTime</button>
+      <ejs-pdfviewer #pdfViewer id="pdfViewer"
+        [resourceUrl]="resourceUrl"
+        [documentPath]="document"
+        style="height: 640px; display: block;">
+      </ejs-pdfviewer>
+    </div>
+  `,
+  providers: [
+    ToolbarService,
+    MagnificationService,
+    NavigationService,
+    AnnotationService,
+    TextSelectionService,
+    TextSearchService,
+    FormFieldsService,
+    FormDesignerService,
+  ],
+})
+export class AppComponent {
+  public document: string = 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf';
+  public resourceUrl: string = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+
+  @ViewChild('pdfViewer') public pdfviewer!: PdfViewerComponent;
+
+  editDateTime(): void {
+    const fields = this.pdfviewer.retrieveFormFields();
+    const dateField = fields.find((f: any) => f.name === 'DateField1');
+    if (dateField) {
+      this.pdfviewer.formDesignerModule.updateFormField(dateField, {
+        value: '10/19/2026',
+        isDateField: true,
+        isReadOnly: false,
+        isRequired: true,
+        isPrint: true,
+        fontFamily: 'Helvetica',
+        fontSize: 10,
+        color: 'black',
+        backgroundColor: '#daeaf7ff',
+        borderColor: '#303030',
+        thickness: 1,
+        alignment: 'Left',
+        tooltip: 'Select a date',
+        actions: {
+          format: { script: 'AFDate_FormatEx("m/d/yy")' }
+        }
+      } as any);
+    }
+  }
+}
+{% endhighlight %}
+{% endtabs %}
+
 [View Sample on GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples)
 
 ## See also

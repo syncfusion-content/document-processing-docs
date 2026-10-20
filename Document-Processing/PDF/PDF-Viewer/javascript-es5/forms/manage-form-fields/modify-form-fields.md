@@ -280,6 +280,43 @@ document.getElementById('editInitial').addEventListener('click', function () {
 });
 ```
 
+### DateTime Picker
+- UI: Field type (Date / Time), display format string, value, font, colors, border, alignment, required/read-only, print visibility.
+![DateTime Picker properties panel showing format and field type](../../../javascript-es6/images/ui-datetime-edit.png)
+- API: [`updateFormField()`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) for value, format script, typography, colors, borders.
+```html
+<button id="editDateTime">Edit DateTime</button>
+```
+```js
+document.getElementById('editDateTime').addEventListener('click', function () {
+  // Retrieve form fields collection
+  var fields = pdfviewer.retrieveFormFields();
+  // Find the DateTime field by name (Here field name is DateField1)
+  var dateField = (fields || []).find(function (f) { return f && f.name === 'DateField1'; });
+  if (dateField) {
+    // Update DateTime field properties
+    pdfviewer.formDesignerModule.updateFormField(dateField, {
+      value: '10/19/2026',
+      isDateField: true,
+      isReadOnly: false,
+      isRequired: true,
+      isPrint: true,
+      fontFamily: 'Helvetica',
+      fontSize: 10,
+      color: 'black',
+      backgroundColor: '#daeaf7ff',
+      borderColor: '#303030',
+      thickness: 1,
+      alignment: 'Left',
+      tooltip: 'Select a date',
+      actions: {
+        format: { script: 'AFDate_FormatEx("m/d/yy")' }
+      }
+    });
+  }
+});
+```
+
 [View Sample on GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples)
 
 ## See also

@@ -386,6 +386,55 @@ Use [updateFormField()](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.
 {% endhighlight %}
 {% endtabs %}
 
+### DateTime Picker
+- UI: Field type (Date / Time), display format string, value, font, colors, border, alignment, required/read-only, print visibility.
+![DateTime Picker properties panel showing format and field type](../../../javascript-es6/images/ui-datetime-edit.png)
+- API: [updateFormField()](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#updateFormField) for value, format script, typography, colors, borders.
+
+{% tabs %}
+{% highlight cshtml tabtitle="Standalone" %}
+
+    <div style="width:100%;height:120px">
+        <button id="editDateTime">Edit DateTime</button>
+    </div>
+
+    <div style="width:100%;height:600px">
+        @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf").Render()
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
+            document.getElementById('editDateTime').addEventListener('click', function () {
+                var fields = pdfviewer.retrieveFormFields();
+                var dateField = fields.find(function (f) { return f.name === 'DateField1'; });
+                if (dateField) {
+                    pdfviewer.formDesignerModule.updateFormField(dateField, {
+                        value: '10/19/2026',
+                        isDateField: true,
+                        isReadOnly: false,
+                        isRequired: true,
+                        isPrint: true,
+                        fontFamily: 'Helvetica',
+                        fontSize: 10,
+                        color: 'black',
+                        backgroundColor: '#daeaf7ff',
+                        borderColor: '#303030',
+                        thickness: 1,
+                        alignment: 'Left',
+                        tooltip: 'Select a date',
+                        actions: {
+                            format: { script: 'AFDate_FormatEx("m/d/yy")' }
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+
+{% endhighlight %}
+{% endtabs %}
+
 [View Sample on GitHub](https://github.com/SyncfusionExamples/mvc-pdf-viewer-examples)
 
 ## See also

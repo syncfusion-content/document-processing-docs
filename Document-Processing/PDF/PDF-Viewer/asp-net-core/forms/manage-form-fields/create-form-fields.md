@@ -325,6 +325,110 @@ document.addEventListener('DOMContentLoaded', function () {
 {% endhighlight %}
 {% endtabs %}
 
+### DateTime Picker
+**Add via Toolbar (UI)**
+- Select **DateTime Picker** → click on a PDF page to place the field → configure the field type (Date or Time) and format string in the **Properties** panel.
+![DateTime Picker Properties Panel](../../../javascript-es6/images/ui-datetime-edit.png)
+
+**Manual Entry and Picker**
+The field accepts values either by direct typing or through the integrated picker UI:
+- **Date Field** – Enter a date manually, or open the calendar dropdown to pick a date.
+- **Time Field** – Enter a time manually, or open the clock dropdown to pick a time.
+
+**Strict Format Validation**
+Invalid values are rejected and a validation popup is displayed. The invalid value is not applied to the field.
+
+For example, with the format `m/d/yy`:
+
+| Input | Result |
+|---|---|
+| `10/19/2026` | Accepted |
+| `19/10/26` | Rejected |
+| `not-a-date` | Rejected |
+
+**Date / Time Toggle and Format Editing**
+The **Format** tab in the Properties panel lets you:
+- Switch between Date Picker and Time Picker modes.
+- Edit the display format string.
+- Preview formatting changes before saving.
+
+**Common Formats**
+
+| Format String | Example Output |
+|---|---|
+| `m/d/yy` | `10/19/26` |
+| `mm/dd/yyyy` | `10/19/2026` |
+| `HH:MM` | `14:30` |
+| `HH:MM:ss` | `14:30:45` |
+
+**Form Designer Appearance**
+Placed DateTime pickers have a distinct visual appearance in Form Designer mode, including:
+- Colored background
+- Visible border
+- Field-type indicator
+
+**Add Programmatically (API)**
+{% tabs %}
+{% highlight cshtml tabtitle="Standalone" %}
+<div class="text-center">
+    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+    </ejs-pdfviewer>
+</div>
+
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function () {
+  var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
+  pdfviewer.documentLoad = function () {
+    // Add Date field using addFormField Method
+    pdfviewer.formDesignerModule.addFormField('Textbox', {
+      name: 'DateField1',
+      bounds: { X: 146, Y: 200, Width: 200, Height: 24 },
+      pageNumber: 1,
+      isDateField: true,
+      fontSize: 10,
+      color: 'black',
+      fontFamily: 'Helvetica',
+      backgroundColor: '#daeaf7ff',
+      borderColor: '#303030',
+      alignment: 'Left',
+      isReadOnly: false,
+      visibility: 'visible',
+      isRequired: false,
+      isPrint: true,
+      tooltip: '',
+      thickness: 1,
+      actions: {
+        format: { script: 'AFDate_FormatEx("m/d/yy")' }
+      }
+    });
+    // Add Time field using addFormField Method
+    pdfviewer.formDesignerModule.addFormField('Textbox', {
+      name: 'TimeField1',
+      bounds: { X: 146, Y: 250, Width: 200, Height: 24 },
+      pageNumber: 1,
+      isDateField: true,
+      fontSize: 10,
+      color: 'black',
+      fontFamily: 'Helvetica',
+      backgroundColor: '#daeaf7ff',
+      borderColor: '#303030',
+      alignment: 'Left',
+      isReadOnly: false,
+      visibility: 'visible',
+      isRequired: false,
+      isPrint: true,
+      tooltip: '',
+      thickness: 1,
+      actions: {
+        format: { script: 'AFTime_FormatEx("HH:MM")' }
+      }
+    });
+  };
+});
+</script>
+{% endhighlight %}
+{% endtabs %}
+
 ## Add Fields Dynamically with setFormFieldMode
 
 Use **setFormFieldMode()** to add fields on the fly based on user actions.

@@ -346,6 +346,50 @@ document.addEventListener('DOMContentLoaded', function () {
 {% endhighlight %}
 {% endtabs %}
 
+### DateTime Picker
+- UI: Field type (Date / Time), display format string, value, font, colors, border, alignment, required/read-only, print visibility.
+![DateTime Picker properties panel showing format and field type](../../../javascript-es6/images/ui-datetime-edit.png)
+- API: [updateFormField()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#updateformfields) for value, format script, typography, colors, borders.
+{% tabs %}
+{% highlight cshtml tabtitle="Standalone" %}
+<button id="editDateTime">Edit DateTime</button>
+<div class="text-center">
+    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+    </ejs-pdfviewer>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function () {
+  var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
+  document.getElementById('editDateTime').addEventListener('click', function () {
+    if (!pdfviewer || !pdfviewer.formDesignerModule) { console.warn('formDesignerModule not ready'); return; }
+    var fields = pdfviewer.retrieveFormFields() || [];
+    var dateField = fields.find(function (f) { return f.name === 'DateField1'; });
+    if (dateField) {
+      pdfviewer.formDesignerModule.updateFormField(dateField, {
+        value: '10/19/2026',
+        isDateField: true,
+        isReadOnly: false,
+        isRequired: true,
+        isPrint: true,
+        fontFamily: 'Helvetica',
+        fontSize: 10,
+        color: 'black',
+        backgroundColor: '#daeaf7ff',
+        borderColor: '#303030',
+        thickness: 1,
+        alignment: 'Left',
+        tooltip: 'Select a date',
+        actions: {
+          format: { script: 'AFDate_FormatEx("m/d/yy")' }
+        }
+      });
+    }
+  });
+});
+</script>
+{% endhighlight %}
+{% endtabs %}
+
 [View Sample on GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples)
 
 ## See also

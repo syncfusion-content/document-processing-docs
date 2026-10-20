@@ -564,6 +564,74 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
+### DateTime Picker
+- UI: Field type (Date / Time), display format string, value, font, colors, border, alignment, required/read-only, print visibility.
+![DateTime Picker properties panel showing format and field type](../../../javascript-es6/images/ui-datetime-edit.png)
+- API: [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) for value, format script, typography, colors, borders.
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+<template>
+  <div>
+    <button @click="editDateTime">Edit DateTime</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" style="height:640px" />
+  </div>
+</template>
+
+<script>
+import {
+  PdfViewerComponent,
+  Toolbar,
+  Magnification,
+  Navigation,
+  Annotation,
+  TextSelection,
+  TextSearch,
+  FormFields,
+  FormDesigner,
+  PageOrganizer,
+} from '@syncfusion/ej2-vue-pdfviewer';
+
+export default {
+  components: { 'ejs-pdfviewer': PdfViewerComponent },
+  provide: { PdfViewer: [Toolbar, Magnification, Navigation, Annotation, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer] },
+  data() {
+    return {
+      documentPath: 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+    };
+  },
+  methods: {
+    editDateTime() {
+      const pdfviewer = this.$refs.pdfviewer.ej2Instances;
+      const fields = pdfviewer.retrieveFormFields();
+      const dateField = fields.find(f => f.name === 'DateField1');
+      if (dateField) {
+        pdfviewer.formDesignerModule.updateFormField(dateField, {
+          value: '10/19/2026',
+          isDateField: true,
+          isReadOnly: false,
+          isRequired: true,
+          isPrint: true,
+          fontFamily: 'Helvetica',
+          fontSize: 10,
+          color: 'black',
+          backgroundColor: '#daeaf7ff',
+          borderColor: '#303030',
+          thickness: 1,
+          alignment: 'Left',
+          tooltip: 'Select a date',
+          actions: {
+            format: { script: 'AFDate_FormatEx("m/d/yy")' }
+          }
+        });
+      }
+    }
+  }
+};
+</script>
+{% endhighlight %}
+{% endtabs %}
+
 [View Sample on GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples)
 
 ## See Also
