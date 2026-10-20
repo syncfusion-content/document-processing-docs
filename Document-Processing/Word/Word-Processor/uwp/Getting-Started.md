@@ -4,6 +4,7 @@ description: Learn here about getting started with Syncfusion UWP RichTextBox (S
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: getting-started
 ---
 # Getting Started with UWP RichTextBox (SfRichTextBoxAdv)

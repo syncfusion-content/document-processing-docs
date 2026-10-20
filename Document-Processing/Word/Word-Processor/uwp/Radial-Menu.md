@@ -4,6 +4,7 @@ description: Learn here all about Radial Menu support in Syncfusion UWP RichText
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: radial-menu
 ---
 # Radial Menu in UWP RichTextBox (SfRichTextBoxAdv)

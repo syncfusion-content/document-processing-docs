@@ -4,6 +4,7 @@ description: Learn here all about Printing Contents support in Syncfusion UWP Ri
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: printing
 ---
 # Printing Contents in UWP RichTextBox (SfRichTextBoxAdv)

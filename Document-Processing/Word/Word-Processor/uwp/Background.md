@@ -4,6 +4,7 @@ description: Learn here all about Background support in Syncfusion UWP RichTextB
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: background
 ---
 

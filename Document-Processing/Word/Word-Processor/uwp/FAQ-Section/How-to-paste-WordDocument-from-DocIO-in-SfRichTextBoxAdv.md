@@ -4,6 +4,7 @@ description: Learn here all about how to paste WordDocument from .NET Word libra
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: paste-WordDocument-from-DocIO
 ---
 

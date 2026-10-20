@@ -4,6 +4,7 @@ description: Learn here all about Text Prediction support in Syncfusion UWP Rich
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: virtualization
 ---
 # Text Prediction in UWP RichTextBox (SfRichTextBoxAdv)

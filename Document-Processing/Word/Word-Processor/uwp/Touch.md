@@ -4,6 +4,7 @@ description: Learn here all about Touch support in Syncfusion UWP RichTextBox (S
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: Touch
 ---
 # Touch in UWP RichTextBox (SfRichTextBoxAdv)

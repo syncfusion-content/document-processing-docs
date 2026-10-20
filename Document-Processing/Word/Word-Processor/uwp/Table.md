@@ -4,6 +4,7 @@ description: Learn here all about Table support in Syncfusion UWP RichTextBox (S
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: table
 ---
 # Table in UWP RichTextBox (SfRichTextBoxAdv)

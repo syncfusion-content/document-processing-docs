@@ -4,6 +4,7 @@ description: Learn here all about Automatic Suggestion support in Syncfusion UWP
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: automatic-suggestion, @mentions
 ---
 # Automatic Suggestion in UWP RichTextBox (SfRichTextBoxAdv)

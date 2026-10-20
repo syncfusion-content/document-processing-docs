@@ -4,6 +4,7 @@ description: Learn here all about Commands support in Syncfusion UWP RichTextBox
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: commands
 ---
 # Commands in UWP RichTextBox (SfRichTextBoxAdv)
