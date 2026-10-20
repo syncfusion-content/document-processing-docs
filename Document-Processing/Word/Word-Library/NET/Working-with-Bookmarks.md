@@ -1166,7 +1166,7 @@ If normal content follows the bookmark end, the bookmark end must not be moved a
 The following code example shows how to preserve bookmark ends after a paragraph mark, table-cell mark, table-row mark, and table mark in a Word document.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Bookmarks/Control-bookmark-end-position/.NET/Control-bookmark-end-position/Program.cs" %}
 //Creates an instance of WordDocument class (Empty Word Document)
 WordDocument document = new WordDocument();
 //Adds a section to the document
