@@ -5,7 +5,7 @@ description: Learn here about how to install Syncfusion Document Processing Mac 
 platform: document-SDK
 control: Installation and Deployment
 documentation: ug
-appliesto: Document SDK, PDF Viewer SDK, DOCX Editor SDK, Spreadsheet Editor SDK
+appliesto: Document SDK
 ---
 
 # How to install Document Solutions Mac installer
