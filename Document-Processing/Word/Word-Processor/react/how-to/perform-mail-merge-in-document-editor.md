@@ -5,6 +5,7 @@ description: Perform mail merge in Syncfusion® React DOCX Editor using the Word
 control: Perform mail merge
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 
