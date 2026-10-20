@@ -4,6 +4,7 @@ description: Convert pixel values to points with scaling percentage using the Sy
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to convert pixels to points in .NET Excel Library

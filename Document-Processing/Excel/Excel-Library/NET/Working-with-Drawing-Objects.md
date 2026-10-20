@@ -4,6 +4,7 @@ description: Drawing objects section describes how Excel Library adds worksheet 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Drawing Objects in .NET Excel Library

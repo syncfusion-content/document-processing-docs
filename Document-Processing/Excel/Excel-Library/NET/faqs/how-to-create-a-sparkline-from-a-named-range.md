@@ -4,6 +4,7 @@ description: Create sparklines from named ranges in Excel worksheets using the S
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to create sparklines from named ranges in .NET Excel Library

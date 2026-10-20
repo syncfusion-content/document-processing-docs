@@ -5,6 +5,7 @@ description: Syncfusion .NET Excel Library supports creating Excel files from sc
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 keywords: c#, vb.net, excel, create excel, new excel , open excel, read excel, edit excel, write excel, update excel, syncfusion, xlsio
 ---
 

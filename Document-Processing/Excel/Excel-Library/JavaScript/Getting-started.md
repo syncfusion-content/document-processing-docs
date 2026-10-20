@@ -5,6 +5,7 @@ description: Learn how to create, edit, and download Excel workbooks in the brow
 control: Excel
 platform: document-processing
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Getting Started with JavaScript Excel

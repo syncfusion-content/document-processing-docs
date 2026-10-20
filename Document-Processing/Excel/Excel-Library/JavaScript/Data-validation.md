@@ -4,6 +4,7 @@ description: Restrict cell input with data validation rules, operators, and erro
 platform: document-processing
 control: Excel
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Data Validation in JavaScript Excel

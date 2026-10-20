@@ -4,6 +4,7 @@ description: Find values with matching case in a specific Excel worksheet column
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to find case-sensitive values in .NET Excel Library

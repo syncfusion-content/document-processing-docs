@@ -4,6 +4,7 @@ description: Apply TimePeriod conditional formatting to Excel documents using th
 platform: document-processing 
 control: XlsIO 
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to apply TimePeriod formatting in .NET Excel Library

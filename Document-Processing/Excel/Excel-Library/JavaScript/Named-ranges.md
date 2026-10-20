@@ -4,6 +4,7 @@ description: Add, look up, update, and remove defined names (named ranges) with 
 platform: document-processing
 control: Excel
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Named Ranges in JavaScript Excel

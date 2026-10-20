@@ -5,6 +5,7 @@ description: The Flutter Excel Library lets users process and format text values
 platform: document-processing
 control: Excel
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Text Function Formulas in Flutter Excel Library

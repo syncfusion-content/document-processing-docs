@@ -4,6 +4,7 @@ description: Apply fonts, fills, borders, alignment, number formats, and rich te
 platform: document-processing
 control: Excel
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Cell Formatting in JavaScript Excel

@@ -4,6 +4,7 @@ description: Macro operations section describes how to create, edit, remove, and
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Macros in .NET Excel Library
 

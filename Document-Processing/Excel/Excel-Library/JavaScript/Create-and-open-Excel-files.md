@@ -4,6 +4,7 @@ description: Create, open, and save Excel workbooks with the Syncfusion JavaScri
 platform: document-processing
 control: Excel
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Create and Open Excel Files in JavaScript

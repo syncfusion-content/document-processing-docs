@@ -4,6 +4,7 @@ description: Read and write cell values, dates, errors, and clear cells with the
 platform: document-processing
 control: Excel
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Working with Cells in JavaScript Excel

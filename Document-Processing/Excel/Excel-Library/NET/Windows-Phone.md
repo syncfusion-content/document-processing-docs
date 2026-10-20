@@ -4,6 +4,7 @@ description: Windows Phone load and save operations page describes how Excel doc
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Deploying .NET Excel Library in Windows Phone
 
