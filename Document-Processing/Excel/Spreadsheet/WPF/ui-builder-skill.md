@@ -5,8 +5,8 @@ description: Generate production-ready Spreadsheet controls from natural languag
 control: SfSpreadsheet
 platform: document-processing
 documentation: ug
-appliesto: Spreadsheet Editor SDK, UI Component Suite
 keywords: WPF UI Builder, Skills, AI Assistants, Spreadsheet SDK, Agent Skills
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # UI Builder Skill in WPF Spreadsheet 
