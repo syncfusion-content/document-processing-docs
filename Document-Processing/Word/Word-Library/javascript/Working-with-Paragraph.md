@@ -4,6 +4,7 @@ description: Learn how to work with paragraphs, paragraph formatting, text runs,
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Paragraphs in JavaScript Word Library

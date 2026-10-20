@@ -4,6 +4,7 @@ description: Learn how to add, format, and rotate shapes in a Word document usin
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Working with Shapes in JavaScript Word Library
