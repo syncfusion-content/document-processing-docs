@@ -5,6 +5,7 @@ description: The PDF printing feature in PdfViewerControl enables users to print
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # Printing PDF in WinForms PDF Viewer

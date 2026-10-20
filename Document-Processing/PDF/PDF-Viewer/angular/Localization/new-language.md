@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # Set a New Language in Angular PDF Viewer

@@ -5,6 +5,7 @@ description: Apply redactions in the React PDF Viewer on mobile devices, with a 
 platform: document-processing
 control: PdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # Redaction in Mobile View in React PDF Viewer

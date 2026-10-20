@@ -4,6 +4,7 @@ description: Learn how to protect PDF documents with encryption and set permissi
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Security in .NET PDF Library
 

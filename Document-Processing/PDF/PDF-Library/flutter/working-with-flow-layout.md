@@ -5,6 +5,7 @@ description: Learn how to draw images, paragraphs, headers, and tables using flo
 platform: document-processing
 control: PDF
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Flow Layout in Flutter PDF

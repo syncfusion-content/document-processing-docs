@@ -5,6 +5,7 @@ description: Learn how to print large PDF documents in the Blazor PDF Viewer usi
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # How to Print large page document in PDF Viewer

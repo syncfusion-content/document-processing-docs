@@ -5,6 +5,7 @@ description: Learn how to reference Blazor PDF Viewer scripts using a CDN, stati
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # How to Reference scripts in Blazor PDF Viewer application

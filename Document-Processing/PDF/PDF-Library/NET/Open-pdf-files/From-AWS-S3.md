@@ -5,6 +5,7 @@ keywords: aws s3, load pdf, open pdf, c# load pdf
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Open PDF from AWS S3
 

@@ -5,6 +5,7 @@ description: Add signature fields and apply PKI-based digital signatures to PDF 
 platform: document-processing
 control: PdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # Add Digital Signature in React PDF Viewer

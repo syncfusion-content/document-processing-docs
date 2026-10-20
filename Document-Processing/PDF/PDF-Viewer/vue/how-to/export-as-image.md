@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # How to Export Pages as Images in Vue PDF Viewer

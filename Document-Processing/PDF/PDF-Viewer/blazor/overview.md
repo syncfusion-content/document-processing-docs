@@ -5,6 +5,7 @@ description: Learn about Blazor PDF Viewer component including performance, offl
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # About Syncfusion Blazor PDF Viewer Component

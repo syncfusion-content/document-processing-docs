@@ -5,6 +5,7 @@ description: Capture the current page number in the ASP.NET MVC PDF Viewer when 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # How to Capture the Current Page Number in ASP.NET MVC PDF Viewer

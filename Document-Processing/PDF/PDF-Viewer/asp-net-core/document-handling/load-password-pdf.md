@@ -6,6 +6,7 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # Load Password-Protected PDF in ASP.NET Core PDF Viewer

@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # How to Redirect to the Home Page in ASP.NET MVC PDF Viewer

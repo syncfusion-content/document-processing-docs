@@ -5,6 +5,7 @@ description: Learn about Syncfusion Blazor PDF Viewer Annotations and how to add
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # About Syncfusion Annotation in Blazor PDF Viewer Component
