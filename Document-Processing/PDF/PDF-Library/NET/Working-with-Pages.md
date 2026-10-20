@@ -5,7 +5,6 @@ platform: document-processing
 control: PDF
 documentation: UG
 appliesto: Document SDK
-
 ---
 
 # Pages in .NET PDF Library

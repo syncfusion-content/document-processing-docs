@@ -7,7 +7,6 @@ control: PDF Viewer
 
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # How to Print the PDF in ASP.NET MVC PDF Viewer

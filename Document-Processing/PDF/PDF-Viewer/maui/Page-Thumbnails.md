@@ -7,7 +7,6 @@ control: SfPdfViewer
 documentation: ug
 keywords: .net maui pdf viewer, .net maui page thumbnail, pdf thumbnail preview, maui pdf navigation, pdf page preview
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Page Thumbnail in .NET MAUI PDF Viewer

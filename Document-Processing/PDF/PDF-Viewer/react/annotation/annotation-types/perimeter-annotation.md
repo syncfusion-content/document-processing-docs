@@ -7,7 +7,6 @@ control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Perimeter Annotation in React PDF Viewer

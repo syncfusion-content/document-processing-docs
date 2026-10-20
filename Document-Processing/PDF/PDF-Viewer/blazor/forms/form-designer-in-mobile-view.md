@@ -6,7 +6,6 @@ platform: document-processing
 control: SfPdfViewer
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Form designer in mobile view in Blazor PDF Viewer

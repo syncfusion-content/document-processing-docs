@@ -7,7 +7,6 @@ platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # How to Show Custom Stamp Items in Vue PDF Viewer

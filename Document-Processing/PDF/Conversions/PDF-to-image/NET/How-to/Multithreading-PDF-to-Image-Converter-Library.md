@@ -5,7 +5,6 @@ platform: document-processing
 control: PDF to image
 documentation: UG
 appliesto: Document SDK
-
 ---
 
 # How to Perform Multithreading in PdfToImageConverter Library

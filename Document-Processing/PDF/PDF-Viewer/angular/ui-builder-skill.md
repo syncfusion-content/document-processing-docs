@@ -7,7 +7,6 @@ platform: document-processing
 documentation: ug
 keywords: Angular UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skills
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Angular UI Builder Skill with PDF Viewer

@@ -5,7 +5,6 @@ platform: document-processing
 control: PDF Viewer
 documentation: UG
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # About Syncfusion JavaScript (ES5) PDF Viewer Control

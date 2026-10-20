@@ -7,7 +7,6 @@ control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Measurement Annotation in ASP.NET MVC PDF Viewer

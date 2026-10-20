@@ -7,7 +7,6 @@ control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Search and Redact Text in React PDF Viewer

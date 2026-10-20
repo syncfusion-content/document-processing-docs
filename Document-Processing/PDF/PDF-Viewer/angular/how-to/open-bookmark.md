@@ -7,7 +7,6 @@ control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # How to Open or Hide the Bookmark Pane in Angular PDF Viewer

@@ -6,7 +6,6 @@ platform: document-processing
 control: SfPdfViewer
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Saving PDF file in Blazor PDF Viewer 

@@ -7,7 +7,6 @@ platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Open PDF from OneDrive in Vue PDF Viewer

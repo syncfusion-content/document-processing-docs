@@ -7,7 +7,6 @@ control: Text search
 documentation: ug
 domainurl: ##DomainURL##
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Text Search Events in JavaScript (ES6) PDF Viewer

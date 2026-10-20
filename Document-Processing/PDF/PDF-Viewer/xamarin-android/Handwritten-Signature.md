@@ -6,7 +6,6 @@ platform: document-processing
 control: SfPdfViewer
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 #  Handwritten signature in Xamarin.Android PDF Viewer

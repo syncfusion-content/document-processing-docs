@@ -6,7 +6,6 @@ platform: document-processing
 control: SfPdfViewer
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Lock and Unlock Annotations in Flutter PDF Viewer

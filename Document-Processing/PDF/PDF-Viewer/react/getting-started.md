@@ -7,7 +7,6 @@ platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Getting Started with React PDF Viewer

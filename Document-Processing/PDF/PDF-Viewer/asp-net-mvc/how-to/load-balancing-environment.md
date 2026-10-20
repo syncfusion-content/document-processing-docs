@@ -6,7 +6,6 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # How to Run the PDF Viewer in a Load-Balanced Environment in ASP.NET

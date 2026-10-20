@@ -6,7 +6,6 @@ platform: document-processing
 control: PdfViewer
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Programmatic Support for Organize Pages in JavaScript (ES5) PDF Viewer

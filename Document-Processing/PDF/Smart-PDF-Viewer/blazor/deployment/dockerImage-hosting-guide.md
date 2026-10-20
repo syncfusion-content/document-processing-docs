@@ -6,7 +6,6 @@ platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Docker Image Hosting Guide for Blazor Web App PDF Viewer

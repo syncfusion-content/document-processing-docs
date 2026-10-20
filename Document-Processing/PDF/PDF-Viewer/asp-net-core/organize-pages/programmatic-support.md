@@ -7,7 +7,6 @@ control: PDF Viewer
 
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Programmatic Support for Organize Pages in ASP.NET Core PDF Viewer

@@ -6,7 +6,6 @@ platform: document-processing
 control: PDF
 documentation: UG
 appliesto: Document SDK
-
 ---
 
 # About Syncfusion .NET PDF Library

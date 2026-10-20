@@ -7,7 +7,6 @@ control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Import pages using the Organize Pages tool in Blazor PDF Viewer

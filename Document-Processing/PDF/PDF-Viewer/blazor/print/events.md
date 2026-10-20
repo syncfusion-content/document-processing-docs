@@ -7,7 +7,6 @@ control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Print events in Blazor PDF Viewer

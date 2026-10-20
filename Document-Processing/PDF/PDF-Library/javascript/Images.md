@@ -6,7 +6,6 @@ platform: document-processing
 control: PDF
 documentation: UG
 appliesto: Document SDK
-
 ---
 
 # PDF Images in JavaScript PDF

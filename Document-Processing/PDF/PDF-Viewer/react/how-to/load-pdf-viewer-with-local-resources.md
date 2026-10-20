@@ -6,7 +6,6 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # How to Load the PDF Viewer with Local Resources in React PDF Viewer

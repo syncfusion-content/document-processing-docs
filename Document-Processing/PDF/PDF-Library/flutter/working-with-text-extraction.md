@@ -6,7 +6,6 @@ platform: document-processing
 control: PDF
 documentation: ug
 appliesto: Document SDK
-
 ---
 
 # Text Extraction in Flutter PDF

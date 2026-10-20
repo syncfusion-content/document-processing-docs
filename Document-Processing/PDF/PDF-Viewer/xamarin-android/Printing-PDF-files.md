@@ -6,7 +6,6 @@ platform: document-processing
 control: SfPdfViewer
 documentation: UG
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Printing in PDF Viewer Xamarin.Android

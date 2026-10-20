@@ -6,7 +6,6 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Ink Annotation in WPF Pdf Viewer

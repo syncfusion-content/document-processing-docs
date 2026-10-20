@@ -6,7 +6,6 @@ platform: document-processing
 control: PdfViewerControl
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 # How to navigate pages in WinForms PDF Viewer
 

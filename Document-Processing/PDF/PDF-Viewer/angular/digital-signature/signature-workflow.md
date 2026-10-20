@@ -6,7 +6,6 @@ platform: document-processing
 control: PdfViewer
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Digital Signature Workflows in Angular PDF Viewer

@@ -7,7 +7,6 @@ control: Text Selection
 documentation: ug
 domainurl: ##DomainURL##
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Text Selection API and Events in React PDF Viewer

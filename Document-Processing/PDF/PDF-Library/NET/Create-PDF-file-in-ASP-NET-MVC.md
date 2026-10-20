@@ -6,7 +6,6 @@ control: PDF
 documentation: UG
 keywords: mvc create pdf, mvc generate pdf, edit pdf, merge, pdf form, fill form, digital sign, table, c#, mvc generate pdf
 appliesto: Document SDK
-
 ---
 # Getting Started with .NET PDF Library in ASP.NET MVC
 

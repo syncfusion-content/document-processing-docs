@@ -6,7 +6,6 @@ platform: document-processing
 control: PdfViewer
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Customize Digital Signature Appearance in Angular PDF Viewer

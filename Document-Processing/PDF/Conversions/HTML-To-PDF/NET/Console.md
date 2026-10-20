@@ -6,7 +6,6 @@ control: PDF
 documentation: UG
 keywords: create pdf in console app, generate pdf using console application, syncfusion html to pdf, html to pdf console example
 appliesto: Document SDK
-
 ---
 
 # HTML to PDF conversion in Console App .NET PDF Library

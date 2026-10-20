@@ -5,7 +5,6 @@ platform: document-processing
 control: PDF
 documentation: UG
 appliesto: Document SDK
-
 ---
 
 # Metadata in .NET PDF Library

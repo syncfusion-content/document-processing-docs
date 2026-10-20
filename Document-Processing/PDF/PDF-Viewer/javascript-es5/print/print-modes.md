@@ -7,7 +7,6 @@ control: Print
 documentation: ug
 domainurl: ##DomainURL##
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Print Modes in JavaScript (ES5) PDF Viewer

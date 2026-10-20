@@ -7,7 +7,6 @@ control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Flatten PDF form fields in Blazor PDF Viewer

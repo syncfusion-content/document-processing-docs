@@ -6,7 +6,6 @@ platform: maui
 control: SmartComponents
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Custom AI Service Integration with .NET MAUI Smart Components

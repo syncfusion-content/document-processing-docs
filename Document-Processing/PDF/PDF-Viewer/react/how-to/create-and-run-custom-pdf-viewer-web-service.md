@@ -6,7 +6,6 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # How to Create a Custom PDF Viewer Web Service in React PDF Viewer

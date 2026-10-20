@@ -8,7 +8,6 @@ documentation: ug
 keywords: javascript, pdf, react
 canonical_url: https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-react
 appliesto: Document SDK
-
 ---
 
 # Getting Started with JavaScript PDF in React app

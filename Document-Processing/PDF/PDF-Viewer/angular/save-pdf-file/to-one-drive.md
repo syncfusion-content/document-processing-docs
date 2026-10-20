@@ -7,7 +7,6 @@ control: Save PDF files to One Drive
 documentation: ug
 domainurl: ##DomainURL##
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Save PDF Files to OneDrive in Angular PDF Viewer

@@ -6,7 +6,6 @@ platform: document-processing
 control: PdfViewer
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Programmatic Redaction in React PDF Viewer

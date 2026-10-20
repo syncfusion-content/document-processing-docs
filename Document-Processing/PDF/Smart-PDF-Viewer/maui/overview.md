@@ -7,7 +7,6 @@ control: SfSmartPdfViewer
 documentation: ug
 keywords: .net maui smart pdf viewer, maui smart pdf viewer, ai pdf viewer maui, smart redaction maui, smart fill maui, document summarizer maui
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # About Syncfusion .NET MAUI Smart PDF Viewer Component

@@ -6,7 +6,6 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # How to Overview of the ASP.NET Core PDF Viewer

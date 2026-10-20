@@ -6,7 +6,6 @@ control: PDF
 documentation: UG
 keywords: winforms save pdf, winforms load pdf, c# save pdf, c# load pdf
 appliesto: Document SDK
-
 ---
 
 # Open and Save PDF Document in Windows Forms

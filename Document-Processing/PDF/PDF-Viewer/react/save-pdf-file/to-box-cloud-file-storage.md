@@ -6,7 +6,6 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Save PDF Files to Box Cloud Storage in React PDF Viewer

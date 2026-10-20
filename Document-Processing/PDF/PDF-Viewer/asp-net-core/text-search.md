@@ -6,7 +6,6 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Text Search in ASP.NET Core PDF Viewer

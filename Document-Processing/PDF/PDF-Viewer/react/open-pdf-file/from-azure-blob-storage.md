@@ -6,7 +6,6 @@ control: Open PDF files from Azure Blob Storage
 platform: document-processing
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Open PDF from Azure Blob Storage in React PDF Viewer

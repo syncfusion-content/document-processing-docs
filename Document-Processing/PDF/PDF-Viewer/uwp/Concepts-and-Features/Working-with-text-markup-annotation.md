@@ -6,7 +6,6 @@ platform: document-processing
 control: PDF viewer
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Text markup annotations in UWP Pdf Viewer Control

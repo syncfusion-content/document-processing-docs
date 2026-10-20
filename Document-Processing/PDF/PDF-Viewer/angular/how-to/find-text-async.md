@@ -7,7 +7,6 @@ control: Find Text Async
 documentation: ug
 domainurl: ##DomainURL##
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # How to Use FindTextAsync in Angular PDF Viewer

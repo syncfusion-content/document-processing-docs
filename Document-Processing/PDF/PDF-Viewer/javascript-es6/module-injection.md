@@ -6,7 +6,6 @@ control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Module Injection in JavaScript (ES6) PDF Viewer

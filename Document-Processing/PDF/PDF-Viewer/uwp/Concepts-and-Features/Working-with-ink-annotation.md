@@ -6,7 +6,6 @@ platform: document-processing
 control: PDF viewer
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Working with ink annotations in UWP Pdf Viewer

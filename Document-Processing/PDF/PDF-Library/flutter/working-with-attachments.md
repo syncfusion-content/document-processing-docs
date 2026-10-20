@@ -6,7 +6,6 @@ platform: document-processing
 control: PDF
 documentation: ug
 appliesto: Document SDK
-
 ---
 
 # Attachments in Flutter PDF

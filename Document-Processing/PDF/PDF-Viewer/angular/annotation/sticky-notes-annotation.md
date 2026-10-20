@@ -7,7 +7,6 @@ control: Sticky notes annotation
 documentation: ug
 domainurl: ##DomainURL##
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Sticky Notes Annotation in Angular PDF Viewer

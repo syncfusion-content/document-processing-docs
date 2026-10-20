@@ -7,7 +7,6 @@ control: Open PDF files from Google Cloud Storage
 documentation: ug
 domainurl: ##DomainURL##
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Open PDF from Google Cloud Storage in Angular PDF Viewer

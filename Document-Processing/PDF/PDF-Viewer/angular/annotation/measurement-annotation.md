@@ -7,7 +7,6 @@ control: Measurement annotation
 documentation: ug
 domainurl: ##DomainURL##
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Measurement Annotation in Angular PDF Viewer

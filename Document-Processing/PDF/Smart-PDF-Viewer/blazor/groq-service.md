@@ -6,7 +6,6 @@ platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Groq AI service in Blazor app  Smart PDF Viewer

@@ -6,7 +6,6 @@ platform: document-processing
 control: SfPdfViewerControl
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Working with text selection in UWP Pdf Viewer

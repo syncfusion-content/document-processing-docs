@@ -6,7 +6,6 @@ control: PDF
 documentation: UG
 keywords: Assemblies
 appliesto: Document SDK
-
 ---
 # Assemblies Required for HTML to PDF Converter
 

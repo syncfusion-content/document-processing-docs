@@ -6,7 +6,6 @@ platform: maui
 control: SmartComponents
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Configure Chat Client With Smart Components

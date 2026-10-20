@@ -7,7 +7,6 @@ control: Text Markup Annotation
 documentation: ug
 domainurl: ##DomainURL##
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Text Markup Annotations in Angular PDF Viewer

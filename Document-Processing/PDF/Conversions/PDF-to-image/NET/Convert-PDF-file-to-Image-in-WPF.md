@@ -6,7 +6,6 @@ control: PDF to image
 documentation: UG
 keywords: Assemblies
 appliesto: Document SDK
-
 ---
 
 # Getting Started with WPF PDF to Image Converter Library

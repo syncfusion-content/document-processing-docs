@@ -6,7 +6,6 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # How to Handle Page Render Events in React PDF Viewer

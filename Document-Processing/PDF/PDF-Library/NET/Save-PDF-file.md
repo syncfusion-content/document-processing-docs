@@ -5,7 +5,6 @@ platform: document-processing
 control: PDF
 documentation: UG
 appliesto: Document SDK
-
 ---
 # Save PDF file in C# and VB.NET
 

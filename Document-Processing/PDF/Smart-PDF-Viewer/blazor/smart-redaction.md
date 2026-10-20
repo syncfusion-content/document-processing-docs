@@ -6,7 +6,6 @@ platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Smart Redaction in Blazor Smart PDF Viewer

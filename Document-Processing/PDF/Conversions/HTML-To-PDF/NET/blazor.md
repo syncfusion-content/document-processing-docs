@@ -6,7 +6,6 @@ control: PDF
 documentation: UG
 keywords: Assemblies
 appliesto: Document SDK
-
 ---
 
 # HTML to PDF conversion in Blazor .NET PDF Library

@@ -6,7 +6,6 @@ platform: document-processing
 control: PDF viewer
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # How to Get coordinates of a text in a PDF document in UWP PDF Viewer

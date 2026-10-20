@@ -6,7 +6,6 @@ platform: document-processing
 control: Customize text search color
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # How to Customize the Text Search Color in ASP.NET MVC PDF Viewer

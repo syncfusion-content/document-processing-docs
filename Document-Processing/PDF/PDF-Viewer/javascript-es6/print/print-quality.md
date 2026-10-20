@@ -7,7 +7,6 @@ control: Print
 documentation: ug
 domainurl: ##DomainURL##
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Customize Print Quality in JavaScript (ES6) PDF Viewer

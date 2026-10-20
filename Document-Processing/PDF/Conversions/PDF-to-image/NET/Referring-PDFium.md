@@ -6,7 +6,6 @@ platform: document-processing
 control: PDF to image
 documentation: UG
 appliesto: Document SDK
-
 ---
 
 # PDFium Integration in PDF to Image Converter Library

@@ -6,7 +6,6 @@ control: PDF
 documentation: UG
 keywords: maui os save pdf, maui os load pdf, c# save pdf, c# load pdf
 appliesto: Document SDK
-
 ---
 
 # Open and Save PDF Document in .NET MAUI

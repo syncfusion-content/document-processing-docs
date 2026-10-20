@@ -5,7 +5,6 @@ platform: file-formats
 control: PDF
 documentation: UG
 appliesto: Document SDK
-
 ---
 
 # Getting Started with .NET PDF Library in AKS

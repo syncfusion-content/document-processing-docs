@@ -6,7 +6,6 @@ control: general
 documentation: UG
 keywords: PDF Viewer, Smart PDF, AI PDF, Summarization, Redaction, Form Fill, Blazor, SDK
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # About Smart PDF Viewer Component

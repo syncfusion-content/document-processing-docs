@@ -6,7 +6,6 @@ control: PDF
 documentation: UG
 keywords: Assemblies
 appliesto: Document SDK
-
 ---
 # How to Use HTML Converter in .NET PDF Library
 

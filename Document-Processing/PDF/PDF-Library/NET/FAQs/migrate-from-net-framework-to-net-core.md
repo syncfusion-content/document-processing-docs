@@ -4,7 +4,6 @@ description: Learn the key changes when migrating the Syncfusion PDF library cod
 control: PDF
 documentation: UG
 appliesto: Document SDK
-
 ---
 
 # Migration from .NET Framework to .NET Core

@@ -7,7 +7,6 @@ control: SfSmartPdfViewer
 documentation: ug
 keywords: .net maui smart pdf viewer, maui smart pdf viewer getting started, ai pdf viewer maui, smart redaction maui, smart fill maui
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Getting Started with .NET MAUI Smart PDF Viewer

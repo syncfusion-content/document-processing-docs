@@ -6,7 +6,6 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # How to Get the Base64 Value of a PDF in React PDF Viewer

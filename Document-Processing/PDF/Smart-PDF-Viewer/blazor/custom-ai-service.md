@@ -6,7 +6,6 @@ platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Custom AI Integration in Blazor Smart PDF Viewer

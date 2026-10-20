@@ -5,7 +5,6 @@ platform: document-processing
 control: PDF
 documentation: UG
 appliesto: Document SDK
-
 ---
 
 # HTML to PDF conversion  in Amazon ECS with Fargate .NET PDF Library

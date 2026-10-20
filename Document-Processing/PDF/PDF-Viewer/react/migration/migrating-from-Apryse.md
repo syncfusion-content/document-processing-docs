@@ -6,7 +6,6 @@ platform: document-processing
 documentation: ug
 control: PDF Viewer
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Migrate from Apryse to React PDF Viewer

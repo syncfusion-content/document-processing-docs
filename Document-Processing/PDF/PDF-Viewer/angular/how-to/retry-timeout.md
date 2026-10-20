@@ -7,7 +7,6 @@ control: Retry Timeout
 documentation: ug
 domainurl: ##DomainURL##
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # How to Configure Retry Timeout in Angular PDF Viewer

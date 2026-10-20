@@ -7,7 +7,6 @@ platform: document-processing
 control: PDF
 documentation: ug
 appliesto: Document SDK
-
 ---
 
 # Open and Save PDF files in JavaScript PDF
