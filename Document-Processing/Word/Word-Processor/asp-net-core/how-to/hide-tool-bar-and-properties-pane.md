@@ -5,6 +5,7 @@ description: Learn how to hide the default tool bar properties pane from the Syn
 platform: document-processing
 control: Hide The Default Tool Bar And Properties Pane
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to hide the default tool bar and properties pane in Document Editor component

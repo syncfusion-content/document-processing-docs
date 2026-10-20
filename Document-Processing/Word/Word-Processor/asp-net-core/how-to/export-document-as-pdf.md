@@ -5,6 +5,7 @@ description: Learn here all about export document as PDF in Syncfusion Document 
 platform: document-processing
 control: Export Document As PDF
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

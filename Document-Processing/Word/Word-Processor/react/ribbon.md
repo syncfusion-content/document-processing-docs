@@ -5,6 +5,7 @@ description: Learn here all about the Ribbon UI in Syncfusion React Document edi
 platform: document-processing
 control: Ribbon
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

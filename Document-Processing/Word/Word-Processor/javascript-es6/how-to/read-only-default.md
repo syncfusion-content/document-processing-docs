@@ -5,6 +5,7 @@ description: Learn here all about Read only default in Syncfusion JavaScript (ES
 platform: document-processing
 control: Read only default 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

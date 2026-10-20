@@ -5,6 +5,7 @@ description: Learn here all about Table format in Syncfusion React Document edit
 control: Table format 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

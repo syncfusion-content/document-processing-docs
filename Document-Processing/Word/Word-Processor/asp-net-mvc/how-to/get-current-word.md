@@ -5,6 +5,7 @@ description: Learn how to select and retrieve current word and Paragraph from th
 platform: document-processing
 control: Get The Current Word And Paragrapgh
 documentation: ug 
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to select and retrieve the word and paragraph in current cursor position in Document Editor component

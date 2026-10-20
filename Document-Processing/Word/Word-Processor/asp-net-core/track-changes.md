@@ -5,6 +5,7 @@ description: Learn here all about track changes in Syncfusion Document Editor co
 platform: document-processing
 control: Track Changes
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Track Changes in Document Editor Component

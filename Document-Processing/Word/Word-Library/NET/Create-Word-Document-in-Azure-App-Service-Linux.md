@@ -4,6 +4,7 @@ description: Create Word document in Azure App Service on Linux using .NET Core 
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Word document in Azure App Service on Linux

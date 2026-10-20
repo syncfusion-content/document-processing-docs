@@ -5,6 +5,7 @@ description: Learn here all about Change the default search highlight color in S
 control: Change the default search highlight color 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

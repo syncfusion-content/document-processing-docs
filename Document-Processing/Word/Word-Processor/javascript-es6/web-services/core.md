@@ -5,6 +5,7 @@ description: Learn here all about Core in Syncfusion JavaScript (ES6) Document e
 platform: document-processing
 control: Core 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

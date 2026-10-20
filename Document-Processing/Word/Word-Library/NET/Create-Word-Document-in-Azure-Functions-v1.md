@@ -4,6 +4,7 @@ description: Create Word document in Azure Functions v1 using .NET Word (DocIO) 
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Word document in Azure Functions v1

@@ -5,6 +5,7 @@ description: Learn here all about how to resize Document Editor in Syncfusion AS
 platform: document-processing
 control: Resize Document Editor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

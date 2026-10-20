@@ -5,6 +5,7 @@ description: Checkout and learn here all about Restrict editing in Syncfusion Bl
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Restrict editing in Blazor DocumentEditor Component

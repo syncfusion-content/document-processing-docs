@@ -5,6 +5,7 @@ description: Learn here all about Unsupported file in Syncfusion JavaScript (ES6
 platform: document-processing
 control: Unsupported file 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

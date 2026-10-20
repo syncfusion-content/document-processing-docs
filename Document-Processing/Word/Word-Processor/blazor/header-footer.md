@@ -5,6 +5,7 @@ description: Checkout and learn here all about Headers and Footers in Syncfusion
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Headers and Footers in Blazor DocumentEditor Component

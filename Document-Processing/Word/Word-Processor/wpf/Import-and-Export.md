@@ -4,6 +4,7 @@ description: Learn here all about Import and Export support in Syncfusion WPF Ri
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: import, export, load, save
 ---
 # Import and Export in WPF RichTextBox (SfRichTextBoxAdv)

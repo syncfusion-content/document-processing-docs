@@ -5,6 +5,7 @@ description: Learn here all about text format in Syncfusion Document Editor comp
 platform: document-processing
 control: Text Format
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

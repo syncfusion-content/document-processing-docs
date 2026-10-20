@@ -5,6 +5,7 @@ description: Learn how to get the selected content from the Syncfusion Blazor Do
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to get the selected content in Blazor Document Editor component

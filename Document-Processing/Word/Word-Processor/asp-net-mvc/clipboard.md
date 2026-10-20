@@ -5,6 +5,7 @@ description: Learn here all about clipboard in Syncfusion ASP.NET MVC Document E
 platform: document-processing
 control: Clipboard
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

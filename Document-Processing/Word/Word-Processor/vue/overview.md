@@ -5,6 +5,7 @@ description: Learn here all about Overview in Syncfusion Vue Document editor com
 control: Index 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

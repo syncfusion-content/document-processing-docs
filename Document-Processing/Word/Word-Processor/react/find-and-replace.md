@@ -5,6 +5,7 @@ description: Learn here all about Find and replace in Syncfusion React Document 
 control: Find and replace 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

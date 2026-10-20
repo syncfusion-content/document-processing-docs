@@ -5,6 +5,7 @@ description: Learn here all about How to deploy documenteditor java web api in a
 control: How to deploy documenteditor java web api in azure 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 # How to deploy documenteditor java web api in azure in Vue Document editor component

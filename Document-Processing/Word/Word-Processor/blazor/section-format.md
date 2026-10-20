@@ -5,6 +5,7 @@ description: Learn here all about working with section formatting in Syncfusion 
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Working with Section Formatting in Blazor DocumentEditor Component

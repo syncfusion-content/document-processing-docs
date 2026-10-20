@@ -6,6 +6,7 @@ platform: document-processing
 control: How to publish documenteditor web api application in azure app service from visual studio 
 publishingplatform: ##javascript-es6##
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

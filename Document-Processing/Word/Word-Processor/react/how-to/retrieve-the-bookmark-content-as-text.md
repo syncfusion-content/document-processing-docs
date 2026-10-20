@@ -5,6 +5,7 @@ description: Learn here all about Retrieve the bookmark content as text in Syncf
 control: Retrieve the bookmark content as text 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

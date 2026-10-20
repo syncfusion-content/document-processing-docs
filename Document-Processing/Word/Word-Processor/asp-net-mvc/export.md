@@ -5,6 +5,7 @@ description: Learn here all about Export in Syncfusion ASP.NET MVC Document Edit
 platform: document-processing
 control: Export
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

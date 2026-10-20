@@ -5,6 +5,7 @@ description: Learn here all about View in Syncfusion JavaScript (ES5) Document e
 platform: document-processing
 control: View 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 # View in JavaScript (ES5) Document editor control

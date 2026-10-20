@@ -5,6 +5,7 @@ description: Learn how to retrieve the whole document and bookmark content as te
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Retrieve the document and bookmark content in Blazor Document Editor

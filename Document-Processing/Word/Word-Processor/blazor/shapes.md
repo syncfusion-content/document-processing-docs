@@ -5,6 +5,7 @@ description: Checkout and learn here all about the Shapes in Syncfusion Blazor D
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Working with Shapes in Blazor DocumentEditor

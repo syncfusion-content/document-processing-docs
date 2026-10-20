@@ -5,6 +5,7 @@ description: Learn here all about find and replace in Syncfusion Document Editor
 platform: document-processing
 control: Find And Replace
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

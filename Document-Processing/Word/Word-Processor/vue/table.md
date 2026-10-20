@@ -5,6 +5,7 @@ description: Learn here all about Table in Syncfusion Vue Document editor compon
 control: Table 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

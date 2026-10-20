@@ -5,6 +5,7 @@ description: Learn here all about Right to left in Syncfusion Angular Document e
 platform: document-processing
 control: Right to left 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

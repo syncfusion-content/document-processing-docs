@@ -5,6 +5,7 @@ description: Learn here all about working with table formatting in Syncfusion Bl
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Working with Table Formatting in Blazor DocumentEditor Component

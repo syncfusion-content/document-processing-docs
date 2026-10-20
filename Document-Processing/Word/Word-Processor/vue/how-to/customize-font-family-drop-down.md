@@ -5,6 +5,7 @@ description: Learn here all about Customize font family drop down in Syncfusion 
 control: Customize font family drop down 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: Learn here all about Mvc in Syncfusion Vue Document editor componen
 control: Mvc 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

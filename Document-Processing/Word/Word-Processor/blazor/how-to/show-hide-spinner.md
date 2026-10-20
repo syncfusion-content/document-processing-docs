@@ -5,6 +5,7 @@ description: Learn how to display and hide a loading spinner while opening a doc
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to show and hide spinner in Blazor Document Editor component

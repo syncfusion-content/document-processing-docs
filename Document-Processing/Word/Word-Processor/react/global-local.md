@@ -5,6 +5,7 @@ description: Learn here all about Global local in Syncfusion React Document edit
 control: Global local 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

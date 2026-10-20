@@ -5,6 +5,7 @@ description: Learn how to to disable header and footer edit in Document from the
 platform: document-processing
 control: Disable Header And Footer
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to disable header and footer edit in  Document Editor component

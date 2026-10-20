@@ -5,6 +5,7 @@ description: Learn here all about Override the keyboard shortcuts in Syncfusion 
 control: Override the keyboard shortcuts 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

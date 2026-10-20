@@ -5,6 +5,7 @@ description: Learn here all about import in Syncfusion Document Editor component
 platform: document-processing
 control: Import
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

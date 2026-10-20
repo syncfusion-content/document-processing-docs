@@ -5,6 +5,7 @@ description: Learn here all about comments in Syncfusion Document Editor control
 platform: document-processing
 control: Comments
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

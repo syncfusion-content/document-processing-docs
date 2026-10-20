@@ -5,6 +5,7 @@ description:  Learn about how to Save document to One Drive in ASP.NET MVC Docum
 platform: document-processing
 control: Save document to One Drive
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

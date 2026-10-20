@@ -5,6 +5,7 @@ description: Learn how to customize the ribbon in Syncfusion Vue Document Editor
 platform: document-processing
 control: Ribbon Customization
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

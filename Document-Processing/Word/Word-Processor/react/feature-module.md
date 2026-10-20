@@ -5,6 +5,7 @@ description: Learn here all about Feature module in Syncfusion React Document ed
 control: Feature module 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: Learn here all about how to open default document in Syncfusion ASP
 platform: document-processing
 control: Open Default Document
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

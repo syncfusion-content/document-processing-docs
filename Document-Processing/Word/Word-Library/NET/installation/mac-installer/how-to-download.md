@@ -5,6 +5,7 @@ description: Learn here about the how to download Syncfusion<sup>&reg;</sup> Wor
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
+appliesto: Document SDK
 --- 
 
 # Downloading Syncfusion<sup>&reg;</sup> Word Mac Installer

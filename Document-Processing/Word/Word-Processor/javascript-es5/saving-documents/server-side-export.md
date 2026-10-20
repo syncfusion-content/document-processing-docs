@@ -5,6 +5,7 @@ description: Learn here all about Server side export in Syncfusion JavaScript (E
 platform: document-processing
 control: Server side export 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

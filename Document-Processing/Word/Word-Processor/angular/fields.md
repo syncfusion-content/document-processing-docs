@@ -5,6 +5,7 @@ description: Learn here all about Fields in Syncfusion Angular Document editor c
 platform: document-processing
 control: Fields 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

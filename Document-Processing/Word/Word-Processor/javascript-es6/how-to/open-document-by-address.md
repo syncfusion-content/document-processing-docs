@@ -5,6 +5,7 @@ description: Learn here all about Open document by address in Syncfusion JavaScr
 platform: document-processing
 control: Open document by address 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

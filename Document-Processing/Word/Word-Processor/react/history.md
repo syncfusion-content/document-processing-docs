@@ -5,6 +5,7 @@ description: Learn here all about History in Syncfusion React Document editor co
 control: History 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

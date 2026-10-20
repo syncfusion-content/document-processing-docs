@@ -5,6 +5,7 @@ description: Checkout and learn here all about Form fields in Syncfusion Blazor 
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Form Fields in Blazor DocumentEditor Component

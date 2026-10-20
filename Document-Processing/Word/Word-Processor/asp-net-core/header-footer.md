@@ -5,6 +5,7 @@ description: Learn here all about Header Footer in Syncfusion Document Editor co
 platform: document-processing
 control: Header Footer
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

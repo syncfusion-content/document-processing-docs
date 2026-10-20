@@ -5,6 +5,7 @@ description: Learn about collaborative editing in Syncfusion Vue Document editor
 platform: document-processing
 control: Collaborative Editing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

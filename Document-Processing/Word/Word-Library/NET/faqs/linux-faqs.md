@@ -4,6 +4,7 @@ description: Learn about the frequently asked questions about using the .NET Wor
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Frequently asked questions about using DocIO in Linux
 

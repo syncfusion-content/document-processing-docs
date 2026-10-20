@@ -5,6 +5,7 @@ description: Learn here all about Insert text or image in table programmatically
 control: Insert text or image in table programmatically 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

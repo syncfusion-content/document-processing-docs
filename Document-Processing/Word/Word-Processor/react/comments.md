@@ -5,6 +5,7 @@ description: Learn here all about Comments in Syncfusion React Document editor c
 control: Comments 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

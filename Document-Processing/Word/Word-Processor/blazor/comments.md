@@ -5,6 +5,7 @@ description: Learn how to add, navigate, reply to, and manage comments in the Sy
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Comments in Blazor DocumentEditor Component

@@ -5,6 +5,7 @@ description: Learn how to open a document in read only mode by default in Syncfu
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Open document in read only in Blazor DocumentEditor component

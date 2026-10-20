@@ -4,6 +4,7 @@ description: This section illustrates migrating Syncfusion<sup>&reg;</sup> .NET 
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Migrate DocIO library from .NET Framework to .NET Core
 

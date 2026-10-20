@@ -5,6 +5,7 @@ description: Checkout and learn here all about Images in Syncfusion Blazor Docum
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Images in Blazor DocumentEditor Component

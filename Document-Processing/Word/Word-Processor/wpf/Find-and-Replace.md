@@ -4,6 +4,7 @@ description: Learn here all about Find and Replace support in Syncfusion WPF Ric
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: search,find,replace-text
 ---
 # Find and Replace in WPF RichTextBox (SfRichTextBoxAdv)

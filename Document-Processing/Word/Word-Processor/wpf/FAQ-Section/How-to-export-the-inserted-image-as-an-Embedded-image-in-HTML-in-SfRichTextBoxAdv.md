@@ -4,6 +4,7 @@ description: Learn here all about how to export the inserted image as an Embedde
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: embedded-image-html
 ---
 

@@ -5,6 +5,7 @@ description:  Learn about how to Open document from AWS S3 in Angular Document e
 platform: document-processing
 control: Open document from AWS S3
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

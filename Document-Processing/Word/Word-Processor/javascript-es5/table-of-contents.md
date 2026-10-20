@@ -5,6 +5,7 @@ description: Learn here all about Table of contents in Syncfusion JavaScript (ES
 platform: document-processing
 control: Table of contents 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

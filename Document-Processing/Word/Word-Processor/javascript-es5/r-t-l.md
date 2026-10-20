@@ -5,6 +5,7 @@ description: Learn here all about R t l in Syncfusion JavaScript (ES5) Document 
 platform: document-processing
 control: R t l 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

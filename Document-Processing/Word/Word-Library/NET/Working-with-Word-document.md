@@ -4,6 +4,7 @@ description: Learn to merge, split, and print Word documents with ease, as well 
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Working with Word document
 

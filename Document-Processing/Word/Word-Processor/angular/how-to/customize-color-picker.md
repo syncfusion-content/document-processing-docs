@@ -5,6 +5,7 @@ description: Learn here all about Customize color picker in Syncfusion Angular D
 platform: document-processing
 control: Customize color picker 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

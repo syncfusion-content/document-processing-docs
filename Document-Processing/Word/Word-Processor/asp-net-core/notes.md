@@ -5,6 +5,7 @@ description: Learn here all about notes in Syncfusion Document Editor component 
 platform: document-processing
 control: Notes
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

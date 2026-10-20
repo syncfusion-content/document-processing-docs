@@ -5,6 +5,7 @@ description: Learn how to Customize the existing toolbar in Syncfusion Blazor Do
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 # Customize existing toolbar in Blazor Document Editor Component
 

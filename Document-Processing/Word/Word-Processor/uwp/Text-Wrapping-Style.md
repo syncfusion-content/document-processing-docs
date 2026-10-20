@@ -4,6 +4,7 @@ description: Learn here all about Text Wrapping style support in Syncfusion UWP 
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: text-wrapping, text-wrapping-style
 ---
 # Text Wrapping Style in UWP RichTextBox (SfRichTextBoxAdv)

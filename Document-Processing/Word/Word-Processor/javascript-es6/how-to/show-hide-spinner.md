@@ -5,6 +5,7 @@ description: Learn here all about Show hide spinner in Syncfusion JavaScript (ES
 platform: document-processing
 control: Show hide spinner 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

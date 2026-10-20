@@ -5,6 +5,7 @@ description: Learn here all about Disable drag and drop in document editor in Sy
 platform: document-processing
 control: Disable drag and drop in document editor 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

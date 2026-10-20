@@ -5,6 +5,7 @@ description: Learn here about how to download Syncfusion<sup>&reg;</sup> Word we
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
+appliesto: Document SDK
 
 ---
 

@@ -4,6 +4,7 @@ description: Learn how to add, modify, and remove mathematical equations in a Wo
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Working with Mathematical Equation
 

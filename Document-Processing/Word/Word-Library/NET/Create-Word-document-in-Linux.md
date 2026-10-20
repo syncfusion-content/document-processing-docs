@@ -4,6 +4,7 @@ description: Create Word document in .NET Core application on Linux using Syncfu
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Word document on Linux

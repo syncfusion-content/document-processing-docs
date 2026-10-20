@@ -5,6 +5,7 @@ description: Learn how to perform cut, copy, and paste clipboard operations in t
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Clipboard in Blazor DocumentEditor Component

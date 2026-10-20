@@ -5,6 +5,7 @@ description: Learn here all about open document by address in Syncfusion Documen
 platform: document-processing
 control: Open Document By Address
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

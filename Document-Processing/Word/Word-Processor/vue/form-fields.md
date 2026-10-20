@@ -5,6 +5,7 @@ description: Learn here all about Form fields in Syncfusion Vue Document editor 
 control: Form fields 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

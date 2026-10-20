@@ -5,6 +5,7 @@ description: Learn here about how to install Syncfusion<sup>&reg;</sup> Word Mac
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Installing Syncfusion<sup>&reg;</sup> Word Mac installer

@@ -4,6 +4,7 @@ description: Learn how to work with OLE Objects in a Word document using the Syn
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Working with OLE Objects
 

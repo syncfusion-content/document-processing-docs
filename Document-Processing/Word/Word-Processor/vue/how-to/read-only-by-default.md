@@ -5,6 +5,7 @@ description: Learn here all about Read only by default in Syncfusion Vue Documen
 control: Read only by default 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

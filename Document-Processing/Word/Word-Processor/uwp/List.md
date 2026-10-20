@@ -4,6 +4,7 @@ description: Learn here all about List support in Syncfusion UWP RichTextBox (Sf
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: list
 ---
 # List in UWP RichTextBox (SfRichTextBoxAdv)

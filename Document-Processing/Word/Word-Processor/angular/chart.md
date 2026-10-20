@@ -5,6 +5,7 @@ description: Learn here all about Chart in Syncfusion Angular Document editor co
 platform: document-processing
 control: Chart 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

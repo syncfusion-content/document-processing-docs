@@ -5,6 +5,7 @@ description: Learn here all about Table format in Syncfusion Angular Document ed
 platform: document-processing
 control: Table format 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

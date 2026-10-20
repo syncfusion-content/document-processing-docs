@@ -5,6 +5,7 @@ description: Learn here all about View in Syncfusion ASP.NET MVC Document Editor
 platform: document-processing
 control: View
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # View in DocumentEditor

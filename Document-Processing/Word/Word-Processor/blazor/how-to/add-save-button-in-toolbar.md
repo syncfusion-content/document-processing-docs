@@ -5,6 +5,7 @@ description: Learn how to add a custom save button to the toolbar in the Syncfus
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 # Add save button in Blazor Document editor toolbar
 

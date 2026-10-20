@@ -5,6 +5,7 @@ description: Learn here all about chart in Syncfusion Document Editor component 
 platform: document-processing
 control: Chart
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

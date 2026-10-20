@@ -4,6 +4,7 @@ description: Learn how to accept or reject the track changes in a Word document 
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Accepting or Rejecting Track Changes
 

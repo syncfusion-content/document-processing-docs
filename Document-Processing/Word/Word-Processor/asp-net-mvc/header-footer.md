@@ -5,6 +5,7 @@ description: Learn here all about Header Footer in Syncfusion ASP.NET MVC Docume
 platform: document-processing
 control: Header Footer
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

@@ -5,6 +5,7 @@ description: Learn how to change the document view between Print Layout (Pages) 
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Change Document View in Blazor DocumentEditor

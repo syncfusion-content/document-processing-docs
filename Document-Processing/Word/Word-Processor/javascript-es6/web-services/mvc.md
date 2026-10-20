@@ -5,6 +5,7 @@ description: Learn here all about Mvc in Syncfusion JavaScript (ES6) Document ed
 platform: document-processing
 control: Mvc 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

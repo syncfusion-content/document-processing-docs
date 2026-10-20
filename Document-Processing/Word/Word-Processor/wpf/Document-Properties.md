@@ -4,6 +4,7 @@ description: Learn here all about Document Properties support in Syncfusion WPF 
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: Word count, paragraph count, page count, current page number.
 ---
 # Document Properties in WPF RichTextBox (SfRichTextBoxAdv)

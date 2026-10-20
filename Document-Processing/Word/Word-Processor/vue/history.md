@@ -5,6 +5,7 @@ description: Learn here all about History in Syncfusion Vue Document editor comp
 control: History 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

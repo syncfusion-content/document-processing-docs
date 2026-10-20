@@ -5,6 +5,7 @@ description: Learn here all about text format in Syncfusion ASP.NET MVC Document
 platform: document-processing
 control: Text Format
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

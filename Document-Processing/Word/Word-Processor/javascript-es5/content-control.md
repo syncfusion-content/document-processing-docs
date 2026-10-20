@@ -5,6 +5,7 @@ description: Learn here all about Content control in Syncfusion JavaScript (ES5)
 platform: document-processing
 control: Content control 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

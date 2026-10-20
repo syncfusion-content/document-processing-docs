@@ -5,6 +5,7 @@ description: Learn here all about Scrolling zooming in Syncfusion Vue Document e
 control: Scrolling zooming 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

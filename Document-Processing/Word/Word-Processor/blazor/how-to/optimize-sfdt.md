@@ -5,6 +5,7 @@ description: Learn here all about optimize the SFDT file in Document Editor in S
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to optimize the SFDT file

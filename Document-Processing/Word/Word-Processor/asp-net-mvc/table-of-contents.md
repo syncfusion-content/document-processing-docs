@@ -5,6 +5,7 @@ description: Learn here all about table of contents in Syncfusion ASP.NET MVC Do
 platform: document-processing
 control: Table Of Contents
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

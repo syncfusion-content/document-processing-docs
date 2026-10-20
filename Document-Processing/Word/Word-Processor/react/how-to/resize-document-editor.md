@@ -5,6 +5,7 @@ description: Learn here all about Resize document editor in Syncfusion React Doc
 control: Resize document editor 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

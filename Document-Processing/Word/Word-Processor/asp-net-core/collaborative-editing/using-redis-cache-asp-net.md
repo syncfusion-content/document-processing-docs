@@ -5,6 +5,7 @@ component: DocumentEditor
 description: Learn how to enable and perform the collaborative editing in ASP.NET Core Syncfusion Document editor Component.
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

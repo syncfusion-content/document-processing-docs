@@ -5,6 +5,7 @@ description: Learn here all about Dialog in Syncfusion JavaScript (ES5) Document
 platform: document-processing
 control: Dialog 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: Learn here all about Notes in Syncfusion Vue Document editor compon
 control: Notes 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

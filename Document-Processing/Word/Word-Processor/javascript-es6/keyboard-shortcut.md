@@ -5,6 +5,7 @@ description: Learn here all about Keyboard shortcut in Syncfusion JavaScript (ES
 platform: document-processing
 control: Keyboard shortcut 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

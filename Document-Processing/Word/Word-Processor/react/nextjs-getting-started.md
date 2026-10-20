@@ -5,6 +5,7 @@ description: Integrate the Syncfusion React Document Editor into a Next.js appli
 control: Next.js
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

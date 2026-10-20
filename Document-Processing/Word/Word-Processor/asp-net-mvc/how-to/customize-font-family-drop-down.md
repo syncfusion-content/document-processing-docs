@@ -5,6 +5,7 @@ description: Learn here all about how to customize font family drop down in Sync
 platform: document-processing
 control: Customize Font Family Drop Down
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

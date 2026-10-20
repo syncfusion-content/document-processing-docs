@@ -4,6 +4,7 @@ description: Learn here all about Selection support in Syncfusion WPF RichTextBo
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: selection
 ---
 # Selection in WPF RichTextBox (SfRichTextBoxAdv)

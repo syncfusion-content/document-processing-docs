@@ -4,6 +4,7 @@ description: Learn how to add, modify, and remove shapes as well as group shapes
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 keywords: 
 ---
 # Working with Shapes for File-Formats Platform DocIO Control

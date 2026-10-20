@@ -5,6 +5,7 @@ description: Learn here all about Print in Syncfusion Angular Document editor co
 platform: document-processing
 control: Print 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: Learn here all about Content control in Syncfusion Vue Document edi
 control: Content control 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

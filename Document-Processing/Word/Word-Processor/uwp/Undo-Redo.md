@@ -4,6 +4,7 @@ description: Learn here all about Undo Redo support in Syncfusion UWP RichTextBo
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: undo-redo
 ---
 # Undo Redo in UWP RichTextBox (SfRichTextBoxAdv)

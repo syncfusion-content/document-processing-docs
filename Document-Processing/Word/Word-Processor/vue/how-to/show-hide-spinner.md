@@ -5,6 +5,7 @@ description: Learn here all about Show hide spinner in Syncfusion Vue Document e
 control: Show hide spinner 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

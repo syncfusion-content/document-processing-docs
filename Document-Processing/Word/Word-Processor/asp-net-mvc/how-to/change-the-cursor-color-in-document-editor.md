@@ -5,6 +5,7 @@ description: Learn how to change the cursor color using CSS in ASP.NET MVC Docum
 platform: document-processing
 control: Change The Cursor Color
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to change the cursor color using CSS in Document Editor component

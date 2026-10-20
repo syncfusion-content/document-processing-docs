@@ -5,6 +5,7 @@ description: Learn how to enable ruler in ASP.NET MVC Document Editor component 
 platform: document-processing
 control: Enable Ruler
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 ## How to enable ruler in ASP.NET MVC Document Editor component

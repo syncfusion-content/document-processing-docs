@@ -5,6 +5,7 @@ description: Learn here all about How to in Syncfusion Vue Document editor compo
 control: How to 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

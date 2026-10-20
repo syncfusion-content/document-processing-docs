@@ -5,6 +5,7 @@ description: Learn here all about deploy document editor component for mobile in
 platform: document-processing
 control: Deploy Document Editor Component For Mobile
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

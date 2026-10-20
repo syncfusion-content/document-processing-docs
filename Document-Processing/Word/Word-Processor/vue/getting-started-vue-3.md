@@ -5,6 +5,7 @@ description: Check out and learn about Getting started vue 3 with Vue Document e
 control: Getting started vue 3 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

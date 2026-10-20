@@ -5,6 +5,7 @@ description: Learn here all about image in Syncfusion ASP.NET MVC Document Edito
 platform: document-processing
 control: Image
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

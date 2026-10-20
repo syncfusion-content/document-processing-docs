@@ -5,6 +5,7 @@ description: Learn here all about Get the selected content in Syncfusion Vue Doc
 control: Get the selected content 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: Learn here all about Auto save document in Syncfusion Angular Docum
 platform: document-processing
 control: Auto save document in document editor 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

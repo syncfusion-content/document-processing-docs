@@ -4,6 +4,7 @@ description: Learn here all about Shapes support in Syncfusion WPF RichTextBox (
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: shapes, text-box
 ---
 # Shapes in WPF RichTextBox (SfRichTextBoxAdv)

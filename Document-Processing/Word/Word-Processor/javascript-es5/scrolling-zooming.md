@@ -5,6 +5,7 @@ description: Learn here all about Scrolling zooming in Syncfusion JavaScript (ES
 platform: document-processing
 control: Scrolling zooming 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

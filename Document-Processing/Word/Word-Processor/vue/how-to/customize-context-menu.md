@@ -5,6 +5,7 @@ description: Learn here all about Customize context menu in Syncfusion Vue Docum
 control: Customize context menu 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

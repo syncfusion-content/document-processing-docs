@@ -5,6 +5,7 @@ description: Learn here all about Hide tool bar and properties pane in Syncfusio
 control: Hide tool bar and properties pane 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

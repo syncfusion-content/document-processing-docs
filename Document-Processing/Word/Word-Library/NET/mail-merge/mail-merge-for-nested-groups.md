@@ -4,6 +4,7 @@ description: Learn how to Mail merge for nested groups - replace merge fields in
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Nested Mail merge for group

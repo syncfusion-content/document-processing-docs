@@ -4,6 +4,7 @@ description: Know about the performance benchmark results of Syncfusion® .NET W
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # .NET Word library performance benchmarks

@@ -4,6 +4,7 @@ description: This section illustrates how to migrate from Word Interop to the Sy
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Migration from Office Automation to DocIO
 

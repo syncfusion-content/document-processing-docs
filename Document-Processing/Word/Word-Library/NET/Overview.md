@@ -4,6 +4,7 @@ description: .NET Word (DocIO) library to create, read, edit, and convert Word d
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Overview of Word library (DocIO)
 

@@ -5,6 +5,7 @@ description: Learn here all about Security Advisories in  ASP.NET MVC Document E
 control: Security advisories 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Security Advisories in Syncfusion EJ2 Controls

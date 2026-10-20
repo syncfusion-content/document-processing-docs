@@ -5,6 +5,7 @@ description: Learn here all about Find and replace in Syncfusion JavaScript (ES6
 platform: document-processing
 control: Find and replace 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

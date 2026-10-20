@@ -5,6 +5,7 @@ description: Learn here all about Java in Syncfusion Vue Document editor compone
 control: Java 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

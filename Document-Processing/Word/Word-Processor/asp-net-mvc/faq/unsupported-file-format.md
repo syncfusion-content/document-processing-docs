@@ -5,6 +5,7 @@ description: Learn here all about Unsupported file in Syncfusion ASP.NET MVC Doc
 platform: document-processing
 control: Unsupported file
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Why Do I Get the Unsupported Warning Message When Opening a Document in ASP.NET MVC?

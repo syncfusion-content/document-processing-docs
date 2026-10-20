@@ -5,6 +5,7 @@ description: Learn here all about Track changes in Syncfusion JavaScript (ES5) D
 platform: document-processing
 control: Track changes 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

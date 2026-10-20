@@ -4,6 +4,7 @@ description: Create Word document in Google App Engine using .NET Core Word (Doc
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Word document in Google App Engine

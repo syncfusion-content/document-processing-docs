@@ -5,6 +5,7 @@ description: Learn here all about Spell check in Syncfusion React Document edito
 control: Spell check 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

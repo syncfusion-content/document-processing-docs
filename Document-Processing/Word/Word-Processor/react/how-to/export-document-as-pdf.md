@@ -5,6 +5,7 @@ description: Learn here all about Export document as pdf in Syncfusion React Doc
 control: Export document as pdf 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

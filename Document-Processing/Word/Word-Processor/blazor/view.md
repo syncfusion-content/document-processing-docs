@@ -5,6 +5,7 @@ description: Checkout and learn here all about the view in the Syncfusion Blazor
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # View in Blazor DocumentEditor component

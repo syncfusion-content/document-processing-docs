@@ -5,6 +5,7 @@ description: Checkout and learn about overview of the Syncfusion Blazor Document
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Overview of the Blazor DocumentEditor Component

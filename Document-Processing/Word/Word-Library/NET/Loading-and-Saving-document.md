@@ -4,6 +4,7 @@ description: Learn to open and save the Word document in C# and VB.NET using Syn
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Loading & saving document
 

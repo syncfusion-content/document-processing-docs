@@ -4,6 +4,7 @@ description: Create a Word document in Console Application using .NET Word (DocI
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create a Word document in Console Application

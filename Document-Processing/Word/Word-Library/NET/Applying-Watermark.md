@@ -4,6 +4,7 @@ description: Learn how to insert text or picture watermark into a Word document 
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Applying Watermark in Word (DocIO) Library

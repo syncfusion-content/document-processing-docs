@@ -4,6 +4,7 @@ description: Learn how to modify the appearance of series in a chart in a Word d
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Customize Chart Series

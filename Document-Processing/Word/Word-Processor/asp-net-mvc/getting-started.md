@@ -5,6 +5,7 @@ description: Check out and learn about getting started with ASP.NET MVC Document
 platform: document-processing
 control: Getting Started
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

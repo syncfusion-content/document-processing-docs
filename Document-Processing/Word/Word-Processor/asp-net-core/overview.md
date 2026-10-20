@@ -5,6 +5,7 @@ description: Learn here all about overview in Syncfusion Document Editor compone
 platform: document-processing
 control: Index
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

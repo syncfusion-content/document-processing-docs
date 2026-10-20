@@ -4,6 +4,7 @@ description: Learn how to convert Word document to RTF and vice versa using the 
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # RTF Conversions in Word Library

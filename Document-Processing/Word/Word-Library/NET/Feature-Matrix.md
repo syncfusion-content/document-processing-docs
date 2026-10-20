@@ -4,6 +4,7 @@ description: Learn about the supported features of Syncfusion® .NET Word Librar
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Feature Matrix in .NET Word Library

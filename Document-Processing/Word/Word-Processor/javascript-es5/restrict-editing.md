@@ -5,6 +5,7 @@ description: Learn here all about Restrict editing in Syncfusion JavaScript (ES5
 platform: document-processing
 control: Restrict editing 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

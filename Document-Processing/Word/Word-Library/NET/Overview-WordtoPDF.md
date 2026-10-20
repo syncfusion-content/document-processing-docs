@@ -4,6 +4,7 @@ description: Learn how to convert a Word document to PDF using the .NET Word (Do
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert Word document to PDF in C#

@@ -5,6 +5,7 @@ description: Learn here all about Link in Syncfusion Vue Document editor compone
 control: Link 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: Learn here all about Bookmark in Syncfusion Angular Document editor
 platform: document-processing
 control: Bookmark 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

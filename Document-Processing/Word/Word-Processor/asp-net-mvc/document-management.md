@@ -5,6 +5,7 @@ description: Learn here all about Document Management in Syncfusion ASP.NET MVC 
 platform: document-processing
 control: Document Management
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

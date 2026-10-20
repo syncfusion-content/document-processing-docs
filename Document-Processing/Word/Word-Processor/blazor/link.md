@@ -5,6 +5,7 @@ description: Checkout and learn here all about Hyperlink and its functionality i
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Hyperlink in Blazor DocumentEditor Component

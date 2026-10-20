@@ -5,6 +5,7 @@ description: Learn here all about overview of Fields in the ASP.NET Core of Sync
 platform: document-processing
 control: Fields
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Fields in Document Editor Component

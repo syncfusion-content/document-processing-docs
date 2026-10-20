@@ -5,6 +5,7 @@ description: Learn here all about Disable header and footer edit in document edi
 platform: document-processing
 control: Disable header and footer edit in document editor 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: Learn here all about History in Syncfusion JavaScript (ES6) Documen
 platform: document-processing
 control: History 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

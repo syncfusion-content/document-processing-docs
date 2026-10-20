@@ -5,6 +5,7 @@ description: Learn here all about How to deploy word processor server docker con
 control: How to deploy word processor server docker container in azure kubernetes service 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 # How to deploy word processor server docker container in azure kubernetes service in React Document editor component

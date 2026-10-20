@@ -5,6 +5,7 @@ description: Learn here to add save button in Syncfusion React Document editor c
 control: Add save button tool bar 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

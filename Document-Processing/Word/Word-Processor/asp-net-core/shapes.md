@@ -5,6 +5,7 @@ description: Learn here all about shapes in Syncfusion Document Editor component
 platform: document-processing
 control: Shapes
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

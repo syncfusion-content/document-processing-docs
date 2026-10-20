@@ -4,6 +4,7 @@ description: Learn how to troubleshoot Mail Merge issues in the .NET Word (DocIO
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Troubleshooting Mail Merge Issues in .NET Word Library

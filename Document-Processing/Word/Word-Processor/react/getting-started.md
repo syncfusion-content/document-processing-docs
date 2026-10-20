@@ -5,6 +5,7 @@ description: Checkout and learn about Getting started with React Document editor
 control: Getting started 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

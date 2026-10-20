@@ -5,6 +5,7 @@ description: Learn how to disable optimized text measuring in Syncfusion Blazor 
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Disable Optimized Text Measuring in Blazor DocumentEditor component

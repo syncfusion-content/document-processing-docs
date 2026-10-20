@@ -5,6 +5,7 @@ description: Learn here all about Resize document editor in Syncfusion Vue Docum
 control: Resize document editor 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

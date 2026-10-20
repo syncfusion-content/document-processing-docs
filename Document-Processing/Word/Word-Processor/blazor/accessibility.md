@@ -5,6 +5,7 @@ description: Checkout and learn here all about Accessibility in Syncfusion Blazo
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Accessibility in Blazor DocumentEditor Component

@@ -5,6 +5,7 @@ description: Learn here all about Auto save document in document editor in Syncf
 control: Auto save document in document editor 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

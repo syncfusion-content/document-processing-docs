@@ -4,6 +4,7 @@ description: Learn how to work with images in a Microsoft Word document using th
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Working with Images in Word document
 

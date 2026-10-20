@@ -6,6 +6,7 @@ description: Learn how to enable ruler in Syncfusion JavaScript (ES6) Document e
 platform: document-processing
 control: Enable ruler 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: Learn here all about section format in Syncfusion ASP.NET MVC Docum
 platform: document-processing
 control: Section Format
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

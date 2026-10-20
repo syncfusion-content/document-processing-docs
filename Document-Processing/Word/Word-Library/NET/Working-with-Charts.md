@@ -4,6 +4,7 @@ description: Learn how to add, edit, and remove charts in a Word document using 
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Working with Charts in Word document
 

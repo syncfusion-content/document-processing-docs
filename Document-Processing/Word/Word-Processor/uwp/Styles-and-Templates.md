@@ -4,6 +4,7 @@ description: Learn here all about Styles and Templates support in Syncfusion UWP
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: styles-and-templates, custom-style
 ---
 # Styles and Templates in UWP RichTextBox (SfRichTextBoxAdv)

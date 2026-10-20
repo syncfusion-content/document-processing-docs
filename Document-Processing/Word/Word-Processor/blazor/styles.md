@@ -5,6 +5,7 @@ description: Checkout and learn here all about working with styles in Syncfusion
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Working with Styles in Blazor DocumentEditor Component

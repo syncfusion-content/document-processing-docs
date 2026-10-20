@@ -4,6 +4,7 @@ description: Learn here all about Document Styles support in Syncfusion WPF Rich
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: styles
 ---
 

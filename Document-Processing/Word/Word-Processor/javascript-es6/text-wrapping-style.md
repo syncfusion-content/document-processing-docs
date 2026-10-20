@@ -5,6 +5,7 @@ description: Learn here all about Text wrapping style in Syncfusion JavaScript (
 platform: document-processing
 control: Text wrapping style 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

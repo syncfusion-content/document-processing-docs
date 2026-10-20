@@ -4,6 +4,7 @@ description: Learn how to load and save a macro enabled Word documents and remov
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Working with Macros in Word document
 

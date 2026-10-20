@@ -5,6 +5,7 @@ description: Learn here all about Link in Syncfusion Document Editor component o
 platform: document-processing
 control: Link
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

@@ -4,6 +4,7 @@ description: Learn how to work with tables, rows, cells, and their formatting in
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Working with Tables in Word document
 

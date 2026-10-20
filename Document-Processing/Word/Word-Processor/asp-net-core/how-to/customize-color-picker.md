@@ -5,6 +5,7 @@ description: Learn here all about how to customize color picker in Syncfusion Do
 platform: document-processing
 control: Customize Color Picker
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

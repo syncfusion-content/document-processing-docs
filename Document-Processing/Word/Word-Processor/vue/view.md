@@ -5,6 +5,7 @@ description: Learn here all about View in Syncfusion Vue Document editor compone
 control: View 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

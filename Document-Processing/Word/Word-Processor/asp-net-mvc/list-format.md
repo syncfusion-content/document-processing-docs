@@ -5,6 +5,7 @@ description: Learn here all about List Format in Syncfusion ASP.NET MVC Document
 platform: document-processing
 control: List Format
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

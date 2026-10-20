@@ -5,6 +5,7 @@ description: Learn here all about how to set default format in Document Editor i
 platform: document-processing
 control: Set Default Format In Document Editor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

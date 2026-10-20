@@ -5,6 +5,7 @@ description: Learn here all about Section format in Syncfusion JavaScript (ES6) 
 platform: document-processing
 control: Section format 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

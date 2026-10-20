@@ -5,6 +5,7 @@ description: Learn here all about table in Syncfusion ASP.NET MVC Document Edito
 platform: document-processing
 control: Table
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 

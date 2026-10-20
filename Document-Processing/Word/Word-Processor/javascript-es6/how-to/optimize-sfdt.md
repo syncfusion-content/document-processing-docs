@@ -5,6 +5,7 @@ description: Learn here all about Optimize sfdt in Syncfusion JavaScript (ES6) D
 platform: document-processing
 control: Optimize sfdt 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

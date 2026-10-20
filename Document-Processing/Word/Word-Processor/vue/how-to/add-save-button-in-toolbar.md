@@ -5,6 +5,7 @@ description: Learn here to add save button in Syncfusion Vue Document editor com
 control: Add save button tool bar 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

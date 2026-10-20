@@ -5,6 +5,7 @@ description: Learn here all about Move selection to specific position in Syncfus
 control: Move selection to specific position 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

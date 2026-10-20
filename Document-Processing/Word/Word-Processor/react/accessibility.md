@@ -5,6 +5,7 @@ description: Learn here all about Accessibility in Syncfusion React Document edi
 control: Accessibility 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

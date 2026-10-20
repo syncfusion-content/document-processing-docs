@@ -4,6 +4,7 @@ description: Learn here all about MVVM support in Syncfusion WPF RichTextBox (Sf
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: mvvm
 ---
 # MVVM in WPF RichTextBox (SfRichTextBoxAdv)

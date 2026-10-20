@@ -4,6 +4,7 @@ description: Learn here all about how to identify whether the viewer is scrolled
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: scroll-to-bottom
 ---
 
