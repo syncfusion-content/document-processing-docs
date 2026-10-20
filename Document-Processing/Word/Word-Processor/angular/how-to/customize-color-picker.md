@@ -5,6 +5,7 @@ description: Customize the color picker appearance in Syncfusion® Angular DOCX 
 platform: document-processing
 control: Customize color picker 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: Save documents to Azure Blob Storage from Angular DOCX Editor, enab
 platform: document-processing
 control: Save document to Azure Blob Storage
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

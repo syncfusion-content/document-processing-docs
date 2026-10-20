@@ -5,6 +5,7 @@ description: The spell check feature in TypeScript DOCX Editor enables spelling 
 platform: document-processing
 control: Spell check 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: Customize the toolbar in Syncfusion® Angular DOCX Editor by adding
 platform: document-processing
 control: Customize tool bar 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

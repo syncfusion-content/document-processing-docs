@@ -5,6 +5,7 @@ description: Insert text, paragraphs, and rich-text content in the current curso
 control: Insert text in current position
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

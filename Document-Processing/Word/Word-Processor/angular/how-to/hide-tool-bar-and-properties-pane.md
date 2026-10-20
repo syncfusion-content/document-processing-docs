@@ -5,6 +5,7 @@ description: Hide the toolbar and properties pane in Syncfusion® Angular DOCX E
 platform: document-processing
 control: Hide tool bar and properties pane 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

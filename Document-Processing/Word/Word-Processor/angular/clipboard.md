@@ -5,6 +5,7 @@ description: The clipboard support in Angular DOCX Editor provides copy, cut, pa
 platform: document-processing
 control: Clipboard 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

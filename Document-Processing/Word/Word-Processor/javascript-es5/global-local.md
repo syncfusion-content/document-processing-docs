@@ -5,6 +5,7 @@ description: Global localization in JavaScript DOCX Editor enables translating b
 platform: document-processing
 control: Global local 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

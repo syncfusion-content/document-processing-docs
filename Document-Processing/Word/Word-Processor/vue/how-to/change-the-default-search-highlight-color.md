@@ -5,6 +5,7 @@ description: Change the default search highlight color in Syncfusion® Vue DOCX 
 control: Change the default search highlight color 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

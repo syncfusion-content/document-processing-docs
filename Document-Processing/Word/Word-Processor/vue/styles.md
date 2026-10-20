@@ -5,6 +5,7 @@ description: The styles feature in VueDOCX Editor enables users to apply, custom
 control: Styles 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: Open documents from OneDrive in React DOCX Editor, enabling cloud s
 platform: document-processing
 control: Open a document from OneDrive
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

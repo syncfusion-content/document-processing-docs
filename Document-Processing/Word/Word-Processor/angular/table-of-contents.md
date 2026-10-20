@@ -5,6 +5,7 @@ description: The Table of Contents feature in Angular DOCX Editor enables users 
 platform: document-processing
 control: Table of contents 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

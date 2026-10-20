@@ -4,6 +4,7 @@ description: The dialogs in WPF DOCX Editor offer built-in dialog support simila
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: dialogs
 ---
 # Dialogs in WPF DOCX Editor

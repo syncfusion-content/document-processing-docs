@@ -5,6 +5,7 @@ description: Track changes in React DOCX Editor records document modifications a
 control: Track changes 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

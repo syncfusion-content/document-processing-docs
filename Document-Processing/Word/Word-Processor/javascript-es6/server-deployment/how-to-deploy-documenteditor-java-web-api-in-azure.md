@@ -5,6 +5,7 @@ description: Deploy the Syncfusion® TypeScript DOCX Editor Java Web API in Azur
 platform: document-processing
 control: How to deploy documenteditor java web api in azure 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

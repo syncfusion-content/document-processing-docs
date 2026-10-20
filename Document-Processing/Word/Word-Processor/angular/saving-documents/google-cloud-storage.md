@@ -5,6 +5,7 @@ description: Save documents to Google Cloud Storage from Angular DOCX Editor, en
 platform: document-processing
 control: Save document to Google Cloud Storage
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

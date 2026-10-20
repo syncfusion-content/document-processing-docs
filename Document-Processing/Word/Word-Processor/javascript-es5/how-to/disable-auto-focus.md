@@ -5,6 +5,7 @@ description: Disable the auto focus behavior in Syncfusion® JavaScript DOCX Edi
 platform: document-processing
 control: Disable Auto Focus
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

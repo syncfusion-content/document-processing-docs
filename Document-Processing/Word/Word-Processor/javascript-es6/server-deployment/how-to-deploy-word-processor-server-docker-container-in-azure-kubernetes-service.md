@@ -5,6 +5,7 @@ description: Deploy the Syncfusion® TypeScript DOCX Editor Docker image to Azur
 platform: document-processing
 control: How to deploy word processor server docker container in azure kubernetes service 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 # How to Deploy TypeScript DOCX Editor Docker Image on AKS

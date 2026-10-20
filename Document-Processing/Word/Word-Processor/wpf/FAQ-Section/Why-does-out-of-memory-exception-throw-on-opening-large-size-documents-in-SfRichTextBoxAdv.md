@@ -4,6 +4,7 @@ description: Troubleshoot memory exceptions when opening large documents in Sync
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: out-of-memory-exception
 ---
 

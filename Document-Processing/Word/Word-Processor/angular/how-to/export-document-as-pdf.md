@@ -5,6 +5,7 @@ description: Export documents as PDF in Syncfusion® Angular DOCX Editor using c
 platform: document-processing
 control: Export document as PDF
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: Insert text, paragraphs, and rich text content at the current curso
 platform: document-processing
 control: Insert text or image in table programmatically
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

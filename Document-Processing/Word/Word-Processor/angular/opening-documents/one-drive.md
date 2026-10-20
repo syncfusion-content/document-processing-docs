@@ -5,6 +5,7 @@ description: Open documents from OneDrive in Angular DOCX Editor, enabling cloud
 platform: document-processing
 control: Open document from OneDrive
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

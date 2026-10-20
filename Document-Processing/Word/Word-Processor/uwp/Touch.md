@@ -1,17 +1,16 @@
 ---
-title: Touch in UWP DOCX Editor | Syncfusion
-description: The touch in UWP DOCX Editor supports touch manipulations like pan, scroll, and zoom, enabled through the ManipulationMode property configuration.
+title: Touch in UWP RichTextBox control | Syncfusion
+description: Learn here all about Touch support in Syncfusion UWP RichTextBox (SfRichTextBoxAdv) control and more.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: touch,touch-manipulation,manipulation-mode,manipulationmodes
+appliesto: DOCX Editor SDK, UI Component Suite
+keywords: Touch
 ---
-# Touch in UWP DOCX Editor
+# Touch in UWP RichTextBox (SfRichTextBoxAdv)
 
-In a UWP application, you should specify the `ManipulationMode` property on the controls in order to enable touch manipulations such as pan, scroll, and zoom. Similarly, set the `ManipulationMode` property on the [`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html) control.
-
-The following code example demonstrates how to configure all touch manipulations on the SfRichTextBoxAdv control.
-
+In UWP application, you should specify the **ManipulationMode** property for the controls in order to enable touch manipulations such as pan/scroll and zoom. Similarly, you should specify the **ManipulationMode** property for the SfRichTextBoxAdv control.
+The following code example demonstrates how to configure all the touch manipulations in SfRichTextBoxAdv control.
 {% tabs %}
 {% highlight xaml %}
 <RichTextBoxAdv:SfRichTextBoxAdv x:Name="richTextBoxAdv" ManipulationMode="All" xmlns:RichTextBoxAdv="using:Syncfusion.UI.Xaml.RichTextBoxAdv"/>
@@ -22,7 +21,7 @@ The following code example demonstrates how to configure all touch manipulations
 {% highlight c# %}
 // Initializes a new instance of SfRichTextBoxAdv control.
 SfRichTextBoxAdv richTextBoxAdv = new SfRichTextBoxAdv();
-// Sets the manipulation mode for the control.
+// Specifies the manipulation mode for the control.
 richTextBoxAdv.ManipulationMode = ManipulationModes.All;
 
 
@@ -30,15 +29,14 @@ richTextBoxAdv.ManipulationMode = ManipulationModes.All;
 
 {% endtabs %}
 
-You can configure the specific touch manipulations for a `UIElement` by setting appropriate combinations of `ManipulationModes` flags. The following table lists the `ManipulationModes` values that enable specific touch manipulations.
-
+You can configure the specific touch manipulations for an UIElement by setting appropriate combinations of Manipulation modes. The following table demonstrates the Manipulation modes for enabling specific touch manipulations.
 <table>
 <tr>
 <td>
 {{'**Touch Manipulation**'| markdownify }}
 </td>
 <td>
-{{'**ManipulationModes**'| markdownify }}
+{{'**ManipulationMode**'| markdownify }}
 </td>
 </tr>
 <tr>
@@ -83,8 +81,7 @@ Scale, ScaleInertia, TranslateX, TranslateY, TranslateInertia
 </tr>
 </table>
 
-The following code example demonstrates how to configure the touch manipulations for scrolling and scaling alone in the SfRichTextBoxAdv control.
-
+The following code example demonstrates how to configure the touch manipulations for scrolling and scaling alone in SfRichTextBoxAdv control.
 {% tabs %}
 {% highlight xaml %}
 <RichTextBoxAdv:SfRichTextBoxAdv x:Name="richTextBoxAdv" ManipulationMode="Scale, ScaleInertia, TranslateX, TranslateY, TranslateInertia" xmlns:RichTextBoxAdv="using:Syncfusion.UI.Xaml.RichTextBoxAdv"/>
@@ -95,7 +92,7 @@ The following code example demonstrates how to configure the touch manipulations
 {% highlight c# %}
 // Initializes a new instance of SfRichTextBoxAdv control.
 SfRichTextBoxAdv richTextBoxAdv = new SfRichTextBoxAdv();
-// Sets the manipulation mode for the control.
+// Specifies the manipulation mode for the control.
 richTextBoxAdv.ManipulationMode = ManipulationModes.Scale | ManipulationModes.ScaleInertia | ManipulationModes.TranslateX | ManipulationModes.TranslateY | ManipulationModes.TranslateInertia;
 
 
@@ -103,8 +100,3 @@ richTextBoxAdv.ManipulationMode = ManipulationModes.Scale | ManipulationModes.Sc
 
 {% endtabs %}
 
-## See also
-
-- [Getting started with UWP DOCX Editor](./Getting-Started)
-- [Overview of UWP DOCX Editor](./Overview)
-- [Selection in UWP DOCX Editor](./Selection)

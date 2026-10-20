@@ -5,6 +5,7 @@ description: Learn about the introduction of Syncfusion Essential Studio React D
 control: Index 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

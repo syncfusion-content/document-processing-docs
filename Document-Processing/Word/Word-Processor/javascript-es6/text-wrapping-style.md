@@ -5,6 +5,7 @@ description: Text wrapping styles in TypeScript DOCX Editor preserve inline, squ
 platform: document-processing
 control: Text wrapping style 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

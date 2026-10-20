@@ -5,6 +5,7 @@ description: The scrolling and zooming in React DOCX Editor enables smooth docum
 control: Scrolling zooming 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

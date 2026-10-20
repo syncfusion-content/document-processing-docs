@@ -4,6 +4,7 @@ description: The automatic suggestion in WPF DOCX Editor offers a dropdown of su
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: automatic-suggestion, @mentions
 ---
 # Automatic Suggestion in WPF DOCX Editor

@@ -5,6 +5,7 @@ description: Open documents from Azure Blob storage in Angular DOCX Editor, enab
 platform: document-processing
 control: Open document from Azure Blob Storage
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

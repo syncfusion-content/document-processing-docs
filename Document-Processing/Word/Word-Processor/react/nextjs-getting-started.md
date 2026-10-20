@@ -5,6 +5,7 @@ description: Learn how to get started with Next.js application using Syncfusion 
 control: Next.js
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

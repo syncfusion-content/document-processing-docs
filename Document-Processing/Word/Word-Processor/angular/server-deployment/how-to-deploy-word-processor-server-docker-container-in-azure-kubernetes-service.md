@@ -5,6 +5,7 @@ description: Deploy the Syncfusion® Angular DOCX Editor Docker image to Azure K
 platform: document-processing
 control: How to deploy word processor server docker container in Azure Kubernetes Service
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 # How to Deploy Angular DOCX Editor Docker Image on AKS

@@ -5,6 +5,7 @@ description: Form fields in Angular DOCX Editor allow users to create, update, a
 platform: document-processing
 control: Form fields
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

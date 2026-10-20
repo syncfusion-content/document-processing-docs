@@ -4,6 +4,7 @@ description: The shapes in WPF DOCX Editor offer preservation support for text b
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: shapes, text-box
 ---
 # Shapes in WPF DOCX Editor

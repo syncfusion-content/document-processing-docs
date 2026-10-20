@@ -5,6 +5,7 @@ description: Configure ASP.NET Core web services in the React DOCX Editor to han
 control: Core 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

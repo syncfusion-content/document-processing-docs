@@ -5,6 +5,7 @@ description: Customize the context menu in Syncfusion® Angular DOCX Editor by a
 platform: document-processing
 control: Customize context menu
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

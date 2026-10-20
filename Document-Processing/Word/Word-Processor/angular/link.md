@@ -5,6 +5,7 @@ description: The link feature in Angular DOCX Editor enables users to insert, ed
 platform: document-processing
 control: Link 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

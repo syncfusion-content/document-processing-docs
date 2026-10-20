@@ -5,6 +5,7 @@ description: Get the current word or paragraph content as plain text and SFDT fo
 platform: document-processing
 control: Get current word
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: Automatically save edited documents to the server at regular interv
 platform: document-processing
 control: Auto Save Document
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

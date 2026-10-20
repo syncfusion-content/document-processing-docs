@@ -5,6 +5,7 @@ description: Open a default document in Syncfusion® TypeScript DOCX Editor duri
 platform: document-processing
 control: Open a Default Document
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

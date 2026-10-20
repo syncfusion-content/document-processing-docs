@@ -5,6 +5,7 @@ description: Text wrapping styles in React DOCX Editor preserve inline, square, 
 control: Text wrapping style 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion Vue 3 DOCX Editor cont
 control: Getting started vue 3
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

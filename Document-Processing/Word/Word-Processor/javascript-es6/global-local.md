@@ -5,6 +5,7 @@ description: Global localization in TypeScript DOCX Editor enables translating b
 platform: document-processing
 control: Global and Local
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

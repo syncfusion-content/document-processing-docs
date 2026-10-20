@@ -5,6 +5,7 @@ description: Document management in Angular DOCX Editor provides editing restric
 platform: document-processing
 control: Document management
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

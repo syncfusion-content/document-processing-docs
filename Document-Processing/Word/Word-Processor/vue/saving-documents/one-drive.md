@@ -5,6 +5,7 @@ description: Save documents to OneDrive from Vue DOCX Editor, enabling cloud sto
 platform: document-processing
 control: Save document to OneDrive
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

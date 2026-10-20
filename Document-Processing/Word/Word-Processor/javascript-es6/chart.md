@@ -5,6 +5,7 @@ description: Chart support in TypeScript DOCX Editor ensures accurate rendering 
 platform: document-processing
 control: Chart
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

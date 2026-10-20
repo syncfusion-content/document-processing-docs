@@ -5,6 +5,7 @@ description: Open Syncfusion® Vue DOCX Editor in read-only mode to prevent docu
 control: Read only by default 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

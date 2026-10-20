@@ -4,6 +4,7 @@ description: The document structure in Syncfusion® UWP DOCX Editor represents t
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: document-structure
 ---
 # Document Structure in UWP DOCX Editor

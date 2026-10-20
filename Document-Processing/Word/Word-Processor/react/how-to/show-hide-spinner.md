@@ -5,6 +5,7 @@ description: Show or hide loading indicators in Syncfusion® React DOCX Editor w
 control: Show hide spinner 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

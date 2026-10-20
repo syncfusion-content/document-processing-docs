@@ -5,6 +5,7 @@ description: Automatically save edited documents to AWS S3 at regular intervals 
 control: Auto save document
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

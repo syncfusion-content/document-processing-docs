@@ -1,15 +1,16 @@
 ---
-title: Selection in WPF DOCX Editor | Syncfusion
-description: The selection in WPF DOCX Editor supports selecting a portion of the document, enabling selection through mouse, touch, keyboard, or supported APIs.
+title: Selection in WPF RichTextBox control | Syncfusion
+description: Learn here all about Selection support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: selection,cursor,selection-range,text-position,lost-focus,baseline-alignment
+appliesto: DOCX Editor SDK, UI Component Suite
+keywords: selection
 ---
-# Selection in WPF DOCX Editor
+# Selection in WPF RichTextBox (SfRichTextBoxAdv)
 
-The [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) supports selecting a portion of the document through UI interactions (mouse, touch, keyboard) or through the [Selection](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_Selection) API. A [TextPosition](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.TextPosition.html) represents a position in the document as a paragraph instance plus an offset within that paragraph.
-The following sample code demonstrates how to retrieve the text position from the document using a paragraph instance and an offset value.
+The SfRichTextBoxAdv supports selecting a portion of the document either through UI interactions by using mouse, touch, keyboard or through supported APIs.
+The following sample code demonstrates how to retrieve text position from document using paragraph instance and offset value.
 {% tabs %}
 {% highlight c# %}
 // Gets the first section of the document.
@@ -31,8 +32,8 @@ Dim sectionAdv As SectionAdv = richTextBoxAdv.Document.Sections(0)
 {% highlight c# %}
 // Gets the first block from the section, which is a paragraph.
 ParagraphAdv paragraphAdv = sectionAdv.Blocks[0] as ParagraphAdv;
-// Gets the text position of the specified paragraph at offset 24.
-// TextPosition is returned as null if no such paragraph or offset exists in the document.
+// Gets the text position of the specified paragraph at offset 24. 
+// TextPosition is returned as null, if no such paragraph or offset exists in the document.
 TextPosition startPosition = richTextBoxAdv.Document.GetTextPosition(paragraphAdv, 24);
 
 
@@ -40,8 +41,8 @@ TextPosition startPosition = richTextBoxAdv.Document.GetTextPosition(paragraphAd
 {% highlight VB %}
 ' Gets the first block from the section, which is a paragraph.
 Dim paragraphAdv As ParagraphAdv = TryCast(sectionAdv.Blocks(0), ParagraphAdv)
-' Gets the text position of the specified paragraph at offset 24.
-' TextPosition is returned as null if no such paragraph or offset exists in the document.
+' Gets the text position of the specified paragraph at offset 24. 
+' TextPosition is returned as null, if no such paragraph or offset exists in the document.
 Dim startPosition As TextPosition = richTextBoxAdv.Document.GetTextPosition(paragraphAdv, 24)
 
 
@@ -71,15 +72,21 @@ Dim position As TextPosition = richTextBoxAdv.Document.GetTextPosition(paragraph
 
 {% endtabs %}
 
-The hierarchical index uses the following grammar depending on the block type:
-
-* **Paragraph** — Use the format `"section-index;block-index;offset-in-paragraph"`. Example: `"0;0;1"` returns the text position of the first paragraph of the first section at offset 1.
-* **Table** — Use the format `"table-index;row-index;cell-index;block-index;offset-in-paragraph"`. Example: `"0;2;1;1;0;21"` returns the text position of the first block of the second cell of the second row of the table at the third block of the first section, at offset 21.
-* **Comment** — Use the format `"paragraph-index;offset-in-paragraph;C;block-index;offset-in-paragraph"` where `C` indicates a comment. Example: `"0;3;16;C;2;6"` returns the text position of the third block of the comment that appears at offset 16 in the third paragraph of the first section, at offset 6.
-
-The following sample code demonstrates how to retrieve the text position from the document using the [GetTextPosition](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.DocumentAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_DocumentAdv_GetTextPosition_System_String_) method with a hierarchical index string.
+The following sample code demonstrates how to retrieve text position from document using hierarchical index.
 {% tabs %}
 {% highlight c# %}
+/*
+The hierarchical index should be given as "section-index;block-index;offset-in-paragraph"
+If block in the index is paragraph, then next value is considered as offset and position is retrieved.
+For example "0;0;1" gets text position of Paragraph (first block of first section) at the offset=1.
+If block in the index is table, then next value is considered as row index and following value as cell index.
+The value after cell is again a block index. Then the same process continues.
+"table-index;row-index;cell-index;block-index;"
+For example "0;2;1;1;0;21" gets text position of Paragraph at first block of second cell of second row of table (at third block of first section) at the offset=21.
+If offset value is followed by "C" which stands for comment, then the comment is retrieved which is followed by block index in comment. Then the process of retrieving paragraph from block index continues.
+paragraph-index;offset-in-paragraph;C;block-index;offset-in-paragraph
+For example "0;3;16;C;2;6", gets text position of Paragraph at third block of comment (present at offset = 16 in paragraph at third block of first section) at the offset=6.
+*/
 // Gets the text position from the document based on hierarchical index.
 TextPosition position = richTextBoxAdv.Document.GetTextPosition("0;0;24");
 /* Here text position returned should be first section's first block (which is paragraph) and offset=24. */
@@ -87,9 +94,22 @@ TextPosition position = richTextBoxAdv.Document.GetTextPosition("0;0;24");
 
 {% endhighlight %}
 {% highlight VB %}
+'
+'The hierarchical index should be given as "section-index;block-index;offset-in-paragraph"
+'If block in the index is paragraph, then next value is considered as offset and position is retrieved.
+'For example "0;0;1" gets text position of Paragraph (first block of first section) at the offset=1.
+'If block in the index is table, then next value is considered as row index and following value as cell index.
+'The value after cell is again a block index. Then the same process continues.
+'"table-index;row-index;cell-index;block-index;"
+'For example "0;2;1;1;0;21" gets text position of Paragraph at first block of second cell of second row of table (at third block of first section) at the offset=21.
+'If offset value is followed by "C" which stands for comment, then the comment is retrieved which is followed by block index in comment. Then the process of retrieving paragraph from block index continues.
+'paragraph-index;offset-in-paragraph;C;block-index;offset-in-paragraph
+'For example "0;3;16;C;2;6", gets text position of Paragraph at third block of comment (present at offset = 16 in paragraph at third block of first section) at the offset=6.
+'
+
 ' Gets the text position from the document based on hierarchical index.
 Dim position As TextPosition = richTextBoxAdv.Document.GetTextPosition("0;0;24")
-' Here text position returned should be first section's first block (which is paragraph) and offset=24.
+' Here text position returned should be first section's first block (which is paragraph) and offset=24. 
 
 
 {% endhighlight %}
@@ -155,9 +175,9 @@ richTextBoxAdv.Selection.[Select](endPosition, startPosition)
 
 N> You can select a text position within a comment with another text position within the same comment only. It is not possible to select a text position within comment with a text position that exists outside of that comment.
 
-## Multi selection
+## Multi Selection
 
-The SfRichTextBoxAdv also supports selecting different portions of the document at a time. The following code example demonstrates how to perform multi selection in SfRichTextBoxAdv using the [SelectionRanges](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SelectionAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SelectionAdv_SelectionRanges) collection.
+The SfRichTextBoxAdv also supports selecting different portions of the document at a time. The following code example demonstrates how to perform multi selection in SfRichTextBoxAdv.
 {% tabs %}
 {% highlight c# %}
 // Retrieves the position of the first paragraph start.
@@ -192,16 +212,12 @@ richTextBoxAdv.Selection.SelectionRanges.Add(startPosition2, endPosition2)
 
 {% endtabs %}
 
-## Apply formatting for selection
+## Apply Formatting for selection
 
-The SfRichTextBoxAdv supports the following format properties that can be applied to the selection content.
+The SfRichTextBoxAdv supports the following format properties that can be applied for selection contents.
 Character Format-bold, italic, font size, font family, font color, highlight color, underline, strikethrough, subscript, and superscript.
-
 Paragraph Format-before and after spacing, first line, left and right indenting, text justification, line spacing, and multilevel list.
 Selection Format-page size and page margin.
-
-### Subscript
-
 The following sample code demonstrates how to apply subscript format for the selected content.
 {% tabs %}
 {% highlight c# %}
@@ -217,8 +233,6 @@ richTextBoxAdv.Selection.CharacterFormat.BaselineAlignment = Syncfusion.Windows.
 
 {% endhighlight %}
 {% endtabs %}
-
-### After spacing
 
 The following sample code demonstrates how to apply after spacing for the selected paragraphs.
 {% tabs %}
@@ -237,8 +251,6 @@ richTextBoxAdv.Selection.ParagraphFormat.AfterSpacing = 24
 
 {% endtabs %}
 
-### Page margin
-
 The following sample code demonstrates how to apply page margin for the selected sections.
 {% tabs %}
 {% highlight c# %}
@@ -256,12 +268,9 @@ richTextBoxAdv.Selection.SectionFormat.PageMargin = New Thickness(96, 48, 96, 48
 
 {% endtabs %}
 
-## Binding selection format properties
+## Binding Selection format properties
 
-The SfRichTextBoxAdv supports binding the rich-text format options of the selection content.
-
-### Bold
-
+The SfRichTextBoxAdv provides support to bind the rich-text format options of selection content. 
 The following code sample demonstrates how to bind the bold format option of SfRichTextBoxAdv.
 {% tabs %}
 {% highlight xaml %}
@@ -294,9 +303,7 @@ toggleButton.SetBinding(ToggleButton.IsCheckedProperty, binding)
 
 {% endtabs %}
 
-### Text alignment
-
-The following code sample demonstrates how to bind the text alignment option to a toggle button, using a converter.
+The following code sample demonstrates how to bind the bold format option of SfRichTextBoxAdv.
 {% tabs %}
 {% highlight xaml %}
 <!—Binds IsChecked property of toggle button to Selection text alignment paragraph format -->
@@ -338,17 +345,17 @@ The following keyboard shortcuts are supported by SfRichTextBoxAdv for navigatio
 The following keyboard shortcuts are supported by SfRichTextBoxAdv for selection.
 <table><tr><td>Selection Shortcut<br/></td><td>Description<br/></td></tr><tr><td>CTRL + Right Arrow<br/></td><td>Extends selection to one position forward.<br/></td></tr><tr><td>CTRL + Left Arrow<br/></td><td>Extends selection to one position backward.<br/></td></tr><tr><td>CTRL + Down Arrow<br/></td><td>Extends selection to the same position at next line.<br/></td></tr><tr><td>CTRL + Up Arrow<br/></td><td>Extends selection to the same position at previous line.<br/></td></tr><tr><td>SHIFT + Home<br/></td><td>Extends selection to start of the current line.<br/></td></tr><tr><td>SHIFT + End<br/></td><td>Extends selection to end of the current line.<br/></td></tr><tr><td>CTRL + SHIFT + Home<br/></td><td>Extends selection to the document start position.<br/></td></tr><tr><td>CTRL + SHIFT + End<br/></td><td>Extends selection to the document end position.<br/></td></tr><tr><td>CTRL + SHIFT + Right<br/></td><td>Extends selection to the current word end position.<br/></td></tr><tr><td>CTRL + SHIFT + Left<br/></td><td>Extends selection to the current word start position.<br/></td></tr><tr><td>CTRL + SHIFT + Down<br/></td><td>Extends selection to the current paragraph end position.<br/></td></tr><tr><td>CTRL + SHIFT + Up<br/></td><td>Extends selection to the current paragraph start position.<br/></td></tr><tr><td>CTRL + A<br/></td><td>Selects the entire document.<br/></td></tr></table>
 
-## Showing the caret and selection when the control loses focus
+## How to show blinking cursor and selection highlight even when the control lost focus
 
-The SfRichTextBoxAdv control allows you to show the blinking cursor and selection highlight even when the control does not have focus. You can choose any one of the following selection visibility options:
+The SfRichTextBoxAdv control allows you to show the blinking cursor and selection highlight even when the control doesn't have focus. You can choose any one of the following selection visibility options:
 
-* **None** - Don't display neither caret nor selection highlight when the WPF DOCX Editor control does not have focus.
+* **None** - Don't display neither caret nor selection highlight when the RichTextBox control doesn't have focus.
 
-* **ShowCaret** - Displays the caret (blinking cursor) when the WPF DOCX Editor control does not have focus.
+* **ShowCaret** - Displays the caret (blinking cursor) when the RichTextBox control doesn't have focus.
 
-* **ShowSelection** - Displays the selection highlight when the WPF DOCX Editor control does not have focus.
+* **ShowSelection** - Displays the selection highlight when the RichTextBox control doesn't have focus.
 
-The following code example demonstrates how to display the selection highlight even when the WPF DOCX Editor control does not have focus.
+The following code example demonstrates how to display the selection highlight even when the RichTextBox control doesn't have focus.
 
 {% tabs %}
 {% highlight xaml %}
@@ -359,7 +366,7 @@ The following code example demonstrates how to display the selection highlight e
 {% highlight c# %}
 // Initializes a new instance of RichTextBoxAdv.
 SfRichTextBoxAdv richTextBoxAdv = new SfRichTextBoxAdv();
-// Displays the selection highlight when the RichTextBox control does not have focus.
+// Displays the selection highlight when the RichTextBox control doesn't have focus.
 richTextBoxAdv.LostFocusBehavior = LostFocusBehavior.ShowSelection;
 
 
@@ -368,7 +375,7 @@ richTextBoxAdv.LostFocusBehavior = LostFocusBehavior.ShowSelection;
 ' Initializes a new instance of RichTextBoxAdv.
 Dim richTextBoxAdv As New SfRichTextBoxAdv()
 
-' Displays the selection highlight when the RichTextBox control does not have focus.
+' Displays the selection highlight when the RichTextBox control doesn't have focus.
 richTextBoxAdv.LostFocusBehavior = LostFocusBehavior.ShowSelection
 
 
@@ -378,9 +385,9 @@ richTextBoxAdv.LostFocusBehavior = LostFocusBehavior.ShowSelection
 
 N> This API is supported starting from release version v17.4.0.X.
 
-## Determining the editing context type
+## How to determine the editing context type
 
-The SfRichTextBoxAdv control allows you to know the editing context type based on the selected content through the [EditingContext](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SelectionAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SelectionAdv_EditingContext) and its [Type](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.EditingContext.html#Syncfusion_Windows_Controls_RichTextBoxAdv_EditingContext_Type) property of [EditingContextType](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.EditingContextType.html). The following are the editing context types:
+The SfRichTextBoxAdv control allows you to know the editing context type based on the selected content. The following are the editing context types:
 
 * **Text** - Denotes that the editing context is text
 
@@ -395,8 +402,8 @@ The following code example demonstrates how to determine the editing context typ
 // Initializes a new instance of RichTextBoxAdv.
 SfRichTextBoxAdv richTextBoxAdv = new SfRichTextBoxAdv();
 if (richTextBoxAdv.Selection.EditingContext.Type == EditingContextType.Text)
-{
-}
+ {
+ }
 
 
 {% endhighlight %}
@@ -411,11 +418,11 @@ End If
 
 {% endtabs %}
 
-## Deleting the selected content
-
+## How to delete the selected content
+ 
 The SfRichTextBoxAdv supports deleting the selected portion of the document either through UI command, keyboard or through supported APIs.
 
-The following code sample demonstrates how to delete the selected portion of the document using the [DeleteKeyCommand](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_DeleteKeyCommand).
+The following code sample demonstrates how to delete the selected portion of the document using the DeleteKeyCommand.
 {% tabs %}
 {% highlight Xaml %}
 <!-- Binds button to the DeleteKeyCommand -->
@@ -425,7 +432,7 @@ The following code sample demonstrates how to delete the selected portion of the
 
 {% endtabs %}
 
-The following code sample demonstrates how to delete the selected portion of the document using the [Delete](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SelectionAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SelectionAdv_Delete) method. This method is valid only when the selection is non-empty, and it returns true if the selected content is deleted. Otherwise false.
+The following code sample demonstrates how to delete the selected portion of the document using the Delete method. This method is valid only when the selection is non-empty, and it returns true if the selected content is deleted. Otherwise false.
 
 {% tabs %}
 {% highlight c# %}
@@ -441,12 +448,4 @@ Dim isDeleted As Boolean = richTextBoxAdv.Selection.Delete()
 {% endtabs %}
 
 N> This API is supported starting from release version v18.2.0.X.
-
-
-N> You can refer to our [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF DOCX Editor example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
-
-## See also
-
-- [Commands in WPF DOCX Editor](./Commands)
-- [Document Structure in WPF DOCX Editor](./Document-Structure)
-- [Document Properties in WPF DOCX Editor](./Document-Properties)
+You can refer to our [WPF RichTextBox](https://www.syncfusion.com/wpf-controls/richtextbox) feature tour page for its groundbreaking feature representations.You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/wpf-demos/tree/master/richtextbox) to knows how to render and configure the editing tools.

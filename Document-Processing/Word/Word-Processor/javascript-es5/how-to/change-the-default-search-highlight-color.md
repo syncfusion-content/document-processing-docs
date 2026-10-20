@@ -5,6 +5,7 @@ description: Change the default search highlight color in Syncfusion® JavaScrip
 platform: document-processing
 control: Change the default search highlight color 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

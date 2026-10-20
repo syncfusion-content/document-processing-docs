@@ -5,6 +5,7 @@ description: Save documents to AWS S3 from ASP.NET Core DOCX Editor, enabling cl
 platform: document-processing
 control: Save document to AWS S3
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

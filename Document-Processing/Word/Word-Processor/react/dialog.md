@@ -5,6 +5,7 @@ description: The dialogs in React DOCX Editor provides built-in dialogs to edit 
 control: Dialog 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

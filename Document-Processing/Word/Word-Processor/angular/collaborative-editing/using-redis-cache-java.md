@@ -5,6 +5,7 @@ description: The collaborative editing feature in Angular DOCX Editor supports r
 platform: document-processing
 control: Collaborative Editing Java
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

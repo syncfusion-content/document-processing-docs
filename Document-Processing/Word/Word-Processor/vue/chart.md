@@ -5,6 +5,7 @@ description: Chart support in Vue DOCX Editor ensures accurate rendering and pre
 control: Chart 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

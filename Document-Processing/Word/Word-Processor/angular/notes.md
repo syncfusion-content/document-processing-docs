@@ -5,6 +5,7 @@ description: The footnote and endnote support in Angular DOCX Editor enables use
 platform: document-processing
 control: Notes 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

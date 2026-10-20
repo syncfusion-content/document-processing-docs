@@ -5,6 +5,7 @@ description: Open Syncfusion® JavaScript DOCX Editor in read-only mode to preve
 platform: document-processing
 control: Read-Only by Default
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: The find and replace feature in Angular DOCX Editor helps users qui
 platform: document-processing
 control: Find and replace
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: The collaborative editing feature in Vue DOCX Editor supports real-
 platform: document-processing
 control: Collaborative Editing 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

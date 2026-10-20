@@ -5,6 +5,7 @@ description: Ribbon in TypeScript DOCX Editor provides a tabbed command interfac
 platform: document-processing
 control: Ribbon
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

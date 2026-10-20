@@ -5,6 +5,7 @@ description: Override default keyboard shortcuts in Syncfusion® JavaScript DOCX
 platform: document-processing
 control: Override Keyboard Shortcuts
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

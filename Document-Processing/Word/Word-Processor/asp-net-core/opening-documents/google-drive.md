@@ -5,6 +5,7 @@ description: Open documents from Google Drive in ASP.NET Core DOCX Editor, enabl
 platform: document-processing
 control: Open document from Google Drive
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: Deploy the Syncfusion® JavaScript DOCX Editor for mobile browsers 
 platform: document-processing
 control: Deploy DOCX Editor component for mobile
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

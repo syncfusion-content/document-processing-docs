@@ -5,6 +5,7 @@ description: Save documents to Google Drive from TypeScript DOCX Editor, enablin
 platform: document-processing
 control: Save a Document to Google Drive
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

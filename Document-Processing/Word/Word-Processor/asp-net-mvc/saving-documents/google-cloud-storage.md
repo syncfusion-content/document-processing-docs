@@ -5,6 +5,7 @@ description: Learn how to save a document to Google Cloud Storage in the Syncfus
 platform: document-processing
 control: Save document to Google Cloud Storage
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: Text format properties in TypeScript DOCX Editor enables customizin
 platform: document-processing
 control: Text format 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

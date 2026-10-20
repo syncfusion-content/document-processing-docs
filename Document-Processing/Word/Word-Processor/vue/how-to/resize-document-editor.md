@@ -5,6 +5,7 @@ description: Adjust the height and width of the Syncfusion® Vue DOCX Editor to 
 control: Resize DOCX Editor 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

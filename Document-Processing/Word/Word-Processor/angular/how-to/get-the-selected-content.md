@@ -5,6 +5,7 @@ description: Get selected content as plain text and SFDT rich text in Syncfusion
 platform: document-processing
 control: Get the selected content
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

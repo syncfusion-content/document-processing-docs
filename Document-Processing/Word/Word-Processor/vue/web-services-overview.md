@@ -5,6 +5,7 @@ description: Learn about the overview of web services in Syncfusion Essential St
 control: Web services 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

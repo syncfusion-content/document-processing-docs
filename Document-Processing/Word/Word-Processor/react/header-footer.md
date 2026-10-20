@@ -5,6 +5,7 @@ description: Headers and footers in React DOCX Editor enable adding and customiz
 control: Header and Footer
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

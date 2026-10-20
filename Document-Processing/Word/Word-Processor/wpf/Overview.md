@@ -4,6 +4,7 @@ description: Learn about the introduction of Syncfusion Essential Studio WPF DOC
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: overview, richtextboxadv, sfrichtextboxadv
 ---
 # About Syncfusion WPF DOCX Editor Control

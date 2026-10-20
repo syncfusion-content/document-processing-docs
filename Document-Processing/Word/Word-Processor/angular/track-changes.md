@@ -5,6 +5,7 @@ description: Track changes in Angular DOCX Editor records document modifications
 platform: document-processing
 control: Track changes
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

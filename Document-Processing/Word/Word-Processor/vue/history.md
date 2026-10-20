@@ -5,6 +5,7 @@ description: History in Vue DOCX Editor tracks editing actions to enable undo an
 control: History 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

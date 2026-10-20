@@ -5,6 +5,7 @@ description: Open a default document in Syncfusion® Angular DOCX Editor during 
 platform: document-processing
 control: Open default document
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: Print feature in Angular DOCX Editor enables printing documents wit
 platform: document-processing
 control: Print 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

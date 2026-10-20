@@ -5,6 +5,7 @@ description: The dialogs in JavaScript DOCX Editor provides built-in dialogs to 
 platform: document-processing
 control: Dialog 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

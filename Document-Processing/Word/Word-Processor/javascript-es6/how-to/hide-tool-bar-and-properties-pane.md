@@ -5,6 +5,7 @@ description: Hide the toolbar and properties pane in Syncfusion® TypeScript DOC
 platform: document-processing
 control: Hide Toolbar and Properties Pane
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

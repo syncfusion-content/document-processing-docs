@@ -5,6 +5,7 @@ description: The clipboard support in React DOCX Editor provides copy, cut, past
 control: Clipboard
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

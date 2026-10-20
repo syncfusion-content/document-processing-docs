@@ -5,6 +5,7 @@ description: The find and replace feature in TypeScript DOCX Editor helps users 
 platform: document-processing
 control: Find and Replace
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

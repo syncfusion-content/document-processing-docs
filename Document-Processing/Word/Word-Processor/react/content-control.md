@@ -5,6 +5,7 @@ description: The content control feature in React DOCX Editor provides built-in 
 control: Content Control 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

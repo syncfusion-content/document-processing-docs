@@ -5,6 +5,7 @@ description: The clipboard support in Vue DOCX Editor provides copy, cut, paste,
 control: Clipboard 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

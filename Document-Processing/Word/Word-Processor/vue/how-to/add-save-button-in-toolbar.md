@@ -5,6 +5,7 @@ description: Add a custom save button to the toolbar in Syncfusion® Vue DOCX Ed
 control: Add save button tool bar 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

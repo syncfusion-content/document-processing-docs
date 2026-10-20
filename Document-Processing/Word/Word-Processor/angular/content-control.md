@@ -5,6 +5,7 @@ description: The content control feature in Angular DOCX Editor provides built-i
 platform: document-processing
 control: Content Control 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

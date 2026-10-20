@@ -5,6 +5,7 @@ description: The export feature in JavaScript DOCX Editor enables users to save 
 platform: document-processing
 control: Server side export 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: The clipboard support in Blazor DOCX Editor provides copy, cut, pas
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Clipboard in Blazor DOCX Editor

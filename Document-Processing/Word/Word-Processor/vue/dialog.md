@@ -5,6 +5,7 @@ description: The dialogs in Vue DOCX Editor provides built-in dialogs to edit te
 control: Dialog 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

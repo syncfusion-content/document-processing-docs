@@ -5,6 +5,7 @@ description: Show or hide loading indicators in Syncfusion® TypeScript DOCX Edi
 platform: document-processing
 control: Show or Hide Spinner
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

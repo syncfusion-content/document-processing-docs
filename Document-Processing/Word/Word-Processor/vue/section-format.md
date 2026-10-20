@@ -5,6 +5,7 @@ description: The section format feature in Vue DOCX Editor enables users to cust
 control: Section format 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

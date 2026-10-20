@@ -5,6 +5,7 @@ description: Open documents from Google Drive in JavaScript DOCX Editor, enablin
 platform: document-processing
 control: Open document from Google Drive
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

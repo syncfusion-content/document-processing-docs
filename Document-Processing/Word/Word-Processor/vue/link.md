@@ -5,6 +5,7 @@ description: The hyperlink feature in Vue DOCX Editor enables users to insert, e
 control: Link 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

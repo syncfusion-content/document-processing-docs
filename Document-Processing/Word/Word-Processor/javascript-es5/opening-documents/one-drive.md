@@ -5,6 +5,7 @@ description: Open documents from OneDrive in JavaScript DOCX Editor, enabling cl
 platform: document-processing
 control: Open document from One Drive
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

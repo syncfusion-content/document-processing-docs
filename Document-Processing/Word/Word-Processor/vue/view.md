@@ -5,6 +5,7 @@ description: View in Vue DOCX Editor enables web layout, ruler display, and head
 control: View 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

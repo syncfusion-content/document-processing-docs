@@ -5,6 +5,7 @@ description: The bookmark feature in TypeScript DOCX Editor lets users add, mana
 platform: document-processing
 control: Bookmark
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

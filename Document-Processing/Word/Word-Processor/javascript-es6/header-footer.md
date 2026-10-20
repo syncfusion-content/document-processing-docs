@@ -5,6 +5,7 @@ description: Headers and footers in TypeScript DOCX Editor enable adding and cus
 platform: document-processing
 control: Header and Footer
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: Enable the ruler in Syncfusion® React DOCX Editor to set margins, 
 control: Enable Ruler
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

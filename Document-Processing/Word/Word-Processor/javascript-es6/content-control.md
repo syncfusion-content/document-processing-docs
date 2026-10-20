@@ -5,6 +5,7 @@ description: The content control feature in TypeScript DOCX Editor provides buil
 platform: document-processing
 control: Content Control
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

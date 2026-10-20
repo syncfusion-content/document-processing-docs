@@ -5,6 +5,7 @@ description: Fields in Angular DOCX Editor enable inserting and updating documen
 platform: document-processing
 control: Fields
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

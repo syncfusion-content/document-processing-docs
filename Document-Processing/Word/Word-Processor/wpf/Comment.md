@@ -4,6 +4,7 @@ description: The comments feature in WPF DOCX Editor offers note or annotation s
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: comment
 ---
 # Comments in WPF DOCX Editor

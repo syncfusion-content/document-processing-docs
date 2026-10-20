@@ -5,6 +5,7 @@ description: The bookmark feature in Vue DOCX Editor lets users add, manage, and
 control: Bookmark 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 
