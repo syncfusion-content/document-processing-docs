@@ -3,7 +3,8 @@ title: Create Word document in Google Cloud | Syncfusion
 description: This section illustrates how to create Word documents in Google Cloud Platform using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO 
-documentation: UG 
+documentation: UG
+appliesto: Document SDK 
 --- 
 
 # Create Word document in Google Cloud
