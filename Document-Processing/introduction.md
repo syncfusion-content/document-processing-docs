@@ -4,6 +4,7 @@ description: Learn about overview of Syncfusion Document Solutions that process 
 platform: document-processing
 control: general
 documentation: UG
+appliesto: Document SDK, PDF Viewer SDK, DOCX Editor SDK, Spreadsheet Editor SDK
 keywords: PDF, Excel, Word, PowerPoint, Office, SDK, Automation, API, create, edit, convert, read
 ---
 
