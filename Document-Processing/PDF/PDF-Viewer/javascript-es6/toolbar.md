@@ -7,7 +7,6 @@ control: Toolbar
 documentation: ug
 domainurl: ##DomainURL##
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Customize the Organize Pages Toolbar in JavaScript (ES6) PDF Viewer

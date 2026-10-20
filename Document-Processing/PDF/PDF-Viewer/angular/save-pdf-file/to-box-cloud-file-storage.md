@@ -7,7 +7,6 @@ control: Save PDF files to Box cloud file storage
 documentation: ug
 domainurl: ##DomainURL##
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Save PDF Files to Box Cloud Storage in Angular PDF Viewer

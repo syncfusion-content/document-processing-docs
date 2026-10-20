@@ -6,7 +6,6 @@ platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # How to Reference the Blazor Smart PDF Viewer script

@@ -6,7 +6,6 @@ platform: document-processing
 control: PdfViewer
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Validate Digital Signatures in React PDF Viewer

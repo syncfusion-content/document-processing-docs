@@ -6,7 +6,6 @@ platform: document-processing
 control: Download
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Download in ASP.NET MVC PDF Viewer

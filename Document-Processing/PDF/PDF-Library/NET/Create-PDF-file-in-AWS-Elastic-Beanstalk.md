@@ -6,7 +6,6 @@ control: PDF
 documentation: UG
 keywords: aws elastic beanstalk create pdf, aws edit pdf, merge, pdf form, fill form, digital sign, table, c#, dotnet core pdf, asp generate pdf, aspx generate pdf
 appliesto: Document SDK
-
 ---
 
 # Getting Started with .NET PDF Library in AWS Elastic Beanstalk

@@ -7,7 +7,6 @@ control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Create and modify annotations in Blazor PDF Viewer

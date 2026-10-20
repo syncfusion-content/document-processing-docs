@@ -6,7 +6,6 @@ platform: document-processing
 control: AI coding assistant
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # MCP Server Setup in Windows Forms PDF Viewer

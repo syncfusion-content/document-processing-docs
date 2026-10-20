@@ -6,7 +6,6 @@ platform: document-processing
 control: PDF viewer
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # How to Get page offset collection in UWP PDF Viewer

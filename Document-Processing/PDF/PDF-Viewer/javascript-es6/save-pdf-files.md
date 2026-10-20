@@ -7,7 +7,6 @@ control: Saving PDF files
 documentation: ug
 domainurl: ##DomainURL##
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Save PDF Files in JavaScript (ES6) PDF Viewer

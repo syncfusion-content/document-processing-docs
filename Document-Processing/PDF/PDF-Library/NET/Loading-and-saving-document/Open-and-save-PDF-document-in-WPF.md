@@ -6,7 +6,6 @@ control: PDF
 documentation: UG
 keywords: wpf save pdf, wpf load pdf, c# save pdf, c# load pdf
 appliesto: Document SDK
-
 ---
 
 # Open and Save PDF Document in WPF

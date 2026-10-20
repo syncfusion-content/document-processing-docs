@@ -6,7 +6,6 @@ control: PDF
 documentation: UG
 keywords: aws lambda save pdf, aws load pdf, c# save pdf, c# load pdf
 appliesto: Document SDK
-
 ---
 
 # Open and Save PDF Document in AWS Lambda

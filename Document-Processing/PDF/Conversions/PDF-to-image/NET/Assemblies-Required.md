@@ -5,7 +5,6 @@ platform: document-processing
 control: PDF to image
 documentation: UG
 appliesto: Document SDK
-
 ---
 
 # Assemblies Required for PDF to Image Converter Library

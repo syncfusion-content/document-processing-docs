@@ -6,7 +6,6 @@ control: PDF
 documentation: UG
 keywords: Assemblies
 appliesto: Document SDK
-
 ---
 
 # HTML to PDF Conversion in Windows-Forms .NET PDF Library 

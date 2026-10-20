@@ -6,7 +6,6 @@ control: PDF to image
 documentation: UG
 keywords: Assemblies
 appliesto: Document SDK
-
 ---
 
 # Getting Started with Windows Forms PDF to Image Library

@@ -7,7 +7,6 @@ control: Text search
 documentation: ug
 domainurl: ##DomainURL##
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Text Search in Angular PDF Viewer

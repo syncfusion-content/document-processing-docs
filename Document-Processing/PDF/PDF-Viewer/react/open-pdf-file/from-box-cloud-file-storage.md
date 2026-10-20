@@ -6,7 +6,6 @@ control: Open PDF files from Box cloud file storage
 platform: document-processing
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Open PDF from Box Cloud Storage in React PDF Viewer

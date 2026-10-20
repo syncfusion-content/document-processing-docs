@@ -5,7 +5,6 @@ platform: document-processing
 control: PDF
 documentation: UG
 appliesto: Document SDK
-
 --- 
 
 # Getting Started with .NET PDF Library in Console Application

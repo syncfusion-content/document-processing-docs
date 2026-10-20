@@ -7,7 +7,6 @@ control: Open PDF files from AWS S3
 documentation: ug
 domainurl: ##DomainURL##
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Open PDF from AWS S3 in Angular PDF Viewer

@@ -6,7 +6,6 @@ control: PDF
 documentation: UG
 keywords: Assemblies
 appliesto: Document SDK
-
 ---
 
 # HTML to PDF conversion in ASP.NET MVC .NET PDF Library

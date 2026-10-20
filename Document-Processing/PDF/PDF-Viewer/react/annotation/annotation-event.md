@@ -7,7 +7,6 @@ documentation: ug
 
 domainurl: ##DomainURL##
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Annotation Events in React PDF Viewer

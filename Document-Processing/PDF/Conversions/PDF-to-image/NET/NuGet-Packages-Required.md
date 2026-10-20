@@ -5,7 +5,6 @@ platform: document-processing
 control: PDF to image
 documentation: UG
 appliesto: Document SDK
-
 ---
 
 # NuGet Packages required for PDF to Image Converter

@@ -7,7 +7,6 @@ control: Disable context menu
 
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # How to Disable the Context Menu in ASP.NET MVC PDF Viewer

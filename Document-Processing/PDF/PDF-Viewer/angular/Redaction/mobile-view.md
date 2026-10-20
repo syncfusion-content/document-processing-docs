@@ -7,7 +7,6 @@ control: PdfViewer
 documentation: ug
 domainurl: ##DomainURL##
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Organize Pages in Mobile View in Angular PDF Viewer

@@ -5,7 +5,6 @@ platform: document-processing
 control: PDF Viewer
 documentation: UG
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # About Syncfusion ASP.NET MVC PDF Viewer Control

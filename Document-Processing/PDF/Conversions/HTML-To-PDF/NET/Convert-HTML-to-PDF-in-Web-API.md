@@ -6,7 +6,6 @@ control: PDF
 documentation: UG
 keywords: pdf, aspnet core, web api, csharp, html
 appliesto: Document SDK
-
 ---
 
 # HTML to PDF conversion in ASP.NET Core Web API .NET PDF Library

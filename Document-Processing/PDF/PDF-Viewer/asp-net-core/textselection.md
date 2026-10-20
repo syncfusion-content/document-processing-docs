@@ -6,7 +6,6 @@ platform: document-processing
 control: Text selection
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 # Textselection in ASP.NET Core PDF Viewer
 

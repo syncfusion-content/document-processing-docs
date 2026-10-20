@@ -7,7 +7,6 @@ control: How to enable and disable the delete button based on annotation selecti
 documentation: ug
 domainurl: ##DomainURL##
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # How to Enable or Disable Annotations in Angular PDF Viewer

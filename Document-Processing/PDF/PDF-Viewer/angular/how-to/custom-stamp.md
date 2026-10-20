@@ -7,7 +7,6 @@ control: Add a custom stamp based on the free text bounds
 documentation: ug
 domainurl: ##DomainURL##
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # How to Use Custom Stamp Annotations in Angular PDF Viewer

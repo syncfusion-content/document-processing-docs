@@ -6,7 +6,6 @@ control: general
 documentation: UG
 keywords: PDF, SDK, Automation, API, convert
 appliesto: Document SDK
-
 ---
 
 # About Syncfusion<sup>&reg;</sup> PDF Document Conversion Library

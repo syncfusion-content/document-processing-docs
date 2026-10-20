@@ -5,7 +5,6 @@ platform: document-processing
 control: PDF to image
 documentation: UG
 appliesto: Document SDK
-
 ---
 
 # How to Run .NET 8/.NET 9 PdfToImageConverter on Azure Linux

@@ -7,7 +7,6 @@ control: Save PDF files to AWS S3
 documentation: ug
 domainurl: ##DomainURL##
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Save PDF Files to AWS S3 in Angular PDF Viewer

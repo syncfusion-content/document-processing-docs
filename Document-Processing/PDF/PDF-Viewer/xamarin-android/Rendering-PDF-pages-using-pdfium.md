@@ -6,7 +6,6 @@ platform: document-processing
 control: SfPdfViewer
 documentation: UG
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # PDFium rendering in PDF Viewer Xamarin.Android

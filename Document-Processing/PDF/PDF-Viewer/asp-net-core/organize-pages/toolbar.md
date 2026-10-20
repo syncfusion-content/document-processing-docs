@@ -7,7 +7,6 @@ control: PDF Viewer
 
 documentation: ug
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # Customize the Organize Pages Toolbar in ASP.NET Core PDF Viewer

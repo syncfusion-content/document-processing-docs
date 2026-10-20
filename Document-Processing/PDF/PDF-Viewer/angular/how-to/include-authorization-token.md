@@ -7,7 +7,6 @@ control: Include authorization token
 documentation: ug
 domainurl: ##DomainURL##
 appliesto: PDF Viewer SDK, UI Component Suite
-
 ---
 
 # How to Use an Authorization Token in Angular PDF Viewer
