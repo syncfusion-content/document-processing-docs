@@ -5,6 +5,8 @@ description: Learn about the print in the ASP.NET Core PDF Viewer and how it hel
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Print in ASP.NET Core PDF Viewer

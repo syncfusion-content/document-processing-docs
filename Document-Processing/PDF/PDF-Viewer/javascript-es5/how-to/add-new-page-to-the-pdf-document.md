@@ -6,6 +6,8 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Add a New Page to a PDF in JavaScript (ES5) PDF Viewer

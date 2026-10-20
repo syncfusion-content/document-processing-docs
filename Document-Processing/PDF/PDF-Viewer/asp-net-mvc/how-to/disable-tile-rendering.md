@@ -6,6 +6,8 @@ platform: document-processing
 control: Disable tile rendering
 
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Disable Tile Rendering in ASP.NET MVC PDF Viewer

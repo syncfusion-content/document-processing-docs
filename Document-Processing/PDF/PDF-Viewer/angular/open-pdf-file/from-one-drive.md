@@ -6,6 +6,8 @@ platform: document-processing
 control: Open PDF files from One Drive
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Open PDF from OneDrive in Angular PDF Viewer

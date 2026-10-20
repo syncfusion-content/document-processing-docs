@@ -5,6 +5,8 @@ description: Learn how to enable, apply, customize, and manage Arrow annotations
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Arrow Annotation (Shape) in Blazor PDF Viewer 

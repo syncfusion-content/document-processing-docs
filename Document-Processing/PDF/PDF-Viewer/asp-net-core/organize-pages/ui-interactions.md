@@ -5,6 +5,8 @@ description: Learn about the ui interactions in the ASP.NET Core PDF Viewer and 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Ui Interactions in ASP.NET Core PDF Viewer

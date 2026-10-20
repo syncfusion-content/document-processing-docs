@@ -5,6 +5,8 @@ description: Import and export annotations in the JavaScript (ES6) PDF Viewer as
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Import and Export Annotations in JavaScript (ES6) PDF Viewer

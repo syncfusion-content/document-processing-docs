@@ -5,6 +5,8 @@ description: Integrate the server-backed PDF Viewer control in an ASP.NET Core a
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Getting Started with Server-Backed ASP.NET Core Viewer

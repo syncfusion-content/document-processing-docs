@@ -5,6 +5,8 @@ description: Control session-specific data storage in the ASP.NET Core PDF Viewe
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Enable Local Storage in ASP.NET Core PDF Viewer

@@ -5,6 +5,8 @@ description: Add signature fields, configure signing workflows, and apply PKI di
 platform: document-processing
 control: PdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Digital Signature Workflows in React PDF Viewer

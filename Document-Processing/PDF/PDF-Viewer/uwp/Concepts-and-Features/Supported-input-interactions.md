@@ -5,6 +5,8 @@ description: Learn here all about supported input interactions in Syncfusion<sup
 platform: document-processing
 control: PDF viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Supported input interactions in UWP PDF Viewer

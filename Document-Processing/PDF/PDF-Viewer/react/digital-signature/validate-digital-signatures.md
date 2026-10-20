@@ -5,6 +5,8 @@ description: Validate digital signatures applied to PDF forms from a React app u
 platform: document-processing
 control: PdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Validate Digital Signatures in React PDF Viewer

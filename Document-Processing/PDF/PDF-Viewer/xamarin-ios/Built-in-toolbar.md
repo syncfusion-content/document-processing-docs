@@ -5,6 +5,8 @@ description: The PDF Viewer Xamarin.iOS allows the users to perform almost all o
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 #  Built-in toolbar in PDF viewer Xamarin.iOS

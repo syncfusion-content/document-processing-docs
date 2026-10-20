@@ -5,6 +5,8 @@ description: Learn here about Set localized text for the static texts used in Sy
 platform: document-processing
 control: SfPdfViewer
 documentation: UG
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Localization in Xamarin.Android PDF viewer

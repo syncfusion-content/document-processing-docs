@@ -5,6 +5,8 @@ description: The gesture callbacks in SfPdfViewer provide event notifications fo
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Gesture Callbacks in Flutter PDF Viewer

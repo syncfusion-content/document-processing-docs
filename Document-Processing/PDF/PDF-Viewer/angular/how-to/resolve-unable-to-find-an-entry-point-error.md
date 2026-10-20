@@ -6,6 +6,8 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Resolve the Unable to Find an Entry Point Error in Angular PDF

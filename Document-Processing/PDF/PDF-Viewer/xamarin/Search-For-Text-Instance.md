@@ -5,6 +5,8 @@ description: Learn here all about Search for a Text Instance support in Syncfusi
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Search for a Text Instance in Xamarin Pdf Viewer

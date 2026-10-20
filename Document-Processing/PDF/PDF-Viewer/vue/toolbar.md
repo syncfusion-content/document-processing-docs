@@ -6,6 +6,8 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Customize the Organize Pages Toolbar in Vue PDF Viewer

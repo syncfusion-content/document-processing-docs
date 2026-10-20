@@ -5,6 +5,8 @@ description: Use the extractText method together with text collections in the AS
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 

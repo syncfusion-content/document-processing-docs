@@ -5,6 +5,8 @@ description: Restrict the zoom percentage on mobile devices in the ASP.NET Core 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Restrict Zoom on Mobile Devices in ASP.NET Core PDF Viewer

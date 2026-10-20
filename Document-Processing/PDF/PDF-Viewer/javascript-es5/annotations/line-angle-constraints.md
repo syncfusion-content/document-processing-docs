@@ -6,6 +6,8 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Line Angle Constraints in JavaScript (ES5) PDF Viewer

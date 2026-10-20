@@ -5,6 +5,8 @@ description: Learn how to change the highlight color of text markup highlights i
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Change Text Highlight Color in Blazor PDF Viewer

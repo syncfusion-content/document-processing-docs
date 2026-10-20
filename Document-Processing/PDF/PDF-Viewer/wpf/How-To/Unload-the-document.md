@@ -5,6 +5,8 @@ description: Unload PDF documents and dispose the PDF stream or file in Syncfusi
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Unload the document in WPF Pdf Viewer

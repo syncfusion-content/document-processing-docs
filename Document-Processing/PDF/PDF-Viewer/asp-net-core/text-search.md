@@ -5,6 +5,8 @@ description: Learn about the text search in the ASP.NET Core PDF Viewer and how 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Text Search in ASP.NET Core PDF Viewer

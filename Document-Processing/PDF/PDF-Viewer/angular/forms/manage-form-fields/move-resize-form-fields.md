@@ -5,6 +5,8 @@ description: Move and resize PDF form fields in the Angular PDF Viewer using the
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Move and Resize Form Fields in Angular PDF Viewer

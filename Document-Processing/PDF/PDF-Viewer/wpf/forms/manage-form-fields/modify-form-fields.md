@@ -5,6 +5,8 @@ description: Learn how to modify PDF form fields values using the UI and program
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Modify Form Field values in WPF Pdf Viewer

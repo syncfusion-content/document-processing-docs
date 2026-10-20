@@ -5,6 +5,8 @@ description: Import annotations into the ASP.NET Core PDF Viewer in supported fo
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Import Annotations in ASP.NET Core PDF Viewer

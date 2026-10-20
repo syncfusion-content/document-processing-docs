@@ -5,6 +5,8 @@ description: Save PDF files from the React PDF Viewer to Google Drive using a se
 control: PDF Viewer
 platform: document-processing
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Save PDF Files to Google Drive in React PDF Viewer

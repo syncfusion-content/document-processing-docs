@@ -6,6 +6,8 @@ platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Customize the Annotation Toolbar in JavaScript (ES6) PDF Viewer

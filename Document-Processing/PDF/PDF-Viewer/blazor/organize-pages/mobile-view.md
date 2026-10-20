@@ -5,6 +5,8 @@ description: Learn how to organize pages in the mobile PDF Viewer, including rot
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Organize Pages in Mobile Blazor PDF Viewer

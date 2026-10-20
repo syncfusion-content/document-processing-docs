@@ -6,6 +6,8 @@ platform: document-processing
 control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Duplicate Pages in Blazor PDF Viewer

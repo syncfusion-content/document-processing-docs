@@ -5,6 +5,8 @@ description: The annotations feature in SfPdfViewer provides tools to create, ed
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Annotations in Flutter PDF Viewer

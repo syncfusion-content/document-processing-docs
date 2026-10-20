@@ -5,6 +5,8 @@ description: Set localized text for the static texts used in Syncfusion<sup>®</
 platform: document-processing
 control: SfPdfViewer
 documentation: UG
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Localization in Xamarin.iOS PDF viewer

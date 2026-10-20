@@ -7,6 +7,8 @@ control: Mobile Toolbar Interface
 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 # Customize the Mobile Toolbar in JavaScript (ES5) PDF Viewer
 

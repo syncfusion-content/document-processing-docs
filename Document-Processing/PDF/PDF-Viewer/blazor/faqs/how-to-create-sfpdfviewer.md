@@ -5,6 +5,8 @@ description: Learn how to create a PDF document in the Created event of the Blaz
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Create PDF in the Blazor PDF Viewer Created event

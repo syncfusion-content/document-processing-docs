@@ -5,6 +5,8 @@ description: This guide explains how to retrieve details such as the file name a
 platform: document-processing
 control: PdfViewerControl
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to get document information in WinForms PDF Viewer

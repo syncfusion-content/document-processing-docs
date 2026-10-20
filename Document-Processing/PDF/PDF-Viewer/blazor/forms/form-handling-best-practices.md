@@ -6,6 +6,8 @@ platform: document-processing
 control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # PDF Form Handling Best Practices in Blazor PDF Viewer

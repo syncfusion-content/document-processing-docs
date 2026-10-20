@@ -6,6 +6,8 @@ platform: document-processing
 control: Save PDF files to Google Drive
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Save PDF Files to Google Drive in Angular PDF Viewer

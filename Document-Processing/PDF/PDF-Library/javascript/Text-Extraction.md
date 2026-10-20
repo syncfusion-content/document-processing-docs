@@ -5,6 +5,8 @@ description: Extract text and text bounds from PDF documents programmatically us
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
+
 ---
 
 # Text Extraction in JavaScript PDF

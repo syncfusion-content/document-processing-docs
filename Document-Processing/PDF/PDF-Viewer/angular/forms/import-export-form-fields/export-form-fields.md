@@ -5,6 +5,8 @@ description: Export PDF form field data from the Angular PDF Viewer in FDF, XFDF
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Export Form Data in Angular PDF Viewer

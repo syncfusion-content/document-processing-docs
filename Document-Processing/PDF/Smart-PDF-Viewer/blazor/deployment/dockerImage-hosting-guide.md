@@ -5,6 +5,8 @@ description: Learn here all about creating Docker image from Blazor Smart PDF Vi
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Docker Image Hosting Guide for Blazor Web App PDF Viewer

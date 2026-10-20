@@ -4,6 +4,8 @@ description: Learn how to load and save PDF documents in Silverlight application
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
+
 ---
 # Silverlight in .NET PDF Library
 

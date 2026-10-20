@@ -6,6 +6,8 @@ platform: document-processing
 control: PDF Viewer
 
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Set the Default Width and Height in ASP.NET MVC PDF Viewer

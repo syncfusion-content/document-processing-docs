@@ -5,6 +5,8 @@ description: Learn how to add, edit, delete, and programmatically manage circle 
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Circle Annotation (Shape) in Blazor PDF Viewer 

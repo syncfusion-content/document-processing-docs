@@ -5,6 +5,8 @@ description: Handle import and export events for PDF form fields in the React PD
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Form Field Import and Export Events in React PDF Viewer

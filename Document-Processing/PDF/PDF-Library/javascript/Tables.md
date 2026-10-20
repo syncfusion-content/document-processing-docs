@@ -5,6 +5,8 @@ description: Create and customize PDF tables programmatically using PdfGrid in t
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
+
 ---
 
 # PdfGrid Tables in JavaScript PDF

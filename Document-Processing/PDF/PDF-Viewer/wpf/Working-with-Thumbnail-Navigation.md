@@ -5,6 +5,8 @@ description: Navigate PDF documents using thumbnail previews in Syncfusion WPF P
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Thumbnail Navigation in WPF Pdf Viewer

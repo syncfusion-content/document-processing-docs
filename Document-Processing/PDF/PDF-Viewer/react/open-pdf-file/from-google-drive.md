@@ -5,6 +5,8 @@ description: Load and display PDF files stored in Google Drive in the React PDF 
 control: PDF Viewer
 platform: document-processing
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Open PDF from Google Drive in React PDF Viewer

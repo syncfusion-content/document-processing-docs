@@ -5,6 +5,8 @@ description: Disable the right-click context menu in the ASP.NET Core PDF Viewer
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Disable the Context Menu in ASP.NET Core PDF Viewer

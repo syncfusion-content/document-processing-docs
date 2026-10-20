@@ -7,6 +7,8 @@ platform: document-processing
 control: PDF
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: Document SDK
+
 ---
 
 # About Syncfusion JavaScript PDF Library

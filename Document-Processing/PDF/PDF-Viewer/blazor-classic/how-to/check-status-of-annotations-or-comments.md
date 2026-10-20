@@ -5,6 +5,8 @@ description: Learn here all about how to check the status of annotations or comm
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Check status of annotations in Blazor PDF Viewer

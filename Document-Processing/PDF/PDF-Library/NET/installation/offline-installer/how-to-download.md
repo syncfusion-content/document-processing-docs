@@ -5,6 +5,7 @@ description: Learn how to download the Syncfusion PDF offline installer with a v
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
+appliesto: Document SDK
 
 ---
 

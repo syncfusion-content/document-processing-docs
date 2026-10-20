@@ -5,6 +5,8 @@ description: This guide explains how to integrate the WPF PDF Viewer in WinForms
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 # How to use WPF features in WinForms PDF Viewer
 

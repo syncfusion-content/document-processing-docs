@@ -5,6 +5,8 @@ description: Learn how to implement a custom AI service using Google's Gemini AP
 platform: maui
 control: SmartComponents
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Gemini AI Integration with .NET MAUI Smart Components

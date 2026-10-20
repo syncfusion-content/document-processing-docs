@@ -6,6 +6,8 @@ platform: aspnet-core
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Undo and Redo Annotations in ASP.NET Core PDF Viewer

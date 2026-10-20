@@ -5,6 +5,8 @@ description: How-to overview of the Vue PDF Viewer in Syncfusion Vue PDF Viewer 
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Overview of the Vue PDF Viewer

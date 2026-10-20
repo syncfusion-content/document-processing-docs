@@ -5,6 +5,8 @@ description: Learn about open password-protected PDFs and enforces document perm
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # About Syncfusion Document security in Blazor PDF Viewer Component

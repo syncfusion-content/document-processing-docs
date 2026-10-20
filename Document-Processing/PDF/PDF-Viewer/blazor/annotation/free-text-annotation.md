@@ -5,6 +5,8 @@ description: Learn how to add, edit, and delete free text annotations in the Bla
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Free text annotations in Blazor PDF Viewer 

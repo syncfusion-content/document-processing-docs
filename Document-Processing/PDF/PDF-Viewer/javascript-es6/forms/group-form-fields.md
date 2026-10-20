@@ -5,6 +5,8 @@ description: Group PDF form fields in the JavaScript (ES6) PDF Viewer by assigni
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Group Form Fields in JavaScript (ES6) PDF Viewer

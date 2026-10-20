@@ -5,6 +5,8 @@ description: Learn here all about how to stretch the PDF Viewer size to its cont
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Update the PDF Viewer size to its container in PDF Viewer

@@ -5,6 +5,8 @@ description: Group PDF form fields in the React PDF Viewer by assigning the same
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Group Form Fields in React PDF Viewer

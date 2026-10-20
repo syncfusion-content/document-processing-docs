@@ -5,6 +5,8 @@ description: Learn how to implement a custom AI service using the Groq API with 
 platform: maui
 control: SmartComponents
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Groq AI Integration with .NET MAUI Smart Components

@@ -5,6 +5,8 @@ description: The text annotation feature in WPF PDF Viewer adds free-form text b
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 # Text Annotation in WPF Pdf Viewer
 

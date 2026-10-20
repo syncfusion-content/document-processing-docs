@@ -5,6 +5,8 @@ description: Learn about the globalization in the ASP.NET MVC PDF Viewer and how
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 

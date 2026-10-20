@@ -6,6 +6,8 @@ platform: document-processing
 control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Customize mobile toolbar in Blazor PDF Viewer

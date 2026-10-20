@@ -5,6 +5,8 @@ description: Learn to how to add and edit handwritten signatures in the Blazor P
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Handwritten Signature in Blazor PDF Viewer 

@@ -5,6 +5,8 @@ description: The PDF loading from Base64 feature in SfPdfViewer enables users to
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Open a Document From Base64 in Flutter PDF Viewer

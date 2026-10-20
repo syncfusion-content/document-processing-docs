@@ -5,6 +5,8 @@ description: Learn here all about Working with text selection support in Syncfus
 platform: document-processing
 control: SfPdfViewerControl
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Working with text selection in UWP Pdf Viewer

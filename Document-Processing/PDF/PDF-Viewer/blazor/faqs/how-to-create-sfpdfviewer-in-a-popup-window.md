@@ -5,6 +5,8 @@ description: Learn here all about how to integrating the Blazor PDF Viewer Compo
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Create PDF Viewer in a Popup Window in Blazor

@@ -6,6 +6,8 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Use PDF/A and PDF/X Conformance in Vue PDF Viewer

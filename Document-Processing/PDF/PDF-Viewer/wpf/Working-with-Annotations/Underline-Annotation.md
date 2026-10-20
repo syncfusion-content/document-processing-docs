@@ -5,6 +5,8 @@ description: The underline annotation feature in WPF PDF Viewer emphasizes impor
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Underline text in PDF files using WPF Pdf Viewer

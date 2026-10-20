@@ -5,6 +5,8 @@ description: Load and display PDF files stored in OneDrive in the React PDF View
 control: PDF Viewer
 platform: document-processing
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Open PDF from OneDrive in React PDF Viewer

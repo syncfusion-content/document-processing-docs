@@ -2,6 +2,8 @@
 title: How to Install Packages for Older PDF Viewer Versions | Syncfusion
 component: "PDF Viewer"
 description: Install the NuGet packages required for older versions of the Syncfusion PDF Viewer web service used by the Angular PDF Viewer.
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Install Packages for Older PDF Viewer Versions in Angular PDF

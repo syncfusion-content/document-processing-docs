@@ -6,6 +6,8 @@ control: SfPdfViewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Pre-process PDF Document Before Displaying in Blazor PDF Viewer

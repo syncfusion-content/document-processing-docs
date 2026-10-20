@@ -5,6 +5,8 @@ description: Work with PDF coordinates in Syncfusion WPF PDF Viewer by convertin
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Working With PDF Coordinates in the WPF Pdf Viewer

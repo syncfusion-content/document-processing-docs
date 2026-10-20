@@ -5,6 +5,8 @@ description: Resolve the Web-service is not listening error in the Angular PDF V
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 # How to Resolve the Web-Service Is Not Listening Error in Angular PDF
 

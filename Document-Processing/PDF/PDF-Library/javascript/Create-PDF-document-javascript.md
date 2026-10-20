@@ -7,6 +7,8 @@ platform: document-processing
 control: PDF
 documentation: ug
 keywords: javascript, pdf, cdn
+appliesto: Document SDK
+
 ---
 
 # Getting Started with JavaScript PDF in JavaScript app

@@ -6,6 +6,8 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Handle the ExtractTextCompleted Event in Vue PDF Viewer

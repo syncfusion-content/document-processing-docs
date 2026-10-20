@@ -6,6 +6,8 @@ platform: document-processing
 control: Get base string of the loaded document
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Get the Base64 String of a PDF in Angular PDF Viewer

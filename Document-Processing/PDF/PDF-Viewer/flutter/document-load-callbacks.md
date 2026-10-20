@@ -5,6 +5,8 @@ description: Document load callbacks in SfPdfViewer help track document loading 
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Document load Callbacks in Flutter PDF Viewer

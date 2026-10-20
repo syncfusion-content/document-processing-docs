@@ -5,6 +5,8 @@ description: Learn how to get started with the Syncfusion ASP.NET Core PDF Viewe
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Getting Started with ASP.NET Core PDF Viewer

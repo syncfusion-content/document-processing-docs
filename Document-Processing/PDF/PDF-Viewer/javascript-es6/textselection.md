@@ -6,6 +6,8 @@ platform: document-processing
 control: Text selection
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 # Textselection in JavaScript (ES6) PDF Viewer
 

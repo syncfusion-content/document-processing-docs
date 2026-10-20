@@ -5,6 +5,8 @@ description: Learn how to implement a custom AI service using the Claude API wit
 platform: maui
 control: SmartComponents
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Claude AI Integration with .NET MAUI Smart Components

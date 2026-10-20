@@ -5,6 +5,8 @@ description: The text search feature in PdfViewerControl enables users to find, 
 platform: document-processing
 control: PdfViewerControl
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Searching Text in Windows Forms PDF Viewer

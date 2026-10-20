@@ -4,6 +4,8 @@ description: Learn how to load and save PDF documents in Windows Phone applicati
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
+
 ---
 
 # Windows Phone in .NET PDF Library

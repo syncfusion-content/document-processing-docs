@@ -5,6 +5,8 @@ description: Learn how to integrate and use the Syncfusion Smart PDF Viewer in a
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Deepseek AI Service in Blazor App Smart PDF Viewer

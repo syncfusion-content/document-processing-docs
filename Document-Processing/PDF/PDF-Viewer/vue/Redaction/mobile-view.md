@@ -5,6 +5,8 @@ description: Use the Organize Pages panel on mobile devices in the Vue PDF Viewe
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Organize Pages in Mobile View in Vue PDF Viewer

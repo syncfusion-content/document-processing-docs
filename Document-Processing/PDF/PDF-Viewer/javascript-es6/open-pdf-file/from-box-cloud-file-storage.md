@@ -5,6 +5,8 @@ description: Load and display PDF files stored in Box cloud storage in the JavaS
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Open PDF from Box Cloud Storage in JavaScript (ES6) PDF Viewer

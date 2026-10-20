@@ -5,6 +5,8 @@ description: Learn how to enable, measure, customize, and manage Distance annota
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Add Distance Annotations in Blazor PDF Viewer 

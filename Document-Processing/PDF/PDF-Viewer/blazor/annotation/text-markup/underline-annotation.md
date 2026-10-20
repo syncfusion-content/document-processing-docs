@@ -5,6 +5,8 @@ description: Learn how to enable, apply, customize, and manage Underline annotat
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Underline Annotation in Blazor PDF Viewer 

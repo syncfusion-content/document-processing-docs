@@ -5,6 +5,8 @@ description: Learn how to move and resize PDF form fields using the UI and progr
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Move and Resize Form Fields in the Blazor PDF Viewer

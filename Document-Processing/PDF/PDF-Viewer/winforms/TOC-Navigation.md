@@ -5,6 +5,8 @@ description: Learn about Table of Contents Navigation support in Syncfusion<sup>
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Table of contents navigation in WinForms Pdf Viewer

@@ -6,6 +6,8 @@ platform: document-processing
 control: Save PDF To AAD
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # To Azure Active Directory in Angular PDF Viewer
