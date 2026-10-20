@@ -4,7 +4,7 @@ description: Learn how to open and save a Word document in Google Cloud Platform
 platform: document-processing
 control: DocIO 
 documentation: UG
-appliesto: DOCX Editor SDK, UI Component Suite 
+appliesto: Document SDK 
 --- 
 
 # Open and save Word document in Google Cloud 

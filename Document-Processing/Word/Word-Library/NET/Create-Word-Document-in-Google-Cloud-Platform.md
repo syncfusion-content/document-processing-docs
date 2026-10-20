@@ -4,7 +4,7 @@ description: This section illustrates how to create Word documents in Google Clo
 platform: document-processing
 control: DocIO 
 documentation: UG
-appliesto: DOCX Editor SDK, UI Component Suite 
+appliesto: Document SDK 
 --- 
 
 # Create Word document in Google Cloud

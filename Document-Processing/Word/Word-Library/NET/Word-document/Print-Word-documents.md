@@ -4,7 +4,7 @@ description: Learn how to print the Word documents into one using .NET Word libr
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: DOCX Editor SDK, UI Component Suite
+appliesto: Document SDK
 ---
 # Print Word documents in .NET Word Library
 
