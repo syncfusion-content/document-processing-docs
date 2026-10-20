@@ -5,6 +5,7 @@ description: Find frequently asked questions about SFDT format in the TypeScript
 control: SFDT format
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

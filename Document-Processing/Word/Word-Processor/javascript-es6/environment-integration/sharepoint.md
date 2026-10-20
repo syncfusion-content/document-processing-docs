@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion TypeScript DOCX Editor
 control: DOCX Editor
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 
