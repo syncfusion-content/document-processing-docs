@@ -1134,6 +1134,160 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Bookmarks/Replace-content-with-document-part/.NET).
 
+### Bookmark end positioning options
+
+A bookmark end can be preserved after a paragraph mark, table-cell mark, table-row mark, or table mark. The following properties of the [BookmarkEnd](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html) class allow you to identify and control these positions:
+
+* [IsAfterParagraphMark](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html#Syncfusion_DocIO_DLS_BookmarkEnd_IsAfterParagraphMark)
+* [IsAfterCellMark](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html#Syncfusion_DocIO_DLS_BookmarkEnd_IsAfterCellMark)
+* [IsAfterRowMark](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html#Syncfusion_DocIO_DLS_BookmarkEnd_IsAfterRowMark)
+* [IsAfterTableMark](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html#Syncfusion_DocIO_DLS_BookmarkEnd_IsAfterTableMark)
+
+Setting a property to true serializes the bookmark end after the corresponding mark. When all four properties are false, the bookmark end remains at its normal position inside the paragraph.
+
+| Property | Behavior when set to true |
+|---|---|
+| [IsAfterParagraphMark](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html#Syncfusion_DocIO_DLS_BookmarkEnd_IsAfterParagraphMark) | Preserves the bookmark end after the paragraph mark |
+| [IsAfterCellMark](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html#Syncfusion_DocIO_DLS_BookmarkEnd_IsAfterCellMark) | Preserves the bookmark end after the table-cell mark |
+| [IsAfterRowMark](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html#Syncfusion_DocIO_DLS_BookmarkEnd_IsAfterRowMark) | Preserves the bookmark end after the table-row mark |
+| [IsAfterTableMark](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html#Syncfusion_DocIO_DLS_BookmarkEnd_IsAfterTableMark) | Preserves the bookmark end after the table mark |
+
+N> Enable only the property that represents the required bookmark end position. The bookmark end must be placed at a valid final content position for the selected paragraph, table cell, table row, or table.
+
+Use each property only at the matching final content position:
+
+* [IsAfterParagraphMark](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html#Syncfusion_DocIO_DLS_BookmarkEnd_IsAfterParagraphMark) applies to a bookmark end at the end of a paragraph.
+* [IsAfterCellMark](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html#Syncfusion_DocIO_DLS_BookmarkEnd_IsAfterCellMark) applies to the final content position of the intended table cell.
+* [IsAfterRowMark](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html#Syncfusion_DocIO_DLS_BookmarkEnd_IsAfterRowMark) applies to the final content position of the intended table row.
+* [IsAfterTableMark](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html#Syncfusion_DocIO_DLS_BookmarkEnd_IsAfterTableMark) applies to the final content position of the table.
+
+If normal content follows the bookmark end, the bookmark end must not be moved across that content.
+
+The following code example shows how to preserve bookmark ends after a paragraph mark, table-cell mark, table-row mark, and table mark in a Word document.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+//Creates an instance of WordDocument class (Empty Word Document)
+WordDocument document = new WordDocument();
+//Adds a section to the document
+IWSection section = document.AddSection();
+//Adds a paragraph and preserves its bookmark end after the paragraph mark
+IWParagraph paragraph = section.AddParagraph();
+paragraph.AppendBookmarkStart("ParagraphBookmark");
+paragraph.AppendText("Paragraph content");
+BookmarkEnd bookmarkEnd = paragraph.AppendBookmarkEnd("ParagraphBookmark");
+bookmarkEnd.IsAfterParagraphMark = true;
+//Creates a 2 x 2 table
+IWTable table = section.AddTable();
+table.ResetCells(2, 2);
+//Adds a bookmark at the final content position of the first cell
+IWParagraph cellParagraph = table[0, 0].AddParagraph();
+cellParagraph.AppendBookmarkStart("CellBookmark");
+cellParagraph.AppendText("Cell content");
+bookmarkEnd = cellParagraph.AppendBookmarkEnd("CellBookmark");
+bookmarkEnd.IsAfterCellMark = true;
+table[0, 1].AddParagraph().AppendText("Row content");
+//Adds a bookmark in the final cell of the first row
+IWParagraph rowParagraph = table[0, 1].AddParagraph();
+rowParagraph.AppendBookmarkStart("RowBookmark");
+rowParagraph.AppendText("End of row");
+bookmarkEnd = rowParagraph.AppendBookmarkEnd("RowBookmark");
+bookmarkEnd.IsAfterRowMark = true;
+table[1, 0].AddParagraph().AppendText("Next row");
+//Adds a bookmark in the final cell of the final row
+IWParagraph tableParagraph = table[1, 1].AddParagraph();
+tableParagraph.AppendBookmarkStart("TableBookmark");
+tableParagraph.AppendText("End of table");
+bookmarkEnd = tableParagraph.AppendBookmarkEnd("TableBookmark");
+bookmarkEnd.IsAfterTableMark = true;
+//Saves the Word document to MemoryStream
+MemoryStream stream = new MemoryStream();
+document.Save(stream, FormatType.Docx);
+//Closes the document
+document.Close();
+{% endhighlight %}
+{% highlight c# tabtitle="C# [Windows-specific]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Bookmarks/Control-bookmark-end-position/.NET/Control-bookmark-end-position/Program.cs" %}
+//Creates an instance of WordDocument class (Empty Word Document)
+WordDocument document = new WordDocument();
+//Adds a section to the document
+IWSection section = document.AddSection();
+//Adds a paragraph and preserves its bookmark end after the paragraph mark
+IWParagraph paragraph = section.AddParagraph();
+paragraph.AppendBookmarkStart("ParagraphBookmark");
+paragraph.AppendText("Paragraph content");
+BookmarkEnd bookmarkEnd = paragraph.AppendBookmarkEnd("ParagraphBookmark");
+bookmarkEnd.IsAfterParagraphMark = true;
+//Creates a 2 x 2 table
+IWTable table = section.AddTable();
+table.ResetCells(2, 2);
+//Adds a bookmark at the final content position of the first cell
+IWParagraph cellParagraph = table[0, 0].AddParagraph();
+cellParagraph.AppendBookmarkStart("CellBookmark");
+cellParagraph.AppendText("Cell content");
+bookmarkEnd = cellParagraph.AppendBookmarkEnd("CellBookmark");
+bookmarkEnd.IsAfterCellMark = true;
+table[0, 1].AddParagraph().AppendText("Row content");
+//Adds a bookmark in the final cell of the first row
+IWParagraph rowParagraph = table[0, 1].AddParagraph();
+rowParagraph.AppendBookmarkStart("RowBookmark");
+rowParagraph.AppendText("End of row");
+bookmarkEnd = rowParagraph.AppendBookmarkEnd("RowBookmark");
+bookmarkEnd.IsAfterRowMark = true;
+table[1, 0].AddParagraph().AppendText("Next row");
+//Adds a bookmark in the final cell of the final row
+IWParagraph tableParagraph = table[1, 1].AddParagraph();
+tableParagraph.AppendBookmarkStart("TableBookmark");
+tableParagraph.AppendText("End of table");
+bookmarkEnd = tableParagraph.AppendBookmarkEnd("TableBookmark");
+bookmarkEnd.IsAfterTableMark = true;
+//Saves the document in the given name and format
+document.Save("Bookmarks.docx", FormatType.Docx);
+//Releases the resources occupied by the WordDocument instance
+document.Close();
+{% endhighlight %}
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+'Creates an instance of WordDocument class (Empty Word Document)
+Dim document As New WordDocument()
+'Adds a section to the document
+Dim section As IWSection = document.AddSection()
+'Adds a paragraph and preserves its bookmark end after the paragraph mark
+Dim paragraph As IWParagraph = section.AddParagraph()
+paragraph.AppendBookmarkStart("ParagraphBookmark")
+paragraph.AppendText("Paragraph content")
+Dim bookmarkEnd As BookmarkEnd = paragraph.AppendBookmarkEnd("ParagraphBookmark")
+bookmarkEnd.IsAfterParagraphMark = True
+'Creates a 2 x 2 table
+Dim table As IWTable = section.AddTable()
+table.ResetCells(2, 2)
+'Adds a bookmark at the final content position of the first cell
+Dim cellParagraph As IWParagraph = table(0, 0).AddParagraph()
+cellParagraph.AppendBookmarkStart("CellBookmark")
+cellParagraph.AppendText("Cell content")
+bookmarkEnd = cellParagraph.AppendBookmarkEnd("CellBookmark")
+bookmarkEnd.IsAfterCellMark = True
+table(0, 1).AddParagraph().AppendText("Row content")
+'Adds a bookmark in the final cell of the first row
+Dim rowParagraph As IWParagraph = table(0, 1).AddParagraph()
+rowParagraph.AppendBookmarkStart("RowBookmark")
+rowParagraph.AppendText("End of row")
+bookmarkEnd = rowParagraph.AppendBookmarkEnd("RowBookmark")
+bookmarkEnd.IsAfterRowMark = True
+table(1, 0).AddParagraph().AppendText("Next row")
+'Adds a bookmark in the final cell of the final row
+Dim tableParagraph As IWParagraph = table(1, 1).AddParagraph()
+tableParagraph.AppendBookmarkStart("TableBookmark")
+tableParagraph.AppendText("End of table")
+bookmarkEnd = tableParagraph.AppendBookmarkEnd("TableBookmark")
+bookmarkEnd.IsAfterTableMark = True
+'Saves the document in the given name and format
+document.Save("Bookmarks.docx", FormatType.Docx)
+'Releases the resources occupied by the WordDocument instance
+document.Close()
+{% endhighlight %}
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Bookmarks/Control-bookmark-end-position).
+
 ## Online Demo
 
 * Explore how to insert bookmarks into the Word document using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/bookmarks#/tailwind).  
