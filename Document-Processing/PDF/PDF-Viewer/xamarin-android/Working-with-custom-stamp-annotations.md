@@ -5,6 +5,7 @@ description: The custom stamp annotation allows the users to include any form of
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # Custom stamp annotations in Xamarin.Android PDF Viewer

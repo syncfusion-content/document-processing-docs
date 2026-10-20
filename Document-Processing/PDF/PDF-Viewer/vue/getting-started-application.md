@@ -6,6 +6,7 @@ control: Getting Started application
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # Getting Started with Vue 3 PDF Viewer

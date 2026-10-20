@@ -6,6 +6,7 @@ platform: document-processing
 control: Free text annotation
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # Free Text Annotation in Angular PDF Viewer

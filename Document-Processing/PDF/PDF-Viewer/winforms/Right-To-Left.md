@@ -5,6 +5,7 @@ description: The RTL support feature in PdfViewerControl enables right-to-left l
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # Right to Left (RTL) in WinForms PDF Viewer

@@ -6,6 +6,7 @@ platform: document-processing
 control: Handwritten signature
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # Handwritten Signature in Angular PDF Viewer

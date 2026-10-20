@@ -5,6 +5,7 @@ description: Add annotations from text search results in the React PDF Viewer by
 control: PDF Viewer
 platform: document-processing
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # How to Add Annotations From Text Search in React PDF Viewer

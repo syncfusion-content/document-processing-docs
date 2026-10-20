@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion Blazor Server-side app
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # Getting Started with Blazor Server App PDF Viewer

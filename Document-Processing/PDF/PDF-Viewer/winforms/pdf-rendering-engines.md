@@ -5,6 +5,7 @@ description: The PDF rendering engines feature in PdfViewerControl supports mult
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # PDF Rendering Engines in WinForms PDFViewer

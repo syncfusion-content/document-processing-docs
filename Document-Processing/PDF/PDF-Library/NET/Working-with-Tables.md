@@ -4,6 +4,7 @@ description: Learn the differences between PdfGrid and PdfLightTable models, sup
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Tables in .NET PDF Library

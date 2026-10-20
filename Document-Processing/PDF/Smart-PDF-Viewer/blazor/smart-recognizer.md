@@ -5,6 +5,7 @@ description: Learn how to automatically detect forms in image-based PDFs and add
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # Smart Form Recognizer in Blazor Smart PDF Viewer

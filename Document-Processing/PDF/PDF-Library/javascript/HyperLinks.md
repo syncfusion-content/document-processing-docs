@@ -5,6 +5,7 @@ description: Programmatically add hyperlinks to a new or an existing PDF documen
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # PDF Hyperlinks in JavaScript PDF

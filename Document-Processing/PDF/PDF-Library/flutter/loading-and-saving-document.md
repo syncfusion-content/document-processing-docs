@@ -5,6 +5,7 @@ description: Learn how to open, load, modify, and save PDF documents using the S
 platform: document-processing
 control: PDF
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Open and Save a PDF File in Flutter PDF

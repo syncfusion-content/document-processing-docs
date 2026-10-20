@@ -6,6 +6,7 @@ platform: document-processing
 control: Save PDF files to Azure Blob Storage
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # Save PDF Files to Azure Blob Storage in Angular PDF Viewer

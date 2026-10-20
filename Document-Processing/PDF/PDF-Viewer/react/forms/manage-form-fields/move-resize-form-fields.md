@@ -5,6 +5,7 @@ description: Move and resize PDF form fields in the React PDF Viewer using the b
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # Move and Resize Form Fields in React PDF Viewer

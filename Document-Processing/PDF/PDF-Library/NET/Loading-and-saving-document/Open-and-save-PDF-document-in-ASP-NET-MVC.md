@@ -5,6 +5,7 @@ platform: document-processing
 control: PDF
 documentation: UG
 keywords: save pdf in mvc, load pdf in mvc, c# save pdf, c# load pdf
+appliesto: Document SDK
 ---
 
 # Open and Save PDF Document in ASP.NET MVC
