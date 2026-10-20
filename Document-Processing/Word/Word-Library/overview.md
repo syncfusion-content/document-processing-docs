@@ -5,6 +5,7 @@ description: Learn about the overview of the Syncfusion Word Document Processing
 platform: document-processing
 control: general
 documentation: UG
+appliesto: Document SDK
 keywords: Word, SDK, Automation, API, create, read, write
 ---
 
