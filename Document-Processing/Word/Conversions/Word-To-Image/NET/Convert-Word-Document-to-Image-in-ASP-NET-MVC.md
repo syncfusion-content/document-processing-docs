@@ -4,6 +4,7 @@ description: Convert Word to image in ASP.NET  MVC using .NET Word library wi
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert Word to Image in ASP.NET  MVC 
