@@ -492,16 +492,25 @@ root.render(<App />);
 
 ### DateTime Picker
 
-**Add via UI**: Open Form Designer toolbar → select DateTime Picker → click on a PDF page to place the field → configure the field type (Date or Time) and format string in the **Properties** panel.
+**Add via UI**: Open the Form Designer toolbar, select **DateTime Picker**, and click on a PDF page to place the field. The DateTime Picker tool adds date and time fields in Form Designer mode.
 
-![DateTime Picker Properties Panel](../../../javascript-es6/images/ui-datetime-edit.png)
+![DateTime Picker tool and date and time fields in Form Designer](../../../javascript-es5/images/ui-date-time.png)
+
+Select the field to configure its general properties, such as its name, value, visibility, and whether it is read-only or required.
+
+![General properties for a DateTime Picker field](../../../javascript-es5/images/ui-date-time-properties.png)
 
 #### Manual Entry and Picker
 
 The field accepts values either by direct typing or through the integrated picker UI:
 
 - **Date Field** – Enter a date manually, or open the calendar dropdown to pick a date.
-- **Time Field** – Enter a time manually, or open the clock dropdown to pick a time.
+
+  ![Calendar picker open for a DateTime field](../../../javascript-es5/images/ui-date-entry.png)
+
+- **Time Field** – Enter a time manually, or open the time dropdown to pick a time.
+
+  ![Time picker open for a DateTime field](../../../javascript-es5/images/ui-time-entry.png)
 
 #### Strict Format Validation
 
@@ -523,6 +532,8 @@ The **Format** tab in the Properties panel lets you:
 - Edit the display format string.
 - Preview formatting changes before saving.
 
+![DateTime Picker format settings with type, format, and preview](../../../javascript-es5/images/ui-date-time-format.png)
+
 **Common Formats**
 
 | Format String | Example Output |
@@ -539,6 +550,8 @@ Placed DateTime pickers have a distinct visual appearance in Form Designer mode,
 - Colored background
 - Visible border
 - Field-type indicator
+
+![DateTime Picker Appearance](../../../javascript-es5/images/ui-date-time-appearance.png)
 
 **Add Programmatically (API)**:
 
