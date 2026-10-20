@@ -5,6 +5,7 @@ description: Troubleshoot the 404 error in Syncfusion Vue DOCX Editor by verifyi
 control: document loading issue with 404 error
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 
