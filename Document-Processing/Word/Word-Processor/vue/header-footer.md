@@ -5,6 +5,7 @@ description: Learn here all about Header footer in Syncfusion Vue Document edito
 control: Header footer 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

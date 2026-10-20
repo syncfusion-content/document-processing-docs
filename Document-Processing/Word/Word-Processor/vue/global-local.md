@@ -5,6 +5,7 @@ description: Learn here all about Global local in Syncfusion Vue Document editor
 control: Global local 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

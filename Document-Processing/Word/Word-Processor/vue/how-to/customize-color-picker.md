@@ -5,6 +5,7 @@ description: Learn here all about Customize color picker in Syncfusion Vue Docum
 control: Customize color picker
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

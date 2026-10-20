@@ -5,6 +5,7 @@ description: Learn here all about Server side export in Syncfusion Vue Document 
 control: Server side export 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

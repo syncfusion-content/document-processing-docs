@@ -5,6 +5,7 @@ description: Learn here all about Section format in Syncfusion Vue Document edit
 control: Section format 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

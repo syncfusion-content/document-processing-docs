@@ -5,6 +5,7 @@ description: Learn here all about Bookmark in Syncfusion Vue Document editor com
 control: Bookmark 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

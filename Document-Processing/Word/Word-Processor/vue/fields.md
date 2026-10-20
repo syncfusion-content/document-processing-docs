@@ -5,6 +5,7 @@ description: Learn here all about Fields in Syncfusion Vue Document editor compo
 control: Fields 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

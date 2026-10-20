@@ -5,6 +5,7 @@ description: Learn here all about Styles in Syncfusion Vue Document editor compo
 control: Styles 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

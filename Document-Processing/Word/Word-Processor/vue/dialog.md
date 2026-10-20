@@ -5,6 +5,7 @@ description: Learn here all about Dialog in Syncfusion Vue Document editor compo
 control: Dialog 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

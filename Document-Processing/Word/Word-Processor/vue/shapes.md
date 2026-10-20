@@ -5,6 +5,7 @@ description: Learn here all about Shapes in Syncfusion Vue Document editor compo
 control: Shapes 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

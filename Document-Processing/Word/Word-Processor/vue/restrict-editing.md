@@ -5,6 +5,7 @@ description: Learn here all about Restrict editing in Syncfusion Vue Document ed
 control: Restrict editing 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

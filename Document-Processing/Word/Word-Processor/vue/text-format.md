@@ -5,6 +5,7 @@ description: Learn here all about Text format in Syncfusion Vue Document editor 
 control: Text format 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: Learn here all about Unsupported file in Syncfusion Vue Document ed
 control: Unsupported file 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description:  Learn about how to Save document to AWS S3 in Vue Document editor 
 platform: document-processing
 control: Save document to AWS S3
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

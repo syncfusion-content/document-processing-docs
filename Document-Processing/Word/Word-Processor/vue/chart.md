@@ -5,6 +5,7 @@ description: Learn here all about Chart in Syncfusion Vue Document editor compon
 control: Chart 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

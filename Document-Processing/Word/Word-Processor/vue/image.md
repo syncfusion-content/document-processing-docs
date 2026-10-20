@@ -5,6 +5,7 @@ description: Learn here all about Image in Syncfusion Vue Document editor compon
 control: Image 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

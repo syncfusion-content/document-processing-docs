@@ -5,6 +5,7 @@ description: Learn here all about Text wrapping style in Syncfusion Vue Document
 control: Text wrapping style 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

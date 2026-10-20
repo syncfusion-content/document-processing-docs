@@ -5,6 +5,7 @@ description: Checkout and learn about Getting started with Vue Document editor c
 control: Getting started 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: Learn here all about Track changes in Syncfusion Vue Document edito
 control: Track changes 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

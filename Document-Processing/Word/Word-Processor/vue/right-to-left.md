@@ -5,6 +5,7 @@ description: Learn here all about Right to left in Syncfusion Vue Document edito
 control: Right to left 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 
