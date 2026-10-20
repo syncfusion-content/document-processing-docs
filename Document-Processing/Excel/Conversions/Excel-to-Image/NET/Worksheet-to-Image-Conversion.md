@@ -4,6 +4,7 @@ description: Worksheet to image conversion describes how Syncfusion .NET Excel L
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Excel Worksheet to Image Conversion in .NET Excel Library
