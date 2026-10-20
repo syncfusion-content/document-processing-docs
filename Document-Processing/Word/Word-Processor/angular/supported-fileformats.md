@@ -5,6 +5,7 @@ description: Supported file formats in Angular DOCX Editor allow importing and e
 control: Supported File Formats
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

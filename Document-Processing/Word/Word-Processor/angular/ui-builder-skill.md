@@ -5,6 +5,7 @@ description: Install Syncfusion Angular UI Builder to generate production-ready 
 control: DOCX Editor
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: Angular UI Builder, Skills, AI Assistants, DOCX Editor, Agent Skills
 ---
 
