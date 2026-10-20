@@ -58,7 +58,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 4. Draw the cloud annotation on the PDF page.
 5. Release the mouse or pointer to complete the annotation.
 
-![Add Cloud Annotation](../../images/pdfviewer/cloud-annotation/add-cloud-annotation.png)
+![Cloud Annotation tool in the Shape Annotation dropdown](../../images/ui-cloud-annot.png)
 
 N> When in Pan mode, selecting a shape tool automatically switches the viewer to selection mode for smooth interaction.
 
@@ -105,8 +105,6 @@ The following properties are used in the above example:
 3. Drag the selection handles to resize the annotation.
 4. Use the annotation properties toolbar to edit the cloud shape appearance.
 
-![Modify Cloud Annotation](../../images/pdfviewer/cloud-annotation/modify-cloud-annotation.png)
-
 ## Customize Cloud Annotation Appearance
 
 Select a Cloud annotation and use the annotation properties toolbar to customize its appearance. The following appearance settings are supported:
@@ -118,7 +116,13 @@ Select a Cloud annotation and use the annotation properties toolbar to customize
 - **Border Style** – changes the annotation border style.
 - **Cloud Intensity** – controls the appearance of the cloud border.
 
-![Customize Cloud Annotation](../../images/pdfviewer/cloud-annotation/customize-cloud-annotation.png)
+Use the color picker in the annotation toolbar to change the cloud annotation's border or fill color.
+
+![Cloud Annotation color picker](../../images/ui-edit-cloud.png)
+
+Use the border-style dropdown to choose the cloud annotation's outline style.
+
+![Cloud border style options in the annotation toolbar](../../images/ui-cloud-border.png)
 
 N> The cloud intensity value determines how prominently the cloud border is rendered around the shape.
 
