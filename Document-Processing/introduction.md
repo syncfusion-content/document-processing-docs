@@ -4,8 +4,8 @@ description: Learn about overview of Syncfusion Document Solutions that process 
 platform: document-processing
 control: general
 documentation: UG
-appliesto: Document SDK, PDF Viewer SDK, DOCX Editor SDK, Spreadsheet Editor SDK
 keywords: PDF, Excel, Word, PowerPoint, Office, SDK, Automation, API, create, edit, convert, read
+appliesto: Document SDK, PDF Viewer SDK, DOCX Editor SDK, Spreadsheet Editor SDK
 ---
 
 > With the Essential Studio 2027 Volume 1 release, we will discontinue support for .NET 8.0 and .NET 9.0 in ASP.NET Core, Blazor, .NET MAUI, WinUI, WinForms, WPF, and Document Processing Libraries. Please plan to upgrade to .NET 10.0 or higher.
