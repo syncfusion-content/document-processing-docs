@@ -5,6 +5,7 @@ description: Customize the font family drop down list in Syncfusion® TypeScript
 platform: document-processing
 control: Customize Font Family Drop-Down
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

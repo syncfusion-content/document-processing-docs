@@ -5,6 +5,7 @@ description: Override default keyboard shortcuts in Syncfusion® Angular DOCX Ed
 platform: document-processing
 control: Override the keyboard shortcuts
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -1,18 +1,19 @@
 ---
-title: MVVM in WPF DOCX Editor | Syncfusion
-description: The MVVM in WPF DOCX Editor offers Model-View-ViewModel pattern support, enabling clean separation through view model implementation for the editor.
+title: MVVM in WPF RichTextBox control | Syncfusion
+description: Learn here all about MVVM support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: mvvm,data-binding,dependency-property,two-way-binding,viewmodel
+appliesto: DOCX Editor SDK, UI Component Suite
+keywords: mvvm
 ---
-# MVVM in WPF DOCX Editor
+# MVVM in WPF RichTextBox (SfRichTextBoxAdv)
 
-The [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) control can be used with the Model-View-ViewModel (MVVM) pattern. This section demonstrates how to use the SfRichTextBoxAdv control with the MVVM pattern.
+The SfRichTextBoxAdv control can be used with Model-View-View Model (MVVM) pattern. This section will demonstrate how to use the SfRichTextBoxAdv control with MVVM pattern.
 
-## Creating a view model
+## Creating a View Model
 
-The following code example demonstrates how to implement a view model class that contains properties to hold a collection of animals, the currently selected animal, and the description for the selected animal. When the selected animal changes, the `Text` property is updated with the new animal's description; when `Text` changes (typed by the user), the in-memory description for the current animal is updated.
+The following code example demonstrates how to implement a view model class that contains properties to preserve the description about some of the animals and the animal that is selected for discussion. Whenever the animal chosen for discussion is changed, previously chosen animal description is updated to the database and newly chosen animal description is updated to the text property.
 {% tabs %}
 {% highlight c# %}
 /// <summary>
@@ -32,7 +33,7 @@ public class ViewModel : INotifyPropertyChanged
     /// Gets or sets the animal.
     /// </summary>
     /// <value>
-    /// The animal.
+    /// The document title.
     /// </value>
     public string Animal
     {
@@ -63,7 +64,7 @@ public class ViewModel : INotifyPropertyChanged
     /// Gets or sets the Text.
     /// </summary>
     /// <value>
-    /// The text.
+    /// The document.
     /// </value>
     public string Text
     {
@@ -104,7 +105,7 @@ public class ViewModel : INotifyPropertyChanged
         animals.Add("Tiger", "The tiger is the largest cat species, reaching a total body length of up to 3.38 m over curves and exceptionally weighing up to 388.7 kg in the wild.");
         animals.Add("Lion", "The lion is one of the strongest animal. It is also known as the king of jungles.");
         animals.Add("Panda", "The giant panda, also known as panda bear or simply panda, is a bear native to south central China. It is easily recognized by the large, distinctive black patches around its eyes, over the ears, and across its round body.");
-        animals.Add("Bear", "Bears are mammals and are classified as dog like carnivorous.");
+        animals.Add("Beer", "Bears are mammals and are classified as dog like carnivorous.");
         animals.Add("Deer", "Deer are the ruminant mammals. Species in the family include the white-tailed deer, mule deer, elk, moose, red deer, reindeer, fallow deer, roe deer.");
 
         Animal = "Lion";
@@ -214,7 +215,7 @@ Public Class ViewModel
 	    m_animals.Add("Tiger", "The tiger is the largest cat species, reaching a total body length of up to 3.38 m over curves and exceptionally weighing up to 388.7 kg in the wild.");
         m_animals.Add("Lion", "The lion is one of the strongest animal. It is also known as the king of jungles.");
         m_animals.Add("Panda", "The giant panda, also known as panda bear or simply panda, is a bear native to south central China. It is easily recognized by the large, distinctive black patches around its eyes, over the ears, and across its round body.");
-        m_animals.Add("Bear", "Bears are mammals and are classified as dog like carnivorous.");
+        m_animals.Add("Beer", "Bears are mammals and are classified as dog like carnivorous.");
         m_animals.Add("Deer", "Deer are the ruminant mammals. Species in the family include the white-tailed deer, mule deer, elk, moose, red deer, reindeer, fallow deer, roe deer.");
 
 		Animal = "Lion"
@@ -243,8 +244,7 @@ End Class
 
 ## Implementing extension class for SfRichTextBoxAdv
 
-`SfRichTextBoxAdv` does not expose a `Text` dependency property of its own, so a derived class is needed to add two-way binding support. The following code example demonstrates how to implement an extension class for SfRichTextBoxAdv with a dependency property that supports two-way binding. The extension listens to the control's [ContentChanged](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_ContentChanged) event and re-reads the document as plain text whenever the user edits.
-
+The following code example demonstrates how to implement an extension class for SfRichTextBoxAdv with dependency property that supports two way binding.
 {% tabs %}
 {% highlight c# %}
 /// <summary>
@@ -315,7 +315,7 @@ public class SfRichTextBoxAdvExtension : SfRichTextBoxAdv
     {
         if (this.Document != null)
         {
-            // To skip internal updating of the document when setting the Text property.
+            // To skip internal updation of document on setting Text property.
             skipUpdating = true;
             Stream stream = new MemoryStream();
             // Saves the document's text into a Stream.
@@ -338,7 +338,7 @@ public class SfRichTextBoxAdvExtension : SfRichTextBoxAdv
     /// <param name="text"></param>
     private void UpdateDocument(string text)
     {
-        // If the Text property is being set internally, skip updating the document.
+        // If text property is set internally means, skip updating the document.
         if (!skipUpdating && !string.IsNullOrEmpty(text))
         {
             Stream stream = new MemoryStream();
@@ -347,7 +347,7 @@ public class SfRichTextBoxAdvExtension : SfRichTextBoxAdv
             // Writes the byte array to stream.
             stream.Write(bytes, 0, bytes.Length);
             stream.Position = 0;
-            // Loads the stream.
+            //Load the stream.
             Load(stream, FormatType.Txt);
         }
     }
@@ -390,14 +390,14 @@ Public Class SfRichTextBoxAdvExtension
 	#End Region
 	
 	#Region "Constructor"
-	''' <summary>
-	''' Initializes the instance of SfRichTextBoxAdvExtension class.
-	''' </summary>
-	Public Sub New()
-		' Wires the ContentChanged event.
-		AddHandler Me.ContentChanged, AddressOf RicTextBoxAdv_ContentChanged
-	End Sub
-	#End Region
+''' <summary>
+''' Initializes the instance of SfRichTextBoxAdvExtension class.
+''' </summary>
+Public Sub New()
+	' Wires the ContentChanged event.
+	AddHandler this.ContentChanged, AddressOf RicTextBoxAdv_ContentChanged
+End Sub
+#End Region
 
 #Region "Static Dependency Properties"
 ''' <summary>
@@ -475,7 +475,7 @@ End Class
 {% endhighlight %}
 {% endtabs %}
 
-## Creating xaml view
+## Creating XAML View
 
 The following code example demonstrates how to create XAML view with SfRichTextBoxAdv and UI properties bound to view model properties.
 {% tabs %}
@@ -518,10 +518,4 @@ The following code example demonstrates how to create XAML view with SfRichTextB
 
 {% endtabs %}
 
-N> You can refer to our [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF DOCX Editor example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
-
-## See also
-
-- [Commands in WPF DOCX Editor](./Commands)
-- [Layout Types in WPF DOCX Editor](./Layout-Types)
-- [Document Structure in WPF DOCX Editor](./Document-Structure)
+N> You can refer to our [WPF RichTextBox](https://www.syncfusion.com/wpf-controls/richtextbox) feature tour page for its groundbreaking feature representations.You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/wpf-demos/tree/master/richtextbox) to knows how to render and configure the editing tools.

@@ -4,6 +4,7 @@ description: Describe how to migrate from Microsoft Office Automation to the Syn
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # FAQ about multithreading in Word document in .NET Word
 

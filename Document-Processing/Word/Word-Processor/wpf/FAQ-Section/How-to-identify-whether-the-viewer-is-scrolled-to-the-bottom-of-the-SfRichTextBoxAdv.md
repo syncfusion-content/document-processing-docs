@@ -4,6 +4,7 @@ description: Detect when the document viewer reaches the bottom in Syncfusion® 
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: scroll-to-bottom
 ---
 

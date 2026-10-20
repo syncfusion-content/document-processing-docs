@@ -4,6 +4,7 @@ description: Learn how to split a large Word document into several smaller ones 
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Split Word documents in .NET Word
 

@@ -6,6 +6,7 @@ description: Enable the ruler in Syncfusion® JavaScript DOCX Editor to set marg
 platform: document-processing
 control: Enable Ruler
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

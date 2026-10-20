@@ -5,6 +5,7 @@ description: Explore Syncfusion React DOCX Editor how-to guides, UI elements, fe
 control: How to 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: Open a document from a URL in Syncfusion® TypeScript DOCX Editor t
 platform: document-processing
 control: Open a Document by Address
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

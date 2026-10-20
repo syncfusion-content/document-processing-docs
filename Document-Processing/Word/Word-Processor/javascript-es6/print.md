@@ -5,6 +5,7 @@ description: Print feature in TypeScript DOCX Editor enables printing documents 
 platform: document-processing
 control: Print 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

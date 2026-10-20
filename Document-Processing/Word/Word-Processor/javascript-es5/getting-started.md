@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion JavaScript DOCX Editor
 platform: document-processing
 control: Getting started 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

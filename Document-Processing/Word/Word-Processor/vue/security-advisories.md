@@ -5,6 +5,7 @@ description: Security advisories in Vue DOCX Editor provide information about vu
 control: Security advisories 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

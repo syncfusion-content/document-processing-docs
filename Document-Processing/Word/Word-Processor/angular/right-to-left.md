@@ -5,6 +5,7 @@ description: Right-to-left support in Angular DOCX Editor enables RTL user inter
 platform: document-processing
 control: Right to left 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

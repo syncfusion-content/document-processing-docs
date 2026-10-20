@@ -5,6 +5,7 @@ description: The bookmark feature in React DOCX Editor lets users add, manage, a
 control: Bookmark
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

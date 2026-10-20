@@ -5,6 +5,7 @@ description: Customize the context menu in Syncfusion® TypeScript DOCX Editor b
 platform: document-processing
 control: Customize Context Menu
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

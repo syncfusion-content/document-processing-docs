@@ -5,6 +5,7 @@ description: The server-side export in Angular DOCX Editor allows documents to b
 platform: document-processing
 control: Server-side export
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

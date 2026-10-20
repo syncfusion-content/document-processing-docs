@@ -5,6 +5,7 @@ description: Open documents from AWS S3 in Angular DOCX Editor, enabling cloud s
 platform: document-processing
 control: Open document from AWS S3
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

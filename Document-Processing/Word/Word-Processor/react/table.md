@@ -5,6 +5,7 @@ description: Tables in React DOCX Editor enable adding and managing rows, column
 control: Table 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

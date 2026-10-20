@@ -5,6 +5,7 @@ description: Learn about the supported file formats in JavaScript DOCX Editor fo
 platform: document-processing
 control: Unsupported file 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

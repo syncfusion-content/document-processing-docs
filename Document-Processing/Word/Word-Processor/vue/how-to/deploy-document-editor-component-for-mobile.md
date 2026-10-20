@@ -5,6 +5,7 @@ description: Deploy the Syncfusion® Vue DOCX Editor for mobile browsers in read
 control: Deploy DOCX Editor component for mobile 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

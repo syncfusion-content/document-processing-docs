@@ -5,6 +5,7 @@ description: The spell check feature in React DOCX Editor enables spelling verif
 control: Spell check 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

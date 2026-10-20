@@ -5,6 +5,7 @@ description: The shapes feature in React DOCX Editor preserve shape elements, te
 control: Shapes 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

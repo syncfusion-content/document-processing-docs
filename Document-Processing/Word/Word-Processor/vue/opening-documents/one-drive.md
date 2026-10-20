@@ -5,6 +5,7 @@ description: Open documents from OneDrive in Vue DOCX Editor, enabling cloud sto
 platform: document-processing
 control: Open document from One Drive
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

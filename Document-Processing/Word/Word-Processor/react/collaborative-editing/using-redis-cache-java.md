@@ -5,6 +5,7 @@ description: The collaborative editing feature in React DOCX Editor supports rea
 control: Collaborative Editing Java
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

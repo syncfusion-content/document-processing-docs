@@ -5,6 +5,7 @@ description: Learn about the introduction of Syncfusion Essential Studio JavaScr
 platform: document-processing
 control: Index 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

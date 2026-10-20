@@ -5,6 +5,7 @@ description: Images in Angular DOCX Editor enable resizing and text wrapping whi
 platform: document-processing
 control: Image 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

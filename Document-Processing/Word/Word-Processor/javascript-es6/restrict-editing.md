@@ -5,6 +5,7 @@ description: Restrict editing feature in TypeScript DOCX Editor enables read-onl
 platform: document-processing
 control: Restrict editing 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

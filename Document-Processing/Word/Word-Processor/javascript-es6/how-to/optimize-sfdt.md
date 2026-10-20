@@ -5,6 +5,7 @@ description: Optimize SFDT files in Syncfusion® TypeScript DOCX Editor to reduc
 platform: document-processing
 control: Optimize SFDT
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: Change the default cursor color in Syncfusion® TypeScript DOCX Edi
 platform: document-processing
 control: Change the Cursor Color in the DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

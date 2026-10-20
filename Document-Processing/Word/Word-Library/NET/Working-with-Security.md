@@ -4,6 +4,7 @@ description: Learn how to encrypt, decrypt, and control changes by protecting th
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Word Document Protection in .NET Word
 

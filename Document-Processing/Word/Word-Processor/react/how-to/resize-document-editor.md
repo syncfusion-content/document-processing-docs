@@ -5,6 +5,7 @@ description: Adjust the height and width of the Syncfusion® React DOCX Editor t
 control: Resize DOCX Editor
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: Modules in Vue DOCX Editor enable selective injection of editing, e
 control: Feature module 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: Form fields in Vue DOCX Editor allow users to create, update, and p
 control: Form fields 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

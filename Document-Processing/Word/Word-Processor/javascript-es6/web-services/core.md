@@ -5,6 +5,7 @@ description: Configure ASP.NET Core web services in the TypeScript DOCX Editor t
 platform: document-processing
 control: Core 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

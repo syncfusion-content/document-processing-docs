@@ -5,6 +5,7 @@ description: The shapes feature in Vue DOCX Editor preserve shape elements, text
 control: Shapes 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

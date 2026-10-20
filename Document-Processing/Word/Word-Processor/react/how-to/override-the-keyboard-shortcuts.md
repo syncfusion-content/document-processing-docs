@@ -5,6 +5,7 @@ description: Override default keyboard shortcuts in Syncfusion® React DOCX Edit
 control: Override the keyboard shortcuts
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

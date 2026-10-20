@@ -5,6 +5,7 @@ description: Add a custom save button to the toolbar in Syncfusion® React DOCX 
 control: Add save button to toolbar
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

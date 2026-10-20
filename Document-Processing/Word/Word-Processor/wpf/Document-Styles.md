@@ -4,6 +4,7 @@ description: The document styles in WPF DOCX Editor provide predefined formattin
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: styles
 ---
 

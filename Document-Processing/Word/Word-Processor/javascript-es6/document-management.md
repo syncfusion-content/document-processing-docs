@@ -5,6 +5,7 @@ description: Document management in TypeScript DOCX Editor provides editing rest
 platform: document-processing
 control: Document Management
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

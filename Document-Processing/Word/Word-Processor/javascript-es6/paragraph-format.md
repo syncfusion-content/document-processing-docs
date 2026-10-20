@@ -5,6 +5,7 @@ description: The paragraph format feature in TypeScript DOCX Editor enables user
 platform: document-processing
 control: Paragraph format 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

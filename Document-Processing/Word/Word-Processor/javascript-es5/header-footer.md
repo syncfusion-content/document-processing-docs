@@ -5,6 +5,7 @@ description: Headers and footers in JavaScript DOCX Editor enable adding and cus
 platform: document-processing
 control: Header footer 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

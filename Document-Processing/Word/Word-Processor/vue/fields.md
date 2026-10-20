@@ -5,6 +5,7 @@ description: Fields in Vue DOCX Editor enable inserting and updating document fi
 control: Fields 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

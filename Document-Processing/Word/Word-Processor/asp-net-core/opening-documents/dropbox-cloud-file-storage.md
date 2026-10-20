@@ -5,6 +5,7 @@ description: Open documents from Dropbox cloud storage in ASP.NET Core DOCX Edit
 platform: document-processing
 control: Open document from Dropbox cloud file storage
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

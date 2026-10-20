@@ -5,6 +5,7 @@ description: Open documents from Box cloud file storage in JavaScript DOCX Edito
 platform: document-processing
 control: Opening from Box cloud file storage
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 --- 
 

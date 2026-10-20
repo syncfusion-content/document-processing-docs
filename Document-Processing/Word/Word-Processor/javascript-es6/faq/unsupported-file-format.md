@@ -5,6 +5,7 @@ description: Learn about the supported file formats in TypeScript DOCX Editor fo
 platform: document-processing
 control: Unsupported File
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

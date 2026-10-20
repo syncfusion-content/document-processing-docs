@@ -5,6 +5,7 @@ description: Publish the Syncfusion® Angular DOCX Editor Web API to Azure App S
 platform: document-processing
 control: How to publish DOCX Editor Web API application in Azure App Service from Visual Studio
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: Move the document selection to a specific position in Syncfusion® 
 control: Move selection to specific position 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

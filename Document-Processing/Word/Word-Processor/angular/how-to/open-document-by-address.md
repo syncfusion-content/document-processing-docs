@@ -5,6 +5,7 @@ description: Open a document from a URL in Syncfusion® Angular DOCX Editor to l
 platform: document-processing
 control: Open document by address
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

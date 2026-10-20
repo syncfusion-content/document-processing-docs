@@ -4,6 +4,7 @@ description: Export inserted images as embedded content in HTML from SyncfusionÂ
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: embedded-image-html
 ---
 

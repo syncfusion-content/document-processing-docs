@@ -1,72 +1,69 @@
 ---
-title: Printing Contents in UWP DOCX Editor | Syncfusion
-description: The printing contents in UWP DOCX Editor offer API to retrieve each page as a bitmap image, enabling page-by-page printing through the print manager.
+title: Printing Contents in UWP RichTextBox control | Syncfusion
+description: Learn here all about Printing Contents support in Syncfusion UWP RichTextBox (SfRichTextBoxAdv) control and more.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: printing,printmanager,printdocument,print-task,print-preview
+appliesto: DOCX Editor SDK, UI Component Suite
+keywords: printing
 ---
-# Printing Contents in UWP DOCX Editor
+# Printing Contents in UWP RichTextBox (SfRichTextBoxAdv)
 
-[`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html) supports an API to retrieve each page as a bitmap image by specifying the page number. Using this API together with the UWP print manager, you can print the content of `SfRichTextBoxAdv` page by page in Universal Windows Platform applications.
-
-## Registering for printing
-
-The following sample code demonstrates how to register for printing and how to implement the print document event handlers.
+The SfRichTextBoxAdv supports API to retrieve each page as a bitmap image by specifying the page number. Using this API and Print manager support, you can easily achieve printing contents of SfRichTextBoxAdv page by page in Universal Windows Platform applications.
+The following sample code demonstrates how to register for printing and how to implement print document event handlers.
 {% tabs %}
 {% highlight c# %}
-// Initializes a list of BitmapImage to store the page images.
+// Initializes a list of BitmapImage to store images of pages.
 List<BitmapImage> pageImages = new List<BitmapImage>();
 
-// Initializes a PrintDocument instance.
+// Initializes PrintDocument instance.
 PrintDocument printDocument = new PrintDocument();
 IPrintDocumentSource printDocumentSource;
 
-// Registers for printing.
+// Registers for Printing
 void RegisterForPrinting()
 {
-    // Subscribes to the PrintTaskRequested event.
+    // Hooks print task requested event handler.
     PrintManager printManager = PrintManager.GetForCurrentView();
     printManager.PrintTaskRequested += PrintManager_PrintTaskRequested;
 
     // Initializes the print document source.
     printDocumentSource = printDocument.DocumentSource;
 
-    // Subscribes to the print document events.
+    // Hooks print document event handlers.
     printDocument.Paginate += PrintDocument_Paginate;
     printDocument.GetPreviewPage += PrintDocument_GetPreviewPage;
     printDocument.AddPages += PrintDocument_AddPages;
 }
 
-// Handles the PrintTaskRequested event.
+// Print Task Requested event handler
 private void PrintManager_PrintTaskRequested(PrintManager sender, PrintTaskRequestedEventArgs args)
 {
     PrintTask printTask = null;
     printTask = args.Request.CreatePrintTask("Document", sourceRequested =>
     {
-        // Subscribes to the PrintTask.Completed event, invoked when the print job finishes.
+        // Prints Task event handler invoked when the print job is completed.
         printTask.Completed += PrintTask_Completed;
         sourceRequested.SetSource(printDocumentSource);
     });
 }
 
-// Handles the PrintTask.Completed event.
+// Print Task Completed Event Handler
 private void PrintTask_Completed(PrintTask sender, PrintTaskCompletedEventArgs args)
 {
-    // Clears the page images to free memory after the print job completes.
     pageImages.Clear();
 }
 
-// Handles the Paginate event.
+// Print Document Paginate event handler.
 private void PrintDocument_Paginate(object sender, PaginateEventArgs e)
 {
     int pageCount = richTextBoxAdv.PageCount;
     PrintDocument printDocument = sender as PrintDocument;
-    // Reports the number of preview pages created.
+    // Report the number of preview pages created.
     printDocument.SetPreviewPageCount(pageCount, PreviewPageCountType.Intermediate);
 }
 
-// Handles the GetPreviewPage event.
+// Print Document Get Preview Page event handler.
 private void PrintDocument_GetPreviewPage(object sender, GetPreviewPageEventArgs e)
 {
     PrintDocument printDocument = sender as PrintDocument;
@@ -81,7 +78,7 @@ private void PrintDocument_GetPreviewPage(object sender, GetPreviewPageEventArgs
     }
 }
 
-// Handles the AddPages event.
+// Print Document Add Pages event handler.
 private void PrintDocument_AddPages(object sender, AddPagesEventArgs e)
 {
     int pageCount = richTextBoxAdv.PageCount;
@@ -100,10 +97,7 @@ private void PrintDocument_AddPages(object sender, AddPagesEventArgs e)
 
 {% endtabs %}
 
-## Retrieving page images
-
-The following code example demonstrates how to retrieve each page of `SfRichTextBoxAdv` as a bitmap image and how to invoke printing.
-
+The following code example demonstrates how to retrieve each page in SfRichTextBoxAdv as bitmap image and how to invoke printing.
 {% tabs %}
 {% highlight c# %}
 // Gets the page images asynchronously.
@@ -115,7 +109,7 @@ async Task<bool> GetPageImagesAsync()
     int pageCount = richTextBoxAdv.PageCount;
     for (int i = 0; i < pageCount; i++)
     {
-        // Retrieves the specified page of SfRichTextBoxAdv as a BitmapImage by specifying the page number.
+        // Retrieve page in RichTextBoxAdv as BitmapImage by specifying page number.
         BitmapImage bitmapImage = await richTextBoxAdv.GetPageAsImageAsync(i);
         pageImages.Add(bitmapImage);
     }
@@ -131,19 +125,19 @@ async void InvokePrintAsync()
         await PrintManager.ShowPrintUIAsync();
 }
 
+
+
 {% endhighlight %}
+
 {% endtabs %}
 
-## Unregistering printing
-
-The following code example demonstrates how to unregister printing and the print document event handlers.
-
+The following code example demonstrates how to unregister printing and print document event handlers.
 {% tabs %}
 {% highlight c# %}
 // Unregisters printing.
 void UnRegisterPrinting()
 {
-    // Unsubscribes from the print document events.
+    // Unhooks the print document event handlers.
     if (printDocument != null)
     {
         printDocument.Paginate -= PrintDocument_Paginate;
@@ -152,19 +146,20 @@ void UnRegisterPrinting()
         printDocumentSource = null;
         printDocument = null;
     }
-    // Unsubscribes from the PrintTaskRequested event.
+    // Unhooks the print task requested event handler.
     PrintManager printManager = PrintManager.GetForCurrentView();
     printManager.PrintTaskRequested -= PrintManager_PrintTaskRequested;
 }
 
+
+
 {% endhighlight %}
+
 {% endtabs %}
 
-## Hiding comments when printing
+In the SfRichTextBoxAdv control, comments will be shown by default on printing the document. You can hide the comments while printing by using the [PrintComments](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.EditorSettings.html#Syncfusion_UI_Xaml_RichTextBoxAdv_EditorSettings_PrintComments) property of [EditorSettings](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.EditorSettings.html) class.
 
-In the `SfRichTextBoxAdv` control, comments are shown by default when printing the document. You can hide the comments while printing by setting the [`PrintComments`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.EditorSettings.html#Syncfusion_UI_Xaml_RichTextBoxAdv_EditorSettings_PrintComments) property of the [`EditorSettings`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.EditorSettings.html) class.
-
-The following code example illustrates how to hide the comments when printing the document.
+The following code example illustrates how to hide the comments on printing the document.
 
 {% tabs %}
 {% highlight xaml %}
@@ -186,9 +181,3 @@ richTextBoxAdv.EditorSettings.PrintComments = False
 
 {% endhighlight %}
 {% endtabs %}
-
-## See also
-
-- [Commands in UWP DOCX Editor](./Commands)
-- [Selection in UWP DOCX Editor](./Selection)
-- [Getting started with UWP DOCX Editor](./Getting-Started)

@@ -4,6 +4,7 @@ description: Learn how to create and customize numbered and bulleted lists in Wo
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 
 # List in JavaScript Word Library

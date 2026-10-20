@@ -1,20 +1,21 @@
 ---
-title: Undo Redo in WPF DOCX Editor | Syncfusion
-description: The undo redo feature in WPF DOCX Editor offers history preservation support, enabling editing actions to be preserved in undo and redo stacks.
+title: Undo Redo in WPF RichTextBox control | Syncfusion
+description: Learn here all about Undo Redo support in Syncfusion WPF RichTextBox (SfRichTextBoxAdv) control and more.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: undo-redo,history,undo,redo,editor-settings,is-undo-enabled
+appliesto: DOCX Editor SDK, UI Component Suite
+keywords: undo-redo
 ---
-# Undo Redo in WPF DOCX Editor
+# Undo Redo in WPF RichTextBox (SfRichTextBoxAdv)
 
-The [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) (SfRichTextBoxAdv) provides history preservation support, which means each editing operation performed on its document content will be preserved in history. The undo and redo behavior is configured through the [EditorSettings](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.EditorSettings.html) class. You can easily undo any editing action. The undone actions will also be preserved in a separate stack enabling you to redo the action.
+The SfRichTextBoxAdv provides history preservation support, which means each editing operation performed against its document content will be preserved in history. You can easily undo any editing action with ease. The undone actions will also be preserved in a separate stack enabling you to redo the action again.
 
 N> Currently, the number of actions that can be preserved in both undo and redo stacks is limited to 500.
 
-## UI command to perform undo/redo operations
+## UI Command to perform undo/redo operations
 
-The following code example demonstrates how to bind the [UndoCommand](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_UndoCommand) and [RedoCommand](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_Windows_Controls_RichTextBoxAdv_SfRichTextBoxAdv_RedoCommand) commands for performing undo and redo operations.
+The following code example demonstrates how to bind commands for performing undo and redo operations.
 {% tabs %}
 {% highlight xaml %}
 <!-- Binds button to the UndoCommand -->
@@ -29,11 +30,11 @@ The following code example demonstrates how to bind the [UndoCommand](https://he
 
 N> In order to perform undo/redo, the standard keyboard shortcuts such as CTRL + Z, CTRL + Y can also be used.
 
-## Enable/Disable undo redo
+## Enable/Disable Undo Redo
 
-### Disable undo for all the editing actions
+### Disable Undo for all the editing actions
 
-In SfRichTextBoxAdv, the Undo functionality is enabled by default. You can disable it by using the [IsUndoEnabled](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.EditorSettings.html#Syncfusion_Windows_Controls_RichTextBoxAdv_EditorSettings_IsUndoEnabled) property of the `EditorSettings` class.
+In SfRichTextBoxAdv, the Undo functionality is enabled by default. You can disable it by using the `IsUndoEnabled` property of the `EditorSettings` class.
 
 The following code example demonstrates how to disable the Undo functionality in `SfRichTextBoxAdv`.
 {% tabs %}
@@ -65,9 +66,9 @@ richTextBoxAdv.EditorSettings.IsUndoEnabled = false
 
 N> This API is supported starting from release version v18.1.0.X.
 
-### Disable undo for style modification actions
+### Disable Undo for style modification actions
 
-In SfRichTextBoxAdv, the Undo functionality is enabled by default for all the editing operations. If you want to disable the Undo functionality for modifying an existing style only, you can disable it by using the [CanUndoStyle](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.Controls.RichTextBoxAdv.EditorSettings.html#Syncfusion_Windows_Controls_RichTextBoxAdv_EditorSettings_CanUndoStyle) property of the `EditorSettings` class.
+In SfRichTextBoxAdv, the Undo functionality is enabled by default for all the editing operations. If you want to disable the Undo functionality for modifying an existing style alone. You can disable it by using the `CanUndoStyle` property of the `EditorSettings` class.
 
 The following code example demonstrates how to disable the Undo support for modifying an existing style in `SfRichTextBoxAdv`.
 {% tabs %}
@@ -90,7 +91,7 @@ richTextBoxAdv.EditorSettings.CanUndoStyle = false;
 {% highlight VB %}
 ' Defines the SfRichTextBoxAdv control with document style undo operation disabled.
 Dim richTextBoxAdv As New SfRichTextBoxAdv()
-richTextBoxAdv.EditorSettings.CanUndoStyle = False
+richTextBoxAdv.EditorSettings.CanUndoStyle = false
 
 
 {% endhighlight %}
@@ -98,11 +99,4 @@ richTextBoxAdv.EditorSettings.CanUndoStyle = False
 {% endtabs %}
 
 N> This API is supported starting from release version v18.1.0.X.
-
-N> You can refer to our [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [WPF DOCX Editor example](https://github.com/syncfusion/docx-editor-sdk-wpf-demos) to know how to render and configure the editing tool.
-
-## See also
-
-- [Commands in WPF DOCX Editor](./Commands)
-- [Document Structure in WPF DOCX Editor](./Document-Structure)
-- [Document Properties in WPF DOCX Editor](./Document-Properties)
+You can refer to our [WPF RichTextBox](https://www.syncfusion.com/wpf-controls/richtextbox) feature tour page for its groundbreaking feature representations.You can also explore our [WPF RichTextBox example](https://github.com/syncfusion/wpf-demos/tree/master/richtextbox) to knows how to render and configure the editing tools.

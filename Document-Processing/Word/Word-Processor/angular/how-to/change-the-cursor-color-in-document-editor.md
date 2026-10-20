@@ -5,6 +5,7 @@ description: Change the default cursor color in Syncfusion® Angular DOCX Editor
 platform: document-processing
 control: Change the cursor color in DOCX Editor 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

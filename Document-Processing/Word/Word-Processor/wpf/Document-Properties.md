@@ -4,6 +4,7 @@ description: The document properties in WPF DOCX Editor track document statistic
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: Word count, paragraph count, page count, current page number.
 ---
 # Document Properties in WPF DOCX Editor

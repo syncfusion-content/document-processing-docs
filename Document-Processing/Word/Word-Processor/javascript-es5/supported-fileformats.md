@@ -5,6 +5,7 @@ description: Supported file formats in JavaScript DOCX Editor allow importing an
 control: Supported File Formats
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

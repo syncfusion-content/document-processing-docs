@@ -5,6 +5,7 @@ description: The styles feature in Angular DOCX Editor enables users to apply, c
 platform: document-processing
 control: Styles
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

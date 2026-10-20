@@ -5,6 +5,7 @@ description: Open documents from Azure Blob Storage in ASP.NET MVC DOCX Editor, 
 platform: document-processing
 control: Open document from Azure Blob Storage
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

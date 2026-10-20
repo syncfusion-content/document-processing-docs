@@ -5,6 +5,7 @@ description: The section format feature in React DOCX Editor enables users to cu
 control: Section format 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

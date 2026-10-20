@@ -5,6 +5,7 @@ description: Change the document view to web layout or print layout in Syncfusio
 control: Change document view 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

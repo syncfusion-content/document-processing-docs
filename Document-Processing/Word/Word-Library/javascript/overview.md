@@ -6,6 +6,7 @@ description: Learn about the JavaScript Word Document Processing Library, includ
 platform: document-processing
 control: Word Library
 documentation: ug
+appliesto: Document SDK
 domainurl: ##DomainURL##
 ---
 

@@ -4,6 +4,7 @@ description: Learn how to insert, replace, remove, format, find, and caption ima
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Working with Images in JavaScript Word Library

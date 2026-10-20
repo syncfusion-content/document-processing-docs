@@ -5,6 +5,7 @@ description: Disable the auto focus behavior in Syncfusion® TypeScript DOCX Edi
 platform: document-processing
 control: Disable Auto Focus
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

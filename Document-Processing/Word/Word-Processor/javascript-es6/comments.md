@@ -5,6 +5,7 @@ description: The comments feature in TypeScript DOCX Editor enables users to add
 platform: document-processing
 control: Comments
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

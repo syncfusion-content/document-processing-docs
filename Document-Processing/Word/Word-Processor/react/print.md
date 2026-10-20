@@ -5,6 +5,7 @@ description: Print feature in React DOCX Editor enables printing documents with 
 control: Print 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

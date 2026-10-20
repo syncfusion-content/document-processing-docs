@@ -5,6 +5,7 @@ description: Form fields in React DOCX Editor allow users to create, update, and
 control: Form fields 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

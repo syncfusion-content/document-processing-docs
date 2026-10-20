@@ -5,6 +5,7 @@ description: The Import feature in Angular DOCX Editor enables users to load and
 platform: document-processing
 control: Import 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

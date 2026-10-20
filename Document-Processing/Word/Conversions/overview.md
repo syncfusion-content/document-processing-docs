@@ -4,6 +4,7 @@ description: Learn about the overview of the Syncfusion Document Conversion Libr
 platform: document-processing
 control: general
 documentation: UG
+appliesto: Document SDK
 keywords: Word, SDK, Automation, API, convert
 ---
 

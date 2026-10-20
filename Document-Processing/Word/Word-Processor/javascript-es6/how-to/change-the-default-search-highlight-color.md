@@ -5,6 +5,7 @@ description: Change the default search highlight color in Syncfusion® TypeScrip
 platform: document-processing
 control: Change the Default Search Highlight Color
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

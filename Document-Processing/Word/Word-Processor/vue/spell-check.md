@@ -5,6 +5,7 @@ description: The spell check feature in VueDOCX Editor enables spelling verifica
 control: Spell check 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

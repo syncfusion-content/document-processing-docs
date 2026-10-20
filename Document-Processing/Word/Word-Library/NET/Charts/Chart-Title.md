@@ -4,6 +4,7 @@ description: Learn how to modify the appearance of plot area in a chart in a Wor
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Modify the Appearance of Chart Title in .NET Word

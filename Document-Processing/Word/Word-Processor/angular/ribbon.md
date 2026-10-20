@@ -5,6 +5,7 @@ description: Ribbon in Angular DOCX Editor provides a tabbed command interface t
 platform: document-processing
 control: Ribbon
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

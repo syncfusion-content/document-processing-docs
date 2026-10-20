@@ -5,6 +5,7 @@ description: The footnote and endnote support in Vue DOCX Editor enables users t
 control: Notes 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

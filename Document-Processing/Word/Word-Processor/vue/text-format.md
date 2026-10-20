@@ -5,6 +5,7 @@ description: Text format properties in Vue DOCX Editor enables customizing text 
 control: Text format 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

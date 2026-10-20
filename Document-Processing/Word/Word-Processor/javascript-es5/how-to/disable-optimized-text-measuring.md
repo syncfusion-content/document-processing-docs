@@ -5,6 +5,7 @@ description: Disable optimized text measuring in Syncfusion® JavaScript DOCX Ed
 platform: document-processing
 control: Disable Optimized Text Measuring
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

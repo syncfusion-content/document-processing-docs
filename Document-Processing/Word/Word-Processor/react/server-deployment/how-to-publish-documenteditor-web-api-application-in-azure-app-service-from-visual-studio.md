@@ -5,6 +5,7 @@ description: Publish the Syncfusion® React DOCX Editor Web API to Azure App Ser
 control: How to publish DOCX Editor Web API application in Azure App Service from Visual Studio 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

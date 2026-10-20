@@ -5,6 +5,7 @@ description: The comments feature in React DOCX Editor enables users to add, rev
 control: Comments 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

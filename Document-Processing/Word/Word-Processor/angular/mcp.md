@@ -4,6 +4,7 @@ description: The Syncfusion® Angular MCP Server provides setup guidance, integr
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

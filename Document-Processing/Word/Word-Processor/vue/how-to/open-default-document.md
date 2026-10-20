@@ -5,6 +5,7 @@ description: Open a default document in Syncfusion® Vue DOCX Editor during init
 control: Open default document 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: The hyperlink feature in TypeScript DOCX Editor enables users to in
 platform: document-processing
 control: Link 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

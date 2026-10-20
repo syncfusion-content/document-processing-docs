@@ -1,17 +1,15 @@
 ---
-title: Styles and Templates in UWP DOCX Editor | Syncfusion
-description: The styles and templates in UWP DOCX Editor define the structure and visual appearance, enabling custom appearance through Control template modification.
+title: Styles and Templates in UWP RichTextBox control | Syncfusion
+description: Learn here all about Styles and Templates support in Syncfusion UWP RichTextBox (SfRichTextBoxAdv) control and more.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: styles-and-templates,custom-style,styling
+appliesto: DOCX Editor SDK, UI Component Suite
+keywords: styles-and-templates, custom-style
 ---
-# Styles and Templates in UWP DOCX Editor
+# Styles and Templates in UWP RichTextBox (SfRichTextBoxAdv)
 
-This section describes the styles and templates for the [`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html) control. The control template defines the structure of the SfRichTextBoxAdv control and the style defines its visual appearance. You can modify the default control template to define a unique appearance for the control.
-
-## Default style and template
-
+This section describes the styles and templates for the SfRichTextBoxAdv control. The Template defines the structure of the SfRichTextBoxAdv control and the Style defines its visual appearance. You can modify the default Control template to define a unique appearance for the control.
 The following XAML shows the default style and template for the SfRichTextBoxAdv control.
 {% tabs %}
 {% highlight xml %}
@@ -51,13 +49,12 @@ The following XAML shows the default style and template for the SfRichTextBoxAdv
 
 {% endtabs %}
 
-N> In the control template, you are allowed to reorder the template parts and to add your own elements. However, when changing the control template, you should be careful to include all required parts. Required template parts are marked with the `x:Name` attribute. Omission of required parts may impact some of the functionality.
+N> In the control template, you are allowed to reorder the template parts and to add your own elements. However, when changing the control template you should be careful to include all required parts. Usually required parts are marked with Name attribute. Omission of required parts may impact some of the functionality. 
 
-## Styling SfRichTextBoxAdv
+## Styling the SfRichTextBoxAdv
 
-You can define a custom style for the SfRichTextBoxAdv control either by creating an empty style and setting it up yourself, or by copying the default style and modifying it. 
-
-The following example demonstrates how to customize the style for the SfRichTextBoxAdv control.
+You can define custom style for the SfRichTextBoxAdv control either by creating empty style and set it up on your own or by copying the default style and modifying it. 
+The following example demonstrates how to customize the style for SfRichTextBoxAdv control.
 {% tabs %}
 {% highlight xml %}
 <Style x:Key="RichTextBoxAdvCustomStyle" TargetType="RichTextBoxAdv:SfRichTextBoxAdv" xmlns:RichTextBoxAdv="using:Syncfusion.UI.Xaml.RichTextBoxAdv">
@@ -105,10 +102,9 @@ The following example demonstrates how to customize the style for the SfRichText
 
 {% endtabs %}
 
-The following XAML example demonstrates how to apply the custom style to the SfRichTextBoxAdv control.
-
+The following code example demonstrates how to apply the custom style for RichTextBoxAdv control.
 {% tabs %}
-{% highlight xaml %}
+{% highlight c# %}
 <RichTextBoxAdv:SfRichTextBoxAdv x:Name="richTextBoxAdv" ManipulationMode="All" Style="{StaticResource RichTextBoxAdvCustomStyle}" xmlns:RichTextBoxAdv="using:Syncfusion.UI.Xaml.RichTextBoxAdv"/>
 
 
@@ -116,12 +112,6 @@ The following XAML example demonstrates how to apply the custom style to the SfR
 
 {% endtabs %}
 
-The following screenshot shows the SfRichTextBoxAdv control with the customized style.
+The following screenshot shows the SfRichTextBoxAdv control with customized style.
+![Styles-and-Templates_img1](Styles-and-Templates_images/Styles-and-Templates_img1.jpeg)
 
-![SfRichTextBoxAdv control with the RichTextBoxAdvCustomStyle applied](Styles-and-Templates_images/Styles-and-Templates_img1.jpeg)
-
-## See also
-
-- [Commands in UWP DOCX Editor](./Commands)
-- [Background in UWP DOCX Editor](./Background)
-- [Getting started with UWP DOCX Editor](./Getting-Started)

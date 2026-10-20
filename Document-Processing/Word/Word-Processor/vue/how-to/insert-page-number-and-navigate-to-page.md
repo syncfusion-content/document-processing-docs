@@ -5,6 +5,7 @@ description: Insert page numbers and navigate to specific pages in Syncfusion® 
 control: Insert page number and navigate to page 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

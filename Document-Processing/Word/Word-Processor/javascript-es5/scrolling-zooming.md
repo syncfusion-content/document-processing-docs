@@ -5,6 +5,7 @@ description: The scrolling and zooming in JavaScript DOCX Editor enables smooth 
 platform: document-processing
 control: Scrolling zooming 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

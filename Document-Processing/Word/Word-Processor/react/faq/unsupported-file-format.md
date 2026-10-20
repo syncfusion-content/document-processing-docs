@@ -5,6 +5,7 @@ description: Learn about the supported file formats in React DOCX Editor for imp
 control: Unsupported file 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

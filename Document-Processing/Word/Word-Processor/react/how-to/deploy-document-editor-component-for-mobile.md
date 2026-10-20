@@ -5,6 +5,7 @@ description: Deploy the Syncfusion® React DOCX Editor for mobile browsers in re
 control: Deploy DOCX Editor component for mobile
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

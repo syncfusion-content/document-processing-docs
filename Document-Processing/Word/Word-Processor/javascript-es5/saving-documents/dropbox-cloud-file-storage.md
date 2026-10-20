@@ -5,6 +5,7 @@ description: Save documents to Dropbox cloud storage from JavaScript DOCX Editor
 platform: document-processing
 control: Save document to Dropbox cloud file storage
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

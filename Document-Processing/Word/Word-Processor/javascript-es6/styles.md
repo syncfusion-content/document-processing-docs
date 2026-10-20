@@ -5,6 +5,7 @@ description: The styles feature in TypeScript DOCX Editor enables users to apply
 platform: document-processing
 control: Styles 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

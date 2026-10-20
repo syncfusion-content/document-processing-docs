@@ -5,6 +5,7 @@ description: Form fields in TypeScript DOCX Editor allow users to create, update
 platform: document-processing
 control: Form Fields
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -1,30 +1,27 @@
 ---
-title: Radial Menu in UWP DOCX Editor | Syncfusion
-description: The radial menu in UWP DOCX Editor offers built-in rich text formatting options like bold and italic, with enable or disable configuration support.
+title: Radial Menu in UWP RichTextBox control | Syncfusion
+description: Learn here all about Radial Menu support in Syncfusion UWP RichTextBox (SfRichTextBoxAdv) control and more.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: radial-menu,sf-radial-menu
+appliesto: DOCX Editor SDK, UI Component Suite
+keywords: radial-menu
 ---
-# Radial Menu in UWP DOCX Editor
+# Radial Menu in UWP RichTextBox (SfRichTextBoxAdv)
 
-[`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html) supports a built-in radial menu that provides rich-text formatting options such as bold, italic, and more. The radial menu appears automatically when the user makes a text selection or interacts with the control.
+The SfRichTextBoxAdv supports built-in radial menu to provide rich text formatting options such as bold, italic etc.
+The following screenshot shows built-in radial menu for SfRichTextBoxAdv control.
 
-The following screenshot shows the built-in radial menu for the `SfRichTextBoxAdv` control.
+![UWP SfRichtextBoxAdv displays radial menu](Radial-Menu_images/Radial-Menu_img1.jpeg)
 
-![SfRichTextBoxAdv built-in radial menu](Radial-Menu_images/Radial-Menu_img1.jpeg)
+N> In Windows Phone device, the built-in radial menu is not supported.
 
-N> On Windows Phone devices, the built-in radial menu is not supported.
+## Enable/Disable Radial Menu
 
-## Enable or disable the radial menu
-
-In `SfRichTextBoxAdv`, the built-in radial menu is enabled by default. You can enable or disable the built-in radial menu by setting the [`EnableRadialMenu`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html#Syncfusion_UI_Xaml_RichTextBoxAdv_SfRichTextBoxAdv_EnableRadialMenu) property. 
-
-The following code example demonstrates how to disable the built-in radial menu in the `SfRichTextBoxAdv` control.
-
+In SfRichTextBoxAdv, the built-in radial menu is enabled by default. It is possible to enable/disable the built-in radial menu. The following code example demonstrates how to disable the built-in radial menu in SfRichTextBoxAdv.
 {% tabs %}
 {% highlight xaml %}
-<RichTextBoxAdv:SfRichTextBoxAdv x:Name="richTextBoxAdv" ManipulationMode="All" EnableRadialMenu="False" />
+<RichTextBoxAdv:SfRichTextBoxAdv x:Name="richTextBoxAdv" ManipulationMode="All" EnableRadialMenu="True" xmlns:RichTextBoxAdv="using:Syncfusion.UI.Xaml.RichTextBoxAdv"/>
 
 {% endhighlight %}
 
@@ -33,29 +30,18 @@ The following code example demonstrates how to disable the built-in radial menu 
 SfRichTextBoxAdv richTextBoxAdv = new SfRichTextBoxAdv();
 richTextBoxAdv.ManipulationMode = ManipulationModes.All;
 
-// Disables the built-in radial menu in the SfRichTextBoxAdv control.
+//Disables the built-in radial menu in RichTextBoxAdv.
 richTextBoxAdv.EnableRadialMenu = false;
-
 {% endhighlight %}
-{% highlight VB %}
-' Initializes a new instance of SfRichTextBoxAdv.
-Dim richTextBoxAdv As New SfRichTextBoxAdv()
-richTextBoxAdv.ManipulationMode = ManipulationModes.All
 
-' Disables the built-in radial menu in the SfRichTextBoxAdv control.
-richTextBoxAdv.EnableRadialMenu = False
-
-{% endhighlight %}
 {% endtabs %}
 
-## Customizing the radial menu appearance
+## Customizing Radial Menu Appearance
 
-You can customize the appearance of the built-in radial menu to suit your needs. This is done by defining custom styles for the radial menu under the `Resources` of `SfRichTextBoxAdv`, which override the default style.
-
-The following code example demonstrates how to customize the appearance of the navigation button, rim, radial slider, and radial pointer in the built-in radial menu.
-
+You can customize the appearance of built-in radial menu as per your requirement. This can be done by defining the custom styles for Radial menu under the resources of SfRichTextBoxAdv, which will override its default style.
+The following code example demonstrates how to customize the appearance of navigation button, rim, radial slider and radial pointer in the built-in radial menu.
 {% tabs %}
-{% highlight xaml tabtitle="MainPage.xaml" %}
+{% highlight xaml %}
 <RichTextBoxAdv:SfRichTextBoxAdv x:Name="richTextBox" ManipulationMode="All" AcceptsTab="True" xmlns:RichTextBoxAdv="using:Syncfusion.UI.Xaml.RichTextBoxAdv">
   <!-- Specify resources for this instance -->
   <RichTextBoxAdv:SfRichTextBoxAdv.Resources>
@@ -124,12 +110,7 @@ The following code example demonstrates how to customize the appearance of the n
 
 {% endtabs %}
 The following screenshot shows the radial menu with customized style.
-![SfRichTextBoxAdv radial menu with applied custom styles](Radial-Menu_images/Radial-Menu_img2.jpeg)
+![UWP SfRichTextBoxAdv displays applied different styles in radial menu](Radial-Menu_images/Radial-Menu_img2.jpeg)
 
-N> The sample to demonstrate customizing the style of the built-in radial menu can be downloaded from the link [here](http://www.syncfusion.com/downloads/support/directtrac/general/ze/RadialMenuCustomization-1397995223#).
-
-## See also
-
-- [Commands in UWP DOCX Editor](./Commands)
-- [Selection in UWP DOCX Editor](./Selection)
-- [Getting started with UWP DOCX Editor](./Getting-Started)
+The sample to demonstrate customizing the style of built-in radial menu, can be downloaded from the following link.
+[Sample](http://www.syncfusion.com/downloads/support/directtrac/general/ze/RadialMenuCustomization-1397995223# "Click here to download the sample")

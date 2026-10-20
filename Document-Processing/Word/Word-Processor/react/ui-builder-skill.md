@@ -5,6 +5,7 @@ description: Install Syncfusion React UI Builder to generate production-ready Re
 control: DOCX Editor
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: React UI Builder, Skills, AI Assistants, DOCX Editor SDK, Agent Skills
 ---
 

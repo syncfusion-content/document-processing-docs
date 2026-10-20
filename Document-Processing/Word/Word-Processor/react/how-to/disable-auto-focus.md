@@ -5,6 +5,7 @@ description: Disable the auto focus behavior in Syncfusion® React DOCX Editor t
 platform: document-processing
 control: How to disable auto focus in DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

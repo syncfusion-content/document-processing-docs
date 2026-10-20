@@ -5,6 +5,7 @@ description: The accessibility support in TypeScript DOCX Editor ensures keyboar
 control: Accessibility
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

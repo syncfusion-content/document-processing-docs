@@ -5,6 +5,7 @@ description: The export feature in React DOCX Editor enables users to save and d
 control: Export 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: Change the default cursor color in Syncfusion® React DOCX Editor b
 control: Change the cursor color in DOCX Editor 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

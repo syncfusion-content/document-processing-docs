@@ -5,6 +5,7 @@ description: The keyboard shortcuts feature in React DOCX Editor enables users t
 control: Keyboard shortcut 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

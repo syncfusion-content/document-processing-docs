@@ -5,6 +5,7 @@ description: Disable header and footer editing in Syncfusion® JavaScript DOCX E
 platform: document-processing
 control: Disable Header and Footer Edit in DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

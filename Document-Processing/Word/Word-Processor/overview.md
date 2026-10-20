@@ -4,6 +4,7 @@ description: Learn here all about the introduction of Syncfusion Essential Studi
 platform: document-processing
 control: general
 documentation: UG
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: Word, SDK, view, edit, read, document-editor
 ---
 

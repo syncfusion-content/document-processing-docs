@@ -5,6 +5,7 @@ description: Customize the font family drop down list in Syncfusion® React DOCX
 control: Customize font family drop down 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: Disable header and footer editing in Syncfusion® Vue DOCX Editor b
 control: Disable header and footer edit in DOCX Editor 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

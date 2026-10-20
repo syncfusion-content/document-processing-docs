@@ -5,6 +5,7 @@ description: Disable drag and drop functionality in Syncfusion® TypeScript DOCX
 platform: document-processing
 control: Disable Drag and Drop
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

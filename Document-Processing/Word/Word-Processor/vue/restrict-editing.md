@@ -5,6 +5,7 @@ description: Restrict editing feature in Vue DOCX Editor enables read-only acces
 control: Restrict editing 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: Security advisories in Angular DOCX Editor provide information abou
 platform: document-processing
 control: Security advisories
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

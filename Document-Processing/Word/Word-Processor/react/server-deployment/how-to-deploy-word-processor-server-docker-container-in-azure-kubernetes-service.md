@@ -5,6 +5,7 @@ description: Deploy the Syncfusion® React DOCX Editor Docker image to Azure Kub
 control: How to deploy word processor server docker container in Azure Kubernetes Service 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 # How to Deploy React DOCX Editor Docker Image on AKS

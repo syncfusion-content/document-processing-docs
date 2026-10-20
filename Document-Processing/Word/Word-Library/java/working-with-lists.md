@@ -4,6 +4,7 @@ description: This section explains how to create and manage bulleted and numbere
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Document Lists in Java Word

@@ -5,6 +5,7 @@ description: Open documents from Azure Blob Storage in React DOCX Editor, enabli
 platform: document-processing
 control: Open document from Azure Blob Storage
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

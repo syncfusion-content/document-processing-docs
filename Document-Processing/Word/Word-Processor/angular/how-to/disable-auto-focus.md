@@ -5,6 +5,7 @@ description: Disable the auto focus behavior in Syncfusion® Angular DOCX Editor
 platform: document-processing
 control: How to disable auto focus in DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

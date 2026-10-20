@@ -5,6 +5,7 @@ description: View in Angular DOCX Editor enables web layout, ruler display, and 
 control: View 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 # View in Angular DOCX Editor

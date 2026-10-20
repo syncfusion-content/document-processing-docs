@@ -5,6 +5,7 @@ description: Tables in Angular DOCX Editor enable adding and managing rows, colu
 platform: document-processing
 control: Table 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: Security advisories in TypeScript DOCX Editor provide information a
 platform: document-processing
 control: Security advisories
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

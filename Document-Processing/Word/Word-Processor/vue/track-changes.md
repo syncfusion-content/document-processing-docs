@@ -5,6 +5,7 @@ description: Track changes in Vue DOCX Editor records document modifications and
 control: Track changes 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

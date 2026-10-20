@@ -5,6 +5,7 @@ description: The Syncfusion®React MCP Server provides setup guidance, integrati
 control: DocumentEditor
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

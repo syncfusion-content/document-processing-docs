@@ -4,6 +4,7 @@ description: Configure page setup, columns, headers, footers, page numbers, bord
 platform: document-processing
 control: Word Library
 documentation: ug
+appliesto: Document SDK
 keywords: javascript, word, sections, page setup, headers, footers, page numbers, columns
 ---
 

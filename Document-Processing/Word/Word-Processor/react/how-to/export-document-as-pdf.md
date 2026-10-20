@@ -5,6 +5,7 @@ description: Export documents as PDF in Syncfusion® React DOCX Editor using cli
 control: Export document as PDF
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

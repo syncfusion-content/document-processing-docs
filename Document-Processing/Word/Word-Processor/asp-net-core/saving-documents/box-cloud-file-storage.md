@@ -5,6 +5,7 @@ description: Save documents to Box cloud file storage from ASP.NET Core DOCX Edi
 platform: document-processing
 control: Save document to Box cloud file storage
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

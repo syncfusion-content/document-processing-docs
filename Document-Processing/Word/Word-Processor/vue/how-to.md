@@ -5,6 +5,7 @@ description: Explore Syncfusion Vue DOCX Editor how-to guides, UI elements, feat
 control: How to 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: Customize ribbon tabs, groups, and commands in Syncfusion® React D
 platform: document-processing
 control: Ribbon Customization
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

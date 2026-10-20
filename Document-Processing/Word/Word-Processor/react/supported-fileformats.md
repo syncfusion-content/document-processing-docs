@@ -5,6 +5,7 @@ description: Supported file formats in React DOCX Editor allow importing and exp
 control: Supported File Formats
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

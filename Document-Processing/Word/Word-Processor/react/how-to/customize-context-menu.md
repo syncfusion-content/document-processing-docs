@@ -5,6 +5,7 @@ description: Customize the context menu in Syncfusion® React DOCX Editor by add
 control: Customize Context Menu
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ description: Right-to-left support in TypeScript DOCX Editor enables RTL user in
 platform: document-processing
 control: R t l 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

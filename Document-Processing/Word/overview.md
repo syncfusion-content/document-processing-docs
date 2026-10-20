@@ -4,6 +4,7 @@ description: Learn about introduction of Syncfusion Word Document Processing Lib
 platform: document-processing
 control: general
 documentation: UG
+appliesto: Document SDK, DOCX Editor SDK, UI Component Suite
 keywords: Word, SDK, Automation, API, create, view, edit, convert, read
 ---
 

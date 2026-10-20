@@ -5,6 +5,7 @@ description: The list format feature in Angular DOCX Editor enables users to cre
 platform: document-processing
 control: List format 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

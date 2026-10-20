@@ -5,6 +5,7 @@ description: The Syncfusion®Vue MCP Server provides setup guidance, integration
 control: DocumentEditor
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

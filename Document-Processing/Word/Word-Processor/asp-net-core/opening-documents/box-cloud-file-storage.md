@@ -5,6 +5,7 @@ description: Open documents from Box cloud file storage in ASP.NET Core DOCX Edi
 platform: document-processing
 control: Open document from Box cloud file storage
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

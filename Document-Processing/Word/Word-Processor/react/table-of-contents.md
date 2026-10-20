@@ -5,6 +5,7 @@ description: The Table of Contents feature in React DOCX Editor enables users to
 control: Table of contents 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

@@ -5,6 +5,7 @@ component: DocumentEditor
 description: The collaborative editing feature in ASP.NET MVC DOCX Editor supports real-time multi-user document editing using Redis with ASP.NET.
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

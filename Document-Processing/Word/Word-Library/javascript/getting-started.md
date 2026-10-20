@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion JavaScript Word Librar
 control: Word
 platform: document-processing
 documentation: ug
+appliesto: Document SDK
 keywords: word
 ---
 

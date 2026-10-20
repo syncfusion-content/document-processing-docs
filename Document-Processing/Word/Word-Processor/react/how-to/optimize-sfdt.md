@@ -5,6 +5,7 @@ description: Optimize SFDT files in Syncfusion® React DOCX Editor to reduce fil
 control: Optimize the SFDT file
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

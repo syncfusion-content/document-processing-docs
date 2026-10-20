@@ -5,6 +5,7 @@ description: The list format feature in Vue DOCX Editor enables users to create 
 control: List format 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

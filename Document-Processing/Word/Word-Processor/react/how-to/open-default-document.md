@@ -5,6 +5,7 @@ description: Open a default document in Syncfusion® React DOCX Editor during in
 control: Open default document
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

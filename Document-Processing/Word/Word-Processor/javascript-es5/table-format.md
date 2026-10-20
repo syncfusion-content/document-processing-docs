@@ -5,6 +5,7 @@ description: The table format feature in JavaScript DOCX Editor enables customiz
 platform: document-processing
 control: Table format 
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

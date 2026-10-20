@@ -5,6 +5,7 @@ description: Open a document from a URL in Syncfusion® Vue DOCX Editor to load 
 control: Open document by address 
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

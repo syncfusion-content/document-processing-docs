@@ -5,6 +5,7 @@ description: Add a custom save button to the toolbar in Syncfusion® TypeScript 
 platform: document-processing
 control: Add Save Button in Toolbar
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

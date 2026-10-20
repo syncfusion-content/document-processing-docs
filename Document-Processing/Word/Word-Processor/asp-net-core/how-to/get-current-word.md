@@ -1,19 +1,20 @@
 ---
 layout: post
-title: How to Get Current Word in ASP.NET Core DOCX Editor | Syncfusion
-description: Get the current word or paragraph content as plain text and SFDT format in Syncfusion® ASP.NET Core DOCX Editor for content processing and analysis.
+title: Get current Word/Para in Document editor control | Syncfusion
+description: Learn how to select and retrieve current word and Paragraph from the Syncfusion Document Editor Component
 platform: document-processing
-control: Get The Current Word And Paragraph
-documentation: ug
+control: Get The Current Word And Paragrapgh
+documentation: ug 
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
-# How to Get Current Word in ASP.NET Core DOCX Editor
+# How to select and retrieve the word and paragraph in current cursor position in Document Editor component
 
-You can get the current word or paragraph content from the [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) component as plain text and SFDT (rich text).
+You can get the current word or paragraph content from the  Document Editor component as plain text and SFDT (rich text).
 
 ## Select and get the word in current cursor position
 
-You can use the [`selectCurrentWord`] API in the selection module to select the current word at the cursor position and use the [`text`] API to get the selected content as plain text from the DOCX Editor component.
+You can use [`selectCurrentWord`] API in selection module to select the current word at cursor position and use [`text`] API to get the selected content as plain text from Document Editor component.
 
 The following example code illustrates how to select and get the current word as plain text.
 
@@ -30,7 +31,7 @@ The following example code illustrates how to select and get the current word as
 
 ## Select and get the paragraph in current cursor position
 
-You can use the [`selectParagraph`] API in the selection module to select the current paragraph at the cursor position and use the [`text`] API or the [`sfdt`] API to get the selected content as plain text or SFDT from the DOCX Editor component.
+You can use [`selectParagraph`] API in selection module to select the current paragraph at cursor position and use [`text`] API or [`sfdt`] API to get the selected content as plain text or SFDT from Document Editor component.
 
 The following example code illustrates how to select and get the current paragraph as SFDT.
 
