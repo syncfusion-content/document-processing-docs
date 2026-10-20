@@ -1149,7 +1149,7 @@ Setting a property to true serializes the bookmark end after the corresponding m
 |---|---|
 | [IsAfterParagraphMark](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html#Syncfusion_DocIO_DLS_BookmarkEnd_IsAfterParagraphMark) | Preserves the bookmark end after the paragraph mark |
 | [IsAfterCellMark](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html#Syncfusion_DocIO_DLS_BookmarkEnd_IsAfterCellMark) | Preserves the bookmark end after the table-cell mark |
-| [IsAfterRowMark](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BooEnd.html#Syncfusion_DocIO_DLS_BookmarkEnd_IsAfterRowMark) | Preserves the bookmark end after the table-row mark |
+| [IsAfterRowMark](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html#Syncfusion_DocIO_DLS_BookmarkEnd_IsAfterRowMark) | Preserves the bookmark end after the table-row mark |
 | [IsAfterTableMark](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html#Syncfusion_DocIO_DLS_BookmarkEnd_IsAfterTableMark) | Preserves the bookmark end after the table mark |
 
 N> Enable only the property that represents the required bookmark end position. The bookmark end must be placed at a valid final content position for the selected paragraph, table cell, table row, or table.
@@ -1319,4 +1319,3 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 * [How to Rename a Bookmark in a Word Document using C# in ASP.NET Core?](https://support.syncfusion.com/kb/article/22347/how-to-rename-a-bookmark-in-a-word-document-using-c-in-aspnet-core)
 * [How to remove editable range in bookmark in DOCX using C# .NET Core?](https://support.syncfusion.com/kb/article/22315/how-to-remove-editable-range-in-bookmark-in-docx-using-c-net-core)
 * [How to replace a text with bookmark hyperlink in Word using .NET core?](https://support.syncfusion.com/kb/article/22577/how-to-replace-a-text-with-bookmark-hyperlink-in-word-using-net-core)
-with bookmark hyperlink in Word using .NET core?](https://support.syncfusion.com/kb/article/22577/how-to-replace-a-text-with-bookmark-hyperlink-in-word-using-net-core)
