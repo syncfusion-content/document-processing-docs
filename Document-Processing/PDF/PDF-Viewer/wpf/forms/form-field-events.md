@@ -5,6 +5,8 @@ description: Learn about the different form field events supported in the Syncfu
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Form Field Events in WPF Pdf Viewer

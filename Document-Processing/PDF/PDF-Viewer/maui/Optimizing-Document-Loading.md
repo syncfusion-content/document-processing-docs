@@ -6,6 +6,8 @@ platform: document-processing
 control: SfPdfViewer
 documentation: ug
 keywords: .net maui pdf viewer, android pdf viewer, maui pdf viewer performance, optimize pdf loading, large pdf documents, android large heap, sfpdfviewer memory optimization
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Optimizing document loading on Android in .NET MAUI PDF Viewer Control

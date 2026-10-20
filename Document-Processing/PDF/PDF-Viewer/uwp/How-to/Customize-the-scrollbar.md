@@ -5,6 +5,8 @@ description: Learn how to customize the scrollbar in uwp pdf viewer in Syncfusio
 platform: document-processing
 control: PDF viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Customize the Scrollbar in UWP PDF Viewer

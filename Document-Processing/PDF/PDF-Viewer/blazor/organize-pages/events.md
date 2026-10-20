@@ -5,6 +5,8 @@ description: Learn how to organize pages Events in the Blazor PDF Viewer, includ
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Organize Pages Events in Blazor PDF Viewer

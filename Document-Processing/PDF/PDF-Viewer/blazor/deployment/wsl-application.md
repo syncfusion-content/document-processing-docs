@@ -5,6 +5,8 @@ description: Learn how to run the Blazor PDF Viewer component in a Blazor app us
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Getting started with Blazor WSL PDF Viewer 

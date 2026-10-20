@@ -5,6 +5,8 @@ description: Learn how to draw raster images and apply transparency and rotation
 platform: document-processing
 control: PDF
 documentation: ug
+appliesto: Document SDK
+
 ---
 
 # Images in Flutter PDF

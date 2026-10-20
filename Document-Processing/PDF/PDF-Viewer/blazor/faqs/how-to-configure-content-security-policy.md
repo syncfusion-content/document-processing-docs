@@ -5,6 +5,8 @@ description: Learn how to configure a strict Content Security Policy (CSP) for t
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Use strict CSP in Blazor PDF Viewer

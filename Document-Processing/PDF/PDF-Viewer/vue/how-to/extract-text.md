@@ -6,6 +6,8 @@ control: Extract Text
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Use the ExtractText Method in Vue PDF Viewer

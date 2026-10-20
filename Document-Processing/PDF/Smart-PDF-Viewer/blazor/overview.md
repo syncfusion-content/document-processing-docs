@@ -5,6 +5,8 @@ description: Learn about the AI-powered Syncfusion Blazor Smart PDF Viewer, incl
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 # About Syncfusion  Blazor Smart PDF Viewer Component 
 

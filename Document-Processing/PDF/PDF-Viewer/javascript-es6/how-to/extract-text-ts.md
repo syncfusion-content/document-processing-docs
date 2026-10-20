@@ -5,6 +5,8 @@ description: Use the extractText method in the JavaScript (ES6) PDF Viewer to ex
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Use the ExtractText Method in JavaScript (ES6) PDF Viewer

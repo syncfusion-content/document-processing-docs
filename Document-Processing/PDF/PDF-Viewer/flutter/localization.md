@@ -5,6 +5,8 @@ description: The localization feature in SfPdfViewer enables users to display bu
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Localization in Flutter PDF Viewer

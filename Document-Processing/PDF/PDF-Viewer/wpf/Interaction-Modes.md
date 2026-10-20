@@ -5,6 +5,8 @@ description:  Explore interaction modes in Syncfusion WPF PDF Viewer control inc
 platform: document-processing
 control: PDF Viewer
 documentation: UG
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Interaction Modes in WPF Pdf Viewer

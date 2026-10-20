@@ -5,6 +5,8 @@ description: Load and display PDF files stored in Google Drive in the ASP.NET Co
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Open PDF from Google Drive in ASP.NET Core PDF Viewer

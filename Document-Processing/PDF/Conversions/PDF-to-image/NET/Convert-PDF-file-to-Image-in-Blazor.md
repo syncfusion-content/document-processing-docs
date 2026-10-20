@@ -5,6 +5,8 @@ platform: document-processing
 control: PDF to image
 documentation: UG
 keywords: Assemblies
+appliesto: Document SDK
+
 ---
 
 # Getting Started with Blazor PDF to Image Library

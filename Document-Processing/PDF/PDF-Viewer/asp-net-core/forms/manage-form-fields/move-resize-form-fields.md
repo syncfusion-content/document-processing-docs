@@ -5,6 +5,8 @@ description: Move and resize PDF form fields in the ASP.NET Core PDF Viewer usin
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Move and Resize Form Fields in ASP.NET Core PDF Viewer

@@ -5,6 +5,8 @@ description: Navigate PDF documents using hyperlinks and URI annotations in Sync
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Hyperlink Navigation in WPF Pdf Viewer

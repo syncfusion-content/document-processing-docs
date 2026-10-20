@@ -5,6 +5,8 @@ description: Learn how to open PDF files from AWS S3 in the Blazor PDF Viewer , 
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 #  Open PDF files from AWS S3 in Blazor PDF Viewer

@@ -5,6 +5,8 @@ description: Display custom items in the custom stamp dropdown in the ASP.NET MV
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Show Custom Stamp Items in ASP.NET MVC PDF Viewer

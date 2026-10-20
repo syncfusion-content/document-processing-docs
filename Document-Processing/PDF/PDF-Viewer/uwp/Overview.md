@@ -5,6 +5,8 @@ description: Learn about the introduction and overview of the Syncfusion<sup>®<
 platform: document-processing
 control: PDF viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # About Syncfusion UWP PDF Viewer Control

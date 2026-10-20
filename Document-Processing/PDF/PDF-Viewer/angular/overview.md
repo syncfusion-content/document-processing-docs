@@ -4,6 +4,8 @@ description: Learn about introduction of Syncfusion Essential Studio Angular PDF
 platform: document-processing
 control: PDF Viewer
 documentation: UG
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # About Syncfusion Angular PDF Viewer Control

@@ -5,6 +5,8 @@ description: Use the extractTextOption property in the ASP.NET MVC PDF Viewer to
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Configure ExtractTextOption in ASP.NET MVC PDF Viewer

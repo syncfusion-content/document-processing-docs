@@ -5,6 +5,8 @@ description: Delete a specific annotation in the ASP.NET MVC PDF Viewer using th
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Delete a Specific Annotation in ASP.NET MVC PDF Viewer

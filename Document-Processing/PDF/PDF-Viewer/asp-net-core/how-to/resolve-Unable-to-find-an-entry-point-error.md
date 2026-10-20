@@ -5,6 +5,8 @@ description: Resolve the Unable to find an entry point error after upgrading the
 control: PDF Viewer
 platform: document-processing
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Resolve the Unable to Find an Entry Point Error in ASP.NET

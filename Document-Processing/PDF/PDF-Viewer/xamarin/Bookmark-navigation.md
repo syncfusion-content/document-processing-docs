@@ -5,6 +5,8 @@ description: Learn here all about Bookmark Navigation support in Syncfusion<sup>
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Bookmark Navigation in Xamarin Pdf Viewer

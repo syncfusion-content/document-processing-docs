@@ -5,6 +5,8 @@ description: Learn how to use IChatInferenceService to integrate custom AI servi
 platform: maui
 control: SmartComponents
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Custom AI Service Integration with .NET MAUI Smart Components

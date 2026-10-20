@@ -5,6 +5,8 @@ description: Handle overlapping annotations in the ASP.NET Core PDF Viewer so us
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Handle Overlapped Annotations in ASP.NET Core PDF Viewer

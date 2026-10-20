@@ -5,6 +5,8 @@ description: Learn how to save PDF files to Google Drive using the Blazor PDF Vi
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Save PDF files to Google Drive in Blazor PDF Viewer 

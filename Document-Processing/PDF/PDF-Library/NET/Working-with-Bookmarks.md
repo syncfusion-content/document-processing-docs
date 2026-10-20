@@ -4,6 +4,8 @@ description: Learn how to add, modify, and remove bookmarks in a PDF document us
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
+
 ---
 # Bookmarks in .NET PDF Library
 

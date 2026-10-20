@@ -5,6 +5,8 @@ description: Display a PDF in the ASP.NET Core PDF Viewer without downloading th
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Display a PDF Without Downloading in ASP.NET Core PDF Viewer

@@ -5,6 +5,8 @@ description: Learn here all about Rendering PDF pages using pdfium support on UW
 platform: document-processing
 control: SfPdfViewer
 documentation: UG
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 # Rendering PDF pages using pdfium in Xamarin Pdf Viewer
 

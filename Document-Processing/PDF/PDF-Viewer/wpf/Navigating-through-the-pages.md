@@ -5,6 +5,8 @@ description: Navigate through PDF pages in Syncfusion WPF PDF Viewer using GotoP
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Page Navigation in WPF Pdf Viewer

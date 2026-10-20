@@ -5,6 +5,8 @@ description: Learn how to enable, apply, customize, and manage Strikethrough ann
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Strikethrough Annotation in Blazor PDF Viewer 

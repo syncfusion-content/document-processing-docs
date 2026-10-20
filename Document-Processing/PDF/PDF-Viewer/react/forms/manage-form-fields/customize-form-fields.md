@@ -5,6 +5,8 @@ description: Style PDF form fields in the React PDF Viewer by configuring fonts,
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Customize Form Field Appearance in React PDF Viewer

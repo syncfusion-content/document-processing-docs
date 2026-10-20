@@ -5,6 +5,8 @@ description: Manage PDF layers in Syncfusion WPF PDF Viewer by toggling visibili
 platform: document-processing
 control: PDF Viewer
 documentation: UG
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # PDF Layers in WPF Pdf Viewer control

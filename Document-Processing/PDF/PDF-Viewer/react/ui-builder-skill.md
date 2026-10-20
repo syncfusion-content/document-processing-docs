@@ -6,6 +6,8 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 keywords: React UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skills
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # React UI Builder Skill with PDF Viewer

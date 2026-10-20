@@ -5,6 +5,8 @@ description: Learn about the introduction and overview of the Syncfusion Xamarin
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # About Syncfusion Xamarin PDF Viewer Control

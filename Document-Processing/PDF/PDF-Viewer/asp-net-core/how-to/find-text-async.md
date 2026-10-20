@@ -5,6 +5,8 @@ description: Search text asynchronously in the ASP.NET Core PDF Viewer using the
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Use FindTextAsync in ASP.NET Core PDF Viewer

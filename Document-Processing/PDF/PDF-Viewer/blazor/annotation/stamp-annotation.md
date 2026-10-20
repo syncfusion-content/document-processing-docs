@@ -5,6 +5,8 @@ description: Learn how to add, edit, rotate, and customize stamp annotations in 
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Stamp annotations in Blazor PDF Viewer 

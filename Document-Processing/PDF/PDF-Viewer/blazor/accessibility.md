@@ -5,6 +5,8 @@ description: Check out this guide and learn here all about Keyboard accessibilit
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Keyboard accessibility in Blazor PDF Viewer

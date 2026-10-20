@@ -5,6 +5,8 @@ description: Learn how to implement a configure chat client with Syncfusion<sup>
 platform: maui
 control: SmartComponents
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Configure Chat Client With Smart Components

@@ -5,6 +5,8 @@ description: Learn about the server actions in the ASP.NET Core PDF Viewer and h
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Server Actions in ASP.NET Core PDF Viewer

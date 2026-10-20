@@ -5,6 +5,8 @@ description: Install the NuGet packages required to use the ASP.NET Core PDF Vie
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Install Packages for the PDF Viewer in ASP.NET Core PDF Viewer

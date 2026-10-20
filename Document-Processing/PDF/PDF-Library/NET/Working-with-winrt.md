@@ -4,6 +4,8 @@ description: Learn how to load and save PDF documents in WinRT applications usin
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
+
 ---
 
 # WinRT in .NET PDF Library

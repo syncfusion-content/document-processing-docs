@@ -5,6 +5,8 @@ description: Learn about introduction of the Syncfusion React PDF Viewer Forms s
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # About Syncfusion React PDF Viewer Forms

@@ -5,6 +5,8 @@ description: Import PDF form field data into the React PDF Viewer from FDF, XFDF
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Import Form Data in React PDF Viewer

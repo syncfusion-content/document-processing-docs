@@ -5,6 +5,8 @@ description: Learn how to retrieve the review status of comments using the Revie
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Check the Status of Comments in Blazor PDF Viewer

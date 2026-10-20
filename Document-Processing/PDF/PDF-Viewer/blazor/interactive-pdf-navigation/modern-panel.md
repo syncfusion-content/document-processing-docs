@@ -5,6 +5,8 @@ description: Learn how the modern navigation panel in the Blazor PDF Viewer with
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Modern navigation panel in PDF Viewer

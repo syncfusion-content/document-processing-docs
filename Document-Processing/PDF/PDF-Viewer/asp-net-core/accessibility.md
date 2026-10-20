@@ -5,6 +5,8 @@ description: Accessibility features in the ASP.NET Core PDF Viewer help all user
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 # Accessibility in ASP.NET Core PDF Viewer
 

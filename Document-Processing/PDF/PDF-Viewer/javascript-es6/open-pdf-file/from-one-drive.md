@@ -5,6 +5,8 @@ description: Load and display PDF files stored in OneDrive in the JavaScript (ES
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Open PDF from OneDrive in JavaScript (ES6) PDF Viewer

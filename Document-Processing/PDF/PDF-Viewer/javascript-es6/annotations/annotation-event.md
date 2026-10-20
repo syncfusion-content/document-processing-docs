@@ -6,6 +6,8 @@ control: PDF Viewer
 documentation: ug
 
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Annotation Events in JavaScript (ES6) PDF Viewer

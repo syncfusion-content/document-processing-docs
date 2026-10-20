@@ -5,6 +5,8 @@ description: Learn here all about Programmatic Support for Organize Pages in Bla
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Programmatic support for Organize Pages in Blazor PDF Viewer

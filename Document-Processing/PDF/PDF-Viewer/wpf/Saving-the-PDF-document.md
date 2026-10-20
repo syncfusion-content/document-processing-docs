@@ -5,6 +5,8 @@ description: Save and persist PDF file modifications in Syncfusion WPF PDF Viewe
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Saving PDF Files in WPF Pdf Viewer

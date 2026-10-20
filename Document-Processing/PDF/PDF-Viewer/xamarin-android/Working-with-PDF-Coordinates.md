@@ -5,6 +5,8 @@ description: Learn here all about working with PDF coordinates and their convers
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # PDF coordinates in Xamarin.Android Pdf Viewer

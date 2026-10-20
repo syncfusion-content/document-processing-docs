@@ -5,6 +5,8 @@ description: Configure Content Security Policy headers for the JavaScript (ES5) 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Content Security Policy with JavaScript (ES5) PDF Viewer

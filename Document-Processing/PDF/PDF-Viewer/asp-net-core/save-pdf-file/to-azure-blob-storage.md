@@ -5,6 +5,8 @@ description: Save PDF files from the ASP.NET Core PDF Viewer to Azure Blob Stora
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Save PDF Files to Azure Blob Storage in ASP.NET Core PDF Viewer

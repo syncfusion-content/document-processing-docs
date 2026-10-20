@@ -5,6 +5,8 @@ description: Add annotations from text search results in the ASP.NET Core PDF Vi
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Add Annotations From Text Search in ASP.NET Core PDF Viewer

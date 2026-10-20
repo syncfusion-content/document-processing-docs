@@ -6,6 +6,8 @@ platform: document-processing
 control: Open PDF files from Google Drive
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Open PDF from Google Drive in Angular PDF Viewer

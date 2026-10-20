@@ -5,6 +5,8 @@ description: Load and display PDF files stored in AWS S3 in the React PDF Viewer
 control: PDF Viewer
 platform: document-processing
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Open PDF from AWS S3 in React PDF Viewer

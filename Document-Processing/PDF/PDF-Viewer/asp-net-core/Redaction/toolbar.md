@@ -5,6 +5,8 @@ description: Customize the Organize Pages toolbar in the ASP.NET Core PDF Viewer
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Customize the Organize Pages Toolbar in ASP.NET Core PDF Viewer

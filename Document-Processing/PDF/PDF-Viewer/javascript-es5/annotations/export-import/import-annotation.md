@@ -5,6 +5,8 @@ description: Import annotations into the JavaScript (ES5) PDF Viewer in supporte
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Import Annotations in JavaScript (ES5) PDF Viewer

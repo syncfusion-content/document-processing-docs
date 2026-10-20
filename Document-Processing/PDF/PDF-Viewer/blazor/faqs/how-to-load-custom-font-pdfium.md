@@ -5,6 +5,8 @@ description: Learn how to load custom fonts in the Blazor PDF Viewer using Pdfiu
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Load custom fonts with Pdfium in Blazor PDF Viewer

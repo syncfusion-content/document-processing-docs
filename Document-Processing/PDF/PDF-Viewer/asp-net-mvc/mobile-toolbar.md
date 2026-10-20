@@ -6,6 +6,8 @@ platform: document-processing
 control: PDF Viewer
 
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Mobile Toolbar in ASP.NET MVC PDF Viewer

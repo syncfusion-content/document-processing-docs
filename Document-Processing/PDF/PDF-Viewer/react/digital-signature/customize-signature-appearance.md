@@ -5,6 +5,8 @@ description: Customize the appearance of visible PKI digital signatures in PDFs 
 platform: document-processing
 control: PdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Customize Digital Signature Appearance in React PDF Viewer

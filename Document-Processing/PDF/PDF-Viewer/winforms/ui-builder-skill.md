@@ -6,6 +6,8 @@ control: PDF Viewer
 platform: document-processing
 documentation: ug
 keywords: WinForms UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skills
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # UI Builder Skill with PDF Viewer in WinForms PDF Viewer

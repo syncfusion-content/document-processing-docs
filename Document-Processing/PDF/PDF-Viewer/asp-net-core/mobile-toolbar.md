@@ -5,6 +5,8 @@ description: The mobile toolbar in the ASP.NET Core PDF Viewer adapts the touch 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Mobile Toolbar in ASP.NET Core PDF Viewer

@@ -5,6 +5,8 @@ description: Load and save PDF files in the React PDF Viewer through Azure Activ
 control: PDF Viewer
 platform: document-processing
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Open PDF from Azure Active Directory in React PDF Viewer

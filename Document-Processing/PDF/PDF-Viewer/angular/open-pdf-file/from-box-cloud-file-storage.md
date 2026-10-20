@@ -6,6 +6,8 @@ platform: document-processing
 control: Open PDF files from Box cloud file storage
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Open PDF from Box Cloud Storage in Angular PDF Viewer

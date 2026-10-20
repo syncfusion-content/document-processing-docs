@@ -5,6 +5,8 @@ description: Learn how to render a PDF from an embedded resource and run the Bla
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Deploy in Blazor  PDF Viewer MAUI on Android

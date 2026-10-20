@@ -5,6 +5,8 @@ description: The ErrorOccurred event in PdfViewerControl enables applications to
 platform: document-processing
 control: PdfViewerControl
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # ErrorOccured Event in WinForm PDFViewer

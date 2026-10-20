@@ -5,6 +5,8 @@ description: Restrict the zoom percentage on mobile devices in the ASP.NET MVC P
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Restrict Zoom on Mobile Devices in ASP.NET MVC PDF Viewer

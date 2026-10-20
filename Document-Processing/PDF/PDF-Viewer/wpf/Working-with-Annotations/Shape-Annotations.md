@@ -5,6 +5,8 @@ description: The shape annotations feature in WPF PDF Viewer provides line, rect
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 # Shape Annotations in WPF Pdf Viewer
 

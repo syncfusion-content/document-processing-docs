@@ -5,6 +5,8 @@ description: Learn how to configure and use Syncfusion MAUI MCP server for intel
 platform: document-processing
 control: AI coding assistant
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Syncfusion MAUI PDF Viewer MCP Server

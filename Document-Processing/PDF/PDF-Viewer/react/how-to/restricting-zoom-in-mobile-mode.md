@@ -5,6 +5,8 @@ description: Restrict the zoom percentage on mobile devices in the React PDF Vie
 control: PDF Viewer
 platform: document-processing
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Restrict Zoom on Mobile Devices in React PDF Viewer

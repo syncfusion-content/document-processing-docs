@@ -5,6 +5,8 @@ description: Configure text extraction engines in Syncfusion WPF PDF Viewer. Cho
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Text Extraction Engines in WPF Pdf Viewer

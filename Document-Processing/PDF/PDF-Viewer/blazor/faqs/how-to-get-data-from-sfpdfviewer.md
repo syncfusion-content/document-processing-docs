@@ -5,6 +5,8 @@ description: Learn how to retrieve the current PDF as a byte array using GetDocu
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Get PDF document data in Blazor PDF Viewer

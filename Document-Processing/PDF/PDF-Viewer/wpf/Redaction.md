@@ -5,6 +5,8 @@ description: Remove sensitive information from PDF documents using redaction in 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Redaction in WPF Pdf Viewer

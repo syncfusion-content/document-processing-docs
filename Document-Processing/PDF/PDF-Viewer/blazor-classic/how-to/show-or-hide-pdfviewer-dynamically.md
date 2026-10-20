@@ -5,6 +5,8 @@ description: Learn here all about how to show or hide the pdfviewer dynamically 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Show or hide the pdfviewer dynamically in Blazor 

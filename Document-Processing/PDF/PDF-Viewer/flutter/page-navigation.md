@@ -5,6 +5,8 @@ description: The page navigation feature in SfPdfViewer allows users to jump to,
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Page Navigation in Flutter PDF Viewer

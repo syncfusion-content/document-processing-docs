@@ -5,6 +5,8 @@ description: Learn how to load a PDF from Google Cloud Storage into the Blazor P
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Open PDF from Google Cloud Storage in Blazor PDF Viewer

@@ -5,6 +5,8 @@ description: Remove PDF form fields in the JavaScript (ES5) PDF Viewer using the
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Remove Form Fields in JavaScript (ES5) PDF Viewer

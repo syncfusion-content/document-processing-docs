@@ -5,6 +5,8 @@ description: Learn how to load Microsoft Word, Excel, PowerPoint, and image file
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # How to Load Office files in Blazor PDF Viewer

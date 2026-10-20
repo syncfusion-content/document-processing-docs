@@ -5,6 +5,8 @@ description: How to add PDF form fields in the Blazor PDF Viewer component using
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Create PDF Form Fields in Blazor PDF Viewer

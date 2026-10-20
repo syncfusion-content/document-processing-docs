@@ -5,6 +5,7 @@ description: Learn how to install the Syncfusion PDF offline installer and set u
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
+appliesto: Document SDK
 
 ---
 

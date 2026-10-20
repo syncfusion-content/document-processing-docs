@@ -5,6 +5,8 @@ description: Learn here all about Table of content navigation support in Syncfus
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Table of content navigation in Xamarin Pdf Viewer

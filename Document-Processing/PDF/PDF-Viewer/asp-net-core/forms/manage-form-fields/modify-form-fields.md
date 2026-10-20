@@ -5,6 +5,8 @@ description: Edit PDF form fields in the ASP.NET Core PDF Viewer using the built
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Modify Form Fields in ASP.NET Core PDF Viewer

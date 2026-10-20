@@ -5,6 +5,8 @@ description: The annotation collection feature in SfPdfViewer allows users to ac
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
+
 ---
 
 # Annotation Collection in Flutter PDF Viewer widget
