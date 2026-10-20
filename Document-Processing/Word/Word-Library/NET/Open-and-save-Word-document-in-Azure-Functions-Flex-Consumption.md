@@ -4,6 +4,7 @@ description: Open and save Word document in Azure Functions Flex Consumption usi
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Open and save Word document in Azure Functions 

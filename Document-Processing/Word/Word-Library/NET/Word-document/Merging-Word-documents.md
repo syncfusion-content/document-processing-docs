@@ -4,6 +4,7 @@ description: Learn how to merge multiple Word documents into one using .NET Word
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 # Merge Word documents in .NET Word
 
