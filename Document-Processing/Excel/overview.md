@@ -4,6 +4,7 @@ description: Learn about introduction of Syncfusion Excel Document Processing Li
 platform: document-processing
 control: general
 documentation: UG
+appliesto: Document SDK, Spreadsheet Editor SDK, UI Component Suite
 keywords: Excel, SDK, Automation, API, create, view, edit, convert, read
 ---
 
