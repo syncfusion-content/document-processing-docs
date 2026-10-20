@@ -1134,7 +1134,7 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Bookmarks/Replace-content-with-document-part/.NET).
 
-### Controlling the bookmark end position
+### Bookmark end positioning options
 
 A bookmark end can be preserved after a paragraph mark, table-cell mark, table-row mark, or table mark. The following properties of the [BookmarkEnd](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html) class allow you to identify and control these positions:
 
@@ -1166,7 +1166,7 @@ If normal content follows the bookmark end, the bookmark end must not be moved a
 The following code example shows how to preserve bookmark ends after a paragraph mark, table-cell mark, table-row mark, and table mark in a Word document.
 
 {% tabs %}
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Bookmarks/Control-bookmark-end-position/.NET/Control-bookmark-end-position/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 //Creates an instance of WordDocument class (Empty Word Document)
 WordDocument document = new WordDocument();
 //Adds a section to the document
@@ -1206,7 +1206,7 @@ document.Save(stream, FormatType.Docx);
 //Closes the document
 document.Close();
 {% endhighlight %}
-{% highlight c# tabtitle="C# [Windows-specific]" %}
+{% highlight c# tabtitle="C# [Windows-specific]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Bookmarks/Control-bookmark-end-position/.NET/Control-bookmark-end-position/Program.cs" %}
 //Creates an instance of WordDocument class (Empty Word Document)
 WordDocument document = new WordDocument();
 //Adds a section to the document
@@ -1285,6 +1285,8 @@ document.Save("Bookmarks.docx", FormatType.Docx)
 document.Close()
 {% endhighlight %}
 {% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Bookmarks/Control-bookmark-end-position).
 
 ## Online Demo
 
