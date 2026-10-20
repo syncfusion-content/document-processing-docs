@@ -4,6 +4,7 @@ description: Open and save Word document in WinUI application using Syncfusion<s
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Open and Save Word document in WinUI

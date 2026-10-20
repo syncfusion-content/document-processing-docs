@@ -4,6 +4,7 @@ description: Learn how to work with list in a Word document using the .NET Word 
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Working with Lists

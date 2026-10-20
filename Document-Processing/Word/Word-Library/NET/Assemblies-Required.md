@@ -4,6 +4,7 @@ description: Learn the assemblies required to use .NET Word (DocIO) library in v
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Assemblies Required for DocIO

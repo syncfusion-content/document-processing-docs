@@ -4,6 +4,7 @@ description: Open and save Word documents in Blazor applications using Syncfusio
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Open and Save Word Document in Blazor

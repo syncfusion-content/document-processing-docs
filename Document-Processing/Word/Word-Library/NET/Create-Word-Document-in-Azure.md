@@ -4,6 +4,7 @@ description: Learn how to create a Word document in Azure services using Syncfus
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Word document in Azure Platform 

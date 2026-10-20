@@ -4,6 +4,7 @@ description: Create Word document without Microsoft Word or interop dependencies
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create a Word document using ASP.NET Core Web API

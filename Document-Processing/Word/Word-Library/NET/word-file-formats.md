@@ -4,6 +4,7 @@ description: Learn about the supported Word file format conversions such a Word 
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 

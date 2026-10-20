@@ -4,6 +4,7 @@ description: Create Word document in ASP.NET Core application on macOS using Syn
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Word document on Mac OS 

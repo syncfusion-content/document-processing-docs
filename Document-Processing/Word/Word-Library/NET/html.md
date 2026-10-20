@@ -4,6 +4,7 @@ description: Learn how to convert Word document to HTML file and vice versa  usi
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Word to HTML and HTML to Word Conversions

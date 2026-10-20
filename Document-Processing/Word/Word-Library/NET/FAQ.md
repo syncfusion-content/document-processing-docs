@@ -4,6 +4,7 @@ description: In this section, you can know about the various questions asked abo
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Frequently Asked Questions in Word Library
 

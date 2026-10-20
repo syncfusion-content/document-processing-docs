@@ -4,6 +4,7 @@ description: Learn how to create, edit, and format SmartArt in a Word document u
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Working with SmartArt
 

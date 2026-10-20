@@ -4,6 +4,7 @@ description: Learn how to convert Word document to text file and vice versa  usi
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Text Conversions in Word Library

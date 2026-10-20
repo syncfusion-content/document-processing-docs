@@ -4,6 +4,7 @@ description: Learn the list of LaTeX supported by .NET Word Library (DocIO) whil
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Supported symbols using LaTeX in Word Library

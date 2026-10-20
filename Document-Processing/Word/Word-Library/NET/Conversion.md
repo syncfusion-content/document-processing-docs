@@ -4,6 +4,7 @@ description: This section illustrates how to convert a Word document into other 
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Conversion in Word Library
 

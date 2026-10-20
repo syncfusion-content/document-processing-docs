@@ -4,6 +4,7 @@ description: Create Word document in AWS Lambda using .NET Core Word (DocIO) lib
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Word document in AWS Lambda

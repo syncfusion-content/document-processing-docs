@@ -4,6 +4,7 @@ description: Find an item in the Word document in C# using Syncfusion<sup>&reg;<
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Find item in Word document

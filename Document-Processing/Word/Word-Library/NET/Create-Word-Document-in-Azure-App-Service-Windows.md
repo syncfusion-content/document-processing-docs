@@ -4,6 +4,7 @@ description: Create Word document in Azure App Service on Windows using .NET Cor
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Word document in Azure App Service on Windows

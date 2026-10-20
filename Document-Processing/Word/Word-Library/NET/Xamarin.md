@@ -4,6 +4,7 @@ description: Create a Xamarin application and load the document
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Working with Xamarin

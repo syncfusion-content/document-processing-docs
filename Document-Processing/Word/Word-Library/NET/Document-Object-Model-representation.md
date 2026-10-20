@@ -4,6 +4,7 @@ description: Learn here all about the Document Object Model (DOM) representation
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Document Object Model representation in File Formats DocIO
 

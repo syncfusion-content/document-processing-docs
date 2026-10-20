@@ -4,6 +4,7 @@ description: Learn how to create a Word document in Amazon Web Services (AWS) us
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Word document in Amazon Web Services (AWS)

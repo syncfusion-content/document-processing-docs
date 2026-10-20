@@ -4,6 +4,7 @@ description: Learn how to use .NET Word (DocIO) library to create Word documents
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Getting started with simple word document
 

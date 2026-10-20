@@ -4,6 +4,7 @@ description: Learn how to work with hyperlinks in a Word document using the Sync
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Working with Hyperlinks
 
