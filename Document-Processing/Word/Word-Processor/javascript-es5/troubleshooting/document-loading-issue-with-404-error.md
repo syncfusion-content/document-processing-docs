@@ -5,6 +5,7 @@ description: Troubleshoot the 404 error in Syncfusion JavaScript DOCX Editor by 
 control: document loading issue with 404 error
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

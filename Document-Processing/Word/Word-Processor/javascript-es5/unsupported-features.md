@@ -5,6 +5,7 @@ description: Explore unsupported and partially supported document formatting opt
 control: Unsupported features
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 
