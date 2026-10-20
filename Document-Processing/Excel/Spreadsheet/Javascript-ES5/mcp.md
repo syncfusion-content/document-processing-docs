@@ -5,8 +5,8 @@ description: MCP Server setup in JavaScript Spreadsheet explains how to install 
 control: Spreadsheet
 platform: document-processing
 documentation: ug
-appliesto: Spreadsheet Editor SDK, UI Component Suite
 keywords: JavaScript Agentic UI Builder, MCP Server, search docs, Spreadsheet SDK, Server Packages
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # MCP Server setup in JavaScript Spreadsheet 

@@ -5,8 +5,8 @@ description: Install and configure the Syncfusion ASP.NET MVC Spreadsheet MCP Se
 control: Spreadsheet
 platform: document-processing
 documentation: ug
-appliesto: Spreadsheet Editor SDK, UI Component Suite
 keywords: ASP.NET MVC Agentic UI Builder, MCP Server, search docs, Spreadsheet SDK, Server Packages
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # MCP Server Setup in ASP.NET MVC Spreadsheet

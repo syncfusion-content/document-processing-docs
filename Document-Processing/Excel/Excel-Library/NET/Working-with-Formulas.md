@@ -4,8 +4,8 @@ description: Excel formulas section describes how Syncfusion .NET Excel Library 
 platform: document-processing
 control: XlsIO
 documentation: UG
-appliesto: Document SDK
 keywords: c#, vb.net, excel, read excel, edit excel, edit excel cell, excel formula, cell formula, add formula, write excel, update excel, syncfusion, xlsio
+appliesto: Document SDK
 ---
 # Formulas in .NET Excel Library
 
