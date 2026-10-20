@@ -4,6 +4,7 @@ description: Learn how to modify the appearance of data labels in a chart in a W
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Customize Chart Data Labels
