@@ -5,6 +5,7 @@ description: Install Syncfusion Blazor UI Builder to generate production-ready B
 control: DOCX Editor
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: Blazor UI Builder, Skills, AI Assistants, DOCX Editor SDK, Agent Skills
 ---
 
