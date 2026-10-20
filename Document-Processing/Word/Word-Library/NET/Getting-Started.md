@@ -5,7 +5,7 @@ description: Learn how to get started with the Syncfusion .NET Word Library. Exp
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: Document SDK
+appliesto: DOCX Editor SDK
 ---
 # Loading and Saving Word document in .NET Word
 

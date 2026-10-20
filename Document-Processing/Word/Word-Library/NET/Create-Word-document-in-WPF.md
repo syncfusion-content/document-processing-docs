@@ -4,7 +4,7 @@ description: Describe how to migrate applications from .NET Framework to .NET Co
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: Document SDK
+appliesto: DOCX Editor SDK
 ---
 
 # Create Word document in WPF

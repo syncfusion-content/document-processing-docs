@@ -4,7 +4,7 @@ description: Learn how to work with mail merge events to customize the document 
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: Document SDK
+appliesto: DOCX Editor SDK
 ---
 
 # Mail merge events in .NET Word library

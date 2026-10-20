@@ -4,7 +4,7 @@ description: Learn how to add or remove bookmarks, replace, or delete the conten
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: Document SDK
+appliesto: DOCX Editor SDK
 ---
 # Bookmarks in .NET Word
 

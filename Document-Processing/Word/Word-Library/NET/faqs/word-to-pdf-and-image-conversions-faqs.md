@@ -4,7 +4,7 @@ description: Learn about the frequently asked questions about Word to PDF and im
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: Document SDK
+appliesto: DOCX Editor SDK
 ---
 
 # FAQ about Word to PDF and image Conversions in .NET Word

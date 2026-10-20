@@ -4,7 +4,7 @@ description: Learn how to add, modify, and update the table of contents (TOC) in
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: Document SDK
+appliesto: DOCX Editor SDK
 ---
 # Table of Contents (TOC) in .NET Word
 

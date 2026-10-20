@@ -4,7 +4,7 @@ description: Learn how to convert a Word document into other supported file form
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: Document SDK
+appliesto: DOCX Editor SDK
 ---
 
 # Work document Conversions in .NET Word

@@ -4,7 +4,7 @@ description: This section illustrates common questions about using the Syncfusio
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: Document SDK
+appliesto: DOCX Editor SDK
 ---
 
 # Create Word document in Windows Forms

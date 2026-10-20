@@ -4,7 +4,7 @@ description: Describe common mail merge issues and troubleshooting techniques in
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: Document SDK
+appliesto: DOCX Editor SDK
 ---
 
 # Modify the Appearance of Chart Area in .NET Word

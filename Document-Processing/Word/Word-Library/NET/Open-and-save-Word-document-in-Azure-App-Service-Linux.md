@@ -4,7 +4,7 @@ description: Open and save Word document in Azure App Service on Linux using .NE
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: Document SDK
+appliesto: DOCX Editor SDK
 ---
 
 # Open and save Word document in Azure App Service Linux

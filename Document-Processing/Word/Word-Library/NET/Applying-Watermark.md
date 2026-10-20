@@ -4,7 +4,7 @@ description: Describe the performance benchmark results of the Syncfusion .NET W
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: Document SDK
+appliesto: DOCX Editor SDK
 ---
 
 # Watermark in .NET Word

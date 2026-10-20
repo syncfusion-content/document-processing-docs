@@ -4,7 +4,7 @@ description: This section illustrates how to create and manage hyperlinks in Wor
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: Document SDK
+appliesto: DOCX Editor SDK
 ---
 # Word document conversion in .NET Word
 

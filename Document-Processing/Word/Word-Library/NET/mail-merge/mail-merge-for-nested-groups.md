@@ -4,7 +4,7 @@ description: Learn how to Mail merge for nested groups - replace merge fields in
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: Document SDK
+appliesto: DOCX Editor SDK
 ---
 
 # Mail merge for nested groups in .NET Word Library

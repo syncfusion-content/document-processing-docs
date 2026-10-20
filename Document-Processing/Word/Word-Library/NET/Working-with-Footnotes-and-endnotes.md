@@ -4,7 +4,7 @@ description: Learn how to add, modify, and remove footnotes and endnotes in a Wo
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: Document SDK
+appliesto: DOCX Editor SDK
 ---
 # Footnotes and Endnotes in .NET Word
 

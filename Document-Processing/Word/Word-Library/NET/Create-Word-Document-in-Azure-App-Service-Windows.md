@@ -4,7 +4,7 @@ description: Describe frequently asked questions and solutions related to Word-t
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: Document SDK
+appliesto: DOCX Editor SDK
 ---
 
 # Create Word document in Azure App Service Windows

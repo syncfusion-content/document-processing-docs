@@ -4,7 +4,7 @@ description: Learn how to work with sections, headers, footers, and page setting
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: Document SDK
+appliesto: DOCX Editor SDK
 ---
 
 # Sections in .NET Word library

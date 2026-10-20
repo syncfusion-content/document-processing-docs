@@ -4,7 +4,7 @@ description: Describe the supported LaTeX equations and mathematical expressions
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: Document SDK
+appliesto: DOCX Editor SDK
 ---
 
 # Assemblies required for .NET Word in .NET

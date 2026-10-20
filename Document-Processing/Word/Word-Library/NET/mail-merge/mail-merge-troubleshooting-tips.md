@@ -4,7 +4,7 @@ description: This section illustrates common mail merge issues and troubleshooti
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: Document SDK
+appliesto: DOCX Editor SDK
 ---
 
 # Troubleshooting tips for Mail merge in .NET Word Library

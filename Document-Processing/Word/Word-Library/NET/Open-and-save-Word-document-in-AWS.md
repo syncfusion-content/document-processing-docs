@@ -4,7 +4,7 @@ description: Learn how to open and save Word document in Amazon Web Services (AW
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: Document SDK
+appliesto: DOCX Editor SDK
 ---
 
 # Open and save Word document in AWS 

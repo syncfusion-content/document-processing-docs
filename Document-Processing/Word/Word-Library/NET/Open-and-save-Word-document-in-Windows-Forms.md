@@ -4,7 +4,7 @@ description: Open and save Word document in Windows Forms application using Sync
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: Document SDK
+appliesto: DOCX Editor SDK
 ---
 
 # Open and save Word document in Windows Forms 

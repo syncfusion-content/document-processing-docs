@@ -4,7 +4,7 @@ description: Open and save Word document without Microsoft Word or interop depen
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: Document SDK
+appliesto: DOCX Editor SDK
 ---
 
 # Open and save Word document in AWS Elastic Beanstalk 

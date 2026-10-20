@@ -4,7 +4,7 @@ description: Describe how to configure fallback fonts during Word-to-image conve
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: Document SDK
+appliesto: DOCX Editor SDK
 ---
 
 # Create Word document in Azure App Service Linux

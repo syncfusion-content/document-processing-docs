@@ -4,7 +4,7 @@ description: Describe how to insert, format, and manage images in Word documents
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: Document SDK
+appliesto: DOCX Editor SDK
 ---
 
 # Create Word documents in ASP.NET  Core Web API

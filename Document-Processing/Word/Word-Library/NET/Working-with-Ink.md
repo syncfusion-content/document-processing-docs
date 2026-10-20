@@ -4,7 +4,7 @@ description: Learn how to create and edit Ink elements in a Word document using 
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: Document SDK
+appliesto: DOCX Editor SDK
 ---
 # Ink elements in .NET Word library
 

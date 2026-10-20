@@ -4,7 +4,7 @@ description: Describe common questions and answers related to HTML and EPUB conv
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: Document SDK
+appliesto: DOCX Editor SDK
 ---
 
 # Create Word document in UWP

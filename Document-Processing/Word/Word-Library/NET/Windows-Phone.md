@@ -4,7 +4,7 @@ description: Create a Windows phone application, load the word document and save
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: Document SDK
+appliesto: DOCX Editor SDK
 ---
 
 # Windows phone in .NET Word
