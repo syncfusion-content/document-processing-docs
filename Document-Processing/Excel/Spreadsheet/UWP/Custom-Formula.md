@@ -5,6 +5,7 @@ description: Create and use custom formulas in the UWP Spreadsheet control to pe
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Custom Formula in UWP Spreadsheet 

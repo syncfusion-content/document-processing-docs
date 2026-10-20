@@ -5,6 +5,7 @@ description: Learn about the introduction and overview of AI Assist in Syncfusio
 platform: document-processing
 control: AI Assist
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # About Syncfusion JavaScript Spreadsheet AI Assist

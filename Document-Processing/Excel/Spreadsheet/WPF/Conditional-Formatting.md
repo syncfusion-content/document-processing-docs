@@ -5,6 +5,7 @@ description: Apply conditional formatting in the WPF Spreadsheet control to high
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Conditional Formatting in WPF Spreadsheet

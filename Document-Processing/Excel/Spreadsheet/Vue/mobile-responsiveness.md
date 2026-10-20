@@ -5,6 +5,7 @@ description: Learn how the Syncfusion Vue Spreadsheet component adapts seamlessl
 control: Mobile responsiveness 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Mobile Responsiveness in Vue Spreadsheet

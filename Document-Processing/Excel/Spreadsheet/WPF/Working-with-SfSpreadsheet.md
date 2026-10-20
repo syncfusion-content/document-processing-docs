@@ -6,6 +6,7 @@ description: Access worksheets, grids, and associated events in the WPF Spreadsh
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Working with SfSpreadsheet in WPF Spreadsheet

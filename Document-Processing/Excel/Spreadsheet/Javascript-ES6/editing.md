@@ -5,6 +5,7 @@ description: Editing in TypeScript Spreadsheet allows users to update cell value
 platform: document-processing
 control: Editing
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Editing in TypeScript Spreadsheet 

@@ -5,6 +5,7 @@ description: Keyboard shortcuts in JavaScript Spreadsheet help users perform com
 platform: document-processing
 control: Keyboard shortcuts
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Keyboard shortcuts in JavaScript Spreadsheet 

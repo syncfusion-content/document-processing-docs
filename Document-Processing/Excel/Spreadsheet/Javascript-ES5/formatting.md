@@ -5,6 +5,7 @@ description: Formatting in JavaScript Spreadsheet allows users to customize cell
 platform: document-processing
 control: Formatting
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Formatting in JavaScript Spreadsheet 

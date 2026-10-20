@@ -5,6 +5,7 @@ description: AI Assist integration in TypeScript Spreadsheet explains AI-powered
 platform: document-processing
 control: AI Assist
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # AI Assist Integration in TypeScript Spreadsheet 

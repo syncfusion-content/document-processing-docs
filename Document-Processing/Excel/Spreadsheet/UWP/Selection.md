@@ -5,6 +5,7 @@ description: Select cells, rows, columns, and ranges in the  UWP Spreadsheet con
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Selection in UWP Spreadsheet

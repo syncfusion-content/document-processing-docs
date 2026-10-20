@@ -5,6 +5,7 @@ description: Keyboard shortcuts in Angular Spreadsheet help users perform common
 platform: document-processing
 control: Keyboard shortcuts
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Keyboard shortcuts in Angular Spreadsheet

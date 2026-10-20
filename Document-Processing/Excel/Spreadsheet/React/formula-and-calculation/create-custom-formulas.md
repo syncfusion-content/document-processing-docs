@@ -5,6 +5,7 @@ description: Learn about creating custom functions in the Syncfusion React Sprea
 control: Formulas 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Custom Function Creation in React Spreadsheet

@@ -5,6 +5,7 @@ description: Clipboard in TypeScript Spreadsheet enables copying, cutting, and p
 platform: document-processing
 control: Clipboard
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Clipboard in TypeScript Spreadsheet 

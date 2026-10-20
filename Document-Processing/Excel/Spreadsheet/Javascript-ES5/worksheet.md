@@ -5,6 +5,7 @@ description: Worksheets in JavaScript Spreadsheet enable users to organize, mana
 platform: document-processing
 control: Worksheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Worksheet in JavaScript Spreadsheet

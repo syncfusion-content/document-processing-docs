@@ -5,6 +5,7 @@ description: Localize the  UWP Spreadsheet control by customizing ribbon, dialog
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Localization in UWP Spreadsheet 

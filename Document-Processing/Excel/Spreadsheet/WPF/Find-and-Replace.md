@@ -5,6 +5,7 @@ description: Find and replace cell content in the WPF Spreadsheet control to qui
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Find and Replace in WPF Spreadsheet

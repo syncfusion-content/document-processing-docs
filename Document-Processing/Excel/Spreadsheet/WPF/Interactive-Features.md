@@ -5,6 +5,7 @@ description: Perform interactive spreadsheet operations in the WPF Spreadsheet c
 platform:  document-processing
 control: SfSpreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Interactive Features in WPF Spreadsheet 

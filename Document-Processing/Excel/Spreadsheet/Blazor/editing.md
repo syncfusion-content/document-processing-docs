@@ -5,6 +5,7 @@ description: Explore cell editing capabilities in the Syncfusion Blazor Spreadsh
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Cell Editing in Blazor Spreadsheet

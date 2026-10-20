@@ -5,6 +5,7 @@ description: Learn how to deploy and host the Syncfusion ASP.NET MVC Spreadsheet
 platform: document-processing
 control: Docker deployment 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 

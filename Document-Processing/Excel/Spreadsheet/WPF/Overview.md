@@ -5,6 +5,7 @@ description: Learn about the introduction and overview of Syncfusion Essential S
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # About Syncfusion WPF Spreadsheet Control

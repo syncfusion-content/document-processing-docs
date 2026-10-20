@@ -5,6 +5,7 @@ description: Learn how to manage cell ranges in the Syncfusion Blazor Spreadshee
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Cell Ranges in Blazor Spreadsheet
