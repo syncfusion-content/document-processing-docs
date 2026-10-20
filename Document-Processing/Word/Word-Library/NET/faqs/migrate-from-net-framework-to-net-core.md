@@ -3,7 +3,7 @@ title: Migrate from .NET Framework to .NET core in .NET Word | Syncfusion
 description: This section illustrates how to migrate applications from .NET Framework to .NET Core using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 # Migrate from .NET Framework to .NET core in .NET Word
 

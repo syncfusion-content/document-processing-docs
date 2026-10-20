@@ -3,7 +3,7 @@ title: Word Document Protection in .NET Word | Syncfusion
 description: Learn how to encrypt, decrypt, and control changes by protecting the Word document using the .NET Word library without Microsoft Word.
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 # Word Document Protection in .NET Word
 

@@ -3,7 +3,7 @@ title: Open and save Word document in Xamarin  | Syncfusion
 description: Open and save Word document in Xamarin application using Syncfusion® Xamarin Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 
 # Open and save Word document in Xamarin 

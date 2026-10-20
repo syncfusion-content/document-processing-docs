@@ -3,7 +3,7 @@ title: Word Library performance benchmark in .NET Word | Syncfusion
 description: Describe the performance benchmark results of the Syncfusion .NET Word library across various document sizes
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 
 # Word Library performance benchmark in .NET Word

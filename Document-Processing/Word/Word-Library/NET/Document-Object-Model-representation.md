@@ -3,7 +3,7 @@ title: Document Object Model of .NET Word | Syncfusion
 description: Describe frequently asked questions about working with sections in Word documents using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 # Document Object Model of .NET Word
 

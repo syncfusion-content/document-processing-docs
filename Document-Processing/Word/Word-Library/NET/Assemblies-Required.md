@@ -3,7 +3,7 @@ title: Assemblies required for .NET Word in .NET | Syncfusion
 description: Describe the supported LaTeX equations and mathematical expressions available in the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 
 # Assemblies required for .NET Word in .NET

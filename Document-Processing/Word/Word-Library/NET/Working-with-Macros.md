@@ -3,7 +3,7 @@ title: Macros in Word document in .NET Word | Syncfusion
 description: Learn how to load and save a macro-enabled Word document and remove macros from a Word document using the .NET Word library.
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 # Macros in Word document in .NET Word
 

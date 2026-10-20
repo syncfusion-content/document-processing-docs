@@ -3,7 +3,7 @@ title: Mail merge options in .NET Word library in .NET | Syncfusion
 description: Learn how to use mail merge options to map the merge fields, remove unmerged fields, unmerged region, empty paragraphs and more in Word document.
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 
 # Mail merge options in .NET Word library in .NET

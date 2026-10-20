@@ -3,7 +3,7 @@ title: Create Word document in Windows Forms | Syncfusion
 description: This section illustrates common questions about using the Syncfusion .NET Word library in Linux environments.
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Word document in Windows Forms

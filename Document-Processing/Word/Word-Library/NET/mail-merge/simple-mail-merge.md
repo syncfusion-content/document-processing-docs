@@ -3,7 +3,7 @@ title: Simple Mail merge in .NET Word Library | Syncfusion
 description: Learn how to Mail merge - replace all merge fields with data, by repeating whole document for each record in data source using the .NET Word library.
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 
 # Simple Mail merge in .NET Word Library

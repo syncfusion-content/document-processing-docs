@@ -3,7 +3,7 @@ title: FAQ about Tables in .NET Word | Syncfusion
 description: This section illustrates frequently asked questions about creating and managing tables using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 # FAQ about Tables in .NET Word
 

@@ -3,7 +3,7 @@ title: Charts in Word document in .NET Word | Syncfusion
 description: Learn how to add, edit, and remove charts in a Word document using the .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 # Charts in Word document in .NET Word
 

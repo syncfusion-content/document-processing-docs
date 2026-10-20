@@ -3,7 +3,7 @@ title: Silverlight in .NET Word | Syncfusion
 description: Creating a Silverlight application, load the Word document and save the document with the .NET Word Library
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 # Silverlight in .NET Word
 

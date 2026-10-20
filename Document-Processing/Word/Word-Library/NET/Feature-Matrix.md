@@ -3,7 +3,7 @@ title: Feature Matrix in .NET Word | Syncfusion
 description: This section illustrates common mail merge issues and troubleshooting techniques in the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 
 # Feature Matrix in .NET Word

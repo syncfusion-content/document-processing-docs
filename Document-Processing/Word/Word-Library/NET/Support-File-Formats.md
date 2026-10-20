@@ -3,7 +3,7 @@ title: Supported file formats in .NET Word Library | Syncfusion
 description: Learn more about the supported file formats in .NET Word Library to create, edit, and convert Word documents.
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 
 # Supported file formats in .NET Word Library

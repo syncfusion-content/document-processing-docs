@@ -3,7 +3,7 @@ title: Create Word document on macOS | Syncfusion
 description: Describe the available customization options for Word-to-PDF conversion using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Word document on macOS

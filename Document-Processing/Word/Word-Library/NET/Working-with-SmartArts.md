@@ -3,7 +3,7 @@ title: SmartArt in .NET Word library | Syncfusion
 description: Learn how to create, edit, and format SmartArt in a Word document using the .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 # SmartArt in .NET Word library
 

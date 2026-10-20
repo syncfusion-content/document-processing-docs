@@ -3,7 +3,7 @@ title: Paragraphs in .NET Word | Syncfusion
 description: Learn how to work with paragraphs, lists, and child elements of paragraphs in a Word document using the .NET Word library.
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 # Paragraphs in .NET Word
 

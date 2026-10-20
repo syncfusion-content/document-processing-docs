@@ -3,7 +3,7 @@ title: Open and save Word document in UWP  | Syncfusion
 description: Open and save Word document in UWP application using Syncfusion® UWP Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 
 # Open and save Word document in UWP 

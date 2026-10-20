@@ -4,7 +4,7 @@ title: How to download Syncfusion® Word web installer | Syncfusion
 description: Learn here about how to download Syncfusion® Word web installer from our Syncfusion® website with license.
 platform: document-processing
 control: Installation and Deployment
-documentation: ug
+appliesto: Document SDK
 
 ---
 

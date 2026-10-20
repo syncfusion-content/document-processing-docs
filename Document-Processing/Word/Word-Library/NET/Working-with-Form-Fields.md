@@ -3,7 +3,7 @@ title: Form Fields in .NET Word | Syncfusion
 description: Learn how to work with form fields such as Text, Checkbox and Drop-Down in a Word document using the .NET Word library without Microsoft Word.
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 # Form Fields in .NET Word
 

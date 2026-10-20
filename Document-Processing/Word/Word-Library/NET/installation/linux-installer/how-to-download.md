@@ -4,7 +4,7 @@ title: How to download Syncfusion® Word Linux installer | Syncfusion
 description: Learn here about how to download the Syncfusion® Word Linux installer from our Syncfusion® website with license.
 platform: document-processing
 control: Installation and Deployment
-documentation: ug
+appliesto: Document SDK
 
 ---
 

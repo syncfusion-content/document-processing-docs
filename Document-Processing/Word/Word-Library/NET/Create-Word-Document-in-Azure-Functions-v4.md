@@ -3,7 +3,7 @@ title: Create Word document in Azure Functions v4 | Syncfusion
 description: Describe the assemblies required to convert Word documents to PDF using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Word document in Azure Functions v4

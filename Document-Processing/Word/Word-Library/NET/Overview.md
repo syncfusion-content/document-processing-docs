@@ -4,7 +4,7 @@ canonical_url: "https://www.syncfusion.com/document-sdk/net-word-library"
 description: Learn about the overview of the Syncfusion .NET Word Document Processing Library, its key features, and more details in this section.
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 # About Syncfusion .NET Word Document Processing Library
 

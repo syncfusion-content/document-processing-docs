@@ -3,7 +3,7 @@ title: Modify the Appearance of Axes in Chart in .NET Word | Syncfusion
 description: Learn how to compare two Word documents using Java Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 
 # Modify the Appearance of Axes in Chart in .NET Word

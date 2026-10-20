@@ -3,7 +3,7 @@ title: Create Word document in AWS Elastic Beanstalk | Syncfusion
 description: This section illustrates how to convert Word documents to images on Linux using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Word document in AWS Elastic Beanstalk

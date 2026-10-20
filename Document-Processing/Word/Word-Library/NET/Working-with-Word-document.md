@@ -3,7 +3,7 @@ title: Word document in .NET Word | Syncfusion
 description: Learn to merge, split, and print Word documents with ease, as well as iterate through DOM elements using .NET Word library without Microsoft Word.
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 # Word document in .NET Word
 

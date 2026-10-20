@@ -3,7 +3,7 @@ title: Footnotes and Endnotes in .NET Word | Syncfusion
 description: Learn how to add, modify, and remove footnotes and endnotes in a Word document using the .NET Word library without Microsoft Word.
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 # Footnotes and Endnotes in .NET Word
 

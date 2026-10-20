@@ -3,7 +3,7 @@ title: Images in .NET Word | Syncfusion
 description: Describe how to insert, format, and manage images in Word documents using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 # Document Images in .NET Word
 

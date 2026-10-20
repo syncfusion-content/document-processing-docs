@@ -4,7 +4,7 @@ canonical_url: "https://www.syncfusion.com/document-sdk/net-word-library"
 description: Learn how to get started with the Syncfusion .NET Word Library. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 # Loading and Saving Word document in .NET Word
 

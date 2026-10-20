@@ -3,7 +3,7 @@ title: Modify the Appearance of Legend in .NET Word | Syncfusion
 description: Learn how to modify the appearance of axes in a chart in a Word document using the Syncfusion® .NET Word library without Microsoft Word.
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 
 # Modify the Appearance of Legend in .NET Word

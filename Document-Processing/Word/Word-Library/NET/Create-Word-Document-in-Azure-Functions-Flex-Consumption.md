@@ -3,7 +3,7 @@ title: Create Word document in Azure Functions | Syncfusion
 description: Describe how to substitute missing fonts during Word-to-image conversion using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Word document in Azure Functions

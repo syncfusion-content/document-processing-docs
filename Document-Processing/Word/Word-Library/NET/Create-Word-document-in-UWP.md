@@ -3,7 +3,7 @@ title: Create Word document in UWP | Syncfusion
 description: Describe common questions and answers related to HTML and EPUB conversions using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Word document in UWP

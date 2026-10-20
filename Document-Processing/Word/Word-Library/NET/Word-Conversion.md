@@ -3,7 +3,7 @@ title: Work document Conversions in .NET Word | Syncfusion
 description: Learn how to convert a Word document into other supported file formats such as RTF, Text, HTML, Markdown, PDF, and image using the .NET Word library.
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 
 # Work document Conversions in .NET Word

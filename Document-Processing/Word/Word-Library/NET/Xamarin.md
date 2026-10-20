@@ -3,7 +3,7 @@ title: Xamarin in Xamarin Word | Syncfusion
 description: Learn about Xamarin in the Syncfusion Xamarin Word library to create, read, and edit documents without external dependencies.
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 
 # Xamarin in Xamarin Word

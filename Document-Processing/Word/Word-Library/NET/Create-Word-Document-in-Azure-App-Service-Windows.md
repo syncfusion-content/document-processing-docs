@@ -3,7 +3,7 @@ title: Create Word document in Azure App Service Windows | Syncfusion
 description: Describe frequently asked questions and solutions related to Word-to-image conversion using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Word document in Azure App Service Windows

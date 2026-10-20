@@ -3,7 +3,7 @@ title: Digital signature in .NET Word library | Syncfusion
 description: Learn how to add, validate, and remove digital signatures and signature lines in a Word document using the .NET Word library.
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 # Digital signature in .NET Word library
 

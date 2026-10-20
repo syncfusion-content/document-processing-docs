@@ -3,7 +3,7 @@ title: Split Word documents in .NET Word | Syncfusion
 description: Learn how to split a large Word document into several smaller ones using .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 # Split Word documents in .NET Word
 

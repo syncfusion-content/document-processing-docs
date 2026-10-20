@@ -3,7 +3,7 @@ title: Modify the Appearance of Plot Area in .NET Word | Syncfusion
 description: Learn how to modify the appearance of data labels in a chart in a Word document using Syncfusion® Word library without Microsoft Word.
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 
 # Modify the Appearance of Plot Area in .NET Word

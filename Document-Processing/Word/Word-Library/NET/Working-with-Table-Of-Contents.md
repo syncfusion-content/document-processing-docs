@@ -3,7 +3,7 @@ title: Table of Contents (TOC) in .NET Word | Syncfusion
 description: Learn how to add, modify, and update the table of contents (TOC) in a Word document using the .NET Word library without Microsoft Word.
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 # Table of Contents (TOC) in .NET Word
 

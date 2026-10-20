@@ -3,7 +3,7 @@ title: Open and save Word document on Mac OS | Syncfusion
 description: Open and save Word document in .NET Core application on macOS using Syncfusion® .NET Core Word library.
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 
 # Open and save Word document on Mac OS

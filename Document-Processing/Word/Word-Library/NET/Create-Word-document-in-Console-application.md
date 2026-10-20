@@ -3,7 +3,7 @@ title: Create Word document in Console Application | Syncfusion
 description: Describe how to configure fallback fonts during Word-to-PDF conversion using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Word document in Console Application

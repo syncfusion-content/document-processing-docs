@@ -3,7 +3,7 @@ title: FAQ about Track Changes in .NET Word | Syncfusion
 description: Describe frequently asked questions about creating and managing tables using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 # FAQ about Track Changes in .NET Word
 

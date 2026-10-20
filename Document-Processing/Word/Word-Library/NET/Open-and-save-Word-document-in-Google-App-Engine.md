@@ -3,7 +3,7 @@ title: Open and save Word documents in Google App Engine  | Syncfusion
 description: Open and save Word document in Google App Engine using .NET Core Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 
 # Open and save Word documents in Google App Engine 

@@ -3,7 +3,7 @@ title: Open and Save Word Document in Azure App Service Windows | Syncfusion
 description: Open and save Word document in Azure App Service on Windows using .NET Core Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 
 # Open and Save Word Document in Azure App Service Windows

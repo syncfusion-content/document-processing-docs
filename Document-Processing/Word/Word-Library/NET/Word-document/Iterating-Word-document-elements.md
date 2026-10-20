@@ -3,7 +3,7 @@ title: Iterating Word document elements in .NET Word | Syncfusion
 description: Learn how to modify an existing Word document and iterate through the elements without Microsoft Word using .NET Word library.
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 # Iterating Word document elements in .NET Word
 

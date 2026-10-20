@@ -3,7 +3,7 @@ title: Word document with WinRT | Syncfusion
 description: Create a WinRT application , load the Word document and save the Word document with the .NET Word Library
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 
 # Word document with WinRT

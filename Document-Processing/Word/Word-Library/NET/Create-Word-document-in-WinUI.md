@@ -3,7 +3,7 @@ title: Create Word document in WinUI | Syncfusion
 description: Describe common questions and solutions related to mail merge operations in the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Word document in WinUI

@@ -3,7 +3,7 @@ title: Comments in .NET Word | Syncfusion
 description: Learn how to add, modify, and remove comments in a Word document using the .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 # Comments in .NET Word
 

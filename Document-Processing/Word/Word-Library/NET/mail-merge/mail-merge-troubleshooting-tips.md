@@ -3,7 +3,7 @@ title: Troubleshooting tips for Mail merge in .NET Word Library | Syncfusion
 description: This section illustrates common mail merge issues and troubleshooting techniques in the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 
 # Troubleshooting tips for Mail merge in .NET Word Library

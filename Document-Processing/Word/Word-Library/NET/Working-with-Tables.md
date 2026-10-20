@@ -3,7 +3,7 @@ title: Tables in .NET Word library in .NET | Syncfusion
 description: Learn how to work with tables, rows, cells, and their formatting in a Word document using the .NET Word library.
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 # Tables in .NET Word library in .NET
 

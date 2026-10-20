@@ -3,7 +3,7 @@ title: FAQ about multithreading in Word document in .NET Word | Syncfusion
 description: Describe how to migrate from Microsoft Office Automation to the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 # FAQ about multithreading in Word document in .NET Word
 

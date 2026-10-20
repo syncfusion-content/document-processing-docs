@@ -3,7 +3,7 @@ title: Open and save Word document in Azure Functions v4  | Syncfusion
 description: Open and save Word document in Azure Functions v4 using .NET Core Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 
 # Open and save Word document in Azure Functions v4 

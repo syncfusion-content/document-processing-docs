@@ -3,7 +3,7 @@ title: FAQ about Word Document in .NET Word | Syncfusion
 description: Describe common mail merge issues and troubleshooting techniques in the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 # FAQ about Word Document in .NET Word
 

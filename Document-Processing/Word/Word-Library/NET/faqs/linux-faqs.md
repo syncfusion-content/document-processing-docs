@@ -3,7 +3,7 @@ title: FAQ about in .NET Word | Syncfusion
 description: Describe common questions about using the Syncfusion .NET Word library in Linux environments
 platform: document-processing
 control: DocIO
-documentation: UG
+appliesto: Document SDK
 ---
 # FAQ about in .NET Word
 
