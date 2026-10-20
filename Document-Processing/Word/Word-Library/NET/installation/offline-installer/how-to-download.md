@@ -5,7 +5,7 @@ description: Learn here about how to download the Syncfusion® Word offline inst
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
-appliesto: DOCX Editor SDK
+appliesto: Document SDK
 
 ---
 

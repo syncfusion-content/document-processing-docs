@@ -4,7 +4,7 @@ description: Open and save Word document in Azure Blob Cloud Storage using Syncf
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: DOCX Editor SDK
+appliesto: Document SDK
 ---
 
 # Open and save Word document in Azure Blob Storage 

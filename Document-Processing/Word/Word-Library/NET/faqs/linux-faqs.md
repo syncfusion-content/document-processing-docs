@@ -4,7 +4,7 @@ description: Describe common questions about using the Syncfusion .NET Word libr
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: DOCX Editor SDK
+appliesto: Document SDK
 ---
 # FAQ about in .NET Word
 

@@ -5,7 +5,7 @@ description: Learn about the overview of the Syncfusion .NET Word Document Proce
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: DOCX Editor SDK
+appliesto: Document SDK
 ---
 # About Syncfusion .NET Word Document Processing Library
 

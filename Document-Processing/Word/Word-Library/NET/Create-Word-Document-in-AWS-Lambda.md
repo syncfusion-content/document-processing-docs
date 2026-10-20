@@ -4,7 +4,7 @@ description: Describe how to convert Word documents to images in UWP application
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: DOCX Editor SDK
+appliesto: Document SDK
 ---
 
 # Create Word document in AWS Lambda

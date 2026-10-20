@@ -4,7 +4,7 @@ description: Learn more about the supported file formats in .NET Word Library to
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: DOCX Editor SDK
+appliesto: Document SDK
 ---
 
 # Supported file formats in .NET Word Library

@@ -4,7 +4,7 @@ description: Learn how to open and save a Word document in Azure services using 
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: DOCX Editor SDK
+appliesto: Document SDK
 ---
 
 # Open and save Word document in Azure 

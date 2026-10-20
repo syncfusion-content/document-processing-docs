@@ -4,7 +4,7 @@ description: This section illustrates how to migrate from Microsoft Office Autom
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: DOCX Editor SDK
+appliesto: Document SDK
 ---
 
 # Create Word document in Xamarin

@@ -4,7 +4,7 @@ description: Open and save Word document in WPF application using Syncfusion® .
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: DOCX Editor SDK
+appliesto: Document SDK
 ---
 
 # Open and save Word document in WPF 

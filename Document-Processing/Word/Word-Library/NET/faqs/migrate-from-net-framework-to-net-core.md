@@ -4,7 +4,7 @@ description: This section illustrates how to migrate applications from .NET Fram
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: DOCX Editor SDK
+appliesto: Document SDK
 ---
 # Migrate from .NET Framework to .NET core in .NET Word
 

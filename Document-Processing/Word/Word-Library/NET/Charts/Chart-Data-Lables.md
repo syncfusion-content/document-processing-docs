@@ -4,7 +4,7 @@ description: Learn how to modify the appearance of chart area in a chart in a Wo
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: DOCX Editor SDK
+appliesto: Document SDK
 ---
 
 # Modify the Appearance of Data Labels in .NET Word

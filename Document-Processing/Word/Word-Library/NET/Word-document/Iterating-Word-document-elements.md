@@ -4,7 +4,7 @@ description: Learn how to modify an existing Word document and iterate through t
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: DOCX Editor SDK
+appliesto: Document SDK
 ---
 # Iterating Word document elements in .NET Word
 

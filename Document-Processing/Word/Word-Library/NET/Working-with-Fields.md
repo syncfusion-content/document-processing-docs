@@ -4,7 +4,7 @@ description: Learn how to add dynamic information such as title, time, page numb
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: DOCX Editor SDK
+appliesto: Document SDK
 ---
 # Fields in .NET Word library in .NET
 

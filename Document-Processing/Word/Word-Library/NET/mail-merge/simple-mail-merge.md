@@ -4,7 +4,7 @@ description: Learn how to Mail merge - replace all merge fields with data, by re
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: DOCX Editor SDK
+appliesto: Document SDK
 ---
 
 # Simple Mail merge in .NET Word Library

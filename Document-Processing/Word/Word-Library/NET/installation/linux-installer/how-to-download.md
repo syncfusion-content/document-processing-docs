@@ -5,7 +5,7 @@ description: Learn here about how to download the Syncfusion® Word Linux instal
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
-appliesto: DOCX Editor SDK
+appliesto: Document SDK
 
 ---
 

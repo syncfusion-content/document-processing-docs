@@ -4,7 +4,7 @@ description: Describe how to insert, format, and manage images in Word documents
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: DOCX Editor SDK
+appliesto: Document SDK
 ---
 # Document Images in .NET Word
 

@@ -4,7 +4,7 @@ description: This section illustrates common mail merge issues and troubleshooti
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: DOCX Editor SDK
+appliesto: Document SDK
 ---
 
 # Feature Matrix in .NET Word

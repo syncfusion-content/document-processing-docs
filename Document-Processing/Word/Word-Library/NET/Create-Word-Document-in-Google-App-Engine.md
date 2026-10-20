@@ -4,7 +4,7 @@ description: This section illustrates how to substitute fonts during Word-to-PDF
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: DOCX Editor SDK
+appliesto: Document SDK
 ---
 
 # Create Word document in GAE in Google App Engine

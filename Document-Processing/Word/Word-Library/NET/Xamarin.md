@@ -4,7 +4,7 @@ description: Learn about Xamarin in the Syncfusion Xamarin Word library to creat
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: DOCX Editor SDK
+appliesto: Document SDK
 ---
 
 # Xamarin in Xamarin Word

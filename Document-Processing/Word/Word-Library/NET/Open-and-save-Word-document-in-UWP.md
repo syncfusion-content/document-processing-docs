@@ -4,7 +4,7 @@ description: Open and save Word document in UWP application using Syncfusion® U
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: DOCX Editor SDK
+appliesto: Document SDK
 ---
 
 # Open and save Word document in UWP 

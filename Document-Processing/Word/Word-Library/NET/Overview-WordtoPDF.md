@@ -4,7 +4,7 @@ description: Learn about the overview of the Syncfusion .NET Word to PDF Library
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: DOCX Editor SDK
+appliesto: Document SDK
 ---
 
 # About Syncfusion .NET Word to PDF Library

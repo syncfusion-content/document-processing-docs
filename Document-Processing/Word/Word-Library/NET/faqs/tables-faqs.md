@@ -4,7 +4,7 @@ description: This section illustrates frequently asked questions about creating 
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: DOCX Editor SDK
+appliesto: Document SDK
 ---
 # FAQ about Tables in .NET Word
 

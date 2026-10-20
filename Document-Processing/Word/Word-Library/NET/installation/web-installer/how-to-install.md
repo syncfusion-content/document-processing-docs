@@ -5,7 +5,7 @@ description: Learn here about how to install Syncfusion® Word web installer aft
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
-appliesto: DOCX Editor SDK
+appliesto: Document SDK
 ---
 
 # How to install Syncfusion® Word web installer

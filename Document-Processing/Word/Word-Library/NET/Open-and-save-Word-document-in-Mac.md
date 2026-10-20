@@ -4,7 +4,7 @@ description: Open and save Word document in .NET Core application on macOS using
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: DOCX Editor SDK
+appliesto: Document SDK
 ---
 
 # Open and save Word document on Mac OS

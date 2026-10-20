@@ -4,7 +4,7 @@ description: This section illustrates how to create Word documents in Google Clo
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: DOCX Editor SDK
+appliesto: Document SDK
 ---
 # Track changes in .NET Word
 

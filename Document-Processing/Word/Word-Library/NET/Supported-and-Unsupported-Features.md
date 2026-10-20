@@ -4,7 +4,7 @@ description: Learn about the supported and unsupported features in C# using the 
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: DOCX Editor SDK
+appliesto: Document SDK
 ---
 # Supported and Unsupported Features in .NET Word
 

@@ -4,7 +4,7 @@ description: Describe the NuGet packages required for Word-to-image conversion u
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: DOCX Editor SDK
+appliesto: Document SDK
 ---
 
 # Create Word document in Azure Functions v1

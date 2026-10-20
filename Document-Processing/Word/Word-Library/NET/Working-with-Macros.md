@@ -4,7 +4,7 @@ description: Learn how to load and save a macro-enabled Word document and remove
 platform: document-processing
 control: DocIO
 documentation: UG
-appliesto: DOCX Editor SDK
+appliesto: Document SDK
 ---
 # Macros in Word document in .NET Word
 
