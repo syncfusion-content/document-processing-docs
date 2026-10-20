@@ -5,6 +5,7 @@ description: Supported file formats in ASP.NET MVC DOCX Editor allow importing a
 control: Supported File Formats
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 domainurl: ##DomainURL##
 ---
 
