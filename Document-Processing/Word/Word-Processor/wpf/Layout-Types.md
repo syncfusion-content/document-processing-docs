@@ -4,6 +4,7 @@ description: Learn here all about Layout Types support in Syncfusion WPF RichTex
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: layout-types
 ---
 # Layout Types in WPF RichTextBox (SfRichTextBoxAdv)

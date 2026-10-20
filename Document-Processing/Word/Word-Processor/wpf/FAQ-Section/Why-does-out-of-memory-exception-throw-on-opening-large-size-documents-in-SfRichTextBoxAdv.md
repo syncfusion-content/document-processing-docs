@@ -4,6 +4,7 @@ description: Understand why out of memory exceptions occur in Syncfusion WPF SfR
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: out-of-memory-exception
 ---
 

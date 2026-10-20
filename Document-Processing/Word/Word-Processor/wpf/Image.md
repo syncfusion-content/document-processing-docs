@@ -4,6 +4,7 @@ description: Learn here all about Image support in Syncfusion WPF RichTextBox (S
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: image
 ---
 # Image in WPF RichTextBox (SfRichTextBoxAdv)

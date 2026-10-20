@@ -4,6 +4,7 @@ description: Learn here all about Spell Check support in Syncfusion WPF RichText
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: spell-check
 ---
 # Spell Check in WPF RichTextBox (SfRichTextBoxAdv)

@@ -4,6 +4,7 @@ description: Learn here all about Mini Toolbar support in Syncfusion WPF RichTex
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: mini-toolbar
 ---
 # Mini Toolbar in WPF RichTextBox (SfRichTextBoxAdv)

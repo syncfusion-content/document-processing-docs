@@ -4,6 +4,7 @@ description: Learn here all about Clipboard support in Syncfusion WPF RichTextBo
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: clipboard
 ---
 # Clipboard in WPF RichTextBox (SfRichTextBoxAdv)

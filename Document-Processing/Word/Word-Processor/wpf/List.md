@@ -4,6 +4,7 @@ description: Learn here all about List support in Syncfusion WPF RichTextBox (Sf
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: list
 ---
 # List in WPF RichTextBox (SfRichTextBoxAdv)

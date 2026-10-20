@@ -5,6 +5,7 @@ description: Learn here all about Localization support in Syncfusion WPF RichTex
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: localization
 ---
 # Localization in WPF RichTextBox (SfRichTextBoxAdv)

@@ -4,6 +4,7 @@ description: Learn here all about getting started with Syncfusion WPF RichTextBo
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: getting started
 ---
 

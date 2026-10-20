@@ -4,6 +4,7 @@ description: Learn here all about Document Structure support in Syncfusion WPF R
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: document-structure
 ---
 # Document Structure in WPF RichTextBox (SfRichTextBoxAdv)

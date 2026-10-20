@@ -4,6 +4,7 @@ description: Learn here all about Dialogs support in Syncfusion WPF RichTextBox 
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: dialogs
 ---
 # Dialogs in WPF RichTextBox (SfRichTextBoxAdv)

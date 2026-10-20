@@ -4,6 +4,7 @@ description: Learn here all about Virtualization support in Syncfusion WPF RichT
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 keywords: virtualization
 ---
 # Virtualization in WPF RichTextBox (SfRichTextBoxAdv)
