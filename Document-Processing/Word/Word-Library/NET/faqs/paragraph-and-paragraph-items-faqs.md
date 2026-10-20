@@ -4,6 +4,7 @@ description: Learn about the frequently asked questions about paragraph and para
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Frequently asked questions on paragraphs and items in Word document
 

@@ -4,6 +4,7 @@ description: Learn about the frequently asked questions about track changes in W
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Frequently asked questions about track changes in Word document
 
