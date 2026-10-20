@@ -5,6 +5,7 @@ description: Learn here about how to install Syncfusion<sup>&reg;</sup> Word lin
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
+appliesto: Document SDK
 
 ---
 
