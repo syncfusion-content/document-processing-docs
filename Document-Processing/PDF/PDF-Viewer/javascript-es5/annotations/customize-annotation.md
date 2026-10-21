@@ -25,7 +25,30 @@ Use the annotation toolbar after selecting an annotation:
 - Edit opacity: change annotation transparency.
 ![Edit opacity](../images/shape_opacity.png)
 
+The annotation toolbar also exposes **Border Style** options (Solid, Cloud, Dashed) on shape and measurement annotations that support additional border styles. See [Cloud Annotation](./annotation-types/cloud-annotation) for cloud-specific appearance options and the per-annotation pages linked below for border-style customization.
+
 Type‑specific options (for example, Line properties) are available from the context menu (right‑click > Properties) where supported.
+
+### Border Style Support Matrix
+
+Use this matrix to find which annotation types support the **Solid**, **Cloud**, and **Dashed** border styles and the settings property that controls them.
+
+| Annotation Type | Solid | Cloud | Dashed | Settings property |
+| --- | --- | --- | --- | --- |
+| [Rectangle](./annotation-types/rectangle-annotation#supported-border-styles) | ✓ | ✓ | ✓ | `rectangleSettings` |
+| [Circle](./annotation-types/circle-annotation#supported-border-styles) | ✓ | ✓ | ✓ | `circleSettings` |
+| [Polygon](./annotation-types/polygon-annotation#supported-border-styles) | ✓ | ✓ | ✓ | `polygonSettings` |
+| [Cloud](./annotation-types/cloud-annotation) | ✓ | ✓ | — | `cloudSettings` |
+| [Free Text](./annotation-types/free-text-annotation#supported-border-styles) | ✓ | ✓ | ✓ | `freeTextSettings` |
+| [Area](./annotation-types/area-annotation#supported-border-styles) | ✓ | ✓ | ✓ | `areaSettings` |
+| [Radius](./annotation-types/radius-annotation#supported-border-styles) | ✓ | ✓ | ✓ | `radiusSettings` |
+| [Volume](./annotation-types/volume-annotation#supported-border-styles) | ✓ | ✓ | ✓ | `volumeSettings` |
+| [Perimeter](./annotation-types/perimeter-annotation#supported-border-styles) | ✓ | — | ✓ | `perimeterSettings` |
+| [Distance](./annotation-types/distance-annotation#supported-border-styles) | ✓ | — | ✓ | `distanceSettings` |
+| [Line](./annotation-types/line-annotation#supported-border-styles) | ✓ | — | ✓ | `lineSettings` |
+| [Arrow](./annotation-types/arrow-annotation#supported-border-styles) | ✓ | — | ✓ | `arrowSettings` |
+
+Use the [`BorderStyle`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/borderStyle) enum together with the optional `borderDashArray` (Dashed) and `cloudIntensity` (Cloud) settings. `cloudIntensity` accepts values from `1` to `2`; the default value is `1`.
 
 ## Set default properties during initialization
 

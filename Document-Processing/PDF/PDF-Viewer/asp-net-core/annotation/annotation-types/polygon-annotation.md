@@ -114,6 +114,71 @@ window.onload = function () {
 {% endhighlight %}
 {% endtabs %}
 
+### Supported Border Styles
+
+In addition to the default **Solid** border, Polygon annotations support the following additional border styles:
+
+- **Cloud** — scalloped cloud border.
+- **Dashed** — dashed line border.
+
+Use [`BorderStyle`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.borderstyle.html) values such as `BorderStyle.Cloud` and `BorderStyle.Dashed` together with the optional `borderDashArray` and `cloudIntensity` settings in the [`polygonSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#polygonSettings) property.
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `borderStyle` | `BorderStyle` | Specifies the border style. Supported values: `BorderStyle.Solid`, `BorderStyle.Cloud`, and `BorderStyle.Dashed`. |
+| `borderDashArray` | `number[]` | Specifies the dash pattern when `borderStyle` is `BorderStyle.Dashed`. |
+| `cloudIntensity` | `number` | Specifies the cloud border intensity. Supported range: `1` to `2`; default value: `1`. |
+
+N> `borderStyle`, `borderDashArray`, and `cloudIntensity` are preserved during save, reload, import, and export.
+
+#### Apply a Cloud Border
+
+```ts
+export enum BorderStyle {
+    Solid = 'Solid',
+    Dashed = 'Dashed',
+    Cloud = 'Cloud'
+}
+```
+
+{% tabs %}
+{% highlight cshtml tabtitle="Standalone" %}
+<div style="width:100%;height:650px">
+    <ejs-pdfviewer id="pdfviewer"
+                   style="height:650px"
+                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib">
+    </ejs-pdfviewer>
+</div>
+<script>
+window.onload = function () {
+  var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+  viewer.polygonSettings = { fillColor: '#ffa5d8', strokeColor: '#ff6a00', thickness: 2, opacity: 0.9, borderStyle: 'Cloud', cloudIntensity: 2 };
+}
+</script>
+{% endhighlight %}
+{% endtabs %}
+
+#### Apply a Dashed Border
+
+{% tabs %}
+{% highlight cshtml tabtitle="Standalone" %}
+<div style="width:100%;height:650px">
+    <ejs-pdfviewer id="pdfviewer"
+                   style="height:650px"
+                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib">
+    </ejs-pdfviewer>
+</div>
+<script>
+window.onload = function () {
+  var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+  viewer.polygonSettings = { fillColor: '#ffa5d8', strokeColor: '#ff6a00', thickness: 2, opacity: 0.9, borderStyle: 'Dashed', borderDashArray: [5, 5] };
+}
+</script>
+{% endhighlight %}
+{% endtabs %}
+
 ## Manage Polygon (Edit, Move, Resize, Delete)
 
 ### Edit Polygon

@@ -164,6 +164,65 @@ export class AppComponent {
 {% endhighlight %}
 {% endtabs %}
 
+### Supported Border Styles
+
+In addition to the default **Solid** border, Distance annotations support the following additional border style:
+
+- **Dashed** — dashed line border.
+
+Use [`BorderStyle`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/borderStyle) values such as `BorderStyle.Cloud` and `BorderStyle.Dashed` together with the optional `borderDashArray` settings in the [`distanceSettings`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#distanceSettings) property.
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `borderStyle` | `BorderStyle` | Specifies the border style. Supported values: `BorderStyle.Solid` and `BorderStyle.Dashed`. |
+| `borderDashArray` | `number[]` | Specifies the dash pattern when `borderStyle` is `BorderStyle.Dashed`. |
+
+N> `borderStyle` and `borderDashArray` are preserved during save, reload, import, and export.
+
+#### Apply a Dashed Border
+
+```ts
+export enum BorderStyle {
+    Solid = 'Solid',
+    Dashed = 'Dashed',
+    Cloud = 'Cloud'
+}
+```
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+
+import { Component } from '@angular/core';
+import {
+  PdfViewerModule,
+  ToolbarService,
+  AnnotationService
+} from '@syncfusion/ej2-angular-pdfviewer';
+
+@Component({
+  selector: 'app-root',
+  template: `
+    <div class="content-wrapper">
+      <ejs-pdfviewer
+        id="container"
+        [documentPath]="document"
+        [resourceUrl]="resource"
+        [distanceSettings]="distanceSettings"
+        style="height:650px;display:block">
+      </ejs-pdfviewer>
+    </div>
+  `,
+  imports: [PdfViewerModule],
+  providers: [ToolbarService, AnnotationService]
+})
+export class AppComponent {
+  public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+  public resource = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+  public distanceSettings = { fillColor: 'blue', strokeColor: 'green', thickness: 2, opacity: 0.9, borderStyle: 'Dashed', borderDashArray: [5, 5] };
+}
+{% endhighlight %}
+{% endtabs %}
+
 ## Manage Distance (Move, Resize, Edit, Delete)
 - **Move**: Drag the measurement to reposition it.
 - **Resize**: Drag the end handles to adjust the length.
