@@ -10,20 +10,18 @@ DocumentEditorContainerComponent.Inject(Toolbar);
 
 function App() {
     let container = useRef<DocumentEditorContainerComponent>(null);
-    const [result, setResult] = useState('');
 
     //Utilise the correct Service URL where the CompareDocuments Web API is hosted.
-    //If you choose to use localhost, please update the URL below to 'http://localhost:62870/api/DocumentEditor/';
+    //If you choose to use localhost, please update the URL below to 'http://localhost:62870/';
     let serviceUrl: string = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 
-    // Compare the original and revised documents by sending the SFDT contents to the server-side CompareDocuments Web API
-    // and load the resultant document with tracked changes into the Document Editor.
+    // Compare the original and revised documents by sending the SFDT contents as form files
+    // to the server-side CompareDocuments Web API and load the resultant document
+    // with tracked changes into the Document Editor.
     function onCompareClick() {
         const formData = new FormData();
-        formData.append('originalDocument', JSON.stringify(originalDocument));
-        formData.append('revisedDocument', JSON.stringify(revisedDocument));
-        formData.append('authorName', 'Author');
-        formData.append('dateTime', new Date().toISOString());
+        formData.append('OriginalFile', new File([JSON.stringify(originalDocument)], 'original.sfdt', { type: 'application/octet-stream' }));
+        formData.append('RevisedFile', new File([JSON.stringify(revisedDocument)], 'revised.sfdt', { type: 'application/octet-stream' }));
         fetch(serviceUrl + 'CompareDocuments', {
             method: 'POST',
             body: formData
