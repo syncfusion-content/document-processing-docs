@@ -1134,7 +1134,7 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Bookmarks/Replace-content-with-document-part/.NET).
 
-### Bookmark end positioning options
+## Bookmark end positioning options
 
 A bookmark end can be preserved after a paragraph mark, table-cell mark, table-row mark, or table mark by using the following properties of the [BookmarkEnd](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html) class. When all four properties are false, the bookmark end remains at its normal position inside the paragraph.
 
