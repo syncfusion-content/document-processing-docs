@@ -37,6 +37,25 @@ let picture = firstParagraph.appendImage(imageBytes, {
 // Save the Word document
 document.save('Output.docx');
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Create a new Word document
+let document = ej.docx.WordDocument.create();
+// Access the first section
+let section = document.sections[0];
+// Get a paragraph from the section
+let firstParagraph = section.body.paragraphs[0];
+
+// Add an image to the paragraph and set height and width
+let response = await fetch('Image.png');
+let imageBytes = new Uint8Array(await response.arrayBuffer());
+let picture = firstParagraph.appendImage(imageBytes, {
+    width: 200,
+    height: 100,
+});
+
+// Save the Word document
+document.save('Output.docx');
+{% endhighlight %}
 {% endtabs %}
 
 ## Replace image
@@ -83,6 +102,39 @@ for (let paragraph of textBody.paragraphs) {
 // Save the modified document
 document.save('Output.docx');
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Load an existing Word document
+let document = ej.docx.WordDocument.open(data);
+
+// Get the body of the first section
+let textBody = document.sections[0].body;
+
+// Iterate through all paragraphs in the text body
+for (let paragraph of textBody.paragraphs) {
+    // Iterate through all paragraph items
+    for (let paraItem of paragraph.items) {
+        // Check whether the current paragraph item is a picture
+        if (paraItem instanceof ej.docx.Picture) {
+            let picture = paraItem;
+
+            // Find the picture whose title matches the specified value
+            if (picture.title === 'Bookmark') {
+                // Set the picture width and height in points
+                picture.width = 150;
+                picture.height = 100;
+
+                // Load image data and replace the existing image
+                let response = await fetch('Image.png');
+                let imageBytes = new Uint8Array(await response.arrayBuffer());
+                picture.loadImage(imageBytes);
+            }
+        }
+    }
+}
+
+// Save the modified document
+document.save('Output.docx');
+{% endhighlight %}
 {% endtabs %}
 
 ## Remove image
@@ -97,6 +149,31 @@ import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Open a Word document
 let document = WordDocument.open(data);
+
+// Get the body of the first section
+let textBody = document.sections[0].body;
+
+// Iterate through all paragraphs in the section body
+for (let paragraph of textBody.paragraphs) {
+   // Iterates through all paragraphs in the section body. 
+   for (let paragraph of textBody.paragraphs) { 
+       // Iterates through all items in the paragraph. 
+       for (let paraItem of paragraph.items) { 
+            // Checks whether the current item is an image. 
+            if (paraItem instanceof Picture) { 
+                // Removes the image from the paragraph. 
+                paragraph.items.remove(paraItem); 
+            } 
+        } 
+    } 
+}
+
+// Save the modified document
+document.save('Output.docx');
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Open a Word document
+let document = ej.docx.WordDocument.open(data);
 
 // Get the body of the first section
 let textBody = document.sections[0].body;
@@ -171,6 +248,47 @@ picture.flipHorizontal = true;
 // Save the Word document
 document.save('Output.docx');
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Create a new Word document
+let document = ej.docx.WordDocument.create();
+// WordDocument.create() already seeds section 0
+let section = document.sections[0];
+// Get a paragraph from the section
+let paragraph = section.body.paragraphs[0];
+paragraph.appendText('This paragraph has picture. ');
+// Append a new picture
+let response = await fetch('Image.png');
+let imageBytes = new Uint8Array(await response.arrayBuffer());
+let picture = paragraph.appendImage(imageBytes);
+// Set text wrapping style – when the wrapping style is inline, the image is not absolutely positioned
+picture.textWrappingStyle = ej.docx.TextWrappingStyle.Square;
+// Set horizontal and vertical origin
+picture.horizontalOrigin = ej.docx.HorizontalOrigin.Page;
+picture.verticalOrigin = ej.docx.VerticalOrigin.Paragraph;
+// Set width and height
+picture.width = 150;
+picture.height = 100;
+// Set horizontal and vertical position
+picture.horizontalPosition = 200;
+picture.verticalPosition = 150;
+
+// Set lock aspect ratio and name
+picture.lockAspectRatio = true;
+picture.name = 'PictureName';
+
+// Set horizontal and vertical alignments
+picture.horizontalAlignment = ej.docx.HorizontalAlignment.Center;
+picture.verticalAlignment = ej.docx.VerticalAlignment.Bottom;
+
+// Set 90 degree rotation
+picture.rotation = 90;
+
+// Set horizontal flip
+picture.flipHorizontal = true;
+
+// Save the Word document
+document.save('Output.docx');
+{% endhighlight %}
 {% endtabs %}
 
 ## Find an image by title
@@ -194,6 +312,30 @@ for (let paragraph of textBody.paragraphs) {
     for (let paraItem of paragraph.items) {
         if (paraItem instanceof Picture) {
             let picture = paraItem as Picture;
+            // Match the picture title
+            if (picture.title === 'Bookmark') {
+                picture.width = 150;
+                picture.height = 100;
+            }
+        }
+    }
+}
+
+// Save the document
+document.save('Output.docx');
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Load an existing Word document
+let document = ej.docx.WordDocument.open(data);
+
+let textBody = document.sections[0].body;
+
+// Iterate paragraphs in the body
+for (let paragraph of textBody.paragraphs) {
+    // Iterate paragraph items
+    for (let paraItem of paragraph.items) {
+        if (paraItem instanceof ej.docx.Picture) {
+            let picture = paraItem;
             // Match the picture title
             if (picture.title === 'Bookmark') {
                 picture.width = 150;
@@ -243,6 +385,32 @@ let picture = firstParagraph.appendImage(imageBytes, {
 
 // Add a caption above the image using Arabic numbering
 picture.addCaption('Figure', CaptionNumberingFormat.Arabic, CaptionPosition.Above);
+
+// Save the document
+document.save('Output.docx');
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Create a new Word document
+let document = ej.docx.WordDocument.create();
+
+// Get the first section in the document
+let section = document.sections[0];
+
+// Access a paragraph from the section body
+let firstParagraph = section.body.paragraphs[0];
+
+// Load image data from the specified file
+let response = await fetch('Image.png');
+let imageBytes = new Uint8Array(await response.arrayBuffer());
+
+// Insert an image into the paragraph with the specified dimensions
+let picture = firstParagraph.appendImage(imageBytes, {
+    width: 200,
+    height: 100,
+});
+
+// Add a caption above the image using Arabic numbering
+picture.addCaption('Figure', ej.docx.CaptionNumberingFormat.Arabic, ej.docx.CaptionPosition.Above);
 
 // Save the document
 document.save('Output.docx');
