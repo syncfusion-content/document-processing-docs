@@ -11,6 +11,12 @@ documentation: UG
 
 The JavaScript PDF Library enables you to extract embedded images from PDF documents and retrieve properties such as image format, page index, occurrence index, bounds, resource name, interpolation settings, masking flags, and physical dimensions.
 
+## Video Tutorial
+
+Watch the following video to learn how to extract images from a PDF document using the JavaScript PDF Library.
+
+{% youtube "https://www.youtube.com/watch?v=01aArUvYF7c" %}
+
 ## Extract Images from a PDF
 
 This section demonstrates how to extract embedded images and their metadata from a PDF using [PdfDataExtractor](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfdataextractor). It loads a PDF, retrieves all [PdfEmbeddedImage](https://ej2.syncfusion.com/documentation/api/pdf-data-extract/pdfembeddedimage) entries across pages, accesses the first image's raw byte data, and reads its properties before disposing of the document.
