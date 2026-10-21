@@ -25,7 +25,8 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> Document SDK Skills eliminate c
       <td><a href="https://help.syncfusion.com/document-processing/word/word-library/overview" aria-label="Word DocIO library overview">Word (DocIO)</a></td>
       <td>
         <a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-dotnet-word" aria-label="Syncfusion .NET Word skill">syncfusion-dotnet-word</a><br>
-        <a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-java-word" aria-label="Syncfusion Java Word skill">syncfusion-java-word</a>
+        <a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-java-word" aria-label="Syncfusion Java Word skill">syncfusion-java-word</a><br>
+        <a href="https://github.com/syncfusion/document-sdk-skills/tree/master/skills/syncfusion-javascript-word" aria-label="Syncfusion JavaScript Word skill">syncfusion-javascript-word</a>
       </td>
     </tr>
     <tr>
