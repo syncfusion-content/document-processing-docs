@@ -945,6 +945,112 @@ Line-based measurement annotations (distance and perimeter) have additional opti
 
 ![Line properties dialog for measurement annotations](../images/calibrate_lineprop.png)
 
+## Supported Border Styles
+
+In addition to the default **Solid** border, measurement annotations support additional border styles. The supported styles depend on the annotation type.
+
+| Annotation | Solid | Cloud | Dashed |
+| --- | --- | --- | --- |
+| Area | ✓ | ✓ | ✓ |
+| Radius | ✓ | ✓ | ✓ |
+| Volume | ✓ | ✓ | ✓ |
+| Distance | ✓ | — | ✓ |
+| Perimeter | ✓ | — | ✓ |
+
+Use the [`BorderStyle`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/borderStyle) enum together with the optional `borderDashArray` (Dashed) and `cloudIntensity` (Cloud) settings in the corresponding `{xx}Settings` property (`areaSettings`, `radiusSettings`, `volumeSettings`, `distanceSettings`, `perimeterSettings`).
+
+```ts
+export enum BorderStyle {
+    Solid = 'Solid',
+    Dashed = 'Dashed',
+    Cloud = 'Cloud'
+}
+```
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `borderStyle` | `BorderStyle` | Specifies the border style. Supported values: `BorderStyle.Solid`, `BorderStyle.Cloud`, and `BorderStyle.Dashed`. |
+| `borderDashArray` | `number[]` | Specifies the dash pattern when `borderStyle` is `BorderStyle.Dashed`. |
+| `cloudIntensity` | `number` | Specifies the cloud border intensity. Supported range: `1` to `2`; default value: `1`. |
+
+N> `cloudIntensity` is honored only when `borderStyle` is `BorderStyle.Cloud`.
+N> `borderStyle`, `borderDashArray`, and `cloudIntensity` are preserved during save, reload, import, and export.
+
+### Apply a Cloud Border (Area, Radius, Volume)
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (Standalone)" %}
+
+<template>
+  <div id="app">
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :resourceUrl="resourceUrl" :documentPath="documentPath"
+      :areaSettings="areaSettings" :radiusSettings="radiusSettings" :volumeSettings="volumeSettings">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide } from 'vue';
+import { BorderStyle } from '@syncfusion/ej2-vue-pdfviewer';
+
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+const areaSettings = { fillColor: 'yellow', strokeColor: 'orange', thickness: 2, opacity: 0.9, borderStyle: BorderStyle.Cloud, cloudIntensity: 2 };
+const radiusSettings = { fillColor: 'orange', strokeColor: 'pink', thickness: 2, opacity: 0.9, borderStyle: BorderStyle.Cloud, cloudIntensity: 2 };
+const volumeSettings = { fillColor: 'pink', strokeColor: 'yellow', thickness: 2, opacity: 0.9, borderStyle: BorderStyle.Cloud, cloudIntensity: 2 };
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer])
+
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+### Apply a Dashed Border (Area, Radius, Volume, Distance, Perimeter)
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (Standalone)" %}
+
+<template>
+  <div id="app">
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :resourceUrl="resourceUrl" :documentPath="documentPath"
+      :distanceSettings="distanceSettings" :perimeterSettings="perimeterSettings"
+      :areaSettings="areaSettings" :radiusSettings="radiusSettings" :volumeSettings="volumeSettings">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide } from 'vue';
+import { BorderStyle } from '@syncfusion/ej2-vue-pdfviewer';
+
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+const distanceSettings = { fillColor: 'blue', strokeColor: 'green', thickness: 2, opacity: 0.9, borderStyle: BorderStyle.Dashed, borderDashArray: [5, 5] };
+const perimeterSettings = { fillColor: 'green', strokeColor: 'blue', thickness: 2, opacity: 0.9, borderStyle: BorderStyle.Dashed, borderDashArray: [5, 5] };
+const areaSettings = { fillColor: 'yellow', strokeColor: 'orange', thickness: 2, opacity: 0.9, borderStyle: BorderStyle.Dashed, borderDashArray: [5, 5] };
+const radiusSettings = { fillColor: 'orange', strokeColor: 'pink', thickness: 2, opacity: 0.9, borderStyle: BorderStyle.Dashed, borderDashArray: [5, 5] };
+const volumeSettings = { fillColor: 'pink', strokeColor: 'yellow', thickness: 2, opacity: 0.9, borderStyle: BorderStyle.Dashed, borderDashArray: [5, 5] };
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer])
+
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Set default properties during control initialization
 
 Default properties for measurement annotations can be set before creating the control using `distanceSettings`, `perimeterSettings`, `areaSettings`, `radiusSettings`, and `volumeSettings`.
