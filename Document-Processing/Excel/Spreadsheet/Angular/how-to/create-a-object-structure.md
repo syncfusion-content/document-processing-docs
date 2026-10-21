@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Create an Object Structure in Angular Spreadsheet | Syncfusion
-description: Create an object structure in Angular Spreadsheet to organize workbook data and manage spreadsheet content programmatically.
+title: Create a object structure in Angular Spreadsheet | Syncfusion
+description: Learn here all about Create a object structure in Syncfusion Angular Spreadsheet Component of Syncfusion Essential JS 2 and more.
 platform: document-processing
-control: Create an object structure
+control: Create a object structure 
 documentation: ug
 ---
 
-# How to Create an Object Structure in Angular Spreadsheet
+# Create an object structure in Angular Spreadsheet Component
 
 This topic guides you to construct a JSON structure that can be passed to the [`openFromJson`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#openfromjson) method to render the spreadsheet. The JSON structure is an object with the key as `Workbook` and the [`properties`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#properties) of the spreadsheet as value.
 

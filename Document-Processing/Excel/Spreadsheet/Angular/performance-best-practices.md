@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Performance practices in Angular Spreadsheet | Syncfusion
-description: Performance best practices in Angular Spreadsheet help optimize rendering, data processing, and user interactions for large datasets.
+title: Performance Best Practices in Angular Spreadsheet | Syncfusion
+description: Learn about performance best practices in the Syncfusion Angular Spreadsheet component to optimize rendering and data processing.
 platform: document-processing
 control: Performance
 documentation: ug
 ---
 
-# Performance Best Practices in Angular Spreadsheet 
+# Performance Best Practices in Angular Spreadsheet
 
 Performance optimization is crucial when working with large datasets in the [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor). This documentation outlines best practices to enhance data handling efficiency and ensure a smooth, responsive user experience during various spreadsheet operations.
 
@@ -23,7 +23,7 @@ For more details, refer to the [virtual scrolling documentation](https://help.sy
 
 ### Chunk response processing
 
-When opening large Excel files with extensive data and features, server responses can become too large, leading to memory issues or connection failures during transmission. The Chunk Response Processing feature addresses this by breaking the response into smaller chunks and sending them in parallel to the client.
+When opening large Excel files with extensive data and features, server responses can become too large—leading to memory issues or connection failures during transmission. The Chunk Response Processing feature addresses this by breaking the response into smaller chunks and sending them in parallel to the client.
 
 These chunks are combined on the client side to load the Excel data smoothly into the Spreadsheet. This approach avoids transmission failures due to memory constraints and ensures reliable and efficient loading of large files.
 
@@ -32,11 +32,11 @@ To enable the chunk response processing feature, you can refer to the following 
 
 ### Configure JSON serialization options during open
 
-Serialization options in the Angular Spreadsheet allow you to exclude specific features—such as styles, formats, charts, images, wrap, etc.—from the `Workbook JSON object` when opening it in the Spreadsheet using the [`openFromJson`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#openfromjson) method. By skipping unnecessary features, you can significantly improve performance, especially when working with large or complex workbooks.
+Serialization options in the Angular Spreadsheet allow you to exclude specific features—such as styles, formats, charts, images, wrap, etc.—from the `Workbook JSON object` when opening it in the Spreadsheet using the [`openFromJson`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet#openfromjson) method. By skipping unnecessary features, you can significantly improve performance, especially when working with large or complex workbooks.
 
 This is particularly useful when:
 * You need only the raw data without formatting.
-* You're opening the `Workbook JSON object` in the Spreadsheet using the [`openFromJson`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#openfromjson) method.
+* You're opening the `Workbook JSON object` in the Spreadsheet using the [`openFromJson`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet#openfromjson) method.
 * You want to minimize the size of the JSON payload and optimize processing speed.
 
 Refer to the following UG section to learn how to configure these options:
@@ -80,7 +80,7 @@ public IActionResult Open(IFormCollection openRequest)
 To improve performance when opening large Excel files, use parsing options like `IgnoreStyle` and `IgnoreFormat` to skip unnecessary styles and formats. This reduces memory usage, speeds up loading, and minimizes JSON size—especially helpful for files with many styled but empty cells.
 
 To learn how to configure these parsing options, please refer to the UG section below.
-* [Configure Parsing Options](./open-save#improving-excel-file-open-performance-with-parsing-options)
+* [Configure Parsing Options](https://help.syncfusion.com/document-processing/excel/spreadsheet/angular/open-save#improving-excel-file-open-performance-with-parsing-options)
 
 ## How to improve performance on formula calculation in Spreadsheet?
 
@@ -102,9 +102,9 @@ To learn more about Manual Calculation Mode and how to enable it, you can refer 
 
 ### Handling large file saves with `isFullPost` option
 
-When saving large Excel files using **File → Save As** or the [`save`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#save) method, the Spreadsheet triggers a server API call through a form submit operation. This can lead to performance issues such as timeouts or delays, particularly due to the size and complexity of the workbook.
+When saving large Excel files with extensive data and features using **File → Save As** or the **save** method, the Spreadsheet triggers a server API call through a form submit operation. This can lead to performance issues such as timeouts or delays, particularly due to the size and complexity of the workbook.
 
-To mitigate these issues during the save operation, you can set the [`isFullPost`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/beforesaveeventargs#isfullpost) property to **false** in the [`beforeSave`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#beforesave) event of the Spreadsheet.
+To mitigate these issues during the save operation, you can set the [`isFullPost`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/beforeSaveEventArgs#isfullpost) property to **false** in the [`beforeSave`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet#beforesave) event of the Spreadsheet.
 
 The following code example shows how to set `isFullPost` to **false** in the Spreadsheet component:
 
@@ -146,11 +146,11 @@ export class AppComponent {
 
 ### Configure JSON serialization options during save
 
-Serialization options in the Angular Spreadsheet allow you to exclude specific features such as styles, formats, charts, images, wrap, etc. from the `Workbook JSON object` when saving it using the [`saveAsJson`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#saveasjson) method in the Spreadsheet. By skipping unnecessary features, you can significantly improve performance, especially when working with large or complex workbooks.
+Serialization options in the Angular Spreadsheet allow you to exclude specific features such as styles, formats, charts, images, wrap, etc. from the `Workbook JSON object` when saving it using the [`saveAsJson`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet#saveasjson) method in the Spreadsheet. By skipping unnecessary features, you can significantly improve performance, especially when working with large or complex workbooks.
 
 This is particularly useful when:
 * You need only the raw data without formatting.
-* You're saving the `Workbook JSON object` using the [`saveAsJson`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#saveasjson) method in the Spreadsheet.
+* You're saving the `Workbook JSON object` using the [`saveAsJson`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet#saveasjson) method in the Spreadsheet.
 * You want to minimize the size of the JSON payload and optimize processing speed.
 
 Proper use of serialization options during save improves performance and reduces the time taken during the save process.
@@ -165,7 +165,7 @@ Refer to the following UG section to learn how to configure these options:
 
 When working with large datasets in the Angular Spreadsheet, user interactions such as selecting a large range of cells can experience delays. This occurs because, by default, the Spreadsheet performs aggregate calculations (e.g., SUM, AVERAGE, COUNT, MIN, and MAX) on the selected range and displays the results in the sheet tab panel at the bottom-right corner.
 
-To enhance the responsiveness of cell selection, particularly in performance-critical scenarios, consider disabling unnecessary aggregate calculations using the [`showAggregate`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#showaggregate) property.
+To enhance the responsiveness of cell selection, particularly in performance-critical scenarios, consider disabling unnecessary aggregate calculations using the [`showAggregate`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet#showaggregate) property.
 
 Benefits:
 * Reduces selection lag when dealing with large data ranges.
