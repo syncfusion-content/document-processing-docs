@@ -1134,16 +1134,9 @@ document.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Bookmarks/Replace-content-with-document-part/.NET).
 
-### Bookmark end positioning options
+## Bookmark end positioning options
 
-A bookmark end can be preserved after a paragraph mark, table-cell mark, table-row mark, or table mark. The following properties of the [BookmarkEnd](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html) class allow you to identify and control these positions:
-
-* [IsAfterParagraphMark](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html#Syncfusion_DocIO_DLS_BookmarkEnd_IsAfterParagraphMark)
-* [IsAfterCellMark](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html#Syncfusion_DocIO_DLS_BookmarkEnd_IsAfterCellMark)
-* [IsAfterRowMark](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html#Syncfusion_DocIO_DLS_BookmarkEnd_IsAfterRowMark)
-* [IsAfterTableMark](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html#Syncfusion_DocIO_DLS_BookmarkEnd_IsAfterTableMark)
-
-Setting a property to true serializes the bookmark end after the corresponding mark. When all four properties are false, the bookmark end remains at its normal position inside the paragraph.
+A bookmark end can be preserved after a paragraph mark, table-cell mark, table-row mark, or table mark by using the following properties of the [BookmarkEnd](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html) class. When all four properties are false, the bookmark end remains at its normal position inside the paragraph.
 
 | Property | Behavior when set to true |
 |---|---|
@@ -1152,16 +1145,7 @@ Setting a property to true serializes the bookmark end after the corresponding m
 | [IsAfterRowMark](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html#Syncfusion_DocIO_DLS_BookmarkEnd_IsAfterRowMark) | Preserves the bookmark end after the table-row mark |
 | [IsAfterTableMark](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html#Syncfusion_DocIO_DLS_BookmarkEnd_IsAfterTableMark) | Preserves the bookmark end after the table mark |
 
-N> Enable only the property that represents the required bookmark end position. The bookmark end must be placed at a valid final content position for the selected paragraph, table cell, table row, or table.
-
-Use each property only at the matching final content position:
-
-* [IsAfterParagraphMark](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html#Syncfusion_DocIO_DLS_BookmarkEnd_IsAfterParagraphMark) applies to a bookmark end at the end of a paragraph.
-* [IsAfterCellMark](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html#Syncfusion_DocIO_DLS_BookmarkEnd_IsAfterCellMark) applies to the final content position of the intended table cell.
-* [IsAfterRowMark](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html#Syncfusion_DocIO_DLS_BookmarkEnd_IsAfterRowMark) applies to the final content position of the intended table row.
-* [IsAfterTableMark](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.BookmarkEnd.html#Syncfusion_DocIO_DLS_BookmarkEnd_IsAfterTableMark) applies to the final content position of the table.
-
-If normal content follows the bookmark end, the bookmark end must not be moved across that content.
+N> Enable only the property that represents the required bookmark end position. Place the bookmark end at the final content position of the corresponding paragraph, table cell, table row, or table.
 
 The following code example shows how to preserve bookmark ends after a paragraph mark, table-cell mark, table-row mark, and table mark in a Word document.
 
