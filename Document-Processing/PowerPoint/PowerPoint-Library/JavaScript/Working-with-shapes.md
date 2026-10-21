@@ -41,19 +41,8 @@ const picture = slide.shapes.addPicture({
     }
 });
 
-// Saves the presentation and downloads it in the browser.
-const bytes = await pptxDoc.save();
-const blob = new Blob([bytes], {
-    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-});
-const url = window.URL.createObjectURL(blob);
-const link = document.createElement('a');
-link.href = url;
-link.download = 'ShapeSample.pptx';
-document.body.appendChild(link);
-link.click();
-document.body.removeChild(link);
-window.URL.revokeObjectURL(url);
+// Saves the Presentation to the file system.
+await pptxDoc.save('ShapeSample.pptx');
 
 {% endhighlight %}
 {% endtabs %}
@@ -81,19 +70,8 @@ for (const shape of slide.shapes) {
     }
 }
 
-// Saves the presentation and downloads it in the browser.
-const bytes = await pptxDoc.save();
-const blob = new Blob([bytes], {
-    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-});
-const url = window.URL.createObjectURL(blob);
-const link = document.createElement('a');
-link.href = url;
-link.download = 'ShapeOutput1.pptx';
-document.body.appendChild(link);
-link.click();
-document.body.removeChild(link);
-window.URL.revokeObjectURL(url);
+// Saves the Presentation to the file system.
+await pptxDoc.save('ShapeOutput1.pptx');
 
 {% endhighlight %}
 {% endtabs %}
@@ -119,19 +97,8 @@ for (const shape of slide.shapes) {
     }
 }
 
-// Saves the presentation and downloads it in the browser.
-const bytes = await pptxDoc.save();
-const blob = new Blob([bytes], {
-    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-});
-const url = window.URL.createObjectURL(blob);
-const link = document.createElement('a');
-link.href = url;
-link.download = 'ShapeOutput2.pptx';
-document.body.appendChild(link);
-link.click();
-document.body.removeChild(link);
-window.URL.revokeObjectURL(url);
+// Saves the Presentation to the file system.
+await pptxDoc.save('ShapeOutput2.pptx');
 
 {% endhighlight %}
 {% endtabs %}

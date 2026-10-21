@@ -41,19 +41,8 @@ const textPart = paragraph.addTextPart('AdventureWorks Cycles, the fictitious co
 // Gets text from the TextPart.
 const paraText = textPart.text;
 
-// Saves the presentation and downloads it in the browser.
-const bytes = await pptxDoc.save();
-const blob = new Blob([bytes], {
-    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-});
-const url = window.URL.createObjectURL(blob);
-const link = document.createElement('a');
-link.href = url;
-link.download = 'Output.pptx';
-document.body.appendChild(link);
-link.click();
-document.body.removeChild(link);
-window.URL.revokeObjectURL(url);
+// Saves the Presentation to the file system.
+await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
 {% endtabs %}
@@ -92,19 +81,8 @@ paragraph.leftIndent = 8;
 // Modifies the end paragraph font name.
 paragraph.endParagraphFont.fontName = 'Times New Roman';
 
-// Saves the presentation and downloads it in the browser.
-const bytes = await pptxDoc.save();
-const blob = new Blob([bytes], {
-    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-});
-const url = window.URL.createObjectURL(blob);
-const link = document.createElement('a');
-link.href = url;
-link.download = 'Output.pptx';
-document.body.appendChild(link);
-link.click();
-document.body.removeChild(link);
-window.URL.revokeObjectURL(url);
+// Saves the Presentation to the file system.
+await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
 {% endtabs %}
@@ -161,19 +139,8 @@ textPartFormatting2.font.color = '#0000FF';
 // Sets the underline type.
 textPartFormatting2.font.underline = TextUnderlineType.WavyDouble;
 
-// Saves the presentation and downloads it in the browser.
-const bytes = await pptxDoc.save();
-const blob = new Blob([bytes], {
-    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-});
-const url = window.URL.createObjectURL(blob);
-const link = document.createElement('a');
-link.href = url;
-link.download = 'Output.pptx';
-document.body.appendChild(link);
-link.click();
-document.body.removeChild(link);
-window.URL.revokeObjectURL(url);
+// Saves the Presentation to the file system.
+await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
 {% endtabs %}
@@ -207,19 +174,8 @@ const textPart = paragraph.textParts[0];
 // Modifies the text content of the TextPart.
 textPart.text = 'Hello Presentation';
 
-// Saves the presentation and downloads it in the browser.
-const bytes = await pptxDoc.save();
-const blob = new Blob([bytes], {
-    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-});
-const url = window.URL.createObjectURL(blob);
-const link = document.createElement('a');
-link.href = url;
-link.download = 'Output.pptx';
-document.body.appendChild(link);
-link.click();
-document.body.removeChild(link);
-window.URL.revokeObjectURL(url);
+// Saves the Presentation to the file system.
+await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
 {% endtabs %}
@@ -250,19 +206,8 @@ const textBody = shape.textBody;
 const paragraph = textBody.paragraphs[0];
 textBody.paragraphs.remove(paragraph);
 
-// Saves the presentation and downloads it in the browser.
-const bytes = await pptxDoc.save();
-const blob = new Blob([bytes], {
-    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-});
-const url = window.URL.createObjectURL(blob);
-const link = document.createElement('a');
-link.href = url;
-link.download = 'Output.pptx';
-document.body.appendChild(link);
-link.click();
-document.body.removeChild(link);
-window.URL.revokeObjectURL(url);
+// Saves the Presentation to the file system.
+await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
 {% endtabs %}

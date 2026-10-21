@@ -46,19 +46,8 @@ for (let rowIndex = 0; rowIndex < table.rowCount; rowIndex++) {
     }
 }
 
-// Saves the presentation and downloads it in the browser.
-const bytes = await pptxDoc.save();
-const blob = new Blob([bytes], {
-    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-});
-const url = window.URL.createObjectURL(blob);
-const link = document.createElement('a');
-link.href = url;
-link.download = 'TableModified1.pptx';
-document.body.appendChild(link);
-link.click();
-document.body.removeChild(link);
-window.URL.revokeObjectURL(url);
+// Saves the Presentation to the file system.
+await pptxDoc.save('TableModified1.pptx');
 
 {% endhighlight %}
 {% endtabs %}
@@ -97,19 +86,8 @@ for (let colIndex = 0; colIndex < table.columnCount; colIndex++) {
     }
 }
 
-// Saves the presentation and downloads it in the browser.
-const bytes = await pptxDoc.save();
-const blob = new Blob([bytes], {
-    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-});
-const url = window.URL.createObjectURL(blob);
-const link = document.createElement('a');
-link.href = url;
-link.download = 'TableModified2.pptx';
-document.body.appendChild(link);
-link.click();
-document.body.removeChild(link);
-window.URL.revokeObjectURL(url);
+// Saves the Presentation to the file system.
+await pptxDoc.save('TableModified2.pptx');
 
 {% endhighlight %}
 {% endtabs %}
@@ -147,19 +125,8 @@ if (table) {
     }
 }
 
-// Saves the presentation and downloads it in the browser.
-const bytes = await pptxDoc.save();
-const blob = new Blob([bytes], {
-    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-});
-const url = window.URL.createObjectURL(blob);
-const link = document.createElement('a');
-link.href = url;
-link.download = 'TableModified3.pptx';
-document.body.appendChild(link);
-link.click();
-document.body.removeChild(link);
-window.URL.revokeObjectURL(url);
+// Saves the Presentation to the file system.
+await pptxDoc.save('TableModified3.pptx');
 
 {% endhighlight %}
 {% endtabs %}
@@ -187,19 +154,8 @@ if (table) {
     table.insertRowAt(1);
 }
 
-// Saves the presentation and downloads it in the browser.
-const bytes = await pptxDoc.save();
-const blob = new Blob([bytes], {
-    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-});
-const url = window.URL.createObjectURL(blob);
-const link = document.createElement('a');
-link.href = url;
-link.download = 'TableModified4.pptx';
-document.body.appendChild(link);
-link.click();
-document.body.removeChild(link);
-window.URL.revokeObjectURL(url);
+// Saves the Presentation to the file system.
+await pptxDoc.save('TableModified4.pptx');
 
 {% endhighlight %}
 {% endtabs %}
@@ -227,19 +183,8 @@ if (table) {
     table.insertColumnAt(1);
 }
 
-// Saves the presentation and downloads it in the browser.
-const bytes = await pptxDoc.save();
-const blob = new Blob([bytes], {
-    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-});
-const url = window.URL.createObjectURL(blob);
-const link = document.createElement('a');
-link.href = url;
-link.download = 'TableModified5.pptx';
-document.body.appendChild(link);
-link.click();
-document.body.removeChild(link);
-window.URL.revokeObjectURL(url);
+// Saves the Presentation to the file system.
+await pptxDoc.save('TableModified5.pptx');
 
 {% endhighlight %}
 {% endtabs %}
@@ -269,19 +214,8 @@ if (table) {
     removeTable(slide, table);
 }
 
-// Saves the presentation and downloads it in the browser.
-const bytes = await pptxDoc.save();
-const blob = new Blob([bytes], {
-    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-});
-const url = window.URL.createObjectURL(blob);
-const link = document.createElement('a');
-link.href = url;
-link.download = 'TableModified6.pptx';
-document.body.appendChild(link);
-link.click();
-document.body.removeChild(link);
-window.URL.revokeObjectURL(url);
+// Saves the Presentation to the file system.
+await pptxDoc.save('TableModified6.pptx');
 
 {% endhighlight %}
 {% endtabs %}

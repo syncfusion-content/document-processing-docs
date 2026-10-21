@@ -27,19 +27,8 @@ const pptxDoc = Presentation.create();
 // Adds a slide to the PowerPoint presentation.
 const slide = pptxDoc.slides.add();
 
-// Saves the presentation and downloads it in the browser.
-const bytes = await pptxDoc.save();
-const blob = new Blob([bytes], {
-    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-});
-const url = window.URL.createObjectURL(blob);
-const link = document.createElement('a');
-link.href = url;
-link.download = 'Output.pptx';
-document.body.appendChild(link);
-link.click();
-document.body.removeChild(link);
-window.URL.revokeObjectURL(url);
+// Saves the Presentation to the file system.
+await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
 {% endtabs %}
@@ -74,19 +63,8 @@ const pptxDoc = Presentation.create();
 const slide1 = pptxDoc.slides.add({ layout: SlideLayoutType.Title });
 
 // Save the PowerPoint file.
-// Saves the presentation and downloads it in the browser.
-const bytes = await pptxDoc.save();
-const blob = new Blob([bytes], {
-    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-});
-const url = window.URL.createObjectURL(blob);
-const link = document.createElement('a');
-link.href = url;
-link.download = 'Output.pptx';
-document.body.appendChild(link);
-link.click();
-document.body.removeChild(link);
-window.URL.revokeObjectURL(url);
+// Saves the Presentation to the file system.
+await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
 {% endtabs %}
@@ -118,19 +96,8 @@ pptxDoc.slides.remove(slide);
 pptxDoc.slides.removeAt(1);
 
 // Save the Presentation to the file system.
-// Saves the presentation and downloads it in the browser.
-const bytes = await pptxDoc.save();
-const blob = new Blob([bytes], {
-    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-});
-const url = window.URL.createObjectURL(blob);
-const link = document.createElement('a');
-link.href = url;
-link.download = 'Output.pptx';
-document.body.appendChild(link);
-link.click();
-document.body.removeChild(link);
-window.URL.revokeObjectURL(url);
+// Saves the Presentation to the file system.
+await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
 {% endtabs %}
@@ -156,19 +123,8 @@ const masterSlide = pptxDoc.slideMasters[0];
 const shapeName = masterSlide.shapes[0].name;
 
 // Save the PowerPoint presentation to a file.
-// Saves the presentation and downloads it in the browser.
-const bytes = await pptxDoc.save();
-const blob = new Blob([bytes], {
-    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-});
-const url = window.URL.createObjectURL(blob);
-const link = document.createElement('a');
-link.href = url;
-link.download = 'Output.pptx';
-document.body.appendChild(link);
-link.click();
-document.body.removeChild(link);
-window.URL.revokeObjectURL(url);
+// Saves the Presentation to the file system.
+await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
 {% endtabs %}

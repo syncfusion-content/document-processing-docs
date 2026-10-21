@@ -32,19 +32,8 @@ const picture = slide.shapes.addPicture({
     bounds: { x: 0, y: 0, width: 250, height: 250 }
 });
 
-// Saves the presentation and downloads it in the browser.
-const bytes = await pptxDoc.save();
-const blob = new Blob([bytes], {
-    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-});
-const url = window.URL.createObjectURL(blob);
-const link = document.createElement('a');
-link.href = url;
-link.download = 'PictureSample.pptx';
-document.body.appendChild(link);
-link.click();
-document.body.removeChild(link);
-window.URL.revokeObjectURL(url);
+// Saves the Presentation to the file system.
+await pptxDoc.save('PictureSample.pptx');
 
 {% endhighlight %}
 {% endtabs %}
@@ -75,19 +64,8 @@ if (!picture) {
 // Replaces the existing embedded image with the new image.
 picture.replaceImageData({ data: newBytes });
 
-// Saves the presentation and downloads it in the browser.
-const bytes = await pptxDoc.save();
-const blob = new Blob([bytes], {
-    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-});
-const url = window.URL.createObjectURL(blob);
-const link = document.createElement('a');
-link.href = url;
-link.download = 'PictureReplaced.pptx';
-document.body.appendChild(link);
-link.click();
-document.body.removeChild(link);
-window.URL.revokeObjectURL(url);
+// Saves the Presentation to the file system.
+await pptxDoc.save('PictureReplaced.pptx');
 
 {% endhighlight %}
 {% endtabs %}
@@ -117,19 +95,8 @@ for (const shape of slide.shapes) {
     }
 }
 
-// Saves the presentation and downloads it in the browser.
-const bytes = await pptxDoc.save();
-const blob = new Blob([bytes], {
-    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-});
-const url = window.URL.createObjectURL(blob);
-const link = document.createElement('a');
-link.href = url;
-link.download = 'PictureRemoved.pptx';
-document.body.appendChild(link);
-link.click();
-document.body.removeChild(link);
-window.URL.revokeObjectURL(url);
+// Saves the Presentation to the file system.
+await pptxDoc.save('PictureRemoved.pptx');
 
 {% endhighlight %}
 {% endtabs %}
