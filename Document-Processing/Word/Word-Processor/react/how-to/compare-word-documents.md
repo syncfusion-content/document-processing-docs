@@ -154,4 +154,6 @@ container.current.documentEditor.showRevisions = true;
 container.current.documentEditor.open(sfdt);
 ```
 
+{% previewsample "/document-processing/code-snippet/document-editor/react/compare-documents-cs1" %}
+
 N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
