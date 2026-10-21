@@ -1751,6 +1751,64 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Security/Remove-password-from-user-password-PDF-document/).
 
+## Unlock a PDF document
+
+The PDF password is required to remove the security settings from an encrypted PDF. Without the correct password, it is not possible to unlock the document or remove its security restrictions.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+
+//Load the PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf", "password");
+//Change the user password
+loadedDocument.Security.UserPassword = "newUserPassword";
+
+//Save and Close the PDF document
+loadedDocument.Save("Output.pdf");
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+
+//Load the password protected PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf","password");
+//Change the user password 
+loadedDocument.Security.UserPassword = "newUserPassword";
+
+//Save the password removed PDF document
+loadedDocument.Save("Output.pdf");
+//Close the document
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Security
+
+'Load the password protected PDF document
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf", "password")
+'Change the user password 
+loadedDocument.Security.UserPassword = "newUserPassword"
+
+'Save the password removed PDF document
+loadedDocument.Save("Output.pdf")
+'Close the document
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ## How to determine whether the PDF document is password protected or not?
 
 You can determine whether the existing PDF document is password protected or not by catching the [PdfDocumentException](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentException.html) as shown below.
