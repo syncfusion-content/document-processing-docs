@@ -16,7 +16,7 @@ Create or add new form fields visually with the Form Designer UI or programmatic
 The guide explains the following:
 - How to add fields with the Form Designer UI.
 - How to add and edit fields programmatically (API).
-- How to add common field types: Textbox, Password, CheckBox, RadioButton, ListBox, DropDown, Signature, Initial.
+- How to add common field types: Textbox, Password, CheckBox, RadioButton, ListBox, DropDown, Signature, Initial, DateTime picker.
 
 ## Steps
 
@@ -466,6 +466,150 @@ export function App() {
       bounds: { X: 57, Y: 923, Width: 200, Height: 43 },
       tooltip: 'sign Here',
       isRequired: true,
+    });
+  };
+
+  return (
+    <div className='control-section'>
+      <PdfViewerComponent
+        ref={viewerRef}
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+        style={{ height: '680px' }}
+        documentLoad={onDocumentLoad}
+      >
+        <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
+      </PdfViewerComponent>
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+{% endhighlight %}
+{% endtabs %}
+
+### DateTime Picker
+
+**Add via UI**: Open the Form Designer toolbar, select **DateTime Picker**, and click on a PDF page to place the field. The DateTime Picker tool adds date and time fields in Form Designer mode.
+
+![DateTime Picker tool and date and time fields in Form Designer](../../../javascript-es5/images/ui-date-time.png)
+
+Select the field to configure its general properties, such as its name, value, visibility, and whether it is read-only or required.
+
+![General properties for a DateTime Picker field](../../../javascript-es5/images/ui-date-time-properties.png)
+
+#### Manual Entry and Picker
+
+The field accepts values either by direct typing or through the integrated picker UI:
+
+- **Date Field** – Enter a date manually, or open the calendar dropdown to pick a date.
+
+  ![Calendar picker open for a DateTime field](../../../javascript-es5/images/ui-date-entry.png)
+
+- **Time Field** – Enter a time manually, or open the time dropdown to pick a time.
+
+  ![Time picker open for a DateTime field](../../../javascript-es5/images/ui-time-entry.png)
+
+#### Strict Format Validation
+
+Invalid values are rejected and a validation popup is displayed. The invalid value is not applied to the field.
+
+For example, with the format `m/d/yy`:
+
+| Input | Result |
+|---|---|
+| `10/19/2026` | Accepted |
+| `19/10/26` | Rejected |
+| `not-a-date` | Rejected |
+
+#### Date / Time Toggle and Format Editing
+
+The **Format** tab in the Properties panel lets you:
+
+- Switch between Date Picker and Time Picker modes.
+- Edit the display format string.
+- Preview formatting changes before saving.
+
+![DateTime Picker format settings with type, format, and preview](../../../javascript-es5/images/ui-date-time-format.png)
+
+**Common Formats**
+
+| Format String | Example Output |
+|---|---|
+| `m/d/yy` | `10/19/26` |
+| `mm/dd/yyyy` | `10/19/2026` |
+| `HH:MM` | `14:30` |
+| `HH:MM:ss` | `14:30:45` |
+
+#### Form Designer Appearance
+
+Placed DateTime pickers have a distinct visual appearance in Form Designer mode, including:
+
+- Colored background
+- Visible border
+- Field-type indicator
+
+![DateTime Picker Appearance](../../../javascript-es5/images/ui-date-time-appearance.png)
+
+**Add Programmatically (API)**:
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+import * as ReactDOM from 'react-dom/client';
+import React, { useRef } from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject } from '@syncfusion/ej2-react-pdfviewer';
+
+export function App() {
+  const viewerRef = useRef(null);
+
+  const onDocumentLoad = () => {
+    // Add a Date field
+    viewerRef.current?.formDesignerModule.addFormField('Textbox', {
+      name: 'DateField1',
+      bounds: { X: 146, Y: 200, Width: 200, Height: 24 },
+      pageNumber: 1,
+      isDateField: true,
+      fontSize: 10,
+      color: 'black',
+      fontFamily: 'Helvetica',
+      backgroundColor: '#daeaf7ff',
+      borderColor: '#303030',
+      alignment: 'Left',
+      isReadOnly: false,
+      visibility: 'visible',
+      isRequired: false,
+      isPrint: true,
+      tooltip: '',
+      thickness: 1,
+      actions: {
+        format: { script: 'AFDate_FormatEx("m/d/yy")' }
+      }
+    });
+
+    // Add a Time field
+    viewerRef.current?.formDesignerModule.addFormField('Textbox', {
+      name: 'TimeField1',
+      bounds: { X: 146, Y: 250, Width: 200, Height: 24 },
+      pageNumber: 1,
+      isDateField: true,
+      fontSize: 10,
+      color: 'black',
+      fontFamily: 'Helvetica',
+      backgroundColor: '#daeaf7ff',
+      borderColor: '#303030',
+      alignment: 'Left',
+      isReadOnly: false,
+      visibility: 'visible',
+      isRequired: false,
+      isPrint: true,
+      tooltip: '',
+      thickness: 1,
+      actions: {
+        format: { script: 'AFTime_FormatEx("HH:MM")' }
+      }
     });
   };
 

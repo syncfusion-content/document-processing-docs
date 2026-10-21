@@ -56,6 +56,45 @@ pentagonTextParagraph.appendText('This text is in pentagon shape');
 // Save the Word document
 document.save('Output.docx'); 
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Create a new Word document
+let document = ej.docx.WordDocument.create();
+// Access section
+let section = document.sections[0];
+// Add a rounded rectangle shape
+let rectangleParagraph = section.body.paragraphs[0];
+let rectangle = rectangleParagraph.appendShape(
+    ej.docx.AutoShapeType.RoundedRectangle,
+    150,
+    100,
+);
+
+// Set shape position (points)
+rectangle.horizontalPosition = 72;
+rectangle.verticalPosition = 72;
+
+// Add text content inside the shape
+let rectangleTextParagraph = rectangle.textBody.appendParagraph();
+let rectangleText = rectangleTextParagraph.appendText(
+    'This text is in rounded rectangle shape',
+);
+rectangleText.characterFormat.textColor = ej.docx.Color.Green;
+rectangleText.characterFormat.bold = true;
+
+// Add a pentagon shape in the first section body
+let pentagonParagraph = document.sections[0].body.appendParagraph();
+pentagonParagraph.appendBreak(ej.docx.BreakType.LineBreak);
+
+let pentagon = pentagonParagraph.appendShape(ej.docx.AutoShapeType.Pentagon, 100, 100);
+pentagon.horizontalPosition = 72;
+pentagon.verticalPosition = 200;
+
+let pentagonTextParagraph = pentagon.textBody.appendParagraph();
+pentagonTextParagraph.appendText('This text is in pentagon shape');
+
+// Save the Word document
+document.save('Output.docx'); 
+{% endhighlight %}
 {% endtabs %}
 
 ### Format shapes
@@ -119,6 +158,55 @@ rectangle.textFrame.internalMargin.bottom = 18;
 // Save the Word document
 document.save('Output.docx');
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Create a new Word document
+let document = ej.docx.WordDocument.create();
+// Access section
+let section = document.sections[0];
+// Add a rounded rectangle shape
+let paragraph = section.body.paragraphs[0];
+let rectangle = paragraph.appendShape(
+    ej.docx.AutoShapeType.RoundedRectangle,
+    150, 100
+);
+
+rectangle.horizontalPosition = 72;
+rectangle.verticalPosition = 72;
+
+// Add text inside the shape
+let textParagraph = rectangle.textBody.appendParagraph();
+let text = textParagraph.appendText(
+    'This text is in rounded rectangle shape',
+);
+text.characterFormat.textColor = ej.docx.Color.Green;
+text.characterFormat.bold = true;
+
+// Apply fill color and transparency
+rectangle.fillFormat.fill = true;
+rectangle.fillFormat.color = ej.docx.Color.LightGray;
+rectangle.fillFormat.transparency = 75;
+
+// Apply wrap formats
+rectangle.wrapFormat.textWrappingStyle = ej.docx.TextWrappingStyle.Square;
+rectangle.wrapFormat.textWrappingType = ej.docx.TextWrappingType.Right;
+
+// Set horizontal and vertical origin
+rectangle.horizontalOrigin = ej.docx.HorizontalOrigin.Margin;
+rectangle.verticalOrigin = ej.docx.VerticalOrigin.Page;
+
+// Set line format
+rectangle.lineFormat.dashStyle = ej.docx.LineDashing.Dot;
+rectangle.lineFormat.color = ej.docx.Color.DarkGray;
+
+// Set internal margins for the shape text frame
+rectangle.textFrame.internalMargin.left = 30;
+rectangle.textFrame.internalMargin.right = 24;
+rectangle.textFrame.internalMargin.top = 6;
+rectangle.textFrame.internalMargin.bottom = 18;
+
+// Save the Word document
+document.save('Output.docx');
+{% endhighlight %}
 {% endtabs %}
 
 ### Rotate shapes
@@ -139,6 +227,36 @@ let section = document.sections[0];
 let paragraph = section.body.paragraphs[0];
 let rectangle = paragraph.appendShape(
     AutoShapeType.RoundedRectangle,
+    150,
+    100,
+);
+
+// Set shape position
+rectangle.verticalPosition = 72;
+rectangle.horizontalPosition = 72;
+
+// Set 90 degree rotation
+rectangle.rotation = 90;
+
+// Set horizontal flip
+rectangle.flipHorizontal = true;
+
+// Add text to the shape
+let textParagraph = rectangle.textBody.appendParagraph();
+textParagraph.appendText('This text is in rounded rectangle shape');
+
+// Save the Word document
+document.save('Output.docx');
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Create a new Word document
+let document = ej.docx.WordDocument.create();
+// Access section
+let section = document.sections[0];
+// Add a rounded rectangle shape
+let paragraph = section.body.paragraphs[0];
+let rectangle = paragraph.appendShape(
+    ej.docx.AutoShapeType.RoundedRectangle,
     150,
     100,
 );
