@@ -256,7 +256,7 @@ In addition to the default **Solid** border, Free Text annotations support the f
 - **Cloud** — scalloped cloud border.
 - **Dashed** — dashed line border.
 
-Use the [`PdfViewerBorderStyle`](https://ej2.syncfusion.com/aspnetcore/documentation/api/pdfviewer/pdfViewerBorderStyle) enum together with the optional `BorderDashArray` (Dashed) and `CloudIntensity` (Cloud) settings on the [`PdfViewerFreeTextSettings`](https://ej2.syncfusion.com/aspnetcore/documentation/api/pdfviewer/index-default#freeTextSettings) object.
+Use the `PdfViewerBorderStyle` enum together with the optional `BorderDashArray` (Dashed) and `CloudIntensity` (Cloud) settings on the [`PdfViewerFreeTextSettings`](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.PdfViewer.PdfViewerFreeTextSettings.html) object.
 
 ```cs
 public enum PdfViewerBorderStyle
