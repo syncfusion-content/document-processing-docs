@@ -45,6 +45,7 @@ Shape annotations:
 - Rectangle: Use [`rectangleSettings`](./annotation-types/rectangle-annotation#default-rectangle-settings-during-initialization)
 - Circle: Use [`circleSettings`](./annotation-types/circle-annotation#default-circle-settings-during-initialization)
 - Polygon: Use [`polygonSettings`](./annotation-types/polygon-annotation#default-polygon-settings-during-initialization)
+- Cloud: Use [`cloudSettings`](./annotation-types/cloud-annotation#configure-default-cloud-annotation-settings)
 
 Measurement annotations:
 
