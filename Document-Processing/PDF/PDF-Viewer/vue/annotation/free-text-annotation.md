@@ -659,6 +659,100 @@ Adjust annotation opacity with the Edit Opacity slider.
 
 ![Change opacity](../images/fontopacity.png)
 
+## Supported Border Styles
+
+In addition to the default **Solid** border, Free Text annotations support the following additional border styles:
+
+- **Cloud** — scalloped cloud border.
+- **Dashed** — dashed line border.
+
+Use the [`BorderStyle`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/borderStyle) enum together with the optional `borderDashArray` (Dashed) and `cloudIntensity` (Cloud) settings in the [`freeTextSettings`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#freeTextSettings) property.
+
+```ts
+export enum BorderStyle {
+    Solid = 'Solid',
+    Dashed = 'Dashed',
+    Cloud = 'Cloud'
+}
+```
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `borderStyle` | `BorderStyle` | Specifies the border style. Supported values: `BorderStyle.Solid`, `BorderStyle.Cloud`, and `BorderStyle.Dashed`. |
+| `borderDashArray` | `number[]` | Specifies the dash pattern when `borderStyle` is `BorderStyle.Dashed`. |
+| `cloudIntensity` | `number` | Specifies the cloud border intensity. Supported range: `1` to `2`; default value: `1`. |
+
+N> `cloudIntensity` is honored only when `borderStyle` is `BorderStyle.Cloud`.
+N> `borderStyle`, `borderDashArray`, and `cloudIntensity` are preserved during save, reload, import, and export.
+
+### Apply a Cloud Border
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (Standalone)" %}
+
+<template>
+  <div id="app">
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl"
+      :freeTextSettings="freeTextSettings">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide } from 'vue';
+import { BorderStyle } from '@syncfusion/ej2-vue-pdfviewer';
+
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+const freeTextSettings = { fillColor: 'green', borderColor: 'blue', fontColor: 'yellow', borderStyle: BorderStyle.Cloud, cloudIntensity: 2 };
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer])
+
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+### Apply a Dashed Border
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (Standalone)" %}
+
+<template>
+  <div id="app">
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl"
+      :freeTextSettings="freeTextSettings">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide } from 'vue';
+import { BorderStyle } from '@syncfusion/ej2-vue-pdfviewer';
+
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+const freeTextSettings = { fillColor: 'green', borderColor: 'blue', fontColor: 'yellow', borderStyle: BorderStyle.Dashed, borderDashArray: [5, 5] };
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer])
+
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Set default properties during control initialization
 
 Default properties for free text annotations can be set before creating the control using FreeTextSettings.
