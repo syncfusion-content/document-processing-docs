@@ -130,6 +130,53 @@ Configure default line appearance using the [`lineSettings`](https://ej2.syncfus
 {% endhighlight %}
 {% endtabs %}
 
+### Supported Border Styles
+
+In addition to the default **Solid** border, Line annotations support the following additional border style:
+
+- **Dashed** — dashed line border.
+
+Use [`BorderStyle`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/borderStyle) value `BorderStyle.Dashed` together with the optional `borderDashArray` setting in the [`lineSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#linesettings) property.
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `borderStyle` | `BorderStyle` | Specifies the border style. Supported values: `BorderStyle.Solid` and `BorderStyle.Dashed`. |
+| `borderDashArray` | `number[]` | Specifies the dash pattern when `borderStyle` is `BorderStyle.Dashed`. |
+
+N> `borderStyle` and `borderDashArray` are preserved during save, reload, import, and export.
+
+#### Apply a Dashed Border
+
+```ts
+export enum BorderStyle {
+    Solid = 'Solid',
+    Dashed = 'Dashed',
+    Cloud = 'Cloud'
+}
+```
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
+<PdfViewerComponent
+  id="container"
+  documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+  resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+  lineSettings={{
+    strokeColor: '#0066ff',
+    thickness: 2,
+    opacity: 0.9,
+    borderStyle: BorderStyle.Dashed,
+    borderDashArray: [5, 5]
+  }}
+  style={{ height: '650px' }}
+>
+  <Inject services={[Toolbar, Annotation]} />
+</PdfViewerComponent>
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
 N> Fill color is available only when an arrowhead style is applied at the Start or End of the line. If both are set to `None`, the Fill option is disabled.
 
 ## Manage Line (Edit, Move, Resize, Delete)
