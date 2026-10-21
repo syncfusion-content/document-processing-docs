@@ -151,6 +151,6 @@ When you click **Create Word document**, the Word file is generated in the brows
 | Word document does not download | The browser blocks the download | Check the browser's download settings and the downloads folder |
 | Build fails with TypeScript errors | The Angular TypeScript version is incompatible with the Word package | Update Angular to 20 or later and run `npm install` again |
 
-## Additional Resources
+## See Also
 
 - [JavaScript Word Library documentation](https://help.syncfusion.com/document-processing/word/word-library/javascript/overview)
