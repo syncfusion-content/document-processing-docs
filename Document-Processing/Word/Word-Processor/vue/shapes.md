@@ -73,4 +73,4 @@ DOCX Editor preserves the position properties of the shape and displays the shap
 
 ## Online demo
 
-Explore how to preserve auto shapes and grouped shapes in Word documents using the Vue DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/autoshapes.html).
+Explore how to preserve AutoShapes and grouped shapes in Word documents using the Vue DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/autoshapes.html).
