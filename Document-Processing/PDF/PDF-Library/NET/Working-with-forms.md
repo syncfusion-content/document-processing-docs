@@ -1449,7 +1449,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ### Add an image field to a PDF form
 
-This section explains how to add an image field to a PDF form using the Syncfusion PDF library. The image field enables an image to be displayed within a specified area of the PDF form.
+This section explains how to add an image field to a PDF form using Syncfusion .NET PDF library. The image field enables an image to be displayed within a specified area of the PDF form.
 
 The following code example illustrates how to add an image field to a PDF form.
 
@@ -1637,7 +1637,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Add a date field to a PDF form
 
-This section explains how to add a date text box field to a PDF form using the Syncfusion PDF library. The field is initialized with a sample date and uses JavaScript-based formatting to enforce the date format, validate input, and automatically format user entries.
+This section explains how to add a date text box field to a PDF form using the Syncfusion .NET PDF library. The field is initialized with a sample date and uses JavaScript-based formatting to enforce the date format, validate input, and automatically format user entries.
 
 The following code example illustrates how to add a date field to a PDF form.
 
