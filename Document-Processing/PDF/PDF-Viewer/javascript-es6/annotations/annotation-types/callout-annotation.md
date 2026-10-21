@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Callout Annotation in JavaScript (ES6) PDF Viewer | Syncfusion
-description: Enable, add, customize, and manage Callout annotations in the JavaScript (ES6) PDF Viewer to place editable text boxes connected to a target point on a PDF page.
+description: Enable, add, customize Callout annotations in the TypeScript PDF Viewer to place editable text boxes connected to a target point on a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
