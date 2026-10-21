@@ -175,7 +175,9 @@ document.getElementById('normalButton').onclick = async (): Promise<void> => {
   const bytes: Uint8Array = await workbook.save();
   
   // Download the workbook
-  const blob = new Blob([bytes as BlobPart], {
+  // Create a new Uint8Array to ensure ArrayBuffer compatibility with Blob
+  const buffer = new Uint8Array(bytes);
+  const blob = new Blob([buffer], {
     type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
   });
   const url = URL.createObjectURL(blob);
