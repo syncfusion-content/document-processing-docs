@@ -152,7 +152,7 @@ export default {
       const bytes = await workbook.save();
 
       // Download the workbook
-      const blob = new Blob([bytes], {
+      const blob = new Blob([bytes as BlobPart], {
         type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
       });
       const url = URL.createObjectURL(blob);
