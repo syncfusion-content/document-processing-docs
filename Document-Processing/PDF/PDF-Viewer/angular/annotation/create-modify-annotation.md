@@ -28,6 +28,7 @@ Jump directly to a specific annotation type for detailed usage and examples:
 - Rectangle: [Rectangle annotation](./annotation-types/rectangle-annotation)
 - Circle: [Circle annotation](./annotation-types/circle-annotation)
 - Polygon: [Polygon annotation](./annotation-types/polygon-annotation)
+- Cloud: [Cloud annotation](./annotation-types/cloud-annotation)
 
 **Measurement annotations:**
 - Distance: [Distance annotation](./annotation-types/distance-annotation)
