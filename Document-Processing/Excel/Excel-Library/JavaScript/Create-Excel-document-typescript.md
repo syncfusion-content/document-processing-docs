@@ -21,7 +21,7 @@ Before you begin, make sure you have the following installed:
 - npm 9 or later, or Yarn 1.22 or later.
 - TypeScript 4.5 or later.
 - Code Studio, Visual Studio Code, or another code editor.
-- A browser-based bundler or dev server.
+- A browser-based bundler or development server.
 
 To verify your Node.js and npm versions, run:
 
@@ -40,7 +40,7 @@ cd excel-typescript-app
 npm init -y
 ```
 
-Install TypeScript and the Vite dev server as development dependencies:
+Install TypeScript and Vite as development dependencies:
 
 ```bash
 npm install typescript vite --save-dev
@@ -70,7 +70,7 @@ N> The `outDir` setting is ignored by Vite; the bundled output is emitted to `di
 
 ## Configure the Start Script
 
-Add a `start` script to `package.json` so you can launch the Vite dev server with `npm start`:
+Add a `start` script to `package.json` to launch the Vite development server using npm start:
 
 ```json
 {
