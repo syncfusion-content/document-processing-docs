@@ -22,10 +22,7 @@ To enable Callout annotations, render the PDF Viewer with the required configura
 {% highlight cshtml tabtitle="Standalone" %}
 
 <div style="width:100%;height:650px">
-    @Html.EJS().PdfViewer("pdfviewer")
-        .DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf")
-        .ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib")
-        .Render()
+    @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").ResourceUrl("https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib").Render()
 </div>
 
 {% endhighlight %}
@@ -175,6 +172,8 @@ The PDF Viewer raises annotation life cycle events that can be used to detect wh
 ## Export and Import
 
 Callout annotations can be exported or imported just like other annotations. For supported formats and steps, see [**Export and Import annotations**](../export-import/export-annotation).
+
+N> [View Sample on GitHub](https://github.com/SyncfusionExamples/mvc-pdf-viewer-examples/tree/master/Annotations/Callout%20Annotation).
 
 ## See Also
 
