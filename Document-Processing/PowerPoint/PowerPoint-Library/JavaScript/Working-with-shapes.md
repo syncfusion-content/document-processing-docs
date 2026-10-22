@@ -80,6 +80,9 @@ The shapes can be removed from a slide by its instance or by its index position 
 {% tabs %}
 {% highlight js tabtitle="TypeScript" %}
 
+import { Presentation } from '@syncfusion/ej2-pptx';
+
+// data is a Uint8Array or ArrayBuffer of an existing .pptx file.
 (async () => {
 // Loads or opens a PowerPoint Presentation.
 const pptxDoc = await Presentation.open(data);

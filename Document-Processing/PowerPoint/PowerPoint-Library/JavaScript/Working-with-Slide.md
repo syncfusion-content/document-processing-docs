@@ -71,7 +71,8 @@ await pptxDoc.save('Output.pptx');
 The JavaScript PowerPoint Library provides the ability to delete a slide by its instance or by its index position in the slide collection. The following code demonstrates how to delete a slide from a presentation.
 
 {% tabs %}
-{% highlight js tabtitle="index.js" %}
+{% highlight js tabtitle="TypeScript" %}
+import { Presentation } from '@syncfusion/ej2-pptx';
 
 (async () => {
 // Create a new PowerPoint presentation.

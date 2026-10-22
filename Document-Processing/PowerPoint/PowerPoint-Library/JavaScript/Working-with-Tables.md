@@ -94,7 +94,8 @@ You can append new rows at the end of an existing PowerPoint table. Refer to the
 {% highlight js tabtitle="TypeScript" %}
 
 import { Presentation } from '@syncfusion/ej2-pptx';
-import { asTable } from '@syncfusion/ej2-pptx/tables';
+
+// data is a Uint8Array or ArrayBuffer of an existing .pptx file that contains a table.
 (async () => {
 // Loads or opens a PowerPoint presentation.
 const pptxDoc = await Presentation.open(data);
@@ -130,6 +131,8 @@ You can insert a row at the specified index position of a table. Refer to the fo
 {% highlight js tabtitle="index.js" %}
 
 import { Presentation } from '@syncfusion/ej2-pptx';
+
+// data is a Uint8Array or ArrayBuffer of an existing .pptx file that contains a table.
 (async () => {
 // Loads or opens a PowerPoint presentation.
 const pptxDoc = await Presentation.open(data);
@@ -154,6 +157,9 @@ You can insert a column at the specified index position of a table. Refer to the
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
 
+import { Presentation } from '@syncfusion/ej2-pptx';
+
+// data is a Uint8Array or ArrayBuffer of an existing .pptx file that contains a table.
 (async () => {
 // Loads or opens a PowerPoint presentation.
 const pptxDoc = await Presentation.open(data);
@@ -178,6 +184,9 @@ You can remove a table from a slide by passing its instance to `removeTable`. Th
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
 
+import { Presentation } from '@syncfusion/ej2-pptx';
+
+// data is a Uint8Array or ArrayBuffer of an existing .pptx file that contains a table.
 (async () => {
 // Loads or opens a PowerPoint presentation.
 const pptxDoc = await Presentation.open(data);
