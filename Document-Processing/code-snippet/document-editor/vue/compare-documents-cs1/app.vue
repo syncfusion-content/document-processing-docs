@@ -6,7 +6,7 @@
   </div>
 </template>
 <script>
-import { DocumentEditorComponent, SfdtExport, Selection, Editor, UndoRedo, View } from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorComponent } from '@syncfusion/ej2-vue-documenteditor';
 import { originalDocument, revisedDocument } from './data';
 
 export default {
@@ -18,9 +18,6 @@ export default {
     return {
       serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/'
     };
-  },
-  provide: {
-    DocumentEditor: [SfdtExport, Selection, Editor, UndoRedo, View]
   },
   mounted: function () {
     // Load the original document by default.
