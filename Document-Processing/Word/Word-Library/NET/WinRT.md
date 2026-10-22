@@ -4,6 +4,7 @@ description: Create a WinRT application , load the Word document and save the Wo
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Word document with WinRT

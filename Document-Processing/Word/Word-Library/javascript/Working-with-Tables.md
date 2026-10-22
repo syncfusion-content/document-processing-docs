@@ -4,6 +4,7 @@ description: Learn how to create, format, merge, style, and manage tables in a W
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Working with Tables in JavaScript Word Library

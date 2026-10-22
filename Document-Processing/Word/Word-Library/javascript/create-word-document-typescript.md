@@ -7,6 +7,7 @@ control: Word
 documentation: ug
 keywords: typescript create word, typescript generate docx, typescript word library, ej2 word typescript, javascript
 canonical_url: https://help.syncfusion.com/document-processing/word/word-library/javascript/create-word-document-typescript
+appliesto: Document SDK
 ---
 
 # Getting Started with JavaScript Word Library in TypeScript app
