@@ -4,6 +4,7 @@ description: Learn about the NuGet package required to install and use the Syncf
 platform: document-processing
 control: Chunking
 documentation: UG
+appliesto: Document SDK
 ---
 
 # NuGet Package Required for .NET Document Chunking Library
