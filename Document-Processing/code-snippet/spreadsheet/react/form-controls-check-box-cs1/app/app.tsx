@@ -3,10 +3,6 @@ import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent, SheetsDirective, SheetDirective, RowsDirective, RowDirective, CellsDirective, CellDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
 import { CellStyleModel, FormControlModel, SpreadsheetAllModule } from '@syncfusion/ej2-react-spreadsheet';
 
-interface FormControlProps {
-    ref: React.RefObject<SpreadsheetComponent>;
-}
-
 function App() {
     const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
 
