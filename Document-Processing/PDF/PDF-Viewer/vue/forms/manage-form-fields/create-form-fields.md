@@ -759,7 +759,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-[View Sample on GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples)
+[View Sample on GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/Forms/DateTime%20picker)
 
 ## See Also
 
