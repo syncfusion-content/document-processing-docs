@@ -5,6 +5,7 @@ description: Learn about the Syncfusion Document SDK AI Agent Tools - an AI-read
 platform: document-processing
 control: AI Agent Tools
 documentation: ug
+appliesto: Document SDK
 ---
 
 # About Syncfusion Document SDK AI Agent Tools

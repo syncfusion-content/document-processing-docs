@@ -6,6 +6,7 @@ platform: document-processing
 control: Syncfusion AI Coding Assistant Prompt Library
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: Document SDK, Spreadsheet Editor SDK
 ---
 
 # Syncfusion AI Coding Assistant Prompt Library
