@@ -18,7 +18,7 @@ imports: [
 standalone: true,
     selector: "app-container",
     template: `<button ejs-button cssClass="e-primary" (click)="onCompareClick()">Compare Documents</button>
-    <ejs-documenteditor #documenteditor height="590px" style="width:100%;display:block" [isReadOnly]=false [enableTrackChanges]=true [enableComment]=true [enableSfdtExport]=true [serviceUrl]="serviceUrl"></ejs-documenteditor>`,
+    <ejs-documenteditor #documenteditor height="590px" style="width:100%;display:block" [isReadOnly]=false [enableTrackChanges]=true [serviceUrl]="serviceUrl"></ejs-documenteditor>`,
     encapsulation: ViewEncapsulation.None,
     providers: []
 })
