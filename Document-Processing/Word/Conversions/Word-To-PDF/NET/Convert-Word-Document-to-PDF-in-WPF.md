@@ -4,6 +4,7 @@ description: Describe how to convert Word documents to PDF in WPF applications u
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert Word to PDF in WPF 
