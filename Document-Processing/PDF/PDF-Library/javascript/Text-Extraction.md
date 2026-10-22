@@ -18,6 +18,12 @@ The JavaScript PDF library allows you to extract text from a particular page or 
 
 N> The `@syncfusion/ej2-pdf-data-extract` add-on package also powers the redaction features available in the JavaScript PDF Library.
 
+## Video Tutorial
+
+Watch the following video to learn how to extract text from a PDF document using the JavaScript PDF Library.
+
+{% youtube "https://www.youtube.com/watch?v=ccY8FEaCUQs" %}
+
 ## Working with basic text extraction synchronously
 
 The `extractTextSync` method provides the simplest way to retrieve all text content from a PDF document in a single operation. This synchronous approach is ideal when you need immediate access to the complete text and your document size permits blocking execution.
