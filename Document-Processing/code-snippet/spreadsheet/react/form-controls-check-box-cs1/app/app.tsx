@@ -9,6 +9,40 @@ interface FormControlProps {
 
 function App() {
     const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
+
+    const formControls: FormControlModel[] = [
+        {
+            type: 'CheckBox',
+            text: 'Accept Terms',
+            cellLink: 'D2',
+            value: 'Unchecked',
+            top: 40,
+            left: 150,
+            height: 20,
+            width: 120
+        },
+        {
+            type: 'CheckBox',
+            text: 'Enable Notifications',
+            cellLink: 'D4',
+            value: 'Unchecked',
+            top: 80,
+            left: 150,
+            height: 20,
+            width: 120
+        },
+        {
+            type: 'CheckBox',
+            text: 'Select All Options',
+            cellLink: 'D6',
+            value: 'Unchecked',
+            top: 120,
+            left: 150,
+            height: 20,
+            width: 120
+        }
+    ];
+
     const boldCenter: CellStyleModel = { fontWeight: 'bold', textAlign: 'center' };
 
     return (
