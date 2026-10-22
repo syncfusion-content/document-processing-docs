@@ -76,11 +76,11 @@ export default function App() {
 		// Adds a textbox for the title.
 		const titleShape = slide.shapes.addTextBox({
 			bounds: {
-						x: 55,
-						y: 25,
-						width: 850,
-						height: 72,
-				},
+				x: 55,
+          		y: 25,
+          		width: 850,
+          		height: 72
+				}
 			});
 		const paragraph = titleShape.textBody.addParagraph();
 		paragraph.horizontalAlignment = HorizontalAlignmentType.Center; 

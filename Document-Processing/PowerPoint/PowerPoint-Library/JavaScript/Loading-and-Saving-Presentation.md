@@ -19,7 +19,6 @@ Open an existing PowerPoint presentation by passing the Presentation data to the
 
 import { Presentation } from '@syncfusion/ej2-pptx';
  
-// data is a Uint8Array or ArrayBuffer of an .pptx file
 // Loads or opens a PowerPoint Presentation.
 const pptxDoc = await Presentation.open(data);
 
@@ -35,10 +34,6 @@ A modified PowerPoint presentation can be saved to the file system by passing th
 
 import { Presentation } from '@syncfusion/ej2-pptx';
 
-// Creates a Presentation instance.
-const pptxDoc = Presentation.create();
-// Adds a slide to the presentation.
-pptxDoc.slides.add();
 // Saves the Presentation to a file.
 await pptxDoc.save('Output.pptx');
 
