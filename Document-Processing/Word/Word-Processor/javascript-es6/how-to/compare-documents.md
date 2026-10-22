@@ -138,4 +138,4 @@ documenteditor.open(sfdt);
 
 ## Online Demo
 
-Explore how to compare Word documents side by side with the TypeScript DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/compare-documents).
+Explore how to compare Word documents side by side with the TypeScript DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript/#/tailwind3/document-editor/compare-documents.html).
