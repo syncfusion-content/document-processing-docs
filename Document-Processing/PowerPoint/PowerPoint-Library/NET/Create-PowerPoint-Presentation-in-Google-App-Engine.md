@@ -4,6 +4,7 @@ description: Create PowerPoint document in Google App Engine using .NET Core Pow
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create PowerPoint document in Google App Engine

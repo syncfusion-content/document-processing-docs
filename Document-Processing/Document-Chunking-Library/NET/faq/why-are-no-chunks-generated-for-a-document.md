@@ -4,6 +4,7 @@ description: Learn why a document may produce no chunks and how to handle an emp
 platform: document-processing
 control: Chunking
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Why Are No Chunks Generated for a Document?

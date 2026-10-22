@@ -4,6 +4,7 @@ description: Learn how to load, save, and modify PowerPoint presentations using 
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Loading and Saving in JavaScript PowerPoint

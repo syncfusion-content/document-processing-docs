@@ -7,6 +7,7 @@ control: PowerPoint
 documentation: ug
 keywords: angular create pptx, angular generate powerpoint, angular powerpoint library, ej2 powerpoint angular, javascript
 canonical_url: https://help.syncfusion.com/document-processing/presentation/pptx-library/javascript/create-powerpoint-document-angular
+appliesto: Document SDK
 ---
 
 # Getting Started with JavaScript PowerPoint in Angular app
