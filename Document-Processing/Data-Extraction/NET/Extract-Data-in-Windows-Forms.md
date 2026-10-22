@@ -5,6 +5,7 @@ platform: document-processing
 control: SmartDataExtractor
 documentation: UG
 
+appliesto: Document SDK
 ---
 
 # Getting Started with Windows Forms Smart Data Extractor
