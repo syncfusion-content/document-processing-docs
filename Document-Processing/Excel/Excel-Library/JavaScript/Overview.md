@@ -43,11 +43,3 @@ The JavaScript Excel Library supports the following application environments:
 * Angular
 * React
 * Vue
-
-## Licensing
-
-A valid Syncfusion license is required to use the JavaScript Excel Library in commercial applications. A free community license is available for eligible individuals and small businesses, and trial licenses are available for evaluation.
-
-* [Generate a license key](https://help.syncfusion.com/document-processing/licensing/overview)
-
-If the license is not registered, the generated Excel documents may include an evaluation warning.

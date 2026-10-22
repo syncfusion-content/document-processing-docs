@@ -60,21 +60,7 @@ npm install @syncfusion/ej2-xlsx --save
 
 The following package is included automatically by `@syncfusion/ej2-xlsx` and does not need to be installed separately:
 
-- `@syncfusion/ej2-base` — common utilities used by the library, including license registration.
-
-## License Registration
-
-If your project requires a Syncfusion license, register the license key before using the Excel API. Add the following code at the top of `App.jsx`:
-
-```javascript
-import { registerLicense } from '@syncfusion/ej2-base';
-
-registerLicense('YOUR_LICENSE_KEY');
-```
-
-Replace `YOUR_LICENSE_KEY` with the key from your Syncfusion account. For more information, see the <a href="https://help.syncfusion.com/document-processing/licensing/overview" aria-label="Syncfusion licensing overview documentation">Syncfusion licensing documentation</a>.
-
-N> A valid Syncfusion license is required for commercial use.
+- `@syncfusion/ej2-base` — common utilities used by the library.
 
 ## Create an Excel Workbook
 
@@ -85,11 +71,7 @@ Replace the contents of `App.jsx` with the following code. The file imports `Wor
 {% raw %}
 
 import React from 'react';
-import { registerLicense } from '@syncfusion/ej2-base';
 import { Workbook } from '@syncfusion/ej2-xlsx';
-
-// Register the Syncfusion license key.
-registerLicense('YOUR_LICENSE_KEY');
 
 export default function App() {
   const createExcel = async () => {
@@ -149,7 +131,6 @@ N> In the browser, call the parameterless `save()` overload, which returns a `Pr
 
 ## Code Explanation
 
-- `registerLicense(key)` - registers the Syncfusion license key at application startup. Required for commercial usage.
 - `Workbook.create()` - creates a new workbook with one visible worksheet named `Sheet1`.
 - `workbook.sheet(0)` - returns the worksheet at the zero-based index.
 - `sheet.name` - sets the worksheet tab name. This example renames the first sheet to `Sales`.
@@ -183,5 +164,4 @@ N> If you used Create-React-App instead of Vite, the run command is `npm start` 
 | Button click does nothing | The click handler is not wired, or an error is thrown inside the async function | Confirm the button uses `onClick={createExcel}` and check the browser console for errors |
 | `save(filePath) requires the Node.js filesystem and is not available in this environment` | A path was passed to `save()` in the browser | Use `const bytes = await workbook.save()` with no arguments, then download the bytes |
 | `Output.xlsx` does not download | The browser blocks the download, or the click handler did not finish | Check the browser download settings, allow downloads for the site, and confirm `await workbook.save()` completed |
-| `registerLicense` warning at runtime | The license key is missing or invalid | Confirm the key is set in `App.jsx` and is the correct key for your Syncfusion account |
 | Vite dev server fails to start | Port `5173` is in use | Stop the conflicting process or change the port in `vite.config.js` |

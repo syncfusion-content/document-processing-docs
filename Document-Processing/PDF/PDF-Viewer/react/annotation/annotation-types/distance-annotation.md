@@ -123,6 +123,53 @@ Configure default properties using the [`distanceSettings`](https://ej2.syncfusi
 {% endhighlight %}
 {% endtabs %}
 
+### Supported Border Styles
+
+In addition to the default **Solid** border, Distance annotations support the following additional border style:
+
+- **Dashed** — dashed line border.
+
+Use [`BorderStyle`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/borderStyle) value `BorderStyle.Dashed` together with the optional `borderDashArray` setting in the [`distanceSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#distancesettings) property.
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `borderStyle` | `BorderStyle` | Specifies the border style. Supported values: `BorderStyle.Solid` and `BorderStyle.Dashed`. |
+| `borderDashArray` | `number[]` | Specifies the dash pattern when `borderStyle` is `BorderStyle.Dashed`. |
+
+N> `borderStyle` and `borderDashArray` are preserved during save, reload, import, and export.
+
+#### Apply a Dashed Border
+
+```ts
+export enum BorderStyle {
+    Solid = 'Solid',
+    Dashed = 'Dashed',
+    Cloud = 'Cloud'
+}
+```
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
+<PdfViewerComponent
+  id="container"
+  documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+  resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+  distanceSettings={{
+    fillColor: 'blue',
+    strokeColor: 'green',
+    opacity: 0.6,
+    borderStyle: BorderStyle.Dashed,
+    borderDashArray: [5, 5]
+  }}
+  style={{ height: '650px' }}
+>
+  <Inject services={[Toolbar, Annotation]} />
+</PdfViewerComponent>
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
 ## Manage Distance (Move, Resize, Edit, Delete)
 - **Move**: Drag the measurement to reposition it.
 - **Resize**: Drag the end handles to adjust the length.

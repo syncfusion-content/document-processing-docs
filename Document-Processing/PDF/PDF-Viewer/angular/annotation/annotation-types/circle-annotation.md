@@ -166,6 +166,103 @@ export class AppComponent {
 {% endhighlight %}
 {% endtabs %}
 
+### Supported Border Styles
+
+In addition to the default **Solid** border, Circle annotations support the following additional border styles:
+
+- **Cloud** — scalloped cloud border.
+- **Dashed** — dashed line border.
+
+Use [`BorderStyle`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/borderStyle) values such as `BorderStyle.Cloud` and `BorderStyle.Dashed` together with the optional `borderDashArray` and `cloudIntensity` settings in the [`circleSettings`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#circleSettings) property.
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `borderStyle` | `BorderStyle` | Specifies the border style. Supported values: `BorderStyle.Solid`, `BorderStyle.Cloud`, and `BorderStyle.Dashed`. |
+| `borderDashArray` | `number[]` | Specifies the dash pattern when `borderStyle` is `BorderStyle.Dashed`. |
+| `cloudIntensity` | `number` | Specifies the cloud border intensity. Supported range: `1` to `2`; default value: `1`. |
+
+N> `borderStyle`, `borderDashArray`, and `cloudIntensity` are preserved during save, reload, import, and export.
+
+#### Apply a Cloud Border
+
+```ts
+export enum BorderStyle {
+    Solid = 'Solid',
+    Dashed = 'Dashed',
+    Cloud = 'Cloud'
+}
+```
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+
+import { Component } from '@angular/core';
+import {
+  PdfViewerModule,
+  ToolbarService,
+  AnnotationService
+} from '@syncfusion/ej2-angular-pdfviewer';
+
+@Component({
+  selector: 'app-root',
+  template: `
+    <div class="content-wrapper">
+      <ejs-pdfviewer
+        id="container"
+        [documentPath]="document"
+        [resourceUrl]="resource"
+        [circleSettings]="circleSettings"
+        style="height:650px;display:block">
+      </ejs-pdfviewer>
+    </div>
+  `,
+  imports: [PdfViewerModule],
+  providers: [ToolbarService, AnnotationService]
+})
+export class AppComponent {
+  public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+  public resource = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+  public circleSettings = { fillColor: '#ffa500', strokeColor: '#ff6a00', thickness: 2, opacity: 0.9, borderStyle: 'Cloud', cloudIntensity: 2 };
+}
+{% endhighlight %}
+{% endtabs %}
+
+#### Apply a Dashed Border
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+
+import { Component } from '@angular/core';
+import {
+  PdfViewerModule,
+  ToolbarService,
+  AnnotationService
+} from '@syncfusion/ej2-angular-pdfviewer';
+
+@Component({
+  selector: 'app-root',
+  template: `
+    <div class="content-wrapper">
+      <ejs-pdfviewer
+        id="container"
+        [documentPath]="document"
+        [resourceUrl]="resource"
+        [circleSettings]="circleSettings"
+        style="height:650px;display:block">
+      </ejs-pdfviewer>
+    </div>
+  `,
+  imports: [PdfViewerModule],
+  providers: [ToolbarService, AnnotationService]
+})
+export class AppComponent {
+  public document = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+  public resource = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+  public circleSettings = { fillColor: '#ffa500', strokeColor: '#ff6a00', thickness: 2, opacity: 0.9, borderStyle: 'Dashed', borderDashArray: [5, 5] };
+}
+{% endhighlight %}
+{% endtabs %}
+
 ## Manage Circle (Edit, Move, Resize, Delete)
 
 ### Edit Circle
