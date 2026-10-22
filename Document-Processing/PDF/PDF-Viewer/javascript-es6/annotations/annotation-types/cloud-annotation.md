@@ -240,6 +240,9 @@ N> Cloud annotation appearance settings persist when the PDF is saved, when anno
 - Cloud annotations can be created through both UI interaction and API methods.
 - Cloud annotation appearance settings persist during save, import, export, and reload operations.
 
+N> [View Sample on GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master/Annotations/Annotation%20Types/Cloud%20Border%20and%20Dashed%20Border).
+
+
 ## See Also
 - [Polygon Annotation](./polygon-annotation)
 - [Rectangle Annotation](./rectangle-annotation)

@@ -491,7 +491,7 @@ document.addEventListener('DOMContentLoaded', function () {
 {% endhighlight %}
 {% endtabs %}
 
-[View Sample on GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples)
+[View Sample on GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/DateTime%20picker)
 
 ## See Also
 
