@@ -6,68 +6,64 @@ import { CellStyleModel } from '@syncfusion/ej2-react-spreadsheet';
 function App() {
     const spreadsheetRef = React.useRef(null);
 
-    React.useEffect(() => {
-        let spreadsheet = spreadsheetRef.current;
-        if (spreadsheet) {
-            // Insert Radio Button form controls - Group 1
-            spreadsheet.addFormControl({
-                type: 'RadioButton',
-                target: 'B2',
-                name: 'shippingGroup',
-                caption: 'Standard Shipping',
-                value: 'standard',
-                linkedCell: 'D2',
-                fontName: 'Calibri',
-                fontSize: 14
-            });
-
-            spreadsheet.addFormControl({
-                type: 'RadioButton',
-                target: 'B3',
-                name: 'shippingGroup',
-                caption: 'Express Shipping',
-                value: 'express',
-                linkedCell: 'D3'
-            });
-
-            spreadsheet.addFormControl({
-                type: 'RadioButton',
-                target: 'B4',
-                name: 'shippingGroup',
-                caption: 'Overnight Shipping',
-                value: 'overnight',
-                linkedCell: 'D4'
-            });
-
-            // Insert Radio Button form controls - Group 2
-            spreadsheet.addFormControl({
-                type: 'RadioButton',
-                target: 'B6',
-                name: 'paymentGroup',
-                caption: 'Credit Card',
-                value: 'creditcard',
-                linkedCell: 'D6'
-            });
-
-            spreadsheet.addFormControl({
-                type: 'RadioButton',
-                target: 'B7',
-                name: 'paymentGroup',
-                caption: 'Debit Card',
-                value: 'debitcard',
-                linkedCell: 'D7'
-            });
-
-            spreadsheet.addFormControl({
-                type: 'RadioButton',
-                target: 'B8',
-                name: 'paymentGroup',
-                caption: 'Wire Transfer',
-                value: 'transfer',
-                linkedCell: 'D8'
-            });
+    const formControls = [
+        // Shipping options group
+        {
+            type: 'RadioButton',
+            text: 'Standard Shipping',
+            cellLink: 'D2',
+            top: 40,
+            left: 150,
+            height: 30,
+            width: 60
+        },
+        {
+            type: 'RadioButton',
+            text: 'Express Shipping',
+            cellLink: 'D3',
+            top: 80,
+            left: 150,
+            height: 30,
+            width: 60
+        },
+        {
+            type: 'RadioButton',
+            text: 'Overnight Shipping',
+            cellLink: 'D4',
+            top: 120,
+            left: 150,
+            height: 30,
+            width: 60
+        },
+        // Payment options group
+        {
+            type: 'RadioButton',
+            text: 'Credit Card',
+            cellLink: 'D6',
+            top: 200,
+            left: 150,
+            height: 30,
+            width: 60
+        },
+        {
+            type: 'RadioButton',
+            text: 'Debit Card',
+            cellLink: 'D7',
+            top: 240,
+            left: 150,
+            height: 30,
+            width: 60
+        },
+        {
+            type: 'RadioButton',
+            text: 'Wire Transfer',
+            cellLink: 'D8',
+            top: 280,
+            left: 150,
+            height: 30,
+            width: 60
         }
-    }, []);
+    ];
 
     const boldCenter = { fontWeight: 'bold', textAlign: 'center' };
 
@@ -75,7 +71,7 @@ function App() {
         <div>
             <SpreadsheetComponent ref={spreadsheetRef} showFormulaBar={false} allowFormControl={true}>
                 <SheetsDirective>
-                    <SheetDirective name={'RadioButtonDemo'}>
+                    <SheetDirective name={'RadioButtonDemo'} formControls={formControls}>
                         <ColumnsDirective>
                             <ColumnDirective width={150}></ColumnDirective>
                             <ColumnDirective width={180}></ColumnDirective>
