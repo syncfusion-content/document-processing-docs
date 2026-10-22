@@ -5,37 +5,6 @@ import { CellStyleModel } from '@syncfusion/ej2-react-spreadsheet';
 
 function App() {
     const spreadsheetRef = React.useRef(null);
-
-    const formControls = [
-        {
-            type: 'CheckBox',
-            text: 'Accept Terms',
-            cellLink: 'D2',
-            top: 40,
-            left: 150,
-            height: 30,
-            width: 60
-        },
-        {
-            type: 'CheckBox',
-            text: 'Enable Notifications',
-            cellLink: 'D4',
-            top: 100,
-            left: 150,
-            height: 30,
-            width: 60
-        },
-        {
-            type: 'CheckBox',
-            text: 'Select All Options',
-            cellLink: 'D6',
-            top: 160,
-            left: 150,
-            height: 30,
-            width: 60
-        }
-    ];
-
     const boldCenter = { fontWeight: 'bold', textAlign: 'center' };
 
     return (
@@ -80,6 +49,9 @@ function App() {
                                 </CellsDirective>
                             </RowDirective>
                         </RowsDirective>
+                        <FormControlsDirective>
+                            <FormControlDirective type="CheckBox" text="Check Box 1" celllink="H4" height={40} width={110}></FormControlDirective>"
+                        </FormControlsDirective>
                     </SheetDirective>
                 </SheetsDirective>
             </SpreadsheetComponent>

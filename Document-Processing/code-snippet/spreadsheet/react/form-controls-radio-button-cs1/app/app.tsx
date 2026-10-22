@@ -5,66 +5,6 @@ import { CellStyleModel, FormControlModel } from '@syncfusion/ej2-react-spreadsh
 
 function App() {
     const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
-
-    const formControls: FormControlModel[] = [
-        // Shipping options group
-        {
-            type: 'RadioButton',
-            text: 'Standard Shipping',
-            cellLink: 'D2',
-            top: 40,
-            left: 150,
-            height: 30,
-            width: 60
-        },
-        {
-            type: 'RadioButton',
-            text: 'Express Shipping',
-            cellLink: 'D3',
-            top: 80,
-            left: 150,
-            height: 30,
-            width: 60
-        },
-        {
-            type: 'RadioButton',
-            text: 'Overnight Shipping',
-            cellLink: 'D4',
-            top: 120,
-            left: 150,
-            height: 30,
-            width: 60
-        },
-        // Payment options group
-        {
-            type: 'RadioButton',
-            text: 'Credit Card',
-            cellLink: 'D6',
-            top: 200,
-            left: 150,
-            height: 30,
-            width: 60
-        },
-        {
-            type: 'RadioButton',
-            text: 'Debit Card',
-            cellLink: 'D7',
-            top: 240,
-            left: 150,
-            height: 30,
-            width: 60
-        },
-        {
-            type: 'RadioButton',
-            text: 'Wire Transfer',
-            cellLink: 'D8',
-            top: 280,
-            left: 150,
-            height: 30,
-            width: 60
-        }
-    ];
-
     const boldCenter: CellStyleModel = { fontWeight: 'bold', textAlign: 'center' };
 
     return (
@@ -106,6 +46,9 @@ function App() {
                                 </CellsDirective>
                             </RowDirective>
                         </RowsDirective>
+                        <FormControlsDirective>
+                            <FormControlDirective type="RadioButton" text="Radio Button 1" celllink="H4" height={40} width={110}></FormControlDirective>"
+                        </FormControlsDirective>
                     </SheetDirective>
                 </SheetsDirective>
             </SpreadsheetComponent>

@@ -5,40 +5,6 @@ import { CellStyleModel } from '@syncfusion/ej2-react-spreadsheet';
 
 function App() {
     const spreadsheetRef = React.useRef(null);
-
-    const formControls = [
-        {
-            type: 'DropDown',
-            text: 'Select Delivery',
-            cellLink: 'D2',
-            listItems: 'Standard Delivery,Express Delivery,Priority Delivery,Pickup at Store,Digital Download',
-            top: 40,
-            left: 150,
-            height: 30,
-            width: 120
-        },
-        {
-            type: 'DropDown',
-            text: 'Select Payment',
-            cellLink: 'D4',
-            listItems: 'Cash on Delivery,Credit Card,Debit Card,Online Payment',
-            top: 120,
-            left: 150,
-            height: 30,
-            width: 120
-        },
-        {
-            type: 'DropDown',
-            text: 'Select Priority',
-            cellLink: 'D6',
-            listItems: 'Low,Medium,High',
-            top: 200,
-            left: 150,
-            height: 30,
-            width: 120
-        }
-    ];
-
     const boldCenter = { fontWeight: 'bold', textAlign: 'center' };
 
     return (
@@ -89,6 +55,9 @@ function App() {
                                 </CellsDirective>
                             </RowDirective>
                         </RowsDirective>
+                        <FormControlsDirective>
+                            <FormControlDirective type="DropDown" text="Drop Down 1" celllink="H4" range="A1:A3" height={40} width={110}></FormControlDirective>"
+                        </FormControlsDirective>
                     </SheetDirective>
                 </SheetsDirective>
             </SpreadsheetComponent>
