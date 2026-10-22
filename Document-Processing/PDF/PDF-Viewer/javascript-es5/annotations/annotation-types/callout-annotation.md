@@ -205,6 +205,8 @@ Listen to add/modify/select/remove events for Callout annotations and handle the
 
 Callout annotations can be exported or imported just like other annotations. For supported formats and steps, see [**Export and Import annotations**](../export-import/export-annotation).
 
+N> [View Sample on GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/Annotations/Callout%20Annotation).
+
 ## See Also
 
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)

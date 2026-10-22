@@ -348,7 +348,7 @@ document.getElementById('addPasswordField').addEventListener('click', function (
 });
 ```
 
-[View Sample on GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples)
+[View Sample on GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master/Form%20Designer)
 
 ## See Also
 
