@@ -5,6 +5,7 @@ description: Explore example prompts for Syncfusion Document SDK AI Agent Tools 
 platform: document-processing
 control: AI Agent Tools
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Example Prompts of Document SDK AI Agent Tools
