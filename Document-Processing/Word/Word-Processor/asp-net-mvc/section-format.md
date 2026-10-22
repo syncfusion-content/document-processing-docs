@@ -69,7 +69,7 @@ container.documentEditor.editor.insertPageBreak();
 You can insert a next-page section break to start the new section on the next page.
 
 ```typescript
-container.documentEditor.editor.insertSectionBreak();
+container.documentEditor.editor.insertSectionBreak(SectionBreakType.NewPage);
 ```
 
 You can insert a continuous section break to start the new section on the same page.

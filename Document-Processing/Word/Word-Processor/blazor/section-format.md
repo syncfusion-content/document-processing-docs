@@ -70,7 +70,7 @@ await documentEditor.Editor.InsertPageBreakAsync();
 You can insert a next-page section break to start the new section on the next page.
 
 ```csharp
-await documentEditor.Editor.InsertSectionBreakAsync();
+await documentEditor.Editor.InsertSectionBreakAsync(SectionBreakType.NewPage);
 ```
 
 You can insert a continuous section break to start the new section on the same page.
