@@ -10,7 +10,7 @@ new Vue({
     <div id="app">
       <button id='compare' v-on:click="onCompare">Compare Documents</button>
       <ejs-documenteditor ref='documenteditor' :serviceUrl='serviceUrl' :isReadOnly='false' :enableTrackChanges='true'
-        :enableSelection='true' :enableSfdtImport='true' :enableSfdtExport='true' height="590px"></ejs-documenteditor>
+        height="590px"></ejs-documenteditor>
     </div>
 `,
 
