@@ -19,9 +19,6 @@ new Vue({
             serviceUrl:'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/'
         }
       },
-      provide: {
-        DocumentEditor: [SfdtExport, Selection, Editor, UndoRedo, View]
-      },
       mounted: function() {
         // Load the original document by default.
         this.$refs.documenteditor.open(originalDocument);

@@ -6,15 +6,12 @@
   </div>
 </template>
 <script setup>
-import { onMounted, ref, provide } from 'vue';
-import { DocumentEditorComponent as EjsDocumenteditor, SfdtExport, Selection, Editor, UndoRedo, View } from '@syncfusion/ej2-vue-documenteditor';
+import { onMounted, ref } from 'vue';
+import { DocumentEditorComponent as EjsDocumenteditor } from '@syncfusion/ej2-vue-documenteditor';
 import { originalDocument, revisedDocument } from './data';
 
 const documenteditor = ref(null);
 const serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
-
-//Inject required modules.
-provide('DocumentEditor', [SfdtExport, Selection, Editor, UndoRedo, View]);
 
 onMounted(function () {
   // Load the original document by default.
