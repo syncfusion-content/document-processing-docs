@@ -1,5 +1,5 @@
 ---
-title: Does Syncfusion require LGPL compliance from SkiaSharp dependencies? | Syncfusion
+title: Does Syncfusion require LGPL compliance from SkiaSharp? | Syncfusion
 description: This page explains whether Syncfusion packages require LGPL compliance due to the SkiaSharp dependency on libmicrohttpd.
 platform: document-processing
 documentation: UG
