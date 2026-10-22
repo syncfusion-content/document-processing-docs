@@ -4,6 +4,7 @@ description: Learn how to clone, merge, and traverse elements in Markdown docume
 platform: document-processing
 control: Markdown
 documentation: UG
+appliesto: Document SDK
 ---
 # Markdown documents in .NET Markdown Library
 
