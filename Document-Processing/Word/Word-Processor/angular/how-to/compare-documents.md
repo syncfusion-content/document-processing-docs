@@ -17,12 +17,8 @@ Document comparison is a server-side operation and it cannot be performed in the
 The .NET Word library (DocIO) enables you to compare two Word documents and highlight the following changes as tracked changes.
 *	Insertions
 *	Deletions
-*	Formatting
 
-N> 1. DocIO performs word level comparison while comparing two Word documents. In this scenario, if a single character in a word is changed, the entire word will be highlighted as changed.
-N> 2. Comparing two Word documents is supported in DOCX format only.
-
-After the comparison, the resultant document (with tracked changes) is loaded into the Document Editor on the client side, where you can view the inserted, deleted, and formatting changes as revisions, and accept or reject them using the Review pane.
+After the comparison, the resultant document (with tracked changes) is loaded into the Document Editor on the client side, where you can view the inserted and deleted changes as revisions, and accept or reject them using the Review pane.
 
 ## Compare documents using server-side Web API
 
@@ -107,11 +103,9 @@ private static WDocument GetWordDocument(IFormFile file)
 }
 ```
 
-N> The `MetafileImageParsed` event is hooked while loading the compared document into the `WordDocument` instance to parse the metafile images present in the document. You can refer to the [MetafileImageParsed event](https://help.syncfusion.com/document-processing/word/word-processor/web-services/core) section to handle this event in your Web API project.
-
 ## Compare documents from the client side
 
-* Pass the original and revised document contents (as SFDT strings) to the server-side `CompareDocuments` Web API using the `FormData` object, where the comparison is performed and the resultant SFDT content is returned.
+* Pass the original and revised document contents (either SFDT or DOCX files) to the server-side `CompareDocuments` Web API using the `FormData` object, where the comparison is performed and the resultant SFDT content is returned.
 * Open the resultant SFDT content returned from the server side in the Document Editor using the [`open`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#open) method to view the comparison result with tracked changes.
 
 The following example code illustrates how to compare two documents (using static SFDT contents) and open the resultant document in the Document Editor.
@@ -130,7 +124,14 @@ N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-ed
 
 ## View the comparison result with tracked changes in Document Editor
 
-Once the resultant SFDT content returned from the server side is opened in the Document Editor, all the insertions, deletions, and formatting changes are highlighted as tracked changes (revisions) in the document. You can show or hide the revisions pane using the `showRevisions` property of the Document Editor, and accept or reject the revisions individually or all at once using the Review pane of the Document Editor.
+Once the resultant SFDT content returned from the server side is opened in the Document Editor, all the insertions and deletions are highlighted as tracked changes (revisions) in the document. You can show or hide the revisions pane using the `showRevisions` property of the Document Editor, and accept or reject the revisions individually or all at once using the Review pane of the Document Editor.
+
+The following example code illustrates how to show the revisions and open the resultant SFDT content in the Document Editor.
+
+```typescript
+(this.documentEditor as DocumentEditorComponent).showRevisions = true;
+(this.documentEditor as DocumentEditorComponent).open(sfdt);
+```
 
 ## Preview Sample
 
@@ -139,5 +140,3 @@ Once the resultant SFDT content returned from the server side is opened in the D
 ## Online Demo
 
 Explore how to compare Word documents side by side with the Angular DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/compare-documents).
-
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
