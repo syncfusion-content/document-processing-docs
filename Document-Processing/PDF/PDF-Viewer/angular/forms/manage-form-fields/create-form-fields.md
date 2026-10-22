@@ -896,7 +896,7 @@ export class AppComponent {
 {% endhighlight %}
 {% endtabs %}
 
-[View Sample on GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples)
+N> [View Sample on GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/Form%20fields/DateTime%20picker).
 
 ## Troubleshooting
 
