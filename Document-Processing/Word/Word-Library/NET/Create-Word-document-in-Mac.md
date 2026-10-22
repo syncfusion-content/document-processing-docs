@@ -4,6 +4,7 @@ description: Describe the available customization options for Word-to-PDF conver
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Word document on macOS

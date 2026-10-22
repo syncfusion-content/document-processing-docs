@@ -4,6 +4,7 @@ description: Open and save Word document in Azure Functions v4 using .NET Core W
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Open and save Word document in Azure Functions v4 

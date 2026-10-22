@@ -7,6 +7,7 @@ platform: document-processing
 control: Word
 documentation: ug
 keywords: javascript create word, javascript generate docx, javascript word library, ej2 word javascript, cdn
+appliesto: Document SDK
 ---
 
 # Getting Started with JavaScript Word Library in JavaScript app

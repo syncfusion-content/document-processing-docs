@@ -4,6 +4,7 @@ description: Learn how to format fields, get field codes, and add IF and merge f
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Working with Fields in JavaScript Word Library

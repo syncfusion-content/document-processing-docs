@@ -4,6 +4,7 @@ description: Learn how to create, load, edit, and save Word documents using the 
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Open and Save Word documents in JavaScript Word
