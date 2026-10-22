@@ -192,4 +192,6 @@ if (table) {
 // Saves the Presentation to the file system.
 await pptxDoc.save('Output.pptx');
 })();
+
+{% endhighlight %}
 {% endtabs %}
