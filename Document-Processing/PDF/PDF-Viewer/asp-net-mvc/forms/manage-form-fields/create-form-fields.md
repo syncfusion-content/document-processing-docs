@@ -499,7 +499,7 @@ You can edit form fields using the UI or API.
 {% endhighlight %}
 {% endtabs %}
 
-[View Sample on GitHub](https://github.com/SyncfusionExamples/mvc-pdf-viewer-examples)
+[View Sample on GitHub](https://github.com/SyncfusionExamples/mvc-pdf-viewer-examples/tree/master/Forms/DateAndTimePicker)
 
 ## See Also
 
