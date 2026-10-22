@@ -129,6 +129,10 @@ You can modify text by accessing the existing paragraphs in a Presentation. The 
 
 {% tabs %}
 {% highlight js tabtitle="TypeScript" %}
+
+import { Presentation } from '@syncfusion/ej2-pptx';
+
+// data is a Uint8Array or ArrayBuffer of a PowerPoint Presentation that contains a shape with a text body.
 (async () => {
 // Loads or opens a PowerPoint Presentation.
 const pptxDoc = await Presentation.open(data);
@@ -156,6 +160,10 @@ The following code example demonstrates how to remove a paragraph from a slide.
 
 {% tabs %}
 {% highlight js tabtitle="TypeScript" %}
+
+import { Presentation } from '@syncfusion/ej2-pptx';
+
+// data is a Uint8Array or ArrayBuffer of a PowerPoint Presentation that contains a shape with at least one paragraph.
 (async () => {
 // Loads or opens a PowerPoint Presentation.
 const pptxDoc = await Presentation.open(data);

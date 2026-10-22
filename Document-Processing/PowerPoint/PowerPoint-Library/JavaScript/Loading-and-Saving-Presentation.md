@@ -18,7 +18,8 @@ Open an existing PowerPoint presentation by passing the Presentation data to the
 {% highlight typescript tabtitle="TypeScript" %}
 
 import { Presentation } from '@syncfusion/ej2-pptx';
- 
+
+// data is a Uint8Array or ArrayBuffer of an .pptx file
 // Loads or opens a PowerPoint Presentation.
 const pptxDoc = await Presentation.open(data);
 

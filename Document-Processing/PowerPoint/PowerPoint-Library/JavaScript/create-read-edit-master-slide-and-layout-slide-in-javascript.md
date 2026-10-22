@@ -99,7 +99,7 @@ shape.fill.solidFill.color = ColorObject.fromArgb(78, 89, 90);
 // Change the background color for the layout slide.
 layoutSlide.background.fill.solidFill.color = ColorObject.fromArgb(78, 89, 90);
 // Save the PowerPoint presentation to a file.
-await pptxDoc.save('LayoutSlide.pptx');
+await pptxDoc.save('Output.pptx');
 })();
 
 {% endhighlight %}

@@ -29,6 +29,7 @@ const slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
 slide.shapes.addShape(AutoShapeType.Rectangle, {
     x: 50, y: 200, width: 300, height: 300
 });
+// imageBytes is a Uint8Array of a JPEG image.
 // Add picture to the shape collection.
 const picture = slide.shapes.addPicture({
     data: imageBytes,
@@ -49,6 +50,9 @@ You can iterate through the shapes in a PowerPoint slide. The following code exa
 
 {% tabs %}
 {% highlight js tabtitle="TypeScript" %}
+
+import { Presentation } from '@syncfusion/ej2-pptx';
+// data is a Uint8Array or ArrayBuffer of an existing .pptx file.
 
 (async () => {
 // Loads or opens a PowerPoint Presentation.
