@@ -6,6 +6,7 @@ control: Deploy DOCX Editor component for mobile
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Deploy React DOCX Editor for Mobile

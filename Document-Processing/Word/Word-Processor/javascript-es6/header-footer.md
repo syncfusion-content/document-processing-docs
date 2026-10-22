@@ -6,6 +6,7 @@ platform: document-processing
 control: Header and Footer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Headers and Footers in TypeScript DOCX Editor

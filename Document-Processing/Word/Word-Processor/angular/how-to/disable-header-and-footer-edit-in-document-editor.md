@@ -6,6 +6,7 @@ platform: document-processing
 control: Disable header and footer edit in DOCX Editor
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Disable Header and Footer Editing in Angular DOCX Editor

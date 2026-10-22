@@ -6,6 +6,7 @@ control: Spell check
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Spell Check in Vue DOCX Editor

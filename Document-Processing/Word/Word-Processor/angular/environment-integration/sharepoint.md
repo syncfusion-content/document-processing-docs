@@ -6,6 +6,7 @@ control: DOCX Editor
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Getting Started with Angular DOCX Editor in SharePoint

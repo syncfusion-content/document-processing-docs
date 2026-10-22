@@ -6,6 +6,7 @@ platform: document-processing
 control: How to disable auto focus in DOCX Editor
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Disable Auto Focus in React DOCX Editor

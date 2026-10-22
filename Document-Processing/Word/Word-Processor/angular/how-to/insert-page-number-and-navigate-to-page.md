@@ -6,6 +6,7 @@ platform: document-processing
 control: Insert page number and navigate to page
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Insert Page Numbers and Navigate in Angular DOCX Editor

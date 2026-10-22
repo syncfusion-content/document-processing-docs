@@ -5,6 +5,7 @@ description: Fields in ASP.NET MVC DOCX Editor enable inserting and updating doc
 platform: document-processing
 control: Fields
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Fields in ASP.NET MVC DOCX Editor

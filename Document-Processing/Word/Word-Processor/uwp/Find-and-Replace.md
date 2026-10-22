@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: search,find,replace-text,findall,findoptions,showoptionspanecommand
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 # Find and Replace in UWP DOCX Editor
 

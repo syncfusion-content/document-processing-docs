@@ -6,6 +6,7 @@ control: Unsupported file
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Supported File Formats in React DOCX Editor

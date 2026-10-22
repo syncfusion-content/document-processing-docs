@@ -6,6 +6,7 @@ platform: document-processing
 control: Open document from Google Drive
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Open Documents from Google Drive in ASP.NET MVC DOCX Editor
