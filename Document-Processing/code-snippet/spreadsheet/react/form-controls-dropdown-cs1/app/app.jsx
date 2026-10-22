@@ -77,7 +77,7 @@ function App() {
 
     return (
         <div>
-            <SpreadsheetComponent ref={spreadsheetRef} showFormulaBar={false}>
+            <SpreadsheetComponent ref={spreadsheetRef} showFormulaBar={false} allowFormControl={true}>
                 <SheetsDirective>
                     <SheetDirective name={'DropDownDemo'}>
                         <ColumnsDirective>

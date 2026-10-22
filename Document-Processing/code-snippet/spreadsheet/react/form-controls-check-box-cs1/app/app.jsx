@@ -10,7 +10,6 @@ function App() {
         let spreadsheet = spreadsheetRef.current;
         if (spreadsheet) {
             // Insert Check Box form control
-            // Parameters: target cell, name, x offset, y offset, width, height
             spreadsheet.addFormControl({
                 type: 'CheckBox',
                 target: 'B2',
@@ -49,7 +48,7 @@ function App() {
 
     return (
         <div>
-            <SpreadsheetComponent ref={spreadsheetRef} showFormulaBar={false}>
+            <SpreadsheetComponent ref={spreadsheetRef} showFormulaBar={false} allowFormControl={true}>
                 <SheetsDirective>
                     <SheetDirective name={'FormControls'}>
                         <ColumnsDirective>
