@@ -36,6 +36,29 @@ The accessibility compliance for the Blazor DOCX Editor component is outlined be
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
+## Screen Reader Support
+
+The DOCX Editor provides screen reader support for improved accessibility. Set the [`EnableScreenReader`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.DocumentEditorSettingsModel.html#Syncfusion_Blazor_DocumentEditor_DocumentEditorSettingsModel_EnableScreenReader) property to true in [`DocumentEditorSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.SfDocumentEditorContainer.html#Syncfusion_Blazor_DocumentEditor_SfDocumentEditorContainer_DocumentEditorSettings) to enable screen reader support and expose the necessary accessibility information for screen reader tools.
+
+### Enable Screen Reader Support
+
+```csharp
+@using Syncfusion.Blazor.DocumentEditor
+
+<SfDocumentEditorContainer Height="590px"
+                           DocumentEditorSettings="Settings">
+</SfDocumentEditorContainer>
+
+@code {
+    private DocumentEditorSettingsModel Settings = new DocumentEditorSettingsModel
+    {
+        EnableScreenReader = true
+    };
+}
+```
+
+N> `EnableScreenReader` is disabled by default. Set it to `true` to enable screen reader support.
+
 ## Keyboard interaction
 
 The DOCX Editor supports a wide range of keyboard shortcuts to facilitate common actions, including text formatting, paragraph formatting, navigation, and editing.
