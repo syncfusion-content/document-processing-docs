@@ -59,6 +59,43 @@ paragraph.listFormat.continueListNumbering();
 // Saves the Word document.
 document.save('Output.docx');
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Creates a new Word document.
+let document = ej.docx.WordDocument.create();
+
+// Access section of document.
+let section = document.sections[0];
+
+// Adds the first paragraph at level 0.
+let paragraph = section.body.paragraphs[0];
+
+// Applies the default bulleted list style.
+paragraph.listFormat.applyDefBulletStyle();
+
+// Adds text to the first list item.
+paragraph.appendText('List item 1');
+
+// Adds the second paragraph.
+paragraph = section.body.appendParagraph();
+
+// Adds text to the second list item.
+paragraph.appendText('List item 2');
+
+// Continues the previously defined bullet list.
+paragraph.listFormat.continueListNumbering();
+
+// Adds the third paragraph.
+paragraph = section.body.appendParagraph();
+
+// Adds text to the third list item.
+paragraph.appendText('List item 3');
+
+// Continues the previously defined bullet list.
+paragraph.listFormat.continueListNumbering();
+
+// Saves the Word document.
+document.save('Output.docx');
+{% endhighlight %}
 {% endtabs %}
 
 ## Create Numbered List
@@ -71,6 +108,36 @@ import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Creates a new Word document.
 let document = WordDocument.create();
+// Access section of document.
+let section = document.sections[0];
+
+// Adds the first paragraph at level 0.
+let paragraph = section.body.paragraphs[0];
+// Applies the default numbered list style.
+paragraph.listFormat.applyDefNumberedStyle();
+// Adds text to the first list item.
+paragraph.appendText('List item 1');
+
+// Adds the second paragraph.
+paragraph = section.body.appendParagraph();
+// Adds text to the second list item.
+paragraph.appendText('List item 2');
+// Continues the previously defined list.
+paragraph.listFormat.continueListNumbering();
+
+// Adds the third paragraph.
+paragraph = section.body.appendParagraph();
+// Adds text to the third list item.
+paragraph.appendText('List item 3');
+// Continues the previously defined list.
+paragraph.listFormat.continueListNumbering();
+
+// Saves the Word document.
+document.save('Output.docx');
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Creates a new Word document.
+let document = ej.docx.WordDocument.create();
 // Access section of document.
 let section = document.sections[0];
 
@@ -134,6 +201,33 @@ paragraph.listFormat.increaseIndentLevel();
 // Saves the Word document.
 document.save('Output.docx');
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Creates a new Word document.
+let document = ej.docx.WordDocument.create();
+
+// Access section of document.
+let section = document.sections[0];
+
+// Adds the first paragraph at level 0.
+let paragraph = section.body.paragraphs[0];
+paragraph.appendText('List item 1 - Level 0');
+paragraph.listFormat.applyDefBulletStyle();
+
+// Adds the second paragraph and continues the previous list.
+paragraph = section.body.appendParagraph();
+paragraph.appendText('List item 2 - Level 1');
+paragraph.listFormat.continueListNumbering();
+paragraph.listFormat.increaseIndentLevel();
+
+// Adds the third paragraph and continues at the next level.
+paragraph = section.body.appendParagraph();
+paragraph.appendText('List item 3 - Level 2');
+paragraph.listFormat.continueListNumbering();
+paragraph.listFormat.increaseIndentLevel();
+
+// Saves the Word document.
+document.save('Output.docx');
+{% endhighlight %}
 {% endtabs %}
 
 ## Create Multilevel Numbered List
@@ -146,6 +240,33 @@ import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Creates a new Word document.
 let document = WordDocument.create();
+
+// Access section of document.
+let section = document.sections[0];
+
+// Adds the first paragraph at level 0.
+let paragraph = section.body.paragraphs[0];
+paragraph.appendText('List item 1 - Level 0');
+paragraph.listFormat.applyDefNumberedStyle();
+
+// Adds the second paragraph and continues the numbered list.
+paragraph = section.body.appendParagraph();
+paragraph.appendText('List item 2 - Level 1');
+paragraph.listFormat.continueListNumbering();
+paragraph.listFormat.increaseIndentLevel();
+
+// Adds the third paragraph and continues at the next level.
+paragraph = section.body.appendParagraph();
+paragraph.appendText('List item 3 - Level 2');
+paragraph.listFormat.continueListNumbering();
+paragraph.listFormat.increaseIndentLevel();
+
+// Saves the Word document.
+document.save('Output.docx');
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Creates a new Word document.
+let document = ej.docx.WordDocument.create();
 
 // Access section of document.
 let section = document.sections[0];
@@ -276,6 +397,103 @@ paragraph.listFormat.continueListNumbering();
 // Saves the Word document.
 document.save('Output.docx');
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Creates a new Word document.
+let document = ej.docx.WordDocument.create();
+
+// Creates a numbered list style with the CardinalText pattern.
+let listStyle = document.addListStyle(ej.docx.ListType.Numbered, 'CardinalText');
+let levelOne = listStyle.levels.getItem(0);
+levelOne.patternType = ej.docx.ListPatternType.CardinalText;
+levelOne.startAt = 1;
+
+// Gets the first section of the document.
+let section = document.sections[0];
+
+// Gets the first paragraph in the section.
+let paragraph = section.body.paragraphs[0];
+paragraph.appendText('List pattern Cardinal Text');
+
+// Adds the first list item.
+paragraph = section.body.appendParagraph();
+paragraph.appendText('List item 1');
+paragraph.listFormat.applyStyle('CardinalText');
+
+// Adds the second list item and continues numbering.
+paragraph = section.body.appendParagraph();
+paragraph.appendText('List item 2');
+paragraph.listFormat.applyStyle('CardinalText');
+paragraph.listFormat.continueListNumbering();
+
+// Adds the third list item and continues numbering.
+paragraph = section.body.appendParagraph();
+paragraph.appendText('List item 3');
+paragraph.listFormat.applyStyle('CardinalText');
+paragraph.listFormat.continueListNumbering();
+
+// Adds an empty paragraph as a separator.
+section.body.appendParagraph();
+
+// Creates a numbered list style with the HindiLetter1 pattern.
+listStyle = document.addListStyle(ej.docx.ListType.Numbered, 'HindiLetter1');
+levelOne = listStyle.levels.getItem(0);
+levelOne.patternType = ej.docx.ListPatternType.HindiLetter1;
+levelOne.startAt = 1;
+
+// Adds a heading paragraph for the Hindi letter list.
+paragraph = section.body.appendParagraph();
+paragraph.appendText('List pattern Hindi Letter');
+
+// Adds the first list item.
+paragraph = section.body.appendParagraph();
+paragraph.appendText('List item 1');
+paragraph.listFormat.applyStyle('HindiLetter1');
+
+// Adds the second list item and continues numbering.
+paragraph = section.body.appendParagraph();
+paragraph.appendText('List item 2');
+paragraph.listFormat.applyStyle('HindiLetter1');
+paragraph.listFormat.continueListNumbering();
+
+// Adds the third list item and continues numbering.
+paragraph = section.body.appendParagraph();
+paragraph.appendText('List item 3');
+paragraph.listFormat.applyStyle('HindiLetter1');
+paragraph.listFormat.continueListNumbering();
+
+// Adds an empty paragraph as a separator.
+section.body.appendParagraph();
+
+// Creates a numbered list style with the Hebrew1 pattern.
+listStyle = document.addListStyle(ej.docx.ListType.Numbered, 'Hebrew1');
+levelOne = listStyle.levels.getItem(0);
+levelOne.patternType = ej.docx.ListPatternType.Hebrew1;
+levelOne.startAt = 1;
+
+// Adds a heading paragraph for the Hebrew list.
+paragraph = section.body.appendParagraph();
+paragraph.appendText('List pattern Hebrew');
+
+// Adds the first list item.
+paragraph = section.body.appendParagraph();
+paragraph.appendText('List item 1');
+paragraph.listFormat.applyStyle('Hebrew1');
+
+// Adds the second list item and continues numbering.
+paragraph = section.body.appendParagraph();
+paragraph.appendText('List item 2');
+paragraph.listFormat.applyStyle('Hebrew1');
+paragraph.listFormat.continueListNumbering();
+
+// Adds the third list item and continues numbering.
+paragraph = section.body.appendParagraph();
+paragraph.appendText('List item 3');
+paragraph.listFormat.applyStyle('Hebrew1');
+paragraph.listFormat.continueListNumbering();
+
+// Saves the Word document.
+document.save('Output.docx');
+{% endhighlight %}
 {% endtabs %}
 
 ## Customize List
@@ -326,6 +544,47 @@ paragraph.listFormat.increaseIndentLevel();
 // Saves the Word document.
 document.save('Output.docx');
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Creates a new Word document
+let document = ej.docx.WordDocument.create();
+
+// Adds new list style to the document
+let listStyle = document.addListStyle(ej.docx.ListType.Numbered, 'UserDefinedList');
+
+let levelOne = listStyle.levels.getItem(0);
+// Defines the follow character, prefix, suffix, start index for level 0
+levelOne.followCharacter = ej.docx.FollowCharacterType.Tab;
+levelOne.numberPrefix = '(';
+levelOne.numberSuffix = ')';
+levelOne.patternType = ej.docx.ListPatternType.RomanLow;
+levelOne.startAt = 1;
+levelOne.tabSpaceAfter = 5;
+levelOne.numberAlignment = ej.docx.ListNumberAlignment.Center;
+
+let levelTwo = listStyle.levels.getItem(1);
+// Defines the follow character, suffix, pattern, start index for level 1
+levelTwo.followCharacter = ej.docx.FollowCharacterType.Tab;
+levelTwo.numberSuffix = '}';
+levelTwo.patternType = ej.docx.ListPatternType.LetterLow;
+levelTwo.startAt = 2;
+
+// Access section of document.
+let section = document.sections[0];
+
+// Adds the first paragraph at level 0.
+let paragraph = section.body.paragraphs[0];
+paragraph.appendText('User defined list - Level 0');
+paragraph.listFormat.applyStyle('UserDefinedList');
+
+// Level 1 item: continue prior list, then increase indent
+paragraph = section.body.appendParagraph();
+paragraph.appendText('User defined list - Level 1');
+paragraph.listFormat.continueListNumbering();
+paragraph.listFormat.increaseIndentLevel();
+
+// Saves the Word document.
+document.save('Output.docx');
+{% endhighlight %}
 {% endtabs %}
 
 ## Change List Levels
@@ -338,6 +597,43 @@ import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Creates a new Word document.
 let document = WordDocument.create();
+
+// Access section of document.
+let section = document.sections[0];
+
+// Adds the first paragraph at level 0.
+let paragraph = section.body.paragraphs[0];
+
+paragraph.appendText('Multilevel numbered list - Level 0');
+paragraph.listFormat.applyDefNumberedStyle();
+
+// Adds the second paragraph at level 1.
+paragraph = section.body.appendParagraph();
+
+paragraph.appendText('Multilevel numbered list - Level 1');
+paragraph.listFormat.continueListNumbering();
+paragraph.listFormat.increaseIndentLevel();
+
+// Adds the third paragraph at level 0.
+paragraph = section.body.appendParagraph();
+
+paragraph.appendText('Multilevel numbered list - Level 0');
+paragraph.listFormat.continueListNumbering();
+paragraph.listFormat.decreaseIndentLevel();
+
+// Adds the fourth paragraph at level 1.
+paragraph = section.body.appendParagraph();
+
+paragraph.appendText('Multilevel numbered list - Level 1');
+paragraph.listFormat.continueListNumbering();
+paragraph.listFormat.increaseIndentLevel();
+
+// Saves the Word document.
+document.save('Output.docx');
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Creates a new Word document.
+let document = ej.docx.WordDocument.create();
 
 // Access section of document.
 let section = document.sections[0];
@@ -431,6 +727,56 @@ paragraph.listFormat.increaseIndentLevel();
 // Saves the Word document.
 document.save('Output.docx');
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Create a new Word document.
+let document = ej.docx.WordDocument.create();
+
+// Add a new list style to the document.
+let listStyle = document.addListStyle(ej.docx.ListType.Bulleted, 'UserDefinedList');
+
+let levelOne = listStyle.levels.getItem(0);
+// Define the pattern, bullet character, and start index for level 0.
+levelOne.patternType = ej.docx.ListPatternType.Bullet;
+levelOne.bulletCharacter = '*';
+levelOne.startAt = 1;
+
+let levelTwo = listStyle.levels.getItem(1);
+// Define the pattern, bullet character, and start index for level 1.
+levelTwo.patternType = ej.docx.ListPatternType.Bullet;
+levelTwo.bulletCharacter = '\u00A9';
+levelTwo.characterFormat.fontName = 'Wingdings';
+levelTwo.startAt = 1;
+
+let levelThree = listStyle.levels.getItem(2);
+// Define the pattern, bullet character, and start index for level 2.
+levelThree.patternType = ej.docx.ListPatternType.Bullet;
+levelThree.bulletCharacter = '\u0076';
+levelThree.characterFormat.fontName = 'Wingdings';
+levelThree.startAt = 1;
+
+// Access section of document.
+let section = document.sections[0];
+
+// Adds the first paragraph at level 0.
+let paragraph = section.body.paragraphs[0];
+paragraph.appendText('User defined list - Level 0');
+paragraph.listFormat.applyStyle('UserDefinedList');
+
+// Level 1
+paragraph = section.body.appendParagraph();
+paragraph.appendText('User defined list - Level 1');
+paragraph.listFormat.continueListNumbering();
+paragraph.listFormat.increaseIndentLevel();
+
+// Level 2
+paragraph = section.body.appendParagraph();
+paragraph.appendText('User defined list - Level 2');
+paragraph.listFormat.continueListNumbering();
+paragraph.listFormat.increaseIndentLevel();
+
+// Saves the Word document.
+document.save('Output.docx');
+{% endhighlight %}
 {% endtabs %}
 
 ## Number List with Prefixes
@@ -490,6 +836,56 @@ paragraph.listFormat.increaseIndentLevel();
 // Saves the Word document.
 document.save('Output.docx');
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Create a new Word document.
+let document = ej.docx.WordDocument.create();
+
+// Add a new list style to the document.
+let listStyle = document.addListStyle(ej.docx.ListType.Numbered, 'UserDefinedList');
+
+let levelOne = listStyle.levels.getItem(0);
+// Define the follow character, pattern, and start index for level 0.
+levelOne.followCharacter = ej.docx.FollowCharacterType.Nothing;
+levelOne.patternType = ej.docx.ListPatternType.Arabic;
+levelOne.startAt = 1;
+
+let levelTwo = listStyle.levels.getItem(1);
+// Define the follow character, prefix from previous level, pattern, and start index for level 1.
+levelTwo.followCharacter = ej.docx.FollowCharacterType.Nothing;
+levelTwo.numberPrefix = '\u0000.';
+levelTwo.patternType = ej.docx.ListPatternType.Arabic;
+levelTwo.startAt = 1;
+
+let levelThree = listStyle.levels.getItem(2);
+// Define the follow character, prefix from previous level, pattern, and start index for level 2.
+levelThree.followCharacter = ej.docx.FollowCharacterType.Nothing;
+levelThree.numberPrefix = '\u0000.\u0001.';
+levelThree.patternType = ej.docx.ListPatternType.Arabic;
+levelThree.startAt = 1;
+
+// Access section of document.
+let section = document.sections[0];
+
+// Level 0
+let paragraph = section.body.paragraphs[0];
+paragraph.appendText('User defined list - Level 0');
+paragraph.listFormat.applyStyle('UserDefinedList');
+
+// Level 1
+paragraph = section.body.appendParagraph();
+paragraph.appendText('User defined list - Level 1');
+paragraph.listFormat.continueListNumbering();
+paragraph.listFormat.increaseIndentLevel();
+
+// Level 2
+paragraph = section.body.appendParagraph();
+paragraph.appendText('User defined list - Level 2');
+paragraph.listFormat.continueListNumbering();
+paragraph.listFormat.increaseIndentLevel();
+
+// Saves the Word document.
+document.save('Output.docx');
+{% endhighlight %}
 {% endtabs %}
 
 ## Get List Value
@@ -502,6 +898,17 @@ import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Load an existing Word document.
 let document = WordDocument.open(data);
+
+// Get the string that represents the appearance of the list value of the last paragraph.
+let listString = document.lastParagraph.listString;
+console.log('listString:', JSON.stringify(listString));
+
+// Saves the Word document.
+document.save('Output.docx');
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Load an existing Word document.
+let document = ej.docx.WordDocument.open(data);
 
 // Get the string that represents the appearance of the list value of the last paragraph.
 let listString = document.lastParagraph.listString;

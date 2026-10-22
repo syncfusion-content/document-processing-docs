@@ -25,7 +25,7 @@ The [`ASP.NET MVC`](https://www.syncfusion.com/pdf-viewer-sdk) PDF Viewer is a l
 * [Print](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/print) PDF files.
 * Annotate PDFs with:
     * [Text markup annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/annotation/text-markup-annotation): highlight, underline, and strikethrough
-    * [Shape annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/annotation/shape-annotation): rectangle, circle, polygon, line, and arrow
+    * [Shape annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/annotation/shape-annotation): rectangle, circle, polygon, cloud, line, and arrow
     * [Stamp annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/annotation/stamp-annotation)
     * [Free text annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-mvc/annotation/free-text-annotation)
     * [Link annotations](./annotation/link-annotation)
