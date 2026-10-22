@@ -17,7 +17,6 @@ Document comparison is a server-side operation and it cannot be performed in the
 The .NET Word library (DocIO) enables you to compare two Word documents and highlight the following changes as tracked changes.
 *	Insertions
 *	Deletions
-*	Formatting
 
 After the comparison, the resultant document (with tracked changes) is loaded into the Document Editor on the client side, where you can view the inserted and deleted changes as revisions, and accept or reject them using the Review pane.
 
