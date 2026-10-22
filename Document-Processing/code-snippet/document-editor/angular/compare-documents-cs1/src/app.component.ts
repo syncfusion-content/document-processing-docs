@@ -44,6 +44,8 @@ export class AppComponent {
         httpRequest.responseType = 'text';
         httpRequest.onload = () => {
             if (httpRequest.status === 200 || httpRequest.status === 304) {
+                //Show the tracked changes (revisions) in the Document Editor.
+                (this.documentEditor as DocumentEditorComponent).showRevisions = true;
                 //Open the resultant document (comparison result with tracked changes) in the Document Editor.
                 (this.documentEditor as DocumentEditorComponent).open(httpRequest.responseText);
             } else {
