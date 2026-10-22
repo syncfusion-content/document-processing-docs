@@ -657,6 +657,36 @@ export class AppComponent {
 {% endhighlight %}
 {% endtabs %}
 
+### DateTime Picker
+
+Select a DateTime Picker field in Form Designer to review or change its settings. The toolbar includes the DateTime Picker tool, and the page displays date and time fields.
+
+![DateTime Picker tool and date and time fields in Form Designer](../../../javascript-es5/images/ui-date-time.png)
+
+Date and time fields can also be used to enter values directly or choose a value from the picker:
+
+- For a date field, type a date or open the calendar picker.
+
+  ![Calendar picker open for a DateTime field](../../../javascript-es5/images/ui-date-entry.png)
+
+- For a time field, type a time or open the time picker.
+
+  ![Time picker open for a DateTime field](../../../javascript-es5/images/ui-time-entry.png)
+
+Use the field's **General** properties to review or edit its name, value, tooltip, visibility, read-only and required settings, and print visibility.
+
+![General properties for a DateTime Picker field](../../../javascript-es5/images/ui-date-time-properties.png)
+
+The **Appearance** properties include font, colors, border, and alignment.
+
+![DateTime Picker Appearance](../../../javascript-es5/images/ui-date-time-appearance.png)
+
+Use the **Format** tab to change the field type (Date or Time), select a display format, and review the preview.
+
+![DateTime Picker format settings with type, format, and preview](../../../javascript-es5/images/ui-date-time-format.png)
+
+- API: [updateFormField()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#updateformfields) for value, format script, typography, colors, borders.
+
 [View Sample on GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples)
 
 ## See also
