@@ -5,6 +5,7 @@ platform: document-processing
 control: Essential<sup>&reg;</sup> Presentation
 documentation: UG
 keywords: PowerPoint animation, slide animation, shape animation, pptx animation
+appliesto: Document SDK
 ---
 # Working with Animations in PowerPoint Library
 

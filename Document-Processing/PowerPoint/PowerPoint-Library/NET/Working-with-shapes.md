@@ -4,6 +4,7 @@ description: Explore C# and VB.NET code examples to create, edit, and format Pow
 platform: document-processing
 control: Presentation
 documentation: UG
+appliesto: Document SDK
 ---
 # Working with PowerPoint Shapes
 

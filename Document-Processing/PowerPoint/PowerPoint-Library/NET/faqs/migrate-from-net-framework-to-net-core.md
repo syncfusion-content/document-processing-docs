@@ -4,6 +4,7 @@ description: This section illustrates migrating Syncfusion® .NET PowerPoint (Pr
 platform: document-processing
 control: Presentation
 documentation: UG
+appliesto: Document SDK
 ---
 # Migration to .NET Core in PowerPoint Presentation
 In this section, we will review the changes required when migrating the Syncfusion<sup>&reg;</sup> .NET PowerPoint (Presentation) library from .NET Framework to .NET Core.

@@ -4,6 +4,7 @@ description: Learn about the frequently asked questions of PowerPoint to PDF con
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # FAQs in PowerPoint to PDF Conversion
