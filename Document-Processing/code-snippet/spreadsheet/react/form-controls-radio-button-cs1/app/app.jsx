@@ -7,61 +7,67 @@ function App() {
     const spreadsheetRef = React.useRef(null);
 
     const formControls = [
-        // Shipping options group
+        // Shipping options group - linked to same cell (D2)
         {
             type: 'RadioButton',
             text: 'Standard Shipping',
             cellLink: 'D2',
+            value: 'Unchecked',
             top: 40,
             left: 150,
-            height: 30,
-            width: 60
+            height: 20,
+            width: 120
         },
         {
             type: 'RadioButton',
             text: 'Express Shipping',
-            cellLink: 'D3',
-            top: 80,
+            cellLink: 'D2',
+            value: 'Unchecked',
+            top: 70,
             left: 150,
-            height: 30,
-            width: 60
+            height: 20,
+            width: 120
         },
         {
             type: 'RadioButton',
             text: 'Overnight Shipping',
-            cellLink: 'D4',
-            top: 120,
+            cellLink: 'D2',
+            value: 'Unchecked',
+            top: 100,
             left: 150,
-            height: 30,
-            width: 60
+            height: 20,
+            width: 120
         },
-        // Payment options group
+        // Payment options group - linked to same cell (D4)
         {
             type: 'RadioButton',
             text: 'Credit Card',
-            cellLink: 'D6',
-            top: 200,
+            cellLink: 'D4',
+            value: 'Unchecked',
+            top: 160,
             left: 150,
-            height: 30,
-            width: 60
+            height: 20,
+            width: 120
         },
         {
             type: 'RadioButton',
             text: 'Debit Card',
-            cellLink: 'D7',
-            top: 240,
+            cellLink: 'D4',
+            value: 'Unchecked',
+            top: 190,
             left: 150,
-            height: 30,
-            width: 60
+            height: 20,
+            width: 120
         },
         {
             type: 'RadioButton',
             text: 'Wire Transfer',
-            cellLink: 'D8',
-            top: 280,
+            cellLink: 'D4',
+            value: 'Unchecked',
+            top: 220,
             left: 150,
-            height: 30,
-            width: 60
+            height: 20,
+            width: 120
         }
     ];
 

@@ -15,28 +15,31 @@ function App() {
             type: 'CheckBox',
             text: 'Accept Terms',
             cellLink: 'D2',
+            value: 'Unchecked',
             top: 40,
             left: 150,
-            height: 30,
-            width: 60
+            height: 20,
+            width: 120
         },
         {
             type: 'CheckBox',
             text: 'Enable Notifications',
             cellLink: 'D4',
-            top: 100,
+            value: 'Unchecked',
+            top: 80,
             left: 150,
-            height: 30,
-            width: 60
+            height: 20,
+            width: 120
         },
         {
             type: 'CheckBox',
             text: 'Select All Options',
             cellLink: 'D6',
-            top: 160,
+            value: 'Unchecked',
+            top: 120,
             left: 150,
-            height: 30,
-            width: 60
+            height: 20,
+            width: 120
         }
     ];
 
