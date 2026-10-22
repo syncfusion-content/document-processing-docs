@@ -23,8 +23,7 @@ onMounted(function () {
 
 const onCompare = function () {
   let http = new XMLHttpRequest();
-  // Replace your running web service Url here
-  http.open('POST', 'http://localhost:62869/api/documenteditor/CompareDocuments', true);
+  http.open('POST', 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/CompareDocuments', true);
   http.responseType = 'text';
   //Form data with the original and revised SFDT documents.
   let formData = new FormData();
