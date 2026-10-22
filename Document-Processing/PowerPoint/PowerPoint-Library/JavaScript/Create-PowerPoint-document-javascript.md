@@ -14,7 +14,7 @@ appliesto: Document SDK
 
 The `JavaScript PowerPoint Library` facilitates the creation of a simple PowerPoint presentation with basic elements from scratch.
 
-This guide explains how to integrate the [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) into a JavaScript application using NPM and a module bundler like **Parcel**. The generated PowerPoint presentation is downloaded directly from the browser; no server-side PowerPoint rendering is required.
+This guide explains how to integrate the [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) into a JavaScript application using NPM and a module bundler like **Parcel**. The sample saves the generated PowerPoint presentation with `save('Output.pptx')`.
 
 ## Prerequisites
 
@@ -87,29 +87,8 @@ Create `index.html` in your project root with a button to generate the PowerPoin
             textPart.font.bold = true;
             textPart.font.fontSize = 36;
 
-            try {
-                // Saves the presentation
-                const bytes = await pptxDoc.save();
-
-                // Creates a blob from the bytes
-                const blob = new Blob([bytes], {
-                    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-                });
-
-                // Creates a download link
-                const url = window.URL.createObjectURL(blob);
-                const link = document.createElement('a');
-                link.href = url;
-                link.download = 'Output.pptx';
-
-                // Triggers the download
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-                window.URL.revokeObjectURL(url);
-            } catch (error) {
-                console.error('Error creating PowerPoint file:', error);
-            }
+            // Saves the Presentation to the file system.
+            await pptxDoc.save('Output.pptx');
         });
     </script>
 </body>
@@ -117,7 +96,7 @@ Create `index.html` in your project root with a button to generate the PowerPoin
 {% endhighlight %}
 {% endtabs %}
 
-N> The `save()` method saves the presentation and returns the bytes, which are then converted to a Blob for browser download. The file is sent to the browser's default downloads folder.
+N> The `save()` method saves the presentation to the specified file.
 
 ## Run the Application
 
@@ -135,7 +114,7 @@ Then start the development server:
 npm start
 ```
 
-Parcel serves the application at `http://localhost:5000`. Open this URL in a browser and click **Generate PowerPoint document** to download the generated file as `Output.pptx`.
+Parcel serves the application at `http://localhost:5000`. Open this URL in a browser and click **Generate PowerPoint document**. The sample saves the presentation as `Output.pptx`.
 
 The generated PowerPoint presentation contains a single slide with the text "Hello World!!!".
 

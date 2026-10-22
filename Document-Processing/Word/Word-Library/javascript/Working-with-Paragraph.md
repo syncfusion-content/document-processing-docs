@@ -28,6 +28,17 @@ paragraph.appendText('Adding new paragraph to the document');
 // Save the document
 await document.save('Sample.docx');
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Create a new document
+let document = ej.docx.WordDocument.create();
+let section = document.sections[0];
+// Get paragraph and append text to it
+let paragraph = section.body.paragraphs[0];
+paragraph.appendText('Adding new paragraph to the document');
+
+// Save the document
+await document.save('Sample.docx');
+{% endhighlight %}
 {% endtabs %}
 
 ## Modify an existing paragraph
@@ -47,6 +58,24 @@ let paragraph = section.body.paragraphs[0];
 // Apply bold formatting to the first text range
 for (let item of paragraph.items) {
     if (item instanceof TextRange) {
+        item.characterFormat.bold = true;
+        break;
+    }
+}
+
+// Save the document
+document.save('Sample.docx');
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Load an existing document
+let document = ej.docx.WordDocument.open(data);
+
+let section = document.sections[0];
+let paragraph = section.body.paragraphs[0];
+
+// Apply bold formatting to the first text range
+for (let item of paragraph.items) {
+    if (item instanceof ej.docx.TextRange) {
         item.characterFormat.bold = true;
         break;
     }
@@ -97,6 +126,37 @@ if (paragraph8 instanceof Paragraph) {
 // Save the document
 document.save('Sample.docx');
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Load the document
+let document = ej.docx.WordDocument.open(data);
+let bodyItems = document.sections[0].body.items;
+
+// Apply spacing, indentation, shading, and alignment to paragraph 5 (index 4)
+let paragraph5 = bodyItems[4];
+if (paragraph5 instanceof ej.docx.Paragraph) {
+    paragraph5.paragraphFormat.beforeSpacing = 18;
+    paragraph5.paragraphFormat.afterSpacing = 18;
+    paragraph5.paragraphFormat.lineSpacing = 10;
+    paragraph5.paragraphFormat.firstLineIndent = 10;
+    paragraph5.paragraphFormat.backColor = ej.docx.Color.LightGray;
+    paragraph5.paragraphFormat.horizontalAlignment = ej.docx.ParagraphAlignment.Right;
+}
+
+// Keep paragraph 7 (index 6) with the next paragraph
+let paragraph7 = bodyItems[6];
+if (paragraph7 instanceof ej.docx.Paragraph) {
+    paragraph7.paragraphFormat.keepFollow = true;
+}
+
+// Keep paragraph 8 (index 7) lines together
+let paragraph8 = bodyItems[7];
+if (paragraph8 instanceof ej.docx.Paragraph) {
+    paragraph8.paragraphFormat.keepLines = true;
+}
+
+// Save the document
+document.save('Sample.docx');
+{% endhighlight %}
 {% endtabs %}
 
 ### Tab stop
@@ -128,6 +188,24 @@ paragraph.paragraphFormat.tabs.removeByPosition(11);
 // Save the document
 document.save('Sample.docx');
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Create a new document and access the paragraph
+let document = ej.docx.WordDocument.create();
+let paragraph = document.sections[0].body.paragraphs[0];
+
+// Add tab stops to the paragraph
+paragraph.paragraphFormat.tabs.addTab(11, ej.docx.TabJustification.Left, ej.docx.TabLeader.Dot);
+paragraph.paragraphFormat.tabs.addTab(62, ej.docx.TabJustification.Left, ej.docx.TabLeader.Single);
+
+// Add text that uses the tab stops
+paragraph.appendText('This sample\t illustrates the use of tabs in the paragraph. Tabs\t can be inserted or removed from the paragraph.');
+
+// Optionally remove a tab stop by position
+paragraph.paragraphFormat.tabs.removeByPosition(11);
+
+// Save the document
+document.save('Sample.docx');
+{% endhighlight %}
 {% endtabs %}
 
 ### RTL paragraph
@@ -142,6 +220,22 @@ import { WordDocument, Paragraph } from '@syncfusion/ej2-docx';
 
 // Load an existing document
 let document = WordDocument.open(data);
+
+// Access the second body item (index 1)
+let paragraph = document.sections[0].body.items[1];
+let isRTL = paragraph.paragraphFormat.bidi; 
+
+if (!isRTL) { 
+paragraph.paragraphFormat.bidi = true; 
+
+} 
+
+// Save the document
+await document.save('Sample.docx');
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Load an existing document
+let document = ej.docx.WordDocument.open(data);
 
 // Access the second body item (index 1)
 let paragraph = document.sections[0].body.items[1];
@@ -182,6 +276,20 @@ if (style instanceof ParagraphStyle) {
 // Save the document
 document.save('Output.docx');
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Load an existing Word document
+let document = ej.docx.WordDocument.open(data);
+
+let styles = document.styles;
+let style = styles.findByName('Heading1');
+if (style instanceof ej.docx.ParagraphStyle) {
+    style.characterFormat.textColor = ej.docx.Color.DarkBlue;
+    style.paragraphFormat.firstLineIndent = 36;
+}
+
+// Save the document
+document.save('Output.docx');
+{% endhighlight %}
 {% endtabs %}
 
 ### Creating a new paragraph style
@@ -200,6 +308,27 @@ let myStyle = document.styles.addParagraphStyle('MyStyle');
 myStyle.characterFormat.fontSize = 16;
 myStyle.characterFormat.textColor = Color.DarkBlue;
 myStyle.paragraphFormat.horizontalAlignment = ParagraphAlignment.Right;
+
+// Append content to the last paragraph
+document.lastParagraph.appendText(
+    'AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.'
+);
+
+// Apply the style to the paragraph
+document.lastParagraph.applyStyle('MyStyle');
+
+// Save the document
+document.save('Output.docx');
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Load an existing Word document
+let document = ej.docx.WordDocument.open(data);
+
+// Create a custom paragraph style
+let myStyle = document.styles.addParagraphStyle('MyStyle');
+myStyle.characterFormat.fontSize = 16;
+myStyle.characterFormat.textColor = ej.docx.Color.DarkBlue;
+myStyle.paragraphFormat.horizontalAlignment = ej.docx.ParagraphAlignment.Right;
 
 // Append content to the last paragraph
 document.lastParagraph.appendText(
@@ -231,6 +360,16 @@ document.lastParagraph.applyStyle('Emphasis');
 // Save the document
 document.save('Output.docx');
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Load an existing Word document
+let document = ej.docx.WordDocument.open(data);
+
+// Apply the built-in Emphasis style
+document.lastParagraph.applyStyle('Emphasis');
+
+// Save the document
+document.save('Output.docx');
+{% endhighlight %}
 {% endtabs %}
 
 ### Remove styles
@@ -247,6 +386,19 @@ let document = WordDocument.open(data);
 let styles = document.styles;
 let style = styles.findByName('Style1');
 if (style instanceof ParagraphStyle) {
+    style.remove();
+}
+
+// Save the document
+document.save('Output.docx');
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Load an existing Word document
+let document = ej.docx.WordDocument.open(data);
+
+let styles = document.styles;
+let style = styles.findByName('Style1');
+if (style instanceof ej.docx.ParagraphStyle) {
     style.remove();
 }
 
@@ -280,6 +432,22 @@ text.characterFormat.textColor = Color.Green;
 // Save the document
 document.save('Sample.docx');
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Create a new document and access the paragraph
+let document = ej.docx.WordDocument.create();
+let paragraph = document.sections[0].body.paragraphs[0];
+
+// Add text and get the created text range
+let text = paragraph.appendText('A new text is added to the paragraph.');
+
+// Apply character formatting to the text range
+text.characterFormat.fontSize = 14;
+text.characterFormat.bold = true;
+text.characterFormat.textColor = ej.docx.Color.Green;
+
+// Save the document
+document.save('Sample.docx');
+{% endhighlight %}
 {% endtabs %}
 
 Text in a paragraph can be modified or replaced with new text by iterating through the paragraph items.
@@ -298,6 +466,25 @@ let block = document.sections[0].body.items[3];
 if (block instanceof Paragraph) {
     for (let item of block.items) {
         if (item instanceof TextRange) {
+            item.text = 'First text range of the last paragraph is replaced';
+            item.characterFormat.fontSize = 14;
+            break;
+        }
+    }
+}
+
+// Save the document
+document.save('Sample.docx');
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Load an existing document
+let document = ej.docx.WordDocument.open(data));
+
+// Modify the first text range of the paragraph at body index 3
+let block = document.sections[0].body.items[3];
+if (block instanceof ej.docx.Paragraph) {
+    for (let item of block.items) {
+        if (item instanceof ej.docx.TextRange) {
             item.text = 'First text range of the last paragraph is replaced';
             item.characterFormat.fontSize = 14;
             break;
@@ -365,6 +552,46 @@ let fourthParagraph = document.sections[0].body.appendParagraph();
 fourthParagraph.appendText('m');
 let seventhText = fourthParagraph.appendText('3');
 seventhText.characterFormat.subSuperScript = SubSuperScript.SubScript;
+
+// Save the document
+document.save('Sample.docx');
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Create a new document and get the first paragraph
+let document = ej.docx.WordDocument.create();
+let firstParagraph = document.sections[0].body.paragraphs[0];
+
+// Add the first text range and apply formatting
+let firstText = firstParagraph.appendText('This is the first text range. ');
+firstText.characterFormat.bold = true;
+firstText.characterFormat.fontSize = 14;
+firstText.characterFormat.shadow = true;
+firstText.characterFormat.smallCaps = true;
+
+// Add the second text range and apply formatting
+let secondText = firstParagraph.appendText('This is the second text range');
+secondText.characterFormat.highlightColor = ej.docx.Color.Green;
+secondText.characterFormat.underlineStyle = ej.docx.UnderlineStyle.DotDash;
+secondText.characterFormat.italic = true;
+secondText.characterFormat.fontName = 'Times New Roman';
+secondText.characterFormat.textColor = ej.docx.Color.Green;
+
+// Add the second paragraph with RTL text formatting
+let secondParagraph = document.sections[0].body.appendParagraph();
+let thirdText = secondParagraph.appendText('שלום עולם');
+thirdText.characterFormat.bidi = true;
+
+// Add the third paragraph and apply superscript formatting
+let thirdParagraph = document.sections[0].body.appendParagraph();
+thirdParagraph.appendText('X');
+let fifthText = thirdParagraph.appendText('2');
+fifthText.characterFormat.subSuperScript = ej.docx.SubSuperScript.SuperScript;
+
+// Add the fourth paragraph and apply subscript formatting
+let fourthParagraph = document.sections[0].body.appendParagraph();
+fourthParagraph.appendText('m');
+let seventhText = fourthParagraph.appendText('3');
+seventhText.characterFormat.subSuperScript = ej.docx.SubSuperScript.SubScript;
 
 // Save the document
 document.save('Sample.docx');

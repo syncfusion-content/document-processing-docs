@@ -14,7 +14,7 @@ appliesto: Document SDK
 
 The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) is used to create, read, and edit PowerPoint presentations. The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) also offers functionality to insert shapes, images, text, and paragraphs with rich formatting.
 
-This guide explains how to integrate the [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) into a Vue application that runs in the browser. The generated PowerPoint presentation is downloaded directly from the browser; no server-side PowerPoint rendering is required.
+This guide explains how to integrate the [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) into a Vue application that runs in the browser. The sample saves the generated PowerPoint presentation with `save('Output.pptx')`.
 
 > Vue 2 reached end-of-life on December 31, 2023. This guide leads with **Vue 3** (recommended) and provides a separate Vue 2 path for legacy projects.
 
@@ -121,29 +121,8 @@ export default {
       textPart.font.bold = true;
       textPart.font.fontSize = 36;
 
-      try {
-        // Saves the presentation
-        const bytes = await pptxDoc.save();
-
-        // Creates a blob from the bytes
-        const blob = new Blob([bytes], {
-          type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-        });
-
-        // Creates a download link
-        const url = window.URL.createObjectURL(blob);
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = 'Output.pptx';
-
-        // Triggers the download
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        window.URL.revokeObjectURL(url);
-      } catch (error) {
-        console.error('Error creating PowerPoint file:', error);
-      }
+      // Saves the Presentation to the file system.
+      await pptxDoc.save('Output.pptx');
     }
   }
 };
@@ -171,7 +150,7 @@ Open a terminal in the project root and start the Vite development server:
 npm run dev
 ```
 
-Vite serves the application at `http://localhost:5173`. Open this URL in a browser and click **Create PowerPoint document** to download the generated file as `Output.pptx`.
+Vite serves the application at `http://localhost:5173`. Open this URL in a browser and click **Create PowerPoint document**. The sample saves the presentation as `Output.pptx`.
 
 
 ## See Also

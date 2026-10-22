@@ -14,7 +14,7 @@ appliesto: Document SDK
 
 The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) is used to create, read, and edit PowerPoint presentations. The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) also offers functionality to insert shapes, images, text, and paragraphs with rich formatting.
 
-This guide explains how to integrate the [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) into an Angular application that runs in the browser. The generated PowerPoint presentation is downloaded directly from the browser; no server-side PowerPoint rendering is involved.
+This guide explains how to integrate the [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) into an Angular application that runs in the browser. The sample saves the generated PowerPoint presentation with `save('Output.pptx')`.
 
 
 ## Prerequisites
@@ -138,35 +138,14 @@ export class AppComponent {
     textPart.font.bold = true;
     textPart.font.fontSize = 36;
 
-    try {
-      // Saves the presentation
-      const bytes = await pptxDoc.save();
-
-      // Creates a blob from the bytes
-      const blob = new Blob([bytes as Uint8Array], {
-        type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-      });
-
-      // Creates a download link
-      const url = window.URL.createObjectURL(blob);
-      const link = document.createElement('a');
-      link.href = url;
-      link.download = 'Output.pptx';
-
-      // Triggers the download
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      window.URL.revokeObjectURL(url);
-    } catch (error) {
-      console.error('Error creating PowerPoint file:', error);
-    }
+    // Saves the Presentation to the file system.
+    await pptxDoc.save('Output.pptx');
   }
 }
 {% endhighlight %}
 {% endtabs %}
 
-N> The `save()` method saves the presentation and returns the bytes, which are then converted to a Blob for browser download. The file is sent to the browser's default downloads folder.
+N> The `save()` method saves the presentation to the specified file.
 
 ## Run the Application
 
@@ -176,7 +155,7 @@ Use the following command to run the application in the browser:
 ng serve --open
 ```
 
-When you click **Create PowerPoint document**, the PowerPoint file is generated in the browser and downloaded as `Output.pptx` to your default downloads folder.
+When you click **Create PowerPoint document**, the sample saves the presentation as `Output.pptx`.
 
 
 ## Additional Resources
