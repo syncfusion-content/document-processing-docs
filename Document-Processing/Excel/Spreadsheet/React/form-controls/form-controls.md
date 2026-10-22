@@ -11,13 +11,15 @@ documentation: ug
 
 The Spreadsheet component provides built-in form controls that allow users to add interactive controls within a worksheet. Form controls are worksheet-level objects and are associated with individual worksheets rather than the workbook.
 
-## Overview
+## Supported Form Controls
 
 The Spreadsheet supports the following form controls:
 
 - **Check Box**: Allows toggling between checked and unchecked states.
 - **Radio Button**: Allows selecting a single option from a group of choices.
 - **Combo Box (Dropdown)**: Allows selecting from a predefined list of values.
+
+The following sections describe each supported form control and its configuration options.
 
 ### Inserting Form Controls
 
@@ -40,18 +42,6 @@ All form controls support the following operations:
 ### Worksheet-Based Behavior
 
 Form controls are worksheet-specific. A form control created in one worksheet exists only in that worksheet and does not appear in other worksheets within the workbook.
-
-### Supported Features
-
-- Worksheet-based form controls
-- Check Box with mixed state
-- Radio Button selection
-- Combo Box (Dropdown) with input ranges
-- Cell Link integration
-- Excel import and export support
-- RTL support
-- Editable captions for Check Box and Radio Button controls
-- Clipboard operations
 
 ## Check Box Form Control
 
@@ -101,9 +91,9 @@ When a Check Box is right-clicked and the **Format Control** dialog is opened, t
 2. Select **Format Control** from the context menu.
 3. The Format Control dialog will display state options and Cell Link configuration.
 
-### Check Box Cell Link Support
+### Cell Link Support
 
-The Format Control dialog provides a **Cell Link** input box for linking the Check Box to a specific cell.
+The Format Control dialog provides a **Cell Link** field that links the Check Box to a worksheet cell.
 
 #### Setting Cell Link
 
@@ -119,35 +109,7 @@ When a cell link is configured, the linked cell reflects the state of the Check 
 - **Checked** → linked cell value: **TRUE**
 - **Mixed** → linked cell value reflects the mixed state
 
-The linked cell value is automatically synchronized whenever the Check Box state changes.
-
-### Common Check Box Operations
-
-#### Moving and Resizing
-- **Drag**: Click and drag a Check Box to move it to a different location in the worksheet.
-- **Resize**: Drag the edges of the Check Box to adjust its size.
-- **Undo/Redo**: Use Ctrl+Z (Undo) and Ctrl+Y (Redo) to revert or reapply resize operations.
-
-#### Deletion
-- **Delete**: Right-click the Check Box and select Delete, or press Delete key after selecting the Check Box.
-- **Undo/Redo**: Use Ctrl+Z to undo deletion operations.
-
-#### Clipboard Operations
-- **Cut**: Right-click the Check Box and select Cut (or Ctrl+X).
-- **Copy**: Right-click the Check Box and select Copy (or Ctrl+C).
-- **Paste**: Right-click a cell and select Paste (or Ctrl+V).
-
-### Check Box Worksheet Interaction
-
-Check Box controls are worksheet-specific. A Check Box created in one worksheet exists only in that worksheet.
-
-### Check Box Import and Export Support
-
-Check Box form controls are supported during Excel import and export operations. Check Box controls retain their configuration, caption, and cell link settings during import and export.
-
-### Check Box RTL Support
-
-Check Box controls support Right-to-Left (RTL) layouts. When RTL mode is enabled, Check Box controls render and function appropriately in RTL direction.
+The linked cell value is automatically updated whenever the Check Box state changes.
 
 ### Check Box Limitations
 
@@ -203,9 +165,9 @@ When a Radio Button is right-clicked and the **Format Control** dialog is opened
 2. Select **Format Control** from the context menu.
 3. The Format Control dialog will display state options and Cell Link configuration.
 
-### Radio Button Cell Link Support
+### Cell Link Support
 
-The Format Control dialog includes a **Cell Link** input box for linking the Radio Button to a specific cell.
+The Format Control dialog includes a **Cell Link** field for linking the Radio Button to a worksheet cell.
 
 #### Setting Cell Link
 
@@ -225,34 +187,6 @@ The linked cell value is automatically updated whenever the Radio Button state c
 ### Selection Behavior
 
 Once a Radio Button is selected, clicking the same Radio Button again does not uncheck it.
-
-### Common Radio Button Operations
-
-#### Moving and Resizing
-- **Drag**: Click and drag a Radio Button to move it to a different location in the worksheet.
-- **Resize**: Drag the edges of the Radio Button to adjust its size.
-- **Undo/Redo**: Use Ctrl+Z (Undo) and Ctrl+Y (Redo) to revert or reapply resize operations.
-
-#### Deletion
-- **Delete**: Right-click the Radio Button and select Delete, or press Delete key after selecting the Radio Button.
-- **Undo/Redo**: Use Ctrl+Z to undo deletion operations.
-
-#### Clipboard Operations
-- **Cut**: Right-click the Radio Button and select Cut (or Ctrl+X).
-- **Copy**: Right-click the Radio Button and select Copy (or Ctrl+C).
-- **Paste**: Right-click a cell and select Paste (or Ctrl+V).
-
-### Radio Button Worksheet Interaction
-
-Radio Button controls are worksheet-specific. Radio Buttons created in one worksheet exist only in that worksheet.
-
-### Radio Button Import and Export Support
-
-Radio Button form controls are supported during Excel import and export operations. Radio Button controls retain their configuration, caption, and cell link settings during import and export.
-
-### Radio Button RTL Support
-
-Radio Button controls support Right-to-Left (RTL) layouts. When RTL mode is enabled, Radio Button controls render and function appropriately in RTL direction.
 
 ### Radio Button Limitations
 
@@ -317,14 +251,14 @@ The **Input Range** field specifies the source range that contains the list valu
 Input Range: H1:H11
 ```
 
-This configuration makes cells H1 through H11 the source of combo box options. When users click the combo box button, they will see the values from this range as selectable options.
+This configuration uses cells H1 through H11 as the source for Combo Box options. When users click the combo box button, they will see the values from this range as selectable options.
 
 ##### Range Specification Guidelines
 
 - **Single Column Range**: Use vertical range format (e.g., H1:H11).
 - **Cell References**: Use absolute references ($H$1:$H$11) for stable references when copying the combo box.
 
-#### Combo Box Cell Link
+#### Cell Link
 
 The **Cell Link** field specifies the destination cell to store the selected item index when a user makes a selection from the Combo Box (Dropdown).
 
@@ -344,7 +278,7 @@ With this configuration:
 - The combo box lists values from H1 to H11
 - When a user selects an option, the **position/index** of that option is stored in cell K10
 
-### Combo Box Cell Link Behavior
+### Cell Link Behavior
 
 When a value is selected from the Combo Box (Dropdown) control:
 
@@ -384,34 +318,6 @@ This formula will return the actual selected value from the Input Range using th
 
 The linked cell updates automatically whenever a selection is made from the Combo Box (Dropdown).
 
-### Common Combo Box (Dropdown) Operations
-
-#### Moving and Resizing
-- **Drag**: Click and drag a Combo Box (Dropdown) control to move it to a different location in the worksheet.
-- **Resize**: Drag the edges of the Combo Box (Dropdown) to adjust its size.
-- **Undo/Redo**: Use Ctrl+Z (Undo) and Ctrl+Y (Redo) to revert or reapply resize operations.
-
-#### Deletion
-- **Delete**: Right-click the Combo Box (Dropdown) and select Delete, or press Delete key after selecting the Combo Box (Dropdown).
-- **Undo/Redo**: Use Ctrl+Z to undo deletion operations.
-
-#### Clipboard Operations
-- **Cut**: Right-click the Combo Box (Dropdown) and select Cut (or Ctrl+X).
-- **Copy**: Right-click the Combo Box (Dropdown) and select Copy (or Ctrl+C).
-- **Paste**: Right-click a cell and select Paste (or Ctrl+V).
-
-### Combo Box Worksheet Interaction
-
-Combo Box (Dropdown) controls are worksheet-specific. A Combo Box (Dropdown) created in one worksheet exists only in that worksheet.
-
-### Combo Box Import and Export Support
-
-Combo Box (Dropdown) form controls are supported during Excel import and export operations. Combo Box (Dropdown) controls retain their Input Range and Cell Link settings during import and export.
-
-### Combo Box RTL Support
-
-Combo Box (Dropdown) controls support Right-to-Left (RTL) layouts. When RTL mode is enabled, Combo Box (Dropdown) controls render and function appropriately in RTL direction.
-
 ### Combo Box Limitations
 
 - Each Combo Box (Dropdown) occupies a single cell location.
@@ -419,6 +325,34 @@ Combo Box (Dropdown) controls support Right-to-Left (RTL) layouts. When RTL mode
 - The Cell Link stores the index of the selected item, not the item value itself.
 - Input Range and Cell Link must reference cells in the same worksheet.
 - Input Range must be a contiguous cell range.
+
+## Common Form Control Operations
+
+### Moving and Resizing
+- **Drag**: Click and drag a form control to move it to a different location in the worksheet.
+- **Resize**: Drag the edges of a form control to adjust its size.
+- **Undo/Redo**: Use Ctrl+Z (Undo) and Ctrl+Y (Redo) to revert or reapply resize operations.
+
+### Deletion
+- **Delete**: Right-click the form control and select Delete, or press Delete key after selecting the form control.
+- **Undo/Redo**: Use Ctrl+Z to undo deletion operations.
+
+### Clipboard Operations
+- **Cut**: Right-click the form control and select Cut (or Ctrl+X).
+- **Copy**: Right-click the form control and select Copy (or Ctrl+C).
+- **Paste**: Right-click a cell and select Paste (or Ctrl+V).
+
+## Worksheet Interaction
+
+Form controls are worksheet-specific. A form control created in one worksheet exists only in that worksheet and does not appear in other worksheets within the workbook.
+
+## Import and Export Support
+
+Form controls are supported during Excel import and export operations. Form controls retain their configuration, caption, and cell link settings during import and export. This applies to all form control types: Check Box, Radio Button, and Combo Box (Dropdown).
+
+## RTL Support
+
+Form controls support Right-to-Left (RTL) layouts. When RTL mode is enabled, form controls render and function appropriately in RTL direction. This applies to all form control types: Check Box, Radio Button, and Combo Box (Dropdown).
 
 ## See Also
 
