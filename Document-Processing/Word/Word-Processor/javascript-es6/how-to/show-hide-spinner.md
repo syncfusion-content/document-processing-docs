@@ -6,6 +6,7 @@ platform: document-processing
 control: Show or Hide Spinner
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Show and Hide Spinner in TypeScript DOCX Editor

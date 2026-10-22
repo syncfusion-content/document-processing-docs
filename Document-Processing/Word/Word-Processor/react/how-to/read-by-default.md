@@ -6,6 +6,7 @@ control: Read by default
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Open React DOCX Editor in Read-Only Mode

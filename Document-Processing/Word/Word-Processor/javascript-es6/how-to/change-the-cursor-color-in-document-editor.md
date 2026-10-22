@@ -6,6 +6,7 @@ platform: document-processing
 control: Change the Cursor Color in the DOCX Editor
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Change Cursor Color in TypeScript DOCX Editor

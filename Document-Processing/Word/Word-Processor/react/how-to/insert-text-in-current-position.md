@@ -6,6 +6,7 @@ control: Insert text in current position
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Insert Content at Cursor in React DOCX Editor

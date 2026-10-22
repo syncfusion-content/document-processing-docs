@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: dialogs
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 # Dialogs in WPF DOCX Editor
 

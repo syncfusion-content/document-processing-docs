@@ -6,6 +6,7 @@ platform: document-processing
 control: Set the Default Format in the DOCX Editor
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Set Default Format in TypeScript DOCX Editor

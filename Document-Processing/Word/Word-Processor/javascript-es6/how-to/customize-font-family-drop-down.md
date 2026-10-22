@@ -6,6 +6,7 @@ platform: document-processing
 control: Customize Font Family Drop-Down
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Customize Font Family in TypeScript DOCX Editor

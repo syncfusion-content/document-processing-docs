@@ -6,6 +6,7 @@ control: Get current word
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Get Current Word in React DOCX Editor

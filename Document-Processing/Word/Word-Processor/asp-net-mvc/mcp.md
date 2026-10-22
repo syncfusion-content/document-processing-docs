@@ -5,6 +5,7 @@ description: The Syncfusion® ASP.NET MVC MCP Server provides setup guidance, in
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # MCP Server for ASP.NET MVC DOCX Editor

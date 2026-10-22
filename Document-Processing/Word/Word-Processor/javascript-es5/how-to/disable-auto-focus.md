@@ -6,6 +6,7 @@ platform: document-processing
 control: Disable Auto Focus
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Disable Auto Focus in JavaScript DOCX Editor

@@ -6,6 +6,7 @@ platform: document-processing
 control: Image 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Images in JavaScript DOCX Editor

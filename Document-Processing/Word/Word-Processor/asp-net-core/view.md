@@ -5,6 +5,7 @@ description: View in ASP.NET Core DOCX Editor enables web layout, ruler display,
 platform: document-processing
 control: View
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # View in ASP.NET Core DOCX Editor

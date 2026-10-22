@@ -6,6 +6,7 @@ platform: document-processing
 control: Hide Toolbar and Properties Pane
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Hide Toolbar and Properties Pane in JavaScript DOCX Editor

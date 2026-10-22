@@ -6,6 +6,7 @@ platform: document-processing
 control: Import 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Import in TypeScript DOCX Editor

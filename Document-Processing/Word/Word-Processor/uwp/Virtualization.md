@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: virtualization,ui-virtualization,performance,memory,rendering
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 # Virtualization in UWP DOCX Editor
 

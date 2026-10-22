@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: radial-menu,sf-radial-menu
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 # Radial Menu in UWP DOCX Editor
 

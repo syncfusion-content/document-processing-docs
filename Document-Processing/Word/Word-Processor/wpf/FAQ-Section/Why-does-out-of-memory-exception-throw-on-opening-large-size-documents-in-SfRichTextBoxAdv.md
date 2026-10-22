@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: out-of-memory-exception
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Memory Issues with Large Documents in WPF DOCX Editor

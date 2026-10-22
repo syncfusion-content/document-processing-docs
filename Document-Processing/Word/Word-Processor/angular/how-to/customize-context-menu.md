@@ -6,6 +6,7 @@ platform: document-processing
 control: Customize context menu
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Customize Context Menu in Angular DOCX Editor
