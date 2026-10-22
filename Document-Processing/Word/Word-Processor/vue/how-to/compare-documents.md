@@ -1,141 +1,31 @@
 ---
 layout: post
 title: How to Compare Word Documents in Vue DOCX Editor | Syncfusion
-description: Compare two Word documents in Syncfusion® Vue DOCX Editor using server-side DocIO and view the resultant document with tracked changes.
-control: Compare documents
+description: Learn how to compare two Word documents on the server side using DocIO and view the resultant document with tracked changes in Syncfusion® Vue DOCX Editor.
 platform: document-processing
+control: Compare Word documents
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
 # How to Compare Word Documents in Vue DOCX Editor
 
-Comparing two Word documents allows you to identify the changes between two versions of a document. The [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) does not provide built-in support for comparing documents on the client side. However, similar to mail merge, you can achieve this using the server-side Word Library ([DocIO](https://help.syncfusion.com/document-processing/word/word-library/net/overview)) as a dependency and view the resultant document with tracked changes in the Document Editor.
+In this article, we are going to see how to compare two Word documents and view the resultant document with tracked changes in the Document Editor.
 
-The comparison highlights the following changes as tracked revisions:
+Document comparison is a server-side operation and it cannot be performed in the client side alone, because the Document Editor performs comparison using the .NET Word library (DocIO) on the server side. Similar to performing mail merge operations, you can achieve document comparison using [DocIO](https://www.syncfusion.com/document-sdk/net-word-library) as a dependency in your server-side Web API project.
 
-* Insertions
-* Deletions
-* Formatting
+The .NET Word library (DocIO) enables you to compare two Word documents and highlight the following changes as tracked changes.
+*	Insertions
+*	Deletions
+*	Formatting
 
-N> 1. DocIO performs word level comparison while comparing two Word documents. In this scenario, if a single character in a word is changed, the entire word will be highlighted as changed.
-N> 2. Comparing two Word documents is supported in DOCX format only. So, the SFDT content is converted to DOCX format in the server side before comparison.
+After the comparison, the resultant document (with tracked changes) is loaded into the Document Editor on the client side, where you can view the inserted and deleted changes as revisions, and accept or reject them using the Review pane.
 
-To learn more about the comparison functionality in DocIO, refer to this [page](https://help.syncfusion.com/document-processing/word/word-library/net/word-document/compare-word-documents).
+## Compare documents using server-side Web API
 
-## Compare documents on the server side
+Add a Web API controller in the server-side project to compare the original and revised documents using the `Compare` method of DocIO, and then load the compared document into the `WordDocument` instance of the Document Editor server-side library to serialize it as SFDT (Syncfusion Document Text) content. Send the resultant SFDT content back to the client side to open it in the Document Editor.
 
-* In the client-side, send the original and revised documents to the server using a button click action. The documents can be sent as [`FormData`](https://developer.mozilla.org/en-US/docs/Web/API/FormData) with file content, file name, author name, and date time details.
-
-The following example code illustrates how to send the original and revised SFDT documents to the server side for comparison.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<template>
-  <div id="app">
-    <button id='compare' v-on:click="onCompare">Compare Documents</button>
-    <ejs-documenteditor ref='documenteditor' :serviceUrl='serviceUrl' :isReadOnly='false' :enableTrackChanges='true'
-      :enableSelection='true' :enableSfdtImport='true' :enableSfdtExport='true' height="590px"></ejs-documenteditor>
-  </div>
-</template>
-<script setup>
-import { onMounted, ref, provide } from 'vue';
-import { DocumentEditorComponent as EjsDocumenteditor, SfdtExport, Selection, Editor, UndoRedo, View } from '@syncfusion/ej2-vue-documenteditor';
-
-const documenteditor = ref(null);
-const serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
-
-//Inject required modules.
-provide('DocumentEditor', [SfdtExport, Selection, Editor, UndoRedo, View]);
-
-const onCompare = function () {
-  let http = new XMLHttpRequest();
-  // Replace your running web service Url here
-  http.open('POST', 'http://localhost:62869/api/documenteditor/CompareDocuments', true);
-  http.responseType = 'text';
-  //Form data with the original and revised SFDT documents.
-  let formData = new FormData();
-  formData.append('originalFile', new File([originalDocument], 'original.sfdt', { type: 'application/json' }));
-  formData.append('revisedFile', new File([revisedDocument], 'revised.sfdt', { type: 'application/json' }));
-  formData.append('author', 'Author');
-  formData.append('dateTime', new Date().toISOString());
-  http.onreadystatechange = () => {
-    if (http.readyState === 4) {
-      if (http.status === 200 || http.status === 304) {
-        // Open the resultant SFDT content (with tracked changes) in the Document Editor.
-        documenteditor.value.open(http.responseText);
-      } else {
-        alert('Failed to compare the documents. Please try again.');
-      }
-    }
-  };
-  http.send(formData);
-}
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<template>
-  <div id="app">
-    <button id='compare' v-on:click="onCompare">Compare Documents</button>
-    <ejs-documenteditor ref='documenteditor' :serviceUrl='serviceUrl' :isReadOnly='false' :enableTrackChanges='true'
-      :enableSelection='true' :enableSfdtImport='true' :enableSfdtExport='true' height="590px"></ejs-documenteditor>
-  </div>
-</template>
-<script>
-import { DocumentEditorComponent, SfdtExport, Selection, Editor, UndoRedo, View } from '@syncfusion/ej2-vue-documenteditor';
-
-export default {
-  components: {
-    'ejs-documenteditor': DocumentEditorComponent
-  },
-  data() {
-    return {
-      serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/'
-    };
-  },
-  provide: {
-    //Inject required modules.
-    DocumentEditor: [SfdtExport, Selection, Editor, UndoRedo, View]
-  },
-  methods: {
-    onCompare: function () {
-      let http = new XMLHttpRequest();
-      // Replace your running web service Url here
-      http.open('POST', 'http://localhost:62869/api/documenteditor/CompareDocuments', true);
-      http.responseType = 'text';
-      //Form data with the original and revised SFDT documents.
-      let formData = new FormData();
-      formData.append('originalFile', new File([originalDocument], 'original.sfdt', { type: 'application/json' }));
-      formData.append('revisedFile', new File([revisedDocument], 'revised.sfdt', { type: 'application/json' }));
-      formData.append('author', 'Author');
-      formData.append('dateTime', new Date().toISOString());
-      http.onreadystatechange = () => {
-        if (http.readyState === 4) {
-          if (http.status === 200 || http.status === 304) {
-            // Open the resultant SFDT content (with tracked changes) in the Document Editor.
-            this.$refs.documenteditor.open(http.responseText);
-          } else {
-            alert('Failed to compare the documents. Please try again.');
-          }
-        }
-      };
-      http.send(formData);
-    }
-  }
-};
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
-
-* In the server-side, add a Web API in the controller file to compare the documents using the `Compare` method of DocIO. The resultant document is converted back to SFDT and returned to the client-side.
-
-The following example code illustrates how to compare the original and revised documents in the server side.
+The following example code illustrates how to add the `CompareDocuments` Web API in the controller file to compare the original and revised documents using DocIO.
 
 ```c#
 [AcceptVerbs("Post")]
@@ -148,22 +38,21 @@ public string CompareDocuments([FromForm] CompareParameter data)
         return null;
     IFormFile originalFile = data.OriginalFile;
     IFormFile revisedFile = data.RevisedFile;
-
     try
     {
         using (WDocument revisedDocument = GetWordDocument(revisedFile))
         {
             using (WDocument originalDocument = GetWordDocument(originalFile))
             {
-                //Compare the original and revised documents.
+                //Compares the original document with the revised document and highlights the changes as tracked changes.
                 originalDocument.Compare(revisedDocument);
                 //Hooks MetafileImageParsed event.
                 WordDocument.MetafileImageParsed += OnMetafileImageParsed;
+                //Loads the compared document into the WordDocument instance of the Document Editor server-side library.
                 WordDocument document = WordDocument.Load(originalDocument);
                 //Unhooks MetafileImageParsed event.
                 WordDocument.MetafileImageParsed -= OnMetafileImageParsed;
-
-                //Serialize the resultant document as SFDT and return it to the client-side.
+                //Serializes the compared document as SFDT content.
                 string json = Newtonsoft.Json.JsonConvert.SerializeObject(document);
                 document.Dispose();
                 return json;
@@ -192,14 +81,13 @@ private static WDocument GetWordDocument(IFormFile file)
         file.FileName.Substring(index) : ".docx";
     file.CopyTo(stream);
     stream.Position = 0;
-
     WDocument document;
     if (type == ".sfdt")
     {
+        //Converts the SFDT content to DOCX format for comparison.
         using (var reader = new StreamReader(stream))
         {
             string sfdtContent = reader.ReadToEnd();
-            //Convert the SFDT content to DOCX format.
             document = WordDocument.Save(sfdtContent);
             var outStream = new MemoryStream();
             document.Save(outStream, WFormatType.Docx);
@@ -210,6 +98,7 @@ private static WDocument GetWordDocument(IFormFile file)
     }
     else
     {
+        //Loads the DOCX document for comparison.
         document = new WDocument(stream, GetWFormatType(type));
         stream.Dispose();
         return document;
@@ -219,9 +108,37 @@ private static WDocument GetWordDocument(IFormFile file)
 
 N> The `MetafileImageParsed` event is hooked to convert the metafile images (WMF, EMF) in the document to a raster image format, so that they can be displayed in the client-side DOCX Editor component.
 
-## View the resultant document with tracked changes
+## Compare documents from the client side
 
-Once the comparison is completed on the server side, the resultant SFDT content is returned to the client-side. This SFDT content contains all the changes as tracked revisions (insertions, deletions, and formatting). You can open this content in the Document Editor using the [`open`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#open) API, and the tracked changes will be displayed in the editor. The revisions can be accepted or rejected using the built-in review pane in the DOCX Editor. To learn more about track changes, refer to this [page](../track-changes).
+* Pass the original and revised document contents (either SFDT or DOCX files) to the server-side `CompareDocuments` Web API using the `FormData` object, where the comparison is performed and the resultant SFDT content is returned.
+* Open the resultant SFDT content returned from the server side in the Document Editor using the [`open`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#open) method to view the comparison result with tracked changes.
+
+The following example code illustrates how to compare two documents (using static SFDT contents) and open the resultant document in the Document Editor.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/document-editor/vue/compare-documents-cs1/app-composition.vue %}
+{% endhighlight %}
+
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/document-editor/vue/compare-documents-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+
+## View the comparison result with tracked changes in Document Editor
+
+Once the resultant SFDT content returned from the server side is opened in the Document Editor, all the insertions and deletions are highlighted as tracked changes (revisions) in the document. You can show or hide the revisions pane using the `showRevisions` property of the Document Editor, and accept or reject the revisions individually or all at once using the Review pane of the Document Editor.
+
+The following example code illustrates how to show the revisions and open the resultant SFDT content in the Document Editor.
+
+```ts
+// Show the revisions pane.
+this.$refs.documenteditor.showRevisions = true;
+// Open the resultant SFDT content in the Document Editor.
+this.$refs.documenteditor.open(sfdt);
+```
 
 ## Preview Sample
 
@@ -229,7 +146,7 @@ Once the comparison is completed on the server side, the resultant SFDT content 
 
 ## Online Demo
 
-Explore how to compare Word documents side-by-side using the Vue DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/compare-documents).
+Explore how to compare Word documents side by side with the Vue DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/compare-documents).
 
 ## See Also
 
