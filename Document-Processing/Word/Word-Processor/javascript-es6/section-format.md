@@ -82,6 +82,12 @@ The following code example illustrates how to insert a column break.
 container.documentEditor.editor.insertColumnBreak();
 ```
 
+You can insert a page break to move the content following the cursor to the next page.
+
+```ts
+container.documentEditor.editor.insertPageBreak();
+```
+
 You can insert a next page section break to start the new section on the next page.
 
 The following code example illustrates how to insert a next page section break.
