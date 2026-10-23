@@ -1,93 +1,125 @@
-import { NgModule } from '@angular/core'
-import { BrowserModule } from '@angular/platform-browser'
-import { SpreadsheetAllModule } from '@syncfusion/ej2-angular-spreadsheet'
-
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { SpreadsheetComponent, CellStyleModel, FormControlModel } from '@syncfusion/ej2-angular-spreadsheet';
+import { Component, ViewChild } from '@angular/core';
+import { SpreadsheetComponent, CellStyleModel, FormControlModel, SpreadsheetAllModule } from '@syncfusion/ej2-angular-spreadsheet';
 
 @Component({
-    imports: [
-        SpreadsheetAllModule
-    ],
+    selector: 'app-root',
     standalone: true,
-    selector: 'app-container',
-    template: `<ejs-spreadsheet #spreadsheet>
-                <e-sheets>
-                    <e-sheet name='FormControls'>
-                        <e-columns>
-                            <e-column [width]='150'></e-column>
-                            <e-column [width]='150'></e-column>
-                            <e-column [width]='150'></e-column>
-                            <e-column [width]='150'></e-column>
-                        </e-columns>
-                        <e-rows>
-                            <e-row [index]='0'>
-                                <e-cells>
-                                    <e-cell [index]='0' value='Form Controls Demo' [style]='boldCenter'></e-cell>
-                                </e-cells>
-                            </e-row>
-                            <e-row [index]='1'>
-                                <e-cells>
-                                    <e-cell [index]='0' value='Shipping Options'></e-cell>
-                                    <e-cell [index]='1' value=''></e-cell>
-                                    <e-cell [index]='2' value='Cell Link'></e-cell>
-                                    <e-cell [index]='3' value=''></e-cell>
-                                </e-cells>
-                            </e-row>
-                            <e-row [index]='3'>
-                                <e-cells>
-                                    <e-cell [index]='0' value='Payment Method'></e-cell>
-                                    <e-cell [index]='1' value=''></e-cell>
-                                    <e-cell [index]='2' value='Cell Link'></e-cell>
-                                    <e-cell [index]='3' value=''></e-cell>
-                                </e-cells>
-                            </e-row>
-                        </e-rows>
-                    </e-sheet>
-                </e-sheets>
-            </ejs-spreadsheet>`,
-    styleUrls: ['./app.css']
-})
-export class AppComponent implements OnInit {
-    public boldCenter: CellStyleModel = { fontWeight: 'bold', textAlign: 'center' };
-    @ViewChild('spreadsheet') public spreadsheetObj!: SpreadsheetComponent;
-
-    ngOnInit(): void {
-        let spreadsheet = this.spreadsheetObj;
-        if (spreadsheet) {
-            // Insert Radio Button form control for Shipping
-            spreadsheet.addFormControl({
-                type: 'RadioButton',
-                target: 'B2',
-                name: 'shippingOption1',
-                caption: 'Standard Shipping',
-                linkedCell: 'D2'
-            } as FormControlModel);
-
-            spreadsheet.addFormControl({
-                type: 'RadioButton',
-                target: 'B3',
-                name: 'shippingOption2',
-                caption: 'Express Shipping',
-                linkedCell: 'D2'
-            } as FormControlModel);
-
-            // Insert Radio Button form control for Payment
-            spreadsheet.addFormControl({
-                type: 'RadioButton',
-                target: 'B4',
-                name: 'paymentOption1',
-                caption: 'Credit Card',
-                linkedCell: 'D4'
-            } as FormControlModel);
-
-            spreadsheet.addFormControl({
-                type: 'RadioButton',
-                target: 'B5',
-                name: 'paymentOption2',
-                caption: 'PayPal',
-                linkedCell: 'D4'
-            } as FormControlModel);
+    imports: [SpreadsheetAllModule],
+    template: `<ejs-spreadsheet #spreadsheet [showFormulaBar]="false" [allowFormControl]="true">
+                    <e-sheets>
+                        <e-sheet name="RadioButtonDemo" [formControls]="formControls">
+                            <e-columns>
+                                <e-column [width]="150"></e-column>
+                                <e-column [width]="180"></e-column>
+                                <e-column [width]="150"></e-column>
+                                <e-column [width]="150"></e-column>
+                            </e-columns>
+                            <e-rows>
+                                <e-row [index]="0">
+                                    <e-cells>
+                                        <e-cell [index]="0" value="Shipping Options" [style]="boldCenter"></e-cell>
+                                    </e-cells>
+                                </e-row>
+                                <e-row [index]="1">
+                                    <e-cells>
+                                        <e-cell [index]="0" value="Select Shipping"></e-cell>
+                                        <e-cell [index]="1" value=""></e-cell>
+                                        <e-cell [index]="2" value="Selected"></e-cell>
+                                        <e-cell [index]="3" value=""></e-cell>
+                                    </e-cells>
+                                </e-row>
+                                <e-row [index]="5">
+                                    <e-cells>
+                                        <e-cell [index]="0" value="Payment Method" [style]="boldCenter"></e-cell>
+                                    </e-cells>
+                                </e-row>
+                                <e-row [index]="6">
+                                    <e-cells>
+                                        <e-cell [index]="0" value="Choose Payment"></e-cell>
+                                        <e-cell [index]="1" value=""></e-cell>
+                                        <e-cell [index]="2" value="Selected"></e-cell>
+                                        <e-cell [index]="3" value=""></e-cell>
+                                    </e-cells>
+                                </e-row>
+                            </e-rows>
+                        </e-sheet>
+                    </e-sheets>
+                </ejs-spreadsheet>`,
+    styles: [`
+        :host ::ng-deep {
+            .e-spreadsheet {
+                min-height: 600px;
+            }
         }
-    }
+    `]
+})
+export class AppComponent {
+    @ViewChild('spreadsheet') spreadsheetObj!: SpreadsheetComponent;
+
+    boldCenter: CellStyleModel = { fontWeight: 'bold', textAlign: 'center' };
+
+    formControls: FormControlModel[] = [
+        // Shipping options group - linked to same cell (D2)
+        {
+            type: 'RadioButton',
+            text: 'Standard Shipping',
+            cellLink: 'D2',
+            value: 'Unchecked',
+            top: 40,
+            left: 150,
+            height: 20,
+            width: 120
+        },
+        {
+            type: 'RadioButton',
+            text: 'Express Shipping',
+            cellLink: 'D2',
+            value: 'Unchecked',
+            top: 70,
+            left: 150,
+            height: 20,
+            width: 120
+        },
+        {
+            type: 'RadioButton',
+            text: 'Overnight Shipping',
+            cellLink: 'D2',
+            value: 'Unchecked',
+            top: 100,
+            left: 150,
+            height: 20,
+            width: 120
+        },
+        // Payment options group - linked to same cell (D4)
+        {
+            type: 'RadioButton',
+            text: 'Credit Card',
+            cellLink: 'D4',
+            value: 'Unchecked',
+            top: 160,
+            left: 150,
+            height: 20,
+            width: 120
+        },
+        {
+            type: 'RadioButton',
+            text: 'Debit Card',
+            cellLink: 'D4',
+            value: 'Unchecked',
+            top: 190,
+            left: 150,
+            height: 20,
+            width: 120
+        },
+        {
+            type: 'RadioButton',
+            text: 'Wire Transfer',
+            cellLink: 'D4',
+            value: 'Unchecked',
+            top: 220,
+            left: 150,
+            height: 20,
+            width: 120
+        }
+    ];
 }
