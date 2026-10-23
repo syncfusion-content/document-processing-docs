@@ -1,8 +1,8 @@
 <template>
   <div>
-    <ejs-spreadsheet ref="spreadsheetRef" :showFormulaBar="false">
+    <ejs-spreadsheet ref="spreadsheetRef" :showFormulaBar="false" :allowFormControl="true">
       <e-sheets>
-        <e-sheet name="FormControls">
+        <e-sheet name="FormControls" :formControls="formControls">
           <e-columns>
             <e-column :width="150"></e-column>
             <e-column :width="150"></e-column>
@@ -64,57 +64,40 @@ export default {
   },
   data() {
     return {
+      formControls: [
+        {
+          type: 'CheckBox',
+          text: 'Accept Terms',
+          cellLink: 'D2',
+          value: 'Unchecked',
+          top: 40,
+          left: 150,
+          height: 20,
+          width: 120
+        },
+        {
+          type: 'CheckBox',
+          text: 'Enable Notifications',
+          cellLink: 'D4',
+          value: 'Unchecked',
+          top: 80,
+          left: 150,
+          height: 20,
+          width: 120
+        },
+        {
+          type: 'CheckBox',
+          text: 'Select All Options',
+          cellLink: 'D6',
+          value: 'Unchecked',
+          top: 120,
+          left: 150,
+          height: 20,
+          width: 120
+        }
+      ],
       boldCenter: { fontWeight: 'bold', textAlign: 'center' }
-    };
-  },
-  mounted() {
-    let spreadsheet = this.$refs.spreadsheetRef;
-    if (spreadsheet) {
-      // Insert Check Box form control
-      spreadsheet.addFormControl({
-        type: 'CheckBox',
-        target: 'B2',
-        name: 'checkboxControl',
-        caption: 'Accept Terms',
-        checkedValue: true,
-        uncheckedValue: false,
-        linkedCell: 'D2',
-        fontName: 'Calibri',
-        fontSize: 14
-      });
-
-      // Insert another Check Box with different properties
-      spreadsheet.addFormControl({
-        type: 'CheckBox',
-        target: 'B4',
-        name: 'checkboxControl2',
-        caption: 'Enable Notifications',
-        checkedValue: true,
-        uncheckedValue: false,
-        linkedCell: 'D4'
-      });
-
-      // Insert Check Box with mixed state
-      spreadsheet.addFormControl({
-        type: 'CheckBox',
-        target: 'B6',
-        name: 'checkboxControl3',
-        caption: 'Select All Options',
-        linkedCell: 'D6'
-      });
     }
   }
 }
 </script>
-
-<style>
-@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css';
-@import "../node_modules/@syncfusion/ej2-vue-spreadsheet/styles/tailwind3.css";
-</style>

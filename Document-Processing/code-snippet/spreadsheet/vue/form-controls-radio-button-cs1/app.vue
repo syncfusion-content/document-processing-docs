@@ -1,8 +1,8 @@
 <template>
   <div>
-    <ejs-spreadsheet ref="spreadsheetRef" :showFormulaBar="false">
+    <ejs-spreadsheet ref="spreadsheetRef" :showFormulaBar="false" :allowFormControl="true">
       <e-sheets>
-        <e-sheet name="RadioButtonDemo">
+        <e-sheet name="RadioButtonDemo" :formControls="formControls">
           <e-columns>
             <e-column :width="150"></e-column>
             <e-column :width="180"></e-column>
@@ -61,82 +61,72 @@ export default {
   },
   data() {
     return {
+      formControls: [
+        // Shipping options group - linked to same cell (D2)
+        {
+          type: 'RadioButton',
+          text: 'Standard Shipping',
+          cellLink: 'D2',
+          value: 'Unchecked',
+          top: 40,
+          left: 150,
+          height: 20,
+          width: 120
+        },
+        {
+          type: 'RadioButton',
+          text: 'Express Shipping',
+          cellLink: 'D2',
+          value: 'Unchecked',
+          top: 70,
+          left: 150,
+          height: 20,
+          width: 120
+        },
+        {
+          type: 'RadioButton',
+          text: 'Overnight Shipping',
+          cellLink: 'D2',
+          value: 'Unchecked',
+          top: 100,
+          left: 150,
+          height: 20,
+          width: 120
+        },
+        // Payment options group - linked to same cell (D4)
+        {
+          type: 'RadioButton',
+          text: 'Credit Card',
+          cellLink: 'D4',
+          value: 'Unchecked',
+          top: 160,
+          left: 150,
+          height: 20,
+          width: 120
+        },
+        {
+          type: 'RadioButton',
+          text: 'Debit Card',
+          cellLink: 'D4',
+          value: 'Unchecked',
+          top: 190,
+          left: 150,
+          height: 20,
+          width: 120
+        },
+        {
+          type: 'RadioButton',
+          text: 'Wire Transfer',
+          cellLink: 'D4',
+          value: 'Unchecked',
+          top: 220,
+          left: 150,
+          height: 20,
+          width: 120
+        }
+      ],
       boldCenter: { fontWeight: 'bold', textAlign: 'center' }
-    };
-  },
-  mounted() {
-    let spreadsheet = this.$refs.spreadsheetRef;
-    if (spreadsheet) {
-      // Insert Radio Button form controls - Group 1
-      spreadsheet.addFormControl({
-        type: 'RadioButton',
-        target: 'B2',
-        name: 'shippingGroup',
-        caption: 'Standard Shipping',
-        value: 'standard',
-        linkedCell: 'D2',
-        fontName: 'Calibri',
-        fontSize: 14
-      });
-
-      spreadsheet.addFormControl({
-        type: 'RadioButton',
-        target: 'B3',
-        name: 'shippingGroup',
-        caption: 'Express Shipping',
-        value: 'express',
-        linkedCell: 'D3'
-      });
-
-      spreadsheet.addFormControl({
-        type: 'RadioButton',
-        target: 'B4',
-        name: 'shippingGroup',
-        caption: 'Overnight Shipping',
-        value: 'overnight',
-        linkedCell: 'D4'
-      });
-
-      // Insert Radio Button form controls - Group 2
-      spreadsheet.addFormControl({
-        type: 'RadioButton',
-        target: 'B6',
-        name: 'paymentGroup',
-        caption: 'Credit Card',
-        value: 'creditcard',
-        linkedCell: 'D6'
-      });
-
-      spreadsheet.addFormControl({
-        type: 'RadioButton',
-        target: 'B7',
-        name: 'paymentGroup',
-        caption: 'Debit Card',
-        value: 'debitcard',
-        linkedCell: 'D7'
-      });
-
-      spreadsheet.addFormControl({
-        type: 'RadioButton',
-        target: 'B8',
-        name: 'paymentGroup',
-        caption: 'Wire Transfer',
-        value: 'transfer',
-        linkedCell: 'D8'
-      });
     }
   }
 }
 </script>
-
-<style>
-@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css';
-@import "../node_modules/@syncfusion/ej2-vue-spreadsheet/styles/tailwind3.css";
-</style>
