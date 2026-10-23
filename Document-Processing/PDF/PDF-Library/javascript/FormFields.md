@@ -20,6 +20,7 @@ The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-
 - Check box (`PdfCheckBoxField`)
 - Signature (`PdfSignatureField`)
 - Button (`PdfButtonField`)
+- Barcode (`PdfBarcodeField`)
 
 ## Creating a new PDF form
 
@@ -571,6 +572,105 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
+### Adding the barcode field
+
+The following example adds a barcode field using the [PdfBarcodeField](https://ej2.syncfusion.com/documentation/api/pdf/pdfbarcodefield) class. A barcode field is an interactive field whose barcode appearance is generated from the values of other form fields, and it is updated when those values change in a PDF viewer that supports form calculations.
+
+Supported scenarios:
+
+- Create a barcode field with the PDF417 (default), QR Code, or Data Matrix symbology.
+- Encode the values of one or more referenced fields by setting `fields`.
+- Combine the referenced values as tab-delimited text, XML (XFDF), or the result of a custom calculation script using `valueFormat`.
+- Customize the module size, error correction level, and caption.
+
+Public APIs:
+
+| API | Description | Default |
+|---|---|---|
+| `barcodeOptions` (`PdfBarcodeOptions`) | `symbology` (`PdfBarcodeSymbology.PDF417`, `QR`, or `DataMatrix`), `xDimention` (module size in points; values of 1 or less fall back to 4), and `errorCorrectionLevel` (`Pdf417ErrorCorrectionLevel` for PDF417, `PdfQRErrorCorrectionLevel` for QR Code; ignored for Data Matrix). | PDF417, `xDimention` 4 |
+| `fields` | Names of the form fields whose values are encoded. | Empty |
+| `valueFormat` (`PdfBarcodeValueFormat`) | `TabDelimited`, `XML`, or `CustomScript`. | `TabDelimited` |
+| `includeFieldNames` | Includes field names in the tab-delimited payload. | `false` |
+| `customCalculationScript` | JavaScript calculation script used when `valueFormat` is `CustomScript`. | Empty |
+| `caption` | Text drawn at the bottom of the barcode. | Empty |
+| `compressData` | Compresses the data before encoding. | `false` |
+| `text` | Read-only. The current barcode payload. | - |
+| `itemsCount`, `itemAt(index)` | Access the widgets (`PdfBarcodeFieldItem`) of the field. | - |
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import {PdfDocument, PdfPage, PdfTextBoxField, PdfBarcodeField, PdfBarcodeSymbology, PdfBarcodeValueFormat, PdfQRErrorCorrectionLevel} from '@syncfusion/ej2-pdf';
+
+// Create a new PDF document
+let document: PdfDocument = new PdfDocument();
+// Add a page to the document
+let page: PdfPage = document.addPage();
+// Create a text box field that provides the barcode value
+let textBox: PdfTextBoxField = new PdfTextBoxField(page, 'EmployeeId', { x: 50, y: 600, width: 200, height: 22 });
+textBox.text = 'EMP-1001';
+// Add the text box field
+document.form.add(textBox);
+// Create a new barcode field
+let barcode: PdfBarcodeField = new PdfBarcodeField(
+  page,
+  'EmployeeBarcode',
+  { x: 50, y: 400, width: 150, height: 150 },
+  {
+    fields: ['EmployeeId'],
+    valueFormat: PdfBarcodeValueFormat.TabDelimited,
+    caption: 'Employee',
+    barcodeOptions: {
+      symbology: PdfBarcodeSymbology.QR,
+      xDimention: 4,
+      errorCorrectionLevel: PdfQRErrorCorrectionLevel.Medium
+    }
+  }
+);
+// Add the barcode field
+document.form.add(barcode);
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Add a page to the document
+var page = document.addPage();
+// Create a text box field that provides the barcode value
+var textBox = new ej.pdf.PdfTextBoxField(page, 'EmployeeId', { x: 50, y: 600, width: 200, height: 22 });
+textBox.text = 'EMP-1001';
+// Add the text box field
+document.form.add(textBox);
+// Create a new barcode field
+var barcode = new ej.pdf.PdfBarcodeField(
+  page,
+  'EmployeeBarcode',
+  { x: 50, y: 400, width: 150, height: 150 },
+  {
+    fields: ['EmployeeId'],
+    valueFormat: ej.pdf.PdfBarcodeValueFormat.TabDelimited,
+    caption: 'Employee',
+    barcodeOptions: {
+      symbology: ej.pdf.PdfBarcodeSymbology.QR,
+      xDimention: 4,
+      errorCorrectionLevel: ej.pdf.PdfQRErrorCorrectionLevel.Medium
+    }
+  }
+);
+// Add the barcode field
+document.form.add(barcode);
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+{% endhighlight %}
+{% endtabs %}
+
+N> The `xDimention` property name is spelled as shown in the public API. To draw a barcode as static page content instead of a form field, refer to [Barcode](./barcode).
+
 ## Filling form fields in an existing PDF document
 
 The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) lets you fill form fields using the `PdfField` API.
@@ -838,6 +938,118 @@ document.save('output.pdf');
 // Destroy the document
 document.destroy();
 
+{% endhighlight %}
+{% endtabs %}
+
+### Filling the barcode field
+
+The following example updates an existing [PdfBarcodeField](https://ej2.syncfusion.com/documentation/api/pdf/pdfbarcodefield). You can change the barcode symbology and appearance, caption, and the names of the fields that supply the barcode value.
+
+The barcode value is synchronized from the fields listed in `fields`. The following reference field types are supported:
+
+| Reference field | Value used in the barcode |
+|---|---|
+| Text box (`PdfTextBoxField`) | `text` |
+| Combo box (`PdfComboBoxField`) | `selectedValue` |
+| List box (`PdfListBoxField`) | `selectedValue` |
+| Radio button (`PdfRadioButtonListField`) | Value of the selected item |
+| Check box (`PdfCheckBoxField`) | `exportValue` when checked; otherwise `Off` |
+| Button (`PdfButtonField`) | `text` |
+| Barcode (`PdfBarcodeField`) | Accepted as a reference name; the current implementation does not read a value from another barcode field, so it contributes an empty value |
+
+Values are combined according to `valueFormat` (`TabDelimited`, `XML`, or `CustomScript`). Updating `fields`, `valueFormat`, `includeFieldNames`, `customCalculationScript`, or `caption` regenerates the barcode calculation script of the field. Referenced field names that do not exist in the form, or field types that are not listed above, contribute an empty value.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import {PdfDocument, PdfBarcodeField, PdfBarcodeSymbology, PdfBarcodeValueFormat, PdfQRErrorCorrectionLevel} from '@syncfusion/ej2-pdf';
+
+// Load an existing PDF document
+let document: PdfDocument = new PdfDocument(data);
+// Access the barcode field
+let field: PdfBarcodeField = document.form.fieldAt(0) as PdfBarcodeField;
+// Change the barcode symbology and appearance
+field.barcodeOptions = {
+  symbology: PdfBarcodeSymbology.QR,
+  xDimention: 4,
+  errorCorrectionLevel: PdfQRErrorCorrectionLevel.High
+};
+// Set the caption
+field.caption = 'Employee';
+// Set the names of the fields that supply the barcode value
+field.fields = ['EmployeeId', 'Department'];
+// Include the field names in the tab-delimited payload
+field.includeFieldNames = true;
+// Set the value format
+field.valueFormat = PdfBarcodeValueFormat.TabDelimited;
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Load an existing PDF document
+var document = new ej.pdf.PdfDocument(data);
+// Access the barcode field
+var field = document.form.fieldAt(0);
+// Change the barcode symbology and appearance
+field.barcodeOptions = {
+  symbology: ej.pdf.PdfBarcodeSymbology.QR,
+  xDimention: 4,
+  errorCorrectionLevel: ej.pdf.PdfQRErrorCorrectionLevel.High
+};
+// Set the caption
+field.caption = 'Employee';
+// Set the names of the fields that supply the barcode value
+field.fields = ['EmployeeId', 'Department'];
+// Include the field names in the tab-delimited payload
+field.includeFieldNames = true;
+// Set the value format
+field.valueFormat = ej.pdf.PdfBarcodeValueFormat.TabDelimited;
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+{% endhighlight %}
+{% endtabs %}
+
+The following example reads the current barcode payload and reference field names, and applies a custom calculation script.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import {PdfDocument, PdfBarcodeField, PdfBarcodeValueFormat} from '@syncfusion/ej2-pdf';
+
+// Load an existing PDF document
+let document: PdfDocument = new PdfDocument(data);
+// Access the barcode field
+let field: PdfBarcodeField = document.form.fieldAt(0) as PdfBarcodeField;
+// Read the current payload and the referenced field names
+let payload: string = field.text;
+let names: string[] = field.fields;
+// Use a custom calculation script to build the payload
+field.valueFormat = PdfBarcodeValueFormat.CustomScript;
+field.customCalculationScript = "event.value = this.getField('EmployeeId').value;";
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Load an existing PDF document
+var document = new ej.pdf.PdfDocument(data);
+// Access the barcode field
+var field = document.form.fieldAt(0);
+// Read the current payload and the referenced field names
+var payload = field.text;
+var names = field.fields;
+// Use a custom calculation script to build the payload
+field.valueFormat = ej.pdf.PdfBarcodeValueFormat.CustomScript;
+field.customCalculationScript = "event.value = this.getField('EmployeeId').value;";
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
