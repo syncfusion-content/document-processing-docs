@@ -574,7 +574,7 @@ document.destroy();
 
 ### Adding the barcode field
 
-The following example adds a barcode field using the [PdfBarcodeField](https://ej2.syncfusion.com/documentation/api/pdf/pdfbarcodefield) class. A barcode field is an interactive field whose barcode appearance is generated from the values of other form fields, and it is updated when those values change in a PDF viewer that supports form calculations.
+The following example adds a barcode field using the `PdfBarcodeField` class. A barcode field is an interactive field whose barcode appearance is generated from the values of other form fields, and it is updated when those values change in a PDF viewer that supports form calculations.
 
 Supported scenarios:
 
@@ -582,20 +582,6 @@ Supported scenarios:
 - Encode the values of one or more referenced fields by setting `fields`.
 - Combine the referenced values as tab-delimited text, XML (XFDF), or the result of a custom calculation script using `valueFormat`.
 - Customize the module size, error correction level, and caption.
-
-Public APIs:
-
-| API | Description | Default |
-|---|---|---|
-| `barcodeOptions` (`PdfBarcodeOptions`) | `symbology` (`PdfBarcodeSymbology.PDF417`, `QR`, or `DataMatrix`), `xDimention` (module size in points; values of 1 or less fall back to 4), and `errorCorrectionLevel` (`Pdf417ErrorCorrectionLevel` for PDF417, `PdfQRErrorCorrectionLevel` for QR Code; ignored for Data Matrix). | PDF417, `xDimention` 4 |
-| `fields` | Names of the form fields whose values are encoded. | Empty |
-| `valueFormat` (`PdfBarcodeValueFormat`) | `TabDelimited`, `XML`, or `CustomScript`. | `TabDelimited` |
-| `includeFieldNames` | Includes field names in the tab-delimited payload. | `false` |
-| `customCalculationScript` | JavaScript calculation script used when `valueFormat` is `CustomScript`. | Empty |
-| `caption` | Text drawn at the bottom of the barcode. | Empty |
-| `compressData` | Compresses the data before encoding. | `false` |
-| `text` | Read-only. The current barcode payload. | - |
-| `itemsCount`, `itemAt(index)` | Access the widgets (`PdfBarcodeFieldItem`) of the field. | - |
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -668,8 +654,6 @@ document.save('output.pdf');
 document.destroy();
 {% endhighlight %}
 {% endtabs %}
-
-N> The `xDimention` property name is spelled as shown in the public API. To draw a barcode as static page content instead of a form field, refer to [Barcode](./barcode).
 
 ## Filling form fields in an existing PDF document
 
@@ -943,7 +927,7 @@ document.destroy();
 
 ### Filling the barcode field
 
-The following example updates an existing [PdfBarcodeField](https://ej2.syncfusion.com/documentation/api/pdf/pdfbarcodefield). You can change the barcode symbology and appearance, caption, and the names of the fields that supply the barcode value.
+The following example updates an existing `PdfBarcodeField`. You can change the barcode symbology and appearance, caption, and the names of the fields that supply the barcode value.
 
 The barcode value is synchronized from the fields listed in `fields`. The following reference field types are supported:
 
@@ -955,9 +939,6 @@ The barcode value is synchronized from the fields listed in `fields`. The follow
 | Radio button (`PdfRadioButtonListField`) | Value of the selected item |
 | Check box (`PdfCheckBoxField`) | `exportValue` when checked; otherwise `Off` |
 | Button (`PdfButtonField`) | `text` |
-| Barcode (`PdfBarcodeField`) | Accepted as a reference name; the current implementation does not read a value from another barcode field, so it contributes an empty value |
-
-Values are combined according to `valueFormat` (`TabDelimited`, `XML`, or `CustomScript`). Updating `fields`, `valueFormat`, `includeFieldNames`, `customCalculationScript`, or `caption` regenerates the barcode calculation script of the field. Referenced field names that do not exist in the form, or field types that are not listed above, contribute an empty value.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -1012,6 +993,8 @@ document.save('output.pdf');
 document.destroy();
 {% endhighlight %}
 {% endtabs %}
+
+N> Values are combined according to `valueFormat` (`TabDelimited`, `XML`, or `CustomScript`). Updating `fields`, `valueFormat`, `includeFieldNames`, `customCalculationScript`, or `caption` regenerates the barcode calculation script of the field. Referenced field names that do not exist in the form, or field types that are not listed above, contribute an empty value.
 
 The following example reads the current barcode payload and reference field names, and applies a custom calculation script.
 
@@ -1482,4 +1465,4 @@ document.destroy();
 - [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library)
 - [JavaScript PDF Library documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
 - [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
-- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/tailwind3/pdf/default.html)
+- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/document-library/javascript/#/tailwind3/pdf/default.html)
