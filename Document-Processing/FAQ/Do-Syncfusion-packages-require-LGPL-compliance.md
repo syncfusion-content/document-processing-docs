@@ -13,8 +13,8 @@ The **SkiaSharp** team removed the **libmicrohttpd** dependency beginning with *
 
 Customers can verify the current dependency information from the official SkiaSharp documentation:
 
-* SkiaSharp dependency information: [dependencies.md](https://github.com/mono/SkiaSharp/blob/main/documentation/dev/dependencies.md)
-* Dependency removal pull request: [#3463](https://github.com/mono/SkiaSharp/pull/3463)
+* SkiaSharp dependency information: [https://github.com/mono/SkiaSharp/blob/main/documentation/dev/dependencies.md](https://github.com/mono/SkiaSharp/blob/main/documentation/dev/dependencies.md)
+* Dependency removal pull request: [https://github.com/mono/SkiaSharp/pull/3463](https://github.com/mono/SkiaSharp/pull/3463)
 
 Although **libmicrohttpd** is still referenced in the [External-Dependency-Info.txt](https://github.com/mono/SkiaSharp/blob/main/External-Dependency-Info.txt#L1475) file, the SkiaSharp maintainers have confirmed that this is an outdated reference and not an active runtime dependency. Syncfusion reported this discrepancy through the GitHub issues [#3511](https://github.com/mono/SkiaSharp/issues/3511), [#5401](https://github.com/mono/SkiaSharp/issues/5401)
 
