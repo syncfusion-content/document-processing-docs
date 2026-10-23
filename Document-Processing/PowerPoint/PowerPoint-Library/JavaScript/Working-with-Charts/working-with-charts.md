@@ -181,7 +181,7 @@ await chart.commitPlotArea({
 
 ### Chart series
 
-`commitSeriesFormat` sets the series fill and line (`c:spPr`). Per-point formatting is not available.
+`commitSeriesFormat` sets the series fill and line. Per-point formatting is not available.
 
 {% tabs %}
 {% highlight js tabtitle="TypeScript" %}

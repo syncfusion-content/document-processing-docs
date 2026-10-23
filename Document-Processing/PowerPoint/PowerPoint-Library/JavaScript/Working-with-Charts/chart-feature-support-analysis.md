@@ -10,7 +10,7 @@ keywords: javascript, powerpoint, charts
 
 # Chart feature support analysis (JavaScript PowerPoint)
 
-Validated against `@syncfusion/ej2-pptx` **35.1.41**, module `@syncfusion/ej2-pptx/charts` (published package `src/pptx/features/charts`). The private source repository `essential-studio/ej2-powerpoint-library` was not reachable from this environment (no Gitea credentials). Do not treat the .NET UG as evidence of JavaScript support.
+Validated against `@syncfusion/ej2-pptx` **35.1.41**, module `@syncfusion/ej2-pptx/charts` (published package `src/pptx/features/charts`). The private source repository `essential-studio/ej2-powerpoint-library` was not reachable from this environment (no remote credentials). Do not treat the .NET user guide as evidence of JavaScript support.
 
 Charts are a side-effect feature. Importing the module registers `slide.charts`, `slide.addChart`, and `slide.removeChart`. The xlsx engine must be warm before reads: `await loadXlsxRoot()` (exported from the charts module) or `ensureFeature(CHARTS_FEATURE_ID)`.
 
