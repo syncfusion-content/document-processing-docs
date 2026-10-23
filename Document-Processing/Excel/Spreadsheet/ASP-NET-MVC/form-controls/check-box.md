@@ -1,42 +1,100 @@
 ---
 layout: post
 title: Check Box Form Control in ASP.NET MVC Spreadsheet | Syncfusion
-description: Learn how to create and configure Check Box form controls in Syncfusion ASP.NET MVC Spreadsheet component.
+description: Learn about Check Box form control in the Syncfusion ASP.NET MVC Spreadsheet component, including editing, formatting, and cell link integration.
 control: Form Controls
 platform: document-processing
 documentation: ug
 ---
 
-# Check Box Form Control
+# Check Box Form Control in ASP.NET MVC Spreadsheet
 
-The Check Box form control allows users to toggle between checked, unchecked, and mixed states, while updating the corresponding value in a linked cell.
+The Check Box form control allows users to represent checked, unchecked, and mixed states within a worksheet.
 
-## Configuration Options
+## Code Snippet
 
-Check Box provides the following configuration options:
+<iframe src="https://github.com/SyncfusionExamples/document-processing-docs/blob/development/Document-Processing/code-snippet/spreadsheet/asp-net-mvc/form-controls-check-box-cs1" style="height:600px;" width="100%"></iframe>
 
-- **Unchecked**: The unselected state of the Check Box for a Linked cell. If Unchecked, linked cell value: **FALSE**
-- **Checked**: The selected state of the Check Box for a Linked cell. If Checked, linked cell value: **TRUE**
-- **Mixed**: Represents the mixed state of the Check Box for a Linked cell.
-- **Cell Link**: Specify a cell reference to link the Check Box to a worksheet cell.
+## Inserting Check Box
 
-The linked cell value is automatically updated whenever the Check Box state changes.
+To insert a Check Box form control:
 
-## Code Example
+1. Select the **Insert** tab in the ribbon.
+2. Click **Form Controls** dropdown.
+3. Select **Check Box**.
+4. Click on the desired cell to place the Check Box control.
 
-The following code example shows the Check Box Form Control functionality in the Spreadsheet control.
+## Editing Check Box Caption
 
-{% tabs %}
-{% highlight html tabtitle="Razor" %}
-{% include code-snippet/spreadsheet/asp-net-mvc/form-controls-check-box-cs1/razor %}
-{% endhighlight %}
-{% highlight html tabtitle="Tag Helper" %}
-{% include code-snippet/spreadsheet/asp-net-mvc/form-controls-check-box-cs1/tagHelper %}
-{% endhighlight %}
-{% endtabs %}
+The caption of a Check Box can be edited by:
 
-## See Also
+1. **Right-click** on the Check Box control.
+2. Select the editing option from the context menu.
+3. Modify the caption text.
 
-* [Form Controls](../form-controls)
-* [Radio Button](./radio-button)
-* [Combo Box](./combo-box)
+## Format Control Dialog
+
+When a Check Box is right-clicked and the **Format Control** dialog is opened, the following states are available:
+
+- **Unchecked**: The unselected state of the Check Box.
+- **Checked**: The selected state of the Check Box.
+- **Mixed**: Represents the mixed state of the Check Box.
+
+### Accessing Format Control Dialog
+
+1. Right-click on the Check Box control.
+2. Select **Format Control** from the context menu.
+3. The Format Control dialog will display state options and Cell Link configuration.
+
+## Cell Link Support
+
+The Format Control dialog provides a **Cell Link** input box for linking the Check Box to a specific cell.
+
+### Setting Cell Link
+
+1. Open the Format Control dialog (right-click → Format Control).
+2. In the **Cell Link** field, specify a cell reference (for example, **J5**).
+3. Click **OK** to apply the link.
+
+### Cell Link Behavior
+
+When a cell link is configured, the linked cell reflects the state of the Check Box:
+
+- **Unchecked** → linked cell value: **FALSE**
+- **Checked** → linked cell value: **TRUE**
+- **Mixed** → linked cell value reflects the mixed state
+
+The linked cell value is automatically synchronized whenever the Check Box state changes.
+
+## Common Check Box Operations
+
+### Moving and Resizing
+- **Drag**: Click and drag a Check Box to move it to a different location in the worksheet.
+- **Resize**: Drag the edges of the Check Box to adjust its size.
+- **Undo/Redo**: Use Ctrl+Z (Undo) and Ctrl+Y (Redo) to revert or reapply resize operations.
+
+### Deletion
+- **Delete**: Right-click the Check Box and select Delete, or press Delete key after selecting the Check Box.
+- **Undo/Redo**: Use Ctrl+Z to undo deletion operations.
+
+### Clipboard Operations
+- **Cut**: Right-click the Check Box and select Cut (or Ctrl+X).
+- **Copy**: Right-click the Check Box and select Copy (or Ctrl+C).
+- **Paste**: Right-click a cell and select Paste (or Ctrl+V).
+
+## Worksheet Interaction
+
+Check Box controls are worksheet-specific. A Check Box created in one worksheet exists only in that worksheet.
+
+## Import and Export Support
+
+Check Box form controls are supported during Excel import and export operations. Check Box controls retain their configuration, caption, and cell link settings during import and export.
+
+## RTL Support
+
+Check Box controls support Right-to-Left (RTL) layouts. When RTL mode is enabled, Check Box controls render and function appropriately in RTL direction.
+
+## Limitations
+
+- Each Check Box occupies a single cell location.
+- Check Boxes cannot span multiple cells.
