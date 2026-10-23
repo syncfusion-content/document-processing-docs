@@ -349,5 +349,5 @@ N> * `exportDataObject` is a feature of Adobe Acrobat's JavaScript API. Other PD
 
 * [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library)
 * [JavaScript PDF Library documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
-* [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf/)
+* [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
 * [JavaScript PDF Library examples](https://ej2.syncfusion.com/javascript/demos/#/tailwind3/pdf/default)
