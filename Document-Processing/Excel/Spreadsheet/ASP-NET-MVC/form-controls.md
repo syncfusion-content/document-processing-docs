@@ -23,16 +23,16 @@ The Spreadsheet supports the following form controls:
 - **Radio Button**: Allows selecting a single option from a group of choices.
 - **Combo Box (Dropdown)**: Allows selecting from a predefined list of values.
 
-## Check Box
+### Check Box
 
 The Check Box form control allows users to toggle between checked, unchecked, and mixed states, while updating the corresponding value in a linked cell.
 
 Check Box provides the following configuration options:
 
-- **Unchecked**: The unselected state of the Check Box for a Linked cell. If Unchecked, linked cell value: FALSE
-- **Checked**: The selected state of the Check Box for a Linked cell. If Checked, linked cell value: TRUE
+- **Unchecked**: The unselected state of the Check Box for a Linked cell. If Unchecked, linked cell value: **FALSE**
+- **Checked**: The selected state of the Check Box for a Linked cell. If Checked, linked cell value: **TRUE**
 - **Mixed**: Represents the mixed state of the Check Box for a Linked cell.
-- **Cell Link**: Specify a cell reference to link the Check Box to a worksheet cell.
+- **Cell Link** :Specify a cell reference to link the Check Box to a worksheet cell.
 
 The linked cell value is automatically updated whenever the Check Box state changes.
 
@@ -143,21 +143,21 @@ The following code example shows the Check Box Form Control functionality in the
 </ejs-spreadsheet>
 ```
 
-## Radio Button
+### Radio Button
 
 The Radio Button form control allows users to store either 1 (selected) or 0 (unselected) in a linked cell.
 
-Once a Radio Button is selected, clicking the same Radio Button again does not uncheck it.
+> Once a Radio Button is selected, clicking the same Radio Button again does not uncheck it.
 
 Radio Button provides the following configuration options:
 
-- **Unchecked**: The unselected state of the Radio Button for a Linked cell. If Unchecked, linked cell value: 0
-- **Checked**: The selected state of the Radio Button for a Linked cell. If Checked, linked cell value: 1
-- **Cell Link**: Specify a cell reference to link the Radio Button to a worksheet cell.
+- **Unchecked**: The unselected state of the Radio Button for a Linked cell. If Unchecked, linked cell value: **0**
+- **Checked**: The selected state of the Radio Button for a Linked cell. If Checked, linked cell value: **1**
+- **Cell Link** :Specify a cell reference to link the Radio Button to a worksheet cell.
 
 The linked cell value is automatically updated whenever the Radio Button state changes.
 
-**Note**: Within a worksheet, only one Radio Button can be selected (checked) at a time. Selecting a new Radio Button automatically deselects any previously selected Radio Button.
+> **Note:** Within a worksheet, only one Radio Button can be selected (checked) at a time. Selecting a new Radio Button automatically deselects any previously selected Radio Button.
 
 The following code example shows the Radio Button Form Control functionality in the Spreadsheet control.
 
@@ -272,16 +272,16 @@ The following code example shows the Radio Button Form Control functionality in 
 </ejs-spreadsheet>
 ```
 
-## Combo Box (Dropdown)
+### Combo Box (Dropdown)
 
 The Combo Box (Dropdown) form control allows users to select an item from a predefined list and stores the selected item's position in the linked cell.
 
-**Note**: The Combo Box (Dropdown) control displays an empty list when first inserted. You must configure the Input Range and set a Cell Link to make the Combo Box (Dropdown) functional.
+> **Note:** The Combo Box (Dropdown) control displays an **empty list** when first inserted. You must configure the Input Range and set a Cell Link to make the Combo Box (Dropdown) functional.
 
 Combo Box (Dropdown) provides the following configuration options:
 
-- **Input Range**: Specify the cell range for combo box (e.g., H1:H11). This configuration uses cells H1 through H11 as the source for Combo Box options. When users click the combo box button, they will see the values from this range as selectable options.
-- **Cell Link**: Specify a cell reference to link the selected item's position within the Combo Box (Dropdown).
+- **Input Range**: Specify the cell range for combo box (e.g., **H1:H11**). This configuration uses cells H1 through H11 as the source for Combo Box options. When users click the combo box button, they will see the values from this range as selectable options.
+- **Cell Link** :Specify a cell reference to link the selected item's position within the Combo Box (Dropdown).
 
 The linked cell value is automatically updated whenever the Combo Box's selected item changes.
 
@@ -465,8 +465,8 @@ The Format Control dialog allows you to configure settings specific to a form co
 To open the Format Control dialog:
 
 1. Right-click the desired form control.
-2. Select Format Control from the context menu.
-3. Configure the required settings and click OK to apply the changes.
+2. Select **Format Control** from the context menu.
+3. Configure the required settings and click **OK** to apply the changes.
 
 ## Common Form Control Operations
 
@@ -481,5 +481,5 @@ To open the Format Control dialog:
 
 ## See Also
 
-- [Data Validation](../data-validation.md)
-- [Cell Formatting](../formatting.md)
+* [Data Validation](../data-validation.md)
+* [Cell Formatting](../formatting.md)
