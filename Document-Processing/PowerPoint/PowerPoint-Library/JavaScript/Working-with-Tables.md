@@ -27,9 +27,11 @@ const pptxDoc = Presentation.create();
 // Add slide to the presentation.
 const slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
 // Add a table to the slide (2 rows × 2 columns). Bounds are in points.
-const table = addTable(slide, {
-    rows: 2, columns: 2,
-    xfrm: { x: 100, y: 120, width: 300, height: 200 }
+const table = slide.addTable({
+  rows: 3,
+  columns: 4,
+  xfrm: { x: 0, y: 0, width: 400, height: 200 },
+  name: 'Metrics'
 });
 // Iterate row-wise cells and add text to each.
 for (let rowIndex = 0; rowIndex < table.rowCount; rowIndex++) {
