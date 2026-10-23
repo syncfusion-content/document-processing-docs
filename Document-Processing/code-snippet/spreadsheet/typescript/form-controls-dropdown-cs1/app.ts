@@ -1,89 +1,130 @@
 
-
-import { Spreadsheet, SheetModel, ColumnModel, RowModel, FormControlModel, CellStyleModel } from '@syncfusion/ej2-spreadsheet';
+import { Spreadsheet, SheetModel, CellStyleModel, FormControlModel } from '@syncfusion/ej2-spreadsheet';
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
 
-let formControls: FormControlModel[] = [
+const formControls: FormControlModel[] = [
     {
-        type: 'ComboBox',
-        text: 'Select Country',
+        type: 'DropDown',
+        text: 'Select Delivery',
         cellLink: 'D2',
-        inputRange: 'H1:H11',
+        inputRange: 'H1:H5',
+        selectedIndex: 0,
         top: 40,
         left: 150,
-        height: 20,
+        height: 22,
+        width: 120
+    },
+    {
+        type: 'DropDown',
+        text: 'Select Payment',
+        cellLink: 'D4',
+        inputRange: 'I1:I4',
+        selectedIndex: 0,
+        top: 100,
+        left: 150,
+        height: 22,
+        width: 120
+    },
+    {
+        type: 'DropDown',
+        text: 'Select Priority',
+        cellLink: 'D6',
+        inputRange: 'J1:J3',
+        selectedIndex: 1,
+        top: 160,
+        left: 150,
+        height: 22,
         width: 120
     }
 ];
 
-let boldCenter: CellStyleModel = { fontWeight: 'bold', textAlign: 'center' };
+const boldCenter: CellStyleModel = { fontWeight: 'bold', textAlign: 'center' };
 
-let sheets: SheetModel[] = [
+const sheets: SheetModel[] = [
     {
-        name: 'FormControls',
+        name: 'DropDownDemo',
+        formControls: formControls,
         columns: [
             { width: 150 },
+            { width: 200 },
             { width: 150 },
             { width: 150 },
+            { width: 100 },
+            { width: 100 },
+            { width: 100 },
             { width: 150 },
-            { width: 50 },
-            { width: 50 },
-            { width: 50 },
-            { width: 150 }
+            { width: 150 },
+            { width: 100 }
         ],
         rows: [
             {
                 index: 0,
                 cells: [
-                    { index: 0, value: 'Form Controls Demo', style: boldCenter }
+                    { index: 0, value: 'Drop Down Form Controls', style: boldCenter },
+                    { index: 7, value: 'Delivery Options' },
+                    { index: 8, value: 'Payment Methods' },
+                    { index: 9, value: 'Priority' }
                 ]
             },
             {
                 index: 1,
                 cells: [
-                    { index: 0, value: 'Combo Box (Dropdown) Control' },
+                    { index: 0, value: 'Delivery Options' },
                     { index: 1, value: '' },
-                    { index: 2, value: 'Cell Link' },
-                    { index: 3, value: '' }
+                    { index: 2, value: 'Selected Index' },
+                    { index: 3, value: '' },
+                    { index: 7, value: 'Standard Delivery' },
+                    { index: 8, value: 'Cash on Delivery' },
+                    { index: 9, value: 'Low' }
+                ]
+            },
+            {
+                index: 2,
+                cells: [
+                    { index: 7, value: 'Express Delivery' },
+                    { index: 8, value: 'Credit Card' },
+                    { index: 9, value: 'Medium' }
                 ]
             },
             {
                 index: 3,
                 cells: [
-                    { index: 0, value: 'Input Range' },
+                    { index: 0, value: 'Payment Method' },
                     { index: 1, value: '' },
-                    { index: 2, value: 'H1:H11' },
-                    { index: 3, value: '' }
+                    { index: 2, value: 'Selected Index' },
+                    { index: 3, value: '' },
+                    { index: 7, value: 'Priority Delivery' },
+                    { index: 8, value: 'Debit Card' },
+                    { index: 9, value: 'High' }
+                ]
+            },
+            {
+                index: 4,
+                cells: [
+                    { index: 7, value: 'Pickup at Store' },
+                    { index: 8, value: 'Online Payment' }
+                ]
+            },
+            {
+                index: 5,
+                cells: [
+                    { index: 0, value: 'Priority Level' },
+                    { index: 1, value: '' },
+                    { index: 2, value: 'Selected Index' },
+                    { index: 3, value: '' },
+                    { index: 7, value: 'Digital Download' }
                 ]
             }
-        ],
-        ranges: [
-            {
-                dataSource: [
-                    { Country: 'USA' },
-                    { Country: 'Canada' },
-                    { Country: 'Mexico' },
-                    { Country: 'Brazil' },
-                    { Country: 'Germany' },
-                    { Country: 'France' },
-                    { Country: 'India' },
-                    { Country: 'China' },
-                    { Country: 'Japan' },
-                    { Country: 'Australia' }
-                ],
-                startCell: 'H1'
-            }
-        ],
-        formControls: formControls
+        ]
     }
 ];
 
-let spreadsheet: Spreadsheet = new Spreadsheet({
+const spreadsheet: Spreadsheet = new Spreadsheet({
     sheets: sheets,
-    allowFormControl: true,
-    showFormulaBar: false
+    showFormulaBar: false,
+    allowFormControl: true
 });
 
 spreadsheet.appendTo('#spreadsheet');

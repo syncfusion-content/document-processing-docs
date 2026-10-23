@@ -1,11 +1,10 @@
 
-
-import { Spreadsheet, SheetModel, ColumnModel, RowModel, FormControlModel, CellStyleModel } from '@syncfusion/ej2-spreadsheet';
+import { Spreadsheet, SheetModel, CellStyleModel, FormControlModel } from '@syncfusion/ej2-spreadsheet';
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
 
-let formControls: FormControlModel[] = [
+const formControls: FormControlModel[] = [
     {
         type: 'CheckBox',
         text: 'Accept Terms',
@@ -38,11 +37,12 @@ let formControls: FormControlModel[] = [
     }
 ];
 
-let boldCenter: CellStyleModel = { fontWeight: 'bold', textAlign: 'center' };
+const boldCenter: CellStyleModel = { fontWeight: 'bold', textAlign: 'center' };
 
-let sheets: SheetModel[] = [
+const sheets: SheetModel[] = [
     {
         name: 'FormControls',
+        formControls: formControls,
         columns: [
             { width: 150 },
             { width: 150 },
@@ -83,15 +83,14 @@ let sheets: SheetModel[] = [
                     { index: 3, value: '' }
                 ]
             }
-        ],
-        formControls: formControls
+        ]
     }
 ];
 
-let spreadsheet: Spreadsheet = new Spreadsheet({
+const spreadsheet: Spreadsheet = new Spreadsheet({
     sheets: sheets,
-    allowFormControl: true,
-    showFormulaBar: false
+    showFormulaBar: false,
+    allowFormControl: true
 });
 
 spreadsheet.appendTo('#spreadsheet');
