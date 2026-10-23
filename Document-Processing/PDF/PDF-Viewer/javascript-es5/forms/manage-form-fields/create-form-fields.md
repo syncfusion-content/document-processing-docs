@@ -345,7 +345,7 @@ document.getElementById('addPasswordField').addEventListener('click', function (
 });
 ```
 
-[View Sample on GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples)
+[View Sample on GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/Form%20Fields)
 
 ## See Also
 
