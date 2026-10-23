@@ -9,9 +9,9 @@ documentation: ug
 
 # Form Controls in ASP.NET MVC Spreadsheet
 
-The Spreadsheet component provides built-in form controls that enable users to add interactive elements within a worksheet. Form controls are associated with individual worksheets and are available only in the worksheet where they are created, rather than across the entire workbook. Use the `AllowFormControl` property to enable or disable form controls.
+The Spreadsheet component provides built-in form controls that enable users to add interactive elements within a worksheet. Form controls are associated with individual worksheets and are available only in the worksheet where they are created, rather than across the entire workbook. Use the `allowFormControl` property to enable or disable form controls.
 
-The default value for AllowFormControl property is true.
+> The default value for `allowFormControl` property is `true`.
 
 The following sections describe each supported form control and its configuration options.
 
