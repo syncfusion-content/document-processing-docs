@@ -1,0 +1,56 @@
+<ejs-spreadsheet id="spreadsheet" showFormulaBar="false" allowFormControl="true">
+    <e-sheets>
+        <e-sheet name="FormControls">
+            <e-rows>
+                <e-row>
+                    <e-cells>
+                        <e-cell value="Form Controls Demo">
+                            <e-cellStyle fontWeight="Bold" textAlign="Center"></e-cellStyle>
+                        </e-cell>
+                    </e-cells>
+                </e-row>
+                <e-row>
+                    <e-cells>
+                        <e-cell value="Item 1"></e-cell>
+                        <e-cell value="Item 2"></e-cell>
+                        <e-cell value="Item 3"></e-cell>
+                        <e-cell value="Item 4"></e-cell>
+                    </e-cells>
+                </e-row>
+                <e-row>
+                    <e-cells>
+                        <e-cell value="Item 5"></e-cell>
+                        <e-cell value="Item 6"></e-cell>
+                        <e-cell value="Item 7"></e-cell>
+                        <e-cell value="Item 8"></e-cell>
+                    </e-cells>
+                </e-row>
+                <e-row>
+                    <e-cells>
+                        <e-cell value="Item 9"></e-cell>
+                        <e-cell value="Item 10"></e-cell>
+                        <e-cell value="Item 11"></e-cell>
+                        <e-cell value=""></e-cell>
+                    </e-cells>
+                </e-row>
+                <e-row>
+                    <e-cells>
+                        <e-cell value="Combo Box Control"></e-cell>
+                        <e-cell value=""></e-cell>
+                        <e-cell value="Cell Link"></e-cell>
+                        <e-cell value=""></e-cell>
+                    </e-cells>
+                </e-row>
+            </e-rows>
+            <e-columns>
+                <e-column width="100"></e-column>
+                <e-column width="100"></e-column>
+                <e-column width="100"></e-column>
+                <e-column width="100"></e-column>
+            </e-columns>
+            <e-formcontrols>
+                <e-formcontrol type="ComboBox" text="Select Item" inputRange="A1:D3" cellLink="D5" top="100" left="200" height="20" width="120"></e-formcontrol>
+            </e-formcontrols>
+        </e-sheet>
+    </e-sheets>
+</ejs-spreadsheet>

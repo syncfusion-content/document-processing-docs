@@ -1,0 +1,51 @@
+@Html.EJS().Spreadsheet("spreadsheet").ShowFormulaBar(false).AllowFormControl(true).Sheets(sheet =>
+{
+    sheet.Name("FormControls").Rows(row =>
+    {
+        row.Cells(cell =>
+        {
+            cell.Value("Form Controls Demo").Style(new SpreadsheetCellStyle() { FontWeight = FontWeight.Bold, TextAlign = TextAlign.Center }).Add();
+        }).Add();
+        
+        row.Cells(cell =>
+        {
+            cell.Value("Item 1").Add();
+            cell.Value("Item 2").Add();
+            cell.Value("Item 3").Add();
+            cell.Value("Item 4").Add();
+        }).Add();
+        
+        row.Cells(cell =>
+        {
+            cell.Value("Item 5").Add();
+            cell.Value("Item 6").Add();
+            cell.Value("Item 7").Add();
+            cell.Value("Item 8").Add();
+        }).Add();
+        
+        row.Cells(cell =>
+        {
+            cell.Value("Item 9").Add();
+            cell.Value("Item 10").Add();
+            cell.Value("Item 11").Add();
+            cell.Value("").Add();
+        }).Add();
+        
+        row.Cells(cell =>
+        {
+            cell.Value("Combo Box Control").Add();
+            cell.Value("").Add();
+            cell.Value("Cell Link").Add();
+            cell.Value("").Add();
+        }).Add();
+    }).Columns(column =>
+    {
+        column.Width(100).Add();
+        column.Width(100).Add();
+        column.Width(100).Add();
+        column.Width(100).Add();
+    }).FormControls(formControl =>
+    {
+        formControl.Type("ComboBox").Text("Select Item").InputRange("A1:D3").CellLink("D5").Top(100).Left(200).Height(20).Width(120).Add();
+    }).Add();
+}).Render()

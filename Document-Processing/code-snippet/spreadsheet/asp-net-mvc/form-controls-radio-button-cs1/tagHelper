@@ -1,0 +1,50 @@
+<ejs-spreadsheet id="spreadsheet" showFormulaBar="false" allowFormControl="true">
+    <e-sheets>
+        <e-sheet name="FormControls">
+            <e-rows>
+                <e-row>
+                    <e-cells>
+                        <e-cell value="Form Controls Demo">
+                            <e-cellStyle fontWeight="Bold" textAlign="Center"></e-cellStyle>
+                        </e-cell>
+                    </e-cells>
+                </e-row>
+                <e-row>
+                    <e-cells>
+                        <e-cell value="Radio Button Control"></e-cell>
+                        <e-cell value=""></e-cell>
+                        <e-cell value="Cell Link"></e-cell>
+                        <e-cell value=""></e-cell>
+                    </e-cells>
+                </e-row>
+                <e-row>
+                    <e-cells>
+                        <e-cell value="Option 2"></e-cell>
+                        <e-cell value=""></e-cell>
+                        <e-cell value="Cell Link"></e-cell>
+                        <e-cell value=""></e-cell>
+                    </e-cells>
+                </e-row>
+                <e-row>
+                    <e-cells>
+                        <e-cell value="Option 3"></e-cell>
+                        <e-cell value=""></e-cell>
+                        <e-cell value="Cell Link"></e-cell>
+                        <e-cell value=""></e-cell>
+                    </e-cells>
+                </e-row>
+            </e-rows>
+            <e-columns>
+                <e-column width="150"></e-column>
+                <e-column width="150"></e-column>
+                <e-column width="150"></e-column>
+                <e-column width="150"></e-column>
+            </e-columns>
+            <e-formcontrols>
+                <e-formcontrol type="RadioButton" text="Option 1" cellLink="D2" value="Unchecked" top="40" left="150" height="20" width="120"></e-formcontrol>
+                <e-formcontrol type="RadioButton" text="Option 2" cellLink="D4" value="Unchecked" top="80" left="150" height="20" width="120"></e-formcontrol>
+                <e-formcontrol type="RadioButton" text="Option 3" cellLink="D6" value="Unchecked" top="120" left="150" height="20" width="120"></e-formcontrol>
+            </e-formcontrols>
+        </e-sheet>
+    </e-sheets>
+</ejs-spreadsheet>
