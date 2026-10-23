@@ -17,7 +17,7 @@
                         <e-cell value=""></e-cell>
                     </e-cells>
                 </e-row>
-                <e-row>
+                <e-row index="3">
                     <e-cells>
                         <e-cell value="Notifications"></e-cell>
                         <e-cell value=""></e-cell>
@@ -25,7 +25,7 @@
                         <e-cell value=""></e-cell>
                     </e-cells>
                 </e-row>
-                <e-row>
+                <e-row index="5">
                     <e-cells>
                         <e-cell value="Select All"></e-cell>
                         <e-cell value=""></e-cell>

@@ -1,55 +1,78 @@
 <ejs-spreadsheet id="spreadsheet" showFormulaBar="false" allowFormControl="true">
     <e-sheets>
-        <e-sheet name="FormControls">
+        <e-sheet name="DropDownDemo">
             <e-rows>
                 <e-row>
                     <e-cells>
-                        <e-cell value="Form Controls Demo">
+                        <e-cell value="Drop Down Form Controls">
                             <e-cellStyle fontWeight="Bold" textAlign="Center"></e-cellStyle>
                         </e-cell>
+                        <e-cell index="7" value="Delivery Options"></e-cell>
+                        <e-cell index="8" value="Payment Methods"></e-cell>
+                        <e-cell index="9" value="Priority"></e-cell>
                     </e-cells>
                 </e-row>
                 <e-row>
                     <e-cells>
-                        <e-cell value="Item 1"></e-cell>
-                        <e-cell value="Item 2"></e-cell>
-                        <e-cell value="Item 3"></e-cell>
-                        <e-cell value="Item 4"></e-cell>
-                    </e-cells>
-                </e-row>
-                <e-row>
-                    <e-cells>
-                        <e-cell value="Item 5"></e-cell>
-                        <e-cell value="Item 6"></e-cell>
-                        <e-cell value="Item 7"></e-cell>
-                        <e-cell value="Item 8"></e-cell>
-                    </e-cells>
-                </e-row>
-                <e-row>
-                    <e-cells>
-                        <e-cell value="Item 9"></e-cell>
-                        <e-cell value="Item 10"></e-cell>
-                        <e-cell value="Item 11"></e-cell>
+                        <e-cell value="Delivery Options"></e-cell>
                         <e-cell value=""></e-cell>
+                        <e-cell value="Selected Index"></e-cell>
+                        <e-cell value=""></e-cell>
+                        <e-cell index="7" value="Standard Delivery"></e-cell>
+                        <e-cell index="8" value="Cash on Delivery"></e-cell>
+                        <e-cell index="9" value="Low"></e-cell>
                     </e-cells>
                 </e-row>
                 <e-row>
                     <e-cells>
-                        <e-cell value="Combo Box Control"></e-cell>
+                        <e-cell index="7" value="Express Delivery"></e-cell>
+                        <e-cell index="8" value="Credit Card"></e-cell>
+                        <e-cell index="9" value="Medium"></e-cell>
+                    </e-cells>
+                </e-row>
+                <e-row>
+                    <e-cells>
+                        <e-cell value="Payment Method"></e-cell>
                         <e-cell value=""></e-cell>
-                        <e-cell value="Cell Link"></e-cell>
+                        <e-cell value="Selected Index"></e-cell>
                         <e-cell value=""></e-cell>
+                        <e-cell index="7" value="Priority Delivery"></e-cell>
+                        <e-cell index="8" value="Debit Card"></e-cell>
+                        <e-cell index="9" value="High"></e-cell>
+                    </e-cells>
+                </e-row>
+                <e-row>
+                    <e-cells>
+                        <e-cell index="7" value="Pickup at Store"></e-cell>
+                        <e-cell index="8" value="Online Payment"></e-cell>
+                    </e-cells>
+                </e-row>
+                <e-row>
+                    <e-cells>
+                        <e-cell value="Priority Level"></e-cell>
+                        <e-cell value=""></e-cell>
+                        <e-cell value="Selected Index"></e-cell>
+                        <e-cell value=""></e-cell>
+                        <e-cell index="7" value="Digital Download"></e-cell>
                     </e-cells>
                 </e-row>
             </e-rows>
             <e-columns>
+                <e-column width="150"></e-column>
+                <e-column width="200"></e-column>
+                <e-column width="150"></e-column>
+                <e-column width="150"></e-column>
                 <e-column width="100"></e-column>
                 <e-column width="100"></e-column>
                 <e-column width="100"></e-column>
+                <e-column width="150"></e-column>
+                <e-column width="150"></e-column>
                 <e-column width="100"></e-column>
             </e-columns>
             <e-formcontrols>
-                <e-formcontrol type="ComboBox" text="Select Item" inputRange="A1:D3" cellLink="D5" top="100" left="200" height="20" width="120"></e-formcontrol>
+                <e-formcontrol type="DropDown" text="Select Delivery" cellLink="D2" inputRange="H1:H5" selectedIndex="0" top="40" left="150" height="22" width="120"></e-formcontrol>
+                <e-formcontrol type="DropDown" text="Select Payment" cellLink="D4" inputRange="I1:I4" selectedIndex="0" top="100" left="150" height="22" width="120"></e-formcontrol>
+                <e-formcontrol type="DropDown" text="Select Priority" cellLink="D6" inputRange="J1:J3" selectedIndex="1" top="160" left="150" height="22" width="120"></e-formcontrol>
             </e-formcontrols>
         </e-sheet>
     </e-sheets>

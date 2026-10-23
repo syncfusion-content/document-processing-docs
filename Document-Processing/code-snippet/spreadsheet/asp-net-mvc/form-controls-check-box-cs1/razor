@@ -21,7 +21,7 @@
             cell.Value("").Add();
             cell.Value("Cell Link").Add();
             cell.Value("").Add();
-        }).Add();
+        }).Index(3).Add();
         
         row.Cells(cell =>
         {
@@ -29,7 +29,7 @@
             cell.Value("").Add();
             cell.Value("Cell Link").Add();
             cell.Value("").Add();
-        }).Add();
+        }).Index(5).Add();
     }).Columns(column =>
     {
         column.Width(150).Add();
