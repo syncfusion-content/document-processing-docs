@@ -583,20 +583,6 @@ Supported scenarios:
 - Combine the referenced values as tab-delimited text, XML (XFDF), or the result of a custom calculation script using `valueFormat`.
 - Customize the module size, error correction level, and caption.
 
-Public APIs:
-
-| API | Description | Default |
-|---|---|---|
-| `barcodeOptions` (`PdfBarcodeOptions`) | `symbology` (`PdfBarcodeSymbology.PDF417`, `QR`, or `DataMatrix`), `xDimention` (module size in points; values of 1 or less fall back to 4), and `errorCorrectionLevel` (`Pdf417ErrorCorrectionLevel` for PDF417, `PdfQRErrorCorrectionLevel` for QR Code; ignored for Data Matrix). | PDF417, `xDimention` 4 |
-| `fields` | Names of the form fields whose values are encoded. | Empty |
-| `valueFormat` (`PdfBarcodeValueFormat`) | `TabDelimited`, `XML`, or `CustomScript`. | `TabDelimited` |
-| `includeFieldNames` | Includes field names in the tab-delimited payload. | `false` |
-| `customCalculationScript` | JavaScript calculation script used when `valueFormat` is `CustomScript`. | Empty |
-| `caption` | Text drawn at the bottom of the barcode. | Empty |
-| `compressData` | Compresses the data before encoding. | `false` |
-| `text` | Read-only. The current barcode payload. | - |
-| `itemsCount`, `itemAt(index)` | Access the widgets (`PdfBarcodeFieldItem`) of the field. | - |
-
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import {PdfDocument, PdfPage, PdfTextBoxField, PdfBarcodeField, PdfBarcodeSymbology, PdfBarcodeValueFormat, PdfQRErrorCorrectionLevel} from '@syncfusion/ej2-pdf';
@@ -668,8 +654,6 @@ document.save('output.pdf');
 document.destroy();
 {% endhighlight %}
 {% endtabs %}
-
-N> The `xDimention` property name is spelled as shown in the public API. To draw a barcode as static page content instead of a form field, refer to [Barcode](./barcode).
 
 ## Filling form fields in an existing PDF document
 
@@ -955,9 +939,6 @@ The barcode value is synchronized from the fields listed in `fields`. The follow
 | Radio button (`PdfRadioButtonListField`) | Value of the selected item |
 | Check box (`PdfCheckBoxField`) | `exportValue` when checked; otherwise `Off` |
 | Button (`PdfButtonField`) | `text` |
-| Barcode (`PdfBarcodeField`) | Accepted as a reference name; the current implementation does not read a value from another barcode field, so it contributes an empty value |
-
-Values are combined according to `valueFormat` (`TabDelimited`, `XML`, or `CustomScript`). Updating `fields`, `valueFormat`, `includeFieldNames`, `customCalculationScript`, or `caption` regenerates the barcode calculation script of the field. Referenced field names that do not exist in the form, or field types that are not listed above, contribute an empty value.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -1012,6 +993,8 @@ document.save('output.pdf');
 document.destroy();
 {% endhighlight %}
 {% endtabs %}
+
+N> Values are combined according to `valueFormat` (`TabDelimited`, `XML`, or `CustomScript`). Updating `fields`, `valueFormat`, `includeFieldNames`, `customCalculationScript`, or `caption` regenerates the barcode calculation script of the field. Referenced field names that do not exist in the form, or field types that are not listed above, contribute an empty value.
 
 The following example reads the current barcode payload and reference field names, and applies a custom calculation script.
 

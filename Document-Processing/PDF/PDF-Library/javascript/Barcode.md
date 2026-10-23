@@ -9,17 +9,12 @@ documentation: UG
 
 # Barcode in JavaScript PDF
 
-The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) lets you draw barcodes as vector graphics directly on PDF pages. Barcodes are grouped into two categories:
+The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) lets you draw barcodes as vector graphics directly on PDF pages.
 
-- **Unidimensional (1D) barcodes** encode data in the widths of parallel bars. Support for 1D barcodes is planned; this page will list them under [Supported barcode types](#supported-barcode-types) when they become available.
 - **Bidimensional (2D) barcodes** encode data in a matrix or stacked pattern. The following 2D barcodes are currently supported:
   - QR Code (`PdfQRBarcode`)
   - Data Matrix (`PdfDataMatrixBarcode`)
   - PDF417 (`Pdf417Barcode`)
-
-All 2D barcode classes derive from `PdfBidimensionalBarcode` and share the same `draw` method, which accepts a `PdfPage` or `PdfGraphics` target together with the bounds of the barcode, and returns the bounds actually occupied by the barcode.
-
-N> To create interactive barcode fields in a PDF form, refer to [Adding the barcode field](./form-fields#adding-the-barcode-field).
 
 ## Adding a two-dimensional barcode to a PDF document
 
@@ -105,22 +100,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-### Barcode-specific properties
-
-| Barcode | Property | Description | Default |
-|---|---|---|---|
-| QR Code | `inputMode` (`PdfQRInputMode`) | `Numeric`, `AlphaNumeric`, `Byte`, or `Mixed`. Forced modes reject characters they cannot encode. | `Mixed` |
-| QR Code | `errorCorrectionLevel` (`PdfQRErrorCorrectionLevel`) | `Low`, `Medium`, `Quartile`, or `High`. | `Medium` |
-| QR Code | `version` (`PdfQRVersion`) | `Auto` or an explicit version from `Version01` to `Version40`. | `Auto` |
-| QR Code | `textEncoding` (`PdfBarcodeTextEncoding`) | `Utf8` or `Iso88591`, used for byte segments. | `Utf8` |
-| QR Code | `actualVersion`, `moduleCount` | Read-only. Values resolved by the most recent `draw` call. | - |
-| QR Code | `logo` (`PdfQRBarcodeLogo`) | Optional image placed at the center. See [Creating a QR Code with a logo](#creating-a-qr-code-with-a-logo). | `undefined` |
-| Data Matrix | `encoding` (`PdfDataMatrixEncoding`) | `Auto`, `Ascii`, `AsciiNumeric`, or `Base256`. | `Auto` |
-| Data Matrix | `symbolSize` (`PdfDataMatrixSize`) | `Auto`, a square size from `Size10x10` to `Size144x144`, or a rectangular size such as `Size8x18` and `Size16x48`. | `Auto` |
-| Data Matrix | `textEncoding` (`PdfBarcodeTextEncoding`) | `Utf8` or `Iso88591`. | `Utf8` |
-| Data Matrix | `actualRows`, `actualColumns` | Read-only. Symbol dimensions resolved by the most recent `draw` call. | - |
-| PDF417 | `errorCorrectionLevel` (`Pdf417ErrorCorrectionLevel`) | `Auto` or `Level0` to `Level8`. | `Auto` |
-| PDF417 | `barHeight` | Height of each barcode row. `0` calculates the height from `xDimension`. | `0` |
+N> All 2D barcode classes derive from `PdfBidimensionalBarcode` and share the same `draw` method, which accepts a `PdfPage` or `PdfGraphics` target together with the bounds of the barcode, and returns the bounds actually occupied by the barcode.
 
 ## Customizing the barcode appearance
 
@@ -245,7 +225,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-N> Use the `High` error correction level when adding a logo, and keep the logo small. A logo that covers too much of the symbol or overlaps its protected patterns throws an error when `strictValidation` is `true`. An unsupported or invalid logo image also throws an error. To remove a logo, set `logo` to `undefined`.
+N> Use the `High` error correction level when adding a logo, and keep the logo small. A logo that covers too much of the symbol or overlaps its protected patterns throws an error when `strictValidation` is `true`. An unsupported or invalid logo image also throws an error.
 
 ## Supported QR Code error correction levels
 
@@ -256,7 +236,7 @@ N> Use the `High` error correction level when adding a logo, and keep the logo s
 | Quartile | `PdfQRErrorCorrectionLevel.Quartile` | 25% | Printed labels that may be scuffed. |
 | High | `PdfQRErrorCorrectionLevel.High` | 30% | Harsh environments, or QR Codes with a logo. |
 
-A higher level makes the symbol more resilient but also increases its size for the same content. PDF417 uses its own `Pdf417ErrorCorrectionLevel` enumeration (`Auto`, `Level0` to `Level8`). Data Matrix does not expose an error correction option.
+A higher level makes the symbol more resilient but also increases its size for the same content. PDF417 uses its own `Pdf417ErrorCorrectionLevel` enumeration (`Auto`, `Level0` to `Level8`).
 
 ## Supported barcode types
 
@@ -265,7 +245,6 @@ A higher level makes the symbol more resilient but also increases its size for t
 | QR Code | 2D (matrix) | Numeric (`0-9`), alphanumeric (`0-9`, `A-Z`, space, `$ % * + - . / :`), and byte data (UTF-8 or ISO-8859-1). `Mixed` mode (default) selects segments automatically. | Up to the capacity of version 40 at the selected error correction level (at most 7,089 digits, 4,296 alphanumeric characters, or 2,953 bytes). |
 | Data Matrix | 2D (matrix) | ASCII (including digit-pair compaction) or arbitrary bytes (Base256). | Up to the capacity of the largest symbol (144 x 144); Base256 payloads up to 1,555 bytes. |
 | PDF417 | 2D (stacked) | Any text, encoded as UTF-8. | Up to 1,800 UTF-8 bytes. |
-| 1D barcodes | 1D | Planned. | Planned. |
 
 N> Empty text is not supported. An invalid configuration, a payload that does not fit the selected symbol, or characters not supported by a forced input mode throws an error when `draw` is called.
 
