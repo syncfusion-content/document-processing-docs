@@ -13,6 +13,8 @@ The Spreadsheet component provides built-in form controls that enable users to a
 
 > The default value for `allowFormControl` property is `true`.
 
+The following sections describe each supported form control and its configuration options.
+
 ## Supported Form Controls
 
 The Spreadsheet supports the following form controls:
@@ -23,13 +25,13 @@ The Spreadsheet supports the following form controls:
 
 ### Check Box
 
-The Check Box form control allows users to toggle between checked, unchecked, and mixed states, while updating the corresponding value in a cell linked cell.
+The Check Box form control allows users to toggle between checked, unchecked, and mixed states, while updating the corresponding value in a linked cell.
 
 Check Box provides the following configuration options:
 
-- **Unchecked**: The unselected state of the Check Box for a Cell Linked cell. If Unchecked, linked cell value: **FALSE**
-- **Checked**: The selected state of the Check Box for a Cell Linked cell. If Checked, linked cell value: **TRUE**
-- **Mixed**: Represents the mixed state of the Check Box for a Cell Linked cell.
+- **Unchecked**: The unselected state of the Check Box for a Linked cell. If Unchecked, linked cell value: **FALSE**
+- **Checked**: The selected state of the Check Box for a Linked cell. If Checked, linked cell value: **TRUE**
+- **Mixed**: Represents the mixed state of the Check Box for a Linked cell.
 - **Cell Link** :Specify a cell reference to link the Check Box to a worksheet cell.
 
 The linked cell value is automatically updated whenever the Check Box state changes.
@@ -49,19 +51,19 @@ The following code example shows the Check Box Form Control functionality in the
 
 ### Radio Button
 
-The Radio Button form control allows users to store either 1 (selected) or 0 (unselected) in a cell linked cell.
+The Radio Button form control allows users to store either 1 (selected) or 0 (unselected) in a linked cell.
 
 > Once a Radio Button is selected, clicking the same Radio Button again does not uncheck it.
 
 Radio Button provides the following configuration options:
 
-- **Unchecked**: The unselected state of the Radio Button for a Cell Linked cell. If Unchecked, linked cell value: **0**
-- **Checked**: The selected state of the Radio Button for a Cell Linked cell. If Checked, linked cell value: **1**
+- **Unchecked**: The unselected state of the Radio Button for a Linked cell. If Unchecked, linked cell value: **0**
+- **Checked**: The selected state of the Radio Button for a Linked cell. If Checked, linked cell value: **1**
 - **Cell Link** :Specify a cell reference to link the Radio Button to a worksheet cell.
 
 The linked cell value is automatically updated whenever the Radio Button state changes.
 
-> **Note:** Within a worksheet, only one Radio Button can be enabled at a time.
+> **Note:** Within a worksheet, only one Radio Button can be selected (checked) at a time. Selecting a new Radio Button automatically deselects any previously selected Radio Button.
 
 The following code example shows the Radio Button Form Control functionality in the Spreadsheet control.
 
@@ -78,9 +80,9 @@ The following code example shows the Radio Button Form Control functionality in 
 
 ### Combo Box (Dropdown)
 
-The Combo Box (Dropdown) form control allows users to select an item from a predefined list and stores the selected item's position in the cell linked cell.
+The Combo Box (Dropdown) form control allows users to select an item from a predefined list and stores the selected item's position in the linked cell.
 
-> **Note:** The Combo Box (Dropdown) control is **initially empty** when inserted. You must configure the Input Range and set a Cell Link to make the Combo Box (Dropdown) functional.
+> **Note:** The Combo Box (Dropdown) control displays an **empty list** when first inserted. You must configure the Input Range and set a Cell Link to make the Combo Box (Dropdown) functional.
 
 Combo Box (Dropdown) provides the following configuration options:
 
@@ -110,8 +112,6 @@ Form controls can be inserted through the ribbon menu:
 
 Click on the desired cell location to place the Form Control and select the required Form Control type (Check Box, Radio Button, or Combo Box (Dropdown)) in the Form Controls dropdown from the insert tab within the ribbon menu.
 
-The following sections describe each supported form control and its configuration options.
-
 ## Accessing Format Control Dialog
 
 The Format Control dialog allows you to configure settings specific to a form control, such as state options, input ranges, and cell links.
@@ -131,7 +131,7 @@ To open the Format Control dialog:
 - **Delete**: Right-click the form control and select Delete, or press Delete key after selecting the form control.
 - **Cut, Copy, Paste**: Right-click the form control and select Cut, Copy, or Paste.
 - **Right-to-Left (RTL)**: Form controls support Right-to-Left (RTL) layouts. When RTL mode is enabled, form controls render and function appropriately in RTL direction.
-- **Rename**: Right-click the form control, click Edit Text option from the context menu and Rename Form Control
+- **Rename**: Right-click the form control and select Edit Text from the context menu to rename it.
 
 ## See Also
 
