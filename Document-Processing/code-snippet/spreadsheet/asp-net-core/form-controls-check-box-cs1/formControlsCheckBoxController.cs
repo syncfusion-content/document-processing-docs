@@ -1,13 +1,14 @@
 public IActionResult Index()
 {
-    // Sample data for demonstration
-    List<object> data = new List<object>()
+    // Form controls data for checkbox
+    var formControls = new List<object>
     {
-        new { Description = "Accept Terms", Status = false },
-        new { Description = "Enable Notifications", Status = true },
-        new { Description = "Subscribe to Newsletter", Status = false }
+        new { type = "CheckBox", text = "Accept Terms", cellLink = "D2", value = "Unchecked", top = 40, left = 150, height = 20, width = 120 },
+        new { type = "CheckBox", text = "Enable Notifications", cellLink = "D4", value = "Unchecked", top = 80, left = 150, height = 20, width = 120 },
+        new { type = "CheckBox", text = "Select All Options", cellLink = "D6", value = "Unchecked", top = 120, left = 150, height = 20, width = 120 }
     };
-    
-    ViewBag.DefaultData = data;
+
+    ViewBag.FormControls = formControls;
+
     return View();
 }
