@@ -574,7 +574,7 @@ document.destroy();
 
 ### Adding the barcode field
 
-The following example adds a barcode field using the [PdfBarcodeField](https://ej2.syncfusion.com/documentation/api/pdf/pdfbarcodefield) class. A barcode field is an interactive field whose barcode appearance is generated from the values of other form fields, and it is updated when those values change in a PDF viewer that supports form calculations.
+The following example adds a barcode field using the `PdfBarcodeField` class. A barcode field is an interactive field whose barcode appearance is generated from the values of other form fields, and it is updated when those values change in a PDF viewer that supports form calculations.
 
 Supported scenarios:
 
@@ -927,7 +927,7 @@ document.destroy();
 
 ### Filling the barcode field
 
-The following example updates an existing [PdfBarcodeField](https://ej2.syncfusion.com/documentation/api/pdf/pdfbarcodefield). You can change the barcode symbology and appearance, caption, and the names of the fields that supply the barcode value.
+The following example updates an existing `PdfBarcodeField`. You can change the barcode symbology and appearance, caption, and the names of the fields that supply the barcode value.
 
 The barcode value is synchronized from the fields listed in `fields`. The following reference field types are supported:
 
