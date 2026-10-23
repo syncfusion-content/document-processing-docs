@@ -34,7 +34,7 @@ Check Box provides the following configuration options:
 
 The linked cell value is automatically updated whenever the Check Box state changes.
 
-The following code example shows `allowFormControl` functionality in the Spreadsheet control.
+The following code example shows the Check Box Form Control functionality in the Spreadsheet control.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -63,7 +63,7 @@ The linked cell value is automatically updated whenever the Radio Button state c
 
 > **Note:** Within a worksheet, only one Radio Button can be enabled at a time.
 
-The following code example shows `allowFormControl` functionality in the Spreadsheet control.
+The following code example shows the Radio Button Form Control functionality in the Spreadsheet control.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -89,7 +89,7 @@ Combo Box (Dropdown) provides the following configuration options:
 
 The linked cell value is automatically updated whenever the Combo Box's selected item changes.
 
-The following code example shows `allowFormControl` functionality in the Spreadsheet control.
+The following code example shows the Combo Box (Dropdown) Form Control functionality in the Spreadsheet control.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
