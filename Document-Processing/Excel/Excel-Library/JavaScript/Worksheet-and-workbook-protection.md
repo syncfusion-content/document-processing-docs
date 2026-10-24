@@ -4,6 +4,7 @@ description: Protect worksheets and workbooks, set options, and manage protected
 platform: document-processing
 control: Excel
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Worksheet and Workbook Protection in JavaScript Excel

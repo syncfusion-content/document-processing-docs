@@ -4,6 +4,7 @@ description: File format compatibility page describes supported and unsupported 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Supported File Formats in .NET Excel Library

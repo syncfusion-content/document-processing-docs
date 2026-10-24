@@ -5,6 +5,7 @@ description: Learn how real-time collaborative editing synchronizes workbook cha
 control: Collaborative Editing
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Collaborative editing in TypeScript SpreadsheetEditor

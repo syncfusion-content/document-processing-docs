@@ -5,6 +5,7 @@ description: Learn about the introduction of the Syncfusion Essential Studio Vue
 platform: document-processing
 control: Index
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # About Syncfusion Vue Spreadsheet Control

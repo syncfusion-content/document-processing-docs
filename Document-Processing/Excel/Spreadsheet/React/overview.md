@@ -5,6 +5,7 @@ description: Learn about the introduction of Syncfusion Essential Studio React S
 platform: document-processing
 control: Index
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # About Syncfusion React Spreadsheet Component

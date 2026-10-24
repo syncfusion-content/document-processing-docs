@@ -5,6 +5,7 @@ description: Selection in Angular Spreadsheet allows users to select cells, rang
 platform: document-processing
 control: Selection 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Selection in Angular Spreadsheet 

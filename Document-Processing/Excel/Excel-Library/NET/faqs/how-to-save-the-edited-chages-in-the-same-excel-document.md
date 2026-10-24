@@ -4,6 +4,7 @@ description: Save edited changes in the same Excel document using the Syncfusion
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to save changes in the same Excel document in .NET Excel Library

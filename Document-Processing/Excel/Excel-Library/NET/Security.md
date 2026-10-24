@@ -4,6 +4,7 @@ description: Excel protected view page describes security options in the Syncfus
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Security in .NET Excel Library

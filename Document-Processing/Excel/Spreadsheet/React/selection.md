@@ -5,6 +5,7 @@ description: Learn about selection in the Syncfusion React Spreadsheet component
 control: Selection
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Selection in React Spreadsheet

@@ -5,6 +5,7 @@ description: The Flutter Excel Library lets users perform calculations in Excel 
 platform: document-processing
 control: Excel
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Formulas in Flutter Excel Library

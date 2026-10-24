@@ -5,6 +5,7 @@ description: The feature list in TypeScript Spreadsheet provides an overview of 
 platform: document-processing
 control: Feature list 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Feature list in TypeScript Spreadsheet 

@@ -5,6 +5,7 @@ description: The Flutter Excel Library lets users apply styles, fonts, colors, b
 platform: document-processing
 control: Excel
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Cell Formatting in Flutter Excel Library

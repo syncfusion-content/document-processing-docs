@@ -5,6 +5,7 @@ description: The ribbon in TypeScript Spreadsheet organizes commands into tabs, 
 platform: document-processing
 control: Ribbon
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Ribbon in TypeScript Spreadsheet 

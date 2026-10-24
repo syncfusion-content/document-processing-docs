@@ -4,6 +4,7 @@ description: Syncfusion .NET Excel Library supports creating Excel documents in 
 platform: document-processing 
 control: XlsIO 
 documentation: UG 
+appliesto: Document SDK
 --- 
 
 # Create Excel Documents in GCP using .NET Excel Library

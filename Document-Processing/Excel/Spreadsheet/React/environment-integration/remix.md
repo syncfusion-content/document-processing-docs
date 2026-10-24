@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion React Spreadsheet comp
 control: Spreadsheet
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Getting Started with React Spreadsheet in Remix

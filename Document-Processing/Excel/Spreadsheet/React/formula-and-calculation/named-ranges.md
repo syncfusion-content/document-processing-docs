@@ -5,6 +5,7 @@ description: Learn about named ranges in the Syncfusion React Spreadsheet compon
 control: Formulas 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Named Ranges in React Spreadsheet

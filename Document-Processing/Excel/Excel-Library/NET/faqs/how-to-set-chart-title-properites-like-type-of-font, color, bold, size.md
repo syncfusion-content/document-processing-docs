@@ -4,6 +4,7 @@ description: Set chart title properties such as font type, color, bold style, an
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to set chart title properties in .NET Excel Library

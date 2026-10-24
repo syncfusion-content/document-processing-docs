@@ -6,6 +6,7 @@ control: Spreadsheet
 platform: document-processing
 documentation: ug
 keywords: React UI Builder, Skills, AI Assistants, Spreadsheet SDK, Agent Skills
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # React UI Builder Skill with Spreadsheet for AI Assistants

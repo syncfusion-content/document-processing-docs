@@ -5,6 +5,7 @@ description: Suspend and resume UI refresh in Angular Spreadsheet improve perfor
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Suspend and Resume UI Refresh in Angular Spreadsheet

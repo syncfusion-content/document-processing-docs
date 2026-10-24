@@ -6,6 +6,7 @@ platform: document-processing
 control: XlsIO
 documentation: UG
 keywords: c#, vb.net, excel, create excel, new excel , open excel, read excel, edit excel, write excel, update excel, syncfusion, xlsio
+appliesto: Document SDK
 ---
 
 # Create Excel File in C# and VB.NET

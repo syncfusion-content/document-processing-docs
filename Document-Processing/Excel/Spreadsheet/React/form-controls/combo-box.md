@@ -5,6 +5,7 @@ description: Learn about Combo Box (Dropdown) form control in the Syncfusion Rea
 control: Form Controls
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Combo Box (Dropdown) Form Control in React Spreadsheet

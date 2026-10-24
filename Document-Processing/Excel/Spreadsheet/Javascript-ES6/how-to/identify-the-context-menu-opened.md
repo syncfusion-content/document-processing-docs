@@ -5,6 +5,7 @@ description: Identify the context menu opened in TypeScript Spreadsheet to perfo
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # How to Identify Context Menu Opened in TypeScript Spreadsheet

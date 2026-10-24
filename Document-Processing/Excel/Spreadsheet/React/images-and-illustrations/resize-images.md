@@ -5,6 +5,7 @@ description: Learn about resizing images in the Syncfusion React Spreadsheet com
 control: Images
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Resize images in React Spreadsheet

@@ -5,6 +5,7 @@ description: Syncfusion Excel web installer download section explains how to dow
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
+appliesto: Document SDK
 
 ---
 

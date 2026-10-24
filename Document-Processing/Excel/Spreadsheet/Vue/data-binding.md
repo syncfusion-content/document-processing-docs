@@ -5,6 +5,7 @@ description: Bind local and remote data sources to the Syncfusion Vue Spreadshee
 control: Data binding 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Data Binding in Vue Spreadsheet

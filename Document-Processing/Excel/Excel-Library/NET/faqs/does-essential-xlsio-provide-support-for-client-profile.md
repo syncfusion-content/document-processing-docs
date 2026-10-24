@@ -4,6 +4,7 @@ description: Client Profile compatibility describes whether the Syncfusion .NET 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Client Profile Support in .NET Excel Library

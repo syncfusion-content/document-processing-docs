@@ -4,6 +4,7 @@ description: Add URL, file, UNC, and workbook hyperlinks to cells and manage she
 platform: document-processing
 control: Excel
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Hyperlinks in JavaScript Excel

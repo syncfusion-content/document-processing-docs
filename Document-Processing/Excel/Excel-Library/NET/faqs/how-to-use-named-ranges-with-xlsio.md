@@ -4,6 +4,7 @@ description: Learn how to use named ranges in Excel documents programmatically w
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to use named ranges in .NET Excel Library

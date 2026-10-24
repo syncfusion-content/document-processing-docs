@@ -4,6 +4,7 @@ description: Add and configure conditional formatting rules, formulas, and diffe
 platform: document-processing
 control: Excel
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Conditional Formatting in JavaScript Excel

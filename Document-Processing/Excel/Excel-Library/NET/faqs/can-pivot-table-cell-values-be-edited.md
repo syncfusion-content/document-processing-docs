@@ -4,6 +4,7 @@ description: PivotTable cell editing describes whether Syncfusion .NET Excel Lib
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Pivot Table Cell Editing in .NET Excel Library

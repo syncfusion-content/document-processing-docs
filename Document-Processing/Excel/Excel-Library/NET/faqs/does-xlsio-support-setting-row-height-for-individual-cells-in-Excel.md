@@ -4,6 +4,7 @@ description: Individual cell row height explains whether Syncfusion .NET Excel L
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Row Height Settings in .NET Excel Library

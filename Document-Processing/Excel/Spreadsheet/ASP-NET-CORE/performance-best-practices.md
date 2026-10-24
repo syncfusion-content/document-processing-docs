@@ -5,6 +5,7 @@ description: Learn about performance best practices in the Syncfusion ASP.NET Co
 platform: document-processing
 control: Performance
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Performance Best Practices in ASP.NET Core Spreadsheet

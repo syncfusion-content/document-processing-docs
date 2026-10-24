@@ -4,6 +4,7 @@ description: Linux Excel file handling section explains how to load and save Exc
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Loading and Saving Workbooks in Linux
 

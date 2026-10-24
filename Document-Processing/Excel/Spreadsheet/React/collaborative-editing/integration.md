@@ -5,6 +5,7 @@ description: Learn how to integrate real-time collaborative editing into the Syn
 control: Collaborative Editing
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Collaborative editing integration in React SpreadsheetEditor

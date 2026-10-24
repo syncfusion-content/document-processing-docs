@@ -5,6 +5,7 @@ description: Learn about form controls feature in the Syncfusion React Spreadshe
 control: Form Controls
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Form Controls in React Spreadsheet

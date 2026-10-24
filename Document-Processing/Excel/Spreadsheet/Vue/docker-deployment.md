@@ -5,6 +5,7 @@ description: Learn how to deploy the Syncfusion Vue Spreadsheet application usin
 platform: document-processing
 control: Docker deployment
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Docker Deployment in Vue Spreadsheet
