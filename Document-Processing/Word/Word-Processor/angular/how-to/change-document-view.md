@@ -6,6 +6,7 @@ platform: document-processing
 control: Change document view 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Change Document View in Angular DOCX Editor

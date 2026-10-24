@@ -5,6 +5,7 @@ description: Add, rearrange, remove, and manage pages in PDF documents using the
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # PDF Pages in JavaScript PDF

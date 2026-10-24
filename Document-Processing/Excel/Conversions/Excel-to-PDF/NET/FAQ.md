@@ -4,6 +4,7 @@ description: Excel to PDF FAQ content describes common questions about convertin
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # FAQ in .NET Excel Library

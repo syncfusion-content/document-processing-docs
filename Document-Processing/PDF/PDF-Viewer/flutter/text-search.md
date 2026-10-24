@@ -5,6 +5,7 @@ description: The text search feature in SfPdfViewer enables users to find and na
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Text Search in Flutter PDF Viewer

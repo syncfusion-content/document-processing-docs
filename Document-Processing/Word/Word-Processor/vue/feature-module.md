@@ -6,6 +6,7 @@ control: Feature module
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Feature Modules in Vue DOCX Editor

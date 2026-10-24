@@ -5,6 +5,7 @@ description: Learn about merging cells in the Syncfusion React Spreadsheet compo
 control: Spreadsheet
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Merge cells in React Spreadsheet

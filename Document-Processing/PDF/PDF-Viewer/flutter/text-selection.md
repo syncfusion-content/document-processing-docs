@@ -5,6 +5,7 @@ description: The text selection feature in SfPdfViewer allows users to select an
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Text Selection in Flutter PDF Viewer

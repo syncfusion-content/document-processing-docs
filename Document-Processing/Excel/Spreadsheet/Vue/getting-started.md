@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion Vue Spreadsheet compon
 control: Getting started
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Getting Started with Vue Spreadsheet

@@ -4,6 +4,7 @@ description: Group a pivot table in an Excel document programmatically using the
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Pivot Table Grouping in .NET Excel Library

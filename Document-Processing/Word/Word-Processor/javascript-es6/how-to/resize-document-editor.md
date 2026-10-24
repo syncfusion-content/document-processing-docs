@@ -6,6 +6,7 @@ platform: document-processing
 control: Resize the DOCX Editor
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Resize in TypeScript DOCX Editor 

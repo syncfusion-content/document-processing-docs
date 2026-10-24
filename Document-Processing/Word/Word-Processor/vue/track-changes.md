@@ -6,6 +6,7 @@ control: Track changes
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Track Changes in Vue DOCX Editor

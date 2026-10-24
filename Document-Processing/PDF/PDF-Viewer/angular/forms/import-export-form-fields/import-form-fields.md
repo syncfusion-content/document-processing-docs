@@ -5,6 +5,7 @@ description: Import PDF form field data into the Angular PDF Viewer from FDF, XF
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Import Form Data in Angular PDF Viewer

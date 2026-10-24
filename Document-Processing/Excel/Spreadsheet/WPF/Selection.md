@@ -5,6 +5,7 @@ description: Select cells, rows, columns, and ranges in the WPF Spreadsheet cont
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Selection in WPF Spreadsheet

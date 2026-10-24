@@ -5,6 +5,7 @@ description: Configure retry timeout settings in the ASP.NET MVC PDF Viewer so f
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Configure Retry Timeout in ASP.NET MVC PDF Viewer

@@ -5,6 +5,7 @@ description: Learn about accessibility support in the Syncfusion ASP.NET MVC Spr
 platform: document-processing
 control: Accessibility
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Accessibility in ASP.NET MVC Spreadsheet

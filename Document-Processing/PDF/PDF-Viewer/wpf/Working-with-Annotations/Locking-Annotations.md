@@ -5,6 +5,7 @@ description: The locking annotations feature in WPF PDF Viewer protects annotati
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Locking annotations in WPF Pdf Viewer

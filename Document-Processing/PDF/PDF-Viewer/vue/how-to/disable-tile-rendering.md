@@ -5,6 +5,7 @@ description: Disable tile rendering in the Vue PDF Viewer to use the classic ful
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Disable Tile Rendering in Vue PDF Viewer

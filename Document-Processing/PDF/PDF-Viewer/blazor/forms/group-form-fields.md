@@ -5,6 +5,7 @@ description: Learn how to group PDF form fields in the Blazor SfPdfViewer by ass
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Group form fields in the Blazor PDF Viewer 

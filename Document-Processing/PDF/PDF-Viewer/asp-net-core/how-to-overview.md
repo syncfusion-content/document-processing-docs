@@ -5,6 +5,7 @@ description: How-to overview of the ASP.NET Core PDF Viewer in Syncfusion ASP.NE
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Overview of the ASP.NET Core PDF Viewer

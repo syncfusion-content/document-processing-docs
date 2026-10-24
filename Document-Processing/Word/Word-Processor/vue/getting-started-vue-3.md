@@ -6,6 +6,7 @@ control: Getting started vue 3
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Getting Started with Vue DOCX Editor (Vue 3)

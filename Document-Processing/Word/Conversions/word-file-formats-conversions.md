@@ -4,6 +4,7 @@ description: Learn about the supported Word file format conversions such as Word
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Word file format conversions in .NET Word

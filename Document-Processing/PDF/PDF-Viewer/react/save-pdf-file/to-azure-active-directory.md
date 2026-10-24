@@ -5,6 +5,7 @@ description: Save PDF files from the React PDF Viewer to Azure Active Directory 
 control: PDF Viewer
 platform: document-processing
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Save PDF Files to Azure Active Directory in React PDF Viewer

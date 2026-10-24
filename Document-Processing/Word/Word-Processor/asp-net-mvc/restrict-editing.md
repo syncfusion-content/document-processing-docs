@@ -5,6 +5,7 @@ description: Restrict editing feature in ASP.NET MVC DOCX Editor enables read-on
 platform: document-processing
 control: Restrict Editing
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

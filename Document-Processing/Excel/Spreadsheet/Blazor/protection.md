@@ -5,6 +5,7 @@ description: Learn about protect and unprotect worksheets and workbooks using th
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Protection in Blazor Spreadsheet

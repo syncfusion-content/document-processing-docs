@@ -5,6 +5,7 @@ description: AI Assist Web API server setup in Angular Spreadsheet explains how 
 platform: document-processing
 control: AI Assist Web API Server Setup
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # AI Assist Web API Server Setup in Angular Spreadsheet

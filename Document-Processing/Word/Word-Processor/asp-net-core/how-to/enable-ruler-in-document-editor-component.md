@@ -5,6 +5,7 @@ description: Enable the ruler in Syncfusion® ASP.NET Core DOCX Editor to set ma
 platform: document-processing
 control: Enable Ruler
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # How to Enable Ruler in ASP.NET Core DOCX Editor

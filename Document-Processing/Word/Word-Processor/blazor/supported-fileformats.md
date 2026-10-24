@@ -6,6 +6,7 @@ control: Supported File Formats
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Supported File Formats in Blazor DOCX Editor

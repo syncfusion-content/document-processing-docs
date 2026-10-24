@@ -6,6 +6,7 @@ platform: document-processing
 control: Customize tool bar 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Customize Toolbar in JavaScript DOCX Editor

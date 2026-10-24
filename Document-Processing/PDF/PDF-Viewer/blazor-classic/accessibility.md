@@ -5,6 +5,7 @@ description: Check out and learn here all about accessibility in the Syncfusion 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Accessibility in Syncfusion® Blazor PDF Viewer Classic

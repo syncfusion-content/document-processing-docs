@@ -5,6 +5,7 @@ description: Instantiate the ASP.NET MVC PDF Viewer dynamically at runtime using
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Instantiate the PDF Viewer Dynamically in ASP.NET MVC PDF

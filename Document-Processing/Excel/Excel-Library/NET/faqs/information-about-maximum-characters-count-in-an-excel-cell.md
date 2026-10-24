@@ -4,6 +4,7 @@ description: Excel cell character limit describes the maximum number of characte
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Maximum Cell Characters in .NET Excel Library

@@ -6,6 +6,7 @@ control: DOCX Editor
 platform: document-processing
 documentation: ug
 keywords: Blazor UI Builder, Skills, AI Assistants, DOCX Editor SDK, Agent Skills
+appliesto: DOCX Editor SDK
 ---
 
 # UI Builder Skill with Blazor DOCX Editor

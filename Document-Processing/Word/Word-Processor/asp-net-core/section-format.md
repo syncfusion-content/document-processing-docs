@@ -5,6 +5,7 @@ description: The section format feature in ASP.NET Core DOCX Editor enables user
 platform: document-processing
 control: Section Format
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

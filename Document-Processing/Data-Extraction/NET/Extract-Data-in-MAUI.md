@@ -5,7 +5,7 @@ platform: document-processing
 control: SmartDataExtractor
 documentation: UG
 keywords: Assemblies
-
+appliesto: Document SDK
 ---
 
 # Getting Started with .NET MAUI  Smart Data Extractor

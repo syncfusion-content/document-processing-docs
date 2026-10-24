@@ -6,6 +6,7 @@ control: Server side export
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Server-side export in Vue DOCX Editor

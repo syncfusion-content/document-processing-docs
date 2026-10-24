@@ -6,6 +6,7 @@ control: Clipboard
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Clipboard in Vue DOCX Editor component

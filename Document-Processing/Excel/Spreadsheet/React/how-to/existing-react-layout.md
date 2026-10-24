@@ -5,6 +5,7 @@ description: Learn how to integrate the Syncfusion React Spreadsheet component i
 control: Spreadsheet 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # How to Integrate Spreadsheet into Existing React Layouts

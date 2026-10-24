@@ -5,6 +5,7 @@ description: The accessibility support in Blazor DOCX Editor ensures keyboard na
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # Accessibility in Blazor DOCX Editor

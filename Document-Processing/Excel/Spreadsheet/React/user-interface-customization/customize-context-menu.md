@@ -5,6 +5,7 @@ description: Learn about customizing context menu items in the Syncfusion React 
 control: Spreadsheet 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Context Menu Item in React Spreadsheet

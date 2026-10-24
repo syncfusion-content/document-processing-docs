@@ -5,6 +5,7 @@ description: Undo and redo in TypeScript Spreadsheet allow users to reverse or r
 platform: document-processing
 control: Undo redo
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Undo redo in TypeScript Spreadsheet 

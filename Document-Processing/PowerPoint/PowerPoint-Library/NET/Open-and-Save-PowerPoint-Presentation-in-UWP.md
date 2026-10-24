@@ -4,6 +4,7 @@ description: Open and save Presentation in UWP using UWP PowerPoint library (Pre
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Open and save Presentation in UWP

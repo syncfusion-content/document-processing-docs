@@ -5,6 +5,7 @@ description: The content control feature in ASP.NET MVC DOCX Editor provides bui
 platform: document-processing
 control: Content Control
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

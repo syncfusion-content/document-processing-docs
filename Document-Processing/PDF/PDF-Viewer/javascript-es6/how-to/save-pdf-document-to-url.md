@@ -5,6 +5,7 @@ description: Save a PDF document from the JavaScript (ES6) PDF Viewer to a speci
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Save the PDF to a URL in JavaScript (ES6) PDF Viewer

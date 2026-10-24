@@ -5,6 +5,7 @@ description: Learn how to add, delete, redact pages, and apply redaction in the 
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # About Syncfusion Redaction in Blazor PDF Viewer Component

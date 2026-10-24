@@ -5,7 +5,7 @@ description: Checkout and learn here all about the system requirements needed to
 platform: document-processing
 control: System Requirements
 documentation: ug
-
+appliesto: Document SDK, PDF Viewer SDK, DOCX Editor SDK, Spreadsheet Editor SDK
 ---
 # System Requirements of Document Processing Solutions
 

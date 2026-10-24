@@ -5,6 +5,7 @@ description: Use page thumbnail navigation in the ASP.NET Core PDF Viewer to pre
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Page Thumbnail Navigation in ASP.NET Core PDF Viewer

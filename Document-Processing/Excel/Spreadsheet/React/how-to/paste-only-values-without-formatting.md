@@ -5,6 +5,7 @@ description: Learn how to paste values without formatting in the Syncfusion Reac
 control: Spreadsheet 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # How to Paste Without Formatting in React Spreadsheet

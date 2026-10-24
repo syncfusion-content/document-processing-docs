@@ -5,6 +5,7 @@ description: Retrieve bookmark content as plain text and retrieve document data 
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # How to Retrieve Bookmark Content as Text in Blazor DOCX Editor

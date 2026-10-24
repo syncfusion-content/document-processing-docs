@@ -4,6 +4,7 @@ description: Learn how to use the .NET Markdown library to create Markdown docum
 platform: document-processing
 control: Markdown
 documentation: UG
+appliesto: Document SDK
 ---
 # Getting Started with .NET Markdown Library
 

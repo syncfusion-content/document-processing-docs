@@ -5,6 +5,7 @@ description: Intercept and control file downloads in the ASP.NET Core PDF Viewer
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Control File Downloads in ASP.NET Core PDF Viewer

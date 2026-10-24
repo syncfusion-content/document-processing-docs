@@ -5,6 +5,7 @@ description: Manage rows and columns in the  UWP Spreadsheet control with suppor
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Rows and Columns in UWP Spreadsheet 

@@ -6,6 +6,7 @@ platform: document-processing
 control: Security advisories
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Security Advisories in Angular DOCX Editor

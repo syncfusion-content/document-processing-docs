@@ -5,6 +5,7 @@ description: Learn how to identify if the Viewer has values in Undo, Redo stack 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Identify if the Viewer has values in the Undo, Redo stack

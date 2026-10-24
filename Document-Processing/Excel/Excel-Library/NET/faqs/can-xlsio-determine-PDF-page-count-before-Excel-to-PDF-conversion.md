@@ -4,6 +4,7 @@ description: PDF page count detection describes whether Syncfusion .NET Excel Li
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # PDF Page Count in .NET Excel Library

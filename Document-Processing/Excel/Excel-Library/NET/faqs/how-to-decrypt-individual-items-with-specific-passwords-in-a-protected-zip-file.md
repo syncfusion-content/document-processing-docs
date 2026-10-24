@@ -4,6 +4,7 @@ description: Decrypt individual compressed items with specific passwords using S
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to decrypt items with passwords in .NET Excel Library

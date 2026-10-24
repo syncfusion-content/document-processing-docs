@@ -5,6 +5,7 @@ description: Add each PDF form field using the JavaScript (ES6) PDF Viewer UI, a
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Create Form Fields in JavaScript (ES6) PDF Viewer

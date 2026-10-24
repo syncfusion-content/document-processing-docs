@@ -5,6 +5,7 @@ description: Configure form field constraints in the ASP.NET Core PDF Viewer, in
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # PDF Form Field Constraints in ASP.NET Core PDF Viewer

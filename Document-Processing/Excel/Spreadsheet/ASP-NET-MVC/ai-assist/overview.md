@@ -5,6 +5,7 @@ description: Learn about the AI Assist feature in Syncfusion ASP.NET MVC Spreads
 platform: document-processing
 control: AI Assist
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # AI Assist in ASP.NET MVC Spreadsheet

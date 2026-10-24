@@ -5,6 +5,7 @@ description: Configure the minimum and maximum zoom levels in the ASP.NET Core P
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Configure MinZoom and MaxZoom in ASP.NET Core PDF Viewer

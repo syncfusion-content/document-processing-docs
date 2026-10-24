@@ -4,6 +4,7 @@ description: Deploy and manage Syncfusion Document Processing API with Docker. S
 platform: document-processing
 control: general
 documentation: UG
+appliesto: Document SDK
 ---
 # Docker Image Hosting Guide for Document Processing APIs
 

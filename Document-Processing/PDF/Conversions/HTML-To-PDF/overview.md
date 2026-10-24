@@ -4,6 +4,7 @@ description: Learn about HTML-to-PDF conversion in Syncfusion .NET PDF Library u
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # About HTML-to-PDF Conversion in .NET PDF Library
 
