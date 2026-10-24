@@ -52,6 +52,32 @@ You can define the distance of footer content from the bottom of the page by usi
 documenteditor.selection.sectionFormat.footerDistance = 72;
 ```
 
+## Breaks
+
+You can insert a column break to move the text following the cursor to the next column.
+
+```typescript
+container.documentEditor.editor.insertColumnBreak();
+```
+
+You can insert a page break to move the content following the cursor to the next page.
+
+```typescript
+container.documentEditor.editor.insertPageBreak();
+```
+
+You can insert a next-page section break to start the new section on the next page.
+
+```typescript
+container.documentEditor.editor.insertSectionBreak(SectionBreakType.NewPage);
+```
+
+You can insert a continuous section break to start the new section on the same page.
+
+```typescript
+container.documentEditor.editor.insertSectionBreak(SectionBreakType.Continuous);
+```
+
 ## Online demo
 
 Explore how to apply section formatting in Word documents using the ASP.NET Core DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/sectionformat#/tailwind3).
