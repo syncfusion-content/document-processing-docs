@@ -1,0 +1,15 @@
+@import 'node_modules/@syncfusion/ej2-material-theme/styles/base/base.css';
+@import 'node_modules/@syncfusion/ej2-material-theme/styles/button/button.css';
+@import 'node_modules/@syncfusion/ej2-material-theme/styles/check-box/check-box.css';
+@import 'node_modules/@syncfusion/ej2-material-theme/styles/chips/chips.css';
+@import 'node_modules/@syncfusion/ej2-material-theme/styles/context-menu/context-menu.css';
+@import 'node_modules/@syncfusion/ej2-material-theme/styles/dialog/dialog.css';
+@import 'node_modules/@syncfusion/ej2-material-theme/styles/document-editor/document-editor.css';
+@import 'node_modules/@syncfusion/ej2-material-theme/styles/drop-down-button/drop-down-button.css';
+@import 'node_modules/@syncfusion/ej2-material-theme/styles/drop-down-list/drop-down-list.css';
+@import 'node_modules/@syncfusion/ej2-material-theme/styles/input/input.css';
+@import 'node_modules/@syncfusion/ej2-material-theme/styles/list-view/list-view.css';
+@import 'node_modules/@syncfusion/ej2-material-theme/styles/popup/popup.css';
+@import 'node_modules/@syncfusion/ej2-material-theme/styles/split-button/split-button.css';
+@import 'node_modules/@syncfusion/ej2-material-theme/styles/splitter/splitter.css';
+@import 'node_modules/@syncfusion/ej2-material-theme/styles/toolbar/toolbar.css';
