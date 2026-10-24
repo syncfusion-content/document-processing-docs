@@ -124,13 +124,13 @@ N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-ed
 
 ## View the comparison result with tracked changes in Document Editor
 
-Once the resultant SFDT content returned from the server side is opened in the Document Editor, all the insertions and deletions are highlighted as tracked changes (revisions) in the document. You can show or hide the revisions pane using the `showRevisions` property of the Document Editor, and accept or reject the revisions individually or all at once using the Review pane of the Document Editor.
-
-The following example code illustrates how to show the revisions and open the resultant SFDT content in the Document Editor.
+Once the resultant SFDT content returned from the server side is opened in the Document Editor, all the insertions and deletions are highlighted as tracked changes (revisions) in the document. You can show the revisions using the [`showRevisions`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#showrevisions) property of the Document Editor, and accept or reject the revisions individually or all at once using the Review pane of the Document Editor.
 
 ```js
-editor2.documentEditor.showRevisions = true;
-editor2.documentEditor.open(sfdt);
+//Show the tracked changes (revisions) in the Document Editor.
+documenteditor.showRevisions = true;
+//Open the resultant SFDT content in the Document Editor.
+documenteditor.open(httpRequest.responseText);
 ```
 
 ## Preview Sample
