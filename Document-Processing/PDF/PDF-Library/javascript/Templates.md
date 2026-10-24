@@ -5,6 +5,7 @@ description: Create and use PDF templates to add reusable content in PDF documen
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # PDF Templates in JavaScript PDF
 

@@ -6,6 +6,7 @@ platform: document-processing
 control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # About Syncfusion Print PDF in Blazor PDF Viewer Component

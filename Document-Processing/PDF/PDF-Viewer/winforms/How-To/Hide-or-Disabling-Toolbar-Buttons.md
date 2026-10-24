@@ -5,6 +5,7 @@ description: This guide explains how to hide or disable specific toolbar buttons
 platform: document-processing
 control: PdfViewerControl
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # How to hide toolbar buttons in WinForms PDF Viewer

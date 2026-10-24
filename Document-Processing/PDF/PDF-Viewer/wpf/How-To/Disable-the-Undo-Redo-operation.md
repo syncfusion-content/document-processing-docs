@@ -5,6 +5,7 @@ description: Disable or enable undo redo operations of functions or features in 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # How to Disable the Undo Redo operation in WPF Pdf Viewer

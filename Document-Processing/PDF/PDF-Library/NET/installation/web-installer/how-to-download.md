@@ -5,7 +5,7 @@ description: Learn how to download the Syncfusion PDF web installer with a valid
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
-
+appliesto: Document SDK
 ---
 
 # How to Download Syncfusion PDF Web Installer

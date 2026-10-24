@@ -5,6 +5,7 @@ description: Learn here all about Create PDF Viewer in a popup window in Syncfus
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # Create PDF Viewer in popup window in Blazor PDF Viewer

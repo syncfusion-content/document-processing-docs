@@ -4,6 +4,7 @@ description: Learn how to create and manage PDF portfolios by adding, extracting
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Portfolio in .NET PDF Library

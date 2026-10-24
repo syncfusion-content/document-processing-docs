@@ -5,6 +5,7 @@ description: Learn how to customize or remove the start and end arrow heads in t
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # How to Customize arrow heads in Blazor PDF Viewer

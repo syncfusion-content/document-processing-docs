@@ -5,6 +5,7 @@ description: Customize the primary toolbar in the ASP.NET Core PDF Viewer to sho
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # Customize the Primary Toolbar in ASP.NET Core PDF Viewer

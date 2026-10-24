@@ -4,6 +4,7 @@ description: Learn how to convert HTML to PDF in AWS Elastic Beanstalk using Syn
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # HTML to PDF conversion in AWS Elastic Beanstalk in .NET PDF Library

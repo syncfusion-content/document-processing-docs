@@ -5,6 +5,7 @@ description: Enable, disable, and programmatically trigger PDF downloads in the 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # Download in ASP.NET Core PDF Viewer

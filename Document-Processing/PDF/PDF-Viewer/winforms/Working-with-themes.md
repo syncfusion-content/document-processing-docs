@@ -5,6 +5,7 @@ description: The themes feature in PdfViewerControl enables users to customize t
 platform: document-processing
 control: PdfViewerControl
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # Themes in Windows Forms PDF Viewer

@@ -5,6 +5,7 @@ description: Learn about the ui interaction in the JavaScript (ES5) PDF Viewer a
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # Ui Interaction in JavaScript (ES5) PDF Viewer

@@ -5,6 +5,7 @@ description: Discover the MCP server's advantages, installation requirements, an
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # MCP Server Setup in Blazor Smart PDF Viewer

@@ -4,6 +4,7 @@ description: Learn how to convert HTML to PDF using Blink rendering engine with 
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # HTML to PDF conversion in Blink Engine .NET PDF Library
 

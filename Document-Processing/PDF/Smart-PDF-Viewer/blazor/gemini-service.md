@@ -5,6 +5,7 @@ description: Learn how to implement a custom AI service using Google's Gemini AP
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # Gemini AI Service in Blazor App Smart PDF Viewer

@@ -6,6 +6,7 @@ platform: document-processing
 control: PdfViewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # Programmatic Support for Organize Pages in Angular PDF Viewer

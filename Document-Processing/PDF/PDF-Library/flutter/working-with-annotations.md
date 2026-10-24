@@ -5,6 +5,7 @@ description: Learn about interactive annotations in Syncfusion Flutter PDF non-U
 platform: document-processing
 control: PDF
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Annotations in Flutter PDF

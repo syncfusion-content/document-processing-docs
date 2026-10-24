@@ -5,6 +5,7 @@ description: Use the extractText method in the ASP.NET Core PDF Viewer to extrac
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # How to Use the ExtractText Method in ASP.NET Core PDF Viewer

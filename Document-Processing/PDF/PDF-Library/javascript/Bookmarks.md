@@ -5,6 +5,7 @@ description: Add, edit, and remove bookmarks in PDF documents using the Syncfusi
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # PDF Bookmarks in JavaScript PDF

@@ -4,6 +4,7 @@ description: Learn how to create, modify, and remove different types of interact
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # PDF Annotations in .NET PDF Library
 

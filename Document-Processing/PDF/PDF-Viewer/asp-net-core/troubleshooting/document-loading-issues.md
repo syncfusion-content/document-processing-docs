@@ -5,6 +5,7 @@ description: Resolve document loading issues in the ASP.NET Core PDF Viewer v23.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # Resolve Document Loading Issues in ASP.NET Core PDF Viewer
