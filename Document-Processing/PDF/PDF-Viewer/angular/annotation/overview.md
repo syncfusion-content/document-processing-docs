@@ -21,7 +21,7 @@ The PDF Viewer provides a complete set of annotation tools for reviewing, measur
 - Text boxes: [Free Text](../annotation/annotation-types/free-text-annotation)
 - Drawing: [Ink](../annotation/annotation-types/ink-annotation) (freehand)
 - Stamps: [Standard and custom stamps](../annotation/annotation-types/stamp-annotation)
-- Notes: [Sticky Notes](../annotation/annotation-types/sticky-notes-annotation) (comments)
+- Notes: [Sticky Notes](../annotation/annotation-types/sticky-notes) (comments)
 - Redaction: Mark and apply [redactions](../annotation/annotation-types/redaction-annotation)
 - Measurement: [Distance](../annotation/annotation-types/distance-annotation), [Perimeter](../annotation/annotation-types/perimeter-annotation), [Area](../annotation/annotation-types/area-annotation), [Radius](../annotation/annotation-types/radius-annotation), [Volume](../annotation/annotation-types/volume-annotation)
 

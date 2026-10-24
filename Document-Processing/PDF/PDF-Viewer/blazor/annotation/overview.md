@@ -33,7 +33,7 @@ The Blazor SfPdfViewer provides a complete set of annotation tools for reviewing
 - [Undo and redo annotations](../annotation/annotations-undo-redo): Revert or reapply annotation actions (add, edit, delete) using toolbar buttons or corresponding APIs.
 - [Import and export annotations](../annotation/import-export-annotation): Save and load annotations in JSON (`.json`) or XFDF (`.xfdf`) formats to persist markups across sessions or share them with others.
 - [Set permissions](../annotation/annotation-permission): Enable or disable the `AnnotationPermission` enum value (default: `AnnotationPermission.All`) to control which annotation actions users can perform.
-- [Add and manage comments](../annotation/comments): Insert, edit, and delete comments or sticky notes attached to annotations for clearer feedback and collaboration. The Comments pane must be enabled in the [toolbar settings](../toolbar-customization).
+- [Add and manage comments](../annotation/comments): Insert, edit, and delete comments or sticky notes attached to annotations for clearer feedback and collaboration. The Comments pane must be enabled in the [toolbar settings](../toolbar/overview).
 
 ## See also
 

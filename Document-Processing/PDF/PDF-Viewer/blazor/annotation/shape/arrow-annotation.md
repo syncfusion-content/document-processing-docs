@@ -42,7 +42,7 @@ To enable Arrow annotations in the Blazor SfPdfViewer, configure the component w
 N> When in Pan mode, selecting a shape tool automatically switches the viewer to selection mode for smooth interaction.
 
 ### Enable Arrow Annotation Mode
-Switch the viewer into arrow mode using [`SetAnnotationModeAsync(AnnotationType.Arrow)`]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SetAnnotationModeAsync_Syncfusion_Blazor_SfPdfViewer_AnnotationType_)).
+Switch the viewer into arrow mode using [`SetAnnotationModeAsync(AnnotationType.Arrow)`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_SetAnnotationModeAsync_Syncfusion_Blazor_SfPdfViewer_AnnotationType_).
 
 ```cshtml
 

@@ -388,7 +388,7 @@ Additionally, the component provides a built-in Submit button that exports form 
 
 ## See also
 
-* [UI interactions in form Designer](./ui-interactions)
+* [UI interactions in form Designer](.forms/overview)
 * [Programmatic Support in Form Designer](./create-programmatically)
 * [Custom Fonts in Form Designer](./custom-font)
 * [Events in Form Designer](./events)
