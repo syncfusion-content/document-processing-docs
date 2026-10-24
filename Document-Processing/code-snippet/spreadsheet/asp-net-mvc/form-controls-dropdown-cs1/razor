@@ -1,0 +1,75 @@
+@Html.EJS().Spreadsheet("spreadsheet").ShowFormulaBar(false).AllowFormControl(true).Sheets(sheet =>
+{
+    sheet.Name("DropDownDemo").Rows(row =>
+    {
+        row.Cells(cell =>
+        {
+            cell.Value("Drop Down Form Controls").Style(new SpreadsheetCellStyle() { FontWeight = FontWeight.Bold, TextAlign = TextAlign.Center }).Add();
+            cell.Value("").Index(7).Add();
+            cell.Value("Delivery Options").Index(7).Add();
+            cell.Value("Payment Methods").Index(8).Add();
+            cell.Value("Priority").Index(9).Add();
+        }).Add();
+        
+        row.Cells(cell =>
+        {
+            cell.Value("Delivery Options").Add();
+            cell.Value("").Add();
+            cell.Value("Selected Index").Add();
+            cell.Value("").Add();
+            cell.Value("Standard Delivery").Index(7).Add();
+            cell.Value("Cash on Delivery").Index(8).Add();
+            cell.Value("Low").Index(9).Add();
+        }).Add();
+        
+        row.Cells(cell =>
+        {
+            cell.Value("Express Delivery").Index(7).Add();
+            cell.Value("Credit Card").Index(8).Add();
+            cell.Value("Medium").Index(9).Add();
+        }).Add();
+        
+        row.Cells(cell =>
+        {
+            cell.Value("Payment Method").Add();
+            cell.Value("").Add();
+            cell.Value("Selected Index").Add();
+            cell.Value("").Add();
+            cell.Value("Priority Delivery").Index(7).Add();
+            cell.Value("Debit Card").Index(8).Add();
+            cell.Value("High").Index(9).Add();
+        }).Add();
+        
+        row.Cells(cell =>
+        {
+            cell.Value("Pickup at Store").Index(7).Add();
+            cell.Value("Online Payment").Index(8).Add();
+        }).Add();
+        
+        row.Cells(cell =>
+        {
+            cell.Value("Priority Level").Add();
+            cell.Value("").Add();
+            cell.Value("Selected Index").Add();
+            cell.Value("").Add();
+            cell.Value("Digital Download").Index(7).Add();
+        }).Add();
+    }).Columns(column =>
+    {
+        column.Width(150).Add();
+        column.Width(200).Add();
+        column.Width(150).Add();
+        column.Width(150).Add();
+        column.Width(100).Add();
+        column.Width(100).Add();
+        column.Width(100).Add();
+        column.Width(150).Add();
+        column.Width(150).Add();
+        column.Width(100).Add();
+    }).FormControls(formControl =>
+    {
+        formControl.Type("DropDown").Text("Select Delivery").CellLink("D2").InputRange("H1:H5").SelectedIndex(0).Top(40).Left(150).Height(22).Width(120).Add();
+        formControl.Type("DropDown").Text("Select Payment").CellLink("D4").InputRange("I1:I4").SelectedIndex(0).Top(100).Left(150).Height(22).Width(120).Add();
+        formControl.Type("DropDown").Text("Select Priority").CellLink("D6").InputRange("J1:J3").SelectedIndex(1).Top(160).Left(150).Height(22).Width(120).Add();
+    }).Add();
+}).Render()
