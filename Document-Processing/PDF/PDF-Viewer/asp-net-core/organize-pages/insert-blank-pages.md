@@ -1,0 +1,79 @@
+---
+layout: post
+title: Insert Blank Pages in ASP.NET Core PDF Viewer | Syncfusion
+description: Insert blank pages into a PDF in the ASP.NET Core PDF Viewer using the Organize Pages panel to add new empty pages at any position.
+platform: document-processing
+control: PDF Viewer
+documentation: ug
+domainurl: ##DomainURL##
+---
+
+# Insert Blank Pages in ASP.NET Core PDF Viewer
+
+## Overview
+
+This guide describes inserting new blank pages into a PDF using the **Organize Pages** UI in the ASP.NET Core PDF Viewer.
+
+**Outcome**: A blank page is added at the chosen position and will appear in thumbnails and exports.
+
+## Prerequisites
+
+- Syncfusion ASP.NET Core PDF Viewer installed and added to your project. See [getting started guide](../getting-started).
+- The viewer is configured with [`resourceUrl`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ResourceUrl) (standalone) or [`serviceUrl`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ServiceUrl) (server-backed) as required.
+
+## Steps
+
+1. Open the Organize Pages view
+
+    - Click the **Organize Pages** button in the viewer navigation toolbar to open the panel.
+
+2. Select insertion point
+
+    - Hover over the thumbnail before or after which you want the blank page added.
+
+3. Insert a blank page
+
+    - Click the **Insert Left** / **Insert Right** option and choose the position (Before / After). A new blank thumbnail appears in the sequence.
+
+    ![Insert pages in Organize Pages](../images/organize-insert.png)
+
+4. Adjust and confirm
+
+    - Reposition or remove the inserted blank page if needed using drag-and-drop or delete options.
+
+5. Persist the change
+
+    - Click **Save** or **Save As** to include the blank page in the exported PDF.
+
+## Expected result
+
+- A blank page thumbnail appears at the chosen position and is present in any saved or downloaded PDF.
+
+## Enable or disable Insert Pages button
+
+To enable or disable the **Insert Pages** button in the page thumbnails, update the `pageOrganizerSettings`. See [Organize pages toolbar customization](./toolbar#show-or-hide-the-insert-option) for the guidelines.
+
+{% tabs %}
+{% highlight cshtml tabtitle="Standalone" %}
+<div class="text-center">
+    <ejs-pdfviewer id="pdfviewer"
+                   style="height:600px"
+                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+                   pageOrganizerSettings="@(new { canInsert= false })">
+    </ejs-pdfviewer>
+</div>
+{% endhighlight %}
+{% endtabs %}
+
+## Troubleshooting
+
+- **Organize Pages button missing**: Verify that the page organizer is enabled and that the viewer is properly configured.
+- **Inserted page not saved**: Confirm `resourceUrl` or `serviceUrl` is configured for your selected processing mode.
+- **Insert options disabled**: Ensure `pageOrganizerSettings.canInsert` is set to `true` to enable insert option.
+
+## Related topics
+
+- [Organize pages toolbar customization](./toolbar)
+- [Organize pages event reference](./events)
+- [Remove pages in Organize Pages](./remove-pages)
+- [Reorder pages in Organize Pages](./reorder-pages)
