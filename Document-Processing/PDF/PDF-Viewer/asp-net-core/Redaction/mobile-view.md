@@ -1,21 +1,23 @@
 ---
 layout: post
-title: Mobile View in ASP.NET Core PDF Viewer | Syncfusion
-description: Use the Organize Pages panel on mobile devices in the ASP.NET Core PDF Viewer to rotate, rearrange, add, remove, and duplicate PDF pages.
+title: Redaction Mobile View in ASP.NET Core PDF Viewer | Syncfusion
+description: Apply redactions in the ASP.NET Core PDF Viewer on mobile devices, with a complete mobile toolbar setup and a redaction workflow you can copy.
 platform: document-processing
 control: PdfViewer
 documentation: ug
 ---
 
-# Organize Pages in Mobile View in ASP.NET Core PDF Viewer
+# Redaction in Mobile View in ASP.NET Core PDF Viewer
 
-The Redaction Tool enables users to permanently mark and remove sensitive content from PDF documents in mobile view using the ASP.NET Core PdfViewer component. This feature is optimized for touch interactions and provides a streamlined redaction workflow specifically designed for mobile devices.
+## Overview
 
-![Redaction in Mobile View](./redaction-annotations-images/redaction-mobile-view.png)
+This tutorial teaches you how to enable and use the Redaction tools in the Syncfusion ASP.NET Core PDF Viewer, optimized for mobile (phone/tablet) screens. You will add a redaction button to the viewer toolbar, open the viewer on a small-screen layout, create selective and page-wide redactions, customize appearance, and apply redactions permanently.
 
-N> In mobile view, the redaction toolbar appears at the bottom of the viewer for thumb-friendly access.
+**Outcome**: a working ASP.NET Core sample where users can mark content for redaction using touch, configure appearance, and apply redactions.
 
-N> The mobile layout activates automatically on small screens.
+![Redaction toolbar displayed at bottom of mobile PDF viewer](./redaction-annotations-images/redaction-mobile-view.png)
+
+N> In mobile view, the redaction toolbar appears at the bottom of the viewer for thumb-friendly access. Mobile layout activates automatically on small screens.
 
 ## Adding Redaction in Mobile View
 
@@ -60,7 +62,7 @@ window.onload = function () {
 
 ## Understanding Mobile Redaction Toolbar Tools
 
-When you enter redaction mode in mobile view, a specialized redaction toolbar appears with multiple tools optimized for touch interaction. Each tool serves a specific purpose in the redaction workflow.
+When entering redaction mode in mobile view, a specialized redaction toolbar appears with tools optimized for touch. Each tool supports a specific step in the redaction workflow.
 
 ### Redaction Annotation Tool
 
@@ -115,7 +117,7 @@ Customizable Properties:
 
 ## Enabling Redaction Mode in Mobile View
 
-Step 1: Tap the Redaction button in the mobile toolbar to activate redaction mode. The redaction toolbar will appear at the bottom of the viewer.
+Step 1: Tap the **Redaction** button in the mobile toolbar to activate redaction mode. The redaction toolbar will appear at the bottom of the viewer.
 
 ![Redaction toolbar displayed at bottom of mobile PDF viewer with three distinct tools](./redaction-annotations-images/redaction-mobile-view.png)
 
@@ -182,10 +184,23 @@ Alternative: Tap redaction annotation → Use delete button in annotation proper
 
 N> Once redactions have been applied to the document, they become part of the PDF content and cannot be removed or modified.
 
-## See Also
+## Mobile redaction workflow
 
-* [Redaction Overview](./overview)
-* [UI Interaction](./ui-interaction)
-* [Programmatic Support in Redaction](./programmatic-support)
-* [Toolbar](./toolbar)
-* [Search Text and Redact](./search-redact)
+1. Tap the **Redaction** button in the main toolbar to open the mobile redaction toolbar at the bottom.
+2. Choose **Redaction Annotation** to draw boxes by touch-and-drag.
+3. Use **Redaction Properties** to set fill color and overlay text.
+4. Tap **Apply Redactions** to make changes permanent (this is irreversible).
+
+## Troubleshooting
+
+- If toolbar or redaction controls don't appear: ensure your `toolbarSettings` includes `RedactionEditTool` and that the injected services list contains `Annotation`.
+- If the viewer is blank: confirm `resourceUrl` points to the correct Syncfusion PDF Viewer resource package version.
+- For production builds, ensure your app serves the WASM and resource files from `resourceUrl` or a hosted CDN.
+
+## Related topics
+
+- [Redaction Overview](./overview)
+- [UI Interaction](./ui-interaction)
+- [Programmatic Support in Redaction](./programmatic-support)
+- [Toolbar](./toolbar)
+- [Search Text and Redact](./search-redact)
