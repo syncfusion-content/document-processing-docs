@@ -6,6 +6,7 @@ control: Optimize the SFDT file
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Optimize SFDT Files in React DOCX Editor

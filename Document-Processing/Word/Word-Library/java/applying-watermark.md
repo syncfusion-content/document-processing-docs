@@ -4,6 +4,7 @@ description: This section illustrates how to insert text or pictures watermark t
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Watermark in Java Word

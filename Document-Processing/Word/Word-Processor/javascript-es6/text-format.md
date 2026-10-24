@@ -6,6 +6,7 @@ platform: document-processing
 control: Text format 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Text Format in TypeScript DOCX Editor

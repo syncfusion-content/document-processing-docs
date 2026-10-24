@@ -6,6 +6,7 @@ platform: document-processing
 control: Shapes
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Shapes in JavaScript DOCX Editor

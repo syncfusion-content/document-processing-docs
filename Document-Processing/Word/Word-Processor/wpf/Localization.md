@@ -6,6 +6,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: localization,resx,culture,current-ui-culture,resource-file
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 # Localization in WPF DOCX Editor
 

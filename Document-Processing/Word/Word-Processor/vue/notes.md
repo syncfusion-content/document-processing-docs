@@ -6,6 +6,7 @@ control: Notes
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Footnotes and Endnotes in Vue DOCX Editor

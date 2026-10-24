@@ -6,6 +6,7 @@ control: Styles
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Styles in Vue DOCX Editor

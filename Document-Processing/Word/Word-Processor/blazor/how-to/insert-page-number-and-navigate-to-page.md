@@ -5,6 +5,7 @@ description: Insert page numbers and navigate to specific pages in Syncfusion® 
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Insert Page Numbers and Navigate in Blazor DOCX Editor

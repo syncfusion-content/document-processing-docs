@@ -4,6 +4,7 @@ description: Learn how to create and manage web, email, file, bookmark, and imag
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Working with Hyperlinks in JavaScript Word Library

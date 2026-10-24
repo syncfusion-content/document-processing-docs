@@ -6,6 +6,7 @@ control: Customize font family drop down
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Customize Font Family in Vue DOCX Editor

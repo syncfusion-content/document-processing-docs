@@ -6,6 +6,7 @@ platform: document-processing
 control: Open document from One Drive
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Open Documents from OneDrive in JavaScript DOCX Editor

@@ -6,6 +6,7 @@ platform: document-processing
 control: Save document to Dropbox cloud file storage
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Save Documents to Dropbox Cloud Storage in TypeScript DOCX Editor

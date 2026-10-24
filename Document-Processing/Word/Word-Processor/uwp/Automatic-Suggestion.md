@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: automatic-suggestion,@mentions,mention-character,suggestion-box,name-suggestion-provider
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 # Automatic Suggestion in UWP DOCX Editor
 

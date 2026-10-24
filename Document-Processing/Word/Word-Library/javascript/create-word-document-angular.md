@@ -7,6 +7,7 @@ control: Word
 documentation: ug
 keywords: angular create word, angular generate docx, angular word library, ej2 word angular, javascript
 canonical_url: https://help.syncfusion.com/document-processing/word/word-library/javascript/create-word-document-angular
+appliesto: Document SDK
 ---
 
 # Getting Started with JavaScript Word Library in Angular app

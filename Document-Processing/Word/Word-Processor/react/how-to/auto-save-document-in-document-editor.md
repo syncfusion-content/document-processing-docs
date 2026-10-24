@@ -6,6 +6,7 @@ control: Auto save document
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Auto Save Document to AWS S3 in React DOCX Editor

@@ -6,6 +6,7 @@ control: Header footer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Headers and Footers in Vue DOCX Editor

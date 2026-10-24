@@ -4,6 +4,7 @@ description: Learn about Supported LaTeX in the Syncfusion Java Word library to 
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Supported LaTeX in Java Word

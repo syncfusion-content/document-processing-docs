@@ -6,6 +6,7 @@ platform: document-processing
 control: Scrolling zooming 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Scrolling and Zooming in JavaScript DOCX Editor
