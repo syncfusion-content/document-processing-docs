@@ -5,6 +5,7 @@ description: Syncfusion Excel offline installer installation section explains ho
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
+appliesto: Document SDK
 
 ---
 

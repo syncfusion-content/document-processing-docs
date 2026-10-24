@@ -5,6 +5,7 @@ description: The context menu in Angular Spreadsheet provides quick access to co
 platform: document-processing
 control: Context menu
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Context Menu in Angular Spreadsheet 

@@ -5,6 +5,7 @@ description: Use interactive options in UWP Spreadsheet control such as clipboar
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Interactive Features in UWP Spreadsheet 

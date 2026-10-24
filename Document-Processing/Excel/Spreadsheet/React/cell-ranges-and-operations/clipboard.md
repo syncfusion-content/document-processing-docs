@@ -5,6 +5,7 @@ description: Learn about clipboard operations in the Syncfusion React Spreadshee
 control: Clipboard 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Clipboard in React Spreadsheet

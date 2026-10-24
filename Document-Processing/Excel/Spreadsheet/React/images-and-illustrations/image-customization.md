@@ -5,6 +5,7 @@ description: Learn about image customization in the Syncfusion React Spreadsheet
 control: Images
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Image Customization in React Spreadsheet

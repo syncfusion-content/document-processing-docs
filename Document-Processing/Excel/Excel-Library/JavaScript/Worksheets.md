@@ -4,6 +4,7 @@ description: Add, remove, move, rename, and configure worksheets in a workbook w
 platform: document-processing
 control: Excel
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Worksheets in JavaScript Excel

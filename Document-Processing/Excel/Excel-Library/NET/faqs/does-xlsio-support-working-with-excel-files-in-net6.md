@@ -4,6 +4,7 @@ description: .NET 6.0 compatibility explains whether Syncfusion .NET Excel Libra
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # .NET 6.0 Support in .NET Excel Library

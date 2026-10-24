@@ -4,6 +4,7 @@ description: Insert and configure Excel charts with ChartType, series, and layou
 platform: document-processing
 control: Excel
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Charts in JavaScript Excel

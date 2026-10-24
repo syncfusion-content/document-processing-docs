@@ -4,6 +4,7 @@ description: Configure print page setup, margins, orientation, and print areas w
 platform: document-processing
 control: Excel
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Page Setup in JavaScript Excel

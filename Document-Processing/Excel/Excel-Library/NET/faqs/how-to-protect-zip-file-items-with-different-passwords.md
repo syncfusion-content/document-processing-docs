@@ -4,6 +4,7 @@ description: Protect zip file items with different passwords using Syncfusion.Co
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to protect ZIP items in .NET Excel Library

@@ -5,6 +5,7 @@ description: Selection in JavaScript Spreadsheet allows users to select cells, r
 platform: document-processing
 control: Selection
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Selection in  JavaScript Spreadsheet 

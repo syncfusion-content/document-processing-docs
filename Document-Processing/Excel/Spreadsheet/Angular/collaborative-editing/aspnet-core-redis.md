@@ -5,6 +5,7 @@ description: Learn how to configure the ASP.NET Core Collaboration Server and Re
 control: Collaborative Editing
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Using Redis Cache with ASP.NET Core

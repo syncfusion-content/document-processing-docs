@@ -5,6 +5,7 @@ description: The feature list in JavaScript Spreadsheet provides an overview of 
 platform: document-processing
 control: Feature list 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Feature list in Javascript Spreadsheet

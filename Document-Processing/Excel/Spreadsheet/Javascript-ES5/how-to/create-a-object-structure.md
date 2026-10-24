@@ -5,6 +5,7 @@ description: Create an object structure in JavaScript Spreadsheet to organize wo
 platform: document-processing
 control: Create a object structure 
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # How to Create Object Structure in JavaScript Spreadsheet

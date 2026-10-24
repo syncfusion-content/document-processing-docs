@@ -5,6 +5,7 @@ description: The ribbon in Angular Spreadsheet organizes commands into tabs, pro
 platform: document-processing
 control: Ribbon
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Ribbon in Angular Spreadsheet 

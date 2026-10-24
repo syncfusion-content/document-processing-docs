@@ -5,6 +5,7 @@ description: Learn about removing charts in the Syncfusion Blazor Spreadsheet co
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Remove Charts in Blazor Spreadsheet

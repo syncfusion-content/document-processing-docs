@@ -5,6 +5,7 @@ description: AI Assist integration in ASP.NET MVC Spreadsheet explains AI-powere
 platform: document-processing
 control: AI Assist
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # AI Assist Integration in ASP.NET MVC Spreadsheet

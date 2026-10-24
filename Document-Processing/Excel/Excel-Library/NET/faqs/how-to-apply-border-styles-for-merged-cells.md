@@ -4,6 +4,7 @@ description: Apply border styles to merged cells in Excel using the Syncfusion .
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to apply borders to merged cells in .NET Excel Library

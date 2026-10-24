@@ -5,6 +5,7 @@ description: Editing in Angular Spreadsheet allows users to update cell values, 
 platform: document-processing
 control: Editing
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Editing in Angular Spreadsheet 

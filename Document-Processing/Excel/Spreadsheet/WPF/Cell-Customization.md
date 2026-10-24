@@ -5,6 +5,7 @@ description: Customize cell types in the WPF Spreadsheet control by converting c
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Cell Type Customization in WPF Spreadsheet

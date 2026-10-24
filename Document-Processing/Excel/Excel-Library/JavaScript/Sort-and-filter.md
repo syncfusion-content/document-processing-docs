@@ -4,6 +4,7 @@ description: Author worksheet sort state and AutoFilter column metadata with the
 platform: document-processing
 control: Excel
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Sort and Filter in JavaScript Excel

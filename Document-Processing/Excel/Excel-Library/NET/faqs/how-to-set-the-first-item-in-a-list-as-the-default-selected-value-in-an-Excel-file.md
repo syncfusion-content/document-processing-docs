@@ -4,6 +4,7 @@ description: Select the first item in an Excel data-validation list using the Sy
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to set default list values in .NET Excel Library

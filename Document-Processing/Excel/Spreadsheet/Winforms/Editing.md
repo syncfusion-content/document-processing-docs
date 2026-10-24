@@ -5,6 +5,7 @@ description: Modify worksheet content in Windows Forms Spreadsheet by editing ce
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Editing in Windows Forms Spreadsheet

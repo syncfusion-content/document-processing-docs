@@ -5,6 +5,7 @@ description: The Flutter Excel Library lets users add text, numbers, dates, time
 platform: document-processing
 control: Excel
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Worksheet Cells in Flutter Excel Library

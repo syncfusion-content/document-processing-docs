@@ -4,6 +4,7 @@ description: Cell background transparency explains whether Syncfusion .NET Excel
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Cell Background Transparency in .NET Excel Library

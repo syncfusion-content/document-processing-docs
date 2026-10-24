@@ -4,6 +4,7 @@ description: Overcome UnauthorizedAccessException when using the Syncfusion .NET
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to fix UnauthorizedAccessException in .NET Excel Library

@@ -5,6 +5,7 @@ description: Localize the WPF Spreadsheet control by customizing ribbon, dialog,
 platform:  document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Localization in Windows Forms Spreadsheet

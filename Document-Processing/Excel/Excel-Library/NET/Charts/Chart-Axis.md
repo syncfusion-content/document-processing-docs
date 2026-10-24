@@ -4,6 +4,7 @@ description: Chart axis settings describes how the Syncfusion .NET Excel Library
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Chart Axis in .NET Excel Library

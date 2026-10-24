@@ -4,6 +4,7 @@ description: Large Excel document processing explains why out-of-memory exceptio
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Out of Memory Exceptions in .NET Excel Library

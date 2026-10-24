@@ -5,6 +5,7 @@ description: Learn how to create an object structure in the Syncfusion React Spr
 control: Create a object structure 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # How to Create an Object Structure in React Spreadsheet

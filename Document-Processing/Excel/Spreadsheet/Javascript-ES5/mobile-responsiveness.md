@@ -5,6 +5,7 @@ description: Mobile responsiveness in JavaScript Spreadsheet adapts layouts and 
 platform: document-processing
 control: Mobile responsiveness
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Mobile responsiveness in JavaScript Spreadsheet

@@ -5,6 +5,7 @@ description: Create an object structure in Angular Spreadsheet to organize workb
 platform: document-processing
 control: Create an object structure
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # How to Create an Object Structure in Angular Spreadsheet

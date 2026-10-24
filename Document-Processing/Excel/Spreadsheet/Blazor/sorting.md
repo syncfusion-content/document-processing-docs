@@ -5,6 +5,7 @@ description: Sort spreadsheet data efficiently using built-in sorting options an
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Sorting in Blazor Spreadsheet

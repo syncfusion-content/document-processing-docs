@@ -5,6 +5,7 @@ description: Learn about duplicating worksheets in an Excel document using the S
 control: Worksheet 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Duplicate Worksheet in React Spreadsheet

@@ -5,6 +5,7 @@ description: Comments in TypeScript Spreadsheet allow users to add notes to cell
 platform: document-processing
 control: Comment
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Comments in TypeScript Spreadsheet 
