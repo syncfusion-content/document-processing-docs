@@ -372,9 +372,9 @@ let columns: PdfColumnInformation[] = [
 // Create grid from data source and columns
 let grid: PdfGrid = new PdfGrid(source, columns);
 // Customize the first row: set height to 50
-grid.rows[0].height = 50;
+grid.getRow(0).height = 50;
 // Apply style to the first row
-grid.rows[0].style = {
+grid.getRow(0).style = {
     // Set light yellow background
     background: new PdfBrush({ r: 255, g: 255, b: 200 }),
     textProperties: {
@@ -415,9 +415,9 @@ var columns = [
 // Create grid from data source and columns
 var grid = new ej.pdf.PdfGrid(source, columns);
 // Customize the first row: set height to 50
-grid.rows[0].height = 50;
+grid.getRow(0).height = 50;
 // Apply style to the first row
-grid.rows[0].style = {
+grid.getRow(0).style = {
     // Set light yellow background
     background: new ej.pdf.PdfBrush({ r: 255, g: 255, b: 200 }),
     textProperties: {
@@ -463,7 +463,7 @@ grid.style = {
     // Set cell padding (inside space between content and border)
     padding: { left: 4, right: 4, top: 3, bottom: 3 },
     // Set spacing between cells
-    space: { left: 1, right: 1, top: 1, bottom: 1 },
+    space: 1,
     // Set dark gray border with 0.5pt width
     border: new PdfPen({ r: 80, g: 80, b: 80 }, 0.5),
     // Set helvetica font with size 9
@@ -494,7 +494,7 @@ grid.style = {
     // Set cell padding (inside space between content and border)
     padding: { left: 4, right: 4, top: 3, bottom: 3 },
     // Set spacing between cells
-    space: { left: 1, right: 1, top: 1, bottom: 1 },
+    space: 1,
     // Set dark gray border with 0.5pt width
     border: new ej.pdf.PdfPen({ r: 80, g: 80, b: 80 }, 0.5),
     // Set helvetica font with size 9
@@ -1038,7 +1038,7 @@ let rows: PdfGridRow[] = [{
     height: 70,
     cells: [
         // Cell with background image
-        { value: 'Employee ID', style: { backgroundImage: {
+        { value: 'Employee ID', style: { background: {
             // Specify the image to use as background
             image: image,
             imageProperties: {
@@ -1080,7 +1080,7 @@ var rows = [{
     height: 70,
     cells: [
         // Cell with background image
-        { value: 'Employee ID', style: { backgroundImage: {
+        { value: 'Employee ID', style: { background: {
             // Specify the image to use as background
             image: image,
             imageProperties: {
@@ -1208,7 +1208,7 @@ let columns = [{ field: 'id', headerText: 'ID' }, { field: 'name', headerText: '
 // Create a style with zero-width border (invisible)
 let style: PdfGridStyle = { border: new PdfPen({ r: 255, g: 255, b: 255 }, 0) };
 // Create grid with no visible borders
-let grid: PdfGrid = new PdfGrid(source, columns, style);
+let grid: PdfGrid = new PdfGrid(source, columns, { style });
 // Draw the grid on the page
 grid.draw(page, { x: 10, y: 10 });
 // Save the document as Output.pdf
@@ -1230,7 +1230,7 @@ var columns = [{ field: 'id', headerText: 'ID' }, { field: 'name', headerText: '
 // Create a style with zero-width border (invisible)
 var style = { border: new ej.pdf.PdfPen({ r: 255, g: 255, b: 255 }, 0) };
 // Create grid with no visible borders
-var grid = new ej.pdf.PdfGrid(source, columns, style);
+var grid = new ej.pdf.PdfGrid(source, columns, { style });
 // Draw the grid on the page
 grid.draw(page, { x: 10, y: 10 });
 // Save the document as Output.pdf
@@ -1241,11 +1241,11 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-## Update the grid data source
+## Create a grid with data-source and manual rows
 
 Reassign `dataSource` on a data-source grid. Generated rows are rebuilt, while manually added rows remain after them.
 
-This example shows how to dynamically update a table's data source and how manual rows are preserved after the update.
+This example shows how to create a data-source grid and append a manually added row after the update.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -1256,14 +1256,10 @@ import { PdfDocument, PdfGrid, PdfPage } from '@syncfusion/ej2-pdf';
 let document: PdfDocument = new PdfDocument();
 // Add a page to the document
 let page: PdfPage = document.addPage();
-// Define columns
+// Define columns and add rows
 let columns = [{ field: 'id', headerText: 'ID' }, { field: 'name', headerText: 'Name' }];
-// Create grid with initial data source
-let grid: PdfGrid = new PdfGrid([{ id: 'E01', name: 'Clay' }], columns);
-// Add a manual row (this will be preserved after update)
+let grid: PdfGrid = new PdfGrid([{ id: 'E10', name: 'Andrew' }, { id: 'E11', name: 'Michael' }], columns);
 grid.addRow({ cells: [{ value: 'Manual' }, { value: 'Record' }] });
-// Update the data source (data-source rows are rebuilt)
-grid.dataSource = [{ id: 'E10', name: 'Andrew' }, { id: 'E11', name: 'Michael' }];
 // Draw the grid on the page
 grid.draw(page, { x: 10, y: 10 });
 // Save the document as Output.pdf
@@ -1280,12 +1276,9 @@ var document = new ej.pdf.PdfDocument();
 var page = document.addPage();
 // Define columns
 var columns = [{ field: 'id', headerText: 'ID' }, { field: 'name', headerText: 'Name' }];
-// Create grid with initial data source
-var grid = new ej.pdf.PdfGrid([{ id: 'E01', name: 'Clay' }], columns);
-// Add a manual row (this will be preserved after update)
+// Define columns and add rows
+var grid = new ej.pdf.PdfGrid([{ id: 'E10', name: 'Andrew' }, { id: 'E11', name: 'Michael' }], columns);
 grid.addRow({ cells: [{ value: 'Manual' }, { value: 'Record' }] });
-// Update the data source (data-source rows are rebuilt)
-grid.dataSource = [{ id: 'E10', name: 'Andrew' }, { id: 'E11', name: 'Michael' }];
 // Draw the grid on the page
 grid.draw(page, { x: 10, y: 10 });
 // Save the document as Output.pdf
@@ -1454,17 +1447,17 @@ let document: PdfDocument = new PdfDocument();
 // Add a page to the document
 let page: PdfPage = document.addPage();
 // Create a PDF template with width 300 and height 200
-let template: PdfTemplate = new PdfTemplate(300, 200);
+let template: PdfTemplate = new PdfTemplate({ x: 0, y: 0, width: 300, height: 200 });
 // Create the data source
 let source: object[] = [{ id: 'E01', name: 'Clay' }, { id: 'E02', name: 'Thomas' }];
 // Define columns
-let columns = [{ field: 'id', headerText: 'ID' }, { field: 'name', headerText: 'Name' }];
+let columns: PdfColumnInformation[] = [{ field: 'id', headerText: 'ID', width: 150 }, { field: 'name', headerText: 'Name', width: 150 }];
 // Create grid from data source and columns
 let grid: PdfGrid = new PdfGrid(source, columns);
 // Draw the grid on the template's graphics (no pagination)
-grid.draw(template.graphics, { x: 10, y: 10, width: 300, height: 200 });
+grid.draw(template.graphics, { x: 0, y: 0, width: 300, height: 200 });
 // Draw the template on the page
-page.graphics.drawTemplate(template, { x: 10, y: 10 });
+page.graphics.drawTemplate(template, { x: 10, y: 10, width: 300, height: 200 });
 // Save the document as Output.pdf
 document.save('Output.pdf');
 // Dispose of the document resources
@@ -1478,17 +1471,17 @@ var document = new ej.pdf.PdfDocument();
 // Add a page to the document
 var page = document.addPage();
 // Create a PDF template with width 300 and height 200
-var template = new ej.pdf.PdfTemplate(300, 200);
+var template = new ej.pdf.PdfTemplate({ x: 0, y: 0, width: 300, height: 200 });
 // Create the data source
 var source = [{ id: 'E01', name: 'Clay' }, { id: 'E02', name: 'Thomas' }];
 // Define columns
-var columns = [{ field: 'id', headerText: 'ID' }, { field: 'name', headerText: 'Name' }];
+var columns: PdfColumnInformation[] = [{ field: 'id', headerText: 'ID', width: 150 }, { field: 'name', headerText: 'Name', width: 150 }];
 // Create grid from data source and columns
 var grid = new ej.pdf.PdfGrid(source, columns);
 // Draw the grid on the template's graphics (no pagination)
-grid.draw(template.graphics, { x: 10, y: 10, width: 300, height: 200 });
+grid.draw(template.graphics, { x: 0, y: 0, width: 300, height: 200 });
 // Draw the template on the page
-page.graphics.drawTemplate(template, { x: 10, y: 10 });
+page.graphics.drawTemplate(template, { x: 10, y: 10, width: 300, height: 200 });
 // Save the document as Output.pdf
 document.save('Output.pdf');
 // Dispose of the document resources
