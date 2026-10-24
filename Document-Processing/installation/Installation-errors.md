@@ -5,6 +5,7 @@ description: Learn here about the common installation errors and solutions to th
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
+appliesto: Document SDK
 
 ---
 

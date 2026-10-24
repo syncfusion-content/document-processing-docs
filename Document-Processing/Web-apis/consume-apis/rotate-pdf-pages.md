@@ -4,6 +4,7 @@ description: Rotate PDF pages by 90, 180, or 270 degrees and regenerate updated 
 platform: document-processing
 control: general
 documentation: UG
+appliesto: Document SDK
 ---
 # Rotate PDF Pages Using Syncfusion WEB API
 
