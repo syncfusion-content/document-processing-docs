@@ -4,6 +4,7 @@ description: Learn how to select an appropriate chunking mode for Excel, Word, P
 platform: document-processing
 control: Chunking
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Which Chunking Mode Should Be Selected?

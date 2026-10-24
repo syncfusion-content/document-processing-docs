@@ -5,6 +5,7 @@ platform: document-processing
 control: Syncfusion<sup>&reg;</sup> PowerPoint presentation
 documentation: 
 keywords: PowerPoint, slide, format-table, pptx, transitions
+appliesto: Document SDK
 ---
 
 # Slide Transitions in .NET PowerPoint Presentation

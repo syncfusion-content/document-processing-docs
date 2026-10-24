@@ -5,6 +5,7 @@ platform: document-processing
 control: DOCX Editor SDK
 documentation: ug
 keywords: Skills, AI Assistants, DOCX Editor SDK, Agent Skills
+appliesto: DOCX Editor SDK
 ---
 
 # DOCX Editor SDK Agent Skills for AI Assistants

@@ -4,6 +4,7 @@ description: Learn about the assembly required to use the Syncfusion® .NET Docu
 platform: document-processing
 control: Chunking
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Assemblies Required for .NET Document Chunking Library
