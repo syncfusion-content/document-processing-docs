@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: commands
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 # Commands in WPF DOCX Editor
 

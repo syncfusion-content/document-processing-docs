@@ -4,6 +4,7 @@ description: Convert Word to image in Blazor using Blazor Word library without M
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert Word to Image in Blazor 

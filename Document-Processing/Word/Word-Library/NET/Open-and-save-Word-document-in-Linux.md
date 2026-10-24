@@ -4,6 +4,7 @@ description: Open and save Word document in .NET Core application on Linux using
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Open and save Word document on Linux 

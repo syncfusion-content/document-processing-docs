@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: table,rows,columns,cells,merge,alignment
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 # Tables in WPF DOCX Editor
 

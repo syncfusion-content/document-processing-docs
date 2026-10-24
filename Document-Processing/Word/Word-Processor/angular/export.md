@@ -6,6 +6,7 @@ platform: document-processing
 control: Export
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Export in Angular DOCX Editor

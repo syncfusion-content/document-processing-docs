@@ -6,6 +6,7 @@ control: Import
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Import in Vue DOCX Editor

@@ -5,6 +5,7 @@ description: Enable the ruler in Syncfusion® Blazor DOCX Editor to set margins,
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Enable Ruler in Blazor DOCX Editor

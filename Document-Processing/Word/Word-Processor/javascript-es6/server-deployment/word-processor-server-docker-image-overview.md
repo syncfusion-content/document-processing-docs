@@ -6,6 +6,7 @@ platform: document-processing
 control: Word processor server docker image overview 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 # Docker Image of Syncfusion TypeScript DOCX Editor Control
 

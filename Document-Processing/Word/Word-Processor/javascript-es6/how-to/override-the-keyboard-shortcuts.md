@@ -6,6 +6,7 @@ platform: document-processing
 control: Override Keyboard Shortcuts
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Override Keyboard Shortcuts in TypeScript DOCX Editor

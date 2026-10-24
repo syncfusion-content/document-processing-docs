@@ -6,6 +6,7 @@ platform: document-processing
 control: Auto save document in DOCX Editor 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Auto Save Document in JavaScript DOCX Editor

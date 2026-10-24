@@ -5,6 +5,7 @@ platform: document-processing
 control: Word Library
 documentation: ug
 keywords: javascript, word, iterate, sections, paragraphs, tables, content controls
+appliesto: Document SDK
 ---
 
 # Word document in JavaScript Word Library

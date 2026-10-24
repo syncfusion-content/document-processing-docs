@@ -6,6 +6,7 @@ platform: document-processing
 control: Deploy DOCX Editor Component for Mobile
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Deploy TypeScript DOCX Editor for Mobile

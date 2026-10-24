@@ -4,6 +4,7 @@ description: Learn how to customize the plot area appearance including border an
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Modify the Appearance of Plot Area in JavaScript Word

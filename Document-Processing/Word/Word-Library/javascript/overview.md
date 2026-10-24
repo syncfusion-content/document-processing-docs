@@ -7,6 +7,7 @@ platform: document-processing
 control: Word Library
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: Document SDK
 ---
 
 # About Syncfusion JavaScript Word Document Processing Library

@@ -4,6 +4,7 @@ description: Learn how to compare two Word documents using Java Word library wit
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Modify the Appearance of Axes in Chart in .NET Word

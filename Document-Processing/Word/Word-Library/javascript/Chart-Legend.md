@@ -4,6 +4,7 @@ description: Learn how to modify the appearance of chart legend in a chart in a 
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Modify the Appearance of Chart Legend in JavaScript Word

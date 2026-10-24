@@ -6,6 +6,7 @@ platform: document-processing
 control: Customize font family drop down 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Customize Font Family in JavaScript DOCX Editor

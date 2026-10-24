@@ -6,6 +6,7 @@ control: Comments
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Comments in Vue DOCX Editor

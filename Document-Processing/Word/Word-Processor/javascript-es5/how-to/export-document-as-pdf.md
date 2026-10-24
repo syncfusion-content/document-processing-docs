@@ -6,6 +6,7 @@ platform: document-processing
 control: Export Document as PDF
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Export Document as PDF in JavaScript DOCX Editor

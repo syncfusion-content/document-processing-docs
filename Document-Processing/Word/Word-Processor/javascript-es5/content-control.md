@@ -6,6 +6,7 @@ platform: document-processing
 control: Content control 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Content Controls in JavaScript DOCX Editor
