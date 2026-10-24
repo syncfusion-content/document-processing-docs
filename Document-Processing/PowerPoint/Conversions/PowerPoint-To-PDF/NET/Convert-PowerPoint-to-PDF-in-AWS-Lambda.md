@@ -4,6 +4,7 @@ description: Convert PPTX to PDF in AWS Lambda using .NET Core PowerPoint librar
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert PowerPoint Presentation to PDF in AWS Lambda

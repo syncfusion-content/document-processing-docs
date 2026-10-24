@@ -4,6 +4,7 @@ description: Convert PPTX to image in AWS Lambda using .NET Core PowerPoint libr
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert PowerPoint Presentation to Image in AWS Lambda

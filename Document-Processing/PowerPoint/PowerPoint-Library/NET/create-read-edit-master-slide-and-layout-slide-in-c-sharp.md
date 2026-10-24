@@ -4,6 +4,7 @@ description: Create, read, and edit master slides and layout slides using the Sy
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Master and Layout Slides in .NET PowerPoint Presentation

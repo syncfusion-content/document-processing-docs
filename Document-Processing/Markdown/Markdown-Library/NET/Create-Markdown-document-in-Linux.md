@@ -4,6 +4,7 @@ description: Create Markdown document in .NET Core application on Linux using Sy
 platform: document-processing
 control: Markdown
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Markdown document on Linux

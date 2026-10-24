@@ -5,6 +5,7 @@ description: Discover the MCP server’s advantages, installation requirements, 
 platform: document-processing
 control: AI coding assistant
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Syncfusion Document SDK MCP Server
