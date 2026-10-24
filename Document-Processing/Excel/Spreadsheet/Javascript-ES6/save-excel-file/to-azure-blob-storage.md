@@ -1,0 +1,123 @@
+---
+layout: post
+title: Save Excel to Azure Blob Storage in JavaScript ES6 Spreadsheet | Syncfusion
+description: Learn about how to save Excel documents using the Syncfusion JavaScript ES6 Spreadsheet control to Azure Blob Storage.
+platform: document-processing
+control: Save file to Azure Blob Storage
+documentation: ug
+---
+
+# Save Excel to Azure Blob Storage in JavaScript ES6 Spreadsheet
+
+To save a file to Azure Blob Storage in a Spreadsheet Component, you can follow the steps below
+
+**Step 1:** Create a Simple Spreadsheet Sample in JavaScript ES6
+
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es6/getting-started) to create a simple Spreadsheet sample in JavaScript ES6. This will give you a basic setup of the Spreadsheet component.
+
+**Step 2:** Modify the `SpreadsheetController.cs` File in the Web Service Project
+
+1. Create a web service project in .NET Core 3.0 or above. You can refer to this [link](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services) for instructions on how to create a web service project.
+
+2. Open the `SpreadsheetController.cs` file in your web service project.
+
+3. Import the required namespaces at the top of the file:
+
+```csharp
+
+using System;
+using System.IO;
+using System.Threading.Task;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using Syncfusion.EJ2.Spreadsheet;
+using Azure.Storage.Blobs;
+
+```
+
+4. Add the following private fields and constructor parameters to the `SpreadsheetController` class, In the constructor, assign the values from the configuration to the corresponding fields.
+
+```csharp
+
+private readonly string _storageConnectionString;
+private readonly string _storageContainerName;
+
+public SpreadsheetController(IConfiguration configuration)
+{
+    _storageConnectionString = configuration.GetValue<string>("connectionString");
+    _storageContainerName = configuration.GetValue<string>("containerName");
+}
+
+```
+
+5. Create the `SaveToAzure()` method to save the document to the Azure Blob storage.
+
+```csharp
+
+[HttpPost]
+[Route("SaveToAzure")]
+public async Task<IActionResult> SaveToAzure([FromForm] SaveSettings saveSettings)
+{
+    if (saveSettings == null || string.IsNullOrWhiteSpace(saveSettings.FileName))
+        return BadRequest("Invalid save settings.");
+
+    try
+    {
+        // Convert spreadsheet JSON to Excel/PDF/CSV stream
+        Stream fileStream = Workbook.Save(saveSettings);
+        fileStream.Position = 0;
+
+        // Define Azure Blob Storage client
+        BlobServiceClient blobServiceClient = new BlobServiceClient(_storageConnectionString);
+        BlobContainerClient containerClient = blobServiceClient.GetBlobContainerClient(_storageContainerName);
+
+        // Define blob name using file name and save type
+        string blobName = $"{saveSettings.FileName}.{saveSettings.SaveType.ToString().ToLower()}";
+        BlobClient blobClient = containerClient.GetBlobClient(blobName);
+
+        // Upload the Excel file stream to Azure Blob Storage (overwrite if exists)
+        await blobClient.UploadAsync(fileStream, overwrite: true);
+
+        return Ok("Excel file successfully saved to Azure Blob Storage.");
+    }
+    catch (Exception ex)
+    {
+        return BadRequest("Error saving file to Azure Blob Storage: " + ex.Message);
+    }
+}
+
+```
+
+N> Note: Install the Azure.Storage.Blobs NuGet package in the service project. Ensure the configured connection string has permissions to read and write blobs in the specified container.
+
+**Step 3:**  Modify the index File in the Spreadsheet sample to using [`saveAsJson`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet/index-default#saveasjson) method to serialize the spreadsheet and send it to the back-end
+
+```js
+
+const saveToAzure = () => {
+  const spreadsheet = document.getElementById('spreadsheet').ej2_instances[0];
+  spreadsheet.saveAsJson().then((json) => {
+    const formData = new FormData();
+    formData.append("FileName", loadedFileInfo.fileName); // e.g., "Report"
+    formData.append("saveType", loadedFileInfo.saveType); // e.g., "Xlsx"
+    formData.append("JSONData", JSON.stringify(json.jsonObject.Workbook));
+    formData.append(
+      "PdfLayoutSettings",
+      JSON.stringify({ FitSheetOnOnePage: false })
+    );
+
+    fetch("https://localhost:portNumber/api/spreadsheet/SaveToAzure", {
+      method: "POST",
+      body: formData
+    })
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`Save failed with status ${res.status}`);
+        }
+        window.alert("Workbook saved successfully to Azure Blob Storage.");
+      })
+      .catch((err) => window.alert("Error saving to server: " + err));
+  });
+};
+
+```
