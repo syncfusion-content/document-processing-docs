@@ -4,6 +4,7 @@ description: Linux Docker Excel to PDF section explains how to convert Excel doc
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Excel to PDF Conversion in Linux Docker using Excel Library

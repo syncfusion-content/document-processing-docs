@@ -6,6 +6,7 @@ control: Add save button to toolbar
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Add Save Button in Toolbar in React DOCX Editor

@@ -5,6 +5,7 @@ description: Add, edit, and modify redaction annotations in the React PDF Viewer
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Redaction UI Interactions in React PDF Viewer

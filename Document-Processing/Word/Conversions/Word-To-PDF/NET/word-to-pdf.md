@@ -4,6 +4,7 @@ description: Learn how to convert a Word document to PDF, PDF/A, and PDF/UA usin
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert Word to PDF in .NET using Syncfusion® Word (DocIO) library

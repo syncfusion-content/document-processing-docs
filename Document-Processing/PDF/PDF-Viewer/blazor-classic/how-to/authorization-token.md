@@ -5,6 +5,7 @@ description: Learn here all about how to include the authorization token in Sync
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Include Authorization token in Blazor PDF Viewer

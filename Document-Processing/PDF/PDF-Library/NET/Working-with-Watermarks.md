@@ -4,6 +4,7 @@ description: Learn how to add text and image watermarks to new and existing PDF 
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Watermarks in .NET PDF Library
 

@@ -4,6 +4,7 @@ description: Identify how many hyperlinks a single Excel cell can contain using 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to use multiple hyperlinks in a cell in .NET Excel Library

@@ -5,6 +5,7 @@ description: The PDF Viewer enables importing PDF form field data from FDF, XFDF
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Import PDF Form Data in WPF Pdf Viewer

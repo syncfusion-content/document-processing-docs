@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: paste-WordDocument-from-DocIO,paste,worddocument,docio,pastecommand
+appliesto: DOCX Editor SDK
 ---
 
 # How to Paste a WordDocument from DocIO in UWP DOCX Editor

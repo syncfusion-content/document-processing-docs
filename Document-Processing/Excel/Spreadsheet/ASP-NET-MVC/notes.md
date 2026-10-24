@@ -5,6 +5,7 @@ description: Add and manage notes in the Syncfusion ASP.NET MVC Spreadsheet to p
 platform: document-processing
 control: Notes
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Notes in ASP.NET MVC Spreadsheet

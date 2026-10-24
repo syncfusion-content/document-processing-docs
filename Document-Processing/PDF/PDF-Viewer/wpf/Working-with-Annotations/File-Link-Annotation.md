@@ -5,6 +5,7 @@ description: The file link annotation feature in WPF PDF Viewer lets users open 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # File Link Annotation in WPF Pdf Viewer

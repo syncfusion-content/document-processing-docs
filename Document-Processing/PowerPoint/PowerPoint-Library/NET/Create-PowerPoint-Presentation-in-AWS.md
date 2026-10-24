@@ -4,6 +4,7 @@ description: Learn how to create a PowerPoint document in Amazon Web Services (A
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create PowerPoint document in Amazon Web Services (AWS)

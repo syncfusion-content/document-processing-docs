@@ -5,6 +5,7 @@ description: Open a default document in Syncfusion® ASP.NET MVC DOCX Editor dur
 platform: document-processing
 control: Open Default Document
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

@@ -4,6 +4,7 @@ description: Excel to PDF conversion settings describes how to convert workbooks
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # PDF Converter Settings in .NET using Excel Library

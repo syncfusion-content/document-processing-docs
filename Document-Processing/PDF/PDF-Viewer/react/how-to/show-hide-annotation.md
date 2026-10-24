@@ -5,6 +5,7 @@ description: Show or hide annotations in the React PDF Viewer by exporting and i
 control: PDF Viewer
 platform: document-processing
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Show or Hide Annotations in React PDF Viewer

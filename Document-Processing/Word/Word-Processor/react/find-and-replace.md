@@ -6,6 +6,7 @@ control: Find and replace
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Find and Replace in React DOCX Editor

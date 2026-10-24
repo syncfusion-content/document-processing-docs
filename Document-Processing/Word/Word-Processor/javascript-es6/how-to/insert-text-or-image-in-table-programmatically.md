@@ -6,6 +6,7 @@ platform: document-processing
 control: Insert Text or Image in a Table Programmatically
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Insert Text or Image in Table in TypeScript DOCX Editor

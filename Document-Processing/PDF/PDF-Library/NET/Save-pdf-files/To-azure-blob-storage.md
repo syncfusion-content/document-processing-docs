@@ -5,6 +5,7 @@ keywords: azure blob, save pdf, c# save pdf, upload pdf
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Save PDF to Azure Blob Storage
 

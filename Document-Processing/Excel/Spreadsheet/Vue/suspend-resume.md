@@ -5,6 +5,7 @@ description: Improve Spreadsheet performance using suspendRefresh and resumeRefr
 control: Spreadsheet
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Suspend and Resume UI Refresh in Vue Spreadsheet

@@ -5,6 +5,7 @@ description: Extract text from PDF files in Syncfusion WPF PDF Viewer using Extr
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Extract Text from PDF Files in WPF Pdf Viewer

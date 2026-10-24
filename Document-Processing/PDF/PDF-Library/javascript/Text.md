@@ -5,6 +5,7 @@ description: Add and format text with standard and TrueType fonts in PDF documen
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # PDF Text in JavaScript PDF

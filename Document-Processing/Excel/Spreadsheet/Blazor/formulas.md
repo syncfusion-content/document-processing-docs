@@ -5,6 +5,7 @@ description: Use built-in formulas and calculation features in the Syncfusion Bl
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Formulas in Blazor Spreadsheet

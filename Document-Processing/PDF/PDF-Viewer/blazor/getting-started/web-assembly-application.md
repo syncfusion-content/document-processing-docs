@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion Blazor WebAssembly (WA
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Getting Started with Blazor WebAssembly PDF Viewer

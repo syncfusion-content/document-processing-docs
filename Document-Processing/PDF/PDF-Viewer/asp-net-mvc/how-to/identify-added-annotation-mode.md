@@ -5,6 +5,7 @@ description: Identify the annotation mode that was used to add an annotation in 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Identify the Added Annotation Mode in ASP.NET MVC PDF Viewer

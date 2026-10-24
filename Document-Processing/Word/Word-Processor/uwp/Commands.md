@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: commands,boldcommand,italiccommand,underlinecommand,table-commands,paragraph-commands,clipboard-commands,command-parameter
+appliesto: DOCX Editor SDK
 ---
 # Commands in UWP DOCX Editor
 

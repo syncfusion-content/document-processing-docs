@@ -5,6 +5,7 @@ description: Sort and filter worksheet data in Windows Forms Spreadsheet to orga
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Sorting and Filtering in Windows Forms Spreadsheet

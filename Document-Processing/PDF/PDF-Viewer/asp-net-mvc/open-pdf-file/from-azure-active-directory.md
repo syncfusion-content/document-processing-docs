@@ -5,6 +5,7 @@ description: Learn how to load and save PDFs using Azure Active Directory (AAD) 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Open PDF from Azure Active Directory in ASP.NET MVC PDF Viewer

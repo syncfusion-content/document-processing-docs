@@ -4,6 +4,7 @@ description: Syncfusion .NET Excel Library lets users to create and edit XML par
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Custom XML Support in .NET Excel Library
 

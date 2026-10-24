@@ -5,6 +5,7 @@ description: Learn about comments in the Syncfusion ASP.NET Core Spreadsheet con
 platform: document-processing
 control: Comment
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Comments in ASP.NET Core Spreadsheet

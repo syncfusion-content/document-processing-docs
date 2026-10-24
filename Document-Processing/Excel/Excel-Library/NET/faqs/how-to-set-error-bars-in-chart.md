@@ -4,6 +4,7 @@ description: Learn how to set error bars in an Excel chart programmatically usin
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to set chart error bars in .NET Excel Library

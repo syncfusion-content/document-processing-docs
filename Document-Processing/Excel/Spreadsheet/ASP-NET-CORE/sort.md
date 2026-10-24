@@ -5,6 +5,7 @@ description: Learn about sorting in the Syncfusion ASP.NET Core Spreadsheet cont
 platform: document-processing
 control: Sort
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

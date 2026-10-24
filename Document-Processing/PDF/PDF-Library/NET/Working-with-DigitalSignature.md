@@ -4,6 +4,7 @@ description: Learn how to create a digital signature in a PDF document programma
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Digital Signature in .NET PDF Library
 

@@ -6,6 +6,7 @@ control: Restrict editing
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Restrict Editing in Vue DOCX Editor

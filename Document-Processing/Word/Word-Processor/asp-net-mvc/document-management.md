@@ -5,6 +5,7 @@ description: Document management in ASP.NET MVC DOCX Editor provides editing res
 platform: document-processing
 control: Document Management
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

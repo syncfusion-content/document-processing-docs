@@ -4,6 +4,7 @@ description: Icon set customization explains whether Syncfusion .NET Excel Libra
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Built-In Icon Set Colors in .NET Excel Library

@@ -5,6 +5,7 @@ description: Explore how to generate concise document summaries and ask AI-assis
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Document Summaries and Q&A in Blazor Smart PDF Viewer

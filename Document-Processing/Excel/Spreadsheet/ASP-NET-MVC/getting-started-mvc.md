@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion ASP.NET MVC Spreadshee
 platform: document-processing
 control: Getting Started MVC
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

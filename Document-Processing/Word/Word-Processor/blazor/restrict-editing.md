@@ -5,6 +5,7 @@ description: Restrict editing feature in Blazor DOCX Editor enables read-only ac
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # Restrict Editing in Blazor DOCX Editor

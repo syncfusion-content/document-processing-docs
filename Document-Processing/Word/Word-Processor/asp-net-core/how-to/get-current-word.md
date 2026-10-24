@@ -5,6 +5,7 @@ description: Get the current word or paragraph content as plain text and SFDT fo
 platform: document-processing
 control: Get The Current Word And Paragraph
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # How to Get Current Word in ASP.NET Core DOCX Editor

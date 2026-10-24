@@ -5,6 +5,7 @@ description: Learn how to open PDF files from Google Drive in the Blazor PDF Vie
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Open PDF from Google Drive in Blazor PDF Viewer

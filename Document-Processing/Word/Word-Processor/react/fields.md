@@ -6,6 +6,7 @@ control: Fields
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Fields in React DOCX Editor

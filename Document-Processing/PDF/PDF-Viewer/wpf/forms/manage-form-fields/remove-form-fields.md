@@ -5,6 +5,7 @@ description: Learn how to remove PDF form fields programmatically using the Sync
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 

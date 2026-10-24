@@ -4,6 +4,7 @@ description: WrapText behavior explains how Syncfusion .NET Excel Library wraps 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # WrapText Property in .NET Excel Library

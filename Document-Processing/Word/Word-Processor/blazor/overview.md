@@ -5,6 +5,7 @@ description: Learn about the introduction of Syncfusion Essential Studio Blazor 
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # About Syncfusion Blazor DOCX Editor Control

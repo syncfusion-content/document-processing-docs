@@ -4,6 +4,7 @@ description: Learn about introduction of converting Excel workbooks or worksheet
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # About Syncfusion .NET Excel to HTML Conversion

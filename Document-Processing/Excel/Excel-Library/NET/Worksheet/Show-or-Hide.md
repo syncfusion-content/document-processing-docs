@@ -4,6 +4,7 @@ description: Use show and hide options in Excel worksheets using the Syncfusion 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to show or hide elements in .NET Excel Library

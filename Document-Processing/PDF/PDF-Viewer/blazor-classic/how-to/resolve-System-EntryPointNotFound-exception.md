@@ -5,6 +5,7 @@ description: Learn here all about how to solve EntryPointNotFound exception in S
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Resolve System.EntryPointNotFound exception in PDF Viewer 

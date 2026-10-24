@@ -5,6 +5,7 @@ description: Configure form field constraints in the React PDF Viewer, including
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # PDF Form Field Constraints in React PDF Viewer

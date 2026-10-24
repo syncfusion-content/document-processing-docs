@@ -3,6 +3,7 @@ title: How to resolve LibSkiaSharp Not Found Exception on Linux | Syncfusion
 description: This page explains how to resolve libSkiaSharp not found exception in .NET 8 and .NET 9 on Linux using SkiaSharp version upto v2.88.8 on AWS.
 platform: document-processing
 documentation: UG
+appliesto: Document SDK, PDF Viewer SDK
 ---
 
 # How to fix LibSkiaSharp not found issue with SkiaSharp v2.88.8 in AWS?

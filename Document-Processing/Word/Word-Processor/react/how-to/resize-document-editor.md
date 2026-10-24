@@ -6,6 +6,7 @@ control: Resize DOCX Editor
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Resize in React DOCX Editor 

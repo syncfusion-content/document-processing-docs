@@ -4,6 +4,7 @@ description: Remove data validation from the specified range in Excel using the 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to remove data validation in .NET Excel Library

@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: overview, richtextboxadv, sfrichtextboxadv
+appliesto: DOCX Editor SDK
 ---
 # About Syncfusion WPF DOCX Editor Control
 

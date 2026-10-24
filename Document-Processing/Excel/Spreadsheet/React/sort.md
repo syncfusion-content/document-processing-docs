@@ -5,6 +5,7 @@ description: Learn about sorting in the Syncfusion React Spreadsheet component, 
 control: Sort 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Sort in React Spreadsheet

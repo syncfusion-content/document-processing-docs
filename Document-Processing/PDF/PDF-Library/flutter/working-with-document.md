@@ -5,6 +5,7 @@ description: Learn about document settings and configuration options in Syncfusi
 platform: document-processing
 control: PDF
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Document in Flutter PDF

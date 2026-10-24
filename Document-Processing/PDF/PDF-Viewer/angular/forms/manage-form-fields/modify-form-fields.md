@@ -5,6 +5,7 @@ description: Edit PDF form fields in the Angular PDF Viewer using the built-in U
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Modify Form Fields in Angular PDF Viewer

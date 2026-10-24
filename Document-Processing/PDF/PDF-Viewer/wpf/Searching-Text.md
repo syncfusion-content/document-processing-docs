@@ -5,6 +5,7 @@ description:  Search and highlight text in PDF files using Syncfusion WPF PDF Vi
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Search text in PDF files using WPF Pdf Viewer

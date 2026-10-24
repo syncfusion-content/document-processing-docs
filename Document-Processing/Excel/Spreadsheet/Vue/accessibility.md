@@ -5,6 +5,7 @@ description: Learn about accessibility support in the Syncfusion Vue Spreadsheet
 control: Accessibility 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Accessibility in Vue Spreadsheet

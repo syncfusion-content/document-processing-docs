@@ -5,6 +5,7 @@ description: Insert text, paragraphs, and rich-text content in the current curso
 platform: document-processing
 control: Insert Text, Paragraph And Rich-Text Content
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # How to Insert Content at Cursor in ASP.NET MVC DOCX Editor

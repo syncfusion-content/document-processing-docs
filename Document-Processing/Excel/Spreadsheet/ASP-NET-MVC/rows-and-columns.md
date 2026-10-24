@@ -5,6 +5,7 @@ description: Learn how to manage rows and columns in the Syncfusion ASP.NET MVC 
 platform: document-processing
 control: Rows And Columns
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

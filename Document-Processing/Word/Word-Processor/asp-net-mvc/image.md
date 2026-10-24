@@ -5,6 +5,7 @@ description: Images in ASP.NET MVC DOCX Editor enable resizing and text wrapping
 platform: document-processing
 control: Image
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

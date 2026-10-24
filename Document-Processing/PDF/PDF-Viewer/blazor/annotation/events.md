@@ -5,6 +5,7 @@ description: Learn how to subscribe to and handle annotations and signature anno
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Annotation Events in Blazor PDF Viewer 

@@ -6,6 +6,7 @@ platform: document-processing
 control: View 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 # View in TypeScript DOCX Editor
 

@@ -5,6 +5,7 @@ description: The PDFDocumentView control enables users to load, view, navigate, 
 platform: document-processing
 control: PdfViewerControl
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # PdfDocumentView in WinForms PDF Viewer

@@ -4,6 +4,7 @@ description: Creating a Silverlight application, load the Word document and save
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Silverlight in .NET Word
 

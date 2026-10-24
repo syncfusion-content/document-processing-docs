@@ -4,6 +4,7 @@ description: Avoid duplicate worksheet name exceptions when adding sheets to Exc
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to avoid duplicate worksheet names in .NET Excel Library

@@ -4,6 +4,7 @@ description: Learn how to convert a PPTX to image in Amazon Web Services (AWS) u
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert PowerPoint Presentation to Image in Amazon Web Services (AWS)

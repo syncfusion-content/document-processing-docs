@@ -5,6 +5,7 @@ description: Learn how to add, rotate pages, and customize page settings in Sync
 platform: document-processing
 control: PDF
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Pages in Flutter PDF

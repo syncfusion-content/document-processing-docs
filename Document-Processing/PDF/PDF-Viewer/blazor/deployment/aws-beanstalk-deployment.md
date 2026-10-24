@@ -5,6 +5,7 @@ description: Add the Blazor PDF Viewer component to a Blazor Server app and depl
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Deploy Blazor PDF Viewer to AWS Elastic Beanstalk

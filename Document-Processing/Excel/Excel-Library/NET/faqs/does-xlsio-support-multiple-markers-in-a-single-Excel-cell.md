@@ -4,6 +4,7 @@ description: Multiple template markers explains whether Syncfusion .NET Excel Li
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Multiple Markers in .NET Excel Library

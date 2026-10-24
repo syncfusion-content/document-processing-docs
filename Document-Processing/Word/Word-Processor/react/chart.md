@@ -6,6 +6,7 @@ control: Chart
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Charts in React DOCX Editor

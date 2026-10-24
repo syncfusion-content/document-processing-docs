@@ -5,6 +5,7 @@ description: Customize the context menu in Syncfusion® ASP.NET MVC DOCX Editor 
 platform: document-processing
 control: Customize Context Menu
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

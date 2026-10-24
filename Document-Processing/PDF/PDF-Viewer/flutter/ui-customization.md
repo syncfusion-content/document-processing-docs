@@ -5,6 +5,7 @@ description: The UI customization feature in SfPdfViewer allows users to customi
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # UI Customization in Flutter PDF Viewer

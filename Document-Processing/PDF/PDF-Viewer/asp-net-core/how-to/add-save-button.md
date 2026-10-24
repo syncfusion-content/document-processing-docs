@@ -5,6 +5,7 @@ description: Add, show, hide, enable, and disable a custom Save button in the bu
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Add a Save Button to the Toolbar in ASP.NET Core PDF Viewer

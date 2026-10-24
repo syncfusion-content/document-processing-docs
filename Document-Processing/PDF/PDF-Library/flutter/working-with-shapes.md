@@ -5,6 +5,7 @@ description: Learn how to draw different types of shapes in PDF documents using 
 platform: document-processing
 control: PDF
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Shapes Drawing in Flutter PDF

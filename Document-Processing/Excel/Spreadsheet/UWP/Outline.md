@@ -5,6 +5,7 @@ description: Group rows and columns in UWP Spreadsheet control with outline opti
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Outline in UWP Spreadsheet 

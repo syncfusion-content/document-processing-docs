@@ -5,6 +5,7 @@ description: Text format properties in ASP.NET MVC DOCX Editor enables customizi
 platform: document-processing
 control: Text Format
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

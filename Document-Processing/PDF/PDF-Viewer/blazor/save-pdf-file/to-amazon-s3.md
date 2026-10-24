@@ -5,6 +5,7 @@ description: Learn here all about how to save PDF files to AWS S3 in Blazor PDF 
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Save PDF to AWS S3 in Blazor PDF Viewer 

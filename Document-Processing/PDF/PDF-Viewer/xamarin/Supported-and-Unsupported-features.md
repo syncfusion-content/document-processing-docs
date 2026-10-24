@@ -5,6 +5,7 @@ description: Learn here all about the list of supported and unsupported features
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Supported and Unsupported features in Xamarin Pdf Viewer

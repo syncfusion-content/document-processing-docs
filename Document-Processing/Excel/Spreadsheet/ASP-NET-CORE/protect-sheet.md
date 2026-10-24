@@ -5,6 +5,7 @@ description: Learn about sheet protection in the Syncfusion ASP.NET Core Spreads
 platform: document-processing
 control: Protect Sheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

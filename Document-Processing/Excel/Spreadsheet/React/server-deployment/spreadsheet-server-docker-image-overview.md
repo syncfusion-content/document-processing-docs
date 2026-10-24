@@ -5,6 +5,7 @@ description: Learn about Docker image deployment for the Syncfusion React Spread
 platform: document-processing
 control: Docker deployment 
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Docker Image Deployment in React Spreadsheet

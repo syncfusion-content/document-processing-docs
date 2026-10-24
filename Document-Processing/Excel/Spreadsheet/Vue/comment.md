@@ -5,6 +5,7 @@ description: Learn how to add, edit, and manage comments in the Syncfusion Vue S
 platform: document-processing
 control: Comment
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Comments in Vue Spreadsheet

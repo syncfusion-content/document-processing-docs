@@ -5,6 +5,7 @@ description: Format cells in the WPF Spreadsheet control with fonts, colors, bor
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Formatting in WPF Spreadsheet

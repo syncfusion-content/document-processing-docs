@@ -5,6 +5,7 @@ description: Learn keyboard shortcuts and navigation options in the Syncfusion V
 control: Keyboard shortcuts 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Keyboard Shortcuts in Vue Spreadsheet

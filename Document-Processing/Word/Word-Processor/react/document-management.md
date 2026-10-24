@@ -6,6 +6,7 @@ control: Document management
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Document Management in React DOCX Editor

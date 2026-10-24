@@ -4,6 +4,7 @@ description: IRange interface details describes the properties and methods used 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # IRange APIs in .NET Excel Library
