@@ -177,6 +177,7 @@ At present there is a known technical limitation related to a slight difference 
 ### How Syncfusion<sup style="font-size:70%">&reg;</sup> addresses the document pagination difference compared to Microsoft Word
 
 The following table illustrates the reasons for pagination (page-by-page display) difference compared to Microsoft Word in your documents and how Syncfusion<sup style="font-size:70%">&reg;</sup> addresses it.
+
 | Root causes | How is it solved? |
 |-----------------|-------------|
 |Any mistake (wrong behavior handled) in lay outing the supported elements and formatting  |Customer can report to Syncfusion<sup style="font-size:70%">&reg;</sup> support and track the status through bug report link. Syncfusion<sup style="font-size:70%">&reg;</sup> fixes the bugs in the next possible weekly patch release and service pack or main releases.|
