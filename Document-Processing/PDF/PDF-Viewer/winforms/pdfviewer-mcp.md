@@ -5,6 +5,7 @@ description: Discover the MCP server's advantages, installation requirements, an
 platform: document-processing
 control: AI coding assistant
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # MCP Server Setup in Windows Forms PDF Viewer

@@ -5,6 +5,7 @@ description: Complete reference for all Syncfusion Document SDK Agent Tool class
 platform: document-processing
 control: AI Agent Tools
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Tools available in Document SDK AI Agent Tools

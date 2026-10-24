@@ -7,6 +7,7 @@ control: PDF
 documentation: ug
 keywords: pdf, script, express, node
 canonical_url: https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-node-js
+appliesto: Document SDK
 ---
 
 # Getting Started with JavaScript PDF in Node.js app

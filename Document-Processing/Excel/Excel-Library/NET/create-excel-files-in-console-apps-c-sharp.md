@@ -4,6 +4,7 @@ description: Syncfusion .NET Excel Library supports creating Excel files program
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Create Excel Files in Console Applications with Excel Library
 

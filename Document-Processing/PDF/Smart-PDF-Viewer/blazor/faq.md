@@ -5,6 +5,7 @@ description: Explore frequently asked questions about the Blazor Smart PDF Viewe
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Frequently Asked Questions Section in Blazor Smart PDF Viewer

@@ -5,6 +5,7 @@ description: Create an object structure in TypeScript Spreadsheet to organize wo
 platform: document-processing
 control: Create an object structure
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # How to Create an Object Structure in TypeScript Spreadsheet

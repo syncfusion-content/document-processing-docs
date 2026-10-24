@@ -5,6 +5,7 @@ description: Save PDF files from the JavaScript (ES6) PDF Viewer to Google Drive
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Save PDF Files to Google Drive in JavaScript (ES6) PDF Viewer

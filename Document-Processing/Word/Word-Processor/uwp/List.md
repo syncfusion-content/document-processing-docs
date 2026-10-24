@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: list,bullet,numbered,multilevel,single-level
+appliesto: DOCX Editor SDK
 ---
 # List in UWP DOCX Editor
 

@@ -4,6 +4,7 @@ description: This section explains how to load and save Excel files in Google Dr
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Loading and Saving Files in Google Drive
 

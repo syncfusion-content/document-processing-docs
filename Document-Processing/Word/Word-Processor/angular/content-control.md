@@ -6,6 +6,7 @@ platform: document-processing
 control: Content Control 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Content Controls in Angular DOCX Editor

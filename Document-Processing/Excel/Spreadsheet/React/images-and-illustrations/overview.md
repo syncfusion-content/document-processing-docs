@@ -5,6 +5,7 @@ description: Learn about images and illustrations in the Syncfusion React Spread
 control: Spreadsheet
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Images and Illustrations in React Spreadsheet

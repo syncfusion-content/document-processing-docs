@@ -6,6 +6,7 @@ platform: document-processing
 control: Insert Text in Current Position
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Insert Content at Cursor in TypeScript DOCX Editor

@@ -5,6 +5,7 @@ description: Resolve common Pdfium issues in the ASP.NET Core PDF Viewer such as
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 

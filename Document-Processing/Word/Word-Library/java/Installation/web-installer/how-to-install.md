@@ -5,6 +5,7 @@ description: Learn here about how to install Syncfusion FileFormats web installe
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
+appliesto: Document SDK
 ---
 
 # How to install Syncfusion FileFormats web installer

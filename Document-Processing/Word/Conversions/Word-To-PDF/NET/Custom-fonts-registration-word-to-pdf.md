@@ -4,6 +4,7 @@ description: This section illustrates how to register custom fonts for Word-to-P
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Custom Font Registration for Word to PDF Conversion in .NET Word

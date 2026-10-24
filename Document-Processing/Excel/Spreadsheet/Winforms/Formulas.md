@@ -5,6 +5,7 @@ description: Create and calculate formulas in the Windows Forms Spreadsheet cont
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Formulas in Windows Forms Spreadsheet

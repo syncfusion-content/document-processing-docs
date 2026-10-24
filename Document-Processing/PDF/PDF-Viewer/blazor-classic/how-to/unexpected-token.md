@@ -5,6 +5,7 @@ description: Learn here all about resolve the "Unexpected token T in JSON at pos
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Resolve the "Unexpected token T in JSON at position 0"

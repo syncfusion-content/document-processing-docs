@@ -5,6 +5,7 @@ platform: document-processing
 control: SmartTableExtractor
 documentation: UG
 keywords: Table Extraction, PDF, Image, Smart Table Extractor, Assemblies, NuGet Packages
+appliesto: Document SDK
 --- 
 
 # Table Extraction in .NET Smart Data Extractor

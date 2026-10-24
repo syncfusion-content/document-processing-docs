@@ -5,6 +5,7 @@ description: Set default character, paragraph, and section formatting in Syncfus
 platform: document-processing
 control: Set Default Format In DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

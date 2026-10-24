@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: embedded-image-html,image-node-visited,html-import-export-settings,embedded-image,html-export,image-source
+appliesto: DOCX Editor SDK
 ---
 
 # How to Export Embedded Images in HTML in UWP DOCX Editor

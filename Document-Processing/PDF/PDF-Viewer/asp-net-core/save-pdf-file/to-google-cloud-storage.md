@@ -5,6 +5,7 @@ description: Save PDF files from the ASP.NET Core PDF Viewer to Google Cloud Sto
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Save PDF Files to Google Cloud Storage in ASP.NET Core PDF Viewer

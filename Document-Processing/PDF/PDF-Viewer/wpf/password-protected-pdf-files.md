@@ -5,6 +5,7 @@ description: View password-protected PDF files in Syncfusion WPF PDF Viewer by l
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Viewing Password protected PDF Files in WPF Pdf Viewer

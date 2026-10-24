@@ -5,6 +5,7 @@ platform: document-processing
 control: general
 documentation: UG
 keywords: PowerPoint, Presentation, Slide, SDK, Automation, API, convert
+appliesto: Document SDK
 ---
 
 # About Syncfusion .NET PowerPoint Presentation Conversion Library

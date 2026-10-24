@@ -4,6 +4,7 @@ description: Conditional formatting section describes how the Syncfusion .NET Ex
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Conditional Formatting in .NET Excel Library

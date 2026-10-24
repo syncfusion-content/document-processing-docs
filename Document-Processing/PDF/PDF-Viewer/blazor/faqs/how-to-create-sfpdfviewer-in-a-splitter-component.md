@@ -5,6 +5,7 @@ description: Learn how to place the Blazor PDF Viewer inside a Splitter pane and
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Host the PDF Viewer in a Splitter pane in Blazor

@@ -5,6 +5,7 @@ description: The scrolling and zooming in ASP.NET MVC DOCX Editor enables smooth
 platform: document-processing
 control: Scrolling Zooming
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

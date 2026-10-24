@@ -4,6 +4,7 @@ description: Hyperlinks in Excel to PDF conversion explains why some workbook-le
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Hyperlinks in Excel to PDF in .NET Excel Library

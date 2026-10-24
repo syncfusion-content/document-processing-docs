@@ -5,6 +5,7 @@ description: Learn here all about Working with page navigation support in Syncfu
 platform: document-processing
 control: PDF viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Working with page navigation in UWP PDF Viewer

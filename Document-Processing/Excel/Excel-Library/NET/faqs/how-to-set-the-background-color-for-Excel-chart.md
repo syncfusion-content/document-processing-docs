@@ -4,6 +4,7 @@ description: Learn how to set the background color for an Excel chart programmat
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to set chart background colors in .NET Excel Library

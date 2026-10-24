@@ -6,6 +6,7 @@ platform: document-processing
 control: Find and Replace
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Find and Replace in TypeScript DOCX Editor

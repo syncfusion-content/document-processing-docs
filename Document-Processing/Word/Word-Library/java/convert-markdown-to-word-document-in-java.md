@@ -4,6 +4,7 @@ description: Convert Markdown to Word document in java using Syncfusion Java Wor
 platform: document-processing
 control: Word library
 documentation: UG
+appliesto: Document SDK
 ---
 # Convert Markdown to Word document in Java Word
 

@@ -5,6 +5,7 @@ description: Learn about clearing cell contents or formats in the Syncfusion Rea
 control: Spreadsheet
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Clear Cell Contents or Formats in React Spreadsheet

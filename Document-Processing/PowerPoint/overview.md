@@ -5,6 +5,7 @@ platform: document-processing
 control: general
 documentation: UG
 keywords: PowerPoint, Presentation, slide, SDK, Automation, API, create, convert, read
+appliesto: Document SDK
 ---
 
 > With the 2025 Volume 1 release, we will discontinue support for .NET 6.0 and 7.0 in WinForms, WPF, WinUI, and Document Processing Libraries. Please plan to upgrade to .NET 8.0 or higher.

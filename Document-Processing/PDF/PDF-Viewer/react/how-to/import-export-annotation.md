@@ -5,6 +5,7 @@ description: Import and export annotations in the React PDF Viewer as JavaScript
 control: PDF Viewer
 platform: document-processing
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Import and Export Annotations in React PDF Viewer

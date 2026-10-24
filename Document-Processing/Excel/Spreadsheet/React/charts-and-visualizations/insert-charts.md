@@ -5,6 +5,7 @@ description: Learn about inserting charts in the Syncfusion React Spreadsheet co
 control: Spreadsheet
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Insert Charts in React Spreadsheet

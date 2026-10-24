@@ -4,6 +4,7 @@ description: .NET MAUI Excel file handling section explains how to load and save
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Loading and Saving Workbooks in .NET MAUI
 

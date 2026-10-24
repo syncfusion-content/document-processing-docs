@@ -5,6 +5,7 @@ description: The styles feature in Blazor DOCX Editor enables users to apply, cu
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # Styles in Blazor DOCX Editor

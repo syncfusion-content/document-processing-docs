@@ -5,6 +5,7 @@ description: Improve performance when running or debugging the Blazor WebAssembl
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Reduce slowness when running WASM in Visual Studio

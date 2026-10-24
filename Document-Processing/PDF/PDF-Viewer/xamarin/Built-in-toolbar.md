@@ -5,6 +5,7 @@ description: Learn here all about Working with Built-In Toolbar support in Syncf
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Built-In Toolbar in Xamarin Pdf Viewer Control

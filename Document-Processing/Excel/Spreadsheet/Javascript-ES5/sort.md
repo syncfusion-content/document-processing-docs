@@ -5,6 +5,7 @@ description: Sorting in JavaScript Spreadsheet enables users to arrange data in 
 platform: document-processing
 control: Sort
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Sorting in JavaScript Spreadsheet

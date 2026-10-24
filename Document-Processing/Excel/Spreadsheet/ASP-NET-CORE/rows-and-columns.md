@@ -5,6 +5,7 @@ description: Learn about rows and columns in the Syncfusion ASP.NET Core Spreads
 platform: document-processing
 control: Rows And Columns
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

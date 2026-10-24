@@ -4,6 +4,7 @@ description: Find answers to frequently asked questions about creating, editing,
 platform: document-processing
 control: Presentation
 documentation: UG
+appliesto: Document SDK
 ---
 # FAQs in .NET PowerPoint Presentation
 

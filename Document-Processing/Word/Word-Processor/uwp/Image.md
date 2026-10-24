@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: image,insert-picture,image-resizer,text-wrapping
+appliesto: DOCX Editor SDK
 ---
 # Images in UWP DOCX Editor
 

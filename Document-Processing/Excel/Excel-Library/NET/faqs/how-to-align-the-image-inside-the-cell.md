@@ -4,6 +4,7 @@ description: Align images precisely within Excel worksheet cells using the Syncf
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to align pictures in cells in .NET Excel Library

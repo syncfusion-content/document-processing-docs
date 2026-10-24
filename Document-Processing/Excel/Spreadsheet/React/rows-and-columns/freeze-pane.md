@@ -5,6 +5,7 @@ description: Learn about freeze panes in the Syncfusion React Spreadsheet compon
 control: Rows and Columns 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Freeze Panes in React Spreadsheet

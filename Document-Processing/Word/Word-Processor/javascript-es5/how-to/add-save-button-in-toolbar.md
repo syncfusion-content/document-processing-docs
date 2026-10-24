@@ -6,6 +6,7 @@ platform: document-processing
 control: Add save button tool bar 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Add Save Button in Toolbar in JavaScript DOCX Editor

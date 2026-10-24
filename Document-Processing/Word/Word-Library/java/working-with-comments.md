@@ -4,6 +4,7 @@ description: This section illustrates how to add, edit, and manage comments in W
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 # Comments in Java Word
 

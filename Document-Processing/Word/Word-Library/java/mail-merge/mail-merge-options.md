@@ -4,6 +4,7 @@ description: Describe how to migrate from Microsoft Office Automation to the Syn
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Mail merge options in Java Word

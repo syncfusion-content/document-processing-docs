@@ -5,6 +5,7 @@ platform: document-processing
 control: SmartDataExtractor
 documentation: UG
 keywords: SmartDataExtractor, PDF to JSON, PDF to Markdown
+appliesto: Document SDK
 ---
 
 # About Document Conversions of .NET Smart Data Extractor

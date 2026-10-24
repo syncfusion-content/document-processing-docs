@@ -4,6 +4,7 @@ description: Convert Word to PDF in AWS Lambda using .NET Core Word library with
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert Word to PDF in AWS Lambda 

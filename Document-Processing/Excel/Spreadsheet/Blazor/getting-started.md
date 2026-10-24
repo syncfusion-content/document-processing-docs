@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion Blazor Spreadsheet in 
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Getting Started with Blazor WebAssembly Spreadsheet

@@ -5,6 +5,7 @@ description: Tables in ASP.NET Core DOCX Editor enable adding and managing rows,
 platform: document-processing
 control: Table
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

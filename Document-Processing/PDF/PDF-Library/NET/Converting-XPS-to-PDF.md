@@ -4,6 +4,7 @@ description: Learn how to convert XPS documents to PDF format easily using the S
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Convert XPS to PDF in .NET
 

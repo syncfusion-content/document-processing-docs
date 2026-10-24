@@ -5,6 +5,7 @@ description: Security advisories in ASP.NET MVC DOCX Editor provide information 
 control: Security Advisories
 platform: document-processing
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # Security Advisories in ASP.NET MVC DOCX Editor

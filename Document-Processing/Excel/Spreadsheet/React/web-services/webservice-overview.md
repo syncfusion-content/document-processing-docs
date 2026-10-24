@@ -5,6 +5,7 @@ description: Learn about connecting web services for open and save operations in
 control: Web Services
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Web Services in React Spreadsheet

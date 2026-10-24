@@ -5,6 +5,7 @@ description: Adjust the height and width of the Syncfusion® ASP.NET MVC DOCX Ed
 platform: document-processing
 control: Resize DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

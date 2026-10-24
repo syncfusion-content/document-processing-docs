@@ -5,6 +5,7 @@ description: Learn here all about Working with shape annotations support in Sync
 platform: document-processing
 control: PDF viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Working with shape annotations in UWP Pdf Viewer

@@ -6,6 +6,7 @@ control: Table format
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Table format in React DOCX Editor

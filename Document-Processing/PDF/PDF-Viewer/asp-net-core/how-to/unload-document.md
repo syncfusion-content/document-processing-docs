@@ -5,6 +5,7 @@ description: Unload the current document in the ASP.NET Core PDF Viewer to free 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Unload a Document in ASP.NET Core PDF Viewer

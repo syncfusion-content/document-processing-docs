@@ -5,6 +5,7 @@ platform: document-processing
 control: SmartDataExtractor
 documentation: UG
 keywords: Syncfusion.SmartDataExtractor, Syncfusion.SmartTableExtractor, Syncfusion.SmartFormRecognizer, Syncfusion.PDF.OCR
+appliesto: Document SDK
 ---
 
 # About Syncfusion Smart Data Extraction Solutions

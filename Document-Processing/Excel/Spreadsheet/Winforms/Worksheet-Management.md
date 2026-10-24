@@ -5,6 +5,7 @@ description: Insert, delete, rename, hide, protect, zoom, and manage worksheet d
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Worksheet Management in Windows Forms Spreadsheet

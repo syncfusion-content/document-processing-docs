@@ -6,6 +6,7 @@ platform: document-processing
 control: Import 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Import in JavaScript DOCX Editor

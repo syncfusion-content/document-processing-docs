@@ -5,6 +5,7 @@ description: Getting started with the Syncfusion PDF Viewer for WinForms covers 
 platform: document-processing
 control: PdfViewerControl
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Getting Started with WinForms PDF Viewer

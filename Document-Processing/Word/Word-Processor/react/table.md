@@ -6,6 +6,7 @@ control: Table
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Tables in React DOCX Editor

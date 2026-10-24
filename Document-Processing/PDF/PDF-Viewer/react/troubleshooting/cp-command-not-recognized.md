@@ -5,6 +5,7 @@ description: Resolve the cp is not recognized error in the React PDF Viewer by u
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Resolve cp Not Recognized Error in React PDF Viewer

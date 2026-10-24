@@ -6,6 +6,7 @@ control: Spreadsheet
 platform: document-processing
 documentation: ug
 keywords: Angular Agentic UI Builder, MCP Server, search docs, Spreadsheet SDK, Server Packages
+appliesto: Spreadsheet Editor SDK
 ---
 
 # MCP Server Configuration in Angular Spreadsheet

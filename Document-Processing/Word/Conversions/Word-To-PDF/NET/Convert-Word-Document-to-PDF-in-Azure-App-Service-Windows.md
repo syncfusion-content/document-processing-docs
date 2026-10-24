@@ -4,6 +4,7 @@ description: Convert Word to PDF in Azure App Service on Windows using .NET Core
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert Word to PDF in Azure App Service Windows 

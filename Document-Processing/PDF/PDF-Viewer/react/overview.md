@@ -4,6 +4,7 @@ description: Learn about introduction of Syncfusion Essential Studio React PDF V
 platform: document-processing
 control: PDF Viewer
 documentation: UG
+appliesto: PDF Viewer SDK
 ---
 
 # About Syncfusion React PDF Viewer Control

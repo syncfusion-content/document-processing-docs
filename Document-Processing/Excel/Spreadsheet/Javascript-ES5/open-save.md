@@ -5,6 +5,7 @@ description: Open and save in JavaScript Spreadsheet enable users to import, edi
 platform: document-processing
 control: Open save
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Open and Save in JavaScript Spreadsheet

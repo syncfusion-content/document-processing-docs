@@ -3,6 +3,7 @@ title: How to Fix Skiasharp native reference issue in Blazor | Syncfusion
 description: This page explains how to resolve Skiasharp native reference linking issue in Blazor .NET 9 application.
 platform: document-processing
 documentation: UG
+appliesto: Document SDK, PDF Viewer SDK
 ---
 
 # How to fix Skiasharp native reference issue in Blazor .NET 9 app?

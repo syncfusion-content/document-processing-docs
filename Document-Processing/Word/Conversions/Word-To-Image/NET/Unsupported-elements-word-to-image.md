@@ -4,6 +4,7 @@ description: Learn about the limitations in Word-to-Image conversion in C# using
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Limitations in Word-to-Image Conversion in .NET Word

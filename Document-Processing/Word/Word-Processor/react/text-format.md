@@ -6,6 +6,7 @@ control: Text format
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Text Format in React DOCX Editor

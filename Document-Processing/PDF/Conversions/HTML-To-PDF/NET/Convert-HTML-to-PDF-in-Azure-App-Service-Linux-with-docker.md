@@ -4,6 +4,7 @@ description: Learn how to convert HTML to PDF in Azure App Service Linux with do
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # HTML to PDF conversion in Azure App Service Linux Docker .NET PDF

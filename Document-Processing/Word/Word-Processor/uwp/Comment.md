@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: comment,newcommentcommand,deletecommentcommand,showcommentscommand,review-pane,commentadding,editor-settings
+appliesto: DOCX Editor SDK
 ---
 # Comments in UWP DOCX Editor
 

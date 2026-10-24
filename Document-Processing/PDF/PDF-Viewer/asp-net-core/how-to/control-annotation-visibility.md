@@ -5,6 +5,7 @@ description: Control the visibility of PDF annotations in the ASP.NET Core PDF V
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Control Annotation Visibility in ASP.NET Core PDF Viewer

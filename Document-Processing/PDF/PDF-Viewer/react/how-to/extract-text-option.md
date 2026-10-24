@@ -5,6 +5,7 @@ description: Use the extractTextOption property in the React PDF Viewer to contr
 control: PDF Viewer
 platform: document-processing
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Configure ExtractTextOption in React PDF Viewer

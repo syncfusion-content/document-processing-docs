@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion UWP Spreadsheet contro
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Getting Started with UWP Spreadsheet 

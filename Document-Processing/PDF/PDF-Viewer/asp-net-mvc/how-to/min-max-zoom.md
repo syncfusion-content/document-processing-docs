@@ -6,6 +6,7 @@ platform: document-processing
 control: PDF Viewer
 
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Configure MinZoom and MaxZoom in ASP.NET MVC PDF Viewer

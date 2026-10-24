@@ -5,6 +5,7 @@ description: Learn about sheet protection in the Syncfusion React Spreadsheet co
 control: Protect sheet 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Protect Sheet in React Spreadsheet

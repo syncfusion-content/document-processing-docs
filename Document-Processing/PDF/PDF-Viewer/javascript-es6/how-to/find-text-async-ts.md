@@ -5,6 +5,7 @@ description: Search text asynchronously in the JavaScript (ES6) PDF Viewer using
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Use FindTextAsync in JavaScript (ES6) PDF Viewer

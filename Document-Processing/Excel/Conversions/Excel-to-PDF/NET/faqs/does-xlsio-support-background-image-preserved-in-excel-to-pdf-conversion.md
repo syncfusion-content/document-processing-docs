@@ -4,6 +4,7 @@ description: Excel to PDF conversion explains whether the Syncfusion .NET Excel 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Watermarks and Background Images in .NET Excel Library

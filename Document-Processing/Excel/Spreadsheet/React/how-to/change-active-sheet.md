@@ -5,6 +5,7 @@ description: Learn how to change the active sheet while importing a workbook in 
 control: Spreadsheet 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # How to Change Active Sheet While Importing a File in React Spreadsheet

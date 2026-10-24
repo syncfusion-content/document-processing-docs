@@ -5,6 +5,7 @@ description: Rows and columns in Angular Spreadsheet enable users to insert, del
 platform: document-processing
 control: Rows and columns
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Rows and columns in Angular Spreadsheet 

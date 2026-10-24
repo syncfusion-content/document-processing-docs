@@ -5,6 +5,7 @@ description: PDF Viewer in Xamarin.Android supports printing the PDF documents l
 platform: document-processing
 control: SfPdfViewer
 documentation: UG
+appliesto: PDF Viewer SDK
 ---
 
 # Printing in PDF Viewer Xamarin.Android

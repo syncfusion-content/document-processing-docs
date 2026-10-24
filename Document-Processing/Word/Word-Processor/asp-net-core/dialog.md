@@ -5,6 +5,7 @@ description: The dialogs in ASP.NET Core DOCX Editor provides built-in dialogs t
 platform: document-processing
 control: Dialog
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 
