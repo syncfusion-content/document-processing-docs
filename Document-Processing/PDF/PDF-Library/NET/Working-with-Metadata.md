@@ -4,6 +4,7 @@ description: Learn how to add, modify, and read document information and XMP met
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Metadata in .NET PDF Library

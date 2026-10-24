@@ -5,6 +5,7 @@ description: Learn about the open pdf file in the ASP.NET MVC PDF Viewer and how
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # Open Pdf File in ASP.NET MVC PDF Viewer

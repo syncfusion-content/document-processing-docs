@@ -5,6 +5,7 @@ description: Handle overlapping annotations in the Vue PDF Viewer so users can s
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # How to Handle Overlapped Annotations in Vue PDF Viewer

@@ -5,6 +5,7 @@ description: The PDF loading from URL feature in SfPdfViewer enables users to re
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # Open a Document From URL in Flutter PDF Viewer

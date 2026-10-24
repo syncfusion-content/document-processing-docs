@@ -5,6 +5,7 @@ description: Learn about introduction of Syncfusion Essential Studio Windows For
 platform: document-processing
 control: PdfViewerControl
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # About Syncfusion Windows Forms PDF Viewer Control

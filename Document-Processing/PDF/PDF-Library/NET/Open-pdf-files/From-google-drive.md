@@ -4,6 +4,7 @@ description: Learn how to open PDF files programmatically from Google Drive in C
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Open PDF from Google Drive
 

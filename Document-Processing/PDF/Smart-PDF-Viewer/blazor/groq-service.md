@@ -5,6 +5,7 @@ description: Learn how to integrate a custom AI service using the Groq API with 
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # Groq AI service in Blazor app  Smart PDF Viewer

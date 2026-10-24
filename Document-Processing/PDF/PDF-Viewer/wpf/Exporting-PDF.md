@@ -5,6 +5,7 @@ description: Export PDF pages to image formats in Syncfusion WPF PDF Viewer. Lea
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # Exporting PDF pages in WPF Pdf Viewer

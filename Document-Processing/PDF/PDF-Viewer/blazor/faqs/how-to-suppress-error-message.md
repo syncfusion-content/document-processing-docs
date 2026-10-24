@@ -5,6 +5,7 @@ description: Learn how to suppress the built-in error dialog in the Blazor PDF V
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # How to Suppress the error dialog in the Blazor PDF Viewer

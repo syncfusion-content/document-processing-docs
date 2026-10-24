@@ -6,6 +6,7 @@ platform: document-processing
 control: Shape annotation
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # Shape Annotation in Angular PDF Viewer

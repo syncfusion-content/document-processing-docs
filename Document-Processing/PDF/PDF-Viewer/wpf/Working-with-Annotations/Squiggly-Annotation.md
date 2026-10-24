@@ -5,6 +5,7 @@ description: The squiggly annotation feature in WPF PDF Viewer marks text with a
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # Squiggly text in WPF Pdf Viewer

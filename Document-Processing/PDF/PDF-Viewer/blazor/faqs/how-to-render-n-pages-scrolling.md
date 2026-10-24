@@ -5,6 +5,7 @@ description: Learn how to improve scrolling performance in the Blazor PDF Viewer
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # Render multiple pages while scroll using OverscanCount
