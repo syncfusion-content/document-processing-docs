@@ -1,17 +1,26 @@
 ---
 layout: post
-title: Toolbar in ASP.NET Core PDF Viewer | Syncfusion
-description: Customize the Organize Pages toolbar in the ASP.NET Core PDF Viewer to show, hide, or replace the default actions that appear in the panel.
+title: Redaction Toolbar in ASP.NET Core PDF Viewer | Syncfusion
+description: Customize the redaction toolbar in the ASP.NET Core PDF Viewer by showing or hiding the default redaction actions to fit your scenario.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Customize the Organize Pages Toolbar in ASP.NET Core PDF Viewer
+# Customize the Redaction Toolbar in ASP.NET Core PDF Viewer
 
-Customize the redaction toolbar by rearranging existing items, hiding default items, or adding custom items. Custom items can be inserted at specific index positions among existing toolbar items.
+This guide shows how to enable and control the redaction toolbar in the ASP.NET Core PDF Viewer, including showing/hiding it from the primary toolbar programmatically.
 
-## Enable the redaction toolbar
+**Outcome**: a working viewer with the Redaction toolbar available and code to toggle it.
+
+## Prerequisites
+
+- Syncfusion ASP.NET Core PDF Viewer installed and added to your project. See [getting started guide](../getting-started).
+- A public PDF or service endpoint (the examples use a CDN-hosted PDF and the Syncfusion resource URL).
+
+## Steps
+
+### Enable redaction toolbar
 
 To enable the redaction toolbar, configure the `toolbarSettings.toolbarItems` property of the PdfViewer instance to include the **RedactionEditTool**.
 
@@ -57,6 +66,8 @@ window.onload = function () {
 Refer to the following image for the toolbar view:
 
 ![Enable redaction toolbar](./redaction-annotations-images/redaction-icon-toolbar.png)
+
+**Expected result**: the primary toolbar contains the Redaction icon. Clicking it opens the redaction toolbar.
 
 ## Show or hide the redaction toolbar
 
@@ -120,10 +131,16 @@ Refer to the following image for details:
 
 ![Programmatically show the Redaction toolbar](./redaction-annotations-images/show-redaction-toolbar.png)
 
-## See also
+## Troubleshooting
 
-* [Adding the redaction annotation in PDF viewer](./overview)
-* [UI interactions](./ui-interaction)
-* [Programmatic support](./programmatic-support)
-* [Mobile view](./mobile-view)
-* [Search Text and Redact](./search-redact)
+- If redaction icon not visible, ensure that `'RedactionEditTool'` is added to `toolbarSettings.toolbarItems` and `Toolbar` is included in the injected services.
+- If toolbar buttons have no effect, verify `resourceUrl` points to a reachable `ej2-pdfviewer-lib` bundle appropriate for your viewer version.
+- If viewer fails to load PDF, use a public PDF URL or configure a server-side service endpoint.
+
+## Related topics
+
+- [Adding the redaction annotation in PDF viewer](./overview)
+- [Redaction UI interactions](./ui-interaction)
+- [Programmatic support](./programmatic-support)
+- [Mobile view](./mobile-view)
+- [Search Text and Redact](./search-redact)

@@ -1,20 +1,27 @@
 ---
 layout: post
 title: Search Redact in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn about the search redact in the ASP.NET Core PDF Viewer and how it helps users work with PDF documents more effectively.
+description: Find text and add redaction annotations programmatically in the ASP.NET Core PDF Viewer to remove sensitive content across an entire document.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Search Redact in ASP.NET Core PDF Viewer
+# Search and Redact Text in ASP.NET Core PDF Viewer
 
-Search for a keyword in the loaded PDF and automatically add redaction annotations for each match. The example below calls `findTextAsync` to perform the search and then adds a redaction annotation for every returned text bound.
+## Overview
 
-N> Prerequisites: Add the PdfViewer control to the ASP.NET Core application and ensure a document is loaded. Confirm the redaction feature is available in the used product version. Applying redaction permanently removes the selected content.
+This guide shows how to search for text inside a loaded PDF and add redaction annotations programmatically for every match. You will add two buttons: one to locate and mark matches with redaction annotations, and another to apply redactions (permanently remove the marked content).
 
-## Steps to add Redaction annotations on search Text Bounds
+**Outcome:** After following the steps you will have a working ASP.NET Core sample where clicking **Search & Mark for Redaction** marks found text with redaction annotations and clicking **Apply Redaction** permanently removes the marked content.
+
+## Prerequisites
+
+- Syncfusion ASP.NET Core PDF Viewer added to your project. See [getting started guide](../getting-started).
+- The viewer's redaction feature enabled in your product version.
+
+## Steps
 
 **Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/asp-net-core/getting-started) to create a simple PDF Viewer sample.
 
@@ -107,16 +114,23 @@ N> Prerequisites: Add the PdfViewer control to the ASP.NET Core application and 
 
 [View Sample in GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples)
 
-## Notes
-- Ensure the PDF is fully loaded before triggering extraction and search.
-- Bounds from search are in points (72 DPI). Convert to pixels (96 DPI) to align with annotation coordinates.
-- Customize overlay text, colors, and typography as needed.
-- Adding a redaction annotation covers the content visually. To permanently remove sensitive data, use the viewer's Apply Redaction action or equivalent API if available in the used product version.
+### Expected result
 
-## See also
+- The viewer loads the specified PDF.
+- Clicking **Search "syncfusion" & Mark for Redaction** adds redaction annotations over the matched text.
+- Clicking **Apply Redaction** permanently removes the marked content from the document; this operation is irreversible.
 
-* [Overview of Redaction](./overview)
-* [Programmatic Support in Redaction](./programmatic-support)
-* [UI interactions](./ui-interaction)
-* [Redaction in Mobile View](./mobile-view)
-* [Redaction Toolbar](./toolbar)
+## Troubleshooting
+
+- Issue: "No matches found" even though text exists — Cause: PDF text extraction may not be ready. Solution: Wait for the document to finish loading or call search after the `documentLoad` event.
+- Issue: Bounds look misplaced — Cause: `findTextAsync()` returns bounds in points (72 DPI). Ensure conversion to pixels using the provided `px()` helper.
+- Issue: `textSearchModule` is undefined — Cause: `TextSearch` service not injected. Add `TextSearch` to the injected services list.
+- Issue: Redactions not applied — Cause: `redact()` requires redaction annotations present and viewer to support apply-redaction; ensure `Annotation` service and `Redaction` features are available in your build.
+
+## Related topics
+
+- [Overview of Redaction](./overview)
+- [Programmatic Support in Redaction](./programmatic-support)
+- [Redaction UI interactions](./ui-interaction)
+- [Redaction in Mobile View](./mobile-view)
+- [Redaction Toolbar](./toolbar)
