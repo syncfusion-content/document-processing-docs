@@ -113,6 +113,7 @@ The following table lists the supported localized words in the Blazor Spreadshee
 | `Spreadsheet_ClearContents` | Clear Contents |
 | `Spreadsheet_ClearHyperlinks` | Clear Hyperlinks |
 | `Spreadsheet_Clear` | Clear |
+| `ChooseTime` | Choose Time |
 | `Spreadsheet_Link` | Link |
 | `Spreadsheet_Image` | Image |
 
