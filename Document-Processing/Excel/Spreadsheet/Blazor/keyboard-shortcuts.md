@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Keyboard Shortcuts in Blazor Spreadsheet | Syncfusion
+title: Keyboard shortcuts in Blazor Spreadsheet | Syncfusion
 description: Learn about keyboard shortcuts in the Syncfusion Blazor Spreadsheet component for efficient navigation and editing.
 control: Keyboard shortcuts
 platform: document-processing
@@ -13,62 +13,37 @@ The keyboard shortcuts supported in the spreadsheet are,
 
 | Shortcut | Description |
 |----------|-------------|
-| Ctrl + O | Displays dialog to open a file. |
-| Ctrl + S / Alt + F2 | Saves the workbook. |
-| Ctrl + P | Print the active worksheet when the spreadsheet is in focus. |
-| F2 | Enables edit mode. |
-| ESC | Cancel edit mode and discard the changes. |
-| Backspace and SPACE | Clears content of the active cell and enables edit mode. |
+| Ctrl + B | Applies or removes **bold** formatting. |
+| Ctrl + U | Applies or removes `underline`. |
+| Ctrl + I | Applies or removes *italic* formatting. |
+| Ctrl + 5 | Applies or removes ~~strikethrough~~. |
+| Ctrl + D | Fills the cell down. |
+| Ctrl + R | Fills the cell right. |
 | Ctrl + C | Copies the selected cells. |
 | Ctrl + X | Cuts the selected cells. |
 | Ctrl + V | Paste the clipboard(cut or copied) content in the new selected range. |
-| Ctrl + B | Applies or removes **bold** formatting. |
-| Ctrl + I | Applies or removes *italic* formatting. |
-| Ctrl + U | Applies or removes `underline`. |
-| Ctrl + 5 | Applies or removes ~~strikethrough~~. |
 | Ctrl + Z | Reverses (Undo) the last action. |
 | Ctrl + Y | Repeats (Redo) the last reversed action. |
+| Arrow keys | Moves between cells. |
+| Shift + Arrow keys | Extends the current selection in the direction of the arrow key. |
+| Tab / Shift + Tab | Moves the active cell right / left. |
+| Enter / Shift + Enter | Moves the active cell down / up. |
+| Ctrl + Home | Moves to the A1 cell. |
+| Ctrl + End | Moves to the last used cell. |
+| Ctrl + Left/Right/Up/Down | Moves to the edge of the current data region. |
+| Ctrl + A | Selects all cells in the worksheet. |
+| Ctrl + Space | Selects an entire column in the worksheet. |
+| Shift + Space | Selects an entire row in the worksheet. |
+| Ctrl + Shift + Space | Selects all cells in the worksheet. |
+| F2 | Enables edit mode. |
+| Escape | Cancels edit mode and discards the changes. |
+| Delete | Removes the contents of the cell. |
+| Ctrl + O | Displays dialog to open a file. |
+| Ctrl + S | Saves the workbook. |
 | Ctrl + K | It opens the `Insert Hyperlink` dialog for adding new hyperlink to a cell. If the selected cell already contains hyperlink, it opens the `Edit Hyperlink` dialog. |
-| Ctrl + F / Shift + F5 | Opens `Find` dialog. |
-| Ctrl + H | Opens `Find and Replace` dialog. |
-| Ctrl + G | Opens `GoTo` dialog, which helps to navigate to cell. |
-| Ctrl + Shift + L | Applies filter to the first row of the selected range or used range. |
-| Alt + F | Opens the `File` menu. |
-| Alt + H | Go to `Home` tab. |
-| Alt + N | Go to `Insert` tab. |
-| Alt + M | Go to `Formulas` tab. |
-| Alt + A | Go to `Data` tab. |
-| Alt + W | Go to `View` tab. |
-| Spacebar or Enter | Activate a selected button. |
-| Ctrl + F8  | Expand or collapse the ribbon content. |
-| Ctrl + Shift + U | Expand or collapse the formula bar. |
-| Ctrl + 9 | Hide the selected row. |
-| Ctrl + 0 | Hide the selected column. |
-| Ctrl + & | Apply an outline border to the selected cells. |
-| Ctrl + Shift + & | Apply an outline border to the cells that you've chosen. |
-| Ctrl + Shift + ~ | Apply the `General` number format. |
-| Ctrl + Shift + $ | Apply the `Currency` format with two decimal places (negative numbers in parentheses). |
-| Shift + F10 | Open the context menu. |
-| Ctrl + % | Apply the `Percentage` format with no decimal places. |
-| Ctrl + ^ | Apply the `Scientific` number format with two decimal places. |
-| Ctrl + Shift + # |Apply the `Date` format with the day, month, and year. |
-| Ctrl + Shift + @ | Apply the `Time` format with the hour and minute, and AM or PM. |
-| Ctrl + Shift + ! | Apply the `Number` format with two decimal places, thousands separator, and minus sign (-) for negative values. |
-| Ctrl + Spacebar | Select an entire column in a worksheet. |
-| Shift + Spacebar | Select an entire row in a worksheet. |
-| Shift + F3 | Opens `Insert Function` dialog. |
-| Ctrl + Alt + N | Opens new workbook. |
-| Shift + Alt + K | Open the `List All Sheets` dropdown option. |
-| Alt + Down | Open the list data validation menu and filter menu. |
-| Alt + Up | Close the list data validation menu and filter menu. |
-| Delete | Remove the contents of the cell. |
-| Shift + F11 | Add a new sheet. |
-| Shift + F2 | Open the dialog box to add or edit notes for the desired cells. Meanwhile, upon pressing the `Esc` key, the dialog box for notes, when in focus, will save and close. |
-| Ctrl + Shift + 9 | Unhide the selected rows. |
-| Ctrl + Shift + 0 | Unhide the selected columns. |
-| Ctrl + D | Fill the cell down. |
-| Ctrl + R | Fill the cell right. |
-| Ctrl + Shift + F2 | Opens the comment editor for the active cell. Upon pressing the `Esc` key, the comment editor in focus will close. |
+| Shift + F11 | Adds a new sheet. |
+| Ctrl + Shift + L | Opens the filter dialog. |
+| Ctrl + F | Opens `Find and Replace` dialog. |
 
 ## Note
 
