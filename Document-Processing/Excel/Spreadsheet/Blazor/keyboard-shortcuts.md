@@ -1,54 +1,79 @@
 ---
 layout: post
-title: Keyboard shortcuts in Blazor Spreadsheet | Syncfusion
-description: Learn about keyboard shortcuts in the Syncfusion Blazor Spreadsheet component for faster navigation and editing.
+title: Keyboard Shortcuts in Blazor Spreadsheet | Syncfusion
+description: Learn about keyboard shortcuts in the Syncfusion Blazor Spreadsheet component for efficient navigation and editing.
+control: Keyboard shortcuts
 platform: document-processing
-control: Spreadsheet
 documentation: ug
 ---
 
 # Keyboard shortcuts in Blazor Spreadsheet
 
-The keyboard shortcuts supported in the Blazor Spreadsheet are listed below.
+The keyboard shortcuts supported in the spreadsheet are,
 
-| Shortcut | Purpose |
-|----------|---------|
-| `Ctrl + B` | Bold |
-| `Ctrl + U` | Underline |
-| `Ctrl + I` | Italic |
-| `Ctrl + 5` | Strikethrough |
-| `Ctrl + D` | Fill down |
-| `Ctrl + R` | Fill right |
-| `Ctrl + C` | Copy |
-| `Ctrl + X` | Cut |
-| `Ctrl + V` | Paste |
-| `Ctrl + Z` | Undo |
-| `Ctrl + Y` | Redo |
-| `Arrow keys` | Move between cells |
-| `Shift + Arrow keys` | Extend selection |
-| `Tab / Shift + Tab` | Move right / left |
-| `Enter / Shift + Enter` | Move down / up |
-| `Ctrl + Home` | Go to A1 |
-| `Ctrl + End` | Go to last used cell |
-| `Ctrl + Left/Right/Up/Down` | Jump to sheet edges |
-| `Ctrl + A` | Select all |
-| `Ctrl + Space` | Select column |
-| `Shift + Space` | Select row |
-| `Ctrl + Shift + Space` | Select all cells |
-| `F2` | Edit cell |
-| `Escape` | Cancel edit |
-| `Delete` | Clear selected content |
-| `Ctrl + O` | Open file |
-| `Ctrl + S` | Save / export |
-| `Ctrl + K` | Insert/open hyperlink |
-| `Shift + F11` | Insert new worksheet |
-| `Ctrl + Shift + L` | Open filter UI |
-| `Ctrl + F` | Open find and replace dialog |
+| Shortcut | Description |
+|----------|-------------|
+| Ctrl + O | Displays dialog to open a file. |
+| Ctrl + S / Alt + F2 | Saves the workbook. |
+| Ctrl + P | Print the active worksheet when the spreadsheet is in focus. |
+| F2 | Enables edit mode. |
+| ESC | Cancel edit mode and discard the changes. |
+| Backspace and SPACE | Clears content of the active cell and enables edit mode. |
+| Ctrl + C | Copies the selected cells. |
+| Ctrl + X | Cuts the selected cells. |
+| Ctrl + V | Paste the clipboard(cut or copied) content in the new selected range. |
+| Ctrl + B | Applies or removes **bold** formatting. |
+| Ctrl + I | Applies or removes *italic* formatting. |
+| Ctrl + U | Applies or removes `underline`. |
+| Ctrl + 5 | Applies or removes ~~strikethrough~~. |
+| Ctrl + Z | Reverses (Undo) the last action. |
+| Ctrl + Y | Repeats (Redo) the last reversed action. |
+| Ctrl + K | It opens the `Insert Hyperlink` dialog for adding new hyperlink to a cell. If the selected cell already contains hyperlink, it opens the `Edit Hyperlink` dialog. |
+| Ctrl + F / Shift + F5 | Opens `Find` dialog. |
+| Ctrl + H | Opens `Find and Replace` dialog. |
+| Ctrl + G | Opens `GoTo` dialog, which helps to navigate to cell. |
+| Ctrl + Shift + L | Applies filter to the first row of the selected range or used range. |
+| Alt + F | Opens the `File` menu. |
+| Alt + H | Go to `Home` tab. |
+| Alt + N | Go to `Insert` tab. |
+| Alt + M | Go to `Formulas` tab. |
+| Alt + A | Go to `Data` tab. |
+| Alt + W | Go to `View` tab. |
+| Spacebar or Enter | Activate a selected button. |
+| Ctrl + F8  | Expand or collapse the ribbon content. |
+| Ctrl + Shift + U | Expand or collapse the formula bar. |
+| Ctrl + 9 | Hide the selected row. |
+| Ctrl + 0 | Hide the selected column. |
+| Ctrl + & | Apply an outline border to the selected cells. |
+| Ctrl + Shift + & | Apply an outline border to the cells that you've chosen. |
+| Ctrl + Shift + ~ | Apply the `General` number format. |
+| Ctrl + Shift + $ | Apply the `Currency` format with two decimal places (negative numbers in parentheses). |
+| Shift + F10 | Open the context menu. |
+| Ctrl + % | Apply the `Percentage` format with no decimal places. |
+| Ctrl + ^ | Apply the `Scientific` number format with two decimal places. |
+| Ctrl + Shift + # |Apply the `Date` format with the day, month, and year. |
+| Ctrl + Shift + @ | Apply the `Time` format with the hour and minute, and AM or PM. |
+| Ctrl + Shift + ! | Apply the `Number` format with two decimal places, thousands separator, and minus sign (-) for negative values. |
+| Ctrl + Spacebar | Select an entire column in a worksheet. |
+| Shift + Spacebar | Select an entire row in a worksheet. |
+| Shift + F3 | Opens `Insert Function` dialog. |
+| Ctrl + Alt + N | Opens new workbook. |
+| Shift + Alt + K | Open the `List All Sheets` dropdown option. |
+| Alt + Down | Open the list data validation menu and filter menu. |
+| Alt + Up | Close the list data validation menu and filter menu. |
+| Delete | Remove the contents of the cell. |
+| Shift + F11 | Add a new sheet. |
+| Shift + F2 | Open the dialog box to add or edit notes for the desired cells. Meanwhile, upon pressing the `Esc` key, the dialog box for notes, when in focus, will save and close. |
+| Ctrl + Shift + 9 | Unhide the selected rows. |
+| Ctrl + Shift + 0 | Unhide the selected columns. |
+| Ctrl + D | Fill the cell down. |
+| Ctrl + R | Fill the cell right. |
+| Ctrl + Shift + F2 | Opens the comment editor for the active cell. Upon pressing the `Esc` key, the comment editor in focus will close. |
 
 ## Note
 
-Refer to the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) feature tour page for an overview of the component capabilities.
+You can refer to our [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) feature tour page for its groundbreaking feature representations.
 
-## See also
+## See Also
 
-- [Formatting](./formatting)
+* [Formatting](./formatting)
