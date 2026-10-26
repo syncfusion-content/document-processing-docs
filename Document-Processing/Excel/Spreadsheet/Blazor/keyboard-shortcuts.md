@@ -11,39 +11,39 @@ documentation: ug
 
 The keyboard shortcuts supported in the Blazor Spreadsheet are listed below.
 
-| Category | Shortcut | Purpose |
-|----------|----------|---------|
-| Formatting | `Ctrl + B` | Bold |
-| Formatting | `Ctrl + U` | Underline |
-| Formatting | `Ctrl + I` | Italic |
-| Formatting | `Ctrl + 5` | Strikethrough |
-| Autofill | `Ctrl + D` | Fill down |
-| Autofill | `Ctrl + R` | Fill right |
-| Clipboard | `Ctrl + C` | Copy |
-| Clipboard | `Ctrl + X` | Cut |
-| Clipboard | `Ctrl + V` | Paste |
-| Undo/Redo | `Ctrl + Z` | Undo |
-| Undo/Redo | `Ctrl + Y` | Redo |
-| Navigation | `Arrow keys` | Move between cells |
-| Navigation | `Shift + Arrow keys` | Extend selection |
-| Navigation | `Tab / Shift + Tab` | Move right / left |
-| Navigation | `Enter / Shift + Enter` | Move down / up |
-| Navigation | `Ctrl + Home` | Go to A1 |
-| Navigation | `Ctrl + End` | Go to last used cell |
-| Navigation | `Ctrl + Left/Right/Up/Down` | Jump to sheet edges |
-| Selection | `Ctrl + A` | Select all |
-| Selection | `Ctrl + Space` | Select column |
-| Selection | `Shift + Space` | Select row |
-| Selection | `Ctrl + Shift + Space` | Select all cells |
-| Edit mode | `F2` | Edit cell |
-| Edit mode | `Escape` | Cancel edit |
-| Edit mode | `Delete` | Clear selected content |
-| Sheet actions | `Ctrl + O` | Open file |
-| Sheet actions | `Ctrl + S` | Save / export |
-| Sheet actions | `Ctrl + K` | Insert/open hyperlink |
-| Sheet actions | `Shift + F11` | Insert new worksheet |
-| Sheet actions | `Ctrl + Shift + L` | Open filter UI |
-| Sheet actions | `Ctrl + F` | Open find and replace dialog |
+| Shortcut | Purpose |
+|----------|---------|
+| `Ctrl + B` | Bold |
+| `Ctrl + U` | Underline |
+| `Ctrl + I` | Italic |
+| `Ctrl + 5` | Strikethrough |
+| `Ctrl + D` | Fill down |
+| `Ctrl + R` | Fill right |
+| `Ctrl + C` | Copy |
+| `Ctrl + X` | Cut |
+| `Ctrl + V` | Paste |
+| `Ctrl + Z` | Undo |
+| `Ctrl + Y` | Redo |
+| `Arrow keys` | Move between cells |
+| `Shift + Arrow keys` | Extend selection |
+| `Tab / Shift + Tab` | Move right / left |
+| `Enter / Shift + Enter` | Move down / up |
+| `Ctrl + Home` | Go to A1 |
+| `Ctrl + End` | Go to last used cell |
+| `Ctrl + Left/Right/Up/Down` | Jump to sheet edges |
+| `Ctrl + A` | Select all |
+| `Ctrl + Space` | Select column |
+| `Shift + Space` | Select row |
+| `Ctrl + Shift + Space` | Select all cells |
+| `F2` | Edit cell |
+| `Escape` | Cancel edit |
+| `Delete` | Clear selected content |
+| `Ctrl + O` | Open file |
+| `Ctrl + S` | Save / export |
+| `Ctrl + K` | Insert/open hyperlink |
+| `Shift + F11` | Insert new worksheet |
+| `Ctrl + Shift + L` | Open filter UI |
+| `Ctrl + F` | Open find and replace dialog |
 
 ## Note
 
