@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with JavaScript Excel in Node.js app | Syncfusion
-description: Learn how to get started with the Syncfusion JavaScript Excel in Node.js application. Easy steps to create Excel workbooks.
+title: Getting Started with JavaScript Excel Library in a Node.js Application | Syncfusion
+description: Learn how to create Excel workbooks in a Node.js application by using the Syncfusion JavaScript Excel Library.
 platform: document-processing
 control: Excel
 documentation: ug
 ---
 
-# Getting Started with JavaScript Excel in Node.js app
+# Getting Started with JavaScript Excel Library in a Node.js Application
 
 The [JavaScript Excel Library](https://www.syncfusion.com/document-sdk/javascript-excel-library) is used to create, read, and edit Microsoft Excel (`.xlsx`) workbooks. You can work with worksheets, cells, formulas, formatting, and other spreadsheet features without Microsoft Excel installed.
 
@@ -29,7 +29,7 @@ node --version
 npm --version
 ```
 
-## Create a Node.js Project
+## Create a Node.js project
 
 Create a new project folder and initialize it with `npm init`. The project uses CommonJS (the default `npm init` setting), so `require` syntax is used in `server.js`.
 
@@ -49,24 +49,24 @@ excel-node-app/
 └── package.json
 ```
 
-## Install Dependencies
+## Install dependencies
 
-Install the [JavaScript Excel Library](https://www.syncfusion.com/document-sdk/javascript-excel-library) and Express. Express is required to host the HTTP endpoint that generates and serves the Excel workbook.
+Install the [JavaScript Excel Library](https://www.syncfusion.com/document-sdk/javascript-excel-library) and Express. Express hosts the HTTP endpoint that generates and serves the Excel workbook.
 
 ```bash
 npm install @syncfusion/ej2-xlsx express --save
 ```
 
-### Required Dependencies
+### Required dependencies
 
 The following packages are required to use the [JavaScript Excel Library](https://www.syncfusion.com/document-sdk/javascript-excel-library) in a Node.js application:
 
-- `@syncfusion/ej2-xlsx` — the core JavaScript Excel Library
-- `@syncfusion/ej2-base` — base utilities used by the Excel Library
-- `@syncfusion/ej2-compression` — compression support used internally by the Excel Library
-- `express` — HTTP server used to expose the Excel generation endpoint
+- `@syncfusion/ej2-xlsx` — the core JavaScript Excel Library.
+- `express` — the HTTP server that exposes the Excel generation endpoint.
 
-## Create a Node.js Server Application to Generate an Excel Document
+N> `@syncfusion/ej2-base` is a dependency of `@syncfusion/ej2-xlsx` and is installed automatically. You do not need to install it separately.
+
+## Create a Node.js server application to generate an Excel document
 
 * Create a `public` folder inside the project root. The Express server uses `express.static('public')` to serve files from this folder.
 
@@ -87,7 +87,7 @@ mkdir public
     <button onclick="generateExcel()">Create Excel</button>
     <script>
       async function generateExcel() {
-        const response = await fetch('http://localhost:3000/generate-excel');
+        const response = await fetch('/generate-excel');
         const blob = await response.blob();
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
@@ -104,22 +104,20 @@ mkdir public
 {% endhighlight %}
 {% endtabs %}
 
-N> The `fetch` call uses a relative path (`/generate-excel`) because the frontend is served by the same Express server. This avoids CORS configuration. If you host the frontend on a different origin, enable CORS in Express using the `cors` package and update the `fetch` URL to the full server origin.
+N> The `fetch` call uses a relative path (`/generate-excel`) because the same Express server serves the frontend. This avoids CORS configuration. If you host the frontend on a different origin, enable CORS in Express by using the `cors` package and change the `fetch` URL to the full server origin.
 
-* Include the following namespaces in `server.js`. This guide uses CommonJS (the default `npm init` setting). If you prefer ESM, add `"type": "module"` to `package.json` and use the imports shown in the **Module imports (ESM)** tab below.
+* Import the required modules in `server.js`. This guide uses CommonJS (the default `npm init` setting). If you prefer ES modules, add `"type": "module"` to `package.json` and use the imports shown in the **Module imports (ESM)** tab.
 
 {% tabs %}
 {% highlight javascript tabtitle="Module imports (CommonJS)" %}
 
 const express = require('express');
 const { Workbook } = require('@syncfusion/ej2-xlsx');
-
 {% endhighlight %}
 {% highlight typescript tabtitle="Module imports (ESM)" %}
 
 import { Workbook } from '@syncfusion/ej2-xlsx';
 import express from 'express';
-
 {% endhighlight %}
 {% endtabs %}
 
@@ -162,9 +160,6 @@ app.get('/generate-excel', async (req, res) => {
   // Save the workbook as bytes
   const bytes = await workbook.save();
 
-  // Release workbook resources if needed
-  // Note: Unlike PDF, workbook resources are automatically managed in Node.js
-
   // Send the Excel file to the browser as a downloadable attachment
   res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
   res.setHeader('Content-Disposition', 'attachment; filename=Output.xlsx');
@@ -175,11 +170,10 @@ app.get('/generate-excel', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
-
 {% endhighlight %}
 {% endtabs %}
 
-### Code Explanation
+### Code explanation
 
 - `Workbook.create()` — creates a new workbook with one visible worksheet named `Sheet1`.
 - `workbook.sheet(0)` — returns the worksheet at the zero-based index.
@@ -191,7 +185,7 @@ app.listen(PORT, () => {
 - `res.setHeader('Content-Disposition', ...)` — specifies the filename for the browser download.
 - `res.send(Buffer)` — sends the workbook bytes to the browser as an attachment.
 
-## Run the Application
+## Run the application
 
 Run the following command from the project root to start the Node.js server:
 
@@ -201,13 +195,13 @@ node server.js
 
 The server listens on `http://localhost:3000`. Open this URL in a browser and click **Create Excel** to download the generated file as `Output.xlsx`.
 
-N> If the port is already in use, stop the conflicting process or change `PORT` in `server.js` to an available port. The error `EADDRINUSE` indicates a port conflict.
+N> If the port is already in use, Node.js reports the `EADDRINUSE` error. Stop the conflicting process, or change `PORT` in `server.js` to an available port.
 
 ## Output
 
 Clicking **Create Excel** triggers the `fetch('/generate-excel')` call. The server responds with the Excel bytes and the `Content-Disposition: attachment; filename=Output.xlsx` header causes the browser to download the file as `Output.xlsx`. The file contains a `Sales` worksheet with `Product`, `Quantity`, and `Price` headings and the `Notebook` and `Pen` sample rows.
 
-N> The `Content-Disposition: inline` value can be used instead of `attachment` if you want the Excel workbook to open in a browser tab rather than download.
+N> To open the workbook in a browser tab instead of downloading it, use `Content-Disposition: inline` instead of `attachment`.
 
 ## Troubleshooting
 

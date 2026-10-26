@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Getting Started with JavaScript Excel in React app | Syncfusion
+title: Getting Started with JavaScript Excel Library in a React Application | Syncfusion
 description: Learn how to create and download an Excel workbook in a React application using the Syncfusion JavaScript Excel Library.
 control: Excel
 platform: document-processing
 documentation: ug
 ---
 
-# Getting Started with JavaScript Excel in React app
+# Getting Started with JavaScript Excel Library in a React Application
 
 The <a href="https://help.syncfusion.com/document-processing/excel/excel-library/javascript/overview" aria-label="JavaScript Excel Library overview documentation"> JavaScript Excel Library</a> is used to create, read, and edit Microsoft Excel (`.xlsx`) workbooks. You can work with worksheets, cells, formulas, formatting, and other spreadsheet features without Microsoft Excel installed.
 
-This guide explains how to integrate the <a href="https://helpstaging.syncfusion.com/document-processing/excel/excel-library/javascript/overview" aria-label="JavaScript Excel Library overview documentation on staging">JavaScript Excel Library</a> into a React application that runs in the browser. The generated workbook is downloaded directly from the browser; no server-side Excel processing is required.
+This guide explains how to integrate the <a href="https://help.syncfusion.com/document-processing/excel/excel-library/javascript/overview" aria-label="JavaScript Excel Library overview documentation on staging">JavaScript Excel Library</a> into a React application that runs in the browser. The generated workbook is downloaded directly from the browser; no server-side Excel processing is required.
 
 ## Prerequisites
 
@@ -30,7 +30,7 @@ node --version
 npm --version
 ```
 
-## Create a React Project
+## Create a React project
 
 This guide uses <a href="https://vitejs.dev/" aria-label="Vite official website">Vite</a> to scaffold the React project. Run the following command in a terminal:
 
@@ -55,13 +55,13 @@ All Syncfusion<sup>&reg;</sup> JS 2 packages are published in the `npmjs.com` re
 npm install @syncfusion/ej2-xlsx --save
 ```
 
-### Transitive Dependencies
+### Transitive dependencies
 
 The following package is included automatically by `@syncfusion/ej2-xlsx` and does not need to be installed separately:
 
 - `@syncfusion/ej2-base` — common utilities used by the library.
 
-## Create an Excel Workbook
+## Create an Excel workbook
 
 Replace the contents of `App.jsx` with the following code. The file imports `Workbook` from `@syncfusion/ej2-xlsx`, writes sample cell values, saves the workbook as bytes, and downloads the result as an `.xlsx` file from the browser.
 
@@ -128,7 +128,7 @@ N> Import `Workbook` as a named export from `@syncfusion/ej2-xlsx`.
 
 N> In the browser, call the parameterless `save()` overload, which returns a `Promise<Uint8Array>`. Saving to a file system path with `save(filePath)` requires the Node.js file system module and is not available in browser apps.
 
-## Code Explanation
+## Code explanation
 
 - `Workbook.create()` - creates a new workbook with one visible worksheet named `Sheet1`.
 - `workbook.sheet(0)` - returns the worksheet at the zero-based index.
@@ -140,7 +140,7 @@ N> In the browser, call the parameterless `save()` overload, which returns a `Pr
 - `anchor.remove()` - removes the temporary anchor element after the download click.
 - `URL.revokeObjectURL(url)` - releases the temporary object URL after the download starts.
 
-## Run the Application
+## Run the application
 
 Open a terminal in the project root and start the Vite development server:
 

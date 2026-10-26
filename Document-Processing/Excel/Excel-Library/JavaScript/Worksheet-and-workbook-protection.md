@@ -1,12 +1,12 @@
 ---
-title: Protection in JavaScript Excel Library | Syncfusion
+title: Worksheet and Workbook Protection in JavaScript Excel Library | Syncfusion
 description: Protect worksheets and workbooks, set options, and manage protected ranges with the Syncfusion JavaScript Excel Library.
 platform: document-processing
 control: Excel
 documentation: ug
 ---
 
-# Worksheet and Workbook Protection in JavaScript Excel
+# Worksheet and Workbook Protection in JavaScript Excel Library
 
 Worksheet and workbook protection store restrictions that control the changes users can make when the workbook is opened in a spreadsheet application. Sheet protection controls editing on a worksheet, while workbook protection can lock structure, windows, or revision tracking. Optional passwords strengthen these limits.
 
@@ -37,8 +37,6 @@ const options: SheetProtectionOptions = {
 
 // Protect the sheet; Excel enforces these flags when the file opens
 sheet.protect('sheet-secret', options);
-
-// Later: sheet.unprotect('sheet-secret');
 await workbook.save('./SheetProtected.xlsx');
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
@@ -58,8 +56,6 @@ sheet.protect('sheet-secret', {
   allowsSort: false,
   allowsAutoFilter: true,
 });
-
-// Later: sheet.unprotect('sheet-secret');
 await workbook.save('./SheetProtected.xlsx');
 {% endhighlight %}
 {% endtabs %}
@@ -71,9 +67,87 @@ Common `SheetProtectionOptions` flags include:
 * `allowsDeleteColumns`, `allowsDeleteRows`
 * `allowsSelectLockedCells`, `allowsSelectUnlockedCells`
 * `allowsSort`, `allowsAutoFilter`, `allowsPivotTables`
-* Drawing-related allow flags as exported on the interface
+* `allowsEditObjects` and `allowsEditScenarios` to allow editing of drawing objects and scenarios
 
 Cell-level locked / hidden formula settings belong on cell style protection, not on `SheetProtectionOptions`.
+
+## Protect a worksheet without a password
+
+Call `protect()` without a password to lock the sheet so that users can unprotect it without entering a password. This prevents accidental edits but does not prevent deliberate changes. Use `isProtected` to check the state.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { Workbook } from '@syncfusion/ej2-xlsx';
+
+const workbook: Workbook = Workbook.create();
+const sheet = workbook.sheet(0);
+sheet.cell('A1').value = 'Read-only report';
+
+// Lock the sheet with the default allowed actions
+sheet.protect();
+
+const locked = sheet.isProtected; // true
+
+// Save the workbook.
+await workbook.save('ProtectWithoutPassword.xlsx');
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+import { Workbook } from '@syncfusion/ej2-xlsx';
+
+const workbook = Workbook.create();
+const sheet = workbook.sheet(0);
+sheet.cell('A1').value = 'Read-only report';
+
+// Lock the sheet with the default allowed actions
+sheet.protect();
+
+const locked = sheet.isProtected; // true
+
+// Save the workbook.
+await workbook.save('ProtectWithoutPassword.xlsx');
+{% endhighlight %}
+{% endtabs %}
+
+## Allow drawing objects and scenarios
+
+The `allowsEditObjects` option controls whether users can edit drawing objects, such as shapes, text boxes, and charts, on a protected sheet. The `allowsEditScenarios` option controls whether users can edit scenarios.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { Workbook } from '@syncfusion/ej2-xlsx';
+
+const workbook: Workbook = Workbook.create();
+const sheet = workbook.sheet(0);
+
+sheet.protect('sheet-secret', {
+  allowsEditObjects: true,
+  allowsEditScenarios: false,
+  allowsFormatColumns: true,
+  allowsInsertHyperlinks: true,
+  allowsPivotTables: false,
+});
+
+// Save the workbook.
+await workbook.save('AllowObjectsAndScenarios.xlsx');
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+import { Workbook } from '@syncfusion/ej2-xlsx';
+
+const workbook = Workbook.create();
+const sheet = workbook.sheet(0);
+
+sheet.protect('sheet-secret', {
+  allowsEditObjects: true,
+  allowsEditScenarios: false,
+  allowsFormatColumns: true,
+  allowsInsertHyperlinks: true,
+  allowsPivotTables: false,
+});
+
+// Save the workbook.
+await workbook.save('AllowObjectsAndScenarios.xlsx');
+{% endhighlight %}
+{% endtabs %}
 
 ## Allow-edit ranges (`protectedRanges`)
 
@@ -95,10 +169,6 @@ const input: ProtectedRangeInput = {
 };
 
 const editable = sheet.protectedRanges.add(input);
-
-// Later: editable.setPassword(undefined) to clear the range password
-// editable.verifyPassword('range-secret') when a password is set
-// editable.sqref = 'D2:D20'; // update areas after add
 
 const byName = sheet.protectedRanges.getByName('InputCells');
 const all = sheet.protectedRanges.list();
@@ -153,7 +223,6 @@ const options: WorkbookProtectionOptions = {
 workbook.protect('wb-secret', options);
 
 // workbook.workbookProtection is defined while protection is on
-// workbook.unprotect('wb-secret');
 await workbook.save('./WorkbookProtected.xlsx');
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
@@ -168,7 +237,6 @@ workbook.protect('wb-secret', {
   lockRevision: false,
 });
 
-// workbook.unprotect('wb-secret');
 await workbook.save('./WorkbookProtected.xlsx');
 {% endhighlight %}
 {% endtabs %}
@@ -176,3 +244,48 @@ await workbook.save('./WorkbookProtected.xlsx');
 * `lockStructure` — prevent adding, deleting, renaming, or reordering sheets (default `true` on protect).
 * `lockWindows` — prevent resizing or moving workbook windows (default `false`).
 * `lockRevision` — lock shared-workbook revision tracking (default `false` on new protect).
+
+## Unprotect a worksheet and a workbook
+
+Remove protection with `unprotect()`. If you protected with a password, pass the same password. Check `isProtected` on the worksheet to confirm the result.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { Workbook } from '@syncfusion/ej2-xlsx';
+
+const workbook: Workbook = Workbook.create();
+const sheet = workbook.sheet(0);
+
+sheet.protect('sheet-secret');
+const before = sheet.isProtected; // true
+
+sheet.unprotect('sheet-secret');
+const after = sheet.isProtected; // false
+
+// The same pattern works for workbook protection
+workbook.protect('wb-secret', { lockStructure: true });
+workbook.unprotect('wb-secret');
+
+// Save the workbook.
+await workbook.save('Unprotect.xlsx');
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+import { Workbook } from '@syncfusion/ej2-xlsx';
+
+const workbook = Workbook.create();
+const sheet = workbook.sheet(0);
+
+sheet.protect('sheet-secret');
+const before = sheet.isProtected; // true
+
+sheet.unprotect('sheet-secret');
+const after = sheet.isProtected; // false
+
+// The same pattern works for workbook protection
+workbook.protect('wb-secret', { lockStructure: true });
+workbook.unprotect('wb-secret');
+
+// Save the workbook.
+await workbook.save('Unprotect.xlsx');
+{% endhighlight %}
+{% endtabs %}
