@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Installing Syncfusion PDF Mac installer - Syncfusion
-description: Learn here about how to install Syncfusion PDF Mac installer after downloading from our Syncfusion website.
+title: How to Install Syncfusion PDF Mac Installer | Syncfusion
+description: Learn how to install the Syncfusion PDF Mac installer and complete the setup process on macOS systems.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 ---
 
-# Installing Syncfusion<sup>&reg;</sup> PDF Mac installer
+# How to Install Syncfusion PDF Mac Installer
 
 ## Steps to resolve the warning message in Catalina OS or later
 

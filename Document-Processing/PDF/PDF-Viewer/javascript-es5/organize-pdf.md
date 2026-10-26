@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Organize Pages in Javascript PDF Viewer control | Syncfusion
-description: Learn here all about Organize Pages in Syncfusion Javascript PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Organize Pdf in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Reorder, rotate, insert, delete, and save pages in the JavaScript (ES5) PDF Viewer using the Organize Pages panel and its programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Organize Pages in JavaScript PDF Viewer control
+# Organize Pages in JavaScript (ES5) PDF Viewer
 
 The PDF Viewer provides tools to organize PDF documents by inserting, deleting, rotating, rearranging, copying, and importing pages. These features enable efficient page-level editing within the viewer.
 
 ## Getting started
 
-To access the organize pages feature, open a PDF document in the PDF Viewer and choose the Organize Pages option from the left toolbar. See the [Organize Pages API](https://ej2.syncfusion.com/documentation/api/pdfviewer/pageOrganizerSettingsModel/) for configuration options.
+To access the organize pages feature, open a PDF document in the PDF Viewer and choose the Organize Pages option from the left toolbar. See the [Organize Pages API](https://ej2.syncfusion.com/documentation/api/pdfviewer/pageOrganizerSettingsModel) for configuration options.
 
 ![Organize Pages dialog showing page thumbnails](./images/organize-page.png)
 
@@ -168,7 +168,7 @@ pdfviewer.appendTo('#PdfViewer');
 ```ts
 document.getElementById('openPageOrganizer').addEventListener('click', function () {
   // Open Page Organizer panel.
-  viewer.pageOrganizer.openPageOrganizer();;
+  viewer.pageOrganizer.openPageOrganizer();
 });
 
 ```
@@ -195,7 +195,7 @@ The following keyboard shortcuts are available at the organize pages dialog.
 * **Ctrl+Scroll** : Zoom in and zoom out page thumbnails for better visibility.
 ![Undo and redo controls in organizer](./images/undo-redo.png)
 
-#### Conclusion
+### Conclusion
 
 The Organize Pages feature provides a set of tools for editing the page structure of PDF documents inside the viewer. Use the toolbar and organizer panel to insert, delete, rotate, rearrange, copy, import, and save changes to documents.
 

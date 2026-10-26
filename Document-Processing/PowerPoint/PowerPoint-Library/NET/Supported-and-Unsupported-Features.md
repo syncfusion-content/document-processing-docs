@@ -1,13 +1,13 @@
 ---
-title: Supported and Unsupported Features | Syncfusion
-description: Know more about the File Format’s supported and unsupported features of Presentation Library and its various platforms.
+title: Feature Support in .NET PowerPoint Presentation | Syncfusion
+description: Learn about the supported and unsupported features available in the Syncfusion® .NET PowerPoint Presentation library.
 platform: document-processing
 control: Presentation
 documentation: UG
 keywords: Supported and Unsupported Features of Presentation library
 ---
 
-# Supported and Unsupported Features
+# Feature Support in .NET PowerPoint Presentation
 
 <table>
 <tr>
@@ -688,3 +688,28 @@ Yes
 </td>
 </tr>
 </table>
+
+## Platform-Specific Setup
+
+Install and configure the Presentation library on the platform you target. Each guide covers prerequisites, NuGet packages, and a working code sample.
+
+- [Windows Forms](create-read-edit-powerpoint-files-in-windows-forms)
+- [WPF](create-read-edit-powerpoint-files-in-wpf)
+- [ASP.NET Web Forms](create-read-edit-powerpoint-files-in-asp-net-web-forms)
+- [ASP.NET MVC](create-read-edit-powerpoint-files-in-asp-net-mvc)
+- [ASP.NET Core](create-read-edit-powerpoint-files-in-asp-net-core-c-sharp)
+- [.NET MAUI](create-read-edit-powerpoint-files-in-maui)
+- [WinUI](create-read-edit-powerpoint-files-in-winui)
+- [Xamarin](create-read-edit-powerpoint-files-in-xamarin)
+- [UWP](create-read-edit-powerpoint-files-in-uwp)
+- [Blazor](create-read-edit-powerpoint-files-in-blazor)
+
+## See Also
+
+- [Getting Started with the Presentation Library](Getting-Started)
+- [NuGet Packages Required](NuGet-Packages-Required)
+- [Assemblies Required](Assemblies-Required)
+- [Document Object Model](Document-Object-Model)
+- [Feature Matrix](Feature-Matrix)
+- [Loading and Saving the Presentation](Loading-and-Saving-the-Presentation)
+- [FAQ](FAQ)

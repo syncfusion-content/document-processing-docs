@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Handwritten Signature in Blazor SfPdfViewer Component | Syncfusion
-description: Learn how to add and edit handwritten signatures in the Syncfusion Blazor SfPdfViewer component, including placement and property customization.
+title: Handwritten Signature in Blazor PDF Viewer  | Syncfusion
+description: Learn to how to add and edit handwritten signatures in the Blazor PDF Viewer component for PDF workflows.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Handwritten Signature in Blazor SfPdfViewer Component
+# Handwritten Signature in Blazor PDF Viewer 
 
-The SfPdfViewer component supports adding handwritten signatures to PDF documents. Handwritten signatures reduce paperwork during review and enable digital verification within the document.
+The SfPdfViewer component supports adding handwritten signatures to PDF documents. Handwritten signatures reduce paperwork by capturing approvals directly within the PDF.
 
 ## Adding a handwritten signature to the PDF document
 
@@ -30,12 +30,12 @@ Add a handwritten signature using the annotation toolbar.
 
 The added signature becomes part of the PDF annotations and is preserved when saving or exporting the document.
 
-## Editing the properties of handwritten signature
+## Editing the properties of a handwritten signature
 
-Stroke color, thickness, and opacity can be adjusted using the annotation toolbar’s property editors. Select the signature on the page to enable these editors. After placement, the signature can be moved, resized, or removed like other annotations.
+Select the signature on the page to enable the property editors in the annotation toolbar.
 
 ![Editing handwritten signature properties in Blazor SfPdfViewer](images/blazor-pdfviewer-signature-properties.png)
 
 ## See also
 
-* [Form filling in Blazor SfPdfViewer Component](./form-filling)
+* [Form filling in Blazor SfPdfViewer Component](./forms/form-filling)

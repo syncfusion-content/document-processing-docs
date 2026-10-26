@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Show the bookmark pane in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to display the bookmark pane programmatically in the Syncfusion ASP.NET Core PDF Viewer by enabling the enableBookmark property.
+title: How to Show the Bookmark Pane in ASP.NET Core PDF Viewer | Syncfusion
+description: Show or hide the bookmark pane in the ASP.NET Core PDF Viewer using showBookmarkPane to control when users can access document bookmarks.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Display the bookmark pane in ASP.NET Core PDF Viewer
+# How to Show the Bookmark Pane in ASP.NET Core PDF Viewer
 
 Enable automatic display of the bookmark navigation pane by setting the [`enableBookmark`](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer#enablebookmark) property to `true`. Use bookmarks to provide quick navigation for documents with chapters, sections, or hierarchical content organization.
 

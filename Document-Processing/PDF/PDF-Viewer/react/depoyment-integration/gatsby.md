@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Getting started with React PDF Viewer in Gatsby | Syncfusion
-description: How to integrate the Syncfusion React PDF Viewer into a Gatsby site (quickstart, how-to, reference, explanation).
+title: Gatsby in React PDF Viewer | Syncfusion
+description: Integrate the Syncfusion React PDF Viewer into a Gatsby site, including package installation, CSS imports, and SSR-safe loading.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with the React PDF Viewer in Gatsby
+# Getting Started with React PDF Viewer in Gatsby
 
-How to integrate the Syncfusion React PDF Viewer into a Gatsby site. Use the Quickstart below to get a working viewer, then consult the How-to and Reference sections for configuration details (WASM, static assets, and SSR notes).
+How to integrate the [React PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/react-pdf-viewer) into a Gatsby site. Use the Quickstart below to get a working viewer, then consult the How-to and Reference sections for configuration details (WASM, static assets, and SSR notes).
 
 ## Quickstart for Gatsby
 
-#### Create or open your Gatsby site:
+### Create or open your Gatsby site:
 
 ```bash
 # create a new Gatsby site (or use an existing one)
@@ -43,17 +43,18 @@ mkdir -p static/assets && cp ./path/to/sample.pdf static/assets/sample.pdf
 
 - Add viewer CSS imports to `src/components/layout.css` (recommended for Gatsby component-scoped styling):
 
-Create `src/components/layout.css` and add the imports below (relative path to `node_modules` used from `src/components`):
+Themes for PDF Viewer can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
+
+Install the Tailwind 3 theme package:
+
+```bash
+npm install @syncfusion/ej2-tailwind3-theme
+```
+
+Create `src/components/layout.css` and add the imports below (relative path to `node_modules` used from `src/components`). The `index.css` file automatically includes all required dependent component styles for the PDF Viewer. You do not need to import individual dependency styles such as Base, Buttons, Dropdowns, Inputs, Navigations, Popups, and SplitButtons separately.
 
 ```css
-@import '../../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import "../../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css";
+@import '../../node_modules/@syncfusion/ej2-tailwind3-theme/styles/pdfviewer/index.css';
 ```
 
 Then import the stylesheet in `gatsby-browser.js` at your project root so it is included in the client bundle:
@@ -63,7 +64,7 @@ Then import the stylesheet in `gatsby-browser.js` at your project root so it is 
 import './src/components/layout.css';
 ```
 
-- Use a client-only approach (Gatsby is server-side rendered). A simple and reliable pattern is to render the viewer after mount with a mounted flag. Create `src/components/pdfviewer.js` with the component below (the example also shows where to register a Syncfusion license if you have one):
+- Use a client-only approach (Gatsby is server-side rendered). A simple and reliable pattern is to render the viewer after mount with a mounted flag. Create `src/components/pdfviewer.js` with the component below. The example also shows where to register a Syncfusion license if you have one:
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -73,8 +74,8 @@ import React, { useEffect, useState } from 'react';
 import {
     PdfViewerComponent,
     Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
-    BookmarkView, ThumbnailView, Print, TextSelection, TextSearch
-    , FormFields, FormDesigner, Inject
+    BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
+    FormFields, FormDesigner, Inject
 } from '@syncfusion/ej2-react-pdfviewer';
 
 export default function PdfViewer() {
@@ -95,7 +96,7 @@ export default function PdfViewer() {
                 <Inject services={[
                     Toolbar, Magnification, Navigation, Annotation, LinkAnnotation,
                     BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
-                    Magnification, FormFields, FormDesigner
+                    FormFields, FormDesigner
                 ]} />
             </PdfViewerComponent>
         </div>
@@ -136,5 +137,5 @@ npm run develop
 ## See also
 
 - [Getting started overview](../getting-started-overview)
-- [Creating a Next.js application using Syncfusion React PDF Viewer](./nextjs-getting-started)
-- [Getting started with Syncfusion React PDF Viewer in Remix](./remix)
+- [Creating a Next.js application using React PDF Viewer](./nextjs-getting-started)
+- [Getting started with React PDF Viewer in Remix](./remix)

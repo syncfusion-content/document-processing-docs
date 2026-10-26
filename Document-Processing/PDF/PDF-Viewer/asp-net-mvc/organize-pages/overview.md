@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Organize pages in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to reorder, rotate, insert, delete, and save pages with the Syncfusion ASP.NET MVC PDF Viewer component.
+title: About Syncfusion ASP.NET MVC PDF Viewer Organize Pages | Syncfusion
+description: Learn about introduction of the Syncfusion ASP.NET MVC PDF Viewer Organize Pages section and the key capabilities it provides.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Organize pages in ASP.NET MVC PDF Viewer
+# About Syncfusion ASP.NET MVC PDF Viewer Organize Pages
 
 The ASP.NET MVC PDF Viewer component provides an Organize Pages panel that helps you prepare documents before sharing them. Use it to tidy scanned files, move pages into the right order, and duplicate important content without leaving the viewer.
 

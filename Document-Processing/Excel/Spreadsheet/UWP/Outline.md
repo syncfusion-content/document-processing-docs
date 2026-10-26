@@ -1,21 +1,21 @@
 ---
 layout: post
 title: Outline in UWP Spreadsheet control | Syncfusion®
-description: Learn here all about Outline support in Syncfusion® UWP Spreadsheet (SfSpreadsheet) control and more.
+description: Group rows and columns in UWP Spreadsheet control with outline options to organize and collapse worksheet data.
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
 ---
 
-# Outline in UWP Spreadsheet (SfSpreadsheet)
+# Outline in UWP Spreadsheet 
 
-SfSpreadsheet provides support for outlines like in excel which makes your data easier to view. You can group or ungroup the data’s either by rows or columns.
+SfSpreadsheet provides support for outlines similar to Microsoft Excel, which makes your data easier to view. You can group or ungroup data either by rows or by columns.
 
 ## Group rows and columns
 
 SfSpreadsheet provides support to group the specified range in a worksheet.
 
-To `Group` the rows/columns
+To `Group` rows or columns:
 
 {% tabs %}
 {% highlight c# %}
@@ -35,7 +35,7 @@ spreadsheet.Group(spreadsheet.ActiveSheet, gridRange, ExcelGroupBy.ByColumns);
 
 SfSpreadsheet provides support to ungroup the specified range in a worksheet.
 
-To `Ungroup` the rows/columns
+To `Ungroup` rows or columns:
 
 {% tabs %}
 {% highlight c# %}
@@ -52,7 +52,7 @@ spreadsheet.UnGroup(spreadsheet.ActiveSheet, gridRange, ExcelGroupBy.ByColumns);
 
 ## Collapse or Expand Group
 
-Groups can be Expanded by `ExpandGroup` method  and Collapsed  by `CollapseGroup` method of XlsIO.
+You can expand a group using the `ExpandGroup` method and collapse a group using the `CollapseGroup` method of XlsIO.
 
 {% tabs %}
 {% highlight c# %}
@@ -80,7 +80,7 @@ spreadsheet.RefreshOutlines(false,true);
 {% endhighlight %}
 {% endtabs %}
 
-N> `RefreshOutlines` method is invoked to refresh/update the Outlines of the Group in SfSpreadsheet.
+N> The `RefreshOutlines` method is invoked to refresh or update the Outlines of the Group in `SfSpreadsheet`.
 
 ## Change Outline Settings
 
@@ -98,7 +98,7 @@ spreadsheet.RefreshOutlines(true, true);
 
 ## Clear Outlines
 
-SfSpreadsheet provides support to clear all the Outlines of the Grouped range.
+`SfSpreadsheet` provides support to clear all the Outlines of a Grouped range.
 
 {% tabs %}
 {% highlight c# %}

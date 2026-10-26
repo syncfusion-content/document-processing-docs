@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Save PDF files to AWS S3 in React PDF Viewer | Syncfusion
-description: Learn how to save PDF files to AWS S3 using the Syncfusion React PDF Viewer component in standalone and server-backed configurations.
+title: To Amazon S3 in React PDF Viewer | Syncfusion
+description: Save PDF files from the React PDF Viewer to AWS S3 using standalone and server-backed configurations, with code samples and tips.
 control: PDF Viewer
 documentation: ug
 ---
 
-# Save PDF files to AWS S3 in React
+# Save PDF Files to AWS S3 in React PDF Viewer
 
 The React PDF Viewer component supports saving PDF files to AWS S3 using either a standalone (browser) configuration or a server-backed configuration. The following steps demonstrate both approaches and include notes on prerequisites and security considerations for production use.
 
@@ -28,13 +28,13 @@ import * as AWS from 'aws-sdk';
 
 2. Configure the AWS SDK with the region, access key, and secret access key. This enables the application to interact with AWS services such as S3.
 
-N> Replace **Your Region** with the actual Region of your AWS S3 account and **Your Access Key** with the actual Access Key of your AWS S3 account and **Your Security Access Key** with the actual Security Access Key of your AWS S3 account.
+N> Replace **Your Region**, **Your Access Key**, and **Your Security Access Key** with the corresponding values from your AWS S3 account.
 
 ```typescript
 AWS.config.update({
-  region: '**Your Region**', // Update this your region
-  accessKeyId: '*Your Access Key*', // Update this with your access key id
-  secretAccessKey: '*Your Security Access Key*', // Update this with your secret access key
+  region: '**Your Region**', // Update this with your region
+  accessKeyId: '**Your Access Key**', // Update this with your access key id
+  secretAccessKey: '**Your Security Access Key**', // Update this with your secret access key
 });
 ```
 
@@ -159,7 +159,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Download()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#download) method to save the downloaded PDF file to the AWS S3 bucket.
+5. Modify the [Download()] (https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#download) method to save the downloaded PDF file to the AWS S3 bucket.
 
 ```csharp
 
@@ -217,7 +217,7 @@ N> Replace the placeholders with the appropriate AWS credentials and bucket name
 
 **Step 3:** Set the PDF Viewer properties in the React PDF Viewer component
 
-Modify the [serviceUrl](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#serviceurl) property of the PDF Viewer component with the accurate URL of the web service, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from AWS S3, and ensure that the document exists in the target bucket.
+Modify the [serviceUrl] (https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#serviceurl) property of the PDF Viewer component with the accurate URL of the web service, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from AWS S3, and ensure that the document exists in the target bucket.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}

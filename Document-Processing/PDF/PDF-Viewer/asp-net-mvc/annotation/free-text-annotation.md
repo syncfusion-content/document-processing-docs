@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Free text annotation in EJ2 ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn about free text annotations in the Syncfusion ASP.NET MVC PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
+title: Free Text Annotation in ASP.NET MVC PDF Viewer | Syncfusion
+description: Enable, add, customize, and manage Free Text annotations in the ASP.NET MVC PDF Viewer for inline notes and labels on a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
-# Free text annotation in ASP.NET MVC PDF Viewer control
+# Free Text Annotation in ASP.NET MVC PDF Viewer
 
 The PDF Viewer control provides options to add, edit, and delete free text annotations.
 
@@ -62,7 +63,7 @@ The following example switches to free text annotation mode using a button click
 
 ## Add a free text annotation programmatically to the PDF document
 
-The PDF Viewer library allows adding a free text annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotation/#annotation) method.
+The PDF Viewer library allows adding a free text annotation programmatically using the [addAnnotation()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#addannotation) method.
 
 Here is an example of adding a free text annotation programmatically using addAnnotation():
 
@@ -247,6 +248,71 @@ Edit border thickness using the range slider in the Edit Thickness tool.
 Edit opacity using the range slider in the Edit Opacity tool.
 
 ![Change opacity](../images/fontopacity.png)
+
+## Supported Border Styles
+
+In addition to the default **Solid** border, Free Text annotations support the following additional border styles:
+
+- **Cloud** — scalloped cloud border.
+- **Dashed** — dashed line border.
+
+Use the `PdfViewerBorderStyle` enum together with the optional `BorderDashArray` (Dashed) and `CloudIntensity` (Cloud) settings on the [`PdfViewerFreeTextSettings`](https://help.syncfusion.com/cr/aspnetmvc-js2/Syncfusion.EJ2.PdfViewer.PdfViewerFreeTextSettings.html) object.
+
+```cs
+public enum PdfViewerBorderStyle
+{
+    Solid,
+    Dashed,
+    Cloud
+}
+```
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `BorderStyle` | `PdfViewerBorderStyle` | Specifies the border style. Supported values: `Solid`, `Cloud`, and `Dashed`. |
+| `BorderDashArray` | `double[]` | Specifies the dash pattern when `BorderStyle` is `Dashed`. |
+| `CloudIntensity` | `double` | Specifies the cloud border intensity. Supported range: `1` to `2`; default value: `1`. |
+
+N> `CloudIntensity` is honored only when `BorderStyle` is `Cloud`.
+N> `BorderStyle`, `BorderDashArray`, and `CloudIntensity` are preserved during save, reload, import, and export.
+
+### Apply a Cloud Border
+
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+
+<div style="width:100%;height:600px">
+    @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").FreeTextSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerFreeTextSettings { FillColor = "green", BorderColor = "blue", FontColor = "yellow", BorderStyle = Syncfusion.EJ2.PdfViewer.PdfViewerBorderStyle.Cloud, CloudIntensity = 2 }).Render()
+</div>
+
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+
+<div style="width:100%;height:600px">
+    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").FreeTextSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerFreeTextSettings { FillColor = "green", BorderColor = "blue", FontColor = "yellow", BorderStyle = Syncfusion.EJ2.PdfViewer.PdfViewerBorderStyle.Cloud, CloudIntensity = 2 }).Render()
+</div>
+
+{% endhighlight %}
+{% endtabs %}
+
+### Apply a Dashed Border
+
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+
+<div style="width:100%;height:600px">
+    @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").FreeTextSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerFreeTextSettings { FillColor = "green", BorderColor = "blue", FontColor = "yellow", BorderStyle = Syncfusion.EJ2.PdfViewer.PdfViewerBorderStyle.Dashed, BorderDashArray = new double[] { 5, 5 } }).Render()
+</div>
+
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+
+<div style="width:100%;height:600px">
+    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").FreeTextSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerFreeTextSettings { FillColor = "green", BorderColor = "blue", FontColor = "yellow", BorderStyle = Syncfusion.EJ2.PdfViewer.PdfViewerBorderStyle.Dashed, BorderDashArray = new double[] { 5, 5 } }).Render()
+</div>
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Set default properties during control initialization
 

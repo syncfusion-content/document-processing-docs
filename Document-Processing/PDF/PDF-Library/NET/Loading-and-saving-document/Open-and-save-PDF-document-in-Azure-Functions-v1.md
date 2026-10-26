@@ -1,14 +1,14 @@
 ---
-title: Open and save PDF document in Azure Functions v1 | Syncfusion
-description: Open and save PDF document in Azure Functions v1 using .NET PDF library without the dependency of Adobe Acrobat. 
+title: Open and Save PDF Document in Azure Functions v1 | Syncfusion
+description: Learn how to open and save PDF documents in Azure Functions v1 using Syncfusion .NET PDF library without Adobe Acrobat dependency.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Open and save PDF document in Azure Functions v1
+# Open and Save PDF Document in Azure Functions v1
 
-The [Syncfusion<sup>&reg;</sup> .NET PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net) is used to create, read, edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **Open and save PDF document in Azure Functions v1**.
+The [.NET PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **open and save a PDF document in Azure Functions v1**.
 
 ## Steps to open and save PDF document in Azure Functions v1
 
@@ -48,6 +48,10 @@ Step 6: Add the following code snippet in **Run** method of **Function1** class 
 var assembly = Assembly.GetExecutingAssembly();
 var docStream = assembly.GetManifestResourceStream("Open_and_save_PDF_document.Data.Input.pdf");
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument(docStream);
+//Get the first page from the document.
+PdfLoadedPage loadedPage = loadedDocument.Pages[0] as PdfLoadedPage;
+//Create PDF graphics for the page.
+PdfGraphics graphics = loadedPage.Graphics;
 
 {% endhighlight %}
 {% endtabs %}
@@ -84,7 +88,7 @@ Step 8: Add below code example to **save the PDF document**.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-//Save and close the PDF document  
+//Save and close the PDF document.
 MemoryStream ms = new MemoryStream();
 loadedDocument.Save(ms);
 loadedDocument.Close();
@@ -120,7 +124,7 @@ Step 13: After creating app service then click **Finish** button.
 Step 14: Click the **Publish** button.
 ![Click Publish Button](Azure_Images/Azure-functions-v1/Ready_for_publish.png)
 
-Step 15: Publish has been succeed.
+Step 15: Publish has been succeeded.
 ![Publish succeeded](Azure_Images/Azure-functions-v1/Published_link.png)
 
 Step 16: Now, go to Azure portal and select the App Services. After running the service, click **Get function URL > Copy**. Include the URL as a query string in the URL. Then, paste it into the new browser tab. You will get the PDF document as follows. 

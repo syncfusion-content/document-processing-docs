@@ -1,14 +1,13 @@
 ---
 layout: post
-title: Text search in ASP.NET MVC PDF Viewer component | Syncfusion
-description: Learn all about text search in the Syncfusion ASP.NET MVC PDF Viewer component, including features, programmatic search options, and events.
+title: Text Search in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn about the text search in the ASP.NET MVC PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Text search in ASP.NET MVC PDF Viewer
+# Text Search in ASP.NET MVC PDF Viewer
 
 The Text Search option in PDF Viewer is used to find and highlight the text content from the document. You can enable/disable the text search using the following code snippet.
 
@@ -150,7 +149,7 @@ The following text search methods are available in the PDF Viewer,
 * **Search text** - Searches the target text in the PDF document and highlights the occurrences in the pages.
 * **Search next** - Searches the next occurrence of the searched text from the current occurrence of the PDF Viewer.
 * **Search previous** - Searches the previous occurrence of the searched text from the current occurrence of the PDF Viewer.
-* **Cancel text search** - The text search can be canceled and the highlighted occurrences from the PDF Viewer can be removed .
+* **Cancel text search** - The text search can be canceled and the highlighted occurrences from the PDF Viewer can be removed.
 
 ![Alt text](./images/search.png)
 
@@ -171,7 +170,7 @@ Searches for the specified text within the document and returns the bounding rec
 <script>
     function findTextBounds() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        console.log(viewer.textSearch.findText('pdf', false));
+        console.log(pdfViewer.textSearch.findText('pdf', false));
     }
 </script>
 
@@ -186,7 +185,7 @@ Searches for the specified text within the document and returns the bounding rec
 <script>
     function findTextBounds() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        console.log(viewer.textSearch.findText('pdf', false));
+        console.log(pdfViewer.textSearch.findText('pdf', false));
     }
 </script>
 
@@ -207,7 +206,7 @@ Searches for the specified text within the document and returns the bounding rec
 <script>
     function findTextBounds() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        console.log(viewer.textSearch.findText('pdf', false, 7));
+        console.log(pdfViewer.textSearch.findText('pdf', false, 7));
     }
 </script>
 
@@ -222,7 +221,7 @@ Searches for the specified text within the document and returns the bounding rec
 <script>
     function findTextBounds() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        console.log(viewer.textSearch.findText('pdf', false, 7));
+        console.log(pdfViewer.textSearch.findText('pdf', false, 7));
     }
 </script>
 
@@ -243,7 +242,7 @@ Searches for an array of strings within the document and returns the bounding re
 <script>
     function findTextBounds() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        console.log(viewer.textSearch.findText(['pdf', 'adobe'], false));
+        console.log(pdfViewer.textSearch.findText(['pdf', 'adobe'], false));
     }
 </script>
 
@@ -258,7 +257,7 @@ Searches for an array of strings within the document and returns the bounding re
 <script>
     function findTextBounds() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        console.log(viewer.textSearch.findText(['pdf', 'adobe'], false));
+        console.log(pdfViewer.textSearch.findText(['pdf', 'adobe'], false));
     }
 </script>
 
@@ -279,7 +278,7 @@ Searches for an array of strings within the document and returns the bounding re
 <script>
     function findTextBounds() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        console.log(viewer.textSearch.findText(['pdf', 'adobe'], false, 7));
+        console.log(pdfViewer.textSearch.findText(['pdf', 'adobe'], false, 7));
     }
 </script>
 
@@ -294,7 +293,7 @@ Searches for an array of strings within the document and returns the bounding re
 <script>
     function findTextBounds() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        console.log(viewer.textSearch.findText(['pdf', 'adobe'], false, 7));
+        console.log(pdfViewer.textSearch.findText(['pdf', 'adobe'], false, 7));
     }
 </script>
 

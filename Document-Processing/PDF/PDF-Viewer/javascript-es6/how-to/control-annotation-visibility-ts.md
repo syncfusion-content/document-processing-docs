@@ -1,22 +1,20 @@
 ---
 layout: post
-title: Control annotation visibility in TypeScript PDF Viewer | Syncfusion
-description: Learn how to control the visibility of PDF annotations in the TypeScript PDF Viewer, ensuring annotations appear only in the viewer as needed.
+title: How to Control Annotation Visibility in JavaScript (ES6) | Syncfusion
+description: Control the visibility of PDF annotations in the JavaScript (ES6) PDF Viewer so annotations appear only in the viewer and not in the saved PDF.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Control annotation visibility in PDF Viewer
+# How to Control Annotation Visibility in JavaScript (ES6) PDF Viewer
 
-Overview
-
-This guide explains how to control the visibility of PDF annotations in documents loaded and saved using the Syncfusion PDF Viewer in JavaScript, so annotations remain visible in the viewer but can be hidden or omitted in saved/downloaded files
+This guide explains how to control the visibility of PDF annotations in documents loaded and saved using the Syncfusion PDF Viewer in JavaScript, so annotations remain visible in the viewer but can be hidden or omitted in saved/downloaded files.
 
 Steps to control annotation visibility
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample.
 
 **Step 2:** Add buttons for annotation modification and downloading
 
@@ -31,7 +29,7 @@ Include buttons in the HTML for modifying annotations and downloading the PDF.
 
 Add the following code to insert annotations. Additional annotations can be included as needed.
 
-```js
+```ts
 const viewer: PdfViewer = new PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/annotations-v1.pdf',
     resourceUrl: "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib",
@@ -62,7 +60,7 @@ viewer.documentLoad = function (args) {
 Attach an event listener to handle annotation visibility changes and document download.
 
 ```js
-// Add event listener to the button with ID 'download'
+// Add event listener to the button with ID 'save'
 document.getElementById('save')?.addEventListener('click', save);
 ```
 

@@ -1,15 +1,15 @@
 ---
-title: Open and save PDF document in Google App Engine| Syncfusion
-description: Open and save PDF document in Google App Engine using Syncfusion .NET Core PDF library without the dependency of Adobe Acrobat. 
+title: Open and Save PDF Document in Google App Engine | Syncfusion
+description: Learn how to open and save PDF documents in Google App Engine using Syncfusion .NET PDF library without Adobe Acrobat.
 platform: document-processing
 control: PDF
 documentation: UG
 keywords: google app engine save pdf, app engine load pdf, c# save pdf, c# load pdf
 ---
 
-# Open and save PDF document in Google App Engine
+# Open and Save PDF Document in Google App Engine
 
-The [Syncfusion<sup>&reg;</sup> .NET Core PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net-core) is used to create, read, and edit PDF documents programatically without the dependency on Adobe Acrobat. Using this library, you can **open and save PDF document in Google App Engine**. 
+The [.NET Core PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency on Adobe Acrobat. Using this library, you can **open and save a PDF document in Google App Engine**.
 
 ## Set up App Engine
 
@@ -21,7 +21,7 @@ Step 2: Click the **Cloud Shell Editor** button to view the **Workspace**.
 
 Step 3: Open **Cloud Shell Terminal**, and run the following **command** to confirm authentication.
 {% tabs %}
-{% highlight c# tabtitle="CLI" %}
+{% highlight bash %}
 
 gcloud auth list
 
@@ -67,7 +67,7 @@ Step 6: A default action method named Index will be present in HomeController.cs
 Step 7: Add a new button in the Index.cshtml as shown in the following.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight CSHTML %}
 
 @{Html.BeginForm("CreateDocument", "Home", FormMethod.Get);
     {
@@ -93,7 +93,7 @@ PdfLoadedDocument document = new PdfLoadedDocument(docStream);
 {% endhighlight %}
 {% endtabs %}
 
-step 9: Add the following code example to add paragraph and table to the PDF document.
+Step 9: Add the following code example to add paragraph and table to the PDF document.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -139,7 +139,7 @@ document.Save(stream);
 stream.Position = 0;
 //Close the document.
 document.Close(true);
-//Download Word document in the browser.
+//Download PDF document in the browser.
 return File(stream, "application/pdf", "Sample.pdf");
 
 {% endhighlight %}
@@ -149,7 +149,7 @@ return File(stream, "application/pdf", "Sample.pdf");
 
 Step 1: Open the **Cloud Shell editor**.
 
-![Cloud Sell editor](GCP_Images/Cloud_Shell_Editor.png)
+![Cloud Shell editor](GCP_Images/Cloud_Shell_Editor.png)
 
 Step 2: Drag and drop the sample from your local machine to **Workspace**.
 ![Add Project](GCP_Images/Add_Project.png)
@@ -159,7 +159,7 @@ N> If you have your sample application in your local machine, drag and drop it i
 Step 3: Open the Cloud Shell Terminal and run the following **command** to view the files and directories within your **current Workspace**.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight bash %}
 
 ls
 
@@ -171,9 +171,9 @@ ls
 Step 4: Run the following **command** to navigate which sample you want to run.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight bash %}
 
-cd Open-and-save-Word-document
+cd Open_and_Save_PDF_GoogleAppEngine
 
 {% endhighlight %}
 {% endtabs %}
@@ -183,7 +183,7 @@ cd Open-and-save-Word-document
 Step 5: To ensure that the sample is working correctly, please run the application using the following command.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight bash %}
 
 dotnet run --urls=http://localhost:8080
 
@@ -209,7 +209,7 @@ Step 8: Close the preview page and return to the terminal then press **Ctrl+C** 
 Step 1: Run the following command in the **Cloud Shell Terminal** to publish the application.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight bash %}
 
 dotnet publish -c Release
 
@@ -221,7 +221,7 @@ dotnet publish -c Release
 Step 2: Run the following command in the **Cloud Shell Terminal** to navigate to the publish folder.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight bash %}
 
 cd bin/Release/net6.0/publish/
 
@@ -235,7 +235,7 @@ cd bin/Release/net6.0/publish/
 Step 1: Add the app.yaml file to the publish folder with the following contents.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight bash %}
 
 cat <<EOT >> app.yaml
 env: flex
@@ -251,7 +251,7 @@ EOT
 Step 2: Add the Docker file to the publish folder with the following contents.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight bash %}
 
 cat <<EOT >> Dockerfile
 FROM mcr.microsoft.com/dotnet/aspnet:6.0
@@ -260,7 +260,7 @@ ADD / /app
 EXPOSE 8080
 ENV ASPNETCORE_URLS=http://*:8080
 WORKDIR /app
-ENTRYPOINT [ "dotnet", "Open-and-save-Word-document.dll"]
+ENTRYPOINT [ "dotnet", "Open_and_Save_PDF_GoogleAppEngine.dll"]
 EOT
 
 {% endhighlight %}
@@ -277,7 +277,7 @@ Step 3: You can ensure **Docker** and **app.yaml** files are added in **Workspac
 Step 1: To deploy the application to the App Engine, run the following command in Cloud Shell Terminal. Afterwards, retrieve the **URL** from the Cloud Shell Terminal.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight bash %}
 
 gcloud app deploy --version v0
 
@@ -296,5 +296,5 @@ By executing the program, you will get the **PDF document** as follows. The outp
 
 ![Output PDF Document](GCP_Images/Open_and_save_output.png)
 
-Click [here](https://www.syncfusion.com/document-processing/pdf-framework/net-core?_gl=1*dk4frx*_ga*OTcwNzc5NDkuMTY4MTEwMjEwNA..*_ga_WC4JKKPHH0*MTY5MDQzMjEyNi4zNzMuMS4xNjkwNDMyMTUwLjM2LjAuMA..) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
+Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
 

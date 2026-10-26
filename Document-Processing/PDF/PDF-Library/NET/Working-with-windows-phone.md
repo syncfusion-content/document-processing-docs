@@ -1,12 +1,12 @@
 ---
-title: Working with Windows Phone
-description: This section explains how to load and save PDF document in Windows Phone
+title: Windows Phone in .NET PDF Library | Syncfusion
+description: Learn how to load and save PDF documents in Windows Phone applications using the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
 
-# Working with Windows Phone 
+# Windows Phone in .NET PDF Library
 
 In your Windows Phone application, please add the required assemblies in order to use Essential<sup>&reg;</sup> PDF. [Refer here for assemblies required](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/assemblies-required).
 

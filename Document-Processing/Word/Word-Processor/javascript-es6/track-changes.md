@@ -1,22 +1,31 @@
 ---
 layout: post
-title: Track changes in JavaScript (ES6) Document editor control | Syncfusion
-description: Learn here all about Track changes in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
+title: Track Changes in TypeScript DOCX Editor | Syncfusion
+description: Track changes in TypeScript DOCX Editor records document modifications and enables reviewers to accept or reject revisions efficiently.
 platform: document-processing
-control: Track changes 
+control: Track changes
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Track changes in JavaScript (ES6) Document editor control
+# Track Changes in TypeScript DOCX Editor
 
-Track Changes allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject the modifications. It is a useful tool for managing changes made by several reviewers to the same document. If track changes option is enabled, all editing operations are preserved as revisions in Document Editor.
+Track Changes allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject the modifications. It is a useful tool for managing changes made by several reviewers to the same document. If the track changes option is enabled, all editing operations are preserved as revisions in the [JavaScript (ES6) DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor).
 
-## Enable track changes in Document Editor
+Starting from v35.1.xx, the default value of table row insertion and deletion colors are changed based on author. To retain the previous static colors, add the following code.
+
+```ts
+container.documentEditorSettings.revisionSettings = {
+        insertRevisionColor: 'byAuthor',
+        deleteRevisionColor: 'byAuthor',
+        insertedRowColor: '#0078D4', 
+        deletedRowColor: '#E3008C' 
+      };
+```
+
+## Enable track changes
 
 The following example demonstrates how to enable track changes.
-
- 
 
 ```ts
 let container: DocumentEditorContainer = new DocumentEditorContainer({
@@ -25,11 +34,7 @@ let container: DocumentEditorContainer = new DocumentEditorContainer({
 container.appendTo('#container');
 ```
 
-
-
->Track changes are document level settings. When opening a document, if the document does not have track changes enabled, then enableTrackChanges will be disabled even if we set enableTrackChanges : true in the initial rendering. If you want to enable track changes for all the documents, then we recommend enabling track changes during the document change event. The following example demonstrates how to enable Track changes for the all the Document while Opening.
-
- 
+N> Track changes are document-level settings. When opening a document, if the document does not have track changes enabled, then `enableTrackChanges` will be disabled even if you set `enableTrackChanges: true` in the initial rendering. If you want to enable track changes for all documents, we recommend enabling track changes in the `documentChange` event.
 
 ```ts
 container.documentChange = (): void => {
@@ -39,14 +44,11 @@ container.documentChange = (): void => {
 };
 ```
 
+## Show or hide revisions pane
 
-## Show/Hide Revisions Pane
- 
-The Show/Hide Revisions Pane feature in the Document Editor allows users to toggle the visibility of the revisions pane, providing flexibility in managing tracked changes within the document.
- 
-The following example code illustrates how to show/hide the revisions pane.
+The Show or Hide Revisions Pane option in the DOCX Editor allows users to toggle the visibility of the revisions pane, providing flexibility in managing tracked changes within the document.
 
- 
+The following example code illustrates how to show or hide the revisions pane.
 
 ```ts
 
@@ -62,13 +64,11 @@ container.documentEditor.showRevisions = false; // To hide revisions pane
 
 ```
 
-
-
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 ## Get all tracked revisions
 
-The following example demonstrate how to get all tracked revision from current document.
+The following example demonstrates how to get all tracked revisions from the current document.
 
  
 
@@ -87,7 +87,7 @@ let revisions : RevisionCollection = container.documentEditor.revisions;
 
 ## Accept or Reject all changes programmatically
 
-The following example demonstrates how to accept/reject all changes.
+The following example demonstrates how to accept or reject all changes.
 
  
 
@@ -116,7 +116,7 @@ revisions.rejectAll();
 
 ## Accept or reject a specific revision
 
-The following example demonstrates how to accept/reject specific revision in the Document Editor.
+The following example demonstrates how to accept or reject a specific revision in the DOCX Editor.
 
  
 
@@ -138,7 +138,7 @@ revisions.get(1).reject();
 
 ## Navigate between the tracked changes
 
-The following example demonstrates how to navigate tracked revision programmatically.
+The following example demonstrates how to navigate tracked revisions programmatically.
 
  
 
@@ -160,28 +160,70 @@ container.documentEditor.selection.navigateNextRevision();
  */
 container.documentEditor.selection.navigatePreviousRevision();
 ```
+## Custom Colors for Track Changes
 
+You can set an array of colors to show track changes such as insertions and deletions in the DOCX editor by configuring the [`revisionColors`](https://ej2.syncfusion.com/documentation/api/document-editor/revisionsettings#revisioncolors) property in [RevisionSettings](https://ej2.syncfusion.com/documentation/api/document-editor/revisionsettings). Each author is assigned a color in order: the first author gets the first color, the second author gets the next, and so on. If there are more authors than colors, the assignment starts again from the beginning of the array.
 
-## Filtering changes based on user
+The following example illustrates how to set the color order for track changes in the DOCX Editor
 
-In DocumentEditor, we have built-in review panel in which we have provided support for filtering changes based on the user.
+```ts
+container.documentEditorSettings.revisionSettings.revisionColors = [
+  '#0e76b1',
+  '#bb00ff',
+  '#c14f16'
+];
+```
+
+## Set colors for revision types
+
+By default, the DOCX Editor uses author-based colors for tracked changes. You can also customize colors for specific revision types, such as inserted content, deleted content, inserted table rows, and deleted table rows by configuring the corresponding properties in [RevisionSettings](https://ej2.syncfusion.com/documentation/api/document-editor/revisionsettings):
+
+- [`insertRevisionColor`](https://ej2.syncfusion.com/documentation/api/document-editor/revisionsettings#insertrevisioncolor): Sets the color for inserted content.
+- [`deleteRevisionColor`](https://ej2.syncfusion.com/documentation/api/document-editor/revisionsettings#deleterevisioncolor): Sets the color for deleted content.
+- [`insertedRowColor`](https://ej2.syncfusion.com/documentation/api/document-editor/revisionsettings#insertedrowcolor): Sets the background color for inserted table rows.
+- [`deletedRowColor`](https://ej2.syncfusion.com/documentation/api/document-editor/revisionsettings#deletedrowcolor): Sets the background color for deleted table rows.
+ 
+The following example shows how to customize revision type colors instead of using the default author-based colors.
+ 
+```ts
+let container: DocumentEditorContainer = new DocumentEditorContainer({
+      enableToolbar: true,
+      enableTrackChanges: true,
+      height: '590px',
+      // Use the following service URL only for demo purposes
+      serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/'
+    });
+
+    container.documentEditorSettings.revisionSettings = {
+      insertRevisionColor: '#22C55E',
+      deleteRevisionColor: '#EF4444',
+      insertedRowColor: '#f6fa06',
+      deletedRowColor: '#3a02bb'
+    };
+```
+N> 1. These settings only affect how revisions are displayed in the DOCX Editor and are not stored in the document.
+N> 2. By default, all revision types use author-specific colors ('byAuthor').
+
+## Filter changes by user
+
+In the DOCX Editor, the built-in review panel supports filtering changes based on the user.
 
 ![Track changes](images/track-changes.png)
 
 ## Custom metadata along with author
 
-The Document Editor provides options to customize revisions using [`revisionSettings`](https://ej2.syncfusion.com/documentation/api/document-editor/documenteditorsettingsmodel#revisionsettings). The [`customData`](https://ej2.syncfusion.com/documentation/api/document-editor/revisionsettings#customdata) property allows you to attach additional metadata to tracked revisions in the Word Processor. This metadata can represent roles, tags, or any custom identifier for the revision. To display this metadata along with the author name in the Track Changes pane, you must enable the [`showCustomDataWithAuthor`](https://ej2.syncfusion.com/documentation/api/document-editor/revisionsettings#showcustomdatawithauthor) property.
+The DOCX Editor provides options to customize revisions using [`revisionSettings`](https://ej2.syncfusion.com/documentation/api/document-editor/documenteditorsettingsmodel#revisionsettings). The [`customData`](https://ej2.syncfusion.com/documentation/api/document-editor/revisionsettings#customdata) property allows you to attach additional metadata to tracked revisions in the Word Processor. This metadata can represent roles, tags, or any custom identifier for the revision. To display this metadata along with the author name in the Track Changes pane, you must enable the [`showCustomDataWithAuthor`](https://ej2.syncfusion.com/documentation/api/document-editor/revisionsettings#showcustomdatawithauthor) property.
 
 The following example code illustrates how to enable and update custom metadata for track changes revisions.
 
 ```ts
 import { DocumentEditorContainer, Toolbar } from '@syncfusion/ej2-documenteditor';
-let container: DocumentEditorContainer = new DocumentEditorContainer({ 
+let container: DocumentEditorContainer = new DocumentEditorContainer({
   height: '590px',
-  serviceUrl= 'hostUrl', 
-  enableTrackChanges= true,
+  serviceUrl: 'hostUrl',
+  enableTrackChanges: true,
   documentEditorSettings: {
-    revisionSettings: { customData : "Developer", showCustomDataWithAuthor : true }}
+    revisionSettings: { customData: "Developer", showCustomDataWithAuthor: true }}
 });
 DocumentEditorContainer.Inject(Toolbar);
 container.appendTo('#container');
@@ -191,15 +233,13 @@ The Track Changes pane will display the author name along with the custom metada
 
 ![Custom metadata along with author](images/track-changes-customData.png)
 
->Note:
-* When you export the document as SFDT, the customData value is stored in the revision collection. When you reopen the SFDT, the custom data is automatically restored and displayed in the Track Changes pane.
-* Other than SFDT export (e.g. DOCX and other), the customData is not preserved, as it is specific to the Document Editor component.
+N> When you export the document as SFDT, the customData value is stored in the revision collection. When you reopen the SFDT, the custom data is automatically restored and displayed in the Track Changes pane. Other than SFDT export (e.g. DOCX and other), the customData is not preserved, as it is specific to the DOCX Editor component.
 
 ## Protect the document in track changes only mode
 
-Document Editor provides support for protecting the document with `RevisionsOnly` protection. In this protection, all the users are allowed to view the document and do their corrections, but they cannot accept or reject any tracked changes in the document. Later, the author can view their corrections and accept or reject the changes.
+DOCX Editor provides support for protecting the document with `RevisionsOnly` protection. In this protection, all the users are allowed to view the document and do their corrections, but they cannot accept or reject any tracked changes in the document. Later, the author can view their corrections and accept or reject the changes.
 
-Document editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#stopprotection) API.
+DOCX Editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/documentation/api/document-editor/editor#stopprotection) API.
 
 The following example code illustrates how to enforce and stop protection in Document editor container.
 
@@ -227,11 +267,11 @@ Tracked changes only protection can be enabled in UI by using [Restrict Editing 
 
 ![Enable track changes only protection](images/tracked-changes.png)
 
->Note: In enforce Protection method, first parameter denotes password and second parameter denotes protection type. Possible values of protection type are `NoProtection |ReadOnly |FormFieldsOnly |CommentsOnly |RevisionsOnly`. In stop protection method, parameter denotes the password.
+N> In the `enforceProtection` method, the first parameter denotes the password and the second parameter denotes the protection type. Possible values of the protection type are `NoProtection | ReadOnly | FormFieldsOnly | CommentsOnly | RevisionsOnly`. In the `stopProtection` method, the parameter denotes the password.
 
 ## Events
 
-DocumentEditor provides [beforeAcceptRejectChanges](https://ej2.syncfusion.com/documentation/api/document-editor-container#beforeacceptrejectchanges) event, which is triggered before a tracked content is accepted or rejected. This event provides an opportunity to perform custom logic before accepting or rejecting changes. The event handler receives the [RevisionActionEventArgs](https://ej2.syncfusion.com/documentation/api/document-editor/revisionActionEventArgs) object as an argument, which allows access to information about the tracked content. . 
+DocumentEditor provides [beforeAcceptRejectChanges](https://ej2.syncfusion.com/documentation/api/document-editor-container#beforeacceptrejectchanges) event, which is triggered before a tracked content is accepted or rejected. This event provides an opportunity to perform custom logic before accepting or rejecting changes. The event handler receives the [RevisionActionEventArgs](https://ej2.syncfusion.com/documentation/api/document-editor/revisionActionEventArgs) object as an argument, which allows access to information about the tracked content.
 
 To demonstrate a specific use case, let's consider an example where we want to restrict the accept and reject changes functionality based on the author name. The following code snippet illustrates how to allow only the author of the tracked content to accept or reject changes:
 
@@ -249,7 +289,7 @@ let container: DocumentEditorContainer = new DocumentEditorContainer({
 });
 container.appendTo('#container');
 
-// Event get triggerd before accepting/rejecting changes
+// Event gets triggered before accepting/rejecting changes
 function beforeAcceptRejectChanges(args : RevisionActionEventArgs) : void {
   // Check the author of the revision and current user are different
   if (args.author !== container.currentUser) {
@@ -259,3 +299,6 @@ function beforeAcceptRejectChanges(args : RevisionActionEventArgs) : void {
 }
 ```
 
+## Online demo
+
+Explore how to track and review changes in Word documents using the JavaScript DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/track-changes.html).

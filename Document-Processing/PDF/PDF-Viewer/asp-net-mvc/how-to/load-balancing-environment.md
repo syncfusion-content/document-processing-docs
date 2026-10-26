@@ -1,14 +1,13 @@
 ---
 layout: post
-title: Configure Redis for Load Balancing in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to configure Redis for load balancing with the Syncfusion ASP.NET MVC PDF Viewer, ensuring efficient document processing in a distributed environment.
+title: How to Run the PDF Viewer in a Load-Balanced Environment | Syncfusion
+description: Configure the ASP.NET MVC PDF Viewer to work in a load-balanced environment by setting up shared storage and consistent service URLs.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Configure Redis for Load Balancing in ASP.NET MVC PDF Viewer
+# How to Run the PDF Viewer in a Load-Balanced Environment in ASP.NET
 
 This document explains how to configure Redis for load balancing with the Syncfusion ASP.NET MVC PDF Viewer. This setup ensures efficient document processing and caching across multiple server instances.
 
@@ -27,7 +26,7 @@ public class CacheManager:{{'**ICacheManager**'| markdownify }}{}
 
 ```
 
-**Step 3:** Connect the Redis database in the constructor by using the **redisconnectionstring** as provided in the below code.
+**Step 2:** Connect the Redis database in the constructor by using the **re-disconnection string** as provided in the below code.
 
 ```cs
 
@@ -51,7 +50,7 @@ public CacheManager(string redisConnectionstring = null, int slidingExpiration =
 
 ```
 
-**Step 4:** Override the **ICacheManager** interface methods into the newly created class for adding, retrieving, and deleting the data from the Redis cache.
+**Step 3:** Override the **ICacheManager** interface methods into the newly created class for adding, retrieving, and deleting the data from the Redis cache.
 
 ```cs
 
@@ -86,7 +85,7 @@ public void DeleteCache(string key)
 
 ```
 
-**Step 5:** In the controller, create a new object by passing the **redisconnectionstring** and the sliding expiration time.
+**Step 4:** In the controller, create a new object by passing the **re-disconnection string** and the sliding expiration time.
 
 ```cs
 
@@ -96,7 +95,7 @@ pdfviewer.CacheManager = new CacheManager(redisconnectonstring, slidingexpiratio
 
 ```
 
-**Step 6:** Set the newly created object to **CacheManager** property by using the below code-snippet.
+**Step 5:** Set the newly created object to **CacheManager** property by using the below code-snippet.
 
 ```cs
 
@@ -105,7 +104,7 @@ pdfviewer.CacheManager = new CacheManager(redisconnectonstring, 0);
 
 ```
 
-**Step 7:** Use this code in all our controller methods (Load, RenderPdfPage).
+**Step 6:** Use this code in all our controller methods (Load, RenderPdfPage).
 
 ```cs
 
@@ -149,7 +148,7 @@ public object Load(Dictionary&lt;string, string&gt; jsonObject)
 
 **Important Notes:**
 
-*   Replace `"YOUR_REDIS_CONNECTION_STRING"` with your actual Redis connection string. It's highly recommended to load this from a configuration file (e.g., `Web.config` or `appsettings.json`) rather than hardcoding it.
+*   Replace `"YOUR_REDIS_CONNECTION_STRING"` with your actual Redis connection string. It's highly recommended to load this from a configuration file (e.g., `Web.config` or `appsettings.json`) rather than hard coding it.
 *   The `cacheSlidingExpiration` value is in minutes. Setting it to `0` will use the default 24-hour expiration.
 *   Ensure the `GetDocumentPath` method is correctly implemented in your controller to resolve document paths.
 *   Apply the `CacheManager` initialization logic to all relevant controller methods that process PDF documents.

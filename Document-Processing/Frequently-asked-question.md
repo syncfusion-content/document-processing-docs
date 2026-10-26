@@ -1,11 +1,11 @@
 ---
-title: Frequently Asked Question Section| Syncfusion
-description: This section provides answers to frequently asked questions related to document processing using Syncfusion libraries.
+title: Frequently Asked Questions in Document Solutions| Syncfusion
+description: This section provides answers to frequently asked questions related to document processing using Syncfusion Document Solutions.
 platform: document-processing
 documentation: UG
 ---
 
-# Frequently Asked Questions Section  
+# Frequently Asked Questions in Document Solutions
 
 The frequently asked questions in document processing are listed below.
 

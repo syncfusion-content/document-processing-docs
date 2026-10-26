@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Import in Vue Document editor component | Syncfusion
-description: Learn here all about Import in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Import in Vue DOCX Editor | Syncfusion
+description: The Import feature in Vue DOCX Editor enables users to load and edit documents from supported formats while preserving content structure.
 control: Import 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Import in Vue Document editor component
+# Import in Vue DOCX Editor
 
-In Document Editor, the documents are stored in its own format called **Syncfusion Document Text (SFDT)**.
+In [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor), the documents are stored in DOCX Editor's own format called **Syncfusion Document Text (SFDT)**.
 
-The following example shows how to open SFDT data in Document Editor.
+The following example shows how to open SFDT data in DOCX Editor.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -27,7 +27,7 @@ The following example shows how to open SFDT data in Document Editor.
 
 ## Import document from local machine
 
-The following example shows how to import document from local machine.
+The following example shows how to import a document from the local machine.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -42,11 +42,11 @@ The following example shows how to import document from local machine.
 
 ## Convert word documents into SFDT
 
-You can convert word documents into SFDT format using the .NET Standard library [`Syncfusion.EJ2.WordEditor.AspNet.Core`](<https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Core/>) by the web API service implementation. This library helps you to convert word documents (.dotx,.docx,.docm,.dot,.doc), rich text format documents (.rtf), and text documents (.txt) into SFDT format.
+You can convert Word documents into SFDT format using the .NET Standard library [`Syncfusion.EJ2.WordEditor.AspNet.Core`](<https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Core/>) by the web API service implementation. This library helps you to convert Word documents (.dotx,.docx,.docm,.dot,.doc), rich text format documents (.rtf), and text documents (.txt) into SFDT format.
 
->Note: The Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
+N> The Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word).
 
-Please refer the following example for converting word documents into SFDT.
+Please refer to the following example for converting Word documents into SFDT.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -173,7 +173,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-Here’s how to handle the server-side action for converting word document in to SFDT.
+Here's how to handle the server-side action for converting a Word document into SFDT.
 
 ```c#
     [AcceptVerbs("Post")]
@@ -220,37 +220,120 @@ Here’s how to handle the server-side action for converting word document in to
     }
 ```
 
-To know about server-side action, please refer this [page](./web-services-overview).
+To know about server-side action, please refer to this [page](./web-services-overview).
+
+## Opening a document in asynchronous mode
+
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) supports asynchronous document loading, which can be enabled using the enable property available in the [`openAsyncSettings`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/openasyncsettingsmodel) API.
+
+### Properties
+
+- **[`enable`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/openasyncsettingsmodel#enable):** Enables or disables asynchronous document loading.
+- **[`initialPageLoadCount`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/openasyncsettingsmodel#initialpageloadcount):** Number of pages to load initially when the document is opened.
+- **[`incrementalPageLoadCount`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/openasyncsettingsmodel#incrementalpageloadcount):** Number of pages to load incrementally after initial pages load, during the asynchronous document-loading operation.
+
+The following example shows how to open the document asynchronously in DOCX Editor.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' v-on:created="onCreated" height="590px"
+      id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
+</template>
+<script setup>
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { provide, ref } from 'vue';
+
+const container = ref(null);
+const serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
+
+//Inject required modules.
+provide('DocumentEditorContainer', [Toolbar])
+
+const onCreated = function () {
+  container.value.ej2Instances.documentEditorSettings.openAsyncSettings.enable = true;
+  container.value.ej2Instances.documentEditorSettings.openAsyncSettings.initialPageLoadCount = 5;
+  container.value.ej2Instances.documentEditorSettings.openAsyncSettings.incrementalPageLoadCount = 3;
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' v-on:created="onCreated" height="590px"
+      id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
+</template>
+<script>
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+
+export default {
+  components: {
+    'ejs-documenteditorcontainer': DocumentEditorContainerComponent
+  },
+  data() {
+    return {
+      serviceUrl:
+        'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/',
+    };
+  },
+  provide: {
+    //Inject required modules.
+    DocumentEditorContainer: [Toolbar]
+  },
+  methods: {
+    onCreated: function () {
+      this.$refs.container.ej2Instances.documentEditorSettings.openAsyncSettings.enable = true;
+      this.$refs.container.ej2Instances.documentEditorSettings.openAsyncSettings.initialPageLoadCount = 5;
+      this.$refs.container.ej2Instances.documentEditorSettings.openAsyncSettings.incrementalPageLoadCount = 3;
+    },
+  },
+};
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+N> When asynchronous loading is enabled, the document initially opens in read-only mode, allowing users to view the first set of pages while the remaining pages load in the background. During this time, the document can be viewed but cannot be edited or saved. Once loading is complete, editing and saving become available.
 
 ## Compatibility with Microsoft Word
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor is a minimal viable Word document viewer/editor product for web applications. As most compatible Word editor, the product vision is adding valuable feature sets of Microsoft Word, and not to cover 100% feature sets of Microsoft Word desktop application. You can even see the feature sets difference between Microsoft Word desktop and their Word online application. So kindly don't misunderstand this component as a complete replacement for Microsoft Word desktop application and expect 100% feature sets of it.
+Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor is a minimal viable Word document viewer/editor product for web applications. As the most compatible Word editor, the product vision is adding valuable feature sets of Microsoft Word, and not to cover 100% feature sets of Microsoft Word desktop application. You can even see the feature sets difference between Microsoft Word desktop and their Word online application. So kindly don't misunderstand this component as a complete replacement for Microsoft Word desktop application and expect 100% feature sets of it.
 
-### How Syncfusion<sup style="font-size:70%">&reg;</sup> accepts the feature request for Document Editor
+### How Syncfusion<sup style="font-size:70%">&reg;</sup> accepts the feature requests for DOCX Editor
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> accepts new feature request as valid based on feature value and technological feasibility, then plan to implement unsupported features incrementally in future releases in a phase-by-phase manner.
+Syncfusion accepts new feature requests as valid based on feature value and technological feasibility, then plans to implement unsupported features incrementally in future releases in a phase-by-phase manner.
 
-### How to report the problems in Document Editor
+### How to report problems in DOCX Editor
 
-You can report the problems with displaying, or editing Word documents in Document Editor component through [`support forum`](https://www.syncfusion.com/forums/), [`Direct-Trac`](https://www.syncfusion.com/support/directtrac/), or [`feedback portal`](https://www.syncfusion.com/feedback/). Kindly share the Word document for replicating the problem easily in minimal time. If you have confidential data, you can replace it and attach the document.
+You can report problems with displaying or editing Word documents in DOCX Editor component through [`support forum`](https://www.syncfusion.com/forums/), [`Direct-Trac`](https://www.syncfusion.com/support/directtrac/), or [`feedback portal`](https://www.syncfusion.com/feedback/). Kindly share the Word document for replicating the problem easily in minimal time. If you have confidential data, you can replace it and attach the document.
 
 ### Why the document pagination differs from Microsoft Word
 
-For your understanding about the Word document structure and the workflow of Word viewer/editor components, the Word document is a flow document in which content will not be preserved page by page; instead, the content will be preserved sequentially like a HTML file. Only the Word viewer/editor paginates the content of the Word document page by page dynamically, when opened for viewing or editing and this page-wise position information will not be preserved in the document level (it is Word file format specification standard). Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component also does the same.
+For your understanding about the Word document structure and the workflow of Word viewer/editor components, the Word document is a flow document in which content will not be preserved page by page; instead, the content will be preserved sequentially like an HTML file. Only the Word viewer/editor paginates the content of the Word document page by page dynamically, when opened for viewing or editing and this page-wise position information will not be preserved at the document level (it is Word file format specification standard). Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor component also does the same.
   
-At present there is a known technical limitation related to slight difference in text size calculated using HTML element based text measuring approach. Even though the text size is calculated with correct font and font size values, the difference lies; it is as low as 0.00XX to 0. XXXX values compared to that of Microsoft Word application’s display. Hence the document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application.
+At present there is a known technical limitation related to a slight difference in text size calculated using an HTML element-based text measuring approach. Even though the text size is calculated with correct font and font size values, the difference lies; it is as low as 0.00XX to 0.XXXX values compared to that of Microsoft Word application's display. Hence the document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application.
 
-### How Syncfusion<sup style="font-size:70%">&reg;</sup> address the document pagination difference compared to Microsoft Word
+### How Syncfusion<sup style="font-size:70%">&reg;</sup> addresses the document pagination difference compared to Microsoft Word
 
-The following table illustrates the reasons for pagination (page-by-page display) difference compared to Microsoft Word in your documents and how Syncfusion<sup style="font-size:70%">&reg;</sup> address it.
+The following table illustrates the reasons for pagination (page-by-page display) difference compared to Microsoft Word in your documents and how Syncfusion<sup style="font-size:70%">&reg;</sup> addresses it.
 
 | Root causes | How is it solved? |
 |-----------------|-------------|
-|Any mistake (wrong behavior handled) in lay outing the supported elements and formatting   |Customer can report to Syncfusion<sup style="font-size:70%">&reg;</sup> support and track the status through bug report link.  Syncfusion<sup style="font-size:70%">&reg;</sup> fixes the bugs in next possible weekly patch release and service pack or main releases. |
-|Font missing in deployment environment|Customer can either report to Syncfusion<sup style="font-size:70%">&reg;</sup> support and get suggestion or solve it on their own by installing the missing fonts in their deployment environment.|
-|Any unsupported elements or formatting present in your document |Customer can report to Syncfusion<sup style="font-size:70%">&reg;</sup> support and track the status through feature request link.   Syncfusion<sup style="font-size:70%">&reg;</sup> implements unsupported features incrementally in future releases based on feature importance, customer interest, efforts involved, and technological feasibility. Also, suggests alternate approach for possible cases.|
-|Technical limitation related to framework   For example, there is a known case with slight fractional difference in text size measured using HTML and Microsoft Word’s display.|Customer can report to Syncfusion<sup style="font-size:70%">&reg;</sup> support and track the status through feature request link.  Syncfusion<sup style="font-size:70%">&reg;</sup> does research about alternate approaches to overcome the technical limitation/behaviors and process it same as a feature. >Note: Here the challenge is, time schedule for implementation varies based on the alternate solution and its reliability.|
+|Any mistake (wrong behavior handled) in lay outing the supported elements and formatting  |Customer can report to Syncfusion<sup style="font-size:70%">&reg;</sup> support and track the status through bug report link. Syncfusion<sup style="font-size:70%">&reg;</sup> fixes the bugs in the next possible weekly patch release and service pack or main releases.|
+|Font missing in deployment environment|Customer can either report to Syncfusion<sup style="font-size:70%">&reg;</sup> support and get a suggestion or solve it on their own by installing the missing fonts in their deployment environment.|
+|Any unsupported elements or formatting present in your document |Customer can report to Syncfusion<sup style="font-size:70%">&reg;</sup> support and track the status through feature request link. Syncfusion<sup style="font-size:70%">&reg;</sup> implements unsupported features incrementally in future releases based on feature importance, customer interest, efforts involved, and technological feasibility. Also, suggests an alternate approach for possible cases.|
+|Technical limitation related to framework   For example, there is a known case with a slight fractional difference in text size measured using HTML and Microsoft Word's display.|Customer can report to Syncfusion<sup style="font-size:70%">&reg;</sup> support and track the status through feature request link. Syncfusion<sup style="font-size:70%">&reg;</sup> does research about alternate approaches to overcome the technical limitation/behaviors and process it same as a feature. N> Here the challenge is, time schedule for implementation varies based on the alternate solution and its reliability.|
 
 ## See Also
 
 * [Feature modules](./feature-module)
+* [How to show and hide spinner while opening document in DocumentEditor](./how-to/show-hide-spinner)
+* [How to open default document](./how-to/open-default-document)
+* [How to open document in read only by default](./how-to/read-only-by-default)
+* [How to open document from URL](./how-to/open-document-by-address)

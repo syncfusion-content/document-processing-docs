@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Server actions for Syncfusion ASP.NET MVC PDF Viewer
-description: Review the ASP.NET MVC server actions used by the Syncfusion PDF Viewer to manage loading, caching, annotations, and document interactions.
+title: Server Actions in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn about the server actions in the ASP.NET MVC PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

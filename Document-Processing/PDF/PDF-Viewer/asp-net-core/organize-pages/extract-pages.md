@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Extract Pages in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn here all about Extract Pages in Organize Pages in Syncfusion ASP.NET Core PDF Viewer control of Syncfusion Essential JS 2 and more.
+description: Extract pages from a PDF in the ASP.NET Core PDF Viewer using the Organize Pages panel to save selected pages as a separate document.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Extract pages in ASP.NET Core PDF Viewer
+# Extract Pages in ASP.NET Core PDF Viewer
 
 The PDF Viewer component lets you extract pages from a document using the Extract Pages option in the Organize Pages UI.
 The Extract Pages tool is available by default in Organize Pages.
@@ -116,7 +116,7 @@ The `extractPages` method enables programmatic extraction. This example extracts
 
     //Load the Extracted Pages
     viewer.load(array,'');
-    //Print the Base64 for reference
+    //Print the extracted PDF data for reference
     console.log(array);
   }
 </script>

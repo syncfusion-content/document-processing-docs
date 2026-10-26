@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with Syncfusion React PDF Viewer in Preact Application
-description: Provides a short overview and essential task links for integrating and using the Syncfusion React PDF Viewer within Preact.
+title: Preact in React PDF Viewer | Syncfusion
+description: Get started with the Syncfusion React PDF Viewer in a Preact application, with setup steps and the essentials you need to render PDFs.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -9,9 +9,11 @@ domainurl: ##DomainURL##
 ---
 
 
-# Getting started with Syncfusion React PDF Viewer in Preact
+# Getting Started with React PDF Viewer in Preact
 
-This page is a short, task-focused overview for integrating the Syncfusion React PDF Viewer into a [Preact](https://preactjs.com/) app. Use the short sections below for quick tasks; a minimal full example is provided as an optional reference.
+This page is a short, task-focused overview for integrating the [React PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/react-pdf-viewer) into a [Preact](https://preactjs.com/) app. Use the short sections below for quick tasks; a full example is provided below as an optional reference.
+
+## What is Preact?
 
 [Preact](https://preactjs.com/) is a lightweight React alternative that preserves the React-compatible API. Use Preact when you want smaller bundle size while reusing the React viewer components.
 ## Setup
@@ -31,18 +33,19 @@ yarn add @syncfusion/ej2-react-pdfviewer
 
 How‑to: Add the required Syncfusion theme and component CSS to `src/style.css`.
 
-```css
-@import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material3.css';
-@import '../node_modules/@syncfusion/ej2-react-pdfviewer/styles/material3.css';
+Themes for PDF Viewer can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
+
+This guide uses the `Tailwind 3` theme as an example. To install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
+
+```bash
+npm install @syncfusion/ej2-tailwind3-theme
 ```
 
-Note: keep import order consistent with component dependencies.
+```css
+@import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/pdfviewer/index.css';
+```
+
+N> The `index.css` file automatically includes all required dependent component styles for the PDF Viewer. You do not need to import individual dependency styles such as Base, Buttons, Dropdowns, Inputs, Navigations, Popups, and SplitButtons separately.
 
 ## Add component
 
@@ -76,5 +79,5 @@ render(<App />, document.getElementById('app'));
 
 **See also**
 
-- [Getting started with the Syncfusion React PDF Viewer](../getting-started-overview)
-- [System requirements for Syncfusion React PDF Viewer](../../../../System-Requirements)
+- [Getting started with the React PDF Viewer](../getting-started-overview)
+- [System requirements for React PDF Viewer](../../../../System-Requirements)

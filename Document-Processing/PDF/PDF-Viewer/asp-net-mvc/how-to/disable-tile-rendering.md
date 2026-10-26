@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Disable tile rendering in ASP.NET MVC PDF Viewer control | Syncfusion
-description: Learn here all about Disable tile rendering in Syncfusion ASP.NET MVC PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: How to Disable Tile Rendering in ASP.NET MVC PDF Viewer | Syncfusion
+description: Disable tile rendering in the ASP.NET MVC PDF Viewer to use the classic full-page rendering mode for simpler PDF display scenarios.
 platform: document-processing
 control: Disable tile rendering
-publishingplatform: ASP.NET MVC
+
 documentation: ug
 ---
 
-# Disable tile rendering in ASP.NET MVC PDF Viewer control
+# How to Disable Tile Rendering in ASP.NET MVC PDF Viewer
 
 To disable the tile rendering feature in the Syncfusion PDF viewer control, you can use the **enableTileRendering** property. This property allows you to enable or disable the tile rendering feature, which is used to improve the performance of the PDF viewer when displaying large documents.
 

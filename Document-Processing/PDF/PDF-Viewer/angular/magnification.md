@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Magnification in Angular PDF Viewer component | Syncfusion
-description: Learn here all about Magnification in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Magnification in Angular PDF Viewer | Syncfusion
+description: Enable and use magnification in the Angular PDF Viewer, including Zoom In, Zoom Out, Fit to Page, and Fit to Width options.
 platform: document-processing
-control: Magnification
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Magnification in Angular PDF Viewer component
+# Magnification in Angular PDF Viewer
 
 The PDF Viewer includes magnification controls—ZoomIn, ZoomOut, Zoom, FitPage, and FitWidth—in the
 default toolbar. The magnification controls can be shown or hidden in the toolbar.
@@ -97,5 +97,5 @@ N> The PDF Viewer supports zoom values from 10% to 400%.
 
 ## See also
 
-* [Toolbar items](./toolbar)
+* [Toolbar items](./toolbar-customization/overview)
 * [Feature Modules](./feature-module)

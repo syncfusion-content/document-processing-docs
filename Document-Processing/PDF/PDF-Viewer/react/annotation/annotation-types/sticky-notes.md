@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add Sticky Notes Annotations in React PDF Viewer | Syncfusion
-description: Learn how to enable, add, customize, and manage Sticky Notes annotations in the Syncfusion React PDF Viewer.
+title: Sticky Notes in React PDF Viewer | Syncfusion
+description: Enable, add, customize, and manage Sticky Notes annotations in the React PDF Viewer for short notes placed anywhere on a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add Sticky Notes Annotations in React PDF Viewer
+# Sticky Note Annotation in React PDF Viewer
 Sticky Notes allow users to place comment markers on the PDF. When clicked, the note opens a popup containing comments, replies, and discussions. Use them to capture review feedback without altering the original content. 
 
 ![Sticky Notes overview](../../images/stickynotes_annotation.png)
@@ -74,8 +74,7 @@ function addStickyNote() {
 {% endtabs %}
 
 ## Customize Sticky Note Appearance
-Configure default properties using the [`stickyNotesSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#stickyNotesSettings).
- property (for example, default **fill color**, **stroke color**, **opacity**).
+Configure default properties using the [`stickyNotesSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#stickyNotesSettings) property (for example, default **fill color**, **stroke color**, **opacity**).
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -115,7 +114,7 @@ Update properties and call `editAnnotation()`.
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
 {% raw %}
-function editVolumeProgrammatically() {
+function editStickyNotesProgrammatically() {
   const viewer = document.getElementById('container').ej2_instances[0];
   for (const ann of viewer.annotationCollection) {
     if (ann.subject === 'Volume calculation') {
@@ -131,12 +130,12 @@ function editVolumeProgrammatically() {
 {% endhighlight %}
 {% endtabs %}
 
-### Delete Volume Annotation
+### Delete Sticky Notes Annotation
 
-Delete Volume Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
+Delete Sticky Notes Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../delete-annotation).
 
 ## Set Default Properties During Initialization
-Configure scale defaults using [`stickyNotesSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#stickyNotesSettings).
+Configure default properties for Sticky Notes using [`stickyNotesSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#stickyNotesSettings).
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -159,12 +158,12 @@ Configure scale defaults using [`stickyNotesSettings`](https://ej2.syncfusion.co
 Listen to annotation life-cycle events and filter for sticky notes. See [**Annotation Events**](../annotation-event) for the full list and argument details. 
 
 ## Export and Import
-Sticky Notes are included when exporting or importing annotations. For supported formats and workflows, see [**Export and Import annotations**](../export-import-annotations). 
+Sticky Notes are included when exporting or importing annotations. For supported formats and workflows, see [**Export and Import annotations**](../export-import/export-annotation). 
 
 ## See Also
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)
 - [Customize Context Menu](../../context-menu/custom-context-menu)
 - [Comments Panel](../comments)
 - [Annotation Events](../annotation-event)
-- [Export and Import annotations](../export-import-annotations)
-- [Delete Annotations](../remove-annotations)
+- [Export and Import annotations](../export-import/export-annotation)
+- [Delete Annotations](../delete-annotation)

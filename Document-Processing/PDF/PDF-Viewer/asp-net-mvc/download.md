@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Download in  EJ2 ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn here all about Download in ASP.NET MVC PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Download in ASP.NET MVC PDF Viewer | Syncfusion
+description: Enable, disable, and programmatically trigger PDF downloads in the ASP.NET MVC PDF Viewer, including download events and Base64 handling.
 platform: document-processing
 control: Download
 documentation: ug
 ---
 
-# Download PDF document in PDF Viewer component
+# Download in ASP.NET MVC PDF Viewer
 
 The PDF Viewer supports downloading the loaded PDF file. You can enable or disable the download using the following example.
 
@@ -28,7 +28,7 @@ The PDF Viewer supports downloading the loaded PDF file. You can enable or disab
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](./images/download.png)
+![Download option in the PDF Viewer toolbar](./images/download.png)
 
 You can also programmatically invoke the download action using the `download()` method, as shown below:
 
@@ -50,7 +50,7 @@ You can also programmatically invoke the download action using the `download()` 
 {% highlight html tabtitle="Server-Backed" %}
 ```html
 <div style="width:100%;height:600px">
-    @Html.EJS().PdfViewer("pdfviewer").DocumentLoad("download")..ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnableDownload(true).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
+    @Html.EJS().PdfViewer("pdfviewer").DocumentLoad("download").ServiceUrl(VirtualPathUtility.ToAbsolute("~/api/PdfViewer/")).EnableDownload(true).DocumentPath("https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf").Render()
 </div>
 
 <script>

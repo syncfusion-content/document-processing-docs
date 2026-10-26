@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Change font family in Vue PDF Viewer | Syncfusion
-description: Learn how to change the font family for form field type signatures and initials in the Vue PDF Viewer using typeSignatureFonts and typeInitialFonts.
+title: How to Change the Font for Type Signatures in Vue PDF | Syncfusion
+description: Change the font family for type signatures and initials in the Vue PDF Viewer using typeSignatureFonts and typeInitialFonts properties.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change the font family for type signatures in Vue
+# How to Change the Font for Type Signatures in Vue PDF Viewer
 
-Change the font family in the type signature of the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer by adding a custom CSS stylesheet to the document and applying the desired font family to the type signature element. Include the Google Fonts link in the HTML head section to apply the font.
+Change the font family in the type signature and initial fields of the Syncfusion<sup style="font-size:70%">&reg;</sup> PDF Viewer using the `typeSignatureFonts` and `typeInitialFonts` properties. To apply the selected font, include the corresponding Google Fonts link in the HTML `head` section of the host page.
 
-### Signature field property
+## Signature field property
 
-The PDF Viewer supports changing fonts for Signature and Initial fields using the `typeSignatureFonts` and `typeInitialFonts` properties.
+The PDF Viewer supports changing fonts for Signature and Initial fields using the [`typeSignatureFonts`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/signaturefieldsettings#typesignaturefonts) and [`typeInitialFonts`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/initialfieldsettings#typeinitialfonts) properties.
 
 **Step 1:** Follow the steps in the [Getting Started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/getting-started) guide to create a simple PDF Viewer sample.
 
@@ -37,6 +37,7 @@ The PDF Viewer supports changing fonts for Signature and Initial fields using th
   </div>
 </template>
 
+<script>
 import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, AnnotationResizerLocation, DisplayMode, CursorType } from '@syncfusion/ej2-vue-pdfviewer';
 export default {
   name: 'app',
@@ -77,6 +78,7 @@ Use the following code to apply custom fonts to the Initial field.
   </div>
 </template>
 
+<script>
 import {
     PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, AnnotationResizerLocation, DisplayMode, CursorType } from '@syncfusion/ej2-vue-pdfviewer';
 export default {

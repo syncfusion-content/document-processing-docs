@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Digital Signature in Flutter PDF library | Syncfusion
-description: Learn here all about internal and external Digital Signature feature of Syncfusion Flutter PDF non-UI library and more.
+title: Digital Signature in Flutter PDF Library | Syncfusion
+description: Learn about internal and external digital signature features in Syncfusion Flutter PDF non-UI Library with practical examples.
 platform: document-processing
 control: PDF
 documentation: ug
@@ -9,25 +9,26 @@ documentation: ug
 
 # Digital Signature in Flutter PDF
 
-Flutter PDF allows you to add a digital signature to the PDF document. You can sign the PDF document internally by using a certificate with private keys or externally by using the digital signature created from various sources such as cloud services like DigitalSign.
+Flutter PDF allows you to add a digital signature to the PDF document. You can sign the PDF document internally using a certificate with private keys or externally by using the digital signature created from various sources such as cloud services like DigitalSign.
 
 ## Adding a digital signature
 
 To add a digital signature, you need a certificate with private keys. The following code example explains how to add a digital signature to the PDF document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
-//Creates a new PDF document
+//Creates a new PDF document.
 PdfDocument document = PdfDocument();
 
-//Adds a new page
+//Adds a new page.
 PdfPage page = document.pages.add();
 
-//Creates a digital signature and sets signature information
+//Creates a digital signature and sets signature information.
 PdfSignatureField field = PdfSignatureField(page, 'signature',
     bounds: Rect.fromLTWH(0, 0, 200, 100),
     signature: PdfSignature(
-        //Creates a certificate instance from the PFX file with a private key
+        //Creates a certificate instance from the PFX file with a private key.
         certificate:
             PdfCertificate(File('PDF.pfx').readAsBytesSync(), 'password123'),
         contactInfo: 'johndoe@owned.us',
@@ -36,20 +37,22 @@ PdfSignatureField field = PdfSignatureField(page, 'signature',
         digestAlgorithm: DigestAlgorithm.sha256,
         cryptographicStandard: CryptographicStandard.cms));
 
-//Add a signature field to the form
+//Add a signature field to the form.
 document.form.fields.add(field);
 
-//Save and dispose the PDF document
+//Save and dispose the PDF document.
 File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Signing an existing document
 
 You can load the signature field from the existing PDF document and add a certificate to the document as follows,
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document.
 PdfDocument document =
@@ -74,12 +77,14 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Adding a signature appearance
 
 You can customize the appearance of the signature field by using the [`appearance`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSignatureField/appearance.html) property in [`PdfSignatureField`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSignatureField-class.html) as follows,
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document.
 PdfDocument document =
@@ -106,14 +111,18 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Externally sign a PDF document
 
 You can sign the PDF document from an external digital signature created from various sources such as cloud services like DigitalSign.
 
+The `addExternalSigner` method on `PdfSignature` accepts a custom signer (an implementation of `IPdfExternalSigner`) and a list of public-certificate bytes that are used to generate the message digest to be signed.
+
 The following code example shows how to sign the PDF document from an external signature.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document.
 PdfDocument document =
@@ -135,33 +144,39 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 You can create an external digital signature with the [`x509`](https://pub.dev/packages/x509) package by using the following steps:
 
 **Add dependency**
 
-Add this to your package's pubspec.yaml file.
+Add the following dependency to your `pubspec.yaml` file and then run `flutter pub get`.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight yaml tabtitle="yaml" %}
 
 dependencies:
   x509: ^0.1.4
 
 {% endhighlight %}
+{% endtabs %}
 
 **Import package**
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 import 'package:x509/x509.dart' as x509;
 
 {% endhighlight %}
+{% endtabs %}
 
 You can compute the signed message digest by using the x509 package with a corresponding private key of the public certificate.
 
+{% tabs %}
 {% highlight dart %}
 
-//Class for singing a PDF document externally.
+//Class for signing a PDF document externally.
 class PdfExternalSigner extends IPdfExternalSigner {
   //Hash algorithm.
   @override
@@ -181,14 +196,16 @@ class PdfExternalSigner extends IPdfExternalSigner {
 }
 
 {% endhighlight %}
+{% endtabs %}
 
-You can use the sign method in IPdfExternalSigner for asynchronous signing.
+You can use the sign method in `IPdfExternalSigner` for asynchronous signing.
 
-N> Asynchronous signing will only work when saving the PDF document asynchronously. signSync works with synchronous and asynchronous save methods.
+N> The asynchronous `sign` method only works when the PDF document is saved asynchronously (using `await document.save()`). The `signSync` method can be used with both `document.save()` and `document.saveSync()`.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
-    //Class for singing a PDF document externally.
+    //Class for signing a PDF document externally.
     class PdfExternalSigner extends IPdfExternalSigner {
     //Hash algorithm.
     @override
@@ -208,12 +225,14 @@ N> Asynchronous signing will only work when saving the PDF document asynchronous
     }
 
 {% endhighlight %}
+{% endtabs %}
 
-## Adding multiple digital signature
+## Adding multiple digital signatures
 
 You can apply one or more digital signatures to a PDF document. The following code example shows how to add multiple signatures to the PDF document.
- 
-{% highlight dart %}
+
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Loads an existing PDF document.
 PdfDocument document =
@@ -255,17 +274,18 @@ File('Output.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Long Term Validation (LTV) PDF signature
 
-The Syncfusion<sup>&reg;</sup>
-  Flutter PDF supports creating long term signature validation for the signed PDF document. The LTV signature allows you to check the validity of a signature long after the document has been signed. To achieve long term validation, all the required elements for signature validation must be embedded in the signed PDF.
+The Syncfusion<sup>&reg;</sup> Flutter PDF supports creating long term signature validation for the signed PDF document. The LTV signature allows you to check the validity of a signature long after the document has been signed. To achieve long term validation, all the required elements for signature validation must be embedded in the signed PDF.
 
 N> The resulting PDF document size will be substantial because all the necessary signature information, Certificate Revocation List (CRL), and Online Certificate Status Protocol (OCSP) are embedded.
 
-The following code example shows how to enable LTV for a signed PDF document using createLongTermValidity method in [PdfSignature](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSignature-class.html) class.
+The following code example shows how to enable LTV for a signed PDF document using the `createLongTermValidity` method in [PdfSignature](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSignature-class.html) class.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
     // Load the existing PDF document.
     PdfDocument document =
@@ -280,12 +300,14 @@ The following code example shows how to enable LTV for a signed PDF document usi
     document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
-## Create Long Term Validation (LTV) with public certificates data
+## LTV with public certificates data
 
-The following code example shows how to create an LTV for a signed PDF document using public certificates with the createLongTermValidity method in [PdfSignature](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSignature-class.html) class.
+The following code example shows how to create an LTV for a signed PDF document using public certificates with the `createLongTermValidity` method in [PdfSignature](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSignature-class.html) class. The `publicCertificatesData` parameter accepts the chain of certificates returned by `PdfCertificate.getCertificateChain()`, and the `includePublicCertificates` flag controls whether the certificates are embedded into the signed document.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
     // Load the existing PDF document.
     PdfDocument document =
@@ -307,15 +329,18 @@ The following code example shows how to create an LTV for a signed PDF document 
     document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
-## Adding a timestamp in digital signature
+## Adding a timestamp in a digital signature
 
-The Syncfusion<sup>&reg;</sup>
-  Flutter PDF allows you to add timestamp in the digital signature of the PDF document using timestampServer property in [PdfSignature](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSignature-class.html) class. The following code example explains the same.
+Use this approach when you are creating a new digital signature and want the signature itself to carry a trusted timestamp from a `TimestampServer` (a TSA URL, with optional `userName`, `password`, and `timeOut`).
 
-N> Signing using TimestampServer only works when the document is saved using asynchronous [save](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument/save.html). It is not supported in synchronous [saveSync](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument/saveSync.html).
+The Syncfusion<sup>&reg;</sup> Flutter PDF allows you to add a timestamp in the digital signature of the PDF document using the `timestampServer` property in [PdfSignature](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSignature-class.html) class. The following code example explains the same.
 
-{% highlight dart %}
+N> Signing using `TimestampServer` only works when the document is saved using the asynchronous [save](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument/save.html). It is not supported in the synchronous [saveSync](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument/saveSync.html).
+
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
     // Create a new PDF document.
     PdfDocument document = PdfDocument();
@@ -356,15 +381,18 @@ N> Signing using TimestampServer only works when the document is saved using asy
     document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
-## Adding a timestamp in the PDF document
+## Adding a timestamp to the PDF document
 
-You can add timestamp to the PDF document using timestampServer property in [PdfSignature](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSignature-class.html) class. The following code example explains the same.
+Use this approach when you need to add a trusted timestamp to a PDF document without binding it to a certificate-based signature.
 
-N> Signing using TimestampServer only works when the document is saved using asynchronous [save](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument/save.html). It is not supported in synchronous [saveSync](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument/saveSync.html).
+You can add a timestamp to the PDF document using the `timestampServer` property in [PdfSignature](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSignature-class.html) class. The following code example explains the same.
 
+N> Signing using `TimestampServer` only works when the document is saved using the asynchronous [save](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument/save.html). It is not supported in the synchronous [saveSync](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument/saveSync.html).
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
     // Create a new PDF document.
     PdfDocument document = PdfDocument();
@@ -393,14 +421,18 @@ N> Signing using TimestampServer only works when the document is saved using asy
     document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
-## Adding a timestamp in an existing PDF document
+## Adding a timestamp to an existing PDF document
 
-You can add timestamp to the existing PDF document using timestampServer property in [PdfSignature](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSignature-class.html) class. The following code example explains the same.
+Use this approach when the document already exists and you need to attach a trusted timestamp without re-signing with a certificate.
 
-N> Signing using TimestampServer only works when the document is saved using asynchronous [save](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument/save.html). It is not supported in synchronous [saveSync](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument/saveSync.html).
+You can add a timestamp to the existing PDF document using the `timestampServer` property in [PdfSignature](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfSignature-class.html) class. The following code example explains the same.
 
-{% highlight dart %}
+N> Signing using `TimestampServer` only works when the document is saved using the asynchronous [save](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument/save.html). It is not supported in the synchronous [saveSync](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfDocument/saveSync.html).
+
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
     // Create a new PDF document.
     PdfDocument document =
@@ -427,3 +459,4 @@ N> Signing using TimestampServer only works when the document is saved using asy
     document.dispose();
 
 {% endhighlight %}
+{% endtabs %}

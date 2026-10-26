@@ -1,12 +1,12 @@
 ---
-title: Working with Xamarin
-description: Create a Xamarin application and load the document
+title: Xamarin in Xamarin Word | Syncfusion
+description: Learn about Xamarin in the Syncfusion Xamarin Word library to create, read, and edit documents without external dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Working with Xamarin
+# Xamarin in Xamarin Word
 
 In your Xamarin application, please add the required assemblies in order to use DocIO. [Refer here for assemblies required](/document-processing/word/word-library/net/Assemblies-Required).
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Free text annotation in Vue PDF viewer component | Syncfusion
-description: Learn about free text annotations in the Syncfusion Vue PDF Viewer (Essential JS 2): add, edit, delete, and default settings.
-control: Free text annotation
+title: Free Text Annotation in Vue PDF Viewer | Syncfusion
+description: Enable, add, customize, and manage Free Text annotations in the Vue PDF Viewer for inline notes and labels on a PDF page.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Free text annotation in Vue PDF Viewer control
+# Free Text Annotation in Vue PDF Viewer
 
 The PDF Viewer control supports adding, editing, and deleting free text annotations. This article explains how to add free text annotations using the toolbar and programmatically, modify their properties, and manage selection and focus.
 
@@ -627,7 +627,7 @@ Select a color from the Font Color palette to change the font color.
 
 Use the Text Align tool to set the annotation text alignment.
 
-![FreeTextAnnotation](../images/textalign.png)
+![Set free text alignment](../images/textalign.png)
 
 ### Font styles
 
@@ -658,6 +658,100 @@ Adjust border thickness with the Edit Thickness slider.
 Adjust annotation opacity with the Edit Opacity slider.
 
 ![Change opacity](../images/fontopacity.png)
+
+## Supported Border Styles
+
+In addition to the default **Solid** border, Free Text annotations support the following additional border styles:
+
+- **Cloud** — scalloped cloud border.
+- **Dashed** — dashed line border.
+
+Use the [`BorderStyle`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/borderStyle) enum together with the optional `borderDashArray` (Dashed) and `cloudIntensity` (Cloud) settings in the [`freeTextSettings`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#freeTextSettings) property.
+
+```ts
+export enum BorderStyle {
+    Solid = 'Solid',
+    Dashed = 'Dashed',
+    Cloud = 'Cloud'
+}
+```
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `borderStyle` | `BorderStyle` | Specifies the border style. Supported values: `BorderStyle.Solid`, `BorderStyle.Cloud`, and `BorderStyle.Dashed`. |
+| `borderDashArray` | `number[]` | Specifies the dash pattern when `borderStyle` is `BorderStyle.Dashed`. |
+| `cloudIntensity` | `number` | Specifies the cloud border intensity. Supported range: `1` to `2`; default value: `1`. |
+
+N> `cloudIntensity` is honored only when `borderStyle` is `BorderStyle.Cloud`.
+N> `borderStyle`, `borderDashArray`, and `cloudIntensity` are preserved during save, reload, import, and export.
+
+### Apply a Cloud Border
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (Standalone)" %}
+
+<template>
+  <div id="app">
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl"
+      :freeTextSettings="freeTextSettings">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide } from 'vue';
+import { BorderStyle } from '@syncfusion/ej2-vue-pdfviewer';
+
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+const freeTextSettings = { fillColor: 'green', borderColor: 'blue', fontColor: 'yellow', borderStyle: BorderStyle.Cloud, cloudIntensity: 2 };
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer])
+
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+### Apply a Dashed Border
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (Standalone)" %}
+
+<template>
+  <div id="app">
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl"
+      :freeTextSettings="freeTextSettings">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide } from 'vue';
+import { BorderStyle } from '@syncfusion/ej2-vue-pdfviewer';
+
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+const freeTextSettings = { fillColor: 'green', borderColor: 'blue', fontColor: 'yellow', borderStyle: BorderStyle.Dashed, borderDashArray: [5, 5] };
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer])
+
+</script>
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Set default properties during control initialization
 
@@ -694,7 +788,7 @@ provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, Bookma
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Optiions API (Standalone)" %}
+{% highlight html tabtitle="Options API (Standalone)" %}
 
 <template>
   <div id="app">
@@ -732,7 +826,7 @@ export default {
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Composition API (Server-backed)" %}
+{% highlight html tabtitle="Composition API (Server-Backed)" %}
 
 <template>
   <div id="app">

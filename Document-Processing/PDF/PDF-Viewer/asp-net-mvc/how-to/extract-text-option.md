@@ -1,18 +1,17 @@
 ---
 layout: post
-title: Configure extractTextOption in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to use the extractTextOption property in the Syncfusion ASP.NET MVC PDF Viewer to control text extraction and memory usage.
+title: How to Configure ExtractTextOption in ASP.NET MVC PDF | Syncfusion
+description: Use the extractTextOption property in the ASP.NET MVC PDF Viewer to control how text is extracted and to manage memory usage during extraction.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Configure extractTextOption in the ASP.NET MVC PDF Viewer
+# How to Configure ExtractTextOption in ASP.NET MVC PDF Viewer
 
 The `extractTextOption` property controls how text is extracted and optimizes memory usage. It also affects the data returned in the `extractTextCompleted` event. Choose one of the following options to determine the text and layout data to retrieve.
 
-### Available Options:
+## Available Options:
 
 **None:** No text information is extracted or returned. This is useful when you want to optimize memory usage and don't need any text data.
 
@@ -42,14 +41,14 @@ The following example demonstrates how to configure the `extractTextOption` prop
 <script type="text/javascript">
     window.onload = function () {
         var viewer = document.getElementById('pdfviewer').ej2_instances[0];
-        viewer.extractTextOption  = 'None';  // Options: 'None', 'TextOnly', 'BoundsOnly', 'TextAndBounds'
+        viewer.extractTextOption = 'None';  // Options: 'None', 'TextOnly', 'BoundsOnly', 'TextAndBounds'
     }
 </script>
 
 {% endhighlight %}
 {% endtabs %}
 
-### Description of each option
+### Description of each option:
 **extractTextOption.TextAndBounds (default):** Returns both plain text and positional data (bounds). Use this option when you need both the content of the PDF and its layout for further processing.
 
 **extractTextOption.TextOnly:** Returns only the plain text from the PDF. No positional data is included. Text search functionality is disabled when using this option; use `findTextAsync` for searching.

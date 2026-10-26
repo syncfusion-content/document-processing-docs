@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Squiggly annotation in JavaScript PDF Viewer | Syncfusion
-description: Learn to add, edit, delete, and customize Squiggly text markup annotations in Syncfusion JavaScript PDF Viewer, with UI and programmatic examples.
+title: Squiggly Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Learn about the squiggly annotation in the JavaScript (ES5) PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Squiggly annotation in JavaScript PDF Viewer
+# Squiggly Annotation in JavaScript (ES5) PDF Viewer
 
 The PDF Viewer provides options to add, edit, and delete Squiggly text markup annotations on text. You can add squiggles via the UI (context menu or annotation toolbar) and programmatically. You can also customize color, opacity, author/subject, and default settings, and use undo/redo, save, print, or disable them as needed.
 

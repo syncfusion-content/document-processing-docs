@@ -1,371 +1,618 @@
 ---
 layout: post
-title: Collaborative Editing in ASP.NET MVC Document Editor | Syncfusion
+title: Collaborative Editing in ASP.NET MVC DOCX Editor | Syncfusion
 component: DocumentEditor
-description: Learn about collaborative editing in Syncfusion ASP.NET MVC Document editor control With Redis in ASP.NET Core of Syncfusion Essential JS 2 and more
+description: The collaborative editing feature in ASP.NET MVC DOCX Editor supports real-time multi-user document editing using Redis with ASP.NET.
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Collaborative Editing in ASP.NET ASP.MVC with Redis in ASP.NET Core
+# Collaborative Editing in ASP.NET MVC DOCX Editor with Redis
 
-Allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made. Collaborative editing can be a great way to improve efficiency, as it allows team members to work together on a document without having to wait for others to finish their changes.
+[ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) supports collaborative editing, which allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made.
+
+This topic walks through integrating collaborative editing in a ASP.NET MVC DOCX Editor using the [Syncfusion Collaborator](https://help.syncfusion.com/document-processing/collaborator/overview) common packages — the `@syncfusion/ej2-collaborator` client library and the `Syncfusion.Collaborator.Server.AspNet.MVC` ASP.NET MVC Collaboration Server with Redis as the distributed cache.
 
 ## Prerequisites
 
-Following things are needed to enable collaborative editing in Document Editor
+The following are needed to enable collaborative editing in DOCX Editor using the Syncfusion Collaborator (common collaboration packages).
 
-- SignalR
+- [Syncfusion Collaborator](https://help.syncfusion.com/document-processing/collaborator/overview) client and server packages:
+   - `@syncfusion/ej2-collaborator` (client library)
+   - `Syncfusion.Collaborator.Server.AspNet.Mvc` (ASP.NET MVC Collaboration Server)
 - Redis
-
-## SignalR
-
-In collaborative editing, real-time communication is essential for users to see each other's changes instantly. We use a real-time transport protocol to efficiently send and receive data as edits occur. For this, we utilize SignalR, which supports real-time data exchange between the client and server. SignalR ensures that updates are transmitted immediately, allowing seamless collaboration by handling the complexities of connection management and offering reliable communication channels.
-
-To make SignalR work in a distributed environment (with more than one server instance), it needs to be configured with either Azure SignalR Service or a Redis backplane.
-
-### Scale-out SignalR using Azure SignalR service
-
-Azure SignalR Service is a scalable, managed service for real-time communication in web applications. It enables real-time messaging between web clients (browsers) and your server-side application(across multiple servers). 
-
-Below is a code snippet to configure Azure SignalR in an ASP.NET Core application using the ```AddAzureSignalR``` method
-
-```csharp
-builder.Services.AddSignalR() .AddAzureSignalR("<your-azure-signalr-service-connection-string>", options => { 
-    // Specify the channel name 
-    options.Channels.Add("document-editor");
- }); 
-```
-
-### Scale-out SignalR using Redis
-
-Using a Redis backplane, you can achieve horizontal scaling of your SignalR application. The SignalR leverages Redis to efficiently broadcast messages across multiple servers. This allows your application to handle large user bases with minimal latency.
-
-In the SignalR app, install the following NuGet package:
-* ` Microsoft.AspNetCore.SignalR.StackExchangeRedis`
-
-Below is a code snippet to configure Redis backplane in an ASP.NET Core application using the ```AddStackExchangeRedis ``` method
-
-```csharp
-builder.Services.AddSignalR().AddStackExchangeRedis("<your_redis_connection_string>");
-```
-Configure options as needed:
-
-The following example shows how to add a channel prefix in the ConfigurationOptions object. 
-
-```csharp
-builder.Services.AddDistributedMemoryCache().AddSignalR().AddStackExchangeRedis(connectionString, options =>
-  {
-      options.Configuration.ChannelPrefix = "document-editor";
-  });
-```
 
 ## Redis
 
-In collaborative editing, Redis is used to store temporary data that helps queue editing operations and resolve conflicts using the `Operational Transformation` algorithm. 
+In collaborative editing, Redis is used to store temporary data that helps queue editing operations and resolve conflicts using the `Operational Transformation` algorithm.
 
-All editing operations in collaborative editing are stored in the Redis cache. To prevent memory buildup, we can configure  a `SaveThreshold` limit at the application level. If the `SaveThreshold` is 100, editing operations up to twice the save threshold limit are kept in Redis per document. Once exceeded, the first 100 operations (as defined by the save threshold) are removed from the cache and automatically saved to the source input document.
+All editing operations are stored in the Redis cache. To prevent memory buildup, a `SaveThreshold` limit can be configured at the application level. For example, if the SaveThreshold is set to 100, up to twice that number of editing operations are retained in Redis per document. When this limit is exceeded, the first 100 operations (as defined by the save threshold) are removed from the cache and automatically saved to the source document.
 
-The configuration and store size of the Redis cache can be adjusted based on the following considerations.
+The configuration and storage size of the Redis cache can be adjusted based on the following considerations:
 
-- *Storage Requirements*: A minimum of 400KB of cache memory is needed for editing a single document, with the capacity to store up to 100 editing operations. Storage needs may increase based on following factor.
-    - *Images*: Increases with the number of images added to the document.
-    - *Pasted content*: Depends on the size of the SFDT content.
-- *Connection Limits*: Redis has a limit on concurrent connections. Choose the Redis configuration based on your user base to ensure optimal performance.
+- *Storage Requirements*: A minimum of 400 KB of cache memory is required to edit a single document, with the capacity to store up to 100 editing operations. Storage requirements may increase based on the following factors:
 
-> For better performance, we recommend to have minimum `SaveThreshold` limit of 100.
+   - *Images*: Increases with the number of images added to the document.
 
-## How to enable collaborative editing in client side
+   - *Pasted content*: Depends on the size of the SFDT content.
 
-### Step 1: Enable collaborative editing in Document Editor
+- *Connection Limits*: Redis has a limit on concurrent connections. The Redis configuration should be selected based on the user base to ensure optimal performance.
 
-To enable collaborative editing, inject `CollaborativeEditingHandler` and set the property `enableCollaborativeEditing` to true in the Document Editor, like in the code snippet below.
+> For better performance, a minimum `SaveThreshold` value of 100 is recommended.
 
+## Collaborative editing architecture 
+
+Collaborative editing with the common Syncfusion Collaborator packages is built using three main components:
+
+### Client (Collaboration Client + DOCX Editor adapter)
+
+The browser side uses the shared [Collaboration Client](https://help.syncfusion.com/document-processing/collaborator/collaboration-client) (`@syncfusion/ej2-collaborator`) wired to the ASP.NET MVC DOCX Editor through a control-specific **adapter** that implements the `ICollaborationProvider` interface.
+
+- Captures user edits in the DOCX Editor.
+- Bridges local edits to the Collaboration Client through a `DocumentEditorAdapter`.
+- Sends local editing actions to the Collaboration Server.
+- Receives remote actions and applies them to the editor through `applyRemoteAction`.
+- Keeps the document synchronized across all connected users.
+
+### Collaboration Server (common collaborator framework)
+
+The ASP.NET MVC [Collaboration Server](https://help.syncfusion.com/document-processing/collaborator/collaboration-server#aspnet-mvc-server) (`Syncfusion.Collaborator.Server.AspNet.Mvc`) hosts the shared, control-agnostic collaboration services and uses a control-specific **server adapter** (`ICollaborationAdapter`) to translate Document Editor actions to and from the common collaboration model.
+
+- Receives editing actions from the Collaboration Client.
+- Runs Operational Transformation through the server adapter and common `IActionService`.
+- Persists actions and assigns version numbers.
+- Broadcasts the transformed action to all participants in the room using `IActiveTransport`.
+
+### Real-time communication (transport layer)
+
+Acts as the transport layer between the Collaboration Client and the Collaboration Server. The common Collaborator framework supports  transport by **WebSocket**.
+
+- Sends and receives editing changes instantly between clients and server.
+- Broadcasts updates to all connected users in real time.
+- With WebSocket, ensure WebSocket support is enabled on the host (`app.UseWebSockets()`) before mapping the collaboration server.
+
+The transport is selected when constructing the `CollaborationClient` on the client side (`connectionType: 'websocket'`) and through `CollaborationOptions.ConnectionType` on the server side. 
+
+### Distributed cache (Redis)
+
+- Temporarily stores all editing operations.
+- Maintains the correct order of changes.
+- Resolves conflicts between multiple users using the OT algorithm.
+
+## Integrate collaborative editing in client side
+
+### Step 1: Enable collaborative editing in DOCX Editor
+
+To enable collaborative editing, inject `CollaborativeEditingHandler` and set the `enableCollaborativeEditing` property to true in the DOCX Editor.
+
+The following code snippet demonstrates how to enable collaborative editing in the DOCX Editor.
 
 {% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/collaborative-editing/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/collaborative-editing/document-editor.cs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/document-editor/javascript-es6/collaborative-editing-cs1/index.ts %}
 {% endhighlight %}
 {% endtabs %}
 
-## Step 2: Configure SignalR to send and receive changes
+### Step 2: Install the Collaboration Client package
 
-To broadcast the changes made and receive changes from remote users, configure SignalR like below.
-
+Install the shared [Collaboration Client](https://www.npmjs.com/package/@syncfusion/ej2-collaborator) npm package in your application.
 
 {% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/collaborative-editing/script-1 %}
+{% highlight bash tabtitle="npm" %}
+
+npm install @syncfusion/ej2-collaborator
+
 {% endhighlight %}
 {% endtabs %}
 
-### Step 3: Join SignalR room while opening the document
+### Step 3: Create the Document Editor adapter
 
-When opening a document, we need to generate a unique ID for each document. These unique IDs are then used to create rooms using SignalR, which facilitates sending and receiving data from the server.
+The adapter acts as a bridge between the Collaboration Client and the DOCX Editor. It implements the `ICollaborationProvider` interface and is responsible for loading the document from the server, bridging local edits to the editor's sender, and applying remote collaboration actions to the editor.
 
+The following code snippet demonstrates the `DocumentEditorAdapter`.
 
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/collaborative-editing/script-2 %}
-{% endhighlight %}
-{% endtabs %}
+ ```ts
+import { ICollaborationProvider, ICollaborationActionData } from '@syncfusion/ej2-collaborator';
 
-### Step 5: Broadcast current editing changes to remote users
+export class DocumentEditorAdapter implements ICollaborationProvider {
 
-Changes made on the client-side need to be sent to the server-side to broadcast them to other connected users. To send the changes made to the server, use the method shown below from the document editor using the `contentChange` event.
+  constructor(
+    private container: DocumentEditorContainer,
+    private serviceUrl: string,
+  ) { }
 
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/collaborative-editing/script-3 %}
-{% endhighlight %}
-{% endtabs %}
-
-## How to enable collaborative editing in ASP.NET Core
-
-### Step 1: Configure SignalR in ASP.NET Core 
-
-We are using Microsoft SignalR to broadcast the changes. Please add the following configuration to your application's Program.cs file.
-
-```csharp
-    using Microsoft.Azure.SignalR;
-    .....
-    builder.Services.AddSignalR();
-    .....
-    .....
-    .....
-    app.MapHub<DocumentEditorHub>("/documenteditorhub");
-    .....
-    .....
-```
-
-### Step 2: Configure SignalR hub to create room for collaborative editing session
-
-To manage groups for each document, create a folder named "Hub" and add a file named "DocumentEditorHub.cs" inside it. Add the following code to the file to manage SignalR groups using room names.
-
-Join the group by using unique id of the document by using `JoinGroup` method.
-
-```csharp
-static Dictionary<string, ActionInfo> userManager = new Dictionary<string, ActionInfo>();
-    internal static Dictionary<string, List<ActionInfo>> groupManager = new Dictionary<string, List<ActionInfo>>();
-
-    // Join to the specified room name
-    public async Task JoinGroup(ActionInfo info)
-    {
-        if (!userManager.ContainsKey(Context.ConnectionId))
-        {
-            userManager.Add(Context.ConnectionId, info);
-        }
-        info.ConnectionId = Context.ConnectionId;
-        //Add the current connected use to the specified group
-        await Groups.AddToGroupAsync(Context.ConnectionId, info.RoomName);
-        if (groupManager.ContainsKey(info.RoomName))
-        {
-            await Clients.Caller.SendAsync("dataReceived", "addUser", groupManager[info.RoomName]);
-        }
-        lock (groupManager)
-        {
-            if (groupManager.ContainsKey(info.RoomName))
-            {
-                groupManager[info.RoomName].Add(info);
-            }
-            else
-            {
-                List<ActionInfo> actions = new List<ActionInfo>
-                {
-                    info
-                };
-                groupManager.Add(info.RoomName, actions);
-            }
-        }
-       // Notify other users in the group about new user joined the collaborative editing session.
-        Clients.GroupExcept(info.RoomName, Context.ConnectionId).SendAsync("dataReceived", "addUser", info);
-    }
-
-```
-
-Handle user disconnection using SignalR.
-
-```csharp
-//Handle disconnection from group.
-    public override Task OnDisconnectedAsync(Exception? e)
-    {
-        string roomName = userManager[Context.ConnectionId].RoomName;
-        if (groupManager.ContainsKey(roomName))
-        {
-            groupManager[roomName].Remove(userManager[Context.ConnectionId]);
-
-            if (groupManager[roomName].Count == 0)
-            {
-                groupManager.Remove(roomName);
-//If all user disconnected from current room. Auto save the change to source document.
-CollaborativeEditingController.UpdateOperationsToSourceDocument(roomName, “<<documentpath>>”, false);
-            }
-        }
-
-        if (userManager.ContainsKey(Context.ConnectionId))
-        {
-            //Notify other user in the group about user exit the collaborative editing session
-            Clients.OthersInGroup(roomName).SendAsync("dataReceived", "removeUser", Context.ConnectionId);
-            Groups.RemoveFromGroupAsync(Context.ConnectionId, roomName);
-            userManager.Remove(Context.ConnectionId);
-        }
-        return base.OnDisconnectedAsync(e);
-    }
-
-```
-
-### Step 3: Configure Redis cache connection string in application level
-
-Configure the Redis that stores temporary data for the collaborative editing session. Provide the Redis connection string in `appsettings.json` file.
-
-```json
-.....
-"ConnectionStrings": {
-  "RedisConnectionString": "<<Your Redis connection string>>"
-}
-.....
-
-```
-
-### Step 4: Configure Web API actions for collaborative editing
-
-#### Import File
-
-1.	When opening a document, check the Redis cache for pending operations and retrieve them for the collaborative editing session.
-2.	If pending operations exist, apply them to the WordDocument instance using the `UpdateActions` method before converting it to the SFDT format.
-
-```csharp
-public string ImportFile([FromBody] FileInfo param)
- {
-     .....
-     .....
-     DocumentContent content = new DocumentContent();
-
-     .....
-     //Get source document from database/file system/blob storage
-     WordDocument document = GetSourceDocument(param.fileName);
-     .....
-     //Get the temporary operations
-     List<ActionInfo> actions = await GetPendingOperations(param.fileName, 0, -1);
-     if(actions!=null && actions.Count > 0)
-     {
-         //Apply temporary data to the document.
-         document.UpdateActions(actions);
-     }
-     string json = Newtonsoft.Json.JsonConvert.SerializeObject(document);
-     content.version = 0;
-     content.sfdt = json;
-     return Newtonsoft.Json.JsonConvert.SerializeObject(content);
- }
-
-```
-
-#### Update editing records to Redis cache.
-
-Each edit operation made by the user is sent to the server and pushed into a Redis list data structure. Each operation is assigned a version number upon insertion into Redis.
-
-After inserting the records to the server, the position of the current editing operation must be transformed relative to any previous editing operations not yet synced with the client using the `TransformOperation` method to resolve any potential conflicts with the help of the `Operational Transformation` algorithm.
-
-Once the conflict is resolved, the current operation is broadcast to all connected users within the group.
-
-```csharp
-public async Task<ActionInfo> UpdateAction([FromBody] ActionInfo param)
-{
-    try
-    {
-        ActionInfo modifiedAction = AddOperationsToCache(param);
-        //After transformation broadcast changes to all users in the gropu
-        await _hubContext.Clients.Group(param.RoomName).SendAsync("dataReceived", "action", modifiedAction);
-        return modifiedAction;
-    }
-    catch
-    {
-        return null;
-    }
-}
-
-private ActionInfo AddOperationsToCache(ActionInfo action)
- {
-     int clientVersion = action.Version;
-     string insertScript = "-------"
-     …………
-     …………
-     …………
-     ………… 
-
-    IDatabase database = _redisConnection.GetDatabase();
-    // Define the keys for Redis operations based on the action's room name
-    RedisKey[] keys = new RedisKey[] { action.RoomName + CollaborativeEditingHelper.VersionSuffix, action.RoomName, action.RoomName + CollaborativeEditingHelper.RevisionSuffix };
-    // Serialize the action and prepare values for the Redis script
-    RedisValue[] values = new RedisValue[] { JsonConvert.SerializeObject(action), clientVersion.ToString(), CollaborativeEditingHelper.SaveThreshold.ToString() };
-    // Execute the Lua script in Redis and store the results
-    RedisResult[] results = (RedisResult[])await database.ScriptEvaluateAsync(insertScript, keys, values);
-
-    List<ActionInfo> previousOperations = ((RedisResult[])results[1]).Select(value => JsonConvert.DeserializeObject<ActionInfo>(value.ToString())).ToList();
-     previousOperations.ForEach(op => op.Version = ++clientVersion);
-     if (previousOperations.Count > 1)
-     {
-        // Set the current action to the last operation in the list
-        action = previousOperations.Last();
-        // Transform operations that have not been transformed yet
-        previousOperations.Where(op => !op.IsTransformed).ToList().ForEach(op => CollaborativeEditingHandler.TransformOperation(op, previousOperations));
-     }
-     action = actions[actions.Count - 1];
-     action.Version = updateVersion;
-     //Return the transformed operation to broadcast it to other clients.
-     return action;
- }
-
-```
-
-#### Add Web API to get previous operation as a backup to get lost operations
-
-On the client side, messages broadcast using SignalR might be received out of order or lost due to network issues. In such cases, we need a backup method to retrieve missing operations from Redis. By using the following method, we can retrieve all operations performed after the last successful client-synchronized version and return any missing operations to the requesting client.
-
-```csharp
-public async Task<string> GetActionsFromServer(ActionInfo param)
-  {
-      try
-      {
-          // Initialize necessary variables from the parameters and helper class
-          int saveThreshold = CollaborativeEditingHelper.SaveThreshold;
-          string tableName = param.RoomName;
-          int lastSyncedVersion = param.Version;
-          int clientVersion = param.Version;
-
-          // Retrieve the database connection
-          IDatabase database = _redisConnection.GetDatabase();
-
-          // Fetch actions that are effective and pending based on the last synced version
-          List<ActionInfo> actions = await GetEffectivePendingVersion(tableName, lastSyncedVersion);
-
-          // Increment the version for each action sequentially
-          actions.ForEach(action => action.Version = ++clientVersion);
-
-          // Filter actions to only include those that are newer than the client's last known version
-          actions = actions.Where(action => action.Version > lastSyncedVersion).ToList();
-
-          // Transform actions that have not been transformed yet
-          actions.Where(action => !action.IsTransformed).ToList()
-              .ForEach(action => CollaborativeEditingHandler.TransformOperation(action, actions));
-
-          // Serialize the filtered and transformed actions to JSON and return
-          return Newtonsoft.Json.JsonConvert.SerializeObject(actions);
-      }
-      catch (Exception ex)
-      {
-          // In case of an exception, return an empty JSON object
-          return "{}";
-      }
+ // The only ICollaborationProvider method — applied for every remote action.
+  public applyRemoteAction(action: string, data: ICollaborationActionData): void {
+    this.container.documentEditor.collaborativeEditingHandlerModule?.applyRemoteAction(action, data.payload);
   }
 
+  // Fetch the document from the product's REST API and return the room name.
+  public async loadFromServer(fileName: string): Promise<string> {
+    const roomName: string = this.getRoomName(fileName);
+    const response: Response = await fetch(
+      this.serviceUrl + 'api/CollaborativeEditing/ImportFile',
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ fileName, roomName })
+      }
+    );
+    if (!response.ok) {
+      throw new Error('Failed to load document');
+    }
+    const responseText: string = await response.text();
+    await this.open(responseText, roomName);
+    return roomName;
+  }
+
+  // Seed the editor and bridge local edits to the editor's sender.
+  public async open(responseText: string, roomName: string): Promise<void> {
+    const data: any = JSON.parse(responseText);
+    this.container?.documentEditor.collaborativeEditingHandlerModule?.updateRoomInfo(
+      roomName, data.version, this.serviceUrl + 'api/CollaborativeEditing/'
+    );
+    this.container.documentEditor.open(data.sfdt);
+    this.container.contentChange = (args: any) => {
+      // Send the editing action to server
+      this.container.documentEditor.collaborativeEditingHandlerModule?.sendActionToServer(args.operations as Operation[]);
+    }
+  } 
+
+  // Generate a unique room name from the query string (or create one).
+  private getRoomName(fileName: string): string {
+    const queryString: string = window.location.search;
+    const urlParams: URLSearchParams = new URLSearchParams(queryString);
+    let roomId: string | null = urlParams.get('id');
+    if (!roomId) {
+      roomId = Math.random().toString(32).slice(2);
+      window.history.replaceState({}, '', '?id=' + roomId);
+    }
+    return roomId;
+  }
+}
+
 ```
 
-Full version of the code discussed about can be found in below GitHub location.
+### Step 4: Wire the Collaboration Client
 
-GitHub Example: [`Collaborative editing examples`](https://github.com/SyncfusionExamples/EJ2-Document-Editor-Collabrative-Editing)
+With collaborative editing enabled in the DOCX Editor (Step 2), create the adapter and initialize the [Collaboration Client](https://help.syncfusion.com/document-processing/collaborator/collaboration-server) with the desired transport. The Collaboration Client connects to the server, joins the collaboration room, and tracks user join/leave events. After the document is loaded through the adapter, join the collaboration room.
+
+The `connectionType` option selects the transport:
+- `'websocket'` — uses WebSocket. The server must be registered with `ConnectionType = CollaborationConnectionType.WebSocket`
+
+The following code snippet demonstrates how to wire the Collaboration Client with websocket transport in the DOCX Editor.
+
+```ts
+import { CollaborationClient, UserInfo } from '@syncfusion/ej2-collaborator';
+import { DocumentEditorAdapter } from './DocumentEditorAdapter';
+
+// Set the backend service URL used by the adapter and editor.
+const serviceUrl: string = 'https://localhost:44387/';
+
+// Create the adapter that bridges the DOCX Editor and the Collaboration Client.
+const adapter: DocumentEditorAdapter = new DocumentEditorAdapter(this.container, serviceUrl);
+
+// Use connectionType: 'websocket' to use the WebSocket transport.
+const client: CollaborationClient = new CollaborationClient(adapter, {
+  serviceUrl: 'https://localhost:44387/',
+  connectionType: 'websocket',
+  currentUser: this.currentUser,
+  onUserJoined: (user: UserInfo) => {
+    // Add the user to title bar when user joins the room
+    if (this.titleBar) { this.titleBar.addUser(user); }
+  },
+  onUserLeft: (user: UserInfo) => {
+    // Remove the user from title bar when user leaves the room
+    if (this.titleBar) { this.titleBar.removeUser(user); }
+  }
+});
+
+// Load the document, then join the collaboration room.
+(async () => {
+  const roomName: string = await adapter.loadFromServer('Giant Panda.docx');
+  await client.joinRoomAsync(roomName);
+})();
+
+```
+
+The Collaboration Client internally manages the transport connection, room joining, and the `dataReceived` events (`connectionId`, `addUser`, `removeUser`, and `action`). For each remote action received from the server, it calls the adapter's `applyRemoteAction` method, which applies the action to the DOCX Editor through the `CollaborativeEditingHandler`. Local edits are bridged to the editor's sender through the `contentChange` handler in the adapter, so there is no need to configure WebSocket manually.
+
+## Integrate collaborative editing in server side
+
+The server side uses the shared [Collaboration Server](https://help.syncfusion.com/document-processing/collaborator/collaboration-server) (`Syncfusion.Collaborator.Server.AspNet.Mvc`) and a DOCX Editor-specific server adapter that implements the `ICollaborationAdapter` interface. The common collaboration framework handles Redis storage, Operational Transformation, versioning, and broadcast, while the adapter translates Document Editor actions to and from the common collaboration model.
+
+### Step 1: Create the DOCX Editor web service project 
+
+Create an ASP.NET MVC web service to handle server-side operations. Refer to the [ASP.NET MVC web service for ASP.NET MVC DOCX Editor](https://help.syncfusion.com/document-processing/word/word-processor/javascript-es6/web-services/mvc) documentation to create the web service project.
+
+### Step 2: Install required NuGet packages
+
+In the web service app, install the following NuGet packages:
+
+- Syncfusion.Collaborator.Server.AspNet.Mvc
+- [Syncfusion.EJ2.WordEditor.AspNet.Mvc5](https://www.nuget.org/packages/Syncfusion.EJ2.WordEditor.AspNet.Mvc5)
+
+### Step 3: Register the Collaboration Server and provide Redis connection string
+
+Open Global.asax.cs and register the Collaboration Server services during application startup. Configure the Redis connection and select WebSocket as the transport type. For ASP.NET MVC, the WebSocket transport is selected by setting CollaborationConnectionType.WebSocket. The adapter is registered through ServiceCollectionExtensions.RegisterAdapter(…).
+
+The following code snippet demonstrates the configuration in the "Global.asax.cs " file.
+
+```C#
+
+namespace WebApplication1
+{
+    public class MvcApplication : System.Web.HttpApplication
+    {
+        protected void Application_Start()
+        {
+            AreaRegistration.RegisterAllAreas();
+            GlobalConfiguration.Configure(WebApiConfig.Register);
+            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);           
+            ServiceCollectionExtensions.RegisterAdapter(
+                new DocumentEditorCollaborationAdapter());
+            ServiceCollectionExtensions.AddCollaborationServer(options =>{
+            options.ConnectionString = "Your Redis Connection string";
+            options.ConnectionType = CollaborationConnectionType.WebSocket;            
+            });
+           
+        }
+    }
+}
+
+
+```
+
+### Step 4: Mount the WebSocket endpoint (Startup.cs)
+Add an startup class to expose the Collaboration Server WebSocket endpoint. Incoming WebSocket requests are forwarded to the Collaboration Server transport handler.
+
+```C#
+ public class Startup
+ {
+     public void Configuration(IAppBuilder app)
+     {
+         app.Map("/ws", map =>
+         {
+             map.Run(context =>
+             {
+                 var httpContext = HttpContext.Current;
+
+                 if (httpContext == null)
+                 {
+                     context.Response.StatusCode = 500;
+                     return Task.CompletedTask;
+                 }
+
+                 if (!httpContext.IsWebSocketRequest)
+                 {
+                     context.Response.StatusCode = 400;
+                     return context.Response.WriteAsync(
+                         "WebSocket connection required.");
+                 }                    
+                 httpContext.AcceptWebSocketRequest(ServiceCollectionExtensions.MapCollaborationServer());
+                 return Task.CompletedTask;
+             });
+         });
+     }
+    
+ }
+```
+
+### Step 5: Add the DOCX Editor server adapter
+
+Create a folder named "Adapter" and add a file named `DocumentEditorCollaborationAdapter.cs` inside it. This adapter is the control-specific translator on the server side. It implements `ICollaborationAdapter` and converts Document Editor actions to and from the common `CollaborationAction`, runs Operational Transformation, and queues save requests for background processing.
+
+```C#
+namespace WebApplication1.Adapter
+{
+    public class DocumentEditorCollaborationAdapter : ICollaborationAdapter
+    {
+        public DocumentEditorCollaborationAdapter()
+        {
+        }
+
+        public CollaborationAction MapControlToGenericAction(object controlAction)
+        {
+            var action = (Syncfusion.EJ2.DocumentEditor.ActionInfo)controlAction;
+
+            return new CollaborationAction
+            {
+                RoomName = action.RoomName,
+                ConnectionId = action.ConnectionId,
+                CurrentUser = action.CurrentUser,
+                Version = action.Version,
+                ClientVersion = action.ClientVersion,
+                IsTransformed = action.IsTransformed,
+                Data = JsonConvert.SerializeObject(action.Operations)
+            };
+        }
+
+        public object MapGenericToControlAction(CollaborationAction action)
+        {
+            return new Syncfusion.EJ2.DocumentEditor.ActionInfo
+            {
+                RoomName = action.RoomName,
+                ConnectionId = action.ConnectionId,
+                CurrentUser = action.CurrentUser,
+                Version = action.Version,
+                ClientVersion = action.ClientVersion,
+                IsTransformed = action.IsTransformed,
+                Operations = JsonConvert.DeserializeObject<List<DocumentOperation>>(action.Data)
+            };
+        }
+
+        public async Task ProcessSaveRequestAsync(SaveRequest request, CancellationToken cancellationToken)
+        {
+            //throw new NotImplementedException();
+            Console.WriteLine("save called");
+            // You can get the document master document 
+            Syncfusion.EJ2.DocumentEditor.WordDocument document = CollaborativeEditingController.GetSourceDocument();
+            CollaborativeEditingHandler handler = new CollaborativeEditingHandler(document);
+            //Get actions from Redis
+            var actions = request.Actions.Select(x => (Syncfusion.EJ2.DocumentEditor.ActionInfo)MapGenericToControlAction(x)).ToList();
+
+
+            if (actions.Count > 0)
+            {
+                foreach (var action in actions)
+                {
+                    if (!action.IsTransformed)
+                    {
+                        CollaborativeEditingHandler.TransformOperation(action, actions);
+                    }
+                }
+                //Apply the actions to document 
+                foreach (var action in actions)
+                {
+                    handler.UpdateAction(action);
+                }
+
+                MemoryStream stream = new MemoryStream();
+                //save the updated document in the loaction as per your need. 
+
+                Syncfusion.DocIO.DLS.WordDocument doc = WordDocument.Save(Newtonsoft.Json.JsonConvert.SerializeObject(handler.Document));
+
+                doc.Save(stream, Syncfusion.DocIO.FormatType.Docx);
+
+               // SaveDocument(stream, "Getting Started.docx");
+
+                stream.Close();
+            }
+
+            document.Dispose();
+
+            var actionService = CollaborationServiceContainer.Resolve<IActionService>();
+            await actionService.ClearRecordsAsync(request.RoomName, request.PartialSave);
+        }
+
+        public async Task SaveOperationsAsync(List<CollaborationAction> actions, string roomName, bool partialSave)
+        {
+            var message = new SaveRequest
+            {
+                Actions = actions,
+                PartialSave = partialSave,
+                RoomName = roomName
+            };
+
+            var queue = CollaborationServiceContainer.Resolve<IBackgroundTaskQueue>();
+            await queue.QueueBackgroundWorkItemAsync(message);
+        }
+
+        public void TransformOperations(List<CollaborationAction> actions)
+        {
+            var documentActions = actions.Select(x => (Syncfusion.EJ2.DocumentEditor.ActionInfo)MapGenericToControlAction(x)).ToList();
+
+            documentActions.Where(x => !x.IsTransformed).ToList().ForEach(x => CollaborativeEditingHandler.TransformOperation(x, documentActions));
+
+        }
+    }
+}
+
+```
+
+### Step 6: Configure Web API actions for collaborative editing
+
+Create "CollaborativeEditingController.cs" in the "Controllers" folder. 
+
+This controller is the HTTP bridge between the client control and the common Collaboration Server. It depends on the shared `IActionService`, the control-specific `ICollaborationAdapter`, and the `IActiveTransport` for broadcasting. The three required web service methods are:
+
+| Web service method | Why it is needed |
+| --- | --- |
+| ImportFile | Loads the source document and applies any pending collaboration actions before sending the latest document state to a newly connected client. Returns the document content and current server version. |
+| UpdateAction | Receives editing actions from connected clients, processes operational transformation, persists the action, and broadcasts the updated action to other participants. |
+| GetActionsFromServer | Retrieves collaboration actions created after the client's last synchronized version so the client can catch up with the latest document state. |
+
+```C#
+
+namespace WebApplication1.Controllers
+{
+     [RoutePrefix("api/CollaborativeEditing")]
+    public class CollaborativeEditingController : ApiController
+    {
+        private static string fileLocation;
+
+        private readonly IActionService actionService;
+        private readonly ICollaborationAdapter adapter;
+        private readonly IActiveTransport transport;
+        public CollaborativeEditingController()
+        {
+            fileLocation = HostingEnvironment.MapPath("~/App_Data");
+
+            actionService = CollaborationServiceContainer.Resolve<IActionService>();
+
+            adapter = CollaborationServiceContainer.Resolve<ICollaborationAdapter>();
+
+            transport = CollaborationServiceContainer.Resolve<IActiveTransport>();
+        }
+        public CollaborativeEditingController(
+            IActionService actionService,
+            ICollaborationAdapter adapter,
+            IActiveTransport transport)
+        {
+            fileLocation = HostingEnvironment.MapPath("~/App_Data");
+            this.actionService = actionService;
+            this.adapter = adapter;
+            this.transport = transport;
+        }
+
+        [HttpPost]
+        [Route("ImportFile")]
+        public async Task<HttpResponseMessage> ImportFile(FileInfo param)
+        {
+            try
+            {
+                DocumentContent content = new DocumentContent();
+
+                EJ2WordDocument document = GetSourceDocument();
+
+                List<CollaborationAction> collaborationActions = await actionService.GetPendingOperationsAsync( param.roomName,  0, -1);
+
+                List<ActionInfo> actions = collaborationActions.Select(x => (ActionInfo)adapter.MapGenericToControlAction(x)).ToList();
+
+                if (actions != null && actions.Count > 0)
+                {
+                    document.UpdateActions(actions);
+                }
+
+                string sfdt = JsonConvert.SerializeObject(document);
+
+                content.version = 0;
+                content.sfdt = sfdt;
+
+                document.Dispose();
+
+                return Request.CreateResponse(HttpStatusCode.OK, content);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse( System.Net.HttpStatusCode.InternalServerError, ex);
+            }
+        }
+
+
+
+        [HttpPost]
+        [Route("UpdateAction")]
+        public async Task<Syncfusion.EJ2.DocumentEditor.ActionInfo> UpdateAction(Syncfusion.EJ2.DocumentEditor.ActionInfo param)
+        {
+            // Convert DocumentEditor ActionInfo to CollaborationAction
+            CollaborationAction collaborationAction = (CollaborationAction)adapter.MapControlToGenericAction(param);
+            // Process through common package
+            CollaborationAction modifiedAction = await actionService.AddOperationAsync(collaborationAction, adapter);
+            // Convert back to DocumentEditor ActionInfo
+            var documentAction = (Syncfusion.EJ2.DocumentEditor.ActionInfo)adapter.MapGenericToControlAction(modifiedAction);           
+            await transport.SendToGroupAsync(param.RoomName, "action", documentAction);
+            return documentAction;
+
+        }
+
+        [HttpPost]
+        [Route("GetActionsFromServer")]       
+        public async Task<string> GetActionsFromServer(Syncfusion.EJ2.DocumentEditor.ActionInfo param)
+        {
+            try
+            {
+                // Initialize necessary variables from the parameters and helper class
+                string roomName = param.RoomName;
+                int lastSyncedVersion = param.Version;
+                int clientVersion = param.Version;
+
+                // Retrieve the database connection
+                // IDatabase database = _redisConnection.GetDatabase();
+
+                // Fetch actions that are effective and pending based on the last synced version
+                List<CollaborationAction> collaborationActions = await actionService.GetEffectivePendingVersionAsync(roomName, lastSyncedVersion);
+
+
+                List<Syncfusion.EJ2.DocumentEditor.ActionInfo> actions = collaborationActions.Select(x => (Syncfusion.EJ2.DocumentEditor.ActionInfo)adapter.MapGenericToControlAction(x)).ToList();
+
+                // Increment the version for each action sequentially
+                actions.ForEach(action => action.Version = ++clientVersion);
+
+                // Filter actions to only include those that are newer than the client's last known version
+                actions = actions.Where(action => action.Version > lastSyncedVersion).ToList();
+
+                // Transform actions that have not been transformed yet
+                actions.Where(action => !action.IsTransformed).ToList()
+                    .ForEach(action => CollaborativeEditingHandler.TransformOperation(action, actions));
+
+                // Serialize the filtered and transformed actions to JSON and return
+                return Newtonsoft.Json.JsonConvert.SerializeObject(actions);
+            }
+            catch
+            {
+                // In case of an exception, return an empty JSON object
+                return "{}";
+            }
+        }
+
+        public class DocumentContent
+        {
+            public int version { get; set; }
+
+            public string sfdt { get; set; }
+        }
+
+        public class FileInfo
+        {
+            public string fileName { get; set; }
+
+            public string roomName { get; set; }
+        }
+        internal static EJ2WordDocument GetSourceDocument()
+        {
+            string path = HostingEnvironment.MapPath("~/App_Data/Giant Panda.docx");
+
+            string extension = Path.GetExtension(path);
+
+            Stream stream = File.Open(
+                path,
+                FileMode.Open,
+                FileAccess.Read,
+                FileShare.Read);
+
+            EJ2WordDocument document =
+                EJ2WordDocument.Load(
+                    stream,
+                    GetFormatType(extension));
+
+            stream.Dispose();
+
+            return document;
+        }
+
+
+        internal static Syncfusion.EJ2.DocumentEditor.FormatType GetFormatType(string format)
+        {
+            if (string.IsNullOrEmpty(format))
+                throw new NotSupportedException("EJ2 DocumentEditor does not support this file format.");
+            switch (format.ToLower())
+            {
+                case ".dotx":
+                case ".docx":
+                case ".docm":
+                case ".dotm":
+                    return Syncfusion.EJ2.DocumentEditor.FormatType.Docx;
+                case ".dot":
+                case ".doc":
+                    return Syncfusion.EJ2.DocumentEditor.FormatType.Doc;
+                case ".rtf":
+                    return Syncfusion.EJ2.DocumentEditor.FormatType.Rtf;
+                case ".txt":
+                    return Syncfusion.EJ2.DocumentEditor.FormatType.Txt;
+                case ".xml":
+                    return Syncfusion.EJ2.DocumentEditor.FormatType.WordML;
+                case ".html":
+                    return Syncfusion.EJ2.DocumentEditor.FormatType.Html;
+                default:
+                    throw new NotSupportedException("EJ2 DocumentEditor does not support this file format.");
+            }
+        }
+    }
+
+```
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/EJ2-Document-Editor-Collaborative-Editing/tree/master/Server%20side%20with%20distributed%20cache/).

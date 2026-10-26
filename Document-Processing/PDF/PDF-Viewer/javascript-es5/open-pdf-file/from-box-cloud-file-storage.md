@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open PDF from Box cloud storage in JavaScript PDF Viewer | Syncfusion
-description: Learn how to load PDFs from Box cloud storage in the Syncfusion JavaScript PDF Viewer component using a server-backed approach.
+title: From Box Cloud File Storage in JavaScript (ES5) PDF | Syncfusion
+description: Load and display PDF files stored in Box cloud storage in the JavaScript (ES5) PDF Viewer using a server-backed web service for authentication.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF from Box cloud storage in JavaScript
+# Open PDF from Box Cloud Storage in JavaScript (ES5) PDF Viewer
 
 Follow these steps to load a PDF from Box cloud storage using the server-backed PDF Viewer.
 
@@ -56,7 +56,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Load()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to load PDF files from Box cloud storage.
+5. Modify the [Load()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#load) method to load PDF files from Box cloud storage.
 
 ```csharp
 [HttpPost("Load")]
@@ -130,7 +130,7 @@ N> Replace the placeholders with your actual Box values: Access Token, Folder ID
 
 **Step 4:** Configure the PDF Viewer component
 
-Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from Box cloud storage. Ensure the document name exists in your Box folder.
+Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from Box cloud storage. Ensure the document name exists in your Box folder.
 
 ```javascript
 // Inject required modules

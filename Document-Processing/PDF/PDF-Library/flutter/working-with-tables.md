@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tables in Flutter PDF library | Syncfusion
-description: Learn here all about draw and customize cells, rows, and columns in Tables feature of Syncfusion Flutter PDF non-UI library and more.
+title: Tables in Flutter PDF Library | Syncfusion
+description: Learn how to draw and customize tables, cells, rows, and columns in PDF documents using Syncfusion Flutter PDF non-UI Library.
 platform: document-processing
 control: PDF
 documentation: ug
@@ -13,11 +13,12 @@ The Syncfusion<sup>&reg;</sup> Flutter PDF provides support for creating customi
 
 ## Creating a table
 
-[`PdfGrid`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGrid-class.html) allows you to create table by entering the data manually.
+[`PdfGrid`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGrid-class.html) allows you to create a table by entering the data manually.
 
 The following code example explains how to create a table directly using [`PdfGrid`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGrid-class.html) with [`PdfGridStyle`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGridStyle-class.html), [`PdfGridColumn`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGridColumn-class.html) and [`PdfGridRow`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGridRow-class.html) classes.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document
 PdfDocument document = PdfDocument();
@@ -28,10 +29,10 @@ PdfGrid grid = PdfGrid();
 //Add the columns to the grid
 grid.columns.add(count: 3);
 
-//Add header to the grid
+//Add a header to the grid
 grid.headers.add(1);
 
-//Add the rows to the grid
+//Add the header to the grid
 PdfGridRow header = grid.headers[0];
 header.cells[0].value = 'Employee ID';
 header.cells[1].value = 'Employee Name';
@@ -64,6 +65,7 @@ File('SampleOutput.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Cell customization in PdfGrid
 
@@ -71,7 +73,8 @@ document.dispose();
 
 The following code snippet explains how to customize the cell in [`PdfGrid`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGrid-class.html).
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document
 PdfDocument document = PdfDocument();
@@ -133,6 +136,7 @@ File('SampleOutput.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Row customization in PdfGrid
 
@@ -140,7 +144,8 @@ You can customize row height and styles using the [`rows`](https://pub.dev/docum
 
 The following code snippet explains how to customize the row in [`PdfGrid`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGrid-class.html).
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document
 PdfDocument document = PdfDocument();
@@ -198,6 +203,7 @@ File('SampleOutput.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Columns customization in PdfGrid
 
@@ -205,7 +211,8 @@ You can customize the column width and text formats using the [`columns`](https:
 
 The following code snippet explains how to customize the column in [`PdfGrid`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGrid-class.html).
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document
 PdfDocument document = PdfDocument();
@@ -252,14 +259,16 @@ File('SampleOutput.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Table customization in PdfGrid
 
-Flutter PDF supports users to create a customizable PDF table like [`cellSpacing`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGridStyle/cellSpacing.html), [`cellPadding`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGridStyle/cellPadding.html), [`borderOverLapStyle`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGridStyle/borderOverlapStyle.html), and more. This can be achieved by using the [`PdfGridStyle`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGridStyle-class.html) class.
+Flutter PDF supports users to create a customizable PDF table like [`cellSpacing`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGridStyle/cellSpacing.html), [`cellPadding`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGridStyle/cellPadding.html), [`borderOverlapStyle`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGridStyle/borderOverlapStyle.html), and more. This can be achieved by using the [`PdfGridStyle`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGridStyle-class.html) class.
 
 The following code snippet explains how to customize the [`PdfGrid`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGrid-class.html) using [`PdfGridStyle`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGridStyle-class.html).
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new Pdf document
 PdfDocument document = PdfDocument();
@@ -343,16 +352,18 @@ File('SampleOutput.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Pagination in PdfGrid
 
-Flutter PDF supports to paginate the [`PdfGrid`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGrid-class.html) using the [`PdfLayoutFormat`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfLayoutFormat-class.html) class.
+Flutter PDF supports paginating the [`PdfGrid`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGrid-class.html) using the [`PdfLayoutFormat`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfLayoutFormat-class.html) class.
 
 The following sample explains how to allow [`PdfGrid`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGrid-class.html) to flow across pages.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
-//Create a new PDF documentation
+//Create a new PDF document
 PdfDocument document = PdfDocument();
 
 //Create a PdfGrid
@@ -396,12 +407,14 @@ File('SampleOutput.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Adding multiple tables
 
 The Flutter PDF supports maintaining the position of a PDF grid drawn on PDF page using [`PdfLayoutResult`](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfLayoutResult-class.html). It provides the rendered bounds of previously added grid, which can be used to place successive elements without overlapping. You can add multiple PDF grids using the bottom position of previously rendered PDF grid. The following code snippet explains this.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 
 //Create a new PDF document
 PdfDocument document = PdfDocument();
@@ -463,6 +476,7 @@ File('SampleOutput.pdf').writeAsBytes(await document.save());
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}
 
 ## Apply built-in grid style
 
@@ -495,7 +509,8 @@ And we have some styles that have background color only in the header rows. Plea
 N>  We can also customize the background color of the ['PdfGrid'](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGrid-class.html) by using the PdfGrid.style.backgroundBrush, PdfGridRow.style.backgroundBrush and PdfGridCell.style.backgroundBrush properties. Please note that the changes in the above properties are not considered, when we apply the ['PdfGridBuiltInStyle'](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGridBuiltInStyle.html) . 
 The below code example illustrates how to apply a built-in table style using the ['applyBuiltInStyle'](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGrid/applyBuiltInStyle.html ) method of the PdfGrid with styles from the ['PdfGridBuiltInStyle'](https://pub.dev/documentation/syncfusion_flutter_pdf/latest/pdf/PdfGridBuiltInStyle.html) Enum.
 
-{% highlight dart %}
+{% tabs %}
+{% highlight dart tabtitle="dart" %}
 //Create a new PDF document.
 PdfDocument document = PdfDocument();
 //Create a PdfGrid class.
@@ -533,3 +548,4 @@ List<int> bytes =await document.save();
 document.dispose();
 
 {% endhighlight %}
+{% endtabs %}

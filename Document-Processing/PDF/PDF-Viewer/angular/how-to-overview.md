@@ -1,14 +1,14 @@
 ---
 layout: post
-title: FAQ Section in Angular PDF Viewer control | Syncfusion
-description: In this section, you can know about the various questions asked about manipulation of in Angular PDF Viewer control.
+title: How to Overview of the Angular PDF Viewer | Syncfusion
+description: How-to overview of the Angular PDF Viewer in Syncfusion Angular PDF Viewer (SfPdfViewer) control, with its elements and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Angular PDF Viewer — Frequently Asked Questions
+# How to Overview of the Angular PDF Viewer
 
 The following FAQ provides concise solutions and links to detailed how-to articles for the Angular PDF Viewer. Each entry links to a step-by-step article with examples and troubleshooting notes.
 
@@ -31,6 +31,7 @@ The frequently asked questions in Essential<sup>&reg;</sup> PDF Viewer are liste
 * [Resolve unable to find an entry point named FPDFText_GetCharAngle error](./how-to/resolve-unable-to-find-an-entry-point-error)
 * [How to clear the Web-service is not listening error](./how-to/webservice-not-listening)
 * [Load N number of pages on initial loading](./how-to/load-n-number-page)
+* [Active Viewport Rendering](./how-to/active-viewport-rendering)
 * [Retry Timeout](./how-to/retry-timeout)
 * [Configure Redis Cache](./how-to/redis-cache)
 * [Supported conformance documents](./how-to/conformance)

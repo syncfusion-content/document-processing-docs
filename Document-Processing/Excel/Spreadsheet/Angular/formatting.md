@@ -1,22 +1,24 @@
 ---
 layout: post
-title: Formatting in Angular Spreadsheet component | Syncfusion
-description: Learn here all about Formatting in Syncfusion Angular Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Formatting in Angular Spreadsheet| Syncfusion
+description: Formatting in Angular Spreadsheet allows users to customize cell appearance, styles, and number formats for enhanced data presentation.
 platform: document-processing
 control: Formatting 
 documentation: ug
 ---
 
-# Formatting in Angular Spreadsheet component
+# Formatting in Angular Spreadsheet 
 
 Formatting options make your data easier to view and understand. The different types of formatting options in the Spreadsheet are,
 * Number Formatting
 * Text Formatting
 * Cell Formatting
+* Conditional Formatting
+* Rich Text Formatting
 
 ## Number Formatting
 
-Number formatting provides a type for your data in the Spreadsheet. Use the [`allowNumberFormatting`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allownumberformatting) property to enable or disable the number formatting option in the Spreadsheet. The different types of number formatting supported in Spreadsheet are,
+Number formatting provides a type for your data in the [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor). Use the [`allowNumberFormatting`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allownumberformatting) property to enable or disable the number formatting option in the Spreadsheet. The different types of number formatting supported in the Spreadsheet are:
 
 | Types | Format Code | Format ID |
 |---------|---------|---------|
@@ -41,7 +43,7 @@ Number formatting can be applied in following ways,
 
 Spreadsheet supports custom number formats to display your data as numbers, dates, times, percentages, and currency values. If the pre-defined number formats do not meet your needs, you can set your own custom formats using custom number formats dialog or `numberFormat` method.
 
-The different types of custom number format populated in the custom number format dialog are,
+The different types of custom number formats populated in the custom number format dialog are,
 
 | Type | Format Code | Format ID |
 |-------|---------|---------|
@@ -108,7 +110,7 @@ The spreadsheet allows customization of formats in the custom format dialog usin
 
 Compared to Excel, the date, time, currency, and accounting formats vary across different cultures. For example, when an Excel file with the date format `'m/d/yyyy'` is imported in the `en-US` culture, the spreadsheet displays the date in that format. However, when the same file is imported in the German culture, the date format changes to `'dd.MM.yyyy'`, which is the default for that region. The default number format ID for the date is 14. To customize the date format based on the culture, you should map the default number format ID to the appropriate culture-specific format code, like this: `{ id: 14, code: 'dd.MM.yyyy' }` in the `configureLocalizedFormat` method.
 
-> The format code should use the default decimal separator (.) and group separator (,).
+> The format code should use the default decimal separator (`.`) and group separator (`,`).
 
 The code below illustrates how culture-based format codes are mapped to their corresponding number format ID for the `German (de)` culture.
 
@@ -157,18 +159,18 @@ The following code example demonstrates how to configure culture-based formats f
 
 ## Text and cell formatting
 
-Text and cell formatting enhances the look and feel of your cell. It helps to highlight a particular cell or range of cells from a whole workbook. You can apply formats like font size, font family, font color, text alignment, border etc. to a cell or range of cells. Use the [`allowCellFormatting`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowcellformatting) property to enable or disable the text and cell formatting option in Spreadsheet. You can set the formats in following ways,
+Text and cell formatting enhance the look and feel of your cells. It helps to highlight a particular cell or range of cells from a whole workbook. You can apply formats like font size, font family, font color, text alignment, border etc. to a cell or range of cells. Use the [`allowCellFormatting`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowcellformatting) property to enable or disable the text and cell formatting option in the Spreadsheet. You can set the formats in the following ways:
 * Using the `style` property, you can set formats to each cell at initial load.
 * Using the [`cellFormat`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#cellformat) method, you can set formats to a cell or range of cells.
-* You can also apply by clicking the desired format option from the ribbon toolbar.
+* You can also apply formats by clicking the desired format option from the **Home** tab in the ribbon toolbar.
 
 ### Fonts
 
-Various font formats supported in the spreadsheet are font-family, font-size, bold, italic, strike-through, underline and font color.
+The supported font formats in the Spreadsheet are font-family, font-size, bold, italic, strike-through, underline, and font color.
 
 ### Text Alignment
 
-You can align text in a cell either vertically or horizontally using the  `textAlign` and `verticalAlign` property.
+You can align text in a cell either vertically or horizontally using the `textAlign` and `verticalAlign` properties.
 
 ### Indents
 
@@ -176,7 +178,7 @@ To enhance the appearance of text in a cell, you can change the indentation of a
 
 ### Fill color
 
-To highlight cell or range of cells from whole workbook you can apply background color for a cell using `backgroundColor` property.
+To highlight a cell or range of cells from the whole workbook, you can apply a background color to a cell using the `backgroundColor` property.
 
 ### Borders
 
@@ -208,9 +210,9 @@ You can also change the color, size, and style of the border. The size and style
 | Double | Used to create the `double` border.|
 
 Borders can be applied in the following ways,
-* Using the  `border`, `borderLeft`, `borderRight`, `borderBottom` properties, you can set the desired border to each cell at initial load.
-* Using the `setBorder` method, you can set various border options to a cell or range of cells.
-* Selecting the border options from ribbon toolbar.
+* Using the `border`, `borderLeft`, `borderRight`, and `borderBottom` properties, you can set the desired border to each cell at initial load.
+* Using the [`setBorder`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#setborder) method, you can set various border options to a cell or range of cells.
+* Selecting the border options from the **Home** tab in the ribbon toolbar.
 
 The following code example shows the style formatting in text and cells of the spreadsheet.
 
@@ -226,26 +228,49 @@ The following code example shows the style formatting in text and cells of the s
   
 {% previewsample "/document-processing/samples/spreadsheet/angular/format/number-cs2" %}
 
+### Text Overflow
+
+When cell content exceeds the column width, the Spreadsheet automatically displays the overflowing text across adjacent empty cells. This preserves readability without altering the column width.
+
+Text overflows only into adjacent empty cells. If a neighboring cell contains a value, formula, or merged range, the text is clipped at the cell boundary.
+
+Text overflow is supported for plain text, rich text, hyperlinks, and RTL (right-to-left) layouts, and updates automatically whenever cell content, formatting, or column widths change.
+
+The following code example demonstrates text overflow in the Spreadsheet.
+
+{% tabs %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/text-overflow-cs1/src/app.ts %}
+{% endhighlight %}
+
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/spreadsheet/angular/text-overflow-cs1/src/main.ts %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "/document-processing/samples/spreadsheet/angular/text-overflow-cs1" %}
+
 ### Limitations of Formatting
 
 The following features are not supported in Formatting:
 
 * Insert row/column between the formatting applied cells.
 * Formatting support for row/column.
+* Text overflow across freeze pane boundaries and for right-aligned cells.
 
 ## Conditional Formatting
 
 Conditional formatting helps you to format a cell or range of cells based on the conditions applied. You can enable or disable conditional formats by using the [`allowConditionalFormat`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowconditionalformat) property.
 
-> * The default value for the `allowConditionalFormat` property is `true`.
+> The default value for the `allowConditionalFormat` property is `true`.
 
 ### Apply Conditional Formatting
 
-You can apply conditional formatting by using one of the following ways,
+You can apply conditional formatting in one of the following ways:
 
-* Select the conditional formatting icon in the Ribbon toolbar under the Home Tab.
+* Select the **Conditional Formatting** icon in the ribbon toolbar under the **Home** tab.
 * Using the [`conditionalFormat()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#conditionalformat) method to define the condition.
-* Using the `conditionalFormats` in sheets model.
+* Using the `conditionalFormats` property in the sheets model.
 
 Conditional formatting has the following types in the spreadsheet,
 
@@ -297,9 +322,15 @@ The following options can be given for the icon sets as type,
 
 >* 'ThreeArrows', 'ThreeArrowsGray', 'FourArrowsGray', 'FourArrows', 'FiveArrowsGray', 'FiveArrows', 'ThreeTrafficLights1', 'ThreeTrafficLights2', 'ThreeSigns', 'FourTrafficLights', 'FourRedToBlack', 'ThreeSymbols', 'ThreeSymbols2', 'ThreeFlags', 'FourRating', 'FiveQuarters', 'FiveRating', 'ThreeTriangles', 'ThreeStars', 'FiveBoxes'.
 
+### Formula-based Conditional Format
+
+Formula-based Conditional Formatting allows you to apply custom formatting rules using formulas through the `conditionalFormats` property in the sheet model or the [`conditionalFormat()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet#conditionalformat) method.
+
+When the specified formula rule evaluates to `TRUE`, the defined formatting is automatically applied to the target cells. This allows you to create advanced highlighting scenarios based on values from other cells or ranges within the worksheet.
+
 ### Custom Format
 
-Using the custom format for conditional formatting you can set cell styles like color, background color, font style, font weight, and underline.
+Using the custom format for conditional formatting, you can set cell styles such as color, background color, font style, font weight, and underline.
 
 In the MAY and JUN columns, we have applied conditional formatting custom format.
 
@@ -307,9 +338,9 @@ In the MAY and JUN columns, we have applied conditional formatting custom format
 
 ### Clear Rules
 
-You can clear the defined rules by using one of the following ways,
+You can clear the defined rules in one of the following ways:
 
-* Using the “Clear Rules” option in the Conditional Formatting button of HOME Tab in the ribbon to clear the rule from selected cells.
+* Using the **Clear Rules** option in the **Conditional Formatting** button on the **Home** tab in the ribbon to clear the rule from the selected cells.
 * Using the [`clearConditionalFormat()`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#clearconditionalformat) method to clear the defined rules.
 
 {% tabs %}
@@ -329,13 +360,111 @@ You can clear the defined rules by using one of the following ways,
 The following features have some limitations in Conditional Formatting:
 
 * Insert row/column between the conditional formatting.
-* Conditional formatting with formula support.
+* User Interface support for formula-based conditional formatting.
 * Copy and paste the conditional formatting applied cells.
 * Custom rule support.
 
+## Rich Text Formatting
+
+Rich text formatting allows you to apply different styles to specific portions of text within a single cell to improve readability and presentation. Each text segment can have its own formatting, enabling you to combine multiple styles within a single cell.
+
+In the **Syncfusion Angular Spreadsheet**, rich text formatting is supported through the [`richText`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#richtext) property of the cell model.
+
+Each `richText` segment contains:
+
+- `text` – Specifies the content of the segment  
+- `style` – Defines formatting using the [`CellStyleModel`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/cellstylemodel)
+
+Rich text formatting supports the following style options through the `style` property of each `richText` segment:
+
+### Font Family
+
+You can change the font family of individual rich text segments using the `fontFamily` property. This allows different portions of text within the same cell to be displayed using different typefaces such as `Calibri`, `Arial`, and `Georgia`.
+
+### Font Size
+
+You can customize the size of individual rich text segments using the `fontSize` property to emphasize specific content within a cell.
+
+### Font Weight
+
+You can apply font weight formatting using the `fontWeight` property. This is typically used to display specific text segments in bold.
+
+### Font Style
+
+You can apply font style formatting using the `fontStyle` property. This property supports values such as `normal` and `italic`.
+
+### Text Decoration
+
+You can apply text decorations to individual rich text segments using the `textDecoration` property. Supported decorations include `underline` and `line-through`.
+
+### Font Color
+
+You can customize the color of specific text segments using the `color` property to improve visibility or highlight important information.
+
+### Subscript and Superscript
+
+You can apply subscript and superscript formatting to individual text segments using the `verticalAlign` property.
+
+- Use `verticalAlign: 'sub'` to display text as subscript.
+- Use `verticalAlign: 'super'` to display text as superscript.
+
+### How to Apply Rich Text Formatting
+
+You can apply rich text formatting in following ways:
+
+1. Select the desired portion of text within a cell, then use the available formatting options in the ribbon such as font family, font size, bold, italic, underline, strikethrough, font color, subscript, or superscript.
+
+![Rich text formatting in Spreadsheet](./images/spreadsheet_richtext.gif)
+
+2. You can define the [`richText`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#richtext) property directly while initializing the Spreadsheet. This is useful when you want the formatting to be applied when the data is loaded.
+
+```ts
+cells: [
+    {
+        value: 'Annual Sales Report 2026 Highlights (Draft)',
+        richText: [
+            { text: 'Annual Sales Report ', style: { fontWeight: 'bold' } },
+            { text: '2026', style: { color: '#0078D4' } },
+            { text: ' Highlights', style: { textDecoration: 'underline' } },
+            { text: ' (Draft)', style: { fontStyle: 'italic' } }
+        ]
+    }
+]
+```
+
+3. You can also apply formatting dynamically using the [`updateCell`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#updatecell) method.
+
+```ts
+    spreadsheet.updateCell({
+        richText: [
+            { text: 'Premium Membership ', style: { fontWeight: 'bold', color: '#2E7D32' } },
+            { text: 'valid until ', style: { fontStyle: 'italic' } },
+            { text: '31', style: { textDecoration: 'underline' } },
+            { text: 'st', style: { verticalAlign: 'super' } },
+            { text: ' Dec 2026' }
+        ]
+    }, 'A5');
+```
+
+The following code example shows how to apply multiple rich text formats in cells of the Spreadsheet.
+
+{% tabs %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/richtext-format-cs1/src/app.ts %}
+{% endhighlight %}
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/spreadsheet/angular/richtext-format-cs1/src/main.ts %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/samples/spreadsheet/angular/richtext-format-cs1" %}
+
+## Limitations
+* **Edit mode requirement:** Formatting can be applied only while the cell is in edit mode. Selecting text outside of edit mode does not support subscript or superscript formatting.
+
 ## Note
 
-You can refer to our [Angular Spreadsheet](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/angular/#/material3/spreadsheet/default) to knows how to present and manipulate data.
+You can refer to our [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Angular Spreadsheet example](https://document.syncfusion.com/demos/spreadsheet-editor/angular/#/material3/spreadsheet/default) to knows how to present and manipulate data.
 
 ## See Also
 
@@ -343,4 +472,4 @@ You can refer to our [Angular Spreadsheet](https://www.syncfusion.com/spreadshee
 * [Hyperlink](./link)
 * [Sorting](./sort)
 * [Filtering](./filter)
-* [`Ribbon customization`](./ribbon#ribbon-customization)
+* [Ribbon customization](./ribbon#ribbon-customization)

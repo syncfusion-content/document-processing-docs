@@ -1,22 +1,22 @@
 ---
 layout: post
-title: extractTextCompleted Event in Angular PDF Viewer component | Syncfusion
-description: Learn here all about extractTextCompleted Event in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: How to Handle the ExtractTextCompleted Event in Angular | Syncfusion
+description: Use the extractTextCompleted event and isExtractText property in the Angular PDF Viewer to extract text and bounds from a loaded PDF.
 platform: document-processing
-control: extractTextCompleted
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## Extract text using the extractTextCompleted event in the PDF Viewer
+# How to Handle the ExtractTextCompleted Event in Angular PDF Viewer
 
 The PDF Viewer can extract page text along with bounding information. Enable text extraction using the `isExtractText` property and handle the `extractTextCompleted` event to receive extracted text and bounds for the document.
 
-The following steps are used to extract the text from the page.
+The following steps are used to extract text from a page.
 
 **Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/getting-started) to create a simple PDF Viewer sample.
 
-**Step 2:** The following code snippet explains how to extract the text from a page .
+**Step 2:** The following code snippet explains how to extract text from a page.
 
 ```html
 <ejs-pdfviewer #pdfViewer id="pdfViewer"

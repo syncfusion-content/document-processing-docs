@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Organize Pages Events in Angular PDF Viewer | Syncfusion
-description: Learn how to organize pages Events in the PDF Viewer, including rotating, rearranging, inserting, deleting, and copying pages on mobile devices.
+title: Events in Angular PDF Viewer | Syncfusion
+description: Subscribe to Organize Pages events in the Angular PDF Viewer to react to rotate, rearrange, insert, delete, and copy actions on pages.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Organize Pages Events in Angular PDF Viewer
 
-The PDF Viewer exposes events for tracking and responding to actions within the page organizer, enabling customization of page manipulation workflows.
+The PDF Viewer exposes events for the page organizer to track and respond to page manipulation actions (for example: rotate, rearrange, insert, delete, and copy).
 
 ## pageOrganizerSaveAs
 
@@ -24,33 +24,82 @@ The event arguments provide information about the save event:
 - `downloadDocument`: A base64 string of the modified PDF document data.
 - `cancel`: A boolean that, when set to `true`, prevents the default save action from proceeding.
 
-```typescript
-import { Component, ViewChild } from '@angular/core';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-angular-pdfviewer';
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
 
-PdfViewerComponent.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer);
+import { Component, ViewChild, OnInit } from '@angular/core';
+import {
+  PdfViewerComponent,
+  PdfViewerModule,
+  LinkAnnotationService,
+  BookmarkViewService,
+  MagnificationService,
+  ThumbnailViewService,
+  ToolbarService,
+  NavigationService,
+  TextSearchService,
+  TextSelectionService,
+  PrintService,
+  AnnotationService,
+  FormFieldsService,
+  FormDesignerService,
+  PageOrganizerService,
+  PageOrganizerSaveAsEventArgs,
+} from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
   selector: 'app-root',
-  template: `<div class="content-wrapper">
-            <ejs-pdfviewer #pdfViewer id="pdfViewer"
-                  [documentPath]='document'
-                  [resourceUrl]="resource"
-                  (pageOrganizerSaveAs)="onPageOrganizerSaveAs($event)">
-                  style="height:640px;display:block">
-            </ejs-pdfviewer>
-          </div>`
+  standalone: true,
+  imports: [PdfViewerModule],
+  providers: [
+    LinkAnnotationService,
+    BookmarkViewService,
+    MagnificationService,
+    ThumbnailViewService,
+    ToolbarService,
+    NavigationService,
+    TextSearchService,
+    TextSelectionService,
+    PrintService,
+    AnnotationService,
+    FormFieldsService,
+    FormDesignerService,
+    PageOrganizerService,
+  ],
+  template: `
+    <ejs-pdfviewer
+      #pdfviewer
+      id="PdfViewer"
+      [documentPath]="document"
+      [resourceUrl]="resource"
+      (pageOrganizerSaveAs)="onPageOrganizerSaveAs($event)"
+      style="height: 100vh; width: 100%; display: block"
+    >
+    </ejs-pdfviewer>
+  `,
 })
-export class AppComponent {
-    @ViewChild('pdfViewer') public pdfViewer: PdfViewerComponent;
-    public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
-    public resource: string = 'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib';
-    onPageOrganizerSaveAs(args: any): void {
-      console.log('File Name is' + args.fileName);
-      console.log('Document data' + args.downloadDocument);
-    }
+export class AppComponent implements OnInit {
+  @ViewChild('pdfviewer')
+  public pdfviewerControl!: PdfViewerComponent;
+
+  public document: string =
+    'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+
+  public resource: string =
+    'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib';
+
+  ngOnInit(): void {
+    // Initialization logic (if needed)
+  }
+
+  onPageOrganizerSaveAs(args: PageOrganizerSaveAsEventArgs): void {
+    console.log('File Name is ' + args.fileName);
+    console.log('Document data ' + args.downloadDocument);
+  }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## pageOrganizerZoomChanged
 
@@ -58,42 +107,91 @@ The `pageOrganizerZoomChanged` event is triggered when the zoom level of the pag
 
 -  This event is fired when the user interacts with the zoom slider in the page organizer. The `showImageZoomingSlider` property in `pageOrganizerSettings` must be set to `true` for the slider to be visible.
 
-
 Event arguments:
 
 - `previousZoom`: The previous zoom value.
 - `currentZoom`: The current zoom value.
 
-```typescript
-import { Component, ViewChild } from '@angular/core';
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-angular-pdfviewer';
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
 
-PdfViewerComponent.Inject(Toolbar, Magnification, Navigation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, Annotation, FormDesigner, FormFields, PageOrganizer);
+import { Component, ViewChild, OnInit } from '@angular/core';
+import {
+  PdfViewerComponent,
+  PdfViewerModule,
+  LinkAnnotationService,
+  BookmarkViewService,
+  MagnificationService,
+  ThumbnailViewService,
+  ToolbarService,
+  NavigationService,
+  TextSearchService,
+  TextSelectionService,
+  PrintService,
+  AnnotationService,
+  FormFieldsService,
+  FormDesignerService,
+  PageOrganizerService,
+  PageOrganizerZoomChangedEventArgs,
+} from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
   selector: 'app-root',
-  template: `<div class="content-wrapper">
-              <ejs-pdfviewer #pdfViewer id="pdfViewer"
-                    [documentPath]='document'
-                    [resourceUrl]="resource"
-                    [pageOrganizerSettings]="{ showImageZoomingSlider: true }"
-                    (pageOrganizerZoomChanged)="onPageOrganizerZoomChanged($event)">
-                    style="height:640px;display:block">
-              </ejs-pdfviewer>
-            </div>`
+  standalone: true,
+  imports: [PdfViewerModule],
+  providers: [
+    LinkAnnotationService,
+    BookmarkViewService,
+    MagnificationService,
+    ThumbnailViewService,
+    ToolbarService,
+    NavigationService,
+    TextSearchService,
+    TextSelectionService,
+    PrintService,
+    AnnotationService,
+    FormFieldsService,
+    FormDesignerService,
+    PageOrganizerService,
+  ],
+  template: `
+    <ejs-pdfviewer
+      #pdfviewer
+      id="PdfViewer"
+      [documentPath]="document"
+      [resourceUrl]="resource"
+      [pageOrganizerSettings]="{ showImageZoomingSlider: true }"
+      (pageOrganizerZoomChanged)="onPageOrganizerZoomChanged($event)"
+      style="height: 100vh; width: 100%; display: block"
+    >
+    </ejs-pdfviewer>
+  `,
 })
-export class AppComponent {
-  @ViewChild('pdfviewer', { static: true }) pdfviewer?: PdfViewerComponent;
+export class AppComponent implements OnInit {
+  @ViewChild('pdfviewer')
+  public pdfviewerControl!: PdfViewerComponent;
 
-  onPageOrganizerZoomChanged(args: any): void {
-    console.log('Previous Zoom Value is' + args.previousZoom);
-    console.log('Current Zoom Value is' + args.currentZoom);
+  public document: string =
+    'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
+
+  public resource: string =
+    'https://cdn.syncfusion.com/ej2/23.2.6/dist/ej2-pdfviewer-lib';
+
+  ngOnInit(): void {
+    // Initialization logic (if needed)
+  }
+
+  onPageOrganizerZoomChanged(args: PageOrganizerZoomChangedEventArgs): void {
+    console.log('Previous Zoom Value is ' + args.previousZoom);
+    console.log('Current Zoom Value is ' + args.currentZoom);
   }
 }
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Related event documentation
 
-- Overall Viewer events: [Event](../event)
+- Overall Viewer events: [Event](../events)
 - Annotation events: [Annotation events](../annotation/annotation-event)
-- Form designer events: [Form field events](../form-designer/form-field-events)
+- Form designer events: [Form field events](../forms/form-field-events)

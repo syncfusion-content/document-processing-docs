@@ -1,34 +1,39 @@
 ---
 layout: post
-title: Content control in Angular Document editor component | Syncfusion
-description: Learn here all about Content Control in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: Content Controls in Angular DOCX Editor | Syncfusion
+description: The content control feature in Angular DOCX Editor provides built-in content controls to create structured and interactive document templates.
 platform: document-processing
 control: Content Control 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Content control in Angular Document editor component
+# Content Controls in Angular DOCX Editor
 
-Document Editor provides support for inserting, editing content controls.
+[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) provides support for inserting, editing content controls.
 
-Content controls can be categorized based on its occurrence in a document as follows,
+Content controls can be categorized based on their occurrence in a document as follows:
 
-InlineContentControl: Among inline content inside, as a child of a paragraph.
-BlockContentControl: Among paragraphs and tables, as a child of a Body, HeaderFooter.
+**Inline Content Control:** Inserted within the text of a paragraph and flows together with the surrounding text as shown in below example.
+
+![Inline content control.](images/inline-content-control.png)
+
+**Block Content Control:** Inserted as a standalone element at the block level and can contain one or more paragraphs, tables, images, or other content as shown in below example.
+
+![Block content control.](images/block-content-control.png)
 
 ## Types of Content Controls
 
-    * Rich Text
-    * Plain Text
-    * Check Box
-    * Date picker
-    * Drop-Down List and Combo Box
-    * Picture
+* Rich Text
+* Plain Text
+* Check Box
+* Date Picker
+* Drop-Down List and Combo Box
+* Picture
 
-## Insert content control
+## Insert Content Control
 
-Content control can be inserted using [`insertContentControl`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor/#insertcontentcontrol) method in editor module.
+Content controls can be inserted using the [`insertContentControl`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/editor#insertcontentcontrol) method in the editor module.
 
 {% highlight ts %}
 //Insert Rich Text Content Control
@@ -44,7 +49,7 @@ this.container.documentEditor.editor.insertContentControl('Text', 'Hello World')
 
 //Insert CheckBox Content Control
 this.container.documentEditor.editor.insertContentControl('CheckBox');
-//Insert CheckBox Content Control with mention checked state
+//Insert CheckBox Content Control with a checked state specified
 this.container.documentEditor.editor.insertContentControl('CheckBox', true);
 
 //Insert ComboBox Content Control
@@ -68,9 +73,11 @@ this.container.documentEditor.editor.insertContentControl('Picture');
 this.container.documentEditor.editor.insertContentControl('Picture', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADgSURBVEhLY3jx4sV/WuDBafCluXH/D6ydhlWObIMPLmn8/32KPBiD2OjyKAY7+zbDsX945/91azehiBWU9IPVgVwJMxSX4SgG65jXwrGVa+v/6TOXoojBDEZ2LQh/m676/+D+/XBzQJgsg0EY5GqQgSCDsYUz2QaDMCiosIUvCKMYDFKIjK9dvYrCB3kXJIaMkfUjY5JdDEpioCCAYZCFyGbAMFkGI0fcMDUYpAgZY4s8EEYWwxWBJLsYhJHFQIYjmwHDQ9xgkGEwDCp0QAYji8EMRhYjymBq4lGDofjFfwCV5AGEIf9DQQAAAABJRU5ErkJggg==');
 {% endhighlight %}
 
-## Import content control properties
+## Import Content Control Properties
 
-Content control properties can be set using the [`ContentControlInfo`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/contentControlInfo/) and import it using [`importContentControlData`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#importcontentcontroldata)
+Replace an existing content control value with a new value using the [`importContentControlData`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#importcontentcontroldata) method. Pass one or more [`ContentControlInfo`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/contentControlInfo) objects and specify the content control title and content control type to identify the content control and update them with new values.
+
+The following code snippet illustrates how to import the content control properties.
 
 {% highlight ts %}
 let data: ContentControlInfo[] = [];
@@ -79,17 +86,21 @@ data.push(contentControlData);
 this.container.documentEditor.importContentControlData(data);
 {% endhighlight %}
 
-## Export content control properties
+## Export Content Control Properties
 
-Content control properties can be exported using the [`exportContentControlData`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#exportcontentcontroldata)
+Retrieve the content controls properties present in a document using [`exportContentControlData`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#exportcontentcontroldata) method. This method returns a collection of [`ContentControlInfo`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/contentControlInfo) objects, allowing you to access properties such as the content control title, type, tag, and value.
+
+The following code snippet illustrates how to export the content control properties.
 
 {% highlight ts %}
 let contentControlInfos: ContentControlInfo[] = this.container.documentEditor.exportContentControlData();
 {% endhighlight %}
 
-## Reset content control
+## Reset Content Control
 
-Content control properties can be reset using the [`resetContentControlData`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/#resetcontentcontroldata)
+Restore a content control to its default placeholder text (for example, "Click here or tap to insert text") using the [`resetContentControlData`](https://ej2.syncfusion.com/angular/documentation/api/document-editor#resetcontentcontroldata) method. Pass one or more [`ContentControlInfo`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/contentcontrolinfo) objects and specify the content control title to identify the content controls to reset.
+
+The following code snippet illustrates how to reset the content control properties:
 
 {% highlight ts %}
 let data: ContentControlInfo[] = [];
@@ -98,4 +109,4 @@ data.push(contentControlData);
 this.container.documentEditor.resetContentControlData(data);
 {% endhighlight %}
 
->Note: Content control with custom XML mapping of file type WordML is converted as normal Rich Text Content Control to provide lossless round-tripping upon saving.
+N> Content controls with custom XML mapping of file type WordML are converted as normal Rich Text Content Control to provide lossless round-tripping upon saving.

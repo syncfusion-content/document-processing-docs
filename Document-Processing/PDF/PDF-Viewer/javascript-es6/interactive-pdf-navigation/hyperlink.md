@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Hyperlink navigation in PDF Viewer | Syncfusion
-description: Learn how to configure hyperlink navigation, including table-of-contents entries, in the Syncfusion PDF Viewer control for TypeScript.
+title: Hyperlink in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Configure hyperlink navigation in the JavaScript (ES6) PDF Viewer, including how internal and external links open when users click them.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Hyperlink navigation in TypeScript PDF Viewer
+# Hyperlink Navigation in JavaScript (ES6) PDF Viewer
 
 The PDF Viewer supports hyperlink navigation for inline links and table-of-contents (TOC) entries that target destinations inside a document. These elements let users jump directly to relevant sections.
 
@@ -16,7 +16,7 @@ N> The table of contents pane and hyperlink interactions share the same navigati
 
 ## Required modules
 
-Inject the following modules to enable navigation: `Toolbar`, `Magnification`, `Navigation`, `LinkAnnotation`, `BookmarkView`, `TextSelection`, `ThumbnailView`, and optionally `Annotation`.
+Inject the following modules to enable navigation: `Toolbar`, `Magnification`, `Navigation`, `LinkAnnotation`, `BookmarkView`, `TextSelection`, `ThumbnailView`, and optionally `Annotation`. `Annotation` is required only when working with PDF annotations in addition to hyperlinks.
 
 ## Table of contents navigation
 
@@ -189,6 +189,6 @@ viewer.appendTo('#PdfViewer');
 
 ## See also
 
-- [Bookmark navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/interactive-pdf-navigation/bookmark-navigation/)
-- [Page navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/interactive-pdf-navigation/page-navigation/)
-- [Page thumbnail navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/interactive-pdf-navigation/page-thumbnail-navigation/)
+- [Bookmark navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/interactive-pdf-navigation/bookmark)
+- [Page navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/interactive-pdf-navigation/page)
+- [Page thumbnail navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/interactive-pdf-navigation/page-thumbnail)

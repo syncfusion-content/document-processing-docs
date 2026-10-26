@@ -1,11 +1,11 @@
 ---
-title: Working with Security | Syncfusion
-description: This sections explains how to protect the PDF document using encryption and set permission to the PDF document operations like printing, editing, copy content
+title: Security in .NET PDF Library | Syncfusion
+description: Learn how to protect PDF documents with encryption and set permissions for printing, editing, and copying using Syncfusion .NET PDF.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Working with PDF Security
+# Security in .NET PDF Library
 
 Essential<sup>&reg;</sup> PDF enables you to [secure PDF documents](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/protect-pdf) using various encryption algorithms while defining specific permissions such as printing, editing, and copying content. You can apply both a user password (document open password) and an owner password (permission password) for enhanced protection.
 
@@ -18,9 +18,9 @@ The two supported encryption algorithms are:
 
 ## Working with RC4 Encryption
 
-You can encrypt PDF document by specifying the [Algorithm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html#Syncfusion_Pdf_Security_PdfSecurity_Algorithm) property as **RC4** through [PdfEncryptionAlgorithm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfEncryptionAlgorithm.html) Enum and [KeySize](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html#Syncfusion_Pdf_Security_PdfSecurity_KeySize) property as **40bit or 128bit** through [PdfEncryptionKeySize](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfEncryptionKeySize.html) Enum in [PdfSecurity](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html) class. The following code snippet illustrates how to encrypt the PDF document with the [UserPassword](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html#Syncfusion_Pdf_Security_PdfSecurity_UserPassword).
+You can encrypt a PDF document by specifying the [Algorithm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html#Syncfusion_Pdf_Security_PdfSecurity_Algorithm) property as **RC4** through the [PdfEncryptionAlgorithm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfEncryptionAlgorithm.html) enum and the [KeySize](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html#Syncfusion_Pdf_Security_PdfSecurity_KeySize) property as **40-bit or 128-bit** through the [PdfEncryptionKeySize](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfEncryptionKeySize.html) enum in the [PdfSecurity](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html) class. The following code snippet illustrates how to encrypt the PDF document with the [UserPassword](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html#Syncfusion_Pdf_Security_PdfSecurity_UserPassword) property.
 
-User password: Prevents people from opening or viewing a PDF document. Once the User Password is set, to open the PDF document, Adobe Acrobat/Reader will prompt a user to enter this password. If it is not correct, the document will not open. By setting a PDF User password, you can secure the PDF document.
+**User password:** Prevents people from opening or viewing a PDF document. Once the user password is set, opening the PDF document in Adobe Acrobat/Reader prompts the user to enter this password. If the password is incorrect, the document will not open. By setting a PDF user password, you can secure the PDF document.
 
 {% tabs %}
 
@@ -129,9 +129,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 N> While using both user and owner passwords, please specify different user and owner password while encrypting the PDF document for better security.
 
-You can protect the PDF document from printing, editing, copying with the [OwnerPassword](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html#Syncfusion_Pdf_Security_PdfSecurity_OwnerPassword) by using the following code snippet.
+You can protect the PDF document from printing, editing, and copying with the [OwnerPassword](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html#Syncfusion_Pdf_Security_PdfSecurity_OwnerPassword) property by using the following code snippet.
 
-Owner password: Sets PDF document restrictions, which can include printing, content copying, editing, page extracting, commenting, and more. Once the owner password is set, Acrobat will require this password to make any changes to the PDF document. It further secures the PDF document to set a PDF Owner Password.
+**Owner password:** Sets PDF document restrictions, which can include printing, content copying, editing, page extraction, commenting, and more. Once the owner password is set, Acrobat requires this password to make any changes to the PDF document. Setting a PDF owner password further secures the PDF document.
 
 {% tabs %}
 
@@ -249,7 +249,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Working with AES Encryption
 
-You can encrypt PDF document by specifying the [Algorithm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html#Syncfusion_Pdf_Security_PdfSecurity_Algorithm) property as **AES** through [PdfEncryptionAlgorithm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfEncryptionAlgorithm.html) Enum and [KeySize](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html#Syncfusion_Pdf_Security_PdfSecurity_KeySize) property as **40bit or 128bit or 256bit** through [PdfEncryptionKeySize](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfEncryptionKeySize.html) Enum in [PdfSecurity](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html) class. The following code snippet illustrates how to encrypt the PDF document with the [UserPassword](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html#Syncfusion_Pdf_Security_PdfSecurity_UserPassword).
+You can encrypt a PDF document by specifying the [Algorithm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html#Syncfusion_Pdf_Security_PdfSecurity_Algorithm) property as **AES** through the [PdfEncryptionAlgorithm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfEncryptionAlgorithm.html) enum and the [KeySize](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html#Syncfusion_Pdf_Security_PdfSecurity_KeySize) property as **40-bit, 128-bit, or 256-bit** through the [PdfEncryptionKeySize](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfEncryptionKeySize.html) enum in the [PdfSecurity](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html) class. The following code snippet illustrates how to encrypt the PDF document with the [UserPassword](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html#Syncfusion_Pdf_Security_PdfSecurity_UserPassword) property.
 
 {% tabs %}
 
@@ -452,7 +452,7 @@ Dim brush As PdfBrush = PdfBrushes.Black
 
 'Document security.
 Dim security As PdfSecurity = document.Security
-'Specifies key size and encryption algorithm using 256 bit key in RC4 mode.
+'Specifies key size and encryption algorithm using 256-bit key in AES mode.
 security.KeySize = PdfEncryptionKeySize.Key256Bit
 security.Algorithm = PdfEncryptionAlgorithm.AES
 security.OwnerPassword = "syncfusion"
@@ -474,9 +474,9 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Working with AES-GCM encryption
 
-To encrypt a PDF document using AES-GCM, set the [Algorithm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html#Syncfusion_Pdf_Security_PdfSecurity_Algorithm) property to AESGCM using the [PdfEncryptionAlgorithm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfEncryptionAlgorithm.html) enum and the KeySize property to **256bit** using the PdfEncryptionKeySize enum in the [PdfSecurity](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html) class.
+To encrypt a PDF document using AES-GCM, set the [Algorithm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html#Syncfusion_Pdf_Security_PdfSecurity_Algorithm) property to **AESGCM** using the [PdfEncryptionAlgorithm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfEncryptionAlgorithm.html) enum and the [KeySize](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html#Syncfusion_Pdf_Security_PdfSecurity_KeySize) property to **256-bit** using the [PdfEncryptionKeySize](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfEncryptionKeySize.html) enum in the [PdfSecurity](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html) class.
 
-N> AES-GCM encryption is supported only in PDF version 2.0. Ensure that the PDF file version is set to 2.0.
+N> AES-GCM encryption is supported only in PDF version 2.0. Ensure that the PDF file version is set to 2.0 by assigning `document.FileStructure.Version = PdfVersion.Version2_0` before applying encryption.
 
 Refer to the following code example for further details.
 
@@ -587,7 +587,7 @@ Dim page As PdfPage = document.Pages.Add()
 Dim graphics As PdfGraphics = page.Graphics 
 
 ' Set the font 
-Dim font As New PdfStandardFont(PdfFontFamily.TimesRoman, 20.0F, PdfFontStyle.Bold) 
+Dim font As New PdfStandardFont(PdfFontFamily.TimesRoman, 15.0F, PdfFontStyle.Bold) 
 
 ' Set the brush 
 Dim brush As PdfBrush = PdfBrushes.Black 
@@ -595,7 +595,7 @@ Dim brush As PdfBrush = PdfBrushes.Black
 'Document security. 
 Dim security As PdfSecurity = document.Security 
 
-'Specifies key size and encryption algorithm using 256 bit key in AES-GCM mode. 
+'Specifies key size and encryption algorithm using 256-bit key in AES-GCM mode. 
 security.KeySize = PdfEncryptionKeySize.Key256Bit 
 security.Algorithm = PdfEncryptionAlgorithm.AESGCM 
 security.OwnerPassword = "ownerPassword" 
@@ -698,7 +698,7 @@ graphics.DrawString("Encrypted with AES 256bit", font, brush, new PointF(0, 40))
 
 //Save and close the document
 document.Save("Output.pdf");
-document.Close();
+document.Close(true);
 
 {% endhighlight %}
 
@@ -722,18 +722,18 @@ Dim brush As PdfBrush = PdfBrushes.Black
 
 'Document security.
 Dim security As PdfSecurity = document.Security
-'Specifies key size and encryption algorithm using 256 bit key in AES mode.
+'Specifies key size and encryption algorithm using 256-bit key in AES mode.
 security.KeySize = PdfEncryptionKeySize.Key256Bit
 security.Algorithm = PdfEncryptionAlgorithm.AES
 'Specifies encryption option.
-security.EncryptionOptions = PdfEncryptionOptions.EncryptAllContents;
+security.EncryptionOptions = PdfEncryptionOptions.EncryptAllContents
 security.UserPassword = "password"
 'Draw the text.
 graphics.DrawString("Encrypted with AES 256bit", font, brush, New PointF(0, 40))        
 
 'Save and close the document
 document.Save("Output.pdf")
-document.Close()
+document.Close(True)
 
 {% endhighlight %}
 
@@ -782,7 +782,7 @@ graphics.DrawString("Encrypted all contents except metadata with AES 256bit", fo
 
 //Save and close the document.
 document.Save("Output.pdf");
-document.Close();
+document.Close(true);
 
 {% endhighlight %}
 
@@ -817,7 +817,7 @@ graphics.DrawString("Encrypted all contents except metadata with AES 256bit", fo
 
 //Save and close the document.
 document.Save("Output.pdf");
-document.Close();
+document.Close(true);
 
 {% endhighlight %}
 
@@ -851,8 +851,8 @@ security.UserPassword = "password"
 graphics.DrawString("Encrypted all contents except metadata with AES 256bit", font, brush, New PointF(0, 40))        
 
 'Save and close the document.
-document.Save("Output.pdf"
-document.Close()
+document.Save("Output.pdf")
+document.Close(True)
 
 {% endhighlight %}
 
@@ -952,7 +952,7 @@ document.Attachments.Add(attachment);
 
 //Save and close the document.
 document.Save("Output.pdf");
-document.Close();
+document.Close(true);
 
 {% endhighlight %}
 
@@ -976,11 +976,11 @@ Dim brush As PdfBrush = PdfBrushes.Black
 
 'Document security.
 Dim security As PdfSecurity = document.Security
-'Specifies key size and encryption algorithm using 256 bit key in AES mode.
+'Specifies key size and encryption algorithm using 256-bit key in AES mode.
 security.KeySize = PdfEncryptionKeySize.Key256Bit
 security.Algorithm = PdfEncryptionAlgorithm.AES
 'Specifies encryption option.
-security.EncryptionOptions = PdfEncryptionOptions.EncryptOnlyAttachments;
+security.EncryptionOptions = PdfEncryptionOptions.EncryptOnlyAttachments
 security.UserPassword = "password"
 'Draw the text.
 graphics.DrawString("Encrypted only attachments with AES 256bit", font, brush, New PointF(0, 40))
@@ -995,7 +995,7 @@ document.Attachments.Add(attachment)
 
 'Save and close the document.
 document.Save("Output.pdf")
-document.Close()
+document.Close(True)
 
 {% endhighlight %}
 
@@ -1005,7 +1005,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Decrypting encrypted PDF document
 
-The Syncfusion<sup>&reg;</sup> PDF library has provided decrypt an encrypted PDF document by removing its `owner` or `user` password and resetting its permissions to default. This is particularly useful when you need to access or modify a secured PDF.
+The Syncfusion<sup>&reg;</sup> PDF library supports decrypting an encrypted PDF document by removing its `owner` or `user` password and resetting its permissions to default. This is particularly useful when you need to access or modify a secured PDF.
 
 The following code example demonstrates how to decrypt a PDF document and restore its default permissions.
 
@@ -1019,19 +1019,19 @@ using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Parsing;
 using Syncfusion.Pdf.Security;
 
-  // Load the encrypted PDF document from the input stream
-  PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf", "syncfusion");
+// Load the encrypted PDF document from the input stream
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf", "syncfusion");
 
-  // Set the document permissions to default (removes any restrictions)
-  loadedDocument.Security.Permissions = PdfPermissionsFlags.Default;
+// Set the document permissions to default (removes any restrictions)
+loadedDocument.Security.Permissions = PdfPermissionsFlags.Default;
 
-  // Clear the owner and user passwords to decrypt the document
-  loadedDocument.Security.OwnerPassword = string.Empty;
-  loadedDocument.Security.UserPassword = string.Empty;
+// Clear the owner and user passwords to decrypt the document
+loadedDocument.Security.OwnerPassword = string.Empty;
+loadedDocument.Security.UserPassword = string.Empty;
 
-  //Save and close the document.
-  loadedDocument.Save("Output.pdf");
-  loadedDocument.Close(true);
+//Save and close the document.
+loadedDocument.Save("Output.pdf");
+loadedDocument.Close(true);
 
 {% endhighlight %}
 
@@ -1043,19 +1043,19 @@ using Syncfusion.Pdf.Graphics;
 using Syncfusion.Pdf.Parsing;
 using Syncfusion.Pdf.Security;
 
-  // Load the encrypted PDF document from the input stream
-  PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf", "syncfusion");
+// Load the encrypted PDF document from the input stream
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf", "syncfusion");
 
-  // Set the document permissions to default (removes any restrictions)
-  loadedDocument.Security.Permissions = PdfPermissionsFlags.Default;
+// Set the document permissions to default (removes any restrictions)
+loadedDocument.Security.Permissions = PdfPermissionsFlags.Default;
 
-  // Clear the owner and user passwords to decrypt the document
-  loadedDocument.Security.OwnerPassword = string.Empty;
-  loadedDocument.Security.UserPassword = string.Empty;
+// Clear the owner and user passwords to decrypt the document
+loadedDocument.Security.OwnerPassword = string.Empty;
+loadedDocument.Security.UserPassword = string.Empty;
 
-  //Save and close the document.
-  loadedDocument.Save("Output.pdf");
-  loadedDocument.Close(true);
+//Save and close the document.
+loadedDocument.Save("Output.pdf");
+loadedDocument.Close(true);
 
 {% endhighlight %}
 
@@ -1067,21 +1067,21 @@ Imports Syncfusion.Pdf.Graphics
 Imports Syncfusion.Pdf.Parsing
 Imports Syncfusion.Pdf.Security
 
-    ' Load the encrypted PDF document from the input stream with password
-    Dim loadedDocument As New PdfLoadedDocument("Input.pdf", "syncfusion")
+' Load the encrypted PDF document from the input stream with password
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf", "syncfusion")
 
-    ' Set the document permissions to default (removes any restrictions)
-    loadedDocument.Security.Permissions = PdfPermissionsFlags.Default
+' Set the document permissions to default (removes any restrictions)
+loadedDocument.Security.Permissions = PdfPermissionsFlags.Default
 
-    ' Clear the owner and user passwords to decrypt the document
-    loadedDocument.Security.OwnerPassword = String.Empty
-    loadedDocument.Security.UserPassword = String.Empty
+' Clear the owner and user passwords to decrypt the document
+loadedDocument.Security.OwnerPassword = String.Empty
+loadedDocument.Security.UserPassword = String.Empty
 
-    ' Save the decrypted PDF document to the specified file
-    loadedDocument.Save("Output.pdf")
+' Save the decrypted PDF document to the specified file
+loadedDocument.Save("Output.pdf")
 
-    ' Close the loaded PDF document and release resources
-    loadedDocument.Close(True)
+' Close the loaded PDF document and release resources
+loadedDocument.Close(True)
 
 {% endhighlight %}
 
@@ -1114,9 +1114,9 @@ PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf", "password");
 //Accessing the attachments.
 foreach (PdfAttachment attachment in document.Attachments)
 {
-    FileStream stream = new FileStream("Output/" + attachment.FileName, FileMode.Create);
-    stream.Write(attachment.Data, 0, attachment.Data.Length);
-    stream.Dispose();
+  FileStream stream = new FileStream("Output/" + attachment.FileName, FileMode.Create);
+  stream.Write(attachment.Data, 0, attachment.Data.Length);
+  stream.Dispose();
 }
     
 //Close the document.
@@ -1135,9 +1135,9 @@ PdfLoadedDocument document = new PdfLoadedDocument("Input.pdf", "password");
 //Accessing the attachments.
 foreach (PdfAttachment attachment in document.Attachments)
 {
-    FileStream stream = new FileStream("Output/" + attachment.FileName, FileMode.Create);
-    stream.Write(attachment.Data, 0, attachment.Data.Length);
-    stream.Dispose();
+  FileStream stream = new FileStream("Output/" + attachment.FileName, FileMode.Create);
+  stream.Write(attachment.Data, 0, attachment.Data.Length);
+  stream.Dispose();
 }
     
 //Close the document.
@@ -1155,9 +1155,9 @@ Dim document As New PdfLoadedDocument("Input.pdf", "password")
 
 ' Accessing the attachments.
 For Each attachment As PdfAttachment In document.Attachments
-    Dim stream As New FileStream("Output/" & attachment.FileName, FileMode.Create)
-    stream.Write(attachment.Data, 0, attachment.Data.Length)
-    stream.Dispose()
+  Dim stream As New FileStream("Output/" & attachment.FileName, FileMode.Create)
+  stream.Write(attachment.Data, 0, attachment.Data.Length)
+  stream.Dispose()
 Next
 
 ' Close the document.
@@ -1188,11 +1188,11 @@ document.OnPdfPassword += Document_OnPdfPassword;
 //Accessing the attachments.
 foreach (PdfAttachment attachment in document.Attachments)
 {
-    FileStream stream = new FileStream("Output/" + attachment.FileName, FileMode.Create);
+  FileStream stream = new FileStream("Output/" + attachment.FileName, FileMode.Create);
 
-    stream.Write(attachment.Data, 0, attachment.Data.Length);
+  stream.Write(attachment.Data, 0, attachment.Data.Length);
 
-    stream.Dispose();
+  stream.Dispose();
 }
 
 //Close the document.
@@ -1201,7 +1201,7 @@ document.Close(true);
 //Provide the user password in event. 
 void Document_OnPdfPassword(object sender, OnPdfPasswordEventArgs args)
 {
-    args.UserPassword = "syncfusion";
+  args.UserPassword = "syncfusion";
 }
 
 {% endhighlight %}
@@ -1219,11 +1219,11 @@ document.OnPdfPassword += Document_OnPdfPassword;
 //Accessing the attachments.
 foreach (PdfAttachment attachment in document.Attachments)
 {
-    FileStream stream = new FileStream("Output/" + attachment.FileName, FileMode.Create);
+  FileStream stream = new FileStream("Output/" + attachment.FileName, FileMode.Create);
 
-    stream.Write(attachment.Data, 0, attachment.Data.Length);
+  stream.Write(attachment.Data, 0, attachment.Data.Length);
 
-    stream.Dispose();
+  stream.Dispose();
 }
 
 //Close the document.
@@ -1232,7 +1232,7 @@ document.Close(true);
 //Provide the user password in event. 
 void Document_OnPdfPassword(object sender, OnPdfPasswordEventArgs args)
 {
-    args.UserPassword = "syncfusion";
+  args.UserPassword = "syncfusion";
 }
 
 {% endhighlight %}
@@ -1260,7 +1260,7 @@ document.Close(True)
 
 ' Provide the user password in event.
 Private Sub Document_OnPdfPassword(sender As Object, args As OnPdfPasswordEventArgs)
-    args.UserPassword = "syncfusion"
+  args.UserPassword = "syncfusion"
 End Sub
 
 {% endhighlight %}
@@ -1419,9 +1419,9 @@ Dim document As New PdfLoadedDocument("Input.pdf")
 
 'PDF Document Security.
 Dim security As PdfSecurity = document.Security
-'Specifies key size and encryption algorithm.
-security.KeySize = PdfEncryptionKeySize.Key128Bit
-security.Algorithm = PdfEncryptionAlgorithm.RC4
+'Specifies key size and encryption algorithm using 256-bit key in AES mode.
+security.KeySize = PdfEncryptionKeySize.Key256Bit
+security.Algorithm = PdfEncryptionAlgorithm.AES
 'Provide owner and user password.
 security.OwnerPassword = "ownerPassword256"
 security.UserPassword = "userPassword256"
@@ -1603,6 +1603,94 @@ loadedDocument.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Security/Change-the-permission-of-the-PDF-document/).
 
+## View document permission flags
+
+Read the permission flags of a PDF document using the [Security.Permissions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html#Syncfusion_Pdf_Security_PdfSecurity_Permissions) property, which returns a bitwise combination of values from the [PdfPermissionsFlags](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfPermissionsFlags.html) enumeration.
+
+{% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Security/PDF-permission-viewer/.NET/PDF-permission-viewer/Program.cs" %}
+
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+
+// Load an existing PDF
+using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"))
+{
+    // Access the document security settings
+    PdfSecurity security = loadedDocument.Security;
+    // Get the permission flags (bitwise enum)
+    PdfPermissionsFlags permissions = security.Permissions;
+    Console.WriteLine("Permissions in the document:");
+    // Enumerate all flags and print the enabled ones
+    foreach (PdfPermissionsFlags flag in Enum.GetValues(typeof(PdfPermissionsFlags)))
+    {
+      // Skip None (0)
+      if (flag == 0) continue; 
+      // Check whether the specific flag is set
+      if (permissions.HasFlag(flag))
+      {
+        Console.WriteLine($"- {flag}");
+      }
+    }
+}
+
+{% endhighlight %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf.Parsing;
+using Syncfusion.Pdf.Security;
+
+// Load an existing PDF
+using (PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf"))
+{
+    // Access the document security settings
+    PdfSecurity security = loadedDocument.Security;
+    // Get the permission flags (bitwise enum)
+    PdfPermissionsFlags permissions = security.Permissions;
+    Console.WriteLine("Permissions in the document:");
+    // Enumerate all flags and print the enabled ones
+    foreach (PdfPermissionsFlags flag in Enum.GetValues(typeof(PdfPermissionsFlags)))
+    {
+      // Skip None (0)
+      if (flag == 0) continue; 
+      // Check whether the specific flag is set
+      if (permissions.HasFlag(flag))
+      {
+        Console.WriteLine($"- {flag}");
+      }
+    }
+}
+
+{% endhighlight %}
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
+Imports Syncfusion.Pdf.Security
+
+' Load an existing PDF
+Using loadedDocument As New PdfLoadedDocument("Input.pdf")
+    ' Access the document security settings
+    Dim security As PdfSecurity = loadedDocument.Security
+    ' Get the permission flags (bitwise enum)
+    Dim permissions As PdfPermissionsFlags = security.Permissions
+    Console.WriteLine("Permissions in the document:")
+    ' Enumerate all flags and print the enabled ones
+    For Each flag As PdfPermissionsFlags In [Enum].GetValues(GetType(PdfPermissionsFlags))
+        If flag = 0 Then
+            Continue For ' Skip None (0)
+        End If
+        ' Check whether the specific flag is set
+        If permissions.HasFlag(flag) Then
+          Console.WriteLine($"- {flag}")
+        End If
+    Next
+End Using
+
+{% endhighlight %}
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Security/PDF-permission-viewer/.NET).
+
 ## Remove password from the user password PDF document
 
 You can remove the [UserPassword](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Security.PdfSecurity.html#Syncfusion_Pdf_Security_PdfSecurity_UserPassword) from the encrypted PDF document by using the following code snippet.
@@ -1676,15 +1764,15 @@ using Syncfusion.Pdf.Parsing;
 
 try
 {
-  //Load the PDF document
-  PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+    //Load the PDF document
+    PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 }
 catch (PdfDocumentException exception)
 {
-  if (exception.Message == "Can't open an encrypted document. The password is invalid.")
-	{
-		MessageBox.Show("Cannot open an encrypted document without password");
-	}
+    if (exception.Message == "Can't open an encrypted document. The password is invalid.")
+    {
+        MessageBox.Show("Cannot open an encrypted document without password");
+    }
 }
 
 {% endhighlight %}
@@ -1696,15 +1784,15 @@ using Syncfusion.Pdf.Parsing;
 
 try
 {
-	//Load the password protected PDF document without user password
-	PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Output.pdf");
+    //Load the PDF document
+    PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 }
 catch (PdfDocumentException exception)
 {
-	if (exception.Message == "Can't open an encrypted document. The password is invalid.")
-	{
-		MessageBox.Show("Cannot open an encrypted document without password");
-	}
+    if (exception.Message == "Can't open an encrypted document. The password is invalid.")
+    {
+        MessageBox.Show("Cannot open an encrypted document without password");
+    }
 }
 
 {% endhighlight %}
@@ -1716,7 +1804,7 @@ Imports Syncfusion.Pdf.Parsing
 
 Try
 	'Load the password protected PDF document without user password
-	Dim loadedDocument As New PdfLoadedDocument("Output.pdf")
+	Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 Catch exception As PdfDocumentException
 	If exception.Message = "Can't open an encrypted document. The password is invalid." Then
 		MessageBox.Show("Cannot open an encrypted document without password")
@@ -1731,7 +1819,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## How to determine whether the PDF document is protected by user or owner password
 
-Essential<sup>&reg;</sup> PDF supports identifying the document whether it is protected by user or owner.
+Essential<sup>&reg;</sup> PDF supports identifying whether a document is protected by a user or owner password.
 
 The following table shows the various combination for loading the secured document with user or owner password:
 

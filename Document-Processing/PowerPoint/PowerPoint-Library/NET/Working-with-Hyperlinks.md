@@ -7,74 +7,73 @@ documentation: UG
 ---
 # Working with Hyperlinks
 
-The Hyperlink is a reference to data that can link to external contents like images, files, webpage, and more. In PowerPoint slide, a hyperlink may target to any one of the following sources:
+A hyperlink is a reference that links to external content such as images, files, web pages, and more. In a PowerPoint slide, a hyperlink can target any of the following:
 
-* Webpage: Represents the web content.
-* File: Represents the file in some location.
-* Email: Represents an Email.
-* Slide: Represents the slide in the same document.
+* Webpage: Represents web content.
+* File: Represents a file in some location.
+* Email: Represents an email address.
+* Slide: Represents a slide in the same document.
 
 ## Add hyperlink to PowerPoint shape
 
-You can navigate to any slide of the same PowerPoint document. The following code example demonstrates how to add the hyperlink for internal document navigation.
+You can navigate to any slide of the same PowerPoint document by attaching a slide-target hyperlink to a shape. The following code example demonstrates how to add a hyperlink for internal document navigation.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Hyperlinks/Add-hyperlink-to-PowerPoint-shape/.NET/Add-hyperlink-to-PowerPoint-shape/Program.cs" %}
-//Creates the PowerPoint Presentation instance
+//Create a new PowerPoint Presentation instance.
 IPresentation pptxDoc = Presentation.Create();
-//Adds a slide of blank layout type
+//Add a slide with a blank layout to the presentation.
 ISlide slide1 = pptxDoc.Slides.Add(SlideLayoutType.Blank);
-//Adds one more slide.
+//Add a second slide that the hyperlink will target.
 ISlide slide2 = pptxDoc.Slides.Add();
-//Adds normal shape to the first slide
+//Add a rectangle shape to the first slide.
 IShape shape = slide1.Shapes.AddShape(AutoShapeType.Rectangle, 100, 20, 200, 100);
-//Sets the target slide index (index is valid from 0 to slides count – 1) as hyperlink
+//Set the target slide index (index is valid from 0 to slides count – 1) as the hyperlink target.
 IHyperLink hyperLink = shape.SetHyperlink("1");
-//Gets the target slide of the hyperlink
+//Get the target slide resolved by the hyperlink.
 ISlide targetSlide = hyperLink.TargetSlide;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
-//Close the presentation
+//Save the PowerPoint Presentation to a file.
+pptxDoc.Save("Sample.pptx");
+//Close the presentation.
 pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Creates the PowerPoint Presentation instance
+//Create a new PowerPoint Presentation instance.
 IPresentation pptxDoc = Presentation.Create();
-//Adds a slide of blank layout type
+//Add a slide with a blank layout to the presentation.
 ISlide slide1 = pptxDoc.Slides.Add(SlideLayoutType.Blank);
-//Adds one more slide.
+//Add a second slide that the hyperlink will target.
 ISlide slide2 = pptxDoc.Slides.Add();
-//Adds normal shape to the first slide
+//Add a rectangle shape to the first slide.
 IShape shape = slide1.Shapes.AddShape(AutoShapeType.Rectangle, 100, 20, 200, 100);
-//Sets the target slide index (index is valid from 0 to slides count – 1) as hyperlink
+//Set the target slide index (index is valid from 0 to slides count – 1) as the hyperlink target.
 IHyperLink hyperLink = shape.SetHyperlink("1");
-//Gets the target slide of the hyperlink
+//Get the target slide resolved by the hyperlink.
 ISlide targetSlide = hyperLink.TargetSlide;
-//Save the presentation
+//Save the presentation.
 pptxDoc.Save("Sample.pptx");
-//Close the presentation
+//Close the presentation.
 pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Creates the PowerPoint Presentation instance
-Dim pptxDoc As IPresentation = Presentation.Create() 
-'Adds a slide of blank layout type
-Dim slide1 As ISlide = pptxDoc.Slides.Add(SlideLayoutType.Blank) 
-'Adds one more slide.
-Dim slide2 As ISlide = pptxDoc.Slides.Add() 
-'Adds normal shape to the first slide
-Dim shape As IShape = slide1.Shapes.AddShape(AutoShapeType.Rectangle, 100, 20, 200, 100) 
-'Sets the target slide index (index is valid from 0 to slides count – 1) as hyperlink
+'Create a new PowerPoint Presentation instance.
+Dim pptxDoc As IPresentation = Presentation.Create()
+'Add a slide with a blank layout to the presentation.
+Dim slide1 As ISlide = pptxDoc.Slides.Add(SlideLayoutType.Blank)
+'Add a second slide that the hyperlink will target.
+Dim slide2 As ISlide = pptxDoc.Slides.Add()
+'Add a rectangle shape to the first slide.
+Dim shape As IShape = slide1.Shapes.AddShape(AutoShapeType.Rectangle, 100, 20, 200, 100)
+'Set the target slide index (index is valid from 0 to slides count – 1) as the hyperlink target.
 Dim hyperLink As IHyperLink = shape.SetHyperlink("1")
-'Gets the target slide of the hyperlink
+'Get the target slide resolved by the hyperlink.
 Dim targetSlide As ISlide = hyperLink.TargetSlide
-'Save the presentation
+'Save the presentation.
 pptxDoc.Save("Sample.pptx")
-'Close the presentation
+'Close the presentation.
 pptxDoc.Close()
 {% endhighlight %}
 
@@ -84,67 +83,65 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Add hyperlink to text
 
-You can navigate to the specified URL from a PowerPoint slide. The following code example demonstrates how to add the web URL as a hyperlink.
+You can link a shape's text to a specified URL within a PowerPoint slide. The following code example demonstrates how to add a web URL as a hyperlink.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Hyperlinks/Add-hyperlink-to-PowerPoint-text/.NET/Add-hyperlink-to-PowerPoint-text/Program.cs" %}
-//Creates the PowerPoint Presentation instance
+//Create a new PowerPoint Presentation instance.
 IPresentation pptxDoc = Presentation.Create();
-//Adds a slide of blank layout type
+//Add a slide with a blank layout to the presentation.
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
-//Adds normal shape to the first slide
+//Add a rectangle shape to the slide.
 IShape shape = slide.Shapes.AddShape(AutoShapeType.Rectangle, 100, 20, 200, 100);
-//Adds paragraph into the shape
+//Add a paragraph into the shape.
 IParagraph paragraph = shape.TextBody.AddParagraph();
-//Adds text to the TextPart
+//Add text to the TextPart.
 paragraph.Text = "Syncfusion";
-//Sets the web hyperlink to the TextPart
+//Set the web hyperlink to the TextPart.
 IHyperLink hyperLink = paragraph.TextParts[0].SetHyperlink("http://www.syncfusion.com");
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
-//Close the presentation
+//Save the PowerPoint Presentation to a file.
+pptxDoc.Save("Sample.pptx");
+//Close the presentation.
 pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Creates the PowerPoint Presentation instance
+//Create a new PowerPoint Presentation instance.
 IPresentation pptxDoc = Presentation.Create();
-//Adds a slide of blank layout type
+//Add a slide with a blank layout to the presentation.
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
-//Adds normal shape to the first slide
+//Add a rectangle shape to the slide.
 IShape shape = slide.Shapes.AddShape(AutoShapeType.Rectangle, 100, 20, 200, 100);
-//Adds paragraph into the shape
+//Add a paragraph into the shape.
 IParagraph paragraph = shape.TextBody.AddParagraph();
-//Adds text to the TextPart
+//Add text to the TextPart.
 paragraph.Text = "Syncfusion";
-//Sets the web hyperlink to the TextPart
+//Set the web hyperlink to the TextPart.
 IHyperLink hyperLink = paragraph.TextParts[0].SetHyperlink("http://www.syncfusion.com");
-//Save the presentation
+//Save the presentation.
 pptxDoc.Save("Sample.pptx");
-//Close the presentation
+//Close the presentation.
 pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Creates the PowerPoint Presentation instance
-Dim pptxDoc As IPresentation = Presentation.Create() 
-'Adds a slide of blank layout type
-Dim slide As ISlide = pptxDoc.Slides.Add(SlideLayoutType.Blank) 
-'Adds normal shape to the first slide
-Dim shape As IShape = slide.Shapes.AddShape(AutoShapeType.Rectangle,100,20,200,100) 
-'Adds paragraph into the shape
-Dim paragraph As IParagraph = shape.TextBody.AddParagraph() 
-'Adds text to the TextPart
+'Create a new PowerPoint Presentation instance.
+Dim pptxDoc As IPresentation = Presentation.Create()
+'Add a slide with a blank layout to the presentation.
+Dim slide As ISlide = pptxDoc.Slides.Add(SlideLayoutType.Blank)
+'Add a rectangle shape to the slide.
+Dim shape As IShape = slide.Shapes.AddShape(AutoShapeType.Rectangle, 100, 20, 200, 100)
+'Add a paragraph into the shape.
+Dim paragraph As IParagraph = shape.TextBody.AddParagraph()
+'Add text to the TextPart.
 paragraph.Text = "Syncfusion"
-'Sets the web hyperlink to the TextPart
-Dim hyperLink As IHyperLink = paragraph.TextParts(0).SetHyperlink("http://www.syncfusion.com") 
-'Save the presentation
+'Set the web hyperlink to the TextPart.
+Dim hyperLink As IHyperLink = paragraph.TextParts(0).SetHyperlink("http://www.syncfusion.com")
+'Save the presentation.
 pptxDoc.Save("Sample.pptx")
-'Close the presentation
+'Close the presentation.
 pptxDoc.Close()
-
 {% endhighlight %}
 
 {% endtabs %}
@@ -153,59 +150,58 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Add hyperlink to picture
 
-You can add the email link to the shape or text on a PowerPoint slide. The following code example demonstrates how to add an email hyperlink to the picture.
+The following code example demonstrates how to add an email hyperlink to a picture.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Hyperlinks/Add-hyperlink-to-PowerPoint-picture/.NET/Add-hyperlink-to-PowerPoint-picture/Program.cs" %}
-//Creates the PowerPoint Presentation instance
+//Create a new PowerPoint Presentation instance.
 IPresentation pptxDoc = Presentation.Create();
-//Adds a slide of blank layout type
+//Add a slide with a blank layout to the presentation.
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
-//Gets a picture as stream
+//Open the picture file as a stream.
 FileStream pictureStream = new FileStream("Image.png", FileMode.Open);
-//Adds the picture to a slide by specifying its size and position.
+//Add the picture to the slide by specifying its size and position.
 IPicture picture = slide.Pictures.AddPicture(pictureStream, 0, 0, 250, 250);
-//Sets the Email hyperlink to the picture
+//Set the email hyperlink to the picture.
 IHyperLink hyperLink = (picture as IShape).SetHyperlink("mailto:sales@syncfusion.com");
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
-//Close the presentation
+//Save the PowerPoint Presentation to a file.
+pptxDoc.Save("Sample.pptx");
+//Close the presentation.
 pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Creates the PowerPoint Presentation instance
+//Create a new PowerPoint Presentation instance.
 IPresentation pptxDoc = Presentation.Create();
-//Adds a slide of blank layout type
+//Add a slide with a blank layout to the presentation.
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
-//Gets a picture as stream
+//Open the picture file as a stream.
 Stream pictureStream = File.Open("Image.png", FileMode.Open);
-//Adds the picture to a slide by specifying its size and position.
+//Add the picture to the slide by specifying its size and position.
 IPicture picture = slide.Pictures.AddPicture(pictureStream, 0, 0, 250, 250);
-//Sets the Email hyperlink to the picture
+//Set the email hyperlink to the picture.
 IHyperLink hyperLink = (picture as IShape).SetHyperlink("mailto:sales@syncfusion.com");
-//Save the presentation
+//Save the presentation.
 pptxDoc.Save("Sample.pptx");
-//Close the presentation
+//Close the presentation.
 pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Creates the PowerPoint Presentation instance
-Dim pptxDoc As IPresentation = Presentation.Create() 
-'Adds a slide of blank layout type
-Dim slide As ISlide = pptxDoc.Slides.Add(SlideLayoutType.Blank) 
-'Gets a picture as stream
-Dim pictureStream As Stream = File.Open("Image.png",FileMode.Open) 
-'Adds the picture to a slide by specifying its size and position
-Dim picture As IPicture = slide.Pictures.AddPicture(pictureStream, 0, 0, 250, 250) 
-'Sets the Email hyperlink to the picture
-Dim hyperLink As IHyperLink = TryCast(picture, IShape).SetHyperlink("mailto:sales@syncfusion.com") 
-'Save the presentation
+'Create a new PowerPoint Presentation instance.
+Dim pptxDoc As IPresentation = Presentation.Create()
+'Add a slide with a blank layout to the presentation.
+Dim slide As ISlide = pptxDoc.Slides.Add(SlideLayoutType.Blank)
+'Open the picture file as a stream.
+Dim pictureStream As Stream = File.Open("Image.png", FileMode.Open)
+'Add the picture to the slide by specifying its size and position.
+Dim picture As IPicture = slide.Pictures.AddPicture(pictureStream, 0, 0, 250, 250)
+'Set the email hyperlink to the picture.
+Dim hyperLink As IHyperLink = TryCast(picture, IShape).SetHyperlink("mailto:sales@syncfusion.com")
+'Save the presentation.
 pptxDoc.Save("Sample.pptx")
-'Close the presentation
+'Close the presentation.
 pptxDoc.Close()
 {% endhighlight %}
 
@@ -213,61 +209,61 @@ pptxDoc.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Hyperlinks/Add-hyperlink-to-PowerPoint-picture).
 
+### Add file hyperlink to picture
+
 You can open external documents like images, text files, PDF, etc. from the PowerPoint slide. The following code example demonstrates how to add a file hyperlink to the picture.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Hyperlinks/Add-file-hyperlink-to-picture/.NET/Add-file-hyperlink-to-picture/Program.cs" %}
-//Creates the PowerPoint Presentation instance
+//Create a new PowerPoint Presentation instance.
 IPresentation pptxDoc = Presentation.Create();
-//Adds a slide of blank layout type
+//Add a slide with a blank layout to the presentation.
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
-//Gets a picture as stream
+//Open the picture file as a stream.
 FileStream pictureStream = new FileStream("Image.png", FileMode.Open);
-//Adds the picture to a slide by specifying its size and position
+//Add the picture to the slide by specifying its size and position.
 IPicture picture = slide.Pictures.AddPicture(pictureStream, 0, 0, 250, 250);
-//Sets the File path as hyperlink
+//Set the file path as the hyperlink target.
 IHyperLink hyperLink = (picture as IShape).SetHyperlink("WordDocument.docx");
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
-//Close the presentation
+//Save the PowerPoint Presentation to a file.
+pptxDoc.Save("Sample.pptx");
+//Close the presentation.
 pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Creates the PowerPoint Presentation instance
+//Create a new PowerPoint Presentation instance.
 IPresentation pptxDoc = Presentation.Create();
-//Adds a slide of blank layout type
+//Add a slide with a blank layout to the presentation.
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
-//Gets a picture as stream
+//Open the picture file as a stream.
 Stream pictureStream = File.Open("Image.png", FileMode.Open);
-//Adds the picture to a slide by specifying its size and position
+//Add the picture to the slide by specifying its size and position.
 IPicture picture = slide.Pictures.AddPicture(pictureStream, 0, 0, 250, 250);
-//Sets the File path as hyperlink
+//Set the file path as the hyperlink target.
 IHyperLink hyperLink = (picture as IShape).SetHyperlink("WordDocument.docx");
-//Save the presentation
+//Save the presentation.
 pptxDoc.Save("Sample.pptx");
-//Close the presentation
+//Close the presentation.
 pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Creates the PowerPoint Presentation instance
-Dim pptxDoc As IPresentation = Presentation.Create() 
-'Adds a slide of blank layout type
-Dim slide As ISlide = pptxDoc.Slides.Add(SlideLayoutType.Blank) 
-'Gets a picture as stream
-Dim pictureStream As Stream = File.Open("Image.png",FileMode.Open) 
-'Adds the picture to a slide by specifying its size and position
-Dim picture As IPicture = slide.Pictures.AddPicture(pictureStream, 0, 0, 250, 250) 
-'Sets the Email hyperlink to the picture
+'Create a new PowerPoint Presentation instance.
+Dim pptxDoc As IPresentation = Presentation.Create()
+'Add a slide with a blank layout to the presentation.
+Dim slide As ISlide = pptxDoc.Slides.Add(SlideLayoutType.Blank)
+'Open the picture file as a stream.
+Dim pictureStream As Stream = File.Open("Image.png", FileMode.Open)
+'Add the picture to the slide by specifying its size and position.
+Dim picture As IPicture = slide.Pictures.AddPicture(pictureStream, 0, 0, 250, 250)
+'Set the file path as the hyperlink target.
 Dim hyperLink As IHyperLink = TryCast(picture, IShape).SetHyperlink("WordDocument.docx")
-'Save the presentation
+'Save the presentation.
 pptxDoc.Save("Sample.pptx")
-'Close the presentation
+'Close the presentation.
 pptxDoc.Close()
-
 {% endhighlight %}
 
 {% endtabs %}
@@ -276,80 +272,82 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 N> The above link makes use of the absolute path of the file for navigation. So, moving the files to another machine or location may lead to file not found error in PowerPoint reader applications.
 
-## Gets a hyperlink details from text and shape
+## Get hyperlink details from text and shape
 
-You can get the hyperlink details from the shape or text in a PowerPoint slide.
+You can read the hyperlink details from a shape or from the text of a shape in a PowerPoint slide.
 
-The following code example demonstrates how to get the details about the hyperlink from shape.
+### Get hyperlink from a shape
+
+The following code example demonstrates how to get the details about the hyperlink from a shape.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Hyperlinks/Get-hyperlink-from-shape/.NET/Get-hyperlink-from-shape/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
-//Retrieves the first slide from the Presentation
+//Open an existing PowerPoint presentation.
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Retrieve the first slide from the presentation.
 ISlide slide = pptxDoc.Slides[0];
-//Retrieves the first shape from the slide
+//Retrieve the first shape from the slide.
 IShape shape = slide.Shapes[0] as IShape;
-//Gets the hyperlink from the shape
+//Get the hyperlink from the shape.
 IHyperLink hyperlink = shape.Hyperlink;
-//Gets the type of action, the hyperlink will be performed when the shape is clicked
+//Get the type of action performed when the hyperlink is clicked.
 HyperLinkType hyperlinkType = hyperlink.Action;
-//Gets the target slide of the hyperlink
+//Get the target slide of the hyperlink.
 ISlide targetSlide = hyperlink.TargetSlide;
-//Gets the url address of the hyperlink
+//Get the URL address of the hyperlink.
 string url = hyperlink.Url;
-//Gets the screen tip text of a hyperlink
+//Get the screen tip text of the hyperlink.
 string screenTip = hyperlink.ScreenTip;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Result.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
-//Close the presentation
+//Save the PowerPoint Presentation to a file.
+pptxDoc.Save("Result.pptx");
+//Close the presentation.
 pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Open an existing PowerPoint presentation
+//Open an existing PowerPoint presentation.
 IPresentation pptxDoc = Presentation.Open("Sample.pptx");
-//Retrieves the first slide from the Presentation
+//Retrieve the first slide from the presentation.
 ISlide slide = pptxDoc.Slides[0];
-//Retrieves the first shape from the slide
+//Retrieve the first shape from the slide.
 IShape shape = slide.Shapes[0] as IShape;
-//Gets the hyperlink from the shape
+//Get the hyperlink from the shape.
 IHyperLink hyperlink = shape.Hyperlink;
-//Gets the type of action, the hyperlink will be performed when the shape is clicked
+//Get the type of action performed when the hyperlink is clicked.
 HyperLinkType hyperlinkType = hyperlink.Action;
-//Gets the target slide of the hyperlink
+//Get the target slide of the hyperlink.
 ISlide targetSlide = hyperlink.TargetSlide;
-//Gets the url address of the hyperlink
+//Get the URL address of the hyperlink.
 string url = hyperlink.Url;
-//Gets the screen tip text of a hyperlink
+//Get the screen tip text of the hyperlink.
 string screenTip = hyperlink.ScreenTip;
-//Save the presentation
+//Save the presentation.
 pptxDoc.Save("Result.pptx");
-//Close the presentation
+//Close the presentation.
 pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Open an existing PowerPoint presentation
-Dim pptxDoc As IPresentation = Presentation.Open("Table.pptx")
-'Retrieves the first shape from the slide
-Dim shape As IShape = TryCast(slide.Shapes(0), IShape) 
-'Gets the hyperlink from the shape
-Dim hyperlink As IHyperLink = shape.Hyperlink 
-'Gets the type of action, the hyperlink will be performed when the shape is clicked
-Dim hyperlinkType As HyperLinkType = hyperlink.Action 
-'Gets the target slide of the hyperlink
-Dim targetSlide As ISlide = hyperlink.TargetSlide 
-'Gets the url address of the hyperlink
-Dim url As String = hyperlink.Url 
-'Gets the screen tip text of a hyperlink
-Dim screenTip As String = hyperlink.ScreenTip 
-'Save the presentation
-pptxDoc.Save("Sample.pptx")
-'Close the presentation
+'Open an existing PowerPoint presentation.
+Dim pptxDoc As IPresentation = Presentation.Open("Sample.pptx")
+'Retrieve the first slide from the presentation.
+Dim slide As ISlide = pptxDoc.Slides(0)
+'Retrieve the first shape from the slide.
+Dim shape As IShape = TryCast(slide.Shapes(0), IShape)
+'Get the hyperlink from the shape.
+Dim hyperlink As IHyperLink = shape.Hyperlink
+'Get the type of action performed when the hyperlink is clicked.
+Dim hyperlinkType As HyperLinkType = hyperlink.Action
+'Get the target slide of the hyperlink.
+Dim targetSlide As ISlide = hyperlink.TargetSlide
+'Get the URL address of the hyperlink.
+Dim url As String = hyperlink.Url
+'Get the screen tip text of the hyperlink.
+Dim screenTip As String = hyperlink.ScreenTip
+'Save the presentation.
+pptxDoc.Save("Result.pptx")
+'Close the presentation.
 pptxDoc.Close()
 {% endhighlight %}
 
@@ -357,88 +355,90 @@ pptxDoc.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Hyperlinks/Get-hyperlink-from-shape).
 
+### Get hyperlink from text
+
 The following code example demonstrates how to get the details about the hyperlink from text.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Hyperlinks/Get-hyperlink-from-text/.NET/Get-hyperlink-from-text/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
-//Retrieves the first slide from the Presentation.
+//Open an existing PowerPoint presentation.
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Retrieve the first slide from the presentation.
 ISlide slide = pptxDoc.Slides[0];
-//Retrieves the first shape from the slide
+//Retrieve the first shape from the slide.
 IShape shape = slide.Shapes[0] as IShape;
-//Retrieves the first paragraph of the shape
+//Retrieve the first paragraph of the shape.
 IParagraph paragraph = shape.TextBody.Paragraphs[0];
-//Retrieves the first TextPart of the shape
+//Retrieve the first TextPart of the shape.
 ITextPart textPart = paragraph.TextParts[0];
-//Gets the hyperlink from the text
+//Get the hyperlink from the text.
 IHyperLink hyperlink = textPart.Hyperlink;
-//Gets the type of action, the hyperlink will be performed when the shape is clicked
+//Get the type of action performed when the hyperlink is clicked.
 HyperLinkType hyperlinkType = hyperlink.Action;
-//Gets the target slide of the hyperlink
+//Get the target slide of the hyperlink.
 ISlide targetSlide = hyperlink.TargetSlide;
-//Gets the url address of the hyperlink
+//Get the URL address of the hyperlink.
 string url = hyperlink.Url;
-//Gets the screen tip text of a hyperlink
+//Get the screen tip text of the hyperlink.
 string screenTip = hyperlink.ScreenTip;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Result.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
-//Close the presentation
+//Save the PowerPoint Presentation to a file.
+pptxDoc.Save("Result.pptx");
+//Close the presentation.
 pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Open an existing PowerPoint presentation
+//Open an existing PowerPoint presentation.
 IPresentation pptxDoc = Presentation.Open("Sample.pptx");
-//Retrieves the first slide from the Presentation
+//Retrieve the first slide from the presentation.
 ISlide slide = pptxDoc.Slides[0];
-//Retrieves the first shape from the slide
+//Retrieve the first shape from the slide.
 IShape shape = slide.Shapes[0] as IShape;
-//Retrieves the first paragraph of the shape
+//Retrieve the first paragraph of the shape.
 IParagraph paragraph = shape.TextBody.Paragraphs[0];
-//Retrieves the first TextPart of the shape
+//Retrieve the first TextPart of the shape.
 ITextPart textPart = paragraph.TextParts[0];
-//Gets the hyperlink from the text
+//Get the hyperlink from the text.
 IHyperLink hyperlink = textPart.Hyperlink;
-//Gets the type of action, the hyperlink will be performed when the shape is clicked
+//Get the type of action performed when the hyperlink is clicked.
 HyperLinkType hyperlinkType = hyperlink.Action;
-//Gets the target slide of the hyperlink
+//Get the target slide of the hyperlink.
 ISlide targetSlide = hyperlink.TargetSlide;
-//Gets the url address of the hyperlink
+//Get the URL address of the hyperlink.
 string url = hyperlink.Url;
-//Gets the screen tip text of a hyperlink
+//Get the screen tip text of the hyperlink.
 string screenTip = hyperlink.ScreenTip;
-//Save the presentation
+//Save the presentation.
 pptxDoc.Save("Result.pptx");
-//Close the presentation
+//Close the presentation.
 pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Open an existing PowerPoint presentation
+'Open an existing PowerPoint presentation.
 Dim pptxDoc As IPresentation = Presentation.Open("Sample.pptx")
-'Retrieves the first shape from the slide
+'Retrieve the first slide from the presentation.
+Dim slide As ISlide = pptxDoc.Slides(0)
+'Retrieve the first shape from the slide.
 Dim shape As IShape = TryCast(slide.Shapes(0), IShape)
-'Retrieves the first paragraph of the shape
+'Retrieve the first paragraph of the shape.
 Dim paragraph As IParagraph = shape.TextBody.Paragraphs(0)
-'Retrieves the first TextPart of the shape
+'Retrieve the first TextPart of the shape.
 Dim textPart As ITextPart = paragraph.TextParts(0)
-'Gets the hyperlink from the text
-Dim hyperlink As IHyperLink = textPart.Hyperlink 
-'Gets the type of action, the hyperlink will be performed when the shape is clicked
-Dim hyperlinkType As HyperLinkType = hyperlink.Action 
-'Gets the target slide of the hyperlink
-Dim targetSlide As ISlide = hyperlink.TargetSlide 
-'Gets the url address of the hyperlink
-Dim url As String = hyperlink.Url 
-'Gets the screen tip text of a hyperlink
-Dim screenTip As String = hyperlink.ScreenTip 
-'Save the presentation
+'Get the hyperlink from the text.
+Dim hyperlink As IHyperLink = textPart.Hyperlink
+'Get the type of action performed when the hyperlink is clicked.
+Dim hyperlinkType As HyperLinkType = hyperlink.Action
+'Get the target slide of the hyperlink.
+Dim targetSlide As ISlide = hyperlink.TargetSlide
+'Get the URL address of the hyperlink.
+Dim url As String = hyperlink.Url
+'Get the screen tip text of the hyperlink.
+Dim screenTip As String = hyperlink.ScreenTip
+'Save the presentation.
 pptxDoc.Save("Result.pptx")
-'Close the presentation
+'Close the presentation.
 pptxDoc.Close()
 {% endhighlight %}
 
@@ -450,52 +450,54 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 You can remove the hyperlink from the shape or text in a PowerPoint slide.
 
-The following code example demonstrates how to remove a hyperlink from the shape in a PowerPoint slide.
+### Remove hyperlink from a shape
+
+The following code example demonstrates how to remove a hyperlink from a shape in a PowerPoint slide.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Hyperlinks/Remove-hyperlink-from-shape/.NET/Remove-hyperlink-from-shape/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
-//Retrieves the first slide from the Presentation
+//Open an existing PowerPoint presentation.
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Retrieve the first slide from the presentation.
 ISlide slide = pptxDoc.Slides[0];
-//Retrieves the first shape from the slide
+//Retrieve the first shape from the slide.
 IShape shape = slide.Shapes[0] as IShape;
-//Removes the hyperlink from the shape
+//Remove the hyperlink from the shape.
 shape.RemoveHyperlink();
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Result.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
-//Close the presentation
+//Save the PowerPoint Presentation to a file.
+pptxDoc.Save("Result.pptx");
+//Close the presentation.
 pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Open an existing PowerPoint presentation
+//Open an existing PowerPoint presentation.
 IPresentation pptxDoc = Presentation.Open("Sample.pptx");
-//Retrieves the first slide from the Presentation
+//Retrieve the first slide from the presentation.
 ISlide slide = pptxDoc.Slides[0];
-//Retrieves the first shape from the slide
+//Retrieve the first shape from the slide.
 IShape shape = slide.Shapes[0] as IShape;
-//Removes the hyperlink from the shape
+//Remove the hyperlink from the shape.
 shape.RemoveHyperlink();
-//Save the presentation
+//Save the presentation.
 pptxDoc.Save("Result.pptx");
-//Close the presentation
+//Close the presentation.
 pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Open an existing PowerPoint presentation
+'Open an existing PowerPoint presentation.
 Dim pptxDoc As IPresentation = Presentation.Open("Sample.pptx")
-'Retrieves the first shape from the slide
+'Retrieve the first slide from the presentation.
+Dim slide As ISlide = pptxDoc.Slides(0)
+'Retrieve the first shape from the slide.
 Dim shape As IShape = TryCast(slide.Shapes(0), IShape)
-'Removes the hyperlink from the shape
+'Remove the hyperlink from the shape.
 shape.RemoveHyperlink()
-'Save the presentation
+'Save the presentation.
 pptxDoc.Save("Result.pptx")
-'Close the presentation
+'Close the presentation.
 pptxDoc.Close()
 {% endhighlight %}
 
@@ -503,67 +505,78 @@ pptxDoc.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Hyperlinks/Remove-hyperlink-from-shape).
 
+### Remove hyperlink from text
+
 The following code example demonstrates how to remove a hyperlink from the text in a PowerPoint slide.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Hyperlinks/Remove-hyperlink-from-text/.NET/Remove-hyperlink-from-text/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
-//Retrieves the first slide from the Presentation
+//Open an existing PowerPoint presentation.
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Retrieve the first slide from the presentation.
 ISlide slide = pptxDoc.Slides[0];
-//Retrieves the first shape from the slide
+//Retrieve the first shape from the slide.
 IShape shape = slide.Shapes[0] as IShape;
-//Retrieves the first paragraph of the shape
+//Retrieve the first paragraph of the shape.
 IParagraph paragraph = shape.TextBody.Paragraphs[0];
-//Retrieves the first TextPart of the shape
+//Retrieve the first TextPart of the shape.
 ITextPart textPart = paragraph.TextParts[0];
-//Removes the hyperlink from the TextPart
+//Remove the hyperlink from the TextPart.
 textPart.RemoveHyperLink();
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Result.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
-//Close the presentation
+//Save the PowerPoint Presentation to a file.
+pptxDoc.Save("Result.pptx");
+//Close the presentation.
 pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Open an existing PowerPoint presentation
+//Open an existing PowerPoint presentation.
 IPresentation pptxDoc = Presentation.Open("Sample.pptx");
-//Retrieves the first slide from the Presentation
+//Retrieve the first slide from the presentation.
 ISlide slide = pptxDoc.Slides[0];
-//Retrieves the first shape from the slide
+//Retrieve the first shape from the slide.
 IShape shape = slide.Shapes[0] as IShape;
-//Retrieves the first paragraph of the shape
+//Retrieve the first paragraph of the shape.
 IParagraph paragraph = shape.TextBody.Paragraphs[0];
-//Retrieves the first TextPart of the shape
+//Retrieve the first TextPart of the shape.
 ITextPart textPart = paragraph.TextParts[0];
-//Removes the hyperlink from the TextPart
+//Remove the hyperlink from the TextPart.
 textPart.RemoveHyperLink();
-//Save the presentation
+//Save the presentation.
 pptxDoc.Save("Result.pptx");
-//Close the presentation
+//Close the presentation.
 pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Open an existing PowerPoint presentation
+'Open an existing PowerPoint presentation.
 Dim pptxDoc As IPresentation = Presentation.Open("Sample.pptx")
-'Retrieves the first shape from the slide
+'Retrieve the first slide from the presentation.
+Dim slide As ISlide = pptxDoc.Slides(0)
+'Retrieve the first shape from the slide.
 Dim shape As IShape = TryCast(slide.Shapes(0), IShape)
-'Retrieves the first paragraph of the shape
+'Retrieve the first paragraph of the shape.
 Dim paragraph As IParagraph = shape.TextBody.Paragraphs(0)
-'Retrieves the first TextPart of the shape
+'Retrieve the first TextPart of the shape.
 Dim textPart As ITextPart = paragraph.TextParts(0)
-'Removes the hyperlink from the TextPart
+'Remove the hyperlink from the TextPart.
 textPart.RemoveHyperLink()
-'Save the presentation
+'Save the presentation.
 pptxDoc.Save("Result.pptx")
-'Close the presentation
+'Close the presentation.
 pptxDoc.Close()
 {% endhighlight %}
 
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Hyperlinks/Remove-hyperlink-from-text).
+
+## See also
+
+* [Working with Shapes](./Working-with-Shapes)
+* [Working with Pictures](./Working-with-Pictures)
+* [Working with Text](./Working-with-Text)
+* [Loading and Saving the Presentation](Loading-and-Saving-the-Presentation)
+* [Assemblies-Required](Assemblies-Required)
+* [NuGet-Packages-Required](NuGet-Packages-Required)

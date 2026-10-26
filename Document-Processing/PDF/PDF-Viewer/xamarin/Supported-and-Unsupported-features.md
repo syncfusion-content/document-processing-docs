@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Supported and Unsupported features in Xamarin Pdf Viewer (SfPdfViewer)
+# Supported and Unsupported features in Xamarin Pdf Viewer
 
 The following table shows the various features available in the PDF Viewer and their availability in different platforms.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Move and Resize form fields in the TypeScript PDF Viewer | Syncfusion
-description: Learn how to move and resize PDF form fields using the UI and programmatically with APIs in the Syncfusion TypeScript PDF Viewer.
+title: Move Resize Form Fields in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Move and resize PDF form fields in the JavaScript (ES6) PDF Viewer using the built-in UI and programmatic APIs to control the field layout.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Move and resize PDF form fields
+# Move and Resize Form Fields in JavaScript (ES6) PDF Viewer
 - **Move**: Drag the form field to reposition it.
 - **Resize**: Use the resize handles to change width and height.
 
@@ -30,7 +30,7 @@ You can set absolute bounds or move fields by a delta.
     // Find the textbox field by name (Here field name is First Name)
     const field = fields.find((f: any) => f.name === 'First Name') || fields[0]; //Update Name accordingly
     if (field) {
-      // Update bounds to move or rezie form fields
+      // Update bounds to move or resize form fields
       pdfviewer.formDesignerModule.updateFormField(field, {
         bounds: { X: 140, Y: 210, Width: 220, Height: 24 }, // new absolute position & size
       } as TextFieldSettings);
@@ -39,12 +39,12 @@ You can set absolute bounds or move fields by a delta.
 );
 ```
 
-## See also
+## See Also
 
 - [Form Designer overview](../overview)
 - [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)
 - [Create form fields](./create-form-fields)
-- [Remove form Fields](./remove-form-fields)
+- [Remove form fields](./remove-form-fields)
 - [Customize form fields](./customize-form-fields)
 - [Group form fields](../group-form-fields)
 - [Form validation](../form-validation)

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Enable Print Rotation in TypeScript PDF Viewer | Syncfusion
-description: Learn how to enable print rotation for landscape documents in the Syncfusion TypeScript PDF Viewer component.
+title: Enable Print Rotation in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Enable print rotation in the JavaScript (ES6) PDF Viewer so landscape documents are printed in the correct orientation without manual adjustment.
 platform: document-processing
 control: Print
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Enable print rotation in TypeScript PDF Viewer
+# Enable Print Rotation in JavaScript (ES6) PDF Viewer
 
 Use the `enablePrintRotation` property to enable automatic rotation of landscape pages during printing so they match the paper orientation. Enable this setting to reduce clipping of landscape pages; disable it to preserve the document's original orientation. Ensure the `Print` module is injected before using this property — see the PdfViewer API reference: [PdfViewer API Reference](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default).
 

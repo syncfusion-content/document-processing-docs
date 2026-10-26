@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Open document from One Drive in Vue Document editor | Syncfusion
-description: Learn about how to Open document from One Drive in Vue Document editor control of Syncfusion Essential JS 2 and more details.
+title: Open Documents from OneDrive in Vue DOCX Editor | Syncfusion
+description: Open documents from OneDrive in Vue DOCX Editor, enabling cloud storage integration and seamless document access.
 platform: document-processing
 control: Open document from One Drive
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document from One Drive in Vue Document editor
+# Open Documents from OneDrive in Vue DOCX Editor
 
-To load a document from One Drive in a Document editor, you can follow the steps below
+To load a document from One Drive in a [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor), you can follow the steps below
 
 **Step 1** Create the Microsoft graph API.
 
 Need to create a Microsoft Graph API application and obtain the necessary credentials, namely the application ID and tenant ID. Follow the steps provided in the [link](https://learn.microsoft.com/en-us/training/modules/msgraph-access-file-data/3-exercise-access-files-onedrive) to create the application and obtain the required IDs. 
 
-**Step 2:** Create a Simple Document Editor Sample in Vue
+**Step 2:** Create a Simple DOCX Editor Sample in Vue
 
-Start by following the steps provided in this [link](../getting-started) to create a simple Document Editor sample in vue. This will give you a basic setup of the Document Editor component.
+Start by following the steps provided in this [link](../getting-started) to create a simple DOCX Editor sample in vue. This will give you a basic setup of the DOCX Editor component.
 
 **Step 3:** Modify the `DocumentEditorController.cs` File in the Web Service Project
 
@@ -131,7 +131,7 @@ public async Task<string> LoadFromOneDrive([FromBody] Dictionary<string, string>
 
 N> Replace **Your_Tenant_ID**, **Your_Application_ID**, and **Your_Folder_Name_To_Access_The_Files_In_Onedrive** with your actual tenant ID, application ID, and folder name.
 
-**Step 4:**  Modify the index File in the Document Editor sample
+**Step 4:**  Modify the index File in the DOCX Editor sample
 
 In the client-side, the document is returned from the web service is opening using [`open`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#open) method.
 

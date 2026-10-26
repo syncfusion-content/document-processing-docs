@@ -1,21 +1,21 @@
 ---
-title: Create Pie Chart in Excel | Syncfusion
-description: Explains with an example on how to programmatically create pie chart in Excel and to position the chart in a worksheet using Interop and XlsIO.
+title: Pie Charts in .NET Excel Library | Syncfusion
+description: Creating Excel pie charts programmatically explains how to create and position pie charts using Interop and Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Create Pie Chart in Excel
+# Pie Charts in .NET Excel Library
 
-The pie charts are used to display the contribution of each value (slice) to a total (pie). So, it is easy to compare proportions. Pie charts always use one data series.
+Pie charts display the contribution of each value (slice) to a total, making it easy to compare proportions. Pie charts always use one data series.
 
-The following code shows how to create pie chart in Excel and to place it in a worksheet with Interop and XlsIO for .NET.
+The following code shows how to create a pie chart in Excel and place it in a worksheet using Interop and XlsIO for .NET.
 
 ## Interop
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 private void CreatePieChart()
 {
   //Instantiate the application object
@@ -32,7 +32,7 @@ private void CreatePieChart()
   sheet.Cells[1, 1] = "Products";
   sheet.Cells[1, 2] = "Users";
 
-  //Add data from A2 till B4
+  //Add data from A2 to B4
   sheet.Cells[2, 1] = "XlsIO";
   sheet.Cells[2, 2] = 10000;
   sheet.Cells[3, 1] = "DocIO";
@@ -50,7 +50,7 @@ private void CreatePieChart()
   chart.HasTitle = true;
   chart.ChartTitle.Text = "Users";
 
-  //Gets the cells that define the data to be charted
+  //Get the cells that define the data to be charted
   Range chartRange = sheet.get_Range("A2", "B4");
   chart.SetSourceData(chartRange, Type.Missing);
 
@@ -63,7 +63,55 @@ private void CreatePieChart()
 }
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+private void CreatePieChart()
+{
+  //Instantiate the application object
+  var excelApp = new Microsoft.Office.Interop.Excel.Application();
+
+  //Add a workbook
+  Workbook workbook = excelApp.Workbooks.Add(System.Reflection.Missing.Value);
+
+  //Get the first sheet
+  Worksheet sheet = workbook.Sheets["Sheet1"];
+
+  //Add sample data for pie chart
+  //Add headings in A1 and B1.
+  sheet.Cells[1, 1] = "Products";
+  sheet.Cells[1, 2] = "Users";
+
+  //Add data from A2 to B4
+  sheet.Cells[2, 1] = "XlsIO";
+  sheet.Cells[2, 2] = 10000;
+  sheet.Cells[3, 1] = "DocIO";
+  sheet.Cells[3, 2] = 8000;
+  sheet.Cells[4, 1] = "PDF";
+  sheet.Cells[4, 2] = 12000;
+
+  //Add a pie chart
+  ChartObjects charts = (ChartObjects)sheet.ChartObjects(Type.Missing);
+  ChartObject chartObject = (ChartObject)charts.Add(10, 80, 300, 250);
+  Chart chart = chartObject.Chart;
+  chart.ChartType = XlChartType.xlPie;
+
+  //Set chart title
+  chart.HasTitle = true;
+  chart.ChartTitle.Text = "Users";
+
+  //Get the cells that define the data to be charted
+  Range chartRange = sheet.get_Range("A2", "B4");
+  chart.SetSourceData(chartRange, Type.Missing);
+
+  //Save the Excel file
+  workbook.SaveCopyAs("InteropOutput_PieChart.xlsx");
+
+  //Quit the application
+  excelApp.Quit();
+
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Private Sub CreatePieChart()
   'Instantiate the application object
   Dim excelApp = New Microsoft.Office.Interop.Excel.Application()
@@ -79,7 +127,7 @@ Private Sub CreatePieChart()
   sheet.Cells(1, 1) = "Products"
   sheet.Cells(1, 2) = "Users"
 
-  'Add data from A2 till B4
+  'Add data from A2 to B4
   sheet.Cells(2, 1) = "XlsIO"
   sheet.Cells(2, 2) = 10000
   sheet.Cells(3, 1) = "DocIO"
@@ -97,7 +145,7 @@ Private Sub CreatePieChart()
   chart.HasTitle = True
   chart.ChartTitle.Text = "Users"
 
-  'Gets the cells that define the data to be charted
+  'Get the cells that define the data to be charted
   Dim chartRange As Range = sheet.Range("A2", "B4")
   chart.SetSourceData(chartRange, Type.Missing)
 
@@ -113,7 +161,7 @@ End Sub
 ## XlsIO
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 private void CreatePieChart()
 {
   using (ExcelEngine excelEngine = new ExcelEngine())
@@ -132,7 +180,7 @@ private void CreatePieChart()
     worksheet.SetValue(1, 1, "Products");
     worksheet.SetValue(1, 2, "Users");
 
-    //Add data from A2 till B4
+    //Add data from A2 to B4
     worksheet.SetValue(2, 1, "XlsIO");
     worksheet.Range["B2"].Value2 = 10000;
     worksheet.SetValue(3, 1, "DocIO");
@@ -161,7 +209,55 @@ private void CreatePieChart()
 }
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+private void CreatePieChart()
+{
+  using (ExcelEngine excelEngine = new ExcelEngine())
+  {
+    //Instantiate the application object
+    IApplication application = excelEngine.Excel;
+
+    //Create a workbook
+    IWorkbook workbook = application.Workbooks.Create(1);
+
+    //Get the first sheet
+    IWorksheet worksheet = workbook.Worksheets[0];
+
+    //Add sample data for pie chart
+    //Add headings in A1 and B1.
+    worksheet.SetValue(1, 1, "Products");
+    worksheet.SetValue(1, 2, "Users");
+
+    //Add data from A2 to B4
+    worksheet.SetValue(2, 1, "XlsIO");
+    worksheet.Range["B2"].Value2 = 10000;
+    worksheet.SetValue(3, 1, "DocIO");
+    worksheet.Range["B3"].Value2 = 8000;
+    worksheet.SetValue(4, 1, "PDF");
+    worksheet.Range["B4"].Value2 = 12000;
+
+    //Add a pie chart and set data range in the worksheet
+    IChartShape chart = worksheet.Charts.Add();
+    chart.DataRange = worksheet.Range["A2:B4"];
+    chart.ChartType = ExcelChartType.Pie;
+    chart.IsSeriesInRows = false;
+
+    //Position chart in the worksheet
+    chart.TopRow = 7;
+    chart.LeftColumn = 1;
+    chart.RightColumn = 7;
+    chart.BottomRow = 23;
+
+    //Set chart title
+    chart.ChartTitle = "Users";
+
+    //Save the workbook
+    workbook.SaveAs("XlsIOOutput_PieChart.xlsx");
+  }
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Private Sub CreatePieChart()
   Using excelEngine As ExcelEngine = New ExcelEngine()
     'Instantiate the application object
@@ -178,7 +274,7 @@ Private Sub CreatePieChart()
     worksheet.SetValue(1, 1, "Products")
     worksheet.SetValue(1, 2, "Users")
 
-    'Add data from A2 till B4
+    'Add data from A2 to B4
     worksheet.SetValue(2, 1, "XlsIO")
     worksheet.Range("B2").Value2 = 10000
     worksheet.SetValue(3, 1, "DocIO")
@@ -201,7 +297,7 @@ Private Sub CreatePieChart()
     'Set chart title
     chart.ChartTitle = "Users"
 
-    'Save as Excel file
+    'Save the workbook
     workbook.SaveAs("XlsIOOutput_PieChart.xlsx")
   End Using
 End Sub

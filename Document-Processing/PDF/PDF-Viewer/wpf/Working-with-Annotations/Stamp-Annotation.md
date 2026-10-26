@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Stamp Annotation in WPF Pdf Viewer control | Syncfusion&reg;
-description: Learn about Stamp Annotation support in Syncfusion<sup>&reg;</sup>; Essential Studio<sup>&reg;</sup>; WPF Pdf Viewer control, its elements and more.
+title: Stamp Annotation in WPF Pdf Viewer control | Syncfusion
+description: The stamp annotation feature in WPF PDF Viewer applies visual stamps like APPROVED or DRAFT to PDF pages for document status indication.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -285,6 +285,32 @@ private void AddStamp_Click(object sender, RoutedEventArgs e)
     System.Windows.Size stampSize = new System.Windows.Size (200,200);
     //Adds the custom stamp with the desired size.
     PdfViewer.AddStamp(stamp, pageNumber, position, stampSize);
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+## Adding dynamic stamps using toolbar
+
+You can add a dynamic stamp containing the author name and the current date time by selecting a stamp from the Dynamic Stamp category in the toolbar, as shown in the following screenshot.
+
+N> The author name can be customized either by changing the annotation settings or by setting the PdfViewer's current user. For more information, refer to the [documentation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/wpf/how-to/changing-the-current-user). By default, the author name is taken from the stamp annotation's author property.
+
+![Dynamic stamps](Annotation-images\dynamic-stamp.png)
+
+## Adding dynamic stamps to the desired page programmatically
+
+PDF Viewer allows the user to add dynamic stamps to the desired page by passing PdfViewerDynamicStampType, page number and position where the dynamic stamp needs to be added as parameters to the `AddDynamicStamp` method. The following code snippet illustrates adding a dynamic stamp to the desired page programmatically.
+
+{% tabs %}
+{% highlight C# %}
+
+private void AddDynamicStamp_Click(object sender, RoutedEventArgs e)
+{
+    //Enter the page number ranges from 1 to page count.
+    int pageNumber = 1;
+    //Adds the dynamic stamp to the desired page.
+    PdfViewer.AddDynamicStamp(PdfViewerDynamicStampType.Approved, pageNumber, new Point(200, 200));
 }
 
 {% endhighlight %}

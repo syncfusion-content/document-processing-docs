@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Search for a text instance
+#  Search text in PDF using PDF viewer Xamarin.Android
 
 PDF Viewer provides support to find and highlight texts in the PDF document and it provides the following methods to perform text search operations.
 

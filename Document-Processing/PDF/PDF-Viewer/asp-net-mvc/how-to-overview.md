@@ -1,13 +1,13 @@
 ---
 layout: post
-title: FAQ Section in ASP.NET MVC PDF Viewer control | Syncfusion
-description: In this section, you can know about the various questions asked about manipulation of ASP.NET MVC PDF Viewer control.
+title: How to Overview of the ASP.NET MVC PDF Viewer | Syncfusion
+description: How-to overview of the ASP.NET MVC PDF Viewer in Syncfusion ASP.NET MVC PDF Viewer (SfPdfViewer) control, with its elements and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Frequently Asked Questions Section in PDF Viewer Component
+# How to Overview of the ASP.NET MVC PDF Viewer
 
 The frequently asked questions in Essential<sup>&reg;</sup> PDF Viewer are listed below.
 
@@ -24,6 +24,7 @@ The frequently asked questions in Essential<sup>&reg;</sup> PDF Viewer are liste
 * [How to customize text search highlight color in PDF Viewer?](./how-to/customize-text-search-color)
 * [How to disable the context menu?](./how-to/disable-context-menu)
 * [How to disable tile rendering in PDF Viewer?](./how-to/disable-tile-rendering)
+* [Active Viewport Rendering](./how-to/active-viewport-rendering)
 * [How to get the download start event?](./how-to/download-start-event)
 * [How to enable or disable the local storage?](./how-to/enable-local-storage)
 * [Enable the resizer for text markup annotation?](./how-to/enable-resize)
@@ -75,3 +76,4 @@ The frequently asked questions in Essential<sup>&reg;</sup> PDF Viewer are liste
 * [How to Show notification dialog in PDF Viewer?](./how-to/show-notification-dialog)
 * [How to set date to the signature in PDF Viewer?](./how-to/signature-date)
 * [Load Document after resources Loaded](./how-to/load-document-after-resources-loaded)
+* [How to configure PDF Viewer with local resources?](./how-to/local-resources)

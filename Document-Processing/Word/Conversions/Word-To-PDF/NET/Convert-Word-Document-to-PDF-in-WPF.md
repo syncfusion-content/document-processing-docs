@@ -1,14 +1,14 @@
 ---
-title: Convert Word to PDF in WPF | Syncfusion 
-description: Convert Word to PDF in WPF using .NET Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Convert Word to PDF in WPF  | Syncfusion
+description: Describe how to convert Word documents to PDF in WPF applications using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Convert Word document to PDF in WPF
+# Convert Word to PDF in WPF 
 
-Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-processing/word-framework/net/word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to PDF in WPF**.
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to PDF in WPF**.
 
 ## Steps to convert Word document to PDF in WPF
 
@@ -36,6 +36,7 @@ Step 3: Include the following namespaces in the **MainWindow.xaml.cs** file.
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
+using System.IO;
 using Syncfusion.DocIO.DLS;
 using Syncfusion.DocIO;
 using Syncfusion.DocToPDFConverter;
@@ -67,6 +68,8 @@ Step 4: Add a new button in **MainWindow.xaml** to convert Word document to PDF 
 
 Step 5: Add the following code in **btnConvert_Click** to **convert Word document to PDF** with simple text.
 
+N> Ensure the sample **Input.docx** file is placed in a **Data** folder at the project root (the path used in the code is `../../Data/Input.docx`).
+
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
@@ -77,13 +80,13 @@ using (WordDocument document = new WordDocument(Path.GetFullPath(@"../../Data/In
     //Instantiation of DocToPDFConverter for Word to PDF conversion
     using (DocToPDFConverter converter = new DocToPDFConverter())
     {
-        //Converts Word document into PDF document
+        //Converts Word document to PDF document
         using (PdfDocument pdfDocument = converter.ConvertToPDF(document))
         {
             //Saves the PDF document
             pdfDocument.Save(Path.GetFullPath(@"../../Sample.pdf"));
         }
-    };
+    }
 }
 
 {% endhighlight %}
@@ -113,7 +116,7 @@ By executing the program, you will get the **PDF document** as follows.
 * JetBrains Rider.
 * Install .NET Framework Developer Pack.
 
-Step 1. Open JetBrains Rider and create a new WPF application project.
+Step 1: Open JetBrains Rider and create a new WPF application project.
 * Launch JetBrains Rider.
 * Click **New Solution** on the welcome screen.
 
@@ -127,7 +130,7 @@ Step 1. Open JetBrains Rider and create a new WPF application project.
 
 ![Creating a new WPF application in JetBrains Rider](WPF_images/Create-WPF-sample.png)
 
-Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
+Step 2: Install the [Syncfusion.DocToPdfConverter.Wpf](https://www.nuget.org/packages/Syncfusion.DocToPdfConverter.Wpf) NuGet package from [NuGet.org](https://www.nuget.org/).
 * Click the NuGet icon in the Rider toolbar and type [Syncfusion.DocToPdfConverter.Wpf](https://www.nuget.org/packages/Syncfusion.DocToPdfConverter.Wpf/) in the search bar.
 * Ensure that nuget.org is selected as the package source.
 * Select the latest Syncfusion.DocToPdfConverter.Wpf NuGet package from the list.
@@ -146,6 +149,7 @@ Step 3: Include the following namespaces in the **MainWindow.xaml.cs** file.
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
+using System.IO;
 using Syncfusion.DocIO.DLS;
 using Syncfusion.DocIO;
 using Syncfusion.DocToPDFConverter;
@@ -177,6 +181,8 @@ Step 4: Add a new button in **MainWindow.xaml** to convert Word document to PDF 
 
 Step 5: Add the following code in **btnConvert_Click** to **convert Word document to PDF** with simple text.
 
+N> Ensure the sample **Input.docx** file is placed in a **Data** folder at the project root (the path used in the code is `../../Data/Input.docx`).
+
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
@@ -187,13 +193,13 @@ using (WordDocument document = new WordDocument(Path.GetFullPath(@"../../Data/In
     //Instantiation of DocToPDFConverter for Word to PDF conversion
     using (DocToPDFConverter converter = new DocToPDFConverter())
     {
-        //Converts Word document into PDF document
+        //Converts Word document to PDF document
         using (PdfDocument pdfDocument = converter.ConvertToPDF(document))
         {
             //Saves the PDF document
             pdfDocument.Save(Path.GetFullPath(@"../../Sample.pdf"));
         }
-    };
+    }
 }
 
 {% endhighlight %}
@@ -218,6 +224,6 @@ By executing the program, you will get the **PDF document** as follows.
 
 {% endtabcontents %}
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/net) to explore the rich set of Syncfusion<sup>&reg;</sup> Word library (DocIO) features.
+Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page.
 
-An online sample link to [convert Word document to PDF](https://document.syncfusion.com/demos/word/wordtopdf#/tailwind) in ASP.NET Core.
+You can also explore an online demo to [convert Word document to PDF](https://document.syncfusion.com/demos/word/wordtopdf#/tailwind) using Syncfusion's Word (DocIO) library.

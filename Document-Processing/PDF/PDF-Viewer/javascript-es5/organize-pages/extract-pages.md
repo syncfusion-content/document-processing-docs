@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Extract Pages in JavaScript PDF Viewer | Syncfusion
-description: Learn here all about Extract Pages in Organize Pages in Syncfusion JavaScript PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Extract Pages in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Extract pages from a PDF in the JavaScript (ES5) PDF Viewer using the Organize Pages panel to save selected pages as a separate document.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Extract pages in JavaScript PDF Viewer
+# Extract Pages in JavaScript (ES5) PDF Viewer
 
 The PDF Viewer component enables users to extract pages from a document using the Extract Pages option in the Organize Pages UI and to control extraction programmatically. The Extract Pages tool is available by default in Organize Pages.
 
@@ -77,14 +77,15 @@ Use the `showExtractPagesOption` API to show or hide the Extract Pages option. W
 
 Use the following code snippet to remove the Extract Pages option:
 ```js
-// Remove the Extract Pages option entirely from the UI (redacted example as provided)
+// Remove the Extract Pages option entirely from the UI
 viewer.pageOrganizerSettings = { showExtractPagesOption: false }
 ```
 
 ### Extract pages and load the result programmatically
 
-You can extract pages programmatically using the `extractPages` method.
-The following example extracts pages 1 and 2, then immediately loads the extracted pages back into the viewer. The returned value is a byte array (e.g., Uint8Array) representing the PDF file contents.
+You can extract pages programmatically using the `extractPages` method. The method accepts a page-selection string (for example, `"1,2"` or `"2-4"`) and returns the extracted PDF as a `Uint8Array`, which can be passed directly to `viewer.load()` or saved as a file.
+
+The following example extracts pages 1 and 2, then immediately loads the extracted pages back into the viewer.
 
 ```html
 <button id="extractPage">Extract Pages</button>

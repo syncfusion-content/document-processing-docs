@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Move and Resize form fields in the Vue PDF Viewer | Syncfusion
-description: Learn how to move and resize PDF form fields using the UI and programmatically with APIs in the Syncfusion Vue PDF Viewer.
+title: Move Resize Form Fields in Vue PDF Viewer | Syncfusion
+description: Move and resize PDF form fields in the Vue PDF Viewer using the built-in UI and programmatic APIs to control the field layout.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Move and Resize PDF Form Fields in Vue
+# Move and Resize Form Fields in Vue PDF Viewer
 - **Move**: Drag the form field to reposition it.
 - **Resize**: Use the resize handles to change width and height.
 
-![Moveing and Resizing a form field](../../../javascript-es6/images/move-resize-forms.gif)
+![Moving and Resizing a form field](../../../javascript-es6/images/move-resize-forms.gif)
 
 ## Move and Resize Fields Programmatically (API)
 You can set absolute bounds or move fields by a delta.
@@ -70,12 +70,12 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## See also
+## See Also
 
 - [Form Designer overview](../overview)
 - [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)
 - [Create form fields](./create-form-fields)
-- [Remove form Fields](./remove-form-fields)
+- [Remove form fields](./remove-form-fields)
 - [Customize form fields](./customize-form-fields)
 - [Group form fields](../group-form-fields)
 - [Form validation](../form-validation)

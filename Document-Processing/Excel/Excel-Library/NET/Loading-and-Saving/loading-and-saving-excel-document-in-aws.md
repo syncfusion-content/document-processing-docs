@@ -1,12 +1,12 @@
 ---
-title: Loading and Saving an Excel in AWS | Syncfusion
-description: Learn how to load and save an Excel document in Amazon Web Services (AWS) using Syncfusion .NET Core Excel (XlsIO) library in C#.
+title: Loading and Saving Excel in AWS| Syncfusion
+description: AWS Excel file handling section explains how to load and save Excel documents in AWS using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Loading and Saving Excel files in Amazon Web Services (AWS)
+# Loading and Saving Files in AWS
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, **load and save an Excel document in Amazon Web Services (AWS)** within a few lines of code. 
 

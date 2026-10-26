@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Redaction UI interactions in Vue PDF Viewer | Syncfusion
-description: Learn about the various UI interactions in Redaction annotations of the Syncfusion Vue PDF Viewer component and more
+title: Ui Interaction in Vue PDF Viewer | Syncfusion
+description: Learn about the ui interaction in the Vue PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Redaction UI interactions in Vue PDF Viewer
+# Ui Interaction in Vue PDF Viewer
 
 ## Add redaction annotations from the toolbar
 
@@ -15,7 +15,7 @@ Use the redaction tool in the toolbar to draw over content that should be hidden
 
 ![Drawing a redaction annotation on the page](redaction-annotations-images/adding-redaction-annotation.png)
 
-#### Redaction annotations are interactive
+### Redaction annotations are interactive
 
 * **Movable** – Drag and reposition the annotation within the same page.  
 ![Moving a redaction annotation](redaction-annotations-images/moving-redaction-annotation.png)
@@ -23,7 +23,7 @@ Use the redaction tool in the toolbar to draw over content that should be hidden
 * **Resizable** – Resize the annotation to cover the required area.  
 ![Resizing a redaction annotation](redaction-annotations-images/resizing-redaction-annotation.png)
 
-N> The redaction tool is hidden by default. Customize the toolbar to include it. For instructions, see the [Toolbar customization](../toolbar).
+N> The redaction tool is hidden by default. Customize the toolbar to include it. For instructions, see the [Toolbar customization](./toolbar).
 
 ## Add redaction annotations using the context menu
 
@@ -62,7 +62,7 @@ Use the General tab to define how the content will look after redaction. These s
 
 ![Fill Color in General Tab](redaction-annotations-images/after-redaction-fill-color.png)
 
-N> Hovering over a redaction annotation shows a preview of the final look. After Apply Redaction is selected, these settings are flattened into the page and cannot be edited. Tip: Select Save in the dialog to persist changes.
+N> Hovering over a redaction annotation shows a preview of the final look. After Apply Redaction is selected, these settings are flattened into the page and cannot be edited. Tip: In the property panel dialog, select Save to persist the changes before applying the redaction.
 
 #### Appearance tab
 
@@ -115,8 +115,7 @@ After choosing the range, select **Save** to apply redaction marks to the select
 
 The **Apply Redaction** button permanently removes all marked content from the document.
 
-* The button is disabled when no redaction annotations exist.  
-* It automatically enables once at least one annotation is present.
+* The button is disabled when no redaction annotations exist and automatically enables once at least one annotation is present.
 
 ![Redact Button Icon](redaction-annotations-images/redact-button-icon.png)
 

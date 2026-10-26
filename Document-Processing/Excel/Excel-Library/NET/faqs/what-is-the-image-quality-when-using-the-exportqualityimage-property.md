@@ -1,12 +1,12 @@
 ---
-title: Image quality when using the ExportQualityImage property | Syncfusion
-description: This page explains about the impact on image quality when using the ExportQualityImage property of XlsIO.
+title: Export Quality Images in .NET Excel Library | Syncfusion
+description: ExportQualityImage property describes how image quality is affected when exporting images using Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# What is the image quality when using the ExportQualityImage property?
+# ExportQualityImage Property in .NET Excel Library
 
 Normally, the image in the PDF will be saved in PNG format. With this property, the TIFF format is used for exporting the images into PDF. 
 
@@ -20,6 +20,6 @@ Hence, we have used PNG format as default for exporting the images into PDF. If 
 
 ## See Also
 
-* [How to export quality image?](https://help.syncfusion.com/file-formats/xlsio/excel-to-pdf-converter-settings#export-quality-image)
-* [How to convert Worksheet to Image?](https://help.syncfusion.com/file-formats/xlsio/worksheet-to-image-conversion)
-* [How to convert Chart to Image?](https://help.syncfusion.com/file-formats/xlsio/chart-to-image-conversion)
+* [How to export quality image?](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/excel-to-pdf-converter-settings#export-quality-image)
+* [How to convert Worksheet to Image?](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-image/net/worksheet-to-image-conversion)
+* [How to convert Chart to Image?](https://help.syncfusion.com/document-processing/excel/conversions/chart-to-image/net/chart-to-image-conversion)

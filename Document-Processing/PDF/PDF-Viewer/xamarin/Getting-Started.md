@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Xamarin Pdf Viewer control | Syncfusion
-description: Learn here about getting started with Syncfusion<sup>®</sup> Xamarin Pdf Viewer (SfPdfViewer) control, its elements and more.
+title: Getting Started with Xamarin PDF Viewer | Syncfusion
+description: Learn how to get started with the Syncfusion Xamarin PDF Viewer control. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Getting Started with Xamarin Pdf Viewer (SfPdfViewer)
+# Getting Started with Xamarin PDF Viewer
 
 This section demonstrates how to create an application that displays a PDF file using [Xamarin Pdf Viewer](https://www.syncfusion.com/xamarin-ui-controls/xamarin-pdf-viewer) (SfPdfViewer) control.
  

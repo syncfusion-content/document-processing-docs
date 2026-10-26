@@ -1,12 +1,12 @@
 ---
-title: Convert Excel to Image in AWS | Syncfusion
-description: Learn how to convert an Excel document to Image in Amazon Web Services (AWS) using Syncfusion .NET Core Excel (XlsIO) library in C#.
+title: Excel to Image conversion in AWS | Syncfusion
+description: AWS Excel to Image section explains how to convert Excel documents to images in AWS using Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Convert Excel to Image in Amazon Web Services (AWS)
+# Excel to Image Conversion in AWS using Excel Library
 
 Syncfusion<sup>&reg;</sup> XlsIO is a [.NET Core Excel library](https://www.syncfusion.com/document-processing/excel-framework/net-core) used to create, read, edit and **convert Excel documents** programmatically without **Microsoft Excel** or interop dependencies. Using this library, **convert an Excel document to Image in Amazon Web Services (AWS)** within a few lines of code. 
 
@@ -30,7 +30,7 @@ NuGet package name<br/></th></tr></thead>
 <td>
 AWS Lambda <br/></td><td>
 {{'[Syncfusion.XlsIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.XlsIORenderer.Net.Core)' | markdownify}}<br/>
-{{'[SkiaSharp.NativeAssets.Linux v3.119.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/3.119.1)' | markdownify}} <br/>
+{{'[SkiaSharp.NativeAssets.Linux v4.150.1](https://www.nuget.org/packages/SkiaSharp.NativeAssets.Linux/4.150.1)' | markdownify}} <br/>
 {{'[HarfBuzzSharp.NativeAssets.Linux v2.8.2.2](https://www.nuget.org/packages/HarfBuzzSharp.NativeAssets.Linux/2.8.2.2)' | markdownify}}<br/> 
 </td></tr>
 </table>

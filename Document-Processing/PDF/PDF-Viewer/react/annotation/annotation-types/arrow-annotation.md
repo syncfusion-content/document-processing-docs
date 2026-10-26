@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Arrow Annotation (Shape) in React PDF Viewer | Syncfusion
-description: Learn how to enable, apply, customize, and manage Arrow annotations in the Syncfusion React PDF Viewer.
+title: Arrow Annotation in React PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Arrow annotations in the React PDF Viewer to point at or connect areas of a PDF document.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Arrow Annotation (Shape) in React PDF Viewer
+# Arrow Annotation in React PDF Viewer
 Arrow annotations let users point, direct attention, or indicate flow on PDFs—useful for callouts, direction markers, and connectors during reviews. You can add arrows from the toolbar, switch to arrow mode programmatically, customize appearance, edit/delete them in the UI, and export them with the document.
 
 ![Arrow overview](../../../javascript-es6/annotations/annotation-images/arrow-annot.png)
@@ -57,7 +57,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 N> When in Pan mode, selecting a shape tool automatically switches the viewer to selection mode for smooth interaction.
 
 ### Enable Arrow Mode
-Switch the viewer into highlight mode using `setAnnotationMode('Arrow')`.
+Switch the viewer into Arrow mode using `setAnnotationMode('Arrow')`.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -122,13 +122,61 @@ Configure default arrow appearance (fill color, stroke color, thickness, opacity
 {% endhighlight %}
 {% endtabs %}
 
-N> For **Line** and **Arrow** annotations, **Fill Color** is available only when an arrowhead style is applied at the **Start** or **End**. If both are `None`, lines do not render fill and the Fill option remains disabled.
+### Supported Border Styles
+
+In addition to the default **Solid** border, Arrow annotations support the following additional border style:
+
+- **Dashed** — dashed line border.
+
+Use [`BorderStyle`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/borderStyle) value `BorderStyle.Dashed` together with the optional `borderDashArray` setting in the [`arrowSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#arrowsettings) property.
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `borderStyle` | `BorderStyle` | Specifies the border style. Supported values: `BorderStyle.Solid` and `BorderStyle.Dashed`. |
+| `borderDashArray` | `number[]` | Specifies the dash pattern when `borderStyle` is `BorderStyle.Dashed`. |
+
+N> `borderStyle` and `borderDashArray` are preserved during save, reload, import, and export.
+
+#### Apply a Dashed Border
+
+```ts
+export enum BorderStyle {
+    Solid = 'Solid',
+    Dashed = 'Dashed',
+    Cloud = 'Cloud'
+}
+```
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
+<PdfViewerComponent
+  id="container"
+  documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+  resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+  arrowSettings={{
+    fillColor: '#ffff00',
+    strokeColor: '#0066ff',
+    thickness: 2,
+    opacity: 0.9,
+    borderStyle: BorderStyle.Dashed,
+    borderDashArray: [5, 5]
+  }}
+  style={{ height: '650px' }}
+>
+  <Inject services={[Toolbar, Annotation]} />
+</PdfViewerComponent>
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+> For **Line** and **Arrow** annotations, **Fill Color** is available only when an arrowhead style is applied at the **Start** or **End**. If both are `None`, lines do not render fill and the Fill option remains disabled.
 
 ## Manage Arrow (Edit, Move, Resize, Delete)
 ### Edit Arrow 
 
 #### Edit Arrow (UI)
-- Select a Arrow to view resize handles.
+- Select an Arrow to view resize handles.
 - Drag endpoints to adjust length/angle.
 - Edit stroke color, opacity, and thickness using the annotation toolbar.
 
@@ -172,13 +220,13 @@ function editArrowProgrammatically() {
 ### Delete Arrow
 
 The PDF Viewer supports deleting existing annotations through the UI and API.
-See [**Delete Annotation**](../remove-annotations) for full behavior and workflows.
+See [**Delete Annotation**](../delete-annotation) for full behavior and workflows.
 
 ### Comments
 
 Use the [**Comments panel**](../comments) to add, view, and reply to threaded discussions linked to arrow annotations. It provides a dedicated interface for collaboration and review within the PDF Viewer.
 
-## Set properties while adding Individual Annotation
+## Set properties while adding individual annotations
 
 Set properties for individual arrow annotations by passing values directly during [`addAnnotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation).
 
@@ -245,15 +293,15 @@ Disable shape annotations (Line, Arrow, Rectangle, Circle, Polygon) using the [`
 ## Handle Arrow Events
 
 The PDF viewer provides annotation life-cycle events that notify when Arrow annotations are added, modified, selected, or removed.
-For the full list of available events and their descriptions, see [**Annotation Events**](../annotation-event)
+For the full list of available events and their descriptions, see [**Annotation Events**](../annotation-event).
 
 ## Export and Import
-The PDF Viewer supports exporting and importing annotations. For details on supported formats and workflows, see [**Export and Import annotations**](../export-import-annotations).
+The PDF Viewer supports exporting and importing annotations. For details on supported formats and workflows, see [**Export and Import annotations**](../export-import/export-annotation).
 
 ## See Also
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)
 - [Customize Context Menu](../../context-menu/custom-context-menu)
 - [Comments Panel](../comments)
 - [Annotation Events](../annotation-event)
-- [Export and Import annotations](../export-import-annotations)
-- [Delete Annotations](../remove-annotations)
+- [Export and Import annotations](../export-import/export-annotation)
+- [Delete Annotations](../delete-annotation)

@@ -1,24 +1,24 @@
 ---
-title: Performance benchmark results | Syncfusion
-description: Explore the performance benchmark results of PowerPoint to PDF conversion using the .NET PowerPoint Library with different slide counts
+title: Performance Metrics in PowerPoint to PDF Conversion | Syncfusion
+description: Explore the performance benchmark results of PowerPoint to PDF conversion using the .NET PowerPoint Library with different slide counts.
 platform: document-processing
 control: Presentation
 documentation: UG
 ---
 
-# PowerPoint to PDF performance benchmarks using .NET PowerPoint Library
+# PowerPoint to PDF Performance Metrics
 
-The Syncfusion<sup>&reg;</sup> .NET PowerPoint library (Presentation) enables seamless integration with PowerPoint files, offering robust features for handling presentations in various formats. This performance benchmark report highlights the speed and efficiency of PowerPoint to PDF conversion, demonstrating how our library performs in real-world scenarios.
+The [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) enables seamless integration with PowerPoint files, offering robust features for handling presentations in various formats. This performance benchmark report highlights the speed and efficiency of PowerPoint to PDF conversion, demonstrating how our library performs in real-world scenarios.
 
 ## Environment 
 
 The following system configurations were used for benchmarking: 
 
 * **Operating System:** Windows 11
-* **Processor:** 12th Gen Intel(R) Core(TM) i5-1235U (1.30 GHz)
-* **RAM:** 24GB
+* **Processor:** AMD Ryzen 5 7520U with Radeon Graphics  
+* **RAM:** 16GB
 * **.NET Version:** .NET 8.0
-* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.PresentationRenderer.Net.Core v32.1.19](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core/32.1.19)
+* **Syncfusion<sup>&reg;</sup> Version:** [Syncfusion.PresentationRenderer.Net.Core v34.1.29](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core/34.1.29)
 
 ## PowerPoint to PDF conversion 
 
@@ -46,8 +46,10 @@ The following system configurations were used for benchmarking:
 <tr>
     <td>500</td>
     <td>{{'[PowerPoint-500.pptx](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-PDF/.NET/PPTX-to-PDF/Data/PowerPoint-500.pptx)'| markdownify }}</td>
-    <td>13.5</td>
+    <td>13.3</td>
 </tr>
 </table>
 
 You can find the sample used for this performance evaluation on [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Performance-metrices/PPTX-to-PDF/).
+
+N> Execution times are based on the sample documents and may vary with different content or environments.

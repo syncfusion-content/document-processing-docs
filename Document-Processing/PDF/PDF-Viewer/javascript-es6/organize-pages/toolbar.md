@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Organize Page Toolbar Customization in TypeScript PDF Viewer control | Syncfusion
-description: Learn here all about Organize Page Toolbar Customization in Syncfusion TypeScript PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Toolbar in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Customize the Organize Pages toolbar in the JavaScript (ES6) PDF Viewer to show, hide, or replace the default actions that appear in the panel.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Organize Page Toolbar Customization in TypeScript PDF Viewer control
+# Customize the Organize Pages Toolbar in JavaScript (ES6) PDF Viewer
 
 The PDF Viewer allows you to customize the toolbar for the organize pages feature, enabling you to show or hide specific tools based on your application's requirements. The `pageOrganizerSettings` API provides properties to control the visibility of each tool in the organize pages dialog.
 
 ## Show or hide the insert option
 
-The `canInsert` property controls the visibility of the insert tool. When set to `false`, the insert tool will be hidden from the toolbar.
+The `canInsert` property controls the visibility of the insert tool. When set to `false`, the insert tool will be hidden from the toolbar. The default value is `true`.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -45,9 +45,9 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-## Show or hide the Delete option
+## Show or hide the delete option
 
-The `canDelete` property controls the visibility of the delete tool. Set to `false` to hide the delete tool.
+The `canDelete` property controls the visibility of the delete tool. Set to `false` to hide the delete tool. The default value is `true`.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -80,7 +80,7 @@ pdfviewer.appendTo('#PdfViewer');
 
 ## Show or hide the Rotate option
 
-The `canRotate` property controls the visibility of the rotate tool. Set to `false` to hide the rotate tool.
+The `canRotate` property controls the visibility of the rotate tool. Set to `false` to hide the rotate tool. The default value is `true`.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -117,8 +117,8 @@ The `canCopy` property controls the visibility of the copy tool. When set to `fa
 
 ## Show or hide the import option
 
-The `canImport` property controls the visibility of the import tool. When set to `false`, the import tool will be hidden.
+The `canImport` property controls the visibility of the import tool. When set to `false`, the import tool will be hidden. The default value is `true`.
 
 ## Show or hide the rearrange option
 
-The `canRearrange` property controls the ability to rearrange pages. When set to `false`, pages cannot be rearranged.
+The `canRearrange` property controls the ability to rearrange pages. When set to `false`, pages cannot be rearranged. The default value is `true`.

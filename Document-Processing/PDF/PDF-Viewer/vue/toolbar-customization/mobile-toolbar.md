@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Mobile Toolbar Interface in Vue PDF Viewer component | Syncfusion
-description: Learn all about the mobile toolbar interface in Syncfusion Vue PDF Viewer component of Essential JS 2 and more.
+title: Mobile Toolbar in Vue PDF Viewer | Syncfusion
+description: Customize the mobile toolbar in the Vue PDF Viewer to ensure smooth touch interactions and a tailored experience on small screens.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Mobile Toolbar Interface in Vue PDF Viewer component
+
+# Customize the Mobile Toolbar in Vue PDF Viewer
 
 The Mobile PDF Viewer provides features for viewing, searching, annotating, and managing PDF documents on mobile devices. It exposes core tools such as search, download, bookmarking, annotation, and page organization. The desktop toolbar can also be enabled in mobile mode to expose additional actions when required.
 
@@ -43,11 +44,11 @@ When you open the more options menu, you will see additional actions such as:
 
 ![More options menu showing additional actions like download and bookmark](../images/more-options.png)
 
-## Enable desktop mode in mobile
+## Enable Desktop Mode in Mobile
 
 The desktop toolbar can be enabled on mobile devices by setting the `enableDesktopMode` option. Enabling this option exposes desktop-style toolbar actions in the mobile PDF Viewer.
 
-### Steps to enable desktop mode
+### Steps to Enable Desktop Mode
 
 **Step 1:** Set `enableDesktopMode` to true in the component configuration.
 **Step 2:** The viewer will use the desktop toolbar layout, granting access to additional actions and controls.
@@ -167,7 +168,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## Enable scrolling in desktop mode with touch gestures
+## Enable Scrolling in Desktop Mode with Touch Gestures
 
 To ensure smooth touch scrolling of documents on mobile devices when the desktop toolbar is enabled, set the `enableTextSelection` option to **false**. This disables text-selection interactions that can interfere with touch-based scrolling.
 
@@ -286,11 +287,11 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## Print option not available in mobile mode
+## Print Option Not Available in Mobile Mode
 
 The Print option is not available in mobile mode by default. Enabling the desktop toolbar on mobile via `enableDesktopMode` makes the Print option available.
 
-### How to use Print on mobile:
+### How to Use Print on Mobile:
 
 - Set `enableDesktopMode` to true to load the desktop toolbar on mobile.
 - After enabling desktop mode, the Print option appears in the toolbar and can be used to print the document from the mobile device.
@@ -299,10 +300,9 @@ N> Print functionality remains unavailable in the default mobile toolbar unless 
 
 ## See also
 
-* [Primary toolbar customization](./toolbar-customization/primary-toolbar-customization)
-* [Custom toolbar](./toolbar-customization/custom-toolbar)
-* [Annotation toolbar customization](./toolbar-customization/annotation-toolbar-customization)
-* [Form designer toolbar customization](./toolbar-customization/form-designer-toolbar-customization)
-* [Mobile toolbar](./toolbar-customization/mobile-toolbar)
-* [Toolbar customization](./how-to/toolbar-customization)
-* [Feature Modules](./feature-module)
+* [Primary toolbar customization](./primary-toolbar)
+* [Custom toolbar](./custom-toolbar)
+* [Annotation toolbar customization](./annotation-toolbar)
+* [Form designer toolbar customization](./form-designer-toolbar)
+* [Toolbar customization](../toolbar)
+* [Feature Modules](../feature-module)

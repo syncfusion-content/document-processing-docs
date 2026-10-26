@@ -4,7 +4,8 @@ var documenteditor1 = new ej.documenteditor.DocumentEditor({
     enableEditor: true,
     enableSelection: true,
     enableEditorHistory: true,
-    enableSfdtExport: true
+    enableSfdtExport: true,
+    height: '370px'
 });
 
 documenteditor1.appendTo('#DocumentEditor');

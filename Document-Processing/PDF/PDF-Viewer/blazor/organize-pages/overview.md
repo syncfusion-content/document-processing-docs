@@ -1,141 +1,41 @@
 ---
 layout: post
-title: Overview of Organize Pages in Blazor PDF Viewer component | Syncfusion
-description: Learn here all about Overview of functionalities of Organize Pages in Syncfusion Blazor PDF Viewer component.
+title: About Organize pages in Blazor PDF Viewer Component | Syncfusion
+description: Learn how to reorder, rotate, insert, delete, and save pages with the Blazor PDF Viewer component and more details.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
-# Organize pages in SfPdfViewer
 
-The Organize Pages feature in `SfPdfViewer` helps you manage PDF pages quickly — add, remove, rotate, reorder, duplicate, import, extract, and save changes with a few clicks.
+# About Syncfusion Organize pages in Blazor PDF Viewer Component
 
-## Getting started
+The Blazor PDF Viewer includes an Organize Pages panel for preparing documents before sharing. Use this panel to reorder pages, correct orientation, insert or remove pages, and duplicate pages without leaving the viewer.
 
-Open a PDF in the viewer and choose **Organize Pages** from the left toolbar to open the organizer dialog.
+Check out the following video to learn how to organize pages in a PDF document using the Blazor PDF Viewer.
+{% youtube "https://www.youtube.com/watch?v=CQwfp5arshQ" %}
 
-![Organize pages](./images/organize-pages.png)
 
-## Common actions
+To open the Organize Pages panel, load a document and choose **Organize Pages** from the left vertical toolbar (when enabled).
 
-### Rotate pages
+The Organize Pages panel supports the following actions:
 
-- **Rotate clockwise** — rotate selected pages 90° clockwise.
+* **Rotate pages**: Fix page orientation in 90-degree increments to correct scanned pages. See [Rotate pages](./rotate-pages).
+* **Rearrange pages**: Drag and drop thumbnails to update the reading order. See [Reorder pages](./reorder-pages).
+* **Insert blank pages**: Add blank pages at the required position. See [Insert blank pages](./insert-blank-pages).
+* **Delete pages**: Remove pages that are no longer needed. See [Remove pages](./remove-pages).
+* **Duplicate pages**: Duplicate selected pages to reuse content elsewhere in the document. See [Duplicate pages](./duplicate-pages).
+* **Import a PDF document**: Merge the current document with pages from another PDF file. See [Import pages](./import-pages).
+* **Select all pages**: Apply bulk actions, such as rotation or deletion, to every page. See [Extract pages](./extract-pages).
+* **Zoom pages**: Change the thumbnail zoom level in the Organize Pages panel. See [Zoom pages](./zoom-pages).
 
-![Rotate right](./images/organize-rotate-right.png)
+Changes are previewed in real time. After completing the changes, apply them by selecting **Save** to overwrite the loaded document or **Save As** to download a new copy that retains the updated page order.
 
-- **Rotate counter-clockwise** — rotate selected pages 90° counter-clockwise.
+## See also:
 
-![Rotate left](./images/organize-rotate-left.png)
+- [Toolbar customization for Organize Pages](./toolbar)
+- [Programmatic support for Organize Pages](./programmatic-support)
+- [Organize Pages events](./events)
+- [Organize Pages in mobile view](./mobile-view)
 
-### Rearrange pages
-
-Drag and drop thumbnails to change page order.
-
-![Drag and drop](./images/Drag_and_Drop.gif)
-
-### Insert, duplicate, delete
-
-- **Insert page** — add a blank page to the left or right of the selection.
-
-![Insert left](./images/organize-insert-left.png)
-
-- **Duplicate page** — create a copy placed to the right of the original.
-
-![Insert right](./images/organize-insert-right.png)
-
-- **Delete page** — remove selected pages.
-
-![Select and delete](./images/organize-select-delete.png)
-
-### Import and extract
-
-- **Import PDF** — insert pages from another PDF; imported pages are merged when you save.
-
-![Import pages](./images/Import_Pages.gif)
-
-- **Extract pages** — export selected pages as a separate PDF.
-
-![Extract pages](./images/Extract_Pages.gif)
-
-### Select all and thumbnail zoom
-
-- **Select all** — select every page for bulk actions.
-
-![Select all thumbnails](./images/organize-select-all.png)
-
-- **Thumbnail zoom** — adjust thumbnail size with the zoom slider for better visibility or overview.
-
-![Thumbnail zoom panel](./images/organize-zoom-panel.png)
-
-## Real-time edits and saving
-
-Changes in the organizer are reflected in the viewer immediately. Use **Save** to overwrite the document or **Save As** to download a modified copy.
-
-## Supported APIs
-
-- `EnablePageOrganizer` (bool) — enable or disable the organizer. Default: `true`.
-
-{% tabs %}
-{% highlight razor %}
-@page "/"
-
-<SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-              Height="100%"
-              Width="100%" EnablePageOrganizer="true">
-</SfPdfViewer2>
-
-{% endhighlight %}
-{% endtabs %}
-
-- `PageOrganizerVisibility` (bool) — show the organizer dialog on load. Default: `false`.
-
-{% tabs %}
-{% highlight razor %}
-@page "/"
-
-<SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-              Height="100%"
-              Width="100%" PageOrganizerVisibility="true">
-</SfPdfViewer2>
-
-{% endhighlight %}
-{% endtabs %}
-
-- `PageOrganizerSettings` — controls available actions and thumbnail zoom settings. Common properties:
-
-* `CanDelete` — allow delete. Default: `true`.
-* `CanInsert` — allow insert. Default: `true`.
-* `CanRotate` — allow rotate. Default: `true`.
-* `CanDuplicate` — allow duplicate. Default: `true`.
-* `CanRearrange` — allow rearrange. Default: `true`.
-* `CanExtractPages` — allow extract. Default: `true`.
-* `CanImport` — allow import. Default: `true`.
-* `ShowImageZoomingSlider` — show thumbnail zoom slider. Default: `true`.
-* `ImageZoom` — current thumbnail zoom. Default: `1`.
-* `ImageZoomMin` — minimum zoom (1).
-* `ImageZoomMax` — maximum zoom (5).
-* `FooterButtons` — which footer buttons to show: `None`, `Save`, `SaveAs`, or combinations.
-
-{% tabs %}
-{% highlight razor %}
-@page "/"
-
-<SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" Height="100%" Width="100%">
-    <PageOrganizerSettings CanDelete="true" CanInsert="true" CanRotate="true" CanDuplicate="true" CanRearrange="true" CanImport="true" ImageZoom="1" ShowImageZoomingSlider="true" ImageZoomMin="1" ImageZoomMax="5" CanExtractPages="true" FooterButtons="FooterButton.Save | FooterButton.SaveAs"></PageOrganizerSettings>
-</SfPdfViewer2>
-
-{% endhighlight %}
-{% endtabs %}
-
-## Keyboard shortcuts
-
-- **Ctrl+Z** — undo.
-- **Ctrl+Y** — redo.
-
-## Conclusion
-
-Organize Pages provides a compact, efficient interface to manage document pages in `SfPdfViewer`. Use the available settings and APIs to tailor the organizer to your application's needs.
-
-[View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Page%20Organizer)

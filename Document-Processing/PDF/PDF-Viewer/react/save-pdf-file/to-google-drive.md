@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Save PDF files to Google Drive in React PDF Viewer | Syncfusion
-description: Learn how to save PDF files to Google Drive using the Syncfusion React PDF Viewer component with a server-backed web service.
+title: To Google Drive in React PDF Viewer | Syncfusion
+description: Save PDF files from the React PDF Viewer to Google Drive using a server-backed web service for authentication and secure uploads.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 ---
 
-# Save PDF files to Google Drive
+# Save PDF Files to Google Drive in React PDF Viewer
 
-This article describes how to save a PDF file to Google Drive from the Syncfusion React PDF Viewer using a server-side web service. Follow the steps below.
+This article describes how to save a PDF file to Google Drive from the React PDF Viewer using a server-side web service. Follow the steps below.
 
 **Step 1:** Set up the Google Drive API
 
@@ -17,7 +17,7 @@ Create a Google Cloud project, enable the Google Drive API, and obtain OAuth 2.0
 
 **Step 2:** Create a PDF Viewer sample in React
 
-Create a simple PDF Viewer sample in React by following the Syncfusion PDF Viewer for React [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) guide. This establishes the basic application structure required for the integration.
+Create a simple PDF Viewer sample in React by following the PDF Viewer for React [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) guide. This establishes the basic application structure required for the integration.
 
 **Step 3:** Modify the `PdfViewerController.cs` file in the web service project
 
@@ -136,7 +136,7 @@ N> Use a valid `client_id` from the JSON file to authenticate with the Google Dr
 
 **Step 4:** Set the PDF Viewer properties in the React PDF Viewer component
 
-Update the `serviceUrl` property of the PDF Viewer component to the web service URL, replacing `https://localhost:44396/pdfviewer` with the actual server endpoint. Set the `documentPath` property to the PDF file name that exists in the configured Google Drive folder.
+Update the `serviceUrl` property of the PDF Viewer component to the web service URL, replacing `https://localhost:44396/pdfviewer` with the actual server endpoint. Set the `documentPath` property to the PDF file name that the web service will load into the viewer. When the user triggers a download, the modified `Download()` method uploads this file to the configured Google Drive folder.
 
 {% raw %}
 

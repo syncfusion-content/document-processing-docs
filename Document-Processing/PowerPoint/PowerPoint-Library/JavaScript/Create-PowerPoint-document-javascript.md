@@ -1,0 +1,126 @@
+---
+layout: post
+title: Getting Started with JavaScript PowerPoint Library | Syncfusion
+canonical_url: https://www.syncfusion.com/document-sdk/javascript-powerpoint-library
+description: Learn how to create PowerPoint presentations in a JavaScript app using the Syncfusion PowerPoint Library without Microsoft Office.
+platform: document-processing
+control: PowerPoint
+documentation: ug
+keywords: javascript, powerpoint, cdn
+---
+
+# Getting Started with JavaScript PowerPoint in JavaScript app
+
+The `JavaScript PowerPoint Library` facilitates the creation of a simple PowerPoint presentation with basic elements from scratch.
+
+This guide explains how to integrate the [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) into a JavaScript application using NPM and a module bundler like **Parcel**. The sample saves the generated PowerPoint presentation with `save('Output.pptx')`.
+
+## Prerequisites
+
+Before you begin, make sure you have the following installed:
+
+- Node.js 18 or later.
+- npm 9 or later.
+- A modern web browser such as the latest versions of Microsoft Edge, Google Chrome, Mozilla Firefox, or Safari.
+- A text editor such as Visual Studio Code, Code Studio, or Notepad.
+
+To verify your Node.js and npm versions, run the following commands:
+
+```bash
+node --version
+npm --version
+```
+
+## Project Setup
+
+Create a folder for your project and initialize it with npm. Then install the required dependencies:
+
+```bash
+mkdir my-pptx-app
+cd my-pptx-app
+npm init -y
+npm install @syncfusion/ej2-pptx
+npm install -D parcel
+```
+
+## Create a PowerPoint Presentation Document
+
+Create `index.html` in your project root with a button to generate the PowerPoint file. Use the following code with ES modules to import the PowerPoint library:
+
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create PowerPoint Document</title>
+</head>
+<body>
+    <h1>Create PowerPoint Document</h1>
+    <button id="createPptx">Generate PowerPoint Document</button>
+
+    <script type="module">
+        import { Presentation, HorizontalAlignmentType } from '@syncfusion/ej2-pptx';
+
+        document.getElementById('createPptx').addEventListener('click', async function () {
+            // Creates a Presentation instance
+            const pptxDoc = Presentation.create();
+            // Adds a slide to the presentation
+            const slide = pptxDoc.slides.add();
+            // Adds a textbox for the title
+            const titleShape = slide.shapes.addTextBox({
+                bounds: {
+                    x: 55,
+                    y: 25,
+                    width: 850,
+                    height: 72
+                }
+            });
+            // Adds a paragraph to the textbox
+            const paragraph = titleShape.textBody.addParagraph();
+            paragraph.horizontalAlignment = HorizontalAlignmentType.Center;
+            // Adds text to the paragraph
+            const textPart = paragraph.addTextPart('Hello World!!!');
+            textPart.font.fontName = 'Calibri';
+            textPart.font.bold = true;
+            textPart.font.fontSize = 36;
+
+            // Saves the Presentation to the file system.
+            await pptxDoc.save('Output.pptx');
+        });
+    </script>
+</body>
+</html>
+{% endhighlight %}
+{% endtabs %}
+
+N> The `save()` method saves the presentation to the specified file.
+
+## Run the Application
+
+Update the `package.json` to add a Dev script for Parcel:
+
+```json
+"scripts": {
+  "start": "parcel index.html --port 5000"
+}
+```
+
+Then start the development server:
+
+```bash
+npm start
+```
+
+Parcel serves the application at `http://localhost:5000`. Open this URL in a browser and click **Generate PowerPoint document**. The sample saves the presentation as `Output.pptx`.
+
+The generated PowerPoint presentation contains a single slide with the text "Hello World!!!".
+
+## See Also
+
+- [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library)
+- [JavaScript PowerPoint Library documentation](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/overview)
+
+
+For build-tool-based workflows (React, Vue, Angular, TypeScript, Node.js), see the corresponding guides in the [JavaScript PowerPoint Library documentation](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/overview).

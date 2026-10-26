@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Saving PDF files in Angular PDF Viewer component | Syncfusion
-description: This page helps you to learn here all about saving PDF files in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Save Pdf Files in Angular PDF Viewer | Syncfusion
+description: Save edited or annotated PDFs from the Angular PDF Viewer to a server, database, or local file system using the server-backed web service.
 platform: document-processing
-control: Saving PDF files
+control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Saving PDF file in Angular PDF Viewer component
+# Save PDF Files in Angular PDF Viewer
 
 After annotating a PDF with the viewer's annotation tools, save the updated file to a server, database, or local file system so changes persist.
 
@@ -26,7 +26,7 @@ Follow the getting-started guide at [Link](https://help.syncfusion.com/document-
 
 2. Open the `PdfViewerController.cs` file in the web service project.
 
-3. Modify the [Download()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/downloadStartEventArgs/) method to open it in the viewer using URL
+3. Modify the [Download()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/downloadstarteventargs) method to open it in the viewer using URL
 
 ```csharp
 
@@ -59,7 +59,7 @@ public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
 
 **Step 3:**  Set the PDF Viewer Properties in Angular PDF viewer component
 
-Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server.Modify the documentPath with the correct PDF Document URL want to load.
+Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Modify the `documentPath` with the correct PDF document URL to load.
 
 ```typescript
 import { Component, OnInit } from '@angular/core';

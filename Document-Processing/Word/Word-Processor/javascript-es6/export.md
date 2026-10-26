@@ -1,27 +1,27 @@
 ---
 layout: post
-title: Export in JavaScript (ES6) Document editor control | Syncfusion
-description: Learn here all about Export in Syncfusion JavaScript (ES6) Document editor control of Syncfusion Essential JS 2 and more.
+title: Export in TypeScript DOCX Editor | Syncfusion
+description: The export feature in TypeScript DOCX Editor enables users to save and download documents in supported formats while preserving content and formatting.
 platform: document-processing
-control: Export 
+control: Export
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Export in JavaScript (ES6) Document editor control
+# Export in TypeScript DOCX Editor
 
-Document Editor exports the document into various known file formats in client-side such as Microsoft Word document (.docx), Word template (.dotx), text document (.txt), and its own format called **Syncfusion Document Text (.sfdt)**.
+[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) exports the document into various known file formats on the client side such as Microsoft Word document (.docx), Word template (.dotx), text document (.txt), and its own format called **Syncfusion Document Text (.sfdt)**.
 
-We are providing two types of save APIs as mentioned below.
+Two save APIs are provided as mentioned below.
 
-|API name|Purpose|Code Snippet for Document Editor|Code Snippet for Document Editor Container|
+|API name|Purpose|Code Snippet for DOCX Editor|Code Snippet for Document Editor Container|
 |--------|---------|----------|----------|
 |save(filename,FormatType):void<br>FormatType: Sfdt or Docx or Txt|Creates the document with specified file name and format type. Then, the created file is downloaded in the client browser by default.|documenteditor.save('sample', 'Docx')|container.documenteditor.save('sample', 'Docx')|
 |saveAsBlob(FormatType):Blob|Creates the document in specified format type and returns the created document as Blob.<br>This blob can be uploaded to your required server, database, or file path.|documenteditor.saveAsBlob('Docx')|container.documenteditor.saveAsBlob('Docx')|
 
 ## SFDT export
 
-The following example shows how to export documents in Document Editor as Syncfusion document text (.sfdt).
+The following example shows how to export documents in the DOCX Editor as Syncfusion Document Text (.sfdt).
 
  
 
@@ -49,9 +49,9 @@ The following example shows how to export documents in Document Editor as Syncfu
 
 ## Word export
 
-The following example shows how to export the document as Word document (.docx).
+The following example shows how to export the document as a Word document (.docx).
 
->Note: The Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
+N> The JavaScript DOCX Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of the Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
 
  
 
@@ -81,7 +81,7 @@ The following example shows how to export the document as Word document (.docx).
 
 The following example shows how to export the document as Word Template (.dotx).
 
->Note: The Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
+>Note: The JavaScript DOCX Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
 
  
 
@@ -137,7 +137,7 @@ The following example shows how to export document as text document (.txt).
 
 ## Export as blob
 
-Document Editor also supports API to store the document into a blob. Refer to the following sample to export document into blob in client-side.
+DOCX Editor also supports API to store the document into a blob. Refer to the following sample to export document into blob in client-side.
 
 ```ts
 import { DocumentEditor, FormatType, WordExport, SfdtExport } from '@syncfusion/ej2-documenteditor';
@@ -240,6 +240,13 @@ function download(fileName: string, extension: string, buffer: Blob, downloadLin
 }
 ```
 
+## Online Demo
+
+Explore how to export Word documents in various formats using the JavaScript DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/advanced-exporting.html).
+
 ## See Also
 
 * [Feature modules](./feature-module)
+* [Export the document as PDF](./how-to/export-document-as-pdf)
+* [Auto save the document in server](./how-to/auto-save-document)
+* [Auto save the document in AWS S3](./how-to/auto-save-document-in-document-editor)

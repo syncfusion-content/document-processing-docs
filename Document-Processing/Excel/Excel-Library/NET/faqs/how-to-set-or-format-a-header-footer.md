@@ -1,12 +1,12 @@
 ---
-title: How to set or format a Header/Footer | XlsIO | Syncfusion
-description: This page explains with an example to set or format a Header/Footer using Syncfusion .NET Excel library (XlsIO).
+title: How to Format Headers and Footers in .NET Excel Library | Syncfusion
+description: Set or format the header and footer in an Excel document using the Syncfusion .NET Excel Library for page layout.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to set or format a Header/Footer?
+# How to set headers and footers in .NET Excel Library
 
 Script commands are used to set header/ footer formatting. The following code snippet illustrate this. For more information on formatting the string, see [Inserting and Formatting Text in Headers and Footers](https://docs.microsoft.com/en-us/previous-versions/office/developer/office-2007/bb225426(v=office.12))
 
@@ -60,8 +60,8 @@ N> Go to “ View -> Page Layout” option to view the header and footer in Micr
 
 ## See Also
 
-* [How to enable/disable header footer?](https://help.syncfusion.com/file-formats/xlsio/excel-to-pdf-converter-settings#header-footer-option)
-* [What are page setup settings?](https://help.syncfusion.com/file-formats/xlsio/working-with-excel-worksheet#page-setup-settings)
-* [How to set a line break inside a cell?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-set-a-line-break-inside-a-cell)
-* [How to set print titles?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-set-print-titles)
-* [How to format text within a cell?](https://help.syncfusion.com/file-formats/xlsio/faqs/how-to-format-text-within-a-cell)
+* [How to enable/disable header footer?](https://help.syncfusion.com/document-processing/excel/conversions/excel-to-pdf/net/excel-to-pdf-converter-settings#header-footer-option)
+* [What are page setup settings?](https://help.syncfusion.com/document-processing/excel/excel-library/net/working-with-excel-worksheet#page-setup-settings)
+* [How to set a line break inside a cell?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-set-a-line-break-inside-a-cell)
+* [How to set print titles?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-set-print-titles)
+* [How to format text within a cell?](https://help.syncfusion.com/document-processing/excel/excel-library/net/faqs/how-to-format-text-within-a-cell)

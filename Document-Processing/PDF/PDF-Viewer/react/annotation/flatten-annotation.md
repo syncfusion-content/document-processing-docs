@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Flatten Annotations in the Syncfusion React PDF Viewer
-description: Learn how all about how to flatten annotations and formfields before saving a PDF in the Syncfusion React PDF Viewer.
+title: Flatten Annotation in React PDF Viewer | Syncfusion
+description: Flatten annotations and form fields in the React PDF Viewer before saving a PDF so they become permanent parts of the document content.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -118,7 +118,6 @@ root.render(<Default />);
 {% endtabs %}
 
 N> To flatten documents when they are uploaded/loaded into the viewer, see [Flatten on Load](../document-handling/preprocess-pdf#flatten-on-load).
-
 
 ## Notes
 

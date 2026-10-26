@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Shape annotation in ASP.NET MVC PDF Viewer control | Syncfusion
-description: Learn about shape annotations in the Syncfusion ASP.NET MVC PDF Viewer (Essential JS 2), including add, edit, delete, and default settings.
+title: Shape Annotation in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn about the shape annotation in the ASP.NET MVC PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
-# Shape annotation in ASP.NET MVC PDF Viewer control
+# Shape Annotation in ASP.NET MVC PDF Viewer
 
 The PDF Viewer control provides options to add, edit, and delete shape annotations. The supported shape annotation types are:
 
@@ -76,11 +77,11 @@ Here is an example showing how to add shape annotations programmatically using *
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
 
-<button onclick="addLineAnnotation()">add Line Annotation programatically</button>
-<button onclick="addArrowAnnotation()">add Arrow Annotation programatically</button>
-<button onclick="addRectangleAnnotation()">add Rectangle Annotation programatically</button>
-<button onclick="addCircleAnnotation()">add Circle Annotation programatically</button>
-<button onclick="addPolygonAnnotation()">add Polygon Annotation programatically</button>
+<button onclick="addLineAnnotation()">add Line Annotation programmatically</button>
+<button onclick="addArrowAnnotation()">add Arrow Annotation programmatically</button>
+<button onclick="addRectangleAnnotation()">add Rectangle Annotation programmatically</button>
+<button onclick="addCircleAnnotation()">add Circle Annotation programmatically</button>
+<button onclick="addPolygonAnnotation()">add Polygon Annotation programmatically</button>
 
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
@@ -132,11 +133,11 @@ Here is an example showing how to add shape annotations programmatically using *
 {% endhighlight %}
 {% highlight html tabtitle="Server-Backed" %}
 
-<button onclick="addLineAnnotation()">add Line Annotation programatically</button>
-<button onclick="addArrowAnnotation()">add Arrow Annotation programatically</button>
-<button onclick="addRectangleAnnotation()">add Rectangle Annotation programatically</button>
-<button onclick="addCircleAnnotation()">add Circle Annotation programatically</button>
-<button onclick="addPolygonAnnotation()">add Polygon Annotation programatically</button>
+<button onclick="addLineAnnotation()">add Line Annotation programmatically</button>
+<button onclick="addArrowAnnotation()">add Arrow Annotation programmatically</button>
+<button onclick="addRectangleAnnotation()">add Rectangle Annotation programmatically</button>
+<button onclick="addCircleAnnotation()">add Circle Annotation programmatically</button>
+<button onclick="addPolygonAnnotation()">add Polygon Annotation programmatically</button>
 
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
@@ -198,11 +199,11 @@ Here is an example of using **editAnnotation()**:
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
 
-<button onclick="editLineAnnotation()">edit Line Annotation programatically</button>
-<button onclick="editArrowAnnotation()">edit Arrow Annotation programatically</button>
-<button onclick="editRectangleAnnotation()">edit Rectangle Annotation programatically</button>
-<button onclick="editCircleAnnotation()">edit Circle Annotation programatically</button>
-<button onclick="editPolygonAnnotation()">edit Polygon Annotation programatically</button>
+<button onclick="editLineAnnotation()">edit Line Annotation programmatically</button>
+<button onclick="editArrowAnnotation()">edit Arrow Annotation programmatically</button>
+<button onclick="editRectangleAnnotation()">edit Rectangle Annotation programmatically</button>
+<button onclick="editCircleAnnotation()">edit Circle Annotation programmatically</button>
+<button onclick="editPolygonAnnotation()">edit Polygon Annotation programmatically</button>
 
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
@@ -274,11 +275,11 @@ Here is an example of using **editAnnotation()**:
 {% endhighlight %}
 {% highlight html tabtitle="Server-Backed" %}
 
-<button onclick="editLineAnnotation()">edit Line Annotation programatically</button>
-<button onclick="editArrowAnnotation()">edit Arrow Annotation programatically</button>
-<button onclick="editRectangleAnnotation()">edit Rectangle Annotation programatically</button>
-<button onclick="editCircleAnnotation()">edit Circle Annotation programatically</button>
-<button onclick="editPolygonAnnotation()">edit Polygon Annotation programatically</button>
+<button onclick="editLineAnnotation()">edit Line Annotation programmatically</button>
+<button onclick="editArrowAnnotation()">edit Arrow Annotation programmatically</button>
+<button onclick="editRectangleAnnotation()">edit Rectangle Annotation programmatically</button>
+<button onclick="editCircleAnnotation()">edit Circle Annotation programmatically</button>
+<button onclick="editPolygonAnnotation()">edit Polygon Annotation programmatically</button>
 
 <div style="width:100%;height:600px">
     @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").Render()
@@ -384,6 +385,76 @@ Line and arrow annotations have additional options in the Line Properties window
 Refer to the following code sample to set the default annotation settings.
 
 ![Line properties dialog](../images/shape_lineproperty.png)
+
+## Supported Border Styles
+
+In addition to the default **Solid** border, shape annotations support additional border styles. The supported styles depend on the annotation type.
+
+| Annotation | Solid | Cloud | Dashed |
+| --- | --- | --- | --- |
+| Rectangle | ✓ | ✓ | ✓ |
+| Circle | ✓ | ✓ | ✓ |
+| Polygon | ✓ | ✓ | ✓ |
+| Line | ✓ | — | ✓ |
+| Arrow | ✓ | — | ✓ |
+
+Use the [`PdfViewerBorderStyle`](https://ej2.syncfusion.com/aspnetcore/documentation/api/pdfviewer/pdfViewerBorderStyle) enum together with the optional `BorderDashArray` (Dashed) and `CloudIntensity` (Cloud) settings on the corresponding settings object (`PdfViewerRectangleSettings`, `PdfViewerCircleSettings`, `PdfViewerPolygonSettings`, `PdfViewerLineSettings`, `PdfViewerArrowSettings`).
+
+```cs
+public enum PdfViewerBorderStyle
+{
+    Solid,
+    Dashed,
+    Cloud
+}
+```
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `BorderStyle` | `PdfViewerBorderStyle` | Specifies the border style. Supported values: `Solid`, `Cloud`, and `Dashed`. |
+| `BorderDashArray` | `double[]` | Specifies the dash pattern when `BorderStyle` is `Dashed`. |
+| `CloudIntensity` | `double` | Specifies the cloud border intensity. Supported range: `1` to `2`; default value: `1`. |
+
+N> `CloudIntensity` is honored only when `BorderStyle` is `Cloud`.
+N> `BorderStyle`, `BorderDashArray`, and `CloudIntensity` are preserved during save, reload, import, and export.
+
+### Apply a Cloud Border (Rectangle, Circle, Polygon)
+
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+
+<div style="width:100%;height:600px">
+    @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").RectangleSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerRectangleSettings { FillColor = "yellow", StrokeColor = "orange", Thickness = 2, Opacity = 0.9, BorderStyle = Syncfusion.EJ2.PdfViewer.PdfViewerBorderStyle.Cloud, CloudIntensity = 2 }).CircleSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerCircleSettings { FillColor = "orange", StrokeColor = "pink", Thickness = 2, Opacity = 0.9, BorderStyle = Syncfusion.EJ2.PdfViewer.PdfViewerBorderStyle.Cloud, CloudIntensity = 2 }).PolygonSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerPolygonSettings { FillColor = "pink", StrokeColor = "yellow", Thickness = 2, Opacity = 0.9, BorderStyle = Syncfusion.EJ2.PdfViewer.PdfViewerBorderStyle.Cloud, CloudIntensity = 2 }).Render()
+</div>
+
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+
+<div style="width:100%;height:600px">
+    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").RectangleSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerRectangleSettings { FillColor = "yellow", StrokeColor = "orange", Thickness = 2, Opacity = 0.9, BorderStyle = Syncfusion.EJ2.PdfViewer.PdfViewerBorderStyle.Cloud, CloudIntensity = 2 }).CircleSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerCircleSettings { FillColor = "orange", StrokeColor = "pink", Thickness = 2, Opacity = 0.9, BorderStyle = Syncfusion.EJ2.PdfViewer.PdfViewerBorderStyle.Cloud, CloudIntensity = 2 }).PolygonSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerPolygonSettings { FillColor = "pink", StrokeColor = "yellow", Thickness = 2, Opacity = 0.9, BorderStyle = Syncfusion.EJ2.PdfViewer.PdfViewerBorderStyle.Cloud, CloudIntensity = 2 }).Render()
+</div>
+
+{% endhighlight %}
+{% endtabs %}
+
+### Apply a Dashed Border (Rectangle, Circle, Polygon, Line, Arrow)
+
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+
+<div style="width:100%;height:600px">
+    @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").LineSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerLineSettings { FillColor = "blue", StrokeColor = "green", Thickness = 2, Opacity = 0.9, BorderStyle = Syncfusion.EJ2.PdfViewer.PdfViewerBorderStyle.Dashed, BorderDashArray = new double[] { 5, 5 } }).ArrowSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerArrowSettings { FillColor = "green", StrokeColor = "blue", Thickness = 2, Opacity = 0.9, BorderStyle = Syncfusion.EJ2.PdfViewer.PdfViewerBorderStyle.Dashed, BorderDashArray = new double[] { 5, 5 } }).RectangleSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerRectangleSettings { FillColor = "yellow", StrokeColor = "orange", Thickness = 2, Opacity = 0.9, BorderStyle = Syncfusion.EJ2.PdfViewer.PdfViewerBorderStyle.Dashed, BorderDashArray = new double[] { 5, 5 } }).CircleSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerCircleSettings { FillColor = "orange", StrokeColor = "pink", Thickness = 2, Opacity = 0.9, BorderStyle = Syncfusion.EJ2.PdfViewer.PdfViewerBorderStyle.Dashed, BorderDashArray = new double[] { 5, 5 } }).PolygonSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerPolygonSettings { FillColor = "pink", StrokeColor = "yellow", Thickness = 2, Opacity = 0.9, BorderStyle = Syncfusion.EJ2.PdfViewer.PdfViewerBorderStyle.Dashed, BorderDashArray = new double[] { 5, 5 } }).Render()
+</div>
+
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+
+<div style="width:100%;height:600px">
+    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").LineSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerLineSettings { FillColor = "blue", StrokeColor = "green", Thickness = 2, Opacity = 0.9, BorderStyle = Syncfusion.EJ2.PdfViewer.PdfViewerBorderStyle.Dashed, BorderDashArray = new double[] { 5, 5 } }).ArrowSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerArrowSettings { FillColor = "green", StrokeColor = "blue", Thickness = 2, Opacity = 0.9, BorderStyle = Syncfusion.EJ2.PdfViewer.PdfViewerBorderStyle.Dashed, BorderDashArray = new double[] { 5, 5 } }).RectangleSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerRectangleSettings { FillColor = "yellow", StrokeColor = "orange", Thickness = 2, Opacity = 0.9, BorderStyle = Syncfusion.EJ2.PdfViewer.PdfViewerBorderStyle.Dashed, BorderDashArray = new double[] { 5, 5 } }).CircleSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerCircleSettings { FillColor = "orange", StrokeColor = "pink", Thickness = 2, Opacity = 0.9, BorderStyle = Syncfusion.EJ2.PdfViewer.PdfViewerBorderStyle.Dashed, BorderDashArray = new double[] { 5, 5 } }).PolygonSettings(new Syncfusion.EJ2.PdfViewer.PdfViewerPolygonSettings { FillColor = "pink", StrokeColor = "yellow", Thickness = 2, Opacity = 0.9, BorderStyle = Syncfusion.EJ2.PdfViewer.PdfViewerBorderStyle.Dashed, BorderDashArray = new double[] { 5, 5 } }).Render()
+</div>
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Set default properties during control initialization
 

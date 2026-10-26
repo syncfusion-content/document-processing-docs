@@ -1,13 +1,13 @@
 ---
 layout: post
-title: View DOCX file in Blazor application using PDF Viewer | Syncfusion
+title: How to View DOCX file using Blazor PDF Viewer | Syncfusion
 description: Learn here all about View DOCX file in Blazor application in Syncfusion Blazor PDF Viewer component and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# View DOCX file in Blazor application in Blazor PDF Viewer Component
+# How to View DOCX file using Blazor PDF Viewer
 
 You can achieve this requirement of viewing DOCX file in two ways:.
 

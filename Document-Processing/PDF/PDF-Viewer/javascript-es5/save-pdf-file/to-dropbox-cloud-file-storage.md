@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Save PDF files to Dropbox in JavaScript PDF Viewer | Syncfusion
-description: Learn how to save PDF files to Dropbox using the Syncfusion JavaScript PDF Viewer component in standalone and server-backed configurations.
+title: To Dropbox Cloud File Storage in JavaScript (ES5) PDF | Syncfusion
+description: Save PDF files from the JavaScript (ES5) PDF Viewer to Dropbox using standalone and server-backed configurations, with code samples and tips.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save PDF files to Dropbox cloud storage
+# Save PDF Files to Dropbox in JavaScript (ES5) PDF Viewer
 
 The JavaScript PDF Viewer component supports saving PDF files to Dropbox using either the standalone or server-backed configuration. The following steps demonstrate both approaches.
 
@@ -126,7 +126,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Download()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#download) method to save the downloaded PDF files to the Dropbox storage.
+5. Modify the [Download()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#download) method to save the downloaded PDF files to the Dropbox storage.
 
 ```csharp
 

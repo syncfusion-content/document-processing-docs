@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Interaction mode in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to use selection and panning interaction modes in the Syncfusion ASP.NET MVC PDF Viewer.
+title: Interaction Mode in ASP.NET MVC PDF Viewer | Syncfusion
+description: Switch between selection mode and panning mode in the ASP.NET MVC PDF Viewer to control how users interact with PDF pages and content.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
 
-# Interaction mode in PDF Viewer
+# Interaction Mode in ASP.NET MVC PDF Viewer
 
 The PDF Viewer provides two interaction modes to work with the loaded PDF document: selection mode and panning mode.
 
@@ -34,13 +33,13 @@ In this mode, users can select and copy text in the loaded PDF document. Panning
 {% endhighlight %}
 {% endtabs %}
 
-![Alt text](./images/selection.png)
+![Selection mode in the PDF Viewer](./images/selection.png)
 
 ## Panning mode
 
 In this mode, panning and touch-based scrolling are enabled, while text selection is disabled.
 
-![Alt text](./images/pan.png)
+![Panning mode in the PDF Viewer](./images/pan.png)
 
 Switch the interaction mode of the PDF Viewer using the following example:
 

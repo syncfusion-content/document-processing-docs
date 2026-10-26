@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Save PDF files to Box cloud storage in Vue PDF Viewer | Syncfusion
-description: Learn how to save PDF files to Box cloud storage using the Syncfusion Vue PDF Viewer component with a server-backed web service.
+title: To Box Cloud File Storage in Vue PDF Viewer | Syncfusion
+description: Save PDF files from the Vue PDF Viewer to Box cloud storage using a server-backed web service for authentication and secure uploads.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Save PDF files to Box cloud storage
+# Save PDF Files to Box Cloud Storage in Vue PDF Viewer
 
 The Vue PDF Viewer component supports saving PDF files to Box cloud file storage using a server-backed web service. This article describes a recommended server-client pattern that keeps credentials secure and shows how to upload viewer documents to a Box folder.
 
@@ -56,7 +56,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Download()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#download) method to save the downloaded PDF file to the Box cloud storage folder.
+5. Modify the [Download()](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#download) method to save the downloaded PDF file to the Box cloud storage folder.
 
 ```csharp
 [HttpPost("Download")]
@@ -115,7 +115,7 @@ public async Task<IActionResult> Download([FromBody] Dictionary<string, string> 
 
 N> Replace the placeholders with the appropriate Box access token, folder ID, client ID, and client secret. For production, avoid storing secrets in configuration files; use environment variables or a secure secret manager and follow Box best practices for OAuth or JWT authentication.
 
-**Step 4:**  Set the PDF Viewer Properties in Vue PDF viewer component
+**Step 4:**  Set the PDF Viewer Properties in Vue PDF Viewer component
 
 Modify the `serviceUrl` property of the PDF Viewer component with the accurate URL of the web service, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from Box cloud storage, and ensure that the document exists in the target folder.
 

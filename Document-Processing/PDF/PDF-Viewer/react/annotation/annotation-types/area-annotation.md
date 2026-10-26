@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add Area Measurement Annotations in React PDF Viewer | Syncfusion
-description: Learn how to enable, draw, customize, and manage Area measurement annotations in the Syncfusion React PDF Viewer.
+title: Area Annotation in React PDF Viewer | Syncfusion
+description: Enable, draw, customize, and manage Area measurement annotations in the React PDF Viewer to measure regions inside a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add Area Measurement Annotations in React PDF Viewer
+# Area Annotation in React PDF Viewer
 Area is a measurement annotation used to calculate the surface of a closed region on a PDF page—ideal for engineering, construction, or design reviews.
 
 ![Area overview](../../../javascript-es6/annotations/annotation-images/area-annot.png)
@@ -107,7 +107,7 @@ function addArea() {
 {% endtabs %}
 
 ## Customize Area Appearance
-Configure default properties using the [`Area Settings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#areasettings) property (for example, default **fill color**, **stroke color**, **opacity**).
+Configure default properties using the [`areaSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#areasettings) property (for example, default **fill color**, **stroke color**, **opacity**).
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -117,6 +117,79 @@ Configure default properties using the [`Area Settings`](https://ej2.syncfusion.
   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
   resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
   areaSettings={{ fillColor: 'yellow', strokeColor: 'orange', opacity: 0.6 }}
+  style={{ height: '650px' }}
+>
+  <Inject services={[Toolbar, Annotation]} />
+</PdfViewerComponent>
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+### Supported Border Styles
+
+In addition to the default **Solid** border, Area annotations support the following additional border styles:
+
+- **Cloud** — scalloped cloud border.
+- **Dashed** — dashed line border.
+
+Use [`BorderStyle`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/borderStyle) values such as `BorderStyle.Cloud` and `BorderStyle.Dashed` together with the optional `borderDashArray` and `cloudIntensity` settings in the [`areaSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#areasettings) property.
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `borderStyle` | `BorderStyle` | Specifies the border style. Supported values: `BorderStyle.Solid`, `BorderStyle.Cloud`, and `BorderStyle.Dashed`. |
+| `borderDashArray` | `number[]` | Specifies the dash pattern when `borderStyle` is `BorderStyle.Dashed`. |
+| `cloudIntensity` | `number` | Specifies the cloud border intensity. Supported range: `1` to `2`; default value: `1`. |
+
+N> `borderStyle`, `borderDashArray`, and `cloudIntensity` are preserved during save, reload, import, and export.
+
+#### Apply a Cloud Border
+
+```ts
+export enum BorderStyle {
+    Solid = 'Solid',
+    Dashed = 'Dashed',
+    Cloud = 'Cloud'
+}
+```
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
+<PdfViewerComponent
+  id="container"
+  documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+  resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+  areaSettings={{
+    fillColor: 'yellow',
+    strokeColor: 'orange',
+    opacity: 0.6,
+    borderStyle: BorderStyle.Cloud,
+    cloudIntensity: 2
+  }}
+  style={{ height: '650px' }}
+>
+  <Inject services={[Toolbar, Annotation]} />
+</PdfViewerComponent>
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+#### Apply a Dashed Border
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
+<PdfViewerComponent
+  id="container"
+  documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+  resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+  areaSettings={{
+    fillColor: 'yellow',
+    strokeColor: 'orange',
+    opacity: 0.6,
+    borderStyle: BorderStyle.Dashed,
+    borderDashArray: [5, 5]
+  }}
   style={{ height: '650px' }}
 >
   <Inject services={[Toolbar, Annotation]} />
@@ -167,9 +240,9 @@ function editAreaProgrammatically() {
 {% endhighlight %}
 {% endtabs %}
 
-### Delete Distance Annotation
+### Delete Area Annotation
 
-Delete Distance Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
+Delete Area Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../delete-annotation).
 
 ## Set Default Properties During Initialization
 Apply defaults for Area using the [`areaSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#areasettings) property.
@@ -247,12 +320,12 @@ Configure scale defaults using [`measurementSettings`](https://ej2.syncfusion.co
 Listen to annotation life-cycle events (add/modify/select/remove). For the full list and parameters, see [**Annotation Events**](../annotation-event).
 
 ## Export and Import
-Area measurements can be exported or imported with other annotations. For workflows and supported formats, see [**Export and Import annotations**](../export-import-annotations).
+Area measurements can be exported or imported with other annotations. For workflows and supported formats, see [**Export and Import annotations**](../export-import/export-annotation).
 
 ## See Also
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)
 - [Customize Context Menu](../../context-menu/custom-context-menu)
 - [Comments Panel](../comments)
 - [Annotation Events](../annotation-event)
-- [Export and Import annotations](../export-import-annotations)
-- [Delete Annotations](../remove-annotations)
+- [Export and Import annotations](../export-import/export-annotation)
+- [Delete Annotations](../delete-annotation)

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Ink annotations in Xamarin Pdf Viewer control | Syncfusion
+title: Ink annotations in Xamarin Pdf Viewer | Syncfusion
 description: Learn here all about Ink annotations support in Syncfusion<sup>®</sup> Xamarin Pdf Viewer (SfPdfViewer) control and more.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Ink annotations in Xamarin Pdf Viewer (SfPdfViewer)
+# Ink annotations in Xamarin Pdf Viewer
 
 [Xamarin PDF Viewer](https://www.syncfusion.com/xamarin-ui-controls/xamarin-pdf-viewer) allows you to include ink annotation in the PDF document and provides options to edit or remove the existing ink annotation in the PDF document.
 

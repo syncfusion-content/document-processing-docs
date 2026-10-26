@@ -1,13 +1,13 @@
 ---
 layout: post
-title: PDF form field flags in the TypeScript PDF Viewer | Syncfusion
-description: Learn how to apply isReadOnly, isRequired, and isPrint flags to PDF form fields in the Syncfusion TypeScript PDF Viewer.
+title: Form Constrain in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Configure form field constraints in the JavaScript (ES6) PDF Viewer, including isReadOnly, isRequired, and isPrint flags for each field.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# PDF form field flags in TypeScript PDF Viewer
+# PDF Form Field Constraints in JavaScript (ES6) PDF Viewer
 
 The Syncfusion **TypeScript PDF Viewer** allows you to control how users interact with form fields and how those fields behave during validation and printing by applying **form field flags**. These flags define whether a form field can be modified, whether it is mandatory, and whether it appears in printed output.
 
@@ -71,7 +71,7 @@ If required fields are empty, validation can prevent further actions.
 // 1) Default for new Textbox fields
 pdfviewer.textFieldSettings = { isRequired: true };
 
-// 2) Validation wiring
+// 2) Wire up the validateFormFields event (fires when required fields are empty on submit/validate)
 pdfviewer.enableFormFieldsValidation = true;
 pdfviewer.validateFormFields = (args: any) => {
   // Triggers when required fields are empty on submit/validate

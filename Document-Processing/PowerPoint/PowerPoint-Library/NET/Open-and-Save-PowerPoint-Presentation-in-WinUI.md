@@ -11,7 +11,7 @@ documentation: UG
 Syncfusion<sup>&reg;</sup> PowerPoint is a [WinUI PowerPoint library](https://www.syncfusion.com/powerpoint-framework/winui/powerpoint-library) used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **open and save a Presentation in WinUI**.
 
 ## Prerequisites
-To use the WinUI 3 project templates, install the Windows App SDK extension for Visual Studio. For more details, refer [here](https://docs.microsoft.com/en-us/windows/apps/windows-app-sdk/set-up-your-development-environment).
+To use the WinUI 3 project templates, install the Windows App SDK extension for Visual Studio. For more details, refer [here](https://learn.microsoft.com/en-us/windows/apps/get-started/start-here?tabs=visual-studio).
 
 ## WinUI Desktop app
 
@@ -25,11 +25,11 @@ Step 2: Enter the project name and click **Create**.
 
 ![Create a project name for your new project](Workingwith-WinUI/Desktop_Configure.png)
 
-Step 3: Set the Target version to Windows 10, version 2004 (build 19041) and the Minimum version to Windows 10, version 1809 (build 17763) and then click **OK**.
+Step 3: Set the **Target version** to **Windows 10, version 22H2 (build 19045)** and the **Minimum version** to **Windows 10, version 1809 (build 17763)**, then click **OK**.
 
 ![Set the target version](Workingwith-WinUI/Target_Version.png)
 
-Step 4: Install the [Syncfusion.Presentation.NET](https://www.nuget.org/packages/Syncfusion.Presentation.NET) NuGet package as a reference to your .NET Standard applications from the [NuGet.org](https://www.nuget.org/).
+Step 4: Install the [Syncfusion.Presentation.NET](https://www.nuget.org/packages/Syncfusion.Presentation.NET) NuGet package as a reference to your application from the [NuGet.org](https://www.nuget.org/).
 
 ![Install Syncfusion.Presentation.NET Nuget Package](Workingwith-WinUI/Install_Nuget.png)
 
@@ -38,7 +38,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 Step 5: Add a new button to the **MainWindow.xaml** as shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Window
     x:Class="Read_and_edit_PowerPoint_presentation.MainWindow"
@@ -61,6 +61,8 @@ Step 6: Include the following namespaces in the **MainWindow.xaml.cs** file.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+using System.IO;
+using System.Reflection;
 using Syncfusion.Presentation;
 
 {% endhighlight %}
@@ -83,20 +85,20 @@ Step 8: Add below code snippet demonstrates accessing a shape from a slide and c
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-//Opens an existing PowerPoint presentation.
-using IPresentation pptxDoc = Presentation.Open(stream);
+//Load the PowerPoint file from the application's installation folder.
+using IPresentation pptxDoc = Presentation.Open("Assets/Template.pptx");
 //Get the first slide from the PowerPoint presentation.
 ISlide slide = pptxDoc.Slides[0];
 //Get the first shape of the slide.
 IShape shape = slide.Shapes[0] as IShape;
 //Modify the text of the shape.
-if (shape.TextBody.Text == "Company History")
+if (shape != null && shape.TextBody.Text == "Company History")
     shape.TextBody.Text = "Company Profile";
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 9: Add below code example to **save the PowerPoint Presentation in WinUI Desktop app**. Refer the helper class file to save the **Presentation document** in WinUI Desktop App from [here](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/WinUI/WinUI-Desktop-app/Read-and-edit-PowerPoint-presentation/Read-and-edit-PowerPoint-presentation/SaveHelper.cs).
+Step 10: Add the following code example to **save the PowerPoint presentation** in a WinUI Desktop app. The `SaveHelper` class (from the [GitHub sample](https://github.com/SyncfusionExamples/PowerPoint-Examples/blob/master/Read-and-save-PowerPoint-presentation/Open-and-save-PowerPoint/WinUI/WinUI-Desktop-app/Read-and-edit-PowerPoint-presentation/SaveHelper.cs)) uses a `FileSavePicker` and `WindowsRT.Interop` to write the file to disk.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -116,7 +118,7 @@ By executing the program, you will get the **PowerPoint document** as follows.
 
 ![WinUI Desktop app output PowerPoint document](Workingwith-Core/Open-and-Save-output-image.png)
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/winui) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page. 
 
 ## WinUI UWP app
 
@@ -126,7 +128,6 @@ Step 1: Create a new C# WinUI UWP app. Select Blank App (WinUI 3 in UWP)from the
 
 ![Create the WinUI UWP app in Visual Studio](Workingwith-WinUI/Create_UWP_Project.png)
 
-N> To get the UWP Experimental project templates and build UWP apps with WinUI 3, you should download the [Windows App SDK Experimental Extension](https://aka.ms/projectreunion/previewdownload) for Visual Studio.
 
 Step 2: Enter the project name and click **Create**.
 
@@ -145,7 +146,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 Step 5: Add a new button to the **MainPage.xaml** as shown below.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight xaml tabtitle="XAML" %}
 
 <Page
     x:Class="Read_and_edit_PowerPoint_presentation.MainPage"
@@ -264,4 +265,11 @@ By executing the program, you will get the **PowerPoint document** as follows.
 
 ![WinUI UWP app output PowerPoint document](Workingwith-Core/Open-and-Save-output-image.png)
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/winui) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features.
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page.
+
+## See also
+
+- [Create a PowerPoint presentation in WinUI](./create-read-edit-powerpoint-files-in-winui)
+- [Open and save Presentation in UWP](./Open-and-Save-PowerPoint-Presentation-in-UWP)
+- [.NET PowerPoint Library — features and pricing](https://www.syncfusion.com/document-sdk/net-powerpoint-library)
+- [Syncfusion licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview)

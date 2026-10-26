@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Add Free Text Annotations in React PDF Viewer | Syncfusion
-description: Learn how to enable, add, customize, and manage Free Text (text box) annotations in the Syncfusion React PDF Viewer.
+title: Free Text Annotation in React PDF Viewer | Syncfusion
+description: Enable, add, customize, and manage Free Text annotations in the React PDF Viewer for inline notes and labels on a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add Free Text Annotations in React PDF Viewer
+# Free Text Annotation in React PDF Viewer
 Free Text annotations let users place editable text boxes on a PDF page to add comments, labels, or notes without changing the original document content.
 
 ## Enable Free Text in the Viewer
 
-To enable ink annotations, inject the following modules into the React PDF Viewer:
+To enable Free Text annotations, inject the following modules into the React PDF Viewer:
 
 - [**Annotation**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#annotation)
 - [**Toolbar**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#toolbar)
@@ -113,7 +113,7 @@ function addFreeTextProgrammatically() {
 
 ## Customize Free Text Appearance
 
-Configure default properties using the [`FreeTextSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#freeTextsettings) property (for example, default **fill color**, **border color**, **font color**, **opacity**, and **auto‑fit**). 
+Configure default properties using the [`freeTextSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#freeTextsettings) property (for example, default **fill color**, **border color**, **font color**, **opacity**, and **auto‑fit**). 
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -137,13 +137,90 @@ Configure default properties using the [`FreeTextSettings`](https://ej2.syncfusi
 {% endhighlight %}
 {% endtabs %}
 
+### Supported Border Styles
+
+In addition to the default **Solid** border, Free Text annotations support the following additional border styles:
+
+- **Cloud** — scalloped cloud border.
+- **Dashed** — dashed line border.
+
+Use [`BorderStyle`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/borderStyle) values such as `BorderStyle.Cloud` and `BorderStyle.Dashed` together with the optional `borderDashArray` and `cloudIntensity` settings in the [`freeTextSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#freeTextsettings) property.
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `borderStyle` | `BorderStyle` | Specifies the border style. Supported values: `BorderStyle.Solid`, `BorderStyle.Cloud`, and `BorderStyle.Dashed`. |
+| `borderDashArray` | `number[]` | Specifies the dash pattern when `borderStyle` is `BorderStyle.Dashed`. |
+| `cloudIntensity` | `number` | Specifies the cloud border intensity. Supported range: `1` to `2`; default value: `1`. |
+
+N> `borderStyle`, `borderDashArray`, and `cloudIntensity` are preserved during save, reload, import, and export.
+
+#### Apply a Cloud Border
+
+```ts
+export enum BorderStyle {
+    Solid = 'Solid',
+    Dashed = 'Dashed',
+    Cloud = 'Cloud'
+}
+```
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
+<PdfViewerComponent
+  id="container"
+  documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+  resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+  freeTextSettings={{
+    fillColor: 'green',
+    borderColor: 'blue',
+    fontColor: 'yellow',
+    opacity: 0.3,
+    enableAutoFit: true,
+    borderStyle: BorderStyle.Cloud,
+    cloudIntensity: 2
+  }}
+  style={{ height: '650px' }}
+>
+  <Inject services={[Toolbar, Annotation]} />
+</PdfViewerComponent>
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+#### Apply a Dashed Border
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
+<PdfViewerComponent
+  id="container"
+  documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+  resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+  freeTextSettings={{
+    fillColor: 'green',
+    borderColor: 'blue',
+    fontColor: 'yellow',
+    opacity: 0.3,
+    enableAutoFit: true,
+    borderStyle: BorderStyle.Dashed,
+    borderDashArray: [5, 5]
+  }}
+  style={{ height: '650px' }}
+>
+  <Inject services={[Toolbar, Annotation]} />
+</PdfViewerComponent>
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
 N> To tailor right‑click options, see [**Customize Context Menu**](../../context-menu/custom-context-menu).
 
 ## Modify, Edit, Delete Free Text
 
 - **Move/Resize**: Drag the box or use the resize handles.
 - **Edit Text**: Click inside the box and type.
-- **Delete**: Use the toolbar or context menu options. For deletion workflows and API details, see [**Delete Annotation**](../remove-annotations).
+- **Delete**: Use the toolbar or context menu options. For deletion workflows and API details, see [**Delete Annotation**](../delete-annotation).
 
 ### Edit Free Text
 
@@ -205,7 +282,7 @@ N> Free Text annotations do **not** modify the original PDF text; they overlay e
 
 ### Delete Free Text
 
-Delete Free Text via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
+Delete Free Text via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../delete-annotation).
 
 ## Set Default Properties During Initialization
 Apply defaults for new text boxes using the [`freeTextSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#inkannotationsettings) property. You can also enable **Auto‑fit** so the box expands with content.
@@ -237,12 +314,12 @@ Listen to add/modify/select/remove events for Free Text and handle them as neede
 
 ## Export and Import
 
-Free Text annotations can be exported or imported just like other annotations. For supported formats and steps, see [**Export and Import annotations**](../export-import-annotations).
+Free Text annotations can be exported or imported just like other annotations. For supported formats and steps, see [**Export and Import annotations**](../export-import/export-annotation).
 
 ## See Also
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)
 - [Customize Context Menu](../../context-menu/custom-context-menu)
 - [Comments Panel](../comments)
 - [Annotation Events](../annotation-event)
-- [Export and Import annotations](../export-import-annotations)
-- [Delete Annotations](../remove-annotations)
+- [Export and Import annotations](../export-import/export-annotation)
+- [Delete Annotations](../delete-annotation)

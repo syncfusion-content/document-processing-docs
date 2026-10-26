@@ -1,109 +1,161 @@
 ---
 layout: post
-title: Getting Started with WPF Pdf Viewer control | Syncfusion&reg;
-description: Learn here about getting started with Syncfusion<sup>&reg;</sup>; Essential Studio&reg; WPF Pdf Viewer control, its elements and more.
+title: Getting Started with WPF PDF Viewer | Syncfusion
+description: Learn how to get started with the Syncfusion WPF PDF Viewer control. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Getting Started with WPF Pdf Viewer
+# Getting Started with WPF PDF Viewer
 
 This section explains how to create an application that displays a PDF file using the [WPF PDF Viewer](https://www.syncfusion.com/wpf-controls/pdf-viewer).
 
-To get started quickly with WPF PDF Viewer, you can check on this video:
+To get started quickly with WPF PDF Viewer, you can check out this video:
 <style>#WPFPDFViewerVideoTutorial{width : 90% !important; height: 400px !important }</style>
 <iframe id='WPFPDFViewerVideoTutorial' src='https://www.youtube.com/embed/H1YBX_-QWKc'></iframe>
 
-## Assemblies required
+## Prerequisites
+* [System requirements for WPF components](https://help.syncfusion.com/wpf/system-requirements)
 
-The following assemblies are required in your WPF application to use the PDF Viewer.
+## Create a new WPF App in Visual Studio
+
+You can create a **WPF Application** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/get-started/create-app-visual-studio) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> WPF](https://help.syncfusion.com/wpf/visual-studio-integration/template-studio).
+
+## Assemblies Deployment
+
+To add a WPF PDF Viewer component to your application by installing it via NuGet packages (Recommended) or by manually adding the required assemblies to the project.
+
+{% tabcontents %}
+
+{% tabcontent NuGet Package %}
+
+### Install Syncfusion<sup style="font-size:70%">&reg;</sup> WPF PDF Viewer NuGet packages
+
+To add **WPF PDF Viewer** component in the application, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search and install:
+
+•	[Syncfusion.PdfViewer.WPF](https://www.nuget.org/packages/Syncfusion.PdfViewer.WPF)
+
+To ensure the control is styled correctly, install the theme package:
+
+•	[Syncfusion.Themes.Windows11Light.WPF](https://www.nuget.org/packages/Syncfusion.Themes.Windows11Light.WPF)
+
+Rather than referencing the assemblies, you can utilize the [PdfViewer NuGet](https://www.nuget.org/packages/Syncfusion.PdfViewer.WPF) Packages. For more information on how to install the NuGet package in a WPF application, please follow the provided link.
+[How to install nuget packages in a WPF application](https://help.syncfusion.com/wpf/installation/install-nuget-packages)
+
+{% endtabcontent %}
+ 
+{% tabcontent Assemblies (.dll) %}
+
+### Add Syncfusion® WPF PDF Viewer Assemblies
+
+The following table lists the assemblies required to be added in the project when the WPF PDF Viewer control is used in your application.
 
 <table>
 <tr>
-<th>Required Assemblies</th>
-<th>Description</th>
-</tr>
+<th>
+Assembly</th><th>
+Description</th></tr>
 <tr>
-<td>Syncfusion.Compression.Base</td>
-<td>This library handles various compression and decompression operations that are used in the PDF file internally.</td></tr>
+<td>
+Syncfusion.Compression.Base.dll</td><td>
+This library handles various compression and decompression operations that are used in the PDF file internally.</td></tr>
 <tr>
-<td>Syncfusion.Pdf.Base</td>
-<td>This library contains the PDF reader and creator that supports the PDF Viewer.</td></tr>
+<td>
+Syncfusion.Pdf.Base.dll</td><td>
+This library contains the PDF reader and creator that supports the PDF Viewer.</td></tr>
 <tr>
-<td>Syncfusion.PdfToImageConverter.Base</td>
-<td>This library is responsible for Pdfium integration and image generation, enhancing the capabilities of the PDF Viewer.</td></tr>
+<td>
+Syncfusion.PdfToImageConverter.Base.dll</td><td>
+This library is responsible for Pdfium integration and image generation, enhancing the capabilities of the PDF Viewer.</td></tr>
 <tr>
-<td>Syncfusion.PdfViewer.WPF</td>
-<td>This component contains the rendering area and other related UI elements.</td>
-</tr>
+<td>
+Syncfusion.PdfViewer.WPF.dll</td><td>
+This component contains the rendering area and other related UI elements.</td></tr>
 <tr>
-<td>Syncfusion.Shared.WPF</td>
-<td>This component contains various UI controls (ColorPickerPalette and Numeric UpDown) that are used in the PDF Viewer.</td></tr>
+<td>
+Syncfusion.Shared.WPF.dll</td><td>
+This component contains various UI controls (ColorPickerPalette and Numeric UpDown) that are used in the PDF Viewer.</td></tr>
 </table>
 
-Rather than referencing the assemblies, you can utilize the [PdfViewer NuGet](https://www.nuget.org/packages/Syncfusion.PdfViewer.WPF) Packages. For more information on how to install the NuGet package in a WPF application, please follow the provided link.
-[How to install nuget packages in a WPF application](https://help.syncfusion.com/wpf/visual-studio-integration/nuget-packages)
 
-N> Starting with version 23.1.x, a reference to the Syncfusion.PdfToImageConverter.Base assembly is necessary for PdfViewer applications.
-N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup>; assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to [this link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your WPF application to use our components.
 
-## Create a simple PDF Viewer application 
+Below are the additional DLLs required for applying themes and skinning to the WPF PDF Viewer control:
 
-You can create a PDF Viewer application by simply drag the control from the Visual Studio toolbox and drop in the designer window of your application or by creating the control manually from code.
+<table> <tr> <th>Assembly</th> <th>Description</th> </tr> <tr> <td>Syncfusion.Themes.Windows11Light.WPF.dll</td> <td>Contains the Windows 11 Light theme style for Syncfusion WPF controls.</td> </tr> <tr> <td>Syncfusion.SfSkinManager.WPF.dll</td> <td>Contains the SfSkinManager which helps to apply different themes to Syncfusion WPF controls.</td> </tr> </table>
 
-### Drag and drop the PdfViewerControl from the toolbox
-Follow these steps to drag and drop the PdfViewerControl from the toolbox.
+N> You need to add these references to your project to use the skinning and theming capabilities of the PDF Viewer.
 
-1. After installing the Syncfusion<sup>&reg;</sup>; Essential Studio&reg; in your machine, create a new WPF application in Visual Studio.
-2. Open the Visual Studio toolbox.
-3. Navigate to <b>Syncfusion<sup>&reg;</sup>; WPF Toolbox</b> tab and drag the `PdfViewerControl` toolbox item to the Designer window, it automatically adds the required references to the current application.
+{% endtabcontent %}
+ 
+{% endtabcontents %}
+
+N>* Starting with version 23.1.x, Syncfusion PdfToImageConverter is necessary for PDF Viewer applications.
+N>* Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to [this link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion&reg; license key in your WPF application to use our components.
+
+## Add WPF PDF Viewer component
+WPF PDF Viewer control can be added to an application either through the designer (XAML) or programmatically using code. 
+
+{% tabcontents %}
+ 
+{% tabcontent Via Designer %}
+1. Open the Visual Studio toolbox.
+2. Navigate to <b>Syncfusion<sup>&reg;</sup> WPF Toolbox</b> tab and drag the `PdfViewerControl` toolbox item to the Designer window. The required references are automatically added to the current application.
 
    ![WPF PDF Viewer in Toolbox](getting-started_images/wpf-pdf-viewer-in-toolbox.png)
-    PDF viewer control in toolbox
-    {:.caption}
+   PDF Viewer control in toolbox
+   {:.caption}
+    
+3.Use the `PdfViewerControl` in XAML by including the Syncfusion namespace.
 
-### Adding control manually in XAML
-To add control manually in XAML, do the following steps,
-
-1. Add the required assemblies as a reference to the project.
-2. Add the following Syncfusion<sup>&reg;</sup>; namespace in XAML to make use of the [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html).
-
-	~~~xaml
-	<Window
-		xmlns:syncfusion="clr-namespace:Syncfusion.Windows.PdfViewer;assembly=Syncfusion.PdfViewer.WPF"
-	</Window>	
-	~~~
-
-3. Declare the [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html) in the XAML page.
-
-   ~~~xaml
-	<Window 
-		x:Class="PdfViewerDemo.MainWindow"
-		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-		Title="PDF Viewer" WindowState="Maximized"
-		xmlns:syncfusion="clr-namespace:Syncfusion.Windows.PdfViewer;assembly=Syncfusion.PdfViewer.WPF">
+	{% tabs %}
+	{% highlight xaml tabtitle="MainWindow.xaml" %}
+	<Window x:Class="Namespace.MainWindow"
+			xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			xmlns:syncfusion="clr-namespace:Syncfusion.Windows.PdfViewer;assembly=Syncfusion.PdfViewer.WPF">
 		<Grid x:Name="HomeGrid">
 			<syncfusion:PdfViewerControl x:Name="pdfViewer"></syncfusion:PdfViewerControl>
 		</Grid>
 	</Window>
-   ~~~
+		
+	{% endhighlight %}
+	{% endtabs %}
 
-### Adding control manually from code
+	N> Declare a name for the PDF Viewer component as shown above for reference.
 
-To add control manually from code, follow these steps,
+4.Add the [SfSkinManager](https://help.syncfusion.com/cr/wpf/Syncfusion.SfSkinManager.html) namespace to style the control correctly, and apply the desired theme.
 
-1.	Add the required assemblies as a reference to the project.
-2.	Add the following Syncfusion<sup>&reg;</sup>; namespace class file.
+	{% tabs %}
+	{% highlight xaml tabtitle="MainWindow.xaml" %}
+	<Window x:Class="Namespace.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:syncfusionskin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+		syncfusionskin:SfSkinManager.Theme="{syncfusionskin:SkinManagerExtension ThemeName=Windows11Light}">
 
-	~~~csharp
+	</Window>
+	{% endhighlight %}
+	{% endtabs %}
+
+	{% endtabcontent %}
+	 
+	{% tabcontent Via Coding %}
+To add the control manually from code, follow these steps:
+
+1. Add the required assemblies as a reference to the project.
+2. Add the following Syncfusion<sup>&reg;</sup>; namespace in MainWindow.xaml.cs.
+
+	{% tabs %}
+	{% highlight c# tabtitle="C#" %}
 	using Syncfusion.Windows.PdfViewer;
-	~~~
+	{% endhighlight %}
+	{% endtabs %}
 
-3. Create a PdfViewerControl instance and add it to the main window.
+3.Create a PdfViewerControl instance and add it to the main window.
 
-   ~~~csharp
+	{% tabs %}
+	{% highlight c# tabtitle="C#" %}
 	using Syncfusion.Windows.PdfViewer;
 	using System.Windows;
 
@@ -124,118 +176,59 @@ To add control manually from code, follow these steps,
 			#endregion
 		}
 	}
-   ~~~
+	{% endhighlight %}
+	{% endtabs %}
 
-## Display PDF file
-
-The [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html)’s [ItemSource](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_ItemSource) property allows you to bind PDF documents in XAML. This property accepts a stream input that can be bounded to the viewer during initialization. The following steps explain how to display a PDF file using the [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html):
-
-N> From v16.3.0x onwards, PDF Viewer uses PDFium as a default rendering engine to render the PDF pages, which is a more robust and promising rendering engine. Refer to this [link](https://help.syncfusion.com/wpf/pdf-viewer/pdf-rendering-engines) for more details.
-
-1.	Create a simple class in the application that implements [INotifyPropertyChanged](https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=netcore-3.1) and declare a file stream property in the class as shown in the following code sample.
-
-	~~~csharp
-	using System.ComponentModel;
-	using System.IO;
-
-	namespace PdfViewerDemo
-	{
-		public class PdfReport : INotifyPropertyChanged
-		{
-			private Stream docStream;
-			public event PropertyChangedEventHandler PropertyChanged;
-			
-			public Stream DocumentStream
-			{
-				get
-				{
-					return docStream;
-				}
-				set
-				{
-					docStream = value;
-					OnPropertyChanged(new PropertyChangedEventArgs("DocumentStream"));
-				}
-			}
-
-			public PdfReport()
-			{
-				//Load the stream from the local system.
-				docStream = new FileStream(@"../../Data/HTTP Succinctly.pdf", FileMode.OpenOrCreate);
-			}
-
-			public void OnPropertyChanged(PropertyChangedEventArgs e)
-			{
-				if (PropertyChanged != null)
-					PropertyChanged(this, e);
-			}
-		}
-	}
-	~~~
-
-2. Set the [DataContext](https://learn.microsoft.com/en-us/dotnet/api/system.windows.frameworkelement.datacontext?view=windowsdesktop-8.0&viewFallbackFrom=netcore-3.1) to the Window for data binding. To add the `DataContext` in XAML, use the following code example.
-
-	~~~xaml
-	<Window.DataContext>
-		<pdfviewerdemo:PdfReport/>
-	</Window.DataContext>
-	~~~
-
-3.	After setting the `DataContext`, bind the file stream property to the [ItemSource](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html#Syncfusion_Windows_PdfViewer_PdfViewerControl_ItemSource) dependency property of [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html) using the following code sample in XAML.
-
-	~~~xaml
-	<syncfusion:PdfViewerControl x:Name="pdfViewer" ItemSource="{Binding DocumentStream}"/>
-	~~~
-
-The sample project for displaying PDF files using the PDF Viewer is available in the [GitHub](https://github.com/SyncfusionExamples/WPF-PDFViewer-Examples/tree/master/DisplayPDF).
-
-N> Alternatively, the Open button in the toolbar can also be used to load and display the PDF documents at runtime. Refer to this [link](https://help.syncfusion.com/wpf/pdf-viewer/viewing-pdf-files#open-pdf-file-from-the-local-disk-using-toolbar) for more details.
-
-## Theme
-
-The WPF PdfViewer Control supports various built-in themes. Refer to the below links to apply themes for the PdfViewerControl,
-
-  * [Apply theme using SfSkinManager](https://help.syncfusion.com/wpf/themes/skin-manager)
-	
-  * [Create a custom theme using ThemeStudio](https://help.syncfusion.com/wpf/themes/theme-studio#creating-custom-theme)
-
-  ![WPF PDF Viewer Theme](getting-started_images/wpf-pdf-viewer-theme.png)
-
-The following example code demonstrate how to apply the FluentDark theme to PDF Viewer control.
+4.The following example code demonstrate how to apply the FluentDark theme to PDF Viewer control in MainWindow.xaml.cs using SfSkinManager.
   
-{% tabs %}
-{% highlight c# %}
+	{% tabs %}
+	{% highlight c# tabtitle="C#" %}
+	
+	using Syncfusion.Windows.PdfViewer;
+	using Syncfusion.SfSkinManager;
+	public MainWindow()
+	{
+		InitializeComponent();
+		//Initialize PDF Viewer.
+		PdfViewerControl pdfViewer = new PdfViewerControl();
+		HomeGrid.Children.Add(pdfViewer);
 
-public MainWindow()
-{
-    InitializeComponent();
-    //Initialize PDF Viewer.
-    PdfViewerControl pdfViewer1 = new PdfViewerControl();
-    HomeGrid.Children.Add(pdfViewer);
+		//Apply the theme to PDFViewer.
+		SfSkinManager.ApplyThemeAsDefaultStyle = true;
+		SfSkinManager.SetTheme(pdfViewer, new Theme() { ThemeName = "FluentDark" });
+		pdfViewer.Load(@"../../PDF_Succinctly.pdf");           
+	}        
 
-    //Apply the theme to PDFViewer.
-    SfSkinManager.SetTheme(pdfViewer, new Theme() { ThemeName = "FluentDark" });
-    pdfViewer.Load(@"../../PDF_Succinctly.pdf");           
-}
+	{% endhighlight %}
 
-{% endhighlight %}
+	{% highlight vbnet tabtitle="VB.NET" %}
 
-{% highlight vbnet %}
+	Public Sub New()
+		InitializeComponent()
+		'Initialize PDF Viewer.
+		Dim pdfViewer As PdfViewerControl = New PdfViewerControl()
+		HomeGrid.Children.Add(pdfViewer)
 
-    Public Sub New()
-        InitializeComponent()
-        'Initialize PDF Viewer.
-        Dim pdfViewer As PdfViewerControl = New PdfViewerControl()
-        HomeGrid.Children.Add(pdfViewer)
+		'Apply the theme to PDFViewer.
+		SfSkinManager.ApplyThemeAsDefaultStyle = True
+		SfSkinManager.SetTheme(pdfViewer, New Theme() With {
+			.ThemeName = "FluentDark"
+		})
+		pdfViewer.Load("../../PDF_Succinctly.pdf")
+	End Sub
 
-        'Apply the theme to PDFViewer.
-        SfSkinManager.SetTheme(pdfViewer, New Theme() With {
-            .ThemeName = "FluentDark"
-        })
-        pdfViewer.Load("../../PDF_Succinctly.pdf")
-    End Sub
+	{% endhighlight %}
+	{% endtabs %}
 
-{% endhighlight %}
-{% endtabs %}
 
-N> You can refer to our [WPF PDF Viewer](https://www.syncfusion.com/wpf-controls/pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [WPF PDF Viewer example](https://github.com/syncfusion/wpf-demos) to know how to render and configure the pdfviewer.
+	{% endtabcontent %}
+	 
+	{% endtabcontents %}
+
+
+N>[View Sample in GitHub.](https://github.com/SyncfusionExamples/WPF-PDFViewer-Examples/tree/master/GettingStarted). Looking for the full WPF PDF Viewer component overview, features, pricing, and documentation? Visit the [WPF PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/wpf-pdf-viewer) page.
+
+## See Also
+- [Viewing PDF Files](./viewing-pdf-files)
+- [Themes](./Themes)
+

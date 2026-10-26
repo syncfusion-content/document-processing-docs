@@ -1,29 +1,31 @@
 ---
 layout: post
-title: Comments in Vue Document editor component | Syncfusion
-description: Learn here all about Comments in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Comments in Vue DOCX Editor | Syncfusion
+description: The comments feature in Vue DOCX Editor enables users to add, review, navigate, reply to, and manage comments within documents
 control: Comments 
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Comments in Vue Document editor component
+# Comments in Vue DOCX Editor
 
-Document Editor allows you to add comments to documents. You can add, navigate and remove comments in code and from the UI.
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) allows you to add comments to documents. You can add, navigate and remove comments in code and from the UI.
 
 ## Add a new comment
 
 Comments can be inserted to the selected text.
 
 ```ts
-this.$refs.documenteditor.ej2Instances.editor.insertComment('Test comment');
+this.$refs.container.ej2Instances.documentEditor.editor.insertComment('Test comment');
 ```
 ## Add a New Comment with Date, Author, and Status
 
 Comments can be inserted into the selected text with a specified date, author, and status [`insertComment`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#insertcomment).
 
 ```ts
+import { CommentProperties } from '@syncfusion/ej2-documenteditor';
+
 // In this example, a comment with the text "Hello world"
 // is added by the author Nancy Davolio on July 23, 2024, at 2:30 PM. 
 // The isResolved status is set to false.
@@ -39,8 +41,8 @@ let commentProperties: CommentProperties = {
     isResolved: false                 // The status of the comment; false indicates it is unresolved.
 };
 
-// Insert the comment with the specified properties into the document editor.
-this.$refs.documenteditor.ej2Instances.editor.insertComment('Hello world', commentProperties);
+// Insert the comment with the specified properties into the Document Editor.
+this.$refs.container.ej2Instances.documentEditor.editor.insertComment('Hello world', commentProperties);
 ```
 
 ## Add a Reply Comment with Date, Author, and Status
@@ -63,15 +65,15 @@ let commentProperties: CommentProperties = {
     isResolved: false                 // The status of the comment; false indicates it is unresolved.
 };
 
-// Insert the comment with the specified properties into the document editor.
-let comment: Comment = this.$refs.documenteditor.ej2Instances.editor.insertComment('Hello world', commentProperties);
+// Insert the comment with the specified properties into the Document Editor.
+let comment: Comment = this.$refs.container.ej2Instances.documentEditor.editor.insertComment('Hello world', commentProperties);
 // Insert a reply comment with specified properties into the Document Editor
-this.$refs.documenteditor.ej2Instances.editor.insertReplyComment(comment.id, 'Hello world', commentProperties);
+this.$refs.container.ej2Instances.documentEditor.editor.insertReplyComment(comment.id, 'Hello world', commentProperties);
 ```
 
 ## Get Comments
 
-Document Editor allows to get the comments along with its reply and comment properties using [`getComments`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#getcomments).
+DOCX Editor allows you to get the comments along with its reply and comment properties using [`getComments`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#getcomments).
 
 ```ts
 //Get Comments in the document along with the properties author, date, status.
@@ -84,21 +86,21 @@ Next and previous comments can be navigated using the below code snippet.
 
 ```ts
 //Navigate to next comment
-this.$refs.documenteditor.ej2Instances.selection.navigateNextComment();
+this.$refs.container.ej2Instances.documentEditor.selection.navigateNextComment();
 
 //Navigate to previous comment
-this.$refs.documenteditor.ej2Instances.selection.navigatePreviousComment();
+this.$refs.container.ej2Instances.documentEditor.selection.navigatePreviousComment();
 ```
 
 ## Delete comment
 
-Current comment can be deleted using [`deleteComment`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#deletecomment).
+The current comment can be deleted using [`deleteComment`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#deletecomment).
 
 ```ts
 //Delete the current selected comment.
 this.$refs.container.ej2Instances.documentEditor.editor.deleteComment();
 
-//Get Comments in the document along with the properties author, date, status.
+//Get comments before deletion. Refer to the Get Comments section above for details.
 let commentinfo: CommentInfo[] = this.$refs.container.ej2Instances.documentEditor.getComments();
 
 //Delete the particular parent comments and all of its reply comments
@@ -108,21 +110,23 @@ this.$refs.container.ej2Instances.documentEditor.editor.deleteComment(commentinf
 this.$refs.container.ej2Instances.documentEditor.editor.deleteComment(commentinfo[0].replies[0].id);
 ```
 
-## Delete all comment
+## Delete all comments
 
 All the comments in the document can be deleted using the below code snippet.
 
 ```ts
-this.$refs.documenteditor.ej2Instances.editor.deleteAllComments();
+this.$refs.container.ej2Instances.documentEditor.editor.deleteAllComments();
 ```
 
 ## Protect the document in comments only mode
 
-Document Editor provides support for protecting the document with `CommentsOnly` protection. In this protection, user allowed to add or edit comments alone in the document.
+To use the DOCX Editor component and its protection APIs, follow the [Getting Started](./getting-started) documentation to set up the component, then load a document before enforcing protection.
 
-Document editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#stopprotection) API.
+DOCX Editor provides support for protecting the document with `CommentsOnly` protection. In this protection, user is allowed to add or edit comments alone in the document.
 
-The following example code illustrates how to enforce and stop protection in Document editor container.
+DOCX Editor provides an option to protect and unprotect document using [`enforceProtection`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#enforceprotection) and [`stopProtection`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor#stopprotection) APIs.
+
+The following example code illustrates how to enforce and stop protection in Document Editor container.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -187,7 +191,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 Comment only protection can be enabled in UI by using [Restrict Editing pane](./document-management#restrict-editing-pane)
 
@@ -199,7 +203,7 @@ Comment only protection can be enabled in UI by using [Restrict Editing pane](./
 
 Mention support displays a list of items that users can select or tag from the suggested list. To use this feature, type the @ character in the comment box and select or tag the user from the suggestion list.
 
-The following example illustrates how to enable mention support in the Document Editor
+The following example illustrates how to enable mention support in the DOCX Editor
 
 ```
 <template>
@@ -208,11 +212,9 @@ The following example illustrates how to enable mention support in the Document 
     </div>
 </template>
 <script>
-  import Vue from 'vue';
-  import { DocumentEditorContainerPlugin, DocumentEditorContainerComponent,Toolbar} from '@syncfusion/ej2-vue-documenteditor';
-  Vue.use(DocumentEditorContainerPlugin);
+  import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
   let mentionData =  [
-                { "Name": "Mary Kate", "EmailId": "marry@company.com" },
+                { "Name": "Mary Kate", "EmailId": "mary@company.com" },
                 { "Name": "Andrew James", "EmailId": "james@company.com" },
                 { "Name": "Andrew Fuller", "EmailId": "andrew@company.com"}
             ];
@@ -229,7 +231,35 @@ The following example illustrates how to enable mention support in the Document 
 </script>
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+
+## Highlight comments by author
+
+When `highlightCommentsByAuthor` is enabled, each comment marker is displayed in the author's avatar color. Selecting a comment highlights the corresponding text and comment pane border in that color. If multiple comments appear on the same line, the marker retains the first author's avatar color.
+
+The following example illustrates how to enable comment highlights in the DOCX Editor using the [`highlightCommentsByAuthor`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/commentsettings#highlightcommentsbyauthor) property in the [CommentSettings](https://ej2.syncfusion.com/vue/documentation/api/document-editor/commentsettings) API Reference.
+```
+<template>
+    <div id="app">
+      <ejs-documenteditorcontainer ref='documenteditor' :serviceUrl='serviceUrl' :documentEditorSettings='settings' height="590px" id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
+    </div>
+</template>
+<script>
+  import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+  export default {
+    data() {
+      return {
+      serviceUrl:'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/',
+      settings: { commentSettings: { highlightCommentsByAuthor : true } }
+      },
+    },
+    provide: {
+      //Inject require modules.
+      DocumentEditorContainer: [Toolbar]
+    }
+  }
+</script>
+```
 
 ## Events
 
@@ -253,7 +283,7 @@ import { provide, ref } from 'vue';
 
 const container = ref(null);
 let mentionData =  [
-                { "Name": "Mary Kate", "EmailId": "marry@company.com" },
+                { "Name": "Mary Kate", "EmailId": "mary@company.com" },
                 { "Name": "Andrew James", "EmailId": "james@company.com" },
                 { "Name": "Andrew Fuller", "EmailId": "andrew@company.com"}
             ];
@@ -292,7 +322,7 @@ const beforeComment = function (args) {
 <script>
 import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 let mentionData =  [
-                { "Name": "Mary Kate", "EmailId": "marry@company.com" },
+                { "Name": "Mary Kate", "EmailId": "mary@company.com" },
                 { "Name": "Andrew James", "EmailId": "james@company.com" },
                 { "Name": "Andrew Fuller", "EmailId": "andrew@company.com"}
             ];
@@ -332,3 +362,7 @@ export default {
 
 {% endhighlight %}
 {% endtabs %}
+
+## Online Demo
+
+Explore how to add, view, and manage comments in Word documents using the Vue DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/comments.html).

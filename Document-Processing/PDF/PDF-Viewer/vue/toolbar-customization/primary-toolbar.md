@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Primary Toolbar Customization in Vue PDF Viewer Component | Syncfusion
-description: Learn how to show or hide the built-in primary toolbar and customize it in the Syncfusion Vue PDF Viewer component.
+title: Primary Toolbar in Vue PDF Viewer | Syncfusion
+description: Customize the primary toolbar in the Vue PDF Viewer to show, hide, reorder, or add items so it matches the way users work with PDFs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Primary Toolbar Customization in Vue PDF Viewer
+# Customize the Primary Toolbar in Vue PDF Viewer
 
 The primary toolbar of the PDF Viewer can be customized by rearranging existing items, disabling default items, and adding custom items. New items can be inserted at a specific index among existing toolbar items to control placement.
 
 ## Show or hide the primary toolbar
 
-Toggle the built-in primary toolbar to create custom toolbar experiences or simplify the UI. When a custom toolbar is required, hide the built-in toolbar. Use the [enableToolbar](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/pdfViewerModel/#enabletoolbar) property or the [showToolbar](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbar/#showtoolbar) method to show or hide the primary toolbar.
+Toggle the built-in primary toolbar to create custom toolbar experiences or simplify the UI. When a custom toolbar is required, hide the built-in toolbar. Use the [enableToolbar](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/pdfviewermodel#enabletoolbar) property or the [showToolbar](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbar#showtoolbar) method to show or hide the primary toolbar.
 
 Show or hide the toolbar using the `enableToolbar` property:
 
@@ -169,10 +169,9 @@ Within the template, configure the PDF Viewer by adding the :serviceUrl="service
 
 ## See also
 
-* [Primary toolbar customization](./toolbar-customization/primary-toolbar-customization)
-* [Custom toolbar](./toolbar-customization/custom-toolbar)
-* [Annotation toolbar customization](./toolbar-customization/annotation-toolbar-customization)
-* [Form designer toolbar customization](./toolbar-customization/form-designer-toolbar-customization)
-* [Mobile toolbar](./toolbar-customization/mobile-toolbar)
-* [Toolbar customization](./how-to/toolbar-customization)
-* [Feature Modules](./feature-module)
+* [Custom toolbar](./custom-toolbar)
+* [Annotation toolbar customization](./annotation-toolbar)
+* [Form designer toolbar customization](./form-designer-toolbar)
+* [Mobile toolbar](./mobile-toolbar)
+* [Toolbar customization](../toolbar)
+* [Feature Modules](../feature-module)

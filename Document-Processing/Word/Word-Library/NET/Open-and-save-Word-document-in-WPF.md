@@ -1,14 +1,14 @@
 ---
-title: Open and save Word document in WPF | Syncfusion
-description: Open and save Word document in WPF application using Syncfusion<sup>&reg;</sup> .NET Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Open and save Word document in WPF  | Syncfusion
+description: Open and save Word document in WPF application using Syncfusion® .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Open and Save Word document in WPF
+# Open and save Word document in WPF 
 
-Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-processing/word-framework/net/word-library) used to **create, read, and edit Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **open and save a Word document in WPF**.
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to **create, read, and edit Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **open and save a Word document in WPF**.
 
 ## Steps to open and save Word document programmatically in WPF:
 
@@ -49,7 +49,7 @@ Step 4: Add a new button in **MainWindow.xaml** to create Word file as follows.
     </Button.Background>
     <StackPanel Orientation="Horizontal" Height="23" Margin="0,0,0,-2.52" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="100">
         <Image Name="image2" Margin="2" HorizontalAlignment="Center" VerticalAlignment="Center" />
-        <TextBlock Text="Opend and Save" Height="15.96" Width="126" Margin="0,4,0,3" />
+        <TextBlock Text="Open and Save" Height="15.96" Width="126" Margin="0,4,0,3" />
     </StackPanel>
 </Button>
 {% endhighlight %}
@@ -62,7 +62,8 @@ Step 5: Add the following code in **btnOpenAndSave_Click** to **open an existing
 
 {% highlight c# tabtitle="C#" %}
 //Open an existing Word document.
-WordDocument document = new WordDocument("Input.docx");
+using (WordDocument document = new WordDocument("Input.docx"))
+{
 {% endhighlight %}
 
 {% endtabs %}
@@ -91,6 +92,7 @@ Step 7: Add below code example to **save the Word document in WPF**.
 {% highlight c# tabtitle="C#" %}
 //Save the Word document
 document.Save("Sample.docx");
+}
 {% endhighlight %}
 
 {% endtabs %}
@@ -101,4 +103,4 @@ By executing the program, you will get the **Word document** as follows.
 
 ![WPF open and save output Word document](WPF_images/OpenAndSaveOutput.png)
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/net) to explore the rich set of Syncfusion<sup>&reg;</sup> Word library (DocIO) features. 
+Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page.

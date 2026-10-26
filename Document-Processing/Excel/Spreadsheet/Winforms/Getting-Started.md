@@ -1,19 +1,67 @@
 ---
 layout: post
 title: Getting Started with WinForms Spreadsheet control | Syncfusion®
-description: Learn here about getting started with Syncfusion® Windows Forms Spreadsheet control, its elements and more details.
+canonical_url: "https://www.syncfusion.com/spreadsheet-editor-sdk/winforms-spreadsheet-editor"
+description: Learn how to get started with the Syncfusion Windows Forms Spreadsheet control. Create and configure a spreadsheet and perform basic worksheet operations.
 platform:  document-processing
 control: Spreadsheet
 documentation: ug
 ---
 
 # Getting Started with Windows Forms Spreadsheet
+This section briefly explains how to include the [WinForms Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/winforms-spreadsheet-editor) component in Windows Forms App using Visual Studio.
 
-This section helps you to get started with the Spreadsheet
+## Prerequisites
+* [System requirements for WinForms components](https://help.syncfusion.com/windowsforms/system-requirements)
 
-## Assemblies deployment
+## Create a new Windows Forms App in Visual Studio
 
-Below table describes, list of assemblies required to be added in project when the [WinForms Spreadsheet](https://www.syncfusion.com/winforms-ui-controls/spreadsheet) control is used in your application.
+You can create a **Windows Forms Application** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/dotnet/desktop/winforms/get-started/create-app-visual-studio) or the [Syncfusion<sup style="font-size:70%">&reg;</sup> Windows Forms](https://help.syncfusion.com/windowsforms/visual-studio-integration/template-studio).
+
+## Installation
+
+You can add the WinForms Spreadsheet component to your application either by installing the NuGet package (recommended) or by manually adding the required assemblies to the project.
+
+{% tabcontents %}
+
+{% tabcontent NuGet Package %}
+
+### Install Syncfusion<sup style="font-size:70%">&reg;</sup> Windows Forms Spreadsheet NuGet package
+
+To add the **Windows Forms Spreadsheet** component in the application, open the NuGet package manager in Visual Studio (*Tools → NuGet Package Manager → Manage NuGet Packages for Solution*), search for and install the following package:
+
+•	[Syncfusion.Spreadsheet.Windows](https://www.nuget.org/packages/Syncfusion.Spreadsheet.Windows)
+
+The following table lists the optional NuGet packages that enable additional features in the Spreadsheet control.
+
+<table>
+<tr>
+<th>
+Optional NuGet Packages</th><th>
+Description</th></tr>
+<tr>
+<td>
+{{'[Syncfusion.SpreadsheetHelper.Windows](https://www.nuget.org/packages/Syncfusion.SpreadsheetHelper.Windows)' | markdownify}}</td><td>
+Contains the classes that import charts and sparklines into the Spreadsheet.</td></tr>
+<tr>
+<td>
+{{'[Syncfusion.ExcelChartToImageConverter.WPF](https://www.nuget.org/packages/Syncfusion.ExcelChartToImageConverter.WPF)' | markdownify}}</td><td>
+Contains the classes that convert charts to images.</td></tr>
+<tr>
+<td>
+{{'[Syncfusion.Chart.Windows](https://www.nuget.org/packages/Syncfusion.Chart.Windows)' | markdownify}}</td><td>
+Contains the classes that create charts that hold axes, series, and legends.</td></tr>
+</table>
+
+{% endtabcontent %}
+
+{% tabcontent Manual (.dll) %}
+
+### Add Syncfusion<sup style="font-size:70%">&reg;</sup> WinForms Spreadsheet Assemblies
+
+The table below lists the assemblies required to be added to the project when the [Syncfusion WinForms Spreadsheet](https://www.syncfusion.com/winforms-ui-controls/spreadsheet) control is used in your application. The assemblies can be obtained from the Syncfusion Essential Studio installer (default install path: `C:\Program Files (x86)\Syncfusion\Essential Studio\{{site.releaseversion}}\Assemblies`).
+
+**Required Assemblies**
 
 <table>
 <tr>
@@ -23,21 +71,22 @@ Description</th></tr>
 <tr>
 <td>
 Syncfusion.Spreadsheet.Windows.dll</td><td>
-Contains the classes  that handles all the UI Operations of Spreadsheet such as importing of sheets, applying formulas/styles etc.</td></tr>
+Contains the classes that handle all the UI operations of the Spreadsheet, such as importing sheets and applying formulas and styles.</td></tr>
 <tr>
 <td>
 Syncfusion.Shared.Base.dll</td><td>
-Contains the classes which holds the controls like TabBarPage, TabBarSplitterControl etc.</td></tr>
+Contains the classes that provide controls like TabBarPage and TabBarSplitterControl.</td></tr>
 <tr>
 <td>
 Syncfusion.Tools.Windows.dll</td><td>
-Contains the classes which holds the controls like Ribbon, ToolStripPanelItem,MaskedEditBox,ToolStripGallery,BackStageButton  etc which are used in Spreadsheet.</td></tr>
+Contains the classes that provide controls like Ribbon, ToolStripPanelItem, MaskedEditBox, ToolStripGallery, and BackStageButton, which are used in the Spreadsheet.</td></tr>
 <tr>
 <td>
 Syncfusion.XlsIO.Base.dll</td><td>
-Contains the base classes which is responsible for read and write in Excel files, Worksheet Manipulations, Formula calculations etc.</td></tr>
+Contains the base classes that are responsible for reading and writing Excel files, worksheet manipulation, and formula calculations.</td></tr>
 </table>
-Below are the assemblies list that can be added when you want to enable certain features in Spreadsheet control. 
+
+The following table lists the optional assemblies that enable additional features in the Spreadsheet control.
 
 <table>
 <tr>
@@ -47,190 +96,147 @@ Description</th></tr>
 <tr>
 <td>
 Syncfusion.SpreadsheetHelper.Windows.dll</td><td>
-Contains the classes which is responsible for importing charts and sparklines into Spreadsheet</td></tr>
+Contains the classes that import charts and sparklines into the Spreadsheet.</td></tr>
 <tr>
 <td>
 Syncfusion.ExcelChartToImageConverter.WPF.dll</td><td>
-Contains the classes which is responsible for converting charts as image</td></tr>
+Contains the classes that convert charts to images.</td></tr>
 <tr>
 <td>
 Syncfusion.Chart.Base.dll</td><td>
-Contains the base classes which is responsible for importing charts like Line charts, Pie charts, Sparklines etc.</td></tr>
+Contains the base classes that import charts such as line, pie, and sparklines.</td></tr>
 <tr>
 <td>
 Syncfusion.Chart.Windows.dll</td><td>
-Contains the classes which is responsible for creating charts that holds axes, series, legends etc.</td></tr>
+Contains the classes that create charts that hold axes, series, and legends.</td></tr>
 <tr>
 <td>
 Syncfusion.ExcelToPDFConverter.Base.dll</td><td>
-Contains the base and fundamental classes which is responsible for converting excel to PDF.</td></tr>
+Contains the base and fundamental classes that convert Excel to PDF.</td></tr>
 <tr>
 <td>
 Syncfusion.Pdf.Base.dll</td><td>
-Contains the base and fundamental classes for creating PDF.</td></tr>
+Contains the base and fundamental classes for creating PDFs.</td></tr>
 </table>
 
-## Create a simple application with Spreadsheet
+{% endtabcontent %}
+ 
+{% endtabcontents %}
 
-WinForms Spreadsheet control can be added into the application either via designer or via coding. 
+## Add the Windows Forms Spreadsheet Component
 
-### Adding a control via designer
+WinForms Spreadsheet control can be added to an application either through the designer (Form1.cs[Design]) or programmatically using code.
 
-1.Create new Windows Forms application in Visual Studio.
+{% tabcontents %}
 
-2.Open the Visual Studio **Tool** **box**. Navigate to Syncfusion<sup>®</sup> Controls tab, and find the  Spreadsheet/SpreadsheetRibbon toolbox items 
+{% tabcontent Via Designer %}
 
-![Toolbox in WindowsForms Spreadsheet](getting-started_images/windowsforms-spreadsheet-toolbox.jpg)
+1. Open the Visual Studio **Toolbox**. Navigate to the **Syncfusion<sup>®</sup> Controls** tab and find the `Spreadsheet` and `SpreadsheetRibbon` toolbox items.
 
-3.Drag `Spreadsheet` and drop in the Designer area from the Toolbox
+   ![Toolbox in WindowsForms Spreadsheet](getting-started_images/windowsforms-spreadsheet-toolbox.jpg)
 
-4.Ribbon can be added to the application by dragging `SpreadsheetRibbon` to the Designer area.
+2.Drag `Spreadsheet` and `SpreadsheetRibbon` from the Toolbox onto the Designer area.
+    {% tabs %}
+    {% highlight c# tabtitle="Form1.Designer.cs" %}
+    ....
+    partial class Form1
+    {
+    ....
+    private void InitializeComponent()
+    {
+    Spreadsheet spreadsheet = new Spreadsheet();
+    }
+    ....
+    }
+    ....
+    {% endhighlight %}
+    {% endtabs %}
 
-5.To make an interaction between Ribbon items and `Spreadsheet`, bind the Spreadsheet as DataContext to the `SpreadsheetRibbon`.
+3.Ribbon can be added to the application by dragging `SpreadsheetRibbon` to the Designer area.
 
-### Adding control via coding
+    {% tabs %}
+    {% highlight c# tabtitle="Form1.Designer.cs" %}
+    ....
+    partial class Form1
+    {
+    ....
+    private void InitializeComponent()
+    {
+    Spreadsheet spreadsheet = new Spreadsheet();
+    SpreadsheetRibbon spreadsheetRibbon = new SpreadsheetRibbon();
+    }
+    ....
+    }
+    ....
+    {% endhighlight %}
+    {% endtabs %}
 
-Spreadsheet is available in the following namespace `Syncfusion.Windows.Forms.Spreadsheet` and it can be created programmatically by using below code. 
+4.To make an interaction between Ribbon items and `Spreadsheet`, bind the Spreadsheet as DataContext to the `SpreadsheetRibbon`.
+
+    {% tabs %}
+    {% highlight c# tabtitle="Form1.Designer.cs" %}
+    ....
+    partial class Form1
+    {
+    ....
+    private void InitializeComponent()
+    {
+    Spreadsheet spreadsheet = new Spreadsheet();
+    SpreadsheetRibbon spreadsheetRibbon = new SpreadsheetRibbon();
+    spreadsheetRibbon.Spreadsheet = spreadsheet;
+    }
+    ....
+    }
+    ....
+    {% endhighlight %}
+    {% endtabs %}
+
+{% endtabcontent %}
+ 
+{% tabcontent Via Coding %}
+
+The `Spreadsheet` control is available in the [Syncfusion.Windows.Forms.Spreadsheet](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.html) namespace and can be created programmatically with the following code.
 
 _For_ _Spreadsheet_
 
 {% tabs %}
+{% highlight c# tabtitle="Form1.cs" %}
 
-{% highlight c# %}
-
-private Spreadsheet spreadsheet;
-spreadsheet = new Spreadsheet();
-SpreadsheetRibbon ribbon = new SpreadsheetRibbon() { Spreadsheet = spreadsheet };
-spreadsheet.Dock = DockStyle.Fill;
-spreadsheet.Anchor = AnchorStyles.Left | AnchorStyles.Top;
-          
-this.Controls.Add(spreadsheet);
-this.Controls.Add(ribbon);
+using Syncfusion.Windows.Forms.Spreadsheet;
+....
+    public Form1()
+    {
+        InitializeComponent();
+        Spreadsheet spreadsheet = new Spreadsheet();
+        SpreadsheetRibbon ribbon = new SpreadsheetRibbon() { Spreadsheet = spreadsheet };
+        spreadsheet.Dock = DockStyle.Fill;
+        spreadsheet.Anchor = AnchorStyles.Left | AnchorStyles.Top;
+        this.Controls.Add(spreadsheet);
+        this.Controls.Add(ribbon);
+    }
+....
 
 {% endhighlight %}
-
 {% endtabs %}
 
-_You_ _can_ _get_ _the_ _following_ _output_ _when_ _execute_ _the_ _application_.
+{% endtabcontent %}
+ 
+{% endtabcontents %}
+
+## Run the Application
+
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> in Visual Studio to launch the application.The output will appear as follows:
 
 ![Adding control via coding in WindowsForms Spreadsheet](getting-started_images/windowsforms-spreadsheet-coding.png)
 
-## Creating a new Excel Workbook
+## Next Steps
 
-A new workbook can be created by using a [Create](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html#Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_Create_System_Int32_) method with specified number of worksheets. By default, a workbook will be created with single worksheet.
+* To learn how to create, open, and save files in the WinForms Spreadsheet control, see [Workbook Operations](Workbook-Operations).
+* For a complete working sample that demonstrates everything in this getting-started guide, see the [WinForms Spreadsheet Getting Started sample on GitHub](https://github.com/SyncfusionExamples/winforms-spreadsheet-getting-started).
+* For a full overview of the WinForms Spreadsheet Editor component, including features, pricing, and documentation, visit the [WinForms Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/winforms-spreadsheet-editor) page.
 
-{% tabs %}
-{% highlight c# %}
-
-spreadsheet.Create(2);
-
-{% endhighlight %}
-{% endtabs %}
-
-## Opening an existing Excel Workbook
-
-The Excel Workbook can be opened in Spreadsheet using the [Open](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html#Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_Open_Syncfusion_XlsIO_IWorkbook_) method in various ways,
-
-{% tabs %}
-{% highlight c# %}
-
-//Using Stream,
-spreadsheet.Open (Stream file);
-
-//Using String,
-spreadsheet.Open (string file);
-
-//Using Workbook,
-spreadsheet.Open(IWorkbook workbook);
-      
-{% endhighlight %}
-{% endtabs %}
-
-{% tabs %}
-{% highlight c# %}
-
-spreadsheet.Open (@"..\..\Data\Outline.xlsx");
-
-{% endhighlight %}
-{% endtabs %}
-
-![Opening an existing excel workbook in WindowsForms Spreadsheet](getting-started_images/windowsforms-spreadsheet-opening-an-existing-excel-workbook.png)
-
-
-Opening Excel File in Spreadsheet
-   {:.caption}
-
-## Saving the Excel Workbook
-
-The Excel workbook can be saved in Spreadsheet using [Save](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html#Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_Save) method. If the workbook already exists in the system drive, it will be saved in the same location, otherwise Save Dialog box opens to save the workbook in user specified location. 
-
-{% tabs %}
-{% highlight c# %}
-
-spreadsheet.Save();
-
-{% endhighlight %}
-{% endtabs %}
-
-You can also use [SaveAs](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet.html#Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_SaveAs) method directly to save the existing excel file with modifications.
-
-The `SaveAs` method in Spreadsheet can be used in various ways,
-
-{% tabs %}
-{% highlight c# %}
-
-//Using Stream,
-spreadsheet.SaveAs (Stream file);
-
-//Using String,
-spreadsheet.SaveAs (string file);
-
-//For Dialog box,
-spreadsheet.SaveAs();
-      
-{% endhighlight %}
-{% endtabs %}
-
-## Displaying charts and sparklines
-
-For importing charts and sparklines in Spreadsheet, add the following assembly as reference into the application.
- 
-Assembly: **Syncfusion.SpreadsheetHelper.Windows.dll** 
-
-### Charts
- 
-Create an instance of Syncfusion.Windows.Forms.SpreadsheetHelper.[GraphicChartCellRenderer](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.SpreadsheetHelper.GraphicChartCellRenderer.html) and add that renderer into [GraphicCellRenderers](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.GraphicCells.GraphicModel.html#Syncfusion_Windows_Forms_Spreadsheet_GraphicCells_GraphicModel_GraphicCellRenderers) collection by using the helper method [AddGraphicChartCellRenderer](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.GraphicCells.GraphicCellHelper.html#Syncfusion_Windows_Forms_Spreadsheet_GraphicCells_GraphicCellHelper_AddGraphicChartCellRenderer_Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_Syncfusion_Windows_Forms_Spreadsheet_GraphicCells_IGraphicCellRenderer_) which is available under the namespace `Syncfusion.Windows.Forms.Spreadsheet.GraphicCells`. 
-
-{% tabs %}
-{% highlight c# %}
-
-public Form1()
-{
-    InitializeComponent();
-  
-    //For importing charts,
-    this.spreadsheet.AddGraphicChartCellRenderer(new GraphicChartCellRenderer());
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-### Sparklines
-
-Create an instance of Syncfusion.Windows.Forms.SpreadsheetHelper.[SparklineCellRenderer](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.SpreadsheetHelper.SparklineCellRenderer.html) and add that renderer into Spreadsheet by using the helper method [AddSparklineCellRenderer](https://help.syncfusion.com/cr/windowsforms/Syncfusion.Windows.Forms.Spreadsheet.GraphicCells.GraphicCellHelper.html#Syncfusion_Windows_Forms_Spreadsheet_GraphicCells_GraphicCellHelper_AddSparklineCellRenderer_Syncfusion_Windows_Forms_Spreadsheet_Spreadsheet_Syncfusion_Windows_Forms_Spreadsheet_CellRenderer_ISpreadsheetCellRenderer_) which is available under the namespace `Syncfusion.Windows.Forms.Spreadsheet.GraphicCells`.
-
-{% tabs %}
-{% highlight c# %}
-
-public Form1()
-{
-    InitializeComponent();
-      
-    //For importing sparklines,
-    this.spreadsheet.AddSparklineCellRenderer(new SparklineCellRenderer());
-}
-
-{% endhighlight %}
-{% endtabs %}
-
-N> You can refer to our [WinForms Spreadsheet](https://www.syncfusion.com/winforms-ui-controls/spreadsheet) control feature tour page for its groundbreaking feature representations. You can also explore our [WinForms Spreadsheet example](https://github.com/syncfusion/winforms-demos/tree/master/spreadsheet) that shows you how to render and configure the Spreadsheet.
+## See Also
+* [Data Management](Data-Management)
+* [Formatting](Formatting)
+* [Formulas](Formulas)
+* [Display Charts and Sparklines](Shapes)

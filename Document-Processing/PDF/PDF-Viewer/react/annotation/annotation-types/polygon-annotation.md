@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Polygon Annotation (Shape) in React PDF Viewer \ Syncfusion
-description: Learn how to enable, apply, customize, and manage Polygon annotations in the Syncfusion React PDF Viewer.
+title: Polygon Annotation in React PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Polygon annotations in the React PDF Viewer to outline irregular shapes on a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Polygon Annotation (Shape) in React PDF Viewer
+# Polygon Annotation in React PDF Viewer
 Polygon annotations allow users to outline irregular regions, draw custom shapes, highlight non-rectangular areas, or create specialized callouts on PDFs for review and markup.
 
 ![Polygon overview](../../../javascript-es6/annotations/annotation-images/polygon-annot.png)
 
 ## Enable Polygon Annotation in the Viewer
 
-To enable Line annotations, inject the following modules into the React PDF Viewer:
+To enable Polygon annotations, inject the following modules into the React PDF Viewer:
 
 - [**Annotation**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#annotation)
 - [**Toolbar**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#toolbar)
@@ -46,7 +46,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-##  Add Polygon Annotation
+## Add Polygon Annotation
 
 ### Add Polygon Annotation Using the Toolbar
 1. Open the **Annotation Toolbar**.
@@ -60,7 +60,7 @@ N> When in Pan mode, selecting a shape tool automatically switches the viewer to
 
 ### Enable Polygon Mode
 
-Switch the viewer into highlight mode using `setAnnotationMode('Polygon')`.
+Switch the viewer into Polygon mode using `setAnnotationMode('Polygon')`.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -129,13 +129,88 @@ Configure default polygon appearance (fill color, stroke color, thickness, opaci
 {% endhighlight %}
 {% endtabs %}
 
+### Supported Border Styles
+
+In addition to the default **Solid** border, Polygon annotations support the following additional border styles:
+
+- **Cloud** — scalloped cloud border.
+- **Dashed** — dashed line border.
+
+Use [`BorderStyle`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/borderStyle) values such as `BorderStyle.Cloud` and `BorderStyle.Dashed` together with the optional `borderDashArray` and `cloudIntensity` settings in the [`polygonSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#polygonsettings) property.
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `borderStyle` | `BorderStyle` | Specifies the border style. Supported values: `BorderStyle.Solid`, `BorderStyle.Cloud`, and `BorderStyle.Dashed`. |
+| `borderDashArray` | `number[]` | Specifies the dash pattern when `borderStyle` is `BorderStyle.Dashed`. |
+| `cloudIntensity` | `number` | Specifies the cloud border intensity. Supported range: `1` to `2`; default value: `1`. |
+
+N> `borderStyle`, `borderDashArray`, and `cloudIntensity` are preserved during save, reload, import, and export.
+
+#### Apply a Cloud Border
+
+```ts
+export enum BorderStyle {
+    Solid = 'Solid',
+    Dashed = 'Dashed',
+    Cloud = 'Cloud'
+}
+```
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
+<PdfViewerComponent
+  id="container"
+  documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+  resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+  polygonSettings={{
+    fillColor: '#ffa5d8',
+    strokeColor: '#ff6a00',
+    thickness: 2,
+    opacity: 0.9,
+    borderStyle: BorderStyle.Cloud,
+    cloudIntensity: 2
+  }}
+  style={{ height: '650px' }}
+>
+  <Inject services={[Toolbar, Annotation]} />
+</PdfViewerComponent>
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+#### Apply a Dashed Border
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
+<PdfViewerComponent
+  id="container"
+  documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+  resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+  polygonSettings={{
+    fillColor: '#ffa5d8',
+    strokeColor: '#ff6a00',
+    thickness: 2,
+    opacity: 0.9,
+    borderStyle: BorderStyle.Dashed,
+    borderDashArray: [5, 5]
+  }}
+  style={{ height: '650px' }}
+>
+  <Inject services={[Toolbar, Annotation]} />
+</PdfViewerComponent>
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
 ## Manage Polygon (Edit, Move, Resize, Delete)
 
-### Edit Circle
+### Edit Polygon
 
-#### Edit Circle (UI)
+#### Edit Polygon (UI)
 
-- Select a Circle to view resize handles.
+- Select a Polygon to view resize handles.
 - Drag any side/corner to resize; drag inside the shape to move it.
 - Edit **fill**, **stroke**, **thickness**, and **opacity** using the annotation toolbar.
 
@@ -156,7 +231,7 @@ Use the annotation toolbar:
 
 #### Edit Polygon Programmatically
 
-Modify an existing Circle programmatically using `editAnnotation()`.
+Modify an existing Polygon programmatically using `editAnnotation()`.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -180,12 +255,12 @@ function editPolygonProgrammatically() {
 
 ### Delete Polygon
 The PDF Viewer supports deleting existing annotations through the UI and API.
-See [**Delete Annotation**](../remove-annotations) for full behavior and workflows.
+See [**Delete Annotation**](../delete-annotation) for full behavior and workflows.
 
 ### Comments
 Use the [**Comments panel**](../comments) to add, view, and reply to threaded discussions linked to polygon annotations. It provides a dedicated interface for collaboration and review within the PDF Viewer.
 
-## Set properties while adding Individual Annotation
+## Set properties while adding individual annotations
 Configure per-annotation appearance while adding a polygon using [`addAnnotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation).
 
 
@@ -253,15 +328,15 @@ Disable shape annotations (Polygon, Line, Rectangle, Circle, Arrow) using the [`
 ## Handle Polygon Events
 
 The PDF viewer provides annotation life-cycle events that notify when Polygon annotations are added, modified, selected, or removed.
-For the full list of available events and their descriptions, see [**Annotation Events**](../annotation-event)
+For the full list of available events and their descriptions, see [**Annotation Events**](../annotation-event).
 
 ## Export and Import
-The PDF Viewer supports exporting and importing annotations. For details on supported formats and workflows, see [**Export and Import annotations**](../export-import-annotations).
+The PDF Viewer supports exporting and importing annotations. For details on supported formats and workflows, see [**Export and Import annotations**](../export-import/export-annotation).
 
 ## See Also
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)
 - [Customize Context Menu](../../context-menu/custom-context-menu)
 - [Comments Panel](../comments)
 - [Annotation Events](../annotation-event)
-- [Export and Import annotations](../export-import-annotations)
-- [Delete Annotations](../remove-annotations)
+- [Export and Import annotations](../export-import/export-annotation)
+- [Delete Annotations](../delete-annotation)

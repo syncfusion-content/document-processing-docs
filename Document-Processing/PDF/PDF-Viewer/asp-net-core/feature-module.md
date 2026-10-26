@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Feature modules in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn about feature modules in the Syncfusion ASP.NET Core PDF Viewer component and how to enable them.
+title: Feature Module in ASP.NET Core PDF Viewer | Syncfusion
+description: Inject feature modules into the ASP.NET Core PDF Viewer to enable only the toolbar, search, forms, annotations, and printing capabilities you need.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

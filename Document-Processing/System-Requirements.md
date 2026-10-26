@@ -1,13 +1,13 @@
 ---
 layout: post
-title: System Requirements in Document Processing - Syncfusion
+title: System Requirements of Document Processing Solutions | Syncfusion
 description: Checkout and learn here all about the system requirements needed to use Syncfusion Document Processing Components.
 platform: document-processing
 control: System Requirements
 documentation: ug
 
 ---
-# System Requirements for Document Processing Components
+# System Requirements of Document Processing Solutions
 
 The system requirements for using our Syncfusion<sup>&reg;</sup> Document Processing platform are as follows
 
@@ -45,6 +45,7 @@ Syncfusion<sup>&reg;</sup> Document Processing libraries supports the following 
 * .NET Standard 2.0
 * .NET 8.0
 * .NET 9.0
+* .NET 10.0
 
-You can use our Document Processing libraries in any type of .NET application, like WinForms, WPF, Web services, ASP.NET MVC, ASP.NET Core, Blazor, UWP, Xamarin, WinUI and .NET MAUI applications. 
+You can use our Document Processing libraries in any type of .NET application, like WinForms, WPF, Web services, ASP.NET MVC, ASP.NET Core, Blazor, UWP, WinUI and .NET MAUI applications. 
 

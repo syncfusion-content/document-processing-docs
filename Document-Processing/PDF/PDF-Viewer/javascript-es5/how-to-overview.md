@@ -1,14 +1,14 @@
 ---
 layout: post
-title: FAQ Section in JavaScript PDF Viewer control | Syncfusion
-description: In this section, you can know about the various questions asked about manipulation of JavaScript PDF Viewer control.
+title: About how to section of JavaScript (ES5) PDF Viewer | Syncfusion
+description: Learn about the frequently asked questions in how to section of Syncfusion JavaScript (ES5) PDF Viewer control and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## Frequently Asked Questions in JavaScript PDF Viewer
+# About how to section of Syncfusion JavaScript (ES5) PDF Viewer
 
 The frequently asked questions for the Essential<sup>&reg;</sup> PDF Viewer are listed below.
 
@@ -32,7 +32,8 @@ The frequently asked questions for the Essential<sup>&reg;</sup> PDF Viewer are 
 * [How to customize text search highlight color in PDF Viewer?](./how-to/customize-text-search-color)
 * [How to delete a specific annotation from the PDF document?](./how-to/delete-annotation)
 * [How to disable the context menu?](./how-to/disable-context-menu)
-* [How to disable tile rendering in PDF Viewer?](./how-to/disable-tile-rendering)
+* [How to disable tile rendering in PDF Viewer?](./how-to/disable-tile-renderings)
+* [Active Viewport Rendering](./how-to/active-viewport-rendering)
 * [How to display custom tooltip for annotation?](./how-to/display-custom-tool-tip-for-annotation)
 * [How to download the pdf document when closing the browser window?](./how-to/download-document-on-window-closing)
 * [How to focus on a form field after loading a document?](./how-to/focus-on-a-form-field-after-loading)

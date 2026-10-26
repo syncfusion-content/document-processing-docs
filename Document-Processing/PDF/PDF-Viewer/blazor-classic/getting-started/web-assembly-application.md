@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with PDF Viewer in Blazor WASM App | Syncfusion
-description: Checkout and learn about getting started with Blazor PDF Viewer component in Blazor WebAssembly (WASM) App using Visual Studio and more.
+title: Getting Started with Blazor WASM App PDF Viewer | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor WebAssembly (WASM) App PDF Viewer component. Explore view, annotate and fill PDF forms.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 N> Syncfusion<sup style="font-size:70%">&reg;</sup> recommends using [Blazor PDF Viewer (NextGen)](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/blazor/getting-started/server-side-application) Component which provides fast rendering of pages and improved performance. Also, there is no need of external Web service for processing the files and ease out the deployment complexity. It can be used in Blazor Server, WASM and MAUI applications without any changes.
 
-# Getting Started with Blazor PDF Viewer Component in Blazor WASM App
+# Getting Started with Blazor WASM App PDF Viewer
 
 This section briefly explains about how to include [Blazor PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/blazor-pdf-viewer) component in your Blazor WebAssembly (WASM) App using Visual Studio.
 

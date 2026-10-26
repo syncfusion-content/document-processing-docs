@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add Volume Measurement Annotations in React PDF Viewer | Syncfusion
-description: Learn how to enable, draw, customize, and manage Volume measurement annotations in the Syncfusion React PDF Viewer.
+title: Volume Annotation in React PDF Viewer | Syncfusion
+description: Enable, draw, customize, and manage Volume measurement annotations in the React PDF Viewer to calculate the volume of a 3D region.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add Volume Measurement Annotations in React PDF Viewer
+# Volume Annotation in React PDF Viewer
 Volume measurement annotations allow users to draw circular regions and calculate the volume visually.
 
 ![Volume overview](../../../javascript-es6/annotations/annotation-images/volume-annot.png)
@@ -81,7 +81,7 @@ function exitVolumeMode() {
 {% endtabs %}
 
 ### Add Volume Programmatically
-Configure default properties using the [`Volume Settings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#volumesettings) property (for example, default **fill color**, **stroke color**, **opacity**).
+Use [`addAnnotation()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation) to insert a Volume measurement at a specific page location with optional offset, dimensions, and styling.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -118,7 +118,80 @@ Configure default properties using the [`Volume Settings`](https://ej2.syncfusio
 {% endhighlight %}
 {% endtabs %}
 
-## Manage Volume (Move, Resize, Delete)
+### Supported Border Styles
+
+In addition to the default **Solid** border, Volume annotations support the following additional border styles:
+
+- **Cloud** — scalloped cloud border.
+- **Dashed** — dashed line border.
+
+Use [`BorderStyle`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/borderStyle) values such as `BorderStyle.Cloud` and `BorderStyle.Dashed` together with the optional `borderDashArray` and `cloudIntensity` settings in the [`volumeSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#volumesettings) property.
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `borderStyle` | `BorderStyle` | Specifies the border style. Supported values: `BorderStyle.Solid`, `BorderStyle.Cloud`, and `BorderStyle.Dashed`. |
+| `borderDashArray` | `number[]` | Specifies the dash pattern when `borderStyle` is `BorderStyle.Dashed`. |
+| `cloudIntensity` | `number` | Specifies the cloud border intensity. Supported range: `1` to `2`; default value: `1`. |
+
+N> `borderStyle`, `borderDashArray`, and `cloudIntensity` are preserved during save, reload, import, and export.
+
+#### Apply a Cloud Border
+
+```ts
+export enum BorderStyle {
+    Solid = 'Solid',
+    Dashed = 'Dashed',
+    Cloud = 'Cloud'
+}
+```
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
+<PdfViewerComponent
+  id="container"
+  documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+  resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+  volumeSettings={{
+    fillColor: 'yellow',
+    strokeColor: 'orange',
+    opacity: 0.6,
+    borderStyle: BorderStyle.Cloud,
+    cloudIntensity: 2
+  }}
+  style={{ height: '650px' }}
+>
+  <Inject services={[Toolbar, Annotation]} />
+</PdfViewerComponent>
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+#### Apply a Dashed Border
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
+<PdfViewerComponent
+  id="container"
+  documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+  resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+  volumeSettings={{
+    fillColor: 'yellow',
+    strokeColor: 'orange',
+    opacity: 0.6,
+    borderStyle: BorderStyle.Dashed,
+    borderDashArray: [5, 5]
+  }}
+  style={{ height: '650px' }}
+>
+  <Inject services={[Toolbar, Annotation]} />
+</PdfViewerComponent>
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+## Manage Volume (Move, Reshape, Delete)
 - **Move**: Drag inside the polygon to reposition it.
 - **Reshape**: Drag any vertex handle to adjust points and shape.
 
@@ -163,7 +236,7 @@ function editVolumeProgrammatically() {
 
 ### Delete Volume Annotation
 
-Delete Volume Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
+Delete Volume Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../delete-annotation).
 
 
 
@@ -190,7 +263,7 @@ Apply defaults for Volume using the [`volumeSettings`](https://ej2.syncfusion.co
 
 
 ## Set Properties While Adding Individual Annotation
-Apply defaults for Area using the [`volumeSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#volumesettings) property.
+Apply defaults for Volume using the [`volumeSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#volumesettings) property.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -246,7 +319,7 @@ Listen to annotation life-cycle events (add/modify/select/remove). For the full 
 
 
 ## Export and Import
-Volume measurements can be exported or imported with other annotations. For workflows and supported formats, see [**Export and Import annotations**](../export-import-annotations).
+Volume measurements can be exported or imported with other annotations. For workflows and supported formats, see [**Export and Import annotations**](../export-import/export-annotation).
 
 
 ## See Also
@@ -254,5 +327,5 @@ Volume measurements can be exported or imported with other annotations. For work
 - [Customize Context Menu](../../context-menu/custom-context-menu)
 - [Comments Panel](../comments)
 - [Annotation Events](../annotation-event)
-- [Export and Import annotations](../export-import-annotations)
-- [Delete Annotations](../remove-annotations)
+- [Export and Import annotations](../export-import/export-annotation)
+- [Delete Annotations](../delete-annotation)

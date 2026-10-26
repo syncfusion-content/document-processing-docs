@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Edit form fields in the React PDF Viewer | Syncfusion
-description: Learn how to edit PDF form fields using the UI and programmatically with APIs in the Syncfusion React PDF Viewer.
+title: Modify Form Fields in React PDF Viewer | Syncfusion
+description: Edit PDF form fields in the React PDF Viewer using the built-in UI and programmatic APIs to update field properties at runtime.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Modify PDF Form Field Properties in React
+# Modify Form Fields in React PDF Viewer
 
 Modify form fields using the UI or programmatically via the API.
 
@@ -71,7 +71,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-## Modify PDF Form Field Properties by Field type
+## Modify PDF Form Field Properties by Field Type
 
 ### Textbox
 - UI: Update value, font, size, colors, border thickness, alignment, max length, multiline.
@@ -243,7 +243,7 @@ root.render(<App />);
 ### RadioButton
 - UI: Set selected item in a group (same Name).
 ![RadioButton properties panel showing grouped options](../../../javascript-es6/images/ui-radiobutton-edit.png)
-- API: [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) to set selected value and border appearance.
+- API: [`updateFormField()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/formdesigner#updateformfield) to set selected value and border appearance.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -290,7 +290,7 @@ root.render(<App />);
 ### ListBox
 - UI: Add/remove items, set selection, adjust fonts/colors.
 ![ListBox properties panel showing items and selection](../../../javascript-es6/images/ui-listbox-edit.png)
-- API: [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) for items, selection, borders.
+- API: [`updateFormField()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/formdesigner#updateformfield) for items, selection, borders.
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -348,7 +348,7 @@ root.render(<App />);
 ### DropDown
 - UI: Add/remove items, default value, appearance.
 ![DropDown properties panel showing list items and default value](../../../javascript-es6/images/ui-dropdown-edit.png)
-- API: [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) for items, value, borders.
+- API: [`updateFormField()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/formdesigner#updateformfield) for items, value, borders.
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
 import * as ReactDOM from 'react-dom/client';
@@ -405,7 +405,7 @@ root.render(<App />);
 ### Signature Field
 - UI: Tooltip, thickness, indicator text, required/visibility.
 ![Signature field properties panel showing indicator and appearance](../../../javascript-es6/images/ui-signature-edit.png)
-- API: [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, required, colors, borders.
+- API: [`updateFormField()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/formdesigner#updateformfield) for tooltip, required, colors, borders.
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
 import * as ReactDOM from 'react-dom/client';
@@ -457,7 +457,7 @@ root.render(<App />);
 ### Initial Field
 - UI: Tooltip, indicator text, thickness, required/visibility.
 ![Initial field properties panel showing indicator and tooltip](../../../javascript-es6/images/ui-initial-edit.png)
-- API: [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, required, colors, borders.
+- API: [`updateFormField()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/formdesigner#updateformfield) for tooltip, required, colors, borders.
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
 import * as ReactDOM from 'react-dom/client';
@@ -506,14 +506,44 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
+### DateTime Picker
+
+Select a DateTime Picker field in Form Designer to review or change its settings. The toolbar includes the DateTime Picker tool, and the page displays date and time fields.
+
+![DateTime Picker tool and date and time fields in Form Designer](../../../javascript-es5/images/ui-date-time.png)
+
+Date and time fields can also be used to enter values directly or choose a value from the picker:
+
+- For a date field, type a date or open the calendar picker.
+
+  ![Calendar picker open for a DateTime field](../../../javascript-es5/images/ui-date-entry.png)
+
+- For a time field, type a time or open the time picker.
+
+  ![Time picker open for a DateTime field](../../../javascript-es5/images/ui-time-entry.png)
+
+Use the field's **General** properties to review or edit its name, value, tooltip, visibility, read-only and required settings, and print visibility.
+
+![General properties for a DateTime Picker field](../../../javascript-es5/images/ui-date-time-properties.png)
+
+The **Appearance** properties include font, colors, border, and alignment.
+
+![DateTime Picker format Appearacne](../../../javascript-es5/images/ui-date-time-appearance.png)
+
+Use the **Format** tab to change the field type (Date or Time), select a display format, and review the preview.
+
+![DateTime Picker format settings with type, format, and preview](../../../javascript-es5/images/ui-date-time-format.png)
+
+- API: [`updateFormField()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/formdesigner#updateformfield) for value, format script, typography, colors, borders.
+
 [View Sample on GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples)
 
-## See also
+## Related topics
 
 - [Form Designer overview](../overview)
 - [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)
 - [Create form fields](./create-form-fields)
-- [Remove form Fields](./remove-form-fields)
+- [Remove form fields](./remove-form-fields)
 - [Style form fields](./customize-form-fields)
 - [Group form fields](../group-form-fields)
 - [Form validation](../form-validation)

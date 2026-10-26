@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Downloading Syncfusion Excel Mac installer - Syncfusion
-description: Learn here about the how to download Syncfusion Excel Mac installer from our syncfusion website with license.
+title: How to Download Mac Installer in .NET Excel Library | Syncfusion
+description: Syncfusion Excel Mac installer download section explains how to download the Mac installer from the Syncfusion website with a valid license.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 --- 
 
-# Downloading Syncfusion&reg; Excel Mac Installer
+# How to download Mac installer in .NET Excel Library
 
 The Syncfusion&reg; installer can be downloaded from the [Syncfusion](https://www.syncfusion.com/) website. You can either download the licensed installer or try our trial installer depending on your license.
 

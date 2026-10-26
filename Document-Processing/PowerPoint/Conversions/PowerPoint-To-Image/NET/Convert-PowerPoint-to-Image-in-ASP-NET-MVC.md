@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert PowerPoint to Image in ASP.NET MVC
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to image in ASP.NET MVC**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint to image in ASP.NET MVC**.
 
 ## Steps to convert PowerPoint to Image programmatically
 
@@ -19,7 +19,7 @@ Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET PowerPoint library](https://www
 **Prerequisites:**
 
 * Visual Studio 2022.
-* Install **.NET desktop development** workload with necessary .NET Framework SDK.
+* Install **ASP.NET and web development** workload with the required .NET Framework SDK.
 
 Step 1: Create a new C# ASP.NET MVC application project.
 
@@ -35,7 +35,7 @@ Step 3: Install the [Syncfusion.Presentation.AspNet.Mvc5](https://www.nuget.org/
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 4: Include the following namespace in that **HomeController.cs** file.
+Step 4: Include the following namespace in the **HomeController.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -50,7 +50,7 @@ Step 5: A default action method named **Index** will be present in HomeControlle
 Step 6: Add a new button in the Index.cshtml as shown below.
 
 {% tabs %}
-{% highlight HTML %}
+{% highlight cshtml tabtitle="CSHTML" %}
 
 @{
     Html.BeginForm("ConvertPPTXtoImage", "Home", FormMethod.Get);
@@ -65,26 +65,20 @@ Step 6: Add a new button in the Index.cshtml as shown below.
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Add the below code snippet in **HomeController.cs** to **convert a PowerPoint to image in ASP.NET MVC**.
+Step 7: Add the below code snippet in the **HomeController.cs** to **convert a PowerPoint to image in ASP.NET MVC**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public void ConvertPPTXtoImage()
 {
-    //Open the file as Stream.
-    using (FileStream pathStream = new FileStream(Server.MapPath("~/App_Data/Input.pptx"), FileMode.Open, FileAccess.Read))
+    //Opens a PowerPoint Presentation.
+    using (IPresentation pptxDoc = Presentation.Open(Server.MapPath("~/App_Data/Input.pptx")))
     {
-        //Opens a PowerPoint Presentation.
-        using (IPresentation pptxDoc = Presentation.Open(pathStream))
-        {
-            //Convert the first slide into image.
-            Image image = pptxDoc.Slides[0].ConvertToImage(Syncfusion.Drawing.ImageType.Metafile);
-            //Saves the image file to MemoryStream.
-            MemoryStream stream = new MemoryStream();
-            //Download image file in the browser.
-            ExportAsImage(image, "PPTXToImage.Jpeg", ImageFormat.Jpeg, HttpContext.ApplicationInstance.Response);
-        }
+        //Convert the first slide into image.
+        Image image = pptxDoc.Slides[0].ConvertToImage(Syncfusion.Drawing.ImageType.Metafile);
+        //Download image file in the browser.
+        ExportAsImage(image, "PPTXToImage.Jpeg", ImageFormat.Jpeg, HttpContext.ApplicationInstance.Response);
     }
 }
 //To download the image file.
@@ -125,7 +119,7 @@ By executing the program, you will get the **image** as follows.
 * JetBrains Rider.
 * Install .NET Framework Developer Pack.
 
-Step 1. Open JetBrains Rider and create a new ASP.NET MVC web application project.
+Step 1: Open JetBrains Rider and create a new ASP.NET MVC web application project.
 * Launch JetBrains Rider.
 * Click **New Solution** on the welcome screen.
 
@@ -135,7 +129,7 @@ Step 1. Open JetBrains Rider and create a new ASP.NET MVC web application projec
 * Enter a project name and specify the location.
 * Select the target framework as Full Framework and choose the desired version.
 * Select **Template** as **Web App**.
-* Click create.
+* Click **Create**.
 
 ![Creating a new ASP.NET MVC web application in JetBrains Rider](Workingwith-MVC/Create-MVC-sample.png)
 
@@ -151,9 +145,9 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 
 ![Install the Syncfusion.PresentationToPdfConverter.AspNet.Mvc5 NuGet package](Workingwith-MVC/Install-Syncfusion.PresentationToPdfConverter.AspNet.Mvc5-NuGet.png)
 
-N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 3: Include the following namespace in that **HomeController.cs** file.
+Step 3: Include the following namespace in the **HomeController.cs** file.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -168,7 +162,7 @@ Step 4: A default action method named **Index** will be present in HomeControlle
 Step 5: Add a new button in the Index.cshtml as shown below.
 
 {% tabs %}
-{% highlight HTML %}
+{% highlight cshtml tabtitle="CSHTML" %}
 
 @{
     Html.BeginForm("ConvertPPTXtoImage", "Home", FormMethod.Get);
@@ -183,26 +177,20 @@ Step 5: Add a new button in the Index.cshtml as shown below.
 {% endhighlight %}
 {% endtabs %}
 
-Step 6: Add the below code snippet in **HomeController.cs** to **convert a PowerPoint to image in ASP.NET MVC**.
+Step 6: Add the below code snippet in the **HomeController.cs** to **convert a PowerPoint to image in ASP.NET MVC**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
 public void ConvertPPTXtoImage()
 {
-    //Open the file as Stream.
-    using (FileStream pathStream = new FileStream(Server.MapPath("~/App_Data/Input.pptx"), FileMode.Open, FileAccess.Read))
+    //Opens a PowerPoint Presentation.
+    using (IPresentation pptxDoc = Presentation.Open(Server.MapPath("~/App_Data/Input.pptx")))
     {
-        //Opens a PowerPoint Presentation.
-        using (IPresentation pptxDoc = Presentation.Open(pathStream))
-        {
-            //Convert the first slide into image.
-            Image image = pptxDoc.Slides[0].ConvertToImage(Syncfusion.Drawing.ImageType.Metafile);
-            //Saves the image file to MemoryStream.
-            MemoryStream stream = new MemoryStream();
-            //Download image file in the browser.
-            ExportAsImage(image, "PPTXToImage.Jpeg", ImageFormat.Jpeg, HttpContext.ApplicationInstance.Response);
-        }
+        //Convert the first slide into image.
+        Image image = pptxDoc.Slides[0].ConvertToImage(Syncfusion.Drawing.ImageType.Metafile);
+        //Download image file in the browser.
+        ExportAsImage(image, "PPTXToImage.Jpeg", ImageFormat.Jpeg, HttpContext.ApplicationInstance.Response);
     }
 }
 //To download the image file.
@@ -238,4 +226,4 @@ By executing the program, you will get the **image** as follows.
 
 {% endtabcontents %}
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page. 

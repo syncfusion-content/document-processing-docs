@@ -1,5 +1,5 @@
 var documenteditorcontainer = new ej.documenteditor.DocumentEditorContainer({
-  isReadOnly: false
+  isReadOnly: false, height: '370px'
 });
 ej.documenteditor.DocumentEditorContainer.Inject(
   ej.documenteditor.Toolbar

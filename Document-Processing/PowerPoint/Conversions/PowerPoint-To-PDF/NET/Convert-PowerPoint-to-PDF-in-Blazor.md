@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert PowerPoint to PDF in Blazor
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, a  **convert a PowerPoint to PDF in Blazor**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and convert PowerPoint presentation programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint Presentation to PDF in Blazor**.
 
 ## Blazor Web App Server Application
 
@@ -34,9 +34,7 @@ Step 1: Create a new C# Blazor Web app project.
 
 ![Select the framework in Blazor Web App Server in Visual Studio](Workingwith-Blazor/Blazor_image_Server_Web_Additional_Information.png)
 
-Step 2: Install the `Syncfusion.PresentationRenderer.Net.Core` NuGet package.
-
-To convert a **PowerPoint presentation to PDF in a Web App Server**, install the [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) NuGet package as reference to the project from [NuGet.org](https://www.nuget.org/).
+Step 2: To convert a **PowerPoint presentation to PDF in a Blazor Web App Server**, install the [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) NuGet package from [NuGet.org](https://www.nuget.org/).
 
 ![Install Syncfusion.PresentationRenderer.Net.Core Nuget Package](Azure-Images/App-Service-Linux/Nuget_Package_PowerPoint_Presentation_to_PDF.png)
 
@@ -112,31 +110,28 @@ using Syncfusion.Pdf;
 
 Step 7: Implement the method in `PowerPointService.cs`.
 
-Create a new `MemoryStream` method in the `PowerPointService` and include the following code snippet to **convert a PowerPoint to PDF in Blazor Web App Server**.
+Add a new method that returns a `MemoryStream` to the `PowerPointService` and include the following code snippet to **convert a PowerPoint Presentation to PDF in a Blazor Web App Server**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-// Open the file as Stream
-using (FileStream sourceStreamPath = new FileStream(@"wwwroot/Input.pptx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+// Open the existing PowerPoint presentation.
+using (IPresentation pptxDoc = Presentation.Open("wwwroot/Input.pptx"))
 {
-    // Open the existing PowerPoint presentation with loaded stream.
-    using (IPresentation pptxDoc = Presentation.Open(sourceStreamPath))
+    // Convert the PowerPoint presentation to PDF document.
+    using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
     {
-        // Convert the PowerPoint presentation to PDF document.
-        using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
+        // Save the converted PDF document to a MemoryStream.
+        using (MemoryStream pdfStream = new MemoryStream())
         {
-            // Create the MemoryStream to save the converted PDF.      
-            MemoryStream pdfStream = new MemoryStream();
-            // Save the converted PDF document to MemoryStream.
             pdfDocument.Save(pdfStream);
+            // Reset stream position before returning it to the browser.
             pdfStream.Position = 0;
-
-            // Download PDF document in the browser.
+            // Return the PDF document for download in the browser.
             return pdfStream;
         }
     }
-} 
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -180,9 +175,9 @@ Add this function in the `App.razor` file located in the `Pages` folder.
 {% highlight HTML %}
 
 <script type="text/javascript">
-    function saveAsFile(filename, bytesBase64) 
+    function saveAsFile(filename, bytesBase64)
     {
-        if (navigator.msSaveBlob) 
+        if (navigator.msSaveBlob)
         {
             // Download document in Edge browser
             var data = window.atob(bytesBase64);
@@ -193,7 +188,7 @@ Add this function in the `App.razor` file located in the `Pages` folder.
             var blob = new Blob([bytes.buffer], { type: "application/octet-stream" });
             navigator.msSaveBlob(blob, filename);
         }
-        else 
+        else
         {
             var link = document.createElement('a');
             link.download = filename;
@@ -338,31 +333,28 @@ using Syncfusion.Pdf;
 
 Step 7: Implement the method in `PowerPointService.cs`.
 
-Create a new `MemoryStream` method in the `PowerPointService` and include the following code snippet to **convert a PowerPoint to PDF in Blazor Web App Server**.
+Add a new method that returns a `MemoryStream` to the `PowerPointService` and include the following code snippet to **convert a PowerPoint presentation to PDF in a Blazor Web App Server**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-// Open the file as Stream
-using (FileStream sourceStreamPath = new FileStream(@"wwwroot/Input.pptx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+// Open the existing PowerPoint presentation.
+using (IPresentation pptxDoc = Presentation.Open("wwwroot/Input.pptx"))
 {
-    // Open the existing PowerPoint presentation with loaded stream.
-    using (IPresentation pptxDoc = Presentation.Open(sourceStreamPath))
+    // Convert the PowerPoint presentation to PDF document.
+    using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
     {
-        // Convert the PowerPoint presentation to PDF document.
-        using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
+        // Save the converted PDF document to a MemoryStream.
+        using (MemoryStream pdfStream = new MemoryStream())
         {
-            // Create the MemoryStream to save the converted PDF.      
-            MemoryStream pdfStream = new MemoryStream();
-            // Save the converted PDF document to MemoryStream.
             pdfDocument.Save(pdfStream);
+            // Reset stream position before returning it to the browser.
             pdfStream.Position = 0;
-
-            // Download PDF document in the browser.
+            // Return the PDF document for download in the browser.
             return pdfStream;
         }
     }
-} 
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -406,9 +398,9 @@ Add this function in the `App.razor` file located in the `Pages` folder.
 {% highlight HTML %}
 
 <script type="text/javascript">
-    function saveAsFile(filename, bytesBase64) 
+    function saveAsFile(filename, bytesBase64)
     {
-        if (navigator.msSaveBlob) 
+        if (navigator.msSaveBlob)
         {
             // Download document in Edge browser
             var data = window.atob(bytesBase64);
@@ -419,7 +411,7 @@ Add this function in the `App.razor` file located in the `Pages` folder.
             var blob = new Blob([bytes.buffer], { type: "application/octet-stream" });
             navigator.msSaveBlob(blob, filename);
         }
-        else 
+        else
         {
             var link = document.createElement('a');
             link.download = filename;
@@ -581,31 +573,28 @@ using Syncfusion.Pdf;
 
 Step 7: Implement the method in `PowerPointService.cs`.
 
-Create a new `MemoryStream` method in the `PowerPointService` and include the following code snippet to **convert a PowerPoint to PDF in Blazor Web App Server**.
+Add a new method that returns a `MemoryStream` to the `PowerPointService` and include the following code snippet to **convert a PowerPoint Presentation to PDF in a Blazor Web App Server**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-// Open the file as Stream
-using (FileStream sourceStreamPath = new FileStream(@"wwwroot/Input.pptx", FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+// Open the existing PowerPoint presentation.
+using (IPresentation pptxDoc = Presentation.Open("wwwroot/Input.pptx"))
 {
-    // Open the existing PowerPoint presentation with loaded stream.
-    using (IPresentation pptxDoc = Presentation.Open(sourceStreamPath))
+    // Convert the PowerPoint presentation to PDF document.
+    using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
     {
-        // Convert the PowerPoint presentation to PDF document.
-        using (PdfDocument pdfDocument = PresentationToPdfConverter.Convert(pptxDoc))
+        // Save the converted PDF document to a MemoryStream.
+        using (MemoryStream pdfStream = new MemoryStream())
         {
-            // Create the MemoryStream to save the converted PDF.      
-            MemoryStream pdfStream = new MemoryStream();
-            // Save the converted PDF document to MemoryStream.
             pdfDocument.Save(pdfStream);
+            // Reset stream position before returning it to the browser.
             pdfStream.Position = 0;
-
-            // Download PDF document in the browser.
+            // Return the PDF document for download in the browser.
             return pdfStream;
         }
     }
-} 
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -649,9 +638,9 @@ Add this function in the `App.razor` file located in the `Pages` folder.
 {% highlight HTML %}
 
 <script type="text/javascript">
-    function saveAsFile(filename, bytesBase64) 
+    function saveAsFile(filename, bytesBase64)
     {
-        if (navigator.msSaveBlob) 
+        if (navigator.msSaveBlob)
         {
             // Download document in Edge browser
             var data = window.atob(bytesBase64);
@@ -662,7 +651,7 @@ Add this function in the `App.razor` file located in the `Pages` folder.
             var blob = new Blob([bytes.buffer], { type: "application/octet-stream" });
             navigator.msSaveBlob(blob, filename);
         }
-        else 
+        else
         {
             var link = document.createElement('a');
             link.download = filename;
@@ -713,7 +702,7 @@ Upon executing the program, the **PDF** will be generated as follows.
 
 {% endtabcontents %}
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/blazor) to explore the rich set of Syncfusion PowerPoint Library (Presentation) features.
+Click [here](https://www.syncfusion.com/document-sdk/net-powerpoint-library) to explore the rich set of Syncfusion PowerPoint Library (Presentation) features.
 
 An online sample link to [convert PowerPoint Presentation to PDF](https://document.syncfusion.com/demos/powerpoint/pptxtopdf#/tailwind) in ASP.NET Core. 
 
@@ -737,11 +726,11 @@ Select "Blazor WebAssembly Standalone App" from the template and click the Next 
 Step 2: Install the following **Nuget packages** in the application from [Nuget.org](https://www.nuget.org/).
 
 *  [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) 
-*  [SkiaSharp.Views.Blazor v3.119.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1)
+*  [SkiaSharp.Views.Blazor v4.150.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/4.150.1)
 
 ![Install Syncfusion.PresentationRenderer.Net.Core Nuget Package](Azure-Images/App-Service-Linux/Nuget_Package_PowerPoint_Presentation_to_PDF.png)
 
-![Install SkiaSharp.Views.Blazor v3.119.1 Nuget Package](Workingwith-Blazor/NuGet_package_PPTXtoPDF.png)
+![Install SkiaSharp.Views.Blazor v4.150.1 Nuget Package](Workingwith-Blazor/NuGet_package_PPTXtoPDF.png)
 
 N> 1. If you're deploying the application in a Linux environment, refer to the [documentation](https://help.syncfusion.com/document-processing/powerpoint/conversions/powerpoint-to-pdf/net/nuget-packages-required-for-pptxtopdf-conversion#additional-nuget-packages-required-for-linux) for the required additional NuGet packages.
 N> 2. Starting with v16.2.0.x, if Syncfusion<sup>&reg;</sup> assemblies are referenced from trial setup or from the NuGet feed, the "Syncfusion.Licensing" assembly reference must also be added and a license key included in projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in an application to use Syncfusion components.
@@ -920,10 +909,10 @@ Step 1: Create a new C# Blazor WASM Standalone app project.
 * Select the project location, type the project name and press enter.
 * Then choose **Create project**.
 
-Step 2: To **convert a PowerPoint to PDF in Blazor WASM Standalone app**, install [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) and [SkiaSharp.Views.Blazor v3.119.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/3.119.1) to the Blazor project.
+Step 2: To **convert a PowerPoint to PDF in Blazor WASM Standalone app**, install [Syncfusion.PresentationRenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core) and [SkiaSharp.Views.Blazor v4.150.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/4.150.1) to the Blazor project.
 * Press <kbd>Ctrl</kbd> + <kbd>`</kbd> (backtick) to open the integrated terminal in Visual Studio Code.
 * Ensure you're in the project root directory where your .csproj file is located.
-* Run the command `dotnet add package Syncfusion.PresentationRenderer.Net.Core` and `dotnet add package SkiaSharp.Views.Blazor --version 3.119.1` to install the NuGet package.
+* Run the command `dotnet add package Syncfusion.PresentationRenderer.Net.Core` and `dotnet add package SkiaSharp.Views.Blazor --version 4.150.1` to install the NuGet package.
 
 ![Add Syncfusion.PresentationRenderer.Net.Core NuGet package](Workingwith-Blazor/Command-to-add-NuGet-package-for-WASM.png)
 
@@ -1296,7 +1285,7 @@ N> To convert PPTX to PDF, it is necessary to access the font stream internally.
 
 {% endtabcontents %}
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features.
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page.
 
 An online sample link to [convert PowerPoint Presentation to PDF](https://document.syncfusion.com/demos/powerpoint/pptxtopdf#/tailwind) in ASP.NET Core.
 

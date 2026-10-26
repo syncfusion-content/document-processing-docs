@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview of Syncfusion licensing errors - Syncfusion 
+title: Licensing errors Possible in Document Solutions | Syncfusion 
 description: Learn here about Syncfusion common licensing errors which appears on license validation in Syncfusion Document Processing applications.
 platform: document-processing
 control: Essential Studio
 documentation: ug
 ---
 
-# Syncfusion<sup>&reg;</sup> Licensing Errors
+# Licensing errors Possible in Document Solutions
 
 Licensing error popup is displayed with various messages under different circumstances. Here are some ways to resolve different issues.
 

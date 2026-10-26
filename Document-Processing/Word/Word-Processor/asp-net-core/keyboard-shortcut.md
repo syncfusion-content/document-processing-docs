@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Keyboard Shortcut in Document Editor Component | Syncfusion
-description: Learn here all about keyboard shortcut in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: Keyboard Shortcuts in ASP.NET Core DOCX Editor | Syncfusion
+description: The keyboard shortcuts feature in ASP.NET Core DOCX Editor enables users to perform editing actions quickly using predefined key combinations.
 platform: document-processing
 control: Keyboard Shortcut
 documentation: ug
 ---
 
 
-# Keyboard Shortcuts in Document Editor Component
+# Keyboard Shortcuts in ASP.NET Core DOCX Editor
 
 ## Text formatting
 
-The following table lists the default keyboard shortcuts in document editor for formatting text:
+The following table lists the default keyboard shortcuts in [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) for formatting text:
 
 | Key combination | Description |
 |-----------------|-------------|
@@ -34,12 +34,12 @@ The following table lists the default keyboard shortcuts for formatting the para
 |Ctrl + J | Selected paragraphs are justified.|
 |Ctrl + L | Selected paragraphs are left aligned.|
 |Ctrl + R | Selected paragraphs are right aligned.|
-|Ctrl + 1 | Single line spacing is applied for selected paragraphs.|
-|Ctrl + 5 | 1.5 line spacing is applied for selected paragraphs.|
-|Ctrl + 2 | Double spacing is applied for selected paragraphs.|
+|Ctrl + 1 | Single line spacing is applied to selected paragraphs.|
+|Ctrl + 5 | 1.5 line spacing is applied to selected paragraphs.|
+|Ctrl + 2 | Double spacing is applied to selected paragraphs.|
 |Ctrl + 0 | No spacing is applied before the selected paragraphs.|
-|Ctrl + M | Increases the left indent of selected paragraphs by a factor of 36 points.|
-|Ctrl + Shift + M | Decreases the left indent of selected paragraphs by a factor of 36 points.|
+|Ctrl + M | Increases the left indent of selected paragraphs by 36 points.|
+|Ctrl + Shift + M | Decreases the left indent of selected paragraphs by 36 points.|
 |Ctrl + * | Show/Hide the hidden characters like spaces, tab, paragraph marks, and breaks.|
 
 ## Clipboard
@@ -80,7 +80,7 @@ The following table lists the default keyboard shortcuts for formatting the para
 |Shift + Down arrow| Extends selection one line downward.|
 |Shift + Up arrow| Extends selection one line upward.|
 |Shift + Home| Extends selection to the start of a line.|
-|Shift + End| Extends Selection to the end of a line.|
+|Shift + End| Extends selection to the end of a line.|
 |Ctrl + A| Extends selection to the entire document.|
 |Ctrl + Shift + Left arrow| Extends selection one word to the left.|
 |Ctrl + Shift + Right arrow| Extends selection one word to the right.|
@@ -100,9 +100,9 @@ The following table lists the default keyboard shortcuts for formatting the para
 
 |Key Combination|Description|
 |---------------|-----------|
-|Ctrl + N| Opens empty document.|
-|Ctrl + S| Saves the document in SFDT format.|
-|Ctrl + P| Prints the document.|
+|Ctrl + N | Opens empty document.|
+|Ctrl + S | Saves the document in SFDT format.|
+|Ctrl + P | Prints the document.|
 
 ## Edit Operation
 
@@ -111,7 +111,7 @@ The following table lists the default keyboard shortcuts for formatting the para
 |Backspace | Deletes one character to the left.|
 |Delete | Deletes one character to the right.|
 |Ctrl + Z | Undo last performed action.|
-|Ctrl + Y | Redo last undo action.|
+|Ctrl + Y | Redo the last undone action.|
 
 ## Insert special characters
 

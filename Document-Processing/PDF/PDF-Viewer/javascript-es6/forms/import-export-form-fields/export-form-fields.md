@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Export form data in the TypeScript PDF Viewer component | Syncfusion
-description: Learn how to export PDF form field data (FDF, XFDF, JSON, and as an object) using the Syncfusion TypeScript PDF Viewer component.
+title: Export Form Fields in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Export PDF form field data from the JavaScript (ES6) PDF Viewer in FDF, XFDF, and JSON formats, or as a JavaScript object for further processing.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Export PDF Form Data from TypeScript PDF Viewer
+# Export Form Data in JavaScript (ES6) PDF Viewer
 
 The PDF Viewer allows you to export form field data in multiple formats for easy storage or integration. Supported formats:
 

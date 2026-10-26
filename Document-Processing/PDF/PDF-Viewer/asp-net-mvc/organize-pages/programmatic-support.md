@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Programmatic Organize Pages in MVC PDF Viewer control | Syncfusion
-description: Learn here all about Programmatic Support for Organize Pages in Syncfusion ASP.NET MVC PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Programmatic Support in ASP.NET MVC PDF Viewer | Syncfusion
+description: Use the programmatic APIs for Organize Pages in the ASP.NET MVC PDF Viewer to reorder, rotate, insert, delete, and copy pages from C# or JavaScript.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Programmatic Support in ASP.NET MVC PDF Viewer control
+# Programmatic Support for Organize Pages in ASP.NET MVC PDF Viewer
 
 The PDF Viewer provides comprehensive programmatic support for organizing pages, allowing you to integrate and manage PDF functionalities directly within your application. This section details the available APIs to enable, control, and interact with the page organization features.
 
@@ -61,14 +61,14 @@ The `pageOrganizerSettings` API allows you to customize the page management func
 {% highlight cshtml tabtitle="Standalone" %}
 
 <div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").PageOrganizerSettings(new { CanDelete = false, CanInsert = false, CanRotate = false, canCopy = false, canRearrange = false, canImport = false, imageZoom = 1, showImageZoomingSlider = true, imageZoomMin = 1, imageZoomMax = 5 }).Render()
+    @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").PageOrganizerSettings(new { CanDelete = false, CanInsert = false, CanRotate = false, CanCopy = false, CanRearrange = false, CanImport = false, imageZoom = 1, showImageZoomingSlider = true, imageZoomMin = 1, imageZoomMax = 5 }).Render()
 </div>
 
 {% endhighlight %}
 {% highlight cshtml tabtitle="Server-Backed" %}
 
 <div id="e-pv-e-sign-pdfViewer-div">
-    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").PageOrganizerSettings(new { CanDelete = false, CanInsert = false, CanRotate = false, canCopy = false, canRearrange = false, canImport = false, imageZoom = 1, showImageZoomingSlider = true, imageZoomMin = 1, imageZoomMax = 5 }).Render()
+    @Html.EJS().PdfViewer("pdfviewer").ServiceUrl(VirtualPathUtility.ToAbsolute("~/PdfViewer/")).DocumentPath("https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf").PageOrganizerSettings(new { CanDelete = false, CanInsert = false, CanRotate = false, CanCopy = false, CanRearrange = false, CanImport = false, imageZoom = 1, showImageZoomingSlider = true, imageZoomMin = 1, imageZoomMax = 5 }).Render()
 </div>
 
 {% endhighlight %}

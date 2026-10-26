@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Organizing Pages in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to organize PDF pages in the ASP.NET Core PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Organize Pdf in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn about the organize pdf in the ASP.NET Core PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Organize Pages in PDF Viewer
+# Organize Pdf in ASP.NET Core PDF Viewer
 
 The ASP.NET Core PDF Viewer provides comprehensive page organization capabilities for efficient document management. Users can seamlessly modify PDF documents by rotating pages, rearranging their order, inserting new pages, deleting unwanted pages, copying and duplicating pages, and importing additional PDF documents. These features empower users to customize and restructure PDF documents directly within the viewer without requiring external tools.
 
@@ -131,7 +131,7 @@ After organizing your PDF pages, save your modifications to preserve the changes
 
 Real-time updates reflect all your page organization changes (rotations, rearrangements, deletions, insertions, etc.) immediately in the PDF Viewer. Simply click **Save** or **Save As** when you're ready to finalize your changes.
 
-## API's supported
+## APIs supported
 
 The page organizer feature provides several APIs for programmatic control and configuration of page organization capabilities.
 
@@ -234,7 +234,7 @@ Programmatically opens the page organizer panel. Use this API to provide users w
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
 
-<button type="button" onclick="closePageOrganizer()">Close PageOrganizer Pane</button>
+<button type="button" onclick="openPageOrganizer()">Open PageOrganizer Pane</button>
 
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
@@ -245,16 +245,16 @@ Programmatically opens the page organizer panel. Use this API to provide users w
 </div>
 
 <script>
-    function closePageOrganizer() {
+    function openPageOrganizer() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        // Close Page Organizer panel.
-        pdfViewer.pageOrganizer.closePageOrganizer(););
+        // Open Page Organizer panel.
+        pdfViewer.pageOrganizer.openPageOrganizer();
     }
 </script>
 {% endhighlight %}
 {% highlight cshtml tabtitle="Server-Backed" %}
 
-<button type="button" onclick="closePageOrganizer()">Close PageOrganizer Pane</button>
+<button type="button" onclick="openPageOrganizer()">Open PageOrganizer Pane</button>
 
 <div style="width:100%;height:600px">
     <ejs-pdfviewer id="pdfviewer"
@@ -267,7 +267,7 @@ Programmatically opens the page organizer panel. Use this API to provide users w
 <script>
     function openPageOrganizer() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
-        // Close Page Organizer panel.
+        // Open Page Organizer panel.
         pdfViewer.pageOrganizer.openPageOrganizer();
     }
 </script>
@@ -333,7 +333,7 @@ Programmatically closes the page organizer panel. Use this API to dismiss the or
     function closePageOrganizer() {
         var pdfViewer = document.getElementById('pdfviewer').ej2_instances[0];
         // Close Page Organizer panel.
-        pdfViewer.pageOrganizer.closePageOrganizer(););
+        pdfViewer.pageOrganizer.closePageOrganizer();
     }
 </script>
 {% endhighlight %}
@@ -372,7 +372,7 @@ These shortcuts enable efficient keyboard-based navigation and operations, makin
 
 ![Undo and redo operations in page organizer](./images/undo-redo.png)
 
-#### Conclusion
+## Conclusion
 
 With the Organize Pages feature in the PDF Viewer, managing your PDF documents has never been easier. Whether you are adding new content, adjusting page orientation, moving the pages, duplicating the pages, or removing unnecessary pages, this feature provides the tools you need to streamline your document management workflow. Explore these capabilities today and take control of your PDF documents with ease!
 

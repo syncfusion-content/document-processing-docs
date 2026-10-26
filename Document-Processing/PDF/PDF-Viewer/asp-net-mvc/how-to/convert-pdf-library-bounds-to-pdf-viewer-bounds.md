@@ -1,14 +1,13 @@
 ---
 layout: post
-title: Convert PDF Library bounds to PDF Viewer bounds in ASP.NET MVC | Syncfusion
-description: Learn how to convert PDF Library bounds into PDF Viewer bounds when exporting annotations, ensuring accurate placement in the ASP.NET MVC PDF Viewer.
+title: How to Convert PDF Library Bounds to PDF Viewer Bounds | Syncfusion
+description: Convert PDF Library bounds to PDF Viewer bounds when exporting annotations in the ASP.NET MVC PDF Viewer so coordinates map correctly.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Convert PDF Library bounds to PDF Viewer bounds in ASP.NET MVC
+# How to Convert PDF Library Bounds to PDF Viewer Bounds in ASP.NET MVC
 
 When exporting annotations from the PDF Library, convert the bounds values into the PDF Viewer format to ensure accurate placement.
 
@@ -111,5 +110,5 @@ Fetch the blob data and convert it into a JSON object that can be processed for 
 ## Conclusion
 
 These steps convert PDF Library bounds values into PDF Viewer bounds values when exporting annotations as JSON, maintaining accurate annotation placement.
-  
+
 [View sample in GitHub](https://github.com/SyncfusionExamples/mvc-pdf-viewer-examples/tree/master/How%20to)

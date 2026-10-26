@@ -1,21 +1,21 @@
 ---
-title: Activate a Worksheet | Syncfusion
-description: Explains with an example on how to programmatically activate a worksheet in a workbook in Interop and XlsIO.
+title: Worksheet Activation in .NET Excel Library | Syncfusion
+description: Worksheet activation in a workbook explains how to programmatically activate a worksheet using Interop and Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Activate a Worksheet
+# Worksheet Activation in .NET Excel Library
 
-If there are more worksheets in a workbook, certain worksheets should be active while opening the workbook in Microsoft Excel.
+When a workbook contains multiple worksheets, a specific worksheet can be made active so it is selected when the workbook is opened in Microsoft Excel.
 
-The following code shows how to activate a worksheet in workbook containing three worksheets with Interop and XlsIO for .NET.
+The following code shows how to activate a worksheet in a workbook that contains three worksheets, using Interop and XlsIO for .NET.
 
 ## Interop
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
 private void ActivateWorksheet()
 {
   //Instantiate the application object
@@ -27,7 +27,7 @@ private void ActivateWorksheet()
   //Open the Excel file
   Workbook workbook = excelApp.Workbooks.Open(myPath);
 
-  //Activate the first worksheet by default
+  //Activate the first worksheet
   workbook.Sheets[1].Activate();
 
   //Save as Excel file
@@ -38,7 +38,7 @@ private void ActivateWorksheet()
 }
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Private Sub ActivateWorksheet()
   'Instantiate the application object
   Dim excelApp = New Microsoft.Office.Interop.Excel.Application()
@@ -49,7 +49,7 @@ Private Sub ActivateWorksheet()
   'Open the Excel file
   Dim workbook As Workbook = excelApp.Workbooks.Open(myPath)
 
-  'Activate the first worksheet by default
+  'Activate the first worksheet
   workbook.Sheets(1).Activate()
 
   'Save as Excel file
@@ -64,7 +64,7 @@ End Sub
 ## XlsIO
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 private void ActivateWorksheet()
 {
   using (ExcelEngine excelEngine = new ExcelEngine())
@@ -75,11 +75,10 @@ private void ActivateWorksheet()
     //Specify the template Excel file path
     string myPath = "Sample.xlsx";
 
-    //Instantiate a new workbook
-    //Open the Excel file
+    //Open the existing Excel file
     IWorkbook workbook = application.Workbooks.Open(myPath);
 
-    //Activate the first worksheet by default
+    //Activate the first worksheet
     workbook.Worksheets[0].Activate();
 
     //Save as Excel file
@@ -88,7 +87,30 @@ private void ActivateWorksheet()
 }
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+private void ActivateWorksheet()
+{
+  using (ExcelEngine excelEngine = new ExcelEngine())
+  {
+    //Instantiate the application object
+    IApplication application = excelEngine.Excel;
+
+    //Specify the template Excel file path
+    string myPath = "Sample.xlsx";
+
+    //Open the existing Excel file
+    IWorkbook workbook = application.Workbooks.Open(myPath);
+
+    //Activate the first worksheet
+    workbook.Worksheets[0].Activate();
+
+    //Save as Excel file
+    workbook.SaveAs("XlsIOOutput_ActivateWorksheet.xlsx");
+  }
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Private Sub ActivateWorksheet()
   Using excelEngine As ExcelEngine = New ExcelEngine()
     'Instantiate the application object
@@ -97,11 +119,10 @@ Private Sub ActivateWorksheet()
     'Specify the template Excel file path
     Dim myPath As String = "Sample.xlsx"
 
-    'Instantiate a new workbook
-    'Open the Excel file
+    'Open the existing Excel file
     Dim workbook As IWorkbook = application.Workbooks.Open(myPath)
 
-    'Activate the first worksheet by default
+    'Activate the first worksheet
     workbook.Worksheets(0).Activate()
 
     'Save as Excel file

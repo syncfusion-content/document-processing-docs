@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Import/Export events in React PDF Viewer | Syncfusion
-description: Learn how to handle Import/Export events for PDF Annotations in the Syncfusion React PDF Viewer component.
+title: Export Import Events in React PDF Viewer | Syncfusion
+description: Handle import and export events in the React PDF Viewer to run custom logic when annotations are loaded or saved from the control.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
-# Import/Export events in React PDF Viewer
+# Annotation Import and Export Events in React PDF Viewer
 
 Import/export events let developers monitor and control annotation data as it flows into and out of the PDF Viewer. These events enable validation, progress reporting, audit logging, and conditional blocking of import/export operations.
 
@@ -17,7 +18,7 @@ Common use cases:
 - Audit logging and telemetry
 - Blocking or altering operations based on business rules
 
-Each event exposes typed event-args: `ImportStartEventArgs`, `ImportSuccessEventArgs`, `ImportFailureEventArgs`, `ExportStartEventArgs`, `ExportSuccessEventArgs`, and `ExportFailureEventArgs` that describe the operation context.
+Each event passes a typed event-args object: `ImportStartEventArgs`, `ImportSuccessEventArgs`, `ImportFailureEventArgs`, `ExportStartEventArgs`, `ExportSuccessEventArgs`, and `ExportFailureEventArgs` that describe the operation context.
 
 ## Import events
 - [`importStart`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#importstart): Triggers when an import operation starts.
@@ -95,15 +96,15 @@ N> `importStart`, `importSuccess`, and `importFailed` cover the lifecycle of ann
 ## See also
 
 - [Annotation Overview](../../overview)
-- [Annotation Types](../../annotations/annotation-types/area-annotation)
+- [Annotation Types](../annotation-types/area-annotation)
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)
-- [Create and Modify Annotation](../../annotations/create-modify-annotation)
-- [Customize Annotation](../../annotations/customize-annotation)
-- [Remove Annotation](../../annotations/delete-annotation)
-- [Handwritten Signature](../../annotations/signature-annotation)
-- [Export Annotation](../export-import/export-annotation)
-- [Import Annotation](../export-import/import-annotation)
-- [Annotation Permission](../../annotations/annotation-permission)
-- [Annotation in Mobile View](../../annotations/annotations-in-mobile-view)
-- [Annotation Events](../../annotations/annotation-event)
-- [Annotation API](../../annotations/annotations-api)
+- [Create and Modify Annotation](../create-modify-annotation)
+- [Customize Annotation](../customize-annotation)
+- [Remove Annotation](../delete-annotation)
+- [Handwritten Signature](../signature-annotation)
+- [Export Annotation](./export-annotation)
+- [Import Annotation](./import-annotation)
+- [Annotation Permission](../annotation-permission)
+- [Annotation in Mobile View](../annotations-in-mobile-view)
+- [Annotation Events](../annotation-event)
+- [Annotation API](../annotations-api)

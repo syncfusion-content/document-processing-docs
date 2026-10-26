@@ -1,14 +1,18 @@
 ---
 layout: post
-title: Installing Syncfusion<sup>&reg;</sup> PowerPoint linux installer-Syncfusion<sup>&reg;</sup>
-description: Learn here about how to install Syncfusion<sup>&reg;</sup> PowerPoint linux installer after downloading from our Syncfusion<sup>&reg;</sup> website.
+title: How to Install Syncfusion PowerPoint Linux Installer | Syncfusion
+description: Learn how to install the Syncfusion® PowerPoint Linux Installer after downloading it from the Syncfusion® website.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 
 ---
 
-# Installing Syncfusion<sup>&reg;</sup> PowerPoint Linux installer
+# How to Install Syncfusion PowerPoint Linux Installer
+
+## Overview
+
+This guide walks you through installing the Syncfusion<sup>&reg;</sup> PowerPoint Linux Installer on a Linux machine. The installer is distributed as a `.zip` archive that contains the demo samples and the NuGet packages required to build the included samples.
 
 ## Step-by-Step Installation
 
@@ -31,11 +35,17 @@ The steps below show how to install PowerPoint Linux installer.
 
 5. Run the following command in linux machine to deploy the ASP.NET Core samples
  
-  **dotnet restore projectname -s \nuget** in order to restore.
+  **dotnet restore project-name -s \nuget** in order to restore.
 
 ## License key registration in samples
 
 After the installation, the license key is required to register the demo source that is included in the Linux installer. To learn about the steps for license registration for the ASP.NET Core - EJ2 samples in the Essential Studio<sup>&reg;</sup> PowerPoint linux installer, please refer to this.
 
-* Register the license key in the [Program.cs](https://ej2.syncfusion.com/aspnetcore/documentation/licensing/how-to-register-in-an-application#for-aspnet-core-application-using-net-60) file if you created the ASP.NET Core web application with Visual Studio 2022 and .NET 6.0.
-* Register the license key in Configure method of [Startup.cs](https://ej2.syncfusion.com/aspnetcore/documentation/licensing/how-to-register-in-an-application#for-aspnet-core-application-using-net-50-or-net-31)
+## Related Links
+
+- [Download the Syncfusion<sup>&reg;</sup> PowerPoint Linux Installer](how-to-download)
+- [Offline Installer for PowerPoint](../offline-installer/how-to-install)
+- [Web Installer for PowerPoint](../web-installer/how-to-install)
+- [NuGet Packages Required for PowerPoint](../../Assemblies-Required)
+- [PowerPoint Getting Started](../../Getting-Started)
+- [Syncfusion<sup>&reg;</sup> Licensing FAQ](https://www.syncfusion.com/sales/communitylicense)

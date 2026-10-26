@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Show custom items in the Custom Stamp dropdown | Syncfusion
-description: Learn how to display custom items in the Custom Stamp dropdown using customStampSettings in the Syncfusion React PDF Viewer.
+title: How to Show Custom Stamp Items in React PDF Viewer | Syncfusion
+description: Display custom items in the custom stamp dropdown in the React PDF Viewer using customStampSettings to provide tailored stamp options.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 ---
 
 
-# Display custom stamp items in the custom stamp dropdown
+# How to Show Custom Stamp Items in React PDF Viewer
 
-### Overview
+## Overview
 
 This guide shows how to add custom images to the custom stamp dropdown in the React PDF Viewer so users can apply personalized stamps to documents.
 
 ### Steps to show custom items in the custom stamp dropdown
 
-**Step 1:** Create a basic React PDF Viewer sample using the [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) guide: 
+**Step 1:** Create a basic React PDF Viewer sample using the [getting started](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started) guide.
 
 **Step 2:** Configure custom stamp settings
 
@@ -183,3 +183,10 @@ root.render(<App />);
 Use `customStampSettings` to specify the custom stamps that should appear in the dropdown menu.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/How%20to)
+
+## Troubleshooting
+
+- **Stamps do not appear in the dropdown:** Ensure `isAddToMenu` and `enableCustomStamp` are both set to `true`, and that the `customStamps` array is not empty.
+- **Image not loading (CORS errors):** When using an absolute URL, the image host must send the appropriate CORS headers. Host images on the same origin or a CORS-enabled CDN.
+- **Broken image icon in the dropdown:** Verify that the `customStampImageSource` contains a valid Base64 data URI or a reachable absolute URL. Open the URL directly in a browser to confirm.
+- **Stamps appear faded:** Check the `opacity` value; it must be between `0` and `1`.

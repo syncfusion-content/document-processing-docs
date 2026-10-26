@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Keyboard accessibility in Blazor SfPdfViewer Component | Syncfusion
-description: Checkout and learn here all about Keyboard accessibility in Syncfusion Blazor SfPdfViewer component and more.
+title: Keyboard accessibility in Blazor PDF Viewer | Syncfusion
+description: Check out this guide and learn here all about Keyboard accessibility in Blazor PDF Viewer  component and more.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Accessibility in Syncfusion® Blazor SfPdfViewer
+# Keyboard accessibility in Blazor PDF Viewer
 The Blazor SfPdfViewer component follows established accessibility guidelines and standards, including the [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles), which are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Blazor SfPdfViewer component is outlined below.
@@ -72,12 +72,12 @@ The Blazor SfPdfViewer component follows the [keyboard interaction](https://www.
 |||**Shortcuts for Zooming**|
 | <kbd>Ctrl</kbd> + <kbd>=</kbd> | <kbd>⌘</kbd> + <kbd>=</kbd> | Perform zoom-in operation |
 | <kbd>Ctrl</kbd> + <kbd>-</kbd> | <kbd>⌘</kbd> + <kbd>-</kbd> | Perform zoom-out operation |
-|<kbd>Ctrl</kbd> + <kbd>0</kbd> | <kbd>⌘</kbd> + <kbd>0</kbd> | Reset zoom to 100% |
+|<kbd>Ctrl</kbd> + <kbd>1</kbd> | <kbd>⌘</kbd> + <kbd>1</kbd> | Reset zoom to 100% |
 |||**Shortcut for Text Search**|
 | <kbd>Ctrl</kbd> + <kbd>F</kbd> | <kbd>⌘</kbd> + <kbd>F</kbd> | Open the search toolbar|
 |||**Shortcut for Text Selection**|
 |<kbd>Ctrl</kbd> + <kbd>C</kbd> | <kbd>⌘</kbd> + <kbd>C</kbd> | Copy the selected text or annotation |
-| <kbd>Ctrl</kbd> + <kbd>X</kbd> | <kbd>⌘</kbd> + <kbd>X</kbd> | Cut the selected text or annotation |
+| <kbd>Ctrl</kbd> + <kbd>X</kbd> | <kbd>⌘</kbd> + <kbd>X</kbd> | Cut the selected annotation or form field |
 |<kbd>Ctrl</kbd> + <kbd>V</kbd> | <kbd>⌘</kbd> + <kbd>V</kbd> | Paste the selected text or annotation |
 |||**Shortcuts for general operation**|
 | <kbd>Ctrl</kbd> + <kbd>Z</kbd> | <kbd>⌘</kbd> + <kbd>Z</kbd> | Undo the action |
@@ -94,10 +94,10 @@ The Blazor SfPdfViewer component follows the [keyboard interaction](https://www.
 
 ## Ensuring accessibility
 
-The Blazor SfPdfViewer component's accessibility levels are ensured through an [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with playwright tests.
+The Blazor SfPdfViewer component's accessibility is validated using [axe-core](https://www.nuget.org/packages/Deque.AxeCore.Playwright) with Playwright tests.
 
 The accessibility compliance of the Blazor SfPdfViewer component is demonstrated in the following sample. Open the [SfPdfViewer accessibility sample](https://blazor.syncfusion.com/accessibility/sfpdfviewer) in a new window to evaluate the accessibility of the Blazor SfPdfViewer component with accessibility tools.
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in Blazor components](https://blazor.syncfusion.com/documentation/common/accessibility)

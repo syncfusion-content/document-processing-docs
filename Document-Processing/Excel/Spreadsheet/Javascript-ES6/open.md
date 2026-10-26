@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Open in EJ2 TypeScript Spreadsheet control | Syncfusion
-description: Learn here all about Open in Syncfusion EJ2 TypeScript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Open in TypeScript Spreadsheet | Syncfusion
+description: Open in TypeScript Spreadsheet enables users to import and load workbook files for viewing, editing, and data management.
 platform: document-processing
 control: Open 
 documentation: ug
 ---
 
-# Open in EJ2 TypeScript Spreadsheet control
+# Open in TypeScript Spreadsheet 
 
-The Spreadsheet control opens an Excel document with its data, style, format, and more. To enable this feature, set [`allowOpen`](../api/spreadsheet/#allowopen) to `true` and assign service url to the [`openUrl`](../api/spreadsheet/#openurl) property.
+The Spreadsheet control opens an Excel document with its data, style, format, and more. To enable this feature, set [`allowOpen`](../api/spreadsheet#allowopen) to `true` and assign service url to the [`openUrl`](../api/spreadsheet#openurl) property.
 
 The following list of Excel file formats are supported in Spreadsheet:
 
@@ -35,4 +35,4 @@ The following code example shows `Open` option in the Spreadsheet control.
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/open-cs1" %}
 
 > * Use `Ctrl + O` keyboard shortcut to open Excel documents.
-> * The default value of the [allowOpen](../api/spreadsheet/#allowopen) property is `true`. For demonstration purpose, we have showcased the [allowOpen](../api/spreadsheet/#allowopen) property in previous code snippet.
+> * The default value of the [allowOpen](../api/spreadsheet#allowopen) property is `true`. For demonstration purpose, we have showcased the [allowOpen](../api/spreadsheet#allowopen) property in previous code snippet.

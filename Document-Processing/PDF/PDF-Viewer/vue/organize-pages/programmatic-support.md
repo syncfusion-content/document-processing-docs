@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Programmatic Support for Organize Pages in Vue PDF Viewer component | Syncfusion
-description: Learn here all about Programmatic Support for Organize Pages in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Programmatic Support in Vue PDF Viewer | Syncfusion
+description: Use the programmatic APIs for Organize Pages in the Vue PDF Viewer to reorder, rotate, insert, delete, and copy pages from JavaScript.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Programmatic Support for Organize Pages in Vue PDF Viewer component
+# Programmatic Support for Organize Pages in Vue PDF Viewer
 
 The PDF Viewer exposes programmatic APIs to manage page organization. Use these APIs to enable the page organizer, open or close the organizer dialog, and customize page-management behaviors from application code.
 
@@ -55,42 +55,6 @@ export default {
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-<template>
-  <div id="app">
-      <ejs-pdfviewer
-          id="pdfViewer"
-          ref="pdfviewer"
-          :serviceUrl="serviceUrl"
-          :documentPath="documentPath"
-          :enablePageOrganizer=true>
-      </ejs-pdfviewer>
-  </div>
-</template>
-
-<script>
-import Vue from 'vue';
-import {  PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation,
-          BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
-          TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
-
-export default {
-  name: 'app',
-  data () {
-    return {
-      serviceUrl:"https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
-      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-    };
-  },
-
-  provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer ]},
-
-}
-</script>
-{% endhighlight %}
 {% endtabs %}
 
 ## Open the page organizer on document load
@@ -107,7 +71,7 @@ Control whether the page organizer opens automatically when a document loads usi
           ref="pdfviewer"
           :documentPath="documentPath"
           :resourceUrl="resourceUrl"
-          :isPageOrganizerOpen = true>
+          :isPageOrganizerOpen =true>
       </ejs-pdfviewer>
   </div>
 </template>
@@ -135,42 +99,6 @@ export default {
 }
 </script>
 
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-<template>
-  <div id="app">
-      <ejs-pdfviewer
-          id="pdfViewer"
-          ref="pdfviewer"
-          :serviceUrl="serviceUrl"
-          :documentPath="documentPath"
-          :isPageOrganizerOpen = true>
-      </ejs-pdfviewer>
-  </div>
-</template>
-
-<script>
-import Vue from 'vue';
-import {  PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation,
-          BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
-          TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
-
-export default {
-  name: 'app',
-  data () {
-    return {
-      serviceUrl:"https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
-      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-    };
-  },
-
-  provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer ]},
-
-}
-</script>
 {% endhighlight %}
 {% endtabs %}
 
@@ -217,43 +145,6 @@ export default {
 }
 </script>
 
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-<template>
-  <div id="app">
-      <ejs-pdfviewer
-          id="pdfViewer"
-          ref="pdfviewer"
-          :serviceUrl="serviceUrl"
-          :documentPath="documentPath"
-          :pageOrganizerSettings="pageOrganizerSettings">
-      </ejs-pdfviewer>
-  </div>
-</template>
-
-<script>
-import Vue from 'vue';
-import {  PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation,
-          BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
-          TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
-
-export default {
-  name: 'app',
-  data () {
-    return {
-      serviceUrl:"https://document.syncfusion.com/web-services/pdf-viewer/api/pdfviewer",
-      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      pageOrganizerSettings : {canDelete: true, canInsert: true, canRotate: true, canCopy: true, canRearrange: true, canImport: true, imageZoom: 1, showImageZoomingSlider: true, imageZoomMin: 1, imageZoomMax: 5}
-    };
-  },
-
-  provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer ]},
-
-}
-</script>
 {% endhighlight %}
 {% endtabs %}
 

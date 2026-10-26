@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Importing and exporting data in Xamarin Pdf Viewer (SfPdfViewer)
+# Importing and exporting data in Xamarin Pdf Viewer
 
 [Xamarin PDF Viewer](https://www.syncfusion.com/xamarin-ui-controls/xamarin-pdf-viewer) provides options to import and export data like form fields and annotations in the PDF document.
 

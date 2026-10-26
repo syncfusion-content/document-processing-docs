@@ -1,14 +1,14 @@
 ---
-title: Convert Word to Image in Azure App Service on Windows | Syncfusion
-description: Convert Word to image in Azure App Service on Windows using .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Convert Word to Image in Azure App Service Windows  | Syncfusion
+description: Convert Word to image in Azure App Service on Windows using .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Convert Word to Image in Azure App Service on Windows
+# Convert Word to Image in Azure App Service Windows 
 
-Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-processing/word-framework/net/word-library) used to create, read, edit and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to image in Azure App Service on Windows**
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to image in Azure App Service on Windows**.
 
 ## Steps to convert Word document to Image in Azure App Service on Windows
 
@@ -23,7 +23,7 @@ Step 3: Click **Create** button.
 
 Step 4: Install the [Syncfusion.DocIORenderer.Net.Core](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/).
 
-![Install Syncfusion.DocIORenderer.Net.Core Nuget Package](Azure-Images/App-Service-Linux/Syncfusion_Nuget_Package_WordtoPDF.png)
+![Install Syncfusion.DocIORenderer.Net.Core NuGet package](Azure-Images/App-Service-Linux/Syncfusion_Nuget_Package_WordtoPDF.png)
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
@@ -79,7 +79,7 @@ using Syncfusion.DocIORenderer;
 
 {% endtabs %}
 
-Step 7: Include the below code snippet in **HomeController.cs** for **convert the Word document to image**. 
+Step 7: Include the below code snippet in **HomeController.cs** to **convert the Word document to image**. 
 
 {% tabs %}
 
@@ -105,7 +105,7 @@ public IActionResult WordToImage(string button)
     {
         if (Request.Form.Files.Count == 0)
         {
-            ViewBag.Message = string.Format("Browse a Word document and then click the button to convert as a image");
+            ViewBag.Message = string.Format("Browse a Word document and then click the button to convert as an image");
             return View("Index");
         }
         // Gets the extension from file.
@@ -141,12 +141,12 @@ public IActionResult WordToImage(string button)
         }
         else
         {
-            ViewBag.Message = string.Format("Please choose Word format document to convert to image");
+            ViewBag.Message = string.Format("Please choose a Word format document to convert to image");
         }
     }
     else
     {
-        ViewBag.Message = string.Format("Browse a Word document and then click the button to convert as a image document");
+        ViewBag.Message = string.Format("Browse a Word document and then click the button to convert as an image document");
     }
     return View("Index");
 }
@@ -195,6 +195,6 @@ Step 12: Select the Word document and Click **Convert to Image** to convert the 
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-to-Image-conversion/Convert-Word-to-image/Azure/Azure_App_Service).
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> Word library (DocIO) features. 
+Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page.
 
 An online sample link to [convert Word document to image](https://document.syncfusion.com/demos/word/wordtoimage#/tailwind) in ASP.NET Core. 

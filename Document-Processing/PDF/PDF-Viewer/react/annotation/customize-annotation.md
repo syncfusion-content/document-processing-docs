@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize annotations in React PDF Viewer | Syncfusion
-description: Learn how to customize PDF annotations in Syncfusion React PDF Viewer using UI tools and programmatic settings (defaults and runtime edits).
+title: Customize Annotation in React PDF Viewer | Syncfusion
+description: Customize the appearance and behavior of annotations in the React PDF Viewer through UI settings and programmatic configuration.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize annotations in React
+# Customize Annotations in React PDF Viewer
 
 Annotation appearance and behavior (for example color, stroke color, thickness, and opacity) can be customized using the built‑in UI or programmatically. This page summarizes common customization patterns and shows how to set defaults per annotation type.
 
@@ -17,14 +17,37 @@ Annotation appearance and behavior (for example color, stroke color, thickness, 
 Use the annotation toolbar after selecting an annotation:
 - Edit color: changes the annotation fill/text color
 ![Edit color](../images/edit_color.png)
-- Edit stroke color: changes border or line color for shapes and lines types.
+- Edit stroke color: changes border or line color for shapes and line types.
 ![Edit stroke color](../images/shape_strokecolor.png)
 - Edit thickness: adjusts border or line thickness
 ![Edit thickness](../images/shape_thickness.png)
 - Edit opacity: adjusts transparency
 ![Edit opacity](../images/shape_opacity.png)
 
+The annotation toolbar also exposes **Border Style** options (Solid, Cloud, Dashed) on shape and measurement annotations that support additional border styles. See [Cloud Annotation](./annotation-types/cloud-annotation) for cloud-specific appearance options and the per-annotation pages linked below for border-style customization.
+
 Type‑specific options (for example, Line properties) are available from the context menu (right‑click > Properties) where supported.
+
+### Border Style Support Matrix
+
+Use this matrix to find which annotation types support the **Solid**, **Cloud**, and **Dashed** border styles and the settings property that controls them.
+
+| Annotation Type | Solid | Cloud | Dashed | Settings property |
+| --- | --- | --- | --- | --- |
+| [Rectangle](./annotation-types/rectangle-annotation#supported-border-styles) | ✓ | ✓ | ✓ | `rectangleSettings` |
+| [Circle](./annotation-types/circle-annotation#supported-border-styles) | ✓ | ✓ | ✓ | `circleSettings` |
+| [Polygon](./annotation-types/polygon-annotation#supported-border-styles) | ✓ | ✓ | ✓ | `polygonSettings` |
+| [Cloud](./annotation-types/cloud-annotation) | ✓ | ✓ | — | `cloudSettings` |
+| [Free Text](./annotation-types/free-text-annotation#supported-border-styles) | ✓ | ✓ | ✓ | `freeTextSettings` |
+| [Area](./annotation-types/area-annotation#supported-border-styles) | ✓ | ✓ | ✓ | `areaSettings` |
+| [Radius](./annotation-types/radius-annotation#supported-border-styles) | ✓ | ✓ | ✓ | `radiusSettings` |
+| [Volume](./annotation-types/volume-annotation#supported-border-styles) | ✓ | ✓ | ✓ | `volumeSettings` |
+| [Perimeter](./annotation-types/perimeter-annotation#supported-border-styles) | ✓ | — | ✓ | `perimeterSettings` |
+| [Distance](./annotation-types/distance-annotation#supported-border-styles) | ✓ | — | ✓ | `distanceSettings` |
+| [Line](./annotation-types/line-annotation#supported-border-styles) | ✓ | — | ✓ | `lineSettings` |
+| [Arrow](./annotation-types/arrow-annotation#supported-border-styles) | ✓ | — | ✓ | `arrowSettings` |
+
+Use the [`BorderStyle`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/borderStyle) enum together with the optional `borderDashArray` (Dashed) and `cloudIntensity` (Cloud) settings. `cloudIntensity` accepts values from `1` to `2`; the default value is `1`.
 
 ## Set default properties during initialization
 
@@ -44,6 +67,7 @@ Shape annotations:
 - Rectangle: Use [`rectangleSettings`](./annotation-types/rectangle-annotation#set-properties-while-adding-individual-annotation)
 - Circle: Use [`circleSettings`](./annotation-types/circle-annotation#set-properties-while-adding-individual-annotation)
 - Polygon: Use [`polygonSettings`](./annotation-types/polygon-annotation#set-properties-while-adding-individual-annotation)
+- Cloud: Use [`cloudSettings`](./annotation-types/cloud-annotation#configure-default-cloud-annotation-settings)
 
 Measurement annotations:
 

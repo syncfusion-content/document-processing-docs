@@ -1,4 +1,4 @@
-var documenteditor = new ej.documenteditor.DocumentEditor({ isReadOnly: false, enableSelection: true, enableEditorHistory: true, enableEditor: true, enableSfdtExport: true });
+var documenteditor = new ej.documenteditor.DocumentEditor({ isReadOnly: false, enableSelection: true, enableEditorHistory: true, enableEditor: true, enableSfdtExport: true, height: '370px' });
 function toolbarButtonClick(arg) {
   switch (arg.item.id) {
     case 'bold':

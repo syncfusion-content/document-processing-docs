@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add Radius Measurement Annotations in React PDF Viewer \ Syncfusion
-description: Learn how to enable, draw, customize, and manage Radius measurement annotations in the Syncfusion React PDF Viewer.
+title: Radius Annotation in React PDF Viewer | Syncfusion
+description: Enable, draw, customize, and manage Radius measurement annotations in the React PDF Viewer to measure the radius of circular regions.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add Radius Measurement Annotations in React PDF Viewer
+# Radius Annotation in React PDF Viewer
 Radius measurement annotations allow users to draw circular regions and calculate the radius visually.
 
 ![Radius overview](../../../javascript-es6/annotations/annotation-images/radius-annot.png)
@@ -83,7 +83,7 @@ function exitRadiusMode() {
 {% endtabs %}
 
 ### Add Radius Programmatically
-Configure default properties using the [`Radius Settings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#radiussettings) property (for example, default **fill color**, **stroke color**, **opacity**).
+Use the [`addAnnotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation) API to draw a radius at a specific location.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -102,7 +102,7 @@ function addRadius() {
 {% endtabs %}
 
 ## Customize Radius Appearance
-Configure default properties using the [`Radius Settings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#radiussettings) property (for example, default **fill color**, **stroke color**, **opacity**).
+Configure default properties using the [`radiusSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#radiussettings) property (for example, default **fill color**, **stroke color**, **opacity**).
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -120,8 +120,81 @@ Configure default properties using the [`Radius Settings`](https://ej2.syncfusio
 {% endhighlight %}
 {% endtabs %}
 
+### Supported Border Styles
+
+In addition to the default **Solid** border, Radius annotations support the following additional border styles:
+
+- **Cloud** — scalloped cloud border.
+- **Dashed** — dashed line border.
+
+Use [`BorderStyle`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/borderStyle) values such as `BorderStyle.Cloud` and `BorderStyle.Dashed` together with the optional `borderDashArray` and `cloudIntensity` settings in the [`radiusSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#radiussettings) property.
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `borderStyle` | `BorderStyle` | Specifies the border style. Supported values: `BorderStyle.Solid`, `BorderStyle.Cloud`, and `BorderStyle.Dashed`. |
+| `borderDashArray` | `number[]` | Specifies the dash pattern when `borderStyle` is `BorderStyle.Dashed`. |
+| `cloudIntensity` | `number` | Specifies the cloud border intensity. Supported range: `1` to `2`; default value: `1`. |
+
+N> `borderStyle`, `borderDashArray`, and `cloudIntensity` are preserved during save, reload, import, and export.
+
+#### Apply a Cloud Border
+
+```ts
+export enum BorderStyle {
+    Solid = 'Solid',
+    Dashed = 'Dashed',
+    Cloud = 'Cloud'
+}
+```
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
+<PdfViewerComponent
+  id="container"
+  documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+  resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+  radiusSettings={{
+    fillColor: 'yellow',
+    strokeColor: 'orange',
+    opacity: 0.6,
+    borderStyle: BorderStyle.Cloud,
+    cloudIntensity: 2
+  }}
+  style={{ height: '650px' }}
+>
+  <Inject services={[Toolbar, Annotation]} />
+</PdfViewerComponent>
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+#### Apply a Dashed Border
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
+<PdfViewerComponent
+  id="container"
+  documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+  resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+  radiusSettings={{
+    fillColor: 'yellow',
+    strokeColor: 'orange',
+    opacity: 0.6,
+    borderStyle: BorderStyle.Dashed,
+    borderDashArray: [5, 5]
+  }}
+  style={{ height: '650px' }}
+>
+  <Inject services={[Toolbar, Annotation]} />
+</PdfViewerComponent>
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
 ## Manage Radius (Move, Reshape, Edit, Delete)
-- **Move**: Drag inside the polygon to reposition it.
+- **Move**: Drag inside the radius annotation to reposition it.
 - **Reshape**: Drag any vertex handle to adjust points and shape.
 
 ### Edit Radius Annotation
@@ -164,7 +237,7 @@ function editRadiusProgrammatically() {
 
 ### Delete Radius Annotation
 
-Delete Radius Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../remove-annotations).
+Delete Radius Annotation via UI (toolbar/context menu) or programmatically. For supported workflows and APIs, see [**Delete Annotation**](../delete-annotation).
 
 ## Set Default Properties During Initialization
 Apply defaults for Radius using the [`radiusSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#radiussettings) property.
@@ -185,8 +258,8 @@ Apply defaults for Radius using the [`radiusSettings`](https://ej2.syncfusion.co
 {% endhighlight %}
 {% endtabs %}
 
-## Set Properties While Adding Individual Annotation
-Apply defaults for Area using the [`radiusSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#radiussettings) property.
+## Set Properties While Adding Individual Annotations
+Pass per‑annotation values directly when calling [`addAnnotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation).
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -214,7 +287,7 @@ function addStyledRadius() {
   ![Scale dialog](../../images/calibrate_scaledialog.png)
 
 ### Set Default Scale Ratio During Initialization
-Configure scale defaults using [`measurementSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#mesaurementsettings).
+Configure scale defaults using [`measurementSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#measurementsettings).
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -236,13 +309,13 @@ Configure scale defaults using [`measurementSettings`](https://ej2.syncfusion.co
 Listen to annotation life-cycle events (add/modify/select/remove). For the full list and parameters, see [**Annotation Events**](../annotation-event).
 
 ## Export and Import
-Radius measurements can be exported or imported with other annotations. For workflows and supported formats, see [**Export and Import annotations**](../export-import-annotations).
+Radius measurements can be exported or imported with other annotations. For workflows and supported formats, see [**Export and Import annotations**](../export-import/export-annotation).
 
 ## See Also
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)
 - [Customize Context Menu](../../context-menu/custom-context-menu)
 - [Comments Panel](../comments)
 - [Annotation Events](../annotation-event)
-- [Export and Import annotations](../export-import-annotations)
-- [Delete Annotations](../remove-annotations)
+- [Export and Import annotations](../export-import/export-annotation)
+- [Delete Annotations](../delete-annotation)
 

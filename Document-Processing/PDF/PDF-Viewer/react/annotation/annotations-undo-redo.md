@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Undo and Redo annotation in React PDF Viewer | Syncfusion
-description: Learn to undo and redo annotations changes in Syncfusion React PDF Viewer, with UI and programmatic examples.
+title: Annotations Undo Redo in React PDF Viewer | Syncfusion
+description: Undo and redo annotation changes in the React PDF Viewer from the toolbar, keyboard shortcuts, and programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Undo and redo annotations in React PDF Viewer
+# Undo and Redo Annotations in React PDF Viewer
 
 The PDF Viewer supports undo and redo for annotations.
 
 ![Undo-redo](../../javascript-es6/annotations/annotation-images/annotation-undo-redo.png)
 
-Undo and redo actions can be performed by using either of the following methods:
+Undo and redo actions can be performed using either of the following methods:
 
 1. Using keyboard shortcuts (desktop):
     After performing an annotation action, press `Ctrl+Z` to undo and `Ctrl+Y` to redo on Windows and Linux. On macOS, use `Command+Z` to undo and `Command+Shift+Z` to redo.
@@ -70,12 +70,12 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 
 - [Annotation Overview](../overview)
 - [Annotation Types](../annotation/annotation-types/area-annotation)
-- [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)
-- [Create and Modify Annotation](../../annotation/create-modify-annotation)
-- [Customize Annotation](../../annotation/customize-annotation)
-- [Remove Annotation](../../annotation/delete-annotation)
-- [Handwritten Signature](../../annotation/signature-annotation)
-- [Export and Import Annotation](../../annotations/export-import/export-annotation)
-- [Annotation in Mobile View](../../annotation/annotations-in-mobile-view)
-- [Annotation Events](../../annotation/annotation-event)
+- [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
+- [Create and Modify Annotation](../annotation/create-modify-annotation)
+- [Customize Annotation](../annotation/customize-annotation)
+- [Remove Annotation](../annotation/delete-annotation)
+- [Handwritten Signature](../annotation/signature-annotation)
+- [Export and Import Annotation](../annotation/export-import/export-annotation)
+- [Annotation in Mobile View](../annotation/annotations-in-mobile-view)
+- [Annotation Events](../annotation/annotation-event)
 - [Annotations API](../annotation/annotations-api)

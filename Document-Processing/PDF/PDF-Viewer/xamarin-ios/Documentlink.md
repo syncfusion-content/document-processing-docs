@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Working with Document Link Annotation (Table of content)
+#  Document link in PDF viewer Xamarin.iOS
 
 The PDF viewer navigates to a specific destination within the PDF document.
 

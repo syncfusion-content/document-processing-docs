@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Downloading Syncfusion Excel linux installer - Syncfusion
-description: Learn here about how to download the Syncfusion Excel linux installer from our Syncfusion website with license.
+title: How to Download Linux Installer in .NET Excel Library | Syncfusion
+description: Syncfusion Excel Linux installer download section explains how to download the Linux installer from the Syncfusion website with a valid license.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 
 ---
 
-# Download Syncfusion&reg; Excel Linux Installer
+# How to download Linux installer in .NET Excel Library
 
 The Syncfusion&reg; installer can be downloaded from the [Syncfusion](https://www.syncfusion.com/) website. You can either download the licensed installer or try our trial installer depending on your license.
 

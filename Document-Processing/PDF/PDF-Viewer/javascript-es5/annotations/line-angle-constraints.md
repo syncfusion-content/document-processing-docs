@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Line angle constraints in JavaScript PDF Viewer | Syncfusion
-description: Learn to add, edit, delete, and configure highlight, underline, strikethrough, and squiggly text markup annotations programmatically in PDF Viewer.
+title: Line Angle Constraints in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Enable line angle constraints in the JavaScript (ES5) PDF Viewer so line-type annotations snap to common angles while users draw them.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Line angle constraints in JavaScript PDF Viewer
+# Line Angle Constraints in JavaScript (ES5) PDF Viewer
 
 The PDF Viewer provides line angle constraints functionality that allows drawing line-type annotations with controlled angle snapping. This improves precision for technical drawings and measurements in PDF documents.
 
-![Line angle constraint](../annotations/annotation-images/line-angle-constraint.gif)
+![Line angle constraint](../../javascript-es6/annotations/annotation-images/line-angle-constraint.gif)
 
 ## Enable line angle constraints
 
@@ -21,7 +21,6 @@ Set the `enableLineAngleConstraints` property within `annotationDrawingOptions` 
 The following code demonstrates enabling line angle constraints:
 
 ```js
-
 var pdfviewer = new ej.pdfviewer.PdfViewer({
   documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
   resourceUrl: "https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib",
@@ -29,8 +28,7 @@ var pdfviewer = new ej.pdfviewer.PdfViewer({
 });
 
 ej.pdfviewer.PdfViewer.Inject(ej.pdfviewer.TextSelection, ej.pdfviewer.TextSearch, ej.pdfviewer.Print, ej.pdfviewer.Navigation, ej.pdfviewer.Toolbar,ej.pdfviewer.Magnification, ej.pdfviewer.Annotation, ej.pdfviewer.FormDesigner, ej.pdfviewer.FormFields, ej.pdfviewer.PageOrganizer);
-  pdfviewer.appendTo('#PdfViewer');
-
+pdfviewer.appendTo('#PdfViewer');
 ```
 
 ## Work with constrained annotations

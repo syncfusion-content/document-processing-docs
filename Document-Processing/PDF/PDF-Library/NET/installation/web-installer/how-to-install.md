@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Installing Syncfusion PDF web installer - Syncfusion
-description: Learn here about how to install Syncfusion PDF web installer after downloading from our Syncfusion website.
+title: How to Install Syncfusion PDF Web Installer | Syncfusion
+description: Learn how to install the Syncfusion PDF web installer and configure the required PDF components successfully.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 ---
 
-# Installing Syncfusion<sup>&reg;</sup> PDF web installer
+# How to Install Syncfusion PDF Web Installer
 
 
 ## Overview

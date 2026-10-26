@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Use extractTextCompleted in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to use the extractTextCompleted event and isExtractText property in the Syncfusion ASP.NET Core PDF Viewer to extract text and bounds.
+title: How to Handle the ExtractTextCompleted Event in ASP.NET | Syncfusion
+description: Use the extractTextCompleted event and isExtractText property in the ASP.NET Core PDF Viewer to extract text and bounds from a loaded PDF.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Extract text using extractTextCompleted in ASP.NET Core PDF Viewer
+# How to Handle the ExtractTextCompleted Event in ASP.NET Core PDF
 
 The PDF Viewer provides the **isExtractText** property and the [**extractTextCompleted**](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.PdfViewer.PdfViewer.html#Syncfusion_EJ2_PdfViewer_PdfViewer_ExtractTextCompleted) event to retrieve all text content and its corresponding bounding box coordinates from a document.
 
@@ -18,7 +18,7 @@ To extract text, set the **isExtractText** property to `true`. Once the text ext
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
 
-page "{handler?}"
+@page "{handler?}"
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
@@ -34,7 +34,7 @@ page "{handler?}"
         var viewer = document.getElementById('pdfviewer').ej2_instances[0];
         viewer.isExtractText = true;
         viewer.extractTextCompleted = args => {
-        //Extract the Complete text of load document
+        //Extract the complete text of the loaded document
         console.log(args);
         console.log(args.documentTextCollection[1]);
         //Extract the Text data.

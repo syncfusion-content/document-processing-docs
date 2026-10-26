@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Get PDF document's data from Blazor PDF Viewer Component
+# Get loaded PDF document's data from Blazor PDF Viewer
 
 You can get the loaded PDF document's data from the PDF Viewer component using the GetDocumentAsync() method of PDF Viewer. 
 

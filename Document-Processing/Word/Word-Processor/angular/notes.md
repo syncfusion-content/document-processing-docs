@@ -1,24 +1,24 @@
 ---
 layout: post
-title: Notes in Angular Document editor component | Syncfusion
-description: Learn here all about Notes in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: Footnotes and Endnotes in Angular DOCX Editor | Syncfusion
+description: The footnote and endnote support in Angular DOCX Editor enables users to insert, edit, and manage references for additional document information.
 platform: document-processing
 control: Notes 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Notes in Angular Document editor component
+# Footnotes and Endnotes in Angular DOCX Editor
 
-DocumentEditorContainer component provides support for inserting footnotes and endnotes through the in-built toolbar. Refer to the following screenshot.
+[Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) Container component provides support for inserting footnotes and endnotes through the built-in toolbar. Refer to the following screenshot.
 
 ![Insert footnote endnote](images/note-toolbar.jpg)
 
-The Footnotes and endnotes are both ways of adding extra bits of information to your writing outside of the main text. You can use footnotes and endnotes to add side comments to your work or to place other publications like books, articles, or websites.
+Footnotes and endnotes are both ways of adding extra bits of information to your writing outside of the main text. You can use footnotes and endnotes to add side comments to your work or to cite other publications like books, articles, or websites.
 
 ## Insert footnotes
 
-Document Editor exposes an API to insert footnotes at cursor position programmatically or can be inserted to the end of selected text.
+DOCX Editor exposes an API to insert footnotes at the cursor position programmatically, or they can be inserted at the end of selected text.
 
 ```typescript
 import { NgModule } from '@angular/core';
@@ -56,11 +56,11 @@ export class AppComponent {
 }
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 ## Insert endnotes
 
-Document Editor exposes an API to insert endnotes at cursor position programmatically or can be inserted to the end of selected text.
+DOCX Editor exposes an API to insert endnotes at the cursor position programmatically, or they can be inserted at the end of selected text.
 
 ```typescript
 import { NgModule } from '@angular/core';
@@ -98,11 +98,15 @@ export class AppComponent {
 }
 ```
 
-> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the Document Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
+> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
 
 ## Update or edit footnotes and endnotes
 
-You can update or edit the footnotes and endnotes using the built-in context menu shown up by right-clicking it.
-the footnote endnote dialog box popup and you can customize the number format and start at. Refer to the following screenshot.
+You can update or edit the footnotes and endnotes using the built-in context menu shown by right-clicking the footnote or endnote. The Footnote/Endnote dialog box pops up, and you can customize the number format and the starting value. Refer to the following screenshot.
 
 ![Update or edit footnotes and endnotes](images/notes-option.jpg)
+
+## Online Demo
+
+Explore how to add and manage notes in Word documents using the Angular DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/notes).
+

@@ -6,11 +6,11 @@ control: PowerPoint
 documentation: UG
 ---
 
-# Open and save Presentation in AWS Elastic Beanstalk
+# Open and Save Presentation in AWS Elastic Beanstalk
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **open and save a Presentation in AWS Elastic Beanstalk**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and convert PowerPoint documents programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **open and save a Presentation in AWS Elastic Beanstalk**.
 
-## Steps to open and save Presentation in AWS Elastic Beanstalk
+## Steps to open and save a Presentation in AWS Elastic Beanstalk
 
 Step 1: Create a new ASP.NET Core Web App (Model-View-Controller).
 ![Create a ASP.NET Core Web App project](Azure-Images/App-Service-Linux/Create-PowerPoint-Presentation-to-PDF.png)
@@ -27,7 +27,7 @@ Step 4: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/pac
 
 N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
 
-Step 5: Add a new button in the **Index.cshtml** as shown below.
+Step 5: Add a new button in **Views/Home/Index.cshtml** as shown below.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
@@ -50,55 +50,45 @@ Step 6: Include the following namespaces in **HomeController.cs**.
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
+using Microsoft.AspNetCore.Mvc;
 using Syncfusion.Presentation;
+using System.IO;
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 7: Add a new action method **CreatePowerPoint** in HomeController.cs and include the below code snippet to **open an existing Presentation in AWS Elastic Beanstalk**.
+Step 7: Add a new action method **CreatePowerPoint** in HomeController.cs (the class must inherit from `Controller`) and include the below code snippet to **open an existing PowerPoint Presentation from the wwwroot folder**.
 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-using FileStream fileStreamPath = new(Path.GetFullPath("wwwroot/Data/Input.pptx"), FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-//Open an existing PowerPoint presentation.
-using IPresentation pptxDoc = Presentation.Open(fileStreamPath);
+public IActionResult CreatePowerPoint()
+{
+    //Open an existing PowerPoint presentation using the file path overload.
+    using IPresentation pptxDoc = Presentation.Open(Path.GetFullPath("wwwroot/Data/Input.pptx"));
+
+    //Get the first slide from the PowerPoint presentation.
+    ISlide slide = pptxDoc.Slides[0];
+    //Get the first shape of the slide.
+    IShape shape = slide.Shapes[0] as IShape;
+    //Change the text of the shape.
+    if (shape.TextBody.Text == "Company History")
+        shape.TextBody.Text = "Company Profile";
+
+    //Save the PowerPoint Presentation as stream.
+    MemoryStream pptxStream = new();
+    pptxDoc.Save(pptxStream);
+    pptxStream.Position = 0;
+    //Download Powerpoint document in the browser.
+    return File(pptxStream, "application/powerpoint", "Result.pptx");
+}
 
 {% endhighlight %}
 {% endtabs %}
 
-Step 8: Add below code snippet demonstrates accessing a shape from a slide and changing the text within it.
+## Steps to publish to AWS Elastic Beanstalk
 
-{% tabs %}
-{% highlight c# tabtitle="C#" %}
-
-//Get the first slide from the PowerPoint presentation.
-ISlide slide = pptxDoc.Slides[0];
-//Get the first shape of the slide.
-IShape shape = slide.Shapes[0] as IShape;
-//Change the text of the shape.
-if (shape.TextBody.Text == "Company History")
-    shape.TextBody.Text = "Company Profile";
-
-{% endhighlight %}
-{% endtabs %}
-
-Step 9: Add below code example to **save the PowerPoint Presentation**.
-
-{% tabs %}
-{% highlight c# tabtitle="C#" %}
-
-//Save the PowerPoint Presentation as stream.
-MemoryStream pptxStream = new();
-pptxDoc.Save(pptxStream);
-pptxStream.Position = 0;
-//Download Powerpoint document in the browser.
-return File(pptxStream, "application/powerpoint", "Result.pptx");
-
-{% endhighlight %}
-{% endtabs %}
-
-## Steps to publish as AWS Elastic Beanstalk
+N> Before publishing, ensure you have an active **AWS account**, have installed the **AWS Toolkit for Visual Studio** (from **Extensions > Manage Extensions** or the [AWS download page](https://aws.amazon.com/visualstudio/)), and have configured your AWS credentials in the toolkit.
 
 Step 1: Right-click the project and select **Publish to AWS Elastic Beanstalk (Legacy)** option.
 ![Right-click the project and select the Publish option](AWS_Images/Elastic_Beanstalk_Images/Publish-Create-PowerPoint.png)
@@ -106,10 +96,10 @@ Step 1: Right-click the project and select **Publish to AWS Elastic Beanstalk (L
 Step 2: Select the **Deployment Target** as **Create a new application environment** and click **Next** button.
 ![Deployment Target in AWS Ealastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Deployment-Target-Create-PowerPoint.png)
 
-Step 3: Choose the **Environment Name** in the dropdown list and the **URL** will be automatically assign and check the URL is available, if available click next otherwise change the **URL**. 
+Step 3: Choose the **Environment Name** in the dropdown list and the **URL** will be automatically assigned. Check that the URL is available; if so, click **Next**. Otherwise, change the **URL**.
 ![Application Environment in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/URL-Availability-Open-and-Save-PowerPoint.png)
 
-Step 4: Select the instance type in **t3a.micro** from the dropdown list and click next.
+Step 4: Select the **t3a.micro** instance type from the dropdown list and click **Next**.
 ![Application Environment in AWS Elastic Beanstalk](AWS_Images/Elastic_Beanstalk_Images/Launch-Configuration-Create-PowerPoint.png)
 
 Step 5: Click the **Next** button to proceed further.
@@ -133,4 +123,11 @@ By executing the program, you will get the **PowerPoint document** as follows.
 
 ![Open and save in AWS Elastic Beanstalk](Workingwith-Core/Open-and-Save-output-image.png)
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page.
+
+## See also
+
+* [Create a PowerPoint document in AWS Elastic Beanstalk](Create-PowerPoint-Presentation-in-AWS-Elastic-Beanstalk)
+* [Open and save a Presentation in AWS](Open-and-Save-PowerPoint-Presentation-in-AWS)
+* [Open and save a Presentation in AWS Lambda](Open-and-Save-PowerPoint-Presentation-in-AWS-Lambda)
+* [Open and save a Presentation in AWS S3 Cloud Storage](Open-and-Save-PowerPoint-Presentation-in-AWS-S3-Cloud-Storage)
