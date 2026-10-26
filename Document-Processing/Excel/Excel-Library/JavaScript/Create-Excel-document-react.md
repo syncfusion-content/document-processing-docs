@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with JavaScript Excel Library in a React Application | Syncfusion
+title: Getting Started with Excel Library in React | Syncfusion
 description: Learn how to create and download an Excel workbook in a React application using the Syncfusion JavaScript Excel Library.
 control: Excel
 platform: document-processing
 documentation: ug
 ---
 
-# Getting Started with JavaScript Excel Library in a React Application
+# Getting Started with JavaScript Excel Library in React
 
 The <a href="https://help.syncfusion.com/document-processing/excel/excel-library/javascript/overview" aria-label="JavaScript Excel Library overview documentation"> JavaScript Excel Library</a> is used to create, read, and edit Microsoft Excel (`.xlsx`) workbooks. You can work with worksheets, cells, formulas, formatting, and other spreadsheet features without Microsoft Excel installed.
 
@@ -163,4 +163,4 @@ N> If you used Create-React-App instead of Vite, the run command is `npm start` 
 | Button click does nothing | The click handler is not wired, or an error is thrown inside the async function | Confirm the button uses `onClick={createExcel}` and check the browser console for errors |
 | `save(filePath) requires the Node.js filesystem and is not available in this environment` | A path was passed to `save()` in the browser | Use `const bytes = await workbook.save()` with no arguments, then download the bytes |
 | `Output.xlsx` does not download | The browser blocks the download, or the click handler did not finish | Check the browser download settings, allow downloads for the site, and confirm `await workbook.save()` completed |
-| Vite dev server fails to start | Port `5173` is in use | Stop the conflicting process or change the port in `vite.config.js` |
+| Vite development server fails to start | Port `5173` is in use | Stop the conflicting process or change the port in `vite.config.js` |

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with JavaScript Excel Library in a TypeScript Application | Syncfusion
+title: Getting Started with Excel Library in TypeScript | Syncfusion
 description: Learn how to get started with the Syncfusion JavaScript Excel in TypeScript application. Easy steps to create Excel workbooks.
 platform: document-processing
 control: Excel
 documentation: ug
 ---
 
-# Getting Started with JavaScript Excel Library in a TypeScript Application
+# Getting Started with JavaScript Excel Library in TypeScript
 
 The [JavaScript Excel Library](https://www.syncfusion.com/document-sdk/javascript-excel-library) is used to create, read, and edit Microsoft Excel (`.xlsx`) workbooks. You can work with worksheets, cells, formulas, formatting, and other spreadsheet features without Microsoft Excel installed.
 
@@ -21,7 +21,7 @@ Before you begin, make sure you have the following installed:
 - npm 9 or later, or Yarn 1.22 or later.
 - TypeScript 5.0 or later.
 - Code Studio, Visual Studio Code, or another code editor.
-- A browser-based bundler or dev server.
+- A browser-based bundler or development server.
 
 To verify your Node.js and npm versions, run:
 
@@ -40,7 +40,7 @@ cd excel-typescript-app
 npm init -y
 ```
 
-Install TypeScript and the Vite dev server as development dependencies:
+Install TypeScript and the Vite development server as development dependencies:
 
 ```bash
 npm install typescript vite --save-dev
@@ -66,11 +66,11 @@ The following minimal configuration is sufficient for this guide:
 }
 ```
 
-N> The `moduleResolution: "bundler"` option requires TypeScript 5.0 or later. Vite compiles the TypeScript files itself, so you do not need to run `tsc` to start the application.
+N> The `moduleResolution: "bundler"` option requires TypeScript 5.0 or later. Vite compiles the TypeScript files itself, so you do not need to compile the files manually to start the application.
 
 ## Configure the start script
 
-Add a `start` script to `package.json` so you can launch the Vite dev server with `npm start`:
+Add a `start` script to `package.json` so you can launch the Vite development server with `npm start`:
 
 ```json
 {
@@ -209,4 +209,4 @@ The workbook contains a `Sales` worksheet with `Product`, `Quantity`, and `Price
 | Button click does nothing | The script runs before the button is in the DOM | Move the `<script>` tag to the end of `<body>`, or wrap the listener in a `DOMContentLoaded` event |
 | `Output.xlsx` does not download | The browser blocks the download | Check the browser's download settings and the downloads folder |
 | TypeScript compilation errors | The TypeScript configuration is incompatible with the Excel package | Update TypeScript to 5.0 or later and verify the compiler options in `tsconfig.json` |
-| Vite dev server fails to start | Port `5173` is in use | Stop the conflicting process or change the port in `vite.config.js` |
+| Vite development server fails to start | Port `5173` is in use | Stop the conflicting process or change the port in `vite.config.js` |

@@ -64,7 +64,7 @@ await workbook.save('CreateATable.xlsx');
 
 ## Table styles and banding
 
-A table style sets the color scheme. Use the style options to emphasize the first or last column and to turn row or column stripes on or off. Set `style` to `undefined` to leave the table unstyled.
+A table style sets the color scheme. Use the style options to emphasize the first or last column and to turn row or column stripes on or off. Set `style` to `undefined` to leave the table without a style.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

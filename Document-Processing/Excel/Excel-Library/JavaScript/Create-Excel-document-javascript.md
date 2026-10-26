@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with JavaScript Excel Library in a JavaScript Application | Syncfusion
+title: Getting Started with Excel Library in JavaScript | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-excel-library
 description: Learn how to get started with the Syncfusion JavaScript Excel in JavaScript application. Easy steps to create Excel workbooks.
 platform: document-processing
@@ -8,7 +8,7 @@ control: Excel
 documentation: ug
 ---
 
-# Getting Started with JavaScript Excel Library in a JavaScript Application
+# Getting Started with JavaScript Excel Library in JavaScript
 
 Syncfusion<sup>&reg;</sup> JS 2 (global script) is an ES5-formatted distribution of the [JavaScript Excel Library](https://www.syncfusion.com/document-sdk/javascript-excel-library) that runs directly in any modern web browser without a build step or bundler. The all-in-one `ej2.min.js` bundle exposes the `ej.xlsx` namespace, which contains the Workbook class and related Excel APIs.
 

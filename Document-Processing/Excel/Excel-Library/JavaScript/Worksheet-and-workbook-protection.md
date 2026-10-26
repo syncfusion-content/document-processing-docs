@@ -1,5 +1,5 @@
 ---
-title: Worksheet and Workbook Protection in JavaScript Excel Library | Syncfusion
+title: Worksheet and Workbook Protection in JavaScript Excel | Syncfusion
 description: Protect worksheets and workbooks, set options, and manage protected ranges with the Syncfusion JavaScript Excel Library.
 platform: document-processing
 control: Excel

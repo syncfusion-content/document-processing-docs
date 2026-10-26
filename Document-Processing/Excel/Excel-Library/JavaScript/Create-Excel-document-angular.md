@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with JavaScript Excel Library in an Angular Application | Syncfusion
+title: Getting Started with Excel Library in Angular | Syncfusion
 description: Learn how to get started with the Syncfusion JavaScript Excel in Angular application. Easy steps to create Excel workbooks.
 platform: document-processing
 control: Excel
 documentation: ug
 ---
 
-# Getting Started with JavaScript Excel Library in an Angular Application
+# Getting Started with JavaScript Excel Library in Angular
 
 The [JavaScript Excel Library](https://www.syncfusion.com/document-sdk/javascript-excel-library) is used to create, read, and edit Microsoft Excel (`.xlsx`) workbooks. You can work with worksheets, cells, formulas, formatting, and other spreadsheet features without Microsoft Excel installed.
 

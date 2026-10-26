@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with JavaScript Excel Library in a Node.js Application | Syncfusion
+title: Getting Started with Excel Library in Node.js | Syncfusion
 description: Learn how to create Excel workbooks in a Node.js application by using the Syncfusion JavaScript Excel Library.
 platform: document-processing
 control: Excel
 documentation: ug
 ---
 
-# Getting Started with JavaScript Excel Library in a Node.js Application
+# Getting Started with JavaScript Excel Library in Node.js
 
 The [JavaScript Excel Library](https://www.syncfusion.com/document-sdk/javascript-excel-library) is used to create, read, and edit Microsoft Excel (`.xlsx`) workbooks. You can work with worksheets, cells, formulas, formatting, and other spreadsheet features without Microsoft Excel installed.
 
