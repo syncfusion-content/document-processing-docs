@@ -99,6 +99,22 @@ The following table lists some of the Spreadsheet localization terms available i
 | `Spreadsheet_Description` | Description |
 | `Spreadsheet_UnsupportedFile` | Unsupported File |
 | `Spreadsheet_InvalidUrl` | Invalid Url |
+| `Spreadsheet_InvalidPassword` | Invalid Password |
+| `Spreadsheet_Duplicate` | Duplicate |
+| `Spreadsheet_MoveRight` | Move Right |
+| `Spreadsheet_MoveLeft` | Move Left |
+| `Spreadsheet_InsertLeft` | Insert Left |
+| `Spreadsheet_InsertRight` | Insert Right |
+| `Spreadsheet_InsertRowsAbove` | Insert Rows Above |
+| `Spreadsheet_InsertRowsBelow` | Insert Rows Below |
+| `Spreadsheet_Sort` | Sort |
+| `Spreadsheet_ClearAll` | Clear All |
+| `Spreadsheet_ClearFormats` | Clear Formats |
+| `Spreadsheet_ClearContents` | Clear Contents |
+| `Spreadsheet_ClearHyperlinks` | Clear Hyperlinks |
+| `Spreadsheet_Clear` | Clear |
+| `Spreadsheet_Link` | Link |
+| `Spreadsheet_Image` | Image |
 
 ## Internationalization
 
