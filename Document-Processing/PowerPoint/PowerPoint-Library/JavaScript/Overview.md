@@ -16,10 +16,15 @@ The `JavaScript PowerPoint Library` supports programmatic creation and modificat
 
 The following are the key features of the `JavaScript PowerPoint Library`.
 
-* Create PowerPoint presentations from scratch.
-* Open, modify, and save existing presentations.
+* [Create](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/getting-started) PowerPoint presentations from scratch.
+* [Open](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/loading-and-saving-presentation#opening-an-existing-presentation), [modify](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/working-with-slide), and [save](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/loading-and-saving-presentation#save-the-document) existing presentations.
 * Add and format paragraphs with bullets and numberings within text boxes.
-* Add text with different formatting into a single paragraph using TextParts.
+* Add text with different formatting into a single [paragraph](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/working-with-paragraphs) using TextParts.
+* Add and edit charts in PowerPoint presentation.
+*Add, edit and remove [tables](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/working-with-tables) in PowerPoint presentation.
+* Add, edit, replace and remove the [images](https://teams.public.onecdn.static.microsoft/evergreen-assets/safelinks/2/atp-safelinks.html) in a PowerPoint Presentation.
+
+
 
 ## Supported environments
 
