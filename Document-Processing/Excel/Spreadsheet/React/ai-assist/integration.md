@@ -26,11 +26,10 @@ Ensure the following before integrating AI Assist:
 
 ### Add CSS references
 
-Add the following AI Assist dependent style references to the `src/index.css` file. The base Spreadsheet theme must already be imported; these references are additional styles required by the AI Assist UI.
+Add the following spreadsheet style references to the `src/index.css` file.
 
 ```css
-@import '../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-interactive-chat/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/spreadsheet/index.css';
 ```
 
 ### Inject the AI Assist Module

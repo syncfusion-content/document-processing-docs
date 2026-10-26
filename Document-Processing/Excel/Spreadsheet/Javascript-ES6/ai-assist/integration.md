@@ -24,13 +24,12 @@ Ensure the following before integrating AI Assist:
 
 ### Add CSS references
 
-Add the following AI Assist dependent style references to the `~/src/styles/styles.css` file.
+Add the following spreadsheet style references to the `~/src/styles/styles.css` file.
 
 {% tabs %}
 {% highlight css tabtitle="~/src/styles/styles.css" %}
 
-@import '../../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css';
-@import '../../node_modules/@syncfusion/ej2-interactive-chat/styles/tailwind3.css';
+@import '../../node_modules/@syncfusion/ej2-tailwind3-theme/styles/spreadsheet/index.css';
 
 {% endhighlight %}
 {% endtabs %}
