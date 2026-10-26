@@ -9,10 +9,10 @@ documentation: UG
 
 Equations in a Word document are combinations of mathematical symbols or text. For example, you can create a Fourier series equation in a Word document.
 
-The [JavaScript Word Library](https://www.syncfusion.com/document-sdk/javascript-word-library) offers two ways to create and modify equations in a Word document.
+The JavaScript Word Library offers two ways to create and modify equations in a Word document.
 
-* [Using Math DOM](https://help.syncfusion.com/document-processing/word/word-library/javascript/working-with-mathematical-equation#types-of-equation).
-* [Using LaTeX](https://help.syncfusion.com/document-processing/word/word-library/javascript/working-with-latex).
+* Using Math DOM.
+* Using LaTeX.
 
 ![Mathematical equation in Microsoft Word document](WorkingwithMathematicalEquation_images/Mathematical Equation.png)
 

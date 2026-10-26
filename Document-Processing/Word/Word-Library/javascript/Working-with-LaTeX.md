@@ -1136,7 +1136,7 @@ The following table demonstrates the LaTeX equivalent to professional format Rig
 
 ### Apply style to characters
 
-Apply styles to characters, such as bold and bold-italic, for equations in a Word document using LaTeX with the [JavaScript Word Library](https://www.syncfusion.com/document-sdk/javascript-word-library). Apply the following styles using LaTeX commands.
+Apply styles to characters, such as bold and bold-italic, for equations in a Word document using LaTeX with the JavaScript Word Library. Apply the following styles using LaTeX commands.
 
 <table>
 <thead> 
@@ -1187,7 +1187,7 @@ document.save('Result.docx');
 
 ### Apply scripts to the equation
 
-Apply scripts, such as double-struck, fraktur, and more, to equations in a Word document using LaTeX with the [JavaScript Word Library](https://www.syncfusion.com/document-sdk/javascript-word-library). Apply the following scripts using LaTeX commands.
+Apply scripts, such as double-struck, fraktur, and more, to equations in a Word document using LaTeX with the JavaScript Word Library. Apply the following scripts using LaTeX commands.
 
 <table>
 <thead> 
@@ -1290,7 +1290,7 @@ document.save('Result.docx');
 
 ## Apply Math Justification
 
-Apply justification, such as Left, Right, and more to the equation in a Word document using the [JavaScript Word Library](https://www.syncfusion.com/document-sdk/javascript-word-library).
+Apply justification, such as Left, Right, and more to the equation in a Word document using the JavaScript Word Library.
 
 The following code examples show how to apply the justification to equations in a Word document.
 
