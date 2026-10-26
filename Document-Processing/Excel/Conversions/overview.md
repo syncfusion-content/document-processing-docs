@@ -27,7 +27,7 @@ keywords: Excel, SDK, Automation, API, convert
 
 {% doccard text="Excel to JSON" link="/document-processing/excel/conversions/excel-to-json/overview" icon="/document-processing/excel/conversions/images/Excel_to_JSON.svg" %}
 
-{% doccard text="PDF to Excel" link="/document-processing/data-extraction/net/conversions/pdf-to-word" icon="/document-processing/Data-Extraction/net/conversions/Images/pdf-to-excel.svg" %}
+{% doccard text="PDF to Excel" link="/document-processing/data-extraction/net/conversions/pdf-to-excel" icon="/document-processing/Data-Extraction/net/conversions/Images/pdf-to-excel.svg" %}
 
 {% enddoccards %}
 

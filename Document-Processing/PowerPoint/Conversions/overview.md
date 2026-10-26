@@ -19,7 +19,7 @@ keywords: PowerPoint, Presentation, Slide, SDK, Automation, API, convert
 
 {% doccard text="PowerPoint to Markdown" link="/document-processing/powerpoint/conversions/powerpoint-to-markdown" icon="/document-processing/markdown/conversions/images/PowerPoint to Markdown.svg" %}
 
-{% doccard text="PDF to PPTX" link="/document-processing/data-extraction/net/conversions/pdf-to-word" icon="/document-processing/Data-Extraction/net/conversions/Images/pdf-to-ppt.svg" %}
+{% doccard text="PDF to PPTX" link="/document-processing/data-extraction/net/conversions/pdf-to-pptx" icon="/document-processing/Data-Extraction/net/conversions/Images/pdf-to-ppt.svg" %}
 
 {% enddoccards %}
 
