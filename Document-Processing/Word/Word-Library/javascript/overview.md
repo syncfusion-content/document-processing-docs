@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 
 # About Syncfusion JavaScript Word Document Processing Library
 
-The [JavaScript Word Library](https://ftstaging.syncfusion.com:14039/document-sdk/javascript-word-library) is a high-performance, non-UI library written natively in JavaScript for creating, reading, modifying, and saving Microsoft Word documents in Node.js and browser-based applications. It enables developers to build document-processing features without requiring Microsoft Word or interop dependencies.
+The JavaScript Word Library is a high-performance, non-UI library written natively in JavaScript for creating, reading, modifying, and saving Microsoft Word documents in Node.js and browser-based applications. It enables developers to build document-processing features without requiring Microsoft Word or interop dependencies.
 
 The library provides a document object model that lets you work with Word documents, sections, paragraphs, lists, tables, images, shapes, hyperlinks, fields, and content controls in a structured way. It is designed for JavaScript and TypeScript applications and can be used across modern web frameworks and server-side environments.
 
