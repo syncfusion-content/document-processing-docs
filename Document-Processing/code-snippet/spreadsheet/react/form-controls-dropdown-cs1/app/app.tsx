@@ -6,80 +6,49 @@ import { CellStyleModel, FormControlModel } from '@syncfusion/ej2-react-spreadsh
 function App() {
     const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
 
-    React.useEffect(() => {
-        let spreadsheet = spreadsheetRef.current;
-        if (spreadsheet) {
-            // Define the input range for dropdown
-            spreadsheet.insertRange('H1:H5', 'H', false);
-            
-            // Set dropdown values in range H1:H5
-            spreadsheet.getActiveSheet().setFormula('H1', 'Standard Delivery');
-            spreadsheet.getActiveSheet().setFormula('H2', 'Express Delivery');
-            spreadsheet.getActiveSheet().setFormula('H3', 'Priority Delivery');
-            spreadsheet.getActiveSheet().setFormula('H4', 'Pickup at Store');
-            spreadsheet.getActiveSheet().setFormula('H5', 'Digital Download');
-
-            // Insert Drop Down form control with input range
-            spreadsheet.addFormControl({
-                type: 'DropDown',
-                target: 'B2',
-                name: 'deliveryDropdown',
-                caption: 'Select Delivery',
-                value: 'Standard Delivery',
-                inputRange: '$H$1:$H$5',
-                linkedCell: 'D2',
-                fontName: 'Calibri',
-                fontSize: 14
-            } as FormControlModel);
-
-            // Define the input range for second dropdown
-            spreadsheet.insertRange('I1:I4', 'I', false);
-            
-            // Set dropdown values for payment methods
-            spreadsheet.getActiveSheet().setFormula('I1', 'Cash on Delivery');
-            spreadsheet.getActiveSheet().setFormula('I2', 'Credit Card');
-            spreadsheet.getActiveSheet().setFormula('I3', 'Debit Card');
-            spreadsheet.getActiveSheet().setFormula('I4', 'Online Payment');
-
-            // Insert second Drop Down form control
-            spreadsheet.addFormControl({
-                type: 'DropDown',
-                target: 'B4',
-                name: 'paymentDropdown',
-                caption: 'Select Payment',
-                value: 'Cash on Delivery',
-                inputRange: '$I$1:$I$4',
-                linkedCell: 'D4'
-            } as FormControlModel);
-
-            // Define the input range for priority dropdown
-            spreadsheet.insertRange('J1:J3', 'J', false);
-            
-            // Set dropdown values for priority
-            spreadsheet.getActiveSheet().setFormula('J1', 'Low');
-            spreadsheet.getActiveSheet().setFormula('J2', 'Medium');
-            spreadsheet.getActiveSheet().setFormula('J3', 'High');
-
-            // Insert third Drop Down form control
-            spreadsheet.addFormControl({
-                type: 'DropDown',
-                target: 'B6',
-                name: 'priorityDropdown',
-                caption: 'Select Priority',
-                value: 'Medium',
-                inputRange: '$J$1:$J$3',
-                linkedCell: 'D6'
-            } as FormControlModel);
+    const formControls: FormControlModel[] = [
+        {
+            type: 'DropDown',
+            text: 'Select Delivery',
+            cellLink: 'D2',
+            inputRange: 'H1:H5',
+            selectedIndex: 0,
+            top: 40,
+            left: 150,
+            height: 22,
+            width: 120
+        },
+        {
+            type: 'DropDown',
+            text: 'Select Payment',
+            cellLink: 'D4',
+            inputRange: 'I1:I4',
+            selectedIndex: 0,
+            top: 100,
+            left: 150,
+            height: 22,
+            width: 120
+        },
+        {
+            type: 'DropDown',
+            text: 'Select Priority',
+            cellLink: 'D6',
+            inputRange: 'J1:J3',
+            selectedIndex: 1,
+            top: 160,
+            left: 150,
+            height: 22,
+            width: 120
         }
-    }, []);
+    ];
 
     const boldCenter: CellStyleModel = { fontWeight: 'bold', textAlign: 'center' };
 
     return (
         <div>
-            <SpreadsheetComponent ref={spreadsheetRef} showFormulaBar={false}>
+            <SpreadsheetComponent ref={spreadsheetRef} showFormulaBar={false} allowFormControl={true}>
                 <SheetsDirective>
-                    <SheetDirective name={'DropDownDemo'}>
+                    <SheetDirective name={'DropDownDemo'} formControls={formControls}>
                         <ColumnsDirective>
                             <ColumnDirective width={150}></ColumnDirective>
                             <ColumnDirective width={200}></ColumnDirective>
@@ -96,6 +65,9 @@ function App() {
                             <RowDirective index={0}>
                                 <CellsDirective>
                                     <CellDirective index={0} value={'Drop Down Form Controls'} style={boldCenter}></CellDirective>
+                                    <CellDirective index={7} value={'Delivery Options'}></CellDirective>
+                                    <CellDirective index={8} value={'Payment Methods'}></CellDirective>
+                                    <CellDirective index={9} value={'Priority'}></CellDirective>
                                 </CellsDirective>
                             </RowDirective>
                             <RowDirective index={1}>
@@ -104,6 +76,16 @@ function App() {
                                     <CellDirective index={1} value={''}></CellDirective>
                                     <CellDirective index={2} value={'Selected Index'}></CellDirective>
                                     <CellDirective index={3} value={''}></CellDirective>
+                                    <CellDirective index={7} value={'Standard Delivery'}></CellDirective>
+                                    <CellDirective index={8} value={'Cash on Delivery'}></CellDirective>
+                                    <CellDirective index={9} value={'Low'}></CellDirective>
+                                </CellsDirective>
+                            </RowDirective>
+                            <RowDirective index={2}>
+                                <CellsDirective>
+                                    <CellDirective index={7} value={'Express Delivery'}></CellDirective>
+                                    <CellDirective index={8} value={'Credit Card'}></CellDirective>
+                                    <CellDirective index={9} value={'Medium'}></CellDirective>
                                 </CellsDirective>
                             </RowDirective>
                             <RowDirective index={3}>
@@ -112,6 +94,15 @@ function App() {
                                     <CellDirective index={1} value={''}></CellDirective>
                                     <CellDirective index={2} value={'Selected Index'}></CellDirective>
                                     <CellDirective index={3} value={''}></CellDirective>
+                                    <CellDirective index={7} value={'Priority Delivery'}></CellDirective>
+                                    <CellDirective index={8} value={'Debit Card'}></CellDirective>
+                                    <CellDirective index={9} value={'High'}></CellDirective>
+                                </CellsDirective>
+                            </RowDirective>
+                            <RowDirective index={4}>
+                                <CellsDirective>
+                                    <CellDirective index={7} value={'Pickup at Store'}></CellDirective>
+                                    <CellDirective index={8} value={'Online Payment'}></CellDirective>
                                 </CellsDirective>
                             </RowDirective>
                             <RowDirective index={5}>
@@ -120,9 +111,13 @@ function App() {
                                     <CellDirective index={1} value={''}></CellDirective>
                                     <CellDirective index={2} value={'Selected Index'}></CellDirective>
                                     <CellDirective index={3} value={''}></CellDirective>
+                                    <CellDirective index={7} value={'Digital Download'}></CellDirective>
                                 </CellsDirective>
                             </RowDirective>
                         </RowsDirective>
+                        <FormControlsDirective>
+                            <FormControlDirective type="DropDown" text="Drop Down 1" celllink="H4" range="A1:A3" height={40} width={110}></FormControlDirective>"
+                        </FormControlsDirective>
                     </SheetDirective>
                 </SheetsDirective>
             </SpreadsheetComponent>
