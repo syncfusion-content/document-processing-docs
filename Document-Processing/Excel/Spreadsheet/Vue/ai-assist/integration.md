@@ -24,11 +24,10 @@ Ensure the following before integrating AI Assist:
 
 ### Add CSS references
 
-Add the following AI Assist dependent style references to the `src/App.vue` file, in addition to the base Spreadsheet theme that is already imported:
+Add the following spreadsheet style references to the `src/App.vue` file.
 
 ```css
-@import '../node_modules/@syncfusion/ej2-notifications/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-interactive-chat/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/spreadsheet/index.css';
 ```
 
 ### Inject the AI Assist Module
