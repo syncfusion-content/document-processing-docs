@@ -13,7 +13,7 @@ documentation: ug
 
 The `ISyncfusionStringLocalizer` interface lets you localize the default text used in the Blazor Spreadsheet. Add the `SfResources.resx` file and the required culture-specific resource file to your project, and register a custom localizer in `Program.cs`.
 
-The following table lists some of the Spreadsheet localization terms available in the resource files.
+The following table lists the supported localized words in the Blazor Spreadsheet resource files.
 
 | Locale keywords | Text |
 |-----|-----|
@@ -99,7 +99,7 @@ The following table lists some of the Spreadsheet localization terms available i
 | `Spreadsheet_Description` | Description |
 | `Spreadsheet_UnsupportedFile` | Unsupported File |
 | `Spreadsheet_InvalidUrl` | Invalid Url |
-| `Spreadsheet_InvalidPassword` | Invalid Password |
+| `Spreadsheet_InvalidPassword` | Incorrect Password. Please try again. |
 | `Spreadsheet_Duplicate` | Duplicate |
 | `Spreadsheet_MoveRight` | Move Right |
 | `Spreadsheet_MoveLeft` | Move Left |
