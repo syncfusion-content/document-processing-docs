@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Read only default in JavaScript (ES5) Document editor | Syncfusion
-description: Learn here all about Read only default in Syncfusion JavaScript (ES5) Document editor control of Syncfusion Essential JS 2 and more.
+title: How to Open JavaScript DOCX Editor in Read-Only Mode | Syncfusion
+description: Open Syncfusion® JavaScript DOCX Editor in read-only mode to prevent document modifications while allowing users to view content.
 platform: document-processing
-control: Read only default 
+control: Read-Only by Default
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Read only default in JavaScript (ES5) Document editor
+# How to Open JavaScript DOCX Editor in Read-Only Mode
 
-In this article, we are going to see how to open a document in read only mode by default in DocumentEditor & DocumentEditorContainer.
+In this article, we are going to see how to open a document in read-only mode by default in DocumentEditor and DocumentEditorContainer.
 
-## Opening a document in read only mode by default in DocumentEditor
+## Opening a Document in Read-Only Mode by Default in DocumentEditor
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -25,7 +25,7 @@ In this article, we are going to see how to open a document in read only mode by
 
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/read-cs1" %}
 
-## Opening a document in ready only mode by default in DocumentEditorContainer
+## Opening a Document in Read-Only Mode by Default in DocumentEditorContainer
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
@@ -38,4 +38,4 @@ In this article, we are going to see how to open a document in read only mode by
 
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es5/read-container-cs1" %}
 
->Note: You can use the [`restrictEditing`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#restrictediting) in DocumentEditorContainer and [`isReadOnly`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/#isreadonly) in DocumentEditor based on your requirement to change component to read only mode.
+N> You can use the [`restrictEditing`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#restrictediting) in the DocumentEditorContainer and [`isReadOnly`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor#isreadonly) in the DocumentEditor based on your requirement to change the component to read-only mode.

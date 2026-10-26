@@ -1,12 +1,12 @@
 ---
-title: How to install a Syncfusion NuGet package from a local source
-description: This page explains about how to perform a clean installation of a NuGet package from a local source.
+title: How to Install NuGet Packages for .NET Excel Library | Syncfusion
+description: Perform a clean installation of a NuGet package from a local source for Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Steps for a clean installation of a NuGet package from a local source
+# How to install NuGet packages for .NET Excel Library
 
 To perform a clean installation of a NuGet package from a local source, follow these steps:
  

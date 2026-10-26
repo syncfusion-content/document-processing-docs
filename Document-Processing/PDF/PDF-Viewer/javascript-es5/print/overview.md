@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Print Overview in JavaScript PDF Viewer | Syncfusion
-description: Enable and customize printing, configure print events, cancel print, and monitor printing in the Syncfusion JavaScript PDF Viewer component.
+title: About Syncfusion JavaScript (ES5) PDF Viewer Print | Syncfusion
+description: Learn about introduction of the Syncfusion JavaScript (ES5) PDF Viewer Print section and the key capabilities it provides.
 platform: document-processing
 control: Print
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print Overview in JavaScript PDF Viewer Control
+# About Syncfusion JavaScript (ES5) PDF Viewer Print
 
-The JavaScript PDF Viewer includes built-in printing via the toolbar and APIs so users can control how documents are printed and monitor the process.
+The [JavaScript PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/javascript-pdf-viewer) includes built-in printing via the toolbar and APIs so users can control how documents are printed and monitor the process.
 
 Select **Print** in the built-in toolbar to open the browser print dialog.
 
@@ -18,7 +18,7 @@ Select **Print** in the built-in toolbar to open the browser print dialog.
 
 ## Enable or Disable Print in JavaScript PDF Viewer
 
-The Syncfusion JavaScript PDF Viewer component lets users print a loaded PDF document through the built-in toolbar or programmatic calls. Control whether printing is available by setting the `enablePrint` property (`true` enables printing; `false` disables it).
+The JavaScript PDF Viewer component lets users print a loaded PDF document through the built-in toolbar or programmatic calls. Control whether printing is available by setting the `enablePrint` property (`true` enables printing; `false` disables it).
 
 The following JavaScript examples render the PDF Viewer with printing enabled in standalone and server-backed applications.
 
@@ -33,13 +33,14 @@ ej.pdfviewer.PdfViewer.Inject(
     ej.pdfviewer.LinkAnnotation,
     ej.pdfviewer.ThumbnailView,
     ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.Print
 );
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
     enablePrint: true,
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib'
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/34.1.32/dist/ej2-pdfviewer-lib'
 });
 pdfviewer.appendTo('#PdfViewer');
 
@@ -54,7 +55,8 @@ ej.pdfviewer.PdfViewer.Inject(
     ej.pdfviewer.LinkAnnotation,
     ej.pdfviewer.ThumbnailView,
     ej.pdfviewer.BookmarkView,
-    ej.pdfviewer.TextSelection
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.Print
 );
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
@@ -92,7 +94,7 @@ ej.pdfviewer.PdfViewer.Inject(
 
 var pdfviewer = new ej.pdfviewer.PdfViewer({
     documentPath: 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-    resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib'
+    resourceUrl: 'https://cdn.syncfusion.com/ej2/34.1.32/dist/ej2-pdfviewer-lib'
 });
 pdfviewer.appendTo('#PdfViewer');
 //print on button click
@@ -139,9 +141,9 @@ if (printButton) {
 - Enable or disable printing with the enablePrint property
 - Start printing from UI (toolbar Print) or programmatically using print.print()
 - Control output quality with the printScaleFactor property (0.5–5)
-- Auto‑rotate pages during print using enablePrintRotation
+- Auto-rotate pages during print using enablePrintRotation
 - Choose where printing happens with printMode (Default or NewWindow)
- - Track the lifecycle with printStart and printEnd events
+- Track the lifecycle with printStart and printEnd events
 
 N> Ensure the `resourceUrl` value matches the deployed `ej2-pdfviewer-lib` version. Calling `print()` launches the browser print dialog; behavior varies by browser and may be affected by popup blockers or browser settings.
 

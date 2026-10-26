@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Search for a Text Instance in Xamarin Pdf Viewer (SfPdfViewer)
+# Search for a Text Instance in Xamarin Pdf Viewer
 
 [Xamarin PDF Viewer](https://www.syncfusion.com/xamarin-ui-controls/xamarin-pdf-viewer) provides support to find and highlight texts in normal and rotated PDF documents, and you can also perform text search on rotated texts as well. The following commands are used to perform text search operations:
 

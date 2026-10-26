@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Form Fields API in TypeScript PDF Viewer | Syncfusion
-description:  Learn How to use Form Fields API to enable, update, retrieve and clear in the Syncfusion TypeScript PDF Viewer.
+title: Form Fields Api in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Use the form fields API in the JavaScript (ES6) PDF Viewer to enable, update, retrieve, and clear form fields programmatically from JavaScript or TypeScript.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form fields API in TypeScript PDF Viewer
+# Form Fields API in JavaScript (ES6) PDF Viewer
 
 The PDF Viewer exposes APIs to create, edit, validate, navigate, export, and manage form fields programmatically. The following APIs are available:
 
@@ -39,15 +39,15 @@ Updates the value of one or more form fields programmatically.
 ```
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-const btn = document.getElementById('updateFormFields');
+const btn = document.getElementById('updateFormFieldsValue');
 if (btn) {
   btn.onclick = () => {
    // Retrieve form fields collection
   const fields = pdfviewer.retrieveFormFields();
-  // Find the textbox field by name (Here field name is FIrst Name)
+  // Find the textbox field by name (Here field name is First Name)
   const field = fields.find((f: any) => f.name === 'First Name') || fields[0]; //Update Name accordingly
   if (field) {
-    // give value to be updated in teh for
+    // set the value to be updated in the field
     field.value='John Doe';
     field.tooltip='First'
     pdfviewer.updateFormFieldsValue(field);
@@ -71,7 +71,7 @@ if (btn) {
   btn.onclick = () => {
    // Retrieve form fields collection
   const fields = pdfviewer.retrieveFormFields();
-  // Find the textbox field by name (Here field name is FIrst Name)
+  // Find the textbox field by name (Here field name is First Name)
   const field = fields.find((f: any) => f.name === 'First Name') || fields[0]; //Update Name accordingly
   if (field) {
     // Update textbox field styling and value
@@ -218,7 +218,7 @@ Clears values of specified or all fields without removing the fields themselves.
 ```
 {% tabs %}
 {% highlight ts tabtitle="index.ts" %}
-const btn = document.getElementById('clearFormFields');
+const btn = document.getElementById('clearformfield');
 if (btn) {
   btn.onclick = () => {
   let field=pdfviewer.retrieveFormFields();

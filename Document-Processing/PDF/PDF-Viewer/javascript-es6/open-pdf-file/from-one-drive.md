@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Open PDF from OneDrive in TypeScript PDF Viewer | Syncfusion
-description: Learn how to load PDFs from OneDrive in the Syncfusion TypeScript PDF Viewer component using a server-backed approach.
+title: From One Drive in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Load and display PDF files stored in OneDrive in the JavaScript (ES6) PDF Viewer using a server-backed web service for authentication.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Open PDF from OneDrive
+# Open PDF from OneDrive in JavaScript (ES6) PDF Viewer
 
 Follow these steps to load a PDF from OneDrive using the server-backed PDF Viewer.
 
@@ -15,7 +15,7 @@ Follow these steps to load a PDF from OneDrive using the server-backed PDF Viewe
 
 Create a Microsoft Graph API application and obtain the application ID and tenant ID. Follow this guide: https://learn.microsoft.com/en-us/training/modules/msgraph-access-file-data/3-exercise-access-files-onedrive
 
-**Step 2:** Create a Simple PDF Viewer Sample in TypeScript
+**Step 2:** Create a simple PDF Viewer sample in TypeScript
 
 Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample in TypeScript. This will give you a basic setup of the PDF Viewer component.
 
@@ -53,7 +53,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Load()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to load the PDF files from One Drive.
+5. Modify the [Load()] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to load the PDF files from One Drive.
 
 ```csharp
 [HttpPost("Load")]
@@ -141,7 +141,7 @@ N> Replace the placeholders with your actual values: Tenant ID, Application ID, 
 
 **Step 4:** Configure the PDF Viewer component
 
-Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from OneDrive. Ensure the document name exists in your OneDrive folder.
+Set the [serviceUrl] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from OneDrive. Ensure the document name exists in your OneDrive folder.
 
 ```typescript
 

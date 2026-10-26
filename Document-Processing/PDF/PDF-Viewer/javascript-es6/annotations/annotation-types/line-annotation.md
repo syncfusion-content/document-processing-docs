@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Line annotation in TypeScript PDF Viewer | Syncfusion
-description: Learn to add, edit, and customize Line annotations in Syncfusion TypeScript PDF Viewer with UI and programmatic examples.
+title: Line Annotation in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Line annotations in the JavaScript (ES6) PDF Viewer for marking straight paths on a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Line annotation in TypeScript PDF Viewer
+# Line Annotation in JavaScript (ES6) PDF Viewer
 
 Line is a shape annotation used to mark straight connections or callouts. Common use cases include underline-like rulers, connectors, and measurement guides.
 
@@ -264,6 +264,47 @@ N> In both [Arrow](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master)
 
+### Supported Border Styles
+
+In addition to the default **Solid** border, Line annotations support the following additional border style:
+
+- **Dashed** — dashed line border.
+
+Use [`BorderStyle`](https://ej2.syncfusion.com//documentation/api/pdfviewer/borderStyle) values such as `BorderStyle.Cloud` and `BorderStyle.Dashed` together with the optional `borderDashArray` settings in the [`lineSettings`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#lineSettings) property.
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `borderStyle` | `BorderStyle` | Specifies the border style. Supported values: `BorderStyle.Solid` and `BorderStyle.Dashed`. |
+| `borderDashArray` | `number[]` | Specifies the dash pattern when `borderStyle` is `BorderStyle.Dashed`. |
+
+N> `borderStyle` and `borderDashArray` are preserved during save, reload, import, and export.
+
+#### Apply a Dashed Border
+
+```ts
+export enum BorderStyle {
+    Solid = 'Solid',
+    Dashed = 'Dashed',
+    Cloud = 'Cloud'
+}
+```
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+var pdfviewer = new ej.pdfviewer.PdfViewer();
+pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
+pdfviewer.lineSettings = {
+    strokeColor: '#0066ff',
+    thickness: 2,
+    opacity: 0.9,
+    borderStyle: ej.pdfviewer.BorderStyle.Dashed,
+    borderDashArray: [5, 5]
+  };
+pdfviewer.appendTo("#PdfViewer");
+{% endhighlight %}
+{% endtabs %}
+
 ## Set properties while adding Individual Annotation
 
 Set properties for individual annotations before creating the control using `lineSettings`.
@@ -279,7 +320,7 @@ Refer to the following code snippet to set the default line settings.
 {% highlight ts tabtitle="Standalone" %}
 import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, LineSettings} from '@syncfusion/ej2-pdfviewer';
 
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
 
 const pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
@@ -303,7 +344,7 @@ document.getElementById('line')?.addEventListener('click', function () {
 {% highlight ts tabtitle="Server-Backed" %}
 import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, LineSettings} from '@syncfusion/ej2-pdfviewer';
 
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
 
 const pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';

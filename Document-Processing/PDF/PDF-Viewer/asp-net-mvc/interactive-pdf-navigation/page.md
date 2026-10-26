@@ -1,27 +1,27 @@
 ---
 layout: post
-title: Page Navigation in ASP.NET MVC PDF Viewer control | Syncfusion
-description: Explore how to navigate pages in the Syncfusion ASP.NET MVC PDF Viewer control using built-in options for seamless document viewing.
+title: Page in ASP.NET MVC PDF Viewer | Syncfusion
+description: Use page navigation in the ASP.NET MVC PDF Viewer to move between pages and programmatically control the current page from C# or JavaScript.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Navigation in ASP.NET MVC PDF Viewer control
+# Page Navigation in ASP.NET MVC PDF Viewer
 
 The ASP.NET MVC PDF Viewer supports different internal and external navigations.
 
 ## Toolbar page navigation option
 
-The default toolbar of PDF Viewer contains the following navigation options
+The default toolbar of PDF Viewer contains the following navigation options:
 
 * **Go to page** :- Navigates to the specific page of a PDF document.
-* **Show next page** :- Navigates to the next page of PDF a document.
+* **Show next page** :- Navigates to the next page of a PDF document.
 * **Show previous page** :- Navigates to the previous page of a PDF document.
 * **Show first page** :-  Navigates to the first page of a PDF document.
 * **Show last page** :- Navigates to the last page of a PDF document.
 
-You can enable/disable page navigation option in PDF Viewer using the following code snippet.,
+You can enable/disable page navigation option in PDF Viewer using the following code snippet:
 
 {% tabs %}
 {% highlight html tabtitle="Standalone" %}
@@ -48,7 +48,7 @@ Also, you can programmatically perform page navigation options as follows.
 {% highlight cshtml tabtitle="Standalone" %}
 
 <button id="goToFirstPage" onclick="goToFirstPage()">Go To First Page</button>
-<button id="goToLastPage" onclick="goToLastPage()">Go To last Page</button>
+<button id="goToLastPage" onclick="goToLastPage()">Go To Last Page</button>
 <button id="goToNextPage" onclick="goToNextPage()">Go To Next Page</button>
 <button id="goToPage" onclick="goToPage()">Go To Page</button>
 <button id="goToPreviousPage" onclick="goToPreviousPage()">Go To Previous Page</button>
@@ -84,7 +84,7 @@ Also, you can programmatically perform page navigation options as follows.
 {% highlight cshtml tabtitle="Server-Backed" %}
 
 <button id="goToFirstPage" onclick="goToFirstPage()">Go To First Page</button>
-<button id="goToLastPage" onclick="goToLastPage()">Go To last Page</button>
+<button id="goToLastPage" onclick="goToLastPage()">Go To Last Page</button>
 <button id="goToNextPage" onclick="goToNextPage()">Go To Next Page</button>
 <button id="goToPage" onclick="goToPage()">Go To Page</button>
 <button id="goToPreviousPage" onclick="goToPreviousPage()">Go To Previous Page</button>

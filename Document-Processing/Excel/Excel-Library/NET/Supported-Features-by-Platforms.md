@@ -1,14 +1,33 @@
 ---
-title: Syncfusion Excel (XlsIO) Supported Features by Platforms
-description: Learn here all about supported and non-supported features of Syncfusion Excel (XlsIO) Library and more.
+title: Supported Platforms in .NET Excel Library | Syncfusion
+description: Platform compatibility page describes supported and unsupported Syncfusion .NET Excel Library features across .NET and Blazor platforms.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Supported Features by Platforms
+# Supported Platforms in .NET Excel Library
 
-The list of various supported and non-supported Excel features of Essential<sup>&reg;</sup> XlsIO in different platforms is given in this section.
+The following tables list the supported and unsupported Excel features of *Essential<sup>&reg;</sup> XlsIO* across the supported platforms. Use these tables to confirm whether a feature is available in your target environment before designing your solution.
+
+## How to read these tables
+
+Each cell uses a yes/no indicator:
+
+- **Yes** — the feature is fully supported on the target platform.
+- **No** — the feature is not supported on the target platform.
+
+If a feature is marked **No** and is critical to your scenario, see the related getting-started page for your platform or contact Syncfusion support.
+
+## See also
+
+- [Syncfusion XlsIO overview](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview)
+- [System requirements](https://help.syncfusion.com/document-processing/system-requirements)
+- [Supported features by file format](https://help.syncfusion.com/document-processing/excel/excel-library/net/supported-features-by-file-formats)
+'- [Getting started with XlsIO on .NET Core](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-asp-net-core-c-sharp)
+
+- [Getting started with XlsIO on Blazor](https://help.syncfusion.com/document-processing/excel/excel-library/net/create-read-edit-excel-files-in-blazor-c-sharp)
+
 
 ## Supported Features by .NET Framework and .NET Standard
 
@@ -489,7 +508,7 @@ N> Worksheet to image conversion is supported from .NET Framework 2.0 and .NET S
 
 ## Supported Features in Blazor Platform
 
-The list of supported and non-supported Excel features in Blazor platform is given below.
+The list of supported and non-supported Excel features in Blazor Server-Side and Blazor Client-Side (Blazor WebAssembly) is given below.
 
 <table>
   <tr>

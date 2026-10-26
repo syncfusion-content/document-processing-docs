@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Xamarin Pdf Viewer control | Syncfusion
+title: Accessibility in Xamarin Pdf Viewer | Syncfusion
 description: Learn here all about Accessibility support in Syncfusion<sup>®</sup> Xamarin Pdf Viewer (SfPdfViewer) control and more.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Accessibility in Xamarin Pdf Viewer (SfPdfViewer)
+# Accessibility in Xamarin Pdf Viewer
 
 The SfPdfViewer control has built-in `AutomationId` for inner elements. The `AutomationId` API allows the automation framework to find and interact with the inner elements of the SfPdfViewer control. The following screenshots illustrate the AutomationIds of SfPdfViewer's inner elements. 
 

@@ -1,18 +1,18 @@
 ---
 layout: post
-title: React Spreadsheet getting started with Next.js | Syncfusion
-description: Checkout and learn about how to use React Spreadsheet component of Syncfusion Essential JS 2 in the Next.js project.
+title: Getting Started with React Spreadsheet in Next.js | Syncfusion
+description: Learn how to get started with the Syncfusion React Spreadsheet component in a Next.js project. Explore setup and integration steps.
 control: Next.js
 platform: document-processing
 documentation: ug
 ---
 
-# Creating a Spreadsheet Application in Next.js
-This section provides a step-by-step guide for setting up a Next.js application and integrating the Syncfusion<sup style="font-size:70%">&reg;</sup> React Spreadsheet component.
+# Getting Started with React Spreadsheet in Next.js
+This section provides a step-by-step guide for setting up a Next.js application and integrating the React Spreadsheet component.
 
 ## What is Next.js?
 
-[Next.js](https://nextjs.org/) is a React framework that makes it easy to build fast, SEO-friendly, and user-friendly web applications. It provides features such as server-side rendering, automatic code splitting, routing, and API routes, making it an excellent choice for building modern web applications.
+[Next.js](https://nextjs.org) is a React framework that makes it easy to build fast, SEO-friendly, and user-friendly web applications. It provides features such as server-side rendering, automatic code splitting, routing, and API routes, making it an excellent choice for building modern web applications.
 
 ## Prerequisites
 
@@ -41,7 +41,7 @@ yarn create next-app
 
 Using one of the above commands will lead you to set up additional configurations for the project as below:
 
-1.Define the project name: Users can specify the name of the project directly. Let's specify the name of the project as `ej2-next-js-spreadsheet`.
+1. Define the project name: Users can specify the name of the project directly. Let's specify the name of the project as `ej2-next-js-spreadsheet`.
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -51,7 +51,7 @@ Using one of the above commands will lead you to set up additional configuration
 {% endhighlight %}
 {% endtabs %}
 
-2.Select the required packages.
+2. Select the required packages.
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -68,7 +68,7 @@ Creating a new Next.js app in D:\ej2-next-js-spreadsheet.
 {% endhighlight %}
 {% endtabs %}
 
-3.Once complete the above mentioned steps to create `ej2-next-js-spreadsheet`, navigate to the directory using the below command:
+3. After completing the above steps to create `ej2-next-js-spreadsheet`, navigate to the directory using the below command:
 
 {% tabs %}
 {% highlight bash tabtitle="CMD" %}
@@ -99,34 +99,29 @@ yarn add @syncfusion/ej2-react-spreadsheet
 {% endhighlight %}
 {% endtabs %}
 
-## Import Syncfusion<sup style="font-size:70%">&reg;</sup> CSS styles
+## Import the required CSS styles
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> React components come with [built-in themes](https://ej2.syncfusion.com/react/documentation/appearance/theme), which are available in the installed packages. It’s easy to adapt the Syncfusion<sup style="font-size:70%">&reg;</sup> React components to match the style of your application by referring to one of the built-in themes.
+Themes for Spreadsheet can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
 
-Import the `Material` theme into the **src/app/globals.css** file and removed the existing styles in that file, as shown below:
+This guide uses the `Tailwind 3` theme as an example, sourced from the theme package. In this package, each component includes an `index.css` file that automatically loads all the required dependency styles. To install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
+
+```bash
+npm install @syncfusion/ej2-tailwind3-theme
+```
+
+Add the required Spreadsheet theme style reference to `src/app/globals.css` file. Replace the existing content with the theme import code below.
 
 {% tabs %}
 {% highlight css tabtitle="globals.css" %}
 
-@import '../../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-lists/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-grids/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-react-spreadsheet/styles/material.css';
+@import '../../node_modules/@syncfusion/ej2-tailwind3-theme/styles/spreadsheet/index.css';
 
 {% endhighlight %}
 {% endtabs %}
 
-> To know more about built-in themes and CSS reference for individual components, refer to the [themes](https://ej2.syncfusion.com/react/documentation/appearance/theme) section.
-
 ## Add Syncfusion<sup style="font-size:70%">&reg;</sup> React component
 
-Follow the below steps to add the React Spreadsheet component to the Next.js project:
+Follow the below steps to add the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component to the Next.js project:
 
 1.Before adding the Spreadsheet component to your markup, create a `datasource.tsx` file within the **src/app/** folder and add the Spreadsheet component data.
 
@@ -373,6 +368,8 @@ export let defaultData: object[] = [
 
 2.Then, import and define the Spreadsheet component in the **src/app/page.tsx** file, as shown below: 
 
+> The Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet component relies on browser APIs (DOM, events) and does not support server-side rendering. Add the `'use client'` directive at the top of `page.tsx` to mark the file as a Client Component so the Spreadsheet renders only on the client side and avoids Next.js hydration errors.
+
 {% tabs %}
 {% highlight ts tabtitle="page.tsx" %}
 
@@ -380,7 +377,7 @@ export let defaultData: object[] = [
 import { SpreadsheetComponent, SheetsDirective, SheetDirective, ColumnsDirective, RangesDirective, RangeDirective, RowsDirective, RowDirective, CellsDirective, CellDirective, CellStyleModel, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
 import { defaultData } from './datasource';
 
-export default function Home(this: any) {
+export default function Home() {
   let spreadsheet!: SpreadsheetComponent;
   const boldRight: CellStyleModel = { fontWeight: 'bold', textAlign: 'right' };
   const bold: CellStyleModel = { fontWeight: 'bold' };
@@ -392,10 +389,10 @@ export default function Home(this: any) {
 
   return (
     <>
-      <h2>Syncfusion React Spreadsheet Component</h2>
+      <h2>React Spreadsheet Editor</h2>
       <SpreadsheetComponent openUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open'
         saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save'
-        ref={(Obj) => { spreadsheet = Obj as SpreadsheetComponent }} created={onCreated.bind(this)} >
+        ref={(Obj) => { spreadsheet = Obj as SpreadsheetComponent }} created={onCreated} >
         <SheetsDirective>
           <SheetDirective name="Car Sales Report">
             <RangesDirective>
@@ -427,6 +424,8 @@ export default function Home(this: any) {
 {% endhighlight %}
 {% endtabs %}
 
+> **Note:** The [`openUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openurl) and [`saveUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveurl) endpoints used in this example are provided only for demonstration purposes. For development and production use, we strongly recommend configuring your own local or hosted web service for the Open and Save actions instead of relying on the online demo service. For more information, refer to the [`Web Services`](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/web-services/webservice-overview) section.
+
 ## Run the application
 
 To run the application, use the following command:
@@ -445,3 +444,16 @@ yarn run dev
 {% endtabs %}
 
 To learn more about the functionality of the Spreadsheet component, refer to the [documentation](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/feature-list).
+
+## Troubleshooting
+
+Common setup and runtime issues are listed below with their cause and a resolution.
+
+| Issue | Likely cause | Resolution |
+|---|---|---|
+| **`use client` / hydration error**: `Text content did not match` or error referencing server-rendered HTML. | The Spreadsheet uses browser APIs (DOM, events) and cannot be server-rendered. | Ensure the `'use client'` directive is present at the top of `src/app/page.tsx`. If the component is imported into a Server Component, move it to a separate Client Component file. See [React Server and Client Components](https://react.dev/reference/rsc/use-client). |
+| **CSS not applied / unstyled component** (plain HTML layout, broken toolbar icons). | Theme stylesheets were not imported or imported with the wrong relative path. | Verify the `@import` blocks for all dependency CSS files (`ej2-base`, `ej2-inputs`, etc.) are present in `src/app/globals.css` and the paths resolve from the `src/app/` location. Restart the dev server after editing CSS. |
+| **`Cannot find module '@syncfusion/ej2...'` or peer dependency warnings during `npm install`.** | Package not installed, or React version mismatch. | Re-run `npm install @syncfusion/ej2-react-spreadsheet`. For peer dependency conflicts, ensure React is on a version supported by the package (see the [NuGet package / npm version](../../../../NuGet-Packages) notes) and use `--legacy-peer-deps` only as a temporary workaround. |
+| **License warning or toolbar shows a license banner at runtime.** | Syncfusion license key not registered, or registered after the component renders. | Register the license key in the application entry point **before** rendering any Syncfusion component. See [Register the Syncfusion License Key](../../register-the-syncfusion-license-key) and [Licensing FAQ](../../../../Licensing/licensing-faq). |
+| **Open/Save actions fail with network or CORS errors.** | The `openUrl` / `saveUrl` endpoints are unreachable from the browser, or in production the Syncfusion demo services are rate-limited / blocked. | Host your own Spreadsheet open/save web service and ensure CORS is enabled. Refer to the [Web Services](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/web-services/webservice-overview) section. |
+

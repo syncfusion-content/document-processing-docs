@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Install packages for ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to install the Syncfusion ASP.NET Core PDF Viewer NuGet package and restore the required dependencies.
+title: How to Install Packages for the PDF Viewer in ASP.NET | Syncfusion
+description: Install the NuGet packages required to use the ASP.NET Core PDF Viewer control in your Visual Studio project with the correct dependencies.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Install PDF Viewer packages in ASP.NET Core
+# How to Install Packages for the PDF Viewer in ASP.NET Core PDF Viewer
 
 The Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PDF Viewer requires the [Syncfusion.EJ2.PdfViewer.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.PdfViewer.AspNet.Core/) NuGet package. This package contains all the necessary assemblies, managed wrappers, and server-side components to render and interact with PDF documents.
 
@@ -43,4 +43,4 @@ Replace `*` with the specific version matching the other Syncfusion dependencies
 
 ## Licensing requirement
 
-Syncfusion provides a license key that must be registered in the application. Ensure that  the key is registered in the `Program.cs` or `Startup.cs` file before deploying the application to avoid licensing watermarks. For detailed instructions, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/license-key).
+Syncfusion provides a license key that must be registered in the application. Ensure that the key is registered in the `Program.cs` or `Startup.cs` file before deploying the application to avoid licensing watermarks. For detailed instructions, refer to the [Syncfusion licensing documentation](https://help.syncfusion.com/common/essential-studio/licensing/license-key).

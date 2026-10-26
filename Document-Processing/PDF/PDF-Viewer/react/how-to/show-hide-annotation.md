@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Show or hide annotations in React PDF Viewer | Syncfusion
-description: Learn how to toggle annotation visibility in the Syncfusion React PDF Viewer by exporting and importing annotations.
+title: How to Show or Hide Annotations in React PDF Viewer | Syncfusion
+description: Show or hide annotations in the React PDF Viewer by exporting and importing annotations with a visibility flag for each annotation.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 ---
 
-# Show and hide annotations in PDF Viewer
+# How to Show or Hide Annotations in React PDF Viewer
 
 ## Overview
 
@@ -57,8 +57,11 @@ export class App extends React.Component {
 
     hideAnnotations = () => {
         if (this.pdfViewer.current) {
+            // exportAnnotationsAsObject() returns a Promise that resolves to a JSON string
+            // of the current annotations. Store it so it can be restored later.
             this.pdfViewer.current.exportAnnotationsAsObject().then((value) => {
                 this.setState({ exportObject: value });
+                // deleteAnnotations() removes all annotations from the viewer.
                 this.pdfViewer.current.deleteAnnotations();
             });
         }
@@ -66,6 +69,7 @@ export class App extends React.Component {
 
     showAnnotations = () => {
         if (this.pdfViewer.current && this.state.exportObject) {
+            // importAnnotation() expects the JSON string from exportAnnotationsAsObject().
             this.pdfViewer.current.importAnnotation(JSON.parse(this.state.exportObject));
         }
     }
@@ -91,6 +95,7 @@ export class App extends React.Component {
                 <PdfViewerComponent
                     id="pdfViewer"
                     ref={this.pdfViewer}
+                    // The resourceUrl version must match the installed @syncfusion/ej2-react-pdfviewer package version.
                     resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
                     documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
                     style={{ 'height': '680px' }}

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: About Essential Studio Licensing | Syncfusion
-description: Learn here about Syncfusion Essential Studio license key, how to generate the license key, how to register the license key, and more details.
+title: Register license for Document Solutions NuGet packages | Syncfusion
+description: Learn here how to generate and register the license key for Document Processing solutions specific to NuGet package users.
 platform: document-processing
 control: Essential Studio
 documentation: ug
 ---
 
-# Registering Syncfusion<sup>&reg;</sup> account for direct NuGet.org user
+# Register license for Document Solutions NuGet packages
 
 If you have directly obtained Syncfusion<sup>&reg;</sup> assemblies from [NuGet.org](http://nuget.org/) and do not have a Syncfusion<sup>&reg;</sup> account, follow the steps to obtain a free 30-day trial license key:
 

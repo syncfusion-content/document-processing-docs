@@ -1,20 +1,27 @@
 ---
 layout: post
-title: Overview of Syncfusion license generation - Syncfusion
+title: How to generate license key for Document Solutions | Syncfusion
 description: Learn here about how to generate Syncfusion Document Processing license key for syncfusion Document Processing application for license validation.
 platform: document-processing
 control: Essential Studio
 documentation: ug
 ---
 
-# Generate Syncfusion<sup>&reg;</sup> Document Processing License key
+# How to generate license key for Document Solutions
 
 License keys for Document Processing can be generated from the [License & Downloads](https://syncfusion.com/account/downloads) or [Trial & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) section from your Syncfusion<sup>&reg;</sup> account. 
 
 ![Get License Key](licensing-images/generate-license.png)
 
-I> * Syncfusion<sup>&reg;</sup> license keys are **version and platform specific**, refer to the [KB](https://www.syncfusion.com/kb/8976/how-to-generate-license-key-for-licensed-products) to generate the license key for the required version and platform.
-* Refer this [KB](https://www.syncfusion.com/kb/8951/which-version-syncfusion-license-key-should-i-use-in-my-application) to know about which version of the Syncfusion<sup>&reg;</sup> license key should be used in the application.
+I> * Syncfusion<sup style="font-size:70%">&reg;</sup> license keys are **version‑specific and edition‑specific**, refer to the [KB](https://www.syncfusion.com/kb/8976/how-to-generate-license-key-for-licensed-products) to generate the license key for the required version and platform.
+* **Starting from v31.1.17 (2025 Volume 3 release)**, Syncfusion® introduced a new licensing model where license keys are generated **per edition rather than per platform.** The editions include:
+  - **Essential Studio UI Edition**
+  - **Essential Studio Document SDK**
+  - **Essential Studio PDF Viewer SDK**
+  - **Essential Studio DOCX Editor SDK**
+  - **Essential Studio Spreadsheet Editor SDK**
+  - **Essential Studio Enterprise Edition** (includes all the above)
+* **Previously (before v31.x)**, Syncfusion® generated license keys **per platform** (e.g., File Formats).
 
 ## Claim License key
 

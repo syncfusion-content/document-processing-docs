@@ -1,15 +1,17 @@
 ---
 layout: post
-title: Overview of the EJ2 Javascript Spreadsheet control | Syncfusion
-description: Learn here all about Overview of the Syncfusion EJ2 Javascript Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: About Syncfusion JavaScript Spreadsheet Control | Syncfusion
+description: Learn about the introduction and overview of Syncfusion Essential Studio JavaScript Spreadsheet control and more details.
 platform: document-processing
 control: Index 
 documentation: ug
 ---
 
-# Overview of the EJ2 Javascript Spreadsheet control
+# About Syncfusion JavaScript Spreadsheet Control
 
-The Spreadsheet is an user interactive control to organize and analyze data in tabular format with configuration options for customization. It will load data by importing an Excel/CSV file or from local and remote data sources such as JSON, RESTful services, OData services, and more. The populated data can be exported as Excel with xlsx, xls, CSV and PDF formats.
+The [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) is an user interactive control to organize and analyze data in tabular format with configuration options for customization. It will load data by importing an Excel/CSV file or from local and remote data sources such as JSON, RESTful services, OData services, and more. The populated data can be exported as Excel with XLSX, XLS, CSV and PDF formats.
+
+![JavaScript ES5 Spreadsheet Control](./images/overview-banner.png)
 
 ## Key features
 
@@ -46,6 +48,7 @@ The Spreadsheet is an user interactive control to organize and analyze data in t
 * [Password protection](protect-sheet#protect-workbook): Allows you to protect the workbook with a password.
 * [Multi-line editing](editing): Allows you to insert a line break between paragraphs of the text within a cell in a Spreadsheet.
 * [Calculate range selection](selection): Helps you to select a range or multiple ranges when editing a formula in a cell.
+* [Collaborative editing](collaborative-editing/overview): Allows multiple users to edit the same workbook and view synchronized and selections in real time.
 * [Right-to-left (RTL)](global-local#right-to-left-rtl): Aligns content in the Spreadsheet control from right to left.
 * [Templates](template): Templates can be used to create custom user experiences in the Spreadsheet.
 * [Globalization](global-local): Personalize the Spreadsheet control with different languages, as well as culture-specific number, date, and time formatting.

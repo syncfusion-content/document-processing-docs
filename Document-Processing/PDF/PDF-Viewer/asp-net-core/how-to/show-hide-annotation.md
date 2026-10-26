@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Toggle annotation visibility in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to toggle annotation visibility in the Syncfusion ASP.NET Core PDF Viewer by exporting and restoring annotations with custom buttons.
+title: How to Show or Hide Annotations in ASP.NET Core PDF | Syncfusion
+description: Show or hide annotations in the ASP.NET Core PDF Viewer by exporting and importing annotations with a visibility flag for each annotation.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Show and hide annotations in ASP.NET Core PDF Viewer
+# How to Show or Hide Annotations in ASP.NET Core PDF Viewer
 
 Temporarily hide and restore annotations by exporting them to memory, removing them from the view, and then re-importing them on demand. This is useful for presentations or comparing annotated versus clean document versions.
 
@@ -59,4 +59,4 @@ ViewData["Title"] = "Home page";
 - The `resourceUrl` must match the application's PDF Viewer library version.
 - In server-backed scenarios, replace `resourceUrl` with `serviceUrl` pointing to the ASP.NET Core controller.
 
-[View sample on GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/ShowHideAnnotations)
+[View sample on GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/Show%20and%20Hide%20Annotations/ShowHideAnnotations/ShowHideAnnotations)

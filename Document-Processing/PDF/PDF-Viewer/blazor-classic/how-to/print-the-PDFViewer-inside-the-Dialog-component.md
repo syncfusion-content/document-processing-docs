@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Print the PDFViewer inside the Dialog in Blazor | Syncfusion
+title: How to Print the PDFViewer inside the Dialog in Blazor | Syncfusion
 description: Learn here all about how to print the PDFViewer inside the Dialog in Syncfusion Blazor PDF Viewer component and more.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Print the PDFViewer inside the Dialog in Blazor PDF Viewer Component
+# How to Print the PDFViewer inside the Dialog in Blazor
 
 The PDF Viewer supports printing the loaded PDF file by default. Here, we perform print action once PDFViewer is loaded with document.
 

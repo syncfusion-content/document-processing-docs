@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Add Save Button to Toolbar in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to add, show, hide, enable, and disable a custom Save button in the built-in toolbar of the Syncfusion ASP.NET MVC PDF Viewer component.
+title: How to Add a Save Button to the Toolbar in ASP.NET MVC | Syncfusion
+description: Add, show, hide, enable, and disable a custom Save button in the built-in toolbar of the ASP.NET MVC PDF Viewer using toolbar settings.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Add a Save button to the built-in toolbar
+# How to Add a Save Button to the Toolbar in ASP.NET MVC PDF Viewer
 
 PDF Viewer supports customizing toolbar items, including adding, showing, hiding, enabling, and disabling items.
 
@@ -42,7 +42,7 @@ PDF Viewer supports customizing toolbar items, including adding, showing, hiding
         }
         pdfViewer.toolbarSettings = {
             showTooltip: true,
-            toolbarItems: ['OpenOption', toolItem1'PageNavigationTool', 'MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']
+            toolbarItems: ['OpenOption', toolItem1, 'PageNavigationTool', 'MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']
         };
 
     };
@@ -99,7 +99,7 @@ PDF Viewer supports customizing toolbar items, including adding, showing, hiding
 
 N> Default toolbar items: ['OpenOption', 'PageNavigationTool','MagnificationTool', 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'DownloadOption','UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', 'CommentTool', 'SubmitForm']
 
-### Align property
+## Align property
 
 Specifies the alignment of the `Save` button within the toolbar.
 

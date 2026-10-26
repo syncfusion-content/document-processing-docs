@@ -1,19 +1,19 @@
 ---
-title: Unhide Excel Worksheets | Syncfusion
-description: Explains with an example on how to unhide Excel worksheets which are in hidden state using Interop and XlsIO.
+title: Worksheet Unhiding in .NET Excel Library | Syncfusion
+description: Programmatically unhide hidden Excel worksheets in a workbook using Interop and Syncfusion .NET Excel Library visibility settings.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# Unhide Excel Worksheets
+# Unhiding Worksheets in .NET Excel Library
 
 Hidden sheets can be unhidden. The following code shows how to unhide Excel worksheets with Interop and XlsIO for .NET.
 
 ## Interop
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 private void UnhideWorksheet()
 {
   //Instantiate the application object
@@ -29,14 +29,37 @@ private void UnhideWorksheet()
   worksheet.Visible = XlSheetVisibility.xlSheetVisible;
 
   //Save the file
-  workbook.SaveCopyAs("InteropOutput_UnhiddenWorksheet.xlsx");
+  workbook.SaveAs("InteropOutput_UnhiddenWorksheet.xlsx");
 
   //Quit the application
   excelApp.Quit();
 }
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+private void UnhideWorksheet()
+{
+  //Instantiate the application object
+  var excelApp = new Microsoft.Office.Interop.Excel.Application();
+
+  //Open the workbook with hidden worksheets
+  Workbook workbook = excelApp.Workbooks.Open("InteropOutput_HiddenWorksheet.xlsx");
+
+  //Get the first sheet
+  Worksheet worksheet = (Worksheet)workbook.Sheets["Sheet1"];
+
+  //Unhide the worksheet
+  worksheet.Visible = XlSheetVisibility.xlSheetVisible;
+
+  //Save the file
+  workbook.SaveAs("InteropOutput_UnhiddenWorksheet.xlsx");
+
+  //Quit the application
+  excelApp.Quit();
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Private Sub UnhideWorksheet()
   'Instantiate the application object
   Dim excelApp = New Microsoft.Office.Interop.Excel.Application()
@@ -51,7 +74,7 @@ Private Sub UnhideWorksheet()
   worksheet.Visible = XlSheetVisibility.xlSheetVisible
 
   'Save the file
-  workbook.SaveCopyAs("InteropOutput_UnhiddenWorksheet.xlsx")
+  workbook.SaveAs("InteropOutput_UnhiddenWorksheet.xlsx")
 
   'Quit the application
   excelApp.Quit()
@@ -62,7 +85,7 @@ End Sub
 ## XlsIO
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 private void UnhideWorksheet()
 {
   using (ExcelEngine excelEngine = new ExcelEngine())
@@ -85,7 +108,30 @@ private void UnhideWorksheet()
 }
 {% endhighlight %}
 
-{% highlight vb.net tabtitle="VB.NET" %}
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+private void UnhideWorksheet()
+{
+  using (ExcelEngine excelEngine = new ExcelEngine())
+  {
+    //Instantiate the application object
+    IApplication application = excelEngine.Excel;
+
+    //Open the workbook with hidden worksheets
+    IWorkbook workbook = application.Workbooks.Open("XlsIOOutput_HiddenWorksheet.xlsx");
+
+    //Get the first sheet
+    IWorksheet worksheet = workbook.Worksheets[0];
+
+    //Unhide the worksheet
+    worksheet.Visibility = WorksheetVisibility.Visible;
+
+    //Save the workbook
+    workbook.SaveAs("XlsIOOutput_UnhiddenWorksheet.xlsx");
+  }
+}
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 Private Sub UnhideWorksheet()
   Using excelEngine As ExcelEngine = New ExcelEngine()
     'Instantiate the application object

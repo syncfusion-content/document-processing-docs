@@ -1,12 +1,12 @@
 ---
-title: Find duplicate values in the Excel document | Syncfusion
-description: This page shows how to find duplicate values in the Excel document using formulas with the Syncfusion .NET Excel library (XlsIO).
+title: How to Find Duplicate Values in .NET Excel Library | Syncfusion
+description: Find duplicate values in an Excel document using formulas with the Syncfusion .NET Excel Library in worksheet cells.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to find duplicate values in the Excel document using formulas in C#?
+# How to find duplicate values in .NET Excel Library
 
 The following code illustrates how to find the duplicate values in the Excel document using formulas.
 

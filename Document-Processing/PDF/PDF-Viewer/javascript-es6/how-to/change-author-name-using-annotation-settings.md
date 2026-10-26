@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Change author name using annotation settings in TypeScript PDF Viewer | Syncfusion
-description: Learn how to change the author name and related annotation settings using the annotationSettings API in the TypeScript PDF Viewer.
+title: How to Change the Annotation Author Name in JavaScript | Syncfusion
+description: Change the author name and related annotation settings in the JavaScript (ES6) PDF Viewer using the annotationSettings API and configuration options.
 platform: document-processing
 control: PDF Viewer
 
@@ -9,11 +9,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Change author name using annotation settings in TypeScript PDF Viewer
+# How to Change the Annotation Author Name in JavaScript (ES6) PDF
 
-The PDF Viewer allows customizing individual annotation settings through the `annotationSettings` API, which exposes properties common to all annotations. See the annotationSettings API reference for full details.
+The PDF Viewer allows customizing individual annotation settings through the [`annotationSettings`](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotationSettings) API, which exposes properties common to all annotations. See the annotationSettings API reference for full details.
 
-API: `annotationSettings` (refer to the API reference)
+API: [`annotationSettings`](https://ej2.syncfusion.com/documentation/api/pdfviewer/annotationSettings)
 
 | Property Name | Data type & Default Value | Description |
 |---|---|---|
@@ -28,7 +28,7 @@ API: `annotationSettings` (refer to the API reference)
 | Free Text Settings |
 | allowOnlyTextInput | Boolean (false) | Specifies text-only mode for free text annotations. If true, moving or resizing is disabled. |
 
-Change the author name and other properties using the `annotationSettings` API as shown below.
+Change the author name and other properties using the `annotationSettings` API as shown below. The example assumes a container element `<div id="pdfViewer"></div>` exists in the DOM.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}

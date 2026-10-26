@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Feature modules in TypeScript PDF Viewer | Syncfusion
-description: Learn to inject feature modules in Syncfusion TypeScript PDF Viewer to enable toolbar, search, forms, and more.
+title: Feature Module in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Inject feature modules into the JavaScript (ES6) PDF Viewer to enable only the toolbar, search, forms, annotations, and printing capabilities you need.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Feature modules in TypeScript PDF Viewer
+# Feature Modules in JavaScript (ES6) PDF Viewer
 
 The PDF Viewer features are organized into discrete modules so applications can include only the functionality they require. Inject the necessary modules to extend the viewer's behavior and reduce bundle size. The modules listed below are available for selective inclusion:
 

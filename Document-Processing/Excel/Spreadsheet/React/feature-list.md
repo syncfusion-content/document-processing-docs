@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Feature list in React Spreadsheet component | Syncfusion
-description: Learn here all about Feature list in Syncfusion React Spreadsheet component of Syncfusion Essential JS 2 and more.
+title: Feature List in React Spreadsheet | Syncfusion
+description: Learn about the features available in the Syncfusion React Spreadsheet component, including editing, formatting, formulas, and more.
 control: Feature list 
 platform: document-processing
 documentation: ug
 ---
 
-# Feature list in React Spreadsheet component
+# Feature list in React Spreadsheet
 
-The following table shows the features available in our Syncfusion EJ2 Spreadsheet.
+The following table shows the features available in our [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component.
 
 | **Features** | **Available in EJ2 Spreadsheet** | **Comments** |
 | --- | --- | --- |
@@ -23,6 +23,7 @@ The following table shows the features available in our Syncfusion EJ2 Spreadshe
 | Formulae | Partially | EJ2 supports limited number of [`most used formulas`](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/formulas#supported-formulas)  |
 | Named range | Yes | - |
 | Data Binding | Yes | - |
+| AI Assist | Yes | - |
 | Cell Formatting | Yes | - |
 | Number Formatting | Yes | - |
 | Context menu | Yes | - |

@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Import form data in the Vue PDF Viewer | Syncfusion
-description: Learn how to import PDF form field data (FDF, XFDF, JSON, and from an object) using the Syncfusion Vue PDF Viewer.
+title: Import Form Fields in Vue PDF Viewer | Syncfusion
+description: Import PDF form field data into the Vue PDF Viewer from FDF, XFDF, and JSON sources, or directly from a JavaScript object.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
-# Import PDF Form Data into Vue PDF Viewer
+# Import Form Data in Vue PDF Viewer
 
 The **PDF Viewer** lets you import values into interactive form fields in the currently loaded PDF. You can import data from these formats:
 
@@ -25,7 +26,7 @@ N> If a **server-backed viewer** is used, set `serviceUrl` before importing.
 The following Vue example imports FDF data into the currently loaded PDF.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <button @click="importFdf">Import FDF</button>
@@ -74,7 +75,7 @@ export default {
 The following example imports XFDF data.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <button @click="importXfdf">Import XFDF</button>
@@ -123,7 +124,7 @@ export default {
 The following example imports JSON form data.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <button @click="importJson">Import JSON</button>
@@ -167,7 +168,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-## Common Use Cases
+## Common use cases
 
 - Pre-fill application forms from a database using JSON.
 - Migrate data from other PDF tools using FDF/XFDF.
@@ -182,7 +183,7 @@ export default {
 - [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)
 - [Export form fields](./export-form-fields)
 - [Import Export Events](./import-export-events)
-- [Create Edit form fields](../overview-create-forms)
+- [Create and edit form fields](../overview-create-forms)
 - [Group form fields](../group-form-fields)
 - [Form validation](../form-validation)
 - [Add custom data to form fields](../custom-data)

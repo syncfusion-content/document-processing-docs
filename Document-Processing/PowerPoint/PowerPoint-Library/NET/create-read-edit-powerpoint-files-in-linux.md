@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Create, read and edit a PowerPoint file on Linux
 
-You can create or edit a PowerPoint file in .NET Core on Linux using Syncfusion<sup>&reg;</sup> PowerPoint library. The below are the steps.
+You can create or edit a PowerPoint file in .NET Core on Linux using [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library). The below are the steps.
 
 ## Create a PowerPoint file in .NET Core Console application project on Linux
 
@@ -24,7 +24,7 @@ Step 1: Execute the following command in Linux terminal to create a new .NET Cor
 
 {% tabs %}
 
-{% highlight KCONFIG %}
+{% highlight bash tabtitle="CLI" %}
 
 dotnet new console
 
@@ -34,13 +34,13 @@ dotnet new console
 
 ![Create .NET Core console project](Workingwith-Linux/CreateCore.png)
 
-Step 2: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/) by execute the following command.
+Step 2: Install the [Syncfusion.Presentation.Net.Core](https://www.nuget.org/packages/Syncfusion.Presentation.Net.Core) NuGet package as a reference to your project from [NuGet.org](https://www.nuget.org/) by executing the following command.
 
 {% tabs %}
 
-{% highlight KCONFIG %}
+{% highlight bash tabtitle="CLI" %}
 
-dotnet add package Syncfusion.Presentation.Net.Core -v 17.4.0.39 -s https://www.nuget.org/
+dotnet add package Syncfusion.Presentation.Net.Core -s https://www.nuget.org/
 
 {% endhighlight %}
 
@@ -50,7 +50,7 @@ dotnet add package Syncfusion.Presentation.Net.Core -v 17.4.0.39 -s https://www.
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
-Step 3: Add the following Namespaces in Program.cs file.
+Step 3: Add the following namespaces in the Program.cs file.
 
 {% tabs %}
 
@@ -61,7 +61,7 @@ using System.IO;
 
 {% endtabs %}
 
-Step 4: Add the following code snippet in Program.cs file.
+Step 4: Add the following code snippet in the Program.cs file.
 
 {% tabs %}
 
@@ -117,7 +117,7 @@ Step 5: Execute the following command to restore the NuGet packages.
 
 {% tabs %}
 
-{% highlight KCONFIG %}
+{% highlight bash tabtitle="CLI" %}
 
 dotnet restore
 
@@ -131,7 +131,7 @@ Step 6: Execute the following command in terminal to run the application.
 
 {% tabs %}
 
-{% highlight KCONFIG %}
+{% highlight bash tabtitle="CLI" %}
 
 dotnet run
 
@@ -139,7 +139,7 @@ dotnet run
 
 {% endtabs %}
 
-![Run the Applcation](Workingwith-Linux/Run.png)
+![Run the Application](Workingwith-Linux/Run.png)
 
 The output of the above code example will generate the below PowerPoint slide. The output will be saved in parallel to program.cs file.
 
@@ -152,7 +152,7 @@ The output of the above code example will generate the below PowerPoint slide. T
 **Prerequisites:**
 
 * JetBrains Rider.
-* Install .NET 8 SDK or later.
+* Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 
 Step 1: Open JetBrains Rider and create a new .NET Core console application project.
 * Launch JetBrains Rider.
@@ -163,7 +163,7 @@ Step 1: Open JetBrains Rider and create a new .NET Core console application proj
 * In the New Solution dialog, select **Project Type** as **Console**.
 * Select the target framework (e.g., .NET 8.0, .NET 9.0).
 * Enter a project name and specify the location.
-* Click create.
+* Click **Create**.
 
 ![Creating a new .NET Core console application in JetBrains Rider](Workingwith-Linux/Create-Console-NET-core-sample.png)
 
@@ -181,7 +181,7 @@ Step 2: Install the NuGet package from [NuGet.org](https://www.nuget.org/).
 
 N> Starting with v16.2.0.x, if you reference Syncfusion assemblies from trial setup or from the NuGet feed, you also have to add "Syncfusion.Licensing" assembly reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
 
-Step 3: Add the following Namespaces in Program.cs file.
+Step 3: Add the following namespaces in the Program.cs file.
 
 {% tabs %}
 
@@ -192,7 +192,7 @@ using System.IO;
 
 {% endtabs %}
 
-Step 4: Add the following code snippet in Program.cs file.
+Step 4: Add the following code snippet in the Program.cs file.
 
 {% tabs %}
 
@@ -262,7 +262,9 @@ The output of the above code example will generate the below PowerPoint slide. T
 
 ## Read and edit a PowerPoint file in .NET Core Console application project on Linux
 
-You can edit an existing PowerPoint file on Linux using this library. The below code snippet demonstrates accessing a shape from a slide and changing the text within it.
+You can edit an existing PowerPoint file on Linux using this library. Use the `Sample.pptx` generated from the [Create a PowerPoint file](#create-a-powerpoint-file-in-net-core-console-application-project-on-linux) section above as the input. The below code snippet demonstrates accessing a shape from a slide and changing the text within it.
+
+N> If you encounter a `libSkiaSharp not found` exception on .NET 8 or .NET 9 on Linux, refer to [How to fix LibSkiaSharp not found issue](https://help.syncfusion.com/document-processing/faq/how-to-resolve-libskiasharp-not-found-exception-in-net8-and-net9-on-linux) for troubleshooting.
 
 {% tabs %}
 
@@ -288,6 +290,6 @@ pptxDoc.Close();
 
 {% endtabs %}
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page. 
 
 An online sample link to [create a PowerPoint Presentation](https://document.syncfusion.com/demos/powerpoint/default#/tailwind) in ASP.NET Core. 

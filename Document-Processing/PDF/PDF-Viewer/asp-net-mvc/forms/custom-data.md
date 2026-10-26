@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Add custom data to form fields in MVC PDF Viewer | Syncfusion
-description: Learn how to attach, update, and read custom data on PDF form fields using the Form Designer UI and APIs in the Syncfusion MVC PDF Viewer.
+title: Custom Data in ASP.NET MVC PDF Viewer | Syncfusion
+description: Attach, update, and read custom data on PDF form fields in the ASP.NET MVC PDF Viewer using the Form Designer UI and the form fields API.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
-# Add Custom Data to PDF Form Fields in MVC PDF Viewer
+# Custom Data on Form Fields in ASP.NET MVC PDF Viewer
 
 The **Syncfusion MVC PDF Viewer** allows you to attach **custom application-specific data** to form fields by using the customData property. This enables you to associate business identifiers, tags, validation hints, or workflow metadata with form fields.
 
@@ -170,8 +171,9 @@ You can access the customData property from any form field at any point in your 
 
 - [Form Designer overview](./overview)
 - [Form Designer Toolbar](../toolbar-customization/form-designer-toolbar)
-- [Create form fields](./overview-create-forms)
-- [Group form fields](../group-form-fields)
+- [Create form fields](./manage-form-fields/create-form-fields)
+- [Modify form fields](./manage-form-fields/modify-form-fields)
+- [Group form fields](./group-form-fields)
 - [Form flags](./form-constrain)
 - [Form validation](./form-validation)
 - [Form fields API](./form-fields-api)

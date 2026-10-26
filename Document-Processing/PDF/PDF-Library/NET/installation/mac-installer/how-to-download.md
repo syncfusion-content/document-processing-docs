@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Downloading Syncfusion PDF Mac installer - Syncfusion
-description: Learn here about the how to download Syncfusion PDF Mac installer from our syncfusion website with license.
+title: How to Download Syncfusion PDF Mac Installer | Syncfusion
+description: Learn how to download the Syncfusion PDF Mac installer using your licensed account and prepare for installation.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 --- 
 
-# Downloading Syncfusion<sup>&reg;</sup> PDF Mac Installer
+# How to Download Syncfusion PDF Mac Installer
 
 The Syncfusion<sup>&reg;</sup> installer can be downloaded from the [Syncfusion](https://www.syncfusion.com/) website. You can either download the licensed installer or try our trial installer depending on your license.
 

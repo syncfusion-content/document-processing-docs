@@ -1,12 +1,12 @@
 ---
-title: How to show the leader line on Excel chart | Syncfusion 
-description: Code example to show the leader line on Excel chart using Syncfusion .NET Excel library (XlsIO). 
+title: How to Show Leader Lines in .NET Excel Library | Syncfusion
+description: Show leader lines on an Excel chart using the Syncfusion .NET Excel Library for chart data label display settings.
 platform: document-processing 
 control: XlsIO 
 documentation: UG
 ---
 
-# How to show the leader line on Excel chart?
+# How to show leader lines in .NET Excel Library
 
 The following code snippets demonstrate how to show the leader line on Excel chart using C# (cross-platform and Windows-specific) and VB.NET.
 

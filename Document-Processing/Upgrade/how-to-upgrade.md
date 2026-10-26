@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Upgrading Syncfusion Document Processing installer to latest version
+title: How to upgrade Document Processing installer to latest | Syncfusion
 description: Learn here about the how upgrade Syncfusion Document Processing installer to a latest version from website and control panel.
 platform: document-processing
 control: Essential Studio
 documentation: ug
 ---
 
-# Upgrading Syncfusion<sup>&reg;</sup> Document Processing installer to a latest version
+# How to upgrade Document Processing installer to latest
 
 Syncfusion<sup>&reg;</sup> releases new volumes once every three months, with exciting new features. There will be one Service Pack release for these volume releases. Service Pack releases are provided to address major bug fixes in the volume releases.
 

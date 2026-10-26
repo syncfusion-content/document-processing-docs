@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Working with Hyperlink navigation
+#  Hyperlink navigation in PDF viewer Xamarin.iOS
 
 PDF viewer supports hyperlink navigation that detects hyperlinks and tapping on the hyperlink will open the URL in the browser.
 

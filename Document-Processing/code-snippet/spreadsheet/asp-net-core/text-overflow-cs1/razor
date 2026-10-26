@@ -1,0 +1,57 @@
+@using Syncfusion.EJ2.Spreadsheet
+
+@Html.EJS().Spreadsheet("spreadsheet").Sheets(sheet =>
+    {
+        sheet.Name("Famous Quotes")
+        .Columns(column =>
+        {
+            column.Width(160).Add();
+            column.Width(110).Add();
+            column.Width(110).Add();
+            column.Width(100).Add();
+            column.Width(100).Add();
+            column.Width(110).Add();
+        })
+        .Rows(rows =>
+        {
+            rows.Cells(cell =>
+            {
+                cell.Value("Famous Quotes")
+                    .Style(new SpreadsheetCellStyle()
+                    {
+                        FontWeight = "bold",
+                        FontSize = "16pt"
+                    }).Add();
+            }).Add();
+
+            rows.Cells(cell =>
+            {
+                cell.Value("Success is the sum of small efforts repeated day after day.")
+                    .Style(new SpreadsheetCellStyle() { FontSize = "14pt" }).Add();
+            }).Add();
+
+            rows.Cells(cell =>
+            {
+                cell.Value("Quality is never an accident it is always the result of intelligent effort.")
+                    .Style(new SpreadsheetCellStyle() { FontSize = "14pt" }).Add();
+            }).Add();
+
+            rows.Cells(cell =>
+            {
+                cell.Value("The future depends on what you do today and how consistently you do it.")
+                    .Style(new SpreadsheetCellStyle() { FontSize = "14pt" }).Add();
+            }).Add();
+
+            rows.Cells(cell =>
+            {
+                cell.Value("Well organized information helps teams make better decisions and achieve goals.")
+                    .Style(new SpreadsheetCellStyle() { FontSize = "14pt" }).Add();
+            }).Add();
+
+            rows.Cells(cell =>
+            {
+                cell.Value("Great achievements are built through planning persistence and continuous improvement.")
+                    .Style(new SpreadsheetCellStyle() { FontSize = "14pt" }).Add();
+            }).Add();
+        }).Add();
+    }).Render()

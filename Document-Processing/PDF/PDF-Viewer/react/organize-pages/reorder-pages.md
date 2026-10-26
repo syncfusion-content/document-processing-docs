@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Reorder pages in Organize Pages in React PDF Viewer | Syncfusion
-description: How to rearrange pages using drag-and-drop and grouping in the Organize Pages UI of the Syncfusion React PDF Viewer.
+title: Reorder Pages in React PDF Viewer | Syncfusion
+description: Reorder pages in the React PDF Viewer using drag-and-drop and grouping inside the Organize Pages panel, or through programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Reorder pages using the Organize Pages view
+# Reorder Pages in React PDF Viewer
 
 ## Overview
 
@@ -53,11 +53,11 @@ This guide describes how to rearrange pages in a PDF using the **Organize Pages*
 
 ## Enable or disable reorder option
 
-To enable or disable the **Reorder pages** option in the Organize Pages, update the [`pageOrganizerSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/pageorganizersettings). See [Organize pages toolbar customization](./toolbar#enable-or-disable-the-rearrange-option) for the guidelines
+To enable or disable the **Reorder pages** option in the Organize Pages, update the [`pageOrganizerSettings`] (https://ej2.syncfusion.com/react/documentation/api/pdfviewer/pageorganizersettings). See [Organize pages toolbar customization](./toolbar#enable-or-disable-the-rearrange-option) for the guidelines.
 
 ## Troubleshooting
 
-- **Thumbnails won't move**: Confirm [`pageOrganizerSettings.canRearrange`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/pageorganizersettingsmodel#canrearrange) is is not set to `false`.
+- **Thumbnails won't move**: Confirm [`pageOrganizerSettings.canRearrange`] (https://ej2.syncfusion.com/react/documentation/api/pdfviewer/pageorganizersettingsmodel#canrearrange) is not set to `false`.
 - **Changes not saved**: Verify [`serviceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#serviceurl) (server) or [`resourceUrl`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer#resourceurl) (standalone) is configured correctly.
 
 ## Related topics

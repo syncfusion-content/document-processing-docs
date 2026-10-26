@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Form validation in the Angular PDF Viewer component | Syncfusion
-description: Learn how to enable built-in form field validation and validate missing required fields in the Syncfusion Angular PDF Viewer.
+title: Form Validation in Angular PDF Viewer | Syncfusion
+description: Enable built-in PDF form field validation in the Angular PDF Viewer and detect missing required fields while users complete a form.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Validate PDF Form Fields in Angular PDF Viewer
+# Form Validation in Angular PDF Viewer
 
 The Syncfusion **Angular PDF Viewer** provides built-in support for **validating form fields** before end users perform actions such as **printing**, **downloading**, or **submitting** a PDF document. Validation ensures that all required form fields are completed before allowing these actions to proceed.
 This feature helps enforce data completeness and improves the reliability of collected form data.
@@ -24,7 +24,7 @@ Form field validation follows this flow:
 
 ## Enable PDF Form Field Validation
 
-Enable validation by setting the [enableFormFieldsValidation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#validateformfields) property to `true` and handling the `validateFormFields` event.
+Enable validation by setting the [enableFormFieldsValidation](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#enableformfieldsvalidation) property to `true` and handling the `validateFormFields` event.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}

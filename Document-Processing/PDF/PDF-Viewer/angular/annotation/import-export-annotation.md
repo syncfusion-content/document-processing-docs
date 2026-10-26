@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Import export annotation in Angular PDF Viewer component | Syncfusion
-description: Learn here all about Import export annotation in Syncfusion Angular PDF Viewer component of Syncfusion Essential JS 2 and more.
+title: Import Export Annotation in Angular PDF Viewer | Syncfusion
+description: Export annotations from the Angular PDF Viewer in supported formats using the built-in UI options and programmatic APIs.
 platform: document-processing
 control: Import export annotation
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Import and export annotations
+# Export Annotations in Angular PDF Viewer
 
 The PDF Viewer control supports importing and exporting annotations as JSON or XFDF. Use the annotation toolbar to add, edit, import, or export annotations for the loaded PDF document.
 
@@ -31,7 +31,7 @@ Using the annotation toolbar:
 * Click the Add or Edit annotation button in the PDF Viewer toolbar.
 * The annotation toolbar will appear.
 * Click the Comment Panel button in the annotation toolbar.
-* The comments panel will displayed.
+* The comments panel will be displayed.
 * Click the **More Option** button in the comment panel container.
 * Select the Import annotations from JSON file option to import annotations from a JSON file.
 
@@ -495,6 +495,7 @@ import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService,
   })
   export class AppComponent implements OnInit {
     @ViewChild('pdfviewer')
+    public pdfviewerControl: PdfViewerComponent;
     public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
     onImportAnnotationsClick() {
       var pdfviewer = (<any>document.getElementById('pdfViewer')).ej2_instances[0];
@@ -531,6 +532,7 @@ import { PdfViewerComponent, LinkAnnotationService, BookmarkViewService,
   })
   export class AppComponent implements OnInit {
     @ViewChild('pdfviewer')
+    public pdfviewerControl: PdfViewerComponent;
     public service: string = 'https://localhost:44347/pdfviewer';
     public document: string = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
     onImportAnnotationsClick() {
@@ -820,7 +822,7 @@ The PDF Viewer control provides the support to export the annotations as JSON fi
 * Click the Add or Edit annotation button in the PDF Viewer toolbar.
 * The annotation toolbar will appear.
 * Click the Comment Panel button in the annotation toolbar.
-* The comments panel will displayed.
+* The comments panel will be displayed.
 * Click the **More Option** button in the comment panel container.
 * Select the Export annotation to JSON file option to export annotations to a JSON file.
 
@@ -830,7 +832,7 @@ The PDF Viewer control provides the support to export the annotations as JSON fi
 
 ![ExportAnnotation](../images/export_annotation_to_XFDF.png)
 
->Export annotations will be in the disabled state when the loaded PDF document does not contain any annotations.
+>The Export annotations option will be disabled when the loaded PDF document does not contain any annotations.
 
 ## Exporting annotation using PDF Viewer API
 

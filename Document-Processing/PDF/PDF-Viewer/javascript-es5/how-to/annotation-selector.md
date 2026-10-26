@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Annotation selector customization | Syncfusion PDF Viewer
-description: Learn how to customize annotation selectors in the JavaScript PDF Viewer component using annotationSelectorSettings with examples.
+title: How to Customize Annotation Selectors in JavaScript | Syncfusion
+description: Customize annotation selectors in the JavaScript (ES5) PDF Viewer using annotationSelectorSettings to control how users select and resize annotations.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize annotation selectors in JavaScript ES5 PDF Viewer
+# How to Customize Annotation Selectors in JavaScript (ES5) PDF Viewer
 
-Customize the annotation selector using the [annotationSelectorSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/#annotationselectorsettings) property of the PDF Viewer.
+Customize the annotation selector using the [annotationSelectorSettings](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#annotationselectorsettings) property of the PDF Viewer.
 
 Example: Customize the selector of a shape annotation
 

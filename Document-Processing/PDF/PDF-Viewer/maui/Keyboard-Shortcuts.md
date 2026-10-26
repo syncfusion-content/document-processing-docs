@@ -8,9 +8,9 @@ documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Keyboard shortcuts in .NET MAUI PDF Viewer (SfPdfViewer)
+# Keyboard Shortcuts in .NET MAUI PDF Viewer
 
-The [.NET MAUI PDF viewer](https://www.syncfusion.com/maui-controls/maui-pdf-viewer) allows the users to perform certain operations such as page navigation using keyboard shortcuts in Windows and macOS platforms. The below table lists the available shortcuts and the corresponding operations.
+The [.NET MAUI PDF viewer](https://www.syncfusion.com/pdf-viewer-sdk/net-maui-pdf-viewer) allows the users to perform certain operations such as page navigation using keyboard shortcuts in Windows and macOS platforms. The below table lists the available shortcuts and the corresponding operations.
 
 <table>
 <tr>
@@ -142,7 +142,7 @@ The [.NET MAUI PDF viewer](https://www.syncfusion.com/maui-controls/maui-pdf-vie
 </tr>
 </table>
 
-### Limitations
+## Limitations
 
 * The `Ctrl` + mouse wheel combinations for zooming are applicable only for Windows. There is no support for this combination in macOS.
 * In Windows, it is the default behavior of UI elements to receive notification of the key pressed event only when they are focused. So, while using keyboard shortcuts in Windows, please make sure that the PDF viewer control is focused by either tapping or clicking on it. 
@@ -150,6 +150,6 @@ The [.NET MAUI PDF viewer](https://www.syncfusion.com/maui-controls/maui-pdf-vie
 N> Use the `Command` key instead of the `Ctrl` key in macOS.
 
 ## See Also
-- [Toolbar Customization](../toolbar-customization)
-- [Text Search](../text-search)
-- [Annotations Overview](../annotations-overview)
+- [Toolbar Customization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/toolbar-customization)
+- [Text Search](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/text-search)
+- [Annotations Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-overview)

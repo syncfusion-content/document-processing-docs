@@ -1,0 +1,55 @@
+---
+layout: post
+title: Openssl Error in React PDF Viewer | Syncfusion
+description: Resolve the ERR_OSSL_EVP_UNSUPPORTED error in the React PDF Viewer by enabling the Node.js OpenSSL legacy provider option during development.
+platform: document-processing
+control: PDF Viewer
+documentation: ug
+---
+
+# Resolve ERR_OSSL_EVP_UNSUPPORTED Error in React PDF Viewer
+
+When running your React application with the PDF Viewer, you may encounter the **ERR_OSSL_EVP_UNSUPPORTED** error. This error is related to OpenSSL, which is a cryptographic library used by Node.js for secure communication and encryption tasks. This specific error typically occurs when Node.js is trying to use cryptographic algorithms or routines that are not supported by the current version of OpenSSL being used.
+
+## Solution
+
+To resolve this issue, run the following command in the **same terminal session** in which you plan to start your application, then start the app from that same session:
+
+{% tabs %}
+{% highlight bash tabtitle="Windows (PowerShell)" %}
+
+$env:NODE_OPTIONS = "--openssl-legacy-provider"
+
+{% endhighlight %}
+{% highlight bash tabtitle="Windows (CMD)" %}
+
+set NODE_OPTIONS=--openssl-legacy-provider
+
+{% endhighlight %}
+{% highlight bash tabtitle="macOS/Linux" %}
+
+export NODE_OPTIONS=--openssl-legacy-provider
+
+{% endhighlight %}
+{% endtabs %}
+
+After setting the environment variable, start your application in the same terminal:
+
+```bash
+npm run dev
+```
+
+## Permanent Solution
+
+To avoid running this command every time, you can add it to your `package.json` scripts:
+
+```json
+{
+  "scripts": {
+    "dev": "SET NODE_OPTIONS=--openssl-legacy-provider && vite",
+    "build": "SET NODE_OPTIONS=--openssl-legacy-provider && vite build"
+  }
+}
+```
+
+N> For Mac/Linux, use `export NODE_OPTIONS=--openssl-legacy-provider &&` instead of `SET NODE_OPTIONS=--openssl-legacy-provider &&` in the scripts.

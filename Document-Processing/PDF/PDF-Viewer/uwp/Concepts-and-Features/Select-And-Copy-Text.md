@@ -7,7 +7,7 @@ control: SfPdfViewerControl
 documentation: ug
 ---
 
-# Working with text selection in UWP PDF Viewer (SfPdfViewer)
+# Working with text selection in UWP Pdf Viewer
 
 The PDF Viewer supports text selection and copy feature, which allows user to select the text in the PDF document and copy it to the clipboard. This section illustrates about how to use this feature.
 
@@ -105,3 +105,8 @@ private void PdfViewer_TextSelectionCompleted(object sender, TextSelectionComple
 
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+- [Viewing PDF](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/viewing-pdf)
+- [Text Search](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-text-search)
+- [Enable and disable text selection](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/how-to/enable-and-disable-text-selection)

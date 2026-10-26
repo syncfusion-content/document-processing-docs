@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Hyperlink navigation in Vue PDF Viewer | Syncfusion
-description: Learn how to configure hyperlink navigation, including table-of-contents entries, in the Syncfusion PDF Viewer control for Vue.
+title: Hyperlink in Vue PDF Viewer | Syncfusion
+description: Configure hyperlink navigation in the Vue PDF Viewer, including how internal and external links open when users click them.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Hyperlink navigation in Vue PDF Viewer
+# Hyperlink Navigation in Vue PDF Viewer
 
 The PDF Viewer consolidates hyperlink-driven experiences, including inline links and table-of-contents (TOC) entries that target in-document destinations. These elements surface contextual entry points so users can jump directly to relevant sections without manual scrolling.
 
@@ -473,6 +473,6 @@ export default {
 
 ## See also
 
-- [Bookmark navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/interactive-pdf-navigation/bookmark-navigation/)
-- [Page navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/interactive-pdf-navigation/page-navigation/)
-- [Page thumbnail navigation](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/interactive-pdf-navigation/page-thumbnail-navigation/)
+- [Bookmark navigation](bookmark)
+- [Page navigation](page)
+- [Page thumbnail navigation](page-thumbnail)

@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Working with magnification
+#  Working with magnification in PDF Viewer Xamarin.iOS
 
 Magnification of the PDF document can be done in multiple ways and the different ways are explained below.
 

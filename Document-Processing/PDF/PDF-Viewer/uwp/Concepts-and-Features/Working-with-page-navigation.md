@@ -7,7 +7,7 @@ control: PDF viewer
 documentation: ug
 ---
 
-# Working with page navigation in UWP PDF Viewer (SfPdfViewer)
+# Working with page navigation in UWP PDF Viewer
 
 The PdfViewer allows navigation through the pages of PDF documents. The navigation from one page to other can be done by using “GoToPage” method.
 
@@ -149,3 +149,8 @@ Private Sub PdfViewer_PageChanged(sender As Object, e As PageChangedEventArgs) H
 End Sub
 {% endhighlight %}
 {% endtabs %}
+
+## See Also
+- [Toggle display of Page number](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/how-to/toggle-the-display-of-the-page-number)
+- [Disable thumbnail view](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/how-to/disable-thumbnail-view)
+- [Customize the scrollbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/how-to/customize-the-scrollbar)

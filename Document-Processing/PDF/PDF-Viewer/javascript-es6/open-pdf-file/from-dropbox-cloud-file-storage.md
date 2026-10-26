@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Open PDF from Dropbox cloud storage in TypeScript PDF Viewer | Syncfusion
-description: Learn how to load PDFs from Dropbox cloud storage in the Syncfusion TypeScript PDF Viewer component using standalone and server-backed approaches.
+title: From Dropbox Cloud File Storage in JavaScript (ES6) PDF | Syncfusion
+description: Load and display PDF files stored in Dropbox cloud storage in the JavaScript (ES6) PDF Viewer using standalone and server-backed approaches.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Open PDF from Dropbox cloud storage
+# Open PDF from Dropbox Cloud Storage in JavaScript (ES6) PDF Viewer
 
 The TypeScript PDF Viewer component supports loading PDF files from Dropbox using either the standalone or the server-backed PDF Viewer. The following steps demonstrate both approaches.
 
@@ -15,13 +15,13 @@ The TypeScript PDF Viewer component supports loading PDF files from Dropbox usin
 
 To load a PDF file from Dropbox cloud file storage in a PDF Viewer, you can follow the steps below
 
-**Step 1** Create a Dropbox API app
+**Step 1:** Create a Dropbox API app
 
 Follow the [Dropbox documentation](https://www.dropbox.com/developers/documentation/dotnet#tutorial) to create a Dropbox API app. This enables programmatic access with secure credentials and allows generation of access tokens or configuration of OAuth flows.
 
 **Step 2:** Create a simple PDF Viewer sample in TypeScript
 
-Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample in JavaScript. This provides a basic setup of the PDF Viewer component.
+Start by following the steps provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample in TypeScript. This provides a basic setup of the PDF Viewer component.
 
 **Step 3:** Modify the src/app/app.ts file in the TypeScript project
 
@@ -88,7 +88,7 @@ using Dropbox.Api;
 using Dropbox.Api.Files;
 ```
 
-4. Add the following private fields and constructor parameters to the `PdfViewerController` class, In the constructor, assign the values from the configuration to the corresponding fields
+4. Add the following private fields and constructor parameters to the `PdfViewerController` class. In the constructor, assign the values from the configuration to the corresponding fields
 
 ```csharp
 private IConfiguration _configuration;
@@ -105,7 +105,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Load()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to load the PDF files from Dropbox cloud file storage.
+5. Modify the [Load()] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to load the PDF files from Dropbox cloud file storage.
 
 ```csharp
  [HttpPost("Load")]
@@ -148,7 +148,7 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
 }
 ```
 
-6. Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+6. Open the `appsettings.json` file in your web service project. Add the following lines below the existing `"AllowedHosts"` configuration
 
 ```json
 {
@@ -168,7 +168,7 @@ N> Replace the placeholders with your actual Dropbox values: access token and fo
 
 **Step 4:** Configure the PDF Viewer component
 
-Set the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from Dropbox. Ensure the document name exists in your Dropbox folder.
+Set the [serviceUrl] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) to your web service endpoint (replace the localhost URL with your server URL). Set documentPath to the PDF file name to load from Dropbox. Ensure the document name exists in your Dropbox folder.
 
 ```typescript
 

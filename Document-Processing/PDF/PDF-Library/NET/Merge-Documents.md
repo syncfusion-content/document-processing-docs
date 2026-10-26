@@ -1,25 +1,27 @@
 ---
-title: Merge PDF Documents | Syncfusion
-description: Learn how to merge or combine multiple PDF documents as one and how to import pages from one document to another using Syncfusion .NET PDF library
+title: Merge PDF Documents in .NET PDF Library | Syncfusion
+description: Learn how to merge or combine multiple PDF documents and import pages from one document to another using Syncfusion .NET PDF.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# Merge PDF Documents using .NET PDF Library
+# Merge PDF Documents in .NET PDF Library
 
-Essential<sup>&reg;</sup> PDF supports [merging multiple PDF](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/merge-pdf) documents from disk and stream.
+Essential<sup>&reg;</sup> PDF supports [merging multiple PDF](https://www.syncfusion.com/document-processing/pdf-framework/net/pdf-library/merge-pdf) documents from disk and streams.
 
 Check the following video to quickly get started with merge PDF document in .NET using the PDF Library.
 {% youtube "https://www.youtube.com/watch?v=IHOgJnFyj6A" %}
 
-## Merging multiple documents from disk and stream
+## Merging multiple documents from disk and streams
 
-You can merge the multiple PDF document using [Merge](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_Merge_Syncfusion_Pdf_PdfDocumentBase_Syncfusion_Pdf_Parsing_PdfLoadedDocument_) method of [PdfDocumentBase](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html) class, by specifying the path of the documents in a string array.
+You can merge multiple PDF documents using the [Merge](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html#Syncfusion_Pdf_PdfDocumentBase_Merge_Syncfusion_Pdf_PdfDocumentBase_Syncfusion_Pdf_Parsing_PdfLoadedDocument_) method of the [PdfDocumentBase](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfDocumentBase.html) class, by specifying the path of the documents in a string array.
 
 Refer to the following code example to merge multiple documents from disk.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Merge%20PDFs/Merge-multiple-documents-from-stream/.NET/Merge-multiple-documents-from-stream/Program.cs" %} 
+
+using Syncfusion.Pdf;
 
 //Due to platform limitations, the PDF file cannot be loaded from disk. However, you can merge multiple documents from stream using the following code snippet.
 //Creates a PDF document.
@@ -29,15 +31,16 @@ string[] source = { "file1.pdf", "file2.pdf" };
 //Merges PDFDocument.
 PdfDocumentBase.Merge(finalDoc, source);
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-finalDoc.Save(stream);
+//Save the document.
+finalDoc.Save("Output.pdf");
 //Close the document.
 finalDoc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
 
 //Creates a new PDF document.
 PdfDocument finalDoc = new PdfDocument();
@@ -54,6 +57,8 @@ finalDoc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
 
 'Creates a new PDF document.
 Dim finalDoc As New PdfDocument()
@@ -76,63 +81,66 @@ You can merge the PDF document streams by using the following code example.
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Merge%20PDFs/Merge-multiple-documents-from-stream/.NET/Merge-multiple-documents-from-stream/Program.cs" %} 
 
+using Syncfusion.Pdf;
+
 //Creates a PDF document.
 PdfDocument finalDoc = new PdfDocument();
-FileStream stream1 = new FileStream("file1.pdf", FileMode.Open, FileAccess.Read);
-FileStream stream2 = new FileStream("file2.pdf", FileMode.Open, FileAccess.Read);
-//Creates a PDF stream for merging.
-Stream[] streams = { stream1, stream2 };
-//Merges PDFDocument.
-PdfDocumentBase.Merge(finalDoc, streams);
+using (FileStream stream1 = new FileStream("file1.pdf", FileMode.Open, FileAccess.Read))
+using (FileStream stream2 = new FileStream("file2.pdf", FileMode.Open, FileAccess.Read))
+{
+    //Creates a PDF stream for merging.
+    Stream[] streams = { stream1, stream2 };
+    //Merges PDFDocument.
+    PdfDocumentBase.Merge(finalDoc, streams);
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-finalDoc.Save(stream);
-//Close the document.
-finalDoc.Close(true);
-//Disposes the streams.
-stream1.Dispose();
-stream2.Dispose();
+    //Save the document.
+    finalDoc.Save("Output.pdf");
+    //Close the document.
+    finalDoc.Close(true);
+}
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+
 //Creates a PDF document.
 PdfDocument finalDoc = new PdfDocument();
-Stream stream1 = File.OpenRead("file1.pdf");
-Stream stream2 = File.OpenRead("file2.pdf");
-//Creates a PDF stream for merging.
-Stream[] streams = { stream1, stream2 };
-//Merges PDFDocument.
-PdfDocumentBase.Merge(finalDoc, streams);
+using (Stream stream1 = File.OpenRead("file1.pdf"))
+using (Stream stream2 = File.OpenRead("file2.pdf"))
+{
+    //Creates a PDF stream for merging.
+    Stream[] streams = { stream1, stream2 };
+    //Merges PDFDocument.
+    PdfDocumentBase.Merge(finalDoc, streams);
 
-//Saves the document.
-finalDoc.Save("sample.pdf");
-//Closes the document.
-finalDoc.Close(true);
-//Disposes the streams.
-stream1.Dispose();
-stream2.Dispose();
+    //Saves the document.
+    finalDoc.Save("sample.pdf");
+    //Closes the document.
+    finalDoc.Close(true);
+}
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.Pdf
+
 'Creates a PDF document.
 Dim finalDoc As New PdfDocument()
-Dim stream1 As Stream = File.OpenRead("file1.pdf")
-Dim stream2 As Stream = File.OpenRead("file2.pdf")
-'Creates a PDF stream for merging.
-Dim streams As Stream() = {stream1, stream2}
-'Merges PDFDocument.
-PdfDocumentBase.Merge(finalDoc, streams)
+Using stream1 As Stream = File.OpenRead("file1.pdf")
+    Using stream2 As Stream = File.OpenRead("file2.pdf")
+        'Creates a PDF stream for merging.
+        Dim streams As Stream() = {stream1, stream2}
+        'Merges PDFDocument.
+        PdfDocumentBase.Merge(finalDoc, streams)
 
-'Saves the document.
-finalDoc.Save("sample.pdf")
-'Closes the document.
-finalDoc.Close(True)
-'Disposes the streams.
-stream1.Dispose()
-stream2.Dispose()
+        'Saves the document.
+        finalDoc.Save("sample.pdf")
+        'Closes the document.
+        finalDoc.Close(True)
+    End Using
+End Using
 
 {% endhighlight %}
 {% endtabs %}
@@ -146,18 +154,18 @@ Essential<sup>&reg;</sup> PDF provides support for importing the pages from one 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Merge%20PDFs/Importing-pages-from-one-document-another-document/.NET/Importing-pages-from-one-document-another-document/Program.cs" %} 
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
-FileStream docStream = new FileStream("file1.pdf", FileMode.Open, FileAccess.Read);
-//Load the PDF document.
-PdfLoadedDocument lDoc = new PdfLoadedDocument(docStream);
+PdfLoadedDocument lDoc = new PdfLoadedDocument("file1.pdf");
 //Create a new document.
 PdfDocument document = new PdfDocument();
 //Imports the page at 1 from the lDoc.
 document.ImportPage(lDoc, 1);
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Closes the document.
 document.Close(true);
 lDoc.Close(true);
@@ -165,6 +173,9 @@ lDoc.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
 
 //Load the PDF document.
 PdfLoadedDocument lDoc = new PdfLoadedDocument("file1.pdf");
@@ -182,6 +193,9 @@ lDoc.Close(true)
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
 
 'Load the PDF document
 Dim lDoc As New PdfLoadedDocument("file1.pdf")
@@ -207,18 +221,18 @@ You can import multiple pages from an existing document by using [ImportPageRang
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Merge%20PDFs/Import-multiple-pages-from-an-existing-PDF/.NET/Import-multiple-pages-from-an-existing-PDF/Program.cs" %} 
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
-FileStream docStream = new FileStream("file1.pdf", FileMode.Open, FileAccess.Read);
-//Load the PDF document.
-PdfLoadedDocument lDoc = new PdfLoadedDocument(docStream);
+PdfLoadedDocument lDoc = new PdfLoadedDocument("file1.pdf");
 //Create a new document.
 PdfDocument document = new PdfDocument();
 //Imports the page at 1 from the lDoc.
 document.ImportPageRange(lDoc, 0, lDoc.Pages.Count - 1);
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Closes the document.
 document.Close(true);
 lDoc.Close(true);
@@ -226,6 +240,9 @@ lDoc.Close(true);
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
 
 //Loads PDF document.
 PdfLoadedDocument lDoc = new PdfLoadedDocument("file1.pdf");
@@ -243,6 +260,9 @@ lDoc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
 
 'Loads PDF document
 Dim lDoc As New PdfLoadedDocument("file1.pdf")
@@ -268,23 +288,21 @@ You can also import pages from multiple documents and arrange the pages by using
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Merge%20PDFs/Import-pages-from-multiple-documents-and-arrange-pages/.NET/Import-pages-from-multiple-documents-and-arrange-pages/Program.cs" %} 
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
 //Load the PDF document.
-FileStream docStream1 = new FileStream("file1.pdf", FileMode.Open, FileAccess.Read);
+PdfLoadedDocument lDoc = new PdfLoadedDocument("file1.pdf");
 //Load the PDF document.
-PdfLoadedDocument lDoc = new PdfLoadedDocument(docStream1);
-//Load the PDF document.
-FileStream docStream2 = new FileStream("file2.pdf", FileMode.Open, FileAccess.Read);
-//Load the PDF document.
-PdfLoadedDocument lDoc2 = new PdfLoadedDocument(docStream2);
+PdfLoadedDocument lDoc2 = new PdfLoadedDocument("file2.pdf");
 //Create the new document.
 PdfDocument document = new PdfDocument();
 //Imports and arranges the pages.
-document.ImportPage(lDoc, 1);
-document.ImportPage(lDoc2, 0);
+document.ImportPage(lDoc, 2);
+document.ImportPage(lDoc2, 1);
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
+//Save the document.
+document.Save("Output.pdf");
 //Closes the documents.
 document.Close(true);
 lDoc.Close(true);
@@ -294,10 +312,13 @@ lDoc2.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
 //Loads document.
 PdfLoadedDocument lDoc = new PdfLoadedDocument("file1.pdf");
 //Loads document.
-PdfLoadedDocument lDoc2 = new PdfLoadedDocument("file1.pdf");
+PdfLoadedDocument lDoc2 = new PdfLoadedDocument("file2.pdf");
 //Create the new document.
 PdfDocument document = new PdfDocument();
 //Imports and arranges the pages.
@@ -314,6 +335,9 @@ lDoc2.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
 
 'Loads a document
 Dim lDoc As New PdfLoadedDocument("file1.pdf")
@@ -341,7 +365,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 Merging multiple large PDF documents can lead to high runtime memory. So, you can split the documents into multiple documents and later you can merge. This method avoids the extensive memory usage and increases the performance.
 
-N> Note:  The parent PDF document has all the contents in run time memory. It releases the memory once the final PDF document instance is disposed. 
+N> The parent PDF document holds all of its contents in run-time memory. It releases that memory once the final PDF document instance is disposed.
 
 You can split a large PDF document into multiple documents using [Split](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html#Syncfusion_Pdf_Parsing_PdfLoadedDocument_Split_System_String_) method of [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) class. The following code snippet explains this.
 
@@ -354,6 +378,8 @@ You can split a large PDF document into multiple documents using [Split](https:/
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf.Parsing;
+
 //Loads the PDF document.
 PdfLoadedDocument loadedDocument = new PdfLoadedDocument("large.pdf");
 //Splits the document.
@@ -364,6 +390,8 @@ loadedDocument.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf.Parsing
 
 'Loads the PDF document
 Dim loadedDocument As New PdfLoadedDocument("large.pdf")
@@ -385,6 +413,8 @@ The following code shows how to merge multiple PDF documents using [Merge](https
 
 //Due to platform limitations, the PDF file cannot be loaded from disk. However, you can merge multiple documents from stream using the following code snippet.
 
+using Syncfusion.Pdf;
+
 //Creates a PDF document.
 PdfDocument finalDoc = new PdfDocument();
 //Creates a string array of source files to be merged.
@@ -392,15 +422,16 @@ string[] source = { "file1.pdf", "file2.pdf" };
 //Merges PDFDocument.
 PdfDocumentBase.Merge(finalDoc, source);
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-finalDoc.Save(stream);
+//Save the document.
+finalDoc.Save("Output.pdf");
 //Close the document.
 finalDoc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
 
 //Input documents.
 string[] inputDocuments = Directory.GetFiles("../../Data/Split");
@@ -416,6 +447,8 @@ document.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
 
 'Input documents
 Dim inputDocuments As String() = Directory.GetFiles("../../Data/Split")
@@ -443,7 +476,10 @@ Refer to the following code example to optimize the PDF resources when merging P
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Merge%20PDFs/Optimize-the-PDF-resources-when-merging-PDF-documents/.NET/Optimize-the-PDF-resources-when-merging-PDF-documents/Program.cs" %} 
 
-//Due to platform limitations, the PDF file cannot be loaded from disk. However, you can optimize PDF resources when merging multiple documents from stream using the following code snippet.
+//Due to platform limitations, the PDF file cannot be loaded from disk. However, you can optimize PDF resources when merging multiple documents from stream using the following code example.
+
+using Syncfusion.Pdf;
+
 //Create a PDF document.
 PdfDocument finalDoc = new PdfDocument();
 //Creates a string array of source files to be merged.
@@ -454,15 +490,16 @@ mergeOptions.OptimizeResources = true;
 //Merges PDFDocument.
 PdfDocumentBase.Merge(finalDoc, mergeOptions, source);
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-finalDoc.Save(stream);
+//Save the document.
+finalDoc.Save("output.pdf");
 //Close the document.
 finalDoc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
 
 //Create a new PDF document.
 PdfDocument finalDoc = new PdfDocument();
@@ -483,6 +520,8 @@ finalDoc.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.Pdf
+
 'Create a new PDF document
 Dim finalDoc As New PdfDocument()
 'Creates a string array of source files to be merged
@@ -491,7 +530,7 @@ Dim mergeOptions As New PdfMergeOptions()
 'Enable Optimize Resources
 mergeOptions.OptimizeResources = True
 'Merges PDFDocument
-PdfDocument.Merge(finalDoc, mergeOptions, source)
+PdfDocumentBase.Merge(finalDoc, mergeOptions, source)
 
 'Save the final document
 finalDoc.Save("Sample.pdf")
@@ -506,14 +545,17 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Extend the margin of the PDF pages while merging PDF document
 
-The [Syncfusion<sup>&reg;</sup> PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net) provides support for extending the margins of the pdf pages by using the [ExtendMargin](https://help.syncfusion.com/cr/aspnet/Syncfusion.Pdf.PdfMergeOptions.html#Syncfusion_Pdf_PdfMergeOptions_ExtendMargin) property available from the [PdfMergeOptions](https://help.syncfusion.com/cr/aspnet/Syncfusion.Pdf.PdfMergeOptions.html) class. When ExtendMargin is set to true, then a specified margin is considered while merging the existing documents. 
-
+The [Syncfusion<sup>&reg;</sup> PDF library](https://www.syncfusion.com/document-processing/pdf-framework/net) provides support for extending the margins of PDF pages by using the [ExtendMargin](https://help.syncfusion.com/cr/aspnet/Syncfusion.Pdf.PdfMergeOptions.html#Syncfusion_Pdf_PdfMergeOptions_ExtendMargin) property available in the [PdfMergeOptions](https://help.syncfusion.com/cr/aspnet/Syncfusion.Pdf.PdfMergeOptions.html) class. When `ExtendMargin` is set to **true**, the specified margin is considered while merging the existing documents.
 The following code sample illustrates this.
 
 {% tabs %}
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Merge%20PDFs/Extend-the-margin-of-PDF-pages-while-merging-PDFs/.NET/Extend-the-margin-of-PDF-pages-while-merging-PDFs/Program.cs" %} 
  
-//Due to platform limitations, the PDF file cannot be loaded from disk. However, you can optimize PDF resources when merging multiple documents from a stream using the following code snippet.
+//Due to platform limitations, the PDF file cannot be loaded from disk. However, you can optimize PDF resources when merging multiple documents from a stream using the following code example.
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+
 //Create a PDF document.
 PdfDocument finalDoc = new PdfDocument();
 //Create new instance for the document margin.
@@ -529,15 +571,17 @@ mergeOptions.ExtendMargin = true;
 //Merge PDFDocument.
 PdfDocumentBase.Merge(finalDoc, mergeOptions, source);
 
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-finalDoc.Save(stream);
+//Save the document.
+finalDoc.Save("Output.pdf");
 //Close the document.
 finalDoc.Close(true);
 
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
 
 //Create a new PDF document.
 PdfDocument finalDoc = new PdfDocument();
@@ -550,9 +594,9 @@ finalDoc.PageSettings.Margins = margin;
 string[] source = { "file1.pdf", "file2.pdf" };
 PdfMergeOptions mergeOptions = new PdfMergeOptions();
 // Enable the Extend Margin Property.
-mergeOptions.ExtendMargin=true;
+mergeOptions.ExtendMargin = true;
 //Merge PDFDocument.
-PdfDocument.Merge(finalDoc, mergeOptions, source);
+PdfDocumentBase.Merge(finalDoc, mergeOptions, source);
 
 //Save the final document.
 finalDoc.Save("Sample.pdf");
@@ -562,6 +606,9 @@ finalDoc.Close(true);
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Graphics
 
 'Create a new PDF document
 Dim finalDoc As New PdfDocument()
@@ -574,9 +621,9 @@ finalDoc.PageSettings.Margins = margin
 Dim source As String() = {"file1.pdf", "file2.pdf"}
 Dim mergeOptions As New PdfMergeOptions()
 'Enable the Extend Margin Property
-mergeOptions.ExtendMargin=true
+mergeOptions.ExtendMargin = True
 'Merge PDFDocument
-PdfDocument.Merge(finalDoc, mergeOptions, source)
+PdfDocumentBase.Merge(finalDoc, mergeOptions, source)
 
 'Save the final document
 finalDoc.Save("Sample.pdf")
@@ -589,9 +636,9 @@ finalDoc.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Merge%20PDFs/Extend-the-margin-of-PDF-pages-while-merging-PDFs/). 
 
-##  Merge PDF document without compromising accessibility tags 
+## Merge PDF documents without compromising accessibility tags
 
-The Syncfusion<sup>&reg;</sup> PDF library enables users to merge PDF documents while maintaining their accessibility standards, which are essential for users relying on screen readers and other assistive technologies. By enabling the `MergeAccessibilityTags` property in the [PdfMergeOptions](https://help.syncfusion.com/cr/aspnet/Syncfusion.Pdf.PdfMergeOptions.html) class, the tagged structure of the documents is preserved in the final merged PDF. The default value for this property is false. 
+The Syncfusion<sup>&reg;</sup> PDF library enables users to merge PDF documents while maintaining their accessibility standards, which are essential for users relying on screen readers and other assistive technologies. By enabling the `MergeAccessibilityTags` property in the [PdfMergeOptions](https://help.syncfusion.com/cr/aspnet/Syncfusion.Pdf.PdfMergeOptions.html) class, the tagged structure of the documents is preserved in the final merged PDF. The default value for this property is **false**.
 
  Refer to the following code to merge PDF documents without losing accessibility tags. 
 
@@ -600,18 +647,23 @@ The Syncfusion<sup>&reg;</sup> PDF library enables users to merge PDF documents 
  
 //Due to platform limitations, the PDF file cannot be loaded from disk. However, you can optimize PDF resources when merging multiple documents from a stream using the following code snippet. 
 
+using Syncfusion.Pdf;
+
 //Create a PDF document. 
 PdfDocument finalDoc = new PdfDocument(); 
 //Create a string array of source files to be merged.
 string[] source = { "file1.pdf", "file2.pdf" }; 
-PdfMergeOptions mergeOptions = new PdfMergeOptions(); 
-//Enable the Merge Accessibility Tags. 
-mergeOptions.MergeAccessibilityTags = true; 
-//Merge PDFDocument. 
-PdfDocumentBase.Merge(finalDoc, mergeOptions, source); 
-//Save the document into stream. 
-MemoryStream stream = new MemoryStream(); 
-finalDoc.Save(stream); 
+PdfMergeOptions mergeOptions = new PdfMergeOptions();
+//Enable the Merge Accessibility Tags.
+mergeOptions.MergeAccessibilityTags = true;
+//Merge PDFDocument.
+PdfDocumentBase.Merge(finalDoc, mergeOptions, source);
+//Save the document.
+finalDoc.Save("Output.pdf");
+//Close the document.
+finalDoc.Close(true);
+//Save the document.
+finalDoc.Save("Output.pdf");
 //Close the document. 
 finalDoc.Close(true);
 
@@ -619,15 +671,17 @@ finalDoc.Close(true);
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 
+using Syncfusion.Pdf;
+
 //Create a new PDF document. 
 PdfDocument finalDoc = new PdfDocument(); 
 //Create a string array of source files to be merged. 
 string[] source = { "file1.pdf", "file2.pdf" }; 
 PdfMergeOptions mergeOptions = new PdfMergeOptions(); 
-//Enable the Merge Accessibility Tags. 
-mergeOptions.MergeAccessibilityTags = true; 
-//Merge PDFDocument. 
-PdfDocument.Merge(finalDoc, mergeOptions, source); 
+//Enable the Merge Accessibility Tags.
+mergeOptions.MergeAccessibilityTags = true;
+//Merge PDFDocument.
+PdfDocumentBase.Merge(finalDoc, mergeOptions, source);
 //Save the final document. 
 finalDoc.Save("Sample.pdf"); 
 //Close the document. 
@@ -637,15 +691,17 @@ finalDoc.Close(true);
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
+Imports Syncfusion.Pdf
+
 'Create a new PDF document 
 Dim finalDoc As New PdfDocument() 
 'Create a string array of source files to be merged 
 Dim source As String() = {"file1.pdf", "file2.pdf"} 
 Dim mergeOptions As New PdfMergeOptions() 
-'Enable the Merge Accessibility Tags. 
-mergeOptions.MergeAccessibilityTags = True 
-'Merge PDFDocument 
-PdfDocument.Merge(finalDoc, mergeOptions, source) 
+'Enable the Merge Accessibility Tags.
+mergeOptions.MergeAccessibilityTags = True
+'Merge PDFDocument
+PdfDocumentBase.Merge(finalDoc, mergeOptions, source)
 'Save the final document 
 finalDoc.Save("Sample.pdf") 
 'Close the document 

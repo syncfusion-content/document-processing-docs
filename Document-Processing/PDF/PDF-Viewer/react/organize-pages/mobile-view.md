@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Organize Pages in React Mobile PDF Viewer | Syncfusion
-description: Organize PDF pages in React mobile viewer—rotate, rearrange, add, remove, and duplicate pages easily on mobile devices.
+title: Mobile View in React PDF Viewer | Syncfusion
+description: Use the Organize Pages panel on mobile devices in the React PDF Viewer to rotate, rearrange, add, remove, and duplicate PDF pages.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Organize Pages in Mobile PDF Viewer React
+# Organize Pages in Mobile View in React PDF Viewer
 
 The PDF Viewer provides a mobile-responsive layout for the `Organize Pages` feature, optimized for touch interactions on small screens. The toolbar and navigation adapt to the device viewport so page-management controls remain accessible on phones and tablets.
 
@@ -28,7 +28,7 @@ To perform actions on a page thumbnail, tap and hold (long-press) the thumbnail 
 *   **Select All**: Select all pages in the document.
 
 
-![Context menu displaying page operations (rotate, insert, copy, delete, select all)](../images/Context-Menu-Page-Operations1.png)
+![Context menu displaying page operations rotate insert copy delete select all](../images/Context-Menu-Page-Operations1.png)
 
 ## Rearranging Pages on Mobile
 

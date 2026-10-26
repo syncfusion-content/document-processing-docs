@@ -1,11 +1,11 @@
 ---
-title: NuGet Packages for PDF | Syncfusion
-description: This section illustrates the NuGet packages required to use Syncfusion PDF library (Essential PDF) in various platforms and frameworks
+title: NuGet Packages for .NET PDF Library | Syncfusion
+description: Learn about the NuGet packages required to use Syncfusion PDF Library across various platforms and frameworks.
 platform: document-processing
 control: PDF
 documentation: UG
 ---
-# NuGet Packages Required for PDF
+# NuGet Packages for .NET PDF Library
 
 ## Create and modify PDF documents
 
@@ -63,14 +63,6 @@ Blazor
 </tr>
 <tr>
 <td>
-Xamarin
-</td>
-<td>
-{{'[Syncfusion.Xamarin.Pdf.nupkg](https://www.nuget.org/packages/Syncfusion.Xamarin.Pdf/)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
 Windows UI (WinUI) <br/>
 .NET Multi-platform App UI (.NET MAUI)
 </td>
@@ -80,7 +72,7 @@ Windows UI (WinUI) <br/>
 </tr>
 </table>
 
-### RETIRED PRODUCTS
+**RETIRED PRODUCTS**
 
 <table>
   <thead>
@@ -98,6 +90,14 @@ Windows UI (WinUI) <br/>
         {{'[Syncfusion.Pdf.AspNet.nupkg]( https://www.nuget.org/packages/Syncfusion.Pdf.AspNet/)'| markdownify }}
       </td>
     </tr>
+    <tr>
+      <td>
+        Xamarin
+      </td>
+      <td>
+        {{'[Syncfusion.Xamarin.Pdf.nupkg](https://www.nuget.org/packages/Syncfusion.Xamarin.Pdf/)'| markdownify }}
+      </td>
+    </tr>
   </tbody>
 </table>
 
@@ -107,7 +107,6 @@ N> 2. From the Essential Studio<sup>&reg;</sup> 2018 Volume 3 release(v16.3.0.21
 ## Additional NuGet package for advanced PDF processing (.NET Core)
 
 For advanced PDF features like compression, redaction, PDF/A conversion, image extraction, and OCR, include the corresponding Syncfusion<sup>&reg;</sup> imaging package in your .NET Core applications:
-
 
 <table>
   <thead>
@@ -129,14 +128,6 @@ For advanced PDF features like compression, redaction, PDF/A conversion, image e
     </tr>
     <tr>
       <td>
-        Xamarin
-      </td>
-      <td>
-        {{'[Syncfusion.Xamarin.Pdf.Imaging.nupkg](https://www.nuget.org/packages/Syncfusion.Xamarin.Pdf.Imaging)'| markdownify }}
-      </td>
-    </tr>
-    <tr>
-      <td>
         Windows UI (WinUI)
         .NET Multi-platform App UI (.NET MAUI)
       </td>
@@ -145,6 +136,59 @@ For advanced PDF features like compression, redaction, PDF/A conversion, image e
       </td>
     </tr>
   </tbody>
+</table>
+
+To convert XPS documents to PDF, install the following required NuGet packages in your .NET application. 
+
+<table>
+  <thead>
+    <tr>
+      <th>Platform(s)</th>
+      <th>NuGet Package</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        ASP.NET Core (Targeting NET Core)
+        Console Application (Targeting .NET Core)
+        Blazor
+      </td>
+      <td>
+        {{'[Syncfusion.XpsToPdfConverter.Net.Core.nupkg](https://www.nuget.org/packages/Syncfusion.XpsToPdfConverter.Net.Core)'| markdownify }}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Windows UI (WinUI)
+        .NET Multi-platform App UI (.NET MAUI)
+      </td>
+      <td>
+        {{'[Syncfusion.XpsToPdfConverter.NET.nupkg](https://www.nuget.org/packages/Syncfusion.XpsToPdfConverter.NET)'| markdownify }}
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+**RETIRED PRODUCTS**
+
+<table>
+  <thead>
+    <tr>
+      <th>Platform(s)</th>
+      <th>NuGet Package</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        Xamarin
+      </td>
+      <td>
+        {{'[Syncfusion.Xamarin.Pdf.Imaging.nupkg](https://www.nuget.org/packages/Syncfusion.Xamarin.Pdf.Imaging)'| markdownify }}
+      </td>
+    </tr>
+    </tbody>
 </table>
 
 ### Additional NuGet packages required for Linux
@@ -169,7 +213,6 @@ The following table illustrates the native assets NuGet package with their match
         Common Linux distributions such as Ubuntu, Alpine, CentOS, Debian, Fedora, and RHEL
         Azure App Service
         Google App Engine
-
       </td>
     </tr>
     <tr>
@@ -199,7 +242,7 @@ N> The HTML to PDF converter library internally uses the Blink rendering engine 
 </tr>
 <tr>
 <td>
-(.NET Core, .NET 5, .NET 6 and .NET 8) Windows
+Windows (.NET Core, NET 8.0, NET 9.0 and NET 10.0)
 </td>
 <td>
 {{'[Syncfusion.HtmlToPdfConverter.Net.Windows.nupkg](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Windows/)'| markdownify }}
@@ -207,7 +250,7 @@ N> The HTML to PDF converter library internally uses the Blink rendering engine 
 </tr>
 <tr>
 <td>
-(.NET Core, .NET 5, .NET 6 and .NET 8) Linux
+Linux (.NET Core, NET 8.0, NET 9.0, NET 10.0)
 </td>
 <td>
 {{'[Syncfusion.HtmlToPdfConverter.Net.Linux.nupkg](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Linux/)'| markdownify }}
@@ -215,7 +258,7 @@ N> The HTML to PDF converter library internally uses the Blink rendering engine 
 </tr>
 <tr>
 <td>
-(.NET Core, .NET 5, .NET 6 and .NET 8) Mac
+Mac (.NET Core, NET 8.0, NET 9.0, NET 10.0)
 </td>
 <td>
 {{'[Syncfusion.HtmlToPdfConverter.Net.Mac.nupkg](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Mac/)'| markdownify }}
@@ -223,7 +266,7 @@ N> The HTML to PDF converter library internally uses the Blink rendering engine 
 </tr>
 <tr>
 <td>
-(.NET Core, .NET 5, .NET 6 and .NET 8) Aws
+Aws (.NET Core, NET 8.0, NET 9.0, NET 10.0)
 </td>
 <td>
 {{'[Syncfusion.HtmlToPdfConverter.Net.Aws.nupkg](https://www.nuget.org/packages/Syncfusion.HtmlToPdfConverter.Net.Aws/)'| markdownify }}
@@ -266,7 +309,7 @@ ASP.NET MVC
 </tr>
 </table>
 
-### RETIRED PRODUCTS
+**RETIRED PRODUCTS**
 
 <table>
   <thead>
@@ -337,7 +380,7 @@ Blazor
 </tr>
 </table>
 
-### RETIRED PRODUCTS
+**RETIRED PRODUCTS**
 
 <table>
   <thead>
@@ -404,17 +447,9 @@ Blazor
 {{'[Syncfusion.DocIORenderer.Net.Core.nupkg](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core/)'| markdownify }}
 </td>
 </tr>
-<tr>
-<td>
-Xamarin
-</td>
-<td>
-{{'[Syncfusion.Xamarin.DocIORenderer.nupkg](https://www.nuget.org/packages/Syncfusion.Xamarin.DocIORenderer/)'| markdownify }}
-</td>
-</tr>
 </table>
 
-### RETIRED PRODUCTS
+**RETIRED PRODUCTS**
 
 <table>
   <thead>
@@ -430,6 +465,14 @@ Xamarin
       </td>
       <td>
         {{'[Syncfusion.DocToPdfConverter.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.DocToPDFConverter.AspNet/)'| markdownify }}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Xamarin
+      </td>
+      <td>
+        {{'[Syncfusion.Xamarin.DocIORenderer.nupkg](https://www.nuget.org/packages/Syncfusion.Xamarin.DocIORenderer/)'| markdownify }}
       </td>
     </tr>
   </tbody>
@@ -483,14 +526,6 @@ Console Application (Targeting .NET Core)
 </tr>
 <tr>
 <td>
-Xamarin
-</td>
-<td>
-{{'[Syncfusion.Xamarin.XlsIORenderer.nupkg](https://www.nuget.org/packages/Syncfusion.Xamarin.XlsIORenderer/)'| markdownify }}
-</td>
-</tr>
-<tr>
-<td>
 Blazor (Server-App)
 </td>
 <td>
@@ -499,7 +534,7 @@ Blazor (Server-App)
 </tr>
 </table>
 
-### RETIRED PRODUCTS
+**RETIRED PRODUCTS**
 
 <table>
   <thead>
@@ -515,6 +550,14 @@ Blazor (Server-App)
       </td>
       <td>
         {{'[Syncfusion.ExcelToPdfConverter.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.ExcelToPdfConverter.AspNet/)'| markdownify }}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Xamarin
+      </td>
+      <td>
+        {{'[Syncfusion.Xamarin.XlsIORenderer.nupkg](https://www.nuget.org/packages/Syncfusion.Xamarin.XlsIORenderer/)'| markdownify }}
       </td>
     </tr>
   </tbody>
@@ -566,17 +609,9 @@ Blazor
 {{'[Syncfusion.PresentationRenderer.Net.Core.nupkg](https://www.nuget.org/packages/Syncfusion.PresentationRenderer.Net.Core/)'| markdownify }}
 </td>
 </tr>
-<tr>
-<td>
-Xamarin
-</td>
-<td>
-{{'[Syncfusion.Xamarin.PresentationRenderer.nupkg](https://www.nuget.org/packages/Syncfusion.Xamarin.PresentationRenderer/)'| markdownify }}
-</td>
-</tr>
 </table>
 
-### RETIRED PRODUCTS
+**RETIRED PRODUCTS**
 
 <table>
   <thead>
@@ -592,6 +627,14 @@ Xamarin
       </td>
       <td>
         {{'[Syncfusion.PresentationToPdfConverter.AspNet.nupkg](https://www.nuget.org/packages/Syncfusion.PresentationToPdfConverter.AspNet/)'| markdownify }}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Xamarin
+      </td>
+      <td>
+        {{'[Syncfusion.Xamarin.PresentationRenderer.nupkg](https://www.nuget.org/packages/Syncfusion.Xamarin.PresentationRenderer/)'| markdownify }}
       </td>
     </tr>
   </tbody>

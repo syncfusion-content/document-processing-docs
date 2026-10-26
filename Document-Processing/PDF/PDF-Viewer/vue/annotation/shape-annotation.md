@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Shape annotation in Vue PDF Viewer component | Syncfusion
-description: Learn here all about Shape annotation in Syncfusion Vue PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Shape Annotation in Vue PDF Viewer | Syncfusion
+description: Learn about the shape annotation in the Vue PDF Viewer and how it helps users work with PDF documents more effectively.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Shape annotation in Vue PDF Viewer control
+# Shape Annotation in Vue PDF Viewer
 
 The PDF Viewer provides options to add, edit, and delete shape annotations. Supported shape annotation types include:
 
@@ -968,6 +968,114 @@ Line and arrow annotations have additional options in the Line Properties window
 Refer to the following code sample to set the default annotation settings.
 
 ![Line properties dialog](../images/shape_lineproperty.png)
+
+## Supported Border Styles
+
+In addition to the default **Solid** border, shape annotations support additional border styles. The supported styles depend on the annotation type.
+
+| Annotation | Solid | Cloud | Dashed |
+| --- | --- | --- | --- |
+| Rectangle | ✓ | ✓ | ✓ |
+| Circle | ✓ | ✓ | ✓ |
+| Polygon | ✓ | ✓ | ✓ |
+| Line | ✓ | — | ✓ |
+| Arrow | ✓ | — | ✓ |
+
+Use the [`BorderStyle`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/borderStyle) enum together with the optional `borderDashArray` (Dashed) and `cloudIntensity` (Cloud) settings in the corresponding `{xx}Settings` property (`rectangleSettings`, `circleSettings`, `polygonSettings`, `lineSettings`, `arrowSettings`).
+
+```ts
+export enum BorderStyle {
+    Solid = 'Solid',
+    Dashed = 'Dashed',
+    Cloud = 'Cloud'
+}
+```
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `borderStyle` | `BorderStyle` | Specifies the border style. Supported values: `BorderStyle.Solid`, `BorderStyle.Cloud`, and `BorderStyle.Dashed`. |
+| `borderDashArray` | `number[]` | Specifies the dash pattern when `borderStyle` is `BorderStyle.Dashed`. |
+| `cloudIntensity` | `number` | Specifies the cloud border intensity. Supported range: `1` to `2`; default value: `1`. |
+
+N> `cloudIntensity` is honored only when `borderStyle` is `BorderStyle.Cloud`.
+N> `borderStyle`, `borderDashArray`, and `cloudIntensity` are preserved during save, reload, import, and export.
+
+### Apply a Cloud Border (Rectangle, Circle, Polygon)
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (Standalone)" %}
+
+<template>
+  <div id="app">
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath"
+      :rectangleSettings="rectangleSettings" :circleSettings="circleSettings"
+      :polygonSettings="polygonSettings" :resourceUrl="resourceUrl">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide } from 'vue';
+import { BorderStyle } from '@syncfusion/ej2-vue-pdfviewer';
+
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+const rectangleSettings = { fillColor: 'yellow', strokeColor: 'orange', thickness: 2, opacity: 0.9, borderStyle: BorderStyle.Cloud, cloudIntensity: 2 };
+const circleSettings = { fillColor: 'orange', strokeColor: 'pink', thickness: 2, opacity: 0.9, borderStyle: BorderStyle.Cloud, cloudIntensity: 2 };
+const polygonSettings = { fillColor: 'pink', strokeColor: 'yellow', thickness: 2, opacity: 0.9, borderStyle: BorderStyle.Cloud, cloudIntensity: 2 };
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+  Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer])
+
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+### Apply a Dashed Border (Rectangle, Circle, Polygon, Line, Arrow)
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (Standalone)" %}
+
+<template>
+  <div id="app">
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath"
+      :lineSettings="lineSettings" :arrowSettings="arrowSettings"
+      :rectangleSettings="rectangleSettings" :circleSettings="circleSettings"
+      :polygonSettings="polygonSettings" :resourceUrl="resourceUrl">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide } from 'vue';
+import { BorderStyle } from '@syncfusion/ej2-vue-pdfviewer';
+
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+const lineSettings = { fillColor: 'blue', strokeColor: 'green', thickness: 2, opacity: 0.9, borderStyle: BorderStyle.Dashed, borderDashArray: [5, 5] };
+const arrowSettings = { fillColor: 'green', strokeColor: 'blue', thickness: 2, opacity: 0.9, borderStyle: BorderStyle.Dashed, borderDashArray: [5, 5] };
+const rectangleSettings = { fillColor: 'yellow', strokeColor: 'orange', thickness: 2, opacity: 0.9, borderStyle: BorderStyle.Dashed, borderDashArray: [5, 5] };
+const circleSettings = { fillColor: 'orange', strokeColor: 'pink', thickness: 2, opacity: 0.9, borderStyle: BorderStyle.Dashed, borderDashArray: [5, 5] };
+const polygonSettings = { fillColor: 'pink', strokeColor: 'yellow', thickness: 2, opacity: 0.9, borderStyle: BorderStyle.Dashed, borderDashArray: [5, 5] };
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+  Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer])
+
+</script>
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Set default properties during control initialization
 

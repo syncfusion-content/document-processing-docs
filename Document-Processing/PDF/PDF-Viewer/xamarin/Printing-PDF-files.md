@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: UG
 ---
 
-# Printing PDF files in Xamarin Pdf Viewer (SfPdfViewer)
+# Printing in PDF Viewer Xamarin.Forms
 
 [Xamarin PDF Viewer](https://www.syncfusion.com/xamarin-ui-controls/xamarin-pdf-viewer) allows printing the loaded PDF documents using the Print button in the built-in toolbar. 
 

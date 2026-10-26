@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Save PDF files to Box cloud storage in React PDF Viewer | Syncfusion
-description: Learn how to save PDF files to Box cloud storage using the Syncfusion React PDF Viewer component with a server-backed web service.
+title: To Box Cloud File Storage in React PDF Viewer | Syncfusion
+description: Save PDF files from the React PDF Viewer to Box cloud storage using a server-backed web service for authentication and secure uploads.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 ---
 
-# Save PDF files to Box cloud file storage
+# Save PDF Files to Box Cloud Storage in React PDF Viewer
 
 The React PDF Viewer component supports saving PDF files to Box cloud file storage using a server-backed web service. This article describes a recommended server-client pattern that keeps credentials secure and shows how to upload viewer documents to a Box folder.
 
 **Step 1:** Set up a Box developer account and create a Box application
 
-To access Box storage programmatically, you'll need a developer account with Box. Go to the [Box Developer Console](https://developer.box.com/), sign in or create a new account, and then create a new Box application. This application will provide you with the necessary credentials Client ID and Client Secret to authenticate and access Box APIs. Before accessing files, you need to authenticate your application to access your Box account. Box API supports `OAuth 2.0 authentication` for this purpose.
+To access Box storage programmatically, you'll need a developer account with Box. Go to the [Box Developer Console](https://developer.box.com/), sign in or create a new account, and then create a new Box application. This application will provide you with the necessary credentials (Client ID and Client Secret) to authenticate and access Box APIs. Before accessing files, you need to authenticate your application to access your Box account. Box API supports `OAuth 2.0 authentication` for this purpose.
 
 **Step 2:** Create a PDF Viewer sample in React
 
@@ -55,7 +55,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Download()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#download) method to save the downloaded PDF file to the Box cloud storage folder.
+5. Modify the [Download()] (https://ej2.syncfusion.com/react/documentation/api/pdfviewer/#download) method to save the downloaded PDF file to the Box cloud storage folder.
 
 ```csharp
 [HttpPost("Download")]

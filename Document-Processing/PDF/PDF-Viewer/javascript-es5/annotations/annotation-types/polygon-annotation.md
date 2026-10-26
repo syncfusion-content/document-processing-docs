@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Polygon annotation in JavaScript PDF Viewer | Syncfusion
-description: Learn to add, edit, and customize Polygon annotations in Syncfusion JavaScript PDF Viewer with UI and programmatic examples.
+title: Polygon Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Polygon annotations in the JavaScript (ES5) PDF Viewer to outline irregular shapes on a PDF page.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Polygon annotation in JavaScript PDF Viewer
+# Polygon Annotation in JavaScript (ES5) PDF Viewer
 
 Polygon is a shape annotation used to outline irregular regions, highlight areas, or create custom callouts.
 
@@ -18,10 +18,11 @@ Polygon is a shape annotation used to outline irregular regions, highlight areas
 
 ### Add polygon annotation via UI
 
-Use the annotation toolbar to:
-- Click the **Edit Annotation** button in the PDF Viewer toolbar.
-- Open the **Shape Annotation** dropdown.
-- Choose **Polygon**, then draw on the page.
+Use the annotation toolbar to add a polygon annotation:
+
+1. Click the **Edit Annotation** button in the PDF Viewer toolbar.
+2. Open the **Shape Annotation** dropdown.
+3. Choose **Polygon**, then draw on the page.
 
 N> When in pan mode, selecting shape annotations switches the viewer to text select mode.
 
@@ -220,7 +221,9 @@ The opacity of the annotation can be edited using the range slider provided in t
 
 ### Edit an existing polygon annotation programmatically
 
-Use editAnnotation on items from annotationCollection.
+To modify an existing polygon annotation programmatically, use the editAnnotation() method.
+
+Here is an example of using editAnnotation():
 
 ```html
 <button id="editPolygonAnnotation">Edit Polygon annotation programmatically</button>
@@ -346,13 +349,106 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
+### Supported Border Styles
+
+In addition to the default **Solid** border, Polygon annotations support the following additional border styles:
+
+- **Cloud** — scalloped cloud border.
+- **Dashed** — dashed line border.
+
+Use [`BorderStyle`](https://ej2.syncfusion.com//documentation/api/pdfviewer/borderStyle) values such as `BorderStyle.Cloud` and `BorderStyle.Dashed` together with the optional `borderDashArray` and `cloudIntensity` settings in the [`polygonSettings`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#polygonSettings) property.
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `borderStyle` | `BorderStyle` | Specifies the border style. Supported values: `BorderStyle.Solid`, `BorderStyle.Cloud`, and `BorderStyle.Dashed`. |
+| `borderDashArray` | `number[]` | Specifies the dash pattern when `borderStyle` is `BorderStyle.Dashed`. |
+| `cloudIntensity` | `number` | Specifies the cloud border intensity. Supported range: `1` to `2`; default value: `1`. |
+
+N> `borderStyle`, `borderDashArray`, and `cloudIntensity` are preserved during save, reload, import, and export.
+
+#### Apply a Cloud Border
+
+```ts
+export enum BorderStyle {
+    Solid = 'Solid',
+    Dashed = 'Dashed',
+    Cloud = 'Cloud'
+}
+```
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+ej.pdfviewer.PdfViewer.Inject(
+    ej.pdfviewer.Toolbar,
+    ej.pdfviewer.Magnification,
+    ej.pdfviewer.Navigation,
+    ej.pdfviewer.Annotation,
+    ej.pdfviewer.LinkAnnotation,
+    ej.pdfviewer.ThumbnailView,
+    ej.pdfviewer.BookmarkView,
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.TextSearch,
+    ej.pdfviewer.FormFields,
+    ej.pdfviewer.FormDesigner,
+    ej.pdfviewer.PageOrganizer
+);
+
+var pdfviewer = new ej.pdfviewer.PdfViewer();
+pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
+pdfviewer.polygonSettings = {
+    fillColor: '#ffa5d8',
+    strokeColor: '#ff6a00',
+    thickness: 2,
+    opacity: 0.9,
+    borderStyle: ej.pdfviewer.BorderStyle.Cloud,
+    cloudIntensity: 2
+  };
+pdfviewer.appendTo('#PdfViewer');
+{% endhighlight %}
+{% endtabs %}
+
+#### Apply a Dashed Border
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+ej.pdfviewer.PdfViewer.Inject(
+    ej.pdfviewer.Toolbar,
+    ej.pdfviewer.Magnification,
+    ej.pdfviewer.Navigation,
+    ej.pdfviewer.Annotation,
+    ej.pdfviewer.LinkAnnotation,
+    ej.pdfviewer.ThumbnailView,
+    ej.pdfviewer.BookmarkView,
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.TextSearch,
+    ej.pdfviewer.FormFields,
+    ej.pdfviewer.FormDesigner,
+    ej.pdfviewer.PageOrganizer
+);
+
+var pdfviewer = new ej.pdfviewer.PdfViewer();
+pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
+pdfviewer.polygonSettings = {
+    fillColor: '#ffa5d8',
+    strokeColor: '#ff6a00',
+    thickness: 2,
+    opacity: 0.9,
+    borderStyle: ej.pdfviewer.BorderStyle.Dashed,
+    borderDashArray: [5, 5]
+  };
+pdfviewer.appendTo('#PdfViewer');
+{% endhighlight %}
+{% endtabs %}
+
 ## Set properties while adding Individual Annotation
 
-Set properties for individual annotations before creating the control using `PolygonSettings`.
+Set properties for individual annotations while adding the annotation using `addAnnotation()`.
 
 N> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
 
-Refer to the following code snippet to set the default Polygon settings.
+Refer to the following code snippet to set the properties while adding a Polygon annotation.
 
 ```html
 <button id="Polygon">Add Polygon</button>
@@ -387,13 +483,13 @@ document.getElementById('Polygon')?.addEventListener('click', function () {
         vertexPoints: [
             { x: 200, y: 800 }, { x: 242, y: 771 }, { x: 289, y: 799 }, { x: 278, y: 842 }, { x: 211, y: 842 }, { x: 200, y: 800 }
         ],
-        fillColor:'#ff000',
+        fillColor:'#ff0000',
         opacity: 0.9,
-        strokeColor:'##ff000'
+        strokeColor:'#ff0000'
     });
 });
 {% endhighlight %}
-{% highlight ts tabtitle="Server-Backed" %}
+{% highlight js tabtitle="Server-Backed" %}
 ej.pdfviewer.PdfViewer.Inject(
     ej.pdfviewer.Toolbar,
     ej.pdfviewer.Magnification,
@@ -422,9 +518,9 @@ document.getElementById('Polygon')?.addEventListener('click', function () {
         vertexPoints: [
             { x: 200, y: 800 }, { x: 242, y: 771 }, { x: 289, y: 799 }, { x: 278, y: 842 }, { x: 211, y: 842 }, { x: 200, y: 800 }
         ],
-        fillColor:'#ff000',
+        fillColor:'#ff0000',
         opacity: 0.9,
-        strokeColor:'##ff000'
+        strokeColor:'#ff0000'
     });
 });
 {% endhighlight %}

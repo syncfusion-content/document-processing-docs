@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Form filling in MVC PDF Viewer Control | Syncfusion
-description: Learn to view, fill, export, and import PDF form fields in Syncfusion MVC PDF Viewer, including disabling interaction and handling signatures.
+title: Form Filling in ASP.NET MVC PDF Viewer | Syncfusion
+description: View, fill, import, and export PDF form fields in the ASP.NET MVC PDF Viewer, with options to disable interaction and handle digital signatures.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filling PDF Forms in MVC PDF Viewer
+# Fill PDF Form Fields in ASP.NET MVC PDF Viewer
 
 The Syncfusion PDF Viewer supports three types of form-filling:
 
@@ -162,7 +162,7 @@ By enabling [enableFormFieldsValidation](https://help.syncfusion.com/cr/aspnetmv
 - [Form Designer overview](./overview)
 - [Form Designer Toolbar](../toolbar-customization/form-designer-toolbar)
 - [Create](./manage-form-fields/create-form-fields), [edit](./manage-form-fields/modify-form-fields), [style](./manage-form-fields/customize-form-fields) and [remove](./manage-form-fields/remove-form-fields) form fields
-- [Edit form fields](./manage-form-fields/edit-form-fields)
+- [Edit form fields](./manage-form-fields/modify-form-fields)
 - [Group form fields](./group-form-fields)
 - [Add custom data to form fields](./custom-data)
 - [Form Constrain](./form-constrain)

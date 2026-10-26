@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Syncfusion React Spreadsheet in SharePoint
-description: Checkout and learn how to use the React Spreadsheet component of Syncfusion Essential JS 2 in a SharePoint web part.
+title: Getting Started with React Spreadsheet in SharePoint | Syncfusion
+description: Learn how to get started with the Syncfusion React Spreadsheet component in SharePoint Framework applications. Explore setup and examples.
 control: Spreadsheet
 platform: document-processing
 documentation: ug
 ---
 
-# Getting Started with React Spreadsheet in SharePoint Framework(SPFx)
+# Getting Started with React Spreadsheet in SharePoint
 
-This article provides a step-by-step guide for setting up a SharePoint project and integrating the Syncfusion® React components.
+This article provides a step-by-step guide for setting up a SharePoint project and integrating the [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component.
 
 `SharePoint` Framework (SPFx) is a development model and framework provided by Microsoft for building custom solutions and extensions for SharePoint and Microsoft Teams. It is a modern, client-side framework that allows developers to create web parts, extensions, and customizations that can be deployed and used within SharePoint sites and Teams applications.
 
@@ -47,7 +47,7 @@ gulp trust-dev-cert
 
 With these steps complete, your `my-project` SharePoint Framework solution is ready for Syncfusion® component integration.
 
-## Add Syncfusion Spreadsheet packages
+## Add Syncfusion® Spreadsheet packages
 
 To install the React Spreadsheet component package, use the following command:
 
@@ -55,27 +55,25 @@ To install the React Spreadsheet component package, use the following command:
 npm install @syncfusion/ej2-react-spreadsheet --save
 ```
 
-## Adding CSS reference
-Themes for Syncfusion React Spreadsheet can be applied using CSS files from npm packages, CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). Refer to the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme) for more detail.
+## Import the required CSS styles
 
-This example demonstrates importing the `Tailwind 3` theme CSS within the `App.tsx` file located at `~/src/webparts/app/components/App.tsx`:
+Themes for Spreadsheet can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
+
+This guide uses the `Tailwind 3` theme as an example, sourced from the theme package. In this package, each component includes an `index.css` file that automatically loads all the required dependency styles. To install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
+
+```bash
+npm install @syncfusion/ej2-tailwind3-theme
+```
+
+Add the required Spreadsheet theme style reference to `~/src/webparts/app/components/App.tsx` file.
 
 ```ts
-require('@syncfusion/ej2-base/styles/tailwind3.css');
-require('@syncfusion/ej2-inputs/styles/tailwind3.css');
-require('@syncfusion/ej2-buttons/styles/tailwind3.css');
-require('@syncfusion/ej2-splitbuttons/styles/tailwind3.css');
-require('@syncfusion/ej2-lists/styles/tailwind3.css');
-require('@syncfusion/ej2-navigations/styles/tailwind3.css');
-require('@syncfusion/ej2-popups/styles/tailwind3.css');
-require('@syncfusion/ej2-dropdowns/styles/tailwind3.css');
-require('@syncfusion/ej2-grids/styles/tailwind3.css');
-require('@syncfusion/ej2-react-spreadsheet/styles/tailwind3.css');
+require('@syncfusion/ej2-tailwind3-theme/styles/spreadsheet/index.css');
 ```
 
 ## Add Spreadsheet Component
 
-Add the below code in the `App.tsx` file inside the ~/src/webparts/app/components folder to render the spreadsheet.
+Add the following code in the `App.tsx` file inside the ~/src/webparts/app/components folder to render the spreadsheet.
 
 ```ts
 import * as React from 'react';
@@ -91,7 +89,7 @@ require('@syncfusion/ej2-navigations/styles/tailwind3.css');
 require('@syncfusion/ej2-popups/styles/tailwind3.css');
 require('@syncfusion/ej2-dropdowns/styles/tailwind3.css');
 require('@syncfusion/ej2-grids/styles/tailwind3.css');
-require('@syncfusion/ej2-react-spreadsheet/styles/tailwind3.css');;
+require('@syncfusion/ej2-react-spreadsheet/styles/tailwind3.css');
 
 export default class App extends React.Component<IAppProps, {}> {
   
@@ -109,4 +107,4 @@ gulp serve
 ```
 
 ## See Also
-* [Getting Started with Syncfusion React Spreadsheet](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/getting-started)
+* [Getting Started with React Spreadsheet](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/getting-started)

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Comment in Vue Spreadsheet control | Syncfusion
-description: Learn here all about Comment feature in Syncfusion Vue Spreadsheet control of Syncfusion Essential JS 2 and more.
+title: Comments in Vue Spreadsheet | Syncfusion
+description: Learn how to add, edit, and manage comments in the Syncfusion Vue Spreadsheet for collaboration and annotations.
 platform: document-processing
 control: Comment
 documentation: ug
 ---
 
-# Comment in Vue Spreadsheet control
+# Comments in Vue Spreadsheet
 The **Comment** feature allows you to add feedback to cells without changing their values, enabling contextual discussions through threaded **replies**. Unlike [Notes](./notes), Comment include advanced review tools such as **resolve** and **reopen** to track status, plus an optional **Comments Review Pane** for browsing and managing threads.
 
 Cells with comment display a small comment indicator; hover to preview the comment editor. This provides a clear, collaborative workflow while keeping data intact.
@@ -79,9 +79,9 @@ The **Resolve thread** option marks a comment thread as completed when the discu
 
 ![Resolve and reopen in Spreadsheet](./images/spreadsheet_resolve_reopen.gif)
 
-You can also use the `isResolved` property in the comment model when initializing or updating comments programmatically.
+You can also set the `isResolved` property in the comment model when initializing or updating comments programmatically.
 
-**Example: Using `isResolved` property in the comment model with the `updateCell` method**
+**Example: Using the `isResolved` property in the comment model with the `updateCell` method**
 
 ```ts
 // Update a cell with a comment using the updateCell method
@@ -104,7 +104,7 @@ You can delete either a specific reply or an entire comment thread (including al
 ### Deleting a comment thread
 * **Context menu**: Right-click the cell that contains the comment and select **Comment > Delete Comment**.
 * **Ribbon**: Go to **Review > Comment > Delete Comment** on a cell that contains the comment.
-* **Comment editor**: In the comment editor, click the **"⋯" (More thread actions)** menu in the header and select **Delete Thread** for an active comment or use the **Delete Thread** button in header for a resolved comment.
+* **Comment editor**: In the comment editor, click the **"⋯" (More thread actions)** menu in the header and select **Delete Thread** for an active comment, or use the **Delete Thread** button in header for a resolved comment.
 
 Deleting a thread removes the comment and all its replies from the cell.
 

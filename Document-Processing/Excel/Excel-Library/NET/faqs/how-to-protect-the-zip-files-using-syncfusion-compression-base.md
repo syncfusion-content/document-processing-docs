@@ -1,12 +1,12 @@
 ---
-title: Protect the zip files with password | Syncfusion
-description: This page demonstrates how to protect the zip files with password using Syncfusion.Compression.Base.
+title: How to Protect ZIP Files in .NET Excel Library | Syncfusion
+description: Protect zip files with a password using Syncfusion.Compression.Base for password-protected zip files.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to protect the zip files using Syncfusion.Compression.Base?
+# How to protect ZIP files in .NET Excel Library
 
 Password is used for protecting files which needs more security. This can be achieved by using various encryption algorithms. The compressed zip files can be protected using encryption algorithms with password as a key for that algorithm. 
 
@@ -15,6 +15,30 @@ Syncfusion.Compression.Base supports AES-128 bits, AES-192 bits, AES-256 bits an
 The following complete code snippet explains how to protect a zip file with password using AES-256 bits encryption algorithm.
 
 {% tabs %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+using Syncfusion.Compression.Zip;
+
+class Program
+{
+  static void Main(string[] args)
+  {
+    //Initialize ZipArchive
+    ZipArchive zipArchive = new ZipArchive();
+
+    //Add files into ZipArchive
+    zipArchive.AddFile("../../Data/Template1.txt");
+    zipArchive.AddFile("../../Data/Template2.txt");
+    zipArchive.AddFile("../../Data/Template3.txt");
+
+    //Protect the ZipArchive with password
+    zipArchive.Protect("password", EncryptionAlgorithm.AES256);
+
+    //Save the ZipArchive
+    zipArchive.Save("WithPassword256Bit.zip");
+  }
+}
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 using Syncfusion.Compression.Zip;
 

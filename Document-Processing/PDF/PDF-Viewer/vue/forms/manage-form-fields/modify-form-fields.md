@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Modify form fields in the Vue PDF Viewer | Syncfusion
-description: Learn how to modify PDF form fields using the UI and programmatically with APIs in the Syncfusion Vue PDF Viewer.
+title: Modify Form Fields in Vue PDF Viewer | Syncfusion
+description: Edit PDF form fields in the Vue PDF Viewer using the built-in UI and programmatic APIs to update field properties at runtime.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
-# Modify PDF Form Field Properties in Vue
+# Modify Form Fields in Vue PDF Viewer
 You can modify form fields using the **UI** or **API**.
 
 ## Modify PDF Form Field Properties using the UI
@@ -20,7 +21,7 @@ You can modify form fields using the **UI** or **API**.
 Use [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) to change behavior/data (including position and size).
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <button @click="modifyTextbox">Apply Textbox Changes</button>
@@ -88,7 +89,7 @@ export default {
 Use [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) for value, typography, alignment, colors, borders.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <button @click="modifyTextbox">Apply Textbox Changes</button>
@@ -152,7 +153,7 @@ export default {
 Use [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, validation flags, typography, colors, alignment, borders.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <button @click="modifyPasswordBox">Edit PasswordBox</button>
@@ -217,7 +218,7 @@ export default {
 Use [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) for isChecked, tooltip, colors, borders.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <button @click="modifyCheckbox">Modify CheckBox</button>
@@ -270,11 +271,11 @@ export default {
 {% endtabs %}
 
 ### RadioButton
-•	UI: Set selected item in a group (same Name).
+- UI: Set selected item in a group (same Name).
 ![RadioButton edited from UI](../../../javascript-es6/images/ui-radiobutton-edit.png)
-•	API: [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) to set selected value and border appearance.
+- API: [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) to set selected value and border appearance.
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <button @click="editRadio">Modify RadioButton</button>
@@ -322,11 +323,11 @@ export default {
 {% endtabs %}
 
 ### ListBox
-•	UI: Add/remove items, set selection, adjust fonts/colors.
+- UI: Add/remove items, set selection, adjust fonts/colors.
 ![ListBox edited from UI](../../../javascript-es6/images/ui-listbox-edit.png)
-•	API: [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) for items, selection, borders.
+- API: [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) for items, selection, borders.
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <button @click="editListBox">Edit ListBox</button>
@@ -385,11 +386,11 @@ export default {
 {% endtabs %}
 
 ### DropDown
-•	UI: Add/remove items, default value, appearance.
+- UI: Add/remove items, default value, appearance.
 ![DropDown edited from UI](../../../javascript-es6/images/ui-dropdown-edit.png)
-•	API: [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) for items, value, borders.
+- API: [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) for items, value, borders.
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <button @click="editDropDown">Edit DropDown</button>
@@ -448,9 +449,9 @@ export default {
 {% endtabs %}
 
 ### Signature Field
-•	UI: Tooltip, thickness, indicator text, required/visibility.
+- UI: Tooltip, thickness, indicator text, required/visibility.
 ![Signature field edited from UI](../../../javascript-es6/images/ui-signature-edit.png)
-•	API: [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, required, colors, borders.
+- API: [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, required, colors, borders.
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 <template>
@@ -506,9 +507,9 @@ export default {
 {% endtabs %}
 
 ### Initial Field
-•	UI: Tooltip, indicator text, thickness, required/visibility.
+- UI: Tooltip, indicator text, thickness, required/visibility.
 ![Initial field edited from UI](../../../javascript-es6/images/ui-initial-edit.png)
-•	API: [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, required, colors, borders.
+- API: [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) for tooltip, required, colors, borders.
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 <template>
@@ -563,14 +564,44 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
+### DateTime Picker
+
+Select a DateTime Picker field in Form Designer to review or change its settings. The toolbar includes the DateTime Picker tool, and the page displays date and time fields.
+
+![DateTime Picker tool and date and time fields in Form Designer](../../../javascript-es5/images/ui-date-time.png)
+
+Date and time fields can also be used to enter values directly or choose a value from the picker:
+
+- For a date field, type a date or open the calendar picker.
+
+  ![Calendar picker open for a DateTime field](../../../javascript-es5/images/ui-date-entry.png)
+
+- For a time field, type a time or open the time picker.
+
+  ![Time picker open for a DateTime field](../../../javascript-es5/images/ui-time-entry.png)
+
+Use the field's **General** properties to review or edit its name, value, tooltip, visibility, read-only and required settings, and print visibility.
+
+![General properties for a DateTime Picker field](../../../javascript-es5/images/ui-date-time-properties.png)
+
+The **Appearance** properties include font, colors, border, and alignment.
+
+![DateTime Picker Appearance](../../../javascript-es5/images/ui-date-time-appearance.png)
+
+Use the **Format** tab to change the field type (Date or Time), select a display format, and review the preview.
+
+![DateTime Picker format settings with type, format, and preview](../../../javascript-es5/images/ui-date-time-format.png)
+
+- API: [updateFormField()](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#updateformfields) for value, format script, typography, colors, borders.
+
 [View Sample on GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples)
 
-## See also
+## See Also
 
 - [Form Designer overview](../overview)
 - [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)
 - [Create form fields](./create-form-fields)
-- [Remove form Fields](./remove-form-fields)
+- [Remove form fields](./remove-form-fields)
 - [Style form fields](./customize-form-fields)
 - [Group form fields](../group-form-fields)
 - [Form validation](../form-validation)

@@ -1,11 +1,11 @@
 ---
-title: Working with Silverlight using Syncfusion<sup>&reg;</sup> Word library
-description: Creating a Silverlight application, load the Word document and save the document with Syncfusion<sup>&reg;</sup> Word library
+title: Silverlight in .NET Word | Syncfusion
+description: Creating a Silverlight application, load the Word document and save the document with the .NET Word Library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Working with Silverlight
+# Silverlight in .NET Word
 
 In your Silverlight application, please add the required assemblies in order to use DocIO. [Refer here for assemblies required](/document-processing/word/word-library/net/assemblies-required).
 

@@ -1,35 +1,35 @@
 ---
-title: About UWP RichTextBox control | Syncfusion
-description: Learn here all about introduction of Syncfusion UWP RichTextBox (SfRichTextBoxAdv) control, its elements and more.
+title: About Syncfusion UWP DOCX Editor Control | Syncfusion
+description: Learn about the introduction of Syncfusion Essential Studio UWP DOCX Editor control and more details.
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: overview, richtextboxadv, sfrichtextboxadv
 ---
-# UWP RichTextBox (SfRichTextBoxAdv) Overview
+# About Syncfusion UWP DOCX Editor Control
 
-The SfRichTextBoxAdv control allows you to view, edit and print rich text content including text, images, hyperlink etc. arranged in sections, tables, paragraphs, headers, footers and comments. You can perform all editing operations using keyboard, mouse and touch.
-![Overview_img1](Overview_images/Overview_img1.jpeg)
+The Syncfusion <sup style="font-size:70%">&reg;</sup> [UWP DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/uwp-docx-editor) (SfRichTextBoxAdv) is a feature-rich, user-interactive control that enables viewing, editing, and printing rich text content. It supports advanced formatting and layout for elements such as text, images, tables, paragraphs, and comments.
 
-## Features
+![SfRichTextBoxAdv overview showing the Pages layout with a sample document](Overview_images/uwp-docx-editor.png)
 
-The SfRichTextBoxAdv control supports basic features for editing rich text contents such as
+## Key features
 
-* Viewing and editing rich text, images, tables and comments.
+* View and edit rich text content, including text, [images](/uwp/richtextbox/Image), [tables](/uwp/richtextbox/table), and [comments](/uwp/richtextbox/Comment). 
 
-* Importing and exporting word documents (.doc, .docx), rich text format documents (.rtf), HTML documents (.htm, .html) and text documents (.txt).
+* [Import and export](/uwp/richtextbox/Import-and-Export) document formats such as Word (.doc, .docx), Rich Text Format (.rtf), HTML (.htm, .html), and plain text (.txt). 
 
-* Printing rendered contents as page by page.
+* [Print](/uwp/richtextbox/Printing-Contents) document content with page-by-page rendering. 
 
-* Supports all image types except Metafile images.
+* Supports a wide range of image formats (except Metafile images). 
 
-* Supports undo and redo all editing operation such as inserting text, table, images, hyperlink, comments and all formatting operations such as bold, italic etc.
+* Provides [undo and redo](/uwp/richtextbox/Undo-Redo) support for all editing and formatting operations, including text, tables, images, hyperlinks, and styling (bold, italic, etc.). 
 
-* Supports first page header and footer as well as odd and even page headers and footers.
+* Supports different header and footer configurations, including first page and odd/even pages. 
 
-* Moving or copying portion of the document to clipboard and also pasting rich text contents from clipboard into the document.
+* Enables [cut, copy, and paste](/uwp/richtextbox/Clipboard) operations, including rich text content via the clipboard. 
 
-* Supports loading encrypted word documents with valid password.
+* Supports loading encrypted Word documents with a valid password.
 
+> **Limitation:** The SfRichTextBoxAdv cannot currently edit rich text in headers and footers of a document.
 
-N> Currently, the SfRichTextBoxAdv cannot edit rich text in headers and footers.
+N> You can refer to our [UWP DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/uwp-docx-editor) feature tour page for its groundbreaking feature representations. You can also explore our [UWP DOCX Editor example](https://github.com/syncfusion/docx-editor-sdk-uwp-demos) to know how to render and configure the editing tool.

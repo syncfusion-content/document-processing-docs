@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Open PDF from Box cloud storage in Angular PDF Viewer | Syncfusion
-description: Learn how to integrate Box cloud storage and load PDF files seamlessly in the Syncfusion Angular PDF Viewer component for better document management.
+title: From Box Cloud File Storage in Angular PDF Viewer | Syncfusion
+description: Load and display PDF files stored in Box cloud storage in the Angular PDF Viewer using a server-backed web service for authentication.
 platform: document-processing
 control: Open PDF files from Box cloud file storage
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF from Box cloud storage in Angular
+# Open PDF from Box Cloud Storage in Angular PDF Viewer
 
 Follow these steps to load a PDF from Box cloud storage using the server-backed PDF Viewer.
 
 **Step 1:** Set up a Box developer account and create a Box application
 
-Create a developer account and Box application in the [Box Developer Console](https://developer.box.com/). Note the Client ID and Client Secret. Use OAuth 2.0 to authenticate the application.
+Create a developer account and a Box application in the [Box Developer Console](https://developer.box.com/). Note the Client ID and Client Secret. Use OAuth 2.0 to authenticate the application.
 
 **Step 2:** Create a PDF Viewer sample in Angular
 
@@ -48,7 +48,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 {
   _hostingEnvironment = hostingEnvironment;
   _cache = cache;
-   _configuration = configuration;
+  _configuration = configuration;
   _accessToken = _configuration.GetValue<string>("AccessToken");
   _clientID = _configuration.GetValue<string>("ClientID");
   _clientSecret = _configuration.GetValue<string>("ClientSecret");
@@ -111,7 +111,7 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
 
 ```
 
-6. Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+6. Open the `appsettings.json` file in your web service project. Add the following lines below the existing `"AllowedHosts"` configuration
 
 ```json
 {

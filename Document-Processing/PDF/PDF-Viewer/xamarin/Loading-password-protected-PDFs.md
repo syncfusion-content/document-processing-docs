@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: ug
 ---
 
-# Loading password protected PDFs in Xamarin Pdf Viewer (SfPdfViewer)
+# Loading password protected PDFs in Xamarin Pdf Viewer
 
 Password protected PDFs can be loaded using the `LoadDocument(Stream pdfStream, string password)` method. 
 

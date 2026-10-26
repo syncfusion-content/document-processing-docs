@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Measurement annotation in Vue PDF Viewer control | Syncfusion
-description: Learn about measurement annotations in the Syncfusion Vue PDF Viewer (Essential JS 2): distance, perimeter, area, radius, and volume.
+title: Measurement Annotation in Vue PDF Viewer | Syncfusion
+description: Learn about the measurement annotation in the Vue PDF Viewer and how it helps users work with PDF documents more effectively.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Measurement annotation in Vue PDF Viewer control
+# Measurement Annotation in Vue PDF Viewer
 
 The PDF Viewer provides options to add measurement annotations. The supported measurement annotations are:
 
@@ -211,11 +211,11 @@ Here is an example showing how to add measurement annotations programmatically u
 
 <template>
   <div id="app">
-    <button v-on:click="addDistanceAnnotation">Add Distance Annotation programatically</button>
-    <button v-on:click="addPerimeterAnnotation">Add Perimeter Annotation programatically</button>
-    <button v-on:click="addAreaAnnotation">Add Area Annotation programatically</button>
-    <button v-on:click="addRadiusAnnotation">Add Radius Annotation programatically</button>
-    <button v-on:click="addVolumeAnnotation">Add Volume Annotation programatically</button>
+    <button v-on:click="addDistanceAnnotation">Add Distance Annotation programmatically</button>
+    <button v-on:click="addPerimeterAnnotation">Add Perimeter Annotation programmatically</button>
+    <button v-on:click="addAreaAnnotation">Add Area Annotation programmatically</button>
+    <button v-on:click="addRadiusAnnotation">Add Radius Annotation programmatically</button>
+    <button v-on:click="addVolumeAnnotation">Add Volume Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl">
     </ejs-pdfviewer>
   </div>
@@ -283,11 +283,11 @@ const addVolumeAnnotation = function () {
 
 <template>
   <div id="app">
-    <button v-on:click="addDistanceAnnotation">Add Distance Annotation programatically</button>
-    <button v-on:click="addPerimeterAnnotation">Add Perimeter Annotation programatically</button>
-    <button v-on:click="addAreaAnnotation">Add Area Annotation programatically</button>
-    <button v-on:click="addRadiusAnnotation">Add Radius Annotation programatically</button>
-    <button v-on:click="addVolumeAnnotation">Add Volume Annotation programatically</button>
+    <button v-on:click="addDistanceAnnotation">Add Distance Annotation programmatically</button>
+    <button v-on:click="addPerimeterAnnotation">Add Perimeter Annotation programmatically</button>
+    <button v-on:click="addAreaAnnotation">Add Area Annotation programmatically</button>
+    <button v-on:click="addRadiusAnnotation">Add Radius Annotation programmatically</button>
+    <button v-on:click="addVolumeAnnotation">Add Volume Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl">
     </ejs-pdfviewer>
   </div>
@@ -362,11 +362,11 @@ export default {
 
 <template>
   <div id="app">
-    <button v-on:click="addDistanceAnnotation">Add Distance Annotation programatically</button>
-    <button v-on:click="addPerimeterAnnotation">Add Perimeter Annotation programatically</button>
-    <button v-on:click="addAreaAnnotation">Add Area Annotation programatically</button>
-    <button v-on:click="addRadiusAnnotation">Add Radius Annotation programatically</button>
-    <button v-on:click="addVolumeAnnotation">Add Volume Annotation programatically</button>
+    <button v-on:click="addDistanceAnnotation">Add Distance Annotation programmatically</button>
+    <button v-on:click="addPerimeterAnnotation">Add Perimeter Annotation programmatically</button>
+    <button v-on:click="addAreaAnnotation">Add Area Annotation programmatically</button>
+    <button v-on:click="addRadiusAnnotation">Add Radius Annotation programmatically</button>
+    <button v-on:click="addVolumeAnnotation">Add Volume Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl">
     </ejs-pdfviewer>
   </div>
@@ -434,11 +434,11 @@ const addVolumeAnnotation = function () {
 
 <template>
   <div id="app">
-    <button v-on:click="addDistanceAnnotation">Add Distance Annotation programatically</button>
-    <button v-on:click="addPerimeterAnnotation">Add Perimeter Annotation programatically</button>
-    <button v-on:click="addAreaAnnotation">Add Area Annotation programatically</button>
-    <button v-on:click="addRadiusAnnotation">Add Radius Annotation programatically</button>
-    <button v-on:click="addVolumeAnnotation">Add Volume Annotation programatically</button>
+    <button v-on:click="addDistanceAnnotation">Add Distance Annotation programmatically</button>
+    <button v-on:click="addPerimeterAnnotation">Add Perimeter Annotation programmatically</button>
+    <button v-on:click="addAreaAnnotation">Add Area Annotation programmatically</button>
+    <button v-on:click="addRadiusAnnotation">Add Radius Annotation programmatically</button>
+    <button v-on:click="addVolumeAnnotation">Add Volume Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl">
     </ejs-pdfviewer>
   </div>
@@ -521,11 +521,11 @@ Here is an example of using editAnnotation():
 
 <template>
   <div id="app">
-    <button v-on:click="editDistanceAnnotation">Edit Distance Annotation programatically</button>
-    <button v-on:click="editPerimeterAnnotation">Edit Perimeter Annotation programatically</button>
-    <button v-on:click="editAreaAnnotation">Edit Area Annotation programatically</button>
-    <button v-on:click="editRadiusAnnotation">Edit Radius Annotation programatically</button>
-    <button v-on:click="editVolumeAnnotation">Edit Volume Annotation programatically</button>
+    <button v-on:click="editDistanceAnnotation">Edit Distance Annotation programmatically</button>
+    <button v-on:click="editPerimeterAnnotation">Edit Perimeter Annotation programmatically</button>
+    <button v-on:click="editAreaAnnotation">Edit Area Annotation programmatically</button>
+    <button v-on:click="editRadiusAnnotation">Edit Radius Annotation programmatically</button>
+    <button v-on:click="editVolumeAnnotation">Edit Volume Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl">
     </ejs-pdfviewer>
   </div>
@@ -613,11 +613,11 @@ const editVolumeAnnotation = function () {
 
 <template>
   <div id="app">
-    <button v-on:click="editDistanceAnnotation">Edit Distance Annotation programatically</button>
-    <button v-on:click="editPerimeterAnnotation">Edit Perimeter Annotation programatically</button>
-    <button v-on:click="editAreaAnnotation">Edit Area Annotation programatically</button>
-    <button v-on:click="editRadiusAnnotation">Edit Radius Annotation programatically</button>
-    <button v-on:click="editVolumeAnnotation">Edit Volume Annotation programatically</button>
+    <button v-on:click="editDistanceAnnotation">Edit Distance Annotation programmatically</button>
+    <button v-on:click="editPerimeterAnnotation">Edit Perimeter Annotation programmatically</button>
+    <button v-on:click="editAreaAnnotation">Edit Area Annotation programmatically</button>
+    <button v-on:click="editRadiusAnnotation">Edit Radius Annotation programmatically</button>
+    <button v-on:click="editVolumeAnnotation">Edit Volume Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl">
     </ejs-pdfviewer>
   </div>
@@ -715,11 +715,11 @@ export default {
 
 <template>
   <div id="app">
-    <button v-on:click="editDistanceAnnotation">Edit Distance Annotation programatically</button>
-    <button v-on:click="editPerimeterAnnotation">Edit Perimeter Annotation programatically</button>
-    <button v-on:click="editAreaAnnotation">Edit Area Annotation programatically</button>
-    <button v-on:click="editRadiusAnnotation">Edit Radius Annotation programatically</button>
-    <button v-on:click="editVolumeAnnotation">Edit Volume Annotation programatically</button>
+    <button v-on:click="editDistanceAnnotation">Edit Distance Annotation programmatically</button>
+    <button v-on:click="editPerimeterAnnotation">Edit Perimeter Annotation programmatically</button>
+    <button v-on:click="editAreaAnnotation">Edit Area Annotation programmatically</button>
+    <button v-on:click="editRadiusAnnotation">Edit Radius Annotation programmatically</button>
+    <button v-on:click="editVolumeAnnotation">Edit Volume Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl">
     </ejs-pdfviewer>
   </div>
@@ -811,11 +811,11 @@ const editVolumeAnnotation = function () {
 
 <template>
   <div id="app">
-    <button v-on:click="editDistanceAnnotation">Edit Distance Annotation programatically</button>
-    <button v-on:click="editPerimeterAnnotation">Edit Perimeter Annotation programatically</button>
-    <button v-on:click="editAreaAnnotation">Edit Area Annotation programatically</button>
-    <button v-on:click="editRadiusAnnotation">Edit Radius Annotation programatically</button>
-    <button v-on:click="editVolumeAnnotation">Edit Volume Annotation programatically</button>
+    <button v-on:click="editDistanceAnnotation">Edit Distance Annotation programmatically</button>
+    <button v-on:click="editPerimeterAnnotation">Edit Perimeter Annotation programmatically</button>
+    <button v-on:click="editAreaAnnotation">Edit Area Annotation programmatically</button>
+    <button v-on:click="editRadiusAnnotation">Edit Radius Annotation programmatically</button>
+    <button v-on:click="editVolumeAnnotation">Edit Volume Annotation programmatically</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl">
     </ejs-pdfviewer>
   </div>
@@ -944,6 +944,112 @@ The opacity of the annotation can be edited using the range slider provided in t
 Line-based measurement annotations (distance and perimeter) have additional options in the Line Properties window. Open it by right-clicking the annotation and selecting Properties from the context menu.
 
 ![Line properties dialog for measurement annotations](../images/calibrate_lineprop.png)
+
+## Supported Border Styles
+
+In addition to the default **Solid** border, measurement annotations support additional border styles. The supported styles depend on the annotation type.
+
+| Annotation | Solid | Cloud | Dashed |
+| --- | --- | --- | --- |
+| Area | ✓ | ✓ | ✓ |
+| Radius | ✓ | ✓ | ✓ |
+| Volume | ✓ | ✓ | ✓ |
+| Distance | ✓ | — | ✓ |
+| Perimeter | ✓ | — | ✓ |
+
+Use the [`BorderStyle`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/borderStyle) enum together with the optional `borderDashArray` (Dashed) and `cloudIntensity` (Cloud) settings in the corresponding `{xx}Settings` property (`areaSettings`, `radiusSettings`, `volumeSettings`, `distanceSettings`, `perimeterSettings`).
+
+```ts
+export enum BorderStyle {
+    Solid = 'Solid',
+    Dashed = 'Dashed',
+    Cloud = 'Cloud'
+}
+```
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `borderStyle` | `BorderStyle` | Specifies the border style. Supported values: `BorderStyle.Solid`, `BorderStyle.Cloud`, and `BorderStyle.Dashed`. |
+| `borderDashArray` | `number[]` | Specifies the dash pattern when `borderStyle` is `BorderStyle.Dashed`. |
+| `cloudIntensity` | `number` | Specifies the cloud border intensity. Supported range: `1` to `2`; default value: `1`. |
+
+N> `cloudIntensity` is honored only when `borderStyle` is `BorderStyle.Cloud`.
+N> `borderStyle`, `borderDashArray`, and `cloudIntensity` are preserved during save, reload, import, and export.
+
+### Apply a Cloud Border (Area, Radius, Volume)
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (Standalone)" %}
+
+<template>
+  <div id="app">
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :resourceUrl="resourceUrl" :documentPath="documentPath"
+      :areaSettings="areaSettings" :radiusSettings="radiusSettings" :volumeSettings="volumeSettings">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide } from 'vue';
+import { BorderStyle } from '@syncfusion/ej2-vue-pdfviewer';
+
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+const areaSettings = { fillColor: 'yellow', strokeColor: 'orange', thickness: 2, opacity: 0.9, borderStyle: BorderStyle.Cloud, cloudIntensity: 2 };
+const radiusSettings = { fillColor: 'orange', strokeColor: 'pink', thickness: 2, opacity: 0.9, borderStyle: BorderStyle.Cloud, cloudIntensity: 2 };
+const volumeSettings = { fillColor: 'pink', strokeColor: 'yellow', thickness: 2, opacity: 0.9, borderStyle: BorderStyle.Cloud, cloudIntensity: 2 };
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer])
+
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+### Apply a Dashed Border (Area, Radius, Volume, Distance, Perimeter)
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (Standalone)" %}
+
+<template>
+  <div id="app">
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :resourceUrl="resourceUrl" :documentPath="documentPath"
+      :distanceSettings="distanceSettings" :perimeterSettings="perimeterSettings"
+      :areaSettings="areaSettings" :radiusSettings="radiusSettings" :volumeSettings="volumeSettings">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide } from 'vue';
+import { BorderStyle } from '@syncfusion/ej2-vue-pdfviewer';
+
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib';
+const distanceSettings = { fillColor: 'blue', strokeColor: 'green', thickness: 2, opacity: 0.9, borderStyle: BorderStyle.Dashed, borderDashArray: [5, 5] };
+const perimeterSettings = { fillColor: 'green', strokeColor: 'blue', thickness: 2, opacity: 0.9, borderStyle: BorderStyle.Dashed, borderDashArray: [5, 5] };
+const areaSettings = { fillColor: 'yellow', strokeColor: 'orange', thickness: 2, opacity: 0.9, borderStyle: BorderStyle.Dashed, borderDashArray: [5, 5] };
+const radiusSettings = { fillColor: 'orange', strokeColor: 'pink', thickness: 2, opacity: 0.9, borderStyle: BorderStyle.Dashed, borderDashArray: [5, 5] };
+const volumeSettings = { fillColor: 'pink', strokeColor: 'yellow', thickness: 2, opacity: 0.9, borderStyle: BorderStyle.Dashed, borderDashArray: [5, 5] };
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer])
+
+</script>
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Set default properties during control initialization
 
@@ -1123,7 +1229,7 @@ The PDF Viewer supports the following measurement units:
 
 ## Setting default scale ratio settings during control initialization
 
-The properties of scale ratio for measurement annotation can be set before creating the control using ScaleRatioSettings as shown in the following code snippet,
+The properties of scale ratio for measurement annotation can be set before creating the control using ScaleRatioSettings as shown in the following code snippet.
 
 
 {% tabs %}

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: React Spreadsheet getting started with Remix | Syncfusion
-description: Checkout and learn how to use the React Spreadsheet component of Syncfusion Essential JS 2 in a Remix project.
+title: Getting Started with React Spreadsheet in Remix | Syncfusion
+description: Learn how to get started with the Syncfusion React Spreadsheet component in a Remix project. Explore setup and configuration options.
 control: Spreadsheet
 platform: document-processing
 documentation: ug
 ---
 
-# Getting started with Syncfusion React Spreadsheet in Remix
+# Getting Started with React Spreadsheet in Remix
 
 This guide provides a step-by-step workflow for integrating Syncfusion React Spreadsheet into a new Remix application.
 
@@ -37,7 +37,7 @@ To set up a basic Remix sample, run the following command:
 npx create-react-router@latest
 ```
 
-The `create-react-router@latest` command create a remix app using the latest package versions.
+The `create-react-router@latest` command creates a remix app using the latest package versions.
 
 When you run this command, you will be asked the following questions.
 
@@ -55,13 +55,13 @@ When you run this command, you will be asked the following questions.
          Yes
 ```
 
-Navigate into the project directory with the below command and install the `react-router` package:
+Navigate into the project directory using the following command.
 
 ```bash
 cd my-react-router-app
 ```
 
-## Adding Syncfusion Spreadsheet package
+## Adding Syncfusion® Spreadsheet package
 
 To include the React Spreadsheet component in your project, use the following command:
 
@@ -69,21 +69,20 @@ To include the React Spreadsheet component in your project, use the following co
 npm install @syncfusion/ej2-react-spreadsheet --save
 ```
 
-## Adding CSS reference
+## Import the required CSS styles
 
-Import the Syncfusion® component themes in the `app.css` file as shown below:
+Themes for Spreadsheet can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/react/documentation/appearance/theme#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/react/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/react/documentation/appearance/theme).
+
+This guide uses the `Tailwind 3` theme as an example, sourced from the theme package. In this package, each component includes an `index.css` file that automatically loads all the required dependency styles. To install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
+
+```bash
+npm install @syncfusion/ej2-tailwind3-theme
+```
+
+Add the required Spreadsheet theme style reference to `app.css` file.
 
 ```css
-@import '../node_modules/@syncfusion/ej2-base/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-lists/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-grids/styles/tailwind3.css';
-@import '../node_modules/@syncfusion/ej2-react-spreadsheet/styles/tailwind3.css';
+@import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/spreadsheet/index.css';
 ```
 
 ## Configure Server-Side Rendering (SSR)
@@ -132,7 +131,7 @@ Start your Remix application in development mode:
 npm run dev
 ```
 
-For deployment, build your app for production,
+For deployment, build your app for production.
 ```bash
 npm run build
 ```
@@ -145,4 +144,4 @@ npm run start
 
 ## See Also
 
-* [Getting Started with Syncfusion React Spreadsheet](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/getting-started)
+* [Getting Started with React Spreadsheet](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/getting-started)

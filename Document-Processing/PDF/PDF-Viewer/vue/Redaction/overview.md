@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Redaction annotation in Vue PDF Viewer | Syncfusion
-description: Learn how to hide sensitive information with interactive and programmatic redaction using the Syncfusion Vue PDF Viewer.
+title: About Syncfusion Vue PDF Viewer Redaction | Syncfusion
+description: Learn about introduction of the Syncfusion Vue PDF Viewer Redaction section and the key capabilities it provides.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Redaction in Vue PdfViewer
+# About Syncfusion Vue PDF Viewer Redaction
 
-Redaction annotations hide confidential or sensitive information in a PDF. The Syncfusion Vue PDF Viewer (EJ2) enables marking regions or entire pages for redaction, customizing appearance, and permanently applying redaction with a single action.
+Redaction annotations hide confidential or sensitive information in a PDF. The Vue PDF Viewer (EJ2) enables marking regions or entire pages for redaction, customizing appearance, and permanently applying redaction with a single action.
 
 ## Enable the redaction toolbar
 
@@ -123,7 +123,7 @@ Remove redaction annotations using the toolbar or keyboard shortcuts:
 
 ## Redact Entire Pages
 
-The viewer supports redacting entire pages that contain sensitive information. Use the built-in dialog to select specific pages, page ranges, or all pages, or invoke the same behavior programmatically.
+The viewer supports redacting entire pages that contain sensitive information. Use the built-in dialog to select specific pages, page ranges, or all pages, or invoke the same behavior programmatically using the `addPageRedactions` method.
 
 ![Toolbar showing the Redact Page option](redaction-annotations-images/redact-page-icon.png)
 
@@ -136,7 +136,7 @@ After adding redaction annotations, permanently apply them to the document using
 
 ![Toolbar showing the Apply Redaction button](redaction-annotations-images/redact-button-icon.png)
 
-A confirmation dialog appears before applying redaction to ensure acknowledgement of the irreversible action.
+A confirmation dialog appears before applying redaction to ensure acknowledgment of the irreversible action.
 
 ![Confirmation dialog for applying redaction](redaction-annotations-images/apply-redaction-dialog.png)
 

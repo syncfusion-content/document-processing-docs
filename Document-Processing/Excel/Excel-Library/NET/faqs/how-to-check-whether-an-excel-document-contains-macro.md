@@ -1,12 +1,12 @@
 ---
-title: How to check whether an Excel document contains macro | Syncfusion
-description: Code example to check whether an Excel document contains macro using Syncfusion .NET Excel library (XlsIO).
+title: How to Detect Macros in .NET Excel Library | Syncfusion
+description: Check whether an Excel document contains macros using the Syncfusion .NET Excel Library before workbook processing.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to check whether an Excel document contains macro?
+# How to check for macros in .NET Excel Library
 You can check whether the Excel document contains macro using [HasMacros](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorkbook.html#Syncfusion_XlsIO_IWorkbook_HasMacros) property of [IWorkbook](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IWorkbook.html). The value true indicates that the Excel document has a Vba project.
 
 The following code illustrate how to check whether an Excel document contains macro using XlsIO.

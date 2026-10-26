@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Form filling in JavaScript PDF Viewer Control | Syncfusion
-description: Learn to view, fill, export, and import PDF form fields in Syncfusion JavaScript PDF Viewer, including disabling interaction and handling signatures.
+title: Form Filling in JavaScript (ES5) PDF Viewer | Syncfusion
+description: View, fill, import, and export PDF form fields in the JavaScript (ES5) PDF Viewer, with options to disable interaction and handle digital signatures.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filling PDF forms in JavaScript PDF Viewer
+# Fill PDF Form Fields in JavaScript (ES5) PDF Viewer
 
-The Syncfusion PDF Viewer supports filling form fields programmatically, via the user interface, or by importing form data from external sources.
+The PDF Viewer supports filling form fields programmatically, via the user interface, or by importing form data from external sources.
 
 1. [Filling form fields programmatically](#fill-pdf-forms-programmatically)
 
@@ -22,7 +22,7 @@ The Syncfusion PDF Viewer supports filling form fields programmatically, via the
 
 3. [Importing form field data](#fill-pdf-forms-through-import-data)
 
-  Import form data to prefill fields from a JSON/FDF/XFDF source so forms are ready for review or signing.
+  Import form data to pre-fill fields from a JSON/FDF/XFDF source so forms are ready for review or signing.
 
 ## Fill PDF forms programmatically 
 
@@ -37,7 +37,7 @@ The following example demonstrates how to update PDF form field values programma
 // Wire up the button click
 document.getElementById('updateBtn').onclick = function () {
   // Retrieve form fields
-  var fields = pdfviewer.retrieveFormFields?.() || pdfviewer.formFieldCollection || [];
+  var fields = pdfviewer.retrieveFormFields() || [];
   // Get form fields by name
   var field = fields.find(function (f) { return f && f.name === 'name'; }) || fields[0];
 
@@ -54,17 +54,17 @@ document.getElementById('updateBtn').onclick = function () {
 
 ## Fill PDF forms through the user interface
 
-The Syncfusion PDF Viewer lets users fill form fields directly in the viewer. Clicking a field allows users to enter text, select options, or sign where supported.
+The PDF Viewer lets users fill form fields directly in the viewer. Clicking a field allows users to enter text, select options, or sign where supported.
 
 ![Fill text and signature fields in PDF Viewer](../../javascript-es6/images/FormFields.gif)
 
 The PDF Viewer supports text boxes, check boxes, radio buttons, drop-down lists, list boxes, and signature fields. Filled values remain editable during the viewing session.
 
-{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es6/prefilledforms-cs1" %}
+{% previewsample "/document-processing/code-snippet/pdfviewer/javascript-es5/prefilledforms-cs1" %}
 
 ## Fill PDF forms through Import Data 
 
-The Syncfusion PDF Viewer allows you to import form field data into an existing PDF document using the [importFormFields](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#importformfields) API. This feature enables you to pre-fill form fields using data from an external source without requiring manual user input.
+The PDF Viewer allows you to import form field data into an existing PDF document using the [importFormFields](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#importformfields) API. This feature enables you to pre-fill form fields using data from an external source without requiring manual user input.
 
 Imported form field data is automatically mapped to the corresponding form fields in the PDF document based on the field names. Once the data is imported, the populated values are displayed in the PDF Viewer and can be edited through the user interface if required.
 
@@ -73,8 +73,9 @@ Imported form field data is automatically mapped to the corresponding form field
 ```
 ```js
 document.getElementById('importJson').addEventListener('click', function () {
+  // Ensure the viewer instance (var pdfviewer = new ej.pdfviewer.PdfViewer({ ... })) is created and appended before this code runs.
   // The file for importing should be accessible at the given path or as a file stream depending on your integration
-  viewer.importFormFields('File', FormFieldDataFormat.Json);
+  pdfviewer.importFormFields('File', 'Json');
 });
 ```
 
@@ -88,7 +89,7 @@ For more details, see [Export Form Data](./import-export-form-fields/export-form
 
 ## How to Validate Form Fields using `validateFormFields` Event
 
-The [validateFormFields](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#validateformfields) event in the Syncfusion PDF Viewer is triggered when a user tries to download or submit a form while validation is enabled. You can use the [retrieveFormFields()](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#retrieveformfields) API to get all the form fields and check them one by one to see if any form fields values are empty.
+The [validateFormFields](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#validateformfields) event in the PDF Viewer is triggered when a user tries to download or submit a form while validation is enabled. You can use the [retrieveFormFields()](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#retrieveformfields) API to get all the form fields and check them one by one to see if any form fields values are empty.
 
 This validation applies to all form field types in the PDF Viewer. A textbox is empty if no text is entered, a list box or dropdown is empty if no item is selected, a signature or initial field is empty if the user has not signed, and radio buttons or checkboxes are empty if none are chosen. 
 By enabling [enableFormFieldsValidation](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#enableformfieldsvalidation) and wiring the event, you can go through each field and stop the action if required fields are not filled.
@@ -132,7 +133,7 @@ pdfviewer.validateFormFields = function (args) {
 - [Form Designer overview](./overview)
 - [Form Designer Toolbar](../toolbar-customization/form-designer-toolbar)
 - [Create](./manage-form-fields/create-form-fields), [edit](./manage-form-fields/modify-form-fields), [style](./manage-form-fields/customize-form-fields) and [remove](./manage-form-fields/remove-form-fields) form fields
-- [Edit form fields](./manage-form-fields/edit-form-fields)
+- [Edit form fields](./manage-form-fields/modify-form-fields)
 - [Group form fields](./group-form-fields)
 - [Add custom data to form fields](./custom-data)
 - [Form Constrain](./form-constrain)

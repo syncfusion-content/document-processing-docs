@@ -1,19 +1,19 @@
 ---
-title: Convert PDF file to Image in ASP.NET MVC | Syncfusion&reg;
-description: Learn how to convert a PDF file to Image in ASP.NET MVC with easy steps using System Drawing library.
+title: Getting Started with ASP.NET MVC PDF to Image Library | Syncfusion
+description: Learn how to get started with the Syncfusion ASP.NET MVC PDF to Image Library. Explore setup, features, examples, and conversion options.
 platform: document-processing
 control: PDF to image
 documentation: UG
 keywords: Assemblies
 ---
 
-# Convert PDF file to Image in ASP.NET MVC
+# Getting Started with ASP.NET MVC PDF to Image Library
 
-The Syncfusion&reg; PDF to Image converter is a .NET library used to convert PDF document to image in ASP.NET MVC application.  
+The Syncfusion&reg; PDF to Image converter is a .NET library used to convert a PDF document to an image in ASP.NET MVC application.  
 
 ## Steps to convert PDF document to Image in ASP.NET MVC
 
-Step 1: Create a new C# ASP.NET Web Application (.NET Framework) project.
+Step 1: Create a new C# ASP.NET Web Application (.NET Framework) project and select the **MVC** template.
 ![Create ASP.NET MVC application](MVC_images/aspnetmvc1.png)   
 
 Step 2: In the project configuration windows, name your project and select Create.
@@ -24,17 +24,20 @@ Step 3: Install [Syncfusion.PdfToImageConverter.AspNet.Mvc5](https://www.nuget.o
 
 Step 4: Include the following namespaces in the HomeController.cs file.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# %}
 
 using Syncfusion.PdfToImageConverter;
 using System.Drawing;
 using System.IO;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 5: Add a new button in the Index.cshtml as shown below.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# tabtitle="~/Index.cshtml" %}
 
 @{Html.BeginForm("ExportToImage", "Home", FormMethod.Post);
     {
@@ -46,10 +49,12 @@ Step 5: Add a new button in the Index.cshtml as shown below.
  }
 
 {% endhighlight %}
+{% endtabs %}
 
-Step 6: Add a new action method named ExportToImage in HomeController.cs and include the below code example to convert PDF document to Image using Convert method in PdfToImageConverter class.
+Step 6: Add a new action method named ExportToImage in HomeController.cs and include the below code example to convert PDF document to Image using Convert method in PdfToImageConverter class. Ensure the **Input.pdf** file is available in the application's working directory before running the conversion.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# %}
 
 //Initialize PDF to Image converter.
 PdfToImageConverter imageConverter = new PdfToImageConverter();
@@ -62,6 +67,7 @@ MemoryStream stream = outputStream as MemoryStream;
 return File(stream.ToArray(), System.Net.Mime.MediaTypeNames.Image.Jpeg, "sample.jpeg");
 
 {% endhighlight %}
+{% endtabs %}
 
 By executing the program, you will get the image as follows.
 ![Convert PDFToImage MVC output](GettingStarted_images/pdftoimageoutput.png)

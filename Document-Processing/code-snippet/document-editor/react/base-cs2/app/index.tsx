@@ -1,6 +1,5 @@
-import { createRoot } from 'react-dom/client';
 import * as React from 'react';
-
+import { createRoot } from 'react-dom/client';
 import {
     DocumentEditorComponent, DocumentEditor, RequestNavigateEventArgs, ViewChangeEventArgs,
     Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory,
@@ -24,7 +23,7 @@ function Default() {
     );
 }
 export default Default
-const root = ReactDOM.createRoot(document.getElementById('sample'));
+const root = createRoot(document.getElementById('sample'));
 root.render(<Default />);
 
 

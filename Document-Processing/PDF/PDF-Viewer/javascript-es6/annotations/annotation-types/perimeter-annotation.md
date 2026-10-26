@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Perimeter annotation in TypeScript PDF Viewer | Syncfusion
-description: Learn to add, edit, and customize Perimeter measurement annotations in Syncfusion TypeScript PDF Viewer with UI and programmatic examples.
+title: Perimeter Annotation in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Enable, draw, customize, and manage Perimeter measurement annotations in the JavaScript (ES6) PDF Viewer to calculate the perimeter of a region.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Perimeter annotation in TypeScript PDF Viewer
+# Perimeter Annotation in JavaScript (ES6) PDF Viewer
 
 Perimeter is a measurement annotation used to measure the length around a closed polyline in the PDF.
 
@@ -253,6 +253,48 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
+### Supported Border Styles
+
+In addition to the default **Solid** border, Perimeter annotations support the following additional border style:
+
+- **Dashed** — dashed line border.
+
+Use [`BorderStyle`](https://ej2.syncfusion.com//documentation/api/pdfviewer/borderStyle) values such as `BorderStyle.Cloud` and `BorderStyle.Dashed` together with the optional `borderDashArray` settings in the [`perimeterSettings`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#perimeterSettings) property.
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `borderStyle` | `BorderStyle` | Specifies the border style. Supported values: `BorderStyle.Solid` and `BorderStyle.Dashed`. |
+| `borderDashArray` | `number[]` | Specifies the dash pattern when `borderStyle` is `BorderStyle.Dashed`. |
+
+N> `borderStyle` and `borderDashArray` are preserved during save, reload, import, and export.
+
+#### Apply a Dashed Border
+
+```ts
+export enum BorderStyle {
+    Solid = 'Solid',
+    Dashed = 'Dashed',
+    Cloud = 'Cloud'
+}
+```
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+var pdfviewer = new ej.pdfviewer.PdfViewer();
+pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
+pdfviewer.perimeterSettings = {
+    fillColor: 'blue',
+    strokeColor: 'green',
+    thickness: 2,
+    opacity: 0.9,
+    borderStyle: ej.pdfviewer.BorderStyle.Dashed,
+    borderDashArray: [5, 5]
+  };
+pdfviewer.appendTo("#PdfViewer");
+{% endhighlight %}
+{% endtabs %}
+
 ## Set properties while adding Individual Annotation
 
 Set properties for individual annotations before creating the control using `PerimeterSettings`.
@@ -268,7 +310,7 @@ Refer to the following code snippet to set the default Perimeter settings.
 {% highlight ts tabtitle="Standalone" %}
 import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PerimeterSettings} from '@syncfusion/ej2-pdfviewer';
 
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
 
 const pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
@@ -287,7 +329,7 @@ document.getElementById('Perimeter')?.addEventListener('click', function () {
 {% highlight ts tabtitle="Server-Backed" %}
 import { PdfViewer, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PerimeterSettings} from '@syncfusion/ej2-pdfviewer';
 
-PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner);
+PdfViewer.Inject(Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, ThumbnailView, BookmarkView, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer);
 
 const pdfviewer: PdfViewer = new PdfViewer();
 pdfviewer.documentPath = 'https://cdn.syncfusion.com/content/pdf/form-designer.pdf';
@@ -311,7 +353,7 @@ The scale ratio and unit of measurement can be modified using the scale ratio op
 
 ![Scale ratio](../../images/calibrate_scaleratio.png)
 
-The Units of measurements support for the measurement annotations in the PDF Viewer are
+The supported units of measurement for the measurement annotations in the PDF Viewer are
 
 - Inch
 - Millimeter

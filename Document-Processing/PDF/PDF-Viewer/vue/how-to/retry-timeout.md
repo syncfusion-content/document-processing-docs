@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Retry Timeout in Vue PDF Viewer component | Syncfusion
-description: Learn here all about Retry Timeout in Syncfusion Vue PDF Viewer component of Syncfusion Essential JS 2 and more.
-control: Retry Timeout
+title: How to Configure Retry Timeout in Vue PDF Viewer | Syncfusion
+description: Configure retry timeout settings in the Vue PDF Viewer so failed requests are retried automatically with a delay you control.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Retry timeout in Vue PDF Viewer
+# How to Configure Retry Timeout in Vue PDF Viewer
 
 The `retryTimeout` property controls how long the PDF Viewer waits (in seconds) for an AJAX response before considering that request timed out. When a timeout occurs, the viewer will retry the request according to the `retryCount` setting. Properly configuring `retryTimeout` and `retryCount` makes the viewer more resilient to transient network errors while avoiding excessive load on the server.
 
 Defaults and units:
 
-- `retryTimeout` is specified in seconds. A value of `0` disables the timeout and may cause requests to hang indefinitely — avoid this in production.
-- `retryCount` sets how many retry attempts the viewer makes after timeouts or transient failures.
+- `retryTimeout` is specified in seconds. A value of `0` disables the timeout and may cause requests to hang indefinitely — avoid this in production. The default value is `0`.
+- `retryCount` sets how many retry attempts the viewer makes after timeouts or transient failures. The default value is `1`.
 
 Use cases:
 
@@ -67,7 +67,7 @@ import {
   PdfViewerComponent, Toolbar, Magnification, Navigation,
   Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
   Print, TextSelection, TextSearch, FormFields, FormDesigner
-} from '@syncfusion/ej2-vue-pdfviewer';;
+} from '@syncfusion/ej2-vue-pdfviewer';
 
 export default {
   name: 'app',
@@ -95,7 +95,7 @@ export default {
 
 In the given example, the `retryTimeout` is set to 10 seconds, and the `retryCount` is set to 5. This means that if a request made by the PDF Viewer takes longer than 10 seconds to receive a response, it will be considered a timeout. In such cases, The PDF Viewer will resend the same request based on the retryCount. Here, this process will repeat up to maximum of 5 retries.
 
-When an exception occurs during the AJAX request in the context of the PDF Viewer, the request will wait for the specified `retryTimeout` duration. If the timeout duration is exceeded, the PDF Viewer will decrement the [retryCount](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#retrycount) and attempt to load the document again. This retry process continues until the document is successfully loaded or the retryCount limit is reached.
+When an exception occurs during the AJAX request in the context of the PDF Viewer, the request will wait for the specified `retryTimeout` duration. If the timeout duration is exceeded, the PDF Viewer will decrement the [retryCount](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#retrycount) and attempt to load the document again. This retry process continues until the document is successfully loaded or the retryCount limit is reached.
 
 The `retryCount` property of the PDF Viewer allows you to set the number of retries for a specific request. This feature is particularly useful for handling temporary errors such as network timeouts or server issues. By initiating new requests according to the retry count, ensure a smoother user experience and efficiently handle network or server problems.
 

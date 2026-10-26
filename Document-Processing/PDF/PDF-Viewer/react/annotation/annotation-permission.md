@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Annotations Permission in React PDF Viewer | Syncfusion
-description: Learn here all about how to use annotation permissions in Syncfusion React PDF Viewer using programmatic APIs.
+title: Annotation Permission in React PDF Viewer | Syncfusion
+description: Control who can add, edit, or remove annotations in the React PDF Viewer using permission settings and programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotation permissions in React
+# Annotation Permissions in React PDF Viewer
 
 Use [annotationSettings](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#annotationsettings) to control creation-time permissions and default behavior for annotations in the PDF Viewer. These settings establish defaults for annotations created through the UI and programmatic flows.
 
@@ -60,7 +60,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-## Individual permissions
+## Annotation-type default settings
 
 - `isPrint`: Controls whether a specific annotation participates in printing. Set to `false` to exclude only that annotation from print output.
 - `isLock`: Lock or unlock a specific annotation instance programmatically.
@@ -131,14 +131,14 @@ Behavior notes
 
 ## See also
 
-- [Annotation Overview](../overview)
-- [Annotation Types](../annotation/annotation-types/area-annotation)
+- [Annotation Overview](/overview)
+- [Annotation Types](annotation-types/area-annotation)
 - [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
-- [Create and Modify Annotation](../annotation/create-modify-annotation)
-- [Customize Annotation](../annotation/customize-annotation)
-- [Remove Annotation](../annotation/delete-annotation)
-- [Handwritten Signature](../annotation/signature-annotation)
-- [Export and Import Annotation](../annotation/export-import/export-annotation)
-- [Annotation in Mobile View](../annotation/annotations-in-mobile-view)
-- [Annotation Events](../annotation/annotation-event)
-- [Annotation API](../annotation/annotations-api)
+- [Create and Modify Annotation](create-modify-annotation)
+- [Customize Annotation](customize-annotation)
+- [Remove Annotation](delete-annotation)
+- [Handwritten Signature](signature-annotation)
+- [Export and Import Annotation](export-import/export-annotation)
+- [Annotation in Mobile View](annotations-in-mobile-view)
+- [Annotation Events](annotation-event)
+- [Annotation API](annotations-api)

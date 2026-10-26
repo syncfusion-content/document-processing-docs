@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Customize form fields in MVC PDF Viewer | Syncfusion
-description: Learn how to customize PDF form fields using the UI and programmatically with APIs in the Syncfusion MVC PDF Viewer.
+title: Customize Form Fields in ASP.NET MVC PDF Viewer | Syncfusion
+description: Style PDF form fields in the ASP.NET MVC PDF Viewer by configuring fonts, colors, borders, alignment, and other visual properties through the UI or code.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
-# Customize the appearance of PDF Form Fields in MVC PDF Viewer
+# Customize Form Field Appearance in ASP.NET MVC PDF Viewer
 
 **Styling** customizes appearance only (font, color, alignment, border, background, indicator text).
 
@@ -18,7 +19,7 @@ Use the **Properties** panel to adjust:
 - Background color
 ![Textbox style from UI](../../../javascript-es6/images/ui-textbox-style.png)
 
-## Customize appearance Form Fields Programmatically
+## Customize Form Fields Programmatically
 Use [updateFormField()](https://help.syncfusion.com/cr/aspnetmvc-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#updateFormField) to apply styles:
 
 {% tabs %}

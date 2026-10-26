@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open PDF files in TypeScript PDF Viewer | Syncfusion
-description: Learn how to load PDF files in the Syncfusion TypeScript PDF Viewer from URLs, base64 strings, and databases by configuring the required server-backed services.
+title: Open Pdf Files in JavaScript (ES6) PDF Viewer | Syncfusion
+description: Load PDF files in the JavaScript (ES6) PDF Viewer from URLs, Base64 strings, databases, and other sources so users can open documents from anywhere.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open PDF files in TypeScript PDF Viewer
+# Open PDF Files in JavaScript (ES6) PDF Viewer
 
 Load documents into the PDF Viewer from hosted URLs, base64 strings, or database storage. The following sections outline each scenario and the configuration required for server-backed viewing.
 
@@ -24,7 +24,7 @@ Follow the [TypeScript getting started guide](https://help.syncfusion.com/docume
 
 1. Create a web service project in .NET Core 3.0 or later. Refer to [How to create a PDF Viewer web service in .NET Core](https://www.syncfusion.com/kb/11063/how-to-create-pdf-viewer-web-service-in-net-core-3-0-and-above) for guidance.
 2. Open the `PdfViewerController.cs` file.
-3. Modify the [Load](https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to resolve remote URLs when `isFileName` is `true`.
+3. Modify the [Load] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to resolve remote URLs when `isFileName` is `true`.
 
 ```csharp
 
@@ -74,7 +74,7 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonData)
 
 **Step 3:** Configure the PDF Viewer in the TypeScript application
 
-Update the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) with the hosted web service endpoint (replace `https://localhost:44396/pdfviewer` with your server URL) and set `documentPath` to the PDF file to load.
+Update the [serviceUrl] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) with the hosted web service endpoint (replace `https://localhost:44396/pdfviewer` with your server URL) and set `documentPath` to the PDF file to load.
 
 ```typescript
 
@@ -114,7 +114,7 @@ Use the [TypeScript getting started guide](https://help.syncfusion.com/document-
 document.getElementById('load').addEventListener('click', () => {
   viewer.load(
     'data:application/pdf;base64,'+ AddBase64String, null);
-}
+});
 ```
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master/Save%20and%20Load/Load%20PDF%20file%20from%20base64%20string)
@@ -153,7 +153,7 @@ public PdfViewerController(IWebHostEnvironment hostingEnvironment, IMemoryCache 
 }
 ```
 
-5. Modify the [Load](https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to stream the PDF from SQL Server when `isFileName` is `true`.
+5. Modify the [Load] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#load) method to stream the PDF from SQL Server when `isFileName` is `true`.
 
 ```csharp
 

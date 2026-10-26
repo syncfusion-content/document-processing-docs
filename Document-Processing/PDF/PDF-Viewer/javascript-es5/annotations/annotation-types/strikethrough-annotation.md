@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Strikethrough annotation in JavaScript PDF Viewer | Syncfusion
-description: Learn to add, edit, delete, and customize Strikethrough text markup annotations in Syncfusion JavaScript PDF Viewer, with UI and programmatic examples.
+title: Strikethrough Annotation in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Strikethrough annotations in the JavaScript (ES5) PDF Viewer to mark text with a horizontal line through it.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Strikethrough annotation in JavaScript PDF Viewer
+# Strikethrough Annotation in JavaScript (ES5) PDF Viewer
 
 The PDF Viewer provides options to add, edit, and delete Strikethrough annotations on text. You can add strikethrough via the UI (context menu or annotation toolbar) and programmatically. You can also customize color, opacity, author/subject, and default settings, and use undo/redo, save, print, or disable them as needed.
 
@@ -269,10 +269,6 @@ Use the range slider in the Edit Opacity tool to change annotation opacity.
 
 ![Delete button](../../../javascript-es6/images/delete_button.png)
 
-#### Edit strikethrough annotation properties
-
-The color and opacity of strikethrough annotations can be edited using the Edit Color and Edit Opacity tools in the annotation toolbar.
-
 ### Edit existing strikethrough annotations programmatically
 
 To modify existing strikethrough annotations programmatically, use the `editAnnotation()` method. Example:
@@ -412,7 +408,7 @@ Set properties for individual annotations before creating the control using `Str
 
 N> After editing default color and opacity using the Edit Color and Edit Opacity tools, the values update to the selected settings.
 
-Refer to the following code snippet to set the default highlight settings.
+Refer to the following code snippet to set the default strikethrough settings.
 
 ```html
 <button id="Strikethrough">Add Strikethrough</button>

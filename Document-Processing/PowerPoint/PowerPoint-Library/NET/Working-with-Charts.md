@@ -5,12 +5,16 @@ platform: document-processing
 control: Presentation
 documentation: UG
 ---
-# Working with charts using various operations
+# Working with charts in PowerPoint presentations
 
 To quickly start creating a chart in a PowerPoint Presentation using .NET PowerPoint library, please check out this video:
 {% youtube "https://www.youtube.com/watch?v=z2yD83HWIrQ" %}
 
-## Creating a Chart from scratch
+## Prerequisites
+
+Refer to the [NuGet Packages Required](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/nuget-packages-required) and [Assemblies Required](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/assemblies-required) documentation to install the required packages and references for working with charts in PowerPoint presentations.
+
+## Creating a chart from scratch
 
 An instance of [IOfficeChart](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChart.IOfficeChart.html) can be used to create or modify the charts in PowerPoint Presentation. The following code example demonstrates how to create a simple chart by adding data from scratch.
 
@@ -65,9 +69,8 @@ seriesMarch.Values = chart.ChartData[2, 4, 4, 4];
 chart.PrimaryCategoryAxis.CategoryLabels = chart.ChartData[2, 1, 4, 1];
 //Specifies the chart type
 chart.ChartType = OfficeChartType.Column_Clustered;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Saves the Presentation to a file
+pptxDoc.Save("Sample.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -121,8 +124,8 @@ seriesMarch.Values = chart.ChartData[2, 4, 4, 4];
 chart.PrimaryCategoryAxis.CategoryLabels = chart.ChartData[2, 1, 4, 1];
 //Specifies the chart type
 chart.ChartType = OfficeChartType.Column_Clustered;
-//Adds the third slide into the Presentation
-pptxDoc.Save("sample.pptx");
+//Saves the Presentation
+pptxDoc.Save("Sample.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -176,8 +179,8 @@ seriesMarch.Values = chart.ChartData(2, 4, 4, 4)
 chart.PrimaryCategoryAxis.CategoryLabels = chart.ChartData(2, 1, 4, 1)
 'Specifies the chart type
 chart.ChartType = OfficeChartType.Column_Clustered
-'Adds the third slide into the Presentation
-pptxDoc.Save("sample.pptx")
+'Saves the Presentation
+pptxDoc.Save("Sample.pptx")
 'Closes the Presentation
 pptxDoc.Close()
 {% endhighlight %}
@@ -201,9 +204,8 @@ ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
 FileStream excelStream = new FileStream("Book1.xlsx",FileMode.Open);
 //Adds a chart to the slide with a data range from excel worksheet – excel workbook, worksheet number, Data range, position, and size.
 IPresentationChart chart = slide.Charts.AddChart(excelStream, 1, "A1:D4", new RectangleF(100, 10, 700, 500));
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Saves the Presentation to a file
+pptxDoc.Save("Output.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -242,9 +244,9 @@ pptxDoc.Close()
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Charts/Create-chart-from-excel-sheet).
 
-## Creating Custom Charts 
+## Creating Custom Charts
 
-Essential<sup>&reg;</sup> Presentation facilitates you to create custom charts by adding different charts series for a single chart. 
+Essential<sup>&reg;</sup> Presentation facilitates you to create custom charts by adding different charts series for a single chart.
 
 For example, you can use a Bar-clustered chart for the first data series and a scatter-line-marker chart for the second series. As a result, you can have a Bar-clustered chart combined with a scatter-line-marker chart.
 
@@ -304,9 +306,8 @@ IOfficeChartSerie serie2014 = chart.Series.Add("2014");
 serie2014.Values = chart.ChartData[2, 3, 7, 3];
 serie2014.SerieType = OfficeChartType.Scatter_Line_Markers;
 
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output_1.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Saves the Presentation to a file
+pptxDoc.Save("Output_1.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -444,9 +445,8 @@ The following code example demonstrates how to refresh the charts in PowerPoint 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Charts/Refresh-PowerPoint-chart/.NET/Refresh-PowerPoint-chart/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Opens the PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
 //Gets the first slide
 ISlide slide = pptxDoc.Slides[0];
 //Gets the chart in slide
@@ -454,9 +454,8 @@ IPresentationChart chart = slide.Shapes[0] as IPresentationChart;
 //Refreshes the chart data. Set true to evaluate Excel formulas before refreshing,
 //or false to refresh only the data without evaluating formulas.
 chart.Refresh(false);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Saves the Presentation to a file
+pptxDoc.Save("Output.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -504,9 +503,8 @@ You can change the data for an existing chart. The code example demonstrates how
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Charts/Edit-chart-data/.NET/Edit-chart-data/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Opens the PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
 //Gets the first slide
 ISlide slide = pptxDoc.Slides[0];
 //Gets the chart in slide
@@ -525,9 +523,8 @@ chart.ChartData.SetValue(2, 4, 80);
 
 //Refreshes the chart
 chart.Refresh();
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Saves the Presentation to a file
+pptxDoc.Save("Output.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -535,7 +532,7 @@ pptxDoc.Close();
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 //Opens a Presentation
 IPresentation pptxDoc = Presentation.Open("Sample.pptx");
-//Adds a slide to the Presentation
+//Gets the first slide
 ISlide slide = pptxDoc.Slides[0];
 //Gets the chart in slide
 IPresentationChart chart = slide.Shapes[0] as IPresentationChart;
@@ -562,7 +559,7 @@ pptxDoc.Close();
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 'Opens a Presentation
 Dim pptxDoc As IPresentation = Presentation.Open("Sample.pptx")
-'Adds a slide to the Presentation
+'Gets the first slide
 Dim slide As ISlide = pptxDoc.Slides(0)
 'Gets the chart in slide
 Dim chart As IPresentationChart = TryCast(slide.Shapes(0), IPresentationChart)
@@ -596,13 +593,13 @@ A chart is composed of various elements such as legends, axes, series, etc. Each
 
 ![PowerPoint Example Chart2](WorkingwithCharts_images/WorkingwithCharts_img2.jpeg)
 
-1. The chart area of the chart.
-2. The plot area of the chart.
-3. The data points of the data series that are plotted in the chart.
-4. The horizontal (category) and vertical (value) axis along where the data is plotted in the chart.
-5. The legend of the chart.
-6. A chart and axis title that you can use in the chart.
-7. A data label that you can use to identify the details of a data point in a data series.
+1. **Chart area** — the background area of the chart.
+2. **Plot area** — the area where the data series are plotted.
+3. **Data points** — the individual values that make up a data series.
+4. **Axes** — the horizontal (category) and vertical (value) axes along which data is plotted.
+5. **Legend** — the key that identifies each data series by color or pattern.
+6. **Title** — the chart and axis titles that describe the chart.
+7. **Data labels** — labels that identify the details of a data point in a data series.
 
 ### Chart Title
 Customize the **chart title** by modifying its name, appearance, and resizing it using the **Presentation library**. For more information, click [here](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/net/charts/chart-title).
@@ -632,9 +629,8 @@ Essential<sup>&reg;</sup> Presentation allows you to modify side wall, back wall
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Charts/Apply-chart-3D-formats/.NET/Apply-chart-3D-formats/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Opens the PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
 //Gets the first slide
 ISlide slide = pptxDoc.Slides[0];
 //Gets the chart in slide
@@ -647,13 +643,12 @@ chart.Rotation = 80;
 chart.SideWall.Shadow.Angle = 60;
 //Sets the back wall border weight
 chart.BackWall.Border.LineWeight = OfficeChartLineWeight.Narrow;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
 //Set the right angle axes property of the chart
 chart.RightAngleAxes = true;
 //Set the auto scaling of chart
 chart.AutoScaling = true;
-pptxDoc.Save(outputStream);
+//Saves the Presentation to a file
+pptxDoc.Save("Output.pptx");
 //Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
@@ -772,20 +767,19 @@ T> You can specify the quality of the converted charts by setting the scaling mo
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Charts/Convert-chart-to-image/.NET/Convert-Chart-to-Image/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("../../../Data/Sample.pptx", FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
-//Initialize the PresentationRenderer
-pptxDoc.PresentationRenderer = new PresentationRenderer();
-//Gets the first instance of chart from slide
-IPresentationChart chart = pptxDoc.Slides[0].Charts[0];
-//Converts the chart to image.
-Stream image = new FileStream("../../../Data/ChartToImage.jpg", FileMode.Create, FileAccess.ReadWrite);
-pptxDoc.PresentationRenderer.ConvertToImage(chart, image);
-//Closes the presentation
-pptxDoc.Close();
-image.Close();
-inputStream.Close();
+//Opens the PowerPoint Presentation
+using (IPresentation pptxDoc = Presentation.Open("../../../Data/Sample.pptx"))
+{
+    //Initialize the PresentationRenderer
+    pptxDoc.PresentationRenderer = new PresentationRenderer();
+    //Gets the first instance of chart from slide
+    IPresentationChart chart = pptxDoc.Slides[0].Charts[0];
+    //Converts the chart to image.
+    using (Stream image = new FileStream("../../../Data/ChartToImage.jpg", FileMode.Create, FileAccess.ReadWrite))
+    {
+        pptxDoc.PresentationRenderer.ConvertToImage(chart, image);
+    }
+}
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -795,10 +789,8 @@ IPresentation pptxDoc = Presentation.Open("Sample.pptx");
 pptxDoc.ChartToImageConverter = new ChartToImageConverter();
 //Sets the scaling mode for quality
 pptxDoc.ChartToImageConverter.ScalingMode = Syncfusion.OfficeChart.ScalingMode.Best;
-//Gets the first slide
-ISlide slide = pptxDoc.Slides[0];
-//Gets the chart in slide
-IPresentationChart chart = slide.Shapes[0] as IPresentationChart;
+//Gets the first chart from the first slide
+IPresentationChart chart = pptxDoc.Slides[0].Charts[0];
 //Creates a stream instance to store the image
 MemoryStream stream = new MemoryStream();
 //Saves the image to stream
@@ -837,61 +829,6 @@ stream.Close()
 pptxDoc.Close()
 {% endhighlight %}
 
-{% highlight c# tabtitle="UWP" %}
-//You can convert a chart to images in UWP using PresentationRenderer, by using cross-platform NuGets or assemblies in a UWP application.
-//Loads or open an PowerPoint Presentation
-IPresentation pptxDoc = Presentation.Open(assembly.GetManifestResourceStream("Convert_chart_to_image.Assets.Template.pptx"));
-//Initialize the PresentationRenderer
-pptxDoc.PresentationRenderer = new PresentationRenderer();
-//Gets the first instance of chart from slide
-IPresentationChart chart = pptxDoc.Slides[0].Charts[0];
-//Converts the chart to image.
-//Creates a stream instance to store the image
-MemoryStream stream = new MemoryStream();
-pptxDoc.PresentationRenderer.ConvertToImage(chart, stream);
-//Closes the presentation
-pptxDoc.Close();
-inputStream.Close();
-//Save the memory stream as file.
-Save(stream as MemoryStream, "ChartToImage.jpeg");
-/// <summary>
-/// Save the image.
-/// </summary>
-async void Save(MemoryStream streams, string filename)
-{
-    streams.Position = 0;
-    StorageFile stFile;
-    if (!(Windows.Foundation.Metadata.ApiInformation.IsTypePresent("Windows.Phone.UI.Input.HardwareButtons")))
-    {
-        FileSavePicker savePicker = new FileSavePicker();
-        savePicker.DefaultFileExtension = ".jpeg";
-        savePicker.SuggestedFileName = filename;
-        savePicker.FileTypeChoices.Add("Image", new List<string>() { ".jpeg" });
-        stFile = await savePicker.PickSaveFileAsync();
-    }
-    else
-    {
-        StorageFolder local = Windows.Storage.ApplicationData.Current.LocalFolder;
-        stFile = await local.CreateFileAsync(filename, CreationCollisionOption.ReplaceExisting);
-    }
-    if (stFile != null)
-    {
-        using (Windows.Storage.Streams.IRandomAccessStream zipStream = await stFile.OpenAsync(FileAccessMode.ReadWrite))
-        {
-            //Write compressed data from memory to file.
-            using (Stream outstream = zipStream.AsStreamForWrite())
-            {
-                byte[] buffer = streams.ToArray();
-                outstream.Write(buffer, 0, buffer.Length);
-                outstream.Flush();
-            }
-        }
-    }
-    //Launch the saved image file.
-    await Windows.System.Launcher.LaunchFileAsync(stFile);
-}
-{% endhighlight %}
-
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Charts/Convert-chart-to-image).
@@ -903,19 +840,17 @@ The following code example demonstrates removing a chart from a slide.
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Charts/Remove-existing-chart/.NET/Remove-existing-chart/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
+//Opens the PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
 //Gets the first slide
 ISlide slide = pptxDoc.Slides[0];
 //Gets the chart in slide
 IPresentationChart chart = slide.Shapes[0] as IPresentationChart;
 //Removes the chart from slide
 slide.Shapes.Remove(chart as IShape);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
-//Closes the presentation
+//Saves the Presentation to a file
+pptxDoc.Save("Output.pptx");
+//Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
 
@@ -930,7 +865,7 @@ IPresentationChart chart = slide.Shapes[0] as IPresentationChart;
 slide.Shapes.Remove(chart as IShape);
 //Saves the Presentation
 pptxDoc.Save("output.pptx");
-//Closes the presentation
+//Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
 
@@ -985,14 +920,13 @@ chart.ChartData.SetValue(4, 2, 1);
 chart.ChartTitle = "Scatter Markers Chart";  
 //Set legend
 chart.HasLegend = false;  
-//Set Datalabels  
+//Set Datalabels
 IOfficeChartSerie serie = chart.Series[0];  
 serie.DataPoints.DefaultDataPoint.DataLabels.IsValue = true;  
 serie.DataPoints.DefaultDataPoint.DataLabels.IsCategoryName = true; 
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
-//Closes the presentation
+//Saves the Presentation to a file
+pptxDoc.Save("Output.pptx");
+//Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
 
@@ -1022,13 +956,13 @@ chart.ChartData.SetValue(4, 2, 1);
 chart.ChartTitle = "Scatter Markers Chart";  
 //Set legend  
 chart.HasLegend = false;  
-//Set Datalabels  
+//Set Datalabels
 IOfficeChartSerie serie = chart.Series[0];  
 serie.DataPoints.DefaultDataPoint.DataLabels.IsValue = true;  
 serie.DataPoints.DefaultDataPoint.DataLabels.IsCategoryName = true; 
 //Saves the Presentation
 pptxDoc.Save("output.pptx");
-//Closes the presentation
+//Closes the Presentation
 pptxDoc.Close();
 {% endhighlight %}
 
@@ -1202,7 +1136,7 @@ The following screenshot shows the output of previous code.
 
 ### Box and Whisker
 
-[Box and Whisker](https://support.microsoft.com/en-us/office/create-a-box-and-whisker-chart-62f4219f-db4b-4754-aca8-4743f6190f0d?ui=en-us&rs=en-us&ad=us#) chart shows distribution of data into quartiles, highlighting the mean and outliers. Box and Whisker charts are most commonly used in statistical analysis. Refer to the following code example to create the [Box and Whisker](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChart.OfficeChartType.html) chart.
+[Box and Whisker](https://support.microsoft.com/en-us/office/create-a-box-and-whisker-chart-62f4219f-db4b-4754-aca8-4743f6190f0d?ui=en-us&rs=en-us&ad=us#) chart shows distribution of data into quartiles, highlighting the mean and outliers. Box and Whisker charts are most commonly used in statistical analysis. Refer to the following code example to create the [Box and Whisker](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChart.OfficeChartType.html) chart. The following samples extract the chart data setup into a helper method for readability; you can call `TestBox_Whisker` from your application's `Main` method (or any entry point) to run the example.
 
 {% tabs %}
 
@@ -1653,9 +1587,10 @@ chart.ChartTitle = "Company Profit (in USD)";
 chart.Series[0].DataPoints.DefaultDataPoint.DataLabels.IsValue = true;
 chart.Series[0].DataPoints.DefaultDataPoint.DataLabels.Size = 8;
 chart.Legend.Position = OfficeLegendPosition.Right;
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("WaterFall.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Saves the Presentation to a file
+pptxDoc.Save("WaterFall.pptx");
+//Closes the Presentation
+pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
@@ -1889,7 +1824,7 @@ The following screenshot shows the output of previous code.
 
 ### Pareto
 
-[Pareto](https://support.microsoft.com/en-us/office/create-a-pareto-chart-a1512496-6dba-4743-9ab1-df5012972856?ui=en-us&rs=en-us&ad=us#) is a sorted histogram in which the columns sorted in descending order and a line representing the cumulative total percentage. . Refer to the following code example to create a [Pareto](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChart.OfficeChartType.html) chart.
+[Pareto](https://support.microsoft.com/en-us/office/create-a-pareto-chart-a1512496-6dba-4743-9ab1-df5012972856?ui=en-us&rs=en-us&ad=us#) is a sorted histogram in which the columns are sorted in descending order with a line representing the cumulative total percentage. Refer to the following code example to create a [Pareto](https://help.syncfusion.com/cr/document-processing/Syncfusion.OfficeChart.OfficeChartType.html) chart.
 
 {% tabs %}
 
@@ -2106,8 +2041,8 @@ The following Chart types are supported in Presentation.
 
 ## Online Demo
 
-* Explore how to create charts in a PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/chart#/tailwind).
+* Explore how to create charts in a PowerPoint presentation using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/chart#/tailwind).
 
 ## See Also
 * [How to set same number of intervals for Primary and Secondary ValueAxis?](https://support.syncfusion.com/kb/article/11366/how-to-set-same-number-of-intervals-for-primary-and-secondary-valueaxis-in-winforms-presentation)
-* [How to create a chart and save as an image using ASP.NET Core Presentation library?](https://support.syncfusion.com/kb/article/15499/how-to-create-a-chart-and-save-as-an-image-using-aspnet-core-presentation-library?)
+* [How to create a chart and save as an image using ASP.NET Core Presentation library?](https://support.syncfusion.com/kb/article/15499/how-to-create-a-chart-and-save-as-an-image-using-aspnet-core-presentation-library)

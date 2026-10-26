@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Shape Annotations in WPF Pdf Viewer control | Syncfusion<sup>&reg;</sup>;
-description: Learn about Shape Annotations support in Syncfusion<sup>&reg;</sup>; Essential Studio&reg; WPF Pdf Viewer control, its elements and more.
+title: Shape Annotations in WPF Pdf Viewer control | Syncfusion
+description: The shape annotations feature in WPF PDF Viewer provides line, rectangle, circle, arrow, and polygon tools to visually mark up PDF documents.
 platform: document-processing
 control: PDF Viewer
 documentation: ug

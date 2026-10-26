@@ -8,9 +8,9 @@ documentation: ug
 keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
 ---
 
-# Form Data Validation in .NET MAUI PDF Viewer (SfPdfViewer)
+# Form Data Validation in .NET MAUI PDF Viewer
 
-Before saving a filled PDF form, you may want to validate that all required fields contain acceptable values. Validation is performed by iterating the [FormFields](https://help.syncfusion.com/cr/maui/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_FormFields) collection, checking each field's value against your rules, and only proceeding with save if all criteria are met.
+Before saving a filled PDF form, you may want to validate that all required fields contain acceptable values. Validation is performed by iterating the [FormFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_FormFields) collection, checking each field's value against your rules, and only proceeding with save if all criteria are met.
 
 ## Validation example
 
@@ -96,7 +96,7 @@ async void ValidateAndSaveForm()
 {% endtabs %}
 
 ## See Also
-- [Form Field Events](../form-filling-events)
-- [Form Fields Collection](../form-filling-collection)
-- [Import and Export Form Data](../form-filling-import-export)
-- [Save a Document](../save-a-document)
+- [Form Field Events](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-events)
+- [Form Fields Collection](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-collection)
+- [Import and Export Form Data](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/form-filling-import-export)
+- [Save a Document](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/save-a-document)

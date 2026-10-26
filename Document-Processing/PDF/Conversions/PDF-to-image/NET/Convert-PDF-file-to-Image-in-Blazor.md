@@ -1,13 +1,13 @@
 ---
-title: Convert PDF file to Image in Blazor | Syncfusion&reg;
-description: Learn how to convert a PDF file to Image in Blazor with easy steps using Syncfusion&reg; PDF TO Image Converter library.
+title: Getting Started with Blazor PDF to Image Library | Syncfusion
+description: Learn how to get started with the Syncfusion Blazor PDF to Image Library. Explore setup, features, examples, and conversion options.
 platform: document-processing
 control: PDF to image
 documentation: UG
 keywords: Assemblies
 ---
 
-# Convert PDF file to Image in Blazor
+# Getting Started with Blazor PDF to Image Library
 
 The Syncfusion&reg; PDF to Image converter is a .NET library used to convert PDF document to image in Blazor application.
 
@@ -35,23 +35,29 @@ N> If you want to use the PdfToImageConverter in the Linux environment, you need
 
 Step 4: Create a new razor component named ConvertPDFToImage under Pages folder. Include the following namespace in that ConvertPDFToImage.razor file.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight razor tabtitle="~/ConvertPDFToImage.razor" %}
 
 @using Syncfusion.PdfToImageConverter;
+@using System.IO;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 5: Create a new button in ConvertPDFToImage.razor using the following code. 
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight razor tabtitle="~/ConvertPDFToImage.razor" %}
 
 <button @onclick="ExportToImage">Convert PDF To Image</button>
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 6: Add the ExportToImage method in ConvertPDFToImage.razor and include the below code example to convert PDF document to Image using Convert method in PdfToImageConverter class.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# %}
 private void ExportToImage()
 {
     //Initialize PDF to Image converter.
@@ -70,14 +76,17 @@ private void ExportToImage()
 }
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 7: Add ConvertPDFToImage.razor file in index.razor.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight razor tabtitle="~/index.razor" %}
 
 <ConvertPDFToImage></ConvertPDFToImage>
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 8: Build the project.
 
@@ -97,12 +106,12 @@ Click the Start button (green arrow) or press <kbd>F5</kbd> to run the app.
 * Install [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) or later.
 * Open Visual Studio Code and install the [C# for Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) from the Extensions Marketplace.
 
-Step 1: Open the terminal (Ctrl+` ) and run the following command to create a new Blazor Server application
+Step 1: Open the terminal (Ctrl+`) and run the following command to create a new Blazor Server application
 
 ```
 dotnet new blazorserver -n CreatePdfToImageConverterBlazorServerApp
 ```
-Step 2: Replace ****CreatePdfToImageConverterBlazorServerApp** with your desired project name.
+Step 2: Replace **CreatePdfToImageConverterBlazorServerApp** with your desired project name.
 
 Step 3: Navigate to the project directory using the following command
 
@@ -120,7 +129,7 @@ N> If you want to use the PdfToImageConverter in the Linux environment, you need
 Step 5: Create a new cs file named **ExportService.cs** under **Data** folder and include the following namespaces in the file.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight C# %}
 
 using Syncfusion.PdfToImageConverter;
 
@@ -129,23 +138,29 @@ using Syncfusion.PdfToImageConverter;
 
 Step 6: Create a new razor component named ConvertPDFToImage under Pages folder. Include the following namespace in that ConvertPDFToImage.razor file.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight razor tabtitle="~/ConvertPDFToImage.razor" %}
 
 @using Syncfusion.PdfToImageConverter;
+@using System.IO;
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 7: Create a new button in ConvertPDFToImage.razor using the following code. 
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight razor tabtitle="~/ConvertPDFToImage.razor" %}
 
 <button @onclick="ExportToImage">Convert PDF To Image</button>
 
 {% endhighlight %}
+{% endtabs %}
 
 Step 8: Add the ExportToImage method in ConvertPDFToImage.razor and include the below code example to convert PDF document to Image using Convert method in PdfToImageConverter class.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight C# %}
 private void ExportToImage()
 {
     //Initialize PDF to Image converter.
@@ -164,16 +179,19 @@ private void ExportToImage()
 }
 
 {% endhighlight %}
+{% endtabs %}
 
-Step 9: Add ConvertPDFToImage.razor file in index.razor.
+Step 8: Add ConvertPDFToImage.razor file in index.razor.
 
-{% highlight c# tabtitle="C#" %}
+{% tabs %}
+{% highlight razor tabtitle="~/index.razor" %}
 
 <ConvertPDFToImage></ConvertPDFToImage>
 
 {% endhighlight %}
+{% endtabs %}
 
-Step 10: Build the project.
+Step 9: Build the project.
 
 Run the following command in terminal to build the project.
 
@@ -181,9 +199,9 @@ Run the following command in terminal to build the project.
 dotnet build
 ```
 
-Step 11: Run the project.
+Step 10: Run the project.
 
-Run the following command in terminal to build the project.
+Run the following command in terminal to run the project.
 
 ```
 dotnet run

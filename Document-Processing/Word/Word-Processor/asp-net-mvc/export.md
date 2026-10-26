@@ -1,27 +1,27 @@
 ---
 layout: post
-title: Export in ASP.NET MVC Document Editor Component | Syncfusion
-description: Learn here all about Export in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Export in ASP.NET MVC DOCX Editor | Syncfusion
+description: The export feature in ASP.NET MVC DOCX Editor enables users to save and download documents in supported formats while preserving content and formatting.
 platform: document-processing
 control: Export
 documentation: ug
 ---
 
 
-# Export in ASP.NET MVC in Document Editor Component 
+# Export in ASP.NET MVC DOCX Editor
 
-Document editor exports the document into various known file formats in client-side such as Microsoft Word document (.docx), text document (.txt), and its own format called **Syncfusion Document Text (.sfdt)**.
+[ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) exports the document into various known file formats on the client side such as Microsoft Word document (.docx), text document (.txt), and its own format called **Syncfusion Document Text (.sfdt)**.
 
-We are providing two types of save APIs  as mentioned below.
+We are providing two types of save APIs as mentioned below.
 
-|API name|Purpose|Code Snippet for Document Editor|Code Snippet for Document Editor Container|
+|API name|Purpose|Code Snippet for DOCX Editor|Code Snippet for Document Editor Container|
 |--------|---------|----------|----------|
 |save(filename,FormatType):void<br>FormatType: Sfdt or Docx or Txt|Creates the document with specified file name and format type. Then, the created file is downloaded in the client browser by default.|documenteditor.save('sample', 'Docx')|container.documentEditor.save('sample', 'Docx')|
 |saveAsBlob(FormatType):Blob|Creates the document in specified format type and returns the created document as Blob.<br>This blob can be uploaded to your required server, database, or file path.|documenteditor.saveAsBlob('Docx')|container.documentEditor.saveAsBlob('Docx')|
 
 ## Sfdt export
 
-The following example shows how to export documents in document editor as Syncfusion document text (.sfdt).
+The following example shows how to export documents in the DOCX Editor as Syncfusion document text (.sfdt).
 
 
 
@@ -45,11 +45,11 @@ The following example shows how to export documents in document editor as Syncfu
 
 
 
-N>To enable Sfdt export for a document editor instance, set [`enableSfdtExport`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditor.html#Syncfusion_EJ2_DocumentEditor_DocumentEditor_EnableSfdtExport) to true.
+N>To enable Sfdt export for a DOCX Editor instance, set [`enableSfdtExport`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditor.html#Syncfusion_EJ2_DocumentEditor_DocumentEditor_EnableSfdtExport) to true.
 
 ## Word export
 
-The following example shows how to export the document as Word document (.docx).
+The following example shows how to export the document as a Word document (.docx).
 
 
 
@@ -73,13 +73,13 @@ The following example shows how to export the document as Word document (.docx).
 
 
 
-N>To enable word export for a document editor instance, set [`enableWordExport`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditor.html#Syncfusion_EJ2_DocumentEditor_DocumentEditor_EnableWordExport) to true.
+N>To enable Word export for a DOCX Editor instance, set [`enableWordExport`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditor.html#Syncfusion_EJ2_DocumentEditor_DocumentEditor_EnableWordExport) to true.
 
 ## Word Template Export 
 
-The following example shows how to export the document as Word Template (.dotx).
+The following example shows how to export the document as a Word Template (.dotx).
 
->Note: The Syncfusion<sup style="font-size:70%">&reg;</sup> Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
+N>The Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](./import#why-the-document-pagination-differs-from-microsoft-word)
 
 
 
@@ -104,7 +104,7 @@ The following example shows how to export the document as Word Template (.dotx).
 
 ## Text export
 
-The following example shows how to export document as text document (.txt).
+The following example shows how to export the document as a text document (.txt).
 
 
 
@@ -129,11 +129,11 @@ The following example shows how to export document as text document (.txt).
 
 
 
-N>To enable text export for a document editor instance, set [`enableTextExport`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditor.html#Syncfusion_EJ2_DocumentEditor_DocumentEditor_EnableTextExport) to true.
+N>To enable text export for a DOCX Editor instance, set [`enableTextExport`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditor.html#Syncfusion_EJ2_DocumentEditor_DocumentEditor_EnableTextExport) to true.
 
 ## Export as blob
 
-Document editor also supports API to store the document into a blob.
+DOCX Editor also supports an API to store the document into a blob.
 
 
 
@@ -142,18 +142,20 @@ Document editor also supports API to store the document into a blob.
 {% include code-snippet/document-editor/asp-net-mvc/export-blob/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Export-blob.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
 {% include code-snippet/document-editor/asp-net-mvc/document-editor-container/export-container-blob/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Export-blob.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
 
-For instance, to export the document as Rich Text Format file, implement an ASP.NET MVC web API controller using DocIO library by passing the DOCX blob.
+For instance, to export the document as a Rich Text Format file, implement an ASP.NET MVC web API controller using the DocIO library by passing the DOCX blob.
 
 ```csharp
 //API controller for the conversion.
@@ -172,7 +174,7 @@ public HttpResponseMessage ExportAsRtf()
 }
 ```
 
-In client-side, you can consume this web service and save the document as Rich Text Format (.rtf) file.
+On the client side, you can consume this web service and save the document as a Rich Text Format (.rtf) file.
 
 
 
@@ -181,12 +183,17 @@ In client-side, you can consume this web service and save the document as Rich T
 {% include code-snippet/document-editor/asp-net-mvc/export-rtf/razor %}
 {% endhighlight %}
 {% highlight c# tabtitle="Export-rtf.cs" %}
-{% endhighlight %}{% endtabs %}
+{% endhighlight %}
+{% endtabs %}
 
 
+## Online Demo
 
+Explore how to export Word documents in various formats using the ASP.NET MVC DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/advancedexporting#/tailwind3).
 
 ## See Also
 
 * [Feature modules](./feature-module)
-* [How to export the document as pdf](./how-to/export-document-as-pdf).
+* [How to export the document as pdf?](./how-to/export-document-as-pdf)
+* [Auto save the document in server](./how-to/auto-save-document)
+* [Auto save the document in AWS S3](./how-to/auto-save-document-in-document-editor)

@@ -1,14 +1,15 @@
 ---
-title: Assemblies Required for PDF | Syncfusion
-description: This section explains about the Syncfusion assemblies required to work with PDF file, and conversion such as HTML to PDF, Word to PDF, Excel to PDF, PPTX to PDF
+title: Assemblies for .NET PDF Library | Syncfusion
+description: Learn about the Syncfusion assemblies required to work with PDF files and perform conversions like HTML to PDF, Word to PDF, and Excel to PDF.
 platform: document-processing
 control: PDF
 documentation: UG
 keywords: Assemblies
 ---
-# Assemblies Required to work with PDF 
+# Assemblies for .NET PDF Library
 
-The following assemblies need to be referenced in your application based on the platform.
+The following assemblies must be referenced in your application based on the target platform. Syncfusion<sup>&reg;</sup> provides platform-specific assemblies for the .NET PDF library that can be referenced either through the Essential Studio<sup>&reg;</sup> installer or through [NuGet packages](https://www.nuget.org/packages?q=syncfusion).
+
 <table>
   <thead>
     <tr>
@@ -19,8 +20,8 @@ The following assemblies need to be referenced in your application based on the 
   <tbody>
     <tr>
       <td>
-        {{'[WPF](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-wpf)'| markdownify }},
-        {{'[Windows Forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-windows-forms)'| markdownify }} and {{'[ASP.NET MVC](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-mvc)'| markdownify }}      
+        {{'[WPF](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-wpf)'| markdownify }},
+        {{'[Windows Forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-windows-forms)'| markdownify }} and {{'[ASP.NET MVC](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-mvc)'| markdownify }}
       </td>
       <td>
         Syncfusion.Pdf.Base<br/>
@@ -29,16 +30,7 @@ The following assemblies need to be referenced in your application based on the 
     </tr>
     <tr>
       <td>
-      {{'[Windows Forms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-windows-forms)'| markdownify }} and {{'[WPF (Client Profile)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-wpf)'| markdownify }}
-      </td>
-      <td>
-        Syncfusion.Pdf.ClientProfile<br/>
-        Syncfusion.Compression.Base
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{'[Universal Windows Platform](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-uwp)'| markdownify }}
+        {{'[Universal Windows Platform (UWP)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-uwp)'| markdownify }}
       </td>
       <td>
         Syncfusion.Pdf.UWP
@@ -46,18 +38,9 @@ The following assemblies need to be referenced in your application based on the 
     </tr>
     <tr>
       <td>
-      {{'[Xamarin](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-xamarin)'| markdownify }}
-      </td>
-      <td>
-        Syncfusion.Pdf.Portable<br/>
-        Syncfusion.Compression.Portable
-      </td>
-    </tr>
-    <tr>
-      <td>
-      {{'[Blazor](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-document-in-blazor)'| markdownify }},
-      {{'[.NET Core](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-core)'| markdownify }}
-      and {{'[.NET Platforms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-mvc)'| markdownify }}
+        {{'[Blazor](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-document-in-blazor)'| markdownify }},
+        {{'[.NET Core](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-core)'| markdownify }}
+        and {{'[.NET Platforms](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-mvc)'| markdownify }}
       </td>
       <td>
         Syncfusion.Compression.Portable.dll<br/>
@@ -66,8 +49,8 @@ The following assemblies need to be referenced in your application based on the 
     </tr>
     <tr>
       <td>
-      {{'[Windows UI library (WinUI)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-winui)'| markdownify }},
-      {{'[.NET Multi-platform App UI (.NET MAUI)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-maui)'| markdownify }}
+        {{'[Windows UI Library (WinUI)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-winui)'| markdownify }},
+        {{'[.NET Multi-platform App UI (.NET MAUI)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-maui)'| markdownify }}
       </td>
       <td>
         Syncfusion.Pdf.NET.dll<br/>
@@ -76,7 +59,6 @@ The following assemblies need to be referenced in your application based on the 
     </tr>
   </tbody>
 </table>
-
 
 **RETIRED PRODUCTS**
 
@@ -113,18 +95,18 @@ The following assemblies need to be referenced in your application based on the 
         Syncfusion.Compression.WP
       </td>
     </tr>
-        <tr>
+    <tr>
       <td>
-      {{'[ASP.NET](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-web-forms) '| markdownify }}
+        {{'[ASP.NET](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-web-forms) '| markdownify }}
       </td>
       <td>
-         Syncfusion.Pdf.Base<br/>
+        Syncfusion.Pdf.Base<br/>
         Syncfusion.Compression.Base
       </td>
     </tr>
     <tr>
       <td>
-      {{'[ASP.NET (Classic)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-web-forms)'| markdownify }}
+        {{'[ASP.NET (Classic)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-web-forms)'| markdownify }}
       </td>
       <td>
         Syncfusion.Pdf.Web<br/>
@@ -133,24 +115,33 @@ The following assemblies need to be referenced in your application based on the 
     </tr>
     <tr>
       <td>
-      {{'[ASP.NET MVC (Classic)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-mvc)'| markdownify }}
+        {{'[ASP.NET MVC (Classic)](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-asp-net-mvc)'| markdownify }}
       </td>
       <td>
         Syncfusion.Pdf.MVC<br/>
         Syncfusion.Compression.Base
       </td>
     </tr>
+    <tr>
+      <td>
+        {{'[Xamarin](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/create-pdf-file-in-xamarin)'| markdownify }}
+      </td>
+      <td>
+        Syncfusion.Pdf.Portable<br/>
+        Syncfusion.Compression.Portable
+      </td>
+    </tr>
   </tbody>
 </table>
 
-N> 1. The .NET Standard assemblies can be found in the following Essential Studio<sup>&reg;</sup> installation path
+N> 1. The .NET Standard assemblies are available at the following Essential Studio<sup>&reg;</sup> installation path:
 {Installed directory}\Syncfusion<sup>&reg;</sup>\Essential Studio{Product version}\precompiledassemblies\{Product version}\
-N> 2. Syncfusion<sup>&reg;</sup> components are available in [nuget.org](https://www.nuget.org/packages?q=syncfusion).
-N> 3. Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assemblies from trial setup or from the NuGet feed, you also have to include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup>&reg;</sup> license key in your application to use our components.
+N> 2. Syncfusion<sup>&reg;</sup> components are also available on [nuget.org](https://www.nuget.org/packages?q=syncfusion).
+N> 3. Starting with **v16.2.0.x**, if you reference Syncfusion<sup>&reg;</sup> assemblies from the trial setup or from the NuGet feed, you must also include a license key in your projects. Refer to the [licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview) to learn how to register the Syncfusion<sup>&reg;</sup> license key in your application.
 
 ## Converting HTML to PDF
 
-Get the following required assemblies by downloading the HTML converter installer. Download and install the HTML converter for [Windows](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/advanced-installation#windows), [Linux](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/advanced-installation#linux), and [Mac](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/advanced-installation#mac) respectively. Please refer to the [advanced installation](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/advanced-installation) steps for more details. 
+To convert HTML to PDF, download and install the HTML converter for [Windows](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/advanced-installation#windows), [Linux](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/advanced-installation#linux), and [Mac](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/advanced-installation#mac) respectively. For more details, refer to the [advanced installation](https://help.syncfusion.com/document-processing/pdf/conversions/html-to-pdf/net/advanced-installation) steps.
 
 <table>
   <thead>
@@ -218,12 +209,11 @@ Get the following required assemblies by downloading the HTML converter installe
   </tbody>
 </table>
 
+N> HTML to PDF conversion is **not supported** in Xamarin, .NET MAUI, WinUI, and UWP applications.
 
-N> HTML to PDF conversion is not supported in Silverlight, Windows Phone, WinRT, Universal, Xamarin and UWP applications
+## Converting Word Document to PDF
 
-## Converting Word document to PDF
-
-For converting a Word document to PDF, the following assemblies need to be referenced in your application
+To convert a Word document to PDF, the following assemblies must be referenced in your application in addition to the platform-specific PDF assemblies listed above.
 
 <table>
   <thead>
@@ -234,7 +224,7 @@ For converting a Word document to PDF, the following assemblies need to be refer
   </thead>
   <tbody>
     <tr>
-      <td>WPF, Windows Forms and ASP.NET MVC</td>
+      <td>WPF, Windows Forms, and ASP.NET MVC</td>
       <td>
         Syncfusion.DocIO.Base<br/>
         Syncfusion.Compression.Base<br/>
@@ -244,17 +234,7 @@ For converting a Word document to PDF, the following assemblies need to be refer
       </td>
     </tr>
     <tr>
-      <td>Windows Forms and WPF (Client Profile)</td>
-      <td>
-        Syncfusion.DocIO.ClientProfile<br/>
-        Syncfusion.Compression.Base<br/>
-        Syncfusion.OfficeChart.Base<br/>
-        Syncfusion.Pdf.ClientProfile<br/>
-        Syncfusion.DocToPdfConverter.ClientProfile
-      </td>
-    </tr>
-    <tr>
-      <td>ASP.NET Core, Xamarin and Blazor</td>
+      <td>ASP.NET Core and Blazor</td>
       <td>
         Syncfusion.DocIO.Portable<br/>
         Syncfusion.Compression.Portable<br/>
@@ -305,17 +285,30 @@ For converting a Word document to PDF, the following assemblies need to be refer
         Syncfusion.DocToPdfConverter.Base
       </td>
     </tr>
+    <tr>
+      <td>
+        Xamarin
+      </td>
+      <td>
+        Syncfusion.DocIO.Portable<br/>
+        Syncfusion.Compression.Portable<br/>
+        Syncfusion.OfficeChart.Portable<br/>
+        Syncfusion.Pdf.Portable<br/>
+        Syncfusion.DocIORenderer.Portable<br/>
+        SkiaSharp.HarfBuzz<br/>
+        Syncfusion.SkiaSharpHelper.Portable
+      </td>
+    </tr>
   </tbody>
 </table>
 
+N> 1. Word to PDF conversion is supported in ASP.NET Core and Xamarin starting with the **2018 Volume 1 release (v16.1.0.24)** using the SkiaSharp graphics library.
+N> 2. Word to PDF conversion is **not supported** in Silverlight, Windows Phone, WinRT, and Universal applications.
+N> 3. Starting with **v17.1.0.x**, if you reference **Syncfusion.DocIORenderer**, you must also add the **Syncfusion.SkiaSharpHelper** assembly reference in your projects to perform Word to PDF conversion.
 
-N> 1. Word to PDF conversion is supported in ASP.NET Core and Xamarin from 2018 Volume 1 release (v16.1.0.24) using SkiaSharp graphics library.
-N> 2. Word to PDF conversion is not supported in Silverlight, Windows Phone, WinRT, Universal applications.
-N> 3. Starting with v17.1.0.x, if you reference "Syncfusion.DocIORenderer", you also have to add "Syncfusion.SkiaSharpHelper" assembly reference in your projects to perform Word to PDF conversion.
+## Converting Excel Document to PDF
 
-## Converting Excel document to PDF
-
-For converting an Excel document to PDF, the following assemblies need to be referenced in your application.
+To convert an Excel document to PDF, the following assemblies must be referenced in your application in addition to the platform-specific PDF assemblies listed above.
 
 <table>
   <thead>
@@ -326,7 +319,7 @@ For converting an Excel document to PDF, the following assemblies need to be ref
   </thead>
   <tbody>
     <tr>
-      <td>WPF, Windows Forms and ASP.NET MVC</td>
+      <td>WPF, Windows Forms, and ASP.NET MVC</td>
       <td>
         Syncfusion.XlsIO.Base<br/>
         Syncfusion.Compression.Base<br/>
@@ -335,16 +328,7 @@ For converting an Excel document to PDF, the following assemblies need to be ref
       </td>
     </tr>
     <tr>
-      <td>Windows Forms and WPF (Client Profile)</td>
-      <td>
-        Syncfusion.XlsIO.ClientProfile<br/>
-        Syncfusion.Compression.Base<br/>
-        Syncfusion.Pdf.ClientProfile<br/>
-        Syncfusion.ExcelToPDFConverter.ClientProfile
-      </td>
-    </tr>
-    <tr>
-      <td>UWP, .NET Core, Xamarin, and Blazor (Server-Side)</td>
+      <td>UWP, .NET Core, and Blazor (Server-Side)</td>
       <td>
         Syncfusion.Compression.Portable<br/>
         Syncfusion.XlsIO.Portable<br/>
@@ -354,7 +338,9 @@ For converting an Excel document to PDF, the following assemblies need to be ref
       </td>
     </tr>
     <tr>
-      <td>WinUI and .NET MAUI</td>
+      <td>
+        WinUI and .NET MAUI
+      </td>
       <td>
         Syncfusion.Compression.NET<br/>
         Syncfusion.XlsIO.NET<br/>
@@ -387,12 +373,26 @@ For converting an Excel document to PDF, the following assemblies need to be ref
         Syncfusion.ExcelToPDFConverter.Base
       </td>
     </tr>
+    <tr>
+      <td>
+        Xamarin
+      </td>
+      <td>
+        Syncfusion.Compression.Portable<br/>
+        Syncfusion.XlsIO.Portable<br/>
+        Syncfusion.Pdf.Portable<br/>
+        Syncfusion.SkiaSharpHelper.Portable<br/>
+        Syncfusion.XlsIORenderer.Portable
+      </td>
+    </tr>
   </tbody>
 </table>
 
+N> Excel to PDF conversion is **not supported** in Silverlight, Windows Phone, WinRT, and Universal applications.
+
 ## Converting PowerPoint Presentation to PDF
 
-For converting a PowerPoint Presentation to PDF, the following assemblies needed to be referenced in your application
+To convert a PowerPoint Presentation to PDF, the following assemblies must be referenced in your application in addition to the platform-specific PDF assemblies listed above.
 
 <table>
   <thead>
@@ -403,7 +403,7 @@ For converting a PowerPoint Presentation to PDF, the following assemblies needed
   </thead>
   <tbody>
     <tr>
-      <td>WPF, Windows Forms and ASP.NET MVC</td>
+      <td>WPF, Windows Forms, and ASP.NET MVC</td>
       <td>
         Syncfusion.Presentation.Base<br/>
         Syncfusion.Compression.Base<br/>
@@ -413,7 +413,7 @@ For converting a PowerPoint Presentation to PDF, the following assemblies needed
       </td>
     </tr>
     <tr>
-      <td>ASP.NET Core, Xamarin, and Blazor</td>
+      <td>ASP.NET Core and Blazor</td>
       <td>
         Syncfusion.Presentation.Portable<br/>
         Syncfusion.Compression.Portable<br/>
@@ -425,7 +425,9 @@ For converting a PowerPoint Presentation to PDF, the following assemblies needed
       </td>
     </tr>
     <tr>
-      <td>Windows UI Library (WinUI) and .NET Multi-platform App UI (.NET MAUI)</td>
+      <td>
+        Windows UI Library (WinUI) and .NET Multi-platform App UI (.NET MAUI)
+      </td>
       <td>
         Syncfusion.Presentation.NET<br/>
         Syncfusion.Compression.NET<br/>
@@ -438,7 +440,7 @@ For converting a PowerPoint Presentation to PDF, the following assemblies needed
   </tbody>
 </table>
 
-The following assemblies are required to be referred in addition to the above mentioned assemblies for converting the chart present in the PowerPoint Presentation into PDF.
+The following assemblies are required in addition to those listed above to convert charts present in a PowerPoint Presentation to PDF.
 
 <table>
   <thead>
@@ -480,8 +482,19 @@ The following assemblies are required to be referred in addition to the above me
         Syncfusion.PresentationToPDFConverter.Base
       </td>
     </tr>
+    <tr>
+      <td>
+        Xamarin
+      </td>
+      <td>
+        Syncfusion.Presentation.Portable<br/>
+        Syncfusion.Compression.Portable<br/>
+        Syncfusion.OfficeChart.Portable<br/>
+        Syncfusion.Pdf.Portable<br/>
+        Syncfusion.PresentationRenderer.Portable<br/>
+        Syncfusion.SkiaSharpHelper.Portable<br/>
+        SkiaSharp
+      </td>
+    </tr>
   </tbody>
 </table>
-
-N> The "Syncfusion.OfficeChartToImageConverter.WPF" assembly is supported from .NET Framework 4.0 onwards.
-

@@ -1,36 +1,65 @@
 ---
 layout: post
-title: Shapes in Angular Document editor component | Syncfusion
-description: Learn here all about Shapes in Syncfusion Angular Document editor component of Syncfusion Essential JS 2 and more.
+title: Shapes in Angular DOCX Editor | Syncfusion
+description: The shapes feature in Angular DOCX Editor preserve shape elements, text boxes, resizing, positioning, and text wrapping for accurate document rendering.
 platform: document-processing
-control: Shapes 
+control: Shapes
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Shapes in Angular Document editor component
+# Shapes in Angular DOCX Editor
 
-Shapes are drawing objects that include a text box, rectangles, lines, curves, circles, etc. It can be preset or custom geometry.
+Shapes are drawing objects that include a text box, rectangles, lines, curves, circles, etc. They can have preset or custom geometry.
 
->Note: At present, Document Editor does not have support to insert shapes. however, if the document contains a shape while importing, it will be preserved properly.
+N> At present, [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) does not have support to insert shapes. However, if the document contains a shape while importing, it will be preserved properly.
 
 ## Supported shapes
 
-The DocumentEditor has preservation support for Lines, Rectangle, Basic Shapes, Block Arrows, Equation Shapes,Flowchart and Stars and Banners.
+The DocumentEditor has preservation support for Lines, Rectangle, Basic Shapes, Block Arrows, Equation Shapes, Flowchart and Stars and Banners.
 
 ![List of supported shapes in DocumentEditor](images/Shapes_images/supported_shapes.png)
 
->Note: When using ASP.NET MVC service, the unsupported shapes will be converted as image and preserved as image.
+N> When using ASP.NET MVC service, the unsupported shapes will be converted to an image and preserved as an image.
 
-## Text box Shape
+## Text box shape
 
 A text box is a rectangular area on the document where you can enter text. When you click in a text box, a flashing cursor will display indicating that you can begin typing. It allows you to enter multiple lines of text with all text formatting.
 
 ![Text box shape view in DocumentEditor](images/Shapes_images/textbox_shape.png)
 
-## Shape Resizer
+## Insert Text Box
 
-The Document Editor also supports a built-in shape resizer to resize the shapes present in the document. The shape resizer accepts both touch and mouse interactions.
+The **Text Box** option is available in the **Insert** tab of the ribbon. It allows users to insert a text box into the document by configuring the required properties through a dedicated dialog.
+
+### Insert Text Box Using the UI
+
+You can insert a text box from either the Ribbon or Toolbar:
+
+1. Click **Text Box** from the **Insert** tab in the **Ribbon** or from the **Toolbar**.
+2. The **Insert Text Box** dialog opens.
+3. Configure the required text box properties.
+4. Click **Insert** to add the text box to the document.
+
+After insertion, the text box is added to the document with the configured settings.
+
+![Insert Text Box Dialog in DOCX Editor](images/insert-text-box-dialog.png)
+
+### Insert Text Box Using API
+
+The **DOCX Editor** also provides an API to open the **Insert Text Box** dialog programmatically. This is useful when integrating custom toolbar items, buttons, or application workflows.
+
+Use the following code snippet to open the **Insert Text Box** dialog:
+
+```typescript
+this.container.documentEditor.showDialog('TextBox');
+```
+
+When invoked, the same **Insert Text Box** dialog available from the ribbon interface is displayed, allowing users to configure and insert a text box into the document.
+
+## Shape resizer
+
+The DOCX Editor also supports a built-in shape resizer to resize the shapes present in the document. The shape resizer accepts both touch and mouse interactions.
 
 ![Shape resizer view in DocumentEditor](images/Shapes_images/shape_resizer.png)
 
@@ -40,4 +69,8 @@ Text wrapping refers to how shapes fit with surrounding text in a document. Plea
 
 ## Positioning the shape
 
-DocumentEditor preserves the position properties of the shape and displays the shape based on position properties. It does not support modifying the position properties. Whereas the shape will be automatically moved along with text edited if it is positioned relative to the line or paragraph.
+DOCX Editor preserves the position properties of the shape and displays the shape based on position properties. It does not support modifying the position properties. However, the shape will be automatically moved along with the edited text if it is positioned relative to the line or paragraph.
+
+## Online demo
+
+Explore how to preserve AutoShapes and grouped shapes in Word documents using the Angular DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/autoshapes).

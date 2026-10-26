@@ -1,22 +1,22 @@
 ---
 layout: post
-title: Control annotation visibility in JavaScript PDF Viewer | Syncfusion
-description: Learn how to control the visibility of PDF annotations in the JavaScript PDF Viewer, ensuring annotations appear only in the viewer as needed.
+title: How to Control Annotation Visibility in JavaScript (ES5) | Syncfusion
+description: Control the visibility of PDF annotations in the JavaScript (ES5) PDF Viewer so annotations appear only in the viewer and not in the saved PDF.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Control annotation visibility in PDF Viewer
+# How to Control Annotation Visibility in JavaScript (ES5) PDF Viewer
 
-### Overview
+## Overview
 
 This guide explains how to control the visibility of PDF annotations in documents loaded and saved using the Syncfusion PDF Viewer in JavaScript, so annotations remain visible in the viewer but can be hidden or omitted in saved/downloaded files.
 
 ### Steps to control annotation visibility
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started/) to create a simple PDF Viewer sample.
+**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es5/getting-started) to create a simple PDF Viewer sample.
 
 **Step 2:** Add buttons for annotation modification and downloading
 
@@ -61,7 +61,7 @@ var pdfviewer = new ej.pdfviewer.PdfViewer({
 Attach an event listener to handle annotation visibility changes and document download.
 
 ```js
-    // Add event listener to the button with ID 'download'
+    // Add event listener to the button with ID 'save'
     document.getElementById('save').addEventListener('click', save);
 ```
 
@@ -121,6 +121,6 @@ Implement a function that updates annotation visibility flags for the document.
 }
 ```
 
-Following these steps ensures annotations are visible in the Syncfusion PDF Viewer while controlling their visibility in the downloaded PDF.
+Following these steps ensures annotations are visible in the PDF Viewer while controlling their visibility in the downloaded PDF.
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/javascript-pdf-viewer-examples/tree/master/How%20to)

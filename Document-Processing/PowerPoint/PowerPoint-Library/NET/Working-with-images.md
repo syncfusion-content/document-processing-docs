@@ -1,6 +1,6 @@
 ---
 title: Add and edit images in PowerPoint slides|C# PowerPoint| Syncfusion
-description: Learn how to add, edit, and remove the images in C# using Syncfusion .NET PowerPoint library without Microsoft PowerPoint or interop dependencies.
+description: Learn how to add, edit, and remove the images in C# using .NET PowerPoint library without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: Presentation
 documentation: UG
@@ -14,54 +14,53 @@ Essential<sup>&reg;</sup> Presentation library facilitates adding or modifying t
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Images/Add-image-into-PowerPoint-Slide/.NET/Add-image-into-PowerPoint-Slide/Program.cs" %}
-//Creates a instance of Presentation
+//Create an instance of Presentation
 IPresentation pptxDoc = Presentation.Create();
-//Adds a blank slide.
+//Add a blank slide.
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
-//Gets a picture as stream.
+//Get a picture as a stream.
 FileStream pictureStream = new FileStream("Image.png", FileMode.Open);
-//Adds the picture to a slide by specifying its size and position.
+//Add the picture to a slide by specifying its size and position.
 IPicture picture = slide.Pictures.AddPicture(pictureStream, 0, 0, 250, 250);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
+//Save the PowerPoint Presentation to a file
+pptxDoc.Save("Sample.pptx");
 //Dispose the image stream
 pictureStream.Dispose();
-//Closes the Presentation
+//Close the Presentation
 pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Creates a instance of Presentation
+//Create an instance of Presentation
 IPresentation pptxDoc = Presentation.Create();
-//Adds a blank slide.
+//Add a blank slide.
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
-//Gets a picture as stream.
+//Get a picture as a stream.
 Stream pictureStream = File.Open("Image.png", FileMode.Open);
-//Adds the picture to a slide by specifying its size and position.
+//Add the picture to a slide by specifying its size and position.
 IPicture picture = slide.Pictures.AddPicture(pictureStream, 0, 0, 250, 250);
-//Saves the Presentation to the file system.
+//Save the Presentation to the file system.
 pptxDoc.Save("Sample.pptx");
 //Dispose the image stream
 pictureStream.Dispose();
-//Closes the Presentation
+//Close the Presentation
 pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Creates a instance of Presentation
+'Create an instance of Presentation
 Dim pptxDoc As IPresentation = Presentation.Create()
-'Adds a blank slide.
+'Add a blank slide.
 Dim slide As ISlide = pptxDoc.Slides.Add(SlideLayoutType.Blank)
-'Gets a picture as stream.
+'Get a picture as a stream.
 Dim pictureStream As Stream = File.Open("Image.png", FileMode.Open)
-'Adds the picture to a slide by specifying its size and position.
+'Add the picture to a slide by specifying its size and position.
 Dim picture As IPicture = slide.Pictures.AddPicture(pictureStream, 0, 0, 250, 250)
-'Saves the Presentation to the file system.
+'Save the Presentation to the file system.
 pptxDoc.Save("Sample.pptx")
 'Dispose the image stream
 pictureStream.Dispose()
-'Closes the Presentation
+'Close the Presentation
 pptxDoc.Close()
 {% endhighlight %}
 
@@ -71,72 +70,79 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Replacing Images
 
-The following code example demonstrates how to replace an existing image in a slide.
+The following code example demonstrates how to replace an existing image in a slide. The `IPicture.ImageData` property accepts a byte array that represents the new image data.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Images/Replace-existing-image/.NET/Replace-existing-image/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
-//Retrieves the first slide from the Presentation.
+//Open an existing PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Retrieve the first slide from the Presentation.
 ISlide slide = pptxDoc.Slides[0];
-//Retrieves the first picture from the slide.
+//Retrieve the first picture from the slide.
 IPicture picture = slide.Pictures[0];
-//Gets the new picture as stream.
+//Get the new picture as a stream.
 FileStream pictureStream = new FileStream("Image.png", FileMode.Open);
-//Creates instance for memory stream
+//Create an instance for memory stream
 MemoryStream memoryStream = new MemoryStream();
-//Copies stream to memoryStream.
+//Copy stream to memoryStream.
 pictureStream.CopyTo(memoryStream);
-//Replaces the existing image with new image.
+//Replace the existing image with the new image.
 picture.ImageData = memoryStream.ToArray();
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
-//Closes the Presentation
+//Save the PowerPoint Presentation to a file
+pptxDoc.Save("Output.pptx");
+//Dispose the streams
+pictureStream.Dispose();
+memoryStream.Dispose();
+//Close the Presentation
 pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Opens an existing Presentation.
+//Open an existing Presentation.
 IPresentation pptxDoc = Presentation.Open("Sample.pptx");
-//Retrieves the first slide from the Presentation.
+//Retrieve the first slide from the Presentation.
 ISlide slide = pptxDoc.Slides[0];
-//Retrieves the first picture from the slide.
+//Retrieve the first picture from the slide.
 IPicture picture = slide.Pictures[0];
-//Gets the new picture as stream.
+//Get the new picture as a stream.
 Stream pictureStream = File.Open("Image.png", FileMode.Open);
-//Creates instance for memory stream
+//Create an instance for memory stream
 MemoryStream memoryStream = new MemoryStream();
-//Copies stream to memoryStream.
+//Copy stream to memoryStream.
 pictureStream.CopyTo(memoryStream);
-//Replaces the existing image with new image.
+//Replace the existing image with the new image.
 picture.ImageData = memoryStream.ToArray();
-//Saves the Presentation to the file system.
+//Save the Presentation to the file system.
 pptxDoc.Save("Output.pptx");
-//Closes the Presentation
+//Dispose the streams
+pictureStream.Dispose();
+memoryStream.Dispose();
+//Close the Presentation
 pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Opens an existing Presentation.
+'Open an existing Presentation.
 Dim pptxDoc As IPresentation = Presentation.Open("Sample.pptx")
-'Retrieves the first slide from the Presentation.
+'Retrieve the first slide from the Presentation.
 Dim slide As ISlide = pptxDoc.Slides(0)
-'Retrieves the first picture from the slide.
+'Retrieve the first picture from the slide.
 Dim picture As IPicture = slide.Pictures(0)
-'Gets the new picture as stream.
+'Get the new picture as a stream.
 Dim pictureStream As Stream = File.Open("Image.png", FileMode.Open)
-'Creates instance for memory stream
+'Create an instance for memory stream
 Dim memoryStream As New MemoryStream()
-'Copies stream to memoryStream.
+'Copy stream to memoryStream.
 pictureStream.CopyTo(memoryStream)
-'Replaces the existing image with new image.
+'Replace the existing image with the new image.
 picture.ImageData = memoryStream.ToArray()
-'Saves the Presentation to the file system.
+'Save the Presentation to the file system.
 pptxDoc.Save("Output.pptx")
-'Closes the Presentation
+'Dispose the streams
+pictureStream.Dispose()
+memoryStream.Dispose()
+'Close the Presentation
 pptxDoc.Close()
 {% endhighlight %}
 
@@ -146,74 +152,72 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Adding SVG Images
 
-SVG images can be inserted in PowerPoint slide for displaying images with accuracy when scaling or zooming page. The Essential<sup>&reg;</sup> Presentation library allows you to insert and edit an SVG image along with its fallback image.
+SVG images can be inserted in a PowerPoint slide for displaying images with accuracy when scaling or zooming the page. The Essential<sup>&reg;</sup> Presentation library allows you to insert and edit an SVG image along with its fallback image.
 
 The following code example demonstrates how to add a new SVG image into a slide.
 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Images/Add-SVG-image/.NET/Add-SVG-image/Program.cs" %}
-//Creates an instance of Presentation
+//Create an instance of Presentation
 IPresentation pptxDoc = Presentation.Create();
-//Adds a blank slide
+//Add a blank slide
 ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
-//Gets a SVG image (icon) as stream
+//Get an SVG image (icon) as a stream
 FileStream svgImageStream = new FileStream("Image.svg", FileMode.Open);
-//Gets a fallback image as stream
+//Get a fallback image as a stream
 FileStream fallbackImageStream = new FileStream("Image.png", FileMode.Open);
-//Adds the icon to a slide by specifying its size and position
+//Add the icon to a slide by specifying its size and position
 IPicture icon = slide.Pictures.AddPicture(svgImageStream, fallbackImageStream, 0, 0, 250, 250);
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Sample.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
-//Dispose the fallback image stream
-fallbackImageStream.Dispose();
-//Dispose the SVG image stream
-svgImageStream.Dispose();
-//Closes the Presentation
-pptxDoc.Close();
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-//Creates an instance of Presentation
-IPresentation pptxDoc = Presentation.Create();
-//Adds a blank slide
-ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
-//Gets a SVG image (icon) as stream
-Stream svgImageStream = File.Open("Image.svg", FileMode.Open);
-//Gets a fallback image as stream
-Stream fallbackImageStream = File.Open("Image.png", FileMode.Open);
-//Adds the icon to a slide by specifying its size and position
-IPicture icon = slide.Pictures.AddPicture(svgImageStream, fallbackImageStream, 0, 0, 250, 250);
-//Saves the Presentation to the file system
+//Save the PowerPoint Presentation to a file
 pptxDoc.Save("Sample.pptx");
 //Dispose the fallback image stream
 fallbackImageStream.Dispose();
 //Dispose the SVG image stream
 svgImageStream.Dispose();
-//Closes the Presentation
+//Close the Presentation
 pptxDoc.Close();
+{% endhighlight %}
 
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Create an instance of Presentation
+IPresentation pptxDoc = Presentation.Create();
+//Add a blank slide
+ISlide slide = pptxDoc.Slides.Add(SlideLayoutType.Blank);
+//Get an SVG image (icon) as a stream
+Stream svgImageStream = File.Open("Image.svg", FileMode.Open);
+//Get a fallback image as a stream
+Stream fallbackImageStream = File.Open("Image.png", FileMode.Open);
+//Add the icon to a slide by specifying its size and position
+IPicture icon = slide.Pictures.AddPicture(svgImageStream, fallbackImageStream, 0, 0, 250, 250);
+//Save the Presentation to the file system
+pptxDoc.Save("Sample.pptx")
+//Dispose the fallback image stream
+fallbackImageStream.Dispose()
+//Dispose the SVG image stream
+svgImageStream.Dispose()
+//Close the Presentation
+pptxDoc.Close()
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Creates an instance of Presentation
+'Create an instance of Presentation
 Dim pptxDoc As IPresentation = Presentation.Create()
-'Adds a blank slide
-Dim slide As ISlide = pptxDoc.Slides.Add(SlideLayoutType.Blank) 
-'Gets a SVG image (icon) as stream
-Dim svgImageStream As Stream = File.Open("Image.svg",FileMode.Open) 
-'Gets a fallback image as stream
-Dim fallbackImageStream As Stream = File.Open("Image.png",FileMode.Open) 
-'Adds the icon to a slide by specifying its size and position
-Dim icon As IPicture = slide.Pictures.AddPicture(svgImageStream, fallbackImageStream, 0, 0, 250, 250) 
-'Saves the Presentation to the file system
+'Add a blank slide
+Dim slide As ISlide = pptxDoc.Slides.Add(SlideLayoutType.Blank)
+'Get an SVG image (icon) as a stream
+Dim svgImageStream As Stream = File.Open("Image.svg", FileMode.Open)
+'Get a fallback image as a stream
+Dim fallbackImageStream As Stream = File.Open("Image.png", FileMode.Open)
+'Add the icon to a slide by specifying its size and position
+Dim icon As IPicture = slide.Pictures.AddPicture(svgImageStream, fallbackImageStream, 0, 0, 250, 250)
+'Save the Presentation to the file system
 pptxDoc.Save("Sample.pptx")
 'Dispose the fallback image stream
 fallbackImageStream.Dispose()
 'Dispose the SVG image stream
 svgImageStream.Dispose()
-'Closes the Presentation
+'Close the Presentation
 pptxDoc.Close()
 {% endhighlight %}
 
@@ -228,70 +232,77 @@ The following code example demonstrates how to replace an existing SVG image in 
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Images/Replace-SVG-Image/.NET/Replace-SVG-Image/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
-//Retrieves the first slide from the Presentation
+//Open an existing PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Retrieve the first slide from the Presentation
 ISlide slide = pptxDoc.Slides[0];
-//Retrieves the icon object from the slide
+//Retrieve the icon object from the slide
 IPicture icon = slide.Pictures[0];
-//Gets the new picture as stream
+//Get the new picture as a stream
 FileStream pictureStream = new FileStream("Image.svg", FileMode.Open);
-//Creates instance for memory stream
+//Create an instance for memory stream
 MemoryStream memoryStream = new MemoryStream();
-//Copies stream to memoryStream
+//Copy stream to memoryStream
 pictureStream.CopyTo(memoryStream);
-//Replaces the existing icon image with new image
-//SvgData property will return null, if it is not an icon
+//Replace the existing icon image with the new image
+//SvgData property will return null if it is not an icon
 icon.SvgData = memoryStream.ToArray();
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
-//Closes the Presentation
+//Save the PowerPoint Presentation to a file
+pptxDoc.Save("Output.pptx");
+//Dispose the streams
+pictureStream.Dispose();
+memoryStream.Dispose();
+//Close the Presentation
 pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Opens an existing Presentation
-IPresentation pptxDoc = Presentation.Open("Sample.pptx");
-//Retrieves the first slide from the Presentation
-ISlide slide = pptxDoc.Slides[0];
-//Retrieves the icon object from the slide
-IPicture icon = slide.Pictures[0];
-//Gets the new picture as stream
-Stream pictureStream = File.Open("Image.svg", FileMode.Open);
-//Creates instance for memory stream
-MemoryStream memoryStream = new MemoryStream();
-//Copies stream to memoryStream
-pictureStream.CopyTo(memoryStream);
-//Replaces the existing icon image with new image
-//SvgData property will return null, if it is not an icon
-icon.SvgData = memoryStream.ToArray();
-//Saves the Presentation to the file system
-pptxDoc.Save("Output.pptx");
-//Closes the Presentation
-pptxDoc.Close();
+//Open an existing Presentation
+IPresentation pptxDoc = Presentation.Open("Sample.pptx")
+//Retrieve the first slide from the Presentation
+ISlide slide = pptxDoc.Slides[0]
+//Retrieve the icon object from the slide
+IPicture icon = slide.Pictures[0]
+//Get the new picture as a stream
+Stream pictureStream = File.Open("Image.svg", FileMode.Open)
+//Create an instance for memory stream
+MemoryStream memoryStream = new MemoryStream()
+//Copy stream to memoryStream
+pictureStream.CopyTo(memoryStream)
+//Replace the existing icon image with the new image
+'SvgData property will return null if it is not an icon
+icon.SvgData = memoryStream.ToArray()
+//Save the Presentation to the file system
+pptxDoc.Save("Output.pptx")
+//Dispose the streams
+pictureStream.Dispose()
+memoryStream.Dispose()
+//Close the Presentation
+pptxDoc.Close()
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Opens an existing Presentation.
+'Open an existing Presentation.
 Dim pptxDoc As IPresentation = Presentation.Open("Sample.pptx")
-'Retrieves the first slide from the Presentation
+'Retrieve the first slide from the Presentation
 Dim slide As ISlide = pptxDoc.Slides(0)
-'Retrieves the icon object from the slide
+'Retrieve the icon object from the slide
 Dim icon As IPicture = slide.Pictures(0)
-'Gets the new picture as stream
+'Get the new picture as a stream
 Dim pictureStream As Stream = File.Open("Image.svg", FileMode.Open)
-'Creates instance for memory stream
+'Create an instance for memory stream
 Dim memoryStream As New MemoryStream()
-'Copies stream to memoryStream
+'Copy stream to memoryStream
 pictureStream.CopyTo(memoryStream)
-'Replaces the existing icon image with new image
-'SvgData property will return null, if it is not an icon
+'Replace the existing icon image with the new image
+'SvgData property will return null if it is not an icon
 icon.SvgData = memoryStream.ToArray()
-'Saves the Presentation to the file system
+'Save the Presentation to the file system
 pptxDoc.Save("Output.pptx")
-'Closes the Presentation
+'Dispose the streams
+pictureStream.Dispose()
+memoryStream.Dispose()
+'Close the Presentation
 pptxDoc.Close()
 {% endhighlight %}
 
@@ -301,7 +312,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Crop Image
 
-Crop the images in an existing presentation or insert the cropped picture while creating a presentation from scratch by applying crop properties using the .NET PowerPoint Library.
+Crop the images in an existing presentation or insert the cropped picture while creating a presentation from scratch by applying crop properties using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library).
 
 The following code example demonstrates how to crop an image in a PowerPoint slide.
 
@@ -309,33 +320,27 @@ The following code example demonstrates how to crop an image in a PowerPoint sli
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Images/Crop_image/.NET/Crop_image/Program.cs" %}
 
 //Open an existing PowerPoint Presentation.
-using (FileStream inputStream = new FileStream("Sample.pptx", FileMode.Open, FileAccess.Read))
+using (IPresentation pptxDoc = Presentation.Open("Sample.pptx"))
 {
-    using (IPresentation pptxDoc = Presentation.Open(inputStream))
-    {
-        //Retrieve the first slide from the Presentation.
-        ISlide slide = pptxDoc.Slides[0];
-        //Retrieve the first picture from the slide.
-        IPicture picture = slide.Pictures[0];
+    //Retrieve the first slide from the Presentation.
+    ISlide slide = pptxDoc.Slides[0];
+    //Retrieve the first picture from the slide.
+    IPicture picture = slide.Pictures[0];
 
-        //Apply bounding box size and position.
-        picture.Crop.ContainerWidth = 114.48f;
-        picture.Crop.ContainerHeight = 56.88f;
-        picture.Crop.ContainerLeft = 94.32f;
-        picture.Crop.ContainerTop = 128.16f;
+    //Apply bounding box size and position.
+    picture.Crop.ContainerWidth = 114.48f;
+    picture.Crop.ContainerHeight = 56.88f;
+    picture.Crop.ContainerLeft = 94.32f;
+    picture.Crop.ContainerTop = 128.16f;
 
-        //Apply cropping size and offsets.
-        picture.Crop.Width = 900.72f;
-        picture.Crop.Height = 74.88f;
-        picture.Crop.OffsetX = 329.04f;
-        picture.Crop.OffsetY = -9.36f;
+    //Apply cropping size and offsets.
+    picture.Crop.Width = 900.72f;
+    picture.Crop.Height = 74.88f;
+    picture.Crop.OffsetX = 329.04f;
+    picture.Crop.OffsetY = -9.36f;
 
-        //Save the PowerPoint Presentation as stream.
-        using (FileStream outputStream = new FileStream("Output.pptx", FileMode.Create))
-        {
-            pptxDoc.Save(outputStream);
-        }                           
-    }                       
+    //Save the PowerPoint Presentation to a file.
+    pptxDoc.Save("Output.pptx");
 }
 
 {% endhighlight %}
@@ -376,7 +381,7 @@ Using pptxDoc As IPresentation = Presentation.Open("Sample.pptx")
     Dim picture As IPicture = slide.Pictures(0)
 
     ' Apply bounding box size and position
-    picture.Crop.ContainerWidth = 114.82F
+    picture.Crop.ContainerWidth = 114.48F
     picture.Crop.ContainerHeight = 56.88F
     picture.Crop.ContainerLeft = 94.32F
     picture.Crop.ContainerTop = 128.16F
@@ -394,7 +399,7 @@ End Using
 {% endhighlight %}
 {% endtabs %}
 
-N> The bounding box properties (ContainerLeft, ContainerTop, ContainerRight, ContainerBottom) must be set before applying the cropping properties for proper functionality.
+N> The bounding box properties (`ContainerLeft`, `ContainerTop`, `ContainerWidth`, `ContainerHeight`) must be set before applying the cropping properties for proper functionality.
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/Images/Crop_image).
 
@@ -405,57 +410,54 @@ The following code example demonstrates how to remove an existing image in a Pow
 {% tabs %}
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PowerPoint-Examples/master/Images/Remove-all-images/.NET/Remove-all-images/Program.cs" %}
-//Loads or open an PowerPoint Presentation
-FileStream inputStream = new FileStream("Sample.pptx",FileMode.Open);
-IPresentation pptxDoc = Presentation.Open(inputStream);
-//Retrieves the first slide from Presentation
+//Open an existing PowerPoint Presentation
+IPresentation pptxDoc = Presentation.Open("Sample.pptx");
+//Retrieve the first slide from the Presentation
 ISlide slide = pptxDoc.Slides[0];
-//Iterates through the pictures collection and remove the picture named "Image".
+//Iterate through a copy of the pictures collection and remove each picture.
 foreach (IPicture picture in slide.Pictures)
 {
-    //Removes the picture from the slide.
+    //Remove the picture from the slide.
     slide.Pictures.Remove(picture);
-    break;
 }
-//Save the PowerPoint Presentation as stream
-FileStream outputStream = new FileStream("Output.pptx", FileMode.Create);
-pptxDoc.Save(outputStream);
-//Closes the Presentation
+//Save the PowerPoint Presentation to a file
+pptxDoc.Save("Output.pptx");
+//Close the Presentation
 pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight c# tabtitle="C# [Windows-specific]" %}
-//Opens an existing Presentation from file system.
+//Open an existing Presentation from the file system.
 IPresentation pptxDoc = Presentation.Open("Sample.pptx");
-//Retrieves the first slide from Presentation
+//Retrieve the first slide from the Presentation
 ISlide slide = pptxDoc.Slides[0];
-//Iterates through the pictures collection and remove the picture named "Image".
+//Iterate through a copy of the pictures collection and remove each picture.
 foreach (IPicture picture in slide.Pictures)
 {
-    //Removes the picture from the slide.
+    //Remove the picture from the slide.
     slide.Pictures.Remove(picture);
-    break;
 }
-//Saves the Presentation to the file system.
+//Save the Presentation to the file system.
 pptxDoc.Save("Output.pptx");
-//Closes the Presentation
+//Close the Presentation
 pptxDoc.Close();
 {% endhighlight %}
 
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-'Opens an existing Presentation from file system.
+'Open an existing Presentation from the file system.
 Dim pptxDoc As IPresentation = Presentation.Open("Sample.pptx")
-'Retrieves the first slide from Presentation
+'Retrieve the first slide from the Presentation
 Dim slide As ISlide = pptxDoc.Slides(0)
-'Iterates through the pictures collection and removes the picture named "Image".
-For Each picture As IPicture In slide.Pictures
-    'Removes the picture from the slide.
+'Iterate through a copy of the pictures collection and remove each picture.
+Dim pictures As List(Of IPicture) = slide.Pictures.Cast(Of IPicture)().ToList()
+For Each picture As IPicture In pictures
+    'Remove the picture from the slide.
     slide.Pictures.Remove(picture)
 Exit For
 Next
-'Saves the Presentation to the file system.
+'Save the Presentation to the file system.
 pptxDoc.Save("Output.pptx")
-'Closes the Presentation
+'Close the Presentation
 pptxDoc.Close()
 {% endhighlight %}
 
@@ -465,17 +467,18 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* Explore how to add and format images in a PowerPoint presentation using the .NET PowerPoint Library (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/image#/tailwind).
+* Explore how to add and format images in a PowerPoint presentation using the [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) (Presentation) in a live demo [here](https://document.syncfusion.com/demos/powerpoint/image#/tailwind).
 
 ## See Also
 * [How to crop an image in a Presentation using C#?](https://support.syncfusion.com/kb/article/15431/how-to-crop-an-image-in-a-presentation-using-c)
 * [How to extract the cropped image from Presentation in C#?](https://support.syncfusion.com/kb/article/15451/how-to-extract-the-cropped-image-from-presentation-in-c)
 * [How to crop and insert image in Presentation in C#?](https://support.syncfusion.com/kb/article/15432/how-to-crop-and-insert-image-in-presentation-in-c)
 * [How to remove the crop from image in Presentation using C#?](https://support.syncfusion.com/kb/article/15435/how-to-remove-the-crop-from-image-in-presentation-using-c)
-* [How to crop an image in ASP.NET Core Presentation using C#?](https://support.syncfusion.com/kb/article/15431/how-to-crop-an-image-in-aspnet-core-presentation-using-c?)
-* [How to crop and insert image in ASP.NET Core Presentation in C#?](https://support.syncfusion.com/kb/article/15432/how-to-crop-and-insert-image-in-aspnet-core-presentation-in-c?)
-* [How to extract the cropped image from ASP.NET Core Presentation in C#?](https://support.syncfusion.com/kb/article/15451/how-to-extract-the-cropped-image-from-aspnet-core-presentation-in-c?)
-* [How to remove the crop from image in ASP.NET Core Presentation using C#?](https://support.syncfusion.com/kb/article/15435/how-to-remove-the-crop-from-image-in-aspnet-core-presentation-using-c?)
-* [How to extract the cropped image from WinForms Presentation in C#?](https://support.syncfusion.com/kb/article/15533/how-to-extract-the-cropped-image-from-winforms-presentation-in-c?)
+* [How to crop an image in ASP.NET Core Presentation using C#?](https://support.syncfusion.com/kb/article/15431/how-to-crop-an-image-in-aspnet-core-presentation-using-c)
+* [How to crop and insert image in ASP.NET Core Presentation in C#?](https://support.syncfusion.com/kb/article/15432/how-to-crop-and-insert-image-in-aspnet-core-presentation-in-c)
+* [How to extract the cropped image from ASP.NET Core Presentation in C#?](https://support.syncfusion.com/kb/article/15451/how-to-extract-the-cropped-image-from-aspnet-core-presentation-in-c)
+* [How to remove the crop from image in ASP.NET Core Presentation using C#?](https://support.syncfusion.com/kb/article/15435/how-to-remove-the-crop-from-image-in-aspnet-core-presentation-using-c)
+* [How to extract the cropped image from WinForms Presentation in C#?](https://support.syncfusion.com/kb/article/15533/how-to-extract-the-cropped-image-from-winforms-presentation-in-c)
 * [How to extract the text from the images in PowerPoint presentation using C#?](https://support.syncfusion.com/kb/article/17137/how-to-extract-text-from-images-in-net-core-powerpoint-using-c)
 * [How to edit the text of an existing slide and the alt text of an image in PowerPoint Presentation?](https://support.syncfusion.com/kb/article/17890/how-to-edit-the-text-of-an-existing-slide-and-the-alt-text-of-an-image-in-powerpoint-presentation)
+* [How to extract an .EMF images from the PPTX file in ASP.NET Core?](https://support.syncfusion.com/kb/article/22470/how-to-extract-an-emf-images-from-the-pptx-file-in-aspnet-core)

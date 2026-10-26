@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview of Forms in TypeScript PDF Viewer Control | Syncfusion
-description: Learn what the Form Designer in Syncfusion TypeScript PDF Viewer offers, supported field types, and how the topics are organized.
+title: About Syncfusion JavaScript (ES6) PDF Viewer Forms | Syncfusion
+description: Learn about introduction of the Syncfusion JavaScript (ES6) PDF Viewer Forms section and the key capabilities it provides.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Overview of Forms in TypeScript PDF Viewer
+# About Syncfusion JavaScript (ES6) PDF Viewer Forms
 
 The Syncfusion PDF Viewer delivers a complete, easy-to-use PDF forms experience. Users can read, fill, add, edit, and delete form fields directly within PDF documents via the intuitive user interface or programmatic APIs.
 
@@ -112,3 +112,4 @@ Create and customize interactive fields directly on the PDF page.
 - [DropDown](../forms/manage-form-fields/create-form-fields#add-dropdown)
 - [Signature field](../forms/manage-form-fields/create-form-fields#add-signature-field)
 - [Initial field](../forms/manage-form-fields/create-form-fields#add-initial-field)
+- [DateTime picker](../forms/manage-form-fields/create-form-fields#add-datetime-picker)

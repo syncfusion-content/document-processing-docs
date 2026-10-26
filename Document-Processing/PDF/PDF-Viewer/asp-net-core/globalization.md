@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Globalization and Localization in ASP.NET Core PDF Viewer | Syncfusion
-description: Learn how to implement globalization and localization in the ASP.NET Core PDF Viewer component, including localization strings and culture settings.
+title: Globalization in ASP.NET Core PDF Viewer | Syncfusion
+description: Learn about the globalization in the ASP.NET Core PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Globalization and Localization in ASP.NET Core PDF Viewer
+# Globalization in ASP.NET Core PDF Viewer
 
 The PDF Viewer component supports globalization, enabling users in different regions to view the interface in their native languages. Localization is achieved through a collection of culture-specific strings that translate all UI text, labels, messages, and tooltips. The component defaults to English (en-US), but you can configure it to display in any supported language by setting the `locale` property.
 
@@ -306,6 +306,8 @@ The `locale` property enables you to specify the language and culture for the PD
 ### Defining custom locale strings
 
 To use a locale other than the default en-US, or to customize the localization strings, map the text content for the selected locale using the `ej.base.L10n.load()` method. This method registers the localized strings for your chosen locale, and the PDF Viewer will use them when displaying the interface.
+
+N> The `ej.base.L10n.load(...)` call must be registered **before** the PDF Viewer component initializes; otherwise the localized strings will not be applied. The `ej.base` namespace is available through the Syncfusion EJ2 scripts that are loaded by the Tag Helper.
 
 **Example: Custom Arabic (ar-AE) localization**
 

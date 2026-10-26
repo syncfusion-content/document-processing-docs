@@ -1,16 +1,16 @@
 ---
-title: Convert Word to Image in ASP.NET Core Web API | Syncfusion
-description: Convert Word to image in ASP.NET Core Web API using .NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Convert Word to Image in ASP.NET  Core Web API  | Syncfusion
+description: Convert Word to image in ASP.NET  Core Web API using .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Convert Word document to Image in ASP.NET Core Web API
+# Convert Word to Image in ASP.NET  Core Web API 
 
-Syncfusion<sup>&reg;</sup> DocIO is a [.NET Core Word library](https://www.syncfusion.com/document-processing/word-framework/net-core/word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to image in ASP.NET Core Web API**.
+Syncfusion<sup>&reg;</sup> DocIO is a [.NET Word library](https://www.syncfusion.com/document-sdk/net-word-library) used to create, read, edit, and **convert Word documents** programmatically without **Microsoft Word** or interop dependencies. Using this library, you can **convert a Word document to image in ASP.NET Core Web API**.
 
-## Steps to convert Word document to Image in programmatically:
+## Steps to convert a Word document to Image programmatically
 
 The below steps illustrate convert a simple Word document to Image in ASP.NET Core Web API.
 
@@ -113,9 +113,7 @@ Step 1: Create a console application.
 
 N> Ensure your ASP.NET Core Web API is running on the specified port before running this client. Adjust the port number if your Web API runs on a different port (check the ASP.NET Core app's launch settings).
 
-Step 2: Add the below code snippet in the **Program.cs** file for accessing the Web API using HTTP requests. 
-
-This method sends a GET request to the Web API endpoint to retrieve and save the converted image.
+Step 2: Add the following code snippet in the **Program.cs** file to send a GET request to the Web API endpoint, retrieve the converted image, and save it to disk.
 
 {% tabs %}
 
@@ -167,6 +165,6 @@ Upon executing the program, the **image** will be generated as follows.
 
 ![ASP .NET Core WEB API output Word document](WordToPDF_images/Output-WordtoImage.png)
 
-Click [here](https://www.syncfusion.com/document-processing/word-framework/net) to explore the rich set of Syncfusion<sup>&reg;</sup> Word library (DocIO) features.
+Looking for the full .NET Word Library overview, features, pricing, and documentation? Visit the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) page.
 
 An online sample link to [convert Word document to image](https://document.syncfusion.com/demos/word/wordtoimage#/tailwind) in ASP.NET Core.

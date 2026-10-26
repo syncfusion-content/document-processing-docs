@@ -1,14 +1,13 @@
 ---
 layout: post
-title: Authorization token in React Pdfviewer component | Syncfusion
-description: Learn here all about Authorization token in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Authorization token
+title: How to Use an Authorization Token in React PDF Viewer | Syncfusion
+description: Pass an authorization token to the React PDF Viewer to securely access protected PDF documents and authenticated API requests.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
 
-## Authorization token in React PDF Viewer component
+# How to Use an Authorization Token in React PDF Viewer
 
 This article shows how to include an authorization token in AJAX requests issued by the React PDF Viewer by using the `ajaxRequestSettings` property. The token is included in every AJAX request sent by the viewer when configured via `ajaxHeaders`.
 

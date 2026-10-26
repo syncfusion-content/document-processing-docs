@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Single page view mode in Xamarin Pdf Viewer control | Syncfusion
+title: Single page view mode in Xamarin Pdf Viewer | Syncfusion
 description: Learn here all about Single page view mode support in Syncfusion<sup>®</sup> Xamarin Pdf Viewer (SfPdfViewer) control and more.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Single page view mode in Xamarin Pdf Viewer (SfPdfViewer)
+# Single page view mode in Xamarin Pdf Viewer
 
 The default continuous view mode of PDF Viewer allows vertical scrolling. In addition to that, PDF Viewer also provides options to view PDFs page by page with horizontal navigation support.
 

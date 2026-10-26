@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Add save button in Document Editor Component | Syncfusion
-description: Learn here to add save button in Syncfusion Document Editor component of Syncfusion Essential JS 2 and more.
+title: Add Save Button in Toolbar in ASP.NET Core DOCX Editor | Syncfusion
+description: Add a custom save button to the toolbar in Syncfusion® ASP.NET Core DOCX Editor, customize toolbar items, and perform document save operations.
 platform: document-processing
 control: Add save button tool bar 
 documentation: ug
 ---
 
 
-# Add save button in Document editor toolbar
+# How to Add Save Button in Toolbar in ASP.NET Core DOCX Editor
 
 ## To add a save button to the existing toolbar in DocumentEditorContainer
 
-DocumentEditorContainer allows you to add a new button to the existing items in a toolbar using [`CustomToolbarItemModel`] and with existing items in [`toolbarItems`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditorContainer.html#Syncfusion_EJ2_DocumentEditor_DocumentEditorContainer_ToolbarItems) property. Newly added item click action can be defined in [`toolbarClick`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditorContainer.html#Syncfusion_EJ2_DocumentEditor_DocumentEditorContainer_ToolbarClick).
+[ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) Container allows you to add a new button to the existing items in a toolbar using [`CustomToolbarItemModel`] and with existing items in [`toolbarItems`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditorContainer.html#Syncfusion_EJ2_DocumentEditor_DocumentEditorContainer_ToolbarItems) property. Newly added item click action can be defined in [`toolbarClick`](https://help.syncfusion.com/cr/aspnetcore-js2/Syncfusion.EJ2.DocumentEditor.DocumentEditorContainer.html#Syncfusion_EJ2_DocumentEditor_DocumentEditorContainer_ToolbarClick).
 
 
 {% tabs %}

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Form validation in the JavaScript PDF Viewer component | Syncfusion
-description: Learn how to enable built-in form field validation and validate missing required fields in the Syncfusion JavaScript PDF Viewer.
+title: Form Validation in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Enable built-in PDF form field validation in the JavaScript (ES5) PDF Viewer and detect missing required fields while users complete a form.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Validate PDF form fields in JavaScript PDF Viewer
+# Form Validation in JavaScript (ES5) PDF Viewer
 
 The Syncfusion **JavaScript PDF Viewer** provides built-in support for **validating form fields** before users perform actions such as **printing**, **downloading**, or **submitting** a PDF document. Validation ensures that required form fields are completed before allowing these actions to proceed and improves the reliability of collected data.
 

@@ -1,12 +1,12 @@
 ---
-title: Applying Watermark | DocIO | Syncfusion
-description: Learn how to insert text or picture watermark into a Word document using the .NET Word (DocIO) library without Microsoft Word or interop dependencies.
+title: Watermark in .NET Word | Syncfusion
+description: Describe the performance benchmark results of the Syncfusion .NET Word library across various document sizes
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
 
-# Applying Watermark in Word (DocIO) Library
+# Watermark in .NET Word
 
 Watermarks are text or pictures that appear behind the document text. You can access the watermark in the document by using the [Watermark](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html#Syncfusion_DocIO_DLS_WordDocument_Watermark) property of [WordDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.WordDocument.html) class.
 
@@ -40,7 +40,7 @@ textWatermark.Layout = WatermarkLayout.Horizontal;
 textWatermark.Semitransparent = false;
 //Sets the text watermark text color
 textWatermark.Color = Color.Black;
-//Saves the Word document to  MemoryStream
+//Saves the Word document to MemoryStream
 MemoryStream stream = new MemoryStream();
 document.Save(stream, FormatType.Docx);
 //Closes the document
@@ -65,7 +65,7 @@ textWatermark.Layout = WatermarkLayout.Horizontal;
 textWatermark.Semitransparent = false;
 //Sets the text watermark text color
 textWatermark.Color = Color.Black;
-//Sets the text to text watermark text
+//Sets the text to the text watermark
 textWatermark.Text = "TextWatermark";
 document.Save("TextWatermark.docx", FormatType.Docx);
 document.Close();
@@ -105,6 +105,8 @@ You can add or modify picture watermark in the Word document. [PictureWatermark]
 
 The following code example illustrates how to add a picture watermark to the Word document.
 
+N> Refer to the appropriate tabs in the code snippets section: ***C# [Cross-platform]*** for ASP.NET Core, Blazor, Xamarin, UWP, .NET MAUI, and WinUI; ***C# [Windows-specific]*** for WinForms and WPF; ***VB.NET [Windows-specific]*** for VB.NET applications.
+
 {% tabs %}  
 
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/DocIO-Examples/main/Watermark/Add-picture-watermark/.NET/Add-picture-watermark/Program.cs" %}
@@ -127,7 +129,7 @@ BinaryReader br = new BinaryReader(imageStream);
 byte[] image = br.ReadBytes((int)imageStream.Length);
 //Sets the image to the picture watermark.
 picWatermark.LoadPicture(image);
-//Saves the Word document to  MemoryStream
+//Saves the Word document to MemoryStream
 MemoryStream stream = new MemoryStream();
 document.Save(stream, FormatType.Docx);
 //Closes the document
@@ -150,7 +152,7 @@ picWatermark.Washout = true;
 //Sets the picture watermark to document
 document.Watermark = picWatermark;
 //Sets the image to the picture watermark
-picWatermark.Picture = Image.FromFile(ImagesPath + "Water lilies.jpg");
+picWatermark.Picture = Image.FromFile("Water lilies.jpg");
 document.Save("PictureWatermark.docx", FormatType.Docx);
 document.Close();
 {% endhighlight %}
@@ -167,10 +169,10 @@ Dim picWatermark As New PictureWatermark()
 'Sets the scaling to picture
 picWatermark.Scaling = 120.0F
 picWatermark.Washout = True
-Set the picture watermark to document
+'Sets the picture watermark to document
 document.Watermark = picWatermark
-Set the image to the picture watermark
-picWatermark.Picture = Image.FromFile(ImagesPath + "Water lilies.jpg")
+'Sets the image to the picture watermark
+picWatermark.Picture = Image.FromFile("Water lilies.jpg")
 document.Save("PictureWatermark.docx", FormatType.Docx)
 document.Close()
 {% endhighlight %}
@@ -181,7 +183,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Online Demo
 
-* Explore how to insert text and picture watermark into the Word document using the .NET Word Library (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/watermark#/tailwind). 
+* Explore how to insert text and picture watermark into the Word document using the [.NET Word Library](https://www.syncfusion.com/document-sdk/net-word-library) (DocIO) in a live demo [here](https://document.syncfusion.com/demos/word/watermark#/tailwind). 
 
 ## See Also
 

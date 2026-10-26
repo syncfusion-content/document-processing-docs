@@ -1,12 +1,12 @@
 ---
-title: Ignore green error marker in worksheets | XlsIo | Syncfusion
-description: This page demonstrates how to ignore the green error marker in worksheets using Syncfusion .NET Excel library (XlsIO).
+title: How to Ignore Error Markers in .NET Excel Library | Syncfusion
+description: Learn how to ignore the green error marker in Excel worksheets using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to ignore the green error marker in worksheets?
+# How to ignore green error markers in .NET Excel Library
 
 When there exists data that are of different formats, the error marker appears in cells. In XlsIO You can ignore this by using [IgnoreErrorOptions](https://help.syncfusion.com/cr/file-formats/Syncfusion.XlsIO.IRange.html#Syncfusion_XlsIO_IRange_IgnoreErrorOptions) property. The following code snippet illustrate this.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Mobile in UWP Pdf Viewer control | Syncfusion
+title: Mobile in UWP Pdf Viewer | Syncfusion
 description: Learn here all about Mobile support in Syncfusion<sup>®</sup> UWP Pdf Viewer (SfPdfViewer) control, its elements, and more.
 platform: document-processing
 control: PDF viewer
 documentation: ug
 ---
 
-# UI design for mobile in UWP Pdf Viewer
+# Mobile in UWP Pdf Viewer
 
 ![UWP Pdf Viewer in custom toolbar](CustomToolbarImages/CustomToolbarImage23.png)
 
@@ -33,7 +33,7 @@ By default, only the PDF will be displayed along with the page number text box a
 Also, multiple toolbars occupy same row or column and their visibility are toggled based on necessity. Among multiple toolbars that occupy same column or row only one is visible at a time. 
 The code snippets provided in this whole section are basic and are only given as examples. Do not copy and paste them as such in your sample. For working code refer the complete sample attached at the bottom of this page. 
 
-### Performing mobile specific operations in the common code behind
+## Performing mobile specific operations in the common code behind
 
 The code behind file MainPage.xaml.cs file is common as mentioned earlier. However, the code snippets are repeated here for convenience. 
 Since a common code behind file is used and there are a few differences between mobile and desktop UI designs, we need to identify at some times, whether the application is running on desktop or mobile. In mobile the following condition will be true. 
@@ -886,3 +886,8 @@ Sample link:
 <http://www.syncfusion.com/downloads/support/directtrac/general/ze/PdfViewerCustomToolbar154257435>
 
 Note that this sample is common to both mobile design and desktop design. 
+
+## See Also
+- [Custom toolbar](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/creating-custom-toolbar)
+- [Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/working-with-annotations)
+- [Localization](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/uwp/concepts-and-features/localization)

@@ -7,7 +7,7 @@ control: SfPdfViewer
 documentation: UG
 ---
 
-# Printing PDF files
+# Printing in PDF Viewer Xamarin.iOS
 
 PDF Viewer allows printing the loaded PDF documents using the Print button in the built-in toolbar. 
 

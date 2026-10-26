@@ -1,14 +1,13 @@
 ---
 layout: post
-title: Save PDF files to Google Drive in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to save PDF files to Google Drive using the Syncfusion ASP.NET MVC PDF Viewer component with a server-backed web service.
+title: To Google Drive in ASP.NET MVC PDF Viewer | Syncfusion
+description: Save PDF files from the ASP.NET MVC PDF Viewer to Google Drive using a server-backed web service for authentication and secure uploads.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Save PDF files to Google Drive
+# Save PDF Files to Google Drive in ASP.NET MVC PDF Viewer
 
 To save a PDF file to Google Drive using the ASP.NET MVC PDF Viewer, follow the steps below. This approach uses a server-backed web service.
 
@@ -100,7 +99,7 @@ using Google.Apis.Util.Store;
 
 ```
 
-N> Replace the placeholders with the actual Google Drive folder ID, application name, and the path to the OAuth 2.0 Client IDs JSON file. The folder ID is the unique identifier in the folder URL. For example, in `https://drive.google.com/drive/folders/abc123xyz456`, the ID is `abc123xyz456`.
+N> Replace the placeholders with the actual Google Drive folder ID, application name, the path to the OAuth 2.0 Client IDs JSON file, and the path used to store the token.json file. The folder ID is the unique identifier in the folder URL. For example, in `https://drive.google.com/drive/folders/abc123xyz456`, the ID is `abc123xyz456`.
 
 **Step 4:** Set the PDF Viewer properties in the ASP.NET MVC PDF Viewer component
 

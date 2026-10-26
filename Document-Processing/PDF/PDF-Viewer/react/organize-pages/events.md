@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Organize Pages Events in PDF Viewer | Syncfusion
-description: Learn how to organize pages Events in the React PDF viewer, including rotating, rearranging, inserting, deleting, and copying pages on mobile devices.
+title: Events in React PDF Viewer | Syncfusion
+description: Subscribe to Organize Pages events in the React PDF Viewer to react to rotate, rearrange, insert, delete, and copy actions on pages.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Organize Pages Events in PDF Viewer
+# Organize Pages Events in React PDF Viewer
 
 The PDF Viewer exposes events for the page organizer to track and respond to page manipulation actions (for example: rotate, rearrange, insert, delete, and copy).
 

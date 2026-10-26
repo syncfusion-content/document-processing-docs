@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Manage local storage in JavaScript PDF Viewer | Syncfusion
-description: Learn how to control session-specific data storage in the JavaScript PDF Viewer using the enableLocalStorage property.
+title: How to Enable Local Storage in JavaScript (ES5) PDF | Syncfusion
+description: Control session-specific data storage in the JavaScript (ES5) PDF Viewer using the enableLocalStorage property to balance performance and persistence.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Manage local storage in PDF Viewer
+# How to Enable Local Storage in JavaScript (ES5) PDF Viewer
 
 Use the `enableLocalStorage` property to control whether session-specific data is stored in session storage (default) or an internal in-memory collection.
 
-### Use enableLocalStorage
+## Use enableLocalStorage
 
 Set `enableLocalStorage` to manage storage behavior. When `true`, session-specific data is kept in memory; when `false` (default), session storage is used.
 

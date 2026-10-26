@@ -1,11 +1,11 @@
 ---
-title: FAQ about Mail merge | DocIO | Syncfusion
-description: Learn about the frequently asked questions about mail merge in Word document in the .NET Word (DocIO) library.
+title: FAQ about Mail merge in .NET Word | Syncfusion
+description: This section illustrates common questions and solutions related to mail merge operations in the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
 ---
-# Frequently asked questions about mail merge in Word document
+# FAQ about Mail merge in .NET Word
 
 The frequently asked questions about working with mail merge in Word documents using DocIO are listed below.
 
@@ -188,7 +188,7 @@ if (!(dynamicObject as IDictionary<string, object>).ContainsKey(node.LocalName))
 
 If you perform mail merge in stages, such as merging some fields first and others later, unused merge fields may be removed after the first execution. This happens because DocIO clears unused fields by default.
 
-To resolve this, set the [ClearFields](https://help.syncfusion.com/cr/file-formats/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ClearFields) property to false before the first merge to retain all merge fields for later use.
+To resolve this, set the [ClearFields](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.MailMerge.html#Syncfusion_DocIO_DLS_MailMerge_ClearFields) property to false before the first merge to retain all merge fields for later use.
 
 The following example demonstrates how to prevent merge fields from being removed during multiple mail merge operations.
 

@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Add header values to AJAX requests in Vue PDF Viewer | Syncfusion
-description: Learn how to include custom headers in PDF Viewer AJAX requests using ajaxRequestSettings and ajaxHeaders in the Vue PDF Viewer component.
+title: How to Add Headers to AJAX Requests in Vue PDF Viewer | Syncfusion
+description: Add custom headers to PDF Viewer AJAX requests in the Vue PDF Viewer using ajaxRequestSettings and the ajaxHeaders configuration object.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Add header values in the Vue PDF Viewer
+# How to Add Headers to AJAX Requests in Vue PDF Viewer
 
-Use the `ajaxHeaders` property inside the PDF Viewer’s [ajaxRequestSettings](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#ajaxrequestsettings) to send custom HTTP headers with each request made by the viewer.
+Use the `ajaxHeaders` property inside the PDF Viewer’s [ajaxRequestSettings](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/index-default#ajaxrequestsettings) to send custom HTTP headers with each request made by the viewer.
 
-Example: Add a custom Authorization header using `ajaxRequestSettings` in an Vue component
+Example: Add a custom Authorization header using `ajaxRequestSettings` in a Vue component
 
 ```html
 <template>

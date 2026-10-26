@@ -1,19 +1,30 @@
 ---
 layout: post
-title: Track Changes in ASP.NET MVC Document Editor Control | Syncfusion
-description: Learn here all about track changes in Syncfusion ASP.NET MVC Document Editor component of Syncfusion Essential JS 2 and more.
+title: Track Changes in ASP.NET MVC DOCX Editor | Syncfusion
+description: Track changes in ASP.NET MVC DOCX Editor records document modifications and enables reviewers to accept or reject revisions efficiently.
 platform: document-processing
 control: Track Changes
 documentation: ug
 ---
 
-# Track Changes in Document Editor Component
+# Track Changes in ASP.NET MVC DOCX Editor
 
-Track Changes allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject the modifications. It is a useful tool for managing changes made by several reviewers to the same document. If track changes option is enabled, all editing operations are preserved as revisions in Document Editor.
+Track Changes allows you to keep a record of changes or edits made to a document. You can then choose to accept or reject the modifications. It is a useful tool for managing changes made by several reviewers to the same document. If the Track Changes option is enabled, all editing operations are preserved as revisions in the DOCX Editor.
 
-## Enable track changes in Document Editor
+Starting from v35.1.xx, the default value of table row insertion and deletion colors are changed based on author. To retain the previous static colors, add the following code.
 
-The following example demonstrates how to enable track changes.
+```typescript
+container.documentEditorSettings.revisionSettings = {
+        insertRevisionColor: 'byAuthor',
+        deleteRevisionColor: 'byAuthor',
+        insertedRowColor: '#0078D4', 
+        deletedRowColor: '#E3008C' 
+      };
+```
+
+## Enable track changes in DOCX Editor
+
+The following example demonstrates how to enable Track Changes.
 
 
 {% tabs %}
@@ -25,7 +36,7 @@ The following example demonstrates how to enable track changes.
 {% endhighlight %}
 {% endtabs %}
 
->Track changes are document level settings. When opening a document, if the document does not have track changes enabled, then enableTrackChanges will be disabled even if we set enableTrackChanges = true in the initial rendering. If you want to enable track changes for all the documents, then we recommend enabling track changes during the document change event. The following example demonstrates how to enable Track changes for the all the Document while Opening.
+N> Track changes are document-level settings. When opening a document, if the document does not have track changes enabled, then `enableTrackChanges` will be disabled even if `enableTrackChanges = true` is set during the initial rendering. If you want to enable track changes for all documents, then enable track changes during the `documentChange` event. The following example demonstrates how to enable Track Changes for all documents while opening.
 
 
 {% tabs %}
@@ -36,9 +47,9 @@ The following example demonstrates how to enable track changes.
 {% include code-snippet/document-editor/asp-net-mvc/document-editor-container/track-changes-default/document-editor.cs %}
 {% endhighlight %}
 {% endtabs %}
-## Show/Hide Revisions Pane
- 
-The Show/Hide Revisions Pane feature in the Document Editor allows users to toggle the visibility of the revisions pane, providing flexibility in managing tracked changes within the document.
+## Show/Hide revisions pane
+
+The Show/Hide Revisions Pane feature in the DOCX Editor allows users to toggle the visibility of the revisions pane, providing flexibility in reviewing tracked changes in the document.
  
 The following example code illustrates how to show/hide the revisions pane.
 
@@ -53,7 +64,7 @@ The following example code illustrates how to show/hide the revisions pane.
 {% endtabs %}
 ## Get all tracked revisions
 
-The following example demonstrate how to get all tracked revision from current document.
+The following example demonstrates how to get all tracked revisions from the current document.
 
 ```typescript
 /**
@@ -62,9 +73,9 @@ The following example demonstrate how to get all tracked revision from current d
 var revisions  = container.documentEditor.revisions;
 ```
 
-## Accept or Reject all changes programmatically
+## Accept or reject all changes programmatically
 
-The following example demonstrates how to accept/reject all changes.
+The following example demonstrates how to accept or reject all changes.
 
 ```typescript
 /**
@@ -85,7 +96,7 @@ revisions.rejectAll();
 
 ## Accept or reject a specific revision
 
-The following example demonstrates how to accept/reject specific revision in the Document Editor.
+The following example demonstrates how to accept or reject a specific revision in the DOCX Editor.
 
 ```typescript
 /**
@@ -104,7 +115,7 @@ revisions.get(1).reject();
 
 ## Navigate between the tracked changes
 
-The following example demonstrates how to navigate tracked revision programmatically.
+The following example demonstrates how to navigate tracked revisions programmatically.
 
 ```typescript
 /**
@@ -118,15 +129,48 @@ container.documentEditor.selection.navigateNextRevision();
 container.documentEditor.selection.navigatePreviousRevision();
 ```
 
+## Custom Colors for Track Changes
+
+You can set an array of colors to show track changes such as insertions and deletions in the DOCX editor. Each author is assigned a color in order: the first author gets the first color, the second author gets the next, and so on. If there are more authors than colors, the assignment starts again from the beginning of the array.
+
+The following example illustrates how to set the color order for track changes in the DOCX Editor
+
+{% tabs %}
+{% highlight razor tabtitle="CSHTML" %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/track-changes-revision-colors/razor %}
+{% endhighlight %}
+{% highlight c# tabtitle="Track-changes-revision-colors.cs" %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/track-changes-revision-colors/document-editor.cs %}
+{% endhighlight %}
+{% endtabs %}
+
+## Set colors for revision types
+
+By default, the DOCX Editor uses author-based colors for tracked changes. You can also customize colors for specific revision types, such as inserted content, deleted content, inserted table rows, and deleted table rows.
+ 
+The following example shows how to customize revision type colors instead of using the default author-based colors.
+
+{% tabs %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/track-changes-RevisionTypeColors/razor %}
+{% endhighlight %}
+{% highlight c# tabtitle="Track-changes-RevisionTypeColors.cs" %}
+{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/track-changes-RevisionTypeColors/document-editor.cs %}
+{% endhighlight %}
+{% endtabs %}
+
+N> 1. These settings only affect how revisions are displayed in the DOCX Editor and are not stored in the document.
+N> 2. By default, all revision types use author-specific colors ('byAuthor').
+
 ## Filtering changes based on user
 
-In DocumentEditor, we have built-in review panel in which we have provided support for filtering changes based on the user.
+The DOCX Editor has a built-in review panel that supports filtering changes by user.
 
 ![Track changes](images/track-changes.png)
 
 ## Custom metadata along with author
 
-The Document Editor provides options to customize revisions using `revisionSettings`. The `customData` property allows you to attach additional metadata to tracked revisions in the Word Processor. This metadata can represent roles, tags, or any custom identifier for the revision. To display this metadata along with the author name in the Track Changes pane, you must enable the `showCustomDataWithAuthor` property.
+The DOCX Editor provides a `revisionSettings` property to customize revisions. The `customData` property allows you to attach additional metadata to tracked revisions in the Word Processor. This metadata can represent roles, tags, or any custom identifier for the revision. To display this metadata along with the author name in the Track Changes pane, you must enable the `showCustomDataWithAuthor` property.
 
 The following example code illustrates how to enable and update custom metadata for track changes revisions.
 
@@ -143,18 +187,15 @@ The Track Changes pane will display the author name along with the custom metada
 
 ![Custom metadata along with author](images/track-changes-customData.png)
 
->Note:
-* When you export the document as SFDT, the customData value is stored in the revision collection. When you reopen the SFDT, the custom data is automatically restored and displayed in the Track Changes pane.
-* Other than SFDT export (e.g. DOCX and other), the customData is not preserved, as it is specific to the Document Editor component.
+N> When you export the document as SFDT, the `customData` value is stored in the revision collection. When you reopen the SFDT, the custom data is restored automatically and displayed in the Track Changes pane. Other than SFDT export (e.g., DOCX and others), the `customData` is not preserved, as it is specific to the DOCX Editor component.
 
 ## Protect the document in track changes only mode
 
-Document Editor provides support for protecting the document with `RevisionsOnly` protection. In this protection, all the users are allowed to view the document and do their corrections, but they cannot accept or reject any tracked changes in the document. Later, the author can view their corrections and accept or reject the changes.
+The DOCX Editor provides support for protecting the document with `RevisionsOnly` protection. In this protection, all users can view the document and make corrections, but they cannot accept or reject any tracked changes in the document. Later, the author can view their corrections and accept or reject the changes.
 
-Document editor provides an option to protect and unprotect document using `enforceProtection` and `stopProtection` API.
+The DOCX Editor provides options to protect and unprotect a document using the `enforceProtection` and `stopProtection` APIs.
 
-The following example code illustrates how to enforce and stop protection in Document editor container.
-
+The following example code illustrates how to enforce and stop protection in the Document Editor container.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
@@ -169,4 +210,8 @@ Tracked changes only protection can be enabled in UI by using [Restrict Editing 
 
 ![Enable track changes only protection](images/tracked-changes.png)
 
-N> In enforce Protection method, first parameter denotes password and second parameter denotes protection type. Possible values of protection type are `NoProtection |ReadOnly |FormFieldsOnly |CommentsOnly |RevisionsOnly`. In stop protection method, parameter denotes the password.
+N> In the `enforceProtection` method, the first parameter denotes the password and the second parameter denotes the protection type. Possible values of the protection type are `NoProtection | ReadOnly | FormFieldsOnly | CommentsOnly | RevisionsOnly`. In the `stopProtection` method, the parameter denotes the password.
+
+## Online demo
+
+Explore how to track and review changes in Word documents using the ASP.NET MVC DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/trackchanges#/tailwind3).

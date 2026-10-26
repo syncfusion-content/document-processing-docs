@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Control file downloads in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to intercept and control file downloads in the Syncfusion ASP.NET MVC PDF Viewer using the downloadStart event.
+title: How to Control File Downloads in ASP.NET MVC PDF Viewer | Syncfusion
+description: Intercept and control file downloads in the ASP.NET MVC PDF Viewer using the downloadStart event to add custom headers or cancel the action.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
+
 documentation: ug
 ---
 
-# Control file downloads in the ASP.NET MVC PDF Viewer
+# How to Control File Downloads in ASP.NET MVC PDF Viewer
 
 Use the `downloadStart` event to intercept the start of a download and optionally cancel it. In the event handler, set `args.cancel = true` to prevent the download.
 

@@ -1,18 +1,21 @@
 ---
 layout: post
-title: Create form fields in the Vue PDF Viewer | Syncfusion
-description: Learn how to add each PDF form field using the PDF Viewer UI and how to create them programmatically in the Syncfusion Vue PDF Viewer.
+title: Create Form Fields in Vue PDF Viewer | Syncfusion
+description: Add each PDF form field using the Vue PDF Viewer UI, and learn how to create the same fields programmatically from JavaScript or TypeScript.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
-# Create PDF Form Fields in Vue
+# Create Form Fields in Vue PDF Viewer
 
 You can create or add new form fields either visually using the [Form Designer UI](https://document.syncfusion.com/demos/pdf-viewer/vue/#/tailwind3/pdfviewer/form-designer.html) or dynamically using APIs.
 
 ## Create Form Fields Using the Form Designer UI 
 Use this approach when you want to design forms manually without writing code.
+
+Before you begin, ensure the `FormDesigner` module is included in the `provide` block of the PDF Viewer component.
 
 **Steps:**
 
@@ -29,7 +32,7 @@ Use this approach when you want to design forms manually without writing code.
 Use this approach when you want to generate form fields dynamically based on data or application logic.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" @documentLoad="onDocumentLoad" style="height:640px" />
@@ -94,7 +97,7 @@ Each field can be added via the **Form Designer** or **programmatically**.
 
 **Add Programmatically (API)**
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" @documentLoad="onDocumentLoad" style="height:640px" />
@@ -151,7 +154,7 @@ export default {
 
 **Add Programmatically (API)**
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" @documentLoad="onDocumentLoad" style="height:640px" />
@@ -207,7 +210,7 @@ export default {
 
 **Add Programmatically (API)**
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" @documentLoad="onDocumentLoad" style="height:640px" />
@@ -262,7 +265,7 @@ export default {
 
 **Add Programmatically (API)**
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" @documentLoad="onDocumentLoad" style="height:640px" />
@@ -299,13 +302,13 @@ export default {
       pdfviewer.formDesignerModule.addFormField('RadioButton', {
         name: 'Gender',
         value: 'Male',
-        pageNumber: 0,
+        pageNumber: 1,
         bounds: { X: 100, Y: 270, Width: 16, Height: 16 }
       });
       pdfviewer.formDesignerModule.addFormField('RadioButton', {
         name: 'Gender',
         value: 'Female',
-        pageNumber: 0,
+        pageNumber: 1,
         bounds: { X: 160, Y: 270, Width: 16, Height: 16 }
       });
     },
@@ -322,7 +325,7 @@ export default {
 
 **Add Programmatically (API)**
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" @documentLoad="onDocumentLoad" style="height:640px" />
@@ -380,7 +383,7 @@ export default {
 
 **Add Programmatically (API)**
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" @documentLoad="onDocumentLoad" style="height:640px" />
@@ -437,7 +440,7 @@ export default {
 
 **Add Programmatically (API)**
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" @documentLoad="onDocumentLoad" style="height:640px" />
@@ -491,7 +494,7 @@ export default {
 
 **Add Programmatically (API)**
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" @documentLoad="onDocumentLoad" style="height:640px" />
@@ -538,6 +541,143 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
+### DateTime Picker
+**Add via Toolbar (UI)**
+- Open the Form Designer toolbar, select **DateTime Picker**, and click on a PDF page to place the field. The DateTime Picker tool adds date and time fields in Form Designer mode.
+![DateTime Picker tool and date and time fields in Form Designer](../../../javascript-es5/images/ui-date-time.png)
+- Select the field to configure its general properties, such as its name, value, visibility, and whether it is read-only or required.
+![General properties for a DateTime Picker field](../../../javascript-es5/images/ui-date-time-properties.png)
+
+**Manual Entry and Picker**
+The field accepts values either by direct typing or through the integrated picker UI:
+- **Date Field** – Enter a date manually, or open the calendar dropdown to pick a date.
+
+  ![Calendar picker open for a DateTime field](../../../javascript-es5/images/ui-date-entry.png)
+
+- **Time Field** – Enter a time manually, or open the time dropdown to pick a time.
+
+  ![Time picker open for a DateTime field](../../../javascript-es5/images/ui-time-entry.png)
+
+**Strict Format Validation**
+Invalid values are rejected and a validation popup is displayed. The invalid value is not applied to the field.
+
+For example, with the format `m/d/yy`:
+
+| Input | Result |
+|---|---|
+| `10/19/2026` | Accepted |
+| `19/10/26` | Rejected |
+| `not-a-date` | Rejected |
+
+**Date / Time Toggle and Format Editing**
+The **Format** tab in the Properties panel lets you:
+- Switch between Date Picker and Time Picker modes.
+- Edit the display format string.
+- Preview formatting changes before saving.
+![DateTime Picker format settings with type, format, and preview](../../../javascript-es5/images/ui-date-time-format.png)
+
+**Common Formats**
+
+| Format String | Example Output |
+|---|---|
+| `m/d/yy` | `10/19/26` |
+| `mm/dd/yyyy` | `10/19/2026` |
+| `HH:MM` | `14:30` |
+| `HH:MM:ss` | `14:30:45` |
+
+**Form Designer Appearance**
+Placed DateTime pickers have a distinct visual appearance in Form Designer mode, including:
+- Colored background
+- Visible border
+- Field-type indicator
+![DateTime Picker Appearance](../../../javascript-es5/images/ui-date-time-appearance.png)
+
+**Add Programmatically (API)**
+{% tabs %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+<template>
+  <div>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" @documentLoad="onDocumentLoad" style="height:640px" />
+  </div>
+</template>
+
+<script>
+import {
+  PdfViewerComponent,
+  Toolbar,
+  Magnification,
+  Navigation,
+  Annotation,
+  TextSelection,
+  TextSearch,
+  FormFields,
+  FormDesigner,
+  PageOrganizer,
+} from '@syncfusion/ej2-vue-pdfviewer';
+
+export default {
+  components: { 'ejs-pdfviewer': PdfViewerComponent },
+  provide: { PdfViewer: [Toolbar, Magnification, Navigation, Annotation, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer] },
+  data() {
+    return {
+      documentPath: 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+    };
+  },
+  methods: {
+    onDocumentLoad() {
+      const pdfviewer = this.$refs.pdfviewer.ej2Instances;
+      // Add Date field
+      pdfviewer.formDesignerModule.addFormField('Textbox', {
+        name: 'DateField1',
+        bounds: { X: 146, Y: 200, Width: 200, Height: 24 },
+        pageNumber: 1,
+        isDateField: true,
+        fontSize: 10,
+        color: 'black',
+        fontFamily: 'Helvetica',
+        backgroundColor: '#daeaf7ff',
+        borderColor: '#303030',
+        alignment: 'Left',
+        isReadOnly: false,
+        visibility: 'visible',
+        isRequired: false,
+        isPrint: true,
+        tooltip: '',
+        thickness: 1,
+        actions: {
+          format: { script: 'AFDate_FormatEx("m/d/yy")' }
+        }
+      });
+      // Add Time field
+      pdfviewer.formDesignerModule.addFormField('Textbox', {
+        name: 'TimeField1',
+        bounds: { X: 146, Y: 250, Width: 200, Height: 24 },
+        pageNumber: 1,
+        isDateField: true,
+        fontSize: 10,
+        color: 'black',
+        fontFamily: 'Helvetica',
+        backgroundColor: '#daeaf7ff',
+        borderColor: '#303030',
+        alignment: 'Left',
+        isReadOnly: false,
+        visibility: 'visible',
+        isRequired: false,
+        isPrint: true,
+        tooltip: '',
+        thickness: 1,
+        actions: {
+          format: { script: 'AFTime_FormatEx("HH:MM")' }
+        }
+      });
+    },
+  },
+};
+</script>
+{% endhighlight %}
+{% endtabs %}
+
 ## Add Fields Dynamically with setFormFieldMode
 
 Use **setFormFieldMode()** to add fields on the fly based on user actions.
@@ -552,7 +692,7 @@ You can edit form fields using the UI or API.
 
 #### Edit Programmatically
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 <template>
   <div>
     <button @click="editTextbox">EditTextBox</button>
@@ -619,15 +759,15 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-[View Sample on GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples)
+[View Sample on GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/Forms/DateTime%20picker)
 
 ## See Also
 
 - [Form Designer overview](../overview)
 - [Form Designer Toolbar](../../toolbar-customization/form-designer-toolbar)
 - [Modify form fields](./modify-form-fields)
-- [Style form fields](./style-form-fields)
+- [Style form fields](./customize-form-fields)
 - [Remove form fields](./remove-form-fields)
 - [Group form fields](../group-form-fields)
 - [Form validation](../form-validation)
-- [Form Fields API](../form-fields-api)
+- [Form fields API](../form-fields-api)

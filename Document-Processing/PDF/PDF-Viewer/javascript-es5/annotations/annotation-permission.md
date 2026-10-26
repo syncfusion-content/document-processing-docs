@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Annotations Permission in JavaScript PDF Viewer | Syncfusion
-description: Learn how to use annotation permissions in Syncfusion JavaScript PDF Viewer using programmatic APIs.
+title: Annotation Permission in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Control who can add, edit, or remove annotations in the JavaScript (ES5) PDF Viewer using permission settings and programmatic APIs.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotation permissions in JavaScript PDF Viewer
+# Annotation Permissions in JavaScript (ES5) PDF Viewer
 
 Use [annotationSettings](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#annotationsettings) to control creation-time permissions and default behavior for annotations in the PDF Viewer. These settings establish defaults for annotations created through the UI and programmatic flows.
 
@@ -121,7 +121,7 @@ var pdfviewer = new ej.pdfviewer.PdfViewer({
 pdfviewer.appendTo('#PdfViewer');
 ```
 
-Behavior notes
+### Behavior notes
 - isLock true: The annotation is locked; users cannot move, resize, or edit it through the UI until it is unlocked.
 - skipPrint true: All annotations are omitted from the print output initiated from the viewer.
 - skipDownload true: All annotations are omitted from the exported/downloaded PDF from the viewer.

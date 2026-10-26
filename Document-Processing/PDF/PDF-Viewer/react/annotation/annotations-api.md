@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Annotations API in React PDF Viewer | Syncfusion
-description: Learn here all about how to read and configure annotations using APIs in the Syncfusion React PDF Viewer.
+title: Annotations Api in React PDF Viewer | Syncfusion
+description: Use the annotations API in the React PDF Viewer to read, add, update, and delete annotations programmatically from JavaScript or TypeScript.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Annotations API in React
+# Annotations API in React PDF Viewer
 
 The PDF Viewer provides APIs to read the loaded annotations and to configure global defaults for creating/editing annotations.
 
@@ -522,7 +522,7 @@ function App() {
     <PdfViewerComponent
       id="container"
       resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib"
-      documentPath="https://cdn.syncfusion.com/content/pdf/PDF_Succinctly.pdf"
+      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       enableAnnotation={false}
       style={{ height: '650px' }}
     >
@@ -552,7 +552,7 @@ function App() {
     <PdfViewerComponent
       id="container"
       resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib"
-      documentPath="https://cdn.syncfusion.com/content/pdf/PDF_Succinctly.pdf"
+      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       enableAnnotationToolbar={false}
       style={{ height: '650px' }}
     >
@@ -582,7 +582,7 @@ function App() {
     <PdfViewerComponent
       id="container"
       resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib"
-      documentPath="https://cdn.syncfusion.com/content/pdf/PDF_Succinctly.pdf"
+      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       enableFreeText={false}
       style={{ height: '650px' }}
     >
@@ -612,7 +612,7 @@ function App() {
     <PdfViewerComponent
       id="container"
       resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib"
-      documentPath="https://cdn.syncfusion.com/content/pdf/PDF_Succinctly.pdf"
+      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       enableHandwrittenSignature={false}
       style={{ height: '650px' }}
     >
@@ -642,7 +642,7 @@ function App() {
     <PdfViewerComponent
       id="container"
       resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib"
-      documentPath="https://cdn.syncfusion.com/content/pdf/PDF_Succinctly.pdf"
+      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       enableInkAnnotation={false}
       style={{ height: '650px' }}
     >
@@ -672,7 +672,7 @@ function App() {
     <PdfViewerComponent
       id="container"
       resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib"
-      documentPath="https://cdn.syncfusion.com/content/pdf/PDF_Succinctly.pdf"
+      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       enableMeasureAnnotation={false}
       style={{ height: '650px' }}
     >
@@ -732,7 +732,7 @@ function App() {
     <PdfViewerComponent
       id="container"
       resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib"
-      documentPath="https://cdn.syncfusion.com/content/pdf/PDF_Succinctly.pdf"
+      documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       enableShapeAnnotation={false}
       style={{ height: '650px' }}
     >
@@ -1725,13 +1725,13 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 
 ## See also
 
-- [Annotation Overview](../overview)
-- [Annotation Types](../annotation/annotation-types/area-annotation)
-- [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)
-- [Create and Modify Annotation](../../annotation/create-modify-annotation)
-- [Customize Annotation](../../annotation/customize-annotation)
-- [Remove Annotation](../../annotation/delete-annotation)
-- [Handwritten Signature](../../annotation/signature-annotation)
-- [Export and Import Annotation](../../annotation/export-import/export-annotation)
-- [Annotation in Mobile View](../../annotation/annotations-in-mobile-view)
-- [Annotation Events](../../annotation/annotation-event)
+- [Annotation Overview](overview)
+- [Annotation Types](annotation-types/area-annotation)
+- [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
+- [Create and Modify Annotation](create-modify-annotation)
+- [Customize Annotation](customize-annotation)
+- [Remove Annotation](delete-annotation)
+- [Handwritten Signature](signature-annotation)
+- [Export and Import Annotation](export-import/export-annotation)
+- [Annotation in Mobile View](annotations-in-mobile-view)
+- [Annotation Events](annotation-event)

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Installing Syncfusion Excel Mac installer - Syncfusion
-description: Learn here about how to install Syncfusion Excel Mac installer after downloading from our Syncfusion website.
+title: How to Install Mac Installer in .NET Excel Library | Syncfusion
+description: Syncfusion Excel Mac installer installation section explains how to install the Mac installer after downloading it from the Syncfusion website.
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
 ---
 
-# Installing Syncfusion&reg; Excel Mac installer
+# How to install Mac installer in .NET Excel Library
 
 ## Steps to resolve the warning message in Catalina OS or later
 

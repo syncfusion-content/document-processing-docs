@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Document Handling in React Pdfviewer component | Syncfusion
-description: This page helps you to learn about how to Open PDF from URL, Base64, Blob, Stream, Cloud storage in Syncfusion React Pdfviewer component.
+title: Load Large Pdf in React PDF Viewer | Syncfusion
+description: Open PDF files from URL, Base64, Blob, Stream, and cloud storage sources, and load large PDF files efficiently in the React PDF Viewer.
 control: PDF Viewer
 platform: document-processing
 documentation: ug
@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Load Large PDF Files in React PDF Viewer
 
-This article explains how to efficiently load and view large PDF files using the Syncfusion React PDF Viewer. It includes recommended best practices and performance tips for documents ranging from **50 MB to 2 GB**.
+This article explains how to efficiently load and view large PDF files using the [React PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/react-pdf-viewer). It includes recommended best practices and performance tips for documents ranging from **50 MB to 2 GB**.
 
 ## Why Large PDFs Need Special Handling
 
 Large PDF files often contain thousands of embedded objects such as images, compressed streams, digital signatures, form fields, annotations, vector graphics, and complex page structures. Rendering such heavy documents requires more processing time and memory.
 
-The **Syncfusion PDF Viewer is fully optimized for these heavy workloads**, and it delivers excellent performance even when working with very large files.
+The **React PDF Viewer is fully optimized for these heavy workloads**, and it delivers excellent performance even when working with very large files.
 
 ### Viewer Capability Highlights
 - **Smooth performance for PDFs up to 1 GB**
@@ -62,7 +62,7 @@ Blob loading is highly recommended for all PDFs above **200 MB**, especially whe
 
 ### 2. Viewer Performance Range
 
-The Syncfusion PDF Viewer is optimized to handle:
+The React PDF Viewer is optimized to handle:
 
 - **Up to 1 GB** → very smooth
 - **Up to ~2 GB**
@@ -130,7 +130,7 @@ require more storage for:
 
 Enabling local storage in the PDF Viewer can improve performance and smoothness when working with large files. This allows the viewer to cache document data locally, reducing repeated network requests and memory spikes.
 
-Use the [`enableLocalStorage`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#enablelocalstorage) property to control this behavior. When set to `true`, session data is stored in memory for the current session; when `false` (default), browser session storage is used.
+Use the [`enableLocalStorage`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#enablelocalstorage) property to control this behavior. When set to `true`, session data is stored in the browser's local storage; when `false` (default), browser session storage is used.
 
 **How the viewer stores this data by default**
 

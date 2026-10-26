@@ -1,16 +1,15 @@
 ---
 layout: post
-title: Save PDF files to Azure Active Directory (AAD) in ASP.NET MVC PDF Viewer | Syncfusion
-description: Learn how to load and save PDF files with Azure Active Directory (AAD) using the Syncfusion ASP.NET MVC PDF Viewer component and a server-backed web service.
+title: To Azure Active Directory in ASP.NET MVC PDF Viewer | Syncfusion
+description: Learn about the to azure active directory in the ASP.NET MVC PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
-publishingplatform: ASP.NET MVC
 documentation: ug
 ---
 
-# Save PDF files to Azure Active Directory (AAD) in ASP.NET MVC
+# To Azure Active Directory in ASP.NET MVC PDF Viewer
 
-### **Overview**
+## **Overview**
 
 The ASP.NET MVC PDF Viewer component supports loading and saving PDF files with Azure Active Directory (AAD). The following steps describe how to securely load and store PDF documents using a server-backed web service.
 
@@ -58,8 +57,8 @@ The ASP.NET MVC PDF Viewer component supports loading and saving PDF files with 
 
 ### **Step 4: Upload the PDF document to Azure Storage**
 
-1. **Navigate to Data storage**:
-   - In the Azure portal, go to **Data storage** > **Containers**.
+1. **Navigate to the storage account**:
+   - In the Azure portal, go to **Storage accounts** > **Containers** in your storage account.
 
 2. **Upload the PDF file**:
    - Create a new container and upload the PDF document you want to access in the PDF Viewer.
@@ -128,7 +127,7 @@ public async Task<ActionResult> LoadFromAAD(string fileName)
 
 public async Task<ActionResult> SaveToAAD(jsonObjects responseData)
 {
-    var jsonObject = JsonConverterstring(responseData);
+    var jsonObject = JsonConverter(responseData);
     PdfRenderer pdfviewer = new PdfRenderer();
     var fileName = jsonObject.ContainsKey("documentId") ? jsonObject["documentId"] : "Test.pdf";
     string documentBase = pdfviewer.GetDocumentAsBase64(jsonObject);

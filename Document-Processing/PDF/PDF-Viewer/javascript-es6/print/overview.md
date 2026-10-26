@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Print Overview in TypeScript PDF Viewer | Syncfusion
-description: Enable and customize printing, configure print events, cancel print, and monitor printing in the Syncfusion TypeScript PDF Viewer component.
+title: About Syncfusion JavaScript (ES6) PDF Viewer Print | Syncfusion
+description: Learn about introduction of the Syncfusion JavaScript (ES6) PDF Viewer Print section and the key capabilities it provides.
 platform: document-processing
 control: Print
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Print Overview in TypeScript PDF Viewer Control
+# About Syncfusion JavaScript (ES6) PDF Viewer Print
 
 The JavaScript PDF Viewer includes built-in printing via the toolbar and APIs so users can control how documents are printed and monitor the process.
 
@@ -18,7 +18,7 @@ Select **Print** in the built-in toolbar to open the browser print dialog.
 
 ## Enable or Disable Print in TypeScript PDF Viewer
 
-The Syncfusion JavaScript PDF Viewer component lets users print a loaded PDF document through the built-in toolbar or programmatic calls. Control whether printing is available by setting the `enablePrint` property (`true` enables printing; `false` disables it).
+The JavaScript PDF Viewer component lets users print a loaded PDF document through the built-in toolbar or programmatic calls. Control whether printing is available by setting the `enablePrint` property (`true` enables printing; `false` disables it).
 
 The following TypeScript examples render the PDF Viewer with printing enabled in standalone and server-backed applications.
 
@@ -53,7 +53,7 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-## Print programmatically in Typescript PDF Viewer
+## Print programmatically in TypeScript PDF Viewer
 
 To start printing from code, call the `pdfviewer.print.print()` method after the document is fully loaded. This approach is useful when wiring up custom UI or initiating printing automatically; calling print before the document finishes loading can result in no output or an empty print dialog.
 

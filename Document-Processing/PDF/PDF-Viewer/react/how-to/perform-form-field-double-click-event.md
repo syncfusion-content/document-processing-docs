@@ -1,20 +1,23 @@
 ---
 layout: post
-title: Perform form field double click event in React Pdfviewer component | Syncfusion
-description: Learn here all about Perform form field double click event in Syncfusion React Pdfviewer component of Syncfusion Essential JS 2 and more.
-control: Perform form field double click event
+title: How to Handle the Form Field Double-Click Event in React | Syncfusion
+description: Handle the form field double-click event in the React PDF Viewer to customize user interactions and add custom behaviors to PDF form fields.
+control: PDF Viewer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## Perform form field double-click event in React PDF Viewer
+# How to Handle the Form Field Double-Click Event in React PDF Viewer
 
-This article demonstrates how to handle a double-click on a PDF form field by using the `formFieldDoubleClick` event. The event provides information about the clicked field and can be used to open custom editors, show dialogs, or trigger other application behaviors.
+This article demonstrates how to handle a double-click on a PDF form field by using the [`formFieldDoubleClick`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#formfielddoubleclick) event. The event provides information about the clicked field and can be used to open custom editors, show dialogs, or trigger other application behaviors.
 
-**Step 1:** Follow the steps provided in the [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/getting-started/) to create simple PDF Viewer sample in React.
 
-**Step 2:** Add the following code snippet in the `index.js` file to add the form field double click event in the PDF Viewer.
+**Step 1:** Create a simple PDF Viewer sample in React by following the steps in the appropriate getting-started guide based on your deployment mode.
+
+* [Getting started with the React Standalone PDF Viewer](../getting-started)
+
+**Step 2:** Subscribe to the `formFieldDoubleClick` event in the `index.js` file. The complete code for each deployment mode is shown below.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}

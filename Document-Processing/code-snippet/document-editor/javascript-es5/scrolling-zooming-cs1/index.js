@@ -1,5 +1,5 @@
 var documenteditor = new ej.documenteditor.DocumentEditor({
-    isReadOnly: false, enableEditor: true,
+    isReadOnly: false, enableEditor: true, height: '370px'
 });
 documenteditor.appendTo('#DocumentEditor');
 onLoadDefault();

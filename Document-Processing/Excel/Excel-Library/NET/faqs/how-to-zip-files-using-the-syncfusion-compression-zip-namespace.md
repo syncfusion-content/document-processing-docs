@@ -1,16 +1,30 @@
 ---
-title: Zip files using the Syncfusion.Compression.Zip namespace | Syncfusion
-description: This page demonstrates with an example on how to zip files using the Syncfusion.Compression.Zip namespace.
+title: How to Zip Files in .NET Excel Library | Syncfusion
+description: Zip files using the Syncfusion.Compression.Zip namespace for file compression in zip archive handling.
 platform: document-processing
 control: XlsIO
 documentation: UG
 ---
 
-# How to zip files using the Syncfusion.Compression.Zip namespace?
+# How to zip files in .NET Excel Library
 
 You can compress the file using **Syncfusion.Compression.Zip** namespace. The following code illustrate this.
 
 {% tabs %}  
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+using Syncfusion.Compression.Zip;
+
+ZipArchive zipArchive = new Syncfusion.Compression.Zip.ZipArchive();
+zipArchive.DefaultCompressionLevel = Syncfusion.Compression.CompressionLevel.Best;
+
+//Add the file you want to zip.
+zipArchive.AddFile("SampleFile.cs");
+
+//Zip file name and location.
+zipArchive.Save("SyncfusionCompressFileSample.zip");
+zipArchive.Close();
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 using Syncfusion.Compression.Zip;
 
@@ -47,6 +61,18 @@ For compressing directories, you can make use of the **AddDirectory** method whi
 The following code snippet illustrate how to add the file from the local drive.
 
 {% tabs %}  
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+string fileName = @"SampleFile.cs";
+ZipArchive zipArchive = new Syncfusion.Compression.Zip.ZipArchive();
+zipArchive.DefaultCompressionLevel = CompressionLevel.Best;
+Stream stream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+FileAttributes attributes = (FileAttributes)File.GetAttributes(fileName);
+ZipArchiveItem item = new ZipArchiveItem(zipArchive, "SampleFile.cs", stream, true, attributes);
+zipArchive.AddItem(item);
+zipArchive.Save(@"SyncfusionCompressFileSample.zip");
+zipArchive.Close();
+{% endhighlight %}
+
 {% highlight c# tabtitle="C# [Windows-specific]" %}
 string fileName = @"SampleFile.cs";
 ZipArchive zipArchive = new Syncfusion.Compression.Zip.ZipArchive();

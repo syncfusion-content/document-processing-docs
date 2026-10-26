@@ -1,21 +1,21 @@
 ---
 layout: post
-title: Circle Annotation (Shape) in React PDF Viewer | Syncfusion
-description: Learn how to enable, apply, customize, and manage Circle annotations in the Syncfusion React PDF Viewer.
+title: Circle Annotation in React PDF Viewer | Syncfusion
+description: Enable, apply, customize, and manage Circle annotations in the React PDF Viewer for marking, highlighting, or measuring areas.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Circle Annotation (Shape) in React PDF Viewer
+# Circle Annotation in React PDF Viewer
 Circle annotations let users highlight circular regions or draw emphasis bubbles on PDFs for reviews and markups. You can add circles from the toolbar, switch to circle mode programmatically, customize appearance, edit/delete them in the UI, and export them with the document.
 
 ![Circle overview](../../../javascript-es6/annotations/annotation-images/circle-annot.png)
 
 ## Enable Circle Annotation in the Viewer
 
-To enable Line annotations, inject the following modules into the React PDF Viewer:
+To enable Circle annotations, inject the following modules into the React PDF Viewer:
 
 - [**Annotation**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#annotation)
 - [**Toolbar**](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#toolbar)
@@ -58,7 +58,7 @@ N> When in Pan mode, selecting a shape tool automatically switches the viewer to
 
 ### Enable Circle Mode
 
-Switch the viewer into highlight mode using `setAnnotationMode('Circle')`.
+Switch the viewer into Circle mode using `setAnnotationMode('Circle')`.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
@@ -124,6 +124,81 @@ Configure default circle appearance (fill color, stroke color, thickness, opacit
 {% endhighlight %}
 {% endtabs %}
 
+### Supported Border Styles
+
+In addition to the default **Solid** border, Circle annotations support the following additional border styles:
+
+- **Cloud** — scalloped cloud border.
+- **Dashed** — dashed line border.
+
+Use [`BorderStyle`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/borderStyle) values such as `BorderStyle.Cloud` and `BorderStyle.Dashed` together with the optional `borderDashArray` and `cloudIntensity` settings in the [`circleSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#circlesettings) property.
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `borderStyle` | `BorderStyle` | Specifies the border style. Supported values: `BorderStyle.Solid`, `BorderStyle.Cloud`, and `BorderStyle.Dashed`. |
+| `borderDashArray` | `number[]` | Specifies the dash pattern when `borderStyle` is `BorderStyle.Dashed`. |
+| `cloudIntensity` | `number` | Specifies the cloud border intensity. Supported range: `1` to `2`; default value: `1`. |
+
+N> `borderStyle`, `borderDashArray`, and `cloudIntensity` are preserved during save, reload, import, and export.
+
+#### Apply a Cloud Border
+
+```ts
+export enum BorderStyle {
+    Solid = 'Solid',
+    Dashed = 'Dashed',
+    Cloud = 'Cloud'
+}
+```
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
+<PdfViewerComponent
+  id="container"
+  documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+  resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+  circleSettings={{
+    fillColor: '#ffa500',
+    strokeColor: '#ff6a00',
+    thickness: 2,
+    opacity: 0.9,
+    borderStyle: BorderStyle.Cloud,
+    cloudIntensity: 2
+  }}
+  style={{ height: '650px' }}
+>
+  <Inject services={[Toolbar, Annotation]} />
+</PdfViewerComponent>
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+#### Apply a Dashed Border
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+{% raw %}
+<PdfViewerComponent
+  id="container"
+  documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+  resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+  circleSettings={{
+    fillColor: '#ffa500',
+    strokeColor: '#ff6a00',
+    thickness: 2,
+    opacity: 0.9,
+    borderStyle: BorderStyle.Dashed,
+    borderDashArray: [5, 5]
+  }}
+  style={{ height: '650px' }}
+>
+  <Inject services={[Toolbar, Annotation]} />
+</PdfViewerComponent>
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
 ## Manage Circle (Edit, Move, Resize, Delete)
 
 ### Edit Circle
@@ -174,12 +249,12 @@ function editCircleProgrammatically() {
 
 ### Delete Circle
 The PDF Viewer supports deleting existing annotations through the UI and API.
-See [**Delete Annotation**](../remove-annotations) for full behavior and workflows.
+See [**Delete Annotation**](../delete-annotation) for full behavior and workflows.
 
 ### Comments
 Use the [**Comments panel**](../comments) to add, view, and reply to threaded discussions linked to circle annotations. It provides a dedicated interface for collaboration and review within the PDF Viewer.
 
-## Set properties while adding Individual Annotation
+## Set properties while adding individual annotations
 Set properties for individual circle annotations by passing values directly during [`addAnnotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#addannotation).
 
 {% tabs %}
@@ -238,16 +313,16 @@ Disable shape annotations (Line, Arrow, Rectangle, Circle, Polygon) using the [`
 ## Handle Circle Events
 
 The PDF viewer provides annotation life-cycle events that notify when Circle annotations are added, modified, selected, or removed.
-For the full list of available events and their descriptions, see [**Annotation Events**](../annotation-event)
+For the full list of available events and their descriptions, see [**Annotation Events**](../annotation-event).
 
 ## Export and Import
 
-The PDF Viewer supports exporting and importing annotations. For details on supported formats and workflows, see [**Export and Import annotations**](../export-import-annotations).
+The PDF Viewer supports exporting and importing annotations. For details on supported formats and workflows, see [**Export and Import annotations**](../export-import/export-annotation).
 
 ## See Also
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)
 - [Customize Context Menu](../../context-menu/custom-context-menu)
 - [Comments Panel](../comments)
 - [Annotation Events](../annotation-event)
-- [Export and Import annotations](../export-import-annotations)
-- [Delete Annotations](../remove-annotations)
+- [Export and Import annotations](../export-import/export-annotation)
+- [Delete Annotations](../delete-annotation)

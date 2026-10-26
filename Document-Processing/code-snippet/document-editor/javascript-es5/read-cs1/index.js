@@ -1,5 +1,5 @@
 var documenteditor = new ej.documenteditor.DocumentEditor({
-    isReadOnly: false
+    isReadOnly: false, height: '370px'
 });
 
 documenteditor.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';

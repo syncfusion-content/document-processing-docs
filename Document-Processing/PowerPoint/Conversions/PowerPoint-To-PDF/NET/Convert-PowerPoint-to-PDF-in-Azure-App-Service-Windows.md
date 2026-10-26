@@ -8,7 +8,7 @@ documentation: UG
 
 # Convert PowerPoint Presentation to PDF in Azure App Service on Windows
 
-Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) used to create, read, edit and **convert PowerPoint documents** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint Presentation to PDF in Azure App Service on Windows**.
+Syncfusion<sup>&reg;</sup> PowerPoint is a [.NET Core PowerPoint library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) used to create, read, edit and **convert PowerPoint documents** programmatically without **Microsoft PowerPoint** or interop dependencies. Using this library, you can **convert a PowerPoint Presentation to PDF in Azure App Service on Windows**.
 
 ## Steps to convert PowerPoint Presentation to PDF in Azure App Service on Windows
 
@@ -72,6 +72,8 @@ Step 6: Include the following namespaces in **HomeController.cs**.
 {% tabs %}
 
 {% highlight c# tabtitle="C#" %}
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
 using Syncfusion.Presentation;
 using Syncfusion.PresentationRenderer;
 using Syncfusion.Pdf;
@@ -188,12 +190,12 @@ Step 10: Now, Publish has been succeeded.
 Step 11: Now, the published webpage will open in the browser. 
 ![Browser will open after publish](Azure-Images/App-Service-Linux/Browser_PowerPoint_Presentation_to_PDF.png)
 
-Step 12: Select the **PowerPoint Presentation** and Click **Convert to PDF** to convert the given PowerPoint Presentation to PDF.You will get the output **PDF** document as follows.
+Step 12: Select the **PowerPoint Presentation** and Click **Convert to PDF** to convert the given PowerPoint Presentation to PDF. You will get the output **PDF** document as follows.
 
 ![PowerPoint Presentation to PDF in Azure App Service on Windows](PPTXtoPDF_images/Output_PowerPoint_Presentation_to-PDF.png)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PowerPoint-Examples/tree/master/PPTX-to-PDF-conversion/Convert-PowerPoint-presentation-to-PDF/Azure/Azure_App_Service).
 
-Click [here](https://www.syncfusion.com/document-processing/powerpoint-framework/net-core) to explore the rich set of Syncfusion<sup>&reg;</sup> PowerPoint Library (Presentation) features. 
+Looking for the full .NET PowerPoint Library component overview, features, pricing, and documentation? Visit the  [.NET PowerPoint Library](https://www.syncfusion.com/document-sdk/net-powerpoint-library) page. 
 
 An online sample link to [convert PowerPoint Presentation to PDF](https://document.syncfusion.com/demos/powerpoint/pptxtopdf#/tailwind) in ASP.NET Core. 

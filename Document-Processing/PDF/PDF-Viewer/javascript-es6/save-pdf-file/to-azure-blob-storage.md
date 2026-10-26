@@ -1,25 +1,25 @@
 ---
 layout: post
-title: Save PDF files to Azure Blob Storage in TypeScript PDF Viewer | Syncfusion
-description: Learn how to save PDF files to Azure Blob Storage using the Syncfusion TypeScript PDF Viewer component in standalone and server-backed configurations.
+title: Save PDFs to Azure Blob Storage in JavaScript (ES6) | Syncfusion
+description: Save PDF files from the JavaScript (ES6) PDF Viewer to Azure Blob Storage using standalone and server-backed configurations, with code samples and tips.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 ---
 
-# Save PDF files to Azure Blob Storage in TypeScript
+# Save PDF Files to Azure Blob Storage in JavaScript (ES6) PDF Viewer
 
 The TypeScript PDF Viewer component supports saving PDF files to Azure Blob Storage using either a standalone (browser) configuration or a server-backed configuration. The following steps demonstrate both approaches and include prerequisites and security guidance for production deployments.
 
 ## Using Standalone PDF Viewer
 
-Follow the steps below to save a PDF file to Azure Blob Storage from an TypeScript PDF Viewer.
+Follow the steps below to save a PDF file to Azure Blob Storage from a TypeScript PDF Viewer.
 
 **Step 1:** Create a PDF Viewer sample in TypeScript
 
 Follow the instructions provided in this [link](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/javascript-es6/getting-started) to create a simple PDF Viewer sample in TypeScript. This sets up the basic structure of the PDF Viewer application.
 
-**Step 2:** Modify the `src/app/app.ts` file in the Angular project
+**Step 2:** Modify the `src/app/app.ts` file in the TypeScript project
 
 1. Import the required namespaces at the top of the file:
 
@@ -80,7 +80,7 @@ N> Install the Azure Storage Blob client package for browser use: `npm install @
 
 ## Using server-backed PDF Viewer
 
-To save a PDF file to Azure Blob Storage, you can follow the steps below
+To save a PDF file to Azure Blob Storage, you can follow the steps below.
 
 **Step 1:** Create a PDF Viewer sample in TypeScript
 
@@ -115,7 +115,7 @@ public PdfViewerController(IConfiguration configuration, ILogger<PdfViewerContro
 }
 ```
 
-5. Modify the [Download()](https://ej2.syncfusion.com/documentation/api/pdfviewer/#download) method to save the downloaded PDF file to the Azure Blob Storage container.
+5. Modify the [Download()] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#download) method to save the downloaded PDF file to the Azure Blob Storage container.
 
 ```csharp
 
@@ -171,7 +171,7 @@ N> Replace the placeholders with the actual Azure Storage connection string and 
 
 **Step 3:** Set the PDF Viewer properties in the TypeScript PDF Viewer component
 
-Modify the [serviceUrl](https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) property of the PDF Viewer component with the accurate URL of the web service, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from Azure Blob Storage, and ensure that the document exists in the target container.
+Modify the [serviceUrl] (https://ej2.syncfusion.com/documentation/api/pdfviewer/#serviceurl) property of the PDF Viewer component with the accurate URL of the web service, replacing `https://localhost:44396/pdfviewer` with the actual server URL. Set the `documentPath` property to the desired PDF file name to load from Azure Blob Storage, and ensure that the document exists in the target container.
 ```typescript
 
 import { PdfViewer, Toolbar, Magnification, Navigation, LinkAnnotation,ThumbnailView,

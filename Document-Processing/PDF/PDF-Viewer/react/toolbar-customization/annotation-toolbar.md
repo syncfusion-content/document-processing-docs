@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customize the Annotation Toolbar in React PDF Viewer | Syncfusion
-description: Show or hide and customize the annotation toolbar in the EJ2 React PDF Viewer with runnable examples.
+title: Annotation Toolbar in React PDF Viewer | Syncfusion
+description: Customize the annotation toolbar in the React PDF Viewer to show, hide, or replace the default annotation actions for your users.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -132,4 +132,4 @@ export default function App() {
 ## Related topics
 
 - [Customize form designer toolbar](./form-designer-toolbar)
-- [customize primary toolbar](./primary-toolbar)
+- [Customize primary toolbar](./primary-toolbar)

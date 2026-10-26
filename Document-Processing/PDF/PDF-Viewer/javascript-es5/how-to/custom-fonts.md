@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add custom fonts in JavaScript PDF Viewer | Syncfusion
-description: Learn how to add and load custom TTF fonts for documents displayed in the JavaScript PDF Viewer using the customFonts property.
+title: How to Add Custom Fonts in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Add and load custom TTF fonts for documents displayed in the JavaScript (ES5) PDF Viewer using the customFonts property and the assets folder.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add Custom Fonts to PDF Forms in JavaScript PDF Viewer
+# How to Add Custom Fonts in JavaScript (ES5) PDF Viewer
 
 The Syncfusion **JavaScript PDF Viewer** supports loading, editing, and saving **custom fonts** in form fields such as [TextBox](../forms/manage-form-fields/create-form-fields#textbox), [ListBox](../forms/manage-form-fields/create-form-fields#listbox), and [DropDown](../forms/manage-form-fields/create-form-fields#dropdown) fields using the `customFonts` property. This ensures consistent text rendering when required fonts are not installed on the user’s system.
 
@@ -63,7 +63,7 @@ ej.pdfviewer.PdfViewer.Inject(
 
 // Create viewer instance
 var pdfviewer = new ej.pdfviewer.PdfViewer({
-  documentPath: window.location.origin + '/resouces/pdf-succinctly.pdf',
+  documentPath: window.location.origin + '/resources/pdf-succinctly.pdf',
   resourceUrl: window.location.origin + '/resources/ej2-pdfviewer-lib',
   customFonts: [
     'simsun.ttc',

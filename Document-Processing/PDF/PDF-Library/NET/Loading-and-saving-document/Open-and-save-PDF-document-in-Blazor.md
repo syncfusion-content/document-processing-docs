@@ -1,20 +1,20 @@
 ---
-title: Open and save PDF document in Blazor | Syncfusion
-description: Open and save PDF document in Blazor application using Syncfusion Blazor PDF library without the dependency of Adobe Acrobat. 
+title: Open and Save PDF Document in Blazor | Syncfusion
+description: Learn how to open and save PDF documents in Blazor applications using Syncfusion .NET PDF library without Adobe Acrobat.
 platform: document-processing
 control: PDF
 documentation: UG
 keywords: blazor save pdf, blazor load pdf, c# save pdf, c# load pdf
 ---
 
-# Open and save PDF document in Blazor
+# Open and Save PDF Document in Blazor
 
-The [Syncfusion<sup>&reg;</sup> Blazor PDF library](https://www.syncfusion.com/document-processing/pdf-framework/blazor) is used to create, read, and edit PDF documents programatically without the dependency of Adobe Acrobat. Using this library, you can **open and save PDF document in ASP.NET Core**. 
+The [Blazor PDF library](https://www.syncfusion.com/document-sdk/net-pdf-library) is used to create, read, and edit PDF documents programmatically without the dependency of Adobe Acrobat. Using this library, you can **open and save a PDF document in Blazor**.
 
 **Prerequisites:**
 
-* Visual Studio 2019 Preview
-* Install the [.NET Core SDK 3.1 Preview](https://dotnet.microsoft.com/en-us/download/dotnet/3.1)
+* Visual Studio 2022 Preview
+* Install the [.NET Core SDK](https://dotnet.microsoft.com/en-us/download/dotnet)
 
 **Creating a Blazor project**
 
@@ -22,7 +22,7 @@ The [Syncfusion<sup>&reg;</sup> Blazor PDF library](https://www.syncfusion.com/d
 * Open Tools > Options in the menu bar.
 * Open the Projects and Solutions node. Open the .NET Core tab.
 * Check the box for Use previews of the .NET Core SDK and click OK.
-* Restart the Visual Studio 2019.
+* Restart the Visual Studio 2022.
 
 ## Server app
 
@@ -43,7 +43,7 @@ N> Starting with v16.2.0.x, if you reference Syncfusion<sup>&reg;</sup> assembli
 Step 5:  Inject ExportService into `FetchData.razor` using the following code.
 
 {% tabs %}
-{% highlight c# tabtitle="C#" %}
+{% highlight CSHTML %}
 
 @inject ExportService service
 @inject Microsoft.JSInterop.IJSRuntime JS
@@ -115,7 +115,7 @@ public void ConfigureServices(IServiceCollection services)
 
 {% endtabs %}
 
-Step 10: Create a new MemoryStream method with name as **LoadAndSavePDF** in **ExportService** class and include the following code snippet to **open an existing PDF document in Blazor** Server app.
+Step 10: Create a new MemoryStream method named **LoadAndSavePDF** in the **ExportService** class and include the following code snippet to **open an existing PDF document in the Blazor Server app**.
 
 {% tabs %}
 
@@ -125,7 +125,8 @@ public static MemoryStream LoadAndSavePDF()
 {
     //Open an existing PDF document
     FileStream fileStream = new FileStream("Input.pdf", System.IO.FileMode.Open, System.IO.FileAccess.Read);
-    PdfLoadedDocument document = new PdfLoadedDocument(fileStream);    
+    PdfLoadedDocument document = new PdfLoadedDocument(fileStream);
+    return new MemoryStream();
 }
 {% endhighlight %}
 
@@ -198,10 +199,9 @@ public static class FileUtil
 
 {% endtabs %}
 
-Step 14: Add the following JavaScript function in the `_Host.cshtml` available under the `Pages` folder.
+Step 14: Add the following JavaScript function in the  ``App.razor`` available under the ``Components`` folder.
 
 {% tabs %}
-
 {% highlight HTML %}
 
 <script type="text/javascript">
@@ -404,6 +404,6 @@ By executing the program, you will get the **PDF document** as follows.
 
 N> Even though PDF library works in WASM app, it is recommended to use server deployment. Since the WASM app deployment increases the application payload size.
 
-Kindly explore the [supported and unsupported features of PDF library in Blazor](https://www.syncfusion.com/document-processing/pdf-framework/blazor/pdf-library).
+Kindly explore the [supported and unsupported features of PDF library](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/supported-and-unsupported-features).
 
-Click [here](https://www.syncfusion.com/document-processing/pdf-framework/blazor) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.
+Click [here](https://www.syncfusion.com/document-sdk/net-pdf-library) to explore the rich set of Syncfusion<sup>&reg;</sup> PDF library features.

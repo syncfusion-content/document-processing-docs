@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Download in Javascript PDF Viewer control | Syncfusion
-description: Learn here all about Download in Syncfusion Javascript PDF Viewer control of Syncfusion Essential JS 2 and more.
+title: Download in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Enable, disable, and programmatically trigger PDF downloads in the JavaScript (ES5) PDF Viewer, including download events and Base64 handling.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
-# Download in JavaScript PDF Viewer control
+# Download in JavaScript (ES5) PDF Viewer
 
 The PDF Viewer supports downloading the currently loaded PDF document. Use the `enableDownload` option to enable or disable download functionality. The examples below demonstrate standalone and server-backed configurations.
 
@@ -101,7 +101,7 @@ document.getElementById('download').addEventListener('click', function () {
 
 ## How to get the base64 string while downloading the PDF document
 
-The [downloadEnd](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/#downloadend) event fires after a download completes and exposes the downloaded document as a base64 string.
+The [downloadEnd](https://ej2.syncfusion.com/javascript/documentation/api/pdfviewer/index-default#downloadend) event fires after a download completes and exposes the downloaded document as a base64 string.
 
 The following code illustrates how to get the downloaded document as a base64 string.
 
