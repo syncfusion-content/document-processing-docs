@@ -25,7 +25,7 @@ let document = WordDocument.create();
 let paragraph = document.sections[0].body.paragraphs[0];
 
 // Creates and appends a Pie chart to the paragraph.
-let chart = paragraph.appendChart(ChartType.Pie, 446, 270);
+let chart = paragraph.appendChart(ej.docx.ChartType.Pie, 446, 270);
 
 // Sets the chart title.
 chart.chartTitle = 'Purchase Details';
@@ -62,7 +62,7 @@ let document = WordDocument.create();
 let paragraph = document.sections[0].body.paragraphs[0];
 
 // Creates and appends a Pie chart to the paragraph.
-let chart = paragraph.appendChart(ChartType.Pie, 446, 270);
+let chart = paragraph.appendChart(ej.docx.ChartType.Pie, 446, 270);
 
 // Customizes the chart title area.
 chart.chartTitleArea.fontName = 'Calibri';

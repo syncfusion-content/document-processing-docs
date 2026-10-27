@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Collaborative Editing in React PDF Viewer with ASP.NET Core Syncfusion
-description: Learn how to add real-time collaborative editing to the Syncfusion React PDF Viewer using the ASP.NET Core Collaboration Server with Redis.
+title: Collaborative Editing in React PDF Viewer with ASP.NET Core | Syncfusion
+description: Learn how to implement real-time collaborative editing in the Syncfusion React PDF Viewer using the ASP.NET Core Collaboration Server with Redis.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -27,6 +27,14 @@ Use this server when the PDF Viewer sample or your application is hosted on ASP.
 | --- | --- | --- | --- |
 | Node.js Web Service | Node.js | WebSocket | `websocket` |
 | ASP.NET Core Web Service | C# / ASP.NET Core | SignalR | `signalr` |
+
+## Project structure
+
+```text
+Collaborative Editing/
+├── Client/    # React PDF Viewer application
+└── Server/    # Collaboration Server (Node.js or ASP.NET Core) and PDF storage APIs
+```
 
 ## Client-side integration
 
@@ -1376,7 +1384,14 @@ If no `id` is provided in the URL, the client generates a new room ID. Share the
 - For a hosted deployment, configure the client with the hosted Collaboration Server URL and use a shared, reachable Redis instance. All users must access the same client deployment and preserve the same `?id=<room-id>` value to remain in one room.
 - Do not use `localhost` in a hosted client configuration because it refers to each individual user's computer.
 
-N> [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Collaborative%20Editing)
+## Troubleshooting
+
+- **The client cannot connect:** Confirm that the server is running on port `8081` and that the `SERVICE_URL` constant in `App.jsx` matches the server URL.
+- **The client connects but no other user appears:** Confirm that `connectionType` in `App.jsx` matches the running server, `websocket` for the Node.js Web Service or `signalr` for the ASP.NET Core Web Service.
+- **Users do not see each other's changes:** Confirm that every browser URL contains the same `id` value and that Redis is available to the server.
+- **The `UpdateAction` route returns an HTTP 400 error:** Confirm that MVC uses the Newtonsoft.Json serializer through `AddNewtonsoftJson()`. The default System.Text.Json pipeline cannot bind the loosely-typed action payload, which results in the automatic model-state validation error "The request field is required.".
+- **A new room appears unexpectedly:** Check that the URL includes `?id=<room-id>`. Without it, the client generates a new room ID.
+- **Redis connection errors appear at startup:** Confirm that Redis is running and that the connection string in `appsettings.json` is correct. A secured instance such as Azure Cache for Redis uses the `<host>:<port>,ssl=true,password=<password>` format.
 
 ## See Also
 

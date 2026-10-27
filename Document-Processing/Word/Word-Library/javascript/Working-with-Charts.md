@@ -6,7 +6,7 @@ control: Word Library
 documentation: UG
 ---
 
-# Charts in Word document in JavaScript Word Library
+# Charts in Word document in JavaScript Word
 
 A Chart is a graphical representation of data where the data is represented as symbols such as bars, lines, etc. Charts can represent numerical data, functions, or some kinds of qualitative structures. The JavaScript Word Library supports the following chart types:
 

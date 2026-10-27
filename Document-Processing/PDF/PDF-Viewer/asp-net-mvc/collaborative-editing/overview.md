@@ -20,7 +20,7 @@ Collaborative editing uses the following components:
 
 - **PDF Viewer adapter** - A client-side `PdfViewerAdapter` (JavaScript) implements the collaboration provider contract and translates actions between the PDF Viewer and the Collaboration Client.
 - **ej2.min.js** - The Syncfusion EJ2 script (CDN) provides PdfViewer and CollaborationClient components.
-- **Collaboration Server** - Use `ej2-collaborator-server` for Node.js, or `Syncfusion.Collaborator.Server.AspNet.Core` for ASP.NET Core.
+- **Collaboration Server** - Use `ej2-collaborator-server` for Node.js.
 - **Redis** - Required by the Collaboration Server for operation storage, synchronization, and scale-out.
 
 The Collaboration Server manages the transport, collaboration sessions, operation synchronization, and save processing. The MVC application supplies the control adapter and document routes. Do not add a separate Socket.IO Redis adapter or implement the collaboration operation queue in the PDF Viewer application.
@@ -54,20 +54,16 @@ Load the Syncfusion EJ2 library from CDN and create a `pdfViewerAdapter.js` file
 Create a `pdfViewerAdapter.js` file that implements the collaboration provider contract, then initialize the CollaborationClient. See the platform-specific pages for the adapter and initialization examples:
 
 - [Collaborative editing with Node.js](./using-redis-cache-nodejs)
-- [Collaborative editing with ASP.NET Core](./using-redis-cache-asp-net-core)
 
 ## Server setup
 
-The MVC application can work with either the Node.js or the ASP.NET Core Collaboration Server for real-time synchronization:
+The MVC application works with a Node.js Collaboration Server for real-time synchronization:
 
 | Server | Package | Transport |
 | --- | --- | --- |
 | Node.js | `ej2-collaborator-server` | WebSocket |
-| ASP.NET Core | `Syncfusion.Collaborator.Server.AspNet.Core` | SignalR |
 
-Both servers expose the same service on the same port, so only the `connectionType` option differs on the client side. Use `websocket` for the Node.js server and `signalr` for the ASP.NET Core server.
-
-Install the Collaboration Server and configure Redis for operation storage and synchronization. Register the PDF Viewer server adapter and collaboration routes before starting the server.
+Install the Collaboration Server on Node.js and configure Redis for operation storage and synchronization. Register the PDF Viewer server adapter and collaboration routes before starting the server.
 
 The MVC application communicates with the Node.js server via HTTP endpoints (`/api/CollaborativeEditing`) to import files, update actions, and retrieve PDF documents.
 
@@ -92,6 +88,5 @@ The Node.js sample uses the following routes under `/api/CollaborativeEditing`:
 ## See Also
 
 - [Collaborative editing with Node.js](./using-redis-cache-nodejs)
-- [Collaborative editing with ASP.NET Core](./using-redis-cache-asp-net-core)
 - [Collaboration Client](../../../../Collaborator/collaboration-client)
 - [Collaboration Server](../../../../Collaborator/collaboration-server)

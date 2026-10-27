@@ -32,7 +32,6 @@ T> If you encounter issues while using the .NET Word library in ASP.NET Core, re
 * Ability to [encrypt and decrypt](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-security) Word documents.
 * Ability to insert and extract [OLE objects](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-ole-objects).
 * Support to run DocIO applications in multi-threaded environments; the library is thread-safe.
-* Support to add, insert, remove, validate and inspect [digital signature](https://help.syncfusion.com/document-processing/word/word-library/net/working-with-digital-signature).
 
 **Compatible Microsoft Word Versions**
 

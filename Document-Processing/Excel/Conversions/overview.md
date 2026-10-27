@@ -27,8 +27,6 @@ keywords: Excel, SDK, Automation, API, convert
 
 {% doccard text="Excel to JSON" link="/document-processing/excel/conversions/excel-to-json/overview" icon="/document-processing/excel/conversions/images/Excel_to_JSON.svg" %}
 
-{% doccard text="PDF to Excel" link="/document-processing/data-extraction/net/conversions/pdf-to-excel" icon="/document-processing/Data-Extraction/net/conversions/Images/pdf-to-excel.svg" %}
-
 {% enddoccards %}
 
 Syncfusion<sup>&reg;</sup> Excel Conversion Library converts Excel to several file formats like PDF, image, HTML, ODS, JSON, CSV without Microsoft Office dependencies. It eases the developers, as they can just integrate this converter to achieve the required Excel document conversions and concentrate on core logics of their application.
