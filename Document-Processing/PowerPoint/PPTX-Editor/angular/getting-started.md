@@ -116,7 +116,7 @@ import {
   providers: [Toolbar, ThumbnailView, Magnification, Navigation, Print, SlideShow],
   template: `
     <div class="control-section">
-      <ejs-pptxeditor id="container" #default_editor height="590px" style="display:block">
+      <ejs-pptxeditor id="container" #default_editor style="display:block">
       </ejs-pptxeditor>
     </div>
   `
@@ -153,4 +153,4 @@ ng serve --open
 
 After the application starts, open the localhost URL shown in the terminal. The Angular PPTX Editor is rendered in the browser with a toolbar, thumbnail pane, and a slide area, as shown below.
 
-![Output of Angular PPTX Editor](./images/angular_getting_started.png)
+![Output of Angular PPTX Editor](./images/getting_started.png)

@@ -129,7 +129,6 @@ function App() {
   return (
     <PptxEditorComponent
       id="container"
-      height="590px"
     />
   );
 }
@@ -163,4 +162,4 @@ npm run dev
 
 After the application starts, open the localhost URL shown in the terminal. The React PPTX Editor is rendered in the browser with a toolbar, thumbnail pane, and a slide area, as shown below.
 
-![Output of React PPTX Editor](./images/react_getting_started.png)
+![Output of React PPTX Editor](./images/getting_started.png)

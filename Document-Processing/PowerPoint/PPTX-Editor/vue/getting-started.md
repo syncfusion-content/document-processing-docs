@@ -91,8 +91,7 @@ Modify the `src/App.vue` file to render the PPTX Editor. Add the PPTX Editor com
   <div id="app">
     <ejs-pptxeditor
       ref="editor"
-      id="container"
-      height="590px">
+      id="container">
     </ejs-pptxeditor>
   </div>
 </template>
@@ -155,4 +154,4 @@ npm run serve
 
 After the application starts, open the localhost URL shown in the terminal. The Vue PPTX Editor is rendered in the browser with a toolbar, thumbnail pane, and a slide area, as shown below.
 
-![Output of Vue PPTX Editor](./images/vue_2_getting_started.png)
+![Output of Vue PPTX Editor](./images/getting_started.png)

@@ -169,9 +169,7 @@ ej.pptxeditor.PptxEditor.Inject(
 );
 
 // Initialize PPTX Editor component
-var editor = new ej.pptxeditor.PptxEditor({
-    height: '590px'
-});
+var editor = new ej.pptxeditor.PptxEditor({});
 
 // Render the PPTX Editor
 editor.appendTo('#PptxEditor');
@@ -188,4 +186,4 @@ fetch('./sample.pptx')
 
 Open the `index.html` file in a web browser. The JavaScript (ES5) PPTX Editor is rendered with a toolbar, thumbnail pane, and a slide area, as shown below.
 
-![Output of JavaScript ES5 PPTX Editor](./images/javascript_es5_getting_started.png)
+![Output of JavaScript ES5 PPTX Editor](./images/getting_started.png)

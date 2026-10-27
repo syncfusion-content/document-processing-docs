@@ -133,9 +133,7 @@ import samplePptxUrl from './sample.pptx?url';
 
 PptxEditor.Inject(Toolbar, ThumbnailView, Magnification, Navigation, Print, SlideShow);
 
-let editor: PptxEditor = new PptxEditor(undefined, document.getElementById('PptxEditor'), {
-  height: '590px'
-});
+let editor: PptxEditor = new PptxEditor(undefined, document.getElementById('PptxEditor'), {});
 
 // Open a local presentation file in the PPTX Editor
 fetch(samplePptxUrl)
