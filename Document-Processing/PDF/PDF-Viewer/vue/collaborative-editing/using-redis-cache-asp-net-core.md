@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Collaborative Editing in Vue PDF Viewer with ASP.NET Core | Syncfusion
-description: Learn how to implement real-time collaborative editing in the Syncfusion Vue PDF Viewer using the ASP.NET Core Collaboration Server with Redis.
+description: Learn how to add real-time collaborative editing to the Syncfusion Vue PDF Viewer using the ASP.NET Core Collaboration Server with Redis.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
