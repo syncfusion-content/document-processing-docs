@@ -24,15 +24,15 @@ To set up a React application, run the following commands:
 {% tabs %}
 {% highlight bash tabtitle="TypeScript" %}
 
-npm create vite@latest pptxeditor-app -- --template react-ts
-cd pptxeditor-app
+npm create vite@latest pptx-editor-app -- --template react-ts
+cd pptx-editor-app
 
 {% endhighlight %}
 
 {% highlight bash tabtitle="JavaScript" %}
 
-npm create vite@latest pptxeditor-app -- --template react
-cd pptxeditor-app
+npm create vite@latest pptx-editor-app -- --template react
+cd pptx-editor-app
 
 {% endhighlight %}
 {% endtabs %}

@@ -18,10 +18,10 @@ JavaScript PPTX Editor enables you to view and print PowerPoint presentations in
 
 ## Create a JavaScript application
 
-Create a folder named `pptxeditor-app` with `index.html` and `index.js` files with the default structure. Your application structure should look like this:
+Create a folder named `pptx-editor-app` with `index.html` and `index.js` files with the default structure. Your application structure should look like this:
 
 ```text
-pptxeditor-app/
+pptx-editor-app/
 ├── index.html
 └── index.js
 ```
@@ -38,7 +38,7 @@ To use local scripts and styles for the PPTX Editor, follow these steps:
 
 1. Download and install the [PPTX Editor SDK](https://www.syncfusion.com/account/manage-trials/start-trials).
 
-2. Create a `resources` folder in your application (for example, `pptxeditor-app/resources`).
+2. Create a `resources` folder in your application (for example, `pptx-editor-app/resources`).
 
 3. From the installed SDK location, copy the required packages from the following folder into the `resources` folder:
 

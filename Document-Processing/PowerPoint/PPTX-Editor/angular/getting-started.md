@@ -30,7 +30,7 @@ npm install -g @angular/cli
 **Step 1:** Start a new Angular application using the Angular CLI command below:
 
 ```bash
-ng new pptxeditor-app
+ng new pptx-editor-app
 ```
 
 **Step 2:** This command will prompt you to configure settings like enabling Angular routing and choosing a stylesheet format.
@@ -49,7 +49,7 @@ In this guide, CSS is selected as the stylesheet format.
 **Step 3:** Navigate to the created project folder.
 
 ```bash
-cd pptxeditor-app
+cd pptx-editor-app
 ```
 
 ## Install the PPTX Editor packages

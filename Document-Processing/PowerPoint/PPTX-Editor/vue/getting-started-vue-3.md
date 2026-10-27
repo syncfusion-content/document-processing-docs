@@ -27,10 +27,10 @@ npm create vite@latest
 
 After running the command, follow the interactive prompts shown below to configure the project:
 
-Step 1: Define the project name: Specify the project name directly. This guide uses `pptxeditor-app`.
+Step 1: Define the project name: Specify the project name directly. This guide uses `pptx-editor-app`.
 
 ```bash
-? Project name: » pptxeditor-app
+? Project name: » pptx-editor-app
 ```
 
 Step 2: Select `Vue` as the framework to target Vue 3.
@@ -59,7 +59,7 @@ Step 3: Choose `JavaScript` as the variant to build the Vite project with JavaSc
 Step 4: After the scaffold completes, install the project dependencies:
 
 ```bash
-cd pptxeditor-app
+cd pptx-editor-app
 npm install
 ```
 
