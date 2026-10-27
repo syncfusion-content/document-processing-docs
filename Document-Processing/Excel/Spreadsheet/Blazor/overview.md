@@ -45,6 +45,7 @@ The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sd
 * [Cell range](cell-range): Boost efficiency with auto-fill, wrap text, and quick content clearing
 * [Context Menu](contextmenu): Speed up workflows with instant access to key actions via smart menus
 * [Accessibility](accessibility): Built-in accessibility support including keyboard navigation, ARIA attributes, and screen reader
+* [Globalization](global-local): Localization, culture-aware formatting, and right-to-left support
 
 ## Related Links
 
