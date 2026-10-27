@@ -486,3 +486,176 @@ function iterateParagraph(paraItems) {
 {% endhighlight %}
 
 {% endtabs %}
+
+## Working with Word document properties
+
+Document properties, also known as metadata, are details about a file that describe or identify it. You can also define additional custom document properties by using document properties, which are classified into two categories:
+
+* Built-in document properties - includes details such as title, author name, subject, and keywords that identify the document's topic or contents.
+* Custom document properties - defines the user-defined document properties.
+
+### Built-in document properties
+
+The built-in document properties of a Word document are represented by the `builtinDocumentProperties` property of the `WordDocument` class. The following code example illustrates how to access and modify the built-in document properties of the document.
+
+{% tabs %}
+
+{% highlight typescript tabtitle="TypeScript" %}
+import { WordDocument } from '@syncfusion/ej2-docx';
+
+let document = WordDocument.open(bytes);
+
+console.log(document.builtinDocumentProperties.title);
+console.log(document.builtinDocumentProperties.author);
+
+document.builtinDocumentProperties.author = "Andrew";
+document.builtinDocumentProperties.lastAuthor = "Steven";
+document.builtinDocumentProperties.createDate = new Date(1900, 12, 31, 12, 0, 0);
+document.builtinDocumentProperties.lastSaveDate = new Date(1900, 12, 31, 12, 0, 0);
+document.builtinDocumentProperties.lastPrinted = new Date(1900, 12, 31, 12, 0, 0);
+document.builtinDocumentProperties.title = "Sample Document";
+document.builtinDocumentProperties.subject = "Adventure Works Cycle";
+document.builtinDocumentProperties.category = "Technical documentation";
+document.builtinDocumentProperties.comments = "This is sample document.";
+document.builtinDocumentProperties.revisionNumber = "2";
+document.builtinDocumentProperties.company = "Adventure Works Cycle";
+{% endhighlight %}
+
+{% highlight javascript tabtitle="JavaScript" %}
+let document = ej.docx.WordDocument.open(bytes);
+
+console.log(document.builtinDocumentProperties.title);
+console.log(document.builtinDocumentProperties.author);
+
+document.builtinDocumentProperties.author = "Andrew";
+document.builtinDocumentProperties.lastAuthor = "Steven";
+document.builtinDocumentProperties.createDate = new Date(1900, 12, 31, 12, 0, 0);
+document.builtinDocumentProperties.lastSaveDate = new Date(1900, 12, 31, 12, 0, 0);
+document.builtinDocumentProperties.lastPrinted = new Date(1900, 12, 31, 12, 0, 0);
+document.builtinDocumentProperties.title = "Sample Document";
+document.builtinDocumentProperties.subject = "Adventure Works Cycle";
+document.builtinDocumentProperties.category = "Technical documentation";
+document.builtinDocumentProperties.comments = "This is sample document.";
+document.builtinDocumentProperties.revisionNumber = "2";
+document.builtinDocumentProperties.company = "Adventure Works Cycle";
+{% endhighlight %}
+
+{% endtabs %}
+
+### Updating words count
+
+You can get the count of paragraphs, words, and characters in an existing Word document.
+
+The following code example shows how to get the word count in an existing Word document.
+
+{% tabs %}
+
+{% highlight typescript tabtitle="TypeScript" %}
+import { WordDocument } from '@syncfusion/ej2-docx';
+
+let document = WordDocument.open(bytes);
+
+//Get the word count in the document.
+let wordCount = document.builtinDocumentProperties.wordCount;
+//Get the character count in the document.
+let charCount = document.builtinDocumentProperties.charCount;
+//Get the paragraph count in the document.
+let paragraphCount = document.builtinDocumentProperties.paragraphCount;
+{% endhighlight %}
+
+{% highlight javascript tabtitle="JavaScript" %}
+let document = ej.docx.WordDocument.open(bytes);
+
+//Get the word count in the document.
+let wordCount = document.builtinDocumentProperties.wordCount;
+//Get the character count in the document.
+let charCount = document.builtinDocumentProperties.charCount;
+//Get the paragraph count in the document.
+let paragraphCount = document.builtinDocumentProperties.paragraphCount;
+{% endhighlight %}
+
+{% endtabs %}
+
+### Updating pages count
+
+The following code example shows how to get the page count in an existing Word document.
+
+{% tabs %}
+
+{% highlight typescript tabtitle="TypeScript" %}
+import { WordDocument } from '@syncfusion/ej2-docx';
+
+let document = WordDocument.open(bytes);
+
+let pageCount = document.builtinDocumentProperties.pageCount;
+{% endhighlight %}
+
+{% highlight javascript tabtitle="JavaScript" %}
+let document = ej.docx.WordDocument.open(bytes);
+
+let pageCount = document.builtinDocumentProperties.pageCount;
+{% endhighlight %}
+
+{% endtabs %}
+
+### Adding custom document properties
+
+You can add new custom document properties through the `add` method of the `customDocumentProperties` collection. The following code example illustrates how to add new custom document properties of various data types.
+
+{% tabs %}
+
+{% highlight typescript tabtitle="TypeScript" %}
+import { WordDocument } from '@syncfusion/ej2-docx';
+
+let document = WordDocument.open(bytes);
+
+//Adds the custom document properties of various data types
+document.customDocumentProperties.add("PropertyA", "Value of A");
+document.customDocumentProperties.add("PropertyB", 12.5);
+document.customDocumentProperties.add("PropertyC", true);
+document.customDocumentProperties.add("PropertyD", new Date(2015, 7, 20));
+{% endhighlight %}
+
+{% highlight javascript tabtitle="JavaScript" %}
+let document = ej.docx.WordDocument.open(bytes);
+
+//Adds the custom document properties of various data types
+document.customDocumentProperties.add("PropertyA", "Value of A");
+document.customDocumentProperties.add("PropertyB", 12.5);
+document.customDocumentProperties.add("PropertyC", true);
+document.customDocumentProperties.add("PropertyD", new Date(2015, 7, 20));
+{% endhighlight %}
+
+{% endtabs %}
+
+### Accessing and modifying custom document properties
+
+You can access and modify an existing custom document property as shown in the following code example.
+
+{% tabs %}
+
+{% highlight typescript tabtitle="TypeScript" %}
+import { WordDocument } from '@syncfusion/ej2-docx';
+
+let document = WordDocument.open(bytes);
+
+let property = document.customDocumentProperties.get("PropertyA");
+//Modifies the value of DocumentProperty instance
+if (property) {
+    // Modify the value of the DocumentProperty instance
+    property.value = 'Hello world';
+}
+{% endhighlight %}
+
+{% highlight javascript tabtitle="JavaScript" %}
+let document = ej.docx.WordDocument.open(bytes);
+
+let property = document.customDocumentProperties.get("PropertyA");
+//Modifies the value of DocumentProperty instance
+if (property) {
+    // Modify the value of the DocumentProperty instance
+    property.value = 'Hello world';
+}
+{% endhighlight %}
+
+{% endtabs %}
