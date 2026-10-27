@@ -32,5 +32,5 @@ The React PPTX Editor provides the following key features:
 * **Zoom** – Allows zooming in and out of the presentation for a better viewing experience.
 * **Slideshow mode** – Supports slideshow mode to present the slides in full-screen.
 * **Slide notes** – Supports viewing slide notes for each slide.
-* **Presenter view** – Supports presenter view with slide notes while presenting.
+* **Presenter view** – Supports presenter view with speaker notes while presenting.
 * **Print** – Allows printing the presentation with the default print settings.

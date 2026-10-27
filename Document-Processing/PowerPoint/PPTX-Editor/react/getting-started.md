@@ -93,6 +93,7 @@ import {
   Print,
   SlideShow
 } from '@syncfusion/ej2-react-pptxeditor';
+import samplePptxUrl from './sample.pptx?url';
 
 PptxEditorComponent.Inject(Toolbar, ThumbnailView, Magnification, Navigation, Print, SlideShow);
 
@@ -101,8 +102,6 @@ function App() {
     <PptxEditorComponent
       id="container"
       height="590px"
-      // Open a presentation from a URL
-      // documentPath="/sample.pptx"
     />
   );
 }
@@ -122,6 +121,7 @@ import {
   Print,
   SlideShow
 } from '@syncfusion/ej2-react-pptxeditor';
+import samplePptxUrl from './sample.pptx?url';
 
 PptxEditorComponent.Inject(Toolbar, ThumbnailView, Magnification, Navigation, Print, SlideShow);
 
@@ -130,13 +130,25 @@ function App() {
     <PptxEditorComponent
       id="container"
       height="590px"
-      // Open a presentation from a URL
-      // documentPath="/sample.pptx"
     />
   );
 }
 
 export default App;
+
+{% endhighlight %}
+{% endtabs %}
+
+To open a local PPTX file in the PPTX Editor, fetch the file as a blob and load it using the `openFromBlob` method:
+
+{% tabs %}
+{% highlight ts tabtitle="TypeScript (App.tsx)" %}
+
+import samplePptxUrl from './sample.pptx?url';
+
+fetch(samplePptxUrl)
+  .then((response) => response.blob())
+  .then((blob) => editor.openFromBlob(blob, 'sample.pptx'));
 
 {% endhighlight %}
 {% endtabs %}
