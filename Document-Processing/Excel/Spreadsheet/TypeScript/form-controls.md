@@ -38,8 +38,8 @@ The linked cell value is automatically updated whenever the Check Box state chan
 
 The following code example shows the Check Box Form Control functionality in the Spreadsheet control.
 
-{% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/javascript-es6/form-controls-check-box-cs1/app.ts %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/spreadsheet/javascript-es6/form-controls-check-box-cs1/index.ts %}
 {% endhighlight %}
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/form-controls-check-box-cs1" %}
@@ -62,8 +62,8 @@ The linked cell value is automatically updated whenever the Radio Button state c
 
 The following code example shows the Radio Button Form Control functionality in the Spreadsheet control.
 
-{% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/javascript-es6/form-controls-radio-button-cs1/app.ts %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/spreadsheet/javascript-es6/form-controls-radio-button-cs1/index.ts %}
 {% endhighlight %}
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/form-controls-radio-button-cs1" %}
@@ -83,11 +83,11 @@ The linked cell value is automatically updated whenever the Combo Box's selected
 
 The following code example shows the Combo Box (Dropdown) Form Control functionality in the Spreadsheet control.
 
-{% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/typescript/form-controls-dropdown-cs1/app.ts %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/spreadsheet/javascript-es6/form-controls-dropdown-cs1/index.ts %}
 {% endhighlight %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/typescript/form-controls-dropdown-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/form-controls-dropdown-cs1" %}
 
 ## Inserting Form Controls
 
