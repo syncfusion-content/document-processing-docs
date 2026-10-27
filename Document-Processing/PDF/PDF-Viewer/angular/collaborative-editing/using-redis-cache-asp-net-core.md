@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Collaborative Editing in Angular PDF Viewer with ASP.NET Core
+title: Angular PDF Viewer Collaborative Editing with ASP.NET Core Syncfusion
 description: Learn how to add real-time collaborative editing to the Syncfusion Angular PDF Viewer using the ASP.NET Core Collaboration Server with Redis.
 platform: document-processing
 control: PDF Viewer

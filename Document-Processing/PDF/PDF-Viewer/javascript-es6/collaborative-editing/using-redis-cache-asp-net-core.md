@@ -1,6 +1,6 @@
 ---
 layout: post
-title: TypeScript PDF Viewer Collaborative Editing with ASP.NET Core
+title: JS ES6 PDF Viewer Collaborative Editing with ASP.NET Core Syncfusion
 description: Learn how to add real-time collaborative editing to the Syncfusion JavaScript ES6 PDF Viewer using the ASP.NET Core server and Redis.
 platform: document-processing
 control: PDF Viewer

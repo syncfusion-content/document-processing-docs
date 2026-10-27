@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Collaborative Editing in Core PDF Viewer with ASP.NET Core
+title: Collaborative Editing in Core PDF Viewer with ASP.NET Core Syncfusion
 description: Learn how to add real-time collaborative editing to the Syncfusion ASP.NET Core PDF Viewer using the ASP.NET Core server and Redis.
 platform: document-processing
 control: PDF Viewer
