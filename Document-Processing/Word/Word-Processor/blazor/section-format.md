@@ -53,6 +53,32 @@ You can define the distance of footer content from the bottom of the page by usi
 await documentEditor.Selection.SectionFormat.SetFooterDistanceAsync(72);
 ```
 
+## Breaks
+
+You can insert a column break to move the text following the cursor to the next column.
+
+```csharp
+await documentEditor.Editor.InsertColumnBreakAsync();
+```
+
+You can insert a page break to move the content following the cursor to the next page.
+
+```csharp
+await documentEditor.Editor.InsertPageBreakAsync();
+```
+
+You can insert a next-page section break to start the new section on the next page.
+
+```csharp
+await documentEditor.Editor.InsertSectionBreakAsync(SectionBreakType.NewPage);
+```
+
+You can insert a continuous section break to start the new section on the same page.
+
+```csharp
+await documentEditor.Editor.InsertSectionBreakAsync(SectionBreakType.Continuous);
+```
+
 ## Online demo
 
 Explore how to apply section formatting in Word documents using the Blazor DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/section-format?theme=fluent2).
