@@ -1376,9 +1376,7 @@ If no `id` is provided in the URL, the client generates a new room ID. Share the
 - For a hosted deployment, configure the client with the hosted Collaboration Server URL and use a shared, reachable Redis instance. All users must access the same client deployment and preserve the same `?id=<room-id>` value to remain in one room.
 - Do not use `localhost` in a hosted client configuration because it refers to each individual user's computer.
 
-## View Sample on GitHub
-
-[React Collaborative Editing sample](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Collaborative%20Editing)
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Collaborative%20Editing)
 
 ## See Also
 
