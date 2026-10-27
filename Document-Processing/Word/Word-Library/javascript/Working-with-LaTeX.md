@@ -216,25 +216,21 @@ The following code example illustrates how to create a border box equation using
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-{% raw %}
 import { WordDocument } from '@syncfusion/ej2-docx';
 // Create a new Word document
 let document = WordDocument.create();
 // Append a border box equation using LaTeX
-document.lastParagraph.appendMath('\\boxed{{x}^{2}+{y}^{2}={z}^{2}}');
+document.lastParagraph.appendMath('\\boxed{ {x}^{2}+{y}^{2}={z}^{2} }');
 // Save document
 document.save('BorderBox.docx');
-{% endraw %}
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
-{% raw %}
 // Create a new Word document
 let document = ej.docx.WordDocument.create();
 // Append a border box equation using LaTeX
-document.lastParagraph.appendMath('\\boxed{{x}^{2}+{y}^{2}={z}^{2}}');
+document.lastParagraph.appendMath('\\boxed{ {x}^{2}+{y}^{2}={z}^{2} }');
 // Save document
 document.save('BorderBox.docx');
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -1300,29 +1296,25 @@ The following code examples show how to apply the justification to equations in 
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-{% raw %}
 import { WordDocument, MathJustification } from '@syncfusion/ej2-docx';
 // Create a new Word document
 let document = WordDocument.create();
 // Append a border box equation using LaTeX
-let math = document.lastParagraph.appendMath('\\boxed{{x}^{2}+{y}^{2}={z}^{2}}');
+let math = document.lastParagraph.appendMath('\\boxed{ {x}^{2}+{y}^{2}={z}^{2} }');
 // Apply math justification
 math.mathParagraph.justification = MathJustification.Left;
 // Save document
 document.save('Result.docx');
-{% endraw %}
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
-{% raw %}
 // Create a new Word document
 let document = ej.docx.WordDocument.create();
 // Append a border box equation using LaTeX
-let math = document.lastParagraph.appendMath('\\boxed{{x}^{2}+{y}^{2}={z}^{2}}');
+let math = document.lastParagraph.appendMath('\\boxed{ {x}^{2}+{y}^{2}={z}^{2} }');
 // Apply math justification
 math.mathParagraph.justification = ej.docx.MathJustification.Left;
 // Save document
 document.save('Result.docx');
-{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
