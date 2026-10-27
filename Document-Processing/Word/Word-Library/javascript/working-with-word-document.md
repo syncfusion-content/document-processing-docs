@@ -504,7 +504,7 @@ The built-in document properties of a Word document are represented by the `buil
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Opens an existing Word document.
-let document = WordDocument.open(bytes);
+let document = WordDocument.open(data);
 
 // Accesses the built-in document properties.
 console.log(document.builtinDocumentProperties.title);
@@ -529,7 +529,7 @@ document.save('Result.docx');
 
 {% highlight javascript tabtitle="JavaScript" %}
 // Opens an existing Word document.
-let document = ej.docx.WordDocument.open(bytes);
+let document = ej.docx.WordDocument.open(data);
 
 // Accesses the built-in document properties.
 console.log(document.builtinDocumentProperties.title);
@@ -566,7 +566,7 @@ The following code example shows how to get the word count in an existing Word d
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Opens an existing Word document.
-let document = WordDocument.open(bytes);
+let document = WordDocument.open(data);
 
 // Gets the word count in the document.
 let wordCount = document.builtinDocumentProperties.wordCount;
@@ -581,7 +581,7 @@ document.save('Result.docx');
 
 {% highlight javascript tabtitle="JavaScript" %}
 // Opens an existing Word document.
-let document = ej.docx.WordDocument.open(bytes);
+let document = ej.docx.WordDocument.open(data);
 
 // Gets the word count in the document.
 let wordCount = document.builtinDocumentProperties.wordCount;
@@ -606,7 +606,7 @@ The following code example shows how to get the page count in an existing Word d
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Opens an existing Word document.
-let document = WordDocument.open(bytes);
+let document = WordDocument.open(data);
 
 // Gets the page count in the document.
 let pageCount = document.builtinDocumentProperties.pageCount;
@@ -617,7 +617,7 @@ document.save('Result.docx');
 
 {% highlight javascript tabtitle="JavaScript" %}
 // Opens an existing Word document.
-let document = ej.docx.WordDocument.open(bytes);
+let document = ej.docx.WordDocument.open(data);
 
 // Gets the page count in the document.
 let pageCount = document.builtinDocumentProperties.pageCount;
@@ -638,7 +638,7 @@ You can add new custom document properties through the `add` method of the `cust
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Opens an existing Word document.
-let document = WordDocument.open(bytes);
+let document = WordDocument.open(data);
 
 // Adds the custom document properties of various data types.
 document.customDocumentProperties.add("PropertyA", "Value of A");
@@ -652,7 +652,7 @@ document.save('Result.docx');
 
 {% highlight javascript tabtitle="JavaScript" %}
 // Opens an existing Word document.
-let document = ej.docx.WordDocument.open(bytes);
+let document = ej.docx.WordDocument.open(data);
 
 // Adds the custom document properties of various data types.
 document.customDocumentProperties.add("PropertyA", "Value of A");
@@ -676,7 +676,7 @@ You can access and modify an existing custom document property as shown in the f
 import { WordDocument } from '@syncfusion/ej2-docx';
 
 // Opens an existing Word document.
-let document = WordDocument.open(bytes);
+let document = WordDocument.open(data);
 
 // Accesses an existing custom document property.
 let property = document.customDocumentProperties.get("PropertyA");
@@ -692,7 +692,7 @@ document.save('Result.docx');
 
 {% highlight javascript tabtitle="JavaScript" %}
 // Opens an existing Word document.
-let document = ej.docx.WordDocument.open(bytes);
+let document = ej.docx.WordDocument.open(data);
 
 // Accesses an existing custom document property.
 let property = document.customDocumentProperties.get("PropertyA");
