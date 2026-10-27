@@ -503,11 +503,14 @@ The built-in document properties of a Word document are represented by the `buil
 {% highlight typescript tabtitle="TypeScript" %}
 import { WordDocument } from '@syncfusion/ej2-docx';
 
+// Opens an existing Word document.
 let document = WordDocument.open(bytes);
 
+// Accesses the built-in document properties.
 console.log(document.builtinDocumentProperties.title);
 console.log(document.builtinDocumentProperties.author);
 
+// Modifies or sets the built-in document properties.
 document.builtinDocumentProperties.author = "Andrew";
 document.builtinDocumentProperties.lastAuthor = "Steven";
 document.builtinDocumentProperties.createDate = new Date(1900, 12, 31, 12, 0, 0);
@@ -519,14 +522,20 @@ document.builtinDocumentProperties.category = "Technical documentation";
 document.builtinDocumentProperties.comments = "This is sample document.";
 document.builtinDocumentProperties.revisionNumber = "2";
 document.builtinDocumentProperties.company = "Adventure Works Cycle";
+
+// Saves the Word document.
+document.save('Result.docx');
 {% endhighlight %}
 
 {% highlight javascript tabtitle="JavaScript" %}
+// Opens an existing Word document.
 let document = ej.docx.WordDocument.open(bytes);
 
+// Accesses the built-in document properties.
 console.log(document.builtinDocumentProperties.title);
 console.log(document.builtinDocumentProperties.author);
 
+// Modifies or sets the built-in document properties.
 document.builtinDocumentProperties.author = "Andrew";
 document.builtinDocumentProperties.lastAuthor = "Steven";
 document.builtinDocumentProperties.createDate = new Date(1900, 12, 31, 12, 0, 0);
@@ -538,6 +547,9 @@ document.builtinDocumentProperties.category = "Technical documentation";
 document.builtinDocumentProperties.comments = "This is sample document.";
 document.builtinDocumentProperties.revisionNumber = "2";
 document.builtinDocumentProperties.company = "Adventure Works Cycle";
+
+// Saves the Word document.
+document.save('Result.docx');
 {% endhighlight %}
 
 {% endtabs %}
@@ -553,25 +565,33 @@ The following code example shows how to get the word count in an existing Word d
 {% highlight typescript tabtitle="TypeScript" %}
 import { WordDocument } from '@syncfusion/ej2-docx';
 
+// Opens an existing Word document.
 let document = WordDocument.open(bytes);
 
-//Get the word count in the document.
+// Gets the word count in the document.
 let wordCount = document.builtinDocumentProperties.wordCount;
-//Get the character count in the document.
+// Gets the character count in the document.
 let charCount = document.builtinDocumentProperties.charCount;
-//Get the paragraph count in the document.
+// Gets the paragraph count in the document.
 let paragraphCount = document.builtinDocumentProperties.paragraphCount;
+
+// Saves the Word document.
+document.save('Result.docx');
 {% endhighlight %}
 
 {% highlight javascript tabtitle="JavaScript" %}
+// Opens an existing Word document.
 let document = ej.docx.WordDocument.open(bytes);
 
-//Get the word count in the document.
+// Gets the word count in the document.
 let wordCount = document.builtinDocumentProperties.wordCount;
-//Get the character count in the document.
+// Gets the character count in the document.
 let charCount = document.builtinDocumentProperties.charCount;
-//Get the paragraph count in the document.
+// Gets the paragraph count in the document.
 let paragraphCount = document.builtinDocumentProperties.paragraphCount;
+
+// Saves the Word document.
+document.save('Result.docx');
 {% endhighlight %}
 
 {% endtabs %}
@@ -585,15 +605,25 @@ The following code example shows how to get the page count in an existing Word d
 {% highlight typescript tabtitle="TypeScript" %}
 import { WordDocument } from '@syncfusion/ej2-docx';
 
+// Opens an existing Word document.
 let document = WordDocument.open(bytes);
 
+// Gets the page count in the document.
 let pageCount = document.builtinDocumentProperties.pageCount;
+
+// Saves the Word document.
+document.save('Result.docx');
 {% endhighlight %}
 
 {% highlight javascript tabtitle="JavaScript" %}
+// Opens an existing Word document.
 let document = ej.docx.WordDocument.open(bytes);
 
+// Gets the page count in the document.
 let pageCount = document.builtinDocumentProperties.pageCount;
+
+// Saves the Word document.
+document.save('Result.docx');
 {% endhighlight %}
 
 {% endtabs %}
@@ -607,23 +637,31 @@ You can add new custom document properties through the `add` method of the `cust
 {% highlight typescript tabtitle="TypeScript" %}
 import { WordDocument } from '@syncfusion/ej2-docx';
 
+// Opens an existing Word document.
 let document = WordDocument.open(bytes);
 
-//Adds the custom document properties of various data types
+// Adds the custom document properties of various data types.
 document.customDocumentProperties.add("PropertyA", "Value of A");
 document.customDocumentProperties.add("PropertyB", 12.5);
 document.customDocumentProperties.add("PropertyC", true);
 document.customDocumentProperties.add("PropertyD", new Date(2015, 7, 20));
+
+// Saves the Word document.
+document.save('Result.docx');
 {% endhighlight %}
 
 {% highlight javascript tabtitle="JavaScript" %}
+// Opens an existing Word document.
 let document = ej.docx.WordDocument.open(bytes);
 
-//Adds the custom document properties of various data types
+// Adds the custom document properties of various data types.
 document.customDocumentProperties.add("PropertyA", "Value of A");
 document.customDocumentProperties.add("PropertyB", 12.5);
 document.customDocumentProperties.add("PropertyC", true);
 document.customDocumentProperties.add("PropertyD", new Date(2015, 7, 20));
+
+// Saves the Word document.
+document.save('Result.docx');
 {% endhighlight %}
 
 {% endtabs %}
@@ -637,25 +675,35 @@ You can access and modify an existing custom document property as shown in the f
 {% highlight typescript tabtitle="TypeScript" %}
 import { WordDocument } from '@syncfusion/ej2-docx';
 
+// Opens an existing Word document.
 let document = WordDocument.open(bytes);
 
+// Accesses an existing custom document property.
 let property = document.customDocumentProperties.get("PropertyA");
-//Modifies the value of DocumentProperty instance
+
 if (property) {
-    // Modify the value of the DocumentProperty instance
+    // Modifies the value of DocumentProperty instance.
     property.value = 'Hello world';
 }
+
+// Saves the Word document.
+document.save('Result.docx');
 {% endhighlight %}
 
 {% highlight javascript tabtitle="JavaScript" %}
+// Opens an existing Word document.
 let document = ej.docx.WordDocument.open(bytes);
 
+// Accesses an existing custom document property.
 let property = document.customDocumentProperties.get("PropertyA");
-//Modifies the value of DocumentProperty instance
+
 if (property) {
-    // Modify the value of the DocumentProperty instance
+    // Modifies the value of DocumentProperty instance.
     property.value = 'Hello world';
 }
+
+// Saves the Word document.
+document.save('Result.docx');
 {% endhighlight %}
 
 {% endtabs %}
