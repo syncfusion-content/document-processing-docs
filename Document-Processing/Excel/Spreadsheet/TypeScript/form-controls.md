@@ -112,7 +112,7 @@ To open the Format Control dialog:
 - **Import and Export**: Form controls retain their configuration, caption, cell link settings and layout settings during import and export.
 - **Drag and Move**: Form controls can be moved to different locations within the worksheet.
 - **Undo/Redo**: Use Ctrl+Z to undo deletion operations.
-- **Resize**: Drag the edges of a form control to adjust its size. Undo and Redo operations are supported for resize and deletion
+- **Resize**: Drag the edges of a form control to adjust its size. Undo and Redo operations are supported for resize and deletion.
 - **Delete**: Right-click the form control and select Delete, or press Delete key after selecting the form control.
 - **Cut, Copy, Paste**: Right-click the form control and select Cut, Copy, or Paste.
 - **Right-to-Left (RTL)**: Form controls support Right-to-Left (RTL) layouts. When RTL mode is enabled, form controls render and function appropriately in RTL direction.
