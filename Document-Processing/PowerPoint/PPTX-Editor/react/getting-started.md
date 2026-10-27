@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with React PPTX Editor
 
-[React PPTX Editor](https://www.syncfusion.com/powerpoint-editor-sdk/react-powerpoint-editor) enables you to view and print PowerPoint presentations in web applications. This section guides you through the steps to get started and create a PPTX Editor in a React application.
+React PPTX Editor enables you to view and print PowerPoint presentations in web applications. This section guides you through the steps to get started and create a PPTX Editor in a React application.
 
 ## Prerequisites
 
@@ -39,7 +39,7 @@ cd pptxeditor-app
 
 ## Install the React PPTX Editor npm package
 
-The PPTX Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-react-pptxeditor).
+The PPTX Editor package is available in the public npm registry and can be installed directly from `npmjs.com`.
 
 To install the PPTX Editor component, use the following command:
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with TypeScript PPTX Editor
 
-[TypeScript PPTX Editor](https://www.syncfusion.com/powerpoint-editor-sdk/javascript-powerpoint-editor) enables you to view and print PowerPoint presentations in web applications. This section guides you through the steps to get started and create a PPTX Editor in a TypeScript application.
+TypeScript PPTX Editor enables you to view and print PowerPoint presentations in web applications. This section guides you through the steps to get started and create a PPTX Editor in a TypeScript application.
 
 ## Prerequisites
 
@@ -41,7 +41,7 @@ cd ej2-quickstart
 
 By default, the `ej2‑quickstart` repository is preconfigured with the [@syncfusion/ej2](https://www.npmjs.com/package/@syncfusion/ej2) package in `~/package.json`. This package installs all Syncfusion Essential JS 2 component packages, including the PPTX Editor and other EJ2 controls.
 
-To install only the PPTX Editor component, replace the dependency with [@syncfusion/ej2-pptxeditor](https://www.npmjs.com/package/@syncfusion/ej2-pptxeditor), as shown below:
+To install only the PPTX Editor component, replace the dependency with `@syncfusion/ej2-pptxeditor`, as shown below:
 
 {% tabs %}
 {% highlight json tabtitle="~/package.json" %}
@@ -157,4 +157,4 @@ npm start
 
 After the application starts, open the localhost URL shown in the terminal. The TypeScript PPTX Editor is rendered in the browser with a toolbar, thumbnail pane, and a slide area, as shown below.
 
-![Output of TypeScript PPTX Editor](./images/typescript_getting_started.png)
+![Output of TypeScript PPTX Editor](./images/getting_started.png)

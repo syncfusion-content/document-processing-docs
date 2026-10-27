@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About Syncfusion PPTX Editor Control | Syncfusion
-description: Learn about the introduction of Syncfusion Essential Studio PPTX Editor control and more details.
+description: Learn about the Syncfusion Essential Studio PPTX Editor control, its key features, and how to add PowerPoint presentation viewing to your applications.
 platform: document-processing
 control: general
 documentation: UG

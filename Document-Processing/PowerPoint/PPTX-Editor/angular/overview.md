@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # About Syncfusion Angular PPTX Editor Control
 
-The [Angular PPTX Editor](https://www.syncfusion.com/powerpoint-editor-sdk/angular-powerpoint-editor) is a feature-rich, user-interactive component that enables viewing and printing PowerPoint presentations with a familiar Microsoft PowerPoint-like interface.
+The Angular PPTX Editor is a feature-rich, user-interactive component that enables viewing and printing PowerPoint presentations with a familiar Microsoft PowerPoint-like interface.
 
 ![Output of Angular PPTX Editor](./images/pptx-editor.png)
 
@@ -20,7 +20,7 @@ The Angular PPTX Editor provides the following key features:
 
 * **Document elements and formatting** – View the PPTX documents with the basic elements and formatting below.
     * **Textbox and Placeholders** – Supports textboxes and placeholders with their content and formatting.
-    * **Basic Auto shapes** – Supports rendering basic auto shapes with fill and outline formatting.
+    * **Basic Auto shapes** – Supports rendering basic auto-shapes with fill and outline formatting.
     * **Images** – Supports images embedded in the slides.
     * **Table** – Supports tables with their content and formatting.
     * **Chart** – Supports charts rendered in the slides.

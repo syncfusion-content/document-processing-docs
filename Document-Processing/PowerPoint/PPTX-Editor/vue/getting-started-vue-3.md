@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with Vue PPTX Editor (Vue 3)
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with integrating the [Vue PPTX Editor](https://www.syncfusion.com/powerpoint-editor-sdk/vue-powerpoint-editor) component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with integrating the [Vue PPTX Editor component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 ## Prerequisites
 
@@ -65,7 +65,7 @@ npm install
 
 ## Install the PPTX Editor packages
 
-The PPTX Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-vue-pptxeditor).
+The PPTX Editor package is available in the public npm registry and can be installed directly from `npmjs.com`.
 
 To install the PPTX Editor component, use the following command:
 

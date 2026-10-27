@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with Vue PPTX Editor (Vue 2)
 
-[Vue PPTX Editor](https://www.syncfusion.com/powerpoint-editor-sdk/vue-powerpoint-editor) enables you to view and print PowerPoint presentations in web applications. This section guides you through the steps to get started and create a PPTX Editor in a Vue application.
+Vue PPTX Editor enables you to view and print PowerPoint presentations in web applications. This section guides you through the steps to get started and create a PPTX Editor in a Vue application.
 
 ## Prerequisites
 
@@ -43,7 +43,7 @@ cd quickstart
 
 ## Install the PPTX Editor packages
 
-The PPTX Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-vue-pptxeditor).
+The PPTX Editor package is available in the public npm registry and can be installed directly from `npmjs.com`.
 
 To install the PPTX Editor component, use the following command:
 

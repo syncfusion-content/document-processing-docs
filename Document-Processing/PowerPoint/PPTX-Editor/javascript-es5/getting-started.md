@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with JavaScript PPTX Editor
 
-[JavaScript PPTX Editor](https://www.syncfusion.com/powerpoint-editor-sdk/javascript-powerpoint-editor) enables you to view and print PowerPoint presentations in web applications. This section guides you through the steps to get started and create a PPTX Editor in a JavaScript (ES5) application.
+JavaScript PPTX Editor enables you to view and print PowerPoint presentations in web applications. This section guides you through the steps to get started and create a PPTX Editor in a JavaScript (ES5) application.
 
 ## Prerequisites
 

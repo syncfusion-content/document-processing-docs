@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with Angular PPTX Editor
 
-[Angular PPTX Editor](https://www.syncfusion.com/powerpoint-editor-sdk/angular-powerpoint-editor) enables you to view and print PowerPoint presentations in web applications. This section guides you through the steps to get started and create a PPTX Editor in an Angular application.
+Angular PPTX Editor enables you to view and print PowerPoint presentations in web applications. This section guides you through the steps to get started and create a PPTX Editor in an Angular application.
 
 ## Prerequisites
 
@@ -54,7 +54,7 @@ cd pptxeditor-app
 
 ## Install the PPTX Editor packages
 
-The PPTX Editor package is available in the public npm registry and can be installed directly from [`npmjs.com`](https://www.npmjs.com/package/@syncfusion/ej2-angular-pptxeditor).
+The PPTX Editor package is available in the public npm registry and can be installed directly from `npmjs.com`.
 
 To install the PPTX Editor component, use the following command:
 
