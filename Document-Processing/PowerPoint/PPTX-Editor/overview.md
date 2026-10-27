@@ -5,7 +5,7 @@ description: Learn about the introduction of Syncfusion Essential Studio PPTX Ed
 platform: document-processing
 control: general
 documentation: UG
-keywords: PowerPoint, PPTX, SDK, view, edit, read, slide, presentation
+keywords: PowerPoint, PPTX, SDK, view, read, slide, presentation
 ---
 
 # About Syncfusion PPTX Editor Control
@@ -16,4 +16,4 @@ keywords: PowerPoint, PPTX, SDK, view, edit, read, slide, presentation
 
 {% enddoccards %}
 
-Syncfusion<sup>&reg;</sup> PPTX Editor component is a Microsoft PowerPoint-like GUI component used to view, edit, and print PowerPoint presentations in JavaScript, Angular, React, and Vue applications that works without Microsoft Office dependencies. It eases you developers to just integrate this PowerPoint editor component to achieve the required presentation viewing and editing functionalities and concentrate on core logics of your application.
+Syncfusion<sup>&reg;</sup> PPTX Editor component is a Microsoft PowerPoint-like GUI component used to view and print PowerPoint presentations in JavaScript, Angular, React, and Vue applications that works without Microsoft Office dependencies. It eases you developers to just integrate this PowerPoint editor component to achieve the required presentation viewing functionalities and concentrate on core logics of your application.

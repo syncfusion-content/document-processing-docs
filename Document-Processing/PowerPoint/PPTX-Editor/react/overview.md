@@ -10,25 +10,27 @@ domainurl: ##DomainURL##
 
 # About Syncfusion React PPTX Editor Control
 
-The [React PPTX Editor](https://www.syncfusion.com/powerpoint-editor-sdk/react-powerpoint-editor) is a feature-rich, user-interactive component that enables viewing, editing, and printing PowerPoint presentations with a familiar Microsoft PowerPoint-like interface.
+The [React PPTX Editor](https://www.syncfusion.com/powerpoint-editor-sdk/react-powerpoint-editor) is a feature-rich, user-interactive component that enables viewing and printing PowerPoint presentations with a familiar Microsoft PowerPoint-like interface.
 
 ![Output of React PPTX Editor](./images/pptx-editor.png)
 
 ## Key Features
 
-* View the PPTX documents with the basic elements and formatting below,
-  * Textbox and Placeholders
-  * Basic Auto shapes
-  * Images
-  * Table
-  * Chart
-  * Basic Paragraph and Text Formatting
-  * Hyperlinks
-  * Different languages of text
-* Basic viewer ribbon interface.
-* Slide navigation through touch, keyboard, and mouse.
-* Zoom support.
-* Slideshow mode.
-* Slide notes.
-* Presenter view.
-* Print support.
+The React PPTX Editor provides the following key features:
+
+* **Document elements and formatting** – View the PPTX documents with the basic elements and formatting below.
+    * **Textbox and Placeholders** – Supports textboxes and placeholders with their content and formatting.
+    * **Basic Auto shapes** – Supports rendering basic auto shapes with fill and outline formatting.
+    * **Images** – Supports images embedded in the slides.
+    * **Table** – Supports tables with their content and formatting.
+    * **Chart** – Supports charts rendered in the slides.
+    * **Basic Paragraph and Text Formatting** – Supports basic paragraph and text formatting like alignment, indentation, bold, italic, underline, font, size, and color.
+    * **Hyperlinks** – Supports hyperlinks to navigate to the target on click.
+    * **Different languages of text** – Supports rendering text in different languages.
+* **Basic viewer ribbon interface** – Provides a basic viewer ribbon interface similar to Microsoft PowerPoint, with tab-based commands for quick and intuitive access to features.
+* **Slide navigation** – Allows navigating through slides using touch, keyboard, and mouse interactions.
+* **Zoom** – Allows zooming in and out of the presentation for a better viewing experience.
+* **Slideshow mode** – Supports slideshow mode to present the slides in full-screen.
+* **Slide notes** – Supports viewing slide notes for each slide.
+* **Presenter view** – Supports presenter view with slide notes while presenting.
+* **Print** – Allows printing the presentation with the default print settings.
