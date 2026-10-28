@@ -5,6 +5,7 @@ description: Learn here all about Mobile support in Syncfusion<sup>®</sup> UWP 
 platform: document-processing
 control: PDF viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # Mobile in UWP Pdf Viewer

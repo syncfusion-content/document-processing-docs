@@ -5,6 +5,7 @@ description: Learn about the add digital signature in the Angular PDF Viewer and
 platform: document-processing
 control: PdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # Add Digital Signature in Angular PDF Viewer

@@ -6,6 +6,7 @@ platform: document-processing
 control: Text selection
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # About Syncfusion React PDF Viewer Text Selection

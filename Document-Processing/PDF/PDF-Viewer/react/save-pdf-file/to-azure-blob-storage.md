@@ -5,6 +5,7 @@ description: Save PDF files from the React PDF Viewer to Azure Blob Storage usin
 control: PDF Viewer
 platform: document-processing
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # Save PDF Files to Azure Blob Storage in React PDF Viewer

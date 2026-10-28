@@ -5,6 +5,7 @@ description: Learn here all about how to print in the same window in the Blazor 
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # How to Perform print in the same window using PDF Viewer

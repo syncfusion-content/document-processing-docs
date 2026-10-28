@@ -5,6 +5,7 @@ description: Filling and signing the forms in the PDF document using the Syncfus
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 #  Filling PDF forms using PDF Viewer Xamarin.Android

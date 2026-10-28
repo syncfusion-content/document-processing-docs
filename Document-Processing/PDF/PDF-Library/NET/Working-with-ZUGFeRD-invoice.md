@@ -4,6 +4,7 @@ description: Learn how to generate, add, extract, and validate ZUGFeRD invoices 
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # ZUGFeRD Invoice in .NET PDF Library
 

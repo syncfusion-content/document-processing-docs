@@ -5,6 +5,7 @@ description: Control the visibility of PDF annotations in the ASP.NET MVC PDF Vi
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # How to Control Annotation Visibility in ASP.NET MVC PDF Viewer

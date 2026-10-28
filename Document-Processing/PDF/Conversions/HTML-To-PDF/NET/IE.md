@@ -4,6 +4,7 @@ description: Learn how to convert HTML to PDF using IE rendering engine with var
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # HTML to PDF conversion in IE .NET PDF Library 
 

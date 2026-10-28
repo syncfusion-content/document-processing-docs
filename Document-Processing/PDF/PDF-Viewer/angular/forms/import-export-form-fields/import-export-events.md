@@ -5,6 +5,7 @@ description: Handle import and export events for PDF form fields in the Angular 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # Form Field Import and Export Events in Angular PDF Viewer

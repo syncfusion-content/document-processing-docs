@@ -5,6 +5,7 @@ description: Learn about the open pdf file in the ASP.NET Core PDF Viewer and ho
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK, UI Component Suite
 ---
 
 # Open Pdf File in ASP.NET Core PDF Viewer
