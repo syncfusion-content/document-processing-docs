@@ -23,13 +23,12 @@ The following are the key features of the [JavaScript PowerPoint Library](https:
 
 ## Supported environments
 
-The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) supports the following application environments:
-
-* Node.js
-* JavaScript
-* TypeScript
-* Angular
-* React
-* Vue
+| Environment | Get started |
+|---|---|
+| JavaScript | [Create PowerPoint in JavaScript](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/create-powerpoint-document-javascript) |
+| TypeScript | [Create PowerPoint in TypeScript](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/create-powerpoint-document-typescript) |
+| Angular | [Create PowerPoint in Angular](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/create-powerpoint-document-angular) |
+| React | [Create PowerPoint in React](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/getting-started) |
+| Vue | [Create PowerPoint in Vue](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/create-powerpoint-document-vue) |
 
 N> 1. The current version of the [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) supports the .PPTX file format.

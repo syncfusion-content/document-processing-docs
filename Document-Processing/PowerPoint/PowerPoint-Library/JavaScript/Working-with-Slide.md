@@ -20,14 +20,12 @@ The following code example demonstrates how to add a blank slide to the Presenta
 {% highlight js tabtitle="TypeScript" %}
 
 import { Presentation } from '@syncfusion/ej2-pptx';
-(async () => {
 // Creates a Presentation instance.
-const pptxDoc = Presentation.create();
+let pptxDoc = Presentation.create();
 // Adds a slide to the PowerPoint presentation.
-const slide = pptxDoc.slides.add();
+let slide = pptxDoc.slides.add();
 // Saves the Presentation to the file system.
 await pptxDoc.save('Output.pptx');
-})();
 
 {% endhighlight %}
 {% endtabs %}
@@ -54,14 +52,12 @@ The following example demonstrates how to access a slide from the predefined bla
 {% highlight js tabtitle="TypeScript" %}
 
 import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
-(async () => {
 // Create a new instance of PowerPoint Presentation file.
-const pptxDoc = Presentation.create();
+let pptxDoc = Presentation.create();
 // Add a slide of title layout type.
-const slide1 = pptxDoc.slides.add({ layout: SlideLayoutType.Title });
+let slide1 = pptxDoc.slides.add({ layout: SlideLayoutType.Title });
 // Save the PowerPoint file.
 await pptxDoc.save('Output.pptx');
-})();
 
 {% endhighlight %}
 {% endtabs %}
@@ -74,22 +70,20 @@ The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/java
 {% highlight js tabtitle="TypeScript" %}
 import { Presentation } from '@syncfusion/ej2-pptx';
 
-(async () => {
 // Create a new PowerPoint presentation.
-const pptxDoc = Presentation.create();
+let pptxDoc = Presentation.create();
 // Add a few slides.
 pptxDoc.slides.add();
 pptxDoc.slides.add();
 pptxDoc.slides.add();
 // Retrieve the slide instance to remove.
-const slide = pptxDoc.slides[0];
+let slide = pptxDoc.slides[0];
 // Remove the specified slide from the Presentation.
 pptxDoc.slides.remove(slide);
 // Remove the slide from the specified index.
 pptxDoc.slides.removeAt(1);
 // Save the Presentation to the file system.
 await pptxDoc.save('Output.pptx');
-})();
 
 {% endhighlight %}
 {% endtabs %}

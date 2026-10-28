@@ -21,30 +21,28 @@ The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/java
 
 import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
 import { addTable } from '@syncfusion/ej2-pptx/tables';
-(async () => {
 // Create a PowerPoint presentation.
-const pptxDoc = Presentation.create();
+let pptxDoc = Presentation.create();
 // Add slide to the presentation.
-const slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
+let slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
 // Add a table to the slide (2 rows × 2 columns). Bounds are in points.
-const table = addTable(slide, {
+let table = addTable(slide, {
     rows: 2, columns: 2,
     xfrm: { x: 100, y: 120, width: 300, height: 200 }
 });
 // Iterate row-wise cells and add text to each.
 for (let rowIndex = 0; rowIndex < table.rowCount; rowIndex++) {
     for (let colIndex = 0; colIndex < table.columnCount; colIndex++) {
-        const cell = table.getCell(rowIndex, colIndex);
-        const textBody = cell.textBody;
+        let cell = table.getCell(rowIndex, colIndex);
+        let textBody = cell.textBody;
         if (textBody) {
-            const paragraph = textBody.addParagraph();
+            let paragraph = textBody.addParagraph();
             paragraph.addTextPart(`(${rowIndex} , ${colIndex})`);
         }
     }
 }
 // Saves the Presentation to the file system.
 await pptxDoc.save('Output.pptx');
-})();
 
 {% endhighlight %}
 {% endtabs %}
@@ -58,29 +56,27 @@ The following code example demonstrates how to create a simple table in a PowerP
 
 import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
 import { addTable } from '@syncfusion/ej2-pptx/tables';
-(async () => {
 // Create a PowerPoint presentation.
-const pptxDoc = Presentation.create();
+let pptxDoc = Presentation.create();
 // Add slide to the presentation.
-const slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
+let slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
 // Add a table to the slide (2 rows × 2 columns). Bounds are in points.
-const table = addTable(slide, {
+let table = addTable(slide, {
     rows: 2, columns: 2,
     xfrm: { x: 100, y: 120, width: 300, height: 200 }
 });
 // Iterate column-wise cells and add text to each.
 for (let colIndex = 0; colIndex < table.columnCount; colIndex++) {
     for (let rowIndex = 0; rowIndex < table.rowCount; rowIndex++) {
-        const cell = table.getCell(rowIndex, colIndex);
-        const textBody = cell.textBody;
+        let cell = table.getCell(rowIndex, colIndex);
+        let textBody = cell.textBody;
         if (textBody) {
-            const paragraph = textBody.addParagraph();
+            let paragraph = textBody.addParagraph();
             paragraph.addTextPart(`(${rowIndex} , ${colIndex})`);
         }
     }
 }
 // Saves the Presentation to the file system.
-})();
 await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
@@ -96,29 +92,27 @@ You can append new rows at the end of an existing PowerPoint table. Refer to the
 import { Presentation } from '@syncfusion/ej2-pptx';
 
 // data is a Uint8Array or ArrayBuffer of an existing .pptx file that contains a table.
-(async () => {
 // Loads or opens a PowerPoint presentation.
-const pptxDoc = await Presentation.open(data);
+let pptxDoc = await Presentation.open(data);
 // Get the first shape on the first slide and bind it as a table.
-const slide = pptxDoc.slides[0];
-const table = asTable(slide.shapes[0]);
+let slide = pptxDoc.slides[0];
+let table = asTable(slide.shapes[0]);
 if (table) {
     // Add or append a new row at the end of the table.
-    const newRowIndex = table.rowCount;
+    let newRowIndex = table.rowCount;
     table.addRow();
     // Iterate the new row's cells and add text to each.
     for (let colIndex = 0; colIndex < table.columnCount; colIndex++) {
-        const cell = table.getCell(newRowIndex, colIndex);
-        const textBody = cell.textBody;
+        let cell = table.getCell(newRowIndex, colIndex);
+        let textBody = cell.textBody;
         if (textBody) {
-            const paragraph = textBody.addParagraph();
+            let paragraph = textBody.addParagraph();
             paragraph.addTextPart(String(newRowIndex));
         }
     }
 }
 // Saves the Presentation to the file system.
 await pptxDoc.save('Output.pptx');
-})();
 
 {% endhighlight %}
 {% endtabs %}
@@ -133,19 +127,17 @@ You can insert a row at the specified index position of a table. Refer to the fo
 import { Presentation } from '@syncfusion/ej2-pptx';
 
 // data is a Uint8Array or ArrayBuffer of an existing .pptx file that contains a table.
-(async () => {
 // Loads or opens a PowerPoint presentation.
-const pptxDoc = await Presentation.open(data);
+let pptxDoc = await Presentation.open(data);
 // Get the table in the slide.
-const slide = pptxDoc.slides[0];
-const table = asTable(slide.shapes[0]);
+let slide = pptxDoc.slides[0];
+let table = asTable(slide.shapes[0]);
 if (table) {
     // Insert an empty row at index 1 (existing rows shift down).
     table.insertRowAt(1);
 }
 // Saves the Presentation to the file system.
 await pptxDoc.save('Output.pptx');
-})();
 
 {% endhighlight %}
 {% endtabs %}
@@ -160,19 +152,17 @@ You can insert a column at the specified index position of a table. Refer to the
 import { Presentation } from '@syncfusion/ej2-pptx';
 
 // data is a Uint8Array or ArrayBuffer of an existing .pptx file that contains a table.
-(async () => {
 // Loads or opens a PowerPoint presentation.
-const pptxDoc = await Presentation.open(data);
+let pptxDoc = await Presentation.open(data);
 // Get the table in the slide.
-const slide = pptxDoc.slides[0];
-const table = asTable(slide.shapes[0]);
+let slide = pptxDoc.slides[0];
+let table = asTable(slide.shapes[0]);
 if (table) {
     // Insert an empty column at index 1.
     table.insertColumnAt(1);
 }
 // Saves the Presentation to the file system.
 await pptxDoc.save('Output.pptx');
-})();
 
 {% endhighlight %}
 {% endtabs %}
@@ -187,20 +177,18 @@ You can remove a table from a slide by passing its instance to `removeTable`. Th
 import { Presentation } from '@syncfusion/ej2-pptx';
 
 // data is a Uint8Array or ArrayBuffer of an existing .pptx file that contains a table.
-(async () => {
 // Loads or opens a PowerPoint presentation.
-const pptxDoc = await Presentation.open(data);
+let pptxDoc = await Presentation.open(data);
 // Gets the slide from the presentation.
-const slide = pptxDoc.slides[0];
+let slide = pptxDoc.slides[0];
 // Gets the table from the slide (first shape, bound as a table).
-const table = asTable(slide.shapes[0]);
+let table = asTable(slide.shapes[0]);
 if (table) {
     // Removes the table from the slide.
     removeTable(slide, table);
 }
 // Saves the Presentation to the file system.
 await pptxDoc.save('Output.pptx');
-})();
 
 {% endhighlight %}
 {% endtabs %}

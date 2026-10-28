@@ -18,20 +18,18 @@ The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/java
 {% highlight js tabtitle="TypeScript" %}
 
 import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
-(async () => {
 // Creates an instance of Presentation.
-const pptxDoc = Presentation.create();
+let pptxDoc = Presentation.create();
 // Adds a blank slide.
-const slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
+let slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
 // pictureBytes is a Uint8Array of a JPEG image.
 // Adds the picture to the slide by specifying its size and position (points).
-const picture = slide.shapes.addPicture({
+let picture = slide.shapes.addPicture({
     data: pictureBytes,
     bounds: { x: 0, y: 0, width: 250, height: 250 }
 });
 // Saves the Presentation to the file system.
 await pptxDoc.save('Output.pptx');
-})();
 
 {% endhighlight %}
 {% endtabs %}
@@ -44,13 +42,12 @@ The following code example demonstrates how to replace an existing image in a sl
 {% highlight js tabtitle="TypeScript" %}
 
 import { Presentation } from '@syncfusion/ej2-pptx';
-(async () => {
 // Opens an existing PowerPoint Presentation.
-const pptxDoc = await Presentation.open(data);
+let pptxDoc = await Presentation.open(data);
 // Retrieves the first slide from the Presentation.
-const slide = pptxDoc.slides[0];
+let slide = pptxDoc.slides[0];
 // Retrieves the picture from the slide.
-const picture = slide.shapes[4].asPicture();
+let picture = slide.shapes[4].asPicture();
 if (!picture) {
     throw new Error('No picture on the slide.');
 }
@@ -59,7 +56,6 @@ if (!picture) {
 picture.replaceImageData({ data: newBytes });
 // Saves the Presentation to the file system.
 await pptxDoc.save('Output.pptx');
-})();
 
 {% endhighlight %}
 {% endtabs %}
@@ -74,14 +70,13 @@ The following code example demonstrates how to remove an existing image in a Pow
 import { Presentation } from '@syncfusion/ej2-pptx';
 // data is a Uint8Array or ArrayBuffer of an existing .pptx file.
 
-(async () => {
 // Opens an existing PowerPoint Presentation.
-const pptxDoc = await Presentation.open(data);
+let pptxDoc = await Presentation.open(data);
 // Retrieves the first slide from the Presentation.
-const slide = pptxDoc.slides[0];
+let slide = pptxDoc.slides[0];
 // Iterates through the shape collection and removes each picture.
-for (const shape of slide.shapes) {
-    const picture = shape.asPicture();
+for (let shape of slide.shapes) {
+    let picture = shape.asPicture();
     if (picture) {
         // Removes the picture from the slide.
         slide.shapes.removePicture(picture);
@@ -89,7 +84,6 @@ for (const shape of slide.shapes) {
 }
 // Saves the Presentation to the file system.
 await pptxDoc.save('Output.pptx');
-})();
 
 {% endhighlight %}
 {% endtabs %}

@@ -31,16 +31,14 @@ The following code example demonstrates how to access the master slide in a Powe
 {% highlight js tabtitle="TypeScript" %}
 
 import { Presentation } from '@syncfusion/ej2-pptx';
-(async () => {
 // Create a PowerPoint presentation.
-const pptxDoc = Presentation.create();
+let pptxDoc = Presentation.create();
 // Access the first master slide in the PowerPoint presentation.
-const masterSlide = pptxDoc.slideMasters[0];
+let masterSlide = pptxDoc.slideMasters[0];
 // Get the first shape name from the master slide.
-const shapeName = masterSlide.shapes[0].name;
+let shapeName = masterSlide.shapes[0].name;
 // Save the PowerPoint presentation to a file.
 await pptxDoc.save('Output.pptx');
-})();
 
 {% endhighlight %}
 {% endtabs %}
@@ -53,24 +51,22 @@ You can change the background of the master slide, and all slides in the present
 {% highlight js tabtitle="TypeScript" %}
 
 import { Presentation, FillType, ColorObject } from '@syncfusion/ej2-pptx';
-(async () => {
 // Create a PowerPoint presentation.
-const pptxDoc = Presentation.create();
+let pptxDoc = Presentation.create();
 // Access the first master slide in the PowerPoint presentation.
-const masterSlide = pptxDoc.slideMasters[0];
+let masterSlide = pptxDoc.slideMasters[0];
 // Retrieve the background instance.
-const background = masterSlide.background;
+let background = masterSlide.background;
 // Set the fill type for the background as Solid fill.
 background.fill.fillType = FillType.Solid;
 // Get the instance for the solid fill.
-const solidFill = background.fill.solidFill;
+let solidFill = background.fill.solidFill;
 // Set the color for the solid fill object.
 solidFill.color = ColorObject.green;
 // Add a slide so the master background is applied.
 pptxDoc.slides.add(masterSlide.layoutSlides[0]);
 // Save the PowerPoint presentation to a file.
 await pptxDoc.save('Output.pptx');
-})();
 
 {% endhighlight %}
 {% endtabs %}
@@ -85,13 +81,12 @@ The following code example demonstrates how to create a new custom layout slide 
 {% highlight js tabtitle="TypeScript" %}
 
 import { Presentation, SlideLayoutType, AutoShapeType, ColorObject } from '@syncfusion/ej2-pptx';
-(async () => {
 // Create a PowerPoint presentation.
-const pptxDoc = Presentation.create();
+let pptxDoc = Presentation.create();
 // Add a new layout slide to the PowerPoint presentation.
-const layoutSlide = pptxDoc.slideMasters[0].layoutSlides.add(SlideLayoutType.Blank, 'CustomLayout');
+let layoutSlide = pptxDoc.slideMasters[0].layoutSlides.add(SlideLayoutType.Blank, 'CustomLayout');
 // Add a shape to the layout slide. Bounds are in points.
-const shape = layoutSlide.shapes.addShape(AutoShapeType.Diamond, {
+let shape = layoutSlide.shapes.addShape(AutoShapeType.Diamond, {
     x: 30, y: 20, width: 400, height: 300
 });
 // Set a fill color for the added shape.
@@ -100,7 +95,6 @@ shape.fill.solidFill.color = ColorObject.fromArgb(78, 89, 90);
 layoutSlide.background.fill.solidFill.color = ColorObject.fromArgb(78, 89, 90);
 // Save the PowerPoint presentation to a file.
 await pptxDoc.save('Output.pptx');
-})();
 
 {% endhighlight %}
 {% endtabs %}
