@@ -95,7 +95,6 @@ The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sd
 | <kbd>Ctrl</kbd> + <kbd>Space</kbd> | <kbd>⌘</kbd> + <kbd>Space</kbd> | Selects the active column. |
 | <kbd>Shift</kbd> + <kbd>Space</kbd> | <kbd>⇧</kbd> + <kbd>Space</kbd> | Selects the active row. |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Space</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>Space</kbd> | Selects all cells in the worksheet. |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Arrow Keys</kbd> | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>Arrow Keys</kbd> | Extends the selection to the edge of the current data region. |
 
 <b>Navigation</b>
 
@@ -108,7 +107,7 @@ The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sd
 | <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves the active cell left one column. |
 | <kbd>Page Up</kbd> | <kbd>Page Up</kbd> | Moves up one screen at a time. |
 | <kbd>Page Down</kbd> | <kbd>Page Down</kbd> | Moves down one screen at a time. |
-| <kbd>Ctrl</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> + <kbd>Home</kbd> | Moves to the A1 cell. |
+| <kbd>Ctrl</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> + <kbd>Home</kbd> | Moves to the first cell in the worksheet. |
 | <kbd>Ctrl</kbd> + <kbd>End</kbd> | <kbd>⌘</kbd> + <kbd>End</kbd> | Moves to the last used cell. |
 | <kbd>Ctrl</kbd> + <kbd>Arrow Keys</kbd> | <kbd>⌘</kbd> + <kbd>Arrow Keys</kbd> | Moves to the edge of the current data region. |
 
@@ -117,7 +116,6 @@ The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sd
 | Windows | MAC | Actions |
 |-----|----- | -----|
 | <kbd>F2</kbd> | <kbd>F2</kbd> | Enters edit mode for the selected cell. |
-| <kbd>Alt</kbd> + <kbd>Enter</kbd> | <kbd>⌥</kbd> + <kbd>Enter</kbd> | Inserts a new line while editing a cell. |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Confirms the edit and moves the active cell down one row. |
 | <kbd>Shift</kbd> + <kbd>Enter</kbd> | <kbd>⇧</kbd> + <kbd>Enter</kbd> | Confirms the edit and moves the active cell up one row. |
 | <kbd>Tab</kbd> | <kbd>Tab</kbd> | Confirms the edit and moves the active cell right one column. |
@@ -161,16 +159,6 @@ The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sd
 | Windows | MAC | Actions |
 |-----|----- | -----|
 | <kbd>Ctrl</kbd> + <kbd>F</kbd> | <kbd>⌘</kbd> + <kbd>F</kbd> | Opens the Find and Replace dialog. |
-
-<b>Ribbon</b>
-
-| Windows | MAC | Actions |
-|-----|----- | -----|
-| <kbd>Alt</kbd> | <kbd>Alt</kbd> | Focuses the active ribbon tab. |
-| <kbd>Left</kbd> | <kbd>Left</kbd> | Moves the focus to the previous ribbon item. |
-| <kbd>Right</kbd> | <kbd>Right</kbd> | Moves the focus to the next ribbon item. |
-| <kbd>Alt</kbd> + <kbd>Down</kbd> | <kbd>⌥</kbd> + <kbd>Down</kbd> | Opens the ribbon dropdown menu. |
-| <kbd>Esc</kbd> / <kbd>Alt</kbd> + <kbd>Up</kbd> | <kbd>Esc</kbd> / <kbd>⌥</kbd> + <kbd>Up</kbd> | Closes the ribbon dropdown menu. |
 
 N> The <kbd>Command</kbd> and <kbd>Control</kbd> keys on Mac devices can be interchanged. When this switch occurs, use the <kbd>Command</kbd> key in place of the <kbd>Control</kbd> key for the above listed key interactions with Mac devices.
 
