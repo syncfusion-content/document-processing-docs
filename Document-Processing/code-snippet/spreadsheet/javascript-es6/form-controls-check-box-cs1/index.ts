@@ -89,7 +89,6 @@ const sheets: SheetModel[] = [
 
 const spreadsheet: Spreadsheet = new Spreadsheet({
     sheets: sheets,
-    showFormulaBar: false,
     allowFormControl: true
 });
 

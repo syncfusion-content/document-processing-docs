@@ -119,7 +119,6 @@ var sheets = [
 
 var spreadsheet = new ej.spreadsheet.Spreadsheet({
     sheets: sheets,
-    showFormulaBar: false,
     allowFormControl: true
 });
 
