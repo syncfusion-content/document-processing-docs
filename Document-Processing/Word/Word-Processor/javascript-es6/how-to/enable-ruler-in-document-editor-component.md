@@ -7,6 +7,7 @@ platform: document-processing
 control: Enable Ruler
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Enable Ruler in TypeScript DOCX Editor

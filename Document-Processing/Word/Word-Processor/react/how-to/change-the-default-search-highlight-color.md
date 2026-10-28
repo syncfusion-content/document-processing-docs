@@ -6,6 +6,7 @@ control: Change the default search highlight color in DOCX Editor
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Change Search Highlight Color in React DOCX Editor

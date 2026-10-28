@@ -6,6 +6,7 @@ platform: document-processing
 control: Open document from Google Cloud Storage
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Open Documents from Google Cloud Storage in JavaScript DOCX Editor

@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: styles-and-templates,custom-style,styling
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 # Styles and Templates in UWP DOCX Editor
 

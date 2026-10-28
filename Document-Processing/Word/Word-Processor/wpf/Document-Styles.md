@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: styles
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Document Styles in WPF DOCX Editor

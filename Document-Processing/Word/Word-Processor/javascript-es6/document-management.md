@@ -6,6 +6,7 @@ platform: document-processing
 control: Document Management
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Document Management in TypeScript DOCX Editor

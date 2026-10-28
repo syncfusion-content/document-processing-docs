@@ -6,6 +6,7 @@ platform: document-processing
 control: Auto save document
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Auto Save Document to AWS S3 in Angular DOCX Editor

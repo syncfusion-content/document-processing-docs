@@ -6,6 +6,7 @@ platform: document-processing
 control: Hide tool bar and properties pane 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Hide Toolbar and Properties Pane in Angular DOCX Editor

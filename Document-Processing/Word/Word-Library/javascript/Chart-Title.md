@@ -4,6 +4,7 @@ description: Learn how to modify the appearance of chart title in a chart in a W
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Modify the Appearance of Chart Title in JavaScript Word

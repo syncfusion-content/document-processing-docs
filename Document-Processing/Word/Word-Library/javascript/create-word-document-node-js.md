@@ -7,6 +7,7 @@ control: Word
 documentation: ug
 keywords: node create word, node generate docx, node word library, ej2 word node, express
 canonical_url: https://help.syncfusion.com/document-processing/word/word-library/javascript/create-word-document-node-js
+appliesto: Document SDK
 ---
 
 # Getting Started with JavaScript Word Library in Node.js app

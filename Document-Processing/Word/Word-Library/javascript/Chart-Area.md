@@ -4,6 +4,7 @@ description: Learn how to customize the chart area appearance including border a
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Modify the Appearance of Chart Area in JavaScript Word

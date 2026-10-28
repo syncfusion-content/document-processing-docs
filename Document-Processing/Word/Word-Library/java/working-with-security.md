@@ -4,6 +4,7 @@ description: This section illustrates how to encrypt, decrypt and protect the Wo
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 # Document Security in Java Word
 

@@ -6,6 +6,7 @@ control: Override the keyboard shortcuts
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Override Keyboard Shortcuts in React DOCX Editor

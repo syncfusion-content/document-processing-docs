@@ -5,6 +5,7 @@ description: The shapes feature in Blazor DOCX Editor preserve shape elements, t
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Shapes in Blazor DOCX Editor

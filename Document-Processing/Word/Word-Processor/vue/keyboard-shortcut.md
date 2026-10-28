@@ -6,6 +6,7 @@ control: Keyboard shortcut
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Keyboard Shortcuts in Vue DOCX Editor

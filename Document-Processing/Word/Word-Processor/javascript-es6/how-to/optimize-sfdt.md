@@ -6,6 +6,7 @@ platform: document-processing
 control: Optimize SFDT
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Optimize SFDT Files in TypeScript DOCX Editor

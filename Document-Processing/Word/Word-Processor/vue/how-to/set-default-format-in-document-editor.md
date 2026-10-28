@@ -6,6 +6,7 @@ control: Set default format in DOCX Editor
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Set Default Format in Vue DOCX Editor

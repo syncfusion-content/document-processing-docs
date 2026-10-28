@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: use-sfrichtextboxadv-like-richtextbox
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Use WPF DOCX Editor as a Standard Editor

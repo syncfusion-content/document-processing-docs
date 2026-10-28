@@ -6,6 +6,7 @@ platform: document-processing
 control: Notes 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Footnotes and Endnotes in Angular DOCX Editor

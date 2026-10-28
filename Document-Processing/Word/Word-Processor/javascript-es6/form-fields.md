@@ -6,6 +6,7 @@ platform: document-processing
 control: Form Fields
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Form Fields in TypeScript DOCX Editor

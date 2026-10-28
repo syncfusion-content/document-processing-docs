@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: selection,text-position,hierarchy-index,multi-selection,selection-ranges,lost-focus-behavior,editing-context
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 # Selection in UWP DOCX Editor
 

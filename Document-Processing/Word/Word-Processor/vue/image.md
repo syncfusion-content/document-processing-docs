@@ -6,6 +6,7 @@ control: Image
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Images in Vue DOCX Editor

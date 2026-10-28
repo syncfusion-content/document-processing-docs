@@ -5,6 +5,7 @@ platform: document-processing
 control: Word Library
 documentation: ug
 keywords: javascript, word, sections, page setup, headers, footers, page numbers, columns
+appliesto: Document SDK
 ---
 
 # Working with Sections in JavaScript Word Library
