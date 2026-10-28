@@ -78,7 +78,7 @@ await pptxDoc.save('Output.pptx');
 
 ## Working with Text
 
-With the JavaScript PowerPoint Library, you can add or modify text in a Presentation. Within the paragraph, textual contents are grouped into one or more child elements as TextParts. Each TextPart represents a region of text with a common set of formatted text.
+With the [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library), you can add or modify text in a Presentation. Within the paragraph, textual contents are grouped into one or more child elements as TextParts. Each TextPart represents a region of text with a common set of formatted text.
 
 The following code example demonstrates how to add text with different formatting into a single paragraph.
 

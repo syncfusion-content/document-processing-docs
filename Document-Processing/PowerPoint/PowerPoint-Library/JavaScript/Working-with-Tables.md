@@ -14,7 +14,7 @@ A table in PowerPoint presentation is used to arrange document content in rows a
 
 ## Create a table by adding rows
 
-The JavaScript PowerPoint Library supports creating and editing tables in PowerPoint slides by adding rows. Refer to the following code example.
+The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) supports creating and editing tables in PowerPoint slides by adding rows. Refer to the following code example.
 
 {% tabs %}
 {% highlight js tabtitle="TypeScript" %}

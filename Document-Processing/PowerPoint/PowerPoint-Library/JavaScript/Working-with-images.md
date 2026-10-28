@@ -12,7 +12,7 @@ keywords: javascript, powerpoint
 
 ## Adding Images
 
-The JavaScript PowerPoint Library facilitates adding or modifying the images in a PowerPoint Presentation. The following code example demonstrates how to add a new image to the presentation.
+The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) facilitates adding or modifying the images in a PowerPoint Presentation. The following code example demonstrates how to add a new image to the presentation.
 
 {% tabs %}
 {% highlight js tabtitle="TypeScript" %}

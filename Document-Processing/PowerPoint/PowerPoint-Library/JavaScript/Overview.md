@@ -8,13 +8,13 @@ documentation: UG
 
 # About Syncfusion® JavaScript PowerPoint Library
 
-The `JavaScript PowerPoint Library` is a lightweight, high-performance non-UI library written natively in JavaScript for creating, reading, and editing Microsoft PowerPoint presentations in both Node.js and browser environments. It enables developers to integrate robust PowerPoint functionality into their applications without any dependency on Microsoft Office or Microsoft Office COM libraries.
+The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) is a lightweight, high-performance non-UI library written natively in JavaScript for creating, reading, and editing Microsoft PowerPoint presentations in both Node.js and browser environments. It enables developers to integrate robust PowerPoint functionality into their applications without any dependency on Microsoft Office or Microsoft Office COM libraries.
 
-The `JavaScript PowerPoint Library` supports programmatic creation and modification of PowerPoint presentations with rich content, including slides, text boxes, text, paragraphs,  and images.
+The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) supports programmatic creation and modification of PowerPoint presentations with rich content, including slides, text boxes, text, paragraphs,  and images.
 
 ## Key features
 
-The following are the key features of the `JavaScript PowerPoint Library`.
+The following are the key features of the [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library).
 
 * Create PowerPoint presentations from scratch.
 * Open, modify, and save existing presentations.
@@ -23,7 +23,7 @@ The following are the key features of the `JavaScript PowerPoint Library`.
 
 ## Supported environments
 
-The JavaScript PowerPoint Library supports the following application environments:
+The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) supports the following application environments:
 
 * Node.js
 * JavaScript
@@ -32,4 +32,4 @@ The JavaScript PowerPoint Library supports the following application environment
 * React
 * Vue
 
-N> 1. The current version of the JavaScript PowerPoint Library supports the .PPTX file format.
+N> 1. The current version of the [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) supports the .PPTX file format.

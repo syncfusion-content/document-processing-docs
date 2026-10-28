@@ -8,7 +8,7 @@ documentation: UG
 
 # Loading and Saving in JavaScript PowerPoint
 
-The `JavaScript PowerPoint Library` provides support to open existing presentations, modify their content, and save the result. The library accepts presentation data as `Uint8Array` from any source (file system, network, or in-memory buffer) and supports saving to the file system.
+The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) provides support to open existing presentations, modify their content, and save the result. The library accepts presentation data as `Uint8Array` from any source (file system, network, or in-memory buffer) and supports saving to the file system.
 
 ## Opening an existing presentation
 

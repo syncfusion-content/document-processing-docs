@@ -77,7 +77,7 @@ await pptxDoc.save('Output.pptx');
 
 ## Create a Custom Layout Slide
 
-Real-world scenarios often require additional predefined templates. The JavaScript PowerPoint Library lets you build your own custom layout designs and use them to create individual slides.
+Real-world scenarios often require additional predefined templates. The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) lets you build your own custom layout designs and use them to create individual slides.
 
 The following code example demonstrates how to create a new custom layout slide in a PowerPoint presentation. The `SlideLayoutType` enumeration includes other values such as `Title`, `TitleAndContent`, `SectionHeader`, and `TwoContent`.
 

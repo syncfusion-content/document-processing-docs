@@ -34,7 +34,7 @@ await pptxDoc.save('Output.pptx');
 
 ## Create a slide with predefined LayoutSlide
 
-The JavaScript PowerPoint Library supports the following predefined slide layout types to create a slide as equivalent to Microsoft PowerPoint:
+The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) supports the following predefined slide layout types to create a slide as equivalent to Microsoft PowerPoint:
 
 * Blank
 * Comparison
@@ -68,7 +68,7 @@ await pptxDoc.save('Output.pptx');
 
 ## Removing a slide
 
-The JavaScript PowerPoint Library provides the ability to delete a slide by its instance or by its index position in the slide collection. The following code demonstrates how to delete a slide from a presentation.
+The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) provides the ability to delete a slide by its instance or by its index position in the slide collection. The following code demonstrates how to delete a slide from a presentation.
 
 {% tabs %}
 {% highlight js tabtitle="TypeScript" %}
