@@ -25,6 +25,20 @@ keywords: PDF, SDK, Automation, API, convert
 
 {% doccard text="XPS to PDF" link="/document-processing/pdf/pdf-library/net/converting-xps-to-pdf" icon="./HTML-To-PDF/images/xps-to-pdf.svg" %}
 
+{% doccard text="Markdown to PDF" link="/document-processing/markdown/conversions/markdown-to-pdf" icon="./HTML-To-PDF/images/markdown-to-pdf.svg" %}
+
+{% doccard text="PDF to Markdown" link="/document-processing/data-extraction/net/conversions/pdf-to-markdown" icon="./HTML-To-PDF/images/pdf-to-markdown.svg" %}
+
+{% doccard text="PDF to Word" link="/document-processing/data-extraction/net/conversions/pdf-to-word" icon="./HTML-To-PDF/images/pdf-to-word.svg" %}
+
+{% doccard text="PDF to PPTX" link="/document-processing/data-extraction/net/conversions/pdf-to-pptx" icon="/document-processing/Data-Extraction/net/conversions/Images/pdf-to-ppt.svg" %}
+
+{% doccard text="PDF to Excel" link="/document-processing/data-extraction/net/conversions/pdf-to-excel" icon="/document-processing/Data-Extraction/net/conversions/Images/pdf-to-excel.svg" %}
+
+{% doccard text="PDF to JSON" link="/document-processing/data-extraction/net/conversions/pdf-to-json" icon="./HTML-To-PDF/images/pdf-to-json.svg" %}
+
+{% doccard text="PDF to HTML" link="/document-processing/data-extraction/net/conversions/pdf-to-html" icon="./HTML-To-PDF/images/pdf-to-html.svg" %}
+
 {% enddoccards %}
 
 Syncfusion<sup>&reg;</sup> PDF Conversion Library converts several file formats like HTML, Word, Excel, PowerPoint, and images to PDF without Microsoft Office or Adobe dependencies. It eases the developers, as they can just integrate this converter to achieve the required PDF document conversions and concentrate on core logics of their application.
