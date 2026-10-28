@@ -4,6 +4,7 @@ description: Convert Markdown files to PDF using Syncfusion Web API. Preserve he
 platform: document-processing
 control: general
 documentation: UG
+appliesto: Document SDK
 ---
 # Markdown to PDF Conversion Using Syncfusion Web API
 

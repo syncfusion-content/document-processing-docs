@@ -5,6 +5,7 @@ description: Checkout and learn here all about the system requirements needed to
 platform: document-processing
 control: System Requirements
 documentation: ug
+appliesto: Document SDK
 
 ---
 # System Requirements of Document Processing Solutions

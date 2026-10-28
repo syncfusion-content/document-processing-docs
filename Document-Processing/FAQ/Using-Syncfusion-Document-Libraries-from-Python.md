@@ -4,6 +4,7 @@ description: Use Syncfusion .NET Document Libraries from Python to create, proce
 platform: document-processing
 control: Document SDK
 documentation: UG
+appliesto: Document SDK
 keywords: syncfusion python, use syncfusion from python, python document processing, python word document, python pdf document, local dotnet worker, syncfusion integration, docio python, pdf python
 ---
 
