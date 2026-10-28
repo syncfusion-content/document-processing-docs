@@ -4,6 +4,7 @@ description: Convert Word documents (DOCX) to Markdown using Syncfusion Web API.
 platform: document-processing
 control: general
 documentation: UG
+appliesto: Document SDK
 ---
 # Convert Word Documents to Markdown using Syncfusion Web API
 
