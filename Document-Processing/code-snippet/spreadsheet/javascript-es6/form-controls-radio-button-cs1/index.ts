@@ -1,124 +1,35 @@
-
-import { Spreadsheet, SheetModel, CellStyleModel, FormControlModel } from '@syncfusion/ej2-spreadsheet';
+import { Spreadsheet, SheetModel, ColumnModel, FormControlModel } from '@syncfusion/ej2-spreadsheet';
+import { defaultData } from './datasource';
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
 
-const formControls: FormControlModel[] = [
-    // Shipping options group - linked to same cell (D2)
-    {
-        type: 'RadioButton',
-        text: 'Standard Shipping',
-        cellLink: 'D2',
-        value: 'Unchecked',
-        top: 40,
-        left: 150,
-        height: 20,
-        width: 120
-    },
-    {
-        type: 'RadioButton',
-        text: 'Express Shipping',
-        cellLink: 'D2',
-        value: 'Unchecked',
-        top: 70,
-        left: 150,
-        height: 20,
-        width: 120
-    },
-    {
-        type: 'RadioButton',
-        text: 'Overnight Shipping',
-        cellLink: 'D2',
-        value: 'Unchecked',
-        top: 100,
-        left: 150,
-        height: 20,
-        width: 120
-    },
-    // Payment options group - linked to same cell (D4)
-    {
-        type: 'RadioButton',
-        text: 'Credit Card',
-        cellLink: 'D4',
-        value: 'Unchecked',
-        top: 160,
-        left: 150,
-        height: 20,
-        width: 120
-    },
-    {
-        type: 'RadioButton',
-        text: 'Debit Card',
-        cellLink: 'D4',
-        value: 'Unchecked',
-        top: 190,
-        left: 150,
-        height: 20,
-        width: 120
-    },
-    {
-        type: 'RadioButton',
-        text: 'Wire Transfer',
-        cellLink: 'D4',
-        value: 'Unchecked',
-        top: 220,
-        left: 150,
-        height: 20,
-        width: 120
-    }
-];
+let columns: ColumnModel[] = [{ width: 180 }, { width: 130 }, { width: 130 }, { width: 180 }, { width: 130 }, { width: 120 }, { width: 120 }];
 
-const boldCenter: CellStyleModel = { fontWeight: 'bold', textAlign: 'center' };
+let sheets: SheetModel[] = [{
+    name: 'Price Details',
+    ranges: [{ dataSource: defaultData }],
+    columns: columns,
+    formControls: <FormControlModel[]>[
+        {
+            type: 'RadioButton',
+            text: 'Radio Button 1',
+            cellLink: 'G1',
+            height: 40,
+            width: 180
+        }
+    ]
+}];
 
-const sheets: SheetModel[] = [
-    {
-        name: 'RadioButtonDemo',
-        formControls: formControls,
-        columns: [
-            { width: 150 },
-            { width: 180 },
-            { width: 150 },
-            { width: 150 }
-        ],
-        rows: [
-            {
-                index: 0,
-                cells: [
-                    { index: 0, value: 'Shipping Options', style: boldCenter }
-                ]
-            },
-            {
-                index: 1,
-                cells: [
-                    { index: 0, value: 'Select Shipping' },
-                    { index: 1, value: '' },
-                    { index: 2, value: 'Selected' },
-                    { index: 3, value: '' }
-                ]
-            },
-            {
-                index: 5,
-                cells: [
-                    { index: 0, value: 'Payment Method', style: boldCenter }
-                ]
-            },
-            {
-                index: 6,
-                cells: [
-                    { index: 0, value: 'Choose Payment' },
-                    { index: 1, value: '' },
-                    { index: 2, value: 'Selected' },
-                    { index: 3, value: '' }
-                ]
-            }
-        ]
-    }
-];
-
-const spreadsheet: Spreadsheet = new Spreadsheet({
+let spreadsheet: Spreadsheet = new Spreadsheet({
     sheets: sheets,
-    allowFormControl: true
+    created: (): void => {
+        spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle' }, 'A1:F1');
+        spreadsheet.numberFormat('$#,##0.00', 'F2:F31');
+        spreadsheet.numberFormat('m/d/yyyy', 'E2:E30');
+    },
+    showRibbon: false,
+    showFormulaBar: false
 });
 
 spreadsheet.appendTo('#spreadsheet');
