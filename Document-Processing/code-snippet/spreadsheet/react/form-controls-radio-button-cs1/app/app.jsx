@@ -23,7 +23,7 @@ function App() {
                         <RangeDirective dataSource={defaultData}></RangeDirective>
                     </RangesDirective>
                     <FormControlsDirective>
-                        <FormControlDirective type="RadioButton" text="Radio Button 1" cellLink="G1" height={40} width={110} rowIndex={11} colIndex={0}></FormControlDirective>
+                        <FormControlDirective type="RadioButton" text="Radio Button 1" cellLink="G1" height={40} width={180} rowIndex={11} colIndex={0}></FormControlDirective>
                     </FormControlsDirective>
                     <RowsDirective>
                         <RowDirective index={30}>
