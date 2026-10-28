@@ -1614,7 +1614,7 @@ document.Close(true);
 
 void Converter_SubstituteFont(object sender, PdfFontEventArgs args)
 {
-//Get the font name.
+    //Get the font name.
     string fontName = args.FontName.Split(',')[0];
     //Get the font style.
     PdfFontStyle fontStyle = args.FontStyle;
@@ -1649,7 +1649,6 @@ void Converter_SubstituteFont(object sender, PdfFontEventArgs args)
     }
     //Set the font stream to the event args.
     args.FontStream = memoryStream;
-
 }
 
 {% endhighlight %}
@@ -1661,5 +1660,4 @@ void Converter_SubstituteFont(object sender, PdfFontEventArgs args)
 'currently available.
 
 {% endhighlight %}
-
 {% endtabs %}
