@@ -53,7 +53,7 @@ WebMCP integrates seamlessly into Syncfusion Document Editor applications across
 
 Syncfusion DOCX Editor integration with WebMCP provides significant benefits for building AI-powered document editor applications:
 
-### ✅ Key Benefits
+### Key Benefits
 
 - **Universal Tool Access** — AI agents, LLMs, and any MCP-compatible client can discover and invoke document editing operations
 - **Zero Custom Integration** — Inject the WebMcpAdapter module, call `registerWebMcpTools()`, and all tool registration, schema binding, and life cycle management is automatic
