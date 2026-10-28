@@ -486,3 +486,150 @@ function iterateParagraph(paraItems) {
 {% endhighlight %}
 
 {% endtabs %}
+
+## Working with Word document properties
+
+Document properties, also known as metadata, are details about a file that describe or identify it. You can also define additional custom document properties by using document properties, which are classified into two categories:
+
+* Built-in document properties - includes details such as title, author name, subject, and keywords that identify the document's topic or contents.
+* Custom document properties - defines the user-defined document properties.
+
+### Built-in document properties
+
+The built-in document properties of a Word document are represented by the `builtinDocumentProperties` property of the `WordDocument` class. The following code example illustrates how to access and modify the built-in document properties of the document.
+
+{% tabs %}
+
+{% highlight typescript tabtitle="TypeScript" %}
+import { WordDocument } from '@syncfusion/ej2-docx';
+
+// Opens an existing Word document.
+let document = WordDocument.open(data);
+
+// Accesses the built-in document properties.
+console.log(document.builtinDocumentProperties.title);
+console.log(document.builtinDocumentProperties.author);
+
+// Modifies or sets the built-in document properties.
+document.builtinDocumentProperties.author = "Andrew";
+document.builtinDocumentProperties.lastAuthor = "Steven";
+document.builtinDocumentProperties.createDate = new Date(1900, 12, 31, 12, 0, 0);
+document.builtinDocumentProperties.lastSaveDate = new Date(1900, 12, 31, 12, 0, 0);
+document.builtinDocumentProperties.lastPrinted = new Date(1900, 12, 31, 12, 0, 0);
+document.builtinDocumentProperties.title = "Sample Document";
+document.builtinDocumentProperties.subject = "Adventure Works Cycle";
+document.builtinDocumentProperties.category = "Technical documentation";
+document.builtinDocumentProperties.comments = "This is sample document.";
+document.builtinDocumentProperties.revisionNumber = "2";
+document.builtinDocumentProperties.company = "Adventure Works Cycle";
+
+// Saves the Word document.
+document.save('Result.docx');
+{% endhighlight %}
+
+{% highlight javascript tabtitle="JavaScript" %}
+// Opens an existing Word document.
+let document = ej.docx.WordDocument.open(data);
+
+// Accesses the built-in document properties.
+console.log(document.builtinDocumentProperties.title);
+console.log(document.builtinDocumentProperties.author);
+
+// Modifies or sets the built-in document properties.
+document.builtinDocumentProperties.author = "Andrew";
+document.builtinDocumentProperties.lastAuthor = "Steven";
+document.builtinDocumentProperties.createDate = new Date(1900, 12, 31, 12, 0, 0);
+document.builtinDocumentProperties.lastSaveDate = new Date(1900, 12, 31, 12, 0, 0);
+document.builtinDocumentProperties.lastPrinted = new Date(1900, 12, 31, 12, 0, 0);
+document.builtinDocumentProperties.title = "Sample Document";
+document.builtinDocumentProperties.subject = "Adventure Works Cycle";
+document.builtinDocumentProperties.category = "Technical documentation";
+document.builtinDocumentProperties.comments = "This is sample document.";
+document.builtinDocumentProperties.revisionNumber = "2";
+document.builtinDocumentProperties.company = "Adventure Works Cycle";
+
+// Saves the Word document.
+document.save('Result.docx');
+{% endhighlight %}
+
+{% endtabs %}
+
+### Adding custom document properties
+
+You can add new custom document properties through the `add` method of the `customDocumentProperties` collection. The following code example illustrates how to add new custom document properties of various data types.
+
+{% tabs %}
+
+{% highlight typescript tabtitle="TypeScript" %}
+import { WordDocument } from '@syncfusion/ej2-docx';
+
+// Opens an existing Word document.
+let document = WordDocument.open(data);
+
+// Adds the custom document properties of various data types.
+document.customDocumentProperties.add("PropertyA", "Value of A");
+document.customDocumentProperties.add("PropertyB", 12.5);
+document.customDocumentProperties.add("PropertyC", true);
+document.customDocumentProperties.add("PropertyD", new Date(2015, 7, 20));
+
+// Saves the Word document.
+document.save('Result.docx');
+{% endhighlight %}
+
+{% highlight javascript tabtitle="JavaScript" %}
+// Opens an existing Word document.
+let document = ej.docx.WordDocument.open(data);
+
+// Adds the custom document properties of various data types.
+document.customDocumentProperties.add("PropertyA", "Value of A");
+document.customDocumentProperties.add("PropertyB", 12.5);
+document.customDocumentProperties.add("PropertyC", true);
+document.customDocumentProperties.add("PropertyD", new Date(2015, 7, 20));
+
+// Saves the Word document.
+document.save('Result.docx');
+{% endhighlight %}
+
+{% endtabs %}
+
+### Accessing and modifying custom document properties
+
+You can access and modify an existing custom document property as shown in the following code example.
+
+{% tabs %}
+
+{% highlight typescript tabtitle="TypeScript" %}
+import { WordDocument } from '@syncfusion/ej2-docx';
+
+// Opens an existing Word document.
+let document = WordDocument.open(data);
+
+// Accesses an existing custom document property.
+let property = document.customDocumentProperties.get("PropertyA");
+
+if (property) {
+    // Modifies the value of DocumentProperty instance.
+    property.value = 'Hello world';
+}
+
+// Saves the Word document.
+document.save('Result.docx');
+{% endhighlight %}
+
+{% highlight javascript tabtitle="JavaScript" %}
+// Opens an existing Word document.
+let document = ej.docx.WordDocument.open(data);
+
+// Accesses an existing custom document property.
+let property = document.customDocumentProperties.get("PropertyA");
+
+if (property) {
+    // Modifies the value of DocumentProperty instance.
+    property.value = 'Hello world';
+}
+
+// Saves the Word document.
+document.save('Result.docx');
+{% endhighlight %}
+
+{% endtabs %}
