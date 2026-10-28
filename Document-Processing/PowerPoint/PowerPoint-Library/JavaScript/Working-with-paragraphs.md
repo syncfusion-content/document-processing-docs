@@ -38,6 +38,24 @@ let paraText = textPart.text;
 await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Creates a PowerPoint Presentation.
+var pptxDoc = ej.pptx.Presentation.create();
+// Adds a slide to the PowerPoint.
+var slide = pptxDoc.slides.add({ layout: ej.pptx.SlideLayoutType.Blank });
+// Adds a textbox to the slide.
+var textboxShape = slide.shapes.addTextBox({
+    bounds: { x: 0, y: 0, width: 500, height: 500 }
+});
+// Adds a paragraph to the textbody of the textbox.
+var paragraph = textboxShape.textBody.addParagraph();
+// Adds a TextPart to the paragraph.
+var textPart = paragraph.addTextPart('AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets. While its base operation is located in Washington with 290 employees, several regional sales teams are located throughout their market base.');
+// Gets text from the TextPart.
+var paraText = textPart.text;
+// Saves the Presentation to the file system.
+await pptxDoc.save('Output.pptx');
+{% endhighlight %}
 {% endtabs %}
 
 ## Applying Paragraph Formatting
@@ -69,6 +87,27 @@ paragraph.font.fontName = 'Times New Roman';
 // Saves the Presentation to the file system.
 await pptxDoc.save('Output.pptx');
 
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Loads or opens a PowerPoint Presentation.
+var pptxDoc = await ej.pptx.Presentation.open(data);
+// Gets the slide from the Presentation.
+var slide = pptxDoc.slides.add();
+var textboxShape = slide.shapes.addTextBox();
+// Gets the instance of a paragraph in the textbox.
+var paragraph = textboxShape.textBody.paragraphs[0];
+// Font and indent only style existing text. A new text box has none, so the slide looks blank until a run is added.
+paragraph.addTextPart('Paragraph formatting sample');
+// Applies the first line indent of the paragraph (points).
+paragraph.firstLineIndent = 10;
+// Applies the horizontal alignment of the paragraph.
+paragraph.horizontalAlignment = ej.pptx.HorizontalAlignmentType.Left;
+// Applies the left indent of the paragraph (points).
+paragraph.leftIndent = 8;
+// Modifies the paragraph default font name.
+paragraph.font.fontName = 'Times New Roman';
+// Saves the Presentation to the file system.
+await pptxDoc.save('Output.pptx');
 {% endhighlight %}
 {% endtabs %}
 
@@ -115,6 +154,38 @@ textPartFormatting2.font.underline = TextUnderlineType.WavyDouble;
 await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Creates the PowerPoint Presentation instance.
+var pptxDoc = ej.pptx.Presentation.create();
+// Adds a new slide to the Presentation.
+var slide = pptxDoc.slides.add({ layout: ej.pptx.SlideLayoutType.Blank });
+// Adds a textbox to the slide.
+var textboxShape2 = slide.shapes.addTextBox({
+    bounds: { x: 500, y: 0, width: 400, height: 500 }
+});
+// Adds a paragraph to the textbody of the textbox.
+var paragraph2 = textboxShape2.textBody.addParagraph();
+// Adds a TextPart to the paragraph.
+var textPartFormatting = paragraph2.addTextPart('');
+// Adds text to the TextPart.
+textPartFormatting.text = 'In 2000, AdventureWorks Cycles bought a small manufacturing plant, located in Mexico. The plant manufactures several critical subcomponents for the AdventureWorks Cycles product line. These subcomponents are shipped to the another location for final product assembly. In 2001, the plant, became the sole manufacturer and distributor of the touring bicycle product group.';
+// Sets the underline color (canonical #RRGGBB).
+textPartFormatting.font.underlineColor = '#000000';
+// Sets the underline type.
+textPartFormatting.font.underline = ej.pptx.TextUnderlineType.Single;
+// Sets the font weight.
+textPartFormatting.font.bold = true;
+// Adds a second TextPart to the paragraph.
+var textPartFormatting2 = paragraph2.addTextPart('');
+// Adds text to the TextPart.
+textPartFormatting2.text = 'In 2000, AdventureWorks Cycles bought a small manufacturing plant, located in Mexico.';
+// Sets the font color (canonical #RRGGBB).
+textPartFormatting2.font.color = '#0000FF';
+// Sets the underline type.
+textPartFormatting2.font.underline = ej.pptx.TextUnderlineType.WavyDouble;
+// Saves the Presentation to the file system.
+await pptxDoc.save('Output.pptx');
+{% endhighlight %}
 {% endtabs %}
 
 ## Modifying Text
@@ -144,6 +215,24 @@ textPart.text = 'Hello Presentation';
 await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// data is a Uint8Array or ArrayBuffer of a PowerPoint Presentation that contains a shape with a text body.
+// Loads or opens a PowerPoint Presentation.
+var pptxDoc = await ej.pptx.Presentation.open(data);
+// Retrieves the first slide from the Presentation.
+var slide = pptxDoc.slides[0];
+// Retrieves the first shape.
+var shape = slide.shapes[0];
+// Retrieves the first paragraph of the shape (narrow to a text-bearing shape).
+var textBody = shape.textBody;
+var paragraph = textBody.paragraphs[0];
+// Retrieves the first TextPart of the shape.
+var textPart = paragraph.textParts[0];
+// Modifies the text content of the TextPart.
+textPart.text = 'Hello Presentation';
+// Saves the Presentation to the file system.
+await pptxDoc.save('Output.pptx');
+{% endhighlight %}
 {% endtabs %}
 
 ## Removing a Paragraph
@@ -170,5 +259,21 @@ textBody.paragraphs.remove(paragraph);
 // Saves the Presentation to the file system.
 await pptxDoc.save('Output.pptx');
 
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// data is a Uint8Array or ArrayBuffer of a PowerPoint Presentation that contains a shape with at least one paragraph.
+// Loads or opens a PowerPoint Presentation.
+var pptxDoc = await ej.pptx.Presentation.open(data);
+// Retrieves the first slide from the Presentation.
+var slide = pptxDoc.slides[0];
+// Retrieves the first shape.
+var shape = slide.shapes[0];
+// Retrieves the first paragraph of the shape (narrow to a text-bearing shape).
+var textBody = shape.textBody;
+// Removing the paragraph.
+var paragraph = textBody.paragraphs[0];
+textBody.paragraphs.remove(paragraph);
+// Saves the Presentation to the file system.
+await pptxDoc.save('Output.pptx');
 {% endhighlight %}
 {% endtabs %}

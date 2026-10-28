@@ -40,6 +40,26 @@ let picture = slide.shapes.addPicture({
 await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Creates an instance for PowerPoint.
+var pptxDoc = ej.pptx.Presentation.create();
+// Adds a blank slide to the Presentation.
+var slide = pptxDoc.slides.add({ layout: ej.pptx.SlideLayoutType.Blank });
+// Adds a normal shape to the slide. Bounds are in points.
+slide.shapes.addShape(ej.pptx.AutoShapeType.Rectangle, {
+    x: 50, y: 200, width: 300, height: 300
+});
+// imageBytes is a Uint8Array of a JPEG image.
+// Add picture to the shape collection.
+var picture = slide.shapes.addPicture({
+    data: imageBytes,
+    bounds: {
+        x: 373, y: 83, width: 526, height: 382
+    }
+});
+// Saves the Presentation to the file system.
+await pptxDoc.save('Output.pptx');
+{% endhighlight %}
 {% endtabs %}
 
 ## Iterating through shapes
@@ -67,6 +87,24 @@ for (let shape of slide.shapes) {
 await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// data is a Uint8Array or ArrayBuffer of an existing .pptx file.
+
+// Loads or opens a PowerPoint Presentation.
+var pptxDoc = await ej.pptx.Presentation.open(data);
+// Iterates through the shapes in a slide and detects their type.
+var slide = pptxDoc.slides[0];
+for (var i = 0; i < slide.shapes.length; i++) {
+    var shape = slide.shapes[i];
+    if (shape.kind === 'picture') {
+        // Picture shape detected.
+    } else if (shape.kind === 'shape') {
+        // AutoShape detected.
+    }
+}
+// Saves the Presentation to the file system.
+await pptxDoc.save('Output.pptx');
+{% endhighlight %}
 {% endtabs %}
 
 ## Removing the shapes
@@ -91,5 +129,20 @@ for (let shape of slide.shapes) {
 // Saves the Presentation to the file system.
 await pptxDoc.save('Output.pptx');
 
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// data is a Uint8Array or ArrayBuffer of an existing .pptx file.
+// Loads or opens a PowerPoint Presentation.
+var pptxDoc = await ej.pptx.Presentation.open(data);
+var slide = pptxDoc.slides[0];
+for (var i = 0; i < slide.shapes.length; i++) {
+    var shape = slide.shapes[i];
+    if (shape.kind === 'shape' && !shape.isPlaceholder) {
+        slide.shapes.remove(shape);
+        break;
+    }
+}
+// Saves the Presentation to the file system.
+await pptxDoc.save('Output.pptx');
 {% endhighlight %}
 {% endtabs %}

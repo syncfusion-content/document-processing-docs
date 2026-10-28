@@ -32,6 +32,20 @@ let picture = slide.shapes.addPicture({
 await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Creates an instance of Presentation.
+var pptxDoc = ej.pptx.Presentation.create();
+// Adds a blank slide.
+var slide = pptxDoc.slides.add({ layout: ej.pptx.SlideLayoutType.Blank });
+// pictureBytes is a Uint8Array of a JPEG image.
+// Adds the picture to the slide by specifying its size and position (points).
+var picture = slide.shapes.addPicture({
+    data: pictureBytes,
+    bounds: { x: 0, y: 0, width: 250, height: 250 }
+});
+// Saves the Presentation to the file system.
+await pptxDoc.save('Output.pptx');
+{% endhighlight %}
 {% endtabs %}
 
 ## Replacing Images
@@ -48,15 +62,25 @@ let pptxDoc = await Presentation.open(data);
 let slide = pptxDoc.slides[0];
 // Retrieves the picture from the slide.
 let picture = slide.shapes[4].asPicture();
-if (!picture) {
-    throw new Error('No picture on the slide.');
-}
 // newBytes is a Uint8Array of the replacement JPEG image.
 // Replaces the existing embedded image with the new image.
 picture.replaceImageData({ data: newBytes });
 // Saves the Presentation to the file system.
 await pptxDoc.save('Output.pptx');
 
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Opens an existing PowerPoint Presentation.
+var pptxDoc = await ej.pptx.Presentation.open(data);
+// Retrieves the first slide from the Presentation.
+var slide = pptxDoc.slides[0];
+// Retrieves the picture from the slide.
+var picture = slide.shapes[4].asPicture();
+// newBytes is a Uint8Array of the replacement JPEG image.
+// Replaces the existing embedded image with the new image.
+picture.replaceImageData({ data: newBytes });
+// Saves the Presentation to the file system.
+await pptxDoc.save('Output.pptx');
 {% endhighlight %}
 {% endtabs %}
 
@@ -85,5 +109,24 @@ for (let shape of slide.shapes) {
 // Saves the Presentation to the file system.
 await pptxDoc.save('Output.pptx');
 
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// data is a Uint8Array or ArrayBuffer of an existing .pptx file.
+
+// Opens an existing PowerPoint Presentation.
+var pptxDoc = await ej.pptx.Presentation.open(data);
+// Retrieves the first slide from the Presentation.
+var slide = pptxDoc.slides[0];
+// Iterates through the shape collection and removes each picture.
+for (var i = 0; i < slide.shapes.length; i++) {
+    var shape = slide.shapes[i];
+    var picture = shape.asPicture();
+    if (picture) {
+        // Removes the picture from the slide.
+        slide.shapes.removePicture(picture);
+    }
+}
+// Saves the Presentation to the file system.
+await pptxDoc.save('Output.pptx');
 {% endhighlight %}
 {% endtabs %}

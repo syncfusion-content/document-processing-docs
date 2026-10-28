@@ -41,6 +41,16 @@ let shapeName = masterSlide.shapes[0].name;
 await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Create a PowerPoint presentation.
+var pptxDoc = ej.pptx.Presentation.create();
+// Access the first master slide in the PowerPoint presentation.
+var masterSlide = pptxDoc.slideMasters[0];
+// Get the first shape name from the master slide.
+var shapeName = masterSlide.shapes[0].name;
+// Save the PowerPoint presentation to a file.
+await pptxDoc.save('Output.pptx');
+{% endhighlight %}
 {% endtabs %}
 
 ## Change background of Master slide
@@ -69,6 +79,24 @@ pptxDoc.slides.add(masterSlide.layoutSlides[0]);
 await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Create a PowerPoint presentation.
+var pptxDoc = ej.pptx.Presentation.create();
+// Access the first master slide in the PowerPoint presentation.
+var masterSlide = pptxDoc.slideMasters[0];
+// Retrieve the background instance.
+var background = masterSlide.background;
+// Set the fill type for the background as Solid fill.
+background.fill.fillType = ej.pptx.FillType.Solid;
+// Get the instance for the solid fill.
+var solidFill = background.fill.solidFill;
+// Set the color for the solid fill object.
+solidFill.color = ej.pptx.ColorObject.green;
+// Add a slide so the master background is applied.
+pptxDoc.slides.add(masterSlide.layoutSlides[0]);
+// Save the PowerPoint presentation to a file.
+await pptxDoc.save('Output.pptx');
+{% endhighlight %}
 {% endtabs %}
 
 ## Create a Custom Layout Slide
@@ -96,5 +124,21 @@ layoutSlide.background.fill.solidFill.color = ColorObject.fromArgb(78, 89, 90);
 // Save the PowerPoint presentation to a file.
 await pptxDoc.save('Output.pptx');
 
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Create a PowerPoint presentation.
+var pptxDoc = ej.pptx.Presentation.create();
+// Add a new layout slide to the PowerPoint presentation.
+var layoutSlide = pptxDoc.slideMasters[0].layoutSlides.add(ej.pptx.SlideLayoutType.Blank, 'CustomLayout');
+// Add a shape to the layout slide. Bounds are in points.
+var shape = layoutSlide.shapes.addShape(ej.pptx.AutoShapeType.Diamond, {
+    x: 30, y: 20, width: 400, height: 300
+});
+// Set a fill color for the added shape.
+shape.fill.solidFill.color = ej.pptx.ColorObject.fromArgb(78, 89, 90);
+// Change the background color for the layout slide.
+layoutSlide.background.fill.solidFill.color = ej.pptx.ColorObject.fromArgb(78, 89, 90);
+// Save the PowerPoint presentation to a file.
+await pptxDoc.save('Output.pptx');
 {% endhighlight %}
 {% endtabs %}

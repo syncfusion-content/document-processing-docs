@@ -24,6 +24,11 @@ import { Presentation } from '@syncfusion/ej2-pptx';
 let pptxDoc = await Presentation.open(data);
 
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// data is a Uint8Array or ArrayBuffer of an .pptx file
+// Loads or opens a PowerPoint Presentation.
+var pptxDoc = await ej.pptx.Presentation.open(data);
+{% endhighlight %}
 {% endtabs %}
 
 ## Save the document
@@ -38,5 +43,9 @@ import { Presentation } from '@syncfusion/ej2-pptx';
 // Saves the Presentation to a file.
 await pptxDoc.save('Output.pptx');
 
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Saves the Presentation to a file.
+await pptxDoc.save('Output.pptx');
 {% endhighlight %}
 {% endtabs %}

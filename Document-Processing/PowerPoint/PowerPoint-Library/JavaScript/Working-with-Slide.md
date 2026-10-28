@@ -28,6 +28,14 @@ let slide = pptxDoc.slides.add();
 await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Creates a Presentation instance.
+var pptxDoc = ej.pptx.Presentation.create();
+// Adds a slide to the PowerPoint presentation.
+var slide = pptxDoc.slides.add();
+// Saves the Presentation to the file system.
+await pptxDoc.save('Output.pptx');
+{% endhighlight %}
 {% endtabs %}
 
 ## Create a slide with predefined LayoutSlide
@@ -60,6 +68,14 @@ let slide1 = pptxDoc.slides.add({ layout: SlideLayoutType.Title });
 await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Create a new instance of PowerPoint Presentation file.
+var pptxDoc = ej.pptx.Presentation.create();
+// Add a slide of title layout type.
+var slide1 = pptxDoc.slides.add({ layout: ej.pptx.SlideLayoutType.Title });
+// Save the PowerPoint file.
+await pptxDoc.save('Output.pptx');
+{% endhighlight %}
 {% endtabs %}
 
 ## Removing a slide
@@ -85,5 +101,21 @@ pptxDoc.slides.removeAt(1);
 // Save the Presentation to the file system.
 await pptxDoc.save('Output.pptx');
 
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Create a new PowerPoint presentation.
+var pptxDoc = ej.pptx.Presentation.create();
+// Add a few slides.
+pptxDoc.slides.add();
+pptxDoc.slides.add();
+pptxDoc.slides.add();
+// Retrieve the slide instance to remove.
+var slide = pptxDoc.slides[0];
+// Remove the specified slide from the Presentation.
+pptxDoc.slides.remove(slide);
+// Remove the slide from the specified index.
+pptxDoc.slides.removeAt(1);
+// Save the Presentation to the file system.
+await pptxDoc.save('Output.pptx');
 {% endhighlight %}
 {% endtabs %}

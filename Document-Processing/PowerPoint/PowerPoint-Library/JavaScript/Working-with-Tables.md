@@ -45,6 +45,30 @@ for (let rowIndex = 0; rowIndex < table.rowCount; rowIndex++) {
 await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Create a PowerPoint presentation.
+var pptxDoc = ej.pptx.Presentation.create();
+// Add slide to the presentation.
+var slide = pptxDoc.slides.add({ layout: ej.pptx.SlideLayoutType.Blank });
+// Add a table to the slide (2 rows × 2 columns). Bounds are in points.
+var table = addTable(slide, {
+    rows: 2, columns: 2,
+    xfrm: { x: 100, y: 120, width: 300, height: 200 }
+});
+// Iterate row-wise cells and add text to each.
+for (var rowIndex = 0; rowIndex < table.rowCount; rowIndex++) {
+    for (var colIndex = 0; colIndex < table.columnCount; colIndex++) {
+        var cell = table.getCell(rowIndex, colIndex);
+        var textBody = cell.textBody;
+        if (textBody) {
+            var paragraph = textBody.addParagraph();
+            paragraph.addTextPart('(' + (rowIndex) + ' , ' + (colIndex) + ')');
+        }
+    }
+}
+// Saves the Presentation to the file system.
+await pptxDoc.save('Output.pptx');
+{% endhighlight %}
 {% endtabs %}
 
 ## Create a table by adding columns
@@ -79,6 +103,30 @@ for (let colIndex = 0; colIndex < table.columnCount; colIndex++) {
 // Saves the Presentation to the file system.
 await pptxDoc.save('Output.pptx');
 
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Create a PowerPoint presentation.
+var pptxDoc = ej.pptx.Presentation.create();
+// Add slide to the presentation.
+var slide = pptxDoc.slides.add({ layout: ej.pptx.SlideLayoutType.Blank });
+// Add a table to the slide (2 rows × 2 columns). Bounds are in points.
+var table = addTable(slide, {
+    rows: 2, columns: 2,
+    xfrm: { x: 100, y: 120, width: 300, height: 200 }
+});
+// Iterate column-wise cells and add text to each.
+for (var colIndex = 0; colIndex < table.columnCount; colIndex++) {
+    for (var rowIndex = 0; rowIndex < table.rowCount; rowIndex++) {
+        var cell = table.getCell(rowIndex, colIndex);
+        var textBody = cell.textBody;
+        if (textBody) {
+            var paragraph = textBody.addParagraph();
+            paragraph.addTextPart('(' + (rowIndex) + ' , ' + (colIndex) + ')');
+        }
+    }
+}
+// Saves the Presentation to the file system.
+await pptxDoc.save('Output.pptx');
 {% endhighlight %}
 {% endtabs %}
 
@@ -115,6 +163,30 @@ if (table) {
 await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// data is a Uint8Array or ArrayBuffer of an existing .pptx file that contains a table.
+// Loads or opens a PowerPoint presentation.
+var pptxDoc = await ej.pptx.Presentation.open(data);
+// Get the first shape on the first slide and bind it as a table.
+var slide = pptxDoc.slides[0];
+var table = asTable(slide.shapes[0]);
+if (table) {
+    // Add or append a new row at the end of the table.
+    var newRowIndex = table.rowCount;
+    table.addRow();
+    // Iterate the new row's cells and add text to each.
+    for (var colIndex = 0; colIndex < table.columnCount; colIndex++) {
+        var cell = table.getCell(newRowIndex, colIndex);
+        var textBody = cell.textBody;
+        if (textBody) {
+            var paragraph = textBody.addParagraph();
+            paragraph.addTextPart(String(newRowIndex));
+        }
+    }
+}
+// Saves the Presentation to the file system.
+await pptxDoc.save('Output.pptx');
+{% endhighlight %}
 {% endtabs %}
 
 ## Insert a row in table
@@ -139,6 +211,20 @@ if (table) {
 // Saves the Presentation to the file system.
 await pptxDoc.save('Output.pptx');
 
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// data is a Uint8Array or ArrayBuffer of an existing .pptx file that contains a table.
+// Loads or opens a PowerPoint presentation.
+var pptxDoc = await ej.pptx.Presentation.open(data);
+// Get the table in the slide.
+var slide = pptxDoc.slides[0];
+var table = asTable(slide.shapes[0]);
+if (table) {
+    // Insert an empty row at index 1 (existing rows shift down).
+    table.insertRowAt(1);
+}
+// Saves the Presentation to the file system.
+await pptxDoc.save('Output.pptx');
 {% endhighlight %}
 {% endtabs %}
 
@@ -165,6 +251,20 @@ if (table) {
 await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// data is a Uint8Array or ArrayBuffer of an existing .pptx file that contains a table.
+// Loads or opens a PowerPoint presentation.
+var pptxDoc = await ej.pptx.Presentation.open(data);
+// Get the table in the slide.
+var slide = pptxDoc.slides[0];
+var table = asTable(slide.shapes[0]);
+if (table) {
+    // Insert an empty column at index 1.
+    table.insertColumnAt(1);
+}
+// Saves the Presentation to the file system.
+await pptxDoc.save('Output.pptx');
+{% endhighlight %}
 {% endtabs %}
 
 ## Removing the table
@@ -190,5 +290,20 @@ if (table) {
 // Saves the Presentation to the file system.
 await pptxDoc.save('Output.pptx');
 
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// data is a Uint8Array or ArrayBuffer of an existing .pptx file that contains a table.
+// Loads or opens a PowerPoint presentation.
+var pptxDoc = await ej.pptx.Presentation.open(data);
+// Gets the slide from the presentation.
+var slide = pptxDoc.slides[0];
+// Gets the table from the slide (first shape, bound as a table).
+var table = asTable(slide.shapes[0]);
+if (table) {
+    // Removes the table from the slide.
+    removeTable(slide, table);
+}
+// Saves the Presentation to the file system.
+await pptxDoc.save('Output.pptx');
 {% endhighlight %}
 {% endtabs %}
