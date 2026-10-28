@@ -4,6 +4,7 @@ description: Add classic notes and modern threaded comments to worksheet cells w
 platform: document-processing
 control: Excel
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Comments in JavaScript Excel

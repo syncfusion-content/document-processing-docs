@@ -4,6 +4,7 @@ description: Insert pictures into worksheets, set placement, and manage image co
 platform: document-processing
 control: Excel
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Images in JavaScript Excel

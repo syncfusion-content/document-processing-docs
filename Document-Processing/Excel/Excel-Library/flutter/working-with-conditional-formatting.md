@@ -5,6 +5,7 @@ description: The Flutter Excel Library lets users highlight worksheet data with 
 platform: document-processing
 control: Excel
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Conditional Formatting in Flutter Excel Library

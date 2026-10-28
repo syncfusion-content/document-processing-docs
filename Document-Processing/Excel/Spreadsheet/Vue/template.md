@@ -5,6 +5,7 @@ description: Customize spreadsheet cells using templates in the Syncfusion Vue S
 control: Template
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Cell Templates in Vue Spreadsheet

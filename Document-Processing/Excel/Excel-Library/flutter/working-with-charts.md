@@ -5,6 +5,7 @@ description: The Flutter Excel Library lets users create and customize Excel cha
 platform: document-processing
 control: Excel
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Excel Charts in Flutter Excel Library

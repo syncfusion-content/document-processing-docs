@@ -4,6 +4,7 @@ description: Empty row insertion describes whether inserting a blank row extends
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Table Row Insertion in .NET Excel Library

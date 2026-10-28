@@ -5,6 +5,7 @@ description: Learn about accessibility in the Syncfusion ASP.NET Core Spreadshee
 platform: document-processing
 control: Accessibility
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Accessibility in ASP.NET Core Spreadsheet

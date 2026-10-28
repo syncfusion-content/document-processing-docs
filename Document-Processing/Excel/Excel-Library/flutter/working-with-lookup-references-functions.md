@@ -5,6 +5,7 @@ description: The Flutter Excel Library lets users find and retrieve worksheet va
 platform: document-processing
 control: Excel
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Lookup and Reference Formulas in Flutter Excel Library

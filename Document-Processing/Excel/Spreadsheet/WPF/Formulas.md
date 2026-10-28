@@ -5,6 +5,7 @@ description: Create and calculate formulas in the WPF Spreadsheet control using 
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Formulas in WPF Spreadsheet

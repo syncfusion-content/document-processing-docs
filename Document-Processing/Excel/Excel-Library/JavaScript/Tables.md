@@ -4,6 +4,7 @@ description: Create and manage Excel tables, styles, columns, and totals rows wi
 platform: document-processing
 control: Excel
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Tables in JavaScript Excel

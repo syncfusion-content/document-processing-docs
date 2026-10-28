@@ -5,6 +5,7 @@ description: Import worksheet data from DataTable sources and export spreadsheet
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Data Management in Windows Forms Spreadsheet

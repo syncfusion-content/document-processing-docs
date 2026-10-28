@@ -5,6 +5,7 @@ description: Protect sheet in TypeScript Spreadsheet restricts editing and contr
 platform: document-processing
 control: Protect sheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Protect sheet in TypeScript Spreadsheet 

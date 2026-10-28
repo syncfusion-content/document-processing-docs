@@ -4,6 +4,7 @@ description: Learn how to retrieve values from merged cells programmatically usi
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to retrieve data from merged cells in .NET Excel Library

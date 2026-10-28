@@ -4,6 +4,7 @@ description: Resolve performance issues when deleting a large number of rows in 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to resolve row deletion performance issues in .NET Excel Library

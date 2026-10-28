@@ -4,6 +4,7 @@ description: Apply a layout to a pivot table in an Excel document using Excel Li
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Pivot Table Layouts in .NET Excel Library

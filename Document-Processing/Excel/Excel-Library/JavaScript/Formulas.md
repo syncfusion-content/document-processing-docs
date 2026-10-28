@@ -4,6 +4,7 @@ description: Store and clear Excel formulas on cells without calculation or eval
 platform: document-processing
 control: Excel
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Formulas in JavaScript Excel

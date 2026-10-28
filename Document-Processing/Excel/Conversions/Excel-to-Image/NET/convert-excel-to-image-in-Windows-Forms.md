@@ -4,6 +4,7 @@ description: Windows Forms Excel to Image section explains how to convert Excel 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Excel to Image Conversion in Windows Forms using Excel Library

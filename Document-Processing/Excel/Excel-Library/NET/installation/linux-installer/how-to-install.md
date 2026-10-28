@@ -5,6 +5,7 @@ description: Syncfusion Excel Linux installer installation section explains how 
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
+appliesto: Document SDK
 
 ---
 

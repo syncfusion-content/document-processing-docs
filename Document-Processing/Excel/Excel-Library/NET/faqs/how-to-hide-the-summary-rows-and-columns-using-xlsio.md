@@ -4,6 +4,7 @@ description: Hide summary rows and columns in an Excel worksheet programmaticall
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to hide summary rows and columns in .NET Excel Library

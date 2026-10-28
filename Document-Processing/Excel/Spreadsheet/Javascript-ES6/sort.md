@@ -5,6 +5,7 @@ description: Sorting in TypeScript Spreadsheet enables users to arrange data in 
 platform: document-processing
 control: Sort
 documentation: ug
+appliesto: Spreadsheet Editor SDK, UI Component Suite
 ---
 
 # Sorting in TypeScript Spreadsheet 
