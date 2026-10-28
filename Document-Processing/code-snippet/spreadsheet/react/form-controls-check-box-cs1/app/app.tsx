@@ -1,97 +1,58 @@
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
-import { SpreadsheetComponent, SheetsDirective, SheetDirective, RowsDirective, RowDirective, CellsDirective, CellDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
-import { CellStyleModel, FormControlModel, SpreadsheetAllModule } from '@syncfusion/ej2-react-spreadsheet';
+import { SpreadsheetComponent, SheetsDirective, SheetDirective, RowsDirective, RowDirective, CellsDirective, CellDirective, ColumnsDirective, ColumnDirective, FormControlsDirective, FormControlDirective, RangesDirective, RangeDirective } from '@syncfusion/ej2-react-spreadsheet';
+import { CellStyleModel } from '@syncfusion/ej2-react-spreadsheet';
+import { defaultData } from './datasource';
 
-function App() {
+function App(): React.ReactElement {
     const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
-
-    const formControls: FormControlModel[] = [
-        {
-            type: 'CheckBox',
-            text: 'Accept Terms',
-            cellLink: 'D2',
-            value: 'Unchecked',
-            top: 40,
-            left: 150,
-            height: 20,
-            width: 120
-        },
-        {
-            type: 'CheckBox',
-            text: 'Enable Notifications',
-            cellLink: 'D4',
-            value: 'Unchecked',
-            top: 80,
-            left: 150,
-            height: 20,
-            width: 120
-        },
-        {
-            type: 'CheckBox',
-            text: 'Select All Options',
-            cellLink: 'D6',
-            value: 'Unchecked',
-            top: 120,
-            left: 150,
-            height: 20,
-            width: 120
-        }
-    ];
-
-    const boldCenter: CellStyleModel = { fontWeight: 'bold', textAlign: 'center' };
-
+    const boldRight: CellStyleModel = {
+        fontWeight: 'bold',
+        textAlign: 'right'
+    };
+    const bold: CellStyleModel = {
+        fontWeight: 'bold'
+    };
+    const onCreated = (): void => {
+        const spreadsheet = spreadsheetRef.current;
+        if (!spreadsheet) return;
+        spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle' }, 'A1:F1');
+        spreadsheet.numberFormat('$#,##0.00', 'F2:F31');
+        spreadsheet.numberFormat('m/d/yyyy', 'E2:E30');
+    };
     return (
-        <div>
-            <SpreadsheetComponent ref={spreadsheetRef} showFormulaBar={false} allowFormControl={true}>
-                <SheetsDirective>
-                    <SheetDirective name={'FormControls'} formControls={formControls}>
-                        <ColumnsDirective>
-                            <ColumnDirective width={150}></ColumnDirective>
-                            <ColumnDirective width={150}></ColumnDirective>
-                            <ColumnDirective width={150}></ColumnDirective>
-                            <ColumnDirective width={150}></ColumnDirective>
-                        </ColumnsDirective>
-                        <RowsDirective>
-                            <RowDirective index={0}>
-                                <CellsDirective>
-                                    <CellDirective index={0} value={'Form Controls Demo'} style={boldCenter}></CellDirective>
-                                </CellsDirective>
-                            </RowDirective>
-                            <RowDirective index={1}>
-                                <CellsDirective>
-                                    <CellDirective index={0} value={'Check Box Control'}></CellDirective>
-                                    <CellDirective index={1} value={''}></CellDirective>
-                                    <CellDirective index={2} value={'Cell Link'}></CellDirective>
-                                    <CellDirective index={3} value={''}></CellDirective>
-                                </CellsDirective>
-                            </RowDirective>
-                            <RowDirective index={3}>
-                                <CellsDirective>
-                                    <CellDirective index={0} value={'Notifications'}></CellDirective>
-                                    <CellDirective index={1} value={''}></CellDirective>
-                                    <CellDirective index={2} value={'Cell Link'}></CellDirective>
-                                    <CellDirective index={3} value={''}></CellDirective>
-                                </CellsDirective>
-                            </RowDirective>
-                            <RowDirective index={5}>
-                                <CellsDirective>
-                                    <CellDirective index={0} value={'Select All'}></CellDirective>
-                                    <CellDirective index={1} value={''}></CellDirective>
-                                    <CellDirective index={2} value={'Cell Link'}></CellDirective>
-                                    <CellDirective index={3} value={''}></CellDirective>
-                                </CellsDirective>
-                            </RowDirective>
-                        </RowsDirective>
-                        <FormControlsDirective>
-                            <FormControlDirective type="CheckBox" text="Check Box 1" celllink="H4" height={40} width={110}></FormControlDirective>"
-                        </FormControlsDirective>
-                    </SheetDirective>
-                </SheetsDirective>
-            </SpreadsheetComponent>
-        </div>
+        <SpreadsheetComponent ref={spreadsheetRef} created={onCreated} >
+            <SheetsDirective>
+                <SheetDirective name="Price Details">
+                    <RangesDirective>
+                        <RangeDirective dataSource={defaultData} />
+                    </RangesDirective>
+                    <FormControlsDirective>
+                        <FormControlDirective type="CheckBox" text="Check Box 1" cellLink="G1" height={40} width={110} rowIndex={11} colIndex={0}></FormControlDirective>"
+                    </FormControlsDirective>
+                    <RowsDirective>
+                        <RowDirective index={30}>
+                            <CellsDirective>
+                                <CellDirective index={4} value="Total Amount:" style={boldRight} />
+                                <CellDirective formula="=SUM(F2:F30)" style={bold} />
+                            </CellsDirective>
+                        </RowDirective>
+                    </RowsDirective>
+                    <ColumnsDirective>
+                        <ColumnDirective width={180} />
+                        <ColumnDirective width={130} />
+                        <ColumnDirective width={130} />
+                        <ColumnDirective width={180} />
+                        <ColumnDirective width={130} />
+                        <ColumnDirective width={120} />
+                    </ColumnsDirective>
+                </SheetDirective>
+            </SheetsDirective>
+        </SpreadsheetComponent>
     );
 }
+
+export default App;
 
 const root = createRoot(document.getElementById('root')!);
 root.render(<App />);
