@@ -1568,18 +1568,9 @@ document.Close(True)
 
 {% endhighlight %}
 
- {% endtabs %}
+{% endtabs %}
 
-
-## Embedding custom fonts in SVG to PDF
-
-The font resolution order used by `SvgConverter` is:
-
-1. Font embedded in the SVG (`@font-face` or inline font data).
-2. The `SubstituteFont` event (on .NET Core / portable runtimes).
-3. A standard PDF base font.
-
-When a PDF/A conformance level is enabled, the converter always attempts to embed a resolved font (steps 1 and 2) before falling back to a standard font.
+## Embedding Custom Fonts During SVG-to-PDF Conversion
 
 The following code example shows how to subscribe to the `SubstituteFont` event and embed a custom font during SVG to PDF conversion.
 
@@ -1623,17 +1614,42 @@ document.Close(true);
 
 void Converter_SubstituteFont(object sender, PdfFontEventArgs args)
 {
-    //Read the font name requested by the SVG.
+//Get the font name.
     string fontName = args.FontName.Split(',')[0];
-
-    //Resolve the typeface from a known location (for example, an embedded resource
-    //or a file shipped with the application) and open its stream.
-    string fontFilePath = Path.Combine("Fonts", fontName + ".ttf");
-    if (File.Exists(fontFilePath))
+    //Get the font style.
+    PdfFontStyle fontStyle = args.FontStyle;
+    SKFontStyle sKFontStyle = SKFontStyle.Normal;
+    if (fontStyle != PdfFontStyle.Regular)
     {
-        //Provide the font program to the converter so it can be embedded into the PDF.
-        args.FontStream = new FileStream(fontFilePath, FileMode.Open, FileAccess.Read);
+        if (fontStyle == PdfFontStyle.Bold)
+        {
+            sKFontStyle = SKFontStyle.Bold;
+        }
+        else if (fontStyle == PdfFontStyle.Italic)
+        {
+            sKFontStyle = SKFontStyle.Italic;
+        }
+        else if (fontStyle == (PdfFontStyle.Italic | PdfFontStyle.Bold))
+        {
+            sKFontStyle = SKFontStyle.BoldItalic;
+        }
     }
+    SKTypeface typeface = SKTypeface.FromFamilyName(fontName, sKFontStyle);
+    SKStreamAsset typeFaceStream = typeface.OpenStream();
+    MemoryStream memoryStream = null;
+    if (typeFaceStream != null && typeFaceStream.Length > 0)
+    {
+        //Create the fontData from the type face stream.
+        byte[] fontData = new byte[typeFaceStream.Length];
+        typeFaceStream.Read(fontData, typeFaceStream.Length);
+        typeFaceStream.Dispose();
+
+        //Create the new memory stream from the font data.
+        memoryStream = new MemoryStream(fontData);
+    }
+    //Set the font stream to the event args.
+    args.FontStream = memoryStream;
+
 }
 
 {% endhighlight %}
@@ -1643,200 +1659,6 @@ void Converter_SubstituteFont(object sender, PdfFontEventArgs args)
 'Embedding custom fonts in SVG to PDF via the SubstituteFont event is supported
 'on .NET Core / portable targets. VB.NET samples for this feature are not
 'currently available.
-
-{% endhighlight %}
-
-{% endtabs %}
-
-N> 1. The `SubstituteFont` event is raised on .NET Core / portable runtimes. On classic .NET Framework, the converter resolves fonts directly from the system font catalog, so the event is not raised.
-N> 2. When `PdfConformanceLevel` is set (for example, PDF/A), the converter will throw a `PdfException` if a font is required but cannot be embedded. Always handle `SubstituteFont` and assign a valid `FontStream` for any font referenced by the SVG when targeting PDF/A.
-N> 3. The font data supplied through `args.FontStream` is embedded in the output PDF, so the resulting document renders with the chosen typeface on any viewer without requiring the font to be installed locally.
-
-## Linearizing a PDF document
-
-Linearized PDF, also known as fast web view, optimizes a PDF document for incremental loading over the web. Set the `IsLinearized` property to `true` before saving the PDF document.
-
-### Creating a linearized PDF document
-
-The following code snippet illustrates how to create a new linearized PDF document.
-
-{% tabs %}
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Grid;
-using Syncfusion.Drawing;
-using System.IO;
-
-//Create a new PDF document.
-PdfDocument document = new PdfDocument();
-
-//Add four pages.
-for (int i = 0; i < 4; i++)
-{
-  PdfPage page = document.Pages.Add();
-  PdfGrid grid = new PdfGrid();
-  grid.Columns.Add(2);
-  grid.Headers.Add(1);
-  grid.Headers[0].Cells[0].Value = "Page";
-  grid.Headers[0].Cells[1].Value = "Content";
-  PdfGridRow row = grid.Rows.Add();
-  row.Cells[0].Value = (i + 1).ToString();
-  row.Cells[1].Value = "Linearized PDF";
-  grid.Draw(page, new Syncfusion.Drawing.PointF(10, 10));
-}
-
-//Set Linearization to true for fast web view.
-document.FileStructure.IsLinearized = true;
-
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-
-//Close the document.
-document.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Grid;
-using System.Drawing;
-using System.IO;
-
-//Create a new PDF document.
-PdfDocument document = new PdfDocument();
-
-//Add four pages.
-for (int i = 0; i < 4; i++)
-{
-  PdfPage page = document.Pages.Add();
-  PdfGrid grid = new PdfGrid();
-  grid.Columns.Add(2);
-  grid.Headers.Add(1);
-  grid.Headers[0].Cells[0].Value = "Page";
-  grid.Headers[0].Cells[1].Value = "Content";
-  PdfGridRow row = grid.Rows.Add();
-  row.Cells[0].Value = (i + 1).ToString();
-  row.Cells[1].Value = "Linearized PDF";
-  grid.Draw(page, new PointF(10, 10));
-}
-
-//Set Linearization to true for fast web view.
-document.FileStructure.IsLinearized = true;
-
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-document.Save(stream);
-
-//Close the document.
-document.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf
-Imports Syncfusion.Pdf.Grid
-Imports System.Drawing
-Imports System.IO
-
-'Create a new PDF document.
-Dim document As New PdfDocument()
-
-'Add four pages.
-For i As Integer = 0 To 3
-  Dim page As PdfPage = document.Pages.Add()
-  Dim grid As New PdfGrid()
-  grid.Columns.Add(2)
-  grid.Headers.Add(1)
-  grid.Headers(0).Cells(0).Value = "Page"
-  grid.Headers(0).Cells(1).Value = "Content"
-  Dim row As PdfGridRow = grid.Rows.Add()
-  row.Cells(0).Value = (i + 1).ToString()
-  row.Cells(1).Value = "Linearized PDF"
-  grid.Draw(page, New PointF(10, 10))
-Next
-
-'Set Linearization to true for fast web view.
-document.FileStructure.IsLinearized = True
-
-'Save the document into stream.
-Dim stream As New MemoryStream()
-document.Save(stream)
-
-'Close the document.
-document.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %}
-
-### Linearizing an existing PDF document
-
-The following code snippet illustrates how to load an existing PDF document and save it as a linearized PDF document.
-
-{% tabs %}
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-
-using Syncfusion.Pdf.Parsing;
-using System.IO;
-
-// Load the existing PDF document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-
-//Set Linearization to true for fast web view.
-loadedDocument.FileStructure.IsLinearized = true;
-
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf.Parsing;
-using System.IO;
-
-// Load the existing PDF document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
-
-//Set Linearization to true for fast web view.
-loadedDocument.FileStructure.IsLinearized = true;
-
-//Save the document into stream.
-MemoryStream stream = new MemoryStream();
-loadedDocument.Save(stream);
-
-//Close the document.
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf.Parsing
-Imports System.IO
-
-'Load the existing PDF document
-Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
-
-'Set Linearization to true for fast web view.
-loadedDocument.FileStructure.IsLinearized = True
-
-'Save the document into stream.
-Dim stream As New MemoryStream()
-loadedDocument.Save(stream)
-
-'Close the document.
-loadedDocument.Close(True)
 
 {% endhighlight %}
 

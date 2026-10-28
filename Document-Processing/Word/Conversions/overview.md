@@ -15,6 +15,8 @@ keywords: Word, SDK, Automation, API, convert
 
 {% doccard text="Word to Image" link="/document-processing/word/conversions/word-to-image/overview" icon="/document-processing/word/conversions/images/Word to Image.svg" %}
 
+{% doccard text="PDF to Word" link="/document-processing/data-extraction/net/conversions/pdf-to-word" icon="/document-processing/Data-Extraction/net/conversions/Images/pdf-to-word.svg" %}
+
 {% doccard text="HTML Conversion" link="/document-processing/word/conversions/html-conversions" icon="/document-processing/word/conversions/images/HTML Conversion.svg" %}
 
 {% doccard text="Markdown to Word" link="/document-processing/word/conversions/markdown-to-word-conversion" icon="/document-processing/word/conversions/images/Markdown to Word.svg" %}

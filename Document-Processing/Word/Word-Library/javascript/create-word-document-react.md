@@ -33,7 +33,7 @@ npm --version
 
 ## Create a React Project
 
-This guide uses https://vitejs.dev/ to scaffold the React project. Run the following command in a terminal:
+This guide uses [Vite](https://vitejs.dev/) to scaffold the React project. Run the following command in a terminal:
 
 ```bash
 npm create vite@latest my-docx-app -- --template react
@@ -116,3 +116,7 @@ Vite serves the application at `http://localhost:5173`. Open this URL in a brows
 The generated Word document contains a single paragraph with the text **"Hello World!!!"**.
 
 > **Note:** If you used Create-React-App instead of Vite, the run command is `npm start` and the default URL is `http://localhost:3000`.
+
+## See Also
+
+- [JavaScript Word Library documentation](https://help.syncfusion.com/document-processing/word/word-library/javascript/overview)

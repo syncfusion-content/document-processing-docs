@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Form Designer in JavaScript (ES5) PDF Viewer | Syncfusion
-description: Use the Form Designer in the JavaScript (ES5) PDF Viewer to create, edit, and manage form fields visually, and customize the form designer toolbar.
+title: Customize Form Designer Appearance in JavaScript (ES5) PDF Viewer | Syncfusion
+description: Customize Form Designer toolbar icons and property dialog styling in the JavaScript (ES5) PDF Viewer with CSS.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form Designer in JavaScript (ES5) PDF Viewer
+# Customize Form Designer Appearance in JavaScript (ES5) PDF Viewer
 
 Apply the following CSS rules to tailor the form designer toolbar icons and property dialog appearance in the JavaScript PDF Viewer. Add the styles to the page or global stylesheet that hosts the control to adjust color, size, or visibility.
 

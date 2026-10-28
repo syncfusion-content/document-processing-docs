@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Getting Started with JavaScript PowerPoint in JavaScript app | Syncfusion
+title: Getting Started with JavaScript PowerPoint Library | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-powerpoint-library
-description: Learn how to get started with the Syncfusion JavaScript PowerPoint Library in JavaScript application. Easy steps to create presentations without depending on Microsoft Office.
+description: Learn how to create PowerPoint presentations in a JavaScript app using the Syncfusion PowerPoint Library without Microsoft Office.
 platform: document-processing
 control: PowerPoint
 documentation: ug
@@ -13,7 +13,7 @@ keywords: javascript, powerpoint, cdn
 
 The `JavaScript PowerPoint Library` facilitates the creation of a simple PowerPoint presentation with basic elements from scratch.
 
-This guide explains how to integrate the [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) into a JavaScript application using NPM and a module bundler like **Parcel**. The generated PowerPoint presentation is downloaded directly from the browser; no server-side PowerPoint rendering is required.
+This guide explains how to integrate the [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) into a JavaScript application using NPM and a module bundler like **Parcel**. The sample saves the generated PowerPoint presentation with `save('Output.pptx')`.
 
 ## Prerequisites
 
@@ -70,7 +70,6 @@ Create `index.html` in your project root with a button to generate the PowerPoin
             const slide = pptxDoc.slides.add();
             // Adds a textbox for the title
             const titleShape = slide.shapes.addTextBox({
-                name: 'Title',
                 bounds: {
                     x: 55,
                     y: 25,
@@ -79,7 +78,7 @@ Create `index.html` in your project root with a button to generate the PowerPoin
                 }
             });
             // Adds a paragraph to the textbox
-            const paragraph = titleShape.textBody?.addParagraph();
+            const paragraph = titleShape.textBody.addParagraph();
             paragraph.horizontalAlignment = HorizontalAlignmentType.Center;
             // Adds text to the paragraph
             const textPart = paragraph.addTextPart('Hello World!!!');
@@ -87,29 +86,8 @@ Create `index.html` in your project root with a button to generate the PowerPoin
             textPart.font.bold = true;
             textPart.font.fontSize = 36;
 
-            try {
-                // Saves the presentation
-                const bytes = await pptxDoc.save();
-
-                // Creates a blob from the bytes
-                const blob = new Blob([bytes], {
-                    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-                });
-
-                // Creates a download link
-                const url = window.URL.createObjectURL(blob);
-                const link = document.createElement('a');
-                link.href = url;
-                link.download = 'Output.pptx';
-
-                // Triggers the download
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-                window.URL.revokeObjectURL(url);
-            } catch (error) {
-                console.error('Error creating PowerPoint file:', error);
-            }
+            // Saves the Presentation to the file system.
+            await pptxDoc.save('Output.pptx');
         });
     </script>
 </body>
@@ -117,11 +95,11 @@ Create `index.html` in your project root with a button to generate the PowerPoin
 {% endhighlight %}
 {% endtabs %}
 
-N> The `save()` method saves the presentation and returns the bytes, which are then converted to a Blob for browser download. The file is sent to the browser's default downloads folder.
+N> The `save()` method saves the presentation to the specified file.
 
 ## Run the Application
 
-Update the `package.json` to add a dev script for Parcel:
+Update the `package.json` to add a Dev script for Parcel:
 
 ```json
 "scripts": {
@@ -135,24 +113,14 @@ Then start the development server:
 npm start
 ```
 
-Parcel serves the application at `http://localhost:5000`. Open this URL in a browser and click **Generate PowerPoint document** to download the generated file as `Output.pptx`.
+Parcel serves the application at `http://localhost:5000`. Open this URL in a browser and click **Generate PowerPoint document**. The sample saves the presentation as `Output.pptx`.
 
 The generated PowerPoint presentation contains a single slide with the text "Hello World!!!".
-
-## Troubleshooting
-
-| Problem | Cause | Resolution |
-|---|---|---|
-| `Cannot find module '@syncfusion/ej2-pptx'` | The package is not installed | Run `npm install @syncfusion/ej2-pptx --save` |
-| Button click does nothing | The script runs before the button is in the DOM | Ensure the `<script type="module">` tag is at the end of `<body>` |
-| `Output.pptx` does not download | The browser blocks the download | Check the browser's download settings and the downloads folder |
-| Build fails with module errors | Parcel is not installed or the project structure is incorrect | Run `npm install -D parcel` and confirm `index.html` is in the project root |
 
 ## See Also
 
 - [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library)
-- [JavaScript PowerPoint Library documentation](https://help.syncfusion.com/document-processing/presentation/pptx-library/javascript/overview)
-- [JavaScript PowerPoint Library API reference](https://ej2.syncfusion.com/documentation/api/powerpoint)
-- [JavaScript PowerPoint Library examples](https://document.syncfusion.com/demos/powerpoint/react/#/fluent2/powerpoint/default)
+- [JavaScript PowerPoint Library documentation](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/overview)
 
-For build-tool-based workflows (React, Vue, Angular, TypeScript, Node.js), see the corresponding guides in the [JavaScript PowerPoint Library documentation](https://help.syncfusion.com/document-processing/presentation/pptx-library/javascript/overview).
+
+For build-tool-based workflows (React, Vue, Angular, TypeScript, Node.js), see the corresponding guides in the [JavaScript PowerPoint Library documentation](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/overview).

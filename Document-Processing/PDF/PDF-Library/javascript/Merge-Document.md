@@ -14,6 +14,12 @@ The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-
 - **Importing from Multiple Documents** — import selected page ranges from several source PDFs at specified positions.
 - **Importing a Page with Optimization Options** — import a single page with rotation, resource optimization, and grouped form fields.
 
+## Video Tutorial
+
+Watch the following video to learn how to merge PDF documents using the JavaScript PDF Library.
+
+{% youtube "https://www.youtube.com/watch?v=Z_y1rOX4ZxQ" %}
+
 ## Importing a Page Range
 
 This section explains how to import a range of pages from a source PDF into a destination document using the [importPageRange](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument#importpagerange) method.
