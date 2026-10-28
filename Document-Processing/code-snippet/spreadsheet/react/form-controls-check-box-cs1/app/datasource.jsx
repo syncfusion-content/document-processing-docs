@@ -1,5 +1,5 @@
 
-export let data = [
+export let defaultData = [
     {
         "Customer Name": "Romona Heaslip",
         "Model": "Taurus",

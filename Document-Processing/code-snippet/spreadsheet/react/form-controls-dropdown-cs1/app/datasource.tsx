@@ -1,5 +1,5 @@
 
-export let data: Object[] = [
+export let defaultData: Object[] = [
     {
         "Customer Name": "Romona Heaslip",
         "Model": "Taurus",
