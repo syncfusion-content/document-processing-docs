@@ -1,135 +1,121 @@
 <template>
-  <div>
-    <ejs-spreadsheet ref="spreadsheetRef" :showFormulaBar="false" :allowFormControl="true">
-      <e-sheets>
-        <e-sheet name="DropDownDemo" :formControls="formControls">
-          <e-columns>
-            <e-column :width="150"></e-column>
-            <e-column :width="200"></e-column>
-            <e-column :width="150"></e-column>
-            <e-column :width="150"></e-column>
-            <e-column :width="100"></e-column>
-            <e-column :width="100"></e-column>
-            <e-column :width="100"></e-column>
-            <e-column :width="150"></e-column>
-            <e-column :width="150"></e-column>
-            <e-column :width="100"></e-column>
-          </e-columns>
-          <e-rows>
-            <e-row :index="0">
-              <e-cells>
-                <e-cell :index="0" value="Drop Down Form Controls" :style="boldCenter"></e-cell>
-                <e-cell :index="7" value="Delivery Options"></e-cell>
-                <e-cell :index="8" value="Payment Methods"></e-cell>
-                <e-cell :index="9" value="Priority"></e-cell>
-              </e-cells>
-            </e-row>
-            <e-row :index="1">
-              <e-cells>
-                <e-cell :index="0" value="Delivery Options"></e-cell>
-                <e-cell :index="1" value=""></e-cell>
-                <e-cell :index="2" value="Selected Index"></e-cell>
-                <e-cell :index="3" value=""></e-cell>
-                <e-cell :index="7" value="Standard Delivery"></e-cell>
-                <e-cell :index="8" value="Cash on Delivery"></e-cell>
-                <e-cell :index="9" value="Low"></e-cell>
-              </e-cells>
-            </e-row>
-            <e-row :index="2">
-              <e-cells>
-                <e-cell :index="7" value="Express Delivery"></e-cell>
-                <e-cell :index="8" value="Credit Card"></e-cell>
-                <e-cell :index="9" value="Medium"></e-cell>
-              </e-cells>
-            </e-row>
-            <e-row :index="3">
-              <e-cells>
-                <e-cell :index="0" value="Payment Method"></e-cell>
-                <e-cell :index="1" value=""></e-cell>
-                <e-cell :index="2" value="Selected Index"></e-cell>
-                <e-cell :index="3" value=""></e-cell>
-                <e-cell :index="7" value="Priority Delivery"></e-cell>
-                <e-cell :index="8" value="Debit Card"></e-cell>
-                <e-cell :index="9" value="High"></e-cell>
-              </e-cells>
-            </e-row>
-            <e-row :index="4">
-              <e-cells>
-                <e-cell :index="7" value="Pickup at Store"></e-cell>
-                <e-cell :index="8" value="Online Payment"></e-cell>
-              </e-cells>
-            </e-row>
-            <e-row :index="5">
-              <e-cells>
-                <e-cell :index="0" value="Priority Level"></e-cell>
-                <e-cell :index="1" value=""></e-cell>
-                <e-cell :index="2" value="Selected Index"></e-cell>
-                <e-cell :index="3" value=""></e-cell>
-                <e-cell :index="7" value="Digital Download"></e-cell>
-              </e-cells>
-            </e-row>
-          </e-rows>
-        </e-sheet>
-      </e-sheets>
+    <ejs-spreadsheet ref="spreadsheet" :created="created">
+        <e-sheets>
+            <e-sheet name="Price Details">
+                <e-ranges>
+                    <e-range :dataSource="dataSource"></e-range>
+                </e-ranges>
+
+                <e-formcontrols>
+                    <e-formcontrol
+                        type="DropDown"
+                        text="Drop Down 1"
+                        cellLink="G1"
+                        inputRange: "A1:A10"
+                        :height="40"
+                        :width="180"
+                    </e-formcontrol>
+                </e-formcontrols>
+
+                <e-rows>
+                    <e-row :index="30">
+                        <e-cells>
+                            <e-cell
+                                :index="4"
+                                value="Total Amount:"
+                                :style="boldRight">
+                            </e-cell>
+                            <e-cell
+                                formula="=SUM(F2:F30)"
+                                :style="bold">
+                            </e-cell>
+                        </e-cells>
+                    </e-row>
+                </e-rows>
+
+                <e-columns>
+                    <e-column :width="180"></e-column>
+                    <e-column :width="130"></e-column>
+                    <e-column :width="130"></e-column>
+                    <e-column :width="180"></e-column>
+                    <e-column :width="130"></e-column>
+                    <e-column :width="120"></e-column>
+                </e-columns>
+            </e-sheet>
+        </e-sheets>
     </ejs-spreadsheet>
-  </div>
 </template>
 
 <script>
-import { SpreadsheetComponent, SheetsDirective, SheetDirective, RowsDirective, RowDirective, CellsDirective, CellDirective, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-spreadsheet";
+import {
+    SpreadsheetComponent,
+    SheetsDirective,
+    SheetDirective,
+    RowsDirective,
+    RowDirective,
+    CellsDirective,
+    CellDirective,
+    ColumnsDirective,
+    ColumnDirective,
+    RangesDirective,
+    RangeDirective,
+    FormControlsDirective,
+    FormControlDirective
+} from '@syncfusion/ej2-vue-spreadsheet';
+
+import { defaultData } from './datasource';
 
 export default {
-  name: "App",
-  components: {
-    "ejs-spreadsheet": SpreadsheetComponent,
-    "e-sheets": SheetsDirective,
-    "e-sheet": SheetDirective,
-    "e-rows": RowsDirective,
-    "e-row": RowDirective,
-    "e-cells": CellsDirective,
-    "e-cell": CellDirective,
-    "e-columns": ColumnsDirective,
-    "e-column": ColumnDirective
-  },
-  data() {
-    return {
-      formControls: [
-        {
-          type: 'DropDown',
-          text: 'Select Delivery',
-          cellLink: 'D2',
-          inputRange: 'H1:H5',
-          selectedIndex: 0,
-          top: 40,
-          left: 150,
-          height: 22,
-          width: 120
-        },
-        {
-          type: 'DropDown',
-          text: 'Select Payment',
-          cellLink: 'D4',
-          inputRange: 'I1:I4',
-          selectedIndex: 0,
-          top: 100,
-          left: 150,
-          height: 22,
-          width: 120
-        },
-        {
-          type: 'DropDown',
-          text: 'Select Priority',
-          cellLink: 'D6',
-          inputRange: 'J1:J3',
-          selectedIndex: 1,
-          top: 160,
-          left: 150,
-          height: 22,
-          width: 120
+    name: 'App',
+    components: {
+        'ejs-spreadsheet': SpreadsheetComponent,
+        'e-sheets': SheetsDirective,
+        'e-sheet': SheetDirective,
+        'e-rows': RowsDirective,
+        'e-row': RowDirective,
+        'e-cells': CellsDirective,
+        'e-cell': CellDirective,
+        'e-ranges': RangesDirective,
+        'e-range': RangeDirective,
+        'e-columns': ColumnsDirective,
+        'e-column': ColumnDirective,
+        'e-formcontrols': FormControlsDirective,
+        'e-formcontrol': FormControlDirective
+    },
+
+    data: () => {
+        return {
+            dataSource: defaultData,
+            boldRight: {
+                fontWeight: 'bold',
+                textAlign: 'right'
+            },
+            bold: {
+                fontWeight: 'bold'
+            }
+        };
+    },
+
+    methods: {
+        created: function () {
+            const spreadsheet = this.$refs.spreadsheet;
+
+            spreadsheet.cellFormat(
+                {
+                    fontWeight: 'bold',
+                    textAlign: 'center',
+                    verticalAlign: 'middle'
+                },
+                'A1:F1'
+            );
+
+            spreadsheet.numberFormat('$#,##0.00', 'F2:F31');
+            spreadsheet.numberFormat('m/d/yyyy', 'E2:E30');
         }
-      ],
-      boldCenter: { fontWeight: 'bold', textAlign: 'center' }
     }
-  }
-}
+};
 </script>
+
+<style>
+@import '../node_modules/@syncfusion/ej2-tailwind3-theme/styles/spreadsheet/index.css';
+</style>
