@@ -39,12 +39,15 @@ The linked cell value is automatically updated whenever the Check Box state chan
 The following code example shows the Check Box Form Control functionality in the Spreadsheet control.
 
 {% tabs %}
-{% highlight js tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/form-controls-check-box-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/vue/form-controls-check-box-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-
-{% previewsample "/document-processing/code-snippet/spreadsheet/vue/form-controls-check-box-cs1" %}
+        
+{% previewsample "/code-snippet/spreadsheet/vue/form-controls-check-box-cs1" %}
 
 ### Radio Button
 
@@ -65,12 +68,15 @@ The linked cell value is automatically updated whenever the Radio Button state c
 The following code example shows the Radio Button Form Control functionality in the Spreadsheet control.
 
 {% tabs %}
-{% highlight js tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/form-controls-radio-button-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/vue/form-controls-radio-button-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-
-{% previewsample "/document-processing/code-snippet/spreadsheet/vue/form-controls-radio-button-cs1" %}
+        
+{% previewsample "/code-snippet/spreadsheet/vue/form-controls-radio-button-cs1" %}
 
 ### Combo Box (Dropdown)
 
@@ -88,12 +94,15 @@ The linked cell value is automatically updated whenever the Combo Box's selected
 The following code example shows the Combo Box (Dropdown) Form Control functionality in the Spreadsheet control.
 
 {% tabs %}
-{% highlight js tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/form-controls-dropdown-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/vue/form-controls-dropdown-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-
-{% previewsample "/document-processing/code-snippet/spreadsheet/vue/form-controls-dropdown-cs1" %}
+        
+{% previewsample "/code-snippet/spreadsheet/vue/form-controls-dropdown-cs1" %}
 
 ## Inserting Form Controls
 
