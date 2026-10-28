@@ -1658,6 +1658,14 @@ void Converter_SubstituteFont(object sender, PdfFontEventArgs args)
 
 {% endhighlight %}
 
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+'Embedding custom fonts in SVG to PDF via the SubstituteFont event is supported
+'on .NET Core / portable targets. C# [Windows-specific] samples for this feature are not
+'currently available.
+
+{% endhighlight %}
+
 {% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
 
 'Embedding custom fonts in SVG to PDF via the SubstituteFont event is supported
