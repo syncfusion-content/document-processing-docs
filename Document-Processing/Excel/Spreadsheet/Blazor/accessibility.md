@@ -53,7 +53,7 @@ The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sd
 
 ## Keyboard interaction
 
-The Blazor Spreadsheet supports keyboard navigation and interactions for performing various operations.
+The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) follows [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert#keyboardinteraction) guidelines, making it accessible for people who use assistive technologies (AT) and those who rely on keyboard navigation.
 
 N> For a complete list of keyboard shortcuts available in the Blazor Spreadsheet, refer to the [Keyboard shortcuts](./keyboard-shortcuts) documentation.
 
