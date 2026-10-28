@@ -1570,23 +1570,26 @@ document.Close(True)
 
 {% endtabs %}
 
-## Embedding Custom Fonts During SVG-to-PDF Conversion
+## Embed Custom Fonts During SVG-to-PDF Conversion
+
+When converting an SVG document to PDF, fonts used in the SVG may not be available in the conversion environment. In such cases, you can handle the SubstituteFont event and provide the required font stream to ensure the text is rendered correctly and embedded in the generated PDF.
 
 The following code example shows how to subscribe to the `SubstituteFont` event and embed a custom font during SVG to PDF conversion.
 
 {% tabs %}
 
-{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Document%20conversion/SVG-to-PDF/Embedding-custom-fonts-in-SVG-to-PDF/.NET/Program.cs" %}
+{% highlight c# tabtitle="C# [Cross-platform]" %}
 
 using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
 using Syncfusion.Drawing;
 using System.IO;
+using SkiaSharp;
 
 //Initialize SVG converter.
 SvgConverter converter = new SvgConverter();
 
-//Subscribe to the SubstituteFont event to provide custom fonts.
+//Subscribe to the SubstituteFont event to provide font data when a font substitution occurs.
 converter.SubstituteFont += Converter_SubstituteFont;
 
 //Convert the SVG to PdfTemplate.
@@ -1650,6 +1653,8 @@ void Converter_SubstituteFont(object sender, PdfFontEventArgs args)
     //Set the font stream to the event args.
     args.FontStream = memoryStream;
 }
+
+[!NOTE] The SubstituteFont event is raised when the SVG converter cannot directly access the requested font. In the event handler, provide the corresponding font stream through the FontStream property to ensure the font is embedded in the output PDF.
 
 {% endhighlight %}
 
