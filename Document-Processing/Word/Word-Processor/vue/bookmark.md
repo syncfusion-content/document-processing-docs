@@ -6,6 +6,7 @@ control: Bookmark
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Bookmarks in Vue DOCX Editor component

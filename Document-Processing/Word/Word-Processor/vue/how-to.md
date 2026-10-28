@@ -6,6 +6,7 @@ control: How to
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to guides in Vue DOCX Editor Control

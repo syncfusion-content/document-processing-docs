@@ -6,6 +6,7 @@ control: Move selection to specific position
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Move Selection to a Position in Vue DOCX Editor

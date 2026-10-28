@@ -6,6 +6,7 @@ platform: document-processing
 control: Bookmark
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Bookmarks in TypeScript DOCX Editor

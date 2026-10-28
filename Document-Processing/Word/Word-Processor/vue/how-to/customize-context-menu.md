@@ -6,6 +6,7 @@ control: Customize context menu
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Customize Context Menu in Vue DOCX Editor

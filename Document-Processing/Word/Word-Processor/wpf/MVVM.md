@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: mvvm,data-binding,dependency-property,two-way-binding,viewmodel
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 # MVVM in WPF DOCX Editor
 

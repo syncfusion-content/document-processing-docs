@@ -7,6 +7,7 @@ platform: document-processing
 documentation: ug
 keywords: vue create word, vue generate docx, vue word library, ej2 word vue, javascript
 canonical_url: https://help.syncfusion.com/document-processing/word/word-library/javascript/create-word-document-vue
+appliesto: Document SDK
 ---
 
 # Getting Started with JavaScript Word Library in Vue app

@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: paste-WordDocument-from-DocIO
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Paste a WordDocument from DocIO in WPF DOCX Editor

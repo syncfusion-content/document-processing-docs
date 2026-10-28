@@ -6,6 +6,7 @@ platform: document-processing
 control: Form fields 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Form Fields in JavaScript DOCX Editor

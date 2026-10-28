@@ -6,6 +6,7 @@ platform: document-processing
 control: Open a Document by Address
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Open a Document by URL in TypeScript DOCX Editor

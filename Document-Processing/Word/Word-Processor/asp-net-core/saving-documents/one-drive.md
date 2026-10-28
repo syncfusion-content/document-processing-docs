@@ -6,6 +6,7 @@ platform: document-processing
 control: Save document to One Drive
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Save Documents to OneDrive in ASP.NET Core DOCX Editor

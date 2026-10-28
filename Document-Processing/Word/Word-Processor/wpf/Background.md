@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: background
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Background in WPF DOCX Editor

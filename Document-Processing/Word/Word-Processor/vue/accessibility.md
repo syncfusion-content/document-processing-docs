@@ -6,6 +6,7 @@ control: Accessibility
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Accessibility in Vue DOCX Editor component

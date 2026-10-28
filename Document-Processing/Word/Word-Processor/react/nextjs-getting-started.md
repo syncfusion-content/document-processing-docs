@@ -6,6 +6,7 @@ control: Next.js
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Getting started with React DOCX Editor in Next.js

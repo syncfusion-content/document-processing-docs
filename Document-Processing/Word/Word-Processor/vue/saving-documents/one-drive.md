@@ -6,6 +6,7 @@ platform: document-processing
 control: Save document to OneDrive
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Save Documents to OneDrive in Vue DOCX Editor

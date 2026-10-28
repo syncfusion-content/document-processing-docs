@@ -5,6 +5,7 @@ platform: document-processing
 control: Word Library
 documentation: ug
 keywords: javascript, word, content control, block, inline, rich text, plain text, check box, date picker, drop-down list, combo box
+appliesto: Document SDK
 ---
 
 # Content Controls in JavaScript Word Library

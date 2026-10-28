@@ -6,6 +6,7 @@ control: Open default document
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Open a Default Document in React DOCX Editor

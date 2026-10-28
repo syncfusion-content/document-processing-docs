@@ -6,6 +6,7 @@ platform: document-processing
 control: Server side export 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Server-side Export in TypeScript DOCX Editor

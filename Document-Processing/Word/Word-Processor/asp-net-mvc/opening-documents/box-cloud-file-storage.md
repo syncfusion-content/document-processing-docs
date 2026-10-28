@@ -6,6 +6,7 @@ platform: document-processing
 control: Opening from Box cloud file storage
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 --- 
 
 # Open Documents from Box Cloud File Storage in ASP.NET MVC DOCX Editor

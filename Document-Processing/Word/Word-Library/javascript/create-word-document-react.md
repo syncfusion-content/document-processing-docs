@@ -6,6 +6,7 @@ control: Word
 platform: document-processing
 documentation: ug
 keywords: javascript, word, react
+appliesto: Document SDK
 ---
 
 # Getting Started with JavaScript Word Library in React app

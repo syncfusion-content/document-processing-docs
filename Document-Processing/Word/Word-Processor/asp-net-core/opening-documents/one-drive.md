@@ -6,6 +6,7 @@ platform: document-processing
 control: Open document from OneDrive
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Open Documents from OneDrive in ASP.NET Core DOCX Editor

@@ -5,6 +5,7 @@ platform: document-processing
 control: DOCX Editor
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # MCP Server for Angular DOCX Editor

@@ -6,6 +6,7 @@ platform: document-processing
 control: Customize Context Menu
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # How to Customize Context Menu in TypeScript DOCX Editor

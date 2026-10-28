@@ -6,6 +6,7 @@ control: Export
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Export in Vue DOCX Editor

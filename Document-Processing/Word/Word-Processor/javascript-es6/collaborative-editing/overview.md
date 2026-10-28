@@ -6,6 +6,7 @@ platform: document-processing
 control: Collaborative Editing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, UI Component Suite
 ---
 
 # Collaborative Editing in Syncfusion TypeScript DOCX Editor Control
