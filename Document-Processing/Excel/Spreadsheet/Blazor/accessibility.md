@@ -107,7 +107,7 @@ The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sd
 | <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves the active cell left one column. |
 | <kbd>Page Up</kbd> | <kbd>Page Up</kbd> | Moves up one screen at a time. |
 | <kbd>Page Down</kbd> | <kbd>Page Down</kbd> | Moves down one screen at a time. |
-| <kbd>Ctrl</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> + <kbd>Home</kbd> | Moves to the first cell in the worksheet. |
+| <kbd>Ctrl</kbd> + <kbd>Home</kbd> | <kbd>⌘</kbd> + <kbd>Home</kbd> | Moves to the first cell in the current row. |
 | <kbd>Ctrl</kbd> + <kbd>End</kbd> | <kbd>⌘</kbd> + <kbd>End</kbd> | Moves to the last used cell. |
 | <kbd>Ctrl</kbd> + <kbd>Arrow Keys</kbd> | <kbd>⌘</kbd> + <kbd>Arrow Keys</kbd> | Moves to the edge of the current data region. |
 
