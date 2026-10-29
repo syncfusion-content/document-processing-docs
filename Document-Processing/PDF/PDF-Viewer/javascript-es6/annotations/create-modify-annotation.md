@@ -30,6 +30,7 @@ Shape annotations:
 - Rectangle: [Rectangle annotation](./annotation-types/rectangle-annotation)
 - Circle: [Circle annotation](./annotation-types/circle-annotation)
 - Polygon: [Polygon annotation](./annotation-types/polygon-annotation)
+- Cloud: [Cloud annotation](./annotation-types/cloud-annotation)
 
 Measurement annotations:
 

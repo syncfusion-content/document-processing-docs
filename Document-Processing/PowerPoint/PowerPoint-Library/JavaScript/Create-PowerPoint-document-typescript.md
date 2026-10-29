@@ -13,7 +13,7 @@ canonical_url: https://help.syncfusion.com/document-processing/presentation/pptx
 
 The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) is used to create, read, and edit PowerPoint presentations. The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) also offers functionality to insert shapes, images, text, and paragraphs with rich formatting.
 
-This guide explains how to integrate the [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) into a TypeScript application that runs in the browser. The generated PowerPoint presentation is downloaded directly from the browser; no server-side PowerPoint rendering is required.
+This guide explains how to integrate the [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) into a TypeScript application that runs in the browser. The sample saves the generated PowerPoint presentation with `save('Output.pptx')`.
 
 ## Prerequisites
 
@@ -157,29 +157,8 @@ document.getElementById('normalButton').onclick = async (): Promise<void> => {
   textPart.font.bold = true;
   textPart.font.fontSize = 36;
 
-  try {
-    // Saves the presentation
-    const bytes = await pptxDoc.save();
-
-    // Creates a blob from the bytes
-    const blob = new Blob([bytes as Uint8Array], {
-      type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-    });
-
-    // Creates a download link
-    const url = window.URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = 'Output.pptx';
-
-    // Triggers the download
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    window.URL.revokeObjectURL(url);
-  } catch (error) {
-    console.error('Error creating PowerPoint file:', error);
-  }
+  // Saves the Presentation to the file system.
+  await pptxDoc.save('Output.pptx');
 };
 
 {% endhighlight %}
@@ -193,7 +172,7 @@ The quickstart project is configured to compile and run in the browser. Use the 
 npm start
 ```
 
-Vite serves the application at `http://localhost:5173`. Open this URL in a browser and click **Create PowerPoint document** to download the generated file as `Output.pptx`.
+Vite serves the application at `http://localhost:5173`. Open this URL in a browser and click **Create PowerPoint document**. The sample saves the presentation as `Output.pptx`.
 
 
 ## Additional Resources

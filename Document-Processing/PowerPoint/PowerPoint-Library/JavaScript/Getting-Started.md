@@ -12,7 +12,7 @@ keywords: javascript, powerpoint, react
 
 The `JavaScript PowerPoint Library` facilitates the creation of a simple PowerPoint presentation with basic elements from scratch.
 
-This guide explains how to integrate the `JavaScript PowerPoint Library` into a React application that runs in the browser. The generated PowerPoint presentation is downloaded directly from the browser; no server-side PowerPoint rendering is required.
+This guide explains how to integrate the `JavaScript PowerPoint Library` into a React application. The sample saves the generated PowerPoint presentation with `save('Output.pptx')`.
 
 ## Prerequisites
 
@@ -76,11 +76,11 @@ export default function App() {
 		// Adds a textbox for the title.
 		const titleShape = slide.shapes.addTextBox({
 			bounds: {
-						x: 55,
-						y: 25,
-						width: 850,
-						height: 72,
-				},
+				x: 55,
+          		y: 25,
+          		width: 850,
+          		height: 72
+				}
 			});
 		const paragraph = titleShape.textBody.addParagraph();
 		paragraph.horizontalAlignment = HorizontalAlignmentType.Center; 
@@ -88,26 +88,8 @@ export default function App() {
 		textPart1.font.fontName = 'Calibri';
 		textPart1.font.bold = true;
 		textPart1.font.fontSize = 36;
-        try {
-            const bytes = await pptxDoc.save();
-            const blob = new Blob(
-                [bytes],
-                {
-                    type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-                }
-            );
-            const url = window.URL.createObjectURL(blob);
-            const link = document.createElement('a');
-            link.href = url;
-            link.download = 'Output.pptx';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            window.URL.revokeObjectURL(url);
-
-        } catch (error) {
-            console.error('Error creating PowerPoint file:', error);
-        }
+        // Saves the Presentation to the file system.
+        await pptxDoc.save('Output.pptx');
     };
     return (
         <div style={{ padding: '1.5rem' }}>
@@ -130,7 +112,7 @@ Open a terminal in the project root and start the Vite development server:
 npm run dev
 ```
 
-Vite serves the application at `http://localhost:5173`. Open this URL in a browser and click **Create PowerPoint document** to download the generated file as `Output.pptx`.
+Vite serves the application at `http://localhost:5173`. Open this URL in a browser and click **Create PowerPoint document**. The sample saves the presentation as `Output.pptx`.
 
 The generated PowerPoint presentation contains a single slide with the text "Hello World!!!".
 

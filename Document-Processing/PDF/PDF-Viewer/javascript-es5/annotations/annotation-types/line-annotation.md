@@ -351,6 +351,62 @@ pdfviewer.appendTo('#PdfViewer');
 
 N> In both [Arrow](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#arrowsettings) and [Line](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#linesettings) annotation settings, the Fill Color option is available only when an arrowhead style is applied at the Start or End. If both Start and End arrowhead styles are set to None, lines do not support fill rendering and the Fill Color option remains disabled.
 
+### Supported Border Styles
+
+In addition to the default **Solid** border, Line annotations support the following additional border style:
+
+- **Dashed** — dashed line border.
+
+Use [`BorderStyle`](https://ej2.syncfusion.com//documentation/api/pdfviewer/borderStyle) values such as `BorderStyle.Cloud` and `BorderStyle.Dashed` together with the optional `borderDashArray` settings in the [`lineSettings`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#lineSettings) property.
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `borderStyle` | `BorderStyle` | Specifies the border style. Supported values: `BorderStyle.Solid` and `BorderStyle.Dashed`. |
+| `borderDashArray` | `number[]` | Specifies the dash pattern when `borderStyle` is `BorderStyle.Dashed`. |
+
+N> `borderStyle` and `borderDashArray` are preserved during save, reload, import, and export.
+
+#### Apply a Dashed Border
+
+```ts
+export enum BorderStyle {
+    Solid = 'Solid',
+    Dashed = 'Dashed',
+    Cloud = 'Cloud'
+}
+```
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+ej.pdfviewer.PdfViewer.Inject(
+    ej.pdfviewer.Toolbar,
+    ej.pdfviewer.Magnification,
+    ej.pdfviewer.Navigation,
+    ej.pdfviewer.Annotation,
+    ej.pdfviewer.LinkAnnotation,
+    ej.pdfviewer.ThumbnailView,
+    ej.pdfviewer.BookmarkView,
+    ej.pdfviewer.TextSelection,
+    ej.pdfviewer.TextSearch,
+    ej.pdfviewer.FormFields,
+    ej.pdfviewer.FormDesigner,
+    ej.pdfviewer.PageOrganizer
+);
+
+var pdfviewer = new ej.pdfviewer.PdfViewer();
+pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
+pdfviewer.lineSettings = {
+    strokeColor: '#0066ff',
+    thickness: 2,
+    opacity: 0.9,
+    borderStyle: ej.pdfviewer.BorderStyle.Dashed,
+    borderDashArray: [5, 5]
+  };
+pdfviewer.appendTo('#PdfViewer');
+{% endhighlight %}
+{% endtabs %}
+
 ## Set properties while adding Individual Annotation
 
 Set properties for individual annotations while adding the annotation using `addAnnotation()`.

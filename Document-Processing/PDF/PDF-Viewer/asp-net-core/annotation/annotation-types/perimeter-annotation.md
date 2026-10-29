@@ -110,6 +110,49 @@ window.onload = function () {
 {% endhighlight %}
 {% endtabs %}
 
+### Supported Border Styles
+
+In addition to the default **Solid** border, Perimeter annotations support the following additional border style:
+
+- **Dashed** — dashed line border.
+
+Use [`BorderStyle`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.borderstyle.html) values such as `BorderStyle.Cloud` and `BorderStyle.Dashed` together with the optional `borderDashArray` settings in the [`perimeterSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#perimeterSettings) property.
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `borderStyle` | `BorderStyle` | Specifies the border style. Supported values: `BorderStyle.Solid` and `BorderStyle.Dashed`. |
+| `borderDashArray` | `number[]` | Specifies the dash pattern when `borderStyle` is `BorderStyle.Dashed`. |
+
+N> `borderStyle` and `borderDashArray` are preserved during save, reload, import, and export.
+
+#### Apply a Dashed Border
+
+```ts
+export enum BorderStyle {
+    Solid = 'Solid',
+    Dashed = 'Dashed',
+    Cloud = 'Cloud'
+}
+```
+
+{% tabs %}
+{% highlight cshtml tabtitle="Standalone" %}
+<div style="width:100%;height:650px">
+    <ejs-pdfviewer id="pdfviewer"
+                   style="height:650px"
+                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib">
+    </ejs-pdfviewer>
+</div>
+<script>
+window.onload = function () {
+  var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+  viewer.perimeterSettings = { fillColor: 'blue', strokeColor: 'green', thickness: 2, opacity: 0.9, borderStyle: 'Dashed', borderDashArray: [5, 5] };
+}
+</script>
+{% endhighlight %}
+{% endtabs %}
+
 ## Manage Perimeter (Move, Reshape, Edit, Delete)
 - **Move**: Drag inside the shape to reposition it.
 - **Reshape**: Drag any vertex handle to adjust points and shape.
