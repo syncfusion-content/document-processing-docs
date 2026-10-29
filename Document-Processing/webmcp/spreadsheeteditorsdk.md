@@ -72,11 +72,11 @@ WebMCP integrates seamlessly into Syncfusion Spreadsheet applications across all
 
 ### Supported Platforms
 
-- **[WebMCP Integration for React Spreadsheet](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/webmcp)** — React-based Spreadsheet Editor
-- **[WebMCP Integration for Angular Spreadsheet](https://help.syncfusion.com/document-processing/excel/spreadsheet/angular/webmcp)** — Angular-based Spreadsheet Editor
-- **[WebMCP Integration for Vue Spreadsheet](https://help.syncfusion.com/document-processing/excel/spreadsheet/vue/webmcp)** — Vue.js-based Spreadsheet Editor
-- **[WebMCP Integration for TypeScript Spreadsheet](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es6/webmcp)** — TypeScript/ES6 Spreadsheet Editor
-- **[WebMCP Integration for JavaScript Spreadsheet](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es5/webmcp)** — Vanilla JavaScript/ES5 Spreadsheet Editor
+- **[WebMCP Integration for React Spreadsheet](https://ej2.syncfusion.com/react/documentation/webmcp/overview)** — React-based Spreadsheet Editor
+- **[WebMCP Integration for Angular Spreadsheet](https://ej2.syncfusion.com/angular/documentation/webmcp/overview)** — Angular-based Spreadsheet Editor
+- **[WebMCP Integration for Vue Spreadsheet](https://ej2.syncfusion.com/vue/documentation/webmcp/overview)** — Vue.js-based Spreadsheet Editor
+- **[WebMCP Integration for TypeScript Spreadsheet](https://ej2.syncfusion.com/documentation/webmcp/overview)** — TypeScript/ES6 Spreadsheet Editor
+- **[WebMCP Integration for JavaScript Spreadsheet](https://ej2.syncfusion.com/javascript/documentation/webmcp/overview)** — Vanilla JavaScript/ES5 Spreadsheet Editor
 
 ## Common Use Cases
 

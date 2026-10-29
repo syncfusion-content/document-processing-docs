@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
  
-# WebMCP Tools Integration for Syncfusion® JavaScript (ES5) Spreadsheet control
+# WebMCP Tools Integration for JavaScript (ES5) Spreadsheet control
  
 WebMCP enables AI agents to discover and interact with Syncfusion® JavaScript (ES5) Spreadsheet through a standardized tool interface. By enabling WebMCP, AI-powered applications can securely discover control capabilities, read data, perform actions, and automate workflows through a standardized interface.
 
