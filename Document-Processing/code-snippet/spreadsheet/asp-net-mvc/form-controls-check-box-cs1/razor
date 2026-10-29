@@ -1,45 +1,45 @@
-@Html.EJS().Spreadsheet("spreadsheet").ShowFormulaBar(false).AllowFormControl(true).Sheets(sheet =>
+@Html.EJS().Spreadsheet("spreadsheet").Created("created").Sheets(sheet =>
 {
-    sheet.Name("FormControls").Rows(row =>
-    {
-        row.Cells(cell =>
+    sheet.Name("Price Details")
+        .Ranges(ranges =>
         {
-            cell.Value("Form Controls Demo").Style(new SpreadsheetCellStyle() { FontWeight = FontWeight.Bold, TextAlign = TextAlign.Center }).Add();
-        }).Add();
-        
-        row.Cells(cell =>
+            ranges.DataSource((IEnumerable<object>)ViewBag.DefaultData)
+                .StartCell("A1")
+                .Add();
+        })
+        .FormControls(formControls =>
         {
-            cell.Value("Check Box Control").Add();
-            cell.Value("").Add();
-            cell.Value("Cell Link").Add();
-            cell.Value("").Add();
-        }).Add();
-        
-        row.Cells(cell =>
+            formControls.Type(FormControlType.CheckBox)
+                .Text("Check Box 1")
+                .CellLink("G1")
+                .Height(40)
+                .Width(180)
+                .Add();
+        })
+        .Columns(column =>
         {
-            cell.Value("Notifications").Add();
-            cell.Value("").Add();
-            cell.Value("Cell Link").Add();
-            cell.Value("").Add();
-        }).Index(3).Add();
-        
-        row.Cells(cell =>
-        {
-            cell.Value("Select All").Add();
-            cell.Value("").Add();
-            cell.Value("Cell Link").Add();
-            cell.Value("").Add();
-        }).Index(5).Add();
-    }).Columns(column =>
-    {
-        column.Width(150).Add();
-        column.Width(150).Add();
-        column.Width(150).Add();
-        column.Width(150).Add();
-    }).FormControls(formControl =>
-    {
-        formControl.Type("CheckBox").Text("Accept Terms").CellLink("D2").Value("Unchecked").Top(40).Left(150).Height(20).Width(120).Add();
-        formControl.Type("CheckBox").Text("Enable Notifications").CellLink("D4").Value("Unchecked").Top(80).Left(150).Height(20).Width(120).Add();
-        formControl.Type("CheckBox").Text("Select All Options").CellLink("D6").Value("Unchecked").Top(120).Left(150).Height(20).Width(120).Add();
-    }).Add();
+            column.Width(180).Add();
+            column.Width(130).Add();
+            column.Width(130).Add();
+            column.Width(180).Add();
+            column.Width(130).Add();
+            column.Width(120).Add();
+        })
+        .Add();
 }).Render()
+
+<script>
+    function created() {
+        this.cellFormat(
+            {
+                fontWeight: 'bold',
+                textAlign: 'center',
+                verticalAlign: 'middle'
+            },
+            'A1:F1'
+        );
+
+        this.numberFormat('$#,##0.00', 'F2:F31');
+        this.numberFormat('m/d/yyyy', 'E2:E30');
+    }
+</script>
