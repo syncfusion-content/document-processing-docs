@@ -1,22 +1,21 @@
 ---
 layout: post
-title: WebMCP tool integration for JavaScript (ES5) controls | Syncfusion
-description: Learn how to integrate WebMCP with Syncfusion JavaScript (ES5) controls to enable AI interaction, configure tools, manage access, and monitor execution.
+title: WebMCP tool integration for JavaScript (ES5) Spreadsheet | Syncfusion
+description: Learn how to integrate WebMCP with Syncfusion JavaScript (ES5) Spreadsheet to enable AI interaction, configure tools, manage access, and monitor execution.
 control: WebMCP
-platform: ej2-javascript
+platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
  
-# WebMCP Tools Integration for Syncfusion® JavaScript (ES5) Controls
+# WebMCP Tools Integration for Syncfusion® JavaScript (ES5) Spreadsheet component
  
-WebMCP enables AI agents to discover and interact with Syncfusion® JavaScript (ES5) controls through a standardized tool interface. By enabling WebMCP, AI-powered applications can securely discover control capabilities, read data, perform actions, and automate workflows through a standardized interface.
+WebMCP enables AI agents to discover and interact with Syncfusion® JavaScript (ES5) Spreadsheet through a standardized tool interface. By enabling WebMCP, AI-powered applications can securely discover control capabilities, read data, perform actions, and automate workflows through a standardized interface.
 
 This section demonstrates how to integrate WebMCP with the Syncfusion® JavaScript (ES5) Spreadsheet control.
  
 ## WebMCP Overview
  
-WebMCP allows AI assistants running in the browser to interact directly with Syncfusion® controls through natural language prompts.
+WebMCP allows AI assistants running in the browser to interact directly with Syncfusion® JavaScript (ES5) Spreadsheet through natural language prompts.
  
 Instead of relying on DOM inspection or simulating user interactions, AI assistants can interact directly with control APIs through WebMCP tools. This approach provides more reliable and accurate results.
  
@@ -30,7 +29,7 @@ Once connected, an AI assistant can perform tasks such as:
  
 ## Prerequisites
  
-- Syncfusion® JavaScript (ES5) controls
+- Syncfusion® JavaScript (ES5) Spreadsheet component
 - Chromium-based Browser (like Chrome, Edge, or Brave)
 - [Node.js 24+](https://nodejs.org/en) (LTS recommended).
 - WebMCP browser extension installed
@@ -46,11 +45,11 @@ Before you can use WebMCP locally, enable the feature flag and install the brows
  
 3. Visit [Google AI Studio](https://aistudio.google.com/app/apikey) to create or copy an API key. Open the WebMCP extension → paste your API key.
  
-The WebMCP extension is now configured and ready to interact with WebMCP-enabled Syncfusion® controls.
+The WebMCP extension is now configured and ready to interact with WebMCP-enabled Syncfusion® JavaScript (ES5) Spreadsheet component.
 
 ## Integrating WebMCP tools
 
-Follow these steps to integrate WebMCP support into Syncfusion® JavaScript (ES5) controls. The following example uses the Spreadsheet control.
+Follow these steps to integrate WebMCP support into Syncfusion® JavaScript (ES5) Spreadsheet component.
 
 ### Step 1: Create an application
 
@@ -92,7 +91,7 @@ spreadsheet.appendTo('#spreadsheet');
 
 Set the `enableWebMcp` property to `true` to register the control's available tools with the WebMCP runtime.
 
-When `enableWebMcp` is enabled, supported control tools are automatically registered with the WebMCP runtime and become discoverable by authorized WebMCP clients.
+When `enableWebMcp` is enabled, Spreadsheet component tools are automatically registered with the WebMCP runtime and become discoverable by authorized WebMCP clients.
 
 For example, a Spreadsheet control may expose tools such as:
 
@@ -150,7 +149,7 @@ spreadsheet.appendTo('#spreadsheet');
 </script>
 ```
 
-> Use the `exposeTo` property to restrict WebMCP access to trusted domains. This helps prevent unauthorized WebMCP clients from interacting with your control tools.
+> Use the `exposeTo` property to restrict WebMCP access to trusted domains. This helps prevent unauthorized WebMCP clients from interacting with your spreadsheet component tools.
 
 ### Step 5: Monitor and control tool execution
 
@@ -217,4 +216,4 @@ After successfully enabling WebMCP, you can:
 
 ## See also
 
-- [WebMCP Supported Syncfusion JavaScript (ES5) Controls](./controls)
+- [MCP Server Setup in JavaScript (ES5) Spreadsheet](./mcp.md)
