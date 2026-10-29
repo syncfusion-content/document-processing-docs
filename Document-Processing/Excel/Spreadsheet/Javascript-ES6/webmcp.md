@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
  
-# WebMCP Tools Integration for Syncfusion® JavaScript Spreadsheet component
+# WebMCP Tools Integration for Syncfusion® JavaScript Spreadsheet control
  
 WebMCP enables AI agents to discover and interact with Syncfusion® JavaScript Spreadsheet through a standardized tool interface. By enabling WebMCP, AI-powered applications can securely discover control capabilities, read data, perform actions, and automate workflows through a standardized interface.
 
@@ -29,7 +29,7 @@ Once connected, an AI assistant can perform tasks such as:
  
 ## Prerequisites
  
-- Syncfusion® JavaScript Spreadsheet component
+- Syncfusion® JavaScript Spreadsheet control
 - Chromium-based Browser (like Chrome, Edge, or Brave)
 - [Node.js 24+](https://nodejs.org/en) (LTS recommended).
 - WebMCP browser extension installed
@@ -45,11 +45,11 @@ Before you can use WebMCP locally, enable the feature flag and install the brows
  
 3. Visit [Google AI Studio](https://aistudio.google.com/app/apikey) to create or copy an API key. Open the WebMCP extension → paste your API key.
  
-The WebMCP extension is now configured and ready to interact with WebMCP-enabled Syncfusion® JavaScript Spreadsheet component.
+The WebMCP extension is now configured and ready to interact with WebMCP-enabled Syncfusion® JavaScript Spreadsheet control.
 
 ## Integrating WebMCP tools
 
-Follow these steps to integrate WebMCP support into Syncfusion® JavaScript Spreadsheet component.
+Follow these steps to integrate WebMCP support into Syncfusion® JavaScript Spreadsheet control.
 
 ### Step 1: Create an application
 
@@ -95,7 +95,7 @@ spreadsheet.appendTo('#spreadsheet');
 
 Set the `enableWebMcp` property to `true` to register the control's available tools with the WebMCP runtime.
 
-When `enableWebMcp` is enabled, Spreadsheet component tools are automatically registered with the WebMCP runtime and become discoverable by authorized WebMCP clients.
+When `enableWebMcp` is enabled, Spreadsheet control tools are automatically registered with the WebMCP runtime and become discoverable by authorized WebMCP clients.
 
 For example, a Spreadsheet control may expose tools such as:
 
@@ -148,7 +148,7 @@ const spreadsheet = new Spreadsheet({
 spreadsheet.appendTo('#spreadsheet');
 ```
 
-> Use the `exposeTo` property to restrict WebMCP access to trusted domains. This helps prevent unauthorized WebMCP clients from interacting with your spreadsheet component tools.
+> Use the `exposeTo` property to restrict WebMCP access to trusted domains. This helps prevent unauthorized WebMCP clients from interacting with your spreadsheet control tools.
 
 ### Step 5: Monitor and control tool execution
 
