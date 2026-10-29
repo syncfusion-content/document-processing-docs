@@ -4,6 +4,7 @@ description: Learn about the Syncfusion® .NET PowerPoint to PDF conversion feat
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # About Syncfusion .NET PowerPoint to PDF Conversion Library

@@ -4,6 +4,7 @@ description: Open and save PowerPoint presentations in Azure services with the .
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Open and save PowerPoint document in Azure

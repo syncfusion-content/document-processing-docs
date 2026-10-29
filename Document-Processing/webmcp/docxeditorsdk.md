@@ -5,6 +5,7 @@ description: Learn about WebMCP (Model Context Protocol) and how to use it with 
 platform: document-processing
 control: WebMCP
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # WebMCP Tools for DOCX Editor SDK

@@ -4,6 +4,7 @@ description: Create Markdown document without external dependencies in .NET MAUI
 platform: document-processing
 control: Markdown
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Markdown document in .NET MAUI

@@ -5,6 +5,7 @@ platform: document-processing
 control: SmartDataExtractor
 documentation: UG
 keywords: Key-Value Pair Extraction, Form Data Extraction, JSON Output
+appliesto: Document SDK
 ---
 
 # Key-Value Pair Extraction in .NET Smart Data Extractor
