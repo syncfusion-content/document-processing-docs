@@ -138,5 +138,5 @@ To open the Format Control dialog:
 
 ## See Also
 
-* [Data Validation](../data-validation)
-* [Cell Formatting](../formatting/text-cell-formatting)
+* [Comment](./comment)
+* [Formatting](./formatting)
