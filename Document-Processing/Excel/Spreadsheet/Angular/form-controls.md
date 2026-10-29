@@ -38,11 +38,17 @@ The linked cell value is automatically updated whenever the Check Box state chan
 
 The following code example shows the Check Box Form Control functionality in the Spreadsheet control.
 
+{% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/form-controls-check-box-cs1/app/app.ts %}
+{% include code-snippet/spreadsheet/angular/form-controls-check-box-cs1/src/app.ts %}
 {% endhighlight %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/angular/form-controls-check-box-cs1" %}
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/spreadsheet/angular/form-controls-check-box-cs1/src/main.ts %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "/document-processing/samples/spreadsheet/angular/form-controls-check-box-cs1" %}
 
 ### Radio Button
 
@@ -62,11 +68,17 @@ The linked cell value is automatically updated whenever the Radio Button state c
 
 The following code example shows the Radio Button Form Control functionality in the Spreadsheet control.
 
+{% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/form-controls-radio-button-cs1/app/app.ts %}
+{% include code-snippet/spreadsheet/angular/form-controls-radio-button-cs1/src/app.ts %}
 {% endhighlight %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/angular/form-controls-radio-button-cs1" %}
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/spreadsheet/angular/form-controls-radio-button-cs1/src/main.ts %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "/document-processing/samples/spreadsheet/angular/form-controls-radio-button-cs1" %}
 
 ### Combo Box (Dropdown)
 
@@ -83,11 +95,17 @@ The linked cell value is automatically updated whenever the Combo Box's selected
 
 The following code example shows the Combo Box (Dropdown) Form Control functionality in the Spreadsheet control.
 
+{% tabs %}
 {% highlight ts tabtitle="app.ts" %}
-{% include code-snippet/spreadsheet/angular/form-controls-dropdown-cs1/app/app.ts %}
+{% include code-snippet/spreadsheet/angular/form-controls-dropdown-cs1/src/app.ts %}
 {% endhighlight %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/angular/form-controls-dropdown-cs1" %}
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/spreadsheet/angular/form-controls-dropdown-cs1/src/main.ts %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "/document-processing/samples/spreadsheet/angular/form-controls-dropdown-cs1" %}
 
 ## Inserting Form Controls
 
