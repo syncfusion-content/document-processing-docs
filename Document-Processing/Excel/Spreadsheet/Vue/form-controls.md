@@ -47,7 +47,7 @@ The following code example shows the Check Box Form Control functionality in the
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/code-snippet/spreadsheet/vue/form-controls-check-box-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/form-controls-check-box-cs1" %}
 
 ### Radio Button
 
@@ -76,7 +76,7 @@ The following code example shows the Radio Button Form Control functionality in 
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/code-snippet/spreadsheet/vue/form-controls-radio-button-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/form-controls-radio-button-cs1" %}
 
 ### Combo Box (Dropdown)
 
@@ -102,7 +102,7 @@ The following code example shows the Combo Box (Dropdown) Form Control functiona
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "/code-snippet/spreadsheet/vue/form-controls-dropdown-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/form-controls-dropdown-cs1" %}
 
 ## Inserting Form Controls
 
