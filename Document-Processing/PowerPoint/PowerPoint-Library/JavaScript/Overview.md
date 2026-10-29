@@ -25,6 +25,7 @@ The following are the key features of the [JavaScript PowerPoint Library](https:
 
 | Environment | Get started |
 |---|---|
+| Node.js | [Create PowerPoint in Node.js](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/create-powerpoint-document-node-js) |
 | JavaScript | [Create PowerPoint in JavaScript](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/create-powerpoint-document-javascript) |
 | TypeScript | [Create PowerPoint in TypeScript](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/create-powerpoint-document-typescript) |
 | Angular | [Create PowerPoint in Angular](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/create-powerpoint-document-angular) |
