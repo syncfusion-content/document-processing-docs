@@ -110,6 +110,49 @@ Configure default arrow appearance (fill color, stroke color, thickness, opacity
 
 N> For **Line** and **Arrow** annotations, **Fill Color** is available only when an arrowhead style is applied at the **Start** or **End**. If both are `None`, lines do not render fill and the Fill option remains disabled.
 
+### Supported Border Styles
+
+In addition to the default **Solid** border, Arrow annotations support the following additional border style:
+
+- **Dashed** — dashed line border.
+
+Use [`BorderStyle`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.borderstyle.html) values such as `BorderStyle.Cloud` and `BorderStyle.Dashed` together with the optional `borderDashArray` settings in the [`arrowSettings`](https://help.syncfusion.com/cr/aspnetcore-js2/syncfusion.ej2.pdfviewer.pdfviewer.html#arrowSettings) property.
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `borderStyle` | `BorderStyle` | Specifies the border style. Supported values: `BorderStyle.Solid` and `BorderStyle.Dashed`. |
+| `borderDashArray` | `number[]` | Specifies the dash pattern when `borderStyle` is `BorderStyle.Dashed`. |
+
+N> `borderStyle` and `borderDashArray` are preserved during save, reload, import, and export.
+
+#### Apply a Dashed Border
+
+```ts
+export enum BorderStyle {
+    Solid = 'Solid',
+    Dashed = 'Dashed',
+    Cloud = 'Cloud'
+}
+```
+
+{% tabs %}
+{% highlight cshtml tabtitle="Standalone" %}
+<div style="width:100%;height:650px">
+    <ejs-pdfviewer id="pdfviewer"
+                   style="height:650px"
+                   documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+                   resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib">
+    </ejs-pdfviewer>
+</div>
+<script>
+window.onload = function () {
+  var viewer = document.getElementById('pdfviewer').ej2_instances[0];
+  viewer.arrowSettings = { fillColor: '#ffff00', strokeColor: '#0066ff', thickness: 2, opacity: 0.9, borderStyle: 'Dashed', borderDashArray: [5, 5] };
+}
+</script>
+{% endhighlight %}
+{% endtabs %}
+
 ## Manage Arrow (Edit, Move, Resize, Delete)
 ### Edit Arrow 
 

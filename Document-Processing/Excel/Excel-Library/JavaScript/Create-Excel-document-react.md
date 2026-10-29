@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Getting Started with JavaScript Excel in React app | Syncfusion
+title: Getting Started with Excel Library in React | Syncfusion
 description: Learn how to create and download an Excel workbook in a React application using the Syncfusion JavaScript Excel Library.
 control: Excel
 platform: document-processing
 documentation: ug
 ---
 
-# Getting Started with JavaScript Excel in React app
+# Getting Started with JavaScript Excel Library in React
 
 The <a href="https://help.syncfusion.com/document-processing/excel/excel-library/javascript/overview" aria-label="JavaScript Excel Library overview documentation"> JavaScript Excel Library</a> is used to create, read, and edit Microsoft Excel (`.xlsx`) workbooks. You can work with worksheets, cells, formulas, formatting, and other spreadsheet features without Microsoft Excel installed.
 
-This guide explains how to integrate the <a href="https://helpstaging.syncfusion.com/document-processing/excel/excel-library/javascript/overview" aria-label="JavaScript Excel Library overview documentation on staging">JavaScript Excel Library</a> into a React application that runs in the browser. The generated workbook is downloaded directly from the browser; no server-side Excel processing is required.
+This guide explains how to integrate the <a href="https://help.syncfusion.com/document-processing/excel/excel-library/javascript/overview" aria-label="JavaScript Excel Library overview documentation on staging">JavaScript Excel Library</a> into a React application that runs in the browser. The generated workbook is downloaded directly from the browser; no server-side Excel processing is required.
 
 ## Prerequisites
 
@@ -30,7 +30,7 @@ node --version
 npm --version
 ```
 
-## Create a React Project
+## Create a React project
 
 This guide uses <a href="https://vitejs.dev/" aria-label="Vite official website">Vite</a> to scaffold the React project. Run the following command in a terminal:
 
@@ -55,27 +55,13 @@ All Syncfusion<sup>&reg;</sup> JS 2 packages are published in the `npmjs.com` re
 npm install @syncfusion/ej2-xlsx --save
 ```
 
-### Transitive Dependencies
+### Transitive dependencies
 
 The following package is included automatically by `@syncfusion/ej2-xlsx` and does not need to be installed separately:
 
-- `@syncfusion/ej2-base` — common utilities used by the library, including license registration.
+- `@syncfusion/ej2-base` — common utilities used by the library.
 
-## License Registration
-
-If your project requires a Syncfusion license, register the license key before using the Excel API. Add the following code at the top of `App.jsx`:
-
-```javascript
-import { registerLicense } from '@syncfusion/ej2-base';
-
-registerLicense('YOUR_LICENSE_KEY');
-```
-
-Replace `YOUR_LICENSE_KEY` with the key from your Syncfusion account. For more information, see the <a href="https://help.syncfusion.com/document-processing/licensing/overview" aria-label="Syncfusion licensing overview documentation">Syncfusion licensing documentation</a>.
-
-N> A valid Syncfusion license is required for commercial use.
-
-## Create an Excel Workbook
+## Create an Excel workbook
 
 Replace the contents of `App.jsx` with the following code. The file imports `Workbook` from `@syncfusion/ej2-xlsx`, writes sample cell values, saves the workbook as bytes, and downloads the result as an `.xlsx` file from the browser.
 
@@ -84,11 +70,7 @@ Replace the contents of `App.jsx` with the following code. The file imports `Wor
 {% raw %}
 
 import React from 'react';
-import { registerLicense } from '@syncfusion/ej2-base';
 import { Workbook } from '@syncfusion/ej2-xlsx';
-
-// Register the Syncfusion license key.
-registerLicense('YOUR_LICENSE_KEY');
 
 export default function App() {
   const createExcel = async () => {
@@ -146,9 +128,8 @@ N> Import `Workbook` as a named export from `@syncfusion/ej2-xlsx`.
 
 N> In the browser, call the parameterless `save()` overload, which returns a `Promise<Uint8Array>`. Saving to a file system path with `save(filePath)` requires the Node.js file system module and is not available in browser apps.
 
-## Code Explanation
+## Code explanation
 
-- `registerLicense(key)` - registers the Syncfusion license key at application startup. Required for commercial usage.
 - `Workbook.create()` - creates a new workbook with one visible worksheet named `Sheet1`.
 - `workbook.sheet(0)` - returns the worksheet at the zero-based index.
 - `sheet.name` - sets the worksheet tab name. This example renames the first sheet to `Sales`.
@@ -159,7 +140,7 @@ N> In the browser, call the parameterless `save()` overload, which returns a `Pr
 - `anchor.remove()` - removes the temporary anchor element after the download click.
 - `URL.revokeObjectURL(url)` - releases the temporary object URL after the download starts.
 
-## Run the Application
+## Run the application
 
 Open a terminal in the project root and start the Vite development server:
 
@@ -182,5 +163,4 @@ N> If you used Create-React-App instead of Vite, the run command is `npm start` 
 | Button click does nothing | The click handler is not wired, or an error is thrown inside the async function | Confirm the button uses `onClick={createExcel}` and check the browser console for errors |
 | `save(filePath) requires the Node.js filesystem and is not available in this environment` | A path was passed to `save()` in the browser | Use `const bytes = await workbook.save()` with no arguments, then download the bytes |
 | `Output.xlsx` does not download | The browser blocks the download, or the click handler did not finish | Check the browser download settings, allow downloads for the site, and confirm `await workbook.save()` completed |
-| `registerLicense` warning at runtime | The license key is missing or invalid | Confirm the key is set in `App.jsx` and is the correct key for your Syncfusion account |
-| Vite dev server fails to start | Port `5173` is in use | Stop the conflicting process or change the port in `vite.config.js` |
+| Vite development server fails to start | Port `5173` is in use | Stop the conflicting process or change the port in `vite.config.js` |

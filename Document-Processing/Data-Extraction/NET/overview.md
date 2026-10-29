@@ -8,6 +8,8 @@ documentation: UG
 keywords: Assemblies
 ---
 
+> With the Essential Studio 2027 Volume 1 release, we will discontinue support for .NET 8.0 and .NET 9.0 in ASP.NET Core, Blazor, .NET MAUI, WinUI, WinForms, WPF, and Document Processing Libraries. Please plan to upgrade to .NET 10.0 or higher.
+
 # About Syncfusion .NET Smart Data Extraction Library
 
 .NET **Smart Data Extractor** is a high‑performance, deterministic C# library for extracting structured document content from **PDFs** and **images**. Tailored for modern .NET workflows, it interprets visual layout patterns—lines, boxes, labels, and alignment—to accurately identify and extract **tables**, **text elements**, **images**, **headers**, **footers**, **barcodes**, and **form fields**. Each extracted element includes per‑field confidence scores, ensuring reliable validation, seamless export, and smooth integration into applications.

@@ -251,6 +251,69 @@ pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
+### Supported Border Styles
+
+In addition to the default **Solid** border, Circle annotations support the following additional border styles:
+
+- **Cloud** — scalloped cloud border.
+- **Dashed** — dashed line border.
+
+Use [`BorderStyle`](https://ej2.syncfusion.com//documentation/api/pdfviewer/borderStyle) values such as `BorderStyle.Cloud` and `BorderStyle.Dashed` together with the optional `borderDashArray` and `cloudIntensity` settings in the [`circleSettings`](https://ej2.syncfusion.com/documentation/api/pdfviewer/index-default#circleSettings) property.
+
+| Property | Type | Description |
+| --- | --- | --- |
+| `borderStyle` | `BorderStyle` | Specifies the border style. Supported values: `BorderStyle.Solid`, `BorderStyle.Cloud`, and `BorderStyle.Dashed`. |
+| `borderDashArray` | `number[]` | Specifies the dash pattern when `borderStyle` is `BorderStyle.Dashed`. |
+| `cloudIntensity` | `number` | Specifies the cloud border intensity. Supported range: `1` to `2`; default value: `1`. |
+
+N> `borderStyle`, `borderDashArray`, and `cloudIntensity` are preserved during save, reload, import, and export.
+
+#### Apply a Cloud Border
+
+```ts
+export enum BorderStyle {
+    Solid = 'Solid',
+    Dashed = 'Dashed',
+    Cloud = 'Cloud'
+}
+```
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+var pdfviewer = new ej.pdfviewer.PdfViewer();
+pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
+pdfviewer.circleSettings = {
+    fillColor: '#ffa500',
+    strokeColor: '#ff6a00',
+    thickness: 2,
+    opacity: 0.9,
+    borderStyle: ej.pdfviewer.BorderStyle.Cloud,
+    cloudIntensity: 2
+  };
+pdfviewer.appendTo("#PdfViewer");
+{% endhighlight %}
+{% endtabs %}
+
+#### Apply a Dashed Border
+
+{% tabs %}
+{% highlight js tabtitle="Standalone" %}
+var pdfviewer = new ej.pdfviewer.PdfViewer();
+pdfviewer.documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+pdfviewer.resourceUrl = "https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib";
+pdfviewer.circleSettings = {
+    fillColor: '#ffa500',
+    strokeColor: '#ff6a00',
+    thickness: 2,
+    opacity: 0.9,
+    borderStyle: ej.pdfviewer.BorderStyle.Dashed,
+    borderDashArray: [5, 5]
+  };
+pdfviewer.appendTo("#PdfViewer");
+{% endhighlight %}
+{% endtabs %}
+
 ## Set properties while adding Individual Annotation
 
 Set properties for individual annotations before creating the control using `CircleSettings`

@@ -8,7 +8,7 @@ documentation: UG
 
 # Loading and Saving in JavaScript PowerPoint
 
-The `JavaScript PowerPoint Library` provides support to open existing presentations, modify their content, and save the result. The library accepts presentation data as `Uint8Array` from any source (file system, network, or in-memory buffer) and supports saving to the file system.
+The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) provides support to open existing presentations, modify their content, and save the result. The library accepts presentation data as `Uint8Array` from any source (file system, network, or in-memory buffer) and supports saving to the file system.
 
 ## Opening an existing presentation
 
@@ -18,11 +18,16 @@ Open an existing PowerPoint presentation by passing the Presentation data to the
 {% highlight typescript tabtitle="TypeScript" %}
 
 import { Presentation } from '@syncfusion/ej2-pptx';
- 
+
 // data is a Uint8Array or ArrayBuffer of an .pptx file
 // Loads or opens a PowerPoint Presentation.
-const pptxDoc = await Presentation.open(data);
+let pptxDoc = await Presentation.open(data);
 
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// data is a Uint8Array or ArrayBuffer of an .pptx file
+// Loads or opens a PowerPoint Presentation.
+var pptxDoc = await ej.pptx.Presentation.open(data);
 {% endhighlight %}
 {% endtabs %}
 
@@ -35,12 +40,12 @@ A modified PowerPoint presentation can be saved to the file system by passing th
 
 import { Presentation } from '@syncfusion/ej2-pptx';
 
-// Creates a Presentation instance.
-const pptxDoc = Presentation.create();
-// Adds a slide to the presentation.
-pptxDoc.slides.add();
 // Saves the Presentation to a file.
 await pptxDoc.save('Output.pptx');
 
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Saves the Presentation to a file.
+await pptxDoc.save('Output.pptx');
 {% endhighlight %}
 {% endtabs %}

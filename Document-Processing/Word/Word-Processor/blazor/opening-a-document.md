@@ -393,3 +393,43 @@ The following example code illustrates how to use `MetafileImageParsed` event fo
     }
 }
 ```
+
+## Opening a document in asynchronous mode
+
+[Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) supports asynchronous document loading, which can be enabled using the enable property available in the [`OpenAsyncSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.OpenAsyncSettingsModel.html) API.
+
+### Properties
+
+- **[`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.OpenAsyncSettingsModel.html#Syncfusion_Blazor_DocumentEditor_OpenAsyncSettingsModel_Enable):** Enables or disables asynchronous document loading.
+- **[`InitialPageLoadCount`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.OpenAsyncSettingsModel.html#Syncfusion_Blazor_DocumentEditor_OpenAsyncSettingsModel_InitialPageLoadCount):** Number of pages to load initially when the document is opened.
+- **[`IncrementalPageLoadCount`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.OpenAsyncSettingsModel.html#Syncfusion_Blazor_DocumentEditor_OpenAsyncSettingsModel_IncrementalPageLoadCount):** Number of pages to load incrementally after initial pages load, during the asynchronous document-loading operation.
+
+The following example shows how to open the document asynchronously in DOCX Editor.
+
+```csharp
+@using Syncfusion.Blazor.DocumentEditor
+
+<SfDocumentEditorContainer @ref="container" EnableToolbar=true DocumentEditorSettings="EditorSettings">
+    <DocumentEditorContainerEvents Created="OnCreated"></DocumentEditorContainerEvents>
+</SfDocumentEditorContainer>
+
+@code {
+    SfDocumentEditorContainer container;
+
+    DocumentEditorSettingsModel EditorSettings = new DocumentEditorSettingsModel()
+    {
+        OpenAsyncSettings = new OpenAsyncSettingsModel()
+        {
+            Enable = true,
+            InitialPageLoadCount = 5,
+            IncrementalPageLoadCount = 3
+        }
+    };
+    public async void OnCreated(object args)
+    {
+        SfDocumentEditor editor = container.DocumentEditor;
+    }
+}
+```
+
+N> When asynchronous loading is enabled, the document initially opens in read-only mode, allowing users to view the first set of pages while the remaining pages load in the background. During this time, the document can be viewed but cannot be edited or saved. Once loading is complete, editing and saving become available.

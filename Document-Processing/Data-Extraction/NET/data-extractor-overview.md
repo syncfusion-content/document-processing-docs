@@ -26,4 +26,4 @@ keywords: Assemblies
 
 {% enddoccards %}
 
-The .NET **Smart Data Extractor** extracts structured document content from PDFs and images. It interprets visual layout patterns—lines, boxes, labels, and alignment—to identify and extract *tables, text blocks, images, headers, footers, and form fields*. Each extracted element includes per‑field confidence scores for validation, export, and integration. See the [Conversions overview](NET/conversions/overview.md) for JSON, Markdown, and fillable PDF extraction.
+The .NET **Smart Data Extractor** extracts structured document content from PDFs and images. It interprets visual layout patterns—lines, boxes, labels, and alignment—to identify and extract *tables, text blocks, images, headers, footers, and form fields*. Each extracted element includes per‑field confidence scores for validation, export, and integration. See the [Conversions overview](/document-processing/data-extraction/net/conversions/overview) for JSON, Markdown, and fillable PDF extraction.

@@ -25,7 +25,7 @@ The [`Vue PDF Viewer`](https://www.syncfusion.com/pdf-viewer-sdk) component is a
 * [Print](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/print) PDF files.
 * Annotate PDFs with:
     * [Text markup annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/annotation/text-markup-annotation): highlight, underline, and strikethrough
-    * [Shape annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/annotation/shape-annotation): rectangle, circle, polygon, line, and arrow
+    * [Shape annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/annotation/shape-annotation): rectangle, circle, polygon, cloud, line, and arrow
     * [Stamp annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/annotation/stamp-annotation)
     * [Free text annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/vue/annotation/free-text-annotation)
     * [Link annotations](./annotation/link-annotation)

@@ -1568,4 +1568,109 @@ document.Close(True)
 
 {% endhighlight %}
 
- {% endtabs %}
+{% endtabs %}
+
+## Embed Custom Fonts During SVG-to-PDF Conversion
+
+When converting an SVG document to PDF, fonts used in the SVG may not be available in the conversion environment. In such cases, you can handle the SubstituteFont event and provide the required font stream to ensure the text is rendered correctly and embedded in the generated PDF.
+
+The following code example shows how to subscribe to the `SubstituteFont` event and embed a custom font during SVG to PDF conversion.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Graphics;
+using Syncfusion.Drawing;
+using System.IO;
+using SkiaSharp;
+
+//Initialize SVG converter.
+SvgConverter converter = new SvgConverter();
+
+//Subscribe to the SubstituteFont event to provide font data when a font substitution occurs.
+converter.SubstituteFont += Converter_SubstituteFont;
+
+//Convert the SVG to PdfTemplate.
+PdfTemplate svg = converter.Convert("Input.svg");
+
+//Create a new PDF document.
+PdfDocument document = new PdfDocument();
+
+//Update the page settings based on the SVG size.
+document.PageSettings.Margins.All = 0;
+document.PageSettings.Size = new SizeF(svg.Width, svg.Height);
+
+//Add a new page.
+PdfPage page = document.Pages.Add();
+
+//Draw the template to the page.
+page.Graphics.DrawPdfTemplate(svg, new PointF(0, 0), new SizeF(svg.Width, svg.Height));
+
+//Save the document into stream.
+MemoryStream stream = new MemoryStream();
+document.Save(stream);
+
+//Close the document.
+document.Close(true);
+
+void Converter_SubstituteFont(object sender, PdfFontEventArgs args)
+{
+    //Get the font name.
+    string fontName = args.FontName.Split(',')[0];
+    //Get the font style.
+    PdfFontStyle fontStyle = args.FontStyle;
+    SKFontStyle sKFontStyle = SKFontStyle.Normal;
+    if (fontStyle != PdfFontStyle.Regular)
+    {
+        if (fontStyle == PdfFontStyle.Bold)
+        {
+            sKFontStyle = SKFontStyle.Bold;
+        }
+        else if (fontStyle == PdfFontStyle.Italic)
+        {
+            sKFontStyle = SKFontStyle.Italic;
+        }
+        else if (fontStyle == (PdfFontStyle.Italic | PdfFontStyle.Bold))
+        {
+            sKFontStyle = SKFontStyle.BoldItalic;
+        }
+    }
+    SKTypeface typeface = SKTypeface.FromFamilyName(fontName, sKFontStyle);
+    SKStreamAsset typeFaceStream = typeface.OpenStream();
+    MemoryStream memoryStream = null;
+    if (typeFaceStream != null && typeFaceStream.Length > 0)
+    {
+        //Create the fontData from the type face stream.
+        byte[] fontData = new byte[typeFaceStream.Length];
+        typeFaceStream.Read(fontData, typeFaceStream.Length);
+        typeFaceStream.Dispose();
+
+        //Create the new memory stream from the font data.
+        memoryStream = new MemoryStream(fontData);
+    }
+    //Set the font stream to the event args.
+    args.FontStream = memoryStream;
+}
+
+[!NOTE] The SubstituteFont event is raised when the SVG converter cannot directly access the requested font. In the event handler, provide the corresponding font stream through the FontStream property to ensure the font is embedded in the output PDF.
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+'Embedding custom fonts in SVG to PDF via the SubstituteFont event is supported
+'on .NET Core / portable targets. C# [Windows-specific] samples for this feature are not
+'currently available.
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+'Embedding custom fonts in SVG to PDF via the SubstituteFont event is supported
+'on .NET Core / portable targets. VB.NET samples for this feature are not
+'currently available.
+
+{% endhighlight %}
+{% endtabs %}

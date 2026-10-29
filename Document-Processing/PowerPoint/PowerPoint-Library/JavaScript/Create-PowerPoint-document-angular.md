@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with JavaScript PowerPoint in Angular app | Syncfusion
-description: Learn how to get started with the Syncfusion JavaScript PowerPoint in Angular application. Easy steps to create presentations without depending on Microsoft Office.
+description: Learn how to create PowerPoint presentations in an Angular app using the Syncfusion JavaScript PowerPoint Library without Microsoft Office.
 platform: document-processing
 control: PowerPoint
 documentation: ug
@@ -13,13 +13,8 @@ canonical_url: https://help.syncfusion.com/document-processing/presentation/pptx
 
 The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) is used to create, read, and edit PowerPoint presentations. The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) also offers functionality to insert shapes, images, text, and paragraphs with rich formatting.
 
-This guide explains how to integrate the [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) into an Angular application that runs in the browser. The generated PowerPoint presentation is downloaded directly from the browser; no server-side PowerPoint rendering is involved.
+This guide explains how to integrate the [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) into an Angular application that runs in the browser. The sample saves the generated PowerPoint presentation with `save('Output.pptx')`.
 
-## Video Tutorial
-
-Watch the following video to learn how to create a PowerPoint file in an Angular application using the JavaScript PowerPoint Library.
-
-{% youtube "https://www.youtube.com/watch?v=..." %}
 
 ## Prerequisites
 
@@ -57,7 +52,7 @@ cd my-pptx-app
 If you already have an Angular project, open its root folder and continue with the package installation steps:
 
 ```bash
-cd path/to/your-existing-app
+cd my-pptx-app
 ```
 
 ## Installing the JavaScript PowerPoint Library package
@@ -126,7 +121,6 @@ export class AppComponent {
     const slide = pptxDoc.slides.add();
     // Adds a textbox for the title
     const titleShape = slide.shapes.addTextBox({
-      name: 'Title',
       bounds: {
         x: 55,
         y: 25,
@@ -135,7 +129,7 @@ export class AppComponent {
       }
     });
     // Adds a paragraph to the textbox
-    const paragraph = titleShape.textBody?.addParagraph();
+    const paragraph = titleShape.textBody.addParagraph();
     paragraph.horizontalAlignment = HorizontalAlignmentType.Center;
     // Adds text to the paragraph
     const textPart = paragraph.addTextPart('Hello World!!!');
@@ -143,35 +137,14 @@ export class AppComponent {
     textPart.font.bold = true;
     textPart.font.fontSize = 36;
 
-    try {
-      // Saves the presentation
-      const bytes = await pptxDoc.save();
-
-      // Creates a blob from the bytes
-      const blob = new Blob([bytes as Uint8Array], {
-        type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-      });
-
-      // Creates a download link
-      const url = window.URL.createObjectURL(blob);
-      const link = document.createElement('a');
-      link.href = url;
-      link.download = 'Output.pptx';
-
-      // Triggers the download
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      window.URL.revokeObjectURL(url);
-    } catch (error) {
-      console.error('Error creating PowerPoint file:', error);
-    }
+    // Saves the Presentation to the file system.
+    await pptxDoc.save('Output.pptx');
   }
 }
 {% endhighlight %}
 {% endtabs %}
 
-N> The `save()` method saves the presentation and returns the bytes, which are then converted to a Blob for browser download. The file is sent to the browser's default downloads folder.
+N> The `save()` method saves the presentation to the specified file.
 
 ## Run the Application
 
@@ -181,22 +154,10 @@ Use the following command to run the application in the browser:
 ng serve --open
 ```
 
-When you click **Create PowerPoint document**, the PowerPoint file is generated in the browser and downloaded as `Output.pptx` to your default downloads folder.
+When you click **Create PowerPoint document**, the sample saves the presentation as `Output.pptx`.
 
-## Troubleshooting
-
-| Problem | Cause | Resolution |
-|---|---|---|
-| `TS2304: Cannot find name 'Presentation'` (or similar) | The import line is missing or the package is not installed | Confirm `npm install @syncfusion/ej2-pptx` ran successfully and that the import is in `app.component.ts` |
-| `Error: Cannot find module '@syncfusion/ej2-pptx'` | The package is not installed | Run `npm install @syncfusion/ej2-pptx --save` |
-| Button click does nothing | The method `createPowerPoint()` is missing or not bound correctly | Confirm the `(click)="createPowerPoint()"` binding exists in `app.component.html` and the method exists in `app.component.ts` |
-| PowerPoint file does not download | The browser blocks the download | Check the browser's download settings and the downloads folder |
-| Build fails with TypeScript errors | The Angular TypeScript version is incompatible with the PowerPoint package | Update Angular to 20 or later and run `npm install` again |
 
 ## Additional Resources
 
 - [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library)
-- [JavaScript PowerPoint Library documentation](https://help.syncfusion.com/document-processing/presentation/pptx-library/javascript/overview)
-- [JavaScript PowerPoint Library API reference](https://ej2.syncfusion.com/documentation/api/powerpoint)
-- [JavaScript PowerPoint Library examples](https://document.syncfusion.com/demos/powerpoint/angular/#/fluent2/powerpoint/default)
-- [Syncfusion licensing documentation](https://help.syncfusion.com/document-processing/licensing/overview)
+- [JavaScript PowerPoint Library documentation](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/overview)

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with JavaScript PowerPoint in TypeScript app | Syncfusion
-description: Learn how to get started with the Syncfusion JavaScript PowerPoint in TypeScript application. Easy steps to create presentations without depending on Microsoft Office.
+title: Getting Started with JavaScript PowerPoint for TypeScript | Syncfusion
+description: Learn how to create PowerPoint presentations in a TypeScript app using the Syncfusion JavaScript PowerPoint Library without Microsoft Office.
 platform: document-processing
 control: PowerPoint
 documentation: ug
@@ -13,7 +13,7 @@ canonical_url: https://help.syncfusion.com/document-processing/presentation/pptx
 
 The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) is used to create, read, and edit PowerPoint presentations. The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) also offers functionality to insert shapes, images, text, and paragraphs with rich formatting.
 
-This guide explains how to integrate the [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) into a TypeScript application that runs in the browser. The generated PowerPoint presentation is downloaded directly from the browser; no server-side PowerPoint rendering is required.
+This guide explains how to integrate the [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) into a TypeScript application that runs in the browser. The sample saves the generated PowerPoint presentation with `save('Output.pptx')`.
 
 ## Prerequisites
 
@@ -126,6 +126,7 @@ Include the following namespaces in `index.ts` file.
 import { Presentation, HorizontalAlignmentType } from '@syncfusion/ej2-pptx';
 
 {% endhighlight %}
+{% endtabs %}
 Include the following code example in the click event of the button in `index.ts` to generate a PowerPoint document:
 
 * Include the following code example in the click event of the button in `index.ts` to generate a PowerPoint document
@@ -140,7 +141,6 @@ document.getElementById('normalButton').onclick = async (): Promise<void> => {
   const slide = pptxDoc.slides.add();
   // Adds a textbox for the title
   const titleShape = slide.shapes.addTextBox({
-    name: 'Title',
     bounds: {
       x: 55,
       y: 25,
@@ -149,7 +149,7 @@ document.getElementById('normalButton').onclick = async (): Promise<void> => {
     }
   });
   // Adds a paragraph to the textbox
-  const paragraph = titleShape.textBody?.addParagraph();
+  const paragraph = titleShape.textBody.addParagraph();
   paragraph.horizontalAlignment = HorizontalAlignmentType.Center;
   // Adds text to the paragraph
   const textPart = paragraph.addTextPart('Hello World!!!');
@@ -157,29 +157,8 @@ document.getElementById('normalButton').onclick = async (): Promise<void> => {
   textPart.font.bold = true;
   textPart.font.fontSize = 36;
 
-  try {
-    // Saves the presentation
-    const bytes = await pptxDoc.save();
-
-    // Creates a blob from the bytes
-    const blob = new Blob([bytes as Uint8Array], {
-      type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
-    });
-
-    // Creates a download link
-    const url = window.URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = 'Output.pptx';
-
-    // Triggers the download
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    window.URL.revokeObjectURL(url);
-  } catch (error) {
-    console.error('Error creating PowerPoint file:', error);
-  }
+  // Saves the Presentation to the file system.
+  await pptxDoc.save('Output.pptx');
 };
 
 {% endhighlight %}
@@ -193,23 +172,10 @@ The quickstart project is configured to compile and run in the browser. Use the 
 npm start
 ```
 
-Vite serves the application at `http://localhost:5173`. Open this URL in a browser and click **Create PowerPoint document** to download the generated file as `Output.pptx`.
+Vite serves the application at `http://localhost:5173`. Open this URL in a browser and click **Create PowerPoint document**. The sample saves the presentation as `Output.pptx`.
 
-## Troubleshooting
-
-| Problem | Cause | Resolution |
-|---|---|---|
-| `TS2304: Cannot find name 'Presentation'` (or similar) | The import line is missing or the package is not installed | Confirm `npm install @syncfusion/ej2-pptx` ran successfully and that the import is in `index.ts` |
-| `Error: Cannot find module '@syncfusion/ej2-pptx'` | The package is not installed | Run `npm install @syncfusion/ej2-pptx --save` |
-| Button click does nothing | The button ID does not match the ID used in `getElementById` | Confirm the button's `id` is `normalButton` |
-| PowerPoint file does not download | The browser blocks the download | Check the browser's download settings and the downloads folder |
-| Build fails with TypeScript errors | The TypeScript version is incompatible with the PowerPoint package | Update TypeScript to 4.5 or later and run `npm install` again |
-| `registerLicense` warning at runtime | The license key is missing or invalid | Confirm the key is set in `index.ts` and is the correct key for your Syncfusion account |
 
 ## Additional Resources
 
 - [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library)
-- [JavaScript PowerPoint Library documentation](https://help.syncfusion.com/document-processing/presentation/pptx-library/javascript/overview)
-- [JavaScript PowerPoint Library API reference](https://ej2.syncfusion.com/documentation/api/powerpoint)
-- [JavaScript PowerPoint Library examples](https://document.syncfusion.com/demos/powerpoint/typescript/#/fluent2/powerpoint/default)
-- [Syncfusion licensing documentation](https://help.syncfusion.com/document-processing/licensing/overview)
+- [JavaScript PowerPoint Library documentation](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/overview)

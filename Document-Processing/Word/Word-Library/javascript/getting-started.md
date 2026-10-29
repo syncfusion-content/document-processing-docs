@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with JavaScript Word Library in React app | Syncfusion
-description: Learn how to get started with the Syncfusion JavaScript Word Library in React and create Word documents without Microsoft Word.
+title: Getting Started with JavaScript Word | Syncfusion
+description: Learn how to get started with the Syncfusion JavaScript Word Library and create Word documents without Microsoft Word.
 control: Word
 platform: document-processing
 documentation: ug
-keywords: javascript, word, react
+keywords: word
 ---
 
-# Getting Started with JavaScript Word Library in React app
+# Getting Started with JavaScript Word Library
 
 The `JavaScript Word Library` facilitates the creation of Word documents with basic elements from scratch.
 
@@ -33,7 +33,7 @@ npm --version
 
 ## Create a React Project
 
-This guide uses https://vitejs.dev/ to scaffold the React project. Run the following command in a terminal:
+This guide uses [Vite](https://vitejs.dev/) to scaffold the React project. Run the following command in a terminal:
 
 ```bash
 npm create vite@latest my-docx-app -- --template react
