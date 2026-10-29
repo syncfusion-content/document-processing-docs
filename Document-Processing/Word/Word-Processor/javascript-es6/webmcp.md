@@ -11,7 +11,7 @@ documentation: ug
 
 ## Integration
 
-WebMCP integrates seamlessly into your TypeScript DOCX Editor (Document Editor) application with minimal configuration. This section covers the required setup, tool discovery, registration, and complete API reference.
+WebMCP integrates seamlessly into your [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) application with minimal configuration.
 
 ### Prerequisites
 
@@ -45,10 +45,10 @@ Before you can use WebMCP locally, enable the feature flag and install the brows
 Import and inject the `WebMcpToolExecuteEventArgs` module into your DOCX Editor:
 
 ```typescript
-import { DocumentEditorContainer, Toolbar, Ribbon, WebMcpToolExecuteEventArgs } from '@syncfusion/ej2-documenteditor';
+import { DocumentEditorContainer, Toolbar, Ribbon, WebMcpDocumentEditor } from '@syncfusion/ej2-documenteditor';
 
-// Inject required modules including WebMcpToolExecuteEventArgs for WebMCP tool support
-DocumentEditorContainer.Inject(Toolbar, Ribbon, WebMcpToolExecuteEventArgs);
+// Inject required modules
+DocumentEditorContainer.Inject(Toolbar, Ribbon, WebMcpDocumentEditor);
 ```
 
 ### Step 3: Enable WebMCP
@@ -58,7 +58,7 @@ Set the `enableWebMcp` property to `true` in your DocumentEditorContainer config
 ```typescript
 let container: DocumentEditorContainer = new DocumentEditorContainer({
     height: '590px',
-    enableWebMcp: true, // Enable WebMCP
+    enableWebMcp: true,
     toolbarMode: 'Ribbon'
 });
 ```
@@ -68,12 +68,16 @@ let container: DocumentEditorContainer = new DocumentEditorContainer({
 Set the `webMcpSettings` property to register the available tools in the control level:
 
 ```typescript
-let container: DocumentEditorContainer = new DocumentEditorContainer({ 
-    height: '590px', 
-    enableWebMcp: true, // Enable WebMCP
-    toolbarMode: 'Ribbon', 
-    webMcpSettings: {name:'container'} // It will register all tools defined in control level
-});    
+// Initialize DocumentEditorContainer with WebMCP enabled
+let webMcpSettings: any = {
+        name: 'container'
+    };
+let container: DocumentEditorContainer = new DocumentEditorContainer({
+    height: '590px',
+    enableWebMcp: true,
+    webMcpSettings: webMcpSettings,
+    toolbarMode: 'Ribbon'
+});
 ```
 
 ### Step 5: Test Your Setup
@@ -99,125 +103,9 @@ Find every occurrence of "Syncfusion" and replace it with "Syncfusion Inc."
 {% endpromptcard %}
 {% endpromptcards %}
 
-## Tool Discovery and Registration
-
-### Getting Available Tools
-
-Use `getWebMcpTools()` to retrieve available tool schemas:
-
-```typescript
-// Get all tool schemas
-const allTools = container.getWebMcpTools();
-
-// Get specific tools only
-const tools = container.getWebMcpTools(['insertBookmark', 'insertText', 'formatCharacter']);
-
-console.log(allTools[0]); //or tools[0]
-// Output:
-// {
-//   name: 'insertBookmark',
-//   title: 'Insert a bookmark',
-//   description: 'Creates a bookmark at the current cursor position for navigation.',
-//   inputSchema: { type: 'object', properties: {...} },
-//   outputSchema: { type: 'object', properties: {...} }
-// }
-```
-
-
-**Parameters:**
-
-| Parameter | Type | Required | Description |
-|-----------|------|----------|-------------|
-| `prefix` | `string` | ❌ | Unique prefix to avoid tool-name collisions (e.g., `'container'`, `'editor'`). Defaults to the DOCX Editor element's ID if omitted. |
-| `toolNames` | `string[]` | ❌ | Array of permitted tool names (e.g., `['getDocumentInfo', 'insertText']`). When omitted, all available tools are registered. |
-| `exposedTo` | `string[]` | ❌ | List of trusted origins for cross-origin access (e.g., `['https://trusted.example.com']`). Omit for same-origin only. |
-
-### Usage Examples
-
-**Register all tools:**
-```typescript
-webMcpSettings: {name:'container'}// Tools registered for allavailable tools as: container_getDocumentInfo, container_insertText, ...
-```
-
-**Register specific tools only:**
-```typescript
-webMcpSettings: {name:'container', tools['getDocumentInfo', 'insertText', 'formatCharacter']};
-// Only these 3 tools are registered, reducing attack surface
-```
-
-**Multi-instance setup:**
-```typescript
-const container1 = new DocumentEditorContainer({ enableWebMcp: true, webMcpSettings: {name:'container1'}, ... });
-const container2 = new DocumentEditorContainer({ enableWebMcp: true, webMcpSettings: {name:'container2'}, ... });
-
-```
-
-**Cross-origin access:**
-```typescript
-container.registerWebMcpTools('container', undefined, [
-    'https://trusted.example.com',
-    'https://analytics.example.com'
-]);
-// Tools are accessible from these origins (requires HTTPS)
-```
-
-### Understanding the `beforeWebMcpToolExecute` Event
-
-Hook into tool execution for auditing, restrictions, or custom logic:
-
-```typescript
-const container = new DocumentEditorContainer({
-    enableWebMcp: true,
-    beforeWebMcpToolExecute: (args: WebMcpToolExecuteEventArgs): void => {
-        const { toolName, toolArgs } = args;
-
-        console.log(`Tool ${toolName} invoked with:`, toolArgs);
-
-        // Example: Cancel replace operations that target protected ranges
-        if (toolName === 'replaceAll' && toolArgs && toolArgs.matchText === 'Confidential') {
-            args.cancel = true;
-        }
-    }
-});
-```
-
-### Auditing Write Operations
-
-Use the `beforeWebMcpToolExecute` event to enable confirmation prompts for write operations. The example below mirrors the configuration used in the reference `app.ts`:
-
-```typescript
-beforeWebMcpToolExecute: (args: WebMcpToolExecuteEventArgs): void => {
-    const writeOperations = [
-        'saveDocument',
-        'configureDocumentEditorSettings',
-        'replaceAll',
-        'insertText',
-        'paste',
-        'insertBookmark',
-        'enforceProtection',
-        'stopProtection',
-        'insertField',
-        'insertEditingRegion',
-        'formatCharacter',
-        'formatParagraph',
-        'insertImage',
-        'insertHyperlink'
-    ];
-    if (args.toolName) {
-        const toolName = args.toolName.indexOf('_') != -1 ? args.toolName.substring(args.toolName.indexOf('_') + 1) : args.toolName;
-
-        if (writeOperations.indexOf(toolName) !== -1) {
-            args.showConfirmationDialog = true;
-        }
-    }
-}
-```
-
 ## Tool Reference
 
 WebMCP tools are organized by category. The tables below provide an overview of all available tools. For complete input/output schemas, call `getWebMcpTools()` programmatically.
-
-> **Note:** Write operations can trigger user confirmation dialogs when the `showConfirmationDialog` property is enabled in the `beforeWebMcpToolExecute` event. Applications can use this event to audit, restrict, or cancel any operation, whereas read operations execute immediately. In the tables below, the condition "Always" indicates that a tool is enabled by default, regardless of the component configuration.
 
 ## Document Information Tools
 
@@ -290,43 +178,26 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 
 ## Code Examples
 
-### Example 1: Basic Setup
+### Basic Setup
 
 Set up a DocumentEditorContainer with WebMCP enabled and register tools on creation.
 
 ```typescript
-import { DocumentEditorContainer, Toolbar, Ribbon, WebMcpToolExecuteEventArgs } from '@syncfusion/ej2-documenteditor';
+import { DocumentEditorContainer, Toolbar, Ribbon, WebMcpDocumentEditor } from '@syncfusion/ej2-documenteditor';
 
 // Inject required modules
-DocumentEditorContainer.Inject(Toolbar, Ribbon);
+DocumentEditorContainer.Inject(Toolbar, Ribbon, WebMcpDocumentEditor);
 
-let webMcpTools: any[] = [];
+// Initialize DocumentEditorContainer with WebMCP enabled
+let webMcpSettings: any = {
+        name: 'container'
+    };
 
 let container: DocumentEditorContainer = new DocumentEditorContainer({
     height: '590px',
-    enableWebMcp: true, // Enable WebMCP tools
-    webMcpSettings: {name:'container'}, // It will register all tools defined in control level    
-    documentEditorSettings: {
-        showRuler: true,
-        showBookmarks: true,
-        showHiddenMarks: true
-    },
-    toolbarMode: 'Ribbon',
-    created: (): void => {
-        console.log('DocumentEditorContainer created event fired');
-
-        // Get WebMCP tools in created event
-        setTimeout(() => {
-            webMcpTools = container.getWebMcpTools();
-            console.log('WebMCP Tools registered:', webMcpTools);
-            console.log('Total tools available:', webMcpTools.length);
-            if (webMcpTools && webMcpTools.length > 0) {
-                webMcpTools.forEach((tool: any) => {
-                    console.log('Tool:', tool.name);
-                });
-            }
-        }, 100);
-    }
+    enableWebMcp: true,
+    webMcpSettings: webMcpSettings, // Enable WebMCP tools
+    toolbarMode: 'Ribbon'
 });
 
 // Set service URL for document operations
@@ -335,102 +206,11 @@ container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor
 // Append to container element
 container.appendTo('#container');
 
-// Set document name
-container.documentEditor.documentName = 'WebMCP Tool Demo';
+// Update document title
+document.title = 'WebMCP Tool Demo - DocumentEditorContainer';
 ```
 
-### Example 2: Selective Tool Registration
-
-Register only read-only tools to reduce exposure.
-
-```typescript
-// Register only read tools (safer for public applications)
- webMcpSettings: {name:'container',tools:[
-    'getDocumentInfo',
-    'getDocumentText',
-    'getSelectionInfo',
-    'getBookmarks',
-    'getSectionsInfo'
-]}
-```
-
-### Example 3: Multi-Instance Setup
-
-Shows how to use different prefixes for multiple DOCX Editor instances on the same page.
-
-```typescript
-// Two editors on the same page with different prefixes
-const docEditor1 = new DocumentEditorContainer({
-    enableWebMcp: true,
-    webMcpSettings: {name:'container1'}
-});
-
-const docEditor2 = new DocumentEditorContainer({
-    enableWebMcp: true,
-    webMcpSettings: {name:'container2'}
-});
-
-// Tools are now:
-// container1_getDocumentInfo, container1_insertText, ...
-// container2_getDocumentInfo, container2_insertText, ...
-```
-
-### Example 4: Auditing and Restrictions
-
-Demonstrates how to intercept tool execution and block restricted actions.
-
-```typescript
-container.beforeWebMcpToolExecute = (args: WebMcpToolExecuteEventArgs) => {
-    const { toolName, toolArgs } = args;
-
-    // Log all tool invocations
-    console.log(`[WebMCP] Executing: ${toolName}`, toolArgs);
-
-    // Block document protection changes for non-admin users
-    if (toolName === 'enforceProtection' || toolName === 'stopProtection') {
-        if (!userHasAdminPermission()) {
-            args.cancel = true;
-            logSecurityEvent('Unauthorized protection change attempt', toolArgs);
-        }
-    }
-};
-```
-
-### Example 5: Error Handling
-
-Shows how to call a tool manually and handle success or failure.
-
-```typescript
-async function invokeToolManually(toolName: string, toolArgs: any) {
-    try {
-        // Get tool from context
-        const tool = await document.modelContext.getTool(toolName);
-
-        if (!tool) {
-            console.error(`Tool not found: ${toolName}`);
-            return null;
-        }
-
-        // Invoke the tool
-        const result = await tool.execute(toolArgs, {});
-
-        // Handle response
-        if (result.error) {
-            console.error(`Tool error: ${result.error}`);
-            return null;
-        }
-
-        const responseText = result.content[0].text;
-        const responseData = JSON.parse(responseText);
-
-        console.log('Tool result:', responseData);
-        return responseData;
-    } catch (error) {
-        console.error('Failed to invoke tool:', error);
-        return null;
-    }
-}
-```
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/JavaScript-ES6-DOCX-Editor-Examples/tree/WebMcp/webmcp/getting-started).
 
 ## Troubleshooting
 
@@ -471,8 +251,6 @@ async function invokeToolManually(toolName: string, toolArgs: any) {
    - Right-click WebMCP extension → Manage extension
    - Ensure "Allow on this site" is enabled
 
-3. Check browser console for errors (F12 → Console)
-
 ---
 
 ### Q: "Permission denied" or "Secure context required"
@@ -484,59 +262,6 @@ async function invokeToolManually(toolName: string, toolArgs: any) {
 
 ---
 
-### Q: Confirmation dialogs don't appear for write operations
-
-**A:**
-1. Verify that write tools are registered and `args.showConfirmationDialog = true` is set in the `beforeWebMcpToolExecute` event
-2. Check that your browser isn't blocking dialogs
-3. Ensure the `beforeWebMcpToolExecute` event isn't canceling operations via `args.cancel = true`
-
----
-
-### Q: "InvalidStateError" when registering tools
-
-**A:**
-- This occurs if tools are registered before the DOCX Editor initializes
-- Set `webMcpSettings: {name:'container'}` property 
-- Ensure `document.modelContext` is available
-
----
-
-### Q: Multi-instance tools have naming conflicts
-
-**A:**
-- Always use different prefixes for each DocumentEditorContainer instance:
-  ```typescript
-  webMcpSettings: {name:'container1'} // for first DocumentEditorContainer instance
-  webMcpSettings: {name:'container2'} // for second DocumentEditorContainer instance
-  ```
-- Never register the same with same name for multiple instances
-
----
-
-### Q: How do I avoid performance issues with large documents?
-
-**A:**
-1. Use selective tool registration—register only necessary tools
-2. Use `getDocumentInfo` to inspect document size before performing bulk operations
-3. Prefer `replaceAll` over multiple single edits when changing repeated text
-4. Avoid fetching the full text repeatedly; cache `getDocumentText` results when possible
-
----
-
-### Q: Can I prevent certain operations?
-
-**A:**
-Yes, use the `beforeWebMcpToolExecute` event:
-
-```typescript
-container.beforeWebMcpToolExecute = (args: WebMcpToolExecuteEventArgs) => {
-    const restrictedTools = ['enforceProtection', 'stopProtection', 'saveDocument'];
-    if (restrictedTools.includes(args.toolName)) {
-        args.cancel = true;
-    }
-};
-```
 
 ## See Also
 
