@@ -13,7 +13,7 @@ A PDF action defines a predefined operation performed by a PDF reader or viewer 
 
 ## Adding an action to the PDF document
 
-Document-level actions are associated with lifecycle events of the PDF document. You can configure an action to execute when the document is opened, before it closes, before or after printing, and before or after saving.
+Document-level actions are associated with life cycle events of the PDF document. You can configure an action to execute when the document is opened, before it closes, before or after printing, and before or after saving.
 
 Document actions are accessed through the `actions` property of the `PdfDocument` instance, which returns a `PdfDocumentActions` object:
 
@@ -1027,7 +1027,7 @@ document.destroy();
 
 ### Adding an action to the PDF page
 
-Pages expose the `actions` property (`PdfPageActions`) supporting page lifecycle events:
+Pages expose the `actions` property (`PdfPageActions`) supporting page life cycle events:
 - `open`: Executed when the page is displayed.
 - `close`: Executed when leaving or closing the page view.
 
@@ -1112,4 +1112,4 @@ document.destroy();
 - [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library)
 - [JavaScript PDF Library documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
 - [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
-- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/tailwind3/pdf/default)
+- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/document-library/javascript/#/tailwind3/pdf/default)
