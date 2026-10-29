@@ -956,31 +956,17 @@ Add the Blazor SfPdfViewer (Next-Gen) component to a Razor page. The component n
 {% tabs %}
 {% highlight razor tabtitle="WebMcp.razor" %}
 
-@page "/webmcp"
-
 @using Syncfusion.Blazor.SfPdfViewer
 
-<div class="control-section">
-    <SfPdfViewer2 DocumentPath="@DocumentPath" Height="600px" Width="100%">
-    </SfPdfViewer2>
-</div>
-
-@code {
-    private string DocumentPath { get; set; } = string.Empty;
-
-    protected override void OnInitialized()
-    {
-        //Sets the PDF document path for initial loading.
-        DocumentPath = "wwwroot/data/pdfviewer2/pdf-succinctly.pdf";
-    }
-}
+<SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" Height="600px" Width="100%">
+</SfPdfViewer2>
 
 {% endhighlight %}
 {% endtabs %}
 
 ### Step 2: Enable WebMCP
 
-Set `EnableWebMcp="true"` on `SfPdfViewer2` to register the component's available tools with the WebMCP runtime. By default, WebMCP is disabled; you must opt in for every viewer instance. As soon as `EnableWebMcp` is true, the read-only tools that ship with the viewer are automatically registered and become discoverable by authorized WebMCP clients. Five sensitive tools are kept off the registration by default; see [Step 3](#step-3-enable-or-disable-specific-tools) for how to opt them in.
+Set `EnableWebMcp="true"` on `SfPdfViewer2` to register the component's available tools with the WebMCP runtime. By default, WebMCP is disabled; you must opt in for every viewer instance. As soon as [EnableWebMcp](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableWebMcp) is true, the read-only tools that ship with the viewer are automatically registered and become discoverable by authorized WebMCP clients. Five sensitive tools are kept off the registration by default; see [Step 3](#step-3-enable-or-disable-specific-tools) for how to opt them in.
 
 For example, the Blazor PDF Viewer component may expose tools such as:
 
@@ -993,31 +979,17 @@ An AI assistant can discover these tools and invoke them based on user prompts.
 {% tabs %}
 {% highlight razor tabtitle="WebMcp.razor" %}
 
-@page "/webmcp"
-
 @using Syncfusion.Blazor.SfPdfViewer
 
-<div class="control-section">
-    <SfPdfViewer2 DocumentPath="@DocumentPath" Height="600px" Width="100%" EnableWebMcp="true">
-        <PdfViewerWebMcpSettings Name="PdfViewer">
-        </PdfViewerWebMcpSettings>
-    </SfPdfViewer2>
-</div>
-
-@code {
-    private string DocumentPath { get; set; } = string.Empty;
-
-    protected override void OnInitialized()
-    {
-        //Sets the PDF document path for initial loading.
-        DocumentPath = "wwwroot/data/pdfviewer2/pdf-succinctly.pdf";
-    }
-}
+<SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" Height="600px" Width="100%" EnableWebMcp="true">
+    <PdfViewerWebMcpSettings Name="PdfViewer">
+    </PdfViewerWebMcpSettings>
+</SfPdfViewer2>
 
 {% endhighlight %}
 {% endtabs %}
 
-The `Name` attribute on `PdfViewerWebMcpSettings` is the prefix applied to every tool name that the component registers with the browser. In the snippet above, the `goToPage` tool is exposed to agents as `PdfViewer_goToPage`, so multiple viewer instances can coexist on the same page without name collisions.
+The `Name` attribute on [PdfViewerWebMcpSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerWebMcpSettings.html) is the prefix applied to every tool name that the component registers with the browser. In the snippet above, the `goToPage` tool is exposed to agents as `PdfViewer_goToPage`, so multiple viewer instances can coexist on the same page without name collisions.
 
 ### Step 3: Enable or disable specific tools
 
@@ -1031,45 +1003,28 @@ Some built-in tools are **not registered by default**. The five tools in the tab
 | `PdfViewerWebMcpToolCommand.GetSearchTextPositions` | Disabled; opt in with `Enabled="true"`. |
 | `PdfViewerWebMcpToolCommand.GetPageText` | Disabled; opt in with `Enabled="true"`. |
 
-To enable a default-disabled tool, add a `PdfViewerWebMcpTool` entry inside a `PdfViewerWebMcpTools` wrapper. Every entry must set the `Command` from the `PdfViewerWebMcpToolCommand` enum and the `Enabled` flag. To explicitly disable a tool that is on by default, add the same entry with `Enabled="false"`.
+To enable a default-disabled tool, add a `PdfViewerWebMcpTool` entry inside a `PdfViewerWebMcpTools` wrapper. Every entry must set the `Command` from the [PdfViewerWebMcpToolCommand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerWebMcpToolCommand.html) enum and the `Enabled` flag. To explicitly disable a tool that is on by default, add the same entry with `Enabled="false"`.
 
 {% tabs %}
 {% highlight razor tabtitle="WebMcp.razor" %}
 
-@page "/webmcp"
-
 @using Syncfusion.Blazor.SfPdfViewer
 
-<div class="control-section">
-    <SfPdfViewer2 DocumentPath="@DocumentPath" Height="600px" Width="100%" EnableWebMcp="true">
-        <PdfViewerWebMcpSettings Name="PdfViewer">
-            <PdfViewerWebMcpTools>
-                <PdfViewerWebMcpTool Command="PdfViewerWebMcpToolCommand.GetBookmarks" Enabled="true" />
-                <PdfViewerWebMcpTool Command="PdfViewerWebMcpToolCommand.GetAnnotations" Enabled="true" />
-                <PdfViewerWebMcpTool Command="PdfViewerWebMcpToolCommand.GetFormFields" Enabled="true" />
-                <PdfViewerWebMcpTool Command="PdfViewerWebMcpToolCommand.GetSearchTextPositions" Enabled="true" />
-                <PdfViewerWebMcpTool Command="PdfViewerWebMcpToolCommand.GetPageText" Enabled="true" />
-            </PdfViewerWebMcpTools>
-        </PdfViewerWebMcpSettings>
-    </SfPdfViewer2>
-</div>
-
-@code {
-    private string DocumentPath { get; set; } = string.Empty;
-
-    protected override void OnInitialized()
-    {
-        //Sets the PDF document path for initial loading.
-        DocumentPath = "wwwroot/data/pdfviewer2/pdf-succinctly.pdf";
-    }
-}
+<SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" Height="600px" Width="100%" EnableWebMcp="true">
+    <PdfViewerWebMcpSettings Name="PdfViewer">
+        <PdfViewerWebMcpTools>
+            <PdfViewerWebMcpTool Command="PdfViewerWebMcpToolCommand.GetBookmarks" Enabled="true" />
+            <PdfViewerWebMcpTool Command="PdfViewerWebMcpToolCommand.DeletePages" Enabled="false" />
+        </PdfViewerWebMcpTools>
+    </PdfViewerWebMcpSettings>
+</SfPdfViewer2>
 
 {% endhighlight %}
 {% endtabs %}
 
 ### Step 4: Monitor and control tool execution
 
-The `OnWebMcpExecute` event on the [`PdfViewerEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html) child component fires after a tool has been resolved but before the built-in handler runs. Use the `PdfViewerWebMcpExecuteEventArgs` payload to:
+The [OnWebMcpExecute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_OnWebMcpExecute) event on the [`PdfViewerEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html) child component fires after a tool has been resolved but before the built-in handler runs. Use the `PdfViewerWebMcpExecuteEventArgs` payload to:
 
 - Audit tool usage.
 - Validate incoming requests (`args.Arguments`).
@@ -1082,41 +1037,25 @@ The `OnWebMcpExecute` event on the [`PdfViewerEvents`](https://help.syncfusion.c
 {% tabs %}
 {% highlight razor tabtitle="WebMcp.razor" %}
 
-@page "/webmcp"
-
 @using Syncfusion.Blazor.SfPdfViewer
 
-<div class="control-section">
-    <SfPdfViewer2 DocumentPath="@DocumentPath" Height="600px" Width="100%" EnableWebMcp="true">
-        <PdfViewerEvents OnWebMcpExecute="OnWebMcpExecute"></PdfViewerEvents>
-        <PdfViewerWebMcpSettings Name="PdfViewer">
-            <PdfViewerWebMcpTools>
-                <PdfViewerWebMcpTool Command="PdfViewerWebMcpToolCommand.AddAnnotation" Enabled="true" />
-            </PdfViewerWebMcpTools>
-        </PdfViewerWebMcpSettings>
-    </SfPdfViewer2>
-</div>
+<SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" Height="600px" Width="100%" EnableWebMcp="true">
+    <PdfViewerWebMcpSettings Name="PdfViewer">
+        <PdfViewerWebMcpTools>
+            <PdfViewerWebMcpTool Command="PdfViewerWebMcpToolCommand.AddAnnotation" Enabled="true" />
+        </PdfViewerWebMcpTools>
+    </PdfViewerWebMcpSettings>
+    <PdfViewerEvents OnWebMcpExecute="OnWebMcpExecute"></PdfViewerEvents>
+</SfPdfViewer2>
 
 @code {
-    private string DocumentPath { get; set; } = string.Empty;
-
-    protected override void OnInitialized()
-    {
-        //Sets the PDF document path for initial loading.
-        DocumentPath = "wwwroot/data/pdfviewer2/pdf-succinctly.pdf";
-    }
-
     private void OnWebMcpExecute(PdfViewerWebMcpExecuteEventArgs args)
     {
-        // Example business rule - block annotation writes outside business hours.
+        // Example business rule - block annotation
         if (args.Command == PdfViewerWebMcpToolCommand.AddAnnotation)
         {
-            int hour = DateTime.Now.Hour;
-            if (hour < 9 || hour > 17)
-            {
-                args.Cancel = true;
-                args.CancellationResponse = "[USER_CANCELLED] Adding annotations is allowed only between 9:00 AM and 5:00 PM.";
-            }
+           args.Cancel = true;
+           args.CancellationResponse = "[USER_CANCELLED] Adding annotations is not allowed";
         }
     }
 }
@@ -1126,37 +1065,28 @@ The `OnWebMcpExecute` event on the [`PdfViewerEvents`](https://help.syncfusion.c
 
 ### Step 5: Read the effective tool catalog from code
 
-If you need to verify which tools are actually registered for the current settings, call `SfPdfViewer2.GetWebMcpToolsAsync()`. It returns the effective catalog after `PdfViewerWebMcpSettings` has been applied (disabled tools excluded, opt-ins honored), so it reflects exactly what the AI agent will see.
+If you need to verify which tools are actually registered for the current settings, call [SfPdfViewer2.GetWebMcpToolsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_GetWebMcpToolsAsync_System_Collections_Generic_IEnumerable_System_String__). It returns the effective catalog after `PdfViewerWebMcpSettings` has been applied (disabled tools excluded, opt-ins honored), so it reflects exactly what the AI agent will see.
 
 {% tabs %}
 {% highlight razor tabtitle="WebMcp.razor" %}
-
-@page "/webmcp"
-
+@using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.SfPdfViewer
 
-<div class="control-section">
-    <SfPdfViewer2 @ref="Viewer" DocumentPath="@DocumentPath" Height="600px" Width="100%" EnableWebMcp="true">
-        <PdfViewerWebMcpSettings Name="PdfViewer">
-            <PdfViewerWebMcpTools>
-                <PdfViewerWebMcpTool Command="PdfViewerWebMcpToolCommand.GetBookmarks" Enabled="true" />
-                <PdfViewerWebMcpTool Command="PdfViewerWebMcpToolCommand.GetAnnotations" Enabled="true" />
-            </PdfViewerWebMcpTools>
-        </PdfViewerWebMcpSettings>
-    </SfPdfViewer2>
-</div>
+<SfButton OnClick="GetTools">Get registered tools</SfButton>
+
+<SfPdfViewer2 @ref="Viewer" DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" Height="600px" Width="100%" EnableWebMcp="true">
+    <PdfViewerWebMcpSettings Name="PdfViewer">
+        <PdfViewerWebMcpTools>
+           <PdfViewerWebMcpTool Command="PdfViewerWebMcpToolCommand.GetBookmarks" Enabled="true" />
+           <PdfViewerWebMcpTool Command="PdfViewerWebMcpToolCommand.DeletePages" Enabled="false" />
+        </PdfViewerWebMcpTools>
+    </PdfViewerWebMcpSettings>
+</SfPdfViewer2>
 
 <button @onclick="GetTools">Get registered tools</button>
 
 @code {
     private SfPdfViewer2 Viewer { get; set; }
-    private string DocumentPath { get; set; } = string.Empty;
-
-    protected override void OnInitialized()
-    {
-        //Sets the PDF document path for initial loading.
-        DocumentPath = "wwwroot/data/pdfviewer2/pdf-succinctly.pdf";
-    }
 
     private async Task GetTools()
     {
