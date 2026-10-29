@@ -67,9 +67,154 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
+## Creating a template from an existing PDF page
+
+Load the source PDF document, get the required page with `getPage`, and call [createTemplate](https://ej2.syncfusion.com/documentation/api/pdf/pdfpage#createtemplate) on it. Then draw the returned template on a destination page by using [drawTemplate](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#drawtemplate) of the page graphics.
+
+The following example creates a template from the first page of an existing PDF document and draws it on a new document at its original size.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { PdfDocument, PdfPage, PdfTemplate, PdfPageSettings, PdfMargins } from '@syncfusion/ej2-pdf';
+
+// Load the source PDF document
+let source: PdfDocument = new PdfDocument(pdfData);
+// Access the first page of the source document
+let sourcePage: PdfPage = source.getPage(0);
+// Create a template from the source page
+let template: PdfTemplate = sourcePage.createTemplate();
+// Create a destination PDF document
+let document: PdfDocument = new PdfDocument();
+// Use zero margins so the template is placed from the page origin
+let settings: PdfPageSettings = new PdfPageSettings();
+settings.margins = new PdfMargins(0);
+// Add a page to the destination document
+let page: PdfPage = document.addPage(settings);
+// Draw the template at its original size
+page.graphics.drawTemplate(template, { x: 0, y: 0, width: template.size.width, height: template.size.height });
+// Save the document
+document.save('output.pdf');
+// Destroy the documents
+document.destroy();
+source.destroy();
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Load the source PDF document
+var source = new ej.pdf.PdfDocument(pdfData);
+// Access the first page of the source document
+var sourcePage = source.getPage(0);
+// Create a template from the source page
+var template = sourcePage.createTemplate();
+// Create a destination PDF document
+var document = new ej.pdf.PdfDocument();
+// Use zero margins so the template is placed from the page origin
+var settings = new ej.pdf.PdfPageSettings();
+settings.margins = new ej.pdf.PdfMargins(0);
+// Add a page to the destination document
+var page = document.addPage(settings);
+// Draw the template at its original size
+page.graphics.drawTemplate(template, { x: 0, y: 0, width: template.size.width, height: template.size.height });
+// Save the document
+document.save('output.pdf');
+// Destroy the documents
+document.destroy();
+source.destroy();
+{% endhighlight %}
+{% endtabs %}
+
+## Positioning and scaling the template
+
+The `bounds` argument of `drawTemplate` (`{ x, y, width, height }`) controls both the position and the size of the drawn template. The `x` and `y` values set the location on the destination page. The template is scaled by the ratio of `bounds.width` and `bounds.height` to the template's `size` (the original width and height of the source page). Pass `template.size.width` and `template.size.height` to keep the original size, or smaller or larger values to scale it.
+
+The following example draws the template at half of its original size at the position (40, 40).
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { PdfDocument, PdfPage, PdfTemplate } from '@syncfusion/ej2-pdf';
+
+// Load the source PDF document
+let source: PdfDocument = new PdfDocument(pdfData);
+// Create a template from the first page
+let template: PdfTemplate = source.getPage(0).createTemplate();
+// Create a destination PDF document and add a page
+let document: PdfDocument = new PdfDocument();
+let page: PdfPage = document.addPage();
+// Draw the template at half of its size at the position (40, 40)
+page.graphics.drawTemplate(template, { x: 40, y: 40, width: template.size.width / 2, height: template.size.height / 2 });
+// Save the document
+document.save('output.pdf');
+// Destroy the documents
+document.destroy();
+source.destroy();
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Load the source PDF document
+var source = new ej.pdf.PdfDocument(pdfData);
+// Create a template from the first page
+var template = source.getPage(0).createTemplate();
+// Create a destination PDF document and add a page
+var document = new ej.pdf.PdfDocument();
+var page = document.addPage();
+// Draw the template at half of its size at the position (40, 40)
+page.graphics.drawTemplate(template, { x: 40, y: 40, width: template.size.width / 2, height: template.size.height / 2 });
+// Save the document
+document.save('output.pdf');
+// Destroy the documents
+document.destroy();
+source.destroy();
+{% endhighlight %}
+{% endtabs %}
+
+## Reusing a template
+
+A template is created once and can be drawn multiple times. The following example draws the same template twice on one page at different positions and sizes.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { PdfDocument, PdfPage, PdfTemplate } from '@syncfusion/ej2-pdf';
+
+// Load the source PDF document
+let source: PdfDocument = new PdfDocument(pdfData);
+// Create a template from the first page
+let template: PdfTemplate = source.getPage(0).createTemplate();
+// Create a destination PDF document and add a page
+let document: PdfDocument = new PdfDocument();
+let page: PdfPage = document.addPage();
+// Draw the same template twice
+page.graphics.drawTemplate(template, { x: 0, y: 0, width: template.size.width / 2, height: template.size.height / 2 });
+page.graphics.drawTemplate(template, { x: 200, y: 300, width: template.size.width / 3, height: template.size.height / 3 });
+// Save the document
+document.save('output.pdf');
+// Destroy the documents
+document.destroy();
+source.destroy();
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Load the source PDF document
+var source = new ej.pdf.PdfDocument(pdfData);
+// Create a template from the first page
+var template = source.getPage(0).createTemplate();
+// Create a destination PDF document and add a page
+var document = new ej.pdf.PdfDocument();
+var page = document.addPage();
+// Draw the same template twice
+page.graphics.drawTemplate(template, { x: 0, y: 0, width: template.size.width / 2, height: template.size.height / 2 });
+page.graphics.drawTemplate(template, { x: 200, y: 300, width: template.size.width / 3, height: template.size.height / 3 });
+// Save the document
+document.save('output.pdf');
+// Destroy the documents
+document.destroy();
+source.destroy();
+{% endhighlight %}
+{% endtabs %}
+
+
 ## Additional Resources
 
 - [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library)
 - [JavaScript PDF Library documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
 - [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
-- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/tailwind3/pdf/default.html)
+- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/tailwind3/pdf/default)
