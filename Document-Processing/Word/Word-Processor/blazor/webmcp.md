@@ -106,10 +106,10 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 
 | Tool Name | Type | Condition | Description |
 |-----------|------|-----------|-------------|
-| getDocumentBookmarks | Read | Always | Returns all bookmark names available in the current document. |
-| pageCount | Read | Always | Returns the total number of pages in the document. |
-| getSelectionText | Read | Always | Retrieves the plain text content of the current selection. |
-| getSelectionSfdt | Read | Always | Retrieves the selected content as formatted SFDT. |
+| getBookmarks | Read | Always | Retrieve all bookmarks in the document. |
+| getPageCount | Read | Always | Get the total number of pages in the document. |
+| getSelectedText | Read | Always | Get the currently selected text from the document. |
+| getSelectedContent | Read | Always | Get the selected content as SFDT (Syncfusion Document Format) format. |
 
 ---
 
@@ -117,14 +117,12 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 
 | Tool Name | Type | Condition | Description |
 |-----------|------|-----------|-------------|
-| find | Read | Always | Finds the next occurrence of specified text in the document. |
-| findAll | Read | Always | Finds all occurrences of specified text throughout the document. |
-| selectBookmark | Write | Always | Navigates to and selects an existing bookmark. |
-| goToPage | Write | Always | Navigates to a specified page in the document. |
-| select | Write | Always | Selects content between specified document positions or coordinates. |
-| selectAll | Write | Always | Selects all content in the document. |
-| selectCurrentWord | Write | Always | Selects the word at the current cursor position. |
-| selectParagraph | Write | Always | Selects the current paragraph. |
+| findAll | Read | Always | Search all occurrences of text in the document. Returns array of match positions. Accepts `text`, with optional `matchCase` and `wholeWord` flags. |
+| goToPage | Write | Always | Navigate to a specific page number in the document. Accepts `pageNumber`. |
+| selectAll | Write | Always | Select all content in the document. |
+| selectCurrentWord | Write | Always | Select the word at the current cursor position. |
+| selectParagraph | Write | Always | Select the current paragraph. |
+| selectBookmark | Write | Always | Navigate to and select a bookmark in the document. Accepts `bookmarkName`. |
 
 ---
 
@@ -132,32 +130,12 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 
 | Tool Name | Type | Condition | Description |
 |-----------|------|-----------|-------------|
-| insertText | Write | Always | Inserts plain text at the current cursor or selection position. |
-| paste | Write | Always | Pastes formatted SFDT content while preserving document structure and formatting. |
-| replaceAll | Write | Always | Replaces all occurrences of specified text with new content. |
-| insertBookmark | Write | Always | Creates a bookmark at the current cursor position for navigation. |
-| insertField | Write | Always | Inserts dynamic fields such as merge fields, or page numbers. |
-| insertImage | Write | Always | Inserts an image with optional sizing and alternate text. |
-| insertHyperlink | Write | Always | Inserts a hyperlink with optional display text and screen tip. |
-
----
-
-## Formatting Tools
-
-| Tool Name | Type | Condition | Description |
-|-----------|------|-----------|-------------|
-| formatCharacter | Write | Always | Applies character formatting such as font, size, color, bold, italic, and highlighting. |
-| formatParagraph | Write | Always | Applies paragraph formatting such as alignment, indentation, and spacing. |
-
----
-
-## Protection & Permissions Tools
-
-| Tool Name | Type | Condition | Description |
-|-----------|------|-----------|-------------|
-| enforceProtection | Write | Always | Protects the document and restricts editing with a password. |
-| stopProtection | Write | Always | Removes document protection and restores editing access. |
-| insertEditingRegion | Write | Always | Creates an editable region for specific users in a protected document. |
+| insertText | Write | Always | Insert text at the current selection position. Replaces selected text if any. Accepts `text`. |
+| paste | Write | Always | Paste SFDT content at the current selection. Replaces selected content. Accepts `sfdt`. |
+| insertBookmark | Write | Always | Insert a bookmark at the current selection or for the selected content. Accepts `bookmarkName`. |
+| insertEditingRegion | Write | Always | Insert an editing region (merge field) with field code and result text. Accepts `fieldCode` and `fieldResult`. |
+| insertHyperlink | Write | Always | Insert a hyperlink with URL and display text at the current selection. Accepts `url` and `displayText`. |
+| insertImage | Write | Always | Insert an image from a base64-encoded string at the current selection. Accepts `base64String`. |
 
 ---
 
@@ -165,9 +143,67 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 
 | Tool Name | Type | Condition | Description |
 |-----------|------|-----------|-------------|
-| saveDocument | Write | Always | Saves or exports the current document in DOCX, DOTX, TXT, or SFDT format. |
-| configureDocumentEditorSettings | Write | Always | Configures editor appearance and behavior settings such as ruler, bookmarks, navigation pane, and fonts. |
-| print | Write | Always | Opens the print dialog for the current document. |
+| saveDocument | Write | Always | Save the document to a file with specified format (Docx, Pdf, Rtf, Txt, Html, WordML). Accepts `fileName` and optional `formatType`. |
+| print | Write | Always | Print the current document. |
+
+---
+
+## Character Format Tools
+
+| Tool Name | Type | Condition | Description |
+|-----------|------|-----------|-------------|
+| getCharacterFormatBaselineAlignment | Read | Always | Get the baseline alignment of the selected text. |
+| getCharacterFormatBold | Read | Always | Get the bold status of the selected text. |
+| getCharacterFormatFontColor | Read | Always | Get the font color of the selected text. |
+| getCharacterFormatFontFamily | Read | Always | Get the font family of the selected text. |
+| getCharacterFormatFontSize | Read | Always | Get the font size of the selected text. |
+| getCharacterFormatHighlightColor | Read | Always | Get the highlight color of the selected text. |
+| getCharacterFormatItalic | Read | Always | Get the italic status of the selected text. |
+| getCharacterFormatStrikethrough | Read | Always | Get the strikethrough status of the selected text. |
+| getCharacterFormatUnderline | Read | Always | Get the underline type of the selected text. |
+| setCharacterFormatBaselineAlignment | Write | Always | Set the baseline alignment of the selected text (Normal, Superscript, Subscript). |
+| setCharacterFormatBold | Write | Always | Set bold formatting on the selected text. |
+| setCharacterFormatFontColor | Write | Always | Set the font color of the selected text (hex color code, e.g., #FF0000). |
+| setCharacterFormatFontFamily | Write | Always | Set the font family of the selected text. |
+| setCharacterFormatFontSize | Write | Always | Set the font size of the selected text (in points). |
+| setCharacterFormatHighlightColor | Write | Always | Set the highlight color of the selected text. |
+| setCharacterFormatItalic | Write | Always | Set italic formatting on the selected text. |
+| setCharacterFormatStrikethrough | Write | Always | Set strikethrough formatting on the selected text (None, Single, Double). |
+| setCharacterFormatUnderline | Write | Always | Set underline formatting on the selected text (None, Single, Double, Dotted, DashDotDotHeavy, etc.). |
+
+---
+
+## Paragraph Format Tools
+
+| Tool Name | Type | Condition | Description |
+|-----------|------|-----------|-------------|
+| getParagraphFormatAfterSpacing | Read | Always | Get the spacing after the current paragraph (in points). |
+| getParagraphFormatBeforeSpacing | Read | Always | Get the spacing before the current paragraph (in points). |
+| getParagraphFormatBidi | Read | Always | Get the bidirectional text setting of the current paragraph. |
+| getParagraphFormatContextualSpacing | Read | Always | Get the contextual spacing setting of the current paragraph. |
+| getParagraphFormatFirstLineIndent | Read | Always | Get the first line indent of the current paragraph (in points). |
+| getParagraphFormatLeftIndent | Read | Always | Get the left indent of the current paragraph (in points). |
+| getParagraphFormatLineSpacing | Read | Always | Get the line spacing of the current paragraph. |
+| getParagraphFormatLineSpacingType | Read | Always | Get the line spacing type of the current paragraph. |
+| getParagraphFormatListLevelNumber | Read | Always | Get the list level number of the current paragraph. |
+| getParagraphFormatListText | Read | Always | Get the list text of the current paragraph (read-only). |
+| getParagraphFormatOutlineLevel | Read | Always | Get the outline level of the current paragraph. |
+| getParagraphFormatRightIndent | Read | Always | Get the right indent of the current paragraph (in points). |
+| getParagraphFormatTextAlignment | Read | Always | Get the text alignment of the current paragraph. |
+| setParagraphFormatAfterSpacing | Write | Always | Set the spacing after the paragraph (in points). |
+| setParagraphFormatBeforeSpacing | Write | Always | Set the spacing before the paragraph (in points). |
+| setParagraphFormatBidi | Write | Always | Set the bidirectional text setting of the paragraph. |
+| setParagraphFormatContextualSpacing | Write | Always | Set the contextual spacing of the paragraph. |
+| setParagraphFormatFirstLineIndent | Write | Always | Set the first line indent of the paragraph (in points). |
+| setParagraphFormatLeftIndent | Write | Always | Set the left indent of the paragraph (in points). |
+| setParagraphFormatLineSpacing | Write | Always | Set the line spacing of the paragraph. |
+| setParagraphFormatLineSpacingType | Write | Always | Set the line spacing type of the paragraph (Single, OnePointFiveLines, Double, AtLeast, Exactly, Multiple). |
+| setParagraphFormatListLevelNumber | Write | Always | Set the list level number of the paragraph (0-8). Paragraph must already be in a list. |
+| setParagraphFormatOutlineLevel | Write | Always | Set the outline level of the paragraph (BodyText, Level1-Level9). |
+| setParagraphFormatRightIndent | Write | Always | Set the right indent of the paragraph (in points). |
+| setParagraphFormatTextAlignment | Write | Always | Set the text alignment of the paragraph (Left, Center, Right, Justify). |
+
+---
 
 ---
 
