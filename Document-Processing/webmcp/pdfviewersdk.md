@@ -1083,8 +1083,6 @@ If you need to verify which tools are actually registered for the current settin
     </PdfViewerWebMcpSettings>
 </SfPdfViewer2>
 
-<button @onclick="GetTools">Get registered tools</button>
-
 @code {
     private SfPdfViewer2 Viewer { get; set; }
 
