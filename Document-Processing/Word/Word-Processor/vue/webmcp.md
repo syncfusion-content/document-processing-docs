@@ -249,7 +249,7 @@ const created = () => {
 </style>
 ```
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/JavaScript-ES5-DOCX-Editor-Examples/tree/master/webmcp/getting-started).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Vue-DOCX-Editor-Examples/tree/master/webmcp/getting-started).
 
 ## Troubleshooting
 
