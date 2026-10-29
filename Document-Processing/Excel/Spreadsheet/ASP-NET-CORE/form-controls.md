@@ -39,12 +39,13 @@ The linked cell value is automatically updated whenever the Check Box state chan
 The following code example shows the Check Box Form Control functionality in the Spreadsheet control.
 
 {% tabs %}
-{% highlight csharp tabtitle="Controller.cs" %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/spreadsheet/asp-net-core/form-controls-check-box-cs1/tagHelper %}
+{% endhighlight %}
+{% highlight c# tabtitle="FormControlsCheckBoxController.cs" %}
 {% include code-snippet/spreadsheet/asp-net-core/form-controls-check-box-cs1/formControlsCheckBoxController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% previewsample "/document-processing/code-snippet/spreadsheet/asp-net-core/form-controls-check-box-cs1" %}
 
 ### Radio Button
 
@@ -65,12 +66,13 @@ The linked cell value is automatically updated whenever the Radio Button state c
 The following code example shows the Radio Button Form Control functionality in the Spreadsheet control.
 
 {% tabs %}
-{% highlight csharp tabtitle="Controller.cs" %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/spreadsheet/asp-net-core/form-controls-radio-button-cs1/tagHelper %}
+{% endhighlight %}
+{% highlight c# tabtitle="FormControlsRadioButtonController.cs" %}
 {% include code-snippet/spreadsheet/asp-net-core/form-controls-radio-button-cs1/formControlsRadioButtonController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% previewsample "/document-processing/code-snippet/spreadsheet/asp-net-core/form-controls-radio-button-cs1" %}
 
 ### Combo Box (Dropdown)
 
@@ -88,12 +90,13 @@ The linked cell value is automatically updated whenever the Combo Box's selected
 The following code example shows the Combo Box (Dropdown) Form Control functionality in the Spreadsheet control.
 
 {% tabs %}
-{% highlight csharp tabtitle="Controller.cs" %}
-{% include code-snippet/spreadsheet/asp-net-core/form-controls-dropdown-cs1/formControlsDropdownController.cs %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/spreadsheet/asp-net-core/form-controls-dropdown-cs1/tagHelper %}
+{% endhighlight %}
+{% highlight c# tabtitle="FormControlsDropDownController.cs" %}
+{% include code-snippet/spreadsheet/asp-net-core/form-controls-dropdown-cs1/formControlsdropdownController.cs %}
 {% endhighlight %}
 {% endtabs %}
-
-{% previewsample "/document-processing/code-snippet/spreadsheet/asp-net-core/form-controls-dropdown-cs1" %}
 
 ## Inserting Form Controls
 
@@ -126,5 +129,5 @@ To open the Format Control dialog:
 
 ## See Also
 
-* [Data Validation](../data-validation)
-* [Cell Formatting](../formatting/text-cell-formatting)
+* [Comment](./comment)
+* [Formatting](./formatting)
