@@ -18,7 +18,7 @@ WebMCP integrates seamlessly into your [JavaScript DOCX Editor](https://www.sync
 Ensure the following before integrating WebMCP:
 
 - Syncfusion DOCX Editor component is installed and configured [Getting Started](./getting-started)
-- A Chromium-based browser, such as Chrome, Edge, or Brave, has the WebMCP flag enabled
+- A Chromium-based browser with the WebMCP origin trial or chrome://flags/#enable-webmcp enabled. The API is experimental, so confirm it in the browser versions you support.
 
 ## Getting Started
 
@@ -68,7 +68,7 @@ var documenteditorcontainer = new ej.documenteditor.DocumentEditorContainer({
 ### Step 4: Test Your Setup
 
 **Test with Your Local Setup**
-- Run the application locally and open it in a Chromium-based browser such as Chrome, Edge, or Brave.
+- Run the application locally and open it in a Chromium-based browser.
 - Launch the WebMCP extension and confirm that it connects to your application successfully.
 - Verify that the registered tools are displayed with your chosen prefix.
 - Try a sample prompt that matches your data scenario to validate tool execution and response behavior.
