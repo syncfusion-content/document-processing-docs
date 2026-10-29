@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
  
 WebMCP enables AI agents to discover and interact with Syncfusion® React components through a standardized tool interface. By enabling WebMCP, AI-powered applications can securely discover component capabilities, read data, perform actions, and automate workflows through a standardized interface.
 
-This section demonstrates how to integrate WebMCP with the Syncfusion® React Spreadsheet component. The same approach can be used with other supported components such as Grid, Scheduler, Chart, and more.
+This section demonstrates how to integrate WebMCP with the Syncfusion® React Spreadsheet component.
  
 ## WebMCP Overview
  
@@ -22,10 +22,9 @@ Instead of relying on DOM inspection or simulating user interactions, AI assista
  
 Once connected, an AI assistant can perform tasks such as:
  
-- Sort or filter Grid data.
 - Update Spreadsheet cells.
-- Create Scheduler events.
-- Perform component-specific actions through natural language prompts.
+- Read and analyze spreadsheet data.
+- Perform spreadsheet-specific actions through natural language prompts.
  
 > WebMCP is currently an experimental browser capability and requires a Chromium-based browser with WebMCP support enabled. Availability and required browser flags may change as the specification evolves.
  
@@ -228,9 +227,9 @@ Explore the Syncfusion® React Spreadsheet component with WebMCP integration thr
 
 After successfully enabling WebMCP, you can:
 
-- Integrate WebMCP with other Syncfusion® React components such as Grid, Scheduler, Chart, and Rich Text Editor.
-- Build AI-powered workflows that interact directly with application data and UI elements.
+- Build AI-powered workflows that interact directly with spreadsheet data and UI elements.
 - Create secure and controlled tool execution pipelines using custom validation logic.
+- Enhance spreadsheet applications with intelligent automation.
 
 ## See also
 
