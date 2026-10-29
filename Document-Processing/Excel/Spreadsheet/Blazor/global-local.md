@@ -618,7 +618,7 @@ The following table lists the verified Blazor Spreadsheet localization words fro
 
 The Blazor Spreadsheet uses the application’s active .NET culture for culture-specific formatting and parsing. The active culture affects numbers, dates and times, currency, percentages, and the decimal and group separators. `CurrentCulture` determines number, date, time, percentage, and currency formatting, while `CurrentUICulture` determines which culture-specific `.resx` file is used for the UI text.
 
-For information about configuring the application culture for Blazor Web App, Blazor WebAssembly, Blazor Server, and .NET MAUI Blazor applications, refer to the [Blazor Common Globalization](https://blazor.syncfusion.com/documentation/common/globalization) and [Blazor Common Localization](https://blazor.syncfusion.com/documentation/common/localization) documentation. For information about applying culture-aware number formats to Spreadsheet cells, refer to the [Blazor Spreadsheet Formatting](https://blazor.syncfusion.com/documentation/spreadsheet/formatting) documentation.
+For information about configuring the application culture for Blazor Web App, Blazor WebAssembly, Blazor Server, and .NET MAUI Blazor applications, refer to the [Blazor Common Globalization](https://blazor.syncfusion.com/documentation/common/globalization) and [Blazor Common Localization](https://blazor.syncfusion.com/documentation/common/localization) documentation.
 
 The following culture properties are commonly used in the application startup code:
 
