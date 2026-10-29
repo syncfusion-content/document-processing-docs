@@ -16,16 +16,19 @@ The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/java
 
 The following are the key features of the [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library).
 
-* Create PowerPoint presentations from scratch.
-* Open, modify, and save existing presentations.
+* [Create](getting-started) PowerPoint presentations from scratch.
+* [Open](loading-and-saving-presentation#opening-an-existing-presentation), [modify](working-with-slide), and [save](loading-and-saving-presentation#save-the-document) existing presentations.
 * Add and format paragraphs with bullets and numberings within text boxes.
-* Add text with different formatting into a single paragraph using TextParts.
+* Add text with different formatting into a single [paragraph](working-with-paragraphs) using TextParts.
+* Add and edit charts in PowerPoint presentation.
+* Add, edit and remove [tables](working-with-tables) in PowerPoint presentation.
+* Add, edit, replace and remove the [images](working-with-images) in a PowerPoint Presentation.
 
 ## Supported environments
 
 | Environment | Get started |
 |---|---|
-| Node.js | [Create PowerPoint in Node.js](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/create-powerpoint-document-node-js) |
+| Node.js | [Create PowerPoint in Node.js](create-powerpoint-document-node-js) |
 | JavaScript | [Create PowerPoint in JavaScript](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/create-powerpoint-document-javascript) |
 | TypeScript | [Create PowerPoint in TypeScript](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/create-powerpoint-document-typescript) |
 | Angular | [Create PowerPoint in Angular](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/create-powerpoint-document-angular) |

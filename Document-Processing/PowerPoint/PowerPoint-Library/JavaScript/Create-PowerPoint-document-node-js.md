@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with JavaScript PowerPoint in Node.js app | Syncfusion
-description: Learn how to get started with the Syncfusion JavaScript PowerPoint Library in a Node.js application. Steps to create PowerPoint presentations without Microsoft PowerPoint.
+description: Learn how to create PowerPoint presentations in a Node.js app using the Syncfusion JavaScript PowerPoint Library.
 platform: document-processing
 control: PowerPoint
 documentation: ug

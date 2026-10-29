@@ -20,15 +20,17 @@ The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/java
 {% highlight js tabtitle="TypeScript" %}
 
 import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
-import { addTable } from '@syncfusion/ej2-pptx/tables';
+
 // Create a PowerPoint presentation.
 let pptxDoc = Presentation.create();
 // Add slide to the presentation.
 let slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
 // Add a table to the slide (2 rows × 2 columns). Bounds are in points.
-let table = addTable(slide, {
-    rows: 2, columns: 2,
-    xfrm: { x: 100, y: 120, width: 300, height: 200 }
+const table = slide.addTable({
+  rows: 3,
+  columns: 4,
+  xfrm: { x: 0, y: 0, width: 400, height: 200 },
+  name: 'Metrics'
 });
 // Iterate row-wise cells and add text to each.
 for (let rowIndex = 0; rowIndex < table.rowCount; rowIndex++) {
@@ -51,9 +53,11 @@ var pptxDoc = ej.pptx.Presentation.create();
 // Add slide to the presentation.
 var slide = pptxDoc.slides.add({ layout: ej.pptx.SlideLayoutType.Blank });
 // Add a table to the slide (2 rows × 2 columns). Bounds are in points.
-var table = addTable(slide, {
-    rows: 2, columns: 2,
-    xfrm: { x: 100, y: 120, width: 300, height: 200 }
+var table = slide.addTable({
+  rows: 3,
+  columns: 4,
+  xfrm: { x: 0, y: 0, width: 400, height: 200 },
+  name: 'Metrics'
 });
 // Iterate row-wise cells and add text to each.
 for (var rowIndex = 0; rowIndex < table.rowCount; rowIndex++) {
@@ -79,15 +83,17 @@ The following code example demonstrates how to create a simple table in a PowerP
 {% highlight js tabtitle="TypeScript" %}
 
 import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
-import { addTable } from '@syncfusion/ej2-pptx/tables';
+
 // Create a PowerPoint presentation.
 let pptxDoc = Presentation.create();
 // Add slide to the presentation.
 let slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
 // Add a table to the slide (2 rows × 2 columns). Bounds are in points.
-let table = addTable(slide, {
-    rows: 2, columns: 2,
-    xfrm: { x: 100, y: 120, width: 300, height: 200 }
+const table = slide.addTable({
+  rows: 3,
+  columns: 4,
+  xfrm: { x: 0, y: 0, width: 400, height: 200 },
+  name: 'Metrics'
 });
 // Iterate column-wise cells and add text to each.
 for (let colIndex = 0; colIndex < table.columnCount; colIndex++) {
@@ -110,9 +116,11 @@ var pptxDoc = ej.pptx.Presentation.create();
 // Add slide to the presentation.
 var slide = pptxDoc.slides.add({ layout: ej.pptx.SlideLayoutType.Blank });
 // Add a table to the slide (2 rows × 2 columns). Bounds are in points.
-var table = addTable(slide, {
-    rows: 2, columns: 2,
-    xfrm: { x: 100, y: 120, width: 300, height: 200 }
+var table = slide.addTable({
+  rows: 3,
+  columns: 4,
+  xfrm: { x: 0, y: 0, width: 400, height: 200 },
+  name: 'Metrics'
 });
 // Iterate column-wise cells and add text to each.
 for (var colIndex = 0; colIndex < table.columnCount; colIndex++) {
@@ -144,7 +152,7 @@ import { Presentation } from '@syncfusion/ej2-pptx';
 let pptxDoc = await Presentation.open(data);
 // Get the first shape on the first slide and bind it as a table.
 let slide = pptxDoc.slides[0];
-let table = asTable(slide.shapes[0]);
+let table = slide.addTable({ rows: 1, columns: 2 });
 if (table) {
     // Add or append a new row at the end of the table.
     let newRowIndex = table.rowCount;
@@ -169,7 +177,7 @@ await pptxDoc.save('Output.pptx');
 var pptxDoc = await ej.pptx.Presentation.open(data);
 // Get the first shape on the first slide and bind it as a table.
 var slide = pptxDoc.slides[0];
-var table = asTable(slide.shapes[0]);
+var table = slide.addTable({ rows: 1, columns: 2 });
 if (table) {
     // Add or append a new row at the end of the table.
     var newRowIndex = table.rowCount;
@@ -203,7 +211,7 @@ import { Presentation } from '@syncfusion/ej2-pptx';
 let pptxDoc = await Presentation.open(data);
 // Get the table in the slide.
 let slide = pptxDoc.slides[0];
-let table = asTable(slide.shapes[0]);
+let table = slide.addTable({ rows: 1, columns: 2 });
 if (table) {
     // Insert an empty row at index 1 (existing rows shift down).
     table.insertRowAt(1);
@@ -218,7 +226,7 @@ await pptxDoc.save('Output.pptx');
 var pptxDoc = await ej.pptx.Presentation.open(data);
 // Get the table in the slide.
 var slide = pptxDoc.slides[0];
-var table = asTable(slide.shapes[0]);
+var table = slide.addTable({ rows: 1, columns: 2 });
 if (table) {
     // Insert an empty row at index 1 (existing rows shift down).
     table.insertRowAt(1);
@@ -242,7 +250,7 @@ import { Presentation } from '@syncfusion/ej2-pptx';
 let pptxDoc = await Presentation.open(data);
 // Get the table in the slide.
 let slide = pptxDoc.slides[0];
-let table = asTable(slide.shapes[0]);
+let table = slide.addTable({ rows: 1, columns: 2 });
 if (table) {
     // Insert an empty column at index 1.
     table.insertColumnAt(1);
@@ -257,7 +265,7 @@ await pptxDoc.save('Output.pptx');
 var pptxDoc = await ej.pptx.Presentation.open(data);
 // Get the table in the slide.
 var slide = pptxDoc.slides[0];
-var table = asTable(slide.shapes[0]);
+var table = slide.addTable({ rows: 1, columns: 2 });
 if (table) {
     // Insert an empty column at index 1.
     table.insertColumnAt(1);
@@ -282,7 +290,7 @@ let pptxDoc = await Presentation.open(data);
 // Gets the slide from the presentation.
 let slide = pptxDoc.slides[0];
 // Gets the table from the slide (first shape, bound as a table).
-let table = asTable(slide.shapes[0]);
+let table = slide.addTable({ rows: 1, columns: 2 });
 if (table) {
     // Removes the table from the slide.
     removeTable(slide, table);
@@ -298,7 +306,7 @@ var pptxDoc = await ej.pptx.Presentation.open(data);
 // Gets the slide from the presentation.
 var slide = pptxDoc.slides[0];
 // Gets the table from the slide (first shape, bound as a table).
-var table = asTable(slide.shapes[0]);
+var table = slide.addTable({ rows: 1, columns: 2 });
 if (table) {
     // Removes the table from the slide.
     removeTable(slide, table);
