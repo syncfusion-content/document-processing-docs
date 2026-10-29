@@ -177,7 +177,7 @@ await pptxDoc.save('Output.pptx');
 var pptxDoc = await ej.pptx.Presentation.open(data);
 // Get the first shape on the first slide and bind it as a table.
 var slide = pptxDoc.slides[0];
-var table = slide.addTable({ rows: 1, columns: 2 });
+var table = ej.pptx.asTable(slide.shapes[0]);
 if (table) {
     // Add or append a new row at the end of the table.
     var newRowIndex = table.rowCount;
@@ -204,7 +204,7 @@ You can insert a row at the specified index position of a table. Refer to the fo
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
 
-import { Presentation } from '@syncfusion/ej2-pptx';
+import { Presentation, asTable } from '@syncfusion/ej2-pptx';
 
 // data is a Uint8Array or ArrayBuffer of an existing .pptx file that contains a table.
 // Loads or opens a PowerPoint presentation.
@@ -226,7 +226,7 @@ await pptxDoc.save('Output.pptx');
 var pptxDoc = await ej.pptx.Presentation.open(data);
 // Get the table in the slide.
 var slide = pptxDoc.slides[0];
-var table = slide.addTable({ rows: 1, columns: 2 });
+var table = ej.pptx.asTable(slide.shapes[0]);
 if (table) {
     // Insert an empty row at index 1 (existing rows shift down).
     table.insertRowAt(1);
@@ -243,14 +243,14 @@ You can insert a column at the specified index position of a table. Refer to the
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
 
-import { Presentation } from '@syncfusion/ej2-pptx';
+import { Presentation, asTable } from '@syncfusion/ej2-pptx';
 
 // data is a Uint8Array or ArrayBuffer of an existing .pptx file that contains a table.
 // Loads or opens a PowerPoint presentation.
 let pptxDoc = await Presentation.open(data);
 // Get the table in the slide.
 let slide = pptxDoc.slides[0];
-let table = slide.addTable({ rows: 1, columns: 2 });
+let table = asTable(slide.shapes[0]);
 if (table) {
     // Insert an empty column at index 1.
     table.insertColumnAt(1);
@@ -265,7 +265,7 @@ await pptxDoc.save('Output.pptx');
 var pptxDoc = await ej.pptx.Presentation.open(data);
 // Get the table in the slide.
 var slide = pptxDoc.slides[0];
-var table = slide.addTable({ rows: 1, columns: 2 });
+var table = ej.pptx.asTable(slide.shapes[0]);
 if (table) {
     // Insert an empty column at index 1.
     table.insertColumnAt(1);
@@ -282,7 +282,7 @@ You can remove a table from a slide by passing its instance to `removeTable`. Th
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
 
-import { Presentation } from '@syncfusion/ej2-pptx';
+import { Presentation, asTable, removeTable } from '@syncfusion/ej2-pptx';
 
 // data is a Uint8Array or ArrayBuffer of an existing .pptx file that contains a table.
 // Loads or opens a PowerPoint presentation.
@@ -290,7 +290,7 @@ let pptxDoc = await Presentation.open(data);
 // Gets the slide from the presentation.
 let slide = pptxDoc.slides[0];
 // Gets the table from the slide (first shape, bound as a table).
-let table = slide.addTable({ rows: 1, columns: 2 });
+let table = asTable(slide.shapes[0]);
 if (table) {
     // Removes the table from the slide.
     removeTable(slide, table);
