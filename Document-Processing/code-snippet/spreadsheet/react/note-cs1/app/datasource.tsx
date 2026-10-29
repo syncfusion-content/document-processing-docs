@@ -1,235 +1,105 @@
-
-export let defaultData: Object[] = [
-  {
-      "Customer Name": "Romona Heaslip",
-      "Model": "Taurus",
-      "Color": "Aquamarine",
-      "Payment Mode": "Debit Card",
-      "Delivery Date": "07/11/2015",
-      "Amount": "8529.22"
-  },
-  {
-      "Customer Name": "Clare Batterton",
-      "Model": "Sparrow",
-      "Color": "Pink",
-      "Payment Mode": "Cash On Delivery",
-      "Delivery Date": "7/13/2016",
-      "Amount": "17866.19"
-  },
-  {
-      "Customer Name": "Eamon Traise",
-      "Model": "Grand Cherokee",
-      "Color": "Blue",
-      "Payment Mode": "Net Banking",
-      "Delivery Date": "09/04/2015",
-      "Amount": "13853.09"
-  },
-  {
-      "Customer Name": "Julius Gorner",
-      "Model": "GTO",
-      "Color": "Aquamarine",
-      "Payment Mode": "Credit Card",
-      "Delivery Date": "12/15/2017",
-      "Amount": "2338.74"
-  },
-  {
-      "Customer Name": "Jenna Schoolfield",
-      "Model": "LX",
-      "Color": "Yellow",
-      "Payment Mode": "Credit Card",
-      "Delivery Date": "10/08/2014",
-      "Amount": "9578.45"
-  },
-  {
-      "Customer Name": "Marylynne Harring",
-      "Model": "Catera",
-      "Color": "Green",
-      "Payment Mode": "Cash On Delivery",
-      "Delivery Date": "7/01/2017",
-      "Amount": "19141.62"
-  },
-  {
-      "Customer Name": "Vilhelmina Leipelt",
-      "Model": "7 Series",
-      "Color": "Goldenrod",
-      "Payment Mode": "Credit Card",
-      "Delivery Date": "12/20/2015",
-      "Amount": "6543.30"
-  },
-  {
-      "Customer Name": "Barby Heisler",
-      "Model": "Corvette",
-      "Color": "Red",
-      "Payment Mode": "Credit Card",
-      "Delivery Date": "11/24/2014",
-      "Amount": "13035.06"
-  },
-  {
-      "Customer Name": "Karyn Boik",
-      "Model": "Regal",
-      "Color": "Indigo",
-      "Payment Mode": "Debit Card",
-      "Delivery Date": "05/12/2014",
-      "Amount": "18488.80"
-  },
-  {
-      "Customer Name": "Jeanette Pamplin",
-      "Model": "S4",
-      "Color": "Fuscia",
-      "Payment Mode": "Net Banking",
-      "Delivery Date": "12/30/2014",
-      "Amount": "12317.04"
-  },
-  {
-      "Customer Name": "Cristi Espinos",
-      "Model": "TL",
-      "Color": "Aquamarine",
-      "Payment Mode": "Credit Card",
-      "Delivery Date": "12/18/2013",
-      "Amount": "6230.13"
-  },
-  {
-      "Customer Name": "Issy Humm",
-      "Model": "Club Wagon",
-      "Color": "Pink",
-      "Payment Mode": "Cash On Delivery",
-      "Delivery Date": "02/02/2015",
-      "Amount": "9709.49"
-  },
-  {
-      "Customer Name": "Tuesday Fautly",
-      "Model": "V8 Vantage",
-      "Color": "Crimson",
-      "Payment Mode": "Debit Card",
-      "Delivery Date": "11/19/2014",
-      "Amount": "9766.10"
-  },
-  {
-      "Customer Name": "Rosemaria Thomann",
-      "Model": "Caravan",
-      "Color": "Violet",
-      "Payment Mode": "Net Banking",
-      "Delivery Date": "02/08/2014",
-      "Amount": "7685.49"
-  },
-  {
-      "Customer Name": "Lyell Fuentez",
-      "Model": "Bravada",
-      "Color": "Violet",
-      "Payment Mode": "Debit Card",
-      "Delivery Date": "08/05/2016",
-      "Amount": "18012.45"
-  },
-  {
-      "Customer Name": "Raynell Layne",
-      "Model": "Colorado",
-      "Color": "Pink",
-      "Payment Mode": "Credit Card",
-      "Delivery Date": "05/30/2016",
-      "Amount": "2785.49"
-  },
-  {
-      "Customer Name": "Raye Whines",
-      "Model": "4Runner",
-      "Color": "Red",
-      "Payment Mode": "Debit Card",
-      "Delivery Date": "12/10/2016",
-      "Amount": "9967.74"
-  },
-  {
-      "Customer Name": "Virgina Aharoni",
-      "Model": "TSX",
-      "Color": "Pink",
-      "Payment Mode": "Cash On Delivery",
-      "Delivery Date": "10/23/2014",
-      "Amount": "5584.33"
-  },
-  {
-      "Customer Name": "Peta Cheshir",
-      "Model": "Pathfinder",
-      "Color": "Red",
-      "Payment Mode": "Net Banking",
-      "Delivery Date": "12/24/2015",
-      "Amount": "5286.53"
-  },
-  {
-      "Customer Name": "Jule Urion",
-      "Model": "Charger",
-      "Color": "Violet",
-      "Payment Mode": "Debit Card",
-      "Delivery Date": "11/20/2013",
-      "Amount": "13511.91"
-  },
-  {
-      "Customer Name": "Lew Gilyatt",
-      "Model": "Bonneville",
-      "Color": "Crimson",
-      "Payment Mode": "Credit Card",
-      "Delivery Date": "11/19/2013",
-      "Amount": "6498.19"
-  },
-  {
-      "Customer Name": "Jobey Fortun",
-      "Model": "B-Series",
-      "Color": "Blue",
-      "Payment Mode": "Net Banking",
-      "Delivery Date": "10/30/2014",
-      "Amount": "10359.67"
-  },
-  {
-      "Customer Name": "Blondie Crump",
-      "Model": "Voyager",
-      "Color": "Turquoise",
-      "Payment Mode": "Credit Card",
-      "Delivery Date": "04/06/2018",
-      "Amount": "8118.39"
-  },
-  {
-      "Customer Name": "Florentia Binns",
-      "Model": "Grand Prix",
-      "Color": "Orange",
-      "Payment Mode": "Cash On Delivery",
-      "Delivery Date": "10/13/2016",
-      "Amount": "10204.37"
-  },
-  {
-      "Customer Name": "Jaquelin Galtone",
-      "Model": "Sunbird",
-      "Color": "Red",
-      "Payment Mode": "Net Banking",
-      "Delivery Date": "10/22/2013",
-      "Amount": "6528.06"
-  },
-  {
-      "Customer Name": "Hakeem Easseby",
-      "Model": "Mirage",
-      "Color": "Crimson",
-      "Payment Mode": "Debit Card",
-      "Delivery Date": "9/12/2014",
-      "Amount": "5619.25"
-  },
-  {
-      "Customer Name": "Nickolaus Gidman",
-      "Model": "XK",
-      "Color": "Orange",
-      "Payment Mode": "Debit Card",
-      "Delivery Date": "05/12/2016",
-      "Amount": "5091.43"
-  },
-  {
-      "Customer Name": "Jenine Iglesia",
-      "Model": "Accord",
-      "Color": "Orange",
-      "Payment Mode": "Debit Card",
-      "Delivery Date": "09/03/2018",
-      "Amount": "14566.08"
-  },
-  {
-      "Customer Name": "Fax Witherspoon",
-      "Model": "Range Rover Sport",
-      "Color": "Orange",
-      "Payment Mode": "Credit Card",
-      "Delivery Date": "2/22/2018",
-      "Amount": "5284.87"
-  }
+/**
+ * Note data source
+ */
+export let data: Object[] = [
+    {
+        'Item Name': 'Casual Shoes',
+        'Date': '02/14/2014',
+        'Time': '11:34:32 AM',
+        'Quantity': 10,
+        'Price': 20,
+        'Amount': 200,
+        'Discount': 1,
+        'Profit': 10,
+    },
+    {
+        'Item Name': 'Sports Shoes',
+        'Date': '06/11/2014',
+        'Time': '05:56:32 AM',
+        'Quantity': 20,
+        'Price': 30,
+        'Amount': 600,
+        'Discount': 5,
+        'Profit': 50,
+    },
+    {
+        'Item Name': 'Formal Shoes',
+        'Date': '07/27/2014',
+        'Time': '03:32:44 AM',
+        'Quantity': 20,
+        'Price': 15,
+        'Amount': 300,
+        'Discount': 7,
+        'Profit': 27,
+    },
+    {
+        'Item Name': 'Sandals & Floaters',
+        'Date': '11/21/2014',
+        'Time': '06:23:54 AM',
+        'Quantity': 15,
+        'Price': 20,
+        'Amount': 300,
+        'Discount': 11,
+        'Profit': 67,
+    },
+    {
+        'Item Name': 'Flip- Flops & Slippers',
+        'Date': '06/23/2014',
+        'Time': '12:43:59 AM',
+        'Quantity': 30,
+        'Price': 10,
+        'Amount': 300,
+        'Discount': 10,
+        'Profit': 70,
+    },
+    {
+        'Item Name': 'Sneakers',
+        'Date': '07/22/2014',
+        'Time': '10:55:53 AM',
+        'Quantity': 40,
+        'Price': 20,
+        'Amount': 800,
+        'Discount': 13,
+        'Profit': 66,
+    },
+    {
+        'Item Name': 'Running Shoes',
+        'Date': '02/04/2014',
+        'Time': '03:44:34 AM',
+        'Quantity': 20,
+        'Price': 10,
+        'Amount': 200,
+        'Discount': 3,
+        'Profit': 14,
+    },
+    {
+        'Item Name': 'Loafers',
+        'Date': '11/30/2014',
+        'Time': '03:12:52 AM',
+        'Quantity': 31,
+        'Price': 10,
+        'Amount': 310,
+        'Discount': 6,
+        'Profit': 29,
+    },
+    {
+        'Item Name': 'Cricket Shoes',
+        'Date': '07/09/2014',
+        'Time': '11:32:14 AM',
+        'Quantity': 41,
+        'Price': 30,
+        'Amount': 1210,
+        'Discount': 12,
+        'Profit': 166,
+    },
+    {
+        'Item Name': 'T-Shirts',
+        'Date': '10/31/2014',
+        'Time': '12:01:44 AM',
+        'Quantity': 50,
+        'Price': 10,
+        'Amount': 500,
+        'Discount': 9,
+        'Profit': 55,
+    }
 ];
