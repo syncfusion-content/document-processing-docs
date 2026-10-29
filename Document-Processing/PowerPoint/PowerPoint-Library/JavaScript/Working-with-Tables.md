@@ -211,7 +211,7 @@ import { Presentation } from '@syncfusion/ej2-pptx';
 let pptxDoc = await Presentation.open(data);
 // Get the table in the slide.
 let slide = pptxDoc.slides[0];
-let table = slide.addTable({ rows: 1, columns: 2 });
+let table = asTable(slide.shapes[0]);
 if (table) {
     // Insert an empty row at index 1 (existing rows shift down).
     table.insertRowAt(1);
@@ -306,10 +306,10 @@ var pptxDoc = await ej.pptx.Presentation.open(data);
 // Gets the slide from the presentation.
 var slide = pptxDoc.slides[0];
 // Gets the table from the slide (first shape, bound as a table).
-var table = slide.addTable({ rows: 1, columns: 2 });
+var table = ej.pptx.asTable(slide.shapes[0]);
 if (table) {
     // Removes the table from the slide.
-    removeTable(slide, table);
+    ej.pptx.removeTable(slide, table);
 }
 // Saves the Presentation to the file system.
 await pptxDoc.save('Output.pptx');
