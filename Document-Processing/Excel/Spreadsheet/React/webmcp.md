@@ -1,22 +1,21 @@
 ---
 layout: post
-title: WebMCP tool integration for React components | Syncfusion
-description: Learn how to integrate WebMCP with Syncfusion React components to enable AI interaction, configure tools, manage access, and monitor execution.
+title: WebMCP tool integration for React Spreadsheet | Syncfusion
+description: Learn how to integrate WebMCP with Syncfusion React Spreadsheet to enable AI interaction, configure tools, manage access, and monitor execution.
 control: WebMCP
-platform: ej2-react
+platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
  
-# WebMCP Tools Integration for Syncfusion® React Components
+# WebMCP Tools Integration for Syncfusion® React Spreadsheet component
  
-WebMCP enables AI agents to discover and interact with Syncfusion® React components through a standardized tool interface. By enabling WebMCP, AI-powered applications can securely discover component capabilities, read data, perform actions, and automate workflows through a standardized interface.
+WebMCP enables AI agents to discover and interact with Syncfusion® React Spreadsheet through a standardized tool interface. By enabling WebMCP, AI-powered applications can securely discover component capabilities, read data, perform actions, and automate workflows through a standardized interface.
 
 This section demonstrates how to integrate WebMCP with the Syncfusion® React Spreadsheet component.
  
 ## WebMCP Overview
  
-WebMCP allows AI assistants running in the browser to interact directly with Syncfusion® components through natural language prompts.
+WebMCP allows AI assistants running in the browser to interact directly with Syncfusion® React Spreadsheet through natural language prompts.
  
 Instead of relying on DOM inspection or simulating user interactions, AI assistants can interact directly with component APIs through WebMCP tools. This approach provides more reliable and accurate results.
  
@@ -30,7 +29,7 @@ Once connected, an AI assistant can perform tasks such as:
  
 ## Prerequisites
  
-- Syncfusion® React components
+- Syncfusion® React Spreadsheet component
 - Chromium-based Browser (like Chrome, Edge, or Brave)
 - [Node.js 24+](https://nodejs.org/en) (LTS recommended).
 - WebMCP browser extension installed
@@ -46,11 +45,11 @@ Before you can use WebMCP locally, enable the feature flag and install the brows
  
 3. Visit [Google AI Studio](https://aistudio.google.com/app/apikey) to create or copy an API key. Open the WebMCP extension → paste your API key.
  
-The WebMCP extension is now configured and ready to interact with WebMCP-enabled Syncfusion® components.
+The WebMCP extension is now configured and ready to interact with WebMCP-enabled Syncfusion® React Spreadsheet component.
 
 ## Integrating WebMCP tools
 
-Follow these steps to integrate WebMCP support into Syncfusion® React components. The following example uses the Spreadsheet component.
+Follow these steps to integrate WebMCP support into Syncfusion® React Spreadsheet component.
 
 ### Step 1: Set up the Vite project
 
@@ -85,7 +84,7 @@ export default App;
 
 Set the `enableWebMcp` property to `true` to register the component's available tools with the WebMCP runtime.
 
-When `enableWebMcp` is enabled, supported component tools are automatically registered with the WebMCP runtime and become discoverable by authorized WebMCP clients.
+When `enableWebMcp` is enabled, Spreadsheet component tools are automatically registered with the WebMCP runtime and become discoverable by authorized WebMCP clients.
 
 For example, a Spreadsheet component may expose tools such as:
 
@@ -156,7 +155,7 @@ export default App;
 
 {% endraw %}
 
-> Use the `exposeTo` property to restrict WebMCP access to trusted domains. This helps prevent unauthorized WebMCP clients from interacting with your component tools.
+> Use the `exposeTo` property to restrict WebMCP access to trusted domains. This helps prevent unauthorized WebMCP clients from interacting with your spreadsheet component tools.
 
 ### Step 5: Monitor and control tool execution
 
@@ -233,4 +232,4 @@ After successfully enabling WebMCP, you can:
 
 ## See also
 
-- [WebMCP Supported Syncfusion React Components](./components)
+- [MCP Server Setup in React Spreadsheet](./mcp.md)
