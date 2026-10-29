@@ -18,7 +18,7 @@ WebMCP integrates seamlessly into your [Blazor DOCX Editor](https://www.syncfusi
 Ensure the following before integrating WebMCP:
 
 - Syncfusion DOCX Editor component is installed and configured [Getting Started](./getting-started/web-app)
-- A Chromium-based browser, such as Chrome, Edge, or Brave, has the WebMCP flag enabled
+- A Chromium-based browser with the WebMCP origin trial or chrome://flags/#enable-webmcp enabled. The API is experimental, so confirm it in the browser versions you support.
 
 ## Getting Started
 
@@ -78,7 +78,7 @@ Set the `DocumentEditorWebMcpSettings` property to register the available tools 
 ### Step 5: Test Your Setup
 
 **Test with Your Local Setup**
-- Run the application locally and open it in a Chromium-based browser such as Chrome, Edge, or Brave.
+- Run the application locally and open it in a Chromium-based browser.
 - Launch the WebMCP extension and confirm that it connects to your application successfully.
 - Verify that the registered tools are displayed with your chosen prefix.
 - Try a sample prompt that matches your data scenario to validate tool execution and response behavior.
