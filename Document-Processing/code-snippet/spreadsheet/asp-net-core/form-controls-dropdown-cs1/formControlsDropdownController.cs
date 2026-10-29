@@ -1,22 +1,18 @@
 public IActionResult Index()
 {
-    // Form controls data for dropdown
-    var formControls = new List<object>
+    List<object> data = new List<object>()
     {
-        new { type = "DropDown", text = "Select Delivery", cellLink = "D2", inputRange = "H1:H5", selectedIndex = 0, top = 40, left = 150, height = 22, width = 120 },
-        new { type = "DropDown", text = "Select Payment", cellLink = "D4", inputRange = "I1:I4", selectedIndex = 0, top = 100, left = 150, height = 22, width = 120 },
-        new { type = "DropDown", text = "Select Priority", cellLink = "D6", inputRange = "J1:J3", selectedIndex = 1, top = 160, left = 150, height = 22, width = 120 }
+        new { CustomerName= "Romona Heaslip",  Model= "Taurus",  Color= "Aquamarine",  PaymentMode= "Debit Card",  DeliveryDate= "07/11/2015",  Amount= "8529.22" },
+        new { CustomerName= "Clare Batterton",  Model= "Sparrow",  Color= "Pink",  PaymentMode= "Cash On Delivery",  DeliveryDate= "7/13/2016",  Amount= "17866.19" },
+        new { CustomerName= "Eamon Traise",  Model= "Grand Cherokee",  Color= "Blue",  PaymentMode= "Net Banking",  DeliveryDate= "09/04/2015",  Amount= "13853.09" },
+        new { CustomerName= "Julius Gorner",  Model= "GTO",  Color= "Aquamarine",  PaymentMode= "Credit Card",  DeliveryDate= "12/15/2017",  Amount= "2338.74" },
+        new { CustomerName= "Jenna Schoolfield",  Model= "LX",  Color= "Yellow",  PaymentMode= "Credit Card",  DeliveryDate= "10/08/2014",  Amount= "9578.45" },
+        new { CustomerName= "Marylynne Harring",  Model= "Catera",  Color= "Green",  PaymentMode= "Cash On Delivery",  DeliveryDate= "7/01/2017",  Amount= "19141.62" },
+        new { CustomerName= "Vilhelmina Leipelt",  Model= "7 Series",  Color= "Goldenrod",  PaymentMode= "Credit Card",  DeliveryDate= "12/20/2015",  Amount= "6543.30" },
+        new { CustomerName= "Barby Heisler",  Model= "Corvette",  Color= "Red",  PaymentMode= "Credit Card",  DeliveryDate= "11/24/2014",  Amount= "13035.06" },
+        new { CustomerName= "Karyn Boik",  Model= "Regal",  Color= "Indigo",  PaymentMode= "Debit Card",  DeliveryDate= "05/12/2014",  Amount= "18488.80" },
+        new { CustomerName= "Jeanette Pamplin",  Model= "S4",  Color= "Fuscia",  PaymentMode= "Net Banking",  DeliveryDate= "12/30/2014",  Amount= "12317.04" },
     };
-
-    // Data for dropdown lists
-    var deliveryOptions = new List<string> { "Standard Delivery", "Express Delivery", "Priority Delivery", "Pickup at Store", "Digital Download" };
-    var paymentMethods = new List<string> { "Cash on Delivery", "Credit Card", "Debit Card", "Online Payment" };
-    var priorityLevels = new List<string> { "Low", "Medium", "High" };
-
-    ViewBag.FormControls = formControls;
-    ViewBag.DeliveryOptions = deliveryOptions;
-    ViewBag.PaymentMethods = paymentMethods;
-    ViewBag.PriorityLevels = priorityLevels;
-
+    ViewBag.DefaultData = data;
     return View();
 }
