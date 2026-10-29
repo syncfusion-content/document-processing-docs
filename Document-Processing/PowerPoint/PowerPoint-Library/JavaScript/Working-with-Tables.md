@@ -20,16 +20,18 @@ The JavaScript PowerPoint Library supports creating and editing tables in PowerP
 {% highlight js tabtitle="TypeScript" %}
 
 import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
-import { addTable } from '@syncfusion/ej2-pptx/tables';
+
 (async () => {
 // Create a PowerPoint presentation.
 const pptxDoc = Presentation.create();
 // Add slide to the presentation.
 const slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
 // Add a table to the slide (2 rows × 2 columns). Bounds are in points.
-const table = addTable(slide, {
-    rows: 2, columns: 2,
-    xfrm: { x: 100, y: 120, width: 300, height: 200 }
+const table = slide.addTable({
+  rows: 3,
+  columns: 4,
+  xfrm: { x: 0, y: 0, width: 400, height: 200 },
+  name: 'Metrics'
 });
 // Iterate row-wise cells and add text to each.
 for (let rowIndex = 0; rowIndex < table.rowCount; rowIndex++) {
@@ -57,16 +59,18 @@ The following code example demonstrates how to create a simple table in a PowerP
 {% highlight js tabtitle="TypeScript" %}
 
 import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
-import { addTable } from '@syncfusion/ej2-pptx/tables';
+
 (async () => {
 // Create a PowerPoint presentation.
 const pptxDoc = Presentation.create();
 // Add slide to the presentation.
 const slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
 // Add a table to the slide (2 rows × 2 columns). Bounds are in points.
-const table = addTable(slide, {
-    rows: 2, columns: 2,
-    xfrm: { x: 100, y: 120, width: 300, height: 200 }
+const table = slide.addTable({
+  rows: 3,
+  columns: 4,
+  xfrm: { x: 0, y: 0, width: 400, height: 200 },
+  name: 'Metrics'
 });
 // Iterate column-wise cells and add text to each.
 for (let colIndex = 0; colIndex < table.columnCount; colIndex++) {
