@@ -6,9 +6,11 @@ control: Excel
 documentation: ug
 ---
 
-# Worksheets in JavaScript Excel
+# Worksheets in JavaScript Excel Library
 
 Worksheets are the tabs inside a workbook where cells, charts, and other content live. You can open a sheet by order or name, list every sheet, and change tab order as the workbook structure grows.
+
+N> The snippets on this page save the workbook with `await workbook.save('<file name>.xlsx')`, which requires Node.js. In a browser, call `workbook.save()` without arguments and download the returned bytes, as shown in [Getting started](https://help.syncfusion.com/document-processing/excel/excel-library/javascript/getting-started).
 
 ## Access worksheets
 
@@ -28,6 +30,9 @@ const same = workbook.sheet('Sheet1');
 
 // Snapshot of all sheets in tab order
 const all = workbook.worksheets;
+
+// Save the workbook.
+await workbook.save('AccessWorksheets.xlsx');
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 import { Workbook } from '@syncfusion/ej2-xlsx';
@@ -42,12 +47,15 @@ const same = workbook.sheet('Sheet1');
 
 // Snapshot of all sheets in tab order
 const all = workbook.worksheets;
+
+// Save the workbook.
+await workbook.save('AccessWorksheets.xlsx');
 {% endhighlight %}
 {% endtabs %}
 
 ## Add, remove, and reorder sheets
 
-You can add new worksheets, reorder tabs, and remove sheets you no longer need. A workbook must always keep at least one worksheet.
+You can add new worksheets, reorder tabs, and remove sheets you no longer need.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -64,6 +72,9 @@ workbook.moveSheet(0, 1);
 
 // Remove a sheet (the last remaining sheet cannot be removed)
 workbook.removeSheet(summary);
+
+// Save the workbook.
+await workbook.save('AddRemoveAndReorderSheets.xlsx');
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 import { Workbook } from '@syncfusion/ej2-xlsx';
@@ -79,6 +90,9 @@ workbook.moveSheet(0, 1);
 
 // Remove a sheet (the last remaining sheet cannot be removed)
 workbook.removeSheet(summary);
+
+// Save the workbook.
+await workbook.save('AddRemoveAndReorderSheets.xlsx');
 {% endhighlight %}
 {% endtabs %}
 
@@ -95,6 +109,9 @@ import { Workbook } from '@syncfusion/ej2-xlsx';
 const workbook: Workbook = Workbook.create();
 const sheet = workbook.sheet(0);
 sheet.name = 'January';
+
+// Save the workbook.
+await workbook.save('RenameAWorksheet.xlsx');
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 import { Workbook } from '@syncfusion/ej2-xlsx';
@@ -102,6 +119,9 @@ import { Workbook } from '@syncfusion/ej2-xlsx';
 const workbook = Workbook.create();
 const sheet = workbook.sheet(0);
 sheet.name = 'January';
+
+// Save the workbook.
+await workbook.save('RenameAWorksheet.xlsx');
 {% endhighlight %}
 {% endtabs %}
 
@@ -124,6 +144,9 @@ sheet.isRowColumnHeadersVisible = true;
 sheet.isDisplayZeros = false;
 sheet.isRightToLeft = false;
 sheet.zoom = 125;
+
+// Save the workbook.
+await workbook.save('VisibilityAndViewSettings.xlsx');
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 import { Workbook } from '@syncfusion/ej2-xlsx';
@@ -139,6 +162,9 @@ sheet.isRowColumnHeadersVisible = true;
 sheet.isDisplayZeros = false;
 sheet.isRightToLeft = false;
 sheet.zoom = 125;
+
+// Save the workbook.
+await workbook.save('VisibilityAndViewSettings.xlsx');
 {% endhighlight %}
 {% endtabs %}
 
@@ -160,6 +186,9 @@ const width = sheet.getColumnWidth(1);
 // 1-based row index
 sheet.setRowHeight(1, 22);
 const height = sheet.getRowHeight(1);
+
+// Save the workbook.
+await workbook.save('ColumnWidthAndRowHeight.xlsx');
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 import { Workbook } from '@syncfusion/ej2-xlsx';
@@ -174,6 +203,113 @@ const width = sheet.getColumnWidth(1);
 // 1-based row index
 sheet.setRowHeight(1, 22);
 const height = sheet.getRowHeight(1);
+
+// Save the workbook.
+await workbook.save('ColumnWidthAndRowHeight.xlsx');
+{% endhighlight %}
+{% endtabs %}
+
+## Hide and show rows and columns
+
+Hide a row or column without deleting its data, and show it again later. Row and column indexes are 1-based.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { Workbook } from '@syncfusion/ej2-xlsx';
+
+const workbook: Workbook = Workbook.create();
+const sheet = workbook.sheet(0);
+
+sheet.cell('A1').value = 'Visible';
+sheet.cell('B1').value = 'Hidden column';
+sheet.cell('A2').value = 'Hidden row';
+sheet.cell('A3').value = 'Visible';
+
+// Hide column B and row 2
+sheet.setColumnHidden(2, true);
+sheet.setRowHidden(2, true);
+
+// Check whether they are hidden
+const columnHidden = sheet.isColumnHidden(2);
+const rowHidden = sheet.isRowHidden(2);
+
+// Show them again
+
+// Save the workbook.
+await workbook.save('HideRowsAndColumns.xlsx');
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+import { Workbook } from '@syncfusion/ej2-xlsx';
+
+const workbook = Workbook.create();
+const sheet = workbook.sheet(0);
+
+sheet.cell('A1').value = 'Visible';
+sheet.cell('B1').value = 'Hidden column';
+sheet.cell('A2').value = 'Hidden row';
+sheet.cell('A3').value = 'Visible';
+
+// Hide column B and row 2
+sheet.setColumnHidden(2, true);
+sheet.setRowHidden(2, true);
+
+// Check whether they are hidden
+const columnHidden = sheet.isColumnHidden(2);
+const rowHidden = sheet.isRowHidden(2);
+
+// Show them again
+
+// Save the workbook.
+await workbook.save('HideRowsAndColumns.xlsx');
+{% endhighlight %}
+{% endtabs %}
+
+## Used range and selected range
+
+The used range reports the area from cell A1 to the last cell that contains data, which is useful before you loop over cells. You can also set the range that is selected when the workbook opens.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { Workbook } from '@syncfusion/ej2-xlsx';
+
+const workbook: Workbook = Workbook.create();
+const sheet = workbook.sheet(0);
+
+sheet.cell('B2').value = 'Start';
+sheet.cell('D5').value = 'End';
+
+// Area from A1 to the last cell that contains data
+const used = sheet.usedRange;
+const address = used ? used.address : undefined; // 'A1:D5'
+const lastRow = sheet.lastRow; // 5
+const lastColumn = sheet.lastColumn; // 4
+
+// Select a range when the workbook opens
+sheet.selectedRange = 'B2:D5';
+
+// Save the workbook.
+await workbook.save('UsedRangeAndSelection.xlsx');
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+import { Workbook } from '@syncfusion/ej2-xlsx';
+
+const workbook = Workbook.create();
+const sheet = workbook.sheet(0);
+
+sheet.cell('B2').value = 'Start';
+sheet.cell('D5').value = 'End';
+
+// Area from A1 to the last cell that contains data
+const used = sheet.usedRange;
+const address = used ? used.address : undefined; // 'A1:D5'
+const lastRow = sheet.lastRow; // 5
+const lastColumn = sheet.lastColumn; // 4
+
+// Select a range when the workbook opens
+sheet.selectedRange = 'B2:D5';
+
+// Save the workbook.
+await workbook.save('UsedRangeAndSelection.xlsx');
 {% endhighlight %}
 {% endtabs %}
 
@@ -196,6 +332,9 @@ sheet.freeze.freezePanes({ rows: 1, columns: 1 });
 
 // Clear freeze
 sheet.freeze.unfreeze();
+
+// Save the workbook.
+await workbook.save('FreezeRowsAndColumns.xlsx');
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 import { Workbook } from '@syncfusion/ej2-xlsx';
@@ -211,5 +350,8 @@ sheet.freeze.freezePanes({ rows: 1, columns: 1 });
 
 // Clear freeze
 sheet.freeze.unfreeze();
+
+// Save the workbook.
+await workbook.save('FreezeRowsAndColumns.xlsx');
 {% endhighlight %}
 {% endtabs %}
