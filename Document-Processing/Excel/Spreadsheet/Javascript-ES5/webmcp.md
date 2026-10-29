@@ -202,6 +202,39 @@ spreadsheet.appendTo('#spreadsheet');
 - Monitor tool activity through the `beforeWebMcpToolExecute` event.
 - Apply application-specific validation before executing tool operations.
 
+## Supported Features
+
+WebMCP tools are organized into six categories, covering 28 operations:
+
+| Category | Tools | Example |
+|----------|-------|---------|
+| **Core Data** | getCellData, getRangeData, getSheetInfo, sheetList, evaluateFormula, find | Read cell values, formulas, sheet metadata, and search content |
+| **Editing** | editCell, insertRowsColumns, deleteRowsColumns, insertSheet, cut, copy, paste, autofill, findReplace | Modify spreadsheet content and structure |
+| **Formatting** | formatCells, setNumberFormat, addConditionalFormat, mergeCells, toggleWrap | Apply styles, number formats, conditional rules, and cell layout |
+| **Data Operations** | sortRange, filterRange, addDataValidation, freezePanes | Sort, filter, validate, and lock data for navigation |
+| **Charting & Links** | insertChart, insertHyperlink | Create visualizations and insert clickable links |
+| **Workbook & Utility** | save, undo | Export the workbook and manage action history |
+
+For complete tool reference, see [WebMCP Integration — Tool Reference](https://ej2.syncfusion.com/react/documentation/webmcp/components#spreadsheet).
+
+## Writing Effective Prompts
+
+AI responses are only as good as the prompt you provide. Vague requests like *"fix this"* give the AI very little context. More specific prompts produce reliable, accurate results.
+
+**Good Prompt Example:**
+*"Highlight all values in column B that are greater than 500 in red background with white font."*
+
+**Vague Prompt Example:**
+*"make it better"*
+
+### Tips for Effective Prompts
+
+- **Be Specific** — Include exact column names, cell ranges, colors, and formatting details
+- **Provide Context** — Mention the sheet, data type, or business objective
+- **One Goal at a Time** — Complex prompts may confuse the AI; break them into steps
+- **Reference Cells Clearly** — Use specific addresses (e.g., "A1:C10") instead of vague ranges
+- **State Expectations** — Clarify sort order, filter criteria, or output format
+
 ## Explore the demo
 
 Explore the Syncfusion® JavaScript (ES5) Spreadsheet control with WebMCP integration through this [demo](https://demos.syncfusion.com/spreadsheet-editor-sdk/webmcp/index.html).
