@@ -129,5 +129,5 @@ To open the Format Control dialog:
 
 ## See Also
 
-* [Data Validation](../data-validation.md)
-* [Cell Formatting](../formatting.md)
+* [Cell range](./cell-range)
+* [Formatting](./formatting)

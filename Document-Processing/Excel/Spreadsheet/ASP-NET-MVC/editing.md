@@ -61,3 +61,6 @@ After running the sample, verify that cells in column E cannot enter edit mode a
 
 * [Cell range](./cell-range)
 * [Formatting](./formatting)
+* [Hyperlink](./link)
+* [Undo and Redo](./undo-redo)
+* [Unlock the particular cells in the protected sheet](./protect-sheet#unlock-the-particular-cells-in-the-protected-sheet)
