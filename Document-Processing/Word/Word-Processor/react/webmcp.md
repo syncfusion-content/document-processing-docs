@@ -18,7 +18,7 @@ WebMCP integrates seamlessly into your [React DOCX Editor](https://www.syncfusio
 Ensure the following before integrating WebMCP:
 
 - Syncfusion DOCX Editor component is installed and configured [Getting Started](./getting-started)
-- A Chromium-based browser, such as Chrome, Edge, or Brave, has the WebMCP flag enabled
+- A Chromium-based browser with the WebMCP origin trial or chrome://flags/#enable-webmcp enabled. The API is experimental, so confirm it in the browser versions you support.
 
 ## Getting Started
 
@@ -59,6 +59,7 @@ Set the `enableWebMcp` property to `true` in your DocumentEditorContainer config
 <DocumentEditorContainerComponent
           id="container"
           ref={(scope) => { container = scope; }}
+          // Use the following service URL only for demo purposes
           serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
           height="100%"
           enableToolbar={true}
@@ -76,6 +77,7 @@ Set the `webMcpSettings` property to register the available tools in the control
 <DocumentEditorContainerComponent
           id="container"
           ref={(scope) => { container = scope; }}
+          // Use the following service URL only for demo purposes
           serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
           height="100%"
           enableToolbar={true}
@@ -89,7 +91,7 @@ Set the `webMcpSettings` property to register the available tools in the control
 ### Step 5: Test Your Setup
 
 **Test with Your Local Setup**
-- Run the application locally and open it in a Chromium-based browser such as Chrome, Edge, or Brave.
+- Run the application locally and open it in a Chromium-based browser.
 - Launch the WebMCP extension and confirm that it connects to your application successfully.
 - Verify that the registered tools are displayed with your chosen prefix.
 - Try a sample prompt that matches your data scenario to validate tool execution and response behavior.
@@ -214,6 +216,7 @@ const WebMCPApp = () => {
         <DocumentEditorContainerComponent
           id="container"
           ref={(scope) => { container = scope; }}
+          // Use the following service URL only for demo purposes
           serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
           height="100%"
           enableToolbar={true}
