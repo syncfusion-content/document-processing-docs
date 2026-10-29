@@ -62,7 +62,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-### Content for adding action to an existing PDF
+### Adding an Action to an Existing PDF
 
 You can also read, modify, or replace existing document-level actions in a loaded PDF document. Read the `afterOpen` or other event properties to inspect the current action, update properties, or assign a new action.
 
@@ -74,12 +74,8 @@ import { PdfAction, PdfActionDestination, PdfDocument, PdfNamedAction } from '@s
 
 // Load an existing PDF document
 const document: PdfDocument = new PdfDocument(data);
-// Get the existing open action
-const openAction: PdfAction = document.actions.afterOpen;
-if (openAction instanceof PdfNamedAction) {
-    // Change navigation to the first page instead
-    document.actions.afterOpen = new PdfNamedAction(PdfActionDestination.FirstPage);
-}
+// Add or update the existing after open action
+document.actions.afterOpen = new PdfNamedAction(PdfActionDestination.FirstPage);
 // Save the modified document
 document.save('output.pdf');
 // Destroy the document
@@ -106,24 +102,25 @@ document.destroy();
 
 The JavaScript PDF Library supports a wide variety of PDF action types conforming to the PDF specification (ISO 32000-1). Each action class derives from the base `PdfAction` class.
 
-| Action type | Class name | Constructor | Description |
-|---|---|---|---|
-| JavaScript | `PdfJavaScriptAction` | `(script: string)` | Executes a client-side JavaScript script in the PDF viewer. |
-| GoTo | `PdfGoToAction` | `(destination: PdfDestination \| PdfPage)` | Navigates to a specific destination or page within the current document. |
-| Remote GoTo | `PdfRemoteGoToAction` | `(filePath?: string, remoteDestination?: PdfRemoteDestination)` | Navigates to a destination located in an external PDF file. |
-| Embedded GoTo | `PdfEmbeddedGoToAction` | `(destination?: PdfRemoteDestination, fileSpecification?: PdfFileSpecification, target?: PdfTargetDictionary)` | Navigates to a destination within an embedded file or parent/child document. |
-| GoTo DPart | `PdfGoToDPartAction` | `(destination?: PdfDestination)` | Navigates to a document part (DPart) destination. |
-| GoTo 3D view | `PdfGoTo3DViewAction` | `(annotation?: Pdf3DAnnotation, view?: string \| number)` | Activates a specified view in a 3D annotation. |
-| Named | `PdfNamedAction` | `(destination?: PdfActionDestination)` | Executes a predefined viewer navigation command (FirstPage, LastPage, NextPage, PrevPage). |
-| URI | `PdfUriAction` | `(uri?: string)` | Resolves and opens a web URL or external hyperlink. |
-| Launch | `PdfLaunchAction` | `(fileSpecification?: PdfFileSpecification, isNewWindow?: boolean \| PdfWindowsLaunchParameters)` | Launches an external application or opens an external file. |
-| Submit form | `PdfSubmitFormAction` | `(url?: string)` | Submits PDF interactive form data to a specified URL destination. |
-| Reset form | `PdfResetFormAction` | `()` | Resets interactive form fields to their default values. |
-| Import data | `PdfImportDataAction` | `(fileSpecification?: PdfFileSpecification)` | Imports form-field data into the document from an external data file. |
-| Sound | `PdfSoundAction` | `(sound?: PdfSound)` | Plays an audio clip or sound stream. |
-| Rich-media execute | `PdfRichMediaExecuteAction` | `(annotation?: PdfRichMediaAnnotation, command?: PdfRichMediaCommand)` | Executes a rich-media command on a rich-media annotation. |
-| Set OCG state | `PdfSetOCGStateAction` | `(state?: PdfLayerState[], preserveRadioButtons?: boolean)` | Controls the visibility states (On, Off, Toggle) of optional content groups (layers). |
-| Action chaining | `PdfAction` | `next: PdfAction` | Chains multiple actions to execute in sequence using the `next` property. |
+| Action type | Description |
+|---|---|
+| JavaScript (`PdfJavaScriptAction`) | Executes a client-side JavaScript script in the PDF viewer. |
+| GoTo (`PdfGoToAction`) | Navigates to a specific destination or page within the current document. |
+| Remote GoTo (`PdfRemoteGoToAction`) | Navigates to a destination located in an external PDF file. |
+| Embedded GoTo (`PdfEmbeddedGoToAction`) | Navigates to a destination within an embedded file or parent/child document. |
+| GoTo DPart (`PdfGoToDPartAction`) | Navigates to a document part (DPart) destination. |
+| GoTo 3D view (`PdfGoTo3DViewAction`) | Activates a specified view in a 3D annotation. |
+| Named (`PdfNamedAction`) | Executes a predefined viewer navigation command, such as FirstPage, LastPage, NextPage, or PrevPage. |
+| URI (`PdfUriAction`) | Resolves and opens a web URL or external hyperlink. |
+| Launch (`PdfLaunchAction`) | Launches an external application or opens an external file. |
+| Submit form (`PdfSubmitFormAction`) | Submits PDF interactive form data to a specified URL destination. |
+| Reset form (`PdfResetFormAction`) | Resets interactive form fields to their default values. |
+| Import data (`PdfImportDataAction`) | Imports form-field data into the document from an external data file. |
+| Sound (`PdfSoundAction`) | Plays an audio clip or sound stream. |
+| Rich-media execute (`PdfRichMediaExecuteAction`) | Executes a rich-media command on a rich-media annotation. |
+| Set OCG state (`PdfSetOCGStateAction`) | Controls the visibility states of optional content groups or layers using On, Off, and Toggle states. |
+
+> **Note:** Action chaining: We can chain multiple actions to execute in sequence using the `next` property.
 
 ### JavaScript action
 
@@ -383,21 +380,20 @@ The `PdfGoTo3DViewAction` class switches the active view of an existing 3D annot
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { Pdf3DAnnotation, PdfAnnotation, PdfDocument, PdfGoTo3DViewAction, PdfPage } from '@syncfusion/ej2-pdf';
+import { Pdf3DAnnotation, PdfDocument, PdfGoTo3DViewAction, PdfPage } from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document containing a 3D annotation
 const document: PdfDocument = new PdfDocument(data);
 const page: PdfPage = document.getPage(0);
-if (page.annotations.count > 0) {
-    const annotation: PdfAnnotation = page.annotations.at(0);
-    if (annotation instanceof Pdf3DAnnotation) {
-        // Create an action to activate the first view of the 3D annotation
-        const action: PdfGoTo3DViewAction = new PdfGoTo3DViewAction(annotation, 0);
-        page.actions.open = action;
-    }
-}
+const annotation: Pdf3DAnnotation = page.annotations.at(0) as Pdf3DAnnotation;
+
+// Create an action to activate the first view of the 3D annotation
+const action: PdfGoTo3DViewAction = new PdfGoTo3DViewAction(annotation, 0);
+page.actions.open = action;
+
 // Save the document
 document.save('output.pdf');
+
 // Destroy the document
 document.destroy();
 {% endhighlight %}
@@ -406,16 +402,15 @@ document.destroy();
 // Load an existing PDF document containing a 3D annotation
 var document = new ej.pdf.PdfDocument(data);
 var page = document.getPage(0);
-if (page.annotations.count > 0) {
-    var annotation = page.annotations.at(0);
-    if (annotation instanceof ej.pdf.Pdf3DAnnotation) {
-        // Create an action to activate the first view of the 3D annotation
-        var action = new ej.pdf.PdfGoTo3DViewAction(annotation, 0);
-        page.actions.open = action;
-    }
-}
+var annotation = page.annotations.at(0);
+
+// Create an action to activate the first view of the 3D annotation
+var action = new ej.pdf.PdfGoTo3DViewAction(annotation, 0);
+page.actions.open = action;
+
 // Save the document
 document.save('output.pdf');
+
 // Destroy the document
 document.destroy();
 {% endhighlight %}
@@ -744,7 +739,7 @@ document.destroy();
 
 ### Sound action
 
-The `PdfSoundAction` class plays an embedded sound stream when triggered. It uses a `PdfSound` object that encapsulates the audio bytes, sampling rate, bit depth, channel configuration (`PdfSoundChannels.Mono` or `Stereo`), and audio encoding (`PdfSoundEncoding`).
+The `PdfSoundAction` class plays an embedded sound stream when triggered. It uses a `PdfSound` object that encapsulates the audio bytes, sampling rate, bit depth, channel configuration and audio encoding.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -898,60 +893,6 @@ var action = new ej.pdf.PdfSetOCGStateAction(states, false);
 var button = new ej.pdf.PdfButtonField(page, 'btnLayers', { x: 20, y: 20, width: 120, height: 30 });
 button.text = 'Toggle Layers';
 button.actions.mouseUp = action;
-document.form.add(button);
-// Save the document
-document.save('output.pdf');
-// Destroy the document
-document.destroy();
-{% endhighlight %}
-{% endtabs %}
-
-### Action chaining
-
-Every `PdfAction` object provides a `next` property that references subsequent actions. When the primary action is triggered, the viewer executes each chained action in sequence. Different action types can be combined in the chain.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-import { PdfActionDestination, PdfButtonField, PdfDocument, PdfJavaScriptAction, PdfNamedAction, PdfPage } from '@syncfusion/ej2-pdf';
-
-// Create a new PDF document
-const document: PdfDocument = new PdfDocument();
-// Add pages
-const page: PdfPage = document.addPage();
-document.addPage();
-// Create the primary action: navigate to the last page
-const primaryAction: PdfNamedAction = new PdfNamedAction(PdfActionDestination.LastPage);
-// Create the subsequent action: execute JavaScript
-const nextAction: PdfJavaScriptAction = new PdfJavaScriptAction('app.alert("Navigated to last page");');
-// Chain the actions
-primaryAction.next = nextAction;
-// Assign the chained action to a button
-const button: PdfButtonField = new PdfButtonField(page, 'btnChain', { x: 20, y: 20, width: 130, height: 30 });
-button.text = 'Navigate & Alert';
-button.actions.mouseUp = primaryAction;
-document.form.add(button);
-// Save the document
-document.save('output.pdf');
-// Destroy the document
-document.destroy();
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-
-// Create a new PDF document
-var document = new ej.pdf.PdfDocument();
-// Add pages
-var page = document.addPage();
-document.addPage();
-// Create the primary action: navigate to the last page
-var primaryAction = new ej.pdf.PdfNamedAction(ej.pdf.PdfActionDestination.LastPage);
-// Create the subsequent action: execute JavaScript
-var nextAction = new ej.pdf.PdfJavaScriptAction('app.alert("Navigated to last page");');
-// Chain the actions
-primaryAction.next = nextAction;
-// Assign the chained action to a button
-var button = new ej.pdf.PdfButtonField(page, 'btnChain', { x: 20, y: 20, width: 130, height: 30 });
-button.text = 'Navigate & Alert';
-button.actions.mouseUp = primaryAction;
 document.form.add(button);
 // Save the document
 document.save('output.pdf');
