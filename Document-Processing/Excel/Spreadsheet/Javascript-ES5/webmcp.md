@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
  
 WebMCP enables AI agents to discover and interact with Syncfusion® JavaScript (ES5) controls through a standardized tool interface. By enabling WebMCP, AI-powered applications can securely discover control capabilities, read data, perform actions, and automate workflows through a standardized interface.
 
-This section demonstrates how to integrate WebMCP with the Syncfusion® JavaScript (ES5) Spreadsheet control. The same approach can be used with other supported controls such as Grid, Scheduler, Chart, and more.
+This section demonstrates how to integrate WebMCP with the Syncfusion® JavaScript (ES5) Spreadsheet control.
  
 ## WebMCP Overview
  
@@ -22,10 +22,9 @@ Instead of relying on DOM inspection or simulating user interactions, AI assista
  
 Once connected, an AI assistant can perform tasks such as:
  
-- Sort or filter Grid data.
 - Update Spreadsheet cells.
-- Create Scheduler events.
-- Perform control-specific actions through natural language prompts.
+- Read and analyze spreadsheet data.
+- Perform spreadsheet-specific actions through natural language prompts.
  
 > WebMCP is currently an experimental browser capability and requires a Chromium-based browser with WebMCP support enabled. Availability and required browser flags may change as the specification evolves.
  
@@ -212,9 +211,9 @@ Explore the Syncfusion® JavaScript (ES5) Spreadsheet control with WebMCP integr
 
 After successfully enabling WebMCP, you can:
 
-- Integrate WebMCP with other Syncfusion® JavaScript (ES5) controls such as Grid, Scheduler, Chart, and Rich Text Editor.
-- Build AI-powered workflows that interact directly with application data and UI elements.
+- Build AI-powered workflows that interact directly with spreadsheet data and UI elements.
 - Create secure and controlled tool execution pipelines using custom validation logic.
+- Enhance spreadsheet applications with intelligent automation.
 
 ## See also
 
