@@ -17,22 +17,6 @@
                     </e-formcontrol>
                 </e-formcontrols>
 
-                <e-rows>
-                    <e-row :index="30">
-                        <e-cells>
-                            <e-cell
-                                :index="4"
-                                value="Total Amount:"
-                                :style="boldRight">
-                            </e-cell>
-                            <e-cell
-                                formula="=SUM(F2:F30)"
-                                :style="bold">
-                            </e-cell>
-                        </e-cells>
-                    </e-row>
-                </e-rows>
-
                 <e-columns>
                     <e-column :width="180"></e-column>
                     <e-column :width="130"></e-column>
@@ -52,10 +36,6 @@ import {
     SpreadsheetComponent as EjsSpreadsheet,
     SheetsDirective as ESheets,
     SheetDirective as ESheet,
-    RowsDirective as ERows,
-    RowDirective as ERow,
-    CellsDirective as ECells,
-    CellDirective as ECell,
     ColumnsDirective as EColumns,
     ColumnDirective as EColumn,
     RangesDirective as ERanges,

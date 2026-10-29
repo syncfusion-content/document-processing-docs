@@ -11,27 +11,11 @@
                         type="DropDown"
                         text="Drop Down 1"
                         cellLink="G1"
-                        inputRange: "A1:A10"
+                        inputRange = "A1:A10"
                         :height="40"
-                        :width="180"
+                        :width="180">
                     </e-formcontrol>
                 </e-formcontrols>
-
-                <e-rows>
-                    <e-row :index="30">
-                        <e-cells>
-                            <e-cell
-                                :index="4"
-                                value="Total Amount:"
-                                :style="boldRight">
-                            </e-cell>
-                            <e-cell
-                                formula="=SUM(F2:F30)"
-                                :style="bold">
-                            </e-cell>
-                        </e-cells>
-                    </e-row>
-                </e-rows>
 
                 <e-columns>
                     <e-column :width="180"></e-column>
@@ -51,10 +35,6 @@ import {
     SpreadsheetComponent,
     SheetsDirective,
     SheetDirective,
-    RowsDirective,
-    RowDirective,
-    CellsDirective,
-    CellDirective,
     ColumnsDirective,
     ColumnDirective,
     RangesDirective,
@@ -71,10 +51,6 @@ export default {
         'ejs-spreadsheet': SpreadsheetComponent,
         'e-sheets': SheetsDirective,
         'e-sheet': SheetDirective,
-        'e-rows': RowsDirective,
-        'e-row': RowDirective,
-        'e-cells': CellsDirective,
-        'e-cell': CellDirective,
         'e-ranges': RangesDirective,
         'e-range': RangeDirective,
         'e-columns': ColumnsDirective,
