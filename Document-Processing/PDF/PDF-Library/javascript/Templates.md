@@ -211,6 +211,17 @@ source.destroy();
 {% endhighlight %}
 {% endtabs %}
 
+## Notes
+
+- **Page index:** `getPage` uses a zero-based index and throws an `Invalid page index` error when the index is less than 0 or not less than `pageCount`.
+- **Template size:** `template.size` reflects the source page. It is the page size, or the crop box or media box size when the page has a non-zero crop box or media box origin.
+- **Source content:** The template contains the page's drawn content (text, images, graphics, and resources). Pages of an encrypted document can be used after the document is loaded with its password. The security settings are not copied to the destination document.
+- **Interactive content:** When the template is drawn on a page of a different document, the annotations and form fields of the source page are also imported to the destination page, once per source page and destination page.
+- **Read-only template:** A template created from a page does not expose drawing graphics, so `template.graphics` is `null`. Use it only for drawing on other pages.
+- **Positioning and scaling:** The `bounds` argument of `drawTemplate` is required. Use `template.size` to retain the original proportions.
+- **Save and reload:** The generated document can be saved and reloaded as a regular PDF document. The source document is not modified by creating or drawing a template.
+- **Resource cleanup:** Call `destroy()` on both the source and the destination documents after saving.
+
 
 ## Additional Resources
 
