@@ -210,7 +210,7 @@ container.appendTo('#container');
 document.title = 'WebMCP Tool Demo - DocumentEditorContainer';
 ```
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/JavaScript-ES6-DOCX-Editor-Examples/tree/WebMcp/webmcp/getting-started).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/JavaScript-ES6-DOCX-Editor-Examples/tree/master/webmcp/getting-started).
 
 ## Troubleshooting
 
