@@ -11,7 +11,7 @@ documentation: ug
 
 ## Integration
 
-WebMCP integrates seamlessly into your [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/Vue-docx-editor) (Document Editor) application with minimal configuration.
+WebMCP integrates seamlessly into your [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) application with minimal configuration.
 
 ### Prerequisites
 
