@@ -1,22 +1,21 @@
 ---
 layout: post
-title: WebMCP tool integration for Vue components | Syncfusion
-description: Learn how to integrate WebMCP with Syncfusion Vue components to enable AI interaction, configure tools, manage access, and monitor execution.
+title: WebMCP tool integration for Vue Spreadsheet | Syncfusion
+description: Learn how to integrate WebMCP with Syncfusion Vue Spreadsheet to enable AI interaction, configure tools, manage access, and monitor execution.
 control: WebMCP
-platform: ej2-vue
+platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
 ---
  
-# WebMCP Tools Integration for Syncfusion® Vue Components
+# WebMCP Tools Integration for Syncfusion® Vue Spreadsheet component
  
-WebMCP enables AI agents to discover and interact with Syncfusion® Vue components through a standardized tool interface. By enabling WebMCP, AI-powered applications can securely discover component capabilities, read data, perform actions, and automate workflows through a standardized interface.
+WebMCP enables AI agents to discover and interact with Syncfusion® Vue Spreadsheet through a standardized tool interface. By enabling WebMCP, AI-powered applications can securely discover component capabilities, read data, perform actions, and automate workflows through a standardized interface.
 
 This section demonstrates how to integrate WebMCP with the Syncfusion® Vue Spreadsheet component.
  
 ## WebMCP Overview
  
-WebMCP allows AI assistants running in the browser to interact directly with Syncfusion® components through natural language prompts.
+WebMCP allows AI assistants running in the browser to interact directly with Syncfusion® Vue Spreadsheet through natural language prompts.
  
 Instead of relying on DOM inspection or simulating user interactions, AI assistants can interact directly with component APIs through WebMCP tools. This approach provides more reliable and accurate results.
  
@@ -30,7 +29,7 @@ Once connected, an AI assistant can perform tasks such as:
  
 ## Prerequisites
  
-- Syncfusion® Vue components
+- Syncfusion® Vue Spreadsheet component
 - Chromium-based Browser (like Chrome, Edge, or Brave)
 - [Node.js 24+](https://nodejs.org/en) (LTS recommended).
 - WebMCP browser extension installed
@@ -46,11 +45,11 @@ Before you can use WebMCP locally, enable the feature flag and install the brows
  
 3. Visit [Google AI Studio](https://aistudio.google.com/app/apikey) to create or copy an API key. Open the WebMCP extension → paste your API key.
  
-The WebMCP extension is now configured and ready to interact with WebMCP-enabled Syncfusion® components.
+The WebMCP extension is now configured and ready to interact with WebMCP-enabled Syncfusion® Vue Spreadsheet component.
 
 ## Integrating WebMCP tools
 
-Follow these steps to integrate WebMCP support into Syncfusion® Vue components. The following example uses the Spreadsheet component.
+Follow these steps to integrate WebMCP support into Syncfusion® Vue Spreadsheet component.
 
 ### Step 1: Set up the Vite project
 
@@ -84,7 +83,7 @@ Spreadsheet.Inject(WebMcpSpreadsheet);
 
 Set the `enableWebMcp` property to `true` to register the component's available tools with the WebMCP runtime.
 
-When `enableWebMcp` is enabled, supported component tools are automatically registered with the WebMCP runtime and become discoverable by authorized WebMCP clients.
+When `enableWebMcp` is enabled, Spreadsheet component tools are automatically registered with the WebMCP runtime and become discoverable by authorized WebMCP clients.
 
 For example, a Spreadsheet component may expose tools such as:
 
@@ -151,7 +150,7 @@ const webMcpSettings = {
 </script>
 ```
 
-> Use the `exposeTo` property to restrict WebMCP access to trusted domains. This helps prevent unauthorized WebMCP clients from interacting with your component tools.
+> Use the `exposeTo` property to restrict WebMCP access to trusted domains. This helps prevent unauthorized WebMCP clients from interacting with your spreadsheet component tools.
 
 ### Step 5: Monitor and control tool execution
 
@@ -227,4 +226,4 @@ After successfully enabling WebMCP, you can:
 
 ## See also
 
-- [WebMCP Supported Syncfusion Vue Components](./components)
+- [MCP Server Setup in Vue Spreadsheet](./mcp.md)
