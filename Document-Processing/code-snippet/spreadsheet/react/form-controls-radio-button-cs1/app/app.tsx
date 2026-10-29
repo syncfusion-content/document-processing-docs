@@ -6,76 +6,78 @@ import { CellStyleModel, FormControlModel } from '@syncfusion/ej2-react-spreadsh
 function App() {
     const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
 
-    React.useEffect(() => {
-        let spreadsheet = spreadsheetRef.current;
-        if (spreadsheet) {
-            // Insert Radio Button form controls - Group 1
-            spreadsheet.addFormControl({
-                type: 'RadioButton',
-                target: 'B2',
-                name: 'shippingGroup',
-                caption: 'Standard Shipping',
-                value: 'standard',
-                linkedCell: 'D2',
-                fontName: 'Calibri',
-                fontSize: 14
-            } as FormControlModel);
-
-            spreadsheet.addFormControl({
-                type: 'RadioButton',
-                target: 'B3',
-                name: 'shippingGroup',
-                caption: 'Express Shipping',
-                value: 'express',
-                linkedCell: 'D3'
-            } as FormControlModel);
-
-            spreadsheet.addFormControl({
-                type: 'RadioButton',
-                target: 'B4',
-                name: 'shippingGroup',
-                caption: 'Overnight Shipping',
-                value: 'overnight',
-                linkedCell: 'D4'
-            } as FormControlModel);
-
-            // Insert Radio Button form controls - Group 2
-            spreadsheet.addFormControl({
-                type: 'RadioButton',
-                target: 'B6',
-                name: 'paymentGroup',
-                caption: 'Credit Card',
-                value: 'creditcard',
-                linkedCell: 'D6'
-            } as FormControlModel);
-
-            spreadsheet.addFormControl({
-                type: 'RadioButton',
-                target: 'B7',
-                name: 'paymentGroup',
-                caption: 'Debit Card',
-                value: 'debitcard',
-                linkedCell: 'D7'
-            } as FormControlModel);
-
-            spreadsheet.addFormControl({
-                type: 'RadioButton',
-                target: 'B8',
-                name: 'paymentGroup',
-                caption: 'Wire Transfer',
-                value: 'transfer',
-                linkedCell: 'D8'
-            } as FormControlModel);
+    const formControls: FormControlModel[] = [
+        // Shipping options group - linked to same cell (D2)
+        {
+            type: 'RadioButton',
+            text: 'Standard Shipping',
+            cellLink: 'D2',
+            value: 'Unchecked',
+            top: 40,
+            left: 150,
+            height: 20,
+            width: 120
+        },
+        {
+            type: 'RadioButton',
+            text: 'Express Shipping',
+            cellLink: 'D2',
+            value: 'Unchecked',
+            top: 70,
+            left: 150,
+            height: 20,
+            width: 120
+        },
+        {
+            type: 'RadioButton',
+            text: 'Overnight Shipping',
+            cellLink: 'D2',
+            value: 'Unchecked',
+            top: 100,
+            left: 150,
+            height: 20,
+            width: 120
+        },
+        // Payment options group - linked to same cell (D4)
+        {
+            type: 'RadioButton',
+            text: 'Credit Card',
+            cellLink: 'D4',
+            value: 'Unchecked',
+            top: 160,
+            left: 150,
+            height: 20,
+            width: 120
+        },
+        {
+            type: 'RadioButton',
+            text: 'Debit Card',
+            cellLink: 'D4',
+            value: 'Unchecked',
+            top: 190,
+            left: 150,
+            height: 20,
+            width: 120
+        },
+        {
+            type: 'RadioButton',
+            text: 'Wire Transfer',
+            cellLink: 'D4',
+            value: 'Unchecked',
+            top: 220,
+            left: 150,
+            height: 20,
+            width: 120
         }
-    }, []);
+    ];
 
     const boldCenter: CellStyleModel = { fontWeight: 'bold', textAlign: 'center' };
 
     return (
         <div>
-            <SpreadsheetComponent ref={spreadsheetRef} showFormulaBar={false}>
+            <SpreadsheetComponent ref={spreadsheetRef} showFormulaBar={false} allowFormControl={true}>
                 <SheetsDirective>
-                    <SheetDirective name={'RadioButtonDemo'}>
+                    <SheetDirective name={'RadioButtonDemo'} formControls={formControls}>
                         <ColumnsDirective>
                             <ColumnDirective width={150}></ColumnDirective>
                             <ColumnDirective width={180}></ColumnDirective>
@@ -110,6 +112,9 @@ function App() {
                                 </CellsDirective>
                             </RowDirective>
                         </RowsDirective>
+                        <FormControlsDirective>
+                            <FormControlDirective type="RadioButton" text="Radio Button 1" celllink="H4" height={40} width={110}></FormControlDirective>"
+                        </FormControlsDirective>
                     </SheetDirective>
                 </SheetsDirective>
             </SpreadsheetComponent>
