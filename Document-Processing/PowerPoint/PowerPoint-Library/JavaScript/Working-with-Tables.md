@@ -145,14 +145,14 @@ You can append new rows at the end of an existing PowerPoint table. Refer to the
 {% tabs %}
 {% highlight js tabtitle="TypeScript" %}
 
-import { Presentation } from '@syncfusion/ej2-pptx';
+import { Presentation, asTable } from '@syncfusion/ej2-pptx';
 
 // data is a Uint8Array or ArrayBuffer of an existing .pptx file that contains a table.
 // Loads or opens a PowerPoint presentation.
 let pptxDoc = await Presentation.open(data);
 // Get the first shape on the first slide and bind it as a table.
 let slide = pptxDoc.slides[0];
-let table = slide.addTable({ rows: 1, columns: 2 });
+let table = asTable(slide.shapes[0]);
 if (table) {
     // Add or append a new row at the end of the table.
     let newRowIndex = table.rowCount;
