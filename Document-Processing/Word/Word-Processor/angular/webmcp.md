@@ -11,7 +11,7 @@ documentation: ug
 
 ## Integration
 
-WebMCP integrates seamlessly into your Angular DOCX Editor (Document Editor) application with minimal configuration. This section covers the required setup, tool discovery, registration, and complete API reference.
+WebMCP integrates seamlessly into your [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) application with minimal configuration.
 
 ### Prerequisites
 
@@ -49,8 +49,7 @@ import {
     DocumentEditorContainerModule, 
     DocumentEditorContainerComponent, 
     ToolbarService, 
-    RibbonService, 
-    WebMcpToolExecuteEventArgs 
+    RibbonService 
 } from '@syncfusion/ej2-angular-documenteditor'; 
 ```
 
@@ -60,13 +59,16 @@ Set the `enableWebMcp` property to `true` in your DocumentEditorContainer config
 
 ```ts
 template: `
-<ejs-documenteditorcontainer 
-    #documenteditor_default 
-    height="590px" 
-    style="width:100%;display:block" 
-    serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
-    [enableToolbar]="true" 
-    [enableWebMcp]="true" />
+<ejs-documenteditorcontainer        
+        #document_editor
+        id="container"
+        serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
+        height="590px"
+        style="width:100%;display:block"
+        [enableToolbar]="true"
+        [toolbarMode]="'Ribbon'" 
+        [enableWebMcp]="true">
+    </ejs-documenteditorcontainer>
 `
 ```
 
@@ -76,14 +78,17 @@ Set the `webMcpSettings` property to register the available tools in the control
 
 ```ts
 template: `
-<ejs-documenteditorcontainer 
-    #documenteditor_default 
-    height="590px" 
-    style="width:100%;display:block" 
-    serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
-    [enableToolbar]="true" 
-    [enableWebMcp]="true"
-    [webMcpSettings]="webMcpSettings" />
+<ejs-documenteditorcontainer        
+        #document_editor
+        id="container"
+        serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
+        height="590px"
+        style="width:100%;display:block"
+        [enableToolbar]="true"
+        [toolbarMode]="'Ribbon'" 
+        [enableWebMcp]="true"
+        [webMcpSettings]="webMcpSettings">
+    </ejs-documenteditorcontainer>
 `
 ...
 ...
@@ -113,146 +118,9 @@ Find every occurrence of "Syncfusion" and replace it with "Syncfusion Inc."
 {% endpromptcard %}
 {% endpromptcards %}
 
-## Tool Discovery and Registration
-
-### Getting Available Tools
-
-Use `getWebMcpTools()` to retrieve available tool schemas:
-
-```ts
-// Get all tool schemas
-// Get the registered WebMCP tools
-this.allTools = this.container.getWebMcpTools();
-
-// Get specific tools only
-this.tools = this.container.getWebMcpTools(['insertBookmark', 'insertText', 'formatCharacter']);
-
-console.log(allTools[0]); //or tools[0]
-// Output:
-// {
-//   name: 'insertBookmark',
-//   title: 'Insert a bookmark',
-//   description: 'Creates a bookmark at the current cursor position for navigation.',
-//   inputSchema: { type: 'object', properties: {...} },
-//   outputSchema: { type: 'object', properties: {...} }
-// }
-```
-
-
-**Parameters:**
-
-| Parameter | Type | Required | Description |
-|-----------|------|----------|-------------|
-| `prefix` | `string` | ❌ | Unique prefix to avoid tool-name collisions (e.g., `'container'`, `'editor'`). Defaults to the DOCX Editor element's ID if omitted. |
-| `toolNames` | `string[]` | ❌ | Array of permitted tool names (e.g., `['getDocumentInfo', 'insertText']`). When omitted, all available tools are registered. |
-| `exposedTo` | `string[]` | ❌ | List of trusted origins for cross-origin access (e.g., `['https://trusted.example.com']`). Omit for same-origin only. |
-
-### Usage Examples
-
-**Register all tools:**
-```ts
-[enableWebMcp]="true" // Tools registered for allavailable tools as: container_getDocumentInfo, container_insertText, ...
-```
-
-**Register specific tools only:**
-```ts
-[webMcpSettings]="webMcpSettings"
-...
-...
-public webMcpSettings: any = {
-name: 'container',
-tools: ['getDocumentInfo', 'insertText', 'formatCharacter']
-};
-// Only these 3 tools are registered, reducing attack surface
-```
-
-**Multi-instance setup:**
-```ts
-public webMcpSettings: any = { name: 'container1' }; //Set name as 'Container1' for first DOCX Editor 
-public webMcpSettings: any = { name: 'container2' }; //Set name as 'Container2' for first DOCX Editor 
-```
-
-**Cross-origin access:**
-```ts
-this.container.registerWebMcpTools('container', undefined, [
-    'https://trusted.example.com',
-    'https://analytics.example.com'
-]);
-// Tools are accessible from these origins (requires HTTPS)
-```
-
-### Understanding the `beforeWebMcpToolExecute` Event
-
-Hook into tool execution for auditing, restrictions, or custom logic:
-
-```ts
-template: `
-<ejs-documenteditorcontainer
-    #documenteditor_default
-    height="590px"
-    style="width:100%;display:block"
-    serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
-    [enableToolbar]="true"
-    [enableWebMcp]="true"
-    toolbarMode="Ribbon"
-    [webMcpSettings]="webMcpSettings"
-    (created)="created()"
-    (beforeWebMcpToolExecute)="beforeWebMcpToolExecute($event)">
-</ejs-documenteditorcontainer>
-`,
-...
-...
-public beforeWebMcpToolExecute(args: WebMcpToolExecuteEventArgs): void {
-        
-    const { toolName, toolArgs } = args;
-
-    console.log(`Tool ${toolName} invoked with:`, toolArgs);
-
-    // Example: Cancel replace operations that target protected ranges
-    if (toolName === 'replaceAll' && toolArgs && toolArgs.matchText === 'Confidential') {
-        args.cancel = true;
-    }
-};
-
-```
-
-### Auditing Write Operations
-
-Use the `beforeWebMcpToolExecute` event to enable confirmation prompts for write operations. The example below mirrors the configuration used in the reference `Component.ts`:
-
-```ts
-public beforeWebMcpToolExecute(args: WebMcpToolExecuteEventArgs): void {
-    const writeOperations = [
-        'saveDocument',
-        'configureDocumentEditorSettings',
-        'replaceAll',
-        'insertText',
-        'paste',
-        'insertBookmark',
-        'enforceProtection',
-        'stopProtection',
-        'insertField',
-        'insertEditingRegion',
-        'formatCharacter',
-        'formatParagraph',
-        'insertImage',
-        'insertHyperlink'
-    ];
-    if (args.toolName) {
-        const toolName = args.toolName.indexOf('_') != -1 ? args.toolName.substring(args.toolName.indexOf('_') + 1) : args.toolName;
-
-        if (writeOperations.indexOf(toolName) !== -1) {
-            args.showConfirmationDialog = true;
-        }
-    }
-};
-```
-
 ## Tool Reference
 
 WebMCP tools are organized by category. The tables below provide an overview of all available tools. For complete input/output schemas, call `getWebMcpTools()` programmatically.
-
-> **Note:** Write operations can trigger user confirmation dialogs when the `showConfirmationDialog` property is enabled in the `beforeWebMcpToolExecute` event. Applications can use this event to audit, restrict, or cancel any operation, whereas read operations execute immediately. In the tables below, the condition "Always" indicates that a tool is enabled by default, regardless of the component configuration.
 
 ## Document Information Tools
 
@@ -325,237 +193,43 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 
 ## Code Examples
 
-### Example 1: Basic Setup
+### Basic Setup
 
 Set up a DocumentEditorContainer with WebMCP enabled and register tools on creation.
 
 ```ts
-import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component } from '@angular/core';
 import {
     DocumentEditorContainerModule,
-    DocumentEditorContainerComponent,
     ToolbarService,
-    RibbonService,
-    WebMcpToolExecuteEventArgs
+    RibbonService
 } from '@syncfusion/ej2-angular-documenteditor';
 
 @Component({
-    imports: [
-        DocumentEditorContainerModule
-    ],
-    standalone: true,
     selector: 'app-root',
+    standalone: true,
+    imports: [DocumentEditorContainerModule],
     template: `
-<ejs-documenteditorcontainer
-    #documenteditor_default
-    height="590px"
-    style="width:100%;display:block"
-    serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
-    [enableToolbar]="true"
-    [enableWebMcp]="true"
-    toolbarMode="Ribbon"
-    [webMcpSettings]="webMcpSettings"
-    (created)="created()"
-    (beforeWebMcpToolExecute)="beforeWebMcpToolExecute($event)">
-</ejs-documenteditorcontainer>
+    <!-- Use the following service URL only for demo purposes -->
+    <ejs-documenteditorcontainer
+        serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
+        height="590px"
+        style="width:100%;display:block"
+        [enableToolbar]="true"
+        [toolbarMode]="'Ribbon'" 
+        [enableWebMcp]="true"
+        [webMcpSettings]="webMcpSettings">
+    </ejs-documenteditorcontainer>
 `,
-    encapsulation: ViewEncapsulation.None,
     providers: [ToolbarService, RibbonService]
 })
 export class App {
-
-    @ViewChild('documenteditor_default')
-    public container!: DocumentEditorContainerComponent;
-
-    public webMcpTools: any[] = [];
-
-    public documentEditorSettings: any = {
-        showRuler: true,
-        showBookmarks: true,
-        showHiddenMarks: true
+    public webMcpSettings: any = {
+        name: 'container'
     };
-
-    public webMcpSettings: any = { name: 'container' };
-
-    public created(): void {
-
-        // Get the registered WebMCP tools
-        this.webMcpTools = this.container.getWebMcpTools();
-
-        // Set document name
-        this.container.documentEditor.documentName = 'WebMCP Tool Demo';
-
-        // Update document title
-        document.title = 'WebMCP Tool Demo - DocumentEditorContainer';
-    }
-
-    public beforeWebMcpToolExecute(
-        args: WebMcpToolExecuteEventArgs
-    ): void {
-
-        // For write operations, show confirmation dialog
-        const writeOperations: string[] = [
-            'replaceAll',
-            'insertText',
-            'paste',
-            'insertBookmark',
-            'enforceProtection',
-            'stopProtection',
-            'insertField',
-            'insertEditingRegion',
-            'formatCharacter',
-            'formatParagraph',
-            'insertImage',
-            'insertHyperlink'
-        ];
-
-        if (args.toolName) {
-            const toolName: string =
-                args.toolName.indexOf('_') !== -1
-                    ? args.toolName.substring(
-                        args.toolName.indexOf('_') + 1
-                    )
-                    : args.toolName;
-
-            if (writeOperations.indexOf(toolName) !== -1) {
-                args.showConfirmationDialog = true;
-            }
-        }
-    }
 }
 ```
-
-### Example 2: Selective Tool Registration
-
-Register only read-only tools to reduce exposure.
-
-```ts
-// Register only read tools (safer for public applications)
-template: `
-<ejs-documenteditorcontainer
-    #documenteditor_default
-    height="590px"
-    style="width:100%;display:block"
-    serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
-    [enableToolbar]="true"
-    [enableWebMcp]="true"
-    toolbarMode="Ribbon"
-    [webMcpSettings]="webMcpSettings">
-</ejs-documenteditorcontainer>
-`,
-...
-...
-public webMcpSettings: any = {
-    name: 'container',
-    tools: [
-            'getDocumentInfo',
-            'getDocumentText',
-            'getSelectionInfo',
-            'getBookmarks',
-            'getSectionsInfo'
-            ]
-};
-```
-
-### Example 3: Multi-Instance Setup
-
-Shows how to use different prefixes for multiple DOCX Editor instances on the same page.
-
-```ts
-// Two editors on the same page with different prefixes
-template: `
-<ejs-documenteditorcontainer
-    #documenteditor1_default
-    height="590px"
-    style="width:100%;display:block"
-    serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
-    [enableToolbar]="true"
-    [enableWebMcp]="true"
-    toolbarMode="Ribbon"
-    [webMcpSettings]="webMcpSettings">
-</ejs-documenteditorcontainer>
-`,
-...
-...
-public webMcpSettings: any = { name: 'container1' };
-
-template: `
-<ejs-documenteditorcontainer
-    #documenteditor2_default
-    height="590px"
-    style="width:100%;display:block"
-    serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
-    [enableToolbar]="true"
-    [enableWebMcp]="true"
-    toolbarMode="Ribbon"
-    [webMcpSettings]="webMcpSettings">
-</ejs-documenteditorcontainer>
-`,
-...
-...
-public webMcpSettings: any = { name: 'container2' };
-
-// Tools are now:
-// container1_getDocumentInfo, container1_insertText, ...
-// container2_getDocumentInfo, container2_insertText, ...
-```
-
-### Example 4: Auditing and Restrictions
-
-Demonstrates how to intercept tool execution and block restricted actions.
-
-```ts
-public beforeWebMcpToolExecute(args: WebMcpToolExecuteEventArgs): void {
-    const { toolName, toolArgs } = args;
-
-    // Log all tool invocations
-    console.log(`[WebMCP] Executing: ${toolName}`, toolArgs);
-
-    // Block document protection changes for non-admin users
-    if (toolName === 'enforceProtection' || toolName === 'stopProtection') {
-        if (!userHasAdminPermission()) {
-            args.cancel = true;
-            logSecurityEvent('Unauthorized protection change attempt', toolArgs);
-        }
-    }
-};
-```
-
-### Example 5: Error Handling
-
-Shows how to call a tool manually and handle success or failure.
-
-```ts
-async function invokeToolManually(toolName: string, toolArgs: any) {
-    try {
-        // Get tool from context
-        const tool = await document.modelContext.getTool(toolName);
-
-        if (!tool) {
-            console.error(`Tool not found: ${toolName}`);
-            return null;
-        }
-
-        // Invoke the tool
-        const result = await tool.execute(toolArgs, {});
-
-        // Handle response
-        if (result.error) {
-            console.error(`Tool error: ${result.error}`);
-            return null;
-        }
-
-        const responseText = result.content[0].text;
-        const responseData = JSON.parse(responseText);
-
-        console.log('Tool result:', responseData);
-        return responseData;
-    } catch (error) {
-        console.error('Failed to invoke tool:', error);
-        return null;
-    }
-}
-```
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/JavaScript-ES5-DOCX-Editor-Examples/tree/master/webmcp/getting-started).
 
 ## Troubleshooting
 
@@ -595,9 +269,6 @@ async function invokeToolManually(toolName: string, toolArgs: any) {
 2. Verify the extension has permission to access the site:
    - Right-click WebMCP extension → Manage extension
    - Ensure "Allow on this site" is enabled
-
-3. Check browser console for errors (F12 → Console)
-
 ---
 
 ### Q: "Permission denied" or "Secure context required"
@@ -605,63 +276,8 @@ async function invokeToolManually(toolName: string, toolArgs: any) {
 **A:**
 - WebMCP requires HTTPS in production or localhost for development
 - If using cross-origin tools, both sites must be HTTPS
-- Test locally using `localhost:3000` or similar
-
+- Test locally using `localhost:4200` or similar
 ---
-
-### Q: Confirmation dialogs don't appear for write operations
-
-**A:**
-1. Verify that write tools are registered and `args.showConfirmationDialog = true` is set in the `beforeWebMcpToolExecute` event
-2. Check that your browser isn't blocking dialogs
-3. Ensure the `beforeWebMcpToolExecute` event isn't canceling operations via `args.cancel = true`
-
----
-
-### Q: "InvalidStateError" when registering tools
-
-**A:**
-- This occurs if tools are registered before the DOCX Editor initializes
-- Bind `public webMcpSettings: any = { name: 'container' };` property 
-- Ensure `document.modelContext` is available
-
----
-
-### Q: Multi-instance tools have naming conflicts
-
-**A:**
-- Always use different prefixes for each DocumentEditorContainer instance:
-  ```ts
-  public webMcpSettings: any = { name: 'container1' }; // for first DocumentEditorContainer instance
-  public webMcpSettings: any = { name: 'container2' }; // for second DocumentEditorContainer instance
-  ```
-- Never register the same with same name for multiple instances
-
----
-
-### Q: How do I avoid performance issues with large documents?
-
-**A:**
-1. Use selective tool registration—register only necessary tools
-2. Use `getDocumentInfo` to inspect document size before performing bulk operations
-3. Prefer `replaceAll` over multiple single edits when changing repeated text
-4. Avoid fetching the full text repeatedly; cache `getDocumentText` results when possible
-
----
-
-### Q: Can I prevent certain operations?
-
-**A:**
-Yes, use the `beforeWebMcpToolExecute` event:
-
-```ts
-public beforeWebMcpToolExecute(args: WebMcpToolExecuteEventArgs): void {
-    const restrictedTools = ['enforceProtection', 'stopProtection', 'saveDocument'];
-    if (restrictedTools.includes(args.toolName)) {
-        args.cancel = true;
-    }
-};
-```
 
 ## See Also
 
