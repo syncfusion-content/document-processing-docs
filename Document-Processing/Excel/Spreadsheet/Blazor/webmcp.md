@@ -135,7 +135,7 @@ WebMCP tools are organized by category. The following tables provide an overview
 | Tool Name | Type | Condition | Description |
 |-----------|------|-----------|-------------|
 | sortRange | Write | Always | Sorts a range in ascending or descending order. |
-| autofill | Write | Always | Autofills a range from an optional source range. |
+| autofill | Write | Always | Autofill a range from an optional source range. |
 | filterByCellValue | Write | Always | Applies a filter that matches a cell's value. |
 | clearFilter | Write | Always | Clears the filter on a specific field. |
 | clearAllFilters | Write | Always | Clears all filters on the sheet. |
@@ -267,7 +267,7 @@ private async Task<string> OnWebMcpExecute(
 
 {% endhighlight %}
 
-N> A cancelled tool invocation returns `[USER_CANCELLED]` with `isError = false`. Agents must not retry a cancelled tool.
+N> A canceled tool invocation returns `[USER_CANCELLED]` with `isError = false`. Agents must not retry a cancelled tool.
 
 ## Code Examples
 
