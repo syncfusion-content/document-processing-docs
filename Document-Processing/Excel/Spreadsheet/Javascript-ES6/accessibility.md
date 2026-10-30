@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Accessibility in TypeScript Spreadsheet  | Syncfusion
-description: Accessibility in TypeScript Spreadsheet supports keyboard navigation, screen reader compatibility, and ARIA attributes for inclusive experiences.
+title: Accessibility in TypeScript Spreadsheet | Syncfusion
+description: Learn about accessibility in the Syncfusion TypeScript Spreadsheet control, including keyboard navigation, ARIA support, and compliance features.
+control: Accessibility 
 platform: document-processing
-control: Accessibility
 documentation: ug
 ---
 
-# Accessibility in TypeScript Spreadsheet 
+# Accessibility in TypeScript Spreadsheet
 
-The Spreadsheet control followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria#roles) that are commonly used to evaluate accessibility.
+The Spreadsheet control follows the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the Spreadsheet control is outlined below.
 
@@ -76,7 +76,7 @@ The Spreadsheet control followed the [keyboard interaction](https://www.w3.org/W
 | Shift + Home | Extend the cell selection to the first column of a worksheet. |
 | Ctrl + Shift + Home | Extend the selection of cells to the beginning of the worksheet. |
 | Ctrl + End | Move to the last cell on a worksheet, right most last column and last row cell. |
-| Page Up | Move page up. |
+| Page Up | Move page up. |    
 | Page Down | Move page down. |
 | Shift + Page Up | Perform page up by selecting all cells between. |
 | Shift + Page Down | Perform page down by selecting all cells between. |
@@ -100,8 +100,8 @@ The Spreadsheet control followed the [keyboard interaction](https://www.w3.org/W
 | Tab | Complete the cell editing and select the next cell in the same row. |
 | Shift + Tab | Complete the cell editing and select the previous cell in the same row. |
 | Alt | Focus on the active ribbon tab. |
-| Left | Move the focus to the previous items in the ribbon content. |
-| Right | Move the focus to the next items in the ribbon content. |
+| Left | Move the focus to the previous item in the ribbon content. |
+| Right | Move the focus to the next item in the ribbon content. |
 | Alt + Down | Open the ribbon dropdown menu. |
 | Esc / Alt + Up | Close the ribbon dropdown menu. |
 
@@ -115,4 +115,4 @@ The accessibility compliance of the Spreadsheet control is shown in the followin
 
 ## See also
 
-* [Accessibility in Syncfusion<sup style="font-size:70%">&reg;</sup> EJ2 controls](https://ej2.syncfusion.com/documentation/common/accessibility)
+* [Accessibility in TypeScript controls](https://ej2.syncfusion.com/documentation/common/accessibility)
