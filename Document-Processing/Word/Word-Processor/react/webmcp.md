@@ -234,54 +234,45 @@ createRoot(document.getElementById('sample')).render(<WebMCPApp />);
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/React-DOCX-Editor-Examples/tree/master/webmcp/getting-started).
 
-## Troubleshooting
+## Troubleshooting FAQs
 
-### Q: I get "WebMCP not available" or "modelContext is undefined"
+### What are the common causes of "WebMCP Not Available" or an "modelContext is Undefined" errors?
 
-**A:**
 1. Verify WebMCP flag is enabled:
    - Open `chrome://flags/#enable-webmcp-testing`
    - Confirm it shows "Enabled"
    - Fully restart Chrome (not just reload the page)
-
 2. Check your Chrome version is up-to-date (WebMCP requires recent Chromium)
-
 3. Ensure you're testing on a secure context (HTTPS or localhost)
 
 ---
 
-### Q: The extension doesn't show my registered tools
+### Why aren't my registered tools displayed in the extension?
 
-**A:**
 1. Verify `enableWebMcp: true` in your DocumentEditorContainer config
-2. Confirm `webMcpSettings: {{name:'docx-editor'}}` is added to register the available tools
+2. Confirm `public webMcpSettings: any = { name: 'container' };` is bind to register the available tools
 3. Open DevTools (F12) → Console, check for errors
 4. Try refreshing the page and opening the extension again
 5. Verify the tool prefix is correct (check console logs)
 
 ---
 
-### Q: Tools are registered but don't execute
+### Why don't registered tools execute?
 
-**A:**
 1. Check your Gemini API key is valid:
    - Visit [Google AI Studio](https://aistudio.google.com/app/apikey)
    - Create a new key if needed
    - Re-enter it in the WebMCP extension
-
 2. Verify the extension has permission to access the site:
    - Right-click WebMCP extension → Manage extension
    - Ensure "Allow on this site" is enabled
-
 ---
 
-### Q: "Permission denied" or "Secure context required"
+### Why do I get a "Permission denied" or "Secure context required" error?
 
-**A:**
-- WebMCP requires HTTPS in production or localhost for development
-- If using cross-origin tools, both sites must be HTTPS
-- Test locally using `localhost:3000` or similar
-
+1. WebMCP requires HTTPS in production or localhost for development
+2. If using cross-origin tools, both sites must be HTTPS
+3. Test locally using `localhost:3000` or similar
 ---
 
 ## See Also
