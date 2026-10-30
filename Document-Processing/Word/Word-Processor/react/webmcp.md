@@ -250,7 +250,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/React-DOCX-Edit
 ### Why aren't my registered tools displayed in the extension?
 
 1. Verify `enableWebMcp: true` in your DocumentEditorContainer config
-2. Confirm `public webMcpSettings: any = { name: 'container' };` is bind to register the available tools
+2. Confirm `public webMcpSettings: {{ name: 'container' }};` is bind to register the available tools
 3. Open DevTools (F12) → Console, check for errors
 4. Try refreshing the page and opening the extension again
 5. Verify the tool prefix is correct (check console logs)
