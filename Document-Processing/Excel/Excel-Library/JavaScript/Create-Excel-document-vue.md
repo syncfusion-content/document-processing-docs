@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Getting Started with JavaScript Excel in Vue app | Syncfusion
+title: Getting Started with Excel Library in Vue | Syncfusion
 description: Learn how to get started with the Syncfusion JavaScript Excel in Vue application. Easy steps to create Excel workbooks.
 control: Excel
 platform: document-processing
 documentation: ug
 ---
 
-# Getting Started with JavaScript Excel in Vue app
+# Getting Started with JavaScript Excel Library in Vue
 
 The [JavaScript Excel Library](https://www.syncfusion.com/document-sdk/javascript-excel-library) is used to create, read, and edit Microsoft Excel (`.xlsx`) workbooks. You can work with worksheets, cells, formulas, formatting, and other spreadsheet features without Microsoft Excel installed.
 
 This guide explains how to integrate the [JavaScript Excel Library](https://www.syncfusion.com/document-sdk/javascript-excel-library) into a Vue application that runs in the browser. The generated workbook is downloaded directly from the browser; no server-side Excel processing is required.
 
-> Vue 2 reached end-of-life on December 31, 2023. This guide leads with **Vue 3** (recommended) and provides a separate Vue 2 path for legacy projects.
+N> Vue 2 reached end of life on December 31, 2023. This guide uses **Vue 3** (recommended) and provides a separate Vue 2 path for legacy projects.
 
 ## Prerequisites
 
@@ -31,7 +31,7 @@ node --version
 npm --version
 ```
 
-## Create a Vue 3 Project (Recommended)
+## Create a Vue 3 project (recommended)
 
 Create a new Vue 3 project using the official scaffolding tool. This guide uses [Vite](https://vitejs.dev/) as the bundler.
 
@@ -56,9 +56,9 @@ my-excel-app/
 └── package.json
 ```
 
-## Create a Vue 2 Project (Legacy)
+## Create a Vue 2 project (legacy)
 
-N> Vue 2 reached end-of-life on December 31, 2023. Use Vue 2 only for legacy projects.
+N> Use Vue 2 only for legacy projects.
 
 To create a Vue 2 project using the legacy Vue CLI:
 
@@ -86,16 +86,15 @@ npm install @syncfusion/ej2-xlsx --save
 yarn add @syncfusion/ej2-xlsx
 ```
 
-N> The JavaScript Excel Library does not require additional setup for image or data extraction. Install only the main package `@syncfusion/ej2-xlsx` for basic workbook creation and manipulation.
+N> The JavaScript Excel Library does not require additional setup for images or other workbook content. Install only the main package `@syncfusion/ej2-xlsx` to create and edit workbooks.
 
-### Transitive Dependencies
+### Transitive dependencies
 
-The following packages are included automatically by `@syncfusion/ej2-xlsx` and do not need to be installed separately:
+The following package is included automatically by `@syncfusion/ej2-xlsx` and does not need to be installed separately:
 
 - `@syncfusion/ej2-base` — common utilities used by the library.
-- `@syncfusion/ej2-compression` — compression support used by Excel features.
 
-## Create an Excel Document
+## Create an Excel document
 
 Replace the contents of `src/App.vue` with the following code. The script imports the Excel classes as named exports from `@syncfusion/ej2-xlsx` and creates an Excel workbook in a click handler. The same code works for both Vue 2 and Vue 3.
 
@@ -132,7 +131,7 @@ export default {
       const bytes = await workbook.save();
 
       // Download the workbook
-      const blob = new Blob([bytes.buffer], {
+      const blob = new Blob([bytes], {
         type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
       });
       const url = URL.createObjectURL(blob);
@@ -158,9 +157,7 @@ export default {
 
 N> This sample uses **named imports** from the npm package (`import { Workbook, ... } from '@syncfusion/ej2-xlsx'`). The npm package does not expose a global `ej` namespace; using `ej.xlsx.Workbook` without an import will throw `ReferenceError: ej is not defined` in a Vite or Vue CLI build. If you prefer the UMD-style global, load `ej2.min.js` from the Syncfusion CDN in `index.html` (or `public/index.html`) instead of importing the npm package.
 
-N> A click handler is used in this example, so no additional setup is required. The Excel classes load when the import runs at module evaluation time, which happens before any user interaction.
-
-## Code Explanation
+## Code explanation
 
 - `Workbook.create()` — creates a new workbook with one visible worksheet named `Sheet1`.
 - `workbook.sheet(0)` — returns the worksheet at the zero-based index.
@@ -172,7 +169,7 @@ N> A click handler is used in this example, so no additional setup is required. 
 - `anchor.remove()` — removes the temporary anchor element after the download click.
 - `URL.revokeObjectURL(url)` — releases the temporary object URL after the download starts.
 
-## Run the Application
+## Run the application
 
 ### Vue 3 (Vite)
 
