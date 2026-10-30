@@ -248,7 +248,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Angular-DOCX-Ed
 
 ---
 
-### Why aren't my registered tools displayed in the dxtension?
+### Why aren't my registered tools displayed in the extension?
 
 1. Verify `enableWebMcp: true` in your DocumentEditorContainer config
 2. Confirm `public webMcpSettings: any = { name: 'container' };` is bind to register the available tools
