@@ -5,6 +5,7 @@ description: Real-world AI agent workflows for document automation - Legal, Fina
 platform: document-processing
 control: AI Agent Tools
 documentation: ug
+appliesto: Document SDK
 ---
 
 # AI Agents using Document SDK AI Agent Tools

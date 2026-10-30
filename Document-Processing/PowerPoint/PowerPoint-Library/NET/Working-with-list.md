@@ -4,6 +4,7 @@ description: Learn how to create and format numbered, bulleted, picture, and mul
 platform: document-processing
 control: Presentation
 documentation: UG
+appliesto: Document SDK
 ---
 # Working with lists in PowerPoint Library
 
