@@ -1003,11 +1003,11 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Security/Encrypt-only-attachment-in-the-PDF-document).
 
-## Decrypting encrypted PDF document
+## Decrypt an Encrypted PDF Document
 
-The Syncfusion<sup>&reg;</sup> PDF library supports decrypting an encrypted PDF document by removing its `owner` or `user` password and resetting its permissions to default. This is particularly useful when you need to access or modify a secured PDF.
+An encrypted PDF document can be decrypted by removing its `user` or `owner` password and restoring its permissions to their default settings. This allows the document to be opened, viewed, edited, copied, and printed without security restrictions.
 
-The following code example demonstrates how to decrypt a PDF document and restore its default permissions.
+The following code example demonstrates how to decrypt an encrypted PDF document and restore its default permissions.
 
 {% tabs %}
 
@@ -1750,64 +1750,6 @@ loadedDocument.Close(True)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Security/Remove-password-from-user-password-PDF-document/).
-
-## Unlock a PDF document
-
-The PDF password is required to remove the security settings from an encrypted PDF. Without the correct password, it is not possible to unlock the document or remove its security restrictions.
-
-{% tabs %}
-
-{% highlight c# tabtitle="C# [Cross-platform]" %}
-
-using Syncfusion.Pdf.Parsing;
-using Syncfusion.Pdf.Security;
-
-//Load the PDF document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf", "password");
-//Change the user password
-loadedDocument.Security.UserPassword = "newUserPassword";
-
-//Save and Close the PDF document
-loadedDocument.Save("Output.pdf");
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight c# tabtitle="C# [Windows-specific]" %}
-
-using Syncfusion.Pdf.Parsing;
-using Syncfusion.Pdf.Security;
-
-//Load the password protected PDF document
-PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf","password");
-//Change the user password 
-loadedDocument.Security.UserPassword = "newUserPassword";
-
-//Save the password removed PDF document
-loadedDocument.Save("Output.pdf");
-//Close the document
-loadedDocument.Close(true);
-
-{% endhighlight %}
-
-{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
-
-Imports Syncfusion.Pdf.Parsing
-Imports Syncfusion.Pdf.Security
-
-'Load the password protected PDF document
-Dim loadedDocument As New PdfLoadedDocument("Input.pdf", "password")
-'Change the user password 
-loadedDocument.Security.UserPassword = "newUserPassword"
-
-'Save the password removed PDF document
-loadedDocument.Save("Output.pdf")
-'Close the document
-loadedDocument.Close(True)
-
-{% endhighlight %}
-
-{% endtabs %}
 
 ## How to determine whether the PDF document is password protected or not?
 
