@@ -53,66 +53,9 @@ The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sd
 
 ## Keyboard interaction
 
-The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) follows [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert#keyboardinteraction) guidelines, making it accessible for people who use assistive technologies (AT) and those who rely on keyboard navigation. The following keyboard shortcuts are supported by the Spreadsheet.
+The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) follows [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert#keyboardinteraction) guidelines, making it accessible for people who use assistive technologies (AT) and those who rely on keyboard navigation.
 
-<b>Clipboard</b>
-
-| Windows | MAC | Actions |
-|-----|----- | -----|
-| <kbd>Ctrl</kbd> + <kbd>C</kbd> | <kbd>⌘</kbd> + <kbd>C</kbd> | Copies the selected cells to the clipboard.|
-| <kbd>Ctrl</kbd> + <kbd>X</kbd> | <kbd>⌘</kbd> + <kbd>X</kbd> | Cuts the selected cells to the clipboard.|
-| <kbd>Ctrl</kbd> + <kbd>V</kbd> | <kbd>⌘</kbd> + <kbd>V</kbd> | Pastes the clipboard content into the Spreadsheet.|
-
-<b>Undo/Redo</b>
-
-| Windows | MAC | Actions |
-|-----|----- | -----|
-| <kbd>Ctrl</kbd> + <kbd>Z</kbd> | <kbd>⌘</kbd> + <kbd>Z</kbd> | Reverses the last action performed.|
-| <kbd>Ctrl</kbd> + <kbd>Y</kbd> | <kbd>⌘</kbd> + <kbd>Y</kbd> | Reapplies the last action that was undone.|
-
-<b>Selection</b>
-
-| Windows | MAC | Actions |
-|-----|----- | -----|
-| <kbd>Ctrl</kbd> + <kbd>A</kbd> | <kbd>⌘</kbd> + <kbd>A</kbd> | Selects all cells in the current worksheet.|
-| <kbd>Shift</kbd> + <kbd>Arrow Keys</kbd> | <kbd>⇧</kbd> + <kbd>Arrow Keys</kbd> | Extends the current selection in the direction of the arrow key.|
-
-<b>Navigation</b>
-
-| Windows | MAC | Actions |
-|-----|----- | -----|
-| <kbd>Page Up</kbd> / <kbd>Page Down</kbd> | <kbd>Page Up</kbd> / <kbd>Page Down</kbd> (or <kbd>Fn</kbd> + <kbd>↑</kbd> / <kbd>↓</kbd> on older keyboards) |Scrolls up or down one screen at a time.|
-| <kbd>Arrow keys</kbd> | <kbd>Arrow keys</kbd> | Navigates between adjacent cells in the direction of the arrow key.|
-| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Moves the active cell down one row.|
-| <kbd>Shift</kbd> + <kbd>Enter</kbd> | <kbd>⇧</kbd> + <kbd>Enter</kbd> | Moves the active cell up one row.|
-| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Moves the active cell right one column.|
-| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Moves the active cell left one column.|
-
-<b>Editing</b>
-
-| Windows | MAC | Actions |
-|-----|----- | -----|
-| <kbd>F2</kbd> | <kbd>F2</kbd> | Enters edit mode for the selected cell.|
-| <kbd>Enter</kbd> | <kbd>Enter</kbd> | Confirms the edit and moves the active cell down one row.|
-| <kbd>Shift</kbd> + <kbd>Enter</kbd> | <kbd>⇧</kbd> + <kbd>Enter</kbd> | Confirms the edit and moves the active cell up one row.|
-| <kbd>Tab</kbd> | <kbd>Tab</kbd> | Confirms the edit and moves the active cell right one column. |
-| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <kbd>⇧</kbd> + <kbd>Tab</kbd> | Confirms the edit and moves the active cell left one column.|
-| <kbd>Escape</kbd> | <kbd>Esc</kbd> | Cancels the edit and restores the cell's original value.|
-
-<b>Clear</b>
-
-| Windows | MAC | Actions |
-|-----|----- | -----|
-| <kbd>Delete</kbd> | <kbd>Delete</kbd> | Clears the contents of the selected cells.|
-
-<b>Hyperlink</b>
-
-| Windows | MAC | Actions |
-|-----|----- | -----|
-| <kbd>Ctrl</kbd> + <kbd>Click</kbd> | <kbd>⌘</kbd> + <kbd>Click</kbd> | Opens the link in the selected cell.|
-| <kbd>Ctrl</kbd> + <kbd>K</kbd> | <kbd>⌘</kbd> + <kbd>K</kbd> | Opens the hyperlink dialog to insert a new link or edit an existing one.|
-
-N> The <kbd>Command</kbd> and <kbd>Control</kbd> keys on Mac devices can be interchanged. When this switch occurs, use the <kbd>Command</kbd> key in place of the <kbd>Control</kbd> key for the above listed key interactions with Mac devices.
+N> For a complete list of keyboard shortcuts available in the Blazor Spreadsheet, refer to the [Keyboard shortcuts](./keyboard-shortcuts) documentation.
 
 ## See also
 
