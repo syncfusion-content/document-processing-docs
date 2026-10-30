@@ -1,0 +1,115 @@
+---
+layout: post
+title: Rich Text Formatting in JavaScript Spreadsheet | Syncfusion
+description: Learn about rich text formatting in the Syncfusion JavaScript Spreadsheet to apply different styles to text portions within a single cell.
+control: Formatting
+platform: document-processing
+documentation: ug
+---
+
+# Rich Text Formatting in JavaScript Spreadsheet
+
+Rich text formatting allows you to apply different styles to specific portions of text within a single cell to improve readability and presentation. Each text segment can have its own formatting, enabling you to combine multiple styles within a single cell.
+
+In the **Syncfusion EJ2 JavaScript Spreadsheet**, rich text formatting is supported through the [`richText`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#cells) property of the cell model.
+
+Each `richText` segment contains:
+
+- `text` – Specifies the content of the segment  
+- `style` – Defines formatting using the cell style properties
+
+Rich text formatting supports the following style options through the `style` property of each `richText` segment:
+
+## Font Family
+
+You can change the font family of individual rich text segments using the `fontFamily` property. This allows different portions of text within the same cell to be displayed using different typefaces such as `Calibri`, `Arial`, and `Georgia`.
+
+## Font Size
+
+You can customize the size of individual rich text segments using the `fontSize` property to emphasize specific content within a cell.
+
+## Font Weight
+
+You can apply font weight formatting using the `fontWeight` property. This is typically used to display specific text segments in bold.
+
+## Font Style
+
+You can apply font style formatting using the `fontStyle` property. This property supports values such as `normal` and `italic`.
+
+## Text Decoration
+
+You can apply text decorations to individual rich text segments using the `textDecoration` property. Supported decorations include `underline` and `line-through`.
+
+## Font Color
+
+You can customize the color of specific text segments using the `color` property to improve visibility or highlight important information.
+
+## Subscript and Superscript
+
+You can apply subscript and superscript formatting to individual text segments using the `verticalAlign` property.
+
+- Use `verticalAlign: 'sub'` to display text as subscript.
+- Use `verticalAlign: 'super'` to display text as superscript.
+
+## How to Apply Rich Text Formatting
+
+You can apply rich text formatting in following ways:
+
+1. Select the desired portion of text within a cell, then use the available formatting options in the ribbon such as font family, font size, bold, italic, underline, strikethrough, font color, subscript, or superscript.
+
+2. You can define the [`richText`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#richtext) property directly while initializing the Spreadsheet. This is useful when you want the formatting to be applied when the data is loaded.
+
+```js
+    cells: [
+        {
+            value: 'Annual Sales Report 2026 Highlights (Draft)',
+            richText: [
+                { text: 'Annual Sales Report ', style: { fontWeight: 'bold' } },
+                { text: '2026', style: { color: '#0078D4' } },
+                { text: ' Highlights', style: { textDecoration: 'underline' } },
+                { text: ' (Draft)', style: { fontStyle: 'italic' } }
+            ]
+        }
+    ]
+```
+
+3. You can also apply formatting dynamically using the [`updateCell`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#updatecell) method.
+
+```js
+    spreadsheet.updateCell({
+        richText: [
+            { text: 'Premium Membership ', style: { fontWeight: 'bold', color: '#2E7D32' } },
+            { text: 'valid until ', style: { fontStyle: 'italic' } },
+            { text: '31', style: { textDecoration: 'underline' } },
+            { text: 'st', style: { verticalAlign: 'super' } },
+            { text: ' Dec 2026' }
+        ]
+    }, 'A5');
+```
+
+The following code example shows how to apply multiple rich text formats in cells of the Spreadsheet.
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+{% include code-snippet/spreadsheet/javascript-es5/richtext-format-cs1/index.js %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/spreadsheet/javascript-es5/richtext-format-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es5/richtext-format-cs1" %}
+
+## Limitations
+
+* **Edit mode requirement:** Formatting can be applied only while the cell is in edit mode. Selecting text outside of edit mode does not support subscript or superscript formatting.
+
+## Note
+
+You can refer to our [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) feature tour page for its feature representations.
+
+## See Also
+
+* [Formatting Overview](../formatting-overview)
+* [Number Formatting](./number-formatting)
+* [Text & Cell Formatting](./text-cell-formatting)
