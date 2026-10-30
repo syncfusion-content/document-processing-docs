@@ -943,11 +943,170 @@ export default {
 
 {% endtabcontent %}
 
+{% tabcontent Blazor %}
+
+The Blazor PDF Viewer uses the [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) NuGet package, which builds on the same WebMCP runtime that the JavaScript frameworks use. The component exposes a Blazor-friendly settings container (`PdfViewerWebMcpSettings`) and an `OnWebMcpExecute` event that lets you audit, cancel, or override any tool call before the built-in handler runs.
+
+N> A secure context (HTTPS or localhost) and a WebMCP-capable browser are required, just like the JavaScript frameworks. For local development, enable WebMCP via `chrome://flags/`.
+
+### Step 1: Initialize the PDF Viewer
+
+Add the Blazor SfPdfViewer (Next-Gen) component to a Razor page. The component name is `SfPdfViewer2`, and the namespace is `Syncfusion.Blazor.SfPdfViewer`. Make sure the [Syncfusion.Blazor.SfPdfViewer](https://www.nuget.org/packages/Syncfusion.Blazor.SfPdfViewer) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes) NuGet packages are installed, the Syncfusion Blazor service is registered (`AddSyncfusionBlazor`), and the theme stylesheet plus the `syncfusion-blazor-sfpdfviewer.min.js` script are referenced. See the [Blazor getting started topic](../../PDF/PDF-Viewer/blazor/getting-started/web-app) for the full setup.
+
+{% tabs %}
+{% highlight razor tabtitle="WebMcp.razor" %}
+
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" Height="600px" Width="100%">
+</SfPdfViewer2>
+
+{% endhighlight %}
+{% endtabs %}
+
+### Step 2: Enable WebMCP
+
+Set `EnableWebMcp="true"` on `SfPdfViewer2` to register the component's available tools with the WebMCP runtime. By default, WebMCP is disabled; you must opt in for every viewer instance. As soon as [EnableWebMcp](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_EnableWebMcp) is true, the read-only tools that ship with the viewer are automatically registered and become discoverable by authorized WebMCP clients. Five sensitive tools are kept off the registration by default; see [Step 3](#step-3-enable-or-disable-specific-tools) for how to opt them in.
+
+For example, the Blazor PDF Viewer component may expose tools such as:
+
+- `getViewerState`
+- `goToPage`
+- `addAnnotation`
+
+An AI assistant can discover these tools and invoke them based on user prompts.
+
+{% tabs %}
+{% highlight razor tabtitle="WebMcp.razor" %}
+
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" Height="600px" Width="100%" EnableWebMcp="true">
+    <PdfViewerWebMcpSettings Name="PdfViewer">
+    </PdfViewerWebMcpSettings>
+</SfPdfViewer2>
+
+{% endhighlight %}
+{% endtabs %}
+
+The `Name` attribute on [PdfViewerWebMcpSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerWebMcpSettings.html) is the prefix applied to every tool name that the component registers with the browser. In the snippet above, the `goToPage` tool is exposed to agents as `PdfViewer_goToPage`, so multiple viewer instances can coexist on the same page without name collisions.
+
+### Step 3: Enable or disable specific tools
+
+Some built-in tools are **not registered by default**. The five tools in the table below return document-level data (bookmarks, annotations, form fields, search positions, page text) and stay disabled until the host opts in. This protects sensitive content from being exported to an AI agent without an explicit decision.
+
+| Tool | Default state |
+|------|---------------|
+| `PdfViewerWebMcpToolCommand.GetBookmarks` | Disabled; opt in with `Enabled="true"`. |
+| `PdfViewerWebMcpToolCommand.GetAnnotations` | Disabled; opt in with `Enabled="true"`. |
+| `PdfViewerWebMcpToolCommand.GetFormFields` | Disabled; opt in with `Enabled="true"`. |
+| `PdfViewerWebMcpToolCommand.GetSearchTextPositions` | Disabled; opt in with `Enabled="true"`. |
+| `PdfViewerWebMcpToolCommand.GetPageText` | Disabled; opt in with `Enabled="true"`. |
+
+To enable a default-disabled tool, add a `PdfViewerWebMcpTool` entry inside a `PdfViewerWebMcpTools` wrapper. Every entry must set the `Command` from the [PdfViewerWebMcpToolCommand](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerWebMcpToolCommand.html) enum and the `Enabled` flag. To explicitly disable a tool that is on by default, add the same entry with `Enabled="false"`.
+
+{% tabs %}
+{% highlight razor tabtitle="WebMcp.razor" %}
+
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" Height="600px" Width="100%" EnableWebMcp="true">
+    <PdfViewerWebMcpSettings Name="PdfViewer">
+        <PdfViewerWebMcpTools>
+            <PdfViewerWebMcpTool Command="PdfViewerWebMcpToolCommand.GetBookmarks" Enabled="true" />
+            <PdfViewerWebMcpTool Command="PdfViewerWebMcpToolCommand.DeletePages" Enabled="false" />
+        </PdfViewerWebMcpTools>
+    </PdfViewerWebMcpSettings>
+</SfPdfViewer2>
+
+{% endhighlight %}
+{% endtabs %}
+
+### Step 4: Monitor and control tool execution
+
+The [OnWebMcpExecute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_OnWebMcpExecute) event on the [`PdfViewerEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html) child component fires after a tool has been resolved but before the built-in handler runs. Use the `PdfViewerWebMcpExecuteEventArgs` payload to:
+
+- Audit tool usage.
+- Validate incoming requests (`args.Arguments`).
+- Cancel tool execution by setting `args.Cancel = true`. Optionally override the message returned to the agent through `args.CancellationResponse`.
+- Replace the built-in result by assigning a serialized JSON string to `args.Result` (this is also how custom tools are implemented).
+- Request host confirmation for write tools by setting `args.ShowConfirmationDialog = true`.
+
+> AI-generated requests should always be validated before executing write operations. Combine `OnWebMcpExecute` with explicit `Enabled="true"`/`Enabled="false"` opt-ins to keep the agent's surface area to the smallest set of tools your workflow needs.
+
+{% tabs %}
+{% highlight razor tabtitle="WebMcp.razor" %}
+
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfPdfViewer2 DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" Height="600px" Width="100%" EnableWebMcp="true">
+    <PdfViewerWebMcpSettings Name="PdfViewer">
+        <PdfViewerWebMcpTools>
+            <PdfViewerWebMcpTool Command="PdfViewerWebMcpToolCommand.AddAnnotation" Enabled="true" />
+        </PdfViewerWebMcpTools>
+    </PdfViewerWebMcpSettings>
+    <PdfViewerEvents OnWebMcpExecute="OnWebMcpExecute"></PdfViewerEvents>
+</SfPdfViewer2>
+
+@code {
+    private void OnWebMcpExecute(PdfViewerWebMcpExecuteEventArgs args)
+    {
+        // Example business rule - block annotation
+        if (args.Command == PdfViewerWebMcpToolCommand.AddAnnotation)
+        {
+           args.Cancel = true;
+           args.CancellationResponse = "[USER_CANCELLED] Adding annotations is not allowed";
+        }
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+### Step 5: Read the effective tool catalog from code
+
+If you need to verify which tools are actually registered for the current settings, call [SfPdfViewer2.GetWebMcpToolsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_GetWebMcpToolsAsync_System_Collections_Generic_IEnumerable_System_String__). It returns the effective catalog after `PdfViewerWebMcpSettings` has been applied (disabled tools excluded, opt-ins honored), so it reflects exactly what the AI agent will see.
+
+{% tabs %}
+{% highlight razor tabtitle="WebMcp.razor" %}
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.SfPdfViewer
+
+<SfButton OnClick="GetTools">Get registered tools</SfButton>
+
+<SfPdfViewer2 @ref="Viewer" DocumentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf" Height="600px" Width="100%" EnableWebMcp="true">
+    <PdfViewerWebMcpSettings Name="PdfViewer">
+        <PdfViewerWebMcpTools>
+           <PdfViewerWebMcpTool Command="PdfViewerWebMcpToolCommand.GetBookmarks" Enabled="true" />
+           <PdfViewerWebMcpTool Command="PdfViewerWebMcpToolCommand.DeletePages" Enabled="false" />
+        </PdfViewerWebMcpTools>
+    </PdfViewerWebMcpSettings>
+</SfPdfViewer2>
+
+@code {
+    private SfPdfViewer2 Viewer { get; set; }
+
+    private async Task GetTools()
+    {
+        IReadOnlyList<IPdfViewerWebMcpTool> tools = await Viewer.GetWebMcpToolsAsync(null);
+        string names = string.Join(", ", tools.Select(t => t.Name));
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
 {% endtabcontents %}
 
 ## Supported WebMCP Tools
 
 WebMCP tools enable AI agents to interact with PDF documents and automate PDF-related operations. Through the tools exposed by the PDF Viewer, AI agents can access document pages, extract content, manage annotations, process form fields, perform redaction operations, and execute document actions.
+
+{% tabs %}
+
+{% tabcontent React, Angular, Vue, JavaScript, TypeScript %}
 
 ### Document Navigation & Access
 
@@ -989,6 +1148,65 @@ WebMCP tools enable AI agents to interact with PDF documents and automate PDF-re
 - **`printDocument`** — Send document to printer with print settings
 - **`copyText`** — Copy text content to clipboard
 - **`undoRedoActions`** — Undo or redo document changes
+
+{% endtabcontent %}
+
+{% tabcontent Blazor %}
+
+### Viewer & Navigation
+
+- **`getViewerState`** — Read the page count, current page, zoom percentage, and edit state
+- **`getBookmarks`** — List all bookmarks in the document (disabled by default)
+- **`getPageDetails`** — Get the page size and rotation for every page
+- **`getDocumentInfo`** — Read the PDF document information (title, author, subject, keywords, creator, producer, and dates)
+- **`goToPage`** — Jump to a page (1-based) or move relative to the current page
+- **`goToBookmark`** — Jump to a bookmark in the document
+- **`setZoom`** — Set the zoom level (in, out, or to a specific value)
+- **`fitToPage`** — Fit the page to the viewer container (page, width, height, or auto)
+
+### Search & Text Extraction
+
+- **`searchText`** — Search for text in the document and highlight all matches
+- **`searchNext`** — Jump to the next or previous match for the current search
+- **`getSearchTextPositions`** — Get all search result positions and bounds (disabled by default)
+- **`getPageText`** — Extract the text content of a specific page (disabled by default)
+
+### Document Actions
+
+- **`download`** — Download the current document through the browser
+- **`print`** — Print the document using the browser print dialog
+
+### Annotation Management
+
+- **`getAnnotations`** — Get all annotations from the document (disabled by default)
+- **`addAnnotation`** — Add an annotation (line, highlight, shape, stamp, and so on)
+- **`editAnnotation`** — Edit an existing annotation
+- **`deleteAnnotations`** — Delete annotations by ID, or all annotations
+- **`undoRedo`** — Undo or redo the most recent annotation edit
+- **`redact`** — Apply permanent redaction to all redaction annotations
+
+### Form Field Management
+
+- **`getFormFields`** — Get all form fields with type, value, and page information (disabled by default)
+- **`addFormFields`** — Add new form fields
+- **`updateFormFields`** — Update existing form field values
+- **`deleteFormFields`** — Delete form fields by ID, or all form fields
+- **`exportFormFields`** — Export the form fields to a name-value dictionary
+- **`importFormFields`** — Import form fields from a name-value dictionary
+
+### Page Organizer
+
+- **`rotatePages`** — Rotate pages by direction or to a fixed angle
+- **`movePages`** — Reorder pages and move them to a target index
+- **`insertBlankPages`** — Insert blank pages at a specified index
+- **`deletePages`** — Delete the pages at the specified indices
+- **`duplicatePages`** — Duplicate the specified pages
+- **`extractPages`** — Extract the specified pages into a separate PDF document
+
+N> The five tools marked as disabled by default (`getBookmarks`, `getAnnotations`, `getFormFields`, `getSearchTextPositions`, and `getPageText`) are not registered with the WebMCP runtime until you opt in. Add a `PdfViewerWebMcpTool` entry with `Enabled="true"` inside `PdfViewerWebMcpTools` to register them. See [Step 3](#step-3-enable-or-disable-specific-tools) for the complete example.
+
+{% endtabcontent %}
+{% endtabs %}
 
 ## Common Use Cases
 

@@ -179,4 +179,3 @@ Vite serves the application at `http://localhost:5173`. Open this URL in a brows
 
 - [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library)
 - [JavaScript PowerPoint Library documentation](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/overview)
-- [Syncfusion licensing documentation](https://help.syncfusion.com/document-processing/licensing/overview)
