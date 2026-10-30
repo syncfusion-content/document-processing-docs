@@ -233,11 +233,10 @@ export class App {
 ```
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Angular-DOCX-Editor-Examples/tree/master/webmcp/getting-started).
 
-## Troubleshooting
+## Troubleshooting FAQs
 
-### Q: I get "WebMCP not available" or "modelContext is undefined"
+### What are the common causes of "WebMCP Not Available" or an "modelContext is Undefined" errors?
 
-**A:**
 1. Verify WebMCP flag is enabled:
    - Open `chrome://flags/#enable-webmcp-testing`
    - Confirm it shows "Enabled"
@@ -249,9 +248,8 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Angular-DOCX-Ed
 
 ---
 
-### Q: The extension doesn't show my registered tools
+### Why aren't my registered tools displayed in the dxtension?
 
-**A:**
 1. Verify `enableWebMcp: true` in your DocumentEditorContainer config
 2. Confirm `public webMcpSettings: any = { name: 'container' };` is bind to register the available tools
 3. Open DevTools (F12) → Console, check for errors
@@ -260,9 +258,8 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Angular-DOCX-Ed
 
 ---
 
-### Q: Tools are registered but don't execute
+### Why don't registered tools execute?
 
-**A:**
 1. Check your Gemini API key is valid:
    - Visit [Google AI Studio](https://aistudio.google.com/app/apikey)
    - Create a new key if needed
@@ -273,9 +270,8 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Angular-DOCX-Ed
    - Ensure "Allow on this site" is enabled
 ---
 
-### Q: "Permission denied" or "Secure context required"
+### Why do I get a "Permission denied" or "Secure context required" error?
 
-**A:**
 - WebMCP requires HTTPS in production or localhost for development
 - If using cross-origin tools, both sites must be HTTPS
 - Test locally using `localhost:4200` or similar
