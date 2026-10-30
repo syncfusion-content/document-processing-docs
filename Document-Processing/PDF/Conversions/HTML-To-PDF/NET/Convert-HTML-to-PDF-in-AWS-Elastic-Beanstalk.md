@@ -59,12 +59,14 @@ namespace BlinkHtmlConversion.Controllers
 {% endhighlight %}
 {% endtabs %}
 
+N> <div markdown="1" style="display:flex;flex-direction:column;">
 N> Starting from **version 29.2.4**, it is no longer necessary to manually add the following command-line arguments when using the Blink rendering engine:
 N> ```csharp
 N> settings.CommandLineArguments.Add("--no-sandbox");
 N> settings.CommandLineArguments.Add("--disable-setuid-sandbox");
 N> ```
 N> These arguments are only required when using **older versions** of the library that depend on Blink in sandbox-restricted environments.
+N> </div>
 
 ## Steps to convert HTML to PDF using Blink in AWS Elastic Beanstalk
 
