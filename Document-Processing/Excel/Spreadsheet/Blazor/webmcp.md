@@ -222,13 +222,13 @@ Set up a Spreadsheet with WebMCP enabled and register tools on creation.
 @using Syncfusion.Blazor.Spreadsheet
 @rendermode InteractiveServer
 
-<div style="height:100vh; width:100%;">
+<div style="height:100%; width:100%;">
     <SfSpreadsheet 
         @ref="SpreadsheetInstance"
         DataSource="@WorkbookData"
         EnableWebMcp="true">
 
-        <SpreadsheetWebMcpSettings Name="SalesSpreadsheet" />
+        <SpreadsheetWebMcpSettings Name="SpreadsheetEditor" />
         
         <SpreadsheetRibbon></SpreadsheetRibbon>
 
@@ -258,7 +258,7 @@ Configure WebMCP tools with custom descriptions, disable specific tools, and han
 @using Syncfusion.Blazor.Spreadsheet
 @rendermode InteractiveServer
 
-<div style="height:100vh; width:100%;">
+<div style="height:100%; width:100%;">
     <SfSpreadsheet 
         @ref="SpreadsheetInstance"
         DataSource="@WorkbookData"
