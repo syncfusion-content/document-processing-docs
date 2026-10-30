@@ -241,9 +241,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Angular-DOCX-Ed
    - Open `chrome://flags/#enable-webmcp-testing`
    - Confirm it shows "Enabled"
    - Fully restart Chrome (not just reload the page)
-
 2. Check your Chrome version is up-to-date (WebMCP requires recent Chromium)
-
 3. Ensure you're testing on a secure context (HTTPS or localhost)
 
 ---
@@ -264,7 +262,6 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Angular-DOCX-Ed
    - Visit [Google AI Studio](https://aistudio.google.com/app/apikey)
    - Create a new key if needed
    - Re-enter it in the WebMCP extension
-
 2. Verify the extension has permission to access the site:
    - Right-click WebMCP extension → Manage extension
    - Ensure "Allow on this site" is enabled
@@ -272,9 +269,9 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Angular-DOCX-Ed
 
 ### Why do I get a "Permission denied" or "Secure context required" error?
 
-- WebMCP requires HTTPS in production or localhost for development
-- If using cross-origin tools, both sites must be HTTPS
-- Test locally using `localhost:4200` or similar
+1. WebMCP requires HTTPS in production or localhost for development
+2. If using cross-origin tools, both sites must be HTTPS
+3. Test locally using `localhost:4200` or similar
 ---
 
 ## See Also
