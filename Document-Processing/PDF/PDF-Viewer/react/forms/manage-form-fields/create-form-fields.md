@@ -712,7 +712,7 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-[View Sample on GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples)
+[View Sample on GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Forms/DateTime%20picker)
 
 ## Troubleshooting
 

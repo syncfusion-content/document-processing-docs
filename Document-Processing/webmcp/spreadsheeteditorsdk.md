@@ -72,7 +72,7 @@ WebMCP integrates seamlessly into Syncfusion Spreadsheet applications across all
 
 ### Supported Platforms
 
-- **[WebMCP Integration for React Spreadsheet](hhttps://ej2.syncfusion.com/react/documentation/webmcp/overview)** — React-based Spreadsheet Editor
+- **[WebMCP Integration for React Spreadsheet](https://ej2.syncfusion.com/react/documentation/webmcp/overview)** — React-based Spreadsheet Editor
 - **[WebMCP Integration for Angular Spreadsheet](https://ej2.syncfusion.com/angular/documentation/webmcp/overview)** — Angular-based Spreadsheet Editor
 - **[WebMCP Integration for Vue Spreadsheet](https://ej2.syncfusion.com/vue/documentation/webmcp/overview)** — Vue.js-based Spreadsheet Editor
 - **[WebMCP Integration for TypeScript Spreadsheet](https://ej2.syncfusion.com/documentation/webmcp/overview)** — TypeScript/ES6 Spreadsheet Editor
