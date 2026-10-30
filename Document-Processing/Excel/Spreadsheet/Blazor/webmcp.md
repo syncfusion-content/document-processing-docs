@@ -210,130 +210,125 @@ WebMCP tools are organized by category. The following tables provide an overview
 |-----------|------|-----------|-------------|
 | save | Write | Always | Saves the workbook as Xlsx, Xls, Csv, or Pdf with an optional file name. |
 
-## Per-Instance Customization
-
-The tool catalog can be customized for each Spreadsheet instance using the `SpreadsheetWebMcpTools` child element of `SpreadsheetWebMcpSettings`.
-
-You can disable a built-in tool, override its metadata, opt in to the `GetRangeData` tool, or register a custom tool:
-
-{% highlight razor %}
-
-<SfSpreadsheet EnableWebMcp="true" OnWebMcpExecute="OnWebMcpExecute">
-
-    <SpreadsheetWebMcpSettings Name="spreadsheet">
-        <SpreadsheetWebMcpTools>
-            <!-- Disable a built-in tool -->
-            <SpreadsheetWebMcpTool
-                Command="DeleteSheet"
-                Enabled="false" />
-
-            <!-- Opt in to the range read tool -->
-            <SpreadsheetWebMcpTool
-                Command="GetRangeData"
-                Enabled="true" />
-
-            <!-- Override metadata -->
-            <SpreadsheetWebMcpTool
-                Command="UpdateCell"
-                Name="setCell"
-                Description="Write a value to a single cell" />
-
-            <!-- Register a custom tool -->
-            <SpreadsheetWebMcpTool
-                Command="Custom"
-                Name="exportToCsv"
-                Description="Export the active sheet as CSV"
-                InputSchema="@csvSchema" />
-        </SpreadsheetWebMcpTools>
-    </SpreadsheetWebMcpSettings>
-</SfSpreadsheet>
-
-{% endhighlight %}
-
-Handle the `OnWebMcpExecute` event on `SfSpreadsheet` to intercept built-in and custom tool calls. Return `null` to use the built-in handler:
-
-{% highlight csharp %}
-
-private async Task<string> OnWebMcpExecute(
-    SpreadsheetWebMcpExecuteEventArgs args)
-{
-    return args.Name switch
-    {
-        "setCell" => await SetCellAsync(args.Arguments),
-        "exportToCsv" => await ExportCsvAsync(args.Arguments),
-        _ => null
-    };
-}
-
-{% endhighlight %}
-
-N> A canceled tool invocation returns `[USER_CANCELLED]` with `isError = false`. Agents must not retry a cancelled tool.
-
 ## Code Examples
 
 ### Basic Setup
 
-Set up a Spreadsheet with WebMCP enabled and register the tools during component creation:
+Set up a Spreadsheet with WebMCP enabled and register tools on creation.
 
 {% highlight razor %}
 
+@page "/spreadsheet-basic"
 @using Syncfusion.Blazor.Spreadsheet
+@rendermode InteractiveServer
 
-<SfSpreadsheet @ref="spreadsheet" EnableWebMcp="true">
+<div style="height:100vh; width:100%;">
+    <SfSpreadsheet 
+        @ref="SpreadsheetInstance"
+        DataSource="@WorkbookData"
+        EnableWebMcp="true">
 
-    <SpreadsheetWebMcpSettings Name="spreadsheet" />
+        <SpreadsheetWebMcpSettings Name="SalesSpreadsheet" />
+        
+        <SpreadsheetRibbon></SpreadsheetRibbon>
 
-</SfSpreadsheet>
-
+    </SfSpreadsheet>
+</div>
 
 @code {
-    private SfSpreadsheet? spreadsheet;
+    private SfSpreadsheet? SpreadsheetInstance;
+    private byte[]? WorkbookData;
+
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sales.xlsx";
+        WorkbookData = File.ReadAllBytes(filePath);
+    }
 }
 
 {% endhighlight %}
 
-## Troubleshooting
+### Custom Tool Configuration
 
-### Q: I get "WebMCP not available" or "modelContext is undefined"
+Configure WebMCP tools with custom descriptions, disable specific tools, and handle custom tool execution.
 
-**A:**
+{% highlight razor %}
 
-1. Verify that the WebMCP flag is enabled:
-   - Open `chrome://flags/#enable-webmcp-testing`.
-   - Confirm that it is set to **Enabled**.
-   - Fully restart Chrome instead of reloading the page.
-2. Check that the Chrome version is up to date. WebMCP requires a recent Chromium version.
-3. Ensure that the application uses a secure context, such as HTTPS or localhost.
+@page "/spreadsheet-custom"
+@using Syncfusion.Blazor.Spreadsheet
+@rendermode InteractiveServer
 
-### Q: The extension does not show my registered tools
+<div style="height:100vh; width:100%;">
+    <SfSpreadsheet 
+        @ref="SpreadsheetInstance"
+        DataSource="@WorkbookData"
+        EnableWebMcp="true"
+        OnWebMcpExecute="OnWebMcpExecute">
 
-**A:**
+        <SpreadsheetWebMcpSettings Name="CustomizedSpreadsheet">
+            <SpreadsheetWebMcpTools>
+                <!-- Change built-in tool description -->
+                <SpreadsheetWebMcpTool 
+                    Command="UpdateCell" 
+                    Description="Modify a cell value" />
 
-1. Verify that `EnableWebMcp="true"` is set.
-2. Confirm that `<SpreadsheetWebMcpSettings Name="spreadsheet" />` is configured.
-3. Open DevTools using `F12` and check the Console for errors.
-4. Refresh the page and open the extension again.
-5. Verify that the tool prefix is correct.
+                <!-- Disable a built-in tool -->
+                <SpreadsheetWebMcpTool 
+                    Command="DeleteSheet" 
+                    Enabled="false" />
 
-### Q: Tools are registered but do not execute
+                <!-- Register custom tool -->
+                <SpreadsheetWebMcpTool 
+                    Command="Custom" 
+                    Name="getTotalAmount" 
+                    Description="Calculate total amount from selected range" 
+                    InputSchema="@inputSchema" />
+            </SpreadsheetWebMcpTools>
+        </SpreadsheetWebMcpSettings>
 
-**A:**
+        <SpreadsheetRibbon></SpreadsheetRibbon>
 
-1. Check that the Gemini API key is valid:
-   - Visit [Google AI Studio](https://aistudio.google.com/app/apikey).
-   - Create a new key if required.
-   - Enter the key again in the WebMCP extension.
-2. Verify that the extension has permission to access the site:
-   - Right-click the WebMCP extension and select **Manage extension**.
-   - Ensure that **Allow on this site** is enabled.
+    </SfSpreadsheet>
+</div>
 
-### Q: I get "Permission denied" or "Secure context required"
+@code {
+    private SfSpreadsheet? SpreadsheetInstance;
+    private byte[]? WorkbookData;
 
-**A:**
+    private const string inputSchema = """
+    {
+        "type": "object",
+        "properties": {
+            "range": {
+                "type": "string",
+                "description": "Cell range like A1:A10"
+            }
+        }
+    }
+    """;
 
-- WebMCP requires HTTPS in production or localhost during development.
-- If cross-origin tools are used, both sites must use HTTPS.
-- Test the application locally using a localhost URL.
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sales.xlsx";
+        WorkbookData = File.ReadAllBytes(filePath);
+    }
+
+    private Task OnWebMcpExecute(SpreadsheetWebMcpExecuteEventArgs args)
+    {
+        if (args.Name == "getTotalAmount")
+        {
+            args.Result = System.Text.Json.JsonSerializer.Serialize(new
+            {
+                total = 5000,
+                range = args.Arguments?["range"]?.ToString() ?? "Unknown"
+            });
+        }
+
+        return Task.CompletedTask;
+    }
+}
+
+{% endhighlight %}
 
 ## See Also
 
