@@ -77,6 +77,7 @@ WebMCP integrates seamlessly into Syncfusion Spreadsheet applications across all
 - **[WebMCP Integration for Vue Spreadsheet](https://ej2.syncfusion.com/vue/documentation/webmcp/overview)** — Vue.js-based Spreadsheet Editor
 - **[WebMCP Integration for TypeScript Spreadsheet](https://ej2.syncfusion.com/documentation/webmcp/overview)** — TypeScript/ES6 Spreadsheet Editor
 - **[WebMCP Integration for JavaScript Spreadsheet](https://ej2.syncfusion.com/javascript/documentation/webmcp/overview)** — Vanilla JavaScript/ES5 Spreadsheet Editor
+- **[WebMCP Integration for Blazor Spreadsheet](https://help.syncfusion.com/document-processing/excel/spreadsheet/blazor/webmcp) - Blazor Spreadsheet Editor
 
 ## Common Use Cases
 
