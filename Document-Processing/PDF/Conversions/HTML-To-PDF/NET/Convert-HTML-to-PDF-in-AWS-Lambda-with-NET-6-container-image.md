@@ -22,7 +22,7 @@ The HTML to PDF converter supports the following input types:
 - HTML String: Direct HTML content.
 - URL: Web pages and online HTML content.
 - HTML Files: Local HTML files.
-- MHTML Files: Web archive (.mhtml/.mht) content.
+- MHTML Files: Web archive content.
 - Authenticated Web Pages: Pages that require cookies, form authentication, or HTTP authentication.
 - HTTP GET/POST Requests: HTML content accessed through GET or POST methods
 
