@@ -11,14 +11,15 @@ documentation: ug
 
 ## Integration
 
-WebMCP integrates seamlessly into your [Blazor Spreadsheet](https://www.syncfusion.com/blazor-components/blazor-spreadsheet) application with minimal configuration.
+WebMCP integrates seamlessly into your [Blazor Spreadsheet Editor](https://www.syncfusion.com/blazor-components/blazor-spreadsheet) application with minimal configuration. The integration exposes specialized tools that allow AI agents to perform workbook management, data analysis, worksheet manipulation, and spreadsheet insights operations through natural language.
+
 
 ### Prerequisites
 
 Ensure the following before integrating WebMCP:
 
-- Syncfusion Spreadsheet component is installed and configured. Refer to [Getting Started](./getting-started-webapp).
-- A Chromium-based browser with the WebMCP origin trial or `chrome://flags/#enable-webmcp` enabled. The API is experimental, so confirm its availability in the browser versions you support.
+- Syncfusion Spreadsheet component is installed and configured. Refer to [Getting Started](https://help.syncfusion.com/document-processing/excel/spreadsheet/blazor/getting-started-webapp).
+- A Chromium-based browser, such as Chrome, Edge, or Brave, has the WebMCP flag enabled.
 
 ## Getting Started
 
@@ -28,6 +29,7 @@ Before you can use WebMCP locally, enable the feature flag and install the brows
 
 1. **Enable WebMCP Flag**
    - Enable WebMCP for testing through `chrome://flags/`.
+   - Search for "WebMCP" and set to "Enabled (testing)".
    - Click **Relaunch** to restart Chrome.
 
 2. **Install WebMCP Extension**
@@ -69,7 +71,7 @@ Add `SpreadsheetWebMcpSettings` to register the available tools at the component
 {% highlight razor %}
 
 <SfSpreadsheet EnableWebMcp="true">
-    <SpreadsheetWebMcpSettings Name="spreadsheet" />
+    <SpreadsheetWebMcpSettings Name="SpreadsheetEditor" />
 </SfSpreadsheet>
 
 {% endhighlight %}
@@ -216,84 +218,76 @@ WebMCP tools are organized by category. The following tables provide an overview
 
 Set up a Spreadsheet with WebMCP enabled and register tools on creation.
 
-{% highlight razor %}
+{% tabs %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @page "/spreadsheet-basic"
 @using Syncfusion.Blazor.Spreadsheet
 @rendermode InteractiveServer
 
-<div style="height:100%; width:100%;">
-    <SfSpreadsheet 
-        @ref="SpreadsheetInstance"
-        DataSource="@WorkbookData"
-        EnableWebMcp="true">
-
-        <SpreadsheetWebMcpSettings Name="SpreadsheetEditor" />
-        
-        <SpreadsheetRibbon></SpreadsheetRibbon>
-
-    </SfSpreadsheet>
-</div>
+<SfSpreadsheet 
+    @ref="SpreadsheetInstance"
+    DataSource="@WorkbookData"
+    EnableWebMcp="true">
+    <SpreadsheetWebMcpSettings Name="SpreadsheetEditor" />
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
 
 @code {
-    private SfSpreadsheet? SpreadsheetInstance;
-    private byte[]? WorkbookData;
+    private SfSpreadsheet SpreadsheetInstance;
+    private byte[] WorkbookData;
 
     protected override void OnInitialized()
     {
-        string filePath = "wwwroot/Sales.xlsx";
+        string filePath = "wwwroot/Sample.xlsx";
         WorkbookData = File.ReadAllBytes(filePath);
     }
 }
 
 {% endhighlight %}
+{% endtabs %}
+
 
 ### Custom Tool Configuration
 
 Configure WebMCP tools with custom descriptions, disable specific tools, and handle custom tool execution.
 
-{% highlight razor %}
+{% tabs %}
+{% highlight razor tabtitle="Home.razor" %}
 
 @page "/spreadsheet-custom"
 @using Syncfusion.Blazor.Spreadsheet
 @rendermode InteractiveServer
 
-<div style="height:100%; width:100%;">
-    <SfSpreadsheet 
-        @ref="SpreadsheetInstance"
-        DataSource="@WorkbookData"
-        EnableWebMcp="true"
-        OnWebMcpExecute="OnWebMcpExecute">
-
-        <SpreadsheetWebMcpSettings Name="CustomizedSpreadsheet">
-            <SpreadsheetWebMcpTools>
-                <!-- Change built-in tool description -->
-                <SpreadsheetWebMcpTool 
-                    Command="UpdateCell" 
-                    Description="Modify a cell value" />
-
-                <!-- Disable a built-in tool -->
-                <SpreadsheetWebMcpTool 
-                    Command="DeleteSheet" 
-                    Enabled="false" />
-
-                <!-- Register custom tool -->
-                <SpreadsheetWebMcpTool 
-                    Command="Custom" 
-                    Name="getTotalAmount" 
-                    Description="Calculate total amount from selected range" 
-                    InputSchema="@inputSchema" />
-            </SpreadsheetWebMcpTools>
-        </SpreadsheetWebMcpSettings>
-
-        <SpreadsheetRibbon></SpreadsheetRibbon>
-
-    </SfSpreadsheet>
-</div>
+<SfSpreadsheet 
+    @ref="SpreadsheetInstance"
+    DataSource="@WorkbookData"
+    EnableWebMcp="true"
+    OnWebMcpExecute="OnWebMcpExecute">
+    <SpreadsheetWebMcpSettings Name="SpreadsheetEditor">
+        <SpreadsheetWebMcpTools>
+            <!-- Change built-in tool description -->
+            <SpreadsheetWebMcpTool 
+                Command="SpreadsheetWebMcpToolCommand.UpdateCell" 
+                Description="Modify a cell value" />
+            <!-- Disable a built-in tool -->
+            <SpreadsheetWebMcpTool 
+                Command="SpreadsheetWebMcpToolCommand.DeleteSheet" 
+                Enabled="false" />
+            <!-- Register custom tool -->
+            <SpreadsheetWebMcpTool 
+                Command="SpreadsheetWebMcpToolCommand.Custom" 
+                Name="getTotalAmount" 
+                Description="Calculate total amount from selected range" 
+                InputSchema="@inputSchema" />
+        </SpreadsheetWebMcpTools>
+    </SpreadsheetWebMcpSettings>
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
 
 @code {
-    private SfSpreadsheet? SpreadsheetInstance;
-    private byte[]? WorkbookData;
+    private SfSpreadsheet SpreadsheetInstance;
+    private byte[] WorkbookData;
 
     private const string inputSchema = """
     {
@@ -309,7 +303,7 @@ Configure WebMCP tools with custom descriptions, disable specific tools, and han
 
     protected override void OnInitialized()
     {
-        string filePath = "wwwroot/Sales.xlsx";
+        string filePath = "wwwroot/Sample.xlsx";
         WorkbookData = File.ReadAllBytes(filePath);
     }
 
@@ -329,7 +323,8 @@ Configure WebMCP tools with custom descriptions, disable specific tools, and han
 }
 
 {% endhighlight %}
+{% end tabs %}
 
 ## See Also
 
-* [Getting Started with Blazor Spreadsheet](./getting-started-webapp)
+* [Getting Started with Blazor Spreadsheet](https://help.syncfusion.com/document-processing/excel/spreadsheet/blazor/getting-started-webapp)
