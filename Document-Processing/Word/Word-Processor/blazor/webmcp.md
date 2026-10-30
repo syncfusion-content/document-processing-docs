@@ -205,8 +205,6 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 
 ---
 
----
-
 ## Code Examples
 
 ### Basic Setup
