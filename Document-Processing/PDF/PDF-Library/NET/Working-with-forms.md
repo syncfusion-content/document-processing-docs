@@ -1447,11 +1447,11 @@ loadedDocument.Close(True)
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Forms/Adding-the-signatre-field-in-existing-PDF-document).
 
 
-### Add an image field to a PDF form
+### Add an image to a PDF form field
 
-This section explains how to add an image field to a PDF form using Syncfusion .NET PDF library. The image field enables an image to be displayed within a specified area of the PDF form.
+A PDF form field can display an image by assigning a custom image appearance to a button field. This approach is useful for creating image-based buttons, displaying logos, or showing other visual elements within an interactive PDF form.
 
-The following code example illustrates how to add an image field to a PDF form.
+The following code example demonstrates how to add an image to a PDF form field by setting the image as the button field's appearance.
 
 {% tabs %}  
 
@@ -1467,8 +1467,8 @@ PdfDocument document = new PdfDocument();
 //Add a new page to PDF document.
 PdfPage page = document.Pages.Add();
 
-//Create a Button.
-PdfButtonField buttonField = new PdfButtonField(page, "Click");
+//Create an image-based button field.
+PdfButtonField buttonField = new PdfButtonField(page, "ImageField");
 //Set properties to the Button field.
 buttonField.Bounds = new RectangleF(0, 150, 90, 20);
 buttonField.Text = "Click";
@@ -1499,8 +1499,8 @@ PdfDocument document = new PdfDocument();
 //Add a new page to PDF document.
 PdfPage page = document.Pages.Add();
 
-//Create a Button.
-PdfButtonField buttonField = new PdfButtonField(page, "Click");
+//Create an image-based button field.
+PdfButtonField buttonField = new PdfButtonField(page, "ImageField");
 //Set properties to the Button field.
 buttonField.Bounds = new RectangleF(0, 150, 90, 20);
 buttonField.Text = "Click";
@@ -1531,8 +1531,8 @@ Dim document As New PdfDocument()
 'Add a new page to PDF document.
 Dim page As PdfPage = document.Pages.Add()
 
-'Create a Button.
-Dim buttonField As New PdfButtonField(page, "Click")
+'Create an image-based button field.
+Dim buttonField As New PdfButtonField(page, "ImageField")
 'Set properties to the Button field.
 buttonField.Bounds = New RectangleF(0, 150, 90, 20)
 buttonField.Text = "Click"
@@ -1637,9 +1637,11 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Add a date field to a PDF form
 
-This section explains how to add a date text box field to a PDF form using the Syncfusion .NET PDF library. The field is initialized with a sample date and uses JavaScript-based formatting to enforce the date format, validate input, and automatically format user entries.
+This section explains how to create a text box field for date entry in a PDF form. The field is initialized with a sample date and uses JavaScript actions to format, validate, and automatically format user input according to a specified date pattern.
 
-The following code example illustrates how to add a date field to a PDF form.
+The following code example demonstrates how to add a date field to a PDF form.
+
+N> The date formatting and validation behaviors depend on PDF JavaScript support in the PDF viewer. This example uses the `mm/dd/yyyy` date format.
 
 {% tabs %}  
 {% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Forms/Add-a-date-field-to-a-PDF/.NET/Add-a-date-field-to-a-PDF/Program.cs" %}
