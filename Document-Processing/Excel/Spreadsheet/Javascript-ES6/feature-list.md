@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Feature List in TypeScript Spreadsheet | Syncfusion
-description: The feature list in TypeScript Spreadsheet provides an overview of key capabilities, helping users explore and utilize spreadsheet functions effectively.
-platform: document-processing
+description: Learn about the features available in the Syncfusion TypeScript Spreadsheet control, including editing, formatting, formulas, and more.
 control: Feature list 
+platform: document-processing
 documentation: ug
 ---
 
-# Feature list in TypeScript Spreadsheet 
+# Feature list in TypeScript Spreadsheet
 
 The following table compares Excel functionality with the availability of EJ1 and EJ2 Spreadsheet features.
 
@@ -71,5 +71,3 @@ The following table compares Excel functionality with the availability of EJ1 an
 * [Hyperlink](./link)
 * [Undo and Redo](./undo-redo)
 * [Unlock the particular cells in the protected sheet](./protect-sheet#unlock-the-particular-cells-in-the-protected-sheet)
-
-This file can contain any content.
