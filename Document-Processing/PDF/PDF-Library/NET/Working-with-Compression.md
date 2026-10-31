@@ -21,9 +21,12 @@ To quickly get started with compressing an existing PDF document in .NET, check 
 You can compress an existing PDF document by using the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) and [PdfCompressionOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html) classes. The following compression techniques are supported:
 
 1. [Compress the images with image quality](#compressing-images-with-image-quality)
-2. [Optimize embedded fonts](#optimizing-embedded-fonts)
-3. [Optimize page contents](#optimizing-page-contents)
-4. [Remove metadata information](#removing-metadata-information)
+2. [Down sample images to a target DPI](#downsampling-images)
+3. [Choose a down sampling algorithm](#choosing-a-downsampling-algorithm)
+4. [Encode images using JPEG 2000](#encoding-images-using-jpeg-2000)
+5. [Optimize embedded fonts](#optimizing-embedded-fonts)
+6. [Optimize page contents](#optimizing-page-contents)
+7. [Remove metadata information](#removing-metadata-information)
 
 N> 1.To compress an existing PDF document in .NET Core, you need to add the [Syncfusion.Pdf.Imaging.Net.Core](https://www.nuget.org/packages/Syncfusion.Pdf.Imaging.Net.Core) package from [NuGet.org](https://www.nuget.org/) as a reference in your project.
 N> 2.To ensure compatibility on **Linux** when performing image-based operations such as compression or rendering using `Syncfusion.Pdf.Imaging.Net.Core`, you must include the `SkiaSharp` library along with the `SkiaSharp.NativeAssets.Linux` package in your project.
@@ -115,6 +118,294 @@ loadedDocument.Close(True)
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Compression/Compress-the-images-in-an-existing-PDF-document).
+
+## Down sampling images
+
+You can reduce the file size of an existing PDF document by down sampling images whose effective DPI exceeds the value you need for your output (for example, the print or screen resolution of the intended viewer). To do this, enable the [Down sample Images](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html#Syncfusion_Pdf_PdfCompressionOptions_DownsampleImages) property and set the desired resolution through the [TargetDpi](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html#Syncfusion_Pdf_PdfCompressionOptions_TargetDpi) property of the [PdfCompressionOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html) class.
+
+N> 1. The `Down sample Images` property does not affect images whose current resolution is already at or below the `TargetDpi` value.
+N> 2. The `TargetDpi` property accepts values from `36` to `2400`. The default value is `150`.
+
+The following code example illustrates how to down sample images that exceed the target DPI in an existing PDF document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Compression/Downsample-images-in-an-existing-PDF-document/.NET/Downsample-images-in-an-existing-PDF-document/Program.cs" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
+// Load the existing PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+
+// Create a new compression options instance
+PdfCompressionOptions options = new PdfCompressionOptions();
+// Downsample images that exceed the target DPI
+options.DownsampleImages = true;
+// Set the target DPI for the downsampled images
+options.TargetDpi = 150;
+
+// Apply the compression options to the document
+loadedDocument.Compress(options);
+
+// Save the document
+loadedDocument.Save("Output.pdf");
+// Close the document
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
+// Load the existing PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+
+// Create a new compression options instance
+PdfCompressionOptions options = new PdfCompressionOptions();
+// Downsample images that exceed the target DPI
+options.DownsampleImages = true;
+// Set the target DPI for the downsampled images
+options.TargetDpi = 150;
+
+// Assign the compression options to the document
+loadedDocument.CompressionOptions = options;
+
+// Save the document
+loadedDocument.Save("Output.pdf");
+// Close the document
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
+
+' Load the existing PDF document
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+
+' Create a new compression options instance
+Dim options As New PdfCompressionOptions()
+' Downsample images that exceed the target DPI
+options.DownsampleImages = True
+' Set the target DPI for the downsampled images
+options.TargetDpi = 150
+
+' Assign the compression options to the document
+loadedDocument.CompressionOptions = options
+
+' Save the document
+loadedDocument.Save("Output.pdf")
+' Close the document
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Compression/Compress-the-images-in-an-existing-PDF-document).
+
+## Choosing a down sampling algorithm
+
+You can choose the interpolation algorithm that is used when images in an existing PDF document are down sampled by setting the [Down sample Algorithm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html#Syncfusion_Pdf_PdfCompressionOptions_DownsampleAlgorithm) property of the [PdfCompressionOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html) class. The available options are defined by the [Down sampling Algorithm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.DownsamplingAlgorithm.html) enumeration:
+
+| **Member**           | **Description**                                                                          |
+| -------------------- | ---------------------------------------------------------------------------------------- |
+| `Bicubic`            | Uses bicubic interpolation for high-quality image downsampling.                         |
+| `Bilinear`           | Uses bilinear interpolation for efficient image downsampling.                            |
+| `Lanczos`            | Uses Lanczos interpolation for sharp image downsampling.                                 |
+| `NearestNeighbor`    | Uses nearest-neighbor interpolation for fast image downsampling.                         |
+
+N> The default value is `DownsamplingAlgorithm.Bicubic`.
+
+The following code example illustrates how to specify the downsampling algorithm when compressing an existing PDF document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Compression/Choose-a-downsampling-algorithm/.NET/Choose-a-downsampling-algorithm/Program.cs" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
+// Load the existing PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+
+// Create a new compression options instance
+PdfCompressionOptions options = new PdfCompressionOptions();
+// Enable image compression and downsampling
+options.CompressImages = true;
+options.ImageQuality = 50;
+options.DownsampleImages = true;
+options.TargetDpi = 72;
+// Use Lanczos interpolation for sharp downsampling
+options.DownsampleAlgorithm = DownsamplingAlgorithm.Lanczos;
+
+// Apply the compression options to the document
+loadedDocument.Compress(options);
+
+// Save the document
+loadedDocument.Save("Output.pdf");
+// Close the document
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
+// Load the existing PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+
+// Create a new compression options instance
+PdfCompressionOptions options = new PdfCompressionOptions();
+// Enable image compression and downsampling
+options.CompressImages = true;
+options.ImageQuality = 50;
+options.DownsampleImages = true;
+options.TargetDpi = 72;
+// Use Lanczos interpolation for sharp downsampling
+options.DownsampleAlgorithm = DownsamplingAlgorithm.Lanczos;
+
+// Assign the compression options to the document
+loadedDocument.CompressionOptions = options;
+
+// Save the document
+loadedDocument.Save("Output.pdf");
+// Close the document
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
+
+' Load the existing PDF document
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+
+' Create a new compression options instance
+Dim options As New PdfCompressionOptions()
+' Enable image compression and downsampling
+options.CompressImages = True
+options.ImageQuality = 50
+options.DownsampleImages = True
+options.TargetDpi = 72
+' Use Lanczos interpolation for sharp downsampling
+options.DownsampleAlgorithm = DownsamplingAlgorithm.Lanczos
+
+' Assign the compression options to the document
+loadedDocument.CompressionOptions = options
+
+' Save the document
+loadedDocument.Save("Output.pdf")
+' Close the document
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Compression).
+
+## Encoding images using JPEG 2000
+
+You can further reduce the file size of an existing PDF document by re-encoding images with JPEG 2000 (`JPXDecode`) instead of the default JPEG (`DCTDecode`). JPEG 2000 typically produces smaller files at equivalent visual quality and supports lossless encoding. To do this, enable the [JpxDecodeEnabled](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html#Syncfusion_Pdf_PdfCompressionOptions_JpxDecodeEnabled) property of the [PdfCompressionOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html) class.
+
+N> 1. The `JpxDecodeEnabled` property only applies when `CompressImages` is also enabled.
+N> 2. Some legacy PDF viewers may not fully support JPEG 2000-encoded images. Verify that your intended viewers support `JPXDecode` before enabling this option.
+
+The following code example illustrates how to encode images using JPEG 2000 in an existing PDF document.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" playgroundButtonLink="https://raw.githubusercontent.com/SyncfusionExamples/PDF-Examples/master/Compression/Encode-images-using-JPEG-2000/.NET/Encode-images-using-JPEG-2000/Program.cs" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
+// Load the existing PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+
+// Create a new compression options instance
+PdfCompressionOptions options = new PdfCompressionOptions();
+// Enable image compression
+options.CompressImages = true;
+options.ImageQuality = 50;
+// Enable JPEG 2000 (JPXDecode) encoding for the compressed images
+options.JpxDecodeEnabled = true;
+
+// Apply the compression options to the document
+loadedDocument.Compress(options);
+
+// Save the document
+loadedDocument.Save("Output.pdf");
+// Close the document
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
+// Load the existing PDF document
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+
+// Create a new compression options instance
+PdfCompressionOptions options = new PdfCompressionOptions();
+// Enable image compression
+options.CompressImages = true;
+options.ImageQuality = 50;
+// Enable JPEG 2000 (JPXDecode) encoding for the compressed images
+options.JpxDecodeEnabled = true;
+
+// Assign the compression options to the document
+loadedDocument.CompressionOptions = options;
+
+// Save the document
+loadedDocument.Save("Output.pdf");
+// Close the document
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
+
+' Load the existing PDF document
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+
+' Create a new compression options instance
+Dim options As New PdfCompressionOptions()
+' Enable image compression
+options.CompressImages = True
+options.ImageQuality = 50
+' Enable JPEG 2000 (JPXDecode) encoding for the compressed images
+options.JpxDecodeEnabled = True
+
+' Assign the compression options to the document
+loadedDocument.CompressionOptions = options
+
+' Save the document
+loadedDocument.Save("Output.pdf")
+' Close the document
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Compression).
 
 ## Optimizing embedded fonts
 
