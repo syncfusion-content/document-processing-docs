@@ -40,7 +40,7 @@ The accessibility compliance for the [React DOCX Editor](https://www.syncfusion.
 
 ## Screen Reader Support
 
-The DOCX Editor provides screen reader support for improved accessibility. Set the [`enableScreenReader`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documentEditorSettingsModel#enablescreenreader) property to `true` in [`documentEditorSettings`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documenteditorcontainer#documenteditorsettings) to enable screen reader support and expose the necessary accessibility information for screen reader tools.
+The DOCX Editor provides screen reader support for improved accessibility. Set the [`enableScreenReader`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documentEditorSettingsModel#enablescreenreader) property to `true` in [`documentEditorSettings`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documentEditorSettingsModel) to enable screen reader support and expose the necessary accessibility information for screen reader tools.
 
 ### Enable Screen Reader Support
 
