@@ -126,7 +126,7 @@ You can reduce the file size of an existing PDF document by downsampling images 
 N> 1. The `DownsampleImages` property does not affect images whose current resolution is already at or below the `TargetDpi` value.
 N> 2. The `TargetDpi` property accepts values from `36` to `2400`. The default value is `150`.
 
-The following code example illustrates how to down sampleimages that exceed the target DPI in an existing PDF document.
+The following code example illustrates how to downsample images that exceed the target DPI in an existing PDF document.
 
 {% tabs %}
 
@@ -211,7 +211,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Choosing a downsampling algorithm
 
-You can choose the interpolation algorithm that is used when images in an existing PDF document are downsampled by setting the [DownsampleAlgorithm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html#Syncfusion_Pdf_PdfCompressionOptions_DownsampleAlgorithm) property of the [PdfCompressionOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html) class. The available options are defined by the [DownsamplingAlgorithm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.DownsamplingAlgorithm.html) enumeration:
+You can choose the interpolation algorithm that is used when images in an existing PDF document are resized by setting the [DownsampleAlgorithm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html#Syncfusion_Pdf_PdfCompressionOptions_DownsampleAlgorithm) property of the [PdfCompressionOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html) class. The available options are defined by the [DownsamplingAlgorithm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.DownsamplingAlgorithm.html) enumeration:
 
 | **Member**           | **Description**                                                                          |
 | -------------------- | ---------------------------------------------------------------------------------------- |
