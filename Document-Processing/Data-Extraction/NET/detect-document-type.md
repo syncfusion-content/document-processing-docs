@@ -32,8 +32,6 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     DataExtractor extractor = new DataExtractor();
     //Detect document type.
     string documentType = extractor.DetectDocumentType(stream);
-    //Save the detected document type information.
-    File.WriteAllText("DocumentType.txt", documentType, Encoding.UTF8);
 }
 
 {% endhighlight %}
@@ -50,8 +48,6 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
     DataExtractor extractor = new DataExtractor();
     //Detect document type.
     string documentType = extractor.DetectDocumentType(stream);
-    //Save the detected document type information.
-    File.WriteAllText("DocumentType.txt", documentType, Encoding.UTF8);
 }
 			
 {% endhighlight %}
