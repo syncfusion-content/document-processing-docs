@@ -44,7 +44,7 @@ Before you can use WebMCP locally, enable the feature flag and install the brows
 
 Import and inject the needed modules into your DOCX Editor:
 
-```jsx
+```ts
 import { DocumentEditorContainer, Toolbar, Ribbon } from '@syncfusion/ej2-react-documenteditor';
 
 // Inject required modules
@@ -55,7 +55,7 @@ DocumentEditorContainer.Inject(Toolbar, Ribbon);
 
 Set the `enableWebMcp` property to `true` in your DocumentEditorContainer configuration:
 
-```jsx
+```ts
 <DocumentEditorContainerComponent
           id="container"
           ref={(scope) => { container = scope; }}
@@ -73,7 +73,7 @@ Set the `enableWebMcp` property to `true` in your DocumentEditorContainer config
 
 Set the `webMcpSettings` property to register the available tools in the control level:
 
-```jsx
+```ts
 <DocumentEditorContainerComponent
           id="container"
           ref={(scope) => { container = scope; }}
@@ -190,7 +190,7 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 
 Set up a DocumentEditorContainer with WebMCP enabled and register tools on creation.
 
-```jsx
+```ts
 import { createRoot } from 'react-dom/client';
 import * as React from 'react';
 import { DocumentEditorContainerComponent, Ribbon } from '@syncfusion/ej2-react-documenteditor';
