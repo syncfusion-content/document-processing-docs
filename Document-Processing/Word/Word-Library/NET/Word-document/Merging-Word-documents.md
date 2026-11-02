@@ -230,7 +230,28 @@ destinationDocument.Close()
 
 {% endtabs %}
 
+## Merge Source Content into Destination document's last Section
 
+The following code example illustrates how to import the source document's contents into the last section of the destination document, so the imported content is appended to the existing last section instead of starting a new one.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+//Open the source document
+using (WordDocument sourceDocument = new WordDocument(@"../../../Data/SourceDocument.docx"))
+{
+    //Open the destination document
+    using (WordDocument destinationDocument = new WordDocument(@"../../../Data/DestinationDocument.docx"))
+    {
+        //Import the contents; the first source section is merged into the last destination section
+        destinationDocument.ImportContent(sourceDocument, ImportOptions.UseDestinationStyles, true);
+        //Save the destination document
+        destinationDocument.Save("../../../Output/CombinedDocument.docx", FormatType.Docx);
+    }
+}
+{% endhighlight %}
+
+{% endtabs %}
 
 ## See Also
 
