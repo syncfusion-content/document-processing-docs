@@ -283,7 +283,6 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Vue-DOCX-Editor
 2. Verify the extension has permission to access the site:
    - Right-click WebMCP extension → Manage extension
    - Ensure "Allow on this site" is enabled
-   
 ---
 
 ### Why do I get a "Permission denied" or "Secure context required" error?

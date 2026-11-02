@@ -218,7 +218,6 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/JavaScript-ES5-
 2. Verify the extension has permission to access the site:
    - Right-click WebMCP extension → Manage extension
    - Ensure "Allow on this site" is enabled
-   
 ---
 
 ### Why do I get a "Permission denied" or "Secure context required" error?
@@ -226,7 +225,6 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/JavaScript-ES5-
 1. WebMCP requires HTTPS in production or localhost for development
 2. If using cross-origin tools, both sites must be HTTPS
 3. Test locally using `localhost:4200` or similar
-
 ---
 
 
