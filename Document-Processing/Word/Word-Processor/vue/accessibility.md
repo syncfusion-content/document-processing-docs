@@ -38,27 +38,40 @@ The accessibility compliance for the [Vue DOCX Editor](https://www.syncfusion.co
 
 ## Screen Reader Support
 
-The DOCX Editor provides screen reader support for improved accessibility. Set the [`enableScreenReader`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/documentEditorSettingsModel#enablescreenreader) property to `true` in [`documentEditorSettings`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/documenteditorcontainer#documenteditorsettings) to enable screen reader support and expose the necessary accessibility information for screen reader tools.
+The DOCX Editor provides screen reader support for improved accessibility. Set the [`enableScreenReader`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/documentEditorSettingsModel#enablescreenreader) property to `true` in [`documentEditorSettings`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/documenteditorsettingsmodel) to enable screen reader support and expose the necessary accessibility information for screen reader tools.
 
 ### Enable Screen Reader Support
 
 ```
 <template>
-    <div id="app">
-      <ejs-documenteditorcontainer ref='container' :documentEditorSettings='settings' height="590px" id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
-    </div>
+  <div id="app">
+    <ejs-documenteditorcontainer
+      ref="container"
+      :height="height"
+      :width="width"
+      :enableToolbar="true"
+      toolbarMode="Ribbon"
+      :documentEditorSettings='settings'>
+    </ejs-documenteditorcontainer>
+  </div>
 </template>
-<script>
-  import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
-  export default {
-    data() {
-      return { settings: { enableScreenReader: true } },
-    },
-    provide: {
-      //Inject require modules.
-      DocumentEditorContainer: [Toolbar]
-    }
-  }
+
+<script setup>
+import { provide, ref } from 'vue';
+import {
+  DocumentEditorContainerComponent as EjsDocumenteditorcontainer,
+  Toolbar,
+  Ribbon
+} from '@syncfusion/ej2-vue-documenteditor';
+
+const container = ref(null);
+const height = '100%';
+const width = '100%';
+
+const settings= { enableScreenReader: true };
+
+
+provide('DocumentEditorContainer', [Toolbar, Ribbon]);
 </script>
 ```
 

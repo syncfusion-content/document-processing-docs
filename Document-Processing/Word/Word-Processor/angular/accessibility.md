@@ -38,18 +38,20 @@ The accessibility compliance for the [Angular DOCX Editor](https://www.syncfusio
 
 ## Screen Reader Support
 
-The DOCX Editor provides screen reader support for improved accessibility. Set the [`enableScreenReader`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/documentEditorSettingsModel#enablescreenreader) property to `true` in [`documentEditorSettings`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/documenteditorcontainer#documenteditorsettings) to enable screen reader support and expose the necessary accessibility information for screen reader tools.
+The DOCX Editor provides screen reader support for improved accessibility. Set the [`enableScreenReader`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/documentEditorSettingsModel#enablescreenreader) property to `true` in [`documentEditorSettings`](https://ej2.syncfusion.com/angular/documentation/api/document-editor/documenteditorsettingsmodel) to enable screen reader support and expose the necessary accessibility information for screen reader tools.
 
 ### Enable Screen Reader Support
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
-import { ToolbarService, DocumentEditorSettingsModel } from '@syncfusion/ej2-angular-documenteditor';
+import { ToolbarService, DocumentEditorSettingsModel, DocumentEditorContainerModule, RibbonService } from '@syncfusion/ej2-angular-documenteditor';
 @Component({
       selector: 'app-root',
+      standalone: true,
+      imports: [DocumentEditorContainerModule],
+      providers: [ToolbarService, RibbonService],
       // specifies the template string for the DocumentEditorContainer component
-      template: `<ejs-documenteditorcontainer height="590px" style="display:block" [documentEditorSettings]= "settings" [enableToolbar]=true> </ejs-documenteditorcontainer>`,
-      providers: [ToolbarService]
+      template: `<ejs-documenteditorcontainer height="590px" style="display:block" [documentEditorSettings]= "settings" [enableToolbar]=true [toolbarMode]="'Ribbon'"> </ejs-documenteditorcontainer>`
 })
 export class AppComponent implements OnInit {
     public settings: DocumentEditorSettingsModel = { enableScreenReader: true };

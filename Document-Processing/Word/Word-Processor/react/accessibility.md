@@ -45,15 +45,29 @@ The DOCX Editor provides screen reader support for improved accessibility. Set t
 ### Enable Screen Reader Support
 
 ```typescript
-let settings = { enableScreenReader: true };
-  return (
-        <DocumentEditorContainerComponent
-            id="container"
-            height="590px"
-            enableToolbar={true}
-            documentEditorSettings={settings}
-        />
-  );
+import { createRoot } from 'react-dom/client';
+import * as React from 'react';
+import { DocumentEditorContainerComponent, Ribbon, Toolbar } from '@syncfusion/ej2-react-documenteditor';
+DocumentEditorContainerComponent.Inject(Toolbar, Ribbon);
+const Default = () => {
+    let container = React.useRef(null);
+    let settings = { enableScreenReader: true };
+    return (
+            <DocumentEditorContainerComponent
+                id="container"
+                ref={container}
+                style={{ display: 'block' }}
+                height={'590px'}
+                toolbarMode="Ribbon"
+                enableToolbar={true}
+                documentEditorSettings={settings}
+                locale="en-US"
+            />
+    );
+};
+export default Default;
+const root = createRoot(document.getElementById('sample'));
+root.render(<Default />);
 ```
 
 N> `enableScreenReader` is disabled by default. Set it to `true` to enable screen reader support.

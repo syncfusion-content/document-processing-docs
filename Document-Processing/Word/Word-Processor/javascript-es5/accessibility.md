@@ -38,7 +38,7 @@ The accessibility compliance for the [JavaScript DOCX Editor](https://www.syncfu
 
 ## Screen Reader Support
 
-The DOCX Editor provides screen reader support for improved accessibility. Set the [`enableScreenReader`](https://ej2.syncfusion.com/documentation/api/document-editor/documentEditorSettingsModel#enablescreenreader) property to `true` in [`documentEditorSettings`](https://ej2.syncfusion.com/documentation/api/document-editor/documenteditorcontainer#documenteditorsettings) to enable screen reader support and expose the necessary accessibility information for screen reader tools.
+The DOCX Editor provides screen reader support for improved accessibility. Set the [`enableScreenReader`](https://ej2.syncfusion.com/documentation/api/document-editor/documentEditorSettingsModel#enablescreenreader) property to `true` in [`documentEditorSettings`](https://ej2.syncfusion.com/documentation/api/document-editor/documenteditorsettingsmodel) to enable screen reader support and expose the necessary accessibility information for screen reader tools.
 
 ### Enable Screen Reader Support
 
@@ -47,10 +47,10 @@ The DOCX Editor provides screen reader support for improved accessibility. Set t
 
 <script>
     var container = new ej.documenteditor.DocumentEditorContainer({
-        height: '590px',
+        height: '590px', enableToolbar: true, toolbarMode: 'Ribbon',
         documentEditorSettings: { enableScreenReader: true }
     });
-    ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
+    ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Ribbon);
     container.appendTo('#container');
 </script>
 ```
