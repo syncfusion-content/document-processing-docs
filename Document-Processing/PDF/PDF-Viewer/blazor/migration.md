@@ -208,11 +208,7 @@ For WebAssembly applications, include the following properties in the project **
 <tr>
 <td>
 {% tabs %}
-{% highlight C# tabtitle=".csproj" hl_lines="2 6 7" %}
-<ItemGroup>
-    <NativeFileReference Include="$(SkiaSharpStaticLibraryPath)\2.0.23\*.a" />
-</ItemGroup>
-
+{% highlight C# tabtitle=".csproj" hl_lines="2 3" %}
 <PropertyGroup>
 	<WasmNativeStrip>true</WasmNativeStrip>
 	<WasmBuildNative>true</WasmBuildNative>

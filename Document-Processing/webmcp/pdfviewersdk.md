@@ -1022,6 +1022,8 @@ To enable a default-disabled tool, add a `PdfViewerWebMcpTool` entry inside a `P
 {% endhighlight %}
 {% endtabs %}
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/WebMCP/WebMCP/Components/Pages/ManageTools.razor).
+
 ### Step 4: Monitor and control tool execution
 
 The [OnWebMcpExecute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerEvents_OnWebMcpExecute) event on the [`PdfViewerEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerEvents.html) child component fires after a tool has been resolved but before the built-in handler runs. Use the `PdfViewerWebMcpExecuteEventArgs` payload to:
@@ -1063,6 +1065,8 @@ The [OnWebMcpExecute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Sf
 {% endhighlight %}
 {% endtabs %}
 
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/WebMCP/WebMCP/Components/Pages/WebMcpExecute.razor).
+
 ### Step 5: Read the effective tool catalog from code
 
 If you need to verify which tools are actually registered for the current settings, call [SfPdfViewer2.GetWebMcpToolsAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_GetWebMcpToolsAsync_System_Collections_Generic_IEnumerable_System_String__). It returns the effective catalog after `PdfViewerWebMcpSettings` has been applied (disabled tools excluded, opt-ins honored), so it reflects exactly what the AI agent will see.
@@ -1095,6 +1099,8 @@ If you need to verify which tools are actually registered for the current settin
 
 {% endhighlight %}
 {% endtabs %}
+
+N> [View sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/blob/master/WebMCP/WebMCP/Components/Pages/GetTools.razor).
 
 {% endtabcontent %}
 
