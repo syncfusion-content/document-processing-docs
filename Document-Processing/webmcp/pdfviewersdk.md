@@ -1104,7 +1104,7 @@ If you need to verify which tools are actually registered for the current settin
 
 WebMCP tools enable AI agents to interact with PDF documents and automate PDF-related operations. Through the tools exposed by the PDF Viewer, AI agents can access document pages, extract content, manage annotations, process form fields, perform redaction operations, and execute document actions.
 
-{% tabs %}
+{% tabcontents %}
 
 {% tabcontent React, Angular, Vue, JavaScript, TypeScript %}
 
@@ -1206,7 +1206,8 @@ WebMCP tools enable AI agents to interact with PDF documents and automate PDF-re
 N> The five tools marked as disabled by default (`getBookmarks`, `getAnnotations`, `getFormFields`, `getSearchTextPositions`, and `getPageText`) are not registered with the WebMCP runtime until you opt in. Add a `PdfViewerWebMcpTool` entry with `Enabled="true"` inside `PdfViewerWebMcpTools` to register them. See [Step 3](#step-3-enable-or-disable-specific-tools) for the complete example.
 
 {% endtabcontent %}
-{% endtabs %}
+
+{% endtabcontents %}
 
 ## Common Use Cases
 
