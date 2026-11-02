@@ -1212,7 +1212,6 @@ WebMCP tools enable AI agents to interact with PDF documents and automate PDF-re
 N> The five tools marked as disabled by default (`getBookmarks`, `getAnnotations`, `getFormFields`, `getSearchTextPositions`, and `getPageText`) are not registered with the WebMCP runtime until you opt in. Add a `PdfViewerWebMcpTool` entry with `Enabled="true"` inside `PdfViewerWebMcpTools` to register them. See [Step 3](#step-3-enable-or-disable-specific-tools) for the complete example.
 
 {% endtabcontent %}
-
 {% endtabcontents %}
 
 ## Common Use Cases
