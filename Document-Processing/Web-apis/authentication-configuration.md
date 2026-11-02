@@ -4,6 +4,7 @@ description: Learn how to configure authentication for the document processing e
 platform: document-processing
 control: general
 documentation: UG
+appliesto: Document SDK
 ---
 # Guide to Authentication Configuration in Web APIs
 

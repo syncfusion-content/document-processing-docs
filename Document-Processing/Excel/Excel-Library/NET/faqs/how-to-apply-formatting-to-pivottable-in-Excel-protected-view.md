@@ -4,6 +4,7 @@ description: Apply formatting to pivot tables in Excel Protected View using the 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to format pivot tables in protected view in .NET Excel Library

@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: styles-and-templates,custom-style,theming,control-template,resource,xaml
+appliesto: DOCX Editor SDK
 ---
 # Styles and Templates in WPF DOCX Editor
 

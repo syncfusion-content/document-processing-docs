@@ -4,6 +4,7 @@ description: Data validation text limit describes the maximum supported text len
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Maximum Data Validation Text Length in .NET Excel Library

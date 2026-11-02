@@ -6,6 +6,7 @@ control: DOCX Editor
 platform: document-processing
 documentation: ug
 keywords: WPF UI Builder,Skills,AI Assistants,DOCX Editor SDK,Agent Skills,installation,configuration,agent,prompt
+appliesto: DOCX Editor SDK
 ---
 
 # UI Builder Skill with WPF DOCX Editor

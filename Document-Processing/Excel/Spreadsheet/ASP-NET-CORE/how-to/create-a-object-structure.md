@@ -5,6 +5,7 @@ description: Create an object structure in ASP.NET Core Spreadsheet to organize 
 platform: document-processing
 control: Create a object structure 
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # How to Create an Object Structure in ASP.NET Core Spreadsheet

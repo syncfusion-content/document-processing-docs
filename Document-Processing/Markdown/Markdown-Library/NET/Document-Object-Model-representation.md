@@ -4,6 +4,7 @@ description: Learn about the Document Object Model (DOM) used to represent Markd
 platform: document-processing
 control: Markdown
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Document Object Model in .NET Markdown Library

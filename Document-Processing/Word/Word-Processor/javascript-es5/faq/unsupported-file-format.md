@@ -6,6 +6,7 @@ platform: document-processing
 control: Unsupported file 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Supported File Formats in JavaScript DOCX Editor

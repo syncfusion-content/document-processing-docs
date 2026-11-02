@@ -5,6 +5,7 @@ description: Secure worksheets and cells by using protection features in the Syn
 platform: document-processing
 control: Protect Sheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

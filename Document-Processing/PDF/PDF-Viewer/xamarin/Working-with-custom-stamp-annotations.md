@@ -5,6 +5,7 @@ description: Learn here all about Working with custom stamp annotations support 
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Custom stamp annotations in Xamarin Pdf Viewer

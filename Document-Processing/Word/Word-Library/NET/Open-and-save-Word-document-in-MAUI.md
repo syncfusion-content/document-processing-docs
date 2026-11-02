@@ -4,6 +4,7 @@ description: Open and save Word document in .NET MAUI application using the .NET
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Open and save Word document in .NET MAUI

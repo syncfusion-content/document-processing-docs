@@ -5,6 +5,7 @@ platform: document-processing
 control: PDF
 documentation: UG
 Keywords: linux os save pdf, linux os load pdf, c# save pdf, c# load pdf
+appliesto: Document SDK
 ---
 
 # Open and Save PDF Document in Linux

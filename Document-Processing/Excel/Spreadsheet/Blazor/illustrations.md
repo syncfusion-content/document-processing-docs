@@ -5,6 +5,7 @@ description: Add and manage images and visual elements in Excel documents using 
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Illustrations in Blazor Spreadsheet

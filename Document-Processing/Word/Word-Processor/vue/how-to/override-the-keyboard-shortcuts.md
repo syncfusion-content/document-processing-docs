@@ -6,6 +6,7 @@ control: Override the keyboard shortcuts
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Override Keyboard Shortcuts in Vue DOCX Editor

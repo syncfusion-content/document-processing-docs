@@ -4,6 +4,7 @@ description: Migration from .NET Framework to .NET Core describes how to move Sy
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Migration to .NET Core in .NET Excel Library

@@ -5,6 +5,7 @@ description: Use the extractTextOption property in the ASP.NET Core PDF Viewer t
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Configure ExtractTextOption in ASP.NET Core PDF Viewer

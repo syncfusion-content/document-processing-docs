@@ -4,6 +4,7 @@ description: WPF PowerPoint library to create, read, edit and convert PowerPoint
 platform: document-processing
 control: PowerPoint
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Create, read and edit a PowerPoint file in WPF

@@ -6,6 +6,7 @@ platform: document-processing
 control: Change Document View
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Change Document View in TypeScript DOCX Editor

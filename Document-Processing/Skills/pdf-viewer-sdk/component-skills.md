@@ -5,6 +5,7 @@ platform: document-processing
 control: PDF Viewer SDK
 documentation: ug
 keywords: Skills, AI Assistants, PdfViewer SDK, Agent Skills
+appliesto: PDF Viewer SDK
 ---
 
 # Syncfusion PDF Viewer SDK Agent Skills for AI Assistants

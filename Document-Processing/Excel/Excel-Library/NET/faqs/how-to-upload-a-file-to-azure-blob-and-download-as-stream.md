@@ -4,6 +4,7 @@ description: Upload an Excel file to Azure Blob Storage and download it as a str
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to upload files to Azure Blob in .NET Excel Library

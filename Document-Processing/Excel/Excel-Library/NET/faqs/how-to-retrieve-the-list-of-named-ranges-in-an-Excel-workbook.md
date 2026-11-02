@@ -4,6 +4,7 @@ description: Retrieve the list of named ranges in an Excel workbook using the Sy
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to retrieve named ranges in .NET Excel Library

@@ -4,6 +4,7 @@ description: Learn how to add, format, and modify images in a Markdown document 
 platform: document-processing
 control: Markdown
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Images in .NET Markdown Library

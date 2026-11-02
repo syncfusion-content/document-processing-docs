@@ -5,6 +5,7 @@ description: Suspend and resume UI refresh in TypeScript Spreadsheet improve per
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Suspend and Resume UI Refresh in TypeScript Spreadsheet

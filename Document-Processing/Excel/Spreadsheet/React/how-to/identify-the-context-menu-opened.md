@@ -5,6 +5,7 @@ description: Learn how to identify the opened context menu in the Syncfusion Rea
 control: Spreadsheet
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # How to Identify Which Context Menu Was Opened in React Spreadsheet

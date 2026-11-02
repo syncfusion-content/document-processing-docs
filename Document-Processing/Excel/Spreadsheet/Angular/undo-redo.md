@@ -5,6 +5,7 @@ description: Undo and redo in Angular Spreadsheet allow users to reverse or rest
 platform: document-processing
 control: Undo redo
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Undo redo in Angular Spreadsheet 

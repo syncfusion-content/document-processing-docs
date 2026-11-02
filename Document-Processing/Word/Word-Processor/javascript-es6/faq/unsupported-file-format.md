@@ -6,6 +6,7 @@ platform: document-processing
 control: Unsupported File
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Supported File Formats in TypeScript DOCX Editor

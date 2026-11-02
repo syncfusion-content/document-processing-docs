@@ -5,6 +5,7 @@ description: Highlight spreadsheet data using conditional formatting rules, cell
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Conditional Formatting in Windows Forms Spreadsheet

@@ -4,6 +4,7 @@ description: Learn how to convert PDF pages into image files using the Syncfusio
 platform: document-processing
 control: PDF to image
 documentation: UG
+appliesto: Document SDK
 ---
 
 # PDF Page to Image Conversion in PDF to Image Library

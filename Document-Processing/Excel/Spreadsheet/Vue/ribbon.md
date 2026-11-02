@@ -5,6 +5,7 @@ description: Customize and use the ribbon interface in the Syncfusion Vue Spread
 control: Ribbon 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Ribbon in Vue Spreadsheet

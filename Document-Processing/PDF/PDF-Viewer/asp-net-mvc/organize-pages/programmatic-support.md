@@ -5,6 +5,7 @@ description: Use the programmatic APIs for Organize Pages in the ASP.NET MVC PDF
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Programmatic Support for Organize Pages in ASP.NET MVC PDF Viewer

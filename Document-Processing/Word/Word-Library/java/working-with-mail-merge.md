@@ -4,6 +4,7 @@ description: This section illustrates about Mail merge Word document to create r
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 # Mail merge in Java Word
 

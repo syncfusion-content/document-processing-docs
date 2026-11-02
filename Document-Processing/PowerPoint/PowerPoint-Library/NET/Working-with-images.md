@@ -4,6 +4,7 @@ description: Learn how to add, edit, and remove the images in C# using .NET Powe
 platform: document-processing
 control: Presentation
 documentation: UG
+appliesto: Document SDK
 ---
 # Working with PowerPoint Images
 

@@ -4,6 +4,7 @@ description: AWS Excel to Image section explains how to convert Excel documents 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Excel to Image Conversion in AWS using Excel Library

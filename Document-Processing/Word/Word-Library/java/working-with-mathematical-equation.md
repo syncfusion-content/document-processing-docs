@@ -4,6 +4,7 @@ description: This section illustrates about create, modify and remove mathematic
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 # Mathematical Equation in Java Word
 

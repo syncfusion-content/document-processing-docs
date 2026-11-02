@@ -5,6 +5,7 @@ description: Customize the toolbar in Syncfusion® ASP.NET Core DOCX Editor by a
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

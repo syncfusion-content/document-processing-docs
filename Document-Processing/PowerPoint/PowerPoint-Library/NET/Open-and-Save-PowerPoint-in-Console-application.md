@@ -4,6 +4,7 @@ description: Open and save Presentation in Console application using .NET PowerP
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Open and save Presentation in Console application

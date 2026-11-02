@@ -4,6 +4,7 @@ description: This section illustrates common questions and solutions related to 
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # FAQ about Mail merge in .NET Word
 

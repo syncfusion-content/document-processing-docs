@@ -4,6 +4,7 @@ description: Convert Word to image in Windows Forms using .NET Word library with
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert Word to Image in Windows Forms 

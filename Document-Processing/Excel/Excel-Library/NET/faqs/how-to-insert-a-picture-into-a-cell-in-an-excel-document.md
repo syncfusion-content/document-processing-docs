@@ -4,6 +4,7 @@ description: Learn how to insert a picture into a cell in an Excel document usin
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to insert pictures into cells in .NET Excel Library

@@ -4,6 +4,7 @@ description: Remove autofilter from an Excel worksheet using the Syncfusion .NET
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to remove AutoFilter in .NET Excel Library

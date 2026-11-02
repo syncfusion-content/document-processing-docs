@@ -5,6 +5,7 @@ description: The paragraph format feature in Blazor DOCX Editor enables users to
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # Paragraph Format in Blazor DOCX Editor

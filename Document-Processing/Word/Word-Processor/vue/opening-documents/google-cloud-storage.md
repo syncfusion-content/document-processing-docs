@@ -6,6 +6,7 @@ platform: document-processing
 control: Open document from Google Cloud Storage
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Open Documents from Google Cloud Storage in Vue DOCX Editor

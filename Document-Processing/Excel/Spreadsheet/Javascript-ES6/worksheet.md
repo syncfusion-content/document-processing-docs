@@ -5,6 +5,7 @@ description: Worksheets in TypeScript Spreadsheet enable users to organize, mana
 platform: document-processing
 control: Worksheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Worksheet in TypeScript Spreadsheet 

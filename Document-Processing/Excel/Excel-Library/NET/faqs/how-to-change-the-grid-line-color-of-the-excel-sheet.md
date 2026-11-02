@@ -4,6 +4,7 @@ description: Change Excel worksheet gridline colors using the Syncfusion .NET Ex
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to change gridline colors in .NET Excel Library

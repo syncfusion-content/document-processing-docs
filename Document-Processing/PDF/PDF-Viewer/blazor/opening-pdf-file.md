@@ -5,6 +5,7 @@ description: Learn how to load PDF files from various locations like database, c
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Opening PDF file in Blazor PDF Viewer

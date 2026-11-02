@@ -6,6 +6,7 @@ platform: document-processing
 control: Open document from Azure Blob Storage
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Open Documents from Azure Blob Storage in TypeScript DOCX Editor

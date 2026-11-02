@@ -5,6 +5,7 @@ description: The PDF loading from local storage feature in SfPdfViewer enables u
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Open a PDF From Local Storage in Flutter PDF Viewer

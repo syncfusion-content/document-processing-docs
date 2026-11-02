@@ -6,6 +6,7 @@ control: Retry Timeout
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Configure Retry Timeout in React PDF Viewer

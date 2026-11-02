@@ -4,6 +4,7 @@ description: AWS Lambda Excel to PDF section explains how to convert Excel files
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Excel to PDF Conversion in AWS Lambda using Excel Library

@@ -4,6 +4,7 @@ description: Color-scale conditional formatting describes how Syncfusion .NET Ex
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Color Scales in .NET Excel Library

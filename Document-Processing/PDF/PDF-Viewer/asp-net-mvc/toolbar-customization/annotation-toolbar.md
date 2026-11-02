@@ -5,6 +5,7 @@ description: Customize the annotation toolbar in the ASP.NET MVC PDF Viewer to s
 platform: document-processing
 control: Annotation Toolbar Customization
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Customize the Annotation Toolbar in ASP.NET MVC PDF Viewer

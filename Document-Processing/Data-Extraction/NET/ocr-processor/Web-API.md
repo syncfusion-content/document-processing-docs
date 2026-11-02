@@ -5,6 +5,7 @@ platform: document-processing
 control: PDF
 documentation: UG
 keywords: pdf, core, web api, csharp
+appliesto: Document SDK
 ---
 
 # Getting Started with Web API OCR Processor

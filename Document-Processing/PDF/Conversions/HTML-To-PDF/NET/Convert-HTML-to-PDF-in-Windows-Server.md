@@ -5,6 +5,7 @@ platform: document-processing
 control: PDF
 documentation: UG
 keywords: create pdf on windows server, generate pdf on windows server, syncfusion html to pdf, host pdf converter in iis
+appliesto: Document SDK
 ---
 
 # HTML to PDF conversion in Windows Server .NET PDF Library

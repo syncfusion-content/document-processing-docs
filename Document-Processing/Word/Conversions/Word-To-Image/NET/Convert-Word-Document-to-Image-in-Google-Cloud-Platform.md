@@ -4,6 +4,7 @@ description: Learn how to convert a Word document to image in Google Cloud Platf
 platform: document-processing
 control: DocIO 
 documentation: UG 
+appliesto: Document SDK
 --- 
 
 # Convert Word to Image in Google Cloud Platform (GCP)

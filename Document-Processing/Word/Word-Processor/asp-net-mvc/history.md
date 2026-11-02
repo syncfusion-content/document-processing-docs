@@ -5,6 +5,7 @@ description: History in ASP.NET MVC DOCX Editor tracks editing actions to enable
 platform: document-processing
 control: History
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

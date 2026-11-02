@@ -4,6 +4,7 @@ description: Data validation section describes how Syncfusion .NET Excel Library
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Data Validation in .NET Excel Library
 

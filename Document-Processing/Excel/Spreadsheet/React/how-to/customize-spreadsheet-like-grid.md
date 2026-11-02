@@ -5,6 +5,7 @@ description: Learn how to customize the Syncfusion React Spreadsheet component t
 control: Spreadsheet 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # How to Customize Spreadsheet Like a Grid in React Spreadsheet

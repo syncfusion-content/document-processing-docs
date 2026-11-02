@@ -4,6 +4,7 @@ description: Import HTML images explains whether Syncfusion .NET Excel Library c
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # HTML Image Import in .NET Excel Library

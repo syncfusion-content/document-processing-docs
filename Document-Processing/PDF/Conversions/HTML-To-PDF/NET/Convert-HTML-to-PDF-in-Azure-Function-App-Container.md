@@ -4,6 +4,7 @@ description: Learn how to convert HTML to PDF in Azure Function App container in
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # HTML to PDF conversion in Azure Function App container in Linux PDF

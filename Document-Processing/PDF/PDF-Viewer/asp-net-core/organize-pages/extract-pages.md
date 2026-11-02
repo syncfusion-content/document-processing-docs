@@ -5,6 +5,7 @@ description: Extract pages from a PDF in the ASP.NET Core PDF Viewer using the O
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Extract Pages in ASP.NET Core PDF Viewer

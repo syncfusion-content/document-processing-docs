@@ -4,6 +4,7 @@ description: Chart plot area settings describes how the Syncfusion .NET Excel Li
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Chart Plot Area in .NET Excel Library

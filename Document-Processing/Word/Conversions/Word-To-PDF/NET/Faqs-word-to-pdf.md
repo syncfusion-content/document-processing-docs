@@ -5,6 +5,7 @@ keywords: Word to PDF FAQ, DocIO FAQ, Word conversion FAQ, chart conversion, Azu
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Word to PDF FAQs in .NET Word

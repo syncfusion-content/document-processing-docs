@@ -5,6 +5,7 @@ description: The find and replace feature in ASP.NET Core DOCX Editor helps user
 platform: document-processing
 control: Find And Replace
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

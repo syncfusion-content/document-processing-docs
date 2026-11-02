@@ -5,6 +5,7 @@ description: Cell Template in Angular Spreadsheet enable embedding HTML elements
 platform: document-processing
 control: Template 
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Cell Template in Angular Spreadsheet 

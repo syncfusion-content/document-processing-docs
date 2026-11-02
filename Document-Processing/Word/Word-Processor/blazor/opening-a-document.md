@@ -5,6 +5,7 @@ description: Open Word documents in Blazor DOCX Editor from URLs, cloud storage,
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # Opening a Document in Blazor DOCX Editor

@@ -5,6 +5,7 @@ description: Learn about how to select cells, rows, columns, and ranges in the S
 control: Selection 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Selection in Vue Spreadsheet

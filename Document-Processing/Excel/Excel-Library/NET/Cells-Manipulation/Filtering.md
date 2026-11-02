@@ -4,6 +4,7 @@ description: Data filtering in the Syncfusion .NET Excel Library describes how t
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Data Filtering in .NET Excel Library

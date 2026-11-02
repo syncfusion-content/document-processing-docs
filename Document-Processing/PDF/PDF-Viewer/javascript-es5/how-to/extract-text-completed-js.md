@@ -5,6 +5,7 @@ description: Use the extractTextCompleted event and isExtractText property in th
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Handle the ExtractTextCompleted Event in JavaScript (ES5) PDF

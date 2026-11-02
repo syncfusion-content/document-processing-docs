@@ -4,6 +4,7 @@ description: Worksheet activation in a workbook explains how to programmatically
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Worksheet Activation in .NET Excel Library

@@ -5,6 +5,7 @@ description: Learn how to render the EJ2 JavaScript PDF Viewer inside a Blazor p
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Render the EJ2 JavaScript in Blazor PDF Viewer

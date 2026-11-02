@@ -4,6 +4,7 @@ description: Create Markdown documents without external dependencies in Blazor a
 platform: document-processing
 control: Markdown
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Markdown Document in Blazor

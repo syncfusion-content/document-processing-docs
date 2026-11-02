@@ -4,6 +4,7 @@ description: Learn about overview of converting Excel workbooks or worksheets to
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # About Syncfusion .NET Excel to Markdown Conversion

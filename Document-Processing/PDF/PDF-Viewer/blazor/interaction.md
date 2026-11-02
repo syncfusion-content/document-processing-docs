@@ -5,6 +5,7 @@ description: Learn how to use interaction modes in the Blazor PDF Viewer , inclu
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Interaction mode in Blazor PDF Viewer 

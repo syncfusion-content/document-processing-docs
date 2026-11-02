@@ -4,6 +4,7 @@ description: Learn the NuGet packages required to Convert Word document to PDF u
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # NuGet Packages Required to Convert Word to PDF

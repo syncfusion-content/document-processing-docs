@@ -6,6 +6,7 @@ control: Disable optimized text measuring
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Disable Optimized Text Measuring in Vue DOCX Editor

@@ -5,6 +5,7 @@ description: Performance metrics in TypeScript Spreadsheet provide benchmark res
 platform: document-processing
 control: Performance
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Performance Metrics in TypeScript Spreadsheet 

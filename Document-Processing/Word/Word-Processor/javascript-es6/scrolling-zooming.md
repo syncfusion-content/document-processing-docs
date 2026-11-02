@@ -6,6 +6,7 @@ platform: document-processing
 control: DOCX Editor
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Scrolling and Zooming in TypeScript DOCX Editor

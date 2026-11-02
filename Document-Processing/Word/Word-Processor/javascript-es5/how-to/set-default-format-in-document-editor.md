@@ -6,6 +6,7 @@ platform: document-processing
 control: Set default format in DOCX Editor 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Set Default Format in JavaScript DOCX Editor

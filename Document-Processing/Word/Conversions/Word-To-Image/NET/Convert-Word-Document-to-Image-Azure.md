@@ -4,6 +4,7 @@ description: Learn how to convert a Word document to image in Azure services usi
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert Word to Image in Azure 

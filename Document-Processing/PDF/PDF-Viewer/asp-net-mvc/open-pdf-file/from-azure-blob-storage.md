@@ -5,6 +5,7 @@ description: Load and display PDF files stored in Azure Blob Storage in the ASP.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Open PDF from Azure Blob Storage in ASP.NET MVC PDF Viewer

@@ -5,6 +5,7 @@ description: Learn how to get page gap between the pages in uwp pdf viewer in Sy
 platform: document-processing
 control: PDF viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Get page gap between the pages in UWP PDF Viewer

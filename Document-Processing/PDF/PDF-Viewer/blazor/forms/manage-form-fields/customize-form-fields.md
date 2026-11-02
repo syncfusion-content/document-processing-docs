@@ -5,6 +5,7 @@ description: Learn how to configure typography, colors, borders, alignment, and 
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Customize the appearance of PDF Form Fields in Blazor PDF Viewer

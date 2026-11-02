@@ -4,6 +4,7 @@ description: Learn how to find a text and replace it with another text, image, o
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Find and replace in Word document in .NET Word
 

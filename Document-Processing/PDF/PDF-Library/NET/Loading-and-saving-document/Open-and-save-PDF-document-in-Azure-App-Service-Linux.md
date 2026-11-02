@@ -4,6 +4,7 @@ description: Learn how to open and save PDF documents in Azure App Service on Li
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Open and Save PDF Document in Azure App Service on Linux

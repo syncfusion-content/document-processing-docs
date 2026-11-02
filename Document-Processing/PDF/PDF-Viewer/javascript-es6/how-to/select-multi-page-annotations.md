@@ -5,6 +5,7 @@ description: Select multiple annotations across pages in the JavaScript (ES6) PD
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Select Multi-Page Annotations in JavaScript (ES6) PDF Viewer

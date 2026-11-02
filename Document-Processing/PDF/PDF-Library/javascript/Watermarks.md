@@ -5,6 +5,7 @@ description: Add text and image watermarks to PDF documents programmatically usi
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # PDF Watermarks in JavaScript PDF
 

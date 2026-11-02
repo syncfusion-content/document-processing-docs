@@ -5,6 +5,7 @@ description: Learn about Form Designer events in the Blazor SfPdfViewer, includi
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Form Designer events in Blazor PDF Viewer

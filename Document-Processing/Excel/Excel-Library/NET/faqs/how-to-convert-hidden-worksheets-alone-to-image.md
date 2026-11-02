@@ -4,6 +4,7 @@ description: Convert hidden Excel worksheets to images using the Syncfusion .NET
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to convert hidden worksheets to images in .NET Excel Library

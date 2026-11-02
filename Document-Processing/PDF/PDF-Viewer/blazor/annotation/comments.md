@@ -5,6 +5,7 @@ description: Learn how to add, edit, and manage comments and replies efficiently
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Comments in Blazor PDF Viewer 

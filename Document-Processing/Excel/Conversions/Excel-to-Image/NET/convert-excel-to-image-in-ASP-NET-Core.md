@@ -4,6 +4,7 @@ description: ASP.NET Core Excel to Image section explains how to convert Excel f
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Excel to Image Conversion in ASP.NET Core using Excel Library

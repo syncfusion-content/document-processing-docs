@@ -5,6 +5,7 @@ description: Learn here about whether internet connection is required for Syncfu
 platform: document-processing
 control: Essential Studio
 documentation: ug
+appliesto: Document SDK, PDF Viewer SDK, DOCX Editor SDK, Spreadsheet Editor SDK
 ---
 
 # Internet required for Document Solutions license validation?

@@ -4,6 +4,7 @@ description: Handle blank cells in pivot table describes how to show the blank c
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to display "(Blank)" in pivot tables in .NET Excel Library

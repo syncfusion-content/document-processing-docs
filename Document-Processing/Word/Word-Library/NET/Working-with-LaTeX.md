@@ -4,6 +4,7 @@ description: Learn how to create mathematical equations in a Word document using
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # LaTeX Equation in .NET Word

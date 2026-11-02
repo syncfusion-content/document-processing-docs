@@ -5,6 +5,7 @@ platform: document-processing
 control: PDF
 documentation: UG
 keywords: macos save pdf, macos load pdf, c# save pdf, c# load pdf
+appliesto: Document SDK
 ---
 
 # Getting Started with .NET PDF Library on macOS

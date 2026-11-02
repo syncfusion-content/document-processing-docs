@@ -4,6 +4,7 @@ description: Find and replace describes how the Syncfusion .NET Excel Library se
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Find and Replace in .NET Excel Library

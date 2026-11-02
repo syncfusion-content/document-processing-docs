@@ -5,6 +5,7 @@ description: Form fields in ASP.NET Core DOCX Editor allow users to create, upda
 platform: document-processing
 control: Form Fields
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

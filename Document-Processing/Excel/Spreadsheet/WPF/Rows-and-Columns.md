@@ -5,6 +5,7 @@ description: Manage rows and columns in the WPF Spreadsheet control with support
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Rows and Columns in WPF Spreadsheet

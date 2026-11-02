@@ -4,6 +4,7 @@ description: Use the Fill Series feature in Excel using the Syncfusion .NET Exce
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Fill Series in .NET Excel Library

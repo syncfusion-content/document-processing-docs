@@ -5,6 +5,7 @@ description: Learn about selecting and deselecting images in the Syncfusion Reac
 control: Images
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Select and Deselect Images in React Spreadsheet

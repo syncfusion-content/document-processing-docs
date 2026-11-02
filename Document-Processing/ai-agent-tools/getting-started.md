@@ -5,6 +5,7 @@ description: Learn how to integrate the Syncfusion Document SDK Agent Tool libra
 platform: document-processing
 control: AI Agent Tools
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Getting Started with Syncfusion Document SDK AI Agent Tools

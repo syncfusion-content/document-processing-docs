@@ -4,6 +4,7 @@ description: Learn how to load, save, and modify PowerPoint presentations using 
 platform: document-processing
 control: Presentation
 documentation: UG
+appliesto: Document SDK
 ---
 # Loading and Saving in .NET PowerPoint Presentation
 

@@ -5,6 +5,7 @@ description: Learn about charts and visualizations in the Syncfusion Blazor Spre
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Charts and Visualizations in Blazor Spreadsheet

@@ -5,6 +5,7 @@ description: This guide explains how to retrieve the mouse pointer position rela
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to get mouse position to page in WinForms PDF Viewer

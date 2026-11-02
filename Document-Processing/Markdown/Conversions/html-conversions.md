@@ -4,6 +4,7 @@ description: Learn how to convert a Markdown document to an HTML file and vice v
 platform: document-processing
 control: Word
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Markdown to HTML and HTML to Markdown Conversion in .NET Word Library

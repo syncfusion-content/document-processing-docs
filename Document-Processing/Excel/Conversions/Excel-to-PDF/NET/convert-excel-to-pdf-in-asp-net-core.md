@@ -4,6 +4,7 @@ description: ASP.NET Core Excel to PDF section explains how to convert Excel doc
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Excel to PDF Conversion in ASP.NET Core using Excel Library

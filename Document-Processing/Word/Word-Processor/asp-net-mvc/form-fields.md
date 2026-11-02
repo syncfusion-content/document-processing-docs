@@ -5,6 +5,7 @@ description: Form fields in ASP.NET MVC DOCX Editor allow users to create, updat
 platform: document-processing
 control: Form Fields
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

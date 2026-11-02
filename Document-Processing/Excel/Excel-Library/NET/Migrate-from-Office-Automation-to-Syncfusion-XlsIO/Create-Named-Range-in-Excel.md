@@ -4,6 +4,7 @@ description: Creating Excel named ranges programmatically explains how to define
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Named Ranges in .NET Excel Library

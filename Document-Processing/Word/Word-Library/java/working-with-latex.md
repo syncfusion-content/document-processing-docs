@@ -4,6 +4,7 @@ description: Learn how to create mathematical equations in a Word document using
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 
 # LaTeX Equation in Java Word

@@ -5,6 +5,7 @@ description: Export pages as Base64-encoded images from the ASP.NET Core PDF Vie
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Export Pages as Images in ASP.NET Core PDF Viewer

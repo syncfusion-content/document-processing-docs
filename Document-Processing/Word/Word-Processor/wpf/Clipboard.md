@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: clipboard
+appliesto: DOCX Editor SDK
 ---
 # Clipboard in WPF DOCX Editor
 

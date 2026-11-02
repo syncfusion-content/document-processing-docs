@@ -6,6 +6,7 @@ platform: document-processing
 control: Delete a specific annotation
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Delete an Annotation in Angular PDF Viewer

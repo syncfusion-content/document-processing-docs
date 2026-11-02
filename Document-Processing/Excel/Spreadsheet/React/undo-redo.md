@@ -5,6 +5,7 @@ description: Learn about undo and redo operations in the Syncfusion React Spread
 control: Undo redo 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Undo and Redo in React Spreadsheet

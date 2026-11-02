@@ -5,6 +5,7 @@ description: Data binding in JavaScript Spreadsheet enables seamless integration
 platform: document-processing
 control: Data binding
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Data Binding in JavaScript Spreadsheet 

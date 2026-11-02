@@ -5,6 +5,7 @@ description: Pass an authorization token to the React PDF Viewer to securely acc
 control: PDF Viewer
 platform: document-processing
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Use an Authorization Token in React PDF Viewer

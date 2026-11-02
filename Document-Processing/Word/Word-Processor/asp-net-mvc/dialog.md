@@ -5,6 +5,7 @@ description: The dialogs in ASP.NET MVC DOCX Editor provides built-in dialogs to
 platform: document-processing
 control: Dialog
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

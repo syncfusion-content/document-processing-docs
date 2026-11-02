@@ -4,6 +4,7 @@ description: Set print titles in an Excel document using the Syncfusion .NET Exc
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to set print titles in .NET Excel Library

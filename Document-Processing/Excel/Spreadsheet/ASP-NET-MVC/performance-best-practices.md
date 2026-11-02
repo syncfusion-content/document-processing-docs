@@ -5,6 +5,7 @@ description: Improve application performance with best practices and optimizatio
 platform: document-processing
 control: Performance
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Performance Best Practices in ASP.NET MVC Spreadsheet

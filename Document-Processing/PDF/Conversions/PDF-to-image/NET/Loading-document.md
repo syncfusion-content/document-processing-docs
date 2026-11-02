@@ -4,6 +4,7 @@ description: Learn how to load PDF files from streams and other sources using th
 platform: document-processing
 control: PDF to image
 documentation: UG
+appliesto: Document SDK
 ---
 # Load PDF Files in PDF to Image Converter Library
 

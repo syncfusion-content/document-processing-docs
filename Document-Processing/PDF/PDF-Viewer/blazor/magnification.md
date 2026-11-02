@@ -5,6 +5,7 @@ description: Learn how to use magnification in Blazor PDF Viewer zoom options, p
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Magnification in Blazor PDF Viewer 

@@ -5,6 +5,7 @@ description: Deploy the Syncfusion® ASP.NET MVC DOCX Editor for mobile browsers
 platform: document-processing
 control: Deploy DOCX Editor Component For Mobile
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

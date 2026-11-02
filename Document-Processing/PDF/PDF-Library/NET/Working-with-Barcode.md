@@ -4,6 +4,7 @@ description: Learn how to add 1D and 2D barcodes to PDF documents, customize app
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Barcodes in .NET PDF Library
 

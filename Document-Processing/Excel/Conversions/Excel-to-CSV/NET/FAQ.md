@@ -4,6 +4,7 @@ description: FAQ of Excel to CSV provides the frequently asked questions about c
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # FAQ of Excel to CSV Conversion in .NET Excel Library

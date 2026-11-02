@@ -6,6 +6,7 @@ platform: document-processing
 control: Text wrapping style 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Text Wrapping Style in Angular DOCX Editor

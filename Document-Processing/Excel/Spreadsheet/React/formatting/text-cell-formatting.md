@@ -5,6 +5,7 @@ description: Learn about text and cell formatting in the Syncfusion React Spread
 control: Formatting
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Text and Cell Formatting in React Spreadsheet

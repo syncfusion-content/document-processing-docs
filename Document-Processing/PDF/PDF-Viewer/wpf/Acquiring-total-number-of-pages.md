@@ -5,6 +5,7 @@ description: Get the total number of pages in Syncfusion WPF PDF Viewer using Pa
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Acquire total number of pages in WPF Pdf Viewer

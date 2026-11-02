@@ -5,6 +5,7 @@ description: Convert workbook content from Windows Forms Spreadsheet into image,
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Conversion in Windows Forms Spreadsheet

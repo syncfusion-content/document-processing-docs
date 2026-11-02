@@ -4,6 +4,7 @@ description: Change Waterfall chart data point label colors in Excel documents u
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to change Waterfall chart label colors in .NET Excel Library

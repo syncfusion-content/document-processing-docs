@@ -5,6 +5,7 @@ description: Accessibility in JavaScript Spreadsheet supports keyboard navigatio
 platform: document-processing
 control: Accessibility
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Accessibility in JavaScript Spreadsheet

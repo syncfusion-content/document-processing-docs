@@ -6,6 +6,7 @@ control: How to deploy documenteditor java web api in azure
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 # How to Deploy Vue DOCX Editor Java Web API in Azure App
 

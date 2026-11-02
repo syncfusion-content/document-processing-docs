@@ -5,6 +5,7 @@ description: The password-protected PDF feature in SfPdfViewer enables users to 
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Viewing Password-Protected PDFs in Flutter PDF Viewer

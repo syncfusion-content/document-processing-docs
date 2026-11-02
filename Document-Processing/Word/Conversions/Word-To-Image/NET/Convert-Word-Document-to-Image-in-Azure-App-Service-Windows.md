@@ -4,6 +4,7 @@ description: Convert Word to image in Azure App Service on Windows using .NET Wo
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert Word to Image in Azure App Service Windows 

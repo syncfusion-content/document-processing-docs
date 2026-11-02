@@ -4,6 +4,7 @@ description: PivotTable calculated fields describes whether multiple pivot table
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Calculated Fields in .NET Excel Library

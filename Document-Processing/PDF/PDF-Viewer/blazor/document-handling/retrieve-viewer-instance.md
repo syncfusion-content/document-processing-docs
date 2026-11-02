@@ -5,6 +5,7 @@ description: Learn how to access the PDF Viewer instance in the Blazor PDF Viewe
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Retrieve PDF Viewer Instance in Blazor PDF Viewer 

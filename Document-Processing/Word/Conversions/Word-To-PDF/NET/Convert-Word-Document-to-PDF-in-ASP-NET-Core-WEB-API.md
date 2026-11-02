@@ -4,6 +4,7 @@ description: Convert Word to PDF in ASP.NET  Core Web API using .NET Core Wor
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert Word to PDF in ASP.NET  Core Web API 

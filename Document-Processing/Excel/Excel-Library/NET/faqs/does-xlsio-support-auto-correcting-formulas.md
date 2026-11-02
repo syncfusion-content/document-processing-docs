@@ -4,6 +4,7 @@ description: Formula handling in Syncfusion .NET Excel Library explains whether 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Formula Auto-Correction in .NET Excel Library

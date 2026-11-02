@@ -4,6 +4,7 @@ description: Learn about overview of converting Excel workbooks to CSV or TSV do
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # About Syncfusion .NET Excel to CSV Conversion

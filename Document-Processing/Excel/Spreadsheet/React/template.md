@@ -5,6 +5,7 @@ description: Learn about cell templates in the Syncfusion React Spreadsheet comp
 control: Template 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Cell Template in React Spreadsheet

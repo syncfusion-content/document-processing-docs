@@ -5,6 +5,7 @@ description: Apply cell formatting in Windows Forms Spreadsheet, including style
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Formatting in Windows Forms Spreadsheet

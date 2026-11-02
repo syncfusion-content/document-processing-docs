@@ -5,7 +5,7 @@ description: Learn here about how to download Syncfusion® Word web installer fr
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
-
+appliesto: Document SDK
 ---
 
 # How to download Syncfusion® Word web installer

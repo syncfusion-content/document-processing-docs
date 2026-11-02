@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion® .NET PowerPoint Pres
 platform: document-processing
 control: Presentation
 documentation: UG
+appliesto: Document SDK
 ---
 # Getting Started with .NET PowerPoint Presentation Library
 

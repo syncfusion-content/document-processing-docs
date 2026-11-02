@@ -5,6 +5,7 @@ description: Migrate an existing application from Nutrient.io (PSPDFKit) to the 
 platform: document-processing
 documentation: ug
 control: PDF Viewer
+appliesto: PDF Viewer SDK
 ---
 
 # Migrate from PSPDFKit to React PDF Viewer

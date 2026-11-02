@@ -6,6 +6,7 @@ control: PDF Viewer SDK
 platform: document-processing
 documentation: ug
 keywords: UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skills
+appliesto: PDF Viewer SDK
 ---
 
 # Syncfusion® UI Builder Skills with PDF Viewer SDK for AI Assistants

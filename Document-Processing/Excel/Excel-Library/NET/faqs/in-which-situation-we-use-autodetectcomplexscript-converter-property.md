@@ -4,6 +4,7 @@ description: AutoDetectComplexScript property describes when Excel Library can u
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # AutoDetectComplexScript Property in .NET Excel Library

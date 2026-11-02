@@ -4,6 +4,7 @@ description: Remove blank or unwanted PDF pages programmatically to streamline c
 platform: document-processing
 control: general
 documentation: UG
+appliesto: Document SDK
 ---
 # Delete Pages from PDF Using Syncfusion Web API 
 

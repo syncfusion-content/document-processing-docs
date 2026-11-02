@@ -4,6 +4,7 @@ description: Learn about how to convert PowerPoint slides to Image in UWP using 
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 # Convert PowerPoint slides to Image in UWP
 

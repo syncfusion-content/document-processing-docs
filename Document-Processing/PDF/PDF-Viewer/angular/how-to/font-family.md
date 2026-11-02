@@ -6,6 +6,7 @@ platform: document-processing
 control: Change the Font Family in the Type Signature
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Change the Font Family in Angular PDF Viewer

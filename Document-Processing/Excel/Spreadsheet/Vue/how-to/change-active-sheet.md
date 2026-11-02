@@ -5,6 +5,7 @@ description: Change the active sheet index when importing a workbook in Syncfusi
 control: Spreadsheet 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # How to Change Active Sheet in Vue Spreadsheet

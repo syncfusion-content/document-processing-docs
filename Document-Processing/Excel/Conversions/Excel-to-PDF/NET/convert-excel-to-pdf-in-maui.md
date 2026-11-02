@@ -4,6 +4,7 @@ description: .NET MAUI Excel to PDF section explains how to convert Excel docume
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Excel to PDF Conversion in .NET MAUI using Excel Library

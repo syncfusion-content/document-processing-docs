@@ -5,6 +5,7 @@ description: Learn about the textselection in the ASP.NET Core PDF Viewer and ho
 platform: document-processing
 control: Text selection
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 # Textselection in ASP.NET Core PDF Viewer
 

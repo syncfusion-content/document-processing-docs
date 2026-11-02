@@ -4,6 +4,7 @@ description: Check whether an Excel formula returns an error and access the rela
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to check formula errors in .NET Excel Library

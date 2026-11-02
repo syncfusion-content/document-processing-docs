@@ -5,6 +5,7 @@ description: Learn about data binding in the Syncfusion ASP.NET Core Spreadsheet
 platform: document-processing
 control: Data Binding
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

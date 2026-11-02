@@ -4,6 +4,7 @@ description: Learn about how to specify fallback fonts during PowerPoint to Imag
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 # Fallback fonts in PowerPoint to Image conversion
 

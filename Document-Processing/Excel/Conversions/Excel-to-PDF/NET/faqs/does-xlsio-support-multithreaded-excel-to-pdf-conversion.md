@@ -4,6 +4,7 @@ description: Multi-threading support explains whether the Syncfusion .NET Excel 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Multithreaded PDF Conversion in .NET Excel Library

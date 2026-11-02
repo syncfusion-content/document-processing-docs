@@ -4,6 +4,7 @@ description: Autofit for merged cells explains whether Syncfusion .NET Excel Lib
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Merged Cell Autofit in .NET Excel Library

@@ -5,6 +5,7 @@ description: Save PDF files from the ASP.NET Core PDF Viewer to Box cloud storag
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Save PDF Files to Box Cloud Storage in ASP.NET Core PDF Viewer

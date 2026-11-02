@@ -4,6 +4,7 @@ description: Learn about the overview of the Syncfusion .NET Word to PDF Convers
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # About Syncfusion .NET Word to PDF Conversions

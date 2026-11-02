@@ -5,6 +5,7 @@ description: This section explains the features available in the new PDF Viewer 
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Migration from PDF Viewer (Classic) to PDF Viewer

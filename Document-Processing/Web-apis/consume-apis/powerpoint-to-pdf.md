@@ -4,6 +4,7 @@ description: Convert PowerPoint files to highquality PDFs using Syncfusion Web A
 platform: document-processing
 control: general
 documentation: UG
+appliesto: Document SDK
 ---
 # Converting PowerPoint to PDF Using Syncfusion Web API 
 

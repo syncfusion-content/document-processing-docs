@@ -5,6 +5,7 @@ description: Identify the context menu opened in Angular Spreadsheet to perform 
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # How to Identify Context Menu Opened in Angular Spreadsheet

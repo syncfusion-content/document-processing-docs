@@ -5,6 +5,7 @@ description: Learn how to modify PDF form fields using the UI and programmatical
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Modify form fields in the Blazor PDF Viewer

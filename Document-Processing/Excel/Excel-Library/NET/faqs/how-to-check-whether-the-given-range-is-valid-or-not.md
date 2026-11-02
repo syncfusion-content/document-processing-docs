@@ -4,6 +4,7 @@ description: Check whether a given Excel range is valid using the Syncfusion .NE
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to check valid ranges in .NET Excel Library

@@ -4,6 +4,7 @@ description: Convert Word to PDF without Microsoft Word or interop dependencies 
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert Word to PDF in ASP.NET  Core 

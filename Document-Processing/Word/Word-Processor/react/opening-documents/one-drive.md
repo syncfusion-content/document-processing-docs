@@ -6,6 +6,7 @@ platform: document-processing
 control: Open a document from OneDrive
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Open Documents from OneDrive in React DOCX Editor

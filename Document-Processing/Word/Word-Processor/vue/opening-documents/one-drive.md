@@ -6,6 +6,7 @@ platform: document-processing
 control: Open document from One Drive
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Open Documents from OneDrive in Vue DOCX Editor

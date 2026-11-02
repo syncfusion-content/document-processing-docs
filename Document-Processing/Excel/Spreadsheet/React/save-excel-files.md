@@ -5,6 +5,7 @@ description: Learn about saving Excel files in the Syncfusion React Spreadsheet 
 platform: document-processing
 control: Save 
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Save Excel Files in React Spreadsheet

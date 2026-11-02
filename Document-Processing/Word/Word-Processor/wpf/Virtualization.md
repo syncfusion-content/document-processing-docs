@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: virtualization,ui-virtualization,performance,scrolling
+appliesto: DOCX Editor SDK
 ---
 # Virtualization in WPF DOCX Editor
 

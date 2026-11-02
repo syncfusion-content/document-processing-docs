@@ -5,6 +5,7 @@ description: Learn how to process large PDFs in the Blazor PDF Viewer by enablin
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Process large PDFs without upping message size

@@ -5,6 +5,7 @@ description: Add and manage illustrations such as images and visual elements in 
 platform: document-processing
 control: Illustrations
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

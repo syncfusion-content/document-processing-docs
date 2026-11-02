@@ -5,6 +5,7 @@ description: Bookmark navigation allows users to view the bookmarks and navigate
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 #  Bookmark Navigation in Xamarin.Android PDF viewer

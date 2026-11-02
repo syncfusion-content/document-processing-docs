@@ -5,6 +5,7 @@ description: The interaction modes feature in SfPdfViewer allows users to switch
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Interaction Modes in Flutter PDF Viewer

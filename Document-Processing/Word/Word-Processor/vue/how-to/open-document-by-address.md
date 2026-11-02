@@ -6,6 +6,7 @@ control: Open document by address
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Open a Document by URL in Vue DOCX Editor

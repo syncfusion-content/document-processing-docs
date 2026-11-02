@@ -6,6 +6,7 @@ control: Load N pages on initial load
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Load Pages on Initial Load in React PDF Viewer

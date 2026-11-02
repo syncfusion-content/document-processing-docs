@@ -5,6 +5,7 @@ description: Comments in Angular Spreadsheet allow users to add notes to cells, 
 platform: document-processing
 control: Comment 
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Comments in Angular Spreadsheet

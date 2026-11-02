@@ -5,6 +5,7 @@ description: Open and view PDF files in Syncfusion WPF PDF Viewer using toolbar 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Viewing PDF Files in WPF Pdf Viewer

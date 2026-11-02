@@ -5,6 +5,7 @@ description: Handle import and export events in the JavaScript (ES6) PDF Viewer 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Annotation Import and Export Events in JavaScript (ES6) PDF Viewer

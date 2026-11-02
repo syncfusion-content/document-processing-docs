@@ -5,6 +5,7 @@ description: Group PDF form fields in the Angular PDF Viewer by assigning the sa
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Group Form Fields in Angular PDF Viewer

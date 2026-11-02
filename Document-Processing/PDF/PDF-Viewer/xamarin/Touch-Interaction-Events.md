@@ -5,6 +5,7 @@ description: Learn here all about Touch interaction events support in Syncfusion
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Touch interaction events in Xamarin Pdf Viewer

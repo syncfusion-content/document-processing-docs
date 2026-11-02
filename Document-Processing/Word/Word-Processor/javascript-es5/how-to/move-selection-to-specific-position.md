@@ -6,6 +6,7 @@ platform: document-processing
 control: Move Selection to a Specific Position
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Move Selection to a Position in JavaScript DOCX Editor

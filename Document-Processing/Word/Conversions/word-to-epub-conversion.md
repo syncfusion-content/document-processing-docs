@@ -4,6 +4,7 @@ description: Learn how to convert Word document to EPUB using the .NET Word libr
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert Word document to EPUB in .NET Word

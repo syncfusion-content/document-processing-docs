@@ -5,6 +5,7 @@ description: Show or hide loading indicators in Syncfusion® ASP.NET Core DOCX E
 platform: document-processing
 control: Show Hide Spinner
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

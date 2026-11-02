@@ -4,6 +4,7 @@ description: Learn how to create tables in PDF with cell styles, pagination, and
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # PdfGrid Tables in .NET PDF Library

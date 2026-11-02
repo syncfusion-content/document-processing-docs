@@ -5,6 +5,7 @@ description: Learn about the globalization in the ASP.NET Core PDF Viewer and ho
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Globalization in ASP.NET Core PDF Viewer

@@ -5,6 +5,7 @@ description: The styles feature in ASP.NET MVC DOCX Editor enables users to appl
 platform: document-processing
 control: Styles
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

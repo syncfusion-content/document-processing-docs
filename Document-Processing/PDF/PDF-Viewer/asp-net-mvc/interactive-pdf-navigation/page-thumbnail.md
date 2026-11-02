@@ -5,6 +5,7 @@ description: Use page thumbnail navigation in the ASP.NET MVC PDF Viewer to prev
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Page Thumbnail Navigation in ASP.NET MVC PDF Viewer

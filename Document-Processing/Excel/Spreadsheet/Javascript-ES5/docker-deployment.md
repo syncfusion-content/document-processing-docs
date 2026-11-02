@@ -5,6 +5,7 @@ description: Docker Image Deployment in JavaScript Spreadsheet enables container
 platform: document-processing
 control: Docker deployment
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Docker Image Deployment in JavaScript Spreadsheet

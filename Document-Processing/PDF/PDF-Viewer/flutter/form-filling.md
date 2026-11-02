@@ -5,6 +5,7 @@ description: The form filling feature in SfPdfViewer enables users to view, fill
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Form filling in Flutter PDF Viewer

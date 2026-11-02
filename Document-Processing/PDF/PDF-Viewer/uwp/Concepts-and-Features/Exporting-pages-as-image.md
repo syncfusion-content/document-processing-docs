@@ -5,6 +5,7 @@ description: Learn here all about Exporting pages as images support in Syncfusio
 platform: document-processing
 control: PDF viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Exporting pages as images in UWP PDF Viewer

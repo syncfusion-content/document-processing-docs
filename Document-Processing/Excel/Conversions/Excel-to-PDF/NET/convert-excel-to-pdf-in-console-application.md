@@ -4,6 +4,7 @@ description: Console Application Excel to PDF section explains how to convert Ex
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Excel to PDF Conversion in Console Applications using Excel Library

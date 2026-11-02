@@ -5,6 +5,7 @@ description: Learn how to use custom data in annotations in the Blazor PDF Viewe
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Custom data in annotations in Blazor PDF Viewer 

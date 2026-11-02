@@ -4,6 +4,7 @@ description: Describe frequently asked questions and solutions related to Word-t
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Word document on Linux

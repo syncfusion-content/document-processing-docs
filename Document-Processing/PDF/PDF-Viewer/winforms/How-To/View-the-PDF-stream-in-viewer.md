@@ -5,6 +5,7 @@ description: This guide explains how to load and view PDF documents from a strea
 platform: document-processing
 control: PdfViewerControl
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to view PDF stream in WinForms PDF Viewer

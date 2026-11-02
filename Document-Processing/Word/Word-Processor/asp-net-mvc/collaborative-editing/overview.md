@@ -6,6 +6,7 @@ description: Learn about the overview of collaborative editing in Syncfusion Ess
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Collaborative Editing in Syncfusion ASP.NET MVC DOCX Editor Control

@@ -5,6 +5,7 @@ description: Learn here all about Rendering PDF pages using pdfium support on An
 platform: document-processing
 control: SfPdfViewer
 documentation: UG
+appliesto: PDF Viewer SDK
 ---
 
 # Render PDF Pages using the PDFium renderer in Android

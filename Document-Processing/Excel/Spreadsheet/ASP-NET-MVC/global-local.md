@@ -5,6 +5,7 @@ description: Learn how to localize and globalize the Syncfusion ASP.NET MVC Spre
 platform: document-processing
 control: Global Local
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Globalization in ASP.NET MVC Spreadsheet

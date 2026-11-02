@@ -4,6 +4,7 @@ description: This section illustrated how to work with FormFields in Word docume
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 # Form Fields in Java Word
 

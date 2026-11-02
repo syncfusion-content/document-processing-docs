@@ -5,6 +5,7 @@ description: Rows and columns in JavaScript Spreadsheet enable users to insert, 
 platform: document-processing
 control: Rows and columns
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Rows and Columns in JavaScript Spreadsheet 

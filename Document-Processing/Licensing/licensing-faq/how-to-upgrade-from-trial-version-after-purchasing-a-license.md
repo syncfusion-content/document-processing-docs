@@ -5,6 +5,7 @@ description: Learn here some information about upgrading from trial version of E
 platform: document-processing
 control: Essential Studio
 documentation: ug
+appliesto: Document SDK, PDF Viewer SDK, DOCX Editor SDK, Spreadsheet Editor SDK
 ---
 
 # How to upgrade from Trial version after purchasing a license?

@@ -5,6 +5,7 @@ platform: document-processing
 control: DocIO
 documentation: UG
 keywords: 
+appliesto: Document SDK
 ---
 # Shapes in .NET Word library in .NET
 

@@ -4,6 +4,7 @@ description: Create an Excel chart with a discontinuous range using the Syncfusi
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to create charts with discontinuous ranges in .NET Excel Library

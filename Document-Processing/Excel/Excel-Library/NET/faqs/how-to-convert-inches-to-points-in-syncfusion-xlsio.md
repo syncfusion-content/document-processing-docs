@@ -4,6 +4,7 @@ description: Convert inches to points using IApplication.InchesToPoints in Syncf
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to convert inches to points in .NET Excel Library

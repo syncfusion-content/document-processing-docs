@@ -5,6 +5,7 @@ description: Learn here all about Import annotations as objects in Syncfusion Bl
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Import annotations as objects in Blazor PDF Viewer

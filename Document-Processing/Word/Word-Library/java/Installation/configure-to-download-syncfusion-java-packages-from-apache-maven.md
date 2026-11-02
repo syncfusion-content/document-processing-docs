@@ -4,6 +4,7 @@ description: Learn how to convert a Word document to PDF, PDF/A, and PDF/UA usin
 platform: document-processing
 control: general
 documentation: UG
+appliesto: Document SDK
 ---
 # Download Syncfusion Java packages from Apache Maven
 

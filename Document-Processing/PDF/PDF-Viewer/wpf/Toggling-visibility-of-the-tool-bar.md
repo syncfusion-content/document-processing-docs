@@ -5,6 +5,7 @@ description: Toggle toolbar visibility in Syncfusion WPF PDF Viewer for customiz
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Toggle visibility of the tool bar in WPF Pdf Viewer

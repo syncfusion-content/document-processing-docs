@@ -4,6 +4,7 @@ description: Excel to Markdown conversion describes how Syncfusion .NET Excel Li
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Excel to Markdown Conversion in .NET Excel Library

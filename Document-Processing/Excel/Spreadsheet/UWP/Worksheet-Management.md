@@ -5,6 +5,7 @@ description: Learn here all about Worksheet Management support in Syncfusion® U
 platform: document-processing
 control: SfSpreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Worksheet Management in UWP Spreadsheet

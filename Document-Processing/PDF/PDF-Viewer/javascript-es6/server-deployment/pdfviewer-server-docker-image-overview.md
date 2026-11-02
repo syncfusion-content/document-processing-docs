@@ -5,6 +5,7 @@ description: Run and connect to the Syncfusion JavaScript (ES6) PDF Viewer serve
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 # About Docker image for JavaScript (ES6) PDF Viewer
 

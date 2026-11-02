@@ -6,6 +6,7 @@ control: SfSpreadsheet
 platform: document-processing
 documentation: ug
 keywords: Blazor UI Builder, Skills, AI Assistants, Spreadsheet SDK, Agent Skills
+appliesto: Spreadsheet Editor SDK
 ---
 
 # UI Builder Skill in Blazor Spreadsheet

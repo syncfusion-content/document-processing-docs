@@ -5,6 +5,7 @@ description: Open the thumbnail pane programmatically in the ASP.NET MVC PDF Vie
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Open the Thumbnail Pane Programmatically in ASP.NET MVC PDF

@@ -4,6 +4,7 @@ description: Apply a hex color to an Excel cell by converting a hex string to RG
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to set hex color values in .NET Excel Library

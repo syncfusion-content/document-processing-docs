@@ -4,6 +4,7 @@ description: Learn how to apply CalGray, CalRGB, ICC, and Pantone color spaces w
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Color Spaces in .NET PDF Library
 

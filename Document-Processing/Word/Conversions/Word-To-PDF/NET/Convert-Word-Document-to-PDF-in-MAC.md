@@ -4,6 +4,7 @@ description: Convert Word documents to PDF in a .NET Core console app on macOS u
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert Word to PDF on macOS in .NET Word

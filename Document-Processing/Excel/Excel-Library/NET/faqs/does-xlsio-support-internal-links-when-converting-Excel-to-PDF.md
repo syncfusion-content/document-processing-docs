@@ -4,6 +4,7 @@ description: Internal links in conversion explains whether Syncfusion .NET Excel
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Internal Links in Excel to PDF in .NET Excel Library

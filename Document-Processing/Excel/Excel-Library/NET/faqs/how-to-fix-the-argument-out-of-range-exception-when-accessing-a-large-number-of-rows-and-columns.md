@@ -4,6 +4,7 @@ description: Fix ArgumentOutOfRangeException when accessing a large number of ro
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to fix range errors in .NET Excel Library

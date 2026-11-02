@@ -5,6 +5,7 @@ description: The content control feature in ASP.NET Core DOCX Editor provides bu
 platform: document-processing
 control: Content Control
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

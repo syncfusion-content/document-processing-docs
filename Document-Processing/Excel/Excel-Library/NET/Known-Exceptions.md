@@ -4,6 +4,7 @@ description: The known exceptions section lists exception types, classes, messag
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Known Exceptions in .NET Excel Library
 

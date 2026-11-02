@@ -6,6 +6,7 @@ control: Core
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # ASP.NET Core Web Service in React DOCX Editor

@@ -5,6 +5,7 @@ description: Learn about built-in formulas and functions in the Syncfusion React
 control: Formulas 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Built-in Formulas and Functions in React Spreadsheet

@@ -4,6 +4,7 @@ description: Data export in Syncfusion .NET Excel Library explains how to export
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Exporting Excel Documents in .NET Excel Library

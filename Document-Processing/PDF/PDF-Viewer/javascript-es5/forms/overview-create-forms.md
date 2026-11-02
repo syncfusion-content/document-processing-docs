@@ -5,6 +5,7 @@ description: Learn about introduction of the Syncfusion JavaScript (ES5) PDF Vie
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # About Syncfusion JavaScript (ES5) PDF Viewer Manage Form Fields

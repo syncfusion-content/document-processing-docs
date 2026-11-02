@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfsuion Blazor Hybrid WinForms
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Getting Started with Blazor WinForms App Smart PDF Viewer

@@ -5,6 +5,7 @@ description: Learn about customizing the file menu in the Syncfusion React Sprea
 control: Spreadsheet
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Custom File Menu in React Spreadsheet

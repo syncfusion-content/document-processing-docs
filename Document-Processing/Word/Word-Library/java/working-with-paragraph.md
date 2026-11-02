@@ -4,6 +4,7 @@ description: This section explains how to work with the child elements of Paragr
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 # Paragraph in Java Word
 

@@ -4,6 +4,7 @@ description: Azure App Service on Linux Excel to PDF section explains how to con
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Excel to PDF Conversion in Azure Linux using Excel Library
