@@ -38,6 +38,26 @@ The accessibility compliance for the [React DOCX Editor](https://www.syncfusion.
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
+## Screen Reader Support
+
+The DOCX Editor provides screen reader support for improved accessibility. Set the [`enableScreenReader`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documentEditorSettingsModel#enablescreenreader) property to `true` in [`documentEditorSettings`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documenteditorcontainer#documenteditorsettings) to enable screen reader support and expose the necessary accessibility information for screen reader tools.
+
+### Enable Screen Reader Support
+
+```typescript
+let settings = { enableScreenReader: true };
+  return (
+        <DocumentEditorContainerComponent
+            id="container"
+            height="590px"
+            enableToolbar={true}
+            documentEditorSettings={settings}
+        />
+  );
+```
+
+N> `enableScreenReader` is disabled by default. Set it to `true` to enable screen reader support.
+
 ## Keyboard Accessibility
 
 For keyboard accessibility, the DOCX Editor supports a range of [keyboard shortcuts](./keyboard-shortcut) for navigation and editing without a mouse, including tab navigation, cursor movement, and shortcut key combinations for common editing actions such as copy, paste, undo, and redo.
