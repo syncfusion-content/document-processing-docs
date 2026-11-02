@@ -21,7 +21,7 @@ To quickly get started with compressing an existing PDF document in .NET, check 
 You can compress an existing PDF document by using the [PdfLoadedDocument](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedDocument.html) and [PdfCompressionOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html) classes. The following compression techniques are supported:
 
 1. [Compress the images with image quality](#compressing-images-with-image-quality)
-2. [Downsample images to a target DPI](#downsampling-images)
+2. [Downsampling images to a target DPI](#downsampling-images)
 3. [Choose a downsampling algorithm](#choosing-a-downsampling-algorithm)
 4. [Encode images using JPEG 2000](#encoding-images-using-jpeg-2000)
 5. [Optimize embedded fonts](#optimizing-embedded-fonts)
@@ -123,10 +123,10 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 You can reduce the file size of an existing PDF document by downsampling images whose effective DPI exceeds the value you need for your output (for example, the print or screen resolution of the intended viewer). To do this, enable the [Down sample Images](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html#Syncfusion_Pdf_PdfCompressionOptions_DownsampleImages) property and set the desired resolution through the [TargetDpi](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html#Syncfusion_Pdf_PdfCompressionOptions_TargetDpi) property of the [PdfCompressionOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html) class.
 
-N> 1. The `DownsampleImages` property does not affect images whose current resolution is already at or below the `TargetDpi` value.
+N> 1. The `Downsampling Images` property does not affect images whose current resolution is already at or below the `TargetDpi` value.
 N> 2. The `TargetDpi` property accepts values from `36` to `2400`. The default value is `150`.
 
-The following code example illustrates how to downsample images that exceed the target DPI in an existing PDF document.
+The following code example illustrates how to downsampling images that exceed the target DPI in an existing PDF document.
 
 {% tabs %}
 
@@ -211,7 +211,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Choosing a downsampling algorithm
 
-You can choose the interpolation algorithm that is used when images in an existing PDF document are resized by setting the [DownsampleAlgorithm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html#Syncfusion_Pdf_PdfCompressionOptions_DownsampleAlgorithm) property of the [PdfCompressionOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html) class. The available options are defined by the [DownsamplingAlgorithm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.DownsamplingAlgorithm.html) enumeration:
+You can choose the interpolation algorithm that is used when images in an existing PDF document are resized by setting the [DownsamplingAlgorithm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html#Syncfusion_Pdf_PdfCompressionOptions_DownsampleAlgorithm) property of the [PdfCompressionOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html) class. The available options are defined by the [DownsamplingAlgorithm](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.DownsamplingAlgorithm.html) enumeration:
 
 | **Member**           | **Description**                                                                          |
 | -------------------- | ---------------------------------------------------------------------------------------- |
