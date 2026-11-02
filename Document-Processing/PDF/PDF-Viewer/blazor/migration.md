@@ -199,6 +199,18 @@ To render the PDF Viewer component, add the following code in the **Index.razor*
 
 ### .csproj (WebAssembly)
 
+For WebAssembly applications, install the required workload for SkiaSharp. Run the following command:
+ 
+{% tabs %}
+{% highlight bash tabtitle="bash" %}
+ 
+dotnet workload install wasm-tools
+ 
+{% endhighlight %}
+{% endtabs %}
+ 
+The `wasm-tools` workload is installed for the active .NET SDK. When targeting a different .NET SDK version, ensure that the corresponding version-specific workload is installed.
+
 For WebAssembly applications, include the following properties in the project **.csproj** file to ensure proper functionality and compatibility.
 
 <table>
@@ -208,11 +220,7 @@ For WebAssembly applications, include the following properties in the project **
 <tr>
 <td>
 {% tabs %}
-{% highlight C# tabtitle=".csproj" hl_lines="2 6 7" %}
-<ItemGroup>
-    <NativeFileReference Include="$(SkiaSharpStaticLibraryPath)\2.0.23\*.a" />
-</ItemGroup>
-
+{% highlight C# tabtitle=".csproj" hl_lines="2 3" %}
 <PropertyGroup>
 	<WasmNativeStrip>true</WasmNativeStrip>
 	<WasmBuildNative>true</WasmBuildNative>
