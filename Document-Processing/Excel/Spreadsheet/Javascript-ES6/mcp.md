@@ -1,16 +1,16 @@
 ---
 layout: post
-title: MCP Server Setup in TypeScript Spreadsheet | Syncfusion
-description: MCP Server setup in TypeScript Spreadsheet explains how to install and configure the MCP Server for API references, code examples, and troubleshooting.
+title: MCP Server Configuration in TypeScript Spreadsheet | Syncfusion
+description: Install and configure the Syncfusion TypeScript Spreadsheet MCP Server to access documentation, API guidance, code examples, and troubleshooting support.
 control: Spreadsheet
 platform: document-processing
 documentation: ug
 keywords: TypeScript Agentic UI Builder, MCP Server, search docs, Spreadsheet SDK, Server Packages
 ---
 
-# MCP Server setup in TypeScript Spreadsheet 
+# MCP Server Configuration in TypeScript Spreadsheet
 
-The Syncfusion® TypeScript MCP Server accelerates Spreadsheet application development by providing relevant documentation, API references, feature guidance, code examples, and troubleshooting information directly within an AI-powered IDE. The server uses the [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) to connect an AI assistant with Syncfusion TypeScript documentation.
+The Syncfusion® TypeScript MCP Server accelerates Spreadsheet application development by providing relevant documentation, API references, feature guidance, code examples, and troubleshooting information directly within an AI-powered IDE. The server uses the [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) to connect an AI assistant with Syncfusion TypeScript documentation. 
 
 Use the `search_docs` tool to obtain contextual guidance, code examples, and documentation for TypeScript Spreadsheet applications.
 
@@ -197,6 +197,12 @@ Describe the problem in plain language, and let `search_docs` help resolve it.
 {% endpromptcard %}
 {% endpromptcards %}
 
+{% promptcards %}
+{% promptcard Formulas %}
+#search_docs Why does TypeScript Spreadsheet show HTTP 413 entity too large error while export large Excel files?
+{% endpromptcard %}
+{% endpromptcards %}
+
 ## Best practices
 
 To get the most out of the Syncfusion<sup>®</sup> Spreadsheet MCP Server:
@@ -207,7 +213,7 @@ To get the most out of the Syncfusion<sup>®</sup> Spreadsheet MCP Server:
 - **Stay Consistent** - Keep file organization, naming conventions, and coding standards consistent throughout your project.
 - **Start Fresh for New Topics** - Begin a new chat when switching to a different task to maintain clean context.
 - **Use Advanced AI Models** - For the best results, use advanced AI models such as the latest-generation **Claude**, **GPT**, or **Gemini** models.
-- **For Troubleshooting** - Use AI suggestions for common issues; consult the [official documentation](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es6/getting-started) or [support](https://support.syncfusion.com/support/tickets/create) for complex problems.
+- **For Troubleshooting** - Use AI suggestions for common issues; consult the [official documentation](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es6/overview) or [support](https://support.syncfusion.com/support/tickets/create) for complex problems.
 - **Minimize Active Tools** - Limit the number of active MCP tools in your IDE to prevent tool-selection ambiguity and improve response accuracy.
 
 > Always review AI-generated code before using it in production.
