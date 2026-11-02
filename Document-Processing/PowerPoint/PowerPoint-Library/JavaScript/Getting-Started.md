@@ -10,9 +10,9 @@ keywords: javascript, powerpoint, react
 
 # Getting Started with JavaScript PowerPoint Library in React app
 
-The `JavaScript PowerPoint Library` facilitates the creation of a simple PowerPoint presentation with basic elements from scratch.
+The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) facilitates the creation of a simple PowerPoint presentation with basic elements from scratch.
 
-This guide explains how to integrate the `JavaScript PowerPoint Library` into a React application. The sample saves the generated PowerPoint presentation with `save('Output.pptx')`.
+This guide explains how to integrate the [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) into a React application. The sample saves the generated PowerPoint presentation with `save('Output.pptx')`.
 
 ## Prerequisites
 
@@ -50,7 +50,7 @@ npm install
 
 All Syncfusion<sup>&reg;</sup> JS 2 packages are published in the `npmjs.com` registry. The `npm install` command below resolves `@syncfusion/ej2-pptx` to the latest stable version compatible with React 18 or later.
 
-* To install the `JavaScript PowerPoint Library`, use the following command.
+* To install the [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library), use the following command.
 
 ```bash
 npm install @syncfusion/ej2-pptx --save

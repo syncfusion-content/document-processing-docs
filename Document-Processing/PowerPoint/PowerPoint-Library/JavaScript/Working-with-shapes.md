@@ -20,18 +20,17 @@ The following code example demonstrates how to add an AutoShape to the shape col
 {% highlight js tabtitle="TypeScript" %}
 
 import { Presentation, SlideLayoutType, AutoShapeType } from '@syncfusion/ej2-pptx';
-(async () => {
 // Creates an instance for PowerPoint.
-const pptxDoc = Presentation.create();
+let pptxDoc = Presentation.create();
 // Adds a blank slide to the Presentation.
-const slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
+let slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
 // Adds a normal shape to the slide. Bounds are in points.
 slide.shapes.addShape(AutoShapeType.Rectangle, {
     x: 50, y: 200, width: 300, height: 300
 });
 // imageBytes is a Uint8Array of a JPEG image.
 // Add picture to the shape collection.
-const picture = slide.shapes.addPicture({
+let picture = slide.shapes.addPicture({
     data: imageBytes,
     bounds: {
         x: 373, y: 83, width: 526, height: 382
@@ -39,8 +38,27 @@ const picture = slide.shapes.addPicture({
 });
 // Saves the Presentation to the file system.
 await pptxDoc.save('Output.pptx');
-})();
 
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Creates an instance for PowerPoint.
+var pptxDoc = ej.pptx.Presentation.create();
+// Adds a blank slide to the Presentation.
+var slide = pptxDoc.slides.add({ layout: ej.pptx.SlideLayoutType.Blank });
+// Adds a normal shape to the slide. Bounds are in points.
+slide.shapes.addShape(ej.pptx.AutoShapeType.Rectangle, {
+    x: 50, y: 200, width: 300, height: 300
+});
+// imageBytes is a Uint8Array of a JPEG image.
+// Add picture to the shape collection.
+var picture = slide.shapes.addPicture({
+    data: imageBytes,
+    bounds: {
+        x: 373, y: 83, width: 526, height: 382
+    }
+});
+// Saves the Presentation to the file system.
+await pptxDoc.save('Output.pptx');
 {% endhighlight %}
 {% endtabs %}
 
@@ -54,12 +72,11 @@ You can iterate through the shapes in a PowerPoint slide. The following code exa
 import { Presentation } from '@syncfusion/ej2-pptx';
 // data is a Uint8Array or ArrayBuffer of an existing .pptx file.
 
-(async () => {
 // Loads or opens a PowerPoint Presentation.
-const pptxDoc = await Presentation.open(data);
+let pptxDoc = await Presentation.open(data);
 // Iterates through the shapes in a slide and detects their type.
-const slide = pptxDoc.slides[0];
-for (const shape of slide.shapes) {
+let slide = pptxDoc.slides[0];
+for (let shape of slide.shapes) {
     if (shape.kind === 'picture') {
         // Picture shape detected.
     } else if (shape.kind === 'shape') {
@@ -68,8 +85,25 @@ for (const shape of slide.shapes) {
 }
 // Saves the Presentation to the file system.
 await pptxDoc.save('Output.pptx');
-})();
 
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// data is a Uint8Array or ArrayBuffer of an existing .pptx file.
+
+// Loads or opens a PowerPoint Presentation.
+var pptxDoc = await ej.pptx.Presentation.open(data);
+// Iterates through the shapes in a slide and detects their type.
+var slide = pptxDoc.slides[0];
+for (var i = 0; i < slide.shapes.length; i++) {
+    var shape = slide.shapes[i];
+    if (shape.kind === 'picture') {
+        // Picture shape detected.
+    } else if (shape.kind === 'shape') {
+        // AutoShape detected.
+    }
+}
+// Saves the Presentation to the file system.
+await pptxDoc.save('Output.pptx');
 {% endhighlight %}
 {% endtabs %}
 
@@ -83,11 +117,10 @@ The shapes can be removed from a slide by its instance or by its index position 
 import { Presentation } from '@syncfusion/ej2-pptx';
 
 // data is a Uint8Array or ArrayBuffer of an existing .pptx file.
-(async () => {
 // Loads or opens a PowerPoint Presentation.
-const pptxDoc = await Presentation.open(data);
-const slide = pptxDoc.slides[0];
-for (const shape of slide.shapes) {
+let pptxDoc = await Presentation.open(data);
+let slide = pptxDoc.slides[0];
+for (let shape of slide.shapes) {
     if (shape.kind === 'shape' && !shape.isPlaceholder) {
         slide.shapes.remove(shape);
         break;
@@ -95,7 +128,21 @@ for (const shape of slide.shapes) {
 }
 // Saves the Presentation to the file system.
 await pptxDoc.save('Output.pptx');
-})();
 
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// data is a Uint8Array or ArrayBuffer of an existing .pptx file.
+// Loads or opens a PowerPoint Presentation.
+var pptxDoc = await ej.pptx.Presentation.open(data);
+var slide = pptxDoc.slides[0];
+for (var i = 0; i < slide.shapes.length; i++) {
+    var shape = slide.shapes[i];
+    if (shape.kind === 'shape' && !shape.isPlaceholder) {
+        slide.shapes.remove(shape);
+        break;
+    }
+}
+// Saves the Presentation to the file system.
+await pptxDoc.save('Output.pptx');
 {% endhighlight %}
 {% endtabs %}

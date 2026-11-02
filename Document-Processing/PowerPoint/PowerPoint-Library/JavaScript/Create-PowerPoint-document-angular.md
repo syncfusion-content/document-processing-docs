@@ -161,4 +161,3 @@ When you click **Create PowerPoint document**, the sample saves the presentation
 
 - [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library)
 - [JavaScript PowerPoint Library documentation](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/overview)
-- [Syncfusion licensing documentation](https://help.syncfusion.com/document-processing/licensing/overview)

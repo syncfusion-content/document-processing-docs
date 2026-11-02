@@ -11,7 +11,7 @@ keywords: javascript, powerpoint, cdn
 
 # Getting Started with JavaScript PowerPoint in JavaScript app
 
-The `JavaScript PowerPoint Library` facilitates the creation of a simple PowerPoint presentation with basic elements from scratch.
+The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) facilitates the creation of a simple PowerPoint presentation with basic elements from scratch.
 
 This guide explains how to integrate the [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) into a JavaScript application using NPM and a module bundler like **Parcel**. The sample saves the generated PowerPoint presentation with `save('Output.pptx')`.
 
