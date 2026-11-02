@@ -323,7 +323,7 @@ Configure WebMCP tools with custom descriptions, disable specific tools, and han
 }
 
 {% endhighlight %}
-{% end tabs %}
+{% endtabs %}
 
 ## See Also
 
