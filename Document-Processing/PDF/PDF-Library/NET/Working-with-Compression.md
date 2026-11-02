@@ -121,7 +121,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Downsampling images
 
-You can reduce the file size of an existing PDF document by downsampling images whose effective DPI exceeds the value you need for your output (for example, the print or screen resolution of the intended viewer). To do this, enable the [Down sample Images](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html#Syncfusion_Pdf_PdfCompressionOptions_DownsampleImages) property and set the desired resolution through the [TargetDpi](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html#Syncfusion_Pdf_PdfCompressionOptions_TargetDpi) property of the [PdfCompressionOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html) class.
+You can reduce the file size of an existing PDF document by downsampling images whose effective DPI exceeds the value you need for your output (for example, the print or screen resolution of the intended viewer). To do this, enable the [DownsampleImages](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html#Syncfusion_Pdf_PdfCompressionOptions_DownsampleImages) property and set the desired resolution through the [TargetDpi](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html#Syncfusion_Pdf_PdfCompressionOptions_TargetDpi) property of the [PdfCompressionOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html) class.
 
 N> 1. The `Downsampling Images` property does not affect images whose current resolution is already at or below the `TargetDpi` value.
 N> 2. The `TargetDpi` property accepts values from `36` to `2400`. The default value is `150`.
@@ -316,7 +316,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 ## Encoding images using JPEG 2000
 
-You can further reduce the file size of an existing PDF document by re-encoding images with JPEG 2000 (`JPXDecode`) instead of the default JPEG (`DCTDecode`). JPEG 2000 typically produces smaller files at equivalent visual quality and supports lossless encoding. To do this, enable the [JpxDecodeEnabled](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html#Syncfusion_Pdf_PdfCompressionOptions_JpxDecodeEnabled) property of the [PdfCompressionOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html) class.
+You can further reduce the file size of an existing PDF document by re-encoding images with JPEG 2000 (`JPXDecode`) instead of the default JPEG (`DCTDecode`). JPEG 2000 typically produces smaller files at equivalent visual quality and supports lossless encoding. To do this, enable the [EnableJpxDecode](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html#Syncfusion_Pdf_PdfCompressionOptions_EnableJpxDecode) property of the [PdfCompressionOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html) class.
 
 N> 1. The `JpxDecodeEnabled` property only applies when `CompressImages` is also enabled.
 N> 2. Some legacy PDF viewers may not fully support JPEG 2000-encoded images. Verify that your intended viewers support `JPXDecode` before enabling this option.
