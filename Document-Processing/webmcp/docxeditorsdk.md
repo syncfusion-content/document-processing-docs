@@ -43,17 +43,18 @@ WebMCP integrates seamlessly into Syncfusion Document Editor applications across
 
 ### Supported Platforms
 
-- **WebMCP Integration for React DOCX Editor** — React-based Document Editor
-- **WebMCP Integration for Angular DOCX Editor** — Angular-based Document Editor
-- **WebMCP Integration for Vue DOCX Editor** — Vue.js-based Document Editor
-- **WebMCP Integration for TypeScript DOCX Editor** — TypeScript/ES6 Document Editor
-- **WebMCP Integration for JavaScript DOCX Editor** — Vanilla JavaScript/ES5 Document Editor
+- **[WebMCP Integration for React DOCX Editor](../Word/Word-Processor/react/webmcp)** — React-based Document Editor
+- **[WebMCP Integration for Angular DOCX Editor](../Word/Word-Processor/angular/webmcp)** — Angular-based Document Editor
+- **[WebMCP Integration for Vue DOCX Editor](../Word/Word-Processor/vue/webmcp)** — Vue.js-based Document Editor
+- **[WebMCP Integration for TypeScript DOCX Editor](../Word/Word-Processor/javascript-es6/webmcp)** — TypeScript/ES6 Document Editor
+- **[WebMCP Integration for JavaScript DOCX Editor](../Word/Word-Processor/javascript-es5/webmcp)** — Vanilla JavaScript/ES5 Document Editor
+- **[WebMCP Integration for Blazor DOCX Editor](../Word/Word-Processor/blazor/webmcp)** — Blazor-based Document Editor
 
 ## Why Use WebMCP for Document Editor?
 
 Syncfusion DOCX Editor integration with WebMCP provides significant benefits for building AI-powered document editor applications:
 
-### ✅ Key Benefits
+### Key Benefits
 
 - **Universal Tool Access** — AI agents, LLMs, and any MCP-compatible client can discover and invoke document editing operations
 - **Zero Custom Integration** — Inject the WebMcpAdapter module, call `registerWebMcpTools()`, and all tool registration, schema binding, and life cycle management is automatic
