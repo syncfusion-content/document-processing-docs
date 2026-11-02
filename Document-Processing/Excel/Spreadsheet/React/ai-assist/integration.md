@@ -5,6 +5,7 @@ description: AI Assist integration in React Spreadsheet explains AI-powered feat
 platform: document-processing
 control: AI Assist
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # AI Assist Integration in React Spreadsheet

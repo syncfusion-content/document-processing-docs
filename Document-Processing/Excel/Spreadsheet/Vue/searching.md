@@ -5,6 +5,7 @@ description: Search and replace worksheet data efficiently using built-in find a
 control: Searching 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Find and Replace in Vue Spreadsheet

@@ -5,6 +5,7 @@ description: Customize and use the context menu in the Syncfusion ASP.NET MVC Sp
 platform: document-processing
 control: Context Menu
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

@@ -5,6 +5,7 @@ description: Learn about worksheets in the Syncfusion React Spreadsheet componen
 control: Worksheet 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Worksheet in React Spreadsheet

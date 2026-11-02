@@ -5,7 +5,7 @@ description: Learn here about how to install Syncfusion® Word offline installer
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
-
+appliesto: Document SDK
 ---
 
 # How to install Syncfusion® Word offline installer

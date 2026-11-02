@@ -5,6 +5,7 @@ description: Learn about events in the Syncfusion React Spreadsheet component, i
 control: Events
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Events in React Spreadsheet

@@ -4,6 +4,7 @@ description: Convert Word to PDF in Linux using .NET Core Word library without M
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert Word to PDF in Linux 

@@ -5,6 +5,7 @@ description: Customize the Form Designer toolbar in the ASP.NET Core PDF Viewer 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Customize the Form Designer Toolbar in ASP.NET Core PDF Viewer

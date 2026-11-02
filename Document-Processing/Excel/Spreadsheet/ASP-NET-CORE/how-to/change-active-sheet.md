@@ -5,6 +5,7 @@ description: Change the active sheet index when importing a workbook in Syncfusi
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # How to Change Active Sheet in ASP.NET Core Spreadsheet

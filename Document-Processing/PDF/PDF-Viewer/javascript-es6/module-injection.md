@@ -5,6 +5,7 @@ description: Learn about the module injection in the JavaScript (ES6) PDF Viewer
 control: PDF Viewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Module Injection in JavaScript (ES6) PDF Viewer

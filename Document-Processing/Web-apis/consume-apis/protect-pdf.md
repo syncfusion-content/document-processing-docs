@@ -4,6 +4,7 @@ description: Apply passwords and permission restrictions to safeguard sensitive 
 platform: document-processing
 control: general
 documentation: UG
+appliesto: Document SDK
 ---
 # Protect PDF Using Syncfusion Web API
 

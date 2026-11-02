@@ -4,6 +4,7 @@ description: Learn about macro support in Excel documents using the Syncfusion .
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to run macros in .NET Excel Library

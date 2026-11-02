@@ -4,6 +4,7 @@ description: .NET MAUI Excel to Image section explains how to convert Excel docu
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Excel to Image Conversion in .NET MAUI using Excel Library

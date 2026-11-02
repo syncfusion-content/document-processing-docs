@@ -5,6 +5,7 @@ description: The comments feature in ASP.NET MVC DOCX Editor enables users to ad
 platform: document-processing
 control: Comments
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

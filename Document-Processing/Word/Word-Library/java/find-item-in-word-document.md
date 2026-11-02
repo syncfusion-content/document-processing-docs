@@ -4,6 +4,7 @@ description: Learn about Find item in Word document in the Syncfusion Java Word 
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Find item in Word document in Java Word

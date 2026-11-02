@@ -5,6 +5,7 @@ description: Learn about the organize pdf in the ASP.NET Core PDF Viewer and how
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Organize Pdf in ASP.NET Core PDF Viewer

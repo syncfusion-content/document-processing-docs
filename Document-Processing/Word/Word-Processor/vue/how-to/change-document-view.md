@@ -6,6 +6,7 @@ control: Change document view
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Change Document View in Vue DOCX Editor

@@ -5,6 +5,7 @@ description: Check if a loaded document has been edited in Syncfusion WPF PDF Vi
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Check the loaded document is edited in WPF Pdf Viewer 

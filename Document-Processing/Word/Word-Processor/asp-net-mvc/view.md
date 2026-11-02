@@ -5,6 +5,7 @@ description: View in ASP.NET MVC DOCX Editor enables web layout, ruler display, 
 platform: document-processing
 control: View
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # View in ASP.NET MVC DOCX Editor

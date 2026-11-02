@@ -5,6 +5,7 @@ description: Learn how to enable, draw, customize, and manage Perimeter annotati
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Add Perimeter Annotations in Blazor PDF Viewer 

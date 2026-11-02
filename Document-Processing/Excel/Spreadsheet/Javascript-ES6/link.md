@@ -5,6 +5,7 @@ description: Hyperlinks in TypeScript Spreadsheet allow users to insert and mana
 platform: document-processing
 control: Link
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Hyperlink in TypeScript Spreadsheet 

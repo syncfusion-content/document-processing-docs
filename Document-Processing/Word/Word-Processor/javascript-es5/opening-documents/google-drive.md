@@ -6,6 +6,7 @@ platform: document-processing
 control: Open document from Google Drive
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Open Documents from Google Drive in JavaScript DOCX Editor

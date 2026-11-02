@@ -6,6 +6,7 @@ control: Customize tool bar
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Customize Toolbar in React DOCX Editor

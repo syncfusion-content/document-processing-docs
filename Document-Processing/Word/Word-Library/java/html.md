@@ -4,6 +4,7 @@ description: This section illustrates how to convert Word documents to HTML form
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Word Document to HTML conversion in Java Word

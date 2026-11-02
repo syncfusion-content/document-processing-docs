@@ -4,6 +4,7 @@ description: Learn how to create a Markdown document in Google Cloud Platform (G
 platform: document-processing
 control: Markdown
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Markdown document in Google Cloud Platform (GCP)

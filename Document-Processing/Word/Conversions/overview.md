@@ -5,6 +5,7 @@ platform: document-processing
 control: general
 documentation: UG
 keywords: Word, SDK, Automation, API, convert
+appliesto: Document SDK
 ---
 
 # About Syncfusion Word Document Conversion Library

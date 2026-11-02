@@ -4,6 +4,7 @@ description: This section illustrates how to add dynamic information like title,
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 # Document Fields in Java Word
 

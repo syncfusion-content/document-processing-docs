@@ -5,6 +5,7 @@ description: The hyperlink feature in ASP.NET MVC DOCX Editor enables users to i
 platform: document-processing
 control: Link
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

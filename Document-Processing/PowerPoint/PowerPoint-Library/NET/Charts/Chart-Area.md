@@ -4,6 +4,7 @@ description: Learn how to customize the chart area in a PowerPoint presentation 
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Customize the Chart Area in PowerPoint

@@ -4,6 +4,7 @@ description: Applying Excel borders programmatically explains how to use differe
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Borders in .NET Excel Library

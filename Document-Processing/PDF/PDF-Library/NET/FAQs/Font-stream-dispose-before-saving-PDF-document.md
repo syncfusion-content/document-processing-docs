@@ -4,6 +4,7 @@ description: Learn how to manage font streams and prevent disposal errors when s
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Font Stream Disposal in .NET PDF Library

@@ -4,6 +4,7 @@ description: Learn how to get started with the Syncfusion Java Word Library. Exp
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 # Supported and Unsupported Features in Java Word
 

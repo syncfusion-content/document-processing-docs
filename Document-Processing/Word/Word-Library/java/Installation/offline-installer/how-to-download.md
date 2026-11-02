@@ -5,6 +5,7 @@ description: Learn here about how to download the Syncfusion FileFormats offline
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
+appliesto: Document SDK
 
 ---
 

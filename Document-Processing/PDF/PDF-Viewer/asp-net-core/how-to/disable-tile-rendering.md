@@ -5,6 +5,7 @@ description: Disable tile rendering in the ASP.NET Core PDF Viewer to use the cl
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Disable Tile Rendering in ASP.NET Core PDF Viewer

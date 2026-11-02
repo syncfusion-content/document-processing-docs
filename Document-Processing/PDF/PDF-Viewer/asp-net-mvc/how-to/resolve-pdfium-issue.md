@@ -5,6 +5,7 @@ description: Resolve common Pdfium issues in the ASP.NET MVC PDF Viewer such as 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Resolve Pdfium Issues in ASP.NET MVC PDF Viewer

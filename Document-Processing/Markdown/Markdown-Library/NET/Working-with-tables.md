@@ -4,6 +4,7 @@ description: Learn how to create, format, and customize tables for presenting st
 platform: document-processing
 control: Markdown
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Tables in .NET Markdown Library

@@ -5,6 +5,7 @@ description: Learn how to get current vertical and horizontal offsets in uwp pdf
 platform: document-processing
 control: PDF viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Get current vertical and horizontal offsets in UWP PDF Viewer

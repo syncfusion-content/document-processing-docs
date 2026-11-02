@@ -7,6 +7,7 @@ control: PDF
 documentation: ug
 keywords: angular create pdf, angular generate pdf, angular pdf library, ej2 pdf angular, javascript
 canonical_url: https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-angular
+appliesto: Document SDK
 ---
 
 # Getting Started with JavaScript PDF in Angular app

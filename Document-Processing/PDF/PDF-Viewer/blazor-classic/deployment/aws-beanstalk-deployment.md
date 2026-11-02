@@ -5,6 +5,7 @@ description: AWS Elastic Beanstalk simplifies the deployment and management of s
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 #  AWS BeanStalk deployment in Blazor PDF Viewer

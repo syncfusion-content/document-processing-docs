@@ -5,6 +5,7 @@ description: Learn how to get started with the Syncfusion Flutter PDF library. E
 platform: document-processing
 control: PDF
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Getting Started with Flutter PDF Library

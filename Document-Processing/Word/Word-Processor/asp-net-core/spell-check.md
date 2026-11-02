@@ -5,6 +5,7 @@ description: The spell check feature in ASP.NET Core DOCX Editor enables spellin
 platform: document-processing
 control: Spell Check
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

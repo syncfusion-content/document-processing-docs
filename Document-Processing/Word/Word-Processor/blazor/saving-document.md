@@ -5,6 +5,7 @@ description: Save documents from Blazor DOCX Editor to a server, database, or lo
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # Saving a Document in Blazor DOCX Editor

@@ -5,6 +5,7 @@ description: Learn about culture-specific formula separators in the Syncfusion R
 control: Formulas 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Culture-Specific Formula Separators in React Spreadsheet

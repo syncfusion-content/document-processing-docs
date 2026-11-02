@@ -5,6 +5,7 @@ description: Docker image deployment in Angular Spreadsheet enables containerize
 platform: document-processing
 control: Docker deployment
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Docker Image Deployment in Angular Spreadsheet 

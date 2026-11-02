@@ -6,6 +6,7 @@ platform: document-processing
 control: History
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # History in TypeScript DOCX Editor

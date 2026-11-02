@@ -6,6 +6,7 @@ control: Print
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Print in Vue DOCX Editor

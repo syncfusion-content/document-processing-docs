@@ -4,6 +4,7 @@ description: Add an oval shape to Excel charts in C# and VB.NET using the Syncfu
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to add oval shapes to charts in .NET Excel Library

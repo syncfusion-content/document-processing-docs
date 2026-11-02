@@ -5,6 +5,7 @@ description: Switch between selection mode and panning mode in the ASP.NET Core 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 

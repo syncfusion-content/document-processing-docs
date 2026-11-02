@@ -4,6 +4,7 @@ description: Data sorting describes how the Syncfusion .NET Excel Library sorts 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Data Sorting in .NET Excel Library

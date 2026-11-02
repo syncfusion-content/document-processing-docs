@@ -5,6 +5,7 @@ description:  Add, modify, and remove form fields in Syncfusion WPF PDF Viewer p
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Add, Modify and Remove Form Fields in WPF PDF Viewer

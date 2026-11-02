@@ -6,6 +6,7 @@ platform: document-processing
 control: Track changes 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Track Changes in JavaScript DOCX Editor

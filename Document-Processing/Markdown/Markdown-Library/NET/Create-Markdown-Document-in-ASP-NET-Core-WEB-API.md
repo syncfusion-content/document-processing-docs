@@ -4,6 +4,7 @@ description: Create Markdown document without external dependencies in ASP.NET C
 platform: document-processing
 control: Markdown
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Markdown documents in ASP.NET Core Web API

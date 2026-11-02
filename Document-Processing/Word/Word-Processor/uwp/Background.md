@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: background,background-color,overrides-document-background,layout-type,document-background
+appliesto: DOCX Editor SDK
 ---
 
 # Background in UWP DOCX Editor

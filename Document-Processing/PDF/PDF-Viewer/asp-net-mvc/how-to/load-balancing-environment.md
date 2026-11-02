@@ -5,6 +5,7 @@ description: Configure the ASP.NET MVC PDF Viewer to work in a load-balanced env
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Run the PDF Viewer in a Load-Balanced Environment in ASP.NET

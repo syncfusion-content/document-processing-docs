@@ -5,6 +5,7 @@ description: Learn how to get started with Syncfusion® Blazor DOCX Editor in We
 platform: document-processing
 control: DocumentEditor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # Getting Started with Blazor WASM DOCX Editor

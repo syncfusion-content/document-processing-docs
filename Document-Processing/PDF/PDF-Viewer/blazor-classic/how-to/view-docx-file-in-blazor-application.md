@@ -5,6 +5,7 @@ description: Learn here all about View DOCX file in Blazor application in Syncfu
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to View DOCX file using Blazor PDF Viewer

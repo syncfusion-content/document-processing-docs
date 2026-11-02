@@ -5,6 +5,7 @@ description: Install and configure the Syncfusion Blazor Spreadsheet MCP Server 
 platform: document-processing
 control: AI coding assistant
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # MCP Server Setup in Blazor Spreadsheet

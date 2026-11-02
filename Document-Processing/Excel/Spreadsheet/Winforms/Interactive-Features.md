@@ -5,6 +5,7 @@ description: Use interactive options in Windows Forms Spreadsheet such as clipbo
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Interactive Features in Windows Forms Spreadsheet

@@ -4,6 +4,7 @@ description: This section illustrates how to register custom fonts for Word-to-I
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Custom Font Registration for Word to Image Conversion in .NET Word

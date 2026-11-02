@@ -5,6 +5,7 @@ description: Chart support in ASP.NET Core DOCX Editor ensures accurate renderin
 platform: document-processing
 control: Chart
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # Charts in ASP.NET Core DOCX Editor

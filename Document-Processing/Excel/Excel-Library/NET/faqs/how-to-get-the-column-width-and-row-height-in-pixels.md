@@ -4,6 +4,7 @@ description: Retrieve column width and row height in pixels using the Syncfusion
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to get pixel dimensions in .NET Excel Library

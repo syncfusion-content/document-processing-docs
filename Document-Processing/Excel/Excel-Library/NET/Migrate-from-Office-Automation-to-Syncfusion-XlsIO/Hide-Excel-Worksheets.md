@@ -4,6 +4,7 @@ description: Programmatically hide Excel worksheets in a workbook using Interop 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Hiding Worksheets in .NET Excel Library

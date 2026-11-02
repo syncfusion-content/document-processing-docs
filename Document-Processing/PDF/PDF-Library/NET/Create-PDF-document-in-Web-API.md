@@ -5,6 +5,7 @@ platform: document-processing
 control: PDF
 documentation: ug
 keywords: pdf, aspnet core, web api, csharp
+appliesto: Document SDK
 ---
 
 # Getting Started with .NET PDF Library in ASP.NET Core Web API

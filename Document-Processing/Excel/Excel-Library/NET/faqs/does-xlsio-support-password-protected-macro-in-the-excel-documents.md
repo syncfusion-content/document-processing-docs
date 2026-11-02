@@ -4,6 +4,7 @@ description: Password-protected macros explains whether Syncfusion .NET Excel Li
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Password-Protected Macros in .NET Excel Library

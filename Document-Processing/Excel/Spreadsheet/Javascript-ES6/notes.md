@@ -5,6 +5,7 @@ description: Notes in TypeScript Spreadsheet allow users to add contextual infor
 platform: document-processing
 control: Notes
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Notes in TypeScript Spreadsheet 

@@ -4,6 +4,7 @@ description: Handle circular references in Excel formulas when retrieving calcul
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to handle circular references in .NET Excel Library

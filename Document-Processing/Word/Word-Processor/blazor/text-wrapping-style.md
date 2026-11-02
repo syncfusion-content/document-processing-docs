@@ -5,6 +5,7 @@ description: Text wrapping styles in Blazor DOCX Editor preserve inline, square,
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # Text Wrapping Style in Blazor DOCX Editor

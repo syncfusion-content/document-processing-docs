@@ -5,6 +5,7 @@ description: Save PDF files from the JavaScript (ES6) PDF Viewer to Azure Blob S
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Save PDF Files to Azure Blob Storage in JavaScript (ES6) PDF Viewer

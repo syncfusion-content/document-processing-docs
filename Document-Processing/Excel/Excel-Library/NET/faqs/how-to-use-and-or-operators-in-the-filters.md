@@ -4,6 +4,7 @@ description: Use AND and OR operators in Excel filters using the Syncfusion .NET
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to use AND and OR filters in .NET Excel Library

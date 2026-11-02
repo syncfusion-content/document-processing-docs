@@ -5,6 +5,7 @@ description: Learn about globalization in the Syncfusion React Spreadsheet compo
 control: Global local 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Globalization in React Spreadsheet

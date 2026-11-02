@@ -5,6 +5,7 @@ description: Add, insert, and customize JPEG and PNG images in PDF documents usi
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # PDF Images in JavaScript PDF

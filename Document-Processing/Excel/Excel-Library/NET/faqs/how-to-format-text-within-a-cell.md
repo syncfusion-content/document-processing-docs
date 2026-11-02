@@ -4,6 +4,7 @@ description: Format text within an Excel cell using the Syncfusion .NET Excel Li
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to format text in .NET Excel Library

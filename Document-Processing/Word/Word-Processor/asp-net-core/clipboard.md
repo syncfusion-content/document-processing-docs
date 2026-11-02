@@ -5,6 +5,7 @@ description: The clipboard support in ASP.NET Core DOCX Editor provides copy, cu
 platform: document-processing
 control: Clipboard
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

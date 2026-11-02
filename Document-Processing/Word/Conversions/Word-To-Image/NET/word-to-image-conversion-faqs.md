@@ -4,6 +4,7 @@ description: Explain frequently asked questions and solutions for Word-to-image 
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Word to image conversion FAQs in .NET Word

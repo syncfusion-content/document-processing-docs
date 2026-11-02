@@ -5,6 +5,7 @@ description: Learn how the Syncfusion ASP.NET MVC Spreadsheet adapts seamlessly 
 platform: document-processing
 control: Mobile Responsiveness
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

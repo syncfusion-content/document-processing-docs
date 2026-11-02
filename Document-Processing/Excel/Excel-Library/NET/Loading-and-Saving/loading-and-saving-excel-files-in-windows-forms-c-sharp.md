@@ -4,6 +4,7 @@ description: Windows Forms Excel file handling section explains how to load and 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 # Loading and Saving Workbooks in Windows Forms
 

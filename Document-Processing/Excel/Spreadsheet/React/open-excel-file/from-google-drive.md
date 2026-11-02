@@ -5,6 +5,7 @@ description: Learn how to open Excel files stored in Google Drive using the Sync
 platform: document-processing
 control: Open file from Google Drive
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Open Excel from Google Drive in React Spreadsheet

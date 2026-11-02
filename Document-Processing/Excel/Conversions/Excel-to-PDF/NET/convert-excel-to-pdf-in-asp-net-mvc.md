@@ -4,6 +4,7 @@ description: ASP.NET MVC Excel to PDF section explains how to convert Excel docu
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Excel to PDF Conversion in ASP.NET MVC using Excel Library

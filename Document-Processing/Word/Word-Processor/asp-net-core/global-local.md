@@ -5,6 +5,7 @@ description: Global localization in ASP.NET Core DOCX Editor enables translating
 platform: document-processing
 control: Global Local
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

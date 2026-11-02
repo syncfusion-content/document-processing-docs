@@ -4,6 +4,7 @@ description: Convert an Excel worksheet to a high-resolution image using the Syn
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to convert worksheets to images in .NET Excel Library

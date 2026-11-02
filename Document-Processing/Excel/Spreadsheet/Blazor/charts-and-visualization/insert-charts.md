@@ -5,6 +5,7 @@ description: Learn about inserting charts in the Syncfusion Blazor Spreadsheet c
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Insert Charts in Blazor Spreadsheet

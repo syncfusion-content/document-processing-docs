@@ -5,6 +5,7 @@ description: Learn how to prevent unauthorized actions in the Syncfusion React S
 control: Spreadsheet
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # How to Prevent Actions in React Spreadsheet

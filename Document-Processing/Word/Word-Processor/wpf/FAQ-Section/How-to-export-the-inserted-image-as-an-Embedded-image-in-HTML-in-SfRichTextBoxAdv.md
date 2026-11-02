@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: embedded-image-html
+appliesto: DOCX Editor SDK
 ---
 
 # How to Export Embedded Images in HTML in WPF DOCX Editor

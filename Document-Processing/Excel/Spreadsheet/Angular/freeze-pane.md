@@ -5,6 +5,7 @@ description: Freeze panes in Angular Spreadsheet keep selected rows and columns 
 platform: document-processing
 control: Freeze pane
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Freeze panes in Angular Spreadsheet

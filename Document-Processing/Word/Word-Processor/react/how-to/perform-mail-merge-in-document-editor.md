@@ -6,6 +6,7 @@ control: Perform mail merge
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Perform Mail Merge in React DOCX Editor

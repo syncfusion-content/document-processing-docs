@@ -5,6 +5,7 @@ description: Instantiate the ASP.NET Core PDF Viewer dynamically at runtime usin
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Instantiate the PDF Viewer Dynamically in ASP.NET Core PDF

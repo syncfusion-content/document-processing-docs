@@ -5,6 +5,7 @@ description: Learn here all about how to Organize Page Toolbar Customization in 
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Organize Page Toolbar in Blazor PDF Viewer

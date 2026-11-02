@@ -5,6 +5,7 @@ description: Explore the complete feature set and capabilities available in the 
 control: Feature list 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Feature List of Vue Spreadsheet

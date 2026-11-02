@@ -6,6 +6,7 @@ control: Header and Footer
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Headers and Footers in React DOCX Editor

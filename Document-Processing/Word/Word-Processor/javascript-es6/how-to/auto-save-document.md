@@ -6,6 +6,7 @@ platform: document-processing
 control: Auto Save Document
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Auto Save Document in TypeScript DOCX Editor

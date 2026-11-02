@@ -5,6 +5,7 @@ description: Learn about overview of Syncfusion .NET Excel Library across WinFor
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # About Syncfusion .NET Excel Library

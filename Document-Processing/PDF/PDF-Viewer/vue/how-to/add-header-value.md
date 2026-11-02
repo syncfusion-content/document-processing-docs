@@ -5,6 +5,7 @@ description: Add custom headers to PDF Viewer AJAX requests in the Vue PDF Viewe
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Add Headers to AJAX Requests in Vue PDF Viewer

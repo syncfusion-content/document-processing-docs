@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: import,export,load,save,loadasync,saveasync,fileopenpicker,filesavepicker,storage-file,loadasyncsettings,showpagenumber,documentchanging,documentsaving
+appliesto: DOCX Editor SDK
 ---
 # Import and Export in UWP DOCX Editor
 

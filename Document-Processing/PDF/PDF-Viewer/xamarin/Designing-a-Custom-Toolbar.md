@@ -5,6 +5,7 @@ description: Learn here all about Designing a Custom Toolbar support in Syncfusi
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Designing a Custom Toolbar in Xamarin Pdf Viewer

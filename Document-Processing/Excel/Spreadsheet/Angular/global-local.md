@@ -5,6 +5,7 @@ description: Globalization in Angular Spreadsheet enables adapting the user inte
 platform: document-processing
 control: Global local 
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Globalization in Angular Spreadsheet 

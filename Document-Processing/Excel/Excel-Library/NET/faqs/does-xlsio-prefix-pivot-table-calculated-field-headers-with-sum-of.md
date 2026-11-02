@@ -4,6 +4,7 @@ description: PivotTable calculated field headers describes whether Syncfusion .N
 platform: document-processing 
 control: XlsIO 
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Pivot Table Headers in .NET Excel Library

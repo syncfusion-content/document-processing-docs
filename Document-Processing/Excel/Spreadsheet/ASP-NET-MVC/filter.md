@@ -5,6 +5,7 @@ description: Learn how to filter spreadsheet data in the Syncfusion ASP.NET MVC 
 platform: document-processing
 control: Filter
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

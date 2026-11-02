@@ -4,6 +4,7 @@ description: Learn about the limitations in Word to PDF conversion in C# using t
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Word document to PDF Conversion in .NET Word

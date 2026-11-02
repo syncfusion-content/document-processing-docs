@@ -4,6 +4,7 @@ description: This section illustrates how to create and customize tables in Word
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 # Document Tables in Java Word
 

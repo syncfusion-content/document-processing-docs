@@ -5,6 +5,7 @@ description: Customize the context menu in Syncfusion® Blazor DOCX Editor by ad
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # How to Customize Context Menu in Blazor DOCX Editor

@@ -4,6 +4,7 @@ description: Adding Excel hyperlinks programmatically explains how to add hyperl
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Hyperlinks in .NET Excel Library

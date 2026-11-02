@@ -5,6 +5,7 @@ description: Learn here all about how to load the microsoft office files like po
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Load office files in Blazor PDF Viewer

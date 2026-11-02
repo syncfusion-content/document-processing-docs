@@ -6,6 +6,7 @@ platform: document-processing
 control: Global local
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Globalization and Localization in Angular DOCX Editor

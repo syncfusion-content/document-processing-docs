@@ -5,6 +5,7 @@ description: Learn about the server actions in the ASP.NET MVC PDF Viewer and ho
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Server Actions in ASP.NET MVC PDF Viewer

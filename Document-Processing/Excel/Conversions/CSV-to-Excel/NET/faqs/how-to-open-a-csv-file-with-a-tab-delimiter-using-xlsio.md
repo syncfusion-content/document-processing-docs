@@ -4,6 +4,7 @@ description: Open a CSV file with a tab delimiter using the Syncfusion .NET Exce
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to open tab-delimited CSV files in .NET Excel Library

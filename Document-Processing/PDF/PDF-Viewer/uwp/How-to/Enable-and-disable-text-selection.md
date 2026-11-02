@@ -5,6 +5,7 @@ description: Learn how to enable and disable text selection in uwp pdf viewer in
 platform: document-processing
 control: PDF viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Enable and disable text selection in UWP PDF Viewer

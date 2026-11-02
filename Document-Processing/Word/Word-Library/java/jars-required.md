@@ -4,6 +4,7 @@ description: This section illustrates external jars required to use Syncfusion J
 platform: document-processing
 control: Word library
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Jars Required for Java Word library  in Java Word

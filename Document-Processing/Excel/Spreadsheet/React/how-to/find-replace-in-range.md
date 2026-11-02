@@ -5,6 +5,7 @@ description: Learn how to perform find and replace operations within a selected 
 control: Spreadsheet 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # How to Find and Replace in a Range in React Spreadsheet

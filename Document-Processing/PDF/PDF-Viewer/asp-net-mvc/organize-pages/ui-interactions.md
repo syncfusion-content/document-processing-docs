@@ -5,6 +5,7 @@ description: Learn about the ui interactions in the ASP.NET MVC PDF Viewer and h
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Ui Interactions in ASP.NET MVC PDF Viewer

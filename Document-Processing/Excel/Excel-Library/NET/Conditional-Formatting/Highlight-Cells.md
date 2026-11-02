@@ -4,6 +4,7 @@ description: Highlight-cell conditional formatting describes how Syncfusion .NET
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Highlight Cells in .NET Excel Library

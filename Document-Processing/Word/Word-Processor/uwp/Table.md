@@ -5,6 +5,7 @@ platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
 keywords: table,tablecommands,mergecells,tableformat,rowformat,cellformat
+appliesto: DOCX Editor SDK
 ---
 # Tables in UWP DOCX Editor
 

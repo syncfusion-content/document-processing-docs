@@ -5,6 +5,7 @@ description: Performance metrics in Angular Spreadsheet provide benchmark result
 platform: document-processing
 control: Performance
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Performance Metrics in Angular Spreadsheet 

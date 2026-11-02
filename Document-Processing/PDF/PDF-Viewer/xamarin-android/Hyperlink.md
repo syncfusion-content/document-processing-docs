@@ -5,6 +5,7 @@ description: Hyperlink navigation support in PDF Viewer Xamarin.Android detects 
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 #  Hyperlink navigation in PDF viewer Xamarin.Android

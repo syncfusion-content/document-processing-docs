@@ -5,6 +5,7 @@ description: Learn how to use the thumbnail panel in the Blazor PDF Viewer to pr
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Page thumbnail navigation in Blazor PDF Viewer 

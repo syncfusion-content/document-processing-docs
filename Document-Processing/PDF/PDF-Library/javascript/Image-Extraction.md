@@ -5,6 +5,7 @@ description: Extract images from PDF documents and retrieve their properties usi
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Image Extraction in JavaScript PDF

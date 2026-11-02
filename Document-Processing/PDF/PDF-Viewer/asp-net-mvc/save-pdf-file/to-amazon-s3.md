@@ -5,6 +5,7 @@ description: Save PDF files from the ASP.NET MVC PDF Viewer to AWS S3 using stan
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Save PDF Files to AWS S3 in ASP.NET MVC PDF Viewer

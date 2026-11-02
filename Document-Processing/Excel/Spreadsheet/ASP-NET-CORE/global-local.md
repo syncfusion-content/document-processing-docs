@@ -5,6 +5,7 @@ description: Learn about globalization in the Syncfusion ASP.NET Core Spreadshee
 platform: document-processing
 control: Global Local
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Globalization in ASP.NET Core Spreadsheet

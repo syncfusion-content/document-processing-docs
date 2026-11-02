@@ -4,6 +4,7 @@ description: Learn how to add hyperlinks in new and existing PDF documents using
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Hyperlinks in .NET PDF Library
 

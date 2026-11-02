@@ -1,11 +1,12 @@
 ---
 layout: post
 title: Remove pages using Organize Pages in Blazor PDF Viewer | Syncfusion
-description: How to remove one or more pages from a PDF using the Organize Pages view in the Blazor PDF Viewer.
+description: How to remove one or more pages from a PDF document using the Organize Pages view in the Blazor PDF Viewer.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Remove pages using the Organize Pages tool in Blazor PDF Viewer

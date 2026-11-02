@@ -4,6 +4,7 @@ description: Open and save Presentation in AWS S3 Cloud Storage using .NET Core 
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Open and Save a Presentation in AWS S3 Cloud Storage

@@ -5,6 +5,7 @@ description: Learn about cell ranges in the Syncfusion React Spreadsheet compone
 control: Cell range 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Cell Range in React Spreadsheet

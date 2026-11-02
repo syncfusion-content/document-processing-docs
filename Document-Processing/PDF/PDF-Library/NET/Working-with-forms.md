@@ -4,6 +4,7 @@ description: Learn how to create, fill, modify, and flatten AcroForm form fields
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Forms in .NET PDF Library
 

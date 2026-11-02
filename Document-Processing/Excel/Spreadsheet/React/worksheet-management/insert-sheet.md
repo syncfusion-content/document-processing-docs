@@ -5,6 +5,7 @@ description: Learn about inserting worksheets in an Excel document using the Syn
 control: Worksheet 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Insert Worksheet in React Spreadsheet

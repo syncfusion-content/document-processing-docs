@@ -4,6 +4,7 @@ description: This section illustrates how to Work with Sections in Word document
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 # Document Sections in Java Word
 

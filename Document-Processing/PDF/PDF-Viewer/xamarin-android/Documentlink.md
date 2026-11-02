@@ -5,6 +5,7 @@ description: Document Link Annotation or Table of content support in PDF viewer 
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 #  Document link in PDF viewer Xamarin.Android

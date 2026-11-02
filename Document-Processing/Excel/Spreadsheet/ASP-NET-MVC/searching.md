@@ -5,6 +5,7 @@ description: Search and replace content efficiently using built-in find and repl
 platform: document-processing
 control: Searching
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

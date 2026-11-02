@@ -4,6 +4,7 @@ description: Convert Word to image in Azure Functions v4 using .NET Word library
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert Word to Image in Azure Functions v4 

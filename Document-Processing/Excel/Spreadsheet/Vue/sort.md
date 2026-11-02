@@ -5,6 +5,7 @@ description: Sort spreadsheet data efficiently using built-in sorting features i
 control: Sort 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Sorting in Vue Spreadsheet

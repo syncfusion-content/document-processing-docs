@@ -6,6 +6,7 @@ control: Scrolling zooming
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Scrolling and Zooming in React DOCX Editor

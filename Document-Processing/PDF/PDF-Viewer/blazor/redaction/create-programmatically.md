@@ -5,6 +5,7 @@ description: Learn how to add, edit, delete, and apply redaction annotations pro
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Programmatic Support for Redaction in Blazor PDF Viewer

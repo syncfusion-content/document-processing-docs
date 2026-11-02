@@ -5,6 +5,7 @@ description: PDF viewer Xamarin.iOS allows user to highlight, underline and stri
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 #  Add & modify text markups PDF viewer Xamarin.iOS

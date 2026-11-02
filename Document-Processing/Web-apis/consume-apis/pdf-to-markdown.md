@@ -4,6 +4,7 @@ description: Convert PDF documents to Markdown using Syncfusion Web API. Extract
 platform: document-processing
 control: general
 documentation: UG
+appliesto: Document SDK
 ---
 # PDF to Markdown Conversion Using Syncfusion Web API
 

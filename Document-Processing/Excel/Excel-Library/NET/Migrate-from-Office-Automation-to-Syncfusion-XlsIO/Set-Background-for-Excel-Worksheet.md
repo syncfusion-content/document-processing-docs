@@ -4,6 +4,7 @@ description: Set image background for an Excel worksheet programmatically using 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Worksheet Backgrounds in .NET Excel Library

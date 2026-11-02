@@ -5,6 +5,7 @@ description: Accessibility in Angular Spreadsheet supports keyboard navigation, 
 platform: document-processing
 control: Accessibility 
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Accessibility in Angular Spreadsheet

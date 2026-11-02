@@ -6,6 +6,7 @@ platform: document-processing
 control: Read-Only by Default
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Open JavaScript DOCX Editor in Read-Only Mode

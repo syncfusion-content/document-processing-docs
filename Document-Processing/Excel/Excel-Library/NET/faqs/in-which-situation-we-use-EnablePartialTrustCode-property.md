@@ -4,6 +4,7 @@ description: EnablePartialTrustCode property describes when to enable partial tr
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # EnablePartialTrustCode Property in .NET Excel Library

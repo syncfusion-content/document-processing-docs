@@ -4,6 +4,7 @@ description: Cell formatting section describes how cell alignment, borders, font
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Cell and Range Formatting in .NET Excel Library

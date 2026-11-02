@@ -3,6 +3,7 @@ title: Font Manager for Office-to-PDF or image conversion | Syncfusion
 description: Learn how Syncfusion Document Processing handles font management during Office to PDF/Image conversions and PDF processing workflows.
 platform: document-processing
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Font Manager for Office-to-PDF/Image and PDF Processing

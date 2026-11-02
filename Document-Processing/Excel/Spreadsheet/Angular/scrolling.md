@@ -5,6 +5,7 @@ description: Scrolling in Angular Spreadsheet enables smooth navigation across r
 platform: document-processing
 control: Index
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Scrolling in Angular Spreadsheet 

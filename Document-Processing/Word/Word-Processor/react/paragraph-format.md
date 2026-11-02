@@ -6,6 +6,7 @@ control: Paragraph format
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Paragraph Format in React DOCX Editor

@@ -4,6 +4,7 @@ description: Named range conventions describes allowed characters, restrictions,
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Named Range Rules in .NET Excel Library

@@ -6,6 +6,7 @@ platform: document-processing
 control: Clipboard 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Clipboard in JavaScript DOCX Editor

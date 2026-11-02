@@ -5,6 +5,7 @@ description: Learn how to integrate the DeepSeek AI services with Syncfusion<sup
 platform: maui
 control: SmartComponents
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # DeepSeek AI Integration with .NET MAUI Smart Components

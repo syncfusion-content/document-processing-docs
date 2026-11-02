@@ -5,6 +5,7 @@ description: Create a custom toolbar in the ASP.NET MVC PDF Viewer, including ad
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Custom Toolbar in ASP.NET MVC PDF Viewer

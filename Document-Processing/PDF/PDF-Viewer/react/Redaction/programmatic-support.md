@@ -5,6 +5,7 @@ description: Add, delete, update, and apply redaction annotations in the React P
 platform: document-processing
 control: PdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Programmatic Redaction in React PDF Viewer

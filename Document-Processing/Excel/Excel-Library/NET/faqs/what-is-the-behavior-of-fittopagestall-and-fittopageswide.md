@@ -4,6 +4,7 @@ description: FitToPages settings describes the behavior of FitToPagesTall and Fi
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # FitToPagesTall and FitToPagesWide in .NET Excel Library

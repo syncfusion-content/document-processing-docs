@@ -5,6 +5,7 @@ description: Group PDF form fields in the ASP.NET Core PDF Viewer by assigning t
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Group Form Fields in ASP.NET Core PDF Viewer

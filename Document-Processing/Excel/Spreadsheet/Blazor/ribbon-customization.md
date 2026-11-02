@@ -5,6 +5,7 @@ description: Customize ribbon tabs, groups, items, and file menu options in the 
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Ribbon Customization in Blazor Spreadsheet

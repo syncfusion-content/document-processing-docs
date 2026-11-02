@@ -5,6 +5,7 @@ description: Learn how to open, edit, and save spreadsheet documents using the S
 platform: document-processing
 control: Open Save
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

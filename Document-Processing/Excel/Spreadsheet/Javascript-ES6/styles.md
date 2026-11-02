@@ -5,6 +5,7 @@ description: Styles in TypeScript Spreadsheet enable users to customize cell app
 platform: document-processing
 control: Styles
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Styles in TypeScript Spreadsheet 

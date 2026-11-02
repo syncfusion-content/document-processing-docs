@@ -5,6 +5,7 @@ description: Set up the Syncfusion ASP.NET Core PDF Viewer MCP server so AI tool
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # ASP.NET Core PDF Viewer MCP Server Setup

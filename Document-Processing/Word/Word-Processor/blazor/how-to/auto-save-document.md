@@ -5,6 +5,7 @@ description: Automatically save edited documents to the server at regular interv
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 # How to Auto Save Document in Blazor DOCX Editor
 

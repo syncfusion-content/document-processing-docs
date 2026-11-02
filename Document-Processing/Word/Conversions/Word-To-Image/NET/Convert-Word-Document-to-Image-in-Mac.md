@@ -4,6 +4,7 @@ description: Convert Word to image in ASP.NET  application on macOS using .NE
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert Word to Image on macOS

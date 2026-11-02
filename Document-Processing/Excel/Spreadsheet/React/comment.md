@@ -5,6 +5,7 @@ description: Learn about comments in the Syncfusion React Spreadsheet component,
 platform: document-processing
 control: Comment
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Comment in React Spreadsheet

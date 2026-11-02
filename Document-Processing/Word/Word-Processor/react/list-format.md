@@ -6,6 +6,7 @@ control: List format
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # List Format in React DOCX Editor

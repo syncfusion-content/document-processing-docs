@@ -6,6 +6,7 @@ control: Change the cursor color in DOCX Editor
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Change Cursor Color in React DOCX Editor

@@ -3,6 +3,7 @@ title: OCR PDF Using Web API | Syncfusion
 description: Convert scanned or image-based PDFs into searchable, selectable text PDFs using Syncfusion OCR Web API with image-enhancement options.
 control: general
 documentation: UG
+appliesto: Document SDK
 ---
 
 # OCR PDFs Using Syncfusion Web API

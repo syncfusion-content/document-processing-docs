@@ -5,6 +5,7 @@ description: Use page navigation in the ASP.NET Core PDF Viewer to move between 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Page Navigation in ASP.NET Core PDF Viewer

@@ -4,6 +4,7 @@ description: This section illustrates how to insert and manage OLE objects in Wo
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # OLE Objects in .NET Word
 

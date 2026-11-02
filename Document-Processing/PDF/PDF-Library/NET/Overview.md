@@ -5,6 +5,7 @@ description: Learn about the Syncfusion Essential Studio .NET PDF Library, its f
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 
 # About Syncfusion .NET PDF Library

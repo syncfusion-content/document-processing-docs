@@ -7,6 +7,7 @@ control: Annotation Toolbar Customization
 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # Customize the Annotation Toolbar in JavaScript (ES5) PDF Viewer

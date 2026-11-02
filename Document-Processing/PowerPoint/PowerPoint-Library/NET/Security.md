@@ -4,6 +4,7 @@ description: Learn how to encrypt, decrypt, and secure PowerPoint presentations 
 platform: document-processing
 control: Presentation
 documentation: UG
+appliesto: Document SDK
 ---
 # Security in .NET PowerPoint Presentation
 

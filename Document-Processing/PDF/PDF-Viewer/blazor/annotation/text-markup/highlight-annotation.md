@@ -5,6 +5,7 @@ description: Learn how to enable, apply, customize, and manage Highlight annotat
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Highlight Annotation in Blazor PDF Viewer 

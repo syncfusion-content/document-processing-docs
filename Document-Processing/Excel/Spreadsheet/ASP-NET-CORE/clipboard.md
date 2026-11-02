@@ -5,6 +5,7 @@ description: Learn about clipboard operations in the Syncfusion ASP.NET Core Spr
 platform: document-processing
 control: Clipboard
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

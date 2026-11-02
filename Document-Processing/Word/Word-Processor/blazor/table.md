@@ -5,6 +5,7 @@ description: Tables in Blazor DOCX Editor enable adding and managing rows, colum
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # Tables in Blazor DOCX Editor

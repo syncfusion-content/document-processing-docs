@@ -4,6 +4,7 @@ description: Create Markdown documents in AWS Lambda using the Syncfusion® .NET
 platform: document-processing
 control: Markdown
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create Markdown document in AWS Lambda

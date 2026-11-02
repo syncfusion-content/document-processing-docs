@@ -6,6 +6,7 @@ control: Spreadsheet
 platform: document-processing
 documentation: ug
 keywords: WinForms UI Builder, Skills, AI Assistants, Spreadsheet SDK, Agent Skills
+appliesto: Spreadsheet Editor SDK
 ---
 
 # UI Builder Skill in Windows Forms Spreadsheet

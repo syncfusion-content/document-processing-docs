@@ -5,6 +5,7 @@ description: Learn about the introduction and overview of the Syncfusion Windows
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # About Syncfusion Windows Forms Spreadsheet Control

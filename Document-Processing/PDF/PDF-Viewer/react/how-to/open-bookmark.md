@@ -5,6 +5,7 @@ description: Open or close the bookmark pane programmatically in the React PDF V
 control: PDF Viewer
 platform: document-processing
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Open or Hide the Bookmark Pane in React PDF Viewer

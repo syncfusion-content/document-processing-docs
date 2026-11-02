@@ -6,6 +6,7 @@ platform: document-processing
 control: Deploy DOCX Editor component for mobile
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Deploy Angular DOCX Editor for Mobile

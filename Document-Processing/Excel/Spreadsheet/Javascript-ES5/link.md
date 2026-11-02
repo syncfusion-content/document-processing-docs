@@ -5,6 +5,7 @@ description: Hyperlinks in JavaScript Spreadsheet allow users to insert and mana
 platform: document-processing
 control: Link
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Hyperlink in  JavaScript Spreadsheet 

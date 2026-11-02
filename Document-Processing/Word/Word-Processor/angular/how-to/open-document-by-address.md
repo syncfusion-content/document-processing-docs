@@ -6,6 +6,7 @@ platform: document-processing
 control: Open document by address
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Open a Document by URL in Angular DOCX Editor

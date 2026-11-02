@@ -6,6 +6,7 @@ platform: document-processing
 control: Installation and Deployment
 documentation: ug
 
+appliesto: Document SDK
 ---
 
 # How to Download Syncfusion PDF Web Installer

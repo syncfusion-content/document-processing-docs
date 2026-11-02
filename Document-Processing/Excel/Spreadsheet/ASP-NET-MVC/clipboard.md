@@ -5,6 +5,7 @@ description: Use clipboard operations in the Syncfusion ASP.NET MVC Spreadsheet 
 platform: document-processing
 control: Clipboard
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

@@ -4,6 +4,7 @@ description: Get frozen rows and columns in an Excel document using the Syncfusi
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to get frozen rows and columns in .NET Excel Library

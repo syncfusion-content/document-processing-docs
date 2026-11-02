@@ -6,6 +6,7 @@ platform: document-processing
 control: List format 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # List Format in Angular DOCX Editor

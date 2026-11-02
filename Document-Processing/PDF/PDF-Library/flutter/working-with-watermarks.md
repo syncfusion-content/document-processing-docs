@@ -5,6 +5,7 @@ description: Learn how to add text and image watermarks to PDF documents using S
 platform: document-processing
 control: PDF
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Watermarks in Flutter PDF

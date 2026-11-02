@@ -5,6 +5,7 @@ description: Hyperlink navigation in SfPdfViewer allows users to access linked w
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Hyperlink Navigation in Flutter PDF Viewer

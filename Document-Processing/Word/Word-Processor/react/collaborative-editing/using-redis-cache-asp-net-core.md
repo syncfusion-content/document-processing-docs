@@ -6,6 +6,7 @@ platform: document-processing
 control: Collaborative Editing 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Collaborative Editing in React DOCX Editor with Redis in ASP.NET Core

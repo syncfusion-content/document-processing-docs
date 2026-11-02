@@ -4,6 +4,7 @@ description: Access built-in properties of Excel documents using the Syncfusion 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to access document properties in .NET Excel Library

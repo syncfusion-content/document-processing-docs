@@ -5,6 +5,7 @@ description: Learn here all about how to create PDF document in the created even
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Create PDF document in PDF Viewer created event

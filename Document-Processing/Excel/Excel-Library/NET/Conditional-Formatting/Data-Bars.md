@@ -4,6 +4,7 @@ description: Data-bar conditional formatting describes how Syncfusion .NET Excel
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Data Bars in .NET Excel Library

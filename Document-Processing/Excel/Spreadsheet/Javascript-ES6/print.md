@@ -5,6 +5,7 @@ description: Print in TypeScript Spreadsheet enables users to print worksheet co
 platform: document-processing
 control: Print
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Print in TypeScript Spreadsheet 

@@ -5,6 +5,7 @@ description: Deploy the Syncfusion® ASP.NET Core DOCX Editor for mobile browser
 platform: document-processing
 control: Deploy the DOCX Editor component for mobile
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # How to Deploy ASP.NET Core DOCX Editor for Mobile

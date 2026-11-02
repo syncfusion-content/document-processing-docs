@@ -6,6 +6,7 @@ platform: document-processing
 control: Retry Timeout
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: PDF Viewer SDK
 ---
 
 # How to Configure Retry Timeout in Angular PDF Viewer

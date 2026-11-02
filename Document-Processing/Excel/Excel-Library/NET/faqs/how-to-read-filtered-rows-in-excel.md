@@ -4,6 +4,7 @@ description: Read filtered data from an Excel file using the Syncfusion .NET Exc
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to read filtered rows in .NET Excel Library

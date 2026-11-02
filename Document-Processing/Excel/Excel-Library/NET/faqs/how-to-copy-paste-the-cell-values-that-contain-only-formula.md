@@ -4,6 +4,7 @@ description: Copy and paste values from formula cells in Excel worksheets using 
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to copy formula cells in .NET Excel Library

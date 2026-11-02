@@ -5,6 +5,7 @@ description: Close the comment panel in the ASP.NET MVC PDF Viewer programmatica
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Close the Comment Panel in ASP.NET MVC PDF Viewer

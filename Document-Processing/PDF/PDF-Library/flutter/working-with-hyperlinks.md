@@ -5,6 +5,7 @@ description: Learn how to add hyperlinks and web navigation features in PDF docu
 platform: document-processing
 control: PDF
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Hyperlinks in Flutter PDF

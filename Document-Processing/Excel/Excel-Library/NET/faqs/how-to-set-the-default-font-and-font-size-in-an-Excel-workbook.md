@@ -4,6 +4,7 @@ description: Set the default font and font size in an Excel workbook using the S
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to set default fonts in .NET Excel Library

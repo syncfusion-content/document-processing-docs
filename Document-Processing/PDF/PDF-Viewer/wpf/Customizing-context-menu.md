@@ -5,6 +5,7 @@ description: Customize context menus in Syncfusion WPF PDF Viewer by adding, rem
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Customization support for context menu in WPF PdfViewer

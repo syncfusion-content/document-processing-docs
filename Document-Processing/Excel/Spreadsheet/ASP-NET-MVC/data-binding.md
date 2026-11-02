@@ -5,6 +5,7 @@ description: Bind local and remote data sources to the Syncfusion ASP.NET MVC Sp
 platform: document-processing
 control: Data Binding
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 

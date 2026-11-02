@@ -5,6 +5,7 @@ description: The sticky note annotation feature in SfPdfViewer enables users to 
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Sticky Note Annotations in Flutter PDF Viewer

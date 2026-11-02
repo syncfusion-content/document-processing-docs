@@ -5,6 +5,7 @@ description: The find and replace feature in ASP.NET MVC DOCX Editor helps users
 platform: document-processing
 control: Find And Replace
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

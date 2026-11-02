@@ -4,6 +4,7 @@ description: This section illustrates how to configure Gradle and download the r
 platform: document-processing
 control: general
 documentation: UG
+appliesto: Document SDK
 ---
 # Download Syncfusion Java packages from Gradle in Java
 

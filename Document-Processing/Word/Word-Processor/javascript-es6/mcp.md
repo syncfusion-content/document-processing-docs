@@ -6,6 +6,7 @@ platform: document-processing
 control: DocumentEditor
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # MCP Server for TypeScript DOCX Editor

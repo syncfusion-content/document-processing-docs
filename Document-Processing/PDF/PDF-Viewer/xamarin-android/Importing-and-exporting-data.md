@@ -5,6 +5,7 @@ description: Learn about importing and exporting data support in Syncfusion<sup>
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Importing and exporting data in Xamarin.Android Pdf Viewer

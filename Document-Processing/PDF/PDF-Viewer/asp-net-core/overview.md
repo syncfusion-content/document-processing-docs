@@ -4,6 +4,7 @@ description: Learn about introduction of Syncfusion Essential Studio ASP.NET Cor
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # About Syncfusion ASP.NET Core PDF Viewer Control

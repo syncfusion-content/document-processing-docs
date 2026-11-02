@@ -5,6 +5,7 @@ description: Learn how to localize and globalize the Syncfusion Vue Spreadsheet 
 control: Global local 
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Globalization in Vue Spreadsheet

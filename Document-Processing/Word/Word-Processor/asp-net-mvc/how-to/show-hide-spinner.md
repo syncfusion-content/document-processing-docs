@@ -5,6 +5,7 @@ description: Show or hide loading indicators in Syncfusion® ASP.NET MVC DOCX Ed
 platform: document-processing
 control: Show or Hide a Spinner
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

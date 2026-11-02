@@ -5,6 +5,7 @@ description: Export PDF form field data from the ASP.NET Core PDF Viewer in FDF,
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Export Form Data in ASP.NET Core PDF Viewer

@@ -4,6 +4,7 @@ description: Describe common questions about using the Syncfusion .NET Word libr
 platform: document-processing
 control: Word Library
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Mail merge events in Java Word

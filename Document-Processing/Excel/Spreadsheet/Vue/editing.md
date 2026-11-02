@@ -5,6 +5,7 @@ description: Explore cell editing capabilities in the Syncfusion Vue Spreadsheet
 control: Editing
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Editing in Vue Spreadsheet

@@ -5,6 +5,7 @@ description: Learn how to view DOCX in a Blazor application using the Word Proce
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to View a DOCX File in a Blazor Application

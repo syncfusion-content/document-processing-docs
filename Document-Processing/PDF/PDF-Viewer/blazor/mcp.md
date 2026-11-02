@@ -5,6 +5,7 @@ description: Discover the MCP server's advantages, installation requirements, an
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # MCP Server Setup in Blazor PDF Viewer

@@ -5,6 +5,7 @@ description: Customize the primary toolbar in the ASP.NET MVC PDF Viewer to show
 platform: document-processing
 control: PDF Viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Customize the Primary Toolbar in ASP.NET MVC PDF Viewer

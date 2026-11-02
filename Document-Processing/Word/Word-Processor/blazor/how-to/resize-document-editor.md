@@ -5,6 +5,7 @@ description: Adjust the height and width of the Syncfusion® Blazor DOCX Editor 
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # How to Resize in Blazor DOCX Editor 

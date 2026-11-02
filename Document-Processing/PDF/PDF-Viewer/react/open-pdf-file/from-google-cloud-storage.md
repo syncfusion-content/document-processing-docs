@@ -5,6 +5,7 @@ description: Load and display PDF files stored in Google Cloud Storage in the Re
 control: PDF Viewer
 platform: document-processing
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Open PDF from Google Cloud Storage in React PDF Viewer

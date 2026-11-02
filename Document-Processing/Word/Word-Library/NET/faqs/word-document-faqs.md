@@ -4,6 +4,7 @@ description: Describe common mail merge issues and troubleshooting techniques in
 platform: document-processing
 control: DocIO
 documentation: UG
+appliesto: Document SDK
 ---
 # FAQ about Word Document in .NET Word
 

@@ -4,6 +4,7 @@ description: Assign values to Excel cells in Syncfusion .NET Excel Library witho
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to assign values without format changes in .NET Excel Library

@@ -5,6 +5,7 @@ description: Learn about internal and external digital signature features in Syn
 platform: document-processing
 control: PDF
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Digital Signature in Flutter PDF

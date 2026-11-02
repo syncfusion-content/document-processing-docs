@@ -4,6 +4,7 @@ description: Azure App Service on Windows Excel to Image section explains how to
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Excel to Image Conversion in Azure Windows using Excel Library

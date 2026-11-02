@@ -5,6 +5,7 @@ description: Improve performance in Syncfusion ASP.NET Core Spreadsheet by using
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Suspend and Resume UI Refresh in ASP.NET Core Spreadsheet

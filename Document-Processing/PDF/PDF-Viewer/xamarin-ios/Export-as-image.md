@@ -5,6 +5,7 @@ description: Convert pages of the PDF to image stream with custom scale factor u
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # PDF to images conversion using PDF Viewer Xamarin.iOS

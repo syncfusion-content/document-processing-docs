@@ -6,6 +6,7 @@ control: Hide tool bar and properties pane
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # How to Hide Toolbar and Properties Pane in Vue DOCX Editor

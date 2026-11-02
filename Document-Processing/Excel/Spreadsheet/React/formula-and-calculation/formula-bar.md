@@ -5,6 +5,7 @@ description: Learn about the formula bar in the Syncfusion React Spreadsheet com
 control: Formulas
 platform: document-processing
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Formula Bar in React Spreadsheet

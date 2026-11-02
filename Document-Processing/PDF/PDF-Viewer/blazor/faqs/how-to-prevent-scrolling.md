@@ -5,6 +5,7 @@ description: Learn here all about how to prevent scrolling and remove the vertic
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # How to Prevent the PDF from scrolling

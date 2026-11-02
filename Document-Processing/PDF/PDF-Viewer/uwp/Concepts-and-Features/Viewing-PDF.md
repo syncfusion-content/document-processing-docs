@@ -5,6 +5,7 @@ description: Learn here all about Viewing PDF support in Syncfusion<sup>®</sup>
 platform: document-processing
 control: PDF viewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Viewing PDF in UWP PDF Viewer

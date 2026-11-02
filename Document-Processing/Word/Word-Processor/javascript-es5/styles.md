@@ -6,6 +6,7 @@ platform: document-processing
 control: Styles 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 
 # Styles in JavaScript DOCX Editor

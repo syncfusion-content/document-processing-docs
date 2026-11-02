@@ -5,6 +5,7 @@ description: Learn how to create, manage, and customize worksheets in the Syncfu
 platform: document-processing
 control: Spreadsheet
 documentation: ug
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Worksheet Operations in Blazor Spreadsheet

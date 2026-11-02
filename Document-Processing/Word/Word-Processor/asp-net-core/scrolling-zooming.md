@@ -5,6 +5,7 @@ description: The scrolling and zooming in ASP.NET Core DOCX Editor enables smoot
 platform: document-processing
 control: Scrolling and Zooming
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 

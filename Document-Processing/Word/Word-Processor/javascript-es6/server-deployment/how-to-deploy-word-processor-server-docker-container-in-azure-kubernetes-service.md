@@ -6,6 +6,7 @@ platform: document-processing
 control: How to deploy word processor server docker container in azure kubernetes service 
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK
 ---
 # How to Deploy TypeScript DOCX Editor Docker Image on AKS
 

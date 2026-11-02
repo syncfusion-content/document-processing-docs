@@ -4,6 +4,7 @@ description: Configure font settings for shape text in Excel documents using the
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to apply fonts to shape text in .NET Excel Library

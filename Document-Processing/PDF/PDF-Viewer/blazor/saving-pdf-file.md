@@ -5,6 +5,7 @@ description: Check out and learn here all about saving PDF file in Syncfusion Bl
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
+appliesto: PDF Viewer SDK
 ---
 
 # Saving PDF file in Blazor PDF Viewer 

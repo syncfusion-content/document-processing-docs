@@ -4,6 +4,7 @@ description: WPF Excel to PDF section explains how to convert Excel documents to
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Excel to PDF Conversion in WPF using Excel Library

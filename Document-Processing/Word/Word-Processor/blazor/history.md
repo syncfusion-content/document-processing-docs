@@ -5,6 +5,7 @@ description: History in Blazor DOCX Editor tracks editing actions to enable undo
 platform: document-processing
 control: DOCX Editor
 documentation: ug
+appliesto: DOCX Editor SDK
 ---
 
 # History in Blazor DOCX Editor

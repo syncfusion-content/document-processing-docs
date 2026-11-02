@@ -4,6 +4,7 @@ description: Hyperlink ScreenTip limit describes the maximum supported ScreenTip
 platform: document-processing 
 control: XlsIO 
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Maximum Hyperlink ScreenTip Length in .NET Excel Library

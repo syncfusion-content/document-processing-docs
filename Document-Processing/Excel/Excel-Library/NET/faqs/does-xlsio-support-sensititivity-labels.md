@@ -4,6 +4,7 @@ description: Microsoft sensitivity labels explains whether the Syncfusion .NET E
 platform: document-processing
 control: XlsIO
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Sensitivity Labels in .NET Excel Library

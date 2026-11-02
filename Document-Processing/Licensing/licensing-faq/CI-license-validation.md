@@ -5,6 +5,7 @@ description: Learn how to register and validate the license key for Syncfusion D
 platform: file-formats
 control: Essential Studio
 documentation: ug
+appliesto: Document SDK, PDF Viewer SDK, DOCX Editor SDK, Spreadsheet Editor SDK
 ---
 
 <style>
