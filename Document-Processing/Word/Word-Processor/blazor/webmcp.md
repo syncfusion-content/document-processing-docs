@@ -140,7 +140,7 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 
 | Tool Name | Type | Condition | Description |
 |-----------|------|-----------|-------------|
-| saveDocument | Write | Always | Save the document to a file with specified format (Docx, Pdf, Rtf, Txt, Html, WordML). Accepts `fileName` and optional `formatType`. |
+| saveDocument | Write | Always | Save the document to a file with specified format (DOCX, PDF, RTF, TXT, HTML, WordML). Accepts `fileName` and optional `formatType`. |
 | print | Write | Always | Print the current document. |
 
 
