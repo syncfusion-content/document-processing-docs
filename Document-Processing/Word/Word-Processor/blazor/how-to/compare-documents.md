@@ -9,7 +9,7 @@ documentation: ug
 
 # How to Compare Word Documents in Blazor DOCX Editor
 
-In this article, we are going to see how to compare two Word documents and view the resultant document with tracked changes in the Document Editor.
+In this article, we are going to see how to compare two Word documents and view the resultant document with tracked changes in the [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor).
 
 Document comparison is performed with the [Syncfusion<sup style="font-size:70%">&reg;</sup> .NET Word library (DocIO)](https://www.syncfusion.com/document-sdk/net-word-library). It highlights the following changes as tracked changes:
 
