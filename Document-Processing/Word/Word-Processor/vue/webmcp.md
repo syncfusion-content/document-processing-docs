@@ -130,7 +130,6 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 | getSelectionText | Read | Always | Retrieves the plain text content of the current selection. |
 | getSelectionSfdt | Read | Always | Retrieves the selected content as formatted SFDT. |
 
----
 
 ## Search & Navigation Tools
 
@@ -145,7 +144,6 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 | selectCurrentWord | Write | Always | Selects the word at the current cursor position. |
 | selectParagraph | Write | Always | Selects the current paragraph. |
 
----
 
 ## Content Editing Tools
 
@@ -159,7 +157,6 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 | insertImage | Write | Always | Inserts an image with optional sizing and alternate text. |
 | insertHyperlink | Write | Always | Inserts a hyperlink with optional display text and screen tip. |
 
----
 
 ## Formatting Tools
 
@@ -168,7 +165,6 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 | formatCharacter | Write | Always | Applies character formatting such as font, size, color, bold, italic, and highlighting. |
 | formatParagraph | Write | Always | Applies paragraph formatting such as alignment, indentation, and spacing. |
 
----
 
 ## Protection & Permissions Tools
 
@@ -178,7 +174,6 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 | stopProtection | Write | Always | Removes document protection and restores editing access. |
 | insertEditingRegion | Write | Always | Creates an editable region for specific users in a protected document. |
 
----
 
 ## Document Management Tools
 
@@ -188,7 +183,6 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 | configureDocumentEditorSettings | Write | Always | Configures editor appearance and behavior settings such as ruler, bookmarks, navigation pane, and fonts. |
 | print | Write | Always | Opens the print dialog for the current document. |
 
----
 
 ## Code Examples
 
