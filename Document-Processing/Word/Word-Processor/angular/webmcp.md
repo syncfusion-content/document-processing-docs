@@ -124,7 +124,7 @@ Find every occurrence of "Syncfusion" and replace it with "Syncfusion Inc."
 
 WebMCP tools are organized by category. The tables below provide an overview of all available tools. For complete input/output schemas, call `getWebMcpTools()` programmatically.
 
-## Document Information Tools
+### Document Information Tools
 
 | Tool Name | Type | Condition | Description |
 |-----------|------|-----------|-------------|
@@ -134,7 +134,7 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 | getSelectionSfdt | Read | Always | Retrieves the selected content as formatted SFDT. |
 
 
-## Search & Navigation Tools
+### Search & Navigation Tools
 
 | Tool Name | Type | Condition | Description |
 |-----------|------|-----------|-------------|
@@ -148,7 +148,7 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 | selectParagraph | Write | Always | Selects the current paragraph. |
 
 
-## Content Editing Tools
+### Content Editing Tools
 
 | Tool Name | Type | Condition | Description |
 |-----------|------|-----------|-------------|
@@ -161,7 +161,7 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 | insertHyperlink | Write | Always | Inserts a hyperlink with optional display text and screen tip. |
 
 
-## Formatting Tools
+### Formatting Tools
 
 | Tool Name | Type | Condition | Description |
 |-----------|------|-----------|-------------|
@@ -169,7 +169,7 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 | formatParagraph | Write | Always | Applies paragraph formatting such as alignment, indentation, and spacing. |
 
 
-## Protection & Permissions Tools
+### Protection & Permissions Tools
 
 | Tool Name | Type | Condition | Description |
 |-----------|------|-----------|-------------|
@@ -178,7 +178,7 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 | insertEditingRegion | Write | Always | Creates an editable region for specific users in a protected document. |
 
 
-## Document Management Tools
+### Document Management Tools
 
 | Tool Name | Type | Condition | Description |
 |-----------|------|-----------|-------------|
@@ -191,7 +191,7 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 
 ### Basic Setup
 
-Set up a DocumentEditorContainer with WebMCP enabled and register tools on creation.
+Set up a DOCX Editor with WebMCP enabled and register tools on creation.
 
 ```ts
 import { Component } from '@angular/core';
@@ -227,6 +227,161 @@ export class App {
 ```
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Angular-DOCX-Editor-Examples/tree/master/webmcp/getting-started).
 
+### Selective Tool Registration
+
+Register only the essential tools required for the application to minimize system exposure and enhance security.
+
+```ts
+import { Component, ViewChild } from '@angular/core';
+import {
+    DocumentEditorContainerModule,
+    ToolbarService,
+    RibbonService,
+} from '@syncfusion/ej2-angular-documenteditor';
+
+@Component({
+    selector: 'app-root',
+    standalone: true,
+    imports: [DocumentEditorContainerModule],
+    template: `
+    <!-- Use the following service URL only for demo purposes -->
+    <ejs-documenteditorcontainer        
+        #document_editor
+        id="container"
+        serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
+        height="590px"
+        style="width:100%;display:block"
+        [enableToolbar]="true"
+        [toolbarMode]="'Ribbon'" 
+        [enableWebMcp]="true"
+        [webMcpSettings]="webMcpSettings">
+    </ejs-documenteditorcontainer>
+`,
+    providers: [ToolbarService, RibbonService]
+})
+export class App { @ViewChild('document_editor')
+    public webMcpSettings: any = {
+        name: 'container',
+        tools: [ 'getDocumentBookmarks', 'getSelectionText', 'find', 'findAll', 'goToPage' ] //Register only with needed tools
+    };
+}
+```
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Angular-DOCX-Editor-Examples/tree/master/webmcp/selective-tools-registration).
+
+### Multi-Instance Setup
+
+Shows how to use different prefixes for multiple DOCX Editor instances on the same page.
+
+```ts
+import { Component } from '@angular/core';
+import {
+    DocumentEditorContainerModule,
+    ToolbarService,
+    RibbonService
+} from '@syncfusion/ej2-angular-documenteditor';
+
+@Component({
+    selector: 'app-root',
+    standalone: true,
+    imports: [DocumentEditorContainerModule],
+    template: `
+    <!-- Use the following service URLs only for demo purposes -->
+    <div style="display:flex; width:100%; gap:10px;">
+
+        <ejs-documenteditorcontainer
+            serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
+            height="590px"
+            width="50%"
+            [enableToolbar]="true"
+            [toolbarMode]="'Ribbon'"
+            [enableWebMcp]="true"
+            [webMcpSettings]="webMcpSettings1">
+        </ejs-documenteditorcontainer>
+
+        <ejs-documenteditorcontainer
+            serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
+            height="590px"
+            width="50%"
+            [enableToolbar]="true"
+            [toolbarMode]="'Ribbon'"
+            [enableWebMcp]="true"
+            [webMcpSettings]="webMcpSettings2">
+        </ejs-documenteditorcontainer>
+
+    </div>
+    `,
+    providers: [ToolbarService, RibbonService]
+})
+export class App {
+
+    public webMcpSettings1 = {
+        name: 'documentEditor1'
+    };
+
+    public webMcpSettings2 = {
+        name: 'documentEditor2'
+    };
+}
+```
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Angular-DOCX-Editor-Examples/tree/master/webmcp/multi-instance).
+
+### Auditing and Restrictions
+
+Demonstrates the use of the beforeWebMcpToolExecute event to log tool activity and block restricted operations.
+
+```ts
+import { Component } from '@angular/core';
+import {
+    DocumentEditorContainerModule,
+    ToolbarService,
+    RibbonService,
+    WebMcpToolExecuteEventArgs
+} from '@syncfusion/ej2-angular-documenteditor';
+
+@Component({
+    selector: 'app-root',
+    standalone: true,
+    imports: [DocumentEditorContainerModule],
+    template: `
+    <!-- Use the following service URL only for demo purposes -->
+    <ejs-documenteditorcontainer
+        serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
+        height="590px"
+        style="width:100%;display:block"
+        [enableToolbar]="true"
+        [toolbarMode]="'Ribbon'"
+        [enableWebMcp]="true"
+        [webMcpSettings]="webMcpSettings"
+        (beforeWebMcpToolExecute)="beforeWebMcpToolExecute($event)">
+    </ejs-documenteditorcontainer>
+`,
+    providers: [ToolbarService, RibbonService]
+})
+export class App {
+    public webMcpSettings: any = {
+        name: 'container'
+    };
+
+    public beforeWebMcpToolExecute(args: WebMcpToolExecuteEventArgs): void {
+        const { toolName, toolArgs } = args;
+
+        // Audit all WebMCP tool invocations
+        console.log(`[WebMCP] Executing: ${toolName}`, toolArgs);
+
+        const commandName = toolName?.includes('_')
+            ? toolName.substring(toolName.indexOf('_') + 1)
+            : toolName;
+
+        // Restrict a specific tool
+        if (commandName === 'saveDocument') {
+            args.cancel = true;
+            args.cancellationResponse = 'The saveDocument operation has been restricted.';
+        }
+    }
+}
+```
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Angular-DOCX-Editor-Examples/tree/master/webmcp/auditing-and-restrictions).
+
 ## Troubleshooting FAQs
 
 ### What are the common causes of "WebMCP Not Available" or an "modelContext is Undefined" errors?
@@ -238,7 +393,6 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Angular-DOCX-Ed
 2. Check your Chrome version is up-to-date (WebMCP requires recent Chromium)
 3. Ensure you're testing on a secure context (HTTPS or localhost)
 
----
 
 ### Why aren't my registered tools displayed in the extension?
 
@@ -248,7 +402,6 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Angular-DOCX-Ed
 4. Try refreshing the page and opening the extension again
 5. Verify the tool prefix is correct (check console logs)
 
----
 
 ### Why don't registered tools execute?
 
@@ -259,8 +412,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Angular-DOCX-Ed
 2. Verify the extension has permission to access the site:
    - Right-click WebMCP extension → Manage extension
    - Ensure "Allow on this site" is enabled
-   
----
+
 
 ### Why do I get a "Permission denied" or "Secure context required" error?
 
@@ -268,7 +420,6 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Angular-DOCX-Ed
 2. If using cross-origin tools, both sites must be HTTPS
 3. Test locally using `localhost:4200` or similar
 
----
 
 ## See Also
 
