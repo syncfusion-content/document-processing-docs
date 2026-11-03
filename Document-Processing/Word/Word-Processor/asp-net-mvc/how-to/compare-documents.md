@@ -23,24 +23,32 @@ After the comparison, the resultant document is opened in the Document Editor, w
 The following steps illustrate how to compare the documents:
 
 * Install the [`Syncfusion.DocIO.AspNet.Mvc5`](https://www.nuget.org/packages/Syncfusion.DocIO.AspNet.Mvc5) NuGet package in the ASP.NET MVC application.
-* In a controller action, convert the original and revised SFDT contents to DocIO `WordDocument` instances using the `WordDocument.Save` method of the Document Editor library.
+* In a controller action, accept the original and revised documents as uploaded files (DOCX, DOC, RTF or SFDT). Convert SFDT files to DocIO `WordDocument` instances using the `WordDocument.Save` method of the Document Editor library.
 * Compare the documents using the `Compare` method of DocIO. The changes are marked as tracked changes in the original document.
 * Load the compared document into the Document Editor `WordDocument` instance using the `WordDocument.Load` method and return it as SFDT.
-* In the client, call the controller action and open the returned SFDT using the [`open`](https://ej2.syncfusion.com/documentation/api/document-editor#open) method, with the `showRevisions` property enabled to display the tracked changes.
+* In the client, post the documents to the Web API as form data and open the returned SFDT using the [`open`](https://ej2.syncfusion.com/documentation/api/document-editor#open) method, with the `showRevisions` property enabled to display the tracked changes.
 
-The following example code illustrates how to compare two documents (using static SFDT contents) and open the resultant document in the Document Editor.
+The following example code illustrates how to compare two documents (using static SFDT contents sent as files) and open the resultant document in the Document Editor.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Index.cshtml" %}
 <button id="compare" class="e-btn e-primary">Compare Documents</button>
-@Html.EJS().DocumentEditorContainer("container").Height("590px").EnableToolbar(false).ShowPropertiesPane(false).EnableTrackChanges(true).ServiceUrl(Url.Content("~/DocumentEditor/")).Render()
+@Html.EJS().DocumentEditorContainer("container").Height("590px").EnableToolbar(false).ShowPropertiesPane(false).EnableTrackChanges(true).Render()
 
 <script>
+    // Static SFDT contents of the original and revised documents.
+    var originalSfdt = '...';
+    var revisedSfdt = '...';
+
     document.getElementById('compare').addEventListener('click', function () {
-        var container = document.getElementById('container').ej2_instances[0];
-        var editor = container.documentEditor;
-        // Compare the documents on the server side and open the resultant SFDT with tracked changes.
-        fetch('@Url.Content("~/DocumentEditor/CompareDocuments")', { method: 'POST' })
+        var editor = document.getElementById('container').ej2_instances[0].documentEditor;
+
+        // Send the documents to the Web API, which compares them and returns the resultant SFDT.
+        var formData = new FormData();
+        formData.append('OriginalFile', new Blob([originalSfdt]), 'original.sfdt');
+        formData.append('RevisedFile', new Blob([revisedSfdt]), 'revised.sfdt');
+
+        fetch('@Url.Content("~/DocumentEditor/CompareDocuments")', { method: 'POST', body: formData })
             .then(function (response) { return response.text(); })
             .then(function (sfdt) {
                 editor.showRevisions = true;
@@ -50,39 +58,82 @@ The following example code illustrates how to compare two documents (using stati
 </script>
 {% endhighlight %}
 {% highlight c# tabtitle="DocumentEditorController.cs" %}
-        // Static SFDT contents of the original and revised documents (truncated here).
-        private const string OriginalSfdt = "...";
-        private const string RevisedSfdt = "...";
-
-        // Compares the original and revised documents and returns the resultant SFDT with tracked changes.
-        [HttpPost]
-        public ActionResult CompareDocuments()
+    // Multipart form: "OriginalFile" and "RevisedFile" = the documents to compare (.docx, .doc, .rtf or .sfdt).
+    // Returns the original document with the differences marked as tracked changes, as SFDT.
+    [HttpPost]
+    public ActionResult CompareDocuments(HttpPostedFileBase originalFile, HttpPostedFileBase revisedFile)
+    {
+        if (originalFile == null || revisedFile == null)
         {
-            using (DLSWordDocument originalDocument = ToWordDocument(OriginalSfdt))
-            using (DLSWordDocument revisedDocument = ToWordDocument(RevisedSfdt))
+            return new HttpStatusCodeResult(400, "Both the original and revised files are required.");
+        }
+
+        try
+        {
+            using (DLSWordDocument revisedDocument = GetWordDocument(revisedFile))
+            using (DLSWordDocument originalDocument = GetWordDocument(originalFile))
             {
-                // Marks the differences as tracked changes in the original document.
+                // Compares the original document with the revised document and highlights the changes as tracked changes.
                 originalDocument.Compare(revisedDocument);
 
-                // Loads the compared document into the Document Editor WordDocument and serializes it as SFDT.
+                // Loads the compared document into the WordDocument instance of the Document Editor server-side library.
                 EJ2WordDocument document = EJ2WordDocument.Load(originalDocument);
+
+                // Serializes the compared document as SFDT content.
                 string json = JsonConvert.SerializeObject(document);
                 document.Dispose();
                 return Content(json, "application/json");
             }
         }
-
-        private static DLSWordDocument ToWordDocument(string sfdt)
+        catch (Exception ex)
         {
-            // Converts the SFDT content to a DocIO document through a DOCX stream.
-            using (DLSWordDocument sfdtDocument = EJ2WordDocument.Save(sfdt))
+            throw new InvalidOperationException("Error comparing documents: " + ex.Message, ex);
+        }
+    }
+
+    private static DLSWordDocument GetWordDocument(HttpPostedFileBase file)
+    {
+        string type = Path.GetExtension(file.FileName);
+        if (string.IsNullOrEmpty(type))
+        {
+            type = ".docx";
+        }
+
+        MemoryStream stream = new MemoryStream();
+        file.InputStream.CopyTo(stream);
+        stream.Position = 0;
+
+        if (type.ToLowerInvariant() == ".sfdt")
+        {
+            // Converts the SFDT content to DOCX format for comparison.
+            using (StreamReader reader = new StreamReader(stream))
+            using (DLSWordDocument sfdtDocument = EJ2WordDocument.Save(reader.ReadToEnd()))
             {
-                MemoryStream stream = new MemoryStream();
-                sfdtDocument.Save(stream, DocIOFormatType.Docx);
-                stream.Position = 0;
-                return new DLSWordDocument(stream, DocIOFormatType.Docx);
+                MemoryStream outStream = new MemoryStream();
+                sfdtDocument.Save(outStream, DocIOFormatType.Docx);
+                outStream.Position = 0;
+                return new DLSWordDocument(outStream, DocIOFormatType.Docx);
             }
         }
+
+        // Loads the document for comparison.
+        return new DLSWordDocument(stream, GetDocIOFormatType(type));
+    }
+
+    private static DocIOFormatType GetDocIOFormatType(string extension)
+    {
+        switch (extension.ToLowerInvariant())
+        {
+            case ".dotx": return DocIOFormatType.Dotx;
+            case ".docm": return DocIOFormatType.Docm;
+            case ".dotm": return DocIOFormatType.Dotm;
+            case ".doc": return DocIOFormatType.Doc;
+            case ".dot": return DocIOFormatType.Dot;
+            case ".rtf": return DocIOFormatType.Rtf;
+            case ".docx": return DocIOFormatType.Docx;
+            default: throw new NotSupportedException("Unsupported file format: " + extension);
+        }
+    }
 {% endhighlight %}
 {% endtabs %}
 
