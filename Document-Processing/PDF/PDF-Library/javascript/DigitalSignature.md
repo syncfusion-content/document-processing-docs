@@ -1115,8 +1115,6 @@ const document: PdfDocument = new PdfDocument(documentData);
 // Get the first signature field from the form.
 const field: PdfSignatureField = document.form.fieldAt(0) as PdfSignatureField;
 // Get the signature from the field.
-const signature: PdfSignature = field.getSignature();
-// Configure the signature validation options.
 const options: PdfSignatureValidationOptions = {
     trustedCertificates: [certificateData],
     passwords: ['syncfusion']
@@ -1139,8 +1137,6 @@ document.destroy();
 const document = new ej.pdf.PdfDocument(documentData);
 // Get the first signature field from the form.
 const field = document.form.fieldAt(0);
-// Get the signature from the field.
-const signature = field.getSignature();
 // Configure the signature validation options.
 const options = {
     trustedCertificates: [certificateData],
