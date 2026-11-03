@@ -121,7 +121,7 @@ Find every occurrence of "Syncfusion" and replace it with "Syncfusion Inc."
 
 WebMCP tools are organized by category. The tables below provide an overview of all available tools. For complete input/output schemas, call `getWebMcpTools()` programmatically.
 
-## Document Information Tools
+### Document Information Tools
 
 | Tool Name | Type | Condition | Description |
 |-----------|------|-----------|-------------|
@@ -131,7 +131,7 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 | getSelectionSfdt | Read | Always | Retrieves the selected content as formatted SFDT. |
 
 
-## Search & Navigation Tools
+### Search & Navigation Tools
 
 | Tool Name | Type | Condition | Description |
 |-----------|------|-----------|-------------|
@@ -145,7 +145,7 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 | selectParagraph | Write | Always | Selects the current paragraph. |
 
 
-## Content Editing Tools
+### Content Editing Tools
 
 | Tool Name | Type | Condition | Description |
 |-----------|------|-----------|-------------|
@@ -158,7 +158,7 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 | insertHyperlink | Write | Always | Inserts a hyperlink with optional display text and screen tip. |
 
 
-## Formatting Tools
+### Formatting Tools
 
 | Tool Name | Type | Condition | Description |
 |-----------|------|-----------|-------------|
@@ -166,7 +166,7 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 | formatParagraph | Write | Always | Applies paragraph formatting such as alignment, indentation, and spacing. |
 
 
-## Protection & Permissions Tools
+### Protection & Permissions Tools
 
 | Tool Name | Type | Condition | Description |
 |-----------|------|-----------|-------------|
@@ -175,7 +175,7 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 | insertEditingRegion | Write | Always | Creates an editable region for specific users in a protected document. |
 
 
-## Document Management Tools
+### Document Management Tools
 
 | Tool Name | Type | Condition | Description |
 |-----------|------|-----------|-------------|
@@ -188,7 +188,7 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 
 ### Basic Setup
 
-Set up a DocumentEditorContainer with WebMCP enabled and register tools on creation.
+Set up a DOCX Editor with WebMCP enabled and register tools on creation.
 
 ```ts
 <template>
@@ -244,6 +244,180 @@ const created = () => {
 ```
 
 N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Vue-DOCX-Editor-Examples/tree/master/webmcp/getting-started).
+
+### Selective Tool Registration
+
+Register only the essential tools required for the application to minimize system exposure and enhance security.
+
+```ts
+<template>
+  <div id="app">
+    <ejs-documenteditorcontainer
+      ref="container"
+      :serviceUrl="serviceUrl"
+      :height="height"
+      :width="width"
+      :enableToolbar="true"
+      :enableWebMcp="true"
+      toolbarMode="Ribbon"
+      :webMcpSettings="webMcpSettings">
+    </ejs-documenteditorcontainer>
+  </div>
+</template>
+
+<script setup>
+import { provide, ref } from 'vue';
+import {
+  DocumentEditorContainerComponent as EjsDocumenteditorcontainer,
+  Toolbar,
+  Ribbon
+} from '@syncfusion/ej2-vue-documenteditor';
+
+const container = ref(null);
+// Use the following service URL only for demo purposes
+const serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
+
+const height = '100%';
+const width = '100%';
+
+const webMcpSettings = {
+  name: 'container',
+  tools: ['getDocumentBookmarks', 'getSelectionText', 'find', 'findAll', 'goToPage'] // Register only the needed tools
+};
+
+provide('DocumentEditorContainer', [Toolbar, Ribbon]);
+</script>
+<style>
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/document-editor/index.css";
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/document-editor-container/index.css";
+</style>
+```
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Vue-DOCX-Editor-Examples/tree/master/webmcp/selective-tools-registration).
+
+### Multi-Instance Setup
+
+Shows how to use different prefixes for multiple DOCX Editor instances on the same page.
+
+```ts
+<template>
+  <div id="app" style="display:flex; width:100%; gap:10px;">
+    <ejs-documenteditorcontainer
+      ref="container1"
+      :serviceUrl="serviceUrl"
+      height="590px"
+      width="50%"
+      :enableToolbar="true"
+      :enableWebMcp="true"
+      toolbarMode="Ribbon"
+      :webMcpSettings="webMcpSettings1">
+    </ejs-documenteditorcontainer>
+
+    <ejs-documenteditorcontainer
+      ref="container2"
+      :serviceUrl="serviceUrl"
+      height="590px"
+      width="50%"
+      :enableToolbar="true"
+      :enableWebMcp="true"
+      toolbarMode="Ribbon"
+      :webMcpSettings="webMcpSettings2">
+    </ejs-documenteditorcontainer>
+  </div>
+</template>
+
+<script setup>
+import { provide, ref } from 'vue';
+import {
+  DocumentEditorContainerComponent as EjsDocumenteditorcontainer,
+  Toolbar,
+  Ribbon
+} from '@syncfusion/ej2-vue-documenteditor';
+
+// Use the following service URL only for demo purposes
+const serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
+
+const webMcpSettings1 = {
+  name: 'documentEditor1'
+};
+
+const webMcpSettings2 = {
+  name: 'documentEditor2'
+};
+
+provide('DocumentEditorContainer', [Toolbar, Ribbon]);
+</script>
+<style>
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/document-editor/index.css";
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/document-editor-container/index.css";
+</style>
+```
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Vue-DOCX-Editor-Examples/tree/master/webmcp/muli-instance).
+
+### Auditing and Restrictions
+
+Demonstrates the use of the beforeWebMcpToolExecute event to log tool activity and block restricted operations.
+
+```ts
+<template>
+  <div id="app">
+    <ejs-documenteditorcontainer
+      ref="container"
+      :serviceUrl="serviceUrl"
+      :height="height"
+      :width="width"
+      :enableToolbar="true"
+      :enableWebMcp="true"
+      toolbarMode="Ribbon"
+      :webMcpSettings="webMcpSettings"
+      :beforeWebMcpToolExecute="beforeWebMcpToolExecute">
+    </ejs-documenteditorcontainer>
+  </div>
+</template>
+
+<script setup>
+import { provide, ref } from 'vue';
+import {
+  DocumentEditorContainerComponent as EjsDocumenteditorcontainer,
+  Toolbar,
+  Ribbon
+} from '@syncfusion/ej2-vue-documenteditor';
+
+const container = ref(null);
+// Use the following service URL only for demo purposes
+const serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
+
+const height = '100%';
+const width = '100%';
+
+const webMcpSettings = {
+  name: 'container'
+};
+
+const beforeWebMcpToolExecute = (args) => {
+  const { toolName, toolArgs } = args;
+
+  // Audit all WebMCP tool invocations
+  console.log(`[WebMCP] Executing: ${toolName}`, toolArgs);
+
+  const commandName = toolName?.includes('_')
+    ? toolName.substring(toolName.indexOf('_') + 1)
+    : toolName;
+
+  // Restrict a specific tool
+  if (commandName === 'saveDocument') {
+    args.cancel = true;
+    args.cancellationResponse = 'The saveDocument operation has been restricted.';
+  }
+};
+
+provide('DocumentEditorContainer', [Toolbar, Ribbon]);
+</script>
+<style>
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/document-editor/index.css";
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/document-editor-container/index.css";
+</style>
+```
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Vue-DOCX-Editor-Examples/tree/master/webmcp/auditing-and-restrictions).
 
 ## Troubleshooting FAQs
 
