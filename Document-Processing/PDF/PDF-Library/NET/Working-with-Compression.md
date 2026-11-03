@@ -140,6 +140,10 @@ PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
 // Create a new compression options instance
 PdfCompressionOptions options = new PdfCompressionOptions();
+
+// Enable image compression
+options.CompressImages = true;
+
 // Downsample images that exceed the target DPI
 options.DownsampleImages = true;
 // Set the target DPI for the downsampled images
@@ -165,6 +169,10 @@ PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
 // Create a new compression options instance
 PdfCompressionOptions options = new PdfCompressionOptions();
+
+// Enable image compression
+options.CompressImages = true;
+
 // Downsample images that exceed the target DPI
 options.DownsampleImages = true;
 // Set the target DPI for the downsampled images
@@ -190,6 +198,10 @@ Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 
 ' Create a new compression options instance
 Dim options As New PdfCompressionOptions()
+
+' Enable image compression
+options.CompressImages = True
+
 ' Downsample images that exceed the target DPI
 options.DownsampleImages = True
 ' Set the target DPI for the downsampled images
