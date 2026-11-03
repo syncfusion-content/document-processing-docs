@@ -7,7 +7,7 @@ control: AI Assist
 documentation: ug
 ---
 
-# AI Assist Integration in TypeScript Spreadsheet 
+# AI Assist Integration in TypeScript Spreadsheet
 
 ## Integration
 
@@ -18,7 +18,7 @@ AI Assist integrates seamlessly into your TypeScript Spreadsheet application, en
 Ensure the following before integrating AI Assist:
 
 * Backend Server: A running backend AI service (Node.js or Web API) with AI credentials configured on the server.
-* For setup instructions, see the:
+* For server setup instructions, see the:
     * [ASP.NET Web API Server](./ai-service/using-web-api)
     * [Node.js Server](./ai-service/using-node-js-server)
 
@@ -73,7 +73,7 @@ This enables the AI Assist into the spreadsheet.
 
 ### Configure AI Assist Settings
 
-Use the [`aiAssistSettings`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#aiassistsettings) property to connect spreadsheet to the backend server and customize the AI Assist.
+Use the [`aiAssistSettings`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#aiassistsettings) property to connect the Spreadsheet to the backend server and customize the AI Assist.
 
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
@@ -108,7 +108,7 @@ Your Spreadsheet is now integrated with AI Assist and ready to use.
 
 * **Open**: Click the **AI Assist** button in the ribbon toolbar.
 * **Close**: Click the **✕** button inside the panel header, or click the **AI Assist** ribbon button again.
-* **Start new conversation.**: Click the **↺ (Refresh)** button in the panel header.
+* **Start a new conversation**: Click the **↺ (Refresh)** button in the panel header.
 * **Resize the panel**: Drag the left edge of the panel to make it wider or narrower.
 
 ### Undo an AI Action
@@ -215,9 +215,9 @@ Type your request in plain English — no formulas or technical knowledge needed
 
 | What to say | What it does |
 |---|---|
-| *"Can you give me a summary of this sheet?"* | Reviews your data and highlights key trends and totals. |
-| *"What are the top 5 rows by sales?"* | Picks out the highest-performing records from your data. |
-| *"Generate a full report for this sheet"* | Creates a structured report with KPIs, top records, and chart suggestions. |
+| *"Can you give me a summary of this sheet?"* | Reviews your data and highlights key trends and totals |
+| *"What are the top 5 rows by sales?"* | Picks out the highest-performing records from your data |
+| *"Generate a full report for this sheet"* | Creates a structured report with KPIs, top records, and chart suggestions |
 
 #### Data Operations
 
@@ -249,10 +249,10 @@ Type your request in plain English — no formulas or technical knowledge needed
 
 | What to say | What it does |
 |---|---|
-| *"Add two blank rows above row 5"* | Inserts two new rows at that position. |
-| *"Remove column C"* | Deletes the entire column from the sheet. |
-| *"Combine cells A1 to C1 into one"* | Merges the range into a single cell. |
-| *"Keep the first two rows visible when I scroll down"* | Freezes the top rows so they stay in place. |
+| *"Add two blank rows above row 5"* | Inserts two new rows at that position |
+| *"Remove column C"* | Deletes the entire column from the sheet |
+| *"Combine cells A1 to C1 into one"* | Merges the range into a single cell |
+| *"Keep the first two rows visible when I scroll down"* | Freezes the top rows so they stay in place |
 
 #### Navigation
 

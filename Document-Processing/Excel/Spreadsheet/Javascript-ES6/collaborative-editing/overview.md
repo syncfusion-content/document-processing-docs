@@ -70,7 +70,7 @@ Collaborative editing supports SpreadsheetEditor actions such as:
 
 The Collaboration Server assigns an authoritative version to each workbook action. Connected users apply actions in version order.
 
-When a client detects a missing version, the SpreadsheetEditor retrieves and applies the missed actions before continuing. This helps all connected users converge to the same workbook state.
+When the client detects a missing version, the SpreadsheetEditor retrieves and applies the missed actions before continuing. This helps all connected users converge to the same workbook state.
 
 ## Architecture
 
@@ -106,8 +106,8 @@ Redis temporarily stores collaboration actions, versions, and room-related infor
 Collaborative editing is suitable for workflows where multiple users review or update the same workbook, including:
 
 - **Financial planning** - Update budgets, forecasts, and financial reports.
-- **Project tracking** - Maintain schedules, tasks, status updates, and resource information.
-- **Inventory management** - Update stock quantities, availability, and order details.
+- **Project tracking** - Maintain shared schedules, task lists, status updates, and resource information.
+- **Inventory management** - Update stock quantities, item availability, and order details.
 - **Data review** - Review, correct, format, and annotate shared workbook data.
 - **Reporting** - Prepare and validate operational or business reports with multiple participants.
 

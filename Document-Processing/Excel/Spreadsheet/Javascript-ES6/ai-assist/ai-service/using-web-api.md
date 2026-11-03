@@ -7,7 +7,7 @@ control: AI Assist Web API Server Setup
 documentation: ug
 ---
 
-# AI Assist Web API Server Setup in TypeScript Spreadsheet
+# AI Assist — Web API Server Setup in TypeScript Spreadsheet
 
 AI Assist requires a backend service to process prompts and return AI-generated responses. This topic explains how to create an **ASP.NET Core Web API** using **Azure OpenAI** credentials.
 
@@ -58,7 +58,7 @@ dotnet add package Microsoft.Extensions.AI.OpenAI
 
 ## Configure credentials
 
-Add the Azure OpenAI credentials in `appsettings.json` under `AI` section:
+Add the Azure OpenAI credentials in `appsettings.json` under the `AI` section:
 
 ```json
 {
@@ -91,7 +91,7 @@ builder.Configuration
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowSpecificOrigins", policy =>
-        policy.WithOrigins("http://localhost:5173")   // your React dev origin
+        policy.WithOrigins("http://localhost:5173")   // your TypeScript dev origin
               .AllowAnyMethod()
               .AllowAnyHeader());
 });
@@ -193,7 +193,7 @@ Run the following command to start the Web API server:
 dotnet run
 ```
 
-The server runs on `https://localhost:{port}` (as defined in `launchSettings.json`). Update the AI Assist endpoint as below:
+The server runs on `https://localhost:{port}` (as defined in `launchSettings.json`). Update the AI Assist endpoint like below:
 
 ```
 https://localhost:{port}/api/AIAssist/Chat
@@ -265,7 +265,7 @@ dotnet run
 ```
 
 * [Web API Server](https://drive.google.com/file/d/13K7a89Vk4Xt7dgd4wt49q272bSVSVuz3/view?usp=drive_link)
-* [Live Demo](https://document.syncfusion.com/demos/spreadsheet-editor/react/#/tailwind3/spreadsheet/ai-smart-spreadsheets)
+* [Live Demo](https://document.syncfusion.com/demos/spreadsheet-editor/javascript/#/tailwind3/spreadsheet/ai-smart-spreadsheet.html)
 
 ## See also
 
