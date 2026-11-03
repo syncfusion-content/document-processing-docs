@@ -111,7 +111,6 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 | getSelectedText | Read | Always | Get the currently selected text from the document. |
 | getSelectedContent | Read | Always | Get the selected content as SFDT (Syncfusion Document Format) format. |
 
----
 
 ## Search & Navigation Tools
 
@@ -124,7 +123,6 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 | selectParagraph | Write | Always | Select the current paragraph. |
 | selectBookmark | Write | Always | Navigate to and select a bookmark in the document. Accepts `bookmarkName`. |
 
----
 
 ## Content Editing Tools
 
@@ -137,7 +135,6 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 | insertHyperlink | Write | Always | Insert a hyperlink with URL and display text at the current selection. Accepts `url` and `displayText`. |
 | insertImage | Write | Always | Insert an image from a base64-encoded string at the current selection. Accepts `base64String`. |
 
----
 
 ## Document Management Tools
 
@@ -146,7 +143,6 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 | saveDocument | Write | Always | Save the document to a file with specified format (Docx, Pdf, Rtf, Txt, Html, WordML). Accepts `fileName` and optional `formatType`. |
 | print | Write | Always | Print the current document. |
 
----
 
 ## Character Format Tools
 
@@ -171,7 +167,6 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 | setCharacterFormatStrikethrough | Write | Always | Set strikethrough formatting on the selected text (None, Single, Double). |
 | setCharacterFormatUnderline | Write | Always | Set underline formatting on the selected text (None, Single, Double, Dotted, DashDotDotHeavy, etc.). |
 
----
 
 ## Paragraph Format Tools
 
@@ -203,7 +198,6 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 | setParagraphFormatRightIndent | Write | Always | Set the right indent of the paragraph (in points). |
 | setParagraphFormatTextAlignment | Write | Always | Set the text alignment of the paragraph (Left, Center, Right, Justify). |
 
----
 
 ## Code Examples
 
