@@ -1122,7 +1122,7 @@ const options: PdfSignatureValidationOptions = {
     passwords: ['syncfusion']
 };
 // Validate the signature.
-const validationResult = signature.validate(options);
+const validationResult = field.validateSignature(options);
 // Check the validation result.
 console.log('Signature name: ' + validationResult.signatureName);
 console.log('Signature valid: ' + validationResult.isSignatureValid);
@@ -1147,7 +1147,7 @@ const options = {
     passwords: ['syncfusion']
 };
 // Validate the signature.
-const validationResult = signature.validate(options);
+const validationResult = field.validateSignature(options);
 // Check the validation result.
 console.log('Signature name: ' + validationResult.signatureName);
 console.log('Signature valid: ' + validationResult.isSignatureValid);
