@@ -339,7 +339,7 @@ PdfCompressionOptions options = new PdfCompressionOptions();
 options.CompressImages = true;
 options.ImageQuality = 50;
 // Enable JPEG 2000 (JPXDecode) encoding for the compressed images
-options.JpxDecodeEnabled = true;
+options.EnableJpxDecode = true;
 
 // Apply the compression options to the document
 loadedDocument.Compress(options);
@@ -365,7 +365,7 @@ PdfCompressionOptions options = new PdfCompressionOptions();
 options.CompressImages = true;
 options.ImageQuality = 50;
 // Enable JPEG 2000 (JPXDecode) encoding for the compressed images
-options.JpxDecodeEnabled = true;
+options.EnableJpxDecode = true;
 
 // Assign the compression options to the document
 loadedDocument.CompressionOptions = options;
@@ -391,7 +391,7 @@ Dim options As New PdfCompressionOptions()
 options.CompressImages = True
 options.ImageQuality = 50
 ' Enable JPEG 2000 (JPXDecode) encoding for the compressed images
-options.JpxDecodeEnabled = True
+options.EnableJpxDecode = True
 
 ' Assign the compression options to the document
 loadedDocument.CompressionOptions = options
