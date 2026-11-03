@@ -1114,15 +1114,13 @@ import { PdfDocument, PdfSignatureField, PdfSignature, PdfSignatureValidationOpt
 const document: PdfDocument = new PdfDocument(documentData);
 // Get the first signature field from the form.
 const field: PdfSignatureField = document.form.fieldAt(0) as PdfSignatureField;
-// Get the signature from the field.
-const signature: PdfSignature = field.getSignature();
 // Configure the signature validation options.
 const options: PdfSignatureValidationOptions = {
     trustedCertificates: [certificateData],
     passwords: ['syncfusion']
 };
 // Validate the signature.
-const validationResult = signature.validate(options);
+const validationResult = field.validateSignature(options);
 // Check the validation result.
 console.log('Signature name: ' + validationResult.signatureName);
 console.log('Signature valid: ' + validationResult.isSignatureValid);
@@ -1139,15 +1137,13 @@ document.destroy();
 const document = new ej.pdf.PdfDocument(documentData);
 // Get the first signature field from the form.
 const field = document.form.fieldAt(0);
-// Get the signature from the field.
-const signature = field.getSignature();
 // Configure the signature validation options.
 const options = {
     trustedCertificates: [certificateData],
     passwords: ['syncfusion']
 };
 // Validate the signature.
-const validationResult = signature.validate(options);
+const validationResult = field.validateSignature(options);
 // Check the validation result.
 console.log('Signature name: ' + validationResult.signatureName);
 console.log('Signature valid: ' + validationResult.isSignatureValid);
@@ -1559,4 +1555,4 @@ document.destroy();
 - [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library)
 - [JavaScript PDF Library documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
 - [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
-- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/tailwind3/pdf/default.html)
+- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/document-library/javascript/#/tailwind3/pdf/default)
