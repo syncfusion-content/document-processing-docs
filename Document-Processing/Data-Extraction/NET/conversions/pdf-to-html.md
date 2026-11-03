@@ -125,7 +125,7 @@ The following table lists the PDF elements and their preservation details in the
   </thead>
   <tbody>
     <tr>
-      <td>Header, Paragraph Title, Document Title</td>
+      <td>Paragraph Title, Document Title</td>
       <td>Yes</td>
     </tr>
     <tr>
@@ -142,7 +142,7 @@ The following table lists the PDF elements and their preservation details in the
     </tr>
     <tr>
       <td>Subscript, Superscript</td>
-      <td>No</td>
+      <td>Yes (Searchable PDF documents only)</td>
     </tr>
     <tr>
       <td>Underline, Strikethrough</td>
@@ -157,12 +157,20 @@ The following table lists the PDF elements and their preservation details in the
       <td>Yes (Preserved as images)</td>
     </tr>
     <tr>
-      <td>Code blocks, Footer, Page Number</td>
+      <td>Code blocks, Header, Footer, Page Number</td>
       <td>Yes (Preserved as text)</td>
     </tr>
     <tr>
       <td>Link</td>
       <td>No (Preserved as plain text)</td>
+    </tr>
+    <tr>
+      <td>Text color and Background color</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Logo in page header or footer</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
