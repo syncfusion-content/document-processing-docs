@@ -232,7 +232,7 @@ destinationDocument.Close()
 
 ## Merge Source Content into Destination document's last Section
 
-The following code example illustrates how to import the source document's contents into the last section of the destination document, so the imported content is appended to the existing last section instead of starting a new one.
+This example demonstrates how to append the content of the first source section to the last section of the destination document and clone the remaining source sections as separate sections.
 
 {% tabs %}
 
