@@ -26,7 +26,7 @@ The following steps illustrate how to compare the documents:
 * In a controller action, accept the original and revised documents as uploaded files (DOCX, DOC, RTF or SFDT). Convert SFDT files to DocIO `WordDocument` instances using the `WordDocument.Save` method of the Document Editor library.
 * Compare the documents using the `Compare` method of DocIO. The changes are marked as tracked changes in the original document.
 * Load the compared document into the Document Editor `WordDocument` instance using the `WordDocument.Load` method and return it as SFDT.
-* In the client, post the documents to the Web API as form data and open the returned SFDT using the [`open`](https://ej2.syncfusion.com/documentation/api/document-editor#open) method, with the `showRevisions` property enabled to display the tracked changes.
+* In the client, post the documents to the Web API as form data and open the returned SFDT using the [`open`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/index-default#open) method, with the `showRevisions` property enabled to display the tracked changes.
 
 The following example code illustrates how to compare two documents (using static SFDT contents sent as files) and open the resultant document in the Document Editor.
 
