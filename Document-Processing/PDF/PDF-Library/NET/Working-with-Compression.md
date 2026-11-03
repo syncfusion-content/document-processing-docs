@@ -140,6 +140,10 @@ PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
 // Create a new compression options instance
 PdfCompressionOptions options = new PdfCompressionOptions();
+
+// Enable image compression
+options.CompressImages = true;
+
 // Downsample images that exceed the target DPI
 options.DownsampleImages = true;
 // Set the target DPI for the downsampled images
@@ -165,6 +169,10 @@ PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
 
 // Create a new compression options instance
 PdfCompressionOptions options = new PdfCompressionOptions();
+
+// Enable image compression
+options.CompressImages = true;
+
 // Downsample images that exceed the target DPI
 options.DownsampleImages = true;
 // Set the target DPI for the downsampled images
@@ -190,6 +198,10 @@ Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
 
 ' Create a new compression options instance
 Dim options As New PdfCompressionOptions()
+
+' Enable image compression
+options.CompressImages = True
+
 ' Downsample images that exceed the target DPI
 options.DownsampleImages = True
 ' Set the target DPI for the downsampled images
@@ -339,7 +351,7 @@ PdfCompressionOptions options = new PdfCompressionOptions();
 options.CompressImages = true;
 options.ImageQuality = 50;
 // Enable JPEG 2000 (JPXDecode) encoding for the compressed images
-options.JpxDecodeEnabled = true;
+options.EnableJpxDecode = true;
 
 // Apply the compression options to the document
 loadedDocument.Compress(options);
@@ -365,7 +377,7 @@ PdfCompressionOptions options = new PdfCompressionOptions();
 options.CompressImages = true;
 options.ImageQuality = 50;
 // Enable JPEG 2000 (JPXDecode) encoding for the compressed images
-options.JpxDecodeEnabled = true;
+options.EnableJpxDecode = true;
 
 // Assign the compression options to the document
 loadedDocument.CompressionOptions = options;
@@ -391,7 +403,7 @@ Dim options As New PdfCompressionOptions()
 options.CompressImages = True
 options.ImageQuality = 50
 ' Enable JPEG 2000 (JPXDecode) encoding for the compressed images
-options.JpxDecodeEnabled = True
+options.EnableJpxDecode = True
 
 ' Assign the compression options to the document
 loadedDocument.CompressionOptions = options
