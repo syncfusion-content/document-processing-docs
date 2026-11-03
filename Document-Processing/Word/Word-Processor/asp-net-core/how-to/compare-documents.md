@@ -26,7 +26,7 @@ The following steps illustrate how to compare the documents:
 * Create a Web API in the controller that accepts the original and revised files. On the server side, convert the SFDT contents to DocIO `WordDocument` instances using the `WordDocument.Save` method of the Document Editor library.
 * Compare the documents using the `Compare` method of DocIO. The changes are marked as tracked changes in the original document.
 * Load the compared document into the Document Editor `WordDocument` instance using the `WordDocument.Load` method and return it as SFDT from the Web API.
-* On the client side, call the Web API to get the resultant SFDT and open the resultant SFDT in the Document Editor using the [`open`](https://ej2.syncfusion.com/aspnetcore/documentation/api/document-editor#open) method, with the `showRevisions` property enabled to display the tracked changes.
+* On the client side, call the Web API to get the resultant SFDT and open the resultant SFDT in the Document Editor using the [`open`](https://ej2.syncfusion.com/javascript/documentation/api/document-editor/index-default#open) method, with the `showRevisions` property enabled to display the tracked changes.
 
 The following example code illustrates how to compare two documents (using static SFDT contents) and open the resultant document in the Document Editor. The static SFDT contents are kept in the `wwwroot/data` folder (`original.json` and `revised.json`) and are shortened here.
 
