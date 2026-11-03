@@ -123,7 +123,7 @@ You can download a complete working sample from [GitHub](https://github.com/Sync
 
 You can reduce the file size of an existing PDF document by downsampling images whose effective DPI exceeds the value you need for your output (for example, the print or screen resolution of the intended viewer). To do this, enable the [DownsampleImages](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html#Syncfusion_Pdf_PdfCompressionOptions_DownsampleImages) property and set the desired resolution through the [TargetDpi](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html#Syncfusion_Pdf_PdfCompressionOptions_TargetDpi) property of the [PdfCompressionOptions](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.PdfCompressionOptions.html) class.
 
-N> 1. The `DownsampleImages` property does not affect images whose current resolution is already at or below the `TargetDpi` value.
+N> 1. The `DownsampleImages` property does not affect images whose current resolution is already at or below the `TargetDpi` value. 
 N> 2. The `TargetDpi` property accepts values from `36` to `2400`. The default value is `150`.
 
 The following code example illustrates how to downsampling images that exceed the target DPI in an existing PDF document.
