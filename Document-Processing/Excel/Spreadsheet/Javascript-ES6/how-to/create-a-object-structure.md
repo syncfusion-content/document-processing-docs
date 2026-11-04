@@ -1,15 +1,15 @@
 ---
 layout: post
-title: How to Create Objects in TypeScript Spreadsheet | Syncfusion
-description: Create an object structure in TypeScript Spreadsheet to organize workbook data and manage spreadsheet content programmatically.
+title: How to Create an Object Structure in TypeScript Spreadsheet | Syncfusion
+description: Learn how to create an object structure in the Syncfusion TypeScript Spreadsheet control for organizing spreadsheet data.
+control: Create a object structure 
 platform: document-processing
-control: Create an object structure
 documentation: ug
 ---
 
 # How to Create an Object Structure in TypeScript Spreadsheet
 
-This topic guides you to construct a JSON structure that can be passed to the [`openFromJson`](https://ej2.syncfusion.com/documentation/api/spreadsheet#openfromjson) method to render the spreadsheet. The JSON structure is an object with the key as `Workbook` and the [`properties`](https://ej2.syncfusion.com/documentation/api/spreadsheet#properties) of the spreadsheet as value.
+This topic guides you to construct a JSON structure that can be passed to the [`openFromJson`](https://ej2.syncfusion.com/documentation/api/spreadsheet#openfromjson) method to render the spreadsheet. The JSON structure is an object with the key as `Workbook` and the [`properties`](https://ej2.syncfusion.com/documentation/api/spreadsheet#properties) of the spreadsheet as the value.
 
 ```js
 { Workbook: {} }
@@ -19,7 +19,7 @@ The following properties are the root level properties of the `Workbook` object.
 
 | Property | Type | Description |
 |-------|-------|-------|
-| activeSheetIndex | number | Specifies the active sheet index in the workbook. |
+| activeSheetIndex | number | Specifies active sheet index in the workbook. |
 | sheets | `Sheet[]` | Contains a list of sheet properties. |
 | definedNames | `DefineName[]` | Specifies the name for a range and uses it in the formula for calculation. |
 
@@ -34,10 +34,10 @@ The following table defines each property of the `Sheet`.
 | showHeaders | boolean | Specifies to show or hide column and row headers in the sheet. |
 | showGridLines | boolean | Specifies to show or hide gridlines in the sheet. |
 | isProtected | boolean | Specifies to protect the cells in the sheet. |
-| state | [`SheetState`](../worksheet#sheet-visibility) | Specifies the sheet visibility state. There must be at least one visible sheet in Spreadsheet. |
+| state | `SheetState` | Specifies the sheet visibility state. There must be at least one visible sheet in Spreadsheet. |
 | columns | `Column[]` | Contains a list of column properties |
 | rows | `Row[]` | Contains a list of row properties |
-| protectSettings | [`ProtectSettings`](../protect-sheet#protect-sheet) | Configures protect and its options. |
+| protectSettings | `ProtectSettings` | Configures protect and its options. |
 | conditionalFormats | `ConditionalFormat[]` | Specifies the conditional formatting for the sheet. |
 
 The following table defines each property of the `Column`.
