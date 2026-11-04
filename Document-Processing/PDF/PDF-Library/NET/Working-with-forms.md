@@ -1635,7 +1635,7 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Digital%20Signature/Customize-the-signed-date/.NET).
 
-## Add a date field to a PDF form
+### Add a date field to a PDF form
 
 This section explains how to create a text box field for date entry in a PDF form. The field is initialized with a sample date and uses JavaScript actions to format, validate, and automatically format user input according to a specified date pattern.
 
