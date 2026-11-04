@@ -93,8 +93,7 @@ The following example code illustrates how to use the `MetafileImageParsed` even
     {
         if (args.IsMetafile)
         {
-            // Metafile image conversion (EMF and WMF)
-            // You can write your own method definition for converting a metafile to a raster image using any third-party image converter.
+            //MetaFile image conversion (EMF and WMF) using Syncfusion.MetafileRenderer.NET.
             args.ImageStream = ConvertMetafileToRasterImage(args.MetafileStream);
         }
         else
@@ -163,6 +162,32 @@ The following example code illustrates how to use the `MetafileImageParsed` even
         }
         }
         return imageStream;
+    }
+    private static Stream ConvertMetafileToRasterImage(Stream ImageStream)
+    {
+        Syncfusion.Metafile.MetafileRenderer renderer = new Syncfusion.Metafile.MetafileRenderer();
+        byte[] byteArr = renderer.ConvertToImageBytes(ImageStream);
+        if (byteArr == null)
+        {
+            //Here we are loading a default raster image as fallback.
+            return GetManifestResourceStream("ImageNotFound.jpg");
+        }
+        return new MemoryStream(byteArr);
+    }
+
+    private static Stream GetManifestResourceStream(string fileName)
+    {
+        System.Reflection.Assembly execAssembly = typeof(WDocument).Assembly;
+        string[] resourceNames = execAssembly.GetManifestResourceNames();
+        foreach (string resourceName in resourceNames)
+        {
+            if (resourceName.EndsWith("." + fileName))
+            {
+                fileName = resourceName;
+                break;
+            }
+        }
+        return execAssembly.GetManifestResourceStream(fileName);
     }
 ```
 
