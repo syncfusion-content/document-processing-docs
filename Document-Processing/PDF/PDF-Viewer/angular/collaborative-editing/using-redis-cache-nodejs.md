@@ -594,3 +594,4 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/angular-pdf-vie
 ## See Also
 
 - [Getting Started with Node.js Collaboration Server](../../../../Collaborator/getting-started/getting-started-with-node)
+- [Learn how to estimate Redis and Collaboration Server capacity for collaborative editing](../../../../Collaborator/faq#6-how-do-i-calculate-the-redis-and-server-configuration-for-collaborative-editing)

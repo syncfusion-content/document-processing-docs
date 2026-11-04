@@ -751,3 +751,4 @@ N> For complete production implementation with comprehensive form field handling
 ## See Also
 
 - [Getting Started with Node.js Collaboration Server](../../../../Collaborator/getting-started/getting-started-with-node)
+- [Learn how to estimate Redis and Collaboration Server capacity for collaborative editing](../../../../Collaborator/faq#6-how-do-i-calculate-the-redis-and-server-configuration-for-collaborative-editing)

@@ -1384,3 +1384,4 @@ N> [View sample in GitHub](https://github.com/SyncfusionExamples/react-pdf-viewe
 - [Collaboration Client](../../../../Collaborator/collaboration-client)
 - [Collaboration Server](../../../../Collaborator/collaboration-server)
 - [Getting Started with the ASP.NET Core Collaboration Server](../../../../Collaborator/getting-started/getting-started-with-core)
+- [Learn how to estimate Redis and Collaboration Server capacity for collaborative editing](../../../../Collaborator/faq#6-how-do-i-calculate-the-redis-and-server-configuration-for-collaborative-editing)

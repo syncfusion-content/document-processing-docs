@@ -132,3 +132,4 @@ Undo and redo history is maintained locally and is not synchronized among users.
 - [Collaboration Server](https://help.syncfusion.com/document-processing/collaborator/collaboration-server)
 - [Getting Started with ASP.NET Core Collaboration Server](https://help.syncfusion.com/document-processing/collaborator/getting-started/getting-started-with-core)
 - [Collaborator frequently asked questions](https://help.syncfusion.com/document-processing/collaborator/faq)
+- [Learn how to estimate Redis and Collaboration Server capacity for collaborative editing](../../../../Collaborator/faq#6-how-do-i-calculate-the-redis-and-server-configuration-for-collaborative-editing)
