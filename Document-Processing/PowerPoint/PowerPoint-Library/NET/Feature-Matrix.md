@@ -4,6 +4,7 @@ description: Explore the supported features of Syncfusion® Essential PowerPoint
 platform: document-processing
 control: Presentation
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Feature Matrix in .NET PowerPoint Library

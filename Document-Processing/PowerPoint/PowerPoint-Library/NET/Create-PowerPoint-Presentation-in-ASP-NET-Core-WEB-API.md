@@ -4,6 +4,7 @@ description: Create a PowerPoint in an ASP.NET Core Web API application using th
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Create a PowerPoint Presentation in ASP.NET Core Web API

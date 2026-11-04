@@ -4,6 +4,7 @@ description: Learn how to convert a PPTX to image in Google Cloud Platform (GCP)
 platform: document-processing
 control: PowerPoint 
 documentation: UG 
+appliesto: Document SDK
 --- 
 
 # Convert PowerPoint to Image in Google Cloud Platform (GCP)

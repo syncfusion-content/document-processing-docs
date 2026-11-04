@@ -4,6 +4,7 @@ description: Learn how to create, format, and modify lists in a Markdown documen
 platform: document-processing
 control: Markdown
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Lists in .NET Markdown Library

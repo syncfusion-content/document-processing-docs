@@ -4,6 +4,7 @@ description: Learn how to configure maximum tokens, overlapping tokens, metadata
 platform: document-processing
 control: Chunking
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Chunking Options in .NET Document Chunking Library

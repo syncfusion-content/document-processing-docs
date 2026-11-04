@@ -4,6 +4,7 @@ description: This section illustrates about adding, modifying and removing of He
 platform: document-processing
 control: Presentation
 documentation: UG
+appliesto: Document SDK
 ---
 # Working with Headers and Footers
 

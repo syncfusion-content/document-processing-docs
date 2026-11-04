@@ -6,6 +6,7 @@ control: DOCX Editor SDK
 platform: document-processing
 documentation: ug
 keywords: UI Builder, Skills, AI Assistants, DOCX Editor SDK, Agent Skills
+appliesto: DOCX Editor SDK
 ---
 
 # Syncfusion® UI Builder Skills with DOCX Editor SDK for AI Assistants

@@ -7,6 +7,7 @@ platform: document-processing
 control: PowerPoint
 documentation: ug
 keywords: javascript, powerpoint, cdn
+appliesto: Document SDK
 ---
 
 # Getting Started with JavaScript PowerPoint in JavaScript app

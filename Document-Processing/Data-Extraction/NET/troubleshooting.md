@@ -4,6 +4,7 @@ description: Find troubleshooting steps and FAQs for Syncfusion Smart Data Extra
 platform: document-processing
 control: SmartDataExtractor, SmartTableExtractor
 documentation: UG
+appliesto: Document SDK
 ---
 
 # How to troubleshoot in .NET Smart Data Extractor

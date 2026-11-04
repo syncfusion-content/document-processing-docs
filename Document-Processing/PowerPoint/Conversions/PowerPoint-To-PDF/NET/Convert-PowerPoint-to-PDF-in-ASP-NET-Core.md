@@ -4,6 +4,7 @@ description: Convert PowerPoint to PDF in ASP.NET Core using .NET Core PowerPoin
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert PowerPoint to PDF in ASP.NET Core

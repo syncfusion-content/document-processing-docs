@@ -6,6 +6,7 @@ control: PowerPoint
 platform: document-processing
 documentation: ug
 keywords: javascript, powerpoint, react
+appliesto: Document SDK
 ---
 
 # Getting Started with JavaScript PowerPoint Library in React app

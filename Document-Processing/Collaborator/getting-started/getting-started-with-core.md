@@ -6,6 +6,7 @@ control: Collaborator
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
+appliesto: DOCX Editor SDK, PDF Viewer SDK, Spreadsheet Editor SDK
 ---
 # Getting Started with ASP.NET Core Collaboration Server
 
