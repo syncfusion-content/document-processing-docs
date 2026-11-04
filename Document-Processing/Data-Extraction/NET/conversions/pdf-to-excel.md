@@ -79,7 +79,7 @@ The following table lists the PDF elements and their preservation details in the
   </thead>
   <tbody>
     <tr>
-      <td>Paragraph Title, Document Title</td>
+      <td>Title, Text</td>
       <td>Yes</td>
     </tr>
     <tr>
@@ -89,6 +89,10 @@ The following table lists the PDF elements and their preservation details in the
     <tr>
       <td>Table</td>
       <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Nested Table</td>
+      <td>No</td>
     </tr>
     <tr>
       <td>Text Inline Styles</td>
