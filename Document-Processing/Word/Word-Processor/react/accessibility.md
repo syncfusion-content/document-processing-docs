@@ -38,6 +38,40 @@ The accessibility compliance for the [React DOCX Editor](https://www.syncfusion.
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
+## Screen Reader Support
+
+The DOCX Editor provides screen reader support for improved accessibility. Set the [`enableScreenReader`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documentEditorSettingsModel#enablescreenreader) property to `true` in [`documentEditorSettings`](https://ej2.syncfusion.com/react/documentation/api/document-editor/documentEditorSettingsModel) to enable screen reader support and expose the necessary accessibility information for screen reader tools.
+
+### Enable Screen Reader Support
+
+```typescript
+import { createRoot } from 'react-dom/client';
+import * as React from 'react';
+import { DocumentEditorContainerComponent, Ribbon, Toolbar } from '@syncfusion/ej2-react-documenteditor';
+DocumentEditorContainerComponent.Inject(Toolbar, Ribbon);
+const Default = () => {
+    let container = React.useRef(null);
+    let settings = { enableScreenReader: true };
+    return (
+            <DocumentEditorContainerComponent
+                id="container"
+                ref={container}
+                style={{ display: 'block' }}
+                height={'590px'}
+                toolbarMode="Ribbon"
+                enableToolbar={true}
+                documentEditorSettings={settings}
+                locale="en-US"
+            />
+    );
+};
+export default Default;
+const root = createRoot(document.getElementById('sample'));
+root.render(<Default />);
+```
+
+N> `enableScreenReader` is disabled by default. Set it to `true` to enable screen reader support.
+
 ## Keyboard Accessibility
 
 For keyboard accessibility, the DOCX Editor supports a range of [keyboard shortcuts](./keyboard-shortcut) for navigation and editing without a mouse, including tab navigation, cursor movement, and shortcut key combinations for common editing actions such as copy, paste, undo, and redo.
