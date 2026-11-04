@@ -123,7 +123,7 @@ app.get('/generate-word', async (req, res) => {
   // Create a Word document
   const document = WordDocument.create();
   // Access the section
-  const section = document.section[0];
+  const section = document.sections[0];
   // Access the paragraph
   const paragraph = section.body.paragraphs[0];
   // Add text to the paragraph
