@@ -129,12 +129,24 @@ The following table lists the PDF elements and their preservation details in the
       <td>Yes</td>
     </tr>
     <tr>
+      <td>Header</td>
+      <td>Yes (Only the first page header is displayed at the top.)</td>
+    </tr>
+    <tr>
+      <td>Footer</td>
+      <td>Yes(Only the first page footer is shown at the end.)</td>
+    </tr>
+    <tr>
       <td>Image</td>
       <td>Yes</td>
     </tr>
     <tr>
       <td>Table</td>
       <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Nested Table</td>
+      <td>No</td>
     </tr>
     <tr>
       <td>Text Inline Styles</td>
