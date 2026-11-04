@@ -102,7 +102,7 @@ Find every occurrence of "Syncfusion" and replace it with "Syncfusion Inc."
 
 WebMCP tools are organized by category. The tables below provide an overview of all available tools. For complete input/output schemas, call `GetWebMcpToolsAsync()` programmatically.
 
-## Document Information Tools
+### Document Information Tools
 
 | Tool Name | Type | Condition | Description |
 |-----------|------|-----------|-------------|
@@ -112,7 +112,7 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 | getSelectedContent | Read | Always | Get the selected content as SFDT (Syncfusion Document Format) format. |
 
 
-## Search & Navigation Tools
+### Search & Navigation Tools
 
 | Tool Name | Type | Condition | Description |
 |-----------|------|-----------|-------------|
@@ -124,7 +124,7 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 | selectBookmark | Write | Always | Navigate to and select a bookmark in the document. Accepts `bookmarkName`. |
 
 
-## Content Editing Tools
+### Content Editing Tools
 
 | Tool Name | Type | Condition | Description |
 |-----------|------|-----------|-------------|
@@ -136,7 +136,7 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 | insertImage | Write | Always | Insert an image from a base64-encoded string at the current selection. Accepts `base64String`. |
 
 
-## Document Management Tools
+### Document Management Tools
 
 | Tool Name | Type | Condition | Description |
 |-----------|------|-----------|-------------|
@@ -144,7 +144,7 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 | print | Write | Always | Print the current document. |
 
 
-## Character Format Tools
+### Character Format Tools
 
 | Tool Name | Type | Condition | Description |
 |-----------|------|-----------|-------------|
@@ -168,7 +168,7 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 | setCharacterFormatUnderline | Write | Always | Set underline formatting on the selected text (None, Single, Double, Dotted, DashDotDotHeavy, etc.). |
 
 
-## Paragraph Format Tools
+### Paragraph Format Tools
 
 | Tool Name | Type | Condition | Description |
 |-----------|------|-----------|-------------|
@@ -203,7 +203,7 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 
 ### Basic Setup
 
-Set up a DocumentEditorContainer with WebMCP enabled and register tools on creation.
+Set up a DOCX Editor with WebMCP enabled and register tools on creation.
 
 ```
 @using Syncfusion.Blazor.DocumentEditor
@@ -224,7 +224,77 @@ Set up a DocumentEditorContainer with WebMCP enabled and register tools on creat
     private SfDocumentEditorContainer? container;
 }
 ```
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-DOCX-Editor-Examples/tree/master/WebMcp/getting-started).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-DOCX-Editor-Examples/tree/master/webmcp/getting-started).
+
+### Multi-Instance Setup
+
+Shows how to use different prefixes for multiple DOCX Editor instances on the same page.
+
+```
+@using Syncfusion.Blazor.DocumentEditor
+
+<div style="display:flex; width:100%; gap:10px;">
+    <SfDocumentEditorContainer
+        EnableToolbar="true"
+        EnableWebMcp="true"
+        Height="590px"
+        Width="50%">
+
+        <DocumentEditorWebMcpSettings Name="documentEditor1" />
+
+    </SfDocumentEditorContainer>
+
+    <SfDocumentEditorContainer
+        EnableToolbar="true"
+        EnableWebMcp="true"
+        Height="590px"
+        Width="50%">
+
+        <DocumentEditorWebMcpSettings Name="documentEditor2" />
+
+    </SfDocumentEditorContainer>
+</div>
+```
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-DOCX-Editor-Examples/tree/master/webmcp/multi-instance).
+
+### Auditing and Restrictions
+
+Demonstrates the use of the BeforeWebMcpToolExecute event to log tool activity and block restricted operations.
+
+```
+@using Syncfusion.Blazor.DocumentEditor
+
+<SfDocumentEditorContainer
+    EnableToolbar="true"
+    EnableWebMcp="true"
+    Height="590px">
+
+    <DocumentEditorWebMcpSettings Name="container" />
+
+    <DocumentEditorContainerEvents BeforeWebMcpToolExecute="OnBeforeWebMcpToolExecute" />
+
+</SfDocumentEditorContainer>
+
+@code {
+    private void OnBeforeWebMcpToolExecute(WebMcpToolExecuteEventArgs args)
+    {
+        // Audit all WebMCP tool invocations
+        Console.WriteLine($"[WebMCP] Executing: {args.ToolName}");
+
+        var commandName = args.ToolName.Contains('_')
+            ? args.ToolName.Substring(args.ToolName.IndexOf('_') + 1)
+            : args.ToolName;
+
+        // Restrict a specific tool
+        if (commandName == "saveDocument")
+        {
+            args.Cancel = true;
+            args.CancellationResponse = "The saveDocument operation has been restricted.";
+        }
+    }
+}
+```
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-DOCX-Editor-Examples/tree/master/webmcp/auditing-and-restrictions).
 
 ## Troubleshooting FAQs
 
