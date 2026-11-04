@@ -142,7 +142,11 @@ The following table lists the PDF elements and their preservation details in the
   </thead>
   <tbody>
     <tr>
-      <td>Header, Paragraph Title, Document Title</td>
+      <td>Header, Footer, Title</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Text</td>
       <td>Yes</td>
     </tr>
     <tr>
@@ -152,6 +156,10 @@ The following table lists the PDF elements and their preservation details in the
     <tr>
       <td>Table</td>
       <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Nested Table</td>
+      <td>No</td>
     </tr>
     <tr>
       <td>Text Inline Styles</td>
@@ -174,7 +182,7 @@ The following table lists the PDF elements and their preservation details in the
       <td>Yes (Preserved as images)</td>
     </tr>
     <tr>
-      <td>Code blocks, Footer, Page Number</td>
+      <td>Code blocks, Page Number</td>
       <td>Yes (Preserved as text)</td>
     </tr>
     <tr>
