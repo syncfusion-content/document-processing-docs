@@ -362,7 +362,7 @@ import { WordDocument, FieldType, PageNumberStyle } from '@syncfusion/ej2-docx';
 let document = WordDocument.create();
 
 // Get the default section
-let section = document.section[0];
+let section = document.sections[0];
 
 section.pageSetup.pageStartingNumber = 1;
 section.pageSetup.restartPageNumbering = true;
@@ -393,7 +393,7 @@ document.save('Result.docx');
 let document = ej.docx.WordDocument.create();
 
 // Get the default section
-let section = document.section[0];
+let section = document.sections[0];
 
 section.pageSetup.pageStartingNumber = 1;
 section.pageSetup.restartPageNumbering = true;
