@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with JavaScript Excel in JavaScript app | Syncfusion
+title: Getting Started with Excel Library in JavaScript | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-excel-library
 description: Learn how to get started with the Syncfusion JavaScript Excel in JavaScript application. Easy steps to create Excel workbooks.
 platform: document-processing
@@ -8,7 +8,7 @@ control: Excel
 documentation: ug
 ---
 
-# Getting Started with JavaScript Excel in JavaScript app
+# Getting Started with JavaScript Excel Library in JavaScript
 
 Syncfusion<sup>&reg;</sup> JS 2 (global script) is an ES5-formatted distribution of the [JavaScript Excel Library](https://www.syncfusion.com/document-sdk/javascript-excel-library) that runs directly in any modern web browser without a build step or bundler. The all-in-one `ej2.min.js` bundle exposes the `ej.xlsx` namespace, which contains the Workbook class and related Excel APIs.
 
@@ -27,7 +27,7 @@ Common static-server options include:
 - **Node.js** (recommended): `npx serve` (no install required)
 - **VS Code**: the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension
 
-## CDN Syntax
+## CDN syntax
 
 The JS 2 global scripts and styles are hosted on the Syncfusion CDN in the following format:
 
@@ -39,11 +39,11 @@ The JS 2 global scripts and styles are hosted on the Syncfusion CDN in the follo
 
 N> The example uses the all-in-one `ej2.min.js` bundle, which exposes the `ej.xlsx` namespace along with other Essential JS 2 controls. An Excel-only CDN bundle is not provided separately. Replace `31.2.15` with the latest available version when starting a new project.
 
-## Create the HTML Page
+## Create the HTML page
 
 Step 1: Create a folder named `my-app` for your project.
 
-Step 2: Add the CDN reference in the `<head>` of `index.html` (the file is created in the next step).
+Step 2: Add the CDN reference to the `<head>` of `index.html`. You create the complete file in the next step.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -54,7 +54,7 @@ Step 2: Add the CDN reference in the `<head>` of `index.html` (the file is creat
 {% endhighlight %}
 {% endtabs %}
 
-Step 3: Create a complete `index.html` inside `my-app` with the following content. The CDN reference is loaded in the `<head>` and the Excel generation script is placed at the end of `<body>` so the button exists before the click handler is attached.
+Step 3: Create `index.html` in the `my-app` folder with the following content. The CDN reference is loaded in the `<head>`, and the Excel generation script is placed at the end of `<body>` so that the button exists before the click handler is attached.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -67,10 +67,10 @@ Step 3: Create a complete `index.html` inside `my-app` with the following conten
     <script src="https://cdn.syncfusion.com/ej2/31.2.15/dist/ej2.min.js"></script>
 </head>
 <body>
-    <div class="container py-4">
-        <h1 class="h4 mb-3">Create Excel document</h1>
-        <p class="text-muted">Click the button to generate and download an Excel workbook.</p>
-        <button id="createExcel" class="btn btn-primary">Create Excel document</button>
+    <div>
+        <h1>Create Excel document</h1>
+        <p>Click the button to generate and download an Excel workbook.</p>
+        <button id="createExcel">Create Excel document</button>
     </div>
     <script>
         document.getElementById('createExcel').addEventListener('click', async function () {
@@ -116,9 +116,9 @@ Step 3: Create a complete `index.html` inside `my-app` with the following conten
 {% endhighlight %}
 {% endtabs %}
 
-N> The script tag is placed at the end of `<body>` so that `document.getElementById('createExcel')` finds the button. If you prefer to put the script in `<head>`, wrap the listener registration in a `DOMContentLoaded` event.
+N> The script tag is placed at the end of `<body>` so that `document.getElementById('createExcel')` finds the button. To put the script in `<head>` instead, wrap the listener registration in a `DOMContentLoaded` event.
 
-## Code Explanation
+## Code explanation
 
 - `ej.xlsx.Workbook.create()` — creates a new workbook with one visible worksheet named `Sheet1`.
 - `workbook.sheet(0)` — returns the worksheet at the zero-based index.
@@ -130,7 +130,7 @@ N> The script tag is placed at the end of `<body>` so that `document.getElementB
 - `anchor.remove()` — removes the temporary anchor element after the download click.
 - `URL.revokeObjectURL(url)` — releases the temporary object URL after the download starts.
 
-## Run the Sample
+## Run the sample
 
 Step 4: Open a terminal in the `my-app` folder and start a static file server.
 
@@ -149,7 +149,6 @@ Click **Create Excel document**. The browser downloads `Output.xlsx`, which cont
 | Problem | Cause | Resolution |
 |---|---|---|
 | `ej is not defined` in the browser console | The CDN script tag is missing or blocked | Confirm the `<script src="https://cdn.syncfusion.com/ej2/.../ej2.min.js"></script>` reference is reachable and not blocked by an ad blocker or network policy |
-| `@section Scripts` appears as plain text on the page | The file is a static `.html`, not an ASP.NET view | Replace the Razor block with a plain `<script>` tag inside `<body>` |
 | Button click does nothing | The script runs before the button is in the DOM | Move the `<script>` tag to the end of `<body>`, or wrap the listener in a `DOMContentLoaded` event |
 | `Output.xlsx` does not download | The browser blocks the download | Check the browser's download settings and the downloads folder |
 | CORS or `file://` errors | The page is opened directly from disk | Serve the folder over `http://` using `npx serve` or a similar static server |
