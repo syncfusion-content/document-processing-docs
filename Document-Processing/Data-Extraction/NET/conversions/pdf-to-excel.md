@@ -1,6 +1,6 @@
 ---
 title: Convert PDF to Excel in .NET Smart Data Extractor |Syncfusion
-description: Extract structured data from PDF documents and images into Excel files using Smart Data Extractor in .NET applications.
+description: Extract structured data from PDF documents and images into Excel file using Smart Data Extractor in .NET applications.
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG
