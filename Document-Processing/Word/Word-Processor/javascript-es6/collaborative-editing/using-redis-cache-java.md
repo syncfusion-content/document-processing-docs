@@ -308,3 +308,8 @@ try (Jedis jedis = RedisSubscriber.jedisPool.getResource()) {
 Full version of the code discussed above can be found in the below GitHub location.
 
 GitHub Example: [`Collaborative editing examples`](https://github.com/SyncfusionExamples/EJ2-Document-Editor-Collaborative-Editing)
+
+
+## See Also
+
+- [Learn how to estimate Redis and Collaboration Server capacity for collaborative editing](../../../../Collaborator/faq#6-how-do-i-calculate-the-redis-and-server-configuration-for-collaborative-editing)

@@ -90,3 +90,4 @@ Both samples use the following routes under `/api/CollaborativeEditing`:
 - [Collaborative editing with ASP.NET Core](./using-redis-cache-asp-net-core)
 - [Collaboration Client](../../../../Collaborator/collaboration-client)
 - [Collaboration Server](../../../../Collaborator/collaboration-server)
+- [Learn how to estimate Redis and Collaboration Server capacity for collaborative editing](../../../../Collaborator/faq#6-how-do-i-calculate-the-redis-and-server-configuration-for-collaborative-editing)

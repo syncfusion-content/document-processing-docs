@@ -89,3 +89,4 @@ The Node.js sample uses the following routes under `/api/CollaborativeEditing`:
 - [Collaborative editing with Node.js](./using-redis-cache-nodejs)
 - [Collaboration Client](../../../../Collaborator/collaboration-client)
 - [Collaboration Server](../../../../Collaborator/collaboration-server)
+- [Learn how to estimate Redis and Collaboration Server capacity for collaborative editing](../../../../Collaborator/faq#6-how-do-i-calculate-the-redis-and-server-configuration-for-collaborative-editing)
