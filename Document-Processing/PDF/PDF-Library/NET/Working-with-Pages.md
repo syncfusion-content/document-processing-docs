@@ -808,6 +808,78 @@ document.Close(True)
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/PDF-Examples/tree/master/Pages/Import-pages-from-PDF-without-bookmarks/).
 
+## Insert a duplicate page at a specific index
+
+This example demonstrates how to duplicate an existing page within a PDF document and insert the duplicated page at a specified position. The ImportPage method can be used to import a page from a source document into a destination document. When the same document is passed as both the source and destination, the page is duplicated within the document.
+
+In the following example, the first page (page index 0) is duplicated and inserted at page index 1, making it the second page in the document. As a result, the document contains a copy of the original first page at the specified location. The following code snippet illustrates the same.
+
+N> PdfImportOptions is an internal type and is not intended for direct use in user applications. The example is provided to demonstrate the underlying page import behavior used during page duplication operations.
+
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Creates an instance of PdfImportOptions to configure the page import operation. 
+PdfImportOptions options = new PdfImportOptions();
+//Gets or sets the target page index for importing. This property specifies the index of the page to be imported.
+options.TargetPageIndex = 1;
+//Imports page index 0 (the first page) from loadedDocument and inserts the duplicated page at page index 1.
+loadedDocument.ImportPage(loadedDocument, 0, options);
+
+//Save and close the document.
+loadedDocument.Save("Output.pdf");
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.Pdf;
+using Syncfusion.Pdf.Parsing;
+
+//Load the PDF document.
+PdfLoadedDocument loadedDocument = new PdfLoadedDocument("Input.pdf");
+//Creates an instance of PdfImportOptions to configure the page import operation. 
+PdfImportOptions options = new PdfImportOptions();
+//Gets or sets the target page index for importing. This property specifies the index of the page to be imported.
+options.TargetPageIndex = 1;
+//Imports page index 0 (the first page) from loadedDocument and inserts the duplicated page at page index 1.
+loadedDocument.ImportPage(loadedDocument, 0, options);
+
+//Save and close the document.
+loadedDocument.Save("Output.pdf");
+loadedDocument.Close(true);
+
+{% endhighlight %}
+
+{% highlight vb.net tabtitle="VB.NET [Windows-specific]" %}
+
+Imports Syncfusion.Pdf
+Imports Syncfusion.Pdf.Parsing
+
+'Load the PDF document.
+Dim loadedDocument As New PdfLoadedDocument("Input.pdf")
+'Creates an instance of PdfImportOptions to configure the page import operation.
+Dim options As New PdfImportOptions()
+'Gets or sets the target page index for importing. This property specifies the index at which the imported page will be inserted.
+options.TargetPageIndex = 1
+'Imports page index 0 (the first page) from loadedDocument and inserts the duplicated page at page index 1.
+loadedDocument.ImportPage(loadedDocument, 0, options)
+
+'Save and close the document.
+loadedDocument.Save("Output.pdf")
+loadedDocument.Close(True)
+
+{% endhighlight %}
+
+{% endtabs %}
+
 ## Rearranging pages in an existing document
 
 You can rearrange the pages in an existing PDF document using the [ReArrange](https://help.syncfusion.com/cr/document-processing/Syncfusion.Pdf.Parsing.PdfLoadedPageCollection.html#Syncfusion_Pdf_Parsing_PdfLoadedPageCollection_ReArrange_System_Int32___) method. This method uses a zero-based start index and accepts an array of indices that defines the new page order. The following code snippet illustrates the same.
