@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Identify Opened Context Menu in TypeScript Spreadsheet | Syncfusion
+title: How to Identify Opened Context Menu in Spreadsheet | Syncfusion
 description: Learn how to identify the opened context menu in the Syncfusion TypeScript Spreadsheet control through event handling.
 control: Spreadsheet
 platform: document-processing
 documentation: ug
 ---
 
-# How to Identify Which Context Menu Was Opened in TypeScript Spreadsheet
+# How to Identify Which Context Menu Was Opened in Spreadsheet
 
 The Spreadsheet includes several context menus that will open and display depending on the action. When you right-click on a cell, for example, a context menu with options related to the cell element appears.
 

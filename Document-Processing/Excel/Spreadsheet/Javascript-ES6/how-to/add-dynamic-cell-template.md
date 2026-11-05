@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Create Dynamic Cell Templates in TypeScript Spreadsheet | Syncfusion
+title: How to Create Dynamic Cell Templates in Spreadsheet | Syncfusion
 description: Learn how to create dynamic cell templates in the Syncfusion TypeScript Spreadsheet control using dropdown-based templates.
 control: Spreadsheet 
 platform: document-processing

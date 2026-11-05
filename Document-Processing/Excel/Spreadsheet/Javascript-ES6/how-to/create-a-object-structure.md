@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Create an Object Structure in TypeScript Spreadsheet | Syncfusion
+title: How to Create an Object Structure in Spreadsheet | Syncfusion
 description: Learn how to create an object structure in the Syncfusion TypeScript Spreadsheet control for organizing spreadsheet data.
 control: Create a object structure 
 platform: document-processing

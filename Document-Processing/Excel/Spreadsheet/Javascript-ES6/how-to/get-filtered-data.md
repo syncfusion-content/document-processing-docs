@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Retrieve Filtered Row Data in TypeScript Spreadsheet | Syncfusion
+title: How to Retrieve Filtered Row Data in Spreadsheet | Syncfusion
 description: Learn how to retrieve filtered row data from the Syncfusion TypeScript Spreadsheet control after applying filters.
 control: Spreadsheet 
 platform: document-processing

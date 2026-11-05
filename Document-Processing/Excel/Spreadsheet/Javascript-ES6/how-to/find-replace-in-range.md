@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Find and Replace in a Range in TypeScript Spreadsheet | Syncfusion
+title: How to Find and Replace in a Range in Spreadsheet | Syncfusion
 description: Learn how to perform find and replace operations within a selected cell range in the Syncfusion TypeScript Spreadsheet control.
 control: Spreadsheet 
 platform: document-processing

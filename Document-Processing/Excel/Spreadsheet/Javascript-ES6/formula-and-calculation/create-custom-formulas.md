@@ -9,7 +9,7 @@ documentation: ug
 
 # Custom Function Creation in TypeScript Spreadsheet
 
-The Spreadsheet includes a set of built-in formulas. For convenience, you can find the list of supported formulas [here](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es6/formulas-and-calculations#supported-formulas).
+The Spreadsheet includes a set of built-in formulas. For convenience, you can find the list of supported formulas [here](../formulas-and-calculations#supported-formulas).
 
 You can also define and use formulas that are not supported by default, known as **user defined/custom formulas**, by using the [addCustomFunction](https://ej2.syncfusion.com/documentation/api/spreadsheet#addcustomfunction) function. Keep in mind that a user defined/custom formula should return only a single value. If the formula returns an array, updating adjacent cell values will take more time and may affect performance.
 

@@ -90,6 +90,10 @@ In protected spreadsheet, to make some particular cell or range of cells are edi
         
 {% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/protect-sheet-cs2" %}
 
+## Read-only
+
+The read-only feature allows you to restrict editing for specific rows, columns, or cell ranges without protecting the entire worksheet. This provides flexibility to safeguard important data while still allowing users to interact with other parts of the sheet as needed.
+
 ## Make cells read-only without protecting worksheet
 
 Previously, you could make cells read-only by protecting the entire sheet using the [protectSheet](https://ej2.syncfusion.com/documentation/api/spreadsheet#protectsheet) method or through the UI option. Meanwhile, to make a specific range of cells editable within a protected sheet, you needed to use the [lockCells](https://ej2.syncfusion.com/documentation/api/spreadsheet#lockcells) method, passing the `range` parameter and setting the `isLocked` property to **false**. 

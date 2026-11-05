@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Customize Spreadsheet as Grid in TypeScript Spreadsheet | Syncfusion
+title: How to Customize Spreadsheet as Grid in Spreadsheet | Syncfusion
 description: Learn how to customize the Syncfusion TypeScript Spreadsheet control to provide a grid-like user experience.
 control: Spreadsheet 
 platform: document-processing

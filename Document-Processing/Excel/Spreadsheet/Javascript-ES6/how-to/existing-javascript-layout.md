@@ -1,6 +1,6 @@
 --- 
 layout: post
-title: How to Integrate Spreadsheet into Existing TypeScript Layouts | Syncfusion
+title: How to Integrate Spreadsheet into Existing Layouts | Syncfusion
 description: Learn how to integrate the Syncfusion TypeScript Spreadsheet control into existing TypeScript application layouts.
 control: Spreadsheet 
 platform: document-processing

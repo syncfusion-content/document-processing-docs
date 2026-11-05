@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Change Active Sheet on Import in TypeScript Spreadsheet | Syncfusion
+title: How to Change Active Sheet on Import in Spreadsheet | Syncfusion
 description: Learn how to change the active sheet while importing a workbook in the Syncfusion TypeScript Spreadsheet control.
 control: Spreadsheet 
 platform: document-processing
 documentation: ug
 ---
 
-# How to Change Active Sheet While Importing a File in TypeScript Spreadsheet
+# How to Change Active Sheet While Importing a File in Spreadsheet
 
 You can change the active sheet of the imported file by updating the [`activeSheetIndex`](https://ej2.syncfusion.com/documentation/api/spreadsheet#activesheetindex) property on the [`openComplete`](https://ej2.syncfusion.com/documentation/api/spreadsheet#opencomplete) event.
 

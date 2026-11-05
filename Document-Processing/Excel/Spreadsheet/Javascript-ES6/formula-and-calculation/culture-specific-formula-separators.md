@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Culture-Specific Formula Separators in TypeScript Spreadsheet | Syncfusion
+title: Culture-Specific Formula Separators in Spreadsheet | Syncfusion
 description: Learn about culture-specific formula separators in the Syncfusion TypeScript Spreadsheet control and regional formula support.
 control: Formulas 
 platform: document-processing
