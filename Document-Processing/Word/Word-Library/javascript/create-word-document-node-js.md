@@ -123,7 +123,7 @@ app.get('/generate-word', async (req, res) => {
   // Create a Word document
   const document = WordDocument.create();
   // Access the section
-  const section = document.section[0];
+  const section = document.sections[0];
   // Access the paragraph
   const paragraph = section.body.paragraphs[0];
   // Add text to the paragraph
@@ -148,7 +148,7 @@ N> If you prefer ESM, add `"type": "module"` to `package.json` and replace the `
 ### Code Explanation
 
 - `WordDocument.create()` — creates a new Word document instance.
-- `document.section[0]` — accesses the first section of the document.
+- `document.sections[0]` — accesses the first section of the document.
 - `section.body.paragraphs[0]` — accesses the first paragraph in the section body.
 - `appendText(text)` — adds text content to the paragraph.
 - `document.save()` — returns the Word document as a `Uint8Array`. In a browser build, `document.save('filename')` triggers a client download; in Node, you receive the bytes and stream them yourself. Use `saveSync()` when a synchronous call is required.
