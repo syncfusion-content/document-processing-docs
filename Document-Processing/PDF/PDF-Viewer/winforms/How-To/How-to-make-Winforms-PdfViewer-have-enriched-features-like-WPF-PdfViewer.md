@@ -18,19 +18,19 @@ You can host a WPF PdfViewer control within a Windows Forms application using an
 
 2. Add the following Syncfusion&reg; namespace in XAML to make use of the WPF [PdfViewerControl](https://help.syncfusion.com/cr/wpf/Syncfusion.Windows.PdfViewer.PdfViewerControl.html).
 
-   ~~~xaml 
-   <UserControl
-        xmlns:PdfViewerUserControl="clr-namespace:Syncfusion.Windows.PdfViewer;assembly=Syncfusion.PdfViewer.WPF">
-   </UserControl>
-   ~~~
+~~~xaml 
+<UserControl
+	xmlns:PdfViewerUserControl="clr-namespace:Syncfusion.Windows.PdfViewer;assembly=Syncfusion.PdfViewer.WPF">
+</UserControl>
+~~~
 
 3. Add the below code in the XAML page to initialize the WPF PdfViewer.
 
-   ~~~xaml
-    <Grid>
-        <PdfView:PdfViewerControl  x:Name="pdfViewer"/>
-    </Grid>
-   ~~~
+~~~xaml
+<Grid>
+	<PdfView:PdfViewerControl  x:Name="pdfViewer"/>
+</Grid>
+~~~
 
 4. Load the PDF file into the PdfViewer when the UserControl is loaded in the application
 
@@ -81,21 +81,21 @@ namespace SampleWF
             elementHost.AutoSize = true;
             elementHost.Size = panel1.Size;
             elementHost.Dock = DockStyle.Fill;
-			// Adds the ElementHost to the panel1 control
+            // Adds the ElementHost to the panel1 control
             panel1.Controls.Add(elementHost);
 			
             // Create the WPF PdfViewer control and assign it as a child of ElementHost
             PdfViewerUserControl pdfViewerUserControl = new PdfViewerUserControl();
-			// Embeds the PdfViewer into the ElementHost
+            // Embeds the PdfViewer into the ElementHost
             elementHost.Child = pdfViewerUserControl;
           
-		    // Set additional visual properties for a seamless look and feel
+            // Set additional visual properties for a seamless look and feel
             elementHost.Margin = new Padding(0, 0, 0, 0);
             elementHost.Region = new Region();
             elementHost.BackColor = System.Drawing.Color.White;
         }
 		
-		// Set the form to maximized when it loads
+        // Set the form to maximized when it loads
         private void Form1_Load(object sender, System.EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
