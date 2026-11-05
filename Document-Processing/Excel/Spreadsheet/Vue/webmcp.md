@@ -1,0 +1,262 @@
+---
+layout: post
+title: WebMCP tool integration for Vue Spreadsheet | Syncfusion
+description: Learn how to integrate WebMCP with Syncfusion Vue Spreadsheet to enable AI interaction, configure tools, manage access, and monitor execution.
+control: WebMCP
+platform: document-processing
+documentation: ug
+---
+ 
+# WebMCP Tools Integration for Syncfusion® Vue Spreadsheet component
+ 
+WebMCP enables AI agents to discover and interact with Syncfusion® Vue Spreadsheet through a standardized tool interface. By enabling WebMCP, AI-powered applications can securely discover component capabilities, read data, perform actions, and automate workflows through a standardized interface.
+
+This section demonstrates how to integrate WebMCP with the Syncfusion® Vue Spreadsheet component.
+ 
+## WebMCP Overview
+ 
+WebMCP allows AI assistants running in the browser to interact directly with Syncfusion® Vue Spreadsheet through natural language prompts.
+ 
+Instead of relying on DOM inspection or simulating user interactions, AI assistants can interact directly with component APIs through WebMCP tools. This approach provides more reliable and accurate results.
+ 
+Once connected, an AI assistant can perform tasks such as:
+ 
+- Update Spreadsheet cells.
+- Read and analyze spreadsheet data.
+- Perform spreadsheet-specific actions through natural language prompts.
+ 
+> WebMCP is currently an experimental browser capability and requires a Chromium-based browser with WebMCP support enabled. Availability and required browser flags may change as the specification evolves.
+ 
+## Prerequisites
+ 
+- Syncfusion® Vue Spreadsheet component
+- Chromium-based Browser (like Chrome, Edge, or Brave)
+- [Node.js 24+](https://nodejs.org/en) (LTS recommended).
+- WebMCP browser extension installed
+- AI API key configured in the extension
+ 
+## WebMCP setup
+ 
+Before you can use WebMCP locally, enable the feature flag and install the browser extension:
+ 
+1. Enable `WebMCP for testing` flag via `chrome://flags/`. Click **"Relaunch"** to restart Chrome.
+ 
+2. Search for **"WebMCP - Model Context Tool Inspector"** in [Chrome Web Store](https://chromewebstore.google.com/detail/webmcp-model-context-tool/gbpdfapgefenggkahomfgkhfehlcenpd). Click **"Add to Chrome"**.
+ 
+3. Visit [Google AI Studio](https://aistudio.google.com/app/apikey) to create or copy an API key. Open the WebMCP extension → paste your API key.
+ 
+The WebMCP extension is now configured and ready to interact with WebMCP-enabled Syncfusion® Vue Spreadsheet component.
+
+## Integrating WebMCP tools
+
+Follow these steps to integrate WebMCP support into Syncfusion® Vue Spreadsheet component.
+
+### Step 1: Set up the Vite project
+
+Create a Vue Vite application and integrate the Syncfusion® Vue Spreadsheet component by following the [Getting Started with Vue Spreadsheet](https://help.syncfusion.com/document-processing/excel/spreadsheet/vue/vue-3-getting-started) guide. After completing the setup, follow the steps below to enable WebMCP integration.
+
+### Step 2: Enable WebMCP support
+
+Import the WebMCP module and inject it into the component to make WebMCP functionality available.
+
+```html
+<template>
+  <ejs-spreadsheet
+    :enableWebMcp="true"
+    openUrl="https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open"
+    saveUrl="https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save">
+  </ejs-spreadsheet>
+</template>
+
+<script setup>
+import {
+  SpreadsheetComponent as EjsSpreadsheet,
+  Spreadsheet,
+  WebMcpSpreadsheet
+} from '@syncfusion/ej2-vue-spreadsheet';
+
+Spreadsheet.Inject(WebMcpSpreadsheet);
+</script>
+```
+
+### Step 3: Register component tools
+
+Set the `enableWebMcp` property to `true` to register the component's available tools with the WebMCP runtime.
+
+When `enableWebMcp` is enabled, Spreadsheet component tools are automatically registered with the WebMCP runtime and become discoverable by authorized WebMCP clients.
+
+For example, a Spreadsheet component may expose tools such as:
+
+- getCellData
+- editCell
+- addSheet
+
+An AI assistant can discover these tools and invoke them based on user prompts.
+
+```html
+<template>
+  <ejs-spreadsheet
+    :enableWebMcp="true"
+    openUrl="https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open"
+    saveUrl="https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save">
+  </ejs-spreadsheet>
+</template>
+
+<script setup>
+import {
+  SpreadsheetComponent as EjsSpreadsheet,
+  Spreadsheet,
+  WebMcpSpreadsheet
+} from '@syncfusion/ej2-vue-spreadsheet';
+
+Spreadsheet.Inject(WebMcpSpreadsheet);
+</script>
+```
+
+### Step 4: Customize tool registration
+
+Use the `webMcpSettings` property to customize how WebMCP tools are exposed to AI agents. The available settings are listed below.
+
+| Property | Description |
+|-----------|-------------|
+| `name` | Prefix applied to registered tool names. If name: `sales` is specified, a tool such as `getCellData` may be registered as `sales_getCellData`, allowing multiple component instances to coexist without tool name conflicts. |
+| `tools` | List of tool names to expose. Any supported tools not included in this list will not be registered. |
+| `exposeTo` | List of trusted domains that are allowed to interact with the component through WebMCP. |
+
+```html
+<template>
+  <ejs-spreadsheet
+    :enableWebMcp="true"
+    :webMcpSettings="webMcpSettings"
+    openUrl="https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open"
+    saveUrl="https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save">
+  </ejs-spreadsheet>
+</template>
+
+<script setup>
+import {
+  SpreadsheetComponent as EjsSpreadsheet,
+  Spreadsheet,
+  WebMcpSpreadsheet
+} from '@syncfusion/ej2-vue-spreadsheet';
+
+Spreadsheet.Inject(WebMcpSpreadsheet);
+
+const webMcpSettings = {
+  name: 'sales',
+  tools: ['getCellData', 'editCell', 'addSheet'],
+  exposeTo: ['https://www.syncfusion.com/']
+};
+</script>
+```
+
+> Use the `exposeTo` property to restrict WebMCP access to trusted domains. This helps prevent unauthorized WebMCP clients from interacting with your spreadsheet component tools.
+
+### Step 5: Monitor and control tool execution
+
+The `beforeWebMcpToolExecute` event is triggered before a tool is executed. This event allows you to:
+
+- Audit tool usage.
+- Validate incoming requests.
+- Cancel tool execution when necessary.
+- Apply custom business rules and security policies.
+
+> AI-generated requests should always be validated before executing write operations. Restrict access using `exposeTo` and perform additional authorization checks within `beforeWebMcpToolExecute` when modifying application data.
+
+```html
+<template>
+  <ejs-spreadsheet
+    :enableWebMcp="true"
+    :webMcpSettings="webMcpSettings"
+    :beforeWebMcpToolExecute="beforeWebMcpToolExecute"
+    openUrl="https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open"
+    saveUrl="https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save">
+  </ejs-spreadsheet>
+</template>
+
+<script setup>
+import {
+  SpreadsheetComponent as EjsSpreadsheet,
+  Spreadsheet,
+  WebMcpSpreadsheet
+} from '@syncfusion/ej2-vue-spreadsheet';
+
+Spreadsheet.Inject(WebMcpSpreadsheet);
+
+const webMcpSettings = {
+  name: 'sales',
+  tools: ['getCellData', 'editCell', 'addSheet'],
+  exposeTo: ['https://www.syncfusion.com/']
+};
+
+const beforeWebMcpToolExecute = (args) => {
+  // Example business rule
+  if (args.toolName.includes('editCell')) {
+    const hour = new Date().getHours();
+    if (hour < 9 || hour > 17) {
+      args.cancel = true;
+      console.log(
+        'Cell editing is allowed only between 9:00 AM and 5:00 PM.'
+      );
+    }
+  }
+};
+</script>
+```
+
+## Best practices
+
+- Expose only the tools required by your application.
+- Use the `name` property when multiple component instances exist on the same page.
+- Configure `exposeTo` to limit access to trusted domains.
+- Monitor tool activity through the `beforeWebMcpToolExecute` event.
+- Apply application-specific validation before executing tool operations.
+
+## Supported Features
+
+WebMCP tools are organized into six categories, covering 28 operations:
+
+| Category | Tools | Example |
+|----------|-------|---------|
+| **Core Data** | getCellData, getRangeData, getSheetInfo, sheetList, evaluateFormula, find | Read cell values, formulas, sheet metadata, and search content |
+| **Editing** | editCell, insertRowsColumns, deleteRowsColumns, insertSheet, cut, copy, paste, autofill, findReplace | Modify spreadsheet content and structure |
+| **Formatting** | formatCells, setNumberFormat, addConditionalFormat, mergeCells, toggleWrap | Apply styles, number formats, conditional rules, and cell layout |
+| **Data Operations** | sortRange, filterRange, addDataValidation, freezePanes | Sort, filter, validate, and lock data for navigation |
+| **Charting & Links** | insertChart, insertHyperlink | Create visualizations and insert clickable links |
+| **Workbook & Utility** | save, undo | Export the workbook and manage action history |
+
+For complete tool reference, see [WebMCP Integration — Tool Reference](https://ej2.syncfusion.com/react/documentation/webmcp/components#spreadsheet).
+
+## Writing Effective Prompts
+
+AI responses are only as good as the prompt you provide. Vague requests like *"fix this"* give the AI very little context. More specific prompts produce reliable, accurate results.
+
+**Good Prompt Example:**
+*"Highlight all values in column B that are greater than 500 in red background with white font."*
+
+**Vague Prompt Example:**
+*"make it better"*
+
+### Tips for Effective Prompts
+
+- **Be Specific** — Include exact column names, cell ranges, colors, and formatting details
+- **Provide Context** — Mention the sheet, data type, or business objective
+- **One Goal at a Time** — Complex prompts may confuse the AI; break them into steps
+- **Reference Cells Clearly** — Use specific addresses (e.g., "A1:C10") instead of vague ranges
+- **State Expectations** — Clarify sort order, filter criteria, or output format
+
+## Explore the demo
+
+Explore the Syncfusion® Vue Spreadsheet component with WebMCP integration through this [demo](https://demos.syncfusion.com/spreadsheet-editor-sdk/webmcp/index.html).
+
+## Next steps
+
+After successfully enabling WebMCP, you can:
+
+- Build AI-powered workflows that interact directly with spreadsheet data and UI elements.
+- Create secure and controlled tool execution pipelines using custom validation logic.
+- Enhance spreadsheet applications with intelligent automation.
+
+## See also
+
+- [MCP Server Setup in Vue Spreadsheet](./mcp.md)
