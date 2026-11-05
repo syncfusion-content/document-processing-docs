@@ -44,6 +44,7 @@ The following list shows the key features available in the Essential<sup>&reg;</
 * Support to draw text using different [fonts](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-text#drawing-text-using-different-fonts).
 * Support to integrate with [cloud storage services](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/save-pdf-files/to-google-cloud-storage) like OneDrive, Google Drive, and Dropbox.
 * Support to convert [images into PDF](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/converting-images-to-pdf) documents.
+* Support to convert [PDF documents into PCL XL](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/converting-pdf-to-pcl-xl) print jobs.
 * Support to embed and interact with [3D models](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-annotations#3d-annotation).
 * Support to apply and manage [brushes for drawing and styling graphical](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-brushes) elements in PDF documents.
 * Support to arrange content using [flow layout](https://help.syncfusion.com/document-processing/pdf/pdf-library/net/working-with-flow-layout) for dynamic and responsive PDF document design.
