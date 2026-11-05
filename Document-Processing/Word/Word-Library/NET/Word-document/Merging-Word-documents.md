@@ -252,6 +252,7 @@ using (WordDocument sourceDocument = new WordDocument(@"../../../Data/SourceDocu
 {% endhighlight %}
 
 {% endtabs %}
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-document/Merge-source-first-section-to-destination-last-section).
 
 ## See Also
 
