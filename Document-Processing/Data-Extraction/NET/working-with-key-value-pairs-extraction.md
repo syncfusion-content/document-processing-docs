@@ -27,10 +27,8 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 {
     //Initialize the Data Extractor.
     DataExtractor extractor = new DataExtractor();
-
     //Extract data as Key-Value Pairs.
     string data = extractor.ExtractKeyValuePairs(stream);
-
     //Save the extracted JSON data into an output file.
     File.WriteAllText("Output.json", data, Encoding.UTF8);
 }
@@ -90,3 +88,155 @@ The KeyValuePair Object represents a key and its corresponding value detected on
 | Value | String | The extracted value associated with the key. |
 | ValueBounds | Array of Floats | The bounding box coordinates `[X, Y, Width, Height]` representing the value's position and size on the page. |
 | Confidence | Float | Confidence score (0–1) indicating the accuracy of the key-value association. |
+
+## Extract Key-Value Pairs with Table Detection and OCR Settings
+
+To extract key-value pairs from PDF documents while enabling table detection and configuring OCR settings, use the following code example:
+
+```csharp
+using System.Text;
+using Syncfusion.SmartDataExtractor;
+using Syncfusion.OCRProcessor;
+
+using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess.Read))
+{
+    // Initialize the Data Extractor.
+    DataExtractor extractor = new DataExtractor();
+    // Enable table detection.
+    extractor.EnableTableDetection = true;
+    // Initialize the OCR processor.
+    OCRProcessor processor = new OCRProcessor();
+    // Set OCR language.
+    processor.Settings.Language = Languages.English;
+    // Set Tesseract OCR engine version.
+    processor.Settings.TesseractVersion = TesseractVersion.Version5_0;
+    // Assign the configured OCR processor to the Data Extractor.
+    extractor.OCRProcessor = processor;
+    // Extract data as Key-Value Pairs.
+    string data = extractor.ExtractKeyValuePairs(stream);
+    // Save the extracted JSON data into an output file.
+    File.WriteAllText("Output.json", data, Encoding.UTF8);
+}
+```
+
+## Table-to-Key-Value Mapping
+
+When table detection is enabled, the extraction engine automatically converts table content into key-value pairs based on the table structure.
+
+### Two-Column Tables
+
+For tables containing exactly two columns:
+
+- The first column is treated as the **Key**.
+- The second column is treated as the **Value**.
+- Each row is converted into a separate key-value pair.
+
+**Example**
+
+| Key | Value |
+|------|------|
+| Name | John Smith |
+| Email | john@example.com |
+| Phone | +1 234 567 890 |
+
+JSON Output:
+
+```json
+{
+  "Pages": [
+    {
+      "PageNumber": 1,
+      "Width": 595.0,
+      "Height": 842.0,
+      "KeyValuePairs": [
+        {
+          "Key": "Name",
+          "Value": "John Smith",
+          "Confidence": 1.0
+        },
+        {
+          "Key": "Email",
+          "Value": "john@example.com",
+          "Confidence": 1.0
+        },
+        {
+          "Key": "Phone",
+          "Value": "+1 234 567 890",
+          "Confidence": 1.0
+        }
+      ]
+    }
+  ]
+}
+```
+
+### Multi-Column Tables
+
+For tables containing more than two columns:
+
+- The header row is treated as the set of keys.
+- Each subsequent row generates a collection of key-value pairs.
+- Each cell value is mapped to its corresponding column header.
+
+**Example**
+
+| Employee ID | Name | Department | Location |
+|-------------|------|------------|----------|
+| E001 | John Smith | Sales | New York |
+| E002 | Mary Jones | HR | London |
+
+JSON Output:
+
+```json
+{
+  "Pages": [
+    {
+      "PageNumber": 1,
+      "Width": 595.0,
+      "Height": 842.0,
+      "KeyValuePairs": [
+        {
+          "Key": "Employee ID",
+          "Value": "E001",
+          "Confidence": 1.0
+        },
+        {
+          "Key": "Name",
+          "Value": "John Smith",
+          "Confidence": 1.0
+        },
+        {
+          "Key": "Department",
+          "Value": "Sales",
+          "Confidence": 1.0
+        },
+        {
+          "Key": "Location",
+          "Value": "New York",
+          "Confidence": 1.0
+        },
+        {
+          "Key": "Employee ID",
+          "Value": "E002",
+          "Confidence": 1.0
+        },
+        {
+          "Key": "Name",
+          "Value": "Mary Jones",
+          "Confidence": 1.0
+        },
+        {
+          "Key": "Department",
+          "Value": "HR",
+          "Confidence": 1.0
+        },
+        {
+          "Key": "Location",
+          "Value": "London",
+          "Confidence": 1.0
+        }
+      ]
+    }
+  ]
+}
+```
