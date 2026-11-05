@@ -3,59 +3,49 @@ import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent, SheetsDirective, SheetDirective, RowsDirective, RowDirective, CellsDirective, CellDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
 import { CellStyleModel, FormControlModel, SpreadsheetAllModule } from '@syncfusion/ej2-react-spreadsheet';
 
-interface FormControlProps {
-    ref: React.RefObject<SpreadsheetComponent>;
-}
-
 function App() {
     const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
 
-    React.useEffect(() => {
-        let spreadsheet = spreadsheetRef.current;
-        if (spreadsheet) {
-            // Insert Check Box form control
-            // Parameters: target cell, name, x offset, y offset, width, height
-            spreadsheet.addFormControl({
-                type: 'CheckBox',
-                target: 'B2',
-                name: 'checkboxControl',
-                caption: 'Accept Terms',
-                checkedValue: true,
-                uncheckedValue: false,
-                linkedCell: 'D2',
-                fontName: 'Calibri',
-                fontSize: 14
-            } as FormControlModel);
-
-            // Insert another Check Box with different properties
-            spreadsheet.addFormControl({
-                type: 'CheckBox',
-                target: 'B4',
-                name: 'checkboxControl2',
-                caption: 'Enable Notifications',
-                checkedValue: true,
-                uncheckedValue: false,
-                linkedCell: 'D4'
-            } as FormControlModel);
-
-            // Insert Check Box with mixed state
-            spreadsheet.addFormControl({
-                type: 'CheckBox',
-                target: 'B6',
-                name: 'checkboxControl3',
-                caption: 'Select All Options',
-                linkedCell: 'D6'
-            } as FormControlModel);
+    const formControls: FormControlModel[] = [
+        {
+            type: 'CheckBox',
+            text: 'Accept Terms',
+            cellLink: 'D2',
+            value: 'Unchecked',
+            top: 40,
+            left: 150,
+            height: 20,
+            width: 120
+        },
+        {
+            type: 'CheckBox',
+            text: 'Enable Notifications',
+            cellLink: 'D4',
+            value: 'Unchecked',
+            top: 80,
+            left: 150,
+            height: 20,
+            width: 120
+        },
+        {
+            type: 'CheckBox',
+            text: 'Select All Options',
+            cellLink: 'D6',
+            value: 'Unchecked',
+            top: 120,
+            left: 150,
+            height: 20,
+            width: 120
         }
-    }, []);
+    ];
 
     const boldCenter: CellStyleModel = { fontWeight: 'bold', textAlign: 'center' };
 
     return (
         <div>
-            <SpreadsheetComponent ref={spreadsheetRef} showFormulaBar={false}>
+            <SpreadsheetComponent ref={spreadsheetRef} showFormulaBar={false} allowFormControl={true}>
                 <SheetsDirective>
-                    <SheetDirective name={'FormControls'}>
+                    <SheetDirective name={'FormControls'} formControls={formControls}>
                         <ColumnsDirective>
                             <ColumnDirective width={150}></ColumnDirective>
                             <ColumnDirective width={150}></ColumnDirective>
@@ -93,6 +83,9 @@ function App() {
                                 </CellsDirective>
                             </RowDirective>
                         </RowsDirective>
+                        <FormControlsDirective>
+                            <FormControlDirective type="CheckBox" text="Check Box 1" celllink="H4" height={40} width={110}></FormControlDirective>"
+                        </FormControlsDirective>
                     </SheetDirective>
                 </SheetsDirective>
             </SpreadsheetComponent>
