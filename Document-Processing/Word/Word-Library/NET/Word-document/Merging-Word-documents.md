@@ -230,7 +230,7 @@ destinationDocument.Close()
 
 {% endtabs %}
 
-## Merge Source Content into Destination document's last Section
+## Merge First Source Section into Last Section
 
 This example demonstrates how to append the content of the first source section to the last section of the destination document and clone the remaining source sections as separate sections.
 
