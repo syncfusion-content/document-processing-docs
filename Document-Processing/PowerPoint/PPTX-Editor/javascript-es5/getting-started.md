@@ -53,16 +53,16 @@ N> Replace `{VERSION}` in the path above with the installed PPTX Editor SDK vers
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
 <!-- PPTX Editor dependent theme -->
-<link href="resources/ej2-base/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-<link href="resources/ej2-buttons/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-<link href="resources/ej2-inputs/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-<link href="resources/ej2-popups/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-<link href="resources/ej2-lists/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-<link href="resources/ej2-navigations/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-<link href="resources/ej2-splitbuttons/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-<link href="resources/ej2-dropdowns/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<link href="resources/ej2-base/styles/tailwind.css" rel="stylesheet" type="text/css" />
+<link href="resources/ej2-buttons/styles/tailwind.css" rel="stylesheet" type="text/css" />
+<link href="resources/ej2-inputs/styles/tailwind.css" rel="stylesheet" type="text/css" />
+<link href="resources/ej2-popups/styles/tailwind.css" rel="stylesheet" type="text/css" />
+<link href="resources/ej2-lists/styles/tailwind.css" rel="stylesheet" type="text/css" />
+<link href="resources/ej2-navigations/styles/tailwind.css" rel="stylesheet" type="text/css" />
+<link href="resources/ej2-splitbuttons/styles/tailwind.css" rel="stylesheet" type="text/css" />
+<link href="resources/ej2-dropdowns/styles/tailwind.css" rel="stylesheet" type="text/css" />
 <!-- PPTX Editor theme -->
-<link href="resources/ej2-pptxeditor/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<link href="resources/ej2-pptxeditor/styles/tailwind.css" rel="stylesheet" type="text/css" />
 <!-- PPTX Editor dependent scripts -->
 <script src="resources/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"></script>
 <script src="resources/ej2-data/dist/global/ej2-data.min.js" type="text/javascript"></script>
@@ -95,16 +95,16 @@ Style: https://cdn.syncfusion.com/ej2/{VERSION}/{PACKAGE_NAME}/styles/{THEME_NAM
 {% highlight html tabtitle="index.html" %}
 
 <!-- PPTX Editor dependent theme -->
-<link href="https://cdn.syncfusion.com/ej2/34.1.29/ej2-base/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-<link href="https://cdn.syncfusion.com/ej2/34.1.29/ej2-buttons/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-<link href="https://cdn.syncfusion.com/ej2/34.1.29/ej2-inputs/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-<link href="https://cdn.syncfusion.com/ej2/34.1.29/ej2-popups/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-<link href="https://cdn.syncfusion.com/ej2/34.1.29/ej2-lists/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-<link href="https://cdn.syncfusion.com/ej2/34.1.29/ej2-navigations/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-<link href="https://cdn.syncfusion.com/ej2/34.1.29/ej2-splitbuttons/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-<link href="https://cdn.syncfusion.com/ej2/34.1.29/ej2-dropdowns/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/34.1.29/ej2-base/styles/tailwind.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/34.1.29/ej2-buttons/styles/tailwind.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/34.1.29/ej2-inputs/styles/tailwind.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/34.1.29/ej2-popups/styles/tailwind.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/34.1.29/ej2-lists/styles/tailwind.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/34.1.29/ej2-navigations/styles/tailwind.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/34.1.29/ej2-splitbuttons/styles/tailwind.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/34.1.29/ej2-dropdowns/styles/tailwind.css" rel="stylesheet" type="text/css" />
 <!-- PPTX Editor theme -->
-<link href="https://cdn.syncfusion.com/ej2/34.1.29/ej2-pptxeditor/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/34.1.29/ej2-pptxeditor/styles/tailwind.css" rel="stylesheet" type="text/css" />
 <!-- PPTX Editor dependent scripts -->
 <script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"></script>
 <script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-data/dist/global/ej2-data.min.js" type="text/javascript"></script>
@@ -126,7 +126,7 @@ Style: https://cdn.syncfusion.com/ej2/{VERSION}/{PACKAGE_NAME}/styles/{THEME_NAM
 
 {% endtabcontents %}
 
-N> This example uses the `Tailwind 3` theme. To use a different built-in theme, replace the `tailwind3.css` references with the corresponding theme stylesheets. Refer to the [Themes documentation](https://ej2.syncfusion.com/documentation/appearance/theme) for information about the available themes and the different ways to include theme styles in a JavaScript application. To generate customized resources, refer to the [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) documentation.
+N> This example uses the `Tailwind` theme. To use a different built-in theme, replace the `tailwind.css` references with the corresponding theme stylesheets. Refer to the [Themes documentation](https://ej2.syncfusion.com/documentation/appearance/theme) for information about the available themes and the different ways to include theme styles in a JavaScript application. To generate customized resources, refer to the [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator) documentation.
 
 ## Register a Syncfusion License Key
 
@@ -156,6 +156,11 @@ Add a container element for the PPTX Editor in the `index.html` file and then in
 </html>
 
 {% endhighlight %}
+{% endtabs %}
+
+This example demonstrates how to render the PPTX Editor and load a local presentation file into it.
+
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 
 // Inject the required modules
@@ -169,15 +174,14 @@ ej.pptxeditor.PptxEditor.Inject(
 );
 
 // Initialize PPTX Editor component
-var editor = new ej.pptxeditor.PptxEditor({});
+var editor = new ej.pptxeditor.PptxEditor({
+    id: 'editor',
+    theme: 'tailwind',
+    documentPath: './documents/DefaultTemplate.pptx'
+});
 
 // Render the PPTX Editor
 editor.appendTo('#PptxEditor');
-
-// Open a local presentation file in the PPTX Editor
-fetch('./sample.pptx')
-    .then((response) => response.blob())
-    .then((blob) => editor.openFromBlob(blob, 'sample.pptx'));
 
 {% endhighlight %}
 {% endtabs %}

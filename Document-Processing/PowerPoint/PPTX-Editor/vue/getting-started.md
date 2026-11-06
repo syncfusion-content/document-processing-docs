@@ -62,10 +62,10 @@ Before initializing the Vue PPTX Editor control, generate a Syncfusion license k
 
 Themes for PPTX Editor can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/vue/documentation/appearance/theme#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio).
 
-This guide uses the `Tailwind 3` theme as an example, sourced from the theme package. In this package, each component includes an `index.css` file that automatically loads all the required dependency styles. To install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
+This guide uses the `Tailwind` theme as an example, sourced from the theme package. In this package, each component includes an `index.css` file that automatically loads all the required dependency styles. To install the [Tailwind](https://www.npmjs.com/package/@syncfusion/ej2-tailwind-theme) theme package, use the following command:
 
 ```bash
-npm install @syncfusion/ej2-tailwind3-theme
+npm install @syncfusion/ej2-tailwind-theme
 ```
 
 By default, projects include an `src/App.Vue` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `<style>` section of the `App.vue` to prevent style conflicts.
@@ -75,7 +75,7 @@ The required styles for the PPTX Editor are imported in the `<style>` section of
 {% tabs %}
 {% highlight css tabtitle="App.vue" %}
 
-@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/pptx-editor/index.css";
+@import "../node_modules/@syncfusion/ej2-tailwind-theme/styles/pptxeditor/index.css";
 
 {% endhighlight %}
 {% endtabs %}
@@ -89,9 +89,7 @@ Modify the `src/App.vue` file to render the PPTX Editor. Add the PPTX Editor com
 
 <template>
   <div id="app">
-    <ejs-pptxeditor
-      ref="editor"
-      id="container">
+    <ejs-pptxeditor ref="editor" id="container" theme="tailwind" documentPath="/documents/Sample.pptx">
     </ejs-pptxeditor>
   </div>
 </template>
@@ -108,38 +106,19 @@ import {
 } from '@syncfusion/ej2-vue-pptxeditor';
 
 export default {
-  name: "App",
-
+  name: 'App',
   components: {
-    "ejs-pptxeditor": PptxEditorComponent
+    'ejs-pptxeditor': PptxEditorComponent
   },
-
   provide: {
-    // Inject required modules.
-    PptxEditor: [Toolbar, ThumbnailView, Magnification, Navigation, Print, SlideShow]
+    pptxeditor: [Toolbar, ThumbnailView, Magnification, Navigation, Print, SlideShow]
   }
 };
 </script>
 
-{% endhighlight %}
-{% endtabs %}
-
-To open a local PPTX file in the PPTX Editor, fetch the file as a blob and load it using the `openFromBlob` method:
-
-{% tabs %}
-{% highlight html tabtitle="App.vue" %}
-
-<script>
-import samplePptxUrl from '../sample.pptx?url';
-
-export default {
-  mounted() {
-    fetch(samplePptxUrl)
-      .then((response) => response.blob())
-      .then((blob) => this.$refs.editor.openFromBlob(blob, 'sample.pptx'));
-  }
-};
-</script>
+<style>
+@import "@syncfusion/ej2-tailwind-theme/styles/pptxeditor/index.css";
+</style>
 
 {% endhighlight %}
 {% endtabs %}

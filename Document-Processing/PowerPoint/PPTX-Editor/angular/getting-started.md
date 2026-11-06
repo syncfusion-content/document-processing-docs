@@ -46,7 +46,26 @@ ng new pptx-editor-app
 
 In this guide, CSS is selected as the stylesheet format.
 
-**Step 3:** Navigate to the created project folder.
+**Step 3:** During project setup, when prompted for the server-side rendering (SSR) option, choose the appropriate configuration.
+
+```text
+? Do you want to enable Server-Side Rendering (SSR) and Static Site Generation (SSG/Prerendering)? (y/N) N
+```
+
+**Step 4:** Select the required AI tool or 'none' if you do not need any AI tool.
+
+```text
+? Which AI tools do you want to configure with Angular best practices? https://angular.dev/ai/develop-with-ai
+❯ None
+  Agents.md      [ https://agents.md/                                               ]
+  Claude         [ https://docs.anthropic.com/en/docs/claude-code/memory            ]
+  Cursor         [ https://docs.cursor.com/en/context/rules                         ]
+  Gemini         [ https://ai.google.dev/gemini-api/docs                            ]
+  GitHub Copilot [ https://code.visualstudio.com/docs/copilot/copilot-customization ]
+  JetBrains AI   [ https://www.jetbrains.com/help/junie/customize-guidelines.html   ]
+```
+
+**Step 5:** Navigate to the created project folder.
 
 ```bash
 cd pptx-editor-app
@@ -73,10 +92,10 @@ Before initializing the Angular PPTX Editor control, generate a Syncfusion licen
 
 Themes for PPTX Editor can be applied using CSS or SASS files from the [npm theme packages](https://ej2.syncfusion.com/angular/documentation/appearance/overview#theme-packages), CDN, CRG, or [Theme Studio](https://ej2.syncfusion.com/angular/documentation/appearance/theme-studio). For more information, see the [themes documentation](https://ej2.syncfusion.com/angular/documentation/appearance/overview).
 
-This guide uses the `Tailwind 3` theme as an example, sourced from the theme package. In this package, each component includes an `index.css` file that automatically loads all the required dependency styles. To install the [Tailwind 3](https://www.npmjs.com/package/@syncfusion/ej2-tailwind3-theme) theme package, use the following command:
+This guide uses the `Tailwind` theme as an example, sourced from the theme package. In this package, each component includes an `index.css` file that automatically loads all the required dependency styles. To install the [Tailwind](https://www.npmjs.com/package/@syncfusion/ej2-tailwind-theme) theme package, use the following command:
 
 ```bash
-npm install @syncfusion/ej2-tailwind3-theme
+npm install @syncfusion/ej2-tailwind-theme
 ```
 
 By default, projects include an `src/styles.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `src/styles.css` file to prevent style conflicts.
@@ -86,7 +105,7 @@ The required styles for the PPTX Editor are imported in the **src/styles.css** f
 {% tabs %}
 {% highlight css tabtitle="styles.css" %}
 
-@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/pptx-editor/index.css";
+@import "../node_modules/@syncfusion/ej2-tailwind-theme/styles/pptxeditor/index.css";
 
 {% endhighlight %}
 {% endtabs %}
@@ -98,47 +117,26 @@ Modify `src/app/app.ts` to render the PPTX Editor component by adding the Angula
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
 
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import {
-  PptxEditorComponent,
-  Toolbar,
-  ThumbnailView,
-  Magnification,
-  Navigation,
-  Print,
-  SlideShow
+    PptxEditorComponent, MagnificationService, NavigationService,
+    PrintService, SlideShowService, ThumbnailViewService, ToolbarService
 } from '@syncfusion/ej2-angular-pptxeditor';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [PptxEditorComponent],
-  providers: [Toolbar, ThumbnailView, Magnification, Navigation, Print, SlideShow],
-  template: `
-    <div class="control-section">
-      <ejs-pptxeditor id="container" #default_editor style="display:block">
-      </ejs-pptxeditor>
-    </div>
-  `
+    selector: 'app-root',
+    template: `<div class="content-wrapper">
+        <ejs-pptxeditor id="container" theme="tailwind" documentPath="/documents/Sample.pptx">
+        </ejs-pptxeditor>
+    </div>`,
+    encapsulation: ViewEncapsulation.None,
+    styleUrl: './app.css',
+    standalone: true,
+    imports: [PptxEditorComponent],
+    providers: [ToolbarService, ThumbnailViewService, MagnificationService, NavigationService, PrintService, SlideShowService]
 })
-export class App {
-  @ViewChild('default_editor')
-  public editor: PptxEditorComponent;
-}
 
-{% endhighlight %}
-{% endtabs %}
-
-To open a local PPTX file in the PPTX Editor, fetch the file as a blob and load it using the `openFromBlob` method:
-
-{% tabs %}
-{% highlight ts tabtitle="app.ts" %}
-
-import samplePptxUrl from '../sample.pptx?url';
-
-fetch(samplePptxUrl)
-  .then((response) => response.blob())
-  .then((blob) => this.editor.openFromBlob(blob, 'sample.pptx'));
+export class App { }
 
 {% endhighlight %}
 {% endtabs %}
