@@ -85,6 +85,68 @@ To switch between chart types after creation:
 3. **Click Chart Type** option.
 4. **Select a new type** (Column, Bar, Line, Area, Pie, etc.).
 
+## Update Chart Programmatically
+
+The `UpdateChartAsync()` method asynchronously updates the properties of an existing chart identified by `ChartOptions.Id`. This allows you to modify an existing chart without recreating it.
+
+Only the properties provided in the `ChartOptions` object are applied. Any property that is not specified, or is set to `null`, retains its current value.
+
+### Chart update options
+
+The `UpdateChartAsync()` method can update chart settings such as chart type, data range, title, legend, theme, data labels, color palette, and other supported chart properties.
+
+| Property | Description |
+|-----------|--------------|
+| `Id` | Specifies the chart identifier to update. |
+| `ChartType` | Changes the chart type. |
+| `ChartTitle` | Updates the chart title. |
+| `Range` | Updates the chart data range. |
+| `Theme` | Applies a chart theme. |
+| `ShowPrimaryVerticalAxis` | Controls the primary vertical axis visibility. |
+| `PrimaryVerticalAxisTitle` | Updates the primary vertical axis title. |
+| `ColorPalette` | Updates the chart color palette. |
+
+N> Only the properties included in the `ChartOptions` instance are applied during the update.
+
+### Update chart programmatically
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@page "/"
+@using Syncfusion.Blazor.Spreadsheet
+@using Syncfusion.Blazor.Buttons
+
+<SfButton OnClick="UpdateSalesChart">Update Chart</SfButton>
+
+<SfSpreadsheet @ref="SpreadsheetInstance">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+    public SfSpreadsheet SpreadsheetInstance { get; set; }
+
+    private async Task UpdateSalesChart()
+    {
+        var chartOptions = new ChartOptions
+        {
+            Id = "SalesChart",
+            ChartType = ChartType.Line,
+            ChartTitle = "Updated Sales Report",
+            Theme = Theme.Fabric,
+            Range = "Sheet1!A1:C10",
+            ShowPrimaryVerticalAxis = true,
+            PrimaryVerticalAxisTitle = "Sales Amount",
+            ColorPalette = new[] { "#FF5733", "#33FF57" }
+        };
+
+        await SpreadsheetInstance.UpdateChartAsync(chartOptions);
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Customization of line chart markers
 
 You can listen to the [ActionBeginning](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ActionBeginning) event to detect when a chart operation starts and react to it in code. Within the handler you receive an [ActionBeginningEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.ActionBeginningEventArgs.html) that exposes the action name and lets you cancel the operation.
