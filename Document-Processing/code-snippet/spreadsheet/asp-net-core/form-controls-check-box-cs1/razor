@@ -1,0 +1,45 @@
+@Html.EJS().Spreadsheet("spreadsheet").Created("created").Sheets(sheet =>
+{
+    sheet.Name("Price Details")
+        .Ranges(ranges =>
+        {
+            ranges.DataSource((IEnumerable<object>)ViewBag.DefaultData)
+                .StartCell("A1")
+                .Add();
+        })
+        .FormControls(formControls =>
+        {
+            formControls.Type(FormControlType.CheckBox)
+                .Text("Check Box 1")
+                .CellLink("G1")
+                .Height(40)
+                .Width(180)
+                .Add();
+        })
+        .Columns(column =>
+        {
+            column.Width(180).Add();
+            column.Width(130).Add();
+            column.Width(130).Add();
+            column.Width(180).Add();
+            column.Width(130).Add();
+            column.Width(120).Add();
+        })
+        .Add();
+}).Render()
+
+<script>
+    function created() {
+        this.cellFormat(
+            {
+                fontWeight: 'bold',
+                textAlign: 'center',
+                verticalAlign: 'middle'
+            },
+            'A1:F1'
+        );
+
+        this.numberFormat('$#,##0.00', 'F2:F31');
+        this.numberFormat('m/d/yyyy', 'E2:E30');
+    }
+</script>
