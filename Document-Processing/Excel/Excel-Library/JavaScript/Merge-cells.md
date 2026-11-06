@@ -6,9 +6,11 @@ control: Excel
 documentation: ug
 ---
 
-# Merge Cells in JavaScript Excel
+# Merge Cells in JavaScript Excel Library
 
 Merging combines a rectangular block of adjacent cells into one display area. You can merge or unmerge ranges and review every merged region on the worksheet.
+
+N> The snippets on this page save the workbook with `await workbook.save('<file name>.xlsx')`, which requires Node.js. In a browser, call `workbook.save()` without arguments and download the returned bytes, as shown in [Getting started](https://help.syncfusion.com/document-processing/excel/excel-library/javascript/getting-started).
 
 ## Merge and unmerge a range
 
@@ -26,6 +28,9 @@ sheet.range('A1:C1').merge();
 
 // Split the merged area again
 sheet.range('A1:C1').unmerge();
+
+// Save the workbook.
+await workbook.save('MergeAndUnmergeARange.xlsx');
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 import { Workbook } from '@syncfusion/ej2-xlsx';
@@ -38,10 +43,13 @@ sheet.range('A1:C1').merge();
 
 // Split the merged area again
 sheet.range('A1:C1').unmerge();
+
+// Save the workbook.
+await workbook.save('MergeAndUnmergeARange.xlsx');
 {% endhighlight %}
 {% endtabs %}
 
-## Work with the merges collection
+## Merges collection
 
 Merged cells combine two or more adjacent cells into a single area. You can inspect merged regions to understand how cells are grouped within a worksheet.
 
@@ -57,6 +65,9 @@ sheet.range('D1:E1').merge();
 
 // Inspect merged areas on the sheet
 const areas = sheet.merges;
+
+// Save the workbook.
+await workbook.save('WorkWithTheMergesCollection.xlsx');
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 import { Workbook } from '@syncfusion/ej2-xlsx';
@@ -69,5 +80,8 @@ sheet.range('D1:E1').merge();
 
 // Inspect merged areas on the sheet
 const areas = sheet.merges;
+
+// Save the workbook.
+await workbook.save('WorkWithTheMergesCollection.xlsx');
 {% endhighlight %}
 {% endtabs %}
