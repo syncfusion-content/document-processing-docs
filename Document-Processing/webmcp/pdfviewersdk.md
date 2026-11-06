@@ -1112,7 +1112,187 @@ WebMCP tools enable AI agents to interact with PDF documents and automate PDF-re
 
 {% tabcontents %}
 
-{% tabcontent React, Angular, Vue, JavaScript, TypeScript %}
+{% tabcontent React %}
+
+### Document Navigation & Access
+
+- **`navigateToPage`** — Navigate to a specific page number in the PDF
+- **`searchAndNavigate`** — Search for text and navigate to search results
+- **`getPageMetadata`** — Retrieve metadata information about specific pages
+- **`zoomAndView`** — Control zoom level, fit modes, and viewing options
+- **`getBookmarksAndNavigate`** — Access bookmarks and navigate to bookmarked locations
+
+### Content Extraction
+
+- **`extractTextContent`** — Extract text from specified pages with position information
+- **`extractPages`** — Extract and export specific pages as separate documents
+
+### Annotation Management
+
+- **`addAnnotation`** — Add annotations (highlights, comments, stamps, ink)
+- **`editAnnotation`** — Modify existing annotation properties and content
+- **`retrieveAnnotations`** — Get all annotations from document with metadata
+- **`deleteAnnotation`** — Remove annotations from document
+
+### Form Field Operations
+
+- **`retrieveFormFields`** — Get all form fields with type and value information
+- **`addFormField`** — Create new form fields (text, checkbox, radio, dropdown)
+- **`editFormField`** — Modify form field properties and values
+- **`resetFormField`** — Reset form field values to defaults
+- **`deleteFormField`** — Remove form fields from document
+
+### Redaction Operations
+
+- **`addRedaction`** — Add redaction marks (marks sensitive content for removal)
+- **`updateRedaction`** — Modify redaction properties and coverage areas
+- **`applyRedaction`** — Apply and finalize redactions (permanently removes content)
+
+### Document Actions
+
+- **`downloadDocument`** — Download processed document with all changes
+- **`printDocument`** — Send document to printer with print settings
+- **`copyText`** — Copy text content to clipboard
+- **`undoRedoActions`** — Undo or redo document changes
+
+{% endtabcontent %}
+
+{% tabcontent Angular %}
+
+### Document Navigation & Access
+
+- **`navigateToPage`** — Navigate to a specific page number in the PDF
+- **`searchAndNavigate`** — Search for text and navigate to search results
+- **`getPageMetadata`** — Retrieve metadata information about specific pages
+- **`zoomAndView`** — Control zoom level, fit modes, and viewing options
+- **`getBookmarksAndNavigate`** — Access bookmarks and navigate to bookmarked locations
+
+### Content Extraction
+
+- **`extractTextContent`** — Extract text from specified pages with position information
+- **`extractPages`** — Extract and export specific pages as separate documents
+
+### Annotation Management
+
+- **`addAnnotation`** — Add annotations (highlights, comments, stamps, ink)
+- **`editAnnotation`** — Modify existing annotation properties and content
+- **`retrieveAnnotations`** — Get all annotations from document with metadata
+- **`deleteAnnotation`** — Remove annotations from document
+
+### Form Field Operations
+
+- **`retrieveFormFields`** — Get all form fields with type and value information
+- **`addFormField`** — Create new form fields (text, checkbox, radio, dropdown)
+- **`editFormField`** — Modify form field properties and values
+- **`resetFormField`** — Reset form field values to defaults
+- **`deleteFormField`** — Remove form fields from document
+
+### Redaction Operations
+
+- **`addRedaction`** — Add redaction marks (marks sensitive content for removal)
+- **`updateRedaction`** — Modify redaction properties and coverage areas
+- **`applyRedaction`** — Apply and finalize redactions (permanently removes content)
+
+### Document Actions
+
+- **`downloadDocument`** — Download processed document with all changes
+- **`printDocument`** — Send document to printer with print settings
+- **`copyText`** — Copy text content to clipboard
+- **`undoRedoActions`** — Undo or redo document changes
+
+{% endtabcontent %}
+
+{% tabcontent Vue %}
+
+### Document Navigation & Access
+
+- **`navigateToPage`** — Navigate to a specific page number in the PDF
+- **`searchAndNavigate`** — Search for text and navigate to search results
+- **`getPageMetadata`** — Retrieve metadata information about specific pages
+- **`zoomAndView`** — Control zoom level, fit modes, and viewing options
+- **`getBookmarksAndNavigate`** — Access bookmarks and navigate to bookmarked locations
+
+### Content Extraction
+
+- **`extractTextContent`** — Extract text from specified pages with position information
+- **`extractPages`** — Extract and export specific pages as separate documents
+
+### Annotation Management
+
+- **`addAnnotation`** — Add annotations (highlights, comments, stamps, ink)
+- **`editAnnotation`** — Modify existing annotation properties and content
+- **`retrieveAnnotations`** — Get all annotations from document with metadata
+- **`deleteAnnotation`** — Remove annotations from document
+
+### Form Field Operations
+
+- **`retrieveFormFields`** — Get all form fields with type and value information
+- **`addFormField`** — Create new form fields (text, checkbox, radio, dropdown)
+- **`editFormField`** — Modify form field properties and values
+- **`resetFormField`** — Reset form field values to defaults
+- **`deleteFormField`** — Remove form fields from document
+
+### Redaction Operations
+
+- **`addRedaction`** — Add redaction marks (marks sensitive content for removal)
+- **`updateRedaction`** — Modify redaction properties and coverage areas
+- **`applyRedaction`** — Apply and finalize redactions (permanently removes content)
+
+### Document Actions
+
+- **`downloadDocument`** — Download processed document with all changes
+- **`printDocument`** — Send document to printer with print settings
+- **`copyText`** — Copy text content to clipboard
+- **`undoRedoActions`** — Undo or redo document changes
+
+{% endtabcontent %}
+
+{% tabcontent JavaScript %}
+
+### Document Navigation & Access
+
+- **`navigateToPage`** — Navigate to a specific page number in the PDF
+- **`searchAndNavigate`** — Search for text and navigate to search results
+- **`getPageMetadata`** — Retrieve metadata information about specific pages
+- **`zoomAndView`** — Control zoom level, fit modes, and viewing options
+- **`getBookmarksAndNavigate`** — Access bookmarks and navigate to bookmarked locations
+
+### Content Extraction
+
+- **`extractTextContent`** — Extract text from specified pages with position information
+- **`extractPages`** — Extract and export specific pages as separate documents
+
+### Annotation Management
+
+- **`addAnnotation`** — Add annotations (highlights, comments, stamps, ink)
+- **`editAnnotation`** — Modify existing annotation properties and content
+- **`retrieveAnnotations`** — Get all annotations from document with metadata
+- **`deleteAnnotation`** — Remove annotations from document
+
+### Form Field Operations
+
+- **`retrieveFormFields`** — Get all form fields with type and value information
+- **`addFormField`** — Create new form fields (text, checkbox, radio, dropdown)
+- **`editFormField`** — Modify form field properties and values
+- **`resetFormField`** — Reset form field values to defaults
+- **`deleteFormField`** — Remove form fields from document
+
+### Redaction Operations
+
+- **`addRedaction`** — Add redaction marks (marks sensitive content for removal)
+- **`updateRedaction`** — Modify redaction properties and coverage areas
+- **`applyRedaction`** — Apply and finalize redactions (permanently removes content)
+
+### Document Actions
+
+- **`downloadDocument`** — Download processed document with all changes
+- **`printDocument`** — Send document to printer with print settings
+- **`copyText`** — Copy text content to clipboard
+- **`undoRedoActions`** — Undo or redo document changes
+
+{% endtabcontent %}
+
+{% tabcontent TypeScript %}
 
 ### Document Navigation & Access
 
