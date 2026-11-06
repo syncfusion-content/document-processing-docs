@@ -100,6 +100,112 @@ Please find the below table for the [`beforeSave`](https://ej2.syncfusion.com/re
 > * The default value of [allowSave](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowsave) property is `true`. For demonstration purpose, we have showcased the [allowSave](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowsave) property in previous code snippet.
 > * Demo purpose only, we have used the online web service url link.
 
+## Save Excel Files Without a Server Endpoint
+
+The Spreadsheet component supports saving Excel files directly in the browser without requiring a server endpoint. For client-side saving, the component uses the `ej2-xlsx` package to generate Excel files and download them to the local file system.
+
+When the `saveUrl` property is not configured, save operations are processed entirely on the client without any server interaction. This approach helps maintain data privacy and eliminates the need for server-side infrastructure.
+
+**Key Benefits of Client-Side Saving:**
+
+- No server infrastructure required
+- Immediate file generation and download
+- Reduced server load and latency
+- Privacy-friendly approach, as files remain on the client
+
+The following example demonstrates how to save an Excel file entirely on the client side without configuring the `saveUrl` property:
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+import React, { useRef } from 'react';
+import { createRoot } from 'react-dom/client';
+import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective, RangeDirective } from '@syncfusion/ej2-react-spreadsheet';
+
+const salesData = [
+  { OrderID: 10248, CustomerName: 'VINET', TotalAmount: 32.38 },
+  { OrderID: 10249, CustomerName: 'TOMSP', TotalAmount: 11.61 },
+  { OrderID: 10250, CustomerName: 'HANAR', TotalAmount: 65.83 }
+];
+
+const App = () => {
+  const spreadsheetRef = useRef(null);
+
+  const onClick = () => {
+    spreadsheetRef.current?.save({
+      fileName: 'Worksheet',
+      saveType: 'Xlsx'
+    });
+  };
+
+  // Client-side save without saveUrl property
+  return (
+    <div>
+      <SpreadsheetComponent ref={spreadsheetRef}>
+        <SheetsDirective>
+          <SheetDirective name="Sales Report">
+            <RangesDirective>
+              <RangeDirective dataSource={salesData} />
+            </RangesDirective>
+          </SheetDirective>
+        </SheetsDirective>
+      </SpreadsheetComponent>
+      <button onClick={onClick}>Save</button>
+    </div>
+  );
+};
+
+export default App;
+
+const root = createRoot(document.getElementById('spreadsheet'));
+root.render(<App />);
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+import React, { useRef } from 'react';
+import { createRoot } from 'react-dom/client';
+import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective, RangeDirective } from '@syncfusion/ej2-react-spreadsheet';
+
+const salesData = [
+  { OrderID: 10248, CustomerName: 'VINET', TotalAmount: 32.38 },
+  { OrderID: 10249, CustomerName: 'TOMSP', TotalAmount: 11.61 },
+  { OrderID: 10250, CustomerName: 'HANAR', TotalAmount: 65.83 }
+];
+
+const App = () => {
+  const spreadsheetRef = useRef(null);
+
+  const onClick = () => {
+    spreadsheetRef.current?.save({
+      fileName: 'Worksheet',
+      saveType: 'Xlsx'
+    });
+  };
+
+  // Client-side save without saveUrl property
+  return (
+    <div>
+      <SpreadsheetComponent ref={spreadsheetRef}>
+        <SheetsDirective>
+          <SheetDirective name="Sales Report">
+            <RangesDirective>
+              <RangeDirective dataSource={salesData} />
+            </RangesDirective>
+          </SheetDirective>
+        </SheetsDirective>
+      </SpreadsheetComponent>
+      <button onClick={onClick}>Save</button>
+    </div>
+  );
+};
+
+export default App;
+
+const root = createRoot(document.getElementById('spreadsheet'));
+root.render(<App />);
+{% endhighlight %}
+{% endtabs %}
+
+> **Note:** Client-side export currently supports only .xlsx files. To save files in other formats, configure the saveUrl property and use server-side processing.
+
 ## Save Excel files programmatically
 
 To save Excel files programmatically in the Spreadsheet, you can use the [`save`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#save) method of the Spreadsheet component. Before invoking this method, ensure that the [`saveUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#saveurl) property is properly configured, as it is required for processing and generating the file on the server.

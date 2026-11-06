@@ -93,6 +93,90 @@ Please find the below table for the [beforeOpen](https://ej2.syncfusion.com/reac
 > * Use `Ctrl + O` keyboard shortcut to open Excel documents.
 > * The default value of the [allowOpen](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowopen) property is `true`. For demonstration purpose, we have showcased the [allowOpen](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowopen) property in previous code snippet.
 
+## Open Excel Files Without a Server Endpoint
+
+The Spreadsheet component supports opening Excel files directly in the browser without requiring a server endpoint. For client-side file opening, the component uses the `ej2-xlsx` package to parse Excel files and load workbook data into the Spreadsheet.
+
+When the `openUrl` property is not configured, Excel files are processed entirely on the client without any server interaction. This approach helps maintain data privacy and eliminates the need for server-side infrastructure.
+
+**Key Benefits of Client-Side Opening:**
+
+- No server infrastructure required
+- Immediate file processing in the browser
+- Reduced latency for file opening operations
+- Privacy-friendly approach, as files remain on the client
+
+The following example demonstrates how to open an Excel file entirely on the client side without configuring the `openUrl` property:
+
+{% tabs %}
+{% highlight js tabtitle="app.jsx" %}
+import React, { useRef } from 'react';
+import { createRoot } from 'react-dom/client';
+import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
+
+const App = () => {
+  const spreadsheetRef = useRef(null);
+
+  const onCreated = () => {
+    // Fetch an Excel file from a URL or local source
+    fetch('https://js.syncfusion.com/demos/ejservices/data/Spreadsheet/LargeData.xlsx')
+      .then((response) => response.blob())
+      .then((fileBlob) => {
+        const file = new File([fileBlob], 'Sample.xlsx');
+        spreadsheetRef.current?.open({ file });
+      });
+  };
+
+  // Client-side open without openUrl property
+  return (
+    <SpreadsheetComponent
+      ref={spreadsheetRef}
+      created={onCreated}
+    />
+  );
+};
+
+export default App;
+
+const root = createRoot(document.getElementById('spreadsheet'));
+root.render(<App />);
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+import React, { useRef } from 'react';
+import { createRoot } from 'react-dom/client';
+import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
+
+const App = () => {
+  const spreadsheetRef = useRef(null);
+
+  const onCreated = () => {
+    // Fetch an Excel file from a URL or local source
+    fetch('https://js.syncfusion.com/demos/ejservices/data/Spreadsheet/LargeData.xlsx')
+      .then((response) => response.blob())
+      .then((fileBlob) => {
+        const file = new File([fileBlob], 'Sample.xlsx');
+        spreadsheetRef.current?.open({ file });
+      });
+  };
+
+  // Client-side open without openUrl property
+  return (
+    <SpreadsheetComponent
+      ref={spreadsheetRef}
+      created={onCreated}
+    />
+  );
+};
+
+export default App;
+
+const root = createRoot(document.getElementById('spreadsheet'));
+root.render(<App />);
+{% endhighlight %}
+{% endtabs %}
+
+> **Note:** Client-side import currently supports only `.xlsx` files. Other Excel formats require server-side processing through the `openUrl` endpoint.
+
 ## Open Excel files programmatically
 
 To open Excel files programmatically in the Spreadsheet, you can use the [`open`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#open) method of the Spreadsheet component. Before invoking this method, ensure that the [`openUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openurl) property is properly configured, as it is required for processing the file on the server.
