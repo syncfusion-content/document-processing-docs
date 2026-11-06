@@ -37,5 +37,5 @@ keywords: Excel, SDK, view, edit, read, Spreadsheet
 
 {% enddoccards %}
 
-Syncfusion Spreadsheet component is a Microsoft Excel-like GUI component used to view, edit and print Excel files in Windows Forms, WPF, JavaScript, Angular, React, Vue, Blazor, ASP.NET MVC, and ASP.NET Core applications that works without Microsoft Office dependencies. It eases you developers to just integrate this viewer component to achieve the required Excel document viewing, editing functionalities and concentrate on core logics of your application.
+Syncfusion Spreadsheet component is a Microsoft Excel-like GUI component used to view, edit and print Excel files in Windows Forms, WPF, JavaScript, Angular, React, Vue, Blazor, ASP.NET MVC, and ASP.NET Core applications that works without Microsoft Office dependencies. It eases you developers to just integrate this viewer component to achieve the required Excel document viewing, editing functionalities and concentrate on core logics of your application. Frozen pane support is available across the spreadsheet family for keeping rows, columns, or both visible while scrolling, and can be managed programmatically with FreezePanesAsync() and UnfreezePanesAsync().
 
