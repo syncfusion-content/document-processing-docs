@@ -18,4 +18,4 @@ Syncfusion<sup>&reg;</sup> PowerPoint Presentation Processing Framework is a col
 
 * PowerPoint Library - is a class library used to create, read, and write PowerPoint presentations through code in .NET [Windows Forms, WPF, ASP.NET MVC, ASP.NET Core, Blazor, MAUI] applications.
 * PowerPoint Conversions - is class library that convert PowerPoint to PDF, image, Markdown. It also supports convert Markdown to PowerPoint presentations.
-
+* PPTX Editor - is a GUI component for viewing and printing PowerPoint presentations in JavaScript, Angular, React, Vue applications.

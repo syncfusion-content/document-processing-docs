@@ -156,6 +156,11 @@ Add a container element for the PPTX Editor in the `index.html` file and then in
 </html>
 
 {% endhighlight %}
+{% endtabs %}
+
+This example demonstrates how to render the PPTX Editor and load a local presentation file into it.
+
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 
 // Inject the required modules
@@ -169,15 +174,14 @@ ej.pptxeditor.PptxEditor.Inject(
 );
 
 // Initialize PPTX Editor component
-var editor = new ej.pptxeditor.PptxEditor({});
+var editor = new ej.pptxeditor.PptxEditor({
+    id: 'editor',
+    theme: 'tailwind',
+    documentPath: './documents/DefaultTemplate.pptx'
+});
 
 // Render the PPTX Editor
 editor.appendTo('#PptxEditor');
-
-// Open a local presentation file in the PPTX Editor
-fetch('./sample.pptx')
-    .then((response) => response.blob())
-    .then((blob) => editor.openFromBlob(blob, 'sample.pptx'));
 
 {% endhighlight %}
 {% endtabs %}

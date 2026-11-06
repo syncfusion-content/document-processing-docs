@@ -83,7 +83,7 @@ The required styles for the PPTX Editor are imported in the **styles.css** file:
 {% tabs %}
 {% highlight css tabtitle="style.css" %}
 
-@import "../../node_modules/@syncfusion/ej2-tailwind3-theme/styles/pptx-editor/index.css";
+@import "../../node_modules/@syncfusion/ej2-tailwind3-theme/styles/pptxeditor/index.css";
 
 {% endhighlight %}
 {% endtabs %}
@@ -129,16 +129,16 @@ import {
   Print,
   SlideShow
 } from '@syncfusion/ej2-pptxeditor';
-import samplePptxUrl from './sample.pptx?url';
+import defaultTemplateUrl from '../resources/documents/Sample.pptx';
 
 PptxEditor.Inject(Toolbar, ThumbnailView, Magnification, Navigation, Print, SlideShow);
 
-let editor: PptxEditor = new PptxEditor(undefined, document.getElementById('PptxEditor'), {});
-
-// Open a local presentation file in the PPTX Editor
-fetch(samplePptxUrl)
-  .then((response) => response.blob())
-  .then((blob) => editor.openFromBlob(blob, 'sample.pptx'));
+let editor: PptxEditor = new PptxEditor({
+  id: 'container',
+  theme: "tailwind",
+  documentPath: defaultTemplateUrl
+});
+editor.appendTo('#PptxEditor');
 
 {% endhighlight %}
 {% endtabs %}

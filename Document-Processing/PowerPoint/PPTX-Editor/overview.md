@@ -18,9 +18,9 @@ keywords: PowerPoint, PPTX, SDK, view, read, slide, presentation
 
 {% doccard text="Vue" link="/document-processing/powerpoint/pptx-editor/vue/getting-started" icon="/document-processing/powerpoint/pptx-editor/vue/images/Vue.svg" %}
 
-{% doccard text="JavaScript (ES6)" link="/document-processing/powerpoint/pptx-editor/javascript-es6/getting-started" icon="/document-processing/powerpoint/pptx-editor/javascript-es6/images/JavaScript(ES6).svg" %}
+{% doccard text="JavaScript (ES6)" link="/document-processing/powerpoint/pptx-editor/javascript-es6/getting-started" icon="/document-processing/powerpoint/pptx-editor/javascript-es6/images/JavaScript-ES6.svg" %}
 
-{% doccard text="JavaScript (ES5)" link="/document-processing/powerpoint/pptx-editor/javascript-es5/getting-started" icon="/document-processing/powerpoint/pptx-editor/javascript-es5/images/JavaScript(ES5).svg" %}
+{% doccard text="JavaScript (ES5)" link="/document-processing/powerpoint/pptx-editor/javascript-es5/getting-started" icon="/document-processing/powerpoint/pptx-editor/javascript-es5/images/JavaScript-ES5.svg" %}
 
 {% enddoccards %}
 

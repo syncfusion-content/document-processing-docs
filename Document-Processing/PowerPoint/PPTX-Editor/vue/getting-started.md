@@ -75,7 +75,7 @@ The required styles for the PPTX Editor are imported in the `<style>` section of
 {% tabs %}
 {% highlight css tabtitle="App.vue" %}
 
-@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/pptx-editor/index.css";
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/pptxeditor/index.css";
 
 {% endhighlight %}
 {% endtabs %}
@@ -89,9 +89,7 @@ Modify the `src/App.vue` file to render the PPTX Editor. Add the PPTX Editor com
 
 <template>
   <div id="app">
-    <ejs-pptxeditor
-      ref="editor"
-      id="container">
+    <ejs-pptxeditor ref="editor" id="container" theme="tailwind" documentPath="/documents/Sample.pptx">
     </ejs-pptxeditor>
   </div>
 </template>
@@ -108,38 +106,19 @@ import {
 } from '@syncfusion/ej2-vue-pptxeditor';
 
 export default {
-  name: "App",
-
+  name: 'App',
   components: {
-    "ejs-pptxeditor": PptxEditorComponent
+    'ejs-pptxeditor': PptxEditorComponent
   },
-
   provide: {
-    // Inject required modules.
-    PptxEditor: [Toolbar, ThumbnailView, Magnification, Navigation, Print, SlideShow]
+    pptxeditor: [Toolbar, ThumbnailView, Magnification, Navigation, Print, SlideShow]
   }
 };
 </script>
 
-{% endhighlight %}
-{% endtabs %}
-
-To open a local PPTX file in the PPTX Editor, fetch the file as a blob and load it using the `openFromBlob` method:
-
-{% tabs %}
-{% highlight html tabtitle="App.vue" %}
-
-<script>
-import samplePptxUrl from '../sample.pptx?url';
-
-export default {
-  mounted() {
-    fetch(samplePptxUrl)
-      .then((response) => response.blob())
-      .then((blob) => this.$refs.editor.openFromBlob(blob, 'sample.pptx'));
-  }
-};
-</script>
+<style>
+@import "@syncfusion/ej2-tailwind3-theme/styles/pptxeditor/index.css";
+</style>
 
 {% endhighlight %}
 {% endtabs %}
