@@ -162,6 +162,39 @@ To insert a column using the context menu:
 
 N> When the sheet is protected, **Insert Rows Above**, **Insert Rows Below**, **Insert Columns to the Left**, and **Insert Columns to the Right** are available only when the **Insert Rows** or **Insert Columns** permission is enabled in the **Protect Sheet** dialog.
 
+## Setting Row and Column Count
+
+The Blazor Spreadsheet component enables you to define the initial number of rows and columns using the [`RowCount`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_RowCount) and [`ColumnCount`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ColumnCount) properties.
+
+* The default `RowCount` is **1000**.
+* The default `ColumnCount` is **200**.
+
+### Rendering Behavior
+
+- **Without Data Source:** 
+
+  - When no data is bound to the spreadsheet, the sheet renders empty cells up to the specified row and column counts.
+
+- **With Data Source (e.g., byte array or imported file):**
+
+  - If the data source contains fewer rows and columns than the specified row and column counts, the spreadsheet renders additional empty rows and columns to meet those counts.
+  - If the data source contains more rows and columns than the specified row and column counts, the spreadsheet renders enough rows and columns to display all the data (i.e., it extends beyond those counts to fit the data). Your data is never truncated by these properties.
+
+You can set these properties as follows:
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@page "/"
+@using Syncfusion.Blazor.Spreadsheet
+
+<SfSpreadsheet RowCount="1200" ColumnCount="300" >
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+{% endhighlight %}
+{% endtabs %}
+
 ## AutoFit Rows and Columns in Blazor Spreadsheet
 
 AutoFit in the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component automatically adjusts the width of columns or the height of rows to fit their content. This helps improve readability by ensuring that cell values are fully visible without manual resizing.
@@ -248,39 +281,6 @@ The `AutoFitAsync()` method adjusts the width of columns or height of rows in th
         await SpreadsheetRef.AutoFitAsync("1:10");
     }
 }
-
-{% endhighlight %}
-{% endtabs %}
-
-## Setting Row and Column Count
-
-The Blazor Spreadsheet component enables you to define the initial number of rows and columns using the [`RowCount`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_RowCount) and [`ColumnCount`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_ColumnCount) properties.
-
-* The default `RowCount` is **1000**.
-* The default `ColumnCount` is **200**.
-
-### Rendering Behavior
-
-- **Without Data Source:** 
-
-  - When no data is bound to the spreadsheet, the sheet renders empty cells up to the specified row and column counts.
-
-- **With Data Source (e.g., byte array or imported file):**
-
-  - If the data source contains fewer rows and columns than the specified row and column counts, the spreadsheet renders additional empty rows and columns to meet those counts.
-  - If the data source contains more rows and columns than the specified row and column counts, the spreadsheet renders enough rows and columns to display all the data (i.e., it extends beyond those counts to fit the data). Your data is never truncated by these properties.
-
-You can set these properties as follows:
-
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-
-@page "/"
-@using Syncfusion.Blazor.Spreadsheet
-
-<SfSpreadsheet RowCount="1200" ColumnCount="300" >
-    <SpreadsheetRibbon></SpreadsheetRibbon>
-</SfSpreadsheet>
 
 {% endhighlight %}
 {% endtabs %}

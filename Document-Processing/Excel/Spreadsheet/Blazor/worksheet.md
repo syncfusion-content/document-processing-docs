@@ -520,3 +520,6 @@ This method creates a copy of the sheet with the specified name. The sheet name 
 Gridlines provide a border-like appearance that helps distinguish cells on a worksheet. To hide gridlines, navigate to the **View** tab in the Ribbon toolbar and select the **Hide Gridlines** option; to show gridlines again, select the **Show Gridlines** option in the same tab, and these actions apply to the active worksheet.
 
 ![Hide Gridlines option](images/hide-gridlines-option.gif)
+## Headers
+
+Headers display row numbers and column letters on a worksheet, helping identify and reference cell locations more easily. To hide headers, navigate to the **View** tab in the Ribbon toolbar and select the **Hide Headers** option; to show headers again, select the **Show Headers** option in the same tab, and these actions apply to the active worksheet.
