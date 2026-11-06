@@ -1,124 +1,49 @@
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
-import { SpreadsheetComponent, SheetsDirective, SheetDirective, RowsDirective, RowDirective, CellsDirective, CellDirective, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-react-spreadsheet';
-import { CellStyleModel } from '@syncfusion/ej2-react-spreadsheet';
+import { SpreadsheetComponent, SheetsDirective, SheetDirective, RowsDirective, RowDirective, CellsDirective, CellDirective, ColumnsDirective, ColumnDirective, FormControlsDirective, FormControlDirective, RangesDirective, RangeDirective } from '@syncfusion/ej2-react-spreadsheet';
+import { defaultData } from './datasource';
 
 function App() {
-    const spreadsheetRef = React.useRef(null);
-
-    const formControls = [
-        // Shipping options group - linked to same cell (D2)
-        {
-            type: 'RadioButton',
-            text: 'Standard Shipping',
-            cellLink: 'D2',
-            value: 'Unchecked',
-            top: 40,
-            left: 150,
-            height: 20,
-            width: 120
-        },
-        {
-            type: 'RadioButton',
-            text: 'Express Shipping',
-            cellLink: 'D2',
-            value: 'Unchecked',
-            top: 70,
-            left: 150,
-            height: 20,
-            width: 120
-        },
-        {
-            type: 'RadioButton',
-            text: 'Overnight Shipping',
-            cellLink: 'D2',
-            value: 'Unchecked',
-            top: 100,
-            left: 150,
-            height: 20,
-            width: 120
-        },
-        // Payment options group - linked to same cell (D4)
-        {
-            type: 'RadioButton',
-            text: 'Credit Card',
-            cellLink: 'D4',
-            value: 'Unchecked',
-            top: 160,
-            left: 150,
-            height: 20,
-            width: 120
-        },
-        {
-            type: 'RadioButton',
-            text: 'Debit Card',
-            cellLink: 'D4',
-            value: 'Unchecked',
-            top: 190,
-            left: 150,
-            height: 20,
-            width: 120
-        },
-        {
-            type: 'RadioButton',
-            text: 'Wire Transfer',
-            cellLink: 'D4',
-            value: 'Unchecked',
-            top: 220,
-            left: 150,
-            height: 20,
-            width: 120
-        }
-    ];
-
-    const boldCenter = { fontWeight: 'bold', textAlign: 'center' };
-
+    let spreadsheet;
+    const boldRight = { fontWeight: 'bold', textAlign: 'right' };
+    const bold = { fontWeight: 'bold' };
+    const onCreated = () => {
+        // Apply styles to the specified range in the active sheet.
+        spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle' }, 'A1:F1');
+        // Apply format to the specified range in the active sheet.
+        spreadsheet.numberFormat('$#,##0.00', 'F2:F31');
+        // The default format code for the date format is 'm/d/yyyy'.
+        spreadsheet.numberFormat('m/d/yyyy', 'E2:E30');
+    };
     return (
-        <div>
-            <SpreadsheetComponent ref={spreadsheetRef} showFormulaBar={false} allowFormControl={true}>
-                <SheetsDirective>
-                    <SheetDirective name={'RadioButtonDemo'} formControls={formControls}>
-                        <ColumnsDirective>
-                            <ColumnDirective width={150}></ColumnDirective>
-                            <ColumnDirective width={180}></ColumnDirective>
-                            <ColumnDirective width={150}></ColumnDirective>
-                            <ColumnDirective width={150}></ColumnDirective>
-                        </ColumnsDirective>
-                        <RowsDirective>
-                            <RowDirective index={0}>
-                                <CellsDirective>
-                                    <CellDirective index={0} value={'Shipping Options'} style={boldCenter}></CellDirective>
-                                </CellsDirective>
-                            </RowDirective>
-                            <RowDirective index={1}>
-                                <CellsDirective>
-                                    <CellDirective index={0} value={'Select Shipping'}></CellDirective>
-                                    <CellDirective index={1} value={''}></CellDirective>
-                                    <CellDirective index={2} value={'Selected'}></CellDirective>
-                                    <CellDirective index={3} value={''}></CellDirective>
-                                </CellsDirective>
-                            </RowDirective>
-                            <RowDirective index={5}>
-                                <CellsDirective>
-                                    <CellDirective index={0} value={'Payment Method'} style={boldCenter}></CellDirective>
-                                </CellsDirective>
-                            </RowDirective>
-                            <RowDirective index={6}>
-                                <CellsDirective>
-                                    <CellDirective index={0} value={'Choose Payment'}></CellDirective>
-                                    <CellDirective index={1} value={''}></CellDirective>
-                                    <CellDirective index={2} value={'Selected'}></CellDirective>
-                                    <CellDirective index={3} value={''}></CellDirective>
-                                </CellsDirective>
-                            </RowDirective>
-                        </RowsDirective>
-                        <FormControlsDirective>
-                            <FormControlDirective type="RadioButton" text="Radio Button 1" celllink="H4" height={40} width={110}></FormControlDirective>"
-                        </FormControlsDirective>
-                    </SheetDirective>
-                </SheetsDirective>
-            </SpreadsheetComponent>
-        </div>
+        <SpreadsheetComponent ref={(ssObj) => { spreadsheet = ssObj; }} created={onCreated.bind(this)}>
+            <SheetsDirective>
+                <SheetDirective name="Price Details">
+                    <RangesDirective>
+                        <RangeDirective dataSource={defaultData}></RangeDirective>
+                    </RangesDirective>
+                    <FormControlsDirective>
+                        <FormControlDirective type="RadioButton" text="Radio Button 1" cellLink="G1" height={40} width={180} rowIndex={11} colIndex={0}></FormControlDirective>
+                    </FormControlsDirective>
+                    <RowsDirective>
+                        <RowDirective index={30}>
+                            <CellsDirective>
+                                <CellDirective index={4} value="Total Amount:" style={boldRight}></CellDirective>
+                                <CellDirective formula="=SUM(F2:F30)" style={bold}></CellDirective>
+                            </CellsDirective>
+                        </RowDirective>
+                    </RowsDirective>
+                    <ColumnsDirective>
+                        <ColumnDirective width={180}></ColumnDirective>
+                        <ColumnDirective width={130}></ColumnDirective>
+                        <ColumnDirective width={130}></ColumnDirective>
+                        <ColumnDirective width={180}></ColumnDirective>
+                        <ColumnDirective width={130}></ColumnDirective>
+                        <ColumnDirective width={120}></ColumnDirective>
+                    </ColumnsDirective>
+                </SheetDirective>
+            </SheetsDirective>
+        </SpreadsheetComponent>
     );
 }
 
