@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Performance best practices in TypeScript Spreadsheet | Syncfusion
-description: Performance best practices in TypeScript Spreadsheet help optimize rendering, data processing, and user interactions for large datasets.
+title: Performance Best Practices in TypeScript Spreadsheet | Syncfusion
+description: Learn about performance best practices in the Syncfusion TypeScript Spreadsheet control to optimize rendering and data processing.
 platform: document-processing
 control: Performance
 documentation: ug
 ---
 
-# Performance Best Practices in TypeScript Spreadsheet 
+# Performance Best Practices in TypeScript Spreadsheet
 
 Performance optimization is crucial when working with large datasets in the [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor). This documentation outlines best practices to enhance data handling efficiency and ensure a smooth, responsive user experience during various spreadsheet operations.
 
@@ -15,7 +15,7 @@ Performance optimization is crucial when working with large datasets in the [Jav
 
 ### Virtual scrolling
 
-Virtual scrolling is an essential performance feature in the EJ2 Spreadsheet that enhances rendering efficiency when handling large datasets. Instead of loading all rows and columns into the DOM at once, it renders only the cells visible within the viewport. As the user scrolls, additional rows or columns are dynamically loaded and rendered.
+Virtual scrolling is an essential performance feature in the TypeScript Spreadsheet that enhances rendering efficiency when handling large datasets. Instead of loading all rows and columns into the DOM at once, it renders only the cells visible within the viewport. As the user scrolls, additional rows or columns are dynamically loaded and rendered.
 
 This approach significantly reduces initial load time, DOM size, and memory usage — resulting in smoother rendering and interaction, especially when working with thousands of rows or columns.
 
@@ -32,7 +32,7 @@ To enable the chunk response processing feature, you can refer to the following 
 
 ### Configure JSON serialization options during open
 
-Serialization options in the EJ2 Spreadsheet allow you to exclude specific features—such as styles, formats, charts, images, wrap, etc.—from the `Workbook JSON object` when opening it in the Spreadsheet using the [`openFromJson`](https://ej2.syncfusion.com/documentation/api/spreadsheet#openfromjson) method. By skipping unnecessary features, you can significantly improve performance, especially when working with large or complex workbooks.
+Serialization options in the TypeScript Spreadsheet allow you to exclude specific features—such as styles, formats, charts, images, wrap, etc.—from the `Workbook JSON object` when opening it in the Spreadsheet using the [`openFromJson`](https://ej2.syncfusion.com/documentation/api/spreadsheet#openfromjson) method. By skipping unnecessary features, you can significantly improve performance, especially when working with large or complex workbooks.
 
 This is particularly useful when:
 * You need only the raw data without formatting.
@@ -45,7 +45,7 @@ Refer to the following UG section to learn how to configure these options:
 
 ### Configuring threshold limits
 
-To improve performance when importing large Excel files into the Spreadsheet component, you can configure thresholds for both the maximum number of cells `MaximumDataLimit` and the file size `MaximumFileSize`. These limits help prevent delays or potential server timeouts by restricting excessively large files from being imported.
+To improve performance when importing large Excel files into the Spreadsheet control, you can configure thresholds for both the maximum number of cells `MaximumDataLimit` and the file size `MaximumFileSize`. These limits help prevent delays or potential server timeouts by restricting excessively large files from being imported.
 
 When these thresholds are exceeded:
 * The Spreadsheet displays an alert dialog indicating that the file is large.
@@ -80,13 +80,13 @@ public IActionResult Open(IFormCollection openRequest)
 To improve performance when opening large Excel files, use parsing options like `IgnoreStyle` and `IgnoreFormat` to skip unnecessary styles and formats. This reduces memory usage, speeds up loading, and minimizes JSON size—especially helpful for files with many styled but empty cells.
 
 To learn how to configure these parsing options, please refer to the UG section below.
-* [Configure Parsing Options](./open-save#improving-excel-file-open-performance-with-parsing-options)
+* [Configure Parsing Options](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es6/open-save#improving-excel-file-open-performance-with-parsing-options)
 
-## How to improve performance on formula calculation in the Spreadsheet?
+## How to improve performance on formula calculation in Spreadsheet?
 
 ### Manual calculation mode
 
-Manual Calculation Mode in the EJ2 Spreadsheet is a performance optimization feature that allows you to delay formula recalculations until they are explicitly triggered. By default, the Spreadsheet automatically recalculates formulas whenever a dependent cell is edited or changed. While this behavior works well for small datasets, it can result in noticeable lag or UI freezing when working with large spreadsheets that contain many formulas or complex calculation chains.
+Manual Calculation Mode in the TypeScript Spreadsheet is a performance optimization feature that allows you to delay formula recalculations until they are explicitly triggered. By default, the Spreadsheet automatically recalculates formulas whenever a dependent cell is edited or changed. While this behavior works well for small datasets, it can result in noticeable lag or UI freezing when working with large spreadsheets that contain many formulas or complex calculation chains.
 
 To prevent such performance issues during bulk operations—such as importing data, applying formats, or setting multiple formulas — manual calculation mode gives developers control over when recalculations should occur.
 
@@ -118,7 +118,7 @@ let spreadsheet: Spreadsheet = new Spreadsheet({
 
 ### Configure JSON serialization options during save
 
-Serialization options in the EJ2 Spreadsheet allow you to exclude specific features such as styles, formats, charts, images, wrap, etc. from the `Workbook JSON object` when saving it using the [`saveAsJson`](https://ej2.syncfusion.com/documentation/api/spreadsheet#saveasjson) method in the Spreadsheet. By skipping unnecessary features, you can significantly improve performance, especially when working with large or complex workbooks.
+Serialization options in the TypeScript Spreadsheet allow you to exclude specific features such as styles, formats, charts, images, wrap, etc. from the `Workbook JSON object` when saving it using the [`saveAsJson`](https://ej2.syncfusion.com/documentation/api/spreadsheet#saveasjson) method in the Spreadsheet. By skipping unnecessary features, you can significantly improve performance, especially when working with large or complex workbooks.
 
 This is particularly useful when:
 * You need only the raw data without formatting.
@@ -129,13 +129,13 @@ Proper use of serialization options during save improves performance and reduces
 
 Refer to the following UG section to learn how to configure these options:
 
-* [Configure JSON serialization options during save](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es6/open-save#configure-json-deserialization-options)
+* [Configure JSON serialization options during save](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es6/open-save#configure-json-serialization-options)
 
-## How to improve cell selection performance in the Spreadsheet?
+## How to improve cell selection performance in Spreadsheet?
 
 ### Disabling aggregate calculation
 
-When working with large datasets in the EJ2 Spreadsheet, user interactions such as selecting a large range of cells can experience delays. This occurs because, by default, the Spreadsheet performs aggregate calculations (e.g., SUM, AVERAGE, COUNT, MIN, and MAX) on the selected range and displays the results in the sheet tab panel at the bottom-right corner.
+When working with large datasets in the TypeScript Spreadsheet, user interactions such as selecting a large range of cells can experience delays. This occurs because, by default, the Spreadsheet performs aggregate calculations (e.g., SUM, AVERAGE, COUNT, MIN, and MAX) on the selected range and displays the results in the sheet tab panel at the bottom-right corner.
 
 To enhance the responsiveness of cell selection, particularly in performance-critical scenarios, consider disabling unnecessary aggregate calculations using the [`showAggregate`](https://ej2.syncfusion.com/documentation/api/spreadsheet#showaggregate) property.
 
