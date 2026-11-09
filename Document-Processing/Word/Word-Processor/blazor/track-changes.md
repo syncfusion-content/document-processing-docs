@@ -216,3 +216,7 @@ N> In enforce Protection method, first parameter denotes password and second par
 ## Online demo
 
 Explore how to track and review changes in Word documents using the Blazor DOCX Editor in this live [Blazor Track Changes demo](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/track-changes?theme=fluent2).
+
+## See Also
+
+*   [How to customize track changes color in Blazor DOCX Editor?](https://support.syncfusion.com/kb/article/25229/)
