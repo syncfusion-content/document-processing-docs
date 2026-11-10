@@ -165,7 +165,7 @@ When you click **Create Word document**, the Word file is generated in the brows
 
 | Problem | Cause | Resolution |
 |---|---|---|
-| `TS2304: Cannot find name 'WordDocument'` (or similar) | The import line is missing or the package is not installed | Confirm `npm install @syncfusion/ej2-docx` ran successfully and that the import is in `app.component.ts` |
+| `TS2304: Cannot find name 'WordDocument'` (or similar) | The import line is missing or the package is not installed | Confirm `npm install @syncfusion/ej2-docx` ran successfully and that the import is in `app.ts` |
 | `Error: Cannot find module '@syncfusion/ej2-docx'` | The package is not installed | Run `npm install @syncfusion/ej2-docx --save` |
 | Button click does nothing | The button ID does not match the ID used in `getElementById` | Confirm the button's `id` is `normalButton` |
 | Word document does not download | The browser blocks the download | Check the browser's download settings and the downloads folder |
