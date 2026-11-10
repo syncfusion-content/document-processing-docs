@@ -176,7 +176,7 @@ ej.pptxeditor.PptxEditor.Inject(
 // Initialize PPTX Editor component
 var editor = new ej.pptxeditor.PptxEditor({
     id: 'editor',
-    theme: 'tailwind',
+    theme: 'tailwind3',
     documentPath: './documents/DefaultTemplate.pptx'
 });
 

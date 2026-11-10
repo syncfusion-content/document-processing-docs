@@ -97,7 +97,7 @@ import {
 function App() {
   return (
     <div className='control-section'>
-      <PptxEditorComponent id='container' theme="tailwind" documentPath='/documents/Sample.pptx'>
+      <PptxEditorComponent id='container' theme="tailwind3" documentPath='/documents/Sample.pptx'>
         <Inject services={[Toolbar, ThumbnailView, Magnification, Navigation, Print, SlideShow]} />
       </PptxEditorComponent>
     </div>

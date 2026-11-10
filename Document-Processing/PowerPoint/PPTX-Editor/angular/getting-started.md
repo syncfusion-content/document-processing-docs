@@ -126,7 +126,7 @@ import {
 @Component({
     selector: 'app-root',
     template: `<div class="content-wrapper">
-        <ejs-pptxeditor id="container" theme="tailwind" documentPath="/documents/Sample.pptx">
+        <ejs-pptxeditor id="container" theme="tailwind3" documentPath="/documents/Sample.pptx">
         </ejs-pptxeditor>
     </div>`,
     encapsulation: ViewEncapsulation.None,

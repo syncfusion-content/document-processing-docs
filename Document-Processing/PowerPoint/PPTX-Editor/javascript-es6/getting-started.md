@@ -135,7 +135,7 @@ PptxEditor.Inject(Toolbar, ThumbnailView, Magnification, Navigation, Print, Slid
 
 let editor: PptxEditor = new PptxEditor({
   id: 'container',
-  theme: "tailwind",
+  theme: "tailwind3",
   documentPath: defaultTemplateUrl
 });
 editor.appendTo('#PptxEditor');

@@ -89,7 +89,7 @@ Modify the `src/App.vue` file to render the PPTX Editor. Add the PPTX Editor com
 
 <template>
   <div id="app">
-    <ejs-pptxeditor ref="editor" id="container" theme="tailwind" documentPath="/documents/Sample.pptx">
+    <ejs-pptxeditor ref="editor" id="container" theme="tailwind3" documentPath="/documents/Sample.pptx">
     </ejs-pptxeditor>
   </div>
 </template>

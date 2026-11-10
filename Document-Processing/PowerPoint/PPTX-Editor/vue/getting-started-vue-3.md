@@ -112,7 +112,7 @@ Import and register the PPTX Editor component in the `<script>` section of `src/
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 <template>
   <div id="app">
-    <ejs-pptxeditor id="container" theme="tailwind" documentPath="/documents/Sample.pptx">
+    <ejs-pptxeditor id="container" theme="tailwind3" documentPath="/documents/Sample.pptx">
     </ejs-pptxeditor>
   </div>
 </template>
@@ -141,7 +141,7 @@ provide('pptxeditor', [Toolbar, ThumbnailView, Magnification, Navigation, Print,
 
 <template>
   <div id="app">
-    <ejs-pptxeditor id="container" theme="tailwind" documentPath="/documents/Sample.pptx">
+    <ejs-pptxeditor id="container" theme="tailwind3" documentPath="/documents/Sample.pptx">
     </ejs-pptxeditor>
   </div>
 </template>
