@@ -108,7 +108,7 @@ The `UpdateChartAsync()` method can update chart settings such as chart type, da
 
 N> Only the properties included in the `ChartOptions` instance are applied during the update.
 
-### Update chart programmatically
+### Code Example
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}
