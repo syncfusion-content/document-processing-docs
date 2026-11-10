@@ -141,13 +141,6 @@ DataExtractor extractor = new DataExtractor();
 
 // Remove a built-in or custom type
 bool removed = extractor.DocumentTypes.Remove("LeaseAgreement");
-
-if (removed)
-{
-    Console.WriteLine("LeaseAgreement type removed");
-}
-
-// After removal, documents will be detected as a different matching type or "Unknown"
 ```
 
 ### Check if Type Exists
@@ -160,7 +153,7 @@ DataExtractor extractor = new DataExtractor();
 // Check if a type exists (case-insensitive)
 if (extractor.DocumentTypes.Contains("Invoice"))
 {
-    Console.WriteLine("Invoice type is available");
+    // Invoice type is available
 }
 ```
 
@@ -177,8 +170,6 @@ extractor.DocumentTypes.Remove("Receipt");
 
 // Reset to original state
 extractor.DocumentTypes.Reset();
-
-// Now only built-in types are available
 ```
 
 ### Iterate Over All Types
@@ -190,12 +181,13 @@ DataExtractor extractor = new DataExtractor();
 
 foreach (DocumentTypeDefinition definition in extractor.DocumentTypes)
 {
-    Console.WriteLine($"Type: {definition.Name}");
-    Console.WriteLine($"Keywords ({definition.Keywords.Count}): ");
+    // Access the document type name and keywords
+    string typeName = definition.Name;
+    int keywordCount = definition.Keywords.Count;
+    
     foreach (string keyword in definition.Keywords)
     {
-        Console.WriteLine($"  - {keyword}");
+        // Process each keyword
     }
-    Console.WriteLine();
 }
 ```
