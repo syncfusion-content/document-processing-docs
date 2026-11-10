@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Frozen Panes in Blazor Spreadsheet | Syncfusion
-description: Learn how to freeze and unfreeze panes in the Syncfusion Blazor Spreadsheet component.
+description: Learn how to freeze and unfreeze rows and columns in the Syncfusion Blazor Spreadsheet to keep important data visible while scrolling.
 platform: document-processing
 control: Spreadsheet
 documentation: ug

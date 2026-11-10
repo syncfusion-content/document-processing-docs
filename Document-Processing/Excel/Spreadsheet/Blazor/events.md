@@ -25,7 +25,7 @@ The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sd
 | [ColumnResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.ColumnResizingEventArgs.html) | Triggers when a column is being resized. |
 | [ConditionalFormatting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.ConditionalFormattingEventArgs.html) | Triggers before a conditional formatting rule is applied to a range. |
 | [ContextMenuOpenClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.ContextMenuOpenCloseEventArgs.html) | Triggers before the context menu is opened or closed. |
-| [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.Created.html) | Triggers after the Spreadsheet component is created and initialized. |
+| [Created](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.html) | Triggers after the Spreadsheet component is created and initialized. |
 | [CutCopyActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.CutCopyActionBeginEventArgs.html) | Triggers when a cut or copy operation starts. To know more about this event, refer [here](./clipboard#cutcopyactionbegin). |
 | [FileMenuOpenClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.FileMenuOpenCloseEventArgs.html) | Triggers before the file menu popup is opened or closed. |
 | [HyperlinkClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.HyperlinkClickEventArgs.html) | Triggers when a hyperlink is clicked. To know more about this event, refer [here](./hyperlink#hyperlinkclick). |
@@ -34,5 +34,5 @@ The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sd
 | [Pasting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.PastingEventArgs.html) | Triggers when a paste operation starts. To know more about this event, refer [here](./clipboard#pasting). |
 | [RowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.RowResizingEventArgs.html) | Triggers when a row is being resized. |
 | [Selected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SelectedEventArgs.html) | Triggers when a cell or range of cells is selected. |
-| [UndoRedoStateChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.UndoRedoStateChangedEventArgs.html) | Triggers when the undo or redo stack state changes. |
+| [UndoRedoStateChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.html) | Triggers when the undo or redo stack state changes. |
 | [WorksheetAdding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.WorksheetAddingEventArgs.html) | Triggers before a new worksheet is added. |

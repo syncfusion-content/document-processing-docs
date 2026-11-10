@@ -243,8 +243,8 @@ The `AutoFitAsync()` method adjusts the width of columns or height of rows in th
 
 | Range format | Autofit behavior |
 |-------------|------------------|
-| `A:D` or `B:B` | Autofits columns |
-| `1:1` or `1:10` | Autofits rows |
+| `A:D` or `B:B` | Autofit columns |
+| `1:1` or `1:10` | Autofit rows |
 
 {% tabs %}
 {% highlight razor tabtitle="Index.razor" %}

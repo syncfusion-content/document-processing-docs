@@ -121,11 +121,11 @@ The redo action can also be performed programmatically by calling the [Redo()](h
 {% endhighlight %}
 {% endtabs %}
 
-# Event
+## Event
 
 The Blazor Spreadsheet provides the `UndoRedoStateChanged` event to detect changes in the availability of undo and redo operations.
 
-## UndoRedoStateChanged
+### UndoRedoStateChanged
 
 The `UndoRedoStateChanged` event occurs when the availability of undo or redo operations changes in the Spreadsheet. This event is useful for updating UI state, enabling or disabling undo and redo controls, or logging history-related changes.
 
