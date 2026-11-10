@@ -22,64 +22,6 @@ The keyboard shortcuts **Ctrl + Z** for Undo and **Ctrl + Y** for Redo provide q
 
 N> The undo and redo history is limited to **25 operations** to optimize memory usage; once this limit is reached, older actions are automatically discarded. Additionally, the history is cleared when [worksheet protection](./protection#protect-sheet) is enabled.
 
-# Event
-
-The Blazor Spreadsheet provides the `UndoRedoStateChanged` event to detect changes in the availability of undo and redo operations.
-
-## UndoRedoStateChanged
-
-The `UndoRedoStateChanged` event occurs when the availability of undo or redo operations changes in the Spreadsheet. This event is useful for updating UI state, enabling or disabling undo and redo controls, or logging history-related changes.
-
-### Event Arguments
-
-The event uses the `UndoRedoStateChangedEventArgs` class, which includes the following properties:
-
-| Event Arguments | Type | Description |
-| -- | -- | -- |
-| UndoCount | `int` | Represents the number of user-visible logical actions currently available for undo. |
-| RedoCount | `int` | Represents the number of user-visible logical actions currently available for redo. |
-| ActionDescription | `string` | Describes the user-visible action associated with the operation, such as Sort, Cut, Paste, Delete, Insert, or Format. |
-| Action | `UndoRedoAction` | Indicates whether the action was Undo, Redo, Record, or Reset. |
-| Address | `string` | Represents the worksheet name and affected range in the format `Sheet1!A1:B10`. |
-
-### Code Example
-
-{% tabs %}
-{% highlight razor tabtitle="Index.razor" %}
-
-@page "/"
-@using Syncfusion.Blazor.Spreadsheet
-
-<SfSpreadsheet DataSource="DataSourceBytes" UndoRedoStateChanged="OnUndoRedoStateChanged">
-    <SpreadsheetRibbon></SpreadsheetRibbon>
-</SfSpreadsheet>
-
-@code {
-    public byte[] DataSourceBytes { get; set; }
-
-    protected override void OnInitialized()
-    {
-        string filePath = "wwwroot/Sample.xlsx";
-        DataSourceBytes = File.ReadAllBytes(filePath);
-    }
-
-    public void OnUndoRedoStateChanged(UndoRedoStateChangedEventArgs args)
-    {
-        // Check whether undo and redo are available
-        var canUndo = args.UndoCount > 0;
-        var canRedo = args.RedoCount > 0;
-
-        // Read the action details
-        Console.WriteLine($"Undo available: {canUndo}");
-        Console.WriteLine($"Redo available: {canRedo}");
-        Console.WriteLine($"{args.Action}: {args.ActionDescription}");
-        Console.WriteLine($"Address: {args.Address}");
-    }
-}
-
-{% endhighlight %}
-{% endtabs %}
-
 ## Undo
 
 The **Undo** operation reverses the most recent action performed within the Spreadsheet, restoring the previous state of the component and enabling safe modifications to content and formatting. End users can undo through the UI in the following ways:
@@ -173,6 +115,64 @@ The redo action can also be performed programmatically by calling the [Redo()](h
     {
         // Reapplies the most recently undone action in the active worksheet.
         SpreadsheetInstance.Redo();
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
+
+# Event
+
+The Blazor Spreadsheet provides the `UndoRedoStateChanged` event to detect changes in the availability of undo and redo operations.
+
+## UndoRedoStateChanged
+
+The `UndoRedoStateChanged` event occurs when the availability of undo or redo operations changes in the Spreadsheet. This event is useful for updating UI state, enabling or disabling undo and redo controls, or logging history-related changes.
+
+### Event Arguments
+
+The event uses the `UndoRedoStateChangedEventArgs` class, which includes the following properties:
+
+| Event Arguments | Type | Description |
+| -- | -- | -- |
+| UndoCount | `int` | Represents the number of user-visible logical actions currently available for undo. |
+| RedoCount | `int` | Represents the number of user-visible logical actions currently available for redo. |
+| ActionDescription | `string` | Describes the user-visible action associated with the operation, such as Sort, Cut, Paste, Delete, Insert, or Format. |
+| Action | `UndoRedoAction` | Indicates whether the action was Undo, Redo, Record, or Reset. |
+| Address | `string` | Represents the worksheet name and affected range in the format `Sheet1!A1:B10`. |
+
+### Code Example
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@page "/"
+@using Syncfusion.Blazor.Spreadsheet
+
+<SfSpreadsheet DataSource="DataSourceBytes" UndoRedoStateChanged="OnUndoRedoStateChanged">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+    public byte[] DataSourceBytes { get; set; }
+
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sample.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    public void OnUndoRedoStateChanged(UndoRedoStateChangedEventArgs args)
+    {
+        // Check whether undo and redo are available
+        var canUndo = args.UndoCount > 0;
+        var canRedo = args.RedoCount > 0;
+
+        // Read the action details
+        Console.WriteLine($"Undo available: {canUndo}");
+        Console.WriteLine($"Redo available: {canRedo}");
+        Console.WriteLine($"{args.Action}: {args.ActionDescription}");
+        Console.WriteLine($"Address: {args.Address}");
     }
 }
 
