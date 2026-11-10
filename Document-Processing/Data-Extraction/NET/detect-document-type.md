@@ -179,13 +179,15 @@ DataExtractor extractor = new DataExtractor();
 
 foreach (DocumentTypeDefinition definition in extractor.DocumentTypes)
 {
-    // Access the document type name and keywords
+    // Get the document type name
     string typeName = definition.Name;
     int keywordCount = definition.Keywords.Count;
     
+    // Iterate through all keywords for this document type
     foreach (string keyword in definition.Keywords)
     {
-        // Process each keyword
+        // Use keyword for validation, logging, or other operations
+        bool isKeywordPresent = definition.Keywords.Contains(keyword);
     }
 }
 ```
