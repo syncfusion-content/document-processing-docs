@@ -40,8 +40,8 @@ The Blazor Spreadsheet supports the following frozen pane configurations:
 | Freeze rows | Keeps the top rows visible while scrolling vertically. |
 | Freeze columns | Keeps the left columns visible while scrolling horizontally. |
 | Unfreeze panes | Removes all frozen rows and columns from the worksheet. |
-
-N> Frozen panes are measured from the current viewport, starting at its first visible row and column.
+| Unfreeze rows | Removes the frozen rows from the worksheet. |
+| UnFreeze columns | Removes the frozen columns from the worksheet. |
 
 ## Freeze panes
 
@@ -50,17 +50,11 @@ N> Frozen panes are measured from the current viewport, starting at its first vi
 To freeze panes through the Ribbon UI, follow these steps:
 
 1. Select the worksheet area where you want the freeze boundary to begin.
-2. In the **View** tab of the Ribbon, click the **Freeze Panes** drop-down.
-3. Choose one of the following options:
-   - **Freeze Panes**
-   - **Freeze Top Row**
-   - **Freeze First Column**
+2. In the **View** tab of the Ribbon, click the **Freeze Panes**.
 
-![freeze panes](https://help.syncfusion.com/document-processing/excel/spreadsheet/documentation/images/freeze-panes.gif)
+![freeze panes](images/freeze-panes.gif)
 
 When freezing panes through the user interface, the worksheet is split so the selected rows and/or columns remain visible while the rest of the sheet scrolls.
-
-N> The **Freeze Panes** option uses the current selection as the freeze boundary. The **Freeze Top Row** and **Freeze First Column** options apply preset freeze positions.
 
 ### Freeze panes programmatically
 
@@ -100,17 +94,17 @@ The available parameters are:
 
     private async Task FreezeRowsAndColumns()
     {
-        await SpreadsheetInstance.FreezePanesAsync(row: 3, column: 2);
+        await SpreadsheetInstance.FreezePanesAsync(3, 2);
     }
 
     private async Task FreezeOnlyRows()
     {
-        await SpreadsheetInstance.FreezePanesAsync(row: 2, column: 0);
+        await SpreadsheetInstance.FreezePanesAsync(2, 0);
     }
 
     private async Task FreezeOnlyColumns()
     {
-        await SpreadsheetInstance.FreezePanesAsync(row: 0, column: 2);
+        await SpreadsheetInstance.FreezePanesAsync(0, 2);
     }
 }
 
@@ -124,10 +118,9 @@ The available parameters are:
 To freeze rows through the Ribbon UI, follow these steps:
 
 1. Select the worksheet area near the row boundary you want to keep visible.
-2. In the **View** tab of the Ribbon, click the **Freeze Panes** drop-down.
-3. Choose **Freeze Top Row**.
+2. In the **View** tab of the Ribbon, click the **Freeze Rows**.
 
-This keeps the top row visible while scrolling down the worksheet.
+This keeps the row visible while scrolling down the worksheet.
 
 ### Freeze rows programmatically
 
@@ -157,7 +150,7 @@ To freeze only rows, call [FreezePanesAsync()](https://help.syncfusion.com/cr/bl
 
     private async Task FreezeTopRows()
     {
-        await SpreadsheetInstance.FreezePanesAsync(row: 1, column: 0);
+        await SpreadsheetInstance.FreezePanesAsync(1, 0);
     }
 }
 
@@ -171,8 +164,7 @@ To freeze only rows, call [FreezePanesAsync()](https://help.syncfusion.com/cr/bl
 To freeze columns through the Ribbon UI, follow these steps:
 
 1. Select the worksheet area near the column boundary you want to keep visible.
-2. In the **View** tab of the Ribbon, click the **Freeze Panes** drop-down.
-3. Choose **Freeze First Column**.
+2. In the **View** tab of the Ribbon, click the **Freeze Columns**.
 
 This keeps the leftmost column visible while scrolling horizontally.
 
@@ -204,7 +196,7 @@ To freeze only columns, call [FreezePanesAsync()](https://help.syncfusion.com/cr
 
     private async Task FreezeFirstColumn()
     {
-        await SpreadsheetInstance.FreezePanesAsync(row: 0, column: 1);
+        await SpreadsheetInstance.FreezePanesAsync(0, 1);
     }
 }
 
@@ -217,8 +209,7 @@ To freeze only columns, call [FreezePanesAsync()](https://help.syncfusion.com/cr
 
 To remove frozen panes through the Ribbon UI, follow these steps:
 
-1. In the **View** tab of the Ribbon, click the **Freeze Panes** drop-down.
-2. Choose **Unfreeze Panes**.
+1. In the **View** tab of the Ribbon, click the **UnFreeze Panes** or you only want to unfreeze row or column means click the **UnFreeze Rows** or **UnFreeze Columns**.
 
 ### Unfreeze panes programmatically
 
@@ -259,8 +250,4 @@ The [UnfreezePanesAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) enforces these freeze constraints to ensure a consistent viewing experience:
 
-- **Freeze boundary validation** - If the requested freeze boundary exceeds the worksheet dimensions, the operation is not performed.
-- **Invalid sheet index** - If the specified worksheet index is outside the workbook, the operation is not performed.
-- **Imported workbook settings** - When a workbook is imported, the freeze settings already stored in the file are used initially.
-
-These restrictions help maintain a stable worksheet layout and prevent invalid freeze configurations.
+- If images and charts are added inside the freeze area cells, their portion in the unfreeze area will not move when scrolling.
