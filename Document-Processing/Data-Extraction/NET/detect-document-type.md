@@ -83,7 +83,6 @@ The `DocumentTypes` collection is accessible through the `DataExtractor` instanc
 using Syncfusion.SmartDataExtractor;
 
 DataExtractor extractor = new DataExtractor();
-
 // Access the collection (lazily initialized on first access)
 DocumentTypeDefinitionCollection definitions = extractor.DocumentTypes;
 
@@ -94,7 +93,6 @@ DocumentTypeDefinitionCollection definitions = extractor.DocumentTypes;
 using Syncfusion.SmartDataExtractor;
 
 DataExtractor extractor = new DataExtractor();
-
 // Access the collection (lazily initialized on first access)
 DocumentTypeDefinitionCollection definitions = extractor.DocumentTypes;
 
@@ -113,7 +111,6 @@ Add a new custom document type with specific keywords:
 using Syncfusion.SmartDataExtractor;
 
 DataExtractor extractor = new DataExtractor();
-
 // Add a custom document type with keywords
 extractor.DocumentTypes.Add("PurchaseOrder", new[] { 
     "purchase order", 
@@ -134,7 +131,6 @@ string docType = extractor.DetectDocumentType(stream);
 using Syncfusion.SmartDataExtractor;
 
 DataExtractor extractor = new DataExtractor();
-
 // Add a custom document type with keywords
 extractor.DocumentTypes.Add("PurchaseOrder", new[] { 
     "purchase order", 
@@ -171,14 +167,11 @@ Access and modify keywords for any document type (built-in or custom):
 using Syncfusion.SmartDataExtractor;
 
 DataExtractor extractor = new DataExtractor();
-
 // Get an existing definition
 DocumentTypeDefinition invoice = extractor.DocumentTypes["Invoice"];
-
 // Modify its keywords
 invoice.Keywords.Add("bill no");
 invoice.Keywords.Add("invoice amount");
-
 // Remove a keyword if needed
 invoice.Keywords.Remove("date");
 
@@ -189,14 +182,11 @@ invoice.Keywords.Remove("date");
 using Syncfusion.SmartDataExtractor;
 
 DataExtractor extractor = new DataExtractor();
-
 // Get an existing definition
 DocumentTypeDefinition invoice = extractor.DocumentTypes["Invoice"];
-
 // Modify its keywords
 invoice.Keywords.Add("bill no");
 invoice.Keywords.Add("invoice amount");
-
 // Remove a keyword if needed
 invoice.Keywords.Remove("date");
 
@@ -215,7 +205,6 @@ Remove a document type from the collection:
 using Syncfusion.SmartDataExtractor;
 
 DataExtractor extractor = new DataExtractor();
-
 // Remove a built-in or custom type
 bool removed = extractor.DocumentTypes.Remove("LeaseAgreement");
 
@@ -226,7 +215,6 @@ bool removed = extractor.DocumentTypes.Remove("LeaseAgreement");
 using Syncfusion.SmartDataExtractor;
 
 DataExtractor extractor = new DataExtractor();
-
 // Remove a built-in or custom type
 bool removed = extractor.DocumentTypes.Remove("LeaseAgreement");
 
@@ -245,7 +233,6 @@ Verify whether a document type is in the collection:
 using Syncfusion.SmartDataExtractor;
 
 DataExtractor extractor = new DataExtractor();
-
 // Check if a type exists (case-insensitive)
 if (extractor.DocumentTypes.Contains("Invoice"))
 {
@@ -259,7 +246,6 @@ if (extractor.DocumentTypes.Contains("Invoice"))
 using Syncfusion.SmartDataExtractor;
 
 DataExtractor extractor = new DataExtractor();
-
 // Check if a type exists (case-insensitive)
 if (extractor.DocumentTypes.Contains("Invoice"))
 {
@@ -281,11 +267,9 @@ Restore all built-in document types and remove custom types:
 using Syncfusion.SmartDataExtractor;
 
 DataExtractor extractor = new DataExtractor();
-
 // Make customizations
 extractor.DocumentTypes.Add("PurchaseOrder", new[] { "po #", "vendor" });
 extractor.DocumentTypes.Remove("Receipt");
-
 // Reset to original state
 extractor.DocumentTypes.Reset();
 
@@ -296,11 +280,9 @@ extractor.DocumentTypes.Reset();
 using Syncfusion.SmartDataExtractor;
 
 DataExtractor extractor = new DataExtractor();
-
 // Make customizations
 extractor.DocumentTypes.Add("PurchaseOrder", new[] { "po #", "vendor" });
 extractor.DocumentTypes.Remove("Receipt");
-
 // Reset to original state
 extractor.DocumentTypes.Reset();
 
@@ -319,13 +301,11 @@ Enumerate all document types in the collection:
 using Syncfusion.SmartDataExtractor;
 
 DataExtractor extractor = new DataExtractor();
-
 foreach (DocumentTypeDefinition definition in extractor.DocumentTypes)
 {
     // Get the document type name
     string typeName = definition.Name;
     int keywordCount = definition.Keywords.Count;
-    
     // Iterate through all keywords for this document type
     foreach (string keyword in definition.Keywords)
     {
@@ -341,13 +321,11 @@ foreach (DocumentTypeDefinition definition in extractor.DocumentTypes)
 using Syncfusion.SmartDataExtractor;
 
 DataExtractor extractor = new DataExtractor();
-
 foreach (DocumentTypeDefinition definition in extractor.DocumentTypes)
 {
     // Get the document type name
     string typeName = definition.Name;
     int keywordCount = definition.Keywords.Count;
-    
     // Iterate through all keywords for this document type
     foreach (string keyword in definition.Keywords)
     {
