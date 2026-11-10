@@ -104,11 +104,10 @@ Add an HTML `div` element to act as the PPTX Editor element in the `index.html` 
     <meta name="description" content="Syncfusion TypeScript PPTX Editor" />
     <meta name="author" content="Syncfusion" />
     <link rel="shortcut icon" href="resources/favicon.ico" />
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
     <!-- Element which will render as PPTX Editor -->
-    <div id="PptxEditor"></div>
+    <div id="pptxEditor"></div>
 </body>
 </html>
 
@@ -129,16 +128,14 @@ import {
   Print,
   SlideShow
 } from '@syncfusion/ej2-pptxeditor';
-import defaultTemplateUrl from '../resources/documents/Sample.pptx';
 
 PptxEditor.Inject(Toolbar, ThumbnailView, Magnification, Navigation, Print, SlideShow);
 
 let editor: PptxEditor = new PptxEditor({
-  id: 'container',
-  theme: "tailwind3",
-  documentPath: defaultTemplateUrl
+  theme: 'tailwind3',
+  documentPath: 'https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx'
 });
-editor.appendTo('#PptxEditor');
+editor.appendTo('#pptxEditor');
 
 {% endhighlight %}
 {% endtabs %}
@@ -155,6 +152,4 @@ npm start
 {% endhighlight %}
 {% endtabs %}
 
-After the application starts, open the localhost URL shown in the terminal. The TypeScript PPTX Editor is rendered in the browser with a toolbar, thumbnail pane, and a slide area, as shown below.
-
-![Output of TypeScript PPTX Editor](./images/getting_started.png)
+After the application starts, open the localhost URL shown in the terminal. The TypeScript PPTX Editor is rendered in the browser with a toolbar, thumbnail pane, and a slide area.

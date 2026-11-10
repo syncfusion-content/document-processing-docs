@@ -112,7 +112,7 @@ Import and register the PPTX Editor component in the `<script>` section of `src/
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 <template>
   <div id="app">
-    <ejs-pptxeditor id="container" theme="tailwind3" documentPath="/documents/Sample.pptx">
+    <ejs-pptxeditor id="container" theme="tailwind3" documentPath="https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx">
     </ejs-pptxeditor>
   </div>
 </template>
@@ -141,7 +141,7 @@ provide('pptxeditor', [Toolbar, ThumbnailView, Magnification, Navigation, Print,
 
 <template>
   <div id="app">
-    <ejs-pptxeditor id="container" theme="tailwind3" documentPath="/documents/Sample.pptx">
+    <ejs-pptxeditor id="container" theme="tailwind3" documentPath="https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx">
     </ejs-pptxeditor>
   </div>
 </template>
@@ -183,6 +183,4 @@ Run the application using the following command:
 npm run dev
 ```
 
-After the application starts, open the localhost URL shown in the terminal. The Vue PPTX Editor is rendered in the browser with a toolbar, thumbnail pane, and a slide area, as shown below.
-
-![Output of Vue 3 PPTX Editor](./images/getting_started.png)
+After the application starts, open the localhost URL shown in the terminal. The Vue PPTX Editor is rendered in the browser with a toolbar, thumbnail pane, and a slide area.

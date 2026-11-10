@@ -107,7 +107,6 @@ Style: https://cdn.syncfusion.com/ej2/{VERSION}/{PACKAGE_NAME}/styles/{THEME_NAM
 <link href="https://cdn.syncfusion.com/ej2/34.1.29/ej2-pptxeditor/styles/tailwind3.css" rel="stylesheet" type="text/css" />
 <!-- PPTX Editor dependent scripts -->
 <script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-data/dist/global/ej2-data.min.js" type="text/javascript"></script>
 <script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-buttons/dist/global/ej2-buttons.min.js" type="text/javascript"></script>
 <script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-popups/dist/global/ej2-popups.min.js" type="text/javascript"></script>
 <script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-splitbuttons/dist/global/ej2-splitbuttons.min.js" type="text/javascript"></script>
@@ -115,7 +114,6 @@ Style: https://cdn.syncfusion.com/ej2/{VERSION}/{PACKAGE_NAME}/styles/{THEME_NAM
 <script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-lists/dist/global/ej2-lists.min.js" type="text/javascript"></script>
 <script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-navigations/dist/global/ej2-navigations.min.js" type="text/javascript"></script>
 <script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-dropdowns/dist/global/ej2-dropdowns.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-charts/dist/global/ej2-charts.min.js" type="text/javascript"></script>
 <!-- PPTX Editor script -->
 <script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-pptxeditor/dist/global/ej2-pptxeditor.min.js" type="text/javascript"></script>
 
@@ -150,7 +148,7 @@ Add a container element for the PPTX Editor in the `index.html` file and then in
 </head>
 <body>
     <!-- Element that renders the PPTX Editor -->
-    <div id='PptxEditor'></div>
+    <div id='pptxEditor'></div>
     <script src="index.js" type="text/javascript"></script>
 </body>
 </html>
@@ -175,19 +173,16 @@ ej.pptxeditor.PptxEditor.Inject(
 
 // Initialize PPTX Editor component
 var editor = new ej.pptxeditor.PptxEditor({
-    id: 'editor',
     theme: 'tailwind3',
-    documentPath: './documents/DefaultTemplate.pptx'
+    documentPath: 'https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx'
 });
 
 // Render the PPTX Editor
-editor.appendTo('#PptxEditor');
+editor.appendTo('#pptxEditor');
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Run the application
 
-Open the `index.html` file in a web browser. The JavaScript (ES5) PPTX Editor is rendered with a toolbar, thumbnail pane, and a slide area, as shown below.
-
-![Output of JavaScript ES5 PPTX Editor](./images/getting_started.png)
+Open the `index.html` file in a web browser. The JavaScript (ES5) PPTX Editor is rendered with a toolbar, thumbnail pane, and a slide area.

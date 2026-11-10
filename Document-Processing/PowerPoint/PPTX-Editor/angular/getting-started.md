@@ -98,8 +98,6 @@ This guide uses the `Tailwind 3` theme as an example, sourced from the theme pac
 npm install @syncfusion/ej2-tailwind3-theme
 ```
 
-By default, projects include an `src/styles.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `src/styles.css` file to prevent style conflicts.
-
 The required styles for the PPTX Editor are imported in the **src/styles.css** file:
 
 {% tabs %}
@@ -126,7 +124,7 @@ import {
 @Component({
     selector: 'app-root',
     template: `<div class="content-wrapper">
-        <ejs-pptxeditor id="container" theme="tailwind3" documentPath="/documents/Sample.pptx">
+        <ejs-pptxeditor id="container" theme="tailwind3" documentPath="https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx">
         </ejs-pptxeditor>
     </div>`,
     encapsulation: ViewEncapsulation.None,
@@ -149,6 +147,4 @@ Run the application using the following command:
 ng serve --open
 ```
 
-After the application starts, open the localhost URL shown in the terminal. The Angular PPTX Editor is rendered in the browser with a toolbar, thumbnail pane, and a slide area, as shown below.
-
-![Output of Angular PPTX Editor](./images/getting_started.png)
+After the application starts, open the localhost URL shown in the terminal. The Angular PPTX Editor is rendered in the browser with a toolbar, thumbnail pane, and a slide area.

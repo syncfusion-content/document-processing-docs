@@ -89,7 +89,7 @@ Modify the `src/App.vue` file to render the PPTX Editor. Add the PPTX Editor com
 
 <template>
   <div id="app">
-    <ejs-pptxeditor ref="editor" id="container" theme="tailwind3" documentPath="/documents/Sample.pptx">
+    <ejs-pptxeditor ref="editor" id="container" theme="tailwind3" documentPath="https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx">
     </ejs-pptxeditor>
   </div>
 </template>
@@ -131,6 +131,4 @@ Run the application using the following command:
 npm run serve
 ```
 
-After the application starts, open the localhost URL shown in the terminal. The Vue PPTX Editor is rendered in the browser with a toolbar, thumbnail pane, and a slide area, as shown below.
-
-![Output of Vue PPTX Editor](./images/getting_started.png)
+After the application starts, open the localhost URL shown in the terminal. The Vue PPTX Editor is rendered in the browser with a toolbar, thumbnail pane, and a slide area.

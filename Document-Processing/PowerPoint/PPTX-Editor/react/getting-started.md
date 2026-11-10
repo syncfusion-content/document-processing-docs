@@ -97,7 +97,7 @@ import {
 function App() {
   return (
     <div className='control-section'>
-      <PptxEditorComponent id='container' theme="tailwind3" documentPath='/documents/Sample.pptx'>
+      <PptxEditorComponent id='container' theme="tailwind3" documentPath='https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx'>
         <Inject services={[Toolbar, ThumbnailView, Magnification, Navigation, Print, SlideShow]} />
       </PptxEditorComponent>
     </div>
@@ -117,6 +117,4 @@ Run the application using the following command:
 npm run dev
 ```
 
-After the application starts, open the localhost URL shown in the terminal. The React PPTX Editor is rendered in the browser with a toolbar, thumbnail pane, and a slide area, as shown below.
-
-![Output of React PPTX Editor](./images/getting_started.png)
+After the application starts, open the localhost URL shown in the terminal. The React PPTX Editor is rendered in the browser with a toolbar, thumbnail pane, and a slide area.
