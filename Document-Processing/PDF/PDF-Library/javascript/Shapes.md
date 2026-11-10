@@ -460,27 +460,10 @@ document.destroy();
 
 ## Working with shape pagination
 
-### Overview
-
 Shape pagination allows a large shape that exceeds the available page bounds to continue across multiple PDF pages. Describe the shape, its drawing style, and its pagination settings in a `PdfShapeElement`, and then draw it using the [drawShapeElement](https://ej2.syncfusion.com/documentation/api/pdf/pdfpage#drawshapeelement) method of the [PdfPage](https://ej2.syncfusion.com/documentation/api/pdf/pdfpage) class. The method returns a `PdfLayoutResult` that contains the last page used and the occupied bounds.
 
-Pagination is supported for all shape types listed at the beginning of this page.
 
-### Paginating a shape across multiple PDF pages
-
-When the shape is taller than the available page area, the portion that fits on the current page is drawn, and the remaining portion continues on the next page. If the document has no further page, a new page with the same page settings is added automatically.
-
-### Configuring the layout type and layout break type
-
-Pagination is configured through the `layoutFormat` property of the shape element.
-
-* `layoutType` – Specifies the `PdfLayoutType`. Use `PdfLayoutType.paginate` to continue the shape across multiple pages, or `PdfLayoutType.onePage` to draw the shape on a single page without pagination.
-* `breakType` – Specifies the `PdfLayoutBreakType`. Use `PdfLayoutBreakType.fitPage` to draw the shape on the first page and continue it on the following pages, or `PdfLayoutBreakType.fitElement` to start the shape on the next page when it does not fit on the first page.
-* `paginationBounds` – Optionally specifies the bounds used on the continuation pages.
-
-The shape bounds (`x`, `y`, `width`, and `height`) define the starting position and size of the shape. The shape is drawn from the specified `x` and `y` coordinates on the first page, and the remaining portion continues on the next page.
-
-### Drawing a large ellipse across multiple PDF pages
+### Drawing a ellipse across multiple PDF pages
 
 This example demonstrates how to draw an ellipse whose height exceeds the page height across multiple pages using the [drawShapeElement](https://ej2.syncfusion.com/documentation/api/pdf/pdfpage#drawshapeelement) method of the [PdfPage](https://ej2.syncfusion.com/documentation/api/pdf/pdfpage) class.
 
@@ -495,19 +478,7 @@ let document: PdfDocument = new PdfDocument();
 let page: PdfPage = document.addPage();
 // Create an ellipse shape element whose height is greater than the page height
 // The x and y values of the bounds define the starting position of the ellipse
-let element: PdfShapeElement = {
-    shape: {
-        type: PdfShapeType.Ellipse,
-        bounds: { x: 20, y: 20, width: 100, height: 1000 }
-    },
-    // Apply a brush to fill the ellipse
-    brush: new PdfBrush({ r: 165, g: 42, b: 42 }),
-    // Enable pagination and configure the break behavior
-    layoutFormat: {
-        layoutType: PdfLayoutType.paginate,
-        breakType: PdfLayoutBreakType.fitPage
-    }
-};
+let element: PdfShapeElement = { shape: { type: PdfShapeType.Ellipse, bounds: { x: 20, y: 20, width: 100, height: 1000 } }, brush: new PdfBrush({ r: 165, g: 42, b: 42 }), layoutFormat: { layoutType: PdfLayoutType.paginate, breakType: PdfLayoutBreakType.fitPage } };
 // Draw the ellipse across multiple pages
 page.drawShapeElement(element);
 // Save the document
@@ -524,19 +495,7 @@ var document = new ej.pdf.PdfDocument();
 var page = document.addPage();
 // Create an ellipse shape element whose height is greater than the page height
 // The x and y values of the bounds define the starting position of the ellipse
-var element = {
-    shape: {
-        type: ej.pdf.PdfShapeType.Ellipse,
-        bounds: { x: 20, y: 20, width: 100, height: 1000 }
-    },
-    // Apply a brush to fill the ellipse
-    brush: new ej.pdf.PdfBrush({ r: 165, g: 42, b: 42 }),
-    // Enable pagination and configure the break behavior
-    layoutFormat: {
-        layoutType: ej.pdf.PdfLayoutType.paginate,
-        breakType: ej.pdf.PdfLayoutBreakType.fitPage
-    }
-};
+let element: PdfShapeElement = { shape: { type: PdfShapeType.Ellipse, bounds: { x: 20, y: 20, width:100, height: 1000 } }, brush: new PdfBrush({ r: 165, g: 42, b: 42 }), layoutFormat: { layoutType: PdfLayoutType.paginate, breakType: PdfLayoutBreakType.fitPage } };
 // Draw the ellipse across multiple pages
 page.drawShapeElement(element);
 // Save the document
@@ -546,19 +505,6 @@ document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
-
-### Expected output
-
-The generated PDF document contains the ellipse starting at the position (20, 20) on the first page and continuing on the following pages until the full height of 1000 points is drawn.
-
-### Notes
-
-* The shape is positioned using the `x` and `y` values of its bounds.
-* Shape content that is taller than the available page area is continued on the next pages. Content that is wider than the page is clipped at the page margin.
-* The available area is calculated from the page size and page margins, so the number of pages depends on the page settings and the shape height.
-* A pen, a brush, or both can be applied to the shape. Line, Bezier, and Arc shapes require a pen, and a rounded rectangle requires both a pen and a brush.
-* With `PdfLayoutBreakType.fitElement`, a shape that does not fit on the first page is not drawn on that page and starts from the next page.
-* The `drawShapeElement` method of the [PdfGraphics](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics) class draws the shape on the current page and does not paginate it.
 
 ## Additional Resources
 
