@@ -478,7 +478,17 @@ let document: PdfDocument = new PdfDocument();
 let page: PdfPage = document.addPage();
 // Create an ellipse shape element whose height is greater than the page height
 // The x and y values of the bounds define the starting position of the ellipse
-let element: PdfShapeElement = { shape: { type: PdfShapeType.Ellipse, bounds: { x: 20, y: 20, width: 100, height: 1000 } }, brush: new PdfBrush({ r: 165, g: 42, b: 42 }), layoutFormat: { layoutType: PdfLayoutType.paginate, breakType: PdfLayoutBreakType.fitPage } };
+let element: PdfShapeElement = {
+    shape: {
+        type: PdfShapeType.Ellipse,
+        bounds: { x: 20, y: 20, width: 100, height: 1000 }
+    },
+    brush: new PdfBrush({ r: 165, g: 42, b: 42 }),
+    layoutFormat: {
+        layoutType: PdfLayoutType.paginate,
+        breakType: PdfLayoutBreakType.fitPage
+    }
+};
 // Draw the ellipse across multiple pages
 page.drawShapeElement(element);
 // Save the document
@@ -495,7 +505,26 @@ var document = new ej.pdf.PdfDocument();
 var page = document.addPage();
 // Create an ellipse shape element whose height is greater than the page height
 // The x and y values of the bounds define the starting position of the ellipse
-let element: PdfShapeElement = { shape: { type: PdfShapeType.Ellipse, bounds: { x: 20, y: 20, width:100, height: 1000 } }, brush: new PdfBrush({ r: 165, g: 42, b: 42 }), layoutFormat: { layoutType: PdfLayoutType.paginate, breakType: PdfLayoutBreakType.fitPage } };
+var element = {
+    shape: {
+        type: ej.pdf.PdfShapeType.Ellipse,
+        bounds: {
+            x: 20,
+            y: 20,
+            width: 100,
+            height: 1000
+        }
+    },
+    brush: new ej.pdf.PdfBrush({
+        r: 165,
+        g: 42,
+        b: 42
+    }),
+    layoutFormat: {
+        layoutType: ej.pdf.PdfLayoutType.paginate,
+        breakType: ej.pdf.PdfLayoutBreakType.fitPage
+    }
+};
 // Draw the ellipse across multiple pages
 page.drawShapeElement(element);
 // Save the document
