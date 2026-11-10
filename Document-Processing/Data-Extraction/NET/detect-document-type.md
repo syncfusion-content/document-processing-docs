@@ -76,18 +76,42 @@ The following document types are supported by default:
 
 The `DocumentTypes` collection is accessible through the `DataExtractor` instance:
 
-```csharp
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.SmartDataExtractor;
+
 DataExtractor extractor = new DataExtractor();
 
 // Access the collection (lazily initialized on first access)
 DocumentTypeDefinitionCollection definitions = extractor.DocumentTypes;
-```
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.SmartDataExtractor;
+
+DataExtractor extractor = new DataExtractor();
+
+// Access the collection (lazily initialized on first access)
+DocumentTypeDefinitionCollection definitions = extractor.DocumentTypes;
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ### Add Custom Document Types
 
 Add a new custom document type with specific keywords:
 
-```csharp
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.SmartDataExtractor;
+
 DataExtractor extractor = new DataExtractor();
 
 // Add a custom document type with keywords
@@ -102,7 +126,31 @@ extractor.DocumentTypes.Add("PurchaseOrder", new[] {
 
 // Detect document type - will now recognize PurchaseOrder documents
 string docType = extractor.DetectDocumentType(stream);
-```
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.SmartDataExtractor;
+
+DataExtractor extractor = new DataExtractor();
+
+// Add a custom document type with keywords
+extractor.DocumentTypes.Add("PurchaseOrder", new[] { 
+    "purchase order", 
+    "po #", 
+    "po number", 
+    "vendor", 
+    "amount", 
+    "total" 
+});
+
+// Detect document type - will now recognize PurchaseOrder documents
+string docType = extractor.DetectDocumentType(stream);
+
+{% endhighlight %}
+
+{% endtabs %}
 
 **Notes:**
 
@@ -116,7 +164,12 @@ string docType = extractor.DetectDocumentType(stream);
 
 Access and modify keywords for any document type (built-in or custom):
 
-```csharp
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.SmartDataExtractor;
+
 DataExtractor extractor = new DataExtractor();
 
 // Get an existing definition
@@ -128,24 +181,69 @@ invoice.Keywords.Add("invoice amount");
 
 // Remove a keyword if needed
 invoice.Keywords.Remove("date");
-```
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.SmartDataExtractor;
+
+DataExtractor extractor = new DataExtractor();
+
+// Get an existing definition
+DocumentTypeDefinition invoice = extractor.DocumentTypes["Invoice"];
+
+// Modify its keywords
+invoice.Keywords.Add("bill no");
+invoice.Keywords.Add("invoice amount");
+
+// Remove a keyword if needed
+invoice.Keywords.Remove("date");
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ### Remove Document Types
 
 Remove a document type from the collection:
 
-```csharp
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.SmartDataExtractor;
+
 DataExtractor extractor = new DataExtractor();
 
 // Remove a built-in or custom type
 bool removed = extractor.DocumentTypes.Remove("LeaseAgreement");
-```
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.SmartDataExtractor;
+
+DataExtractor extractor = new DataExtractor();
+
+// Remove a built-in or custom type
+bool removed = extractor.DocumentTypes.Remove("LeaseAgreement");
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ### Check if Type Exists
 
 Verify whether a document type is in the collection:
 
-```csharp
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.SmartDataExtractor;
+
 DataExtractor extractor = new DataExtractor();
 
 // Check if a type exists (case-insensitive)
@@ -153,13 +251,35 @@ if (extractor.DocumentTypes.Contains("Invoice"))
 {
     // Invoice type is available
 }
-```
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.SmartDataExtractor;
+
+DataExtractor extractor = new DataExtractor();
+
+// Check if a type exists (case-insensitive)
+if (extractor.DocumentTypes.Contains("Invoice"))
+{
+    // Invoice type is available
+}
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ### Reset to Built-in Types
 
 Restore all built-in document types and remove custom types:
 
-```csharp
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.SmartDataExtractor;
+
 DataExtractor extractor = new DataExtractor();
 
 // Make customizations
@@ -168,13 +288,36 @@ extractor.DocumentTypes.Remove("Receipt");
 
 // Reset to original state
 extractor.DocumentTypes.Reset();
-```
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.SmartDataExtractor;
+
+DataExtractor extractor = new DataExtractor();
+
+// Make customizations
+extractor.DocumentTypes.Add("PurchaseOrder", new[] { "po #", "vendor" });
+extractor.DocumentTypes.Remove("Receipt");
+
+// Reset to original state
+extractor.DocumentTypes.Reset();
+
+{% endhighlight %}
+
+{% endtabs %}
 
 ### Iterate Over All Types
 
 Enumerate all document types in the collection:
 
-```csharp
+{% tabs %}
+
+{% highlight c# tabtitle="C# [Cross-platform]" %}
+
+using Syncfusion.SmartDataExtractor;
+
 DataExtractor extractor = new DataExtractor();
 
 foreach (DocumentTypeDefinition definition in extractor.DocumentTypes)
@@ -190,5 +333,30 @@ foreach (DocumentTypeDefinition definition in extractor.DocumentTypes)
         bool isKeywordPresent = definition.Keywords.Contains(keyword);
     }
 }
-```
+
+{% endhighlight %}
+
+{% highlight c# tabtitle="C# [Windows-specific]" %}
+
+using Syncfusion.SmartDataExtractor;
+
+DataExtractor extractor = new DataExtractor();
+
+foreach (DocumentTypeDefinition definition in extractor.DocumentTypes)
+{
+    // Get the document type name
+    string typeName = definition.Name;
+    int keywordCount = definition.Keywords.Count;
+    
+    // Iterate through all keywords for this document type
+    foreach (string keyword in definition.Keywords)
+    {
+        // Use keyword for validation, logging, or other operations
+        bool isKeywordPresent = definition.Keywords.Contains(keyword);
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
 N> The DetectDocumentType API returns the detected document type as a string, enabling intelligent document routing and automated processing in document management systems.
