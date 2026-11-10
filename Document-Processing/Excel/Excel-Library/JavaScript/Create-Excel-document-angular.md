@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with JavaScript Excel in Angular app | Syncfusion
+title: Getting Started with Excel Library in Angular | Syncfusion
 description: Learn how to get started with the Syncfusion JavaScript Excel in Angular application. Easy steps to create Excel workbooks.
 platform: document-processing
 control: Excel
 documentation: ug
 ---
 
-# Getting Started with JavaScript Excel in Angular app
+# Getting Started with JavaScript Excel Library in Angular
 
 The [JavaScript Excel Library](https://www.syncfusion.com/document-sdk/javascript-excel-library) is used to create, read, and edit Microsoft Excel (`.xlsx`) workbooks. You can work with worksheets, cells, formulas, formatting, and other spreadsheet features without Microsoft Excel installed.
 
@@ -30,11 +30,11 @@ node --version
 npm --version
 ```
 
-## Project Setup
+## Project setup
 
 This guide includes all the steps needed to create and run the sample in an Angular application. You can either create a new project or use an existing one.
 
-### Option A: Create a New Angular Project
+### Option A: Create a new Angular project
 
 If you do not have an Angular project, create one by using the Angular CLI:
 
@@ -44,7 +44,7 @@ ng new my-excel-app
 cd my-excel-app
 ```
 
-### Option B: Use an Existing Angular Project
+### Option B: Use an existing Angular project
 
 If you already have an Angular project, open its root folder and continue with the package installation steps:
 
@@ -52,7 +52,7 @@ If you already have an Angular project, open its root folder and continue with t
 cd path/to/your-existing-app
 ```
 
-## Installing the JavaScript Excel Library package
+## Install the JavaScript Excel Library
 
 All Syncfusion<sup>&reg;</sup> JS 2 packages are published in `npmjs.com` registry. The `npm install` command below resolves `@syncfusion/ej2-xlsx` to the latest stable version that is compatible with Angular 20 or later.
 
@@ -68,9 +68,9 @@ npm install @syncfusion/ej2-xlsx --save
 yarn add @syncfusion/ej2-xlsx
 ```
 
-N> The JavaScript Excel Library does not require additional setup for image or data extraction in Excel files. Install only the main package `@syncfusion/ej2-xlsx` for basic workbook creation and manipulation.
+N> The JavaScript Excel Library does not require additional setup for images or other workbook content. Install only the main package `@syncfusion/ej2-xlsx` to create and edit workbooks.
 
-## Browser and Environment Compatibility
+## Browser and environment compatibility
 
 | Environment | Supported version |
 | --- | --- |
@@ -82,58 +82,58 @@ N> The JavaScript Excel Library does not require additional setup for image or d
 | Edge | Latest two major versions |
 | Firefox | Latest two major versions |
 
-> For server-side rendering or Angular Universal, create the Excel document only in browser execution paths. The sample in this guide uses a click handler that runs in the browser, so no additional lifecycle handling is required.
+N> For server-side rendering (SSR), create the Excel document only in code that runs in the browser. The sample in this guide uses a click handler, which runs only in the browser, so no additional lifecycle handling is required.
 
-## Create an Excel Document
+## Create an Excel document
 
-Add a button to the Angular template and attach a click handler that uses the [JavaScript Excel Library](https://www.syncfusion.com/document-sdk/javascript-excel-library) to create a new Excel workbook.
+Add a button to the Angular template and bind its click event to a component method that uses the [JavaScript Excel Library](https://www.syncfusion.com/document-sdk/javascript-excel-library) to create a new Excel workbook.
 
 * Add the following button to `app.component.html`.
 
 {% tabs %}
 {% highlight html tabtitle="app.component.html" %}
-<button id="normalButton">Create Excel document</button>
+<button type="button" (click)="createExcel()">Create Excel document</button>
 {% endhighlight %}
 {% endtabs %}
 
-* Include the following namespaces in `app.component.ts`.
+* Import the `Workbook` class in `app.component.ts`.
 
 {% tabs %}
-{% highlight ts tabtitle="~/app.component.ts" %}
+{% highlight ts tabtitle="app.component.ts" %}
 import { Workbook } from '@syncfusion/ej2-xlsx';
 {% endhighlight %}
 {% endtabs %}
 
-* Include the following code in the click event of the button in `app.component.ts` to generate an Excel document.
+* Add the following `createExcel` method to the component class in `app.component.ts`. It creates the workbook, saves it as bytes, and downloads it.
 
 {% tabs %}
 {% highlight ts tabtitle="app.component.ts" %}
-document.getElementById('normalButton').onclick = async (): Promise<void> => {
+async createExcel(): Promise<void> {
     // Create a new workbook
     const workbook: Workbook = Workbook.create();
-    
+
     // Access and rename the worksheet
     const sheet = workbook.sheet(0);
     sheet.name = 'Sales';
-    
+
     // Add sample data
     sheet.cell('A1').value = 'Product';
     sheet.cell('B1').value = 'Quantity';
     sheet.cell('C1').value = 'Price';
-    
+
     sheet.cell('A2').value = 'Notebook';
     sheet.cell('B2').value = 12;
     sheet.cell('C2').value = 4.5;
-    
+
     sheet.cell('A3').value = 'Pen';
     sheet.cell('B3').value = 40;
     sheet.cell('C3').value = 1.25;
-    
+
     // Save the workbook as bytes
     const bytes: Uint8Array = await workbook.save();
-    
+
     // Download the workbook
-    // Create a new Uint8Array to ensure ArrayBuffer compatibility with Blob
+    // Copy the bytes into a new Uint8Array so that Blob accepts the ArrayBuffer type
     const buffer = new Uint8Array(bytes);
     const blob = new Blob([buffer], {
         type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
@@ -146,11 +146,13 @@ document.getElementById('normalButton').onclick = async (): Promise<void> => {
     anchor.click();
     anchor.remove();
     URL.revokeObjectURL(url);
-};
+}
 {% endhighlight %}
 {% endtabs %}
 
-## Code Explanation
+N> Angular 20 and later generate `app.ts` and `app.html` instead of `app.component.ts` and `app.component.html`. Use those files if your project follows the newer naming.
+
+## Code explanation
 
 - `Workbook.create()` — creates a new workbook with one visible worksheet named `Sheet1`.
 - `workbook.sheet(0)` — returns the worksheet at the zero-based index.
@@ -162,7 +164,7 @@ document.getElementById('normalButton').onclick = async (): Promise<void> => {
 - `anchor.remove()` — removes the temporary anchor element after the download click.
 - `URL.revokeObjectURL(url)` — releases the temporary object URL after the download starts.
 
-## Run the Application
+## Run the application
 
 Use the following command to run the application in the browser:
 
@@ -180,6 +182,6 @@ The workbook contains a `Sales` worksheet with `Product`, `Quantity`, and `Price
 |---|---|---|
 | `TS2304: Cannot find name 'Workbook'` (or similar) | The import line is missing or the package is not installed | Confirm `npm install @syncfusion/ej2-xlsx` ran successfully and that the import is in `app.component.ts` |
 | `Error: Cannot find module '@syncfusion/ej2-xlsx'` | The package is not installed | Run `npm install @syncfusion/ej2-xlsx --save` |
-| Button click does nothing | The button ID does not match the ID used in `getElementById` | Confirm the button's `id` is `normalButton` |
-| Excel file does not download | The browser blocks the download | Check the browser's download settings and the downloads folder |
+| Button click does nothing | The click event is not bound to the component method | Confirm the button uses `(click)="createExcel()"` and that `createExcel` is defined in the component class |
+| `Output.xlsx` does not download | The browser blocks the download | Check the browser's download settings and the downloads folder |
 | Build fails with TypeScript errors | The Angular TypeScript version is incompatible with the Excel package | Update Angular to 20 or later and run `npm install` again |
