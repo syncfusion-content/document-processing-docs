@@ -14,7 +14,7 @@ Create or add new form fields visually with the Form Designer UI or programmatic
 This guide covers the following:
 - How to add fields with the Form Designer UI.
 - How to add and edit fields programmatically (API).
-- How to add common field types: Textbox, Password, CheckBox, RadioButton, ListBox, DropDown, Signature, Initial, DateTime picker.
+- How to add common field types: Textbox, Password, CheckBox, RadioButton, ListBox, DropDown, Signature, Initial, DateTime picker, Barcode.
 
 ## Steps
 
@@ -801,6 +801,123 @@ export class AppComponent {
       actions: {
         format: { script: 'AFTime_FormatEx("HH:MM")' }
       }
+    } as any);
+  }
+}
+{% endhighlight %}
+{% endtabs %}
+
+### Barcode
+
+A barcode field is a form field that displays the entered value as a scannable barcode. Barcode fields can be added and edited both through the Form Designer UI and programmatically.
+
+#### Barcode Symbology
+
+The barcode type is referred to as the **symbology**. The following symbologies are supported, and **PDF417** is used by default.
+
+| Symbology | Description |
+|---|---|
+| `PDF417` | A stacked, linear barcode that supports alphanumeric data. This is the default symbology. |
+| `QRCode` | A two-dimensional matrix barcode that supports numeric, alphanumeric, and binary data. |
+| `DataMatrix` | A two-dimensional matrix barcode that is used to encode a small amount of data in a compact area. |
+
+#### Barcode Value Format
+
+The value that is encoded in the barcode can be supplied in three ways.
+
+| Value format | Description |
+|---|---|
+| `TabDelimited` | Carries the values in the barcode separated by a tab character, so the values appear at a tab space distance (four spaces) from each other. |
+| `XML` | Stores the values pairwise in an XML structure. |
+| `CustomValue` | Stores the value as a string, and any string can be assigned to it. |
+
+N> Custom scripts are not supported in barcode fields. Instead, the final value assigned to the barcode field is parsed in the PDF Viewer.
+
+#### Barcode Caption
+
+By default, the name of the loaded PDF document is displayed below the generated barcode field. Use the **caption** property to change this text, either from the UI or programmatically.
+
+![Barcode field with caption in Form Designer](../../../javascript-es6/images/ui-barcode.png)
+
+#### Barcode Error Correction Level
+
+The error correction level determines how much damage the generated barcode can tolerate before it can no longer be read. The available levels depend on the selected symbology.
+
+| Symbology | Supported values |
+|---|---|
+| `PDF417` | `Level0` to `Level8` |
+| `QRCode` | `Low`, `Medium`, `Quartile`, `High` |
+| `DataMatrix` | Not applicable, since Data Matrix does not use this setting. |
+
+The default error correction level is `Level5`.
+
+![Barcode error correction level settings in Form Designer](../../../javascript-es6/images/ui-barcode-error-correction.png)
+
+**Add via UI**: Open the Form Designer toolbar, select **Barcode**, and click on a PDF page to place the field. Select the placed field to review or change its general properties, such as its name, value, visibility, and whether it is read-only or required.
+
+**Add Programmatically (API)**
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+import { Component, ViewChild } from '@angular/core';
+import {
+  ToolbarService,
+  MagnificationService,
+  NavigationService,
+  AnnotationService,
+  TextSelectionService,
+  TextSearchService,
+  FormFieldsService,
+  FormDesignerService,
+  PdfViewerModule,
+  PdfViewerComponent,
+} from '@syncfusion/ej2-angular-pdfviewer';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [PdfViewerModule],
+  template: `
+    <div class="content-wrapper">
+      <ejs-pdfviewer #pdfViewer id="pdfViewer" (documentLoad)="onDocumentLoad()"
+        [resourceUrl]="resourceUrl"
+        [documentPath]="document"
+        style="height: 640px; display: block;">
+      </ejs-pdfviewer>
+    </div>
+  `,
+  providers: [
+    ToolbarService,
+    MagnificationService,
+    NavigationService,
+    AnnotationService,
+    TextSelectionService,
+    TextSearchService,
+    FormFieldsService,
+    FormDesignerService,
+  ],
+})
+export class AppComponent {
+  public document: string = 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf';
+  public resourceUrl: string = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+
+  @ViewChild('pdfViewer') public pdfviewer!: PdfViewerComponent;
+
+  onDocumentLoad(): void {
+    // Add a barcode field with the default PDF417 symbology
+    this.pdfviewer.formDesignerModule.addFormField('BarcodeField', {
+      name: 'ProductBarcode',
+      bounds: { X: 146, Y: 300, Width: 180, Height: 100 },
+      pageNumber: 1,
+      value: 'SYNCFUSION-001',
+      caption: 'Product Barcode',
+      symbology: 'PDF417',
+      valueFormat: 'TabDelimited',
+      errorCorrectionLevel: 'Level5',
+      isRequired: false,
+      isPrint: true,
+      visibility: 'visible',
+      tooltip: 'Scan to view the product details',
     } as any);
   }
 }

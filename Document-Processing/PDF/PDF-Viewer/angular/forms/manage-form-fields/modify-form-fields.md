@@ -689,6 +689,125 @@ Use the **Format** tab to change the field type (Date or Time), select a display
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples)
 
+### Barcode
+
+Select a Barcode field in Form Designer to review or change its settings. The toolbar includes the Barcode tool, and the page displays the generated barcode.
+
+![Barcode field in Form Designer](../../../javascript-es6/images/ui-barcode.png)
+
+Use the field's **General** properties to review or edit its name, value, caption, tooltip, visibility, read-only and required settings, and print visibility.
+
+The **Appearance** properties include the symbology, value format, and error correction level.
+
+![Barcode error correction level settings in Form Designer](../../../javascript-es6/images/ui-barcode-error-correction.png)
+
+#### Symbology
+
+The barcode type is referred to as the **symbology**. The following symbologies are supported, and **PDF417** is used by default.
+
+| Symbology | Description |
+|---|---|
+| `PDF417` | A stacked, linear barcode that supports alphanumeric data. This is the default symbology. |
+| `QRCode` | A two-dimensional matrix barcode that supports numeric, alphanumeric, and binary data. |
+| `DataMatrix` | A two-dimensional matrix barcode that is used to encode a small amount of data in a compact area. |
+
+#### Value Format
+
+The value that is encoded in the barcode can be supplied in three ways.
+
+| Value format | Description |
+|---|---|
+| `TabDelimited` | Carries the values in the barcode separated by a tab character, so the values appear at a tab space distance (four spaces) from each other. |
+| `XML` | Stores the values pairwise in an XML structure. |
+| `CustomValue` | Stores the value as a string, and any string can be assigned to it. |
+
+N> Custom scripts are not supported in barcode fields. Instead, the final value assigned to the barcode field is parsed in the PDF Viewer.
+
+#### Caption
+
+By default, the name of the loaded PDF document is displayed below the generated barcode field. Use the **caption** property to change this text, either from the UI or programmatically.
+
+#### Error Correction Level
+
+The error correction level determines how much damage the generated barcode can tolerate before it can no longer be read. The available levels depend on the selected symbology.
+
+| Symbology | Supported values |
+|---|---|
+| `PDF417` | `Level0` to `Level8` |
+| `QRCode` | `Low`, `Medium`, `Quartile`, `High` |
+| `DataMatrix` | Not applicable, since Data Matrix does not use this setting. |
+
+The default error correction level is `Level5`.
+
+- API: [updateFormField()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#updateformfields) for value, caption, symbology, value format, and error correction level.
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+import { Component, ViewChild } from '@angular/core';
+import {
+  ToolbarService,
+  MagnificationService,
+  NavigationService,
+  AnnotationService,
+  TextSelectionService,
+  TextSearchService,
+  FormFieldsService,
+  FormDesignerService,
+  PdfViewerModule,
+  PdfViewerComponent,
+} from '@syncfusion/ej2-angular-pdfviewer';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [PdfViewerModule],
+  template: `
+    <div class="content-wrapper">
+      <button (click)="editBarcode()">Edit Barcode</button>
+      <ejs-pdfviewer #pdfViewer id="pdfViewer"
+        [resourceUrl]="resourceUrl"
+        [documentPath]="document"
+        style="height: 640px; display: block;">
+      </ejs-pdfviewer>
+    </div>
+  `,
+  providers: [
+    ToolbarService,
+    MagnificationService,
+    NavigationService,
+    AnnotationService,
+    TextSelectionService,
+    TextSearchService,
+    FormFieldsService,
+    FormDesignerService,
+  ],
+})
+export class AppComponent {
+  public document: string = 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf';
+  public resourceUrl: string = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+
+  @ViewChild('pdfViewer') public pdfviewer!: PdfViewerComponent;
+
+  editBarcode(): void {
+    const fields = this.pdfviewer.retrieveFormFields();
+    const barcode = fields.find((f: any) => f.name === 'ProductBarcode');
+    if (barcode) {
+      this.pdfviewer.formDesignerModule.updateFormField(barcode, {
+        value: 'SYNCFUSION-002',
+        caption: 'Updated Barcode Caption',
+        symbology: 'QRCode',
+        valueFormat: 'CustomValue',
+        errorCorrectionLevel: 'High',
+        isRequired: true,
+      } as any);
+    }
+  }
+}
+{% endhighlight %}
+{% endtabs %}
+
+[View Sample on GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples)
+
 ## See also
 
 - [Form Designer overview](../overview)
