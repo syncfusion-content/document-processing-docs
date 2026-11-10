@@ -54,8 +54,6 @@ using (FileStream stream = new FileStream("Input.pdf", FileMode.Open, FileAccess
 
 {% endtabs %}
 
-N> The DetectDocumentType API returns the detected document type as a string, enabling intelligent document routing and automated processing in document management systems.
-
 ## Customize Document Type Detection
 
 The SmartDataExtractor provides a customizable document type detection system through the `DocumentTypes` property. You can add custom document types, modify keywords for existing types, and control which document types are recognized during detection.
@@ -191,3 +189,4 @@ foreach (DocumentTypeDefinition definition in extractor.DocumentTypes)
     }
 }
 ```
+N> The DetectDocumentType API returns the detected document type as a string, enabling intelligent document routing and automated processing in document management systems.
