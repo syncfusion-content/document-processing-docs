@@ -230,7 +230,7 @@ destinationDocument.Close()
 
 {% endtabs %}
 
-## Merge Source Content into Destination document's last Section
+## Merge First Source Section into Last Section
 
 This example demonstrates how to append the content of the first source section to the last section of the destination document and clone the remaining source sections as separate sections.
 
@@ -252,6 +252,8 @@ using (WordDocument sourceDocument = new WordDocument(@"../../../Data/SourceDocu
 {% endhighlight %}
 
 {% endtabs %}
+
+You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/Word-document/Merge-source-first-section-to-destination-last-section).
 
 ## See Also
 
