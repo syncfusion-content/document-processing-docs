@@ -10,7 +10,7 @@ keywords: Detect Document Type, Document Classification, Document Detection
 
 # Detect Document Type in .NET Smart Data Extractor
 
-## Detect Document Type from PDF
+## Detect Document Type from PDF or Image
 
 The Syncfusion<sup>&reg;</sup> Smart Data Extractor library enables document type detection from PDF documents and images. The DetectDocumentType API examines document content to determine its type.
 
