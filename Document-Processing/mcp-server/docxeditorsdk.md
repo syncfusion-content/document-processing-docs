@@ -23,14 +23,14 @@ These tools speed up development and reinforce best practices for Syncfusion<sup
 
 You can refer to the platform-specific guidance on how to set up and use the Syncfusion<sup style="font-size:70%">&reg;</sup> DOCX Editor MCP Server from the following:
 
-- [MCP Server for Angular DOCX Editor](../Word/Word-Processor/angular/ai-tools/mcp)
-- [MCP Server for React DOCX Editor](../Word/Word-Processor/react/ai-tools/mcp)
-- [MCP Server for Vue DOCX Editor](../Word/Word-Processor/vue/ai-tools/mcp)
-- [MCP Server for JavaScript DOCX Editor](../Word/Word-Processor/javascript-es5/ai-tools/mcp)
-- [MCP Server for TypeScript DOCX Editor](../Word/Word-Processor/javascript-es6/ai-tools/mcp)
+- [MCP Server for Angular DOCX Editor](../Word/Word-Processor/angular/mcp)
+- [MCP Server for React DOCX Editor](../Word/Word-Processor/react/mcp)
+- [MCP Server for Vue DOCX Editor](../Word/Word-Processor/vue/mcp)
+- [MCP Server for JavaScript DOCX Editor](../Word/Word-Processor/javascript-es5/mcp)
+- [MCP Server for TypeScript DOCX Editor](../Word/Word-Processor/javascript-es6/mcp)
 - [MCP Server for ASP.NET MVC DOCX Editor](../Word/Word-Processor/asp-net-mvc/mcp)
 - [MCP Server for ASP.NET Core DOCX Editor](../Word/Word-Processor/asp-net-core/mcp)
-- [MCP Server for Blazor DOCX Editor](../Word/Word-Processor/blazor/ai-tools/mcp)
+- [MCP Server for Blazor DOCX Editor](../Word/Word-Processor/blazor/mcp)
 - [MCP Server for WPF DOCX Editor](../Word/Word-Processor/wpf/mcp)
 
 ## See also
