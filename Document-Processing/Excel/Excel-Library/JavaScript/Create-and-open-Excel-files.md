@@ -157,6 +157,97 @@ props.comments = 'Q1 workbook';
 
 N> Some document-property fields are package-internal and are stripped from the shipped type definitions. Prefer the public properties documented on `BuiltInDocumentProperties` (for example `author`, `keywords`, `comments`, dates).
 
+## Custom document properties
+
+Custom document properties store your own named metadata, such as a client ID, project code, or review date, inside the workbook. They appear in Excel under **File > Info > Properties > Advanced Properties > Custom**. Use `workbook.customDocumentProperties` to add, read, update, and remove them.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { Workbook } from '@syncfusion/ej2-xlsx';
+
+const workbook: Workbook = Workbook.create();
+const custom = workbook.customDocumentProperties;
+
+custom.add('ClientID', 'ACME-001');          // text
+custom.add('Revision', 3);                   // number
+custom.add('Approved', true);                // yes/no
+custom.add('ReviewDate', new Date('2025-06-30T00:00:00Z')); // date
+
+// Read
+const clientId = custom.get('ClientID');
+console.log(clientId.value, clientId.type);  // 'ACME-001' 'string'
+
+// Update an existing property
+custom.get('Revision').value = 4;
+custom.add('ClientID', 'ACME-002');          // add() on an existing name updates the value
+
+// Remove
+custom.remove('Approved');
+
+// Enumerate
+for (const property of custom) {
+  console.log(property.name, property.value, property.type);
+}
+
+await workbook.save('./CustomProperties.xlsx');
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+import { Workbook } from '@syncfusion/ej2-xlsx';
+
+const workbook = Workbook.create();
+const custom = workbook.customDocumentProperties;
+
+custom.add('ClientID', 'ACME-001');          // text
+custom.add('Revision', 3);                   // number
+custom.add('Approved', true);                // yes/no
+custom.add('ReviewDate', new Date('2025-06-30T00:00:00Z')); // date
+
+// Read
+const clientId = custom.get('ClientID');
+console.log(clientId.value, clientId.type);  // 'ACME-001' 'string'
+
+// Update an existing property
+custom.get('Revision').value = 4;
+custom.add('ClientID', 'ACME-002');          // add() on an existing name updates the value
+
+// Remove
+custom.remove('Approved');
+
+// Enumerate
+for (const property of custom) {
+  console.log(property.name, property.value, property.type);
+}
+
+await workbook.save('./CustomProperties.xlsx');
+{% endhighlight %}
+{% endtabs %}
+
+Custom properties are saved with the workbook and loaded again by `Workbook.open`.
+
+The `customDocumentProperties` collection provides:
+
+* `add(name, value?)` — adds a property, or updates and returns the existing one when the name already exists. The name must be a non-empty string.
+* `get(name)` — returns the property, or `undefined` when it does not exist.
+* `getAt(index)` — returns the property at a zero-based index; throws `RangeError` when the index is out of range.
+* `contains(name)` — returns `true` when a property with that name exists.
+* `remove(name)` — removes the property and returns `true`, or `false` when it was not found.
+* `clear()` — removes all custom properties.
+* `length` — the number of properties. The collection is also iterable with `for...of`.
+
+Each property exposes `name` (read-only), `value`, and `type` (read-only). The type is detected from the assigned value:
+
+| Value assigned | `type` |
+|---|---|
+| `string` | `'string'` |
+| `number` | `'number'` |
+| `boolean` | `'boolean'` |
+| `Date` | `'date'` |
+| `null` / `undefined` | `'unknown'` |
+
+N> Whole numbers are stored as integers and other numbers as floating-point values. Property names are case-sensitive.
+
+N> A property whose value is `null` or `undefined` is saved as an empty text value. When a file contains a property type the library does not read, the property is loaded with a `null` value. The `linkToContent` and `linkSource` members on a property are reserved and are not saved. If the workbook has no custom properties, no custom properties part is written.
+
 ## Date system (1904)
 
 Excel can interpret date serial numbers with the 1900 or 1904 date system. The 1900 system is the default; switch only when you need compatibility with workbooks that use 1904 dates.
