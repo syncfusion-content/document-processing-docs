@@ -809,7 +809,7 @@ export class AppComponent {
 
 ### Barcode
 
-A barcode field is a form field that displays the entered value as a scannable barcode. Barcode fields can be added and edited both through the Form Designer UI and programmatically.
+A barcode field is a form field that displays the entered value as a barcode that can be scanned. Barcode fields can be added and edited both through the Form Designer UI and programmatically.
 
 #### Barcode Symbology
 
