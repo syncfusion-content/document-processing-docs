@@ -20,10 +20,7 @@ The features described here focus on presentation viewing and printing, consiste
     * **Basic auto-shapes** – Render basic auto-shapes with fill and outline formatting.
     * **Images** – Display images embedded in slides.
     * **Tables** – Display tables with their content and formatting.
-    * **Charts** – Render charts in slides.
     * **Paragraph and text formatting** – Display alignment, indentation, bold, italic, underline, font, size, and color.
-    * **Hyperlinks** – Navigate to hyperlink targets on click.
-    * **Multilingual text** – Render text in different languages.
 * **Viewer ribbon interface** – Access viewing commands through a familiar, tab-based interface.
 * **Slide navigation** – Navigate between slides using thumbnails, touch, keyboard, and mouse interactions.
 * **Zoom** – Zoom in and out of a presentation.

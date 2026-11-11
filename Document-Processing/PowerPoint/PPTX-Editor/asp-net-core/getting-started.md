@@ -126,7 +126,8 @@ Include the [stylesheet](https://ej2.syncfusion.com/aspnetcore/documentation/app
 
 ## Register the Script Manager
 
-Add `<ejs-scripts>` at the end of `<body>` in `~/Pages/Shared/_Layout.cshtml`, after the page content and any page script section. This ensures that the page's event handlers are defined before the component is initialized.
+Open the **~/Pages/Shared/_Layout.cshtml** file and register the script manager `<ejs-scripts>` at the end of the `<body>` element as follows.
+
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/Pages/Shared/_Layout.cshtml" %}
@@ -139,49 +140,26 @@ Add `<ejs-scripts>` at the end of `<body>` in `~/Pages/Shared/_Layout.cshtml`, a
 {% endhighlight %}
 {% endtabs %}
 
-N> Keep the existing layout content and scripts. Do not duplicate `@RenderBody()` or the `Scripts` section if they are already present.
-
 ## Add the ASP.NET Core PPTX Editor control
 
-Place a sample PPTX file at `~/wwwroot/presentations/sample.pptx`. Files in `wwwroot` are publicly accessible, so use a presentation intended for public viewing. Ensure that static file serving is enabled in the application.
-
-Replace the content of `~/Pages/Index.cshtml` with the following code. The `created` event loads the presentation only after the editor has initialized. The URL is resolved relative to the application root, including when the application is hosted under a virtual directory.
+Add the ASP.NET Core PptxEditor control in the **~/Pages/Index.cshtml** file.
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/Pages/Index.cshtml" %}
 
 @page
+@model IndexModel
 
-<style>
-    #pptxeditor {
-        width: 100%;
-        height: 620px;
-    }
-</style>
+<ejs-pptxeditor id="pptx-editor"
+                theme="fluent2"
+                documentPath="https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx">
+</ejs-pptxeditor>
 
-<ejs-pptxeditor id="pptxeditor" created="onPptxCreated"></ejs-pptxeditor>
-<p id="presentation-status" role="status"></p>
-
-<script>
-    function onPptxCreated() {
-        var editor = this;
-
-        fetch('@Url.Content("~/presentations/sample.pptx")')
-            .then(function (response) {
-                if (!response.ok) {
-                    throw new Error('Unable to load the presentation.');
-                }
-                return response.blob();
-            })
-            .then(function (blob) {
-                return editor.openFromBlob(blob, 'sample.pptx');
-            })
-            .catch(function () {
-                document.getElementById('presentation-status').textContent =
-                    'The presentation could not be opened. Check the file URL and try again.';
-            });
-    }
-</script>
+@section Scripts {
+    <script>
+        ej.pptxeditor.PptxEditor.Inject(ej.pptxeditor.Toolbar, ej.pptxeditor.ThumbnailView, ej.pptxeditor.Magnification, ej.pptxeditor.Navigation, ej.pptxeditor.Print, ej.pptxeditor.SlideShow);
+    </script>
+}
 
 {% endhighlight %}
 {% endtabs %}
@@ -212,21 +190,7 @@ dotnet run
 
 {% endtabcontents %}
 
-The page displays the PPTX Editor with a toolbar, a thumbnail pane, and a slide area containing `sample.pptx`. Select a thumbnail to navigate to a slide, change the zoom level, start a slideshow, or use the print command.
-
-## Troubleshooting
-
-**The Tag Helper is not recognized**
-* Confirm that `Syncfusion.AspNetCore.PptxEditor` is installed and that both `Syncfusion.AspNetCore.Base` and `Syncfusion.AspNetCore.PptxEditor` Tag Helpers are imported in `~/Pages/_ViewImports.cshtml`.
-* Rebuild the project after installing the package.
-
-**The editor does not render or its toolbar is missing**
-* Confirm that the PPTX Editor script loads successfully and that `<ejs-scripts>` appears after the page's event handler.
-* Check the browser console and network requests for missing `_content` resources, JavaScript errors, or mismatched package versions.
-
-**The presentation does not open**
-* Confirm that `sample.pptx` exists under `wwwroot/presentations`, static files are served, and the file request succeeds.
-* Ensure that the file is a valid PPTX presentation and that `openFromBlob` is called after initialization.
+The page displays the PPTX Editor with a toolbar, a thumbnail pane, and a slide area containing `Sample.pptx`. Select a thumbnail to navigate to a slide, change the zoom level, start a slideshow, or use the print command.
 
 ## See also
 
