@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Resolve SkiaSharp Build Issues in .NET 11 Blazor WebAssembly Applications | Syncfusion
+title: Resolve SkiaSharp Build Issues in .NET 11 WASM | Syncfusion
 description: Learn how to build the Blazor PDF Viewer on .NET 11 by upgrading the SkiaSharp packages to 4.154.0 and including the required native static libraries.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# Resolve SkiaSharp Build Issues in .NET 11 Blazor WebAssembly Applications
+# Resolve SkiaSharp Build Issues in .NET 11 Blazor WebAssembly
 
 Currently, SkiaSharp does not officially support .NET 11. In addition, Syncfusion<sup style="font-size:70%">&reg;</sup> uses the older SkiaSharp 4.150.1 packages. As a workaround, the Blazor WebAssembly sample can be built and run successfully by manually upgrading the SkiaSharp packages to 4.154.0.
 
@@ -49,7 +49,7 @@ dotnet restore
 
 ## Include the required native static libraries
 
-.NET 11 uses the Emscripten 5.0.6 toolchain to build WebAssembly applications, while the SkiaSharp 4.154.0 package ships the native static libraries for the Emscripten 3.1.34 and 3.1.56 toolchains. Therefore, you must include the required native static libraries in the .csproj file to build the application successfully.
+.NET 11 uses the Emscripten 5.0.6 tool chain to build WebAssembly applications, while the SkiaSharp 4.154.0 package ships the native static libraries for the Emscripten 3.1.34 and 3.1.56 tool chains. Therefore, you must include the required native static libraries in the .csproj file to build the application successfully.
 
 Add the following workaround to the .csproj file.
 
@@ -65,7 +65,7 @@ Add the following workaround to the .csproj file.
 
 N>
 * The `$(SkiaSharpStaticLibraryPath)` property is defined by the `SkiaSharp.NativeAssets.WebAssembly` package, which is included as a dependency of the `SkiaSharp.Views.Blazor` package.
-* The `5.0.6` folder contains the native static libraries built with the Emscripten 5.0.6 toolchain used by .NET 11.
+* The `5.0.6` folder contains the native static libraries built with the Emscripten 5.0.6 tool chain used by .NET 11.
 * The `st*.a` pattern refers to the single-threaded static libraries. Use `mt*.a` instead if the application enables multithreading.
 
 ## See also
