@@ -1,0 +1,682 @@
+{
+  "schoolName": "Greenfield International School",
+  "academicYear": "2024-2025",
+  "term": "Term 2",
+  "students": [
+    {
+      "studentId": "S1001",
+      "studentName": "Aarav Sharma",
+      "className": "8-A",
+      "marks": 340,
+      "totalScore": 500,
+      "percentage": 68.0,
+      "grade": "C"
+    },
+    {
+      "studentId": "S1002",
+      "studentName": "Olivia Brown",
+      "className": "9-B",
+      "marks": 375,
+      "totalScore": 500,
+      "percentage": 75.0,
+      "grade": "B"
+    },
+    {
+      "studentId": "S1003",
+      "studentName": "Liam Johnson",
+      "className": "10-C",
+      "marks": 272,
+      "totalScore": 500,
+      "percentage": 54.4,
+      "grade": "D"
+    },
+    {
+      "studentId": "S1004",
+      "studentName": "Emma Davis",
+      "className": "8-A",
+      "marks": 422,
+      "totalScore": 500,
+      "percentage": 84.4,
+      "grade": "A"
+    },
+    {
+      "studentId": "S1005",
+      "studentName": "Noah Wilson",
+      "className": "9-B",
+      "marks": 465,
+      "totalScore": 500,
+      "percentage": 93.0,
+      "grade": "A+"
+    },
+    {
+      "studentId": "S1006",
+      "studentName": "Sophia Miller",
+      "className": "10-C",
+      "marks": 299,
+      "totalScore": 500,
+      "percentage": 59.8,
+      "grade": "D"
+    },
+    {
+      "studentId": "S1007",
+      "studentName": "Mason Moore",
+      "className": "8-A",
+      "marks": 266,
+      "totalScore": 500,
+      "percentage": 53.2,
+      "grade": "D"
+    },
+    {
+      "studentId": "S1008",
+      "studentName": "Isabella Taylor",
+      "className": "9-B",
+      "marks": 254,
+      "totalScore": 500,
+      "percentage": 50.8,
+      "grade": "D"
+    },
+    {
+      "studentId": "S1009",
+      "studentName": "Ethan Anderson",
+      "className": "10-C",
+      "marks": 230,
+      "totalScore": 500,
+      "percentage": 46.0,
+      "grade": "F"
+    },
+    {
+      "studentId": "S1010",
+      "studentName": "Mia Thomas",
+      "className": "8-A",
+      "marks": 425,
+      "totalScore": 500,
+      "percentage": 85.0,
+      "grade": "A"
+    },
+    {
+      "studentId": "S1011",
+      "studentName": "Lucas Jackson",
+      "className": "9-B",
+      "marks": 368,
+      "totalScore": 500,
+      "percentage": 73.6,
+      "grade": "B"
+    },
+    {
+      "studentId": "S1012",
+      "studentName": "Amelia White",
+      "className": "10-C",
+      "marks": 250,
+      "totalScore": 500,
+      "percentage": 50.0,
+      "grade": "D"
+    },
+    {
+      "studentId": "S1013",
+      "studentName": "Logan Harris",
+      "className": "8-A",
+      "marks": 333,
+      "totalScore": 500,
+      "percentage": 66.6,
+      "grade": "C"
+    },
+    {
+      "studentId": "S1014",
+      "studentName": "Harper Martin",
+      "className": "9-B",
+      "marks": 486,
+      "totalScore": 500,
+      "percentage": 97.2,
+      "grade": "A+"
+    },
+    {
+      "studentId": "S1015",
+      "studentName": "James Thompson",
+      "className": "10-C",
+      "marks": 494,
+      "totalScore": 500,
+      "percentage": 98.8,
+      "grade": "A+"
+    },
+    {
+      "studentId": "S1016",
+      "studentName": "Evelyn Garcia",
+      "className": "8-A",
+      "marks": 404,
+      "totalScore": 500,
+      "percentage": 80.8,
+      "grade": "A"
+    },
+    {
+      "studentId": "S1017",
+      "studentName": "Benjamin Clark",
+      "className": "9-B",
+      "marks": 361,
+      "totalScore": 500,
+      "percentage": 72.2,
+      "grade": "B"
+    },
+    {
+      "studentId": "S1018",
+      "studentName": "Abigail Lewis",
+      "className": "10-C",
+      "marks": 308,
+      "totalScore": 500,
+      "percentage": 61.6,
+      "grade": "C"
+    },
+    {
+      "studentId": "S1019",
+      "studentName": "Henry Walker",
+      "className": "8-A",
+      "marks": 274,
+      "totalScore": 500,
+      "percentage": 54.8,
+      "grade": "D"
+    },
+    {
+      "studentId": "S1020",
+      "studentName": "Ella Hall",
+      "className": "9-B",
+      "marks": 354,
+      "totalScore": 500,
+      "percentage": 70.8,
+      "grade": "B"
+    },
+    {
+      "studentId": "S1021",
+      "studentName": "Jack Allen",
+      "className": "10-C",
+      "marks": 329,
+      "totalScore": 500,
+      "percentage": 65.8,
+      "grade": "C"
+    },
+    {
+      "studentId": "S1022",
+      "studentName": "Grace Young",
+      "className": "8-A",
+      "marks": 233,
+      "totalScore": 500,
+      "percentage": 46.6,
+      "grade": "F"
+    },
+    {
+      "studentId": "S1023",
+      "studentName": "Daniel King",
+      "className": "9-B",
+      "marks": 353,
+      "totalScore": 500,
+      "percentage": 70.6,
+      "grade": "B"
+    },
+    {
+      "studentId": "S1024",
+      "studentName": "Chloe Wright",
+      "className": "10-C",
+      "marks": 359,
+      "totalScore": 500,
+      "percentage": 71.8,
+      "grade": "B"
+    },
+    {
+      "studentId": "S1025",
+      "studentName": "Samuel Scott",
+      "className": "8-A",
+      "marks": 319,
+      "totalScore": 500,
+      "percentage": 63.8,
+      "grade": "C"
+    },
+    {
+      "studentId": "S1026",
+      "studentName": "Lily Green",
+      "className": "9-B",
+      "marks": 304,
+      "totalScore": 500,
+      "percentage": 60.8,
+      "grade": "C"
+    },
+    {
+      "studentId": "S1027",
+      "studentName": "Owen Baker",
+      "className": "10-C",
+      "marks": 378,
+      "totalScore": 500,
+      "percentage": 75.6,
+      "grade": "B"
+    },
+    {
+      "studentId": "S1028",
+      "studentName": "Zoe Adams",
+      "className": "8-A",
+      "marks": 368,
+      "totalScore": 500,
+      "percentage": 73.6,
+      "grade": "B"
+    },
+    {
+      "studentId": "S1029",
+      "studentName": "Leo Nelson",
+      "className": "9-B",
+      "marks": 410,
+      "totalScore": 500,
+      "percentage": 82.0,
+      "grade": "A"
+    },
+    {
+      "studentId": "S1030",
+      "studentName": "Hannah Carter",
+      "className": "10-C",
+      "marks": 264,
+      "totalScore": 500,
+      "percentage": 52.8,
+      "grade": "D"
+    },
+    {
+      "studentId": "S1031",
+      "studentName": "Ryan Mitchell",
+      "className": "8-A",
+      "marks": 392,
+      "totalScore": 500,
+      "percentage": 78.4,
+      "grade": "B"
+    },
+    {
+      "studentId": "S1032",
+      "studentName": "Aria Perez",
+      "className": "9-B",
+      "marks": 418,
+      "totalScore": 500,
+      "percentage": 83.6,
+      "grade": "A"
+    },
+    {
+      "studentId": "S1033",
+      "studentName": "Caleb Roberts",
+      "className": "10-C",
+      "marks": 479,
+      "totalScore": 500,
+      "percentage": 95.8,
+      "grade": "A+"
+    },
+    {
+      "studentId": "S1034",
+      "studentName": "Nora Turner",
+      "className": "8-A",
+      "marks": 347,
+      "totalScore": 500,
+      "percentage": 69.4,
+      "grade": "C"
+    },
+    {
+      "studentId": "S1035",
+      "studentName": "Isaac Phillips",
+      "className": "9-B",
+      "marks": 311,
+      "totalScore": 500,
+      "percentage": 62.2,
+      "grade": "C"
+    },
+    {
+      "studentId": "S1036",
+      "studentName": "Layla Campbell",
+      "className": "10-C",
+      "marks": 346,
+      "totalScore": 500,
+      "percentage": 69.2,
+      "grade": "C"
+    },
+    {
+      "studentId": "S1037",
+      "studentName": "Dylan Parker",
+      "className": "8-A",
+      "marks": 462,
+      "totalScore": 500,
+      "percentage": 92.4,
+      "grade": "A+"
+    },
+    {
+      "studentId": "S1038",
+      "studentName": "Riley Evans",
+      "className": "9-B",
+      "marks": 363,
+      "totalScore": 500,
+      "percentage": 72.6,
+      "grade": "B"
+    },
+    {
+      "studentId": "S1039",
+      "studentName": "Wyatt Edwards",
+      "className": "10-C",
+      "marks": 265,
+      "totalScore": 500,
+      "percentage": 53.0,
+      "grade": "D"
+    },
+    {
+      "studentId": "S1040",
+      "studentName": "Stella Collins",
+      "className": "8-A",
+      "marks": 373,
+      "totalScore": 500,
+      "percentage": 74.6,
+      "grade": "B"
+    },
+    {
+      "studentId": "S1041",
+      "studentName": "Aarav Sharma",
+      "className": "9-B",
+      "marks": 457,
+      "totalScore": 500,
+      "percentage": 91.4,
+      "grade": "A+"
+    },
+    {
+      "studentId": "S1042",
+      "studentName": "Olivia Brown",
+      "className": "10-C",
+      "marks": 411,
+      "totalScore": 500,
+      "percentage": 82.2,
+      "grade": "A"
+    },
+    {
+      "studentId": "S1043",
+      "studentName": "Liam Johnson",
+      "className": "8-A",
+      "marks": 356,
+      "totalScore": 500,
+      "percentage": 71.2,
+      "grade": "B"
+    },
+    {
+      "studentId": "S1044",
+      "studentName": "Emma Davis",
+      "className": "9-B",
+      "marks": 290,
+      "totalScore": 500,
+      "percentage": 58.0,
+      "grade": "D"
+    },
+    {
+      "studentId": "S1045",
+      "studentName": "Noah Wilson",
+      "className": "10-C",
+      "marks": 315,
+      "totalScore": 500,
+      "percentage": 63.0,
+      "grade": "C"
+    },
+    {
+      "studentId": "S1046",
+      "studentName": "Sophia Miller",
+      "className": "8-A",
+      "marks": 223,
+      "totalScore": 500,
+      "percentage": 44.6,
+      "grade": "F"
+    },
+    {
+      "studentId": "S1047",
+      "studentName": "Mason Moore",
+      "className": "9-B",
+      "marks": 393,
+      "totalScore": 500,
+      "percentage": 78.6,
+      "grade": "B"
+    },
+    {
+      "studentId": "S1048",
+      "studentName": "Isabella Taylor",
+      "className": "10-C",
+      "marks": 477,
+      "totalScore": 500,
+      "percentage": 95.4,
+      "grade": "A+"
+    },
+    {
+      "studentId": "S1049",
+      "studentName": "Ethan Anderson",
+      "className": "8-A",
+      "marks": 457,
+      "totalScore": 500,
+      "percentage": 91.4,
+      "grade": "A+"
+    },
+    {
+      "studentId": "S1050",
+      "studentName": "Mia Thomas",
+      "className": "9-B",
+      "marks": 261,
+      "totalScore": 500,
+      "percentage": 52.2,
+      "grade": "D"
+    },
+    {
+      "studentId": "S1051",
+      "studentName": "Lucas Jackson",
+      "className": "10-C",
+      "marks": 391,
+      "totalScore": 500,
+      "percentage": 78.2,
+      "grade": "B"
+    },
+    {
+      "studentId": "S1052",
+      "studentName": "Amelia White",
+      "className": "8-A",
+      "marks": 240,
+      "totalScore": 500,
+      "percentage": 48.0,
+      "grade": "F"
+    },
+    {
+      "studentId": "S1053",
+      "studentName": "Logan Harris",
+      "className": "9-B",
+      "marks": 414,
+      "totalScore": 500,
+      "percentage": 82.8,
+      "grade": "A"
+    },
+    {
+      "studentId": "S1054",
+      "studentName": "Harper Martin",
+      "className": "10-C",
+      "marks": 306,
+      "totalScore": 500,
+      "percentage": 61.2,
+      "grade": "C"
+    },
+    {
+      "studentId": "S1055",
+      "studentName": "James Thompson",
+      "className": "8-A",
+      "marks": 451,
+      "totalScore": 500,
+      "percentage": 90.2,
+      "grade": "A+"
+    },
+    {
+      "studentId": "S1056",
+      "studentName": "Evelyn Garcia",
+      "className": "9-B",
+      "marks": 436,
+      "totalScore": 500,
+      "percentage": 87.2,
+      "grade": "A"
+    },
+    {
+      "studentId": "S1057",
+      "studentName": "Benjamin Clark",
+      "className": "10-C",
+      "marks": 300,
+      "totalScore": 500,
+      "percentage": 60.0,
+      "grade": "C"
+    },
+    {
+      "studentId": "S1058",
+      "studentName": "Abigail Lewis",
+      "className": "8-A",
+      "marks": 306,
+      "totalScore": 500,
+      "percentage": 61.2,
+      "grade": "C"
+    },
+    {
+      "studentId": "S1059",
+      "studentName": "Henry Walker",
+      "className": "9-B",
+      "marks": 341,
+      "totalScore": 500,
+      "percentage": 68.2,
+      "grade": "C"
+    },
+    {
+      "studentId": "S1060",
+      "studentName": "Ella Hall",
+      "className": "10-C",
+      "marks": 246,
+      "totalScore": 500,
+      "percentage": 49.2,
+      "grade": "F"
+    },
+    {
+      "studentId": "S1061",
+      "studentName": "Jack Allen",
+      "className": "8-A",
+      "marks": 276,
+      "totalScore": 500,
+      "percentage": 55.2,
+      "grade": "D"
+    },
+    {
+      "studentId": "S1062",
+      "studentName": "Grace Young",
+      "className": "9-B",
+      "marks": 287,
+      "totalScore": 500,
+      "percentage": 57.4,
+      "grade": "D"
+    },
+    {
+      "studentId": "S1063",
+      "studentName": "Daniel King",
+      "className": "10-C",
+      "marks": 479,
+      "totalScore": 500,
+      "percentage": 95.8,
+      "grade": "A+"
+    },
+    {
+      "studentId": "S1064",
+      "studentName": "Chloe Wright",
+      "className": "8-A",
+      "marks": 252,
+      "totalScore": 500,
+      "percentage": 50.4,
+      "grade": "D"
+    },
+    {
+      "studentId": "S1065",
+      "studentName": "Samuel Scott",
+      "className": "9-B",
+      "marks": 416,
+      "totalScore": 500,
+      "percentage": 83.2,
+      "grade": "A"
+    },
+    {
+      "studentId": "S1066",
+      "studentName": "Lily Green",
+      "className": "10-C",
+      "marks": 272,
+      "totalScore": 500,
+      "percentage": 54.4,
+      "grade": "D"
+    },
+    {
+      "studentId": "S1067",
+      "studentName": "Owen Baker",
+      "className": "8-A",
+      "marks": 369,
+      "totalScore": 500,
+      "percentage": 73.8,
+      "grade": "B"
+    },
+    {
+      "studentId": "S1068",
+      "studentName": "Zoe Adams",
+      "className": "9-B",
+      "marks": 324,
+      "totalScore": 500,
+      "percentage": 64.8,
+      "grade": "C"
+    },
+    {
+      "studentId": "S1069",
+      "studentName": "Leo Nelson",
+      "className": "10-C",
+      "marks": 334,
+      "totalScore": 500,
+      "percentage": 66.8,
+      "grade": "C"
+    },
+    {
+      "studentId": "S1070",
+      "studentName": "Hannah Carter",
+      "className": "8-A",
+      "marks": 435,
+      "totalScore": 500,
+      "percentage": 87.0,
+      "grade": "A"
+    },
+    {
+      "studentId": "S1071",
+      "studentName": "Ryan Mitchell",
+      "className": "9-B",
+      "marks": 264,
+      "totalScore": 500,
+      "percentage": 52.8,
+      "grade": "D"
+    },
+    {
+      "studentId": "S1072",
+      "studentName": "Aria Perez",
+      "className": "10-C",
+      "marks": 356,
+      "totalScore": 500,
+      "percentage": 71.2,
+      "grade": "B"
+    },
+    {
+      "studentId": "S1073",
+      "studentName": "Caleb Roberts",
+      "className": "8-A",
+      "marks": 327,
+      "totalScore": 500,
+      "percentage": 65.4,
+      "grade": "C"
+    },
+    {
+      "studentId": "S1074",
+      "studentName": "Nora Turner",
+      "className": "9-B",
+      "marks": 423,
+      "totalScore": 500,
+      "percentage": 84.6,
+      "grade": "A"
+    },
+    {
+      "studentId": "S1075",
+      "studentName": "Isaac Phillips",
+      "className": "10-C",
+      "marks": 363,
+      "totalScore": 500,
+      "percentage": 72.6,
+      "grade": "B"
+    }
+  ]
+}
