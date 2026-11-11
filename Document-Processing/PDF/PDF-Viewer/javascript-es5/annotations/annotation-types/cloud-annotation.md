@@ -253,7 +253,7 @@ N> [View Sample on GitHub](https://github.com/SyncfusionExamples/javascript-pdf-
 - [Rectangle Annotation](./rectangle-annotation)
 - [Circle Annotation](./circle-annotation)
 - [Annotation Toolbar](../../toolbar-customization/annotation-toolbar)
-- [Customize Context Menu](../../context-menu/custom-context-menu)
+- [Customize Context Menu](../../how-to/custom-context-menu)
 - [Comments Panel](../comments)
 - [Annotation Events](../annotation-event)
 - [Export and Import annotations](../export-import/export-annotation)

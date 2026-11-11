@@ -22,7 +22,7 @@ The PDF Viewer features are organized into discrete modules so applications can 
 * [**TextSearch**](./text-search/find-text): Search for text across the document.
 * [**Print**](./print/overview): Print the entire document or specific pages directly from the browser.
 * [**Annotation**](./annotations/overview): Add and edit annotations.
-* [**FormFields**](./form-designer/form-filling): Work with form fields in the document.
+* [**FormFields**](./forms/form-filling): Work with form fields in the document.
 * [**FormDesigner**](./form-designer/Create-edit-Style-del-formFields/create-formfields): Add or edit form fields in the document.
 
 > In addition to injecting the required modules in an application, enable the corresponding properties to activate features on a PDF Viewer instance.
