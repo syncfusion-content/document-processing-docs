@@ -47,18 +47,9 @@ document.getElementById('stopProtection').addEventListener('click', function () 
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head>
           <title>Essential JS 2</title>
 
-          <!-- EJ2 Document Editor dependent theme -->
-          <link href="http://cdn.syncfusion.com/ej2/ej2-base/styles/material.css" rel="stylesheet" type="text/css">
-          <link href="http://cdn.syncfusion.com/ej2/ej2-buttons/styles/material.css" rel="stylesheet" type="text/css">
-          <link href="http://cdn.syncfusion.com/ej2/ej2-inputs/styles/material.css" rel="stylesheet" type="text/css">
-          <link href="http://cdn.syncfusion.com/ej2/ej2-popups/styles/material.css" rel="stylesheet" type="text/css">
-          <link href="http://cdn.syncfusion.com/ej2/ej2-lists/styles/material.css" rel="stylesheet" type="text/css">
-          <link href="http://cdn.syncfusion.com/ej2/ej2-navigations/styles/material.css" rel="stylesheet" type="text/css">
-          <link href="http://cdn.syncfusion.com/ej2/ej2-splitbuttons/styles/material.css" rel="stylesheet" type="text/css">
-          <link href="http://cdn.syncfusion.com/ej2/ej2-dropdowns/styles/material.css" rel="stylesheet" type="text/css">
-
           <!-- EJ2 Document Editor theme -->
-          <link href="http://cdn.syncfusion.com/ej2/ej2-documenteditor/styles/material.css" rel="stylesheet" type="text/css">
+          <link href="https://unpkg.com/@syncfusion/ej2-material-theme@35.1.43/styles/document-editor/index.css" rel="stylesheet" rel='nofollow'/>
+          <link href="https://unpkg.com/@syncfusion/ej2-material-theme@35.1.43/styles/document-editor-container/index.css" rel="stylesheet" rel='nofollow' />
 
           <!-- EJ2 Document Editor Javascript dependent -->
           <script src="http://cdn.syncfusion.com/ej2/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"></script>
@@ -75,18 +66,11 @@ document.getElementById('stopProtection').addEventListener('click', function () 
           <script src="http://cdn.syncfusion.com/ej2/ej2-documenteditor/dist/global/ej2-documenteditor.min.js" type="text/javascript"></script>
           <!-- TypeScripts Dependent -->
           <link href="index.css" rel="stylesheet">
-         <link href="https://cdn.syncfusion.com/ej2/33.1.44/ej2-documenteditor/styles/fabric.css" rel="stylesheet">
-         <link href="https://cdn.syncfusion.com/ej2/33.1.44/ej2-buttons/styles/fabric.css" rel="stylesheet">
-         <link href="https://cdn.syncfusion.com/ej2/33.1.44/ej2-base/styles/fabric.css" rel="stylesheet">
-         <link href="https://cdn.syncfusion.com/ej2/33.1.44/ej2-dropdowns/styles/fabric.css" rel="stylesheet">
-         <link href="https://cdn.syncfusion.com/ej2/33.1.44/ej2-inputs/styles/fabric.css" rel="stylesheet">
-         <link href="https://cdn.syncfusion.com/ej2/33.1.44/ej2-lists/styles/fabric.css" rel="stylesheet">
-         <link href="https://cdn.syncfusion.com/ej2/33.1.44/ej2-navigations/styles/fabric.css" rel="stylesheet">
-         <link href="https://cdn.syncfusion.com/ej2/33.1.44/ej2-popups/styles/fabric.css" rel="stylesheet">
-         <link href="https://cdn.syncfusion.com/ej2/33.1.44/ej2-splitbuttons/styles/fabric.css" rel="stylesheet"> 
+          <link href="https://unpkg.com/@syncfusion/ej2-fabric-theme@35.1.43/styles/document-editor/index.css" rel="stylesheet" rel='nofollow'/>
+          <link href="https://unpkg.com/@syncfusion/ej2-fabric-theme@35.1.43/styles/document-editor-container/index.css" rel="stylesheet" rel='nofollow' />
          
          
-       <script src="https://cdn.syncfusion.com/ej2/33.1.44/dist/ej2.min.js" type="text/javascript"></script>
+       <script src="https://cdn.syncfusion.com/ej2/35.1.37/dist/ej2.min.js" type="text/javascript"></script>
 <style>#loader {display: none}</style>
 </head>
 
@@ -142,18 +126,9 @@ document.getElementById('stopProtection').addEventListener('click', function () 
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head>
           <title>Essential JS 2</title>
 
-          <!-- EJ2 Document Editor dependent theme -->
-          <link href="http://cdn.syncfusion.com/ej2/ej2-base/styles/material.css" rel="stylesheet" type="text/css">
-          <link href="http://cdn.syncfusion.com/ej2/ej2-buttons/styles/material.css" rel="stylesheet" type="text/css">
-          <link href="http://cdn.syncfusion.com/ej2/ej2-inputs/styles/material.css" rel="stylesheet" type="text/css">
-          <link href="http://cdn.syncfusion.com/ej2/ej2-popups/styles/material.css" rel="stylesheet" type="text/css">
-          <link href="http://cdn.syncfusion.com/ej2/ej2-lists/styles/material.css" rel="stylesheet" type="text/css">
-          <link href="http://cdn.syncfusion.com/ej2/ej2-navigations/styles/material.css" rel="stylesheet" type="text/css">
-          <link href="http://cdn.syncfusion.com/ej2/ej2-splitbuttons/styles/material.css" rel="stylesheet" type="text/css">
-          <link href="http://cdn.syncfusion.com/ej2/ej2-dropdowns/styles/material.css" rel="stylesheet" type="text/css">
-
           <!-- EJ2 Document Editor theme -->
-          <link href="http://cdn.syncfusion.com/ej2/ej2-documenteditor/styles/material.css" rel="stylesheet" type="text/css">
+          <link href="https://unpkg.com/@syncfusion/ej2-material-theme@35.1.43/styles/document-editor/index.css" rel="stylesheet" rel='nofollow'/>
+          <link href="https://unpkg.com/@syncfusion/ej2-material-theme@35.1.43/styles/document-editor-container/index.css" rel="stylesheet" rel='nofollow' />
 
           <!-- EJ2 Document Editor Javascript dependent -->
           <script src="http://cdn.syncfusion.com/ej2/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"></script>
@@ -170,18 +145,11 @@ document.getElementById('stopProtection').addEventListener('click', function () 
           <script src="http://cdn.syncfusion.com/ej2/ej2-documenteditor/dist/global/ej2-documenteditor.min.js" type="text/javascript"></script>
           <!-- TypeScripts Dependent -->
           <link href="index.css" rel="stylesheet">
-         <link href="https://cdn.syncfusion.com/ej2/33.1.44/ej2-documenteditor/styles/fabric.css" rel="stylesheet">
-         <link href="https://cdn.syncfusion.com/ej2/33.1.44/ej2-buttons/styles/fabric.css" rel="stylesheet">
-         <link href="https://cdn.syncfusion.com/ej2/33.1.44/ej2-base/styles/fabric.css" rel="stylesheet">
-         <link href="https://cdn.syncfusion.com/ej2/33.1.44/ej2-dropdowns/styles/fabric.css" rel="stylesheet">
-         <link href="https://cdn.syncfusion.com/ej2/33.1.44/ej2-inputs/styles/fabric.css" rel="stylesheet">
-         <link href="https://cdn.syncfusion.com/ej2/33.1.44/ej2-lists/styles/fabric.css" rel="stylesheet">
-         <link href="https://cdn.syncfusion.com/ej2/33.1.44/ej2-navigations/styles/fabric.css" rel="stylesheet">
-         <link href="https://cdn.syncfusion.com/ej2/33.1.44/ej2-popups/styles/fabric.css" rel="stylesheet">
-         <link href="https://cdn.syncfusion.com/ej2/33.1.44/ej2-splitbuttons/styles/fabric.css" rel="stylesheet"> 
+          <link href="https://unpkg.com/@syncfusion/ej2-fabric-theme@35.1.43/styles/document-editor/index.css" rel="stylesheet" rel='nofollow'/>
+          <link href="https://unpkg.com/@syncfusion/ej2-fabric-theme@35.1.43/styles/document-editor-container/index.css" rel="stylesheet" rel='nofollow' />
          
          
-       <script src="https://cdn.syncfusion.com/ej2/33.1.44/dist/ej2.min.js" type="text/javascript"></script>
+       <script src="https://cdn.syncfusion.com/ej2/35.1.37/dist/ej2.min.js" type="text/javascript"></script>
 <style>#loader {display: none}</style>
 </head>
 
@@ -237,18 +205,9 @@ document.getElementById('stopProtection').addEventListener('click', function () 
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head>
           <title>Essential JS 2</title>
 
-          <!-- EJ2 Document Editor dependent theme -->
-          <link href="http://cdn.syncfusion.com/ej2/ej2-base/styles/material.css" rel="stylesheet" type="text/css">
-          <link href="http://cdn.syncfusion.com/ej2/ej2-buttons/styles/material.css" rel="stylesheet" type="text/css">
-          <link href="http://cdn.syncfusion.com/ej2/ej2-inputs/styles/material.css" rel="stylesheet" type="text/css">
-          <link href="http://cdn.syncfusion.com/ej2/ej2-popups/styles/material.css" rel="stylesheet" type="text/css">
-          <link href="http://cdn.syncfusion.com/ej2/ej2-lists/styles/material.css" rel="stylesheet" type="text/css">
-          <link href="http://cdn.syncfusion.com/ej2/ej2-navigations/styles/material.css" rel="stylesheet" type="text/css">
-          <link href="http://cdn.syncfusion.com/ej2/ej2-splitbuttons/styles/material.css" rel="stylesheet" type="text/css">
-          <link href="http://cdn.syncfusion.com/ej2/ej2-dropdowns/styles/material.css" rel="stylesheet" type="text/css">
-
           <!-- EJ2 Document Editor theme -->
-          <link href="http://cdn.syncfusion.com/ej2/ej2-documenteditor/styles/material.css" rel="stylesheet" type="text/css">
+          <link href="https://unpkg.com/@syncfusion/ej2-material-theme@35.1.43/styles/document-editor/index.css" rel="stylesheet" rel='nofollow'/>
+          <link href="https://unpkg.com/@syncfusion/ej2-material-theme@35.1.43/styles/document-editor-container/index.css" rel="stylesheet" rel='nofollow' />
 
           <!-- EJ2 Document Editor Javascript dependent -->
           <script src="http://cdn.syncfusion.com/ej2/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"></script>
@@ -265,18 +224,11 @@ document.getElementById('stopProtection').addEventListener('click', function () 
           <script src="http://cdn.syncfusion.com/ej2/ej2-documenteditor/dist/global/ej2-documenteditor.min.js" type="text/javascript"></script>
           <!-- TypeScripts Dependent -->
           <link href="index.css" rel="stylesheet">
-         <link href="https://cdn.syncfusion.com/ej2/33.1.44/ej2-documenteditor/styles/fabric.css" rel="stylesheet">
-         <link href="https://cdn.syncfusion.com/ej2/33.1.44/ej2-buttons/styles/fabric.css" rel="stylesheet">
-         <link href="https://cdn.syncfusion.com/ej2/33.1.44/ej2-base/styles/fabric.css" rel="stylesheet">
-         <link href="https://cdn.syncfusion.com/ej2/33.1.44/ej2-dropdowns/styles/fabric.css" rel="stylesheet">
-         <link href="https://cdn.syncfusion.com/ej2/33.1.44/ej2-inputs/styles/fabric.css" rel="stylesheet">
-         <link href="https://cdn.syncfusion.com/ej2/33.1.44/ej2-lists/styles/fabric.css" rel="stylesheet">
-         <link href="https://cdn.syncfusion.com/ej2/33.1.44/ej2-navigations/styles/fabric.css" rel="stylesheet">
-         <link href="https://cdn.syncfusion.com/ej2/33.1.44/ej2-popups/styles/fabric.css" rel="stylesheet">
-         <link href="https://cdn.syncfusion.com/ej2/33.1.44/ej2-splitbuttons/styles/fabric.css" rel="stylesheet"> 
+          <link href="https://unpkg.com/@syncfusion/ej2-fabric-theme@35.1.43/styles/document-editor/index.css" rel="stylesheet" rel='nofollow'/>
+          <link href="https://unpkg.com/@syncfusion/ej2-fabric-theme@35.1.43/styles/document-editor-container/index.css" rel="stylesheet" rel='nofollow' />
          
          
-       <script src="https://cdn.syncfusion.com/ej2/33.1.44/dist/ej2.min.js" type="text/javascript"></script>
+       <script src="https://cdn.syncfusion.com/ej2/35.1.37/dist/ej2.min.js" type="text/javascript"></script>
 <style>#loader {display: none}</style>
 </head>
 
@@ -332,18 +284,9 @@ document.getElementById('stopProtection').addEventListener('click', function () 
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head>
           <title>Essential JS 2</title>
 
-          <!-- EJ2 Document Editor dependent theme -->
-          <link href="http://cdn.syncfusion.com/ej2/ej2-base/styles/material.css" rel="stylesheet" type="text/css">
-          <link href="http://cdn.syncfusion.com/ej2/ej2-buttons/styles/material.css" rel="stylesheet" type="text/css">
-          <link href="http://cdn.syncfusion.com/ej2/ej2-inputs/styles/material.css" rel="stylesheet" type="text/css">
-          <link href="http://cdn.syncfusion.com/ej2/ej2-popups/styles/material.css" rel="stylesheet" type="text/css">
-          <link href="http://cdn.syncfusion.com/ej2/ej2-lists/styles/material.css" rel="stylesheet" type="text/css">
-          <link href="http://cdn.syncfusion.com/ej2/ej2-navigations/styles/material.css" rel="stylesheet" type="text/css">
-          <link href="http://cdn.syncfusion.com/ej2/ej2-splitbuttons/styles/material.css" rel="stylesheet" type="text/css">
-          <link href="http://cdn.syncfusion.com/ej2/ej2-dropdowns/styles/material.css" rel="stylesheet" type="text/css">
-
           <!-- EJ2 Document Editor theme -->
-          <link href="http://cdn.syncfusion.com/ej2/ej2-documenteditor/styles/material.css" rel="stylesheet" type="text/css">
+          <link href="https://unpkg.com/@syncfusion/ej2-material-theme@35.1.43/styles/document-editor/index.css" rel="stylesheet" rel='nofollow'/>
+          <link href="https://unpkg.com/@syncfusion/ej2-material-theme@35.1.43/styles/document-editor-container/index.css" rel="stylesheet" rel='nofollow' />
 
           <!-- EJ2 Document Editor Javascript dependent -->
           <script src="http://cdn.syncfusion.com/ej2/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"></script>
@@ -360,18 +303,11 @@ document.getElementById('stopProtection').addEventListener('click', function () 
           <script src="http://cdn.syncfusion.com/ej2/ej2-documenteditor/dist/global/ej2-documenteditor.min.js" type="text/javascript"></script>
           <!-- TypeScripts Dependent -->
           <link href="index.css" rel="stylesheet">
-         <link href="https://cdn.syncfusion.com/ej2/33.1.44/ej2-documenteditor/styles/fabric.css" rel="stylesheet">
-         <link href="https://cdn.syncfusion.com/ej2/33.1.44/ej2-buttons/styles/fabric.css" rel="stylesheet">
-         <link href="https://cdn.syncfusion.com/ej2/33.1.44/ej2-base/styles/fabric.css" rel="stylesheet">
-         <link href="https://cdn.syncfusion.com/ej2/33.1.44/ej2-dropdowns/styles/fabric.css" rel="stylesheet">
-         <link href="https://cdn.syncfusion.com/ej2/33.1.44/ej2-inputs/styles/fabric.css" rel="stylesheet">
-         <link href="https://cdn.syncfusion.com/ej2/33.1.44/ej2-lists/styles/fabric.css" rel="stylesheet">
-         <link href="https://cdn.syncfusion.com/ej2/33.1.44/ej2-navigations/styles/fabric.css" rel="stylesheet">
-         <link href="https://cdn.syncfusion.com/ej2/33.1.44/ej2-popups/styles/fabric.css" rel="stylesheet">
-         <link href="https://cdn.syncfusion.com/ej2/33.1.44/ej2-splitbuttons/styles/fabric.css" rel="stylesheet"> 
+          <link href="https://unpkg.com/@syncfusion/ej2-fabric-theme@35.1.43/styles/document-editor/index.css" rel="stylesheet" rel='nofollow'/>
+          <link href="https://unpkg.com/@syncfusion/ej2-fabric-theme@35.1.43/styles/document-editor-container/index.css" rel="stylesheet" rel='nofollow' />
          
          
-       <script src="https://cdn.syncfusion.com/ej2/33.1.44/dist/ej2.min.js" type="text/javascript"></script>
+       <script src="https://cdn.syncfusion.com/ej2/35.1.37/dist/ej2.min.js" type="text/javascript"></script>
 <style>#loader {display: none}</style>
 </head>
 
