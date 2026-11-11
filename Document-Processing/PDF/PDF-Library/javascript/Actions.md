@@ -119,6 +119,7 @@ The JavaScript PDF Library supports a wide variety of PDF action types conformin
 | Sound (`PdfSoundAction`) | Plays an audio clip or sound stream. |
 | Rich-media execute (`PdfRichMediaExecuteAction`) | Executes a rich-media command on a rich-media annotation. |
 | Set OCG state (`PdfSetOCGStateAction`) | Controls the visibility states of optional content groups or layers using On, Off, and Toggle states. |
+| Hide (`PdfHideAction`) | Shows or hides one or more interactive form fields or annotations. |
 
 > **Note:** Action chaining: We can chain multiple actions to execute in sequence using the `next` property.
 
@@ -892,6 +893,66 @@ var action = new ej.pdf.PdfSetOCGStateAction(states, false);
 // Assign action to a button
 var button = new ej.pdf.PdfButtonField(page, 'btnLayers', { x: 20, y: 20, width: 120, height: 30 });
 button.text = 'Toggle Layers';
+button.actions.mouseUp = action;
+document.form.add(button);
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+{% endhighlight %}
+{% endtabs %}
+
+### Hide action
+
+The [PdfHideAction](https://ej2.syncfusion.com/documentation/api/pdf/pdfhideaction) class shows or hides one or more interactive form fields or annotations in response to document, page, annotation, bookmark, or form-field events. Pass a boolean value indicating whether the targets shall be hidden (`true`) or shown (`false`), along with an optional list of target form fields or annotations.
+
+A target form field is specified using its fully qualified field name (`{ fieldName: 'CustomerName' }`), and a target annotation is specified using its annotation instance (`{ annotation: annotation }`). You can dynamically add, inspect, and remove targets at runtime using the [targets](https://ej2.syncfusion.com/documentation/api/pdf/pdfhidetargetcollection) collection property.
+
+The following code example demonstrates how to create a hide action that hides an interactive text box field and assign it to a button's `mouseUp` event:
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { PdfButtonField, PdfDocument, PdfHideAction, PdfPage, PdfTextBoxField } from '@syncfusion/ej2-pdf';
+
+// Create a new PDF document
+const document: PdfDocument = new PdfDocument();
+// Add a page to the document
+const page: PdfPage = document.addPage();
+// Create a text box field to hide
+const textBox: PdfTextBoxField = new PdfTextBoxField(page, 'CustomerName', { x: 20, y: 20, width: 150, height: 30 });
+textBox.text = 'John Doe';
+document.form.add(textBox);
+// Create a hide action targeting the text box field
+const action: PdfHideAction = new PdfHideAction(true, [
+    { fieldName: 'CustomerName' }
+]);
+// Create a button to trigger the hide action
+const button: PdfButtonField = new PdfButtonField(page, 'btnToggle', { x: 20, y: 70, width: 120, height: 30 });
+button.text = 'Hide Field';
+button.actions.mouseUp = action;
+document.form.add(button);
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Add a page to the document
+var page = document.addPage();
+// Create a text box field to hide
+var textBox = new ej.pdf.PdfTextBoxField(page, 'CustomerName', { x: 20, y: 20, width: 150, height: 30 });
+textBox.text = 'John Doe';
+document.form.add(textBox);
+// Create a hide action targeting the text box field
+var action = new ej.pdf.PdfHideAction(true, [
+    { fieldName: 'CustomerName' }
+]);
+// Create a button to trigger the hide action
+var button = new ej.pdf.PdfButtonField(page, 'btnToggle', { x: 20, y: 70, width: 120, height: 30 });
+button.text = 'Hide Field';
 button.actions.mouseUp = action;
 document.form.add(button);
 // Save the document
