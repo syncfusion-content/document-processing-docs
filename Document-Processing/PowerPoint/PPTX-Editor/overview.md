@@ -25,3 +25,8 @@ keywords: PowerPoint, PPTX, SDK, view, read, slide, presentation
 {% enddoccards %}
 
 Syncfusion<sup>&reg;</sup> PPTX Editor component is a Microsoft PowerPoint-like GUI component used to view and print PowerPoint presentations in JavaScript, Angular, React, and Vue applications that works without Microsoft Office dependencies. It eases you developers to just integrate this PowerPoint editor component to achieve the required presentation viewing functionalities and concentrate on core logics of your application.
+
+## ASP.NET integration
+
+* [ASP.NET Core](./asp-net-core/overview) – Add the PPTX Editor using the ASP.NET Core Tag Helper. See [Getting Started](./asp-net-core/getting-started-core).
+* [ASP.NET MVC](./asp-net-mvc/overview) – Host the JavaScript PPTX Editor in an MVC Razor view. See [Getting Started](./asp-net-mvc/getting-started).
