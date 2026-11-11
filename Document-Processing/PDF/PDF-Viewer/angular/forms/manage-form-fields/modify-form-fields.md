@@ -697,7 +697,7 @@ Select a Barcode field in Form Designer to review or change its settings. The to
 
 Use the field's **General** properties to review or edit its name, value, caption, tooltip, visibility, read-only and required settings, and print visibility.
 
-The **Appearance** properties include the symbology, value format, and error correction level.
+The **Options** properties include the barcode type, X dimension, error correction level, and the option to compress the data before encoding it to the barcode.
 
 #### Symbology
 
@@ -724,6 +724,33 @@ The value that is encoded in the barcode can be supplied in three ways.
 ![Barcode Value Format in Form Designer](../../../angular/images/barcode-value-types.png)
 
 N> Custom scripts are not supported in barcode fields. Instead, the final value assigned to the barcode field is parsed in the PDF Viewer.
+
+#### Static Barcode Value
+
+The barcode value can be set to a fixed value programmatically. Use the `CustomValue` value format to encode a fixed string, so that the same value is rendered in the barcode every time.
+
+```ts
+const fields = this.pdfviewer.retrieveFormFields();
+const barcode = fields.find((f: any) => f.name === 'ProductBarcode');
+if (barcode) {
+  this.pdfviewer.formDesignerModule.updateFormField(barcode, {
+    value: 'SYNCFUSION-002',
+    valueFormat: 'CustomValue',
+  } as BarcodeFieldSettings);
+}
+```
+
+#### Dynamic Barcode Value
+
+The barcode value can also be calculated from the other form fields that are present in the PDF document.
+
+In the Form Designer, open the **Value** tab of the Barcode Properties dialog and use the **Select Field for Calculation** option to bind one or more fields to the barcode field.
+
+![Select Field for Calculation option in the Value tab](../../../angular/images/ui-barcode-value-tab.png)
+
+When a value is entered in a bound field, the barcode value is updated automatically.
+
+By default, the barcode stores the field name along with its value. To store only the field values, clear the **Include Field Names** option. This option applies when the value is encoded in the `TabDelimited` format.
 
 #### Caption
 

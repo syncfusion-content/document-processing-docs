@@ -835,6 +835,36 @@ The value that is encoded in the barcode can be supplied in three ways.
 
 N> Custom scripts are not supported in barcode fields. Instead, the final value assigned to the barcode field is parsed in the PDF Viewer.
 
+#### Static Barcode Value
+
+The barcode value can be set to a fixed value programmatically. Use the `CustomValue` value format to encode a fixed string, so that the same value is rendered in the barcode every time.
+
+```ts
+this.pdfviewer.formDesignerModule.addFormField('Barcode', {
+  name: 'ProductBarcode',
+  bounds: { X: 146, Y: 300, Width: 180, Height: 100 },
+  pageNumber: 1,
+  value: 'SYNCFUSION-001',
+  valueFormat: 'CustomValue',
+  symbology: 'PDF417',
+  caption: 'Product Barcode',
+} as any);
+```
+
+The `value` property holds the text that is encoded in the barcode, and `valueFormat` determines how that text is encoded.
+
+#### Dynamic Barcode Value
+
+The barcode value can also be calculated from the other form fields that are present in the PDF document.
+
+In the Form Designer, open the **Value** tab of the Barcode Properties dialog and use the **Select Field for Calculation** option to bind one or more fields to the barcode field.
+
+![Select Field for Calculation option in the Value tab](../../../angular/images/ui-barcode-value-tab.png)
+
+When a value is entered in a bound field, the barcode value is updated automatically.
+
+By default, the barcode stores the field name along with its value. To store only the field values, clear the **Include Field Names** option. This option applies when the value is encoded in the `TabDelimited` format.
+
 #### Barcode Caption
 
 By default, the name of the loaded PDF document is displayed below the generated barcode field. Use the **caption** property to change this text, either from the UI or programmatically.
