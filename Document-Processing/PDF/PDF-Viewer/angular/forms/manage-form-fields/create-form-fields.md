@@ -849,7 +849,7 @@ The barcode value can also be calculated from the other form fields that are pre
 
 In the Form Designer, open the **Value** tab of the Barcode Properties dialog and use the **Select Field for Calculation** option to bind one or more fields to the barcode field.
 
-![Select Field for Calculation option in the Value tab](../../../angular/images/ui-barcode-value-tab.png)
+![Select Field for Calculation option in the Value tab](../../../angular/images/dynamic-field-binding.png)
 
 When a value is entered in a bound field, the barcode value is updated automatically.
 
