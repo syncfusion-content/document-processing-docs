@@ -743,7 +743,7 @@ In the Form Designer, open the **Value** tab of the Barcode Properties dialog an
 
 When a value is entered in a bound field, the barcode value is updated automatically.
 
-By default, the barcode stores the field name along with its value. To store only the field values, clear the **Include Field Names**  option. This setting applies only when the value is encoded in the `TabDelimited` format and is not applicable to the `XML` format.
+N> By default, the barcode stores the field name along with its value. To store only the field values, clear the **Include Field Names** option. This option is available only for the `TabDelimited` format and does not apply to the `XML` format, which always stores data as name-value pairs.
 
 #### Caption
 

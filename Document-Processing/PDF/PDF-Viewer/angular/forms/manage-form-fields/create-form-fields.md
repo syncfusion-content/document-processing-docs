@@ -833,7 +833,7 @@ The value that is encoded in the barcode can be supplied in three ways.
 | `XML` | Stores the values pairwise in an XML structure. |
 | `CustomValue` | Stores the value as a string, and any string can be assigned to it. |
 
-N> Custom scripts are not supported in barcode fields. Instead, the final value assigned to the barcode field is parsed in the PDF Viewer.
+N> Complete support for executing custom scripts is not available. Instead, the PDF Viewer parses the final value assigned to the barcode field in the PDF document.
 
 #### Static Barcode Value
 
@@ -853,7 +853,7 @@ In the Form Designer, open the **Value** tab of the Barcode Properties dialog an
 
 When a value is entered in a bound field, the barcode value is updated automatically.
 
-By default, the barcode stores the field name along with its value. To store only the field values, clear the **Include Field Names** option. This option applies when the value is encoded in the `TabDelimited` format.
+N> By default, the barcode stores the field name along with its value. To store only the field values, clear the **Include Field Names** option. This option is available only for the `TabDelimited` format and does not apply to the `XML` format, which always stores data as name-value pairs.
 
 #### Barcode Caption
 
