@@ -829,7 +829,7 @@ The value that is encoded in the barcode can be supplied in three ways.
 
 | Value format | Description |
 |---|---|
-| `TabDelimited` | Carries the values in the barcode separated by a tab character, so the values appear at a tab space distance (four spaces) from each other. |
+| `TabDelimited` | Carries the values in the barcode separated by a tab character, so the values appear at a tab space distance from each other. |
 | `XML` | Stores the values pairwise in an XML structure. |
 | `CustomValue` | Stores the value as a string, and any string can be assigned to it. |
 
