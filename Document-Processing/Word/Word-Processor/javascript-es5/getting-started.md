@@ -101,8 +101,8 @@ Style: https://cdn.syncfusion.com/ej2/{VERSION}/{PACKAGE_NAME}/styles/{THEME_NAM
 {% highlight html tabtitle="index.html" %}
 
 <!-- EJ2 Document Editor theme -->
-<link href="https://unpkg.com/@syncfusion/ej2-bootstrap5.3-theme@35.1.43/styles/document-editor/index.css" rel="stylesheet" rel='nofollow'/>
-<link href="https://unpkg.com/@syncfusion/ej2-bootstrap5.3-theme@35.1.43/styles/document-editor-container/index.css" rel="stylesheet" rel='nofollow' />
+<link href="https://unpkg.com/@syncfusion/ej2-tailwind3-theme@35.1.43/styles/document-editor/index.css" rel="stylesheet" rel='nofollow'/>
+<link href="https://unpkg.com/@syncfusion/ej2-tailwind3-theme@35.1.43/styles/document-editor-container/index.css" rel="stylesheet" rel='nofollow' />
 <!-- DOCX Editor dependent scripts -->
 <script src="https://cdn.syncfusion.com/ej2/35.1.37/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"></script>
 <script src="https://cdn.syncfusion.com/ej2/35.1.37/ej2-data/dist/global/ej2-data.min.js" type="text/javascript"></script>
