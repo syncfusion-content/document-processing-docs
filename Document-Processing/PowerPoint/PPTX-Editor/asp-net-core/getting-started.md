@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with ASP.NET Core PPTX Editor
 
-Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PPTX Editor enables you to view and print PowerPoint presentations in web applications. This section guides you through adding the PPTX Editor to an ASP.NET Core Razor Pages application and opening a PPTX file.
+This article provides step-by-step instructions for building an ASP.NET Core application with the Syncfusion<sup style="font-size:70%">&reg;</sup> PPTX Editor using Razor Pages and Tag Helpers in [Visual Studio](https://visualstudio.microsoft.com/vs/) and [Visual Studio Code](https://code.visualstudio.com/). The PPTX Editor enables you to view and print PowerPoint presentations in web applications.
 
 ## Prerequisites
 
@@ -17,22 +17,50 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> ASP.NET Core PPTX Editor enable
 * [Browser compatibility](https://ej2.syncfusion.com/aspnetcore/documentation/browser)
 * The PPTX Editor Tag Helper is available in `Syncfusion.EJ2.AspNet.Core` version `35.1.46`. This guide uses that version for both the NuGet package and client resources.
 
+## Create an ASP.NET Core Web App with Razor Pages
+
 {% tabcontents %}
 
 {% tabcontent Visual Studio %}
 
-## Create an ASP.NET Core Web App in Visual Studio
+Create an **ASP.NET Core Web App** using Visual Studio via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/razor-pages-start?view=aspnetcore-10.0&tabs=visual-studio#create-a-razor-pages-web-app) or the [ASP.NET Core Extension](https://ej2.syncfusion.com/aspnetcore/documentation/visual-studio-integration/create-project). For detailed instructions, refer to the [ASP.NET Core Web App Getting Started](https://ej2.syncfusion.com/aspnetcore/documentation/getting-started/razor-pages) documentation.
 
-Create an **ASP.NET Core Web App (Razor Pages)** using Visual Studio 2022 by following the [Microsoft tutorial](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-aspnet-core?view=visualstudio).
+{% endtabcontent %}
 
-## Install the ASP.NET Core NuGet package
+{% tabcontent Visual Studio Code %}
 
-Open **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**, search for [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core/), and install version `35.1.46`.
-
-Alternatively, use the Package Manager Console:
+Run the following commands to create an ASP.NET Core Web App and open the project in Visual Studio Code.
 
 {% tabs %}
-{% highlight bash tabtitle="Package Manager" %}
+{% highlight bash tabtitle="Terminal" %}
+
+dotnet new webapp -o PptxEditorApp
+code -r PptxEditorApp
+
+{% endhighlight %}
+{% endtabs %}
+
+Alternatively, create an **ASP.NET Core Web App** using Visual Studio Code via [Microsoft Templates](https://learn.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/razor-pages-start?view=aspnetcore-8.0&tabs=visual-studio-code#create-a-razor-pages-web-app), the [ASP.NET Core Extension](https://ej2.syncfusion.com/aspnetcore/documentation/visual-studio-code-integration/create-project), or the [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) extension.
+
+{% endtabcontent %}
+
+{% endtabcontents %}
+
+## Install the required ASP.NET Core package
+
+Install the [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core/) NuGet package. See the [NuGet packages](https://ej2.syncfusion.com/aspnetcore/documentation/nuget-packages) topic for details about Syncfusion ASP.NET Core packages.
+
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+1. Go to **Tools → NuGet Package Manager → Manage NuGet Packages for Solution**.
+2. Search for `Syncfusion.EJ2.AspNet.Core` and install version `35.1.46`.
+
+Alternatively, install the package using the Package Manager Console.
+
+{% tabs %}
+{% highlight bash tabtitle="Package Manager Console" %}
 
 Install-Package Syncfusion.EJ2.AspNet.Core -Version 35.1.46
 
@@ -43,13 +71,7 @@ Install-Package Syncfusion.EJ2.AspNet.Core -Version 35.1.46
 
 {% tabcontent Visual Studio Code %}
 
-## Create an ASP.NET Core Web App in Visual Studio Code
-
-Create an **ASP.NET Core Web App (Razor Pages)** project, then open its project folder in Visual Studio Code. Refer to the [Microsoft tutorial](https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-aspnet-core?view=visualstudio) for the application structure.
-
-## Install the ASP.NET Core NuGet package
-
-Open the integrated terminal in the folder containing the `.csproj` file and install [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core/):
+Open the integrated terminal in the project folder containing the `.csproj` file and run the following command.
 
 {% tabs %}
 {% highlight bash tabtitle="Terminal" %}
@@ -65,7 +87,7 @@ dotnet add package Syncfusion.EJ2.AspNet.Core --version 35.1.46
 
 N> The NuGet package includes dependencies such as [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/) for JSON serialization and [Syncfusion.Licensing](https://www.nuget.org/packages/Syncfusion.Licensing/) for license validation.
 
-## Add the Syncfusion ASP.NET Core Tag Helper
+## Add the ASP.NET Core Tag Helpers
 
 Add the following line to `~/Pages/_ViewImports.cshtml`. Keep the existing Razor Pages imports and Tag Helpers.
 
@@ -119,7 +141,7 @@ Add the following PPTX Editor theme and dependency resources inside the `<head>`
 
 N> To use local resources instead of CDN references, see [Add PPTX Editor resources](../javascript-es5/getting-started#add-pptx-editor-resources). For other themes, see the [ASP.NET Core themes documentation](https://ej2.syncfusion.com/aspnetcore/documentation/appearance/theme).
 
-## Inject the required modules
+### Inject the required modules
 
 After the script references in the layout, register the modules used by the viewer. Perform this registration before the Script Manager initializes the component.
 
@@ -142,7 +164,7 @@ After the script references in the layout, register the modules used by the view
 
 These modules provide the toolbar, slide thumbnails, zoom, navigation, printing, and slideshow features.
 
-## Register the Syncfusion Script Manager
+## Register the Script Manager
 
 Add `<ejs-scripts>` at the end of `<body>` in `~/Pages/Shared/_Layout.cshtml`, after the page content and any page script section. This ensures that the page's event handlers are defined before the component is initialized.
 
@@ -159,7 +181,7 @@ Add `<ejs-scripts>` at the end of `<body>` in `~/Pages/Shared/_Layout.cshtml`, a
 
 N> Keep the existing layout content and scripts. Do not duplicate `@RenderBody()` or the `Scripts` section if they are already present.
 
-## Add the PPTX Editor and open a presentation
+## Add the ASP.NET Core PPTX Editor control
 
 Place a sample PPTX file at `~/wwwroot/presentations/sample.pptx`. Files in `wwwroot` are publicly accessible, so use a presentation intended for public viewing. Ensure that static file serving is enabled in the application.
 
@@ -204,9 +226,33 @@ Replace the content of `~/Pages/Index.cshtml` with the following code. The `crea
 {% endhighlight %}
 {% endtabs %}
 
-## Verify the result
+## Run the application
 
-Start the application from your IDE. The page displays the PPTX Editor with a toolbar, a thumbnail pane, and a slide area containing `sample.pptx`. Select a thumbnail to navigate to a slide, change the zoom level, start a slideshow, or use the print command.
+{% tabcontents %}
+
+{% tabcontent Visual Studio %}
+
+Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (macOS) to launch the application. The ASP.NET Core PPTX Editor renders in the default web browser.
+
+{% endtabcontent %}
+
+{% tabcontent Visual Studio Code %}
+
+Open the integrated terminal in the project folder containing the `.csproj` file and run the following command.
+
+{% tabs %}
+{% highlight bash tabtitle="Terminal" %}
+
+dotnet run
+
+{% endhighlight %}
+{% endtabs %}
+
+{% endtabcontent %}
+
+{% endtabcontents %}
+
+The page displays the PPTX Editor with a toolbar, a thumbnail pane, and a slide area containing `sample.pptx`. Select a thumbnail to navigate to a slide, change the zoom level, start a slideshow, or use the print command.
 
 ## Troubleshooting
 
