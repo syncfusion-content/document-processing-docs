@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Use SkiaSharp 4.154.0 in .NET 11 Blazor Applications | Syncfusion
+title: Resolve SkiaSharp Build Issues in .NET 11 Blazor WebAssembly Applications | Syncfusion
 description: Learn how to build the Blazor PDF Viewer on .NET 11 by upgrading the SkiaSharp packages to 4.154.0 and including the required native static libraries.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
 ---
 
-# How to Use SkiaSharp 4.154.0 in .NET 11 Blazor Applications
+# Resolve SkiaSharp Build Issues in .NET 11 Blazor WebAssembly Applications
 
 Currently, SkiaSharp does not officially support .NET 11. In addition, Syncfusion<sup style="font-size:70%">&reg;</sup> uses the older SkiaSharp 4.150.1 packages. As a workaround, the Blazor WebAssembly sample can be built and run successfully by manually upgrading the SkiaSharp packages to 4.154.0.
 
