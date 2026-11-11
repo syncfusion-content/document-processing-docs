@@ -73,3 +73,4 @@ Common questions and answers for using the Blazor SfPdfViewer component.
 * [How to Suppress the error dialog?](./faqs/how-to-suppress-error-message)
 * [How to Prevent the PDF from scrolling and remove the vertical scrollbar?](./faqs/how-to-prevent-scrolling)
 * [How to Refer the SfPdfViewer script file in Blazor application?](./faqs/how-to-refer-sfpdfviewer-script-in-application)
+* [How to Use SkiaSharp 4.154.0 in .NET 11 Blazor Applications?](./faqs/how-to-use-skiasharp-4-154-0-in-dotnet-11)
