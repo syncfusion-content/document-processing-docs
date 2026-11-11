@@ -693,13 +693,11 @@ Use the **Format** tab to change the field type (Date or Time), select a display
 
 Select a Barcode field in Form Designer to review or change its settings. The toolbar includes the Barcode tool, and the page displays the generated barcode.
 
-![Barcode field in Form Designer](../../../javascript-es6/images/ui-barcode.png)
+![Barcode field in Form Designer](../../../angular/images/ui-barcode.png)
 
 Use the field's **General** properties to review or edit its name, value, caption, tooltip, visibility, read-only and required settings, and print visibility.
 
 The **Appearance** properties include the symbology, value format, and error correction level.
-
-![Barcode error correction level settings in Form Designer](../../../javascript-es6/images/ui-barcode-error-correction.png)
 
 #### Symbology
 
@@ -711,6 +709,8 @@ The barcode type is referred to as the **symbology**. The following symbologies 
 | `QRCode` | A two-dimensional matrix barcode that supports numeric, alphanumeric, and binary data. |
 | `DataMatrix` | A two-dimensional matrix barcode that is used to encode a small amount of data in a compact area. |
 
+![Barcode field Symbology in Form Designer](../../../angular/images/barcode-ui-types.png)
+
 #### Value Format
 
 The value that is encoded in the barcode can be supplied in three ways.
@@ -720,6 +720,8 @@ The value that is encoded in the barcode can be supplied in three ways.
 | `TabDelimited` | Carries the values in the barcode separated by a tab character, so the values appear at a tab space distance (four spaces) from each other. |
 | `XML` | Stores the values pairwise in an XML structure. |
 | `CustomValue` | Stores the value as a string, and any string can be assigned to it. |
+
+![Barcode Value Format in Form Designer](../../../angular/images/barcode-value-types.png)
 
 N> Custom scripts are not supported in barcode fields. Instead, the final value assigned to the barcode field is parsed in the PDF Viewer.
 
@@ -739,7 +741,9 @@ The error correction level determines how much damage the generated barcode can 
 
 The default error correction level is `Level5`.
 
-- API: [updateFormField()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#updateformfields) for value, caption, symbology, value format, and error correction level.
+![Barcode error correction level settings in Form Designer](../../../angular/images/ui-barcode-error-correction.png)
+
+- API: [updateFormField()](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/index-default#updateformfields) for caption, symbology, value format, and error correction level.
 
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
@@ -755,6 +759,7 @@ import {
   FormDesignerService,
   PdfViewerModule,
   PdfViewerComponent,
+  BarcodeFieldSettings,
 } from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
@@ -793,13 +798,11 @@ export class AppComponent {
     const barcode = fields.find((f: any) => f.name === 'ProductBarcode');
     if (barcode) {
       this.pdfviewer.formDesignerModule.updateFormField(barcode, {
-        value: 'SYNCFUSION-002',
         caption: 'Updated Barcode Caption',
         symbology: 'QRCode',
         valueFormat: 'CustomValue',
-        errorCorrectionLevel: 'High',
-        isRequired: true,
-      } as any);
+        errorCorrectionLevel: 'High'
+      } as BarcodeFieldSettings);
     }
   }
 }

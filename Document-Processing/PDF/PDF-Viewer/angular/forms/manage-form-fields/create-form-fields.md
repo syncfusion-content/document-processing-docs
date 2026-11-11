@@ -821,6 +821,8 @@ The barcode type is referred to as the **symbology**. The following symbologies 
 | `QRCode` | A two-dimensional matrix barcode that supports numeric, alphanumeric, and binary data. |
 | `DataMatrix` | A two-dimensional matrix barcode that is used to encode a small amount of data in a compact area. |
 
+![Barcode field Symbology in Form Designer](../../../angular/images/barcode-ui-types.png)
+
 #### Barcode Value Format
 
 The value that is encoded in the barcode can be supplied in three ways.
@@ -837,7 +839,7 @@ N> Custom scripts are not supported in barcode fields. Instead, the final value 
 
 By default, the name of the loaded PDF document is displayed below the generated barcode field. Use the **caption** property to change this text, either from the UI or programmatically.
 
-![Barcode field with caption in Form Designer](../../../javascript-es6/images/ui-barcode.png)
+![Barcode field with caption in Form Designer](../../../angular/images/ui-barcode.png)
 
 #### Barcode Error Correction Level
 
@@ -851,7 +853,7 @@ The error correction level determines how much damage the generated barcode can 
 
 The default error correction level is `Level5`.
 
-![Barcode error correction level settings in Form Designer](../../../javascript-es6/images/ui-barcode-error-correction.png)
+![Barcode error correction level settings in Form Designer](../../../angular/images/ui-barcode-error-correction.png)
 
 **Add via UI**: Open the Form Designer toolbar, select **Barcode**, and click on a PDF page to place the field. Select the placed field to review or change its general properties, such as its name, value, visibility, and whether it is read-only or required.
 
@@ -905,7 +907,7 @@ export class AppComponent {
 
   onDocumentLoad(): void {
     // Add a barcode field with the default PDF417 symbology
-    this.pdfviewer.formDesignerModule.addFormField('BarcodeField', {
+    this.pdfviewer.formDesignerModule.addFormField('Barcode', {
       name: 'ProductBarcode',
       bounds: { X: 146, Y: 300, Width: 180, Height: 100 },
       pageNumber: 1,
@@ -1013,7 +1015,7 @@ export class AppComponent {
 {% endhighlight %}
 {% endtabs %}
 
-N> [View Sample on GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/Form%20fields/DateTime%20picker).
+N> [View Sample on GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/Form%20fields).
 
 ## Troubleshooting
 
