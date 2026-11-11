@@ -1077,8 +1077,6 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-N> The 3D data cannot be empty and must be U3D or PRC. Use `addView`, `updateView`, `removeView`, and `replaceViews` to manage views after creation.
-
 ### Sound Annotation
 
 This example demonstrates how to add a sound annotation to a PDF page using the [PdfSoundAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfsoundannotation) class. A sound annotation embeds audio that plays when the user activates the annotation icon.
@@ -1124,8 +1122,6 @@ document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
-
-N> The sound data must be a mono or stereo WAV file. The `rate`, `channels`, `bits`, and `encoding` properties can also be read and set on the annotation.
 
 ### Rich Media Annotation
 
@@ -1187,8 +1183,6 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-N> The media data, file name, MIME type, and content type are required. Only video and audio content types are supported.
-
 ### Movie Annotation
 
 This example demonstrates how to add a movie annotation to a PDF page using the [PdfMovieAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfmovieannotation) class. A movie annotation embeds a movie, or references an external movie file, with playback options.
@@ -1249,8 +1243,6 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-N> A file name is required when embedding movie bytes. The `volume` value must be between -1 and 1, and `rotation` must be a multiple of 90 degrees. A movie file name can be passed instead of bytes to reference an external file.
-
 ### Trap Network Annotation
 
 This example demonstrates how to add a trap network annotation to a PDF page using the [PdfTrapNetAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdftrapnetannotation) class. A trap network annotation preserves prepress trapping information for a page.
@@ -1305,8 +1297,6 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-N> A page can contain only one trap network annotation, and it must be the last annotation on the page. Adding another annotation after it throws an error.
-
 ### Projection Annotation
 
 This example demonstrates how to read a projection annotation from an existing PDF page using the [PdfProjectionAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfprojectionannotation) class. Existing projection annotations are loaded into the page annotation collection, where their common properties can be modified.
@@ -1356,8 +1346,6 @@ document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
-
-N> `PdfProjectionAnnotation` has no annotation-specific properties. It exposes only the common annotation properties, such as `author`, `subject`, `bounds`, and `flatten`.
 
 ### Screen Annotation
 
@@ -1419,8 +1407,6 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-N> The media data, file name, and MIME type are required. The activation and deactivation triggers must be different.
-
 ### Printer Mark Annotation
 
 This example demonstrates how to add a printer mark annotation to a PDF page using the [PdfPrinterMarkAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfprintermarkannotation) class. A printer mark annotation adds production marks such as crop, bleed, registration, color bar, fold, and page information marks.
@@ -1476,62 +1462,6 @@ document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
-
-N> The printer mark `type` is required. Use `colorBar`, `fold`, and `pageInformation` to configure the matching mark types.
-
-#### Working with existing annotations of these types
-
-Annotations of these eight types in an existing PDF are loaded into the page annotation collection. Use `instanceof` to identify the type, then use the same workflow described in [Modifying Annotations](#modifying-annotations), [Removing Annotations](#removing-annotations), and [Flattening Annotations](#flattening-annotations).
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfAnnotation, PdfSoundAnnotation, Pdf3DAnnotation} from '@syncfusion/ej2-pdf';
-
-// Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data);
-// Access the first page
-let page: PdfPage = document.getPage(0);
-// Get the first annotation of the page
-let annotation: PdfAnnotation = page.annotations.at(0);
-// Identify the annotation type
-if (annotation instanceof PdfSoundAnnotation) {
-  // Modify a supported property
-  annotation.fileName = 'narration.wav';
-} else if (annotation instanceof Pdf3DAnnotation) {
-  // Flatten the annotation
-  annotation.flatten = true;
-}
-// Save the document
-document.save('output.pdf');
-// Destroy the document
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-
-// Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data);
-// Access the first page
-var page = document.getPage(0);
-// Get the first annotation of the page
-var annotation = page.annotations.at(0);
-// Identify the annotation type
-if (annotation instanceof ej.pdf.PdfSoundAnnotation) {
-  // Modify a supported property
-  annotation.fileName = 'narration.wav';
-} else if (annotation instanceof ej.pdf.Pdf3DAnnotation) {
-  // Flatten the annotation
-  annotation.flatten = true;
-}
-// Save the document
-document.save('output.pdf');
-// Destroy the document
-document.destroy();
-
-{% endhighlight %}
-{% endtabs %}
-
-N> Annotations of these types are preserved when the document is saved. Creation-time validation errors, such as empty media data, are thrown when the annotation is added or the document is saved.
 
 ## Cloud Border Style Annotation
 
