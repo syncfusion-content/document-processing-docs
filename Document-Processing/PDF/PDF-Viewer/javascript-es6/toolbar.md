@@ -1602,5 +1602,5 @@ The following code illustrates how to render the default toolbar with specific t
 
 ## See also
 
-* [Toolbar customization](./how-to/toolbar-customization)
+* [Toolbar customization](./toolbar-customization/custom-toolbar)
 * [Feature Modules](./feature-module)
