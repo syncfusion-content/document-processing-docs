@@ -1019,6 +1019,520 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
+### 3D Annotation
+
+This example demonstrates how to add a 3D annotation to a PDF page using the [Pdf3DAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdf3dannotation) class. A 3D annotation embeds U3D or PRC model data in a page and supports named views, activation settings, and animation.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import {PdfDocument, PdfPage, Pdf3DAnnotation, Pdf3DAnnotationType, Pdf3DActivationMode, Pdf3DProjectionType} from '@syncfusion/ej2-pdf';
+
+// Create a new PDF document
+let document: PdfDocument = new PdfDocument();
+// Adds a new page to the PDF
+let page: PdfPage = document.addPage();
+// Create a 3D annotation from U3D model bytes (Uint8Array)
+let annotation: Pdf3DAnnotation = new Pdf3DAnnotation(
+  {x: 50, y: 50, width: 300, height: 250},
+  {
+    data: modelBytes,
+    type: Pdf3DAnnotationType.U3D,
+    views: [{name: 'Front', projection: Pdf3DProjectionType.Perspective}],
+    defaultView: 0,
+    activation: {mode: Pdf3DActivationMode.PageOpen, showToolbar: true}
+  }
+);
+// Add annotation to the page
+page.annotations.add(annotation);
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Adds a new page to the PDF
+var page = document.addPage();
+// Create a 3D annotation from U3D model bytes (Uint8Array)
+var annotation = new ej.pdf.Pdf3DAnnotation(
+  {x: 50, y: 50, width: 300, height: 250},
+  {
+    data: modelBytes,
+    type: ej.pdf.Pdf3DAnnotationType.U3D,
+    views: [{name: 'Front', projection: ej.pdf.Pdf3DProjectionType.Perspective}],
+    defaultView: 0,
+    activation: {mode: ej.pdf.Pdf3DActivationMode.PageOpen, showToolbar: true}
+  }
+);
+// Add annotation to the page
+page.annotations.add(annotation);
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
+N> The 3D data cannot be empty and must be U3D or PRC. Use `addView`, `updateView`, `removeView`, and `replaceViews` to manage views after creation.
+
+### Sound Annotation
+
+This example demonstrates how to add a sound annotation to a PDF page using the [PdfSoundAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfsoundannotation) class. A sound annotation embeds audio that plays when the user activates the annotation icon.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import {PdfDocument, PdfPage, PdfSoundAnnotation, PdfSoundIcon} from '@syncfusion/ej2-pdf';
+
+// Create a new PDF document
+let document: PdfDocument = new PdfDocument();
+// Adds a new page to the PDF
+let page: PdfPage = document.addPage();
+// Create a sound annotation from WAV bytes (Uint8Array)
+let annotation: PdfSoundAnnotation = new PdfSoundAnnotation(
+  {x: 50, y: 50, width: 24, height: 24},
+  {data: wavBytes, fileName: 'sound.wav', icon: PdfSoundIcon.Speaker}
+);
+// Add annotation to the page
+page.annotations.add(annotation);
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Adds a new page to the PDF
+var page = document.addPage();
+// Create a sound annotation from WAV bytes (Uint8Array)
+var annotation = new ej.pdf.PdfSoundAnnotation(
+  {x: 50, y: 50, width: 24, height: 24},
+  {data: wavBytes, fileName: 'sound.wav', icon: ej.pdf.PdfSoundIcon.Speaker}
+);
+// Add annotation to the page
+page.annotations.add(annotation);
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
+N> The sound data must be a mono or stereo WAV file. The `rate`, `channels`, `bits`, and `encoding` properties can also be read and set on the annotation.
+
+### Rich Media Annotation
+
+This example demonstrates how to add a rich media annotation to a PDF page using the [PdfRichMediaAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfrichmediaannotation) class. A rich media annotation embeds video or audio content in a page.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import {PdfDocument, PdfPage, PdfRichMediaAnnotation, PdfRichMediaContentType, PdfRichMediaActivationMode, PdfRichMediaPresentationStyle} from '@syncfusion/ej2-pdf';
+
+// Create a new PDF document
+let document: PdfDocument = new PdfDocument();
+// Adds a new page to the PDF
+let page: PdfPage = document.addPage();
+// Create a rich media annotation from video bytes (Uint8Array)
+let annotation: PdfRichMediaAnnotation = new PdfRichMediaAnnotation(
+  {x: 50, y: 50, width: 320, height: 240},
+  videoBytes,
+  {
+    fileName: 'video.mp4',
+    mimeType: 'video/mp4',
+    contentType: PdfRichMediaContentType.Video,
+    activationMode: PdfRichMediaActivationMode.PageVisible,
+    presentationStyle: PdfRichMediaPresentationStyle.Embedded
+  }
+);
+// Add annotation to the page
+page.annotations.add(annotation);
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Adds a new page to the PDF
+var page = document.addPage();
+// Create a rich media annotation from video bytes (Uint8Array)
+var annotation = new ej.pdf.PdfRichMediaAnnotation(
+  {x: 50, y: 50, width: 320, height: 240},
+  videoBytes,
+  {
+    fileName: 'video.mp4',
+    mimeType: 'video/mp4',
+    contentType: ej.pdf.PdfRichMediaContentType.Video,
+    activationMode: ej.pdf.PdfRichMediaActivationMode.PageVisible,
+    presentationStyle: ej.pdf.PdfRichMediaPresentationStyle.Embedded
+  }
+);
+// Add annotation to the page
+page.annotations.add(annotation);
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
+N> The media data, file name, MIME type, and content type are required. Only video and audio content types are supported.
+
+### Movie Annotation
+
+This example demonstrates how to add a movie annotation to a PDF page using the [PdfMovieAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfmovieannotation) class. A movie annotation embeds a movie, or references an external movie file, with playback options.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import {PdfDocument, PdfPage, PdfMovieAnnotation, PdfMoviePlayMode} from '@syncfusion/ej2-pdf';
+
+// Create a new PDF document
+let document: PdfDocument = new PdfDocument();
+// Adds a new page to the PDF
+let page: PdfPage = document.addPage();
+// Create a movie annotation from movie bytes (Uint8Array)
+let annotation: PdfMovieAnnotation = new PdfMovieAnnotation(
+  {x: 50, y: 50, width: 320, height: 240},
+  movieBytes,
+  {
+    fileName: 'movie.mp4',
+    mimeType: 'video/mp4',
+    showControls: true,
+    playMode: PdfMoviePlayMode.Once,
+    volume: 0.5
+  }
+);
+// Add annotation to the page
+page.annotations.add(annotation);
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Adds a new page to the PDF
+var page = document.addPage();
+// Create a movie annotation from movie bytes (Uint8Array)
+var annotation = new ej.pdf.PdfMovieAnnotation(
+  {x: 50, y: 50, width: 320, height: 240},
+  movieBytes,
+  {
+    fileName: 'movie.mp4',
+    mimeType: 'video/mp4',
+    showControls: true,
+    playMode: ej.pdf.PdfMoviePlayMode.Once,
+    volume: 0.5
+  }
+);
+// Add annotation to the page
+page.annotations.add(annotation);
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
+N> A file name is required when embedding movie bytes. The `volume` value must be between -1 and 1, and `rotation` must be a multiple of 90 degrees. A movie file name can be passed instead of bytes to reference an external file.
+
+### Trap Network Annotation
+
+This example demonstrates how to add a trap network annotation to a PDF page using the [PdfTrapNetAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdftrapnetannotation) class. A trap network annotation preserves prepress trapping information for a page.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import {PdfDocument, PdfPage, PdfTrapNetAnnotation} from '@syncfusion/ej2-pdf';
+
+// Create a new PDF document
+let document: PdfDocument = new PdfDocument();
+// Adds a new page to the PDF
+let page: PdfPage = document.addPage();
+// Create a trap network annotation covering the page
+let annotation: PdfTrapNetAnnotation = new PdfTrapNetAnnotation({
+  x: 0,
+  y: 0,
+  width: page.size.width,
+  height: page.size.height
+});
+// Set when the trap network was last generated (PDF date string)
+annotation.lastModified = 'D:20240101120000Z';
+// Add annotation to the page
+page.annotations.add(annotation);
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Adds a new page to the PDF
+var page = document.addPage();
+// Create a trap network annotation covering the page
+var annotation = new ej.pdf.PdfTrapNetAnnotation({
+  x: 0,
+  y: 0,
+  width: page.size.width,
+  height: page.size.height
+});
+// Set when the trap network was last generated (PDF date string)
+annotation.lastModified = 'D:20240101120000Z';
+// Add annotation to the page
+page.annotations.add(annotation);
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
+N> A page can contain only one trap network annotation, and it must be the last annotation on the page. Adding another annotation after it throws an error.
+
+### Projection Annotation
+
+This example demonstrates how to read a projection annotation from an existing PDF page using the [PdfProjectionAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfprojectionannotation) class. Existing projection annotations are loaded into the page annotation collection, where their common properties can be modified.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import {PdfDocument, PdfPage, PdfAnnotation, PdfProjectionAnnotation} from '@syncfusion/ej2-pdf';
+
+// Load an existing PDF document
+let document: PdfDocument = new PdfDocument(data);
+// Access the first page
+let page: PdfPage = document.getPage(0);
+// Find projection annotations on the page
+for (let i: number = 0; i < page.annotations.count; i++) {
+  let annotation: PdfAnnotation = page.annotations.at(i);
+  if (annotation instanceof PdfProjectionAnnotation) {
+    // Modify supported common properties
+    annotation.author = 'Reviewer';
+    annotation.subject = 'Projection';
+  }
+}
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Load an existing PDF document
+var document = new ej.pdf.PdfDocument(data);
+// Access the first page
+var page = document.getPage(0);
+// Find projection annotations on the page
+for (var i = 0; i < page.annotations.count; i++) {
+  var annotation = page.annotations.at(i);
+  if (annotation instanceof ej.pdf.PdfProjectionAnnotation) {
+    // Modify supported common properties
+    annotation.author = 'Reviewer';
+    annotation.subject = 'Projection';
+  }
+}
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
+N> `PdfProjectionAnnotation` has no annotation-specific properties. It exposes only the common annotation properties, such as `author`, `subject`, `bounds`, and `flatten`.
+
+### Screen Annotation
+
+This example demonstrates how to add a screen annotation to a PDF page using the [PdfScreenAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfscreenannotation) class. A screen annotation plays embedded media in response to mouse triggers.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import {PdfDocument, PdfPage, PdfScreenAnnotation, PdfScreenAnnotationHighlightMode, PdfScreenAnnotationTrigger} from '@syncfusion/ej2-pdf';
+
+// Create a new PDF document
+let document: PdfDocument = new PdfDocument();
+// Adds a new page to the PDF
+let page: PdfPage = document.addPage();
+// Create a screen annotation from media bytes (Uint8Array)
+let annotation: PdfScreenAnnotation = new PdfScreenAnnotation(
+  {x: 50, y: 50, width: 320, height: 240},
+  mediaBytes,
+  {
+    fileName: 'video.mp4',
+    mimeType: 'video/mp4',
+    highlightMode: PdfScreenAnnotationHighlightMode.Invert,
+    activationTrigger: PdfScreenAnnotationTrigger.MouseUp,
+    deactivationTrigger: PdfScreenAnnotationTrigger.MouseExit
+  }
+);
+// Add annotation to the page
+page.annotations.add(annotation);
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Adds a new page to the PDF
+var page = document.addPage();
+// Create a screen annotation from media bytes (Uint8Array)
+var annotation = new ej.pdf.PdfScreenAnnotation(
+  {x: 50, y: 50, width: 320, height: 240},
+  mediaBytes,
+  {
+    fileName: 'video.mp4',
+    mimeType: 'video/mp4',
+    highlightMode: ej.pdf.PdfScreenAnnotationHighlightMode.Invert,
+    activationTrigger: ej.pdf.PdfScreenAnnotationTrigger.MouseUp,
+    deactivationTrigger: ej.pdf.PdfScreenAnnotationTrigger.MouseExit
+  }
+);
+// Add annotation to the page
+page.annotations.add(annotation);
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
+N> The media data, file name, and MIME type are required. The activation and deactivation triggers must be different.
+
+### Printer Mark Annotation
+
+This example demonstrates how to add a printer mark annotation to a PDF page using the [PdfPrinterMarkAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfprintermarkannotation) class. A printer mark annotation adds production marks such as crop, bleed, registration, color bar, fold, and page information marks.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import {PdfDocument, PdfPage, PdfPrinterMarkAnnotation, PdfPrinterMarkType} from '@syncfusion/ej2-pdf';
+
+// Create a new PDF document
+let document: PdfDocument = new PdfDocument();
+// Adds a new page to the PDF
+let page: PdfPage = document.addPage();
+// Create a crop mark annotation
+let annotation: PdfPrinterMarkAnnotation = new PdfPrinterMarkAnnotation(
+  {x: 0, y: 0, width: page.size.width, height: page.size.height},
+  {
+    type: PdfPrinterMarkType.Crop,
+    color: {r: 0, g: 0, b: 0},
+    lineLength: 18,
+    lineWidth: 0.5
+  }
+);
+// Add annotation to the page
+page.annotations.add(annotation);
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Adds a new page to the PDF
+var page = document.addPage();
+// Create a crop mark annotation
+var annotation = new ej.pdf.PdfPrinterMarkAnnotation(
+  {x: 0, y: 0, width: page.size.width, height: page.size.height},
+  {
+    type: ej.pdf.PdfPrinterMarkType.Crop,
+    color: {r: 0, g: 0, b: 0},
+    lineLength: 18,
+    lineWidth: 0.5
+  }
+);
+// Add annotation to the page
+page.annotations.add(annotation);
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
+N> The printer mark `type` is required. Use `colorBar`, `fold`, and `pageInformation` to configure the matching mark types.
+
+#### Working with existing annotations of these types
+
+Annotations of these eight types in an existing PDF are loaded into the page annotation collection. Use `instanceof` to identify the type, then use the same workflow described in [Modifying Annotations](#modifying-annotations), [Removing Annotations](#removing-annotations), and [Flattening Annotations](#flattening-annotations).
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import {PdfDocument, PdfPage, PdfAnnotation, PdfSoundAnnotation, Pdf3DAnnotation} from '@syncfusion/ej2-pdf';
+
+// Load an existing PDF document
+let document: PdfDocument = new PdfDocument(data);
+// Access the first page
+let page: PdfPage = document.getPage(0);
+// Get the first annotation of the page
+let annotation: PdfAnnotation = page.annotations.at(0);
+// Identify the annotation type
+if (annotation instanceof PdfSoundAnnotation) {
+  // Modify a supported property
+  annotation.fileName = 'narration.wav';
+} else if (annotation instanceof Pdf3DAnnotation) {
+  // Flatten the annotation
+  annotation.flatten = true;
+}
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Load an existing PDF document
+var document = new ej.pdf.PdfDocument(data);
+// Access the first page
+var page = document.getPage(0);
+// Get the first annotation of the page
+var annotation = page.annotations.at(0);
+// Identify the annotation type
+if (annotation instanceof ej.pdf.PdfSoundAnnotation) {
+  // Modify a supported property
+  annotation.fileName = 'narration.wav';
+} else if (annotation instanceof ej.pdf.Pdf3DAnnotation) {
+  // Flatten the annotation
+  annotation.flatten = true;
+}
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
+N> Annotations of these types are preserved when the document is saved. Creation-time validation errors, such as empty media data, are thrown when the annotation is added or the document is saved.
+
 ## Cloud Border Style Annotation
 
 A cloud border style can be applied to rectangle, polygon, circle, ellipse and freeText annotations in an existing PDF document by using the [PdfBorderEffect](https://ej2.syncfusion.com/documentation/api/pdf/pdfbordereffect) class. Set the `intensity` property to control the intensity of the cloud effect and set the `style` property to `PdfBorderEffectStyle.cloudy`.
