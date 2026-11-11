@@ -425,5 +425,5 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Angular-DOCX-Ed
 
 ## See Also
 
-* [Getting Started](getting-started)
-* [Supported File Formats](supported-fileformats)
+* [Getting Started](../getting-started)
+* [Supported File Formats](../supported-fileformats)

@@ -17,7 +17,7 @@ WebMCP integrates seamlessly into your [Blazor DOCX Editor](https://www.syncfusi
 
 Ensure the following before integrating WebMCP:
 
-- Syncfusion DOCX Editor component is installed and configured [Getting Started](./getting-started/web-app)
+- Syncfusion DOCX Editor component is installed and configured [Getting Started](../getting-started/web-app)
 - A Chromium-based browser with the WebMCP origin trial or chrome://flags/#enable-webmcp enabled. The API is experimental, so confirm it in the browser versions you support.
 
 ## Getting Started
@@ -374,5 +374,5 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-DOCX-Edi
 
 ## See Also
 
-* [Getting Started](getting-started/web-app)
-* [Supported File Formats](supported-fileformats)
+* [Getting Started](../getting-started/web-app)
+* [Supported File Formats](../supported-fileformats)

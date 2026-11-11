@@ -357,5 +357,5 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/JavaScript-ES6-
 
 ## See Also
 
-* [Getting Started](getting-started)
-* [Supported File Formats](supported-fileformats)
+* [Getting Started](../getting-started)
+* [Supported File Formats](../supported-fileformats)

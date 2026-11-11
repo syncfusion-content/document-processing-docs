@@ -30,7 +30,7 @@ You can refer to the platform-specific guidance on how to set up and use the Syn
 - [MCP Server for TypeScript DOCX Editor](../Word/Word-Processor/javascript-es6/ai-tools/mcp)
 - [MCP Server for ASP.NET MVC DOCX Editor](../Word/Word-Processor/asp-net-mvc/mcp)
 - [MCP Server for ASP.NET Core DOCX Editor](../Word/Word-Processor/asp-net-core/mcp)
-- [MCP Server for Blazor DOCX Editor](../Word/Word-Processor/blazor/mcp)
+- [MCP Server for Blazor DOCX Editor](../Word/Word-Processor/blazor/ai-tools/mcp)
 - [MCP Server for WPF DOCX Editor](../Word/Word-Processor/wpf/mcp)
 
 ## See also

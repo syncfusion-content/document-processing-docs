@@ -24,7 +24,7 @@ You can refer to the platform-specific guidance on how to use Syncfusion<sup sty
 
 - [UI Builder Skill for React DOCX Editor](../../Word/Word-Processor/react/ai-tools/ui-builder-skill)
 - [UI Builder Skill for Angular DOCX Editor](../../Word/Word-Processor/angular/ai-tools/ui-builder-skill)
-- [UI Builder Skill for Blazor DOCX Editor](../../Word/Word-Processor/blazor/ui-builder-skill)
+- [UI Builder Skill for Blazor DOCX Editor](../../Word/Word-Processor/blazor/ai-tools/ui-builder-skill)
 - [UI Builder Skill for WPF DOCX Editor](../../Word/Word-Processor/wpf/ui-builder-skill)
 
 ## See also

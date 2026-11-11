@@ -462,5 +462,5 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Vue-DOCX-Editor
 
 ## See Also
 
-* [Getting Started](getting-started)
-* [Supported File Formats](supported-fileformats)
+* [Getting Started](../getting-started)
+* [Supported File Formats](../supported-fileformats)
