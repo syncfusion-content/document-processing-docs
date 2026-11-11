@@ -96,6 +96,8 @@ Set the `webMcpSettings` property to register the available tools in the control
 - Verify that the registered tools are displayed with your chosen prefix.
 - Try a sample prompt that matches your data scenario to validate tool execution and response behavior.
 
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/React-DOCX-Editor-Examples/tree/master/webmcp/getting-started).
+
 **Sample Prompts**
 Here are realistic natural language prompts you can test with the WebMCP extension:
 
@@ -388,8 +390,6 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/React-DOCX-Edit
 2. Check your Chrome version is up-to-date (WebMCP requires recent Chromium)
 3. Ensure you're testing on a secure context (HTTPS or localhost)
 
----
-
 ### Why aren't my registered tools displayed in the extension?
 
 1. Verify `enableWebMcp: true` in your DocumentEditorContainer config
@@ -397,8 +397,6 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/React-DOCX-Edit
 3. Open DevTools (F12) → Console, check for errors
 4. Try refreshing the page and opening the extension again
 5. Verify the tool prefix is correct (check console logs)
-
----
 
 ### Why don't registered tools execute?
 
@@ -410,17 +408,13 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/React-DOCX-Edit
    - Right-click WebMCP extension → Manage extension
    - Ensure "Allow on this site" is enabled
    
----
-
 ### Why do I get a "Permission denied" or "Secure context required" error?
 
 1. WebMCP requires HTTPS in production or localhost for development
 2. If using cross-origin tools, both sites must be HTTPS
 3. Test locally using `localhost:3000` or similar
 
----
-
 ## See Also
 
-* [Getting Started](getting-started)
-* [Supported File Formats](supported-fileformats)
+* [Getting Started](../getting-started)
+* [Supported File Formats](../supported-fileformats)
