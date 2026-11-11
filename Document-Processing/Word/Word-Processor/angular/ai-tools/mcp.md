@@ -1,22 +1,22 @@
 ---
-layout: post
-title: MCP Server for TypeScript DOCX Editor | Syncfusion
-description: The Syncfusion®TypeScript MCP Server provides setup guidance, integration support, and resources to accelerate TypeScript DOCX Editor development workflows.
+title: MCP Server for Angular DOCX Editor | Syncfusion
+description: The Syncfusion® Angular MCP Server provides setup guidance, integration support, and resources to accelerate Angular DOCX Editor development workflows.
 platform: document-processing
-control: DocumentEditor
+control: DOCX Editor
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# MCP Server for TypeScript DOCX Editor
+# MCP Server for Angular DOCX Editor
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> TypeScript DOCX Editor MCP Server accelerates TypeScript DOCX Editor application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Angular DOCX Editor MCP Server accelerates Angular DOCX Editor application development by providing deep knowledge directly in your AI-powered IDE. [Model Context Protocol](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) (MCP) integration enables quick access to documentation, API references, and code-generation features from within the development environment.
 
-These tools speed up development and reinforce best practices for the TypeScript DOCX Editor (Document Editor) component integration.
+These tools speed up development and reinforce best practices for Angular DOCX Editor integration.
+> The previously available **Agentic UI Builder** (`#sf_angular_ui_builder`) has been upgraded to an **Agent skill-based experience** and is no longer part of the MCP Server. To learn more about the new **Agentic UI Builder**, see the [documentation](./ui-builder-skill). The **AI Coding Assistant** (#sf_angular_assistant) has been **renamed** to **search_docs** (`#search_docs`) to ensure the tool name follows MCP naming conventions.
 
 ## Key Benefits
 
-- **Expert DOCX Editor Knowledge** - Deep understanding of the TypeScript DOCX Editor component (Document Editor) and its implementation patterns.
+- **Expert DOCX Editor Knowledge** - Deep understanding of the Angular DOCX Editor component and its implementation patterns.
 - **Unlimited Usage** - No request limits, time restrictions, or query caps.
 - **Privacy-Focused** - The tools operate based on the user's query and do not store any content, data, or prompts.
 
@@ -26,10 +26,10 @@ These tools speed up development and reinforce best practices for the TypeScript
 
 Before beginning, ensure the following prerequisites are met:
 
-- **Node.js** version 18 or higher
+- [Node.js 18+](https://nodejs.org/en/download) with **npm** or **yarn**
 - A **compatible MCP client** (VS Code, Syncfusion<sup style="font-size:70%">&reg;</sup> Code Studio, Cursor, JetBrains, etc.)
 - An active [Syncfusion<sup style="font-size:70%">&reg;</sup> API key](https://syncfusion.com/account/api-key)
-- A **TypeScript application** (existing or new); see [TypeScript DOCX Editor documentation](./getting-started)
+- An **Angular application** (existing or new); see [Angular DOCX Editor documentation](../getting-started)
 - An active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):
   - [Commercial License](https://www.syncfusion.com/sales/unlimitedlicense)
   - [Free Community License](https://www.syncfusion.com/products/communitylicense)
@@ -58,10 +58,10 @@ Create a configuration file in your project folder to install the server for you
 
 {
   "servers": {
-    "sf-typescript-mcp": {
+    "sf-angular-mcp": {
       "type": "stdio",
       "command": "npx",
-      "args": ["-y", "@syncfusion/typescript-mcp@latest"],
+      "args": ["-y", "@syncfusion/angular-mcp@latest"],
       "env": {
         "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
         // or
@@ -78,10 +78,10 @@ Create a configuration file in your project folder to install the server for you
 
 {
   "servers": {
-    "sf-typescript-mcp": {
+    "sf-angular-mcp": {
       "type": "stdio",
       "command": "npx",
-      "args": ["-y", "@syncfusion/typescript-mcp@latest"],
+      "args": ["-y", "@syncfusion/angular-mcp@latest"],
       "env": {
         "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
         // or
@@ -100,9 +100,9 @@ Create a configuration file in your project folder to install the server for you
 
 {
   "mcpServers": {
-    "sf-typescript-mcp": {
+    "sf-angular-mcp": {
       "command": "npx",
-      "args": ["-y", "@syncfusion/typescript-mcp@latest"],
+      "args": ["-y", "@syncfusion/angular-mcp@latest"],
       "env": {
         "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
         // or
@@ -121,11 +121,11 @@ Create a configuration file in your project folder to install the server for you
 
 {
   "mcpServers": {
-    "sf-typescript-mcp": {
+    "sf-angular-mcp": {
       "command": "npx.cmd",
       "args": [
         "-y",
-        "@syncfusion/typescript-mcp@latest"
+        "@syncfusion/angular-mcp@latest"
       ],
       "env": {
         "Syncfusion_API_Key_Path": "YOUR_API_KEY_FILE_PATH"
@@ -141,35 +141,35 @@ Create a configuration file in your project folder to install the server for you
 {% endhighlight %}
 {% endtabs %}
 
-**Verifying Installation** Check your editor's MCP Server list for `sf-typescript-mcp` with a **Connected** status to confirm a successful installation.
+**Verifying Installation** Check your editor's MCP Server list for `sf-angular-mcp` with a **Connected** status to confirm a successful installation.
 
 ## Common use cases
 
-The examples below showcase how the `search_docs` tool handles real-world TypeScript DOCX Editor development scenarios. The tool can be invoked directly, as shown in the examples below, for specific needs. Alternatively, an AI assistant can automatically invoke it based on the request.
+The examples below showcase how the `search_docs` tool handles real-world Angular DOCX Editor development scenarios. The tool can be invoked directly, as shown in the examples below, for specific needs. Alternatively, an AI assistant can automatically invoke it based on the request.
 
 **Get Started**
 
-Use `search_docs` to get contextual guidance, code snippets, and configuration examples for the TypeScript DOCX Editor component.
+Use `search_docs` to get contextual guidance, code snippets, and configuration examples for the Angular DOCX Editor component.
 
 {% promptcards %}
-{% promptcard Standalone Component Setup %}
-#search_docs How do I configure the Syncfusion TypeScript Standalone DOCX Editor Component?
+{% promptcard DOCX Editor Configuration %}
+#search_docs How do I configure the Syncfusion Angular DOCX Editor Component?
 {% endpromptcard %}
 {% endpromptcards %}
 
 **Implement Features**
 
-Get step-by-step help for adding specific features to the TypeScript DOCX Editor.
+Get step-by-step help for adding specific features to the Angular DOCX Editor.
 
 {% promptcards %}
 {% promptcard Track Changes %}
-#search_docs How to enable Track Changes in TypeScript DOCX Editor?
+#search_docs How to enable Track Changes in Angular DOCX Editor?
 {% endpromptcard %}
 {% endpromptcards %}
 
 {% promptcards %}
 {% promptcard Add Comments %}
-#search_docs How to add comments in TypeScript DOCX Editor?
+#search_docs How to add comments in Angular DOCX Editor?
 {% endpromptcard %}
 {% endpromptcards %}
 
@@ -179,27 +179,27 @@ Describe the problem in plain language, and let `search_docs` help resolve it.
 
 {% promptcards %}
 {% promptcard Unsupported File Format %}
-#search_docs Why does TypeScript DOCX Editor show an unsupported file format message?
+#search_docs Why does Angular DOCX Editor show an unsupported file format message?
 {% endpromptcard %}
 {% endpromptcards %}
 
 {% promptcards %}
 {% promptcard Document Loading Issue %}
-#search_docs Why does TypeScript DOCX Editor fail to load a document with a 404 error?
+#search_docs Why does Angular DOCX Editor fail to load a document with a 404 error?
 {% endpromptcard %}
 {% endpromptcards %}
 
 ## Best Practices
 
-To get the most out of the Syncfusion<sup style="font-size:70%">&reg;</sup> TypeScript DOCX Editor MCP Server:
+To get the most out of the Syncfusion<sup style="font-size:70%">&reg;</sup> Angular DOCX Editor MCP Server:
 
-- **Be Specific** - Include the component and use case in your queries (for example, *"How can I apply font size character formatting to text in TypeScript DOCX Editor?"*)
+- **Be Specific** - Include the component and use case in your queries (for example, *"How can I apply font size character formatting to text in  Angular DOCX Editor?"*).
 - **Provide Context** - Include applicable versions, expected outcomes, and any requirements or limitations that may affect the request.
 - **Use Descriptive Queries** - Avoid overly brief or ambiguous requests. Providing sufficient detail helps improve the accuracy and relevance of the response.
-- **Stay Consistent** - Keep file organization, naming conventions, and coding standards consistent throughout your TypeScript project.
+- **Stay Consistent** - Keep file organization, naming conventions, and coding standards consistent throughout your Angular project.
 - **Start Fresh for New Topics** - Begin a new chat when switching to a different feature or task to maintain clean context.
 - **Use Advanced AI Models** - For the best results, use advanced AI models such as the latest-generation **Claude**, **GPT**, or **Gemini** models.
-- **For Troubleshooting** - Use AI suggestions for common issues; consult the [official documentation](./getting-started) or [support](https://support.syncfusion.com/support/tickets/create) for complex problems.
+- **For Troubleshooting** - Use AI suggestions for common issues; consult the [official documentation](../getting-started) or [support](https://support.syncfusion.com/support/tickets/create) for complex problems.
 - **Minimize Active Tools** - Limit the number of active MCP tools in your IDE to prevent tool-selection ambiguity and improve response accuracy.
 
 > Always review AI-generated code before using it in production.
@@ -210,8 +210,7 @@ The table below lists frequently encountered issues and suggested resolutions to
 
 | Issue | Solution |
 |-------|----------|
-| **Clear npm cache** | Run `npx clear-npx-cache` and restart your IDE to resolve package caching issues. |
-| **Server failed to start** | Update to Node.js 18+, verify JSON syntax in the config file, and restart your IDE. |
+| **Server failed to start** | Verify Node.js 18+ is installed, check JSON syntax in the config file, and restart your IDE. |
 | **Invalid API key** | Verify your key is active at the [Syncfusion Account Page](https://syncfusion.com/account/api-key). |
 | **Incorrect API key config** | For the file path: verify file location and content. For inline key: check the key is correctly updated. |
 | **Wrong config file location** | VS Code: `.vscode/mcp.json` • Code Studio: `.codestudio/mcp.json` • Cursor: `.cursor/mcp.json` in the workspace root. |

@@ -1,23 +1,23 @@
 ---
 layout: post
-title: WebMCP Integration in TypeScript DOCX Editor | Syncfusion
-description: WebMCP integration in TypeScript DOCX Editor explains setup, tool registration, configuration, and API reference with code examples.
+title: WebMCP Integration in Angular DOCX Editor | Syncfusion
+description: WebMCP integration in Angular DOCX Editor explains setup, tool registration, configuration, and API reference with code examples.
 platform: document-processing
 control: WebMCP
 documentation: ug
 ---
 
-# WebMCP Integration in TypeScript DOCX Editor
+# WebMCP Integration in Angular DOCX Editor
 
 ## Integration
 
-WebMCP integrates seamlessly into your [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) application with minimal configuration.
+WebMCP integrates seamlessly into your [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) application with minimal configuration.
 
 ### Prerequisites
 
 Ensure the following before integrating WebMCP:
 
-- Syncfusion DOCX Editor component is installed and configured [Getting Started](./getting-started)
+- Syncfusion DOCX Editor component is installed and configured [Getting Started](../getting-started)
 - A Chromium-based browser with the WebMCP origin trial or chrome://flags/#enable-webmcp enabled. The API is experimental, so confirm it in the browser versions you support.
 
 ## Getting Started
@@ -40,44 +40,61 @@ Before you can use WebMCP locally, enable the feature flag and install the brows
    - Open the WebMCP extension → paste your API key
    - Extension is now ready to use
 
-### Step 2: Inject the WebMCP Module
+### Step 2: Import and Inject the Modules
 
-Import and inject the `WebMcpToolExecuteEventArgs` module into your DOCX Editor:
+Import and inject the needed modules into your DOCX Editor:
 
-```typescript
-import { DocumentEditorContainer, Toolbar, Ribbon, WebMcpDocumentEditor } from '@syncfusion/ej2-documenteditor';
-
-// Inject required modules
-DocumentEditorContainer.Inject(Toolbar, Ribbon, WebMcpDocumentEditor);
+```ts
+import { 
+    DocumentEditorContainerModule, 
+    DocumentEditorContainerComponent, 
+    ToolbarService, 
+    RibbonService 
+} from '@syncfusion/ej2-angular-documenteditor'; 
 ```
 
 ### Step 3: Enable WebMCP
 
 Set the `enableWebMcp` property to `true` in your DocumentEditorContainer configuration:
 
-```typescript
-let container: DocumentEditorContainer = new DocumentEditorContainer({
-    height: '590px',
-    enableWebMcp: true,
-    toolbarMode: 'Ribbon'
-});
+```ts
+template: `
+<!-- Use the following service URL only for demo purposes -->
+<ejs-documenteditorcontainer        
+        #document_editor
+        id="container"
+        serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
+        height="590px"
+        style="width:100%;display:block"
+        [enableToolbar]="true"
+        [toolbarMode]="'Ribbon'" 
+        [enableWebMcp]="true">
+    </ejs-documenteditorcontainer>
+`
 ```
 
 ### Step 4: Register Tools
 
 Set the `webMcpSettings` property to register the available tools in the control level:
 
-```typescript
-// Initialize DocumentEditorContainer with WebMCP enabled
-let webMcpSettings: any = {
-        name: 'container'
-    };
-let container: DocumentEditorContainer = new DocumentEditorContainer({
-    height: '590px',
-    enableWebMcp: true,
-    webMcpSettings: webMcpSettings,
-    toolbarMode: 'Ribbon'
-});
+```ts
+template: `
+<!-- Use the following service URL only for demo purposes -->
+<ejs-documenteditorcontainer        
+        #document_editor
+        id="container"
+        serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
+        height="590px"
+        style="width:100%;display:block"
+        [enableToolbar]="true"
+        [toolbarMode]="'Ribbon'" 
+        [enableWebMcp]="true"
+        [webMcpSettings]="webMcpSettings">
+    </ejs-documenteditorcontainer>
+`
+...
+...
+public webMcpSettings: any = { name: 'container' };
 ```
 
 ### Step 5: Test Your Setup
@@ -88,7 +105,7 @@ let container: DocumentEditorContainer = new DocumentEditorContainer({
 - Verify that the registered tools are displayed with your chosen prefix.
 - Try a sample prompt that matches your data scenario to validate tool execution and response behavior.
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/JavaScript-ES6-DOCX-Editor-Examples/tree/master/webmcp/getting-started).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Angular-DOCX-Editor-Examples/tree/master/webmcp/getting-started).
 
 **Sample Prompts**
 Here are realistic natural language prompts you can test with the WebMCP extension:
@@ -178,118 +195,176 @@ WebMCP tools are organized by category. The tables below provide an overview of 
 
 Set up a DOCX Editor with WebMCP enabled and register tools on creation.
 
-```typescript
-import { DocumentEditorContainer, Toolbar, Ribbon, WebMcpDocumentEditor } from '@syncfusion/ej2-documenteditor';
+```ts
+import { Component } from '@angular/core';
+import {
+    DocumentEditorContainerModule,
+    ToolbarService,
+    RibbonService
+} from '@syncfusion/ej2-angular-documenteditor';
 
-// Inject required modules
-DocumentEditorContainer.Inject(Toolbar, Ribbon, WebMcpDocumentEditor);
-
-// Initialize DocumentEditorContainer with WebMCP enabled
-let webMcpSettings: any = {
+@Component({
+    selector: 'app-root',
+    standalone: true,
+    imports: [DocumentEditorContainerModule],
+    template: `
+    <!-- Use the following service URL only for demo purposes -->
+    <ejs-documenteditorcontainer
+        serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
+        height="590px"
+        style="width:100%;display:block"
+        [enableToolbar]="true"
+        [toolbarMode]="'Ribbon'" 
+        [enableWebMcp]="true"
+        [webMcpSettings]="webMcpSettings">
+    </ejs-documenteditorcontainer>
+`,
+    providers: [ToolbarService, RibbonService]
+})
+export class App {
+    public webMcpSettings: any = {
         name: 'container'
     };
-
-let container: DocumentEditorContainer = new DocumentEditorContainer({
-    height: '590px',
-    enableWebMcp: true,
-    webMcpSettings: webMcpSettings, // Enable WebMCP tools
-    toolbarMode: 'Ribbon'
-});
-
-// Use the following service URL only for demo purposes
-container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
-
-// Append to container element
-container.appendTo('#container');
-
-// Update document title
-document.title = 'WebMCP Tool Demo - DocumentEditorContainer';
+}
 ```
-
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/JavaScript-ES6-DOCX-Editor-Examples/tree/master/webmcp/getting-started).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Angular-DOCX-Editor-Examples/tree/master/webmcp/getting-started).
 
 ### Selective Tool Registration
 
 Register only the essential tools required for the application to minimize system exposure and enhance security.
 
-```typescript
-import { DocumentEditorContainer, Toolbar, Ribbon, WebMcpDocumentEditor } from '@syncfusion/ej2-documenteditor';
+```ts
+import { Component, ViewChild } from '@angular/core';
+import {
+    DocumentEditorContainerModule,
+    ToolbarService,
+    RibbonService,
+} from '@syncfusion/ej2-angular-documenteditor';
 
-// Inject required modules
-DocumentEditorContainer.Inject(Toolbar, Ribbon, WebMcpDocumentEditor);
-
-// Initialize DocumentEditorContainer with WebMCP enabled
-let webMcpSettings: any = {
-    name: 'container',
-    tools: ['getDocumentBookmarks', 'getSelectionText', 'find', 'findAll', 'goToPage'] // Register only the needed tools
-};
-
-let container: DocumentEditorContainer = new DocumentEditorContainer({
-    height: '590px',
-    enableWebMcp: true,
-    webMcpSettings: webMcpSettings, // Enable WebMCP tools
-    toolbarMode: 'Ribbon'
-});
-
-// Use the following service URL only for demo purposes
-container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
-
-// Append to container element
-container.appendTo('#container');
+@Component({
+    selector: 'app-root',
+    standalone: true,
+    imports: [DocumentEditorContainerModule],
+    template: `
+    <!-- Use the following service URL only for demo purposes -->
+    <ejs-documenteditorcontainer        
+        #document_editor
+        id="container"
+        serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
+        height="590px"
+        style="width:100%;display:block"
+        [enableToolbar]="true"
+        [toolbarMode]="'Ribbon'" 
+        [enableWebMcp]="true"
+        [webMcpSettings]="webMcpSettings">
+    </ejs-documenteditorcontainer>
+`,
+    providers: [ToolbarService, RibbonService]
+})
+export class App { @ViewChild('document_editor')
+    public webMcpSettings: any = {
+        name: 'container',
+        tools: [ 'getDocumentBookmarks', 'getSelectionText', 'find', 'findAll', 'goToPage' ] //Register only with needed tools
+    };
+}
 ```
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/JavaScript-ES6-DOCX-Editor-Examples/tree/master/webmcp/selective-tools-registration).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Angular-DOCX-Editor-Examples/tree/master/webmcp/selective-tools-registration).
 
 ### Multi-Instance Setup
 
 Shows how to use different prefixes for multiple DOCX Editor instances on the same page.
 
-```typescript
-import { DocumentEditorContainer, Toolbar, Ribbon, WebMcpDocumentEditor } from '@syncfusion/ej2-documenteditor';
+```ts
+import { Component } from '@angular/core';
+import {
+    DocumentEditorContainerModule,
+    ToolbarService,
+    RibbonService
+} from '@syncfusion/ej2-angular-documenteditor';
 
-// Inject required modules
-DocumentEditorContainer.Inject(Toolbar, Ribbon, WebMcpDocumentEditor);
+@Component({
+    selector: 'app-root',
+    standalone: true,
+    imports: [DocumentEditorContainerModule],
+    template: `
+    <!-- Use the following service URLs only for demo purposes -->
+    <div style="display:flex; width:100%; gap:10px;">
 
-// Use the following service URL only for demo purposes
-const serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
+        <ejs-documenteditorcontainer
+            serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
+            height="590px"
+            width="50%"
+            [enableToolbar]="true"
+            [toolbarMode]="'Ribbon'"
+            [enableWebMcp]="true"
+            [webMcpSettings]="webMcpSettings1">
+        </ejs-documenteditorcontainer>
 
-const container1: DocumentEditorContainer = new DocumentEditorContainer({
-    height: '590px',
-    width: '50%',
-    enableWebMcp: true,
-    toolbarMode: 'Ribbon',
-    webMcpSettings: { name: 'documentEditor1' }
-});
-container1.serviceUrl = serviceUrl;
-container1.appendTo('#container1');
+        <ejs-documenteditorcontainer
+            serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
+            height="590px"
+            width="50%"
+            [enableToolbar]="true"
+            [toolbarMode]="'Ribbon'"
+            [enableWebMcp]="true"
+            [webMcpSettings]="webMcpSettings2">
+        </ejs-documenteditorcontainer>
 
-const container2: DocumentEditorContainer = new DocumentEditorContainer({
-    height: '590px',
-    width: '50%',
-    enableWebMcp: true,
-    toolbarMode: 'Ribbon',
-    webMcpSettings: { name: 'documentEditor2' }
-});
-container2.serviceUrl = serviceUrl;
-container2.appendTo('#container2');
+    </div>
+    `,
+    providers: [ToolbarService, RibbonService]
+})
+export class App {
+
+    public webMcpSettings1 = {
+        name: 'documentEditor1'
+    };
+
+    public webMcpSettings2 = {
+        name: 'documentEditor2'
+    };
+}
 ```
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/JavaScript-ES6-DOCX-Editor-Examples/tree/master/webmcp/multi-instance).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Angular-DOCX-Editor-Examples/tree/master/webmcp/multi-instance).
 
 ### Auditing and Restrictions
 
 Demonstrates the use of the beforeWebMcpToolExecute event to log tool activity and block restricted operations.
 
-```typescript
-import { DocumentEditorContainer, Toolbar, Ribbon, WebMcpDocumentEditor } from '@syncfusion/ej2-documenteditor';
+```ts
+import { Component } from '@angular/core';
+import {
+    DocumentEditorContainerModule,
+    ToolbarService,
+    RibbonService,
+    WebMcpToolExecuteEventArgs
+} from '@syncfusion/ej2-angular-documenteditor';
 
-// Inject required modules
-DocumentEditorContainer.Inject(Toolbar, Ribbon, WebMcpDocumentEditor);
+@Component({
+    selector: 'app-root',
+    standalone: true,
+    imports: [DocumentEditorContainerModule],
+    template: `
+    <!-- Use the following service URL only for demo purposes -->
+    <ejs-documenteditorcontainer
+        serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/"
+        height="590px"
+        style="width:100%;display:block"
+        [enableToolbar]="true"
+        [toolbarMode]="'Ribbon'"
+        [enableWebMcp]="true"
+        [webMcpSettings]="webMcpSettings"
+        (beforeWebMcpToolExecute)="beforeWebMcpToolExecute($event)">
+    </ejs-documenteditorcontainer>
+`,
+    providers: [ToolbarService, RibbonService]
+})
+export class App {
+    public webMcpSettings: any = {
+        name: 'container'
+    };
 
-let container: DocumentEditorContainer = new DocumentEditorContainer({
-    height: '590px',
-    enableWebMcp: true,
-    toolbarMode: 'Ribbon',
-    webMcpSettings: { name: 'container' },
-    beforeWebMcpToolExecute: (args: any) => {
+    public beforeWebMcpToolExecute(args: WebMcpToolExecuteEventArgs): void {
         const { toolName, toolArgs } = args;
 
         // Audit all WebMCP tool invocations
@@ -305,16 +380,9 @@ let container: DocumentEditorContainer = new DocumentEditorContainer({
             args.cancellationResponse = 'The saveDocument operation has been restricted.';
         }
     }
-});
-
-// Use the following service URL only for demo purposes
-container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
-
-// Append to container element
-container.appendTo('#container');
+}
 ```
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/JavaScript-ES6-DOCX-Editor-Examples/tree/master/webmcp/auditing-and-restrictions).
-
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Angular-DOCX-Editor-Examples/tree/master/webmcp/auditing-and-restrictions).
 
 ## Troubleshooting FAQs
 
@@ -331,7 +399,7 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/JavaScript-ES6-
 ### Why aren't my registered tools displayed in the extension?
 
 1. Verify `enableWebMcp: true` in your DocumentEditorContainer config
-2. Confirm `webMcpSettings: {name:'container'}` is added to register the available tools
+2. Confirm `public webMcpSettings: any = { name: 'container' };` is bind to register the available tools
 3. Open DevTools (F12) → Console, check for errors
 4. Try refreshing the page and opening the extension again
 5. Verify the tool prefix is correct (check console logs)
@@ -346,13 +414,13 @@ N> [View Sample in GitHub](https://github.com/SyncfusionExamples/JavaScript-ES6-
 2. Verify the extension has permission to access the site:
    - Right-click WebMCP extension → Manage extension
    - Ensure "Allow on this site" is enabled
-   
+
 
 ### Why do I get a "Permission denied" or "Secure context required" error?
 
 1. WebMCP requires HTTPS in production or localhost for development
 2. If using cross-origin tools, both sites must be HTTPS
-3. Test locally using `localhost:3000` or similar
+3. Test locally using `localhost:4200` or similar
 
 
 ## See Also

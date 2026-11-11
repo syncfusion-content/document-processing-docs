@@ -29,7 +29,7 @@ Before beginning, ensure the following prerequisites are met:
 - **Node.js** version 18 or higher
 - A **compatible MCP client** (VS Code, Syncfusion<sup style="font-size:70%">&reg;</sup> Code Studio, Cursor, JetBrains, etc.)
 - An active [Syncfusion<sup style="font-size:70%">&reg;</sup> API key](https://syncfusion.com/account/api-key)
-- A **Vue application** (existing or new); see [Vue DOCX Editor documentation](./getting-started)
+- A **Vue application** (existing or new); see [Vue DOCX Editor documentation](../getting-started)
 - An active Syncfusion<sup style="font-size:70%">&reg;</sup> license (any of the following):
   - [Commercial License](https://www.syncfusion.com/sales/unlimitedlicense)
   - [Free Community License](https://www.syncfusion.com/products/communitylicense)
@@ -199,7 +199,7 @@ To get the most out of the Syncfusion<sup style="font-size:70%">&reg;</sup> Vue 
 - **Stay Consistent** - Keep file organization, naming conventions, and coding standards consistent throughout your Vue project.
 - **Start Fresh for New Topics** - Begin a new chat when switching to a different feature or task to maintain clean context.
 - **Use Advanced AI Models** - For the best results, use advanced AI models such as the latest-generation **Claude**, **GPT**, or **Gemini** models.
-- **For Troubleshooting** - Use AI suggestions for common issues; consult the [official documentation](./getting-started) or [support](https://support.syncfusion.com/support/tickets/create) for complex problems.
+- **For Troubleshooting** - Use AI suggestions for common issues; consult the [official documentation](../getting-started) or [support](https://support.syncfusion.com/support/tickets/create) for complex problems.
 - **Minimize Active Tools** - Limit the number of active MCP tools in your IDE to prevent tool-selection ambiguity and improve response accuracy.
 
 > Always review AI-generated code before using it in production.

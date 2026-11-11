@@ -43,11 +43,11 @@ WebMCP integrates seamlessly into Syncfusion Document Editor applications across
 
 ### Supported Platforms
 
-- **[WebMCP Integration for React DOCX Editor](../Word/Word-Processor/react/webmcp)** — React-based Document Editor
-- **[WebMCP Integration for Angular DOCX Editor](../Word/Word-Processor/angular/webmcp)** — Angular-based Document Editor
-- **[WebMCP Integration for Vue DOCX Editor](../Word/Word-Processor/vue/webmcp)** — Vue.js-based Document Editor
-- **[WebMCP Integration for TypeScript DOCX Editor](../Word/Word-Processor/javascript-es6/webmcp)** — TypeScript/ES6 Document Editor
-- **[WebMCP Integration for JavaScript DOCX Editor](../Word/Word-Processor/javascript-es5/webmcp)** — Vanilla JavaScript/ES5 Document Editor
+- **[WebMCP Integration for React DOCX Editor](../Word/Word-Processor/react/ai-tools/webmcp)** — React-based Document Editor
+- **[WebMCP Integration for Angular DOCX Editor](../Word/Word-Processor/angular/ai-tools/webmcp)** — Angular-based Document Editor
+- **[WebMCP Integration for Vue DOCX Editor](../Word/Word-Processor/vue/ai-tools/webmcp)** — Vue.js-based Document Editor
+- **[WebMCP Integration for TypeScript DOCX Editor](../Word/Word-Processor/javascript-es6/ai-tools/webmcp)** — TypeScript/ES6 Document Editor
+- **[WebMCP Integration for JavaScript DOCX Editor](../Word/Word-Processor/javascript-es5/ai-tools/webmcp)** — Vanilla JavaScript/ES5 Document Editor
 - **[WebMCP Integration for Blazor DOCX Editor](../Word/Word-Processor/blazor/webmcp)** — Blazor-based Document Editor
 
 ## Why Use WebMCP for Document Editor?
