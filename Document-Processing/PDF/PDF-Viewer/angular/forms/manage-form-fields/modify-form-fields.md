@@ -727,18 +727,11 @@ N> Custom scripts are not supported in barcode fields. Instead, the final value 
 
 #### Static Barcode Value
 
-The barcode value can be set to a fixed value programmatically. Use the `CustomValue` value format to encode a fixed string, so that the same value is rendered in the barcode every time.
+The barcode value can be set to a fixed value from the **Value** tab of the Barcode Properties dialog.
 
-```ts
-const fields = this.pdfviewer.retrieveFormFields();
-const barcode = fields.find((f: any) => f.name === 'ProductBarcode');
-if (barcode) {
-  this.pdfviewer.formDesignerModule.updateFormField(barcode, {
-    value: 'SYNCFUSION-002',
-    valueFormat: 'CustomValue',
-  } as BarcodeFieldSettings);
-}
-```
+Select **Custom Value** in the **Encode** dropdown, and then enter the text to be encoded in the **Custom Value** text box.
+
+![Custom Value option in the Value tab](../../../angular/images/ui-barcode-value-tab.png)
 
 #### Dynamic Barcode Value
 
