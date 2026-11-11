@@ -34,4 +34,4 @@ The features described here focus on presentation viewing and printing, consiste
 
 ## Getting started
 
-Follow the [ASP.NET Core getting-started guide](./getting-started-core) to install the NuGet package, register the Tag Helper and license key, add client resources, and open a PPTX presentation.
+Follow the [ASP.NET Core getting-started guide](./getting-started) to install the NuGet package, register the Tag Helper and license key, add client resources, and open a PPTX presentation.

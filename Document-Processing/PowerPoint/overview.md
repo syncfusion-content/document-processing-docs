@@ -16,7 +16,7 @@ Syncfusion<sup>&reg;</sup> PowerPoint Presentation Processing Framework is a col
 
 ## List of PowerPoint Presentation Processing Products:
 
-* [PPTX Editor](./pptx-editor/overview) - is a Microsoft PowerPoint-like component used to view and print PowerPoint presentations in JavaScript, Angular, React, Vue, [ASP.NET Core](./pptx-editor/asp-net-core/overview), and [ASP.NET MVC](./pptx-editor/asp-net-mvc/overview) applications. Get started with the [ASP.NET Core Tag Helper](./pptx-editor/asp-net-core/getting-started-core) or [JavaScript integration in an ASP.NET MVC Razor view](./pptx-editor/asp-net-mvc/getting-started).
+* [PPTX Editor](./pptx-editor/overview) - is a Microsoft PowerPoint-like component used to view and print PowerPoint presentations in JavaScript, Angular, React, Vue, [ASP.NET Core](./pptx-editor/asp-net-core/overview), and [ASP.NET MVC](./pptx-editor/asp-net-mvc/overview) applications. Get started with the [ASP.NET Core Tag Helper](./pptx-editor/asp-net-core/getting-started) or [JavaScript integration in an ASP.NET MVC Razor view](./pptx-editor/asp-net-mvc/getting-started).
 * PowerPoint Library - is a class library used to create, read, and write PowerPoint presentations through code in .NET [Windows Forms, WPF, ASP.NET MVC, ASP.NET Core, Blazor, MAUI] applications.
 * PowerPoint Conversions - is class library that convert PowerPoint to PDF, image, Markdown. It also supports convert Markdown to PowerPoint presentations.
 
