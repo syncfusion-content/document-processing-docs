@@ -7,17 +7,17 @@ platform: document-processing
 documentation: ug
 ---
 
-# WebMCP Tools Integration for Syncfusion® ASP.NET Core Spreadsheet control
+# WebMCP integration in ASP.NET Core Spreadsheet
 
-WebMCP enables AI agents to discover and interact with Syncfusion® ASP.NET Core Spreadsheet through a standardized tool interface. By enabling WebMCP, AI-powered applications can securely discover control capabilities, read data, perform actions, and automate workflows through a standardized interface.
+WebMCP enables AI agents to discover and interact with Syncfusion® ASP.NET Core Spreadsheet through a standardized tool interface. By enabling WebMCP, AI-powered applications can securely discover Spreadsheet capabilities, read data, perform actions, and automate workflows through a standardized interface.
 
-This section demonstrates how to integrate WebMCP with the Syncfusion® ASP.NET Core Spreadsheet control.
+This section demonstrates how to integrate WebMCP with the Syncfusion® ASP.NET Core Spreadsheet.
 
 ## WebMCP Overview
 
 WebMCP allows AI assistants running in the browser to interact directly with Syncfusion® ASP.NET Core Spreadsheet through natural language prompts.
 
-Instead of relying on DOM inspection or simulating user interactions, AI assistants can interact directly with control APIs through WebMCP tools. This approach provides more reliable and accurate results.
+Instead of relying on DOM inspection or simulating user interactions, AI assistants can interact directly with Spreadsheet APIs through WebMCP tools. This approach provides more reliable and accurate results.
 
 Once connected, an AI assistant can perform tasks such as:
 
@@ -29,7 +29,7 @@ Once connected, an AI assistant can perform tasks such as:
 
 ## Prerequisites
 
-- Syncfusion® ASP.NET Core Spreadsheet control
+- Syncfusion® ASP.NET Core Spreadsheet
 - Chromium-based Browser (like Chrome, Edge, or Brave)
 - [Node.js 24+](https://nodejs.org/en) (LTS recommended).
 - WebMCP browser extension installed
@@ -45,7 +45,7 @@ Before you can use WebMCP locally, enable the feature flag and install the brows
 
 ## Basic Configuration
 
-To enable WebMCP for the Spreadsheet control, set `enableWebMcp` to `true` and add the `e-spreadsheet-webmcpsettings` child tag.
+To enable WebMCP for the Spreadsheet, set `enableWebMcp` to `true` and add the `e-spreadsheet-webmcpsettings` child tag.
 
 ```html
 <ejs-spreadsheet id="sheet" enableWebMcp="true" beforeWebMcpToolExecute="onWebMcpBeforeTool">
@@ -53,11 +53,9 @@ To enable WebMCP for the Spreadsheet control, set `enableWebMcp` to `true` and a
 </ejs-spreadsheet>
 ```
 
-The `name` property uniquely identifies this Spreadsheet instance when multiple controls exist on the same page. AI prompts reference controls by name to disambiguate operations.
+The `name` property uniquely identifies this Spreadsheet instance when multiple Spreadsheet instances exist on the same page. AI prompts reference Spreadsheet instances by name to disambiguate operations.
 
 ## ASP.NET Core Integration
-
-The Spreadsheet WebMCP integration requires ASP.NET Core 6.0 or higher with the Syncfusion EJ2 package installed.
 
 ### Installation
 
@@ -109,27 +107,7 @@ Create a simple Spreadsheet with WebMCP enabled:
 </script>
 ```
 
-### Controller Example
 
-```csharp
-public class SpreadsheetController : Controller
-{
-    public IActionResult Index()
-    {
-        ViewBag.DataSource = GetSpreadsheetData();
-        return View();
-    }
-
-    private List<object> GetSpreadsheetData()
-    {
-        List<object> data = new List<object>();
-        data.Add(new { OrderID = 10248, CustomerID = "VINET", EmployeeID = 5 });
-        data.Add(new { OrderID = 10249, CustomerID = "TOMSP", EmployeeID = 6 });
-        data.Add(new { OrderID = 10250, CustomerID = "HANAR", EmployeeID = 4 });
-        return data;
-    }
-}
-```
 
 ## WebMCP Events
 
@@ -162,12 +140,11 @@ function onBeforeTool(args) {
 
 | Property | Type | Description |
 |----------|------|-------------|
-| `name` | String | Unique identifier for the control instance. Required when multiple controls exist on the same page. |
-| `beforeWebMcpToolExecute` | String | JavaScript function name that handles the beforeWebMcpToolExecute event. |
+| `name` | String | Unique identifier for the Spreadsheet instance. Required when multiple Spreadsheet instances exist on the same page. |
 
 ## Best practices
 
-- Use the `name` property when multiple control instances exist on the same page.
+- Use the `name` property when multiple Spreadsheet instances exist on the same page.
 - Monitor tool activity through the `beforeWebMcpToolExecute` event.
 - Apply application-specific validation before executing tool operations.
 
@@ -184,7 +161,7 @@ WebMCP tools are organized into six categories:
 | **Charting & Links** | insertChart, insertHyperlink | Create visualizations and insert clickable links |
 | **Workbook & Utility** | save, undo | Export the workbook and manage action history |
 
-For complete tool reference, see [WebMCP Integration — Tool Reference](https://ej2.syncfusion.com/aspnetcore/documentation/webmcp/components#spreadsheet).
+
 
 ## Writing Effective Prompts
 
@@ -219,33 +196,7 @@ Here are examples of effective prompts for common Spreadsheet tasks:
 **Chart Creation:**
 *"Create a bar chart showing sales data from columns A and B for the first quarter."*
 
-## Troubleshooting
 
-### WebMCP Not Detected
-
-If the WebMCP extension doesn't detect your Spreadsheet control:
-
-1. Verify `enableWebMcp` is set to `true`.
-2. Check that the `e-spreadsheet-webmcpsettings` child tag exists.
-3. Ensure the browser extension is installed and enabled.
-4. Confirm you're using a Chromium-based browser with WebMCP flags enabled.
-
-### Tools Not Appearing
-
-If WebMCP tools aren't appearing in the extension panel:
-
-1. Refresh the page after enabling WebMCP.
-2. Check browser console for JavaScript errors.
-3. Verify the control is rendering correctly.
-4. Ensure the `name` property is unique if multiple controls exist.
-
-### Tool Execution Errors
-
-If tools execute but produce unexpected results:
-
-1. Check the `beforeWebMcpToolExecute` event isn't cancelling operations.
-2. Verify the Spreadsheet control has loaded completely.
-3. Confirm sufficient permissions for the requested operations.
 
 ## See also
 
