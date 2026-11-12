@@ -142,28 +142,6 @@ Use the following code to toggle the visibility of hidden formatting symbols lik
 documenteditor.documentEditorSettings.showHiddenMarks = true;
 ```
 
-## Toolbar with paragraph formatting options
-
-
-{% tabs %}
-{% highlight cshtml tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-core/paragraph-format/tagHelper %}
-{% endhighlight %}
-{% highlight c# tabtitle="Paragraph-format.cs" %}
-{% include code-snippet/document-editor/asp-net-core/paragraph-format/document-editor.cs %}
-{% endhighlight %}
-{% endtabs %}
-
-## Online Demo
-
-Explore how to apply paragraph formatting in Word documents using the ASP.NET Core DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/paragraphformat#/tailwind3).
-
-## See Also
-
-* [Feature modules](./feature-module)
-* [Paragraph dialog](./dialog#paragraph-dialog)
-* [Keyboard shortcuts](./keyboard-shortcut#paragraph-formatting)
-* [Set the default format in document editor](./how-to/set-default-format-in-document-editor)
 ## Format Painter
 
 The Format Painter option is available in the **Home** tab of the ribbon under the **Clipboard** group. It allows users to copy the formatting from selected content and apply it to other content within the document.
@@ -222,3 +200,26 @@ documenteditor.selection.cancelFormatPainter();
 ```
 
 > **Note:** After Format Painter is cancelled, the copied formatting cannot be applied again until the `copyFormat` method is invoked.
+
+## Toolbar with paragraph formatting options
+
+
+{% tabs %}
+{% highlight cshtml tabtitle="CSHTML" %}
+{% include code-snippet/document-editor/asp-net-core/paragraph-format/tagHelper %}
+{% endhighlight %}
+{% highlight c# tabtitle="Paragraph-format.cs" %}
+{% include code-snippet/document-editor/asp-net-core/paragraph-format/document-editor.cs %}
+{% endhighlight %}
+{% endtabs %}
+
+## Online Demo
+
+Explore how to apply paragraph formatting in Word documents using the ASP.NET Core DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/paragraphformat#/tailwind3).
+
+## See Also
+
+* [Feature modules](./feature-module)
+* [Paragraph dialog](./dialog#paragraph-dialog)
+* [Keyboard shortcuts](./keyboard-shortcut#paragraph-formatting)
+* [Set the default format in document editor](./how-to/set-default-format-in-document-editor)

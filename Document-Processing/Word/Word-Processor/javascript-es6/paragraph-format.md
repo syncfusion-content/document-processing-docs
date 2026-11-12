@@ -155,33 +155,6 @@ The following example code illustrates how to show or hide paragraph marks.
 documenteditor.documentEditorSettings.showHiddenMarks = true;
 ```
 
-## Toolbar with paragraph formatting options
-
-The following sample demonstrates the paragraph formatting options using a toolbar.
-
- 
-
- {% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/document-editor/javascript-es6/paragraph-format-cs1/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/document-editor/javascript-es6/paragraph-format-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/paragraph-format-cs1" %}
-
-## Online Demo
-
-Explore how to apply paragraph formatting in Word documents using the JavaScript DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/paragraph-formatting.html).
-
-## See Also
-
-* [Feature modules](./feature-module)
-* [Paragraph dialog](./dialog#paragraph-dialog)
-* [Keyboard shortcuts](./keyboard-shortcut#paragraph-formatting)
-* [Set the default format in document editor](./how-to/set-default-format-in-document-editor)
 ## Format Painter
 
 The Format Painter option is available in the **Home** tab of the ribbon under the **Clipboard** group. It allows users to copy the formatting from selected content and apply it to other content within the document.
@@ -240,3 +213,31 @@ documenteditor.selection.cancelFormatPainter();
 ```
 
 > **Note:** After Format Painter is cancelled, the copied formatting cannot be applied again until the `copyFormat` method is invoked.
+
+## Toolbar with paragraph formatting options
+
+The following sample demonstrates the paragraph formatting options using a toolbar.
+
+ 
+
+ {% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+{% include code-snippet/document-editor/javascript-es6/paragraph-format-cs1/index.ts %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/document-editor/javascript-es6/paragraph-format-cs1/index.html %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/paragraph-format-cs1" %}
+
+## Online Demo
+
+Explore how to apply paragraph formatting in Word documents using the JavaScript DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript/#/material3/document-editor/paragraph-formatting.html).
+
+## See Also
+
+* [Feature modules](./feature-module)
+* [Paragraph dialog](./dialog#paragraph-dialog)
+* [Keyboard shortcuts](./keyboard-shortcut#paragraph-formatting)
+* [Set the default format in document editor](./how-to/set-default-format-in-document-editor)

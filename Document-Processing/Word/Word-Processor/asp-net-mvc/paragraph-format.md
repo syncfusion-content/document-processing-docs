@@ -144,28 +144,6 @@ The following example code illustrates how to show or hide paragraph marks.
 documenteditor.documentEditorSettings.showHiddenMarks = true;
 ```
 
-## Toolbar with paragraph formatting options
-
-
-{% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/paragraph-format/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Paragraph-format.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/paragraph-format/document-editor.cs %}
-{% endhighlight %}
-{% endtabs %}
-
-## Online Demo
-
-Explore how to apply paragraph formatting in Word documents using the ASP.NET MVC DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/paragraphformatting#/tailwind3).
-
-## See Also
-
-* [Feature modules](./feature-module)
-* [Paragraph dialog](./dialog#paragraph-dialog)
-* [Keyboard shortcuts](./keyboard-shortcut)
-* [Set the default format in document editor](./how-to/set-default-format-in-document-editor)
 ## Format Painter
 
 The Format Painter option is available in the **Home** tab of the ribbon under the **Clipboard** group. It allows users to copy the formatting from selected content and apply it to other content within the document.
@@ -224,3 +202,26 @@ documenteditor.selection.cancelFormatPainter();
 ```
 
 > **Note:** After Format Painter is cancelled, the copied formatting cannot be applied again until the `copyFormat` method is invoked.
+
+## Toolbar with paragraph formatting options
+
+
+{% tabs %}
+{% highlight razor tabtitle="CSHTML" %}
+{% include code-snippet/document-editor/asp-net-mvc/paragraph-format/razor %}
+{% endhighlight %}
+{% highlight c# tabtitle="Paragraph-format.cs" %}
+{% include code-snippet/document-editor/asp-net-mvc/paragraph-format/document-editor.cs %}
+{% endhighlight %}
+{% endtabs %}
+
+## Online Demo
+
+Explore how to apply paragraph formatting in Word documents using the ASP.NET MVC DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/asp-net-mvc/documenteditor/paragraphformatting#/tailwind3).
+
+## See Also
+
+* [Feature modules](./feature-module)
+* [Paragraph dialog](./dialog#paragraph-dialog)
+* [Keyboard shortcuts](./keyboard-shortcut)
+* [Set the default format in document editor](./how-to/set-default-format-in-document-editor)

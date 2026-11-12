@@ -145,32 +145,6 @@ The following example code illustrates how to show or hide paragraph marks.
 this.documenteditor.documentEditorSettings.showHiddenMarks = true;
 ```
 
-## Toolbar with paragraph formatting options
-
-The following sample demonstrates the paragraph formatting options using a toolbar.
-
-{% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/document-editor/angular/paragraph-formatting-cs1/src/app.component.ts %}
-{% endhighlight %}
-
-{% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/document-editor/angular/paragraph-formatting-cs1/src/main.ts %}
-{% endhighlight %}
-{% endtabs %}
-  
-{% previewsample "/document-processing/samples/document-editor/angular/paragraph-formatting-cs1" %}
-
-## Online demo
-
-Explore how to apply paragraph formatting in Word documents using the Angular DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/paragraph-formatting).
-
-## See also
-
-* [Feature modules](./feature-module)
-* [Paragraph dialog](./dialog#paragraph-dialog)
-* [Keyboard shortcuts](./keyboard-shortcut#paragraph-formatting)
-* [Set the default format in document editor](./how-to/set-default-format-in-document-editor)
 ## Format Painter
 
 The Format Painter option is available in the **Home** tab of the ribbon under the **Clipboard** group. It allows users to copy the formatting from selected content and apply it to other content within the document.
@@ -229,3 +203,30 @@ this.documentEditor.selection.cancelFormatPainter();
 ```
 
 > **Note:** After Format Painter is cancelled, the copied formatting cannot be applied again until the `copyFormat` method is invoked.
+
+## Toolbar with paragraph formatting options
+
+The following sample demonstrates the paragraph formatting options using a toolbar.
+
+{% tabs %}
+{% highlight ts tabtitle="app.component.ts" %}
+{% include code-snippet/document-editor/angular/paragraph-formatting-cs1/src/app.component.ts %}
+{% endhighlight %}
+
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/document-editor/angular/paragraph-formatting-cs1/src/main.ts %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "/document-processing/samples/document-editor/angular/paragraph-formatting-cs1" %}
+
+## Online demo
+
+Explore how to apply paragraph formatting in Word documents using the Angular DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/paragraph-formatting).
+
+## See also
+
+* [Feature modules](./feature-module)
+* [Paragraph dialog](./dialog#paragraph-dialog)
+* [Keyboard shortcuts](./keyboard-shortcut#paragraph-formatting)
+* [Set the default format in document editor](./how-to/set-default-format-in-document-editor)
