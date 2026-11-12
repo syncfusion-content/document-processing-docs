@@ -512,34 +512,30 @@ The default error correction level is `Level5`.
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
-<div style="height:680px">
-    <ejs-pdfviewer id="pdfviewer"
-                   documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
-                   resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib">
-    </ejs-pdfviewer>
-</div>
+<ejs-pdfviewer id="pdfviewer"
+               documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
+               resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+               documentLoad="documentLoad">
+</ejs-pdfviewer>
 
 <script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function () {
-  var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
-  pdfviewer.documentLoad = function () {
-    // Add a barcode field with the default PDF417 symbology
-    pdfviewer.formDesignerModule.addFormField('Barcode', {
-      name: 'ProductBarcode',
-      bounds: { X: 146, Y: 300, Width: 180, Height: 100 },
-      pageNumber: 1,
-      value: 'SYNCFUSION-001',
-      caption: 'Product Barcode',
-      symbology: 'PDF417',
-      valueFormat: 'TabDelimited',
-      errorCorrectionLevel: 'Level5',
-      isRequired: false,
-      isPrint: true,
-      visibility: 'visible',
-      tooltip: 'Scan to view the product details'
-    });
-  };
-});
+    function documentLoad() {
+        var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
+        pdfviewer.formDesignerModule.addFormField('Barcode', {
+            name: 'ProductBarcode',
+            bounds: { X: 146, Y: 300, Width: 180, Height: 100 },
+            pageNumber: 1,
+            value: 'SYNCFUSION-001',
+            caption: 'Product Barcode',
+            symbology: 'PDF417',
+            valueFormat: 'TabDelimited',
+            errorCorrectionLevel: 'Level5',
+            isRequired: false,
+            isPrint: true,
+            visibility: 'visible',
+            tooltip: 'Scan to view the product details'
+        });
+    }
 </script>
 {% endhighlight %}
 {% endtabs %}
@@ -633,7 +629,7 @@ document.addEventListener('DOMContentLoaded', function () {
 {% endhighlight %}
 {% endtabs %}
 
-[View Sample on GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/DateTime%20picker)
+[View Sample on GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/)
 
 ## See Also
 

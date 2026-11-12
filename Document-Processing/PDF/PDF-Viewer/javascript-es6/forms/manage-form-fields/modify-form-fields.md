@@ -405,7 +405,7 @@ if (barcode) {
 }
 ```
 
-[View Sample on GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/1065622_barcode/Form%20Designer/Barcode%20Field)
+[View Sample on GitHub](https://github.com/SyncfusionExamples/typescript-pdf-viewer-examples/tree/master/Form%20Designer/Barcode%20Field)
 
 ## See Also
 

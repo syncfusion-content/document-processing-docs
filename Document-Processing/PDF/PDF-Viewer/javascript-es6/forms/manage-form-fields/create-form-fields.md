@@ -376,18 +376,14 @@ The default error correction level is `Level5`.
 ```ts
 // Add a barcode field with the default PDF417 symbology
 pdfviewer.formDesignerModule.addFormField('Barcode', {
-  name: 'ProductBarcode',
   bounds: { X: 146, Y: 300, Width: 180, Height: 100 },
+  name: 'Barcode1',
   pageNumber: 1,
-  value: 'SYNCFUSION-001',
+  tooltip: 'Scan to view the product details',
+  symbology: BarcodeSymbology.PDF417,
+  errorCorrectionLevel: Pdf417ErrorCorrectionLevel.Level6,
+  valueFormat: BarcodeValueFormat.TabDelimited,
   caption: 'Product Barcode',
-  symbology: 'PDF417',
-  valueFormat: 'TabDelimited',
-  errorCorrectionLevel: 'Level5',
-  isRequired: false,
-  isPrint: true,
-  visibility: 'visible',
-  tooltip: 'Scan to view the product details'
 } as BarcodeFieldSettings);
 ```
 

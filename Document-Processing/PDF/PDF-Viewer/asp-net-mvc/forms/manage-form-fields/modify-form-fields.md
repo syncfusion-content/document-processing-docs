@@ -522,7 +522,7 @@ The default error correction level is `Level5`.
 {% endhighlight %}
 {% endtabs %}
 
-[View Sample on GitHub](https://github.com/SyncfusionExamples/mvc-pdf-viewer-examples/tree/1065622_barcode/Forms/Barcode%20field)
+[View Sample on GitHub](https://github.com/SyncfusionExamples/mvc-pdf-viewer-examples/tree/master/Forms/Barcode%20field)
 
 ## See also
 

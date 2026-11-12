@@ -513,32 +513,29 @@ The default error correction level is `Level5`.
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
 
-    <div style="width:100%;height:600px">
-        @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf").Render()
-    </div>
+<div style="width:100%;height:600px">
+    @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf").DocumentLoad("documentLoad").Render()
+</div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
-            pdfviewer.documentLoad = function () {
-                // Add a barcode field with the default PDF417 symbology
-                pdfviewer.formDesignerModule.addFormField('Barcode', {
-                    name: 'ProductBarcode',
-                    bounds: { X: 146, Y: 300, Width: 180, Height: 100 },
-                    pageNumber: 1,
-                    value: 'SYNCFUSION-001',
-                    caption: 'Product Barcode',
-                    symbology: 'PDF417',
-                    valueFormat: 'TabDelimited',
-                    errorCorrectionLevel: 'Level5',
-                    isRequired: false,
-                    isPrint: true,
-                    visibility: 'visible',
-                    tooltip: 'Scan to view the product details'
-                });
-            };
+<script type="text/javascript">
+    function documentLoad() {
+        var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
+        pdfviewer.formDesignerModule.addFormField('Barcode', {
+            name: 'ProductBarcode',
+            bounds: { X: 146, Y: 300, Width: 180, Height: 100 },
+            pageNumber: 1,
+            value: 'SYNCFUSION-001',
+            caption: 'Product Barcode',
+            symbology: 'PDF417',
+            valueFormat: 'TabDelimited',
+            errorCorrectionLevel: 'Level5',
+            isRequired: false,
+            isPrint: true,
+            visibility: 'visible',
+            tooltip: 'Scan to view the product details'
         });
-    </script>
+    }
+</script>
 
 {% endhighlight %}
 {% endtabs %}

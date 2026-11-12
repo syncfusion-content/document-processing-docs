@@ -480,7 +480,7 @@ function updateBarcodeField() {
 {% endhighlight %}
 {% endtabs %}
 
-[View Sample on GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/1065622_barcode/How%20to/Barcode%20Field)
+[View Sample on GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/Barcode%20Field)
 
 ## See also
 

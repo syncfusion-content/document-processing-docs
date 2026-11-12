@@ -726,7 +726,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-[View Sample on GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/1065622_barcode/Forms/Barcode%20Field)
+[View Sample on GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/Forms/Barcode%20Field)
 
 ## See Also
 
