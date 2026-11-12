@@ -144,7 +144,7 @@ This example demonstrates how to dynamically add headers and rows to a grid afte
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { PdfDocument, PdfGrid, PdfPage } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfGrid, PdfPage, PdfTemplate } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
 let document: PdfDocument = new PdfDocument();
@@ -372,9 +372,9 @@ let columns: PdfColumnInformation[] = [
 // Create grid from data source and columns
 let grid: PdfGrid = new PdfGrid(source, columns);
 // Customize the first row: set height to 50
-grid.rows[0].height = 50;
+grid.getRow(0).height = 50;
 // Apply style to the first row
-grid.rows[0].style = {
+grid.getRow(0).style = {
     // Set light yellow background
     background: new PdfBrush({ r: 255, g: 255, b: 200 }),
     textProperties: {
@@ -415,9 +415,9 @@ var columns = [
 // Create grid from data source and columns
 var grid = new ej.pdf.PdfGrid(source, columns);
 // Customize the first row: set height to 50
-grid.rows[0].height = 50;
+grid.getRow(0).height = 50;
 // Apply style to the first row
-grid.rows[0].style = {
+grid.getRow(0).style = {
     // Set light yellow background
     background: new ej.pdf.PdfBrush({ r: 255, g: 255, b: 200 }),
     textProperties: {
@@ -463,7 +463,7 @@ grid.style = {
     // Set cell padding (inside space between content and border)
     padding: { left: 4, right: 4, top: 3, bottom: 3 },
     // Set spacing between cells
-    space: { left: 1, right: 1, top: 1, bottom: 1 },
+    space: 1,
     // Set dark gray border with 0.5pt width
     border: new PdfPen({ r: 80, g: 80, b: 80 }, 0.5),
     // Set helvetica font with size 9
@@ -494,7 +494,7 @@ grid.style = {
     // Set cell padding (inside space between content and border)
     padding: { left: 4, right: 4, top: 3, bottom: 3 },
     // Set spacing between cells
-    space: { left: 1, right: 1, top: 1, bottom: 1 },
+    space: 1,
     // Set dark gray border with 0.5pt width
     border: new ej.pdf.PdfPen({ r: 80, g: 80, b: 80 }, 0.5),
     // Set helvetica font with size 9
@@ -1015,7 +1015,7 @@ document.destroy();
 
 ## Add a background image to a table cell
 
-Set `backgroundImage` in the cell style. A `fitType` value of `3` stretches the background image to fill the content area.
+Set `background` in the cell style. A `fitType` value of `3` stretches the background image to fill the content area.
 
 This example demonstrates how to set background images in table cells with proper sizing and alignment.
 
@@ -1038,7 +1038,7 @@ let rows: PdfGridRow[] = [{
     height: 70,
     cells: [
         // Cell with background image
-        { value: 'Employee ID', style: { backgroundImage: {
+        { value: 'Employee ID', style: { background: {
             // Specify the image to use as background
             image: image,
             imageProperties: {
@@ -1080,7 +1080,7 @@ var rows = [{
     height: 70,
     cells: [
         // Cell with background image
-        { value: 'Employee ID', style: { backgroundImage: {
+        { value: 'Employee ID', style: { background: {
             // Specify the image to use as background
             image: image,
             imageProperties: {
@@ -1208,7 +1208,7 @@ let columns = [{ field: 'id', headerText: 'ID' }, { field: 'name', headerText: '
 // Create a style with zero-width border (invisible)
 let style: PdfGridStyle = { border: new PdfPen({ r: 255, g: 255, b: 255 }, 0) };
 // Create grid with no visible borders
-let grid: PdfGrid = new PdfGrid(source, columns, style);
+let grid: PdfGrid = new PdfGrid(source, columns, { style });
 // Draw the grid on the page
 grid.draw(page, { x: 10, y: 10 });
 // Save the document as Output.pdf
@@ -1230,62 +1230,7 @@ var columns = [{ field: 'id', headerText: 'ID' }, { field: 'name', headerText: '
 // Create a style with zero-width border (invisible)
 var style = { border: new ej.pdf.PdfPen({ r: 255, g: 255, b: 255 }, 0) };
 // Create grid with no visible borders
-var grid = new ej.pdf.PdfGrid(source, columns, style);
-// Draw the grid on the page
-grid.draw(page, { x: 10, y: 10 });
-// Save the document as Output.pdf
-document.save('Output.pdf');
-// Dispose of the document resources
-document.destroy();
-
-{% endhighlight %}
-{% endtabs %}
-
-## Update the grid data source
-
-Reassign `dataSource` on a data-source grid. Generated rows are rebuilt, while manually added rows remain after them.
-
-This example shows how to dynamically update a table's data source and how manual rows are preserved after the update.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-
-import { PdfDocument, PdfGrid, PdfPage } from '@syncfusion/ej2-pdf';
-
-// Create a new PDF document
-let document: PdfDocument = new PdfDocument();
-// Add a page to the document
-let page: PdfPage = document.addPage();
-// Define columns
-let columns = [{ field: 'id', headerText: 'ID' }, { field: 'name', headerText: 'Name' }];
-// Create grid with initial data source
-let grid: PdfGrid = new PdfGrid([{ id: 'E01', name: 'Clay' }], columns);
-// Add a manual row (this will be preserved after update)
-grid.addRow({ cells: [{ value: 'Manual' }, { value: 'Record' }] });
-// Update the data source (data-source rows are rebuilt)
-grid.dataSource = [{ id: 'E10', name: 'Andrew' }, { id: 'E11', name: 'Michael' }];
-// Draw the grid on the page
-grid.draw(page, { x: 10, y: 10 });
-// Save the document as Output.pdf
-document.save('Output.pdf');
-// Dispose of the document resources
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-
-// Create a new PDF document
-var document = new ej.pdf.PdfDocument();
-// Add a page to the document
-var page = document.addPage();
-// Define columns
-var columns = [{ field: 'id', headerText: 'ID' }, { field: 'name', headerText: 'Name' }];
-// Create grid with initial data source
-var grid = new ej.pdf.PdfGrid([{ id: 'E01', name: 'Clay' }], columns);
-// Add a manual row (this will be preserved after update)
-grid.addRow({ cells: [{ value: 'Manual' }, { value: 'Record' }] });
-// Update the data source (data-source rows are rebuilt)
-grid.dataSource = [{ id: 'E10', name: 'Andrew' }, { id: 'E11', name: 'Michael' }];
+var grid = new ej.pdf.PdfGrid(source, columns, { style });
 // Draw the grid on the page
 grid.draw(page, { x: 10, y: 10 });
 // Save the document as Output.pdf
@@ -1464,7 +1409,7 @@ let grid: PdfGrid = new PdfGrid(source, columns);
 // Draw the grid on the template's graphics (no pagination)
 grid.draw(template.graphics, { x: 10, y: 10, width: 300, height: 200 });
 // Draw the template on the page
-page.graphics.drawTemplate(template, { x: 10, y: 10 });
+page.graphics.drawTemplate(template, { x: 10, y: 10, width: page.graphics.clientSize.width - 10, height: page.graphics.clientSize.height - 10 });
 // Save the document as Output.pdf
 document.save('Output.pdf');
 // Dispose of the document resources
@@ -1488,7 +1433,7 @@ var grid = new ej.pdf.PdfGrid(source, columns);
 // Draw the grid on the template's graphics (no pagination)
 grid.draw(template.graphics, { x: 10, y: 10, width: 300, height: 200 });
 // Draw the template on the page
-page.graphics.drawTemplate(template, { x: 10, y: 10 });
+page.graphics.drawTemplate(template, { x: 10, y: 10, width: page.graphics.clientSize.width - 10, height: page.graphics.clientSize.height - 10 });
 // Save the document as Output.pdf
 document.save('Output.pdf');
 // Dispose of the document resources
@@ -1502,5 +1447,5 @@ document.destroy();
 - [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library)
 - [JavaScript PDF Library documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
 - [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
-- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/tailwind3/pdf/default.html)
+- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/document-library/javascript/#/tailwind3/pdf/default.html)
 - [JavaScript PDF examples on GitHub](https://github.com/SyncfusionExamples/javascript-pdf-examples)

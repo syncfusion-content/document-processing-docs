@@ -1051,12 +1051,13 @@ let page: PdfPage = document.getPage(0);
 // Add (or access) a signature field
 let field: PdfSignatureField = document.form.fieldAt(0) as PdfSignatureField;
 // Create a digital signature with PFX data and password
-let signature: PdfSignature = new PdfSignature(pfxData, 'password');
-signature.reason = 'Approval';
-signature.location = 'Headquarters';
-signature.contactInfo = 'support@example.com';
+let signature: PdfSignature = PdfSignature.create(pfxData, 'password', {
+    reason: 'Approval',
+    locationInfo: 'Headquarters',
+    contactInfo: 'support@example.com'
+});
 // Apply the signature to the field
-field.sign(signature);
+field.setSignature(signature);
 // Save the signed document
 document.save('signed.pdf');
 // Destroy the document
@@ -1072,12 +1073,13 @@ var page = document.getPage(0);
 // Add (or access) a signature field
 var field = document.form.fieldAt(0);
 // Create a digital signature
-var signature = new ej.pdf.PdfSignature(pfxData, pfxPassword);
-signature.reason = 'Approval';
-signature.location = 'Headquarters';
-signature.contactInfo = 'support@example.com';
+var signature = ej.pdf.PdfSignature.create(pfxData, pfxPassword, {
+    reason: 'Approval',
+    locationInfo: 'Headquarters',
+    contactInfo: 'support@example.com'
+});
 // Apply the signature to the field
-field.sign(signature);
+field.setSignature(signature);
 // Save the signed document
 document.save('signed.pdf');
 // Destroy the document
