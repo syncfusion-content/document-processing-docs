@@ -9,13 +9,13 @@ documentation: ug
 
 # Client-Side Import in React Spreadsheet
 
-The React Spreadsheet component supports client-side import of Excel files using the [@syncfusion/ej2-xlsx](https://www.npmjs.com/package/@syncfusion/ej2-xlsx) library. This approach processes Excel files directly in the browser without requiring server communication.
+The React Spreadsheet component can import Excel files directly in the browser using the [@syncfusion/ej2-xlsx](https://www.npmjs.com/package/@syncfusion/ej2-xlsx) library. This approach processes Excel files client-side without requiring server communication.
 
-Client-side import supports only XLSX file format and offers faster processing for smaller files since it eliminates network latency. However, for larger files or when advanced processing is required, consider using [server-side import](./server-side-import).
+However, it's important to note that `@syncfusion/ej2-xlsx` is a file-processing library and not designed for direct integration with the Spreadsheet UI component. For full Spreadsheet functionality, including formula calculation and advanced features, [server-side import](./server-side-import) is recommended.
 
 ## Supported File Formats
 
-Client-side import supports only the following file format:
+Client-side import using `@syncfusion/ej2-xlsx` supports only the following file format:
 * Microsoft Excel Workbook (.xlsx)
 
 ## Prerequisites
@@ -26,20 +26,19 @@ To use client-side import, install the required package:
 npm install @syncfusion/ej2-xlsx
 ```
 
-## Import Methods
+## Reading Excel Files Client-Side
 
-### Import from Local File
+The `@syncfusion/ej2-xlsx` library can read and extract data from XLSX files, but does not provide direct integration with the Spreadsheet component. Below are examples of reading Excel files:
 
-To import an Excel file from the local file system, you can use the HTML file input element to select a file and then process it using the `@syncfusion/ej2-xlsx` library.
+### Reading from Local File
+
+To read an Excel file from the local file system:
 
 ```jsx
-import React, { useRef } from 'react';
+import React from 'react';
 import { Workbook } from '@syncfusion/ej2-xlsx';
-import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 
 const App = () => {
-  const spreadsheetRef = useRef(null);
-
   const handleFileUpload = (event) => {
     const file = event.target.files[0];
     if (file && file.type === 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet') {
@@ -47,9 +46,13 @@ const App = () => {
       fileReader.onload = (e) => {
         const data = new Uint8Array(e.target.result);
         Workbook.open(data).then((workbook) => {
-          // Convert workbook to JSON format compatible with Spreadsheet
-          // This is a simplified example - actual implementation would depend on your needs
-          console.log('Workbook loaded:', workbook);
+          // Access workbook data
+          const sheet = workbook.sheet(0);
+          const cellValue = sheet.cell('A1').value;
+          console.log('Cell A1 value:', cellValue);
+          
+          // Note: This does not directly integrate with Spreadsheet component
+          // For full integration, use server-side import approach
         });
       };
       fileReader.readAsArrayBuffer(file);
@@ -59,7 +62,7 @@ const App = () => {
   return (
     <div>
       <input type="file" accept=".xlsx" onChange={handleFileUpload} />
-      <SpreadsheetComponent ref={spreadsheetRef} />
+      <p>Note: This reads file data but does not directly load into Spreadsheet UI</p>
     </div>
   );
 };
@@ -67,25 +70,23 @@ const App = () => {
 export default App;
 ```
 
-### Import from URL
+### Reading from URL
 
-You can import an Excel file directly from a URL by fetching the file and processing it with the `@syncfusion/ej2-xlsx` library.
+To read an Excel file directly from a URL:
 
 ```jsx
-import React, { useRef } from 'react';
+import React from 'react';
 import { Workbook } from '@syncfusion/ej2-xlsx';
-import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 
 const App = () => {
-  const spreadsheetRef = useRef(null);
-
-  const importFromUrl = () => {
+  const readFromUrl = () => {
     fetch('https://example.com/sample.xlsx')
       .then(response => response.arrayBuffer())
       .then(data => {
         Workbook.open(data).then((workbook) => {
-          // Process the workbook and convert to Spreadsheet JSON
+          // Process the workbook data
           console.log('Workbook loaded from URL:', workbook);
+          // Note: Manual conversion to Spreadsheet format required
         });
       })
       .catch(error => {
@@ -95,42 +96,8 @@ const App = () => {
 
   return (
     <div>
-      <button onClick={importFromUrl}>Import from URL</button>
-      <SpreadsheetComponent ref={spreadsheetRef} />
-    </div>
-  );
-};
-
-export default App;
-```
-
-### Import from Blob
-
-To import an Excel file from a Blob object, you can convert the Blob to an ArrayBuffer and process it with the `@syncfusion/ej2-xlsx` library.
-
-```jsx
-import React, { useRef } from 'react';
-import { Workbook } from '@syncfusion/ej2-xlsx';
-import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
-
-const App = () => {
-  const spreadsheetRef = useRef(null);
-
-  const importFromBlob = (blob) => {
-    const fileReader = new FileReader();
-    fileReader.onload = (e) => {
-      const data = new Uint8Array(e.target.result);
-      Workbook.open(data).then((workbook) => {
-        // Process the workbook and convert to Spreadsheet JSON
-        console.log('Workbook loaded from Blob:', workbook);
-      });
-    };
-    fileReader.readAsArrayBuffer(blob);
-  };
-
-  return (
-    <div>
-      <SpreadsheetComponent ref={spreadsheetRef} />
+      <button onClick={readFromUrl}>Read from URL</button>
+      <p>Note: This reads file data but does not directly load into Spreadsheet UI</p>
     </div>
   );
 };
@@ -140,14 +107,25 @@ export default App;
 
 ## Limitations
 
-Client-side import has the following limitations compared to server-side import:
+Client-side import using `@syncfusion/ej2-xlsx` has the following limitations:
 
-1. **File Format Support**: Only supports XLSX format (.xlsx files)
-2. **File Size Limits**: Large files may cause browser memory issues
-3. **Performance**: Processing is limited by client device capabilities
-4. **No Advanced Features**: Does not support features like external workbook references or advanced parsing options
+1. **No Direct Spreadsheet Integration**: Does not directly integrate with Spreadsheet UI component
+2. **Manual Data Conversion Required**: Requires manual conversion to Spreadsheet JSON format
+3. **Limited File Format Support**: Only supports XLSX format (.xlsx files)
+4. **No Formula Calculation**: Formulas remain as text and are not calculated
+5. **No Advanced Features**: Does not support external workbook references, advanced parsing options, or full Spreadsheet features
+6. **File Size Limits**: Large files may cause browser memory issues
+7. **Performance**: Processing is limited by client device capabilities
 
-For applications requiring broader format support or handling of large files, consider using [server-side import](./server-side-import).
+## Recommended Approach
+
+For applications requiring full Spreadsheet functionality with proper integration, consider using [server-side import](./server-side-import) which provides:
+
+* Complete integration with Spreadsheet UI component
+* Automatic conversion to Spreadsheet-compatible JSON
+* Support for multiple file formats (XLSX, XLS, CSV, XLSM, XLSB)
+* Formula calculation and advanced features
+* Better performance for large files
 
 ## See Also
 
