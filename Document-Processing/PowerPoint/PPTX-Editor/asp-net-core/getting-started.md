@@ -47,7 +47,7 @@ Alternatively, create an **ASP.NET Core Web App** using Visual Studio Code via [
 
 ## Install the required ASP.NET Core package
 
-Install the [Syncfusion.AspNetCore.PptxEditor](https://www.nuget.org/packages/Syncfusion.AspNetCore.PptxEditor/) and [Syncfusion.AspNetCore.Themes](https://www.nuget.org/packages/Syncfusion.AspNetCore.Themes/) NuGet packages. See the [NuGet packages](https://ej2.syncfusion.com/aspnetcore/documentation/nuget-packages) topic for details about Syncfusion ASP.NET Core packages.
+Install the [Syncfusion.AspNetCore.PptxEditor] and [Syncfusion.AspNetCore.Themes](https://www.nuget.org/packages/Syncfusion.AspNetCore.Themes/) NuGet packages. See the [NuGet packages](https://ej2.syncfusion.com/aspnetcore/documentation/nuget-packages) topic for details about Syncfusion ASP.NET Core packages.
 
 {% tabcontents %}
 
