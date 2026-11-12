@@ -78,17 +78,7 @@ npm install
 {% highlight html tabtitle="index.html" %}
 
 <!-- PDF Viewer dependency styles -->
-<link href="resources/ej2-base/styles/material.css" rel="stylesheet" type="text/css" />
-<link href="resources/ej2-buttons/styles/material.css" rel="stylesheet" type="text/css" />
-<link href="resources/ej2-popups/styles/material.css" rel="stylesheet" type="text/css" />
-<link href="resources/ej2-navigations/styles/material.css" rel="stylesheet" type="text/css" />
-<link href="resources/ej2-dropdowns/styles/material.css" rel="stylesheet" type="text/css" />
-<link href="resources/ej2-lists/styles/material.css" rel="stylesheet" type="text/css" />
-<link href="resources/ej2-inputs/styles/material.css" rel="stylesheet" type="text/css" />
-<link href="resources/ej2-splitbuttons/styles/material.css" rel="stylesheet" type="text/css" />
-<link href="resources/ej2-notifications/styles/material.css" rel="stylesheet" type="text/css" />
-<!-- PDF Viewer styles -->
-<link href="resources/ej2-pdfviewer/styles/material.css" rel="stylesheet" type="text/css" />
+<link href="https://unpkg.com/@syncfusion/ej2-material-theme@{{ site.releaseversion }}/styles/material.css" rel="stylesheet" type="text/css" />
 <!-- PDF Viewer dependency scripts -->
 <script src="resources/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"></script>
 <script src="resources/ej2-buttons/dist/global/ej2-buttons.min.js" type="text/javascript"></script>
