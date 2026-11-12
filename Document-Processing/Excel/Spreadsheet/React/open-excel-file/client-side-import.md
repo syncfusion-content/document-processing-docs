@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Client-Side Import in React Spreadsheet | Syncfusion
-description: Learn about client-side import of Excel files in the Syncfusion React Spreadsheet component using @syncfusion/ej2-xlsx library.
+description: Learn about client-side import of Excel files in the Syncfusion React Spreadsheet component.
 platform: document-processing
 control: Client-Side Import
 documentation: ug
@@ -9,123 +9,103 @@ documentation: ug
 
 # Client-Side Import in React Spreadsheet
 
-The React Spreadsheet component can import Excel files directly in the browser using the [@syncfusion/ej2-xlsx](https://www.npmjs.com/package/@syncfusion/ej2-xlsx) library. This approach processes Excel files client-side without requiring server communication.
+Client-side import processes workbook files directly in the browser without sending them to an Open service. When `openUrl` is not configured, the Spreadsheet uses its integrated client-side file-processing functionality.
 
-However, it's important to note that `@syncfusion/ej2-xlsx` is a file-processing library and not designed for direct integration with the Spreadsheet UI component. For full Spreadsheet functionality, including formula calculation and advanced features, [server-side import](./server-side-import) is recommended.
+Customers continue using the Spreadsheet user interface or public `open()` method. The Spreadsheet internally handles file processing without requiring manual conversion or direct library usage.
 
-## Supported File Formats
+## How Client-Side Import Works
 
-Client-side import using `@syncfusion/ej2-xlsx` supports only the following file format:
+When `openUrl` is not configured, the Spreadsheet component automatically uses its integrated client-side processing capabilities. The component handles file parsing and rendering internally without requiring server communication.
+
+Customers do not need to manually call `Workbook.open()` or perform any direct processing with `@syncfusion/ej2-xlsx`. The Spreadsheet manages all file processing automatically through its public API.
+
+## Supported Formats
+
+Client-side import currently supports:
 * Microsoft Excel Workbook (.xlsx)
 
-## Prerequisites
+## Configure Client-Side Import
 
-To use client-side import, install the required package:
+To use client-side import, simply omit the `openUrl` property from your Spreadsheet configuration:
 
-```bash
-npm install @syncfusion/ej2-xlsx
-```
-
-## Reading Excel Files Client-Side
-
-The `@syncfusion/ej2-xlsx` library can read and extract data from XLSX files, but does not provide direct integration with the Spreadsheet component. Below are examples of reading Excel files:
-
-### Reading from Local File
-
-To read an Excel file from the local file system:
-
-```jsx
-import React from 'react';
-import { Workbook } from '@syncfusion/ej2-xlsx';
+```js
+import React, { useRef } from 'react';
+import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 
 const App = () => {
-  const handleFileUpload = (event) => {
-    const file = event.target.files[0];
-    if (file && file.type === 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet') {
-      const fileReader = new FileReader();
-      fileReader.onload = (e) => {
-        const data = new Uint8Array(e.target.result);
-        Workbook.open(data).then((workbook) => {
-          // Access workbook data
-          const sheet = workbook.sheet(0);
-          const cellValue = sheet.cell('A1').value;
-          console.log('Cell A1 value:', cellValue);
-          
-          // Note: This does not directly integrate with Spreadsheet component
-          // For full integration, use server-side import approach
-        });
-      };
-      fileReader.readAsArrayBuffer(file);
-    }
-  };
-
+  const spreadsheetRef = useRef(null);
+  
   return (
-    <div>
-      <input type="file" accept=".xlsx" onChange={handleFileUpload} />
-      <p>Note: This reads file data but does not directly load into Spreadsheet UI</p>
-    </div>
+    <SpreadsheetComponent
+      ref={spreadsheetRef}
+      // Note: No openUrl configured for client-side import
+    />
   );
 };
 
 export default App;
 ```
 
-### Reading from URL
+With this configuration, all standard Spreadsheet open functionality works through client-side processing.
 
-To read an Excel file directly from a URL:
+## Supported File Sources
 
-```jsx
-import React from 'react';
-import { Workbook } from '@syncfusion/ej2-xlsx';
+### Open Excel Files from the Local System
 
-const App = () => {
-  const readFromUrl = () => {
-    fetch('https://example.com/sample.xlsx')
-      .then(response => response.arrayBuffer())
-      .then(data => {
-        Workbook.open(data).then((workbook) => {
-          // Process the workbook data
-          console.log('Workbook loaded from URL:', workbook);
-          // Note: Manual conversion to Spreadsheet format required
-        });
-      })
-      .catch(error => {
-        console.error('Error loading file from URL:', error);
-      });
-  };
+You can open Excel files from the local system using the standard File > Open interface or programmatically:
 
-  return (
-    <div>
-      <button onClick={readFromUrl}>Read from URL</button>
-      <p>Note: This reads file data but does not directly load into Spreadsheet UI</p>
-    </div>
-  );
+```js
+// Programmatic open from local file input
+const handleFileOpen = (event) => {
+  const file = event.target.files[0];
+  if (file) {
+    spreadsheetRef.current?.open({ file });
+  }
 };
 
-export default App;
+// In your JSX:
+// <input type="file" accept=".xlsx" onChange={handleFileOpen} />
 ```
 
-## Limitations
+### Open Excel Files from a URL
 
-Client-side import using `@syncfusion/ej2-xlsx` has the following limitations:
+To open Excel files from a URL, fetch the file and convert the response to a File object:
 
-1. **No Direct Spreadsheet Integration**: Does not directly integrate with Spreadsheet UI component
-2. **Manual Data Conversion Required**: Requires manual conversion to Spreadsheet JSON format
-3. **Limited File Format Support**: Only supports XLSX format (.xlsx files)
-4. **No Formula Calculation**: Formulas remain as text and are not calculated
-5. **No Advanced Features**: Does not support external workbook references, advanced parsing options, or full Spreadsheet features
-6. **File Size Limits**: Large files may cause browser memory issues
-7. **Performance**: Processing is limited by client device capabilities
+```js
+const openFromUrl = () => {
+  fetch('https://example.com/sample.xlsx')
+    .then(response => response.blob())
+    .then(blob => {
+      const file = new File([blob], 'sample.xlsx', { type: blob.type });
+      spreadsheetRef.current?.open({ file });
+    })
+    .catch(error => {
+      console.error('Error loading file from URL:', error);
+    });
+};
+```
 
-## Recommended Approach
+### Open Excel Files from Blob Data
 
-For applications requiring full Spreadsheet functionality with proper integration, consider using [server-side import](./server-side-import) which provides:
+To open Excel files from Blob data, convert the Blob to a File object:
 
-* Complete integration with Spreadsheet UI component
-* Automatic conversion to Spreadsheet-compatible JSON
-* Support for multiple file formats (XLSX, XLS, CSV, XLSM, XLSB)
-* Formula calculation and advanced features
-* Better performance for large files
+```js
+const openFromBlob = (blobData) => {
+  const file = new File([blobData], 'sample.xlsx', { type: blobData.type });
+  spreadsheetRef.current?.open({ file });
+};
+```
+
+In all cases, the workflow ends by passing a `File` object to the public Spreadsheet API:
+
+`spreadsheetRef.current?.open({ file });`
+
+## Considerations
+
+1. **Format Limitation**: Client-side import currently supports XLSX format only
+2. **Size Limitations**: Large files may impact browser performance
+3. **Feature Differences**: Some advanced features available in server-side import may not be available in client-side import
+4. **No Manual Processing Required**: Customers should not manually call `Workbook.open()` or process `Uint8Array` data
 
 ## See Also
 
