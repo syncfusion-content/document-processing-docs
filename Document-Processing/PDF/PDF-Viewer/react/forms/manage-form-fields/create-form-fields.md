@@ -16,7 +16,7 @@ Create or add new form fields visually with the Form Designer UI or programmatic
 The guide explains the following:
 - How to add fields with the Form Designer UI.
 - How to add and edit fields programmatically (API).
-- How to add common field types: Textbox, Password, CheckBox, RadioButton, ListBox, DropDown, Signature, Initial, DateTime picker.
+- How to add common field types: Textbox, Password, CheckBox, RadioButton, ListBox, DropDown, Signature, Initial, DateTime picker, Barcode.
 
 ## Steps
 
@@ -610,6 +610,127 @@ export function App() {
       actions: {
         format: { script: 'AFTime_FormatEx("HH:MM")' }
       }
+    });
+  };
+
+  return (
+    <div className='control-section'>
+      <PdfViewerComponent
+        ref={viewerRef}
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+        style={{ height: '680px' }}
+        documentLoad={onDocumentLoad}
+      >
+        <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
+      </PdfViewerComponent>
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+{% endhighlight %}
+{% endtabs %}
+
+### Barcode
+
+A barcode field is a form field that displays the entered value as a barcode that can be scanned. Barcode fields can be added and edited both through the Form Designer UI and programmatically.
+
+#### Barcode Symbology
+
+The barcode type is referred to as the **symbology**. The following symbologies are supported, and **PDF417** is used by default.
+
+| Symbology | Description |
+|---|---|
+| `PDF417` | A stacked, linear barcode that supports alphanumeric data. This is the default symbology. |
+| `QRCode` | A two-dimensional matrix barcode that supports numeric, alphanumeric, and binary data. |
+| `DataMatrix` | A two-dimensional matrix barcode that is used to encode a small amount of data in a compact area. |
+
+![Barcode field Symbology in Form Designer](../../../react/images/barcode-ui-types.png)
+
+#### Barcode Value Format
+
+The value that is encoded in the barcode can be supplied in three ways.
+
+| Value format | Description |
+|---|---|
+| `TabDelimited` | Carries the values in the barcode separated by a tab character, so the values appear at a tab space distance from each other. |
+| `XML` | Stores the values pairwise in an XML structure. |
+| `CustomValue` | Stores the value as a string, and any string can be assigned to it. |
+
+N> Complete support for executing custom scripts is not available. Instead, the PDF Viewer parses the final value assigned to the barcode field in the PDF document.
+
+#### Static Barcode Value
+
+The barcode value can be set to a fixed value from the **Value** tab of the Barcode Properties dialog.
+
+Select **Custom Value** in the **Encode** dropdown, and then enter the text to be encoded in the **Custom Value** text box.
+
+![Custom Value option in the Value tab](../../../react/images/ui-barcode-value-tab.png)
+
+#### Dynamic Barcode Value
+
+The barcode value can also be calculated from the other form fields that are present in the PDF document.
+
+In the Form Designer, open the **Value** tab of the Barcode Properties dialog and use the **Select Field for Calculation** option to bind one or more fields to the barcode field.
+
+![Select Field for Calculation option in the Value tab](../../../react/images/dynamic-field-binding.png)
+
+When a value is entered in a bound field, the barcode value is updated automatically.
+
+N> By default, the barcode stores the field name along with its value. To store only the field values, clear the **Include Field Names** option. This option is available only for the `TabDelimited` format and does not apply to the `XML` format, which always stores data as name-value pairs.
+
+#### Barcode Caption
+
+By default, the name of the loaded PDF document is displayed below the generated barcode field. Use the **caption** property to change this text, either from the UI or programmatically.
+
+![Barcode field with caption in Form Designer](../../../react/images/ui-barcode.png)
+
+#### Barcode Error Correction Level
+
+The error correction level determines how much damage the generated barcode can tolerate before it can no longer be read. The available levels depend on the selected symbology.
+
+| Symbology | Supported values |
+|---|---|
+| `PDF417` | `Level0` to `Level8` |
+| `QRCode` | `Low`, `Medium`, `Quartile`, `High` |
+| `DataMatrix` | Not applicable, since Data Matrix does not use this setting. |
+
+The default error correction level is `Level5`.
+
+![Barcode error correction level settings in Form Designer](../../../react/images/ui-barcode-error-correction.png)
+
+**Add via UI**: Open the Form Designer toolbar, select **Barcode**, and click on a PDF page to place the field. Select the placed field to review or change its general properties, such as its name, value, visibility, and whether it is read-only or required.
+
+**Add Programmatically (API)**
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+import * as ReactDOM from 'react-dom/client';
+import React, { useRef } from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject } from '@syncfusion/ej2-react-pdfviewer';
+
+export function App() {
+  const viewerRef = useRef(null);
+
+  const onDocumentLoad = () => {
+    // Add a barcode field with the default PDF417 symbology
+    viewerRef.current?.formDesignerModule.addFormField('Barcode', {
+      name: 'ProductBarcode',
+      bounds: { X: 146, Y: 300, Width: 180, Height: 100 },
+      pageNumber: 1,
+      value: 'SYNCFUSION-001',
+      caption: 'Product Barcode',
+      symbology: 'PDF417',
+      valueFormat: 'TabDelimited',
+      errorCorrectionLevel: 'Level5',
+      isRequired: false,
+      isPrint: true,
+      visibility: 'visible',
+      tooltip: 'Scan to view the product details',
     });
   };
 
