@@ -904,9 +904,7 @@ document.destroy();
 
 ### Hide action
 
-The [PdfHideAction](https://ej2.syncfusion.com/documentation/api/pdf/pdfhideaction) class shows or hides one or more interactive form fields or annotations in response to document, page, annotation, bookmark, or form-field events. Pass a boolean value indicating whether the targets shall be hidden (`true`) or shown (`false`), along with an optional list of target form fields or annotations.
-
-A target form field is specified using its fully qualified field name (`{ fieldName: 'CustomerName' }`), and a target annotation is specified using its annotation instance (`{ annotation: annotation }`). You can dynamically add, inspect, and remove targets at runtime using the [targets](https://ej2.syncfusion.com/documentation/api/pdf/pdfhidetargetcollection) collection property.
+The `PdfHideAction` class shows or hides one or more interactive form fields or annotations in response to document, page, annotation, bookmark, or form-field events. Pass a boolean value indicating whether the targets shall be hidden (`true`) or shown (`false`), along with an optional list of target form fields or annotations.
 
 The following code example demonstrates how to create a hide action that hides an interactive text box field and assign it to a button's `mouseUp` event:
 

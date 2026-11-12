@@ -1,7 +1,7 @@
 ---
 title: Barcode in JavaScript PDF | Syncfusion
 canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
-description: Draw 1D and 2D barcodes in PDF documents using the Syncfusion JavaScript PDF Library.
+description: Learn how to add 1D and 2D barcodes to PDF documents, customize appearance, and export them as images using the Syncfusion JavaScript PDF Library.
 platform: document-processing
 control: PDF
 documentation: UG
@@ -33,11 +33,11 @@ The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-
   - Data Matrix (`PdfDataMatrixBarcode`)
   - PDF417 (`Pdf417Barcode`)
 
-All 1D barcode classes derive from the abstract [`PdfUnidimensionalBarcode`](https://ej2.syncfusion.com/documentation/api/pdf/pdfunidimensionalbarcode), which itself extends [`PdfBarcode`](https://ej2.syncfusion.com/documentation/api/pdf/pdfbarcode). All 2D barcode classes derive from [`PdfBidimensionalBarcode`](https://ej2.syncfusion.com/documentation/api/pdf/pdfbidimensionalbarcode).
+All 1D barcode classes derive from the abstract `PdfUnidimensionalBarcode`, which itself extends `PdfBarcode`. All 2D barcode classes derive from `PdfBidimensionalBarcode`.
 
 ## Adding a one-dimensional barcode to a PDF document
 
-The following example draws a Code 39 barcode on a PDF page using the [`PdfCode39Barcode`](https://ej2.syncfusion.com/documentation/api/pdf/pdfcode39barcode) class. The same pattern applies to every other 1D barcode class listed in the overview.
+The following example draws a Code 39 barcode on a PDF page using the `PdfCode39Barcode` class. The same pattern applies to every other 1D barcode class listed in the overview.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -73,7 +73,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-The following example draws an EAN-13 barcode using the [`PdfEan13Barcode`](https://ej2.syncfusion.com/documentation/api/pdf/pdfean13barcode) class.
+The following example draws an EAN-13 barcode using the `PdfEan13Barcode` class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -115,7 +115,7 @@ N> All 1D barcode classes share the same `draw` method, which accepts a `PdfPage
 
 The `draw` method accepts a point or bounds. A point or zero-sized bounds selects the natural size, calculated from the encoded data, the `narrowBarWidth`, and the quiet zones. Positive bounds scale the barcode to fit the specified width and height and ignore `narrowBarWidth` and `barHeight`. The width and height must both be 0 (natural size) or both be positive; mixing them throws an error.
 
-The following example sets the location and size of a Codabar barcode using the [`PdfCodabarBarcode`](https://ej2.syncfusion.com/documentation/api/pdf/pdfcodabarbarcode) class. The return value of `draw` is the rectangle that the barcode actually occupies and can be used to position other content around it.
+The following example sets the location and size of a Codabar barcode using the `PdfCodabarBarcode` class. The return value of `draw` is the rectangle that the barcode actually occupies and can be used to position other content around it.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -159,7 +159,7 @@ N> When the bounds are smaller than the required quiet zones, or smaller than th
 
 ## Adding a barcode without displaying the barcode text
 
-The human-readable text for a 1D barcode is hidden by setting `textLocation` to `PdfBarcodeTextLocation.None`. The [`PdfBarcodeTextLocation`](https://ej2.syncfusion.com/documentation/api/pdf/pdfbarcodetextlocation) enumeration also supports `Bottom` (default) and `Top`.
+The human-readable text for a 1D barcode is hidden by setting `textLocation` to `PdfBarcodeTextLocation.None`. The `PdfBarcodeTextLocation` enumeration also supports `Bottom` (default) and `Top`.
 
 The following example draws a Code 39 barcode with the human-readable text hidden.
 

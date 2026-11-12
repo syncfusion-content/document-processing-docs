@@ -1185,7 +1185,7 @@ document.destroy();
 
 ### Movie Annotation
 
-This example demonstrates how to add a movie annotation to a PDF page using the [PdfMovieAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfmovieannotation) class. A movie annotation embeds a movie, or references an external movie file, with playback options.
+This example demonstrates how to add a movie annotation to a PDF page using the `PdfMovieAnnotation` class. A movie annotation embeds a movie, or references an external movie file, with playback options.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -1245,7 +1245,7 @@ document.destroy();
 
 ### Trap Network Annotation
 
-This example demonstrates how to add a trap network annotation to a PDF page using the [PdfTrapNetAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdftrapnetannotation) class. A trap network annotation preserves prepress trapping information for a page.
+This example demonstrates how to add a trap network annotation to a PDF page using the `PdfTrapNetAnnotation` class. A trap network annotation preserves pre-press trapping information for a page.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -1299,7 +1299,7 @@ document.destroy();
 
 ### Projection Annotation
 
-This example demonstrates how to read a projection annotation from an existing PDF page using the [PdfProjectionAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfprojectionannotation) class. Existing projection annotations are loaded into the page annotation collection, where their common properties can be modified.
+This example demonstrates how to read a projection annotation from an existing PDF page using the `PdfProjectionAnnotation` class. Existing projection annotations are loaded into the page annotation collection, where their common properties can be modified.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -1349,7 +1349,7 @@ document.destroy();
 
 ### Screen Annotation
 
-This example demonstrates how to add a screen annotation to a PDF page using the [PdfScreenAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfscreenannotation) class. A screen annotation plays embedded media in response to mouse triggers.
+This example demonstrates how to add a screen annotation to a PDF page using the `PdfScreenAnnotation` class. A screen annotation plays embedded media in response to mouse triggers.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -1409,7 +1409,7 @@ document.destroy();
 
 ### Printer Mark Annotation
 
-This example demonstrates how to add a printer mark annotation to a PDF page using the [PdfPrinterMarkAnnotation](https://ej2.syncfusion.com/documentation/api/pdf/pdfprintermarkannotation) class. A printer mark annotation adds production marks such as crop, bleed, registration, color bar, fold, and page information marks.
+This example demonstrates how to add a printer mark annotation to a PDF page using the `PdfPrinterMarkAnnotation` class. A printer mark annotation adds production marks such as crop, bleed, registration, color bar, fold, and page information marks.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -1890,4 +1890,4 @@ document.destroy();
 - [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library)
 - [JavaScript PDF Library documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
 - [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
-- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/tailwind3/pdf/default.html)
+- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/document-library/javascript/#/tailwind3/pdf/default)
