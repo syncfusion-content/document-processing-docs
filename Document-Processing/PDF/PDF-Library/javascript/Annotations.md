@@ -1299,51 +1299,45 @@ document.destroy();
 
 ### Projection Annotation
 
-This example demonstrates how to read a projection annotation from an existing PDF page using the `PdfProjectionAnnotation` class. Existing projection annotations are loaded into the page annotation collection, where their common properties can be modified.
+The following example demonstrates how to add a new projection annotation to a PDF document using the `PdfProjectionAnnotation` class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfAnnotation, PdfProjectionAnnotation} from '@syncfusion/ej2-pdf';
 
-// Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data);
-// Access the first page
-let page: PdfPage = document.getPage(0);
-// Find projection annotations on the page
-for (let i: number = 0; i < page.annotations.count; i++) {
-  let annotation: PdfAnnotation = page.annotations.at(i);
-  if (annotation instanceof PdfProjectionAnnotation) {
-    // Modify supported common properties
-    annotation.author = 'Reviewer';
-    annotation.subject = 'Projection';
-  }
-}
-// Save the document
+import { PdfDocument, PdfPage, PdfProjectionAnnotation } from '@syncfusion/ej2-pdf';
+// Create a new PDF document.
+const document: PdfDocument = new PdfDocument();
+// Add a new page to the document.
+const page: PdfPage = document.addPage();
+// Create a new projection annotation.
+const annotation: PdfProjectionAnnotation = new PdfProjectionAnnotation({x: 100, y: 100, width: 200, height: 100});
+// Set the annotation properties.
+annotation.author = 'Reviewer';
+annotation.subject = 'Projection';
+// Add the annotation to the page.
+page.annotations.add(annotation);
+// Save the PDF document.
 document.save('output.pdf');
-// Destroy the document
+// Destroy the PDF document.
 document.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
-
-// Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data);
-// Access the first page
-var page = document.getPage(0);
-// Find projection annotations on the page
-for (var i = 0; i < page.annotations.count; i++) {
-  var annotation = page.annotations.at(i);
-  if (annotation instanceof ej.pdf.PdfProjectionAnnotation) {
-    // Modify supported common properties
-    annotation.author = 'Reviewer';
-    annotation.subject = 'Projection';
-  }
-}
-// Save the document
+// Create a new PDF document.
+var document = new ej.pdf.PdfDocument();
+// Add a new page to the document.
+var page = document.addPage();
+// Create a new projection annotation.
+var annotation = new ej.pdf.PdfProjectionAnnotation({ x: 100, y: 100, width: 200, height: 100});
+// Set the annotation properties.
+annotation.author = 'Reviewer';
+annotation.subject = 'Projection';
+// Add the annotation to the page.
+page.annotations.add(annotation);
+// Save the PDF document.
 document.save('output.pdf');
-// Destroy the document
+// Destroy the PDF document.
 document.destroy();
-
 {% endhighlight %}
 {% endtabs %}
 

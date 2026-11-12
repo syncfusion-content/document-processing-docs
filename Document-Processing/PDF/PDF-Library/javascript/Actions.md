@@ -7,24 +7,22 @@ control: PDF
 documentation: UG
 ---
 
-# Actions in JavaScript PDF
+# Actions in javaScript PDF
 
-A PDF action defines a predefined operation performed by a PDF reader or viewer when triggered by a document event, page transition, annotation interaction, outline selection, form-field event, or user action. The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) provides comprehensive support to create, configure, read, modify, and chain various PDF actions.
+PDF actions enable automated operations in response to user interactions and document events. The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) supports creating, managing, and chaining a wide range of PDF actions.
 
 ## Adding an action to the PDF document
 
-Document-level actions are associated with life cycle events of the PDF document. You can configure an action to execute when the document is opened, before it closes, before or after printing, and before or after saving.
+The `PdfDocument.actions` property provides access to document-level actions for opening, closing, printing, and saving.
 
-Document actions are accessed through the `actions` property of the `PdfDocument` instance, which returns a `PdfDocumentActions` object:
+- `afterOpen` - Triggered when the document is opened.
+- `beforeClose` - Triggered before the document is closed.
+- `beforePrint` - Triggered before the document is printed.
+- `afterPrint` - Triggered after the document is printed.
+- `beforeSave` - Triggered before the document is saved.
+- `afterSave` - Triggered after the document is saved.
 
-- `afterOpen`: Action executed when the document is opened (supports any `PdfAction`).
-- `beforeClose`: JavaScript action executed before the document is closed (`PdfJavaScriptAction`).
-- `beforePrint`: JavaScript action executed before the document is printed (`PdfJavaScriptAction`).
-- `afterPrint`: JavaScript action executed after the document is printed (`PdfJavaScriptAction`).
-- `beforeSave`: JavaScript action executed before the document is saved (`PdfJavaScriptAction`).
-- `afterSave`: JavaScript action executed after the document is saved (`PdfJavaScriptAction`).
-
-The following code example demonstrates how to set open and close actions on a new PDF document:
+The following code example demonstrates how to set open and close actions on a new PDF document
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -62,7 +60,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-### Adding an Action to an Existing PDF
+### Adding an action to an existing PDF
 
 You can also read, modify, or replace existing document-level actions in a loaded PDF document. Read the `afterOpen` or other event properties to inspect the current action, update properties, or assign a new action.
 
@@ -85,12 +83,8 @@ document.destroy();
 
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
-// Get the existing open action
-var openAction = document.actions.afterOpen;
-if (openAction instanceof ej.pdf.PdfNamedAction) {
-    // Change navigation to the first page instead
-    document.actions.afterOpen = new ej.pdf.PdfNamedAction(ej.pdf.PdfActionDestination.FirstPage);
-}
+// Set or update the after open action
+document.actions.afterOpen = new ej.pdf.PdfNamedAction(ej.pdf.PdfActionDestination.FirstPage);
 // Save the modified document
 document.save('output.pdf');
 // Destroy the document
@@ -125,9 +119,7 @@ The JavaScript PDF Library supports a wide variety of PDF action types conformin
 
 ### JavaScript action
 
-The `PdfJavaScriptAction` class allows you to run custom JavaScript within compatible PDF viewers. Pass the JavaScript code string to the constructor, or configure it using the `script` property.
-
-N> PDF viewer JavaScript support varies across viewer applications and platforms. Many browser-embedded PDF viewers restrict or disable JavaScript execution for security.
+The `PdfJavaScriptAction` executes JavaScript code embedded in the PDF document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -169,9 +161,11 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
+For more PDF JavaScript code examples, refer to the [Adobe JavaScript Developer Guide](https://developer.adobe.com/acrobat-pdfl-sdk).
+
 ### GoTo action
 
-The `PdfGoToAction` class navigates to a destination within the current PDF document. The constructor accepts a `PdfDestination` or a `PdfPage` instance. You can customize the destination zoom, view mode, and target coordinates.
+The `PdfGoToAction` navigates to a specified page in the current document. You can also specify a location on the destination page.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -219,7 +213,7 @@ document.destroy();
 
 ### Remote GoTo action
 
-The `PdfRemoteGoToAction` class navigates to a destination in another, external PDF document. It requires the path to the target PDF file (`filePath`) and a `PdfRemoteDestination` that defines the remote page index and view mode.
+The `PdfRemoteGoToAction` navigates to a specified page in an external PDF document. You can also configure the destination page view.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -273,7 +267,7 @@ document.destroy();
 
 ### Embedded GoTo action
 
-The `PdfEmbeddedGoToAction` class navigates to a destination inside an embedded PDF file or between parent and child documents. It combines a `PdfRemoteDestination`, a `PdfFileSpecification`, and an optional `PdfTargetDictionary`.
+The `PdfEmbeddedGoToAction` navigates to a specified page in an embedded PDF file. You can also specify the destination page view and target document relationship.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -331,7 +325,7 @@ document.destroy();
 
 ### GoTo DPart action
 
-The `PdfGoToDPartAction` class navigates to a document part (DPart) destination within documents supporting PDF document parts.
+The `PdfGoToDPartAction` navigates to a specified document part (DPart) destination within a PDF document. You can also specify the target document part for navigation.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -377,7 +371,7 @@ document.destroy();
 
 ### GoTo 3D view action
 
-The `PdfGoTo3DViewAction` class switches the active view of an existing 3D annotation to a specified named or index-based view.
+The `PdfGoTo3DViewAction` switches to a specified view of a 3D annotation. You can also navigate using a named view or view index.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -419,12 +413,7 @@ document.destroy();
 
 ### Named action
 
-The `PdfNamedAction` class executes predefined navigation operations standard to PDF viewers. It uses the `PdfActionDestination` enumeration:
-
-- `FirstPage`: Navigates to the first page.
-- `LastPage`: Navigates to the last page.
-- `NextPage`: Navigates to the next page.
-- `PrevPage`: Navigates to the previous page.
+The `PdfNamedAction` performs predefined PDF navigation operations. You can also navigate to the first, last, next, or previous page.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -470,7 +459,7 @@ document.destroy();
 
 ### URI action
 
-The `PdfUriAction` class resolves and opens a specified hyperlink or web address in the user's default browser or PDF reader.
+The `PdfUriAction` opens a specified web address or hyperlink. You can also navigate to external online resources.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -514,9 +503,7 @@ document.destroy();
 
 ### Launch action
 
-The `PdfLaunchAction` class opens an external file or launches a desktop application. You can supply a `PdfFileSpecification` to identify the file, configure `isNewWindow` to open in a new window, and specify Windows-specific launch parameters (`PdfWindowsLaunchParameters`) including command-line arguments and working directory.
-
-N> Launch actions are subject to strict operating system and PDF reader security policies. Modern PDF viewers frequently prompt the user for permission or block launch actions.
+The `PdfLaunchAction` opens an external file or launches an application. You can also specify launch parameters and target files.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -576,7 +563,7 @@ document.destroy();
 
 ### Submit form action
 
-The `PdfSubmitFormAction` class submits interactive PDF form data to a specified URL destination over HTTP/HTTPS. It supports various submission data formats (`Html`, `Pdf`, `Fdf`, `Xfdf`), HTTP methods (`Post`, `Get`), coordinate submission, and field filtering.
+The `PdfSubmitFormAction` submits interactive form data to a specified URL. You can also configure submission formats, methods, and target fields.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -634,7 +621,7 @@ document.destroy();
 
 ### Reset form action
 
-The `PdfResetFormAction` class resets interactive PDF form fields back to their default values. By default, it resets all fields. You can selectively limit the reset operation to specific fields using the `fields` property.
+The `PdfResetFormAction` restores form fields to their default values. You can also reset specific fields selectively.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -688,7 +675,7 @@ document.destroy();
 
 ### Import data action
 
-The `PdfImportDataAction` class imports form data from an external FDF or data file into the document's interactive form fields.
+The `PdfImportDataAction` imports form data from an external data file. You can also populate interactive form fields with imported values.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -740,7 +727,7 @@ document.destroy();
 
 ### Sound action
 
-The `PdfSoundAction` class plays an embedded sound stream when triggered. It uses a `PdfSound` object that encapsulates the audio bytes, sampling rate, bit depth, channel configuration and audio encoding.
+The `PdfSoundAction` plays an embedded sound when triggered. You can also configure playback properties and audio settings.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -800,7 +787,7 @@ document.destroy();
 
 ### Rich-media execute action
 
-The `PdfRichMediaExecuteAction` class triggers executable commands on rich-media annotations (such as video or audio players embedded in PDF documents).
+The `PdfRichMediaExecuteAction` executes commands on a rich-media annotation. You can also control embedded multimedia content such as video or audio.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -846,7 +833,7 @@ document.destroy();
 
 ### Set optional-content-group state action
 
-The `PdfSetOCGStateAction` class manipulates the visibility states of optional content groups (layers). It accepts an array of `PdfLayerState` entries, each pairing a layer with an operation (`PdfLayerStateOperation.On`, `Off`, or `Toggle`).
+The `PdfSetOCGStateAction` changes the visibility state of PDF layers. You can also show, hide, or toggle optional content groups.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -904,9 +891,7 @@ document.destroy();
 
 ### Hide action
 
-The `PdfHideAction` class shows or hides one or more interactive form fields or annotations in response to document, page, annotation, bookmark, or form-field events. Pass a boolean value indicating whether the targets shall be hidden (`true`) or shown (`false`), along with an optional list of target form fields or annotations.
-
-The following code example demonstrates how to create a hide action that hides an interactive text box field and assign it to a button's `mouseUp` event:
+The `PdfHideAction` shows or hides specified form fields or annotations. You can also control the visibility of multiple targets.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -962,41 +947,25 @@ document.destroy();
 
 ## Supported Targets and Events
 
-PDF actions can be attached to various document structures, elements, and interactive targets. Each target exposes an `actions` property providing access to its specific collection of events.
+PDF actions can be associated with various document elements and interactive objects. Each supported target exposes an actions or action property that provides access to the supported action events.
 
-| Target | Class | Event property | Event type | Trigger condition |
-|---|---|---|---|---|
-| Document | `PdfDocument` | `afterOpen` | `PdfAction` | Fired when the document is opened. |
-| Document | `PdfDocument` | `beforeClose` | `PdfJavaScriptAction` | Fired before the document is closed. |
-| Document | `PdfDocument` | `beforePrint` | `PdfJavaScriptAction` | Fired before the document is printed. |
-| Document | `PdfDocument` | `afterPrint` | `PdfJavaScriptAction` | Fired after the document finishes printing. |
-| Document | `PdfDocument` | `beforeSave` | `PdfJavaScriptAction` | Fired before the document is saved. |
-| Document | `PdfDocument` | `afterSave` | `PdfJavaScriptAction` | Fired after the document is saved. |
-| Page | `PdfPage` | `open` | `PdfAction` | Fired when the page becomes active or visible. |
-| Page | `PdfPage` | `close` | `PdfAction` | Fired when navigating away from the page. |
-| Annotation | `PdfAnnotation` | `mouseEnter` | `PdfAction` | Fired when the mouse pointer enters the annotation bounds. |
-| Annotation | `PdfAnnotation` | `mouseLeave` | `PdfAction` | Fired when the mouse pointer leaves the annotation bounds. |
-| Annotation | `PdfAnnotation` | `mouseDown` | `PdfAction` | Fired when the mouse button is pressed inside the annotation. |
-| Annotation | `PdfAnnotation` | `mouseUp` | `PdfAction` | Fired when the mouse button is released inside the annotation. |
-| Annotation | `PdfAnnotation` | `gotFocus` | `PdfAction` | Fired when the annotation receives input focus. |
-| Annotation | `PdfAnnotation` | `lostFocus` | `PdfAction` | Fired when the annotation loses input focus. |
-| Bookmark | `PdfBookmark` | `action` | `PdfAction` | Fired when the bookmark or outline item is clicked. |
-| Form field | `PdfField` | `mouseEnter` | `PdfAction` | Fired when the cursor enters the field area. |
-| Form field | `PdfField` | `mouseLeave` | `PdfAction` | Fired when the cursor leaves the field area. |
-| Form field | `PdfField` | `mouseDown` | `PdfAction` | Fired when the mouse button is pressed inside the field. |
-| Form field | `PdfField` | `mouseUp` | `PdfAction` | Fired when the mouse button is released inside the field. |
-| Form field | `PdfField` | `gotFocus` | `PdfAction` | Fired when the form field receives focus. |
-| Form field | `PdfField` | `lostFocus` | `PdfAction` | Fired when the form field loses focus. |
-| Form field | `PdfField` | `keyPressed` | `PdfJavaScriptAction` | Fired when the user enters a keystroke into the field. |
-| Form field | `PdfField` | `format` | `PdfJavaScriptAction` | Fired before the field value is formatted for display. |
-| Form field | `PdfField` | `validate` | `PdfJavaScriptAction` | Fired when the field value changes to validate the value. |
-| Form field | `PdfField` | `calculate` | `PdfJavaScriptAction` | Fired to compute the field value from other fields. |
 
 ### Adding an action to the form field
 
-Form fields expose the `actions` property (`PdfFieldActions`) which provides events for mouse interactions (`mouseEnter`, `mouseLeave`, `mouseDown`, `mouseUp`, `gotFocus`, `lostFocus`) and JavaScript-specific field events (`keyPressed`, `format`, `validate`, `calculate`).
+The `PdfField.actions` property provides access to form field events.
 
-The following code example demonstrates attaching validation and focus actions to a text box field:
+- `mouseEnter` - Triggered when the pointer enters the field area.
+- `mouseLeave` - Triggered when the pointer leaves the field area.
+- `mouseDown` - Triggered when a mouse button is pressed on the field.
+- `mouseUp` - Triggered when a mouse button is released on the field.
+- `gotFocus` - Triggered when the field receives focus.
+- `lostFocus` - Triggered when the field loses focus.
+- `keyPressed` - Triggered when the user enters text into the field.
+- `format` - Triggered before the field value is formatted for display.
+- `validate` - Triggered to validate the field value after it changes.
+- `calculate` - Triggered to calculate the field value based on other fields.
+
+The following example demonstrates how to add an action to a text box field
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -1040,9 +1009,16 @@ document.destroy();
 
 ### Adding an action to the annotation
 
-Annotations support the `actions` property (`PdfAnnotationActions`), allowing you to trigger navigation, URI, JavaScript, or other actions on user interaction (`mouseEnter`, `mouseLeave`, `mouseDown`, `mouseUp`, `gotFocus`, `lostFocus`).
+The `PdfAnnotation.actions` property provides access to annotation events. You can assign navigation, URI, JavaScript, or other PDF actions to these events.
 
-The following code example demonstrates adding hover and click actions to a rectangle annotation:
+- `mouseEnter` - Triggered when the pointer enters the annotation area.
+- `mouseLeave` - Triggered when the pointer leaves the annotation area.
+- `mouseDown` - Triggered when a mouse button is pressed on the annotation.
+- `mouseUp` - Triggered when a mouse button is released on the annotation.
+- `gotFocus` - Triggered when the annotation receives focus.
+- `lostFocus` - Triggered when the annotation loses focus.
+
+The following example demonstrates how to add hover and click actions to a rectangle annotation.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -1086,11 +1062,12 @@ document.destroy();
 
 ### Adding an action to the PDF page
 
-Pages expose the `actions` property (`PdfPageActions`) supporting page life cycle events:
-- `open`: Executed when the page is displayed.
-- `close`: Executed when leaving or closing the page view.
+The `PdfPage.actions` property provides access to page events.
 
-The following code example demonstrates assigning page open actions in an existing PDF document:
+- `open` - Triggered when the page is displayed.
+- `close` - Triggered when the user leaves or closes the page view.
+
+The following example demonstrates how to add an open action to a page in an existing PDF document.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -1098,25 +1075,21 @@ import { PdfDocument, PdfJavaScriptAction, PdfPage } from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 const document: PdfDocument = new PdfDocument(data);
-// Configure an action for each page when displayed
-for (let i: number = 0; i < document.pageCount; i++) {
-    const page: PdfPage = document.getPage(i);
-    page.actions.open = new PdfJavaScriptAction('app.alert("Page opened");');
-}
+// Access the first page and add JavaScript action to the page open event.
+const page: PdfPage = document.getPage(0);
+page.actions.open = new PdfJavaScriptAction('app.alert("Page opened");');
 // Save the document
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
-{% endhighlight %}
+
 {% highlight javascript tabtitle="JavaScript" %}
 
 // Load an existing PDF document
 var document = new ej.pdf.PdfDocument(data);
 // Configure an action for each page when displayed
-for (var i = 0; i < document.pageCount; i++) {
-    var page = document.getPage(i);
-    page.actions.open = new ej.pdf.PdfJavaScriptAction('app.alert("Page opened");');
-}
+var page = document.getPage(0);
+page.actions.open = new ej.pdf.PdfJavaScriptAction('app.alert("Page opened");');
 // Save the document
 document.save('output.pdf');
 // Destroy the document
@@ -1126,9 +1099,9 @@ document.destroy();
 
 ### Adding an action to the PDF bookmark
 
-PDF bookmarks expose the `action` property directly through the `PdfBookmark`. Use this property to get or set the action performed when the bookmark is selected.
+The `PdfBookmark.action` property provides access to the action associated with a bookmark. You can use this property to get or set the action that is performed when the bookmark is selected.
 
-The following code example demonstrates attaching a named navigation action to a bookmark:
+The following example demonstrates how to add a named navigation action to a bookmark.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}

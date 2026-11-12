@@ -458,14 +458,11 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-## Working with shape pagination
+## Shape Pagination
 
-Shape pagination allows a large shape that exceeds the available page bounds to continue across multiple PDF pages. Describe the shape, its drawing style, and its pagination settings in a `PdfShapeElement`, and then draw it using the [drawShapeElement](https://ej2.syncfusion.com/documentation/api/pdf/pdfpage#drawshapeelement) method of the [PdfPage](https://ej2.syncfusion.com/documentation/api/pdf/pdfpage) class. The method returns a `PdfLayoutResult` that contains the last page used and the occupied bounds.
+Shape pagination automatically continues large shapes across multiple PDF pages. Use a `PdfShapeElement`, to define the shape and pagination behavior, then draw it with `PdfPage.drawShapeElement`.The resulting `PdfLayoutResult` contains the last page and layout bounds.
 
-
-### Drawing a ellipse across multiple PDF pages
-
-This example demonstrates how to draw an ellipse whose height exceeds the page height across multiple pages using the [drawShapeElement](https://ej2.syncfusion.com/documentation/api/pdf/pdfpage#drawshapeelement) method of the [PdfPage](https://ej2.syncfusion.com/documentation/api/pdf/pdfpage) class.
+This example demonstrates how to draw an ellipse across multiple pages when it does not fit on a single page.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -534,6 +531,20 @@ document.destroy();
 
 {% endhighlight %}
 {% endtabs %}
+
+### Supported shape element types
+
+The `PdfShapeElement` supports a variety of shape types for drawing graphical content in PDF documents. Specify the required shape type and corresponding shape data to render the shape.
+
+- `Line` - Draws a straight line between two points.
+- `BezierCurve` - Draws a Bézier curve using control points.
+- `Arc` - Draws a curved arc segment.
+- `Rectangle` - Draws a rectangle.
+- `Ellipse` - Draws an ellipse or circle.
+- `Pie` - Draws a pie-shaped segment.
+- `Polygon` - Draws a closed shape using multiple connected points.
+- `Path` - Draws a custom shape made of lines and curves.
+- `RoundedRectangle` - Draws a rectangle with rounded corners.
 
 ## Additional Resources
 

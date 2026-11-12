@@ -11,7 +11,7 @@ documentation: UG
 
 ## Overview
 
-A PDF document can embed supporting files, such as text documents, images, and other PDF documents, as document-level file attachments. The attachments are stored inside the PDF file and can be extracted by the user or by an application later.
+A PDF document can contain file attachments, such as text documents, images, and other PDF files. These attachments are embedded within the PDF and can be accessed or extracted later.
 
 The JavaScript PDF Library supports the following attachment operations through the `PdfAttachment` class and the attachment members of `PdfDocument`:
 
@@ -74,26 +74,9 @@ document.destroy();
 
 N> The `options` argument of the `PdfAttachment` constructor is optional. When the data is a string, it must be Base64-encoded.
 
-## Attachment properties
-
-The following table lists the public properties of the `PdfAttachment` class.
-
-| Property | Type | Access | Description |
-|----------|------|--------|-------------|
-| `fileName` | `string` | Read / Write | The file name of the attachment. It is used as the display name and as the name of the embedded file. |
-| `data` | `Uint8Array` | Read-only | A copy of the decoded bytes of the embedded file. |
-| `index` | `number` | Read-only | The current zero-based position of the attachment in the document. |
-| `description` | `string` | Read / Write | A description of the attachment. The default value is an empty string. |
-| `mimeType` | `string` | Read / Write | The MIME type of the file, for example `text/plain`. The default value is an empty string. |
-| `creationDate` | `Date` | Read / Write | The creation date of the embedded file. It has no value unless it is set or read from the PDF. |
-| `modificationDate` | `Date` | Read / Write | The last modification date of the embedded file. It has no value unless it is set or read from the PDF. |
-| `relationship` | `PdfAttachmentRelationship` | Read / Write | How the file relates to the document content: `Source`, `Data`, `Alternative`, `Supplement`, or `Unspecified` (default). |
-
-N> `data` and `index` can be read only while the attachment belongs to a document. Reading them from an attachment that has been removed throws an error.
-
 ## Adding an attachment to an existing PDF document
 
-Load the existing PDF document from `pdfData`, create the attachment from `attachmentData`, and add it to the document.
+Attachments can be added to both new and existing PDF documents using the same approach.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -134,11 +117,9 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-To insert the attachment at a specific position, pass a zero-based index as the second argument: `document.addAttachment(attachment, 0)`. The index must be between `0` and the current attachment count; otherwise, an error is thrown.
-
 ## Accessing and extracting attachments
 
-Use `attachmentsCount` to get the number of attachments and `getAttachment` to get an attachment by its zero-based index. The following example reads the metadata and bytes of each attachment and downloads the embedded file in the browser.
+Use `attachmentsCount` to access the attachment count and `getAttachment` to retrieve attachments by index. The following example reads and downloads embedded attachments.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -264,24 +245,7 @@ document.destroy();
 
 N> Removing an attachment by reference throws an error if the attachment does not belong to the document. A removed `PdfAttachment` is detached, and its `data` and `index` properties can no longer be read.
 
-## Working with the attachment collection
-
-The attachment collection is accessed through the following members of `PdfDocument`.
-
-| Member | Signature | Description |
-|--------|-----------|-------------|
-| `attachmentsCount` | `number` (read-only property) | Gets the number of document-level attachments. |
-| `getAttachment` | `getAttachment(index: number): PdfAttachment` | Gets the attachment at the zero-based index. |
-| `addAttachment` | `addAttachment(attachment: PdfAttachment): number` | Adds the attachment at the end and returns its index. |
-| `addAttachment` | `addAttachment(attachment: PdfAttachment, index: number): void` | Inserts the attachment at the specified index. |
-| `has` | `has(attachment: PdfAttachment): boolean` | Checks whether the attachment belongs to the document. |
-| `removeAttachment` | `removeAttachment(index: number): void` | Removes the attachment at the specified index. |
-| `removeAttachment` | `removeAttachment(attachment: PdfAttachment): void` | Removes the specified attachment. |
-| `clearAllAttachments` | `clearAllAttachments(): void` | Removes all document-level attachments. |
-
-N> `addAttachment` throws an error when the attachment is `null`, its file name is empty or contains a null character, or it has no data.
-
-## Adding PDF attachments with interactive launch buttons
+## Adding PDF attachments with interactive launch actions
 
 You can embed a file in the document and add a button that opens it when clicked. The button uses a `PdfJavaScriptAction` assigned to its `mouseUp` action, and the script calls the PDF viewer's `exportDataObject` function with the embedded file name.
 

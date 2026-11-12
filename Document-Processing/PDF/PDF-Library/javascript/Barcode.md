@@ -33,8 +33,6 @@ The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-
   - Data Matrix (`PdfDataMatrixBarcode`)
   - PDF417 (`Pdf417Barcode`)
 
-All 1D barcode classes derive from the abstract `PdfUnidimensionalBarcode`, which itself extends `PdfBarcode`. All 2D barcode classes derive from `PdfBidimensionalBarcode`.
-
 ## Adding a one-dimensional barcode to a PDF document
 
 The following example draws a Code 39 barcode on a PDF page using the `PdfCode39Barcode` class. The same pattern applies to every other 1D barcode class listed in the overview.
@@ -49,8 +47,8 @@ let document: PdfDocument = new PdfDocument();
 let page: PdfPage = document.addPage();
 // Create a Code 39 barcode
 let barcode: PdfCode39Barcode = new PdfCode39Barcode('CODE39$');
-// Draw the barcode on the page at its natural size
-barcode.draw(page, { x: 50, y: 50 });
+// Draw the barcode within the specified bounds
+barcode.draw(page, { x: 50, y: 50, width: 200, height: 50 });
 // Save the document
 document.save('output.pdf');
 // Destroy the document
@@ -64,8 +62,8 @@ var document = new ej.pdf.PdfDocument();
 var page = document.addPage();
 // Create a Code 39 barcode
 var barcode = new ej.pdf.PdfCode39Barcode('CODE39$');
-// Draw the barcode on the page at its natural size
-barcode.draw(page, { x: 50, y: 50 });
+// Draw the barcode within the specified bounds
+barcode.draw(page, { x: 50, y: 50, width: 200, height: 50 });
 // Save the document
 document.save('output.pdf');
 // Destroy the document
@@ -73,7 +71,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-The following example draws an EAN-13 barcode using the `PdfEan13Barcode` class.
+The following example draws an EAN-13 barcode within the specified bounds using the `PdfEan13Barcode` class.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -85,8 +83,8 @@ let document: PdfDocument = new PdfDocument();
 let page: PdfPage = document.addPage();
 // Create an EAN-13 barcode
 let barcode: PdfEan13Barcode = new PdfEan13Barcode('400638133393');
-// Draw the barcode on the page
-barcode.draw(page, { x: 50, y: 50 });
+// Draw the barcode within the specified bounds
+barcode.draw(page, { x: 50, y: 50, width: 200, height: 50 });
 // Save the document
 document.save('output.pdf');
 // Destroy the document
@@ -100,8 +98,8 @@ var document = new ej.pdf.PdfDocument();
 var page = document.addPage();
 // Create an EAN-13 barcode
 var barcode = new ej.pdf.PdfEan13Barcode('400638133393');
-// Draw the barcode on the page
-barcode.draw(page, { x: 50, y: 50 });
+// Draw the barcode within the specified bounds
+barcode.draw(page, { x: 50, y: 50, width: 200, height: 50 });
 // Save the document
 document.save('output.pdf');
 // Destroy the document
@@ -109,9 +107,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-N> All 1D barcode classes share the same `draw` method, which accepts a `PdfPage` or `PdfGraphics` target together with a point or bounds, and returns the rectangle occupied by the barcode, including quiet zones and text. An invalid text, bounds, or property value throws an error and nothing is drawn.
-
-## Setting the location and size of a barcode
+### Setting the location and size of a barcode
 
 The `draw` method accepts a point or bounds. A point or zero-sized bounds selects the natural size, calculated from the encoded data, the `narrowBarWidth`, and the quiet zones. Positive bounds scale the barcode to fit the specified width and height and ignore `narrowBarWidth` and `barHeight`. The width and height must both be 0 (natural size) or both be positive; mixing them throws an error.
 
@@ -157,11 +153,11 @@ document.destroy();
 
 N> When the bounds are smaller than the required quiet zones, or smaller than the space needed for the text and bars, `draw` throws an error.
 
-## Adding a barcode without displaying the barcode text
+### Adding a barcode without displaying the barcode text
 
 The human-readable text for a 1D barcode is hidden by setting `textLocation` to `PdfBarcodeTextLocation.None`. The `PdfBarcodeTextLocation` enumeration also supports `Bottom` (default) and `Top`.
 
-The following example draws a Code 39 barcode with the human-readable text hidden.
+The following example draws a Code 39 barcode without the human-readable text.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -194,6 +190,91 @@ var barcode = new ej.pdf.PdfCode39Barcode('123456789');
 barcode.textLocation = ej.pdf.PdfBarcodeTextLocation.None;
 // Draw the barcode on the page
 barcode.draw(page, { x: 50, y: 50 });
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+{% endhighlight %}
+{% endtabs %}
+
+
+## Adding a two-dimensional barcode to a PDF document
+
+The following example draws a QR Code on a PDF page using the `PdfQRBarcode` class. The same pattern applies to `PdfDataMatrixBarcode` and `Pdf417Barcode`.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import {PdfDocument, PdfPage, PdfQRBarcode, PdfQRErrorCorrectionLevel} from '@syncfusion/ej2-pdf';
+
+// Create a new PDF document
+let document: PdfDocument = new PdfDocument();
+// Add a page to the document
+let page: PdfPage = document.addPage();
+// Create a QR Code barcode
+let barcode: PdfQRBarcode = new PdfQRBarcode('https://www.syncfusion.com', {
+  errorCorrectionLevel: PdfQRErrorCorrectionLevel.Medium
+});
+// Draw the barcode on the page
+barcode.draw(page, { x: 50, y: 50, width: 150, height: 150 });
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Add a page to the document
+var page = document.addPage();
+// Create a QR Code barcode
+var barcode = new ej.pdf.PdfQRBarcode('https://www.syncfusion.com', {
+  errorCorrectionLevel: ej.pdf.PdfQRErrorCorrectionLevel.Medium
+});
+// Draw the barcode on the page
+barcode.draw(page, { x: 50, y: 50, width: 150, height: 150 });
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+{% endhighlight %}
+{% endtabs %}
+
+The following example draws a Data Matrix barcode.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import {PdfDocument, PdfPage, PdfDataMatrixBarcode, PdfDataMatrixEncoding, PdfDataMatrixSize} from '@syncfusion/ej2-pdf';
+
+// Create a new PDF document
+let document: PdfDocument = new PdfDocument();
+// Add a page to the document
+let page: PdfPage = document.addPage();
+// Create a Data Matrix barcode
+let barcode: PdfDataMatrixBarcode = new PdfDataMatrixBarcode('ITEM-2026-0001', {
+  encoding: PdfDataMatrixEncoding.Auto,
+  symbolSize: PdfDataMatrixSize.Auto
+});
+// Draw the barcode on the page
+barcode.draw(page, { x: 50, y: 50, width: 120, height: 120 });
+// Save the document
+document.save('output.pdf');
+// Destroy the document
+document.destroy();
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Add a page to the document
+var page = document.addPage();
+// Create a Data Matrix barcode
+var barcode = new ej.pdf.PdfDataMatrixBarcode('ITEM-2026-0001', {
+  encoding: ej.pdf.PdfDataMatrixEncoding.Auto,
+  symbolSize: ej.pdf.PdfDataMatrixSize.Auto
+});
+// Draw the barcode on the page
+barcode.draw(page, { x: 50, y: 50, width: 120, height: 120 });
 // Save the document
 document.save('output.pdf');
 // Destroy the document
@@ -329,92 +410,6 @@ document.save('output.pdf');
 document.destroy();
 {% endhighlight %}
 {% endtabs %}
-
-## Adding a two-dimensional barcode to a PDF document
-
-The following example draws a QR Code on a PDF page using the `PdfQRBarcode` class. The same pattern applies to `PdfDataMatrixBarcode` and `Pdf417Barcode`.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfQRBarcode, PdfQRErrorCorrectionLevel} from '@syncfusion/ej2-pdf';
-
-// Create a new PDF document
-let document: PdfDocument = new PdfDocument();
-// Add a page to the document
-let page: PdfPage = document.addPage();
-// Create a QR Code barcode
-let barcode: PdfQRBarcode = new PdfQRBarcode('https://www.syncfusion.com', {
-  errorCorrectionLevel: PdfQRErrorCorrectionLevel.Medium
-});
-// Draw the barcode on the page
-barcode.draw(page, { x: 50, y: 50, width: 150, height: 150 });
-// Save the document
-document.save('output.pdf');
-// Destroy the document
-document.destroy();
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-
-// Create a new PDF document
-var document = new ej.pdf.PdfDocument();
-// Add a page to the document
-var page = document.addPage();
-// Create a QR Code barcode
-var barcode = new ej.pdf.PdfQRBarcode('https://www.syncfusion.com', {
-  errorCorrectionLevel: ej.pdf.PdfQRErrorCorrectionLevel.Medium
-});
-// Draw the barcode on the page
-barcode.draw(page, { x: 50, y: 50, width: 150, height: 150 });
-// Save the document
-document.save('output.pdf');
-// Destroy the document
-document.destroy();
-{% endhighlight %}
-{% endtabs %}
-
-The following example draws a Data Matrix barcode.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfDataMatrixBarcode, PdfDataMatrixEncoding, PdfDataMatrixSize} from '@syncfusion/ej2-pdf';
-
-// Create a new PDF document
-let document: PdfDocument = new PdfDocument();
-// Add a page to the document
-let page: PdfPage = document.addPage();
-// Create a Data Matrix barcode
-let barcode: PdfDataMatrixBarcode = new PdfDataMatrixBarcode('ITEM-2026-0001', {
-  encoding: PdfDataMatrixEncoding.Auto,
-  symbolSize: PdfDataMatrixSize.Auto
-});
-// Draw the barcode on the page
-barcode.draw(page, { x: 50, y: 50, width: 120, height: 120 });
-// Save the document
-document.save('output.pdf');
-// Destroy the document
-document.destroy();
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-
-// Create a new PDF document
-var document = new ej.pdf.PdfDocument();
-// Add a page to the document
-var page = document.addPage();
-// Create a Data Matrix barcode
-var barcode = new ej.pdf.PdfDataMatrixBarcode('ITEM-2026-0001', {
-  encoding: ej.pdf.PdfDataMatrixEncoding.Auto,
-  symbolSize: ej.pdf.PdfDataMatrixSize.Auto
-});
-// Draw the barcode on the page
-barcode.draw(page, { x: 50, y: 50, width: 120, height: 120 });
-// Save the document
-document.save('output.pdf');
-// Destroy the document
-document.destroy();
-{% endhighlight %}
-{% endtabs %}
-
-N> All 2D barcode classes derive from `PdfBidimensionalBarcode` and share the same `draw` method, which accepts a `PdfPage` or `PdfGraphics` target together with the bounds of the barcode, and returns the bounds actually occupied by the barcode.
 
 ## Creating a QR Code with a logo
 
