@@ -19,9 +19,37 @@ WebMCP allows AI assistants running in the browser to interact directly with Syn
 
 Instead of relying on DOM inspection or simulating user interactions, AI assistants can interact directly with Spreadsheet APIs through WebMCP tools. This approach provides more reliable and accurate results.
 
-## Basic Configuration
+Once connected, an AI assistant can perform tasks such as:
 
-To enable WebMCP for the Spreadsheet, set `enableWebMcp` to `true`, bind the `beforeWebMcpToolExecute` event, and add the `e-spreadsheet-webmcpsettings` child tag.
+- Update Spreadsheet cells.
+- Read and analyze spreadsheet data.
+- Perform spreadsheet-specific actions through natural language prompts.
+
+## Integrating WebMCP tools
+
+Follow these steps to integrate WebMCP support into Syncfusion® ASP.NET Core Spreadsheet.
+
+### Step 1: Create an application
+
+Create an ASP.NET Core application and add the Syncfusion® ASP.NET Core Spreadsheet by following the [Getting Started with ASP.NET Core Spreadsheet](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/getting-started-core) guide. After completing the setup, follow the steps below to enable WebMCP integration.
+
+### Step 2: Enable WebMCP support
+
+Set the `enableWebMcp` property to `true` to register the Spreadsheet's available tools with the WebMCP runtime.
+
+When `enableWebMcp` is enabled, Spreadsheet tools are automatically registered with the WebMCP runtime and become discoverable by authorized WebMCP clients.
+
+For example, a Spreadsheet may expose tools such as:
+
+- getCellData
+- editCell
+- addSheet
+
+An AI assistant can discover these tools and invoke them based on user prompts.
+
+### Step 3: Register Spreadsheet tools
+
+To register Spreadsheet tools with WebMCP, set `enableWebMcp` to `true` and add the `e-spreadsheet-webmcpsettings` child tag with a `name`.
 
 ```cshtml
 <ejs-spreadsheet id="sheet" height="380px" enableWebMcp="true" beforeWebMcpToolExecute="onWebMcpBeforeTool">
@@ -36,24 +64,54 @@ To enable WebMCP for the Spreadsheet, set `enableWebMcp` to `true`, bind the `be
 </ejs-spreadsheet>
 ```
 
-The `name` property uniquely identifies this Spreadsheet instance when multiple Spreadsheet instances exist on the same page. AI prompts reference Spreadsheet instances by name to disambiguate operations.
+### Step 4: Customize tool registration
 
-## WebMCP Events
+Use the `webMcpSettings` property to customize how WebMCP tools are exposed to AI agents. The available settings are listed below.
 
-### beforeWebMcpToolExecute
+| Property | Description |
+|----------|-------------|
+| `name` | Prefix applied to registered tool names. If name: `sales` is specified, a tool such as `getCellData` may be registered as `sales_getCellData`, allowing multiple Spreadsheet instances to coexist without tool name conflicts. |
 
-The `beforeWebMcpToolExecute` event is a Spreadsheet event that occurs before a WebMCP tool executes. In the example above, it is bound to the `onWebMcpBeforeTool` JavaScript function.
+```cshtml
+<ejs-spreadsheet id="sheet" enableWebMcp="true" beforeWebMcpToolExecute="onWebMcpBeforeTool">
+    <e-spreadsheet-webmcpsettings name="sales"></e-spreadsheet-webmcpsettings>
+</ejs-spreadsheet>
+```
 
-## WebMCP Settings Properties
+> Use only the `name` property as other properties like `tools` and `exposeTo` are not verified for ASP.NET Spreadsheet.
 
-| Property | Type | Description |
-|----------|------|-------------|
-| `name` | String | Unique identifier for the Spreadsheet instance. Required when multiple Spreadsheet instances exist on the same page. |
+### Step 5: Monitor and control tool execution
+
+The `beforeWebMcpToolExecute` event is triggered before a tool is executed. This event allows you to:
+
+- Audit tool usage.
+- Validate incoming requests.
+- Cancel tool execution when necessary.
+- Apply custom business rules and security policies.
+
+> AI-generated requests should always be validated before executing write operations. Perform additional authorization checks within `beforeWebMcpToolExecute` when modifying application data.
+
+```cshtml
+<ejs-spreadsheet id="sheet" enableWebMcp="true" beforeWebMcpToolExecute="onWebMcpBeforeTool">
+    <e-spreadsheet-webmcpsettings name="sheet"></e-spreadsheet-webmcpsettings>
+</ejs-spreadsheet>
+```
+
+Handle the event to implement custom validation:
+
+```javascript
+function onWebMcpBeforeTool(args) {
+    // Access the tool name through args.toolName
+    // Note: Event argument structure may vary in ASP.NET implementation
+    console.log("WebMCP tool execution: " + args.toolName);
+}
+```
 
 ## Best practices
 
 - Use the `name` property when multiple Spreadsheet instances exist on the same page.
 - Monitor tool activity through the `beforeWebMcpToolExecute` event.
+- Apply application-specific validation before executing tool operations.
 
 ## Supported Features
 
@@ -80,26 +138,19 @@ AI responses are only as good as the prompt you provide. Vague requests like *"f
 
 ### Tips for Effective Prompts
 
-- Be specific about the desired outcome.
-- Include relevant context about your data.
-- Specify formatting preferences clearly.
-- Use natural language that describes the visual result you want.
+- **Be Specific** — Include exact column names, cell ranges, colors, and formatting details
+- **Provide Context** — Mention the sheet, data type, or business objective
+- **One Goal at a Time** — Complex prompts may confuse the AI; break them into steps
+- **Reference Cells Clearly** — Use specific addresses (e.g., "A1:C10") instead of vague ranges
+- **State Expectations** — Clarify sort order, filter criteria, or output format
 
-### Common Spreadsheet Tasks
+## Next steps
 
-Here are examples of effective prompts for common Spreadsheet tasks:
+After successfully enabling WebMCP, you can:
 
-**Data Analysis:**
-*"Calculate the sum of column D and display it in cell D100."*
-
-**Formatting:**
-*"Apply currency format to column E and center align all headers."*
-
-**Data Manipulation:**
-*"Sort the data by column C in descending order and filter out empty rows."*
-
-**Chart Creation:**
-*"Create a bar chart showing sales data from columns A and B for the first quarter."*
+- Build AI-powered workflows that interact directly with spreadsheet data and UI elements.
+- Create secure and controlled tool execution pipelines using custom validation logic.
+- Enhance spreadsheet applications with intelligent automation.
 
 ## See also
 
