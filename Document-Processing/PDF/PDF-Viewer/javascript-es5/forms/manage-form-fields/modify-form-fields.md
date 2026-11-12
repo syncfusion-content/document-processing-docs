@@ -368,7 +368,7 @@ When a value is entered in a bound field, the barcode value is updated automatic
 
 N> By default, the barcode stores the field name along with its value. To store only the field values, clear the **Include Field Names** option. This option is available only for the `TabDelimited` format and does not apply to the `XML` format, which always stores data as name-value pairs.
 
-#### Caption
+#### Barcode Caption
 
 By default, the name of the loaded PDF document is displayed below the generated barcode field. Use the **caption** property to change this text, either from the UI or programmatically.
 
