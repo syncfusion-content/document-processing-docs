@@ -538,6 +538,128 @@ Use the **Format** tab to change the field type (Date or Time), select a display
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples)
 
+### Barcode
+
+Select a Barcode field in Form Designer to review or change its settings. The toolbar includes the Barcode tool, and the page displays the generated barcode.
+
+![Barcode field in Form Designer](../../../react/images/ui-barcode.png)
+
+Use the field's **General** properties to review or edit its name, value, caption, tooltip, visibility, read-only and required settings, and print visibility.
+
+The **Options** properties include the barcode type, X dimension, error correction level, and the option to compress the data before encoding it to the barcode.
+
+#### Symbology
+
+The barcode type is referred to as the **symbology**. The following symbologies are supported, and **PDF417** is used by default.
+
+| Symbology | Description |
+|---|---|
+| `PDF417` | A stacked, linear barcode that supports alphanumeric data. This is the default symbology. |
+| `QRCode` | A two-dimensional matrix barcode that supports numeric, alphanumeric, and binary data. |
+| `DataMatrix` | A two-dimensional matrix barcode that is used to encode a small amount of data in a compact area. |
+
+![Barcode field Symbology in Form Designer](../../../react/images/barcode-ui-types.png)
+
+#### Value Format
+
+The value that is encoded in the barcode can be supplied in three ways.
+
+| Value format | Description |
+|---|---|
+| `TabDelimited` | Carries the values in the barcode separated by a tab character, so the values appear at a tab space distance from each other. |
+| `XML` | Stores the values pairwise in an XML structure. |
+| `CustomValue` | Stores the value as a string, and any string can be assigned to it. |
+
+![Barcode Value Format in Form Designer](../../../react/images/barcode-value-types.png)
+
+N> Complete support for executing custom scripts is not available. Instead, the PDF Viewer parses the final value assigned to the barcode field in the PDF document.
+
+#### Static Barcode Value
+
+The barcode value can be set to a fixed value from the **Value** tab of the Barcode Properties dialog.
+
+Select **Custom Value** in the **Encode** dropdown, and then enter the text to be encoded in the **Custom Value** text box.
+
+![Custom Value option in the Value tab](../../../react/images/ui-barcode-value-tab.png)
+
+#### Dynamic Barcode Value
+
+The barcode value can also be calculated from the other form fields that are present in the PDF document.
+
+In the Form Designer, open the **Value** tab of the Barcode Properties dialog and use the **Select Field for Calculation** option to bind one or more fields to the barcode field.
+
+![Select Field for Calculation option in the Value tab](../../../react/images/dynamic-field-binding.png)
+
+When a value is entered in a bound field, the barcode value is updated automatically.
+
+N> By default, the barcode stores the field name along with its value. To store only the field values, clear the **Include Field Names** option. This option is available only for the `TabDelimited` format and does not apply to the `XML` format, which always stores data as name-value pairs.
+
+#### Caption
+
+By default, the name of the loaded PDF document is displayed below the generated barcode field. Use the **caption** property to change this text, either from the UI or programmatically.
+
+#### Error Correction Level
+
+The error correction level determines how much damage the generated barcode can tolerate before it can no longer be read. The available levels depend on the selected symbology.
+
+| Symbology | Supported values |
+|---|---|
+| `PDF417` | `Level0` to `Level8` |
+| `QRCode` | `Low`, `Medium`, `Quartile`, `High` |
+| `DataMatrix` | Not applicable, since Data Matrix does not use this setting. |
+
+The default error correction level is `Level5`.
+
+![Barcode error correction level settings in Form Designer](../../../react/images/ui-barcode-error-correction.png)
+
+- API: [updateFormField()](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#updateformfields) for caption, symbology, value format, and error correction level.
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+import * as ReactDOM from 'react-dom/client';
+import React, { useRef } from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, Inject } from '@syncfusion/ej2-react-pdfviewer';
+
+export function App() {
+  const viewerRef = useRef(null);
+
+  const editBarcode = () => {
+    const fields = viewerRef.current?.retrieveFormFields();
+    const barcode = fields?.find((field) => field.name === 'ProductBarcode');
+    if (barcode) {
+      viewerRef.current?.formDesignerModule.updateFormField(barcode, {
+        caption: 'Updated Barcode Caption',
+        symbology: 'QRCode',
+        valueFormat: 'CustomValue',
+        errorCorrectionLevel: 'High'
+      });
+    }
+  };
+
+  return (
+    <div className='control-section'>
+      <button onClick={editBarcode}>Edit Barcode</button>
+      <PdfViewerComponent
+        ref={viewerRef}
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/31.2.2/dist/ej2-pdfviewer-lib"
+        style={{ height: '680px' }}
+      >
+        <Inject services={[Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]} />
+      </PdfViewerComponent>
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+{% endhighlight %}
+{% endtabs %}
+
+[View Sample on GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Forms/Barcode%20field)
+
 ## Related topics
 
 - [Form Designer overview](../overview)
