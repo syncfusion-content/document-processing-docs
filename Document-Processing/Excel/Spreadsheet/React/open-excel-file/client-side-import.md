@@ -11,13 +11,13 @@ documentation: ug
 
 Client-side import processes workbook files directly in the browser without sending them to an Open service. When `openUrl` is not configured, the Spreadsheet uses its integrated client-side file-processing functionality.
 
-Customers continue using the Spreadsheet user interface or public `open()` method. The Spreadsheet internally handles file processing without requiring manual conversion or direct library usage.
+React Spreadsheet uses `@syncfusion/ej2-xlsx` internally for client-side workbook processing. Customers continue using the Spreadsheet user interface or public `open()` method. Customers must not call `Workbook.open()` directly. Customers do not manually convert workbook data into Spreadsheet JSON.
 
 ## How Client-Side Import Works
 
 When `openUrl` is not configured, the Spreadsheet component automatically uses its integrated client-side processing capabilities. The component handles file parsing and rendering internally without requiring server communication.
 
-Customers do not need to manually call `Workbook.open()` or perform any direct processing with `@syncfusion/ej2-xlsx`. The Spreadsheet manages all file processing automatically through its public API.
+Customers do not need to manually call `Workbook.open()` or perform any direct processing with `@syncfusion/ej2-xlsx`. The Spreadsheet manages all file processing automatically through its public API. `openUrl` must not be configured for client-side import.
 
 ## Supported Formats
 
@@ -97,7 +97,6 @@ const openFromBlob = (blobData) => {
 ```
 
 In all cases, the workflow ends by passing a `File` object to the public Spreadsheet API:
-
 `spreadsheetRef.current?.open({ file });`
 
 ## Considerations
@@ -106,6 +105,7 @@ In all cases, the workflow ends by passing a `File` object to the public Spreads
 2. **Size Limitations**: Large files may impact browser performance
 3. **Feature Differences**: Some advanced features available in server-side import may not be available in client-side import
 4. **No Manual Processing Required**: Customers should not manually call `Workbook.open()` or process `Uint8Array` data
+5. **No openUrl Required**: `openUrl` must not be configured for client-side import
 
 ## See Also
 
