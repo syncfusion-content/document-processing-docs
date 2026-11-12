@@ -79,16 +79,14 @@ let page: PdfPage = document.addPage();
 let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
 // Measure the width and height of the rendered text
 let size: Size = font.measureString('Syncfusion');
-// Create a new document link annotation
-let annotation: PdfDocumentLinkAnnotation = new PdfDocumentLinkAnnotation({ x: 50, y: 40, width: size.width, height: size.height }, { r: 0, g: 0, b: 0}, { r: 165, g: 42, b: 42 }, 1);
 // Initializes a new instance of the `PdfDestination` class.
 let destination: PdfDestination = new PdfDestination(
     page,
     { x: 20, y: 20, width: 100, height: 50 },
     { zoom: 1.0, mode: PdfDestinationMode.fitToPage }
 );
-// Sets destination to document link annotation.
-annotation.destination = destination;
+// Create a new document link annotation
+let annotation: PdfDocumentLinkAnnotation = new PdfDocumentLinkAnnotation({ x: 50, y: 40, width: size.width, height: size.height }, destination, { color: { r: 0, g: 0, b: 0}, innerColor: { r: 165, g: 42, b: 42 }, opacity: 1 });
 // Save the document
 document.save('Output.pdf');
 // Close the document
@@ -105,16 +103,14 @@ var page = document.addPage();
 var font = document.embedFont(ej.pdf.PdfFontFamily.helvetica, 10, ej.pdf.PdfFontStyle.regular);
 // Measure the width and height of the rendered text
 var size = font.measureString('Syncfusion');
-// Create a new document link annotation
-var annotation = new ej.pdf.PdfDocumentLinkAnnotation({ x: 50, y: 40, width: size.width, height: size.height }, { r: 0, g: 0, b: 0 }, { r: 165, g: 42, b: 42 }, 1);
 // Initializes a new instance of the `PdfDestination` class.
 var destination = new ej.pdf.PdfDestination(
     page,
     { x: 20, y: 20, width: 100, height: 50 },
     { zoom: 1.0, mode: ej.pdf.PdfDestinationMode.fitToPage }
 );
-// Sets destination to document link annotation.
-annotation.destination = destination;
+// Create a new document link annotation
+var annotation = new ej.pdf.PdfDocumentLinkAnnotation({ x: 50, y: 40, width: size.width, height: size.height }, destination, { color: { r: 0, g: 0, b: 0 }, innerColor: { r: 165, g: 42, b: 42 }, opacity: 1 });
 // Save the document
 document.save('Output.pdf');
 // Close the document

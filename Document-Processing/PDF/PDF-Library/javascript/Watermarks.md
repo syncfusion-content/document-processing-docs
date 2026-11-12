@@ -27,7 +27,7 @@ The `PdfBitmap` class accepts image data as a Base64 string and supports the fol
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfGraphics, PdfBitmap, PdfGraphicsState } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfGraphics, PdfImage, PdfBitmap, PdfGraphicsState } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
 let document: PdfDocument = new PdfDocument();
@@ -146,7 +146,7 @@ for (let pageIndex = 0; pageIndex < document.pageCount; pageIndex++) {
   // Iterate through the annotations on the page in reverse order
   for (let i: number = page.annotations.count - 1; i >= 0; i--) {
     // Get the annotation at the current index
-    const annotation: PdfWatermarkAnnotation = page.annotations.at(i);
+    const annotation: PdfWatermarkAnnotation = page.annotations.at(i) as PdfWatermarkAnnotation;
     // Check if the annotation is a watermark annotation
     if (annotation instanceof PdfWatermarkAnnotation) {
         // Remove the watermark annotation from the page

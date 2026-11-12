@@ -119,7 +119,7 @@ This example demonstrates how to draw a rounded rectangle in a PDF document usin
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { PdfDocument, PdfPage, PdfGraphics, PdfPen, PdfBrush, drawRoundedRectangle } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfGraphics, PdfPen, PdfBrush } from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument();
@@ -224,7 +224,7 @@ This example demonstrates how to draw a polygon shape in a PDF document using th
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { PdfDocument, PdfPage, PdfGraphics, PdfPen } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfGraphics, PdfPen, Point } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
 let document: PdfDocument = new PdfDocument();
@@ -408,7 +408,7 @@ This example demonstrates how to draw a path in a PDF document using the [drawPa
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { PdfDocument, PdfPage, PdfPen, PdfPath } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfGraphics, PdfPen, PdfPath } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
 let document: PdfDocument = new PdfDocument();

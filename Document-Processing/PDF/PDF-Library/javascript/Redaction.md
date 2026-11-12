@@ -31,9 +31,9 @@ import { PdfDocument } from '@syncfusion/ej2-pdf';
 import { PdfRedactor, PdfRedactionRegion, ApplicationPlatform } from '@syncfusion/ej2-pdf-data-extract';
 
 // Load the source PDF
-let document: PdfDocument = new PdfDocument(data);
+let pdf: PdfDocument = new PdfDocument(data);
 // Create the redactor
-let redactor: PdfRedactor = new PdfRedactor(document);
+let redactor: PdfRedactor = new PdfRedactor(pdf);
 // Define the redaction region
 let redactions: PdfRedactionRegion[] = [];
 redactions.push(new PdfRedactionRegion(0, { x: 10, y: 10, width: 100, height: 50 }));
@@ -47,15 +47,15 @@ const canvasRenderCallback = (): { canvas: any, applicationPlatform: Application
 // Apply the redactions
 await redactor.redact(canvasRenderCallback);
 // Save and dispose
-document.save('output.pdf');
-document.destroy();
+pdf.save('output.pdf');
+pdf.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 // Load the source PDF
-var document = new ej.pdf.PdfDocument(data);
+var pdf = new ej.pdf.PdfDocument(data);
 // Create the redactor
-var redactor = new ej.pdfdataextract.PdfRedactor(document);
+var redactor = new ej.pdfdataextract.PdfRedactor(pdf);
 // Define the redaction region
 var redactions = [];
 redactions.push(new ej.pdfdataextract.PdfRedactionRegion(0, { x: 10, y: 10, width: 100, height: 50 }));
@@ -69,8 +69,8 @@ var canvasRenderCallback = function () {
 // Apply the redactions
 await redactor.redact(canvasRenderCallback);
 // Save and dispose
-document.save('output.pdf');
-document.destroy();
+pdf.save('output.pdf');
+pdf.destroy();
 
 {% endhighlight %}
 {% endtabs %}
@@ -129,11 +129,11 @@ import { PdfDocument } from '@syncfusion/ej2-pdf';
 import { PdfRedactor, PdfRedactionRegion, ApplicationPlatform } from '@syncfusion/ej2-pdf-data-extract';
 
 // Load an existing PDF document
-let document: PdfDocument = new PdfDocument(data);
+let pdf: PdfDocument = new PdfDocument(data);
 // Add redactions to the collection
 let redactions: PdfRedactionRegion[] = [];
 // Initialize a new instance of the `PdfRedactor` class
-let redactor: PdfRedactor = new PdfRedactor(document);
+let redactor: PdfRedactor = new PdfRedactor(pdf);
 // Initialize a new instance of the `PdfRedactionRegion` class.
 let redaction: PdfRedactionRegion = new PdfRedactionRegion(0, {x: 40, y: 41, width: 80, height: 90});
 // Sets the fill color used to fill the redacted area.
@@ -147,21 +147,21 @@ const canvasRenderCallback = (): {canvas: any, applicationPlatform: ApplicationP
     return { canvas: canvas, applicationPlatform: ApplicationPlatform.typescript };
 };
 // Apply redactions on the PDF document
-await redactor.redact(callBack: canvasRenderCallback);
+await redactor.redact(canvasRenderCallback);
 // Save the document
-document.save('output.pdf');
+pdf.save('output.pdf');
 // Destroy the document
-document.destroy();
+pdf.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 
 // Load an existing PDF document
-var document = new ej.pdf.PdfDocument(data);
+var pdf = new ej.pdf.PdfDocument(data);
 // Add redactions to the collection
 var redactions = [];
 // Initialize a new instance of the `PdfRedactor` class
-var redactor = new ej.pdfdataextract.PdfRedactor(document);
+var redactor = new ej.pdfdataextract.PdfRedactor(pdf);
 // Initialize a new instance of the `PdfRedactionRegion` class.
 var redaction = new ej.pdfdataextract.PdfRedactionRegion(0, {x: 40, y: 41, width: 80, height: 90});
 // Sets the fill color used to fill the redacted area.
@@ -177,9 +177,9 @@ const canvasRenderCallback = (): {canvas, applicationPlatform} => {
 // Apply redactions on the PDF document
 await redactor.redact(canvasRenderCallback);
 // Save the document
-document.save('output.pdf');
+pdf.save('output.pdf');
 // Destroy the document
-document.destroy();
+pdf.destroy();
 
 {% endhighlight %}
 {% endtabs %}
@@ -196,12 +196,12 @@ import { PdfDocument } from '@syncfusion/ej2-pdf';
 import { PdfRedactor, PdfRedactionRegion, ApplicationPlatform } from '@syncfusion/ej2-pdf-data-extract';
 
 // Load an existing PDF document
-let document = new PdfDocument(data);
+let pdf = new PdfDocument(data);
 // Add redactions to the collection
 let redactions = [];
 // Initialize a new redaction region with custom appearance
 let redaction = new PdfRedactionRegion(0, { x: 0, y: 0, width: 80, height: 20 }, true);
-let font = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
+let font = pdf.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
 redaction.appearance.normal.graphics.drawString(
   'Redacted Text',
   font,
@@ -213,7 +213,7 @@ redactions.push(redaction);
 redaction = new PdfRedactionRegion(0, { x: 40, y: 43, width: 80, height: 20 }, true);
 redactions.push(redaction);
 // Initialize a new instance of the PdfRedactor class
-let redactor = new PdfRedactor(document);
+let redactor = new PdfRedactor(pdf);
 // Add redactions with specified options
 redactor.add(redactions);
 // Define a canvas render callback that returns a canvas element and the application platform.
@@ -222,22 +222,22 @@ const canvasRenderCallback = (): {canvas: any, applicationPlatform: ApplicationP
     return { canvas: canvas, applicationPlatform: ApplicationPlatform.typescript };
 };
 // Apply redactions on the PDF document
-await redactor.redact(callBack: canvasRenderCallback);
+await redactor.redact(canvasRenderCallback);
 // Save the document
-document.save('output.pdf');
+pdf.save('output.pdf');
 // Destroy the document
-document.destroy();
+pdf.destroy();
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 
 // Load an existing PDF document 
-var document = new ej.pdf.PdfDocument(data);
+var pdf = new ej.pdf.PdfDocument(data);
 // Prepare redactions collection
 var redactions = [];
 // Create a redaction region with a custom appearance (draw "Redacted Text" in red)
 var redaction = new ej.pdf.PdfRedactionRegion(0, { x: 0, y: 0, width: 80, height: 20 }, true);
-var font = document.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
+var font = pdf.embedFont(PdfFontFamily.helvetica, 10, PdfFontStyle.regular);
 // Draw custom appearance on the redaction overlay
 redaction.appearance.normal.graphics.drawString(
   'Redacted Text',
@@ -250,7 +250,7 @@ redactions.push(redaction);
 redaction = new ej.pdf.PdfRedactionRegion(0, {  x: 40, y: 43, width: 80, height: 20 }, true);
 redactions.push(redaction);
 // Initialize redactor
-var redactor = new ej.pdf.PdfRedactor(document);
+var redactor = new ej.pdf.PdfRedactor(pdf);
 // Add redactions with specified options
 redactor.add(redactions);
 // Define a canvas render callback that returns a canvas element and the application platform.
@@ -261,8 +261,8 @@ const canvasRenderCallback = (): {canvas, applicationPlatform} => {
 // Apply redactions on the PDF document
 await redactor.redact(canvasRenderCallback);
 // Save and dispose
-document.save('output.pdf');
-document.destroy();
+pdf.save('output.pdf');
+pdf.destroy();
 
 {% endhighlight %}
 {% endtabs %}

@@ -83,7 +83,7 @@ This example demonstrates how to create an unordered list in a PDF document usin
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfPage, PdfBrush, PdfStringFormat, PdfFontFamily, PdfUnorderedList, PdfFontStyle, PdfPen, PdfUnorderedListStyle, PdfListItemCollection } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfBrush, PdfStringFormat, PdfTextAlignment, PdfFontFamily, PdfUnorderedList, PdfFontStyle, PdfPen, PdfUnorderedListStyle, PdfListItemCollection } from '@syncfusion/ej2-pdf';
 
 // Load the existing document
 let document: PdfDocument = new PdfDocument(data);
@@ -330,7 +330,7 @@ let list: PdfUnorderedList = new PdfUnorderedList(new PdfListItemCollection(['PD
 list.style = PdfUnorderedListStyle.circle;
 // Configure a different marker style for the inner (nested) list
 let nested: PdfOrderedList = new PdfOrderedList(new PdfListItemCollection(['JS', 'TS', 'Vue', 'Angular', 'ASP.Net Core']), {
-    style: PdfNumberStyle.lowerLetter,
+    style: PdfNumberStyle.lowerLatin,
     font: document.embedFont(PdfFontFamily.helvetica, 24, PdfFontStyle.regular)
 });
 // Attach the nested list to the first item of the outer list
@@ -355,7 +355,7 @@ var list = new ej.pdf.PdfUnorderedList(new ej.pdf.PdfListItemCollection(['PDF', 
 list.style = ej.pdf.PdfUnorderedListStyle.circle;
 // Configure a different marker style for the inner (nested) list
 var nested = new ej.pdf.PdfOrderedList(new ej.pdf.PdfListItemCollection(['JS', 'TS', 'Vue', 'Angular', 'ASP.Net Core']), {
-    style: ej.pdf.PdfNumberStyle.lowerLetter,
+    style: ej.pdf.PdfNumberStyle.lowerLatin,
     font: document.embedFont(ej.pdf.PdfFontFamily.helvetica, 24, ej.pdf.PdfFontStyle.regular)
 });
 // Attach the nested list to the first item of the outer list
