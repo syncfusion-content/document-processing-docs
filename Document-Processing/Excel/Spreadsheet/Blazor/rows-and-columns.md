@@ -194,3 +194,93 @@ You can set these properties as follows:
 
 {% endhighlight %}
 {% endtabs %}
+
+## AutoFit Rows and Columns in Blazor Spreadsheet
+
+AutoFit in the [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/blazor-spreadsheet-editor) component automatically adjusts the width of columns or the height of rows to fit their content. This helps improve readability by ensuring that cell values are fully visible without manual resizing.
+
+To control this functionality, use the [AllowAutofit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html) property. When enabled, users can autofit rows and columns by double-clicking the boundaries of row and column headers. You can also apply autofit programmatically using the [AutoFitAsync()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_AutoFitAsync_System_String_) method.
+
+### Enabling autofit
+
+```razor
+@page "/"
+@using Syncfusion.Blazor.Spreadsheet
+
+<SfSpreadsheet AllowAutofit="true">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+```
+
+N> When `AllowAutofit` is set to **true**, users can autofit rows and columns by double-clicking the header boundaries. If it is set to **false**, the double-click autofit behavior is disabled.
+
+### Autofit options
+
+| Operation | Description |
+|------------|-------------|
+| Autofit columns | Adjusts the width of the selected columns to fit their content. |
+| Autofit rows | Adjusts the height of the selected rows to fit their content. |
+
+N> Autofit is applied based on the selected range or the range passed to the API method.
+
+### Autofit via UI
+
+To autofit rows or columns through the user interface, follow these steps:
+
+1. Select the worksheet area you want to adjust.
+2. Double-click the boundary of a column header to autofit the column width.
+3. Double-click the boundary of a row header to autofit the row height.
+
+This automatically resizes the selected columns or rows based on their cell content.
+
+N> Autofit via UI is available only when `AllowAutofit` is enabled.
+
+### Autofit programmatically
+
+The `AutoFitAsync()` method adjusts the width of columns or height of rows in the active sheet to fit their content automatically.
+
+#### Range behavior
+
+| Range format | Autofit behavior |
+|-------------|------------------|
+| `A:D` or `B:B` | Autofit columns |
+| `1:1` or `1:10` | Autofit rows |
+
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
+@page "/"
+@using Syncfusion.Blazor.Spreadsheet
+
+<button class="e-btn" @onclick="AutoFitColumns">AutoFit columns</button>
+<button class="e-btn" @onclick="AutoFitRows">AutoFit rows</button>
+
+<SfSpreadsheet @ref="SpreadsheetRef"
+               DataSource="DataSourceBytes"
+               AllowAutofit="true">
+    <SpreadsheetRibbon></SpreadsheetRibbon>
+</SfSpreadsheet>
+
+@code {
+    private SfSpreadsheet SpreadsheetRef;
+    private byte[] DataSourceBytes;
+
+    protected override void OnInitialized()
+    {
+        string filePath = "wwwroot/Sample.xlsx";
+        DataSourceBytes = File.ReadAllBytes(filePath);
+    }
+
+    private async Task AutoFitColumns()
+    {
+        await SpreadsheetRef.AutoFitAsync("A:D");
+    }
+
+    private async Task AutoFitRows()
+    {
+        await SpreadsheetRef.AutoFitAsync("1:10");
+    }
+}
+
+{% endhighlight %}
+{% endtabs %}
