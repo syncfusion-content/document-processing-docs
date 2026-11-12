@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## FAQs about JavaScript DOCX Editor
+# FAQs about JavaScript DOCX Editor
 
 The frequently asked questions about [JavaScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) are listed below:
 

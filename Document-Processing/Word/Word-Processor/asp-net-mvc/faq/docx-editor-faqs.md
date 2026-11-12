@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## FAQs about ASP.NET MVC DOCX Editor
+# FAQs about ASP.NET MVC DOCX Editor
 
 The frequently asked questions about [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) are listed below:
 

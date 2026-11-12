@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## FAQs about React DOCX Editor
+# FAQs about React DOCX Editor
 
 The frequently asked questions about [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) are listed below:
 

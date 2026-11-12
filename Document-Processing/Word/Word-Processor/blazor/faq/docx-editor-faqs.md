@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## FAQs about Blazor DOCX Editor
+# FAQs about Blazor DOCX Editor
 
 The frequently asked questions about [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) are listed below:
 

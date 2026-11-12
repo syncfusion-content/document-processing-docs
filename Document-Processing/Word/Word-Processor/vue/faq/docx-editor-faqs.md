@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## FAQs about Vue DOCX Editor
+# FAQs about Vue DOCX Editor
 
 The frequently asked questions about [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) are listed below:
 

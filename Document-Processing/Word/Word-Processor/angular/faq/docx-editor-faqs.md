@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-## FAQs about Angular DOCX Editor
+# FAQs about Angular DOCX Editor
 
 The frequently asked questions about [Angular DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/angular-docx-editor) (Document Editor) are listed below:
 
