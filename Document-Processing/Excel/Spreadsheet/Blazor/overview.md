@@ -41,6 +41,7 @@ The [Blazor Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sd
 * [Aggregates](formulas#aggregates): Provides the option to check the sum, average, count, and more for the selected cells or range in the sheet.
 * [Picture](illustrations): Allows you to view, insert, and modify a picture in a Spreadsheet with customizing options.
 * [Chart](charts-and-visualization/overview): Transforms your Spreadsheet data to an intuitive overview for better understanding and to make smart business decisions.
+* [Freeze panes](freeze-pane): Allows you to keep the specified rows and columns always visible at the top and left side of the sheet while scrolling through the sheet.
 * [Password protection](protection#workbook-protection): Allows you to protect the workbook with a password.
 * [Cell range](cell-range): Boost efficiency with auto-fill, wrap text, and quick content clearing
 * [Context Menu](contextmenu): Speed up workflows with instant access to key actions via smart menus
