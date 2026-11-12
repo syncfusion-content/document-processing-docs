@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Form Designer in ASP.NET Core PDF Viewer
 
-When **Form Designer mode** is enabled in the Syncfusion ASP.NET Core PDF Viewer, a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/asp-net-core/pdfviewer/formdesigner#/tailwind3) is displayed. This UI includes a built-in toolbar for adding form fields such as text boxes, password fields, check boxes, radio buttons, drop down lists, list boxes, signature and initial fields, and DateTime picker.
+When **Form Designer mode** is enabled in the Syncfusion ASP.NET Core PDF Viewer, a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/asp-net-core/pdfviewer/formdesigner#/tailwind3) is displayed. This UI includes a built-in toolbar for adding form fields such as text boxes, password fields, check boxes, radio buttons, drop down lists, list boxes, signature and initial fields, DateTime picker, and barcode fields.
 
 Form fields can be placed on the PDF, moved and resized, configured with field and widget properties, previewed, and removed as needed. The Form Designer toolbar can be shown, hidden, and customized to control available tools based on application requirements, enabling flexible and interactive form design directly within the viewer.
 
@@ -29,6 +29,7 @@ The following form fields can be added to the PDF:
 - [Signature field](../forms/manage-form-fields/create-form-fields#add-signature-field)
 - [Initial field](../forms/manage-form-fields/create-form-fields#add-initial-field)
 - [DateTime picker](../forms/manage-form-fields/create-form-fields#add-datetime-picker)
+- [Barcode](../forms/manage-form-fields/create-form-fields#add-barcode)
 
 **Edit Form Fields**
 
@@ -100,6 +101,7 @@ The Form Designer toolbar appears at the top of the PDF Viewer and provides quic
 - [Signature field](../forms/manage-form-fields/create-form-fields#add-signature-field)
 - [Initial field](../forms/manage-form-fields/create-form-fields#add-initial-field)
 - [DateTime picker](../forms/manage-form-fields/create-form-fields#add-datetime-picker)
+- [Barcode](../forms/manage-form-fields/create-form-fields#add-barcode)
 
 Each toolbar item allows placing the corresponding form field by selecting the tool and clicking the desired location in the PDF document.
 
