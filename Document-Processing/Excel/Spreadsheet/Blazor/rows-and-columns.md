@@ -203,14 +203,18 @@ To control this functionality, use the [AllowAutofit](https://help.syncfusion.co
 
 ### Enabling autofit
 
-```razor
+{% tabs %}
+{% highlight razor tabtitle="Index.razor" %}
+
 @page "/"
 @using Syncfusion.Blazor.Spreadsheet
 
 <SfSpreadsheet AllowAutofit="true">
     <SpreadsheetRibbon></SpreadsheetRibbon>
 </SfSpreadsheet>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 N> When `AllowAutofit` is set to **true**, users can autofit rows and columns by double-clicking the header boundaries. If it is set to **false**, the double-click autofit behavior is disabled.
 
