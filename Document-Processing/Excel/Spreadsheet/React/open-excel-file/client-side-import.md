@@ -11,7 +11,7 @@ documentation: ug
 
 Client-side import processes workbook files directly in the browser without sending them to an Open service. When `openUrl` is not configured, the Spreadsheet uses its integrated client-side file-processing functionality.
 
-React Spreadsheet uses `@syncfusion/ej2-xlsx` internally for client-side workbook processing. Customers can use the Spreadsheet user interface or public `open()` method to open files. The Spreadsheet manages all file processing automatically through its public API.
+React Spreadsheet uses `@syncfusion/ej2-xlsx` internally for client-side workbook processing. Use the Spreadsheet user interface or the public `open()` method to open files. The Spreadsheet manages all file processing automatically through its public API.
 
 ## How client-side import works
 

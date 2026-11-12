@@ -7,7 +7,7 @@ control: Spreadsheet
 documentation: ug
 ---
 
-# Open excel files in React Spreadsheet
+# Open Excel files in React Spreadsheet
 
 The React Spreadsheet component allows users to select and open workbook files through the user interface or the public `open()` method. The same UI and public API are used for both client-side and server-side import methods. The processing method is determined by whether `openUrl` is configured.
 
