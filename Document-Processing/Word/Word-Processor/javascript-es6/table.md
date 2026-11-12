@@ -173,7 +173,7 @@ DOCX Editor preserves the position properties of the table and displays the tabl
 
 ## Table position
 
-You can retrieve the position of the table that contains the current selection. The position information can be used to place custom UI elements such as action buttons, context menus, or indicators relative to the table.
+You can retrieve the position of the table that contains the current selection. The table position cannot be retrieved when the current selection is text within a table cell or when table cells are selected.
 
 ### Get table position
 
