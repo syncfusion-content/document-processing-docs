@@ -49,118 +49,24 @@ Please find the below table for the [beforeOpen](https://ej2.syncfusion.com/reac
 | **requestData**   | object                        | Specifies any additional data sent along with the open request. |
 | **requestType**   | `string`                        | Specifies the type of open request that triggered the **beforeOpen** event. Possible values:<br><br>• **initial** – The default request made when loading a workbook.<br>• **chunk** – A follow‑up request to load a portion of the workbook when chunking is enabled and the server provides a chunk plan.<br>• **thresholdLimitConfirmed** – A request made after the user confirms a threshold warning (such as *maximumDataLimit* or *maximumFileSizeLimit*) and chooses to proceed. |
 
-## Open a File Programmatically
-
-To open Excel files programmatically in the Spreadsheet, you can use the [`open`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#open) method of the Spreadsheet component.
-
-Please find the table below for the [`open`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#open) method arguments.
-
-| **Parameter** | **Type**         | **Description**                       |
-|----------|--------------|-----------------------------------|
-| options  | [OpenOptions](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/openOptions)  | Options for opening the excel file. |
-
-
-The following code example demonstrates how to open an Excel file programmatically in the Spreadsheet.
-
-```js
-import React, { useRef } from 'react';
-import { createRoot } from 'react-dom/client';
-import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
-
-const App = () => {
-  const spreadsheetRef = useRef(null);
-
-  const onCreated = () => {
-    fetch('https://js.syncfusion.com/demos/ejservices/data/Spreadsheet/LargeData.xlsx')
-      .then((response) => response.blob())
-      .then((fileBlob) => {
-        const file = new File([fileBlob], 'Sample.xlsx');
-        spreadsheetRef.current?.open({ file });
-      });
-  };
-
-  return (
-    <SpreadsheetComponent
-      ref={spreadsheetRef}
-      created={onCreated}
-      openUrl="https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open"
-      saveUrl="https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save"
-    />
-  );
-};
-
-export default App;
-
-const root = createRoot(document.getElementById('spreadsheet'));
-root.render(<App />);
-```
-
-## Open Events
-
-You can use the [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforeopen) event to customize or cancel the import action, which is triggered before opening an Excel file.
-
 For complete event documentation, refer to the [API reference](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#events).
 
 ## Supported Excel File Formats for Open
 
-The following Excel file formats are supported for opening in the Spreadsheet component:
+The supported Excel file formats depend on the import method:
 
-* Microsoft Excel Workbook (.xlsx)
-* Microsoft Excel 97–2003 Workbook (.xls)
-* Comma-Separated Values (.csv)
-* Excel Macro‑Enabled Workbook (.xlsm)
-* Excel Binary Workbook (.xlsb)
+### Client-Side Import
+- Currently supports XLSX format only
+
+### Server-Side Import
+- Supports multiple file formats (XLSX, XLS, CSV, XLSM, XLSB)
 
 ## Import Options
 
-### Open Excel Files from Local System
+The public `open()` method accepts a File object. For processing-specific source workflows, refer to the client-side or server-side import pages:
 
-If you explore your machine to select and upload an Excel document using the file upload component, you will receive the uploaded document as a raw file in the [success](https://ej2.syncfusion.com/react/documentation/api/uploader/index-default#success) event of the file upload component. In this `success` event, you should pass the received raw file as an argument to the Spreadsheet's [open](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#open) method to see the appropriate output.
-
-The following code example shows how to import an Excel document using file upload component in spreadsheet.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/react/open-save-cs9/app/app.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/open-save-cs9/app/app.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "/document-processing/code-snippet/spreadsheet/react/open-save-cs9" %}
-
-### Open Excel Files from URL
-
-You can achieve to access the remote Excel file by using the [`created`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#created) event. In this event you can fetch the Excel file and convert it to a blob. Convert this blob to a file and [`open`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#open) this file by using Spreadsheet component open method.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/react/open-save-cs2/app/app.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/open-save-cs2/app/app.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "/document-processing/code-snippet/spreadsheet/react/open-save-cs2" %}
-
-### Open Excel Files from Blob Data
-
-By default, the Spreadsheet component provides an option to browse files from the local file system and open them within the component. If you want to open an Excel file from blob data, you need to fetch the blob data from the server or another source and convert this blob data into a `File` object. Then, you can use the [open](https://ej2.syncfusion.com/react/documentation/api/spreadsheet#open) method in the Spreadsheet component to load that `File` object.
-
-Please find the code to fetch the blob data and load it into the Spreadsheet component below.
-
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/react/open-from-blobdata-cs1/app/app.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/open-from-blobdata-cs1/app/app.tsx %}
-{% endhighlight %}
-{% endtabs %}
-
-{% previewsample "/document-processing/code-snippet/spreadsheet/react/open-from-blobdata-cs1" %}
+* [Client-Side Import](./open-excel-file/client-side-import) - For opening files directly in the browser
+* [Server-Side Import](./open-excel-file/server-side-import) - For server-assisted processing
 
 ## Choosing Between Client-Side and Server-Side Import
 

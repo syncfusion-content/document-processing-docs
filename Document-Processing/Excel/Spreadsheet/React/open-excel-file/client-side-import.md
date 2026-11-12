@@ -11,13 +11,13 @@ documentation: ug
 
 Client-side import processes workbook files directly in the browser without sending them to an Open service. When `openUrl` is not configured, the Spreadsheet uses its integrated client-side file-processing functionality.
 
-React Spreadsheet uses `@syncfusion/ej2-xlsx` internally for client-side workbook processing. Customers continue using the Spreadsheet user interface or public `open()` method. Customers must not call `Workbook.open()` directly. Customers do not manually convert workbook data into Spreadsheet JSON.
+React Spreadsheet uses `@syncfusion/ej2-xlsx` internally for client-side workbook processing. Customers can use the Spreadsheet user interface or public `open()` method to open files. The Spreadsheet manages all file processing automatically through its public API.
 
 ## How Client-Side Import Works
 
 When `openUrl` is not configured, the Spreadsheet component automatically uses its integrated client-side processing capabilities. The component handles file parsing and rendering internally without requiring server communication.
 
-Customers do not need to manually call `Workbook.open()` or perform any direct processing with `@syncfusion/ej2-xlsx`. The Spreadsheet manages all file processing automatically through its public API. `openUrl` must not be configured for client-side import.
+The Spreadsheet manages all file processing automatically through its public API. `openUrl` must not be configured for client-side import.
 
 ## Supported Formats
 
@@ -104,8 +104,7 @@ In all cases, the workflow ends by passing a `File` object to the public Spreads
 1. **Format Limitation**: Client-side import currently supports XLSX format only
 2. **Size Limitations**: Large files may impact browser performance
 3. **Feature Differences**: Some advanced features available in server-side import may not be available in client-side import
-4. **No Manual Processing Required**: Customers should not manually call `Workbook.open()` or process `Uint8Array` data
-5. **No openUrl Required**: `openUrl` must not be configured for client-side import
+4. **No openUrl Required**: `openUrl` must not be configured for client-side import
 
 ## See Also
 
