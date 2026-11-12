@@ -19,72 +19,40 @@ To enable opening Excel files, set the [`allowOpen`](https://ej2.syncfusion.com/
 
 > * Use `Ctrl + O` keyboard shortcut to open Excel documents.
 
-## Open a File from the User Interface
+## Open a file from the user interface
 
-In the user interface you can open an Excel document by clicking `File > Open` menu item in ribbon.
+To open a workbook from the user interface, select **File > Open** from the ribbon and choose a file.
 
-The following sample shows the `Open` option configured by using the [`openUrl`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#openurl) property. You can also use the [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforeopen) event to customize or cancel the import action, which is triggered before opening an Excel file.
+The processing method depends on the Spreadsheet configuration. When `openUrl` is not configured, the file is processed in the browser. When `openUrl` is configured, the file is sent to the specified Open service.
 
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
-{% include code-snippet/spreadsheet/react/open-save-cs1/app/app.jsx %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-{% include code-snippet/spreadsheet/react/open-save-cs1/app/app.tsx %}
-{% endhighlight %}
-{% endtabs %}
+## Open a file programmatically
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/react/open-save-cs1" %}
+Use the [`open`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#open) method to open a file programmatically. Pass the file through the `file` property of [`OpenOptions`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/openOptions).
 
-Please find the below table for the [beforeOpen](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforeopen) event arguments.
+The `File` object can come from a local file selection or be created from application-provided data. Refer to [Client-side import](./open-excel-file/client-side-import) or [Server-side import](./open-excel-file/server-side-import) for processing-specific workflows.
 
-**BeforeOpenEventArgs – Properties**
+## Open events
 
-| **Property**          | **Type**                          | **Description** |
-|-------------------|-------------------------------|-------------|
-| **cancel**        | `boolean`                       | Specifies whether the open action should be canceled. |
-| **file**          | `FileList` \| `string` \| `File`    | Specifies the file to be opened. |
-| **parseOptions**  | [`WorkbookParseOptions`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/workbookparseoptions)          | Specifies the parsing options that control how the Excel file is interpreted during loading. |
-| **password**      | `string`                        | Specifies the password required to open the Excel file, if it is protected. |
-| **requestData**   | object                        | Specifies any additional data sent along with the open request. |
-| **requestType**   | `string`                        | Specifies the type of open request that triggered the **beforeOpen** event. Possible values:<br><br>• **initial** – The default request made when loading a workbook.<br>• **chunk** – A follow‑up request to load a portion of the workbook when chunking is enabled and the server provides a chunk plan.<br>• **thresholdLimitConfirmed** – A request made after the user confirms a threshold warning (such as *maximumDataLimit* or *maximumFileSizeLimit*) and chooses to proceed. |
+Use the [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforeopen) event to customize or cancel the Open operation before the selected file is processed.
 
-For complete event documentation, refer to the [API reference](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#events).
+Use the [`openComplete`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#opencomplete) event to perform an action after the workbook is loaded.
 
-## Supported Excel File Formats for Open
+## Supported file formats
 
-The supported Excel file formats depend on the import method:
+The supported file formats depend on the selected import method:
 
-### Client-Side Import
-- Currently supports XLSX format only
+| Import method | Supported formats |
+| --- | --- |
+| Client-side import | Microsoft Excel Workbook (`.xlsx`) |
+| Server-side import | Microsoft Excel Workbook (`.xlsx`), Excel 97-2003 Workbook (`.xls`), Comma-Separated Values (`.csv`), Excel Macro-Enabled Workbook (`.xlsm`), and Excel Binary Workbook (`.xlsb`) |
 
-### Server-Side Import
-- Supports multiple file formats (XLSX, XLS, CSV, XLSM, XLSB)
+## Choose an import method
 
-## Import Options
+Use client-side import when XLSX files should be processed directly in the browser without configuring an Open service.
 
-The public `open()` method accepts a File object. For processing-specific source workflows, refer to the client-side or server-side import pages:
+Use server-side import when the application requires additional file formats, centralized processing, or server-side parsing options.
 
-* [Client-Side Import](./open-excel-file/client-side-import) - For opening files directly in the browser
-* [Server-Side Import](./open-excel-file/server-side-import) - For server-assisted processing
-
-## Choosing Between Client-Side and Server-Side Import
-
-The Spreadsheet component supports both client-side and server-side import methods:
-
-### Client-Side Import
-- Processes workbook files directly in the browser without sending them to an Open service
-- Does not require `openUrl` configuration
-- Currently supports XLSX format only
-- Uses integrated file-processing functionality
-
-### Server-Side Import
-- Sends files to a server endpoint for processing
-- Requires `openUrl` configuration
-- Supports multiple file formats (XLSX, XLS, CSV, XLSM, XLSB)
-- Provides full feature support including formula calculation
-
-The choice between client-side and server-side import depends on your specific requirements for file size, format support, and processing capabilities.
+Choose the import method based on the required file formats, application architecture, and whether workbook processing should occur in the browser or through a server endpoint.
 
 ## See Also
 
