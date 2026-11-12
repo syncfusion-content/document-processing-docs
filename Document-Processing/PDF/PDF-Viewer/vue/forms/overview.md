@@ -172,3 +172,4 @@ Create and customize interactive fields directly on the PDF page.
 - [Signature field](../forms/manage-form-fields/create-form-fields#add-signature-field)
 - [Initial field](../forms/manage-form-fields/create-form-fields#add-initial-field)
 - [DateTime picker](../forms/manage-form-fields/create-form-fields#add-datetime-picker)
+- [Barcode](../forms/manage-form-fields/create-form-fields#add-barcode)
