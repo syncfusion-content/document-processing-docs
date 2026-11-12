@@ -573,4 +573,4 @@ public IActionResult Open(IFormCollection openRequest)
 
 > This feature is only applicable when importing an Excel file and not when loading JSON data or binding cell data.
 
-![External workbook confirmation dialog](./images/external-reference-dialog-alert.png)
+![External workbook confirmation dialog](../images/external-reference-dialog-alert.png)

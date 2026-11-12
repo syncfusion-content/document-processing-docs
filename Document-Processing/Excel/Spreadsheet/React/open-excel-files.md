@@ -3,17 +3,17 @@ layout: post
 title: Open Excel Files in React Spreadsheet | Syncfusion
 description: Learn about opening Excel files in the Syncfusion React Spreadsheet component, including importing and viewing workbook data.
 platform: document-processing
-control: Open
+control: Spreadsheet
 documentation: ug
 ---
 
-# Open Excel Files in React Spreadsheet
+# Open excel files in React Spreadsheet
 
 The React Spreadsheet component allows users to select and open workbook files through the user interface or the public `open()` method. The same UI and public API are used for both client-side and server-side import methods. The processing method is determined by whether `openUrl` is configured.
 
 When `openUrl` is configured, the Spreadsheet sends files to a server endpoint for processing (server-side import). When `openUrl` is not configured, the Spreadsheet processes files directly in the browser (client-side import).
 
-## Enable File Opening
+## Enable file opening
 
 To enable opening Excel files, set the [`allowOpen`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#allowopen) property to **true**. The default value is `true`, so this property typically does not need to be explicitly set unless you want to disable file opening.
 
@@ -54,7 +54,7 @@ Use server-side import when the application requires additional file formats, ce
 
 Choose the import method based on the required file formats, application architecture, and whether workbook processing should occur in the browser or through a server endpoint.
 
-## See Also
+## See also
 
 * [Client-Side Import](./open-excel-file/client-side-import)
 * [Server-Side Import](./open-excel-file/server-side-import)
