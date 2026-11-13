@@ -537,7 +537,7 @@ document.destroy();
 The `PdfShapeElement` supports a variety of shape types for drawing graphical content in PDF documents. Specify the required shape type and corresponding shape data to render the shape.
 
 - `Line` - Draws a straight line between two points.
-- `BezierCurve` - Draws a Bézier curve using control points.
+- `BezierCurve` - Draws a Bezier curve using control points.
 - `Arc` - Draws a curved arc segment.
 - `Rectangle` - Draws a rectangle.
 - `Ellipse` - Draws an ellipse or circle.

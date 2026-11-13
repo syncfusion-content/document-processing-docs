@@ -7,7 +7,7 @@ control: PDF
 documentation: UG
 ---
 
-# Actions in javaScript PDF
+# Actions in JavaScript PDF
 
 PDF actions enable automated operations in response to user interactions and document events. The [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library) supports creating, managing, and chaining a wide range of PDF actions.
 
