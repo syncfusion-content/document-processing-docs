@@ -41,44 +41,14 @@ To use client-side export, simply omit the `saveUrl` property from your Spreadsh
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-import * as React from 'react';
-import { createRoot } from 'react-dom/client';
-import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
-
-function App() {
-    return (
-        <SpreadsheetComponent 
-            allowSave={true}
-            // Note: saveUrl is omitted for client-side export
-        />
-    );
-};
-export default App;
-
-const root = createRoot(document.getElementById('root'));
-root.render(<App />);
+{% include code-snippet/spreadsheet/react/client-side-save-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-import * as React from 'react';
-import { createRoot } from 'react-dom/client';
-import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
-
-function App() {
-    return (
-        <SpreadsheetComponent 
-            allowSave={true}
-            // Note: saveUrl is omitted for client-side export
-        />
-    );
-};
-export default App;
-
-const root = createRoot(document.getElementById('root')!);
-root.render(<App />);
+{% include code-snippet/spreadsheet/react/client-side-save-cs1/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/react/client-side-local-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/client-side-save-cs1" %}
 
 With this configuration, the Spreadsheet will generate Excel files directly in the browser without requiring server communication.
 
@@ -88,74 +58,14 @@ To save Excel files programmatically in the Spreadsheet, you can use the [`save`
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-import * as React from 'react';
-import { createRoot } from 'react-dom/client';
-import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
-
-function App() {
-    const spreadsheetRef = React.useRef(null);
-    
-    const handleSave = () => {
-        if (spreadsheetRef.current) {
-            spreadsheetRef.current.save({
-                fileName: 'MySpreadsheet',
-                saveType: 'Xlsx'
-            });
-        }
-    };
-
-    return (
-        <div>
-            <button onClick={handleSave}>Save Spreadsheet</button>
-            <SpreadsheetComponent 
-                ref={spreadsheetRef}
-                allowSave={true}
-                // Note: saveUrl is omitted for client-side export
-            />
-        </div>
-    );
-};
-export default App;
-
-const root = createRoot(document.getElementById('root'));
-root.render(<App />);
+{% include code-snippet/spreadsheet/react/client-side-save-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-import * as React from 'react';
-import { createRoot } from 'react-dom/client';
-import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
-
-function App() {
-    const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
-    
-    const handleSave = (): void => {
-        if (spreadsheetRef.current) {
-            spreadsheetRef.current.save({
-                fileName: 'MySpreadsheet',
-                saveType: 'Xlsx'
-            });
-        }
-    };
-
-    return (
-        <div>
-            <button onClick={handleSave}>Save Spreadsheet</button>
-            <SpreadsheetComponent 
-                ref={spreadsheetRef}
-                allowSave={true}
-                // Note: saveUrl is omitted for client-side export
-            />
-        </div>
-    );
-};
-export default App;
-
-const root = createRoot(document.getElementById('root')!);
-root.render(<App />);
+{% include code-snippet/spreadsheet/react/client-side-save-cs1/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/react/client-side-local-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/client-side-save-cs1" %}
 
 ## Save Excel files as Blob data
 
@@ -163,92 +73,14 @@ To save an Excel file as blob data, you need to set `needBlobData` property to *
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-import * as React from 'react';
-import { createRoot } from 'react-dom/client';
-import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
-
-function App() {
-    const spreadsheetRef = React.useRef(null);
-    
-    const handleSaveAsBlob = () => {
-        if (spreadsheetRef.current) {
-            spreadsheetRef.current.save({
-                fileName: 'MySpreadsheet',
-                saveType: 'Xlsx',
-                needBlobData: true
-            });
-        }
-    };
-
-    const onSaveComplete = (args) => {
-        if (args.blobData) {
-            // Handle blob data - e.g., send to server, store locally, etc.
-            console.log('Blob data received:', args.blobData);
-        }
-    };
-
-    return (
-        <div>
-            <button onClick={handleSaveAsBlob}>Save as Blob</button>
-            <SpreadsheetComponent 
-                ref={spreadsheetRef}
-                allowSave={true}
-                saveComplete={onSaveComplete}
-                // Note: saveUrl is omitted for client-side export
-            />
-        </div>
-    );
-};
-export default App;
-
-const root = createRoot(document.getElementById('root'));
-root.render(<App />);
+{% include code-snippet/spreadsheet/react/client-side-save-blob-cs1/app/app.jsx %}
 {% endhighlight %}
 {% highlight ts tabtitle="app.tsx" %}
-import * as React from 'react';
-import { createRoot } from 'react-dom/client';
-import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
-
-function App() {
-    const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
-    
-    const handleSaveAsBlob = (): void => {
-        if (spreadsheetRef.current) {
-            spreadsheetRef.current.save({
-                fileName: 'MySpreadsheet',
-                saveType: 'Xlsx',
-                needBlobData: true
-            });
-        }
-    };
-
-    const onSaveComplete = (args: any): void => {
-        if (args.blobData) {
-            // Handle blob data - e.g., send to server, store locally, etc.
-            console.log('Blob data received:', args.blobData);
-        }
-    };
-
-    return (
-        <div>
-            <button onClick={handleSaveAsBlob}>Save as Blob</button>
-            <SpreadsheetComponent 
-                ref={spreadsheetRef}
-                allowSave={true}
-                saveComplete={onSaveComplete}
-                // Note: saveUrl is omitted for client-side export
-            />
-        </div>
-    );
-};
-export default App;
-
-const root = createRoot(document.getElementById('root')!);
-root.render(<App />);
+{% include code-snippet/spreadsheet/react/client-side-save-blob-cs1/app/app.tsx %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/react/client-side-blob-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/client-side-save-blob-cs1" %}
 
 ## Considerations
 
