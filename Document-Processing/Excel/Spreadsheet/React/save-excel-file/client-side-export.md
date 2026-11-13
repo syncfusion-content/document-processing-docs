@@ -33,7 +33,7 @@ The Spreadsheet manages all file generation automatically through its public API
 
 Client-side export currently supports:
 * Microsoft Excel Workbook (.xlsx)
-* Portable Document Format (.pdf) - Coming soon
+* Portable Document Format (.pdf)
 
 ## Configure client-side export
 
@@ -80,11 +80,11 @@ root.render(<App />);
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/client-side-local-cs1" %}
 
-With this configuration, the Spreadsheet will generate Excel files directly in the browser without requiring server communication. For specific export implementations, see the sections below.
+With this configuration, the Spreadsheet will generate Excel files directly in the browser without requiring server communication.
 
-## Export Excel files programmatically
+## Save Excel files programmatically
 
-Use the public `save()` method to export files programmatically. Pass export options through the `options` property:
+To save Excel files programmatically in the Spreadsheet, you can use the [`save`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#save) method of the Spreadsheet component. When calling this method without configuring `saveUrl`, the Spreadsheet generates the file client-side and triggers browser download.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -95,10 +95,10 @@ import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 function App() {
     const spreadsheetRef = React.useRef(null);
     
-    const handleExport = () => {
+    const handleSave = () => {
         if (spreadsheetRef.current) {
             spreadsheetRef.current.save({
-                fileName: 'MyWorkbook',
+                fileName: 'MySpreadsheet',
                 saveType: 'Xlsx'
             });
         }
@@ -106,8 +106,12 @@ function App() {
 
     return (
         <div>
-            <SpreadsheetComponent ref={spreadsheetRef} allowSave={true} />
-            <button onClick={handleExport}>Export to Excel</button>
+            <button onClick={handleSave}>Save Spreadsheet</button>
+            <SpreadsheetComponent 
+                ref={spreadsheetRef}
+                allowSave={true}
+                // Note: saveUrl is omitted for client-side export
+            />
         </div>
     );
 };
@@ -124,10 +128,10 @@ import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 function App() {
     const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
     
-    const handleExport = (): void => {
+    const handleSave = (): void => {
         if (spreadsheetRef.current) {
             spreadsheetRef.current.save({
-                fileName: 'MyWorkbook',
+                fileName: 'MySpreadsheet',
                 saveType: 'Xlsx'
             });
         }
@@ -135,8 +139,12 @@ function App() {
 
     return (
         <div>
-            <SpreadsheetComponent ref={spreadsheetRef} allowSave={true} />
-            <button onClick={handleExport}>Export to Excel</button>
+            <button onClick={handleSave}>Save Spreadsheet</button>
+            <SpreadsheetComponent 
+                ref={spreadsheetRef}
+                allowSave={true}
+                // Note: saveUrl is omitted for client-side export
+            />
         </div>
     );
 };
@@ -149,9 +157,9 @@ root.render(<App />);
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/client-side-local-cs1" %}
 
-## Export Excel files as Blob data
+## Save Excel files as Blob data
 
-To export Excel files as Blob data for custom handling, set `needBlobData` to `true` in the save options:
+To save an Excel file as blob data, you need to set `needBlobData` property to **true** in the save options. Subsequently, you will receive the spreadsheet data as a blob in the [saveComplete](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#savecomplete) event.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -162,32 +170,32 @@ import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 function App() {
     const spreadsheetRef = React.useRef(null);
     
-    const handleExportAsBlob = () => {
+    const handleSaveAsBlob = () => {
         if (spreadsheetRef.current) {
             spreadsheetRef.current.save({
-                fileName: 'MyWorkbook',
+                fileName: 'MySpreadsheet',
                 saveType: 'Xlsx',
                 needBlobData: true
-            }).then((blob: Blob) => {
-                // Handle blob data as needed
-                console.log('Blob data received:', blob);
-                // Example: Create download link
-                const url = URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = 'MyWorkbook.xlsx';
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-                URL.revokeObjectURL(url);
             });
+        }
+    };
+
+    const onSaveComplete = (args) => {
+        if (args.blobData) {
+            // Handle blob data - e.g., send to server, store locally, etc.
+            console.log('Blob data received:', args.blobData);
         }
     };
 
     return (
         <div>
-            <SpreadsheetComponent ref={spreadsheetRef} allowSave={true} />
-            <button onClick={handleExportAsBlob}>Export as Blob</button>
+            <button onClick={handleSaveAsBlob}>Save as Blob</button>
+            <SpreadsheetComponent 
+                ref={spreadsheetRef}
+                allowSave={true}
+                saveComplete={onSaveComplete}
+                // Note: saveUrl is omitted for client-side export
+            />
         </div>
     );
 };
@@ -204,32 +212,32 @@ import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 function App() {
     const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
     
-    const handleExportAsBlob = (): void => {
+    const handleSaveAsBlob = (): void => {
         if (spreadsheetRef.current) {
             spreadsheetRef.current.save({
-                fileName: 'MyWorkbook',
+                fileName: 'MySpreadsheet',
                 saveType: 'Xlsx',
                 needBlobData: true
-            }).then((blob: Blob) => {
-                // Handle blob data as needed
-                console.log('Blob data received:', blob);
-                // Example: Create download link
-                const url = URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = 'MyWorkbook.xlsx';
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-                URL.revokeObjectURL(url);
             });
+        }
+    };
+
+    const onSaveComplete = (args: any): void => {
+        if (args.blobData) {
+            // Handle blob data - e.g., send to server, store locally, etc.
+            console.log('Blob data received:', args.blobData);
         }
     };
 
     return (
         <div>
-            <SpreadsheetComponent ref={spreadsheetRef} allowSave={true} />
-            <button onClick={handleExportAsBlob}>Export as Blob</button>
+            <button onClick={handleSaveAsBlob}>Save as Blob</button>
+            <SpreadsheetComponent 
+                ref={spreadsheetRef}
+                allowSave={true}
+                saveComplete={onSaveComplete}
+                // Note: saveUrl is omitted for client-side export
+            />
         </div>
     );
 };
@@ -242,54 +250,12 @@ root.render(<App />);
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/client-side-blob-cs1" %}
 
-## Feature support
-
-Client-side export supports comprehensive Excel workbook features:
-
-### Worksheets
-* Multiple worksheet creation and management
-* Worksheet renaming and visibility control
-* Active worksheet selection
-
-### Cell Data
-* Text, number, and date values
-* Formulas and expressions
-* Cell references and ranges
-
-### Formatting
-* Font styles, sizes, and colors
-* Background colors and patterns
-* Borders and alignment
-* Number formats and custom formatting
-
-### Structures
-* Row and column dimensions
-* Hidden rows and columns
-* Frozen panes and scroll positions
-
-### Features
-* Conditional formatting rules
-* Data validation constraints
-* Filters and sorting
-* Defined names and ranges
-
-### Objects
-* Charts and images
-* Hyperlinks and comments
-* Notes and threaded comments
-
-### Protection
-* Workbook and worksheet protection
-* Cell locking and unlocking
-* Password protection options
-
 ## Considerations
 
 1. **Format Limitation**: Client-side export currently supports XLSX format only
-2. **Size Limitations**: Large workbooks may impact browser performance
+2. **Size Limitations**: Large files may impact browser performance
 3. **Feature Differences**: Some advanced features available in server-side export may not be available in client-side export
 4. **No saveUrl Required**: `saveUrl` must not be configured for client-side export
-5. **Browser Compatibility**: Modern browsers with adequate memory resources required
 
 ## See also
 

@@ -133,64 +133,7 @@ To open Excel files from Blob data, convert the Blob to a File object:
 In all cases, the workflow ends by passing a `File` object to the public Spreadsheet API:
 `spreadsheetRef.current?.open({ file });`
 
-## Feature support
 
-Client-side import supports comprehensive Excel workbook features:
-
-### Worksheets
-* Worksheet names and visibility
-* Tab color and positioning
-* Frozen panes and gridlines
-* Print titles and print areas
-
-### Cell Data
-* Text, numbers, dates, and Boolean values
-* Formulas with operators (+, -, *, /, =, <, >, <=, >=, <>, &, :)
-* Cell references (A1, $A$1, A$1, $A1)
-* Range references (A1:B2, Sheet1!A1:B2)
-* Cross-worksheet references (Sheet2!A1)
-
-### Formatting
-* Font family, size, style, weight, color, and effects
-* Fill color, pattern, and gradient
-* Borders (style, weight, color)
-* Alignment (horizontal, vertical, text direction, indent, shrink to fit, text wrap)
-* Number formatting (currency, accounting, percentage, scientific, fraction, date/time)
-* Cell protection and locked states
-
-### Formulas and References
-* Arithmetic operators (+, -, *, /, =, <, >, <=, >=, <>, &, :)
-* Comparison operators (=, <, >, <=, >=, <>)
-* Text concatenation (&)
-* Cell references (A1, $A$1, A$1, $A1)
-* Range references (A1:B2, Sheet1!A1:B2)
-* Cross-worksheet references (Sheet2!A1)
-* Named ranges (local and global)
-* Formula calculation engine (R1C1-style formulas converted to A1-style)
-
-### Structures
-* Tables with headers, totals, and styles
-* Pivot tables with fields, filters, and layouts
-* Charts (column, bar, line, pie, area, scatter, combo, radar, surface, bubble, stock)
-* Images (positioning, sizing, aspect ratio)
-* Comments and notes (positioning, sizing, rich text)
-* Data validation (list, whole number, decimal, date, time, text length, custom)
-* Conditional formatting (color scales, data bars, icon sets, formula-based rules)
-* Filters (autofilter, custom filter, advanced filter)
-* Protection (workbook, worksheet, range, sheet elements)
-* Grouping and outlining (row/column grouping, summary rows/columns)
-
-### Objects
-* Shapes (rectangles, circles, lines, arrows, callouts)
-* Text boxes (positioning, sizing, rotation, text formatting)
-* Hyperlinks (internal, external, email, file)
-* Headers and footers (left, center, right sections with images/text)
-
-### Protection
-* Workbook protection (structure, windows)
-* Worksheet protection (elements, scenarios)
-* Range protection (locked/unlocked cells)
-* Sheet element protection (objects, scenarios)
 
 ## Considerations
 
