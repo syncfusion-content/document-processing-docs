@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Resize and Move Annotations in React PDF Viewer | Syncfusion
-description: Resize and move annotations in the React PDF Viewer using the built-in UI and the editAnnotation API to update the annotation bounds and page number dynamically.
+description: Resize and move annotations in the React PDF Viewer using the built-in UI and programmatically update the annotation bounds and page number dynamically.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
