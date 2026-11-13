@@ -271,3 +271,9 @@ function beforeAcceptRejectChanges(args) {
 ## Online Demo
 
 Explore how to track and review changes in Word documents using the JavaScript (ES5) DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/javascript-es5/#/material3/document-editor/track-changes.html).
+
+## Frequently Asked Questions
+
+### Why are custom track changes colors not preserved in the exported DOCX document?
+
+Custom track changes colors are an application level feature supported within the Documnent Editor. Microsoft Word also does not preserve these application specific color customizations. Therefore custom colors are applicable only within the Document Editor and will not be retained during DOCX Export.
