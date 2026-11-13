@@ -82,9 +82,9 @@ root.render(<App />);
 
 With this configuration, the Spreadsheet will generate Excel files directly in the browser without requiring server communication. For specific export implementations, see the sections below.
 
-## Export a file programmatically
+## Export Excel files programmatically
 
-To export a file programmatically, use the public `save()` method without specifying a `saveUrl`:
+Use the public `save()` method to export files programmatically. Pass export options through the `options` property:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -106,10 +106,8 @@ function App() {
 
     return (
         <div>
+            <SpreadsheetComponent ref={spreadsheetRef} allowSave={true} />
             <button onClick={handleExport}>Export to Excel</button>
-            <SpreadsheetComponent 
-                ref={spreadsheetRef}
-                allowSave={true} />
         </div>
     );
 };
@@ -137,10 +135,8 @@ function App() {
 
     return (
         <div>
+            <SpreadsheetComponent ref={spreadsheetRef} allowSave={true} />
             <button onClick={handleExport}>Export to Excel</button>
-            <SpreadsheetComponent 
-                ref={spreadsheetRef}
-                allowSave={true} />
         </div>
     );
 };
@@ -153,9 +149,9 @@ root.render(<App />);
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/client-side-local-cs1" %}
 
-## Export as Blob data
+## Export Excel files as Blob data
 
-To export as Blob data for custom handling, use the `needBlobData` option:
+To export Excel files as Blob data for custom handling, set `needBlobData` to `true` in the save options:
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -173,22 +169,25 @@ function App() {
                 saveType: 'Xlsx',
                 needBlobData: true
             }).then((blob: Blob) => {
-                // Handle the blob data as needed
-                console.log('Blob data generated:', blob);
-                // Example: Upload to a custom service
-                // const formData = new FormData();
-                // formData.append('file', blob, 'MyWorkbook.xlsx');
-                // fetch('/upload', { method: 'POST', body: formData });
+                // Handle blob data as needed
+                console.log('Blob data received:', blob);
+                // Example: Create download link
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'MyWorkbook.xlsx';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
             });
         }
     };
 
     return (
         <div>
+            <SpreadsheetComponent ref={spreadsheetRef} allowSave={true} />
             <button onClick={handleExportAsBlob}>Export as Blob</button>
-            <SpreadsheetComponent 
-                ref={spreadsheetRef}
-                allowSave={true} />
         </div>
     );
 };
@@ -212,22 +211,25 @@ function App() {
                 saveType: 'Xlsx',
                 needBlobData: true
             }).then((blob: Blob) => {
-                // Handle the blob data as needed
-                console.log('Blob data generated:', blob);
-                // Example: Upload to a custom service
-                // const formData = new FormData();
-                // formData.append('file', blob, 'MyWorkbook.xlsx');
-                // fetch('/upload', { method: 'POST', body: formData });
+                // Handle blob data as needed
+                console.log('Blob data received:', blob);
+                // Example: Create download link
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'MyWorkbook.xlsx';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
             });
         }
     };
 
     return (
         <div>
+            <SpreadsheetComponent ref={spreadsheetRef} allowSave={true} />
             <button onClick={handleExportAsBlob}>Export as Blob</button>
-            <SpreadsheetComponent 
-                ref={spreadsheetRef}
-                allowSave={true} />
         </div>
     );
 };
@@ -238,78 +240,61 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/react/client-side-local-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/client-side-blob-cs1" %}
 
-## Feature Support
+## Feature support
 
 Client-side export supports comprehensive Excel workbook features:
 
 ### Worksheets
-* Multiple worksheets with custom names
-* Worksheet visibility (visible, hidden, very hidden)
-* Worksheet protection with password
-* Freeze panes and split views
-* Print area and print titles
-* Tab color customization
+* Multiple worksheet creation and management
+* Worksheet renaming and visibility control
+* Active worksheet selection
 
 ### Cell Data
-* Text, numbers, dates, and Boolean values
-* Formulas with cell references and functions
-* Cross-worksheet references
-* Array formulas
-* Dynamic formulas
+* Text, number, and date values
+* Formulas and expressions
+* Cell references and ranges
 
 ### Formatting
-* Font properties (family, size, weight, style, color)
-* Fill patterns and colors
-* Borders with various styles
-* Number formatting (currency, percentage, date, custom)
-* Text alignment (horizontal, vertical)
-* Text control (wrap text, shrink to fit, merge cells)
-* Cell protection (locked, hidden)
+* Font styles, sizes, and colors
+* Background colors and patterns
+* Borders and alignment
+* Number formats and custom formatting
 
 ### Structures
-* Rows and columns with custom heights and widths
+* Row and column dimensions
 * Hidden rows and columns
-* Grouping and outlining
-* Headers and footers
-* Page setup (orientation, margins, paper size)
+* Frozen panes and scroll positions
 
 ### Features
-* Conditional formatting (color scales, data bars, icon sets, cell rules)
-* Data validation (list, whole number, decimal, date, time, text length)
-* Filtering and sorting
-* Pivot tables
-* Tables with custom styles
-* Defined names and scoped names
+* Conditional formatting rules
+* Data validation constraints
+* Filters and sorting
+* Defined names and ranges
 
 ### Objects
-* Charts (column, bar, line, pie, area, scatter, doughnut)
-* Images with positioning and sizing
-* Shapes and drawing objects
-* Hyperlinks (internal and external)
-* Comments and threaded comments
-* Notes
+* Charts and images
+* Hyperlinks and comments
+* Notes and threaded comments
 
 ### Protection
-* Workbook protection with password
-* Worksheet protection with granular permissions
-* Cell-level protection
-* Scenario protection
-* Structure and window protection
+* Workbook and worksheet protection
+* Cell locking and unlocking
+* Password protection options
 
 ## Considerations
 
-1. **Format Limitation**: Client-side export currently supports XLSX format with PDF support coming soon
+1. **Format Limitation**: Client-side export currently supports XLSX format only
 2. **Size Limitations**: Large workbooks may impact browser performance
 3. **Feature Differences**: Some advanced features available in server-side export may not be available in client-side export
 4. **No saveUrl Required**: `saveUrl` must not be configured for client-side export
-5. **Browser Compatibility**: Modern browsers with JavaScript enabled are required
+5. **Browser Compatibility**: Modern browsers with adequate memory resources required
 
 ## See also
 
 * [Server-Side Export](./server-side-export)
-* [Export to AWS S3](./to-aws-s3-bucket)
-* [Export to Azure Blob Storage](./to-azure-blob-storage)
-* [Export to Google Cloud Storage](./to-google-cloud-storage)
-* [Export to Google Drive](./to-google-drive)
+* [Save to AWS S3](./to-aws-s3-bucket)
+* [Save to Azure Blob Storage](./to-azure-blob-storage)
+* [Save to Google Cloud Storage](./to-google-cloud-storage)
+* [Save to Google Drive](./to-google-drive)
