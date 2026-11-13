@@ -30,7 +30,7 @@ Set the `EnableRtl` property to `true` to render the DOCX Editor user interface 
 
 ## Localize the DOCX Editor for RTL languages
 
-To fully localize the DOCX Editor for right-to-left languages such as Arabic, set the `Locale` property to a right-to-left culture (for example, `ar-AE`) and load the localized strings using the `L10n.load` method. This translates the built-in texts of the toolbar, dialogs, and context menus into the specified language.
+To fully localize the DOCX Editor for right-to-left languages such as Arabic, set the `Locale` property to a right-to-left culture (for example, `ar-AE`) and load the localized strings. This translates the built-in texts of the toolbar, dialogs, and context menus into the specified language.
 
 {% tabs %}
 {% highlight razor tabtitle="CSHTML" %}
