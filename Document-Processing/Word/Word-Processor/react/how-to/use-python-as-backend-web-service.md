@@ -426,9 +426,14 @@ Then use `clr` from `pythonnet` to load the assemblies from the **publish output
 from flask import Flask, request, send_file
 from flask_cors import CORS
 from io import BytesIO
-import clr
 import os
 import json
+
+# Configure Python.NET to use the .NET (CoreCLR) runtime before importing clr.
+# Without this, pythonnet may fall back to the legacy Mono/.NET Framework runtime,
+# which cannot load net10.0 assemblies and the wrapper class import fails.
+os.environ.setdefault("PYTHONNET_RUNTIME", "coreclr")
+import clr
 
 app = Flask(__name__)
 

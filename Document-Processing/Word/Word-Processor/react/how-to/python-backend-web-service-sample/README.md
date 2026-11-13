@@ -30,4 +30,4 @@ python app.py
 
 The service runs at `http://127.0.0.1:5000/`. Configure the DOCX Editor's `serviceUrl` property to this address.
 
-On Linux/macOS, if pythonnet cannot find the .NET runtime, set `PYTHONNET_RUNTIME=coreclr` before starting the service.
+`app.py` sets `PYTHONNET_RUNTIME=coreclr` before importing `clr`, so Python.NET always loads the modern .NET runtime. If the .NET runtime still cannot be located, make sure the [.NET SDK/runtime is installed](https://dotnet.microsoft.com/download) and `DOTNET_ROOT` points to it.
