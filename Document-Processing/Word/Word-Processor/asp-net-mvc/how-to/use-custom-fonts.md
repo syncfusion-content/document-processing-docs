@@ -9,7 +9,7 @@ documentation: ug
 
 # How to Use Custom Fonts in ASP.NET MVC DOCX Editor
 
-The [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) supports custom fonts so that you can use fonts that are not installed on the user's machine. This is helpful when the document contains a specific font, such as a company-branded font, a regional language font, or any other font that is not available by default in the browser.
+DOCX Editor supports custom fonts so that you can use fonts that are not installed on the user's machine. This is helpful when the document contains a specific font, such as a company-branded font, a regional language font, or any other font that is not available by default in the browser.
 
 To use a custom font in the Document Editor, register the font using the `setCustomFonts` API and add the font family name to the `fontFamilies` collection in the `documentEditorSettings` property. The fonts added to the `fontFamilies` collection are displayed in the font family drop-down list and can be applied within the document.
 
