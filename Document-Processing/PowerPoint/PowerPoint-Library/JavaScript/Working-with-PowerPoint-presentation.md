@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Working with PowerPoint Presentation in JavaScript PowerPoint | Syncfusion
-description: Learn how to read and modify the built-in document properties and add, access, and update the custom document properties of a PowerPoint presentation using the Syncfusion JavaScript PowerPoint Library.
+title: Presentation Properties in JavaScript PowerPoint | Syncfusion
+description: Read and modify built-in document properties, and add or update custom properties, with the Syncfusion JavaScript PowerPoint Library.
 platform: document-processing
 control: PowerPoint
 documentation: ug

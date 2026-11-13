@@ -111,7 +111,7 @@ N> `setBodyText` replaces the whole body text. It does not append paragraphs, an
 
 ## Adding a Numbered List to Notes
 
-The JavaScript PowerPoint Library does not currently support adding numbered lists (or bulleted lists) to notes. The notes API replaces the body placeholder text through `setBodyText`, and there is no API to set paragraph numbering properties on the notes paragraphs. Numbered-list numbering has to be added by editing the presentation in Microsoft PowerPoint.
+The JavaScript PowerPoint Library does not currently support adding lists with numbers (or bullet lists) to notes. The notes API replaces the body placeholder text through `setBodyText`, and there is no API to set paragraph list properties on the notes paragraphs. List numbering has to be added by editing the presentation in Microsoft PowerPoint.
 
 ## Removing Notes from a Slide
 

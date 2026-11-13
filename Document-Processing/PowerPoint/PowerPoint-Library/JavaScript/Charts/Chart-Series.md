@@ -12,10 +12,10 @@ keywords: javascript, powerpoint, chart series
 
 A chart series maps category labels and values from the embedded workbook. The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) exposes series on the chart created with `Slide.addChart`.
 
-* `chart.series` returns each series view (`title`, `categoryLabels`, `values`, and optional `serieFormat` / `dataLabels`).
+* `chart.series` returns each series view (`title`, `categoryLabels`, `values`, and optional series format / `dataLabels`).
 * `addSeries` adds a series. `values` is required.
 * `removeSeries` removes a series by zero-based index.
-* `commitSeriesFormat` writes series fill and line (`c:ser` shape properties). Colors are RRGGBB or `#RRGGBB`.
+* `commitSeriesFormat` writes series fill and line (series shape properties). Colors are RRGGBB or `#RRGGBB`.
 * `setSeriesValueCells` and `setSeriesCategoryCells` write the embedded cells for that series.
 * `isSeriesInRows` or `applyIsSeriesInRows` sets whether series are laid out in rows.
 
