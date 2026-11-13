@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Use Python as a Backend Web Service in React DOCX Editor | Syncfusion
+title: How to Use Python as a backend Web Service in React DOCX Editor | Syncfusion
 description: Configure a Python (Flask) web service in the React DOCX Editor to handle server-side operations such as Word document import, save, clipboard operations, mail merge, document comparison, and restricting editing using Syncfusion .NET libraries loaded with Python.NET.
 control: Python web service
 platform: document-processing
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to Use Python as a Backend Web Service in React DOCX Editor
+# How to Use Python as a backend Web Service in React DOCX Editor
 
 The React DOCX Editor depends on server-side interactions for the operations listed below. Typically, these operations are implemented in ASP.NET Core or Java. This section explains how to implement the same operations from a **Python web service** using [Flask](https://flask.palletsprojects.com/), with the document-processing logic hosted in a C# class library that is loaded with [Python.NET](https://pypi.org/project/pythonnet/).
 
@@ -16,7 +16,7 @@ The React DOCX Editor depends on server-side interactions for the operations lis
 *   Paste with formatting (SystemClipboard)
 *   Restrict editing
 *   Save document
-*   Mail merge
+*   Mail Merge
 *   Compare documents
 
 In this approach:
@@ -577,14 +577,5 @@ serviceUrl = "http://127.0.0.1:5000/";
 ```
 
 With this configuration, every server-side operation of the editor is sent to the Python service, processed through the published assembly, and returned to the React application.
-
-## Run and verify
-
-1.  Build and publish the class library as described in [Create the class library](#create-the-class-library).
-2.  Start the Python web service as described in [Start the Python web service](#start-the-python-web-service).
-3.  Open a terminal in the React application directory and run `npm install` followed by `npm run dev`.
-4.  Open the URL displayed in the terminal, typically `http://localhost:5173`.
-5.  Click **Open** in the DOCX Editor toolbar and select a Word document.
-6.  Confirm that the document loads successfully in the editor.
 
 N> [View the Python web service sample in GitHub](https://github.com/SyncfusionExamples/EJ2-Document-Editor-Web-Services/tree/master/Python).
