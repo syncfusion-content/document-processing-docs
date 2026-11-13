@@ -302,6 +302,7 @@ export class AppComponent {
 - [Annotation Types](../annotation/annotation-types/area-annotation)
 - [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
 - [Create and Modify Annotation](../annotation/create-modify-annotation)
+- [Resize and Move Annotations](../annotation/resize-move-annotations)
 - [Remove Annotation](../annotation/delete-annotation)
 - [Handwritten Signature](../annotation/signature-annotation)
 - [Export and Import Annotation](../annotation/export-import/export-annotation)

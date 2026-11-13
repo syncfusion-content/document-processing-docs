@@ -104,6 +104,7 @@ N> Refer to the JavaScript PDF Viewer [feature tour](https://www.syncfusion.com/
 - [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
 - [Create and Modify Annotation](../annotations/create-modify-annotation)
 - [Customize Annotation](../annotations/customize-annotation)
+- [Resize and Move Annotations](../annotations/resize-move-annotations)
 - [Remove Annotation](../annotations/delete-annotation)
 - [Handwritten Signature](../annotations/signature-annotation)
 - [Export and Import Annotation](../annotations/export-import/export-annotation)

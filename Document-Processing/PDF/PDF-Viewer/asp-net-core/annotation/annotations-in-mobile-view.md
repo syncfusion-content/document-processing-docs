@@ -158,3 +158,15 @@ Close the comment panel when finished adding notes:
 **Step 1:** Tap the close button to hide the comment panel
 
 ![Alt text](../images/close-comment-panel.png)
+
+## See also
+
+- [Annotation Overview](../overview)
+- [Annotation Types](../annotation/annotation-types/area-annotation)
+- [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
+- [Create and Modify Annotation](../annotation/create-modify-annotation)
+- [Customize Annotation](../annotation/customize-annotation)
+- [Resize and Move Annotations](../annotation/resize-move-annotations)
+- [Remove Annotation](../annotation/delete-annotation)
+- [Annotation Events](../annotation/annotation-event)
+- [Annotation API](../annotation/annotations-api)
