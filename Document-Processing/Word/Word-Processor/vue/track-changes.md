@@ -433,3 +433,7 @@ export default {
 ## Online demo
 
 Explore how to track and review changes in Word documents using the Vue DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/vue/#/tailwind3/document-editor/track-changes.html).
+
+## See Also
+
+* [FAQs about Track Changes in DOCX Editor](../faq/track-changes-faqs)
