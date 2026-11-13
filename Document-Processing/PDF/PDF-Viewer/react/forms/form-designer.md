@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Form Designer in React PDF Viewer
 
-When **Form Designer mode** is enabled in the Syncfusion [React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/overview), a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/react/#/tailwind3/pdfviewer/form-designer) is displayed. This UI includes a built-in toolbar for adding form fields such as text boxes, password fields, check boxes, radio buttons, drop down lists, list boxes, signature and initial fields, DateTime picker, and barcode fields.
+When **Form Designer mode** is enabled in the Syncfusion [React PDF Viewer](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/react/overview), a default [Form Designer user interface (UI)](https://document.syncfusion.com/demos/pdf-viewer/react/#/tailwind3/pdfviewer/form-designer) is displayed. This UI includes a built-in toolbar for adding form fields such as text boxes, password fields, check boxes, radio buttons, drop down lists, list boxes, signature and initial fields, DateTime picker, button, and barcode fields.
 
 Using the Form Designer UI, users can place form fields on the PDF, move and resize them, configure field and widget properties, preview the designed form, and remove fields when required. The Form Designer toolbar can also be shown or hidden and customized to control the available tools based on application requirements, enabling flexible and interactive form design directly within the viewer.
 
@@ -28,6 +28,7 @@ The following form fields can be added to the PDF:
 - [Signature field](../forms/manage-form-fields/create-form-fields#add-signature-field)
 - [Initial field](../forms/manage-form-fields/create-form-fields#add-initial-field)
 - [DateTime picker](../forms/manage-form-fields/create-form-fields#add-datetime-picker)
+- [Button](../forms/manage-form-fields/create-form-fields#add-button)
 - [Barcode](../forms/manage-form-fields/create-form-fields#add-barcode)
 
 **Edit Form Fields:**
@@ -99,6 +100,7 @@ The **Form Designer toolbar** appears at the top of the PDF Viewer and provides 
 - [Signature field](../forms/manage-form-fields/create-form-fields#add-signature-field)
 - [Initial field](../forms/manage-form-fields/create-form-fields#add-initial-field)
 - [DateTime picker](../forms/manage-form-fields/create-form-fields#add-datetime-picker)
+- [Button](../forms/manage-form-fields/create-form-fields#add-button)
 - [Barcode](../forms/manage-form-fields/create-form-fields#add-barcode)
 
 #### Show or Hide the Built-in Form Designer Toolbar

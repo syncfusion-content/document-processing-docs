@@ -689,6 +689,127 @@ Use the **Format** tab to change the field type (Date or Time), select a display
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples)
 
+### Button
+
+Select a Button field in Form Designer to review or change its settings. The toolbar includes the Button tool, and the page displays the button field.
+
+![Button field in Form Designer](../../../angular/images/ui-button.png)
+
+Use the field's **General** properties to review or edit its name, value, tooltip, visibility, read-only and required settings, and print visibility.
+
+The **Appearance** properties include font, colors, border, and alignment of the button caption.
+
+#### Button Actions
+
+Use the **Actions** tab to associate an action with the button field. The action is executed when the corresponding event occurs.
+
+| Action | Description |
+|---|---|
+| `mouseUp` | Executes the action when the mouse button is released over the button field. |
+| `mouseDown` | Executes the action when the mouse button is pressed over the button field. |
+| `mouseEnter` | Executes the action when the pointer enters the button field area. |
+| `mouseLeave` | Executes the action when the pointer leaves the button field area. |
+| `gotFocus` | Executes the action when the button field receives focus. |
+| `lostFocus` | Executes the action when the button field loses focus. |
+
+![Button field Actions in Form Designer](../../../angular/images/ui-button-actions.png)
+
+The **Go To Action** navigates the viewer to a specific page, position, and zoom level in the document when the action is triggered.
+
+| Property | Description |
+|---|---|
+| `destinationPageNumber` | The page number to navigate to. |
+| `destinationLocation` | The position (`x` and `y`) within the destination page. |
+| `zoomValue` | The zoom level applied when navigating to the destination. A value of `0` retains the current zoom level. |
+
+- API: [`updateFormField()`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formdesigner#updateformfield) for the button text, value, tooltip, alignment, typography, colors, borders, and actions.
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+import { Component, ViewChild } from '@angular/core';
+import {
+  ToolbarService,
+  MagnificationService,
+  NavigationService,
+  AnnotationService,
+  TextSelectionService,
+  TextSearchService,
+  FormFieldsService,
+  FormDesignerService,
+  PdfViewerModule,
+  PdfViewerComponent,
+} from '@syncfusion/ej2-angular-pdfviewer';
+import { ActionType } from '@syncfusion/ej2-pdfviewer';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [PdfViewerModule],
+  template: `
+    <div class="content-wrapper">
+      <button (click)="editButton()">Edit Button</button>
+      <ejs-pdfviewer #pdfViewer id="pdfViewer" (documentLoad)="onDocumentLoad()"
+        [resourceUrl]="resourceUrl"
+        [documentPath]="document"
+        style="height: 640px; display: block;">
+      </ejs-pdfviewer>
+    </div>
+  `,
+  providers: [
+    ToolbarService,
+    MagnificationService,
+    NavigationService,
+    AnnotationService,
+    TextSelectionService,
+    TextSearchService,
+    FormFieldsService,
+    FormDesignerService,
+  ],
+})
+export class AppComponent {
+  public document: string = 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf';
+  public resourceUrl: string = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+
+  @ViewChild('pdfViewer') public pdfviewer!: PdfViewerComponent;
+
+  onDocumentLoad(): void {
+    // Add a button field that can be modified afterwards
+    this.pdfviewer.formDesignerModule.addFormField('ButtonField', {
+      name: 'Submit1',
+      pageNumber: 1,
+      bounds: { X: 100, Y: 350, Width: 120, Height: 32 },
+      value: 'Submit',
+      text: 'Submit',
+      tooltip: 'Click to submit'
+    } as any);
+  }
+
+  editButton(): void {
+    const fields = this.pdfviewer.retrieveFormFields();
+    const button = fields.find((field: any) => field.name === 'Submit1');
+    if (button) {
+      this.pdfviewer.formDesignerModule.updateFormField(button, {
+        value: 'Submit Button',
+        text: 'Submit Button',
+        alignment: 'Left',
+        tooltip: 'Updated Submit Button',
+        actions: {
+          mouseUp: {
+            action: ActionType.GoTo,
+            destinationPageNumber: 7,
+            destinationLocation: { x: 100, y: 100 },
+            zoomValue: 1
+          }
+        }
+      } as any);
+    }
+  }
+}
+{% endhighlight %}
+{% endtabs %}
+
+[View Sample on GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/Form%20fields/Button%20field)
+
 ### Barcode
 
 Select a Barcode field in Form Designer to review or change its settings. The toolbar includes the Barcode tool, and the page displays the generated barcode.
