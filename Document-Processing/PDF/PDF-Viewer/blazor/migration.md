@@ -233,6 +233,7 @@ For WebAssembly applications, include the following properties in the project **
 
 N>
 * For WebAssembly applications, install the [SkiaSharp.Views.Blazor version 4.150.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/4.150.1) NuGet package.
+* If you are targeting .NET 11, SkiaSharp does not officially support .NET 11 yet. As a workaround, upgrade the SkiaSharp packages to version `4.156.0`. Refer to [Resolve SkiaSharp Build Issues in .NET 11 Blazor WebAssembly Applications](./faqs/how-to-resolve-skiasharp-build-issues-in-dotnet-11-blazor-webassembly-applications).
 
 ## See also
 
