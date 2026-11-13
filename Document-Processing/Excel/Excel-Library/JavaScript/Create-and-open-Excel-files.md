@@ -232,7 +232,7 @@ The `customDocumentProperties` collection provides:
 * `contains(name)` — returns `true` when a property with that name exists.
 * `remove(name)` — removes the property and returns `true`, or `false` when it was not found.
 * `clear()` — removes all custom properties.
-* `length` — the number of properties. The collection is also iterable with `for...of`.
+* `length` — the number of properties. You can also iterate over the collection using `for...of`.
 
 Each property exposes `name` (read-only), `value`, and `type` (read-only). The type is detected from the assigned value:
 
