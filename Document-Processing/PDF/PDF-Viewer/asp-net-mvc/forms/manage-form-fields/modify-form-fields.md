@@ -418,6 +418,103 @@ Use the **Format** tab to change the field type (Date or Time), select a display
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/mvc-pdf-viewer-examples)
 
+### Button
+
+Select a Button field in Form Designer to review or change its settings. The toolbar includes the Button tool, and the page displays the button field.
+
+![Button field in Form Designer](../../../asp-net-mvc/images/ui-button.png)
+
+Use the field's **General** properties to review or edit its name, value, tooltip, visibility, read-only and required settings, and print visibility.
+
+The **Appearance** properties include font, colors, border, and alignment of the button caption.
+
+#### Button Actions
+
+Use the **Actions** tab to associate an action with the button field. The action is executed when the corresponding event occurs.
+
+| Action | Description |
+|---|---|
+| `mouseUp` | Executes the action when the mouse button is released over the button field. |
+| `mouseDown` | Executes the action when the mouse button is pressed over the button field. |
+| `mouseEnter` | Executes the action when the pointer enters the button field area. |
+| `mouseLeave` | Executes the action when the pointer leaves the button field area. |
+| `gotFocus` | Executes the action when the button field receives focus. |
+| `lostFocus` | Executes the action when the button field loses focus. |
+
+![Button field Actions in Form Designer](../../../asp-net-mvc/images/ui-button-actions.png)
+
+The **Go To Action** navigates the viewer to a specific page, position, and zoom level in the document when the action is triggered.
+
+| Property | Description |
+|---|---|
+| `destinationPageNumber` | The page number to navigate to. |
+| `destinationLocation` | The position (`x` and `y`) within the destination page. |
+| `zoomValue` | The zoom level applied when navigating to the destination. A value of `0` retains the current zoom level. |
+
+- API: [`updateFormField()`](https://ej2.syncfusion.com/documentation/api/pdfviewer/formdesigner#updateformfield) for the button text, value, tooltip, alignment, typography, colors, borders, and actions.
+
+{% tabs %}
+{% highlight cshtml tabtitle="Standalone" %}
+<div style="width:100%;height:120px">
+    <button id="editButton">Edit Button</button>
+</div>
+
+<div style="width:100%;height:600px">
+    @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf").DocumentLoad("documentLoad").Render()
+</div>
+
+<script>
+    function documentLoad() {
+        var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
+        // Add a button field that navigates to page 5 when it is clicked
+        pdfviewer.formDesignerModule.addFormField('ButtonField', {
+            name: 'Submit1',
+            pageNumber: 1,
+            bounds: { X: 100, Y: 350, Width: 120, Height: 32 },
+            value: 'Submit',
+            text: 'Submit',
+            tooltip: 'Click to submit',
+            actions: {
+                mouseUp: {
+                    action: 'GoTo',
+                    destinationPageNumber: 5,
+                    destinationLocation: { x: 100, y: 100 },
+                    zoomValue: 2
+                }
+            }
+        });
+    };
+    document.getElementById('editButton').addEventListener('click', function () {
+        var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
+        // Retrieve form fields collection
+        var fields = pdfviewer.retrieveFormFields();
+        // Find the button field by name
+        var button = (fields || []).find(function (f) { return f && f.name === 'Submit1'; });
+
+        if (button) {
+            pdfviewer.formDesignerModule.updateFormField(button, {
+                value: 'Submit Button',
+                text: 'Submit Button',
+                alignment: 'Left',
+                tooltip: 'Updated Submit Button',
+                actions: {
+                    mouseUp: {
+                        action: 'GoTo',
+                        destinationPageNumber: 7,
+                        destinationLocation: { x: 100, y: 100 },
+                        zoomValue: 1
+                    }
+                }
+            });
+        }
+    });
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+[View Sample on GitHub](https://github.com/SyncfusionExamples/mvc-pdf-viewer-examples/tree/master/Forms/Button%20field)
+
 ### Barcode
 
 Select a Barcode field in Form Designer to review or change its settings. The toolbar includes the Barcode tool, and the page displays the generated barcode.
