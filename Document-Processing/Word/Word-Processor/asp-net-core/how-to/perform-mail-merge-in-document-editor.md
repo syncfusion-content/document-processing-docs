@@ -20,7 +20,7 @@ You can perform mail merge in the [ASP.NET Core DOCX Editor](https://www.syncfus
 
 ## Insert merge fields
 
-A field can be added to the document using the [`insertField`](https://ej2.syncfusion.com/documentation/api/document-editor/editor?#insertfield) method in the Editor module.
+A field can be added to the document using the `insertField`method in the Editor module.
 
 The following example demonstrates how to insert a merge field programmatically by providing the field code and field result.
 
