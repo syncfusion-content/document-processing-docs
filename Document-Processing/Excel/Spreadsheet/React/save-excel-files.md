@@ -47,7 +47,7 @@ The supported formats depend on the processing method:
 | Microsoft Excel Workbook (.xlsx) | ✓ | ✓ |
 | Microsoft Excel 97–2003 Workbook (.xls) | ✗ | ✓ |
 | Comma-Separated Values (.csv) | ✗ | ✓ |
-| Portable Document Format (.pdf) | ✓ (Coming soon) | ✓ |
+| Portable Document Format (.pdf) | ✓ | ✓ |
 
 ## Save Events
 
