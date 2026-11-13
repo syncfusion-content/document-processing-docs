@@ -469,11 +469,14 @@ docEditor = Documenteditor()   # create the wrapper object
 
 Finally, add one Flask route for each editor operation inside the same `app.py` file. Each route reads the incoming request, calls the matching method on the wrapper instance, and returns the result to the editor.
 
+Each route is registered twice — once with the `/api/documenteditor` prefix and once without — so the service works whether the DOCX Editor's `serviceUrl` is configured as `http://127.0.0.1:5000/api/documenteditor/` (as in the [ASP.NET Core web service](https://help.syncfusion.com/document-processing/word/word-processor/react/web-services/core), where the routes are defined as `api/[controller]`) or simply as `http://127.0.0.1:5000/`.
+
 ### Import
 
 The React DOCX Editor uploads the Word document as `multipart/form-data` using the form field name `files`. The endpoint reads the uploaded file and passes it to the `Import` method, which returns the SFDT string.
 
 ```python
+@app.route('/api/documenteditor/Import', methods=['POST'])
 @app.route('/Import', methods=['POST'])
 def importDocument():
     if 'files' in request.files:
@@ -491,6 +494,7 @@ def importDocument():
 The Save API exports the edited document from the DOCX Editor. The endpoint receives the SFDT content and the file name, and returns the generated document to the client.
 
 ```python
+@app.route('/api/documenteditor/Save', methods=['POST'])
 @app.route('/Save', methods=['POST'])
 def save():
     # Get the SFDT data and the file name from the request.
@@ -508,6 +512,7 @@ def save():
 The SystemClipboard API converts clipboard data (HTML/RTF) to SFDT so content can be pasted with formatting.
 
 ```python
+@app.route('/api/documenteditor/SystemClipboard', methods=['POST'])
 @app.route('/SystemClipboard', methods=['POST'])
 def systemClipboard():
     # Get the SFDT data and the type from the request.
@@ -522,6 +527,7 @@ def systemClipboard():
 The RestrictEditing API computes the password hash used by the document protection feature.
 
 ```python
+@app.route('/api/documenteditor/RestrictEditing', methods=['POST'])
 @app.route('/RestrictEditing', methods=['POST'])
 def restrictEditing():
     passwordBase64 = request.json['passwordBase64']
@@ -537,6 +543,7 @@ def restrictEditing():
 The MailMerge API performs mail merge on the uploaded Word document using the given data records and returns the merged document as SFDT.
 
 ```python
+@app.route('/api/documenteditor/MailMerge', methods=['POST'])
 @app.route('/MailMerge', methods=['POST'])
 def mailMerge():
     # Get the base64 Word document from the request.
@@ -550,6 +557,7 @@ def mailMerge():
 The CompareDocuments API compares the original and revised Word documents and returns the comparison result (with tracked changes) as SFDT.
 
 ```python
+@app.route('/api/documenteditor/CompareDocuments', methods=['POST'])
 @app.route('/CompareDocuments', methods=['POST'])
 def compareDocuments():
     # Get the original and revised files from the request.
@@ -587,6 +595,8 @@ Create the React application with the DOCX Editor component by following the [Ge
 ```tsx
 serviceUrl = "http://127.0.0.1:5000/";
 ```
+
+The service responds on both `http://127.0.0.1:5000/<operation>` and `http://127.0.0.1:5000/api/documenteditor/<operation>`, so the `serviceUrl` can be configured either way.
 
 With this configuration, every server-side operation of the editor is sent to the Python service, processed through the published assembly, and returned to the React application.
 
