@@ -499,7 +499,7 @@ let document: PdfDocument = new PdfDocument();
 // Add a page to the document
 let page: PdfPage = document.addPage();
 // Define font for text rendering
-let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 14);
+let font: PdfStandardFont = document.embedFont(PdfFontFamily.helvetica, 14, PdfFontStyle.regular);
 // Define brush for text color (blue)
 let brush: PdfBrush = new PdfBrush({ r: 0, g: 0, b: 255 });
 // Define pen for text outline
@@ -521,7 +521,7 @@ let element: PdfTextElement = {
   layoutFormat: layoutFormat
 };
 // Draw the text element within specified bounds; width constraint enables wrapping and multi-page flow
-let result: PdfLayoutResult = page.drawTextElement(element, { x: 40, y: 60, width: 400 });
+let result: PdfLayoutResult = page.drawTextElement(element, { x: 40, y: 60, width: 400, height: 40 });
 // Retrieve the last page from layout result
 let nextPage: PdfPage = result.page;
 // Create continuation text element
@@ -531,7 +531,7 @@ let continuation: PdfTextElement = {
   brush: brush
 };
 // Draw continuation text below the previous content using layout bounds
-nextPage.drawTextElement(continuation, { x: 40, y: result.bounds.y + 10, width: 400 });
+nextPage.drawTextElement(continuation, { x: 40, y: result.bounds.y + 10, width: 400, height: 40 });
 // Save the document
 document.save('Output.pdf');
 // Destroy the document to release resources
@@ -543,7 +543,7 @@ var document = new ej.pdf.PdfDocument();
 // Add a page to the document
 var page = document.addPage();
 // Define font for text
-var font = document.embedFont(ej.pdf.PdfFontFamily.helvetica, 14);
+var font = document.embedFont(ej.pdf.PdfFontFamily.helvetica, 14, ej.pdf.PdfFontStyle.regular);
 // Define brush for text color (blue)
 var brush = new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 });
 // Define pen for text outline
@@ -565,7 +565,7 @@ var element = {
   layoutFormat: layoutFormat
 };
 // Draw text with layout and wrapping
-var result = page.drawTextElement(element, { x: 40, y: 60, width: 400 });
+var result = page.drawTextElement(element, { x: 40, y: 60, width: 400, height: 40 });
 // Access last page from layout result
 var nextPage = result.page;
 // Create continuation text
@@ -575,7 +575,7 @@ var continuation = {
   brush: brush
 };
 // Draw continuation text below previous content
-nextPage.drawTextElement(continuation, { x: 40, y: result.bounds.y + 10, width: 400 });
+nextPage.drawTextElement(continuation, { x: 40, y: result.bounds.y + 10, width: 400, height: 40 });
 // Save the document
 document.save('Output.pdf');
 // Destroy the document
@@ -588,4 +588,4 @@ document.destroy();
 - [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library)
 - [JavaScript PDF Library documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
 - [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
-- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/tailwind3/pdf/default.html)
+- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/document-library/javascript/#/tailwind3/pdf/default.html)
