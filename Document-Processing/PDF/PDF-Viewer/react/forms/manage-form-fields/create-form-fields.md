@@ -644,8 +644,6 @@ The label rendered on the button is defined using the **text** property, and the
 
 ![Button field in Form Designer](../../../react/images/ui-button.png)
 
-N> When the value of a button field is a base64 string or an image URL, the button is rendered as an image in the viewer instead of a text button.
-
 #### Button Actions
 
 An action can be associated with a button field, and the action is executed when the corresponding event occurs. The action is configured for the required event in the **Actions** tab of the Button Properties dialog.
@@ -727,7 +725,7 @@ root.render(<App />);
 
 **Place a button field interactively**:
 
-Use [`setFormFieldMode()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/formdesigner#setformfieldmode) to switch the form designer into the button placement mode, and then click on the PDF page to place the button field. The existing button fields can be modified or removed using [`updateFormField()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/formdesigner#updateformfield) and [`deleteFormField()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/formdesigner#deleteformfield).
+Use [`setFormFieldMode()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/formdesigner#setformfieldmode) to switch the form designer into the button placement mode, and then click on the PDF page to place the button field. The existing button fields can be removed using [`deleteFormField()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/formdesigner#deleteformfield).
 
 {% tabs %}
 {% highlight js tabtitle="index.js" %}
