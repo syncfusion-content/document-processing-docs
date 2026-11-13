@@ -678,6 +678,456 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
+### Button
+
+A button field is an interactive form field displayed on a PDF page that allows users to perform various actions, such as navigating to a specific page or location within the document. Users can configure actions to be triggered through mouse and keyboard interactions. Button fields can be added and edited using both the Form Designer UI and programmatically.
+
+#### Button Text and Value
+
+The text displayed on the button is defined using the **text** property, while the data value associated with the button field is defined using the **value** property. If the **text** property is not specified, the **value** property is used as the displayed button text.
+
+![Button field in Form Designer](../../../vue/images/ui-button.png)
+
+#### Button Actions
+
+An action can be associated with a button field, and the action is executed when the corresponding event occurs. The action is configured for the required event in the **Actions** tab of the Button Properties dialog.
+
+| Action | Description |
+|---|---|
+| `mouseUp` | Executes the action when the mouse button is released over the button field. |
+| `mouseDown` | Executes the action when the mouse button is pressed over the button field. |
+| `mouseEnter` | Executes the action when the pointer enters the button field area. |
+| `mouseLeave` | Executes the action when the pointer leaves the button field area. |
+| `gotFocus` | Executes the action when the button field receives focus. |
+| `lostFocus` | Executes the action when the button field loses focus. |
+
+![Button field Actions in Form Designer](../../../vue/images/ui-button-actions.png)
+
+The **Go To Action** navigates the viewer to a specific page, position, and zoom level in the document when the action is triggered.
+
+| Property | Description |
+|---|---|
+| `destinationPageNumber` | The page number to navigate to. |
+| `destinationLocation` | The position (`x` and `y`) within the destination page. |
+| `zoomValue` | The zoom level applied when navigating to the destination. A value of `0` retains the current zoom level. |
+
+**Add via Toolbar (UI)**
+- Open **Form Designer** → select **Button** → click on the page → configure in **Properties**.
+- Select the placed field to review or change its general properties, such as its name, value, tooltip, visibility, and whether it is read-only or required.
+
+**Add Programmatically (API)**
+{% tabs %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+<template>
+  <div>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" @documentLoad="onDocumentLoad" style="height:640px" />
+  </div>
+</template>
+
+<script>
+import {
+  PdfViewerComponent,
+  Toolbar,
+  Magnification,
+  Navigation,
+  Annotation,
+  TextSelection,
+  TextSearch,
+  FormFields,
+  FormDesigner,
+  PageOrganizer,
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { ActionType } from '@syncfusion/ej2-pdfviewer';
+
+export default {
+  components: { 'ejs-pdfviewer': PdfViewerComponent },
+  provide: { PdfViewer: [Toolbar, Magnification, Navigation, Annotation, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer] },
+  data() {
+    return {
+      documentPath: 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+    };
+  },
+  methods: {
+    onDocumentLoad() {
+      const pdfviewer = this.$refs.pdfviewer.ej2Instances;
+      // Add a button field that navigates to page 5 when it is clicked
+      pdfviewer.formDesignerModule.addFormField('ButtonField', {
+        name: 'Submit1',
+        pageNumber: 1,
+        bounds: { X: 100, Y: 350, Width: 120, Height: 32 },
+        value: 'Submit',
+        text: 'Submit',
+        tooltip: 'Click to submit',
+        actions: {
+          mouseUp: {
+            action: ActionType.GoTo,
+            destinationPageNumber: 5,
+            destinationLocation: { x: 100, y: 100 },
+            zoomValue: 2
+          }
+        }
+      });
+    },
+  },
+};
+</script>
+{% endhighlight %}
+{% endtabs %}
+
+**Place a button field interactively**
+Use [`setFormFieldMode()`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formdesigner#setformfieldmode) to switch the form designer into the button placement mode, and then click on the PDF page to place the button field. The existing button fields can be removed using [`deleteFormField()`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formdesigner#deleteformfield).
+
+{% tabs %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+<template>
+  <div>
+    <button @click="addButtonField()">Add Button Field</button>
+    <button @click="enableButtonMode()">Enable Button Designer Mode</button>
+    <select v-model="selectedFieldId">
+      <option v-for="field in buttonFields" :key="field.id" :value="field.id">{{ field.name }}</option>
+      <option v-if="!buttonFields.length" value="">No Button Fields Available</option>
+    </select>
+    <button @click="editButtonField()" :disabled="!selectedFieldId">Edit Button Field</button>
+    <button @click="deleteButtonField()" :disabled="!selectedFieldId">Delete Button Field</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl"
+      @documentLoad="refreshButtonFields" @formFieldAdd="refreshButtonFields" @formFieldRemove="refreshButtonFields"
+      style="height:640px" />
+  </div>
+</template>
+
+<script>
+import {
+  PdfViewerComponent,
+  Toolbar,
+  Magnification,
+  Navigation,
+  Annotation,
+  TextSelection,
+  TextSearch,
+  FormFields,
+  FormDesigner,
+  PageOrganizer,
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { ActionType } from '@syncfusion/ej2-pdfviewer';
+
+export default {
+  components: { 'ejs-pdfviewer': PdfViewerComponent },
+  provide: { PdfViewer: [Toolbar, Magnification, Navigation, Annotation, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer] },
+  data() {
+    return {
+      documentPath: 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+      buttonFields: [],
+      selectedFieldId: '',
+    };
+  },
+  methods: {
+    getViewer() {
+      return this.$refs.pdfviewer.ej2Instances;
+    },
+    // Refresh the button fields available in the document
+    refreshButtonFields() {
+      const viewer = this.getViewer();
+      if (!viewer) {
+        return;
+      }
+
+      const fields = Array.isArray(viewer.formFieldCollections) ? viewer.formFieldCollections : [];
+      const buttons = fields
+        .filter((field) => field.type === 'ButtonField')
+        .map((field) => ({
+          id: field.id,
+          name: field.name || field.value || field.id
+        }));
+
+      this.buttonFields = buttons;
+
+      if (!buttons.some((field) => field.id === this.selectedFieldId)) {
+        this.selectedFieldId = buttons.length > 0 ? buttons[0].id : '';
+      }
+    },
+    getSelectedField() {
+      const viewer = this.getViewer();
+      if (!viewer || !this.selectedFieldId) {
+        return null;
+      }
+
+      const fields = Array.isArray(viewer.formFieldCollections) ? viewer.formFieldCollections : [];
+      return fields.find((field) => field.id === this.selectedFieldId) || null;
+    },
+    // Add a button field programmatically
+    addButtonField() {
+      const viewer = this.getViewer();
+      if (!viewer) {
+        return;
+      }
+
+      viewer.formDesignerModule.addFormField('ButtonField', {
+        name: `Submit${this.buttonFields.length + 1}`,
+        pageNumber: 1,
+        bounds: { X: 100, Y: 350, Width: 120, Height: 32 },
+        value: 'Submit',
+        text: 'Submit',
+        tooltip: 'Click to submit',
+        actions: {
+          mouseUp: {
+            action: ActionType.GoTo,
+            destinationPageNumber: 5,
+            destinationLocation: { x: 100, y: 100 },
+            zoomValue: 2
+          }
+        }
+      });
+
+      this.refreshButtonFields();
+    },
+    // Switch the form designer into the button placement mode
+    enableButtonMode() {
+      const viewer = this.getViewer();
+      if (!viewer) {
+        return;
+      }
+
+      viewer.formDesignerModule.setFormFieldMode('ButtonField');
+    },
+    // Update the properties and actions of the selected button field
+    editButtonField() {
+      const viewer = this.getViewer();
+      const field = this.getSelectedField();
+      if (!viewer || !field) {
+        return;
+      }
+
+      viewer.formDesignerModule.updateFormField(field, {
+        value: 'Submit Button',
+        text: 'Submit Button',
+        alignment: 'Left',
+        tooltip: 'Updated Submit Button',
+        actions: {
+          mouseUp: {
+            action: ActionType.GoTo,
+            destinationPageNumber: 7,
+            destinationLocation: { x: 100, y: 100 },
+            zoomValue: 1
+          }
+        }
+      });
+
+      this.refreshButtonFields();
+    },
+    // Delete the selected button field
+    deleteButtonField() {
+      const viewer = this.getViewer();
+      const field = this.getSelectedField();
+      if (!viewer || !field) {
+        return;
+      }
+
+      viewer.formDesignerModule.deleteFormField(field);
+      this.selectedFieldId = '';
+      this.refreshButtonFields();
+    },
+  },
+};
+</script>
+{% endhighlight %}
+{% endtabs %}
+
+[View Sample on GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/Forms/Button%20Field)
+
+### Barcode
+
+A barcode field is a form field that displays the entered value as a barcode that can be scanned. Barcode fields can be added and edited both through the Form Designer UI and programmatically.
+
+#### Barcode Symbology
+
+The barcode type is referred to as the **symbology**. The following symbologies are supported, and **PDF417** is used by default.
+
+| Symbology | Description |
+|---|---|
+| `PDF417` | A stacked, linear barcode that supports alphanumeric data. This is the default symbology. |
+| `QRCode` | A two-dimensional matrix barcode that supports numeric, alphanumeric, and binary data. |
+| `DataMatrix` | A two-dimensional matrix barcode that is used to encode a small amount of data in a compact area. |
+
+![Barcode field Symbology in Form Designer](../../../vue/images/barcode-ui-types.png)
+
+#### Barcode Value Format
+
+The value that is encoded in the barcode can be supplied in three ways.
+
+| Value format | Description |
+|---|---|
+| `TabDelimited` | Carries the values in the barcode separated by a tab character, so the values appear at a tab space distance from each other. |
+| `XML` | Stores the values pairwise in an XML structure. |
+| `CustomValue` | Stores the value as a string, and any string can be assigned to it. |
+
+N> Complete support for executing custom scripts is not available. Instead, the PDF Viewer parses the final value assigned to the barcode field in the PDF document.
+
+#### Static Barcode Value
+
+The barcode value can be set to a fixed value from the **Value** tab of the Barcode Properties dialog.
+
+Select **Custom Value** in the **Encode** dropdown, and then enter the text to be encoded in the **Custom Value** text box.
+
+![Custom Value option in the Value tab](../../../vue/images/ui-barcode-value-tab.png)
+
+#### Dynamic Barcode Value
+
+The barcode value can also be calculated from the other form fields that are present in the PDF document.
+
+In the Form Designer, open the **Value** tab of the Barcode Properties dialog and use the **Select Field for Calculation** option to bind one or more fields to the barcode field.
+
+![Select Field for Calculation option in the Value tab](../../../vue/images/dynamic-field-binding.png)
+
+When a value is entered in a bound field, the barcode value is updated automatically.
+
+N> By default, the barcode stores the field name along with its value. To store only the field values, clear the **Include Field Names** option. This option is available only for the `TabDelimited` format and does not apply to the `XML` format, which always stores data as name-value pairs.
+
+#### Barcode Caption
+
+By default, the name of the loaded PDF document is displayed below the generated barcode field. Use the **caption** property to change this text, either from the UI or programmatically.
+
+![Barcode field with caption in Form Designer](../../../vue/images/ui-barcode.png)
+
+#### Barcode Error Correction Level
+
+The error correction level determines how much damage the generated barcode can tolerate before it can no longer be read. The available levels depend on the selected symbology.
+
+| Symbology | Supported values |
+|---|---|
+| `PDF417` | `Level0` to `Level8` |
+| `QRCode` | `Low`, `Medium`, `Quartile`, `High` |
+| `DataMatrix` | Not applicable, since Data Matrix does not use this setting. |
+
+The default error correction level is `Level5`.
+
+![Barcode error correction level settings in Form Designer](../../../vue/images/ui-barcode-error-correction.png)
+
+**Add via UI**: Open the Form Designer toolbar, select **Barcode**, and click on a PDF page to place the field. Select the placed field to review or change its general properties, such as its name, value, visibility, and whether it is read-only or required.
+
+**Add Programmatically (API)**
+
+{% tabs %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+<template>
+  <div>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" @documentLoad="onDocumentLoad" style="height:640px" />
+  </div>
+</template>
+
+<script>
+import {
+  PdfViewerComponent,
+  Toolbar,
+  Magnification,
+  Navigation,
+  Annotation,
+  TextSelection,
+  TextSearch,
+  FormFields,
+  FormDesigner,
+  PageOrganizer,
+} from '@syncfusion/ej2-vue-pdfviewer';
+
+export default {
+  components: { 'ejs-pdfviewer': PdfViewerComponent },
+  provide: { PdfViewer: [Toolbar, Magnification, Navigation, Annotation, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer] },
+  data() {
+    return {
+      documentPath: 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+    };
+  },
+  methods: {
+    onDocumentLoad() {
+      const pdfviewer = this.$refs.pdfviewer.ej2Instances;
+      // Add a barcode field with the default PDF417 symbology
+      pdfviewer.formDesignerModule.addFormField('Barcode', {
+        name: 'ProductBarcode',
+        bounds: { X: 146, Y: 300, Width: 180, Height: 100 },
+        pageNumber: 1,
+        value: 'SYNCFUSION-001',
+        caption: 'Product Barcode',
+        symbology: 'PDF417',
+        valueFormat: 'TabDelimited',
+        errorCorrectionLevel: 'Level5',
+        isRequired: false,
+        isPrint: true,
+        visibility: 'visible',
+        tooltip: 'Scan to view the product details',
+      });
+    },
+  },
+};
+</script>
+{% endhighlight %}
+{% endtabs %}
+
+**Add a barcode field with a specific symbology and update an existing barcode field**
+
+{% tabs %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+<template>
+  <div>
+    <button @click="addBarcodeField('QRCode')">Add QR Code</button>
+    <button @click="updateSymbology('DataMatrix')">Set Data Matrix</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" style="height:640px" />
+  </div>
+</template>
+
+<script>
+import {
+  PdfViewerComponent,
+  Toolbar,
+  Magnification,
+  Navigation,
+  Annotation,
+  TextSelection,
+  TextSearch,
+  FormFields,
+  FormDesigner,
+  PageOrganizer,
+} from '@syncfusion/ej2-vue-pdfviewer';
+
+export default {
+  components: { 'ejs-pdfviewer': PdfViewerComponent },
+  provide: { PdfViewer: [Toolbar, Magnification, Navigation, Annotation, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer] },
+  data() {
+    return {
+      documentPath: 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+    };
+  },
+  methods: {
+    addBarcodeField(symbology) {
+      const pdfviewer = this.$refs.pdfviewer.ej2Instances;
+      // Add a barcode field with the given symbology
+      pdfviewer.formDesignerModule.addFormField('Barcode', {
+        name: 'Barcode1',
+        bounds: { X: 100, Y: 150, Width: 200, Height: 80 },
+        pageNumber: 1,
+        symbology: symbology,
+      });
+    },
+    updateSymbology(symbology) {
+      const pdfviewer = this.$refs.pdfviewer.ej2Instances;
+      const fields = pdfviewer.formFieldCollections;
+      const barcode = fields.filter((field) => field.type === 'Barcode')[0];
+
+      if (barcode) {
+        // Update the symbology of the barcode field
+        pdfviewer.formDesignerModule.updateFormField(barcode, {
+          symbology: symbology,
+        });
+      }
+    },
+  },
+};
+</script>
+{% endhighlight %}
+{% endtabs %}
+
 ## Add Fields Dynamically with setFormFieldMode
 
 Use **setFormFieldMode()** to add fields on the fly based on user actions.
