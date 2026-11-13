@@ -596,6 +596,119 @@ Use the **Format** tab to change the field type (Date or Time), select a display
 
 [View Sample on GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples)
 
+### Button
+
+Select a Button field in Form Designer to review or change its settings. The toolbar includes the Button tool, and the page displays the button field.
+
+![Button field in Form Designer](../../../vue/images/ui-button.png)
+
+Use the field's **General** properties to review or edit its name, value, tooltip, visibility, read-only and required settings, and print visibility.
+
+The **Appearance** properties include font, colors, border, and alignment of the button caption.
+
+#### Button Actions
+
+Use the **Actions** tab to associate an action with the button field. The action is executed when the corresponding event occurs.
+
+| Action | Description |
+|---|---|
+| `mouseUp` | Executes the action when the mouse button is released over the button field. |
+| `mouseDown` | Executes the action when the mouse button is pressed over the button field. |
+| `mouseEnter` | Executes the action when the pointer enters the button field area. |
+| `mouseLeave` | Executes the action when the pointer leaves the button field area. |
+| `gotFocus` | Executes the action when the button field receives focus. |
+| `lostFocus` | Executes the action when the button field loses focus. |
+
+![Button field Actions in Form Designer](../../../vue/images/ui-button-actions.png)
+
+The **Go To Action** navigates the viewer to a specific page, position, and zoom level in the document when the action is triggered.
+
+| Property | Description |
+|---|---|
+| `destinationPageNumber` | The page number to navigate to. |
+| `destinationLocation` | The position (`x` and `y`) within the destination page. |
+| `zoomValue` | The zoom level applied when navigating to the destination. A value of `0` retains the current zoom level. |
+
+- API: [`updateFormField()`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/formdesigner#updateformfield) for the button text, value, tooltip, alignment, typography, colors, borders, and actions.
+
+{% tabs %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+<template>
+  <div>
+    <button @click="editButton()">Edit Button</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" @documentLoad="onDocumentLoad" style="height:640px" />
+  </div>
+</template>
+
+<script>
+import {
+  PdfViewerComponent,
+  Toolbar,
+  Magnification,
+  Navigation,
+  Annotation,
+  TextSelection,
+  TextSearch,
+  FormFields,
+  FormDesigner,
+  PageOrganizer,
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { ActionType } from '@syncfusion/ej2-pdfviewer';
+
+export default {
+  components: { 'ejs-pdfviewer': PdfViewerComponent },
+  provide: { PdfViewer: [Toolbar, Magnification, Navigation, Annotation, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer] },
+  data() {
+    return {
+      documentPath: 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib',
+    };
+  },
+  methods: {
+    onDocumentLoad() {
+      const pdfviewer = this.$refs.pdfviewer.ej2Instances;
+      // Add a button field that can be modified afterwards
+      pdfviewer.formDesignerModule.addFormField('ButtonField', {
+        name: 'Submit1',
+        pageNumber: 1,
+        bounds: { X: 100, Y: 350, Width: 120, Height: 32 },
+        value: 'Submit',
+        text: 'Submit',
+        tooltip: 'Click to submit'
+      });
+    },
+    editButton() {
+      const pdfviewer = this.$refs.pdfviewer.ej2Instances;
+      // Retrieve form fields collection
+      const fields = pdfviewer.retrieveFormFields();
+      // Find the button field by name
+      const button = fields.find((field) => field.name === 'Submit1');
+
+      if (button) {
+        pdfviewer.formDesignerModule.updateFormField(button, {
+          value: 'Submit Button',
+          text: 'Submit Button',
+          alignment: 'Left',
+          tooltip: 'Updated Submit Button',
+          actions: {
+            mouseUp: {
+              action: ActionType.GoTo,
+              destinationPageNumber: 7,
+              destinationLocation: { x: 100, y: 100 },
+              zoomValue: 1
+            }
+          }
+        });
+      }
+    },
+  },
+};
+</script>
+{% endhighlight %}
+{% endtabs %}
+
+[View Sample on GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/Forms/Button%20Field)
+
 ### Barcode
 
 Select a Barcode field in Form Designer to review or change its settings. The toolbar includes the Barcode tool, and the page displays the generated barcode.
