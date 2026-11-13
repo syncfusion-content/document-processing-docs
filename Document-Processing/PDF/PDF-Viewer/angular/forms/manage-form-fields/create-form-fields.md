@@ -921,6 +921,7 @@ Use [`setFormFieldMode()`](https://ej2.syncfusion.com/angular/documentation/api/
 {% tabs %}
 {% highlight ts tabtitle="Standalone" %}
 import { Component, ViewChild } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import {
   ToolbarService,
@@ -944,7 +945,7 @@ interface IButtonFieldInfo {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [PdfViewerModule, FormsModule],
+  imports: [PdfViewerModule, FormsModule, CommonModule],
   template: `
     <div class="content-wrapper">
       <button (click)="addButtonField()">Add Button Field</button>
@@ -977,8 +978,10 @@ interface IButtonFieldInfo {
   ],
 })
 export class AppComponent {
-  public document: string = 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf';
-  public resourceUrl: string = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+  public document: string =
+    'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf';
+  public resourceUrl: string =
+    'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
 
   @ViewChild('pdfViewer') public pdfviewer!: PdfViewerComponent;
 
@@ -999,9 +1002,9 @@ export class AppComponent {
           action: ActionType.GoTo,
           destinationPageNumber: 5,
           destinationLocation: { x: 100, y: 100 },
-          zoomValue: 2
-        }
-      }
+          zoomValue: 2,
+        },
+      },
     } as any);
     this.refreshButtonFields();
   }
@@ -1027,9 +1030,9 @@ export class AppComponent {
           action: ActionType.GoTo,
           destinationPageNumber: 7,
           destinationLocation: { x: 100, y: 100 },
-          zoomValue: 1
-        }
-      }
+          zoomValue: 1,
+        },
+      },
     } as any);
     this.refreshButtonFields();
   }
@@ -1052,11 +1055,13 @@ export class AppComponent {
       .filter((field: any) => field.type === 'ButtonField')
       .map((field: any) => ({
         id: field.id,
-        name: field.name || field.value || field.id
+        name: field.name || field.value || field.id,
       }));
 
     if (!this.buttonFields.some((field) => field.id === this.selectedFieldId)) {
-      this.selectedFieldId = this.buttonFields.length ? this.buttonFields[0].id : '';
+      this.selectedFieldId = this.buttonFields.length
+        ? this.buttonFields[0].id
+        : '';
     }
   }
 
@@ -1065,7 +1070,9 @@ export class AppComponent {
       return null;
     }
     const fields: any[] = this.pdfviewer.formFieldCollections ?? [];
-    return fields.find((field: any) => field.id === this.selectedFieldId) || null;
+    return (
+      fields.find((field: any) => field.id === this.selectedFieldId) || null
+    );
   }
 }
 {% endhighlight %}

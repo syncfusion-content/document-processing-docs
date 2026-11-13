@@ -479,33 +479,31 @@ The **Go To Action** navigates the viewer to a specific page, position, and zoom
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
 <div style="width:100%;height:600px">
-    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf" documentLoad="documentLoad">
     </ejs-pdfviewer>
 </div>
 
 <script type="text/javascript">
-document.addEventListener('DOMContentLoaded', function () {
-  var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
-  pdfviewer.documentLoad = function () {
-    // Add a button field that navigates to page 5 when it is clicked
-    pdfviewer.formDesignerModule.addFormField('ButtonField', {
-      name: 'Submit1',
-      pageNumber: 1,
-      bounds: { X: 100, Y: 350, Width: 120, Height: 32 },
-      value: 'Submit',
-      text: 'Submit',
-      tooltip: 'Click to submit',
-      actions: {
-        mouseUp: {
-          action: 'GoTo',
-          destinationPageNumber: 5,
-          destinationLocation: { x: 100, y: 100 },
-          zoomValue: 2
-        }
-      }
-    });
-  };
-});
+    function documentLoad() {
+        var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
+        // Add a button field that navigates to page 5 when it is clicked
+        pdfviewer.formDesignerModule.addFormField('ButtonField', {
+            name: 'Submit1',
+            pageNumber: 1,
+            bounds: { X: 100, Y: 350, Width: 120, Height: 32 },
+            value: 'Submit',
+            text: 'Submit',
+            tooltip: 'Click to submit',
+            actions: {
+                mouseUp: {
+                    action: 'GoTo',
+                    destinationPageNumber: 5,
+                    destinationLocation: { x: 100, y: 100 },
+                    zoomValue: 2
+                }
+            }
+        });
+    };
 </script>
 {% endhighlight %}
 {% endtabs %}

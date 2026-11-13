@@ -455,56 +455,60 @@ The **Go To Action** navigates the viewer to a specific page, position, and zoom
 
 {% tabs %}
 {% highlight cshtml tabtitle="Standalone" %}
+<div style="width:100%;height:120px">
+    <button id="editButton">Edit Button</button>
+</div>
 
-    <div style="width:100%;height:120px">
-        <button id="editButton">Edit Button</button>
-    </div>
+<div style="width:100%;height:600px">
+    @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf").DocumentLoad("documentLoad").Render()
+</div>
 
-    <div style="width:100%;height:600px">
-        @Html.EJS().PdfViewer("pdfviewer").DocumentPath("https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf").Render()
-    </div>
+<script>
+    function documentLoad() {
+        var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
+        // Add a button field that navigates to page 5 when it is clicked
+        pdfviewer.formDesignerModule.addFormField('ButtonField', {
+            name: 'Submit1',
+            pageNumber: 1,
+            bounds: { X: 100, Y: 350, Width: 120, Height: 32 },
+            value: 'Submit',
+            text: 'Submit',
+            tooltip: 'Click to submit',
+            actions: {
+                mouseUp: {
+                    action: 'GoTo',
+                    destinationPageNumber: 5,
+                    destinationLocation: { x: 100, y: 100 },
+                    zoomValue: 2
+                }
+            }
+        });
+    };
+    document.getElementById('editButton').addEventListener('click', function () {
+        var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
+        // Retrieve form fields collection
+        var fields = pdfviewer.retrieveFormFields();
+        // Find the button field by name
+        var button = (fields || []).find(function (f) { return f && f.name === 'Submit1'; });
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
-
-            // Add a button field that can be modified afterwards
-            pdfviewer.documentLoad = function () {
-                pdfviewer.formDesignerModule.addFormField('ButtonField', {
-                    name: 'Submit1',
-                    pageNumber: 1,
-                    bounds: { X: 100, Y: 350, Width: 120, Height: 32 },
-                    value: 'Submit',
-                    text: 'Submit',
-                    tooltip: 'Click to submit'
-                });
-            };
-
-            document.getElementById('editButton').addEventListener('click', function () {
-                // Retrieve form fields collection
-                var fields = pdfviewer.retrieveFormFields();
-                // Find the button field by name
-                var button = (fields || []).find(function (f) { return f && f.name === 'Submit1'; });
-
-                if (button) {
-                    pdfviewer.formDesignerModule.updateFormField(button, {
-                        value: 'Submit Button',
-                        text: 'Submit Button',
-                        alignment: 'Left',
-                        tooltip: 'Updated Submit Button',
-                        actions: {
-                            mouseUp: {
-                                action: 'GoTo',
-                                destinationPageNumber: 7,
-                                destinationLocation: { x: 100, y: 100 },
-                                zoomValue: 1
-                            }
-                        }
-                    });
+        if (button) {
+            pdfviewer.formDesignerModule.updateFormField(button, {
+                value: 'Submit Button',
+                text: 'Submit Button',
+                alignment: 'Left',
+                tooltip: 'Updated Submit Button',
+                actions: {
+                    mouseUp: {
+                        action: 'GoTo',
+                        destinationPageNumber: 7,
+                        destinationLocation: { x: 100, y: 100 },
+                        zoomValue: 1
+                    }
                 }
             });
-        });
-    </script>
+        }
+    });
+</script>
 
 {% endhighlight %}
 {% endtabs %}
