@@ -1275,7 +1275,7 @@ Border settings are resolved separately for each cell in the following precedenc
 
 This example creates a student marks table and customizes the borders at every level:
 
-* **Grid:** Draws the outer border and the horizontal separators (`PdfGridBorderType.Outside | PdfGridBorderType.InsideHorizontal`) in gray.
+* **Grid:** Draws only the outer border (`PdfGridBorderType.None | PdfGridBorderType.Outside`) in gray.
 * **Column:** Draws the **Percentage** column with a thicker, dashed blue border.
 * **Row:** Draws the rows of students who scored above 95% with a green border, and the other rows keep the grid border.
 * **Cell:** Draws a red border around any subject mark below 50 so that it stands out.
@@ -1330,10 +1330,10 @@ let columns: PdfColumnInformation[] = [
 ];
 // Create the grid
 let grid: PdfGrid = new PdfGrid(source, columns);
-// Grid level: draw only the outer border and the horizontal separators in gray
+// Grid level: draw only the outer border in gray
 grid.style = {
     border: {
-        type: PdfGridBorderType.Outside | PdfGridBorderType.InsideHorizontal,
+        type: PdfGridBorderType.None | PdfGridBorderType.Outside,
         pen: {
             width: 1,
             left: { color: { r: 128, g: 128, b: 128 } },
@@ -1433,10 +1433,10 @@ var columns = [
 ];
 // Create the grid
 var grid = new ej.pdf.PdfGrid(source, columns);
-// Grid level: draw only the outer border and the horizontal separators in gray
+// Grid level: draw only the outer border in gray
 grid.style = {
     border: {
-        type: ej.pdf.PdfGridBorderType.Outside | ej.pdf.PdfGridBorderType.InsideHorizontal,
+        type: ej.pdf.PdfGridBorderType.None | ej.pdf.PdfGridBorderType.Outside,
         pen: {
             width: 1,
             left: { color: { r: 128, g: 128, b: 128 } },
