@@ -9,6 +9,12 @@ documentation: ug
 
 # Save Excel Files in React Spreadsheet
 
+The React Spreadsheet component allows users to save Excel files through either server-side or client-side processing methods. The processing method is determined by whether `saveUrl` is configured.
+
+When `saveUrl` is configured, the Spreadsheet sends workbook data to a server endpoint for processing (server-side export). When `saveUrl` is not configured, the Spreadsheet generates files directly in the browser (client-side export).
+
+## Server-Side Export
+
 The [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component uses a server-assisted workflow to save Excel files efficiently and accurately. When a user saves an Excel file, the Spreadsheet content displayed in the browser is first serialized into a structured JSON workbook. This JSON includes all essential details—such as data, formulas, formatting, styles, and sheet configuration.
 
 The JSON workbook is then sent to a server endpoint for processing. On the server, the [`Syncfusion.EJ2.Spreadsheet`](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core) library is used to convert the JSON data into a fully formatted Excel file. This library is built on top of [`Syncfusion XlsIO`](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview), which itself is implemented using **.NET Frameworks**. The server parses the JSON, maps its contents to an XlsIO Workbook instance, and ensures that all data, styles, formulas, and other Spreadsheet features are accurately preserved.
@@ -24,6 +30,10 @@ saveUrl='https://document.syncfusion.com/web-services/spreadsheet-editor/api/spr
 ```
 
 For your own development and production, you must set up your own web service for save operations. This ensures your data remains private, secure, and fully under your control. Using your own service also allows you to customize processing, apply business logic, and comply with your organization’s security requirements.
+
+## Client-Side Export
+
+Client-side export generates workbook files directly in the browser without sending data to a Save service. When `saveUrl` is not configured, the Spreadsheet uses its integrated client-side file-generation functionality. For more information, see [Client-Side Export](./save-excel-file/client-side-export).
 
 **Server Configuration**
 
