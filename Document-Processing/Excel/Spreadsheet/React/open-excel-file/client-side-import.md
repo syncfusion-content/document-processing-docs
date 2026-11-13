@@ -36,7 +36,7 @@ Client-side import currently supports:
 
 ## Configure client-side import
 
-To use client-side import, simply omit the `openUrl` property from your Spreadsheet configuration:
+To use client-side import, simply omit the `openUrl` property from your Spreadsheet configuration. When `openUrl` is not configured, the Spreadsheet automatically uses client-side processing for all file operations.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -45,7 +45,12 @@ import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 
 function App() {
-    return <SpreadsheetComponent allowOpen={true} />;
+    return (
+        <SpreadsheetComponent 
+            allowOpen={true}
+            // Note: openUrl is omitted for client-side import
+        />
+    );
 };
 export default App;
 
@@ -58,7 +63,12 @@ import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 
 function App() {
-    return <SpreadsheetComponent allowOpen={true} />;
+    return (
+        <SpreadsheetComponent 
+            allowOpen={true}
+            // Note: openUrl is omitted for client-side import
+        />
+    );
 };
 export default App;
 
@@ -67,9 +77,9 @@ root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/react/open-save-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/client-side-local-cs1" %}
 
-With this configuration, all standard Spreadsheet open functionality works through client-side processing.
+With this configuration, the Spreadsheet will process all Excel files directly in the browser without requiring server communication. For specific file-source implementations (local system, URL, or Blob data), see the sections below.
 
 ## Supported file sources
 
