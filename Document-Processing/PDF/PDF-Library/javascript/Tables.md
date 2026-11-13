@@ -1243,52 +1243,59 @@ document.destroy();
 
 ## PDF Grid border customization
 
-Borders in a `PdfGrid` can be customized at the grid, column, row, and cell levels through the `border` property of the corresponding style (`PdfGridStyle`, `PdfGridColumnStyle`, `PdfGridRowStyle`, and `PdfGridCellStyle`). Each level accepts either a `PdfPen`, which applies the same pen to all four sides, or a `PdfGridBorder` object whose `pen` (`PdfGridBorderPen`) controls the width, color, and dash style of each side independently. At grid level, the `type` property additionally selects which border groups are drawn, using the `PdfGridBorderType` enumeration.
+You can customize borders in a `PdfGrid` across four levels using the `border` property:
 
-The following table lists the border properties available in the border settings.
+* **Grid level** (`PdfGridStyle`)
+* **Column level** (`PdfGridColumnStyle`)
+* **Row level** (`PdfGridRowStyle`)
+* **Cell level** (`PdfGridCellStyle`)
 
-| Type | Property | Description |
-|---|---|---|
-| `PdfGridBorder` | `type` | Selects the border groups to draw, using `PdfGridBorderType` values. Available at grid level only. |
-| `PdfGridBorder` | `pen` | Side-aware border settings (`PdfGridBorderPen`) used to draw the borders. |
-| `PdfGridBorderPen` | `width` | Border line width, applied to all sides unless a side is customized individually. |
-| `PdfGridBorderPen` | `left`, `right`, `top`, `bottom` | Pen settings (`PdfGridPen`) for the individual border sides. |
-| `PdfGridPen` | `color` | Border line color. |
-| `PdfGridPen` | `style` | Border dash style (`PdfDashStyle`). |
-| `PdfGridPen` | `dashOffset`, `dashPattern` | Dash offset and dash pattern for the border line. |
+**Border Configuration Options**
 
-The following table lists the `PdfGridBorderType` values. Values can be combined with the bitwise OR (`|`) operator.
+Each level supports two ways to define borders:
 
-| PdfGridBorderType | Description |
+* **`PdfPen`**: Applies uniform width, color, and dash style to all four sides.
+* **`PdfGridBorder`**: Allows independent styling (width, color, dash style) for each side (left, right, top, bottom) via `PdfGridBorderPen`. At the grid level, you can also specify which border segments to display using `PdfGridBorderType`.
+
+### Border Types (`PdfGridBorderType`)
+
+Use the `PdfGridBorderType` enumeration to control which borders are visible at the grid level. Values can be combined using the bitwise OR (|) operator.
+
+| Value | Behaviour |
 |---|---|
-| `None` | No borders are selected. |
-| `All` | All outer and inner borders. This is the default. When combined with other values, the combined groups are excluded from drawing. |
-| `Outside` | The four outer borders (left, right, top, and bottom). |
-| `Inside` | All inner borders (vertical and horizontal separators between cells). |
-| `InsideHorizontal` | Horizontal separators between rows. |
-| `InsideVertical` | Vertical separators between columns. |
-| `Left`, `Right`, `Top`, `Bottom` | The individual outer borders. |
+| `None` | No borders. |
+| `All` | All borders (default). Excludes combined groups when used with other flags. |
+| `Outside` | All four outer edges (`Left`, `Right`, `Top`, `Bottom`). |
+| `Inside` | All inner cell separators (`InsideHorizontal` and `InsideVertical`). |
+| `InsideHorizontal` / `InsideVertical` | Row-only or column-only inner separators. |
+| `Left`, `Right`, `Top`, `Bottom` | Specific individual outer edges. |
 
 ### Customize borders at the grid, column, row, and cell levels
 
-Border settings are resolved separately for each cell in the following precedence order: cell, row, column, grid, and default style. Settings that are not defined at a higher-precedence level are inherited from the lower-precedence level.
+### Border Precedence and Inheritance
 
-This example creates a single student marks table on one page and customizes the borders at every level:
+Border styles are evaluated for each cell using the following priority order (highest to lowest):
 
-* **Grid:** Draws only the outer border (`PdfGridBorderType.None | PdfGridBorderType.Outside`) in gray.
-* **Column:** Draws the **Percentage** column with a thicker, dashed blue border.
-* **Row:** Draws the rows of students who scored above 95% (Anna and Clay) with a green border. The other rows keep the grid border.
-* **Cell:** Draws a red border around the mark below 50 (Thomas, English) so that it stands out.
+**Cell** &rarr; **Row** &rarr; **Column** &rarr; **Grid** &rarr; **Default Style**
+
+Any property not explicitly set at a higher level is inherited from the next level down.
+
+The following example demonstrates multi-level border customization by styling the **outer grid** in gray, the **Percentage column** in dashed blue, **top-scoring rows (> 95%)** in green, and a **failing cell (< 50)** in red.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { PdfColumnInformation, PdfDashStyle, PdfDocument, PdfGrid, PdfGridBorderType, PdfPage } from '@syncfusion/ej2-pdf';
+import { PdfColumnInformation, PdfDashStyle, PdfDocument, PdfGrid, PdfGridBorderType, PdfGridPen, PdfPage } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
 let document: PdfDocument = new PdfDocument();
 // Add a page to the document
 let page: PdfPage = document.addPage();
+// Define the border colors once and reuse them
+let gray: PdfGridPen = { color: { r: 128, g: 128, b: 128 } };
+let blue: PdfGridPen = { color: { r: 0, g: 0, b: 255 }, style: PdfDashStyle.dash };
+let green: PdfGridPen = { color: { r: 0, g: 128, b: 0 } };
+let red: PdfGridPen = { color: { r: 255, g: 0, b: 0 } };
 // Create the data source
 let source: object[] = [
     { name: 'Anna', maths: 99, science: 97, english: 96, percentage: '97.3' },
@@ -1302,72 +1309,18 @@ let columns: PdfColumnInformation[] = [
     { field: 'maths', headerText: 'Maths', width: 70 },
     { field: 'science', headerText: 'Science', width: 70 },
     { field: 'english', headerText: 'English', width: 70 },
-    {
-        field: 'percentage', headerText: 'Percentage', width: 90,
-        // Column level: thick dashed blue border for every cell in the Percentage column
-        style: {
-            border: {
-                pen: {
-                    width: 1.5,
-                    left: { color: { r: 0, g: 0, b: 255 }, style: PdfDashStyle.dash },
-                    right: { color: { r: 0, g: 0, b: 255 }, style: PdfDashStyle.dash },
-                    top: { color: { r: 0, g: 0, b: 255 }, style: PdfDashStyle.dash },
-                    bottom: { color: { r: 0, g: 0, b: 255 }, style: PdfDashStyle.dash }
-                }
-            }
-        }
-    }
+    // Column level: thick dashed blue border for every cell in the Percentage column
+    { field: 'percentage', headerText: 'Percentage', width: 90, style: { border: { width: 1.5, left: blue, right: blue, top: blue, bottom: blue } } }
 ];
 // Create the grid
 let grid: PdfGrid = new PdfGrid(source, columns);
 // Grid level: draw only the outer border in gray
-grid.style = {
-    border: {
-        type: PdfGridBorderType.None | PdfGridBorderType.Outside,
-        pen: {
-            width: 1,
-            left: { color: { r: 128, g: 128, b: 128 } },
-            right: { color: { r: 128, g: 128, b: 128 } },
-            top: { color: { r: 128, g: 128, b: 128 } },
-            bottom: { color: { r: 128, g: 128, b: 128 } }
-        }
-    }
-};
+grid.style = { border: { type: PdfGridBorderType.None | PdfGridBorderType.Outside, pen: { width: 1, left: gray, right: gray, top: gray, bottom: gray } } };
 // Row level: green border for the students who scored above 95% (Anna and Clay)
-grid.rows[0].style = {
-    border: {
-        pen: {
-            width: 2,
-            left: { color: { r: 0, g: 128, b: 0 } },
-            right: { color: { r: 0, g: 128, b: 0 } },
-            top: { color: { r: 0, g: 128, b: 0 } },
-            bottom: { color: { r: 0, g: 128, b: 0 } }
-        }
-    }
-};
-grid.rows[2].style = {
-    border: {
-        pen: {
-            width: 2,
-            left: { color: { r: 0, g: 128, b: 0 } },
-            right: { color: { r: 0, g: 128, b: 0 } },
-            top: { color: { r: 0, g: 128, b: 0 } },
-            bottom: { color: { r: 0, g: 128, b: 0 } }
-        }
-    }
-};
+grid.getRow(0).style = { border: { width: 2, left: green, right: green, top: green, bottom: green } };
+grid.getRow(2).style = { border: { width: 2, left: green, right: green, top: green, bottom: green } };
 // Cell level: red border for the mark below 50 (Thomas, English)
-grid.rows[1].cells[3].style = {
-    border: {
-        pen: {
-            width: 2,
-            left: { color: { r: 255, g: 0, b: 0 } },
-            right: { color: { r: 255, g: 0, b: 0 } },
-            top: { color: { r: 255, g: 0, b: 0 } },
-            bottom: { color: { r: 255, g: 0, b: 0 } }
-        }
-    }
-};
+grid.getRow(1).cells[3].style = { border: { width: 2, left: red, right: red, top: red, bottom: red } };
 // Draw the grid on the page
 grid.draw(page, { x: 10, y: 10 });
 // Save the document as Output.pdf
@@ -1382,6 +1335,11 @@ document.destroy();
 var document = new ej.pdf.PdfDocument();
 // Add a page to the document
 var page = document.addPage();
+// Define the border colors once and reuse them
+var gray = { color: { r: 128, g: 128, b: 128 } };
+var blue = { color: { r: 0, g: 0, b: 255 }, style: ej.pdf.PdfDashStyle.dash };
+var green = { color: { r: 0, g: 128, b: 0 } };
+var red = { color: { r: 255, g: 0, b: 0 } };
 // Create the data source
 var source = [
     { name: 'Anna', maths: 99, science: 97, english: 96, percentage: '97.3' },
@@ -1395,72 +1353,18 @@ var columns = [
     { field: 'maths', headerText: 'Maths', width: 70 },
     { field: 'science', headerText: 'Science', width: 70 },
     { field: 'english', headerText: 'English', width: 70 },
-    {
-        field: 'percentage', headerText: 'Percentage', width: 90,
-        // Column level: thick dashed blue border for every cell in the Percentage column
-        style: {
-            border: {
-                pen: {
-                    width: 1.5,
-                    left: { color: { r: 0, g: 0, b: 255 }, style: ej.pdf.PdfDashStyle.dash },
-                    right: { color: { r: 0, g: 0, b: 255 }, style: ej.pdf.PdfDashStyle.dash },
-                    top: { color: { r: 0, g: 0, b: 255 }, style: ej.pdf.PdfDashStyle.dash },
-                    bottom: { color: { r: 0, g: 0, b: 255 }, style: ej.pdf.PdfDashStyle.dash }
-                }
-            }
-        }
-    }
+    // Column level: thick dashed blue border for every cell in the Percentage column
+    { field: 'percentage', headerText: 'Percentage', width: 90, style: { border: { width: 1.5, left: blue, right: blue, top: blue, bottom: blue } } }
 ];
 // Create the grid
 var grid = new ej.pdf.PdfGrid(source, columns);
 // Grid level: draw only the outer border in gray
-grid.style = {
-    border: {
-        type: ej.pdf.PdfGridBorderType.None | ej.pdf.PdfGridBorderType.Outside,
-        pen: {
-            width: 1,
-            left: { color: { r: 128, g: 128, b: 128 } },
-            right: { color: { r: 128, g: 128, b: 128 } },
-            top: { color: { r: 128, g: 128, b: 128 } },
-            bottom: { color: { r: 128, g: 128, b: 128 } }
-        }
-    }
-};
+grid.style = { border: { type: ej.pdf.PdfGridBorderType.None | ej.pdf.PdfGridBorderType.Outside, pen: { width: 1, left: gray, right: gray, top: gray, bottom: gray } } };
 // Row level: green border for the students who scored above 95% (Anna and Clay)
-grid.rows[0].style = {
-    border: {
-        pen: {
-            width: 2,
-            left: { color: { r: 0, g: 128, b: 0 } },
-            right: { color: { r: 0, g: 128, b: 0 } },
-            top: { color: { r: 0, g: 128, b: 0 } },
-            bottom: { color: { r: 0, g: 128, b: 0 } }
-        }
-    }
-};
-grid.rows[2].style = {
-    border: {
-        pen: {
-            width: 2,
-            left: { color: { r: 0, g: 128, b: 0 } },
-            right: { color: { r: 0, g: 128, b: 0 } },
-            top: { color: { r: 0, g: 128, b: 0 } },
-            bottom: { color: { r: 0, g: 128, b: 0 } }
-        }
-    }
-};
+grid.getRow(0).style = { border: { width: 2, left: green, right: green, top: green, bottom: green } };
+grid.getRow(2).style = { border: { width: 2, left: green, right: green, top: green, bottom: green } };
 // Cell level: red border for the mark below 50 (Thomas, English)
-grid.rows[1].cells[3].style = {
-    border: {
-        pen: {
-            width: 2,
-            left: { color: { r: 255, g: 0, b: 0 } },
-            right: { color: { r: 255, g: 0, b: 0 } },
-            top: { color: { r: 255, g: 0, b: 0 } },
-            bottom: { color: { r: 255, g: 0, b: 0 } }
-        }
-    }
-};
+grid.getRow(1).cells[3].style = { border: { width: 2, left: red, right: red, top: red, bottom: red } };
 // Draw the grid on the page
 grid.draw(page, { x: 10, y: 10 });
 // Save the document as Output.pdf
@@ -1471,9 +1375,7 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
-N> When `PdfGridBorderType.All` is combined with other values, those groups are excluded. For example, `PdfGridBorderType.All | PdfGridBorderType.InsideVertical` draws every border except the vertical separators. An invalid value results in an error.
-
-N> A `PdfPen` assigned to the `border` property replaces all four sides, while a side defined in `PdfGridBorderPen` overrides only that side and inherits the unspecified color, dash style, and dash settings from the lower-precedence levels. The `type` property is available only at the grid level.
+N> The `type` property is only available at the grid level; combining `PdfGridBorderType.All` with other types excludes those borders (e.g., `PdfGridBorderType.All | PdfGridBorderType.InsideVertical` omits inner verticals). Setting `border` with a `PdfPen` replaces all four sides, while `PdfGridBorderPen` overrides specific sides and inherits remaining styles from lower-precedence levels.
 
 ## Update the grid data source
 
