@@ -1273,12 +1273,12 @@ The following table lists the `PdfGridBorderType` values. Values can be combined
 
 Border settings are resolved separately for each cell in the following precedence order: cell, row, column, grid, and default style. Settings that are not defined at a higher-precedence level are inherited from the lower-precedence level.
 
-This example creates a student marks table and customizes the borders at every level:
+This example creates a single student marks table on one page and customizes the borders at every level:
 
 * **Grid:** Draws only the outer border (`PdfGridBorderType.None | PdfGridBorderType.Outside`) in gray.
 * **Column:** Draws the **Percentage** column with a thicker, dashed blue border.
-* **Row:** Draws the rows of students who scored above 95% with a green border, and the other rows keep the grid border.
-* **Cell:** Draws a red border around any subject mark below 50 so that it stands out.
+* **Row:** Draws the rows of students who scored above 95% (Anna and Clay) with a green border. The other rows keep the grid border.
+* **Cell:** Draws a red border around the mark below 50 (Thomas, English) so that it stands out.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
@@ -1289,23 +1289,13 @@ import { PdfColumnInformation, PdfDashStyle, PdfDocument, PdfGrid, PdfGridBorder
 let document: PdfDocument = new PdfDocument();
 // Add a page to the document
 let page: PdfPage = document.addPage();
-// Create the student records
-let students: { name: string, maths: number, science: number, english: number }[] = [
-    { name: 'Anna', maths: 99, science: 97, english: 96 },
-    { name: 'Thomas', maths: 78, science: 82, english: 45 },
-    { name: 'Clay', maths: 96, science: 98, english: 97 },
-    { name: 'Maria', maths: 65, science: 70, english: 74 }
+// Create the data source
+let source: object[] = [
+    { name: 'Anna', maths: 99, science: 97, english: 96, percentage: '97.3' },
+    { name: 'Thomas', maths: 78, science: 82, english: 45, percentage: '68.3' },
+    { name: 'Clay', maths: 96, science: 98, english: 97, percentage: '97.0' },
+    { name: 'Maria', maths: 65, science: 70, english: 74, percentage: '69.7' }
 ];
-// Create the data source and calculate the percentage of each student
-let source: object[] = students.map((student: { name: string, maths: number, science: number, english: number }) => {
-    return {
-        name: student.name,
-        maths: student.maths,
-        science: student.science,
-        english: student.english,
-        percentage: ((student.maths + student.science + student.english) / 3).toFixed(1)
-    };
-});
 // Define columns
 let columns: PdfColumnInformation[] = [
     { field: 'name', headerText: 'Student', width: 100 },
@@ -1343,41 +1333,41 @@ grid.style = {
         }
     }
 };
-for (let i: number = 0; i < students.length; i++) {
-    let student: { name: string, maths: number, science: number, english: number } = students[i];
-    let percentage: number = (student.maths + student.science + student.english) / 3;
-    // Row level: green border for students who scored above 95%
-    if (percentage > 95) {
-        grid.rows[i].style = {
-            border: {
-                pen: {
-                    width: 2,
-                    left: { color: { r: 0, g: 128, b: 0 } },
-                    right: { color: { r: 0, g: 128, b: 0 } },
-                    top: { color: { r: 0, g: 128, b: 0 } },
-                    bottom: { color: { r: 0, g: 128, b: 0 } }
-                }
-            }
-        };
-    }
-    // Cell level: red border for any subject mark below 50
-    let marks: number[] = [student.maths, student.science, student.english];
-    for (let j: number = 0; j < marks.length; j++) {
-        if (marks[j] < 50) {
-            grid.rows[i].cells[j + 1].style = {
-                border: {
-                    pen: {
-                        width: 2,
-                        left: { color: { r: 255, g: 0, b: 0 } },
-                        right: { color: { r: 255, g: 0, b: 0 } },
-                        top: { color: { r: 255, g: 0, b: 0 } },
-                        bottom: { color: { r: 255, g: 0, b: 0 } }
-                    }
-                }
-            };
+// Row level: green border for the students who scored above 95% (Anna and Clay)
+grid.rows[0].style = {
+    border: {
+        pen: {
+            width: 2,
+            left: { color: { r: 0, g: 128, b: 0 } },
+            right: { color: { r: 0, g: 128, b: 0 } },
+            top: { color: { r: 0, g: 128, b: 0 } },
+            bottom: { color: { r: 0, g: 128, b: 0 } }
         }
     }
-}
+};
+grid.rows[2].style = {
+    border: {
+        pen: {
+            width: 2,
+            left: { color: { r: 0, g: 128, b: 0 } },
+            right: { color: { r: 0, g: 128, b: 0 } },
+            top: { color: { r: 0, g: 128, b: 0 } },
+            bottom: { color: { r: 0, g: 128, b: 0 } }
+        }
+    }
+};
+// Cell level: red border for the mark below 50 (Thomas, English)
+grid.rows[1].cells[3].style = {
+    border: {
+        pen: {
+            width: 2,
+            left: { color: { r: 255, g: 0, b: 0 } },
+            right: { color: { r: 255, g: 0, b: 0 } },
+            top: { color: { r: 255, g: 0, b: 0 } },
+            bottom: { color: { r: 255, g: 0, b: 0 } }
+        }
+    }
+};
 // Draw the grid on the page
 grid.draw(page, { x: 10, y: 10 });
 // Save the document as Output.pdf
@@ -1392,23 +1382,13 @@ document.destroy();
 var document = new ej.pdf.PdfDocument();
 // Add a page to the document
 var page = document.addPage();
-// Create the student records
-var students = [
-    { name: 'Anna', maths: 99, science: 97, english: 96 },
-    { name: 'Thomas', maths: 78, science: 82, english: 45 },
-    { name: 'Clay', maths: 96, science: 98, english: 97 },
-    { name: 'Maria', maths: 65, science: 70, english: 74 }
+// Create the data source
+var source = [
+    { name: 'Anna', maths: 99, science: 97, english: 96, percentage: '97.3' },
+    { name: 'Thomas', maths: 78, science: 82, english: 45, percentage: '68.3' },
+    { name: 'Clay', maths: 96, science: 98, english: 97, percentage: '97.0' },
+    { name: 'Maria', maths: 65, science: 70, english: 74, percentage: '69.7' }
 ];
-// Create the data source and calculate the percentage of each student
-var source = students.map(function (student) {
-    return {
-        name: student.name,
-        maths: student.maths,
-        science: student.science,
-        english: student.english,
-        percentage: ((student.maths + student.science + student.english) / 3).toFixed(1)
-    };
-});
 // Define columns
 var columns = [
     { field: 'name', headerText: 'Student', width: 100 },
@@ -1446,41 +1426,41 @@ grid.style = {
         }
     }
 };
-for (var i = 0; i < students.length; i++) {
-    var student = students[i];
-    var percentage = (student.maths + student.science + student.english) / 3;
-    // Row level: green border for students who scored above 95%
-    if (percentage > 95) {
-        grid.rows[i].style = {
-            border: {
-                pen: {
-                    width: 2,
-                    left: { color: { r: 0, g: 128, b: 0 } },
-                    right: { color: { r: 0, g: 128, b: 0 } },
-                    top: { color: { r: 0, g: 128, b: 0 } },
-                    bottom: { color: { r: 0, g: 128, b: 0 } }
-                }
-            }
-        };
-    }
-    // Cell level: red border for any subject mark below 50
-    var marks = [student.maths, student.science, student.english];
-    for (var j = 0; j < marks.length; j++) {
-        if (marks[j] < 50) {
-            grid.rows[i].cells[j + 1].style = {
-                border: {
-                    pen: {
-                        width: 2,
-                        left: { color: { r: 255, g: 0, b: 0 } },
-                        right: { color: { r: 255, g: 0, b: 0 } },
-                        top: { color: { r: 255, g: 0, b: 0 } },
-                        bottom: { color: { r: 255, g: 0, b: 0 } }
-                    }
-                }
-            };
+// Row level: green border for the students who scored above 95% (Anna and Clay)
+grid.rows[0].style = {
+    border: {
+        pen: {
+            width: 2,
+            left: { color: { r: 0, g: 128, b: 0 } },
+            right: { color: { r: 0, g: 128, b: 0 } },
+            top: { color: { r: 0, g: 128, b: 0 } },
+            bottom: { color: { r: 0, g: 128, b: 0 } }
         }
     }
-}
+};
+grid.rows[2].style = {
+    border: {
+        pen: {
+            width: 2,
+            left: { color: { r: 0, g: 128, b: 0 } },
+            right: { color: { r: 0, g: 128, b: 0 } },
+            top: { color: { r: 0, g: 128, b: 0 } },
+            bottom: { color: { r: 0, g: 128, b: 0 } }
+        }
+    }
+};
+// Cell level: red border for the mark below 50 (Thomas, English)
+grid.rows[1].cells[3].style = {
+    border: {
+        pen: {
+            width: 2,
+            left: { color: { r: 255, g: 0, b: 0 } },
+            right: { color: { r: 255, g: 0, b: 0 } },
+            top: { color: { r: 255, g: 0, b: 0 } },
+            bottom: { color: { r: 255, g: 0, b: 0 } }
+        }
+    }
+};
 // Draw the grid on the page
 grid.draw(page, { x: 10, y: 10 });
 // Save the document as Output.pdf
