@@ -1243,359 +1243,21 @@ document.destroy();
 
 ## PDF Grid border customization
 
-Borders in a `PdfGrid` can be customized at the grid, column, row, and cell levels. Each level accepts either a `PdfPen`, which applies the same pen to all four sides, or a side-aware `PdfGridBorderPen`, which allows the width, color, and dash style of each side to be controlled independently. At grid level, the `PdfGridBorder` type additionally allows choosing which border groups are drawn through the `PdfGridBorderType` enumeration.
+Borders in a `PdfGrid` can be customized at the grid, column, row, and cell levels through the `border` property of the corresponding style (`PdfGridStyle`, `PdfGridColumnStyle`, `PdfGridRowStyle`, and `PdfGridCellStyle`). Each level accepts either a `PdfPen`, which applies the same pen to all four sides, or a `PdfGridBorder` object whose `pen` (`PdfGridBorderPen`) controls the width, color, and dash style of each side independently. At grid level, the `type` property additionally selects which border groups are drawn, using the `PdfGridBorderType` enumeration.
 
 The following table lists the border properties available in the border settings.
 
 | Type | Property | Description |
 |---|---|---|
 | `PdfGridBorder` | `type` | Selects the border groups to draw, using `PdfGridBorderType` values. Available at grid level only. |
-| `PdfGridBorder` | `pen` | Side-aware border settings (`PdfGridBorderPen`) used to draw the grid borders. |
+| `PdfGridBorder` | `pen` | Side-aware border settings (`PdfGridBorderPen`) used to draw the borders. |
 | `PdfGridBorderPen` | `width` | Border line width, applied to all sides unless a side is customized individually. |
 | `PdfGridBorderPen` | `left`, `right`, `top`, `bottom` | Pen settings (`PdfGridPen`) for the individual border sides. |
 | `PdfGridPen` | `color` | Border line color. |
 | `PdfGridPen` | `style` | Border dash style (`PdfDashStyle`). |
 | `PdfGridPen` | `dashOffset`, `dashPattern` | Dash offset and dash pattern for the border line. |
 
-N> The `border` property is available on `PdfGridStyle` (grid), `PdfGridColumnStyle` (column), `PdfGridRowStyle` (row), and `PdfGridCellStyle` (cell).
-
-### Customize PDF Grid borders
-
-Border color, width, and dash style can be customized by assigning a `PdfPen` or a `PdfGridBorderPen` to the `border` property of a style. The same settings can be applied at grid, column, row, or cell level.
-
-#### Customize borders at the grid level
-
-Set the `border` property of the grid style to apply the border settings to every cell in the table.
-
-This example demonstrates how to set the border color, width, and dash style for the entire table.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-
-import { PdfColumnInformation, PdfDashStyle, PdfDocument, PdfGrid, PdfPage } from '@syncfusion/ej2-pdf';
-
-// Create a new PDF document
-let document: PdfDocument = new PdfDocument();
-// Add a page to the document
-let page: PdfPage = document.addPage();
-// Create the data source
-let source: object[] = [
-    { id: 'E01', name: 'Clay', salary: '$10,000' },
-    { id: 'E02', name: 'Thomas', salary: '$12,000' },
-    { id: 'E03', name: 'Anna', salary: '$11,500' }
-];
-// Define columns
-let columns: PdfColumnInformation[] = [
-    { field: 'id', headerText: 'Employee ID', width: 90 },
-    { field: 'name', headerText: 'Employee Name', width: 140 },
-    { field: 'salary', headerText: 'Salary', width: 100 }
-];
-// Create the grid
-let grid: PdfGrid = new PdfGrid(source, columns);
-// Apply a blue, dashed border with width 1.5 to the whole grid
-grid.style = {
-    border: {
-        pen: {
-            width: 1.5,
-            left: { color: { r: 0, g: 0, b: 255 }, style: PdfDashStyle.dash },
-            right: { color: { r: 0, g: 0, b: 255 }, style: PdfDashStyle.dash },
-            top: { color: { r: 0, g: 0, b: 255 }, style: PdfDashStyle.dash },
-            bottom: { color: { r: 0, g: 0, b: 255 }, style: PdfDashStyle.dash }
-        }
-    }
-};
-// Draw the grid on the page
-grid.draw(page, { x: 10, y: 10 });
-// Save the document as Output.pdf
-document.save('Output.pdf');
-// Dispose of the document resources
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-
-// Create a new PDF document
-var document = new ej.pdf.PdfDocument();
-// Add a page to the document
-var page = document.addPage();
-// Create the data source
-var source = [
-    { id: 'E01', name: 'Clay', salary: '$10,000' },
-    { id: 'E02', name: 'Thomas', salary: '$12,000' },
-    { id: 'E03', name: 'Anna', salary: '$11,500' }
-];
-// Define columns
-var columns = [
-    { field: 'id', headerText: 'Employee ID', width: 90 },
-    { field: 'name', headerText: 'Employee Name', width: 140 },
-    { field: 'salary', headerText: 'Salary', width: 100 }
-];
-// Create the grid
-var grid = new ej.pdf.PdfGrid(source, columns);
-// Apply a blue, dashed border with width 1.5 to the whole grid
-grid.style = {
-    border: {
-        pen: {
-            width: 1.5,
-            left: { color: { r: 0, g: 0, b: 255 }, style: ej.pdf.PdfDashStyle.dash },
-            right: { color: { r: 0, g: 0, b: 255 }, style: ej.pdf.PdfDashStyle.dash },
-            top: { color: { r: 0, g: 0, b: 255 }, style: ej.pdf.PdfDashStyle.dash },
-            bottom: { color: { r: 0, g: 0, b: 255 }, style: ej.pdf.PdfDashStyle.dash }
-        }
-    }
-};
-// Draw the grid on the page
-grid.draw(page, { x: 10, y: 10 });
-// Save the document as Output.pdf
-document.save('Output.pdf');
-// Dispose of the document resources
-document.destroy();
-
-{% endhighlight %}
-{% endtabs %}
-
-A `PdfPen` can also be assigned directly when all sides use the same appearance.
-
-#### Customize borders at the column level
-
-Set the `border` property in the column `style` to apply the border settings to all cells in that column.
-
-This example demonstrates how to apply a red border to the **Salary** column.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-
-import { PdfColumnInformation, PdfDocument, PdfGrid, PdfPage, PdfPen } from '@syncfusion/ej2-pdf';
-
-// Create a new PDF document
-let document: PdfDocument = new PdfDocument();
-// Add a page to the document
-let page: PdfPage = document.addPage();
-// Create the data source
-let source: object[] = [
-    { id: 'E01', name: 'Clay', salary: '$10,000' },
-    { id: 'E02', name: 'Thomas', salary: '$12,000' },
-    { id: 'E03', name: 'Anna', salary: '$11,500' }
-];
-// Define columns
-let columns: PdfColumnInformation[] = [
-    { field: 'id', headerText: 'Employee ID', width: 90 },
-    { field: 'name', headerText: 'Employee Name', width: 140 },
-    {
-        field: 'salary', headerText: 'Salary', width: 100,
-        // Apply a red border with width 2 to every cell in this column
-        style: { border: new PdfPen({ r: 255, g: 0, b: 0 }, 2) }
-    }
-];
-// Create the grid
-let grid: PdfGrid = new PdfGrid(source, columns);
-// Draw the grid on the page
-grid.draw(page, { x: 10, y: 10 });
-// Save the document as Output.pdf
-document.save('Output.pdf');
-// Dispose of the document resources
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-
-// Create a new PDF document
-var document = new ej.pdf.PdfDocument();
-// Add a page to the document
-var page = document.addPage();
-// Create the data source
-var source = [
-    { id: 'E01', name: 'Clay', salary: '$10,000' },
-    { id: 'E02', name: 'Thomas', salary: '$12,000' },
-    { id: 'E03', name: 'Anna', salary: '$11,500' }
-];
-// Define columns
-var columns = [
-    { field: 'id', headerText: 'Employee ID', width: 90 },
-    { field: 'name', headerText: 'Employee Name', width: 140 },
-    {
-        field: 'salary', headerText: 'Salary', width: 100,
-        // Apply a red border with width 2 to every cell in this column
-        style: { border: new ej.pdf.PdfPen({ r: 255, g: 0, b: 0 }, 2) }
-    }
-];
-// Create the grid
-var grid = new ej.pdf.PdfGrid(source, columns);
-// Draw the grid on the page
-grid.draw(page, { x: 10, y: 10 });
-// Save the document as Output.pdf
-document.save('Output.pdf');
-// Dispose of the document resources
-document.destroy();
-
-{% endhighlight %}
-{% endtabs %}
-
-#### Customize borders at the row level
-
-Set the `border` property in the row `style` to apply the border settings to all cells in that row.
-
-This example demonstrates how to apply a green border to the first record row.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-
-import { PdfColumnInformation, PdfDocument, PdfGrid, PdfPage, PdfPen } from '@syncfusion/ej2-pdf';
-
-// Create a new PDF document
-let document: PdfDocument = new PdfDocument();
-// Add a page to the document
-let page: PdfPage = document.addPage();
-// Create the data source
-let source: object[] = [
-    { id: 'E01', name: 'Clay', salary: '$10,000' },
-    { id: 'E02', name: 'Thomas', salary: '$12,000' },
-    { id: 'E03', name: 'Anna', salary: '$11,500' }
-];
-// Define columns
-let columns: PdfColumnInformation[] = [
-    { field: 'id', headerText: 'Employee ID', width: 90 },
-    { field: 'name', headerText: 'Employee Name', width: 140 },
-    { field: 'salary', headerText: 'Salary', width: 100 }
-];
-// Create the grid
-let grid: PdfGrid = new PdfGrid(source, columns);
-// Apply a green border with width 2 to every cell in the first row
-grid.rows[0].style = { border: new PdfPen({ r: 0, g: 128, b: 0 }, 2) };
-// Draw the grid on the page
-grid.draw(page, { x: 10, y: 10 });
-// Save the document as Output.pdf
-document.save('Output.pdf');
-// Dispose of the document resources
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-
-// Create a new PDF document
-var document = new ej.pdf.PdfDocument();
-// Add a page to the document
-var page = document.addPage();
-// Create the data source
-var source = [
-    { id: 'E01', name: 'Clay', salary: '$10,000' },
-    { id: 'E02', name: 'Thomas', salary: '$12,000' },
-    { id: 'E03', name: 'Anna', salary: '$11,500' }
-];
-// Define columns
-var columns = [
-    { field: 'id', headerText: 'Employee ID', width: 90 },
-    { field: 'name', headerText: 'Employee Name', width: 140 },
-    { field: 'salary', headerText: 'Salary', width: 100 }
-];
-// Create the grid
-var grid = new ej.pdf.PdfGrid(source, columns);
-// Apply a green border with width 2 to every cell in the first row
-grid.rows[0].style = { border: new ej.pdf.PdfPen({ r: 0, g: 128, b: 0 }, 2) };
-// Draw the grid on the page
-grid.draw(page, { x: 10, y: 10 });
-// Save the document as Output.pdf
-document.save('Output.pdf');
-// Dispose of the document resources
-document.destroy();
-
-{% endhighlight %}
-{% endtabs %}
-
-#### Customize borders at the cell level
-
-Set the `border` property in the cell `style` to apply the border settings to a single cell.
-
-This example demonstrates how to apply a dash-dot orange border to a single cell.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-
-import { PdfColumnInformation, PdfDashStyle, PdfDocument, PdfGrid, PdfPage } from '@syncfusion/ej2-pdf';
-
-// Create a new PDF document
-let document: PdfDocument = new PdfDocument();
-// Add a page to the document
-let page: PdfPage = document.addPage();
-// Create the data source
-let source: object[] = [
-    { id: 'E01', name: 'Clay', salary: '$10,000' },
-    { id: 'E02', name: 'Thomas', salary: '$12,000' },
-    { id: 'E03', name: 'Anna', salary: '$11,500' }
-];
-// Define columns
-let columns: PdfColumnInformation[] = [
-    { field: 'id', headerText: 'Employee ID', width: 90 },
-    { field: 'name', headerText: 'Employee Name', width: 140 },
-    { field: 'salary', headerText: 'Salary', width: 100 }
-];
-// Create the grid
-let grid: PdfGrid = new PdfGrid(source, columns);
-// Apply an orange dash-dot border to the second cell of the first row
-grid.rows[0].cells[1].style = {
-    border: {
-        pen: {
-            width: 2,
-            left: { color: { r: 255, g: 140, b: 0 }, style: PdfDashStyle.dashDot },
-            right: { color: { r: 255, g: 140, b: 0 }, style: PdfDashStyle.dashDot },
-            top: { color: { r: 255, g: 140, b: 0 }, style: PdfDashStyle.dashDot },
-            bottom: { color: { r: 255, g: 140, b: 0 }, style: PdfDashStyle.dashDot }
-        }
-    }
-};
-// Draw the grid on the page
-grid.draw(page, { x: 10, y: 10 });
-// Save the document as Output.pdf
-document.save('Output.pdf');
-// Dispose of the document resources
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-
-// Create a new PDF document
-var document = new ej.pdf.PdfDocument();
-// Add a page to the document
-var page = document.addPage();
-// Create the data source
-var source = [
-    { id: 'E01', name: 'Clay', salary: '$10,000' },
-    { id: 'E02', name: 'Thomas', salary: '$12,000' },
-    { id: 'E03', name: 'Anna', salary: '$11,500' }
-];
-// Define columns
-var columns = [
-    { field: 'id', headerText: 'Employee ID', width: 90 },
-    { field: 'name', headerText: 'Employee Name', width: 140 },
-    { field: 'salary', headerText: 'Salary', width: 100 }
-];
-// Create the grid
-var grid = new ej.pdf.PdfGrid(source, columns);
-// Apply an orange dash-dot border to the second cell of the first row
-grid.rows[0].cells[1].style = {
-    border: {
-        pen: {
-            width: 2,
-            left: { color: { r: 255, g: 140, b: 0 }, style: ej.pdf.PdfDashStyle.dashDot },
-            right: { color: { r: 255, g: 140, b: 0 }, style: ej.pdf.PdfDashStyle.dashDot },
-            top: { color: { r: 255, g: 140, b: 0 }, style: ej.pdf.PdfDashStyle.dashDot },
-            bottom: { color: { r: 255, g: 140, b: 0 }, style: ej.pdf.PdfDashStyle.dashDot }
-        }
-    }
-};
-// Draw the grid on the page
-grid.draw(page, { x: 10, y: 10 });
-// Save the document as Output.pdf
-document.save('Output.pdf');
-// Dispose of the document resources
-document.destroy();
-
-{% endhighlight %}
-{% endtabs %}
-
-### Customize border groups
-
-Use the `type` property of the grid-level `PdfGridBorder` together with the `PdfGridBorderType` enumeration to choose which groups of borders are drawn. Values can be combined with the bitwise OR (`|`) operator.
+The following table lists the `PdfGridBorderType` values. Values can be combined with the bitwise OR (`|`) operator.
 
 | PdfGridBorderType | Description |
 |---|---|
@@ -1607,279 +1269,115 @@ Use the `type` property of the grid-level `PdfGridBorder` together with the `Pdf
 | `InsideVertical` | Vertical separators between columns. |
 | `Left`, `Right`, `Top`, `Bottom` | The individual outer borders. |
 
-The `pen` property of the same `PdfGridBorder` defines how the selected borders look.
+### Customize borders at the grid, column, row, and cell levels
 
-#### Draw outer borders only
+Border settings are resolved separately for each cell in the following precedence order: cell, row, column, grid, and default style. Settings that are not defined at a higher-precedence level are inherited from the lower-precedence level.
 
-This example demonstrates how to draw only the outer border of the table.
+This example creates a student marks table and customizes the borders at every level:
+
+* **Grid:** Draws the outer border and the horizontal separators (`PdfGridBorderType.Outside | PdfGridBorderType.InsideHorizontal`) in gray.
+* **Column:** Draws the **Percentage** column with a thicker, dashed blue border.
+* **Row:** Draws the rows of students who scored above 95% with a green border, and the other rows keep the grid border.
+* **Cell:** Draws a red border around any subject mark below 50 so that it stands out.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { PdfColumnInformation, PdfDocument, PdfGrid, PdfGridBorderType, PdfPage } from '@syncfusion/ej2-pdf';
+import { PdfColumnInformation, PdfDashStyle, PdfDocument, PdfGrid, PdfGridBorderType, PdfPage } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
 let document: PdfDocument = new PdfDocument();
 // Add a page to the document
 let page: PdfPage = document.addPage();
-// Create the data source
-let source: object[] = [
-    { id: 'E01', name: 'Clay', salary: '$10,000' },
-    { id: 'E02', name: 'Thomas', salary: '$12,000' },
-    { id: 'E03', name: 'Anna', salary: '$11,500' }
+// Create the student records
+let students: { name: string, maths: number, science: number, english: number }[] = [
+    { name: 'Anna', maths: 99, science: 97, english: 96 },
+    { name: 'Thomas', maths: 78, science: 82, english: 45 },
+    { name: 'Clay', maths: 96, science: 98, english: 97 },
+    { name: 'Maria', maths: 65, science: 70, english: 74 }
 ];
+// Create the data source and calculate the percentage of each student
+let source: object[] = students.map((student: { name: string, maths: number, science: number, english: number }) => {
+    return {
+        name: student.name,
+        maths: student.maths,
+        science: student.science,
+        english: student.english,
+        percentage: ((student.maths + student.science + student.english) / 3).toFixed(1)
+    };
+});
 // Define columns
 let columns: PdfColumnInformation[] = [
-    { field: 'id', headerText: 'Employee ID', width: 90 },
-    { field: 'name', headerText: 'Employee Name', width: 140 },
-    { field: 'salary', headerText: 'Salary', width: 100 }
+    { field: 'name', headerText: 'Student', width: 100 },
+    { field: 'maths', headerText: 'Maths', width: 70 },
+    { field: 'science', headerText: 'Science', width: 70 },
+    { field: 'english', headerText: 'English', width: 70 },
+    {
+        field: 'percentage', headerText: 'Percentage', width: 90,
+        // Column level: thick dashed blue border for every cell in the Percentage column
+        style: {
+            border: {
+                pen: {
+                    width: 1.5,
+                    left: { color: { r: 0, g: 0, b: 255 }, style: PdfDashStyle.dash },
+                    right: { color: { r: 0, g: 0, b: 255 }, style: PdfDashStyle.dash },
+                    top: { color: { r: 0, g: 0, b: 255 }, style: PdfDashStyle.dash },
+                    bottom: { color: { r: 0, g: 0, b: 255 }, style: PdfDashStyle.dash }
+                }
+            }
+        }
+    }
 ];
 // Create the grid
 let grid: PdfGrid = new PdfGrid(source, columns);
-// Draw only the outer borders
-grid.style = {
-    border: {
-        type: PdfGridBorderType.Outside,
-        pen: { width: 2 }
-    }
-};
-// Draw the grid on the page
-grid.draw(page, { x: 10, y: 10 });
-// Save the document as Output.pdf
-document.save('Output.pdf');
-// Dispose of the document resources
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-
-// Create a new PDF document
-var document = new ej.pdf.PdfDocument();
-// Add a page to the document
-var page = document.addPage();
-// Create the data source
-var source = [
-    { id: 'E01', name: 'Clay', salary: '$10,000' },
-    { id: 'E02', name: 'Thomas', salary: '$12,000' },
-    { id: 'E03', name: 'Anna', salary: '$11,500' }
-];
-// Define columns
-var columns = [
-    { field: 'id', headerText: 'Employee ID', width: 90 },
-    { field: 'name', headerText: 'Employee Name', width: 140 },
-    { field: 'salary', headerText: 'Salary', width: 100 }
-];
-// Create the grid
-var grid = new ej.pdf.PdfGrid(source, columns);
-// Draw only the outer borders
-grid.style = {
-    border: {
-        type: ej.pdf.PdfGridBorderType.Outside,
-        pen: { width: 2 }
-    }
-};
-// Draw the grid on the page
-grid.draw(page, { x: 10, y: 10 });
-// Save the document as Output.pdf
-document.save('Output.pdf');
-// Dispose of the document resources
-document.destroy();
-
-{% endhighlight %}
-{% endtabs %}
-
-#### Draw inner borders only
-
-This example demonstrates how to draw only the inner horizontal and vertical borders.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-
-import { PdfColumnInformation, PdfDocument, PdfGrid, PdfGridBorderType, PdfPage } from '@syncfusion/ej2-pdf';
-
-// Create a new PDF document
-let document: PdfDocument = new PdfDocument();
-// Add a page to the document
-let page: PdfPage = document.addPage();
-// Create the data source
-let source: object[] = [
-    { id: 'E01', name: 'Clay', salary: '$10,000' },
-    { id: 'E02', name: 'Thomas', salary: '$12,000' },
-    { id: 'E03', name: 'Anna', salary: '$11,500' }
-];
-// Define columns
-let columns: PdfColumnInformation[] = [
-    { field: 'id', headerText: 'Employee ID', width: 90 },
-    { field: 'name', headerText: 'Employee Name', width: 140 },
-    { field: 'salary', headerText: 'Salary', width: 100 }
-];
-// Create the grid
-let grid: PdfGrid = new PdfGrid(source, columns);
-// Draw only the inner borders
-grid.style = {
-    border: {
-        type: PdfGridBorderType.Inside,
-        pen: { width: 1 }
-    }
-};
-// Draw the grid on the page
-grid.draw(page, { x: 10, y: 10 });
-// Save the document as Output.pdf
-document.save('Output.pdf');
-// Dispose of the document resources
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-
-// Create a new PDF document
-var document = new ej.pdf.PdfDocument();
-// Add a page to the document
-var page = document.addPage();
-// Create the data source
-var source = [
-    { id: 'E01', name: 'Clay', salary: '$10,000' },
-    { id: 'E02', name: 'Thomas', salary: '$12,000' },
-    { id: 'E03', name: 'Anna', salary: '$11,500' }
-];
-// Define columns
-var columns = [
-    { field: 'id', headerText: 'Employee ID', width: 90 },
-    { field: 'name', headerText: 'Employee Name', width: 140 },
-    { field: 'salary', headerText: 'Salary', width: 100 }
-];
-// Create the grid
-var grid = new ej.pdf.PdfGrid(source, columns);
-// Draw only the inner borders
-grid.style = {
-    border: {
-        type: ej.pdf.PdfGridBorderType.Inside,
-        pen: { width: 1 }
-    }
-};
-// Draw the grid on the page
-grid.draw(page, { x: 10, y: 10 });
-// Save the document as Output.pdf
-document.save('Output.pdf');
-// Dispose of the document resources
-document.destroy();
-
-{% endhighlight %}
-{% endtabs %}
-
-#### Draw horizontal or vertical borders
-
-This example demonstrates how to draw only the horizontal separators between rows. Use `PdfGridBorderType.InsideVertical` instead to draw only the vertical separators between columns.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-
-import { PdfColumnInformation, PdfDocument, PdfGrid, PdfGridBorderType, PdfPage } from '@syncfusion/ej2-pdf';
-
-// Create a new PDF document
-let document: PdfDocument = new PdfDocument();
-// Add a page to the document
-let page: PdfPage = document.addPage();
-// Create the data source
-let source: object[] = [
-    { id: 'E01', name: 'Clay', salary: '$10,000' },
-    { id: 'E02', name: 'Thomas', salary: '$12,000' },
-    { id: 'E03', name: 'Anna', salary: '$11,500' }
-];
-// Define columns
-let columns: PdfColumnInformation[] = [
-    { field: 'id', headerText: 'Employee ID', width: 90 },
-    { field: 'name', headerText: 'Employee Name', width: 140 },
-    { field: 'salary', headerText: 'Salary', width: 100 }
-];
-// Create the grid
-let grid: PdfGrid = new PdfGrid(source, columns);
-// Draw only the horizontal separators between rows
-grid.style = {
-    border: {
-        type: PdfGridBorderType.InsideHorizontal,
-        pen: { width: 1 }
-    }
-};
-// Draw the grid on the page
-grid.draw(page, { x: 10, y: 10 });
-// Save the document as Output.pdf
-document.save('Output.pdf');
-// Dispose of the document resources
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-
-// Create a new PDF document
-var document = new ej.pdf.PdfDocument();
-// Add a page to the document
-var page = document.addPage();
-// Create the data source
-var source = [
-    { id: 'E01', name: 'Clay', salary: '$10,000' },
-    { id: 'E02', name: 'Thomas', salary: '$12,000' },
-    { id: 'E03', name: 'Anna', salary: '$11,500' }
-];
-// Define columns
-var columns = [
-    { field: 'id', headerText: 'Employee ID', width: 90 },
-    { field: 'name', headerText: 'Employee Name', width: 140 },
-    { field: 'salary', headerText: 'Salary', width: 100 }
-];
-// Create the grid
-var grid = new ej.pdf.PdfGrid(source, columns);
-// Draw only the horizontal separators between rows
-grid.style = {
-    border: {
-        type: ej.pdf.PdfGridBorderType.InsideHorizontal,
-        pen: { width: 1 }
-    }
-};
-// Draw the grid on the page
-grid.draw(page, { x: 10, y: 10 });
-// Save the document as Output.pdf
-document.save('Output.pdf');
-// Dispose of the document resources
-document.destroy();
-
-{% endhighlight %}
-{% endtabs %}
-
-#### Combine multiple border groups
-
-This example demonstrates how to combine the outer borders with the inner horizontal borders.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-
-import { PdfColumnInformation, PdfDocument, PdfGrid, PdfGridBorderType, PdfPage } from '@syncfusion/ej2-pdf';
-
-// Create a new PDF document
-let document: PdfDocument = new PdfDocument();
-// Add a page to the document
-let page: PdfPage = document.addPage();
-// Create the data source
-let source: object[] = [
-    { id: 'E01', name: 'Clay', salary: '$10,000' },
-    { id: 'E02', name: 'Thomas', salary: '$12,000' },
-    { id: 'E03', name: 'Anna', salary: '$11,500' }
-];
-// Define columns
-let columns: PdfColumnInformation[] = [
-    { field: 'id', headerText: 'Employee ID', width: 90 },
-    { field: 'name', headerText: 'Employee Name', width: 140 },
-    { field: 'salary', headerText: 'Salary', width: 100 }
-];
-// Create the grid
-let grid: PdfGrid = new PdfGrid(source, columns);
-// Draw the outer borders and the horizontal separators
+// Grid level: draw only the outer border and the horizontal separators in gray
 grid.style = {
     border: {
         type: PdfGridBorderType.Outside | PdfGridBorderType.InsideHorizontal,
-        pen: { width: 1.5 }
+        pen: {
+            width: 1,
+            left: { color: { r: 128, g: 128, b: 128 } },
+            right: { color: { r: 128, g: 128, b: 128 } },
+            top: { color: { r: 128, g: 128, b: 128 } },
+            bottom: { color: { r: 128, g: 128, b: 128 } }
+        }
     }
 };
+for (let i: number = 0; i < students.length; i++) {
+    let student: { name: string, maths: number, science: number, english: number } = students[i];
+    let percentage: number = (student.maths + student.science + student.english) / 3;
+    // Row level: green border for students who scored above 95%
+    if (percentage > 95) {
+        grid.rows[i].style = {
+            border: {
+                pen: {
+                    width: 2,
+                    left: { color: { r: 0, g: 128, b: 0 } },
+                    right: { color: { r: 0, g: 128, b: 0 } },
+                    top: { color: { r: 0, g: 128, b: 0 } },
+                    bottom: { color: { r: 0, g: 128, b: 0 } }
+                }
+            }
+        };
+    }
+    // Cell level: red border for any subject mark below 50
+    let marks: number[] = [student.maths, student.science, student.english];
+    for (let j: number = 0; j < marks.length; j++) {
+        if (marks[j] < 50) {
+            grid.rows[i].cells[j + 1].style = {
+                border: {
+                    pen: {
+                        width: 2,
+                        left: { color: { r: 255, g: 0, b: 0 } },
+                        right: { color: { r: 255, g: 0, b: 0 } },
+                        top: { color: { r: 255, g: 0, b: 0 } },
+                        bottom: { color: { r: 255, g: 0, b: 0 } }
+                    }
+                }
+            };
+        }
+    }
+}
 // Draw the grid on the page
 grid.draw(page, { x: 10, y: 10 });
 // Save the document as Output.pdf
@@ -1894,27 +1392,95 @@ document.destroy();
 var document = new ej.pdf.PdfDocument();
 // Add a page to the document
 var page = document.addPage();
-// Create the data source
-var source = [
-    { id: 'E01', name: 'Clay', salary: '$10,000' },
-    { id: 'E02', name: 'Thomas', salary: '$12,000' },
-    { id: 'E03', name: 'Anna', salary: '$11,500' }
+// Create the student records
+var students = [
+    { name: 'Anna', maths: 99, science: 97, english: 96 },
+    { name: 'Thomas', maths: 78, science: 82, english: 45 },
+    { name: 'Clay', maths: 96, science: 98, english: 97 },
+    { name: 'Maria', maths: 65, science: 70, english: 74 }
 ];
+// Create the data source and calculate the percentage of each student
+var source = students.map(function (student) {
+    return {
+        name: student.name,
+        maths: student.maths,
+        science: student.science,
+        english: student.english,
+        percentage: ((student.maths + student.science + student.english) / 3).toFixed(1)
+    };
+});
 // Define columns
 var columns = [
-    { field: 'id', headerText: 'Employee ID', width: 90 },
-    { field: 'name', headerText: 'Employee Name', width: 140 },
-    { field: 'salary', headerText: 'Salary', width: 100 }
+    { field: 'name', headerText: 'Student', width: 100 },
+    { field: 'maths', headerText: 'Maths', width: 70 },
+    { field: 'science', headerText: 'Science', width: 70 },
+    { field: 'english', headerText: 'English', width: 70 },
+    {
+        field: 'percentage', headerText: 'Percentage', width: 90,
+        // Column level: thick dashed blue border for every cell in the Percentage column
+        style: {
+            border: {
+                pen: {
+                    width: 1.5,
+                    left: { color: { r: 0, g: 0, b: 255 }, style: ej.pdf.PdfDashStyle.dash },
+                    right: { color: { r: 0, g: 0, b: 255 }, style: ej.pdf.PdfDashStyle.dash },
+                    top: { color: { r: 0, g: 0, b: 255 }, style: ej.pdf.PdfDashStyle.dash },
+                    bottom: { color: { r: 0, g: 0, b: 255 }, style: ej.pdf.PdfDashStyle.dash }
+                }
+            }
+        }
+    }
 ];
 // Create the grid
 var grid = new ej.pdf.PdfGrid(source, columns);
-// Draw the outer borders and the horizontal separators
+// Grid level: draw only the outer border and the horizontal separators in gray
 grid.style = {
     border: {
         type: ej.pdf.PdfGridBorderType.Outside | ej.pdf.PdfGridBorderType.InsideHorizontal,
-        pen: { width: 1.5 }
+        pen: {
+            width: 1,
+            left: { color: { r: 128, g: 128, b: 128 } },
+            right: { color: { r: 128, g: 128, b: 128 } },
+            top: { color: { r: 128, g: 128, b: 128 } },
+            bottom: { color: { r: 128, g: 128, b: 128 } }
+        }
     }
 };
+for (var i = 0; i < students.length; i++) {
+    var student = students[i];
+    var percentage = (student.maths + student.science + student.english) / 3;
+    // Row level: green border for students who scored above 95%
+    if (percentage > 95) {
+        grid.rows[i].style = {
+            border: {
+                pen: {
+                    width: 2,
+                    left: { color: { r: 0, g: 128, b: 0 } },
+                    right: { color: { r: 0, g: 128, b: 0 } },
+                    top: { color: { r: 0, g: 128, b: 0 } },
+                    bottom: { color: { r: 0, g: 128, b: 0 } }
+                }
+            }
+        };
+    }
+    // Cell level: red border for any subject mark below 50
+    var marks = [student.maths, student.science, student.english];
+    for (var j = 0; j < marks.length; j++) {
+        if (marks[j] < 50) {
+            grid.rows[i].cells[j + 1].style = {
+                border: {
+                    pen: {
+                        width: 2,
+                        left: { color: { r: 255, g: 0, b: 0 } },
+                        right: { color: { r: 255, g: 0, b: 0 } },
+                        top: { color: { r: 255, g: 0, b: 0 } },
+                        bottom: { color: { r: 255, g: 0, b: 0 } }
+                    }
+                }
+            };
+        }
+    }
+}
 // Draw the grid on the page
 grid.draw(page, { x: 10, y: 10 });
 // Save the document as Output.pdf
@@ -1927,102 +1493,7 @@ document.destroy();
 
 N> When `PdfGridBorderType.All` is combined with other values, those groups are excluded. For example, `PdfGridBorderType.All | PdfGridBorderType.InsideVertical` draws every border except the vertical separators. An invalid value results in an error.
 
-### Customize individual border sides
-
-Use the `left`, `right`, `top`, and `bottom` properties of `PdfGridBorderPen` to customize each side independently. Sides that are not specified keep the settings inherited from the lower-precedence levels.
-
-This example demonstrates how to draw a thick blue bottom border, a red dashed top border, and keep the left and right sides at their default appearance.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-
-import { PdfColumnInformation, PdfDashStyle, PdfDocument, PdfGrid, PdfPage } from '@syncfusion/ej2-pdf';
-
-// Create a new PDF document
-let document: PdfDocument = new PdfDocument();
-// Add a page to the document
-let page: PdfPage = document.addPage();
-// Create the data source
-let source: object[] = [
-    { id: 'E01', name: 'Clay', salary: '$10,000' },
-    { id: 'E02', name: 'Thomas', salary: '$12,000' },
-    { id: 'E03', name: 'Anna', salary: '$11,500' }
-];
-// Define columns
-let columns: PdfColumnInformation[] = [
-    { field: 'id', headerText: 'Employee ID', width: 90 },
-    { field: 'name', headerText: 'Employee Name', width: 140 },
-    { field: 'salary', headerText: 'Salary', width: 100 }
-];
-// Create the grid
-let grid: PdfGrid = new PdfGrid(source, columns);
-// Customize the top and bottom border sides only
-grid.style = {
-    border: {
-        pen: {
-            top: { color: { r: 255, g: 0, b: 0 }, style: PdfDashStyle.dash },
-            bottom: { color: { r: 0, g: 0, b: 255 } }
-        }
-    }
-};
-// Set a wider bottom border on the last row only
-grid.rows[2].style = {
-    border: { width: 3, bottom: { color: { r: 0, g: 0, b: 255 } } }
-};
-// Draw the grid on the page
-grid.draw(page, { x: 10, y: 10 });
-// Save the document as Output.pdf
-document.save('Output.pdf');
-// Dispose of the document resources
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-
-// Create a new PDF document
-var document = new ej.pdf.PdfDocument();
-// Add a page to the document
-var page = document.addPage();
-// Create the data source
-var source = [
-    { id: 'E01', name: 'Clay', salary: '$10,000' },
-    { id: 'E02', name: 'Thomas', salary: '$12,000' },
-    { id: 'E03', name: 'Anna', salary: '$11,500' }
-];
-// Define columns
-var columns = [
-    { field: 'id', headerText: 'Employee ID', width: 90 },
-    { field: 'name', headerText: 'Employee Name', width: 140 },
-    { field: 'salary', headerText: 'Salary', width: 100 }
-];
-// Create the grid
-var grid = new ej.pdf.PdfGrid(source, columns);
-// Customize the top and bottom border sides only
-grid.style = {
-    border: {
-        pen: {
-            top: { color: { r: 255, g: 0, b: 0 }, style: ej.pdf.PdfDashStyle.dash },
-            bottom: { color: { r: 0, g: 0, b: 255 } }
-        }
-    }
-};
-// Set a wider bottom border on the last row only
-grid.rows[2].style = {
-    border: { width: 3, bottom: { color: { r: 0, g: 0, b: 255 } } }
-};
-// Draw the grid on the page
-grid.draw(page, { x: 10, y: 10 });
-// Save the document as Output.pdf
-document.save('Output.pdf');
-// Dispose of the document resources
-document.destroy();
-
-{% endhighlight %}
-{% endtabs %}
-
-N> The `width` property applies to every side of the level it is set on. If a side is defined, the side inherits the unspecified color, dash style, and dash settings from the lower-precedence levels.
-
-N> **Border precedence and inheritance:** Border settings are resolved separately for each cell in the following precedence order: cell, row, column, grid, and default style. Properties that are not defined at a higher-precedence level are inherited from the lower-precedence level. A border side defined at a higher level overrides the corresponding inherited side, while assigning a `PdfPen` replaces all four sides. The `type` property is available only at the grid level and determines which border groups are drawn.
+N> A `PdfPen` assigned to the `border` property replaces all four sides, while a side defined in `PdfGridBorderPen` overrides only that side and inherits the unspecified color, dash style, and dash settings from the lower-precedence levels. The `type` property is available only at the grid level.
 
 ## Update the grid data source
 
