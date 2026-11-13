@@ -19,22 +19,22 @@ You can detect whether the current cursor position is in an editable or non-edit
 The following code snippet illustrates how to identify the selection region using the `selectionChange` event:
 
 ```html
+<ejs-documenteditorcontainer id="container" toolbarMode="Ribbon" enableToolbar="true" height="590px"></ejs-documenteditorcontainer>
 <script>
     ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Ribbon);
-    var container = new ej.documenteditor.DocumentEditorContainer({
-        enableToolbar: true,
-        toolbarMode: 'Ribbon',
-        height: '590px',
-    });
-    container.appendTo('#container');
 
-    // Detect whether the selection is in an editable or non-editable region.
-    container.selectionChange = function () {
-        if (container.documentEditor.selection.isSelectionInEditRegion()) {
-            console.log('Selection in editable region');
-        } else {
-            console.log('Selection in non-editable region');
-        }
-    };
+    // For initialization before wiring the event
+    setTimeout(function () {
+        var container = document.getElementById('container').ej2_instances[0];
+
+        // Detect whether the selection is in an editable or non-editable region.
+        container.selectionChange = function () {
+            if (container.documentEditor.selection.isSelectionInEditRegion()) {
+                console.log('Selection in editable region');
+            } else {
+                console.log('Selection in non-editable region');
+            }
+        };
+    });
 </script>
 ```
