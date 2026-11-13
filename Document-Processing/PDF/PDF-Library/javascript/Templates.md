@@ -67,9 +67,81 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
+## Creating a template from an existing PDF page
+
+You can create a template from an existing PDF page and reuse it in other pages of the same document or in a different document. This approach helps maintain consistent page layouts and reduces the effort required to redraw identical content multiple times.
+
+This sample demonstrates how to convert an A4-sized PDF page to A3 size using the page-to-template support
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { PdfDocument, PdfPage, PdfTemplate, PdfPageSettings, PdfMargins } from '@syncfusion/ej2-pdf';
+
+// Load the source PDF document containing an A4-sized page
+let source: PdfDocument = new PdfDocument(pdfData);
+// Access the first page of the source document
+let sourcePage: PdfPage = source.getPage(0);
+// Create a template from the A4-sized source page
+let template: PdfTemplate = sourcePage.createTemplate();
+// Create a new destination PDF document
+let document: PdfDocument = new PdfDocument();
+// Configure an A3-sized page with zero margins
+let settings: PdfPageSettings = new PdfPageSettings();
+settings.size = { width: 842, height: 1191 };
+settings.margins = new PdfMargins(0);
+// Add the A3-sized page to the destination document
+let page: PdfPage = document.addPage(settings);
+// Get the client size of the destination page
+let clientSize: { width: number, height: number } = page.getClientSize();
+// Draw and scale the A4 page template to fit the A3 page
+page.graphics.drawTemplate(template, {
+    x: 0,
+    y: 0,
+    width: clientSize.width,
+    height: clientSize.height
+});
+// Save the destination PDF document
+document.save('output.pdf');
+// Destroy the documents
+document.destroy();
+source.destroy();
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Load the source PDF document containing an A4-sized page
+var source = new ej.pdf.PdfDocument(pdfData);
+// Access the first page of the source document
+var sourcePage = source.getPage(0);
+// Create a template from the A4-sized source page
+var template = sourcePage.createTemplate();
+// Create a new destination PDF document
+var document = new ej.pdf.PdfDocument();
+// Configure an A3-sized page with zero margins
+var settings = new ej.pdf.PdfPageSettings();
+settings.size = { width: 842, height: 1191 };
+settings.margins = new ej.pdf.PdfMargins(0);
+// Add the A3-sized page to the destination document
+var page = document.addPage(settings);
+// Get the client size of the destination page
+var clientSize = page.getClientSize();
+// Draw and scale the A4 page template to fit the A3 page
+page.graphics.drawTemplate(template, {
+    x: 0,
+    y: 0,
+    width: clientSize.width,
+    height: clientSize.height
+});
+// Save the destination PDF document
+document.save('output.pdf');
+// Destroy the documents
+document.destroy();
+source.destroy();
+{% endhighlight %}
+{% endtabs %}
+
 ## Additional Resources
 
 - [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library)
 - [JavaScript PDF Library documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
 - [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
-- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/document-library/javascript/#/tailwind3/pdf/default.html)
+- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/document-library/javascript/#/tailwind3/pdf/default)
