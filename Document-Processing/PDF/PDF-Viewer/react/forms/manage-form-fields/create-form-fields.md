@@ -636,11 +636,11 @@ root.render(<App />);
 
 ### Button
 
-A button field is a push button that is displayed on the PDF page. Users can click the button in the viewer to perform an action, such as navigating to a specific page and location within the document. Button fields can be added and edited both through the Form Designer UI and programmatically.
+A button field is an interactive form field displayed on a PDF page that allows users to perform various actions, such as navigating to a specific page or location within the document. Users can configure actions to be triggered through mouse and keyboard interactions. Button fields can be added and edited using both the Form Designer UI and programmatically.
 
-#### Button Text and Caption
+#### Button Text and Value
 
-The label rendered on the button is defined using the **text** property, and the value stored in the button field is defined using the **value** property. When the **text** property is not specified, the **value** property is used as the button caption.
+The text displayed on the button is defined using the **text** property, while the data value associated with the button field is defined using the **value** property. If the **text** property is not specified, the **value** property is used as the displayed button text.
 
 ![Button field in Form Designer](../../../react/images/ui-button.png)
 
