@@ -20,7 +20,7 @@ Annotations can be resized and moved after they are added to a document. The PDF
 2. When the annotation is selected, resize handles appear on its corners and edges.
 3. Drag a handle to change the width and height of the annotation.
 
-<!-- Image placeholder: add the resize annotation GIF here -->
+![Resize annotations in PDF Viewer UI](../images/resize-annotations-pdf-viewer.gif)
 
 ### Resize programmatically
 
@@ -49,7 +49,7 @@ const resizeAnnotation = () => {
 1. Select an annotation.
 2. Drag the annotation to reposition it within the same page, or drag it to a different page in the document.
 
-<!-- Image placeholder: add the move annotation GIF here -->
+![Move annotations between pages in PDF Viewer UI](../images/move-annotations-between-pages.gif)
 
 ### Move programmatically
 
@@ -82,9 +82,9 @@ const moveAnnotationInPage = () => {
   //get recently added annotation
   const annotation =
     viewer.annotationCollection[viewer.annotationCollection.length - 1];
-  //programmatically change the position of the annotation
-  annotation.bounds.x += 50;
-  annotation.bounds.y += 50;
+  // Update the annotation's coordinates (using left/top or x/y depending on the bounds object)
+  annotation.bounds.left += 50;
+  annotation.bounds.top += 50;
   viewer.annotation.editAnnotation(annotation);
 };
 {% endraw %}
