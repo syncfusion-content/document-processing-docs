@@ -16,7 +16,7 @@ Create or add new form fields visually with the Form Designer UI or programmatic
 The guide explains the following:
 - How to add fields with the Form Designer UI.
 - How to add and edit fields programmatically (API).
-- How to add common field types: Textbox, Password, CheckBox, RadioButton, ListBox, DropDown, Signature, Initial, DateTime picker, Barcode.
+- How to add common field types: Textbox, Password, CheckBox, RadioButton, ListBox, DropDown, Signature, Initial, DateTime picker, Button, Barcode.
 
 ## Steps
 
@@ -633,6 +633,232 @@ const root = ReactDOM.createRoot(document.getElementById('sample'));
 root.render(<App />);
 {% endhighlight %}
 {% endtabs %}
+
+### Button
+
+A button field is an interactive form field displayed on a PDF page that allows users to perform various actions, such as navigating to a specific page or location within the document. Users can configure actions to be triggered through mouse and keyboard interactions. Button fields can be added and edited using both the Form Designer UI and programmatically.
+
+#### Button Text and Value
+
+The text displayed on the button is defined using the **text** property, while the data value associated with the button field is defined using the **value** property. If the **text** property is not specified, the **value** property is used as the displayed button text.
+
+![Button field in Form Designer](../../../react/images/ui-button.png)
+
+#### Button Actions
+
+An action can be associated with a button field, and the action is executed when the corresponding event occurs. The action is configured for the required event in the **Actions** tab of the Button Properties dialog.
+
+| Action | Description |
+|---|---|
+| `mouseUp` | Executes the action when the mouse button is released over the button field. |
+| `mouseDown` | Executes the action when the mouse button is pressed over the button field. |
+| `mouseEnter` | Executes the action when the pointer enters the button field area. |
+| `mouseLeave` | Executes the action when the pointer leaves the button field area. |
+| `gotFocus` | Executes the action when the button field receives focus. |
+| `lostFocus` | Executes the action when the button field loses focus. |
+
+![Button field Actions in Form Designer](../../../react/images/ui-button-actions.png)
+
+The **Go To Action** navigates the viewer to a specific page, position, and zoom level in the document when the action is triggered.
+
+| Property | Description |
+|---|---|
+| `destinationPageNumber` | The page number to navigate to. |
+| `destinationLocation` | The position (`x` and `y`) within the destination page. |
+| `zoomValue` | The zoom level applied when navigating to the destination. A value of `0` retains the current zoom level. |
+
+**Add via UI**: Open the Form Designer toolbar, select **Button**, and click on a PDF page to place the field. Select the placed field to review or change its general properties, such as its name, value, tooltip, visibility, and whether it is read-only or required.
+
+**Add Programmatically (API)**:
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+import * as ReactDOM from 'react-dom/client';
+import React, { useRef } from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject } from '@syncfusion/ej2-react-pdfviewer';
+import { ActionType } from '@syncfusion/ej2-pdfviewer';
+
+export function App() {
+  const viewerRef = useRef(null);
+
+  const onDocumentLoad = () => {
+    // Add a button field that navigates to page 5 when it is clicked
+    viewerRef.current?.formDesignerModule.addFormField('ButtonField', {
+      name: 'Submit1',
+      pageNumber: 1,
+      bounds: { X: 100, Y: 350, Width: 120, Height: 32 },
+      value: 'Submit',
+      text: 'Submit',
+      tooltip: 'Click to submit',
+      actions: {
+        mouseUp: {
+          action: ActionType.GoTo,
+          destinationPageNumber: 5,
+          destinationLocation: { x: 100, y: 100 },
+          zoomValue: 2
+        }
+      }
+    });
+  };
+
+  return (
+    <div className='control-section'>
+      <PdfViewerComponent
+        ref={viewerRef}
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/35.1.43/dist/ej2-pdfviewer-lib"
+        style={{ height: '680px' }}
+        documentLoad={onDocumentLoad}
+      >
+        <Inject services={[Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner]} />
+      </PdfViewerComponent>
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+{% endhighlight %}
+{% endtabs %}
+
+**Place a button field interactively**:
+
+Use [`setFormFieldMode()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/formdesigner#setformfieldmode) to switch the form designer into the button placement mode, and then click on the PDF page to place the button field. The existing button fields can be removed using [`deleteFormField()`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/formdesigner#deleteformfield).
+
+{% tabs %}
+{% highlight js tabtitle="index.js" %}
+import * as ReactDOM from 'react-dom/client';
+import React, { useCallback, useRef, useState } from 'react';
+import './index.css';
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner, Inject } from '@syncfusion/ej2-react-pdfviewer';
+import { ActionType } from '@syncfusion/ej2-pdfviewer';
+
+export function App() {
+  const viewerRef = useRef(null);
+  const [buttonFields, setButtonFields] = useState([]);
+  const [selectedFieldId, setSelectedFieldId] = useState('');
+
+  // Refresh the button fields available in the document
+  const refreshButtonFields = useCallback(() => {
+    const viewer = viewerRef.current;
+    if (!viewer) {
+      return;
+    }
+    const fields = Array.isArray(viewer.formFieldCollections) ? viewer.formFieldCollections : [];
+    const buttons = fields
+      .filter((field) => field.type === 'ButtonField')
+      .map((field) => ({ id: field.id, name: field.name || field.value || field.id }));
+    setButtonFields(buttons);
+    setSelectedFieldId((current) => (buttons.some((field) => field.id === current) ? current : (buttons.length ? buttons[0].id : '')));
+  }, []);
+
+  const getSelectedField = () => {
+    const viewer = viewerRef.current;
+    if (!viewer || !selectedFieldId) {
+      return null;
+    }
+    const fields = Array.isArray(viewer.formFieldCollections) ? viewer.formFieldCollections : [];
+    return fields.find((field) => field.id === selectedFieldId) || null;
+  };
+
+  // Add a button field programmatically
+  const addButtonField = () => {
+    viewerRef.current?.formDesignerModule.addFormField('ButtonField', {
+      name: `Submit${buttonFields.length + 1}`,
+      pageNumber: 1,
+      bounds: { X: 100, Y: 350, Width: 120, Height: 32 },
+      value: 'Submit',
+      text: 'Submit',
+      tooltip: 'Click to submit',
+      actions: {
+        mouseUp: {
+          action: ActionType.GoTo,
+          destinationPageNumber: 5,
+          destinationLocation: { x: 100, y: 100 },
+          zoomValue: 2
+        }
+      }
+    });
+    refreshButtonFields();
+  };
+
+  // Switch the form designer into the button placement mode
+  const enableButtonMode = () => {
+    viewerRef.current?.formDesignerModule.setFormFieldMode('ButtonField');
+  };
+
+  // Update the properties and actions of the selected button field
+  const editButtonField = () => {
+    const field = getSelectedField();
+    if (!field) {
+      return;
+    }
+    viewerRef.current?.formDesignerModule.updateFormField(field, {
+      value: 'Submit Button',
+      text: 'Submit Button',
+      alignment: 'Left',
+      tooltip: 'Updated Submit Button',
+      actions: {
+        mouseUp: {
+          action: ActionType.GoTo,
+          destinationPageNumber: 7,
+          destinationLocation: { x: 100, y: 100 },
+          zoomValue: 1
+        }
+      }
+    });
+    refreshButtonFields();
+  };
+
+  // Delete the selected button field
+  const deleteButtonField = () => {
+    const field = getSelectedField();
+    if (!field) {
+      return;
+    }
+    viewerRef.current?.formDesignerModule.deleteFormField(field);
+    refreshButtonFields();
+  };
+
+  return (
+    <div className='control-section'>
+      <button onClick={addButtonField}>Add Button Field</button>
+      <button onClick={enableButtonMode}>Enable Button Designer Mode</button>
+      <select value={selectedFieldId} onChange={(e) => setSelectedFieldId(e.target.value)}>
+        {buttonFields.length > 0 ? (
+          buttonFields.map((field) => (
+            <option key={field.id} value={field.id}>{field.name}</option>
+          ))
+        ) : (
+          <option value="">No Button Fields Available</option>
+        )}
+      </select>
+      <button onClick={editButtonField} disabled={!selectedFieldId}>Edit Button Field</button>
+      <button onClick={deleteButtonField} disabled={!selectedFieldId}>Delete Button Field</button>
+      <PdfViewerComponent
+        ref={viewerRef}
+        id="container"
+        documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        resourceUrl="https://cdn.syncfusion.com/ej2/35.1.43/dist/ej2-pdfviewer-lib"
+        style={{ height: '680px' }}
+        documentLoad={refreshButtonFields}
+        formFieldAdd={refreshButtonFields}
+        formFieldRemove={refreshButtonFields}
+      >
+        <Inject services={[Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, Annotation, TextSearch, FormFields, FormDesigner]} />
+      </PdfViewerComponent>
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('sample'));
+root.render(<App />);
+{% endhighlight %}
+{% endtabs %}
+
+[View Sample on GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples/tree/master/Forms/Button%20field)
 
 ### Barcode
 
