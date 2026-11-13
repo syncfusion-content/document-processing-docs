@@ -80,9 +80,15 @@ The following code indicates that the text following the column break will begin
 
 ```javascript
 this.$refs.documentEditor.ej2Instances.editor.insertColumnBreak();
-```a next-page section break to start the new section on the next page.
+```
 
-The following code example illustrates how to insert a next-ion on the next page.
+You can insert a page break to move the content following the cursor to the next page.
+
+```javascript
+this.$refs.documentEditor.ej2Instances.editor.insertPageBreak();
+```
+
+You can insert a next-page section break to start the new section on the next page.
 
 The following code example illustrates how to insert a next page section break.
 
