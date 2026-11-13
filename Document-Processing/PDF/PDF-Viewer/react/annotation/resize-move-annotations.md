@@ -183,8 +183,6 @@ root.render(<Default />);
 {% endhighlight %}
 {% endtabs %}
 
-[View Sample on GitHub](https://github.com/SyncfusionExamples/react-pdf-viewer-examples)
-
 N> The `editAnnotation` API requires an existing annotation. Add an annotation to the document before calling the resize or move methods.
 
 ## See also
