@@ -130,7 +130,7 @@ let state: PdfGraphicsState = graphics.save();
 // Define a clip region partially overlapping the image
 graphics.setClip({ x: 10, y: 10, width: 200, height: 80 }, PdfFillMode.alternate);
 // Draw the image.
-image.draw(graphics, { x: 10, y: 10, width: 200, height: 100 });
+graphics.drawImage(image, { x: 10, y: 10, width: 200, height: 100 });
 // Restore the graphics state to remove the clipping region
 graphics.restore(state);
 // Save the document
@@ -154,7 +154,7 @@ var state = graphics.save();
 // Define a clip region partially overlapping the image
 graphics.setClip({ x: 10, y: 10, width: 200, height: 80 }, ej.pdf.PdfFillMode.alternate);
 // Draw the image.
-image.draw(graphics, { x: 10, y: 10, width: 200, height: 100 });
+graphics.drawImage(image, { x: 10, y: 10, width: 200, height: 100 });
 // Restore the graphics state to remove the clipping region
 graphics.restore(state);
 // Save the document
@@ -234,4 +234,4 @@ document.destroy();
 - [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library)
 - [JavaScript PDF Library documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
 - [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
-- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/tailwind3/pdf/default.html)
+- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/document-library/javascript/#/tailwind3/pdf/default.html)
