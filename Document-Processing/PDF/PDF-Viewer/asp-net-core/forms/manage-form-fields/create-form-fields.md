@@ -438,6 +438,215 @@ document.addEventListener('DOMContentLoaded', function () {
 {% endhighlight %}
 {% endtabs %}
 
+### Button
+
+A button field is an interactive form field displayed on a PDF page that allows users to perform various actions, such as navigating to a specific page or location within the document. Users can configure actions to be triggered through mouse and keyboard interactions. Button fields can be added and edited using both the Form Designer UI and programmatically.
+
+#### Button Text and Value
+
+The text displayed on the button is defined using the **text** property, while the data value associated with the button field is defined using the **value** property. If the **text** property is not specified, the **value** property is used as the displayed button text.
+
+![Button field in Form Designer](../../../asp-net-core/images/ui-button.png)
+
+#### Button Actions
+
+An action can be associated with a button field, and the action is executed when the corresponding event occurs. The action is configured for the required event in the **Actions** tab of the Button Properties dialog.
+
+| Action | Description |
+|---|---|
+| `mouseUp` | Executes the action when the mouse button is released over the button field. |
+| `mouseDown` | Executes the action when the mouse button is pressed over the button field. |
+| `mouseEnter` | Executes the action when the pointer enters the button field area. |
+| `mouseLeave` | Executes the action when the pointer leaves the button field area. |
+| `gotFocus` | Executes the action when the button field receives focus. |
+| `lostFocus` | Executes the action when the button field loses focus. |
+
+![Button field Actions in Form Designer](../../../asp-net-core/images/ui-button-actions.png)
+
+The **Go To Action** navigates the viewer to a specific page, position, and zoom level in the document when the action is triggered.
+
+| Property | Description |
+|---|---|
+| `destinationPageNumber` | The page number to navigate to. |
+| `destinationLocation` | The position (`x` and `y`) within the destination page. |
+| `zoomValue` | The zoom level applied when navigating to the destination. A value of `0` retains the current zoom level. |
+
+**Add via Toolbar (UI)**
+- Open **Form Designer** → select **Button** → click on the page → configure in **Properties**.
+- Select the placed field to review or change its general properties, such as its name, value, tooltip, visibility, and whether it is read-only or required.
+
+**Add Programmatically (API)**
+{% tabs %}
+{% highlight cshtml tabtitle="Standalone" %}
+<div style="width:100%;height:600px">
+    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf">
+    </ejs-pdfviewer>
+</div>
+
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function () {
+  var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
+  pdfviewer.documentLoad = function () {
+    // Add a button field that navigates to page 5 when it is clicked
+    pdfviewer.formDesignerModule.addFormField('ButtonField', {
+      name: 'Submit1',
+      pageNumber: 1,
+      bounds: { X: 100, Y: 350, Width: 120, Height: 32 },
+      value: 'Submit',
+      text: 'Submit',
+      tooltip: 'Click to submit',
+      actions: {
+        mouseUp: {
+          action: 'GoTo',
+          destinationPageNumber: 5,
+          destinationLocation: { x: 100, y: 100 },
+          zoomValue: 2
+        }
+      }
+    });
+  };
+});
+</script>
+{% endhighlight %}
+{% endtabs %}
+
+**Place a button field interactively**
+Use [`setFormFieldMode()`](https://ej2.syncfusion.com/documentation/api/pdfviewer/formdesigner#setformfieldmode) to switch the form designer into the button placement mode, and then click on the PDF page to place the button field. The existing button fields can be removed using [`deleteFormField()`](https://ej2.syncfusion.com/documentation/api/pdfviewer/formdesigner#deleteformfield).
+
+{% tabs %}
+{% highlight cshtml tabtitle="Standalone" %}
+<div class="toolbar-actions">
+    <button onclick="addButtonField()">Add Button Field</button>
+    <button onclick="enableButtonMode()">Enable Button Designer Mode</button>
+    <select id="buttonFields">
+        <option value="">No Button Field</option>
+    </select>
+    <button onclick="editButtonField()">Edit Button Field</button>
+    <button onclick="deleteSelectedField()">Delete Button Field</button>
+</div>
+
+<div style="width:100%;height:600px">
+    <ejs-pdfviewer id="pdfviewer" style="height:600px" resourceUrl="https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib" documentPath="https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf" documentLoad="refreshButtonFields" formFieldAdd="refreshButtonFields" formFieldRemove="refreshButtonFields">
+    </ejs-pdfviewer>
+</div>
+
+<script type="text/javascript">
+    // Refresh the button fields available in the document
+    function refreshButtonFields() {
+        var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
+        var dropdown = document.getElementById('buttonFields');
+
+        dropdown.innerHTML = '';
+
+        var fields = Array.isArray(pdfviewer.formFieldCollections)
+            ? pdfviewer.formFieldCollections
+            : [];
+
+        var buttonFields = fields.filter(function (field) {
+            return field.type === 'ButtonField';
+        });
+
+        if (buttonFields.length === 0) {
+            var emptyOption = document.createElement('option');
+            emptyOption.text = 'No Button Field';
+            emptyOption.value = '';
+            dropdown.appendChild(emptyOption);
+            return;
+        }
+
+        buttonFields.forEach(function (field) {
+            var option = document.createElement('option');
+            option.value = field.id;
+            option.text = field.name || field.value || field.id;
+            dropdown.appendChild(option);
+        });
+    }
+
+    // Add a button field programmatically
+    function addButtonField() {
+        var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
+
+        pdfviewer.formDesignerModule.addFormField('ButtonField', {
+            name: 'Submit' + (document.getElementById('buttonFields').options.length + 1),
+            pageNumber: 1,
+            bounds: { X: 100, Y: 350, Width: 120, Height: 32 },
+            value: 'Submit',
+            text: 'Submit',
+            tooltip: 'Click to submit',
+            actions: {
+                mouseUp: {
+                    action: 'GoTo',
+                    destinationPageNumber: 5,
+                    destinationLocation: { x: 100, y: 100 },
+                    zoomValue: 2
+                }
+            }
+        });
+
+        refreshButtonFields();
+    }
+
+    // Switch the form designer into the button placement mode
+    function enableButtonMode() {
+        var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
+
+        pdfviewer.formDesignerModule.setFormFieldMode('ButtonField');
+    }
+
+    // Update the properties and actions of the selected button field
+    function editButtonField() {
+        var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
+        var selectedId = document.getElementById('buttonFields').value;
+
+        var fields = Array.isArray(pdfviewer.formFieldCollections)
+            ? pdfviewer.formFieldCollections
+            : [];
+
+        var field = fields.find(function (f) { return f.id === selectedId; });
+
+        if (field) {
+            pdfviewer.formDesignerModule.updateFormField(field, {
+                value: 'Submit Button',
+                text: 'Submit Button',
+                alignment: 'Left',
+                tooltip: 'Updated Submit Button',
+                actions: {
+                    mouseUp: {
+                        action: 'GoTo',
+                        destinationPageNumber: 7,
+                        destinationLocation: { x: 100, y: 100 },
+                        zoomValue: 1
+                    }
+                }
+            });
+        }
+
+        refreshButtonFields();
+    }
+
+    // Delete the selected button field
+    function deleteSelectedField() {
+        var pdfviewer = document.getElementById('pdfviewer').ej2_instances[0];
+        var selectedId = document.getElementById('buttonFields').value;
+
+        var fields = Array.isArray(pdfviewer.formFieldCollections)
+            ? pdfviewer.formFieldCollections
+            : [];
+
+        var field = fields.find(function (f) { return f.id === selectedId; });
+
+        if (field) {
+            pdfviewer.formDesignerModule.deleteFormField(field);
+        }
+
+        refreshButtonFields();
+    }
+</script>
+{% endhighlight %}
+{% endtabs %}
+
+[View Sample on GitHub](https://github.com/SyncfusionExamples/asp-core-pdf-viewer-examples/tree/master/How%20to/Button%20Field)
+
 ### Barcode
 
 A barcode field is a form field that displays the entered value as a barcode that can be scanned. Barcode fields can be added and edited both through the Form Designer UI and programmatically.
