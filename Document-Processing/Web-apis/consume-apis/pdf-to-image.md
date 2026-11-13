@@ -3,7 +3,7 @@ title: Convert PDF to Images Using Web API | Syncfusion
 description: Export PDF pages to high‑quality JPEG, PNG, or TIFF formats for previews, archiving, and processing using Syncfusion conversion Web API.
 platform: document-processing
 control: general
-documentation: UG
+documentation: ugtocname: Document-Processing-Common-toc
 ---
 # Convert PDF to Image Using Syncfusion Web API
 

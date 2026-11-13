@@ -3,7 +3,7 @@ title: Organize PDF Pages Using Web API | Syncfusion
 description: Reorder, rearrange, and structure PDF pages programmatically to streamline document assembly using Syncfusion organize Web API.
 platform: document-processing
 control: general
-documentation: UG
+documentation: ugtocname: Document-Processing-Common-toc
 ---
 
 # Organize PDF Using Syncfusion Web API

@@ -3,7 +3,7 @@ title: File and directory name length limits in Compression | Syncfusion
 description: Describes supported file and directory name length limits in Syncfusion Compression and the exception thrown when exceeded.
 platform: document-processing
 control: Compression
-documentation: UG
+documentation: ugtocname: Document-Processing-Common-toc
 ---
 
 # What are the File and directory name length limits in Compression?

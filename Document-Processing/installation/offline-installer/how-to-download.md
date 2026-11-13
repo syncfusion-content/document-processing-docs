@@ -4,7 +4,7 @@ title: How to download Document Solutions Offline installer | Syncfusion
 description: Learn here about how to download the Syncfusion Document Processing offline installer from our Syncfusion website with a license.
 platform: document-SDK
 control: Installation and Deployment
-documentation: ug
+documentation: ugtocname: Document-Processing-Common-toc
 
 ---
 

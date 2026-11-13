@@ -4,7 +4,7 @@ title: Licensing errors Possible in Document Solutions | Syncfusion
 description: Learn here about Syncfusion common licensing errors which appears on license validation in Syncfusion Document Processing applications.
 platform: document-processing
 control: Essential Studio
-documentation: ug
+documentation: ugtocname: Document-Processing-Common-toc
 ---
 
 # Licensing errors Possible in Document Solutions

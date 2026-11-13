@@ -3,7 +3,7 @@ title: Delete PDF Pages Using Web API | Syncfusion
 description: Remove blank or unwanted PDF pages programmatically to streamline cleanup and automate document preparation using Syncfusion Web API.
 platform: document-processing
 control: general
-documentation: UG
+documentation: ugtocname: Document-Processing-Common-toc
 ---
 # Delete Pages from PDF Using Syncfusion Web API 
 

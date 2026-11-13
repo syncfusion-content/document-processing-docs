@@ -2,7 +2,7 @@
 title: Use Syncfusion Document Processing in Python with Python.NET
 description: Learn how to use Syncfusion Document Processing libraries in-process from Python with Python.NET and the published DocumentBridge assembly.
 platform: document-processing
-documentation: UG
+documentation: ugtocname: Document-Processing-Common-toc
 ---
 
 # Use Syncfusion Document Processing from Python with Python.NET

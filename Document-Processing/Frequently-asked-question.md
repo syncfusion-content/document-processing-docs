@@ -3,6 +3,7 @@ title: Frequently Asked Questions in Document Solutions| Syncfusion
 description: This section provides answers to frequently asked questions related to document processing using Syncfusion Document Solutions.
 platform: document-processing
 documentation: UG
+tocname: Document-Processing-Common-toc
 ---
 
 # Frequently Asked Questions in Document Solutions

@@ -3,7 +3,7 @@ title: Workflow of Document Processing API | Syncfusion
 description: Explore Syncfusion's Document Processing API workflow for handling asynchronous tasks efficiently. Simplify document processing with structured workflows.
 platform: document-processing
 control: general
-documentation: UG
+documentation: ugtocname: Document-Processing-Common-toc
 ---
 
 # Workflow of Document Processing API

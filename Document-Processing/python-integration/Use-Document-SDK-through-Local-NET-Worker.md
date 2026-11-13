@@ -2,7 +2,7 @@
 title: Use Syncfusion Document Processing in Python with a .NET Worker
 description: Learn how to run Syncfusion Document Processing from Python through a local .NET worker process with no extra Python packages.
 platform: document-processing
-documentation: UG
+documentation: ugtocname: Document-Processing-Common-toc
 ---
 
 # Use Syncfusion Document Processing in Python with a Local .NET Worker

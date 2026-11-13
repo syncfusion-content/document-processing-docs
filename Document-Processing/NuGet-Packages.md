@@ -5,6 +5,7 @@ description: Learn here some information about the process of installing, managi
 platform: document-processing
 control: NuGet Packages
 documentation: ug
+tocname: Document-Processing-Common-toc
 ---
 
 # NuGet Packages of Document Processing Solutions

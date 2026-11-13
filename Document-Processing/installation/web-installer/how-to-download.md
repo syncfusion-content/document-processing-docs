@@ -4,7 +4,7 @@ title: How to download Document Solutions Web installer | Syncfusion
 description: Learn here about how to download the Syncfusion Document Processing web installer from our Syncfusion website with a license.
 platform: document-processing
 control: Installation and Deployment
-documentation: ug
+documentation: ugtocname: Document-Processing-Common-toc
 
 ---
 

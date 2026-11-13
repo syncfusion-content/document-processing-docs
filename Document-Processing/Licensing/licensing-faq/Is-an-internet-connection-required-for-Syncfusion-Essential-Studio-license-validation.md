@@ -4,7 +4,7 @@ title: Internet required for Document Solutions license | Syncfusion
 description: Learn here about whether internet connection is required for Syncfusion Document Solutions license validation.
 platform: document-processing
 control: Essential Studio
-documentation: ug
+documentation: ugtocname: Document-Processing-Common-toc
 ---
 
 # Internet required for Document Solutions license validation?

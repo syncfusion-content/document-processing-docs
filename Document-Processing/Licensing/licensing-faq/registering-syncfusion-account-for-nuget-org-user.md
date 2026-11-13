@@ -4,7 +4,7 @@ title: Register license for Document Solutions NuGet packages | Syncfusion
 description: Learn here how to generate and register the license key for Document Processing solutions specific to NuGet package users.
 platform: document-processing
 control: Essential Studio
-documentation: ug
+documentation: ugtocname: Document-Processing-Common-toc
 ---
 
 # Register license for Document Solutions NuGet packages

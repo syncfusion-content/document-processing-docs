@@ -4,7 +4,7 @@ title: How to register license key for Document Solutions | Syncfusion
 description: Learn here about how to register Syncfusion Document Processing license key for Document Processing application for license validation.
 platform: document-processing
 control: Essential Studio
-documentation: ug
+documentation: ugtocname: Document-Processing-Common-toc
 ---
 
 # How to register license key for Document Solutions

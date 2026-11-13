@@ -3,7 +3,7 @@ title: Flatten PDFs Using Web API | Syncfusion
 description: Flatten annotations, form fields, and signatures to secure PDF content from editing using Syncfusion high‑security flattening Web API.
 platform: document-processing
 control: general
-documentation: UG
+documentation: ugtocname: Document-Processing-Common-toc
 ---
 # Flattening PDFs Using Syncfusion Web API 
 

@@ -4,7 +4,7 @@ title: Collaboration Server in Syncfusion Collaborator | Syncfusion
 description: The Collaboration Server manages collaboration sessions, synchronizes editing actions, persists changes, and broadcasts updates in real time.
 control: Collaborator
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-Common-toc
 domainurl: ##DomainURL##
 ---
 

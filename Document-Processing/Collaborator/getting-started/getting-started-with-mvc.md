@@ -4,7 +4,7 @@ title: Getting Started with ASP.NET MVC Collaboration Server | Syncfusion
 description: Learn how to create a collaborative DOCX Editor in an ASP.NET MVC application using the Collaboration Server with WebSocket transport and Redis storage.
 control: Collaborator
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-Common-toc
 domainurl: ##DomainURL##
 ---
 # Getting Started with ASP.NET MVC Collaboration Server

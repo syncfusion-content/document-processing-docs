@@ -3,7 +3,7 @@ title: Protect PDF Files Using Web API | Syncfusion
 description: Apply passwords and permission restrictions to safeguard sensitive PDFs using Syncfusion strong encryption and protection Web API.
 platform: document-processing
 control: general
-documentation: UG
+documentation: ugtocname: Document-Processing-Common-toc
 ---
 # Protect PDF Using Syncfusion Web API
 

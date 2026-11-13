@@ -4,7 +4,7 @@ title: How to register and validate license key in CI | Syncfusion
 description: Learn how to register and validate the license key for Syncfusion Document Processing Solutions in CI services.
 platform: file-formats
 control: Essential Studio
-documentation: ug
+documentation: ugtocname: Document-Processing-Common-toc
 ---
 
 <style>

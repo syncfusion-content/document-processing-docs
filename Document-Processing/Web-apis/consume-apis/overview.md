@@ -3,7 +3,7 @@ title: About Consuming Syncfusion Document Processing Web API | Syncfusion®
 description: Learn about overview of consuming Syncfusion Document Processing Web APIs that converts Office files, HTML or image to PDF. Merge, split, compress PDF and more.
 platform: document-processing
 control: general
-documentation: UG
+documentation: ugtocname: Document-Processing-Common-toc
 ---
 # About Consuming Syncfusion Document Processing Web APIs
 

@@ -4,7 +4,7 @@ title: About Syncfusion License for Document Solutions | Syncfusion
 description: Learn about overview of Syncfusion License for Document Processing Solutions and their respective unlock keys.
 platform: document-processing
 control: Essential Studio
-documentation: ug
+documentation: ugtocname: Document-Processing-Common-toc
 ---
 
 <style>

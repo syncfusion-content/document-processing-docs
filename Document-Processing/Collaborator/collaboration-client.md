@@ -4,7 +4,7 @@ title: Collaboration Client in Syncfusion Collaborator | Syncfusion
 description: The Collaboration Client is a browser-side library that enables real-time collaborative editing in Syncfusion EJ2 components.
 control: Collaborator
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-Common-toc
 domainurl: ##DomainURL##
 ---
 

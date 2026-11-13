@@ -3,7 +3,7 @@ title: Use Syncfusion Document Libraries from Python | Syncfusion
 description: Use Syncfusion .NET Document Libraries from Python to create, process, and convert Word and PDF documents through a local worker or Python.NET.
 platform: document-processing
 control: Document SDK
-documentation: UG
+documentation: ugtocname: Document-Processing-Common-toc
 keywords: syncfusion python, use syncfusion from python, python document processing, python word document, python pdf document, local dotnet worker, syncfusion integration, docio python, pdf python
 ---
 

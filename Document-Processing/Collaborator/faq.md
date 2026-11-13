@@ -4,7 +4,7 @@ title: Collaborator Frequently Asked Questions | Syncfusion
 description: Find answers to common questions about Syncfusion Collaborator, covering Redis configuration, server capacity, transports, and component support.
 control: Collaborator
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-Common-toc
 domainurl: ##DomainURL##
 ---
 # Frequently asked questions

@@ -4,6 +4,7 @@ description: Learn about introduction of Syncfusion Essential Studio .NET Teleme
 platform: document-processing
 control: general
 documentation: UG
+tocname: Document-Processing-Common-toc
 ---
 
 # About Syncfusion .NET Telemetry

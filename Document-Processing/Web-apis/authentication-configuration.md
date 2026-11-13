@@ -3,7 +3,7 @@ title: Guide to Authentication Configuration in Web APIs | Syncfusion
 description: Learn how to configure authentication for the document processing engine using JSON Web Token (JWT). Enable it by setting specific environment variables.
 platform: document-processing
 control: general
-documentation: UG
+documentation: ugtocname: Document-Processing-Common-toc
 ---
 # Guide to Authentication Configuration in Web APIs
 

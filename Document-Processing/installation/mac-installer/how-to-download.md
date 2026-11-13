@@ -4,7 +4,7 @@ title: How to download Document Solutions Mac installer | Syncfusion
 description: Learn here about how to download the Syncfusion Document Processing Mac installer from our Syncfusion website with a license.
 platform: Document SDK
 control: Installation and Deployment
-documentation: ug
+documentation: ugtocname: Document-Processing-Common-toc
 --- 
 
 # How to download Document Solutions Mac installer

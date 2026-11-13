@@ -4,7 +4,7 @@ title: Where can I get a license key for Document Solutions | Syncfusion
 description: Learn here about the recommended places to get and register the license key for Syncfusion Document Solutions in your application.
 platform: document-processing
 control: Essential Studio
-documentation: ug
+documentation: ugtocname: Document-Processing-Common-toc
 ---
 
 # Where can I get a license key for Document Solutions

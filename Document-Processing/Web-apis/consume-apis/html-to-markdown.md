@@ -3,7 +3,7 @@ title: Convert HTML Documents to Markdown Using Web API | Syncfusion
 description: Convert HTML documents to Markdown using Syncfusion Web API. Preserve headings, tables, lists, and formatting with reliable server-side conversion.
 platform: document-processing
 control: general
-documentation: UG
+documentation: ugtocname: Document-Processing-Common-toc
 ---
 # HTML to Markdown Conversion Using Syncfusion Web API
 

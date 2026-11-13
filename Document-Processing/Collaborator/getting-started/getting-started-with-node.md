@@ -4,7 +4,7 @@ title: Getting Started with Node.js Collaboration Server | Syncfusion
 description: Learn how to create a collaborative PDF Viewer backed by the Node.js Collaboration Server using WebSocket transport and Redis storage.
 control: Collaborator
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-Common-toc
 domainurl: ##DomainURL##
 ---
 # Getting Started with Node.js Collaboration Server

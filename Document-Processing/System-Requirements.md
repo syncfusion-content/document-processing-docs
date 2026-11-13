@@ -5,6 +5,7 @@ description: Checkout and learn here all about the system requirements needed to
 platform: document-processing
 control: System Requirements
 documentation: ug
+tocname: Document-Processing-Common-toc
 
 ---
 # System Requirements of Document Processing Solutions

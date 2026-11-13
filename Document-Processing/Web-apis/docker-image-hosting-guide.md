@@ -3,7 +3,7 @@ title: Docker Image Hosting Guide for Document Processing APIs | Syncfusion
 description: Deploy and manage Syncfusion Document Processing API with Docker. Setup includes hardware, software, Docker Compose, and PostgreSQL for seamless deployment.
 platform: document-processing
 control: general
-documentation: UG
+documentation: ugtocname: Document-Processing-Common-toc
 ---
 # Docker Image Hosting Guide for Document Processing APIs
 
