@@ -13,6 +13,16 @@ Client-side import processes workbook files directly in the browser without send
 
 React Spreadsheet uses `@syncfusion/ej2-xlsx` internally for client-side workbook processing. Use the Spreadsheet user interface or the public `open()` method to open files. The Spreadsheet manages all file processing automatically through its public API.
 
+## Advantages of Client-Side Import
+
+Client-side import provides several key advantages over server-side processing:
+
+* **No Server Dependency**: Process Excel files directly in the browser without requiring server endpoints
+* **Improved Performance**: Eliminates network latency for file processing operations
+* **Enhanced Privacy**: Files never leave the client device during processing
+* **Reduced Infrastructure Costs**: No need to maintain server-side processing infrastructure
+* **Better User Experience**: Faster response times and offline capabilities
+
 ## How client-side import works
 
 When `openUrl` is not configured, the Spreadsheet component automatically uses its integrated client-side processing capabilities. The component handles file parsing and rendering internally without requiring server communication.
@@ -53,10 +63,9 @@ import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 
 const App = () => {
     const spreadsheetRef = useRef(null);
-
-    const openFile = (event) => {
-        const file = event.target.files?.[0];
-
+    
+    const handleFileOpen = (event) => {
+        const file = event.target.files[0];
         if (file) {
             spreadsheetRef.current?.open({ file });
         }
@@ -64,8 +73,8 @@ const App = () => {
 
     return (
         <div>
-            <input type="file" accept=".xlsx" onChange={openFile} />
-            <SpreadsheetComponent ref={spreadsheetRef} />
+            <input type="file" accept=".xlsx" onChange={handleFileOpen} />
+            <SpreadsheetComponent ref={spreadsheetRef} allowOpen={true} />
         </div>
     );
 };
@@ -78,49 +87,87 @@ export default App;
 To open Excel files from a URL, fetch the file and convert the response to a File object:
 
 ```jsx
-const openFromUrl = async () => {
-    const response = await fetch('https://example.com/sample.xlsx');
+import React, { useRef } from 'react';
+import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 
-    if (!response.ok) {
-        throw new Error('Unable to retrieve the Excel file.');
-    }
+const App = () => {
+    const spreadsheetRef = useRef(null);
+    
+    const openFromUrl = () => {
+        fetch('https://example.com/sample.xlsx')
+            .then(response => response.blob())
+            .then(blob => {
+                const file = new File([blob], 'sample.xlsx', { type: blob.type });
+                spreadsheetRef.current?.open({ file });
+            })
+            .catch(error => {
+                console.error('Error loading file from URL:', error);
+            });
+    };
 
-    const blob = await response.blob();
-    const file = new File([blob], 'sample.xlsx', {
-        type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
-    });
-
-    spreadsheetRef.current?.open({ file });
+    return (
+        <div>
+            <button onClick={openFromUrl}>Open from URL</button>
+            <SpreadsheetComponent ref={spreadsheetRef} allowOpen={true} />
+        </div>
+    );
 };
+
+export default App;
 ```
 
-> When the file is hosted on a different origin, the server must allow the required cross-origin request.
+Note: Cross-origin requests require appropriate CORS headers from the remote server.
 
 ### Open a file from Blob data
 
 To open Excel files from Blob data, convert the Blob to a File object:
 
 ```jsx
-const openFromBlob = (blobData) => {
-    const file = new File([blobData], 'sample.xlsx', {
-        type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
-    });
+import React, { useRef } from 'react';
+import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 
-    spreadsheetRef.current?.open({ file });
+const App = () => {
+    const spreadsheetRef = useRef(null);
+    
+    const openFromBlob = (blobData) => {
+        const file = new File([blobData], 'sample.xlsx', { type: blobData.type });
+        spreadsheetRef.current?.open({ file });
+    };
+
+    return (
+        <SpreadsheetComponent ref={spreadsheetRef} allowOpen={true} />
+    );
 };
+
+export default App;
 ```
 
 In all cases, the workflow ends by passing a `File` object to the public Spreadsheet API:
 `spreadsheetRef.current?.open({ file });`
 
+## Feature Support
+
+Client-side import supports comprehensive Excel workbook features:
+
+* **Worksheets**: Multiple worksheets with custom names and visibility states
+* **Cell Data**: Text, numbers, dates, formulas, and error values
+* **Formatting**: Fonts, colors, alignment, borders, and number formats
+* **Formulas**: Mathematical, logical, text, date/time, and lookup formulas
+* **References**: Cell references, range references, and cross-sheet formulas
+* **Structures**: Merged cells, frozen panes, hidden rows/columns
+* **Features**: Filters, data validation, conditional formatting, hyperlinks
+* **Objects**: Comments, notes, and basic image support
+* **Protection**: Worksheet-level protection options
+
 ## Considerations
 
-- Client-side import supports the XLSX format.
-- Workbook processing uses browser CPU and memory.
-- Processing time depends on the workbook size and complexity and the capabilities of the browser and device.
-- An Open service is not required when `openUrl` is not configured.
+1. **Format Limitation**: Client-side import currently supports XLSX format only
+2. **Size Limitations**: Large files may impact browser performance
+3. **Feature Differences**: Some advanced features available in server-side import may have limitations in client-side processing
+4. **No openUrl Required**: `openUrl` must not be configured for client-side import
+5. **Browser Compatibility**: Modern browsers with adequate JavaScript support required
 
 ## See also
 
-- [Open Excel files](../open-excel-files)
-- [Server-side import](./server-side-import)
+* [Server-Side Import](./server-side-import)
+* [Import from AWS S3](./from-aws-s3-bucket)
