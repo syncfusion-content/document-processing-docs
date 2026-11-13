@@ -436,4 +436,4 @@ Explore how to track and review changes in Word documents using the Vue DOCX Edi
 
 ## See Also
 
-* [FAQs about Track Changes in DOCX Editor](../faq/track-changes-faqs)
+* [FAQs about Track Changes in DOCX Editor](./faq/track-changes-faqs)

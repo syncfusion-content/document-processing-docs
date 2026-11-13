@@ -356,4 +356,4 @@ Explore how to track and review changes in Word documents using the Angular DOCX
 
 ## See Also
 
-* [FAQs about Track Changes in DOCX Editor](../faq/track-changes-faqs)
+* [FAQs about Track Changes in DOCX Editor](./faq/track-changes-faqs)

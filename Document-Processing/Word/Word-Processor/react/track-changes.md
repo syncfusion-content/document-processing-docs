@@ -433,4 +433,4 @@ To learn more about Track Changes in the DOCX Editor component, refer to the vid
 
 * [How to customize track changes color](https://support.syncfusion.com/kb/article/25232/)
 * [How to restrict track changes for users](https://support.syncfusion.com/kb/article/21708/)
-* [FAQs about Track Changes in DOCX Editor](../faq/track-changes-faqs)
+* [FAQs about Track Changes in DOCX Editor](./faq/track-changes-faqs)
