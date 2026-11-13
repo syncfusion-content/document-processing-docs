@@ -14,7 +14,7 @@ Create or add new form fields visually with the Form Designer UI or programmatic
 This guide covers the following:
 - How to add fields with the Form Designer UI.
 - How to add and edit fields programmatically (API).
-- How to add common field types: Textbox, Password, CheckBox, RadioButton, ListBox, DropDown, Signature, Initial, DateTime picker, Barcode.
+- How to add common field types: Textbox, Password, CheckBox, RadioButton, ListBox, DropDown, Signature, Initial, DateTime picker, Button, Barcode.
 
 ## Steps
 
@@ -806,6 +806,279 @@ export class AppComponent {
 }
 {% endhighlight %}
 {% endtabs %}
+
+### Button
+
+A button field is an interactive form field displayed on a PDF page that allows users to perform various actions, such as navigating to a specific page or location within the document. Users can configure actions to be triggered through mouse and keyboard interactions. Button fields can be added and edited using both the Form Designer UI and programmatically.
+
+#### Button Text and Value
+
+The text displayed on the button is defined using the **text** property, while the data value associated with the button field is defined using the **value** property. If the **text** property is not specified, the **value** property is used as the displayed button text.
+
+![Button field in Form Designer](../../../angular/images/ui-button.png)
+
+#### Button Actions
+
+An action can be associated with a button field, and the action is executed when the corresponding event occurs. The action is configured for the required event in the **Actions** tab of the Button Properties dialog.
+
+| Action | Description |
+|---|---|
+| `mouseUp` | Executes the action when the mouse button is released over the button field. |
+| `mouseDown` | Executes the action when the mouse button is pressed over the button field. |
+| `mouseEnter` | Executes the action when the pointer enters the button field area. |
+| `mouseLeave` | Executes the action when the pointer leaves the button field area. |
+| `gotFocus` | Executes the action when the button field receives focus. |
+| `lostFocus` | Executes the action when the button field loses focus. |
+
+![Button field Actions in Form Designer](../../../angular/images/ui-button-actions.png)
+
+The **Go To Action** navigates the viewer to a specific page, position, and zoom level in the document when the action is triggered.
+
+| Property | Description |
+|---|---|
+| `destinationPageNumber` | The page number to navigate to. |
+| `destinationLocation` | The position (`x` and `y`) within the destination page. |
+| `zoomValue` | The zoom level applied when navigating to the destination. A value of `0` retains the current zoom level. |
+
+**Add via UI**: Open the Form Designer toolbar, select **Button**, and click on a PDF page to place the field. Select the placed field to review or change its general properties, such as its name, value, tooltip, visibility, and whether it is read-only or required.
+
+**Add Programmatically (API)**:
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+import { Component, ViewChild } from '@angular/core';
+import {
+  ToolbarService,
+  MagnificationService,
+  NavigationService,
+  AnnotationService,
+  TextSelectionService,
+  TextSearchService,
+  FormFieldsService,
+  FormDesignerService,
+  PdfViewerModule,
+  PdfViewerComponent,
+} from '@syncfusion/ej2-angular-pdfviewer';
+import { ActionType } from '@syncfusion/ej2-pdfviewer';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [PdfViewerModule],
+  template: `
+    <div class="content-wrapper">
+      <ejs-pdfviewer #pdfViewer id="pdfViewer" (documentLoad)="onDocumentLoad()"
+        [resourceUrl]="resourceUrl"
+        [documentPath]="document"
+        style="height: 640px; display: block;">
+      </ejs-pdfviewer>
+    </div>
+  `,
+  providers: [
+    ToolbarService,
+    MagnificationService,
+    NavigationService,
+    AnnotationService,
+    TextSelectionService,
+    TextSearchService,
+    FormFieldsService,
+    FormDesignerService,
+  ],
+})
+export class AppComponent {
+  public document: string = 'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf';
+  public resourceUrl: string = 'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+
+  @ViewChild('pdfViewer') public pdfviewer!: PdfViewerComponent;
+
+  onDocumentLoad(): void {
+    // Add a button field that navigates to page 5 when it is clicked
+    this.pdfviewer.formDesignerModule.addFormField('ButtonField', {
+      name: 'Submit1',
+      pageNumber: 1,
+      bounds: { X: 100, Y: 350, Width: 120, Height: 32 },
+      value: 'Submit',
+      text: 'Submit',
+      tooltip: 'Click to submit',
+      actions: {
+        mouseUp: {
+          action: ActionType.GoTo,
+          destinationPageNumber: 5,
+          destinationLocation: { x: 100, y: 100 },
+          zoomValue: 2
+        }
+      }
+    } as any);
+  }
+}
+{% endhighlight %}
+{% endtabs %}
+
+**Place a button field interactively**:
+
+Use [`setFormFieldMode()`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formdesigner#setformfieldmode) to switch the form designer into the button placement mode, and then click on the PDF page to place the button field. The existing button fields can be removed using [`deleteFormField()`](https://ej2.syncfusion.com/angular/documentation/api/pdfviewer/formdesigner#deleteformfield).
+
+{% tabs %}
+{% highlight ts tabtitle="Standalone" %}
+import { Component, ViewChild } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import {
+  ToolbarService,
+  MagnificationService,
+  NavigationService,
+  AnnotationService,
+  TextSelectionService,
+  TextSearchService,
+  FormFieldsService,
+  FormDesignerService,
+  PdfViewerModule,
+  PdfViewerComponent,
+} from '@syncfusion/ej2-angular-pdfviewer';
+import { ActionType } from '@syncfusion/ej2-pdfviewer';
+
+interface IButtonFieldInfo {
+  id: string;
+  name: string;
+}
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [PdfViewerModule, FormsModule, CommonModule],
+  template: `
+    <div class="content-wrapper">
+      <button (click)="addButtonField()">Add Button Field</button>
+      <button (click)="enableButtonMode()">Enable Button Designer Mode</button>
+      <select [(ngModel)]="selectedFieldId">
+        <option *ngFor="let field of buttonFields" [value]="field.id">{{ field.name }}</option>
+        <option *ngIf="!buttonFields.length" value="">No Button Fields Available</option>
+      </select>
+      <button (click)="editButtonField()" [disabled]="!selectedFieldId">Edit Button Field</button>
+      <button (click)="deleteButtonField()" [disabled]="!selectedFieldId">Delete Button Field</button>
+      <ejs-pdfviewer #pdfViewer id="pdfViewer"
+        (documentLoad)="refreshButtonFields()"
+        (formFieldAdd)="refreshButtonFields()"
+        (formFieldRemove)="refreshButtonFields()"
+        [resourceUrl]="resourceUrl"
+        [documentPath]="document"
+        style="height: 640px; display: block;">
+      </ejs-pdfviewer>
+    </div>
+  `,
+  providers: [
+    ToolbarService,
+    MagnificationService,
+    NavigationService,
+    AnnotationService,
+    TextSelectionService,
+    TextSearchService,
+    FormFieldsService,
+    FormDesignerService,
+  ],
+})
+export class AppComponent {
+  public document: string =
+    'https://cdn.syncfusion.com/content/pdf/form-filling-document.pdf';
+  public resourceUrl: string =
+    'https://cdn.syncfusion.com/ej2/31.1.23/dist/ej2-pdfviewer-lib';
+
+  @ViewChild('pdfViewer') public pdfviewer!: PdfViewerComponent;
+
+  public buttonFields: IButtonFieldInfo[] = [];
+  public selectedFieldId: string = '';
+
+  // Add a button field programmatically
+  public addButtonField(): void {
+    this.pdfviewer.formDesignerModule.addFormField('ButtonField', {
+      name: `Submit${this.buttonFields.length + 1}`,
+      pageNumber: 1,
+      bounds: { X: 100, Y: 350, Width: 120, Height: 32 },
+      value: 'Submit',
+      text: 'Submit',
+      tooltip: 'Click to submit',
+      actions: {
+        mouseUp: {
+          action: ActionType.GoTo,
+          destinationPageNumber: 5,
+          destinationLocation: { x: 100, y: 100 },
+          zoomValue: 2,
+        },
+      },
+    } as any);
+    this.refreshButtonFields();
+  }
+
+  // Switch the form designer into the button placement mode
+  public enableButtonMode(): void {
+    this.pdfviewer.formDesignerModule.setFormFieldMode('ButtonField');
+  }
+
+  // Update the properties and actions of the selected button field
+  public editButtonField(): void {
+    const field = this.getSelectedField();
+    if (!field) {
+      return;
+    }
+    this.pdfviewer.formDesignerModule.updateFormField(field, {
+      value: 'Submit Button',
+      text: 'Submit Button',
+      alignment: 'Left',
+      tooltip: 'Updated Submit Button',
+      actions: {
+        mouseUp: {
+          action: ActionType.GoTo,
+          destinationPageNumber: 7,
+          destinationLocation: { x: 100, y: 100 },
+          zoomValue: 1,
+        },
+      },
+    } as any);
+    this.refreshButtonFields();
+  }
+
+  // Delete the selected button field
+  public deleteButtonField(): void {
+    const field = this.getSelectedField();
+    if (!field) {
+      return;
+    }
+    this.pdfviewer.formDesignerModule.deleteFormField(field);
+    this.selectedFieldId = '';
+    this.refreshButtonFields();
+  }
+
+  // Refresh the button fields available in the document
+  public refreshButtonFields(): void {
+    const fields: any[] = this.pdfviewer.formFieldCollections ?? [];
+    this.buttonFields = fields
+      .filter((field: any) => field.type === 'ButtonField')
+      .map((field: any) => ({
+        id: field.id,
+        name: field.name || field.value || field.id,
+      }));
+
+    if (!this.buttonFields.some((field) => field.id === this.selectedFieldId)) {
+      this.selectedFieldId = this.buttonFields.length
+        ? this.buttonFields[0].id
+        : '';
+    }
+  }
+
+  private getSelectedField(): any {
+    if (!this.selectedFieldId) {
+      return null;
+    }
+    const fields: any[] = this.pdfviewer.formFieldCollections ?? [];
+    return (
+      fields.find((field: any) => field.id === this.selectedFieldId) || null
+    );
+  }
+}
+{% endhighlight %}
+{% endtabs %}
+
+[View Sample on GitHub](https://github.com/SyncfusionExamples/angular-pdf-viewer-examples/tree/master/Form%20fields/Button%20field)
 
 ### Barcode
 
