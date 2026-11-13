@@ -3,29 +3,31 @@ import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 
 function App() {
-    let spreadsheet;
+    const spreadsheetRef = React.useRef(null);
     
-    const onCreated = () => {
-        // Fetch Excel file from URL and open in spreadsheet
+    const openFromUrl = () => {
         fetch('https://cdn.syncfusion.com/downloads/spreadsheet/Sample.xlsx')
-            .then((response) => response.blob())
-            .then((fileBlob) => {
-                const file = new File([fileBlob], 'Sample.xlsx');
-                spreadsheet.open({ file });
+            .then(response => response.blob())
+            .then(blob => {
+                const file = new File([blob], 'Sample.xlsx', { type: blob.type });
+                if (spreadsheetRef.current) {
+                    spreadsheetRef.current.open({ file: file });
+                }
             })
-            .catch((error) => {
+            .catch(error => {
                 console.error('Error loading file from URL:', error);
             });
     };
-    
+
     return (
-        <SpreadsheetComponent 
-            ref={(scope) => { spreadsheet = scope; }}
-            allowOpen={true}
-            created={onCreated} />
+        <div>
+            <button onClick={openFromUrl}>Open from URL</button>
+            <SpreadsheetComponent 
+                ref={spreadsheetRef}
+                allowOpen={true} />
+        </div>
     );
 };
-
 export default App;
 
 const root = createRoot(document.getElementById('root'));

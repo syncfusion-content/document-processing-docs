@@ -38,39 +38,36 @@ Client-side import currently supports:
 
 To use client-side import, simply omit the `openUrl` property from your Spreadsheet configuration:
 
+{% tabs %}
 {% highlight js tabtitle="app.jsx" %}
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 
 function App() {
-    return (
-        <SpreadsheetComponent allowOpen={true} />
-    );
+    return <SpreadsheetComponent allowOpen={true} />;
 };
-
 export default App;
 
 const root = createRoot(document.getElementById('root'));
 root.render(<App />);
 {% endhighlight %}
-
 {% highlight ts tabtitle="app.tsx" %}
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 
 function App() {
-    return (
-        <SpreadsheetComponent allowOpen={true} />
-    );
+    return <SpreadsheetComponent allowOpen={true} />;
 };
-
 export default App;
 
-const root = createRoot(document.getElementById('root') as HTMLElement);
+const root = createRoot(document.getElementById('root')!);
 root.render(<App />);
 {% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/open-save-cs1" %}
 
 With this configuration, all standard Spreadsheet open functionality works through client-side processing.
 
@@ -80,313 +77,110 @@ With this configuration, all standard Spreadsheet open functionality works throu
 
 You can open Excel files from the local system using the standard File > Open interface or programmatically:
 
+{% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-import * as React from 'react';
-import { createRoot } from 'react-dom/client';
-import { SpreadsheetComponent, Uploader } from '@syncfusion/ej2-react-spreadsheet';
-
-function App() {
-    let spreadsheet;
-    
-    const onCreated = () => {
-        spreadsheet = spreadsheet;
-    };
-    
-    const onSuccess = (args) => {
-        // Upload complete, open the file in spreadsheet
-        spreadsheet.open({ file: args.file });
-    };
-    
-    return (
-        <div>
-            {/* File uploader for local file selection */}
-            <Uploader 
-                autoUpload={false} 
-                success={onSuccess} 
-                allowedExtensions='.xlsx' />
-            
-            {/* Spreadsheet component with client-side import enabled */}
-            <SpreadsheetComponent 
-                ref={(scope) => { spreadsheet = scope; }}
-                allowOpen={true}
-                created={onCreated} />
-        </div>
-    );
-};
-
-export default App;
-
-const root = createRoot(document.getElementById('root'));
-root.render(<App />);
+{% include code-snippet/spreadsheet/react/client-side-local-cs1/app/app.jsx %}
 {% endhighlight %}
-
 {% highlight ts tabtitle="app.tsx" %}
-import * as React from 'react';
-import { createRoot } from 'react-dom/client';
-import { SpreadsheetComponent, Uploader } from '@syncfusion/ej2-react-spreadsheet';
-import { UploaderComponent } from '@syncfusion/ej2-react-inputs';
-
-interface AppProps {}
-
-interface AppState {}
-
-class App extends React.Component<AppProps, AppState> {
-    private spreadsheet: SpreadsheetComponent | null = null;
-
-    onCreated = (): void => {
-        // Spreadsheet created event handler
-    };
-    
-    onSuccess = (args: any): void => {
-        // Upload complete, open the file in spreadsheet
-        if (this.spreadsheet) {
-            this.spreadsheet.open({ file: args.file });
-        }
-    };
-
-    render() {
-        return (
-            <div>
-                {/* File uploader for local file selection */}
-                <UploaderComponent 
-                    autoUpload={false} 
-                    success={this.onSuccess} 
-                    allowedExtensions='.xlsx' />
-                
-                {/* Spreadsheet component with client-side import enabled */}
-                <SpreadsheetComponent 
-                    ref={(scope) => { this.spreadsheet = scope; }}
-                    allowOpen={true}
-                    created={this.onCreated} />
-            </div>
-        );
-    }
-}
-
-const root = createRoot(document.getElementById('root') as HTMLElement);
-root.render(<App />);
+{% include code-snippet/spreadsheet/react/client-side-local-cs1/app/app.tsx %}
 {% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/client-side-local-cs1" %}
 
 ### Open a file from a URL
 
 To open Excel files from a URL, fetch the file and convert the response to a File object:
 
+{% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-import * as React from 'react';
-import { createRoot } from 'react-dom/client';
-import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
-
-function App() {
-    let spreadsheet;
-    
-    const onCreated = () => {
-        // Fetch Excel file from URL and open in spreadsheet
-        fetch('https://cdn.syncfusion.com/downloads/spreadsheet/Sample.xlsx')
-            .then((response) => response.blob())
-            .then((fileBlob) => {
-                const file = new File([fileBlob], 'Sample.xlsx');
-                spreadsheet.open({ file });
-            })
-            .catch((error) => {
-                console.error('Error loading file from URL:', error);
-            });
-    };
-    
-    return (
-        <SpreadsheetComponent 
-            ref={(scope) => { spreadsheet = scope; }}
-            allowOpen={true}
-            created={onCreated} />
-    );
-};
-
-export default App;
-
-const root = createRoot(document.getElementById('root'));
-root.render(<App />);
+{% include code-snippet/spreadsheet/react/client-side-url-cs1/app/app.jsx %}
 {% endhighlight %}
-
 {% highlight ts tabtitle="app.tsx" %}
-import * as React from 'react';
-import { createRoot } from 'react-dom/client';
-import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
-
-interface AppProps {}
-
-interface AppState {}
-
-class App extends React.Component<AppProps, AppState> {
-    private spreadsheet: SpreadsheetComponent | null = null;
-
-    onCreated = (): void => {
-        // Fetch Excel file from URL and open in spreadsheet
-        fetch('https://cdn.syncfusion.com/downloads/spreadsheet/Sample.xlsx')
-            .then((response) => response.blob())
-            .then((fileBlob) => {
-                const file = new File([fileBlob], 'Sample.xlsx');
-                if (this.spreadsheet) {
-                    this.spreadsheet.open({ file });
-                }
-            })
-            .catch((error) => {
-                console.error('Error loading file from URL:', error);
-            });
-    };
-
-    render() {
-        return (
-            <SpreadsheetComponent 
-                ref={(scope) => { this.spreadsheet = scope; }}
-                allowOpen={true}
-                created={this.onCreated} />
-        );
-    }
-}
-
-const root = createRoot(document.getElementById('root') as HTMLElement);
-root.render(<App />);
+{% include code-snippet/spreadsheet/react/client-side-url-cs1/app/app.tsx %}
 {% endhighlight %}
+{% endtabs %}
 
-> When fetching files from a different domain, ensure the server allows cross-origin requests (CORS).
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/client-side-url-cs1" %}
+
+Cross-origin resource sharing (CORS) restrictions may prevent opening files from some URLs. Ensure CORS policies are properly configured on the target server.
 
 ### Open a file from Blob data
 
 To open Excel files from Blob data, convert the Blob to a File object:
 
+{% tabs %}
 {% highlight js tabtitle="app.jsx" %}
-import * as React from 'react';
-import { createRoot } from 'react-dom/client';
-import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
-
-function App() {
-    let spreadsheet;
-    
-    const handleBlobData = () => {
-        // Example: Creating a Blob from string data (in real scenario, this could be from an API response)
-        const excelData = 'UEsDBAoAAAAAALJdHFYAAAAA...'; // Base64 encoded Excel data
-        const byteCharacters = atob(excelData);
-        const byteNumbers = new Array(byteCharacters.length);
-        
-        for (let i = 0; i < byteCharacters.length; i++) {
-            byteNumbers[i] = byteCharacters.charCodeAt(i);
-        }
-        
-        const byteArray = new Uint8Array(byteNumbers);
-        const blob = new Blob([byteArray], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
-        const file = new File([blob], 'Sample.xlsx');
-        
-        // Open the Blob data as a file in the spreadsheet
-        spreadsheet.open({ file });
-    };
-    
-    return (
-        <div>
-            <button onClick={handleBlobData}>Load Excel from Blob Data</button>
-            <SpreadsheetComponent 
-                ref={(scope) => { spreadsheet = scope; }}
-                allowOpen={true} />
-        </div>
-    );
-};
-
-export default App;
-
-const root = createRoot(document.getElementById('root'));
-root.render(<App />);
+{% include code-snippet/spreadsheet/react/client-side-blob-cs1/app/app.jsx %}
 {% endhighlight %}
-
 {% highlight ts tabtitle="app.tsx" %}
-import * as React from 'react';
-import { createRoot } from 'react-dom/client';
-import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
-
-interface AppProps {}
-
-interface AppState {}
-
-class App extends React.Component<AppProps, AppState> {
-    private spreadsheet: SpreadsheetComponent | null = null;
-
-    handleBlobData = (): void => {
-        // Example: Creating a Blob from string data (in real scenario, this could be from an API response)
-        const excelData = 'UEsDBAoAAAAAALJdHFYAAAAA...'; // Base64 encoded Excel data
-        const byteCharacters = atob(excelData);
-        const byteNumbers = new Array(byteCharacters.length);
-        
-        for (let i = 0; i < byteCharacters.length; i++) {
-            byteNumbers[i] = byteCharacters.charCodeAt(i);
-        }
-        
-        const byteArray = new Uint8Array(byteNumbers);
-        const blob = new Blob([byteArray], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
-        const file = new File([blob], 'Sample.xlsx');
-        
-        // Open the Blob data as a file in the spreadsheet
-        if (this.spreadsheet) {
-            this.spreadsheet.open({ file });
-        }
-    };
-
-    render() {
-        return (
-            <div>
-                <button onClick={this.handleBlobData}>Load Excel from Blob Data</button>
-                <SpreadsheetComponent 
-                    ref={(scope) => { this.spreadsheet = scope; }}
-                    allowOpen={true} />
-            </div>
-        );
-    }
-}
-
-const root = createRoot(document.getElementById('root') as HTMLElement);
-root.render(<App />);
+{% include code-snippet/spreadsheet/react/client-side-blob-cs1/app/app.tsx %}
 {% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/client-side-blob-cs1" %}
 
 In all cases, the workflow ends by passing a `File` object to the public Spreadsheet API:
 `spreadsheetRef.current?.open({ file });`
 
 ## Feature support
 
-Client-side import provides comprehensive support for Excel workbook features:
+Client-side import supports comprehensive Excel workbook features:
 
 ### Worksheets
-* Multiple worksheet support
-* Worksheet renaming and manipulation
-* Hidden worksheets
-* Tab color customization
+* Worksheet names and visibility
+* Tab color and positioning
+* Frozen panes and gridlines
+* Print titles and print areas
 
-### Cell Data and Formatting
+### Cell Data
 * Text, numbers, dates, and Boolean values
-* Rich text formatting
-* Font customization (size, style, color)
-* Cell background and border styling
-* Number formatting
-* Alignment options
+* Formulas with operators (+, -, *, /, =, <, >, <=, >=, <>, &, :)
+* Cell references (A1, $A$1, A$1, $A1)
+* Range references (A1:B2, Sheet1!A1:B2)
+* Cross-worksheet references (Sheet2!A1)
+
+### Formatting
+* Font family, size, style, weight, color, and effects
+* Fill color, pattern, and gradient
+* Borders (style, weight, color)
+* Alignment (horizontal, vertical, text direction, indent, shrink to fit, text wrap)
+* Number formatting (currency, accounting, percentage, scientific, fraction, date/time)
+* Cell protection and locked states
 
 ### Formulas and References
-* Basic arithmetic formulas
-* Built-in Excel functions
-* Cell and range references
-* Cross-worksheet references
+* Arithmetic operators (+, -, *, /, =, <, >, <=, >=, <>, &, :)
+* Comparison operators (=, <, >, <=, >=, <>)
+* Text concatenation (&)
+* Cell references (A1, $A$1, A$1, $A1)
+* Range references (A1:B2, Sheet1!A1:B2)
+* Cross-worksheet references (Sheet2!A1)
+* Named ranges (local and global)
+* Formula calculation engine (R1C1-style formulas converted to A1-style)
 
-### Structures and Features
-* Merged cells
-* Cell comments
-* Hyperlinks
-* Data validation rules
-* Conditional formatting
-* Filters and sorting
+### Structures
+* Tables with headers, totals, and styles
+* Pivot tables with fields, filters, and layouts
+* Charts (column, bar, line, pie, area, scatter, combo, radar, surface, bubble, stock)
+* Images (positioning, sizing, aspect ratio)
+* Comments and notes (positioning, sizing, rich text)
+* Data validation (list, whole number, decimal, date, time, text length, custom)
+* Conditional formatting (color scales, data bars, icon sets, formula-based rules)
+* Filters (autofilter, custom filter, advanced filter)
+* Protection (workbook, worksheet, range, sheet elements)
+* Grouping and outlining (row/column grouping, summary rows/columns)
 
 ### Objects
-* Charts (basic chart types)
-* Images and pictures
-* Shapes and drawing objects
+* Shapes (rectangles, circles, lines, arrows, callouts)
+* Text boxes (positioning, sizing, rotation, text formatting)
+* Hyperlinks (internal, external, email, file)
+* Headers and footers (left, center, right sections with images/text)
 
 ### Protection
-* Worksheet protection
-* Cell locking and hiding
-* Password protection for sheets
+* Workbook protection (structure, windows)
+* Worksheet protection (elements, scenarios)
+* Range protection (locked/unlocked cells)
+* Sheet element protection (objects, scenarios)
 
 ## Considerations
 
@@ -398,5 +192,3 @@ Client-side import provides comprehensive support for Excel workbook features:
 ## See also
 
 * [Server-Side Import](./server-side-import)
-* [Import from AWS S3](./from-aws-s3-bucket)
-* [Import from Azure Blob Storage](./from-azure-blob-storage)

@@ -1,36 +1,26 @@
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
-import { SpreadsheetComponent, Uploader } from '@syncfusion/ej2-react-spreadsheet';
+import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 
 function App() {
-    let spreadsheet;
+    const spreadsheetRef = React.useRef(null);
     
-    const onCreated = () => {
-        spreadsheet = spreadsheet;
+    const handleFileSelect = (event) => {
+        const file = event.target.files[0];
+        if (file && spreadsheetRef.current) {
+            spreadsheetRef.current.open({ file: file });
+        }
     };
-    
-    const onSuccess = (args) => {
-        // Upload complete, open the file in spreadsheet
-        spreadsheet.open({ file: args.file });
-    };
-    
+
     return (
         <div>
-            {/* File uploader for local file selection */}
-            <Uploader 
-                autoUpload={false} 
-                success={onSuccess} 
-                allowedExtensions='.xlsx' />
-            
-            {/* Spreadsheet component with client-side import enabled */}
+            <input type="file" accept=".xlsx" onChange={handleFileSelect} />
             <SpreadsheetComponent 
-                ref={(scope) => { spreadsheet = scope; }}
-                allowOpen={true}
-                created={onCreated} />
+                ref={spreadsheetRef}
+                allowOpen={true} />
         </div>
     );
 };
-
 export default App;
 
 const root = createRoot(document.getElementById('root'));

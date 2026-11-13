@@ -1,44 +1,27 @@
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
-import { SpreadsheetComponent, Uploader } from '@syncfusion/ej2-react-spreadsheet';
-import { UploaderComponent } from '@syncfusion/ej2-react-inputs';
+import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
 
-interface AppProps {}
-
-interface AppState {}
-
-class App extends React.Component<AppProps, AppState> {
-    private spreadsheet: SpreadsheetComponent | null = null;
-
-    onCreated = (): void => {
-        // Spreadsheet created event handler
-    };
+function App() {
+    const spreadsheetRef = React.useRef<SpreadsheetComponent>(null);
     
-    onSuccess = (args: any): void => {
-        // Upload complete, open the file in spreadsheet
-        if (this.spreadsheet) {
-            this.spreadsheet.open({ file: args.file });
+    const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>): void => {
+        const file = event.target.files?.[0];
+        if (file && spreadsheetRef.current) {
+            spreadsheetRef.current.open({ file: file });
         }
     };
 
-    render() {
-        return (
-            <div>
-                {/* File uploader for local file selection */}
-                <UploaderComponent 
-                    autoUpload={false} 
-                    success={this.onSuccess} 
-                    allowedExtensions='.xlsx' />
-                
-                {/* Spreadsheet component with client-side import enabled */}
-                <SpreadsheetComponent 
-                    ref={(scope) => { this.spreadsheet = scope; }}
-                    allowOpen={true}
-                    created={this.onCreated} />
-            </div>
-        );
-    }
-}
+    return (
+        <div>
+            <input type="file" accept=".xlsx" onChange={handleFileSelect} />
+            <SpreadsheetComponent 
+                ref={spreadsheetRef}
+                allowOpen={true} />
+        </div>
+    );
+};
+export default App;
 
-const root = createRoot(document.getElementById('root') as HTMLElement);
+const root = createRoot(document.getElementById('root')!);
 root.render(<App />);
