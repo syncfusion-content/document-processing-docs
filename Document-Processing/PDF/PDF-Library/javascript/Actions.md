@@ -1082,6 +1082,7 @@ page.actions.open = new PdfJavaScriptAction('app.alert("Page opened");');
 document.save('output.pdf');
 // Destroy the document
 document.destroy();
+{% endhighlight %}
 
 {% highlight javascript tabtitle="JavaScript" %}
 

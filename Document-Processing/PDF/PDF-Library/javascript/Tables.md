@@ -1261,7 +1261,7 @@ Each level supports two ways to define borders:
 
 Use the `PdfGridBorderType` enumeration to control which borders are visible at the grid level. Values can be combined using the bitwise OR (|) operator.
 
-| Value | Behaviour |
+| Value | Behavior |
 |---|---|
 | `None` | No borders. |
 | `All` | All borders (default). Excludes combined groups when used with other flags. |
