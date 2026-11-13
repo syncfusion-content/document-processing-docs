@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to Use Python as a Backend Web Service in React DOCX Editor | Syncfusion
-description: Learn how to create a Python (Flask) backend web service for the React DOCX Editor by loading the Syncfusion .NET document processing libraries with Python.NET and exposing the Import, Save, ExportSFDT, SystemClipboard, and RestrictEditing endpoints.
+description: Learn how to create a Python (Flask) backend web service for the React DOCX Editor by loading the Syncfusion .NET document processing libraries with Python.NET and exposing the Import, Save, SystemClipboard, RestrictEditing, MailMerge, and CompareDocuments endpoints.
 control: Python web service
 platform: document-processing
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to Use Python as a Backend Web Service in React DOCX Editor
 
-In this article, learn how to host the server-side operations of the [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) from a **Python web service**. A class library written in C# contains the DOCX Editor Web API implementation, **Flask** hosts the endpoints from Python, and [Python.NET](https://pypi.org/project/pythonnet/) loads the published assemblies so Python can invoke the document-processing methods.
+In this documentation, learn how to host the server-side operations of the [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) from a **Python web service**. A class library written in C# contains the DOCX Editor Web API implementation, **Flask** hosts the endpoints from Python, and [Python.NET](https://pypi.org/project/pythonnet/) loads the published assemblies so Python can invoke the document-processing methods.
 
 ## Prerequisites
 
@@ -35,21 +35,21 @@ cd DocumentEditorLibrary
 
 ### Add the required NuGet packages
 
-Add the following packages to the class library project. These are the same Syncfusion and supporting packages used by the [DOCX Editor Web Services sample](https://github.com/SyncfusionExamples/EJ2-Document-Editor-Web-Services/blob/master/ASP.NET%20Core/src/Controllers/DocumentEditorController.cs) (spell checker related packages are not required).
+Add the following packages to the class library project.
 
 ```bash
 dotnet add package Syncfusion.EJ2.WordEditor.AspNet.Core
 dotnet add package Syncfusion.Compression.Net.Core
 dotnet add package Syncfusion.OfficeChart.Net.Core
-dotnet add package Syncfusion.Licensing
+dotnet add package Syncfusion.DocIORenderer.Net.Core
 dotnet add package Newtonsoft.Json
 dotnet add package SkiaSharp
 dotnet add package BitMiracle.LibTiff.NET
 ```
 
-## Step 2: Add the DOCX Editor wrapper class
+### Add the DOCX Editor wrapper class
 
-Add a `Documenteditor.cs` file to the library. The wrapper class exposes the same methods as the [DocumentEditorController.cs](https://github.com/SyncfusionExamples/EJ2-Document-Editor-Web-Services/blob/master/ASP.NET%20Core/src/Controllers/DocumentEditorController.cs) of the ASP.NET Core web service: `Import`, `Save`, `ExportSFDT`, `SystemClipboard`, and `RestrictEditing`.
+Add a `Documenteditor.cs` file to the library. The wrapper class exposes the document-processing methods that Python invokes: `Import`, `Save`, `SystemClipboard`, `RestrictEditing`, `MailMerge`, and `CompareDocuments`.
 
 ```csharp
 using Syncfusion.EJ2.DocumentEditor;
@@ -60,16 +60,21 @@ namespace DocumentEditorLibrary
 {
     public class Documenteditor
     {
-        public string Import(string base64String)
+        // Converts the uploaded Word document into the SFDT string required by the DOCX Editor.
+        // The MetafileImageParsed event converts TIFF, EMF, and WMF images to raster images
+        // because web browsers cannot display metafile images.
+        public string Import(byte[] byteArray, string fileName)
         {
-            byte[] byteArray = Convert.FromBase64String(base64String);
             Stream stream = new MemoryStream(byteArray);
+            int index = fileName.LastIndexOf('.');
+            string type = index > -1 && index < fileName.Length - 1 ?
+                fileName.Substring(index) : ".docx";
 
             try
             {
-                //Hooks MetafileImageParsed event to convert EMF, WMF, and TIFF images to raster images.
+                //Hooks MetafileImageParsed event.
                 WordDocument.MetafileImageParsed += OnMetafileImageParsed;
-                WordDocument document = WordDocument.Load(stream, FormatType.Docx);
+                WordDocument document = WordDocument.Load(stream, GetFormatType(type.ToLower()));
                 //Unhooks MetafileImageParsed event.
                 WordDocument.MetafileImageParsed -= OnMetafileImageParsed;
 
@@ -84,18 +89,14 @@ namespace DocumentEditorLibrary
             }
         }
 
+        // Converts clipboard content (HTML/RTF) into SFDT so content can be pasted with formatting.
         public string SystemClipboard(string Content, string type)
         {
             if (Content != null && Content != "")
             {
                 try
                 {
-                    //Hooks MetafileImageParsed event to convert EMF, WMF, and TIFF images to raster images.
-                    WordDocument.MetafileImageParsed += OnMetafileImageParsed;
                     WordDocument document = WordDocument.LoadString(Content, GetFormatType(type));
-                    //Unhooks MetafileImageParsed event.
-                    WordDocument.MetafileImageParsed -= OnMetafileImageParsed;
-
                     string json = Newtonsoft.Json.JsonConvert.SerializeObject(document);
                     document.Dispose();
                     return json;
@@ -108,16 +109,19 @@ namespace DocumentEditorLibrary
             return "";
         }
 
-        public string Save(string content, string fileName)
+        // Saves the SFDT content as a Word document with the given file name and returns it.
+        public byte[] Save(string content, string fileName)
         {
-            Stream document = WordDocument.Save(content);
-            FileStream file = new FileStream(fileName, FileMode.OpenOrCreate, FileAccess.ReadWrite);
-            document.CopyTo(file);
-            file.Close();
-            document.Close();
-            return "success";
+            Syncfusion.DocIO.DLS.WordDocument document = WordDocument.Save(content);
+            using (MemoryStream stream = new MemoryStream())
+            {
+                document.Save(stream, Syncfusion.DocIO.FormatType.Docx);
+                document.Close();
+                return stream.ToArray();
+            }
         }
 
+        // Computes the password hash used by the document protection feature.
         public string[] RestrictEditing(string passwordBase64, string saltBase64, int spinCount)
         {
             if (passwordBase64 == "" && passwordBase64 == null)
@@ -125,20 +129,136 @@ namespace DocumentEditorLibrary
             return WordDocument.ComputeHash(passwordBase64, saltBase64, spinCount);
         }
 
-        //Converts metafile (EMF and WMF) and TIFF images to raster images.
+        // Performs mail merge on the uploaded Word document and returns the merged document as SFDT.
+        public string MailMerge(string documentData)
+        {
+            byte[] data = Convert.FromBase64String(
+                documentData.Contains(',') ? documentData.Split(',')[1] : documentData);
+            using (MemoryStream stream = new MemoryStream())
+            {
+                stream.Write(data, 0, data.Length);
+                stream.Position = 0;
+
+                using (Syncfusion.DocIO.DLS.WordDocument document =
+                    new Syncfusion.DocIO.DLS.WordDocument(stream, Syncfusion.DocIO.FormatType.Docx))
+                {
+                    document.MailMerge.RemoveEmptyGroup = true;
+                    document.MailMerge.RemoveEmptyParagraphs = true;
+                    document.MailMerge.ClearFields = true;
+                    document.MailMerge.Execute(CustomerDataModel.GetAllRecords());
+                    document.Save(stream, Syncfusion.DocIO.FormatType.Docx);
+                }
+
+                stream.Position = 0;
+                WordDocument wordDocument = WordDocument.Load(stream, FormatType.Docx);
+                string sfdtText = Newtonsoft.Json.JsonConvert.SerializeObject(wordDocument);
+                wordDocument.Dispose();
+                return sfdtText;
+            }
+        }
+
+        // Compares the original and revised Word documents and returns
+        // the comparison result (with tracked changes) as SFDT.
+        public string CompareDocuments(byte[] originalFile, byte[] revisedFile)
+        {
+            using (Syncfusion.DocIO.DLS.WordDocument revisedDocument =
+                new Syncfusion.DocIO.DLS.WordDocument(new MemoryStream(revisedFile), Syncfusion.DocIO.FormatType.Docx))
+            using (Syncfusion.DocIO.DLS.WordDocument originalDocument =
+                new Syncfusion.DocIO.DLS.WordDocument(new MemoryStream(originalFile), Syncfusion.DocIO.FormatType.Docx))
+            {
+                originalDocument.Compare(revisedDocument);
+
+                //Hooks MetafileImageParsed event.
+                WordDocument.MetafileImageParsed += OnMetafileImageParsed;
+                WordDocument document = WordDocument.Load(originalDocument);
+                //Unhooks MetafileImageParsed event.
+                WordDocument.MetafileImageParsed -= OnMetafileImageParsed;
+
+                string json = Newtonsoft.Json.JsonConvert.SerializeObject(document);
+                document.Dispose();
+                return json;
+            }
+        }
+
+        //Converts Metafile to raster image.
         private static void OnMetafileImageParsed(object sender, MetafileImageParsedEventArgs args)
         {
             if (args.IsMetafile)
             {
-                //Metafile image conversion (EMF and WMF).
+                //MetaFile image conversion(EMF and WMF)
                 //You can write your own method definition for converting metafile to raster image using any third-party image converter.
                 args.ImageStream = ConvertMetafileToRasterImage(args.MetafileStream);
             }
             else
             {
-                //TIFF image conversion.
-                args.ImageStream = ConvertTiffToRasterImage(args.MetafileStream);
+                //TIFF image conversion
+                args.ImageStream = TiffToPNG(args.MetafileStream);
             }
+        }
+
+        // Converting Tiff to Png image using Bitmiracle https://www.nuget.org/packages/BitMiracle.LibTiff.NET
+        private static MemoryStream TiffToPNG(Stream tiffStream)
+        {
+            MemoryStream imageStream = new MemoryStream();
+            using (BitMiracle.LibTiff.Classic.Tiff tif =
+                BitMiracle.LibTiff.Classic.Tiff.ClientOpen("in-memory", "r", tiffStream, new BitMiracle.LibTiff.Classic.TiffStream()))
+            {
+                // Find the width and height of the image
+                BitMiracle.LibTiff.Classic.FieldValue[] value =
+                    tif.GetField(BitMiracle.LibTiff.Classic.TiffTag.IMAGEWIDTH);
+                int width = value[0].ToInt();
+
+                value = tif.GetField(BitMiracle.LibTiff.Classic.TiffTag.IMAGELENGTH);
+                int height = value[0].ToInt();
+
+                // Read the image into the memory buffer
+                int[] raster = new int[height * width];
+                if (!tif.ReadRGBAImage(width, height, raster))
+                {
+                    throw new Exception("Could not read image");
+                }
+
+                // Create a bitmap image using SkiaSharp.
+                using (SKBitmap sKBitmap = new SKBitmap(
+                    width, height, SKImageInfo.PlatformColorType, SKAlphaType.Premul))
+                {
+                    // Convert a RGBA value to byte array.
+                    byte[] bitmapData = new byte[sKBitmap.RowBytes * sKBitmap.Height];
+                    for (int y = 0; y < sKBitmap.Height; y++)
+                    {
+                        int rasterOffset = y * sKBitmap.Width;
+                        int bitsOffset = (sKBitmap.Height - y - 1) * sKBitmap.RowBytes;
+
+                        for (int x = 0; x < sKBitmap.Width; x++)
+                        {
+                            int rgba = raster[rasterOffset++];
+                            bitmapData[bitsOffset++] = (byte)((rgba >> 16) & 0xff);
+                            bitmapData[bitsOffset++] = (byte)((rgba >> 8) & 0xff);
+                            bitmapData[bitsOffset++] = (byte)(rgba & 0xff);
+                            bitmapData[bitsOffset++] = (byte)((rgba >> 24) & 0xff);
+                        }
+                    }
+
+                    // Convert a byte array to SKColor array.
+                    SKColor[] sKColor = new SKColor[bitmapData.Length / 4];
+                    int index = 0;
+                    for (int i = 0; i < bitmapData.Length; i++)
+                    {
+                        sKColor[index] = new SKColor(
+                            bitmapData[i + 2], bitmapData[i + 1], bitmapData[i], bitmapData[i + 3]);
+                        i += 3;
+                        index += 1;
+                    }
+
+                    // Set the SKColor array to SKBitmap.
+                    sKBitmap.Pixels = sKColor;
+
+                    // Save the SKBitmap to PNG image stream.
+                    sKBitmap.Encode(SKEncodedImageFormat.Png, 100).SaveTo(imageStream);
+                    imageStream.Flush();
+                }
+            }
+            return imageStream;
         }
 
         private static Stream ConvertMetafileToRasterImage(Stream ImageStream)
@@ -146,14 +266,7 @@ namespace DocumentEditorLibrary
             //Here we are loading a default raster image as fallback.
             Stream imgStream = GetManifestResourceStream("ImageNotFound.jpg");
             return imgStream;
-            //To do: Write your own logic for converting metafile to raster image using any third-party image converter.
-        }
-
-        private static MemoryStream ConvertTiffToRasterImage(Stream tiffStream)
-        {
-            //You can write your own logic for converting TIFF to a raster image.
-            //Refer to the ASP.NET Core web service sample for an implementation using BitMiracle.LibTiff.NET and SkiaSharp.
-            return new MemoryStream();
+            //To do : Write your own logic for converting metafile to raster image using any third-party image converter(Syncfusion doesn't provide any image converter).
         }
 
         private static Stream GetManifestResourceStream(string fileName)
@@ -201,20 +314,22 @@ namespace DocumentEditorLibrary
 }
 ```
 
-## Step 3: Build and publish the library
+### Build and publish the library
 
-**Build** compiles the C# source code into a .NET assembly. **Publish** bundles that assembly with every dependent library into a single folder. The Python service loads the assemblies from this `publish` folder.
+**Build** compiles the C# source code into a .NET assembly. **Publish** bundles that assembly together with every dependent Syncfusion assembly into a single folder that Python loads.
 
 ```bash
 dotnet build -c Release
 dotnet publish -c Release
 ```
 
-N> Repeat both commands after any change to the wrapper code, because the Python service loads the assemblies from the publish output folder.
+N> Repeat both commands after any change to the wrapper code. The Python service loads the assemblies from the publish output folder, so it must be refreshed after every rebuild.
 
-## Step 4: Create the Python web service
+## Step 2: Create the Python web service
 
-Create the Python web service with Flask that exposes the DOCX Editor APIs. Implement all endpoints in a single `app.py` file.
+Create the Python web service with Flask that exposes the DOCX Editor APIs. The service receives requests from the React application, loads the published assemblies with Python.NET, invokes the matching method on the wrapper class, and returns the result to the client.
+
+Implement all endpoints in a single `app.py` file for easier maintenance and deployment.
 
 ### Install the Python packages
 
@@ -226,88 +341,75 @@ pip install flask flask-cors pythonnet
 *   **Flask-CORS** - Enables communication between the React application and the Python service.
 *   **pythonnet** - Allows Python to load the published .NET assemblies.
 
-### Load the published .NET assemblies
+### Create the app.py file
 
-At the top of `app.py`, use `clr` from `pythonnet` to load the assemblies from the publish output folder generated in Step 3. Adjust the path to match the location of your `publish` folder.
+Create a new `app.py` file. The React application and the Python service run on different ports, so enable CORS so the editor can call the service. Also raise the request size limit so that large Word documents can be imported without being rejected by Flask's default limit.
+
+Use `clr` from `pythonnet` to load the assemblies from the **publish output folder** generated in Step 1. Adjust the path to match the location of your `publish` folder.
 
 ```python
+from flask import Flask, request, send_file
+from flask_cors import CORS
+from io import BytesIO
 import clr
 import os
-
-# Point this to the publish output folder of the class library you created.
-publish_base = os.path.join(
-    os.getcwd(), "DocumentEditorLibrary", "bin", "Release", "netstandard2.0", "publish"
-)
-
-# Wrapper library.
-clr.AddReference(os.path.join(publish_base, "DocumentEditorLibrary.dll"))
-
-# Syncfusion assemblies.
-clr.AddReference(os.path.join(publish_base, "Syncfusion.EJ2.DocumentEditor.dll"))
-clr.AddReference(os.path.join(publish_base, "Syncfusion.DocIO.Net.Core.dll"))
-clr.AddReference(os.path.join(publish_base, "Syncfusion.Compression.Net.Core.dll"))
-clr.AddReference(os.path.join(publish_base, "Syncfusion.OfficeChart.Net.Core.dll"))
-clr.AddReference(os.path.join(publish_base, "Syncfusion.Licensing.dll"))
-
-# Supporting assemblies.
-clr.AddReference(os.path.join(publish_base, "Newtonsoft.Json.dll"))
-clr.AddReference(os.path.join(publish_base, "SkiaSharp.dll"))
-clr.AddReference(os.path.join(publish_base, "BitMiracle.LibTiff.NET.dll"))
-```
-
-### Create the wrapper class instance
-
-Import the wrapper class and create one shared instance. All endpoints call their methods on this instance.
-
-```python
-from DocumentEditorLibrary import Documenteditor
-
-docEditor = Documenteditor()
-```
-
-### Configure the Flask application
-
-The React application and the Python service run on different ports, so enable CORS. Also raise the request size limit so large Word documents are not rejected by Flask's default limit.
-
-```python
-from flask import Flask, request
-from flask_cors import CORS
-import base64
 import json
 
 app = Flask(__name__)
 
 # Raise the request size limit so large Word documents can be imported.
 app.config['MAX_CONTENT_LENGTH'] = 500 * 1024 * 1024      # 500 MB
+app.config['MAX_FORM_MEMORY_SIZE'] = 500 * 1024 * 1024    # 500 MB
 
 # Enable CORS so the React application can call the service.
 CORS(app)
+
+# Point this to the publish output folder of the class library created in Step 1.
+publish_base = os.path.join(
+    os.getcwd(), "DocumentEditorLibrary", "bin", "Release", "netstandard2.0", "publish"
+)
+
+# Load the wrapper library and the Syncfusion assemblies.
+clr.AddReference(os.path.join(publish_base, "DocumentEditorLibrary.dll"))
+clr.AddReference(os.path.join(publish_base, "Syncfusion.EJ2.DocumentEditor.dll"))
+clr.AddReference(os.path.join(publish_base, "Syncfusion.DocIO.Portable.dll"))
+clr.AddReference(os.path.join(publish_base, "Syncfusion.Compression.Portable.dll"))
+clr.AddReference(os.path.join(publish_base, "Syncfusion.OfficeChart.Portable.dll"))
+clr.AddReference(os.path.join(publish_base, "Syncfusion.DocIORenderer.Net.Core.dll"))
+clr.AddReference(os.path.join(publish_base, "Newtonsoft.Json.dll"))
+clr.AddReference(os.path.join(publish_base, "SkiaSharp.dll"))
+clr.AddReference(os.path.join(publish_base, "BitMiracle.LibTiff.NET.dll"))
+
+# Import the wrapper class from the C# namespace.
+from DocumentEditorLibrary import Documenteditor
+
+docEditor = Documenteditor()   # create the wrapper object
 ```
 
-## Step 5: Add the DOCX Editor API endpoints
+## Step 3: Add the DOCX Editor API endpoints
 
-Add one Flask route for each server-side operation of the DOCX Editor.
+Add one Flask route for each server-side operation of the DOCX Editor inside the same `app.py` file.
 
 ### Import
 
-The React DOCX Editor uploads the Word document as `multipart/form-data` using the form field name `files`. The endpoint converts the uploaded file to base64 and passes it to the `Import` method, which returns the SFDT string.
+The React DOCX Editor uploads the Word document as `multipart/form-data` using the form field name `files`. The endpoint reads the uploaded file and passes it to the `Import` method, which returns the SFDT string.
 
 ```python
 @app.route('/Import', methods=['POST'])
 def importDocument():
     if 'files' in request.files:
         file = request.files['files']
-        # Read the file and convert to base64 for the .NET wrapper.
+        # Get the stream data and the file name.
         stream_data = file.stream.read()
-        base64_string = base64.b64encode(stream_data).decode('utf-8')
+        file_name = file.filename
         # Returns the SFDT string for the uploaded Word document.
-        return docEditor.Import(base64_string)
+        return docEditor.Import(stream_data, file_name)
     return ""
 ```
 
 ### Save
 
-The Save API exports the edited document from the DOCX Editor.
+The Save API exports the edited document from the DOCX Editor. The endpoint receives the SFDT content and the file name, and returns the generated document to the client.
 
 ```python
 @app.route('/Save', methods=['POST'])
@@ -315,9 +417,11 @@ def save():
     # Get the SFDT data and the file name from the request.
     content = request.json['content']
     fileName = request.json['fileName']
-    # Saves the SFDT content as a Word document.
+    # Saves the SFDT content as a Word document and returns it.
     result = docEditor.Save(content, fileName)
-    return result
+    output = BytesIO(bytes(result))
+    output.seek(0)
+    return send_file(output, as_attachment=True, download_name=fileName)
 ```
 
 ### SystemClipboard
@@ -327,6 +431,7 @@ The SystemClipboard API converts clipboard data (HTML/RTF) to SFDT so content ca
 ```python
 @app.route('/SystemClipboard', methods=['POST'])
 def systemClipboard():
+    # Get the SFDT data and the type from the request.
     content = request.json['content']
     type = request.json['type']
     # Returns the SFDT string for the clipboard content.
@@ -344,11 +449,38 @@ def restrictEditing():
     saltBase64 = request.json['saltBase64']
     spinCount = request.json['spinCount']
     # Returns an array of strings that represent the password and salt values.
-    result = docEditor.RestrictEditing(passwordBase64, saltBase64, spinCount)
-    return list(result)
+    jsonString = docEditor.RestrictEditing(passwordBase64, saltBase64, spinCount)
+    return json.dumps(list(jsonString))
 ```
 
-## Step 6: Start the Python web service
+### MailMerge
+
+The MailMerge API performs mail merge on the uploaded Word document using the given data records and returns the merged document as SFDT.
+
+```python
+@app.route('/MailMerge', methods=['POST'])
+def mailMerge():
+    # Get the base64 Word document from the request.
+    documentData = request.json['documentData']
+    # Performs mail merge and returns the merged document as SFDT.
+    return docEditor.MailMerge(documentData)
+```
+
+### CompareDocuments
+
+The CompareDocuments API compares the original and revised Word documents and returns the comparison result (with tracked changes) as SFDT.
+
+```python
+@app.route('/CompareDocuments', methods=['POST'])
+def compareDocuments():
+    # Get the original and revised files from the request.
+    originalFile = request.files['originalFile'].stream.read()
+    revisedFile = request.files['revisedFile'].stream.read()
+    # Returns the comparison result as SFDT.
+    return docEditor.CompareDocuments(originalFile, revisedFile)
+```
+
+## Step 4: Start the Python web service
 
 Add the application entry point at the bottom of `app.py`.
 
@@ -369,39 +501,26 @@ When the service starts, a message similar to the following is displayed:
 * Running on http://127.0.0.1:5000
 ```
 
-## Step 7: Create the React application
+## Step 5: Configure the React application
 
-To create the React application and integrate the React DOCX Editor component, follow the steps in the [Getting Started with React DOCX Editor](https://help.syncfusion.com/document-processing/word/word-processor/react/getting-started) documentation.
-
-After creating the application, configure the DOCX Editor's `serviceUrl` property to point to the Python web service.
+Create the React application with the DOCX Editor component by following the [Getting Started with React DOCX Editor](https://help.syncfusion.com/document-processing/word/word-processor/react/getting-started) documentation, then configure the DOCX Editor's `serviceUrl` property to point to the Python web service.
 
 ```tsx
 serviceUrl = "http://127.0.0.1:5000/";
 ```
 
-With this configuration, every import, save, paste, and restrict-editing operation is sent to the Python service, processed through the published .NET assembly, and returned to the React application.
+With this configuration, every server-side operation of the editor is sent to the Python service, processed through the published assembly, and returned to the React application.
 
-## Run and verify
+## Step 6: Run and verify
 
-Run the components in the following order:
-
-1.  Build and publish the class library as described in [Step 3](#step-3-build-and-publish-the-library).
-2.  Start the Python web service as described in [Step 6](#step-6-start-the-python-web-service).
-3.  Open a terminal in the React application directory and start the development server:
-
-    ```bash
-    npm run dev
-    ```
-
-    If you have not installed the React dependencies yet, run `npm install` first.
-
+1.  Build and publish the class library as described in [Step 1](#step-1-create-the-class-library).
+2.  Start the Python web service as described in [Step 4](#step-4-start-the-python-web-service).
+3.  Open a terminal in the React application directory and run `npm install` followed by `npm run dev`.
 4.  Click **Open** in the DOCX Editor toolbar and select a Word document.
 5.  Confirm that the document loads successfully in the editor.
 
 ## Complete working sample
 
-A complete working sample is available on GitHub. The sample repository contains the class library wrapper project (`DocumentEditorLibrary`) and the Python API files (`import.py`, `save.py`, `systemclipboard.py`) that call each DOCX Editor operation.
+A complete working sample is available on GitHub. The sample repository contains the .NET wrapper library and the single `app.py` file that hosts all the DOCX Editor endpoints (`Import`, `Save`, `SystemClipboard`, `RestrictEditing`, `MailMerge`, and `CompareDocuments`). If you get stuck, compare your code against the sample to find the discrepancy.
 
 **Sample repository:** [EJ2-Document-Editor-Web-Services — Python](https://github.com/SyncfusionExamples/EJ2-Document-Editor-Web-Services/tree/master/Python)
-
-If you get stuck while following this article, compare your code against the sample to find the discrepancy.
