@@ -179,13 +179,13 @@ Formatting is applied on the chart returned by `addChart`. Colors are RRGGBB or 
 
 See the following topics for each area:
 
-* [Chart title](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/charts/chart-title)
-* [Chart area](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/charts/chart-area)
-* [Chart plot area](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/charts/chart-plot-area)
-* [Chart series](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/charts/chart-series)
-* [Chart legend](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/charts/chart-legend)
-* [Chart data labels](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/charts/chart-data-labels)
-* [Chart axis](https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/charts/chart-axis)
+* [Chart title](Charts/Chart-Title.md)
+* [Chart area](Charts/Chart-Area.md)
+* [Chart plot area](Charts/Chart-Plot-Area.md)
+* [Chart series](Charts/Chart-Series.md)
+* [Chart legend](Charts/Chart-Legend.md)
+* [Chart data labels](Charts/Chart-Data-Labels.md)
+* [Chart axis](Charts/Chart-Axis.md)
 
 Gradient fills on an existing chart source can be set with `setSourceGradientFill`. Theme or scheme colors are not written through the solid-color format bags.
 
