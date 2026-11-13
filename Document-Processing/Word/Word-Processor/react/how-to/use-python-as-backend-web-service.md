@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to Use Python as a Backend Web Service in React DOCX Editor | Syncfusion
-description: Learn how to create a Python (Flask) backend web service for the React DOCX Editor by loading the Syncfusion .NET document processing libraries with Python.NET and exposing the Import, Save, SystemClipboard, RestrictEditing, MailMerge, and CompareDocuments endpoints.
+description: Configure a Python (Flask) web service in the React DOCX Editor to handle server-side operations such as Word document import, save, clipboard operations, mail merge, document comparison, and restricting editing using Syncfusion .NET libraries loaded with Python.NET.
 control: Python web service
 platform: document-processing
 documentation: ug
@@ -10,9 +10,21 @@ domainurl: ##DomainURL##
 
 # How to Use Python as a Backend Web Service in React DOCX Editor
 
-The React DOCX Editor requires server-side processing for several operations, such as importing a Word document, saving the edited document, pasting content with formatting, applying document protection, performing mail merge, and comparing documents. Typically, these operations are implemented in C# or Java.
+The React DOCX Editor depends on server-side interactions for the operations listed below. Typically, these operations are implemented in ASP.NET Core or Java. This section explains how to implement the same operations from a **Python web service** using [Flask](https://flask.palletsprojects.com/), with the document-processing logic hosted in a C# class library that is loaded with [Python.NET](https://pypi.org/project/pythonnet/).
 
-This documentation explains how to implement those operations as a **Python web service**. The approach works as follows: the document-processing logic is written once in a C# class library, the service endpoints are hosted from Python using **Flask**, and [Python.NET](https://pypi.org/project/pythonnet/) loads the published assemblies so the Python endpoints can invoke the C# methods directly. The React DOCX Editor then consumes the service through its `serviceUrl` property.
+*   Import Word document
+*   Paste with formatting (SystemClipboard)
+*   Restrict editing
+*   Save document
+*   Mail merge
+*   Compare documents
+
+In this approach:
+
+*   A class library written in C# contains the Web API implementation.
+*   Python hosts the Web API endpoints by using Flask.
+*   Python.NET loads the published assemblies so that Python can invoke the document-processing methods.
+*   The React DOCX Editor communicates with the Python service through the `serviceUrl` property.
 
 ## Prerequisites
 
@@ -22,9 +34,11 @@ This documentation explains how to implement those operations as a **Python web 
 *   Node.js and npm
 *   An active [Syncfusion&reg; license key](https://www.syncfusion.com/products/communitylicense) (a free 30-day trial is available)
 
-## Step 1: Create the class library
+## Create the class library
 
-First, create a C# class library that contains the document-processing logic. This library acts as the bridge between the Python web service and the Syncfusion document-processing libraries.
+First, create the C# class library that contains the document-processing logic. This library acts as the bridge between the Python web service and the Syncfusion document-processing libraries.
+
+Open a terminal and create a new class library project.
 
 ```bash
 mkdir PythonDocumentEditor
@@ -35,11 +49,11 @@ dotnet new classlib -n DocumentEditorLibrary
 cd DocumentEditorLibrary
 ```
 
-N> Keep the class library inside a subfolder such as `dotnet`. If the `DocumentEditorLibrary` folder is placed directly next to `app.py`, Python treats it as a local package and the `from DocumentEditorLibrary import Documenteditor` call fails.
+N> Keep the class library inside a subfolder such as `dotnet`. If the `DocumentEditorLibrary` folder is placed directly next to `app.py`, Python treats it as a local package and the `from DocumentEditorLibrary import Documenteditor` import fails.
 
 ### Add the required NuGet packages
 
-The Syncfusion Word processing package provides the document editor APIs, and the remaining packages provide the compression, chart, imaging, and JSON serialization support they depend on. Add the following packages to the class library project.
+Add the following packages to the class library project.
 
 ```bash
 dotnet add package Syncfusion.EJ2.WordEditor.AspNet.Core
@@ -50,9 +64,9 @@ dotnet add package SkiaSharp
 dotnet add package BitMiracle.LibTiff.NET
 ```
 
-### Add the DOCX Editor wrapper class
+### Add the wrapper class
 
-Add a `Documenteditor.cs` file to the library. The wrapper class exposes one public method for each editor operation — `Import`, `Save`, `SystemClipboard`, `RestrictEditing`, `MailMerge`, and `CompareDocuments` — which the Python endpoints call directly.
+Add a `Documenteditor.cs` file to the library. The wrapper class exposes one public method for each editor operation, which the Python endpoints call directly.
 
 ```csharp
 using SkiaSharp;
@@ -402,7 +416,7 @@ dotnet publish -c Release
 
 N> Repeat both commands after any change to the wrapper code, because the Python service loads the assemblies from the publish output folder.
 
-## Step 2: Create the Python web service
+## Create the Python web service
 
 Next, create the Python web service. The service receives requests from the React application, loads the published assemblies with Python.NET, invokes the matching method on the wrapper class, and returns the result to the client. Implement everything in a single `app.py` file for easier maintenance and deployment.
 
@@ -418,9 +432,7 @@ pip install flask flask-cors pythonnet
 
 ### Create the app.py file
 
-Create a new `app.py` file and configure the Flask application. Enable CORS so the editor can call the service, and raise the request size limit so that large Word documents are not rejected by Flask's default limit.
-
-Then use `clr` from `pythonnet` to load the assemblies from the **publish output folder** generated in Step 1, and create one shared instance of the wrapper class that all endpoints use.
+Create a new `app.py` file. Enable CORS so the editor can call the service, and raise the request size limit so that large Word documents are not rejected by Flask's default limit. Then use `clr` from `pythonnet` to load the assemblies from the **publish output folder**, and create one shared instance of the wrapper class that all endpoints use.
 
 ```python
 from flask import Flask, request, send_file
@@ -444,7 +456,7 @@ app.config['MAX_FORM_MEMORY_SIZE'] = 500 * 1024 * 1024    # 500 MB
 # Enable CORS so the React application can call the service.
 CORS(app)
 
-# Point this to the publish output folder of the class library created in Step 1.
+# Point this to the publish output folder of the class library.
 publish_base = os.path.join(
     os.getcwd(), "dotnet", "DocumentEditorLibrary", "bin", "Release", "net10.0", "publish"
 )
@@ -463,20 +475,11 @@ clr.AddReference(os.path.join(publish_base, "BitMiracle.LibTiff.NET.dll"))
 from DocumentEditorLibrary import Documenteditor
 
 docEditor = Documenteditor()   # create the wrapper object
-```
 
-## Step 3: Add the DOCX Editor API endpoints
-
-Finally, add one Flask route for each editor operation inside the same `app.py` file. Each route reads the incoming request, calls the matching method on the wrapper instance, and returns the result to the editor.
-
-Each route is registered twice — once with the `/api/documenteditor` prefix and once without — so the service works whether the DOCX Editor's `serviceUrl` is configured as `http://127.0.0.1:5000/api/documenteditor/` (as in the [ASP.NET Core web service](https://help.syncfusion.com/document-processing/word/word-processor/react/web-services/core), where the routes are defined as `api/[controller]`) or simply as `http://127.0.0.1:5000/`.
-
-### Import
-
-The React DOCX Editor uploads the Word document as `multipart/form-data` using the form field name `files`. The endpoint reads the uploaded file and passes it to the `Import` method, which returns the SFDT string.
-
-```python
-@app.route('/api/documenteditor/Import', methods=['POST'])
+# The Import API loads a Word document into the DOCX Editor by
+# converting it to SFDT. The MetafileImageParsed event converts
+# TIFF, EMF, and WMF images to raster images because web browsers
+# cannot display metafile images.
 @app.route('/Import', methods=['POST'])
 def importDocument():
     if 'files' in request.files:
@@ -487,14 +490,29 @@ def importDocument():
         # Returns the SFDT string for the uploaded Word document.
         return docEditor.Import(stream_data, file_name)
     return ""
-```
 
-### Save
+# The SystemClipboard API converts clipboard data (HTML/RTF) to SFDT
+# so content can be pasted with formatting.
+@app.route('/SystemClipboard', methods=['POST'])
+def systemClipboard():
+    # Get the SFDT data and the type from the request.
+    content = request.json['content']
+    type = request.json['type']
+    # Returns the SFDT string for the clipboard content.
+    return docEditor.SystemClipboard(content, type)
 
-The Save API exports the edited document from the DOCX Editor. The endpoint receives the SFDT content and the file name, and returns the generated document to the client.
+# The RestrictEditing API computes the password hash used by the
+# document protection feature.
+@app.route('/RestrictEditing', methods=['POST'])
+def restrictEditing():
+    passwordBase64 = request.json['passwordBase64']
+    saltBase64 = request.json['saltBase64']
+    spinCount = request.json['spinCount']
+    # Returns an array of strings that represent the password and salt values.
+    jsonString = docEditor.RestrictEditing(passwordBase64, saltBase64, spinCount)
+    return json.dumps(list(jsonString))
 
-```python
-@app.route('/api/documenteditor/Save', methods=['POST'])
+# The Save API exports the edited document from the DOCX Editor.
 @app.route('/Save', methods=['POST'])
 def save():
     # Get the SFDT data and the file name from the request.
@@ -505,59 +523,18 @@ def save():
     output = BytesIO(bytes(result))
     output.seek(0)
     return send_file(output, as_attachment=True, download_name=fileName)
-```
 
-### SystemClipboard
-
-The SystemClipboard API converts clipboard data (HTML/RTF) to SFDT so content can be pasted with formatting.
-
-```python
-@app.route('/api/documenteditor/SystemClipboard', methods=['POST'])
-@app.route('/SystemClipboard', methods=['POST'])
-def systemClipboard():
-    # Get the SFDT data and the type from the request.
-    content = request.json['content']
-    type = request.json['type']
-    # Returns the SFDT string for the clipboard content.
-    return docEditor.SystemClipboard(content, type)
-```
-
-### RestrictEditing
-
-The RestrictEditing API computes the password hash used by the document protection feature.
-
-```python
-@app.route('/api/documenteditor/RestrictEditing', methods=['POST'])
-@app.route('/RestrictEditing', methods=['POST'])
-def restrictEditing():
-    passwordBase64 = request.json['passwordBase64']
-    saltBase64 = request.json['saltBase64']
-    spinCount = request.json['spinCount']
-    # Returns an array of strings that represent the password and salt values.
-    jsonString = docEditor.RestrictEditing(passwordBase64, saltBase64, spinCount)
-    return json.dumps(list(jsonString))
-```
-
-### MailMerge
-
-The MailMerge API performs mail merge on the uploaded Word document using the given data records and returns the merged document as SFDT.
-
-```python
-@app.route('/api/documenteditor/MailMerge', methods=['POST'])
+# The MailMerge API performs mail merge on the uploaded Word document
+# and returns the merged document as SFDT.
 @app.route('/MailMerge', methods=['POST'])
 def mailMerge():
     # Get the base64 Word document from the request.
     documentData = request.json['documentData']
     # Performs mail merge and returns the merged document as SFDT.
     return docEditor.MailMerge(documentData)
-```
 
-### CompareDocuments
-
-The CompareDocuments API compares the original and revised Word documents and returns the comparison result (with tracked changes) as SFDT.
-
-```python
-@app.route('/api/documenteditor/CompareDocuments', methods=['POST'])
+# The CompareDocuments API compares the original and revised Word
+# documents and returns the comparison result as SFDT.
 @app.route('/CompareDocuments', methods=['POST'])
 def compareDocuments():
     # Get the original and revised files from the request.
@@ -565,11 +542,14 @@ def compareDocuments():
     revisedFile = request.files['revisedFile'].stream.read()
     # Returns the comparison result as SFDT.
     return docEditor.CompareDocuments(originalFile, revisedFile)
+
+if __name__ == "__main__":
+    app.run(debug=True)   # http://localhost:5000/
 ```
 
-## Step 4: Start the Python web service
+## Start the Python web service
 
-Add the application entry point at the bottom of `app.py`.
+Add the application entry point at the bottom of `app.py` and start the service.
 
 ```python
 if __name__ == "__main__":
@@ -588,7 +568,7 @@ When the service starts, a message similar to the following is displayed:
 * Running on http://127.0.0.1:5000
 ```
 
-## Step 5: Configure the React application
+## Configure the React application
 
 Create the React application with the DOCX Editor component by following the [Getting Started with React DOCX Editor](https://help.syncfusion.com/document-processing/word/word-processor/react/getting-started) documentation, then configure the DOCX Editor's `serviceUrl` property to point to the Python web service.
 
@@ -596,20 +576,15 @@ Create the React application with the DOCX Editor component by following the [Ge
 serviceUrl = "http://127.0.0.1:5000/";
 ```
 
-The service responds on both `http://127.0.0.1:5000/<operation>` and `http://127.0.0.1:5000/api/documenteditor/<operation>`, so the `serviceUrl` can be configured either way.
-
 With this configuration, every server-side operation of the editor is sent to the Python service, processed through the published assembly, and returned to the React application.
 
-## Step 6: Run and verify
+## Run and verify
 
-1.  Build and publish the class library as described in [Step 1](#step-1-create-the-class-library).
-2.  Start the Python web service as described in [Step 4](#step-4-start-the-python-web-service).
+1.  Build and publish the class library as described in [Create the class library](#create-the-class-library).
+2.  Start the Python web service as described in [Start the Python web service](#start-the-python-web-service).
 3.  Open a terminal in the React application directory and run `npm install` followed by `npm run dev`.
-4.  Click **Open** in the DOCX Editor toolbar and select a Word document.
-5.  Confirm that the document loads successfully in the editor.
+4.  Open the URL displayed in the terminal, typically `http://localhost:5173`.
+5.  Click **Open** in the DOCX Editor toolbar and select a Word document.
+6.  Confirm that the document loads successfully in the editor.
 
-## Complete working sample
-
-A complete working sample that implements all the endpoints described in this documentation (`Import`, `Save`, `SystemClipboard`, `RestrictEditing`, `MailMerge`, and `CompareDocuments`) is available on GitHub. If you run into any issues, compare your code with the sample to find the discrepancy.
-
-**Sample repository:** [EJ2-Document-Editor-Web-Services — Python](https://github.com/SyncfusionExamples/EJ2-Document-Editor-Web-Services/tree/master/Python)
+N> [View the Python web service sample in GitHub](https://github.com/SyncfusionExamples/EJ2-Document-Editor-Web-Services/tree/master/Python).

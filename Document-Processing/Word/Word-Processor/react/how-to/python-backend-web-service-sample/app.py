@@ -43,7 +43,6 @@ docEditor = Documenteditor()   # create the wrapper object
 # converting it to SFDT. The MetafileImageParsed event converts
 # TIFF, EMF, and WMF images to raster images because web browsers
 # cannot display metafile images.
-@app.route('/api/documenteditor/Import', methods=['POST'])
 @app.route('/Import', methods=['POST'])
 def importDocument():
     if 'files' in request.files:
@@ -57,7 +56,6 @@ def importDocument():
 
 # The SystemClipboard API converts clipboard data (HTML/RTF) to SFDT
 # so content can be pasted with formatting.
-@app.route('/api/documenteditor/SystemClipboard', methods=['POST'])
 @app.route('/SystemClipboard', methods=['POST'])
 def systemClipboard():
     # Get the SFDT data and the type from the request.
@@ -68,7 +66,6 @@ def systemClipboard():
 
 # The RestrictEditing API computes the password hash used by the
 # document protection feature.
-@app.route('/api/documenteditor/RestrictEditing', methods=['POST'])
 @app.route('/RestrictEditing', methods=['POST'])
 def restrictEditing():
     passwordBase64 = request.json['passwordBase64']
@@ -79,7 +76,6 @@ def restrictEditing():
     return json.dumps(list(jsonString))
 
 # The Save API exports the edited document from the DOCX Editor.
-@app.route('/api/documenteditor/Save', methods=['POST'])
 @app.route('/Save', methods=['POST'])
 def save():
     # Get the SFDT data and the file name from the request.
@@ -93,7 +89,6 @@ def save():
 
 # The MailMerge API performs mail merge on the uploaded Word document
 # and returns the merged document as SFDT.
-@app.route('/api/documenteditor/MailMerge', methods=['POST'])
 @app.route('/MailMerge', methods=['POST'])
 def mailMerge():
     # Get the base64 Word document from the request.
@@ -103,7 +98,6 @@ def mailMerge():
 
 # The CompareDocuments API compares the original and revised Word
 # documents and returns the comparison result as SFDT.
-@app.route('/api/documenteditor/CompareDocuments', methods=['POST'])
 @app.route('/CompareDocuments', methods=['POST'])
 def compareDocuments():
     # Get the original and revised files from the request.
