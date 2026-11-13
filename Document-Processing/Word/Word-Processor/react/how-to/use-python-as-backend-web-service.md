@@ -29,9 +29,13 @@ First, create a C# class library that contains the document-processing logic. Th
 ```bash
 mkdir PythonDocumentEditor
 cd PythonDocumentEditor
+mkdir dotnet
+cd dotnet
 dotnet new classlib -n DocumentEditorLibrary
 cd DocumentEditorLibrary
 ```
+
+N> Keep the class library inside a subfolder such as `dotnet`. If the `DocumentEditorLibrary` folder is placed directly next to `app.py`, Python treats it as a local package and the `from DocumentEditorLibrary import Documenteditor` call fails.
 
 ### Add the required NuGet packages
 
@@ -437,7 +441,7 @@ CORS(app)
 
 # Point this to the publish output folder of the class library created in Step 1.
 publish_base = os.path.join(
-    os.getcwd(), "DocumentEditorLibrary", "bin", "Release", "net10.0", "publish"
+    os.getcwd(), "dotnet", "DocumentEditorLibrary", "bin", "Release", "net10.0", "publish"
 )
 
 # Load the wrapper library and the Syncfusion assemblies.
