@@ -24,9 +24,10 @@ import * as React from 'react';
 import {
     DocumentEditorContainerComponent,
     Toolbar,
+    Ribbon,
 } from '@syncfusion/ej2-react-documenteditor';
 
-DocumentEditorContainerComponent.Inject(Toolbar);
+DocumentEditorContainerComponent.Inject(Toolbar, Ribbon);
 
 function App() {
     let container: DocumentEditorContainerComponent;
@@ -46,6 +47,7 @@ function App() {
             }}
             height={'590px'}
             enableToolbar={true}
+            toolbarMode="Ribbon"
             selectionChange={selectionChanges}
         />
     );
