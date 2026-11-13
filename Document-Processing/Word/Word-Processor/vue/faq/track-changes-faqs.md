@@ -25,17 +25,18 @@ The following code snippet illustrates how to identify the selection region usin
 <template>
   <div id="app">
     <ejs-documenteditorcontainer ref="container" height="590px" id="container"
+      :toolbarMode="'Ribbon'"
       :enableToolbar="true" v-on:selectionChange="selectionChanged.bind(this)"></ejs-documenteditorcontainer>
   </div>
 </template>
 <script setup>
-import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar, Ribbon } from '@syncfusion/ej2-vue-documenteditor';
 import { provide, ref } from 'vue';
 
 const container = ref(null);
 
 //Inject require modules.
-provide('DocumentEditorContainer', [Toolbar]);
+provide('DocumentEditorContainer', [Toolbar, Ribbon]);
 
 const selectionChanged = function () {
   // Detect whether the selection is in an editable or non-editable region.
@@ -55,11 +56,12 @@ const selectionChanged = function () {
 <template>
   <div id="app">
     <ejs-documenteditorcontainer ref="container" height="590px" id="container"
+      :toolbarMode="'Ribbon'"
       :enableToolbar="true" v-on:selectionChange="selectionChanged.bind(this)"></ejs-documenteditorcontainer>
   </div>
 </template>
 <script>
-import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorContainerComponent, Toolbar, Ribbon } from '@syncfusion/ej2-vue-documenteditor';
 
 export default {
   components: {
@@ -67,7 +69,7 @@ export default {
   },
   provide: {
     //Inject require modules.
-    DocumentEditorContainer: [Toolbar]
+    DocumentEditorContainer: [Toolbar, Ribbon]
   },
   methods: {
     selectionChanged: function () {

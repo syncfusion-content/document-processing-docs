@@ -19,7 +19,7 @@ You can detect whether the current cursor position is in an editable or non-edit
 The following code snippet illustrates how to identify the selection region using the `selectionChange` event:
 
 ```ts
-import { DocumentEditorContainer, Toolbar, Ribbon } from '@syncfusion/ej2-documenteditor';
+import { DocumentEditorContainer, Ribbon } from '@syncfusion/ej2-documenteditor';
 
 let container: DocumentEditorContainer = new DocumentEditorContainer({
     enableToolbar: true,

@@ -22,14 +22,15 @@ The following code snippet illustrates how to identify the selection region usin
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {
   ToolbarService,
+  RibbonService,
   DocumentEditorContainerComponent,
 } from '@syncfusion/ej2-angular-documenteditor';
 
 @Component({
       selector: 'app-root',
       // specifies the template string for the DocumentEditorContainer component
-      template: `<ejs-documenteditorcontainer #documenteditor_default height="590px" style="display:block" [enableToolbar]=true (selectionChange)="selectionChanges()"> </ejs-documenteditorcontainer>`,
-      providers: [ToolbarService],
+      template: `<ejs-documenteditorcontainer #documenteditor_default height="590px" style="display:block" [enableToolbar]=true [toolbarMode]="'Ribbon'" (selectionChange)="selectionChanges()"> </ejs-documenteditorcontainer>`,
+      providers: [ToolbarService, RibbonService],
 })
 export class AppComponent implements OnInit {
   @ViewChild('documenteditor_default')
