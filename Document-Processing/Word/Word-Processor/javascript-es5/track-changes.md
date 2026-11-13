@@ -274,4 +274,6 @@ Explore how to track and review changes in Word documents using the JavaScript (
 
 ## Frequently Asked Questions
 
-Custom track changes colors are an application level feature supported within the Documnent Editor. Therefore custom colors are applicable only within the Document Editor and will not be retained during DOCX Export.
+### Why are custom track changes colors not preserved in the exported document?
+
+Custom track changes colors are an application level feature supported within the Document Editor. These colors are applied only within the editor and are not preserved when the document is exported. During export, the default track changes colors are applied based on the target document format.
