@@ -450,7 +450,7 @@ This example demonstrates how to add a file attachment annotation to a PDF page 
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfPage, PdfAttachmentAnnotation, PdfAttachmentIcon, PdfAnnotationBorder, PdfBorderStyle} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfAttachmentAnnotation, PdfAttachment, PdfAttachmentIcon, PdfAnnotationBorder, PdfBorderStyle} from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
 let document: PdfDocument = new PdfDocument();
@@ -459,8 +459,7 @@ let page: PdfPage = document.addPage();
 // Create a new attachment annotation
 let annotation: PdfAttachmentAnnotation = new PdfAttachmentAnnotation(
       { x: 300, y: 200, width: 30, height: 30 },
-      'Nature.jpg',
-       imageData,
+      new PdfAttachment(imageData, 'Nature.jpg'),
        { text: 'Attachment', icon: PdfAttachmentIcon.pushPin, color: { r: 255, g: 0, b: 0 }, opacity: 1,
         border: new PdfAnnotationBorder({ width: 1, hRadius: 0, vRadius: 0, style: PdfBorderStyle.solid })}
     );
@@ -481,8 +480,7 @@ var page = document.addPage();
 // Create a new attachment annotation
 var annotation = new ej.pdf.PdfAttachmentAnnotation(
   {x:300,y:200,width:30,height:30},
-  'Nature.jpg',
-  imageData,
+  new ej.pdf.PdfAttachment(imageData, 'Nature.jpg'),
   {
     text:'Attachment',
     icon:ej.pdf.PdfAttachmentIcon.pushPin,
@@ -558,7 +556,7 @@ let page: PdfPage = document.addPage();
 // Create new document link annotation
 let annotation: PdfDocumentLinkAnnotation = new PdfDocumentLinkAnnotation(
       { x: 80, y: 100, width: 120, height: 18 },
-      new PdfDestination(page: page, { x: 0, y: 0 }, {mode: PdfDestinationMode.fitToPage}),
+      new PdfDestination(page, { x: 0, y: 0 }, {mode: PdfDestinationMode.fitToPage}),
       {
         color: { r: 0, g: 128, b: 0 }, opacity: 1,
         border: new PdfAnnotationBorder({ width: 1, hRadius: 0, vRadius: 0, style: PdfBorderStyle.solid })
@@ -580,7 +578,7 @@ var page = document.addPage();
 // Create new document link annotation
 var annotation = new ej.pdf.PdfDocumentLinkAnnotation(
   {x:80,y:100,width:120,height:18},
-  new ej.pdf.PdfDestination(page: page, {x:0, y:0}, {mode:ej.pdf.PdfDestinationMode.fitToPage}),
+  new ej.pdf.PdfDestination(page, {x:0, y:0}, {mode:ej.pdf.PdfDestinationMode.fitToPage}),
   {color:{r:0,g:128,b:0},opacity:1,border:new ej.pdf.PdfAnnotationBorder({width:1,hRadius:0,vRadius:0,style:ej.pdf.PdfBorderStyle.solid})}
 );
 // Add annotation to the page
@@ -1773,7 +1771,7 @@ This example demonstrates how to flatten annotations in a PDF document using the
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import {PdfDocument, PdfLineAnnotation} from '@syncfusion/ej2-pdf';
+import {PdfDocument, PdfPage, PdfLineAnnotation} from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
