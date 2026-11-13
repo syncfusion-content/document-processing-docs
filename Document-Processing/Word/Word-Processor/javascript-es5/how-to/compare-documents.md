@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to Compare Word Documents in JavaScript DOCX Editor | Syncfusion
-description: Learn how to compare two Word documents on the server side using DocIO and view the resultant document with tracked changes in Syncfusion® JavaScript DOCX Editor.
+title: How to compare word documents in JavaScript DOCX Editor | Syncfusion
+description: Learn to compare two word documents server-side using DocIO and view the resulting tracked changes in the Syncfusion® JavaScript DOCX Editor.
 platform: document-processing
 control: Compare Word documents
 documentation: ug
