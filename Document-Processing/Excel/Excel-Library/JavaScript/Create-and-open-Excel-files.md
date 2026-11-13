@@ -236,13 +236,13 @@ The `customDocumentProperties` collection provides:
 
 Each property exposes `name` (read-only), `value`, and `type` (read-only). The type is detected from the assigned value:
 
-| Value assigned | `type` |
-|---|---|
-| `string` | `'string'` |
-| `number` | `'number'` |
-| `boolean` | `'boolean'` |
-| `Date` | `'date'` |
-| `null` / `undefined` | `'unknown'` |
+| Value assigned | `type` | Description |
+|---|---|---|
+| `string` | `'string'` | Text value. |
+| `number` | `'number'` | Whole numbers are stored as integers, other numbers as floating-point values. |
+| `boolean` | `'boolean'` | Yes/no value. |
+| `Date` | `'date'` | Date and time value. |
+| `null` / `undefined` | `'unknown'` | No value; saved as empty text. |
 
 N> Whole numbers are stored as integers and other numbers as floating-point values. Property names are case-sensitive.
 
