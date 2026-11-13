@@ -10,7 +10,9 @@ domainurl: ##DomainURL##
 
 # How to Use Python as a Backend Web Service in React DOCX Editor
 
-In this documentation, learn how to host the server-side operations of the [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) from a **Python web service**. A class library written in C# contains the DOCX Editor Web API implementation, **Flask** hosts the endpoints from Python, and [Python.NET](https://pypi.org/project/pythonnet/) loads the published assemblies so Python can invoke the document-processing methods.
+The React DOCX Editor requires server-side processing for several operations, such as importing a Word document, saving the edited document, pasting content with formatting, applying document protection, performing mail merge, and comparing documents. Typically, these operations are implemented in C# or Java.
+
+This documentation explains how to implement those operations as a **Python web service**. The approach works as follows: the document-processing logic is written once in a C# class library, the service endpoints are hosted from Python using **Flask**, and [Python.NET](https://pypi.org/project/pythonnet/) loads the published assemblies so the Python endpoints can invoke the C# methods directly. The React DOCX Editor then consumes the service through its `serviceUrl` property.
 
 ## Prerequisites
 
@@ -22,9 +24,7 @@ In this documentation, learn how to host the server-side operations of the [Reac
 
 ## Step 1: Create the class library
 
-The class library acts as the bridge between the Python web service and the Syncfusion document-processing libraries.
-
-Open a terminal and create a new class library project.
+First, create a C# class library that contains the document-processing logic. This library acts as the bridge between the Python web service and the Syncfusion document-processing libraries.
 
 ```bash
 mkdir PythonDocumentEditor
@@ -35,13 +35,12 @@ cd DocumentEditorLibrary
 
 ### Add the required NuGet packages
 
-Add the following packages to the class library project.
+The Syncfusion Word processing package provides the document editor APIs, and the remaining packages provide the compression, chart, imaging, and JSON serialization support they depend on. Add the following packages to the class library project.
 
 ```bash
 dotnet add package Syncfusion.EJ2.WordEditor.AspNet.Core
 dotnet add package Syncfusion.Compression.Net.Core
 dotnet add package Syncfusion.OfficeChart.Net.Core
-dotnet add package Syncfusion.DocIORenderer.Net.Core
 dotnet add package Newtonsoft.Json
 dotnet add package SkiaSharp
 dotnet add package BitMiracle.LibTiff.NET
@@ -49,11 +48,14 @@ dotnet add package BitMiracle.LibTiff.NET
 
 ### Add the DOCX Editor wrapper class
 
-Add a `Documenteditor.cs` file to the library. The wrapper class exposes the document-processing methods that Python invokes: `Import`, `Save`, `SystemClipboard`, `RestrictEditing`, `MailMerge`, and `CompareDocuments`.
+Add a `Documenteditor.cs` file to the library. The wrapper class exposes one public method for each editor operation — `Import`, `Save`, `SystemClipboard`, `RestrictEditing`, `MailMerge`, and `CompareDocuments` — which the Python endpoints call directly.
 
 ```csharp
+using SkiaSharp;
+using BitMiracle.LibTiff.Classic;
 using Syncfusion.EJ2.DocumentEditor;
 using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace DocumentEditorLibrary
@@ -311,25 +313,94 @@ namespace DocumentEditorLibrary
             }
         }
     }
+
+    // Data records used by the MailMerge API.
+    public class CustomerDataModel
+    {
+        public static List<Customer> GetAllRecords()
+        {
+            List<Customer> customers = new List<Customer>();
+            customers.Add(new Customer("9072379", "50%", "C/ Araquil, 67", "Madrid", "22020-08-10 00:00:00", "Spain", "Brittania", "2000", "19072379", "Folk och fä HB", "100000", "440", "32.34", "472.34", "28023", "12000", "2020-11-07 00:00:00", "2020-12-07 00:00:00"));
+            customers.Add(new Customer("9072378", "20%", "C/ Araquil, 67", "Madrid", "22020-08-10 00:00:00", "Spain", "", "2", "19072369", "Maersk", "140000", "245", "20", "265", "28024", "12400", "2020-11-31 00:00:00", "2020-12-22 00:00:00"));
+            customers.Add(new Customer("9072377", "30%", "C/ Araquil, 67", "Madrid", "22020-08-10 00:00:00", "Spain", "Brittania", "100", "19072879", "Mediterranean Shipping Company", "104000", "434", "50.43", "484.43", "28025", "10000", "2020-11-07 00:00:00", "2020-12-02 00:00:00"));
+            customers.Add(new Customer("9072393", "10%", "C/ Araquil, 67", "Madrid", "22020-08-10 00:00:00", "Spain", "Brittania", "2050", "19072378", "China Ocean Shipping Company", "175000", "500", "32", "532", "28026", "17000", "2020-09-23 00:00:00", "2020-10-09 00:00:00"));
+            customers.Add(new Customer("9072377", "14%", "C/ Araquil, 67", "Madrid", "22020-08-10 00:00:00", "Spain", "Brittania", "2568", "19072380", "CGM", "155000", "655", "20.54", "675.54", "28027", "13000", "2020-10-11 00:00:00", "2020-11-17 00:00:00"));
+            customers.Add(new Customer("9072376", "0%", "C/ Araquil, 67", "Madrid", "22020-08-10 00:00:00", "Spain", "Brittania", "1532", "19072345", " Hapag-Lloyd", "106500", "344", "30", "374", "28028", "14500", "2020-06-17 00:00:00", "2020-07-07 00:00:00"));
+            customers.Add(new Customer("9072369", "05%", "C/ Araquil, 67", "Madrid", "22020-08-10 00:00:00", "Spain", "Brittania", "4462", "190723452", "Ocean Network Express", "100054", "541", "50", "591", "28029", "16500", "2020-04-07 00:00:00", "2020-05-07 00:00:00"));
+            customers.Add(new Customer("9072359", "4%", "C/ Araquil, 67", "Madrid", "22020-08-10 00:00:00", "Spain", "Brittania", "27547", "190723713", "Evergreen Line", "124000", "800", "10.23", "810.23", "28030", "12500", "2020-03-07 00:00:00", "2020-04-07 00:00:00"));
+            customers.Add(new Customer("9072380", "20%", "C/ Araquil, 67", "Madrid", "22020-08-10 00:00:00", "Spain", "Brittania", "7582", "19072312", "Yang Ming Marine Transport", "1046000", "290", "10", "300", "27631", "12670", "2020-11-10 00:00:00", "2020-12-13 00:00:00"));
+            customers.Add(new Customer("9072381", "42%", "C/ Araquil, 67", "Madrid", "22020-08-10 00:00:00", "Spain", "Brittania", "862", "19072354", "Hyundai Merchant Marine", "145000", "800", "10.23", "810.23", "28032", "45000", "2020-10-17 00:00:00", "2020-12-23 00:00:00"));
+            customers.Add(new Customer("9072391", "84%", "C/ Araquil, 67", "Madrid", "22020-08-10 00:00:00", "Spain", "Brittania", "82", "19072364", "Pacific International Line", "10094677", "344", "30", "374", "28033", "16500", "2020-11-14 00:00:00", "2020-12-21 00:00:00"));
+            customers.Add(new Customer("9072392", "92%", "C/ Araquil, 67", "Madrid", "22020-08-10 00:00:00", "Spain", "Brittania", "82", "19072385", "Österreichischer Lloyd", "104270", "500", "32", "532", "28034", "156500", "2020-06-07 00:00:00", "2020-07-07 00:00:00"));
+            return customers;
+        }
+    }
+
+    public class Customer
+    {
+        public string CustomerID { get; set; }
+        public string ProductName { get; set; }
+        public string Quantity { get; set; }
+        public string ShipName { get; set; }
+        public string UnitPrice { get; set; }
+        public string Discount { get; set; }
+        public string ShipAddress { get; set; }
+        public string ShipCity { get; set; }
+        public string OrderDate { get; set; }
+        public string ShipCountry { get; set; }
+        public string OrderId { get; set; }
+        public string Subtotal { get; set; }
+        public string Freight { get; set; }
+        public string Total { get; set; }
+        public string ShipPostalCode { get; set; }
+        public string RequiredDate { get; set; }
+        public string ShippedDate { get; set; }
+        public string ExtendedPrice { get; set; }
+
+        public Customer(
+            string orderId, string discount, string shipAddress, string shipCity,
+            string orderDate, string shipCountry, string productName, string quantity,
+            string customerID, string shipName, string unitPrice, string subtotal,
+            string freight, string total, string shipPostalCode, string extendedPrice,
+            string requiredDate, string shippedDate)
+        {
+            this.CustomerID = customerID;
+            this.ProductName = productName;
+            this.Quantity = quantity;
+            this.ShipName = shipName;
+            this.UnitPrice = unitPrice;
+            this.Discount = discount;
+            this.ShipAddress = shipAddress;
+            this.ShipCity = shipCity;
+            this.OrderDate = orderDate;
+            this.ShipCountry = shipCountry;
+            this.OrderId = orderId;
+            this.Subtotal = subtotal;
+            this.Freight = freight;
+            this.Total = total;
+            this.ShipPostalCode = shipPostalCode;
+            this.ShippedDate = shippedDate;
+            this.RequiredDate = requiredDate;
+            this.ExtendedPrice = extendedPrice;
+        }
+    }
 }
 ```
 
 ### Build and publish the library
 
-**Build** compiles the C# source code into a .NET assembly. **Publish** bundles that assembly together with every dependent Syncfusion assembly into a single folder that Python loads.
+**Build** compiles the C# source code into a .NET assembly. **Publish** bundles that assembly together with every dependent Syncfusion assembly into a single output folder, which is what the Python service loads.
 
 ```bash
 dotnet build -c Release
 dotnet publish -c Release
 ```
 
-N> Repeat both commands after any change to the wrapper code. The Python service loads the assemblies from the publish output folder, so it must be refreshed after every rebuild.
+N> Repeat both commands after any change to the wrapper code, because the Python service loads the assemblies from the publish output folder.
 
 ## Step 2: Create the Python web service
 
-Create the Python web service with Flask that exposes the DOCX Editor APIs. The service receives requests from the React application, loads the published assemblies with Python.NET, invokes the matching method on the wrapper class, and returns the result to the client.
-
-Implement all endpoints in a single `app.py` file for easier maintenance and deployment.
+Next, create the Python web service. The service receives requests from the React application, loads the published assemblies with Python.NET, invokes the matching method on the wrapper class, and returns the result to the client. Implement everything in a single `app.py` file for easier maintenance and deployment.
 
 ### Install the Python packages
 
@@ -338,14 +409,14 @@ pip install flask flask-cors pythonnet
 ```
 
 *   **Flask** - Hosts the Web API endpoints.
-*   **Flask-CORS** - Enables communication between the React application and the Python service.
+*   **Flask-CORS** - Enables communication between the React application and the Python service, which run on different ports.
 *   **pythonnet** - Allows Python to load the published .NET assemblies.
 
 ### Create the app.py file
 
-Create a new `app.py` file. The React application and the Python service run on different ports, so enable CORS so the editor can call the service. Also raise the request size limit so that large Word documents can be imported without being rejected by Flask's default limit.
+Create a new `app.py` file and configure the Flask application. Enable CORS so the editor can call the service, and raise the request size limit so that large Word documents are not rejected by Flask's default limit.
 
-Use `clr` from `pythonnet` to load the assemblies from the **publish output folder** generated in Step 1. Adjust the path to match the location of your `publish` folder.
+Then use `clr` from `pythonnet` to load the assemblies from the **publish output folder** generated in Step 1, and create one shared instance of the wrapper class that all endpoints use.
 
 ```python
 from flask import Flask, request, send_file
@@ -366,7 +437,7 @@ CORS(app)
 
 # Point this to the publish output folder of the class library created in Step 1.
 publish_base = os.path.join(
-    os.getcwd(), "DocumentEditorLibrary", "bin", "Release", "netstandard2.0", "publish"
+    os.getcwd(), "DocumentEditorLibrary", "bin", "Release", "net10.0", "publish"
 )
 
 # Load the wrapper library and the Syncfusion assemblies.
@@ -375,7 +446,6 @@ clr.AddReference(os.path.join(publish_base, "Syncfusion.EJ2.DocumentEditor.dll")
 clr.AddReference(os.path.join(publish_base, "Syncfusion.DocIO.Portable.dll"))
 clr.AddReference(os.path.join(publish_base, "Syncfusion.Compression.Portable.dll"))
 clr.AddReference(os.path.join(publish_base, "Syncfusion.OfficeChart.Portable.dll"))
-clr.AddReference(os.path.join(publish_base, "Syncfusion.DocIORenderer.Net.Core.dll"))
 clr.AddReference(os.path.join(publish_base, "Newtonsoft.Json.dll"))
 clr.AddReference(os.path.join(publish_base, "SkiaSharp.dll"))
 clr.AddReference(os.path.join(publish_base, "BitMiracle.LibTiff.NET.dll"))
@@ -388,7 +458,7 @@ docEditor = Documenteditor()   # create the wrapper object
 
 ## Step 3: Add the DOCX Editor API endpoints
 
-Add one Flask route for each server-side operation of the DOCX Editor inside the same `app.py` file.
+Finally, add one Flask route for each editor operation inside the same `app.py` file. Each route reads the incoming request, calls the matching method on the wrapper instance, and returns the result to the editor.
 
 ### Import
 
@@ -521,6 +591,6 @@ With this configuration, every server-side operation of the editor is sent to th
 
 ## Complete working sample
 
-A complete working sample is available on GitHub. The sample repository contains the .NET wrapper library and the single `app.py` file that hosts all the DOCX Editor endpoints (`Import`, `Save`, `SystemClipboard`, `RestrictEditing`, `MailMerge`, and `CompareDocuments`). If you get stuck, compare your code against the sample to find the discrepancy.
+A complete working sample that implements all the endpoints described in this documentation (`Import`, `Save`, `SystemClipboard`, `RestrictEditing`, `MailMerge`, and `CompareDocuments`) is available on GitHub. If you run into any issues, compare your code with the sample to find the discrepancy.
 
 **Sample repository:** [EJ2-Document-Editor-Web-Services — Python](https://github.com/SyncfusionExamples/EJ2-Document-Editor-Web-Services/tree/master/Python)
