@@ -74,6 +74,7 @@ N> Deleting via the API requires the annotation to exist in the current document
 - [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
 - [Create and Modify Annotation](../annotation/create-modify-annotation)
 - [Customize Annotation](../annotation/customize-annotation)
+- [Resize and Move Annotations](../annotation/resize-move-annotations)
 - [Handwritten Signature](../annotation/signature-annotation)
 - [Export and Import Annotation](../annotation/export-import/export-annotation)
 - [Annotation Permission](../annotation/annotation-permission)

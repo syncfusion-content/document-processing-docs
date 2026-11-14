@@ -96,6 +96,7 @@ Examples:
 - [Annotation Types](../annotation/annotation-types/area-annotation)
 - [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
 - [Create and Modify Annotation](../annotation/create-modify-annotation)
+- [Resize and Move Annotations](../annotation/resize-move-annotations)
 - [Customize Annotation](../annotation/customize-annotation)
 - [Remove Annotation](../annotation/delete-annotation)
 - [Handwritten Signature](../annotation/signature-annotation)

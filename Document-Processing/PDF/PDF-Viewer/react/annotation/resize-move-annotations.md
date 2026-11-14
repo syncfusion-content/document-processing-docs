@@ -56,7 +56,7 @@ const resizeAnnotation = () => {
 To move an annotation programmatically, update the relevant property of the annotation and call the `editAnnotation` API.
 
 - To move an annotation to a **different page**, update the `pageNumber` property of the annotation.
-- To move an annotation **within the same page**, update the `x` and `y` values of the annotation `bounds`.
+- To move an annotation **within the same page**, update the `left` and `top` values (or `x` and `y`, depending on the bounds object structure) of the annotation's `bounds` object.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}

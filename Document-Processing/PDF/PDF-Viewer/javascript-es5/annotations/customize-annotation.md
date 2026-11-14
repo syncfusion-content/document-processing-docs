@@ -300,6 +300,7 @@ viewer.appendTo('#PdfViewer');
 - [Annotation Types](../annotations/annotation-types/area-annotation)
 - [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
 - [Create and Modify Annotation](../annotations/create-modify-annotation)
+- [Resize and Move Annotations](../annotations/resize-move-annotations)
 - [Remove Annotation](../annotations/delete-annotation)
 - [Handwritten Signature](../annotations/signature-annotation)
 - [Export and Import Annotation](../annotations/export-import/export-annotation)

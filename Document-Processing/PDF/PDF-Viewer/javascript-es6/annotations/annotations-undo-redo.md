@@ -66,6 +66,7 @@ Add the below `serviceUrl` in the `index.ts` file
 - [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
 - [Create and Modify Annotation](./create-modify-annotation)
 - [Customize Annotation](./customize-annotation)
+- [Resize and Move Annotations](./resize-move-annotations)
 - [Remove Annotation](./delete-annotation)
 - [Handwritten Signature](./signature-annotation)
 - [Export and Import Annotation](./export-import/export-annotation)
