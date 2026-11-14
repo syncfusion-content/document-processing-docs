@@ -4,6 +4,7 @@ description: Learn how to create, edit, and format SmartArt diagrams in PowerPoi
 platform: document-processing
 control: Presentation
 documentation: UG
+appliesto: Document SDK
 ---
 # Working with SmartArt in PowerPoint Presentation
 

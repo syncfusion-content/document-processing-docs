@@ -4,6 +4,7 @@ description: Explore performance benchmark results and metrics of the Syncfusion
 platform: document-processing
 control: Presentation
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Performance Metrics in .NET PowerPoint Library

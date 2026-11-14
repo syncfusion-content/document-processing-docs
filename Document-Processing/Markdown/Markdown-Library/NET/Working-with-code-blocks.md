@@ -4,6 +4,7 @@ description: Learn how to add, format, and modify code blocks in a Markdown docu
 platform: document-processing
 control: Markdown
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Code Blocks in .NET Markdown Library

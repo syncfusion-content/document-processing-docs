@@ -5,6 +5,7 @@ platform: document-processing
 control: SmartDataExtractor
 documentation: UG
 keywords: Assemblies
+appliesto: Document SDK
 ---
 
 # Extract data as Excel from PDF or Image

@@ -4,6 +4,7 @@ description: Learn how to modify the appearance of data labels in a chart in a P
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Chart Data Labels in PowerPoint

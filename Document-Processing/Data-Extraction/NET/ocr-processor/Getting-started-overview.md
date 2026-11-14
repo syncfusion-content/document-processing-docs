@@ -5,6 +5,7 @@ description: Learn about how to getting started with Syncfusion .NET OCR Process
 platform: document-processing
 control: PDF
 documentation: UG
+appliesto: Document SDK
 ---
 # Getting Started with Syncfusion .NET OCR Processor
 

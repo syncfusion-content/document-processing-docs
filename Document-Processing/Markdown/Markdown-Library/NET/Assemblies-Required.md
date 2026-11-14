@@ -4,6 +4,7 @@ description: Learn the required assemblies for creating, reading, editing, and p
 platform: document-processing
 control: Markdown
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Assemblies Required in .NET Markdown Library

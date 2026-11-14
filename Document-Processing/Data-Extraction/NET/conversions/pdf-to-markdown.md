@@ -5,6 +5,7 @@ platform: document-processing
 control: SmartDataExtractor
 documentation: UG
 keywords: Assemblies
+appliesto: Document SDK
 ---
 
 # Convert PDF to Markdown in .NET Smart Data Extractor

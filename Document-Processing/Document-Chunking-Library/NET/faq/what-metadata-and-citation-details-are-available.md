@@ -4,6 +4,7 @@ description: Learn about the metadata and citation details available in chunks g
 platform: document-processing
 control: Chunking
 documentation: UG
+appliesto: Document SDK
 ---
 
 # What Metadata and Citation Details Are Available?

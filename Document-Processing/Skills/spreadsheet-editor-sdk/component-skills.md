@@ -5,6 +5,7 @@ platform: document-processing
 control: Spreadsheet Editor SDK
 documentation: ug
 keywords: Skills, AI Assistants, Spreadsheet Editor SDK, Agent Skills
+appliesto: Spreadsheet Editor SDK
 ---
 
 # Agent Skills in Spreadsheet Editor SDK

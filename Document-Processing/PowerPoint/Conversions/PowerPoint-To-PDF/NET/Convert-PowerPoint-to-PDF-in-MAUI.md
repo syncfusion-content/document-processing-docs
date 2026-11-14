@@ -4,6 +4,7 @@ description: Convert PowerPoint to PDF in .NET MAUI using .NET PowerPoint librar
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert PowerPoint to PDF in .NET MAUI

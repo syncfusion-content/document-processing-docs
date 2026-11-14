@@ -5,6 +5,7 @@ description: Syncfusion Document SDK AI Tools simplify document processing, edit
 platform: document-processing
 control: AI Tools
 documentation: ug
+appliesto: Document SDK
 ---
 
 # AI-Powered Development with Syncfusion Document SDK AI Tools

@@ -4,6 +4,7 @@ description: Convert PowerPoint to image in .NET MAUI using .NET PowerPoint libr
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert PowerPoint to Image in .NET MAUI

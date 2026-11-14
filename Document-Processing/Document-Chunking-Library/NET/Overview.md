@@ -4,6 +4,7 @@ description: Learn how the Syncfusion® .NET Document Chunking Library prepares 
 platform: document-processing
 control: Chunking
 documentation: UG
+appliesto: Document SDK
 ---
 
 # About Syncfusion .NET Document Chunking Library

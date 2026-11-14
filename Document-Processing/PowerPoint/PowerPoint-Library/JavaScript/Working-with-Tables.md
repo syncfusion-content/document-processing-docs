@@ -6,6 +6,7 @@ platform: document-processing
 control: PowerPoint
 documentation: ug
 keywords: javascript, powerpoint
+appliesto: Document SDK
 ---
 
 # Working with Tables in JavaScript PowerPoint

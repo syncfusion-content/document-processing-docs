@@ -4,6 +4,7 @@ description: Learn about the Syncfusion® JavaScript PowerPoint Library for crea
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # About Syncfusion® JavaScript PowerPoint Library

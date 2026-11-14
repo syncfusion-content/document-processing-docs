@@ -4,6 +4,7 @@ description: Convert PowerPoint to PDF in WPF using .NET PowerPoint library (Pre
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert PowerPoint to PDF in WPF

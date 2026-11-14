@@ -5,6 +5,7 @@ platform: document-processing
 control: Syncfusion<sup>&reg;</sup> PowerPoint presentation
 documentation: 
 keywords: PowerPoint, slide, table, format-table, rows, columns, pptx
+appliesto: Document SDK
 ---
 # Working with PowerPoint Tables
 

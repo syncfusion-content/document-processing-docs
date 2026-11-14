@@ -4,6 +4,7 @@ description: Learn about the chunking modes supported for Excel, Word, PDF, Powe
 platform: document-processing
 control: Chunking
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Chunking Modes in .NET Document Chunking Library

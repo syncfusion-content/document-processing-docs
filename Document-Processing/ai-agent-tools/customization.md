@@ -5,6 +5,7 @@ description: Learn how to extend and customize the Syncfusion Document SDK Agent
 platform: document-processing
 control: AI Agent Tools
 documentation: ug
+appliesto: Document SDK
 ---
 
 # Customization in Document SDK AI Agent Tools 

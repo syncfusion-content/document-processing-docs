@@ -4,6 +4,7 @@ description: Convert PowerPoint to image in Windows Forms using .NET PowerPoint 
 platform: document-processing
 control: PowerPoint
 documentation: UG
+appliesto: Document SDK
 ---
 
 # Convert PowerPoint to Image in Windows Forms
