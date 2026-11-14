@@ -46,7 +46,26 @@ ng new pptx-editor-app
 
 In this guide, CSS is selected as the stylesheet format.
 
-**Step 3:** Navigate to the created project folder.
+**Step 3:** During project setup, when prompted for the server-side rendering (SSR) option, choose the appropriate configuration.
+
+```text
+? Do you want to enable Server-Side Rendering (SSR) and Static Site Generation (SSG/Prerendering)? (y/N) N
+```
+
+**Step 4:** Select the required AI tool or 'none' if you do not need any AI tool.
+
+```text
+? Which AI tools do you want to configure with Angular best practices? https://angular.dev/ai/develop-with-ai
+❯ None
+  Agents.md      [ https://agents.md/                                               ]
+  Claude         [ https://docs.anthropic.com/en/docs/claude-code/memory            ]
+  Cursor         [ https://docs.cursor.com/en/context/rules                         ]
+  Gemini         [ https://ai.google.dev/gemini-api/docs                            ]
+  GitHub Copilot [ https://code.visualstudio.com/docs/copilot/copilot-customization ]
+  JetBrains AI   [ https://www.jetbrains.com/help/junie/customize-guidelines.html   ]
+```
+
+**Step 5:** Navigate to the created project folder.
 
 ```bash
 cd pptx-editor-app
@@ -79,14 +98,12 @@ This guide uses the `Tailwind 3` theme as an example, sourced from the theme pac
 npm install @syncfusion/ej2-tailwind3-theme
 ```
 
-By default, projects include an `src/styles.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `src/styles.css` file to prevent style conflicts.
-
 The required styles for the PPTX Editor are imported in the **src/styles.css** file:
 
 {% tabs %}
 {% highlight css tabtitle="styles.css" %}
 
-@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/pptx-editor/index.css";
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/pptxeditor/index.css";
 
 {% endhighlight %}
 {% endtabs %}
@@ -98,47 +115,26 @@ Modify `src/app/app.ts` to render the PPTX Editor component by adding the Angula
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
 
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import {
-  PptxEditorComponent,
-  Toolbar,
-  ThumbnailView,
-  Magnification,
-  Navigation,
-  Print,
-  SlideShow
+    PptxEditorComponent, MagnificationService, NavigationService,
+    PrintService, SlideShowService, ThumbnailViewService, ToolbarService
 } from '@syncfusion/ej2-angular-pptxeditor';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [PptxEditorComponent],
-  providers: [Toolbar, ThumbnailView, Magnification, Navigation, Print, SlideShow],
-  template: `
-    <div class="control-section">
-      <ejs-pptxeditor id="container" #default_editor style="display:block">
-      </ejs-pptxeditor>
-    </div>
-  `
+    selector: 'app-root',
+    template: `<div class="content-wrapper">
+        <ejs-pptxeditor id="container" theme="tailwind3" documentPath="https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx">
+        </ejs-pptxeditor>
+    </div>`,
+    encapsulation: ViewEncapsulation.None,
+    styleUrl: './app.css',
+    standalone: true,
+    imports: [PptxEditorComponent],
+    providers: [ToolbarService, ThumbnailViewService, MagnificationService, NavigationService, PrintService, SlideShowService]
 })
-export class App {
-  @ViewChild('default_editor')
-  public editor: PptxEditorComponent;
-}
 
-{% endhighlight %}
-{% endtabs %}
-
-To open a local PPTX file in the PPTX Editor, fetch the file as a blob and load it using the `openFromBlob` method:
-
-{% tabs %}
-{% highlight ts tabtitle="app.ts" %}
-
-import samplePptxUrl from '../sample.pptx?url';
-
-fetch(samplePptxUrl)
-  .then((response) => response.blob())
-  .then((blob) => this.editor.openFromBlob(blob, 'sample.pptx'));
+export class App { }
 
 {% endhighlight %}
 {% endtabs %}
@@ -151,6 +147,4 @@ Run the application using the following command:
 ng serve --open
 ```
 
-After the application starts, open the localhost URL shown in the terminal. The Angular PPTX Editor is rendered in the browser with a toolbar, thumbnail pane, and a slide area, as shown below.
-
-![Output of Angular PPTX Editor](./images/getting_started.png)
+After the application starts, open the localhost URL shown in the terminal. The Angular PPTX Editor is rendered in the browser with a toolbar, thumbnail pane, and a slide area.

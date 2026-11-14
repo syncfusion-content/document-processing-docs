@@ -71,7 +71,7 @@ The required styles for the PPTX Editor are imported in the **src/index.css** fi
 {% tabs %}
 {% highlight css tabtitle="index.css" %}
 
-@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/pptx-editor/index.css";
+@import "../node_modules/@syncfusion/ej2-tailwind3-theme/styles/pptxeditor/index.css";
 
 {% endhighlight %}
 {% endtabs %}
@@ -81,36 +81,7 @@ The required styles for the PPTX Editor are imported in the **src/index.css** fi
 Add the PPTX Editor component to your application. Add the following code to initialize the component:
 
 {% tabs %}
-{% highlight ts tabtitle="TypeScript (App.tsx)" %}
-
-import * as React from 'react';
-import {
-  PptxEditorComponent,
-  Toolbar,
-  ThumbnailView,
-  Magnification,
-  Navigation,
-  Print,
-  SlideShow
-} from '@syncfusion/ej2-react-pptxeditor';
-import samplePptxUrl from './sample.pptx?url';
-
-PptxEditorComponent.Inject(Toolbar, ThumbnailView, Magnification, Navigation, Print, SlideShow);
-
-function App() {
-  return (
-    <PptxEditorComponent
-      id="container"
-      height="590px"
-    />
-  );
-}
-
-export default App;
-
-{% endhighlight %}
-
-{% highlight js tabtitle="JavaScript (App.jsx)" %}
+{% highlight ts tabtitle="App.tsx" %}
 
 import {
   PptxEditorComponent,
@@ -119,35 +90,21 @@ import {
   Magnification,
   Navigation,
   Print,
-  SlideShow
+  SlideShow,
+  Inject
 } from '@syncfusion/ej2-react-pptxeditor';
-import samplePptxUrl from './sample.pptx?url';
-
-PptxEditorComponent.Inject(Toolbar, ThumbnailView, Magnification, Navigation, Print, SlideShow);
 
 function App() {
   return (
-    <PptxEditorComponent
-      id="container"
-    />
+    <div className='control-section'>
+      <PptxEditorComponent id='container' theme="tailwind3" documentPath='https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx'>
+        <Inject services={[Toolbar, ThumbnailView, Magnification, Navigation, Print, SlideShow]} />
+      </PptxEditorComponent>
+    </div>
   );
 }
 
 export default App;
-
-{% endhighlight %}
-{% endtabs %}
-
-To open a local PPTX file in the PPTX Editor, fetch the file as a blob and load it using the `openFromBlob` method:
-
-{% tabs %}
-{% highlight ts tabtitle="TypeScript (App.tsx)" %}
-
-import samplePptxUrl from './sample.pptx?url';
-
-fetch(samplePptxUrl)
-  .then((response) => response.blob())
-  .then((blob) => editor.openFromBlob(blob, 'sample.pptx'));
 
 {% endhighlight %}
 {% endtabs %}
@@ -160,6 +117,4 @@ Run the application using the following command:
 npm run dev
 ```
 
-After the application starts, open the localhost URL shown in the terminal. The React PPTX Editor is rendered in the browser with a toolbar, thumbnail pane, and a slide area, as shown below.
-
-![Output of React PPTX Editor](./images/getting_started.png)
+After the application starts, open the localhost URL shown in the terminal. The React PPTX Editor is rendered in the browser with a toolbar, thumbnail pane, and a slide area.
