@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Perform Mail Merge in ASP.NET Core DOCX Editor | Syncfusion
+title: How to perform mail merge in ASP.NET Core DOCX Editor | Syncfusion
 description: Perform mail merge in Syncfusion® ASP.NET Core DOCX Editor using the Word Library to generate personalized documents from data sources.
 control: Perform mail merge
 platform: document-processing
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to Perform Mail Merge in ASP.NET Core DOCX Editor
+# How to Perform mail merge in ASP.NET Core DOCX Editor
 
 You can perform mail merge in the [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) using the following approaches:
 
