@@ -22,6 +22,15 @@ keywords: PowerPoint, PPTX, SDK, view, read, slide, presentation
 
 {% doccard text="JavaScript (ES5)" link="/document-processing/powerpoint/pptx-editor/javascript-es5/getting-started" icon="/document-processing/powerpoint/pptx-editor/javascript-es5/images/JavaScript(ES5).svg" %}
 
+{% doccard text="ASP.NET Core" link="/document-processing/powerpoint/pptx-editor/asp-net-core/getting-started" icon="/document-processing/powerpoint/pptx-editor/asp-net-core/images/ASP.NET-Core.png" %}
+
+{% doccard text="ASP.NET MVC" link="/document-processing/powerpoint/pptx-editor/asp-net-mvc/getting-started" icon="/document-processing/powerpoint/pptx-editor/asp-net-mvc/images/ASP.NET-MVC.png" %}
+
 {% enddoccards %}
 
-Syncfusion<sup>&reg;</sup> PPTX Editor component is a Microsoft PowerPoint-like GUI component used to view and print PowerPoint presentations in JavaScript, Angular, React, and Vue applications that works without Microsoft Office dependencies. It eases you developers to just integrate this PowerPoint editor component to achieve the required presentation viewing functionalities and concentrate on core logics of your application.
+Syncfusion<sup>&reg;</sup> PPTX Editor component is a Microsoft PowerPoint-like GUI component used to view and print PowerPoint presentations in JavaScript, Angular, React, Vue, ASP.NET Core, and ASP.NET MVC applications that works without Microsoft Office dependencies. It eases you developers to just integrate this PowerPoint editor component to achieve the required presentation viewing functionalities and concentrate on core logics of your application.
+
+## ASP.NET integration
+
+* [ASP.NET Core](./asp-net-core/overview) – Add the PPTX Editor using the ASP.NET Core Tag Helper. See [Getting Started](./asp-net-core/getting-started).
+* [ASP.NET MVC](./asp-net-mvc/overview) – Host the JavaScript PPTX Editor in an MVC Razor view. See [Getting Started](./asp-net-mvc/getting-started).
