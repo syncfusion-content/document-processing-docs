@@ -83,7 +83,7 @@ The required styles for the PPTX Editor are imported in the **styles.css** file:
 {% tabs %}
 {% highlight css tabtitle="style.css" %}
 
-@import "../../node_modules/@syncfusion/ej2-tailwind3-theme/styles/pptx-editor/index.css";
+@import "../../node_modules/@syncfusion/ej2-tailwind3-theme/styles/pptxeditor/index.css";
 
 {% endhighlight %}
 {% endtabs %}
@@ -104,11 +104,10 @@ Add an HTML `div` element to act as the PPTX Editor element in the `index.html` 
     <meta name="description" content="Syncfusion TypeScript PPTX Editor" />
     <meta name="author" content="Syncfusion" />
     <link rel="shortcut icon" href="resources/favicon.ico" />
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
     <!-- Element which will render as PPTX Editor -->
-    <div id="PptxEditor"></div>
+    <div id="pptxEditor"></div>
 </body>
 </html>
 
@@ -129,16 +128,14 @@ import {
   Print,
   SlideShow
 } from '@syncfusion/ej2-pptxeditor';
-import samplePptxUrl from './sample.pptx?url';
 
 PptxEditor.Inject(Toolbar, ThumbnailView, Magnification, Navigation, Print, SlideShow);
 
-let editor: PptxEditor = new PptxEditor(undefined, document.getElementById('PptxEditor'), {});
-
-// Open a local presentation file in the PPTX Editor
-fetch(samplePptxUrl)
-  .then((response) => response.blob())
-  .then((blob) => editor.openFromBlob(blob, 'sample.pptx'));
+let editor: PptxEditor = new PptxEditor({
+  theme: 'tailwind3',
+  documentPath: 'https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx'
+});
+editor.appendTo('#pptxEditor');
 
 {% endhighlight %}
 {% endtabs %}
@@ -155,6 +152,4 @@ npm start
 {% endhighlight %}
 {% endtabs %}
 
-After the application starts, open the localhost URL shown in the terminal. The TypeScript PPTX Editor is rendered in the browser with a toolbar, thumbnail pane, and a slide area, as shown below.
-
-![Output of TypeScript PPTX Editor](./images/getting_started.png)
+After the application starts, open the localhost URL shown in the terminal. The TypeScript PPTX Editor is rendered in the browser with a toolbar, thumbnail pane, and a slide area.
