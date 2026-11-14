@@ -117,3 +117,4 @@ Collaborative editing is suitable for workflows where multiple users review or u
 - [Using Redis Cache with ASP.NET Core](./aspnet-core-redis)
 - [Syncfusion Collaborator overview](https://help.syncfusion.com/document-processing/collaborator/overview)
 - [Collaborator frequently asked questions](https://help.syncfusion.com/document-processing/collaborator/faq)
+- [Learn how to estimate Redis and Collaboration Server capacity for collaborative editing](../../../../Collaborator/faq#6-how-do-i-calculate-the-redis-and-server-configuration-for-collaborative-editing)

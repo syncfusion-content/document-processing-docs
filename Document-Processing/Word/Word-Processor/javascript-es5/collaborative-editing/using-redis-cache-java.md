@@ -302,3 +302,8 @@ jedis.publish("collaborativeediting", new com.fasterxml.jackson.databind.ObjectM
 Full version of the code discussed about can be found in below GitHub location.
 
 GitHub Example: [`Collaborative editing examples`](https://github.com/SyncfusionExamples/EJ2-Document-Editor-Collaborative-Editing)
+
+
+## See Also
+
+- [Learn how to estimate Redis and Collaboration Server capacity for collaborative editing](../../../../Collaborator/faq#6-how-do-i-calculate-the-redis-and-server-configuration-for-collaborative-editing)
