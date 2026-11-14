@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to Perform mail merge in JavaScript (ES5) DOCX Editor
+# How to perform mail merge in JavaScript (ES5) DOCX Editor
 
 You can perform mail merge in the [JavaScript (ES5) DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) using the following approaches:
 
