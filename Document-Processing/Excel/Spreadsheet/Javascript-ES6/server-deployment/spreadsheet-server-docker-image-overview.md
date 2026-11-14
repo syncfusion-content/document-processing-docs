@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Docker Image Deployment in TypeScript Spreadsheet  | Syncfusion
-description: Docker image deployment in TypeScript Spreadsheet enables containerized hosting for consistent, scalable, and efficient application delivery.
+title: Docker image deployment in TypeScript Spreadsheet | Syncfusion
+description: Learn about Docker image deployment for the Syncfusion TypeScript Spreadsheet component and Spreadsheet Server services.
 platform: document-processing
-control: Docker deployment
+control: Docker deployment 
 documentation: ug
 ---
 
-# Docker Image Overview in TypeScript Spreadsheet 
+# Docker Image Deployment in TypeScript Spreadsheet
 
-The [**Syncfusion<sup style="font-size:70%">&reg;</sup> Spreadsheet (also known as Excel Viewer)**](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) is a feature-rich control for organizing and analyzing data in a tabular format. It provides all the common Excel features, including data binding, selection, editing, formatting, resizing, sorting, filtering, importing, and exporting Excel documents.
+The [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) component is a feature-rich control for organizing and analyzing data in a tabular format. It provides all the common Excel features, including data binding, selection, editing, formatting, resizing, sorting, filtering, importing, and exporting Excel documents.
 
-This Docker image is the pre-defined Docker container for Syncfusion's<sup style="font-size:70%">&reg;</sup> Spreadsheet backend functionalities. This server-side Web API project targets ASP.NET Core 8.0.
+This Docker image is the pre-defined Docker container for TypeScript Spreadsheet back-end functionalities. This server-side Web API project targets ASP.NET Core 8.0.
 
 You can deploy it quickly to your infrastructure. If you want to add new functionality or customize any existing functionalities, create your own Docker file by referencing the existing [Spreadsheet Docker project](https://github.com/SyncfusionExamples/Spreadsheet-Server-Docker).
 
@@ -32,7 +32,7 @@ Have [`Docker`](https://www.docker.com/products/container-runtime#/download) ins
 docker pull syncfusion/spreadsheet-server
 ```
 
-**Step 2:** Create a `docker-compose.yml` file with the following code in your file system.
+**Step 2:** Create the `docker-compose.yml` file with the following code in your file system.
 
 ```yaml
 version: '3.4' 
@@ -57,40 +57,38 @@ docker-compose up
 
 Now the Spreadsheet server Docker instance runs on localhost with the provided port number `http://localhost:6002`. Open this link in a browser and navigate to the Spreadsheet Web API open and save service at `http://localhost:6002/api/spreadsheet/open` and `http://localhost:6002/api/spreadsheet/save`.
 
-**Step 4:** Append the URLs of the Docker instance running services to the [`openUrl`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#openurl) property as `http://localhost:6002/api/spreadsheet/open` and the [`saveUrl`](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#saveurl) property as `http://localhost:6002/api/spreadsheet/save` in the client-side Spreadsheet control. For more information on how to get started with the Spreadsheet control, refer to this [`getting started page.`](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es6/getting-started)
+**Step 4:** Append the URLs of the Docker instance running services to the [`openUrl`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#openurl) property as `http://localhost:6002/api/spreadsheet/open` and the [`saveUrl`](https://ej2.syncfusion.com/documentation/api/spreadsheet/index-default#saveurl) property as `http://localhost:6002/api/spreadsheet/save` in the client-side Spreadsheet component. For more information on how to get started with the Spreadsheet component, refer to this [`getting started page.`](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es6/getting-started)
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Essential JS 2</title>
+    <title>Syncfusion TypeScript Spreadsheet</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-    <meta name="description" content="Essential JS 2" />
+    <meta name="description" content="Syncfusion TypeScript Spreadsheet" />
     <meta name="author" content="Syncfusion" />
     <link rel="shortcut icon" href="resources/favicon.ico" />
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
-    <!--Element which will render as Spreadsheet-->
-    <div id="Spreadsheet"></div>
+    <!-- Element which will render as Spreadsheet -->
+    <div id="element"></div>
 </body>
 </html>
 ```
 
 ```ts
-
 import { Spreadsheet } from '@syncfusion/ej2-spreadsheet';
 
-// Initialize Spreadsheet control
-let spreadsheet: Spreadsheet = new Spreadsheet({
-  openUrl: 'http://localhost:6002/api/spreadsheet/open',
-  saveUrl: 'http://localhost:6002/api/spreadsheet/save'
+// Initialize the Spreadsheet component
+const spreadsheet: Spreadsheet = new Spreadsheet({
+    openUrl: 'http://localhost:6002/api/spreadsheet/open',
+    saveUrl: 'http://localhost:6002/api/spreadsheet/save'
 });
 
-// Render initialized Spreadsheet
-spreadsheet.appendTo('#Spreadsheet');
-
+// Render the Spreadsheet Component.
+spreadsheet.appendTo('#element');
 ```
 
 ## How to configure different cultures using a Docker compose file
@@ -114,4 +112,4 @@ services:
       - "6002:8080"
 ```
 
-Please refer to these getting started pages to create a Spreadsheet in [`Angular`](https://help.syncfusion.com/document-processing/excel/spreadsheet/angular/getting-started), [`React`](https://help.syncfusion.com/document-processing/excel/spreadsheet/react/getting-started), [`Vue`](https://help.syncfusion.com/document-processing/excel/spreadsheet/vue/getting-started), [`ASP.NET Core`](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/getting-started-core), and [`ASP.NET MVC`](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-mvc/getting-started-mvc).
+Please refer to these getting started pages to create a Spreadsheet in [`Javascript`](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es5/getting-started), [`Angular`](https://help.syncfusion.com/document-processing/excel/spreadsheet/angular/getting-started), [`Vue`](https://help.syncfusion.com/document-processing/excel/spreadsheet/vue/getting-started), [`ASP.NET Core`](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-core/getting-started-core), and [`ASP.NET MVC`](https://help.syncfusion.com/document-processing/excel/spreadsheet/asp-net-mvc/getting-started-mvc).

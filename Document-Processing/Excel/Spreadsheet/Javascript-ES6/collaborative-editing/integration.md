@@ -19,7 +19,7 @@ Install the Collaborator package in the TypeScript application.
 npm install @syncfusion/ej2-collaborator
 ```
 
-For details about connection types, room management, and collaboration events, refer to the [Collaboration Client documentation](https://help.syncfusion.com/document-processing/collaborator/collaboration-client).
+For details about the client package, connection types, room management, and collaboration events, refer to the [Collaboration Client documentation](https://help.syncfusion.com/document-processing/collaborator/collaboration-client).
 
 ## Collaboration Client configuration
 

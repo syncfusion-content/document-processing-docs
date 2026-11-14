@@ -1,19 +1,19 @@
 ---
 layout: post
 title: Keyboard Shortcuts in TypeScript Spreadsheet | Syncfusion
-description: Keyboard shortcuts in TypeScript Spreadsheet help users perform common actions quickly, improving productivity and navigation efficiency.
-platform: document-processing
+description: Learn about keyboard shortcuts in the Syncfusion TypeScript Spreadsheet control for efficient navigation and editing.
 control: Keyboard shortcuts
+platform: document-processing
 documentation: ug
 ---
 
-# Keyboard shortcuts in TypeScript Spreadsheet 
+# Keyboard shortcuts in TypeScript Spreadsheet
 
 The keyboard shortcuts supported in the spreadsheet are,
 
 | Shortcut | Description |
-|-------|---------|
-| Ctrl + O | Displays a dialog to open a file. |
+|----------|-------------|
+| Ctrl + O | Displays dialog to open a file. |
 | Ctrl + S / Alt + F2 | Saves the workbook. |
 | Ctrl + P | Print the active worksheet when the spreadsheet is in focus. |
 | F2 | Enables edit mode. |
@@ -114,6 +114,10 @@ The keyboard shortcuts supported in the spreadsheet are,
 | Right | Move the focus to the next items in the ribbon content. |
 | Alt + Down | Open the ribbon dropdown menu. |
 | Esc / Alt + Up | Close the ribbon dropdown menu. |
+
+## Note
+
+You can refer to our [JavaScript Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/javascript-spreadsheet-editor) feature tour page for its groundbreaking feature representations.
 
 ## See Also
 

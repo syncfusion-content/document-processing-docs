@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Suspend and Resume UI Refresh in TypeScript Spreadsheet | Syncfusion
-description: Suspend and resume UI refresh in TypeScript Spreadsheet improve performance by batching multiple updates and reducing unnecessary rendering.
+description: Improve performance in Syncfusion TypeScript Spreadsheet by using suspendRefresh and resumeRefresh to group multiple updates and avoid repeated rendering.
 platform: document-processing
 control: Spreadsheet
 documentation: ug

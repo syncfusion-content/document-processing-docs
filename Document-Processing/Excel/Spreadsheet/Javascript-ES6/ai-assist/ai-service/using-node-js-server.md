@@ -7,7 +7,7 @@ control: AI Assist Node.js Server Setup
 documentation: ug
 ---
 
-# AI Assist Node.js Server Setup in TypeScript Spreadsheet
+# AI Assist — Node.js Server Setup in TypeScript Spreadsheet
 
 AI Assist requires a backend service to process prompts and return AI-generated responses. This topic explains how to create a **Node.js** server with **Azure OpenAI** credentials.
 
@@ -42,7 +42,7 @@ const azureDeploymentName   = 'Your_Deployment_Name';
 
 ## Install dependencies
 
-Run the following command in your server project:
+Run the following command in the server project directory:
 
 ```bash
 npm install express cors dotenv openai date-fns
@@ -163,7 +163,7 @@ Run the following command to start the server:
 npm start
 ```
 
-The server runs on `http://localhost:3000`. Update the AI Assist endpoint like below:
+The server runs on `http://localhost:3000`. Update the AI Assist endpoint as shown below:
 
 ```
 http://localhost:3000/api/AIAssist/Chat

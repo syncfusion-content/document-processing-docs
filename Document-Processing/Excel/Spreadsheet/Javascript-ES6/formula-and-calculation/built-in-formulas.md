@@ -1,162 +1,17 @@
 ---
 layout: post
-title: Formulas in TypeScript Spreadsheet | Syncfusion
-description: Formulas in TypeScript Spreadsheet enable users to perform calculations, automate data processing, and analyze information efficiently.
+title: Built-in Formulas and Functions in TypeScript Spreadsheet | Syncfusion
+description: Learn about built-in formulas and functions in the Syncfusion TypeScript Spreadsheet control for calculations and data analysis.
+control: Formulas 
 platform: document-processing
-control: Formulas
 documentation: ug
 ---
 
-# Formulas in TypeScript Spreadsheet 
+# Built-in Formulas and Functions in TypeScript Spreadsheet
 
-Formulas are used for calculating the data in a worksheet. You can refer the cell reference from the same sheet or from a different sheet.
+The Spreadsheet control supports a comprehensive set of built-in formulas organized by category. These formulas can be used to perform calculations, analyze data, manipulate text, process dates and times, evaluate logical conditions, retrieve information, and work with financial, engineering, and database data. The formulas supported in the Spreadsheet control are listed below by category.
 
-## Usage
-
-You can set formula for a cell in the following ways:
-
-* Using the `formula` property from `cell`, you can set the formula or expression to each cell at initial load.
-* Set the formula or expression through data binding.
-* You can set formula for a cell by [`editing`](./editing).
-* Using the [`updateCell`](https://ej2.syncfusion.com/documentation/api/spreadsheet#updatecell) method, you can set or update the cell formula.
- 
-
-## Culture-Based Argument Separator
-
-Previously, although you could import culture-based Excel files into the Spreadsheet, the formulas wouldn't calculate correctly. This was due to the absence of culture-based argument separators and support for culture-based formatted numeric values as arguments. However, starting from version 25.1.35, you can now import culture-based Excel files into the Spreadsheet component.
-
-> Before importing culture-based Excel files, ensure that the Spreadsheet is rendered with the corresponding culture. Additionally, launch the import/export services with the same culture to ensure compatibility.
-
-When loading spreadsheet data with culture-based formula argument separators using cell data binding, local/remote data, or JSON, ensure to set the [listSeparator](https://ej2.syncfusion.com/documentation/api/spreadsheet#listseparator) property value as the culture-based list separator from your end. Additionally, note that when importing an Excel file, the [listSeparator](https://ej2.syncfusion.com/documentation/api/spreadsheet#listseparator) property will be updated based on the culture of the launched import/export service.
-
-In the example below, the Spreadsheet component is rendered with the `German` [`de`] culture. Additionally, you can find references on how to set the culture-based argument separator and culture-based formatted numeric value as arguments to the formulas.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/javascript-es6/formula-cs3/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/javascript-es6/formula-cs3/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/formula-cs3" %}
-
-## Create User Defined Functions / Custom Functions
-
-The Spreadsheet includes a number of built-in formulas. For your convenience, a list of supported formulas can be found [here](https://help.syncfusion.com/document-processing/excel/spreadsheet/javascript-es6/formulas#supported-formulas).
-
-You can define and use an unsupported formula, i.e. a user defined/custom formula, in the spreadsheet by using the [addCustomFunction](https://ej2.syncfusion.com/documentation/api/spreadsheet#addcustomfunction) function. Meanwhile, remember that you should define a user defined/custom formula whose results should only return a single value. If a user-defined/custom formula returns an array, it will be time-consuming to update adjacent cell values.
-
-The following code example shows an unsupported formula in the spreadsheet.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/javascript-es6/formula-cs1/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/javascript-es6/formula-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/formula-cs1" %}
-
-Second, if you want to directly compute any formula or expression, you can use the [computeExpression](https://ej2.syncfusion.com/documentation/api/spreadsheet#computeexpression) method. This method will work for both built-in and user-defined/custom formula.
- 
-The following code example shows how to use `computeExpression` method in the spreadsheet.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/javascript-es6/formula-cs2/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/javascript-es6/formula-cs2/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/formula-cs2" %}
-
-## Formula bar
-
-Formula bar is used to edit or enter cell data in much easier way. By default, the formula bar is enabled in the spreadsheet. Use the [`showFormulaBar`](https://ej2.syncfusion.com/documentation/api/spreadsheet#showformulabar) property to enable or disable the formula bar.
-
-## Named Ranges
-
-You can define a meaningful name for a cell range and use it in the formula for calculation. It makes your formula much easier to understand and maintain. You can add named ranges to the Spreadsheet in the following ways,
-
-* Using the [`definedNames`](https://ej2.syncfusion.com/documentation/api/spreadsheet#definednames) collection, you can add multiple named ranges at initial load.
-* Use the [`addDefinedName`](https://ej2.syncfusion.com/documentation/api/spreadsheet#adddefinedname) method to add a named range dynamically.
-* You can remove an added named range dynamically using the [`removeDefinedName`](https://ej2.syncfusion.com/documentation/api/spreadsheet#removedefinedname) method.
-* Select the range of cells, and then enter the name for the selected range in the `Name box`.
-
-The following code example shows the usage of named ranges support.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/javascript-es6/defined-name-cs1/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/javascript-es6/defined-name-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/defined-name-cs1" %}
-
-## Calculation Mode
-
-The Spreadsheet provides a `Calculation Mode` feature like the calculation options in online Excel. This feature allows you to control when and how formulas are recalculated in the spreadsheet. The available modes are:
-
-* `Automatic`: Formulas are recalculated instantly whenever a change occurs in the dependent cells.
-* `Manual`: Formulas are recalculated only when triggered explicitly by the user using options like `Calculate Sheet` or `Calculate Workbook`.
-
-You can configure the calculate mode using the [`calculationMode`](https://ej2.syncfusion.com/documentation/api/spreadsheet#calculationmode) property of the Spreadsheet. These modes offer flexibility to balance real-time updates and performance optimization.
-
-### Automatic Mode
-
-In Automatic Mode, formulas are recalculated instantly whenever a dependent cell is modified. This mode is perfect for scenarios where real-time updates are essential, ensuring that users see the latest results without additional actions.
-
-For example, consider a spreadsheet where cell `C1` contains the formula `=A1+B1`. When the value in `A1` or `B1` changes, `C1` updates immediately without requiring any user intervention. You can enable this mode by setting the [`calculationMode`](https://ej2.syncfusion.com/documentation/api/spreadsheet#calculationmode) property to `Automatic`.
-
-The following code example demonstrates how to set the Automatic calculation mode in a Spreadsheet.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/javascript-es6/calculation-cs1/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/javascript-es6/calculation-cs1/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/calculation-cs1" %}
-
-### Manual Mode
-
-In Manual Mode, formulas are not recalculated automatically when cell values are modified. Instead, recalculations must be triggered explicitly. This mode is ideal for scenarios where performance optimization is a priority, such as working with large datasets or computationally intensive formulas.
-
-For example, imagine a spreadsheet where cell `C1` contains the formula `=A1+B1`. When the value in `A1` or `B1` changes, the value in `C1` will not update automatically. Instead, the recalculation must be initiated manually using either the `Calculate Sheet` or `Calculate Workbook` option. To manually initiate recalculation, the Spreadsheet provides two options:
-
-* `Calculate Sheet`: Recalculates formulas for the active sheet only.
-* `Calculate Workbook`: Recalculates formulas across all sheets in the workbook.
-
-The following code example demonstrates how to set the Manual calculation mode in a Spreadsheet.
-
-{% tabs %}
-{% highlight ts tabtitle="index.ts" %}
-{% include code-snippet/spreadsheet/javascript-es6/calculation-cs2/index.ts %}
-{% endhighlight %}
-{% highlight html tabtitle="index.html" %}
-{% include code-snippet/spreadsheet/javascript-es6/calculation-cs2/index.html %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "/document-processing/code-snippet/spreadsheet/javascript-es6/calculation-cs2" %}
-
-## Built-in Formulas and Functions
-
-The Spreadsheet component supports a comprehensive set of built-in formulas organized by category. These formulas can be used to perform calculations, analyze data, manipulate text, process dates and times, evaluate logical conditions, retrieve information, and work with financial, engineering, and database data. The formulas supported in the Spreadsheet component are listed below by category.
-
-### Math & Trigonometry
+## Math & Trigonometry
 
 | Formula | Description |
 |---------|-------------|
@@ -218,7 +73,8 @@ The Spreadsheet component supports a comprehensive set of built-in formulas orga
 | TANH | Returns the hyperbolic tangent of a number. |
 | TRUNC | Truncates a supplied number to a specified number of decimal places. |
 
-### Statistical & Aggregate
+
+## Statistical & Aggregate
 
 | Formula | Description |
 |---------|-------------|
@@ -307,7 +163,7 @@ The Spreadsheet component supports a comprehensive set of built-in formulas orga
 | WEIBULL | Returns the Weibull distribution. |
 | ZTEST | Returns the one-tailed probability-value of a z-test. |
 
-### Logical
+## Logical
 
 | Formula | Description |
 |---------|-------------|
@@ -323,7 +179,7 @@ The Spreadsheet component supports a comprehensive set of built-in formulas orga
 | TRUE | Returns the logical value TRUE. |
 | XOR | Returns a logical exclusive OR of all arguments. |
 
-### Text
+## Text
 
 | Formula | Description |
 |---------|-------------|
@@ -365,7 +221,7 @@ The Spreadsheet component supports a comprehensive set of built-in formulas orga
 | VALUE | Converts a text argument to a number. |
 | VALUETOTEXT | Returns text from any specified value. |
 
-### Date & Time
+## Date & Time
 
 | Formula | Description |
 |---------|-------------|
@@ -394,7 +250,7 @@ The Spreadsheet component supports a comprehensive set of built-in formulas orga
 | YEAR | Converts a serial number to a year. |
 | YEARFRAC | Returns the year fraction representing the number of whole days between start_date and end_date. |
 
-### Lookup & Reference
+## Lookup & Reference
 
 | Formula | Description |
 |---------|-------------|
@@ -419,7 +275,7 @@ The Spreadsheet component supports a comprehensive set of built-in formulas orga
 | XLOOKUP | Searches a range for a match and returns the corresponding item. |
 | XMATCH | Returns the relative position of an item in an array. |
 
-### Financial
+## Financial
 
 | Formula | Description |
 |---------|-------------|
@@ -477,7 +333,7 @@ The Spreadsheet component supports a comprehensive set of built-in formulas orga
 | YIELDDISC | Returns the annual yield for a discounted security. |
 | YIELDMAT | Returns the annual yield of a security that pays interest at maturity. |
 
-### Engineering
+## Engineering
 
 | Formula | Description |
 |---------|-------------|
@@ -521,7 +377,7 @@ The Spreadsheet component supports a comprehensive set of built-in formulas orga
 | OCT2DEC | Converts an octal number to decimal. |
 | OCT2HEX | Converts an octal number to hexadecimal. |
 
-### Database
+## Database
 
 | Formula | Description |
 |---------|-------------|
@@ -538,7 +394,7 @@ The Spreadsheet component supports a comprehensive set of built-in formulas orga
 | DVAR | Estimates variance based on a sample of entries that match criteria. |
 | DVARP | Calculates variance based on the entire population of entries that match criteria. |
 
-### Information
+## Information
 
 | Formula | Description |
 |---------|-------------|
@@ -559,28 +415,3 @@ The Spreadsheet component supports a comprehensive set of built-in formulas orga
 | N | Returns a value converted to a number. |
 | NA | Returns the error value #N/A. |
 | TYPE | Returns a number indicating the data type of a value. |
-
-## Formula Error Dialog
-
-If you enter an invalid formula in a cell, an error dialog with an error message will appear. For instance, a formula with the incorrect number of arguments, a formula without parenthesis, etc.
-
-| Error Message | Reason |
-|-------|---------|
-| We found that you typed a formula with an invalid arguments | Occurs when passing an argument even though it wasn't needed. |
-| We found that you typed a formula with an empty expression | Occurs when passing an empty expression in the argument. |
-| We found that you typed a formula with one or more missing opening or closing parenthesis | Occurs when an open parenthesis or a close parenthesis is missing. |
-| We found that you typed a formula which is improper | Occurs when passing a single reference but a range was needed. |
-| We found that you typed a formula with a wrong number of arguments | Occurs when the required arguments were not passed. |
-| We found that you typed a formula which requires 3 arguments | Occurs when the required 3 arguments were not passed. |
-| We found that you typed a formula with a mismatched quotes | Occurs when passing an argument with mismatched quotes. |
-| We found that you typed a formula with a circular reference | Occurs when passing a formula with circular cell reference. |
-| We found that you typed a formula which is invalid | Except in the cases mentioned above, all other errors will fall into this broad category. |
-
-![Formula Alert Dialog in JavaScript Spreadsheet.](./images/javascript-spreadsheet-formula-alert-dialog.png)
-
-## See Also
-
-* [Editing](./editing)
-* [Formatting](./formatting)
-* [Open](./open-save#open)
-* [Save](./open-save#save)
