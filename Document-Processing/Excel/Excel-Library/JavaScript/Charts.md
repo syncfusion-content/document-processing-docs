@@ -90,7 +90,11 @@ Common chart types cover column, bar, line, pie, area, scatter, and related layo
 * Scatter and bubble: `ScatterMarkers`, `ScatterLine`, `Bubble`
 * Area: `Area`, `AreaStacked`, `AreaPercentStacked`
 * 3-D layouts: `Column3D`, `Pie3D`, `Line3D`, and related members
-* Extended: `Funnel`, `Waterfall`, `BoxAndWhisker`, `Pareto`, `Sunburst`, `TreeMap`
+* Surface and contour: `Surface3D`, `SurfaceNoColor3D`, `SurfaceContour`, `SurfaceNoColorContour`
+* Radar: `Radar`, `RadarMarkers`, `RadarFilled`
+* Stock: `StockHighLowClose`, `StockOpenHighLowClose`, `StockVolumeHighLowClose`, `StockVolumeOpenHighLowClose`
+* Combination: `ColumnClusteredLine`, `ColumnClusteredLineSecondaryAxis`
+* Extended: `Funnel`, `Waterfall`, `BoxAndWhisker`, `Pareto`, `Sunburst`, `TreeMap`, `Histogram`, `FilledMap`
 
 ## Configure series, legend, and axes
 
