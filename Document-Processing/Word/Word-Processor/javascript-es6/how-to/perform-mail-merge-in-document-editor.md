@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Perform Mail Merge in TypeScript DOCX Editor | Syncfusion
+title: How to perform mail merge in TypeScript DOCX Editor | Syncfusion
 description: Perform mail merge in Syncfusion® JavaScript (ES6) DOCX Editor using the Word Library to generate personalized documents from data sources.
 control: Perform mail merge
 platform: document-processing
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to Perform Mail Merge in JavaScript (ES6) DOCX Editor
+# How to perform mail merge in JavaScript (ES6) DOCX Editor
 
 You can perform mail merge in the [JavaScript (ES6) DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) using the following approaches:
 
