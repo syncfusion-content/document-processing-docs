@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to Perform mail merge in ASP.NET Core DOCX Editor
+# How to perform mail merge in ASP.NET Core DOCX Editor
 
 You can perform mail merge in the [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor) using the following approaches:
 
