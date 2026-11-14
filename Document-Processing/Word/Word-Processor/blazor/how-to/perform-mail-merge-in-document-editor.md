@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Perform Mail Merge in Blazor DOCX Editor | Syncfusion
+title: How to perform mail merge in Blazor DOCX Editor | Syncfusion
 description: Perform mail merge in Syncfusion® Blazor DOCX Editor using the Word Library to generate personalized documents from data sources.
 control: Perform mail merge
 platform: document-processing
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to Perform Mail Merge in Blazor DOCX Editor
+# How to perform mail merge in Blazor DOCX Editor
 
 You can perform mail merge in the [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) using the following approaches:
 
