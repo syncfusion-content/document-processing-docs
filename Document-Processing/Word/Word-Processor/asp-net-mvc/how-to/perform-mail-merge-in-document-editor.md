@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Perform Mail Merge in ASP.NET MVC DOCX Editor | Syncfusion
+title: How to perform mail merge in ASP.NET MVC DOCX Editor | Syncfusion
 description: Perform mail merge in Syncfusion® ASP.NET MVC DOCX Editor using the Word Library to generate personalized documents from data sources.
 control: Perform mail merge
 platform: document-processing
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to Perform Mail Merge in ASP.NET MVC DOCX Editor
+# How to perform mail merge in ASP.NET MVC DOCX Editor
 
 You can perform mail merge in the [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) using the following approaches:
 
