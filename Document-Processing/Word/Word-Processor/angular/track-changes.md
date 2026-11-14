@@ -353,3 +353,7 @@ N> 2. By default, all revision types use author-specific colors ('byAuthor').
 ## Online Demo
 
 Explore how to track and review changes in Word documents using the Angular DOCX Editor in this live demo [here](https://document.syncfusion.com/demos/docx-editor/angular/#/tailwind3/document-editor/track-changes).
+
+## See Also
+
+* [FAQs about Track Changes in DOCX Editor](./faq/track-changes-faqs)
