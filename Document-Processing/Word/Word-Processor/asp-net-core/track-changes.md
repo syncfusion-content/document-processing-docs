@@ -222,3 +222,9 @@ N> In the `EnforceProtection` method, the first parameter is the password and th
 ## Online demo
 
 Explore how to track and review changes in Word documents using the ASP.NET Core DOCX Editor in this [live demo](https://document.syncfusion.com/demos/docx-editor/asp-net-core/documenteditor/trackchanges#/tailwind3).
+
+## Frequently Asked Questions
+
+### Why are custom track changes colors not preserved in the exported document?
+
+Custom track changes colors are an application level feature supported within the Document Editor. These colors are applied only within the editor and are not preserved when the document is exported. During export, the default track changes colors are applied based on the target document format.

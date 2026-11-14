@@ -429,6 +429,12 @@ To learn more about Track Changes in the DOCX Editor component, refer to the vid
 
 {% youtube "https://www.youtube.com/watch?v=Ke27Mip4bN0" %}
 
+## Frequently Asked Questions
+
+### Why are custom track changes colors not preserved in the exported document?
+
+Custom track changes colors are an application level feature supported within the Document Editor. These colors are applied only within the editor and are not preserved when the document is exported. During export, the default track changes colors are applied based on the target document format.
+
 ## See Also
 
 * [How to customize track changes color](https://support.syncfusion.com/kb/article/25232/)
