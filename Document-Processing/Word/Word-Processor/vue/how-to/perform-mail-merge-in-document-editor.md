@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Perform Mail Merge in Vue DOCX Editor | Syncfusion
+title: How to perform mail merge in Vue DOCX Editor | Syncfusion
 description: Perform mail merge in Syncfusion® Vue DOCX Editor using the Word Library to generate personalized documents from data sources.
 control: Perform mail merge
 platform: document-processing
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to Perform Mail Merge in Vue DOCX Editor
+# How to perform mail merge in Vue DOCX Editor
 
 You can perform mail merge in the [Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) using the following approaches:
 
