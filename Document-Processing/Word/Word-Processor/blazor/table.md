@@ -132,4 +132,25 @@ Refer to the following sample code.
 await documentEditor.Editor.MergeCellsAsync();
 ```
 
+## Table position
+
+You can retrieve the position of the table that contains the current selection. The table position cannot be retrieved when the current selection is text within a table cell or when table cells are selected.
+
+### Get table position
+
+You can retrieve the top and right position of the table that contains the current selection by using the following sample code.
+
+```csharp
+TableSelectionPosition tablePosition = await documentEditor.Selection.GetTablePositionAsync();
+
+double tableTop = tablePosition.TableTopInCurrentPage;
+double tableRight = tablePosition.TableRightInCurrentPage;
+```
+
+The `TableTopInCurrentPage` property returns the top position of the table relative to the current page.
+
+The `TableRightInCurrentPage` property returns the right position of the table relative to the current page.
+
+N> For tables that span multiple pages, the returned values correspond to the portion of the table rendered on the current page. If the current selection is not inside a table, both properties return `0`.
+
 You can also explore our [Blazor DOCX Editor](https://document.syncfusion.com/demos/docx-editor/blazor-server/document-editor/default-functionalities) example to know how to render and configure the DOCX Editor.
