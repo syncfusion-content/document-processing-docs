@@ -96,7 +96,7 @@ npm install @syncfusion/ej2-docx --save
 
 This sample is intended for **browser-based** TypeScript applications. It is not designed for server-side rendering or Node.js-only execution.
 
-* Add a simple button to `index.html` and a `<script type="module">` tag that loads `index.ts`. The button must exist before the click handler in `index.ts` runs.
+* Add a simple button to the `index.html` file in the project root and a `<script type="module">` tag that loads `index.ts`. The button must exist before the click handler in `index.ts` runs.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -111,6 +111,12 @@ This sample is intended for **browser-based** TypeScript applications. It is not
 </html>
 {% endhighlight %}
 {% endtabs %}
+
+* Create a `src` folder in the project root and create an `index.ts` file inside it. The `index.html` file loads this file through the `<script type="module">` tag.
+
+```bash
+mkdir src
+```
 
 * Include the following namespaces in the `index.ts` file.
 
@@ -138,6 +144,18 @@ document.getElementById('normalButton').onclick = (): void => {
 };
 {% endhighlight %}
 {% endtabs %}
+
+## Project Structure
+
+After adding the `src` folder with the `index.ts` file and the `index.html` file to the project root, the final project structure is:
+
+```text
+word-typescript-app/
+├── src/
+│   └── index.ts
+├── index.html
+└── package.json
+```
 
 ## Code Explanation
 
