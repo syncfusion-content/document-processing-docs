@@ -1,14 +1,14 @@
 ---
 layout: post
-title: How to Compare Word Documents in Vue DOCX Editor | Syncfusion
-description: Learn how to compare two Word documents on the server side using DocIO and view the resultant document with tracked changes in Syncfusion® Vue DOCX Editor.
+title: How to compare Word documents in Vue DOCX Editor | Syncfusion
+description: Learn to compare two word documents server-side using DocIO and view the resulting tracked changes in the Syncfusion® Vue DOCX Editor.
 platform: document-processing
 control: Compare Word documents
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to Compare Word Documents in Vue DOCX Editor
+# How to compare Word documents in Vue DOCX Editor
 
 In this article, we are going to see how to compare two Word documents and view the resultant document with tracked changes in the Document Editor.
 
