@@ -19,7 +19,6 @@ The following code example shows how to add a bookmark in a Word document.
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 import { WordDocument, BookmarkStart, BookmarkEnd } from '@syncfusion/ej2-docx';
-import { writeFileSync } from 'fs';
 
 // Create an empty document
 let document = WordDocument.create();
@@ -46,8 +45,7 @@ paragraph.appendText(
 );
 
 // Save
-let outputBytes = document.saveSync();
-writeFileSync('Bookmark.docx', outputBytes);
+document.save('Output.docx');
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 // Create an empty document
@@ -75,8 +73,7 @@ paragraph.appendText(
 );
 
 // Save
-let outputBytes = document.saveSync();
-require('fs').writeFileSync('Bookmark.docx', outputBytes);
+document.save('Output.docx');
 {% endhighlight %}
 {% endtabs %}
 
@@ -88,7 +85,7 @@ The following code example shows how to retrieve an instance of a bookmark from 
 {% highlight typescript tabtitle="TypeScript" %}
 import { WordDocument, Color } from '@syncfusion/ej2-docx';
 
-const document = WordDocument.openSync(bytes);
+let document = WordDocument.open(data);
 
 // Get bookmark by name
 const bookmark = document.bookmarks.findByName('Northwind');
@@ -97,10 +94,10 @@ if (bookmark) {
   // Change paragraph background color
   bookmark.bookmarkStart.ownerParagraph.paragraphFormat.backColor = Color.AliceBlue;
 }
-document.save('Result.docx');
+document.save('Output.docx');
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
-const document = ej.docx.WordDocument.openSync(bytes);
+let document = ej.docx.WordDocument.open(data);
 
 // Get bookmark by name
 const bookmark = document.bookmarks.findByName('Northwind');
@@ -109,7 +106,7 @@ if (bookmark) {
   // Change paragraph background color
   bookmark.bookmarkStart.ownerParagraph.paragraphFormat.backColor = ej.docx.Color.AliceBlue;
 }
-document.save('Result.docx');
+document.save('Output.docx');
 {% endhighlight %}
 {% endtabs %}
 
@@ -121,7 +118,7 @@ The following code example shows how to remove a bookmark from a Word document.
 {% highlight typescript tabtitle="TypeScript" %}
 import { WordDocument } from '@syncfusion/ej2-docx';
 
-const document = WordDocument.openSync(bytes);
+let document = WordDocument.open(data);
 
 // Get bookmark by name
 const bookmark = document.bookmarks.findByName('Northwind');
@@ -130,10 +127,10 @@ if (bookmark) {
   // Removes the bookmark named "Northwind" from Word document.
   document.bookmarks.remove(bookmark);
 }
-document.save('Result.docx');
+document.save('Output.docx');
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
-const document = ej.docx.WordDocument.openSync(bytes);
+let document = ej.docx.WordDocument.open(data);
 
 // Get bookmark by name
 const bookmark = document.bookmarks.findByName('Northwind');
@@ -142,6 +139,6 @@ if (bookmark) {
   // Removes the bookmark named "Northwind" from Word document.
   document.bookmarks.remove(bookmark);
 }
-document.save('Result.docx');
+document.save('Output.docx');
 {% endhighlight %}
 {% endtabs %}
