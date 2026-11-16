@@ -1259,13 +1259,13 @@ Each level supports two ways to define borders:
 
 ### Border Types (`PdfGridBorderType`)
 
-Use the `PdfGridBorderType` enumeration to control which borders are visible at the grid level. Values can be combined using the bitwise OR (|) operator.
+Use the `PdfGridBorderType` enumeration to control which borders are visible at the grid level. Values can be combined using the bitwise OR (`|`) operator.
 
 | Value | Behavior |
-|---|---|
+| --- | --- |
 | `None` | No borders. |
 | `All` | All borders (default). Excludes combined groups when used with other flags. |
-| `Outside` | All four outer edges (`Left`, `Right`, `Top`, `Bottom`). |
+| `Outside` | All four outer edges (`Left`, `Right`, `Top`, and `Bottom`). |
 | `Inside` | All inner cell separators (`InsideHorizontal` and `InsideVertical`). |
 | `InsideHorizontal` / `InsideVertical` | Row-only or column-only inner separators. |
 | `Left`, `Right`, `Top`, `Bottom` | Specific individual outer edges. |
