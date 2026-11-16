@@ -147,9 +147,9 @@ To know about server-side action, please refer to this [page](./web-services-ove
 
 ## Opening a document in asynchronous mode
 
-[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) supports asynchronous document loading, which can be enabled using the enable property available in the [`openAsyncSettings`](https://ej2.syncfusion.com/documentation/api/document-editor/openasyncsettingsmodel) API.
+[TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) supports asynchronous document loading through the [`openAsyncSettings`](https://ej2.syncfusion.com/documentation/api/document-editor/openasyncsettingsmodel) API, which provides options to enable asynchronous loading and configure both the initial and incremental page-loading behavior.
 
-### Properties
+**Properties**
 
 - **[`enable`](https://ej2.syncfusion.com/documentation/api/document-editor/openasyncsettingsmodel#enable):** Enables or disables asynchronous document loading.
 - **[`initialPageLoadCount`](https://ej2.syncfusion.com/documentation/api/document-editor/openasyncsettingsmodel#initialpageloadcount):** Number of pages to load initially when the document is opened.
