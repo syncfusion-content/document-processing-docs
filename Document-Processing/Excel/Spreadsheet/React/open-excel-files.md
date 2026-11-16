@@ -48,11 +48,7 @@ The supported file formats depend on the selected processing method:
 
 ## Choose a processing method
 
-Use client-side processing when XLSX files should be processed directly in the browser without configuring an Open service.
-
-Use server-side processing when the application requires additional file formats, centralized processing, or server-side parsing options.
-
-Choose the processing method based on the required file formats, application architecture, and whether workbook processing should occur in the browser or through a server endpoint.
+Choose client-side processing for browser-based XLSX file processing without an Open service. Choose server-side processing for additional formats or centralized processing needs.
 
 ## See also
 
@@ -62,3 +58,4 @@ Choose the processing method based on the required file formats, application arc
 * [From Azure Blob Storage](./open-excel-file/from-azure-blob-storage)
 * [From Google Cloud Storage](./open-excel-file/from-google-cloud-storage)
 * [From Google Drive](./open-excel-file/from-google-drive)
+* [Excel Library JavaScript Overview](https://help.syncfusion.com/document-processing/excel/excel-library/javascript/overview)

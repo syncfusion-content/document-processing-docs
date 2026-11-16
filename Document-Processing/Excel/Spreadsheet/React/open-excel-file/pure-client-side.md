@@ -7,9 +7,9 @@ control: Spreadsheet
 documentation: ug
 ---
 
-# Pure client-side processing in React Spreadsheet
+# Client-side processing with React Spreadsheet
 
-Pure client-side processing enables the Spreadsheet component to process workbook files directly within the browser without requiring server communication. When `allowOpen` property is default enabled and `openUrl` is not configured, the Spreadsheet leverages its integrated client-side file-processing functionality powered by the `@syncfusion/ej2-xlsx` library.
+Pure client-side processing enables the Spreadsheet component to process workbook files directly within the browser without requiring server communication. When `allowOpen` property is default enabled and `openUrl` is not configured, the Spreadsheet leverages its integrated client-side file-processing functionality that uses the `@syncfusion/ej2-xlsx` library internally.
 
 ## Advantages of Client-Side Import
 
@@ -17,9 +17,7 @@ Client-side import provides several key advantages over server-side processing:
 
 * **No Server Dependency**: Process Excel files directly in the browser without requiring server endpoints
 * **Improved Performance**: Eliminates network latency for file processing operations
-* **Enhanced Privacy**: Files never leave the client device during processing
 * **Reduced Infrastructure Costs**: No need to maintain server-side processing infrastructure
-* **Better User Experience**: Faster response times and offline capabilities
 
 ## How client-side import works
 
@@ -27,10 +25,9 @@ Once a file is fetched, it is sent to the ej2-xlsx library. This library reads t
 
 ## Configure client-side import
 
-Unlike server-side processing, the `openUrl` is not mandatory for pure client-side processing since there is no server-side request. This approach provides enhanced privacy, improved performance, and reduced infrastructure costs.
+Unlike server-side processing, the `openUrl` is not mandatory for client-side processing since there is no server-side request. This approach provides enhanced privacy, improved performance, and reduced infrastructure costs.
 
-{% tabs %}
-{% highlight js tabtitle="app.jsx" %}
+```jsx
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
@@ -47,26 +44,7 @@ export default App;
 
 const root = createRoot(document.getElementById('root'));
 root.render(<App />);
-{% endhighlight %}
-{% highlight ts tabtitle="app.tsx" %}
-import * as React from 'react';
-import { createRoot } from 'react-dom/client';
-import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
-
-function App() {
-    return (
-        <SpreadsheetComponent 
-            allowOpen={true}
-            // Note: openUrl is omitted for client-side import
-        />
-    );
-};
-export default App;
-
-const root = createRoot(document.getElementById('root')!);
-root.render(<App />);
-{% endhighlight %}
-{% endtabs %}
+```
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/client-side-local-cs1" %}
 
@@ -74,7 +52,7 @@ With this configuration, the Spreadsheet will process all Excel files directly i
 
 ## Supported file sources
 
-### Open a file from the local system
+### Opening a file from the local system
 
 You can open Excel files from the local system using the standard File > Open interface or programmatically:
 
@@ -89,7 +67,7 @@ You can open Excel files from the local system using the standard File > Open in
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/client-side-local-cs1" %}
 
-### Open a file from a URL
+### Opening a file from a URL
 
 To open Excel files from a URL, fetch the file and convert the response to a File object:
 
@@ -106,7 +84,7 @@ To open Excel files from a URL, fetch the file and convert the response to a Fil
 
 Cross-origin resource sharing (CORS) restrictions may prevent opening files from some URLs. Ensure CORS policies are properly configured on the target server.
 
-### Open a file from Blob data
+### Opening a file from Blob data
 
 To open Excel files from Blob data, convert the Blob to a File object:
 

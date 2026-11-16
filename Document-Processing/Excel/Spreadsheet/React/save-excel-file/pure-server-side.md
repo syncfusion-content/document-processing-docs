@@ -7,7 +7,7 @@ control: Spreadsheet
 documentation: ug
 ---
 
-# Pure server-side processing in React Spreadsheet
+# Server-side processing with React Spreadsheet
 
 The React Spreadsheet component uses a pure server-assisted workflow to save Excel files efficiently and accurately. When a user saves an Excel file, the Spreadsheet content displayed in the browser is first serialized into a structured JSON workbook. This JSON includes all essential details—such as data, formulas, formatting, styles, and sheet configuration.
 

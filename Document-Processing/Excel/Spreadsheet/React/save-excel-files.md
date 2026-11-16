@@ -46,8 +46,4 @@ The supported file formats depend on the selected processing method:
 
 ## Choose a processing method
 
-Use client-side processing when workbook files should be generated directly in the browser without configuring a Save service.
-
-Use server-side processing when the application requires additional file formats, centralized processing, or server-side generation options.
-
-Choose the processing method based on the required file formats, application architecture, and whether workbook processing should occur in the browser or through a server endpoint.
+Choose client-side processing for browser-based workbook file generation without a Save service. Choose server-side processing for additional formats or centralized processing needs.
