@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Resize and Move Annotations in React PDF Viewer
 
-Annotations can be resized and moved after they are added to a document. The PDF Viewer supports these operations both from the built-in UI and programmatically through the [`editAnnotation`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/annotation#editannotation) API.
+Annotations can be resized and moved after they are added to a document. The PDF Viewer supports these operations both from the built-in UI and programmatically through the editAnnotation API.
 
 ## Resize annotations
 
@@ -56,7 +56,7 @@ const resizeAnnotation = () => {
 To move an annotation programmatically, update the relevant property of the annotation and call the `editAnnotation` API.
 
 - To move an annotation to a **different page**, update the `pageNumber` property of the annotation.
-- To move an annotation **within the same page**, update the `x` and `y` values of the annotation `bounds`.
+- To move an annotation **within the same page**, update the `left` and `top` values (or `x` and `y`, depending on the bounds object structure) of the annotation's `bounds` object.
 
 {% tabs %}
 {% highlight js tabtitle="Standalone" %}
