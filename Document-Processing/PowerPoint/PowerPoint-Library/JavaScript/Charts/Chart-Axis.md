@@ -92,11 +92,9 @@ The axes of a chart in an existing presentation can be formatted the same way af
 {% tabs %}
 {% highlight js tabtitle="TypeScript" %}
 
-import { Presentation, loadXlsxRoot } from '@syncfusion/ej2-pptx';
+import { Presentation } from '@syncfusion/ej2-pptx';
 
 // data is a Uint8Array or Base64 string of an existing .pptx file with a chart on the first slide.
-// Loads the chart engine before enumerating slide.charts.
-await loadXlsxRoot();
 // Opens an existing PowerPoint presentation.
 let pptxDoc = await Presentation.open(data);
 // Gets the first chart on the first slide.
@@ -126,8 +124,6 @@ await pptxDoc.save('Output.pptx');
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 // data is a Uint8Array or Base64 string of an existing .pptx file with a chart on the first slide.
-// Loads the chart engine before enumerating slide.charts.
-await ej.pptx.loadXlsxRoot();
 // Opens an existing PowerPoint presentation.
 var pptxDoc = await ej.pptx.Presentation.open(data);
 // Gets the first chart on the first slide.

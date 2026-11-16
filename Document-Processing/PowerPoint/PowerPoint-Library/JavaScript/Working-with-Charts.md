@@ -24,24 +24,7 @@ Before you begin, make sure the following npm packages are installed in your app
 npm install @syncfusion/ej2-pptx @syncfusion/ej2-xlsx
 ```
 
-The chart engine of the JavaScript PowerPoint library is built on the `@syncfusion/ej2-xlsx` package. Charts authored with `Slide.addChart` and charts enumerated through `slide.charts` require this package to be resolvable at runtime.
-
-Before reading or editing charts on a slide that was not authored in the same session, warm the chart engine once:
-
-{% tabs %}
-{% highlight js tabtitle="TypeScript" %}
-
-import { loadXlsxRoot } from '@syncfusion/ej2-pptx';
-
-// Loads the chart engine once before enumerating slide.charts.
-await loadXlsxRoot();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-// Loads the chart engine once before enumerating slide.charts.
-await ej.pptx.loadXlsxRoot();
-{% endhighlight %}
-{% endtabs %}
+The chart engine of the JavaScript PowerPoint library is built on the `@syncfusion/ej2-xlsx` package. Charts authored with `Slide.addChart` and charts enumerated through `slide.charts` require this package to be resolvable at runtime. The library loads the chart engine itself, so no separate chart-engine initialization call is needed before creating, reading, or editing charts.
 
 For more information on package setup for each platform, refer to [Getting Started](./Getting-Started).
 
@@ -145,7 +128,7 @@ await pptxDoc.save('Output.pptx');
 
 ## Refreshing the chart
 
-Sometimes a chart does not represent the actual data in its embedded workbook, for example after the workbook bytes were changed outside the chart engine. In those cases, refresh the chart so its series caches are rebuilt from the embedded worksheet.
+Sometimes a chart does not represent the actual data in its embedded workbook, In those cases, refresh the chart so its series caches are rebuilt from the embedded worksheet.
 
 `Chart.refresh` re-opens the embedded workbook, rebuilds the host chart from the current sheet cells and series formulas, and rewrites the chart part. It does not run a full Excel calculation, evaluate trendlines, or fetch an external workbook. Charts that have only an external data source and no embedded package cannot be refreshed.
 
@@ -154,11 +137,9 @@ The following code example demonstrates how to open an existing presentation and
 {% tabs %}
 {% highlight js tabtitle="TypeScript" %}
 
-import { Presentation, loadXlsxRoot } from '@syncfusion/ej2-pptx';
+import { Presentation } from '@syncfusion/ej2-pptx';
 
 // data is a Uint8Array or Base64 string of an existing .pptx file.
-// Loads the chart engine before enumerating slide.charts.
-await loadXlsxRoot();
 // Opens an existing PowerPoint presentation.
 let pptxDoc = await Presentation.open(data);
 // Gets the first slide.
@@ -175,8 +156,6 @@ await pptxDoc.save('Output.pptx');
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 // data is a Uint8Array or Base64 string of an existing .pptx file.
-// Loads the chart engine before enumerating slide.charts.
-await ej.pptx.loadXlsxRoot();
 // Opens an existing PowerPoint presentation.
 var pptxDoc = await ej.pptx.Presentation.open(data);
 // Gets the first slide.
@@ -209,11 +188,9 @@ The following code example demonstrates how to open an existing presentation, ed
 {% tabs %}
 {% highlight js tabtitle="TypeScript" %}
 
-import { Presentation, loadXlsxRoot } from '@syncfusion/ej2-pptx';
+import { Presentation } from '@syncfusion/ej2-pptx';
 
 // data is a Uint8Array or Base64 string of an existing .pptx file with a chart on the first slide.
-// Loads the chart engine before enumerating slide.charts.
-await loadXlsxRoot();
 // Opens an existing PowerPoint presentation.
 let pptxDoc = await Presentation.open(data);
 // Gets the first slide.
@@ -238,8 +215,6 @@ await pptxDoc.save('Output.pptx');
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 // data is a Uint8Array or Base64 string of an existing .pptx file with a chart on the first slide.
-// Loads the chart engine before enumerating slide.charts.
-await ej.pptx.loadXlsxRoot();
 // Opens an existing PowerPoint presentation.
 var pptxDoc = await ej.pptx.Presentation.open(data);
 // Gets the first slide.
@@ -290,11 +265,9 @@ The following code example demonstrates how to open an existing presentation and
 {% tabs %}
 {% highlight js tabtitle="TypeScript" %}
 
-import { Presentation, loadXlsxRoot } from '@syncfusion/ej2-pptx';
+import { Presentation } from '@syncfusion/ej2-pptx';
 
 // data is a Uint8Array or Base64 string of an existing .pptx file.
-// Loads the chart engine before enumerating slide.charts.
-await loadXlsxRoot();
 // Opens an existing PowerPoint presentation.
 let pptxDoc = await Presentation.open(data);
 // Gets the first slide.
@@ -311,8 +284,6 @@ await pptxDoc.save('Output.pptx');
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 // data is a Uint8Array or Base64 string of an existing .pptx file.
-// Loads the chart engine before enumerating slide.charts.
-await ej.pptx.loadXlsxRoot();
 // Opens an existing PowerPoint presentation.
 var pptxDoc = await ej.pptx.Presentation.open(data);
 // Gets the first slide.
