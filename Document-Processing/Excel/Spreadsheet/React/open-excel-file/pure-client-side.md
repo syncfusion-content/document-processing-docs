@@ -71,7 +71,7 @@ The following code example shows how to import an Excel document using file uplo
 
 ### Opening a file from a URL
 
-You can fetch the remote Excel file (.xlsx) through the URL and convert it to a blob. Convert this blob to a file and open this file by using Spreadsheet component's [open](/document-processing/api/spreadsheet/spreadsheetcomponent#open) method.
+You can fetch the remote Excel file (.xlsx) through the URL and convert it to a blob. Convert this blob to a file and open this file by using Spreadsheet component's [open](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#open) method.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
