@@ -7,11 +7,9 @@ control: Spreadsheet
 documentation: ug
 ---
 
-# Client-side import in React Spreadsheet
+# Pure client-side processing in React Spreadsheet
 
-Client-side import processes workbook files directly in the browser without sending them to an Open service. When `allowOpen` property is default enabled and `openUrl` is not configured, the Spreadsheet uses its integrated client-side file-processing functionality.
-
-React Spreadsheet uses `@syncfusion/ej2-xlsx` internally for client-side workbook processing. Use the Spreadsheet user interface or the public `open()` method to open files. The Spreadsheet manages all file processing automatically within the client side browser functionality.
+Pure client-side processing enables the Spreadsheet component to process workbook files directly within the browser without requiring server communication. When `allowOpen` property is default enabled and `openUrl` is not configured, the Spreadsheet leverages its integrated client-side file-processing functionality powered by the `@syncfusion/ej2-xlsx` library.
 
 ## Advantages of Client-Side Import
 
@@ -25,11 +23,11 @@ Client-side import provides several key advantages over server-side processing:
 
 ## How client-side import works
 
-Once file is fetched, send the file to ej2-xlsx, based on that use, read XML (Office Open XML) then based on the info we got, we'll update in the spreadsheet model - workbook (spreadsheet) compatible json and then load, during this process, we'll retain all the spreadsheet supported features.
+Once a file is fetched, it is sent to the ej2-xlsx library. This library reads the Office Open XML format and extracts all relevant information. Based on this extracted information, it generates a workbook-compatible JSON structure that the Spreadsheet component can understand and load. During this process, all Spreadsheet-supported features are retained and properly mapped to the client-side representation.
 
 ## Configure client-side import
 
-Unlike server-side processing the `openUrl` is not mandatory, since there is no server side request we're fully handling for client (tell advantage shortly so due to that you can use it client-side).
+Unlike server-side processing, the `openUrl` is not mandatory for pure client-side processing since there is no server-side request. This approach provides enhanced privacy, improved performance, and reduced infrastructure costs.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -131,9 +129,7 @@ In all cases, the workflow ends by passing a `File` object to the public Spreads
 ## Considerations
 
 1. **Format Limitation**: Client-side import currently supports XLSX format only
-2. **Size Limitations**: Large files may impact browser performance
-3. **Feature Differences**: Some advanced features available in server-side import may not be available in client-side import
-4. **No openUrl Required**: `openUrl` must not be configured for client-side import
+2. **No openUrl Required**: `openUrl` must not be configured for client-side import
 
 ## See also
 

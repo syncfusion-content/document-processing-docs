@@ -56,8 +56,8 @@ Choose the processing method based on the required file formats, application arc
 
 ## See also
 
-* [Client-Side Import](./open-excel-file/client-side-import)
-* [Server-Side Import](./open-excel-file/server-side-import)
+* [Pure Client-Side](./open-excel-file/pure-client-side)
+* [Pure Server-Side](./open-excel-file/pure-server-side)
 * [From AWS S3](./open-excel-file/from-aws-s3-bucket)
 * [From Azure Blob Storage](./open-excel-file/from-azure-blob-storage)
 * [From Google Cloud Storage](./open-excel-file/from-google-cloud-storage)

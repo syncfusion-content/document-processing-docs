@@ -17,8 +17,8 @@ Both processing methods use the same user interface and public `save()` API. The
 
 ## Processing methods
 
-* [Client-Side Export](./save-excel-file/client-side-export)
-* [Server-Side Export](./save-excel-file/server-side-export)
+* [Pure Client-Side](./save-excel-file/pure-client-side)
+* [Pure Server-Side](./save-excel-file/pure-server-side)
 
 ## Cloud storage integrations
 
