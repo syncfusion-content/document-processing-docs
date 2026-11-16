@@ -37,17 +37,11 @@ Add the required PPTX Editor style and script references to the `index.html` fil
 To use local scripts and styles for the PPTX Editor, follow these steps:
 
 1. Download and install the [PPTX Editor SDK](https://www.syncfusion.com/account/manage-trials/start-trials).
-
 2. Create a `resources` folder in your application (for example, `pptx-editor-app/resources`).
-
 3. From the installed SDK location, copy the required packages from the following folder into the `resources` folder:
-
-```text
-<Install path>/Syncfusion/Essential Studio/PPTX Editor SDK/{VERSION}/Web (Essential JS 2)/JavaScript
-```
-
-N> Replace `{VERSION}` in the path above with the installed PPTX Editor SDK version (for example, `34.1.29`). Use the same version segment in the CDN URLs in the next tab to keep the local and CDN resources in sync.
-
+   ```text
+   <Install path>/Syncfusion/Essential Studio/PPTX Editor SDK/{{ site.releaseversion }}/Web (Essential JS 2)/JavaScript
+   ```
 4. After copying the files, add the PPTX Editor and its dependent control style and script references at the end of the **\<head\>** section in the `index.html` file.
 
 {% tabs %}
@@ -74,6 +68,7 @@ N> Replace `{VERSION}` in the path above with the installed PPTX Editor SDK vers
 <script src="resources/ej2-navigations/dist/global/ej2-navigations.min.js" type="text/javascript"></script>
 <script src="resources/ej2-dropdowns/dist/global/ej2-dropdowns.min.js" type="text/javascript"></script>
 <script src="resources/ej2-charts/dist/global/ej2-charts.min.js" type="text/javascript"></script>
+<script src="resources/ej2-office-chart/dist/global/ej2-office-chart.min.js" type="text/javascript"></script>
 <!-- PPTX Editor script -->
 <script src="resources/ej2-pptxeditor/dist/global/ej2-pptxeditor.min.js" type="text/javascript"></script>
 
@@ -87,37 +82,37 @@ N> Replace `{VERSION}` in the path above with the installed PPTX Editor SDK vers
 Reference the scripts and styles directly from the CDN and add at the end of the **\<head\>** section in the `index.html` file.
 
 ```text
-Script: https://cdn.syncfusion.com/ej2/{VERSION}/{PACKAGE_NAME}/dist/global/{PACKAGE_NAME}.min.js
-Style: https://cdn.syncfusion.com/ej2/{VERSION}/{PACKAGE_NAME}/styles/{THEME_NAME}.css
+Script: https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/{PACKAGE_NAME}/dist/global/{PACKAGE_NAME}.min.js
+Style: https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/{PACKAGE_NAME}/styles/{THEME_NAME}.css
 ```
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
 
 <!-- PPTX Editor dependent theme -->
-<link href="https://cdn.syncfusion.com/ej2/34.1.29/ej2-base/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-<link href="https://cdn.syncfusion.com/ej2/34.1.29/ej2-buttons/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-<link href="https://cdn.syncfusion.com/ej2/34.1.29/ej2-inputs/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-<link href="https://cdn.syncfusion.com/ej2/34.1.29/ej2-popups/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-<link href="https://cdn.syncfusion.com/ej2/34.1.29/ej2-lists/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-<link href="https://cdn.syncfusion.com/ej2/34.1.29/ej2-navigations/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-<link href="https://cdn.syncfusion.com/ej2/34.1.29/ej2-splitbuttons/styles/tailwind3.css" rel="stylesheet" type="text/css" />
-<link href="https://cdn.syncfusion.com/ej2/34.1.29/ej2-dropdowns/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-base/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-buttons/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-inputs/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-popups/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-lists/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-navigations/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-splitbuttons/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-dropdowns/styles/tailwind3.css" rel="stylesheet" type="text/css" />
 <!-- PPTX Editor theme -->
-<link href="https://cdn.syncfusion.com/ej2/34.1.29/ej2-pptxeditor/styles/tailwind3.css" rel="stylesheet" type="text/css" />
+<link href="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-pptxeditor/styles/tailwind3.css" rel="stylesheet" type="text/css" />
 <!-- PPTX Editor dependent scripts -->
-<script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-data/dist/global/ej2-data.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-buttons/dist/global/ej2-buttons.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-popups/dist/global/ej2-popups.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-splitbuttons/dist/global/ej2-splitbuttons.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-inputs/dist/global/ej2-inputs.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-lists/dist/global/ej2-lists.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-navigations/dist/global/ej2-navigations.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-dropdowns/dist/global/ej2-dropdowns.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-charts/dist/global/ej2-charts.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-buttons/dist/global/ej2-buttons.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-popups/dist/global/ej2-popups.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-splitbuttons/dist/global/ej2-splitbuttons.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-inputs/dist/global/ej2-inputs.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-lists/dist/global/ej2-lists.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-navigations/dist/global/ej2-navigations.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-dropdowns/dist/global/ej2-dropdowns.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-charts/dist/global/ej2-charts.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-office-chart/dist/global/ej2-office-chart.min.js" type="text/javascript"></script>
 <!-- PPTX Editor script -->
-<script src="https://cdn.syncfusion.com/ej2/34.1.29/ej2-pptxeditor/dist/global/ej2-pptxeditor.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/{{ site.releaseversion }}/ej2-pptxeditor/dist/global/ej2-pptxeditor.min.js" type="text/javascript"></script>
 
 {% endhighlight %}
 {% endtabs %}
@@ -137,7 +132,7 @@ Before initializing the JavaScript (ES5) PPTX Editor control, generate a Syncfus
 
 ## Initialize the PPTX Editor
 
-Add a container element for the PPTX Editor in the `index.html` file and then initialize the control in the `<script>` tag.
+Add a container element in the `index.html` file and initialize the PPTX Editor in the `index.js` file.
 
 {% tabs %}
 {% highlight html tabtitle="index.html" %}
@@ -150,12 +145,17 @@ Add a container element for the PPTX Editor in the `index.html` file and then in
 </head>
 <body>
     <!-- Element that renders the PPTX Editor -->
-    <div id='PptxEditor'></div>
+    <div id='pptxEditor'></div>
     <script src="index.js" type="text/javascript"></script>
 </body>
 </html>
 
 {% endhighlight %}
+{% endtabs %}
+
+Then, render the editor and load a PowerPoint presentation using the `documentPath` property.
+
+{% tabs %}
 {% highlight js tabtitle="index.js" %}
 
 // Inject the required modules
@@ -169,21 +169,17 @@ ej.pptxeditor.PptxEditor.Inject(
 );
 
 // Initialize PPTX Editor component
-var editor = new ej.pptxeditor.PptxEditor({});
+var editor = new ej.pptxeditor.PptxEditor({
+    theme: 'tailwind3',
+    documentPath: 'https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx'
+});
 
 // Render the PPTX Editor
-editor.appendTo('#PptxEditor');
-
-// Open a local presentation file in the PPTX Editor
-fetch('./sample.pptx')
-    .then((response) => response.blob())
-    .then((blob) => editor.openFromBlob(blob, 'sample.pptx'));
+editor.appendTo('#pptxEditor');
 
 {% endhighlight %}
 {% endtabs %}
 
 ## Run the application
 
-Open the `index.html` file in a web browser. The JavaScript (ES5) PPTX Editor is rendered with a toolbar, thumbnail pane, and a slide area, as shown below.
-
-![Output of JavaScript ES5 PPTX Editor](./images/getting_started.png)
+Open the `index.html` file in a web browser. The JavaScript (ES5) PPTX Editor is rendered with a toolbar, thumbnail pane, and a slide area.
