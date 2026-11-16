@@ -38,7 +38,7 @@ Set the [`ShowAnnotationAppearance`](https://help.syncfusion.com/cr/blazor/Syncf
 
 ```
 
-<!-- Add the image: ![Annotation displayed with its embedded custom appearance in Blazor PDF Viewer](../images/blazor-pdfviewer-annotation-appearance.png) -->
+![Circle annotation with custom appearance in the Blazor PDF Viewer](../images/circle-annotation-with-custom-appearance.png)
 
 When the property is enabled, every annotation in the loaded document that contains an appearance is displayed with that appearance. The remaining annotations continue to be displayed from their annotation properties, so that the document is shown without any missing content.
 
@@ -48,15 +48,7 @@ The custom appearance of an annotation is stored in the `/AP` entry of the PDF a
 
 When [`ShowAnnotationAppearance`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ShowAnnotationAppearance) is set to `true`, the viewer displays that custom appearance, and the annotation is shown with the logo, border, and signature line exactly as they were authored.
 
-<!-- Add the image: ![Custom appearance (AP) entry displayed in the Blazor PDF Viewer](../images/blazor-pdfviewer-custom-annotation-appearance.png) -->
-
-N> The appearance is read from the document that is loaded in the viewer. This feature applies to the annotations of the loaded document, and the annotations that are created in the viewer are displayed from their own properties.
-
-## Notes
-
-* The [`ShowAnnotationAppearance`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ShowAnnotationAppearance) property is applicable only to the Blazor PDF Viewer component.
-* Enabling this property only affects how the annotations of the loaded document are displayed. It does not modify the document or the annotation properties.
-* An annotation that does not contain a custom appearance continues to be displayed from its annotation properties, even when this property is enabled.
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/1068213_appearance/Annotation%20Apperance/AnnotationAppearance).
 
 ## See also
 
