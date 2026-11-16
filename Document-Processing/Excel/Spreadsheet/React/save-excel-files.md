@@ -29,13 +29,14 @@ The processing method depends on the Spreadsheet configuration. When `saveUrl` i
 
 Use the [`save`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#save) method to save a file programmatically. Pass the save options through the [`SaveOptions`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/saveOptions) parameter.
 
-Refer to [Using Client-Side](./save-excel-file/using-client-side) or [Using Server-Side](./save-excel-file/using-server-side) for processing-specific workflows.
-
 ## Save events
 
 Use the [`beforeSave`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforesave) event to customize or cancel the Save operation before the workbook data is processed.
 
 Use the [`saveComplete`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#savecomplete) event to perform an action after the file is generated.
+
+* **beforeSave**: Triggered before the file is processed, allowing customization or cancellation of the operation
+* **saveComplete**: Triggered after the file is generated, allowing post-processing actions
 
 ## Supported file formats
 
@@ -45,10 +46,6 @@ The supported file formats depend on the selected processing method:
 | --- | --- |
 | Client-side processing | Microsoft Excel Workbook (`.xlsx`) |
 | Server-side processing | Microsoft Excel Workbook (`.xlsx`), Excel 97-2003 Workbook (`.xls`), Comma-Separated Values (`.csv`), Excel Macro-Enabled Workbook (`.xlsm`), Excel Binary Workbook (`.xlsb`), Portable Document Format (`.pdf`) |
-
-## Choose a processing method
-
-Choose client-side processing for browser-based workbook file generation without a Save service. Choose server-side processing for additional formats or centralized processing needs.
 
 ## Processing methods
 

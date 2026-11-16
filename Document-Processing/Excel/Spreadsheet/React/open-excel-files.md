@@ -29,13 +29,16 @@ The processing method depends on the Spreadsheet configuration. When `openUrl` i
 
 Use the [`open`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#open) method to open a file programmatically. Pass the file through the `file` property of [`OpenOptions`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/openOptions).
 
-The `File` object can come from a local file selection or be created from application-provided data. Refer to [Using Client-Side](./open-excel-file/using-client-side) or [Using Server-Side](./open-excel-file/using-server-side) for processing-specific workflows.
+The `File` object can come from a local file selection or be created from application-provided data.
 
 ## Open events
 
 Use the [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforeopen) event to customize or cancel the Open operation before the selected file is processed.
 
 Use the [`openComplete`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#opencomplete) event to perform an action after the workbook is loaded.
+
+* **beforeOpen**: Triggered before the file is processed, allowing customization or cancellation of the operation
+* **openComplete**: Triggered after the workbook is loaded, allowing post-processing actions
 
 ## Supported file formats
 
