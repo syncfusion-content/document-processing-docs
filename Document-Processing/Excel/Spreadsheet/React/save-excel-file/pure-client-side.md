@@ -18,6 +18,8 @@ Client-side export provides several key advantages over server-side processing:
 * **No Server Dependency**: Generate Excel files directly in the browser without requiring server endpoints
 * **Improved Performance**: Eliminates network latency for file generation operations
 * **Reduced Infrastructure Costs**: No need to maintain server-side processing infrastructure
+* **Enhanced Privacy**: Keep workbook data within the browser during import and export
+* **Offline Capability**: Open and process local Excel files without requiring an internet connection
 
 ## How client-side export works
 
@@ -92,4 +94,4 @@ To save an Excel file as blob data, you need to set `needBlobData` property to *
 
 ## See also
 
-* [Server-Side Export](./using-server-side)
+* [Server-Side Export](./server-side-processing)

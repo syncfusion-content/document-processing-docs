@@ -53,7 +53,7 @@ Choose client-side processing for browser-based XLSX file processing without an 
 ## See also
 
 * [Client-Side Import](./open-excel-file/pure-client-side)
-* [Server-Side Import](./open-excel-file/using-server-side)
+* [Server-Side Import](./open-excel-file/server-side-processing)
 * [From AWS S3](./open-excel-file/from-aws-s3-bucket)
 * [From Azure Blob Storage](./open-excel-file/from-azure-blob-storage)
 * [From Google Cloud Storage](./open-excel-file/from-google-cloud-storage)

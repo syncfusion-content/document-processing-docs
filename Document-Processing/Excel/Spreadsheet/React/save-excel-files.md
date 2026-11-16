@@ -18,7 +18,7 @@ Both approaches use the same user interface and public `save()` API. The Spreads
 ## Processing methods
 
 * [Client-Side Export](./save-excel-file/pure-client-side)
-* [Server-Side Export](./save-excel-file/using-server-side)
+* [Server-Side Export](./save-excel-file/server-side-processing)
 
 ## Cloud storage integrations
 
