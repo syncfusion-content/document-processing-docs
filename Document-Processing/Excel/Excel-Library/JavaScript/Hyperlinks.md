@@ -6,7 +6,7 @@ control: Excel
 documentation: ug
 ---
 
-# Hyperlinks in JavaScript Excel
+# Hyperlinks in JavaScript Excel Library
 
 Hyperlinks turn a cell into a clickable link to a web page, file, network path, or location inside the workbook. You can set the destination, the text users see, optional hover text, and an in-document location when needed.
 
@@ -14,7 +14,9 @@ Hyperlinks turn a cell into a clickable link to a web page, file, network path, 
 
 N> Setting `displayText` on a single-cell hyperlink also updates that cell’s visible value.
 
-## URL hyperlink
+N> The snippets on this page save the workbook with `await workbook.save('<file name>.xlsx')`, which requires Node.js. In a browser, call `workbook.save()` without arguments and download the returned bytes, as shown in [Getting started](https://help.syncfusion.com/document-processing/excel/excel-library/javascript/getting-started).
+
+## URL link
 
 A URL hyperlink opens a web address from the cell. Use it for product pages, help topics, or any online resource related to the row.
 
@@ -112,7 +114,7 @@ await workbook.save('./HyperlinkFile.xlsx');
 {% endhighlight %}
 {% endtabs %}
 
-## UNC network path
+## UNC network path link
 
 A UNC hyperlink points to a network share path. Use it when the target file lives on a shared server location rather than a local drive or website.
 
@@ -162,9 +164,8 @@ const sheet = workbook.sheet(0);
 
 sheet.cell('A4').value = 'Go to summary';
 sheet.cell('A4').hyperlink = {
-  target: '',
+  target: 'Sheet1!A10',
   displayText: 'Go to summary',
-  subAddress: 'Sheet1!A10',
   type: 'workbook',
 };
 
@@ -178,9 +179,8 @@ const sheet = workbook.sheet(0);
 
 sheet.cell('A4').value = 'Go to summary';
 sheet.cell('A4').hyperlink = {
-  target: '',
+  target: 'Sheet1!A10',
   displayText: 'Go to summary',
-  subAddress: 'Sheet1!A10',
   type: 'workbook',
 };
 
@@ -188,18 +188,44 @@ await workbook.save('./HyperlinkWorkbook.xlsx');
 {% endhighlight %}
 {% endtabs %}
 
-## Sheet hyperlinks collection
+## Manage sheet hyperlinks
 
 You can manage hyperlinks for many cells from the worksheet hyperlink list. This is useful when links are added in bulk or maintained separately from other cell content.
 
-```ts
-// ref, target, displayText, tooltip, type
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { Workbook } from '@syncfusion/ej2-xlsx';
+
+const workbook: Workbook = Workbook.create();
+const sheet = workbook.sheet(0);
+
+// Arguments: ref, target, displayText, tooltip, type
 sheet.hyperlinks.add('A6', 'https://example.com', 'Example', 'Open site', 'url');
 
 const count = sheet.hyperlinks.count;
 const first = sheet.hyperlinks.get(0);
 const all = sheet.hyperlinks.list();
-```
+
+// Save the workbook.
+await workbook.save('./HyperlinkCollection.xlsx');
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+import { Workbook } from '@syncfusion/ej2-xlsx';
+
+const workbook = Workbook.create();
+const sheet = workbook.sheet(0);
+
+// Arguments: ref, target, displayText, tooltip, type
+sheet.hyperlinks.add('A6', 'https://example.com', 'Example', 'Open site', 'url');
+
+const count = sheet.hyperlinks.count;
+const first = sheet.hyperlinks.get(0);
+const all = sheet.hyperlinks.list();
+
+// Save the workbook.
+await workbook.save('./HyperlinkCollection.xlsx');
+{% endhighlight %}
+{% endtabs %}
 
 ## Remove a hyperlink
 
@@ -221,11 +247,8 @@ sheet.cell('A1').hyperlink = {
 // Remove from the cell
 sheet.cell('A1').hyperlink = undefined;
 
-// Or remove from the collection after add:
-// const link = sheet.hyperlinks.add('A2', 'https://example.com', 'Example');
-// sheet.hyperlinks.remove(link);
-// sheet.hyperlinks.removeAt(0);
-// sheet.hyperlinks.clear();
+// Save the workbook.
+await workbook.save('RemoveAHyperlink.xlsx');
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 import { Workbook } from '@syncfusion/ej2-xlsx';
@@ -242,10 +265,7 @@ sheet.cell('A1').hyperlink = {
 // Remove from the cell
 sheet.cell('A1').hyperlink = undefined;
 
-// Or remove from the collection after add:
-// const link = sheet.hyperlinks.add('A2', 'https://example.com', 'Example');
-// sheet.hyperlinks.remove(link);
-// sheet.hyperlinks.removeAt(0);
-// sheet.hyperlinks.clear();
+// Save the workbook.
+await workbook.save('RemoveAHyperlink.xlsx');
 {% endhighlight %}
 {% endtabs %}
