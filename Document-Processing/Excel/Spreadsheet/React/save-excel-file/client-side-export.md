@@ -27,18 +27,22 @@ Client-side export provides several key advantages over server-side processing:
 
 Once file is fetched, send the file to ej2-xlsx, based on that use, read XML (Office Open XML) then based on the info we got, we'll update in the spreadsheet model - workbook (spreadsheet) compatible json and then load, during this process, we'll retain all the spreadsheet supported features.
 
+<<<<<<< HEAD
 ## Supported formats
 
 Client-side export currently supports:
 * Microsoft Excel Workbook (.xlsx)
 * Portable Document Format (.pdf)
 
+=======
+>>>>>>> 0dd82bada01dd266ca45353a72dab8cf8d824694
 ## Configure client-side export
 
 Unlike server-side processing the `saveUrl` is not mandatory, since there is no server side request we're fully handling for client (tell advantage shortly so due to that you can use it client-side).
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
+<<<<<<< HEAD
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
@@ -77,6 +81,16 @@ root.render(<App />);
 {% endtabs %}
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/client-side-local-cs1" %}
+=======
+{% include code-snippet/spreadsheet/react/client-side-save-cs1/app/app.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/spreadsheet/react/client-side-save-cs1/app/app.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/client-side-save-cs1" %}
+>>>>>>> 0dd82bada01dd266ca45353a72dab8cf8d824694
 
 With this configuration, the Spreadsheet will generate Excel files directly in the browser without requiring server communication.
 
@@ -86,6 +100,7 @@ To save Excel files programmatically in the Spreadsheet, you can use the [`save`
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
+<<<<<<< HEAD
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
@@ -154,6 +169,16 @@ root.render(<App />);
 {% endtabs %}
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/client-side-local-cs1" %}
+=======
+{% include code-snippet/spreadsheet/react/client-side-save-cs1/app/app.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/spreadsheet/react/client-side-save-cs1/app/app.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/client-side-save-cs1" %}
+>>>>>>> 0dd82bada01dd266ca45353a72dab8cf8d824694
 
 ## Save Excel files as Blob data
 
@@ -161,6 +186,7 @@ To save an Excel file as blob data, you need to set `needBlobData` property to *
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
+<<<<<<< HEAD
 import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { SpreadsheetComponent } from '@syncfusion/ej2-react-spreadsheet';
@@ -247,6 +273,16 @@ root.render(<App />);
 {% endtabs %}
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/client-side-blob-cs1" %}
+=======
+{% include code-snippet/spreadsheet/react/client-side-save-blob-cs1/app/app.jsx %}
+{% endhighlight %}
+{% highlight ts tabtitle="app.tsx" %}
+{% include code-snippet/spreadsheet/react/client-side-save-blob-cs1/app/app.tsx %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "/document-processing/code-snippet/spreadsheet/react/client-side-save-blob-cs1" %}
+>>>>>>> 0dd82bada01dd266ca45353a72dab8cf8d824694
 
 ## Considerations
 

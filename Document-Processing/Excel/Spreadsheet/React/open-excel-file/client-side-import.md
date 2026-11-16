@@ -27,11 +27,6 @@ Client-side import provides several key advantages over server-side processing:
 
 Once file is fetched, send the file to ej2-xlsx, based on that use, read XML (Office Open XML) then based on the info we got, we'll update in the spreadsheet model - workbook (spreadsheet) compatible json and then load, during this process, we'll retain all the spreadsheet supported features.
 
-## Supported format
-
-Client-side import currently supports:
-* Microsoft Excel Workbook (.xlsx)
-
 ## Configure client-side import
 
 Unlike server-side processing the `openUrl` is not mandatory, since there is no server side request we're fully handling for client (tell advantage shortly so due to that you can use it client-side).

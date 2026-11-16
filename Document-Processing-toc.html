@@ -3650,6 +3650,8 @@
 							<li><a href="/document-processing/pdf/pdf-library/javascript/Header-Footer">Headers and Footers</a></li>
 							<li><a href="/document-processing/pdf/pdf-library/javascript/Shapes">Shapes</a></li>
 							<li><a href="/document-processing/pdf/pdf-library/javascript/Annotations">Annotations</a></li>
+							<li><a href="/document-processing/pdf/pdf-library/javascript/File-Attachment">File Attachment</a></li>
+							<li><a href="/document-processing/pdf/pdf-library/javascript/Actions">Actions</a></li>
 							<li><a href="/document-processing/pdf/pdf-library/javascript/FormFields">Form Fields</a></li>
 							<li><a href="/document-processing/pdf/pdf-library/javascript/Encryption">Encryption</a></li>
 							<li><a href="/document-processing/pdf/pdf-library/javascript/DigitalSignature">Digital Signature</a></li>
@@ -6131,8 +6133,8 @@
 							<li><a href="/document-processing/excel/spreadsheet/react/data-binding">Data Binding</a></li>
 							<li><a href="/document-processing/excel/spreadsheet/react/open-excel-files">Open Excel Files</a>
 								<ul>
-									<li><a href="/document-processing/excel/spreadsheet/react/open-excel-file/using-client-side">pure-client-side</a></li>
-									<li><a href="/document-processing/excel/spreadsheet/react/open-excel-file/using-server-side">pure-server-side</a></li>
+									<li><a href="/document-processing/excel/spreadsheet/react/open-excel-file/client-side-import">pure-client-side</a></li>
+									<li><a href="/document-processing/excel/spreadsheet/react/open-excel-file/server-side-import">pure-server-side</a></li>
 									<li><a href="/document-processing/excel/spreadsheet/react/open-excel-file/from-aws-s3-bucket">From AWS S3</a></li>
 									<li><a href="/document-processing/excel/spreadsheet/react/open-excel-file/from-azure-blob-storage">From Azure Blob Storage</a></li>
 									<li><a href="/document-processing/excel/spreadsheet/react/open-excel-file/from-google-cloud-storage">From Google Cloud Storage</a></li>
@@ -6141,8 +6143,8 @@
 							</li>
 							<li><a href="/document-processing/excel/spreadsheet/react/save-excel-files">Save Excel Files</a>
 								<ul>
-									<li><a href="/document-processing/excel/spreadsheet/react/save-excel-file/using-client-side">pure-client-side</a></li>
-									<li><a href="/document-processing/excel/spreadsheet/react/save-excel-file/using-server-side">pure-server-side</a></li>
+									<li><a href="/document-processing/excel/spreadsheet/react/save-excel-file/client-side-export">pure-client-side</a></li>
+									<li><a href="/document-processing/excel/spreadsheet/react/save-excel-file/server-side-export">pure-server-side</a></li>
 									<li><a href="/document-processing/excel/spreadsheet/react/save-excel-file/to-aws-s3-bucket">To AWS S3</a></li>
 									<li><a href="/document-processing/excel/spreadsheet/react/save-excel-file/to-azure-blob-storage">To Azure Blob Storage</a></li>
 									<li><a href="/document-processing/excel/spreadsheet/react/save-excel-file/to-google-cloud-storage">To Google Cloud Storage</a></li>
@@ -8005,9 +8007,22 @@
 				<a href="/document-processing/powerpoint/pptx-editor/overview">PPTX Editor</a>
 				<ul>
 					<li>
+						<a href="/document-processing/powerpoint/pptx-editor/asp-net-core/overview">ASP.NET Core</a>
+						<ul>
+							<li><a href="/document-processing/powerpoint/pptx-editor/asp-net-core/getting-started">Getting Started</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="/document-processing/powerpoint/pptx-editor/asp-net-mvc/overview">ASP.NET MVC</a>
+						<ul>
+							<li><a href="/document-processing/powerpoint/pptx-editor/asp-net-mvc/getting-started">Getting Started</a></li>
+						</ul>
+					</li>
+					<li>
 						<a href="/document-processing/powerpoint/pptx-editor/angular/overview">Angular</a>
 						<ul>
 							<li><a href="/document-processing/powerpoint/pptx-editor/angular/getting-started">Getting Started</a></li>
+							<li>API Reference</li>
 						</ul>
 					</li>
 					<li>
@@ -8015,6 +8030,7 @@
 						<ul>
 							<li><a href="/document-processing/powerpoint/pptx-editor/react/getting-started">Getting Started</a>
 							</li>
+							<li>API Reference</li>
 						</ul>
 					</li>
 					<li>
@@ -8022,18 +8038,21 @@
 						<ul>
 							<li><a href="/document-processing/powerpoint/pptx-editor/vue/getting-started">Getting Started</a></li>
 							<li><a href="/document-processing/powerpoint/pptx-editor/vue/getting-started-vue-3">Getting Started with Vue 3</a></li>
+							<li>API Reference</li>
 						</ul>
 					</li>
 					<li>
 						<a href="/document-processing/powerpoint/pptx-editor/javascript-es5/overview">JavaScript (ES5)</a>
 						<ul>
 							<li><a href="/document-processing/powerpoint/pptx-editor/javascript-es5/getting-started">Getting Started</a></li>
+							<li>API Reference</li>
 						</ul>
 					</li>
 					<li>
 						<a href="/document-processing/powerpoint/pptx-editor/javascript-es6/overview">JavaScript (ES6)</a>
 						<ul>
 							<li><a href="/document-processing/powerpoint/pptx-editor/javascript-es6/getting-started">Getting Started</a></li>
+							<li>API Reference</li>
 						</ul>
 					</li>
 				</ul>
@@ -8606,6 +8625,9 @@
 								<a href="/document-processing/powerpoint/powerpoint-library/javascript/loading-and-saving-presentation">Loading and Saving Presentation</a>
 							</li>
 							<li>
+								<a href="/document-processing/powerpoint/powerpoint-library/javascript/working-with-powerpoint-presentation">Working with Presentation</a>
+							</li>
+							<li>
 								<a href="/document-processing/powerpoint/powerpoint-library/javascript/working-with-slide">Working with Slides</a>
 							</li>
 							<li>
@@ -8624,7 +8646,30 @@
 								<a href="/document-processing/powerpoint/powerpoint-library/javascript/working-with-tables">Working with Tables</a>
 							</li>
 							<li>
-								<a href="/document-processing/powerpoint/powerpoint-library/javascript/working-with-powerpoint-presentation">Working with Presentation</a>
+								<a href="/document-processing/powerpoint/powerpoint-library/javascript/working-with-charts">Working with Charts</a>
+								<ul>
+									<li>
+										<a href="/document-processing/powerpoint/powerpoint-library/javascript/charts/chart-title">Chart Title</a>
+									</li>
+									<li>
+										<a href="/document-processing/powerpoint/powerpoint-library/javascript/charts/chart-area">Chart Area</a>
+									</li>
+									<li>
+										<a href="/document-processing/powerpoint/powerpoint-library/javascript/charts/chart-plot-area">Chart Plot Area</a>
+									</li>
+									<li>
+										<a href="/document-processing/powerpoint/powerpoint-library/javascript/charts/chart-series">Chart Series</a>
+									</li>
+									<li>
+										<a href="/document-processing/powerpoint/powerpoint-library/javascript/charts/chart-legend">Chart Legend</a>
+									</li>
+									<li>
+										<a href="/document-processing/powerpoint/powerpoint-library/javascript/charts/chart-data-labels">Chart Data Labels</a>
+									</li>
+									<li>
+										<a href="/document-processing/powerpoint/powerpoint-library/javascript/charts/chart-axis">Chart Axis</a>
+									</li>
+								</ul>
 							</li>
 							<li>
 								<a href="/document-processing/powerpoint/powerpoint-library/javascript/working-with-notes">Working with Notes</a>
