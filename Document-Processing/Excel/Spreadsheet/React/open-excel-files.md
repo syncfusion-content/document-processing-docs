@@ -9,9 +9,9 @@ documentation: ug
 
 # Open Excel files in React Spreadsheet
 
-The React Spreadsheet component allows users to select and open workbook files through the user interface or the public `open()` method. The same UI and public API are used for both client-side and server-side import methods. The processing method is determined by whether `openUrl` is configured.
+The React Spreadsheet component allows users to select and open workbook files through the user interface or the public `open()` method. The same UI and public API are used for both client-side and server-side processing methods. The processing method is determined by whether `openUrl` is configured.
 
-When `openUrl` is configured, the Spreadsheet sends files to a server endpoint for processing (server-side import). When `openUrl` is not configured, the Spreadsheet processes files directly in the browser (client-side import).
+When `openUrl` is configured, the Spreadsheet sends files to a server endpoint for processing (server-side processing). When `openUrl` is not configured, the Spreadsheet processes files directly in the browser (client-side processing).
 
 ## Enable file opening
 
@@ -29,7 +29,7 @@ The processing method depends on the Spreadsheet configuration. When `openUrl` i
 
 Use the [`open`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#open) method to open a file programmatically. Pass the file through the `file` property of [`OpenOptions`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/openOptions).
 
-The `File` object can come from a local file selection or be created from application-provided data. Refer to [Client-side import](./open-excel-file/client-side-import) or [Server-side import](./open-excel-file/server-side-import) for processing-specific workflows.
+The `File` object can come from a local file selection or be created from application-provided data. Refer to [Using Client-Side](./open-excel-file/using-client-side) or [Using Server-Side](./open-excel-file/using-server-side) for processing-specific workflows.
 
 ## Open events
 
@@ -39,26 +39,26 @@ Use the [`openComplete`](https://ej2.syncfusion.com/react/documentation/api/spre
 
 ## Supported file formats
 
-The supported file formats depend on the selected import method:
+The supported file formats depend on the selected processing method:
 
-| Import method | Supported formats |
+| Processing method | Supported formats |
 | --- | --- |
-| Client-side import | Microsoft Excel Workbook (`.xlsx`) |
-| Server-side import | Microsoft Excel Workbook (`.xlsx`), Excel 97-2003 Workbook (`.xls`), Comma-Separated Values (`.csv`), Excel Macro-Enabled Workbook (`.xlsm`), and Excel Binary Workbook (`.xlsb`) |
+| Client-side processing | Microsoft Excel Workbook (`.xlsx`) |
+| Server-side processing | Microsoft Excel Workbook (`.xlsx`), Excel 97-2003 Workbook (`.xls`), Comma-Separated Values (`.csv`), Excel Macro-Enabled Workbook (`.xlsm`), and Excel Binary Workbook (`.xlsb`) |
 
-## Choose an import method
+## Choose a processing method
 
-Use client-side import when XLSX files should be processed directly in the browser without configuring an Open service.
+Use client-side processing when XLSX files should be processed directly in the browser without configuring an Open service.
 
-Use server-side import when the application requires additional file formats, centralized processing, or server-side parsing options.
+Use server-side processing when the application requires additional file formats, centralized processing, or server-side parsing options.
 
-Choose the import method based on the required file formats, application architecture, and whether workbook processing should occur in the browser or through a server endpoint.
+Choose the processing method based on the required file formats, application architecture, and whether workbook processing should occur in the browser or through a server endpoint.
 
 ## See also
 
-* [Client-Side Import](./open-excel-file/client-side-import)
-* [Server-Side Import](./open-excel-file/server-side-import)
-* [Import from AWS S3](./open-excel-file/from-aws-s3-bucket)
-* [Import from Azure Blob Storage](./open-excel-file/from-azure-blob-storage)
-* [Import from Google Cloud Storage](./open-excel-file/from-google-cloud-storage)
-* [Import from Google Drive](./open-excel-file/from-google-drive)
+* [Using Client-Side](./open-excel-file/using-client-side)
+* [Using Server-Side](./open-excel-file/using-server-side)
+* [From AWS S3](./open-excel-file/from-aws-s3-bucket)
+* [From Azure Blob Storage](./open-excel-file/from-azure-blob-storage)
+* [From Google Cloud Storage](./open-excel-file/from-google-cloud-storage)
+* [From Google Drive](./open-excel-file/from-google-drive)
