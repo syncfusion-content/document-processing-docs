@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to Compare Word Documents in TypeScript DOCX Editor
+# How to compare Word documents in TypeScript DOCX Editor
 
 In this article, we are going to see how to compare two Word documents and view the resultant document with tracked changes in the Document Editor.
 
