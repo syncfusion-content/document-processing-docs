@@ -35,6 +35,7 @@ The Blazor `SfPdfViewer` component enables viewing, annotating, printing, and do
 * [Free text annotations](./annotation/free-text-annotation)
 * [Comments](./annotation/comments) and [sticky notes](./annotation/sticky-notes-annotation)
 * [Redaction annotations](./redaction/overview)
+* [Appearance-based annotation rendering](./annotation/appearance-based-annotation-rendering) to render annotations using their embedded appearance streams
 
 ### Forms
 * [Form filling](./forms/form-filling)
