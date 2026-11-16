@@ -45,10 +45,6 @@ The supported file formats depend on the selected processing method:
 | Client-side processing | Microsoft Excel Workbook (`.xlsx`) |
 | Server-side processing | Microsoft Excel Workbook (`.xlsx`), Excel 97-2003 Workbook (`.xls`), Comma-Separated Values (`.csv`), Excel Macro-Enabled Workbook (`.xlsm`), and Excel Binary Workbook (`.xlsb`) |
 
-## Choose a processing method
-
-Choose client-side processing for browser-based XLSX file processing without an Open service. Choose server-side processing for additional formats or centralized processing needs.
-
 ## See also
 
 * [Client-Side Import](./open-excel-file/pure-client-side)
