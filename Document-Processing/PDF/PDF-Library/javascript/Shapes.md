@@ -458,9 +458,97 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
+## Shape Pagination
+
+Shape pagination automatically continues large shapes across multiple PDF pages. Use a `PdfShapeElement`, to define the shape and pagination behavior, then draw it with `PdfPage.drawShapeElement`.The resulting `PdfLayoutResult` contains the last page and layout bounds.
+
+This example demonstrates how to draw an ellipse across multiple pages when it does not fit on a single page.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+
+import { PdfDocument, PdfPage, PdfBrush, PdfShapeElement, PdfShapeType, PdfLayoutType, PdfLayoutBreakType } from '@syncfusion/ej2-pdf';
+
+// Create a new PDF document
+let document: PdfDocument = new PdfDocument();
+// Add a page
+let page: PdfPage = document.addPage();
+// Create an ellipse shape element whose height is greater than the page height
+// The x and y values of the bounds define the starting position of the ellipse
+let element: PdfShapeElement = {
+    shape: {
+        type: PdfShapeType.Ellipse,
+        bounds: { x: 20, y: 20, width: 100, height: 1000 }
+    },
+    brush: new PdfBrush({ r: 165, g: 42, b: 42 }),
+    layoutFormat: {
+        layoutType: PdfLayoutType.paginate,
+        breakType: PdfLayoutBreakType.fitPage
+    }
+};
+// Draw the ellipse across multiple pages
+page.drawShapeElement(element);
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Add a page
+var page = document.addPage();
+// Create an ellipse shape element whose height is greater than the page height
+// The x and y values of the bounds define the starting position of the ellipse
+var element = {
+    shape: {
+        type: ej.pdf.PdfShapeType.Ellipse,
+        bounds: {
+            x: 20,
+            y: 20,
+            width: 100,
+            height: 1000
+        }
+    },
+    brush: new ej.pdf.PdfBrush({
+        r: 165,
+        g: 42,
+        b: 42
+    }),
+    layoutFormat: {
+        layoutType: ej.pdf.PdfLayoutType.paginate,
+        breakType: ej.pdf.PdfLayoutBreakType.fitPage
+    }
+};
+// Draw the ellipse across multiple pages
+page.drawShapeElement(element);
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
+
+{% endhighlight %}
+{% endtabs %}
+
+### Supported shape element types
+
+The `PdfShapeElement` supports a variety of shape types for drawing graphical content in PDF documents. Specify the required shape type and corresponding shape data to render the shape.
+
+- `Line` - Draws a straight line between two points.
+- `BezierCurve` - Draws a Bezier curve using control points.
+- `Arc` - Draws a curved arc segment.
+- `Rectangle` - Draws a rectangle.
+- `Ellipse` - Draws an ellipse or circle.
+- `Pie` - Draws a pie-shaped segment.
+- `Polygon` - Draws a closed shape using multiple connected points.
+- `Path` - Draws a custom shape made of lines and curves.
+- `RoundedRectangle` - Draws a rectangle with rounded corners.
+
 ## Additional Resources
 
 - [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library)
 - [JavaScript PDF Library documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
 - [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
-- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/document-library/javascript/#/tailwind3/pdf/default.html)
+- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/document-library/javascript/#/tailwind3/pdf/default)
