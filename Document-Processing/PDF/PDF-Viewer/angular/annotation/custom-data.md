@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Custom Data in Angular PDF Viewer | Syncfusion
+title: Custom Data in Angular PDF Viewer Annotations | Syncfusion
 description: Attach custom metadata to annotations in the Angular PDF Viewer and read it back later to drive tailored workflows and integrations.
 platform: document-processing
 control: PDF Viewer
