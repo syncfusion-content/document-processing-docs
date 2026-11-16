@@ -7,7 +7,7 @@ control: Spreadsheet
 documentation: ug
 ---
 
-# Client-side processing with React Spreadsheet
+# Using client-side processing with React Spreadsheet
 
 Client-side processing generates workbook files directly within the browser without sending data to a Save service. When `allowSave` property is default enabled and `saveUrl` is not configured, the Spreadsheet leverages its integrated client-side file-generation functionality that uses the `@syncfusion/ej2-xlsx` library internally.
 
@@ -23,7 +23,7 @@ Client-side export provides several key advantages over server-side processing:
 
 ## How client-side export works
 
-Once a file is fetched, it is sent to the ej2-xlsx library. This library reads the Office Open XML format and extracts all relevant information. Based on this extracted information, it generates a workbook-compatible JSON structure that the Spreadsheet component can understand and load. During this process, all Spreadsheet-supported features are retained and properly mapped to the client-side representation.
+For save processing, the Spreadsheet component serializes its content into a structured JSON workbook that includes all essential details—such as data, formulas, formatting, styles, and sheet configuration. This JSON is processed by the ej2-xlsx library to generate a fully formatted Excel file directly in the browser.
 
 ## Supported formats
 

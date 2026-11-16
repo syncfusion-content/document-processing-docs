@@ -7,7 +7,7 @@ control: Server-Side Import
 documentation: ug
 ---
 
-# Server-side processing with React Spreadsheet
+# Using server-side processing with React Spreadsheet
 
 The [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component uses a server-assisted workflow to open Excel files efficiently and accurately. When a user uploads an Excel file, the file is sent to a server endpoint for processing. This keeps the browser fast and responsive, as all heavy parsing and conversion are handled on the server.
 
