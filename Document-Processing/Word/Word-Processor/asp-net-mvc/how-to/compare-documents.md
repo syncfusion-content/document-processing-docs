@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Compare Word Documents in ASP.NET MVC DOCX Editor | Syncfusion
+title: How to compare Word documents in ASP.NET MVC DOCX Editor | Syncfusion
 description: Learn how to compare two Word documents using DocIO and view the resultant document with tracked changes in Syncfusion® ASP.NET MVC DOCX Editor.
 platform: document-processing
 control: DOCX Editor
 documentation: ug
 ---
 
-# How to Compare Word Documents in ASP.NET MVC DOCX Editor
+# How to compare Word documents in ASP.NET MVC DOCX Editor
 
 In this article, we are going to see how to compare two Word documents and view the resultant document with tracked changes in the [ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor).
 
