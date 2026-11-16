@@ -59,6 +59,15 @@ document.Save("HTMLtoWord.docx", FormatType.Docx)
 document.Close()
 {% endhighlight %}
 
+{% highlight javascript tabtitle="JavaScript" %}
+const response = await fetch('Input.html');
+const bytes = new Uint8Array(await response.arrayBuffer());
+let document = WordDocument.openSync(bytes);
+
+// Save
+document.save('HTMLToWord.docx');
+{% endhighlight %}
+
 {% endtabs %}
 
 You can download a complete working sample from [GitHub](https://github.com/SyncfusionExamples/DocIO-Examples/tree/main/HTML-conversions/Convert-HTML-to-Word).
