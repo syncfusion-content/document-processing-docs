@@ -48,7 +48,7 @@ const root = createRoot(document.getElementById('root'));
 root.render(<App />);
 ```
 
-With this configuration, the Spreadsheet will process all Excel files directly in the browser without requiring server communication. For specific file-source implementations (local system, URL, or Blob data), see the sections below.
+With this configuration, the Spreadsheet will process all Excel files (.xlsx) directly in the browser without requiring server communication. For specific file-source implementations (local system, URL, or Blob data), see the sections below.
 
 ## Supported file sources
 
@@ -71,7 +71,7 @@ The following code example shows how to import an Excel document using file uplo
 
 ### Opening a file from a URL
 
-You can achieve access to the remote Excel file by using the created event. In this event you can fetch the Excel file and convert it to a blob. Convert this blob to a file and open this file by using Spreadsheet component open method.
+You can fetch the remote Excel file (.xlsx) through the URL and convert it to a blob. Convert this blob to a file and open this file by using Spreadsheet component's [open](/document-processing/api/spreadsheet/spreadsheetcomponent#open) method.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -102,9 +102,6 @@ Please find the code to fetch the blob data and load it into the Spreadsheet com
 {% endtabs %}
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/react/client-side-blob-cs1" %}
-
-In all cases, the workflow ends by passing a `File` object to the public Spreadsheet API:
-`spreadsheetRef.current?.open({ file });`
 
 
 

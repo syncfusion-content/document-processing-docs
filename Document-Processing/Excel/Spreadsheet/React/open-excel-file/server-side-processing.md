@@ -9,9 +9,11 @@ documentation: ug
 
 # Server-side processing with React Spreadsheet
 
-The [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component uses a pure server-assisted workflow to open Excel files efficiently and accurately. When a user uploads an Excel file, the file is sent to a server endpoint for processing. This keeps the browser fast and responsive, as all heavy parsing and conversion are handled on the server.
+The [React Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/react-spreadsheet-editor) component uses a server-assisted workflow to open Excel files efficiently and accurately. When a user uploads an Excel file, the file is sent to a server endpoint for processing. This keeps the browser fast and responsive, as all heavy parsing and conversion are handled on the server.
 
 On the server, the [`Syncfusion.EJ2.Spreadsheet`](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core) library is used to process the uploaded Excel file. This library is built on top of [`Syncfusion XlsIO`](https://help.syncfusion.com/document-processing/excel/excel-library/net/overview), which itself is implemented using **.NET Frameworks**. The server extracts all data, styles, formulas, formatting, and sheet structure, then converts everything into a Spreadsheet-compatible JSON format. This JSON is sent back to the client, where the React Spreadsheet component renders the workbook in the browser, preserving the original Excel layout and content.
+
+For open processing, the server receives the uploaded Excel file and processes it with the Syncfusion XlsIO library. This library reads the Office Open XML format and extracts all relevant information. Based on this extracted information, it generates a workbook-compatible JSON structure that the Spreadsheet component can understand and load. During this process, all Spreadsheet-supported features are retained and properly mapped to the client-side representation.
 
 In the code samples and demos, you may see **Syncfusion-hosted service URLs** used for the `openUrl` and `saveUrl` properties. These URLs point to Syncfusion's own WebAPI services (built with **ASP.NET Core**) that handle opening and saving Excel files. These hosted URLs are provided only for demonstration and evaluation purposes:
 
