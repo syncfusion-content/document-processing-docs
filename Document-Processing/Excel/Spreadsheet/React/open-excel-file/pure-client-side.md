@@ -15,11 +15,11 @@ Client-side processing enables the Spreadsheet component to process workbook fil
 
 Client-side import provides several key advantages over server-side processing:
 
-* **No Server Dependency**: Process Excel files directly in the browser without requiring server endpoints
-* **Improved Performance**: Eliminates network latency for file processing operations
-* **Reduced Infrastructure Costs**: No need to maintain server-side processing infrastructure
-* **Enhanced Privacy**: Keep workbook data within the browser during import and export
-* **Offline Capability**: Open and process local Excel files without requiring an internet connection
+* **No Server Dependency**: Process Excel files directly in the browser without requiring server endpoints.
+* **Reduced Network Overhead**: Avoid uploading workbook data to a server and waiting for server-side file processing.
+* **Reduced Infrastructure Costs**: Eliminate the need to deploy and maintain server-side file-processing infrastructure.
+* **Enhanced Privacy**: Keep workbook data within the browser during import instead of sending it to a file-processing service.
+* **Offline Capability**: Open and process local Excel files without an internet connection.
 
 ## How client-side import works
 

@@ -15,11 +15,11 @@ Client-side processing generates workbook files directly within the browser with
 
 Client-side export provides several key advantages over server-side processing:
 
-* **No Server Dependency**: Generate Excel files directly in the browser without requiring server endpoints
-* **Improved Performance**: Eliminates network latency for file generation operations
-* **Reduced Infrastructure Costs**: No need to maintain server-side processing infrastructure
-* **Enhanced Privacy**: Keep workbook data within the browser during import and export
-* **Offline Capability**: Open and process local Excel files without requiring an internet connection
+* **No Server Dependency**: Process Excel files directly in the browser without requiring server endpoints.
+* **Reduced Network Overhead**: Avoid uploading workbook data to a server and waiting for server-side file processing.
+* **Reduced Infrastructure Costs**: Eliminate the need to deploy and maintain server-side file-processing infrastructure.
+* **Enhanced Privacy**: Keep workbook data within the browser during import instead of sending it to a file-processing service.
+* **Offline Capability**: Open and process local Excel files without an internet connection.
 
 ## How client-side export works
 
