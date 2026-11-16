@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to Compare Word Documents in JavaScript DOCX Editor
+# How to compare word documents in JavaScript DOCX Editor
 
 In this article, we are going to see how to compare two Word documents and view the resultant document with tracked changes in the Document Editor.
 
