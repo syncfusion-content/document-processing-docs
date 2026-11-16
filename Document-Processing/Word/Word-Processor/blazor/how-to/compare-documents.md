@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Compare Word Documents in Blazor DOCX Editor | Syncfusion
+title: How to compare Word documents in Blazor DOCX Editor | Syncfusion
 description: Learn how to compare two Word documents using DocIO and view the resultant document with tracked changes in Syncfusion® Blazor DOCX Editor.
 platform: document-processing
 control: DOCX Editor
 documentation: ug
 ---
 
-# How to Compare Word Documents in Blazor DOCX Editor
+# How to compare Word documents in Blazor DOCX Editor
 
 In this article, we are going to see how to compare two Word documents and view the resultant document with tracked changes in the [Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor).
 
