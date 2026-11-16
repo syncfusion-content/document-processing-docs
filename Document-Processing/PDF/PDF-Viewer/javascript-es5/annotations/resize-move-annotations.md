@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Resize and Move Annotations in JavaScript (ES5) PDF Viewer | Syncfusion
-description: Resize and move annotations in the JavaScript (ES5) PDF Viewer using the built-in UI and programmatically update the annotation bounds and page number dynamically.
+title: Resize and Move PDF Annotations in JavaScript | Syncfusion
+description: Resize and move annotations in the JavaScript (ES5) PDF Viewer using built-in tools or programmatically update bounds and page positions.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
