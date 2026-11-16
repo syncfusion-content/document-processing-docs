@@ -179,13 +179,13 @@ Formatting is applied on the chart returned by `addChart`. Colors are RRGGBB or 
 
 See the following topics for each area:
 
-* [Chart title](./Charts/Chart-Title)
-* [Chart area](./Charts/Chart-Area)
-* [Chart plot area](./Charts/Chart-Plot-Area)
-* [Chart series](./Charts/Chart-Series)
-* [Chart legend](./Charts/Chart-Legend)
-* [Chart data labels](./Charts/Chart-Data-Labels)
-* [Chart axis](./Charts/Chart-Axis)
+* [Chart title](Charts/Chart-Title.md)
+* [Chart area](Charts/Chart-Area.md)
+* [Chart plot area](Charts/Chart-Plot-Area.md)
+* [Chart series](Charts/Chart-Series.md)
+* [Chart legend](Charts/Chart-Legend.md)
+* [Chart data labels](Charts/Chart-Data-Labels.md)
+* [Chart axis](Charts/Chart-Axis.md)
 
 Gradient fills on an existing chart source can be set with `setSourceGradientFill`. Theme or scheme colors are not written through the solid-color format bags.
 

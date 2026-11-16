@@ -109,9 +109,9 @@ await pptxDoc.save('PresentationWithNotesText.pptx');
 
 N> `setBodyText` replaces the whole body text. It does not append paragraphs, and per-run font formatting cannot be applied through this function. The notes body placeholder must exist; writing to a notes slide without a body placeholder throws a `NotesError`.
 
-## Adding a Numbered List to Notes
+## Adding a list to notes
 
-The JavaScript PowerPoint Library does not currently support adding lists with numbers (or bullet lists) to notes. The notes API replaces the body placeholder text through `setBodyText`, and there is no API to set paragraph list properties on the notes paragraphs. List numbering has to be added by editing the presentation in Microsoft PowerPoint.
+The JavaScript PowerPoint Library does not currently support adding a list with numbers (or a bullet list) to notes. The notes API replaces the body placeholder text through `setBodyText`, and there is no API to set paragraph list properties on the notes paragraphs. A list has to be added by editing the presentation in Microsoft PowerPoint.
 
 ## Removing Notes from a Slide
 
