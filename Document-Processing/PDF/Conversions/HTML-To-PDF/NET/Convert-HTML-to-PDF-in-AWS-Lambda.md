@@ -27,7 +27,7 @@ The HTML to PDF converter supports the following input types:
 - HTML String: Direct HTML content.
 - URL: Web pages and online HTML content.
 - HTML Files: Local HTML files.
-- MHTML Files: Web archive (.mhtml/.mht) content.
+- MHTML Files: Web archive content.
 - Authenticated Web Pages: Pages that require cookies, form authentication, or HTTP authentication.
 - HTTP GET/POST Requests: HTML content accessed through GET or POST methods
 
@@ -63,12 +63,14 @@ namespace BlinkHtmlConversion.Controllers
 {% endhighlight %}
 {% endtabs %}
 
+N> <div markdown="1" style="display:flex;flex-direction:column;">
 N> Starting from **version 29.2.4**, it is no longer necessary to manually add the following command-line arguments when using the Blink rendering engine:
 N> ```csharp
 N> settings.CommandLineArguments.Add("--no-sandbox");
 N> settings.CommandLineArguments.Add("--disable-setuid-sandbox");
 N> ```
 N> These arguments are only required when using **older versions** of the library that depend on Blink in sandbox-restricted environments.
+N> </div>
 
 ## Steps to convert HTML to PDF in AWS Lambda
 
