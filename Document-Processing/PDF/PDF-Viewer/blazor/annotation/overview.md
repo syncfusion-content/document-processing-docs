@@ -34,7 +34,7 @@ The Blazor SfPdfViewer provides a complete set of annotation tools for reviewing
 - [Import and export annotations](../annotation/import-export-annotation): Save and load annotations in JSON (`.json`) or XFDF (`.xfdf`) formats to persist markups across sessions or share them with others.
 - [Set permissions](../annotation/annotation-permission): Enable or disable the `AnnotationPermission` enum value (default: `AnnotationPermission.All`) to control which annotation actions users can perform.
 - [Add and manage comments](../annotation/comments): Insert, edit, and delete comments or sticky notes attached to annotations for clearer feedback and collaboration. The Comments pane must be enabled in the [toolbar settings](../toolbar-customization).
-- [Render annotations with appearance](../annotation/appearance-based-annotation-rendering): Render the annotations of the loaded document using their embedded appearance streams (`/AP` entry) by enabling the `ShowAnnotationAppearance` API, so that the visual representation stays consistent with the original PDF.
+- [View annotations with custom appearance](../annotation/appearance-based-annotation-rendering): Display the annotations of the loaded document using the custom appearance that is embedded in the PDF by enabling the `ShowAnnotationAppearance` API, so that the visual representation stays consistent with the original PDF.
 
 ## See also
 
