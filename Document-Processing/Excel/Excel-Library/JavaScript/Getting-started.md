@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Getting Started with JavaScript Excel | Syncfusion
+title: Getting Started with Excel Library in React | Syncfusion
 description: Learn how to create, edit, and download Excel workbooks in the browser using the Syncfusion® JavaScript Excel Library.
 control: Excel
 platform: document-processing
 documentation: ug
 ---
 
-# Getting Started with JavaScript Excel
+# Getting Started with JavaScript Excel Library in React
 
 The <a href="https://help.syncfusion.com/document-processing/excel/excel-library/javascript/overview" aria-label="JavaScript Excel Library overview documentation"> JavaScript Excel Library</a> is used to create, read, and edit Microsoft Excel (`.xlsx`) workbooks. You can work with worksheets, cells, formulas, formatting, and other spreadsheet features without Microsoft Excel installed.
 
-This guide explains how to integrate the <a href="https://helpstaging.syncfusion.com/document-processing/excel/excel-library/javascript/overview" aria-label="JavaScript Excel Library overview documentation on staging">JavaScript Excel Library</a> into a React application that runs in the browser. The generated workbook is downloaded directly from the browser; no server-side Excel processing is required.
+This guide explains how to integrate the <a href="https://help.syncfusion.com/document-processing/excel/excel-library/javascript/overview" aria-label="JavaScript Excel Library overview documentation on staging">JavaScript Excel Library</a> into a React application that runs in the browser. The generated workbook is downloaded directly from the browser; no server-side Excel processing is required.
 
 ## Prerequisites
 
@@ -30,7 +30,7 @@ node --version
 npm --version
 ```
 
-## Create a React Project
+## Create a React project
 
 This guide uses <a href="https://vitejs.dev/" aria-label="Vite official website">Vite</a> to scaffold the React project. Run the following command in a terminal:
 
@@ -55,7 +55,7 @@ All Syncfusion<sup>&reg;</sup> JS 2 packages are published in the `npmjs.com` re
 npm install @syncfusion/ej2-xlsx --save
 ```
 
-## Create an Excel Workbook
+## Create an Excel workbook
 
 Replace the contents of `App.jsx` with the following code. The file imports `Workbook` from `@syncfusion/ej2-xlsx`, writes sample cell values, saves the workbook as bytes, and downloads the result as an `.xlsx` file from the browser.
 
@@ -122,7 +122,7 @@ N> Import `Workbook` as a named export from `@syncfusion/ej2-xlsx`.
 
 N> In the browser, call the parameterless `save()` overload, which returns a `Promise<Uint8Array>`. Saving to a file system path with `save(filePath)` requires the Node.js file system module and is not available in browser apps.
 
-## Code Explanation
+## Code explanation
 
 - `Workbook.create()` - creates a new workbook with one visible worksheet named `Sheet1`.
 - `workbook.sheet(0)` - returns the worksheet at the zero-based index.
@@ -134,7 +134,7 @@ N> In the browser, call the parameterless `save()` overload, which returns a `Pr
 - `anchor.remove()` - removes the temporary anchor element after the download click.
 - `URL.revokeObjectURL(url)` - releases the temporary object URL after the download starts.
 
-## Run the Application
+## Run the application
 
 Open a terminal in the project root and start the Vite development server:
 
@@ -157,4 +157,4 @@ N> If you used Create-React-App instead of Vite, the run command is `npm start` 
 | Button click does nothing | The click handler is not wired, or an error is thrown inside the async function | Confirm the button uses `onClick={createExcel}` and check the browser console for errors |
 | `save(filePath) requires the Node.js filesystem and is not available in this environment` | A path was passed to `save()` in the browser | Use `const bytes = await workbook.save()` with no arguments, then download the bytes |
 | `Output.xlsx` does not download | The browser blocks the download, or the click handler did not finish | Check the browser download settings, allow downloads for the site, and confirm `await workbook.save()` completed |
-| Vite dev server fails to start | Port `5173` is in use | Stop the conflicting process or change the port in `vite.config.js` |
+| Vite development server fails to start | Port `5173` is in use | Stop the conflicting process or change the port in `vite.config.js` |
