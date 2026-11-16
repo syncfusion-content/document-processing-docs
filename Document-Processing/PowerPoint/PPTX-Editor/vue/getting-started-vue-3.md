@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with Vue PPTX Editor (Vue 3)
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with integrating the [Vue PPTX Editor component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with integrating the Vue PPTX Editor component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) or [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 ## Prerequisites
 
@@ -27,13 +27,13 @@ npm create vite@latest
 
 After running the command, follow the interactive prompts shown below to configure the project:
 
-Step 1: Define the project name: Specify the project name directly. This guide uses `pptx-editor-app`.
+**Step 1:** Define the project name: Specify the project name directly. This guide uses `pptx-editor-app`.
 
 ```bash
 ? Project name: » pptx-editor-app
 ```
 
-Step 2: Select `Vue` as the framework to target Vue 3.
+**Step 2:** Select `Vue` as the framework to target Vue 3.
 
 ```bash
 ? Select a framework: » - Use arrow-keys. Return to submit.
@@ -46,7 +46,7 @@ Step 2: Select `Vue` as the framework to target Vue 3.
   Others
 ```
 
-Step 3: Choose `JavaScript` as the variant to build the Vite project with JavaScript and Vue.
+**Step 3:** Choose `JavaScript` as the variant to build the Vite project with JavaScript and Vue.
 
 ```bash
 ? Select a variant: » - Use arrow-keys. Return to submit.
@@ -56,7 +56,7 @@ Step 3: Choose `JavaScript` as the variant to build the Vite project with JavaSc
   Nuxt ↗
 ```
 
-Step 4: After the scaffold completes, install the project dependencies:
+**Step 4:** After the scaffold completes, install the project dependencies:
 
 ```bash
 cd pptx-editor-app
@@ -90,7 +90,7 @@ This guide uses the `Tailwind 3` theme as an example, sourced from the theme pac
 npm install @syncfusion/ej2-tailwind3-theme
 ```
 
-By default, projects include an `src/App.Vue` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `src\style.css` to prevent style conflicts.
+By default, projects include an `src/style.css` file with default styles. These default styles may conflict with Syncfusion component styles. Clear all content from the `src/style.css` to prevent style conflicts.
 
 The required styles for the PPTX Editor are imported in the `<style>` section of the **src/App.Vue**
 
