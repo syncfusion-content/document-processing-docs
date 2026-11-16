@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Custom Data in Angular PDF Viewer | Syncfusion
+title: Custom Data in Angular PDF Viewer Annotations | Syncfusion
 description: Attach custom metadata to annotations in the Angular PDF Viewer and read it back later to drive tailored workflows and integrations.
 platform: document-processing
 control: PDF Viewer
@@ -222,6 +222,7 @@ export class AppComponent {
 - [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
 - [Create and Modify Annotation](../annotations/create-modify-annotation)
 - [Customize Annotation](../annotations/customize-annotation)
+- [Resize and Move Annotations](../annotation/resize-move-annotations)
 - [Remove Annotation](../annotations/delete-annotation)
 - [Handwritten Signature](../annotations/signature-annotation)
 - [Export and Import Annotation](../annotations/export-import/export-annotation)

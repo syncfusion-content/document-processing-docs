@@ -1259,18 +1259,16 @@ Each level supports two ways to define borders:
 
 ### Border Types (`PdfGridBorderType`)
 
-Use the `PdfGridBorderType` enumeration to control which borders are visible at the grid level. Values can be combined using the bitwise OR (|) operator.
+Use the `PdfGridBorderType` enumeration to control which borders are visible at the grid level. Values can be combined using the bitwise OR (`|`) operator.
 
 | Value | Behavior |
-|---|---|
+| --- | --- |
 | `None` | No borders. |
 | `All` | All borders (default). Excludes combined groups when used with other flags. |
-| `Outside` | All four outer edges (`Left`, `Right`, `Top`, `Bottom`). |
+| `Outside` | All four outer edges (`Left`, `Right`, `Top`, and `Bottom`). |
 | `Inside` | All inner cell separators (`InsideHorizontal` and `InsideVertical`). |
 | `InsideHorizontal` / `InsideVertical` | Row-only or column-only inner separators. |
 | `Left`, `Right`, `Top`, `Bottom` | Specific individual outer edges. |
-
-### Customize borders at the grid, column, row, and cell levels
 
 ### Border Precedence and Inheritance
 
@@ -1376,61 +1374,6 @@ document.destroy();
 {% endtabs %}
 
 N> The `type` property is only available at the grid level; combining `PdfGridBorderType.All` with other types excludes those borders (e.g., `PdfGridBorderType.All | PdfGridBorderType.InsideVertical` omits inner verticals). Setting `border` with a `PdfPen` replaces all four sides, while `PdfGridBorderPen` overrides specific sides and inherits remaining styles from lower-precedence levels.
-
-## Update the grid data source
-
-Reassign `dataSource` on a data-source grid. Generated rows are rebuilt, while manually added rows remain after them.
-
-This example shows how to dynamically update a table's data source and how manual rows are preserved after the update.
-
-{% tabs %}
-{% highlight typescript tabtitle="TypeScript" %}
-
-import { PdfDocument, PdfGrid, PdfPage } from '@syncfusion/ej2-pdf';
-
-// Create a new PDF document
-let document: PdfDocument = new PdfDocument();
-// Add a page to the document
-let page: PdfPage = document.addPage();
-// Define columns
-let columns = [{ field: 'id', headerText: 'ID' }, { field: 'name', headerText: 'Name' }];
-// Create grid with initial data source
-let grid: PdfGrid = new PdfGrid([{ id: 'E01', name: 'Clay' }], columns);
-// Add a manual row (this will be preserved after update)
-grid.addRow({ cells: [{ value: 'Manual' }, { value: 'Record' }] });
-// Update the data source (data-source rows are rebuilt)
-grid.dataSource = [{ id: 'E10', name: 'Andrew' }, { id: 'E11', name: 'Michael' }];
-// Draw the grid on the page
-grid.draw(page, { x: 10, y: 10 });
-// Save the document as Output.pdf
-document.save('Output.pdf');
-// Dispose of the document resources
-document.destroy();
-
-{% endhighlight %}
-{% highlight javascript tabtitle="JavaScript" %}
-
-// Create a new PDF document
-var document = new ej.pdf.PdfDocument();
-// Add a page to the document
-var page = document.addPage();
-// Define columns
-var columns = [{ field: 'id', headerText: 'ID' }, { field: 'name', headerText: 'Name' }];
-// Create grid with initial data source
-var grid = new ej.pdf.PdfGrid([{ id: 'E01', name: 'Clay' }], columns);
-// Add a manual row (this will be preserved after update)
-grid.addRow({ cells: [{ value: 'Manual' }, { value: 'Record' }] });
-// Update the data source (data-source rows are rebuilt)
-grid.dataSource = [{ id: 'E10', name: 'Andrew' }, { id: 'E11', name: 'Michael' }];
-// Draw the grid on the page
-grid.draw(page, { x: 10, y: 10 });
-// Save the document as Output.pdf
-document.save('Output.pdf');
-// Dispose of the document resources
-document.destroy();
-
-{% endhighlight %}
-{% endtabs %}
 
 ## Add a nested table
 
