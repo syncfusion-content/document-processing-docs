@@ -30,6 +30,7 @@ The PDF Viewer provides a complete set of annotation tools for reviewing, measur
 
 - [Create annotations](../annotation/create-modify-annotation): Use the toolbar, context menu, or APIs to add highlights, notes, shapes, and more directly onto the PDF document.
 - [Edit annotations](../annotation/create-modify-annotation): Modify existing annotations by moving, resizing, or updating text and style properties like color, opacity, and thickness.
+- [Resize and move annotations](../annotation/resize-move-annotations): Change the size and position of an annotation from the UI or programmatically using the `editAnnotation` API.
 - [Customize annotations](../annotation/customize-annotation): Adjust appearance and behavior—such as fonts, fill colors, and opacity—through the UI or configuration options.
 - [Undo and redo annotations](../annotation/annotations-undo-redo): Revert or reapply annotation actions (add, edit, delete) using toolbar buttons or corresponding APIs.
 - [Import and export annotations](../annotation/export-import/export-annotation): Save and load annotations in JSON or XFDF formats to persist markups across sessions or share them with others.
@@ -42,6 +43,7 @@ The PDF Viewer provides a complete set of annotation tools for reviewing, measur
 - [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
 - [Create and Modify Annotation](../annotation/create-modify-annotation)
 - [Customize Annotation](../annotation/customize-annotation)
+- [Resize and Move Annotations](../annotation/resize-move-annotations)
 - [Remove Annotation](../annotation/delete-annotation)
 - [Handwritten Signature](../annotation/signature-annotation)
 - [Export and Import Annotation](../annotation/export-import/export-annotation)
