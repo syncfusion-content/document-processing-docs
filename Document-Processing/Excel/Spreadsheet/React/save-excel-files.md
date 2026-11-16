@@ -31,12 +31,8 @@ Use the [`save`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/
 
 ## Save events
 
-Use the [`beforeSave`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforesave) event to customize or cancel the Save operation before the workbook data is processed.
-
-Use the [`saveComplete`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#savecomplete) event to perform an action after the file is generated.
-
-* **beforeSave**: Triggered before the file is processed, allowing customization or cancellation of the operation
-* **saveComplete**: Triggered after the file is generated, allowing post-processing actions
+* Use the [`beforeSave`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforesave) event to customize or cancel the Save operation before the workbook data is processed.
+* Use the [`saveComplete`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#savecomplete) event to perform an action after the file is generated.
 
 ## Supported file formats
 

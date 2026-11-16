@@ -33,12 +33,8 @@ The `File` object can come from a local file selection or be created from applic
 
 ## Open events
 
-Use the [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforeopen) event to customize or cancel the Open operation before the selected file is processed.
-
-Use the [`openComplete`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#opencomplete) event to perform an action after the workbook is loaded.
-
-* **beforeOpen**: Triggered before the file is processed, allowing customization or cancellation of the operation
-* **openComplete**: Triggered after the workbook is loaded, allowing post-processing actions
+* Use the [`beforeOpen`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#beforeopen) event to customize or cancel the Open operation before the selected file is processed.
+* Use the [`openComplete`](https://ej2.syncfusion.com/react/documentation/api/spreadsheet/index-default#opencomplete) event to perform an action after the workbook is loaded.
 
 ## Supported file formats
 
