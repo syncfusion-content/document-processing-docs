@@ -52,8 +52,7 @@ checkBox.calculateOnExit = true;
 paragraph.appendText('Female');
 
 // Saves the Word document.
-let outputBytes = document.saveSync();
-writeFileSync('CheckBox.docx', outputBytes);
+document.save('Output.docx');
 {% endhighlight %}
 {% endtabs %}
 
@@ -61,8 +60,7 @@ You can modify the checkbox properties such as checked state and size in a Word 
 
 {% tabs %}
 {% highlight javascript tabtitle="JavaScript" %}
-const bytes = readFileSync('CheckBoxTemplate.docx');
-const document = WordDocument.openSync(bytes);
+let document = WordDocument.open(data);
 const paragraph = document.lastParagraph;
 
 for (const item of paragraph.items) {
@@ -76,8 +74,7 @@ for (const item of paragraph.items) {
 }
 
 // Saves the Word document. 
-let outputBytes = document.saveSync(); 
-writeFileSync('Result.docx', outputBytes);
+document.save('Output.docx');
 {% endhighlight %}
 {% endtabs %}
 
@@ -118,8 +115,7 @@ dropDownField.selectedIndex = 1;
 dropDownField.calculateOnExit = true;
 
 // Save the Word document
-let documentData = document.saveSync();
-writeFileSync('DropdownFormField.docx', documentData);
+document.save('Output.docx');
 {% endhighlight %}
 {% endtabs %}
 
@@ -127,8 +123,7 @@ You can add or modify the list of items of a Drop-Down form field in a Word docu
 
 {% tabs %}
 {% highlight javascript tabtitle="JavaScript" %}
-const bytes = readFileSync('DropDownTemplate.docx');
-const document = WordDocument.openSync(bytes);
+let document = WordDocument.open(data);
 const paragraph = document.lastParagraph;
 
 for (const item of paragraph.items) {
@@ -139,8 +134,7 @@ for (const item of paragraph.items) {
 }
 
 // Saves the Word document. 
-let outputBytes = document.saveSync(); 
-writeFileSync('Result.docx', outputBytes);
+document.save('Output.docx');
 {% endhighlight %}
 {% endtabs %}
 
@@ -188,8 +182,7 @@ textField.type = TextFormFieldType.DateText;
 textField.calculateOnExit = true;
 
 // Saves the Word document. 
-let outputBytes = document.saveSync(); 
-writeFileSync('TextFormField.docx', outputBytes);
+document.save('Output.docx');
 {% endhighlight %}
 {% endtabs %}
 
@@ -197,8 +190,7 @@ You can add or modify Text form field properties such as default text and type i
 
 {% tabs %}
 {% highlight javascript tabtitle="JavaScript" %}
-let bytes = readFileSync('TextFormFieldTemplate.docx');
-let document = WordDocument.openSync(bytes);
+let document = WordDocument.open(data);
 for (let section of document.sections) {
     for (let formField of section.body.formFields) {
         switch (formField.formFieldType) {
@@ -220,7 +212,6 @@ for (let section of document.sections) {
     }
 }
 // Saves the Word document. 
-let outputBytes = document.saveSync(); 
-writeFileSync('Result.docx', outputBytes);
+document.save('Output.docx');
 {% endhighlight %}
 {% endtabs %}
