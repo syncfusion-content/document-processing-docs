@@ -1,48 +1,31 @@
 ---
 layout: post
-title: How to Compare Word Documents in React DOCX Editor | Syncfusion
-description: Compare two Word documents in Syncfusion® React DOCX Editor using the server-side Word Library (DocIO) and view the resultant document with tracked changes.
+title: How to compare Word documents in React DOCX Editor | Syncfusion
+description: Learn to compare two word documents server-side using DocIO and view the resulting tracked changes in the Syncfusion® React DOCX Editor.
 control: Compare Word documents
 platform: document-processing
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to Compare Word Documents in React DOCX Editor
+# How to compare Word documents in React DOCX Editor
 
-In this article, we are going to see how to compare two Word documents in the [React DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/react-docx-editor) (Document Editor) and view the comparison result with tracked changes.
+In this article, we are going to see how to compare two Word documents and view the resultant document with tracked changes in the Document Editor.
 
-## Compare documents using server-side Word Library (DocIO)
+Document comparison is a server-side operation and it cannot be performed in the client side alone, because the Document Editor performs comparison using the .NET Word library (DocIO) on the server side. Similar to performing mail merge operations, you can achieve document comparison using [DocIO](https://www.syncfusion.com/document-sdk/net-word-library) as a dependency in your server-side Web API project.
 
-Similar to mail merge, comparing two Word documents is a server-side operation that cannot be performed directly in the browser. The DOCX Editor provides the client-side rendering and editing capabilities, whereas the actual comparison of two documents is achieved using the server-side Word Library (DocIO). The following workflow explains how the comparison is achieved end to end:
+The .NET Word library (DocIO) enables you to compare two Word documents and highlight the following changes as tracked changes.
+*	Insertions
+*	Deletions
 
-1. Provide the original and revised documents from the client side (DOCX Editor) as SFDT (.sfdt) files.
+After the comparison, the resultant document (with tracked changes) is loaded into the Document Editor on the client side, where you can view the inserted and deleted changes as revisions, and accept or reject them using the Review pane.
 
-2. Send the original and revised documents to the server-side Web API using the `CompareDocuments` API.
+## Compare documents using server-side Web API
 
-3. Perform the comparison of the two documents on the server side using the Word Library (DocIO). The server-side API accepts both DOCX and SFDT (.sfdt) file formats, where the SFDT content is converted to DOCX internally before comparison.
+Add a Web API controller in the server-side project to compare the original and revised documents using the `Compare` method of DocIO, and then load the compared document into the `WordDocument` instance of the Document Editor server-side library to serialize it as SFDT (Syncfusion Document Text) content. Send the resultant SFDT content back to the client side to open it in the Document Editor.
 
-4. Return the compared document as SFDT content from the server to the client.
-
-5. Finally, view the resultant document with tracked changes in the DOCX Editor.
-
-For detailed information about comparing documents using the Word Library (DocIO), refer to this [page](https://help.syncfusion.com/document-processing/word/word-library/net/how-to/compare-documents).
-
-## Server-side Web API for CompareDocuments
-
-The DOCX Editor Web API (like the one hosted at [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices)) provides the `CompareDocuments` API to compare two documents on the server side. This API accepts the original and revised documents (DOCX or SFDT files), compares them using DocIO, and returns the resultant document as SFDT content that can be opened in the DOCX Editor.
-
-The following code illustrates how to implement the `CompareDocuments` Web API in an ASP.NET Core Web API controller. The request parameters are bound through a `CompareParameter` model, and the `GetWordDocument` helper method loads the uploaded files as `WordDocument` instances, including support for `.sfdt` files (the SFDT content is converted to DOCX internally before comparison).
-
-{% tabs %}
-{% highlight c# tabtitle="DocumentEditorController.cs" %}
-
-public class CompareParameter
-{
-    public IFormFile OriginalFile { get; set; }
-    public IFormFile RevisedFile { get; set; }
-}
-
+The following example code illustrates how to add the `CompareDocuments` Web API in the controller file to compare the original and revised documents using DocIO.
+```c#
 [AcceptVerbs("Post")]
 [HttpPost]
 [EnableCors("AllowAllOrigins")]
@@ -51,23 +34,23 @@ public string CompareDocuments([FromForm] CompareParameter data)
 {
     if (data.OriginalFile == null || data.RevisedFile == null)
         return null;
-
     IFormFile originalFile = data.OriginalFile;
     IFormFile revisedFile = data.RevisedFile;
-
     try
     {
         using (WDocument revisedDocument = GetWordDocument(revisedFile))
         {
             using (WDocument originalDocument = GetWordDocument(originalFile))
             {
+                //Compares the original document with the revised document and highlights the changes as tracked changes.
                 originalDocument.Compare(revisedDocument);
                 //Hooks MetafileImageParsed event.
                 WordDocument.MetafileImageParsed += OnMetafileImageParsed;
+                //Loads the compared document into the WordDocument instance of the Document Editor server-side library.
                 WordDocument document = WordDocument.Load(originalDocument);
                 //Unhooks MetafileImageParsed event.
                 WordDocument.MetafileImageParsed -= OnMetafileImageParsed;
-
+                //Serializes the compared document as SFDT content.
                 string json = Newtonsoft.Json.JsonConvert.SerializeObject(document);
                 document.Dispose();
                 return json;
@@ -80,6 +63,12 @@ public string CompareDocuments([FromForm] CompareParameter data)
     }
 }
 
+public class CompareParameter
+{
+    public IFormFile OriginalFile { get; set; }
+    public IFormFile RevisedFile { get; set; }
+}
+
 private static WDocument GetWordDocument(IFormFile file)
 {
     Stream stream = new MemoryStream();
@@ -88,10 +77,10 @@ private static WDocument GetWordDocument(IFormFile file)
         file.FileName.Substring(index) : ".docx";
     file.CopyTo(stream);
     stream.Position = 0;
-
     WDocument document;
     if (type == ".sfdt")
     {
+        //Converts the SFDT content to DOCX format for comparison.
         using (var reader = new StreamReader(stream))
         {
             string sfdtContent = reader.ReadToEnd();
@@ -105,26 +94,20 @@ private static WDocument GetWordDocument(IFormFile file)
     }
     else
     {
+        //Loads the DOCX document for comparison.
         document = new WDocument(stream, GetWFormatType(type));
         stream.Dispose();
         return document;
     }
 }
+```
 
-{% endhighlight %}
-{% endtabs %}
+## Compare documents from the client side
 
-N> The `MetafileImageParsed` event is hooked while loading the compared document to handle metafile images present in the documents during the SFDT serialization.
+* Pass the original and revised document contents (either SFDT or DOCX files) to the server-side `CompareDocuments` Web API using the `FormData` object, where the comparison is performed and the resultant SFDT content is returned.
+* Open the resultant SFDT content returned from the server side in the Document Editor using the [`open`](https://ej2.syncfusion.com/react/documentation/api/document-editor#open) method to view the comparison result with tracked changes.
 
-N> In the `CompareDocuments` API, the `Compare` method is invoked without the author name and date time arguments, so the default author and current date time are applied to the tracked changes. You can also pass the author name and date time to the `Compare` method (`originalDocument.Compare(revisedDocument, authorName, dateTime)`) to customize the revision author and timestamp.
-
-N> The Web API hosted link `https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/` utilized in the DOCX Editor's serviceUrl property is intended solely for demonstration and evaluation purposes. For production deployment, please host your own web service with your required server configurations. You can refer and reuse the [GitHub Web Service example](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) or [Docker image](https://hub.docker.com/r/syncfusion/word-processor-server) for hosting your own web service and use for the serviceUrl property.
-
-## Compare documents in DOCX Editor
-
-You can compare two documents in the DOCX Editor by sending the original and revised SFDT contents as form files (with `.sfdt` file names) to the server-side `CompareDocuments` Web API from the client side and open the resultant SFDT content in the DOCX Editor to view the comparison result with tracked changes.
-
-The following example code illustrates how to compare two documents using static SFDT contents from the client side and view the compared document in the DOCX Editor.
+The following example code illustrates how to compare two documents (using static SFDT contents) and open the resultant document in the Document Editor.
 
 {% tabs %}
 {% highlight js tabtitle="index.jsx" %}
@@ -134,16 +117,6 @@ The following example code illustrates how to compare two documents using static
 {% include code-snippet/document-editor/react/compare-documents-cs1/app/index.tsx %}
 {% endhighlight %}
 {% endtabs %}
-
-The following SFDT contents are used as the original and revised documents in the above example.
-
-{% tabs %}
-{% highlight ts tabtitle="data.ts" %}
-{% include code-snippet/document-editor/react/compare-documents-cs1/app/data.ts %}
-{% endhighlight %}
-{% endtabs %}
-
-N> You can get the complete working sample of side-by-side comparison of two documents from this [GitHub example](https://github.com/SyncfusionExamples/react-docx-editor-compare-documents/).
 
 ## View the compared document with tracked changes
 
