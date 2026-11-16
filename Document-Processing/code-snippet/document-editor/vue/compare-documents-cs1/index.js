@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import { Button } from '@syncfusion/ej2-buttons';
 import { DocumentEditorPlugin, DocumentEditorContainerComponent } from '@syncfusion/ej2-vue-documenteditor';
 import { originalDocument, revisedDocument } from './data.js';
 
@@ -29,6 +30,12 @@ new Vue({
         return {
             serviceUrl:'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/'
         }
+      },
+      mounted() {
+          new Button({
+              isPrimary: true,
+              content: 'Compare Documents'
+          }, '#compare');
       },
       methods: {
         onCompare: function () {
