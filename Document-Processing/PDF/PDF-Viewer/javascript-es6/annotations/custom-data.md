@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Custom Data in JavaScript (ES6) PDF Viewer | Syncfusion
+title: Custom Data in JavaScript (ES6) PDF Viewer Annotations | Syncfusion
 description: Attach custom metadata to annotations in the JavaScript (ES6) PDF Viewer and read it back later to drive tailored workflows and integrations.
 platform: document-processing
 control: PDF Viewer
@@ -135,6 +135,7 @@ document.getElementById('CustomData')?.addEventListener('click', () => {
 - [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
 - [Create and Modify Annotation](./create-modify-annotation)
 - [Customize Annotation](./customize-annotation)
+- [Resize and Move Annotations](./resize-move-annotations)
 - [Remove Annotation](./delete-annotation)
 - [Handwritten Signature](./signature-annotation)
 - [Export and Import Annotation](./export-import/export-annotation)

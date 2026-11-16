@@ -337,5 +337,6 @@ export default {
 ## See also
 
 - [Annotation Events](./annotation-event)
+- [Resize and Move Annotations](./resize-move-annotations)
 - [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
 - [Annotation in Mobile View](./annotations-in-mobile-view)
