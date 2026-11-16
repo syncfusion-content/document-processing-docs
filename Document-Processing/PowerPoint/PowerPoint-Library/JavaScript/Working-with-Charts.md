@@ -238,7 +238,9 @@ await pptxDoc.save('Output.pptx');
 {% endhighlight %}
 {% endtabs %}
 
-The same edits also work on a chart created in the same session with `Slide.addChart`. Charts that have only an external data source and no embedded package cannot be edited.
+The same edits also work on a chart created in the same session with `Slide.addChart`.
+
+N> Chart data and format edits are dual-written to the chart part and its embedded workbook. A chart that has only an external data source cannot be edited. That includes a chart whose `c:externalData` relationship is an external `oleObject` pointing at a local `.xlsx` path and that has no `ppt/embeddings` workbook. Calling a chart mutator on that chart throws `ChartsError` with the message `Chart data edit refused: no embedded package relationship on chart part` (or `chart data source is external-only`). Open a presentation whose chart has an embedded workbook, or create the chart with `Slide.addChart`.
 
 ## Customizing the chart
 
