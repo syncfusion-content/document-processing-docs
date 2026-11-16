@@ -9,7 +9,7 @@ documentation: ug
 
 # Client-side processing with React Spreadsheet
 
-Pure client-side processing enables the Spreadsheet component to process workbook files directly within the browser without requiring server communication. When `allowOpen` property is default enabled and `openUrl` is not configured, the Spreadsheet leverages its integrated client-side file-processing functionality that uses the `@syncfusion/ej2-xlsx` library internally.
+Client-side processing enables the Spreadsheet component to process workbook files directly within the browser without requiring server communication. When `allowOpen` property is default enabled and `openUrl` is not configured, the Spreadsheet leverages its integrated client-side file-processing functionality that uses the `@syncfusion/ej2-xlsx` library internally.
 
 ## Advantages of Client-Side Import
 
@@ -46,15 +46,15 @@ const root = createRoot(document.getElementById('root'));
 root.render(<App />);
 ```
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/react/client-side-local-cs1" %}
-
 With this configuration, the Spreadsheet will process all Excel files directly in the browser without requiring server communication. For specific file-source implementations (local system, URL, or Blob data), see the sections below.
 
 ## Supported file sources
 
 ### Opening a file from the local system
 
-You can open Excel files from the local system using the standard File > Open interface or programmatically:
+If you explore your machine to choose and upload an Excel document using the file upload component, you will receive the uploaded document as a raw file in the success event of the file upload component. In this success event, you should pass the received raw file as an argument to the Spreadsheet's open method to see the appropriate output.
+
+The following code example shows how to import an Excel document using file upload component in spreadsheet.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -69,7 +69,7 @@ You can open Excel files from the local system using the standard File > Open in
 
 ### Opening a file from a URL
 
-To open Excel files from a URL, fetch the file and convert the response to a File object:
+You can achieve access to the remote Excel file by using the created event. In this event you can fetch the Excel file and convert it to a blob. Convert this blob to a file and open this file by using Spreadsheet component open method.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}
@@ -86,7 +86,9 @@ Cross-origin resource sharing (CORS) restrictions may prevent opening files from
 
 ### Opening a file from Blob data
 
-To open Excel files from Blob data, convert the Blob to a File object:
+By default, the Spreadsheet component provides an option to browse files from the local file system and open them within the component. If you want to open an Excel file from blob data, you need to fetch the blob data from the server or another source and convert this blob data into a File object. Then, you can use the open method in the Spreadsheet component to load that File object.
+
+Please find the code to fetch the blob data and load it into the Spreadsheet component below.
 
 {% tabs %}
 {% highlight js tabtitle="app.jsx" %}

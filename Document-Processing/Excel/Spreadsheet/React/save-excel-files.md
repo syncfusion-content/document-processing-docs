@@ -9,11 +9,11 @@ documentation: ug
 
 # Save Excel Files in React Spreadsheet
 
-The React Spreadsheet component allows users to save Excel files through either server-side or client-side processing methods. The processing method is determined by whether `saveUrl` is configured.
+The React Spreadsheet component allows users to save Excel files through either server-side or client-side approaches. The approach used is determined by whether `saveUrl` is configured.
 
 When `saveUrl` is configured, the Spreadsheet sends workbook data to a server endpoint for processing (server-side processing). When `saveUrl` is not configured, the Spreadsheet generates files directly in the browser (client-side processing).
 
-Both processing methods use the same user interface and public `save()` API. The Spreadsheet automatically determines which processing method to use based on the presence of the `saveUrl` configuration.
+Both approaches use the same user interface and public `save()` API. The Spreadsheet automatically determines which approach to use based on the presence of the `saveUrl` configuration.
 
 ## Processing methods
 
