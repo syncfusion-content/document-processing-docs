@@ -21,7 +21,6 @@ The React PPTX Editor provides the following key features:
     * **Basic Auto shapes** – Supports rendering basic auto-shapes with fill and outline formatting.
     * **Images** – Supports images embedded in the slides.
     * **Table** – Supports tables with their content and formatting.
-    * **Chart** – Supports charts rendered in the slides.
     * **Basic Paragraph and Text Formatting** – Supports basic paragraph and text formatting like alignment, indentation, bold, italic, underline, font, size, and color.
 * **Basic viewer ribbon interface** – Provides a basic viewer ribbon interface similar to Microsoft PowerPoint, with tab-based commands for quick and intuitive access to features.
 * **Slide navigation** – Allows navigating through slides using touch, keyboard, and mouse interactions.

@@ -82,6 +82,12 @@ The following code indicates that the text following the column break will begin
 documenteditor.editor.insertColumnBreak();
 ```
 
+You can insert a page break to move the content following the cursor to the next page.
+
+```typescript
+documenteditor.editor.insertPageBreak();
+```
+
 You can insert a next-page section break to start the new section on the next page.
 
 The following code example illustrates how to insert a next-page section break.
