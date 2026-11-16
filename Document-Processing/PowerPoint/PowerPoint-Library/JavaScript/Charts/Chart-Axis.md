@@ -10,7 +10,7 @@ keywords: javascript, powerpoint, chart axis
 
 # Chart Axis in JavaScript PowerPoint
 
-Classic charts expose a primary category axis and a primary value axis. The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) surfaces them on the chart created with `Slide.addChart`. There is no `setAxis` method.
+Classic charts expose a primary category axis and a primary value axis. The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) surfaces them on a chart — either a chart created with `Slide.addChart` or a chart in an opened presentation reached through `slide.charts.at(index)`. There is no `setAxis` method.
 
 * `primaryCategoryAxis` maps to the category axis.
 * `primaryValueAxis` maps to the value axis.
@@ -83,6 +83,75 @@ chart.commitPrimaryValueAxis({
     line: { color: '7F7F7F', weightPt: 0.75 },
     titleArea: { size: 11, fontName: 'Calibri', color: '404040' }
 });
+await pptxDoc.save('Output.pptx');
+{% endhighlight %}
+{% endtabs %}
+
+The axes of a chart in an existing presentation can be formatted the same way after opening the file. The following code example demonstrates how to open an existing presentation, set axis titles, fix the value-axis scale, and save the updated file.
+
+{% tabs %}
+{% highlight js tabtitle="TypeScript" %}
+
+import { Presentation, loadXlsxRoot } from '@syncfusion/ej2-pptx';
+
+// data is a Uint8Array or Base64 string of an existing .pptx file with a chart on the first slide.
+// Loads the chart engine before enumerating slide.charts.
+await loadXlsxRoot();
+// Opens an existing PowerPoint presentation.
+let pptxDoc = await Presentation.open(data);
+// Gets the first chart on the first slide.
+let chart = pptxDoc.slides[0].charts.at(0);
+// Formats the category axis.
+chart.commitPrimaryCategoryAxis({
+    title: 'Quarter',
+    visible: true,
+    hasMajorGridLines: true,
+    majorTickMark: 'outside',
+    titleArea: { bold: true, size: 11, fontName: 'Calibri', color: '404040' }
+});
+// Formats the value axis with a fixed scale.
+chart.commitPrimaryValueAxis({
+    title: 'Sales',
+    visible: true,
+    hasMajorGridLines: true,
+    minimumValue: 0,
+    maximumValue: 400,
+    numberFormat: '#,##0',
+    line: { color: '7F7F7F', weightPt: 0.75 },
+    titleArea: { size: 11, fontName: 'Calibri', color: '404040' }
+});
+// Saves the updated presentation.
+await pptxDoc.save('Output.pptx');
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// data is a Uint8Array or Base64 string of an existing .pptx file with a chart on the first slide.
+// Loads the chart engine before enumerating slide.charts.
+await ej.pptx.loadXlsxRoot();
+// Opens an existing PowerPoint presentation.
+var pptxDoc = await ej.pptx.Presentation.open(data);
+// Gets the first chart on the first slide.
+var chart = pptxDoc.slides[0].charts.at(0);
+// Formats the category axis.
+chart.commitPrimaryCategoryAxis({
+    title: 'Quarter',
+    visible: true,
+    hasMajorGridLines: true,
+    majorTickMark: 'outside',
+    titleArea: { bold: true, size: 11, fontName: 'Calibri', color: '404040' }
+});
+// Formats the value axis with a fixed scale.
+chart.commitPrimaryValueAxis({
+    title: 'Sales',
+    visible: true,
+    hasMajorGridLines: true,
+    minimumValue: 0,
+    maximumValue: 400,
+    numberFormat: '#,##0',
+    line: { color: '7F7F7F', weightPt: 0.75 },
+    titleArea: { size: 11, fontName: 'Calibri', color: '404040' }
+});
+// Saves the updated presentation.
 await pptxDoc.save('Output.pptx');
 {% endhighlight %}
 {% endtabs %}

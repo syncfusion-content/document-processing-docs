@@ -10,7 +10,7 @@ keywords: javascript, powerpoint, chart series
 
 # Chart Series in JavaScript PowerPoint
 
-A chart series maps category labels and values from the embedded workbook. The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) exposes series on the chart created with `Slide.addChart`.
+A chart series maps category labels and values from the embedded workbook. The [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) exposes series on a chart — either a chart created with `Slide.addChart` or a chart in an opened presentation reached through `slide.charts.at(index)`.
 
 * `chart.series` returns each series view (`title`, `categoryLabels`, `values`, and optional series format / `dataLabels`).
 * `addSeries` adds a series. `values` is required.
@@ -77,3 +77,64 @@ await pptxDoc.save('Output.pptx');
 {% endtabs %}
 
 To drop the second series, call `chart.removeSeries(1)`.
+
+Series in an existing presentation can be edited the same way after opening the file. The following code example demonstrates how to open an existing presentation, update the values of the first series, add a new series, and save the updated file.
+
+{% tabs %}
+{% highlight js tabtitle="TypeScript" %}
+
+import { Presentation, loadXlsxRoot } from '@syncfusion/ej2-pptx';
+
+// data is a Uint8Array or Base64 string of an existing .pptx file with a chart on the first slide.
+// Loads the chart engine before enumerating slide.charts.
+await loadXlsxRoot();
+// Opens an existing PowerPoint presentation.
+let pptxDoc = await Presentation.open(data);
+// Gets the first chart on the first slide.
+let chart = pptxDoc.slides[0].charts.at(0);
+// Updates the embedded cells of the first series.
+chart.setSeriesValueCells(0, [42, 55, 36]);
+// Formats the first series fill.
+chart.commitSeriesFormat(0, {
+    fill: { type: 'solid', foreColor: '4472C4' },
+    line: { color: '2F528F', weightPt: 1.25 }
+});
+// Adds a series. Formulas must match cells in the embedded sheet.
+chart.addSeries({
+    title: 'Series 2',
+    categoryLabels: 'Sheet1!$A$2:$A$4',
+    values: 'Sheet1!$C$2:$C$4'
+});
+chart.setSeriesValueCells(1, [25, 30, 21]);
+// Saves the updated presentation.
+await pptxDoc.save('Output.pptx');
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// data is a Uint8Array or Base64 string of an existing .pptx file with a chart on the first slide.
+// Loads the chart engine before enumerating slide.charts.
+await ej.pptx.loadXlsxRoot();
+// Opens an existing PowerPoint presentation.
+var pptxDoc = await ej.pptx.Presentation.open(data);
+// Gets the first chart on the first slide.
+var chart = pptxDoc.slides[0].charts.at(0);
+// Updates the embedded cells of the first series.
+chart.setSeriesValueCells(0, [42, 55, 36]);
+// Formats the first series fill.
+chart.commitSeriesFormat(0, {
+    fill: { type: 'solid', foreColor: '4472C4' },
+    line: { color: '2F528F', weightPt: 1.25 }
+});
+// Adds a series. Formulas must match cells in the embedded sheet.
+chart.addSeries({
+    title: 'Series 2',
+    categoryLabels: 'Sheet1!$A$2:$A$4',
+    values: 'Sheet1!$C$2:$C$4'
+});
+chart.setSeriesValueCells(1, [25, 30, 21]);
+// Saves the updated presentation.
+await pptxDoc.save('Output.pptx');
+{% endhighlight %}
+{% endtabs %}
+
+N> Charts that have only an external data source and no embedded package cannot be edited. Check `chart.hasEmbeddedPackage` before calling series mutators.
