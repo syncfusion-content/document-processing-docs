@@ -113,4 +113,4 @@ In all cases, the workflow ends by passing a `File` object to the public Spreads
 
 ## See also
 
-* [Server-Side Import](./server-side-import)
+* [Server-Side Import](./using-server-side)

@@ -92,4 +92,4 @@ To save an Excel file as blob data, you need to set `needBlobData` property to *
 
 ## See also
 
-* [Server-Side Export](./pure-server-side)
+* [Server-Side Export](./using-server-side)
