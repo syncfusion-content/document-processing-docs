@@ -23,7 +23,7 @@ Client-side export provides several key advantages over server-side processing:
 
 ## How client-side export works
 
-For save processing, the Spreadsheet component serializes its content into a structured JSON workbook that includes all essential details—such as data, formulas, formatting, styles, and sheet configuration. This JSON is processed by the ej2-xlsx library to generate a fully formatted Excel file directly in the browser.
+For save processing, the Spreadsheet component maps its in-memory workbook model—including cell data, formulas, styles, formatting, merged cells, and worksheet settings—directly into the @syncfusion/ej2-xlsx workbook object model. The ej2-xlsx library then compiles and generates the fully formatted Excel (.xlsx) binary file directly in the browser without any server dependency.
 
 ## Supported formats
 
