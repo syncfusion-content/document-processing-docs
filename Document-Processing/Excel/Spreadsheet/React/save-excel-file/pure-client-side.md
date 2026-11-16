@@ -248,7 +248,7 @@ root.render(<App />);
 
 ## Considerations
 
-1. **Format Limitation**: Client-side export currently supports XLSX format only
+1. **Format Limitation**: Client-side export currently supports XLSX and PDF formats only
 2. **No saveUrl Required**: `saveUrl` must not be configured for client-side export
 
 ## See also
