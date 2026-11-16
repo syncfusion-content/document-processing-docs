@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Compare Word Documents in ASP.NET Core DOCX Editor | Syncfusion
+title: How to compare Word documents in ASP.NET Core DOCX Editor | Syncfusion
 description: Learn how to compare two Word documents using DocIO and view the resultant document with tracked changes in Syncfusion® ASP.NET Core DOCX Editor.
 platform: document-processing
 control: DOCX Editor
 documentation: ug
 ---
 
-# How to Compare Word Documents in ASP.NET Core DOCX Editor
+# How to compare Word documents in ASP.NET Core DOCX Editor
 
 In this article, we are going to see how to compare two Word documents and view the resultant document with tracked changes in the [ASP.NET Core DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-core-docx-editor) (Document Editor).
 
