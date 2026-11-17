@@ -94,7 +94,7 @@ Modify the `src/App.vue` file to render the DOCX Editor. Add the DOCX Editor com
       height="590px"
       :serviceUrl="serviceUrl"
       :enableToolbar="true"
-      toolbarMode="Ribbon">
+      :toolbarMode="'Ribbon'">
     </ejs-documenteditorcontainer>
   </div>
 </template>
