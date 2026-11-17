@@ -56,7 +56,7 @@ Install-Package SkiaSharp.Views.Blazor -Version 4.150.1
 N>
 * Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) for a list of available packages.
 * Syncfusion<sup style="font-size:70%">&reg;</sup> uses [SkiaSharp.Views.Blazor version 4.150.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/4.150.1). Ensure this exact version to avoid runtime issues.
-* If you are targeting .NET 11, SkiaSharp does not officially support .NET 11 yet. As a workaround, upgrade the SkiaSharp packages to version `4.154.0` and include the required native static libraries in the .csproj file. Refer to [Resolve SkiaSharp Build Issues in .NET 11 Blazor WebAssembly Applications](../faqs/how-to-resolve-skiasharp-build-issues-in-dotnet-11-blazor-webassembly-applications).
+* If you are targeting .NET 11, SkiaSharp does not officially support .NET 11 yet. As a workaround, upgrade the SkiaSharp packages to version `4.156.0`. Refer to [Resolve SkiaSharp Build Issues in .NET 11 Blazor WebAssembly Applications](../faqs/how-to-resolve-skiasharp-build-issues-in-dotnet-11-blazor-webassembly-applications).
 
 {% endtabcontent %}
 
@@ -121,7 +121,7 @@ dotnet restore
 N>
 * Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) for a list of available packages.
 * Syncfusion<sup style="font-size:70%">&reg;</sup> uses [SkiaSharp.Views.Blazor version 4.150.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/4.150.1). Ensure this exact version to avoid runtime issues.
-* If you are targeting .NET 11, SkiaSharp does not officially support .NET 11 yet. As a workaround, upgrade the SkiaSharp packages to version `4.154.0` and include the required native static libraries in the .csproj file. Refer to [Resolve SkiaSharp Build Issues in .NET 11 Blazor WebAssembly Applications](../faqs/how-to-resolve-skiasharp-build-issues-in-dotnet-11-blazor-webassembly-applications).
+* If you are targeting .NET 11, SkiaSharp does not officially support .NET 11 yet. As a workaround, upgrade the SkiaSharp packages to version `4.156.0`. Refer to [Resolve SkiaSharp Build Issues in .NET 11 Blazor WebAssembly Applications](../faqs/how-to-resolve-skiasharp-build-issues-in-dotnet-11-blazor-webassembly-applications).
 
 {% endtabcontent %}
 
@@ -190,7 +190,7 @@ dotnet restore
 N>
 * Syncfusion<sup style="font-size:70%">&reg;</sup> Blazor components are available on [nuget.org](https://www.nuget.org/packages?q=syncfusion.blazor). Refer to [NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) for a list of available packages.
 * Syncfusion<sup style="font-size:70%">&reg;</sup> uses [SkiaSharp.Views.Blazor version 4.150.1](https://www.nuget.org/packages/SkiaSharp.Views.Blazor/4.150.1). Ensure this exact version to avoid runtime issues.
-* If you are targeting .NET 11, SkiaSharp does not officially support .NET 11 yet. As a workaround, upgrade the SkiaSharp packages to version `4.154.0` and include the required native static libraries in the .csproj file. Refer to [Resolve SkiaSharp Build Issues in .NET 11 Blazor WebAssembly Applications](../faqs/how-to-resolve-skiasharp-build-issues-in-dotnet-11-blazor-webassembly-applications).
+* If you are targeting .NET 11, SkiaSharp does not officially support .NET 11 yet. As a workaround, upgrade the SkiaSharp packages to version `4.156.0`. Refer to [Resolve SkiaSharp Build Issues in .NET 11 Blazor WebAssembly Applications](../faqs/how-to-resolve-skiasharp-build-issues-in-dotnet-11-blazor-webassembly-applications).
 
 {% endtabcontent %}
 

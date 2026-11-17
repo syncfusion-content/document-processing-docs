@@ -143,6 +143,7 @@ N> For type-specific edit examples (for example, editing line endings, moving st
 - [Annotation Types](./annotation-types/area-annotation)
 - [Annotation Toolbar](../toolbar-customization/annotation-toolbar)
 - [Customize Annotation](./customize-annotation)
+- [Resize and Move Annotations](./resize-move-annotations)
 - [Remove Annotation](./delete-annotation)
 - [Handwritten Signature](./signature-annotation)
 - [Export and Import Annotation](./export-import/export-annotation)

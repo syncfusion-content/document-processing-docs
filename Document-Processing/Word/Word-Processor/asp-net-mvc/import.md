@@ -114,9 +114,9 @@ internal static FormatType GetFormatType(string format)
 
 ## Opening a document in asynchronous mode
 
-[ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) supports asynchronous document loading, which can be enabled using the enable property available in the openAsyncSettings API.
+[ASP.NET MVC DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/asp-net-mvc-docx-editor) (Document Editor) supports asynchronous document loading through the openAsyncSettings API, which provides options to enable asynchronous loading and configure both the initial and incremental page-loading behavior.
 
-### Properties
+**Properties**
 
 - **enable:** Enables or disables asynchronous document loading.
 - **initialPageLoadCount:** Number of pages to load initially when the document is opened.
