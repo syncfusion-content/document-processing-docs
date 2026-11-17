@@ -27,9 +27,11 @@ The following example demonstrates how to insert a merge field programmatically 
 {% tabs %}
 {% highlight c# tabtitle="C#" %}
 
-string fieldCode = "MERGEFIELD  First Name  \\* MERGEFORMAT ";
+// Defines the field's behavior.
+string fieldCode = "MERGEFIELD FirstName \\* MERGEFORMAT";
+// Defines the placeholder text to display in the editor.
 string fieldResult = "«First Name»";
-await container.DocumentEditor.Editor.InsertFieldAsync(fieldCode, fieldResult);
+await Container.DocumentEditor.Editor.InsertFieldAsync(fieldCode, fieldResult);
 
 {% endhighlight %}
 {% endtabs %}
