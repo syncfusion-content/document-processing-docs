@@ -1,16 +1,16 @@
 ---
-title: Create and Open Excel Files in JavaScript | Syncfusion
+title: Create and Open Excel Files in JavaScript Excel Library | Syncfusion
 description: Create, open, and save Excel workbooks with the Syncfusion JavaScript Excel Library in Node.js and browser environments.
 platform: document-processing
 control: Excel
 documentation: ug
 ---
 
-# Create and Open Excel Files in JavaScript
+# Create and Open Excel Files in JavaScript Excel Library
 
 The [JavaScript Excel Library](https://www.syncfusion.com/document-sdk/javascript-excel-library) creates, opens, and saves Microsoft Excel (`.xlsx`) workbooks in Node.js and browser environments. You can start from a blank workbook or load an existing file from bytes or a file path, then save the result as bytes or back to disk.
 
-N> Open and save with a filesystem path require the Node.js file system module. In the browser, open from `Uint8Array` or `ArrayBuffer`, and save with the parameterless `save()` overload that returns bytes.
+N> Opening and saving with a file path require the Node.js file system module, so the snippets on this page that save to a path run only in Node.js. In a browser, open a workbook from a `Uint8Array` or `ArrayBuffer`, and save it with the parameterless `save()` overload that returns bytes.
 
 ## Create a new workbook
 
@@ -51,24 +51,34 @@ Opening from bytes loads an existing .xlsx file from memory. This approach works
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
+import { readFile } from 'node:fs/promises';
 import { Workbook } from '@syncfusion/ej2-xlsx';
 
-// data is a Uint8Array or ArrayBuffer of an .xlsx file
+// Read the .xlsx file as bytes. Any Uint8Array or ArrayBuffer of an .xlsx file works.
+const data = await readFile('./data/Input.xlsx');
 const workbook: Workbook = await Workbook.open(data);
 const sheet = workbook.sheet(0);
 
 // Read a cell value
 const value = sheet.cell('A1').value;
+
+// Save the workbook.
+await workbook.save('OpenFromBytes.xlsx');
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
+import { readFile } from 'node:fs/promises';
 import { Workbook } from '@syncfusion/ej2-xlsx';
 
-// data is a Uint8Array or ArrayBuffer of an .xlsx file
+// Read the .xlsx file as bytes. Any Uint8Array or ArrayBuffer of an .xlsx file works.
+const data = await readFile('./data/Input.xlsx');
 const workbook = await Workbook.open(data);
 const sheet = workbook.sheet(0);
 
 // Read a cell value
 const value = sheet.cell('A1').value;
+
+// Save the workbook.
+await workbook.save('OpenFromBytes.xlsx');
 {% endhighlight %}
 {% endtabs %}
 
@@ -142,6 +152,9 @@ workbook.author = 'Contoso';
 const props = workbook.builtInDocumentProperties;
 props.keywords = 'sales report';
 props.comments = 'Q1 workbook';
+
+// Save the workbook.
+await workbook.save('WorkbookAuthorAndDocumentProperties.xlsx');
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 import { Workbook } from '@syncfusion/ej2-xlsx';
@@ -152,6 +165,9 @@ workbook.author = 'Contoso';
 const props = workbook.builtInDocumentProperties;
 props.keywords = 'sales report';
 props.comments = 'Q1 workbook';
+
+// Save the workbook.
+await workbook.save('WorkbookAuthorAndDocumentProperties.xlsx');
 {% endhighlight %}
 {% endtabs %}
 
@@ -167,12 +183,18 @@ import { Workbook } from '@syncfusion/ej2-xlsx';
 
 const workbook: Workbook = Workbook.create();
 workbook.date1904 = false;
+
+// Save the workbook.
+await workbook.save('DateSystem.xlsx');
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 import { Workbook } from '@syncfusion/ej2-xlsx';
 
 const workbook = Workbook.create();
 workbook.date1904 = false;
+
+// Save the workbook.
+await workbook.save('DateSystem.xlsx');
 {% endhighlight %}
 {% endtabs %}
 
@@ -187,6 +209,9 @@ import { Workbook } from '@syncfusion/ej2-xlsx';
 const workbook: Workbook = Workbook.create();
 const sales = workbook.addSheet('Sales');
 workbook.activeSheet = sales;
+
+// Save the workbook.
+await workbook.save('ActiveSheet.xlsx');
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
 import { Workbook } from '@syncfusion/ej2-xlsx';
@@ -194,5 +219,8 @@ import { Workbook } from '@syncfusion/ej2-xlsx';
 const workbook = Workbook.create();
 const sales = workbook.addSheet('Sales');
 workbook.activeSheet = sales;
+
+// Save the workbook.
+await workbook.save('ActiveSheet.xlsx');
 {% endhighlight %}
 {% endtabs %}

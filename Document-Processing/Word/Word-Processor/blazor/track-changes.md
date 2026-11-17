@@ -222,3 +222,7 @@ Explore how to track and review changes in Word documents using the Blazor DOCX 
 ### Why are custom track changes colors not preserved in the exported document?
 
 Custom track changes colors are not stored in document formats. The Document Editor provides custom track changes colors as an editor-only feature. After export, track changes colors are determined by the application used to open the document.
+
+## See Also
+
+*   [How to customize track changes color in Blazor DOCX Editor?](https://support.syncfusion.com/kb/article/25229/)
