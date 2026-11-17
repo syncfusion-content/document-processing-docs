@@ -22,7 +22,8 @@
       '@syncfusion/ej2-react-dropdowns': 'npm:@syncfusion/ej2-react-dropdowns/dist/ej2-react-dropdowns.umd.min.js',
       '@syncfusion/ej2-react-navigations': 'npm:@syncfusion/ej2-react-navigations/dist/ej2-react-navigations.umd.min.js',
       '@syncfusion/ej2-react-grids': 'npm:@syncfusion/ej2-react-grids/dist/ej2-react-grids.umd.min.js',
-      '@syncfusion/ej2-react-spreadsheet': 'npm:@syncfusion/ej2-react-spreadsheet/dist/ej2-react-spreadsheet.umd.min.js'
+      '@syncfusion/ej2-react-spreadsheet': 'npm:@syncfusion/ej2-react-spreadsheet/dist/ej2-react-spreadsheet.umd.min.js',
+      '@syncfusion/ej2-xlsx': 'npm:@syncfusion/ej2-xlsx/dist/ej2-xlsx.umd.min.js'
     },
     meta: {
       '*.jsx': {
