@@ -222,18 +222,19 @@ Import and register the DOCX Editor component in the `<script>` section of `src/
   <ejs-documenteditorcontainer 
    height="590px"
    :serviceUrl="serviceUrl" 
-   :enableToolbar="true"> 
+   :enableToolbar="true"
+   toolbarMode="Ribbon"> 
   </ejs-documenteditorcontainer>
 </template>
 
 <script setup>
   import { provide } from 'vue';
-  import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+  import { DocumentEditorContainerComponent, Toolbar, Ribbon } from '@syncfusion/ej2-vue-documenteditor';
   
   // Use the following service URL only for demo purposes
   const serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
 
-  provide('DocumentEditorContainer', [Toolbar]);
+  provide('DocumentEditorContainer', [Toolbar, Ribbon]);
 </script>
 
 {% endhighlight %}
@@ -243,12 +244,13 @@ Import and register the DOCX Editor component in the `<script>` section of `src/
   <ejs-documenteditorcontainer 
     height="590px"
     :serviceUrl="serviceUrl" 
-    :enableToolbar="true"> 
+    :enableToolbar="true"
+    toolbarMode="Ribbon"> 
   </ejs-documenteditorcontainer>
 </template>
 
 <script>
-  import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+  import { DocumentEditorContainerComponent, Toolbar, Ribbon } from '@syncfusion/ej2-vue-documenteditor';
 
   export default {
     name: 'App',
@@ -262,7 +264,7 @@ Import and register the DOCX Editor component in the `<script>` section of `src/
       };
     },
     provide: {
-      DocumentEditorContainer: [Toolbar]
+      DocumentEditorContainer: [Toolbar, Ribbon]
     }
   }
 </script>
@@ -288,7 +290,7 @@ After the application starts, open the localhost URL shown in the terminal. The 
 
 {% endtabcontents %}
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Vue-DOCX-Editor-Examples/tree/master/getting-started/vue_3).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Vue-DOCX-Editor-Examples/tree/master/getting-started/vue_3/src).
 
 ## Server-side dependencies
 

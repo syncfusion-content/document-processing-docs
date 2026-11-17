@@ -138,9 +138,9 @@ Add the DOCX Editor component to your application. In the `app/page.tsx` file, a
 {% highlight ts tabtitle="page.tsx" %}
 
 'use client'
-import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-react-documenteditor';
+import { DocumentEditorContainerComponent, Toolbar, Ribbon } from '@syncfusion/ej2-react-documenteditor';
 
-DocumentEditorContainerComponent.Inject(Toolbar);
+DocumentEditorContainerComponent.Inject(Toolbar, Ribbon);
 
 export default function Home() {
   return (
@@ -149,7 +149,8 @@ export default function Home() {
         height="590px"
         // Use the following service URL only for demo purposes
         serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" 
-        enableToolbar={true}>
+        enableToolbar={true}
+        toolbarMode="Ribbon">
       </DocumentEditorContainerComponent>
   )
 }
@@ -180,7 +181,7 @@ After the application starts, open the `localhost` URL shown in the terminal. Th
 
 ![Output of React DOCX Editor in Next.js](./images/react_getting_started.png)
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/React-DOCX-Editor-Examples/tree/master/getting-started-nextjs).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/React-DOCX-Editor-Examples/tree/master/getting-started-nextjs/ej2-nextjs-documenteditor).
 
 ## Server-side dependencies
 
