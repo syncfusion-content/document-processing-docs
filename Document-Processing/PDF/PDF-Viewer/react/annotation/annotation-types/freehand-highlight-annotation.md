@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Freehand Highlight Annotation in React PDF Viewer | Syncfusion
-description: Add, customize, and manage Freehand Highlight annotations in the React PDF Viewer to mark up PDF text with freehand strokes while keeping the underlying content visible.
+description: Add, customize, and manage Freehand Highlight annotations in the React PDF Viewer to mark PDF content with freehand strokes while preserving the visibility and readability of the underlying text.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Freehand Highlight Annotation in React PDF Viewer
 
-Freehand Highlight annotations let users emphasize content in a PDF by drawing freehand strokes over the text with a mouse, pen, or touch input. Unlike a regular **Ink** annotation, which is drawn on a layer above the page content, a Freehand Highlight stroke is rendered on the highlight blend layer. The underlying page content therefore stays visible and readable through the marked region, so the marked text can still be read while it is highlighted.
+Freehand Highlight annotations let users emphasize content in a PDF by drawing freehand strokes over the document. Unlike a regular **Ink** annotation, which is drawn on a layer above the page content, a Freehand Highlight stroke is rendered on the highlight blend layer. This allows the underlying page content to remain visible and readable through the highlighted region, ensuring the marked text can still be read while highlighted.
 
 The feature is available in the annotation toolbar of the React PDF Viewer, and freehand highlights can also be added and deleted programmatically.
 
