@@ -12,9 +12,22 @@ domainurl: ##DomainURL##
 
 [TypeScript DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/javascript-docx-editor) (Document Editor) provides RTL (right-to-left) support. This can be enabled using the `enableRtl` property.
 
- 
+ ## Enable right-to-left layout
 
- {% tabs %}
+Set the [`enableRtl`](https://ej2.syncfusion.com/documentation/api/document-editor/documenteditormodel#enablertl) property to `true` to render the DOCX Editor user interface — including the toolbar or ribbon, menus, dialogs, and property pane - in a right-to-left layout.
+
+```ts
+let container: DocumentEditorContainer = new DocumentEditorContainer({ enableToolbar: true, enableRtl: true, height: '590px' });
+DocumentEditorContainer.Inject(Toolbar);
+container.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
+container.appendTo('#container');
+```
+
+## Localize the DOCX Editor for RTL languages
+
+To fully localize the DOCX Editor for right-to-left languages such as Arabic, set the [`locale`](https://ej2.syncfusion.com/documentation/api/document-editor/documenteditormodel#locale) property to a right-to-left culture and load the localized strings. This translates the built-in texts of the toolbar, dialogs, and context menus into the specified language.
+
+{% tabs %}
 {% highlight ts tabtitle="index.ts" %}
 {% include code-snippet/document-editor/javascript-es6/rtl-cs1/index.ts %}
 {% endhighlight %}
