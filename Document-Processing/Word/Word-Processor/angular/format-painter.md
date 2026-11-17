@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 The Format Painter option is available in the **Home** tab of the ribbon under the **Clipboard** group. It allows users to copy the formatting from selected content and apply it to other content within the document.
 
-### Use Format Painter Using the UI
+## Use format painter using the UI
 
 You can use Format Painter to quickly replicate character and paragraph formatting across different parts of the document.
 
@@ -31,9 +31,9 @@ You can also use the following keyboard shortcuts.
 | Copy formatting | `Ctrl + Alt + C` |
 | Apply copied formatting | `Ctrl + Alt + V` |
 
-> **Note:** When Format Painter is activated by double-clicking the button, the copied formatting can be applied to multiple selections until Format Painter is cancelled.
+N> When Format Painter is activated by double-clicking the button, the copied formatting can be applied to multiple selections until Format Painter is cancelled.
 
-### Use Format Painter Using API
+## Use format painter using API
 
 You can copy the formatting of the current selection and activate Format Painter by using the following sample code.
 
@@ -53,7 +53,7 @@ You can apply the copied formatting to the current selection by using the follow
 this.documentEditor.selection.applyCopiedFormat();
 ```
 
-> **Note:** By default, Format Painter is automatically deactivated after the copied formatting is applied once. When activated with `copyFormat(true)`, it remains active until it is cancelled.
+N> By default, Format Painter is automatically deactivated after the copied formatting is applied once. When activated with `copyFormat(true)`, it remains active until it is cancelled.
 
 You can determine whether Format Painter is currently active by using the following sample code.
 
@@ -67,4 +67,4 @@ You can cancel Format Painter and remove the formatting currently stored by Form
 this.documentEditor.selection.cancelFormatPainter();
 ```
 
-> **Note:** After Format Painter is cancelled, the copied formatting cannot be applied again until the `copyFormat` method is invoked.
+N> Cancelling Format Painter removes the copied formatting from memory. To apply formatting again, copy the formatting by calling the `copyFormat` method.
