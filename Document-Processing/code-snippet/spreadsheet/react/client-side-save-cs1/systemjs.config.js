@@ -64,6 +64,7 @@
             "@syncfusion/ej2-react-splitbuttons": { main: 'index.js', defaultExtension: 'js' },
             "@syncfusion/ej2-spreadsheet": { main: 'index.js', defaultExtension: 'js' },
             "@syncfusion/ej2-svg-base": { main: 'index.js', defaultExtension: 'js' },
+            "@syncfusion/ej2-xlsx": { main: 'index.js', defaultExtension: 'js' },
             "tslib": { main: 'tslib.es6.js', defaultExtension: 'js' }
         }
     });
