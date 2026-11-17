@@ -4,6 +4,7 @@
             'npm:': 'https://cdn.syncfusion.com/node_modules/'
         },
         map: {
+            '@syncfusion/ej2-xlsx': 'npm:@syncfusion/ej2-xlsx/dist/ej2-xlsx.umd.min.js',
             app: 'app',
             "react": "npm:react",
             "react-dom": "npm:react-dom",

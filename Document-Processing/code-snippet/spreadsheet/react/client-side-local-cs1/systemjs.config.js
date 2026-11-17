@@ -4,6 +4,7 @@
       'npm:': 'https://cdn.jsdelivr.net/npm/'
     },
     map: {
+      '@syncfusion/ej2-xlsx': 'npm:@syncfusion/ej2-xlsx/dist/ej2-xlsx.umd.min.js',
       'react': 'npm:react@18.2.0/umd/react.development.js',
       'react-dom': 'npm:react-dom@18.2.0/umd/react-dom.development.js',
       '@syncfusion/ej2-base': 'npm:@syncfusion/ej2-base/dist/ej2-base.umd.min.js',
