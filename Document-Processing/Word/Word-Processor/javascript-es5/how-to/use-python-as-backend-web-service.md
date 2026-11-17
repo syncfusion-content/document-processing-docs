@@ -49,7 +49,7 @@ dotnet new classlib -n DocumentEditorLibrary
 cd DocumentEditorLibrary
 ```
 
-N> Keep the class library inside a subfolder such as **dotnet**. If the **DocumentEditorLibrary** folder is placed directly next to **app.py**, Python treats it as a local package and the **from DocumentEditorLibrary import Documenteditor** import fails.
+N> Keep the class library inside a subfolder such as **dotnet**. If the **DocumentEditorLibrary** folder is placed directly next to **app.py**, Python treats it as a local package instead of referencing the compiled .NET assembly, causing import errors.
 
 ### Add the required NuGet packages
 
