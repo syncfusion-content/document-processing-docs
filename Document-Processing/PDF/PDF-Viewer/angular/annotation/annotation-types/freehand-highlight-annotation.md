@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Freehand Highlight Annotation in Angular PDF Viewer | Syncfusion
-description: Add, customize, and manage Freehand Highlight annotations in the Angular PDF Viewer to mark PDF content with freehand strokes while preserving the visibility and readability of the underlying text.
+description: Add, customize, and manage Freehand Highlight annotations in the Angular PDF Viewer to mark PDF content with freehand strokes while preserving text visibility and readability.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
