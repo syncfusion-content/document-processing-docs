@@ -438,4 +438,4 @@ Explore how to track and review changes in Word documents using the Vue DOCX Edi
 
 ### Why are custom track changes colors not preserved in the exported document?
 
-Custom track changes colors are an application level feature supported within the Document Editor. These colors are applied only within the editor and are not preserved when the document is exported. During export, the default track changes colors are applied based on the target document format.
+Custom track changes colors are not stored in document formats. The Document Editor provides custom track changes colors as an editor-only feature. After export, track changes colors are determined by the application used to open the document.
