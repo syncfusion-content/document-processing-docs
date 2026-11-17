@@ -20,8 +20,8 @@ You can use Format Painter to quickly replicate character and paragraph formatti
 
 - Select the content whose formatting needs to be copied.
 - Click **Format Painter** from the **Home** tab in the ribbon.
-- Select the target content where the formatting should be applied.
-- Double-click **Format Painter** to keep it active and apply the copied formatting to multiple selections.
+- Select the target content where the formatting should be applied. After the formatting is applied, Format Painter is automatically turned off.
+- To apply the same formatting to multiple selections, double-click **Format Painter**. Format Painter remains active until you press **Esc** or click **Format Painter** again.
 - Press **Esc** or click **Format Painter** again to exit Format Painter mode.
 
 You can also use the following keyboard shortcuts.
@@ -31,7 +31,7 @@ You can also use the following keyboard shortcuts.
 | Copy formatting | `Ctrl + Alt + C` |
 | Apply copied formatting | `Ctrl + Alt + V` |
 
-> **Note:** When Format Painter is activated in persistent mode, the copied formatting can be applied to multiple selections until it is cancelled.
+> **Note:** When Format Painter is activated by double-clicking the button, the copied formatting can be applied to multiple selections until Format Painter is cancelled.
 
 ### Use Format Painter Using API
 
@@ -41,7 +41,7 @@ You can copy the formatting of the current selection and activate Format Painter
 this.$refs.documenteditor.ej2Instances.selection.copyFormat();
 ```
 
-You can also enable persistent Format Painter mode to apply the copied formatting to multiple selections by using the following sample code.
+You can also keep Format Painter active after each use and apply the copied formatting to multiple selections by using the following sample code.
 
 ```javascript
 this.$refs.documenteditor.ej2Instances.selection.copyFormat(true);
@@ -53,7 +53,7 @@ You can apply the copied formatting to the current selection by using the follow
 this.$refs.documenteditor.ej2Instances.selection.applyCopiedFormat();
 ```
 
-> **Note:** When Format Painter is not in persistent mode, it is automatically deactivated after the formatting is applied.
+> **Note:** By default, Format Painter is automatically deactivated after the copied formatting is applied once. When activated with `copyFormat(true)`, it remains active until it is cancelled.
 
 You can determine whether Format Painter is currently active by using the following sample code.
 
@@ -61,7 +61,7 @@ You can determine whether Format Painter is currently active by using the follow
 this.$refs.documenteditor.ej2Instances.selection.isFormatPainterActive;
 ```
 
-You can cancel Format Painter and clear the copied formatting by using the following sample code.
+You can cancel Format Painter and remove the formatting currently stored by Format Painter by using the following sample code.
 
 ```javascript
 this.$refs.documenteditor.ej2Instances.selection.cancelFormatPainter();
