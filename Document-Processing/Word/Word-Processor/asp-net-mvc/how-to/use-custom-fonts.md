@@ -16,11 +16,24 @@ To use a custom font in the Document Editor, register the font using the `setCus
 The following example code illustrates how to register a custom font and add it to the font family drop-down list.
 
 {% tabs %}
-{% highlight razor tabtitle="CSHTML" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/use-custom-fonts/razor %}
-{% endhighlight %}
-{% highlight c# tabtitle="Document-editor.cs" %}
-{% include code-snippet/document-editor/asp-net-mvc/document-editor-container/use-custom-fonts/document-editor.cs %}
+{% highlight html tabtitle="CSHTML" %}
+
+```cshtml
+@Html.EJS().DocumentEditorContainer("container").EnableToolbar(true).Height("590px").DocumentEditorSettings("settings").Render()
+<script>
+    // Add the custom font family to list it in the font drop-down list.
+    var settings = { fontFamilies: ['Algerian', 'Arial', 'Calibri', 'Times New Roman', 'Microsoft YaHei'] };
+    var container = document.getElementById('container').ej2_instances[0];
+    // Register the custom font with its font file source.
+    container.documentEditor.setCustomFonts([
+      {
+        fontFamily: 'Microsoft YaHei',
+        src: "url('https://db.onlinewebfonts.com/t/e63653407669814f5b0eb9bbdc175f77.ttf') format('truetype')"
+      }
+    ]);
+</script>
+```
+
 {% endhighlight %}
 {% endtabs %}
 
