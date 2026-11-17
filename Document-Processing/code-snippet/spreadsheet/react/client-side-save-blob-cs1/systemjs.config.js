@@ -32,6 +32,7 @@
             "@syncfusion/ej2-react-splitbuttons": "npm:@syncfusion/ej2-react-splitbuttons",
             "@syncfusion/ej2-spreadsheet": "npm:@syncfusion/ej2-spreadsheet",
             "@syncfusion/ej2-svg-base": "npm:@syncfusion/ej2-svg-base",
+            "@syncfusion/ej2-xlsx": "npm:@syncfusion/ej2-xlsx",
             "tslib": "npm:tslib"
         },
         packages: {
@@ -63,6 +64,7 @@
             "@syncfusion/ej2-react-splitbuttons": { main: 'index.js', defaultExtension: 'js' },
             "@syncfusion/ej2-spreadsheet": { main: 'index.js', defaultExtension: 'js' },
             "@syncfusion/ej2-svg-base": { main: 'index.js', defaultExtension: 'js' },
+            "@syncfusion/ej2-xlsx": { main: 'index.js', defaultExtension: 'js' },
             "tslib": { main: 'tslib.es6.js', defaultExtension: 'js' }
         }
     });
