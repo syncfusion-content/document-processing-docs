@@ -141,7 +141,11 @@ Add the DOCX Editor component in `~/Pages/Index.cshtml` page.
 {% tabs %}
 {% highlight cshtml tabtitle="~/Pages/Index.cshtml" %}
 
-<ejs-documenteditorcontainer id="container" height="620px"></ejs-documenteditorcontainer>
+<ejs-documenteditorcontainer id="container" height="620px" toolbarMode="Ribbon"></ejs-documenteditorcontainer>
+
+<script>
+    ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar, ej.documenteditor.Ribbon);
+</script>
 
 {% endhighlight %}
 {% endtabs %}
@@ -152,7 +156,7 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 ![Output of ASP.NET Core DOCX Editor](./images/aspnetcore-docx-editor.png)
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-Core-DOCX-Editor-Examples/tree/master/getting-started).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-Core-DOCX-Editor-Examples/tree/master/getting-started/Pages).
 
 ## Online Demo
 

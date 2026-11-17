@@ -121,12 +121,13 @@ Add a container element for the DOCX Editor control in the `app.ts` file using t
 {% tabs %}
 {% highlight ts tabtitle="app.ts" %}
 
-import { DocumentEditorContainer, Toolbar } from '@syncfusion/ej2-documenteditor';
+import { DocumentEditorContainer, Toolbar, Ribbon } from '@syncfusion/ej2-documenteditor';
 
-DocumentEditorContainer.Inject(Toolbar);
+DocumentEditorContainer.Inject(Toolbar, Ribbon);
 
 let documenteditor: DocumentEditorContainer = new DocumentEditorContainer({
     enableToolbar: true,
+    toolbarMode: 'Ribbon',
     height: '590px',
     // Use the following service URL only for demo purposes
     serviceUrl: 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/'
@@ -158,7 +159,7 @@ You can also explore the DOCX Editor interactively using the live sample below.
 
 {% previewsample "/document-processing/code-snippet/document-editor/javascript-es6/getting-started-cs2" %}
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/JavaScript-ES6-DOCX-Editor-Examples/tree/master/getting-started).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/JavaScript-ES6-DOCX-Editor-Examples/tree/master/getting-started/src/app).
 
 ## Online Demo
 
