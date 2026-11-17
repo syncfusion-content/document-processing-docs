@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Appearance-Based Annotation Rendering | Blazor PDF Viewer | Syncfusion
-description: Learn how to view PDF annotations with their embedded custom appearance in the Blazor PDF Viewer by enabling the ShowAnnotationAppearance API.
+description: Add, customize, and manage Freehand Highlight annotations in the React PDF Viewer to mark PDF content with freehand strokes while preserving text visibility and readability.
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
@@ -48,7 +48,7 @@ The custom appearance of an annotation is stored in the `/AP` entry of the PDF a
 
 When [`ShowAnnotationAppearance`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SfPdfViewer.PdfViewerBase.html#Syncfusion_Blazor_SfPdfViewer_PdfViewerBase_ShowAnnotationAppearance) is set to `true`, the viewer displays that custom appearance, and the annotation is shown with the logo, border, and signature line exactly as they were authored.
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/1068213_appearance/Annotation%20Apperance/AnnotationAppearance).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/blazor-pdf-viewer-examples/tree/master/Annotations/Annotation%20Apperance/AnnotationAppearance).
 
 ## See also
 
