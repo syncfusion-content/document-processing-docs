@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to Use Python as a backend Web Service in Angular DOCX Editor | Syncfusion
-description: Configure a Python (Flask) web service in the Angular DOCX Editor to handle server-side operations such as Word document import, save, clipboard operations, mail merge, document comparison, and restricting editing using Syncfusion .NET libraries loaded with Python.NET.
+title: Python Web Service in Angular DOCX Editor | Syncfusion
+description: Host a Python (Flask) backend web service with Python.NET to handle document processing operations in the Syncfusion Angular DOCX Editor.
 control: Python web service
 platform: document-processing
 documentation: ug
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # How to Use Python as a backend Web Service in Angular DOCX Editor
 
-The Angular DOCX Editor depends on server-side interactions for the operations listed below. Typically, these operations are implemented in ASP.NET Core or Java. This section explains how to implement the same operations from a **Python web service** using [Flask](https://flask.palletsprojects.com/), with the document-processing logic hosted in a C# class library that is loaded with [Python.NET](https://pypi.org/project/pythonnet/).
+The Angular DOCX Editor depends on server-side interactions for the operations listed below. Typically, these operations are implemented in ASP.NET Core or Java. This section explains how to implement the same operations from a **Python web service** using [Flask](https://flask.palletsprojects.com/en/stable/), with the document-processing logic hosted in a C# class library that is loaded with [Python.NET](https://pypi.org/project/pythonnet/).
 
 *   Import Word document
 *   Paste with formatting (SystemClipboard)
@@ -28,7 +28,7 @@ In this approach:
 
 ## Prerequisites
 
-*   [.NET SDK](https://dotnet.microsoft.com/download)
+*   [.NET SDK](https://dotnet.microsoft.com/en-us/download)
 *   [Python 3.9 or later](https://www.python.org/downloads/) (CPython distribution recommended)
 *   [pythonnet](https://pypi.org/project/pythonnet/) installed in the active Python environment
 *   Node.js and npm
