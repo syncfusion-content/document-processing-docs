@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Working with Lists in JavaScript PowerPoint | Syncfusion
-description: Learn how to create and format numbered, bulleted, picture, and multi-level lists in PowerPoint presentations using the Syncfusion JavaScript PowerPoint Library.
+description: Create numbered, bulleted, picture, and multilevel lists in PowerPoint with the Syncfusion JavaScript Presentation Library.
 platform: document-processing
 control: PowerPoint
 documentation: ug
@@ -268,7 +268,8 @@ The following code example demonstrates how to create a simple picture list.
 
 import { Presentation, SlideLayoutType, ListType } from '@syncfusion/ej2-pptx';
 
-// pictureBytes is a Uint8Array of the bullet image.
+// Loads the bullet image. Replace this with the PNG, JPEG, or GIF bytes of your image.
+let pictureBytes: Uint8Array = new Uint8Array([]);
 // Creates a PowerPoint presentation.
 let pptxDoc = Presentation.create();
 // Adds a blank slide to the presentation.
@@ -305,7 +306,8 @@ await pptxDoc.save('Sample.pptx');
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
-// pictureBytes is a Uint8Array of the bullet image.
+// Loads the bullet image. Replace this with the PNG, JPEG, or GIF bytes of your image.
+var pictureBytes = new Uint8Array([]);
 // Creates a PowerPoint presentation.
 var pptxDoc = ej.pptx.Presentation.create();
 // Adds a blank slide to the presentation.

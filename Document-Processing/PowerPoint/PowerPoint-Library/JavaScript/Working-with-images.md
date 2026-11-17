@@ -22,7 +22,8 @@ import { Presentation, SlideLayoutType } from '@syncfusion/ej2-pptx';
 let pptxDoc = Presentation.create();
 // Adds a blank slide.
 let slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
-// pictureBytes is a Uint8Array of a JPEG image.
+// Loads the image. Replace this with the PNG, JPEG, or GIF bytes of your image.
+let pictureBytes: Uint8Array = new Uint8Array([]);
 // Adds the picture to the slide by specifying its size and position (points).
 let picture = slide.shapes.addPicture({
     data: pictureBytes,
@@ -37,7 +38,8 @@ await pptxDoc.save('Output.pptx');
 var pptxDoc = ej.pptx.Presentation.create();
 // Adds a blank slide.
 var slide = pptxDoc.slides.add({ layout: ej.pptx.SlideLayoutType.Blank });
-// pictureBytes is a Uint8Array of a JPEG image.
+// Loads the image. Replace this with the PNG, JPEG, or GIF bytes of your image.
+var pictureBytes = new Uint8Array([]);
 // Adds the picture to the slide by specifying its size and position (points).
 var picture = slide.shapes.addPicture({
     data: pictureBytes,
@@ -50,15 +52,17 @@ await pptxDoc.save('Output.pptx');
 
 ## Replacing Images
 
-The following code example demonstrates how to replace an existing image in a slide. Reach a picture with `Shape.asPicture()` (it returns a picture only when the shape kind is `pic`), then pass the new image bytes to `Picture.replaceImageData`. The new image is stored as a new media part; the content type is inferred from the payload (PNG, JPEG, or GIF).
+The following code example demonstrates how to replace an existing image in a slide. Reach a picture with `Shape.asPicture()` (it returns a picture only when the shape is an image), then pass the new image bytes to `Picture.replaceImageData`. The new image is stored as a new media part; the content type is inferred from the payload (PNG, JPEG, or GIF).
 
 {% tabs %}
 {% highlight js tabtitle="TypeScript" %}
 
 import { Presentation } from '@syncfusion/ej2-pptx';
 
-// data is a Uint8Array or Base64 string of an existing .pptx file.
-// newImageBytes is a Uint8Array of the replacement PNG, JPEG, or GIF image.
+// Loads an existing presentation. Replace this with the bytes of your .pptx file.
+let data: Uint8Array = new Uint8Array([]);
+// Loads the replacement image. Replace this with the PNG, JPEG, or GIF bytes of your image.
+let newImageBytes: Uint8Array = new Uint8Array([]);
 // Opens an existing PowerPoint Presentation.
 let pptxDoc = await Presentation.open(data);
 // Retrieves the first slide from the Presentation.
@@ -74,8 +78,10 @@ await pptxDoc.save('Output.pptx');
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
-// data is a Uint8Array or Base64 string of an existing .pptx file.
-// newImageBytes is a Uint8Array of the replacement PNG, JPEG, or GIF image.
+// Loads an existing presentation. Replace this with the bytes of your .pptx file.
+var data = new Uint8Array([]);
+// Loads the replacement image. Replace this with the PNG, JPEG, or GIF bytes of your image.
+var newImageBytes = new Uint8Array([]);
 // Opens an existing PowerPoint Presentation.
 var pptxDoc = await ej.pptx.Presentation.open(data);
 // Retrieves the first slide from the Presentation.

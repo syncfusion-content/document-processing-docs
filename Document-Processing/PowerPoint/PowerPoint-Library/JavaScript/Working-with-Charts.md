@@ -240,7 +240,7 @@ await pptxDoc.save('Output.pptx');
 
 The same edits also work on a chart created in the same session with `Slide.addChart`.
 
-N> Chart data and format edits are dual-written to the chart part and its embedded workbook. A chart that has only an external data source cannot be edited. That includes a chart whose `c:externalData` relationship is an external `oleObject` pointing at a local `.xlsx` path and that has no `ppt/embeddings` workbook. Calling a chart mutator on that chart throws `ChartsError` with the message `Chart data edit refused: no embedded package relationship on chart part` (or `chart data source is external-only`). Open a presentation whose chart has an embedded workbook, or create the chart with `Slide.addChart`.
+N> Chart data and format edits are dual-written to the chart part and its embedded workbook. A chart that has only an external data source cannot be edited. That includes a chart whose `c:externalData` relationship points at a local `.xlsx` path and that has no `ppt/embeddings` workbook. Calling a chart mutator on that chart throws `ChartsError` with the message `Chart data edit refused: no embedded package relationship on chart part` (or `chart data source is external-only`). Open a presentation whose chart has an embedded workbook, or create the chart with `Slide.addChart`.
 
 ## Customizing the chart
 
@@ -325,7 +325,7 @@ N> ChartEx types (box and whisker, funnel, Pareto, sunburst, treemap, and waterf
 
 ## Online demo
 
-* Explore how to create a chart in a PowerPoint presentation with the [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library) in the [PowerPoint chart demo](https://github.com/SyncfusionExamples/javascript-powerpoint-examples/tree/master/Charts).
+* Explore how to create a chart in a PowerPoint presentation with the [JavaScript PowerPoint Library](https://www.syncfusion.com/document-sdk/javascript-powerpoint-library).
 
 ## See Also
 
