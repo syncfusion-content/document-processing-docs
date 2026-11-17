@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# How to Use Python as a backend Web Service in TypeScript DOCX Editor
+# How to Use Python as a back-end Web Service in TypeScript DOCX Editor
 
 The TypeScript DOCX Editor depends on server-side interactions for the operations listed below. Typically, these operations are implemented in ASP.NET Core or Java. This section explains how to implement the same operations from a **Python web service** using [Flask](https://flask.palletsprojects.com/en/stable/), with the document-processing logic hosted in a C# class library that is loaded with [Python.NET](https://pypi.org/project/pythonnet/).
 
@@ -16,7 +16,7 @@ The TypeScript DOCX Editor depends on server-side interactions for the operation
 *   Paste with formatting (SystemClipboard)
 *   Restrict editing
 *   Save document
-*   Mail Merge
+*   Mail merge
 *   Compare documents
 
 In this approach:
@@ -49,7 +49,7 @@ dotnet new classlib -n DocumentEditorLibrary
 cd DocumentEditorLibrary
 ```
 
-N> Keep the class library inside a subfolder such as **dotnet**. If the **DocumentEditorLibrary** folder is placed directly next to **app.py**, Python treats it as a local package instead of referencing the compiled .NET assembly, causing import errors.
+N> Keep the class library inside a subfolder of the project. If the **DocumentEditorLibrary** folder is placed directly next to **app.py**, Python treats it as a local package instead of referencing the compiled .NET assembly, causing import errors.
 
 ### Add the required NuGet packages
 
@@ -306,7 +306,7 @@ public byte[] Save(string content, string fileName)
 }
 ```
 
-#### Mail Merge
+#### Mail merge
 
 Performs mail merge on the uploaded Word document using data records and returns the merged document as SFDT.
 
@@ -575,9 +575,9 @@ def save():
     return send_file(output, as_attachment=True, download_name=fileName)
 ```
 
-#### Mail Merge
+#### Mail merge
 
-The MailMerge API performs mail merge on the uploaded Word document and returns the merged document as SFDT.
+This endpoint performs mail merge on the uploaded Word document and returns the merged document as SFDT.
 
 ```python
 @app.route('/MailMerge', methods=['POST'])
