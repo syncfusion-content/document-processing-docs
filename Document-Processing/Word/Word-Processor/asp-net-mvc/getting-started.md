@@ -112,7 +112,7 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> to run the app. The DOCX Editor component wi
 
 ![Output of ASP.NET MVC DOCX Editor](./images/aspnetmvc-docx-editor.png)
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-MVC-DOCX-Editor-Examples/tree/master/getting-started/Views).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-MVC-DOCX-Editor-Examples/tree/master/getting-started).
 
 
 ## Online Demo

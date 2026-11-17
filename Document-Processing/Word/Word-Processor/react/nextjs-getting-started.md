@@ -181,7 +181,7 @@ After the application starts, open the `localhost` URL shown in the terminal. Th
 
 ![Output of React DOCX Editor in Next.js](./images/react_getting_started.png)
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/React-DOCX-Editor-Examples/tree/master/getting-started-nextjs/ej2-nextjs-documenteditor).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/React-DOCX-Editor-Examples/tree/master/getting-started-nextjs).
 
 ## Server-side dependencies
 

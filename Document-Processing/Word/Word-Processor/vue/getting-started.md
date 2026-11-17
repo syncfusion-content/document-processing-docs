@@ -140,7 +140,7 @@ After the application starts, open the localhost URL shown in the terminal. The 
 
 ![Output of Vue DOCX Editor](./images/vue_2_getting_started.png)
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Vue-DOCX-Editor-Examples/tree/master/getting-started/vue_2/src).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Vue-DOCX-Editor-Examples/tree/master/getting-started/vue_2).
 
 ## Online Demo
 

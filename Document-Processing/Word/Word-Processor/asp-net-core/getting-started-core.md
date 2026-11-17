@@ -156,7 +156,7 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 ![Output of ASP.NET Core DOCX Editor](./images/aspnetcore-docx-editor.png)
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-Core-DOCX-Editor-Examples/tree/master/getting-started/Pages).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/ASP-NET-Core-DOCX-Editor-Examples/tree/master/getting-started).
 
 ## Online Demo
 
