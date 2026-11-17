@@ -26,11 +26,13 @@ The following example demonstrates how to insert a merge field programmatically 
 
 {% tabs %}
 {% highlight ts tabtitle="TS" %}
-
-let fieldCode: string = 'MERGEFIELD  First Name  \\* MERGEFORMAT ';
-let fieldResult: string = '«First Name»';
-documenteditor.documentEditor.editor.insertField(fieldCode, fieldResult);
-
+var container;
+document.addEventListener('DOMContentLoaded', function () {
+    container = document.getElementById('container').ej2_instances[0];
+    var fieldCode = 'MERGEFIELD  First Name  \\* MERGEFORMAT ';
+    var fieldResult = '«First Name»';
+    container.documentEditor.editor.insertField(fieldCode, fieldResult);
+});
 {% endhighlight %}
 {% endtabs %}
 
