@@ -257,8 +257,8 @@ await pptxDoc.save('Sample.pptx');
 
 ### Picture List
 
-N> - `ListType.Picture` replaces the bullet glyph with a custom image supplied through `ListFormat.picture(data)`.
-N> - The image data is a `Uint8Array` or base64 string of a PNG, JPEG, or GIF image. A URL is never fetched.
+N> - `ListType.Picture` replaces the bullet glyph with a custom image supplied through `listFormat.picture(data)`.
+N> - The image file (`Image.png` in the samples below) must exist at runtime. It is read into a `Uint8Array` and passed to `picture`. A URL is never fetched. PNG, JPEG, and GIF are supported.
 N> - `listFormat.size` for a picture list is expressed as a percentage of the text size (range `25` to `400`).
 
 The following code example demonstrates how to create a simple picture list.
@@ -268,8 +268,9 @@ The following code example demonstrates how to create a simple picture list.
 
 import { Presentation, SlideLayoutType, ListType } from '@syncfusion/ej2-pptx';
 
-// Loads the bullet image. Replace this with the PNG, JPEG, or GIF bytes of your image.
-let pictureBytes: Uint8Array = new Uint8Array([]);
+// Opens the image file used as the picture bullet.
+let pictureStream = await fetch('Image.png');
+let pictureBytes = new Uint8Array(await pictureStream.arrayBuffer());
 // Creates a PowerPoint presentation.
 let pptxDoc = Presentation.create();
 // Adds a blank slide to the presentation.
@@ -306,8 +307,9 @@ await pptxDoc.save('Sample.pptx');
 
 {% endhighlight %}
 {% highlight javascript tabtitle="JavaScript" %}
-// Loads the bullet image. Replace this with the PNG, JPEG, or GIF bytes of your image.
-var pictureBytes = new Uint8Array([]);
+// Opens the image file used as the picture bullet.
+var pictureStream = await fetch('Image.png');
+var pictureBytes = new Uint8Array(await pictureStream.arrayBuffer());
 // Creates a PowerPoint presentation.
 var pptxDoc = ej.pptx.Presentation.create();
 // Adds a blank slide to the presentation.
