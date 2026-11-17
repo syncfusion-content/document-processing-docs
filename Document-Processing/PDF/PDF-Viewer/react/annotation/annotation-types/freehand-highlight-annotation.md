@@ -63,8 +63,6 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 
 The stroke is drawn with the highlight blend effect, so the text underneath the stroke remains visible.
 
-![Freehand Highlight stroke over text](../../images/ui-freehand-highlight-stroke.png)
-
 N> The Freehand Highlight tool uses the highlight color configured in the [`highlightSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#highlightsettings) property, so changing the highlight color also changes the color of the freehand strokes.
 
 ### Add Freehand Highlight Programmatically
@@ -164,36 +162,7 @@ N> The Freehand Highlight tool is enabled by default. Setting `enableFreehandHig
 
 ## Customize Freehand Highlight Appearance
 
-The appearance of a freehand highlight is controlled with the [`inkAnnotationSettings`](https://ej2.syncfusion.com/react/documentation/api/pdfviewer/index-default#inkannotationsettings) property, which is shared with the Ink annotation.
-
-{% tabs %}
-{% highlight js tabtitle="Standalone" %}
-{% raw %}
-<PdfViewerComponent
-  id="container"
-  documentPath="https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-  resourceUrl="https://cdn.syncfusion.com/ej2/35.1.46/dist/ej2-pdfviewer-lib"
-  inkAnnotationSettings={{ author: 'Guest', strokeColor: '#ffff00', thickness: 12, opacity: 1 }}
-  style={{ height: '650px' }}
->
-  <Inject services={[Toolbar, Annotation]} />
-</PdfViewerComponent>
-{% endraw %}
-{% endhighlight %}
-{% endtabs %}
-
-The following properties are supported in `inkAnnotationSettings`:
-
-| Property | Description |
-| --- | --- |
-| `strokeColor` | Specifies the color of the freehand highlight stroke. |
-| `thickness` | Specifies the thickness of the freehand highlight stroke. |
-| `opacity` | Specifies the opacity of the freehand highlight stroke. |
-| `author` | Specifies the author of the freehand highlight annotation. |
-| `subject` | Specifies the subject of the freehand highlight annotation. |
-| `enableInkHighlight` | Renders the stroke on the highlight blend layer so the underlying content stays visible. |
-
-N> The **Edit Stroke Color**, **Edit Thickness**, and **Edit Opacity** tools in the annotation toolbar change the appearance of the selected freehand highlight. For the Ink annotation appearance options, see [**Ink Annotation**](./ink-annotation).
+The **Edit Stroke Color**, **Edit Thickness**, and **Edit Opacity** tools in the annotation toolbar change the appearance of the selected freehand highlight. For the Ink annotation appearance options, see [**Ink Annotation**](./ink-annotation).
 
 ## Handle Freehand Highlight Events
 
