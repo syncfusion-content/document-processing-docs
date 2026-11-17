@@ -163,11 +163,12 @@ Add a container element for the DOCX Editor in the `index.html` file and then in
 {% highlight js tabtitle="index.js" %}
 
 // Inject toolbar
-ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
+ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar, ej.documenteditor.Ribbon);
 
 // Initialize Document Editor Container component
 var documenteditorContainer = new ej.documenteditor.DocumentEditorContainer({
     enableToolbar: true,
+    toolbarMode: 'Ribbon',
     height: '590px'
 });
 
