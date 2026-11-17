@@ -290,7 +290,7 @@ After the application starts, open the localhost URL shown in the terminal. The 
 
 {% endtabcontents %}
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Vue-DOCX-Editor-Examples/tree/master/getting-started/vue_3/src).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Vue-DOCX-Editor-Examples/tree/master/getting-started/vue_3).
 
 ## Server-side dependencies
 
