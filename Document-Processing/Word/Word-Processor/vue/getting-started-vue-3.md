@@ -223,7 +223,7 @@ Import and register the DOCX Editor component in the `<script>` section of `src/
    height="590px"
    :serviceUrl="serviceUrl" 
    :enableToolbar="true"
-   toolbarMode="Ribbon"> 
+   :toolbarMode="'Ribbon'"> 
   </ejs-documenteditorcontainer>
 </template>
 
@@ -245,7 +245,7 @@ Import and register the DOCX Editor component in the `<script>` section of `src/
     height="590px"
     :serviceUrl="serviceUrl" 
     :enableToolbar="true"
-    toolbarMode="Ribbon"> 
+    :toolbarMode="'Ribbon'"> 
   </ejs-documenteditorcontainer>
 </template>
 
