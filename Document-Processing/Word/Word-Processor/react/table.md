@@ -179,11 +179,7 @@ documenteditor.editor.mergeCells();
 
 DOCX Editor preserves the position properties of the table and displays the table based on position properties. It does not support modifying the position properties. Whereas the table will be automatically moved along with text edited if it is positioned relative to the paragraph.
 
-## Table position
-
-You can retrieve the position of the table that contains the current selection. The table position cannot be retrieved when the current selection is text within a table cell or when table cells are selected.
-
-### Get table position
+## Get table position
 
 You can retrieve the top and right position of the table that contains the current selection by using the following sample code.
 
