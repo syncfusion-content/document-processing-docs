@@ -48,11 +48,12 @@ N> In Windows, a UI element receives key notifications only when it is focused. 
 
 Copy, cut, and paste operations are supported for the following annotation types:
 
-* [Shape annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/shapes)
-* [Ink annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/ink)
-* [Free text annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/free-text)
-* [Stamp annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/stamps)
-* [Sticky note annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/sticky-notes)
+* Ink annotations
+* Shape annotations
+* Free text annotations
+* Free text callout annotation
+* Stamp annotations
+* Sticky note annotations
 
 N> Pasted annotations retain the appearance and properties of the original annotation. 
 N> For [locked annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/lock-unlock), only Copy and Paste operations are supported. Cut is not available because a locked annotation cannot be removed.
