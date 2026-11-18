@@ -6,18 +6,9 @@
     <script src="https://cdn.syncfusion.com/ej2/syncfusion-helper.js"></script>
       <title>Essential JS 2</title>
 
-      <!-- EJ2 Document Editor dependent theme -->
-      <link href="https://cdn.syncfusion.com/ej2/ej2-base/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
-      <link href="https://cdn.syncfusion.com/ej2/ej2-buttons/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
-      <link href="https://cdn.syncfusion.com/ej2/ej2-inputs/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
-      <link href="https://cdn.syncfusion.com/ej2/ej2-popups/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
-      <link href="https://cdn.syncfusion.com/ej2/ej2-lists/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
-      <link href="https://cdn.syncfusion.com/ej2/ej2-navigations/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
-      <link href="https://cdn.syncfusion.com/ej2/ej2-splitbuttons/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
-      <link href="https://cdn.syncfusion.com/ej2/ej2-dropdowns/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
-
       <!-- EJ2 Document Editor theme -->
-      <link href="https://cdn.syncfusion.com/ej2/ej2-documenteditor/styles/material.css" rel="stylesheet" type="text/css" rel='nofollow' />
+      <link href="https://unpkg.com/@syncfusion/ej2-material-theme/styles/document-editor/index.css" rel="stylesheet" rel='nofollow'/>
+      <link href="https://unpkg.com/@syncfusion/ej2-material-theme/styles/document-editor-container/index.css" rel="stylesheet" rel='nofollow' />
 
       <!-- EJ2 Document Editor dependent scripts -->
       <script src="https://cdn.syncfusion.com/ej2/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"></script>
@@ -35,6 +26,7 @@
       <script src="https://cdn.syncfusion.com/ej2/ej2-dropdowns/dist/global/ej2-dropdowns.min.js" type="text/javascript"></script>
       <script src="https://cdn.syncfusion.com/ej2/ej2-calendars/dist/global/ej2-calendars.min.js" type="text/javascript"></script>
       <script src="https://cdn.syncfusion.com/ej2/ej2-charts/dist/global/ej2-charts.min.js" type="text/javascript"></script>
+     <script src="https://cdn.syncfusion.com/ej2/ej2-ribbon/dist/global/ej2-ribbon.min.js" type="text/javascript"></script>
       <script src="https://cdn.syncfusion.com/ej2/ej2-office-chart/dist/global/ej2-office-chart.min.js" type="text/javascript"></script>
       <!-- EJ2 Document Editor script -->
       <script src="https://cdn.syncfusion.com/ej2/ej2-documenteditor/dist/global/ej2-documenteditor.min.js" type="text/javascript"></script>
