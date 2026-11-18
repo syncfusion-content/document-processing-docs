@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appearance-Based Annotation Rendering | JavaScript (ES5) PDF Viewer | Syncfusion
+title: Appearance Based Annotation Rendering | Syncfusion ES5 PDF Viewer
 description: Learn how to view PDF annotations with their embedded custom appearance in the JavaScript (ES5) PDF Viewer by enabling the showAnnotationAppearance API.
 platform: document-processing
 control: PDF Viewer
@@ -56,7 +56,7 @@ viewer.appendTo('#pdfViewer');
 {% endhighlight %}
 {% endtabs %}
 
-![Circle annotation with custom appearance in the JavaScript (ES5) PDF Viewer](../images/circle-annotation-with-custom-appearance-ej2-pdf-viewer.png)
+![Circle annotation with custom appearance in the JavaScript ES5 PDF Viewer](../images/circle-annotation-with-custom-appearance-ej2-pdf-viewer.png)
 
 When the property is enabled, every annotation in the loaded document that contains an appearance is displayed with that appearance. The remaining annotations continue to be displayed from their annotation properties, so that the document is shown without any missing content.
 

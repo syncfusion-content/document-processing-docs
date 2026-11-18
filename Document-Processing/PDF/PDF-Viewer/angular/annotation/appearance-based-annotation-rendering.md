@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Appearance-Based Annotation Rendering | Angular PDF Viewer | Syncfusion
+title: Appearance Based Annotation Rendering | Syncfusion Angular PDF Viewer
 description: Learn how to view PDF annotations with their embedded custom appearance in the Angular PDF Viewer by enabling the showAnnotationAppearance API.
 platform: document-processing
 control: PDF Viewer
