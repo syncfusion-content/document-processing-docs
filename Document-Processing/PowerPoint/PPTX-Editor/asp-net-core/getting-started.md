@@ -126,14 +126,12 @@ Include the [stylesheet](https://ej2.syncfusion.com/aspnetcore/documentation/app
 
 ## Register the Script Manager
 
-Open the **~/Pages/Shared/_Layout.cshtml** file and register the script manager `<ejs-scripts>` at the end of the `<body>` element as follows.
+Open the `~/Pages/Shared/_Layout.cshtml` file and register the script manager `<ejs-scripts>` at the end of the `<body>` element as follows.
 
 
 {% tabs %}
 {% highlight cshtml tabtitle="~/Pages/Shared/_Layout.cshtml" %}
-
-    @RenderBody()
-    @await RenderSectionAsync("Scripts", required: false)
+    <!-- Syncfusion ASP.NET Core Script Manager -->
     <ejs-scripts></ejs-scripts>
 </body>
 
@@ -150,8 +148,7 @@ Add the ASP.NET Core PptxEditor control in the **~/Pages/Index.cshtml** file.
 @page
 @model IndexModel
 
-<ejs-pptxeditor id="pptx-editor"
-                theme="fluent2"
+<ejs-pptxeditor id="pptxeditor"
                 documentPath="https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx">
 </ejs-pptxeditor>
 

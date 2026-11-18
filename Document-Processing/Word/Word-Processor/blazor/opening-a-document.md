@@ -396,9 +396,9 @@ The following example code illustrates how to use `MetafileImageParsed` event fo
 
 ## Opening a document in asynchronous mode
 
-[Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) supports asynchronous document loading, which can be enabled using the enable property available in the [`OpenAsyncSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.OpenAsyncSettingsModel.html) API.
+[Blazor DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/blazor-docx-editor) (Document Editor) supports asynchronous document loading through the [`OpenAsyncSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.OpenAsyncSettingsModel.html) API, which provides options to enable asynchronous loading and configure both the initial and incremental page-loading behavior.
 
-### Properties
+**Properties**
 
 - **[`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.OpenAsyncSettingsModel.html#Syncfusion_Blazor_DocumentEditor_OpenAsyncSettingsModel_Enable):** Enables or disables asynchronous document loading.
 - **[`InitialPageLoadCount`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DocumentEditor.OpenAsyncSettingsModel.html#Syncfusion_Blazor_DocumentEditor_OpenAsyncSettingsModel_InitialPageLoadCount):** Number of pages to load initially when the document is opened.

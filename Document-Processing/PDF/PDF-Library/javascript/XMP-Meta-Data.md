@@ -118,12 +118,12 @@ This sample demonstrates how to add custom metadata.
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { PdfDocument, PdfDocumentProperties, PdfCustomMetadata } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfDocumentInformation, PdfCustomMetadata } from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
 // Access the document information
-let documentProperties: PdfDocumentProperties = document.getDocumentInformation(false);
+let documentProperties: PdfDocumentInformation = document.getDocumentInformation(false);
 // Gets the custom metadata from document information
 let custom: PdfCustomMetadata = documentProperties.customMetadata;
 // Sets a custom metadata value
@@ -163,12 +163,12 @@ This sample demonstrates how to remove custom metadata from a PDF document.
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { PdfDocument, PdfDocumentProperties, PdfCustomMetadata } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfDocumentInformation, PdfCustomMetadata } from '@syncfusion/ej2-pdf';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
 // Access the document information
-let documentProperties: PdfDocumentProperties = document.getDocumentInformation(false);
+let documentProperties: PdfDocumentInformation = document.getDocumentInformation(false);
 // Gets the custom metadata from document information
 let custom: PdfCustomMetadata = documentProperties.customMetadata;
 // Removes the key from the custom metadata
@@ -324,7 +324,6 @@ let documentProperties: PdfDocumentInformation = document.getDocumentInformation
 let xmpMetadata: PdfXmpMetadata = documentProperties.xmpMetadata;
 // Set job references
 xmpMetadata.basicJobTicketSchema.jobRef = ['JobA', 'JobB'];
-xmpMetadata.basicJobTicketSchema.jobName = 'Quarterly Report';
 // Save the updated document
 document.save('Output.pdf');
 // Destroy the document
@@ -341,7 +340,6 @@ var documentProperties = document.getDocumentInformation(false);
 var xmpMetadata = documentProperties.xmpMetadata;
 // Set job references
 xmpMetadata.basicJobTicketSchema.jobRef = ['JobA', 'JobB'];
-xmpMetadata.basicJobTicketSchema.jobName = 'Quarterly Report';
 // Save the updated document
 document.save('Output.pdf');
 // Destroy the document
@@ -369,7 +367,6 @@ let documentProperties: PdfDocumentInformation = document.getDocumentInformation
 let xmpMetadata: PdfXmpMetadata = documentProperties.xmpMetadata;
 // Mark document as rights-managed
 xmpMetadata.rightsManagementSchema.isMarked = true;
-xmpMetadata.rightsManagementSchema.mark = 'Copyright 2026 Syncfusion';
 xmpMetadata.rightsManagementSchema.webStatement = 'https://example.com/rights';
 // Save the updated document
 document.save('Output.pdf');
@@ -387,7 +384,6 @@ var documentProperties = document.getDocumentInformation(false);
 var xmpMetadata = documentProperties.xmpMetadata;
 // Mark document as rights-managed
 xmpMetadata.rightsManagementSchema.isMarked = true;
-xmpMetadata.rightsManagementSchema.mark = 'Copyright 2026 Syncfusion';
 xmpMetadata.rightsManagementSchema.webStatement = 'https://example.com/rights';
 // Save the updated document
 document.save('Output.pdf');
@@ -412,12 +408,12 @@ import { PdfDocument, PdfXmpMetadata } from '@syncfusion/ej2-pdf';
 let document: PdfDocument = new PdfDocument(data);
 // Create XMP metadata
 let xmpMetadata: PdfXmpMetadata = new PdfXmpMetadata();
-// Assign metadata to document
-document.xmpMetadata = xmpMetadata;
 // Set PDF keywords
 xmpMetadata.pdfSchema.keywords = 'sample, pdf, metadata';
 xmpMetadata.pdfSchema.producer = 'Syncfusion PDF Library';
 xmpMetadata.pdfSchema.pdfVersion = '1.7';
+// Assign metadata to document
+document.setDocumentInformation({ xmpMetadata });
 // Save the document
 document.save('Output.pdf');
 // Destroy the document
@@ -430,12 +426,12 @@ document.destroy();
 var document = new ej.pdf.PdfDocument(data);
 // Create XMP metadata
 var xmpMetadata = new ej.pdf.PdfXmpMetadata();
-// Assign metadata to document
-document.xmpMetadata = xmpMetadata;
 // Set PDF keywords
 xmpMetadata.pdfSchema.keywords = 'sample, pdf, metadata';
 xmpMetadata.pdfSchema.producer = 'Syncfusion PDF Library';
 xmpMetadata.pdfSchema.pdfVersion = '1.7';
+// Assign metadata to document
+document.setDocumentInformation({ xmpMetadata });
 // Save the document
 document.save('Output.pdf');
 // Destroy the document
@@ -462,7 +458,7 @@ let documentProperties: PdfDocumentInformation = document.getDocumentInformation
 // Get XMP metadata
 let xmpMetadata: PdfXmpMetadata = documentProperties.xmpMetadata;
 // Set page count from the actual document page count
-xmpMetadata.pagedTextSchema.pageCount = document.pageCount.toString();
+xmpMetadata.pagedTextSchema.pageCount = document.pageCount;
 // Save the updated document
 document.save('Output.pdf');
 // Destroy the document
@@ -478,7 +474,7 @@ var documentProperties = document.getDocumentInformation(false);
 // Get XMP metadata
 var xmpMetadata = documentProperties.xmpMetadata;
 // Set page count from the actual document page count
-xmpMetadata.pagedTextSchema.pageCount = document.pageCount.toString();
+xmpMetadata.pagedTextSchema.pageCount = document.pageCount;
 // Save the updated document
 document.save('Output.pdf');
 // Destroy the document
@@ -547,4 +543,4 @@ document.destroy();
 - [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library)
 - [JavaScript PDF Library documentation](https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/overview)
 - [JavaScript PDF Library API reference](https://ej2.syncfusion.com/documentation/api/pdf)
-- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/pdf/javascript/#/tailwind3/pdf/default.html)
+- [JavaScript PDF Library examples](https://document.syncfusion.com/demos/document-library/javascript/#/tailwind3/pdf/default.html)
