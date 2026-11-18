@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Freehand Highlight Annotation in JavaScript ES6 PDF Viewer | Syncfusion
-description: Add, customize, and manage Freehand Highlight annotations in the JavaScript (ES6) PDF Viewer to mark PDF content with freehand strokes while preserving text visibility and readability.
+title: Freehand Highlight Annotation in ES6 PDF Viewer | Syncfusion
+description: Add, customize, and manage Freehand Highlight annotations in the JavaScript (ES6) PDF Viewer to highlight PDF content with freehand strokes while maintaining visibility and readability.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
