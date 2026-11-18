@@ -183,6 +183,51 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
+## Grouping layers in a PDF document
+
+This example shows how to group related layers in a PDF document. Create a named `PdfLayerGroup` using the `addGroup()` method of the [`PdfLayerCollection`](https://ej2.syncfusion.com/documentation/api/pdf/pdflayercollection) class, and add layers to the group using the `add()` method. Each layer can contain distinct content and appears under the group in the Layers panel of supported PDF viewers.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+
+import { PdfDocument, PdfPage, PdfLayerCollection, PdfLayerGroup, PdfLayer, PdfGraphics, PdfPen } from '@syncfusion/ej2-pdf';
+
+// Create a new PDF document
+let document: PdfDocument = new PdfDocument();
+// Add a blank page
+let page: PdfPage = document.addPage();
+// Access the collection of layers
+let layers: PdfLayerCollection = document.layers;
+// Add a layer group named 'Shapes'
+let group: PdfLayerGroup = layers.addGroup('Shapes');
+// Add layers to the group
+let lineLayer: PdfLayer = group.add('Line');
+let boxLayer: PdfLayer = group.add('Box');
+// Create graphics for the first layer in the group
+let graphics: PdfGraphics = lineLayer.createGraphics(page);
+// Create a black pen with a thickness of 1 unit
+let pen: PdfPen = new PdfPen({ r: 0, g: 0, b: 0 }, 1);
+// Draw a line from (100, 100) to (300, 200)
+graphics.drawLine(pen, { x: 100, y: 100 }, { x: 300, y: 200 });
+// Create graphics for the second layer in the group
+graphics = boxLayer.createGraphics(page);
+// Create a blue pen with a thickness of 2 units
+pen = new PdfPen({ r: 0, g: 0, b: 255 }, 2);
+// Draw a rectangle
+graphics.drawRectangle({ x: 100, y: 250, width: 200, height: 100 }, pen);
+// Save the document
+document.save('Output.pdf');
+// Release native resources
+document.destroy();
+
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+(same flow using var and the ej.pdf.* namespace — see the file)
+{% endhighlight %}
+{% endtabs %}
+
+> **Note:** A layer group is an organizational node displayed in the Layers panel and does not control the visibility of its layers. Add layers using `group.add()` or create nested groups using `group.addGroup()`. Unlike #nested-layers, where a layer is a child of another layer, a layer group is a named container for organizing layers and other groups. Empty groups are not preserved when the PDF document is saved.
+
 ## Removing layers from an existing PDF document
 
 This example demonstrates how to remove layers from an existing PDF document using the [PdfLayerCollection](https://ej2.syncfusion.com/documentation/api/pdf/pdflayercollection) class. Removing unnecessary layers helps simplify the document structure.
