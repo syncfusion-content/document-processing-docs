@@ -14,8 +14,6 @@ domainurl: ##DomainURL##
 
 The Format Painter option is available in the **Home** tab of the ribbon under the **Clipboard** group. It allows users to copy the formatting from selected content and apply it to other content within the document.
 
-![Format Painter in TypeScript DOCX Editor](./images/format-painter.png)
-
 ## Use format painter using the UI
 
 You can use Format Painter to quickly replicate character and paragraph formatting across different parts of the document.
