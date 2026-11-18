@@ -180,7 +180,7 @@ Press <kbd>Ctrl</kbd>+<kbd>F5</kbd> (Windows) or <kbd>⌘</kbd>+<kbd>F5</kbd> (m
 
 ![Blazor DOCX Editor in WASM](../images/blazor-docx-editor.png)
 
-N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-Getting-Started-Examples/tree/main/DocumentEditor).
+N> [View Sample in GitHub](https://github.com/SyncfusionExamples/Blazor-DOCX-Editor-Examples/tree/master/getting-started/wasm).
 
 ## Online Demo
 

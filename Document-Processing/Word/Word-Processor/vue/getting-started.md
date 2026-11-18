@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with Vue DOCX Editor (Vue 2)
 
-[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/Vue-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a Vue application.
+[Vue DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/vue-docx-editor) (Document Editor) enables you to create, edit, view, and print Word documents in web applications. This section guides you through the steps to get started and create a DOCX Editor in a Vue application.
 
 ## Prerequisites
 
@@ -94,7 +94,7 @@ Modify the `src/App.vue` file to render the DOCX Editor. Add the DOCX Editor com
       height="590px"
       :serviceUrl="serviceUrl"
       :enableToolbar="true"
-      toolbarMode="Ribbon">
+      :toolbarMode="'Ribbon'">
     </ejs-documenteditorcontainer>
   </div>
 </template>
