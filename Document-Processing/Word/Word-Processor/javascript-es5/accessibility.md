@@ -36,6 +36,27 @@ The accessibility compliance for the [JavaScript DOCX Editor](https://www.syncfu
 
 <div><img src="https://cdn.syncfusion.com/content/images/documentation/not-supported.png" alt="No"> - The component does not meet the requirement.</div>
 
+## Screen Reader Support
+
+The DOCX Editor provides screen reader support for improved accessibility. Set the [`enableScreenReader`](https://ej2.syncfusion.com/documentation/api/document-editor/documentEditorSettingsModel#enablescreenreader) property to `true` in [`documentEditorSettings`](https://ej2.syncfusion.com/documentation/api/document-editor/documenteditorsettingsmodel) to enable screen reader support and expose the necessary accessibility information for screen reader tools.
+
+### Enable Screen Reader Support
+
+```
+<div id="container"></div>
+
+<script>
+    var container = new ej.documenteditor.DocumentEditorContainer({
+        height: '590px', enableToolbar: true, toolbarMode: 'Ribbon',
+        documentEditorSettings: { enableScreenReader: true }
+    });
+    ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Ribbon);
+    container.appendTo('#container');
+</script>
+```
+
+N> `enableScreenReader` is disabled by default. Set it to `true` to enable screen reader support.
+
 ## Keyboard Accessibility
 
 For keyboard accessibility, the DOCX Editor supports a range of [keyboard shortcuts](./keyboard-shortcut) for navigation and editing without a mouse, including tab navigation, cursor movement, and shortcut key combinations for common editing actions such as copy, paste, undo, and redo.
