@@ -62,6 +62,7 @@ Build powerful PDF experiences into your .NET MAUI app with the [SfPdfViewer](ht
 * **Sticky note annotation** - Add, remove, modify, import, and export sticky note annotations in PDF files. This feature helps add comments or notes to a specific part of a document to clarify complex concepts, terms, or ideas.
 * **Text markup annotations** - Add, remove, modify, import, and export text markup annotations in PDF files. The available text markups are highlight, underline, strikeout, and squiggly. This feature helps mark important passages, emphasize specific words or phrases, indicate that certain content should be removed, or indicate that text contains possible errors.
 * **Free text annotation** - Add, remove, modify, import, and export free text annotations in PDF files. This feature helps to add text notes, comments, or feedback to PDF documents.
+* **Free text callout annotation** - Add a text box with a leader line that points to a specific location on the page. This helps attach a note to the content it describes.
 * **Show and hide annotations** - This feature enables users to manage the visibility of specific annotations or all annotations within the document.
 
 ### Form filling and signatures

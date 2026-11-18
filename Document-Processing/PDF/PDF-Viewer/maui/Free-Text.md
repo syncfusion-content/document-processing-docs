@@ -251,6 +251,7 @@ N> For WinUI and MacCatalyst platforms, there is no separate modal view to recei
 
 ## See Also
 
+- [Free Text Callout](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/free-text-callout)
 - [Annotations Overview](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/annotations-overview)
 - [Add, Remove, and Edit Annotations](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/add-remove-modify-annotations)
 - [Text Markups](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/maui/text-markups)

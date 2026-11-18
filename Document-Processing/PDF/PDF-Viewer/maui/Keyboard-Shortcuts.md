@@ -115,7 +115,15 @@ The [.NET MAUI PDF viewer](https://www.syncfusion.com/pdf-viewer-sdk/net-maui-pd
 </tr>
 <tr>
 <td><code>Ctrl</code> + <code>C</code></td>
-<td>Copies the selected text to the clipboard</td>
+<td>Copies the currently selected text or annotations to the clipboard</td>
+</tr>
+<tr>
+<td><code>Ctrl</code> + <code>V</code></td>
+<td>Cuts the selected annotations to the clipboard</td>
+</tr>
+<tr>
+<td><code>Ctrl</code> + <code>V</code></td>
+<td>Pastes the annotations from the clipboard</td>
 </tr>
 <tr>
 <td><code>Delete</code></td>
