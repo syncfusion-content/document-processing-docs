@@ -101,27 +101,28 @@ Style: https://cdn.syncfusion.com/ej2/{VERSION}/{PACKAGE_NAME}/styles/{THEME_NAM
 {% highlight html tabtitle="index.html" %}
 
 <!-- EJ2 Document Editor theme -->
-<link href="https://unpkg.com/@syncfusion/ej2-tailwind3-theme@35.1.43/styles/document-editor/index.css" rel="stylesheet" rel='nofollow'/>
-<link href="https://unpkg.com/@syncfusion/ej2-tailwind3-theme@35.1.43/styles/document-editor-container/index.css" rel="stylesheet" rel='nofollow' />
+<link href="https://unpkg.com/@syncfusion/ej2-tailwind3-theme@35.2.12/styles/document-editor/index.css" rel="stylesheet" rel='nofollow'/>
+<link href="https://unpkg.com/@syncfusion/ej2-tailwind3-theme@35.2.12/styles/document-editor-container/index.css" rel="stylesheet" rel='nofollow' />
 <!-- DOCX Editor dependent scripts -->
-<script src="https://cdn.syncfusion.com/ej2/35.1.37/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/35.1.37/ej2-data/dist/global/ej2-data.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/35.1.37/ej2-svg-base/dist/global/ej2-svg-base.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/35.1.37/ej2-file-utils/dist/global/ej2-file-utils.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/35.1.37/ej2-compression/dist/global/ej2-compression.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/35.1.37/ej2-pdf-export/dist/global/ej2-pdf-export.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/35.1.37/ej2-buttons/dist/global/ej2-buttons.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/35.1.37/ej2-popups/dist/global/ej2-popups.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/35.1.37/ej2-splitbuttons/dist/global/ej2-splitbuttons.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/35.1.37/ej2-inputs/dist/global/ej2-inputs.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/35.1.37/ej2-lists/dist/global/ej2-lists.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/35.1.37/ej2-navigations/dist/global/ej2-navigations.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/35.1.37/ej2-dropdowns/dist/global/ej2-dropdowns.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/35.1.37/ej2-calendars/dist/global/ej2-calendars.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/35.1.37/ej2-charts/dist/global/ej2-charts.min.js" type="text/javascript"></script>
-<script src="https://cdn.syncfusion.com/ej2/35.1.37/ej2-office-chart/dist/global/ej2-office-chart.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/35.2.12/ej2-base/dist/global/ej2-base.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/35.2.12/ej2-data/dist/global/ej2-data.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/35.2.12/ej2-svg-base/dist/global/ej2-svg-base.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/35.2.12/ej2-file-utils/dist/global/ej2-file-utils.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/35.2.12/ej2-compression/dist/global/ej2-compression.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/35.2.12/ej2-pdf-export/dist/global/ej2-pdf-export.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/35.2.12/ej2-buttons/dist/global/ej2-buttons.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/35.2.12/ej2-popups/dist/global/ej2-popups.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/35.2.12/ej2-splitbuttons/dist/global/ej2-splitbuttons.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/35.2.12/ej2-inputs/dist/global/ej2-inputs.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/35.2.12/ej2-lists/dist/global/ej2-lists.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/35.2.12/ej2-navigations/dist/global/ej2-navigations.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/35.2.12/ej2-dropdowns/dist/global/ej2-dropdowns.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/35.2.12/ej2-calendars/dist/global/ej2-calendars.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/35.2.12/ej2-charts/dist/global/ej2-charts.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/35.2.12/ej2-ribbon/dist/global/ej2-ribbon.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/35.2.12/ej2-office-chart/dist/global/ej2-office-chart.min.js" type="text/javascript"></script>
 <!-- DOCX Editor script -->
-<script src="https://cdn.syncfusion.com/ej2/35.1.37/ej2-documenteditor/dist/global/ej2-documenteditor.min.js" type="text/javascript"></script>
+<script src="https://cdn.syncfusion.com/ej2/35.2.12/ej2-documenteditor/dist/global/ej2-documenteditor.min.js" type="text/javascript"></script>
 
 {% endhighlight %}
 {% endtabs %}
