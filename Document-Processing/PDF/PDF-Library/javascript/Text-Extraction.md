@@ -167,8 +167,8 @@ The following example demonstrates line-level text extraction:
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument } from '@syncfusion/ej2-pdf';
-import { PdfDataExtractor, TextLine, TextWord, TextGlyph, PdfFontStyle, Rectangle } from '@syncfusion/ej2-pdf-data-extract';
+import { PdfDocument, PdfFontStyle, Rectangle } from '@syncfusion/ej2-pdf';
+import { PdfDataExtractor, TextLine, TextWord, TextGlyph } from '@syncfusion/ej2-pdf-data-extract';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
@@ -242,8 +242,8 @@ The following example demonstrates how to access and process word-level data:
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument } from '@syncfusion/ej2-pdf';
-import { PdfDataExtractor, TextLine, TextWord, TextGlyph, PdfFontStyle, Rectangle } from '@syncfusion/ej2-pdf-data-extract';
+import { PdfDocument, PdfFontStyle, Rectangle } from '@syncfusion/ej2-pdf';
+import { PdfDataExtractor, TextLine, TextWord, TextGlyph } from '@syncfusion/ej2-pdf-data-extract';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
@@ -320,8 +320,8 @@ The following example demonstrates character-level extraction:
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfDocument, PdfColor, Rectangle } from '@syncfusion/ej2-pdf';
-import { PdfDataExtractor, TextLine, TextWord, TextGlyph, PdfFontStyle } from '@syncfusion/ej2-pdf-data-extract';
+import { PdfDocument, PdfColor, Rectangle, PdfFontStyle } from '@syncfusion/ej2-pdf';
+import { PdfDataExtractor, TextLine, TextWord, TextGlyph } from '@syncfusion/ej2-pdf-data-extract';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
@@ -444,8 +444,8 @@ The following code example demonstrates how to search for multiple text values s
 
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { PdfDocument } from '@syncfusion/ej2-pdf';
-import { PdfDataExtractor, TextSearchResult, Rectangle } from '@syncfusion/ej2-pdf-data-extract';
+import { PdfDocument, Rectangle } from '@syncfusion/ej2-pdf';
+import { PdfDataExtractor, TextSearchResult } from '@syncfusion/ej2-pdf-data-extract';
 
 // Load an existing PDF document
 let document: PdfDocument = new PdfDocument(data);
@@ -458,7 +458,7 @@ textSearchResults.forEach((textSearch: TextSearchResult) => {
     // Get the searched text
     let searchText: string = textSearch.searchText;
     // Get the matching bounds grouped by page number
-    let searchResults: Map<number, Rectangle[]>; = textSearch.searchResults;
+    let searchResults: Map<number, Rectangle[]> = textSearch.searchResults;
     // Process the results for each search term
     searchResults.forEach((bounds: Rectangle[], pageIndex: number) => {
         // Access bounds for each matching occurrence

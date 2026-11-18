@@ -183,7 +183,7 @@ let externalSignatureCallback = (
 // Create a new signature using external signing
 let signature: PdfSignature = PdfSignature.create(externalSignatureCallback, {
     cryptographicStandard: CryptographicStandard.cms,
-    algorithm: DigestAlgorithm.sha256,
+    digestAlgorithm: DigestAlgorithm.sha256,
 });
 // Set the signature to the field
 field.setSignature(signature);
@@ -216,7 +216,7 @@ var externalSignatureCallback = function (data, options) {
 // Create a new signature using external signing
 var signature = ej.pdf.PdfSignature.create(externalSignatureCallback, {
   cryptographicStandard: ej.pdf.CryptographicStandard.cms,
-  algorithm: ej.pdf.DigestAlgorithm.sha256
+  digestAlgorithm: ej.pdf.DigestAlgorithm.sha256
 });
 // Set the signature to the field
 field.setSignature(signature);
@@ -263,7 +263,7 @@ let signature: PdfSignature = PdfSignature.create(
     publicCertificates,
     {
         cryptographicStandard: CryptographicStandard.cms,
-        algorithm: DigestAlgorithm.sha256
+        digestAlgorithm: DigestAlgorithm.sha256
     }
 );
 // Set the signature to the field
@@ -297,7 +297,7 @@ var signature = ej.pdf.PdfSignature.create(
     publicCertificates,
     {
         cryptographicStandard: ej.pdf.CryptographicStandard.cms,
-        algorithm: ej.pdf.DigestAlgorithm.sha256
+        digestAlgorithm: ej.pdf.DigestAlgorithm.sha256
     }
 );
 // Set the signature to the field
@@ -349,7 +349,7 @@ let signature: PdfSignature = PdfSignature.create(
     publicCertificates,
     {
         cryptographicStandard: CryptographicStandard.cms,
-        algorithm: DigestAlgorithm.sha256
+        digestAlgorithm: DigestAlgorithm.sha256
     }
 );
 // Set the signature to the field
@@ -397,7 +397,7 @@ var signature = ej.pdf.PdfSignature.create(
     publicCertificates,
     {
         cryptographicStandard: ej.pdf.CryptographicStandard.cms,
-        algorithm: ej.pdf.DigestAlgorithm.sha256
+        digestAlgorithm: ej.pdf.DigestAlgorithm.sha256
     }
 );
 // Set the signature to the field
@@ -718,7 +718,7 @@ The following examples demonstrate the signature-creation options available in `
 |---|---|---|
 | `signedName` | `string` | Name of the signer. |
 | `isLocked` | `boolean` | Locks the document after signing. |
-| `documentPermissions` | `PdfCertificationFlags` | Permissions granted after certifying. |
+| `documentPermissions` | `PdfCertificationFlag` | Permissions granted after certifying. |
 | `certify` | `boolean` | Marks the signature as a certifying signature. |
 | `reason` | `string` | Reason for signing. |
 | `locationInfo` | `string` | Physical location of signing. |
@@ -829,7 +829,7 @@ This example demonstrates how to add two visible signature fields to a PDF, appl
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { PdfDocument, PdfPage, PdfSignatureField, PdfSignature, CryptographicStandard, DigestAlgorithm, PdfCertificationFlags } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfPage, PdfSignatureField, PdfSignature, CryptographicStandard, DigestAlgorithm, PdfCertificationFlag } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
 let document: PdfDocument = new PdfDocument();
@@ -848,7 +848,7 @@ let signature: PdfSignature = PdfSignature.create(
         digestAlgorithm: DigestAlgorithm.sha256,
         reason: 'I am author of this document.',
         certify: true,
-        documentPermissions: PdfCertificationFlags.allowFormFill
+        documentPermissions: PdfCertificationFlag.allowFormFill
     },
 );
 // Bind the certifying signature to the first signature field
@@ -864,7 +864,7 @@ document.destroy();
 // Reopen the saved bytes as a new PdfDocument
 let ldocument: PdfDocument = new PdfDocument(data);
 // Retrieve the second signature field by index (0-based; index 1 = the second field)
-field = ldocument.form.fieldAt(1);
+field = ldocument.form.fieldAt(1) as PdfSignatureField;
 // Create the second signature
 signature = PdfSignature.create(
     certData,
@@ -873,7 +873,7 @@ signature = PdfSignature.create(
         cryptographicStandard: CryptographicStandard.cms,
         digestAlgorithm: DigestAlgorithm.sha256,
         certify: true,
-        documentPermissions: PdfCertificationFlags.forbidChanges
+        documentPermissions: PdfCertificationFlag.forbidChanges
     },
 );
 // Bind the signature to the second field
@@ -903,7 +903,7 @@ var signature = ej.pdf.PdfSignature.create(
     digestAlgorithm: ej.pdf.DigestAlgorithm.sha256,
     reason: 'I am author of this document.',
     certify: true,
-    documentPermissions: ej.pdf.PdfCertificationFlags.allowFormFill
+    documentPermissions: ej.pdf.PdfCertificationFlag.allowFormFill
   }
 );
 // Bind the certifying signature to the first signature field
@@ -928,7 +928,7 @@ signature = ej.pdf.PdfSignature.create(
     cryptographicStandard: ej.pdf.CryptographicStandard.cms,
     digestAlgorithm: ej.pdf.DigestAlgorithm.sha256,
     certify: true,
-    documentPermissions: ej.pdf.PdfCertificationFlags.forbidChanges
+    documentPermissions: ej.pdf.PdfCertificationFlag.forbidChanges
   }
 );
 // Bind the signature to the second field
@@ -958,9 +958,9 @@ let form: PdfForm = document.form;
 // Create a new signature field
 let field: PdfSignatureField = new PdfSignatureField(page, 'Signature', {x: 10, y: 10, width: 100, height: 50});
 // Create a timestamp callback
-async function timestampCallback(request: Uint8Array): Promise<{ response: Uint8Array }> {
+async function timestampCallback(request: Uint8Array): Promise<{ data: Uint8Array }> {
     // Implement timestamp response logic here
-    return { response: new Uint8Array() }; // Placeholder return
+    return { data: new Uint8Array() }; // Placeholder return
 }
 // Create a new signature using PFX data, private key and call back function for timestamp
 const signature: PdfSignature = PdfSignature.create(certData, password, { cryptographicStandard: CryptographicStandard.cms, digestAlgorithm: DigestAlgorithm.sha256 }, timestampCallback);
@@ -987,7 +987,7 @@ var field = new ej.pdf.PdfSignatureField(page, 'Signature', {x: 10, y: 10, width
 // Create a timestamp callback
 async function timestampCallback(request) {
     // Implement timestamp response logic here
-    return { response: new Uint8Array() }; // Placeholder return
+    return { data: new Uint8Array() }; // Placeholder return
 }
 // Create a new signature using PFX data, private key and call back function for timestamp
 const signature = PdfSignature.create(certData, password, { cryptographicStandard: ej.pdf.CryptographicStandard.cms, digestAlgorithm: ej.pdf.DigestAlgorithm.sha256 }, timestampCallback);
@@ -1429,7 +1429,7 @@ let document: PdfDocument = new PdfDocument(data);
 // Access loaded form
 let form: PdfForm = document.form;
 // Access the loaded form field
-let signature: PdfSignatureField = form.fieldAt(0);
+let signature: PdfSignatureField = form.fieldAt(0) as PdfSignatureField;
 // Retrieve all revision indexes of the PDF document
 let revisions: number[] = document.getRevisions();
 // Gets the revision number associated with the signature field
