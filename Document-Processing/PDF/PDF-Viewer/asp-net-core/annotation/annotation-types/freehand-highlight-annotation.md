@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Freehand Highlight Annotation in ASP.NET Core PDF Viewer | Syncfusion
-description: Add, customize, and manage Freehand Highlight annotations in the ASP.NET Core PDF Viewer to highlight PDF content with freehand strokes while maintaining visibility and readability.
+description: Add, customize, and manage Freehand Highlight annotations in the ASP.NET Core PDF Viewer to highlight PDF content while preserving visibility and readability.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
