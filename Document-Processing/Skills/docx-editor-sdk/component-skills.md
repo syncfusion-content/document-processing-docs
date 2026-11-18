@@ -4,7 +4,7 @@ description: Install and use Syncfusion® DOCX Editor Agent Skills to help AI as
 platform: document-processing
 control: DOCX Editor SDK
 documentation: ug
-keywords: Skills, AI Assistants, DOCX Editor SDK, Agent Skills
+keywords: Skills, AI Assistants, DOCX Editor SDK, Agent Skillstocname: Document-Processing-AI-Tools-toc
 ---
 
 # DOCX Editor SDK Agent Skills for AI Assistants

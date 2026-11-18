@@ -4,7 +4,7 @@ title: WebMCP Tools for PDF Viewer SDK | Syncfusion
 description: Learn about WebMCP (Model Context Protocol) and how to use it with the Syncfusion PDF Viewer SDK to expose PDF operations to AI agents.
 platform: document-processing
 control: WebMCP
-documentation: ug
+documentation: ugtocname: Document-Processing-AI-Tools-toc
 ---
 
 # WebMCP Tools for PDF Viewer SDK

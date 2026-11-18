@@ -4,7 +4,7 @@ title: Syncfusion Spreadsheet Editor SDK MCP Server | Syncfusion
 description: The Spreadsheet Editor SDK MCP Server provides installation guidance, integration support, and configuration resources for supported platforms.
 platform: document-processing
 control: AI coding assistant
-documentation: ug
+documentation: ugtocname: Document-Processing-AI-Tools-toc
 ---
 
 # Syncfusion Spreadsheet Editor SDK MCP Server

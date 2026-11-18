@@ -5,7 +5,7 @@ description: UI Builder Skills with Spreadsheet Editor SDK provide AI assistants
 control: Spreadsheet Editor SDK
 platform: document-processing
 documentation: ug
-keywords: UI Builder, Skills, AI Assistants, Spreadsheet Editor SDK, Agent Skills
+keywords: UI Builder, Skills, AI Assistants, Spreadsheet Editor SDK, Agent Skillstocname: Document-Processing-AI-Tools-toc
 ---
 
 # UI Builder Skills in Spreadsheet Editor SDK

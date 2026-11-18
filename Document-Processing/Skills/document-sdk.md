@@ -4,7 +4,7 @@ description: Learn how to install and use Syncfusion Document SDK Agent Skills t
 platform: document-processing
 control: Document SDK
 documentation: ug
-keywords: Skills, AI Assistants, Document SDK, Agent Skills
+keywords: Skills, AI Assistants, Document SDK, Agent Skillstocname: Document-Processing-AI-Tools-toc
 ---
 
 # Syncfusion Document SDK Agent Skills for AI Assistants

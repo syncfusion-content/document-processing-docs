@@ -4,7 +4,7 @@ title: WebMCP Tools for DOCX Editor SDK | Syncfusion
 description: Learn about WebMCP (Model Context Protocol) and how to use it with the Syncfusion DOCX Editor SDK to expose document editing operations to AI agents.
 platform: document-processing
 control: WebMCP
-documentation: ug
+documentation: ugtocname: Document-Processing-AI-Tools-toc
 ---
 
 # WebMCP Tools for DOCX Editor SDK

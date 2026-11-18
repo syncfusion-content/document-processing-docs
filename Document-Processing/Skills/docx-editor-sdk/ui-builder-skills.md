@@ -5,7 +5,7 @@ description: Learn to use Syncfusion® UI Builder Skill with DOCX Editor SDK to 
 control: DOCX Editor SDK
 platform: document-processing
 documentation: ug
-keywords: UI Builder, Skills, AI Assistants, DOCX Editor SDK, Agent Skills
+keywords: UI Builder, Skills, AI Assistants, DOCX Editor SDK, Agent Skillstocname: Document-Processing-AI-Tools-toc
 ---
 
 # Syncfusion® UI Builder Skills with DOCX Editor SDK for AI Assistants

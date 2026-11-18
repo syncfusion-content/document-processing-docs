@@ -4,7 +4,7 @@ title: Syncfusion Document SDK MCP Server | Syncfusion
 description: Discover the MCP server’s advantages, installation requirements, and integration guidance for Syncfusion DocumentSDK.
 platform: document-processing
 control: AI coding assistant
-documentation: ug
+documentation: ugtocname: Document-Processing-AI-Tools-toc
 ---
 
 # Syncfusion Document SDK MCP Server

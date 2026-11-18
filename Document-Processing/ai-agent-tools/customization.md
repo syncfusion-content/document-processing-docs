@@ -4,7 +4,7 @@ title: Customization in Document SDK AI Agent Tools | Syncfusion
 description: Learn how to extend and customize the Syncfusion Document SDK Agent Tool library by creating custom agent tool classes and registering them with an AI agent.
 platform: document-processing
 control: AI Agent Tools
-documentation: ug
+documentation: ugtocname: Document-Processing-AI-Tools-toc
 ---
 
 # Customization in Document SDK AI Agent Tools 

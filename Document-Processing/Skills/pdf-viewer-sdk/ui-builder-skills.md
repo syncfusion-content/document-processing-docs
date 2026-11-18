@@ -5,7 +5,7 @@ description: Learn to use Syncfusion® UI Builder Skill with PDF Viewer SDK to h
 control: PDF Viewer SDK
 platform: document-processing
 documentation: ug
-keywords: UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skills
+keywords: UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skillstocname: Document-Processing-AI-Tools-toc
 ---
 
 # Syncfusion® UI Builder Skills with PDF Viewer SDK for AI Assistants

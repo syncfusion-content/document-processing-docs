@@ -4,7 +4,7 @@ title: AI Agents using Document SDK AI Agent Tools | Syncfusion
 description: Real-world AI agent workflows for document automation - Legal, Finance, HR, Compliance, and Invoice Processing.
 platform: document-processing
 control: AI Agent Tools
-documentation: ug
+documentation: ugtocname: Document-Processing-AI-Tools-toc
 ---
 
 # AI Agents using Document SDK AI Agent Tools

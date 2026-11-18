@@ -4,7 +4,7 @@ description: Learn how to install and use Syncfusion PDF Viewer SDK Agent Skills
 platform: document-processing
 control: PDF Viewer SDK
 documentation: ug
-keywords: Skills, AI Assistants, PdfViewer SDK, Agent Skills
+keywords: Skills, AI Assistants, PdfViewer SDK, Agent Skillstocname: Document-Processing-AI-Tools-toc
 ---
 
 # Syncfusion PDF Viewer SDK Agent Skills for AI Assistants

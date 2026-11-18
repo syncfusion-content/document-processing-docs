@@ -4,7 +4,7 @@ title: About Syncfusion Document SDK AI Agent Tools | Syncfusion
 description: Learn about the Syncfusion Document SDK AI Agent Tools - an AI-ready toolkit for working with Word, Excel, PDF, and PowerPoint documents.
 platform: document-processing
 control: AI Agent Tools
-documentation: ug
+documentation: ugtocname: Document-Processing-AI-Tools-toc
 ---
 
 # About Syncfusion Document SDK AI Agent Tools

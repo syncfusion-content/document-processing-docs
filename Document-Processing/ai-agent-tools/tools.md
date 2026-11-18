@@ -4,7 +4,7 @@ title: Tools available in Document SDK AI Agent Tools | Syncfusion
 description: Complete reference for all Syncfusion Document SDK Agent Tool classes - Managers, PDF, Word, Excel, PowerPoint, Conversion, and Data Extraction tools.
 platform: document-processing
 control: AI Agent Tools
-documentation: ug
+documentation: ugtocname: Document-Processing-AI-Tools-toc
 ---
 
 # Tools available in Document SDK AI Agent Tools

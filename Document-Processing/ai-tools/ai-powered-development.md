@@ -4,7 +4,7 @@ title: AI Powered Development using AI Tools | Syncfusion
 description: Syncfusion Document SDK AI Tools simplify document processing, editing, and integration, helping you to build smarter applications easily.
 platform: document-processing
 control: AI Tools
-documentation: ug
+documentation: ugtocname: Document-Processing-AI-Tools-toc
 ---
 
 # AI-Powered Development with Syncfusion Document SDK AI Tools

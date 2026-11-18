@@ -5,7 +5,7 @@ description: Explore the AI Coding Assistant Prompt Library to enhance DocumentS
 platform: document-processing
 control: Syncfusion AI Coding Assistant Prompt Library
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-AI-Tools-toc
 ---
 
 # Syncfusion AI Coding Assistant Prompt Library

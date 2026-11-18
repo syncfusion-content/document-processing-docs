@@ -4,7 +4,7 @@ title: Syncfusion PDF Viewer SDK MCP Server | Syncfusion
 description: Discover the MCP server’s advantages, installation requirements, and integration guidance for Syncfusion PDF Viewer SDK across multiple platforms.
 platform: document-processing
 control: AI coding assistant
-documentation: ug
+documentation: ugtocname: Document-Processing-AI-Tools-toc
 ---
 
 # Syncfusion PDF Viewer SDK MCP Server

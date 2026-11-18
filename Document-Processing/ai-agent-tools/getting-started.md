@@ -4,7 +4,7 @@ title: Getting Started with Document SDK AI Agent Tools | Syncfusion
 description: Learn how to integrate the Syncfusion Document SDK Agent Tool library with AI agent frameworks such as Microsoft Agents and Microsoft.Extensions.AI.
 platform: document-processing
 control: AI Agent Tools
-documentation: ug
+documentation: ugtocname: Document-Processing-AI-Tools-toc
 ---
 
 # Getting Started with Syncfusion Document SDK AI Agent Tools
