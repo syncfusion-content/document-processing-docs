@@ -83,6 +83,7 @@ Other annotations:
 - Redaction: Use [`redactionSettings`](./annotation-types/redaction-annotation#default-redaction-settings-during-initialization)
 - Free text: Use [`freeTextSettings`](./annotation-types/free-text-annotation#default-free-text-settings-during-initialization)
 - Ink (freehand): Use [`inkAnnotationSettings`](./annotation-types/ink-annotation#default-ink-settings-during-initialization)
+- Freehand Highlight: Use [`enableFreehandHighlight`](./annotation-types/freehand-highlight-annotation#enable-and-disable-freehand-highlight) and [`inkAnnotationSettings`](./annotation-types/freehand-highlight-annotation#customize-freehand-highlight-appearance)
 - Stamp: Use [`stampSettings`](./annotation-types/stamp-annotation#default-stamp-settings-during-initialization)
 - Sticky notes: Use [`stickyNotesSettings`](./annotation-types/sticky-notes-annotation#default-sticky-notes-settings-during-initialization)
 
