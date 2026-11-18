@@ -4,7 +4,7 @@ title: How to View a DOCX File in a Blazor Application | Syncfusion
 description: Learn how to view DOCX in a Blazor application using the Word Processor component or using the PDF Viewer component.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to View a DOCX File in a Blazor Application

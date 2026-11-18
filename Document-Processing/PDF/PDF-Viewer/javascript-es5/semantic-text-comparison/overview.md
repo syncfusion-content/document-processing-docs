@@ -5,7 +5,7 @@ description: Learn about the Syncfusion ES5 JavaScript PDF Viewer Semantic Text 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Syncfusion ES5 JavaScript PDF Viewer Semantic Text Comparison

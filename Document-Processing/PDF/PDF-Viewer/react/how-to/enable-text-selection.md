@@ -5,7 +5,7 @@ description: Enable or disable text selection in the React PDF Viewer using the 
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Enable or Disable Text Selection in React PDF Viewer

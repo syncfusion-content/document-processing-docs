@@ -5,7 +5,7 @@ description: Disable optimized text measuring in Syncfusion® TypeScript DOCX Ed
 platform: document-processing
 control: Disable Optimized Text Measuring
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Disable Optimized Text Measuring in TypeScript DOCX Editor

@@ -4,7 +4,7 @@ title: Hyperlink in ASP.NET Core PDF Viewer | Syncfusion
 description: Configure hyperlink navigation in the ASP.NET Core PDF Viewer, including how internal and external links open when users click them.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Hyperlink Navigation in ASP.NET Core PDF Viewer

@@ -4,7 +4,7 @@ title: Context Menu in Javascript Spreadsheet | Syncfusion
 description: The context menu in JavaScript Spreadsheet provides quick access to commonly used commands for efficient cell and worksheet operations.
 platform: document-processing
 control: Context menu
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Context Menu in Syncfusion JavaScript Spreadsheet

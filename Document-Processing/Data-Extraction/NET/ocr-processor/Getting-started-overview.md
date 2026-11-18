@@ -4,7 +4,7 @@ canonical_url: "https://www.syncfusion.com/document-sdk/net-pdf-library/ocr-proc
 description: Learn about how to getting started with Syncfusion .NET OCR Processor for extracting text from scanned image and more details.
 platform: document-processing
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Getting Started with Syncfusion .NET OCR Processor
 

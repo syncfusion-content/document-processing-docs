@@ -5,7 +5,7 @@ description: The content control feature in JavaScript DOCX Editor provides buil
 platform: document-processing
 control: Content control 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Content Controls in JavaScript DOCX Editor

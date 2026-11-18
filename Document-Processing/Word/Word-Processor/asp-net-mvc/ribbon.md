@@ -5,7 +5,7 @@ description: Ribbon in ASP.NET MVC DOCX Editor provides a tabbed command interfa
 platform: document-processing
 control: Ribbon
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Ribbon in ASP.NET MVC DOCX Editor

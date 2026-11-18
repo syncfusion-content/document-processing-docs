@@ -4,7 +4,7 @@ title: Feature list in Angular Spreadsheet | Syncfusion
 description: The feature list in Angular Spreadsheet provides an overview of key capabilities, helping users explore and utilize spreadsheet functions effectively.
 platform: document-processing
 control: Feature list 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Feature list in Angular Spreadsheet 

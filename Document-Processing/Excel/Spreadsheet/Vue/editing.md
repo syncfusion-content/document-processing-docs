@@ -4,7 +4,7 @@ title: Editing in Vue Spreadsheet | Syncfusion
 description: Explore cell editing capabilities in the Syncfusion Vue Spreadsheet, including validation, updates, and formulas.
 control: Editing
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Editing in Vue Spreadsheet

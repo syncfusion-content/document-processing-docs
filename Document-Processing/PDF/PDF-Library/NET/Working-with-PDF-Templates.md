@@ -3,7 +3,7 @@ title: PDF Templates in .NET PDF Library | Syncfusion
 description: Learn how to create and use PDF templates for headers, footers, overlays, and consistent page elements with Syncfusion .NET PDF.
 platform: document-processing
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # PDF Templates in .NET PDF Library

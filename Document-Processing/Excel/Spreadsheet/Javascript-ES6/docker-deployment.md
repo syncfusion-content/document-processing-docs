@@ -4,7 +4,7 @@ title: Docker Image Deployment in TypeScript Spreadsheet  | Syncfusion
 description: Docker image deployment in TypeScript Spreadsheet enables containerized hosting for consistent, scalable, and efficient application delivery.
 platform: document-processing
 control: Docker deployment
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Docker Image Overview in TypeScript Spreadsheet 

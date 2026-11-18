@@ -5,7 +5,7 @@ description: Optimize SFDT files in Syncfusion® Vue DOCX Editor to reduce file 
 control: Optimize the SFDT file
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Optimize SFDT Files in Vue DOCX Editor

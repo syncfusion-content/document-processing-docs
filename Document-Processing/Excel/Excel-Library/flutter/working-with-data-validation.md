@@ -4,7 +4,7 @@ title: Excel Data Validation in Flutter Excel Library | Syncfusion
 description: The Flutter Excel Library lets users control worksheet input by applying data validation rules to cells or ranges.
 platform: document-processing
 control: Excel
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Excel Data Validation in Flutter Excel Library

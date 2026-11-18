@@ -5,7 +5,7 @@ description: Move between pages in the ASP.NET MVC PDF Viewer using page, bookma
 platform: document-processing
 control: PDF Viewer
 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Navigation in ASP.NET MVC PDF Viewer

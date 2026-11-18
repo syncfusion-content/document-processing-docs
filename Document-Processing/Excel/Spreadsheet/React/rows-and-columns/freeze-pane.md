@@ -4,7 +4,7 @@ title: Freeze Panes in React Spreadsheet | Syncfusion
 description: Learn about freeze panes in the Syncfusion React Spreadsheet component to keep rows and columns visible during scrolling.
 control: Rows and Columns 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Freeze Panes in React Spreadsheet

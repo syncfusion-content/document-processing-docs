@@ -3,7 +3,7 @@ title: How to Import Data with Template Markers in .NET Excel | Syncfusion
 description: Import a data table with its data type using template markers in the Syncfusion .NET Excel Library for populating workbook data.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to import data types with template markers in .NET Excel Library

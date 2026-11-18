@@ -4,7 +4,7 @@ title: Getting Started with Blazor Web App Smart PDF Viewer | Syncfusion
 description: Learn how to get started with  the Syncfusion Blazor  Web App Smart PDF Viewer component. Explore AI interaction, smart redaction, and form filling.
 platform: document-processing
 control: SfSmartPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with Blazor Web App Smart PDF Viewer

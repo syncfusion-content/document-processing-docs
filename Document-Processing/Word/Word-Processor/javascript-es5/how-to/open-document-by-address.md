@@ -5,7 +5,7 @@ description: Open a document from a URL in Syncfusion® JavaScript DOCX Editor t
 platform: document-processing
 control: Open a Document by Address
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Open a Document by URL in JavaScript DOCX Editor

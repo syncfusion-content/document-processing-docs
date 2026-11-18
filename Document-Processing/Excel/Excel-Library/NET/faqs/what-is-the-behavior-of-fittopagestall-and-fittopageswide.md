@@ -3,7 +3,7 @@ title: FitToPages Settings in .NET Excel Library | Syncfusion
 description: FitToPages settings describes the behavior of FitToPagesTall and FitToPagesWide in Excel page layout.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # FitToPagesTall and FitToPagesWide in .NET Excel Library

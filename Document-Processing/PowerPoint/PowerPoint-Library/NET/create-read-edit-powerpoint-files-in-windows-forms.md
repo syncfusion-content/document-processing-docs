@@ -3,7 +3,7 @@ title: Create and edit PowerPoint files in Windows Forms | Syncfusion
 description: Windows Forms PowerPoint library to create, read, edit and convert PowerPoint files in Windows Forms applications.
 platform: document-processing
 control: PowerPoint
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Create, read and edit a PowerPoint file in Windows Forms

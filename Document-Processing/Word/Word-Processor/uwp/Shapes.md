@@ -4,7 +4,7 @@ description: The shapes in UWP DOCX Editor offer preservation support for text b
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: shapes,text-box,rectangle,text-wrapping,shape-resizer
+keywords: shapes,text-box,rectangle,text-wrapping,shape-resizertocname: Document-Processing-SDKs-toc
 ---
 # Shapes in UWP DOCX Editor
 Shapes are drawing objects such as text boxes, rectangles, lines, curves, and circles. Shapes follow a preset or custom geometry. [`SfRichTextBoxAdv`](https://help.syncfusion.com/cr/uwp/Syncfusion.UI.Xaml.RichTextBoxAdv.SfRichTextBoxAdv.html) does not support inserting shapes. However, if the document contains a shape during import, the shape is preserved.

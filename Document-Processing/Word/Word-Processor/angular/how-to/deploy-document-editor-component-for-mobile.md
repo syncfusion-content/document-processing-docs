@@ -5,7 +5,7 @@ description: Deploy the Syncfusion® Angular DOCX Editor for mobile browsers in 
 platform: document-processing
 control: Deploy DOCX Editor component for mobile
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Deploy Angular DOCX Editor for Mobile

@@ -4,7 +4,7 @@ title: How to Open a Default Document in ASP.NET MVC DOCX Editor | Syncfusion
 description: Open a default document in Syncfusion® ASP.NET MVC DOCX Editor during initialization to provide predefined content and streamline document editing workflows.
 platform: document-processing
 control: Open Default Document
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

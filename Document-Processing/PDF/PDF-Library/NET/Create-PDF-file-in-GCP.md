@@ -4,7 +4,7 @@ description: Learn how to get started with the Syncfusion .NET PDF Library in Go
 platform: document-processing
 control: PDF
 documentation: UG
-keywords: gcp os save pdf, gcp os load pdf, c# save pdf, c# load pdf
+keywords: gcp os save pdf, gcp os load pdf, c# save pdf, c# load pdftocname: Document-Processing-SDKs-toc
 ---
 # Getting Started with .NET PDF Library in GCP
 

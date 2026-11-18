@@ -5,7 +5,7 @@ description: Open documents from Google Drive in React DOCX Editor, enabling clo
 platform: document-processing
 control: Open document from Google Drive
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Open Documents from Google Drive in React DOCX Editor

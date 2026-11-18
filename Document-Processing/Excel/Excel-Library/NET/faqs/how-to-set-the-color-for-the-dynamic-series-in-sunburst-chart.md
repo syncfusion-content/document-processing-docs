@@ -3,7 +3,7 @@ title: How to Set Sunburst Series Colors in .NET Excel Library | Syncfusion
 description: Apply custom colors to each data point in a Sunburst chart using the Syncfusion .NET Excel Library in C# and VB.NET.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to set Sunburst chart series colors in .NET Excel Library

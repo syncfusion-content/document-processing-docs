@@ -4,7 +4,7 @@ title: Stacked Bar Chart in Flutter Excel Library | Syncfusion
 description: The Flutter Excel Library allows users create and customize stacked bar charts in Excel worksheets programmatically.
 platform: document-processing
 control: Excel
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Stacked Bar Chart in Syncfusion Excel Library

@@ -3,7 +3,7 @@ title: Performance Metrics in .NET Excel Library | Syncfusion
 description: Benchmark results section describes Syncfusion .NET Excel Library performance for reading, creating, and saving common Excel data types.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Performance Metrics in .NET Excel Library

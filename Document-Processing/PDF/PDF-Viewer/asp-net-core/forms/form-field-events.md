@@ -5,7 +5,7 @@ description: Subscribe to form field events in the ASP.NET Core PDF Viewer to re
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Form Field Events in ASP.NET Core PDF Viewer

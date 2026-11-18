@@ -5,7 +5,7 @@ description: Learn about how to install the Syncfusion .NET Smart Data Extractor
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 # How to install .NET Smart Data Extractor Add-on

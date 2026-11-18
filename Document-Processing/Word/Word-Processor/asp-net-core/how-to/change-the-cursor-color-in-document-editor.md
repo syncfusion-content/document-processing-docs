@@ -4,7 +4,7 @@ title: How to Change Cursor Color in ASP.NET Core DOCX Editor | Syncfusion
 description: Change the default cursor color in Syncfusion® ASP.NET Core DOCX Editor by overriding CSS properties and customizing the editor appearance.
 platform: document-processing
 control: Change The Cursor Color
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Change Cursor Color in ASP.NET Core DOCX Editor

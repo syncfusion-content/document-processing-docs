@@ -4,7 +4,7 @@ title: Web Services Using ASP.NET Core in React Spreadsheet | Syncfusion
 description: Learn about configuring ASP.NET Core web services for open and save operations in React Spreadsheet.
 control: Web Services 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Connecting Web Services for Spreadsheet Open and Save in ASP.NET Core

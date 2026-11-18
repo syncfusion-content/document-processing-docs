@@ -5,7 +5,7 @@ description: Resolve the Unable to find an entry point error after upgrading the
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Resolve the Unable to Find an Entry Point Error in JavaScript

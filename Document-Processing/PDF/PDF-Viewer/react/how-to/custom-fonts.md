@@ -5,7 +5,7 @@ description: Add and load custom TTF fonts for documents displayed in the React 
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Add Custom Fonts in React PDF Viewer

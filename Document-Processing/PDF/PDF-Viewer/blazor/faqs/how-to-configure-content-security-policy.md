@@ -4,7 +4,7 @@ title: How to Use strict CSP in Blazor PDF Viewer | Syncfusion
 description: Learn how to configure a strict Content Security Policy (CSP) for the Blazor PDF Viewer, including required directives and their usage.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Use strict CSP in Blazor PDF Viewer

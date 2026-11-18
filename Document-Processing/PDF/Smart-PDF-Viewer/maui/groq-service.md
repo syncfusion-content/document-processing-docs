@@ -4,7 +4,7 @@ title: Groq AI Integration with AI-Powered Components | Syncfusion®
 description: Learn how to implement a custom AI service using the Groq API with Syncfusion<sup>&reg;</sup> AI-Powered Components.
 platform: maui
 control: SmartComponents
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Groq AI Integration with .NET MAUI Smart Components

@@ -3,7 +3,7 @@ title: Convert Word to PDF in Azure Functions  | Syncfusion
 description: Convert Word to PDF in Azure Functions Flex Consumption using .NET Core Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Convert Word to PDF in Azure Functions 

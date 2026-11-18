@@ -5,7 +5,7 @@ description: Customize the annotation toolbar in the React PDF Viewer to show, h
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Customize the Annotation Toolbar in React PDF Viewer

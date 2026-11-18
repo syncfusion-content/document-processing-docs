@@ -3,7 +3,7 @@ title: Blockquotes in .NET Markdown Library | Syncfusion
 description: Learn how to create, format, and manipulate blockquotes in a Markdown document using the Syncfusion .NET Markdown library.
 platform: document-processing
 control: Markdown
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Blockquotes in .NET Markdown Library

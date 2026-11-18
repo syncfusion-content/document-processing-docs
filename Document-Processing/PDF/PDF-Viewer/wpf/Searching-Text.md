@@ -4,7 +4,7 @@ title: Search text in WPF PDF Viewer | Syncfusion
 description:  Search and highlight text in PDF files using Syncfusion WPF PDF Viewer. Learn programmatic text search and highlighting techniques.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Search text in PDF files using WPF Pdf Viewer

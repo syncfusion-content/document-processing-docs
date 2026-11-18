@@ -3,7 +3,7 @@ title: Convert PPTX to PDF in AWS Elastic Beanstalk | Syncfusion
 description: Convert PPTX to PDF in AWS Elastic Beanstalk using .NET Core PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Convert PowerPoint Presentation to PDF in AWS Elastic Beanstalk

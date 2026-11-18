@@ -5,7 +5,7 @@ description: Submit filled PDF form data from the EJ2 Vue PDF Viewer to a backen
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Submit PDF Form Data to a Server in Vue

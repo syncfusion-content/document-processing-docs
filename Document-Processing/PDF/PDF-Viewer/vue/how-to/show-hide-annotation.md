@@ -5,7 +5,7 @@ description: Show or hide annotations in the Vue PDF Viewer by exporting and imp
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Show or Hide Annotations in Vue PDF Viewer

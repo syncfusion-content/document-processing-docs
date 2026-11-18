@@ -5,7 +5,7 @@ description: Save PDF files from the Angular PDF Viewer to Google Drive using a 
 platform: document-processing
 control: Save PDF files to Google Drive
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Save PDF Files to Google Drive in Angular PDF Viewer

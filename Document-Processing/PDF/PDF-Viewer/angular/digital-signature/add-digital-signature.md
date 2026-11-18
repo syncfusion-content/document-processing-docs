@@ -4,7 +4,7 @@ title: Add Digital Signature in Angular PDF Viewer | Syncfusion
 description: Learn about the add digital signature in the Angular PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Add Digital Signature in Angular PDF Viewer

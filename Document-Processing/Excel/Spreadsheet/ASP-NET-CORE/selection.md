@@ -4,7 +4,7 @@ title: Selection in ASP.NET Core Spreadsheet | Syncfusion
 description: Learn about selection in the Syncfusion ASP.NET Core Spreadsheet control, including cell, row, column, and range selection options.
 platform: document-processing
 control: Selection
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

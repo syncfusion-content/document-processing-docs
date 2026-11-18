@@ -5,7 +5,7 @@ description: The table format feature in Vue DOCX Editor enables customizing cel
 control: Table format 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Table format in Vue DOCX Editor

@@ -3,7 +3,7 @@ title: Word Document to HTML conversion in Java Word | Syncfusion
 description: This section illustrates how to convert Word documents to HTML format using the Syncfusion Java Word library 
 platform: document-processing
 control: Word Library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Word Document to HTML conversion in Java Word

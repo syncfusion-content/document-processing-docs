@@ -4,7 +4,7 @@ title: About Syncfusion Redaction in Blazor PDF Viewer Component | Syncfusion
 description: Learn how to add, delete, redact pages, and apply redaction in the Blazor PDF Viewer, including comments and import/export.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion Redaction in Blazor PDF Viewer Component

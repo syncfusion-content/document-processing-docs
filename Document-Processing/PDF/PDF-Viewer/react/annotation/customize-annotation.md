@@ -5,7 +5,7 @@ description: Customize the appearance and behavior of annotations in the React P
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Customize Annotations in React PDF Viewer

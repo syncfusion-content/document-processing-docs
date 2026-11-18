@@ -4,7 +4,7 @@ title: Performance Metrics in Blazor Spreadsheet | Syncfusion
 description: Learn about rendering, styling, and file processing performance metrics in the Syncfusion Blazor Spreadsheet
 platform: document-processing
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Performance Metrics in Blazor Spreadsheet

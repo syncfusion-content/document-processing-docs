@@ -5,7 +5,7 @@ description: Enable, disable, and programmatically trigger PDF downloads in the 
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 # Download PDF option in Vue PDF Viewer
 

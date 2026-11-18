@@ -4,7 +4,7 @@ title: Feature List in React Spreadsheet | Syncfusion
 description: Learn about the features available in the Syncfusion React Spreadsheet component, including editing, formatting, formulas, and more.
 control: Feature list 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Feature list in React Spreadsheet

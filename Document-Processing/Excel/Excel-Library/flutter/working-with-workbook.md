@@ -4,7 +4,7 @@ title: Workbook in Flutter Excel Library | Syncfusion
 description: The Flutter Excel Library lets users save Excel workbooks in supported formats and close them after processing.
 platform: document-processing
 control: Excel
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Workbook in Flutter Excel Library

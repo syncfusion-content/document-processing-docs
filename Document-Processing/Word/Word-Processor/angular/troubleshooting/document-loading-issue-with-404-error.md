@@ -5,7 +5,7 @@ description: Troubleshoot the 404 error in Angular DOCX Editor by verifying the 
 control: document loading issue with 404 error
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Document Loading Issue in Angular DOCX Editor

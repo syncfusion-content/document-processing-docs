@@ -4,7 +4,7 @@ title: Notes in JavaScript Spreadsheet | Syncfusion
 description: Notes in JavaScript Spreadsheet allow users to add contextual information to cells, making data easier to understand and collaborate on.
 platform: document-processing
 control: Notes
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

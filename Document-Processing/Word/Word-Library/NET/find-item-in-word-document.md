@@ -3,7 +3,7 @@ title: Find item in Word document in .NET Word | Syncfusion
 description: Find an item in the Word document in C# using Syncfusion® .NET Word library without Microsoft Word or interop dependencies
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Find item in Word document in .NET Word

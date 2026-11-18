@@ -5,7 +5,7 @@ description: Ribbon in React DOCX Editor provides a tabbed command interface to 
 platform: document-processing
 control: Ribbon
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Ribbon in React DOCX Editor

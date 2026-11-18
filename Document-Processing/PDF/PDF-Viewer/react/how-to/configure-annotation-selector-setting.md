@@ -5,7 +5,7 @@ description: Configure annotation selector settings in the React PDF Viewer usin
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Configure Annotation Selectors in React PDF Viewer

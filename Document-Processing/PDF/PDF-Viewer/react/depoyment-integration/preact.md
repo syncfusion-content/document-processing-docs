@@ -5,7 +5,7 @@ description: Get started with the Syncfusion React PDF Viewer in a Preact applic
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 

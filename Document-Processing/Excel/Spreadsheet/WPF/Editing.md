@@ -4,7 +4,7 @@ title: Editing in WPF Spreadsheet control | Syncfusion®
 description: Edit worksheet data in the WPF Spreadsheet control with interactive cell editing, value updates, and Excel-like editing capabilities.
 platform: document-processing
 control: SfSpreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Editing in WPF Spreadsheet 

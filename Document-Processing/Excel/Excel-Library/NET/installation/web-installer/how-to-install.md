@@ -4,7 +4,7 @@ title: How to Install Web Installer in .NET Excel Library | Syncfusion
 description: Syncfusion Excel web installer installation section explains how to install the web installer after downloading it from the Syncfusion website.
 platform: document-processing
 control: Installation and Deployment
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to install web installer in .NET Excel Library

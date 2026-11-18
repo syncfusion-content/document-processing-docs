@@ -4,7 +4,7 @@ title: MCP Server in WPF Spreadsheet Control|  Syncfusion®
 description: Configure the WPF Spreadsheet MCP Server to access documentation, API references, code generation, and troubleshooting in AI-powered development environments.
 platform: wpf
 control: Getting started with Syncfusion WPF Spreadsheet MCP Server
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # MCP Server in WPF Spreadsheet

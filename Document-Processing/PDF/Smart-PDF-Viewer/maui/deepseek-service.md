@@ -4,7 +4,7 @@ title: DeepSeek AI for AI-Powered Components | Syncfusion®
 description: Learn how to integrate the DeepSeek AI services with Syncfusion<sup>&reg;</sup> AI-Powered Components.
 platform: maui
 control: SmartComponents
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # DeepSeek AI Integration with .NET MAUI Smart Components

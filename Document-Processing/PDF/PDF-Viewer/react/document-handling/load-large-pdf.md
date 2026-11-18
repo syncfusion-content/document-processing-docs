@@ -5,7 +5,7 @@ description: Open PDF files from URL, Base64, Blob, Stream, and cloud storage so
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Load Large PDF Files in React PDF Viewer

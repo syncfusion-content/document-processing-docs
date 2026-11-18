@@ -4,7 +4,7 @@ title: Sorting in ASP.NET Core Spreadsheet | Syncfusion
 description: Learn about sorting in the Syncfusion ASP.NET Core Spreadsheet control, including ascending, descending, and custom sorting options.
 platform: document-processing
 control: Sort
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

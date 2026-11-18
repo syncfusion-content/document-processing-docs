@@ -5,7 +5,7 @@ description: Migrate an existing Vue PDF Viewer deployment from server-backed mo
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Migrate from Server-Backed to Standalone Vue PDF Viewer

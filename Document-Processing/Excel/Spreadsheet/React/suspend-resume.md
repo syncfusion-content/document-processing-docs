@@ -4,7 +4,7 @@ title: Suspend and Resume UI Refresh in React Spreadsheet | Syncfusion
 description: Improve performance in Syncfusion React Spreadsheet by using suspendRefresh and resumeRefresh to group multiple updates and avoid repeated rendering.
 platform: document-processing
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Suspend and Resume UI Refresh in React Spreadsheet

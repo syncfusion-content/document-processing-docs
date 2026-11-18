@@ -4,7 +4,7 @@ title: Hyperlink navigation in Blazor PDF Viewer | Syncfusion
 description: Learn how the Blazor PDF Viewer handles hyperlinks, including external URLs and in-document links, click behavior, and common link types.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Hyperlink navigation in Blazor PDF Viewer 

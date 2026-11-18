@@ -5,7 +5,7 @@ description: Load and display PDF files stored in Google Drive in the Angular PD
 platform: document-processing
 control: Open PDF files from Google Drive
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Open PDF from Google Drive in Angular PDF Viewer

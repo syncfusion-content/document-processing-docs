@@ -3,7 +3,7 @@ title: How to Format Imported Columns in .NET Excel Library | Syncfusion
 description: Apply formatting to a specific Excel column while importing collection object data using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to format columns during import in .NET Excel Library

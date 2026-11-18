@@ -4,7 +4,7 @@ title: How to Create an Object Structure in Angular Spreadsheet | Syncfusion
 description: Create an object structure in Angular Spreadsheet to organize workbook data and manage spreadsheet content programmatically.
 platform: document-processing
 control: Create an object structure
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Create an Object Structure in Angular Spreadsheet

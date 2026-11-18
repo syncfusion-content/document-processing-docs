@@ -4,7 +4,7 @@ title: Mobile Responsiveness in ASP.NET MVC Spreadsheet | Syncfusion
 description: Learn how the Syncfusion ASP.NET MVC Spreadsheet adapts seamlessly across mobile devices and screen sizes.
 platform: document-processing
 control: Mobile Responsiveness
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

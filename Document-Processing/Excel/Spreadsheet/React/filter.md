@@ -4,7 +4,7 @@ title: Filtering in React Spreadsheet | Syncfusion
 description: Learn about filtering in the Syncfusion React Spreadsheet component, including applying, clearing, and managing data filters.
 control: Filter 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Filtering in React Spreadsheet

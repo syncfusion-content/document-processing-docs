@@ -5,7 +5,7 @@ description: Resolve the Unable to find an entry point error after upgrading the
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Resolve the Unable to Find an Entry Point Error in Angular PDF

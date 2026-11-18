@@ -5,7 +5,7 @@ description: Run and connect to the Syncfusion JavaScript (ES5) PDF Viewer serve
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 # About Syncfusion JavaScript (ES5) PDF Viewer Server Deployment
 

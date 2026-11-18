@@ -5,7 +5,7 @@ description: Learn about the PDF/A and PDF/X conformance levels supported in the
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Use PDF/A and PDF/X Conformance in Vue PDF Viewer

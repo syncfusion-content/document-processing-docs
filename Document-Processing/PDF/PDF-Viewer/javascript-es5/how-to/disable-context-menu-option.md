@@ -5,7 +5,7 @@ description: Disable specific context menu options in the JavaScript (ES5) PDF V
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Disable Context Menu Options in JavaScript (ES5) PDF Viewer

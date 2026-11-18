@@ -3,7 +3,7 @@ title: WrapText Property in .NET Excel Library | Syncfusion
 description: WrapText behavior explains how Syncfusion .NET Excel Library wraps cell content to column width and adjusts row height like Microsoft Excel.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # WrapText Property in .NET Excel Library

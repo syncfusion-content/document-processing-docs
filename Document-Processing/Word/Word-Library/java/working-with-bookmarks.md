@@ -3,7 +3,7 @@ title: Bookmarks in Java Word | Syncfusion
 description: This section illustrates how to create, access, and modify bookmarks in Word documents using the Syncfusion Java Word library
 platform: document-processing
 control: Word Library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Bookmarks in Java Word
 

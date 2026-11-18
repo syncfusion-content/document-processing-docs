@@ -4,7 +4,7 @@ title: Scrolling in Flutter PDF Viewer | Syncfusion
 description: The scrolling feature in SfPdfViewer enables smooth navigation through PDF documents and supports programmatic control of scroll positions.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Scrolling in Flutter PDF Viewer

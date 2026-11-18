@@ -3,7 +3,7 @@ title: How to Avoid Worksheet Name Conflicts in .NET Excel | Syncfusion
 description: Avoid duplicate worksheet name exceptions when adding sheets to Excel workbooks using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to avoid duplicate worksheet names in .NET Excel Library

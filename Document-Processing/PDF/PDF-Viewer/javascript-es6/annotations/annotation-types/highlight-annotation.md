@@ -5,7 +5,7 @@ description: Enable, apply, customize, and manage Highlight annotations in the J
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Highlight Annotation in JavaScript (ES6) PDF Viewer

@@ -5,7 +5,7 @@ description: Find frequently asked questions about SFDT format in the ASP.NET Co
 control: SFDT format
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # FAQs about SFDT in ASP.NET Core DOCX Editor

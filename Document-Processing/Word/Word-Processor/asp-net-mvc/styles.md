@@ -4,7 +4,7 @@ title: Styles in ASP.NET MVC DOCX Editor | Syncfusion
 description: The styles feature in ASP.NET MVC DOCX Editor enables users to apply, customize, and manage consistent formatting across document content.
 platform: document-processing
 control: Styles
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

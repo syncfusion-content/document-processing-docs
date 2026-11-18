@@ -5,7 +5,7 @@ description: Learn how to track document modifications and check whether a PDF c
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-keywords: .net maui pdf viewer, document modified, isdocumentmodified, track pdf changes, save modified pdf, maui pdf viewer
+keywords: .net maui pdf viewer, document modified, isdocumentmodified, track pdf changes, save modified pdf, maui pdf viewertocname: Document-Processing-SDKs-toc
 ---
 
 # Track Document Changes in .NET MAUI PDF Viewer

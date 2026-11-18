@@ -5,7 +5,7 @@ description: Add and customize context menu options in the JavaScript (ES5) PDF 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Customize the Context Menu in JavaScript (ES5) PDF Viewer

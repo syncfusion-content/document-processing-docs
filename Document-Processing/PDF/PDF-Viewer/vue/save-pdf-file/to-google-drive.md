@@ -5,7 +5,7 @@ description: Save PDF files from the Vue PDF Viewer to Google Drive using a serv
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Save PDF Files to Google Drive in Vue PDF Viewer

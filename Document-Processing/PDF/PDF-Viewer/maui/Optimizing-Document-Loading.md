@@ -5,7 +5,7 @@ description: Learn how to optimize document loading performance in the Syncfusio
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-keywords: .net maui pdf viewer, android pdf viewer, maui pdf viewer performance, optimize pdf loading, large pdf documents, android large heap, sfpdfviewer memory optimization
+keywords: .net maui pdf viewer, android pdf viewer, maui pdf viewer performance, optimize pdf loading, large pdf documents, android large heap, sfpdfviewer memory optimizationtocname: Document-Processing-SDKs-toc
 ---
 
 # Optimizing document loading on Android in .NET MAUI PDF Viewer Control

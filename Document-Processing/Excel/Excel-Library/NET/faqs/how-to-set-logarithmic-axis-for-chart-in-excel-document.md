@@ -3,7 +3,7 @@ title: How to Set Logarithmic Axis in .NET Excel Library | Syncfusion
 description: Set a logarithmic axis for a chart in an Excel document using the Syncfusion .NET Excel Library for chart axis formatting.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to set logarithmic chart axes in .NET Excel Library

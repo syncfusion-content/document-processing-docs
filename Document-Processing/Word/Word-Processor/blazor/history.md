@@ -4,7 +4,7 @@ title: History in Blazor DOCX Editor | Syncfusion
 description: History in Blazor DOCX Editor tracks editing actions to enable undo and redo operations for efficient document editing.
 platform: document-processing
 control: DOCX Editor
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # History in Blazor DOCX Editor

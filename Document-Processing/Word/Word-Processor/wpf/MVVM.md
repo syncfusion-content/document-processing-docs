@@ -4,7 +4,7 @@ description: The MVVM in WPF DOCX Editor offers Model-View-ViewModel pattern sup
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: mvvm,data-binding,dependency-property,two-way-binding,viewmodel
+keywords: mvvm,data-binding,dependency-property,two-way-binding,viewmodeltocname: Document-Processing-SDKs-toc
 ---
 # MVVM in WPF DOCX Editor
 

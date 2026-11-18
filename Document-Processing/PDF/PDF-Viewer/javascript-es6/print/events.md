@@ -5,7 +5,7 @@ description: Subscribe to print events in the JavaScript (ES6) PDF Viewer to run
 platform: document-processing
 control: Print
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Print Events in JavaScript (ES6) PDF Viewer

@@ -3,7 +3,7 @@ title: Excel to Image conversion in ASP.NET Core | Syncfusion
 description: ASP.NET Core Excel to Image section explains how to convert Excel files to images in ASP.NET Core without Microsoft Excel.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Excel to Image Conversion in ASP.NET Core using Excel Library

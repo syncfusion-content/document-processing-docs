@@ -3,7 +3,7 @@ title: Create PowerPoint document in Azure Functions v4 | Syncfusion
 description: Create PowerPoint document in Azure Functions v4 using .NET PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Create PowerPoint document in Azure Functions v4

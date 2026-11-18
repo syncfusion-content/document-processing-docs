@@ -4,7 +4,7 @@ description: Export inserted images as embedded content in HTML from SyncfusionÂ
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: embedded-image-html
+keywords: embedded-image-htmltocname: Document-Processing-SDKs-toc
 ---
 
 # How to Export Embedded Images in HTML in WPF DOCX Editor

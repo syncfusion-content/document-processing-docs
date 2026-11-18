@@ -4,7 +4,7 @@ title: Keyboard shortcuts in JavaScript Spreadsheet | Syncfusion
 description: Keyboard shortcuts in JavaScript Spreadsheet help users perform common actions quickly, improving productivity and navigation efficiency.
 platform: document-processing
 control: Keyboard shortcuts
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Keyboard shortcuts in JavaScript Spreadsheet 

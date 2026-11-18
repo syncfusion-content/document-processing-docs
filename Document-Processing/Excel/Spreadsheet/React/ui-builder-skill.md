@@ -5,7 +5,7 @@ description: Install Syncfusion React UI Builder to generate production-ready Re
 control: Spreadsheet
 platform: document-processing
 documentation: ug
-keywords: React UI Builder, Skills, AI Assistants, Spreadsheet SDK, Agent Skills
+keywords: React UI Builder, Skills, AI Assistants, Spreadsheet SDK, Agent Skillstocname: Document-Processing-SDKs-toc
 ---
 
 # React UI Builder Skill with Spreadsheet for AI Assistants

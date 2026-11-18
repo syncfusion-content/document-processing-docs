@@ -4,7 +4,7 @@ title: How to Retrieve Bookmark Content in Blazor DOCX Editor | Syncfusion
 description: Retrieve bookmark content as plain text and retrieve document data in SFDT format using Syncfusion® Blazor DOCX Editor.
 platform: document-processing
 control: DOCX Editor
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Retrieve Bookmark Content as Text in Blazor DOCX Editor

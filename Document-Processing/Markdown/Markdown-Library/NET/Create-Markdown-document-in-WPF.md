@@ -3,7 +3,7 @@ title: Create Markdown document in WPF | Syncfusion
 description: Create Markdown document in WPF application using Syncfusion<sup>&reg;</sup> .NET Markdown library without external dependencies.
 platform: document-processing
 control: Markdown
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Create Markdown document in WPF

@@ -4,7 +4,7 @@ title: Open Excel from Google Drive in React Spreadsheet | Syncfusion
 description: Learn how to open Excel files stored in Google Drive using the Syncfusion React Spreadsheet control.
 platform: document-processing
 control: Open file from Google Drive
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Open Excel from Google Drive in React Spreadsheet

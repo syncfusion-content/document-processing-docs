@@ -5,7 +5,7 @@ description: Create a custom toolbar in the Vue PDF Viewer, including adding com
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Custom Toolbar in Vue PDF Viewer

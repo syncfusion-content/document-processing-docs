@@ -4,7 +4,7 @@ title: Ribbon in ASP.NET Core Spreadsheet | Syncfusion
 description: Learn about the ribbon in the Syncfusion ASP.NET Core Spreadsheet control, including tabs, items, and customization options.
 platform: document-processing
 control: Ribbon
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

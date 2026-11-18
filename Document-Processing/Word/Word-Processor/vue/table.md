@@ -5,7 +5,7 @@ description: Tables in Vue DOCX Editor enable adding and managing rows, columns,
 control: Table 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Tables in Vue DOCX Editor

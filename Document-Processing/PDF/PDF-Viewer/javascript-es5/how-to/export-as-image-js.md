@@ -5,7 +5,7 @@ description: Export pages as Base64-encoded images from the JavaScript (ES5) PDF
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Export Pages as Images in JavaScript (ES5) PDF Viewer

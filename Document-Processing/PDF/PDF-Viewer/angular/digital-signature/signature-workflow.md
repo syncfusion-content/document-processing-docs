@@ -4,7 +4,7 @@ title: Signature Workflow in Angular PDF Viewer | Syncfusion
 description: Add signature fields, configure signing workflows, and apply PKI digital signatures to PDFs in the Angular PDF Viewer.
 platform: document-processing
 control: PdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Digital Signature Workflows in Angular PDF Viewer

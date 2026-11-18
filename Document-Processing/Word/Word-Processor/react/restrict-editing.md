@@ -5,7 +5,7 @@ description: Restrict editing feature in React DOCX Editor enables read-only acc
 control: Restrict editing 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 

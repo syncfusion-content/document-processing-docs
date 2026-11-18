@@ -5,7 +5,7 @@ description: Set up the Syncfusion Vue PDF Viewer MCP server so AI tools can int
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Vue PDF Viewer MCP Server Setup

@@ -5,7 +5,7 @@ description: Subscribe to annotation events in the Vue PDF Viewer to react to ad
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Annotation Events in Vue PDF Viewer

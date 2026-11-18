@@ -4,7 +4,7 @@ description: Learn how to get started with the Syncfusion WPF PDF to Image Libra
 platform: document-processing
 control: PDF to image
 documentation: UG
-keywords: Assemblies
+keywords: Assembliestocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with WPF PDF to Image Converter Library

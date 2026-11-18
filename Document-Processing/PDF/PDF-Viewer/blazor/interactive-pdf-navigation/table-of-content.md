@@ -4,7 +4,7 @@ title: Table of contents navigation in Blazor PDF Viewer | Syncfusion
 description: Learn how to use the table of contents in the Blazor PDF Viewer to navigate within a PDF, and how to configure hyperlink target behavior.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Table of contents navigation in Blazor PDF Viewer

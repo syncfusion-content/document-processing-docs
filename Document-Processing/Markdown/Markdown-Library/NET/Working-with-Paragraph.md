@@ -3,7 +3,7 @@ title: Paragraphs in .NET Markdown Library | Syncfusion
 description: Learn how to add, format, and modify paragraphs in a Markdown document using the .NET Markdown library.
 platform: document-processing
 control: Markdown
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Paragraphs in .NET Markdown Library

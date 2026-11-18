@@ -4,7 +4,7 @@ description: Extract structured data from PDF as JSON using Smart Data Extractor
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG
-keywords: Assemblies
+keywords: Assembliestocname: Document-Processing-SDKs-toc
 ---
 
 # Convert PDF to JSON in .NET Smart Data Extractor

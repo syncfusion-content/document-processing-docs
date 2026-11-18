@@ -5,7 +5,7 @@ description: Display custom tooltips for annotations in the Vue PDF Viewer so us
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Display Custom Tooltips for Annotations in Vue PDF Viewer

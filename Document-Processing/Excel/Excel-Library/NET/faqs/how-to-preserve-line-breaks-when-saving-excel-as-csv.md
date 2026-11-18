@@ -3,7 +3,7 @@ title: How to Preserve Line Breaks in .NET Excel Library | Syncfusion
 description: Understand why line breaks in cell text are not preserved when saving Excel files to CSV and the recommended alternative.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to preserve line breaks in CSV export in .NET Excel Library

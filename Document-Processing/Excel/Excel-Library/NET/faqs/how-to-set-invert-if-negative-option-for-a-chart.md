@@ -3,7 +3,7 @@ title: How to Invert Negative Chart Values in .NET Excel | Syncfusion
 description: Learn how to set the invert if negative option for a chart programmatically using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to set invert-if-negative in charts in .NET Excel Library

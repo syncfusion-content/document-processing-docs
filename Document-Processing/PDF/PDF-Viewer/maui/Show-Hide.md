@@ -5,7 +5,7 @@ description: Learn how to show and hide annotations in .net maui pdf viewer (sfp
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf viewtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Show and Hide Annotations in .NET MAUI PDF Viewer (SfPdfViewer)

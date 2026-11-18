@@ -4,7 +4,7 @@ title: Render PDF Pages using the PDFium renderer in Android | Syncfusion
 description: Learn here all about Rendering PDF pages using pdfium support on Android platform in Syncfusion<sup>®</sup> Xamarin Pdf Viewer (SfPdfViewer) control and more.
 platform: document-processing
 control: SfPdfViewer
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Render PDF Pages using the PDFium renderer in Android

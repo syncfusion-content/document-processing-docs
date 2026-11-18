@@ -3,7 +3,7 @@ title: Supported and Unsupported Features in Java Word | Syncfusion
 description: This section describes the supported and unsupported Word document elements available in the Syncfusion Java Word library
 platform: document-processing
 control: Word Library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Supported and Unsupported Features in Java Word
 

@@ -4,7 +4,7 @@ title: About Syncfusion Angular Spreadsheet AI Assist | Syncfusion
 description: Learn about the AI Assist feature in Syncfusion Angular Spreadsheet, its capabilities, configuration, and AI-powered functionality.
 platform: document-processing
 control: AI Assist
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion Angular Spreadsheet AI Assist

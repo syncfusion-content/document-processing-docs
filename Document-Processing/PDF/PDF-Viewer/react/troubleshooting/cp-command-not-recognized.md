@@ -4,7 +4,7 @@ title: Cp Command Not Recognized in React PDF Viewer | Syncfusion
 description: Resolve the cp is not recognized error in the React PDF Viewer by using Windows-native commands such as xcopy or PowerShell Copy-Item.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Resolve cp Not Recognized Error in React PDF Viewer

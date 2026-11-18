@@ -3,7 +3,7 @@ title: Modify the Appearance of the Chart Area | Syncfusion
 description: Learn how to customize the chart area in a PowerPoint presentation using the .NET PowerPoint library (Presentation) without Microsoft PowerPoint.
 platform: document-processing
 control: PowerPoint
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Customize the Chart Area in PowerPoint

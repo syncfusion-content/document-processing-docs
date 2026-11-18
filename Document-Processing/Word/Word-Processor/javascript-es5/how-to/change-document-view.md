@@ -5,7 +5,7 @@ description: Change the document view to web layout or print layout in Syncfusio
 platform: document-processing
 control: Change document view 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Change Document View in JavaScript DOCX Editor

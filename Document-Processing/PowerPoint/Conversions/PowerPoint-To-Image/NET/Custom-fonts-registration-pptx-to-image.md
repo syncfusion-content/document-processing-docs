@@ -3,7 +3,7 @@ title: Custom font registration for PowerPoint-to-Image in .NET | Syncfusion
 description: This section illustrates how to register custom fonts for PowerPoint-to-Image conversion using the Syncfusion .NET PowerPoint (Presentation) library
 platform: document-processing
 control: PowerPoint
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Custom Font Registration for PowerPoint to Image Conversion in .NET

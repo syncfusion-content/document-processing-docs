@@ -5,7 +5,7 @@ description: Control the visibility of PDF annotations in the React PDF Viewer s
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Control Annotation Visibility in React PDF Viewer

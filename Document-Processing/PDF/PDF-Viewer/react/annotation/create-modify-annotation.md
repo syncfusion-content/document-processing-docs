@@ -5,7 +5,7 @@ description: Create new annotations and modify existing ones in the React PDF Vi
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Create and Modify Annotations in React PDF Viewer

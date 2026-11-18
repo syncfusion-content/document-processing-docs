@@ -5,7 +5,7 @@ description: Learn about the search redact in the Angular PDF Viewer and how it 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Search Redact in Angular PDF Viewer

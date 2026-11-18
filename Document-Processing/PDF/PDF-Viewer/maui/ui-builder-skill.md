@@ -5,7 +5,7 @@ description: Learn how to generate production-ready .NET MAUI controls with PDF 
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-keywords: MAUI UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skills
+keywords: MAUI UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skillstocname: Document-Processing-SDKs-toc
 ---
 
 # UI Builder Skill for AI Assistants in MAUI PDF Viewer

@@ -5,7 +5,7 @@ description: Learn how to get started with Next.js application using Syncfusion 
 control: Next.js
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Getting started with React DOCX Editor in Next.js

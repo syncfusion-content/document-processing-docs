@@ -3,7 +3,7 @@ title: ZUGFeRD Invoice in .NET PDF Library | Syncfusion
 description: Learn how to generate, add, extract, and validate ZUGFeRD invoices in PDF documents using the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # ZUGFeRD Invoice in .NET PDF Library
 

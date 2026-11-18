@@ -4,7 +4,7 @@ title: MCP Server for WPF DOCX Editor | Syncfusion
 description: The Syncfusion®WPF MCP Server provides setup guidance, integration support, and resources to accelerate WPF DOCX Editor development workflows.
 platform: document-processing
 control: WPF DOCX Editor
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 # MCP Server for WPF DOCX Editor
 

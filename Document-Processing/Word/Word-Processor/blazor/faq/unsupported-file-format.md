@@ -4,7 +4,7 @@ title: Supported File Formats in Blazor DOCX Editor | Syncfusion
 description: Learn about the supported file formats in Blazor DOCX Editor for importing, and exporting documents.
 platform: document-processing
 control: DOCX Editor
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Supported File Formats in Blazor DOCX Editor

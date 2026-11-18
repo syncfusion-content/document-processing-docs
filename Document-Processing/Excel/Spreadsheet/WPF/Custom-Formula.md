@@ -4,7 +4,7 @@ title: Custom Formula in WPF Spreadsheet Control | Syncfusion®
 description: Create and use custom formulas in the WPF Spreadsheet control to perform calculations with user-defined functions.
 platform: document-processing
 control: SfSpreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Custom Formula in WPF Spreadsheet 

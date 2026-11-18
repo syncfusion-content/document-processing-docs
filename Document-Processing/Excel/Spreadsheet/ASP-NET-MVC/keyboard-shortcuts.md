@@ -4,7 +4,7 @@ title: Keyboard Shortcuts in ASP.NET MVC Spreadsheet | Syncfusion
 description: Learn keyboard shortcuts and navigation options in the Syncfusion ASP.NET MVC Spreadsheet to improve productivity.
 platform: document-processing
 control: Keyboard Shortcuts
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

@@ -4,7 +4,7 @@ title: Protect sheet in Angular Spreadsheet | Syncfusion
 description: Protect sheet in Angular Spreadsheet restricts editing and controls user access to worksheet content, helping maintain data integrity.
 platform: document-processing
 control: Protect sheet 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Protect sheet in Angular Spreadsheet 

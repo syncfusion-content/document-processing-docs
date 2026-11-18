@@ -3,7 +3,7 @@ title: Create and Edit Excel Files in Linux | Syncfusion
 description: Syncfusion .NET Excel Library supports creating, reading, and editing Excel files in .NET Core Linux applications without Microsoft Office.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Create and Edit Excel Files in Linux using Excel Library
 

@@ -5,7 +5,7 @@ description: Learn here all about Localization support in Syncfusion<sup>®</sup
 platform: document-processing
 control: SfPdfViewerControl
 documentation: ug
-keywords: localization
+keywords: localizationtocname: Document-Processing-SDKs-toc
 ---
 # Localization in UWP PDF Viewer
 

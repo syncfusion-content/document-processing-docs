@@ -5,7 +5,7 @@ description: Configure Redis caching for the Angular PDF Viewer web service so d
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Configure Redis Cache for the PDF Viewer Service in Angular

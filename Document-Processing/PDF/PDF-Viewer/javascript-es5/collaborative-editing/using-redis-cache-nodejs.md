@@ -5,7 +5,7 @@ description: Learn how to implement ES5 JavaScript PDF Viewer collaborative edit
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Collaborative Editing in ES5 JavaScript PDF Viewer with Node.js

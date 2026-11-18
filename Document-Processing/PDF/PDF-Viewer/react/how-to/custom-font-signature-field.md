@@ -5,7 +5,7 @@ description: Change the font family for type signatures and initials in the Reac
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Change the Font for Type Signatures in React PDF Viewer

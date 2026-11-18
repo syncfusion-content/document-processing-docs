@@ -4,7 +4,7 @@ title: About Syncfusion ASP.NET Core DOCX Editor Control | Syncfusion
 description: Learn about the introduction of Syncfusion Essential Studio ASP.NET Core DOCX Editor control and more details.
 platform: document-processing
 control: Index
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

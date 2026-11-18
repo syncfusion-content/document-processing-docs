@@ -5,7 +5,7 @@ description: Learn how to localize the static text in the Syncfusion<sup>&reg;</
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
-keywords: .net maui smart pdf viewer, localization maui, localize smart pdf viewer, maui resx localization
+keywords: .net maui smart pdf viewer, localization maui, localize smart pdf viewer, maui resx localizationtocname: Document-Processing-SDKs-toc
 ---
 
 # Localization in .NET MAUI Smart PDF Viewer

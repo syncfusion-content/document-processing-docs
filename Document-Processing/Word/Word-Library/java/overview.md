@@ -3,7 +3,7 @@ title: About Syncfusion Java Word Document Processing Library| Syncfusion
 description: Learn about the overview of the Syncfusion Java Word Document Processing Library, its key features, and more details in this section.
 platform: document-processing
 control: Word Library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # About Syncfusion Java Word Document Processing Library
 

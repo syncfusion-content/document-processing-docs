@@ -3,7 +3,7 @@ title: Convert Word to PDF in Blazor | DocIO | Syncfusion
 description: Convert Word to PDF in Blazor using the Syncfusion DocIO library without Microsoft Word or Office interop dependencies.
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Convert Word Document to PDF in Blazor

@@ -5,7 +5,7 @@ description: Handle overlapping annotations in the JavaScript (ES5) PDF Viewer s
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Handle Overlapped Annotations in JavaScript (ES5) PDF Viewer

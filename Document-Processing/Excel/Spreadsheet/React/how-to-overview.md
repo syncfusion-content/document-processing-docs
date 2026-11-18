@@ -4,7 +4,7 @@ title: React Spreadsheet How-To Guides Overview | Syncfusion
 description: In this section, you can find answers to frequently asked questions and solutions for common scenarios in the Spreadsheet control.
 platform: document-processing
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # React Spreadsheet – How-to Guides Overview

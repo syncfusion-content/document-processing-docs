@@ -5,7 +5,7 @@ description: Explore how to generate concise document summaries and ask AI-assis
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
-keywords: .net maui smart pdf viewer, ai summarization, document summarizer maui, ai assist view maui, question answering pdf maui
+keywords: .net maui smart pdf viewer, ai summarization, document summarizer maui, ai assist view maui, question answering pdf mauitocname: Document-Processing-SDKs-toc
 ---
 
 # Document Summaries and Q&A in .NET MAUI Smart PDF Viewer

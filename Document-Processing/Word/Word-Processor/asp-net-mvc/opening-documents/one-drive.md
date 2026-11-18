@@ -5,7 +5,7 @@ description: Open documents from OneDrive in ASP.NET MVC DOCX Editor, enabling c
 platform: document-processing
 control: Open document from OneDrive
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Open Documents from OneDrive in ASP.NET MVC DOCX Editor

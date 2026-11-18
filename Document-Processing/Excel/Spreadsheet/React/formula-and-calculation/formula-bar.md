@@ -4,7 +4,7 @@ title: Formula Bar in React Spreadsheet | Syncfusion
 description: Learn about the formula bar in the Syncfusion React Spreadsheet component for viewing, entering, and editing formulas.
 control: Formulas
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Formula Bar in React Spreadsheet

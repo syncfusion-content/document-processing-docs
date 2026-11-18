@@ -5,7 +5,7 @@ description: Load or switch PDF documents dynamically in the Angular PDF Viewer 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Load Documents Dynamically in Angular PDF Viewer

@@ -5,7 +5,7 @@ description: Filter comments and annotations in the React PDF Viewer by author, 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Annotation Comment Filter in React PDF Viewer

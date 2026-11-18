@@ -3,7 +3,7 @@ title: About Syncfusion .NET Document Chunking Library | Syncfusion
 description: Learn how the Syncfusion® .NET Document Chunking Library prepares structured enterprise content for Retrieval-Augmented Generation workflows.
 platform: document-processing
 control: Chunking
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion .NET Document Chunking Library

@@ -5,7 +5,7 @@ description: Learn about the shape annotation in the ASP.NET MVC PDF Viewer and 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Shape Annotation in ASP.NET MVC PDF Viewer

@@ -4,7 +4,7 @@ title: Dialogs in ASP.NET MVC DOCX Editor | Syncfusion
 description: The dialogs in ASP.NET MVC DOCX Editor provides built-in dialogs to edit text, paragraphs, tables, bookmarks, and other document elements.
 platform: document-processing
 control: Dialog
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

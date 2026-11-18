@@ -5,7 +5,7 @@ description: Learn how to add, replace, and remove images in a PowerPoint presen
 platform: document-processing
 control: PowerPoint
 documentation: ug
-keywords: javascript, powerpoint
+keywords: javascript, powerpointtocname: Document-Processing-SDKs-toc
 ---
 
 # Working with Images in JavaScript PowerPoint

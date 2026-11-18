@@ -4,7 +4,7 @@ title: Insert Worksheet in React Spreadsheet component | Syncfusion
 description: Learn about inserting worksheets in an Excel document using the Syncfusion React Spreadsheet component.
 control: Worksheet 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Insert Worksheet in React Spreadsheet

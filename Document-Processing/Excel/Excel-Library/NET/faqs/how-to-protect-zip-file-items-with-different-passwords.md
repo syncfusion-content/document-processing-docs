@@ -3,7 +3,7 @@ title: How to Protect ZIP Items in .NET Excel Library | Syncfusion
 description: Protect zip file items with different passwords using Syncfusion.Compression.Base for item-level protection.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to protect ZIP items in .NET Excel Library

@@ -4,7 +4,7 @@ description: The import and export in WPF DOCX Editor support multiple file form
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: import, export, load, save, async-load, document-events, file-formats
+keywords: import, export, load, save, async-load, document-events, file-formatstocname: Document-Processing-SDKs-toc
 ---
 # Import and Export in WPF DOCX Editor
 

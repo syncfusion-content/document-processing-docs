@@ -5,7 +5,7 @@ description: The Import feature in React DOCX Editor enables users to load and e
 control: Import 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Import in React DOCX Editor

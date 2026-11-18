@@ -5,7 +5,7 @@ description: Text format properties in React DOCX Editor enables customizing tex
 control: Text format 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Text Format in React DOCX Editor

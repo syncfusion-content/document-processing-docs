@@ -5,7 +5,7 @@ description: Add, reply to, edit, set the status of, delete, and read comments a
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Comments in Vue PDF Viewer

@@ -4,7 +4,7 @@ title: Globalization in ASP.NET Core Spreadsheet | Syncfusion
 description: Learn about globalization in the Syncfusion ASP.NET Core Spreadsheet control, including localization, culture settings, and regional formats.
 platform: document-processing
 control: Global Local
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Globalization in ASP.NET Core Spreadsheet

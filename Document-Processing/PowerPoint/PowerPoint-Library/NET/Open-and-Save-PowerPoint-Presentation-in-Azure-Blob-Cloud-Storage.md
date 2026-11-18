@@ -3,7 +3,7 @@ title: Open and save Presentation in Azure Blob Cloud Storage | Syncfusion
 description: Open and save Presentation in Azure Blob Cloud Storage using .NET Core PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Open and Save Presentation in Azure Blob Cloud Storage

@@ -4,7 +4,7 @@ title: Cell Range in ASP.NET MVC Spreadsheet | Syncfusion
 description: Learn how to work with cell ranges in the Syncfusion ASP.NET MVC Spreadsheet, including selection, formatting, and data management.
 platform: document-processing
 control: Cell Range
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

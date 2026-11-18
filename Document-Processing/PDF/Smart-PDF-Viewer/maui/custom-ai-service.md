@@ -4,7 +4,7 @@ title: Custom AI for AI-Powered Components | Syncfusion®
 description: Learn how to use IChatInferenceService to integrate custom AI services with Syncfusion® .NET MAUI AI-Powered Components.
 platform: maui
 control: SmartComponents
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Custom AI Service Integration with .NET MAUI Smart Components

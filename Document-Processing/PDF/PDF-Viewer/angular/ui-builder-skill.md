@@ -5,7 +5,7 @@ description: Install the Syncfusion Angular UI Builder skill to generate product
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-keywords: Angular UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skills
+keywords: Angular UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skillstocname: Document-Processing-SDKs-toc
 ---
 
 # Angular UI Builder Skill with PDF Viewer

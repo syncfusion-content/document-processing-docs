@@ -4,7 +4,7 @@ title: Performance practices in Angular Spreadsheet | Syncfusion
 description: Performance best practices in Angular Spreadsheet help optimize rendering, data processing, and user interactions for large datasets.
 platform: document-processing
 control: Performance
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Performance Best Practices in Angular Spreadsheet 

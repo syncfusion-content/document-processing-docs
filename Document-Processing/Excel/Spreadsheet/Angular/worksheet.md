@@ -4,7 +4,7 @@ title: Worksheet in Angular Spreadsheet | Syncfusion
 description: Worksheets in Angular Spreadsheet enable users to organize, manage, and work with multiple sheets within a single workbook.
 platform: document-processing
 control: Worksheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Worksheet in Angular Spreadsheet 

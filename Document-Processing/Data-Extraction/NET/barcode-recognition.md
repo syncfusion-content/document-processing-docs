@@ -5,7 +5,7 @@ platform: document-processing
 control: SmartDataExtractor
 documentation: UG
 keywords: Barcode Recognition, Barcode Extraction
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 # Barcode Recognition in .NET Smart Data Extractor

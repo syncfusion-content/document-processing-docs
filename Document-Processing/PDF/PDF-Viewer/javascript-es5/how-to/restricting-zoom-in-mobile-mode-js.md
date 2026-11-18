@@ -5,7 +5,7 @@ description: Restrict the zoom percentage on mobile devices in the JavaScript (E
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Restrict Zoom on Mobile Devices in JavaScript (ES5) PDF Viewer

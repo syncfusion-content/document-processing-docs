@@ -4,7 +4,7 @@ title: How to Customize Spreadsheet as Grid in React Spreadsheet | Syncfusion
 description: Learn how to customize the Syncfusion React Spreadsheet component to provide a grid-like user experience.
 control: Spreadsheet 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Customize Spreadsheet Like a Grid in React Spreadsheet

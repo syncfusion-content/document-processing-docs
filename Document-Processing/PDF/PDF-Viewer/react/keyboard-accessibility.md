@@ -5,7 +5,7 @@ description: Use keyboard shortcuts in the React PDF Viewer to navigate, zoom, s
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Keyboard Accessibility in React PDF Viewer

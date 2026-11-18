@@ -4,7 +4,7 @@ title: How to get mouse position to page in WinForms PDF Viewer | Syncfusion
 description: This guide explains how to retrieve the mouse pointer position relative to a PDF page in Syncfusion PDF Viewer for WinForms.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to get mouse position to page in WinForms PDF Viewer

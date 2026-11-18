@@ -4,7 +4,7 @@ title: Rows and Columns in React Spreadsheet | Syncfusion
 description: Learn about rows and columns in the Syncfusion React Spreadsheet component, including insertion, deletion, resizing, and visibility.
 control: Rows and columns 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Rows and Columns in React Spreadsheet

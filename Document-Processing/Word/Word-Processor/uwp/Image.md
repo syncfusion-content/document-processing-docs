@@ -4,7 +4,7 @@ description: The image support in UWP DOCX Editor enables inserting, resizing, a
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: image,insert-picture,image-resizer,text-wrapping
+keywords: image,insert-picture,image-resizer,text-wrappingtocname: Document-Processing-SDKs-toc
 ---
 # Images in UWP DOCX Editor
 

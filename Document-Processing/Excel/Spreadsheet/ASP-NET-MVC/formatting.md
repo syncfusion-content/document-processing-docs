@@ -4,7 +4,7 @@ title: Formatting in ASP.NET MVC Spreadsheet | Syncfusion
 description: Apply cell, row, and column formatting in the Syncfusion ASP.NET MVC Spreadsheet to enhance data presentation.
 platform: document-processing
 control: Formatting
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

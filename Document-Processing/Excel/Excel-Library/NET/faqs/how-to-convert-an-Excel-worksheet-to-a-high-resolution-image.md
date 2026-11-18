@@ -3,7 +3,7 @@ title: How to Convert Worksheets to Images in .NET Excel | Syncfusion
 description: Convert an Excel worksheet to a high-resolution image using the Syncfusion .NET Excel Library for clear output.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to convert worksheets to images in .NET Excel Library

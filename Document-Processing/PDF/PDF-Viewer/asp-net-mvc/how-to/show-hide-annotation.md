@@ -5,7 +5,7 @@ description: Show or hide annotations in the ASP.NET MVC PDF Viewer by exporting
 platform: document-processing
 control: PDF Viewer
 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Show or Hide Annotations in ASP.NET MVC PDF Viewer

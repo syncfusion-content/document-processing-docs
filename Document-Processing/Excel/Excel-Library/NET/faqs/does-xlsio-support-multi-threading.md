@@ -3,7 +3,7 @@ title: Multithreading in .NET Excel Library | Syncfusion
 description: Multithreading in the Syncfusion .NET Excel Library explains whether Excel documents can be processed in multithreaded scenarios.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Multithreading in .NET Excel Library

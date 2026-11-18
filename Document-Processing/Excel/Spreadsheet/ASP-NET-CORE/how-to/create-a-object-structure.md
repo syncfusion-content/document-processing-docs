@@ -4,7 +4,7 @@ title: How to Create Objects in ASP.NET Core Spreadsheet | Syncfusion
 description: Create an object structure in ASP.NET Core Spreadsheet to organize workbook data and manage spreadsheet content programmatically.
 platform: document-processing
 control: Create a object structure 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Create an Object Structure in ASP.NET Core Spreadsheet

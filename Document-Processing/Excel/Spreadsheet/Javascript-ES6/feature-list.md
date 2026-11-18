@@ -4,7 +4,7 @@ title: Feature List in TypeScript Spreadsheet | Syncfusion
 description: The feature list in TypeScript Spreadsheet provides an overview of key capabilities, helping users explore and utilize spreadsheet functions effectively.
 platform: document-processing
 control: Feature list 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Feature list in TypeScript Spreadsheet 

@@ -5,7 +5,7 @@ description: The Syncfusion®JavaScript MCP Server provides setup guidance, inte
 platform: document-processing
 control: DocumentEditor
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # MCP Server for JavaScript DOCX Editor

@@ -3,7 +3,7 @@ title: Windows phone in .NET Word | Syncfusion
 description: Create a Windows phone application, load the word document and save the word document with the .NET Word Library
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Windows phone in .NET Word

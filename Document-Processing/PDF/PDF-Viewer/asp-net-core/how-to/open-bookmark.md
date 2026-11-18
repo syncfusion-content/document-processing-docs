@@ -4,7 +4,7 @@ title: How to Open or Hide the Bookmark Pane in ASP.NET Core | Syncfusion
 description: Open or close the bookmark pane programmatically in the ASP.NET Core PDF Viewer using openBookmarkPane and closeBookmarkPane for custom toolbars.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Open or Hide the Bookmark Pane in ASP.NET Core PDF Viewer

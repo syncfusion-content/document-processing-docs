@@ -4,7 +4,7 @@ title: Row and Column Resize in React Spreadsheet | Syncfusion
 description: Learn about resizing rows and columns in the Syncfusion React Spreadsheet component to adjust worksheet layout.
 control: Rows and Columns 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Row and Column Resize in React Spreadsheet

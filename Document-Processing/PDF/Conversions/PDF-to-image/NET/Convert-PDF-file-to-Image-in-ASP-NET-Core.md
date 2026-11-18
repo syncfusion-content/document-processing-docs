@@ -4,7 +4,7 @@ description: Learn how to get started with the Syncfusion ASP.NET Core PDF to Im
 platform: document-processing
 control: PDF to image
 documentation: UG
-keywords: Assemblies
+keywords: Assembliestocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with ASP.NET Core PDF to Image Library

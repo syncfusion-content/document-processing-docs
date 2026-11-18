@@ -4,7 +4,7 @@ title: How to Open Blazor DOCX Editor in Read-Only Mode | Syncfusion
 description: Open Syncfusion® Blazor DOCX Editor in read-only mode to prevent document modifications while allowing users to view content.
 platform: document-processing
 control: DOCX Editor
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Open Blazor DOCX Editor in Read-Only Mode

@@ -5,7 +5,7 @@ description: Configure Content Security Policy headers for the Vue PDF Viewer so
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Content Security Policy with Vue PDF Viewer

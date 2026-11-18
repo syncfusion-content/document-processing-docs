@@ -4,7 +4,7 @@ title: Freeze Panes in ASP.NET Core Spreadsheet | Syncfusion
 description: Learn about freeze panes in the Syncfusion ASP.NET Core Spreadsheet control, including freezing rows and columns for easier data navigation.
 platform: document-processing
 control: Freeze Pane
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

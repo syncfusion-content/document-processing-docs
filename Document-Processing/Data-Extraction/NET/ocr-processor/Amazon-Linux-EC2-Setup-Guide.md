@@ -4,7 +4,7 @@ description: Learn how to get started with the Syncfusion Amazon Linux 2023 EC2 
 platform: document-processing
 control: PDF  
 documentation: UG  
-keywords: Assemblies
+keywords: Assembliestocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with Amazon Linux EC2 OCR Processor

@@ -4,7 +4,7 @@ description: Learn how to convert PDF documents into image files using the Syncf
 platform: document-processing
 control: PDF to image
 documentation: UG
-keywords: PDF to Image, PdfToImageConverter, Convert method
+keywords: PDF to Image, PdfToImageConverter, Convert methodtocname: Document-Processing-SDKs-toc
 ---
 
 # Convert PDF to Image

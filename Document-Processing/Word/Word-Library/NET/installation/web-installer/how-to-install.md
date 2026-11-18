@@ -4,7 +4,7 @@ title: How to install Syncfusion® Word web installer | Syncfusion
 description: Learn here about how to install Syncfusion® Word web installer after downloading from our Syncfusion® website.
 platform: document-processing
 control: Installation and Deployment
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to install Syncfusion® Word web installer

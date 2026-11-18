@@ -5,7 +5,7 @@ description: Explore the default context menu items in the Angular PDF Viewer, i
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Built-in Context Menu in Angular PDF Viewer

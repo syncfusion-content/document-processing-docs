@@ -4,7 +4,7 @@ title: Rows and Columns in Windows Forms Spreadsheet | Syncfusion®
 description: Manage worksheet rows and columns in Windows Forms Spreadsheet by inserting, deleting, resizing, hiding, and adjusting cells.
 platform: document-processing
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Rows and Columns in Windows Forms Spreadsheet

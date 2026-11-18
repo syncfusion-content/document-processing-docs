@@ -5,7 +5,7 @@ description: Load a specific number of pages during the initial render of the Re
 control: Load N pages on initial load
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Load Pages on Initial Load in React PDF Viewer

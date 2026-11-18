@@ -4,7 +4,7 @@ title: Table of Contents in Blazor DOCX Editor | Syncfusion
 description: The Table of Contents feature in Blazor DOCX Editor enables users to generate and update a structured index for quick document navigation.
 platform: document-processing
 control: DOCX Editor
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Table of Contents in Blazor DOCX Editor

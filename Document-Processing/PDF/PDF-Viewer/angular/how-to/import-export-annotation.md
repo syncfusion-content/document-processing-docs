@@ -5,7 +5,7 @@ description: Import and export annotations in the Angular PDF Viewer as JavaScri
 platform: document-processing
 control: Import export annotation
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Import and Export Annotations in Angular PDF Viewer

@@ -4,7 +4,7 @@ title: Check Box Form Control in React Spreadsheet | Syncfusion
 description: Learn about Check Box form control in the Syncfusion React Spreadsheet component, including editing, formatting, and cell link integration.
 control: Form Controls
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Check Box Form Control in React Spreadsheet

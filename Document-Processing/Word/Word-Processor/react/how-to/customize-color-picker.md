@@ -5,7 +5,7 @@ description: Customize the color picker appearance in Syncfusion® React DOCX Ed
 control: Customize color picker in DOCX Editor 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 # How to Customize Color Picker in React DOCX Editor
 

@@ -5,7 +5,7 @@ description: Use text markup annotations in the Angular PDF Viewer, including hi
 platform: document-processing
 control: Text Markup Annotation
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Text Markup Annotations in Angular PDF Viewer

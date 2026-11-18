@@ -5,7 +5,7 @@ description: The find and replace feature in JavaScript DOCX Editor helps users 
 platform: document-processing
 control: Find and replace 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Find and Replace in JavaScript DOCX Editor

@@ -5,7 +5,7 @@ description: Learn about introduction of the Syncfusion Vue PDF Viewer Text Sear
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion Vue PDF Viewer Text Search

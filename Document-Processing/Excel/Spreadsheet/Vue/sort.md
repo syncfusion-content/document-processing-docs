@@ -4,7 +4,7 @@ title: Sorting in Vue Spreadsheet | Syncfusion
 description: Sort spreadsheet data efficiently using built-in sorting features in the Syncfusion Vue Spreadsheet.
 control: Sort 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Sorting in Vue Spreadsheet

@@ -3,7 +3,7 @@ title: Working with Images in JavaScript Word | Syncfusion
 description: Learn how to insert, replace, remove, format, find, and caption images in a Word document using the Syncfusion JavaScript Word library.
 platform: document-processing
 control: Word Library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Working with Images in JavaScript Word Library

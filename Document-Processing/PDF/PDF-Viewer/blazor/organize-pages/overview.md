@@ -5,7 +5,7 @@ description: Learn how to reorder, rotate, insert, delete, and save pages with t
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 

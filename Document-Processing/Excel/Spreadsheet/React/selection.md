@@ -4,7 +4,7 @@ title: Selection in React Spreadsheet | Syncfusion
 description: Learn about selection in the Syncfusion React Spreadsheet component, including cell, row, column, and range selection.
 control: Selection
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Selection in React Spreadsheet

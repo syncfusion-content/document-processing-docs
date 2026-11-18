@@ -5,7 +5,7 @@ description: Programmatically add a signature to a signature field in the React 
 control: Add signature
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Add a Signature Programmatically in React PDF Viewer

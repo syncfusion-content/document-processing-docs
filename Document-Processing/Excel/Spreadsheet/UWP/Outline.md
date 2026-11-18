@@ -4,7 +4,7 @@ title: Outline in UWP Spreadsheet control | Syncfusion®
 description: Group rows and columns in UWP Spreadsheet control with outline options to organize and collapse worksheet data.
 platform: document-processing
 control: SfSpreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Outline in UWP Spreadsheet 

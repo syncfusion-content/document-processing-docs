@@ -3,7 +3,7 @@ title: Open and save Word document in AWS Elastic Beanstalk  | Syncfusion
 description: Open and save Word document without Microsoft Word or interop dependencies in AWS Elastic Beanstalk application using .NET Core Word library.
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Open and save Word document in AWS Elastic Beanstalk 

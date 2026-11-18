@@ -4,7 +4,7 @@ description: Troubleshoot memory exceptions when opening large documents in Sync
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: out-of-memory-exception
+keywords: out-of-memory-exceptiontocname: Document-Processing-SDKs-toc
 ---
 
 # Memory Issues with Large Documents in WPF DOCX Editor

@@ -4,7 +4,7 @@ title: Freeze Panes in TypeScript Spreadsheet | Syncfusion
 description: Freeze panes in TypeScript Spreadsheet keep selected rows and columns visible while scrolling, improving navigation and data analysis.
 platform: document-processing
 control: Freeze pane
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Freeze panes in TypeScript Spreadsheet 

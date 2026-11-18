@@ -3,7 +3,7 @@ title: Chart Axis Auto Adjustment in .NET Excel Library | Syncfusion
 description: Chart axis adjustment describes whether Syncfusion .NET Excel Library automatically adjusts chart axis values in Excel charts.
 platform: document-processing 
 control: XlsIO 
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Chart Axis Auto Adjustment in .NET Excel Library

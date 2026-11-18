@@ -5,7 +5,7 @@ description: Learn how to enable print rotation for landscape documents in the B
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Enable Print Rotation in Blazor PDF Viewer

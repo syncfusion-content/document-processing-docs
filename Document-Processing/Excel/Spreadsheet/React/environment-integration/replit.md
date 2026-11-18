@@ -4,7 +4,7 @@ title: Getting Started with React Spreadsheet in Replit | Syncfusion
 description: Learn how to get started with the Syncfusion React Spreadsheet Editor component in Replit. Explore setup and integration steps.
 control: Spreadsheet
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with React Spreadsheet in Replit

@@ -5,7 +5,7 @@ description: Export pages as Base64-encoded images from the Vue PDF Viewer using
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Export Pages as Images in Vue PDF Viewer

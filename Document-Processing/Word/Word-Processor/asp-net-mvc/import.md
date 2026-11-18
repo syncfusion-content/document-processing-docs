@@ -4,7 +4,7 @@ title: Import in ASP.NET MVC DOCX Editor | Syncfusion
 description: The Import feature in ASP.NET MVC DOCX Editor enables users to load and edit documents from supported formats while preserving content structure.
 platform: document-processing
 control: Import
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

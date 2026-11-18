@@ -5,7 +5,7 @@ description: Open a default document in Syncfusion® React DOCX Editor during in
 control: Open default document
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Open a Default Document in React DOCX Editor

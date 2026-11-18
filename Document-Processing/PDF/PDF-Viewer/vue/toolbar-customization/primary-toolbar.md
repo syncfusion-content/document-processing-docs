@@ -5,7 +5,7 @@ description: Customize the primary toolbar in the Vue PDF Viewer to show, hide, 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Customize the Primary Toolbar in Vue PDF Viewer

@@ -5,7 +5,7 @@ description: Learn how to get started with the Syncfusion Angular PPTX Editor co
 control: Getting started 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with Angular PPTX Editor

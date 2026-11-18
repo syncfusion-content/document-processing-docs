@@ -3,7 +3,7 @@ title: Font substitution in PowerPoint to PDF conversion| Syncfusion
 description: Learn about how to substitute font during PowerPoint to PDF conversion using the .NET PowerPoint (Presentation) library.
 platform: document-processing
 control: PowerPoint
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Font substitution for unavailable fonts in PPTX to PDF conversion

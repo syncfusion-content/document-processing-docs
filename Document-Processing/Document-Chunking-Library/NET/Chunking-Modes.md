@@ -3,7 +3,7 @@ title: Chunking Modes in .NET Document Chunking Library | Syncfusion
 description: Learn about the chunking modes supported for Excel, Word, PDF, PowerPoint, and Markdown documents using the Syncfusion® .NET Document Chunking Library.
 platform: document-processing
 control: Chunking
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Chunking Modes in .NET Document Chunking Library

@@ -4,7 +4,7 @@ title: Find and Replace in Blazor DOCX Editor | Syncfusion
 description: The find and replace feature in Blazor DOCX Editor helps users quickly locate specific content and replace it throughout a document.
 platform: document-processing
 control: DOCX Editor
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Find and Replace in Blazor DOCX Editor

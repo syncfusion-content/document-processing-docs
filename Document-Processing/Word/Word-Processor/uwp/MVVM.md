@@ -4,7 +4,7 @@ description: The MVVM in UWP DOCX Editor offers Model-View-ViewModel pattern sup
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: mvvm,viewmodel,data-binding,contentchanged,extension-class
+keywords: mvvm,viewmodel,data-binding,contentchanged,extension-classtocname: Document-Processing-SDKs-toc
 ---
 # MVVM in UWP DOCX Editor
 

@@ -3,7 +3,7 @@ title: Working with Paragraphs in PowerPoint Presentation | Syncfusion
 description: Learn how to create, format, and manage paragraphs and text content in PowerPoint presentations using the Syncfusion® .NET PowerPoint Presentation library.
 platform: document-processing
 control: Presentation
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Working with Paragraphs
 

@@ -4,7 +4,7 @@ title: Text Format in ASP.NET MVC DOCX Editor | Syncfusion
 description: Text format properties in ASP.NET MVC DOCX Editor enables customizing text appearance with font styles, colors, highlighting, and character formatting options.
 platform: document-processing
 control: Text Format
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

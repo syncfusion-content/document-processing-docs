@@ -4,7 +4,7 @@ title: Formulas in Blazor Spreadsheet | Syncfusion
 description: Use built-in formulas and calculation features in the Syncfusion Blazor Spreadsheet to perform data analysis.
 platform: document-processing
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Formulas in Blazor Spreadsheet

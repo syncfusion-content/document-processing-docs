@@ -4,7 +4,7 @@ title: Viewing PDF in UWP PDF Viewer | Syncfusion
 description: Learn here all about Viewing PDF support in Syncfusion<sup>®</sup> UWP PDF Viewer (SfPdfViewer) control and more.
 platform: document-processing
 control: PDF viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Viewing PDF in UWP PDF Viewer

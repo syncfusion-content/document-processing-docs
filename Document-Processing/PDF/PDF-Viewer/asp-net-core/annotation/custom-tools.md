@@ -5,7 +5,7 @@ description: Build a custom annotation toolbar for the ASP.NET Core PDF Viewer a
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Custom Annotation Tools in ASP.NET Core PDF Viewer

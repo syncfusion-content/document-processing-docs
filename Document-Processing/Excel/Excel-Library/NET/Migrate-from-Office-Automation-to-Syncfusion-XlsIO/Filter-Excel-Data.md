@@ -3,7 +3,7 @@ title: Data Filtering in .NET Excel Library | Syncfusion
 description: Filtering Excel data programmatically explains how to show or hide rows using specific conditions with Interop and Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Data Filtering in .NET Excel Library

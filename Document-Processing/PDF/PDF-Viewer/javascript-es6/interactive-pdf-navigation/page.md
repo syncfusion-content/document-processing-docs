@@ -5,7 +5,7 @@ description: Use page navigation in the JavaScript (ES6) PDF Viewer to move betw
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Page Navigation in JavaScript (ES6) PDF Viewer

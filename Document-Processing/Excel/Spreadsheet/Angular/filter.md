@@ -4,7 +4,7 @@ title: Filtering in Angular Spreadsheet | Syncfusion
 description: Filtering in Angular Spreadsheet enables users to display specific data based on criteria, making large datasets easier to analyze and manage.
 platform: document-processing
 control: Filter 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Filtering in Angular Spreadsheet 

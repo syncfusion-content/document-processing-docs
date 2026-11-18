@@ -4,7 +4,7 @@ title: Performance Best Practices in Vue Spreadsheet | Syncfusion
 description: Improve application performance with optimization techniques and best practices for the Syncfusion Vue Spreadsheet.
 platform: document-processing
 control: Performance
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Performance Best Practices in Vue Spreadsheet

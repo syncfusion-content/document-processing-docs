@@ -3,7 +3,7 @@ title: Open and save PowerPoint in Azure App Service on Linux | Syncfusion
 description: Open and save PowerPoint in Azure App Service on Linux using .NET Core PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Open and save PowerPoint in Azure App Service on Linux

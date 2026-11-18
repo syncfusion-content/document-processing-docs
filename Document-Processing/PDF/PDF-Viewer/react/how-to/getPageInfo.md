@@ -5,7 +5,7 @@ description: Retrieve page height, width, and rotation in the React PDF Viewer u
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Get Page Info in React PDF Viewer

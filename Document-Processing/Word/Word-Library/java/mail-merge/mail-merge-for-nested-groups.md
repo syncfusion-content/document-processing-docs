@@ -3,7 +3,7 @@ title: Mail merge for nested groups in Java Word | Syncfusion
 description: Describe how to migrate applications from .NET Framework to .NET Core using the Syncfusion .NET Word library
 platform: document-processing
 control: Word Library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Mail merge for nested groups in Java Word

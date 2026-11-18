@@ -4,7 +4,7 @@ description: The commands in UWP DOCX Editor offer a loosely coupled way to hand
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: commands,boldcommand,italiccommand,underlinecommand,table-commands,paragraph-commands,clipboard-commands,command-parameter
+keywords: commands,boldcommand,italiccommand,underlinecommand,table-commands,paragraph-commands,clipboard-commands,command-parametertocname: Document-Processing-SDKs-toc
 ---
 # Commands in UWP DOCX Editor
 

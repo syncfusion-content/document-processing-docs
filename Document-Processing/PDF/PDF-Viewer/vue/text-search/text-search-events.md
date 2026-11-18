@@ -5,7 +5,7 @@ description: Handle text search events in the Vue PDF Viewer and run programmati
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Text Search Events in Vue PDF Viewer

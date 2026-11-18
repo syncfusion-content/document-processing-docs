@@ -4,7 +4,7 @@ description: Learn how to get started with the Syncfusion Web API OCR Processor.
 platform: document-processing
 control: PDF
 documentation: UG
-keywords: pdf, core, web api, csharp
+keywords: pdf, core, web api, csharptocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with Web API OCR Processor

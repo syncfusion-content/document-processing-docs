@@ -3,7 +3,7 @@ title: Deploying .NET Excel Library in Windows Phone | Syncfusion
 description: Windows Phone load and save operations page describes how Excel documents are opened and saved in Windows Phone using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Deploying .NET Excel Library in Windows Phone
 

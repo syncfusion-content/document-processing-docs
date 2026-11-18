@@ -4,7 +4,7 @@ title: Conditional Formatting in React Spreadsheet | Syncfusion
 description: Learn about Conditional formatting rules, data bars, color scales and icon sets in Syncfusion React Spreadsheet.
 control: Formatting
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Conditional Formatting in React Spreadsheet

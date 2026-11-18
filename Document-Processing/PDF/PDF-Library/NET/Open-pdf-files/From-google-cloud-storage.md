@@ -4,7 +4,7 @@ description: Learn how to load PDF files programmatically from Google Cloud Stor
 keywords: google cloud storage, load pdf, open pdf, c# load pdf
 platform: document-processing
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Open PDF from Google Cloud Storage
 

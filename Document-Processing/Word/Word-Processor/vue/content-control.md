@@ -5,7 +5,7 @@ description: The content control feature in Vue DOCX Editor provides built-in co
 control: Content control 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Content Controls in Vue DOCX Editor

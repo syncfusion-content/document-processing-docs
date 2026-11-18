@@ -5,7 +5,7 @@ description: Configure text search in the Angular PDF Viewer and run programmati
 platform: document-processing
 control: Text search
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Find Text in Angular PDF Viewer

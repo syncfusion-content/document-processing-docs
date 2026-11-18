@@ -5,7 +5,7 @@ description: Use the pageRenderInitiate and pageRenderComplete events in the Ang
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Handle Page Render Events in Angular PDF Viewer

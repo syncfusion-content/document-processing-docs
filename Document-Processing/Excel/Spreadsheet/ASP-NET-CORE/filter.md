@@ -4,7 +4,7 @@ title: Filtering in ASP.NET Core Spreadsheet | Syncfusion
 description: Learn about filtering in the Syncfusion ASP.NET Core Spreadsheet control, including applying, clearing, and managing data filters.
 platform: document-processing
 control: Filter
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

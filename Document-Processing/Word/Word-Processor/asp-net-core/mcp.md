@@ -4,7 +4,7 @@ title: MCP Server for ASP.NET Core DOCX Editor | Syncfusion
 description: The Syncfusion® ASP.NET Core MCP Server provides setup guidance and integration resources to accelerate ASP.NET Core DOCX Editor development workflows.
 platform: document-processing
 control: DOCX Editor
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # MCP Server for ASP.NET Core DOCX Editor

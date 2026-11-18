@@ -5,7 +5,7 @@ description: Retrieve the Base64 string of a loaded PDF in the Angular PDF Viewe
 platform: document-processing
 control: Get base string of the loaded document
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Get the Base64 String of a PDF in Angular PDF Viewer

@@ -5,7 +5,7 @@ description: Open Syncfusion® React DOCX Editor in read-only mode to prevent do
 control: Read by default
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Open React DOCX Editor in Read-Only Mode

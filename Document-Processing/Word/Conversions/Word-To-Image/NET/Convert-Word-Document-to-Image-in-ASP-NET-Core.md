@@ -3,7 +3,7 @@ title: Convert Word to Image in ASP.NET  Core  | Syncfusion
 description: Convert Word to image in ASP.NET  Core using .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Convert Word to Image in ASP.NET  Core 

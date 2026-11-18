@@ -5,7 +5,7 @@ description: Load and display PDF files stored in Azure Blob Storage in the Angu
 platform: document-processing
 control: Open PDF files from Azure Blob Storage
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Open PDF from Azure Blob Storage in Angular PDF Viewer

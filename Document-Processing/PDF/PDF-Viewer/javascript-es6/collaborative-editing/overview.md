@@ -5,7 +5,7 @@ description: Learn how to configure real-time collaborative editing in the Syncf
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Collaborative Editing in Syncfusion TypeScript PDF Viewer

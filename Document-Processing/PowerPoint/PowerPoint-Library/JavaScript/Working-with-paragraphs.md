@@ -5,7 +5,7 @@ description: Learn how to add, format, modify, and remove paragraphs and text in
 platform: document-processing
 control: PowerPoint
 documentation: ug
-keywords: javascript, powerpoint
+keywords: javascript, powerpointtocname: Document-Processing-SDKs-toc
 ---
 
 # Working with Paragraphs in JavaScript PowerPoint

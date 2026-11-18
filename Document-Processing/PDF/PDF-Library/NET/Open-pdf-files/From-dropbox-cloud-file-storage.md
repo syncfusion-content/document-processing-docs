@@ -4,7 +4,7 @@ description: Learn how to load PDF files from Dropbox cloud file storage in C# u
 keywords: dropbox, load pdf, open pdf, c# load pdf
 platform: document-processing
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Open PDF from Dropbox
 

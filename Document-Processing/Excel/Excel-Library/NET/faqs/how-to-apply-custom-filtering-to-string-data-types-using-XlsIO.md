@@ -3,7 +3,7 @@ title: How to Filter String Data in .NET Excel Library | Syncfusion
 description: Apply custom filters to string data in Excel worksheets using the Syncfusion .NET Excel Library with filtering options.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to apply custom string filters in .NET Excel Library

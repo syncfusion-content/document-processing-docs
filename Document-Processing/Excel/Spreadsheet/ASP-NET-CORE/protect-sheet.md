@@ -4,7 +4,7 @@ title: Protect Sheet in ASP.NET Core Spreadsheet | Syncfusion
 description: Learn about sheet protection in the Syncfusion ASP.NET Core Spreadsheet control, including protecting worksheets and restricting edits.
 platform: document-processing
 control: Protect Sheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

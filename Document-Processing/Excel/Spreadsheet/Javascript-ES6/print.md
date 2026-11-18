@@ -4,7 +4,7 @@ title: Print in TypeScript Spreadsheet | Syncfusion
 description: Print in TypeScript Spreadsheet enables users to print worksheet content and preview documents directly from the application.
 platform: document-processing
 control: Print
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Print in TypeScript Spreadsheet 

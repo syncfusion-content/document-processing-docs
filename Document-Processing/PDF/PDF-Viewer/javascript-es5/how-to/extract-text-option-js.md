@@ -4,7 +4,7 @@ title: How to Configure ExtractTextOption in JavaScript (ES5) | Syncfusion
 description: Use the extractTextOption property in the JavaScript (ES5) PDF Viewer to control how text is extracted and to manage memory usage during extraction.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Configure ExtractTextOption in JavaScript (ES5) PDF Viewer

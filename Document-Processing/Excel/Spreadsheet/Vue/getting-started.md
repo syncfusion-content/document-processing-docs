@@ -4,7 +4,7 @@ title: Getting Started with Vue Spreadsheet | Syncfusion
 description: Learn how to get started with the Syncfusion Vue Spreadsheet component in a Vue 2 application. Explore setup, features, and examples
 control: Getting started
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with Vue Spreadsheet

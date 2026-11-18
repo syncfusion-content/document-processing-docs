@@ -5,7 +5,7 @@ description: The keyboard shortcuts feature in Angular DOCX Editor enables users
 platform: document-processing
 control: Keyboard shortcut 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Keyboard Shortcuts in Angular DOCX Editor

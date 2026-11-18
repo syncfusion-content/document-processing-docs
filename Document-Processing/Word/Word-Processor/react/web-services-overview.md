@@ -5,7 +5,7 @@ description: Learn about the overview of web services in Syncfusion Essential St
 control: Web services 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Web Services in Syncfusion React DOCX Editor Control

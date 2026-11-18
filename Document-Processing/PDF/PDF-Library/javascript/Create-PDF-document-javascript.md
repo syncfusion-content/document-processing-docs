@@ -6,7 +6,7 @@ description: Learn how to get started with the Syncfusion JavaScript PDF in Java
 platform: document-processing
 control: PDF
 documentation: ug
-keywords: javascript, pdf, cdn
+keywords: javascript, pdf, cdntocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with JavaScript PDF in JavaScript app

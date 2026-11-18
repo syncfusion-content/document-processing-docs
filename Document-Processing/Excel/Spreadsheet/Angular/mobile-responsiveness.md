@@ -4,7 +4,7 @@ title: Mobile responsiveness in Angular Spreadsheet | Syncfusion
 description: Mobile responsiveness in Angular Spreadsheet adapts layouts and interactions for touch devices, ensuring a seamless user experience across screens.
 platform: document-processing
 control: Mobile responsiveness
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Mobile responsiveness in Angular Spreadsheet 

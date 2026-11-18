@@ -3,7 +3,7 @@ title: Performance benchmarks for PPTX to Image Conversion | Syncfusion
 description: Explore the performance benchmark results of PowerPoint to image conversion using the .NET PowerPoint Library with different slide counts
 platform: document-processing
 control: Presentation
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # PowerPoint to image performance metrics in .NET PowerPoint Library

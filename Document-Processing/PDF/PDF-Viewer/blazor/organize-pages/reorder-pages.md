@@ -5,7 +5,7 @@ description: How to rearrange pages using drag-and-drop in the Organize Pages UI
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Reorder pages using the Organize Pages view in Blazor PDF Viewer

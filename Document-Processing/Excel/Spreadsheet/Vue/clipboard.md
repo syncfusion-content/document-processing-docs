@@ -4,7 +4,7 @@ title: Clipboard in Vue Spreadsheet | Syncfusion
 description: Use clipboard operations in the Syncfusion Vue Spreadsheet to cut, copy, and paste data efficiently across worksheets.
 control: Clipboard 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Clipboard in Vue Spreadsheet

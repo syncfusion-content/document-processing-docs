@@ -4,7 +4,7 @@ title: Find and Replace in React Spreadsheet | Syncfusion
 description: Learn about find and replace in the Syncfusion React Spreadsheet component, including searching and updating cell content.
 control: Searching
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Find and Replace in React Spreadsheet

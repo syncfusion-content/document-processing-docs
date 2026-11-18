@@ -4,7 +4,7 @@ description: The layout types in UWP DOCX Editor offer multiple layout options, 
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: layout-types,pages,continuous,block,forum,blog
+keywords: layout-types,pages,continuous,block,forum,blogtocname: Document-Processing-SDKs-toc
 ---
 # Layout Types in UWP DOCX Editor
 

@@ -3,7 +3,7 @@ title: Color Scales in .NET Excel Library | Syncfusion
 description: Color-scale conditional formatting describes how Syncfusion .NET Excel Library applies color-scale rules in Excel documents.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Color Scales in .NET Excel Library

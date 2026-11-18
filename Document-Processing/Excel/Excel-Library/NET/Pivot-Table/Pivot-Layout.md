@@ -3,7 +3,7 @@ title: Pivot Table Layout in .NET Excel Library | Syncfusion
 description: Apply a layout to a pivot table in an Excel document using Excel Library pivot table layout options.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Pivot Table Layouts in .NET Excel Library

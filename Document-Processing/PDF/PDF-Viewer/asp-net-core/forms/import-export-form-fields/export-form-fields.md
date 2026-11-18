@@ -4,7 +4,7 @@ title: Export Form Fields in ASP.NET Core PDF Viewer | Syncfusion
 description: Export PDF form field data from the ASP.NET Core PDF Viewer in FDF, XFDF, and JSON formats, or as a JavaScript object for further processing.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Export Form Data in ASP.NET Core PDF Viewer

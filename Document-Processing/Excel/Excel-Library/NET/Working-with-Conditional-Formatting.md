@@ -3,7 +3,7 @@ title: Conditional Formatting in .NET Excel Library | Syncfusion
 description: Conditional formatting section describes how the Syncfusion .NET Excel Library supports highlighting data in Excel documents.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Conditional Formatting in .NET Excel Library

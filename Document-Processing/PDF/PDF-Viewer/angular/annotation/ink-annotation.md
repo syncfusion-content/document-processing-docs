@@ -5,7 +5,7 @@ description: Enable, draw, customize, and manage Ink (freehand) annotations in t
 platform: document-processing
 control: Ink annotation
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Ink Annotation in Angular PDF Viewer

@@ -4,7 +4,7 @@ title: Accessibility in ASP.NET Core PDF Viewer | Syncfusion
 description: Accessibility features in the ASP.NET Core PDF Viewer help all users read and interact with PDF content using assistive technologies.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 # Accessibility in ASP.NET Core PDF Viewer
 

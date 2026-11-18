@@ -4,7 +4,7 @@ title: Change Column Header Text in React Spreadsheet | Syncfusion
 description: Learn about changing column header text in the Syncfusion React Spreadsheet component to customize worksheet headers.
 control: Rows and Columns 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Change Column Header Text in React Spreadsheet

@@ -4,7 +4,7 @@ title: Text Format in Blazor DOCX Editor | Syncfusion
 description: Text format properties in Blazor DOCX Editor enables customizing text appearance with font styles, colors, highlighting, and character formatting options.
 platform: document-processing
 control: DOCX Editor
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Text Format in Blazor DOCX Editor

@@ -4,7 +4,7 @@ title: ASP.NET MVC SpreadsheetEditor Collaboration Integration | Syncfusion
 description: Learn how to integrate real-time collaborative editing into the Syncfusion ASP.NET MVC SpreadsheetEditor application.
 control: Collaborative Editing
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Collaborative editing integration in ASP.NET MVC SpreadsheetEditor

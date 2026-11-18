@@ -4,7 +4,7 @@ title: How to Optimize SFDT Files in Blazor DOCX Editor | Syncfusion
 description: Optimize SFDT files in Syncfusion® Blazor DOCX Editor to reduce file size, improve performance, and enhance document loading and processing efficiency.
 platform: document-processing
 control: DOCX Editor
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Optimize SFDT Files in Blazor DOCX Editor

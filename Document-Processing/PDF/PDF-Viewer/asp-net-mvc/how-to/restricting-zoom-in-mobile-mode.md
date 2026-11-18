@@ -4,7 +4,7 @@ title: How to Restrict Zoom on Mobile Devices in ASP.NET MVC | Syncfusion
 description: Restrict the zoom percentage on mobile devices in the ASP.NET MVC PDF Viewer using minZoom and maxZoom to keep the UI usable on small screens.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Restrict Zoom on Mobile Devices in ASP.NET MVC PDF Viewer

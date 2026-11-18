@@ -3,7 +3,7 @@ title: Conditional Formatting in JavaScript Excel | Syncfusion
 description: Add and configure conditional formatting rules, formulas, and differential formats with the Syncfusion JavaScript Excel Library.
 platform: document-processing
 control: Excel
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Conditional Formatting in JavaScript Excel

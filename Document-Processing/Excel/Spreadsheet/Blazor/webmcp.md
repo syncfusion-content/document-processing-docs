@@ -4,7 +4,7 @@ title: WebMCP Integration in Blazor Spreadsheet | Syncfusion
 description: WebMCP integration in Blazor Spreadsheet explains setup, tool registration, configuration, and API reference with code examples.
 platform: document-processing
 control: WebMCP
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # WebMCP Integration in Blazor Spreadsheet

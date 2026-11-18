@@ -4,7 +4,7 @@ title: How to Add Headers to AJAX Requests in JavaScript (ES5) | Syncfusion
 description: Add custom headers to PDF Viewer AJAX requests in the JavaScript (ES5) PDF Viewer using ajaxRequestSettings and the ajaxHeaders configuration object.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Add Headers to AJAX Requests in JavaScript (ES5) PDF Viewer

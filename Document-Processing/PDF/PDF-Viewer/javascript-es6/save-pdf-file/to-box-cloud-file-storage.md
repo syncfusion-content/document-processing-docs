@@ -4,7 +4,7 @@ title: Save PDFs to Box Storage in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Save PDF files from the JavaScript (ES6) PDF Viewer to Box cloud storage using a server-backed web service for authentication and secure uploads.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Save PDF Files to Box Cloud Storage in JavaScript (ES6) PDF Viewer

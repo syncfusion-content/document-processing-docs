@@ -4,7 +4,7 @@ title: Data Binding in React Spreadsheet | Syncfusion
 description: Learn about data binding in the Syncfusion React Spreadsheet component, including data source integration and data management.
 control: Data binding 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Data Binding in React Spreadsheet

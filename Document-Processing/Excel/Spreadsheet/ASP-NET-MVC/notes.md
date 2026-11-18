@@ -4,7 +4,7 @@ title: Notes in ASP.NET MVC Spreadsheet | Syncfusion
 description: Add and manage notes in the Syncfusion ASP.NET MVC Spreadsheet to provide contextual information within worksheets.
 platform: document-processing
 control: Notes
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Notes in ASP.NET MVC Spreadsheet

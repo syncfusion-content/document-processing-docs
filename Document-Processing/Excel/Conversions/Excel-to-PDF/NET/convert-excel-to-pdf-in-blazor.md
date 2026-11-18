@@ -3,7 +3,7 @@ title: Excel to PDF conversion in Blazor | Syncfusion
 description: Blazor Excel to PDF section explains how to convert Excel documents to PDF in Blazor using Syncfusion Blazor Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Excel to PDF Conversion in Blazor using Excel Library

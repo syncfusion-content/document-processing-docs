@@ -5,7 +5,7 @@ description: The feature module in the React PDF Viewer lets you load only the c
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Feature Module in React PDF Viewer

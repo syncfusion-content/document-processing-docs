@@ -4,7 +4,7 @@ title: Scrolling in ASP.NET MVC Spreadsheet | Syncfusion
 description: Explore scrolling functionality in the Syncfusion ASP.NET MVC Spreadsheet for smooth navigation across worksheets.
 platform: document-processing
 control: Scrolling
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

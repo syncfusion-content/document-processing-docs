@@ -5,7 +5,7 @@ description: Learn about the measurement annotation in the Vue PDF Viewer and ho
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Measurement Annotation in Vue PDF Viewer

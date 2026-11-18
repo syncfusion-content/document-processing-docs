@@ -4,7 +4,7 @@ title: Disable Optimized Measuring in ASP.NET Core DOCX Editor | Syncfusion
 description: Disable optimized text measuring in Syncfusion® ASP.NET Core DOCX Editor to retain document pagination behavior and maintain layout consistency.
 platform: document-processing
 control: Disable Optimized Text Measuring
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

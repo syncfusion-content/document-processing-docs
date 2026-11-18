@@ -4,7 +4,7 @@ title: How to Highlight, Underline, or Strike Out Text | Syncfusion
 description: Highlight, underline, and strike out text in the JavaScript (ES6) PDF Viewer using the built-in text markup tools in the annotation toolbar.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Highlight, Underline, or Strike Out Text in JavaScript (ES6)

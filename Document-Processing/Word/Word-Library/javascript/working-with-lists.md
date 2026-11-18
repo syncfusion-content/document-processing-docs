@@ -3,7 +3,7 @@ title: List in JavaScript Word | Syncfusion
 description: Learn how to create and customize numbered and bulleted lists in Word documents using the Syncfusion JavaScript Word library.
 platform: document-processing
 control: Word Library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # List in JavaScript Word Library

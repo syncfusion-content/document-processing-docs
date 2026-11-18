@@ -4,7 +4,7 @@ title: How to Show Custom Stamp Items in ASP.NET MVC PDF Viewer | Syncfusion
 description: Display custom items in the custom stamp dropdown in the ASP.NET MVC PDF Viewer using customStampSettings to provide tailored stamp options.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Show Custom Stamp Items in ASP.NET MVC PDF Viewer

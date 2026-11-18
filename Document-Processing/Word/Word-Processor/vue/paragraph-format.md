@@ -5,7 +5,7 @@ description: The paragraph format feature in Vue DOCX Editor enables users to cu
 control: Paragraph format 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Paragraph Format in Vue DOCX Editor

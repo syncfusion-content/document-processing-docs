@@ -4,7 +4,7 @@ title: From Google Cloud Storage in React PDF Viewer | Syncfusion
 description: Load and display PDF files stored in Google Cloud Storage in the React PDF Viewer using a server-backed web service for authentication.
 control: PDF Viewer
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Open PDF from Google Cloud Storage in React PDF Viewer

@@ -5,7 +5,7 @@ description: A complete list of events in the JavaScript (ES6) PDF Viewer, with 
 platform: document-processing
 control: PDF Viewer 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Events in JavaScript (ES6) PDF Viewer

@@ -5,7 +5,7 @@ description: Learn about the sticky notes annotation in the Vue PDF Viewer and h
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Sticky Notes Annotation in Vue PDF Viewer

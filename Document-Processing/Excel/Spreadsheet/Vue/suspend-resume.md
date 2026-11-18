@@ -4,7 +4,7 @@ title: Suspend and Resume UI Refresh in Vue Spreadsheet | Syncfusion
 description: Improve Spreadsheet performance using suspendRefresh and resumeRefresh APIs to batch updates and reduce unnecessary rendering.
 control: Spreadsheet
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Suspend and Resume UI Refresh in Vue Spreadsheet

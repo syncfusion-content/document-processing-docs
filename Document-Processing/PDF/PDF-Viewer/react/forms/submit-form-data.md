@@ -5,7 +5,7 @@ description: Submit filled PDF form data from the React PDF Viewer to a backend 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Submit Form Data to a Server in React PDF Viewer

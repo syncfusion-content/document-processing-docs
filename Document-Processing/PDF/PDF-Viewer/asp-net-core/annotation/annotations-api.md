@@ -5,7 +5,7 @@ description: Use the annotations API in the ASP.NET Core PDF Viewer to read, add
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Annotations API in ASP.NET Core PDF Viewer
@@ -45,7 +45,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## annotationDrawingOptions
@@ -68,7 +68,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## annotationSelectorSettings
@@ -100,7 +100,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## annotationSettings
@@ -132,7 +132,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## areaSettings
@@ -178,7 +178,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## arrowSettings
@@ -227,7 +227,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## circleSettings
@@ -273,7 +273,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## customStamp
@@ -297,7 +297,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## customStampSettings
@@ -322,7 +322,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## distanceSettings
@@ -356,7 +356,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableAnnotation
@@ -377,7 +377,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableAnnotationToolbar
@@ -398,7 +398,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableFreeText
@@ -419,7 +419,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableHandwrittenSignature
@@ -440,7 +440,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableInkAnnotation
@@ -461,7 +461,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableMeasureAnnotation
@@ -482,7 +482,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableMultiPageAnnotation
@@ -503,7 +503,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableShapeAnnotation
@@ -524,7 +524,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableShapeLabel
@@ -545,7 +545,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableStampAnnotations
@@ -566,7 +566,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableStickyNotesAnnotation
@@ -587,7 +587,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableTextMarkupAnnotation
@@ -608,7 +608,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableTextMarkupResizer
@@ -629,7 +629,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## exportAnnotationFileName
@@ -650,7 +650,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## freeTextSettings
@@ -685,7 +685,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## handWrittenSignatureSettings
@@ -723,7 +723,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## highlightSettings
@@ -753,7 +753,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## inkAnnotationSettings
@@ -782,7 +782,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## isAnnotationToolbarVisible
@@ -804,7 +804,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## lineSettings
@@ -836,7 +836,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## measurementSettings
@@ -857,7 +857,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## perimeterSettings
@@ -888,7 +888,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## polygonSettings
@@ -918,7 +918,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## radiusSettings
@@ -948,7 +948,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## rectangleSettings
@@ -978,7 +978,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## shapeLabelSettings
@@ -1002,7 +1002,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## stampSettings
@@ -1035,7 +1035,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## stickyNotesSettings
@@ -1064,7 +1064,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## strikethroughSettings
@@ -1094,7 +1094,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## underlineSettings
@@ -1124,7 +1124,7 @@ window.onload = function () {
 </script>
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## volumeSettings

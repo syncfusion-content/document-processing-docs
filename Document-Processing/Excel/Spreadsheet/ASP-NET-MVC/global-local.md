@@ -4,7 +4,7 @@ title: Globalization in ASP.NET MVC Spreadsheet | Syncfusion
 description: Learn how to localize and globalize the Syncfusion ASP.NET MVC Spreadsheet with culture-specific formatting and translations.
 platform: document-processing
 control: Global Local
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Globalization in ASP.NET MVC Spreadsheet

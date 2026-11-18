@@ -4,7 +4,7 @@ title: How to Display a PDF Without Downloading in ASP.NET MVC | Syncfusion
 description: Display a PDF in the ASP.NET MVC PDF Viewer without downloading the file to the user's device, using inline preview or server streaming.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Display a PDF Without Downloading in ASP.NET MVC PDF Viewer

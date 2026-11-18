@@ -4,7 +4,7 @@ title: How to Change Active Sheet in Vue Spreadsheet | Syncfusion
 description: Change the active sheet index when importing a workbook in Syncfusion Vue Spreadsheet to display the required worksheet by default.
 control: Spreadsheet 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Change Active Sheet in Vue Spreadsheet

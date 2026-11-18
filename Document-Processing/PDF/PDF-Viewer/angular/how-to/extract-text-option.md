@@ -5,7 +5,7 @@ description: Use the extractTextOption property in the Angular PDF Viewer to con
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Configure ExtractTextOption in Angular PDF Viewer

@@ -5,7 +5,7 @@ description: Enable print rotation in the Vue PDF Viewer so landscape documents 
 platform: document-processing
 control: Print
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Enable Print Rotation in Vue PDF Viewer

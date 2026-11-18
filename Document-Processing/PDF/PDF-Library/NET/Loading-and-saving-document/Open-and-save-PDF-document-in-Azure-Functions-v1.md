@@ -3,7 +3,7 @@ title: Open and Save PDF Document in Azure Functions v1 | Syncfusion
 description: Learn how to open and save PDF documents in Azure Functions v1 using Syncfusion .NET PDF library without Adobe Acrobat dependency.
 platform: document-processing
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Open and Save PDF Document in Azure Functions v1

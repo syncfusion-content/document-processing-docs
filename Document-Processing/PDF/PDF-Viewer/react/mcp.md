@@ -5,7 +5,7 @@ description: Set up the Syncfusion React PDF Viewer MCP server so AI tools can i
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # React PDF Viewer MCP Server Setup

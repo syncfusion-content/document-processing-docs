@@ -5,7 +5,7 @@ description: Highlight, underline, and strike out text in the Vue PDF Viewer usi
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Highlight, Underline, or Strike Out Text in Vue PDF Viewer

@@ -4,7 +4,7 @@ title: Migration from PDF Viewer (Classic) to Blazor PDF Viewer | Syncfusion
 description: This section explains the features available in the new PDF Viewer component compared to PDF Viewer (Classic).
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Migration from PDF Viewer (Classic) to PDF Viewer

@@ -4,7 +4,7 @@ title: Clipboard in ASP.NET Core DOCX editor | Syncfusion
 description: The clipboard support in ASP.NET Core DOCX Editor provides copy, cut, paste, and local paste operations for efficient content management.
 platform: document-processing
 control: Clipboard
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

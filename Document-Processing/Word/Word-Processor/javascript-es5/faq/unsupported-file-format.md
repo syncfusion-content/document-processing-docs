@@ -5,7 +5,7 @@ description: Learn about the supported file formats in JavaScript DOCX Editor fo
 platform: document-processing
 control: Unsupported file 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Supported File Formats in JavaScript DOCX Editor

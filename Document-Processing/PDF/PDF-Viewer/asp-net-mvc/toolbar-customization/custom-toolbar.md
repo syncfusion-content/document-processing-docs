@@ -4,7 +4,7 @@ title: Custom Toolbar in ASP.NET MVC PDF Viewer | Syncfusion
 description: Create a custom toolbar in the ASP.NET MVC PDF Viewer, including adding commands and modifying the built-in tools to match your workflow.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Custom Toolbar in ASP.NET MVC PDF Viewer

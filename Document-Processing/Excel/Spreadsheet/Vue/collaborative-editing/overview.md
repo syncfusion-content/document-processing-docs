@@ -4,7 +4,7 @@ title: Collaborative Editing in Vue SpreadsheetEditor | Syncfusion
 description: Learn how real-time collaborative editing synchronizes workbook changes, user presence, and selections in the Vue SpreadsheetEditor.
 control: Collaborative Editing
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Collaborative editing in Vue SpreadsheetEditor

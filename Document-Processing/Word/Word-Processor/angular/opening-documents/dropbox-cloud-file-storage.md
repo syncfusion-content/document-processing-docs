@@ -5,7 +5,7 @@ description: Open documents from Dropbox cloud storage in Angular DOCX Editor, e
 platform: document-processing
 control: Open document from Dropbox cloud file storage
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Open Documents from Dropbox in Angular DOCX Editor

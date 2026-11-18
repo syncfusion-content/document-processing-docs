@@ -5,7 +5,7 @@ description: Enable, draw, customize, and manage Perimeter measurement annotatio
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Perimeter Annotation in JavaScript (ES5) PDF Viewer

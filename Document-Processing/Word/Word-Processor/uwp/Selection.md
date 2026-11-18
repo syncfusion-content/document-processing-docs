@@ -4,7 +4,7 @@ description: The selection in UWP DOCX Editor supports selecting a portion of th
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: selection,text-position,hierarchy-index,multi-selection,selection-ranges,lost-focus-behavior,editing-context
+keywords: selection,text-position,hierarchy-index,multi-selection,selection-ranges,lost-focus-behavior,editing-contexttocname: Document-Processing-SDKs-toc
 ---
 # Selection in UWP DOCX Editor
 

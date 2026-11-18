@@ -5,7 +5,7 @@ description: Preprocess PDF documents with the Syncfusion PDF Library before dis
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Preprocess PDF Document in React PDF Viewer

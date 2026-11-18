@@ -4,7 +4,7 @@ title: How to Check Whether a Loaded PDF Document Is Edited | Syncfusion
 description: Learn how to check whether the loaded pdf document is edited or not in Syncfusion UWP PDF Viewer with examples and implementation details.
 platform: document-processing
 control: PDF viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to check whether loaded PDF document is edited in UWP PDF Viewer

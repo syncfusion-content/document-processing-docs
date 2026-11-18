@@ -5,7 +5,7 @@ description: The collaborative editing feature in Vue DOCX Editor supports real-
 platform: document-processing
 control: Collaborative Editing 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Collaborative Editing in Vue DOCX Editor with Redis in ASP.NET Core

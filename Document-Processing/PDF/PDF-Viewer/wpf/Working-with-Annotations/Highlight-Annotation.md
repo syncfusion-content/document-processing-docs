@@ -4,7 +4,7 @@ title: Highlight text in WPF PDF Viewer | Syncfusion
 description: The highlight annotation feature in WPF PDF Viewer allows users to mark important text in PDFs for easier review and reference.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Highlight text in PDF files using WPF Pdf Viewer

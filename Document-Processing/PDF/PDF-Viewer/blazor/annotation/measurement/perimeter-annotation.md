@@ -4,7 +4,7 @@ title: Add Perimeter Annotations in Blazor PDF Viewer  | Syncfusion
 description: Learn how to enable, draw, customize, and manage Perimeter annotations in the Blazor PDF Viewer component and more details.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Add Perimeter Annotations in Blazor PDF Viewer 

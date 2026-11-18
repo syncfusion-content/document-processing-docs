@@ -5,7 +5,7 @@ description: Learn about the Syncfusion TypeScript PDF Viewer Semantic Text Comp
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Syncfusion TypeScript PDF Viewer Semantic Text Comparison

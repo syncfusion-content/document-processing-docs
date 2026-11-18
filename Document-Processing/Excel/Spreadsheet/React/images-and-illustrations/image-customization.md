@@ -4,7 +4,7 @@ title: Image Customization in React Spreadsheet | Syncfusion
 description: Learn about image customization in the Syncfusion React Spreadsheet component, including image size and positioning options.
 control: Images
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Image Customization in React Spreadsheet

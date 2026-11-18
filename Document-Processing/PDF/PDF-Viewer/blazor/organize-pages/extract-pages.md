@@ -5,7 +5,7 @@ description: Learn all about extracting pages using the Organize Pages tool in t
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Extract Pages in Blazor PDF Viewer

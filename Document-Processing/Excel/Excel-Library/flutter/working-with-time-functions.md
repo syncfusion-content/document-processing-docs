@@ -4,7 +4,7 @@ title: Excel Time Functions in Flutter Excel Library | Syncfusion
 description: The Flutter Excel Library lets users calculate and manage time-based values in Excel worksheet cells.
 platform: document-processing
 control: Excel
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Time Function Formulas in Flutter Excel Library

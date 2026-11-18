@@ -5,7 +5,7 @@ description: Reference documentation for text selection properties, methods, and
 platform: document-processing
 control: Text selection
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Text Selection API and Events in Angular PDF Viewer

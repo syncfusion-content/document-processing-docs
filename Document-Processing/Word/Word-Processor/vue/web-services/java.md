@@ -5,7 +5,7 @@ description: Configure Java web services in the Vue DOCX Editor to handle server
 control: Java 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Java Web Service in Vue DOCX Editor

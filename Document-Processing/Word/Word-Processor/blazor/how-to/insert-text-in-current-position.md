@@ -4,7 +4,7 @@ title: How to Insert Content at Cursor in Blazor DOCX Editor | Syncfusion
 description: Insert text, paragraphs, and rich-text content in the current cursor position in Syncfusion® Blazor DOCX Editor control, its elements and more.
 platform: document-processing
 control: DOCX Editor
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Insert Content at Cursor in Blazor DOCX Editor

@@ -4,7 +4,7 @@ title: Retrieve Bookmark Content in ASP.NET Core DOCX Editor | Syncfusion
 description: Retrieve bookmark content as plain text and retrieve document data in SFDT format using Syncfusion® ASP.NET Core DOCX Editor.
 platform: document-processing
 control: Retrieve The Whole Document And Bookmark Content As Text
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Retrieve Bookmark Content as Text in ASP.NET Core DOCX Editor

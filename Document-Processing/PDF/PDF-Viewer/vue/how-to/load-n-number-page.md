@@ -5,7 +5,7 @@ description: Load a specific number of pages during the initial render of the Vu
 control: Load N number of pages on initial loading
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Load Pages on Initial Load in Vue PDF Viewer

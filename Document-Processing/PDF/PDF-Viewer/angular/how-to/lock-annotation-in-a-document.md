@@ -5,7 +5,7 @@ description: Lock square or rectangle annotations in the Angular PDF Viewer so u
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Lock Annotations in Angular PDF Viewer

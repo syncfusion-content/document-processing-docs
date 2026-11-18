@@ -5,7 +5,7 @@ description: Display custom items in the custom stamp dropdown in the Vue PDF Vi
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Show Custom Stamp Items in Vue PDF Viewer

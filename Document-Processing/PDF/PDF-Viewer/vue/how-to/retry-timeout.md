@@ -5,7 +5,7 @@ description: Configure retry timeout settings in the Vue PDF Viewer so failed re
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Configure Retry Timeout in Vue PDF Viewer

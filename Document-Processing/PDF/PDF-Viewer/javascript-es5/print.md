@@ -5,7 +5,7 @@ description: Learn about the print in the JavaScript (ES5) PDF Viewer and how it
 platform: document-processing
 control: Print
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 # Print in JavaScript (ES5) PDF Viewer
 

@@ -5,7 +5,7 @@ description: Enable the ruler in Syncfusion® Angular DOCX Editor to set margins
 platform: document-processing
 control: Enable Ruler
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Enable Ruler in Angular DOCX Editor

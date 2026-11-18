@@ -5,7 +5,7 @@ description: Save edited or annotated PDFs from the Angular PDF Viewer to a serv
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Save PDF Files in Angular PDF Viewer

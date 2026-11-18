@@ -6,7 +6,7 @@ control: PowerPoint
 platform: document-processing
 documentation: ug
 keywords: powerpoint, vue, vue 3, vue 2, javascript
-canonical_url: https://help.syncfusion.com/document-processing/presentation/pptx-library/javascript/create-powerpoint-document-vue
+canonical_url: https://help.syncfusion.com/document-processing/presentation/pptx-library/javascript/create-powerpoint-document-vuetocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with JavaScript PowerPoint in Vue app

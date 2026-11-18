@@ -4,7 +4,7 @@ description: Learn how to open and save PDF documents in ASP.NET Core applicatio
 platform: document-processing
 control: PDF
 documentation: UG
-keywords: .net core save pdf, .net core load pdf, c# save pdf, c# load pdf
+keywords: .net core save pdf, .net core load pdf, c# save pdf, c# load pdftocname: Document-Processing-SDKs-toc
 ---
 
 # Open and Save PDF Document in ASP.NET Core

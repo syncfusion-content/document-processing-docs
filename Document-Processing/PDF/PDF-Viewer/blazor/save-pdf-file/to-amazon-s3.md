@@ -4,7 +4,7 @@ title: Save PDF files to AWS S3 in PDF Viewer  | Syncfusion
 description: Learn here all about how to save PDF files to AWS S3 in Blazor PDF Viewer component and much more details.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Save PDF to AWS S3 in Blazor PDF Viewer 

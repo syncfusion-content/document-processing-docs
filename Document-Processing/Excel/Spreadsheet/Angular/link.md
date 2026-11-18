@@ -4,7 +4,7 @@ title: Hyperlink in Angular Spreadsheet | Syncfusion
 description: Hyperlink in Angular Spreadsheet allow users to insert and manage hyperlinks, enabling quick navigation to web pages, files, and worksheets.
 platform: document-processing
 control: Link 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Hyperlink in Angular Spreadsheet 

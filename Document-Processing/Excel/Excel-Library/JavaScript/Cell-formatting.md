@@ -3,7 +3,7 @@ title: Cell Formatting in JavaScript Excel | Syncfusion
 description: Apply fonts, fills, borders, alignment, number formats, and rich text with the Syncfusion JavaScript Excel Library.
 platform: document-processing
 control: Excel
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Cell Formatting in JavaScript Excel

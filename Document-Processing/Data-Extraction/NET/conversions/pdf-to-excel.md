@@ -4,7 +4,7 @@ description: Extract structured data from PDF documents and images into Excel fi
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG
-keywords: Assemblies
+keywords: Assembliestocname: Document-Processing-SDKs-toc
 ---
 
 # Extract data as Excel from PDF or Image

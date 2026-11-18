@@ -3,7 +3,7 @@ title: Create Markdown document in Blazor | Syncfusion
 description: Create Markdown documents without external dependencies in Blazor applications using Syncfusion<sup>&reg;</sup> .NET Markdown library.
 platform: document-processing
 control: Markdown
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Create Markdown Document in Blazor

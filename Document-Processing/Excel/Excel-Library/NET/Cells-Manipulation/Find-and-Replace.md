@@ -3,7 +3,7 @@ title: Find and Replace in .NET Excel Library | Syncfusion
 description: Find and replace describes how the Syncfusion .NET Excel Library searches and replaces text, numbers, formulas, values, and comments.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Find and Replace in .NET Excel Library

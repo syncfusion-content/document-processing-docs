@@ -5,7 +5,7 @@ description: Use the Form Designer in the ASP.NET Core PDF Viewer to create, edi
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Form Designer in ASP.NET Core PDF Viewer

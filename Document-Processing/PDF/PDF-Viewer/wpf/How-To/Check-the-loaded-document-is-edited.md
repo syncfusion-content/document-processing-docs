@@ -4,7 +4,7 @@ title: How to Check the document is edited in WPF Pdf Viewer | Syncfusion
 description: Check if a loaded document has been edited in Syncfusion WPF PDF Viewer using IsDocumentEdited property. 
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Check the loaded document is edited in WPF Pdf Viewer 

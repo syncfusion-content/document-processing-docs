@@ -5,7 +5,7 @@ description: Disable optimized text measuring in Syncfusion® Angular DOCX Edito
 platform: document-processing
 control: Disable optimized text measuring
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Disable Optimized Text Measuring in Angular DOCX Editor

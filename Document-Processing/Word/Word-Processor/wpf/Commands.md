@@ -4,7 +4,7 @@ description: The commands in WPF DOCX Editor offer a loosely coupled way to hand
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: commands
+keywords: commandstocname: Document-Processing-SDKs-toc
 ---
 # Commands in WPF DOCX Editor
 

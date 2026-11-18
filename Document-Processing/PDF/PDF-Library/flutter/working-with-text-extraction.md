@@ -4,7 +4,7 @@ title: Text Extraction in Flutter PDF Library | Syncfusion
 description: Learn how to extract and find text from PDF pages using Syncfusion Flutter PDF Library with practical code examples.
 platform: document-processing
 control: PDF
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Text Extraction in Flutter PDF

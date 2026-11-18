@@ -5,7 +5,7 @@ description: Learn how to unload a PDF document and release associated resources
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-keywords: .net maui pdf viewer, unload pdf document, pdf viewer memory management, sfpdfviewer unload document, release pdf resources, maui pdf viewer
+keywords: .net maui pdf viewer, unload pdf document, pdf viewer memory management, sfpdfviewer unload document, release pdf resources, maui pdf viewertocname: Document-Processing-SDKs-toc
 ---
 
 # Unload a document in .NET MAUI PDF Viewer

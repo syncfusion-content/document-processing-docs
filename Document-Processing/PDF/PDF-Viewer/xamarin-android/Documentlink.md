@@ -4,7 +4,7 @@ title:  Document link in PDF viewer Xamarin.Android | Syncfusion
 description: Document Link Annotation or Table of content support in PDF viewer Xamarin.Android allows the user to navigate to specific destination within PDF document.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 #  Document link in PDF viewer Xamarin.Android

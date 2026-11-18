@@ -4,7 +4,7 @@ description: Learn how to get started with the Syncfusion ASP.NET MVC PDF to Ima
 platform: document-processing
 control: PDF to image
 documentation: UG
-keywords: Assemblies
+keywords: Assembliestocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with ASP.NET MVC PDF to Image Library

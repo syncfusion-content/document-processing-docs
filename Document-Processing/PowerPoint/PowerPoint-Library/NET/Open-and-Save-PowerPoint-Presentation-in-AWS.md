@@ -3,7 +3,7 @@ title: Open and save Presentation in AWS | Syncfusion
 description: Learn how to open and save Presentation in Amazon Web Services (AWS) using .NET Core PowerPoint library (Presentation) in C#.
 platform: document-processing
 control: PowerPoint
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Open and save Presentation in Amazon Web Services (AWS)

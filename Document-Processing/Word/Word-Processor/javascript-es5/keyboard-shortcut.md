@@ -5,7 +5,7 @@ description: The keyboard shortcuts feature in JavaScript DOCX Editor enables us
 platform: document-processing
 control: Keyboard shortcut 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Keyboard Shortcuts in JavaScript DOCX Editor

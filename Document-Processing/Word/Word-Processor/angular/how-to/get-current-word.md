@@ -5,7 +5,7 @@ description: Get the current word or paragraph content as plain text and SFDT fo
 platform: document-processing
 control: Get current word
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Get Current Word in Angular DOCX Editor

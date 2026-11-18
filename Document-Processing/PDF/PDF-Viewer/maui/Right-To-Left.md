@@ -5,7 +5,7 @@ description: Learn how to enable right-to-left layout in the Syncfusion<sup>®</
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf viewtocname: Document-Processing-SDKs-toc
 ---
 
 # Right-to-Left Layout in .NET MAUI PDF Viewer

@@ -5,7 +5,7 @@ description: Focus on a specific PDF form field in the JavaScript (ES5) PDF View
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Focus a Form Field After Loading in JavaScript (ES5) PDF Viewer

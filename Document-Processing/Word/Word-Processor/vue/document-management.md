@@ -5,7 +5,7 @@ description: Document management in Vue DOCX Editor provides editing restriction
 control: Document management 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Document Management in Vue DOCX Editor

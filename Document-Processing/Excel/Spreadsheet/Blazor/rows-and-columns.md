@@ -4,7 +4,7 @@ title: Rows and Columns in Blazor Spreadsheet | Syncfusion
 description: Learn how to manage rows and columns in the Syncfusion Blazor Spreadsheet, including resizing and customization.
 platform: document-processing
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Rows and Columns in Blazor Spreadsheet

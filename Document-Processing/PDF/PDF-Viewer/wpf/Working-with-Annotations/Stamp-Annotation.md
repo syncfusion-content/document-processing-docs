@@ -4,7 +4,7 @@ title: Stamp Annotation in WPF Pdf Viewer control | Syncfusion
 description: The stamp annotation feature in WPF PDF Viewer applies visual stamps like APPROVED or DRAFT to PDF pages for document status indication.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Stamp Annotation in WPF Pdf Viewer

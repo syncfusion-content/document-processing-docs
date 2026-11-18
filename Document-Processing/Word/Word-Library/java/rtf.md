@@ -3,7 +3,7 @@ title: Convert Word to RTF and vice versa in Java Word | Syncfusion
 description: This section illustrates how to perform RTF to Word conversion and Word to RTF conversions using Syncfusion Word library 
 platform: document-processing
 control: Word Library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Convert Word to RTF and vice versa in Java Word

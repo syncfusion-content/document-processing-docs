@@ -4,7 +4,7 @@ title: React SpreadsheetEditor ASP.NET Core Redis Setup | Syncfusion
 description: Learn how to configure the ASP.NET Core Collaboration Server and Redis for React SpreadsheetEditor collaborative editing.
 control: Collaborative Editing
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Using Redis Cache with ASP.NET Core

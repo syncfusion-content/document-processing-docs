@@ -3,7 +3,7 @@ title: How to Merge Workbooks in .NET Excel Library | Syncfusion
 description: Merge several Excel files from more than one workbook into a single file using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to merge multiple workbooks in .NET Excel Library

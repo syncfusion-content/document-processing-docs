@@ -3,7 +3,7 @@ title: Create and edit PowerPoint files in WPF |Syncfusion<sup>&reg;</sup>|
 description: WPF PowerPoint library to create, read, edit and convert PowerPoint files in WPF applications. Supports text, shape, chart, table and combine PowerPoints.
 platform: document-processing
 control: PowerPoint
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Create, read and edit a PowerPoint file in WPF

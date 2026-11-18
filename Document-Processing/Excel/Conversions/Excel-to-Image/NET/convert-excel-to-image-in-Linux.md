@@ -3,7 +3,7 @@ title: Excel to Image conversion in Linux | Syncfusion
 description: Linux Excel to Image section explains how to convert Excel documents to images in .NET Core Linux without Microsoft Office.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Excel to Image Conversion in Linux using Excel Library
 

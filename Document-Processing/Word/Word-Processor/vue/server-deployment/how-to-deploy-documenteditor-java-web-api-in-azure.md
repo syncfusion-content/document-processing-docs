@@ -5,7 +5,7 @@ description: Deploy the Syncfusion® Vue DOCX Editor Java Web API in Azure App f
 control: How to deploy documenteditor java web api in azure 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 # How to Deploy Vue DOCX Editor Java Web API in Azure App
 

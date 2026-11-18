@@ -4,7 +4,7 @@ title: ErrorOccured Event in WinForm PDFViewer | Syncfusion
 description: The ErrorOccurred event in PdfViewerControl enables applications to detect, handle, and respond to PDF loading and processing errors.
 platform: document-processing
 control: PdfViewerControl
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # ErrorOccured Event in WinForm PDFViewer

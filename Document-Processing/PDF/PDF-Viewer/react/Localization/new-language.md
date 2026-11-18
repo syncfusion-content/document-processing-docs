@@ -5,7 +5,7 @@ description: Localize the React PDF Viewer to a new language by providing cultur
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Set a New Language in React PDF Viewer

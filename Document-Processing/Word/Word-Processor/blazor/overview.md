@@ -4,7 +4,7 @@ title: About Syncfusion Blazor DOCX Editor Control | Syncfusion
 description: Learn about the introduction of Syncfusion Essential Studio Blazor DOCX Editor control and more details.
 platform: document-processing
 control: DOCX Editor
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion Blazor DOCX Editor Control

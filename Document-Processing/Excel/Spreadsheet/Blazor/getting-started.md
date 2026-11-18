@@ -4,7 +4,7 @@ title: Getting Started with Blazor WebAssembly Spreadsheet | Syncfusion
 description: Learn how to get started with the Syncfusion Blazor Spreadsheet in a Blazor WebAssembly application.
 platform: document-processing
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with Blazor WebAssembly Spreadsheet

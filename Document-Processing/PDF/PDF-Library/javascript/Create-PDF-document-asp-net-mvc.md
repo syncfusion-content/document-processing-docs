@@ -6,7 +6,7 @@ platform: document-processing
 control: PDF
 documentation: ug
 keywords: mvc, asp.net mvc, javascript, pdf
-canonical_url: https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-asp-net-mvc
+canonical_url: https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-asp-net-mvctocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with JavaScript PDF in ASP.NET MVC app

@@ -4,7 +4,7 @@ description: Learn here all about loading, saving, and removing macros in a .NET
 platform: document-processing
 control: Presentation
 documentation: UG
-keywords: macros in powerpoint, pptm, potm, vba, hasmacros, removemacros
+keywords: macros in powerpoint, pptm, potm, vba, hasmacros, removemacrostocname: Document-Processing-SDKs-toc
 ---
 # Working with Macros in PowerPoint Presentation
 

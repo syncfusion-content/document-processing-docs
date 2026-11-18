@@ -5,7 +5,7 @@ description: Override default keyboard shortcuts in Syncfusion® TypeScript DOCX
 platform: document-processing
 control: Override Keyboard Shortcuts
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Override Keyboard Shortcuts in TypeScript DOCX Editor

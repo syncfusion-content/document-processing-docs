@@ -5,7 +5,7 @@ description: Save edited or annotated PDFs from the Vue PDF Viewer to a server, 
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Save PDF Files in Vue PDF Viewer

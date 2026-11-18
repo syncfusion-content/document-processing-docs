@@ -4,7 +4,7 @@ title: Table Format in Blazor DOCX Editor | Syncfusion
 description: The table format feature in Blazor DOCX Editor enables customizing cell margins, spacing, alignment, borders, and sizing to create structured tables.
 platform: document-processing
 control: DOCX Editor
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Table format in Blazor DOCX Editor

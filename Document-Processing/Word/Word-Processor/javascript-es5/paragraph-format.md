@@ -5,7 +5,7 @@ description: The paragraph format feature in JavaScript DOCX Editor enables user
 platform: document-processing
 control: Paragraph format 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Paragraph Format in JavaScript DOCX Editor

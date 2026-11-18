@@ -5,7 +5,7 @@ description: Pass an authorization token to the Angular PDF Viewer to securely a
 platform: document-processing
 control: Include authorization token
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Use an Authorization Token in Angular PDF Viewer

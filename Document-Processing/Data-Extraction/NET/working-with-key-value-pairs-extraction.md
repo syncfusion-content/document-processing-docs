@@ -4,7 +4,7 @@ description: Extract key-value pairs from PDFs and images using Smart Data Extra
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG
-keywords: Key-Value Pair Extraction, Form Data Extraction, JSON Output
+keywords: Key-Value Pair Extraction, Form Data Extraction, JSON Outputtocname: Document-Processing-SDKs-toc
 ---
 
 # Key-Value Pair Extraction in .NET Smart Data Extractor

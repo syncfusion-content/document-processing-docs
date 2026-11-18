@@ -3,7 +3,7 @@ title: How to Add Multiple Hyperlinks in .NET Excel Library | Syncfusion
 description: Identify how many hyperlinks a single Excel cell can contain using the Syncfusion .NET Excel Library and supported options.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to use multiple hyperlinks in a cell in .NET Excel Library

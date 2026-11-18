@@ -3,7 +3,7 @@ title: Word document in Java Word | Syncfusion
 description: This section illustrates how to create Word documents in Azure services using the Syncfusion .NET Word library
 platform: document-processing
 control: Word library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Word document in Java Word
 

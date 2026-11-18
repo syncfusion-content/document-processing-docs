@@ -3,7 +3,7 @@ title: Document Object Model in .NET PowerPoint Presentation | Syncfusion
 description: Learn about the document object model in the Syncfusion® .NET PowerPoint Presentation library and how it helps create and manage presentations.
 platform: document-processing
 control: Presentation
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Document Object Model in .NET PowerPoint Presentation
 

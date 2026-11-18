@@ -6,7 +6,7 @@ platform: document-processing
 control: PDF
 documentation: ug
 keywords: .net core create pdf, edit pdf, merge, pdf form, fill form, digital sign, table, javascript, dotnet core pdf, asp generate pdf, aspx generate pdf
-canonical_url: https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-asp-net-core
+canonical_url: https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-asp-net-coretocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with JavaScript PDF in ASP.NET Core app

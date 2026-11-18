@@ -5,7 +5,7 @@ description: The hyperlink feature in JavaScript DOCX Editor enables users to in
 platform: document-processing
 control: Link 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Hyperlink in JavaScript DOCX Editor

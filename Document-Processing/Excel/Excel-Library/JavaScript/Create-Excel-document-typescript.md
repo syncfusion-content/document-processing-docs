@@ -4,7 +4,7 @@ title: Getting Started with JavaScript Excel in TypeScript app | Syncfusion
 description: Learn how to get started with the Syncfusion JavaScript Excel in TypeScript application. Easy steps to create Excel workbooks.
 platform: document-processing
 control: Excel
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with JavaScript Excel in TypeScript app

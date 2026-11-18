@@ -5,7 +5,7 @@ description: Save documents to Azure Blob Storage from ASP.NET MVC DOCX Editor, 
 platform: document-processing
 control: Save document to Azure Blob Storage
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Save Documents to Azure Blob Storage in ASP.NET MVC DOCX Editor

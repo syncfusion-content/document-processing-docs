@@ -4,7 +4,7 @@ title: Performance Best Practices in ASP.NET Core Spreadsheet | Syncfusion
 description: Learn about performance best practices in the Syncfusion ASP.NET Core Spreadsheet control to optimize rendering, data processing, and user experience.
 platform: document-processing
 control: Performance
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Performance Best Practices in ASP.NET Core Spreadsheet

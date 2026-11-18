@@ -4,7 +4,7 @@ title: Cell Editing in Blazor Spreadsheet | Syncfusion
 description: Explore cell editing capabilities in the Syncfusion Blazor Spreadsheet, including validation, formulas, and data updates.
 platform: document-processing
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Cell Editing in Blazor Spreadsheet

@@ -4,7 +4,7 @@ title: About Syncfusion UWP PDF Viewer Control | Syncfusion
 description: Learn about the introduction and overview of the Syncfusion<sup>®</sup> UWP PDF Viewer control, its key features, capabilities, and usage.
 platform: document-processing
 control: PDF viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion UWP PDF Viewer Control

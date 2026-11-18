@@ -5,7 +5,7 @@ description: Add a custom save button to the toolbar in Syncfusion® JavaScript 
 platform: document-processing
 control: Add save button tool bar 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Add Save Button in Toolbar in JavaScript DOCX Editor

@@ -4,7 +4,7 @@ title: Form Controls in React Spreadsheet | Syncfusion
 description: Learn about form controls feature in the Syncfusion React Spreadsheet component, including checkboxes, radio buttons, and dropdown lists.
 control: Form Controls
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Form Controls in React Spreadsheet

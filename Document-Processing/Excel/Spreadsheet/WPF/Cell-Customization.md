@@ -4,7 +4,7 @@ title: Cell Customization in WPF Spreadsheet Control | Syncfusion®
 description: Customize cell types in the WPF Spreadsheet control by converting cells into Button, ComboBox, CheckBox, and other interactive controls.
 platform: document-processing
 control: SfSpreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Cell Type Customization in WPF Spreadsheet

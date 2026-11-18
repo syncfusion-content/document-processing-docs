@@ -5,7 +5,7 @@ description: Save documents to Google Drive from JavaScript DOCX Editor, enablin
 platform: document-processing
 control: Save document to Google Drive
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Save Documents to Google Drive in JavaScript DOCX Editor

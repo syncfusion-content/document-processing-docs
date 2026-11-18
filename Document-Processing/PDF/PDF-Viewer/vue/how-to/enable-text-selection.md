@@ -5,7 +5,7 @@ description: Enable or disable text selection in the Vue PDF Viewer using the en
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Enable or Disable Text Selection in Vue PDF Viewer

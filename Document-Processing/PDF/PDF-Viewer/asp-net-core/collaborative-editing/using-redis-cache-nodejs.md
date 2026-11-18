@@ -5,7 +5,7 @@ description: Learn how to implement ASP.NET Core PDF Viewer collaborative editin
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Collaborative Editing in ASP.NET Core PDF Viewer with Node.js

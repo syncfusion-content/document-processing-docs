@@ -3,7 +3,7 @@ title: PdfGrid Tables in .NET PDF Library | Syncfusion
 description: Learn how to create tables in PDF with cell styles, pagination, and column customization using PdfGrid in Syncfusion .NET PDF.
 platform: document-processing
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # PdfGrid Tables in .NET PDF Library

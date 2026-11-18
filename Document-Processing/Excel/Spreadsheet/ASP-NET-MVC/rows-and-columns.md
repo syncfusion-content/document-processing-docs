@@ -4,7 +4,7 @@ title: Rows and Columns in ASP.NET MVC Spreadsheet | Syncfusion
 description: Learn how to manage rows and columns in the Syncfusion ASP.NET MVC Spreadsheet, including resizing and customization.
 platform: document-processing
 control: Rows And Columns
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

@@ -5,7 +5,7 @@ description: How to adjust thumbnail zoom levels inside the Organize Pages UI of
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Zoom pages in Organize Pages in Blazor PDF Viewer

@@ -5,7 +5,7 @@ description: The shapes feature in JavaScript DOCX Editor preserve shape element
 platform: document-processing
 control: Shapes
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Shapes in JavaScript DOCX Editor

@@ -5,7 +5,7 @@ description: The Import feature in JavaScript DOCX Editor enables users to load 
 platform: document-processing
 control: Import 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Import in JavaScript DOCX Editor

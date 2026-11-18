@@ -4,7 +4,7 @@ description: Code examples to create, edit, and format notes in C# using .NET Po
 platform: document-processing
 control: Presentation
 documentation: UG
-keywords: Working with Notes
+keywords: Working with Notestocname: Document-Processing-SDKs-toc
 ---
 
 # Working with PowerPoint Notes

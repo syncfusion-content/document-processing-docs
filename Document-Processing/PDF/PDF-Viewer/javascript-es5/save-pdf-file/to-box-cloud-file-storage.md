@@ -5,7 +5,7 @@ description: Save PDF files from the JavaScript (ES5) PDF Viewer to Box cloud st
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Save PDF Files to Box Cloud Storage in JavaScript (ES5) PDF Viewer

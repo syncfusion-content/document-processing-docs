@@ -4,7 +4,7 @@ title: Getting Started with React Spreadsheet Agentic UI Builder | Syncfusion
 description: Learn how to get started with the Syncfusion React Spreadsheet component using Agentic UI Builder. Explore setup, features, and usage options.
 control: Spreadsheet
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with React Spreadsheet Agentic UI Builder

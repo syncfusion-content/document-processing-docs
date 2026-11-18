@@ -5,7 +5,7 @@ canonical_url: "https://www.syncfusion.com/spreadsheet-editor-sdk/winforms-sprea
 description: Access worksheets, grids, cells, ranges, values, and formulas while working with spreadsheet content programmatically.
 platform: document-processing
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Working With Spreadsheet in Windows Forms Spreadsheet

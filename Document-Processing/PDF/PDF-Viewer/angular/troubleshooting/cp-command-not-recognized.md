@@ -5,7 +5,7 @@ description: Resolve the cp is not recognized error in the Angular PDF Viewer by
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Resolve cp Not Recognized Error in Angular PDF Viewer

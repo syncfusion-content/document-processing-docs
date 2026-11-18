@@ -4,7 +4,7 @@ title: Mobile Responsiveness in React Spreadsheet | Syncfusion
 description: Learn about mobile responsiveness in the Syncfusion React Spreadsheet component, including adaptive layouts and touch interactions.
 control: Mobile responsiveness 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Mobile Responsiveness in React Spreadsheet

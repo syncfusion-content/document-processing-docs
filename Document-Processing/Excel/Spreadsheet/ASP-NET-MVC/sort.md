@@ -4,7 +4,7 @@ title: Sorting in ASP.NET MVC Spreadsheet | Syncfusion
 description: Sort spreadsheet data efficiently using built-in sorting capabilities in the Syncfusion ASP.NET MVC Spreadsheet.
 platform: document-processing
 control: Sort
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

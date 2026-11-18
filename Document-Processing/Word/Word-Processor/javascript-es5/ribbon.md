@@ -5,7 +5,7 @@ description: Ribbon in JavaScript DOCX Editor provides a tabbed command interfac
 platform: document-processing
 control: Ribbon
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Ribbon in JavaScript DOCX Editor

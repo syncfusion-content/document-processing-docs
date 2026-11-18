@@ -4,7 +4,7 @@ title: Interactive Features in Windows Forms Spreadsheet | Syncfusion®
 description: Use interactive options in Windows Forms Spreadsheet such as clipboard operations, undo or redo, context menus, and cell comments.
 platform: document-processing
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Interactive Features in Windows Forms Spreadsheet

@@ -4,7 +4,7 @@ title: How to Open ASP.NET Core DOCX Editor in Read-Only Mode | Syncfusion
 description: Open Syncfusion® ASP.NET Core DOCX Editor in read-only mode to prevent document modifications while allowing users to view content.
 platform: document-processing
 control: Read By Default
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

@@ -4,7 +4,7 @@ title: Cell Ranges in Blazor Spreadsheet | Syncfusion
 description: Learn how to manage cell ranges in the Syncfusion Blazor Spreadsheet, including formatting, autofill, and range operations.
 platform: document-processing
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Cell Ranges in Blazor Spreadsheet

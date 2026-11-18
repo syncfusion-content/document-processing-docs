@@ -4,7 +4,7 @@ title: Desktop in UWP Pdf Viewer | Syncfusion
 description: Learn here all about Desktop support in Syncfusion<sup>®</sup> UWP Pdf Viewer (SfPdfViewer) control and more.
 platform: document-processing
 control: PDF viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Desktop in UWP Pdf Viewer

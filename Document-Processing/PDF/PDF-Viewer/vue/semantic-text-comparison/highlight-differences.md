@@ -5,7 +5,7 @@ description: Learn how to highlight text differences in the Syncfusion Vue PDF V
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Highlight Differences in UI in Vue PDF Viewer

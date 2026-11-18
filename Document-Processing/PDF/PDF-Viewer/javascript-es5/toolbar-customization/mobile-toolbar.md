@@ -6,7 +6,7 @@ platform: document-processing
 control: Mobile Toolbar Interface
 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 # Customize the Mobile Toolbar in JavaScript (ES5) PDF Viewer
 

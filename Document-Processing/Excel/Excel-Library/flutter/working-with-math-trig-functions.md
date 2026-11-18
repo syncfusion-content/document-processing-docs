@@ -4,7 +4,7 @@ title: Excel Math & Trig Functions in Flutter Excel Library | Syncfusion
 description: The Flutter Excel Library lets users perform mathematical and trigonometric calculations in worksheet cells.
 platform: document-processing
 control: Excel
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Math and Trig Formulas in Flutter Excel Library

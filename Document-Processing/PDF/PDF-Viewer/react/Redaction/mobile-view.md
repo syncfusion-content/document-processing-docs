@@ -4,7 +4,7 @@ title: Mobile View in React PDF Viewer | Syncfusion
 description: Apply redactions in the React PDF Viewer on mobile devices, with a complete mobile toolbar setup and a redaction workflow you can copy.
 platform: document-processing
 control: PdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Redaction in Mobile View in React PDF Viewer

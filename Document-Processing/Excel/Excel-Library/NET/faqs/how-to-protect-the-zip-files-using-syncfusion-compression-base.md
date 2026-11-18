@@ -3,7 +3,7 @@ title: How to Protect ZIP Files in .NET Excel Library | Syncfusion
 description: Protect zip files with a password using Syncfusion.Compression.Base for password-protected zip files.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to protect ZIP files in .NET Excel Library

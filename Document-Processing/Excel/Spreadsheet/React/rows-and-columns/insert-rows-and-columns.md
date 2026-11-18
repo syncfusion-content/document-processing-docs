@@ -4,7 +4,7 @@ title: Insert Rows and Columns in React Spreadsheet | Syncfusion
 description: Learn about inserting rows and columns in the Syncfusion React Spreadsheet component for data management.
 control: Rows and Columns 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Insert Rows and Columns in React Spreadsheet

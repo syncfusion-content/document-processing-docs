@@ -5,7 +5,7 @@ description: Show or hide annotations in the JavaScript (ES5) PDF Viewer by expo
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Show or Hide Annotations in JavaScript (ES5) PDF Viewer

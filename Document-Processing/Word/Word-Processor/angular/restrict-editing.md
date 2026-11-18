@@ -5,7 +5,7 @@ description: Restrict editing feature in Angular DOCX Editor enables read-only a
 platform: document-processing
 control: Restrict editing 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Restrict Editing in Angular DOCX Editor

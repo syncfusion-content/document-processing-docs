@@ -4,7 +4,7 @@ description: Learn how to open and load PDF documents stored in AWS S3 buckets u
 keywords: aws s3, load pdf, open pdf, c# load pdf
 platform: document-processing
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Open PDF from AWS S3
 

@@ -3,7 +3,7 @@ title: AutoDetectComplexScript Property in .NET Excel Library | Syncfusion
 description: AutoDetectComplexScript property describes when Excel Library can use complex script detection during Excel conversion.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # AutoDetectComplexScript Property in .NET Excel Library

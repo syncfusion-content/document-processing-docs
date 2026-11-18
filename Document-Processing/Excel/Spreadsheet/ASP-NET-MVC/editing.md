@@ -4,7 +4,7 @@ title: Editing in ASP.NET MVC Spreadsheet | Syncfusion
 description: Explore editing capabilities in the Syncfusion ASP.NET MVC Spreadsheet, including cell updates, validation, and formulas.
 platform: document-processing
 control: Editing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

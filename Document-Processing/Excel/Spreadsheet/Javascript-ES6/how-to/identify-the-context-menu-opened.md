@@ -4,7 +4,7 @@ title: How to Identify Context Menu in TypeScript Spreadsheet | Syncfusion
 description: Identify the context menu opened in TypeScript Spreadsheet to perform custom actions based on the selected menu and target area.
 platform: document-processing
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Identify Context Menu Opened in TypeScript Spreadsheet

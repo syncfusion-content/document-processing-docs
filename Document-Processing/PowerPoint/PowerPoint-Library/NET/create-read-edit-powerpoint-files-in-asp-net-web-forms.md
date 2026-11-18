@@ -3,7 +3,7 @@ title: Create and edit PowerPoint files in ASP.NET | Syncfusion
 description: ASP.NET PowerPoint library to create, read, edit and convert PowerPoint files in ASP.NET applications.
 platform: document-processing
 control: PowerPoint
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Create, read and edit a PowerPoint file in ASP.NET

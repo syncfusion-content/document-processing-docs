@@ -5,7 +5,7 @@ description: Use page thumbnail navigation in the React PDF Viewer to preview an
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Page Thumbnail Navigation in React PDF Viewer

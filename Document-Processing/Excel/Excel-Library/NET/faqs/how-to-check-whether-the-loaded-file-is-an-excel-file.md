@@ -3,7 +3,7 @@ title: How to Verify Excel Files in .NET Excel Library | Syncfusion
 description: Check whether a loaded file is an Excel document using the Syncfusion .NET Excel Library before opening it for processing.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to check Excel files in .NET Excel Library

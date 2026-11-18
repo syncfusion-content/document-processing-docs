@@ -4,7 +4,7 @@ title: Getting Started with ASP.NET MVC Spreadsheet | Syncfusion
 description: Learn how to get started with the Syncfusion ASP.NET MVC Spreadsheet. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: Getting Started MVC
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

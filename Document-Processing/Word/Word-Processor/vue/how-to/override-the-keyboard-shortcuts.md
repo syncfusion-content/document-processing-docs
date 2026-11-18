@@ -5,7 +5,7 @@ description: Override default keyboard shortcuts in Syncfusion® Vue DOCX Editor
 control: Override the keyboard shortcuts 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Override Keyboard Shortcuts in Vue DOCX Editor

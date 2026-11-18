@@ -3,7 +3,7 @@ title: Chart Series in PowerPoint | Syncfusion
 description: Learn how to modify the appearance of series in a chart in a PowerPoint using .NET PowerPoint library (Presentation) without Microsoft PowerPoint.
 platform: document-processing
 control: PowerPoint
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Chart Series in PowerPoint

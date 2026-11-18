@@ -4,7 +4,7 @@ title: Stacked Line Chart in Flutter Excel Library | Syncfusion
 description: The Flutter Excel Library allows users create and customize stacked line charts in Excel worksheets.
 platform: document-processing
 control: Excel
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Stacked Line Chart in Syncfusion Excel Library

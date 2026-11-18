@@ -5,7 +5,7 @@ description: Right-to-left support in React DOCX Editor enables RTL user interfa
 control: Right to Left
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Right to Left in React DOCX Editor

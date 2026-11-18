@@ -4,7 +4,7 @@ title: Worksheet Management in Windows Forms Spreadsheet | Syncfusion®
 description: Insert, delete, rename, hide, protect, zoom, and manage worksheet display settings in Windows Forms Spreadsheet.
 platform: document-processing
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Worksheet Management in Windows Forms Spreadsheet

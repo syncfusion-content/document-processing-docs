@@ -4,7 +4,7 @@ title: About Syncfusion JavaScript Spreadsheet Control | Syncfusion
 description: Learn about the introduction and overview of Syncfusion Essential Studio JavaScript Spreadsheet control and more details.
 platform: document-processing
 control: Index 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion JavaScript Spreadsheet Control

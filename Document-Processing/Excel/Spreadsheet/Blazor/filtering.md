@@ -4,7 +4,7 @@ title: Filtering in Blazor Spreadsheet | Syncfusion
 description: Filter and analyze spreadsheet data efficiently using the built-in filtering capabilities of the Syncfusion Blazor Spreadsheet.
 platform: document-processing
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Filtering in Blazor Spreadsheet

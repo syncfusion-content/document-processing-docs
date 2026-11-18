@@ -4,7 +4,7 @@ description: Learn how to iterate through sections, body items, paragraphs, tabl
 platform: document-processing
 control: Word Library
 documentation: ug
-keywords: javascript, word, iterate, sections, paragraphs, tables, content controls
+keywords: javascript, word, iterate, sections, paragraphs, tables, content controlstocname: Document-Processing-SDKs-toc
 ---
 
 # Word document in JavaScript Word Library

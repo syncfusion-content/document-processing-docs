@@ -5,7 +5,7 @@ description: Explore the default context menu items in the React PDF Viewer, inc
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Built-in Context Menu in React PDF Viewer

@@ -5,7 +5,7 @@ description: Customize the color picker appearance in Syncfusion® Angular DOCX 
 platform: document-processing
 control: Customize color picker 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Customize Color Picker in Angular DOCX Editor

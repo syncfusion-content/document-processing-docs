@@ -4,7 +4,7 @@ title: Hyperlink in ASP.NET MVC Spreadsheet | Syncfusion
 description: Create, edit, and manage hyperlinks in the Syncfusion ASP.NET MVC Spreadsheet for quick navigation and references.
 platform: document-processing
 control: Link
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

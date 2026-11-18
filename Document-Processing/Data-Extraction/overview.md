@@ -4,7 +4,7 @@ description: Learn about introduction of Syncfusion Smart Data Extraction Soluti
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG
-keywords: Syncfusion.SmartDataExtractor, Syncfusion.SmartTableExtractor, Syncfusion.SmartFormRecognizer, Syncfusion.PDF.OCR
+keywords: Syncfusion.SmartDataExtractor, Syncfusion.SmartTableExtractor, Syncfusion.SmartFormRecognizer, Syncfusion.PDF.OCRtocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion Smart Data Extraction Solutions

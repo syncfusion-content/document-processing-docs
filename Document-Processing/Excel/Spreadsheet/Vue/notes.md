@@ -4,7 +4,7 @@ title: Notes in Vue Spreadsheet | Syncfusion
 description: Add and manage notes in the Syncfusion Vue Spreadsheet to provide contextual information within worksheets.
 control: Notes
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

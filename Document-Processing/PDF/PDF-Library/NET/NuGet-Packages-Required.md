@@ -3,7 +3,7 @@ title: NuGet Packages for .NET PDF Library | Syncfusion
 description: Learn about the NuGet packages required to use Syncfusion PDF Library across various platforms and frameworks.
 platform: document-processing
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # NuGet Packages for .NET PDF Library
 

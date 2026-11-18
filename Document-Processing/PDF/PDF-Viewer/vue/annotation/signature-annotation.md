@@ -5,7 +5,7 @@ description: Add, edit, and manage handwritten signatures in the Vue PDF Viewer,
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Handwritten Signature in Vue PDF Viewer

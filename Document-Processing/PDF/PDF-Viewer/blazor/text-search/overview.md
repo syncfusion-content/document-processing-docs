@@ -5,7 +5,7 @@ description: Learn text search capabilities, UI features, programmatic APIs, eve
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # About Text search and Extraction in Blazor PDF Viewer Component

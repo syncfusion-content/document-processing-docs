@@ -3,7 +3,7 @@ title: Lists in Java Word | Syncfusion
 description: This section explains how to create and manage bulleted and numbered lists in Word documents using the Syncfusion Java Word library
 platform: document-processing
 control: Word Library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Document Lists in Java Word

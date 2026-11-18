@@ -4,7 +4,7 @@ title: Getting Started with Blazor Using Ollama Smart PDF Viewer | Syncfusion
 description: Learn how to get started with the Syncfusion Blazor using Ollama Smart PDF Viewer component. Explore AI features including smart redaction and form filling.
 platform: document-processing
 control: SfSmartPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with Blazor Using Ollama Smart PDF Viewer

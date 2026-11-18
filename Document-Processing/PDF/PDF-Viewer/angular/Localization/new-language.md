@@ -5,7 +5,7 @@ description: Localize the Angular PDF Viewer to a new language by providing cult
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Set a New Language in Angular PDF Viewer

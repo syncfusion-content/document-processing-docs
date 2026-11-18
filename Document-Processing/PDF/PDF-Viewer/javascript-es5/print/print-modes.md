@@ -5,7 +5,7 @@ description: Configure print modes in the JavaScript (ES5) PDF Viewer to control
 platform: document-processing
 control: Print
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Print Modes in JavaScript (ES5) PDF Viewer

@@ -5,7 +5,7 @@ description: Save edited PDFs from the React PDF Viewer to a local download or t
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Save PDF Files in React PDF Viewer
@@ -360,7 +360,7 @@ export default function App() {
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 **See also**

@@ -5,7 +5,7 @@ description: Learn how to rotate one or more pages using the Organize Pages UI i
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Rotate pages using the Organize Pages view in Blazor PDF Viewer

@@ -4,7 +4,7 @@ title: Getting Started with React Spreadsheet in Next.js | Syncfusion
 description: Learn how to get started with the Syncfusion React Spreadsheet component in a Next.js project. Explore setup and integration steps.
 control: Next.js
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with React Spreadsheet in Next.js

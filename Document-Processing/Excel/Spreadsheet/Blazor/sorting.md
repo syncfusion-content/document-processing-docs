@@ -4,7 +4,7 @@ title: Sorting in Blazor Spreadsheet | Syncfusion
 description: Sort spreadsheet data efficiently using built-in sorting options and APIs in the Syncfusion Blazor Spreadsheet.
 platform: document-processing
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Sorting in Blazor Spreadsheet

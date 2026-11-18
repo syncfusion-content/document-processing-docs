@@ -4,7 +4,7 @@ description: This section explains the required assemblies for creating PowerPoi
 platform: document-processing
 control: Presentation
 documentation: UG
-keywords: Assemblies
+keywords: Assembliestocname: Document-Processing-SDKs-toc
 ---
 # Assemblies Required for .NET PowerPoint Presentation
 

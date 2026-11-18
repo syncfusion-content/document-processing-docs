@@ -5,7 +5,7 @@ component: DocumentEditor
 description: Learn about the overview of collaborative editing in Syncfusion Essential Studio ASP.NET MVC DOCX Editor control and more details.
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Collaborative Editing in Syncfusion ASP.NET MVC DOCX Editor Control

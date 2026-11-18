@@ -5,7 +5,7 @@ description: Change the default cursor color in Syncfusion® Vue DOCX Editor by 
 control: Change the cursor color in DOCX Editor 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Change Cursor Color in Vue DOCX Editor

@@ -4,7 +4,7 @@ description: WPF DOCX Editor allows adding tables to the rich text document, ena
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: table,rows,columns,cells,merge,alignment
+keywords: table,rows,columns,cells,merge,alignmenttocname: Document-Processing-SDKs-toc
 ---
 # Tables in WPF DOCX Editor
 

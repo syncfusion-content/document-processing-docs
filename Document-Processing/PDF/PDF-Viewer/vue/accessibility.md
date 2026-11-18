@@ -5,7 +5,7 @@ description: Accessibility features in the Vue PDF Viewer help all users read an
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Accessibility in Vue PDF Viewer

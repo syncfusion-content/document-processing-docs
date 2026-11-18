@@ -3,7 +3,7 @@ title: Assemblies Required for .NET Document Chunking Library | Syncfusion
 description: Learn about the assembly required to use the Syncfusion® .NET Document Chunking Library in .NET applications.
 platform: document-processing
 control: Chunking
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Assemblies Required for .NET Document Chunking Library

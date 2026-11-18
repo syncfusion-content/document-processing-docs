@@ -5,7 +5,7 @@ description: Print feature in Vue DOCX Editor enables printing documents with pa
 control: Print 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Print in Vue DOCX Editor

@@ -4,7 +4,7 @@ title: Searching Text in Windows Forms PDF Viewer | Syncfusion
 description: The text search feature in PdfViewerControl enables users to find, highlight, and navigate matching text occurrences within PDF documents.
 platform: document-processing
 control: PdfViewerControl
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Searching Text in Windows Forms PDF Viewer

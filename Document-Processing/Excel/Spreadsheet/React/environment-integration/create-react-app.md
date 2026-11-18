@@ -4,7 +4,7 @@ title: React Spreadsheet getting started with Create React App | Syncfusion
 description: Learn how to get started with the Syncfusion React Spreadsheet component in a Create React App project. Explore setup and examples.
 control: Spreadsheet
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with React Spreadsheet in Create React App

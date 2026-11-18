@@ -4,7 +4,7 @@ title: Import Annotation in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Import annotations into the JavaScript (ES6) PDF Viewer in supported formats using the built-in UI options and programmatic APIs.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Import Annotations in JavaScript (ES6) PDF Viewer

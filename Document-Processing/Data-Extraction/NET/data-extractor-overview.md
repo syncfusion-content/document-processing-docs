@@ -5,7 +5,7 @@ description: Learn about introduction of Syncfusion .NET Smart Data Extractor fo
 platform: document-processing
 control: DataExtraction
 documentation: UG
-keywords: Assemblies
+keywords: Assembliestocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion .NET Smart Data Extractor 

@@ -3,7 +3,7 @@ title: How to Add Scatter Labels in .NET Excel Library | Syncfusion
 description: Add chart labels to scatter points in Excel charts using the Syncfusion .NET Excel Library with simple chart customization steps.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to add labels to scatter charts in .NET Excel Library

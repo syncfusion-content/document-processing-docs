@@ -5,7 +5,7 @@ description: Customize the Organize Pages toolbar in the Angular PDF Viewer to s
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Customize the Organize Pages Toolbar in Angular PDF Viewer

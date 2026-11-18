@@ -5,7 +5,7 @@ description: Understand why ej2-pdfviewer-lib assets must be copied from node_mo
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Why Manual File Copying Is Required in Angular PDF Viewer

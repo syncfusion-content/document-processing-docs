@@ -5,7 +5,7 @@ description: How to import pages from another PDF into the current document usin
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Import pages using the Organize Pages tool in Blazor PDF Viewer

@@ -4,7 +4,7 @@ title: Hyperlinks in Windows Forms PDF Viewer | Syncfusion
 description: The hyperlink support feature in PdfViewerControl enables users to access and navigate linked web pages and document destinations within PDFs.
 platform: document-processing
 control: PdfViewerControl
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Hyperlinks in Windows Forms PDF Viewer

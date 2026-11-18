@@ -5,7 +5,7 @@ description: Open documents from Google Cloud Storage in ASP.NET Core DOCX Edito
 platform: document-processing
 control: Open document from Google Cloud Storage
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Open Documents from Google Cloud Storage in ASP.NET Core DOCX Editor

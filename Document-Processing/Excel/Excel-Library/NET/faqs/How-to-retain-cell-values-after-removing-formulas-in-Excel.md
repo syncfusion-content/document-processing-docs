@@ -3,7 +3,7 @@ title: How to Retain Values After Formula Removal in .NET Excel | Syncfusion
 description: Retain cell values after removing formulas from Excel worksheets using the Syncfusion .NET Excel Library in cell ranges.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to retain values after removing formulas in .NET Excel Library

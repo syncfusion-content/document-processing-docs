@@ -4,7 +4,7 @@ title: Localization in Windows Forms Spreadsheet control | Syncfusion®
 description: Localize the WPF Spreadsheet control by customizing ribbon, dialog, and UI text using resource files and culture-specific settings.
 platform:  document-processing
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Localization in Windows Forms Spreadsheet

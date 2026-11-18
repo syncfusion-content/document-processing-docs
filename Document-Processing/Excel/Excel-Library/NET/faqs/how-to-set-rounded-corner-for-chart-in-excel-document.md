@@ -3,7 +3,7 @@ title: How to Set Rounded Chart Corners in .NET Excel Library | Syncfusion
 description: Set rounded corners for a chart in an Excel document using the Syncfusion .NET Excel Library for chart formatting.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to set rounded chart corners in .NET Excel Library

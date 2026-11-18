@@ -4,7 +4,7 @@ title: Notes in React Spreadsheet | Syncfusion
 description: Learn about notes in the Syncfusion React Spreadsheet component, including adding, editing, displaying, and managing cell notes.
 control: Notes
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

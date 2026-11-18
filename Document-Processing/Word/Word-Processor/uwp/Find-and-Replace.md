@@ -4,7 +4,7 @@ description: The find and replace in UWP DOCX Editor offers text search support,
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: search,find,replace-text,findall,findoptions,showoptionspanecommand
+keywords: search,find,replace-text,findall,findoptions,showoptionspanecommandtocname: Document-Processing-SDKs-toc
 ---
 # Find and Replace in UWP DOCX Editor
 

@@ -5,7 +5,7 @@ description: Learn about the module injection in the Angular PDF Viewer and how 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Module Injection in Angular PDF Viewer
@@ -27,7 +27,7 @@ To customize the **Angular PDF Viewer** with specific features, you must import 
 * `FormFieldsService`: Enables form field support.
 * `FormDesignerService`: Enables designing and editing of form fields.
 * `PageOrganizerService`: Enables page organization features.
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## Module injection
@@ -69,7 +69,7 @@ import {
 })
 export class AppComponent {}
 ```
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## Important notes

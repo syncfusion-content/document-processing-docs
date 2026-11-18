@@ -5,7 +5,7 @@ description: Tables in JavaScript DOCX Editor enable adding and managing rows, c
 platform: document-processing
 control: Table 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Tables in JavaScript DOCX Editor

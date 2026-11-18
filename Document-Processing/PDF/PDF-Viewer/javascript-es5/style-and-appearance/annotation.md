@@ -5,7 +5,7 @@ description: Learn about the annotation in the JavaScript (ES5) PDF Viewer and h
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Annotation in JavaScript (ES5) PDF Viewer

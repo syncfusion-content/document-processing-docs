@@ -5,7 +5,7 @@ description: Learn how to get started with the Syncfusion Vue PPTX Editor contro
 platform: document-processing
 control: Getting started 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with Vue PPTX Editor (Vue 2)

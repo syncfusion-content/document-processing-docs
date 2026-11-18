@@ -5,7 +5,7 @@ description: The keyboard shortcuts feature in Vue DOCX Editor enables users to 
 control: Keyboard shortcut 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Keyboard Shortcuts in Vue DOCX Editor

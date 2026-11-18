@@ -5,7 +5,7 @@ description: The collaborative editing feature in TypeScript DOCX Editor support
 platform: document-processing
 control: Collaborative Editing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Collaborative Editing in TypeScript DOCX Editor using ASP.NET Core

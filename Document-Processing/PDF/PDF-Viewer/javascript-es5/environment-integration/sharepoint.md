@@ -5,7 +5,7 @@ description: Learn how to deploy and integrate the JavaScript Syncfusion PDF Vie
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Deploy and Integrate JavaScript PDF Viewer in SharePoint Framework

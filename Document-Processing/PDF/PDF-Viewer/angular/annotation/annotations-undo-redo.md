@@ -5,7 +5,7 @@ description: Undo and redo annotation changes in the Angular PDF Viewer from the
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Undo and Redo Annotations in Angular PDF Viewer

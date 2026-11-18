@@ -5,7 +5,7 @@ description: The hyperlink feature in React DOCX Editor enables users to insert,
 control: Link 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Hyperlinks in React DOCX Editor

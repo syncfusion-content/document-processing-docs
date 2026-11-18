@@ -5,7 +5,7 @@ description: Enable and use magnification in the ASP.NET MVC PDF Viewer, includi
 platform: document-processing
 control: PDF Viewer
 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

@@ -5,7 +5,7 @@ description: Resolve document loading issues in the ASP.NET MVC PDF Viewer v23.1
 platform: document-processing
 control: PDF Viewer
 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Resolve Document Loading Issues in ASP.NET MVC PDF Viewer

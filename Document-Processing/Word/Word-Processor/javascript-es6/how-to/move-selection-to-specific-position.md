@@ -5,7 +5,7 @@ description: Move the document selection to a specific position in Syncfusion® 
 platform: document-processing
 control: Move Selection to a Specific Position
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Move Selection to a Position in TypeScript DOCX Editor

@@ -4,7 +4,7 @@ canonical_url: "https://www.syncfusion.com/document-sdk/net-excel-library"
 description: Learn about overview of Syncfusion .NET Excel Library across WinForms, WPF, ASP.NET Core, Blazor, WinUI, .NET MAUI, and more details.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion .NET Excel Library

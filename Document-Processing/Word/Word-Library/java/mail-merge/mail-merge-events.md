@@ -3,7 +3,7 @@ title: Mail merge events in Java Word | Syncfusion
 description: Describe common questions about using the Syncfusion .NET Word library in Linux environments
 platform: document-processing
 control: Word Library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Mail merge events in Java Word

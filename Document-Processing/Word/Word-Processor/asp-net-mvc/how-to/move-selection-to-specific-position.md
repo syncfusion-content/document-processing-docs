@@ -4,7 +4,7 @@ title: Move Selection to a Position in ASP.NET MVC DOCX Editor | Syncfusion
 description: Move the document selection to a specific position in Syncfusion® ASP.NET MVC DOCX Editor using APIs for precise navigation and content editing.
 platform: document-processing
 control: Move The Selection To Specific Position
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Move Selection to a Position in ASP.NET MVC DOCX Editor

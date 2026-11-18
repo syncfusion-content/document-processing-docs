@@ -4,7 +4,7 @@ title: How to Run the PDF Viewer in a Load-Balanced Environment | Syncfusion
 description: Configure the ASP.NET MVC PDF Viewer to work in a load-balanced environment by setting up shared storage and consistent service URLs.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Run the PDF Viewer in a Load-Balanced Environment in ASP.NET

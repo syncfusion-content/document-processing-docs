@@ -5,7 +5,7 @@ description: Migrate an existing React PDF Viewer deployment from server-backed 
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Migrate from Server-Backed to Standalone React PDF Viewer

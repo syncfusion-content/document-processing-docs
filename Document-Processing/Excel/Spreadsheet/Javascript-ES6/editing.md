@@ -4,7 +4,7 @@ title: Editing in TypeScript Spreadsheet | Syncfusion
 description: Editing in TypeScript Spreadsheet allows users to update cell values, formulas, and content efficiently for accurate data management.
 platform: document-processing
 control: Editing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Editing in TypeScript Spreadsheet 

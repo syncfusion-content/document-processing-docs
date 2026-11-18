@@ -5,7 +5,7 @@ description: Migrate an existing Angular PDF Viewer deployment from server-backe
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Migrate from Server-Backed to Standalone Angular PDF Viewer

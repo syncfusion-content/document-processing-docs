@@ -3,7 +3,7 @@ title: Create Word document in WPF | Syncfusion
 description: Describe how to migrate applications from .NET Framework to .NET Core using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Create Word document in WPF

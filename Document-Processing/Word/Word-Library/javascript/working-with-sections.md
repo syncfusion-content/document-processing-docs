@@ -4,7 +4,7 @@ description: Configure page setup, columns, headers, footers, page numbers, bord
 platform: document-processing
 control: Word Library
 documentation: ug
-keywords: javascript, word, sections, page setup, headers, footers, page numbers, columns
+keywords: javascript, word, sections, page setup, headers, footers, page numbers, columnstocname: Document-Processing-SDKs-toc
 ---
 
 # Working with Sections in JavaScript Word Library

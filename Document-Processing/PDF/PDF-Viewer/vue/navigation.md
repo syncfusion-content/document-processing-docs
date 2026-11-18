@@ -5,7 +5,7 @@ description: Move between pages in the Vue PDF Viewer using page, bookmark, hype
 control: Navigation
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Navigation in Vue PDF Viewer

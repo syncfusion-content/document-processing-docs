@@ -3,7 +3,7 @@ title: Image Autofit in .NET Excel Library | Syncfusion
 description: Image-based autofit describes whether Syncfusion .NET Excel Library adjusts row height and column width based on images.
 platform: document-processing 
 control: XlsIO 
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Image-Based Autofit in .NET Excel Library

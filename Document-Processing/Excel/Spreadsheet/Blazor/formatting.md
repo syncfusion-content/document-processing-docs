@@ -4,7 +4,7 @@ title: Formatting in Blazor Spreadsheet | Syncfusion
 description: Apply cell, text, number, and conditional formatting in the Syncfusion Blazor Spreadsheet to enhance data presentation.
 platform: document-processing
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Formatting in Blazor Spreadsheet

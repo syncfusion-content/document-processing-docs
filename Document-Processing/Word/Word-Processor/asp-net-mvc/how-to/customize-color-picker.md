@@ -4,7 +4,7 @@ title: How to Customize Color Picker in ASP.NET MVC DOCX Editor | Syncfusion
 description: Customize the color picker appearance in Syncfusion® ASP.NET MVC DOCX Editor using color picker settings to match your application's design.
 platform: document-processing
 control: Customize Color Picker
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

@@ -5,7 +5,7 @@ description: Learn how to install the Syncfusion PDF Linux installer and configu
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Install Syncfusion PDF Linux Installer

@@ -5,7 +5,7 @@ description: Configure annotation selector settings in the JavaScript (ES6) PDF 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Configure Annotation Selectors in JavaScript (ES6) PDF Viewer

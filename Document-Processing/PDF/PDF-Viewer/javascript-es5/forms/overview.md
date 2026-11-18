@@ -4,7 +4,7 @@ title: About Syncfusion JavaScript (ES5) PDF Viewer Forms | Syncfusion
 description: Learn about introduction of the Syncfusion JavaScript (ES5) PDF Viewer Forms section and the key capabilities it provides.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion JavaScript (ES5) PDF Viewer Forms

@@ -4,7 +4,7 @@ title: About Syncfusion Vue Spreadsheet Control | Syncfusion
 description: Learn about the introduction of the Syncfusion Essential Studio Vue Spreadsheet control and more details.
 platform: document-processing
 control: Index
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion Vue Spreadsheet Control

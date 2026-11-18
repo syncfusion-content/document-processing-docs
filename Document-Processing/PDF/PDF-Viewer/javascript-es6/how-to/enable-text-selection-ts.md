@@ -5,7 +5,7 @@ description: Enable or disable text selection in the JavaScript (ES6) PDF Viewer
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Enable or Disable Text Selection in JavaScript (ES6) PDF Viewer

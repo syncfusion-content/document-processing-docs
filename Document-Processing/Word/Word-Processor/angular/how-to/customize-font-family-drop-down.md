@@ -5,7 +5,7 @@ description: Customize the font family drop down list in Syncfusion® Angular DO
 platform: document-processing
 control: Customize font family drop down 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Customize Font Family in Angular DOCX Editor

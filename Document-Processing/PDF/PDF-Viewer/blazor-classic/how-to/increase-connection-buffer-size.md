@@ -4,7 +4,7 @@ title: Increase the connection buffer size in Blazor PDF Viewer | Syncfusion
 description: Learn here all about how to increase the connection buffer size in Syncfusion Blazor PDF Viewer component and more.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Increase the connection buffer size in Blazor PDF Viewer

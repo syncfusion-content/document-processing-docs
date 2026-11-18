@@ -5,7 +5,7 @@ canonical_url: "https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadshee
 description: Access worksheets, grids, and associated events in the WPF Spreadsheet control to customize and manage spreadsheet interactions.
 platform: document-processing
 control: SfSpreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Working with SfSpreadsheet in WPF Spreadsheet

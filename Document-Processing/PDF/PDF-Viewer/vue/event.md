@@ -5,7 +5,7 @@ description: A complete list of events in the Vue PDF Viewer, with descriptions,
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Events in Vue PDF Viewer

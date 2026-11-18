@@ -4,7 +4,7 @@ title: Fields in ASP.NET Core DOCX Editor | Syncfusion
 description: Fields in ASP.NET Core DOCX Editor enable inserting and updating document fields to manage dynamic content efficiently.
 platform: document-processing
 control: Fields
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Fields in ASP.NET Core DOCX Editor

@@ -4,7 +4,7 @@ title: Troubleshooting in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Understand why ej2-pdfviewer-lib assets must be copied from node_modules in the JavaScript (ES6) PDF Viewer, and how to reference them in your project.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Why Manual File Copying Is Required in JavaScript (ES6) PDF Viewer

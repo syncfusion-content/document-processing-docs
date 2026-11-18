@@ -4,7 +4,7 @@ title: Worksheet Operations in Vue Spreadsheet | Syncfusion
 description: Learn about how to create, manage, and customize worksheets in the Syncfusion Vue Spreadsheet component.
 control: Worksheet
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Worksheet Operations in Vue Spreadsheet

@@ -5,7 +5,7 @@ description: Remove annotations from PDFs in the React PDF Viewer using the cont
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Remove Annotations in React PDF Viewer

@@ -5,7 +5,7 @@ description: Headers and footers in Vue DOCX Editor enable adding and customizin
 control: Header footer 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Headers and Footers in Vue DOCX Editor

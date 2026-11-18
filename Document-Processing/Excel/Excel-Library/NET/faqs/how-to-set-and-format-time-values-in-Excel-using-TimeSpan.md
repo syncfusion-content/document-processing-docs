@@ -3,7 +3,7 @@ title: How to Set Time Values in .NET Excel Library | Syncfusion
 description: Learn how to set and format time values in Excel using TimeSpan in C# with the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # How to set time values using TimeSpan in .NET Excel Library
 You can set a TimeSpan value into an Excel worksheet cell and format it to display as time using the Syncfusion XlsIO library. The following code examples demonstrate how to do this in C# (cross-platform and Windows-specific) and VB.NET.

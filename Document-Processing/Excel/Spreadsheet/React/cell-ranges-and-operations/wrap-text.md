@@ -4,7 +4,7 @@ title: Wrap Text in React Spreadsheet | Syncfusion
 description: Learn about text wrapping in the Syncfusion React Spreadsheet component to display lengthy content within cells.
 control: Spreadsheet
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Wrap text in React Spreadsheet

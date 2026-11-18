@@ -5,7 +5,7 @@ description: Learn how to get started with the Syncfusion JavaScript Word Librar
 control: Word
 platform: document-processing
 documentation: ug
-keywords: word
+keywords: wordtocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with JavaScript Word Library

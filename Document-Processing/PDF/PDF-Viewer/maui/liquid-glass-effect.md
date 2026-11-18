@@ -5,7 +5,7 @@ description: Learn how to enable and customize the Liquid Glass Effect in the Sy
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf viewtocname: Document-Processing-SDKs-toc
 ---
 
 # Liquid Glass Effect for .NET MAUI PDF Viewer

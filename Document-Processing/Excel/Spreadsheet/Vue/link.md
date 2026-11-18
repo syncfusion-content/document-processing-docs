@@ -4,7 +4,7 @@ title: Hyperlink in Vue Spreadsheet | Syncfusion
 description: Create, edit, and manage hyperlinks in the Syncfusion Vue Spreadsheet for quick navigation and references.
 control: Link 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Hyperlink in Vue Spreadsheet

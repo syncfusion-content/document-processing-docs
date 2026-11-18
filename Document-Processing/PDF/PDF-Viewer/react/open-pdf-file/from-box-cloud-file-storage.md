@@ -4,7 +4,7 @@ title: From Box Cloud File Storage in React PDF Viewer | Syncfusion
 description: Load and display PDF files stored in Box cloud storage in the React PDF Viewer using a server-backed web service for authentication.
 control: Open PDF files from Box cloud file storage
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Open PDF from Box Cloud Storage in React PDF Viewer

@@ -4,7 +4,7 @@ title: How to Move Selection to a Position in Blazor DOCX Editor | Syncfusion
 description: Move the document selection to a specific position in Syncfusion® Blazor DOCX Editor using APIs for precise navigation and content editing.
 platform: document-processing
 control: DOCX Editor
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Move Selection to a Position in Blazor DOCX Editor

@@ -4,7 +4,7 @@ title: MCP Server Setup in Windows Forms PDF Viewer | Syncfusion
 description: Discover the MCP server's advantages, installation requirements, and integration guidance for Syncfusion Windows Forms PDF Viewer.
 platform: document-processing
 control: AI coding assistant
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # MCP Server Setup in Windows Forms PDF Viewer

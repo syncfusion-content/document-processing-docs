@@ -4,7 +4,7 @@ description: The layout types in WPF DOCX Editor offer multiple layout options, 
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: layout-types,pages,continuous,block,layout-type
+keywords: layout-types,pages,continuous,block,layout-typetocname: Document-Processing-SDKs-toc
 ---
 # Layout Types in WPF DOCX Editor
 

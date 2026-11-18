@@ -3,7 +3,7 @@ title: Known Exceptions in .NET Excel Library | Syncfusion
 description: The known exceptions section lists exception types, classes, messages, and reasons for Excel processing issues.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Known Exceptions in .NET Excel Library
 

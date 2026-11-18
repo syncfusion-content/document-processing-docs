@@ -4,7 +4,7 @@ title: PDFium Integration in PDF to Image Converter Library | Syncfusion
 description: Learn how to use PDFium with the Syncfusion PDF to Image Converter Library for accurate and efficient PDF-to-image conversion.
 platform: document-processing
 control: PDF to image
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # PDFium Integration in PDF to Image Converter Library

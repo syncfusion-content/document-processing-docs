@@ -3,7 +3,7 @@ title: Jars Required for Java Word library  in Java Word | Syncfusion
 description: This section illustrates external jars required to use Syncfusion Java Word library  in Java application
 platform: document-processing
 control: Word library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Jars Required for Java Word library  in Java Word

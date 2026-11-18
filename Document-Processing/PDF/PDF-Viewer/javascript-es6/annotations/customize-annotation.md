@@ -5,7 +5,7 @@ description: Customize the appearance and behavior of annotations in the JavaScr
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Customize Annotations in JavaScript (ES6) PDF Viewer

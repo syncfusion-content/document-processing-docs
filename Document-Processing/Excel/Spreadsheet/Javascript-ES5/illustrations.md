@@ -4,7 +4,7 @@ title: Illustrations in JavaScript Spreadsheet | Syncfusion
 description: Illustrations in JavaScript Spreadsheet enable users to add and manage visual elements, enhancing data presentation and worksheet clarity.
 platform: document-processing
 control: Illustrations
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Illustrations in JavaScript Spreadsheet 

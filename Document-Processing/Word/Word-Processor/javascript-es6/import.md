@@ -5,7 +5,7 @@ description: The Import feature in TypeScript DOCX Editor enables users to load 
 platform: document-processing
 control: Import 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Import in TypeScript DOCX Editor

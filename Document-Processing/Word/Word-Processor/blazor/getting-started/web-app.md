@@ -3,7 +3,7 @@ layout: post
 title: Getting Started with Blazor Web App DOCX Editor | Syncfusion
 description: Learn how to get started with Syncfusion® Blazor DOCX Editor in Blazor Web App projects. Explore setup, features, examples, and customization options.
 component: DocumentEditor
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with Blazor Web App DOCX Editor

@@ -3,7 +3,7 @@ title: Excel to PDF Converter Settings in .NET Excel Library | Syncfusion
 description: Excel to PDF conversion settings describes how to convert workbooks and worksheets to PDF files using converter options.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # PDF Converter Settings in .NET using Excel Library

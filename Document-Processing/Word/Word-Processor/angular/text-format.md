@@ -5,7 +5,7 @@ description: Text format properties in Angular DOCX Editor enables customizing t
 platform: document-processing
 control: Text format 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Text Format in Angular DOCX Editor

@@ -4,7 +4,7 @@ title: Viewing PDF Files in WPF Pdf Viewer control | Syncfusion
 description: Open and view PDF files in Syncfusion WPF PDF Viewer using toolbar buttons or programmatic APIs. Support for local disk, streams, and password-protected files.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Viewing PDF Files in WPF Pdf Viewer

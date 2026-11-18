@@ -4,7 +4,7 @@ title: From Azure Active Directory in JavaScript (ES6) PDF | Syncfusion
 description: Learn about the from azure active directory in the JavaScript (ES6) PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # From Azure Active Directory in JavaScript (ES6) PDF Viewer
@@ -14,7 +14,7 @@ documentation: ug
 The TypeScript PDF Viewer component supports loading and saving PDF files with Azure Active Directory (AAD). The following steps explain how to securely load and store PDFs using AAD.
 
 ### Steps to open a PDF from Azure Active Directory
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 1: Register an application in Azure Active Directory (AAD)
@@ -38,7 +38,7 @@ The TypeScript PDF Viewer component supports loading and saving PDF files with A
    ![client-secret](../images/client-secret.png)
 
 N> Avoid embedding client secrets directly in source control or client-side code. For production deployments prefer managed identities or use `DefaultAzureCredential` on the server to obtain tokens securely. Rotate and protect secrets via a secure secrets store.
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 2: Create the Azure Storage account
@@ -48,7 +48,7 @@ N> Avoid embedding client secrets directly in source control or client-side code
    - Create a new storage account by filling in the required details (e.g., name, location, resource group, etc.).
 
     ![storage-account](../images/storage-account.png)
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 3: Assign a role to the application
@@ -63,7 +63,7 @@ N> Avoid embedding client secrets directly in source control or client-side code
    - Select your application and click **Select**.
    - Click **Review + assign** to finalize the role assignment.
 
-    ![add-role](../images/add-role.png)
+    ![add-role](../images/add-role.png)tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 4: Upload the PDF to Azure Storage
@@ -74,7 +74,7 @@ N> Avoid embedding client secrets directly in source control or client-side code
 2. **Upload the PDF File**:
    - Create a new container and upload the PDF document you want to access in the PDF Viewer.
 
-    ![upload-pdf](../images/upload-pdf.png)
+    ![upload-pdf](../images/upload-pdf.png)tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 5: Server-side configuration
@@ -91,7 +91,7 @@ N> Prefer `DefaultAzureCredential` or a managed identity for server authenticati
 
 2. **Run the Web Service**:
    - After configuring the necessary details, run the web service to make it accessible.
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 6: Client-side configuration
@@ -107,7 +107,7 @@ N> For security, the client should not access Azure Blob Storage directly with a
 
 3. **Display PDF in the PDF Viewer**:
    - Once the base64 string is received, the PDF Viewer will load the PDF using the `viewer.load()` method.
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 7: Save the PDF to Azure
@@ -115,7 +115,7 @@ N> For security, the client should not access Azure Blob Storage directly with a
 1. **Save PDF to AAD**:
    - The user can click the **Save to AAD** button to upload any modifications to the PDF back to Azure Blob Storage.
    - This action sends the modified PDF to the server, where it is converted into a byte array and saved to the specified Azure Blob container.
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ### Server-side code

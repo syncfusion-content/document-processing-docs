@@ -4,7 +4,7 @@ title: Customize Form Fields in ASP.NET Core PDF Viewer | Syncfusion
 description: Style PDF form fields in the ASP.NET Core PDF Viewer by configuring fonts, colors, borders, alignment, and other visual properties through the UI or code.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Customize Form Field Appearance in ASP.NET Core PDF Viewer

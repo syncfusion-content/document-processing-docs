@@ -3,7 +3,7 @@ title: How to Resolve File Open Errors in .NET Excel Library | Syncfusion
 description: Resolve the document processing is not valid error when opening the Excel documents the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to resolve Excel file open errors in .NET Excel Library

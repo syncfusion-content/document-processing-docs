@@ -5,7 +5,7 @@ description: Create and apply custom stamp annotations in the Angular PDF Viewer
 platform: document-processing
 control: Add a custom stamp based on the free text bounds
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Use Custom Stamp Annotations in Angular PDF Viewer

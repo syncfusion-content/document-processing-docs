@@ -4,7 +4,7 @@ title: Formatting in ASP.NET Core Spreadsheet | Syncfusion
 description: Learn about formatting in the Syncfusion ASP.NET Core Spreadsheet control, including cell styles, number formats, and text customization.
 platform: document-processing
 control: Formatting
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

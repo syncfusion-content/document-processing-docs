@@ -3,7 +3,7 @@ title: Create Word document in ASP.NET  Core | Syncfusion
 description: Describe how to create and customize numbered and bulleted lists in Word documents using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Create Word document in ASP.NET  Core

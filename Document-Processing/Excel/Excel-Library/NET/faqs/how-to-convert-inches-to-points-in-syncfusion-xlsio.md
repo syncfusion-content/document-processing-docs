@@ -3,7 +3,7 @@ title: How to Convert Inches to Points in .NET Excel Library | Syncfusion
 description: Convert inches to points using IApplication.InchesToPoints in Syncfusion .NET Excel Library for accurate layout sizing.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to convert inches to points in .NET Excel Library

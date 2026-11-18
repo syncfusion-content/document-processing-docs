@@ -5,7 +5,7 @@ description: The Table of Contents feature in Vue DOCX Editor enables users to g
 control: Table of contents 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Table of Contents in Vue DOCX Editor

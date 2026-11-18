@@ -5,7 +5,7 @@ description: This guide explains how to render PDF pages using the PDFium librar
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-keywords: flutter pdf viewer, flutter view pdf, pdf viewer in flutter, flutter open pdf, flutter pdf view
+keywords: flutter pdf viewer, flutter view pdf, pdf viewer in flutter, flutter open pdf, flutter pdf viewtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Render PDF Pages with PDFium in Flutter PDF Viewer

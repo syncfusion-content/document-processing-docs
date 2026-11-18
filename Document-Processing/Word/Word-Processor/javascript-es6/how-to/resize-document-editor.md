@@ -5,7 +5,7 @@ description: Adjust the height and width of the Syncfusion® TypeScript DOCX Edi
 platform: document-processing
 control: Resize the DOCX Editor
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Resize in TypeScript DOCX Editor 

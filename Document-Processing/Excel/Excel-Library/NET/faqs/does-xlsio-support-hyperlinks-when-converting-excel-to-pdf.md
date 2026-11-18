@@ -3,7 +3,7 @@ title: Excel Hyperlinks to PDF in .NET Excel Library | Syncfusion
 description: Hyperlinks in Excel to PDF conversion explains why some workbook-level hyperlinks become inactive when Excel files are converted to PDF.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Hyperlinks in Excel to PDF in .NET Excel Library

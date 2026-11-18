@@ -4,7 +4,7 @@ title: Freehand Drawing in Xamarin.Android PDF Viewer | Syncfusion
 description: PDF viewer Xamarin.Android allows user to add ink annotation and provides options to edit or remove an existing ink annotation in the PDF file.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 #  Add freehand scribble in PDF using Syncfusion PDF Viewer Android

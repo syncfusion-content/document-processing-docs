@@ -5,7 +5,7 @@ description: Text format properties in JavaScript DOCX Editor enables customizin
 platform: document-processing
 control: Text format 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Text Format in JavaScript DOCX Editor

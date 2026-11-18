@@ -3,7 +3,7 @@ title: Loading and Saving Excel in AWS S3 | Syncfusion
 description: AWS S3 Cloud Storage Excel file handling section explains how to load and save Excel files in AWS S3 using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Loading and Saving Files in AWS S3
 

@@ -4,7 +4,7 @@ title: Freeze Panes in JavaScript Spreadsheet | Syncfusion
 description: Freeze panes in JavaScript Spreadsheet keep selected rows and columns visible while scrolling, improving navigation and data analysis.
 platform: document-processing
 control: Freeze Panes 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Freeze Panes in JavaScript Spreadsheet 

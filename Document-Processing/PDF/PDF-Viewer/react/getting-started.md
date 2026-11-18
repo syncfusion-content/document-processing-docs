@@ -5,7 +5,7 @@ description: Learn how to get started with the Syncfusion React PDF Viewer contr
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with React PDF Viewer

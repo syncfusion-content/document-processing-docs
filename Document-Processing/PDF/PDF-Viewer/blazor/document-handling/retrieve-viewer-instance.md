@@ -4,7 +4,7 @@ title: Retrieve PDF Viewer Instance in Blazor PDF Viewer | syncfusion
 description: Learn how to access the PDF Viewer instance in the Blazor PDF Viewer using  references and the DocumentLoad event.
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Retrieve PDF Viewer Instance in Blazor PDF Viewer 

@@ -4,7 +4,7 @@ title: How to Deploy in Blazor  PDF Viewer MAUI on Android | Syncfusion
 description: Learn how to render a PDF from an embedded resource and run the Blazor PDF Viewer on Android using the .NET MAUI emulator.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Deploy in Blazor  PDF Viewer MAUI on Android

@@ -5,7 +5,7 @@ description: Show or hide loading indicators in Syncfusion® Angular DOCX Editor
 platform: document-processing
 control: Show hide spinner 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Show and Hide Spinner in Angular DOCX Editor

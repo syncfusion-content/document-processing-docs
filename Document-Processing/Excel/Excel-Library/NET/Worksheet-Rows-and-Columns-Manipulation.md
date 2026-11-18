@@ -3,7 +3,7 @@ title: Rows and Columns Manipulation in .NET Excel Library | Syncfusion
 description: Row and column manipulation in Excel Library describes how to insert, delete, hide, and manage rows and columns in Excel.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Worksheet Rows and Columns in .NET Excel Library

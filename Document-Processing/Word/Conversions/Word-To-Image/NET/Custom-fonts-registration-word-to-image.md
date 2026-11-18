@@ -3,7 +3,7 @@ title: Custom font registration for Word-to-Image in .NET | Syncfusion
 description: This section illustrates how to register custom fonts for Word-to-Image conversion using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Custom Font Registration for Word to Image Conversion in .NET Word

@@ -3,7 +3,7 @@ title: Content Controls in Java Word | Syncfusion
 description: This section illustrates how to work with Content Controls in Word document using Syncfusion Java Word library 
 platform: document-processing
 control: Word Library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Content Controls in Java Word

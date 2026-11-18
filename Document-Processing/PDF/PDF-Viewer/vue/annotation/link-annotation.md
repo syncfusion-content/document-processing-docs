@@ -5,7 +5,7 @@ description: Enable, apply, customize, and manage link annotations in the Vue PD
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Link Annotation in Vue PDF Viewer

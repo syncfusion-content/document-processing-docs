@@ -5,7 +5,7 @@ description: Delete a specific annotation in the React PDF Viewer using the dele
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Delete an Annotation in React PDF Viewer

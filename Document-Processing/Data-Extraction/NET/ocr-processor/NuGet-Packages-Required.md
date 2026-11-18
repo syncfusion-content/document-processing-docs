@@ -3,7 +3,7 @@ title: NuGet Packages required in .NET OCR Processor | Syncfusion
 description: Discover the NuGet packages required to use the Syncfusion .NET OCR Processor across various platforms and frameworks.
 platform: document-processing
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # NuGet Packages required in .NET OCR Processor
 

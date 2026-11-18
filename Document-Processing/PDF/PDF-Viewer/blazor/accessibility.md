@@ -4,7 +4,7 @@ title: Keyboard accessibility in Blazor PDF Viewer | Syncfusion
 description: Check out this guide and learn here all about Keyboard accessibility in Blazor PDF Viewer  component and more.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Keyboard accessibility in Blazor PDF Viewer

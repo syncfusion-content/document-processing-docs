@@ -4,7 +4,7 @@ title:  How to Insert Page Numbers in ASP.NET Core DOCX Editor | Syncfusion
 description: Insert page numbers and navigate to specific pages in Syncfusion® ASP.NET Core DOCX Editor using built-in APIs for efficient document navigation and formatting.
 platform: document-processing
 control: Insert Page number And Navigate To Specific Page
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Insert Page Numbers and Navigate in ASP.NET Core DOCX Editor

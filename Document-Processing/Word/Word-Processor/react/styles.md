@@ -5,7 +5,7 @@ description: The styles feature in React DOCX Editor enables users to apply, cus
 control: Styles 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Styles in React DOCX Editor

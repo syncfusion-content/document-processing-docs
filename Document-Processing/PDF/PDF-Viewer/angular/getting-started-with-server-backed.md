@@ -4,7 +4,7 @@ description: Set up and run the Syncfusion Angular PDF Viewer in server-backed m
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with Server-Backed Angular PDF Viewer

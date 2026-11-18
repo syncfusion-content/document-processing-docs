@@ -4,7 +4,7 @@ title: Content Controls in ASP.NET MVC DOCX Editor | Syncfusion
 description: The content control feature in ASP.NET MVC DOCX Editor provides built-in content controls to create structured and interactive document templates.
 platform: document-processing
 control: Content Control
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

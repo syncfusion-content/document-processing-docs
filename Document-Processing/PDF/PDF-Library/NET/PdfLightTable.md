@@ -3,7 +3,7 @@ title: PdfLightTable in .NET PDF Library | Syncfusion
 description: Learn how to create tables in PDF with built-in styles, pagination, and row/column customization using PdfLightTable.
 platform: document-processing
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # PdfLightTable in .NET PDF Library

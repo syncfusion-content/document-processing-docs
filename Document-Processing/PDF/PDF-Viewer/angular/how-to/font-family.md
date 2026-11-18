@@ -5,7 +5,7 @@ description: Change the default font family used by the Angular PDF Viewer for f
 platform: document-processing
 control: Change the Font Family in the Type Signature
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Change the Font Family in Angular PDF Viewer

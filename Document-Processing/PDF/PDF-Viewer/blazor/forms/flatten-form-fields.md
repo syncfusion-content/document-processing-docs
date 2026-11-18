@@ -5,7 +5,7 @@ description: Learn how to flatten interactive PDF form fields before download in
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Flatten PDF form fields in Blazor PDF Viewer

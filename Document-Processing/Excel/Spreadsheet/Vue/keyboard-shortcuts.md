@@ -4,7 +4,7 @@ title: Keyboard Shortcuts in Vue Spreadsheet | Syncfusion
 description: Learn keyboard shortcuts and navigation options in the Syncfusion Vue Spreadsheet to improve productivity.
 control: Keyboard shortcuts 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Keyboard Shortcuts in Vue Spreadsheet

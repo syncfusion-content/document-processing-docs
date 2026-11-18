@@ -5,7 +5,7 @@ description: Learn essential keyboard shortcuts for navigating and filling PDF f
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 # Keyboard Shortcuts in WPF Pdf Viewer
 

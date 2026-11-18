@@ -5,7 +5,7 @@ description: Duplicate pages in the Vue PDF Viewer using the Organize Pages pane
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Copy Pages in Vue PDF Viewer

@@ -5,7 +5,7 @@ description: Import pages from another PDF into the current document in the Angu
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Import Pages in Angular PDF Viewer

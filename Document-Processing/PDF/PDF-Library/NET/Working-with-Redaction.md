@@ -3,7 +3,7 @@ title: Redaction in .NET PDF Library | Syncfusion
 description: Learn how to redact sensitive text, images, and patterns in PDF documents using the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Redaction in .NET PDF Library

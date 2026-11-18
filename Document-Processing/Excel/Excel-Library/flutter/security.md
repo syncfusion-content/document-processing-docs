@@ -4,7 +4,7 @@ title: Excel Security in Flutter Excel Library | Syncfusion
 description: The Flutter Excel Library lets users protect Excel workbooks and worksheets with password-based security.
 platform: document-processing
 control: Excel
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Excel Security in Flutter Excel Library

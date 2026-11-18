@@ -5,7 +5,7 @@ description: Handle text search events in the Angular PDF Viewer and run program
 platform: document-processing
 control: Text search
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Text Search Events in Angular PDF Viewer

@@ -5,7 +5,7 @@ description: Add, edit, and manage handwritten signatures in the ASP.NET Core PD
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Handwritten Signature in ASP.NET Core PDF Viewer

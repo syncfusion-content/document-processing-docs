@@ -4,7 +4,7 @@ title: Custom Templates in React Spreadsheet | Syncfusion
 description: Learn about custom templates in the Syncfusion React Spreadsheet component for displaying custom cell content.
 control: Spreadsheet 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Custom Templates in React Spreadsheet

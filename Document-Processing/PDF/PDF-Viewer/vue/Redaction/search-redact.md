@@ -5,7 +5,7 @@ description: Learn about the search redact in the Vue PDF Viewer and how it help
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Search Redact in Vue PDF Viewer

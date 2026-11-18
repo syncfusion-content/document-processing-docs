@@ -5,7 +5,7 @@ description: How-to overview of the React PDF Viewer in Syncfusion React PDF Vie
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Overview of the React PDF Viewer

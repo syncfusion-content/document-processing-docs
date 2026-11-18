@@ -3,7 +3,7 @@ title: Working with Hyperlinks in JavaScript Word | Syncfusion
 description: Learn how to create and manage web, email, file, bookmark, and image hyperlinks in a Word document using the Syncfusion JavaScript Word library.
 platform: document-processing
 control: Word Library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Working with Hyperlinks in JavaScript Word Library

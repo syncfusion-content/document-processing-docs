@@ -4,7 +4,7 @@ title: Save in TypeScript Spreadsheet | Syncfusion
 description: Save in TypeScript Spreadsheet enables users to export and store workbook data in supported file formats for future use.
 platform: document-processing
 control: Save 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Save in TypeScript Spreadsheet 

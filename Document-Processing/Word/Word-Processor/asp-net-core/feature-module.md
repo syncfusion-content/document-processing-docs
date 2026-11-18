@@ -4,7 +4,7 @@ title: Feature Modules in ASP.NET Core DOCX Editor | Syncfusion
 description: Modules in ASP.NET Core DOCX Editor enable selective injection of editing, export, search, and history capabilities to extend document functionality.
 platform: document-processing
 control: Feature Module
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

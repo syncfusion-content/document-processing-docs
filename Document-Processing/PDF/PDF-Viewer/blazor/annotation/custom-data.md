@@ -4,7 +4,7 @@ title: Custom Data in Annotation Blazor PDF Viewer | Syncfusion
 description: Learn how to use custom data in annotations in the Blazor PDF Viewer to attach metadata to annotations.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Custom data in annotations in Blazor PDF Viewer 

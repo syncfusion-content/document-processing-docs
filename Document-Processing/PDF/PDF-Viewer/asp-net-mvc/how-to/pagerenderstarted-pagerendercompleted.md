@@ -5,7 +5,7 @@ description: Use the pageRenderInitiate and pageRenderComplete events in the ASP
 platform: document-processing
 control: PDF Viewer
 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Handle Page Render Events in ASP.NET MVC PDF Viewer

@@ -4,7 +4,7 @@ title: Comments in Blazor DOCX Editor | Syncfusion
 description: The comments feature in Blazor DOCX Editor enables users to add, review, navigate, reply to, and manage comments within documents.
 platform: document-processing
 control: DOCX Editor
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Comments in Blazor DOCX Editor

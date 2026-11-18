@@ -5,7 +5,7 @@ description: Learn how to build a custom toolbar in the Blazor PDF Viewer , incl
 control: SfPdfViewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Create a custom toolbar in Blazor PDF Viewer

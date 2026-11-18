@@ -5,7 +5,7 @@ description: Learn about the introduction of Syncfusion Essential Studio TypeScr
 control: Index 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion TypeScript PPTX Editor Control

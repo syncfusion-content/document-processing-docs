@@ -3,7 +3,7 @@ title: How to Sort Data in .NET Excel Library | Syncfusion
 description: Learn how to sort a column by including the first row programmatically using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to sort columns with the first row in .NET Excel Library

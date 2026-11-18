@@ -5,7 +5,7 @@ description: Configure ASP.NET MVC web services in the Vue DOCX Editor to handle
 control: Mvc 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # ASP.NET MVC Web Service in Vue DOCX Editor

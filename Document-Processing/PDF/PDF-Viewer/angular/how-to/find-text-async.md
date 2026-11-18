@@ -5,7 +5,7 @@ description: Search text asynchronously in the Angular PDF Viewer using the find
 platform: document-processing
 control: Find Text Async
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Use FindTextAsync in Angular PDF Viewer

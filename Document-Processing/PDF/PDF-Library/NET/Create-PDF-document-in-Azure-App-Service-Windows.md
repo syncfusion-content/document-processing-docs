@@ -3,7 +3,7 @@ title: Getting Started with .NET PDF Library in Azure Windows | Syncfusion
 description: Learn how to get started with the Syncfusion .NET PDF Library in Azure App Service on Windows and create PDF documents without Adobe Acrobat dependencies.
 platform: document-processing
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with .NET PDF Library in Azure App Service Windows

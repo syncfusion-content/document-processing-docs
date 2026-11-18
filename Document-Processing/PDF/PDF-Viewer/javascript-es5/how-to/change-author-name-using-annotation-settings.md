@@ -5,7 +5,7 @@ description: Change the author name and related annotation settings in the JavaS
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Change the Annotation Author Name in JavaScript (ES5) PDF

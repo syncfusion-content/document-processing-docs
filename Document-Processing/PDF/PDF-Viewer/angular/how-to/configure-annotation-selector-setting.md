@@ -5,7 +5,7 @@ description: Configure annotation selector settings in the Angular PDF Viewer us
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Configure Annotation Selectors in Angular PDF Viewer

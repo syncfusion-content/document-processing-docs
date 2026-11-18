@@ -5,7 +5,7 @@ description: Learn how Vue DOCX Editor handles unsupported file formats and unde
 control: Unsupported file 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Supported Documents Formats in Vue DOCX Editor

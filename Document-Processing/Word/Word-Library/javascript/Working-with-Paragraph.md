@@ -3,7 +3,7 @@ title: Paragraphs in JavaScript Word | Syncfusion
 description: Learn how to work with paragraphs, paragraph formatting, text runs, styles, and tab stops in a Word document using the Syncfusion JavaScript Word library.
 platform: document-processing
 control: Word Library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Paragraphs in JavaScript Word Library

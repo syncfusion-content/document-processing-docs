@@ -4,7 +4,7 @@ title: Group Form Fields in ASP.NET Core PDF Viewer | Syncfusion
 description: Group PDF form fields in the ASP.NET Core PDF Viewer by assigning the same name to multiple widgets so they behave as a single field group.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Group Form Fields in ASP.NET Core PDF Viewer

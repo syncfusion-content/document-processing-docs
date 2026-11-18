@@ -4,7 +4,7 @@ title: Context Menu in Vue Spreadsheet | Syncfusion
 description: Customize and use context menus in the Syncfusion Vue Spreadsheet to quickly access spreadsheet actions and commands
 control: Context menu 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Context Menu in Vue Spreadsheet

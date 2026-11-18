@@ -4,7 +4,7 @@ title: About Syncfusion JavaScript Spreadsheet AI Assist | Syncfusion
 description: Learn about the introduction and overview of AI Assist in Syncfusion Essential Studio JavaScript Spreadsheet and more details.
 platform: document-processing
 control: AI Assist
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion JavaScript Spreadsheet AI Assist

@@ -4,7 +4,7 @@ title: Formulas in Vue Spreadsheet | Syncfusion
 description: Perform calculations and data analysis using built-in formulas in the Syncfusion Vue Spreadsheet component.
 control: Formulas
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Formulas in Vue Spreadsheet

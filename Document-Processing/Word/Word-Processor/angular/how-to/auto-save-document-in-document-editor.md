@@ -5,7 +5,7 @@ description: Automatically save edited documents to AWS S3 at regular intervals 
 platform: document-processing
 control: Auto save document
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Auto Save Document to AWS S3 in Angular DOCX Editor

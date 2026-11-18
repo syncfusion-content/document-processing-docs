@@ -5,7 +5,7 @@ description: Use the form fields API in the JavaScript (ES6) PDF Viewer to enabl
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Form Fields API in JavaScript (ES6) PDF Viewer

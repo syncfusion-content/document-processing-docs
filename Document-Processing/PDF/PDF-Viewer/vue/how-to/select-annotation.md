@@ -5,7 +5,7 @@ description: Select an annotation programmatically in the Vue PDF Viewer using t
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Select an Annotation in Vue PDF Viewer

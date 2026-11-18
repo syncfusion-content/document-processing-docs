@@ -3,7 +3,7 @@ title: How to Save Changes in .NET Excel Library | Syncfusion
 description: Save edited changes in the same Excel document using the Syncfusion .NET Excel Library after modifying content.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to save changes in the same Excel document in .NET Excel Library

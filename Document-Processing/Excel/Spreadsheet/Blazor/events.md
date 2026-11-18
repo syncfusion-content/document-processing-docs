@@ -4,7 +4,7 @@ title: Events in Blazor Spreadsheet | Syncfusion
 description: Learn about the available events in the Syncfusion Blazor Spreadsheet and handle user interactions programmatically.
 platform: document-processing
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Events in Blazor Spreadsheet

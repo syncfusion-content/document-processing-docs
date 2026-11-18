@@ -3,7 +3,7 @@ title: How to Use AND OR Filters in .NET Excel Library | Syncfusion
 description: Use AND and OR operators in Excel filters using the Syncfusion .NET Excel Library for worksheet data filtering.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to use AND and OR filters in .NET Excel Library

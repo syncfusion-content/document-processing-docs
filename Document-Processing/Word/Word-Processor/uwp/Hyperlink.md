@@ -4,7 +4,7 @@ description: The hyperlink feature in UWP DOCX Editor offers hyperlink field sup
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: hyperlink,insert-hyperlink,requestnavigate,screentip,editor-settings
+keywords: hyperlink,insert-hyperlink,requestnavigate,screentip,editor-settingstocname: Document-Processing-SDKs-toc
 ---
 # Hyperlinks in UWP DOCX Editor
 

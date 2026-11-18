@@ -5,7 +5,7 @@ description: Customize the Form Designer toolbar in the Angular PDF Viewer to sh
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Customize the Form Designer Toolbar in Angular PDF Viewer

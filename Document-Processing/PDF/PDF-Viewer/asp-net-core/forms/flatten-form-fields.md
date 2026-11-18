@@ -5,7 +5,7 @@ description: Flatten interactive PDF form fields in the ASP.NET Core PDF Viewer 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Flatten Form Fields in ASP.NET Core PDF Viewer

@@ -4,7 +4,7 @@ title: Charts in ASP.NET MVC DOCX Editor Component | Syncfusion
 description: Chart support in ASP.NET MVC DOCX Editor ensures accurate rendering and preservation when opening Word documents.
 platform: document-processing
 control: Chart
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

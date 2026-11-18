@@ -5,7 +5,7 @@ description: Learn about the angular universal ssr in the Angular PDF Viewer and
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Angular Universal SSR in Angular PDF Viewer

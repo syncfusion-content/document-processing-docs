@@ -4,7 +4,7 @@ title: Scrolling and Zooming in ASP.NET MVC DOCX Editor | Syncfusion
 description: The scrolling and zooming in ASP.NET MVC DOCX Editor enables smooth document navigation and adjustable zoom levels for better viewing.
 platform: document-processing
 control: Scrolling Zooming
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

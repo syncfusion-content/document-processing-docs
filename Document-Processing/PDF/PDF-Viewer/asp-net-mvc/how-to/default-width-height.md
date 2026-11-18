@@ -5,7 +5,7 @@ description: Set the default width and height of the ASP.NET MVC PDF Viewer so i
 platform: document-processing
 control: PDF Viewer
 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Set the Default Width and Height in ASP.NET MVC PDF Viewer

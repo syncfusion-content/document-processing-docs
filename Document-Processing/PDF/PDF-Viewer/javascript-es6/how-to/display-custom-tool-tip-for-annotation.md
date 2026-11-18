@@ -5,7 +5,7 @@ description: Display custom tooltips for annotations in the JavaScript (ES6) PDF
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Display Custom Tooltips for Annotations in JavaScript (ES6)

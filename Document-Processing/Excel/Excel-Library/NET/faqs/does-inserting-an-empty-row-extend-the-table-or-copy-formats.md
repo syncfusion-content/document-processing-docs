@@ -3,7 +3,7 @@ title: Row Insertion Formatting in .NET Excel Library | Syncfusion
 description: Empty row insertion describes whether inserting a blank row extends an Excel table or copies formatting from the previous row.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Table Row Insertion in .NET Excel Library

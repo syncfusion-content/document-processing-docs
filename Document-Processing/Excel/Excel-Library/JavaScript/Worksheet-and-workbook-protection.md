@@ -3,7 +3,7 @@ title: Protection in JavaScript Excel Library | Syncfusion
 description: Protect worksheets and workbooks, set options, and manage protected ranges with the Syncfusion JavaScript Excel Library.
 platform: document-processing
 control: Excel
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Worksheet and Workbook Protection in JavaScript Excel

@@ -3,7 +3,7 @@ title: Create and edit PowerPoint files in ASP.NET Core | Syncfusion
 description: A .NET Core PowerPoint library to create, read and edit PowerPoint files in .NET Core applications. Supports text, shape, chart, table and combine PowerPoints.
 platform: document-processing
 control: PowerPoint
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Create, read and edit a PowerPoint file in ASP.NET Core
 

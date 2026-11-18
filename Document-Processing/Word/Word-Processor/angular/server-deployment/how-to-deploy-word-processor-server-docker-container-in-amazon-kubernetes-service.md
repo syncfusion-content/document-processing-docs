@@ -5,7 +5,7 @@ description: Deploy the Syncfusion® Angular DOCX Editor Docker image to Amazon 
 control: How to deploy word processor server docker container in Amazon Kubernetes Service in Angular
 platform: document-processing
 documentation: ug 
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 # How to Deploy Angular DOCX Editor Docker Image on Amazon Kubernetes
 

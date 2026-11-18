@@ -3,7 +3,7 @@ title: Comments in .NET Excel Library | Syncfusion
 description: Adding Excel comments programmatically explains how to add comments to worksheets using Interop and Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Comments in .NET Excel Library

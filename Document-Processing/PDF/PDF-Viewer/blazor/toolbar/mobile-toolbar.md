@@ -5,7 +5,7 @@ description: Learn how to customize the toolbar for mobile devices in the Blazor
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Customize mobile toolbar in Blazor PDF Viewer

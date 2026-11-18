@@ -3,7 +3,7 @@ title: HTML to PDF Performance metrics in .NET PDF Library | Syncfusion
 description: This section provides a detailed overview of the performance metrics and capabilities of the HTML-to-PDF conversion Library.
 platform: document-processing
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # HTML to PDF Performance metrics in .NET PDF Library 

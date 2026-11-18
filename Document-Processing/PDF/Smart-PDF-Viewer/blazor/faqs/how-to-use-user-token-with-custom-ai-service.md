@@ -4,7 +4,7 @@ title: User Token with Azure OpenAI Service in Smart PDF Viewer | Syncfusion
 description: Implement a user token with a custom Azure OpenAI service in the Syncfusion Smart PDF Viewer for a Blazor app.
 platform: document-processing
 control: SfSmartPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 # User Token with Azure OpenAI Service in Smart PDF Viewer
 

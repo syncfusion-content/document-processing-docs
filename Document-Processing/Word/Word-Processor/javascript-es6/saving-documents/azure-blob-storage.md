@@ -5,7 +5,7 @@ description: Save documents to Azure Blob Storage from TypeScript DOCX Editor, e
 platform: document-processing
 control: Save document to Azure Blob Storage
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Save Documents to Azure Blob Storage in TypeScript DOCX Editor

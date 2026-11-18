@@ -4,7 +4,7 @@ description: The document properties in UWP DOCX Editor track document statistic
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: word-count,paragraph-count,page-count,current-page-number,selection-changed
+keywords: word-count,paragraph-count,page-count,current-page-number,selection-changedtocname: Document-Processing-SDKs-toc
 ---
 # Document Properties in UWP DOCX Editor
 RichTexBox keep tracking the statistics about your documents. These statistics contains information about word count, paragraph count and pages count.

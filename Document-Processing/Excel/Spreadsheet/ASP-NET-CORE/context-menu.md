@@ -4,7 +4,7 @@ title: Context Menu in ASP.NET Core Spreadsheet | Syncfusion
 description: Learn about the context menu in the Syncfusion ASP.NET Core Spreadsheet control, including customization and available menu actions.
 platform: document-processing
 control: Context Menu
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

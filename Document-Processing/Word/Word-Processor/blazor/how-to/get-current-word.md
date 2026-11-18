@@ -4,7 +4,7 @@ title: How to Get Current Word in Blazor DOCX Editor | Syncfusion
 description: Get the current word or paragraph content as plain text and SFDT format in Syncfusion® Blazor DOCX Editor for content processing and analysis.
 platform: document-processing
 control: DOCX Editor
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Get Current Word in Blazor DOCX Editor

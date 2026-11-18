@@ -3,7 +3,7 @@ title: Track changes in .NET Word | Syncfusion
 description: This section illustrates how to create Word documents in Google Cloud Platform using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Track changes in .NET Word
 

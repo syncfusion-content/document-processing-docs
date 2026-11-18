@@ -5,7 +5,7 @@ description: View in React DOCX Editor enables web layout, ruler display, and he
 control: View 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # View in React DOCX Editor

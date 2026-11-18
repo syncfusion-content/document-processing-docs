@@ -5,7 +5,7 @@ description: Learn about the ui interactions in the JavaScript (ES6) PDF Viewer 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Ui Interactions in JavaScript (ES6) PDF Viewer

@@ -4,7 +4,7 @@ title: Worksheet in Javascript Spreadsheet | Syncfusion
 description: Worksheets in JavaScript Spreadsheet enable users to organize, manage, and work with multiple sheets within a single workbook.
 platform: document-processing
 control: Worksheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Worksheet in JavaScript Spreadsheet

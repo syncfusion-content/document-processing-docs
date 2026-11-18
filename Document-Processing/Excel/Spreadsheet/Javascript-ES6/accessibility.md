@@ -4,7 +4,7 @@ title: Accessibility in TypeScript Spreadsheet  | Syncfusion
 description: Accessibility in TypeScript Spreadsheet supports keyboard navigation, screen reader compatibility, and ARIA attributes for inclusive experiences.
 platform: document-processing
 control: Accessibility
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Accessibility in TypeScript Spreadsheet 

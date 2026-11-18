@@ -3,7 +3,7 @@ title: FAQ about multithreading with the PowerPoint library | Syncfusion
 description: Learn about the FAQs on multithreading support for opening, editing, and saving PowerPoint presentations using the .NET PowerPoint (Presentation) library.
 platform: document-processing
 control: PowerPoint
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # FAQ about multithreading in the PowerPoint library

@@ -4,7 +4,7 @@ title: Primary Toolbar in ASP.NET MVC PDF Viewer | Syncfusion
 description: Customize the primary toolbar in the ASP.NET MVC PDF Viewer to show, hide, reorder, or add items so it matches the way users work with PDFs.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Customize the Primary Toolbar in ASP.NET MVC PDF Viewer

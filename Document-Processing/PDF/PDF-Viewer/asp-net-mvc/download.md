@@ -4,7 +4,7 @@ title: Download in ASP.NET MVC PDF Viewer | Syncfusion
 description: Enable, disable, and programmatically trigger PDF downloads in the ASP.NET MVC PDF Viewer, including download events and Base64 handling.
 platform: document-processing
 control: Download
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Download in ASP.NET MVC PDF Viewer

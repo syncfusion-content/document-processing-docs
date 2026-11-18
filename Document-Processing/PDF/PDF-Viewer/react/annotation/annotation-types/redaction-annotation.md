@@ -5,7 +5,7 @@ description: Add, edit, delete, and apply redaction annotations in the React PDF
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Redaction Annotation in React PDF Viewer

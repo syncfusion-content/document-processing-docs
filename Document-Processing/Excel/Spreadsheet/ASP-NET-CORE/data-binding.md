@@ -4,7 +4,7 @@ title: Data Binding in ASP.NET Core Spreadsheet | Syncfusion
 description: Learn about data binding in the Syncfusion ASP.NET Core Spreadsheet control, including binding data sources and managing cell data.
 platform: document-processing
 control: Data Binding
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

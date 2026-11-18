@@ -3,7 +3,7 @@ title: Ink elements in .NET Word library | Syncfusion
 description: Learn how to create and edit Ink elements in a Word document using the .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Ink elements in .NET Word library
 

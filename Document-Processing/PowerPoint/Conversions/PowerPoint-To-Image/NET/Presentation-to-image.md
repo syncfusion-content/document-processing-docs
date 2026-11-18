@@ -3,7 +3,7 @@ title: Converting PPTX to image in File Formats| Syncfusion
 description: This section illustrates how to convert PowerPoint Presentation document to image; PowerPoint Presentation conversion
 platform: document-processing
 control: Presentation
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Convert PowerPoint to Image using Syncfusion® PowerPoint Library

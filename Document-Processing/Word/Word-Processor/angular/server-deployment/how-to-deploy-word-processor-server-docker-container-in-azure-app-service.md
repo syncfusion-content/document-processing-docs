@@ -5,7 +5,7 @@ description: Deploy the Syncfusion® Angular DOCX Editor Docker image to Azure A
 platform: document-processing
 control: How to deploy word processor server docker container in Azure App Service
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 # How to Deploy Angular DOCX Editor Docker image on Azure App
 

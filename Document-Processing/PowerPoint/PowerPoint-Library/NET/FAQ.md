@@ -3,7 +3,7 @@ title: FAQs in .NET PowerPoint Presentation | Syncfusion
 description: Find answers to frequently asked questions about creating, editing, and managing PowerPoint presentations using the Syncfusion® .NET PowerPoint library.
 platform: document-processing
 control: Presentation
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # FAQs in .NET PowerPoint Presentation
 

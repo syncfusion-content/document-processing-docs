@@ -3,7 +3,7 @@ title: Open and save Presentation in GCP | Syncfusion
 description: Learn how to open and save PowerPoint presentations in Google Cloud Platform using the .NET PowerPoint library without Microsoft PowerPoint.
 platform: document-processing
 control: PowerPoint
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Open and Save PowerPoint Presentation in Google Cloud Platform (GCP)

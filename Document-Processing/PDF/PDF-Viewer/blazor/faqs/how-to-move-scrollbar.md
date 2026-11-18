@@ -4,7 +4,7 @@ title: How to Move scrollbar to the exact annotations location | Syncfusion
 description: Learn how to scroll the scrollbar precisely to the location of annotations in the Blazor PDF Viewer component.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Move scrollbar to the exact annotations location

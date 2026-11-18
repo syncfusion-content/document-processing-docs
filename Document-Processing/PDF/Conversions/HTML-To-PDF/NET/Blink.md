@@ -3,7 +3,7 @@ title: HTML to PDF Conversion in Blink Engine .NET PDF Library | Syncfusion
 description: Learn how to convert HTML to PDF using Blink rendering engine with various features like TOC, partial web page to PDF etc.
 platform: document-processing
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # HTML to PDF conversion in Blink Engine .NET PDF Library
 

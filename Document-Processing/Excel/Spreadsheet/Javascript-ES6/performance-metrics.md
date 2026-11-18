@@ -4,7 +4,7 @@ title: Performance Metrics in TypeScript Spreadsheet | Syncfusion
 description: Performance metrics in TypeScript Spreadsheet provide benchmark results, measurements, and environment details to evaluate control performance.
 platform: document-processing
 control: Performance
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Performance Metrics in TypeScript Spreadsheet 

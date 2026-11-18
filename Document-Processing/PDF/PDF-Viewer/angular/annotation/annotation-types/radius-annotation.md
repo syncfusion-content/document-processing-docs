@@ -5,7 +5,7 @@ description: Enable, draw, customize, and manage Radius measurement annotations 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Radius Annotation in Angular PDF Viewer

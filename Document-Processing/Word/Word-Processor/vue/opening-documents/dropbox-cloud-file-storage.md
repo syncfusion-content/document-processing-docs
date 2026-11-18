@@ -5,7 +5,7 @@ description: Open documents from Dropbox cloud storage in Vue DOCX Editor, enabl
 platform: document-processing
 control: Open document from Dropbox cloud file storage
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Open Documents from Dropbox in Vue DOCX Editor

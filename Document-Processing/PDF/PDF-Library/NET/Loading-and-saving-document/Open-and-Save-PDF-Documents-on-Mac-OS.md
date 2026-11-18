@@ -4,7 +4,7 @@ description: Learn how to open and save PDF documents on macOS using Syncfusion 
 platform: document-processing
 control: PDF
 documentation: UG
-keywords: mac os save pdf, mac os load pdf, c# save pdf, c# load pdf
+keywords: mac os save pdf, mac os load pdf, c# save pdf, c# load pdftocname: Document-Processing-SDKs-toc
 ---
 
 # Open and Save PDF Document in macOS

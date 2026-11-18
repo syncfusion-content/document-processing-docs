@@ -4,7 +4,7 @@ canonical_url: "https://www.syncfusion.com/document-sdk/net-powerpoint-library"
 description: Learn about the Syncfusion® .NET PowerPoint Presentation Library for creating, reading, editing, converting, and managing PowerPoint files.
 platform: document-processing
 control: Presentation
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # About Syncfusion .NET PowerPoint Presentation Library
 

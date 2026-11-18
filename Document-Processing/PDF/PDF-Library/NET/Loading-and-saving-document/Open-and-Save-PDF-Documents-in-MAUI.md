@@ -4,7 +4,7 @@ description: Learn how to open and save PDF documents in .NET MAUI applications 
 platform: document-processing
 control: PDF
 documentation: UG
-keywords: maui os save pdf, maui os load pdf, c# save pdf, c# load pdf
+keywords: maui os save pdf, maui os load pdf, c# save pdf, c# load pdftocname: Document-Processing-SDKs-toc
 ---
 
 # Open and Save PDF Document in .NET MAUI

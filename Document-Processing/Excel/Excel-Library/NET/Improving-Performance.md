@@ -3,7 +3,7 @@ title: Performance Optimization in .NET Excel Library | Syncfusion
 description: The performance section describes best practices for reading, writing, styling, autofit, data import, and validation.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Performance Optimization in .NET Excel Library
 

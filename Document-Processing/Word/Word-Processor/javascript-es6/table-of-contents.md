@@ -5,7 +5,7 @@ description: The Table of Contents feature in TypeScript DOCX Editor enables use
 platform: document-processing
 control: Table of contents 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Table of Contents in TypeScript DOCX Editor

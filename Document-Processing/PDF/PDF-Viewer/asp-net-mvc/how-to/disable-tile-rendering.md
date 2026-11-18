@@ -5,7 +5,7 @@ description: Disable tile rendering in the ASP.NET MVC PDF Viewer to use the cla
 platform: document-processing
 control: Disable tile rendering
 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Disable Tile Rendering in ASP.NET MVC PDF Viewer

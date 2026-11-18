@@ -4,7 +4,7 @@ title: About Syncfusion WPF Spreadsheet Control | Syncfusion®
 description: Learn about the introduction and overview of Syncfusion Essential Studio WPF Spreadsheet control, its features, capabilities, and spreadsheet editing support.
 platform: document-processing
 control: SfSpreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion WPF Spreadsheet Control

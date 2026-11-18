@@ -4,7 +4,7 @@ title: How to Find and Replace in a Range in React Spreadsheet | Syncfusion
 description: Learn how to perform find and replace operations within a selected cell range in the Syncfusion React Spreadsheet component.
 control: Spreadsheet 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Find and Replace in a Range in React Spreadsheet

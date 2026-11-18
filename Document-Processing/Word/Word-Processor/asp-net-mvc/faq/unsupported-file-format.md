@@ -4,7 +4,7 @@ title: Supported File Formats in ASP.NET MVC DOCX Editor | Syncfusion
 description: Learn about the supported file formats in ASP.NET MVC DOCX Editor for importing, and exporting documents.
 platform: document-processing
 control: Unsupported file
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Supported File Formats in ASP.NET MVC DOCX Editor

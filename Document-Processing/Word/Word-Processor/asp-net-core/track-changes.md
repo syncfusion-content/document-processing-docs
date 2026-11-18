@@ -4,7 +4,7 @@ title: Track Changes in ASP.NET Core DOCX Editor | Syncfusion
 description: Track changes in ASP.NET Core DOCX Editor records document modifications and enables reviewers to accept or reject revisions efficiently.
 platform: document-processing
 control: Track Changes
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Track Changes in ASP.NET Core DOCX Editor

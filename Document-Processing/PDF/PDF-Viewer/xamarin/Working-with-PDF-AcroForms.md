@@ -4,7 +4,7 @@ title: Working with PDF forms in Xamarin Pdf Viewer | Syncfusion
 description: Learn here all about Working with PDF forms support in Syncfusion<sup>®</sup> Xamarin Pdf Viewer (SfPdfViewer) control and more.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Working with PDF forms in Xamarin Pdf Viewer

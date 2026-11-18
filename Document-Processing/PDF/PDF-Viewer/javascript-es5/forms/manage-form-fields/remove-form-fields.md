@@ -4,7 +4,7 @@ title: Remove Form Fields in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Remove PDF form fields in the JavaScript (ES5) PDF Viewer using the built-in UI and programmatic APIs to delete fields you no longer need.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Remove Form Fields in JavaScript (ES5) PDF Viewer

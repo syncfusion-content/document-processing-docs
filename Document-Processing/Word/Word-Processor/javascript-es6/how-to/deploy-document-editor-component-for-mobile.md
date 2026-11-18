@@ -5,7 +5,7 @@ description: Deploy the Syncfusion® TypeScript DOCX Editor for mobile browsers 
 platform: document-processing
 control: Deploy DOCX Editor Component for Mobile
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Deploy TypeScript DOCX Editor for Mobile

@@ -4,7 +4,7 @@ description: Learn about the Syncfusion assemblies required to work with PDF fil
 platform: document-processing
 control: PDF
 documentation: UG
-keywords: Assemblies
+keywords: Assembliestocname: Document-Processing-SDKs-toc
 ---
 # Assemblies for .NET PDF Library
 

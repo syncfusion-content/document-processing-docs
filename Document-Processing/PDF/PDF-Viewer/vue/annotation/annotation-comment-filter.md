@@ -5,7 +5,7 @@ description: Filter comments and annotations in the Vue PDF Viewer by author, st
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Annotation Comment Filter in Vue PDF Viewer

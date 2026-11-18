@@ -4,7 +4,7 @@ title: Document Summaries and Q&A in Blazor Smart PDF Viewer | Syncfusion
 description: Explore how to generate concise document summaries and ask AI-assisted questions using SfSmartPdfViewer in your Blazor applications.
 platform: document-processing
 control: SfSmartPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Document Summaries and Q&A in Blazor Smart PDF Viewer

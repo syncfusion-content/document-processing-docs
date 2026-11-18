@@ -4,7 +4,7 @@ title: How to Show the Bookmark Pane in ASP.NET MVC PDF Viewer | Syncfusion
 description: Show or hide the bookmark pane in the ASP.NET MVC PDF Viewer using showBookmarkPane to control when users can access document bookmarks.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Show the Bookmark Pane in ASP.NET MVC PDF Viewer

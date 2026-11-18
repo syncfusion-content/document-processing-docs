@@ -4,7 +4,7 @@ title: Illustrations in Blazor Spreadsheet | Syncfusion
 description: Add and manage images and visual elements in Excel documents using the Syncfusion Blazor Spreadsheet component.
 platform: document-processing
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Illustrations in Blazor Spreadsheet

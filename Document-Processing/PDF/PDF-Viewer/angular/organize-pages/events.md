@@ -5,7 +5,7 @@ description: Subscribe to Organize Pages events in the Angular PDF Viewer to rea
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Organize Pages Events in Angular PDF Viewer

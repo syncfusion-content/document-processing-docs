@@ -5,7 +5,7 @@ description: Localize the JavaScript (ES6) PDF Viewer to a new language by provi
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Set a New Language in JavaScript (ES6) PDF Viewer

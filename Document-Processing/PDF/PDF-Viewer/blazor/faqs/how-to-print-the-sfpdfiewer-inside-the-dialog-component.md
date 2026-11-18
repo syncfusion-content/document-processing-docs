@@ -4,7 +4,7 @@ title: How to Print the PDF Viewer inside the Dialog component | Syncfusion
 description: Learn here all about how to print the PDF Viewer inside a Syncfusion Dialog in the Blazor PDF Viewer.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Print the PDF Viewer inside the Dialog component

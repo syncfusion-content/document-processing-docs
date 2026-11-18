@@ -3,7 +3,7 @@ title: How to Set Default Fonts in .NET Excel Library | Syncfusion
 description: Set the default font and font size in an Excel workbook using the Syncfusion .NET Excel Library for workbook formatting.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to set default fonts in .NET Excel Library

@@ -4,7 +4,7 @@ title: Cell Ranges in Vue Spreadsheet | Syncfusion
 description: Learn how to manage cell ranges in the Syncfusion Vue Spreadsheet, including selection, formatting, and range operations.
 control: Cell range 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Cell Ranges in Vue Spreadsheet

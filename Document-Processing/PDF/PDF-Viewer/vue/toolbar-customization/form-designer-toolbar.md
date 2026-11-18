@@ -5,7 +5,7 @@ description: Customize the Form Designer toolbar in the Vue PDF Viewer to show, 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Customize the Form Designer Toolbar in Vue PDF Viewer

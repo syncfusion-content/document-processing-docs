@@ -5,7 +5,7 @@ description: Add and customize context menu options in the React PDF Viewer usin
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Custom Context Menu in React PDF Viewer

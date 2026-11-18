@@ -5,7 +5,7 @@ description: How to remove one or more pages from a PDF using the Organize Pages
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Remove pages using the Organize Pages tool in Blazor PDF Viewer

@@ -5,7 +5,7 @@ description: Learn about the events in the Angular PDF Viewer and how it helps u
 platform: document-processing
 control: PDF Viewer 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Events in Angular PDF Viewer

@@ -5,7 +5,7 @@ description: Enable print rotation in the React PDF Viewer so landscape document
 platform: document-processing
 control: Print
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Enable Print Rotation in React PDF Viewer

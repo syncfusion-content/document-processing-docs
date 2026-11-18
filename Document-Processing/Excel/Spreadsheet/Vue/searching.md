@@ -4,7 +4,7 @@ title: Find and Replace in Vue Spreadsheet | Syncfusion
 description: Search and replace worksheet data efficiently using built-in find and replace functionality in the Syncfusion Vue Spreadsheet.
 control: Searching 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Find and Replace in Vue Spreadsheet

@@ -3,7 +3,7 @@ title: Attachments in .NET PDF Library | Syncfusion
 description: Learn how to add, remove, and extract file attachments in a PDF document using the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Attachments in .NET PDF Library
 

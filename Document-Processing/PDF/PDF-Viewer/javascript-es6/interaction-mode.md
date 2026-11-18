@@ -5,7 +5,7 @@ description: Switch between selection mode and panning mode in the JavaScript (E
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Interaction Mode in JavaScript (ES6) PDF Viewer

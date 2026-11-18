@@ -5,7 +5,7 @@ description: Customize Form Designer toolbar icons and property dialog styling i
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Customize Form Designer Appearance in JavaScript (ES5) PDF Viewer

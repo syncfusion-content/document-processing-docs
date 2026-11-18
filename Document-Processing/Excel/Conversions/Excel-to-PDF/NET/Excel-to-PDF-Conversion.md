@@ -3,7 +3,7 @@ title: Excel to PDF Conversion in .NET Excel Library | Syncfusion
 description: Excel document conversion describes how to convert workbooks, worksheets, and charts to PDF or image, and print Excel files.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Excel to PDF Conversion in .NET Excel Library

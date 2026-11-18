@@ -5,7 +5,7 @@ description: Lock square or rectangle annotations in the React PDF Viewer so use
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Lock Annotations in React PDF Viewer

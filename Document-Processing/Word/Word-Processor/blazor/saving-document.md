@@ -4,7 +4,7 @@ title: Saving a Document in Blazor DOCX Editor | Syncfusion
 description: Save documents from Blazor DOCX Editor to a server, database, or local file system, and download document copies in supported formats
 platform: document-processing
 control: DOCX Editor
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Saving a Document in Blazor DOCX Editor

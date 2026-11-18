@@ -4,7 +4,7 @@ title: Scrolling in Angular Spreadsheet | Syncfusion
 description: Scrolling in Angular Spreadsheet enables smooth navigation across rows and columns, helping users efficiently view and manage large datasets.
 platform: document-processing
 control: Index
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Scrolling in Angular Spreadsheet 

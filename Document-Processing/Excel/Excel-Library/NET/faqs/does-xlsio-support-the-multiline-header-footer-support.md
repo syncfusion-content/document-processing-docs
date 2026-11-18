@@ -3,7 +3,7 @@ title: Multiline Headers and Footers in .NET Excel Library | Syncfusion
 description: Multiline headers and footers explains how the Syncfusion .NET Excel Library adds multiple lines to Excel headers and footers.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Multiline Headers and Footers in .NET Excel Library

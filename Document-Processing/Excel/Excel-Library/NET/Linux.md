@@ -3,7 +3,7 @@ title: Linux FAQ in .NET Excel Library | Syncfusion
 description: The Linux troubleshooting section describes Docker setup, font installation, locale configuration, and SkiaSharp dependencies.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Linux FAQ in .NET Excel Library

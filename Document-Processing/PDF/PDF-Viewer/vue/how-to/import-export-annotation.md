@@ -5,7 +5,7 @@ description: Import and export annotations in the Vue PDF Viewer as JavaScript o
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Import and Export Annotations in Vue PDF Viewer

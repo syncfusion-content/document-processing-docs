@@ -4,7 +4,7 @@ title: Toolbar in React PDF Viewer | Syncfusion
 description: Customize the redaction toolbar in the React PDF Viewer by showing or hiding the default redaction actions to fit your scenario.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Customize the Redaction Toolbar in React PDF Viewer

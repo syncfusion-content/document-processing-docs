@@ -4,7 +4,7 @@ title: How to Load a font collection in Blazor PDF Viewer | Syncfusion
 description: Learn how to load multiple fallback fonts using FallbackFontCollection in the Blazor PDF Viewer to ensure accurate rendering of PDFs with diverse fonts.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Load a font collection in Blazor PDF Viewer

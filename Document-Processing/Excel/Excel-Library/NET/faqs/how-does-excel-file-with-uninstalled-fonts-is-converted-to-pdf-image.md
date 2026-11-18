@@ -3,7 +3,7 @@ title: How to Convert Uninstalled Fonts in .NET Excel Library | Syncfusion
 description: Convert Excel files with uninstalled fonts to PDF or images using Excel Library and understand how missing fonts are handled.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to convert missing fonts to PDF/Image in .NET Excel Library

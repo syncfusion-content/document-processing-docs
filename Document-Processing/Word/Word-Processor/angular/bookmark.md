@@ -5,7 +5,7 @@ description: The bookmark feature in Angular DOCX Editor lets users add, manage,
 platform: document-processing
 control: Bookmark 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Bookmarks in Angular DOCX Editor

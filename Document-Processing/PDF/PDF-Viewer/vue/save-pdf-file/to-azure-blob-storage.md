@@ -5,7 +5,7 @@ description: Save PDF files from the Vue PDF Viewer to Azure Blob Storage using 
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Save PDF Files to Azure Blob Storage in Vue PDF Viewer

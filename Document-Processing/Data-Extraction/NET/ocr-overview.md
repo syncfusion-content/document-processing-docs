@@ -5,7 +5,7 @@ description: Learn about introduction of Syncfusion OCR Processor for recognizin
 platform: document-processing
 control: OCRProcessor
 documentation: UG
-keywords: OCR, Optical Character Recognition, Text Recognition
+keywords: OCR, Optical Character Recognition, Text Recognitiontocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion OCR Processing Library

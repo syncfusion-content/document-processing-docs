@@ -3,7 +3,7 @@ title: FAQ Section in .NET Word | Syncfusion
 description: Describe frequently asked questions about creating and managing tables using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # FAQ Section in .NET Word
 

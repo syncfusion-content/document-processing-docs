@@ -4,7 +4,7 @@ title: To Azure Active Directory in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Learn about the to azure active directory in the JavaScript (ES6) PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # To Azure Active Directory in JavaScript (ES6) PDF Viewer
@@ -14,7 +14,7 @@ documentation: ug
 The TypeScript PDF Viewer component supports loading and saving PDF files using Azure Active Directory (AAD). This article describes a server-backed pattern to securely load and store PDF documents. It is intended for developers implementing a server-client integration that avoids exposing secrets or long-lived credentials in the browser.
 
 ### Steps to open the PDF file from Azure Active Directory
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 1: Register an application in Azure Active Directory (AAD)
@@ -36,7 +36,7 @@ The TypeScript PDF Viewer component supports loading and saving PDF files using 
    - Copy the client secret value immediately, as it will be hidden later. Store it securely.
 
    ![Create a client secret in Azure AD](../images/client-secret.png)
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 2: Create the Azure Storage account
@@ -46,7 +46,7 @@ The TypeScript PDF Viewer component supports loading and saving PDF files using 
    - Create a new storage account by filling in the required details (e.g., name, location, resource group, etc.).
 
     ![Create an Azure Storage account](../images/storage-account.png)
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 3: Assign a role to the application
@@ -61,7 +61,7 @@ The TypeScript PDF Viewer component supports loading and saving PDF files using 
    - Select your application and click **Select**.
    - Click **Review + assign** to finalize the role assignment.
 
-    ![Assign Storage Blob Data Contributor role to the application](../images/add-role.png)
+    ![Assign Storage Blob Data Contributor role to the application](../images/add-role.png)tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 4: Upload the PDF document to Azure Storage
@@ -72,7 +72,7 @@ The TypeScript PDF Viewer component supports loading and saving PDF files using 
 2. Upload the PDF file:
    - Create a new container and upload the PDF document you want to access in the PDF Viewer.
 
-    ![Upload a PDF file to an Azure Blob container](../images/upload-pdf.png)
+    ![Upload a PDF file to an Azure Blob container](../images/upload-pdf.png)tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 5: Server-side configuration
@@ -87,7 +87,7 @@ The TypeScript PDF Viewer component supports loading and saving PDF files using 
 
 2. Run the web service:
    - After configuring the necessary details, run the web service to make it accessible.
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 6: Client-side configuration
@@ -101,7 +101,7 @@ The TypeScript PDF Viewer component supports loading and saving PDF files using 
 
 3. Display the PDF in the PDF Viewer:
    - Once the base64 string is received, the PDF Viewer will load the PDF using the `viewer.load()` method.
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 7: Save the PDF document to Azure
@@ -109,7 +109,7 @@ The TypeScript PDF Viewer component supports loading and saving PDF files using 
 1. Save PDF to AAD:
    - The user can click the **Save to AAD** button to upload any modifications to the PDF back to Azure Blob Storage.
    - This action sends the modified PDF to the server, where it is converted into a byte array and saved to the specified Azure Blob container.
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ### Server-side code snippets

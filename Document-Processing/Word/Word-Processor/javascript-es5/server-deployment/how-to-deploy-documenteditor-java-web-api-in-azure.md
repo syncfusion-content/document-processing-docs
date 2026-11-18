@@ -5,7 +5,7 @@ description: Deploy the Syncfusion® JavaScript DOCX Editor Java Web API in Azur
 platform: document-processing
 control: How to deploy documenteditor java web api in azure 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 # How to Deploy JavaScript DOCX Editor Java Web API in Azure App
 

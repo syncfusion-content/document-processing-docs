@@ -5,7 +5,7 @@ description: Learn how to highlight text differences in the Syncfusion TypeScrip
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Highlight Differences in TypeScript PDF Viewer UI

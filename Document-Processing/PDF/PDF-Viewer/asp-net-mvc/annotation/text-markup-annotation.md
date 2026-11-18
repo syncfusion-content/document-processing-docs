@@ -5,7 +5,7 @@ description: Use text markup annotations in the ASP.NET MVC PDF Viewer, includin
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Text Markup Annotations in ASP.NET MVC PDF Viewer

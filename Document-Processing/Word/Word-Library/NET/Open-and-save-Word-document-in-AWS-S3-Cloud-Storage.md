@@ -3,7 +3,7 @@ title: Open and save Word document in AWS S3 Storage  | Syncfusion
 description: Open and save Word document in AWS S3 Cloud Storage using Syncfusion® Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Open and save Word document in AWS S3 Storage 

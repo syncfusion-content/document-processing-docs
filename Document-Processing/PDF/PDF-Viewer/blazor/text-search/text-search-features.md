@@ -5,7 +5,7 @@ description: Learn how to configure text search and run programmatic searches in
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Text search in Blazor PDF Viewer 

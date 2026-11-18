@@ -5,7 +5,7 @@ description: Images in TypeScript DOCX Editor enable resizing and text wrapping 
 platform: document-processing
 control: Image 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Images in TypeScript DOCX Editor

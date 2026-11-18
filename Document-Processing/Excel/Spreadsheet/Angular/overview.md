@@ -4,7 +4,7 @@ title: About Syncfusion Angular Spreadsheet Component | Syncfusion
 description: Learn about the introduction and overview of Syncfusion Essential Studio Angular Spreadsheet component, its features, capabilities, and more details.
 platform: document-processing
 control: Index
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion Angular Spreadsheet Component

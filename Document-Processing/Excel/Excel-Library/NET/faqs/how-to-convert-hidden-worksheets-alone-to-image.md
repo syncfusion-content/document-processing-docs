@@ -3,7 +3,7 @@ title: How to Convert Hidden Sheets in .NET Excel Library | Syncfusion
 description: Convert hidden Excel worksheets to images using the Syncfusion .NET Excel Library without rendering visible sheets.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to convert hidden worksheets to images in .NET Excel Library

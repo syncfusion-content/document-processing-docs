@@ -5,7 +5,7 @@ description: Reference documentation for text selection properties, methods, and
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Text Selection API and Events in Vue PDF Viewer

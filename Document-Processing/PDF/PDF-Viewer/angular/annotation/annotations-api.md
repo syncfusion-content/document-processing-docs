@@ -5,7 +5,7 @@ description: Use the annotations API in the Angular PDF Viewer to read, add, upd
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Annotations API in Angular PDF Viewer
@@ -131,7 +131,7 @@ export class AppComponent {
 }
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## annotationDrawingOptions
@@ -199,7 +199,7 @@ export class AppComponent {
 
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## annotationSelectorSettings
@@ -281,7 +281,7 @@ export class AppComponent {
 }
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## annotationSettings
@@ -359,7 +359,7 @@ export class AppComponent {
 }
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## areaSettings
@@ -463,7 +463,7 @@ export class AppComponent {
 
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## arrowSettings
@@ -568,7 +568,7 @@ export class AppComponent {
 }
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## circleSettings
@@ -670,7 +670,7 @@ export class AppComponent {
 }
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## customStamp
@@ -739,7 +739,7 @@ export class AppComponent {
 }
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## customStampSettings
@@ -826,7 +826,7 @@ export class AppComponent {
 }
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## distanceSettings
@@ -935,7 +935,7 @@ export class AppComponent {
 }
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableAnnotation
@@ -996,7 +996,7 @@ export class AppComponent {
 }
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableAnnotationToolbar
@@ -1057,7 +1057,7 @@ export class AppComponent {
 }
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableFreeText
@@ -1118,7 +1118,7 @@ export class AppComponent {
 }
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableHandwrittenSignature
@@ -1179,7 +1179,7 @@ export class AppComponent {
 }
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableInkAnnotation
@@ -1240,7 +1240,7 @@ export class AppComponent {
 }
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableMeasureAnnotation
@@ -1301,7 +1301,7 @@ export class AppComponent {
 }
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableMultiPageAnnotation
@@ -1362,7 +1362,7 @@ export class AppComponent {
 }
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableShapeAnnotation
@@ -1423,7 +1423,7 @@ export class AppComponent {
 }
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableShapeLabel
@@ -1485,7 +1485,7 @@ export class AppComponent {
 
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableStampAnnotations
@@ -1547,7 +1547,7 @@ export class AppComponent {
 
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableStickyNotesAnnotation
@@ -1608,7 +1608,7 @@ export class AppComponent {
 }
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableTextMarkupAnnotation
@@ -1669,7 +1669,7 @@ export class AppComponent {
 }
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableTextMarkupResizer
@@ -1730,7 +1730,7 @@ export class AppComponent {
 }
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## exportAnnotationFileName
@@ -1791,7 +1791,7 @@ export class AppComponent {
 }
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## freeTextSettings
@@ -1905,7 +1905,7 @@ export class AppComponent {
 }
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## handWrittenSignatureSettings
@@ -2023,7 +2023,7 @@ export class AppComponent {
 }
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## highlightSettings
@@ -2093,7 +2093,7 @@ export class AppComponent {
 }
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## inkAnnotationSettings
@@ -2163,7 +2163,7 @@ export class AppComponent {
 }
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## isAnnotationToolbarVisible
@@ -2220,7 +2220,7 @@ export class AppComponent {
 }
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## lineSettings
@@ -2293,7 +2293,7 @@ export class AppComponent {
 }
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## measurementSettings
@@ -2352,7 +2352,7 @@ export class AppComponent {
 }
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## perimeterSettings
@@ -2424,7 +2424,7 @@ export class AppComponent {
 }
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## polygonSettings
@@ -2495,7 +2495,7 @@ export class AppComponent {
 }
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## radiusSettings
@@ -2567,7 +2567,7 @@ export class AppComponent {
 }
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## rectangleSettings
@@ -2638,7 +2638,7 @@ export class AppComponent {
 }
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## shapeLabelSettings
@@ -2701,7 +2701,7 @@ export class AppComponent {
 }
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## stampSettings
@@ -2788,7 +2788,7 @@ export class AppComponent {
 }
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## stickyNotesSettings
@@ -2858,7 +2858,7 @@ export class AppComponent {
 }
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## strikethroughSettings
@@ -2928,7 +2928,7 @@ export class AppComponent {
 }
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## underlineSettings
@@ -2998,7 +2998,7 @@ export class AppComponent {
 }
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## volumeSettings

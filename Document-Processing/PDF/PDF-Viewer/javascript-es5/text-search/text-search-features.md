@@ -5,7 +5,7 @@ description: Configure text search features in the JavaScript (ES5) PDF Viewer a
 platform: document-processing
 control: Text search
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 # Text Search in JavaScript (ES5) PDF Viewer
 

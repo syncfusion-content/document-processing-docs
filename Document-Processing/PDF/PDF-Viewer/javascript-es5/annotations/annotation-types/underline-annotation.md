@@ -5,7 +5,7 @@ description: Enable, apply, customize, and manage Underline annotations in the J
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Underline Annotation in JavaScript (ES5) PDF Viewer

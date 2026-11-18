@@ -5,7 +5,7 @@ description: Learn about the shape annotation in the Angular PDF Viewer and how 
 platform: document-processing
 control: Shape annotation
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Shape Annotation in Angular PDF Viewer

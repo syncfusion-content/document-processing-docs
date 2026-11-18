@@ -4,7 +4,7 @@ title: How to Show and Hide Spinner in ASP.NET MVC DOCX Editor | Syncfusion
 description: Show or hide loading indicators in Syncfusion® ASP.NET MVC DOCX Editor when opening documents and processing content.
 platform: document-processing
 control: Show or Hide a Spinner
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

@@ -4,7 +4,7 @@ canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
 description: Draw QR Code, Data Matrix, and PDF417 barcodes in PDF documents using the Syncfusion JavaScript PDF Library.
 platform: document-processing
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Barcode in JavaScript PDF

@@ -3,7 +3,7 @@ title: Azure Stream Reading in .NET Excel Library | Syncfusion
 description: Azure Blob Storage access explains whether Syncfusion .NET Excel Library can read Excel files directly from Azure Blob Storage streams.
 platform: document-processing 
 control: XlsIO 
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Excel Files from Azure Blob Storage in .NET Excel Library

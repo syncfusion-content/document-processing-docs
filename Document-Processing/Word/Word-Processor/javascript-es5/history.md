@@ -5,7 +5,7 @@ description: History in JavaScript DOCX Editor tracks editing actions to enable 
 platform: document-processing
 control: History 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # History in JavaScript DOCX Editor

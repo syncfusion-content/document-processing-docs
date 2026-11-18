@@ -5,7 +5,7 @@ description: Learn about the common errors when ej2 pdfviewer lib assets are mis
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Common Errors When Ej2 Pdfviewer Lib Assets Are Missing in Angular

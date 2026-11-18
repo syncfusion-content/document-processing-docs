@@ -4,7 +4,7 @@ title: Rows and Columns in ASP.NET Core Spreadsheet | Syncfusion
 description: Learn about rows and columns in the Syncfusion ASP.NET Core Spreadsheet control, including inserting, deleting, resizing, and managing data structures.
 platform: document-processing
 control: Rows And Columns
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

@@ -4,7 +4,7 @@ description: The undo redo feature in WPF DOCX Editor offers history preservatio
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: undo-redo,history,undo,redo,editor-settings,is-undo-enabled
+keywords: undo-redo,history,undo,redo,editor-settings,is-undo-enabledtocname: Document-Processing-SDKs-toc
 ---
 # Undo Redo in WPF DOCX Editor
 

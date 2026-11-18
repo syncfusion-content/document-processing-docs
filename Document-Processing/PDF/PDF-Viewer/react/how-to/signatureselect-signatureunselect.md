@@ -5,7 +5,7 @@ description: Handle the signatureSelect and signatureUnselect events in the Reac
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Handle Signature Select and Unselect Events in React PDF Viewer

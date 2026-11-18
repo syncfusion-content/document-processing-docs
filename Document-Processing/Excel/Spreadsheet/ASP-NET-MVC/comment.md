@@ -4,7 +4,7 @@ title: Comments in ASP.NET MVC Spreadsheet | Syncfusion
 description: Learn how to add, edit, and manage comments in the Syncfusion ASP.NET MVC Spreadsheet for better collaboration and annotations.
 platform: document-processing
 control: Comment
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Comments in ASP.NET MVC Spreadsheet

@@ -4,7 +4,7 @@ title: Printing PDF in WinForms PDF Viewer | Syncfusion
 description: The PDF printing feature in PdfViewerControl enables users to print PDF documents with configurable settings and reliable output quality.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Printing PDF in WinForms PDF Viewer

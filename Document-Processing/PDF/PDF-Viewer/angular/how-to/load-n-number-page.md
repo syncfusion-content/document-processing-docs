@@ -5,7 +5,7 @@ description: Load a specific number of pages during the initial render of the An
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Load Pages on Initial Load in Angular PDF Viewer

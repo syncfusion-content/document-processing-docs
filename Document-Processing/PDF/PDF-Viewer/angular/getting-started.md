@@ -4,7 +4,7 @@ description: Set up and run the standalone Angular PDF Viewer using Syncfusion E
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with Angular PDF Viewer

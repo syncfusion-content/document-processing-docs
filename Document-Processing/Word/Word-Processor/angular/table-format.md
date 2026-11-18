@@ -5,7 +5,7 @@ description: The table format feature in Angular DOCX Editor enables customizing
 platform: document-processing
 control: Table format 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Table format in Angular DOCX Editor

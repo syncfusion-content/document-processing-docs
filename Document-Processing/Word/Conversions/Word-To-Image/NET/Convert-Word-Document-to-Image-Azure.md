@@ -3,7 +3,7 @@ title: Convert Word to Image in Azure  | Syncfusion
 description: Learn how to convert a Word document to image in Azure services using Syncfusion® .NET Word library in C#.
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Convert Word to Image in Azure 

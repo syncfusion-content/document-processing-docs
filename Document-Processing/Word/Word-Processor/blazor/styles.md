@@ -4,7 +4,7 @@ title: Styles in Blazor DOCX Editor | Syncfusion
 description: The styles feature in Blazor DOCX Editor enables users to apply, customize, and manage consistent formatting across document content.
 platform: document-processing
 control: DOCX Editor
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Styles in Blazor DOCX Editor

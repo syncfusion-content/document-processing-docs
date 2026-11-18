@@ -5,7 +5,7 @@ description: Intercept and control file downloads in the JavaScript (ES5) PDF Vi
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Control File Downloads in JavaScript (ES5) PDF Viewer

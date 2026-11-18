@@ -3,7 +3,7 @@ title: Create Markdown document in AWS Lambda | Syncfusion
 description: Create Markdown documents in AWS Lambda using the Syncfusion® .NET Markdown library without external dependencies.
 platform: document-processing
 control: Markdown
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Create Markdown document in AWS Lambda

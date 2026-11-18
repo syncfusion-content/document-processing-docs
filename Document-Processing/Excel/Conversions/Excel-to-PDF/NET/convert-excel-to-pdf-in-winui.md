@@ -3,7 +3,7 @@ title: Excel to PDF conversion in WinUI | Syncfusion
 description: WinUI Excel to PDF section explains how to convert Excel documents to PDF in WinUI using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Excel to PDF Conversion in WinUI using Excel Library

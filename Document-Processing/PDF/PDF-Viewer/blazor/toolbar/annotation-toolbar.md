@@ -5,7 +5,7 @@ description: Learn how to show, hide, and customize the annotation toolbar in th
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Customize the Annotation Toolbar in Blazor PDF Viewer

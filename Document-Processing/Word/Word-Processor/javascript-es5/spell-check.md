@@ -5,7 +5,7 @@ description: The spell check feature in JavaScript DOCX Editor enables spelling 
 platform: document-processing
 control: Spell check 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Spell Check in JavaScript DOCX Editor

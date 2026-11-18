@@ -3,7 +3,7 @@ title: FAQ about multithreading in Word to PDF in .NET Word | Syncfusion
 description: Learn about multithreading and thread-safety support in Word to PDF conversion using the .NET Word library.
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # FAQ about multithreading in Word to PDF in .NET Word
 

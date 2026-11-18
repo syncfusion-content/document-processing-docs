@@ -3,7 +3,7 @@ title: How to Upload Azure Blob Streams in .NET Excel Library | Syncfusion
 description: Upload an Excel file to Azure Blob Storage and download it as a stream using Excel file stream handling.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to upload files to Azure Blob in .NET Excel Library

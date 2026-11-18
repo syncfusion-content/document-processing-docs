@@ -4,7 +4,7 @@ title: Find and Replace in JavaScript Spreadsheet | Syncfusion
 description: Find and replace in JavaScript Spreadsheet helps users quickly locate and update cell content across worksheets efficiently.
 platform: document-processing
 control: Searching
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Find and Replace in JavaScript Spreadsheet

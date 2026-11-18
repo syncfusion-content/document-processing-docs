@@ -4,7 +4,7 @@ title: Override Keyboard Shortcuts in ASP.NET Core DOCX Editor | Syncfusion
 description: Override default keyboard shortcuts in Syncfusion® ASP.NET Core DOCX Editor to customize user interactions and implement application-specific commands.
 platform: document-processing
 control: Override The Keyboard Shortcuts
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

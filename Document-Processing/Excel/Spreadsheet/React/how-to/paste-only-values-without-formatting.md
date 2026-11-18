@@ -4,7 +4,7 @@ title: How to Paste Without Formatting in React Spreadsheet | Syncfusion
 description: Learn how to paste values without formatting in the Syncfusion React Spreadsheet component during copy and paste operations.
 control: Spreadsheet 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Paste Without Formatting in React Spreadsheet

@@ -5,7 +5,7 @@ description: Read and extract values from PDF form fields in the React PDF Viewe
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Read and Extract Form Field Values in React PDF Viewer

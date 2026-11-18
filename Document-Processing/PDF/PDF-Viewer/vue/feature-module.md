@@ -5,7 +5,7 @@ description: Inject feature modules into the Vue PDF Viewer to enable only the t
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Injecting Feature Modules in Vue PDF Viewer

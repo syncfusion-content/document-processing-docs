@@ -4,7 +4,7 @@ title: Text Wrapping Style in ASP.NET Core DOCX Editor | Syncfusion
 description: Text wrapping styles in ASP.NET Core DOCX Editor preserve inline, square, behind text, and other wrapping modes during document rendering.
 platform: document-processing
 control: Text Wrapping Style
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

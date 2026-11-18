@@ -5,7 +5,7 @@ description: Inject feature modules into the Angular PDF Viewer to enable only t
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Feature Modules in Angular PDF Viewer

@@ -5,7 +5,7 @@ description: Learn about the ui interaction in the Angular PDF Viewer and how it
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Ui Interaction in Angular PDF Viewer

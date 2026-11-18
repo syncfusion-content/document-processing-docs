@@ -4,7 +4,7 @@ title: Ribbon in ASP.NET MVC Spreadsheet | Syncfusion
 description: Customize and use the ribbon interface in the Syncfusion ASP.NET MVC Spreadsheet control to access spreadsheet features.
 platform: document-processing
 control: Ribbon
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

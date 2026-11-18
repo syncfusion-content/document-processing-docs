@@ -4,7 +4,7 @@ title: Comment in React Spreadsheet | Syncfusion
 description: Learn about comments in the Syncfusion React Spreadsheet component, including adding, editing, displaying, and managing cell comments.
 platform: document-processing
 control: Comment
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Comment in React Spreadsheet

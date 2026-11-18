@@ -4,7 +4,7 @@ title: Cell Templates in TypeScript Spreadsheet | Syncfusion
 description: Cell Templates in TypeScript Spreadsheet allow embedding HTML elements and Syncfusion controls within cells for interactive data entry and customization.
 platform: document-processing
 control: Template 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Cell Templates in TypeScript Spreadsheet 

@@ -5,7 +5,7 @@ description: Customize the toolbar in Syncfusion® Vue DOCX Editor by adding, re
 control: Customize tool bar 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Customize Toolbar in Vue DOCX Editor

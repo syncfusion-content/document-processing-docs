@@ -5,7 +5,7 @@ description: Change the author name and related annotation settings in the Angul
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 

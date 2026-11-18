@@ -4,7 +4,7 @@ title: About Syncfusion Vue Spreadsheet AI Assist | Syncfusion
 description: Learn about the AI Assist feature in Syncfusion Vue Spreadsheet, its capabilities, configuration, and AI-powered functionality.
 platform: document-processing
 control: AI Assist
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion Vue Spreadsheet AI Assist

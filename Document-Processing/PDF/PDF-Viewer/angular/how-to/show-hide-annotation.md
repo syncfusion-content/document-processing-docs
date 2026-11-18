@@ -5,7 +5,7 @@ description: Show or hide annotations in the Angular PDF Viewer by exporting and
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Show or Hide Annotations in Angular PDF Viewer

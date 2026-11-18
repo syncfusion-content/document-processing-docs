@@ -3,7 +3,7 @@ title: Performance Metrics in .NET PowerPoint Library | Syncfusion
 description: Explore performance benchmark results and metrics of the Syncfusion® .NET PowerPoint library across different slide counts.
 platform: document-processing
 control: Presentation
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Performance Metrics in .NET PowerPoint Library

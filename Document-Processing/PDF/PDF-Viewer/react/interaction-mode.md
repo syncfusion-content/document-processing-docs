@@ -5,7 +5,7 @@ description: The React PDF Viewer supports Pan and Text Selection modes so users
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Interaction Mode in React PDF Viewer

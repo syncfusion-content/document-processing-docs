@@ -6,7 +6,7 @@ description: Enable the ruler in Syncfusion® TypeScript DOCX Editor to set marg
 platform: document-processing
 control: Enable Ruler
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Enable Ruler in TypeScript DOCX Editor

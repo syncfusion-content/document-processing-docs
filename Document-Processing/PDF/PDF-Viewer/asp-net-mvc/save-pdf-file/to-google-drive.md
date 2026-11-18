@@ -4,7 +4,7 @@ title: To Google Drive in ASP.NET MVC PDF Viewer | Syncfusion
 description: Save PDF files from the ASP.NET MVC PDF Viewer to Google Drive using a server-backed web service for authentication and secure uploads.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Save PDF Files to Google Drive in ASP.NET MVC PDF Viewer

@@ -5,7 +5,7 @@ description: Enable, apply, customize, and manage Squiggly annotations in the AS
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Squiggly Annotation in ASP.NET Core PDF Viewer

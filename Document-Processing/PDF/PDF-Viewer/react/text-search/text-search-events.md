@@ -5,7 +5,7 @@ description: Handle text search events in the React PDF Viewer and run programma
 platform: document-processing
 control: Text search
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Text Search Events in React PDF Viewer

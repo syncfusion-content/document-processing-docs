@@ -4,7 +4,7 @@ title: Open Pdf File in ASP.NET MVC PDF Viewer | Syncfusion
 description: Learn about the open pdf file in the ASP.NET MVC PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Open Pdf File in ASP.NET MVC PDF Viewer

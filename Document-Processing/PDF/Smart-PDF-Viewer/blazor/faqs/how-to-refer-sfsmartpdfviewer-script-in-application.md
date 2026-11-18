@@ -4,7 +4,7 @@ title: How to Reference the Blazor Smart PDF Viewer script | Syncfusion
 description: Learn how to include the SfSmartPdfViewer script in a Syncfusion Blazor app using a CDN or local files.
 platform: document-processing
 control: SfSmartPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Reference the Blazor Smart PDF Viewer script

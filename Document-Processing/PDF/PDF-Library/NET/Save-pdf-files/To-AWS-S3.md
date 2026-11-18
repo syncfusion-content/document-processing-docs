@@ -4,7 +4,7 @@ description: Learn how to save PDF files programmatically to AWS S3 storage in C
 keywords: aws s3, save pdf, c# save pdf, upload pdf
 platform: document-processing
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Save PDF documents to AWS S3
 

@@ -3,7 +3,7 @@ title: Page Setup in .NET Excel Library | Syncfusion
 description: Use various page setup options in Excel worksheets using the Syncfusion .NET Excel Library for worksheet print settings.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Page Setup Options in .NET Excel Library

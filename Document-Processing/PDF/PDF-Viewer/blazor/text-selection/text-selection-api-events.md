@@ -5,7 +5,7 @@ description: Reference documentation for text selection properties, methods, and
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Text selection API and events in Blazor PDF Viewer

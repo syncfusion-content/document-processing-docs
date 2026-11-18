@@ -4,7 +4,7 @@ title: Cell Templates in JavaScript Spreadsheet | Syncfusion
 description: Cell templates in JavaScript Spreadsheet enable embedding HTML elements and Syncfusion controls within cells for customized interactions.
 platform: document-processing
 control: Template
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Cell Templates in JavaScript Spreadsheet 

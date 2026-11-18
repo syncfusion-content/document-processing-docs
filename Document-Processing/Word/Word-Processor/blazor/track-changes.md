@@ -4,7 +4,7 @@ title: Track Changes in Blazor DOCX Editor | Syncfusion
 description: Track changes in Blazor DOCX Editor records document modifications and enables reviewers to accept or reject revisions efficiently.
 platform: document-processing
 control: DOCX Editor
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Track Changes in Blazor DOCX Editor

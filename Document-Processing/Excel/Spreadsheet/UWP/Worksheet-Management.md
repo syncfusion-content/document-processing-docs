@@ -4,7 +4,7 @@ title: Worksheet Management in UWP Spreadsheet control | Syncfusion®
 description: Learn here all about Worksheet Management support in Syncfusion® UWP Spreadsheet (SfSpreadsheet) control and more.
 platform: document-processing
 control: SfSpreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Worksheet Management in UWP Spreadsheet

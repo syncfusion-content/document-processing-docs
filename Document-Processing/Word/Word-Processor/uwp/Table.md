@@ -4,7 +4,7 @@ description: UWP DOCX Editor allows adding tables to the rich text document, ena
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: table,tablecommands,mergecells,tableformat,rowformat,cellformat
+keywords: table,tablecommands,mergecells,tableformat,rowformat,cellformattocname: Document-Processing-SDKs-toc
 ---
 # Tables in UWP DOCX Editor
 

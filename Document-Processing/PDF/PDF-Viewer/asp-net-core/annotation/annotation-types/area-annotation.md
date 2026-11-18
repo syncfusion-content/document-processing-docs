@@ -5,7 +5,7 @@ description: Enable, draw, customize, and manage Area measurement annotations in
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Area Annotation in ASP.NET Core PDF Viewer

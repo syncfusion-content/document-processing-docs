@@ -5,7 +5,7 @@ description: Publish the Syncfusion® TypeScript DOCX Editor Web API to Azure Ap
 platform: document-processing
 control: How to publish documenteditor web api application in azure app service from visual studio 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Publish TypeScript DOCX Editor Web API to Azure App

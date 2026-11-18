@@ -5,7 +5,7 @@ description: Hide the toolbar and properties pane in Syncfusion® React DOCX Edi
 control: Hide toolbar and properties pane
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Hide Toolbar and Properties Pane in React DOCX Editor

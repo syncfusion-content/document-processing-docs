@@ -5,7 +5,7 @@ description: Learn to view, fill, export, and import PDF form fields in Blazor S
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Fill PDF form fields in Blazor SfPdfViewer

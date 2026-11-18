@@ -5,7 +5,7 @@ description: Switch between selection mode and panning mode in the Vue PDF Viewe
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Interaction Mode in Vue PDF Viewer

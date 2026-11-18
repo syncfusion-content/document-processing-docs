@@ -3,7 +3,7 @@ title: Simple Mail merge in Java Word | Syncfusion
 description: This section illustrates frequently asked questions about working with sections in Word documents using the Syncfusion .NET Word library
 platform: document-processing
 control: Word Library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Simple Mail merge in Java Word

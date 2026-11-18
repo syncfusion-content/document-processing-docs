@@ -4,7 +4,7 @@ canonical_url: "https://www.syncfusion.com/document-sdk/net-pdf-library"
 description: Learn about the Syncfusion Essential Studio .NET PDF Library, its features, capabilities, and usage details.
 platform: document-processing
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion .NET PDF Library

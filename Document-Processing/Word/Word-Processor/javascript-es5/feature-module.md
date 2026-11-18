@@ -5,7 +5,7 @@ description: Modules in JavaScript DOCX Editor enable selective injection of edi
 platform: document-processing
 control: Feature module 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Feature Modules in JavaScript DOCX Editor

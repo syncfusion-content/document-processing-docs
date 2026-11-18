@@ -5,7 +5,7 @@ description: Learn about the overview of collaborative editing in Syncfusion Ess
 platform: document-processing
 control: Collaborative Editing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Collaborative Editing in Syncfusion JavaScript DOCX Editor Control

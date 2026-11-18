@@ -4,7 +4,7 @@ description: Create and edit OLE Objects in PowerPoint files; Insert and extract
 platform: document-processing
 control: Presentation
 documentation: UG
-keywords: OLE Object in PowerPoint presentation
+keywords: OLE Object in PowerPoint presentationtocname: Document-Processing-SDKs-toc
 ---
 # Working with OLE Objects
 

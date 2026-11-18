@@ -4,7 +4,7 @@ title: Comments in ASP.NET Core Spreadsheet | Syncfusion
 description: Learn about comments in the Syncfusion ASP.NET Core Spreadsheet control, including adding, editing, displaying, and managing cell comments.
 platform: document-processing
 control: Comment
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Comments in ASP.NET Core Spreadsheet

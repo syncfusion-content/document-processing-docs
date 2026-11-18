@@ -5,7 +5,7 @@ description: Open a document from a URL in Syncfusion® React DOCX Editor to loa
 control: Open document by address
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Open a Document by URL in React DOCX Editor

@@ -3,7 +3,7 @@ title: How to Set Pivot Column Widths in .NET Excel Library | Syncfusion
 description: Set column width for a PivotTable range in an Excel document using the Syncfusion .NET Excel Library for PivotTable layout.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to set pivot table column widths in .NET Excel Library

@@ -5,7 +5,7 @@ description: Subscribe to annotation events in the Angular PDF Viewer to react t
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Annotation Events in Angular PDF Viewer

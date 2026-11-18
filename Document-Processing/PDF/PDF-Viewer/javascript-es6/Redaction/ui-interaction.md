@@ -4,7 +4,7 @@ title: Ui Interaction in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Learn about the ui interaction in the JavaScript (ES6) PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Ui Interaction in JavaScript (ES6) PDF Viewer

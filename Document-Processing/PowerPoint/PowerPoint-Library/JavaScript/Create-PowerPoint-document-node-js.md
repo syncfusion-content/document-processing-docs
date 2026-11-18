@@ -6,7 +6,7 @@ platform: document-processing
 control: PowerPoint
 documentation: ug
 keywords: node create powerpoint, node generate pptx, node powerpoint library, ej2 powerpoint node, express
-canonical_url: https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/create-powerpoint-document-node-js
+canonical_url: https://help.syncfusion.com/document-processing/powerpoint/powerpoint-library/javascript/create-powerpoint-document-node-jstocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with JavaScript PowerPoint Library in Node.js app

@@ -5,7 +5,7 @@ description: Use the Form Designer in the JavaScript (ES6) PDF Viewer to create,
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Form Designer in JavaScript (ES6) PDF Viewer

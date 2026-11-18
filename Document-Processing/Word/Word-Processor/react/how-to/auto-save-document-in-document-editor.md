@@ -5,7 +5,7 @@ description: Automatically save edited documents to AWS S3 at regular intervals 
 control: Auto save document
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Auto Save Document to AWS S3 in React DOCX Editor

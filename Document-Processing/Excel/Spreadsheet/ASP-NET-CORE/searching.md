@@ -4,7 +4,7 @@ title: Find and Replace in ASP.NET Core Spreadsheet | Syncfusion
 description: Learn about find and replace in the Syncfusion ASP.NET Core Spreadsheet control, including searching, matching, and updating cell content.
 platform: document-processing
 control: Searching
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

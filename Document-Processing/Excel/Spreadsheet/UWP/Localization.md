@@ -4,7 +4,7 @@ title: Localization in UWP Spreadsheet control | Syncfusion®
 description: Localize the  UWP Spreadsheet control by customizing ribbon, dialog, and UI text using resource files and culture-specific settings.
 platform: document-processing
 control: SfSpreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Localization in UWP Spreadsheet 

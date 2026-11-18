@@ -3,7 +3,7 @@ title: Data Bars in .NET Excel Library | Syncfusion
 description: Data-bar conditional formatting describes how Syncfusion .NET Excel Library applies data-bar rules in Excel documents.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Data Bars in .NET Excel Library

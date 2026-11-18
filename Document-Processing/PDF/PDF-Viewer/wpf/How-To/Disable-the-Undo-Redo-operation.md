@@ -4,7 +4,7 @@ title: How to Disable the Undo Redo operation in WPF Pdf Viewer | Syncfusion
 description: Disable or enable undo redo operations of functions or features in Syncfusion WPF PDF Viewer using UndoRedoSettings.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Disable the Undo Redo operation in WPF Pdf Viewer

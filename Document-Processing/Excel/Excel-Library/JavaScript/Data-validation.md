@@ -3,7 +3,7 @@ title: Data Validation in JavaScript Excel | Syncfusion
 description: Restrict cell input with data validation rules, operators, and error prompts in the Syncfusion JavaScript Excel Library.
 platform: document-processing
 control: Excel
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Data Validation in JavaScript Excel

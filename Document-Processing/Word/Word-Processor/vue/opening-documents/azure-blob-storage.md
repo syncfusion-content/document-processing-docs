@@ -5,7 +5,7 @@ description: Open documents from Azure Blob Storage in Vue DOCX Editor, enabling
 platform: document-processing
 control: Open document from Azure Blob Storage
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Open Documents from Azure Blob Storage in Vue DOCX Editor

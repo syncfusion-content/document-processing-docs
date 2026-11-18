@@ -5,7 +5,7 @@ description: Enable or disable annotations in the Angular PDF Viewer using the e
 platform: document-processing
 control: How to enable and disable the delete button based on annotation selection and unselection events
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Enable or Disable Annotations in Angular PDF Viewer

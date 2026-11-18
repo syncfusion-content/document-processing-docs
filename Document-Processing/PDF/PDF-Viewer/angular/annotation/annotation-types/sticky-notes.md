@@ -5,7 +5,7 @@ description: Enable, add, customize, and manage Sticky Notes annotations in the 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Sticky Note Annotation in Angular PDF Viewer

@@ -3,7 +3,7 @@ title: Convert Word to PDF in Azure App Service on Linux | Syncfusion
 description: Convert Word to PDF in Azure App Service on Linux using ASP.NET Core Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Convert Word to PDF in Azure App Service on Linux

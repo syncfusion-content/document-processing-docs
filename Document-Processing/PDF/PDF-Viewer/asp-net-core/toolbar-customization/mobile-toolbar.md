@@ -4,7 +4,7 @@ title: Customize Mobile Toolbar in ASP.NET Core PDF Viewer | Syncfusion
 description: Customize the mobile toolbar in the ASP.NET Core PDF Viewer to ensure smooth touch interactions and a tailored experience on small screens.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Customize the Mobile Toolbar in ASP.NET Core PDF Viewer

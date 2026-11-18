@@ -3,7 +3,7 @@ title: How to Save Files to Streams in .NET Excel Library | Syncfusion
 description: Save a file to stream using the Syncfusion .NET Excel Library while working with Excel file stream handling operations.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to save files to streams in .NET Excel Library

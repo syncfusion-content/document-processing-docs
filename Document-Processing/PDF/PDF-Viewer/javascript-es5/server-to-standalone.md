@@ -5,7 +5,7 @@ description: Migrate an existing JavaScript (ES5) PDF Viewer deployment from ser
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Migrate from Server-Backed to Standalone JavaScript (ES5) PDF Viewer

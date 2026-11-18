@@ -4,7 +4,7 @@ title: Formulas in React Spreadsheet | Syncfusion
 description: Learn about formulas in the Syncfusion React Spreadsheet component, including built-in functions, calculations, and formula support.
 control: Formulas 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Formulas in React Spreadsheet

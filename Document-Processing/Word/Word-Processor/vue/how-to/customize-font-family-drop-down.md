@@ -5,7 +5,7 @@ description: Customize the font family drop down list in Syncfusion® Vue DOCX E
 control: Customize font family drop down 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Customize Font Family in Vue DOCX Editor

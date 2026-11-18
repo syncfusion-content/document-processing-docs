@@ -4,7 +4,7 @@ title: Document in Flutter PDF Library | Syncfusion
 description: Learn about document settings and configuration options in Syncfusion Flutter PDF non-UI Library for optimal document handling.
 platform: document-processing
 control: PDF
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Document in Flutter PDF

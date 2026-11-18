@@ -4,7 +4,7 @@ title: Custom Formula in UWP Spreadsheet control | Syncfusion®
 description: Create and use custom formulas in the UWP Spreadsheet control to perform calculations with user-defined functions and business logic.
 platform: document-processing
 control: SfSpreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Custom Formula in UWP Spreadsheet 

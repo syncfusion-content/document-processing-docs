@@ -5,7 +5,7 @@ description: Learn how to get started with the Syncfusion Angular DOCX Editor co
 platform: document-processing
 control: Getting started 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with Angular DOCX Editor

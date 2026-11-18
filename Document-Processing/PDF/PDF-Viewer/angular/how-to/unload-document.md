@@ -5,7 +5,7 @@ description: Unload the current document in the Angular PDF Viewer to free resou
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Unload a Document in Angular PDF Viewer

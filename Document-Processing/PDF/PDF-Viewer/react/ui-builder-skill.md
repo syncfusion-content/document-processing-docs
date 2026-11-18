@@ -5,7 +5,7 @@ description: Install the Syncfusion React UI Builder skill to generate productio
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-keywords: React UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skills
+keywords: React UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skillstocname: Document-Processing-SDKs-toc
 ---
 
 # React UI Builder Skill with PDF Viewer

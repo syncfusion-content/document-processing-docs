@@ -4,7 +4,7 @@ title: Ribbon in Angular Spreadsheet | Syncfusion
 description: The ribbon in Angular Spreadsheet organizes commands into tabs, providing quick access to editing, formatting, and worksheet features.
 platform: document-processing
 control: Ribbon
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Ribbon in Angular Spreadsheet 

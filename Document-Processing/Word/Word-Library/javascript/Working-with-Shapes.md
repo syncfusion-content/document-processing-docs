@@ -3,7 +3,7 @@ title: Working with Shapes in JavaScript Word | Syncfusion
 description: Learn how to add, format, and rotate shapes in a Word document using the Syncfusion JavaScript Word library.
 platform: document-processing
 control: Word Library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Working with Shapes in JavaScript Word Library

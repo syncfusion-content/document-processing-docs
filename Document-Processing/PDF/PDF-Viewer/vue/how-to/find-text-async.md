@@ -5,7 +5,7 @@ description: Search text asynchronously in the Vue PDF Viewer using the findText
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Use FindTextAsync in Vue PDF Viewer

@@ -3,7 +3,7 @@ title: NuGet Packages for PDF to Image Converter | Syncfusion
 description: Learn about the NuGet packages required to use the Syncfusion PDF to Image Converter Library across supported platforms.
 platform: document-processing
 control: PDF to image
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # NuGet Packages required for PDF to Image Converter

@@ -3,7 +3,7 @@ title: Excel to Image conversion in .NET MAUI | Syncfusion
 description: .NET MAUI Excel to Image section explains how to convert Excel documents to images in .NET MAUI without Microsoft Excel.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Excel to Image Conversion in .NET MAUI using Excel Library

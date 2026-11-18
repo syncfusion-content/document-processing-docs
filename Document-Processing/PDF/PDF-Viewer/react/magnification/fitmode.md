@@ -5,7 +5,7 @@ description: Configure fit modes in the React PDF Viewer, including Fit Page and
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Fit Modes in React PDF Viewer

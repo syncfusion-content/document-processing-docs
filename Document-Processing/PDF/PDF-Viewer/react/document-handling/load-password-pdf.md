@@ -5,7 +5,7 @@ description: Open password-protected PDF files in the React PDF Viewer by provid
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Load Password-Protected PDF in React PDF Viewer

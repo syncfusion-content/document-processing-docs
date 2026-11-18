@@ -5,7 +5,7 @@ description: Add, reply to, edit, set the status of, delete, and read comments a
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Comments in React PDF Viewer
@@ -72,7 +72,7 @@ You can edit comments in two ways:
 ![Delete comments or replies](../images/commentsdelete.png)
 
 > Deleting the **root** comment from the Comments panel also deletes the associated annotation.
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## Add comments to the annotation programmatically

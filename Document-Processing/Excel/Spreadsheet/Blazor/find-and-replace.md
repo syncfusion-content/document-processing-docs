@@ -4,7 +4,7 @@ title: Find and Replace in Blazor Spreadsheet | Syncfusion
 description: Learn how to search and replace cell values in a sheet or workbook using the find, replace, and go to features of the Syncfusion Blazor Spreadsheet.
 platform: document-processing
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Find and Replace in Blazor Spreadsheet

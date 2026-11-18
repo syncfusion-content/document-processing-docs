@@ -3,7 +3,7 @@ title: How to Format Cell Text in .NET Excel Library | Syncfusion
 description: Format text within an Excel cell using the Syncfusion .NET Excel Library with the cell style settings.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to format text in .NET Excel Library

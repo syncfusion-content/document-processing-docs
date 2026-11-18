@@ -4,7 +4,7 @@ description: Learn about working with sections in Syncfusion Presentation Librar
 platform: document-processing
 control: Presentation
 documentation: UG
-keywords: sections in PowerPoint presentation
+keywords: sections in PowerPoint presentationtocname: Document-Processing-SDKs-toc
 ---
 # Working with Sections in PowerPoint Library
 

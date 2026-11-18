@@ -3,7 +3,7 @@ title: How to Convert Ranges to PDF in .NET Excel Library | Syncfusion
 description: Convert a required Excel range to PDF using the Syncfusion .NET Excel Library for focused workbook content export.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to convert ranges to PDF in .NET Excel Library

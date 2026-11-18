@@ -4,7 +4,7 @@ title: How to Customize a Chart in React Spreadsheet | Syncfusion
 description: Learn how to customize charts in the Syncfusion React Spreadsheet component by modifying chart appearance and settings.
 control: Spreadsheet
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Customize a Chart in React Spreadsheet

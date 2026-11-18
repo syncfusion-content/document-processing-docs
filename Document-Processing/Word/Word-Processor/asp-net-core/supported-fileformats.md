@@ -5,7 +5,7 @@ description: Supported file formats in ASP.NET Core DOCX Editor allow importing 
 control: Supported File Formats
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Supported File Formats in ASP.NET Core DOCX Editor

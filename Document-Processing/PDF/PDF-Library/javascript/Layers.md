@@ -4,7 +4,7 @@ canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
 description: Create, manage, annotate, lock, unlock, and organize PDF layers using the Syncfusion JavaScript PDF Library.
 platform: document-processing
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # PDF Layers in JavaScript PDF

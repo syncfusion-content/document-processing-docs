@@ -5,7 +5,7 @@ description: Set the default language for the Angular PDF Viewer UI and learn ho
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Default Language in Angular PDF Viewer

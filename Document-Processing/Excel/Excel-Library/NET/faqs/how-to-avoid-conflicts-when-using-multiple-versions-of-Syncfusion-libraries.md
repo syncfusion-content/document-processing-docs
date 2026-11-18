@@ -3,7 +3,7 @@ title: How to Avoid Version Conflicts in .NET Excel Library | Syncfusion
 description: Avoid version conflicts when using multiple Syncfusion libraries by managing references and assemblies correctly.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to avoid Syncfusion version conflicts in .NET Excel Library

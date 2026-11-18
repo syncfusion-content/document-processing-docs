@@ -5,7 +5,7 @@ description: Import pages from another PDF into the current document in the Reac
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Import Pages in React PDF Viewer

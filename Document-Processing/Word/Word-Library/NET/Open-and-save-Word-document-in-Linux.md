@@ -3,7 +3,7 @@ title: Open and save Word document on Linux  | Syncfusion
 description: Open and save Word document in .NET Core application on Linux using Syncfusion® .NET Core Word library.
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Open and save Word document on Linux 

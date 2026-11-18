@@ -5,7 +5,7 @@ description: Learn about the introduction of Syncfusion Essential Studio Angular
 control: Index 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion Angular PPTX Editor Control

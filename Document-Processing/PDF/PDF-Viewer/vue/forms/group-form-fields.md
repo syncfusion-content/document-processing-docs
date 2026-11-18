@@ -5,7 +5,7 @@ description: Group PDF form fields in the Vue PDF Viewer by assigning the same n
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Group Form Fields in Vue PDF Viewer

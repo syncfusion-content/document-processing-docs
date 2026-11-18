@@ -4,7 +4,7 @@ title: Opening a Document in Blazor DOCX Editor | Syncfusion
 description: Open Word documents in Blazor DOCX Editor from URLs, cloud storage, databases, local files, or during component initialization.
 platform: document-processing
 control: DOCX Editor
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Opening a Document in Blazor DOCX Editor

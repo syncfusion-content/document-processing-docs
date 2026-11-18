@@ -5,7 +5,7 @@ description: Retrieve bookmark content as plain text and retrieve document data 
 platform: document-processing
 control: Retrieve the bookmark content as text 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Retrieve Bookmark Content as Text in Angular DOCX Editor

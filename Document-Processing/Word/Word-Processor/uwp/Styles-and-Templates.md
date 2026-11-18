@@ -4,7 +4,7 @@ description: The styles and templates in UWP DOCX Editor define the structure an
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: styles-and-templates,custom-style,styling
+keywords: styles-and-templates,custom-style,stylingtocname: Document-Processing-SDKs-toc
 ---
 # Styles and Templates in UWP DOCX Editor
 

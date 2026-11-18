@@ -4,7 +4,7 @@ title: Globalization in Angular Spreadsheet | Syncfusion
 description: Globalization in Angular Spreadsheet enables adapting the user interface, formats, and locale-specific settings for global audiences.
 platform: document-processing
 control: Global local 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Globalization in Angular Spreadsheet 

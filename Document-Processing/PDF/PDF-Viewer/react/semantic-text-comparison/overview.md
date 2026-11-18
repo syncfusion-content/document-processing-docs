@@ -5,7 +5,7 @@ description: Learn about the Syncfusion React PDF Viewer Semantic Text Compariso
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Syncfusion React PDF Viewer Semantic Text Comparison

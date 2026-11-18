@@ -5,7 +5,7 @@ description: Redirect the user to the home page from the ASP.NET MVC PDF Viewer 
 platform: document-processing
 control: PDF Viewer
 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Redirect to the Home Page in ASP.NET MVC PDF Viewer

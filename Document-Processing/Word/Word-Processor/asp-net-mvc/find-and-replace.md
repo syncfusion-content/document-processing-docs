@@ -4,7 +4,7 @@ title: Find and Replace in ASP.NET MVC DOCX Editor | Syncfusion
 description: The find and replace feature in ASP.NET MVC DOCX Editor helps users quickly locate specific content and replace it throughout a document.
 platform: document-processing
 control: Find And Replace
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

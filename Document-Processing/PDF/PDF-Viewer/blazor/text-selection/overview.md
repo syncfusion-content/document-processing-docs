@@ -5,7 +5,7 @@ description: Learn about Syncfusion Blazor PDF Viewer text selection concepts, c
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion Text selection in Blazor PDF Viewer Component

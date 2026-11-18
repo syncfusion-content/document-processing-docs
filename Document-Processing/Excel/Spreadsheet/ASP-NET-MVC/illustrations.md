@@ -4,7 +4,7 @@ title: Illustrations in ASP.NET MVC Spreadsheet | Syncfusion
 description: Add and manage illustrations such as images and visual elements in the Syncfusion ASP.NET MVC Spreadsheet.
 platform: document-processing
 control: Illustrations
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

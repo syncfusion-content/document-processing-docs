@@ -4,7 +4,7 @@ title: Open and Save in ASP.NET Core Spreadsheet | Syncfusion
 description: Learn about open and save operations in the Syncfusion ASP.NET Core Spreadsheet control, including importing and exporting workbook files.
 platform: document-processing
 control: Open Save
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

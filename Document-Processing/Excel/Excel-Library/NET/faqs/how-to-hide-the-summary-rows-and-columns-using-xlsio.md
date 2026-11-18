@@ -3,7 +3,7 @@ title: How to Hide Summary Rows in .NET Excel Library | Syncfusion
 description: Hide summary rows and columns in an Excel worksheet programmatically using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to hide summary rows and columns in .NET Excel Library

@@ -5,7 +5,7 @@ description: The table format feature in TypeScript DOCX Editor enables customiz
 platform: document-processing
 control: Table format 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Table format in TypeScript DOCX Editor

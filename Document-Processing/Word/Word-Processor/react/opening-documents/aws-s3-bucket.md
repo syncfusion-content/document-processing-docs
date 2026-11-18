@@ -5,7 +5,7 @@ description: Open documents from AWS S3 in React DOCX Editor, enabling cloud sto
 platform: document-processing
 control: Open document from AWS S3
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Open Documents from AWS S3 in React DOCX Editor

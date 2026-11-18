@@ -5,7 +5,7 @@ description: Save PDF files from the Angular PDF Viewer to Box cloud storage usi
 platform: document-processing
 control: Save PDF files to Box cloud file storage
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Save PDF Files to Box Cloud Storage in Angular PDF Viewer

@@ -4,7 +4,7 @@ title: Modern navigation panel in Blazor PDF Viewer | Syncfusion
 description: Learn how the modern navigation panel in the Blazor PDF Viewer with custom panels with flexible layouts.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Modern navigation panel in PDF Viewer

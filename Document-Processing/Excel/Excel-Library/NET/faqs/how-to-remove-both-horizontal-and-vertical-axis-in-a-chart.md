@@ -3,7 +3,7 @@ title: How to Remove Chart Axes in .NET Excel Library | Syncfusion
 description: Remove horizontal and vertical axes from an Excel chart using the Syncfusion .NET Excel Library chart axis options in worksheets.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to remove chart axes in .NET Excel Library

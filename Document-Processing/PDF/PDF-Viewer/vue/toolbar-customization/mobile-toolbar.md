@@ -5,7 +5,7 @@ description: Customize the mobile toolbar in the Vue PDF Viewer to ensure smooth
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Customize the Mobile Toolbar in Vue PDF Viewer

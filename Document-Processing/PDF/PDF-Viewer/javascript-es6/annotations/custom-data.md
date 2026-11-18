@@ -5,7 +5,7 @@ description: Attach custom metadata to annotations in the JavaScript (ES6) PDF V
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Custom Data in Annotations in JavaScript (ES6) PDF Viewer

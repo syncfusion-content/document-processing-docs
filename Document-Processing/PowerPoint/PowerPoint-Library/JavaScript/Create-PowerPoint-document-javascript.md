@@ -6,7 +6,7 @@ description: Learn how to create PowerPoint presentations in a JavaScript app us
 platform: document-processing
 control: PowerPoint
 documentation: ug
-keywords: javascript, powerpoint, cdn
+keywords: javascript, powerpoint, cdntocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with JavaScript PowerPoint in JavaScript app

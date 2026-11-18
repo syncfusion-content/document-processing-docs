@@ -5,7 +5,7 @@ description: Navigate PDF bookmarks in the Angular PDF Viewer to jump quickly to
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Bookmark Navigation in Angular PDF Viewer

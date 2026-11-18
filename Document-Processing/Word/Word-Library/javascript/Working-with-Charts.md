@@ -3,7 +3,7 @@ title: Charts in Word document in JavaScript Word | Syncfusion
 description: Learn how to add, edit, and remove charts in a Word document using the JavaScript Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: Word Library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Charts in Word document in JavaScript Word Library

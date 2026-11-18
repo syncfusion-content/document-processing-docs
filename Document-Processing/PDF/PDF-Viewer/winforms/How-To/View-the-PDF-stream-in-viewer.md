@@ -4,7 +4,7 @@ title: How to view PDF stream in WinForms PDF Viewer | Syncfusion
 description: This guide explains how to load and view PDF documents from a stream using the Load method in Syncfusion PDF Viewer for WinForms.
 platform: document-processing
 control: PdfViewerControl
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to view PDF stream in WinForms PDF Viewer

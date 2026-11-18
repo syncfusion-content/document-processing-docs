@@ -3,7 +3,7 @@ title: Images in .NET Markdown library | Syncfusion
 description: Learn how to add, format, and modify images in a Markdown document using Syncfusion<sup>&reg;</sup> .NET Markdown library without any third-party dependencies.
 platform: document-processing
 control: Markdown
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Images in .NET Markdown Library

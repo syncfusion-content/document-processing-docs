@@ -4,7 +4,7 @@ title: Circle Annotation (Shape) in Blazor PDF Viewer | Syncfusion
 description: Learn how to add, edit, delete, and programmatically manage circle annotations in the Blazor PDF Viewer.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Circle Annotation (Shape) in Blazor PDF Viewer 

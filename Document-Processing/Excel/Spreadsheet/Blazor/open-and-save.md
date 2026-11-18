@@ -4,7 +4,7 @@ title: Open and Save in Blazor Spreadsheet | Syncfusion
 description: Learn about how to open, edit, and save Excel documents using the Syncfusion Blazor Spreadsheet component.
 platform: document-processing
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Open and Save in Blazor Spreadsheet

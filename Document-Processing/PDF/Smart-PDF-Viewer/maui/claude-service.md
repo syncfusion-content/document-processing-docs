@@ -4,7 +4,7 @@ title: Claude AI for AI-Powered Components | Syncfusion®
 description: Learn how to implement a custom AI service using the Claude API with Syncfusion<sup>&reg;</sup> AI-Powered Components.
 platform: maui
 control: SmartComponents
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Claude AI Integration with .NET MAUI Smart Components

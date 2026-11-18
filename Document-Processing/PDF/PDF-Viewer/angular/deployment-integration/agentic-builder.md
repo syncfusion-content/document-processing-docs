@@ -5,7 +5,7 @@ description: Create an Angular PDF Viewer project with the Agentic UI Builder, a
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Create an Angular PDF Viewer with Agentic UI Builder

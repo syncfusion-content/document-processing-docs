@@ -5,7 +5,7 @@ component: DocumentEditor
 description: The collaborative editing feature in ASP.NET Core DOCX Editor supports real-time multi-user document editing using Redis with ASP.NET Core.
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Collaborative Editing in ASP.NET Core DOCX Editor with Redis

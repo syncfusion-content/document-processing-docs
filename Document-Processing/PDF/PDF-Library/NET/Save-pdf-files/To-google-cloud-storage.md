@@ -4,7 +4,7 @@ description: Learn how to save PDF files programmatically to Google Cloud Storag
 keywords: google cloud storage, save pdf, c# save pdf, upload pdf
 platform: document-processing
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Save PDF to Google Cloud Storage
 

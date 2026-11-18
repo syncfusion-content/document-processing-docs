@@ -5,7 +5,7 @@ description: The styles feature in JavaScript DOCX Editor enables users to apply
 platform: document-processing
 control: Styles 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Styles in JavaScript DOCX Editor

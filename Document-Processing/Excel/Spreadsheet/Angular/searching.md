@@ -4,7 +4,7 @@ title: Find and Replace in Angular Spreadsheet | Syncfusion
 description: Find and Replace in Angular Spreadsheet helps users quickly locate specific data within worksheets, improving navigation and data analysis.
 platform: document-processing
 control: Searching 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Find and Replace in Angular Spreadsheet 

@@ -5,7 +5,7 @@ description: Tables in TypeScript DOCX Editor enable adding and managing rows, c
 platform: document-processing
 control: Table 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Tables in TypeScript DOCX Editor

@@ -5,7 +5,7 @@ description: Install Syncfusion® WPF UI Builder to generate production-ready WP
 control: DOCX Editor
 platform: document-processing
 documentation: ug
-keywords: WPF UI Builder,Skills,AI Assistants,DOCX Editor SDK,Agent Skills,installation,configuration,agent,prompt
+keywords: WPF UI Builder,Skills,AI Assistants,DOCX Editor SDK,Agent Skills,installation,configuration,agent,prompttocname: Document-Processing-SDKs-toc
 ---
 
 # UI Builder Skill with WPF DOCX Editor

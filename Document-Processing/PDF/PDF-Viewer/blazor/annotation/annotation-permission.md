@@ -4,7 +4,7 @@ title: Annotation Permissions in Blazor PDF Viewer | Syncfusion
 description: Learn how to use annotation permissions in the Blazor PDF Viewer to  annotation behavior and access.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Annotation permissions in Blazor PDF Viewer 

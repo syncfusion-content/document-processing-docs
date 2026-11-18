@@ -5,7 +5,7 @@ description: Resolve document loading issues in the Vue PDF Viewer v23.1 and lat
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Resolve Document Loading Issues in Vue PDF Viewer

@@ -4,7 +4,7 @@ title: About Syncfusion Flutter PDF Viewer Control | Syncfusion
 description: Learn about introduction of Syncfusion Essential Studio Flutter PDF Viewer control and more details.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion Flutter PDF Viewer Control

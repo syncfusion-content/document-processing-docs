@@ -3,7 +3,7 @@ title: Memory Usage Metrics in .NET Excel Library | Syncfusion
 description: Memory usage details section describes peak memory consumption while creating, saving, loading, and reading Excel data.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Memory Usage Metrics in .NET Excel Library

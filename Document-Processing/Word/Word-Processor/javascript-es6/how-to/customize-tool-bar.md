@@ -5,7 +5,7 @@ description: Customize the toolbar in Syncfusion® TypeScript DOCX Editor by add
 platform: document-processing
 control: Customize Toolbar
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Customize Toolbar in TypeScript DOCX Editor

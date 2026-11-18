@@ -3,7 +3,7 @@ title: How to Search Specific Columns in .NET Excel Library | Syncfusion
 description: Search for a value in different columns of an Excel worksheet using the Syncfusion .NET Excel Library with column lookup.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to search values in specific columns in .NET Excel Library

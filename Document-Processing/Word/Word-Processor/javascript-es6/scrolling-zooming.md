@@ -5,7 +5,7 @@ description: The scrolling and zooming in TypeScript DOCX Editor enables smooth 
 platform: document-processing
 control: DOCX Editor
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Scrolling and Zooming in TypeScript DOCX Editor

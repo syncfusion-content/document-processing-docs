@@ -5,7 +5,7 @@ description: Server-side export in Vue DOCX Editor allows documents to be proces
 control: Server side export 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Server-side export in Vue DOCX Editor

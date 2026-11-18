@@ -4,7 +4,7 @@ title: Notes in Angular Spreadsheet | Syncfusion
 description: Notes in Angular Spreadsheet allow users to add contextual information to cells, making data easier to understand and collaborate on.
 platform: document-processing
 control: Notes
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Notes in Angular Spreadsheet 

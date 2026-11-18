@@ -4,7 +4,7 @@ title: Accessible PDF Reading in Blazor PDF Viewer | Syncfusion
 description: Learn about accessible PDF reading in Blazor PDF Viewer using Microsoft Edge’s Screen Reader and Windows Speech description.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Accessible PDF Reading in Blazor PDF Viewer

@@ -4,7 +4,7 @@ title: About Syncfusion JavaScript (ES6) Manage Form Fields | Syncfusion
 description: Learn about introduction of the Syncfusion JavaScript (ES6) PDF Viewer Manage Form Fields section and the key capabilities it provides.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion JavaScript (ES6) PDF Viewer Manage Form Fields

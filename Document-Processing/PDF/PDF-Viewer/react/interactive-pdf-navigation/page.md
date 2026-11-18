@@ -5,7 +5,7 @@ description: Use page navigation in the React PDF Viewer to move between pages a
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Page Navigation in React PDF Viewer

@@ -3,7 +3,7 @@ title: Parameter Not Valid Exception in .NET Excel Library | Syncfusion
 description: Custom paper size exception describes why a parameter not valid error occurs during Excel to PDF conversion.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Parameter Not Valid Exception in .NET Excel Library

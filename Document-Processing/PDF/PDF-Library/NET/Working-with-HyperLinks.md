@@ -3,7 +3,7 @@ title: Hyperlinks in .NET PDF Library | Syncfusion
 description: Learn how to add hyperlinks in new and existing PDF documents using the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Hyperlinks in .NET PDF Library
 

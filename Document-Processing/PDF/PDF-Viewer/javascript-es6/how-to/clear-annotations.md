@@ -5,7 +5,7 @@ description: Clear all annotations or delete specific annotations in the JavaScr
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Clear Annotations in JavaScript (ES6) PDF Viewer

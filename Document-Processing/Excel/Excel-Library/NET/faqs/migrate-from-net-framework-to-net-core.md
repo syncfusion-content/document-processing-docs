@@ -3,7 +3,7 @@ title: Migration to .NET Core in .NET Excel Library | Syncfusion
 description: Migration from .NET Framework to .NET Core describes how to move Syncfusion .NET Excel Library library projects between platforms.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Migration to .NET Core in .NET Excel Library

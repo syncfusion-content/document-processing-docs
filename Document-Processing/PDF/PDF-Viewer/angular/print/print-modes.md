@@ -5,7 +5,7 @@ description: Configure print modes in the Angular PDF Viewer to control how PDF 
 platform: document-processing
 control: Print
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Print Modes in Angular PDF Viewer

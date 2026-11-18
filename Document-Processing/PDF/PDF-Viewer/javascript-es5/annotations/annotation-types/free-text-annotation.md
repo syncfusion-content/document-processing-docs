@@ -5,7 +5,7 @@ description: Enable, add, customize, and manage Free Text annotations in the Jav
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Free Text Annotation in JavaScript (ES5) PDF Viewer

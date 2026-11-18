@@ -5,7 +5,7 @@ description: Track changes in TypeScript DOCX Editor records document modificati
 platform: document-processing
 control: Track changes
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Track Changes in TypeScript DOCX Editor

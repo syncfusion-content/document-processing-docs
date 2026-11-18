@@ -5,7 +5,7 @@ description: Resolve the cp is not recognized error in the Vue PDF Viewer by usi
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Resolve cp Not Recognized Error in Vue PDF Viewer

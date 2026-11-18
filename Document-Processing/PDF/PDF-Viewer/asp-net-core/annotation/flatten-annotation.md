@@ -5,7 +5,7 @@ description: Flatten annotations and form fields in the ASP.NET Core PDF Viewer 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Flatten Annotations in ASP.NET Core PDF Viewer

@@ -3,7 +3,7 @@ title: How to Delete Hyperlinks in .NET Excel Library | Syncfusion
 description: Remove hyperlinks from Excel documents using the Syncfusion .NET Excel Library without removing existing cell formatting.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to delete hyperlinks in .NET Excel Library

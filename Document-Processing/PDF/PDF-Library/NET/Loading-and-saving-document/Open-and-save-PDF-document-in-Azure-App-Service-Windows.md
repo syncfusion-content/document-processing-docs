@@ -3,7 +3,7 @@ title: Open and Save PDF File in Azure App Service on Windows | Syncfusion
 description: Learn how to open and save PDF documents in Azure App Service on Windows using Syncfusion .NET PDF library without Adobe Acrobat.
 platform: document-processing
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Open and Save PDF Document in Azure App Service on Windows

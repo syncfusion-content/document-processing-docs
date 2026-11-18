@@ -5,7 +5,7 @@ description: The comments feature in Angular DOCX Editor enables users to add, r
 platform: document-processing
 control: Comments 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Comments in Angular DOCX Editor

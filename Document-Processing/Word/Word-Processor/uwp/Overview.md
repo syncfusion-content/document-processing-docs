@@ -4,7 +4,7 @@ description: Learn about the introduction of Syncfusion Essential Studio UWP DOC
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: overview, richtextboxadv, sfrichtextboxadv
+keywords: overview, richtextboxadv, sfrichtextboxadvtocname: Document-Processing-SDKs-toc
 ---
 # About Syncfusion UWP DOCX Editor Control
 

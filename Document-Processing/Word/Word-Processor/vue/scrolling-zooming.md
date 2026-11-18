@@ -5,7 +5,7 @@ description: The scrolling and zooming in Vue DOCX Editor enables smooth documen
 control: Scrolling zooming 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Scrolling and Zooming in Vue DOCX Editor

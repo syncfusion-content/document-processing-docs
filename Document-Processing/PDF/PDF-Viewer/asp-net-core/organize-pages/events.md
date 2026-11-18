@@ -5,7 +5,7 @@ description: Subscribe to Organize Pages events in the ASP.NET Core PDF Viewer t
 platform: document-processing
 control: PDF Viewer
 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Organize Pages Events in ASP.NET Core PDF Viewer

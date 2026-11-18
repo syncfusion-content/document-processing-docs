@@ -4,7 +4,7 @@ title: Ui Interaction in React PDF Viewer | Syncfusion
 description: Add, edit, and modify redaction annotations in the React PDF Viewer through the built-in UI for interactive redaction workflows.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Redaction UI Interactions in React PDF Viewer

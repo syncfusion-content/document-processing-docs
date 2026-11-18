@@ -4,7 +4,7 @@ title: Open a Document From URL in Flutter PDF Viewer | Syncfusion
 description: The PDF loading from URL feature in SfPdfViewer enables users to retrieve and display PDF documents directly from web-based sources.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Open a Document From URL in Flutter PDF Viewer

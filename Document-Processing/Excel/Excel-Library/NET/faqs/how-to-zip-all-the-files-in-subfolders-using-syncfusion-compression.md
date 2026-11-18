@@ -3,7 +3,7 @@ title: How to Zip Subfolders in .NET Excel Library | Syncfusion
 description: Zip all files in subfolders using the Syncfusion.Compression.Zip namespace for folder compression in zip files.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to zip files in subfolders with Syncfusion Compression

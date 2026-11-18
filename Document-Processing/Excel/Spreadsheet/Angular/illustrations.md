@@ -4,7 +4,7 @@ title: Illustrations in Angular Spreadsheet  | Syncfusion
 description: Illustrations in Angular Spreadsheet enable users to add and manage visual elements, enhancing data presentation and worksheet clarity.
 platform: document-processing
 control: Illustrations 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Illustrations in Angular Spreadsheet 

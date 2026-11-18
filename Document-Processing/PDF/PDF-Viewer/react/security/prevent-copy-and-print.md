@@ -5,7 +5,7 @@ description: Prevent users from copying or printing PDF content in the React PDF
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Prevent Copy or Print in React PDF Viewer

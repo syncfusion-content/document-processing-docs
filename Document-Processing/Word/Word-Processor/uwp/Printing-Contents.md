@@ -4,7 +4,7 @@ description: The printing contents in UWP DOCX Editor offer API to retrieve each
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: printing,printmanager,printdocument,print-task,print-preview
+keywords: printing,printmanager,printdocument,print-task,print-previewtocname: Document-Processing-SDKs-toc
 ---
 # Printing Contents in UWP DOCX Editor
 

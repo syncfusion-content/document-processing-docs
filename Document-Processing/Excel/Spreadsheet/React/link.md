@@ -4,7 +4,7 @@ title: Hyperlink in React Spreadsheet | Syncfusion
 description: Learn about hyperlinks in the Syncfusion React Spreadsheet component, including inserting, editing, and managing links.
 control: Link 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 # Hyperlink in React Spreadsheet
 

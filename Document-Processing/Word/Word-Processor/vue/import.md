@@ -5,7 +5,7 @@ description: The Import feature in Vue DOCX Editor enables users to load and edi
 control: Import 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Import in Vue DOCX Editor

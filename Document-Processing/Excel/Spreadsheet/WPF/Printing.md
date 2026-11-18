@@ -4,7 +4,7 @@ title: Printing in WPF Spreadsheet control | Syncfusion®
 description: Print workbook data in the WPF Spreadsheet control by converting worksheets to PDF for print preview and direct printing support.
 platform: document-processing
 control: SfSpreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Printing in WPF Spreadsheet

@@ -5,7 +5,7 @@ description: Load or switch PDF documents dynamically in the Vue PDF Viewer usin
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Load Documents in Vue PDF Viewer

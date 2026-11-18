@@ -3,7 +3,7 @@ title: Load PDF Files in PDF to Image Converter Library | Syncfusion
 description: Learn how to load PDF files from streams and other sources using the Syncfusion PDF to Image Converter Library in C#.
 platform: document-processing
 control: PDF to image
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Load PDF Files in PDF to Image Converter Library
 

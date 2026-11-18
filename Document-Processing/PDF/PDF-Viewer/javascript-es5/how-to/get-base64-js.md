@@ -5,7 +5,7 @@ description: Retrieve the Base64 value of a loaded PDF in the JavaScript (ES5) P
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Get the Base64 Value of a PDF in JavaScript (ES5) PDF Viewer

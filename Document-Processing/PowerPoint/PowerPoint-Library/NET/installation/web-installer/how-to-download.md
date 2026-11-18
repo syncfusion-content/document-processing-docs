@@ -5,7 +5,7 @@ description: Learn here about how to download Syncfusion® PowerPoint web instal
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Download Syncfusion PowerPoint Web Installer

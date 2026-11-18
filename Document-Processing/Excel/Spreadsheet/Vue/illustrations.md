@@ -4,7 +4,7 @@ title: Illustrations in Vue Spreadsheet | Syncfusion
 description: Learn about how to add and manage images and visual elements in the Syncfusion Vue Spreadsheet component
 control: Illustrations
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Illustrations in Vue Spreadsheet

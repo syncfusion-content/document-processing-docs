@@ -5,7 +5,7 @@ platform: document-processing
 control: SmartDataExtractor
 documentation: UG
 keywords: Detect Document Type, Document Classification, Document Detection
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 # Detect Document Type in .NET Smart Data Extractor

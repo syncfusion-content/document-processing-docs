@@ -5,7 +5,7 @@ description: Learn about the textselection in the JavaScript (ES5) PDF Viewer an
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 # Textselection in JavaScript (ES5) PDF Viewer
 

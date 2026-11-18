@@ -4,7 +4,7 @@ title: Sorting And Filtering in Windows Forms Spreadsheet | Syncfusion®
 description: Sort and filter worksheet data in Windows Forms Spreadsheet to organize records, narrow results, and analyze spreadsheet content.
 platform: document-processing
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Sorting and Filtering in Windows Forms Spreadsheet

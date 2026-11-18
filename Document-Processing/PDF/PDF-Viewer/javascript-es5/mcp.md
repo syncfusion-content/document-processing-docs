@@ -5,7 +5,7 @@ description: Set up the Syncfusion JavaScript (ES5) PDF Viewer MCP server so AI 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # JavaScript (ES5) PDF Viewer MCP Server Setup

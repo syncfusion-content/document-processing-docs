@@ -3,7 +3,7 @@ title: Excel to PDF conversion in AWS Beanstalk | Syncfusion
 description: AWS Elastic Beanstalk Excel to PDF section explains how to convert Excel files to PDF in AWS Elastic Beanstalk without Microsoft Excel.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Excel to PDF Conversion in AWS Elastic Beanstalk using Excel Library

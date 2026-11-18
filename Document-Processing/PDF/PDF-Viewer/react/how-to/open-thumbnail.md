@@ -4,7 +4,7 @@ title: How to Open the Thumbnail Pane Programmatically in React | Syncfusion
 description: Open the thumbnail pane programmatically in the React PDF Viewer using openThumbnailPane to show page thumbnails from custom UI controls.
 control: PDF Viewer
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Open the Thumbnail Pane Programmatically in React PDF Viewer

@@ -4,7 +4,7 @@ title: Document Management in ASP.NET MVC DOCX Editor | Syncfusion
 description: Document management in ASP.NET MVC DOCX Editor provides editing restrictions and user permissions to secure document content.
 platform: document-processing
 control: Document Management
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

@@ -4,7 +4,7 @@ title: How to Customize a Chart in Blazor Spreadsheet | Syncfusion
 description: Learn how to customize charts in the Syncfusion Blazor Spreadsheet component by modifying chart appearance and settings.
 platform: document-processing
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Customize a Chart in Blazor Spreadsheet

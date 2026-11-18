@@ -3,7 +3,7 @@ title: Find and Replace in Java Word | Syncfusion
 description: This section illustrates finding a text and replacing it with a new text in a Word document without Microsoft Word or Office interop
 platform: document-processing
 control: Word Library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Find and Replace in Java Word
 

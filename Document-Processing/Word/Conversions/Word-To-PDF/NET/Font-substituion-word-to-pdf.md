@@ -3,7 +3,7 @@ title: Font Substitution in Word to PDF Conversion | Syncfusion
 description: This section illustrates how to substitute fonts during Word-to-PDF conversion using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Font Substitution in Word to PDF Conversion

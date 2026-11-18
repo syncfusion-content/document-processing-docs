@@ -5,7 +5,7 @@ description: Control session-specific data storage in the ASP.NET MVC PDF Viewer
 platform: document-processing
 control: PDF Viewer
 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Enable Local Storage in ASP.NET MVC PDF Viewer

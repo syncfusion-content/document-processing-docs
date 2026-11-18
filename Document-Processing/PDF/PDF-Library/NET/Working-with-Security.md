@@ -3,7 +3,7 @@ title: Security in .NET PDF Library | Syncfusion
 description: Learn how to protect PDF documents with encryption and set permissions for printing, editing, and copying using Syncfusion .NET PDF.
 platform: document-processing
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Security in .NET PDF Library
 

@@ -5,7 +5,7 @@ description: Add rectangle annotations from text search results in the Vue PDF V
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Add Annotations From Text Search in Vue PDF Viewer

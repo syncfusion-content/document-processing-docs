@@ -4,7 +4,7 @@ title: Filtering in JavaScript Spreadsheet | Syncfusion
 description: Filtering in JavaScript Spreadsheet enables users to display specific data based on criteria, making datasets easier to analyze and manage.
 platform: document-processing
 control: Filter
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Filtering in JavaScript Spreadsheet

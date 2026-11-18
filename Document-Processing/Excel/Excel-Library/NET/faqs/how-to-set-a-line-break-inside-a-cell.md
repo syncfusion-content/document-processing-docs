@@ -3,7 +3,7 @@ title: How to Set Line Breaks in .NET Excel Library | Syncfusion
 description: Set a line break inside a cell using the Syncfusion .NET Excel Library for Excel worksheet cell text formatting.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to set line breaks in cells in .NET Excel Library

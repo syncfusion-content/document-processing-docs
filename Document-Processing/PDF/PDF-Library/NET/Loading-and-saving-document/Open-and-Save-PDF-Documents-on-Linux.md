@@ -4,7 +4,7 @@ description: Learn how to open and save PDF documents in .NET Core applications 
 platform: document-processing
 control: PDF
 documentation: UG
-Keywords: linux os save pdf, linux os load pdf, c# save pdf, c# load pdf
+Keywords: linux os save pdf, linux os load pdf, c# save pdf, c# load pdftocname: Document-Processing-SDKs-toc
 ---
 
 # Open and Save PDF Document in Linux

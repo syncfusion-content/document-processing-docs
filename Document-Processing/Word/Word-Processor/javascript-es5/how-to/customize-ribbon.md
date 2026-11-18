@@ -5,7 +5,7 @@ description: Customize ribbon tabs, groups, and commands in Syncfusion® JavaScr
 platform: document-processing
 control: Ribbon Customization
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Customize Ribbon in JavaScript DOCX Editor

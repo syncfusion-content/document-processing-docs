@@ -4,7 +4,7 @@ description: The document structure in Syncfusion® WPF DOCX Editor represents t
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: document-structure
+keywords: document-structuretocname: Document-Processing-SDKs-toc
 ---
 # Document Structure in WPF DOCX Editor
 

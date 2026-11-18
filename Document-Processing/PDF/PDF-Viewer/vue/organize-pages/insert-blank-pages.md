@@ -5,7 +5,7 @@ description: Insert blank pages into a PDF in the Vue PDF Viewer using the Organ
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Insert Blank Pages in Vue PDF Viewer

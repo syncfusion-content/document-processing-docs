@@ -4,7 +4,7 @@ title: Cell Template in Angular Spreadsheet | Syncfusion
 description: Cell Template in Angular Spreadsheet enable embedding HTML elements and Syncfusion controls within cells for customized user interactions.
 platform: document-processing
 control: Template 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Cell Template in Angular Spreadsheet 

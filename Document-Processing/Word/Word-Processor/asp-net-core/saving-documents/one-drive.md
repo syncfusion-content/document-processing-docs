@@ -5,7 +5,7 @@ description: Save documents to OneDrive from ASP.NET Core DOCX Editor, enabling 
 platform: document-processing
 control: Save document to One Drive
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Save Documents to OneDrive in ASP.NET Core DOCX Editor

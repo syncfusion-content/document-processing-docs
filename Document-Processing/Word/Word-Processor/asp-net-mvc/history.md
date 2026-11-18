@@ -4,7 +4,7 @@ title: History in ASP.NET MVC DOCX Editor | Syncfusion
 description: History in ASP.NET MVC DOCX Editor tracks editing actions to enable undo and redo operations for efficient document editing.
 platform: document-processing
 control: History
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

@@ -5,7 +5,7 @@ description: Learn how to implement Angular PDF Viewer collaborative editing wit
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Collaborative Editing in Angular PDF Viewer with Node.js

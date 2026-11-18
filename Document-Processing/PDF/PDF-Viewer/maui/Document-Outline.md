@@ -5,7 +5,7 @@ description: Learn how to use the document outline view for navigation in the Sy
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf view
+keywords: .net maui pdf viewer, .net maui view pdf, pdf viewer in .net maui, .net maui open pdf, maui pdf viewer, maui pdf viewtocname: Document-Processing-SDKs-toc
 ---
 
 # Document Outline in .NET MAUI PDF Viewer

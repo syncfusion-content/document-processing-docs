@@ -5,7 +5,7 @@ description: Learn how to get started with the Syncfusion Vue PDF Viewer control
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with Vue PDF Viewer

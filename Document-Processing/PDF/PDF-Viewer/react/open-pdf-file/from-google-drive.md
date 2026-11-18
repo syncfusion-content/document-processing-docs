@@ -4,7 +4,7 @@ title: From Google Drive in React PDF Viewer | Syncfusion
 description: Load and display PDF files stored in Google Drive in the React PDF Viewer using a server-backed web service for authentication.
 control: PDF Viewer
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Open PDF from Google Drive in React PDF Viewer

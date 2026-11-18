@@ -3,7 +3,7 @@ title: Supported File Formats in .NET Excel Library | Syncfusion
 description: File format compatibility page describes supported and unsupported Syncfusion .NET Excel Library features across XLS and XLSX formats.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Supported File Formats in .NET Excel Library

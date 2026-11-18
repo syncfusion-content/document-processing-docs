@@ -5,7 +5,7 @@ description: Move the document selection to a specific position in Syncfusion® 
 control: Move selection to specific position 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Move Selection to a Position in Vue DOCX Editor

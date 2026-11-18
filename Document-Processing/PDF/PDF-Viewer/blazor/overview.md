@@ -4,7 +4,7 @@ title: About Syncfusion Blazor PDF Viewer Component | Syncfusion
 description: Learn about Blazor PDF Viewer component including performance, offline loading, annotations, form filling, printing, and support for Server & WebAssembly.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion Blazor PDF Viewer Component

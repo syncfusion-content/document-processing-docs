@@ -3,7 +3,7 @@ title: Working with Cells in JavaScript Excel | Syncfusion
 description: Read and write cell values, dates, errors, and clear cells with the Syncfusion JavaScript Excel Library.
 platform: document-processing
 control: Excel
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Working with Cells in JavaScript Excel

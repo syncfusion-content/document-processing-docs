@@ -3,7 +3,7 @@ title: Mail merge in Java Word | Syncfusion
 description: This section illustrates about Mail merge Word document to create reports (letters, envelopes, labels, invoice, payroll) without MS Word or Office interop.
 platform: document-processing
 control: Word Library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Mail merge in Java Word
 

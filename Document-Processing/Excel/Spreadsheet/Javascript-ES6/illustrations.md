@@ -4,7 +4,7 @@ title: Illustrations in TypeScript Spreadsheet | Syncfusion
 description: Illustrations in TypeScript Spreadsheet enable users to add and manage visual elements, enhancing data presentation and worksheet clarity.
 platform: document-processing
 control: Illustrations
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Illustrations in TypeScript Spreadsheet 

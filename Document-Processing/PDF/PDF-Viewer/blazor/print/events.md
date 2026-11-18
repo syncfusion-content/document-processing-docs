@@ -5,7 +5,7 @@ description: Learn how to configure print events and track usage and implements 
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Print events in Blazor PDF Viewer

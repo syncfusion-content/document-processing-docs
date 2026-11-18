@@ -5,7 +5,7 @@ description: Display custom items in the custom stamp dropdown in the JavaScript
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Show Custom Stamp Items in JavaScript (ES5) PDF Viewer

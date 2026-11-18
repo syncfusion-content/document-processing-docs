@@ -4,7 +4,7 @@ title: About Syncfusion  Blazor Smart PDF Viewer Component  | Syncfusion
 description: Learn about the AI-powered Syncfusion Blazor Smart PDF Viewer, including document summarization with Q&A, smart redaction, and smart fill.
 platform: document-processing
 control: SfSmartPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 # About Syncfusion  Blazor Smart PDF Viewer Component 
 

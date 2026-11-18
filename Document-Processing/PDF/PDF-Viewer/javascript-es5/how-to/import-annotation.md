@@ -5,7 +5,7 @@ description: Import annotations into the JavaScript (ES5) PDF Viewer from suppor
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Import Annotations in JavaScript (ES5) PDF Viewer

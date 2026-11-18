@@ -5,7 +5,7 @@ description: Identify the annotation mode that was used to add an annotation in 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Identify the Added Annotation Mode in JavaScript (ES5) PDF

@@ -5,7 +5,7 @@ description: Clear all annotations or delete specific annotations in the React P
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Clear Annotations in React PDF Viewer

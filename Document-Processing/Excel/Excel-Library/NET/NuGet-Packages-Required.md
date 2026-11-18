@@ -3,7 +3,7 @@ title: NuGet Packages Required for .NET Excel Library | Syncfusion
 description: The NuGet packages section describes the packages required to use the Syncfusion .NET Excel Library across platforms and frameworks.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # NuGet Packages Required for .NET Excel Library
 

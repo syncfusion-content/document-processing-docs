@@ -4,7 +4,7 @@ title: Data Binding in ASP.NET MVC Spreadsheet | Syncfusion
 description: Bind local and remote data sources to the Syncfusion ASP.NET MVC Spreadsheet for seamless spreadsheet data management.
 platform: document-processing
 control: Data Binding
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

@@ -5,7 +5,7 @@ description: Disable drag and drop functionality in Syncfusion® React DOCX Edit
 platform: document-processing
 control: Disable drag and drop in DOCX Editor
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Disable Drag and Drop in React DOCX Editor

@@ -4,7 +4,7 @@ title: How to Identify Context Menu Opened in Vue Spreadsheet | Syncfusion
 description: Identify the context menu opened in Vue Spreadsheet to perform custom actions based on the selected menu and target area.
 control: Spreadsheet
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Identify Context Menu Opened in Vue Spreadsheet

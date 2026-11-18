@@ -5,7 +5,7 @@ description: Chart support in Angular DOCX Editor ensures accurate rendering and
 platform: document-processing
 control: Chart 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Charts in Angular DOCX Editor

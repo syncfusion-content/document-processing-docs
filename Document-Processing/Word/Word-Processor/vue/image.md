@@ -5,7 +5,7 @@ description: Images in Vue DOCX Editor enable resizing and text wrapping while p
 control: Image 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Images in Vue DOCX Editor

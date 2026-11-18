@@ -3,7 +3,7 @@ title: Compare Word Documents in Java Word | Syncfusion
 description: Describe frequently asked questions about creating and managing tables using the Syncfusion .NET Word library
 platform: document-processing
 control: Word library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Compare Word Documents in Java Word
 

@@ -3,7 +3,7 @@ title: Word document to Text Conversion in Java Word | Syncfusion
 description: This section illustrates how to perform Word document to Text conversion using Syncfusion Word library 
 platform: document-processing
 control: Word Library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Word document to Text Conversion in Java Word

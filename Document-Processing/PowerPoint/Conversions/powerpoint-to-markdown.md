@@ -3,7 +3,7 @@ title: PowerPoint to Markdown Conversion in .NET PowerPoint | Syncfusion
 description: Convert PowerPoint presentations to Markdown format using the Syncfusion® .NET PowerPoint library without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # PowerPoint to Markdown Conversion in .NET PowerPoint

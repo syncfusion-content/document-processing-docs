@@ -4,7 +4,7 @@ title: Headers and Gridlines in React Spreadsheet component | Syncfusion
 description: Learn about headers and gridlines in the Syncfusion React Spreadsheet component and control worksheet visibility options.
 control: Worksheet 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Headers and Gridlines in React Spreadsheet

@@ -5,7 +5,7 @@ description: Remove annotations from PDFs in the ASP.NET Core PDF Viewer using t
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Remove Annotations in ASP.NET Core PDF Viewer

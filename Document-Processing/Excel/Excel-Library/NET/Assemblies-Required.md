@@ -3,7 +3,7 @@ title: Assemblies Required for .NET Excel Library | Syncfusion
 description: The assemblies required for .NET Excel library that allows to create Excel files and manipulate data from existing files programatically.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Assemblies Required for .NET Excel Library

@@ -4,7 +4,7 @@ title: Programmatic Support in React PDF Viewer | Syncfusion
 description: Add, delete, update, and apply redaction annotations in the React PDF Viewer programmatically from JavaScript or TypeScript code.
 platform: document-processing
 control: PdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Programmatic Redaction in React PDF Viewer

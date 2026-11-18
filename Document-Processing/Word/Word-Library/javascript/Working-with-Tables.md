@@ -3,7 +3,7 @@ title: Working with Tables in JavaScript Word | Syncfusion
 description: Learn how to create, format, merge, style, and manage tables in a Word document using the Syncfusion JavaScript Word library.
 platform: document-processing
 control: Word Library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Working with Tables in JavaScript Word Library

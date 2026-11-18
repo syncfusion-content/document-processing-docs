@@ -4,7 +4,7 @@ title: Importing and exporting data | Syncfusion
 description: Learn about importing and exporting data support in Syncfusion<sup>®</sup> Xamarin.iOS Pdf Viewer (SfPdfViewer) control and more details. 
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Importing and exporting data in Xamarin.iOS PDF Viewer

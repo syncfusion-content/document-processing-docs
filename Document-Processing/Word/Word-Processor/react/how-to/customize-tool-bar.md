@@ -5,7 +5,7 @@ description: Customize the toolbar in Syncfusion® React DOCX Editor by adding, 
 control: Customize tool bar 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Customize Toolbar in React DOCX Editor

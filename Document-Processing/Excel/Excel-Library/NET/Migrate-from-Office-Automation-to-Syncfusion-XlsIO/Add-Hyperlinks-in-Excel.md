@@ -3,7 +3,7 @@ title: Hyperlinks in .NET Excel Library | Syncfusion
 description: Adding Excel hyperlinks programmatically explains how to add hyperlinks in Excel using Interop and Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Hyperlinks in .NET Excel Library

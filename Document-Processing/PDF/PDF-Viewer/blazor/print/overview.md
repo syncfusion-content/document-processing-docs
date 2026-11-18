@@ -5,7 +5,7 @@ description: Learn how to Enable and customize printing, configure print events,
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion Print PDF in Blazor PDF Viewer Component

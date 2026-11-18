@@ -3,7 +3,7 @@ title: How to Convert XLS to XLSX in .NET Excel Library | Syncfusion
 description: Convert XLS documents to XLSX format using the Syncfusion .NET Excel Library for modern Excel workbook compatibility.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to convert XLS to XLSX in .NET Excel Library

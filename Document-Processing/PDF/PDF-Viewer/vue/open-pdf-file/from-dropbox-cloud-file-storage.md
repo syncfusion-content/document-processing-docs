@@ -5,7 +5,7 @@ description: Load and display PDF files stored in Dropbox cloud storage in the V
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Open PDF from Dropbox Cloud Storage in Vue PDF Viewer

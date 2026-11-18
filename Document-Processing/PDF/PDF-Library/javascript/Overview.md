@@ -6,7 +6,7 @@ description: Learn about the JavaScript PDF Library, including its key capabilit
 platform: document-processing
 control: PDF
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion JavaScript PDF Library

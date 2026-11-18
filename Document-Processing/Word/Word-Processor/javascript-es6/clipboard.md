@@ -5,7 +5,7 @@ description: The clipboard support in TypeScript DOCX Editor provides copy, cut,
 platform: document-processing
 control: Clipboard
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Clipboard in TypeScript DOCX Editor

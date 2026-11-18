@@ -4,7 +4,7 @@ title: Formula Error Handling in React Spreadsheet | Syncfusion
 description: Learn about formula error handling in the Syncfusion React Spreadsheet component and resolve calculation errors effectively.
 control: Formulas 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Formula Error Handling in React Spreadsheet

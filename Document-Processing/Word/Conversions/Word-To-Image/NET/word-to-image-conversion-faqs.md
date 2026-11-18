@@ -3,7 +3,7 @@ title: Word to image conversion FAQs in .NET Word | Syncfusion
 description: Explain frequently asked questions and solutions for Word-to-image conversion using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Word to image conversion FAQs in .NET Word

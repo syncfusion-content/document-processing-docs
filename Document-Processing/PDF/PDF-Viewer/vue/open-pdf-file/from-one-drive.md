@@ -5,7 +5,7 @@ description: Load and display PDF files stored in OneDrive in the Vue PDF Viewer
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Open PDF from OneDrive in Vue PDF Viewer

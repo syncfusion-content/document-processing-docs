@@ -5,7 +5,7 @@ description: Enable, apply, customize, and manage link annotations in the ASP.NE
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Link Annotation in ASP.NET MVC PDF Viewer

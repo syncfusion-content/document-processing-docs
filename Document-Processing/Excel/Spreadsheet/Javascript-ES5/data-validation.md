@@ -4,7 +4,7 @@ title: Data Validation in JavaScript Spreadsheet | Syncfusion
 description: Data validation in JavaScript Spreadsheet restricts cell input based on defined rules to ensure accurate and consistent data entry.
 platform: document-processing
 control: Data validation 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Data Validation in JavaScript Spreadsheet

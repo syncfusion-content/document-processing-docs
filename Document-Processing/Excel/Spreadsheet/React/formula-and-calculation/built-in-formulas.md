@@ -4,7 +4,7 @@ title: Built-in Formulas and Functions in React Spreadsheet | Syncfusion
 description: Learn about built-in formulas and functions in the Syncfusion React Spreadsheet component for calculations and data analysis.
 control: Formulas 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Built-in Formulas and Functions in React Spreadsheet

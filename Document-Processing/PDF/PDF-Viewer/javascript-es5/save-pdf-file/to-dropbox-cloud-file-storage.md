@@ -5,7 +5,7 @@ description: Save PDF files from the JavaScript (ES5) PDF Viewer to Dropbox usin
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Save PDF Files to Dropbox in JavaScript (ES5) PDF Viewer

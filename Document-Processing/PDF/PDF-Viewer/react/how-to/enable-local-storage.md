@@ -5,7 +5,7 @@ description: Control session-specific data storage in the React PDF Viewer using
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Enable Local Storage in React PDF Viewer

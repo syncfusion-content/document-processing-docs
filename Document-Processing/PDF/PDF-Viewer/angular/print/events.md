@@ -5,7 +5,7 @@ description: Subscribe to print events in the Angular PDF Viewer to run custom l
 platform: document-processing
 control: Print
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Print Events in Angular PDF Viewer

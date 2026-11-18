@@ -4,7 +4,7 @@ title: Bookmark Navigation in WPF Pdf Viewer | Syncfusion
 description: Navigate through bookmarks in Syncfusion WPF PDF Viewer control with UI interaction and programmatic methods. Explore bookmark features and navigation options.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Bookmark Navigation in WPF Pdf Viewer

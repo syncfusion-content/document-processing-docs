@@ -5,7 +5,7 @@ description: The footnote and endnote support in React DOCX Editor enables users
 control: Notes 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Footnotes and Endnotes in React DOCX Editor

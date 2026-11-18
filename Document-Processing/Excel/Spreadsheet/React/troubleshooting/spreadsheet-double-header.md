@@ -4,7 +4,7 @@ title: Double header issue in React Spreadsheet | Syncfusion
 description: Learn about how to resolve double header rendering issues using  the Syncfusion React Spreadsheet component.
 platform: document-processing
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Double Header Issue in React Spreadsheet
@@ -20,7 +20,7 @@ In some scenarios, the Spreadsheet header appears twice or is rendered below the
 The image below illustrates the double header rendering issue:
 
 ![Double header example](../images/image.png)
-
+tocname: Document-Processing-SDKs-toc
 ---
 ## Troubleshooting checklist (in order)
 
@@ -39,7 +39,7 @@ Follow these steps in order to diagnose and fix the double-header issue:
 6. **Inspect frozen panes and merged cells:** If your Spreadsheet uses frozen panes, hidden rows, or merged cells, verify these features aren't interfering with header rendering.
 
 7. **Inspect CSS/layout issues:** Use browser developer tools to inspect and rule out CSS-related issues (position, z-index, transforms) that may visually duplicate or misplace the header.
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## See Also

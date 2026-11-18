@@ -4,7 +4,7 @@ title: Mobile Responsiveness in Vue Spreadsheet | Syncfusion
 description: Learn how the Syncfusion Vue Spreadsheet component adapts seamlessly across various mobile devices and screen sizes.
 control: Mobile responsiveness 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Mobile Responsiveness in Vue Spreadsheet

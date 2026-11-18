@@ -4,7 +4,7 @@ title: Suspend and Resume UI Refresh in JavaScript Spreadsheet | Syncfusion
 description: Suspend and resume UI refresh in JavaScript Spreadsheet improve performance by batching multiple updates and reducing unnecessary rendering.
 platform: document-processing
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Suspend and Resume UI Refresh in the JavaScript Spreadsheet

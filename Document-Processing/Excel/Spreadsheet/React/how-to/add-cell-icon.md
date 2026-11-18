@@ -4,7 +4,7 @@ title: How to Add Icons Inside Cells in React Spreadsheet | Syncfusion
 description: Learn how to add icons inside cells in the Syncfusion React Spreadsheet component using custom cell templates.
 control: Spreadsheet 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Add Icons Inside Cells in React Spreadsheet

@@ -4,7 +4,7 @@ title: How to Reduce slowness when running WASM in Visual Studio | Syncfusion
 description: Improve performance when running or debugging the Blazor WebAssembly (WASM) samples in Visual Studio.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Reduce slowness when running WASM in Visual Studio

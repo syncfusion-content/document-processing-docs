@@ -3,7 +3,7 @@ title: How to Convert Dates in .NET Excel Library | Syncfusion
 description: Convert text-formatted date values to DateTime values in Excel workbooks using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to convert dates in .NET Excel Library

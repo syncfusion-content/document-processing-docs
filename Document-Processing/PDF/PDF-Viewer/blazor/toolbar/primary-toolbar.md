@@ -5,7 +5,7 @@ description: Learn how to show or hide, reorder, and add items to the primary to
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Customize the Primary Toolbar in Blazor PDF Viewer

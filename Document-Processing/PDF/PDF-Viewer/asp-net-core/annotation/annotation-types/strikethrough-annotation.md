@@ -5,7 +5,7 @@ description: Enable, apply, customize, and manage Strikethrough annotations in t
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Strikethrough Annotation in ASP.NET Core PDF Viewer

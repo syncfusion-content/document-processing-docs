@@ -3,7 +3,7 @@ title: Comments in JavaScript Excel Library | Syncfusion
 description: Add classic notes and modern threaded comments to worksheet cells with the Syncfusion JavaScript Excel Library.
 platform: document-processing
 control: Excel
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Comments in JavaScript Excel

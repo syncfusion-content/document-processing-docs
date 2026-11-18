@@ -5,7 +5,7 @@ canonical_url: "https://www.syncfusion.com/spreadsheet-editor-sdk/wpf-spreadshee
 description: Learn how to get started with the Syncfusion WPF Spreadsheet control. Explore setup, configuration, workbook creation, and key features.
 platform:  document-processing
 control: SfSpreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with WPF Spreadsheet

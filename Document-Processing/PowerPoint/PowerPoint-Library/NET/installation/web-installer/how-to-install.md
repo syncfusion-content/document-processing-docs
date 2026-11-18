@@ -4,7 +4,7 @@ title: How to Install Syncfusion PowerPoint Web Installer | Syncfusion
 description: Learn how to install the Syncfusion® Essential Studio® PowerPoint Web Installer after downloading it from the Syncfusion® website.
 platform: document-processing
 control: Installation and Deployment
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Install Syncfusion PowerPoint Web Installer

@@ -5,7 +5,7 @@ description: Customize ribbon tabs, groups, and commands in Syncfusion® ASP.NET
 platform: document-processing
 control: Ribbon Customization
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Customize Ribbon in ASP.NET MVC DOCX Editor

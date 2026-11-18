@@ -4,7 +4,7 @@ title: Shapes in Blazor DOCX Editor | Syncfusion
 description: The shapes feature in Blazor DOCX Editor preserve shape elements, text boxes, resizing, positioning, and text wrapping for accurate document rendering.
 platform: document-processing
 control: DOCX Editor
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Shapes in Blazor DOCX Editor

@@ -4,7 +4,7 @@ title: Editing in React Spreadsheet | Syncfusion
 description: Learn about editing in the Syncfusion React Spreadsheet component and modify cell values, formulas, and spreadsheet content.
 control: Editing 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Editing in React Spreadsheet

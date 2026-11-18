@@ -4,7 +4,7 @@ title: Data Binding in TypeScript Spreadsheet | Syncfusion
 description: Data binding in TypeScript Spreadsheet enables seamless integration with data sources, allowing users to display and manage data efficiently.
 platform: document-processing
 control: Data binding
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Data Binding in TypeScript Spreadsheet 

@@ -4,7 +4,7 @@ title: Accessibility in Flutter PDF Viewer | Syncfusion
 description: The accessibility feature in SfPdfViewer supports screen readers, keyboard navigation, and inclusive access to PDF documents.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Accessibility in Flutter PDF Viewer

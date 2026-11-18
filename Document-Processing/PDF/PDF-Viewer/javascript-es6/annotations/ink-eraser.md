@@ -5,7 +5,7 @@ description: Use the Ink Eraser tool in the JavaScript (ES6) PDF Viewer to remov
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Ink Eraser in JavaScript (ES6) PDF Viewer

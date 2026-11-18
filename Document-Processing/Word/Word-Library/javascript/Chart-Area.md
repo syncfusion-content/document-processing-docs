@@ -3,7 +3,7 @@ title: Modify the Appearance of Chart Area in JavaScript Word | Syncfusion
 description: Learn how to customize the chart area appearance including border and color in Syncfusion JavaScript Word library.
 platform: document-processing
 control: Word Library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Modify the Appearance of Chart Area in JavaScript Word

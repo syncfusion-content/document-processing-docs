@@ -4,7 +4,7 @@ title: Globalization in Blazor Spreadsheet | Syncfusion
 description: Learn how to localize the Blazor Spreadsheet, configure culture-specific formatting, and enable right-to-left layout.
 control: Spreadsheet
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Globalization in Blazor Spreadsheet

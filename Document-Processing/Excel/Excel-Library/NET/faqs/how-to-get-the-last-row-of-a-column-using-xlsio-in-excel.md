@@ -3,7 +3,7 @@ title: How to Get Last Column Row in .NET Excel Library | Syncfusion
 description: Find the last row with data in a specific Excel worksheet column using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to get the last row of a column in .NET Excel Library

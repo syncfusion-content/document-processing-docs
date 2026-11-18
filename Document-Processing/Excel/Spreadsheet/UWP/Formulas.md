@@ -4,7 +4,7 @@ title: Formulas in UWP Spreadsheet control | Syncfusion®
 description: Create and calculate formulas in the  UWP Spreadsheet control using built-in functions for accurate and efficient data analysis.
 platform: document-processing
 control: SfSpreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Formulas in UWP Spreadsheet

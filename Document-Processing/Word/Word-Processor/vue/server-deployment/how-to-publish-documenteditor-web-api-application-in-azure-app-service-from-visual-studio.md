@@ -5,7 +5,7 @@ description: Publish the Syncfusion® Vue DOCX Editor Web API to Azure App Servi
 control: How to publish documenteditor web api application in azure app service from visual studio 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Publish Vue DOCX Editor Web API to Azure App

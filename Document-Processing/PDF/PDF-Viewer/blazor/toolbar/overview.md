@@ -5,7 +5,7 @@ description: Learn about Syncfusion Blazor PDF Viewer primary, annotation, form 
 control: SfPdfViewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion  Toolbar in Blazor PDF Viewer Component

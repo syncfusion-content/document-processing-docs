@@ -5,7 +5,7 @@ description: Load and display PDF files stored in Azure Blob Storage in the Vue 
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Open PDF from Azure Blob Storage in Vue PDF Viewer

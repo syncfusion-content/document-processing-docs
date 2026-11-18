@@ -4,7 +4,7 @@ title: Configure Chat Client with AI-Powered Components | Syncfusion®
 description: Learn how to implement a configure chat client with Syncfusion<sup>&reg;</sup> AI-Powered Components.
 platform: maui
 control: SmartComponents
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Configure Chat Client With Smart Components

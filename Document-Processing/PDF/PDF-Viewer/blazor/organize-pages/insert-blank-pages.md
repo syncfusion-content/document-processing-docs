@@ -5,7 +5,7 @@ description: How to insert blank pages into a PDF using the Organize Pages UI in
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Insert blank pages using the Organize Pages tool in Blazor PDF Viewer

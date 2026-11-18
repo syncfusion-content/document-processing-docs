@@ -5,7 +5,7 @@ description: Load and display PDF files stored in OneDrive in the Angular PDF Vi
 platform: document-processing
 control: Open PDF files from One Drive
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Open PDF from OneDrive in Angular PDF Viewer

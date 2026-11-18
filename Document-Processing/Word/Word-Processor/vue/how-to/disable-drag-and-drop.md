@@ -5,7 +5,7 @@ description: Disable drag and drop functionality in Syncfusion® Vue DOCX Editor
 platform: document-processing
 control: Disable drag and drop in DOCX Editor
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 # How to Disable Drag and Drop in Vue DOCX Editor
 

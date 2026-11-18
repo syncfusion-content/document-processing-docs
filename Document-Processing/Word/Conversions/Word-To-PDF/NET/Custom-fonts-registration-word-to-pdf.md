@@ -3,7 +3,7 @@ title: Custom font registration for Word-to-PDF in .NET | Syncfusion
 description: This section illustrates how to register custom fonts for Word-to-PDF conversion using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Custom Font Registration for Word to PDF Conversion in .NET Word

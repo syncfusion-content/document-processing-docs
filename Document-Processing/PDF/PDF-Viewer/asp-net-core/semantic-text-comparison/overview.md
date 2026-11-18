@@ -5,7 +5,7 @@ description: Learn about the Syncfusion ASP.NET Core PDF Viewer Semantic Text Co
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Syncfusion ASP.NET Core PDF Viewer Semantic Text Comparison

@@ -3,7 +3,7 @@ title: Get Started with .NET Document Chunking  | Syncfusion
 description: Get started with the Syncfusion® .NET Document Chunking Library to divide supported documents into meaningful, structured chunks.
 platform: document-processing
 control: Chunking
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Get Started with .NET Document Chunking Library 

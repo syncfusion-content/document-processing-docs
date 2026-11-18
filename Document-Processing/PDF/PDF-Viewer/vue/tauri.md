@@ -5,7 +5,7 @@ description: Learn how to create a Tauri desktop and mobile application and inte
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Tauri Integration for Vue PDF Viewer

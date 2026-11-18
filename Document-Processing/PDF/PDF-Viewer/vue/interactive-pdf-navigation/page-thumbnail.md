@@ -5,7 +5,7 @@ description: Use page thumbnail navigation in the Vue PDF Viewer to preview and 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Page Thumbnail Navigation in Vue PDF Viewer

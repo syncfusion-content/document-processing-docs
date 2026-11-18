@@ -4,7 +4,7 @@ title: How to Deploy Spreadsheet Server to Azure App Service | Syncfusion
 description: Learn how to publish the Syncfusion Spreadsheet Server Web API to Azure App Service using Visual Studio.
 control: How to publish Spreadsheet Server in Azure App Service using Visual Studio
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Deploy Spreadsheet Server to Azure App Service Using Visual Studio

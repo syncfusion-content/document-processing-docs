@@ -3,7 +3,7 @@ title: Document Object Model representation in Java Word | Syncfusion
 description: Learn about Document Object Model representation in the Syncfusion Java Word library to create, read, and edit documents without external dependencies.
 platform: document-processing
 control: Word Library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Document Object Model representation in Java Word
 

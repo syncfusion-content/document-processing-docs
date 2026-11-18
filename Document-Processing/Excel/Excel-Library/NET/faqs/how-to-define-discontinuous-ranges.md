@@ -3,7 +3,7 @@ title: How to Define Discontinuous Ranges in .NET Excel Library | Syncfusion
 description: Define discontinuous ranges in Excel worksheets using the Syncfusion .NET Excel Library for non-adjacent cell references.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to define discontinuous ranges in .NET Excel Library

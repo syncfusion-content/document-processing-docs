@@ -5,7 +5,7 @@ description: Configure text search in the Vue PDF Viewer and run programmatic se
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Find Text in Vue PDF Viewer

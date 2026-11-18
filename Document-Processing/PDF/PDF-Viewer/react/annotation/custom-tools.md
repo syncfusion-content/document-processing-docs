@@ -5,7 +5,7 @@ description: Build a custom annotation toolbar for the React PDF Viewer and swit
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Custom Annotation Tools in React PDF Viewer

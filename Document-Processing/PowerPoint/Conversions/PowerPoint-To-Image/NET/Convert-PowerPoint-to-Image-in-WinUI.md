@@ -3,7 +3,7 @@ title: Convert PowerPoint to Image in WinUI | Syncfusion
 description: Convert PowerPoint to image in WinUI using WinUI PowerPoint library (Presentation) without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Convert PowerPoint to Image in WinUI

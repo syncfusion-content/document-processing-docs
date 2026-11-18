@@ -3,7 +3,7 @@ title: How to Show Leader Lines in .NET Excel Library | Syncfusion
 description: Show leader lines on an Excel chart using the Syncfusion .NET Excel Library for chart data label display settings.
 platform: document-processing 
 control: XlsIO 
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to show leader lines in .NET Excel Library

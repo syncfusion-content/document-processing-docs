@@ -3,7 +3,7 @@ title: Worksheet Backgrounds in .NET Excel Library | Syncfusion
 description: Set image background for an Excel worksheet programmatically using Syncfusion .NET Excel (XlsIO) Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Worksheet Backgrounds in .NET Excel Library

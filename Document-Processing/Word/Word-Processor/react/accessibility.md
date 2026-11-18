@@ -5,7 +5,7 @@ description: The accessibility support in React DOCX Editor ensures keyboard nav
 control: Accessibility
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Accessibility in React DOCX Editor

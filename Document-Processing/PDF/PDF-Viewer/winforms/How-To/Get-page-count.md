@@ -4,7 +4,7 @@ title: How to get page count in WinForms PDF Viewer | Syncfusion
 description: This guide explains how to retrieve the page count of a loaded PDF document in Syncfusion PDF Viewer for Windows Forms.
 platform: document-processing
 control: PdfViewerControl
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to get page count in WinForms PDF Viewer

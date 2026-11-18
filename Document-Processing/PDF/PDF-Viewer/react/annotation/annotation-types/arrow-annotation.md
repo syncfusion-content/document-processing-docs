@@ -5,7 +5,7 @@ description: Enable, apply, customize, and manage Arrow annotations in the React
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Arrow Annotation in React PDF Viewer

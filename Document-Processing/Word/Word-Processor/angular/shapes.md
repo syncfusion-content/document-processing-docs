@@ -5,7 +5,7 @@ description: The shapes feature in Angular DOCX Editor preserve shape elements, 
 platform: document-processing
 control: Shapes
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Shapes in Angular DOCX Editor

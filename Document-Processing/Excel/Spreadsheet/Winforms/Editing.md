@@ -4,7 +4,7 @@ title: Editing in Windows Forms Spreadsheet control | Syncfusion®
 description: Modify worksheet content in Windows Forms Spreadsheet by editing cells, updating values, and changing formulas programmatically.
 platform: document-processing
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Editing in Windows Forms Spreadsheet

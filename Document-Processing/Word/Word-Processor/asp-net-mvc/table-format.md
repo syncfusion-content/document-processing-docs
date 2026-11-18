@@ -4,7 +4,7 @@ title: Table Format in ASP.NET MVC DOCX Editor | Syncfusion
 description: The table format feature in ASP.NET MVC DOCX Editor enables customizing cell margins, spacing, alignment, borders, and sizing to create structured tables.
 platform: document-processing
 control: Table Format
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

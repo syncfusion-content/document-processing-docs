@@ -4,7 +4,7 @@ description: The background in UWP DOCX Editor offers color customization throug
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: background,background-color,overrides-document-background,layout-type,document-background
+keywords: background,background-color,overrides-document-background,layout-type,document-backgroundtocname: Document-Processing-SDKs-toc
 ---
 
 # Background in UWP DOCX Editor

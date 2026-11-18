@@ -5,7 +5,7 @@ description: Learn how to get started with the Syncfusion TypeScript DOCX Editor
 control: DOCX Editor
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with TypeScript DOCX Editor in SharePoint

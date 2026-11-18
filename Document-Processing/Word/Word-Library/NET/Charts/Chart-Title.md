@@ -3,7 +3,7 @@ title: Modify the Appearance of Chart Title in .NET Word | Syncfusion
 description: Learn how to modify the appearance of plot area in a chart in a Word document using Syncfusion® .NET Word library without Microsoft Word.
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Modify the Appearance of Chart Title in .NET Word

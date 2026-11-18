@@ -4,7 +4,7 @@ title: Magnifying PDF documents in Windows Forms PDF Viewer | Syncfusion
 description: The magnification feature provides zoom in, zoom out, and fit-to-page options to improve document readability and viewing experience.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Magnifying PDF documents in Windows Forms PDF Viewer

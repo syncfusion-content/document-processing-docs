@@ -5,7 +5,7 @@ description: Learn about the supported file formats in Angular DOCX Editor for i
 control: Unsupported file
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Supported File Formats in Angular DOCX Editor

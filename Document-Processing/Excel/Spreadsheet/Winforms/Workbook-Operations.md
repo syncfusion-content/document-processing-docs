@@ -4,7 +4,7 @@ title: Workbook Operations in Windows Forms Spreadsheet control | Syncfusion®
 description: Create new Excel workbooks, open existing files from different sources, and save changes efficiently in Windows Forms Spreadsheet.
 platform: document-processing
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Workbook Operations in Windows Forms Spreadsheet

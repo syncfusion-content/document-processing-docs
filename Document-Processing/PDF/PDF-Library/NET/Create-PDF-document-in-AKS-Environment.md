@@ -3,7 +3,7 @@ title: Getting Started with .NET PDF Library in AKS | Syncfusion
 description: Learn how to get started with the Syncfusion .NET PDF Library in an AKS environment. Create PDF documents without Adobe Acrobat dependencies.
 platform: file-formats
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with .NET PDF Library in AKS
@@ -245,7 +245,7 @@ spec:
     spec:
       containers:
       - name: createpdfdocument
-        image: createpdfdocument20240918103106.azurecr.io/createpdfdocument:latest
+        image: createpdfdocument20240918103106.azurecr.io/createpdfdocument:latesttocname: Document-Processing-SDKs-toc
 ---
 apiVersion: v1
 kind: Service

@@ -5,7 +5,7 @@ description: Intercept and control file downloads in the ASP.NET MVC PDF Viewer 
 platform: document-processing
 control: PDF Viewer
 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Control File Downloads in ASP.NET MVC PDF Viewer

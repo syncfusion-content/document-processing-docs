@@ -4,7 +4,7 @@ title: Filtering in Vue Spreadsheet | Syncfusion
 description: Filter and analyze spreadsheet data efficiently using built-in filtering capabilities in the Syncfusion Vue Spreadsheet.
 control: Filter 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Filtering in Vue Spreadsheet

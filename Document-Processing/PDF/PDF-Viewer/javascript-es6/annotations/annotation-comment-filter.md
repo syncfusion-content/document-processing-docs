@@ -5,7 +5,7 @@ description: Filter comments and annotations in the JavaScript (ES6) PDF Viewer 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Annotation Comment Filter in JavaScript (ES6) PDF Viewer

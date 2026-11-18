@@ -3,7 +3,7 @@ title: Lists in .NET Markdown library | Syncfusion
 description: Learn how to create, format, and modify lists in a Markdown document using .NET Markdown library without any third-party dependencies.
 platform: document-processing
 control: Markdown
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Lists in .NET Markdown Library

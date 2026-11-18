@@ -4,7 +4,7 @@ description: The touch in UWP DOCX Editor supports touch manipulations like pan,
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: touch,touch-manipulation,manipulation-mode,manipulationmodes
+keywords: touch,touch-manipulation,manipulation-mode,manipulationmodestocname: Document-Processing-SDKs-toc
 ---
 # Touch in UWP DOCX Editor
 

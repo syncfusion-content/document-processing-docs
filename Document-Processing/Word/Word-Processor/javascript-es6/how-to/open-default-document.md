@@ -5,7 +5,7 @@ description: Open a default document in Syncfusion® TypeScript DOCX Editor duri
 platform: document-processing
 control: Open a Default Document
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Open a Default Document in TypeScript DOCX Editor

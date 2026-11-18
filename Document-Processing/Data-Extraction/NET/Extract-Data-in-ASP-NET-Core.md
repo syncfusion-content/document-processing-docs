@@ -4,7 +4,7 @@ canonical_url: "https://www.syncfusioninternal.com/document-sdk/net-pdf-data-ext
 description: Learn how to get started with the Syncfusion ASP.NET Core Smart Data Extractor. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: SmartDataExtractor
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with ASP.NET Core Smart Data Extractor

@@ -4,7 +4,7 @@ title: How to Change Active Sheet in TypeScript Spreadsheet | Syncfusion
 description: Change the active sheet index when importing a workbook in TypeScript Spreadsheet to display the required worksheet by default.
 platform: document-processing
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Change Active Sheet in TypeScript Spreadsheet

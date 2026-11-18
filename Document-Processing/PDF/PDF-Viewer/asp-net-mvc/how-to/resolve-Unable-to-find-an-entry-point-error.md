@@ -4,7 +4,7 @@ title: How to Resolve the Unable to Find an Entry Point Error | Syncfusion
 description: Resolve the Unable to find an entry point error after upgrading the Pdfium package in the ASP.NET MVC PDF Viewer with a clear set of steps.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Resolve the Unable to Find an Entry Point Error in ASP.NET MVC

@@ -5,7 +5,7 @@ description: The localization in UWP DOCX Editor provides support to localize st
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: localization,resw,resource-file,culture,language,resources
+keywords: localization,resw,resource-file,culture,language,resourcestocname: Document-Processing-SDKs-toc
 ---
 # Localization in UWP DOCX Editor
 

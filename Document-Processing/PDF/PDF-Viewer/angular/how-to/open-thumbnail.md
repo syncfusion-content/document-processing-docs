@@ -5,7 +5,7 @@ description: Open the thumbnail pane programmatically in the Angular PDF Viewer 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Open the Thumbnail Pane Programmatically in Angular PDF Viewer

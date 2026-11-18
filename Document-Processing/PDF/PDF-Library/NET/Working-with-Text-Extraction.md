@@ -3,7 +3,7 @@ title: Text Extraction in .NET PDF Library | Syncfusion
 description: Learn how to extract text and its bounds from a page or the entire PDF document using the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Text Extraction in .NET PDF Library
 

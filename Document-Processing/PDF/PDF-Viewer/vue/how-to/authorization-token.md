@@ -5,7 +5,7 @@ description: Pass an authorization token to the Vue PDF Viewer to securely acces
 control: Authorization token
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Use an Authorization Token in Vue PDF Viewer

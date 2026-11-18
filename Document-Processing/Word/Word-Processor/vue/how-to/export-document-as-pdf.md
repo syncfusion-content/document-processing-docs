@@ -5,7 +5,7 @@ description: Export documents as PDF in Syncfusion® Vue DOCX Editor using clien
 control: Export document as pdf 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Export Document as PDF in Vue DOCX Editor

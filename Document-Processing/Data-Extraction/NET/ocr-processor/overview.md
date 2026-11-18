@@ -5,7 +5,7 @@ description: Learn about introduction of Syncfusion .NET OCR Processor for recog
 platform: document-processing
 control: PDF
 documentation: UG
-keywords: Assemblies 
+keywords: Assemblies tocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion .NET OCR Processor 

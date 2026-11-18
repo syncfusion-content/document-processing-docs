@@ -4,7 +4,7 @@ title: About Docker image for JavaScript (ES6) PDF Viewer | Syncfusion
 description: Run and connect to the Syncfusion JavaScript (ES6) PDF Viewer server Docker image, set the license key, and configure Redis cache for the Server Deployment
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 # About Docker image for JavaScript (ES6) PDF Viewer
 

@@ -4,7 +4,7 @@ title: Print in ASP.NET Core Spreadsheet | Syncfusion
 description: Learn about printing in the Syncfusion ASP.NET Core Spreadsheet control, including print options, page layout, and worksheet printing.
 platform: document-processing
 control: Print
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

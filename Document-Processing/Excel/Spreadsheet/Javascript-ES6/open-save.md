@@ -4,7 +4,7 @@ title: Open and Save in TypeScript Spreadsheet | Syncfusion
 description: Open and save in TypeScript Spreadsheet enable users to import, edit, and export workbook data seamlessly across applications.
 platform: document-processing
 control: Open save
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Open and save in TypeScript Spreadsheet 

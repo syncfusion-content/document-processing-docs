@@ -5,7 +5,7 @@ description: Right-to-left support in Vue DOCX Editor enables RTL user interface
 control: Right to left 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Right to Left in Vue DOCX Editor

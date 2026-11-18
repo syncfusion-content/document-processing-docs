@@ -4,7 +4,7 @@ title: How to Identify if the PDF Has Been Edited in ASP.NET | Syncfusion
 description: Identify whether the loaded PDF in the ASP.NET MVC PDF Viewer has been edited by the user so you can prompt to save or warn before navigation.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Identify if the PDF Has Been Edited in ASP.NET MVC PDF Viewer

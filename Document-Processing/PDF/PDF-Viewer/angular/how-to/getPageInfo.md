@@ -5,7 +5,7 @@ description: Retrieve page height, width, and rotation in the Angular PDF Viewer
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Get Page Info in Angular PDF Viewer

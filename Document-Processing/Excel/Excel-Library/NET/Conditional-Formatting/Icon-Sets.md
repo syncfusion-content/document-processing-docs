@@ -3,7 +3,7 @@ title: Icon Sets in .NET Excel Library | Syncfusion
 description: Icon-set conditional formatting describes how Syncfusion .NET Excel Library applies icon-based rules to visually highlight Excel data.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Icon Sets in .NET Excel Library

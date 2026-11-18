@@ -4,7 +4,7 @@ title: About Syncfusion React Spreadsheet Component | Syncfusion
 description: Learn about the introduction of Syncfusion Essential Studio React Spreadsheet component and more details.
 platform: document-processing
 control: Index
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion React Spreadsheet Component

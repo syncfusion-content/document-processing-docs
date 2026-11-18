@@ -3,7 +3,7 @@ title: How to Align Pictures in .NET Excel Library | Syncfusion
 description: Align images precisely within Excel worksheet cells using the Syncfusion .NET Excel Library by positioning and fitting images to cells.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to align pictures in cells in .NET Excel Library

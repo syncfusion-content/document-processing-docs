@@ -5,7 +5,7 @@ description: Open a document from a URL in Syncfusion® Angular DOCX Editor to l
 platform: document-processing
 control: Open document by address
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Open a Document by URL in Angular DOCX Editor

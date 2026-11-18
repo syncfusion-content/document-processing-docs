@@ -5,7 +5,7 @@ description: Add, edit, and manage handwritten signatures in the Angular PDF Vie
 platform: document-processing
 control: Handwritten signature
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Handwritten Signature in Angular PDF Viewer

@@ -4,7 +4,7 @@ title: How to Load Documents Dynamically in React PDF Viewer | Syncfusion
 description: Load or switch PDF documents dynamically in the React PDF Viewer using the load method to swap documents without reloading the page.
 control: PDF Viewer
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Load Documents Dynamically in React PDF Viewer

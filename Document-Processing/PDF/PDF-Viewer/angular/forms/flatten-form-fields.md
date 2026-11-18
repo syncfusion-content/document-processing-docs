@@ -5,7 +5,7 @@ description: Flatten interactive PDF form fields in the Angular PDF Viewer befor
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Flatten Form Fields in Angular PDF Viewer

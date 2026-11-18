@@ -5,7 +5,7 @@ description: Add, edit, view, and manage comments in PowerPoint presentations us
 platform: document-processing
 control: Presentation
 documentation: UG
-keywords: comments
+keywords: commentstocname: Document-Processing-SDKs-toc
 ---
 # Comments in .NET PowerPoint Presentation
 A comment is a text note attached to a location on a slide. Each comment contains an unformatted text string, information about its author and the time it was added. In a PowerPoint slide, the comments and the reply comments are sequentially maintained in a single collection. The top most comment will have the index position 0 and the other comments and replies in that slide will have the incremental index positions.

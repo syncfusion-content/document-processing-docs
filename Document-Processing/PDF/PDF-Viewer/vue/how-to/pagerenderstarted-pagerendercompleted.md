@@ -5,7 +5,7 @@ description: Use the pageRenderInitiate and pageRenderComplete events in the Vue
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Handle Page Render Events in Vue PDF Viewer

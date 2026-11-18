@@ -4,7 +4,7 @@ title: To One Drive in React PDF Viewer | Syncfusion
 description: Save PDF files from the React PDF Viewer to OneDrive using a server-backed web service for authentication and secure uploads.
 control: PDF Viewer
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Save PDF Files to OneDrive in React PDF Viewer

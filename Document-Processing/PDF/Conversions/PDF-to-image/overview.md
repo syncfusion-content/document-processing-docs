@@ -4,7 +4,7 @@ description: Learn about the Syncfusion PDF-to-Image Conversion Library and conv
 platform: document-processing
 control: PDF to image
 documentation: UG
-keywords: Assemblies
+keywords: Assembliestocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion PDF-to-Image Conversion Library

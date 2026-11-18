@@ -3,7 +3,7 @@ title: Loading and Saving Word document in JavaScript Word | Syncfusion
 description: Learn how to create, load, edit, and save Word documents using the Syncfusion JavaScript Word library.
 platform: document-processing
 control: Word Library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Open and Save Word documents in JavaScript Word

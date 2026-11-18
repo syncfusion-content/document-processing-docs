@@ -5,7 +5,7 @@ description: Adjust the thumbnail zoom level inside the Organize Pages panel in 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Zoom Pages in Organize Pages in Vue PDF Viewer

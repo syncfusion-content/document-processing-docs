@@ -4,7 +4,7 @@ title: Export in ASP.NET MVC DOCX Editor | Syncfusion
 description: The export feature in ASP.NET MVC DOCX Editor enables users to save and download documents in supported formats while preserving content and formatting.
 platform: document-processing
 control: Export
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

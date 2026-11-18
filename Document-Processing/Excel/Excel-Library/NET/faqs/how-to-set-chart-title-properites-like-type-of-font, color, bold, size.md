@@ -3,7 +3,7 @@ title: How to Set Chart Properties in .NET Excel Library | Syncfusion
 description: Set chart title properties such as font type, color, bold style, and size using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to set chart title properties in .NET Excel Library

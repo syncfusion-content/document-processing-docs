@@ -4,7 +4,7 @@ title: Scrolling in JavaScript Spreadsheet | Syncfusion
 description: Scrolling in JavaScript Spreadsheet enables smooth navigation across rows and columns, helping users efficiently view large datasets.
 platform: document-processing
 control: Scrolling
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Scrolling in  JavaScript Spreadsheet 

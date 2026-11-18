@@ -4,7 +4,7 @@ title: About WPF Pdf Viewer control | Syncfusion
 description: Learn about the introduction of the Syncfusion Essential Studio WPF PDF Viewer control and more details.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # WPF Pdf Viewer Overview

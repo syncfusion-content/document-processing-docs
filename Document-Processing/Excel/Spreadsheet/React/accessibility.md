@@ -4,7 +4,7 @@ title: Accessibility in React Spreadsheet | Syncfusion
 description: Learn about accessibility in the Syncfusion React Spreadsheet component, including keyboard navigation, ARIA support, and compliance features.
 control: Accessibility 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Accessibility in React Spreadsheet

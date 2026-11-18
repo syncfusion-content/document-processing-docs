@@ -5,7 +5,7 @@ description: Retrieve the Base64 value of a loaded PDF in the Vue PDF Viewer usi
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Get the Base64 Value of a PDF in Vue PDF Viewer

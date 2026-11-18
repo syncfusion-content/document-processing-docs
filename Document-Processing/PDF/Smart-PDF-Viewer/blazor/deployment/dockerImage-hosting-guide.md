@@ -4,7 +4,7 @@ title: Docker Image Hosting Guide for Blazor Web App PDF Viewer | Syncfusion
 description: Learn here all about creating Docker image from Blazor Smart PDF Viewer Web App and ensure the images locally by hosting it as a link.
 platform: document-processing
 control: SfSmartPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Docker Image Hosting Guide for Blazor Web App PDF Viewer

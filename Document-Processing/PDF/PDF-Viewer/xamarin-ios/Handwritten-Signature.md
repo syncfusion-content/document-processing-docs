@@ -4,7 +4,7 @@ title:  Handwritten signature in Xamarin.iOS PDF Viewer | Syncfusion
 description: Learn about handwritten signatures support in Syncfusion<sup>®</sup> Xamarin.iOS Pdf Viewer (SfPdfViewer) control and more details.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 #  Handwritten signature in Xamarin.iOS PDF Viewer

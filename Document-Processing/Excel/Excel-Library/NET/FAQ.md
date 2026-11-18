@@ -3,7 +3,7 @@ title: FAQ Section in .NET Excel Library | Syncfusion
 description: The FAQ section provides answers to common questions about creating, editing, and manipulating Excel documents.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # FAQ Section in .NET Excel Library

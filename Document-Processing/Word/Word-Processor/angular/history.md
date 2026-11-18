@@ -5,7 +5,7 @@ description: History in Angular DOCX Editor tracks editing actions to enable und
 platform: document-processing
 control: History 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # History in Angular DOCX Editor

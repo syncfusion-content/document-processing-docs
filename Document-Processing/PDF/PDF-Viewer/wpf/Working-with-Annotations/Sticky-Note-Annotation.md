@@ -4,7 +4,7 @@ title: Sticky Note Annotation in WPF Pdf Viewer control | Syncfusion
 description:  The sticky note annotation feature in WPF PDF Viewer lets users attach note-style comments to specific locations in PDF documents for collaboration.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Sticky Note Annotation in WPF Pdf Viewer

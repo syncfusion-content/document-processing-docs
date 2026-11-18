@@ -4,7 +4,7 @@ title: Headers and Footers in Flutter PDF Library | Syncfusion
 description: Learn how to draw and customize headers and footers in PDF documents using Syncfusion Flutter PDF non-UI Library.
 platform: document-processing
 control: PDF
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Headers and Footers in Flutter PDF

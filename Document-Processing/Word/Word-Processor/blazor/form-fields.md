@@ -4,7 +4,7 @@ title: Form Fields in Blazor DOCX Editor | Syncfusion
 description: Form fields in Blazor DOCX Editor allow users to create, update, and protect fillable fields for structured data entry.
 platform: document-processing
 control: DOCX Editor
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Form Fields in Blazor DOCX Editor

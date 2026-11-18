@@ -5,7 +5,7 @@ description: Set default character, paragraph, and section formatting in Syncfus
 platform: document-processing
 control: Set default format in DOCX Editor 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Set Default Format in Angular DOCX Editor

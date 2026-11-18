@@ -3,7 +3,7 @@ title: How to Zip Files in .NET Excel Library | Syncfusion
 description: Zip files using the Syncfusion.Compression.Zip namespace for file compression in zip archive handling.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to zip files in .NET Excel Library

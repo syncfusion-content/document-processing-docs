@@ -4,7 +4,7 @@ title: How to Control File Downloads in ASP.NET Core PDF Viewer | Syncfusion
 description: Intercept and control file downloads in the ASP.NET Core PDF Viewer using the downloadStart event to add custom headers or cancel the action.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Control File Downloads in ASP.NET Core PDF Viewer

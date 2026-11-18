@@ -3,7 +3,7 @@ title: About Syncfusion .NET PowerPoint to Image Library | Syncfusion
 description: Learn about the Syncfusion® .NET PowerPoint to Image conversion feature and how to convert PowerPoint presentations into image formats.
 platform: document-processing
 control: Presentation
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion .NET PowerPoint to Image Conversion Library

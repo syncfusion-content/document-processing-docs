@@ -3,7 +3,7 @@ title: PDF Page to Image Conversion in PDF to Image Library | Syncfusion
 description: Learn how to convert PDF pages into image files using the Syncfusion PDF to Image Converter Library and customize conversion settings.
 platform: document-processing
 control: PDF to image
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # PDF Page to Image Conversion in PDF to Image Library

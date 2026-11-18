@@ -3,7 +3,7 @@ title: Excel to Image conversion in Azure Windows | Syncfusion
 description: Azure App Service on Windows Excel to Image section explains how to convert Excel files to images in Azure App Service on Windows using Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Excel to Image Conversion in Azure Windows using Excel Library

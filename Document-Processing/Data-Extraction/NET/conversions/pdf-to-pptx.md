@@ -4,7 +4,7 @@ description: Convert PDF documents to PowerPoint using Smart Data Extractor. Tra
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG
-keywords: Assemblies
+keywords: Assembliestocname: Document-Processing-SDKs-toc
 ---
 
 # Convert PDF to PowerPoint in .NET Smart Data Extractor

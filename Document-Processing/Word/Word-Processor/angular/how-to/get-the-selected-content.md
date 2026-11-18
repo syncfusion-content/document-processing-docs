@@ -5,7 +5,7 @@ description: Get selected content as plain text and SFDT rich text in Syncfusion
 platform: document-processing
 control: Get the selected content
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Get Selected Content in Angular DOCX Editor

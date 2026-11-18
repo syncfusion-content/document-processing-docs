@@ -3,7 +3,7 @@ title: Pages in .NET PDF Library | Syncfusion
 description: Learn how to add, insert, reorder, remove, and split PDF pages with page numbering and page actions using Syncfusion .NET PDF.
 platform: document-processing
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Pages in .NET PDF Library

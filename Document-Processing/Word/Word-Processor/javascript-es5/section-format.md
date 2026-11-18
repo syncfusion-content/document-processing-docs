@@ -5,7 +5,7 @@ description: The section format feature in JavaScript DOCX Editor enables users 
 platform: document-processing
 control: Section format 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Section Format in JavaScript DOCX Editor

@@ -5,7 +5,7 @@ description: Add rectangle annotations from text search results in the Angular P
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Add Annotations From Text Search in Angular PDF Viewer

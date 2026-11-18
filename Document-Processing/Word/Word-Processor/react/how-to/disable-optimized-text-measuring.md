@@ -5,7 +5,7 @@ description: Disable optimized text measuring in Syncfusion® React DOCX Editor 
 control: Disable optimized text measuring
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Disable Optimized Text Measuring in React DOCX Editor

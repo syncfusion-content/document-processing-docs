@@ -3,7 +3,7 @@ title: How to Get Column Colors in .NET Excel Library | Syncfusion
 description: Get the styled column color when column cells have different colors using the Syncfusion .NET Excel Library in Excel.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to get column colors in .NET Excel Library

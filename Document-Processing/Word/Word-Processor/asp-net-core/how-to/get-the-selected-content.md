@@ -4,7 +4,7 @@ title: How to Get Selected Content in ASSP.NET Core DOCX Editor | Syncfusion
 description: Get selected content as plain text and SFDT rich text in Syncfusion® ASP.NET Core DOCX Editor for content extraction, processing, and customization.
 platform: document-processing
 control: Get The Selected Content
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

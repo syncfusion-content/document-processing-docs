@@ -3,7 +3,7 @@ title: Fallback fonts in PowerPoint to Image conversion| Syncfusion
 description: Learn about how to specify fallback fonts during PowerPoint to Image conversion using the .NET PowerPoint (Presentation) library.
 platform: document-processing
 control: PowerPoint
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Fallback fonts in PowerPoint to Image conversion
 

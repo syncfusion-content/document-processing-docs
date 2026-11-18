@@ -4,7 +4,7 @@ title: Open and Save in ASP.NET MVC Spreadsheet | Syncfusion
 description: Learn how to open, edit, and save spreadsheet documents using the Syncfusion ASP.NET MVC Spreadsheet.
 platform: document-processing
 control: Open Save
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

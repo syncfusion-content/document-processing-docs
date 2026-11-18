@@ -4,7 +4,7 @@ title: Open PDF from Azure Blob Storage in MVC PDF Viewer | Syncfusion
 description: Load and display PDF files stored in Azure Blob Storage in the ASP.NET MVC PDF Viewer using a server-backed web service for secure access.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Open PDF from Azure Blob Storage in ASP.NET MVC PDF Viewer

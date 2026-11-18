@@ -5,7 +5,7 @@ description: Open Syncfusion® Angular DOCX Editor in read-only mode to prevent 
 platform: document-processing
 control: Default read-only
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Open Angular DOCX Editor in Read-Only Mode

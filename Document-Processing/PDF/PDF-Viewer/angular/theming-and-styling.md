@@ -5,7 +5,7 @@ description: Apply built-in themes, configure dark mode, and customize the visua
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Theming and Styling in Angular PDF Viewer

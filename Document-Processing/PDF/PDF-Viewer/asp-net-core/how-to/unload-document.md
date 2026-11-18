@@ -4,7 +4,7 @@ title: How to Unload a Document in ASP.NET Core PDF Viewer | Syncfusion
 description: Unload the current document in the ASP.NET Core PDF Viewer to free resources and prepare the viewer for loading a different PDF document.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Unload a Document in ASP.NET Core PDF Viewer

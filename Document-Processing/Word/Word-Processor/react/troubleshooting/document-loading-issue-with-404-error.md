@@ -5,7 +5,7 @@ description: Troubleshoot the 404 error in Syncfusion React DOCX Editor by verif
 control: document loading issue with 404 error
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Document loading issue in React DOCX Editor

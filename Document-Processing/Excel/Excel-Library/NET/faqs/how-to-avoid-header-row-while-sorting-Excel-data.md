@@ -3,7 +3,7 @@ title: How to Sort Without Headers in .NET Excel Library | Syncfusion
 description: Avoid sorting the header row when sorting Excel worksheet data using the Syncfusion .NET Excel Library with custom sort options.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to exclude header rows while sorting in .NET Excel Library

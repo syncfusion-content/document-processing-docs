@@ -5,7 +5,7 @@ description: Use the Ink Eraser tool in the Vue PDF Viewer to remove or correct 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Ink Eraser in Vue PDF Viewer

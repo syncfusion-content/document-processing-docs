@@ -3,7 +3,7 @@ title: Create Word documents in ASP.NET  Core Web API | Syncfusion
 description: Describe how to insert, format, and manage images in Word documents using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Create Word documents in ASP.NET  Core Web API

@@ -3,7 +3,7 @@ title: EnablePartialTrustCode in .NET Excel Library | Syncfusion
 description: EnablePartialTrustCode property describes when to enable partial trust code in Azure to avoid EMF or WMF GDI+ errors.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # EnablePartialTrustCode Property in .NET Excel Library

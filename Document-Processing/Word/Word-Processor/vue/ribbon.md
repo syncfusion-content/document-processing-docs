@@ -5,7 +5,7 @@ description: Ribbon in Vue DOCX Editor provides a tabbed command interface to ac
 platform: document-processing
 control: Ribbon
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Ribbon in Vue DOCX Editor

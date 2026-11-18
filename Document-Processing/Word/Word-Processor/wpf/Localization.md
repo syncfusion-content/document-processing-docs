@@ -5,7 +5,7 @@ description: The localization in WPF DOCX Editor provides support to localize st
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: localization,resx,culture,current-ui-culture,resource-file
+keywords: localization,resx,culture,current-ui-culture,resource-filetocname: Document-Processing-SDKs-toc
 ---
 # Localization in WPF DOCX Editor
 

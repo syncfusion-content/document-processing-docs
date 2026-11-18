@@ -5,7 +5,7 @@ description: The paragraph format feature in Angular DOCX Editor enables users t
 platform: document-processing
 control: Paragraph format 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Paragraph Format in Angular DOCX Editor

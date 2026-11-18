@@ -4,7 +4,7 @@ title: From One Drive in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Load and display PDF files stored in OneDrive in the JavaScript (ES5) PDF Viewer using a server-backed web service for authentication.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Open PDF from OneDrive in JavaScript (ES5) PDF Viewer

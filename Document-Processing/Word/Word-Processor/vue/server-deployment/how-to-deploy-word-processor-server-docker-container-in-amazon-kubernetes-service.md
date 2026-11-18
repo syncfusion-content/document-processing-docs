@@ -5,7 +5,7 @@ description: Deploy the Syncfusion® Vue DOCX Editor Docker image to Amazon Kube
 control: How to deploy word processor server docker container in amazon kubernetes service 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 # How to Deploy Vue DOCX Editor Docker Image on Amazon Kubernetes
 

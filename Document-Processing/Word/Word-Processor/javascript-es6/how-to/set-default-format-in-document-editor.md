@@ -5,7 +5,7 @@ description: Set default character, paragraph, and section formatting in Syncfus
 platform: document-processing
 control: Set the Default Format in the DOCX Editor
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Set Default Format in TypeScript DOCX Editor

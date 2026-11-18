@@ -3,7 +3,7 @@ title: Pivot Table Grouping in .NET Excel Library | Syncfusion
 description: Group a pivot table in an Excel document programmatically using the Syncfusion .NET Excel (XlsIO) Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Pivot Table Grouping in .NET Excel Library

@@ -3,7 +3,7 @@ title: Create PowerPoint document in Blazor | PowerPoint | Syncfusion
 description: A .NET Core PowerPoint library to create, read, and edit PowerPoint files in Blazor applications. Supports text, shapes, charts, tables and combine PowerPoints.
 platform: document-processing
 control: PowerPoint
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Create PowerPoint Document in Blazor

@@ -4,7 +4,7 @@ title: Filtering in TypeScript Spreadsheet | Syncfusion
 description: Filtering in TypeScript Spreadsheet enables users to display specific data based on criteria, making datasets easier to analyze and manage.
 platform: document-processing
 control: Filter
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Filtering in TypeScript Spreadsheet 

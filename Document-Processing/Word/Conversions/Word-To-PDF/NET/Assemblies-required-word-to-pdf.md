@@ -3,7 +3,7 @@ title: Assemblies required to convert Word to PDF in .NET Word | Syncfusion
 description: Describe the assemblies required to convert Word documents to PDF using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Assemblies required to convert Word to PDF in .NET Word
 

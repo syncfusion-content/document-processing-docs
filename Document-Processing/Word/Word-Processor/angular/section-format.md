@@ -5,7 +5,7 @@ description: The section format feature in Angular DOCX Editor enables users to 
 platform: document-processing
 control: Section format
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Section Format in Angular DOCX Editor

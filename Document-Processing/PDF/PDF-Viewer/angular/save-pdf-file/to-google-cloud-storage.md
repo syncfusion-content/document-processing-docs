@@ -5,7 +5,7 @@ description: Save PDF files from the Angular PDF Viewer to Google Cloud Storage 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Save PDF Files to Google Cloud Storage in Angular PDF Viewer

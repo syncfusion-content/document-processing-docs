@@ -5,7 +5,7 @@ description: Use the extractText method in the Angular PDF Viewer to extract tex
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Use the ExtractText Method in Angular PDF Viewer

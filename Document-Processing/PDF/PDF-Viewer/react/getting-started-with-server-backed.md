@@ -5,7 +5,7 @@ description: Get started with the Syncfusion React PDF Viewer in server-backed m
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with Server-Backed React PDF Viewer

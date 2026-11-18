@@ -4,7 +4,7 @@ title: Illustrations in ASP.NET Core Spreadsheet | Syncfusion
 description: Learn about illustrations in the Syncfusion ASP.NET Core Spreadsheet control, including images, shapes, and visual elements in worksheets.
 platform: document-processing
 control: Illustrations
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

@@ -5,7 +5,7 @@ description: Learn about the frequently asked questions in how to section of Syn
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # About how to section of Syncfusion JavaScript (ES6) PDF Viewer

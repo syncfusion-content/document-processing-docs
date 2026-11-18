@@ -3,7 +3,7 @@ title: How to Get Applied Cell Colors in .NET Excel Library | Syncfusion
 description: Get the RGB color value for the applied cell color in an Excel document using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to get RGB cell colors in .NET Excel Library

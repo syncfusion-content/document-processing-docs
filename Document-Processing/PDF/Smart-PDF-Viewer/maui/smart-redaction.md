@@ -5,7 +5,7 @@ description: Explore how to intelligently redact sensitive information using AI-
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
-keywords: .net maui smart pdf viewer, smart redaction maui, ai redaction, pii detection, pdf redact maui
+keywords: .net maui smart pdf viewer, smart redaction maui, ai redaction, pii detection, pdf redact mauitocname: Document-Processing-SDKs-toc
 ---
 
 # Smart Redaction in .NET MAUI Smart PDF Viewer

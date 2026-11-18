@@ -3,7 +3,7 @@ title: Pivot Table Expand Buttons in .NET Excel Library | Syncfusion
 description: PivotTable expand buttons describes whether expand controls are preserved when Excel documents are converted to PDF.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Pivot Table Expand Buttons in .NET Excel Library

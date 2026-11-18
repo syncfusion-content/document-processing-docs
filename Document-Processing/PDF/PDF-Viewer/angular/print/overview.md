@@ -5,7 +5,7 @@ description: Learn about introduction of the Syncfusion Angular PDF Viewer Print
 platform: document-processing
 control: Print
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 

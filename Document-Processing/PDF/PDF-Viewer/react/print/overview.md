@@ -5,7 +5,7 @@ description: Learn about introduction of the Syncfusion React PDF Viewer Print s
 platform: document-processing
 control: Print
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion React PDF Viewer Print

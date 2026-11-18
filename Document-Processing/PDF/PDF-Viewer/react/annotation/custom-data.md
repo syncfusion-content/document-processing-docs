@@ -5,7 +5,7 @@ description: Attach custom metadata to annotations in the React PDF Viewer and r
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Custom Data in Annotations in React PDF Viewer

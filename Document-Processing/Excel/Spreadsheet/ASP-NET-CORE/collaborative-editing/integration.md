@@ -4,7 +4,7 @@ title: ASP.NET Core SpreadsheetEditor Collaboration Integration | Syncfusion
 description: Learn how to integrate real-time collaborative editing into the Syncfusion ASP.NET Core SpreadsheetEditor application.
 control: Collaborative Editing
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Collaborative editing integration in ASP.NET Core SpreadsheetEditor

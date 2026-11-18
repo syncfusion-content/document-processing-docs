@@ -4,7 +4,7 @@ title: Sorting in React Spreadsheet | Syncfusion
 description: Learn about sorting in the Syncfusion React Spreadsheet component, including ascending, descending, and custom sorting options.
 control: Sort 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Sort in React Spreadsheet

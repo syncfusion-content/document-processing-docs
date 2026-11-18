@@ -5,7 +5,7 @@ description: Modules in React DOCX Editor enable selective injection of editing,
 control: Feature module 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Feature Modules in React DOCX Editor

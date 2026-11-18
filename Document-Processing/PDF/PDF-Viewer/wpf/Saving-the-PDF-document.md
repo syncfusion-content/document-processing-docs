@@ -4,7 +4,7 @@ title: Saving PDF Files in WPF Pdf Viewer control | Syncfusion
 description: Save and persist PDF file modifications in Syncfusion WPF PDF Viewer using Save and Save As options. Learn programmatic saving techniques.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Saving PDF Files in WPF Pdf Viewer

@@ -3,7 +3,7 @@ title: Open and save PowerPoint in Microsoft Azure | Syncfusion
 description: Open and save PowerPoint presentations in Azure services with the .NET PowerPoint library, without Microsoft PowerPoint or interop.
 platform: document-processing
 control: PowerPoint
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Open and save PowerPoint document in Azure

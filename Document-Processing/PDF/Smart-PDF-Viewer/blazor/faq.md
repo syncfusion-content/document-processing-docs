@@ -4,7 +4,7 @@ title: FAQ Section in Blazor Smart PDF Viewer | Syncfusion
 description: Explore frequently asked questions about the Blazor Smart PDF Viewer, including custom AI service token usage and script integration guidance.
 platform: document-processing
 control: SfSmartPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Frequently Asked Questions Section in Blazor Smart PDF Viewer

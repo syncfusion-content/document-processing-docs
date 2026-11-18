@@ -3,7 +3,7 @@ title: Editing Open Excel Files in .NET Excel Library | Syncfusion
 description: Open workbook editing explains whether the Syncfusion .NET Excel Library can edit an Excel document opened in Microsoft Excel.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Editing Open Excel Files in .NET Excel Library

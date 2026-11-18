@@ -3,7 +3,7 @@ title: Tables in .NET Markdown library | Syncfusion
 description: Learn how to create, format, and customize tables for presenting structured data in Markdown documents
 platform: document-processing
 control: Markdown
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Tables in .NET Markdown Library

@@ -5,7 +5,7 @@ description: Load PDF files in the Vue PDF Viewer from URLs, Base64 strings, dat
 control: Open PDF files
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Open PDF Files in Vue PDF Viewer

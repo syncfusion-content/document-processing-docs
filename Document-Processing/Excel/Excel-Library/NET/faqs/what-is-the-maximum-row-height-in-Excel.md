@@ -3,7 +3,7 @@ title: Row Height and Text Overflow in .NET Excel Library | Syncfusion
 description: Maximum row height describes Excel's 409-point row height limit and how Syncfusion .NET Excel Library enforces it.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Maximum Row Height in .NET Excel Library

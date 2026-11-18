@@ -5,7 +5,7 @@ description: Find text and add redaction annotations programmatically in the Rea
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Search and Redact Text in React PDF Viewer

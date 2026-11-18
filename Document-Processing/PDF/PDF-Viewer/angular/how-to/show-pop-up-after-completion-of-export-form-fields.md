@@ -5,7 +5,7 @@ description: Show a confirmation pop-up in the Angular PDF Viewer after exportin
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Show a Pop-Up After Exporting Form Fields in Angular PDF Viewer

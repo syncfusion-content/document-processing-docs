@@ -5,7 +5,7 @@ description: Convert PDF Library bounds to PDF Viewer bounds when exporting anno
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Convert PDF Library Bounds to PDF Viewer Bounds in JavaScript

@@ -4,7 +4,7 @@ title: Performance Best Practices in React Spreadsheet | Syncfusion
 description: Learn about performance best practices in the Syncfusion React Spreadsheet component to optimize rendering and data processing.
 platform: document-processing
 control: Performance
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Performance Best Practices in React Spreadsheet

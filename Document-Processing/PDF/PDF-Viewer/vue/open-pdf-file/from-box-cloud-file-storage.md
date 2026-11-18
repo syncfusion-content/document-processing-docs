@@ -5,7 +5,7 @@ description: Load and display PDF files stored in Box cloud storage in the Vue P
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Open PDF from Box Cloud Storage in Vue PDF Viewer

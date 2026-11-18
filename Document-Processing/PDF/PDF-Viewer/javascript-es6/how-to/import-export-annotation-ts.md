@@ -4,7 +4,7 @@ title: How to Import and Export Annotations in JavaScript (ES6) | Syncfusion
 description: Import and export annotations in the JavaScript (ES6) PDF Viewer as JavaScript objects, JSON strings, or XFDF for backup, sharing, and migration.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Import and Export Annotations in JavaScript (ES6) PDF Viewer

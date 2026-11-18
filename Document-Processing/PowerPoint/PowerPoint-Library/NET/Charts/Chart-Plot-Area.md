@@ -3,7 +3,7 @@ title: Modify the Appearance of Plot Area | Syncfusion
 description: Learn how to modify the appearance of plot area in a chart in a PowerPoint using .NET PowerPoint library (Presentation) without Microsoft PowerPoint.
 platform: document-processing
 control: PowerPoint
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Chart Plot Area in PowerPoint

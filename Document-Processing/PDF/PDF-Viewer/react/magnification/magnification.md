@@ -5,7 +5,7 @@ description: Use zoom and fit modes in the React PDF Viewer to control the magni
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Magnification in React PDF Viewer

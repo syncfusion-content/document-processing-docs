@@ -4,7 +4,7 @@ description: This section describes how to work with the shapes and groupshape i
 platform: document-processing
 control: Word Library
 documentation: UG
-keywords: 
+keywords: tocname: Document-Processing-SDKs-toc
 ---
 # Document Shapes in Java Word
 

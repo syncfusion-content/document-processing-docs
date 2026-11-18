@@ -5,7 +5,7 @@ description: Security advisories in JavaScript DOCX Editor provide information a
 platform: document-processing
 control: Security advisories
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Security Advisories in JavaScript DOCX Editor

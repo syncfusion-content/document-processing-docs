@@ -4,7 +4,7 @@ title: MCP Server Setup in WPF PDF Viewer| Syncfusion
 description: Discover the MCP server’s advantages, installation requirements, and integration guidance for Syncfusion WPF PDF Viewer.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 # Syncfusion WPF PDF Viewer MCP Server
 

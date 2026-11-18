@@ -4,7 +4,7 @@ title: How to Customize Toolbar in Blazor DOCX Editor | Syncfusion
 description: Customize the toolbar in Syncfusion® Blazor DOCX Editor by adding, removing, showing, hiding, enabling, and disabling toolbar items.
 platform: document-processing
 control: DOCX Editor
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Customize Toolbar in Blazor DOCX Editor

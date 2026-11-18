@@ -5,7 +5,7 @@ description: Learn how to read and extract values from PDF form fields in the Bl
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Bookmark navigation in Blazor PDF Viewer

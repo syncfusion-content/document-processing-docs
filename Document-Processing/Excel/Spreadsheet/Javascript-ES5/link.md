@@ -4,7 +4,7 @@ title: Hyperlink in JavaScript Spreadsheet | Syncfusion
 description: Hyperlinks in JavaScript Spreadsheet allow users to insert and manage links for quick navigation to web pages, files, and worksheets.
 platform: document-processing
 control: Link
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Hyperlink in  JavaScript Spreadsheet 

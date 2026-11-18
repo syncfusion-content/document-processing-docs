@@ -4,7 +4,7 @@ title: Annotations in WPF Pdf Viewer | Syncfusion
 description: Discover the complete annotations feature in Syncfusion WPF PDF Viewer that supports ink, text markup, shapes, stamps, and sticky notes for PDF review.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Annotations in WPF Pdf Viewer

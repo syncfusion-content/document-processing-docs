@@ -3,7 +3,7 @@ title: Pivot Charts in .NET Excel Library | Syncfusion
 description: Pivot charts in Syncfusion .NET Excel Library describes how to create and work with pivot-based charts in Excel workbooks.
 platform: document-processing
 control: XlsIO
-documentation: UG 
+documentation: UG tocname: Document-Processing-SDKs-toc
 ---
 
 # Pivot Charts in .NET Excel Library

@@ -3,7 +3,7 @@ title: Excel to Image conversion in Blazor Server | Syncfusion
 description: Blazor Server Excel to Image section explains how to convert Excel files to images in Blazor Server using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Excel to Image Conversion in Blazor Server using Excel Library

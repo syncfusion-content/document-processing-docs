@@ -5,7 +5,7 @@ description: Learn about the vite angular in the Angular PDF Viewer and how it h
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Vite Angular in Angular PDF Viewer

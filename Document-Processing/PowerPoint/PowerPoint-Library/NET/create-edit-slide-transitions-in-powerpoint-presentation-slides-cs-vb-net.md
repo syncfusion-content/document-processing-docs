@@ -4,7 +4,7 @@ description: Add and customize slide transition effects in PowerPoint presentati
 platform: document-processing
 control: Syncfusion<sup>&reg;</sup> PowerPoint presentation
 documentation: 
-keywords: PowerPoint, slide, format-table, pptx, transitions
+keywords: PowerPoint, slide, format-table, pptx, transitionstocname: Document-Processing-SDKs-toc
 ---
 
 # Slide Transitions in .NET PowerPoint Presentation

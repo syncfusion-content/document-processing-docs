@@ -5,7 +5,7 @@ description: Learn here all about form designer and toolbar features of the Blaz
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Form Designer in Blazor PDF Viewer

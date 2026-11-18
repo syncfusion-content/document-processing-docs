@@ -4,7 +4,7 @@ title: ASP.NET Core PDF Viewer Toolbar Customization | Syncfusion
 description: Learn about introduction of the Syncfusion ASP.NET Core PDF Viewer Toolbar Customization section and the key capabilities it provides.
 control: PDF Viewer
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion ASP.NET Core PDF Viewer Toolbar Customization

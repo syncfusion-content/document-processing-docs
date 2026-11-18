@@ -5,7 +5,7 @@ description: History in React DOCX Editor tracks editing actions to enable undo 
 control: History 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # History in React DOCX Editor

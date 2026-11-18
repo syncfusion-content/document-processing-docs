@@ -5,7 +5,7 @@ description: Load and display PDF files stored in AWS S3 in the Angular PDF View
 platform: document-processing
 control: Open PDF files from AWS S3
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Open PDF from AWS S3 in Angular PDF Viewer

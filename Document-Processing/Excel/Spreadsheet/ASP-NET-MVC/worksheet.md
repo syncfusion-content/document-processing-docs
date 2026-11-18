@@ -4,7 +4,7 @@ title: Worksheet in ASP.NET MVC Spreadsheet | Syncfusion
 description: Learn about create, manage, and customize worksheets using  the Syncfusion ASP.NET MVC Spreadsheet component.
 platform: document-processing
 control: Worksheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

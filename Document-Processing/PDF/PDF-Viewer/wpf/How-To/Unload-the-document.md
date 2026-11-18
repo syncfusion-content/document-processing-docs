@@ -4,7 +4,7 @@ title: How to Unload the document in WPF Pdf Viewer | Syncfusion
 description: Unload PDF documents and dispose the PDF stream or file in Syncfusion WPF PDF Viewer using Unload API. 
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Unload the document in WPF Pdf Viewer

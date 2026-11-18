@@ -4,7 +4,7 @@ description: Subscribe to annotation events in the ASP.NET MVC PDF Viewer to rea
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Annotation Events in ASP.NET MVC PDF Viewer

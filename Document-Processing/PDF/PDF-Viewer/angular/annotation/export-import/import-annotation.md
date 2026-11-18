@@ -5,7 +5,7 @@ description: Import annotations into the Angular PDF Viewer in supported formats
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Import Annotations in Angular PDF Viewer

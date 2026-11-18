@@ -4,7 +4,7 @@ title: How to Prevent Scrolling in Blazor PDF Viewer  | Syncfusion
 description: Learn how to prevent scrolling and remove the vertical scrollbar in the Syncfusion Blazor PDF Viewer component for a cleaner viewing experience.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Prevent Scrolling in Blazor PDF Viewer

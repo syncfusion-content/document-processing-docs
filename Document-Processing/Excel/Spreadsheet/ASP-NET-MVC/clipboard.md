@@ -4,7 +4,7 @@ title: Clipboard in ASP.NET MVC Spreadsheet | Syncfusion
 description: Use clipboard operations in the Syncfusion ASP.NET MVC Spreadsheet control to cut, copy, and paste data efficiently across worksheets.
 platform: document-processing
 control: Clipboard
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

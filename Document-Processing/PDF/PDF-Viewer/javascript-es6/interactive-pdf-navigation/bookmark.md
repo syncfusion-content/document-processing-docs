@@ -5,7 +5,7 @@ description: Navigate PDF bookmarks in the JavaScript (ES6) PDF Viewer to jump q
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Bookmark Navigation in JavaScript (ES6) PDF Viewer

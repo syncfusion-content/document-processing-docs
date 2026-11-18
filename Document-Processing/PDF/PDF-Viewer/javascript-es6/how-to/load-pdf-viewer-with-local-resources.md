@@ -5,7 +5,7 @@ description: Configure the JavaScript (ES6) PDF Viewer to load PDF documents and
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Load the PDF Viewer with Local Resources in JavaScript (ES6)

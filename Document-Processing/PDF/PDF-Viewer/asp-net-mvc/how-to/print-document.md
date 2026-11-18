@@ -5,7 +5,7 @@ description: Print the loaded PDF in the ASP.NET MVC PDF Viewer from custom UI c
 platform: document-processing
 control: PDF Viewer
 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Print the PDF in ASP.NET MVC PDF Viewer

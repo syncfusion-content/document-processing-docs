@@ -4,7 +4,7 @@ title: Redaction UI interactions in Blazor PDF Viewer | Syncfusion
 description: Learn about UI interactions in Redaction annotation of the Blazor PDF Viewer component and more details.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Redaction UI interactions in Blazor PDF Viewer

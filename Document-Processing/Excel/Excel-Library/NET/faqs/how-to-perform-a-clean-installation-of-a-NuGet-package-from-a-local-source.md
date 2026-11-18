@@ -3,7 +3,7 @@ title: How to Install NuGet Packages for .NET Excel Library | Syncfusion
 description: Perform a clean installation of a NuGet package from a local source for Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to install NuGet packages for .NET Excel Library

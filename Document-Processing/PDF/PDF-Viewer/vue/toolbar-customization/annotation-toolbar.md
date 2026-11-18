@@ -5,7 +5,7 @@ description: Customize the annotation toolbar in the Vue PDF Viewer to show, hid
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Customize the Annotation Toolbar in Vue PDF Viewer

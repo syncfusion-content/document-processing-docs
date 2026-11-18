@@ -3,7 +3,7 @@ title: How to Set Hex Colors in .NET Excel Library | Syncfusion
 description: Apply a hex color to an Excel cell by converting a hex string to RGB and assigning it to CellStyle.Color property using Syncfusion .NET Excel library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to set hex color values in .NET Excel Library

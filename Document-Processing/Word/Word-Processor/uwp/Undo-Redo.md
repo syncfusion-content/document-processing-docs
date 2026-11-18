@@ -4,7 +4,7 @@ description: The undo redo feature in UWP DOCX Editor offers history preservatio
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: undo,redo,undo-redo,history,undocommand,redocommand,isundoenabled,canundostyle,editorsettings
+keywords: undo,redo,undo-redo,history,undocommand,redocommand,isundoenabled,canundostyle,editorsettingstocname: Document-Processing-SDKs-toc
 ---
 # Undo Redo in UWP DOCX Editor
 

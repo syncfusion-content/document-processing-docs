@@ -5,7 +5,7 @@ description: Learn how to customize the redaction toolbar in the Blazor PDF View
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Customize the Redaction Toolbar in Blazor PDF Viewer

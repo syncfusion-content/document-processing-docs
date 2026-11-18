@@ -3,7 +3,7 @@ title: Tagged PDF in .NET PDF Library | Syncfusion
 description: Learn how to create tagged PDF documents programmatically to comply with accessibility standards using the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Tagged PDF in .NET PDF Library

@@ -5,7 +5,7 @@ description: The UI Builder Skill with PDF Viewer enables developers to generate
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-keywords: WinForms UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skills
+keywords: WinForms UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skillstocname: Document-Processing-SDKs-toc
 ---
 
 # UI Builder Skill with PDF Viewer in WinForms PDF Viewer

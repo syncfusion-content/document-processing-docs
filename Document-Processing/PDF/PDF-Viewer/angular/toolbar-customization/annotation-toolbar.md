@@ -5,7 +5,7 @@ description: Customize the annotation toolbar in the Angular PDF Viewer to show,
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Customize the Annotation Toolbar in Angular PDF Viewer

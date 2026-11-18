@@ -5,7 +5,7 @@ description: Server-side export in React DOCX Editor allows documents to be proc
 control: Server-side export 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Server-side export in React DOCX Editor

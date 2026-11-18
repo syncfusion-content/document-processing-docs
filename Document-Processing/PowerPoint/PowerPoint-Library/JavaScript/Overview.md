@@ -3,7 +3,7 @@ title: About Syncfusion JavaScript PowerPoint Library | Syncfusion
 description: Learn about the Syncfusion® JavaScript PowerPoint Library for creating, reading, editing, and managing PowerPoint files.
 platform: document-processing
 control: PowerPoint
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion® JavaScript PowerPoint Library

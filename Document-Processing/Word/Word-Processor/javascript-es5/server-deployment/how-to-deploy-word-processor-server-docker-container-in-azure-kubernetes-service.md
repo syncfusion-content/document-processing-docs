@@ -5,7 +5,7 @@ description: Deploy the Syncfusion® JavaScript DOCX Editor Docker image to Azur
 platform: document-processing
 control: How to deploy word processor server docker container in azure kubernetes service 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 # How to Deploy JavaScript DOCX Editor Docker Image on AKS
 
@@ -79,7 +79,7 @@ spec:
         - containerPort: 80
         env:
         - name: SYNCFUSION_LICENSE_KEY
-          value: "YOUR_LICENSE_KEY"
+          value: "YOUR_LICENSE_KEY"tocname: Document-Processing-SDKs-toc
 ---
 apiVersion: v1
 kind: Service

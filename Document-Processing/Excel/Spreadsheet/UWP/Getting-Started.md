@@ -4,7 +4,7 @@ title: Getting Started with UWP Spreadsheet Control | Syncfusion®
 description: Learn how to get started with the Syncfusion UWP Spreadsheet control. Explore setup, workbook management, features, and customization options.
 platform: document-processing
 control: SfSpreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with UWP Spreadsheet 

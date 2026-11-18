@@ -5,7 +5,7 @@ description: Optimize SFDT files in Syncfusion® Angular DOCX Editor to reduce f
 control: Optimize the SFDT file
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Optimize SFDT Files in Angular DOCX Editor

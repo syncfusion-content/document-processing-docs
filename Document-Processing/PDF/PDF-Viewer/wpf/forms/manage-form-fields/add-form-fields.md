@@ -4,7 +4,7 @@ title: Add form fields in WPF PDF Viewer | Syncfusion
 description:  Add, modify, and remove form fields in Syncfusion WPF PDF Viewer programmatically. Learn form field management and programmatic control.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 # Add Form Field in WPF Pdf Viewer
 

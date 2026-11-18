@@ -4,7 +4,7 @@ description: The mini toolbar in WPF DOCX Editor offers built-in rich text forma
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: mini-toolbar,context-menu,formatting,floating-toolbar
+keywords: mini-toolbar,context-menu,formatting,floating-toolbartocname: Document-Processing-SDKs-toc
 ---
 # Mini Toolbar in WPF DOCX Editor
 

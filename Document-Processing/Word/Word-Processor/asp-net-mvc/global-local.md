@@ -4,7 +4,7 @@ title: Globalization and Localization in ASP.NET MVC DOCX Editor | Syncfusion
 description: Global localization in ASP.NET MVC DOCX Editor enables translating built-in UI text and dialogs to support multiple languages and cultures.
 platform: document-processing
 control: Global Local
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

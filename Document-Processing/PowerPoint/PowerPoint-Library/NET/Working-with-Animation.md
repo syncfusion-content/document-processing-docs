@@ -4,7 +4,7 @@ description: Learn here all about working with animations of PowerPoint Presenta
 platform: document-processing
 control: Essential<sup>&reg;</sup> Presentation
 documentation: UG
-keywords: PowerPoint animation, slide animation, shape animation, pptx animation
+keywords: PowerPoint animation, slide animation, shape animation, pptx animationtocname: Document-Processing-SDKs-toc
 ---
 # Working with Animations in PowerPoint Library
 

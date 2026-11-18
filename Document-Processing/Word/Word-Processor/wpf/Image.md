@@ -4,7 +4,7 @@ description: The image support in WPF DOCX Editor enables inserting, resizing, a
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: image,insert-picture,image-resizer,text-wrapping,image-position
+keywords: image,insert-picture,image-resizer,text-wrapping,image-positiontocname: Document-Processing-SDKs-toc
 ---
 # Images in WPF DOCX Editor
 

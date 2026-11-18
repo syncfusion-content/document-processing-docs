@@ -4,7 +4,7 @@ title: Excel Formulas in Flutter Excel Library | Syncfusion
 description: The Flutter Excel Library lets users perform calculations in Excel worksheet cells and update calculated results.
 platform: document-processing
 control: Excel
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Formulas in Flutter Excel Library

@@ -5,7 +5,7 @@ description: Enable print rotation in the Angular PDF Viewer so landscape docume
 platform: document-processing
 control: Print
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Enable Print Rotation in Angular PDF Viewer

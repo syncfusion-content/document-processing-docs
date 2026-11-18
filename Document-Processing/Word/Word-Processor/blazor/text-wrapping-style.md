@@ -4,7 +4,7 @@ title: Text Wrapping Style in Blazor DOCX Editor | Syncfusion
 description: Text wrapping styles in Blazor DOCX Editor preserve inline, square, behind text, and other wrapping modes during document rendering.
 platform: document-processing
 control: DOCX Editor
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Text Wrapping Style in Blazor DOCX Editor

@@ -4,7 +4,7 @@ title: Shapes in ASP.NET MVC DOCX Editor | Syncfusion
 description: The shapes feature in ASP.NET MVC DOCX Editor preserve shape elements, text boxes, resizing, positioning, and text wrapping for accurate document rendering.
 platform: document-processing
 control: Shapes
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

@@ -4,7 +4,7 @@ title: Images and illustrations in React Spreadsheet | Syncfusion
 description: Learn about images and illustrations in the Syncfusion React Spreadsheet component, including insertion, positioning, resizing, and selection.
 control: Spreadsheet
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Images and Illustrations in React Spreadsheet

@@ -3,7 +3,7 @@ title: Save PDF file in C# and VB.NET | Syncfusion
 description: Learn how to save PDF files to the file system or stream in C# and VB.NET using Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Save PDF file in C# and VB.NET
 

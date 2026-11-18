@@ -4,7 +4,7 @@ title: How to Show a Notification Dialog in ASP.NET MVC PDF | Syncfusion
 description: Show a notification dialog in the ASP.NET MVC PDF Viewer after a save, download, or print action completes so users see the result clearly.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Show a Notification Dialog in ASP.NET MVC PDF Viewer

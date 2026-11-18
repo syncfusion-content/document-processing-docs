@@ -3,7 +3,7 @@ title: LaTeX in .NET Word | Syncfusion
 description: Learn how to create mathematical equations in a Word document using LaTeX with the .NET Word library without Microsoft Word.
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # LaTeX Equation in .NET Word

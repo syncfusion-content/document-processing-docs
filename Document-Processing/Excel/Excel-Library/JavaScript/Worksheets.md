@@ -3,7 +3,7 @@ title: Worksheets in JavaScript Excel Library | Syncfusion
 description: Add, remove, move, rename, and configure worksheets in a workbook with the Syncfusion JavaScript Excel Library.
 platform: document-processing
 control: Excel
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Worksheets in JavaScript Excel

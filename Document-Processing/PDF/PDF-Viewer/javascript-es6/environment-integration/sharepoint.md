@@ -5,7 +5,7 @@ description: Learn how to deploy and integrate the Syncfusion PDF Viewer compone
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Deploy and Integrate TypeScript PDF Viewer in SharePoint Framework

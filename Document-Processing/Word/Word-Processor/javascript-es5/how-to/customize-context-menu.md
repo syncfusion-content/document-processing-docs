@@ -5,7 +5,7 @@ description: Customize the context menu in Syncfusion® JavaScript DOCX Editor b
 platform: document-processing
 control: Customize context menu 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Customize Context Menu in JavaScript DOCX Editor

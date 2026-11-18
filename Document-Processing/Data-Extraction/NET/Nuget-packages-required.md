@@ -4,7 +4,7 @@ description: Discover the NuGet packages required to integrate Smart Data Extrac
 platform: document-processing
 control: DataExtraction
 documentation: UG
-keywords: Assemblies
+keywords: Assembliestocname: Document-Processing-SDKs-toc
 ---
 
 # NuGet Packages required for .NET Smart Data Extractor

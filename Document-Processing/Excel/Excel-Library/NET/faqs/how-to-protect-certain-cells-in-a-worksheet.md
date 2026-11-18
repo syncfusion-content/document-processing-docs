@@ -3,7 +3,7 @@ title: How to Protect Cells in .NET Excel Library | Syncfusion
 description: Protect certain cells in an Excel worksheet using the Syncfusion .NET Excel Library with worksheet protection settings.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to protect cells in .NET Excel Library

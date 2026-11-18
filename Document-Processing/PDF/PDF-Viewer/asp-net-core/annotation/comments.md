@@ -5,7 +5,7 @@ description: Add, reply to, edit, set the status of, delete, and read comments a
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Comments in ASP.NET Core PDF Viewer

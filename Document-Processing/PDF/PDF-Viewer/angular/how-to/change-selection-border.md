@@ -5,7 +5,7 @@ description: Change the selection border color and thickness for annotations in 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Change the Selection Border in Angular PDF Viewer

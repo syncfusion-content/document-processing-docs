@@ -3,7 +3,7 @@ title: Select a Chunking Mode in .NET Document Library | Syncfusion
 description: Learn how to select an appropriate chunking mode for Excel, Word, PDF, PowerPoint, and Markdown documents using the Syncfusion® .NET Document Chunking Library.
 platform: document-processing
 control: Chunking
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Which Chunking Mode Should Be Selected?

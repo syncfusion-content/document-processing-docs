@@ -5,7 +5,7 @@ description: Handle import and export events in the React PDF Viewer to run cust
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Annotation Import and Export Events in React PDF Viewer

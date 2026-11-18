@@ -3,7 +3,7 @@ title: Why Are No Document Chunks Generated in .NET | Syncfusion
 description: Learn why a document may produce no chunks and how to handle an empty result using the Syncfusion® .NET Document Chunking Library.
 platform: document-processing
 control: Chunking
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Why Are No Chunks Generated for a Document?

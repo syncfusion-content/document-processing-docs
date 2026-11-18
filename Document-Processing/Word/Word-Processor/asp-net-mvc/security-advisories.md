@@ -4,7 +4,7 @@ title: Security Advisories in ASP.NET MVC DOCX Editor | Syncfusion
 description: Security advisories in ASP.NET MVC DOCX Editor provide information about vulnerability fixes and security updates to help maintain secure applications.
 control: Security Advisories
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Security Advisories in ASP.NET MVC DOCX Editor

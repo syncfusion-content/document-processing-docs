@@ -5,7 +5,7 @@ description: Learn how Active Viewport Rendering optimizes large-document zoomin
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Active Viewport Rendering in Vue PDF Viewer

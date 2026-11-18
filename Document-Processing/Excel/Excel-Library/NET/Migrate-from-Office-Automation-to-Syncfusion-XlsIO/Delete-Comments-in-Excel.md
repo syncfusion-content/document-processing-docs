@@ -3,7 +3,7 @@ title: Comment Deletion in .NET Excel Library | Syncfusion
 description: Deleting Excel comments programmatically explains how to remove comments from worksheets using Interop and Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Deleting Comments in .NET Excel Library

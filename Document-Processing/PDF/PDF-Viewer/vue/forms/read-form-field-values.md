@@ -5,7 +5,7 @@ description: Learn how to read and extract values from PDF form fields in the EJ
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Read and Extract PDF Form Field Values in Vue PDF Viewer

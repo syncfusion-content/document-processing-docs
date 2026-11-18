@@ -4,7 +4,7 @@ title: Headers and Footers in ASP.NET MVC DOCX Editor | Syncfusion
 description: Headers and footers in ASP.NET MVC DOCX Editor enable adding and customizing content at the top and bottom of document pages.
 platform: document-processing
 control: Header Footer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

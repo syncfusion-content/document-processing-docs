@@ -4,7 +4,7 @@ title: Undo redo in JavaScript Spreadsheet | Syncfusion
 description: Undo and redo in JavaScript Spreadsheet allow users to reverse or restore actions, helping manage changes efficiently.
 platform: document-processing
 control: Undo redo
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Undo redo in JavaScript Spreadsheet

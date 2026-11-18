@@ -5,7 +5,7 @@ description: Best practices for securely viewing PDF content in React apps using
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Secure PDF Viewing in React Apps

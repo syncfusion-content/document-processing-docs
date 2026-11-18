@@ -4,7 +4,7 @@ title: Editing in ASP.NET Core Spreadsheet | Syncfusion
 description: Learn about editing in the Syncfusion ASP.NET Core Spreadsheet control, including cell editing, updating data, and editing options.
 platform: document-processing
 control: Editing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

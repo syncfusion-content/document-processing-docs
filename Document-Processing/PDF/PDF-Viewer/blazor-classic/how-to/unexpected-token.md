@@ -4,7 +4,7 @@ title: Resolve the "Unexpected token T in JSON at position 0" | Syncfusion
 description: Learn here all about resolve the "Unexpected token T in JSON at position 0" error in the LINUX platform in Syncfusion Blazor PDF Viewer component and more.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Resolve the "Unexpected token T in JSON at position 0"

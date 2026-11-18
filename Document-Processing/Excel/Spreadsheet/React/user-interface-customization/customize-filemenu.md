@@ -4,7 +4,7 @@ title: Custom File Menu in React Spreadsheet | Syncfusion
 description: Learn about customizing the file menu in the Syncfusion React Spreadsheet component and more details.
 control: Spreadsheet
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Custom File Menu in React Spreadsheet

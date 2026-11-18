@@ -5,7 +5,7 @@ description: The accessibility support in Vue DOCX Editor ensures keyboard navig
 control: Accessibility 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Accessibility in Vue DOCX Editor component

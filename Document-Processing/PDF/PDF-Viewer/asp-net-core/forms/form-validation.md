@@ -4,7 +4,7 @@ title: Form Validation in ASP.NET Core PDF Viewer | Syncfusion
 description: Enable built-in PDF form field validation in the ASP.NET Core PDF Viewer and detect missing required fields while users complete a form.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Form Validation in ASP.NET Core PDF Viewer

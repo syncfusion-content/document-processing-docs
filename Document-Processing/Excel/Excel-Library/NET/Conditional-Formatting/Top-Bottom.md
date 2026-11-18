@@ -3,7 +3,7 @@ title: Top and Bottom Rules in .NET Excel Library | Syncfusion
 description: Advanced conditional formatting describes how Syncfusion .NET Excel Library applies top, bottom, average, and standard deviation rules.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Top and Bottom Rules in .NET Excel Library

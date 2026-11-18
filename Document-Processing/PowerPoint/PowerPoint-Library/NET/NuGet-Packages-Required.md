@@ -3,7 +3,7 @@ title: Required NuGet Packages in .NET PowerPoint Presentation | Syncfusion
 description: Learn about the NuGet packages required to use the Syncfusion® .NET PowerPoint Presentation library across platforms and frameworks.
 platform: document-processing
 control: PowerPoint
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Required NuGet Packages in .NET PowerPoint Presentation
 

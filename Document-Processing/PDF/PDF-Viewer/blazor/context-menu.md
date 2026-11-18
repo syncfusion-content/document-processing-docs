@@ -5,7 +5,7 @@ description: Learn how to customize the context menu in the Blazor PDF Viewer, i
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Context Menu in Blazor PDF Viewer

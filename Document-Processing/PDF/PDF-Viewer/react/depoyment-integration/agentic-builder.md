@@ -5,7 +5,7 @@ description: Create a React PDF Viewer project with the Agentic UI Builder, a gu
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Create a React PDF Viewer with Agentic UI Builder

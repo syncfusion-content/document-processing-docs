@@ -5,7 +5,7 @@ description: Configure hyperlink navigation in the JavaScript (ES5) PDF Viewer, 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Hyperlink Navigation in JavaScript (ES5) PDF Viewer

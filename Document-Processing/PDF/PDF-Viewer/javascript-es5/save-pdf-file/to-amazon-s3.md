@@ -5,7 +5,7 @@ description: Save PDF files from the JavaScript (ES5) PDF Viewer to AWS S3 using
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Save PDF Files to AWS S3 in JavaScript (ES5) PDF Viewer

@@ -5,7 +5,7 @@ description: Insert text, paragraphs, and rich-text content in the current curso
 control: Insert text in current position
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Insert Content at Cursor in React DOCX Editor

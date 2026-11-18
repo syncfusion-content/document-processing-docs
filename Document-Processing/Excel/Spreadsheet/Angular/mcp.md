@@ -5,7 +5,7 @@ description: MCP Server configuration in Angular Spreadsheet enables access to d
 control: Spreadsheet
 platform: document-processing
 documentation: ug
-keywords: Angular Agentic UI Builder, MCP Server, search docs, Spreadsheet SDK, Server Packages
+keywords: Angular Agentic UI Builder, MCP Server, search docs, Spreadsheet SDK, Server Packagestocname: Document-Processing-SDKs-toc
 ---
 
 # MCP Server Configuration in Angular Spreadsheet

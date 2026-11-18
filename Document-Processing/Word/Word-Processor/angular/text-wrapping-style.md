@@ -5,7 +5,7 @@ description: Text wrapping styles in Angular DOCX Editor preserve inline, square
 platform: document-processing
 control: Text wrapping style 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Text Wrapping Style in Angular DOCX Editor

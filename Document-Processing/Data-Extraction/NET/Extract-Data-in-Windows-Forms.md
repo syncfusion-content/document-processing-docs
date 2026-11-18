@@ -4,7 +4,7 @@ description: Learn how to get started with the Syncfusion Windows Forms Smart Da
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with Windows Forms Smart Data Extractor

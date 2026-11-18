@@ -3,7 +3,7 @@ title: Modify the Appearance of Axes in Chart | Syncfusion
 description: Learn how to modify the appearance of axes in a chart in a PowerPoint using .NET PowerPoint library (Presentation) without Microsoft PowerPoint.
 platform: document-processing
 control: PowerPoint
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Chart Axis in PowerPoint

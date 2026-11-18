@@ -5,7 +5,7 @@ description: Reorder, rotate, insert, delete, and save pages in the ASP.NET Core
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion ASP.NET Core PDF Viewer Organize Pages

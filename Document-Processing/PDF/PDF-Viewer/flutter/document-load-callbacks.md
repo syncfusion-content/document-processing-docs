@@ -4,7 +4,7 @@ title: Document load Callbacks in Flutter PDF Viewer | Syncfusion
 description: Document load callbacks in SfPdfViewer help track document loading status and handle successful or failed load events.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Document load Callbacks in Flutter PDF Viewer

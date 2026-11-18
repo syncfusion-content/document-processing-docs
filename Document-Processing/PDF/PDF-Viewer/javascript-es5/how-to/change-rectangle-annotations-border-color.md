@@ -5,7 +5,7 @@ description: Change the border color of rectangle annotations in the JavaScript 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Change the Rectangle Annotation Border Color in JavaScript

@@ -4,7 +4,7 @@ description: Create, edit, and remove connectors in PowerPoint slides using the 
 platform: document-processing
 control: Syncfusion<sup>&reg;</sup> PowerPoint presentation
 documentation: 
-keywords: PowerPoint, slide, connectors, pptx, shapes
+keywords: PowerPoint, slide, connectors, pptx, shapestocname: Document-Processing-SDKs-toc
 ---
 
 # Connectors in .NET PowerPoint Presentation

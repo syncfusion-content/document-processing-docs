@@ -4,7 +4,7 @@ title: How to Change Active Sheet on Import in React Spreadsheet | Syncfusion
 description: Learn how to change the active sheet while importing a workbook in the Syncfusion React Spreadsheet component.
 control: Spreadsheet 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Change Active Sheet While Importing a File in React Spreadsheet

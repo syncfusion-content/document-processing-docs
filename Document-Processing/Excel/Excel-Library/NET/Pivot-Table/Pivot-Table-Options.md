@@ -3,7 +3,7 @@ title: Pivot Table Options in .NET Excel Library | Syncfusion
 description: Use various pivot table options in an Excel document using the Syncfusion .NET Excel Library for pivot table settings.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Pivot Table Options in .NET Excel Library

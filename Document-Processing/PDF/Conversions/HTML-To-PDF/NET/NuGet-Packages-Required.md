@@ -3,7 +3,7 @@ title: NuGet Packages Required for HTML to PDF Converter | Syncfusion
 description: This section outlines the NuGet packages required to perform HTML to PDF conversion using the Syncfusion PDF Library across various platforms
 platform: document-processing
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # NuGet Packages Required for HTML to PDF Converter
 

@@ -5,7 +5,7 @@ description: Insert text, paragraphs, and rich text content at the current curso
 platform: document-processing
 control: Insert text or image in table programmatically
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Insert Text or Image in Table in Angular DOCX Editor

@@ -4,7 +4,7 @@ title: How to Change Document View in ASP.NET MVC DOCX Editor | Syncfusion
 description: Change the document view to web layout or print layout in Syncfusion® ASP.NET MVC DOCX Editor using layout type settings.
 platform: document-processing
 control: Change Document View
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

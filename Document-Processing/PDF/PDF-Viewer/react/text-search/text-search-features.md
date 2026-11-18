@@ -5,7 +5,7 @@ description: Configure text search features in the React PDF Viewer and run prog
 platform: document-processing
 control: Text search
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Text Search in React PDF Viewer

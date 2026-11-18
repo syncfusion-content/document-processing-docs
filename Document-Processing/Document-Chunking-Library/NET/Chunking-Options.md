@@ -3,7 +3,7 @@ title: Chunking Options in .NET Document Chunking Library | Syncfusion
 description: Learn how to configure maximum tokens, overlapping tokens, metadata, and citations using the Syncfusion® .NET Document Chunking Library.
 platform: document-processing
 control: Chunking
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Chunking Options in .NET Document Chunking Library

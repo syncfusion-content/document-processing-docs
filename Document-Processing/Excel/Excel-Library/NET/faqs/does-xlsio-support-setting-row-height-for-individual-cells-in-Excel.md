@@ -3,7 +3,7 @@ title: Individual Cell Row Height in .NET Excel Library | Syncfusion
 description: Individual cell row height explains whether Syncfusion .NET Excel Library can set row height for separate cells in an Excel worksheet.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Row Height Settings in .NET Excel Library

@@ -5,7 +5,7 @@ description: Restrict end users from downloading or printing PDFs displayed by t
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Restrict Download or Print in React PDF Viewer

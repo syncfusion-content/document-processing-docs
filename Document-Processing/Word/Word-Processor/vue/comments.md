@@ -5,7 +5,7 @@ description: The comments feature in Vue DOCX Editor enables users to add, revie
 control: Comments 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Comments in Vue DOCX Editor

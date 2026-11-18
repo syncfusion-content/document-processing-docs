@@ -5,7 +5,7 @@ description: Save PDF files from the Vue PDF Viewer to OneDrive using a server-b
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Save PDF Files to OneDrive in Vue PDF Viewer

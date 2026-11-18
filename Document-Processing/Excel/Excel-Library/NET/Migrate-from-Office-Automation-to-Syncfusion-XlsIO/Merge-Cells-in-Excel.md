@@ -3,7 +3,7 @@ title: Cell Merging in .NET Excel Library | Syncfusion
 description: Programmatically merge a range of Excel cells into a single cell using Interop and Syncfusion .NET Excel Library cell range handling.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Merging Cells in .NET Excel Library

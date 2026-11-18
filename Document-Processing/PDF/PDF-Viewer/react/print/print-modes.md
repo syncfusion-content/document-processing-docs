@@ -5,7 +5,7 @@ description: Configure print modes in the React PDF Viewer to control how PDF do
 platform: document-processing
 control: Print
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Print Modes in React PDF Viewer

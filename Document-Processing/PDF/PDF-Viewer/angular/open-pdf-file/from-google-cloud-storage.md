@@ -5,7 +5,7 @@ description: Load and display PDF files stored in Google Cloud Storage in the An
 platform: document-processing
 control: Open PDF files from Google Cloud Storage
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Open PDF from Google Cloud Storage in Angular PDF Viewer

@@ -4,7 +4,7 @@ title: Deploy Spreadsheet Server to Azure App Service using CLI | Syncfusion
 description: Learn how to deploy the Syncfusion Spreadsheet Server Docker image to Azure App Service using Azure CLI.
 control: How to deploy Spreadsheet Server Docker Image to Azure App Service using Azure CLI
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Deploy Spreadsheet Docker to Azure App Service using CLI

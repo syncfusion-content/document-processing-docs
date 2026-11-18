@@ -5,7 +5,7 @@ description: Retrieve the document ID in the React PDF Viewer to identify, track
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Retrieve the Document ID in React PDF Viewer

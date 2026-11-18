@@ -5,7 +5,7 @@ description: Learn about the overview of the Docker image for Syncfusion Essenti
 control: Word processor server docker image overview 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Docker Image of Syncfusion Vue DOCX Editor Control

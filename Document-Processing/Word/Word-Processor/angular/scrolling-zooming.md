@@ -5,7 +5,7 @@ description: The scrolling and zooming in Angular DOCX Editor enables smooth doc
 platform: document-processing
 control: Scrolling zooming
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Scrolling and Zooming in Angular DOCX Editor

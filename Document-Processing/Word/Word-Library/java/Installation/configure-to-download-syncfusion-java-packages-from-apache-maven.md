@@ -3,7 +3,7 @@ title: Download Syncfusion Java packages from Apache Maven | Syncfusion
 description: Learn how to convert a Word document to PDF, PDF/A, and PDF/UA using the .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: general
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Download Syncfusion Java packages from Apache Maven
 

@@ -5,7 +5,7 @@ description: Use the Ink Eraser tool in the React PDF Viewer to remove or correc
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Ink Eraser in React PDF Viewer

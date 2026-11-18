@@ -4,7 +4,7 @@ title: Charts and Visualizations in React Spreadsheet | Syncfusion
 description: Learn about charts and visualizations in the Syncfusion React Spreadsheet component, including chart creation, customization, and management.
 control: Spreadsheet
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Charts and Visualizations in React Spreadsheet

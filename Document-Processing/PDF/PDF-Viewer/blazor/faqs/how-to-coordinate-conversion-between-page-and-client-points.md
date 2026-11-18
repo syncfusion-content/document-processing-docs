@@ -4,7 +4,7 @@ title: How to Convert between page and client coordinates | Syncfusion
 description: Learn how to convert between page and client coordinates in the Blazor PDF Viewer using JavaScript interop helper functions.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Convert between page and client coordinates

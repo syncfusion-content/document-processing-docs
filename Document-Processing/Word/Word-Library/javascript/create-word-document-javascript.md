@@ -6,7 +6,7 @@ description: Learn how to get started with the Syncfusion JavaScript Word Librar
 platform: document-processing
 control: Word
 documentation: ug
-keywords: javascript create word, javascript generate docx, javascript word library, ej2 word javascript, cdn
+keywords: javascript create word, javascript generate docx, javascript word library, ej2 word javascript, cdntocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with JavaScript Word Library in JavaScript app

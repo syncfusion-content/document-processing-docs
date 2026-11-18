@@ -4,7 +4,7 @@ title: Feature List of ASP.NET MVC Spreadsheet | Syncfusion
 description: Explore the complete feature comparison and capabilities available in the Syncfusion ASP.NET MVC Spreadsheet.
 platform: document-processing
 control: Feature List
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

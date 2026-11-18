@@ -3,7 +3,7 @@ title: Compare Word Documents in .NET Word | Syncfusion
 description: Learn how to compare two Word documents in C# using .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Compare Word Documents in .NET Word

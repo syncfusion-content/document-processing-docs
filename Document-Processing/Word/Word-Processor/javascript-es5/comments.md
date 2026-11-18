@@ -5,7 +5,7 @@ description: The comments feature in JavaScript DOCX Editor enables users to add
 platform: document-processing
 control: Comments 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Comments in JavaScript DOCX Editor

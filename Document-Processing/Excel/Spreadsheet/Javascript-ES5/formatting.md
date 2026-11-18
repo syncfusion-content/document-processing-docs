@@ -4,7 +4,7 @@ title: Formatting in JavaScript Spreadsheet | Syncfusion
 description: Formatting in JavaScript Spreadsheet allows users to customize cell appearance, styles, and number formats for enhanced data presentation.
 platform: document-processing
 control: Formatting
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Formatting in JavaScript Spreadsheet 

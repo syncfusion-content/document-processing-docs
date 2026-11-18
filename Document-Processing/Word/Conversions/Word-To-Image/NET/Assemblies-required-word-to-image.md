@@ -3,7 +3,7 @@ title: Assemblies required to convert Word document to Image | Syncfusion
 description: Describe the assemblies required to convert Word documents to images using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Assemblies required to convert Word document to Image
 

@@ -5,7 +5,7 @@ description: Undo and redo annotation changes in the React PDF Viewer from the t
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Undo and Redo Annotations in React PDF Viewer

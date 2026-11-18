@@ -4,7 +4,7 @@ description: The comments feature in UWP DOCX Editor offers note or annotation s
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: comment,newcommentcommand,deletecommentcommand,showcommentscommand,review-pane,commentadding,editor-settings
+keywords: comment,newcommentcommand,deletecommentcommand,showcommentscommand,review-pane,commentadding,editor-settingstocname: Document-Processing-SDKs-toc
 ---
 # Comments in UWP DOCX Editor
 

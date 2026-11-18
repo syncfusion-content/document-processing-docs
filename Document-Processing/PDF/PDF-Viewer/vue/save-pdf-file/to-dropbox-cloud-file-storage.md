@@ -5,7 +5,7 @@ description: Save PDF files from the Vue PDF Viewer to Dropbox using standalone 
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Save PDF Files to Dropbox in Vue PDF Viewer

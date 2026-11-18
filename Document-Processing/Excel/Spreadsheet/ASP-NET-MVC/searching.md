@@ -4,7 +4,7 @@ title: Find and Replace in ASP.NET MVC Spreadsheet | Syncfusion
 description: Search and replace content efficiently using built-in find and replace functionality in the Syncfusion ASP.NET MVC Spreadsheet.
 platform: document-processing
 control: Searching
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

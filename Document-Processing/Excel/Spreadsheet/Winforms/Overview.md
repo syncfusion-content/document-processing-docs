@@ -4,7 +4,7 @@ title: About Syncfusion Windows Forms Spreadsheet Control | Syncfusion
 description: Learn about the introduction and overview of the Syncfusion Windows Forms Spreadsheet control and its key features for spreadsheet management.
 platform: document-processing
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion Windows Forms Spreadsheet Control

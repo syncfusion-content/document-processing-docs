@@ -4,7 +4,7 @@ title: Formatting in Vue Spreadsheet | Syncfusion
 description: Apply cell, text, number, and conditional formatting in the Syncfusion Vue Spreadsheet to improve data presentation.
 control: Formatting 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Formatting in Vue Spreadsheet

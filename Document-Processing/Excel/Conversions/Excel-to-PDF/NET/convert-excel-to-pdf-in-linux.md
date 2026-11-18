@@ -3,7 +3,7 @@ title: Excel to PDF conversion in Linux | Syncfusion
 description: Linux Excel to PDF section explains how to convert Excel documents to PDF in Linux without Microsoft Excel.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Excel to PDF Conversion in Linux using Excel Library
 

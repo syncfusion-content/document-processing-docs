@@ -4,7 +4,7 @@ title: Text and Cell Formatting in React Spreadsheet | Syncfusion
 description: Learn about text and cell formatting in the Syncfusion React Spreadsheet component to customize worksheet appearance and layout.
 control: Formatting
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Text and Cell Formatting in React Spreadsheet

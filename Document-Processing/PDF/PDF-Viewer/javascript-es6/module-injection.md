@@ -4,7 +4,7 @@ title: Module Injection in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Learn about the module injection in the JavaScript (ES6) PDF Viewer and how it helps users work with PDF documents more effectively.
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Module Injection in JavaScript (ES6) PDF Viewer
@@ -25,7 +25,7 @@ To customize the **TypeScript PDF Viewer** with specific features, you must impo
 - `TextSearch`: Text search
 - `FormFields`: Form field support
 - `FormDesigner`: Form field design and editing
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## Module injection
@@ -67,7 +67,7 @@ const pdfviewer: PdfViewer = new PdfViewer({
 pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## Minimal module injection example
@@ -88,7 +88,7 @@ const pdfviewer: PdfViewer = new PdfViewer({
 pdfviewer.appendTo('#PdfViewer');
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## Important notes

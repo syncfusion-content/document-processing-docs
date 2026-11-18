@@ -3,7 +3,7 @@ title: Move and Copy Options in .NET Excel Library | Syncfusion
 description: Use copy and move operations in Excel worksheets using the Syncfusion .NET Excel Library for workbook content handling.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Move and Copy Operations in .NET Excel Library

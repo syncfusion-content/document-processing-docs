@@ -5,7 +5,7 @@ description: Subscribe to print events in the React PDF Viewer to run custom log
 platform: document-processing
 control: Print
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Print Events in React PDF Viewer

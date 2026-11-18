@@ -4,7 +4,7 @@ description: Learn about AI-powered PDF Viewer for Blazor with summarization, Q&
 platform: document-processing
 control: general
 documentation: UG
-keywords: PDF Viewer, Smart PDF, AI PDF, Summarization, Redaction, Form Fill, Blazor, SDK
+keywords: PDF Viewer, Smart PDF, AI PDF, Summarization, Redaction, Form Fill, Blazor, SDKtocname: Document-Processing-SDKs-toc
 ---
 
 # About Smart PDF Viewer Component

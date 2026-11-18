@@ -5,7 +5,7 @@ description: Migrate an existing ASP.NET MVC PDF Viewer deployment from server-b
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Migrate from Server-Backed to Standalone ASP.NET MVC PDF Viewer

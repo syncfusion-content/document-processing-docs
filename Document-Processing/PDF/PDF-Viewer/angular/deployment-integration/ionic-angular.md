@@ -5,7 +5,7 @@ description: Learn about the ionic angular in the Angular PDF Viewer and how it 
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Ionic Angular in Angular PDF Viewer

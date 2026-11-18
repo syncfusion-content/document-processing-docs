@@ -5,7 +5,7 @@ description: Configure hyperlink navigation in the React PDF Viewer, including h
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Hyperlink Navigation in React PDF Viewer

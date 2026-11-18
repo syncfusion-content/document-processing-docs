@@ -4,7 +4,7 @@ title: Excel Logical Functions in Flutter Excel Library | Syncfusion
 description: The Flutter Excel Library lets users evaluate conditions in worksheet cells and return logical results.
 platform: document-processing
 control: Excel
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Logical Function Formulas in Flutter Excel Library

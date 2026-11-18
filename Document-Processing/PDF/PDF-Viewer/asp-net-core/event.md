@@ -3,7 +3,7 @@ title: Event in ASP.NET Core PDF Viewer | Syncfusion
 description: A complete list of events in the ASP.NET Core PDF Viewer, with descriptions, arguments, and examples to integrate custom logic into PDF interactions.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Events in ASP.NET Core PDF Viewer

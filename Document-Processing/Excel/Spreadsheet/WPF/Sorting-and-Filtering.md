@@ -4,7 +4,7 @@ title: Sorting and Filtering in WPF Spreadsheet control | Syncfusion®
 description: Sort and filter worksheet data in the WPF Spreadsheet control to quickly organize, analyze, and display relevant information.
 platform: document-processing
 control: SfSpreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Sorting and Filtering in WPF Spreadsheet

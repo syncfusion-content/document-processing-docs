@@ -5,7 +5,7 @@ description: Add custom headers to PDF Viewer AJAX requests in the Angular PDF V
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Add Headers to AJAX Requests in Angular PDF Viewer

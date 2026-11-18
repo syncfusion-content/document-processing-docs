@@ -4,7 +4,7 @@ description: The shapes in WPF DOCX Editor offer preservation support for text b
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: shapes, text-box
+keywords: shapes, text-boxtocname: Document-Processing-SDKs-toc
 ---
 # Shapes in WPF DOCX Editor
 Shapes are drawing objects that include a text box, rectangles, lines, curves, circles, etc. It can be preset or custom geometry. At present, [WPF DOCX Editor](https://www.syncfusion.com/docx-editor-sdk/wpf-docx-editor) does not have support to insert shapes. however, if the document contains a shape while importing, it will be preserved properly.

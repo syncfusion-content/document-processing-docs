@@ -5,7 +5,7 @@ description: Customize the toolbar in Syncfusion® JavaScript DOCX Editor by add
 platform: document-processing
 control: Customize tool bar 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Customize Toolbar in JavaScript DOCX Editor

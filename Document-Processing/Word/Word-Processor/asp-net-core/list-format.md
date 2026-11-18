@@ -4,7 +4,7 @@ title: List Format in ASP.NET Core DOCX Editor | Syncfusion
 description: The list format feature in ASP.NET Core DOCX Editor enables users to create and customize bulleted and numbered lists for organized document content.
 platform: document-processing
 control: List Format
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

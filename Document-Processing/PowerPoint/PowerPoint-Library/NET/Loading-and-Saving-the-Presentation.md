@@ -3,7 +3,7 @@ title: Loading and Saving in .NET PowerPoint Presentation | Syncfusion
 description: Learn how to load, save, and modify PowerPoint presentations using the Syncfusion® .NET PowerPoint Presentation library.
 platform: document-processing
 control: Presentation
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Loading and Saving in .NET PowerPoint Presentation
 

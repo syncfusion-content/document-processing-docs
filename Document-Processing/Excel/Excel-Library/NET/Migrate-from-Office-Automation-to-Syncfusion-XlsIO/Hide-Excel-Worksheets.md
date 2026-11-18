@@ -3,7 +3,7 @@ title: Worksheet Hiding in .NET Excel Library | Syncfusion
 description: Programmatically hide Excel worksheets in a workbook using Interop and Syncfusion .NET Excel Library with worksheet visibility options.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Hiding Worksheets in .NET Excel Library

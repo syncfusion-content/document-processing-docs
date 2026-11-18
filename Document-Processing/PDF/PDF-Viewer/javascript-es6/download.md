@@ -5,7 +5,7 @@ description: Enable, disable, and programmatically trigger PDF downloads in the 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 # Download in JavaScript (ES6) PDF Viewer
 

@@ -5,7 +5,7 @@ description: Global localization in Angular DOCX Editor enables translating buil
 platform: document-processing
 control: Global local
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Globalization and Localization in Angular DOCX Editor

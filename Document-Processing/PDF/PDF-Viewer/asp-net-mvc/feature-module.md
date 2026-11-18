@@ -4,7 +4,7 @@ title: Feature Module in ASP.NET MVC PDF Viewer | Syncfusion
 description: Inject feature modules into the ASP.NET MVC PDF Viewer to enable only the toolbar, search, forms, annotations, and printing capabilities you need.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

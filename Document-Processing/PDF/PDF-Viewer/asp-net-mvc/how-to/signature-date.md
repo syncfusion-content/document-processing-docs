@@ -5,7 +5,7 @@ description: Display or configure the date that appears with a handwritten signa
 platform: document-processing
 control: PDF Viewer
 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Configure the Signature Date in ASP.NET MVC PDF Viewer

@@ -3,7 +3,7 @@ title: Internal PDF Links in .NET Excel Library | Syncfusion
 description: Internal links in conversion explains whether Syncfusion .NET Excel Library preserves internal links during Excel to PDF conversion.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Internal Links in Excel to PDF in .NET Excel Library

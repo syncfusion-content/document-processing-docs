@@ -4,7 +4,7 @@ title: Clipboard in React Spreadsheet | Syncfusion
 description: Learn about clipboard operations in the Syncfusion React Spreadsheet component, including copy, cut, and paste actions.
 control: Clipboard 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Clipboard in React Spreadsheet

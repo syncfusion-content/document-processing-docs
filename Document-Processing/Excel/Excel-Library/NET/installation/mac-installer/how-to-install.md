@@ -4,7 +4,7 @@ title: How to Install Mac Installer in .NET Excel Library | Syncfusion
 description: Syncfusion Excel Mac installer installation section explains how to install the Mac installer after downloading it from the Syncfusion website.
 platform: document-processing
 control: Installation and Deployment
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to install Mac installer in .NET Excel Library

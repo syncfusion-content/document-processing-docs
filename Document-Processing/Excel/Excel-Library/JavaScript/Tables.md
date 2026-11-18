@@ -3,7 +3,7 @@ title: Excel Tables in JavaScript Excel Library | Syncfusion
 description: Create and manage Excel tables, styles, columns, and totals rows with the Syncfusion JavaScript Excel Library.
 platform: document-processing
 control: Excel
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Tables in JavaScript Excel

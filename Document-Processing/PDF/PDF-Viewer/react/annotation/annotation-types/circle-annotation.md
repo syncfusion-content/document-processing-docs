@@ -5,7 +5,7 @@ description: Enable, apply, customize, and manage Circle annotations in the Reac
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Circle Annotation in React PDF Viewer

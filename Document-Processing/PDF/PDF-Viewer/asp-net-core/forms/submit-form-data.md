@@ -5,7 +5,7 @@ description: Submit filled PDF form data from the ASP.NET Core PDF Viewer to a b
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Submit Form Data to a Server in ASP.NET Core PDF Viewer

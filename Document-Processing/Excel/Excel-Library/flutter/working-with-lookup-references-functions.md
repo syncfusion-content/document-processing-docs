@@ -4,7 +4,7 @@ title: Excel Lookup Functions in Flutter Excel Library | Syncfusion
 description: The Flutter Excel Library lets users find and retrieve worksheet values with lookup and reference formulas.
 platform: document-processing
 control: Excel
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Lookup and Reference Formulas in Flutter Excel Library

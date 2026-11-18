@@ -3,7 +3,7 @@ title: How to Merge Cells in .NET Excel Library | Syncfusion
 description: Merge a range using the Syncfusion .NET Excel Library while keeping the top-left cell value and applying its formatting.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to merge cells with formatting in .NET Excel Library

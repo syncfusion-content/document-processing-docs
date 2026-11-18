@@ -5,7 +5,7 @@ description: Enable and use magnification in the Vue PDF Viewer, including Zoom 
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Magnification in Vue PDF Viewer

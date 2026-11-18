@@ -5,7 +5,7 @@ description: Learn about the shape annotation in the Vue PDF Viewer and how it h
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Shape Annotation in Vue PDF Viewer

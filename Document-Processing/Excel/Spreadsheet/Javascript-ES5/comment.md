@@ -4,7 +4,7 @@ title: Comments in JavaScript Spreadsheet | Syncfusion
 description: Comments in JavaScript Spreadsheet allow users to add notes to cells, making it easier to provide context, feedback, and annotations.
 platform: document-processing
 control: Comment
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Comments in JavaScript Spreadsheet 

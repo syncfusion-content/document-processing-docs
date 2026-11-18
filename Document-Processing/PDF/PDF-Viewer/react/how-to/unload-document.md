@@ -5,7 +5,7 @@ description: Unload the current document in the React PDF Viewer to free resourc
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Unload a Document in React PDF Viewer

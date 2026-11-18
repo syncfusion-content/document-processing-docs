@@ -5,7 +5,7 @@ description: The table format feature in React DOCX Editor enables customizing c
 control: Table format 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Table format in React DOCX Editor

@@ -5,7 +5,7 @@ description: Configure the minimum and maximum zoom levels in the Angular PDF Vi
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Configure MinZoom and MaxZoom in Angular PDF Viewer

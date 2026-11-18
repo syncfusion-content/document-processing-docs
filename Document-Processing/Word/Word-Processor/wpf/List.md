@@ -4,7 +4,7 @@ description: List in WPF DOCX Editor offers single-level and multilevel list sup
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: list,numbered-list,bulleted-list,multilevel-list,list-format
+keywords: list,numbered-list,bulleted-list,multilevel-list,list-formattocname: Document-Processing-SDKs-toc
 ---
 # List in WPF DOCX Editor
 

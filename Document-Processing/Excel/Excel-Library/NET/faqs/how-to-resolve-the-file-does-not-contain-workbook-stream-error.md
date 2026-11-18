@@ -3,7 +3,7 @@ title: How to Resolve Workbook Stream Errors in .NET Excel | Syncfusion
 description: Resolve the file does not contain workbook stream error when opening Excel files using Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to resolve workbook stream errors in .NET Excel Library

@@ -5,7 +5,7 @@ description: Intercept and control file downloads in the Vue PDF Viewer using th
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Control File Downloads in Vue PDF Viewer

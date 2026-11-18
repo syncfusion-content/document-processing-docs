@@ -3,7 +3,7 @@ title: Mathematical Equation in Java Word | Syncfusion
 description: This section illustrates about create, modify and remove mathematical equation in Word document without MS Word or Office interop
 platform: document-processing
 control: Word Library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Mathematical Equation in Java Word
 

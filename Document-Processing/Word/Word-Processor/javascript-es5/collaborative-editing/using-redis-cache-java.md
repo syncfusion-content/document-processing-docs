@@ -5,7 +5,7 @@ description: The collaborative editing feature in JavaScript DOCX Editor support
 platform: document-processing
 control: Collaborative Editing Java
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Collaborative Editing in JavaScript DOCX Editor with Redis in Java

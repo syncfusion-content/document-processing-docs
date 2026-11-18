@@ -4,7 +4,7 @@ title: Styles in Angular Spreadsheet| Syncfusion
 description: Styles in Angular Spreadsheet enable users to customize cell appearance with fonts, colors, borders, and formatting options.
 platform: document-processing
 control: Styles
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Styles in Angular Spreadsheet 

@@ -5,7 +5,7 @@ description: Learn about the measurement annotation in the Angular PDF Viewer an
 platform: document-processing
 control: Measurement annotation
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Measurement Annotation in Angular PDF Viewer

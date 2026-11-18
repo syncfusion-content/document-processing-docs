@@ -5,7 +5,7 @@ description: Open password-protected PDF files in the ASP.NET Core PDF Viewer by
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Load Password-Protected PDF in ASP.NET Core PDF Viewer

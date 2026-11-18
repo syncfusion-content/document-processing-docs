@@ -5,7 +5,7 @@ description: Change the default cursor color in Syncfusion® JavaScript DOCX Edi
 platform: document-processing
 control: Change the cursor color in DOCX Editor 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Change Cursor Color in JavaScript DOCX Editor

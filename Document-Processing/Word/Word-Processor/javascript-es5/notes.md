@@ -5,7 +5,7 @@ description: The footnote and endnote support in JavaScript DOCX Editor enables 
 platform: document-processing
 control: Notes 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Footnotes and Endnotes in JavaScript DOCX Editor

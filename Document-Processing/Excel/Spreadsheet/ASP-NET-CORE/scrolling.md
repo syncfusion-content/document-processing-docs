@@ -4,7 +4,7 @@ title: Scrolling in ASP.NET Core Spreadsheet | Syncfusion
 description: Learn about scrolling in the Syncfusion ASP.NET Core Spreadsheet control, including horizontal and vertical navigation across worksheets.
 platform: document-processing
 control: Scrolling
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

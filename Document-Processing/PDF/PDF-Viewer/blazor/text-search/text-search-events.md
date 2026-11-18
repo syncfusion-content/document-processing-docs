@@ -5,7 +5,7 @@ description: Learn how to handle text search events, and run programmatic search
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Text Search Events in Blazor PDF Viewer

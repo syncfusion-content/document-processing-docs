@@ -3,7 +3,7 @@ title: How to Handle Spaces in .NET Excel Library | Syncfusion
 description: Handle leading and trailing spaces explains how to use spaces in Excel cell values during calculation and display using the Syncfusion .NET Excel Library.
 platform: document-processing 
 control: XlsIO 
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to handle spaces in cell values in .NET Excel Library

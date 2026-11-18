@@ -3,7 +3,7 @@ title: How to Resolve LibSkiaSharp Errors in .NET Excel Library | Syncfusion
 description: Resolve the LibSkiaSharp not found exception while using the Syncfusion .NET Excel Library for Excel conversion.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to resolve LibSkiaSharp exceptions in .NET Excel Library

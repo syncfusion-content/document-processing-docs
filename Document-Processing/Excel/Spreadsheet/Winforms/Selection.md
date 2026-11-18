@@ -4,7 +4,7 @@ title: Selection in Windows Forms Spreadsheet control | Syncfusion®
 description: Select cells, rows, columns, and ranges in Windows Forms Spreadsheet to work with worksheet content and range-based actions.
 platform: document-processing
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Selection in Windows Forms Spreadsheet

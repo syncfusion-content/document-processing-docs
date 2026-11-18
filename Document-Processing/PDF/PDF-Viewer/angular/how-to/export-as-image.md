@@ -5,7 +5,7 @@ description: Export pages as Base64-encoded images from the Angular PDF Viewer u
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Export Pages as Images in Angular PDF Viewer

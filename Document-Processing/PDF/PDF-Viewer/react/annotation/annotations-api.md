@@ -5,7 +5,7 @@ description: Use the annotations API in the React PDF Viewer to read, add, updat
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Annotations API in React PDF Viewer
@@ -69,7 +69,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## annotationDrawingOptions
@@ -107,7 +107,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## annotationSelectorSettings
@@ -156,7 +156,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## annotationSettings
@@ -204,7 +204,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## areaSettings
@@ -266,7 +266,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## arrowSettings
@@ -331,7 +331,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## circleSettings
@@ -393,7 +393,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## customStamp
@@ -425,7 +425,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## customStampSettings
@@ -460,7 +460,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## distanceSettings
@@ -504,7 +504,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableAnnotation
@@ -534,7 +534,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableAnnotationToolbar
@@ -564,7 +564,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableFreeText
@@ -594,7 +594,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableHandwrittenSignature
@@ -624,7 +624,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableInkAnnotation
@@ -654,7 +654,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableMeasureAnnotation
@@ -684,7 +684,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableMultiPageAnnotation
@@ -714,7 +714,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableShapeAnnotation
@@ -744,7 +744,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableShapeLabel
@@ -774,7 +774,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableStampAnnotations
@@ -804,7 +804,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableStickyNotesAnnotation
@@ -834,7 +834,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableTextMarkupAnnotation
@@ -864,7 +864,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## enableTextMarkupResizer
@@ -894,7 +894,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## exportAnnotationFileName
@@ -924,7 +924,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## freeTextSettings
@@ -975,7 +975,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## handWrittenSignatureSettings
@@ -1037,7 +1037,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## highlightSettings
@@ -1084,7 +1084,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## inkAnnotationSettings
@@ -1131,7 +1131,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## isAnnotationToolbarVisible
@@ -1161,7 +1161,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## lineSettings
@@ -1211,7 +1211,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## measurementSettings
@@ -1241,7 +1241,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## perimeterSettings
@@ -1290,7 +1290,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## polygonSettings
@@ -1338,7 +1338,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## radiusSettings
@@ -1387,7 +1387,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## rectangleSettings
@@ -1435,7 +1435,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## shapeLabelSettings
@@ -1469,7 +1469,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## stampSettings
@@ -1533,7 +1533,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## stickyNotesSettings
@@ -1580,7 +1580,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## strikethroughSettings
@@ -1627,7 +1627,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## underlineSettings
@@ -1674,7 +1674,7 @@ ReactDOM.createRoot(document.getElementById('sample')).render(<App />);
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## volumeSettings

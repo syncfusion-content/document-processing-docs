@@ -4,7 +4,7 @@ title: About Syncfusion ASP.NET MVC Spreadsheet Control | Syncfusion
 description: Learn about introduction of Syncfusion Essential Studio ASP.NET MVC Spreadsheet control and more details
 platform: document-processing
 control: Index
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion ASP.NET MVC Spreadsheet Control

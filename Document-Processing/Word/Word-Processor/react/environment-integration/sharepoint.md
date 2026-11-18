@@ -5,7 +5,7 @@ description: Learn how to get started with the Syncfusion React DOCX Editor comp
 control: DOCX Editor
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with React DOCX Editor in SharePoint

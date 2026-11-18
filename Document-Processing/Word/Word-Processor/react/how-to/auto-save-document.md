@@ -5,7 +5,7 @@ description: Automatically save edited documents to the server at regular interv
 control: Auto save document in DOCX Editor 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Auto Save Document in React DOCX Editor

@@ -4,7 +4,7 @@ title: How to Create an Object Structure in React Spreadsheet | Syncfusion
 description: Learn how to create an object structure in the Syncfusion React Spreadsheet component for organizing spreadsheet data.
 control: Create a object structure 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Create an Object Structure in React Spreadsheet

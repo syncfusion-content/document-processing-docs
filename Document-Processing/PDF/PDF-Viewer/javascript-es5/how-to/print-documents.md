@@ -5,7 +5,7 @@ description: Print the loaded PDF in the JavaScript (ES5) PDF Viewer from custom
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Print the PDF in JavaScript (ES5) PDF Viewer

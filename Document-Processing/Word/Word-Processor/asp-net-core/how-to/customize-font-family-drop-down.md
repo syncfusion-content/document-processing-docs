@@ -4,7 +4,7 @@ title: How to Customize Font Family in ASP.NET Core DOCX Editor | Syncfusion
 description: Customize the font family drop down list in Syncfusion® ASP.NET Core DOCX Editor by configuring available font families and controlling font selection options.
 platform: document-processing
 control: DOCX Editor
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

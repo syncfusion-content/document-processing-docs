@@ -5,7 +5,7 @@ description: Switch between selection mode and panning mode in the Angular PDF V
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Interaction Mode in Angular PDF Viewer

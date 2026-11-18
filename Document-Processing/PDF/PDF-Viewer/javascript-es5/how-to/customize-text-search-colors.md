@@ -5,7 +5,7 @@ description: Customize the highlight colors used for text search matches in the 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Customize the Text Search Colors in JavaScript (ES5) PDF Viewer

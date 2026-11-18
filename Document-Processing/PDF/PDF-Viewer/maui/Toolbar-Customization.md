@@ -5,7 +5,7 @@ description: Learn how to show, hide, add, remove, and reorder toolbars and tool
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-keywords: .net maui pdf viewer, customize toolbar, show hide toolbar, add toolbar item, remove toolbar item, maui pdf viewer toolbar
+keywords: .net maui pdf viewer, customize toolbar, show hide toolbar, add toolbar item, remove toolbar item, maui pdf viewer toolbartocname: Document-Processing-SDKs-toc
 ---
 
 # Customize the Toolbar in .NET MAUI PDF Viewer

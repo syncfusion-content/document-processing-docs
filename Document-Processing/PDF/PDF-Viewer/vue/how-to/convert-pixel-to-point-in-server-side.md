@@ -5,7 +5,7 @@ description: Convert pixel values to points on the server side in the Vue PDF Vi
 control: Convert pixel to point in server side
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Convert Pixel to Point on the Server in Vue PDF Viewer

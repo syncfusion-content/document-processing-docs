@@ -4,7 +4,7 @@ title: How to navigate pages in WinForms PDF Viewer | Syncfusion
 description: This guide explains how to programmatically navigate between pages and locations within PDF documents in Syncfusion PDF Viewer for WinForms.
 platform: document-processing
 control: PdfViewerControl
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 # How to navigate pages in WinForms PDF Viewer
 

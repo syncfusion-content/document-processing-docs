@@ -3,7 +3,7 @@ title: Convert Word to Image in .NET MAUI | Syncfusion
 description: Convert Word to image in .NET MAUI using .NET MAUI Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Convert Word to Image in .NET MAUI

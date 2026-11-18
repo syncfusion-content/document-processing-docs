@@ -5,7 +5,7 @@ description: Load a PDF only after PDFium resources are ready in the standalone 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Load a Document After Resources Are Ready in React PDF Viewer

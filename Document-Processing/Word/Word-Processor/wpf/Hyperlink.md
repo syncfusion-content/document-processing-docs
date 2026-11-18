@@ -4,7 +4,7 @@ description: The hyperlink feature in WPF DOCX Editor offers hyperlink field sup
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: hyperlink,insert-hyperlink,screen-tip,request-navigate
+keywords: hyperlink,insert-hyperlink,screen-tip,request-navigatetocname: Document-Processing-SDKs-toc
 ---
 # Hyperlinks in WPF DOCX Editor
 

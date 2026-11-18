@@ -5,7 +5,7 @@ description: Insert page numbers and navigate to specific pages in Syncfusion® 
 platform: document-processing
 control: Insert Page Number and Navigate to Page
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Insert Page Numbers and Navigate in TypeScript DOCX Editor

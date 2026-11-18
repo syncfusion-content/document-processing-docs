@@ -4,7 +4,7 @@ title: Accessibility in Vue Spreadsheet | Syncfusion
 description: Learn about accessibility support in the Syncfusion Vue Spreadsheet, including keyboard navigation, WAI-ARIA attributes, and compliance features.
 control: Accessibility 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Accessibility in Vue Spreadsheet

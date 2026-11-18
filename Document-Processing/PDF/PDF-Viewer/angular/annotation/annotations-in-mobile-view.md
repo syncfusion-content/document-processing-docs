@@ -5,7 +5,7 @@ description: Create, edit, and manage annotations in the Angular PDF Viewer when
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 # Annotations in Mobile View in Angular PDF Viewer
 

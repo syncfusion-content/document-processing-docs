@@ -5,7 +5,7 @@ description: Control who can add, edit, or remove annotations in the React PDF V
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Annotation Permissions in React PDF Viewer

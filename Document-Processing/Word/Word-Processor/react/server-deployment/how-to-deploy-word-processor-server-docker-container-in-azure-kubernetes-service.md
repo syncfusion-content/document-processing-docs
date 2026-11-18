@@ -5,7 +5,7 @@ description: Deploy the Syncfusion® React DOCX Editor Docker image to Azure Kub
 control: How to deploy word processor server docker container in Azure Kubernetes Service 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 # How to Deploy React DOCX Editor Docker Image on AKS
 
@@ -78,7 +78,7 @@ spec:
         - containerPort: 80
         env:
         - name: SYNCFUSION_LICENSE_KEY
-          value: "YOUR_LICENSE_KEY"
+          value: "YOUR_LICENSE_KEY"tocname: Document-Processing-SDKs-toc
 ---
 apiVersion: v1
 kind: Service

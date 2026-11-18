@@ -4,7 +4,7 @@ description: This section explains about how to assemblies required to convert p
 platform: document-processing
 control: Presentation
 documentation: UG
-keywords: Assemblies
+keywords: Assembliestocname: Document-Processing-SDKs-toc
 ---
 # Assemblies Required for PowerPoint to Image Conversion
 

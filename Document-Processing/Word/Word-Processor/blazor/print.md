@@ -4,7 +4,7 @@ title: Print in Blazor DOCX Editor | Syncfusion
 description: Print feature in Blazor DOCX Editor enables printing documents with page setup and quality settings for accurate document output.
 platform: document-processing
 control: DOCX Editor
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Print in Blazor DOCX Editor

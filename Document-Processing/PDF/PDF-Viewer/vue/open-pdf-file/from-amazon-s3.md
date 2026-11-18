@@ -5,7 +5,7 @@ description: Load and display PDF files stored in AWS S3 in the Vue PDF Viewer u
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Open PDF from AWS S3 in Vue PDF Viewer

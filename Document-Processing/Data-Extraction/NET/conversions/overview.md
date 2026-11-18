@@ -4,7 +4,7 @@ description: Learn about overview of the document conversions supported by Syncf
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG
-keywords: SmartDataExtractor, PDF to JSON, PDF to Markdown
+keywords: SmartDataExtractor, PDF to JSON, PDF to Markdowntocname: Document-Processing-SDKs-toc
 ---
 
 # About Document Conversions of .NET Smart Data Extractor

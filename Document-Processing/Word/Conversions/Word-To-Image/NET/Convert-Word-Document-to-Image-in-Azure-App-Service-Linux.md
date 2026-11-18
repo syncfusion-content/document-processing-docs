@@ -3,7 +3,7 @@ title: Convert Word to Image in Azure App Service Linux  | Syncfusion
 description: Convert Word to image in Azure App Service on Linux using .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Convert Word to Image in Azure App Service Linux 

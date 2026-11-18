@@ -4,7 +4,7 @@ title: Insert Charts in Blazor Spreadsheet | Syncfusion
 description: Learn about inserting charts in the Syncfusion Blazor Spreadsheet component to visualize worksheet data effectively.
 platform: document-processing
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Insert Charts in Blazor Spreadsheet

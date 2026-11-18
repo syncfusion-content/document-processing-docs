@@ -4,7 +4,7 @@ title: AI Assist Node.js Server Setup in TypeScript Spreadsheet | Syncfusion
 description: AI Assist Node.js server setup in TypeScript Spreadsheet explains how to configure and connect a Node.js and Express server for AI-powered features.
 platform: document-processing
 control: AI Assist Node.js Server Setup
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # AI Assist Node.js Server Setup in TypeScript Spreadsheet

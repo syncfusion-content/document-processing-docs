@@ -5,7 +5,7 @@ description: Adjust the height and width of the Syncfusion® React DOCX Editor t
 control: Resize DOCX Editor
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Resize in React DOCX Editor 

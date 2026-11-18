@@ -5,7 +5,7 @@ description: The list format feature in React DOCX Editor enables users to creat
 control: List format 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # List Format in React DOCX Editor

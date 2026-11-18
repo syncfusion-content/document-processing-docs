@@ -3,7 +3,7 @@ title: How to Handle Circular References in .NET Excel Library | Syncfusion
 description: Handle circular references in Excel formulas when retrieving calculated values using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to handle circular references in .NET Excel Library

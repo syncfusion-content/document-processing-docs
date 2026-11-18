@@ -5,7 +5,7 @@ description: The find and replace feature in Vue DOCX Editor helps users quickly
 control: Find and replace 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Find and Replace in Vue DOCX Editor

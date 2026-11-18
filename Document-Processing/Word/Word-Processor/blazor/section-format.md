@@ -4,7 +4,7 @@ title: Section Format in Blazor DOCX Editor | Syncfusion
 description: The section format feature in Blazor DOCX Editor enables users to customize page layout, margins, orientation, and section-specific settings.
 platform: document-processing
 control: DOCX Editor
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Section Format in Blazor DOCX Editor

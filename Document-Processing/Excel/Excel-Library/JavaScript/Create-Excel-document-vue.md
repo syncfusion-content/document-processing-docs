@@ -4,7 +4,7 @@ title: Getting Started with JavaScript Excel in Vue app | Syncfusion
 description: Learn how to get started with the Syncfusion JavaScript Excel in Vue application. Easy steps to create Excel workbooks.
 control: Excel
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with JavaScript Excel in Vue app

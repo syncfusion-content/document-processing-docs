@@ -4,7 +4,7 @@ title: Keyboard Shortcuts in ASP.NET Core DOCX Editor | Syncfusion
 description: The keyboard shortcuts feature in ASP.NET Core DOCX Editor enables users to perform editing actions quickly using predefined key combinations.
 platform: document-processing
 control: Keyboard Shortcut
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

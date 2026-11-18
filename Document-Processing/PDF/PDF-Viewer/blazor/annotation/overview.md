@@ -4,7 +4,7 @@ title: About Annotation in Blazor PDF Viewer Component | Syncfusion
 description: Learn about Syncfusion Blazor PDF Viewer Annotations and how to add, edit, delete, and configure Annotations in the Blazor PDF Viewer.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion Annotation in Blazor PDF Viewer Component

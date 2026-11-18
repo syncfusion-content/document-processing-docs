@@ -4,7 +4,7 @@ description: Learn how to save PDF files programmatically to Azure Blob Storage 
 keywords: azure blob, save pdf, c# save pdf, upload pdf
 platform: document-processing
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Save PDF to Azure Blob Storage
 

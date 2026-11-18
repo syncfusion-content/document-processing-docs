@@ -4,7 +4,7 @@ title: From Amazon S3 in JavaScript (ES6) PDF Viewer | Syncfusion
 description: Load and display PDF files stored in AWS S3 in the JavaScript (ES6) PDF Viewer using both standalone and server-backed integration approaches.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Open PDF from AWS S3 in JavaScript (ES6) PDF Viewer

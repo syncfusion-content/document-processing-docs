@@ -5,7 +5,7 @@ description: Enable zoom in the React PDF Viewer and programmatically control zo
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Zoom in React PDF Viewer

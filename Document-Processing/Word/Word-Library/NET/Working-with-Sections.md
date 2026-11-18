@@ -3,7 +3,7 @@ title: Sections in .NET Word library | Syncfusion
 description: Learn how to work with sections, headers, footers, and page settings in a Word document using the .NET Word library, without Microsoft Word.
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Sections in .NET Word library

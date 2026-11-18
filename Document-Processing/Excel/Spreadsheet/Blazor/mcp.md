@@ -4,7 +4,7 @@ title: MCP Server Setup in Blazor Spreadsheet | Syncfusion
 description: Install and configure the Syncfusion Blazor Spreadsheet MCP Server to access documentation, API assistance, and code examples
 platform: document-processing
 control: AI coding assistant
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # MCP Server Setup in Blazor Spreadsheet

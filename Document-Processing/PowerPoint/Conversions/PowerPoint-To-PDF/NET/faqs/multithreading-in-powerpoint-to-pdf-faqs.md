@@ -3,7 +3,7 @@ title: FAQ about multithreading in PowerPoint to PDF | Syncfusion
 description: Learn about the FAQs regarding the support of multithreading in PowerPoint to PDF conversion using the .NET PowerPoint (Presentation) library.
 platform: document-processing
 control: PowerPoint
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Frequently asked questions about multithreading in PowerPoint to PDF

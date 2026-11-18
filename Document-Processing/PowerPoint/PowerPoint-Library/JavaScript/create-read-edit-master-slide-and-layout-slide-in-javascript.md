@@ -5,7 +5,7 @@ description: Access master slides, change the master background, and create cust
 platform: document-processing
 control: PowerPoint
 documentation: ug
-keywords: javascript, powerpoint
+keywords: javascript, powerpointtocname: Document-Processing-SDKs-toc
 ---
 
 # Master and Layout Slides in JavaScript PowerPoint

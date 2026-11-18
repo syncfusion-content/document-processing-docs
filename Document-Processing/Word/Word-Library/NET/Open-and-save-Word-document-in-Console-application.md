@@ -3,7 +3,7 @@ title: Open and save Word document in Console application | Syncfusion
 description: Open and save Word document in Console application using .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Open and save Word document in Console application

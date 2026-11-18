@@ -5,7 +5,7 @@ description: Hide the toolbar and properties pane in Syncfusion® Vue DOCX Edito
 control: Hide tool bar and properties pane 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Hide Toolbar and Properties Pane in Vue DOCX Editor

@@ -5,7 +5,7 @@ description: Add new pages to a loaded PDF in the JavaScript (ES5) PDF Viewer us
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Add a New Page to a PDF in JavaScript (ES5) PDF Viewer

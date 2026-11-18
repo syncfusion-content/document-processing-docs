@@ -4,7 +4,7 @@ description: The clipboard in UWP DOCX Editor offers copy and paste support in r
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: clipboard,cut,copy,paste,cutcommand,copycommand,pastecommand,rich-text-format,clipboard-formats
+keywords: clipboard,cut,copy,paste,cutcommand,copycommand,pastecommand,rich-text-format,clipboard-formatstocname: Document-Processing-SDKs-toc
 ---
 # Clipboard in UWP DOCX Editor
 

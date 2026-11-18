@@ -4,7 +4,7 @@ title: WebMCP tool integration for JavaScript Spreadsheet | Syncfusion
 description: Learn how to integrate WebMCP with Syncfusion JavaScript Spreadsheet to enable AI interaction, configure tools, manage access, and monitor execution.
 control: WebMCP
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
  
 # WebMCP Tools Integration for JavaScript Spreadsheet control

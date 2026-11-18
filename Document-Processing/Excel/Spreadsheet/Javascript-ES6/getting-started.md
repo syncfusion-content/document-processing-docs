@@ -4,7 +4,7 @@ title: Getting Started with TypeScript Spreadsheet | Syncfusion
 description: Learn how to get started with the Syncfusion TypeScript Spreadsheet control. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: Getting started 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with the TypeScript Spreadsheet 

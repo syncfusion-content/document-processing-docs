@@ -3,7 +3,7 @@ title: HTML-to-PDF Installation Guide for a .NET PDF Library | Syncfusion
 description: Explore our guide on how to convert HTML to PDF using the Blink rendering engine with various features like TOC, partial web page to PDF, and more.
 platform: document-processing
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # HTML-to-PDF Installation Guide for a .NET PDF Library

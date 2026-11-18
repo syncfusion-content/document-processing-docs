@@ -5,7 +5,7 @@ description: The collaborative editing feature in React DOCX Editor supports rea
 platform: document-processing
 control: Collaborative Editing 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Collaborative Editing in React DOCX Editor with Redis in ASP.NET Core

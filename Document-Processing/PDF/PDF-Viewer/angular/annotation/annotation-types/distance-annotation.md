@@ -5,7 +5,7 @@ description: Enable, draw, customize, and manage Distance annotations in the Ang
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Distance Annotation in Angular PDF Viewer

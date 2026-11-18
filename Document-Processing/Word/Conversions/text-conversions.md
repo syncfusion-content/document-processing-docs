@@ -3,7 +3,7 @@ title: Convert Word to Text and vice versa in .NET Word | Syncfusion
 description: Learn how to convert Word document to text file and vice versa using the .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Convert Word to Text and vice versa in .NET Word

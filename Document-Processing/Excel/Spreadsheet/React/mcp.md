@@ -5,7 +5,7 @@ description: Install and configure the Syncfusion React Spreadsheet MCP Server t
 control: Spreadsheet
 platform: document-processing
 documentation: ug
-keywords: React Agentic UI Builder, MCP Server, search docs, Spreadsheet SDK, Server Packages
+keywords: React Agentic UI Builder, MCP Server, search docs, Spreadsheet SDK, Server Packagestocname: Document-Processing-SDKs-toc
 ---
 
 # MCP Server Configuration in React Spreadsheet

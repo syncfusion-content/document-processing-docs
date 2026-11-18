@@ -4,7 +4,7 @@ title: How to Identify the Added Annotation Mode in JavaScript | Syncfusion
 description: Identify the annotation mode that was used to add an annotation in the JavaScript (ES6) PDF Viewer so you can branch on the annotation type in your code.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Identify the Added Annotation Mode in JavaScript (ES6) PDF

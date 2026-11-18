@@ -4,7 +4,7 @@ title: About Create form fields in Blazor PDF Viewer Component | Syncfusion
 description: Learn how to create and edit each form field using the PDF Viewer UI and how to create them programmatically in the Blazor PDF Viewer.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 #  About Syncfusion Create form fields in Blazor PDF Viewer Component

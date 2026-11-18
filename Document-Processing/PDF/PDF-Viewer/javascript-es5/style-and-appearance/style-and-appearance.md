@@ -5,7 +5,7 @@ description: Learn about the style and appearance in the JavaScript (ES5) PDF Vi
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Style and Appearance in JavaScript (ES5) PDF Viewer

@@ -3,7 +3,7 @@ title: Hyperlinks in .NET Word | Syncfusion
 description: This section illustrates how to create and manage hyperlinks in Word documents using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Hyperlinks in .NET Word
 

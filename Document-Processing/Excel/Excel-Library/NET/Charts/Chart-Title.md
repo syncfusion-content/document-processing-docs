@@ -3,7 +3,7 @@ title: Chart Title in .NET Excel Library | Syncfusion
 description: Chart title settings describes how the Syncfusion .NET Excel Library adds and formats titles in Excel charts with options.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Chart Title in .NET Excel Library

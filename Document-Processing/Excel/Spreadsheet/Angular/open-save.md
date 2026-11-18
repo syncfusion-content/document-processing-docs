@@ -4,7 +4,7 @@ title: Open and Save in Angular Spreadsheet | Syncfusion
 description: Open and save in Angular Spreadsheet enable users to import, edit, and export workbook data seamlessly across applications.
 platform: document-processing
 control: Open and Save
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Open and Save in Angular Spreadsheet 

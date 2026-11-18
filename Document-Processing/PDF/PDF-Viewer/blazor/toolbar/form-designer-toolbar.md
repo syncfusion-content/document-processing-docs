@@ -5,7 +5,7 @@ description: Learn how to show or hide and customize the Form Designer toolbar i
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Customize the Form Designer Toolbar in Blazor PDF Viewer

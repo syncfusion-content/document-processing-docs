@@ -4,7 +4,7 @@ title: Accessibility in ASP.NET Core Spreadsheet | Syncfusion
 description: Learn about accessibility in the Syncfusion ASP.NET Core Spreadsheet control, including WAI-ARIA attributes, compliance, and keyboard navigation.
 platform: document-processing
 control: Accessibility
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Accessibility in ASP.NET Core Spreadsheet

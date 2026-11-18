@@ -4,7 +4,7 @@ title: EJ1 API Migration in TypeScript Spreadsheet | Syncfusion
 description: EJ1 API migration in TypeScript Spreadsheet helps transition existing applications to Essential JS 2 with updated APIs and features.
 platform: document-processing
 control: Ej1 api migration 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # EJI API Migration in TypeScript Spreadsheet 

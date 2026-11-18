@@ -3,7 +3,7 @@ title: Performance Metrics in .NET PDF Library | Syncfusion
 description: Learn about the detailed performance metrics and processing capabilities of Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Performance Metrics in .NET PDF Library

@@ -4,7 +4,7 @@ title: Security in Flutter PDF Library | Syncfusion
 description: Learn how to add encryption and set permissions for secure PDF documents using Syncfusion Flutter PDF non-UI Library.
 platform: document-processing
 control: PDF
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Security in Flutter PDF

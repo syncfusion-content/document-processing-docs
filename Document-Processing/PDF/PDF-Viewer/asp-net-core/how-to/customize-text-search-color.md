@@ -4,7 +4,7 @@ title: How to Customize the Text Search Color in ASP.NET Core | Syncfusion
 description: Customize the highlight color used for text search matches in the ASP.NET Core PDF Viewer to match your application design.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Customize the Text Search Color in ASP.NET Core PDF Viewer

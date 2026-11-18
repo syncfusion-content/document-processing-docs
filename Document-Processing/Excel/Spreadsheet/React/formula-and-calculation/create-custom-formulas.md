@@ -4,7 +4,7 @@ title: Custom Function Creation in React Spreadsheet | Syncfusion
 description: Learn about creating custom functions in the Syncfusion React Spreadsheet component to extend formula capabilities.
 control: Formulas 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Custom Function Creation in React Spreadsheet

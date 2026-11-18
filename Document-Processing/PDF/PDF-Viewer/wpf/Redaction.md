@@ -4,7 +4,7 @@ title: Redaction in WPF Pdf Viewer control | Syncfusion
 description: Remove sensitive information from PDF documents using redaction in Syncfusion WPF PDF Viewer. Learn to redact text, images, and graphics.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Redaction in WPF Pdf Viewer

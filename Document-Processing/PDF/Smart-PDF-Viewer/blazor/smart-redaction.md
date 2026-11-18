@@ -4,7 +4,7 @@ title: Smart Redaction in Blazor Smart PDF Viewer | Syncfusion
 description: Explore how to intelligently redact sensitive information using AI-powered Smart Redaction in your Blazor applications.
 platform: document-processing
 control: SfSmartPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Smart Redaction in Blazor Smart PDF Viewer

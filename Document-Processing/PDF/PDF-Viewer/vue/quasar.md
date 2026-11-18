@@ -5,7 +5,7 @@ description: Get started with the Quasar Framework and the Syncfusion Vue PDF Vi
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with Vue PDF Viewer in Quasar Framework

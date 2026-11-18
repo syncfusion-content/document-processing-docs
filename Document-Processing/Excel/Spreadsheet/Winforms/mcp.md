@@ -4,7 +4,7 @@ title: MCP Server in Windows Forms Spreadsheet | Syncfusion
 description: Configure the WPF Spreadsheet MCP Server to access documentation, API references, code generation, and troubleshooting in AI-powered development environments.
 platform: WindowsForms
 control: Getting started with Syncfusion WinForms Spreadsheet MCP Server
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # MCP Server in Windows Forms Spreadsheet

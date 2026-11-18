@@ -3,7 +3,7 @@ title: Mail merge for nested groups in .NET Word Library | Syncfusion
 description: Learn how to Mail merge for nested groups - replace merge fields in nested regions of document with relational data using the .NET Word library.
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Mail merge for nested groups in .NET Word Library

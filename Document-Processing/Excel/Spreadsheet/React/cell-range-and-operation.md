@@ -4,7 +4,7 @@ title: Cell Range in React Spreadsheet | Syncfusion
 description: Learn about cell ranges in the Syncfusion React Spreadsheet component, including selection, editing, formatting, and range operations.
 control: Cell range 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Cell Range in React Spreadsheet

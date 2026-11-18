@@ -5,7 +5,7 @@ description: Add, edit, and manage handwritten signatures in the ASP.NET MVC PDF
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Handwritten Signature in ASP.NET MVC PDF Viewer

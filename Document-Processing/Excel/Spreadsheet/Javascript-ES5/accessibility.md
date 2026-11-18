@@ -4,7 +4,7 @@ title: Accessibility in JavaScript Spreadsheet | Syncfusion
 description: Accessibility in JavaScript Spreadsheet supports keyboard navigation, screen reader compatibility, and ARIA attributes for inclusive experiences.
 platform: document-processing
 control: Accessibility
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Accessibility in JavaScript Spreadsheet

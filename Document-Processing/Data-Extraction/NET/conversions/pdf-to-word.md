@@ -4,7 +4,7 @@ description: Convert PDF documents to Word using Smart Data Extractor. Transform
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG
-keywords: Assemblies
+keywords: Assembliestocname: Document-Processing-SDKs-toc
 ---
 
 # Convert PDF to Word in .NET Smart Data Extractor

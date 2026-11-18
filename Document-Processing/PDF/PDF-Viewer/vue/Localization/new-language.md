@@ -5,7 +5,7 @@ description: Localize the Vue PDF Viewer to a new language by providing culture-
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Set a New Language in Vue PDF Viewer

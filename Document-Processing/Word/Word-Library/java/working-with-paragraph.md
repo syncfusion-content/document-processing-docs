@@ -3,7 +3,7 @@ title: Paragraph in Java Word | Syncfusion
 description: This section explains how to work with the child elements of Paragraph in Word document using Syncfusion Java Word library 
 platform: document-processing
 control: Word Library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Paragraph in Java Word
 

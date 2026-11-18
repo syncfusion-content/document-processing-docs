@@ -5,7 +5,7 @@ description: Save PDF files from the Angular PDF Viewer to AWS S3 using standalo
 platform: document-processing
 control: Save PDF files to AWS S3
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Save PDF Files to AWS S3 in Angular PDF Viewer

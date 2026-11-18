@@ -5,7 +5,7 @@ description: Load and display PDF files stored in Google Drive in the Vue PDF Vi
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Open PDF from Google Drive in Vue PDF Viewer

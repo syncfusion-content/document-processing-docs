@@ -4,7 +4,7 @@ title: Rich Text Formatting in React Spreadsheet | Syncfusion
 description: Learn about rich text formatting in the Syncfusion React Spreadsheet component and apply multiple text styles within cells.
 control: Formatting
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Rich Text Formatting in React Spreadsheet

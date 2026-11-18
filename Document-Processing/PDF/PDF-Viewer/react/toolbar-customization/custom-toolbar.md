@@ -5,7 +5,7 @@ description: Create a custom toolbar in the React PDF Viewer, including adding c
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Custom Toolbar in React PDF Viewer

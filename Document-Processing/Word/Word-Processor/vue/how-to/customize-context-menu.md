@@ -5,7 +5,7 @@ description: Customize the context menu in Syncfusion® Vue DOCX Editor by addin
 control: Customize context menu 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Customize Context Menu in Vue DOCX Editor

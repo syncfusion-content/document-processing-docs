@@ -4,7 +4,7 @@ title: Globalization in TypeScript Spreadsheet | Syncfusion
 description: Globalization in TypeScript Spreadsheet enables adapting the user interface, formats, and locale-specific settings for global audiences.
 platform: document-processing
 control: Global local
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Globalization in TypeScript Spreadsheet 

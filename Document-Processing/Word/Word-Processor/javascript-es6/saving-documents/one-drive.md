@@ -5,7 +5,7 @@ description: Save documents to OneDrive from TypeScript DOCX Editor, enabling cl
 platform: document-processing
 control: Save document to OneDrive
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Save Documents to OneDrive in TypeScript DOCX Editor

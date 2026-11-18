@@ -6,7 +6,7 @@ platform: document-processing
 control: Annotation Toolbar Customization
 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Customize the Annotation Toolbar in JavaScript (ES5) PDF Viewer

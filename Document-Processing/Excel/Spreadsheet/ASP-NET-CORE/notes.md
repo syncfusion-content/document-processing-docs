@@ -4,7 +4,7 @@ title: Notes in ASP.NET Core Spreadsheet | Syncfusion
 description: Learn about notes in the Syncfusion ASP.NET Core Spreadsheet control, including adding, editing, displaying, and managing cell notes.
 platform: document-processing
 control: Notes
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Notes in ASP.NET Core Spreadsheet

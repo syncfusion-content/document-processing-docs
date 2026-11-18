@@ -3,7 +3,7 @@ title: Create PowerPoint in Azure App Service on Windows | Syncfusion
 description: Create PowerPoint document in Azure App Service on Windows using .NET Core PowerPoint library without Microsoft PowerPoint or interop dependencies.
 platform: document-processing
 control: PowerPoint
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Create PowerPoint document in Azure App Service on Windows

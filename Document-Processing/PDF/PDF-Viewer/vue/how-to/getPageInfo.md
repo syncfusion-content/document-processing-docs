@@ -5,7 +5,7 @@ description: Retrieve page height, width, and rotation in the Vue PDF Viewer usi
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Get Page Info in Vue PDF Viewer

@@ -5,7 +5,7 @@ description: Retrieve the loaded PDF document instance in the Angular PDF Viewer
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Retrieve the Loaded Document in Angular PDF Viewer

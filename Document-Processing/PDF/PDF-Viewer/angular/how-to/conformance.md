@@ -5,7 +5,7 @@ description: Learn about the PDF/A and PDF/X conformance levels supported in the
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Use PDF/A and PDF/X Conformance in Angular PDF Viewer

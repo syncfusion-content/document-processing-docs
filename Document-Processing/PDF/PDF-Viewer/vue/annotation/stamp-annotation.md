@@ -5,7 +5,7 @@ description: Enable, apply, customize, and manage Stamp annotations in the Vue P
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Stamp Annotation in Vue PDF Viewer

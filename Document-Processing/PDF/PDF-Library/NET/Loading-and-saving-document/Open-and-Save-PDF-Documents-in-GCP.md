@@ -4,7 +4,7 @@ description: Learn how to open and save PDF documents in Google Cloud Platform u
 platform: document-processing
 control: PDF
 documentation: UG
-keywords: gcp os save pdf, gcp os load pdf, c# save pdf, c# load pdf
+keywords: gcp os save pdf, gcp os load pdf, c# save pdf, c# load pdftocname: Document-Processing-SDKs-toc
 ---
 # Open and Save PDF Document in Google Cloud Platform
 

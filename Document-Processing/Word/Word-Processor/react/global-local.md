@@ -5,7 +5,7 @@ description: Global localization in React DOCX Editor enables translating built-
 control: Global local 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Globalization and Localization in React DOCX Editor

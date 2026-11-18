@@ -5,7 +5,7 @@ description: The export feature in Angular DOCX Editor enables users to save and
 platform: document-processing
 control: Export
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Export in Angular DOCX Editor

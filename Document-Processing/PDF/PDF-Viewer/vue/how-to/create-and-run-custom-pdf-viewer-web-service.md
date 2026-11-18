@@ -5,7 +5,7 @@ description: Create and run a custom PDF Viewer web service for the Vue PDF View
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Create a Custom PDF Viewer Web Service in Vue PDF Viewer

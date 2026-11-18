@@ -5,7 +5,7 @@ description: Load and display PDF files stored in Google Cloud Storage in the Vu
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Open PDF from Google Cloud Storage in Vue PDF Viewer

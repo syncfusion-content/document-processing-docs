@@ -5,7 +5,7 @@ description: Learn about the AI-powered Syncfusion .NET MAUI Smart PDF Viewer, i
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
-keywords: .net maui smart pdf viewer, maui smart pdf viewer, ai pdf viewer maui, smart redaction maui, smart fill maui, document summarizer maui
+keywords: .net maui smart pdf viewer, maui smart pdf viewer, ai pdf viewer maui, smart redaction maui, smart fill maui, document summarizer mauitocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion .NET MAUI Smart PDF Viewer Component

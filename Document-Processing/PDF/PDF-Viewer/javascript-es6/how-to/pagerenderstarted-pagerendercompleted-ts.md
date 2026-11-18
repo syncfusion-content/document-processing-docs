@@ -4,7 +4,7 @@ title: How to Handle Page Render Events in JavaScript (ES6) PDF | Syncfusion
 description: Use the pageRenderInitiate and pageRenderComplete events in the JavaScript (ES6) PDF Viewer to track page rendering and coordinate custom UI updates.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Handle Page Render Events in JavaScript (ES6) PDF Viewer

@@ -4,7 +4,7 @@ title: Selection in WPF Spreadsheet control | Syncfusion®
 description: Select cells, rows, columns, and ranges in the WPF Spreadsheet control to efficiently edit, manage, and work with worksheet data.
 platform: document-processing
 control: SfSpreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Selection in WPF Spreadsheet

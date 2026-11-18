@@ -5,7 +5,7 @@ description: Learn about the to azure active directory in the Angular PDF Viewer
 platform: document-processing
 control: Save PDF To AAD
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # To Azure Active Directory in Angular PDF Viewer
@@ -15,7 +15,7 @@ domainurl: ##DomainURL##
 The Angular PDF Viewer component supports loading and saving PDF files using Azure Active Directory (AAD). This article describes a server-backed pattern to securely load and store PDF documents. It is intended for developers implementing a server-client integration that avoids exposing secrets or long-lived credentials in the browser.
 
 ### Steps to Open the PDF File from Azure Active Directory
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 1: Register an Application in Azure Active Directory (AAD)
@@ -37,7 +37,7 @@ The Angular PDF Viewer component supports loading and saving PDF files using Azu
    - Copy the client secret value immediately, as it will be hidden later. Store it securely.
 
   ![Create a client secret in Azure AD](../images/client-secret.png)
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 2: Create the Azure Storage Account
@@ -47,7 +47,7 @@ The Angular PDF Viewer component supports loading and saving PDF files using Azu
    - Create a new storage account by filling in the required details (e.g., name, location, resource group, etc.).
 
     ![Create an Azure Storage account](../images/storage-account.png)
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 3: Assign Role to the Application
@@ -62,7 +62,7 @@ The Angular PDF Viewer component supports loading and saving PDF files using Azu
    - Select your application and click **Select**.
    - Click **Review + assign** to finalize the role assignment.
 
-    ![Assign Storage Blob Data Contributor role to the application](../images/add-role.png)
+    ![Assign Storage Blob Data Contributor role to the application](../images/add-role.png)tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 4: Upload the PDF Document to the Azure Storage Account
@@ -73,7 +73,7 @@ The Angular PDF Viewer component supports loading and saving PDF files using Azu
 2. Upload the PDF File:
    - Create a new container and upload the PDF document you want to access in the PDF Viewer.
 
-    ![Upload a PDF file to an Azure Blob container](../images/upload-pdf.png)
+    ![Upload a PDF file to an Azure Blob container](../images/upload-pdf.png)tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 5: Server-Side Configuration
@@ -88,7 +88,7 @@ The Angular PDF Viewer component supports loading and saving PDF files using Azu
 
 2. Run the Web Service:
    - After configuring the necessary details, run the web service to make it accessible.
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 6: Client-Side Configuration
@@ -102,7 +102,7 @@ The Angular PDF Viewer component supports loading and saving PDF files using Azu
 
 3. Display PDF in the PDF Viewer:
    - Once the base64 string is received, the PDF Viewer will load the PDF using the `viewer.load()` method.
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 7: Save the PDF Document to Azure
@@ -110,7 +110,7 @@ The Angular PDF Viewer component supports loading and saving PDF files using Azu
 1. Save PDF to AAD:
    - The user can click the **Save to AAD** button to upload any modifications to the PDF back to Azure Blob Storage.
    - This action sends the modified PDF to the server, where it is converted into a byte array and saved to the specified Azure Blob container.
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ### Server-Side Code Snippets

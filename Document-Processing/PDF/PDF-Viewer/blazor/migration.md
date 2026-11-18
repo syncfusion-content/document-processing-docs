@@ -4,7 +4,7 @@ title: Migrate from (Classic) PDFViewer to Blazor PDF Viewer | Syncfusion
 description: Step-by-step migration guide from Blazor PDF Viewer (Classic) to PDF Viewer, covering packages, scripts, Program.cs, markup, and WebAssembly.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Migrate from (Classic) PDFViewer to Blazor PDF Viewer

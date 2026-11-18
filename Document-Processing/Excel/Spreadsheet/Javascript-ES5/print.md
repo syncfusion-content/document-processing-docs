@@ -4,7 +4,7 @@ title: Print in JavaScript Spreadsheet | Syncfusion
 description: Print in JavaScript Spreadsheet enables users to print worksheet content and preview documents directly from the application.
 platform: document-processing
 control: Print
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Print in JavaScript Spreadsheet

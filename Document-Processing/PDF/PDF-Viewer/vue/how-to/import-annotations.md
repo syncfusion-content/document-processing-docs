@@ -5,7 +5,7 @@ description: Import annotations into the Vue PDF Viewer from supported formats u
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Import Annotations in Vue PDF Viewer

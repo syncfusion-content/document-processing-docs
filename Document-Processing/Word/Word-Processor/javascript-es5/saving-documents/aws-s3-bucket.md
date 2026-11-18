@@ -5,7 +5,7 @@ description: Save documents to AWS S3 from JavaScript DOCX Editor, enabling clou
 platform: document-processing
 control: Save document to AWS S3
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Save Documents to AWS S3 in JavaScript DOCX Editor

@@ -3,7 +3,7 @@ title: About HTML-to-PDF Conversion in .NET PDF Library | Syncfusion
 description: Learn about HTML-to-PDF conversion in Syncfusion .NET PDF Library using Blink rendering engine, including TOC support, partial page conversion, and more.
 platform: document-processing
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # About HTML-to-PDF Conversion in .NET PDF Library
 

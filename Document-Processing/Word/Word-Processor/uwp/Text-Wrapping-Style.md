@@ -4,7 +4,7 @@ description: Text wrapping style in UWP DOCX Editor offers preservation support 
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: text-wrapping,text-wrapping-style,inline,behind,in-front-of-text,top-and-bottom,square,image-wrap,shape-wrap
+keywords: text-wrapping,text-wrapping-style,inline,behind,in-front-of-text,top-and-bottom,square,image-wrap,shape-wraptocname: Document-Processing-SDKs-toc
 ---
 # Text Wrapping Style in UWP DOCX Editor
 Text wrapping refers to how images and shapes are fit with surrounding text in a document. Currently, UWP DOCX Editor has only preservation support for image and textbox shape with below wrapping styles.

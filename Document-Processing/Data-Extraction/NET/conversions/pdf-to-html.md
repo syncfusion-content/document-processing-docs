@@ -4,7 +4,7 @@ description: Convert PDF documents to HTML using Smart Data Extractor. Transform
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG
-keywords: Assemblies
+keywords: Assembliestocname: Document-Processing-SDKs-toc
 ---
 
 # Convert PDF to HTML in .NET Smart Data Extractor

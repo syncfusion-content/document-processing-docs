@@ -4,7 +4,7 @@ description: Learn how to get started with the Syncfusion .NET PDF Library on ma
 platform: document-processing
 control: PDF
 documentation: UG
-keywords: macos save pdf, macos load pdf, c# save pdf, c# load pdf
+keywords: macos save pdf, macos load pdf, c# save pdf, c# load pdftocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with .NET PDF Library on macOS

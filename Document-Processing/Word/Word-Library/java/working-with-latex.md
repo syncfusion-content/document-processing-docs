@@ -3,7 +3,7 @@ title: LaTeX in Java Word | Syncfusion
 description: Learn how to create mathematical equations in a Word document using LaTeX with the Java Word library without Microsoft Word.
 platform: document-processing
 control: Word Library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # LaTeX Equation in Java Word

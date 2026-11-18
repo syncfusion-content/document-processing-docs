@@ -5,7 +5,7 @@ description: Configure ASP.NET Core web services in the JavaScript DOCX Editor t
 platform: document-processing
 control: Core 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # ASP.NET Core Web Service in JavaScript DOCX Editor

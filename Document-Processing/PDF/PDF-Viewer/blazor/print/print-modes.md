@@ -5,7 +5,7 @@ description: Learn how to configure print modes for PDF Documents in the Syncfus
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Print Modes in Blazor PDF Viewer

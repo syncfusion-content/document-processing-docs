@@ -3,7 +3,7 @@ title: Excel Protected View in .NET Excel Library | Syncfusion
 description: Excel protected view page describes security options in the Syncfusion .NET Excel Library for opening documents with protection.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Security in .NET Excel Library

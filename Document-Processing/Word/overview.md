@@ -4,7 +4,7 @@ description: Learn about introduction of Syncfusion Word Document Processing Lib
 platform: document-processing
 control: general
 documentation: UG
-keywords: Word, SDK, Automation, API, create, view, edit, convert, read
+keywords: Word, SDK, Automation, API, create, view, edit, convert, readtocname: Document-Processing-SDKs-toc
 ---
 
 > With the Essential Studio 2027 Volume 1 release, we will discontinue support for .NET 8.0 and .NET 9.0 in ASP.NET Core, Blazor, .NET MAUI, WinUI, WinForms, WPF, and Document Processing Libraries. Please plan to upgrade to .NET 10.0 or higher.

@@ -5,7 +5,7 @@ description: Control the visibility of PDF annotations in the JavaScript (ES5) P
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Control Annotation Visibility in JavaScript (ES5) PDF Viewer

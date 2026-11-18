@@ -4,7 +4,7 @@ title: Data Validation in Blazor Spreadsheet | Syncfusion
 description: Learn about data validation in the Syncfusion Blazor Spreadsheet component, including validation rules and input restrictions.
 platform: document-processing
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Data Validation in Blazor Spreadsheet

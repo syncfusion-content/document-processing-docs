@@ -5,7 +5,7 @@ description: Load and display PDF files stored in Box cloud storage in the Angul
 platform: document-processing
 control: Open PDF files from Box cloud file storage
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Open PDF from Box Cloud Storage in Angular PDF Viewer

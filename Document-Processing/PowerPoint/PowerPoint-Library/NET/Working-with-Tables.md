@@ -4,7 +4,7 @@ description: Code examples to create, edit and format PowerPoint tables in .NET,
 platform: document-processing
 control: Syncfusion<sup>&reg;</sup> PowerPoint presentation
 documentation: 
-keywords: PowerPoint, slide, table, format-table, rows, columns, pptx
+keywords: PowerPoint, slide, table, format-table, rows, columns, pptxtocname: Document-Processing-SDKs-toc
 ---
 # Working with PowerPoint Tables
 

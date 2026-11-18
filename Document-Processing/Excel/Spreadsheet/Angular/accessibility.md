@@ -4,7 +4,7 @@ title: Accessibility in Angular Spreadsheet | Syncfusion
 description: Accessibility in Angular Spreadsheet supports keyboard navigation, screen readers, and ARIA attributes for an inclusive user experience.
 platform: document-processing
 control: Accessibility 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Accessibility in Angular Spreadsheet

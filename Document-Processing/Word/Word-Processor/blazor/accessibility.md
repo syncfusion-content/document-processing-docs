@@ -4,7 +4,7 @@ title: Accessibility in Blazor DOCX Editor | Syncfusion
 description: The accessibility support in Blazor DOCX Editor ensures keyboard navigation, screen reader compatibility, and an inclusive document editing experience.
 platform: document-processing
 control: DOCX Editor
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Accessibility in Blazor DOCX Editor

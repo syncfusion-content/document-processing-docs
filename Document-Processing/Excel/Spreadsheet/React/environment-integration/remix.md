@@ -4,7 +4,7 @@ title: Getting Started with React Spreadsheet in Remix | Syncfusion
 description: Learn how to get started with the Syncfusion React Spreadsheet component in a Remix project. Explore setup and configuration options.
 control: Spreadsheet
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with React Spreadsheet in Remix

@@ -4,7 +4,7 @@ description: Learn how to get started with the Syncfusion .NET PDF Library in AS
 platform: document-processing
 control: PDF
 documentation: ug
-keywords: pdf, aspnet core, web api, csharp
+keywords: pdf, aspnet core, web api, csharptocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with .NET PDF Library in ASP.NET Core Web API

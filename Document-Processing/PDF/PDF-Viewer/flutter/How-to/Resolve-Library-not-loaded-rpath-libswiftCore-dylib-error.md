@@ -4,7 +4,7 @@ title: How to fix library load error in Flutter PDF Viewer | Syncfusion
 description: This guide explains how to identify and resolve the library not loaded error encountered when using SfPdfViewer in Flutter applications.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to fix library load error in Flutter PDF Viewer

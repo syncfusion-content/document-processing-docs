@@ -5,7 +5,7 @@ description: Use text markup annotations in the Vue PDF Viewer, including highli
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Text Markup Annotations in Vue PDF Viewer

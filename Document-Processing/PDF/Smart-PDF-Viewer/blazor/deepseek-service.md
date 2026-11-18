@@ -4,7 +4,7 @@ title: Deepseek AI Service in Blazor App Smart PDF Viewer | Syncfusion
 description: Learn how to integrate and use the Syncfusion Smart PDF Viewer in a Blazor Web App with DeepSeek AI services.
 platform: document-processing
 control: SfSmartPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Deepseek AI Service in Blazor App Smart PDF Viewer

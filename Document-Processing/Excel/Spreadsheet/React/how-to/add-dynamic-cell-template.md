@@ -4,7 +4,7 @@ title: How to Create Dynamic Cell Templates in React Spreadsheet | Syncfusion
 description: Learn how to create dynamic cell templates in the Syncfusion React Spreadsheet component using dropdown-based templates.
 control: Spreadsheet 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Create Dynamic Cell Templates in React Spreadsheet

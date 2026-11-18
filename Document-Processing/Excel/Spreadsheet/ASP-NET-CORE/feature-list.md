@@ -4,7 +4,7 @@ title: Feature List in ASP.NET Core Spreadsheet | Syncfusion
 description: Learn here all about Feature List in Syncfusion ASP.NET Core Spreadsheet component of Syncfusion Essential JS 2 and more.
 platform: document-processing
 control: Feature List
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

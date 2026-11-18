@@ -4,7 +4,7 @@ description: The printing contents in WPF DOCX Editor offer an API to print rich
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: printing,print-dialog,print-completed,print-comments
+keywords: printing,print-dialog,print-completed,print-commentstocname: Document-Processing-SDKs-toc
 ---
 # Printing Contents in WPF DOCX Editor
 

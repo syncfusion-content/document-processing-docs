@@ -5,7 +5,7 @@ description: Add a custom save button to the toolbar in Syncfusion® TypeScript 
 platform: document-processing
 control: Add Save Button in Toolbar
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Add Save Button in Toolbar in TypeScript DOCX Editor

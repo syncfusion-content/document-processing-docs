@@ -5,7 +5,7 @@ description: Enable, draw, customize, and manage Ink (freehand) annotations in t
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Ink Annotation in Vue PDF Viewer

@@ -5,7 +5,7 @@ description: Show or hide loading indicators in Syncfusion® Vue DOCX Editor whe
 control: Show hide spinner 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Show and Hide Spinner in Vue DOCX Editor

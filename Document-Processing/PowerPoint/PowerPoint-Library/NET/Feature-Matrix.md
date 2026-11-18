@@ -3,7 +3,7 @@ title: Feature Matrix in .NET PowerPoint Library | Syncfusion
 description: Explore the supported features of Syncfusion® Essential PowerPoint for working with PowerPoint 2007–2016 and later OOXML presentations programmatically.
 platform: document-processing
 control: Presentation
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Feature Matrix in .NET PowerPoint Library

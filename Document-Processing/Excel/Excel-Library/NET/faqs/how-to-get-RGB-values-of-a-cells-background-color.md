@@ -3,7 +3,7 @@ title: How to Get Cell RGB Colors in .NET Excel Library | Syncfusion
 description: Get RGB values of a cell background color using the Syncfusion .NET Excel Library in an Excel worksheet cell style.
 platform: document-processing 
 control: XlsIO 
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to get RGB values in .NET Excel Library

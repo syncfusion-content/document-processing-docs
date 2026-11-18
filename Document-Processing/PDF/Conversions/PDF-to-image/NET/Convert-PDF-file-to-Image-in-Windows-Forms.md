@@ -4,7 +4,7 @@ description: Learn how to get started with the Syncfusion Windows Forms PDF to I
 platform: document-processing
 control: PDF to image
 documentation: UG
-keywords: Assemblies
+keywords: Assembliestocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with Windows Forms PDF to Image Library

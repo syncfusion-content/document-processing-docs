@@ -4,7 +4,7 @@ title: How to Show or Hide Annotations in ASP.NET Core PDF | Syncfusion
 description: Show or hide annotations in the ASP.NET Core PDF Viewer by exporting and importing annotations with a visibility flag for each annotation.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Show or Hide Annotations in ASP.NET Core PDF Viewer

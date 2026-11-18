@@ -5,7 +5,7 @@ description: Extract pages from a PDF in the React PDF Viewer using the Organize
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Extract Pages in React PDF Viewer

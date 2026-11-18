@@ -4,7 +4,7 @@ title: Getting Started with Flutter Excel Library | Syncfusion
 description: Learn how to get started with the Syncfusion Flutter Excel Library to create Excel documents with basic elements and save them in browsers or mobile devices.
 platform: document-processing
 control: Excel
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with Flutter Excel Library

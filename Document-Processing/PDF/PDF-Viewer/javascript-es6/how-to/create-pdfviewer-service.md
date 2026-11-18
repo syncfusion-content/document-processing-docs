@@ -5,7 +5,7 @@ description: Create a custom PDF Viewer web service for the JavaScript (ES6) PDF
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 # How to Create a Custom PDF Viewer Service in JavaScript (ES6) PDF
 

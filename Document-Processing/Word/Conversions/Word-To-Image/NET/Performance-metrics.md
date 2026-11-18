@@ -3,7 +3,7 @@ title: Word to Image Performance Benchmark in .NET Word | Syncfusion
 description: Explore the performance benchmark results of Word-to-Image conversion using the Syncfusion .NET Word Library across different operations and document sizes.
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Word to Image Performance Benchmark in .NET Word

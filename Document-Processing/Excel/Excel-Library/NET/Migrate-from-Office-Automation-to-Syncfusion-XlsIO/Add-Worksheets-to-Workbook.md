@@ -3,7 +3,7 @@ title: Worksheets in .NET Excel Library | Syncfusion
 description: Adding worksheets to template Excel documents explains how to update a workbook using Interop and Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Worksheets in .NET Excel Library

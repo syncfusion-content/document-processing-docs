@@ -3,7 +3,7 @@ title: FAQ Section in Java Word | Syncfusion
 description: Describe common questions and answers about using the Syncfusion Java Word library and its document processing features
 platform: document-processing
 control: Word Library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # FAQ Section in Java Word
 

@@ -3,7 +3,7 @@ title: Merged Cells and Row Insertion in .NET Excel Library | Syncfusion
 description: Format as Before or After behavior describes why cells are not merged when inserting rows or columns in Excel.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Cell Merging During Row and Column Insertions in .NET Excel Library

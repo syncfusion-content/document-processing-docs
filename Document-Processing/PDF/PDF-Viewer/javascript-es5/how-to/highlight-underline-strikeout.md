@@ -5,7 +5,7 @@ description: Highlight, underline, and strike out text in the JavaScript (ES5) P
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Highlight, Underline, or Strike Out Text in JavaScript (ES5)

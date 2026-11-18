@@ -5,7 +5,7 @@ description: Learn how to implement MVC PDF Viewer collaborative editing with th
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Collaborative Editing in MVC PDF Viewer with Node.js

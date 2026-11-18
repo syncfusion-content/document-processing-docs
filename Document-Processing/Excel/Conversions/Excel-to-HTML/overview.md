@@ -3,7 +3,7 @@ title: About Syncfusion .NET Excel to HTML Conversion | Syncfusion
 description: Learn about introduction of converting Excel workbooks or worksheets to HTML using the Syncfusion .NET Excel Library and more details.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion .NET Excel to HTML Conversion

@@ -3,7 +3,7 @@ title: Excel to PDF conversion in Microsoft Azure | Syncfusion
 description: Azure Excel to PDF section explains how to convert Excel documents to PDF in Azure using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Excel to PDF Conversion in Azure using Excel Library

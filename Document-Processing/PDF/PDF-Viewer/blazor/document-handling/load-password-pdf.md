@@ -5,7 +5,7 @@ description: Learn how to open password-protected PDF files in the Blazor PDF Vi
 control: SfPdfViewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Load Password Protected PDFs in Blazor PDF Viewer

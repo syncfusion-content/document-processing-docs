@@ -5,7 +5,7 @@ description: Download PDF files in the React PDF Viewer to a local device, with 
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Download PDF in React PDF Viewer

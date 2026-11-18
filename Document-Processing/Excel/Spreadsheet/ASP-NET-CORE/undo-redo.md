@@ -4,7 +4,7 @@ title: Undo and Redo in ASP.NET Core Spreadsheet | Syncfusion
 description: Learn about undo and redo operations in the Syncfusion ASP.NET Core Spreadsheet control, including reversing and restoring actions.
 platform: document-processing
 control: Undo Redo
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

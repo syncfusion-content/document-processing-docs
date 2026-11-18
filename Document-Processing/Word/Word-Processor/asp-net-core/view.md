@@ -4,7 +4,7 @@ title: View in ASP.NET Core DOCX Editor | Syncfusion
 description: View in ASP.NET Core DOCX Editor enables web layout, ruler display, and heading navigation to enhance document readability and navigation.
 platform: document-processing
 control: View
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # View in ASP.NET Core DOCX Editor

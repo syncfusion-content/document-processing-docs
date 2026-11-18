@@ -5,7 +5,7 @@ description: Understand why ej2-pdfviewer-lib assets must be copied from node_mo
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Why Manual File Copying Is Required in Vue PDF Viewer

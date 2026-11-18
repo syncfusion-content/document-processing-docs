@@ -5,7 +5,7 @@ description: Learn about introduction of the Syncfusion Vue PDF Viewer Organize 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion Vue PDF Viewer Organize Pages

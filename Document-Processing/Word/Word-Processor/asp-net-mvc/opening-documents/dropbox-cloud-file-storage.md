@@ -5,7 +5,7 @@ description: Open documents from Dropbox cloud storage in ASP.NET MVC DOCX Edito
 platform: document-processing
 control: Open document from Dropbox cloud file storage
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Open Documents from Dropbox in ASP.NET MVC DOCX Editor

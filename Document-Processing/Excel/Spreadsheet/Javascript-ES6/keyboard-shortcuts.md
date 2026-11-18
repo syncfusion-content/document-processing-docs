@@ -4,7 +4,7 @@ title: Keyboard Shortcuts in TypeScript Spreadsheet | Syncfusion
 description: Keyboard shortcuts in TypeScript Spreadsheet help users perform common actions quickly, improving productivity and navigation efficiency.
 platform: document-processing
 control: Keyboard shortcuts
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Keyboard shortcuts in TypeScript Spreadsheet 

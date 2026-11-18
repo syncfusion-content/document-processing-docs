@@ -5,7 +5,7 @@ description: Create a standalone Angular PDF Viewer in Angular 17 and above with
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Create a Standalone PDF Viewer in Angular 17 and Above in

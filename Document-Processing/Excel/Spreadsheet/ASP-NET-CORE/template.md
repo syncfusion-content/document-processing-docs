@@ -4,7 +4,7 @@ title: Cell Template in ASP.NET Core Spreadsheet | Syncfusion
 description: Learn about cell templates in the Syncfusion ASP.NET Core Spreadsheet control, including custom content and cell rendering options.
 platform: document-processing
 control: Template
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

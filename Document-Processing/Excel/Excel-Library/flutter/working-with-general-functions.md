@@ -4,7 +4,7 @@ title: Excel General Function Formulas in Flutter Excel Library | Syncfusion
 description: The Flutter Excel Library lets users use common Excel functions to calculate values in worksheet cells.
 platform: document-processing
 control: Excel
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # General Function Formulas in Flutter Excel Library

@@ -5,7 +5,7 @@ description: Configure ASP.NET MVC web services in the TypeScript DOCX Editor to
 platform: document-processing
 control: Mvc 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # ASP.NET MVC Web Service in TypeScript DOCX Editor

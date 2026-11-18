@@ -5,7 +5,7 @@ description: Enable and use magnification in the Angular PDF Viewer, including Z
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Magnification in Angular PDF Viewer

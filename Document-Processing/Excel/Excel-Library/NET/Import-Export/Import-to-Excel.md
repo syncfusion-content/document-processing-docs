@@ -3,7 +3,7 @@ title: Importing Worksheets in .NET Excel Library | Syncfusion
 description: Data import in Excel Library explains how to load data from DataTables, collections, arrays, grids, HTML tables, and XML files into Excel.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Importing Data to Worksheets in .NET Excel Library

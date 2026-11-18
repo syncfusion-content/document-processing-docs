@@ -4,7 +4,7 @@ title: Formatting in Windows Forms Spreadsheet control | Syncfusion®
 description: Apply cell formatting in Windows Forms Spreadsheet, including styles, number formats, alignment, borders, and appearance settings.
 platform: document-processing
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Formatting in Windows Forms Spreadsheet

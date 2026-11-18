@@ -4,7 +4,7 @@ title: Spreadsheet Comparison in WPF Spreadsheet Control | Syncfusion®
 description: Compare the WPF Spreadsheet control with the classic Spreadsheet control and explore feature enhancements, improvements, and differences.
 platform: document-processing
 control: SfSpreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 # Spreadsheet Comparison in WPF Spreadsheet
 

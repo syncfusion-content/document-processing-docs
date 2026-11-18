@@ -5,7 +5,7 @@ description: Save PDF files from the Angular PDF Viewer to OneDrive using a serv
 platform: document-processing
 control: Save PDF files to One Drive
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Save PDF Files to OneDrive in Angular PDF Viewer

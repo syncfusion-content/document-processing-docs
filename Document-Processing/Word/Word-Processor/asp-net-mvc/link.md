@@ -4,7 +4,7 @@ title: Hyperlinks in ASP.NET MVC DOCX Editor | Syncfusion
 description: The hyperlink feature in ASP.NET MVC DOCX Editor enables users to insert, edit, and manage hyperlinks for quick navigation to web pages or document locations.
 platform: document-processing
 control: Link
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

@@ -4,7 +4,7 @@ description: This section describes the required Syncfusion assemblies needed to
 platform: document-processing
 control: DataExtraction
 documentation: UG
-keywords: Assemblies
+keywords: Assembliestocname: Document-Processing-SDKs-toc
 ---
 # Assemblies Required in Data Extraction
 

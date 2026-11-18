@@ -5,7 +5,7 @@ description: Scaffold a Vite project and integrate the Syncfusion Vue PDF Viewer
 control: Getting Started application
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with Vue 3 PDF Viewer

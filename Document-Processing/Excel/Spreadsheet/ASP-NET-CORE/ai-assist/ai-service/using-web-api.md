@@ -4,7 +4,7 @@ title: AI Assist Web API Server in ASP.NET Core Spreadsheet | Syncfusion
 description: AI Assist Web API server setup in ASP.NET Core Spreadsheet explains how to configure and connect an ASP.NET Core Web API for AI-powered features.
 platform: document-processing
 control: AI Assist Web API Server Setup
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # AI Assist Web API Server Setup in ASP.NET Core Spreadsheet

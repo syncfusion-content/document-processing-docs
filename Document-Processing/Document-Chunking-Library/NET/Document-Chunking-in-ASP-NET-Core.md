@@ -3,7 +3,7 @@ title: Get Started with .NET Document Chunking in ASP.NET Core | Syncfusion
 description: Learn how to use the Syncfusion® .NET Document Chunking Library to chunk Excel, Word, PDF, PowerPoint, and Markdown documents in an ASP.NET Core application.
 platform: document-processing
 control: Chunking
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Get Started with .NET Document Chunking Library in ASP.NET Core

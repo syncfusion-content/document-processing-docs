@@ -5,7 +5,7 @@ description: Configure the minimum and maximum zoom levels in the Vue PDF Viewer
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Configure MinZoom and MaxZoom in Vue PDF Viewer

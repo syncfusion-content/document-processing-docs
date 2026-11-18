@@ -5,7 +5,7 @@ description: Customize the color picker appearance in Syncfusion® Vue DOCX Edit
 control: Customize color picker
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Customize Color Picker in Vue DOCX Editor

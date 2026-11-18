@@ -3,7 +3,7 @@ title: Assemblies required for .NET Markdown Library | Syncfusion
 description: Learn the required assemblies for creating, reading, editing, and processing Markdown documents in .NET applications.
 platform: document-processing
 control: Markdown
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Assemblies Required in .NET Markdown Library

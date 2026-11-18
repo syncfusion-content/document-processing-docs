@@ -3,7 +3,7 @@ title: Multiple Markers in .NET Excel Library | Syncfusion
 description: Multiple template markers explains whether Syncfusion .NET Excel Library allows more than one marker in a single Excel cell.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Multiple Markers in .NET Excel Library

@@ -5,7 +5,7 @@ description: Import and export annotations in the JavaScript (ES5) PDF Viewer as
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Import and Export Annotations in JavaScript (ES5) PDF Viewer

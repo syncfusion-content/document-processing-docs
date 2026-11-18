@@ -5,7 +5,7 @@ description: Add each PDF form field using the Vue PDF Viewer UI, and learn how 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Create Form Fields in Vue PDF Viewer

@@ -4,7 +4,7 @@ title: How to Prevent Actions in React Spreadsheet | Syncfusion
 description: Learn how to prevent unauthorized actions in the Syncfusion React Spreadsheet component using read-only mode and sheet protection.
 control: Spreadsheet
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Prevent Actions in React Spreadsheet

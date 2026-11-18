@@ -5,7 +5,7 @@ description: Track changes in JavaScript DOCX Editor records document modificati
 platform: document-processing
 control: Track changes 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Track Changes in JavaScript DOCX Editor

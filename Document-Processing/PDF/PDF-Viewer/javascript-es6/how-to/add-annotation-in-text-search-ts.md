@@ -4,7 +4,7 @@ title: How to Add Annotations From Text Search in JavaScript | Syncfusion
 description: Add annotations from text search results in the JavaScript (ES6) PDF Viewer by responding to text search events and using the search bounds.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Add Annotations From Text Search in JavaScript (ES6) PDF Viewer

@@ -4,7 +4,7 @@ title: Undo and Redo in ASP.NET MVC Spreadsheet | Syncfusion
 description: Learn how to revert and restore spreadsheet actions using undo and redo functionality in the Syncfusion ASP.NET MVC Spreadsheet.
 platform: document-processing
 control: Undo Redo
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

@@ -4,7 +4,7 @@ title: Context Menu in ASP.NET MVC Spreadsheet | Syncfusion
 description: Customize and use the context menu in the Syncfusion ASP.NET MVC Spreadsheet to access spreadsheet actions quickly.
 platform: document-processing
 control: Context Menu
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

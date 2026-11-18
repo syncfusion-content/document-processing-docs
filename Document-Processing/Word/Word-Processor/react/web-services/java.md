@@ -5,7 +5,7 @@ description: Configure Java web services in the React DOCX Editor to handle serv
 control: Java 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Java Web Service in React DOCX Editor

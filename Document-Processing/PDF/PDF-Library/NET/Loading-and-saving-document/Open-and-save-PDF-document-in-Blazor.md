@@ -4,7 +4,7 @@ description: Learn how to open and save PDF documents in Blazor applications usi
 platform: document-processing
 control: PDF
 documentation: UG
-keywords: blazor save pdf, blazor load pdf, c# save pdf, c# load pdf
+keywords: blazor save pdf, blazor load pdf, c# save pdf, c# load pdftocname: Document-Processing-SDKs-toc
 ---
 
 # Open and Save PDF Document in Blazor

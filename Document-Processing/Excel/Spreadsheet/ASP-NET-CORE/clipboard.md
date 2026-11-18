@@ -4,7 +4,7 @@ title: Clipboard in ASP.NET Core Spreadsheet | Syncfusion
 description: Learn about clipboard operations in the Syncfusion ASP.NET Core Spreadsheet control, including copy, cut, and paste actions for cell data.
 platform: document-processing
 control: Clipboard
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

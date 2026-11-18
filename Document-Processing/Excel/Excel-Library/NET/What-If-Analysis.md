@@ -3,7 +3,7 @@ title: What-If Analysis in .NET Excel Library | Syncfusion
 description: What-If Analysis Scenario Manager section describes how Syncfusion .NET Excel Library creates and manages scenarios in Excel worksheets.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # What-If Analysis in .NET Excel Library

@@ -4,7 +4,7 @@ title: Web Services in React Spreadsheet | Syncfusion
 description: Learn about connecting web services for open and save operations in the Syncfusion React Spreadsheet component.
 control: Web Services
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Web Services in React Spreadsheet

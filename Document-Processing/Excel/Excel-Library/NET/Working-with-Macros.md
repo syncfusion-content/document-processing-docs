@@ -3,7 +3,7 @@ title: Macros in .NET Excel Library | Syncfusion
 description: Macro operations section describes how to create, edit, remove, and perform macro operations in Excel.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Macros in .NET Excel Library
 

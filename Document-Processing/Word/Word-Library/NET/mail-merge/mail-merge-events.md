@@ -3,7 +3,7 @@ title: Mail merge events in .NET Word (DocIO) library | Syncfusion
 description: Learn how to work with mail merge events to customize the document contents and merging image during mail merge process using .NET Word (DocIO) library.
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Mail merge events in .NET Word library

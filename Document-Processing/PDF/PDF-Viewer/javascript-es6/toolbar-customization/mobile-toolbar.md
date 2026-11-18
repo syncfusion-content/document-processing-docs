@@ -5,7 +5,7 @@ description: Customize the mobile toolbar in the JavaScript (ES6) PDF Viewer to 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 # Customize the Mobile Toolbar in JavaScript (ES6) PDF Viewer
 

@@ -5,7 +5,7 @@ description: Open a default document in Syncfusion® JavaScript DOCX Editor duri
 platform: document-processing
 control: Open a Default Document
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Open a Default Document in JavaScript DOCX Editor

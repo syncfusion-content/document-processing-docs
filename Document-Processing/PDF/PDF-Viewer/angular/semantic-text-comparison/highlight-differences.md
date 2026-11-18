@@ -5,7 +5,7 @@ description: Learn how to highlight text differences in the Syncfusion Angular P
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Highlight Differences in Angular PDF Viewer UI

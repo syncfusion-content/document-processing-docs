@@ -5,7 +5,7 @@ description: Ribbon in ASP.NET Core DOCX Editor provides a tabbed command interf
 platform: document-processing
 control: DocumentEditor
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Ribbon in ASP.NET Core DOCX Editor

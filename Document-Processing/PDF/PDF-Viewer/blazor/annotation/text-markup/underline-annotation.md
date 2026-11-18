@@ -4,7 +4,7 @@ title: Underline Text in Blazor PDF Viewer | Syncfusion
 description: Learn how to enable, apply, customize, and manage Underline annotations in the Blazor PDF Viewer component and more details.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Underline Annotation in Blazor PDF Viewer 

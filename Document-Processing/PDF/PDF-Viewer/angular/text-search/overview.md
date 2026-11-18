@@ -5,7 +5,7 @@ description: Learn about introduction of the Syncfusion Angular PDF Viewer Text 
 platform: document-processing
 control: Text search
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion Angular PDF Viewer Text Search

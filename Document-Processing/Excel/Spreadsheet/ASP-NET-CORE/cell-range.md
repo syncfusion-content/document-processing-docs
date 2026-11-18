@@ -4,7 +4,7 @@ title: Cell Range in ASP.NET Core Spreadsheet | Syncfusion
 description: Learn about cell ranges in the Syncfusion ASP.NET Core Spreadsheet control, including selection, formatting, editing, and data operations.
 platform: document-processing
 control: Cell Range
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

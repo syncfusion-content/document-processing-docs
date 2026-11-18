@@ -5,7 +5,7 @@ description: Open or close the bookmark pane programmatically in the Vue PDF Vie
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Open or Hide the Bookmark Pane in Vue PDF Viewer

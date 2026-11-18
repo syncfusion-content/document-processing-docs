@@ -5,7 +5,7 @@ description: Handle import and export events in the Angular PDF Viewer to run cu
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Annotation Import and Export Events in Angular PDF Viewer

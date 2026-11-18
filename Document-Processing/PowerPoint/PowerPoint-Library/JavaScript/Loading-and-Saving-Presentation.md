@@ -3,7 +3,7 @@ title: Loading and Saving in JavaScript PowerPoint | Syncfusion
 description: Learn how to load, save, and modify PowerPoint presentations using the Syncfusion JavaScript PowerPoint Library.
 platform: document-processing
 control: PowerPoint
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Loading and Saving in JavaScript PowerPoint

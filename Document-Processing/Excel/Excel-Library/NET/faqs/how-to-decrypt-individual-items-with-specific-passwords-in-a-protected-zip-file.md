@@ -3,7 +3,7 @@ title: How to Decrypt Items in .NET Excel Library | Syncfusion
 description: Decrypt individual compressed items with specific passwords using Syncfusion.Compression.Base in .NET applications.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to decrypt items with passwords in .NET Excel Library

@@ -3,7 +3,7 @@ title: Client Profile Support in .NET Excel Library | Syncfusion
 description: Client Profile compatibility describes whether the Syncfusion .NET Excel Library works with Client Profile-based projects.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Client Profile Support in .NET Excel Library

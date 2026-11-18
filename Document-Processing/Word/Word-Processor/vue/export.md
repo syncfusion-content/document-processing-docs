@@ -5,7 +5,7 @@ description: The export feature in Vue DOCX Editor enables users to save and dow
 control: Export 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Export in Vue DOCX Editor

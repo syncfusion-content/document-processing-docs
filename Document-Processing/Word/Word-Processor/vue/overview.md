@@ -5,7 +5,7 @@ description: Learn about the introduction of Syncfusion Essential Studio Vue DOC
 control: Index 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion Vue DOCX Editor Control

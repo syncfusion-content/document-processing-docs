@@ -5,7 +5,7 @@ description: Learn how to duplicate pages using the Organize Pages UI in the Bla
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Duplicate Pages in Blazor PDF Viewer

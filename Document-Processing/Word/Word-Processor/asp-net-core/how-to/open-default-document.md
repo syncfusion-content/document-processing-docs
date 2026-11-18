@@ -4,7 +4,7 @@ title: Open a Default Document in ASP.NET Core DOCX Editor | Syncfusion
 description: Open a default document in Syncfusion® ASP.NET Core DOCX Editor during initialization to provide predefined content and streamline document editing workflows.
 platform: document-processing
 control: Open Default Document
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

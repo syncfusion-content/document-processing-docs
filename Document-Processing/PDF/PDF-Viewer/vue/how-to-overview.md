@@ -4,7 +4,7 @@ title: How to Overview of the Vue PDF Viewer | Syncfusion
 description: How-to overview of the Vue PDF Viewer in Syncfusion Vue PDF Viewer (SfPdfViewer) control, with its elements and more.
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Overview of the Vue PDF Viewer

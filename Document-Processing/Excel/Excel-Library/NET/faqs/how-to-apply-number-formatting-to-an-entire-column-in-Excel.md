@@ -3,7 +3,7 @@ title: How to Format Columns in .NET Excel Library | Syncfusion
 description: Apply number formatting to an entire Excel column using the Syncfusion .NET Excel Library for consistent column value display.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to apply column number formats in .NET Excel Library

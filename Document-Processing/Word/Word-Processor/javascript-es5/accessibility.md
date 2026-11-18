@@ -5,7 +5,7 @@ description: The accessibility support in JavaScript DOCX Editor ensures keyboar
 control: Accessibility 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Accessibility in JavaScript DOCX Editor

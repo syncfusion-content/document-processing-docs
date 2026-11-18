@@ -5,7 +5,7 @@ description: Enable, apply, customize, and manage Line annotations in the Angula
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Line Annotation in Angular PDF Viewer

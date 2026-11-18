@@ -4,7 +4,7 @@ title: Data Validation in React Spreadsheet | Syncfusion
 description: Learn about data validation in the Syncfusion React Spreadsheet component, including validation rules and input restrictions.
 platform: document-processing
 control: Data validation
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Data Validation in React Spreadsheet

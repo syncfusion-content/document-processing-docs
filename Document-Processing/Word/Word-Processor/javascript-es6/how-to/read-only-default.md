@@ -5,7 +5,7 @@ description: Open Syncfusion® TypeScript DOCX Editor in read-only mode to preve
 platform: document-processing
 control: Read-Only by Default
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Open TypeScript DOCX Editor in Read-Only Mode

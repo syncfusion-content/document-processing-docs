@@ -3,7 +3,7 @@ title: Actions in .NET PDF Library | Syncfusion
 description: Learn how to add document and form field actions in the .NET PDF Library, including Sound, JavaScript, URI, Launch, Named, Submit, and Reset.
 platform: document-processing
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Actions in .NET PDF Library
 

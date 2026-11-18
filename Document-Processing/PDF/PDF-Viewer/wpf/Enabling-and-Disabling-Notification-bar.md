@@ -4,7 +4,7 @@ title: Enable/Disable Notification bar in WPF Pdf Viewer | Syncfusion
 description: Enable and disable notification bar in Syncfusion WPF PDF Viewer to control error notifications. Learn notification bar configuration options.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Enable and Disable Notification bar in WPF Pdf Viewer

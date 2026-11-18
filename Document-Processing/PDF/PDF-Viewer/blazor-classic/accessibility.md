@@ -4,7 +4,7 @@ title: Accessibility in Blazor PDF Viewer Classic| Syncfusion
 description: Check out and learn here all about accessibility in the Syncfusion Blazor PDF Viewer component and much more details.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Accessibility in Syncfusion® Blazor PDF Viewer Classic

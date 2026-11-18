@@ -4,7 +4,7 @@ description: Extract PDF documents as Markdown using Smart Data Extractor. Conve
 platform: document-processing
 control: SmartDataExtractor
 documentation: UG
-keywords: Assemblies
+keywords: Assembliestocname: Document-Processing-SDKs-toc
 ---
 
 # Convert PDF to Markdown in .NET Smart Data Extractor

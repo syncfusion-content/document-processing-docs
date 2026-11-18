@@ -5,7 +5,7 @@ description: Learn about the Syncfusion Vue PDF Viewer Semantic Text Comparison 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Syncfusion Vue PDF Viewer Semantic Text Comparison

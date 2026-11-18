@@ -3,7 +3,7 @@ title: Available Syncfusion Java packages in Java Word | Syncfusion
 description: This section illustrates how to configure Gradle and download the required Syncfusion Java Word library packages
 platform: document-processing
 control: general
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Available Syncfusion Java packages in Java Word

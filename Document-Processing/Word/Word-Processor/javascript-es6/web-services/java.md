@@ -5,7 +5,7 @@ description: Configure Java web services in the TypeScript DOCX Editor to handle
 platform: document-processing
 control: Java 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Java Web Service in TypeScript DOCX Editor

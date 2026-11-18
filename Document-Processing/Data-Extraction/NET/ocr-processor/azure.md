@@ -4,7 +4,7 @@ description: Learn how to get started with the Syncfusion Azure OCR Processor. E
 platform: document-processing
 control: PDF
 documentation: UG
-keywords: Assemblies
+keywords: Assembliestocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with Azure OCR Processor

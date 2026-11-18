@@ -4,7 +4,7 @@ title: Limitations in WPF Spreadsheet control | Syncfusion®
 description: Learn about the known limitations in the WPF Spreadsheet control, including memory management considerations and supported workarounds.
 platform: document-processing
 control: SfSpreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Limitations in WPF Spreadsheet

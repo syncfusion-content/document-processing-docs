@@ -4,7 +4,7 @@ title: Worksheet in ASP.NET Core Spreadsheet | Syncfusion
 description: Learn about worksheets in the Syncfusion ASP.NET Core Spreadsheet control, including creating, managing, and organizing sheets.
 platform: document-processing
 control: Worksheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

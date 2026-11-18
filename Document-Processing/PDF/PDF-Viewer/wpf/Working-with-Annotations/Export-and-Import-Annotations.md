@@ -4,7 +4,7 @@ title: Export and Import Annotations in WPF Pdf Viewer | Syncfusion
 description: The export and import annotations feature in WPF PDF Viewer enables sharing annotation data in FDF and XFDF formats for seamless collaboration.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Exporting and Importing Annotations

@@ -4,7 +4,7 @@ title: How to Optimize SFDT Files in ASP.NET MVC DOCX Editor | Syncfusion
 description: Optimize SFDT files in Syncfusion® ASP.NET MVC DOCX Editor to reduce file size, improve performance, and enhance document loading and processing efficiency.
 platform: document-processing
 control: Optimize the SFDT file
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Optimize SFDT Files in ASP.NET MVC DOCX Editor

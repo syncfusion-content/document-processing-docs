@@ -5,7 +5,7 @@ description: Install and configure the Syncfusion Vue Spreadsheet MCP Server to 
 control: Spreadsheet
 platform: document-processing
 documentation: ug
-keywords: Vue Agentic UI Builder, MCP Server, search docs, Spreadsheet SDK, Server Packages
+keywords: Vue Agentic UI Builder, MCP Server, search docs, Spreadsheet SDK, Server Packagestocname: Document-Processing-SDKs-toc
 ---
 
 # MCP Server Setup in Vue Spreadsheet

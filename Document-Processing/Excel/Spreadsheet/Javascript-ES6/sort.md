@@ -4,7 +4,7 @@ title: Sorting in TypeScript Spreadsheet | Syncfusion
 description: Sorting in TypeScript Spreadsheet enables users to arrange data in ascending or descending order for easier analysis and organization.
 platform: document-processing
 control: Sort
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Sorting in TypeScript Spreadsheet 

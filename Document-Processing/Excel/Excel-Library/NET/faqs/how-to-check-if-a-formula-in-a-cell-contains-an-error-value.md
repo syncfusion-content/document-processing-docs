@@ -3,7 +3,7 @@ title: How to Check Formula Errors in .NET Excel Library | Syncfusion
 description: Check whether an Excel formula returns an error and access the related error value using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to check formula errors in .NET Excel Library

@@ -3,7 +3,7 @@ title: Security in .NET PowerPoint Presentation | Syncfusion
 description: Learn how to encrypt, decrypt, and secure PowerPoint presentations using the Syncfusion® .NET PowerPoint Presentation library.
 platform: document-processing
 control: Presentation
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Security in .NET PowerPoint Presentation
 

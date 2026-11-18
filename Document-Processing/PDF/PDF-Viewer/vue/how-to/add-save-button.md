@@ -5,7 +5,7 @@ description: Add, show, hide, enable, and disable a custom Save button in the bu
 control: Toolbar
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Add a Save Button to the Toolbar in Vue PDF Viewer

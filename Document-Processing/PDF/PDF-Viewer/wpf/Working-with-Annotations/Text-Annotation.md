@@ -4,7 +4,7 @@ title: Text Annotation in WPF Pdf Viewer control | Syncfusion
 description: The text annotation feature in WPF PDF Viewer adds free-form text boxes anywhere on a PDF page for inline notes, labels, or comments.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 # Text Annotation in WPF Pdf Viewer
 

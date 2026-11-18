@@ -5,7 +5,7 @@ description: Open a default document in Syncfusion® Angular DOCX Editor during 
 platform: document-processing
 control: Open default document
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Open a Default Document in Angular DOCX Editor

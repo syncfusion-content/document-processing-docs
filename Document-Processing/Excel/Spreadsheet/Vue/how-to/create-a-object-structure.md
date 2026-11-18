@@ -4,7 +4,7 @@ title: How to Create an Object Structure in Vue Spreadsheet | Syncfusion
 description: Create an object structure in Vue Spreadsheet to organize workbook data and manage spreadsheet content programmatically.
 control: Create a object structure 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Create an Object Structure in Vue Spreadsheet

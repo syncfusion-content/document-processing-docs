@@ -3,7 +3,7 @@ title: Limitations in Word-to-Image Conversion in .NET Word | Syncfusion
 description: Learn about the limitations in Word-to-Image conversion in C# using the .NET Word library for effective application.
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Limitations in Word-to-Image Conversion in .NET Word

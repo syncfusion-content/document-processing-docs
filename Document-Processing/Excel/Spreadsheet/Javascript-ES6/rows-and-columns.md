@@ -4,7 +4,7 @@ title: Rows and Columns in TypeScript Spreadsheet | Syncfusion
 description: Rows and columns in TypeScript Spreadsheet enable users to insert, delete, resize, and manage worksheet structure efficiently.
 platform: document-processing
 control: Rows and columns
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Rows and columns in TypeScript Spreadsheet 

@@ -3,7 +3,7 @@ title: Merge Word documents in .NET Word | Syncfusion
 description: Learn how to merge multiple Word documents into one using .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Merge Word documents in .NET Word
 

@@ -5,7 +5,7 @@ description: Configure the Angular PDF Viewer to load PDF documents and library 
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Load the PDF Viewer with Local Resources in Angular PDF Viewer

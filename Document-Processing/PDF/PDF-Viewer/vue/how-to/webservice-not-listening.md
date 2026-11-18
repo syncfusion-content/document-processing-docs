@@ -5,7 +5,7 @@ description: Resolve the Web-service is not listening error in the Vue PDF Viewe
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Resolve the Web-Service Is Not Listening Error in Vue PDF

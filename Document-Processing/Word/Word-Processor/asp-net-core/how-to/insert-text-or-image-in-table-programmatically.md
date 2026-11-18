@@ -4,7 +4,7 @@ title: Insert Text or Image in Table in ASP.NET Core DOCX Editor | Syncfusion
 description: Insert text, paragraphs, and rich text content at the current cursor position in Syncfusion® ASP.NET Core DOCX Editor using document editing APIs.
 platform: document-processing
 control: Insert Text Or Image In Table
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Insert Text or Image in Table in ASP.NET Core DOCX Editor

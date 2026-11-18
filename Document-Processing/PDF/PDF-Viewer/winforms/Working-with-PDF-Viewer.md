@@ -4,7 +4,7 @@ title: PdfViewerControl in WinForms PDF Viewer | Syncfusion
 description: The PdfViewerControl feature enables users to load, view, navigate, and interact with PDF documents in Windows Forms applications.
 platform: document-processing
 control: PdfViewerControl
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # PdfViewerControl in WinForms PDF Viewer

@@ -5,7 +5,7 @@ description: Get selected content as plain text and SFDT rich text in Syncfusion
 control: Get the selected content
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Get Selected Content in React DOCX Editor

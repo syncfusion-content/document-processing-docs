@@ -3,7 +3,7 @@ title: FAQs in PowerPoint to PDF Conversion | Syncfusion
 description: Learn about the frequently asked questions of PowerPoint to PDF conversion in the .NET PowerPoint (Presentation) library.
 platform: document-processing
 control: PowerPoint
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # FAQs in PowerPoint to PDF Conversion

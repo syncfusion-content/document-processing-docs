@@ -4,7 +4,7 @@ title: Formulas in ASP.NET Core Spreadsheet | Syncfusion
 description: Learn about formulas in the Syncfusion ASP.NET Core Spreadsheet control, including built-in functions, calculations, and formula support.
 platform: document-processing
 control: Formulas
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

@@ -4,7 +4,7 @@ title: Excel Charts in Flutter Excel Library | Syncfusion
 description: The Flutter Excel Library lets users create and customize Excel charts to visually represent worksheet data.
 platform: document-processing
 control: Excel
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Excel Charts in Flutter Excel Library

@@ -5,7 +5,7 @@ description: Change the document view to web layout or print layout in Syncfusio
 control: Change document view 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Change Document View in Vue DOCX Editor

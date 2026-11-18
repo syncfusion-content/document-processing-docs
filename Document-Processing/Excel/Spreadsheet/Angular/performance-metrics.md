@@ -4,7 +4,7 @@ title: Performance Metrics in Angular Spreadsheet | Syncfusion
 description: Performance metrics in Angular Spreadsheet provide benchmark results, measurements, and environment details to evaluate control performance.
 platform: document-processing
 control: Performance
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Performance Metrics in Angular Spreadsheet 

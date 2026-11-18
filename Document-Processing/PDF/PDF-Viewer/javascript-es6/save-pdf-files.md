@@ -5,7 +5,7 @@ description: Save edited or annotated PDFs from the JavaScript (ES6) PDF Viewer 
 platform: document-processing
 control: Saving PDF files
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Save PDF Files in JavaScript (ES6) PDF Viewer

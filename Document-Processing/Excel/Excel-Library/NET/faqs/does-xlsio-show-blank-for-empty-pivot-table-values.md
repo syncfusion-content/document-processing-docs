@@ -3,7 +3,7 @@ title: How to Show Blank Pivot Values in .NET Excel Library | Syncfusion
 description: Handle blank cells in pivot table describes how to show the blank cells in the pivot table using the word "blank"
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to display "(Blank)" in pivot tables in .NET Excel Library

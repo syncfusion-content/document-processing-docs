@@ -3,7 +3,7 @@ title: Pivot Table Formatting in .NET Excel Library | Syncfusion
 description: Style and format pivot tables in an Excel document using the Syncfusion .NET Excel Library for pivot table appearance.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Styles and Formatting in .NET Excel Library

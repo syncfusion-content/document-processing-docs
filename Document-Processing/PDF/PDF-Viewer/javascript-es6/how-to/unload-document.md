@@ -5,7 +5,7 @@ description: Unload the current document in the JavaScript (ES6) PDF Viewer to f
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Unload a Document in JavaScript (ES6) PDF Viewer

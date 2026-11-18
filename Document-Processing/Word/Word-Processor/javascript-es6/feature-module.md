@@ -5,7 +5,7 @@ description: Modules in TypeScript DOCX Editor enable selective injection of edi
 platform: document-processing
 control: Feature Module
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Feature Modules in TypeScript DOCX Editor

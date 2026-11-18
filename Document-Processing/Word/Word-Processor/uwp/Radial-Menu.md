@@ -4,7 +4,7 @@ description: The radial menu in UWP DOCX Editor offers built-in rich text format
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: radial-menu,sf-radial-menu
+keywords: radial-menu,sf-radial-menutocname: Document-Processing-SDKs-toc
 ---
 # Radial Menu in UWP DOCX Editor
 

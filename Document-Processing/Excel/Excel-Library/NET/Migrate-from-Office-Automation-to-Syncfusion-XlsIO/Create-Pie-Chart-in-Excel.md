@@ -3,7 +3,7 @@ title: Pie Charts in .NET Excel Library | Syncfusion
 description: Creating Excel pie charts programmatically explains how to create and position pie charts using Interop and Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Pie Charts in .NET Excel Library

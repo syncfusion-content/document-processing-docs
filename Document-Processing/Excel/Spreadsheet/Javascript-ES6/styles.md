@@ -4,7 +4,7 @@ title: Styles in TypeScript Spreadsheet | Syncfusion
 description: Styles in TypeScript Spreadsheet enable users to customize cell appearance with fonts, colors, borders, and formatting options.
 platform: document-processing
 control: Styles
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Styles in TypeScript Spreadsheet 

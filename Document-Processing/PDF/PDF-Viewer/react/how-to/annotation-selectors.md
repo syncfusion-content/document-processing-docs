@@ -5,7 +5,7 @@ description: Customize annotation selectors in the React PDF Viewer using annota
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Customize Annotation Selectors in React PDF Viewer

@@ -5,7 +5,7 @@ description: Lock form fields in the Angular PDF Viewer so users cannot edit or 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Lock Form Fields in Angular PDF Viewer

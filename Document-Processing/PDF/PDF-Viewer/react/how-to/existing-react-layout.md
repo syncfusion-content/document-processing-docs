@@ -5,7 +5,7 @@ description: Embed the React PDF Viewer into existing React layouts such as tabs
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Integrate the PDF Viewer Into Existing Layouts in React PDF

@@ -4,7 +4,7 @@ description: Paste a WordDocument from the .NET Word library (DocIO) into the Sy
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: paste-WordDocument-from-DocIO,paste,worddocument,docio,pastecommand
+keywords: paste-WordDocument-from-DocIO,paste,worddocument,docio,pastecommandtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Paste a WordDocument from DocIO in UWP DOCX Editor

@@ -3,7 +3,7 @@ title: Office Automation Migration in .NET Excel Library | Syncfusion
 description: Excel Interop migration page describes how to move from Microsoft Excel Interop to Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Office Automation Migration in .NET Excel Library

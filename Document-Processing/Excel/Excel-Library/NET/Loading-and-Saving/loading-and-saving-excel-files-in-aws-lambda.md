@@ -3,7 +3,7 @@ title: Loading and Saving Excel in AWS Lambda | Syncfusion
 description: AWS Lambda Excel file handling section explains how to load and save Excel files in AWS Lambda using the Syncfusion .NET Excel Library without Microsoft Excel.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Loading and Saving Files in AWS Lambda

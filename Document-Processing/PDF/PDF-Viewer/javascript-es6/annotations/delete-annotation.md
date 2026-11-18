@@ -5,7 +5,7 @@ description: Remove annotations from PDFs in the JavaScript (ES6) PDF Viewer usi
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Remove Annotations in JavaScript (ES6) PDF Viewer

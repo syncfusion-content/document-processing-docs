@@ -3,7 +3,7 @@ title: Getting Started with Java Word Library | Syncfusion
 description: Learn how to get started with the Syncfusion Java Word Library. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: Word Library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Supported and Unsupported Features in Java Word
 

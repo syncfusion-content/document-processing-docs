@@ -3,7 +3,7 @@ title: Worksheet Activation in .NET Excel Library | Syncfusion
 description: Worksheet activation in a workbook explains how to programmatically activate a worksheet using Interop and Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Worksheet Activation in .NET Excel Library

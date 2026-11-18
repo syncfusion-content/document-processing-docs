@@ -5,7 +5,7 @@ description: The keyboard shortcuts feature in TypeScript DOCX Editor enables us
 platform: document-processing
 control: Keyboard shortcut 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Keyboard Shortcuts in TypeScript DOCX Editor

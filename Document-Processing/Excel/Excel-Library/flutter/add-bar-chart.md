@@ -4,7 +4,7 @@ title: Bar Chart in Flutter Excel Library | Syncfusion
 description: The Flutter Excel Library allows users create, add, and customize bar charts in Excel worksheets with chart options.
 platform: document-processing
 control: Excel
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Bar Chart in Syncfusion Excel Library

@@ -4,7 +4,7 @@ title: Accessibility in ASP.NET MVC Spreadsheet | Syncfusion
 description: Learn about accessibility support in the Syncfusion ASP.NET MVC Spreadsheet, including WAI-ARIA attributes, screen reader support, and keyboard navigation.
 platform: document-processing
 control: Accessibility
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Accessibility in ASP.NET MVC Spreadsheet

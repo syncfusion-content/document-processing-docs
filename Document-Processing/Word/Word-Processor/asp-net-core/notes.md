@@ -4,7 +4,7 @@ title: Footnotes and Endnotes in ASP.NET Core DOCX Editor | Syncfusion
 description: The footnote and endnote support in ASP.NET Core DOCX Editor enables users to insert, edit, and manage references for additional document information.
 platform: document-processing
 control: Notes
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

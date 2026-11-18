@@ -3,7 +3,7 @@ layout: post
 title: Clipboard in Blazor Spreadsheet | Syncfusion
 description: Explore clipboard operations in the Syncfusion Blazor Spreadsheet, including cut, copy, and paste functionality.
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Clipboard in Blazor Spreadsheet

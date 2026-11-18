@@ -5,7 +5,7 @@ description: Intercept and control file downloads in the React PDF Viewer using 
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Control File Downloads in React PDF Viewer

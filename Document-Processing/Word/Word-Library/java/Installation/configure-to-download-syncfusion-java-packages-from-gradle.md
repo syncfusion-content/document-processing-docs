@@ -3,7 +3,7 @@ title: Download Syncfusion Java packages from Gradle in Java | Syncfusion
 description: This section illustrates how to configure Gradle and download the required Syncfusion Java Word library packages
 platform: document-processing
 control: general
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Download Syncfusion Java packages from Gradle in Java
 

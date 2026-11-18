@@ -5,7 +5,7 @@ description: Load PDF files in the Angular PDF Viewer from URLs, Base64 strings,
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Open PDF Files in Angular PDF Viewer

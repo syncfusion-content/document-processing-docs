@@ -4,7 +4,7 @@ title: Smart Fill in Blazor Smart PDF Viewer | Syncfusion
 description: Discover how Smart Fill enhances form filling in the Syncfusion Blazor SfSmartPdfViewer by automatically detecting and populating PDF form fields.
 platform: document-processing
 control: SfSmartPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Smart Fill in Blazor Smart PDF Viewer

@@ -3,7 +3,7 @@ title: Chart Series in .NET Excel Library | Syncfusion
 description: Chart series settings describes how the Syncfusion .NET Excel Library creates and formats data series in Excel charts.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Chart Series in .NET Excel Library

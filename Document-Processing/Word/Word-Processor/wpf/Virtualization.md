@@ -4,7 +4,7 @@ description: The virtualization in WPF DOCX Editor offers UI Virtualization supp
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: virtualization,ui-virtualization,performance,scrolling
+keywords: virtualization,ui-virtualization,performance,scrollingtocname: Document-Processing-SDKs-toc
 ---
 # Virtualization in WPF DOCX Editor
 

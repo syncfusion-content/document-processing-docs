@@ -5,7 +5,7 @@ description: Configure ASP.NET MVC web services in the React DOCX Editor to hand
 control: Mvc 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # ASP.NET MVC Web Service in React DOCX Editor

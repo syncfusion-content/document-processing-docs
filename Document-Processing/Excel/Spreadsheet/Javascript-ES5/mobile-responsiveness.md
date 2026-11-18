@@ -4,7 +4,7 @@ title: Mobile responsiveness in JavaScript Spreadsheet | Syncfusion
 description: Mobile responsiveness in JavaScript Spreadsheet adapts layouts and interactions for touch devices, ensuring a seamless user experience across screens.
 platform: document-processing
 control: Mobile responsiveness
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Mobile responsiveness in JavaScript Spreadsheet

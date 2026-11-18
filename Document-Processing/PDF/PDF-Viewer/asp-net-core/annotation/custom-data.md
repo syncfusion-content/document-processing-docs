@@ -5,7 +5,7 @@ description: Attach custom metadata to annotations in the ASP.NET Core PDF Viewe
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Custom Data in Annotations in ASP.NET Core PDF Viewer

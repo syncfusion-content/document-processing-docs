@@ -4,7 +4,7 @@ title: Docker image deployment in React Spreadsheet | Syncfusion
 description: Learn about Docker image deployment for the Syncfusion React Spreadsheet component and Spreadsheet Server services.
 platform: document-processing
 control: Docker deployment 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Docker Image Deployment in React Spreadsheet

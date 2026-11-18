@@ -4,7 +4,7 @@ title: View in Blazor DOCX Editor | Syncfusion
 description: View in Blazor DOCX Editor enables web layout, ruler display, and heading navigation to enhance document readability and navigation.
 platform: document-processing
 control: DOCX Editor
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # View in Blazor DOCX Editor

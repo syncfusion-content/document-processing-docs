@@ -4,7 +4,7 @@ title: Cell Templates in ASP.NET MVC Spreadsheet | Syncfusion
 description: Customize spreadsheet cells with templates in the Syncfusion ASP.NET MVC Spreadsheet for enhanced presentation.
 platform: document-processing
 control: Template
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

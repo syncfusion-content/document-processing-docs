@@ -5,7 +5,7 @@ description: Configure the minimum and maximum zoom levels in the ASP.NET MVC PD
 platform: document-processing
 control: PDF Viewer
 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Configure MinZoom and MaxZoom in ASP.NET MVC PDF Viewer

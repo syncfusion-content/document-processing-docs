@@ -3,7 +3,7 @@ title: Named Ranges in JavaScript Excel Library | Syncfusion
 description: Add, look up, update, and remove defined names (named ranges) with the Syncfusion JavaScript Excel Library.
 platform: document-processing
 control: Excel
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Named Ranges in JavaScript Excel

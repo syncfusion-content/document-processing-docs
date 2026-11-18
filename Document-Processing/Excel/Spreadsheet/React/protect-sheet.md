@@ -4,7 +4,7 @@ title: Protect Sheet in React Spreadsheet | Syncfusion
 description: Learn about sheet protection in the Syncfusion React Spreadsheet component, including protecting worksheets and restricting edits.
 control: Protect sheet 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Protect Sheet in React Spreadsheet

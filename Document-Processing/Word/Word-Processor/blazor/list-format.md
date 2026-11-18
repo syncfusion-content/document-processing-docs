@@ -4,7 +4,7 @@ title: List Format in Blazor DOCX Editor | Syncfusion
 description: The list format feature in Blazor DOCX Editor enables users to create and customize bulleted and numbered lists for organized document content.
 platform: document-processing
 control: DOCX Editor
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # List Format in Blazor DOCX Editor

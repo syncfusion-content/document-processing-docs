@@ -5,7 +5,7 @@ description: The export feature in TypeScript DOCX Editor enables users to save 
 platform: document-processing
 control: Export
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Export in TypeScript DOCX Editor

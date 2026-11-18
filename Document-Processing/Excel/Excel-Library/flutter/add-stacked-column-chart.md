@@ -4,7 +4,7 @@ title: Stacked Column Chart in Flutter Excel Library | Syncfusion
 description: The Flutter Excel Library allows users create and customize stacked column charts in Excel worksheets.
 platform: document-processing
 control: Excel
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Stacked Column Chart in Syncfusion Excel Library

@@ -4,7 +4,7 @@ title: Clipboard in Angular Spreadsheet | Syncfusion
 description: Clipboard in Angular Spreadsheet enables copying, cutting, and pasting cell data efficiently while preserving formatting and content.
 platform: document-processing
 control: Clipboard
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Clipboard in Angular Spreadsheet 

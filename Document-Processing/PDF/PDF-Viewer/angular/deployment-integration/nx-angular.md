@@ -5,7 +5,7 @@ description: Learn about the nx angular in the Angular PDF Viewer and how it hel
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Nx Angular in Angular PDF Viewer

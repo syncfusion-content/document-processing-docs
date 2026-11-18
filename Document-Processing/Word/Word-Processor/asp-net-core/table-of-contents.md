@@ -4,7 +4,7 @@ title: Table of Contents in ASP.NET Core DOCX Editor | Syncfusion
 description: The Table of Contents feature in ASP.NET Core DOCX Editor enables users to generate and update a structured index for quick document navigation.
 platform: document-processing
 control: Table Of Contents
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

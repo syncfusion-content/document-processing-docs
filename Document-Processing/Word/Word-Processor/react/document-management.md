@@ -5,7 +5,7 @@ description: Document management in React DOCX Editor provides editing restricti
 control: Document management 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Document Management in React DOCX Editor

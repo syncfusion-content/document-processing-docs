@@ -5,7 +5,7 @@ description: Learn how to add real-time collaborative editing to the Syncfusion 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Collaborative Editing in JavaScript PDF Viewer with ASP.NET Core

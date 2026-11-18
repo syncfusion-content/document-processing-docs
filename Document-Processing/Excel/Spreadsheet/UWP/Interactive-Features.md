@@ -4,7 +4,7 @@ title: Interactive Features in UWP Spreadsheet control | Syncfusion®
 description: Use interactive options in UWP Spreadsheet control such as clipboard operations, undo or redo, context menus, and cell comments.
 platform: document-processing
 control: SfSpreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Interactive Features in UWP Spreadsheet 

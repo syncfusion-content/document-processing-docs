@@ -4,7 +4,7 @@ description: This section illustrates how to find a particular text and replace 
 platform: document-processing
 control: Presentation
 documentation: UG
-keywords: find, replace, regex, highlight, PowerPoint, .NET, Syncfusion, presentation, text, search
+keywords: find, replace, regex, highlight, PowerPoint, .NET, Syncfusion, presentation, text, searchtocname: Document-Processing-SDKs-toc
 ---
 # Working with Find and Replace
 

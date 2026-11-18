@@ -4,7 +4,7 @@ description: The selection in WPF DOCX Editor supports selecting a portion of th
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: selection,cursor,selection-range,text-position,lost-focus,baseline-alignment
+keywords: selection,cursor,selection-range,text-position,lost-focus,baseline-alignmenttocname: Document-Processing-SDKs-toc
 ---
 # Selection in WPF DOCX Editor
 

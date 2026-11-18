@@ -5,7 +5,7 @@ description: Learn how to remove/delete PDF annotations in Blazor PDF Viewer usi
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Remove annotations in Blazor PDF Viewer 

@@ -5,7 +5,7 @@ description: Handle the signatureSelect and signatureUnselect events in the Angu
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Handle Signature Select and Unselect Events in Angular PDF

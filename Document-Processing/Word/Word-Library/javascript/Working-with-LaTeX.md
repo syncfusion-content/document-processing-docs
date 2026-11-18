@@ -3,7 +3,7 @@ title: LaTeX in Word document in JavaScript Word | Syncfusion
 description: Learn how to create mathematical equations in a Word document using LaTeX with the JavaScript Word library without Microsoft Word.
 platform: document-processing
 control: Word Library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # LaTeX Equation in Word document in JavaScript Word Library

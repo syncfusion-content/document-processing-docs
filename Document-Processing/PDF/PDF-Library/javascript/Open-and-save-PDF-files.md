@@ -5,7 +5,7 @@ canonical_url: https://www.syncfusion.com/document-sdk/javascript-pdf-library
 description: Load and save PDF documents using Base64 strings or Uint8Array data with the Syncfusion JavaScript PDF Library.
 platform: document-processing
 control: PDF
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Open and Save PDF files in JavaScript PDF

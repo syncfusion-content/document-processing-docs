@@ -4,7 +4,7 @@ title: Combo Box (Dropdown) Form Control in React Spreadsheet | Syncfusion
 description: Learn about Combo Box (Dropdown) form control in the Syncfusion React Spreadsheet component, including input ranges, cell links, and configuration.
 control: Form Controls
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Combo Box (Dropdown) Form Control in React Spreadsheet

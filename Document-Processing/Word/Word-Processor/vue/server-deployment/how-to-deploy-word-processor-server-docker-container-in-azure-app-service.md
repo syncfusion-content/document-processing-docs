@@ -5,7 +5,7 @@ description: Deploy the Syncfusion® Vue DOCX Editor Docker image to Azure App S
 control: How to deploy word processor server docker container in azure app service 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 # How to Deploy Vue DOCX Editor Docker image on Azure App
 

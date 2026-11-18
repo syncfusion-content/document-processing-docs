@@ -4,7 +4,7 @@ title: Disable Header Footer Editing in ASP.NET MVC DOCX Editor | Syncfusion
 description: Disable header and footer editing in Syncfusion® ASP.NET MVC DOCX Editor based on selection context to restrict modifications within document sections.
 platform: document-processing
 control: Disable Header And Footer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Disable Header and Footer Editing in ASP.NET MVC DOCX Editor

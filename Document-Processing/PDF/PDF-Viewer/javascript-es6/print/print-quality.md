@@ -5,7 +5,7 @@ description: Customize the print quality of PDF documents in the JavaScript (ES6
 platform: document-processing
 control: Print
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Customize Print Quality in JavaScript (ES6) PDF Viewer

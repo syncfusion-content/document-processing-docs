@@ -5,7 +5,7 @@ description: Optimize SFDT files in Syncfusion® JavaScript DOCX Editor to reduc
 platform: document-processing
 control: Optimize SFDT
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Optimize SFDT Files in JavaScript DOCX Editor

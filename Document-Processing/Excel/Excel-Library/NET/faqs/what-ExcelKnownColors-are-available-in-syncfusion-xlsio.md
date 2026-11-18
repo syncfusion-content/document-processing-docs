@@ -3,7 +3,7 @@ title: Known Colors in .NET Excel Library | Syncfusion
 description: ExcelKnownColors reference describes the available known colors with names and color images for quick lookup.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # ExcelKnownColors in .NET Excel Library

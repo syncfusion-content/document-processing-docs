@@ -5,7 +5,7 @@ description: Use the extractText method in the Vue PDF Viewer to extract text an
 control: Extract Text
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Use the ExtractText Method in Vue PDF Viewer

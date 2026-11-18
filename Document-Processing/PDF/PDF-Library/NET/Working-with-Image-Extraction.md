@@ -3,7 +3,7 @@ title: Image Extraction in .NET PDF Library | Syncfusion
 description: Learn how to extract images and image information from a PDF document using the Syncfusion .NET PDF Library.
 platform: document-processing
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Image Extraction in .NET PDF Library
 

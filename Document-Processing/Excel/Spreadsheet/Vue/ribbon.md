@@ -4,7 +4,7 @@ title: Ribbon in Vue Spreadsheet | Syncfusion
 description: Customize and use the ribbon interface in the Syncfusion Vue Spreadsheet to access spreadsheet features efficiently.
 control: Ribbon 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Ribbon in Vue Spreadsheet

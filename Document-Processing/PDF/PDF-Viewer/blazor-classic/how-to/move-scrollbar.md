@@ -4,7 +4,7 @@ title: Move the scrollbar to the exact location of annotations | Syncfusion
 description: Learn here all about move scrollbar to the exact location of annotations in Syncfusion Blazor PDF Viewer component and more.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Move the scrollbar to the exact location of annotations

@@ -3,7 +3,7 @@ title: Document in .NET PDF Library | Syncfusion
 description: Learn about Syncfusion .NET PDF page setup, sections, document properties, viewer preferences, and compression features.
 platform: document-processing
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Document in .NET PDF Library
 

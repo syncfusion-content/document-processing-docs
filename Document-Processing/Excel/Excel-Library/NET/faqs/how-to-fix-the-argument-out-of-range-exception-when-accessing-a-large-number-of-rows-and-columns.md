@@ -3,7 +3,7 @@ title: How to Avoid Row and Column Exceptions in .NET Excel | Syncfusion
 description: Fix ArgumentOutOfRangeException when accessing a large number of rows and columns in the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to fix range errors in .NET Excel Library

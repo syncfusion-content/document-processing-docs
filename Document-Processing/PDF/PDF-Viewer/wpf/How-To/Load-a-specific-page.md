@@ -4,7 +4,7 @@ title: How to Load a specific page in WPF PDF Viewer| Syncfusion
 description: Load a specific page ranges in loaded document in Syncfusion WPF PDF Viewer control using GoToPageAtIndex method.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Load a specific page in WPF PDF Viewer

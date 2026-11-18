@@ -3,7 +3,7 @@ title: Working with Fields in JavaScript Word | Syncfusion
 description: Learn how to format fields, get field codes, and add IF and merge fields in a Word document using the Syncfusion JavaScript Word library.
 platform: document-processing
 control: Word Library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Working with Fields in JavaScript Word Library

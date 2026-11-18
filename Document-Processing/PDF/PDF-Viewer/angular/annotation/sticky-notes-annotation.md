@@ -5,7 +5,7 @@ description: Learn about the sticky notes annotation in the Angular PDF Viewer a
 platform: document-processing
 control: Sticky notes annotation
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Sticky Notes Annotation in Angular PDF Viewer

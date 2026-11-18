@@ -4,7 +4,7 @@ title: Filtering in ASP.NET MVC Spreadsheet | Syncfusion
 description: Learn how to filter spreadsheet data in the Syncfusion ASP.NET MVC Spreadsheet for improved analysis and data organization.
 platform: document-processing
 control: Filter
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

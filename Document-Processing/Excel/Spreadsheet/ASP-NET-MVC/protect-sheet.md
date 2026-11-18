@@ -4,7 +4,7 @@ title: Protection in ASP.NET MVC Spreadsheet | Syncfusion
 description: Secure worksheets and cells by using protection features in the Syncfusion ASP.NET MVC Spreadsheet component.
 platform: document-processing
 control: Protect Sheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

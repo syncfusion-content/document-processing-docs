@@ -3,7 +3,7 @@ title: Mail merge options in Java Word | Syncfusion
 description: Describe how to migrate from Microsoft Office Automation to the Syncfusion .NET Word library
 platform: document-processing
 control: Word Library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Mail merge options in Java Word

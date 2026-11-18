@@ -5,7 +5,7 @@ description: Right-to-left support in JavaScript DOCX Editor enables RTL user in
 platform: document-processing
 control: Right to Left
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Right to Left in JavaScript DOCX Editor

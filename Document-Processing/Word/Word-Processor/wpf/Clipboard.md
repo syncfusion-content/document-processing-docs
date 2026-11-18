@@ -4,7 +4,7 @@ description: The clipboard in WPF DOCX Editor offers copy and paste support in r
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: clipboard
+keywords: clipboardtocname: Document-Processing-SDKs-toc
 ---
 # Clipboard in WPF DOCX Editor
 

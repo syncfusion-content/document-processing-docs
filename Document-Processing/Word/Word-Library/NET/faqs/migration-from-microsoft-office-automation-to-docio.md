@@ -3,7 +3,7 @@ title: Migration from Office Automation to DocIO in .NET Word | Syncfusion
 description: Describe how to migrate from Microsoft Office Automation to the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Migration from Office Automation to DocIO in .NET Word
 

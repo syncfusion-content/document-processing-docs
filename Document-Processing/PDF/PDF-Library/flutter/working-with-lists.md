@@ -4,7 +4,7 @@ title: Bullets and Lists in Flutter PDF Library | Syncfusion
 description: Learn how to add ordered and unordered lists and bullets in PDF documents using Syncfusion Flutter PDF non-UI Library.
 platform: document-processing
 control: PDF
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Bullets and Lists in Flutter PDF

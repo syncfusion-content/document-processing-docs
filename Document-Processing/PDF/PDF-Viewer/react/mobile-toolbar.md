@@ -5,7 +5,7 @@ description: The mobile toolbar in the React PDF Viewer adapts the touch interfa
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 # Mobile Toolbar in React PDF Viewer
 

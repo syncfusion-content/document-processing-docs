@@ -5,7 +5,7 @@ description: Deploy the Syncfusion® JavaScript DOCX Editor Docker image to Amaz
 platform: document-processing
 control: How to deploy word processor server docker container in amazon kubernetes service 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 # How to Deploy JavaScript DOCX Editor Docker Image on Amazon Kubernetes
 

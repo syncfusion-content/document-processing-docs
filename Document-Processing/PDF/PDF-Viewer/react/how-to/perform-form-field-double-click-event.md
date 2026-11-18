@@ -5,7 +5,7 @@ description: Handle the form field double-click event in the React PDF Viewer to
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Handle the Form Field Double-Click Event in React PDF Viewer

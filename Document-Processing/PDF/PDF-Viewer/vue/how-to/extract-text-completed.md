@@ -5,7 +5,7 @@ description: Use the extractTextCompleted event and isExtractText property in th
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Handle the ExtractTextCompleted Event in Vue PDF Viewer

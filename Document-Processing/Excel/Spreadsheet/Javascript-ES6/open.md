@@ -4,7 +4,7 @@ title: Open in TypeScript Spreadsheet | Syncfusion
 description: Open in TypeScript Spreadsheet enables users to import and load workbook files for viewing, editing, and data management.
 platform: document-processing
 control: Open 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Open in TypeScript Spreadsheet 

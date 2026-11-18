@@ -4,7 +4,7 @@ title: How to Customize the Text Search Color in ASP.NET MVC | Syncfusion
 description: Customize the highlight color used for text search matches in the ASP.NET MVC PDF Viewer to match your application design.
 platform: document-processing
 control: Customize text search color
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Customize the Text Search Color in ASP.NET MVC PDF Viewer

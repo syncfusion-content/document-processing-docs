@@ -4,7 +4,7 @@ title: Deploy Blazor PDF Viewer to Azure Container (Linux) | Syncfusion
 description: Containerize and deploy the Blazor PDF Viewer (Server and WebAssembly) to Azure using Azure Container Registry and App Service for Containers.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Deploy Blazor PDF Viewer to Azure Container (Linux)

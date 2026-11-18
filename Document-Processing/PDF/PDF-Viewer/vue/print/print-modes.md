@@ -5,7 +5,7 @@ description: Configure print modes in the Vue PDF Viewer to control how PDF docu
 platform: document-processing
 control: Print
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Print Modes in Vue PDF Viewer

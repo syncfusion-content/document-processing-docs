@@ -5,7 +5,7 @@ description: Load and display PDF files stored in Box cloud storage in the JavaS
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Open PDF from Box Cloud Storage in JavaScript (ES5) PDF Viewer

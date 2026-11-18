@@ -4,7 +4,7 @@ title: Images in Blazor DOCX Editor | Syncfusion
 description: Images in Blazor DOCX Editor enable resizing and text wrapping while preserving image positions for accurate document layouts.
 platform: document-processing
 control: DOCX Editor
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Images in Blazor DOCX Editor

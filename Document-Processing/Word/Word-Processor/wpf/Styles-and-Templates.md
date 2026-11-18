@@ -4,7 +4,7 @@ description: The styles and templates in WPF DOCX Editor define the structure an
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: styles-and-templates,custom-style,theming,control-template,resource,xaml
+keywords: styles-and-templates,custom-style,theming,control-template,resource,xamltocname: Document-Processing-SDKs-toc
 ---
 # Styles and Templates in WPF DOCX Editor
 

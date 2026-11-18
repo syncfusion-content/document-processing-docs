@@ -5,7 +5,7 @@ description: Unload the current document in the ASP.NET MVC PDF Viewer to free r
 platform: document-processing
 control: PDF Viewer
 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Unload a Document in ASP.NET MVC PDF Viewer

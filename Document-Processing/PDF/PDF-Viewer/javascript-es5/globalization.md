@@ -5,7 +5,7 @@ description: Learn about the globalization in the JavaScript (ES5) PDF Viewer an
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Globalization in JavaScript (ES5) PDF Viewer

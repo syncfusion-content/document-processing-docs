@@ -5,7 +5,7 @@ description: Global localization in Vue DOCX Editor enables translating built-in
 control: Global local 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Globalization and Localization in Vue DOCX Editor

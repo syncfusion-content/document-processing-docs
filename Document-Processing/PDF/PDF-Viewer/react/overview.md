@@ -3,7 +3,7 @@ title: About Syncfusion React PDF Viewer Control | Syncfusion
 description: Learn about introduction of Syncfusion Essential Studio React PDF Viewer control, its key features, and how to get started with it.
 platform: document-processing
 control: PDF Viewer
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion React PDF Viewer Control

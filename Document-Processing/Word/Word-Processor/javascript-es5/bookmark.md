@@ -5,7 +5,7 @@ description: The bookmark feature in JavaScript DOCX Editor lets users add, mana
 platform: document-processing
 control: Bookmark 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Bookmarks in JavaScript DOCX Editor

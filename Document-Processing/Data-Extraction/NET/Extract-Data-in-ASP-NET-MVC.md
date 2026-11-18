@@ -5,7 +5,7 @@ platform: document-processing
 control: SmartDataExtractor
 documentation: UG
 keywords: Assemblies
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with ASP.NET MVC Smart Data Extractor

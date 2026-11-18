@@ -5,7 +5,7 @@ description: Learn about the Syncfusion Essential Studio PPTX Editor control, it
 platform: document-processing
 control: general
 documentation: UG
-keywords: PowerPoint, PPTX, SDK, view, read, slide, presentation
+keywords: PowerPoint, PPTX, SDK, view, read, slide, presentationtocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion PPTX Editor Control

@@ -5,7 +5,7 @@ description: Create a Next.js application that uses the Syncfusion React PDF Vie
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with Next.js and React PDF Viewer

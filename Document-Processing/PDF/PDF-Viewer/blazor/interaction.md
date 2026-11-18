@@ -4,7 +4,7 @@ title: Interaction mode in Blazor PDF Viewer  | Syncfusion
 description: Learn how to use interaction modes in the Blazor PDF Viewer , including text selection, panning, and annotation locking.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Interaction mode in Blazor PDF Viewer 

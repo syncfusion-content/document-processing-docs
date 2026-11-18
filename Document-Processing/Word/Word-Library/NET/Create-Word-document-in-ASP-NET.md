@@ -3,7 +3,7 @@ title: Create Word document in ASP.NET  | Syncfusion
 description: Describe the assemblies required to convert Word documents to images using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Create Word document in ASP.NET 

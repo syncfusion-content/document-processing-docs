@@ -5,7 +5,7 @@ description: Navigate PDF bookmarks in the React PDF Viewer to jump quickly to s
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Bookmark Navigation in React PDF Viewer

@@ -5,7 +5,7 @@ description: Add and customize context menu options in the Vue PDF Viewer using 
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Customize the Context Menu in Vue PDF Viewer

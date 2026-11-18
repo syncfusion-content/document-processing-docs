@@ -3,7 +3,7 @@ title: Hyperlinks in JavaScript Excel Library | Syncfusion
 description: Add URL, file, UNC, and workbook hyperlinks to cells and manage sheet-level links with the Syncfusion JavaScript Excel Library.
 platform: document-processing
 control: Excel
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Hyperlinks in JavaScript Excel

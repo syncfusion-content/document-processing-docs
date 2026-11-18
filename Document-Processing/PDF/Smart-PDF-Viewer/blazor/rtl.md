@@ -4,7 +4,7 @@ title: RTL in Blazor Smart PDF Viewer | Syncfusion
 description: Learn how to enable and use Right-to-Left (RTL) layout in the Blazor SfSmartPdfViewer using the EnableRtl property.
 platform: document-processing
 control: SfSmartPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # RTL in Blazor Smart PDF Viewer

@@ -5,7 +5,7 @@ description: Accessibility features in the React PDF Viewer help all users read 
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Accessibility in React PDF Viewer

@@ -3,7 +3,7 @@ title: Word to PDF performance benchmark in .NET Word | Syncfusion
 description: Describe the NuGet packages required for Word-to-PDF conversion using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Word to PDF performance benchmark in .NET Word

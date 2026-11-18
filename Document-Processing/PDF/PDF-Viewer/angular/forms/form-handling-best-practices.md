@@ -5,7 +5,7 @@ description: Recommended best practices for naming, validating, grouping, import
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # PDF Form Handling Best Practices in Angular PDF Viewer

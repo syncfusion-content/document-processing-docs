@@ -4,7 +4,7 @@ title: How to Resize in ASP.NET MVC DOCX Editor | Syncfusion
 description: Adjust the height and width of the Syncfusion® ASP.NET MVC DOCX Editor to create responsive layouts and customize the document editing experience.
 platform: document-processing
 control: Resize DOCX Editor
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

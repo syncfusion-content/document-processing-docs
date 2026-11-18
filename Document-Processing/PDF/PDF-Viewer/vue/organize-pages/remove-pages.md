@@ -5,7 +5,7 @@ description: Remove one or more pages from a PDF in the Vue PDF Viewer using the
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Remove Pages in Vue PDF Viewer

@@ -5,7 +5,7 @@ description: Handle text search events in the JavaScript (ES5) PDF Viewer and ru
 platform: document-processing
 control: Text search
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Text Search Events in JavaScript (ES5) PDF Viewer

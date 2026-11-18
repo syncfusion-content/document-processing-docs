@@ -4,7 +4,7 @@ description: The automatic suggestion in UWP DOCX Editor offers a dropdown of su
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: automatic-suggestion,@mentions,mention-character,suggestion-box,name-suggestion-provider
+keywords: automatic-suggestion,@mentions,mention-character,suggestion-box,name-suggestion-providertocname: Document-Processing-SDKs-toc
 ---
 # Automatic Suggestion in UWP DOCX Editor
 

@@ -4,7 +4,7 @@ title: Remove form fields in the Blazor PDF Viewer  | Syncfusion
 description: Learn how to remove PDF form fields using the UI and programmatically in the Blazor PDF Viewer component and more details.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Remove PDF Form Fields from a PDF in Blazor

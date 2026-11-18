@@ -4,7 +4,7 @@ title: Globalization in Vue Spreadsheet | Syncfusion
 description: Learn how to localize and globalize the Syncfusion Vue Spreadsheet with culture-specific formatting and translations.
 control: Global local 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Globalization in Vue Spreadsheet

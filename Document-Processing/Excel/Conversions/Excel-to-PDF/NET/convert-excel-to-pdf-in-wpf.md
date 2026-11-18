@@ -3,7 +3,7 @@ title: Excel to PDF conversion in WPF | Syncfusion
 description: WPF Excel to PDF section explains how to convert Excel documents to PDF in WPF using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Excel to PDF Conversion in WPF using Excel Library

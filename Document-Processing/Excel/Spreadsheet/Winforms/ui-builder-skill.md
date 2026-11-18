@@ -5,7 +5,7 @@ description: Generate production-ready Spreadsheet controls from natural languag
 control: Spreadsheet
 platform: document-processing
 documentation: ug
-keywords: WinForms UI Builder, Skills, AI Assistants, Spreadsheet SDK, Agent Skills
+keywords: WinForms UI Builder, Skills, AI Assistants, Spreadsheet SDK, Agent Skillstocname: Document-Processing-SDKs-toc
 ---
 
 # UI Builder Skill in Windows Forms Spreadsheet

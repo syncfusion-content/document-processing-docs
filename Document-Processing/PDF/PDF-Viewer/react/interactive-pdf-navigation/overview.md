@@ -5,7 +5,7 @@ description: Learn about introduction of the Syncfusion React PDF Viewer Navigat
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion React PDF Viewer Navigation

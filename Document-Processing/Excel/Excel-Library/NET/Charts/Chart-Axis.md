@@ -3,7 +3,7 @@ title: Chart Axis in .NET Excel Library | Syncfusion
 description: Chart axis settings describes how the Syncfusion .NET Excel Library configures axes in Excel charts with clear options.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Chart Axis in .NET Excel Library

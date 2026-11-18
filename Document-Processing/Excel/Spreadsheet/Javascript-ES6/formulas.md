@@ -4,7 +4,7 @@ title: Formulas in TypeScript Spreadsheet | Syncfusion
 description: Formulas in TypeScript Spreadsheet enable users to perform calculations, automate data processing, and analyze information efficiently.
 platform: document-processing
 control: Formulas
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Formulas in TypeScript Spreadsheet 

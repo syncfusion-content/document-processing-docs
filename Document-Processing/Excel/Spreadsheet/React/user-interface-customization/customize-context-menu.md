@@ -4,7 +4,7 @@ title: Context Menu Item in React Spreadsheet | Syncfusion
 description: Learn about customizing context menu items in the Syncfusion React Spreadsheet component and more details.
 control: Spreadsheet 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Context Menu Item in React Spreadsheet

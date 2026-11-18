@@ -4,7 +4,7 @@ title: How to Enable Resize Text in ASP.NET Core PDF Viewer | Syncfusion
 description: Enable or disable text resize inside form fields in the ASP.NET Core PDF Viewer using the enableResizeText property for accessibility.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Enable Resize Text in ASP.NET Core PDF Viewer

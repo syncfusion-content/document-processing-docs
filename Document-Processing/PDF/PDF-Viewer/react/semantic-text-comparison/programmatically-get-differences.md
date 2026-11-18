@@ -5,7 +5,7 @@ description: Learn how to programmatically access text differences between two P
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Programmatically Get Differences in React PDF Viewer

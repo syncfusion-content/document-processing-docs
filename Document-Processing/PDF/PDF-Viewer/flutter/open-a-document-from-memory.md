@@ -4,7 +4,7 @@ title: Open a Document From Memory in Flutter PDF Viewer | Syncfusion
 description: The PDF loading from memory feature in SfPdfViewer enables users to open and display PDF documents directly from in-memory byte data.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Open a Document From Memory in Flutter PDF Viewer

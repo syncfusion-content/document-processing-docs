@@ -4,7 +4,7 @@ title: Selection in Blazor Spreadsheet | Syncfusion
 description: Learn about explore cell, row, column, and range selection options in the Syncfusion Blazor Spreadsheet component.
 platform: document-processing
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Selection in Blazor Spreadsheet

@@ -3,7 +3,7 @@ title: Security in Java Word | Syncfusion
 description: This section illustrates how to encrypt, decrypt and protect the Word document using Syncfusion Word library 
 platform: document-processing
 control: Word Library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Document Security in Java Word
 

@@ -5,7 +5,7 @@ description: Learn about introduction of the Syncfusion Angular PDF Viewer Toolb
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion Angular PDF Viewer Toolbar Customization

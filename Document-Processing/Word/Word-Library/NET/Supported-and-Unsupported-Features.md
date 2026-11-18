@@ -3,7 +3,7 @@ title: Supported and Unsupported Features in .NET Word | Syncfusion
 description: Learn about the supported and unsupported features in C# using the .NET Word library for document processing.
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Supported and Unsupported Features in .NET Word
 

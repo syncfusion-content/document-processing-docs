@@ -5,7 +5,7 @@ description: Learn how to get started with the Syncfusion JavaScript PowerPoint 
 control: PowerPoint
 platform: document-processing
 documentation: ug
-keywords: javascript, powerpoint, react
+keywords: javascript, powerpoint, reacttocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with JavaScript PowerPoint Library in React app

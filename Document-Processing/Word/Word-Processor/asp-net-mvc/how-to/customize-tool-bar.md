@@ -4,7 +4,7 @@ title: How to Customize Toolbar in ASP.NET MVC DOCX Editor | Syncfusion
 description: Customize the toolbar in Syncfusion® ASP.NET MVC DOCX Editor by adding, removing, showing, hiding, enabling, and disabling toolbar items.
 platform: document-processing
 control: Customize Tool Bar
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

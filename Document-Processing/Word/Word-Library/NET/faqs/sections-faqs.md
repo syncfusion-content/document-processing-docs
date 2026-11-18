@@ -3,7 +3,7 @@ title: FAQ about Sections in .NET Word | Syncfusion
 description: Describe frequently asked questions about working with sections in Word documents using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # FAQ about Sections in .NET Word
 

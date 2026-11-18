@@ -3,7 +3,7 @@ title: How to Resolve Cone Chart Issues in .NET Excel Library | Syncfusion
 description: Explain why a cone chart appears as a column or bar chart in Excel instead of displaying as a cone chart.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to fix cone charts displayed as bar charts in .NET Excel Library

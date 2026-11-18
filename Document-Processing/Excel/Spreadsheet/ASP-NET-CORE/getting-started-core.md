@@ -4,7 +4,7 @@ title: Getting Started with ASP.NET Core Spreadsheet | Syncfusion
 description: Learn how to get started with the Syncfusion ASP.NET Core Spreadsheet control. Explore setup, features, examples, and customization options.
 platform: document-processing
 control: ASP.NET Core Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

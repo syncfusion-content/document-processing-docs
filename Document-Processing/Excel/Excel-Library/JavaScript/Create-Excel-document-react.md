@@ -4,7 +4,7 @@ title: Getting Started with JavaScript Excel in React app | Syncfusion
 description: Learn how to create and download an Excel workbook in a React application using the Syncfusion JavaScript Excel Library.
 control: Excel
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with JavaScript Excel in React app

@@ -4,7 +4,7 @@ title: Outline in WPF Spreadsheet control | Syncfusion®
 description: Group and ungroup rows and columns in the WPF Spreadsheet control using outline support to organize and manage worksheet data efficiently.
 platform: document-processing
 control: SfSpreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Outlines in WPF Spreadsheet

@@ -3,7 +3,7 @@ title: Convert Word to Markdown in .NET Word | Syncfusion
 description: Learn how to convert a Word document to Markdown using the .NET Word library without Microsoft Word or interop dependencies.
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Convert Word to Markdown in .NET Word

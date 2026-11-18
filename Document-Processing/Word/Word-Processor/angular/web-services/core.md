@@ -5,7 +5,7 @@ description: Configure ASP.NET Core web services in the Angular DOCX Editor to h
 platform: document-processing
 control: Core 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # ASP.NET Core Web Service in  Angular DOCX Editor

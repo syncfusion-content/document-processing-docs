@@ -3,7 +3,7 @@ title: Create Word document in Azure | Syncfusion
 description: This section illustrates how to create Word documents in Azure services using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Create Word document in Azure

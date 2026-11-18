@@ -5,7 +5,7 @@ description: Enable right-to-left (RTL) language support in the Angular PDF View
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # RTL Language Support in Angular PDF Viewer

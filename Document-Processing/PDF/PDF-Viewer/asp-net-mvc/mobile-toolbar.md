@@ -5,7 +5,7 @@ description: The mobile toolbar in the ASP.NET MVC PDF Viewer adapts the touch i
 platform: document-processing
 control: PDF Viewer
 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Mobile Toolbar in ASP.NET MVC PDF Viewer

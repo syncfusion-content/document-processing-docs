@@ -5,7 +5,7 @@ description: Learn about the squiggly annotation in the JavaScript (ES6) PDF Vie
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Squiggly Annotation in JavaScript (ES6) PDF Viewer

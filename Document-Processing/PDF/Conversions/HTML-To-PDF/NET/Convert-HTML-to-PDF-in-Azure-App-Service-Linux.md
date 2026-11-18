@@ -3,7 +3,7 @@ title: HTML to PDF in Azure App Service Linux .NET PDF Library| Syncfusion
 description: Learn how to convert HTML to PDF in Azure App Service on Linux with easy steps using Syncfusion .NET Core HTML to PDF converter Library.
 platform: document-processing
 control: PDF
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # HTML to PDF conversion in Azure App Service Linux .NET PDF Library

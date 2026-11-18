@@ -4,7 +4,7 @@ title: Mobile View in ASP.NET Core PDF Viewer | Syncfusion
 description: Use the Organize Pages panel on mobile devices in the ASP.NET Core PDF Viewer to rotate, rearrange, add, remove, and duplicate PDF pages.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Organize Pages in Mobile View in ASP.NET Core PDF Viewer

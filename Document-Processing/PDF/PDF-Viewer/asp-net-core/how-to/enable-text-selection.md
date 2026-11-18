@@ -4,7 +4,7 @@ title: How to Enable or Disable Text Selection in ASP.NET Core | Syncfusion
 description: Enable or disable text selection in the ASP.NET Core PDF Viewer using the enableTextSelection property to control how users interact with PDF text.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Enable or Disable Text Selection in ASP.NET Core PDF Viewer

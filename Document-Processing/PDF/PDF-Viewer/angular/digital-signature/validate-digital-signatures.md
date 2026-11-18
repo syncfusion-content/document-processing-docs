@@ -4,7 +4,7 @@ title: Validate Digital Signatures in Angular PDF Viewer | Syncfusion
 description: Validate digital signatures applied to PDF forms from an Angular app using the Syncfusion PDF Library together with the Angular PDF Viewer.
 platform: document-processing
 control: PdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Validate Digital Signatures in Angular PDF Viewer

@@ -5,7 +5,7 @@ description: Save PDF files from the Vue PDF Viewer to AWS S3 using standalone a
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Save PDF Files to AWS S3 in Vue PDF Viewer

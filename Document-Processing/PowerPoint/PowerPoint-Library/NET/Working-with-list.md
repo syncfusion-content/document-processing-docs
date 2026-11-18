@@ -3,7 +3,7 @@ title: Working with lists in PowerPoint Presentation | Syncfusion
 description: Learn how to create and format numbered, bulleted, picture, and multi-level lists in PowerPoint presentations using the Syncfusion Presentation library.
 platform: document-processing
 control: Presentation
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Working with lists in PowerPoint Library
 

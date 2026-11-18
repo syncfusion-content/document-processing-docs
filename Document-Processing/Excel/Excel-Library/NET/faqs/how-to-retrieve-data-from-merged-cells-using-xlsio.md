@@ -3,7 +3,7 @@ title: How to Retrieve Merged Cell Data in .NET Excel Library | Syncfusion
 description: Learn how to retrieve values from merged cells programmatically using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to retrieve data from merged cells in .NET Excel Library

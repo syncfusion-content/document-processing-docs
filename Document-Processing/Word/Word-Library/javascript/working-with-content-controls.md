@@ -4,7 +4,7 @@ description: Create and edit rich text, plain text, check box, date picker, drop
 platform: document-processing
 control: Word Library
 documentation: ug
-keywords: javascript, word, content control, block, inline, rich text, plain text, check box, date picker, drop-down list, combo box
+keywords: javascript, word, content control, block, inline, rich text, plain text, check box, date picker, drop-down list, combo boxtocname: Document-Processing-SDKs-toc
 ---
 
 # Content Controls in JavaScript Word Library

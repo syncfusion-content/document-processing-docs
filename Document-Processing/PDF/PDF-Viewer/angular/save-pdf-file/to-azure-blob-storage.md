@@ -5,7 +5,7 @@ description: Save PDF files from the Angular PDF Viewer to Azure Blob Storage us
 platform: document-processing
 control: Save PDF files to Azure Blob Storage
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Save PDF Files to Azure Blob Storage in Angular PDF Viewer

@@ -3,7 +3,7 @@ title: Font Substitution in Word to Image Conversion | Syncfusion
 description: Describe how to substitute missing fonts during Word-to-image conversion using the Syncfusion .NET Word library
 platform: document-processing
 control: DocIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Font Substitution in Word to Image Conversion

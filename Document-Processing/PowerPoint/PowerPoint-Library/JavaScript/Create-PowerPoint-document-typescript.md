@@ -6,7 +6,7 @@ platform: document-processing
 control: PowerPoint
 documentation: ug
 keywords: powerpoint, typescript, javascript powerpoint library
-canonical_url: https://help.syncfusion.com/document-processing/presentation/pptx-library/javascript/create-powerpoint-document-typescript
+canonical_url: https://help.syncfusion.com/document-processing/presentation/pptx-library/javascript/create-powerpoint-document-typescripttocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with JavaScript PowerPoint in TypeScript app

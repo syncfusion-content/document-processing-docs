@@ -3,7 +3,7 @@ title: Excel to JSON Conversion using .NET Excel Library | Syncfusion
 description: Excel to JSON conversion describes how Syncfusion .NET Excel Library converts workbooks, worksheets, or ranges into JSON data.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Excel to JSON Conversion in .NET Excel Library

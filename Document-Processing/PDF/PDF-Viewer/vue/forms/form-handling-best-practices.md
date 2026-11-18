@@ -5,7 +5,7 @@ description: Learn the recommended best practices for naming, validating, groupi
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # PDF Form Handling Best Practices in Vue PDF Viewer

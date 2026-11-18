@@ -4,7 +4,7 @@ title: Syncfusion MAUI PDF Viewer MCP Server | Syncfusion
 description: Learn how to configure and use Syncfusion MAUI MCP server for intelligent code generation, documentation, and troubleshooting of the MAUI PDF Viewer component.
 platform: document-processing
 control: AI coding assistant
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Syncfusion MAUI PDF Viewer MCP Server

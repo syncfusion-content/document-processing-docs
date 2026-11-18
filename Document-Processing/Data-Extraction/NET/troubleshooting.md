@@ -3,7 +3,7 @@ title: How to troubleshoot in .NET Smart Data Extractor | Syncfusion
 description: Find troubleshooting steps and FAQs for Syncfusion Smart Data Extractor in .NET platforms and frameworks.
 platform: document-processing
 control: SmartDataExtractor, SmartTableExtractor
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to troubleshoot in .NET Smart Data Extractor

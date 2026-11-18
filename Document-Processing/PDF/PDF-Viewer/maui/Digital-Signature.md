@@ -5,7 +5,7 @@ description: Learn how to validate, inspect, and apply digital signatures in the
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-keywords: .net maui pdf viewer, digital signature, pdf signature validation, certificate signing, pdf signing, signature panel
+keywords: .net maui pdf viewer, digital signature, pdf signature validation, certificate signing, pdf signing, signature paneltocname: Document-Processing-SDKs-toc
 ---
 
 # Digital Signature in .NET MAUI PDF Viewer

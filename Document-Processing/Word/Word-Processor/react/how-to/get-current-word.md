@@ -5,7 +5,7 @@ description: Get the current word or paragraph content as plain text and SFDT fo
 control: Get current word
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Get Current Word in React DOCX Editor

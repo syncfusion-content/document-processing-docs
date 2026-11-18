@@ -4,7 +4,7 @@ title: Globalization in React Spreadsheet | Syncfusion
 description: Learn about globalization in the Syncfusion React Spreadsheet component, including localization, culture settings, and regional formats.
 control: Global local 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Globalization in React Spreadsheet

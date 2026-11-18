@@ -4,7 +4,7 @@ title: How to Set Default Format in ASP.NET MVC DOCX Editor | Syncfusion
 description: Set default character, paragraph, and section formatting in Syncfusion® ASP.NET MVC DOCX Editor for consistent document styling across documents.
 platform: document-processing
 control: Set Default Format in the DOCX Editor
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

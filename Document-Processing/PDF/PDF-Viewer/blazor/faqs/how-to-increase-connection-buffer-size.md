@@ -4,7 +4,7 @@ title: How to Increase buffer size in Blazor PDF Viewer | Syncfusion
 description: Learn how to increase the SignalR connection buffer size (MaximumReceiveMessageSize) for the Blazor PDF Viewer to handle large PDF documents.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Increase buffer size in Blazor PDF Viewer

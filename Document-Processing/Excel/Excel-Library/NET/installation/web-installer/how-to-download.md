@@ -5,7 +5,7 @@ description: Syncfusion Excel web installer download section explains how to dow
 platform: document-processing
 control: Installation and Deployment
 documentation: ug
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 # How to download web installer in .NET Excel Library

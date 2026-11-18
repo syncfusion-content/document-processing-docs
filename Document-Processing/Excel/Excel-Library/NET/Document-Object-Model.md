@@ -3,7 +3,7 @@ title: Document Object Model in .NET Excel Library | Syncfusion
 description: The document object model page describes the structure used to create and manipulate Excel workbook elements.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 # Document Object Model in .NET Excel Library
 

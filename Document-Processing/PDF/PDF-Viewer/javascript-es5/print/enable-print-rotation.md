@@ -5,7 +5,7 @@ description: Enable print rotation in the JavaScript (ES5) PDF Viewer so landsca
 platform: document-processing
 control: Print
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Enable Print Rotation in JavaScript (ES5) PDF Viewer

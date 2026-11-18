@@ -3,7 +3,7 @@ title: Mail merge for group in Java Word | Syncfusion
 description: This section illustrates common questions and solutions related to mail merge operations in the Syncfusion .NET Word library
 platform: document-processing
 control: Word Library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Mail merge for group in Java Word

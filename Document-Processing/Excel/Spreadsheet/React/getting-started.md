@@ -4,7 +4,7 @@ title: Getting Started with React Spreadsheet | Syncfusion
 description: Learn how to get started with the Syncfusion React Spreadsheet component. Explore setup, features, examples, and customization options.
 control: Getting started
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with React Spreadsheet

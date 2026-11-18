@@ -5,7 +5,7 @@ description: Export annotations from the React PDF Viewer in supported formats u
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Export Annotations in React PDF Viewer

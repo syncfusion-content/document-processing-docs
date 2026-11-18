@@ -4,7 +4,7 @@ title: Headers and Footers in Blazor DOCX Editor | Syncfusion
 description: Headers and footers in Blazor DOCX Editor enable adding and customizing content at the top and bottom of document pages.
 platform: document-processing
 control: DOCX Editor
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Headers and Footers in Blazor DOCX Editor

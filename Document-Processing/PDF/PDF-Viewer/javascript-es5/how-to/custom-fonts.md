@@ -5,7 +5,7 @@ description: Add and load custom TTF fonts for documents displayed in the JavaSc
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Add Custom Fonts in JavaScript (ES5) PDF Viewer

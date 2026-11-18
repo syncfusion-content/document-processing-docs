@@ -5,7 +5,7 @@ description: Export documents as PDF in Syncfusion® JavaScript DOCX Editor usin
 platform: document-processing
 control: Export Document as PDF
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Export Document as PDF in JavaScript DOCX Editor

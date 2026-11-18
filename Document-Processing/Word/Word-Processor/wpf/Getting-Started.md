@@ -4,7 +4,7 @@ description: Learn how to get started with the Syncfusion WPF DOCX Editor contro
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: getting started, docx editor
+keywords: getting started, docx editortocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with WPF DOCX Editor

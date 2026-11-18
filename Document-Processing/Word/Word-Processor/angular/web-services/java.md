@@ -5,7 +5,7 @@ description: Configure Java web services in the Angular DOCX Editor to handle se
 platform: document-processing
 control: Java 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Java Web Service in  Angular DOCX Editor

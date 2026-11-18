@@ -4,7 +4,7 @@ title: Charts and Visualizations in Blazor Spreadsheet | Syncfusion
 description: Learn about charts and visualizations in the Syncfusion Blazor Spreadsheet component, including chart creation, customization, and management.
 platform: document-processing
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Charts and Visualizations in Blazor Spreadsheet

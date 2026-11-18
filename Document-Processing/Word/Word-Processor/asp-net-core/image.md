@@ -4,7 +4,7 @@ title: Image in ASP.NET Core DOCX Editor | Syncfusion
 description: Images in ASP.NET Core DOCX Editor enable resizing and text wrapping while preserving image positions for accurate document layouts.
 platform: document-processing
 control: Image
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

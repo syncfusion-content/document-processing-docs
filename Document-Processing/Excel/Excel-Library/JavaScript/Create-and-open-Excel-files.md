@@ -3,7 +3,7 @@ title: Create and Open Excel Files in JavaScript | Syncfusion
 description: Create, open, and save Excel workbooks with the Syncfusion JavaScript Excel Library in Node.js and browser environments.
 platform: document-processing
 control: Excel
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Create and Open Excel Files in JavaScript

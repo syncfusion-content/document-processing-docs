@@ -5,7 +5,7 @@ description: Insert page numbers and navigate to specific pages in Syncfusion® 
 control: Insert page number and navigate to page 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Insert Page Numbers and Navigate in Vue DOCX Editor

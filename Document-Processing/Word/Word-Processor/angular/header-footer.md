@@ -5,7 +5,7 @@ description: Headers and footers in Angular DOCX Editor enable adding and custom
 platform: document-processing
 control:  Header and Footer 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Headers and Footers in Angular DOCX Editor

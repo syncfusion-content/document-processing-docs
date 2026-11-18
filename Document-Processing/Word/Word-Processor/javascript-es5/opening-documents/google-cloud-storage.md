@@ -5,7 +5,7 @@ description: Open documents from Google Cloud Storage in JavaScript DOCX Editor,
 platform: document-processing
 control: Open document from Google Cloud Storage
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Open Documents from Google Cloud Storage in JavaScript DOCX Editor

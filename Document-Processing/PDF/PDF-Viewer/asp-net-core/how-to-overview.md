@@ -4,7 +4,7 @@ title: How to Overview of the ASP.NET Core PDF Viewer | Syncfusion
 description: How-to overview of the ASP.NET Core PDF Viewer in Syncfusion ASP.NET Core PDF Viewer (SfPdfViewer) control, with its elements and more.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Overview of the ASP.NET Core PDF Viewer

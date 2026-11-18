@@ -4,7 +4,7 @@ title: Scrolling in Vue Spreadsheet | Syncfusion
 description: Learn about explore scrolling functionality in the Syncfusion Vue Spreadsheet component for smooth worksheet navigation.
 control: Scrolling 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Scrolling in Vue Spreadsheet

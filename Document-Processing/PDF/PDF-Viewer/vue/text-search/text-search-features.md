@@ -5,7 +5,7 @@ description: Configure text search features in the Vue PDF Viewer and run progra
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Text Search in Vue PDF Viewer

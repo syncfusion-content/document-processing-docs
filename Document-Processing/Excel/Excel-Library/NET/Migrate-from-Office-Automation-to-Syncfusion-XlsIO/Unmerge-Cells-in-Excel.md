@@ -3,7 +3,7 @@ title: Cell Unmerging in .NET Excel Library | Syncfusion
 description: Programmatically unmerge cells in Excel using Interop and Syncfusion .NET Excel Library with merged cell handling in worksheet ranges.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Unmerging Cells in .NET Excel Library

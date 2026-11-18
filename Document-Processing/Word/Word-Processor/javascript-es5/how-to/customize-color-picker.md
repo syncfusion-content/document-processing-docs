@@ -5,7 +5,7 @@ description: Customize the color picker appearance in Syncfusion® JavaScript DO
 platform: document-processing
 control: Customize Color Picker 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Customize Color Picker in JavaScript DOCX Editor

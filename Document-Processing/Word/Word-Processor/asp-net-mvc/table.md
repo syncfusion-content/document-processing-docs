@@ -4,7 +4,7 @@ title: Tables in ASP.NET MVC DOCX Editor | Syncfusion
 description: Tables in ASP.NET MVC DOCX Editor enable adding and managing rows, columns, and cells to present information in a structured format.
 platform: document-processing
 control: Table
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

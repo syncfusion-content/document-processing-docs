@@ -4,7 +4,7 @@ title: Freeze Panes in ASP.NET MVC Spreadsheet | Syncfusion
 description: Keep important rows and columns visible while scrolling using freeze pane support in the Syncfusion ASP.NET MVC Spreadsheet.
 platform: document-processing
 control: Freeze Pane
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

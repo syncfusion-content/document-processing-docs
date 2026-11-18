@@ -5,7 +5,7 @@ description: Server-side export in TypeScript DOCX Editor enables users to save 
 platform: document-processing
 control: Server side export 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Server-side Export in TypeScript DOCX Editor

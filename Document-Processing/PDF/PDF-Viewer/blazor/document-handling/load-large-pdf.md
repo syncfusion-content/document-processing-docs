@@ -5,7 +5,7 @@ description: Learn how to load and render large PDF files in the Blazor PDF View
 control: SfPdfViewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Load Large PDF Files in Blazor PDF Viewer

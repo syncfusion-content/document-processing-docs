@@ -4,7 +4,7 @@ title: Single page view mode in Xamarin Pdf Viewer | Syncfusion
 description: Learn here all about Single page view mode support in Syncfusion<sup>®</sup> Xamarin Pdf Viewer (SfPdfViewer) control and more.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Single page view mode in Xamarin Pdf Viewer

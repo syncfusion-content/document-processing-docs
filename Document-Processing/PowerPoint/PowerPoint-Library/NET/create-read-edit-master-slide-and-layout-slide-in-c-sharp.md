@@ -3,7 +3,7 @@ title: Master and Layout Slides in .NET PowerPoint Presentation | Syncfusion
 description: Create, read, and edit master slides and layout slides using the Syncfusion® .NET PowerPoint Presentation library.
 platform: document-processing
 control: PowerPoint
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Master and Layout Slides in .NET PowerPoint Presentation

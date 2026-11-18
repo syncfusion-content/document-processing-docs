@@ -5,7 +5,7 @@ description: Learn about the from azure active directory in the Vue PDF Viewer a
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # From Azure Active Directory in Vue PDF Viewer
@@ -13,7 +13,7 @@ domainurl: ##DomainURL##
 ## Overview
 
 This article explains how to load and save PDF files from Azure Active Directory (AAD) into the Vue PDF Viewer using a secure server-side component. It covers application registration, storage configuration, server and client setup, common pitfalls, and recommended security practices.
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 1: Register an application in Azure Active Directory (AAD)
@@ -32,7 +32,7 @@ This article explains how to load and save PDF files from Azure Active Directory
   - Copy and store the client secret securely; it will be hidden after creation.
 
   ![Create client secret in Azure AD](../images/client-secret.png)
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 2: Create the Azure Storage account
@@ -41,7 +41,7 @@ This article explains how to load and save PDF files from Azure Active Directory
   - In the Azure portal, create a Storage account and configure name, region, and redundancy options.
 
   ![Azure storage account overview](../images/storage-account.png)
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 3: Assign a role to the application
@@ -53,7 +53,7 @@ This article explains how to load and save PDF files from Azure Active Directory
   - Select the application and click **Select**.
   - Click **Review + assign** to finalize the role assignment.
 
-  ![Assign role to application in Azure](../images/add-role.png)
+  ![Assign role to application in Azure](../images/add-role.png)tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 4: Upload the PDF to Azure Storage
@@ -64,7 +64,7 @@ This article explains how to load and save PDF files from Azure Active Directory
 2. **Upload the PDF file**:
   - Create a new container, and upload the PDF document you want to access in the PDF Viewer.
 
-  ![Upload PDF to Azure Blob container](../images/upload-pdf.png)
+  ![Upload PDF to Azure Blob container](../images/upload-pdf.png)tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 5: Server-side configuration
@@ -79,7 +79,7 @@ This article explains how to load and save PDF files from Azure Active Directory
 
 2. **Run the web service**:
    - After saving the configuration values, run the web service so that the Vue application can reach it.
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 6: Client-side configuration
@@ -93,7 +93,7 @@ This article explains how to load and save PDF files from Azure Active Directory
 
 3. **Display the PDF in the viewer**:
    - After the Base64 string is received, the PDF Viewer loads the document by calling `viewer.load()`.
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 7: Save the PDF to Azure
@@ -101,7 +101,7 @@ This article explains how to load and save PDF files from Azure Active Directory
 1. **Save PDF to AAD**:
    - When the user selects **Save To AAD**, the application uploads any PDF changes back to Azure Blob Storage.
    - The server converts the updated PDF into a byte array and writes it to the specified Azure Blob container.
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ### Server-side code

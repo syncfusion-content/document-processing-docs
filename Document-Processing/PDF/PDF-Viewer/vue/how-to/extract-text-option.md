@@ -5,7 +5,7 @@ description: Use the extractTextOption property in the Vue PDF Viewer to control
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Configure ExtractTextOption in Vue PDF Viewer

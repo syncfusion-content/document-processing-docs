@@ -5,7 +5,7 @@ description: Security advisories in React DOCX Editor provide information about 
 control: Security advisories
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Security Advisories in React DOCX Editor

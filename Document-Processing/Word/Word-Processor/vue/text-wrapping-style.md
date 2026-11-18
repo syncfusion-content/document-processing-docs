@@ -5,7 +5,7 @@ description: Text wrapping styles in Vue DOCX Editor preserve inline, square, be
 control: Text wrapping style 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Text Wrapping Style in Vue DOCX Editor

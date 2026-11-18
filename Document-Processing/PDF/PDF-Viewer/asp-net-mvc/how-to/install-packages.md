@@ -4,13 +4,13 @@ title: How to Install Packages for the PDF Viewer in ASP.NET | Syncfusion
 description: Install the NuGet packages required to use the ASP.NET MVC PDF Viewer control in your Visual Studio project with the correct dependencies.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Install Packages for the PDF Viewer in ASP.NET MVC PDF Viewer
 
 Here’s a rephrased version of your instructions for installing the Syncfusion ASP.NET MVC PDF Viewer package:
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ## Installing Syncfusion PDF Viewer in an ASP.NET MVC Project

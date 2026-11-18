@@ -3,7 +3,7 @@ title: How to Retrieve Named Ranges in .NET Excel Library | Syncfusion
 description: Retrieve the list of named ranges in an Excel workbook using the Syncfusion .NET Excel Library for named range access.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to retrieve named ranges in .NET Excel Library

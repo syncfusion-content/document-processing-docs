@@ -4,7 +4,7 @@ title: Deploy Spreadsheet Docker to AWS EKS Cluster | Syncfusion
 description: Learn how to deploy the Syncfusion Spreadsheet server Docker image to AWS EKS and connect it to the React Spreadsheet component.
 control: How to deploy spreadsheet server to AWS EKS using Docker
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Deploy Spreadsheet Docker to AWS EKS Cluster

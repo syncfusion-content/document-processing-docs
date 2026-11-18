@@ -5,7 +5,7 @@ description: Learn how to get started with the Syncfusion JavaScript (ES6) PDF V
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with JavaScript (ES6) PDF Viewer

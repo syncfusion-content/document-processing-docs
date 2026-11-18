@@ -4,7 +4,7 @@ title: Comments in Vue Spreadsheet | Syncfusion
 description: Learn how to add, edit, and manage comments in the Syncfusion Vue Spreadsheet for collaboration and annotations.
 platform: document-processing
 control: Comment
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Comments in Vue Spreadsheet

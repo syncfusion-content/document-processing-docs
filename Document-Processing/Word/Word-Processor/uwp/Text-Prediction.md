@@ -4,7 +4,7 @@ description: The text prediction in UWP DOCX Editor offers text prediction suppo
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: text-prediction,is-text-prediction-enabled
+keywords: text-prediction,is-text-prediction-enabledtocname: Document-Processing-SDKs-toc
 ---
 # Text Prediction in UWP DOCX Editor
 

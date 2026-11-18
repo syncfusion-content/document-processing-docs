@@ -5,7 +5,7 @@ description: Open or close the bookmark pane programmatically in the JavaScript 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Open or Hide the Bookmark Pane in JavaScript (ES5) PDF Viewer

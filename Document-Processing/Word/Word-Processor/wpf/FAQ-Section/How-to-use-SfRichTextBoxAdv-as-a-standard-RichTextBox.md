@@ -4,7 +4,7 @@ description: Use Syncfusion® WPF DOCX Editor as a standard editor with rich tex
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: use-sfrichtextboxadv-like-richtextbox
+keywords: use-sfrichtextboxadv-like-richtextboxtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Use WPF DOCX Editor as a Standard Editor

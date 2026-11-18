@@ -4,7 +4,7 @@ title: How to Convert PDF Library Bounds to PDF Viewer Bounds | Syncfusion
 description: Convert PDF Library bounds to PDF Viewer bounds when exporting annotations in the ASP.NET MVC PDF Viewer so coordinates map correctly.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Convert PDF Library Bounds to PDF Viewer Bounds in ASP.NET MVC

@@ -5,7 +5,7 @@ description: Learn how to create and modify annotations in Blazor PDF Viewer wit
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Create and modify annotations in Blazor PDF Viewer

@@ -4,7 +4,7 @@ description: Set up the Syncfusion Angular PDF Viewer MCP server so AI tools can
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Angular PDF Viewer MCP Server Setup

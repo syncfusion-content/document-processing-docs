@@ -3,7 +3,7 @@ title: Maximum Cell Characters in .NET Excel Library | Syncfusion
 description: Excel cell character limit describes the maximum number of characters supported in a cell using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Maximum Cell Characters in .NET Excel Library

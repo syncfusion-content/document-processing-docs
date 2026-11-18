@@ -5,7 +5,7 @@ description: Subscribe to form field events in the JavaScript (ES6) PDF Viewer t
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Form Field Events in JavaScript (ES6) PDF Viewer

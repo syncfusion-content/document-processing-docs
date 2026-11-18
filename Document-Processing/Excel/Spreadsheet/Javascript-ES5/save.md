@@ -4,7 +4,7 @@ title: Save in Javascript Spreadsheet | Syncfusion
 description: Save in JavaScript Spreadsheet enables users to export and store workbook data in supported file formats for future use.
 platform: document-processing
 control: Save 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Save in Javascript Spreadsheet 

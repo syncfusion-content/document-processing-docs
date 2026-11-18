@@ -5,7 +5,7 @@ description: Learn about the from azure active directory in the Angular PDF View
 platform: document-processing
 control: Load PDF From AAD
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # From Azure Active Directory in Angular PDF Viewer
@@ -13,7 +13,7 @@ domainurl: ##DomainURL##
 ## Overview
 
 This article explains how to load and save PDF files from Azure Active Directory (AAD) into the Syncfusion Angular PDF Viewer using a secure server-side component. It covers application registration, storage configuration, server and client setup, common pitfalls, and recommended security practices.
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 1: Register an application in Azure Active Directory (AAD)
@@ -32,7 +32,7 @@ This article explains how to load and save PDF files from Azure Active Directory
   - Copy and store the client secret securely; it will be hidden after creation.
 
   ![Create client secret in Azure AD](../images/client-secret.png)
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 2: Create the Azure Storage account
@@ -41,7 +41,7 @@ This article explains how to load and save PDF files from Azure Active Directory
   - In the Azure portal, create a Storage account and configure name, region, and redundancy options.
 
   ![Azure storage account overview](../images/storage-account.png)
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 3: Assign a role to the application
@@ -54,7 +54,7 @@ This article explains how to load and save PDF files from Azure Active Directory
   - Click **Review + assign** to finalize the role assignment.
 
   ![Assign role to application in Azure](../images/add-role.png)
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 4: Upload the PDF to Azure Storage
@@ -66,7 +66,7 @@ This article explains how to load and save PDF files from Azure Active Directory
   - Create a new container and upload the PDF document you want to access in the PDF Viewer.
 
   ![Upload PDF to Azure Blob container](../images/upload-pdf.png)
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 5: Server-side configuration
@@ -81,7 +81,7 @@ This article explains how to load and save PDF files from Azure Active Directory
 
 2. **Run the Web Service**:
    - After configuring the necessary details, run the web service to make it accessible.
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 6: Client-side configuration
@@ -95,7 +95,7 @@ This article explains how to load and save PDF files from Azure Active Directory
 
 3. Display PDF in the PDF Viewer:
    - Once the base64 string is received, the PDF Viewer will load the PDF using the `viewer.load()` method.
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 7: Save the PDF to Azure
@@ -103,7 +103,7 @@ This article explains how to load and save PDF files from Azure Active Directory
 1. **Save PDF to AAD**:
    - The user can click the **Save to AAD** button to upload any modifications to the PDF back to Azure Blob Storage.
    - This action sends the modified PDF to the server, where it is converted into a byte array and saved to the specified Azure Blob container.
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ### Server-side code

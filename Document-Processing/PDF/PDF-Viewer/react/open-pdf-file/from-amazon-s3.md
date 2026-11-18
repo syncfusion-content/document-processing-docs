@@ -4,7 +4,7 @@ title: From Amazon S3 in React PDF Viewer | Syncfusion
 description: Load and display PDF files stored in AWS S3 in the React PDF Viewer using both standalone and server-backed integration approaches.
 control: PDF Viewer
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Open PDF from AWS S3 in React PDF Viewer

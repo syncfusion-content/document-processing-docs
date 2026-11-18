@@ -4,7 +4,7 @@ title: Undo and Redo in React Spreadsheet | Syncfusion
 description: Learn about undo and redo operations in the Syncfusion React Spreadsheet component, including reversing and restoring actions.
 control: Undo redo 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Undo and Redo in React Spreadsheet

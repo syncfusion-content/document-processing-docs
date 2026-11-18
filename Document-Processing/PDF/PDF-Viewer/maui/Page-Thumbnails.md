@@ -5,7 +5,7 @@ description: Learn how to preview and navigate PDF pages using the page thumbnai
 platform: document-processing
 control: SfPdfViewer
 documentation: ug
-keywords: .net maui pdf viewer, .net maui page thumbnail, pdf thumbnail preview, maui pdf navigation, pdf page preview
+keywords: .net maui pdf viewer, .net maui page thumbnail, pdf thumbnail preview, maui pdf navigation, pdf page previewtocname: Document-Processing-SDKs-toc
 ---
 
 # Page Thumbnail in .NET MAUI PDF Viewer

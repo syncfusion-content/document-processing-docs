@@ -3,7 +3,7 @@ title: CSV Number Formatting in .NET Excel Library | Syncfusion
 description: CSV number formatting explains why Microsoft Excel removes number formats from CSV files created using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # CSV Number Formatting in .NET Excel Library

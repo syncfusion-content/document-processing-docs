@@ -4,7 +4,7 @@ description: The virtualization in UWP DOCX Editor offers UI Virtualization supp
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: virtualization,ui-virtualization,performance,memory,rendering
+keywords: virtualization,ui-virtualization,performance,memory,renderingtocname: Document-Processing-SDKs-toc
 ---
 # Virtualization in UWP DOCX Editor
 

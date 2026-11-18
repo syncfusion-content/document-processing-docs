@@ -4,7 +4,7 @@ title: How to Print the PDF in ASP.NET Core PDF Viewer | Syncfusion
 description: Print the loaded PDF in the ASP.NET Core PDF Viewer from custom UI controls using the print method with optional mode and quality settings.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Print the PDF in ASP.NET Core PDF Viewer

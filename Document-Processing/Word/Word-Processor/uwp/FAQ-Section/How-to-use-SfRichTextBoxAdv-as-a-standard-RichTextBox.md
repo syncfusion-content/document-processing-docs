@@ -4,7 +4,7 @@ description: Use Syncfusion® UWP DOCX Editor as a standard editor with rich tex
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: use-sfrichtextboxadv-like-richtextbox,standard-richtextbox,toolbar
+keywords: use-sfrichtextboxadv-like-richtextbox,standard-richtextbox,toolbartocname: Document-Processing-SDKs-toc
 ---
 
 # How to Use UWP DOCX Editor as a Standard Editor

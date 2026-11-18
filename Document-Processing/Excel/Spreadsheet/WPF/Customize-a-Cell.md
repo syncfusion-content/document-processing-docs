@@ -4,7 +4,7 @@ title: Customize a Cell in WPF Spreadsheet Control | Syncfusion®
 description: Customize cells in the WPF Spreadsheet control by defining cell types, appearance, and interactive elements to enhance worksheet functionality.
 platform: document-processing
 control: SfSpreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Customize a Cell in WPF Spreadsheet

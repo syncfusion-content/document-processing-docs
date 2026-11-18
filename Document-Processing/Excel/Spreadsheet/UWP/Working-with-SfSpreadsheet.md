@@ -4,7 +4,7 @@ title: Working With Spreadsheet in UWP Spreadsheet control | Syncfusion®
 description: Access worksheets, grids, and associated events in the  UWP Spreadsheet control to customize and manage spreadsheet interactions.
 platform: document-processing
 control: SfSpreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Working with Spreadsheet in UWP Spreadsheet 

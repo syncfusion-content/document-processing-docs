@@ -5,7 +5,7 @@ description: Restrict editing feature in JavaScript DOCX Editor enables read-onl
 platform: document-processing
 control: Restrict editing 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Restrict Editing in JavaScript DOCX Editor

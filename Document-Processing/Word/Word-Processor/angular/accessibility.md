@@ -5,7 +5,7 @@ description: The accessibility support in Angular DOCX Editor ensures keyboard n
 control: Accessibility 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Accessibility in Angular DOCX Editor

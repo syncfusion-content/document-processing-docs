@@ -5,7 +5,7 @@ description: View in TypeScript DOCX Editor enables web layout, ruler display, a
 platform: document-processing
 control: View 
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 # View in TypeScript DOCX Editor
 

@@ -3,7 +3,7 @@ title: Modify the Appearance of Chart Legend in JavaScript Word | Syncfusion
 description: Learn how to modify the appearance of chart legend in a chart in a Word document using Syncfusion® JavaScript Word library without Microsoft Word.
 platform: document-processing
 control: Word Library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Modify the Appearance of Chart Legend in JavaScript Word

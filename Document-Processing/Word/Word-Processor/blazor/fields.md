@@ -4,7 +4,7 @@ title: Fields in Blazor DOCX Editor | Syncfusion
 description: Fields in Blazor DOCX Editor enable inserting and updating document fields to manage dynamic content efficiently.
 platform: document-processing
 control: DOCX Editor
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Fields in Blazor DOCX Editor

@@ -6,7 +6,7 @@ description: Learn about the JavaScript Word Document Processing Library, includ
 platform: document-processing
 control: Word Library
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion JavaScript Word Document Processing Library

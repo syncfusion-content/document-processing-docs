@@ -4,7 +4,7 @@ title: Sorting in Angular Spreadsheet | Syncfusion
 description: Sorting in Angular Spreadsheet enables users to arrange data in ascending or descending order for easier analysis and organization.
 platform: document-processing
 control: Sort 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Sort in Angular Spreadsheet 

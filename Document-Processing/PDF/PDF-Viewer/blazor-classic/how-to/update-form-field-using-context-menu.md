@@ -4,7 +4,7 @@ title: Update form field using context menu in Blazor PDF Viewer | Syncfusion
 description: Learn here all about how to update form field using context menu in Syncfusion Blazor PDF Viewer component and more.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Update form field using context menu in Blazor PDF Viewer 

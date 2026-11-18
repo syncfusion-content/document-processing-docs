@@ -4,7 +4,7 @@ title: Form Designer Toolbar in ASP.NET MVC PDF Viewer | Syncfusion
 description: Customize the Form Designer toolbar in the ASP.NET MVC PDF Viewer to show, hide, or replace the default form design actions for your users.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Customize the Form Designer Toolbar in ASP.NET MVC PDF Viewer

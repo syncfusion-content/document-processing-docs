@@ -4,7 +4,7 @@ title: How to Create Object Structure in JavaScript Spreadsheet | Syncfusion
 description: Create an object structure in JavaScript Spreadsheet to organize workbook data and manage spreadsheet content programmatically.
 platform: document-processing
 control: Create a object structure 
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Create Object Structure in JavaScript Spreadsheet

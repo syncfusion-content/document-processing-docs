@@ -4,7 +4,7 @@ title: Theme and Style in React Spreadsheet | Syncfusion
 description: Learn about themes and styling options in the Syncfusion React Spreadsheet component for customizing appearance.
 control: Spreadsheet 
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Theme and Style in React Spreadsheet

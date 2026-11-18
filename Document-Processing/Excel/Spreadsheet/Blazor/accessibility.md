@@ -4,7 +4,7 @@ title: Accessibility in Blazor Spreadsheet | Syncfusion
 description: Learn about accessibility support in the Syncfusion Blazor Spreadsheet, including WCAG compliance, keyboard navigation, and WAI-ARIA attributes.
 platform: document-processing
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Accessibility in Blazor Spreadsheet

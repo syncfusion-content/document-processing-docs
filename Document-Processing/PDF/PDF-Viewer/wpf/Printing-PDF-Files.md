@@ -4,7 +4,7 @@ title: Printing PDF Files in WPF PDF Viewer control | Syncfusion
 description:  Print PDF files using Syncfusion WPF PDF Viewer with toolbar print button and silent printing options. Explore printer settings and customization features.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Printing PDF Files in WPF Pdf Viewer

@@ -4,7 +4,7 @@ description: Learn how to get started with the Syncfusion Blazor PDF to Image Li
 platform: document-processing
 control: PDF to image
 documentation: UG
-keywords: Assemblies
+keywords: Assembliestocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with Blazor PDF to Image Library

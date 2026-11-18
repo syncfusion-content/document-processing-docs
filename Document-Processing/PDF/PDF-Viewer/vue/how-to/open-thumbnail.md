@@ -5,7 +5,7 @@ description: Open the thumbnail pane programmatically in the Vue PDF Viewer usin
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Open the Thumbnail Pane Programmatically in Vue PDF Viewer

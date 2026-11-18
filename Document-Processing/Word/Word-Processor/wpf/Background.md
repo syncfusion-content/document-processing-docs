@@ -4,7 +4,7 @@ description: The background in WPF DOCX Editor offers color customization throug
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: background
+keywords: backgroundtocname: Document-Processing-SDKs-toc
 ---
 
 # Background in WPF DOCX Editor

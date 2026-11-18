@@ -5,7 +5,7 @@ description: Set up and use the Syncfusion JavaScript (ES5) PDF Viewer in server
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with Server-Backed JS PDF Viewer

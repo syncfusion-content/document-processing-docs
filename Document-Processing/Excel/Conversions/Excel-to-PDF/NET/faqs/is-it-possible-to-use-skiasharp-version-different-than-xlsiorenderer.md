@@ -3,7 +3,7 @@ title: SkiaSharp Compatibility in .NET Excel Library | Syncfusion
 description: SkiaSharp compatibility explains runtime errors caused by incompatible SkiaSharp versions with Excel Library converters.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # SkiaSharp Version Support in .NET Excel Library

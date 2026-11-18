@@ -4,7 +4,7 @@ title: How to Check the document editing status in PDF Viewer | Syncfusion
 description: Learn here all about how to check the editing status of the document in Syncfusion Blazor PDF Viewer component.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Check the document editing status in PDF Viewer

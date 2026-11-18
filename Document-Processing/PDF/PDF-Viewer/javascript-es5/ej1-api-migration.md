@@ -5,7 +5,7 @@ description: Learn about the ej1 api migration in the JavaScript (ES5) PDF Viewe
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Ej1 Api Migration in JavaScript (ES5) PDF Viewer

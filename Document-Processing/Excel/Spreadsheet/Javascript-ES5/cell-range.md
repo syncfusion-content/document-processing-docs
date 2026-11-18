@@ -4,7 +4,7 @@ title: Cell Range in JavaScript Spreadsheet | Syncfusion
 description: Cell range in JavaScript Spreadsheet enables selecting, accessing, and managing groups of cells efficiently for data entry and manipulation.
 platform: document-processing
 control: Cell range
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Cell range in JavaScript Spreadsheet 

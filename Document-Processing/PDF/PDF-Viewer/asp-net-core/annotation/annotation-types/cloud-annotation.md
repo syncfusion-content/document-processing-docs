@@ -5,7 +5,7 @@ description: Add, customize, and manage Cloud annotations in the ASP.NET Core PD
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Cloud Annotation in ASP.NET Core PDF Viewer

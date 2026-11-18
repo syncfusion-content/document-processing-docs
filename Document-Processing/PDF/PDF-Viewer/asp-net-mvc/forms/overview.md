@@ -5,7 +5,7 @@ description: Learn about introduction of the Syncfusion ASP.NET MVC PDF Viewer F
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion ASP.NET MVC PDF Viewer Forms

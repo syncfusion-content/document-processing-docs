@@ -4,7 +4,7 @@ title: From Azure Active Directory in ASP.NET Core PDF Viewer | Syncfusion
 description: Learn about the from azure active directory in the ASP.NET Core PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # From Azure Active Directory in ASP.NET Core PDF Viewer
@@ -14,7 +14,7 @@ documentation: ug
 The ASP.NET Core PDF Viewer component supports loading and saving PDF files with Azure Active Directory (AAD). The following steps explain how to securely load and store PDFs using AAD.
 
 ### Steps to open a PDF from Azure Active Directory
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 1: Register an application in Azure Active Directory (AAD)
@@ -36,7 +36,7 @@ The ASP.NET Core PDF Viewer component supports loading and saving PDF files with
    - Copy the client secret value immediately, as it will be hidden later. Store it securely.
 
    ![client-secret](../images/client-secret.png)
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 2: Create the Azure Storage account
@@ -46,7 +46,7 @@ The ASP.NET Core PDF Viewer component supports loading and saving PDF files with
    - Create a new storage account by filling in the required details (e.g., name, location, resource group, etc.).
 
     ![storage-account](../images/storage-account.png)
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 3: Assign a role to the application
@@ -61,7 +61,7 @@ The ASP.NET Core PDF Viewer component supports loading and saving PDF files with
    - Select your application and click **Select**.
    - Click **Review + assign** to finalize the role assignment.
 
-    ![add-role](../images/add-role.png)
+    ![add-role](../images/add-role.png)tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 4: Upload the PDF to Azure Storage
@@ -72,7 +72,7 @@ The ASP.NET Core PDF Viewer component supports loading and saving PDF files with
 2. **Upload the PDF File**:
    - Create a new container and upload the PDF document you want to access in the PDF Viewer.
 
-    ![upload-pdf](../images/upload-pdf.png)
+    ![upload-pdf](../images/upload-pdf.png)tocname: Document-Processing-SDKs-toc
 ---
 
 ### Step 5: Server-side configuration

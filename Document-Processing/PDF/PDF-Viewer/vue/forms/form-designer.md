@@ -5,7 +5,7 @@ description: Use the Form Designer in the Vue PDF Viewer to create, edit, and ma
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Form Designer in Vue PDF Viewer

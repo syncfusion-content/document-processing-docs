@@ -4,7 +4,7 @@ title: Events in React Spreadsheet | Syncfusion
 description: Learn about events in the Syncfusion React Spreadsheet component, including event handling and customization options.
 control: Events
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Events in React Spreadsheet

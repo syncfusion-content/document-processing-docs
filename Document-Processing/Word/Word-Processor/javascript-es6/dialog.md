@@ -5,7 +5,7 @@ description: The dialogs in TypeScript DOCX Editor provides built-in dialogs to 
 platform: document-processing
 control: Dialog
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Dialogs in TypeScript DOCX Editor

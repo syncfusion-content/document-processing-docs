@@ -5,7 +5,7 @@ description: Load and display PDF files in the React PDF Viewer from URLs, Base6
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Load and Open PDF Files in React PDF Viewer
@@ -206,7 +206,7 @@ Each link goes to a provider page with simple step-by-step instructions, sample 
 - [OneDrive](./open-pdf-file/from-one-drive)
 - [Dropbox](./open-pdf-file/from-dropbox-cloud-file-storage)
 - [Box](./open-pdf-file/from-box-cloud-file-storage)
-
+tocname: Document-Processing-SDKs-toc
 ---
 
 **See also**

@@ -3,7 +3,7 @@ title: Find item in Word document in Java Word | Syncfusion
 description: Learn about Find item in Word document in the Syncfusion Java Word library to create, read, and edit documents without external dependencies.
 platform: document-processing
 control: Word Library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Find item in Word document in Java Word

@@ -5,7 +5,7 @@ description: How-to overview of the Angular PDF Viewer in Syncfusion Angular PDF
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Overview of the Angular PDF Viewer

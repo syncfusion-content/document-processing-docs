@@ -5,7 +5,7 @@ description: Open password-protected PDF files in the Angular PDF Viewer by prov
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Load Password-Protected PDF in Angular PDF Viewer

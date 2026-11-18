@@ -3,7 +3,7 @@ title: Sort and Filter in JavaScript Excel Library | Syncfusion
 description: Author worksheet sort state and AutoFilter column metadata with the Syncfusion JavaScript Excel Library.
 platform: document-processing
 control: Excel
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Sort and Filter in JavaScript Excel

@@ -5,7 +5,7 @@ description: Get started with Syncfusion .NET MAUI Smart PDF Viewer by installin
 platform: document-processing
 control: SfSmartPdfViewer
 documentation: ug
-keywords: .net maui smart pdf viewer, maui smart pdf viewer getting started, ai pdf viewer maui, smart redaction maui, smart fill maui
+keywords: .net maui smart pdf viewer, maui smart pdf viewer getting started, ai pdf viewer maui, smart redaction maui, smart fill mauitocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with .NET MAUI Smart PDF Viewer

@@ -4,7 +4,7 @@ title: Localization in Xamarin Pdf Viewer | Syncfusion
 description: Learn here all about Localization support in Syncfusion<sup>®</sup> Xamarin Pdf Viewer (SfPdfViewer) control and more.
 platform: document-processing
 control: SfPdfViewer
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Localization in Xamarin Pdf Viewer

@@ -5,7 +5,7 @@ description: Undo and redo annotation changes in the ASP.NET Core PDF Viewer fro
 platform: aspnet-core
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Undo and Redo Annotations in ASP.NET Core PDF Viewer

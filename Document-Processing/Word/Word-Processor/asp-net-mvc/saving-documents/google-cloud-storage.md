@@ -5,7 +5,7 @@ description: Learn how to save a document to Google Cloud Storage in the Syncfus
 platform: document-processing
 control: Save document to Google Cloud Storage
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Save Documents to Google Cloud Storage in ASP.NET MVC DOCX Editor

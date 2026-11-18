@@ -4,7 +4,7 @@ title: How to Resolve Pdfium Issues in ASP.NET MVC PDF Viewer | Syncfusion
 description: Resolve common Pdfium issues in the ASP.NET MVC PDF Viewer such as rendering failures, missing dependencies, and version mismatches.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Resolve Pdfium Issues in ASP.NET MVC PDF Viewer

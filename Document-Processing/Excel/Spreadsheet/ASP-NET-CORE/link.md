@@ -4,7 +4,7 @@ title: Hyperlink in ASP.NET Core Spreadsheet | Syncfusion
 description: Learn about hyperlinks in the Syncfusion ASP.NET Core Spreadsheet control, including inserting, editing, and managing links.
 platform: document-processing
 control: Link
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 

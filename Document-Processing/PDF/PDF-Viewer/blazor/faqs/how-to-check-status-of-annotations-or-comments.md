@@ -4,7 +4,7 @@ title: How to Check the Status of Comments in Blazor PDF Viewer | Syncfusion
 description: Learn how to retrieve the review status of comments using the Review property and GetAnnotationsAsync in the Blazor PDF Viewer component.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Check the Status of Comments in Blazor PDF Viewer

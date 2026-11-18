@@ -5,7 +5,7 @@ description: The dialogs in Angular DOCX Editor provides built-in dialogs to edi
 platform: document-processing
 control: Dialog
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Dialogs in Angular DOCX Editor

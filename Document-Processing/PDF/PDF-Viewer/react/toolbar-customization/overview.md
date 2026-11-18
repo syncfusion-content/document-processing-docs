@@ -5,7 +5,7 @@ description: Learn about introduction of the Syncfusion React PDF Viewer Toolbar
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # About Syncfusion React PDF Viewer Toolbar Customization

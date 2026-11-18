@@ -4,7 +4,7 @@ title: Radio Button Form Control in React Spreadsheet | Syncfusion
 description: Learn about Radio Button form control in the Syncfusion React Spreadsheet component, including editing, formatting, and cell link integration.
 control: Form Controls
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Radio Button Form Control in React Spreadsheet

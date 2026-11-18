@@ -3,7 +3,7 @@ title: How to Enable PivotTable Details in .NET Excel Library | Syncfusion
 description: Enable the PivotTable show details option in Excel worksheets using the Syncfusion .NET Excel Library with code examples.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to enable PivotTable details in .NET Excel Library

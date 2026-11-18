@@ -3,7 +3,7 @@ title: Create Markdown document in AWS Elastic Beanstalk | Syncfusion
 description: Create Markdown document without external dependencies in AWS Elastic Beanstalk application using .NET Markdown library.
 platform: document-processing
 control: Markdown
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Create Markdown document in AWS Elastic Beanstalk

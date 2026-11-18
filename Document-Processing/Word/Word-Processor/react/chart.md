@@ -5,7 +5,7 @@ description: Chart support in React DOCX Editor ensures accurate rendering and p
 control: Chart 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Charts in React DOCX Editor

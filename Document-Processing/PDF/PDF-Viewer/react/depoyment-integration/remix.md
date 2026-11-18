@@ -5,7 +5,7 @@ description: Integrate the Syncfusion React PDF Viewer into a React Router v7 (f
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with React PDF Viewer in React Router

@@ -5,7 +5,7 @@ description: Accessibility features in the Angular PDF Viewer help all users rea
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Accessibility in Angular PDF Viewer

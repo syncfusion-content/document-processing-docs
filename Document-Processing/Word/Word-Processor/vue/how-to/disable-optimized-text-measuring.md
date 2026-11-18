@@ -5,7 +5,7 @@ description: Disable optimized text measuring in Syncfusion® Vue DOCX Editor to
 control: Disable optimized text measuring 
 platform: document-processing
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Disable Optimized Text Measuring in Vue DOCX Editor

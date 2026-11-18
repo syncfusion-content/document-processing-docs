@@ -3,7 +3,7 @@ title: Export Quality Images in .NET Excel Library | Syncfusion
 description: ExportQualityImage property describes how image quality is affected when exporting images using Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # ExportQualityImage Property in .NET Excel Library

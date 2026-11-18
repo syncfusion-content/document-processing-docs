@@ -4,7 +4,7 @@ title: How to Disable the annotation selection in WPF Pdf Viewer | Syncfusion
 description: Disable or enable the annotation selection in Syncfusion WPF PDF Viewer control using Constraints property. 
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # How to Disable the annotations selection in WPF Pdf Viewer 

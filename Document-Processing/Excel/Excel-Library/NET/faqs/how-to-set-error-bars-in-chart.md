@@ -3,7 +3,7 @@ title: How to Set Error Bars in .NET Excel Library | Syncfusion
 description: Learn how to set error bars in an Excel chart programmatically using the Syncfusion .NET Excel Library.
 platform: document-processing
 control: XlsIO
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # How to set chart error bars in .NET Excel Library

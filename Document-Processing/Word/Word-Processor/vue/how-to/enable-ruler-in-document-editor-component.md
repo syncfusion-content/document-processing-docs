@@ -5,7 +5,7 @@ description: Enable the ruler in Syncfusion® Vue DOCX Editor to set margins, ta
 platform: document-processing
 control: Enable Ruler
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # How to Enable Ruler in Vue DOCX Editor

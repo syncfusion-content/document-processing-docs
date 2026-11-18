@@ -4,7 +4,7 @@ title: Open PDF from Azure Blob Storage in Blazor PDF Viewer  | Syncfusion
 description: Learn how to load a PDF from Azure Blob Storage into the Blazor PDF Viewer , including setup steps, and configuration guidance.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Open PDF from Azure Blob Storage in Blazor PDF Viewer

@@ -4,7 +4,7 @@ title: Selection in JavaScript Spreadsheet | Syncfusion
 description: Selection in JavaScript Spreadsheet allows users to select cells, ranges, rows, and columns for efficient editing and data management.
 platform: document-processing
 control: Selection
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Selection in  JavaScript Spreadsheet 

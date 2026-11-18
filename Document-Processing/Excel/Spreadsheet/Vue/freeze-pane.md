@@ -4,7 +4,7 @@ title: Freeze Panes in Vue Spreadsheet | Syncfusion
 description: Keep important rows and columns visible while scrolling using freeze pane support in the Syncfusion Vue Spreadsheet.
 control: Freeze pane
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Freeze Panes in Vue Spreadsheet

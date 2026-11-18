@@ -3,7 +3,7 @@ title: Supported LaTeX in Java Word | Syncfusion
 description: Learn about Supported LaTeX in the Syncfusion Java Word library to create, read, and edit documents without external dependencies.
 platform: document-processing
 control: Word Library
-documentation: UG
+documentation: UGtocname: Document-Processing-SDKs-toc
 ---
 
 # Supported LaTeX in Java Word

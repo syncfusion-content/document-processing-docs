@@ -4,7 +4,7 @@ title: Getting Started with JavaScript Excel | Syncfusion
 description: Learn how to create, edit, and download Excel workbooks in the browser using the Syncfusion® JavaScript Excel Library.
 control: Excel
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with JavaScript Excel

@@ -4,7 +4,7 @@ description: The spell check in WPF DOCX Editor offers spelling mistake detectio
 platform: document-processing
 control: SfRichTextBoxAdv
 documentation: ug
-keywords: spell-check,spelling,dictionary,multilingual,language
+keywords: spell-check,spelling,dictionary,multilingual,languagetocname: Document-Processing-SDKs-toc
 ---
 # Spell Check in WPF DOCX Editor
 

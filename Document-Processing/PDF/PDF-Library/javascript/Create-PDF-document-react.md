@@ -6,7 +6,7 @@ control: PDF
 platform: document-processing
 documentation: ug
 keywords: javascript, pdf, react
-canonical_url: https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-react
+canonical_url: https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/create-pdf-document-reacttocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with JavaScript PDF in React app

@@ -4,7 +4,7 @@ title: Events in Blazor PDF Viewer | Syncfusion
 description: Explore all events available in the Blazor PDF Viewer , including lifecycle, navigation, annotation, search, and printing events.
 platform: document-processing
 control: SfPdfViewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Events in Blazor PDF Viewer 

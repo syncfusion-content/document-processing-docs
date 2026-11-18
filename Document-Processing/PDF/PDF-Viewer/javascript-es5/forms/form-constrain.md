@@ -4,7 +4,7 @@ title: Form Constrain in JavaScript (ES5) PDF Viewer | Syncfusion
 description: Configure form field constraints in the JavaScript (ES5) PDF Viewer, including isReadOnly, isRequired, and isPrint flags for each field.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # PDF Form Field Constraints in JavaScript (ES5) PDF Viewer

@@ -5,7 +5,7 @@ canonical_url: "https://www.syncfusion.com/spreadsheet-editor-sdk/winforms-sprea
 description: Learn how to get started with the Syncfusion Windows Forms Spreadsheet control. Create and configure a spreadsheet and perform basic worksheet operations.
 platform:  document-processing
 control: Spreadsheet
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Getting Started with Windows Forms Spreadsheet

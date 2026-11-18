@@ -5,7 +5,7 @@ description: Install Syncfusion® WPF UI Builder to generate production-ready WP
 control: PDF Viewer
 platform: document-processing
 documentation: ug
-keywords: WPF UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skills
+keywords: WPF UI Builder, Skills, AI Assistants, PDF Viewer SDK, Agent Skillstocname: Document-Processing-SDKs-toc
 ---
 
 # UI Builder Skill in WPF Pdf Viewer

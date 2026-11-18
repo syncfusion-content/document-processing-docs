@@ -4,7 +4,7 @@ title: From Dropbox Cloud File Storage in React PDF Viewer | Syncfusion
 description: Load and display PDF files stored in Dropbox cloud storage in the React PDF Viewer using standalone and server-backed approaches.
 control: Open PDF files from Dropbox cloud file storage
 platform: document-processing
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Open PDF from Dropbox Cloud Storage in React PDF Viewer

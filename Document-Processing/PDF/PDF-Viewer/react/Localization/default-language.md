@@ -5,7 +5,7 @@ description: Set the default language for the React PDF Viewer UI and learn how 
 platform: document-processing
 control: PDF Viewer
 documentation: ug
-domainurl: ##DomainURL##
+domainurl: ##DomainURL##tocname: Document-Processing-SDKs-toc
 ---
 
 # Default Language in React PDF Viewer

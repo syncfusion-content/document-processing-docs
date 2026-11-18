@@ -4,7 +4,7 @@ title: Ui Interactions in ASP.NET MVC PDF Viewer | Syncfusion
 description: Learn about the ui interactions in the ASP.NET MVC PDF Viewer and how it helps users work with PDF documents more effectively.
 platform: document-processing
 control: PDF Viewer
-documentation: ug
+documentation: ugtocname: Document-Processing-SDKs-toc
 ---
 
 # Ui Interactions in ASP.NET MVC PDF Viewer
