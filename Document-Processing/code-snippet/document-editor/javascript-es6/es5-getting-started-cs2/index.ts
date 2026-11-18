@@ -46,8 +46,8 @@
   </div>
   <script>
       // Initialize DocumentEditorContainer component.
-      var documenteditorContainer = new ej.documenteditor.DocumentEditorContainer({ enableToolbar: true, height: '590px' });
-      ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
+      var documenteditorContainer = new ej.documenteditor.DocumentEditorContainer({ enableToolbar: true, toolbarMode: 'Ribbon', height: '590px' });
+      ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar, ej.documenteditor.Ribbon);
       documenteditorContainer.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
       //DocumentEditorContainer control rendering starts
       documenteditorContainer.appendTo('#DocumentEditor');
