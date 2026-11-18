@@ -184,10 +184,11 @@ Add the DOCX Editor component to your application. Add the following code to ini
 import * as React from 'react';
 import {
   DocumentEditorContainerComponent,
-  Toolbar
+  Toolbar,
+  Ribbon
 } from '@syncfusion/ej2-react-documenteditor';
 
-DocumentEditorContainerComponent.Inject(Toolbar);
+DocumentEditorContainerComponent.Inject(Toolbar, Ribbon);
 
 function App() {
   return (
@@ -196,7 +197,8 @@ function App() {
             height="590px" 
             // Use the following service URL only for demo purposes
             serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" 
-            enableToolbar={true}
+            enableToolbar={true},
+            toolbarMode="Ribbon"
         />
   );
 }
@@ -218,7 +220,8 @@ function App() {
             height="590px" 
             // Use the following service URL only for demo purposes
             serviceUrl="https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/" 
-            enableToolbar={true}
+            enableToolbar={true},
+            toolbarMode="Ribbon"
         />
     );
 }
