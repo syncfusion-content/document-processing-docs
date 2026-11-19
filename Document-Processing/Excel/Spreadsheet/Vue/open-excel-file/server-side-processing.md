@@ -120,6 +120,7 @@ const saveUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor
 const created = () => {
   fetch('https://js.syncfusion.com/demos/ejservices/data/Spreadsheet/LargeData.xlsx')
     .then((response) => response.blob())
+    // Convert the Blob to a File and open it in the Spreadsheet.
     .then((blob) => spreadsheet.value.open({ file: new File([blob], 'Sample.xlsx') }));
 };
 </script>
@@ -224,7 +225,7 @@ By default, the Spreadsheet component provides an option to browse files from th
         string filePath = _env.ContentRootPath.ToString() + "\\Files\\" + options.FileName + ".xlsx";
         // Getting the file stream from the file path.
         FileStream fileStream = new FileStream(filePath, FileMode.Open);
-        // Converting "MemoryStream" to "IFormFile".
+        // Wrap the file stream as an IFormFile.
         IFormFile formFile = new FormFile(fileStream, 0, fileStream.Length, "", options.FileName + ".xlsx");
         open.File = formFile;
         // Processing the Excel file and return the workbook JSON.
@@ -289,15 +290,18 @@ import { SpreadsheetComponent as EjsSpreadsheet } from '@syncfusion/ej2-vue-spre
 const spreadsheet = ref(null);
 const openUrl = 'https://your-api.execute-api.your-region.amazonaws.com/Prod/api/spreadsheet/open';
 const beforeOpen = (args) => {
+    // Prevent the default open action.
     args.cancel = true;
     if (!(args.file instanceof File)) return;
     const file = args.file;
     const reader = new FileReader();
     reader.onload = async () => {
+      // Send the Base64 file data to AWS for open processing.
       const response = await fetch(openUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+          // Remove the data URL prefix to send only the Base64 file content.
           file: String(reader.result).split(',')[1],
           extension: file.name.split('.').pop(),
           password: args.password || ''
@@ -305,6 +309,7 @@ const beforeOpen = (args) => {
       });
       if (!response.ok) throw new Error('Open request failed.');
       const data = await response.json();
+      // Load the returned workbook JSON into the Spreadsheet.
       spreadsheet.value.openFromJson({ file: data });
     };
     reader.readAsDataURL(file);
@@ -329,15 +334,18 @@ export default {
   },
   methods: {
     beforeOpen(args) {
+    // Prevent the default open action.
     args.cancel = true;
     if (!(args.file instanceof File)) return;
     const file = args.file;
     const reader = new FileReader();
     reader.onload = async () => {
+      // Send the Base64 file data to AWS for open processing.
       const response = await fetch(this.openUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+          // Remove the data URL prefix to send only the Base64 file content.
           file: String(reader.result).split(',')[1],
           extension: file.name.split('.').pop(),
           password: args.password || ''
@@ -345,6 +353,7 @@ export default {
       });
       if (!response.ok) throw new Error('Open request failed.');
       const data = await response.json();
+      // Load the returned workbook JSON into the Spreadsheet.
       this.$refs.spreadsheet.openFromJson({ file: data });
     };
     reader.readAsDataURL(file);
@@ -507,6 +516,9 @@ import { SpreadsheetComponent as EjsSpreadsheet } from '@syncfusion/ej2-vue-spre
 
 const spreadsheet = ref(null);
 const openUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open';
+// chunkSize specifies the server response chunk size in bytes.
+// retryCount specifies how many times to retry a failed chunk request.
+// retryAfterDelay specifies the delay in milliseconds between retries.
 const openSettings = { chunkSize: 1000000, retryCount: 3, retryAfterDelay: 500 };
 </script>
 
@@ -544,6 +556,7 @@ import { ref } from 'vue';
 import { SpreadsheetComponent as EjsSpreadsheet } from '@syncfusion/ej2-vue-spreadsheet';
 
 const spreadsheet = ref(null);
+// Specify the service URL that processes the Excel file and returns workbook JSON.
 const openUrl = 'https://localhost:{{port_number}}/Home/Open';
 </script>
 

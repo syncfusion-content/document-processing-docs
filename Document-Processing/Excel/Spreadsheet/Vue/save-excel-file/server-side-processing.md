@@ -219,7 +219,7 @@ Place this code inside a `<script setup>` handler after the Spreadsheet is creat
             string basePath = _env.ContentRootPath + "\\Files\\" + saveSettings.FileName + ".xlsx";
             var file = System.IO.File.Create(basePath);
             fileStream.Seek(0, SeekOrigin.Begin);
-            // To convert the stream to file options.
+            // Copy the workbook stream to the file on the server.
             fileStream.CopyTo(file);
             file.Dispose();
             fileStream.Dispose();
@@ -261,19 +261,27 @@ const spreadsheet = ref(null);
 const saveUrl = 'https://your-api.execute-api.your-region.amazonaws.com/Prod/api/spreadsheet/save';
 let saveInitiated = false;
 const beforeSaveHandler = async (args) => {
+    // saveAsJson also triggers beforeSave; let that nested event proceed without starting another save.
     if (saveInitiated) return;
+    // Prevent the default save action.
     args.cancel = true;
     saveInitiated = true;
     try {
+      // Convert the spreadsheet workbook to JSON data.
       const json = await spreadsheet.value.saveAsJson();
       const formData = new FormData();
+      // Pass the workbook JSON to the server for save processing.
       formData.append('JSONData', JSON.stringify(json.jsonObject.Workbook));
       formData.append('saveType', 'Xlsx');
       formData.append('fileName', args.fileName || 'Worksheet');
+      // Invoke the AWS service to generate the Excel file.
       const response = await fetch(saveUrl, { method: 'POST', body: formData });
       if (!response.ok) throw new Error('Save request failed.');
+      // Read the Excel file returned by the service as Base64 text.
       const base64 = await response.text();
+      // Remove any data URL prefix and decode the Base64 content into bytes.
       const bytes = Uint8Array.from(atob(base64.replace(/^data:.*?;base64,/, '')), (char) => char.charCodeAt(0));
+      // Create a Blob with the XLSX content type from the decoded bytes.
       const blob = new Blob([bytes], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
       const url = URL.createObjectURL(blob);
       const anchor = document.createElement('a');
@@ -308,19 +316,27 @@ export default {
   },
   methods: {
     async beforeSaveHandler(args) {
+    // saveAsJson also triggers beforeSave; let that nested event proceed without starting another save.
     if (this.saveInitiated) return;
+    // Prevent the default save action.
     args.cancel = true;
     this.saveInitiated = true;
     try {
+      // Convert the spreadsheet workbook to JSON data.
       const json = await this.$refs.spreadsheet.saveAsJson();
       const formData = new FormData();
+      // Pass the workbook JSON to the server for save processing.
       formData.append('JSONData', JSON.stringify(json.jsonObject.Workbook));
       formData.append('saveType', 'Xlsx');
       formData.append('fileName', args.fileName || 'Worksheet');
+      // Invoke the AWS service to generate the Excel file.
       const response = await fetch(this.saveUrl, { method: 'POST', body: formData });
       if (!response.ok) throw new Error('Save request failed.');
+      // Read the Excel file returned by the service as Base64 text.
       const base64 = await response.text();
+      // Remove any data URL prefix and decode the Base64 content into bytes.
       const bytes = Uint8Array.from(atob(base64.replace(/^data:.*?;base64,/, '')), (char) => char.charCodeAt(0));
+      // Create a Blob with the XLSX content type from the decoded bytes.
       const blob = new Blob([bytes], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
       const url = URL.createObjectURL(blob);
       const anchor = document.createElement('a');

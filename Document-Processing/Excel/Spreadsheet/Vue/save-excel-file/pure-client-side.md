@@ -87,7 +87,9 @@ const spreadsheet = ref(null);
 const created = async () => {
     const response = await fetch('https://js.syncfusion.com/demos/ejservices/data/Spreadsheet/LargeData.xlsx');
     if (!response.ok) throw new Error('Unable to fetch workbook.');
+    // Read the fetched Excel file as Blob data.
     const blob = await response.blob();
+    // Convert the Blob to a File and open it in the Spreadsheet.
     spreadsheet.value.open({ file: new File([blob], 'Sample.xlsx') });
 };
 </script>
