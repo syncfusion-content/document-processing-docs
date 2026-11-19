@@ -32,8 +32,6 @@ let document: PdfDocument = new PdfDocument(data);
 {% highlight javascript tabtitle="JavaScript" %}
 
 var data = 'JVBERi0xLjcNJeLjz9MNCjEyNSAw...........TU3MTQNCiUlRU9GDQo=';
-// Load an existing PDF document from data as Base64 string
-var document = new ej.pdf.PdfDocumentPdfDocument(data);
 // Load an existing PDF document from a Base64 string
 var document = new ej.pdf.PdfDocument(data);
 

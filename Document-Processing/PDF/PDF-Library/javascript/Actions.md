@@ -102,7 +102,7 @@ The JavaScript PDF Library supports a wide variety of PDF action types conformin
 | GoTo (`PdfGoToAction`) | Navigates to a specific destination or page within the current document. |
 | Remote GoTo (`PdfRemoteGoToAction`) | Navigates to a destination located in an external PDF file. |
 | Embedded GoTo (`PdfEmbeddedGoToAction`) | Navigates to a destination within an embedded file or parent/child document. |
-| GoTo DPart (`PdfGoToDPartAction`) | Navigates to a document part (DPart) destination. |
+| GoTo DPart (`PdfGoToDocumentPartAction`) | Navigates to a document part (DPart) destination. |
 | GoTo 3D view (`PdfGoTo3DViewAction`) | Activates a specified view in a 3D annotation. |
 | Named (`PdfNamedAction`) | Executes a predefined viewer navigation command, such as FirstPage, LastPage, NextPage, or PrevPage. |
 | URI (`PdfUriAction`) | Resolves and opens a web URL or external hyperlink. |
@@ -325,11 +325,11 @@ document.destroy();
 
 ### GoTo DPart action
 
-The `PdfGoToDPartAction` navigates to a specified document part (DPart) destination within a PDF document. You can also specify the target document part for navigation.
+The `PdfGoToDocumentPartAction` navigates to a specified document part (DPart) destination within a PDF document. You can also specify the target document part for navigation.
 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
-import { PdfButtonField, PdfDestination, PdfDocument, PdfGoToDPartAction, PdfPage } from '@syncfusion/ej2-pdf';
+import { PdfButtonField, PdfDestination, PdfDocument, PdfGoToDocumentPartAction, PdfPage } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
 const document: PdfDocument = new PdfDocument();
@@ -337,7 +337,7 @@ const document: PdfDocument = new PdfDocument();
 const page: PdfPage = document.addPage();
 // Create a destination and DPart action
 const destination: PdfDestination = new PdfDestination(page);
-const action: PdfGoToDPartAction = new PdfGoToDPartAction(destination);
+const action: PdfGoToDocumentPartAction = new PdfGoToDocumentPartAction(destination);
 // Assign to a button
 const button: PdfButtonField = new PdfButtonField(page, 'btnDPart', { x: 20, y: 20, width: 120, height: 30 });
 button.text = 'Go to DPart';
@@ -356,7 +356,7 @@ var document = new ej.pdf.PdfDocument();
 var page = document.addPage();
 // Create a destination and DPart action
 var destination = new ej.pdf.PdfDestination(page);
-var action = new ej.pdf.PdfGoToDPartAction(destination);
+var action = new ej.pdf.PdfGoToDocumentPartAction(destination);
 // Assign to a button
 var button = new ej.pdf.PdfButtonField(page, 'btnDPart', { x: 20, y: 20, width: 120, height: 30 });
 button.text = 'Go to DPart';
