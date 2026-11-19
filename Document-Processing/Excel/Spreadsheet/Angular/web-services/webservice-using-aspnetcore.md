@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Connecting Web Services for Spreadsheet Open and Save in ASP.NET Core
+# Connecting ASP.NET Core Web Services to Angular Spreadsheet
 
 This guide explains how to set up and connect local web services for open and save operations in the [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) component using ASP.NET Core.
 
@@ -131,10 +131,10 @@ Build and run your Web API project. For detailed instructions, refer to:
 Once your local service is launched, configure the openUrl and saveUrl properties in your client application to use the local endpoints for import and export operations
 
 ```js
-<SpreadsheetComponent
+<ejs-spreadsheet
     openUrl="https://localhost:5173/api/spreadsheet/open"
-    saveUrl="https://localhost:5173/api/spreadsheet/save"
-/>
+    saveUrl="https://localhost:5173/api/spreadsheet/save">
+</ejs-spreadsheet>
 ```
 
 For more information, refer to the following [blog post](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services).

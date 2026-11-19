@@ -7,7 +7,7 @@ platform: document-processing
 documentation: ug
 ---
 
-# Connecting Web Services for Spreadsheet Open and Save in ASP.NET MVC
+# Connecting ASP.NET MVC Web Services to Angular Spreadsheet
 
 This guide explains how to set up and connect local web services for open and save operations in the [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) component using **ASP.NET MVC**.
 
@@ -123,10 +123,10 @@ After adding the controller codes and above mentioned configurations, build and 
 Once your local service is launched, configure the openUrl and saveUrl properties in client application to use the local endpoints to perform import and export operation.
 
 ```js
-<SpreadsheetComponent
+<ejs-spreadsheet
     openUrl="https://localhost:44300/Spreadsheet/Open"
-    saveUrl="https://localhost:44300/Spreadsheet/Save"
-/>
+    saveUrl="https://localhost:44300/Spreadsheet/Save">
+</ejs-spreadsheet>
 ```
 
 For more information, refer to the following [blog post](https://www.syncfusion.com/blogs/post/host-spreadsheet-open-and-save-services).
