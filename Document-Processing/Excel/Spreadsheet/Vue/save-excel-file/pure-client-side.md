@@ -78,28 +78,9 @@ const save = () => {
 
 To save an Excel file as blob data, you need to set `needBlobData` to **true** and `isFullPost` to **false** in the `beforeSave` event. Subsequently, you will receive the spreadsheet data as a blob in the [saveComplete](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#savecomplete) event.
 
-```vue
-<script setup>
-import { ref } from 'vue';
-import { SpreadsheetComponent as EjsSpreadsheet } from '@syncfusion/ej2-vue-spreadsheet';
+{% tabs %} {% highlight html tabtitle="Composition API (/src/App.vue)" %} {% include code-snippet/spreadsheet/vue/client-side-save-blob-cs1/app-composition.vue %} {% endhighlight %} {% highlight html tabtitle="Options API (/src/App.vue)" %} {% include code-snippet/spreadsheet/vue/client-side-save-blob-cs1/app.vue %} {% endhighlight %} {% endtabs %}
 
-const spreadsheet = ref(null);
-const created = async () => {
-    const response = await fetch('https://js.syncfusion.com/demos/ejservices/data/Spreadsheet/LargeData.xlsx');
-    if (!response.ok) throw new Error('Unable to fetch workbook.');
-    // Read the fetched Excel file as Blob data.
-    const blob = await response.blob();
-    // Convert the Blob to a File and open it in the Spreadsheet.
-    spreadsheet.value.open({ file: new File([blob], 'Sample.xlsx') });
-};
-</script>
-
-<template>
-  <ejs-spreadsheet ref="spreadsheet" :created="created" />
-
-</template>
-```
-
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/client-side-save-blob-cs1" %}
 
 ## Considerations
 

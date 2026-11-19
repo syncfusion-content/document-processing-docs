@@ -43,6 +43,7 @@ import { SpreadsheetComponent, SpreadsheetAllModule } from '@syncfusion/ej2-angu
   standalone: true,
   imports: [SpreadsheetAllModule],
   template: `<ejs-spreadsheet #spreadsheet ></ejs-spreadsheet>`
+  // Note: saveUrl is omitted for client-side export
 })
 export class AppComponent {
   @ViewChild('spreadsheet') public spreadsheet!: SpreadsheetComponent;
@@ -81,29 +82,11 @@ export class AppComponent {
 
 To save an Excel file as blob data, you need to set `needBlobData` to **true** and `isFullPost` to **false** in the `beforeSave` event. Subsequently, you will receive the spreadsheet data as a blob in the [saveComplete](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#savecomplete) event.
 
-```ts
-import { Component, ViewChild } from '@angular/core';
-import { SpreadsheetComponent, SpreadsheetAllModule } from '@syncfusion/ej2-angular-spreadsheet';
+{% tabs %} {% highlight ts tabtitle="app.ts" %} {% include code-snippet/spreadsheet/angular/client-side-save-blob-cs1/src/app.ts %} {% endhighlight %}
 
-@Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [SpreadsheetAllModule],
-  template: `<ejs-spreadsheet #spreadsheet (created)="created()"></ejs-spreadsheet>`
-})
-export class AppComponent {
-  @ViewChild('spreadsheet') public spreadsheet!: SpreadsheetComponent;
-  public async created(): Promise<void> {
-    const response = await fetch('https://js.syncfusion.com/demos/ejservices/data/Spreadsheet/LargeData.xlsx');
-    if (!response.ok) throw new Error('Unable to fetch workbook.');
-    // Read the fetched Excel file as Blob data.
-    const blob = await response.blob();
-    // Convert the Blob to a File and open it in the Spreadsheet.
-    this.spreadsheet.open({ file: new File([blob], 'Sample.xlsx') });
-  }
-}
-```
+{% highlight ts tabtitle="main.ts" %} {% include code-snippet/spreadsheet/angular/client-side-save-blob-cs1/src/main.ts %} {% endhighlight %} {% endtabs %}
 
+{% previewsample "/document-processing/samples/spreadsheet/angular/client-side-save-blob-cs1" %}
 
 ## Considerations
 

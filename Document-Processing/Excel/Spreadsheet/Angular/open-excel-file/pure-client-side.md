@@ -38,6 +38,7 @@ import { SpreadsheetComponent, SpreadsheetAllModule } from '@syncfusion/ej2-angu
   standalone: true,
   imports: [SpreadsheetAllModule],
   template: `<ejs-spreadsheet #spreadsheet ></ejs-spreadsheet>`
+  // Note: openUrl is omitted for client-side import
 })
 export class AppComponent {
   @ViewChild('spreadsheet') public spreadsheet!: SpreadsheetComponent;
@@ -53,54 +54,21 @@ With this configuration, the Spreadsheet will process all Excel files (.xlsx) di
 
 Use a native file input to select an Excel workbook. Pass the selected `File` to the Spreadsheet's `open` method; do not configure `openUrl` for this client-side workflow.
 
-```ts
-import { Component, ViewChild } from '@angular/core';
-import { SpreadsheetComponent, SpreadsheetAllModule } from '@syncfusion/ej2-angular-spreadsheet';
+{% tabs %} {% highlight ts tabtitle="app.ts" %} {% include code-snippet/spreadsheet/angular/client-side-local-cs1/src/app.ts %} {% endhighlight %}
 
-@Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [SpreadsheetAllModule],
-  template: `<ejs-spreadsheet #spreadsheet ></ejs-spreadsheet>
-<input type="file" accept=".xlsx" (change)="openFile($event)">`
-})
-export class AppComponent {
-  @ViewChild('spreadsheet') public spreadsheet!: SpreadsheetComponent;
-  public openFile(event: Event): void {
-    const input = event.target as HTMLInputElement;
-    if (input.files?.length) this.spreadsheet.open({ file: input.files[0] });
-  }
-}
-```
+{% highlight ts tabtitle="main.ts" %} {% include code-snippet/spreadsheet/angular/client-side-local-cs1/src/main.ts %} {% endhighlight %} {% endtabs %}
 
+{% previewsample "/document-processing/samples/spreadsheet/angular/client-side-local-cs1" %}
 
 ### Opening a file from a URL
 
 You can fetch the remote Excel file (.xlsx) through the URL and convert it to a blob. Convert this blob to a file and open this file by using Spreadsheet component's [open](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#open) method.
 
-```ts
-import { Component, ViewChild } from '@angular/core';
-import { SpreadsheetComponent, SpreadsheetAllModule } from '@syncfusion/ej2-angular-spreadsheet';
+{% tabs %} {% highlight ts tabtitle="app.ts" %} {% include code-snippet/spreadsheet/angular/client-side-url-cs1/src/app.ts %} {% endhighlight %}
 
-@Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [SpreadsheetAllModule],
-  template: `<ejs-spreadsheet #spreadsheet (created)="created()"></ejs-spreadsheet>`
-})
-export class AppComponent {
-  @ViewChild('spreadsheet') public spreadsheet!: SpreadsheetComponent;
-  public async created(): Promise<void> {
-    const response = await fetch('https://js.syncfusion.com/demos/ejservices/data/Spreadsheet/LargeData.xlsx');
-    if (!response.ok) throw new Error('Unable to fetch workbook.');
-    // Read the fetched Excel file as Blob data.
-    const blob = await response.blob();
-    // Convert the Blob to a File and open it in the Spreadsheet.
-    this.spreadsheet.open({ file: new File([blob], 'Sample.xlsx') });
-  }
-}
-```
+{% highlight ts tabtitle="main.ts" %} {% include code-snippet/spreadsheet/angular/client-side-url-cs1/src/main.ts %} {% endhighlight %} {% endtabs %}
 
+{% previewsample "/document-processing/samples/spreadsheet/angular/client-side-url-cs1" %}
 
 Cross-origin resource sharing (CORS) restrictions may prevent opening files from some URLs. Ensure CORS policies are properly configured on the target server.
 
@@ -110,29 +78,11 @@ By default, the Spreadsheet component provides an option to browse files from th
 
 Please find the code to fetch the blob data and load it into the Spreadsheet component below.
 
-```ts
-import { Component, ViewChild } from '@angular/core';
-import { SpreadsheetComponent, SpreadsheetAllModule } from '@syncfusion/ej2-angular-spreadsheet';
+{% tabs %} {% highlight ts tabtitle="app.ts" %} {% include code-snippet/spreadsheet/angular/client-side-blob-cs1/src/app.ts %} {% endhighlight %}
 
-@Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [SpreadsheetAllModule],
-  template: `<ejs-spreadsheet #spreadsheet (created)="created()"></ejs-spreadsheet>`
-})
-export class AppComponent {
-  @ViewChild('spreadsheet') public spreadsheet!: SpreadsheetComponent;
-  public async created(): Promise<void> {
-    const response = await fetch('https://js.syncfusion.com/demos/ejservices/data/Spreadsheet/LargeData.xlsx');
-    if (!response.ok) throw new Error('Unable to fetch workbook.');
-    // Read the fetched Excel file as Blob data.
-    const blob = await response.blob();
-    // Convert the Blob to a File and open it in the Spreadsheet.
-    this.spreadsheet.open({ file: new File([blob], 'Sample.xlsx') });
-  }
-}
-```
+{% highlight ts tabtitle="main.ts" %} {% include code-snippet/spreadsheet/angular/client-side-blob-cs1/src/main.ts %} {% endhighlight %} {% endtabs %}
 
+{% previewsample "/document-processing/samples/spreadsheet/angular/client-side-blob-cs1" %}
 
 ## Considerations
 

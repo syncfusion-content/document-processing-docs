@@ -52,51 +52,17 @@ With this configuration, the Spreadsheet will process all Excel files (.xlsx) di
 
 Use a native file input to select an Excel workbook. Pass the selected `File` to the Spreadsheet's `open` method; do not configure `openUrl` for this client-side workflow.
 
-```vue
-<script setup>
-import { ref } from 'vue';
-import { SpreadsheetComponent as EjsSpreadsheet } from '@syncfusion/ej2-vue-spreadsheet';
+{% tabs %} {% highlight html tabtitle="Composition API (/src/App.vue)" %} {% include code-snippet/spreadsheet/vue/client-side-local-cs1/app-composition.vue %} {% endhighlight %} {% highlight html tabtitle="Options API (/src/App.vue)" %} {% include code-snippet/spreadsheet/vue/client-side-local-cs1/app.vue %} {% endhighlight %} {% endtabs %}
 
-const spreadsheet = ref(null);
-const openFile = (event) => {
-  const file = event.target.files?.[0];
-  if (file) spreadsheet.value.open({ file });
-};
-</script>
-
-<template>
-  <ejs-spreadsheet ref="spreadsheet"  />
-  <input type="file" accept=".xlsx" @change="openFile" />
-</template>
-```
-
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/client-side-local-cs1" %}
 
 ### Opening a file from a URL
 
 You can fetch the remote Excel file (.xlsx) through the URL and convert it to a blob. Convert this blob to a file and open this file by using Spreadsheet component's [open](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#open) method.
 
-```vue
-<script setup>
-import { ref } from 'vue';
-import { SpreadsheetComponent as EjsSpreadsheet } from '@syncfusion/ej2-vue-spreadsheet';
+{% tabs %} {% highlight html tabtitle="Composition API (/src/App.vue)" %} {% include code-snippet/spreadsheet/vue/client-side-url-cs1/app-composition.vue %} {% endhighlight %} {% highlight html tabtitle="Options API (/src/App.vue)" %} {% include code-snippet/spreadsheet/vue/client-side-url-cs1/app.vue %} {% endhighlight %} {% endtabs %}
 
-const spreadsheet = ref(null);
-const created = async () => {
-    const response = await fetch('https://js.syncfusion.com/demos/ejservices/data/Spreadsheet/LargeData.xlsx');
-    if (!response.ok) throw new Error('Unable to fetch workbook.');
-    // Read the fetched Excel file as Blob data.
-    const blob = await response.blob();
-    // Convert the Blob to a File and open it in the Spreadsheet.
-    spreadsheet.value.open({ file: new File([blob], 'Sample.xlsx') });
-};
-</script>
-
-<template>
-  <ejs-spreadsheet ref="spreadsheet" :created="created" />
-
-</template>
-```
-
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/client-side-url-cs1" %}
 
 Cross-origin resource sharing (CORS) restrictions may prevent opening files from some URLs. Ensure CORS policies are properly configured on the target server.
 
@@ -106,28 +72,9 @@ By default, the Spreadsheet component provides an option to browse files from th
 
 Please find the code to fetch the blob data and load it into the Spreadsheet component below.
 
-```vue
-<script setup>
-import { ref } from 'vue';
-import { SpreadsheetComponent as EjsSpreadsheet } from '@syncfusion/ej2-vue-spreadsheet';
+{% tabs %} {% highlight html tabtitle="Composition API (/src/App.vue)" %} {% include code-snippet/spreadsheet/vue/open-from-blobdata-cs1/app-composition.vue %} {% endhighlight %} {% highlight html tabtitle="Options API (/src/App.vue)" %} {% include code-snippet/spreadsheet/vue/open-from-blobdata-cs1/app.vue %} {% endhighlight %} {% endtabs %}
 
-const spreadsheet = ref(null);
-const created = async () => {
-    const response = await fetch('https://js.syncfusion.com/demos/ejservices/data/Spreadsheet/LargeData.xlsx');
-    if (!response.ok) throw new Error('Unable to fetch workbook.');
-    // Read the fetched Excel file as Blob data.
-    const blob = await response.blob();
-    // Convert the Blob to a File and open it in the Spreadsheet.
-    spreadsheet.value.open({ file: new File([blob], 'Sample.xlsx') });
-};
-</script>
-
-<template>
-  <ejs-spreadsheet ref="spreadsheet" :created="created" />
-
-</template>
-```
-
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/open-from-blobdata-cs1" %}
 
 ## Considerations
 
