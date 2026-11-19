@@ -1526,14 +1526,14 @@ This example demonstrates how to draw a table within a PDF template where the ta
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import { PdfDocument, PdfGrid, PdfPage } from '@syncfusion/ej2-pdf';
+import { PdfDocument, PdfGrid, PdfPage, PdfTemplate } from '@syncfusion/ej2-pdf';
 
 // Create a new PDF document
 let document: PdfDocument = new PdfDocument();
 // Add a page to the document
 let page: PdfPage = document.addPage();
 // Create a PDF template with width 300 and height 200
-let template: PdfTemplate = new PdfTemplate(300, 200);
+let template: PdfTemplate = new PdfTemplate({ width: 300, height: 200 });
 // Create the data source
 let source: object[] = [{ id: 'E01', name: 'Clay' }, { id: 'E02', name: 'Thomas' }];
 // Define columns
@@ -1557,7 +1557,7 @@ var document = new ej.pdf.PdfDocument();
 // Add a page to the document
 var page = document.addPage();
 // Create a PDF template with width 300 and height 200
-var template = new ej.pdf.PdfTemplate(300, 200);
+var template = new ej.pdf.PdfTemplate({ width: 300, height: 200 });
 // Create the data source
 var source = [{ id: 'E01', name: 'Clay' }, { id: 'E02', name: 'Thomas' }];
 // Define columns
