@@ -52,17 +52,31 @@ With this configuration, the Spreadsheet will process all Excel files (.xlsx) di
 
 Use a native file input to select an Excel workbook. Pass the selected `File` to the Spreadsheet's `open` method; do not configure `openUrl` for this client-side workflow.
 
-{% tabs %} {% highlight html tabtitle="Composition API (/src/App.vue)" %} {% include code-snippet/spreadsheet/vue/client-side-local-cs1/app-composition.vue %} {% endhighlight %} {% highlight html tabtitle="Options API (/src/App.vue)" %} {% include code-snippet/spreadsheet/vue/client-side-local-cs1/app.vue %} {% endhighlight %} {% endtabs %}
+{% tabs %}
+{% highlight html tabtitle="Composition API (/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/open-local-file-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/open-local-file-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/vue/client-side-local-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/open-local-file-cs1" %}
 
 ### Opening a file from a URL
 
 You can fetch the remote Excel file (.xlsx) through the URL and convert it to a blob. Convert this blob to a file and open this file by using Spreadsheet component's [open](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#open) method.
 
-{% tabs %} {% highlight html tabtitle="Composition API (/src/App.vue)" %} {% include code-snippet/spreadsheet/vue/client-side-url-cs1/app-composition.vue %} {% endhighlight %} {% highlight html tabtitle="Options API (/src/App.vue)" %} {% include code-snippet/spreadsheet/vue/client-side-url-cs1/app.vue %} {% endhighlight %} {% endtabs %}
+{% tabs %}
+{% highlight html tabtitle="Composition API (/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/open-from-url-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/open-from-url-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/vue/client-side-url-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/open-from-url-cs1" %}
 
 Cross-origin resource sharing (CORS) restrictions may prevent opening files from some URLs. Ensure CORS policies are properly configured on the target server.
 
@@ -72,9 +86,16 @@ By default, the Spreadsheet component provides an option to browse files from th
 
 Please find the code to fetch the blob data and load it into the Spreadsheet component below.
 
-{% tabs %} {% highlight html tabtitle="Composition API (/src/App.vue)" %} {% include code-snippet/spreadsheet/vue/open-from-blobdata-cs1/app-composition.vue %} {% endhighlight %} {% highlight html tabtitle="Options API (/src/App.vue)" %} {% include code-snippet/spreadsheet/vue/open-from-blobdata-cs1/app.vue %} {% endhighlight %} {% endtabs %}
+{% tabs %}
+{% highlight html tabtitle="Composition API (/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/client-side-blob-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/client-side-blob-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/vue/open-from-blobdata-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/client-side-blob-cs1" %}
 
 ## Considerations
 

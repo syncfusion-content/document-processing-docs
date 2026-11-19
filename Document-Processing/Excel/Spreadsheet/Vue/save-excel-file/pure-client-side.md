@@ -78,7 +78,14 @@ const save = () => {
 
 To save an Excel file as blob data, you need to set `needBlobData` to **true** and `isFullPost` to **false** in the `beforeSave` event. Subsequently, you will receive the spreadsheet data as a blob in the [saveComplete](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#savecomplete) event.
 
-{% tabs %} {% highlight html tabtitle="Composition API (/src/App.vue)" %} {% include code-snippet/spreadsheet/vue/client-side-save-blob-cs1/app-composition.vue %} {% endhighlight %} {% highlight html tabtitle="Options API (/src/App.vue)" %} {% include code-snippet/spreadsheet/vue/client-side-save-blob-cs1/app.vue %} {% endhighlight %} {% endtabs %}
+{% tabs %}
+{% highlight html tabtitle="Composition API (/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/client-side-save-blob-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/client-side-save-blob-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
 
 {% previewsample "/document-processing/code-snippet/spreadsheet/vue/client-side-save-blob-cs1" %}
 
