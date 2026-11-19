@@ -1,7 +1,7 @@
 ---
 layout: post
 title: JavaScript Actions in Angular PDF Viewer | Syncfusion
-description: Learn how the React PDF Viewer supports Adobe AcroForm text field format actions for Number, Percentage, Special, and Arbitrary Mask formatting.
+description: Learn how the Angular PDF Viewer supports Adobe AcroForm text field format actions for Number, Percentage, Special, and Arbitrary Mask formatting.
 platform: document-processing
 control: PDF Viewer
 documentation: ug
