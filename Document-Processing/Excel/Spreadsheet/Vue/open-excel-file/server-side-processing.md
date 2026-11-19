@@ -36,7 +36,7 @@ Below is an example of a server-side `Open` endpoint using ASP.NET Core WebAPI, 
 public IActionResult Open([FromForm] IFormCollection openRequest)
 {
     OpenRequest open = new OpenRequest();
-    if (openRequest.Files && openRequest.Files.Count > 0) {
+    if (openRequest.Files.Count > 0) {
         open.File = openRequest.Files[0];
         return Content(Workbook.Open(open));
     }
@@ -44,7 +44,7 @@ public IActionResult Open([FromForm] IFormCollection openRequest)
 }
 ```
 
-> **Note:** For details on how to set up your own web service for open/save operations, refer to the [web service](./web-services/webservice-overview) section of this documentation.
+> **Note:** For details on how to set up your own web service for open/save operations, refer to the [web service](../web-services/webservice-overview) section of this documentation.
 
 **Install Required Dependencies**
 
@@ -57,7 +57,7 @@ For spreadsheet open and save operations, install the following NuGet packages b
 
 For more details, see the [dependencies section on nuget.org](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core#dependencies-body-tab).
 
-To enable opening Excel files, set the [`allowOpen`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#allowopen) property to **true** and specify the service url using the [`openUrl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#openurl) property. The control will send the uploaded file to this endpoint, where it is processed and returned as JSON for the Spreadsheet to render.
+To enable opening Excel files, set the [`allowOpen`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#allowopen) property to **true** and specify the service url using the [`openUrl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#openurl) property. The control will send the uploaded file to this endpoint, where it is processed and returned as JSON for the Spreadsheet to render.
 
 For a quick walkthrough on how the open functionality works, refer to the following video:
 {% youtube "https://www.youtube.com/watch?v=MpwiXmL1Z_o" %}
@@ -66,37 +66,40 @@ For a quick walkthrough on how the open functionality works, refer to the follow
 
 In the user interface you can open an Excel document by clicking `File > Open` menu item in ribbon.
 
-The following sample shows the `Open` option configured by using the [`openUrl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#openurl) property. You can also use the [`beforeOpen`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#beforeopen) event to customize or cancel the import action, which is triggered before opening an Excel file.
+The following sample shows the `Open` option configured by using the [`openUrl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#openurl) property. You can also use the [`beforeOpen`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#beforeopen) event to customize or cancel the import action, which is triggered before opening an Excel file.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
-{% include code-snippet/spreadsheet/vue/open-save-cs1/App.vue %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/open-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/open-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/vue/open-save-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/open-cs1" %}
 
-Please find the below table for the [beforeOpen](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#beforeopen) event arguments.
+Please find the below table for the [beforeOpen](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#beforeopen) event arguments.
 
 **BeforeOpenEventArgs - Properties**
 
 | **Property**          | **Type**                          | **Description** |
 |-------------------|-------------------------------|-------------|
 | **cancel**        | `boolean`                       | Specifies whether the open action should be canceled. |
-| **file**          | `FileList` | `string` | `File`    | Specifies the file to be opened. |
+| **file**          | `FileList` or `string` or `File`    | Specifies the file to be opened. |
 | **parseOptions**  | [`WorkbookParseOptions`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/workbookparseoptions)          | Specifies the parsing options that control how the Excel file is interpreted during loading. |
 | **password**      | `string`                        | Specifies the password required to open the Excel file, if it is protected. |
 | **requestData**   | object                        | Specifies any additional data sent along with the open request. |
 | **requestType**   | `string`                        | Specifies the type of open request that triggered the **beforeOpen** event. Possible values:<br><br>• **initial** - The default request made when loading a workbook.<br>• **chunk** - A follow-up request to load a portion of the workbook when chunking is enabled and the server provides a chunk plan.<br>• **thresholdLimitConfirmed** - A request made after the user confirms a threshold warning (such as *maximumDataLimit* or *maximumFileSizeLimit*) and chooses to proceed. |
 
 > * Use `Ctrl + O` keyboard shortcut to open Excel documents.
-> * The default value of the [allowOpen](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#allowopen) property is `true`. For demonstration purpose, we have showcased the [allowOpen](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#allowopen) property in previous code snippet.
+> * The default value of the [allowOpen](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#allowopen) property is `true`. For demonstration purpose, we have showcased the [allowOpen](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#allowopen) property in previous code snippet.
 
 ## Open Excel files programmatically
 
-To open Excel files programmatically in the Spreadsheet, you can use the [`open`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#open) method of the Spreadsheet component. Before invoking this method, ensure that the [`openUrl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#openurl) property is properly configured, as it is required for processing the file on the server.
+To open Excel files programmatically in the Spreadsheet, you can use the [`open`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#open) method of the Spreadsheet component. Before invoking this method, ensure that the [`openUrl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#openurl) property is properly configured, as it is required for processing the file on the server.
 
-Please find the table below for the [`open`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#open) method arguments.
+Please find the table below for the [`open`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#open) method arguments.
 
 | **Parameter** | **Type**         | **Description**                       |
 |----------|--------------|-----------------------------------|
@@ -117,12 +120,13 @@ const saveUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor
 const created = () => {
   fetch('https://js.syncfusion.com/demos/ejservices/data/Spreadsheet/LargeData.xlsx')
     .then((response) => response.blob())
+    // Convert the Blob to a File and open it in the Spreadsheet.
     .then((blob) => spreadsheet.value.open({ file: new File([blob], 'Sample.xlsx') }));
 };
 </script>
 
 <template>
-  <ejs-spreadsheet ref="spreadsheet" :openUrl="openUrl" :saveUrl="saveUrl" @created="created" />
+  <ejs-spreadsheet ref="spreadsheet" :openUrl="openUrl" :saveUrl="saveUrl" :created="created" />
 </template>
 ```
 
@@ -140,29 +144,35 @@ The following Excel file formats are supported for opening in the Spreadsheet co
 
 ### Open Excel files from local system
 
-If you explore your machine to choose and upload an Excel document using the file upload component, you will receive the uploaded document as a raw file in the [success](https://ej2.syncfusion.com/vue/documentation/api/uploader/index-default#success) event of the file upload component. In this `success` event, you should pass the received raw file as an argument to the Spreadsheet's [open](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#open) method to see the appropriate output.
+If you explore your machine to choose and upload an Excel document using the file upload component, you will receive the uploaded document as a raw file in the [success](https://ej2.syncfusion.com/vue/documentation/api/uploader#success) event of the file upload component. In this `success` event, you should pass the received raw file as an argument to the Spreadsheet's [open](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#open) method to see the appropriate output.
 
 The following code example shows how to import an Excel document using file upload component in spreadsheet.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
-{% include code-snippet/spreadsheet/vue/open-save-cs9/App.vue %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/open-uploader-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/open-uploader-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/vue/open-save-cs9" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/open-uploader-cs1" %}
 
 ### Open Excel files from URL
 
-You can achieve to access the remote Excel file by using the [`created`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#created) event. In this event you can fetch the Excel file and convert it to a blob. Convert this blob to a file and [`open`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#open) this file by using Spreadsheet component open method.
+You can achieve to access the remote Excel file by using the [`created`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#created) event. In this event you can fetch the Excel file and convert it to a blob. Convert this blob to a file and [`open`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#open) this file by using Spreadsheet component open method.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
-{% include code-snippet/spreadsheet/vue/open-save-cs2/App.vue %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/open-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/open-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/vue/open-save-cs2" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/open-cs2" %}
 
 ### Open Excel files from Blob Data
 
@@ -171,8 +181,11 @@ By default, the Spreadsheet component provides an option to browse files from th
 Please find the code to fetch the blob data and load it into the Spreadsheet component below.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
-{% include code-snippet/spreadsheet/vue/open-from-blobdata-cs1/App.vue %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/open-from-blobdata-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/open-from-blobdata-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -182,23 +195,26 @@ Please find the code to fetch the blob data and load it into the Spreadsheet com
 
 The Spreadsheet component allows you to load an entire workbook using a JSON object. This JSON is typically generated by the Spreadsheet server by converting an Excel file into a Spreadsheet-compatible workbook JSON, but it can also be created manually. When loaded, the component reads the JSON and restores all workbook details, including sheets, cells, styles, formulas, formatting, and other associated metadata.
 
-You can optionally pass deserialization options to the [openFromJson](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#openfromjson) method to ignore specific features when loading the JSON. For example, you can exclude styles, formulas, number formats, images, or conditional formatting. These options are optional-if you do not specify them, the method restores the full workbook details by default.
+You can optionally pass deserialization options to the [openFromJson](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#openfromjson) method to ignore specific features when loading the JSON. For example, you can exclude styles, formulas, number formats, images, or conditional formatting. These options are optional-if you do not specify them, the method restores the full workbook details by default.
 
 Reference: Guide to Creating the JSON Structure: https://help.syncfusion.com/document-processing/excel/spreadsheet/vue/how-to/create-a-object-structure.
 
 The following example demonstrates how to load a workbook JSON into the Spreadsheet component.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
-{% include code-snippet/spreadsheet/vue/open-from-json-cs1/App.vue %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/open-from-json/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/open-from-json/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/vue/open-from-json-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/open-from-json" %}
 
 ### Load server-side Excel files into Spreadsheet
 
-By default, the Spreadsheet component provides an option to browse files from the local file system and open them within the component. If you want to load an Excel file located on a server, you need to configure the server endpoint to fetch the Excel file from the server location, process it using `Syncfusion.EJ2.Spreadsheet.AspNet.Core`, and send it back to the client side as `JSON data`. On the client side, you should use the [openFromJson](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#openfromjson) method to load that `JSON data` into the Spreadsheet component.
+By default, the Spreadsheet component provides an option to browse files from the local file system and open them within the component. If you want to load an Excel file located on a server, you need to configure the server endpoint to fetch the Excel file from the server location, process it using `Syncfusion.EJ2.Spreadsheet.AspNet.Core`, and send it back to the client side as `JSON data`. On the client side, you should use the [openFromJson](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#openfromjson) method to load that `JSON data` into the Spreadsheet component.
 
 **Server Endpoint**:
 
@@ -209,8 +225,8 @@ By default, the Spreadsheet component provides an option to browse files from th
         string filePath = _env.ContentRootPath.ToString() + "\\Files\\" + options.FileName + ".xlsx";
         // Getting the file stream from the file path.
         FileStream fileStream = new FileStream(filePath, FileMode.Open);
-        // Converting "MemoryStream" to "IFormFile".
-        IFormFile formFile = new FormFile(fileStream, 0, fileStream.Length, "", options.FileName + ".xlsx"); 
+        // Wrap the file stream as an IFormFile.
+        IFormFile formFile = new FormFile(fileStream, 0, fileStream.Length, "", options.FileName + ".xlsx");
         open.File = formFile;
         // Processing the Excel file and return the workbook JSON.
         var result = Workbook.Open(open);
@@ -226,6 +242,8 @@ By default, the Spreadsheet component provides an option to browse files from th
 
 **Client Side**:
 
+Place this code inside a `<script setup>` handler after the Spreadsheet is created.
+
 ```js
 
     // Fetch call to server to load the Excel file.
@@ -239,7 +257,7 @@ By default, the Spreadsheet component provides an option to browse files from th
     .then((response) => response.json())
     .then((data) => {
             // Load the JSON data into spreadsheet.
-            spreadsheet.openFromJson({ file: data });
+            spreadsheet.value.openFromJson({ file: data });
     })
 
 ```
@@ -257,28 +275,102 @@ Before proceeding with the opening process, you should deploy the spreadsheet op
 
 [How to deploy a spreadsheet open and save web API service to AWS Lambda](https://support.syncfusion.com/kb/article/17184/how-to-deploy-a-spreadsheet-open-and-save-web-api-service-to-aws-lambda)
 
-After deployment, you will get the AWS service URL for the open and save actions. Before opening the Excel file with this hosted open URL, you need to prevent the default file opening process to avoid getting a corrupted file on the open service end. The spreadsheet component appends the file to the `formData` and sends it to the open service, which causes the file to get corrupted. To prevent this, set the `args.cancel` value to `true` in the [`beforeOpen`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#beforeopen) event. After that, you will get the chosen file in the `beforeOpen` event argument. Then, convert this file into a base64 string and send it to the open service URL using a fetch request.
+After deployment, you will get the AWS service URL for the open and save actions. Before opening the Excel file with this hosted open URL, you need to prevent the default file opening process to avoid getting a corrupted file on the open service end. The spreadsheet component appends the file to the `formData` and sends it to the open service, which causes the file to get corrupted. To prevent this, set the `args.cancel` value to `true` in the [`beforeOpen`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#beforeopen) event. After that, you will get the chosen file in the `beforeOpen` event argument. Then, convert this file into a base64 string and send it to the open service URL using a fetch request.
 
-On the open service end, convert the base64 string back to a file and pass it as an argument to the workbook `Open` method. The open service will process the file and return the spreadsheet data in JSON format. You will then receive this JSON data in the fetch success callback. Finally, use the [openFromJson](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#openfromjson) method to load this JSON data into the spreadsheet component.
+On the open service end, convert the base64 string back to a file and pass it as an argument to the workbook `Open` method. The open service will process the file and return the spreadsheet data in JSON format. You will then receive this JSON data in the fetch success callback. Finally, use the [openFromJson](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#openfromjson) method to load this JSON data into the spreadsheet component.
 
 The following code example shows how to open an Excel file using a hosted web service in AWS Lambda, as mentioned above.
 
-```vue
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 <script setup>
 import { ref } from 'vue';
 import { SpreadsheetComponent as EjsSpreadsheet } from '@syncfusion/ej2-vue-spreadsheet';
 
 const spreadsheet = ref(null);
-const openUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open';
+const openUrl = 'https://your-api.execute-api.your-region.amazonaws.com/Prod/api/spreadsheet/open';
+const beforeOpen = (args) => {
+    // Prevent the default open action.
+    args.cancel = true;
+    if (!(args.file instanceof File)) return;
+    const file = args.file;
+    const reader = new FileReader();
+    reader.onload = async () => {
+      // Send the Base64 file data to AWS for open processing.
+      const response = await fetch(openUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          // Remove the data URL prefix to send only the Base64 file content.
+          file: String(reader.result).split(',')[1],
+          extension: file.name.split('.').pop(),
+          password: args.password || ''
+        })
+      });
+      if (!response.ok) throw new Error('Open request failed.');
+      const data = await response.json();
+      // Load the returned workbook JSON into the Spreadsheet.
+      spreadsheet.value.openFromJson({ file: data });
+    };
+    reader.readAsDataURL(file);
+};
 </script>
 
 <template>
-  <ejs-spreadsheet ref="spreadsheet" :openUrl="openUrl" />
+  <ejs-spreadsheet ref="spreadsheet" :openUrl="openUrl" :beforeOpen="beforeOpen" />
+
 </template>
-```
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+<script>
+import { SpreadsheetComponent } from '@syncfusion/ej2-vue-spreadsheet';
+
+export default {
+  components: { 'ejs-spreadsheet': SpreadsheetComponent },
+  data() {
+    return {
+      openUrl: 'https://your-api.execute-api.your-region.amazonaws.com/Prod/api/spreadsheet/open'
+    };
+  },
+  methods: {
+    beforeOpen(args) {
+    // Prevent the default open action.
+    args.cancel = true;
+    if (!(args.file instanceof File)) return;
+    const file = args.file;
+    const reader = new FileReader();
+    reader.onload = async () => {
+      // Send the Base64 file data to AWS for open processing.
+      const response = await fetch(this.openUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          // Remove the data URL prefix to send only the Base64 file content.
+          file: String(reader.result).split(',')[1],
+          extension: file.name.split('.').pop(),
+          password: args.password || ''
+        })
+      });
+      if (!response.ok) throw new Error('Open request failed.');
+      const data = await response.json();
+      // Load the returned workbook JSON into the Spreadsheet.
+      this.$refs.spreadsheet.openFromJson({ file: data });
+    };
+    reader.readAsDataURL(file);
+    }
+  }
+};
+</script>
+
+<template>
+  <ejs-spreadsheet ref="spreadsheet" :openUrl="openUrl" :beforeOpen="beforeOpen" />
+
+</template>
+{% endhighlight %}
+{% endtabs %}
 
 ```csharp
-public IActionResult Open(OpenOptions openOptions)
+public IActionResult Open([FromBody] OpenOptions openOptions)
 {
     // Convert the base64 string to bytes array.
     byte[] bytes = Convert.FromBase64String(openOptions.File);
@@ -287,7 +379,7 @@ public IActionResult Open(OpenOptions openOptions)
     OpenRequest open = new OpenRequest();
     // Converting the stream into FormFile.
     open.File = new FormFile(stream, 0, bytes.Length, "Sample", "Sample." + openOptions.Extension);
-    if (string.IsNullOrEmpty(openOptions.Password))
+    if (!string.IsNullOrEmpty(openOptions.Password))
         open.Password = openOptions.Password;
     var result = Workbook.Open(open);
     return Content(result);
@@ -303,13 +395,16 @@ public class OpenOptions
 
 ### Open Base64-encoded Excel data
 
-In the Spreadsheet, there is no direct option to open data as a `Base64` string. To achieve this, the `import()` function fetches the `Base64` string, converts it to a Blob, creates a File object from the Blob, and then opens it using the [open](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#open) method in the spreadsheet.
+In the Spreadsheet, there is no direct option to open data as a `Base64` string. To achieve this, the `import()` function fetches the `Base64` string, converts it to a Blob, creates a File object from the Blob, and then opens it using the [open](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#open) method in the spreadsheet.
 
 The following code example shows how to open the spreadsheet data as base64 string.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
-{% include code-snippet/spreadsheet/vue/base-64-string/App.vue %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/base-64-string/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/base-64-string/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -318,27 +413,30 @@ The following code example shows how to open the spreadsheet data as base64 stri
 
 ### Open Excel files in read-only mode
 
-You can open Excel file into a read-only mode by using the [`openComplete`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#opencomplete) event. In this event, you must protect all the sheets and lock its used range cells by using [`protectSheet`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#protectsheet) and [`lockCells`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#lockcells) methods.
+You can open Excel file into a read-only mode by using the [`openComplete`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#opencomplete) event. In this event, you must protect all the sheets and lock its used range cells by using [`protectSheet`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#protectsheet) and [`lockCells`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#lockcells) methods.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
-{% include code-snippet/spreadsheet/vue/open-save-cs4/App.vue %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/open-readonly-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/open-readonly-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/vue/open-save-cs4" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/open-readonly-cs1" %}
 
 
 ## Advanced Open Options
 
 ### Configure JSON Deserialization
 
-Previously, when opening a workbook JSON object into the Spreadsheet using the [openFromJson](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#openfromjson) method, the entire workbook, including all features specified in the JSON object, was processed and loaded into the Spreadsheet. 
+Previously, when opening a workbook JSON object into the Spreadsheet using the [openFromJson](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#openfromjson) method, the entire workbook, including all features specified in the JSON object, was processed and loaded into the Spreadsheet.
 
 Now, you have the option to selectively ignore some features during the opening of the JSON object by configuring deserialization options and passing them as arguments to the `openFromJson` method. This argument is optional, and if not configured, the entire workbook JSON object will be loaded without ignoring any features.
 
 ```ts
-spreadsheet.openFromJson({ file: file }, { ignoreStyle: true });
+spreadsheet.value.openFromJson({ file: file }, { ignoreStyle: true });
 ```
 
 | Option | Description |
@@ -358,8 +456,11 @@ spreadsheet.openFromJson({ file: file }, { ignoreStyle: true });
 The following code snippet demonstrates how to configure the deserialization options and pass them as arguments to the `openFromJson` method:
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
-{% include code-snippet/spreadsheet/vue/open-from-json/App.vue %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/open-from-json/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/open-from-json/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -376,7 +477,7 @@ To address this, we've introduced parsing options that allow users to selectivel
 
 These enhancements are especially beneficial for users working with large or complex Excel files, offering a more efficient and responsive experience.
 
-> **Note:** These options are ideal when styles and number formats are not critical to your use case and the focus is on loading the actual data efficiently. 
+> **Note:** These options are ideal when styles and number formats are not critical to your use case and the focus is on loading the actual data efficiently.
 
 The code example below demonstrates how to configure the `IgnoreStyle` and `IgnoreFormat` parsing options on the `server-side`.
 
@@ -384,24 +485,23 @@ The code example below demonstrates how to configure the `IgnoreStyle` and `Igno
 
 **Server-Side Configuration:**
 ```csharp
-public IActionResult Open(IFormCollection openRequest) 
-{ 
+public IActionResult Open(IFormCollection openRequest)
+{
     OpenRequest open = new OpenRequest();
-    ...
-    open.ParseOptions = new WorkbookParseOptions() { 
-        IgnoreStyle = true, 
+    open.File = openRequest.Files[0];
+    open.ParseOptions = new WorkbookParseOptions() {
+        IgnoreStyle = true,
         IgnoreFormat = true
-    }; 
-    ...
-    return Content(Workbook.Open(open)); 
-} 
+    };
+    return Content(Workbook.Open(open));
+}
 ```
 
 ### Open Large Excel Files with Chunk Response Processing
 
 When opening large Excel files with many features and data, the server response can become very large. This might cause memory issues or connection problems during data transmission. The `Chunk Response Processing` feature solves this by dividing the server response into smaller parts, called chunks, and sending them to the client in parallel. The client receives these chunks and combines them to load the Excel data smoothly into the spreadsheet.
 
-You can enable this feature by setting the [`chunkSize`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/opensettings#chunksize) property in the [`openSettings`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#opensettings) object. Set the [`chunkSize`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/opensettings#chunksize) to a value greater than 0 (in bytes). The [`chunkSize`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/opensettings#chunksize) defines how large each chunk will be. Make sure your server supports chunked responses to use this feature effectively.
+You can enable this feature by setting the [`chunkSize`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/opensettings#chunksize) property in the [`openSettings`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#opensettings) object. Set the [`chunkSize`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/opensettings#chunksize) to a value greater than 0 (in bytes). The [`chunkSize`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/opensettings#chunksize) defines how large each chunk will be. Make sure your server supports chunked responses to use this feature effectively.
 
 > This feature reduces memory usage on both the server and client, ensuring that resources are managed efficiently during data transmission. By sending smaller parts of data, it prevents connection issues that could occur with large payloads, making the transmission process more reliable. Additionally, it allows large Excel files to be loaded smoothly into the spreadsheet, providing a seamless user experience even with extensive data.
 
@@ -416,6 +516,9 @@ import { SpreadsheetComponent as EjsSpreadsheet } from '@syncfusion/ej2-vue-spre
 
 const spreadsheet = ref(null);
 const openUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open';
+// chunkSize specifies the server response chunk size in bytes.
+// retryCount specifies how many times to retry a failed chunk request.
+// retryAfterDelay specifies the delay in milliseconds between retries.
 const openSettings = { chunkSize: 1000000, retryCount: 3, retryAfterDelay: 500 };
 </script>
 
@@ -453,7 +556,8 @@ import { ref } from 'vue';
 import { SpreadsheetComponent as EjsSpreadsheet } from '@syncfusion/ej2-vue-spreadsheet';
 
 const spreadsheet = ref(null);
-const openUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open';
+// Specify the service URL that processes the Excel file and returns workbook JSON.
+const openUrl = 'https://localhost:{{port_number}}/Home/Open';
 </script>
 
 <template>
@@ -465,15 +569,18 @@ const openUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor
 
 ### Add custom headers to Open requests
 
-You can add your own custom header to the open action in the Spreadsheet. For processing the data, it has to be sent from server to client side and adding customer header can provide privacy to the data with the help of Authorization Token. Through the [`beforeOpen`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#beforeopen) event, the custom header can be added to the request during open action.
+You can add your own custom header to the open action in the Spreadsheet. For processing the data, it has to be sent from server to client side and adding customer header can provide privacy to the data with the help of Authorization Token. Through the [`beforeOpen`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#beforeopen) event, the custom header can be added to the request during open action.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
-{% include code-snippet/spreadsheet/vue/open-save-cs3/App.vue %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/custom-header-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/custom-header-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/vue/open-save-cs3" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/custom-header-cs1" %}
 
 ### Handle External workbook reference confirmation
 

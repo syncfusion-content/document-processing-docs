@@ -39,14 +39,14 @@ Below is an example of a server-side `Save` endpoint using ASP.NET Core WebAPI, 
 [Route("Save")]
 public IActionResult Save([FromForm] SaveSettings saveSettings)
 {
-    if(saveSettings && saveSettings.JSONData) {
+    if (saveSettings != null && !string.IsNullOrEmpty(saveSettings.JSONData)) {
         return Workbook.Save(saveSettings);
     }
     return BadRequest("saveSettings or JSONData was not available.");
 }
 ```
 
-> **Note:** For details on how to set up your own web service for open/save operations, refer to the [web service](./web-services/webservice-overview) section of this documentation.
+> **Note:** For details on how to set up your own web service for open/save operations, refer to the [web service](../web-services/webservice-overview) section of this documentation.
 
 ## Install Required Dependencies
 
@@ -71,15 +71,15 @@ In user interface, you can save Spreadsheet data as Excel document by clicking `
 The following sample shows the `Save` option by using the [`saveUrl`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#saveurl) property in the Spreadsheet control. You can also use the [`beforeSave`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#beforesave) event to customize or cancel the save action which gets triggered before saving the Spreadsheet as an Excel file.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/open-save-cs5/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/open-save-cs3/src/app.ts %}
 {% endhighlight %}
-{% highlight ts tabtitle="data.ts" %}
-{% include code-snippet/spreadsheet/angular/open-save-cs5/data.ts %}
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/spreadsheet/angular/open-save-cs3/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/angular/open-save-cs5" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/open-save-cs3" %}
 
 Please find the below table for the [`beforeSave`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#beforesave) event arguments.
 
@@ -107,24 +107,25 @@ Please find the below table for the [`save`](https://ej2.syncfusion.com/angular/
 
 | **Parameter**             | **Type**                   | **Description**                                                      |
 |-----------------------|------------------------|------------------------------------------------------------------|
-| options               | [`SaveOptions`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/saveoptions)                 | Options for opening the JSON object.                            |
-| jsonConfig *(optional)* | [`SerializationOptions`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/serializationOptions) | Specify the serialization options to customize the loading of the JSON data. |
+| options               | [`SaveOptions`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/saveoptions)                 | Options for saving the workbook.                            |
+| jsonConfig *(optional)* | [`SerializationOptions`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/serializationOptions) | Specify the serialization options to customize the exported JSON data. |
 
 The following code example demonstrates how to save an Excel file programmatically in the Spreadsheet.
 
 ```ts
 import { Component, ViewChild } from '@angular/core';
-import { SpreadsheetComponent, SpreadsheetModule } from '@syncfusion/ej2-angular-spreadsheet';
+import { SpreadsheetComponent, SpreadsheetAllModule } from '@syncfusion/ej2-angular-spreadsheet';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [SpreadsheetModule],
-  template: `<ejs-spreadsheet #spreadsheet ></ejs-spreadsheet>
+  imports: [SpreadsheetAllModule],
+  template: `<ejs-spreadsheet #spreadsheet [saveUrl]="saveUrl"></ejs-spreadsheet>
 <button type="button" (click)="save()">Save</button>`
 })
 export class AppComponent {
   @ViewChild('spreadsheet') public spreadsheet!: SpreadsheetComponent;
+  public saveUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save';
   public save(): void {
     this.spreadsheet.save({ fileName: 'Worksheet', saveType: 'Xlsx' });
   }
@@ -149,12 +150,15 @@ By default, the Spreadsheet control saves the Excel file and downloads it to the
 Please find below the code to retrieve blob data from the Spreadsheet control below.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/save-as-blobdata-cs1/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/save-as-blobdata-cs1/src/app.ts %}
+{% endhighlight %}
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/spreadsheet/angular/save-as-blobdata-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/angular/save-as-blobdata-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/save-as-blobdata-cs1" %}
 
 ### Save Workbook as JSON
 
@@ -165,12 +169,15 @@ You can optionally pass serialization options to the [saveAsJson](https://ej2.sy
 The following example demonstrates how to save a workbook as JSON from the Spreadsheet component.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/save-as-json-cs1/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/save-as-json/src/app.ts %}
+{% endhighlight %}
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/spreadsheet/angular/save-as-json/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/angular/save-as-json-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/save-as-json" %}
 
 ### Save Excel files to a server
 
@@ -178,10 +185,12 @@ By default, the Spreadsheet control saves the Excel file and downloads it to the
 
 **Client Side**:
 
-```js
+Place this code inside a component method after the Spreadsheet is created.
+
+```ts
 
     // Convert the spreadsheet workbook to JSON data.
-    spreadsheet.saveAsJson().then((json) => {
+    this.spreadsheet.saveAsJson().then((json) => {
         const formData = new FormData();
         formData.append('FileName', "Sample");
         formData.append('saveType', 'Xlsx');
@@ -212,7 +221,7 @@ By default, the Spreadsheet control saves the Excel file and downloads it to the
             string basePath = _env.ContentRootPath + "\\Files\\" + saveSettings.FileName + ".xlsx";
             var file = System.IO.File.Create(basePath);
             fileStream.Seek(0, SeekOrigin.Begin);
-            // To convert the stream to file options.
+            // Copy the workbook stream to the file on the server.
             fileStream.CopyTo(file);
             file.Dispose();
             fileStream.Dispose();
@@ -246,20 +255,52 @@ The following code example shows how to save an Excel file using a hosted web se
 
 ```ts
 import { Component, ViewChild } from '@angular/core';
-import { SpreadsheetComponent, SpreadsheetModule } from '@syncfusion/ej2-angular-spreadsheet';
+import { SpreadsheetComponent, SpreadsheetAllModule } from '@syncfusion/ej2-angular-spreadsheet';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [SpreadsheetModule],
-  template: `<ejs-spreadsheet #spreadsheet [saveUrl]="saveUrl"></ejs-spreadsheet>
-<button type="button" (click)="save()">Save</button>`
+  imports: [SpreadsheetAllModule],
+  template: `<ejs-spreadsheet #spreadsheet [saveUrl]="saveUrl" (beforeSave)="beforeSaveHandler($event)"></ejs-spreadsheet>`
 })
 export class AppComponent {
   @ViewChild('spreadsheet') public spreadsheet!: SpreadsheetComponent;
-  public saveUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save';
-  public save(): void {
-    this.spreadsheet.save({ fileName: 'Worksheet', saveType: 'Xlsx' });
+  public saveUrl = 'https://your-api.execute-api.your-region.amazonaws.com/Prod/api/spreadsheet/save';
+  private saveInitiated = false;
+  public async beforeSaveHandler(args: any): Promise<void> {
+    // saveAsJson also triggers beforeSave; let that nested event proceed without starting another save.
+    if (this.saveInitiated) return;
+    // Prevent the default save action.
+    args.cancel = true;
+    this.saveInitiated = true;
+    try {
+      // Convert the spreadsheet workbook to JSON data.
+      const json = await this.spreadsheet.saveAsJson();
+      const formData = new FormData();
+      // Pass the workbook JSON to the server for save processing.
+      formData.append('JSONData', JSON.stringify((json as any).jsonObject.Workbook));
+      formData.append('saveType', 'Xlsx');
+      formData.append('fileName', args.fileName || 'Worksheet');
+      // Invoke the AWS service to generate the Excel file.
+      const response = await fetch(this.saveUrl, { method: 'POST', body: formData });
+      if (!response.ok) throw new Error('Save request failed.');
+      // Read the Excel file returned by the service as Base64 text.
+      const base64 = await response.text();
+      // Remove any data URL prefix and decode the Base64 content into bytes.
+      const bytes = Uint8Array.from(atob(base64.replace(/^data:.*?;base64,/, '')), (char) => char.charCodeAt(0));
+      // Create a Blob with the XLSX content type from the decoded bytes.
+      const blob = new Blob([bytes], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+      const url = URL.createObjectURL(blob);
+      const anchor = document.createElement('a');
+      anchor.href = url;
+      anchor.download = (args.fileName || 'Worksheet') + '.xlsx';
+      document.body.appendChild(anchor);
+      anchor.click();
+      anchor.remove();
+      URL.revokeObjectURL(url);
+    } finally {
+      this.saveInitiated = false;
+    }
   }
 }
 ```
@@ -274,25 +315,28 @@ public string Save([FromForm]SaveSettings saveSettings)
 
 ### Save Spreadsheet data as Base64 string
 
-In the Spreadsheet component, there is currently no direct option to save data as a `Base64` string. You can achieve this by saving the Spreadsheet data as blob data and then converting that saved blob data to a `Base64` string using `FileReader`. 
+In the Spreadsheet component, there is currently no direct option to save data as a `Base64` string. You can achieve this by saving the Spreadsheet data as blob data and then converting that saved blob data to a `Base64` string using `FileReader`.
 
 > You can get the Spreadsheet data as blob in the [saveComplete](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#savecomplete) event when you set the  `needBlobData` as **true** and `isFullPost` as **false** in the [beforeSave](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#beforesave) event.
 
 The following code example shows how to save the spreadsheet data as base64 string.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/base-64-string/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/base-64-string/src/app.ts %}
+{% endhighlight %}
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/spreadsheet/angular/base-64-string/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/angular/base-64-string" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/base-64-string" %}
 
 ## Advanced Save options
 
 ### Configure JSON serialization
 
-Previously, when saving the Spreadsheet as a workbook JSON object using the [saveAsJson](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#saveasjson) method, the entire workbook with all loaded features were processed and saved as a JSON object. 
+Previously, when saving the Spreadsheet as a workbook JSON object using the [saveAsJson](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#saveasjson) method, the entire workbook with all loaded features were processed and saved as a JSON object.
 
 Now, you have the option to selectively ignore some features while saving the Spreadsheet as a JSON object by configuring serialization options and passing them as arguments to the `saveAsJson` method. This argument is optional, and if not configured, the entire workbook JSON object will be saved without ignoring any features.
 
@@ -317,12 +361,15 @@ spreadsheet.saveAsJson({ onlyValues: true });
 The following code snippet demonstrates how to configure the serialization options and pass them as arguments to the saveAsJson method:
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/save-as-json/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/save-as-json/src/app.ts %}
+{% endhighlight %}
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/spreadsheet/angular/save-as-json/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/angular/save-as-json" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/save-as-json" %}
 
 ## Customization
 
@@ -331,15 +378,15 @@ The following code snippet demonstrates how to configure the serialization optio
 Passing the custom parameters from client to server by using [`beforeSave`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#beforesave) event.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/open-save-cs6/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/open-save-cs4/src/app.ts %}
 {% endhighlight %}
-{% highlight ts tabtitle="data.ts" %}
-{% include code-snippet/spreadsheet/angular/open-save-cs6/data.ts %}
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/spreadsheet/angular/open-save-cs4/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "/document-processing/code-snippet/spreadsheet/angular/open-save-cs6" %}
+ {% previewsample "/document-processing/samples/spreadsheet/angular/open-save-cs4" %}
 Server side code snippets:
 
 ```csharp
@@ -356,15 +403,15 @@ Server side code snippets:
 You can add your own custom header to the save action in the Spreadsheet. For processing the data, it has to be sent from client to server side and adding customer header can provide privacy to the data with the help of Authorization Token. Through the [`fileMenuItemSelect`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#filemenuitemselect) event, the custom header can be added to the request during save action.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/open-save-cs7/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/open-save-cs11/src/app.ts %}
 {% endhighlight %}
-{% highlight ts tabtitle="data.ts" %}
-{% include code-snippet/spreadsheet/angular/open-save-cs7/data.ts %}
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/spreadsheet/angular/open-save-cs11/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/angular/open-save-cs7" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/open-save-cs11" %}
 
 ### Customize PDF export orientation
 
@@ -376,12 +423,12 @@ The possible values are:
 * **Landscape** - Used to display content in a horizontal layout.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/open-save-cs8/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/open-save-cs6/src/app.ts %}
 {% endhighlight %}
-{% highlight ts tabtitle="data.ts" %}
-{% include code-snippet/spreadsheet/angular/open-save-cs8/data.ts %}
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/spreadsheet/angular/open-save-cs6/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/angular/open-save-cs8" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/open-save-cs6" %}
