@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The Syncfusion [React PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/react-pdf-viewer) supports Adobe AcroForm text field format actions. Number, Percentage, Special, and Arbitrary Mask formatting behaviors can be applied to PDF form fields so that values are formatted and validated as users type and when a field loses focus.
 
-The feature introduces a typed JavaScript action model for format actions, a `keyPressed` event for handling text field input, and support for parsing and applying Adobe Form Helper scripts. Document security is preserved by restricting arbitrary JavaScript execution. Only supported Adobe helper functions are parsed and executed. Custom scripts are preserved during import and export, but they are not executed.
+The feature introduces a typed JavaScript action model for format actions, a `keyPressed` event for handling text field input, and support for parsing and applying Adobe Form Helper scripts. Document security is preserved by restricting arbitrary JavaScript execution. Only supported Adobe helper functions are parsed and executed. Custom scripts are not currently handled in the PDF Viewer. They are preserved during import and export, but they are not executed.
 
 ## Key features
 
@@ -35,14 +35,14 @@ The **Type** drop-down lists the available format types:
 
 | Type | Description |
 | --- | --- |
-| None | No formatting is applied. |
+| None | No formatting is applied. The field remains a text box. |
 | Number | Formats the value as a number, with optional decimal places, separator style, currency symbol, and negative-value styling. |
 | Percentage | Formats the committed value as a percentage. |
-| Date | Reserved format type in the Format tab. Date formatting scripts are not executed. |
-| Time | Reserved format type in the Format tab. Time formatting scripts are not executed. |
+| Date | Changes the text box into a [DateTime picker](./forms/manage-form-fields/create-form-fields#datetime-picker) in date mode. The field then uses the DateTime picker calendar and format settings instead of a JavaScript format action. |
+| Time | Changes the text box into a [DateTime picker](./forms/manage-form-fields/create-form-fields#datetime-picker) in time mode. The field then uses the DateTime picker time list and format settings instead of a JavaScript format action. |
 | Special | Applies a predefined mask, such as ZIP code, ZIP+4, phone number, or Social Security Number, or a custom arbitrary mask. |
 
-N> Date and Time appear in the Format tab type list, but only Number, Percentage, Special, and Arbitrary Mask formatting behaviors are applied. Unsupported scripts are kept with the document and are not executed.
+N> Choosing **Date** or **Time** in the Format tab converts the text box into a DateTime picker. JavaScript format actions are applied only for Number, Percentage, Special, and Arbitrary Mask. Custom scripts are not currently handled in the PDF Viewer. They are kept with the document and are not executed.
 
 ## Supported format actions
 
@@ -378,10 +378,10 @@ actions: {
 To keep document security intact:
 
 - Only supported Adobe Form Helper functions are executed.
-- Unsupported scripts are preserved during import and export, but they are not executed.
+- Custom scripts are not currently handled in the PDF Viewer. They are preserved during import and export, but they are not executed.
 - Script parameters are parsed and validated before execution.
 
-This provides Acrobat-compatible text field formatting without running arbitrary JavaScript from the document.
+This provides Acrobat-compatible text field formatting for the supported helper functions without running arbitrary JavaScript from the document.
 
 ## See also
 
