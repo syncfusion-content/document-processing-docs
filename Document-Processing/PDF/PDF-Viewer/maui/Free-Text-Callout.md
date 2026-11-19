@@ -42,6 +42,8 @@ void DisableFreeTextCalloutMode()
 {% endhighlight %}
 {% endtabs %}
 
+![Freetext callout](Images\Annotations\FreetextCallout.png)
+
 ### Add a free text callout annotation programmatically
 
 Create a [FreeTextCalloutAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.FreeTextCalloutAnnotation.html) when the text, the text box location, and the leader line are already known, and add it with the [AddAnnotation](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AddAnnotation_Syncfusion_Maui_PdfViewer_Annotation_) method.
