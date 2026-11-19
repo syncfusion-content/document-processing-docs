@@ -24,6 +24,7 @@
   <script src="https://cdn.syncfusion.com/ej2/23.1.36/ej2-dropdowns/dist/global/ej2-dropdowns.min.js" type="text/javascript"></script>
   <script src="https://cdn.syncfusion.com/ej2/23.1.36/ej2-calendars/dist/global/ej2-calendars.min.js" type="text/javascript"></script>
   <script src="https://cdn.syncfusion.com/ej2/23.1.36/ej2-charts/dist/global/ej2-charts.min.js" type="text/javascript"></script>
+  <script src="https://cdn.syncfusion.com/ej2/23.1.36/ej2-ribbon/dist/global/ej2-ribbon.min.js" type="text/javascript"></script>
   <script src="https://cdn.syncfusion.com/ej2/23.1.36/ej2-office-chart/dist/global/ej2-office-chart.min.js" type="text/javascript"></script>
   <!-- EJ2 Document Editor script -->
   <script src="https://cdn.syncfusion.com/ej2/23.1.36/ej2-documenteditor/dist/global/ej2-documenteditor.min.js" type="text/javascript"></script>
@@ -36,8 +37,8 @@
   </div>
   <script>
     // Initialize DocumentEditorContainer component.
-    var documenteditorContainer = new ej.documenteditor.DocumentEditorContainer({ enableToolbar: true, height: '590px' });
-    ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar);
+    var documenteditorContainer = new ej.documenteditor.DocumentEditorContainer({ enableToolbar: true, toolbarMode: 'Ribbon', height: '590px' });
+    ej.documenteditor.DocumentEditorContainer.Inject(ej.documenteditor.Toolbar, ej.documenteditor.Ribbon);
     documenteditorContainer.serviceUrl = 'https://document.syncfusion.com/web-services/docx-editor/api/documenteditor/';
     //DocumentEditorContainer control rendering starts
     documenteditorContainer.appendTo('#DocumentEditor');
