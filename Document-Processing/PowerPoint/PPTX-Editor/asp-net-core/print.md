@@ -31,7 +31,6 @@ The following example injects the `Print` module, loads a presentation from `doc
 </button>
 
 <ejs-pptxeditor id="pptxeditor"
-                height="590px"
                 enablePrint="true"
                 documentPath="https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx">
 </ejs-pptxeditor>
@@ -81,7 +80,6 @@ Set `enablePrint` to `false` to hide the print workflow. The File menu **Print**
 </button>
 
 <ejs-pptxeditor id="pptxeditor"
-                height="590px"
                 enablePrint="false"
                 documentPath="https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx">
 </ejs-pptxeditor>
@@ -122,7 +120,7 @@ You can print the presentation by passing a window instance. This is useful in h
 {% highlight cshtml tabtitle="CSHTML" %}
 
 <ejs-button id="print" content="Print"></ejs-button>
-<ejs-pptxeditor id="container" height="590px" enablePrint="true" documentPath="https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx"></ejs-pptxeditor>
+<ejs-pptxeditor id="container" enablePrint="true" documentPath="https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx"></ejs-pptxeditor>
 
 <script>
     var pptxeditor;

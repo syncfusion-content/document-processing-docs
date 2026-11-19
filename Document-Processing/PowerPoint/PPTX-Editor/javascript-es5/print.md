@@ -25,7 +25,6 @@ ej.pptxeditor.PptxEditor.Inject(ej.pptxeditor.Print);
 
 var pptxeditor = new ej.pptxeditor.PptxEditor({
     enablePrint: true,
-    height: '590px',
     documentPath: 'https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx',
     created: function () {
         pptxeditor.print();
@@ -72,7 +71,6 @@ ej.pptxeditor.PptxEditor.Inject(ej.pptxeditor.Print);
 
 var pptxeditor = new ej.pptxeditor.PptxEditor({
     enablePrint: false,
-    height: '590px',
     documentPath: 'https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx'
 });
 pptxeditor.appendTo('#pptx-editor');
@@ -114,7 +112,6 @@ ej.pptxeditor.PptxEditor.Inject(ej.pptxeditor.Print);
 
 var pptxeditor = new ej.pptxeditor.PptxEditor({
     enablePrint: true,
-    height: '590px',
     documentPath: 'https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx'
 });
 pptxeditor.appendTo('#pptx-editor');

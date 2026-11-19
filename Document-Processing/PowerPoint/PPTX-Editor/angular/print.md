@@ -28,7 +28,7 @@ import { PptxEditorComponent, PrintService } from '@syncfusion/ej2-angular-pptxe
     standalone: true,
     selector: 'app-container',
     template: `
-        <ejs-pptxeditor #pptx_editor id="pptx-editor" height="590px" style="display:block" [enablePrint]="true" documentPath="https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx" (created)="onCreated()"></ejs-pptxeditor>`,
+        <ejs-pptxeditor #pptx_editor id="pptx-editor" style="display:block" [enablePrint]="true" documentPath="https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx" (created)="onCreated()"></ejs-pptxeditor>`,
     encapsulation: ViewEncapsulation.None,
     providers: [PrintService]
 })
@@ -63,7 +63,7 @@ import { PptxEditorComponent, PrintService } from '@syncfusion/ej2-angular-pptxe
 @Component({
     standalone: true,
     selector: 'app-container',
-    template: `<ejs-pptxeditor #pptx_editor id="pptx-editor" height="590px" style="display:block" [enablePrint]="false" documentPath="https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx"></ejs-pptxeditor>`,
+    template: `<ejs-pptxeditor #pptx_editor id="pptx-editor" style="display:block" [enablePrint]="false" documentPath="https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx"></ejs-pptxeditor>`,
     encapsulation: ViewEncapsulation.None,
     providers: [PrintService]
 })
@@ -92,7 +92,7 @@ import { PptxEditorComponent, PrintService } from '@syncfusion/ej2-angular-pptxe
     standalone: true,
     selector: 'app-container',
     template: `
-        <ejs-pptxeditor #pptx_editor id="pptx-editor" height="590px" style="display:block" [enablePrint]="true" documentPath="https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx"></ejs-pptxeditor>`,
+        <ejs-pptxeditor #pptx_editor id="pptx-editor" style="display:block" [enablePrint]="true" documentPath="https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx"></ejs-pptxeditor>`,
     encapsulation: ViewEncapsulation.None,
     providers: [PrintService]
 })

@@ -27,7 +27,6 @@ PptxEditor.Inject(Print);
 
 let pptxeditor: PptxEditor = new PptxEditor({
     enablePrint: true,
-    height: '590px',
     documentPath: 'https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx',
     created: (): void => {
         pptxeditor.print();
@@ -80,7 +79,6 @@ PptxEditor.Inject(Print);
 
 let pptxeditor: PptxEditor = new PptxEditor({
     enablePrint: false,
-    height: '590px',
     documentPath: 'https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx'
 });
 pptxeditor.appendTo('#pptx-editor');
@@ -128,7 +126,6 @@ PptxEditor.Inject(Print);
 
 let pptxeditor: PptxEditor = new PptxEditor({
     enablePrint: true,
-    height: '590px',
     documentPath: 'https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx'
 });
 pptxeditor.appendTo('#pptx-editor');

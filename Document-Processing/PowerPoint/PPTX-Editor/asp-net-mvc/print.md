@@ -23,7 +23,7 @@ The following example injects the `Print` module, loads a presentation from `doc
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
 
-@Html.EJS().PptxEditor("container").Height("590px").EnablePrint(true).DocumentPath("https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx").Created("onCreated").Render()
+@Html.EJS().PptxEditor("container").EnablePrint(true).DocumentPath("https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx").Created("onCreated").Render()
 
 <script>
     function onCreated() {
@@ -53,7 +53,7 @@ Set `enablePrint` to `false` to hide the print workflow. The File menu **Print**
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
 
-@Html.EJS().PptxEditor("container").Height("590px").EnablePrint(false).DocumentPath("https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx").Render()
+@Html.EJS().PptxEditor("container").EnablePrint(false).DocumentPath("https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx").Render()
 
 {% endhighlight %}
 {% highlight c# tabtitle="HomeController.cs" %}
@@ -74,7 +74,7 @@ You can print the presentation by passing a window instance. This is useful in h
 {% highlight cshtml tabtitle="CSHTML" %}
 
 @Html.EJS().Button("print").Content("Print").Render()
-@Html.EJS().PptxEditor("container").Height("590px").EnablePrint(true).DocumentPath("https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx").Render()
+@Html.EJS().PptxEditor("container").EnablePrint(true).DocumentPath("https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx").Render()
 
 <script>
     var pptxeditor;

@@ -38,7 +38,6 @@ function App() {
           <PptxEditorComponent
             id="pptx-editor"
             ref={(scope: PptxEditorComponent) => { editor = scope; }}
-            height={'590px'}
             documentPath="https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx"
             enablePrint={true}
             created={onCreated}
@@ -75,7 +74,6 @@ function App() {
          <PptxEditorComponent
             id="pptx-editor"
             ref={(scope: PptxEditorComponent) => { editor = scope; }}
-            height={'590px'}
             documentPath="https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx"
             enablePrint={false}
         />
@@ -110,8 +108,7 @@ function App() {
             <PptxEditorComponent
                 id="pptx-editor"
                 ref={(scope: PptxEditorComponent) => { editor = scope; }}
-                height={'590px'}
-                documentPath="https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx"
+                    documentPath="https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx"
                 enablePrint={true}
             />
         </div>

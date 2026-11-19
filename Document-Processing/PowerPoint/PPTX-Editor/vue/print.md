@@ -31,7 +31,6 @@ The following example injects the `Print` module, loads a presentation from `doc
         <ejs-pptxeditor
             ref="pptxeditor"
             :enablePrint="true"
-            height="590px"
             style="width: 100%;"
             :documentPath="documentPath">
         </ejs-pptxeditor>
@@ -67,7 +66,7 @@ const print = () => {
         <div>
             <button v-on:click="print">Print</button>
         </div>
-        <ejs-pptxeditor ref="pptxeditor" :enablePrint="true" height="590px" style="width: 100%;" :documentPath="documentPath" :created="onCreated"></ejs-pptxeditor>
+        <ejs-pptxeditor ref="pptxeditor" :enablePrint="true" style="width: 100%;" :documentPath="documentPath" :created="onCreated"></ejs-pptxeditor>
     </div>
 </template>
 <script>
@@ -126,7 +125,6 @@ Set `enablePrint` to `false` to hide the print workflow. The File menu **Print**
         <ejs-pptxeditor
             ref="pptxeditor"
             :enablePrint="false"
-            height="590px"
             style="width: 100%;"
             :documentPath="documentPath">
         </ejs-pptxeditor>
@@ -167,7 +165,6 @@ const print = () => {
         <ejs-pptxeditor
             ref="pptxeditor"
             :enablePrint="false"
-            height="590px"
             style="width: 100%;"
             :documentPath="documentPath">
         </ejs-pptxeditor>
@@ -225,7 +222,6 @@ You can print the presentation by passing a window instance. This is useful in h
         <ejs-pptxeditor
             ref="pptxeditor"
             :enablePrint="true"
-            height="590px"
             style="width: 100%;"
             :documentPath="documentPath">
         </ejs-pptxeditor>
@@ -273,7 +269,6 @@ const print = () => {
         <ejs-pptxeditor
             ref="pptxeditor"
             :enablePrint="true"
-            height="590px"
             style="width: 100%;"
             :documentPath="documentPath">
         </ejs-pptxeditor>
