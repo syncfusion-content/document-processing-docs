@@ -583,6 +583,47 @@ document.destroy();
 {% endhighlight %}
 {% endtabs %}
 
+### Drawing text using OpenType fonts
+
+This example shows how to draw text in a PDF document using an OpenType (`.otf`) font. Use the [`PdfDocument.embedFont()`](https://ej2.syncfusion.com/documentation/api/pdf/pdfdocument#embedfont) method to embed the font data and obtain a [`PdfTrueTypeFont`](https://ej2.syncfusion.com/documentation/api/pdf/pdftruetypefont) instance. Pass the embedded font to the [`PdfGraphics.drawString()`](https://ej2.syncfusion.com/documentation/api/pdf/pdfgraphics#drawstring) method to render the text.
+
+Provide the font data as either a `Uint8Array` containing the raw `.otf` bytes or a base64-encoded `string`. The second argument to `embedFont()` specifies the font size in points.
+
+{% tabs %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { PdfDocument, PdfPage, PdfTrueTypeFont, PdfBrush } from '@syncfusion/ej2-pdf';
+
+// Create a new PDF document
+let document: PdfDocument = new PdfDocument();
+// Add a page
+let page: PdfPage = document.addPage();
+// Embed an OpenType font into the PDF — `data` holds the raw .otf bytes (Uint8Array) or a base64 string
+let font: PdfTrueTypeFont = document.embedFont(data, 14);
+// Draw text using the embedded OpenType font
+page.graphics.drawString('Hello World', font, { x: 10, y: 20, width: 200, height: 30 }, new PdfBrush({ r: 0, g: 0, b: 255 }));
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Create a new PDF document
+var document = new ej.pdf.PdfDocument();
+// Add a page
+var page = document.addPage();
+// Embed an OpenType font into the PDF — `data` holds the raw .otf bytes (Uint8Array) or a base64 string
+var font = document.embedFont(data, 14);
+// Draw text using the embedded OpenType font
+page.graphics.drawString('Hello World', font, { x: 10, y: 20, width: 200, height: 30 }, new ej.pdf.PdfBrush({ r: 0, g: 0, b: 255 }));
+// Save the document
+document.save('Output.pdf');
+// Close the document
+document.destroy();
+{% endhighlight %}
+{% endtabs %}
+
+N> OpenType (OTF) fonts are recommended for advanced typographic requirements, such as ligatures, stylistic alternates, and extended glyph support, whereas TrueType (TTF) fonts are suitable for standard text rendering scenarios.
+
 ## Additional Resources
 
 - [JavaScript PDF Library](https://www.syncfusion.com/document-sdk/javascript-pdf-library)
