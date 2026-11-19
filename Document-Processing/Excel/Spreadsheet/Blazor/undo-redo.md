@@ -123,7 +123,7 @@ The redo action can also be performed programmatically by calling the [Redo()](h
 
 ## Programmatically Check Undo/Redo Availability
 
-The **CanUndo()** and **CanRedo()** methods provide a programmatic way to determine whether Undo or Redo operations are currently available in the Spreadsheet. These methods return a boolean value indicating the availability of the corresponding operation.
+The [CanUndo()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_CanUndo) and [CanRedo()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.SfSpreadsheet.html#Syncfusion_Blazor_Spreadsheet_SfSpreadsheet_CanRedo) methods provide a programmatic way to determine whether Undo or Redo operations are currently available in the Spreadsheet. These methods return a boolean value indicating the availability of the corresponding operation.
 
 * `CanUndo()` returns `true` when there are actions available in the undo history; otherwise, it returns `false`.
 * `CanRedo()` returns `true` when there are actions available in the redo history; otherwise, it returns `false`.
@@ -178,7 +178,7 @@ The Blazor Spreadsheet provides the `UndoRedoStateChanged` event to detect chang
 
 ### UndoRedoStateChanged
 
-The `UndoRedoStateChanged` event occurs when the availability of undo or redo operations changes in the Spreadsheet. This event is useful for updating UI state, enabling or disabling undo and redo controls, or logging history-related changes.
+The [UndoRedoStateChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spreadsheet.UndoRedoStateChangedEventArgs.html) event occurs when the availability of undo or redo operations changes in the Spreadsheet. This event is useful for updating UI state, enabling or disabling undo and redo controls, or logging history-related changes.
 
 ### Event Arguments
 
