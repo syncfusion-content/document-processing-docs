@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # JavaScript Actions in React PDF Viewer
 
-The Syncfusion [React PDF Viewer](https://www.syncfusion.com/pdf-viewer-sdk/react-pdf-viewer) supports Adobe AcroForm text field format actions. Number, Percentage, Special, and Arbitrary Mask formatting behaviors can be applied to PDF form fields so that values are formatted and validated as users type and when a field loses focus.
+The Syncfusion React PDF Viewer supports Adobe AcroForm text field format actions. Number, Percentage, Special, and Arbitrary Mask formatting behaviors can be applied to PDF form fields so that values are formatted and validated as users type and when a field loses focus.
 
-The feature introduces a typed JavaScript action model for format actions, a `keyPressed` event for handling text field input, and support for parsing and applying Adobe Form Helper scripts. Document security is preserved by restricting arbitrary JavaScript execution. Only supported Adobe helper functions are parsed and executed. Custom scripts are not currently handled in the PDF Viewer. They are preserved during import and export, but they are not executed.
+The feature introduces a typed JavaScript action model for format actions, a `keyPressed` event for handling text field input, and support for parsing and applying Adobe Form Helper scripts. Document security is preserved by restricting arbitrary JavaScript execution. Only supported Adobe helper functions are parsed and executed.
 
 ## Key features
 
@@ -42,7 +42,7 @@ The **Type** drop-down lists the available format types:
 | Time | Changes the text box into a [DateTime picker](./forms/manage-form-fields/create-form-fields#datetime-picker) in time mode. The field then uses the DateTime picker time list and format settings instead of a JavaScript format action. |
 | Special | Applies a predefined mask, such as ZIP code, ZIP+4, phone number, or Social Security Number, or a custom arbitrary mask. |
 
-N> Choosing **Date** or **Time** in the Format tab converts the text box into a DateTime picker. JavaScript format actions are applied only for Number, Percentage, Special, and Arbitrary Mask. Custom scripts are not currently handled in the PDF Viewer. They are kept with the document and are not executed.
+N> Choosing **Date** or **Time** in the Format tab converts the text box into a DateTime picker. JavaScript format actions are applied only for Number, Percentage, Special, and Arbitrary Mask. Custom scripts are not currently handled in the PDF Viewer.
 
 ## Supported format actions
 
@@ -378,7 +378,7 @@ actions: {
 To keep document security intact:
 
 - Only supported Adobe Form Helper functions are executed.
-- Custom scripts are not currently handled in the PDF Viewer. They are preserved during import and export, but they are not executed.
+- Custom scripts are not currently handled in the PDF Viewer.
 - Script parameters are parsed and validated before execution.
 
 This provides Acrobat-compatible text field formatting for the supported helper functions without running arbitrary JavaScript from the document.
