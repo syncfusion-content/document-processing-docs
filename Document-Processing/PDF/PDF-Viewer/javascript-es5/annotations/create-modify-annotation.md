@@ -44,6 +44,7 @@ Other annotations:
 
 - Redaction: [Redaction annotation](./annotation-types/redaction-annotation)
 - Free text: [Free text annotation](./annotation-types/free-text-annotation)- Link: [Link annotation](./annotation-types/link-annotation)- Ink (freehand): [Ink annotation](./annotation-types/ink-annotation)
+- Freehand Highlight: [Freehand Highlight annotation](./annotation-types/freehand-highlight-annotation)
 - Stamp: [Stamp annotation](./annotation-types/stamp-annotation)
 - Sticky notes: [Sticky notes annotation](./annotation-types/sticky-notes-annotation)
 
