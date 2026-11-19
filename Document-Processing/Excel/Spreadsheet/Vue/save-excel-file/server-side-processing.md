@@ -39,14 +39,14 @@ Below is an example of a server-side `Save` endpoint using ASP.NET Core WebAPI, 
 [Route("Save")]
 public IActionResult Save([FromForm] SaveSettings saveSettings)
 {
-    if(saveSettings && saveSettings.JSONData) {
+    if (saveSettings != null && !string.IsNullOrEmpty(saveSettings.JSONData)) {
         return Workbook.Save(saveSettings);
     }
     return BadRequest("saveSettings or JSONData was not available.");
 }
 ```
 
-> **Note:** For details on how to set up your own web service for open/save operations, refer to the [web service](./web-services/webservice-overview) section of this documentation.
+> **Note:** For details on how to set up your own web service for open/save operations, refer to the [web service](../web-services/webservice-overview) section of this documentation.
 
 ## Install Required Dependencies
 
@@ -59,7 +59,7 @@ For spreadsheet open and save operations, install the following NuGet packages b
 
 For more details, see the [dependencies section on nuget.org](https://www.nuget.org/packages/Syncfusion.EJ2.Spreadsheet.AspNet.Core#dependencies-body-tab).
 
-To enable saving Excel files, set the [`allowSave`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#allowsave) property to **true** and specify the service URL using the [`saveUrl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#saveurl) property. When a save action is triggered, the control sends the spreadsheet model to this endpoint, where it is processed and returned as a downloadable Excel file.
+To enable saving Excel files, set the [`allowSave`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#allowsave) property to **true** and specify the service URL using the [`saveUrl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#saveurl) property. When a save action is triggered, the control sends the spreadsheet model to this endpoint, where it is processed and returned as a downloadable Excel file.
 
 For a quick walkthrough on how the save functionality works, refer to the following video:
 {% youtube "https://www.youtube.com/watch?v=MpwiXmL1Z_o" %}
@@ -68,20 +68,20 @@ For a quick walkthrough on how the save functionality works, refer to the follow
 
 In user interface, you can save Spreadsheet data as Excel document by clicking `File > Save As` menu item in ribbon.
 
-The following sample shows the `Save` option by using the [`saveUrl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#saveurl) property in the Spreadsheet control. You can also use the [`beforeSave`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#beforesave) event to customize or cancel the save action which gets triggered before saving the Spreadsheet as an Excel file.
+The following sample shows the `Save` option by using the [`saveUrl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#saveurl) property in the Spreadsheet control. You can also use the [`beforeSave`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#beforesave) event to customize or cancel the save action which gets triggered before saving the Spreadsheet as an Excel file.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
-{% include code-snippet/spreadsheet/vue/open-save-cs5/App.vue %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/open-save-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight js tabtitle="data.js" %}
-{% include code-snippet/spreadsheet/vue/open-save-cs5/data.js %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/open-save-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/vue/open-save-cs5" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/open-save-cs1" %}
 
-Please find the below table for the [`beforeSave`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#beforesave) event arguments.
+Please find the below table for the [`beforeSave`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#beforesave) event arguments.
 
 | **Parameter** | **Type** | **Description** |
 | ----- | ----- | ----- |
@@ -95,20 +95,20 @@ Please find the below table for the [`beforeSave`](https://ej2.syncfusion.com/vu
 
 > * Use `Ctrl + S` keyboard shortcut to save the Spreadsheet data as Excel file.
 
-> * The default value of [allowSave](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#allowsave) property is `true`. For demonstration purpose, we have showcased the [allowSave](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#allowsave) property in previous code snippet.
+> * The default value of [allowSave](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#allowsave) property is `true`. For demonstration purpose, we have showcased the [allowSave](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#allowsave) property in previous code snippet.
 
 > * Demo purpose only, we have used the online web service url link.
 
 ## Save Excel files programmatically
 
-To save Excel files programmatically in the Spreadsheet, you can use the [`save`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#save) method of the Spreadsheet component. Before invoking this method, ensure that the [`saveUrl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#saveurl) property is properly configured, as it is required for processing and generating the file on the server.
+To save Excel files programmatically in the Spreadsheet, you can use the [`save`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#save) method of the Spreadsheet component. Before invoking this method, ensure that the [`saveUrl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#saveurl) property is properly configured, as it is required for processing and generating the file on the server.
 
-Please find the below table for the [`save`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#save) method arguments.
+Please find the below table for the [`save`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#save) method arguments.
 
 | **Parameter**             | **Type**                   | **Description**                                                      |
 |-----------------------|------------------------|------------------------------------------------------------------|
-| options               | [`SaveOptions`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/saveoptions)                 | Options for opening the JSON object.                            |
-| jsonConfig *(optional)* | [`SerializationOptions`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/serializationOptions) | Specify the serialization options to customize the loading of the JSON data. |
+| options               | [`SaveOptions`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/saveoptions)                 | Options for saving the workbook.                            |
+| jsonConfig *(optional)* | [`SerializationOptions`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/serializationOptions) | Specify the serialization options to customize the exported JSON data. |
 
 The following code example demonstrates how to save an Excel file programmatically in the Spreadsheet.
 
@@ -118,14 +118,14 @@ import { ref } from 'vue';
 import { SpreadsheetComponent as EjsSpreadsheet } from '@syncfusion/ej2-vue-spreadsheet';
 
 const spreadsheet = ref(null);
-
+const saveUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save';
 const save = () => {
   spreadsheet.value.save({ fileName: 'Worksheet', saveType: 'Xlsx' });
 };
 </script>
 
 <template>
-  <ejs-spreadsheet ref="spreadsheet"  />
+  <ejs-spreadsheet ref="spreadsheet" :saveUrl="saveUrl" />
   <button type="button" @click="save">Save</button>
 </template>
 ```
@@ -143,13 +143,16 @@ The following file formats are supported when saving the Spreadsheet component:
 
 ### Save Excel files as Blob
 
-By default, the Spreadsheet control saves the Excel file and downloads it to the local file system. If you want to save an Excel file as blob data, you need to set `needBlobData` property to **true** and `isFullPost` property to **false** in the [beforeSave](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#beforesave) event of the spreadsheet. Subsequently, you will receive the spreadsheet data as a blob in the [saveComplete](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#savecomplete) event. You can then post the blob data to the server endpoint for saving.
+By default, the Spreadsheet control saves the Excel file and downloads it to the local file system. If you want to save an Excel file as blob data, you need to set `needBlobData` property to **true** and `isFullPost` property to **false** in the [beforeSave](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#beforesave) event of the spreadsheet. Subsequently, you will receive the spreadsheet data as a blob in the [saveComplete](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#savecomplete) event. You can then post the blob data to the server endpoint for saving.
 
 Please find below the code to retrieve blob data from the Spreadsheet control below.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
-{% include code-snippet/spreadsheet/vue/save-as-blobdata-cs1/App.vue %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/save-as-blobdata-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/save-as-blobdata-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -159,28 +162,33 @@ Please find below the code to retrieve blob data from the Spreadsheet control be
 
 Our Spreadsheet component allows you to export an entire workbook as a JSON object. This JSON output includes all workbook details such as sheets, cell values, formulas, styles, and formatting.
 
-You can optionally pass serialization options to the [saveAsJson](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#saveasjson) method to exclude specific features from the exported JSON. For example, you can choose to ignore styles, formulas, number formats, images, or conditional formatting. These options are fully optional-if they are not provided, the method exports the workbook with all details preserved by default.
+You can optionally pass serialization options to the [saveAsJson](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#saveasjson) method to exclude specific features from the exported JSON. For example, you can choose to ignore styles, formulas, number formats, images, or conditional formatting. These options are fully optional-if they are not provided, the method exports the workbook with all details preserved by default.
 
 The following example demonstrates how to save a workbook as JSON from the Spreadsheet component.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
-{% include code-snippet/spreadsheet/vue/save-as-json-cs1/App.vue %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/save-as-json/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/save-as-json/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/vue/save-as-json-cs1" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/save-as-json" %}
 
 ### Save Excel files to a server
 
-By default, the Spreadsheet control saves the Excel file and downloads it to the local file system. If you want to save an Excel file to a server location, you need to configure the server endpoint to convert the spreadsheet data into a file stream and save it to the server location. To do this, first, on the client side, you must convert the spreadsheet data into `JSON` format using the [saveAsJson](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#saveasjson) method and send it to the server endpoint. On the server endpoint, you should convert the received spreadsheet `JSON` data into a file stream using `Syncfusion.EJ2.Spreadsheet.AspNet.Core`, then convert the stream into an Excel file, and finally save it to the server location.
+By default, the Spreadsheet control saves the Excel file and downloads it to the local file system. If you want to save an Excel file to a server location, you need to configure the server endpoint to convert the spreadsheet data into a file stream and save it to the server location. To do this, first, on the client side, you must convert the spreadsheet data into `JSON` format using the [saveAsJson](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#saveasjson) method and send it to the server endpoint. On the server endpoint, you should convert the received spreadsheet `JSON` data into a file stream using `Syncfusion.EJ2.Spreadsheet.AspNet.Core`, then convert the stream into an Excel file, and finally save it to the server location.
 
 **Client Side**:
+
+Place this code inside a `<script setup>` handler after the Spreadsheet is created.
 
 ```js
 
     // Convert the spreadsheet workbook to JSON data.
-    spreadsheet.saveAsJson().then((json) => {
+    spreadsheet.value.saveAsJson().then((json) => {
         const formData = new FormData();
         formData.append('FileName', "Sample");
         formData.append('saveType', 'Xlsx');
@@ -237,30 +245,105 @@ Before proceeding with the save process, you should deploy the spreadsheet open/
 
 [How to deploy a spreadsheet open and save web API service to AWS Lambda](https://support.syncfusion.com/kb/article/17184/how-to-deploy-a-spreadsheet-open-and-save-web-api-service-to-aws-lambda)
 
-After deployment, you will get the AWS service URL for the open and save actions. Before saving the Excel file with this hosted save URL, you need to prevent the default save action to avoid getting a corrupted excel file on the client end. The save service returns the file stream as a result to the client, which can cause the file to become corrupted. To prevent this, set the `args.cancel` value to `true` in the [`beforeSave`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#beforesave) event. After that, convert the spreadsheet data into JSON format using the [saveAsJson](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#saveasjson) method in the `beforeSave` event and send it to the save service endpoint URL using a fetch request.
+After deployment, you will get the AWS service URL for the open and save actions. Before saving the Excel file with this hosted save URL, you need to prevent the default save action to avoid getting a corrupted excel file on the client end. The save service returns the file stream as a result to the client, which can cause the file to become corrupted. To prevent this, set the `args.cancel` value to `true` in the [`beforeSave`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#beforesave) event. After that, convert the spreadsheet data into JSON format using the [saveAsJson](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#saveasjson) method in the `beforeSave` event and send it to the save service endpoint URL using a fetch request.
 
 On the server side, the save service will take the received JSON data, pass it to the workbook `Save` method, and return the result as a base64 string. The fetch success callback will receive the Excel file in base64 string format on the client side. Finally, you can then convert the base64 string back to a file on the client end to obtain a non-corrupted Excel file.
 
 The following code example shows how to save an Excel file using a hosted web service in AWS Lambda, as mentioned above.
 
-```vue
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 <script setup>
 import { ref } from 'vue';
 import { SpreadsheetComponent as EjsSpreadsheet } from '@syncfusion/ej2-vue-spreadsheet';
 
 const spreadsheet = ref(null);
-const saveUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save';
-
-const save = () => {
-  spreadsheet.value.save({ fileName: 'Worksheet', saveType: 'Xlsx' });
+const saveUrl = 'https://your-api.execute-api.your-region.amazonaws.com/Prod/api/spreadsheet/save';
+let saveInitiated = false;
+const beforeSaveHandler = async (args) => {
+    if (saveInitiated) return;
+    args.cancel = true;
+    saveInitiated = true;
+    try {
+      const json = await spreadsheet.value.saveAsJson();
+      const formData = new FormData();
+      formData.append('JSONData', JSON.stringify(json.jsonObject.Workbook));
+      formData.append('saveType', 'Xlsx');
+      formData.append('fileName', args.fileName || 'Worksheet');
+      const response = await fetch(saveUrl, { method: 'POST', body: formData });
+      if (!response.ok) throw new Error('Save request failed.');
+      const base64 = await response.text();
+      const bytes = Uint8Array.from(atob(base64.replace(/^data:.*?;base64,/, '')), (char) => char.charCodeAt(0));
+      const blob = new Blob([bytes], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+      const url = URL.createObjectURL(blob);
+      const anchor = document.createElement('a');
+      anchor.href = url;
+      anchor.download = (args.fileName || 'Worksheet') + '.xlsx';
+      document.body.appendChild(anchor);
+      anchor.click();
+      anchor.remove();
+      URL.revokeObjectURL(url);
+    } finally {
+      saveInitiated = false;
+    }
 };
 </script>
 
 <template>
-  <ejs-spreadsheet ref="spreadsheet" :saveUrl="saveUrl" />
-  <button type="button" @click="save">Save</button>
+  <ejs-spreadsheet ref="spreadsheet" :saveUrl="saveUrl" :beforeSave="beforeSaveHandler" />
+
 </template>
-```
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+<script>
+import { SpreadsheetComponent } from '@syncfusion/ej2-vue-spreadsheet';
+
+export default {
+  components: { 'ejs-spreadsheet': SpreadsheetComponent },
+  data() {
+    return {
+      saveUrl: 'https://your-api.execute-api.your-region.amazonaws.com/Prod/api/spreadsheet/save',
+      saveInitiated: false
+    };
+  },
+  methods: {
+    async beforeSaveHandler(args) {
+    if (this.saveInitiated) return;
+    args.cancel = true;
+    this.saveInitiated = true;
+    try {
+      const json = await this.$refs.spreadsheet.saveAsJson();
+      const formData = new FormData();
+      formData.append('JSONData', JSON.stringify(json.jsonObject.Workbook));
+      formData.append('saveType', 'Xlsx');
+      formData.append('fileName', args.fileName || 'Worksheet');
+      const response = await fetch(this.saveUrl, { method: 'POST', body: formData });
+      if (!response.ok) throw new Error('Save request failed.');
+      const base64 = await response.text();
+      const bytes = Uint8Array.from(atob(base64.replace(/^data:.*?;base64,/, '')), (char) => char.charCodeAt(0));
+      const blob = new Blob([bytes], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+      const url = URL.createObjectURL(blob);
+      const anchor = document.createElement('a');
+      anchor.href = url;
+      anchor.download = (args.fileName || 'Worksheet') + '.xlsx';
+      document.body.appendChild(anchor);
+      anchor.click();
+      anchor.remove();
+      URL.revokeObjectURL(url);
+    } finally {
+      this.saveInitiated = false;
+    }
+    }
+  }
+};
+</script>
+
+<template>
+  <ejs-spreadsheet ref="spreadsheet" :saveUrl="saveUrl" :beforeSave="beforeSaveHandler" />
+
+</template>
+{% endhighlight %}
+{% endtabs %}
 
 ```csharp
 public string Save([FromForm]SaveSettings saveSettings)
@@ -272,15 +355,18 @@ public string Save([FromForm]SaveSettings saveSettings)
 
 ### Save Spreadsheet data as Base64 string
 
-In the Spreadsheet component, there is currently no direct option to save data as a `Base64` string. You can achieve this by saving the Spreadsheet data as blob data and then converting that saved blob data to a `Base64` string using `FileReader`. 
+In the Spreadsheet component, there is currently no direct option to save data as a `Base64` string. You can achieve this by saving the Spreadsheet data as blob data and then converting that saved blob data to a `Base64` string using `FileReader`.
 
-> You can get the Spreadsheet data as blob in the [saveComplete](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#savecomplete) event when you set the  `needBlobData` as **true** and `isFullPost` as **false** in the [beforeSave](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#beforesave) event.
+> You can get the Spreadsheet data as blob in the [saveComplete](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#savecomplete) event when you set the  `needBlobData` as **true** and `isFullPost` as **false** in the [beforeSave](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#beforesave) event.
 
 The following code example shows how to save the spreadsheet data as base64 string.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
-{% include code-snippet/spreadsheet/vue/base-64-string/App.vue %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/base-64-string/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/base-64-string/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -290,12 +376,12 @@ The following code example shows how to save the spreadsheet data as base64 stri
 
 ### Configure JSON serialization
 
-Previously, when saving the Spreadsheet as a workbook JSON object using the [saveAsJson](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#saveasjson) method, the entire workbook with all loaded features were processed and saved as a JSON object. 
+Previously, when saving the Spreadsheet as a workbook JSON object using the [saveAsJson](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#saveasjson) method, the entire workbook with all loaded features were processed and saved as a JSON object.
 
 Now, you have the option to selectively ignore some features while saving the Spreadsheet as a JSON object by configuring serialization options and passing them as arguments to the `saveAsJson` method. This argument is optional, and if not configured, the entire workbook JSON object will be saved without ignoring any features.
 
 ```ts
-spreadsheet.saveAsJson({ onlyValues: true });
+spreadsheet.value.saveAsJson({ onlyValues: true });
 ```
 
 | Options | Description |
@@ -315,8 +401,11 @@ spreadsheet.saveAsJson({ onlyValues: true });
 The following code snippet demonstrates how to configure the serialization options and pass them as arguments to the saveAsJson method:
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
-{% include code-snippet/spreadsheet/vue/save-as-json/App.vue %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/save-as-json/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/save-as-json/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -326,18 +415,18 @@ The following code snippet demonstrates how to configure the serialization optio
 
 ### Pass custom parameters during Save
 
-Passing the custom parameters from client to server by using [`beforeSave`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#beforesave) event.
+Passing the custom parameters from client to server by using [`beforeSave`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#beforesave) event.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
-{% include code-snippet/spreadsheet/vue/open-save-cs6/App.vue %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/open-save-cs2/app-composition.vue %}
 {% endhighlight %}
-{% highlight js tabtitle="data.js" %}
-{% include code-snippet/spreadsheet/vue/open-save-cs6/data.js %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/open-save-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
- {% previewsample "/document-processing/code-snippet/spreadsheet/vue/open-save-cs6" %}
+ {% previewsample "/document-processing/code-snippet/spreadsheet/vue/open-save-cs2" %}
 Server side code snippets:
 
 ```csharp
@@ -351,22 +440,22 @@ Server side code snippets:
 
 ### Add custom headers to Save requests
 
-You can add your own custom header to the save action in the Spreadsheet. For processing the data, it has to be sent from client to server side and adding customer header can provide privacy to the data with the help of Authorization Token. Through the [`fileMenuItemSelect`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#filemenuitemselect) event, the custom header can be added to the request during save action.
+You can add your own custom header to the save action in the Spreadsheet. For processing the data, it has to be sent from client to server side and adding customer header can provide privacy to the data with the help of Authorization Token. Through the [`fileMenuItemSelect`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#filemenuitemselect) event, the custom header can be added to the request during save action.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
-{% include code-snippet/spreadsheet/vue/open-save-cs7/App.vue %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/custom-header-cs2/app-composition.vue %}
 {% endhighlight %}
-{% highlight js tabtitle="data.js" %}
-{% include code-snippet/spreadsheet/vue/open-save-cs7/data.js %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/custom-header-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/vue/open-save-cs7" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/custom-header-cs2" %}
 
 ### Customize PDF export orientation
 
-By default, the PDF document is created in **Portrait** orientation. You can change the orientation of the PDF document by using the `args.pdfLayoutSettings.orientation` argument settings in the [`beforeSave`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#beforesave) event.
+By default, the PDF document is created in **Portrait** orientation. You can change the orientation of the PDF document by using the `args.pdfLayoutSettings.orientation` argument settings in the [`beforeSave`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#beforesave) event.
 
 The possible values are:
 
@@ -374,12 +463,12 @@ The possible values are:
 * **Landscape** - Used to display content in a horizontal layout.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
-{% include code-snippet/spreadsheet/vue/open-save-cs8/App.vue %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/open-save-cs3/app-composition.vue %}
 {% endhighlight %}
-{% highlight js tabtitle="data.js" %}
-{% include code-snippet/spreadsheet/vue/open-save-cs8/data.js %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/vue/open-save-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/vue/open-save-cs8" %}
+{% previewsample "/document-processing/code-snippet/spreadsheet/vue/open-save-cs3" %}

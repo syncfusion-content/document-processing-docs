@@ -9,7 +9,7 @@ documentation: ug
 
 # Import Excel files using client-side processing in Vue Spreadsheet
 
-The [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) component uses a client-side workflow to process workbook files directly in the browser without requiring server communication. When the [allowOpen](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowopen) property is enabled by default and the [openUrl](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#openurl) property is not configured, the Spreadsheet uses its integrated client-side file-processing functionality, which internally uses the [@syncfusion/ej2-xlsx](https://help.syncfusion.com/document-processing/excel/excel-library/javascript/overview) library.
+The [Vue Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/vue-spreadsheet-editor) component uses a client-side workflow to process workbook files directly in the browser without requiring server communication. When the [allowOpen](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#allowopen) property is enabled by default and the [openUrl](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#openurl) property is not configured, the Spreadsheet uses its integrated client-side file-processing functionality, which internally uses the [@syncfusion/ej2-xlsx](https://help.syncfusion.com/document-processing/excel/excel-library/javascript/overview) library.
 
 ## Advantages of Client-Side Import
 
@@ -27,7 +27,7 @@ For open processing, when a file is fetched, it is sent to the ej2-xlsx library.
 
 ## Configure client-side import
 
-Unlike server-side processing, the `openUrl` is not mandatory for client-side processing since there is no server-side request. This approach provides enhanced privacy, improved performance, and reduced infrastructure costs.
+Unlike server-side processing, the `openUrl` must be omitted for client-side processing since there is no server-side request. This approach provides enhanced privacy, improved performance, and reduced infrastructure costs.
 
 ```vue
 <script setup>
@@ -35,11 +35,12 @@ import { ref } from 'vue';
 import { SpreadsheetComponent as EjsSpreadsheet } from '@syncfusion/ej2-vue-spreadsheet';
 
 const spreadsheet = ref(null);
-const openUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open';
+
 </script>
 
 <template>
-  <ejs-spreadsheet ref="spreadsheet" :openUrl="openUrl" />
+  <ejs-spreadsheet ref="spreadsheet"  />
+
 </template>
 ```
 
@@ -49,29 +50,51 @@ With this configuration, the Spreadsheet will process all Excel files (.xlsx) di
 
 ### Opening a file from the local system
 
-If you explore your machine to choose and upload an Excel document using the file upload component, you will receive the uploaded document as a raw file in the success event of the file upload component. In this success event, you should pass the received raw file as an argument to the Spreadsheet's open method to see the appropriate output.
+Use a native file input to select an Excel workbook. Pass the selected `File` to the Spreadsheet's `open` method; do not configure `openUrl` for this client-side workflow.
 
-The following code example shows how to import an Excel document using file upload component in spreadsheet.
+```vue
+<script setup>
+import { ref } from 'vue';
+import { SpreadsheetComponent as EjsSpreadsheet } from '@syncfusion/ej2-vue-spreadsheet';
 
-{% tabs %}
-{% highlight js tabtitle="App.vue" %}
-{% include code-snippet/spreadsheet/vue/client-side-local-cs1/App.vue %}
-{% endhighlight %}
-{% endtabs %}
+const spreadsheet = ref(null);
+const openFile = (event) => {
+  const file = event.target.files?.[0];
+  if (file) spreadsheet.value.open({ file });
+};
+</script>
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/vue/client-side-local-cs1" %}
+<template>
+  <ejs-spreadsheet ref="spreadsheet"  />
+  <input type="file" accept=".xlsx" @change="openFile" />
+</template>
+```
+
 
 ### Opening a file from a URL
 
-You can fetch the remote Excel file (.xlsx) through the URL and convert it to a blob. Convert this blob to a file and open this file by using Spreadsheet component's [open](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/index-default#open) method.
+You can fetch the remote Excel file (.xlsx) through the URL and convert it to a blob. Convert this blob to a file and open this file by using Spreadsheet component's [open](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet#open) method.
 
-{% tabs %}
-{% highlight js tabtitle="App.vue" %}
-{% include code-snippet/spreadsheet/vue/client-side-url-cs1/App.vue %}
-{% endhighlight %}
-{% endtabs %}
+```vue
+<script setup>
+import { ref } from 'vue';
+import { SpreadsheetComponent as EjsSpreadsheet } from '@syncfusion/ej2-vue-spreadsheet';
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/vue/client-side-url-cs1" %}
+const spreadsheet = ref(null);
+const created = async () => {
+    const response = await fetch('https://js.syncfusion.com/demos/ejservices/data/Spreadsheet/LargeData.xlsx');
+    if (!response.ok) throw new Error('Unable to fetch workbook.');
+    const blob = await response.blob();
+    spreadsheet.value.open({ file: new File([blob], 'Sample.xlsx') });
+};
+</script>
+
+<template>
+  <ejs-spreadsheet ref="spreadsheet" :created="created" />
+
+</template>
+```
+
 
 Cross-origin resource sharing (CORS) restrictions may prevent opening files from some URLs. Ensure CORS policies are properly configured on the target server.
 
@@ -81,13 +104,26 @@ By default, the Spreadsheet component provides an option to browse files from th
 
 Please find the code to fetch the blob data and load it into the Spreadsheet component below.
 
-{% tabs %}
-{% highlight js tabtitle="App.vue" %}
-{% include code-snippet/spreadsheet/vue/client-side-blob-cs1/App.vue %}
-{% endhighlight %}
-{% endtabs %}
+```vue
+<script setup>
+import { ref } from 'vue';
+import { SpreadsheetComponent as EjsSpreadsheet } from '@syncfusion/ej2-vue-spreadsheet';
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/vue/client-side-blob-cs1" %}
+const spreadsheet = ref(null);
+const created = async () => {
+    const response = await fetch('https://js.syncfusion.com/demos/ejservices/data/Spreadsheet/LargeData.xlsx');
+    if (!response.ok) throw new Error('Unable to fetch workbook.');
+    const blob = await response.blob();
+    spreadsheet.value.open({ file: new File([blob], 'Sample.xlsx') });
+};
+</script>
+
+<template>
+  <ejs-spreadsheet ref="spreadsheet" :created="created" />
+
+</template>
+```
+
 
 ## Considerations
 

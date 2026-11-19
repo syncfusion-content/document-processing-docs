@@ -9,7 +9,7 @@ documentation: ug
 
 # Export Excel files using client-side processing in Angular Spreadsheet
 
-The [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) component uses a client-side workflow to generate workbook files directly in the browser without sending data to a Save service. When the [allowSave](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#allowsave) property is enabled by default and the [saveUrl](https://ej2.syncfusion.com/javascript/documentation/api/spreadsheet#saveurl) property is not configured, the Spreadsheet uses its integrated client-side file-generation functionality, which internally uses the [@syncfusion/ej2-xlsx](https://help.syncfusion.com/document-processing/excel/excel-library/javascript/overview) library.
+The [Angular Spreadsheet Editor](https://www.syncfusion.com/spreadsheet-editor-sdk/angular-spreadsheet-editor) component uses a client-side workflow to generate workbook files directly in the browser without sending data to a Save service. When the [allowSave](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#allowsave) property is enabled by default and the [saveUrl](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#saveurl) property is not configured, the Spreadsheet uses its integrated client-side file-generation functionality, which internally uses the [@syncfusion/ej2-xlsx](https://help.syncfusion.com/document-processing/excel/excel-library/javascript/overview) library.
 
 ## Advantages of Client-Side Export
 
@@ -18,8 +18,8 @@ Client-side export provides several key advantages over server-side processing:
 * **No Server Dependency**: Process Excel files directly in the browser without requiring server endpoints.
 * **Reduced Network Overhead**: Avoid uploading workbook data to a server and waiting for server-side file processing.
 * **Reduced Infrastructure Costs**: Eliminate the need to deploy and maintain server-side file-processing infrastructure.
-* **Enhanced Privacy**: Keep workbook data within the browser during import instead of sending it to a file-processing service.
-* **Offline Capability**: Open and process local Excel files without an internet connection.
+* **Enhanced Privacy**: Keep workbook data within the browser during export instead of sending it to a file-processing service.
+* **Offline Capability**: Generate and download Excel files without an internet connection.
 
 ## How client-side export works
 
@@ -32,24 +32,24 @@ Client-side export currently supports:
 
 ## Configure client-side export
 
-Unlike server-side processing, the `saveUrl` is not mandatory for client-side processing since there is no server-side request. This approach provides enhanced privacy, improved performance, and reduced infrastructure costs.
+Unlike server-side processing, the `saveUrl` must be omitted for client-side processing since there is no server-side request. This approach provides enhanced privacy, improved performance, and reduced infrastructure costs.
 
 ```ts
 import { Component, ViewChild } from '@angular/core';
-import { SpreadsheetComponent, SpreadsheetModule } from '@syncfusion/ej2-angular-spreadsheet';
+import { SpreadsheetComponent, SpreadsheetAllModule } from '@syncfusion/ej2-angular-spreadsheet';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [SpreadsheetModule],
-  template: `<ejs-spreadsheet #spreadsheet [saveUrl]="saveUrl"></ejs-spreadsheet>`
+  imports: [SpreadsheetAllModule],
+  template: `<ejs-spreadsheet #spreadsheet ></ejs-spreadsheet>`
 })
 export class AppComponent {
-  public saveUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/save';
+  @ViewChild('spreadsheet') public spreadsheet!: SpreadsheetComponent;
+
 }
 ```
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/angular/client-side-save-cs1" %}
 
 With this configuration, the Spreadsheet will generate Excel files directly in the browser without requiring server communication.
 
@@ -57,25 +57,51 @@ With this configuration, the Spreadsheet will generate Excel files directly in t
 
 To save Excel files programmatically in the Spreadsheet, you can use the [`save`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#save) method of the Spreadsheet component. When calling this method with client-side processing, the Spreadsheet generates the file directly in the browser and triggers browser download.
 
-{% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/client-side-save-cs1/app.component.ts %}
-{% endhighlight %}
-{% endtabs %}
+```ts
+import { Component, ViewChild } from '@angular/core';
+import { SpreadsheetComponent, SpreadsheetAllModule } from '@syncfusion/ej2-angular-spreadsheet';
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/angular/client-side-save-cs1" %}
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [SpreadsheetAllModule],
+  template: `<ejs-spreadsheet #spreadsheet ></ejs-spreadsheet>
+<button type="button" (click)="save()">Save</button>`
+})
+export class AppComponent {
+  @ViewChild('spreadsheet') public spreadsheet!: SpreadsheetComponent;
+  public save(): void {
+    this.spreadsheet.save({ fileName: 'Worksheet', saveType: 'Xlsx' });
+  }
+}
+```
+
 
 ## Saving Excel files as Blob data
 
-To save an Excel file as blob data, you need to set `needBlobData` property to **true** in the save options. Subsequently, you will receive the spreadsheet data as a blob in the [saveComplete](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#savecomplete) event.
+To save an Excel file as blob data, you need to set `needBlobData` to **true** and `isFullPost` to **false** in the `beforeSave` event. Subsequently, you will receive the spreadsheet data as a blob in the [saveComplete](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#savecomplete) event.
 
-{% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/client-side-save-blob-cs1/app.component.ts %}
-{% endhighlight %}
-{% endtabs %}
+```ts
+import { Component, ViewChild } from '@angular/core';
+import { SpreadsheetComponent, SpreadsheetAllModule } from '@syncfusion/ej2-angular-spreadsheet';
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/angular/client-side-save-blob-cs1" %}
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [SpreadsheetAllModule],
+  template: `<ejs-spreadsheet #spreadsheet (created)="created()"></ejs-spreadsheet>`
+})
+export class AppComponent {
+  @ViewChild('spreadsheet') public spreadsheet!: SpreadsheetComponent;
+  public async created(): Promise<void> {
+    const response = await fetch('https://js.syncfusion.com/demos/ejservices/data/Spreadsheet/LargeData.xlsx');
+    if (!response.ok) throw new Error('Unable to fetch workbook.');
+    const blob = await response.blob();
+    this.spreadsheet.open({ file: new File([blob], 'Sample.xlsx') });
+  }
+}
+```
+
 
 ## Considerations
 

@@ -36,7 +36,7 @@ Below is an example of a server-side `Open` endpoint using ASP.NET Core WebAPI, 
 public IActionResult Open([FromForm] IFormCollection openRequest)
 {
     OpenRequest open = new OpenRequest();
-    if (openRequest.Files && openRequest.Files.Count > 0) {
+    if (openRequest.Files.Count > 0) {
         open.File = openRequest.Files[0];
         return Content(Workbook.Open(open));
     }
@@ -44,7 +44,7 @@ public IActionResult Open([FromForm] IFormCollection openRequest)
 }
 ```
 
-> **Note:** For details on how to set up your own web service for open/save operations, refer to the [web service](./web-services/webservice-overview) section of this documentation.
+> **Note:** For details on how to set up your own web service for open/save operations, refer to the [web service](../web-services/webservice-overview) section of this documentation.
 
 **Install Required Dependencies**
 
@@ -69,12 +69,15 @@ In the user interface you can open an Excel document by clicking `File > Open` m
 The following sample shows the `Open` option configured by using the [`openUrl`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#openurl) property. You can also use the [`beforeOpen`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#beforeopen) event to customize or cancel the import action, which is triggered before opening an Excel file.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/open-save-cs1/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/open-save-cs1/src/app.ts %}
+{% endhighlight %}
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/spreadsheet/angular/open-save-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/angular/open-save-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/open-save-cs1" %}
 
 Please find the below table for the [beforeOpen](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#beforeopen) event arguments.
 
@@ -83,7 +86,7 @@ Please find the below table for the [beforeOpen](https://ej2.syncfusion.com/angu
 | **Property**          | **Type**                          | **Description** |
 |-------------------|-------------------------------|-------------|
 | **cancel**        | `boolean`                       | Specifies whether the open action should be canceled. |
-| **file**          | `FileList` | `string` | `File`    | Specifies the file to be opened. |
+| **file**          | `FileList` or `string` or `File`    | Specifies the file to be opened. |
 | **parseOptions**  | [`WorkbookParseOptions`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/workbookparseoptions)          | Specifies the parsing options that control how the Excel file is interpreted during loading. |
 | **password**      | `string`                        | Specifies the password required to open the Excel file, if it is protected. |
 | **requestData**   | object                        | Specifies any additional data sent along with the open request. |
@@ -107,12 +110,12 @@ The following code example demonstrates how to open an Excel file programmatical
 
 ```ts
 import { Component, ViewChild } from '@angular/core';
-import { SpreadsheetComponent, SpreadsheetModule } from '@syncfusion/ej2-angular-spreadsheet';
+import { SpreadsheetComponent, SpreadsheetAllModule } from '@syncfusion/ej2-angular-spreadsheet';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [SpreadsheetModule],
+  imports: [SpreadsheetAllModule],
   template: `<ejs-spreadsheet #spreadsheet [openUrl]="openUrl" [saveUrl]="saveUrl" (created)="created()"></ejs-spreadsheet>`
 })
 export class AppComponent {
@@ -146,38 +149,47 @@ If you explore your machine to choose and upload an Excel document using the fil
 The following code example shows how to import an Excel document using file upload component in spreadsheet.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/open-save-cs9/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/open-save-cs7/src/app.ts %}
+{% endhighlight %}
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/spreadsheet/angular/open-save-cs7/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/angular/open-save-cs9" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/open-save-cs7" %}
 
 ### Open Excel files from URL
 
 You can achieve to access the remote Excel file by using the [`created`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#created) event. In this event you can fetch the Excel file and convert it to a blob. Convert this blob to a file and [`open`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#open) this file by using Spreadsheet component open method.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/open-save-cs2/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/open-save-cs2/src/app.ts %}
+{% endhighlight %}
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/spreadsheet/angular/open-save-cs2/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/angular/open-save-cs2" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/open-save-cs2" %}
 
 ### Open Excel files from Blob Data
 
-By default, the Spreadsheet component provides an option to browse files from the local file system and open them within the component. If you want to open an Excel file from blob data, you need to fetch the blob data from the server or another source and convert this blob data into a `File` object. Then, you can use the [open](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet#open) method in the Spreadsheet component to load that `File` object.
+By default, the Spreadsheet component provides an option to browse files from the local file system and open them within the component. If you want to open an Excel file from blob data, you need to fetch the blob data from the server or another source and convert this blob data into a `File` object. Then, you can use the [open](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#open) method in the Spreadsheet component to load that `File` object.
 
 Please find the code to fetch the blob data and load it into the Spreadsheet component below.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/open-from-blobdata-cs1/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/open-from-blobdata-cs1/src/app.ts %}
+{% endhighlight %}
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/spreadsheet/angular/open-from-blobdata-cs1/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/angular/open-from-blobdata-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/open-from-blobdata-cs1" %}
 
 ### Load Workbook as JSON
 
@@ -190,12 +202,15 @@ Reference: Guide to Creating the JSON Structure: https://help.syncfusion.com/doc
 The following example demonstrates how to load a workbook JSON into the Spreadsheet component.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/open-from-json-cs1/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/open-from-json/src/app.ts %}
+{% endhighlight %}
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/spreadsheet/angular/open-from-json/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/angular/open-from-json-cs1" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/open-from-json" %}
 
 ### Load server-side Excel files into Spreadsheet
 
@@ -211,7 +226,7 @@ By default, the Spreadsheet component provides an option to browse files from th
         // Getting the file stream from the file path.
         FileStream fileStream = new FileStream(filePath, FileMode.Open);
         // Converting "MemoryStream" to "IFormFile".
-        IFormFile formFile = new FormFile(fileStream, 0, fileStream.Length, "", options.FileName + ".xlsx"); 
+        IFormFile formFile = new FormFile(fileStream, 0, fileStream.Length, "", options.FileName + ".xlsx");
         open.File = formFile;
         // Processing the Excel file and return the workbook JSON.
         var result = Workbook.Open(open);
@@ -227,7 +242,9 @@ By default, the Spreadsheet component provides an option to browse files from th
 
 **Client Side**:
 
-```js
+Place this code inside a component method after the Spreadsheet is created.
+
+```ts
 
     // Fetch call to server to load the Excel file.
     fetch('https://localhost:{{Your_port_number}}/Home/Open', {
@@ -240,7 +257,7 @@ By default, the Spreadsheet component provides an option to browse files from th
     .then((response) => response.json())
     .then((data) => {
             // Load the JSON data into spreadsheet.
-            spreadsheet.openFromJson({ file: data });
+            this.spreadsheet.openFromJson({ file: data });
     })
 
 ```
@@ -266,22 +283,43 @@ The following code example shows how to open an Excel file using a hosted web se
 
 ```ts
 import { Component, ViewChild } from '@angular/core';
-import { SpreadsheetComponent, SpreadsheetModule } from '@syncfusion/ej2-angular-spreadsheet';
+import { SpreadsheetComponent, SpreadsheetAllModule } from '@syncfusion/ej2-angular-spreadsheet';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [SpreadsheetModule],
-  template: `<ejs-spreadsheet #spreadsheet [openUrl]="openUrl"></ejs-spreadsheet>`
+  imports: [SpreadsheetAllModule],
+  template: `<ejs-spreadsheet #spreadsheet [openUrl]="openUrl" (beforeOpen)="beforeOpen($event)"></ejs-spreadsheet>`
 })
 export class AppComponent {
   @ViewChild('spreadsheet') public spreadsheet!: SpreadsheetComponent;
-  public openUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open';
+  public openUrl = 'https://your-api.execute-api.your-region.amazonaws.com/Prod/api/spreadsheet/open';
+  public beforeOpen(args: any): void {
+    args.cancel = true;
+    if (!(args.file instanceof File)) return;
+    const file = args.file;
+    const reader = new FileReader();
+    reader.onload = async () => {
+      const response = await fetch(this.openUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          file: String(reader.result).split(',')[1],
+          extension: file.name.split('.').pop(),
+          password: args.password || ''
+        })
+      });
+      if (!response.ok) throw new Error('Open request failed.');
+      const data = await response.json();
+      this.spreadsheet.openFromJson({ file: data });
+    };
+    reader.readAsDataURL(file);
+  }
 }
 ```
 
 ```csharp
-public IActionResult Open(OpenOptions openOptions)
+public IActionResult Open([FromBody] OpenOptions openOptions)
 {
     // Convert the base64 string to bytes array.
     byte[] bytes = Convert.FromBase64String(openOptions.File);
@@ -290,7 +328,7 @@ public IActionResult Open(OpenOptions openOptions)
     OpenRequest open = new OpenRequest();
     // Converting the stream into FormFile.
     open.File = new FormFile(stream, 0, bytes.Length, "Sample", "Sample." + openOptions.Extension);
-    if (string.IsNullOrEmpty(openOptions.Password))
+    if (!string.IsNullOrEmpty(openOptions.Password))
         open.Password = openOptions.Password;
     var result = Workbook.Open(open);
     return Content(result);
@@ -311,12 +349,15 @@ In the Spreadsheet, there is no direct option to open data as a `Base64` string.
 The following code example shows how to open the spreadsheet data as base64 string.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/base-64-string/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/base-64-string/src/app.ts %}
+{% endhighlight %}
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/spreadsheet/angular/base-64-string/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/angular/base-64-string" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/base-64-string" %}
 
 
 ### Open Excel files in read-only mode
@@ -324,24 +365,27 @@ The following code example shows how to open the spreadsheet data as base64 stri
 You can open Excel file into a read-only mode by using the [`openComplete`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#opencomplete) event. In this event, you must protect all the sheets and lock its used range cells by using [`protectSheet`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#protectsheet) and [`lockCells`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#lockcells) methods.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/open-save-cs4/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/open-save-cs12/src/app.ts %}
+{% endhighlight %}
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/spreadsheet/angular/open-save-cs12/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/angular/open-save-cs4" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/open-save-cs12" %}
 
 
 ## Advanced Open Options
 
 ### Configure JSON Deserialization
 
-Previously, when opening a workbook JSON object into the Spreadsheet using the [openFromJson](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#openfromjson) method, the entire workbook, including all features specified in the JSON object, was processed and loaded into the Spreadsheet. 
+Previously, when opening a workbook JSON object into the Spreadsheet using the [openFromJson](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#openfromjson) method, the entire workbook, including all features specified in the JSON object, was processed and loaded into the Spreadsheet.
 
 Now, you have the option to selectively ignore some features during the opening of the JSON object by configuring deserialization options and passing them as arguments to the `openFromJson` method. This argument is optional, and if not configured, the entire workbook JSON object will be loaded without ignoring any features.
 
 ```ts
-spreadsheet.openFromJson({ file: file }, { ignoreStyle: true });
+this.spreadsheet.openFromJson({ file: file }, { ignoreStyle: true });
 ```
 
 | Option | Description |
@@ -361,12 +405,15 @@ spreadsheet.openFromJson({ file: file }, { ignoreStyle: true });
 The following code snippet demonstrates how to configure the deserialization options and pass them as arguments to the `openFromJson` method:
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/open-from-json/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/open-from-json/src/app.ts %}
+{% endhighlight %}
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/spreadsheet/angular/open-from-json/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/angular/open-from-json" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/open-from-json" %}
 
 ### Optimize Open Performance with Parsing Options
 
@@ -379,7 +426,7 @@ To address this, we've introduced parsing options that allow users to selectivel
 
 These enhancements are especially beneficial for users working with large or complex Excel files, offering a more efficient and responsive experience.
 
-> **Note:** These options are ideal when styles and number formats are not critical to your use case and the focus is on loading the actual data efficiently. 
+> **Note:** These options are ideal when styles and number formats are not critical to your use case and the focus is on loading the actual data efficiently.
 
 The code example below demonstrates how to configure the `IgnoreStyle` and `IgnoreFormat` parsing options on the `server-side`.
 
@@ -387,17 +434,16 @@ The code example below demonstrates how to configure the `IgnoreStyle` and `Igno
 
 **Server-Side Configuration:**
 ```csharp
-public IActionResult Open(IFormCollection openRequest) 
-{ 
+public IActionResult Open(IFormCollection openRequest)
+{
     OpenRequest open = new OpenRequest();
-    ...
-    open.ParseOptions = new WorkbookParseOptions() { 
-        IgnoreStyle = true, 
+    open.File = openRequest.Files[0];
+    open.ParseOptions = new WorkbookParseOptions() {
+        IgnoreStyle = true,
         IgnoreFormat = true
-    }; 
-    ...
-    return Content(Workbook.Open(open)); 
-} 
+    };
+    return Content(Workbook.Open(open));
+}
 ```
 
 ### Open Large Excel Files with Chunk Response Processing
@@ -414,12 +460,12 @@ The following code example demonstrates the client-side and server-side configur
 
 ```ts
 import { Component, ViewChild } from '@angular/core';
-import { SpreadsheetComponent, SpreadsheetModule } from '@syncfusion/ej2-angular-spreadsheet';
+import { SpreadsheetComponent, SpreadsheetAllModule } from '@syncfusion/ej2-angular-spreadsheet';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [SpreadsheetModule],
+  imports: [SpreadsheetAllModule],
   template: `<ejs-spreadsheet #spreadsheet [openUrl]="openUrl" [openSettings]="openSettings"></ejs-spreadsheet>`
 })
 export class AppComponent {
@@ -454,17 +500,17 @@ The [attachment](https://www.syncfusion.com/downloads/support/directtrac/general
 
 ```ts
 import { Component, ViewChild } from '@angular/core';
-import { SpreadsheetComponent, SpreadsheetModule } from '@syncfusion/ej2-angular-spreadsheet';
+import { SpreadsheetComponent, SpreadsheetAllModule } from '@syncfusion/ej2-angular-spreadsheet';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [SpreadsheetModule],
+  imports: [SpreadsheetAllModule],
   template: `<ejs-spreadsheet #spreadsheet [openUrl]="openUrl"></ejs-spreadsheet>`
 })
 export class AppComponent {
   @ViewChild('spreadsheet') public spreadsheet!: SpreadsheetComponent;
-  public openUrl = 'https://document.syncfusion.com/web-services/spreadsheet-editor/api/spreadsheet/open';
+  public openUrl = 'https://localhost:{{port_number}}/Home/Open';
 }
 ```
 
@@ -475,12 +521,15 @@ export class AppComponent {
 You can add your own custom header to the open action in the Spreadsheet. For processing the data, it has to be sent from server to client side and adding customer header can provide privacy to the data with the help of Authorization Token. Through the [`beforeOpen`](https://ej2.syncfusion.com/angular/documentation/api/spreadsheet/index-default#beforeopen) event, the custom header can be added to the request during open action.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/spreadsheet/angular/open-save-cs3/app.component.ts %}
+{% highlight ts tabtitle="app.ts" %}
+{% include code-snippet/spreadsheet/angular/open-save-cs8/src/app.ts %}
+{% endhighlight %}
+{% highlight ts tabtitle="main.ts" %}
+{% include code-snippet/spreadsheet/angular/open-save-cs8/src/main.ts %}
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "/document-processing/code-snippet/spreadsheet/angular/open-save-cs3" %}
+{% previewsample "/document-processing/samples/spreadsheet/angular/open-save-cs8" %}
 
 ### Handle External workbook reference confirmation
 
