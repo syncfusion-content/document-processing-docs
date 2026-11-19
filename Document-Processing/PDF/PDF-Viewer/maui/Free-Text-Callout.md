@@ -21,7 +21,7 @@ This section explains how to add free text callout annotations using the built-i
 Set the [AnnotationMode](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.AnnotationMode.html) property of the PDF Viewer to [FreeTextCallout](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_FreeTextCallout) to let users place a callout by tapping the target location on a page. After the required callouts are added, set [AnnotationMode](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.AnnotationMode.html) to [None](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.AnnotationMode.html#Syncfusion_Maui_PdfViewer_AnnotationMode_None) to leave the annotation mode.
 
 {% tabs %}
-{% highlight C# hl_lines="4" %}
+{% highlight C# %}
 // Enable the free text callout annotation mode.
 void EnableFreeTextCalloutMode()
 {
@@ -33,7 +33,7 @@ void EnableFreeTextCalloutMode()
 Similarly, refer to the following code to disable the free text callout annotation mode.
 
 {% tabs %}
-{% highlight C# hl_lines="4" %}
+{% highlight C# %}
 // Disable the free text callout annotation mode.
 void DisableFreeTextCalloutMode()
 {
@@ -41,6 +41,8 @@ void DisableFreeTextCalloutMode()
 }
 {% endhighlight %}
 {% endtabs %}
+
+![Freetext callout](Images\Annotations\FreetextCallout.png)
 
 ### Add a free text callout annotation programmatically
 
@@ -55,7 +57,7 @@ The constructor takes the text, the page number, the text box bounds, and the ca
 The following example adds a callout to the first page.
 
 {% tabs %}
-{% highlight C# hl_lines="9 16" %}
+{% highlight C# %}
 FreeTextCalloutAnnotation CreateFreeTextCalloutAnnotation()
 {
     int pageNumber = 1;
@@ -86,7 +88,7 @@ N> The page number is 1-based. The text box bounds and callout points are in PDF
 The [CalloutPoints](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.FreeTextCalloutAnnotation.html#Syncfusion_Maui_PdfViewer_FreeTextCalloutAnnotation_CalloutPoints) property gets or sets the points that define the leader line from the text box to the target location. Change it when the note must point to a different place, or when you need to reshape the leader line after the annotation is created.
 
 {% tabs %}
-{% highlight C# hl_lines="5" %}
+{% highlight C# %}
 void UpdateCalloutPoints(FreeTextCalloutAnnotation annotation)
 {
     annotation.CalloutPoints = new PointF[]
@@ -104,7 +106,7 @@ void UpdateCalloutPoints(FreeTextCalloutAnnotation annotation)
 Callouts added from the annotation mode use a default appearance. To define that appearance before the user adds a callout, obtain the [FreeTextCallout](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.AnnotationSettings.html#Syncfusion_Maui_PdfViewer_AnnotationSettings_FreeTextCallout) settings from [AnnotationSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.AnnotationSettings.html) and modify the [FreeTextCalloutAnnotationSettings](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.FreeTextCalloutAnnotationSettings.html). These settings do not change callouts that are already in the document.
 
 {% tabs %}
-{% highlight C# hl_lines="3" %}
+{% highlight C# %}
 void CustomizeDefaultFreeTextCalloutSettings()
 {
     FreeTextCalloutAnnotationSettings calloutSettings = PdfViewer.AnnotationSettings.FreeTextCallout;
@@ -125,7 +127,7 @@ A free text callout is a free text annotation with a leader line, so its text an
 To change where an existing callout points, update [CalloutPoints](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.FreeTextCalloutAnnotation.html#Syncfusion_Maui_PdfViewer_FreeTextCalloutAnnotation_CalloutPoints) on the selected annotation. The selected annotation can be obtained from the [AnnotationSelected](https://help.syncfusion.com/cr/document-processing/Syncfusion.Maui.PdfViewer.SfPdfViewer.html#Syncfusion_Maui_PdfViewer_SfPdfViewer_AnnotationSelected) event.
 
 {% tabs %}
-{% highlight C# hl_lines="6" %}
+{% highlight C# %}
 void EditSelectedFreeTextCallout(Annotation selectedAnnotation)
 {
     if (selectedAnnotation is FreeTextCalloutAnnotation callout)
