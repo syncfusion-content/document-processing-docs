@@ -127,8 +127,8 @@ N> The `fetch` call uses a relative path (`/generate-pdf`) because the frontend 
 {% tabs %}
 {% highlight typescript tabtitle="Module imports (ESM)" %}
 
-import pdf from '@syncfusion/ej2-pdf';
-const document = new pdf.PdfDocument();
+import { PdfDocument } from '@syncfusion/ej2-pdf';
+const document = new PdfDocument();
 
 {% endhighlight %}
 {% endtabs %}
