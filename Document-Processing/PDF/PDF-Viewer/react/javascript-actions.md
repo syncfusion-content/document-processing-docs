@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The Syncfusion React PDF Viewer supports Adobe AcroForm text field format actions. Number, Percentage, Special, and Arbitrary Mask formatting behaviors can be applied to PDF form fields so that values are formatted and validated as users type and when a field loses focus.
 
-The feature introduces a typed JavaScript action model for format actions, a `keyPressed` event for handling text field input, and support for parsing and applying Adobe Form Helper scripts. Document security is preserved by restricting arbitrary JavaScript execution. Only supported Adobe helper functions are parsed and executed.
+The feature introduces a typed JavaScript action model for format actions, a `keyPressed` event for handling text field input, and support for parsing and applying Adobe Form Helper scripts. Only supported Adobe helper functions are parsed and executed.
 
 ## Key features
 
@@ -42,7 +42,7 @@ The **Type** drop-down lists the available format types:
 | Time | Changes the text box into a [DateTime picker](./forms/manage-form-fields/create-form-fields#datetime-picker) in time mode. The field then uses the DateTime picker time list and format settings instead of a JavaScript format action. |
 | Special | Applies a predefined mask, such as ZIP code, ZIP+4, phone number, or Social Security Number, or a custom arbitrary mask. |
 
-N> Choosing **Date** or **Time** in the Format tab converts the text box into a DateTime picker. JavaScript format actions are applied only for Number, Percentage, Special, and Arbitrary Mask. Custom scripts are not currently handled in the PDF Viewer.
+N> Choosing **Date** or **Time** in the Format tab converts the text box into a DateTime picker. Custom scripts are not currently handled in the PDF Viewer.
 
 ## Supported format actions
 
