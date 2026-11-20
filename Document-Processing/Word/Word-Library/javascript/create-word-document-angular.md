@@ -131,12 +131,13 @@ export class App {
 
   createDocument(): void {
     const document = WordDocument.create();
-
+    // Access the section
     const section = document.sections[0];
+	// Access the paragraph
     const paragraph = section.body.paragraphs[0];
-
+    // Add text to the paragraph
     paragraph.appendText('Hello World!!!');
-
+    // Save and download Word document
     document.save('Output.docx');
   }
 }
