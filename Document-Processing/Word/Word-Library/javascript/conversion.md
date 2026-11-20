@@ -21,6 +21,7 @@ Syncfusion<sup>&reg;</sup> JavaScript Word Library converts documents from one f
 
 The following conversions are supported by the JavaScript Word Library:
 
+* [Microsoft Word file format Conversions](https://help.syncfusion.com/document-processing/word/word-library/javascript/word-file-formats)
 * [HTML Conversions](https://help.syncfusion.com/document-processing/word/word-library/javascript/html)
 
 ## HTML conversion
