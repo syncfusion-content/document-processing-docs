@@ -22,9 +22,43 @@ You can add a new Checkbox form field to a Word document by using the `appendChe
 The following code illustrates how to add a new Checkbox form field.
 
 {% tabs %}
-{% highlight javascript tabtitle="JavaScript" %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { WordDocument } from '@syncfusion/ej2-docx';
+
 // Create document
 let document = WordDocument.create();
+
+// Add section
+let section = document.lastSection;
+
+// Add paragraph
+let paragraph = section.body.paragraphs[0];
+
+paragraph.appendText('Gender\t');
+
+// Append first checkbox
+let checkBox = paragraph.appendCheckBoxFormField();
+checkBox.checked = false;
+checkBox.checkBoxSize = 10;
+checkBox.calculateOnExit = true;
+checkBox.help = 'Help text';
+
+paragraph.appendText('Male\t');
+
+// Append second checkbox
+checkBox = paragraph.appendCheckBoxFormField();
+checkBox.checked = false;
+checkBox.checkBoxSize = 10;
+checkBox.calculateOnExit = true;
+
+paragraph.appendText('Female');
+
+// Saves the Word document.
+document.save('Output.docx');
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Create document
+let document = ej.docx.WordDocument.create();
 
 // Add section
 let section = document.lastSection;
@@ -59,11 +93,13 @@ document.save('Output.docx');
 You can modify the checkbox properties such as checked state and size in a Word document. The following code illustrates how to modify the Checkbox form field properties.
 
 {% tabs %}
-{% highlight javascript tabtitle="JavaScript" %}
-let document = WordDocument.open(data);
-const paragraph = document.lastParagraph;
+{% highlight typescript tabtitle="TypeScript" %}
+import { WordDocument, CheckBoxFormField, CheckBoxSizeType } from '@syncfusion/ej2-docx';
 
-for (const item of paragraph.items) {
+let document = WordDocument.open(data);
+let paragraph = document.lastParagraph;
+
+for (let item of paragraph.items) {
     if (item instanceof CheckBoxFormField) {
         if (item.checked) {
             item.checked = false;
@@ -73,7 +109,24 @@ for (const item of paragraph.items) {
     }
 }
 
-// Saves the Word document. 
+// Saves the Word document.
+document.save('Output.docx');
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+let document = ej.docx.WordDocument.open(data);
+let paragraph = document.lastParagraph;
+
+for (let item of paragraph.items) {
+    if (item instanceof ej.docx.CheckBoxFormField) {
+        if (item.checked) {
+            item.checked = false;
+        }
+
+        item.sizeType = ej.docx.CheckBoxSizeType.Exactly;
+    }
+}
+
+// Saves the Word document.
 document.save('Output.docx');
 {% endhighlight %}
 {% endtabs %}
@@ -85,9 +138,43 @@ You can add a new Drop-Down form field to a Word document by using the `appendDr
 The following code illustrates how to add a new Drop-Down form field.
 
 {% tabs %}
-{% highlight javascript tabtitle="JavaScript" %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { WordDocument } from '@syncfusion/ej2-docx';
+
 // Create a new Word document
 let document = WordDocument.create();
+
+// Add a new section
+let section = document.lastSection;
+
+// Add a new paragraph
+let paragraph = section.body.paragraphs[0];
+
+paragraph.appendText('Educational Qualification\t');
+
+// Append a dropdown form field
+let dropDownField = paragraph.appendDropDownFormField();
+
+// Add items to the dropdown collection
+dropDownField.dropDownItems.add('Higher');
+dropDownField.dropDownItems.add('Vocational');
+dropDownField.dropDownItems.add('Universal');
+
+// Enable the dropdown field
+dropDownField.enabled = true;
+
+// Set the selected item index
+dropDownField.selectedIndex = 1;
+
+// Enable calculation when exiting the field
+dropDownField.calculateOnExit = true;
+
+// Save the Word document
+document.save('Output.docx');
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Create a new Word document
+let document = ej.docx.WordDocument.create();
 
 // Add a new section
 let section = document.lastSection;
@@ -122,18 +209,34 @@ document.save('Output.docx');
 You can add or modify the list of items of a Drop-Down form field in a Word document. The following code illustrates how to modify the drop-down list of a Drop-Down form field.
 
 {% tabs %}
-{% highlight javascript tabtitle="JavaScript" %}
-let document = WordDocument.open(data);
-const paragraph = document.lastParagraph;
+{% highlight typescript tabtitle="TypeScript" %}
+import { WordDocument, DropDownFormField } from '@syncfusion/ej2-docx';
 
-for (const item of paragraph.items) {
+let document = WordDocument.open(data);
+let paragraph = document.lastParagraph;
+
+for (let item of paragraph.items) {
     if (item instanceof DropDownFormField) {
         item.dropDownItems.removeAt(1);
         item.selectedIndex = 0;
     }
 }
 
-// Saves the Word document. 
+// Saves the Word document.
+document.save('Output.docx');
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+let document = ej.docx.WordDocument.open(data);
+let paragraph = document.lastParagraph;
+
+for (let item of paragraph.items) {
+    if (item instanceof ej.docx.DropDownFormField) {
+        item.dropDownItems.removeAt(1);
+        item.selectedIndex = 0;
+    }
+}
+
+// Saves the Word document.
 document.save('Output.docx');
 {% endhighlight %}
 {% endtabs %}
@@ -145,9 +248,11 @@ You can add a new Text form field to a Word document by using the `appendTextFor
 The following code illustrates how to add a new Text form field.
 
 {% tabs %}
-{% highlight javascript tabtitle="JavaScript" %}
-// Create document 
-let document = WordDocument.create(); 
+{% highlight typescript tabtitle="TypeScript" %}
+import { WordDocument, TextFormFieldType } from '@syncfusion/ej2-docx';
+
+// Create document
+let document = WordDocument.create();
 let section = document.lastSection;
 // Add heading paragraph
 let paragraph = section.body.paragraphs[0];
@@ -181,7 +286,46 @@ textField.stringFormat = 'MM/DD/YY';
 textField.type = TextFormFieldType.DateText;
 textField.calculateOnExit = true;
 
-// Saves the Word document. 
+// Saves the Word document.
+document.save('Output.docx');
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+// Create document
+let document = ej.docx.WordDocument.create();
+let section = document.lastSection;
+// Add heading paragraph
+let paragraph = section.body.paragraphs[0];
+paragraph.appendText('General Information');
+
+// Name field
+paragraph = section.body.appendParagraph();
+
+let text = paragraph.appendText('Name\t');
+text.characterFormat.bold = true;
+
+// Text form field
+let textField = paragraph.appendTextFormField();
+textField.type = ej.docx.TextFormFieldType.RegularText;
+textField.characterFormat.fontName = 'Calibri';
+textField.calculateOnExit = true;
+
+// Date of birth field
+paragraph = section.body.appendParagraph();
+
+text = paragraph.appendText('Date of Birth\t');
+text.characterFormat.bold = true;
+
+// Date form field
+textField = paragraph.appendTextFormField(
+    'Date field',
+    new Date().toLocaleDateString('en-US')
+);
+
+textField.stringFormat = 'MM/DD/YY';
+textField.type = ej.docx.TextFormFieldType.DateText;
+textField.calculateOnExit = true;
+
+// Saves the Word document.
 document.save('Output.docx');
 {% endhighlight %}
 {% endtabs %}
@@ -189,13 +333,15 @@ document.save('Output.docx');
 You can add or modify Text form field properties such as default text and type in a Word document. The following code illustrates how to modify the Text form field.
 
 {% tabs %}
-{% highlight javascript tabtitle="JavaScript" %}
+{% highlight typescript tabtitle="TypeScript" %}
+import { WordDocument, TextFormField, TextFormFieldType } from '@syncfusion/ej2-docx';
+
 let document = WordDocument.open(data);
 for (let section of document.sections) {
     for (let formField of section.body.formFields) {
         switch (formField.formFieldType) {
             case 'textInput': {
-                const textField = formField as TextFormField;
+                let textField = formField as TextFormField;
 
                 if (textField.type === TextFormFieldType.DateText) {
                     textField.type = TextFormFieldType.RegularText;
@@ -211,7 +357,32 @@ for (let section of document.sections) {
         }
     }
 }
-// Saves the Word document. 
+// Saves the Word document.
+document.save('Output.docx');
+{% endhighlight %}
+{% highlight javascript tabtitle="JavaScript" %}
+let document = ej.docx.WordDocument.open(data);
+for (let section of document.sections) {
+    for (let formField of section.body.formFields) {
+        switch (formField.formFieldType) {
+            case 'textInput': {
+                let textField = formField;
+
+                if (textField.type === ej.docx.TextFormFieldType.DateText) {
+                    textField.type = ej.docx.TextFormFieldType.RegularText;
+                    textField.stringFormat = '';
+
+                    textField.defaultText = 'Default text';
+                    textField.text = 'Default text';
+
+                    textField.calculateOnExit = false;
+                }
+                break;
+            }
+        }
+    }
+}
+// Saves the Word document.
 document.save('Output.docx');
 {% endhighlight %}
 {% endtabs %}
