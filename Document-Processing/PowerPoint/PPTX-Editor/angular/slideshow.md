@@ -154,3 +154,33 @@ import 'zone.js';
 bootstrapApplication(AppComponent).catch((err) => console.error(err));
 ```
 
+
+## Disable Slide Show
+
+`enableSlideShow` controls whether Slide Show is available. The default value is `true`, so Slide Show works when the `SlideShow` module is injected. Set `enableSlideShow` to `false` to disable it. Slide Show actions then do nothing.
+
+```ts
+import { Component, ViewEncapsulation, ViewChild } from '@angular/core';
+import { PptxEditorComponent, SlideShowService, ToolbarService } from '@syncfusion/ej2-angular-pptxeditor';
+
+@Component({
+    standalone: true,
+    selector: 'app-root',
+    template: `
+        <ejs-pptxeditor
+            #pptx_editor
+            id="pptx-editor"
+            style="display:block"
+            [enableSlideShow]="false"
+            documentPath="https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx">
+        </ejs-pptxeditor>
+    `,
+    encapsulation: ViewEncapsulation.None,
+    imports: [PptxEditorComponent],
+    providers: [SlideShowService, ToolbarService]
+})
+export class AppComponent {
+    @ViewChild('pptx_editor')
+    public pptxEditor?: PptxEditorComponent;
+}
+```

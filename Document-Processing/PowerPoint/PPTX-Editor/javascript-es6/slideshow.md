@@ -163,3 +163,45 @@ pptxeditor.appendTo('#pptx-editor');
 {% endhighlight %}
 {% endtabs %}
 
+
+## Disable Slide Show
+
+`enableSlideShow` controls whether Slide Show is available. The default value is `true`, so Slide Show works when the `SlideShow` module is injected. Set `enableSlideShow` to `false` to disable it. Slide Show actions then do nothing.
+
+{% tabs %}
+{% highlight ts tabtitle="index.ts" %}
+
+import { PptxEditor, SlideShow } from '@syncfusion/ej2-pptxeditor';
+
+PptxEditor.Inject(SlideShow);
+
+let pptxeditor: PptxEditor = new PptxEditor({
+    enableSlideShow: false,
+    documentPath: 'https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx'
+});
+pptxeditor.appendTo('#pptx-editor');
+
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Slide Show in TypeScript PPTX Editor</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="description" content="Essential JS 2" />
+    <meta name="author" content="Syncfusion" />
+    <link rel="shortcut icon" href="resources/favicon.ico" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="pptx-editor"></div>
+</body>
+
+</html>
+
+{% endhighlight %}
+{% endtabs %}

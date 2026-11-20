@@ -116,3 +116,27 @@ export default App;
 createRoot(document.getElementById('sample')).render(<App />);
 ```
 
+
+## Disable Slide Show
+
+`enableSlideShow` controls whether Slide Show is available. The default value is `true`, so Slide Show works when the `SlideShow` module is injected. Set `enableSlideShow` to `false` to disable it. Slide Show actions then do nothing.
+
+```tsx
+import * as React from 'react';
+import { createRoot } from 'react-dom/client';
+import { PptxEditorComponent, SlideShow } from '@syncfusion/ej2-react-pptxeditor';
+
+PptxEditorComponent.Inject(SlideShow);
+
+function App() {
+    return (
+        <PptxEditorComponent
+            id="pptx-editor"
+            documentPath="https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx"
+            enableSlideShow={false}
+        />
+    );
+}
+export default App;
+createRoot(document.getElementById('sample')).render(<App />);
+```

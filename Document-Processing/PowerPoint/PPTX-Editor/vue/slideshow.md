@@ -319,3 +319,84 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
+
+## Disable Slide Show
+
+`enableSlideShow` controls whether Slide Show is available. The default value is `true`, so Slide Show works when the `SlideShow` module is injected. Set `enableSlideShow` to `false` to disable it. Slide Show actions then do nothing.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<template>
+    <div id="app">
+        <ejs-pptxeditor
+            ref="pptxeditor"
+            :enableSlideShow="false"
+            height="590px"
+            style="width: 100%;"
+            :documentPath="documentPath">
+        </ejs-pptxeditor>
+    </div>
+</template>
+
+<script setup>
+import { provide } from "vue";
+import {
+    PptxEditorComponent as EjsPptxeditor,
+    SlideShow
+} from "@syncfusion/ej2-vue-pptxeditor";
+
+const documentPath =
+    "https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx";
+
+// Inject SlideShow module
+provide("pptxeditor", [SlideShow]);
+</script>
+
+<style>
+@import "@syncfusion/ej2-tailwind3-theme/styles/pptxeditor/index.css";
+</style>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+    <div id="app">
+        <ejs-pptxeditor
+            ref="pptxeditor"
+            :enableSlideShow="false"
+            height="590px"
+            style="width: 100%;"
+            :documentPath="documentPath">
+        </ejs-pptxeditor>
+    </div>
+</template>
+
+<script>
+import { PptxEditorComponent, SlideShow } from '@syncfusion/ej2-vue-pptxeditor';
+
+export default {
+    name: "App",
+
+    components: {
+        "ejs-pptxeditor": PptxEditorComponent
+    },
+
+    data() {
+        return {
+            documentPath: 'https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx'
+        };
+    },
+
+    provide: {
+        pptxeditor: [SlideShow]
+    }
+}
+</script>
+
+<style>
+@import "@syncfusion/ej2-tailwind3-theme/styles/pptxeditor/index.css";
+</style>
+
+{% endhighlight %}
+{% endtabs %}

@@ -126,3 +126,23 @@ public ActionResult Index()
 {% endhighlight %}
 {% endtabs %}
 
+
+## Disable Slide Show
+
+`enableSlideShow` controls whether Slide Show is available. The default value is `true`, so Slide Show works when the `SlideShow` module is injected. Set `enableSlideShow` to `false` to disable it. Slide Show actions then do nothing.
+
+{% tabs %}
+{% highlight cshtml tabtitle="CSHTML" %}
+
+@Html.EJS().PptxEditor("container").EnableSlideShow(false).DocumentPath("https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx").Render()
+
+{% endhighlight %}
+{% highlight c# tabtitle="HomeController.cs" %}
+
+public ActionResult Index()
+{
+    return View();
+}
+
+{% endhighlight %}
+{% endtabs %}
