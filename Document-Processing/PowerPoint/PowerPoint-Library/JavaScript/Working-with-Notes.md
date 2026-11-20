@@ -80,8 +80,9 @@ let pptxDoc = Presentation.create();
 let slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
 // Adds a notes slide to the slide.
 let notesSlide = slide.addNotesSlide();
-// Adds a paragraph with formatted text to the notes slide.
+// Adds a paragraph to the notes slide.
 let paragraph = notesSlide.notesTextBody.addParagraph();
+// Adds a text part to the paragraph.
 let textpart = paragraph.addTextPart();
 textpart.text ='The notes slide represents the contents and key notes of the corresponding slide. It is more useful when we use Presenter View while presenting the seminars through SlideShow.';
 // Sets Bold format for text content.
@@ -90,7 +91,7 @@ textpart.font.bold = true;
 textpart.font.fontName = 'Times New Roman';
 // Sets text content size using FontSize property.
 textpart.font.fontSize = 20;
-// Saves the Presentation to the file system.
+// Saves the Presentation
 await pptxDoc.save('PresentationWithNotesText.pptx');
 
 
@@ -128,7 +129,7 @@ The following code example demonstrates how to create a simple numbered list as 
 {% tabs %}
 {% highlight typescript tabtitle="TypeScript" %}
 
-import {ListType, NumberedListStyle, Presentation, SlideLayoutType} from '@syncfusion/ej2-pptx';
+import {Presentation, SlideLayoutType, ListType, NumberedListStyle} from '@syncfusion/ej2-pptx';
 
 // Creates a Presentation instance.
 let pptxDoc = Presentation.create();
@@ -137,44 +138,43 @@ let slide = pptxDoc.slides.add({ layout: SlideLayoutType.Blank });
 // Adds a notes slide to the slide.
 let notesSlide = slide.addNotesSlide();
 // Adds the first numbered list item.
-let paragraph = notesSlide.notesTextBody.addParagraph('The Northwind sample database (Northwind.mdb) is included with all versions of Access.');
-// Sets the list type as Numbered 
-paragraph.listFormat.type = ListType.Numbered;
-// Sets the numbered style (list numbering) as Arabic number following by period. 
-paragraph.listFormat.numberStyle = NumberedListStyle.ArabicPeriod;
-// Sets the starting value as 1 
-paragraph.listFormat.startValue = 1;
-// Sets the list level as 1 
-paragraph.indentLevelNumber = 1;
-// Sets the hanging value 
-paragraph.firstLineIndent = -20;
-// Sets the bullet character size. Here, 100 means 100% of its text. Possible values can range from 25 to 400. 
-paragraph.listFormat.size = 100;
-// Adds another paragraph with the text in the left hand side textbox. 
-paragraph = notesSlide.notesTextBody.addParagraph('It provides data you can experiment with and database objects that demonstrate features you might want to implement in your own databases.');
-// Sets the list type as bulleted 
-paragraph.listFormat.type = ListType.Numbered;
-// Sets the numbered style (list numbering) as Arabic number following by period. 
-paragraph.listFormat.numberStyle = NumberedListStyle.ArabicPeriod;
-// Sets the list level as 1 
-paragraph.indentLevelNumber = 1;
-// Sets the hanging value 
-paragraph.firstLineIndent = -20;
-// Sets the bullet character size. Here, 100 means 100% of its text. Possible values can range from 25 to 400. 
-paragraph.listFormat.size = 100;
-// Adds another paragraph with the text in the left hand side textbox. 
-paragraph = notesSlide.notesTextBody.addParagraph('Using Northwind, you can become familiar with how a relational database is structured and how the database objects work together to help you enter, store, manipulate, and print your data.');
-// Sets the list type as bulleted 
-paragraph.listFormat.type = ListType.Numbered;
-// Sets the numbered style (list numbering) as Arabic number following by period. 
-paragraph.listFormat.numberStyle = NumberedListStyle.ArabicPeriod;
-// Sets the list level as 1 
-paragraph.indentLevelNumber = 1;
-// Sets the hanging value 
-paragraph.firstLineIndent = -20;
-// Sets the bullet character size. Here, 100 means 100% of its text. Possible values can range from 25 to 400. 
-paragraph.ListFormat.Size = 100; 
-paragraph.listFormat.size = 100;
+let paragraph1 = notesSlide.notesTextBody.addParagraph('The Northwind sample database (Northwind.mdb) is included with all versions of Access.');
+// Sets the list type as Numbered
+paragraph1.listFormat.type = ListType.Numbered;
+// Sets the numbered style (list numbering) as Arabic number following by period.
+paragraph1.listFormat.numberStyle = NumberedListStyle.ArabicPeriod;
+// Sets the starting value as 1
+paragraph1.listFormat.startValue = 1;
+// Sets the list level as 1
+paragraph1.indentLevelNumber = 1;
+// Sets the hanging value
+paragraph1.firstLineIndent = -20;
+// Sets the bullet character size. Here, 100 means 100% of its text. Possible values can range from 25 to 400.
+paragraph1.listFormat.size = 100;
+// Adds another paragraph with the text in the left hand side textbox.
+let paragraph2 = notesSlide.notesTextBody.addParagraph('It provides data you can experiment with and database objects that demonstrate features you might want to implement in your own databases.');
+// Sets the list type as bulleted
+paragraph2.listFormat.type = ListType.Numbered;
+// Sets the numbered style (list numbering) as Arabic number following by period.
+paragraph2.listFormat.numberStyle = NumberedListStyle.ArabicPeriod;
+// Sets the list level as 1
+paragraph2.indentLevelNumber = 1;
+// Sets the hanging value
+paragraph2.firstLineIndent = -20;
+// Sets the bullet character size. Here, 100 means 100% of its text. Possible values can range from 25 to 400.
+paragraph2.listFormat.size = 100;
+// Adds another paragraph with the text in the left hand side textbox.
+let paragraph3 = notesSlide.notesTextBody.addParagraph('Using Northwind, you can become familiar with how a relational database is structured and how the database objects work together to help you enter, store, manipulate, and print your data.');
+// Sets the list type as bulleted
+paragraph3.listFormat.type = ListType.Numbered;
+// Sets the numbered style (list numbering) as Arabic number following by period.
+paragraph3.listFormat.numberStyle = NumberedListStyle.ArabicPeriod;
+// Sets the list level as 1
+paragraph3.indentLevelNumber = 1;
+// Sets the hanging value
+paragraph3.firstLineIndent = -20;
+// Sets the bullet character size. Here, 100 means 100% of its text. Possible values can range from 25 to 400.
+paragraph3.listFormat.size = 100;
 // Save the PowerPoint Presentation as Uint8Array
 let data = await pptxDoc.save();
 
@@ -225,8 +225,7 @@ paragraph.listFormat.numberStyle = ej.pptx.NumberedListStyle.ArabicPeriod;
 paragraph.indentLevelNumber = 1;
 // Sets the hanging value.
 paragraph.firstLineIndent = -20;
-// Sets the bullet character size. Here, 100 means 100% of its text.
-// Possible values can range from 25 to 400.
+// Sets the bullet character size. Here, 100 means 100% of its text.Possible values can range from 25 to 400.
 paragraph.listFormat.size = 100;
 // Save the PowerPoint Presentation as Uint8Array.
 var data = await pptxDoc.save();
