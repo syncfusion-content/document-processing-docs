@@ -25,15 +25,21 @@ The following example injects the `SlideShow` module and starts the presentation
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
 
-@Html.EJS().PptxEditor("container").Height("590px").EnableSlideShow(true).DocumentPath("https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx").Created("onCreated").Render()
+<button id="slideShowBtn">Start Slide Show</button>
+@Html.EJS().PptxEditor("container").EnableSlideShow(true).DocumentPath("https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx").Render()
 
 <script>
-    function onCreated() {
+    document.addEventListener('DOMContentLoaded', function () {
+
         var pptxeditor = document.getElementById('container').ej2_instances[0];
-        setTimeout(function () {
+
+        document.getElementById('slideShowBtn').addEventListener('click', function () {
+
             pptxeditor.startSlideShowFromBeginning();
-        }, 1000);
-    }
+
+        });
+
+    });
 </script>
 
 {% endhighlight %}
@@ -54,15 +60,21 @@ public ActionResult Index()
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
 
-@Html.EJS().PptxEditor("container").Height("590px").EnableSlideShow(true).DocumentPath("https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx").Created("onCreated").Render()
+<button id="slideShowBtn">Current Slide Show</button>
+@Html.EJS().PptxEditor("container").EnableSlideShow(true).DocumentPath("https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx").Render()
 
 <script>
-    function onCreated() {
+    document.addEventListener('DOMContentLoaded', function () {
+
         var pptxeditor = document.getElementById('container').ej2_instances[0];
-        setTimeout(function () {
+
+        document.getElementById('slideShowBtn').addEventListener('click', function () {
+
             pptxeditor.startSlideShowFromCurrent();
-        }, 1000);
-    }
+
+        });
+
+    });
 </script>
 
 {% endhighlight %}
@@ -87,17 +99,22 @@ N> Presenter View is an in-page panel. It does not open a separate window.
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
 
-@Html.EJS().PptxEditor("container").Height("590px").EnableSlideShow(true).DocumentPath("https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx").Created("onCreated").Render()
+<button id="slideShowBtn">Presenter View</button>
+@Html.EJS().PptxEditor("container").EnableSlideShow(true).DocumentPath("https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx").Render()
 
 <script>
-    function onCreated() {
-        var pptxeditor = document.getElementById('container').ej2_instances[0];
-        setTimeout(function () {
-            pptxeditor.startPresenterView();
-        }, 1000);
-    }
-</script>
+    document.addEventListener('DOMContentLoaded', function () {
 
+        var pptxeditor = document.getElementById('container').ej2_instances[0];
+
+        document.getElementById('slideShowBtn').addEventListener('click', function () {
+
+            pptxeditor.startPresenterView();
+
+        });
+
+    });
+</script>
 {% endhighlight %}
 {% highlight c# tabtitle="HomeController.cs" %}
 

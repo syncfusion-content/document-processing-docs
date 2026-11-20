@@ -28,9 +28,19 @@ import { PptxEditorComponent, SlideShowService } from '@syncfusion/ej2-angular-p
 
 @Component({
     standalone: true,
-    selector: 'app-container',
-    template: `<ejs-pptxeditor #pptx_editor id="pptx-editor" height="590px" style="display:block" [enableSlideShow]="true" documentPath="https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx" (created)="onCreated()"></ejs-pptxeditor>`,
+    selector: 'app-root',
+    template: `
+        <ejs-pptxeditor
+            #pptx_editor
+            id="pptx-editor"
+            style="display:block"
+            [enableSlideShow]="true"
+            documentPath="https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx"
+            (created)="onCreated()">
+        </ejs-pptxeditor>
+    `,
     encapsulation: ViewEncapsulation.None,
+    imports: [PptxEditorComponent],
     providers: [SlideShowService]
 })
 export class AppComponent {
@@ -62,9 +72,19 @@ import { PptxEditorComponent, SlideShowService } from '@syncfusion/ej2-angular-p
 
 @Component({
     standalone: true,
-    selector: 'app-container',
-    template: `<ejs-pptxeditor #pptx_editor id="pptx-editor" height="590px" style="display:block" [enableSlideShow]="true" documentPath="https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx" (created)="onCreated()"></ejs-pptxeditor>`,
+    selector: 'app-root',
+    template: `
+        <ejs-pptxeditor
+            #pptx_editor
+            id="pptx-editor"
+            style="display:block"
+            [enableSlideShow]="true"
+            documentPath="https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx"
+            (created)="onCreated()">
+        </ejs-pptxeditor>
+    `,
     encapsulation: ViewEncapsulation.None,
+    imports: [PptxEditorComponent],
     providers: [SlideShowService]
 })
 export class AppComponent {
@@ -100,9 +120,19 @@ import { PptxEditorComponent, SlideShowService } from '@syncfusion/ej2-angular-p
 
 @Component({
     standalone: true,
-    selector: 'app-container',
-    template: `<ejs-pptxeditor #pptx_editor id="pptx-editor" height="590px" style="display:block" [enableSlideShow]="true" documentPath="https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx" (created)="onCreated()"></ejs-pptxeditor>`,
+    selector: 'app-root',
+    template: `
+        <ejs-pptxeditor
+            #pptx_editor
+            id="pptx-editor"
+            style="display:block"
+            [enableSlideShow]="true"
+            documentPath="https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx"
+            (created)="onCreated()">
+        </ejs-pptxeditor>
+    `,
     encapsulation: ViewEncapsulation.None,
+    imports: [PptxEditorComponent],
     providers: [SlideShowService]
 })
 export class AppComponent {
