@@ -23,14 +23,19 @@ The following example injects the `Print` module, loads a presentation from `doc
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
 
-@Html.EJS().PptxEditor("container").EnablePrint(true).DocumentPath("https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx").Created("onCreated").Render()
+<button id="printBtn">Print</button>
+@Html.EJS().PptxEditor("container").EnablePrint(true).DocumentPath("https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx").Render()
 
 <script>
-    function onCreated() {
+    document.addEventListener('DOMContentLoaded', function () {
+
         var pptxeditor = document.getElementById('container').ej2_instances[0];
-        // Print the loaded presentation.
-        pptxeditor.print();
-    }
+
+        document.getElementById('printBtn').addEventListener('click', function () {
+            pptxeditor.print();
+        });
+
+    });
 </script>
 
 {% endhighlight %}
@@ -73,7 +78,7 @@ You can print the presentation by passing a window instance. This is useful in h
 {% tabs %}
 {% highlight cshtml tabtitle="CSHTML" %}
 
-@Html.EJS().Button("print").Content("Print").Render()
+<button id="print">Print</button>
 @Html.EJS().PptxEditor("container").EnablePrint(true).DocumentPath("https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx").Render()
 
 <script>

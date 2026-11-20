@@ -21,15 +21,28 @@ N> The PPTX Editor prints slide content only. Speaker notes are not included in 
 The following example injects the `Print` module, loads a presentation from `documentPath`, and prints it.
 
 ```ts
-import { Component, ViewEncapsulation, ViewChild } from '@angular/core';
-import { PptxEditorComponent, PrintService } from '@syncfusion/ej2-angular-pptxeditor';
+import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
+import {
+    PptxEditorComponent,
+    PrintService
+} from '@syncfusion/ej2-angular-pptxeditor';
 
 @Component({
     standalone: true,
-    selector: 'app-container',
+    selector: 'app-root',
     template: `
-        <ejs-pptxeditor #pptx_editor id="pptx-editor" style="display:block" [enablePrint]="true" documentPath="https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx" (created)="onCreated()"></ejs-pptxeditor>`,
+    <div>
+        <button (click)="onCreated()">Print</button>
+        <ejs-pptxeditor
+            #pptx_editor
+            id="pptx-editor"
+            style="display:block"
+            [enablePrint]="true"
+            documentPath="https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx">
+        </ejs-pptxeditor>
+    </div>`,
     encapsulation: ViewEncapsulation.None,
+    imports: [PptxEditorComponent],
     providers: [PrintService]
 })
 export class AppComponent {
@@ -37,10 +50,11 @@ export class AppComponent {
     public pptxEditor?: PptxEditorComponent;
 
     public onCreated(): void {
-        // Print the loaded presentation.
+        console.log('Created event fired');
         this.pptxEditor?.print();
     }
 }
+
 ```
 
 ```ts
@@ -57,20 +71,40 @@ You can also print from the File menu. When the `Print` module is injected and `
 Set `enablePrint` to `false` to hide the print workflow. The File menu **Print** item is disabled, and calling `print()` does nothing.
 
 ```ts
-import { Component, ViewEncapsulation, ViewChild } from '@angular/core';
-import { PptxEditorComponent, PrintService } from '@syncfusion/ej2-angular-pptxeditor';
+import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
+import {
+    PptxEditorComponent,
+    PrintService
+} from '@syncfusion/ej2-angular-pptxeditor';
 
 @Component({
     standalone: true,
-    selector: 'app-container',
-    template: `<ejs-pptxeditor #pptx_editor id="pptx-editor" style="display:block" [enablePrint]="false" documentPath="https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx"></ejs-pptxeditor>`,
+    selector: 'app-root',
+    template: `
+    <div>
+        <button (click)="onCreated()">Print</button>
+        <ejs-pptxeditor
+            #pptx_editor
+            id="pptx-editor"
+            style="display:block"
+            [enablePrint]="false"
+            documentPath="https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx">
+        </ejs-pptxeditor>
+    </div>`,
     encapsulation: ViewEncapsulation.None,
+    imports: [PptxEditorComponent],
     providers: [PrintService]
 })
 export class AppComponent {
     @ViewChild('pptx_editor')
     public pptxEditor?: PptxEditorComponent;
+
+    public onCreated(): void {
+        console.log('Created event fired');
+        this.pptxEditor?.print();
+    }
 }
+
 ```
 
 ```ts
@@ -85,15 +119,28 @@ bootstrapApplication(AppComponent).catch((err) => console.error(err));
 You can print the presentation by passing a window instance. This is useful in hosts such as Electron, where a window instance is already available. Open the window from a user action so the browser does not treat it as a blocked popup. If the window cannot be opened, `print()` returns without printing.
 
 ```ts
-import { Component, ViewEncapsulation, ViewChild } from '@angular/core';
-import { PptxEditorComponent, PrintService } from '@syncfusion/ej2-angular-pptxeditor';
+import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
+import {
+    PptxEditorComponent,
+    PrintService
+} from '@syncfusion/ej2-angular-pptxeditor';
 
 @Component({
     standalone: true,
-    selector: 'app-container',
+    selector: 'app-root',
     template: `
-        <ejs-pptxeditor #pptx_editor id="pptx-editor" style="display:block" [enablePrint]="true" documentPath="https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx"></ejs-pptxeditor>`,
+    <div>
+        <button (click)="onPrint()">Print</button>
+        <ejs-pptxeditor
+            #pptx_editor
+            id="pptx-editor"
+            style="display:block"
+            [enablePrint]="true"
+            documentPath="https://document.syncfusion.com/content/pptxeditor-resources/Sample.pptx">
+        </ejs-pptxeditor>
+    </div>`,
     encapsulation: ViewEncapsulation.None,
+    imports: [PptxEditorComponent],
     providers: [PrintService]
 })
 export class AppComponent {
@@ -107,6 +154,7 @@ export class AppComponent {
         }
     }
 }
+
 ```
 
 ```ts
