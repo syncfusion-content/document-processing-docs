@@ -8,7 +8,7 @@ documentation: UG
 
 # Supported file formats in JavaScript Word Library
 
-Syncfusion<sup>&reg;</sup> [JavaScript Word Library](https://www.syncfusion.com/document-sdk/javascript-word-library) supports native file formats of Microsoft Word, such as [DOCX](https://help.syncfusion.com/document-processing/word/conversions/word-file-formats-conversions#word-document-docx), [DOTX](https://help.syncfusion.com/document-processing/word/conversions/word-file-formats-conversions#word-template-dotx), [DOCM](https://help.syncfusion.com/document-processing/word/conversions/word-file-formats-conversions#macros-docm-dotm), and [DOTM](https://help.syncfusion.com/document-processing/word/conversions/word-file-formats-conversions#macros-docm-dotm). It also supports import [HTML](https://help.syncfusion.com/document-processing/word/conversions/html-conversions) format.
+Syncfusion<sup>&reg;</sup> [JavaScript Word Library](https://www.syncfusion.com/document-sdk/javascript-word-library) supports native file formats of Microsoft Word, such as [DOCX](https://help.syncfusion.com/document-processing/word/word-library/javascript/word-file-formats#word-open-xml-formats-2007--later), [DOTX](https://help.syncfusion.com/document-processing/word/word-library/javascript/word-file-formats#templates-dotx), [DOCM](https://help.syncfusion.com/document-processing/word/word-library/javascript/word-file-formats#macros-docm-dotm), and [DOTM](https://help.syncfusion.com/document-processing/word/word-library/javascript/word-file-formats#macros-docm-dotm). It also supports import [HTML](https://help.syncfusion.com/document-processing/word/word-library/javascript/html) format.
 
 The following table describes the supported file formats and their conversions in JavaScript Word Library.
 
@@ -19,48 +19,48 @@ The following table describes the supported file formats and their conversions i
 </tr>
 <tr>
 <th>
-{{'[DOCX](https://help.syncfusion.com/document-processing/word/conversions/word-file-formats-conversions#word-document-docx)'| markdownify }}
+{{'[DOCX](https://help.syncfusion.com/document-processing/word/word-library/javascript/word-file-formats#word-open-xml-formats-2007--later)'| markdownify }}
 </th>
 <th>
-{{'[DOTX](https://help.syncfusion.com/document-processing/word/conversions/word-file-formats-conversions#word-template-dotx)'| markdownify }}
+{{'[DOTX](https://help.syncfusion.com/document-processing/word/word-library/javascript/word-file-formats#templates-dotx)'| markdownify }}
 </th>
 <th>
-{{'[DOCM](https://help.syncfusion.com/document-processing/word/conversions/word-file-formats-conversions#macros-docm-dotm)'| markdownify }}
+{{'[DOCM](https://help.syncfusion.com/document-processing/word/word-library/javascript/word-file-formats#macros-docm-dotm)'| markdownify }}
 </th>
 <th>
-{{'[DOTM](https://help.syncfusion.com/document-processing/word/conversions/word-file-formats-conversions#macros-docm-dotm)'| markdownify }}
+{{'[DOTM](https://help.syncfusion.com/document-processing/word/word-library/javascript/word-file-formats#macros-docm-dotm)'| markdownify }}
 </th>
 </tr>
 <tr>
-<th>{{'[DOCX](https://help.syncfusion.com/document-processing/word/conversions/word-file-formats-conversions#word-document-docx)'| markdownify }}</th>
+<th>{{'[DOCX](https://help.syncfusion.com/document-processing/word/word-library/javascript/word-file-formats#word-open-xml-formats-2007--later)'| markdownify }}</th>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
 </tr>
 <tr>
-<th>{{'[DOTX](https://help.syncfusion.com/document-processing/word/conversions/word-file-formats-conversions#word-template-dotx)'| markdownify }}</th>
+<th>{{'[DOTX](https://help.syncfusion.com/document-processing/word/word-library/javascript/word-file-formats#templates-dotx)'| markdownify }}</th>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
 </tr>
 <tr>
-<th>{{'[DOCM](https://help.syncfusion.com/document-processing/word/conversions/word-file-formats-conversions#macros-docm-dotm)'| markdownify }}</th>
+<th>{{'[DOCM](https://help.syncfusion.com/document-processing/word/word-library/javascript/word-file-formats#macros-docm-dotm)'| markdownify }}</th>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
 </tr>
 <tr>
-<th>{{'[DOTM](https://help.syncfusion.com/document-processing/word/conversions/word-file-formats-conversions#macros-docm-dotm)'| markdownify }}</th>
+<th>{{'[DOTM](https://help.syncfusion.com/document-processing/word/word-library/javascript/word-file-formats#macros-docm-dotm)'| markdownify }}</th>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
 </tr>
 <tr>
-<th>{{'[HTML](https://help.syncfusion.com/document-processing/word/conversions/html-conversions)'| markdownify }}</th>
+<th>{{'[HTML](https://help.syncfusion.com/document-processing/word/word-library/javascript/html)'| markdownify }}</th>
 <td>Yes</td>
 <td>Yes</td>
 <td>Yes</td>
@@ -72,4 +72,6 @@ N> Exporting to the HTML format is not supported. However, you can import HTML d
 
 ## See Also
 
+* [Word File Format Conversions in JavaScript Word Library](https://help.syncfusion.com/document-processing/word/word-library/javascript/word-file-formats)
+* [HTML Conversions in JavaScript Word Library](https://help.syncfusion.com/document-processing/word/word-library/javascript/html)
 * [Loading and Saving Word document in JavaScript Word Library](https://help.syncfusion.com/document-processing/word/word-library/javascript/loading-and-saving-document)
