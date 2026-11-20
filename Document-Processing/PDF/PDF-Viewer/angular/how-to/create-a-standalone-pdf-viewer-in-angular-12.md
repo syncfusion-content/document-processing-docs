@@ -14,8 +14,8 @@ This section explains the steps required to create a simple Standalone Angular P
 
 N> For Angular 17+, see the following links:
 
-* [Create a Standalone PDF Viewer in Angular 17 and above with-no-standalone-flag](./how-to/create-a-standalone-pdf-viewer-in-angular-17-and-above-with-no-standalone-flag).
-* [Create a Standalone PDF Viewer in Angular 17 and above without --no-standalone flag](./how-to/create-a-standalone-pdf-viewer-in-angular-17-and-above-without-no-standalone-flag).
+* [Create a Standalone PDF Viewer in Angular 17 and above with-no-standalone-flag](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/how-to/create-a-standalone-pdf-viewer-in-angular-17-and-above-with-no-standalone-flag).
+* [Create a Standalone PDF Viewer in Angular 17 and above without --no-standalone flag](https://help.syncfusion.com/document-processing/pdf/pdf-viewer/angular/how-to/create-a-standalone-pdf-viewer-in-angular-17-and-above-without-no-standalone-flag).
 
 ## Set Up Angular Environment
 

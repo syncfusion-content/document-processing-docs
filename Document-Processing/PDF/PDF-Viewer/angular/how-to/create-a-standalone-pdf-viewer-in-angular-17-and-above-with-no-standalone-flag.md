@@ -48,7 +48,7 @@ cp -R ./node_modules/@syncfusion/ej2-pdfviewer/dist/ej2-pdfviewer-lib  src/asset
 
 * Confirm that an `ej2-pdfviewer-lib` directory exists under `src/assets` (or the application's static public assets directory).
 
-* Ensure the application server is configured to serve WebAssembly files with the `Content-Type: application/wasm` MIME type. See the [Troubleshooting](./troubleshooting/troubleshooting) section for server configuration guidance.
+* Ensure the application server is configured to serve WebAssembly files with the `Content-Type: application/wasm` MIME type. See the [Troubleshooting](./troubleshooting/cp-command-not-recognized) section for server configuration guidance.
 
 ## Registering PDF Viewer Module
 
