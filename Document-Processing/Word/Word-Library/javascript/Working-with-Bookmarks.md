@@ -88,7 +88,7 @@ import { WordDocument, Color } from '@syncfusion/ej2-docx';
 let document = WordDocument.open(data);
 
 // Get bookmark by name
-const bookmark = document.bookmarks.findByName('Northwind');
+let bookmark = document.bookmarks.findByName('Northwind');
 
 if (bookmark) {
   // Change paragraph background color
@@ -100,7 +100,7 @@ document.save('Output.docx');
 let document = ej.docx.WordDocument.open(data);
 
 // Get bookmark by name
-const bookmark = document.bookmarks.findByName('Northwind');
+let bookmark = document.bookmarks.findByName('Northwind');
 
 if (bookmark) {
   // Change paragraph background color
@@ -121,7 +121,7 @@ import { WordDocument } from '@syncfusion/ej2-docx';
 let document = WordDocument.open(data);
 
 // Get bookmark by name
-const bookmark = document.bookmarks.findByName('Northwind');
+let bookmark = document.bookmarks.findByName('Northwind');
 
 if (bookmark) {
   // Removes the bookmark named "Northwind" from Word document.
@@ -133,7 +133,7 @@ document.save('Output.docx');
 let document = ej.docx.WordDocument.open(data);
 
 // Get bookmark by name
-const bookmark = document.bookmarks.findByName('Northwind');
+let bookmark = document.bookmarks.findByName('Northwind');
 
 if (bookmark) {
   // Removes the bookmark named "Northwind" from Word document.
